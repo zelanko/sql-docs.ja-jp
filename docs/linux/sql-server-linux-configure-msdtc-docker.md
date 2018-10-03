@@ -4,26 +4,24 @@ description: この記事では、Linux 上の MSDTC を構成するため Dprov
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3242f0d074dc3c2f33fc83de4604a20bfdcbd64a
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: 65bd8b35c0ab211a522a380521b5e2246c31bdf0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793780"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>SQL Server on Docker での分散トランザクションを使用する方法
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、分散トランザクションの場合、Docker 上の SQL Server をセットアップする方法について説明します。
+この記事では、分散トランザクションの Docker で SQL Server Linux コンテナーを設定する方法について説明します。
 
 SQL Server 2019 プレビュー以降は、コンテナー イメージは、Microsoft 分散トランザクション コーディネーター (MSDTC) 分散トランザクションに必要なをサポートします。 MSDTC の通信要件を理解するのを参照してください。 [Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法](sql-server-linux-configure-msdtc.md)します。 この記事では、特別な要件と SQL Server の Docker コンテナーに関連するシナリオについて説明します。
 
@@ -32,34 +30,27 @@ SQL Server 2019 プレビュー以降は、コンテナー イメージは、Mic
 Docker のコンテナーでの MSDTC トランザクションを有効にするには、2 つの新しい環境変数を設定する必要があります。
 
 - **MSSQL_RPC_PORT**: RPC エンドポイント マッパー サービスにバインドし、リッスンする TCP ポート。  
-- **MSSQL_DTC_TCP_PORT**ポート MSDTC サービスがリッスンするように構成されていること。
+- **MSSQL_DTC_TCP_PORT**: ポート MSDTC サービスがリッスンするように構成されていること。
 
 ### <a name="pull-and-run"></a>プルし、実行
 
-次の例では、これらの環境変数を使用してプルし、MSDTC 用に構成されたコンテナーを実行する方法を示します。 これにより、すべてのホスト上のアプリケーションと通信することができます。
+次の例では、これらの環境変数を使用してプルし、MSDTC 用に構成された 1 つの SQL Server コンテナーを実行する方法を示します。 これにより、すべてのホスト上のアプリケーションと通信することができます。
 
 ```bash
 docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-   -e 'MSSQL_RPC_PORT=13500' -e 'MSSQL_DTC_TCP_PORT=51000' \
-   -p 51433:1433 -p 13500:13500 -p 51000:51000  \
+   -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
+   -p 51433:1433 -p 135:135 -p 51000:51000  \
    -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
 ```
 
-次のコマンドでは、PowerShell で Windows 上の Docker の同じコマンドを示しています。
+> [!IMPORTANT]
+> 前のコマンドでは、Linux で実行されている Docker がのみ機能します。 Windows 上の Docker での Windows ホストは、既にポート 135 でリッスンします。 削除することができます、`-p 135:135`が、Windows 上の Docker のパラメーターがいくつかの制限。 結果のコンテナーは、使用できませんはホストに関連する分散トランザクションホスト上の docker コンテナー間で分散トランザクションにのみ参加できます。
 
-```PowerShell
-docker run `
-   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-   -e "MSSQL_RPC_PORT=13500" -e "MSSQL_DTC_TCP_PORT=51000" `
-   -p 51433:1433 -p 13500:13500 -p 51000:51000 `
-   -d "mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu"
-```
-
-このコマンドで、 **RPC エンドポイント マッパー** 13500、ポートにバインドされたサービス、および**MSDTC**サービスがポート 51000 docker 仮想ネットワーク内にバインドされました。 Docker の仮想ネットワーク内でポート 1433 で SQL Server の TDS 通信が行われます。 これらのポートが外部で公開されているホストに TDS ポート 51433、RPC エンドポイント マッパー ポート 13500、および MSDTC ポート 51000 として。
+このコマンドで、 **RPC エンドポイント マッパー**ポート 135、サービスにバインドし、 **MSDTC**サービスがポート 51000 docker 仮想ネットワーク内にバインドされました。 Docker の仮想ネットワーク内でポート 1433 で SQL Server の TDS 通信が行われます。 これらのポートが外部で公開されているホストに TDS ポート 51433、RPC エンドポイント マッパー ポート 135、および MSDTC ポート 51000 として。
 
 > [!NOTE]
-> RPC エンドポイント マッパーと MSDTC ポートが同じホストとコンテナーであるにありません。 コンテナーに対する 13500 する RPC エンドポイント マッパーのポートが構成されたときに、13501 またはその他の使用可能なポート、ホスト サーバー上のポートにマップ可能性がある可能性があります。
+> RPC エンドポイント マッパーと MSDTC ポート、ホストとコンテナーで同じである必要ありません。 コンテナーに対する 135 を使用する RPC エンドポイント マッパーのポートが構成されたときに、13501 またはその他の使用可能なポート、ホスト サーバー上のポートにマップ可能性がある可能性があります。
 
 ## <a name="configure-the-firewall"></a>ファイアウォールの構成
 
@@ -84,7 +75,9 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing-on-the-host"></a>ポートがホストでルーティングを構成します。
 
-Docker コンテナーは、ホスト外部のサーバーでの分散トランザクションに参加しているの場合、ホストは、ポート ルーティングで構成する必要があります。 詳細については、次を参照してください。[ポート ルーティングを構成する](sql-server-linux-configure-msdtc.md#configure-port-routing)します。
+前の例では、1 つの Docker コンテナーでは、RPC ポート 135 をホストのポート 135 にマップされるため、ホストでの分散トランザクションは必要があります構成なしで動作ようになりました。 ある直接ポート 135、コンテナーを使用する SQL Server がコンテナーに昇格した特権で実行されるため、注意してください。 コンテナーの外部での SQL server の別のエフェメラル ポートを使用する必要があり、ポート 135 へのトラフィックをそのポートにルーティングする必要があります。
+
+ただし、コンテナーのポート 135 を 13500 など、ホスト上の別のポートにマップした場合は、し構成する必要ポートがホストにルーティングします。 これにより、docker コンテナーのホストおよびその他の外部のサーバーと分散トランザクションに参加できます。 詳細については、次を参照してください。[ポート ルーティングを構成する](sql-server-linux-configure-msdtc.md#configure-port-routing)します。
 
 ## <a name="next-steps"></a>次の手順
 

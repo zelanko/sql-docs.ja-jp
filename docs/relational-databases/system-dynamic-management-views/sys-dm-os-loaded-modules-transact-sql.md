@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_loaded_modules (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_os_loaded_modules (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_loaded_modules
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1888f39f6024a0b299834217c2f8b69052761b65
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794320"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +32,9 @@ ms.lasthandoff: 05/23/2018
   サーバーのアドレス空間に読み込まれたモジュールごとに 1 行のデータを返します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_loaded_modules**です。  
+>  これから[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_loaded_modules**します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary(8)**|プロセス内のモジュールのアドレス。|  
 |**file_version**|**varchar(23)**|ファイルのバージョン。 次の形式で表示されます。<br /><br /> x.x:x.x|  
@@ -48,11 +46,11 @@ ms.lasthandoff: 05/23/2018
 |**special_build**|**bit**|1 = モジュールは読み込まれたモジュールの特別なビルドです。|  
 |**言語**|**int**|モジュールのバージョン情報の言語。|  
 |**company**|**nvarchar (256)**|モジュールを作成した会社名。|  
-|**説明**|**nvarchar (256)**|モジュールの説明。|  
+|**description**|**nvarchar (256)**|モジュールの説明。|  
 |**name**|**nvarchar (255)**|モジュールの名前。 モジュールの完全なパスを含みます。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

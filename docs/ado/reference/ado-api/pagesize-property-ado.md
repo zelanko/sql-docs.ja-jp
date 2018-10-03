@@ -1,13 +1,11 @@
 ---
-title: PageSize プロパティ (ADO) |Microsoft ドキュメント
+title: PageSize プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,33 +13,32 @@ f1_keywords:
 helpviewer_keywords:
 - PageSize property [ADO]
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aea2e9510f80f8cd0d15bfbc2f7f544055b65884
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c33b8a757e699a78c699cc87e7fd7dba26006b5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741450"
 ---
 # <a name="pagesize-property-ado"></a>PageSize プロパティ (ADO)
-レコードの数を構成することを示します。 1 つのページで、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
+レコードの数を構成することを示します。 1 つのページで、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**長い**をページ上のレコードの数を示す値。 既定値は**10**です。  
+ 設定または取得を**長い**レコードの数は、ページを示す値です。 既定値は**10**します。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、 **PageSize**データの論理ページを構成するレコード数を決定するプロパティです。 使用するページ サイズを確立することができます、[と、AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティを特定のページの最初のレコードに移動します。 これは、一度にレコード数を表示する、データのページにユーザーを許可するときに Web サーバーのシナリオで役に立ちます。  
+ 使用して、 **PageSize**プロパティをレコードの数は、データの論理ページを構成を確認します。 ページ サイズの確立を使用することができます、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティを特定のページの最初のレコードに移動します。 これは、一度にレコード数を表示するデータをページにユーザーを許可する場合、Web サーバーのシナリオで役に立ちます。  
   
- このプロパティは、いつでも設定でき、特定のページの最初のレコードの場所を計算するための値が使用されます。  
+ このプロパティは、いつでも設定でき、特定のページの最初のレコードの位置を計算するための値が使用されます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [AbsolutePage、PageCount、および PageSize のプロパティの例 (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [AbsolutePage、PageCount、および PageSize のプロパティの例 (vc++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+ [AbsolutePage、PageCount、PageSize プロパティの例 (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [AbsolutePage、PageCount、PageSize プロパティの例 (vc++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

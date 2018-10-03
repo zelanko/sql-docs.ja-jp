@@ -1,38 +1,35 @@
 ---
-title: 削除メソッドの例 (VBScript) |Microsoft ドキュメント
+title: Delete メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 148baaf84c8025d23b78f01bd098fb4a37634257
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e9c059a003d263a61f1e224e0187fc6e5a80b9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787460"
 ---
-# <a name="delete-method-example-vbscript"></a>メソッドの例 (VBScript) の削除します。
-この例では、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)から指定されたレコードを削除する方法、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
+# <a name="delete-method-example-vbscript"></a>Delete メソッドの例 (VBScript)
+この例では、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)から指定されたレコードを削除する方法、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
   
- アクティブ サーバー ページ (ASP) で次の例を使用します。 この完全に機能の例を表示するには、データ ソースの C:\Program files \microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にある AdvWorks.mdb (SDK と共にインストールされた) またはパスを反映するようにコード例では編集するかが必要このファイルの実際の位置。 これは、Microsoft Access データベース ファイルです。  
+ 次の例を Active Server Page (ASP) で使用します。 この完全に機能の例を表示するには、C:\Program files \microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にある (SDK がインストールされた) AdvWorks.mdb をソースまたは反映するようにコード例ではパスを編集するデータかが必要このファイルの実際の場所。 これは、Microsoft Access データベース ファイルです。  
   
- 使用して**検索**Adovbs.inc ファイルを見つけて、使用する予定のディレクトリに配置します。 次のコードをメモ帳または別のテキスト エディターに貼り付け切り取ってとして保存して**DeleteVBS.asp**です。 結果は、任意のクライアント ブラウザーで表示できます。  
+ 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けるし、として保存**DeleteVBS.asp**します。 結果は、任意のクライアント ブラウザーで表示できます。  
   
- 例を実行するを使用して、 [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)をいくつかのレコードを追加する最初の例です。 それらを削除しようとすることができます。 結果は、任意のクライアント ブラウザーで表示します。  
+ 例を実行するには、 [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)いくつかのレコードを追加するには、最初の例です。 それらを削除しようとすることができます。 任意のクライアント ブラウザーで結果を表示します。  
   
 ```  
 <!-- BeginDeleteVBS -->  
@@ -174,5 +171,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Delete メソッド (ADO レコード セット)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Delete メソッド (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

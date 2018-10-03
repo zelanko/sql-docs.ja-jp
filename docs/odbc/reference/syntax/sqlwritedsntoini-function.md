@@ -1,13 +1,11 @@
 ---
-title: SQLWriteDSNToIni 関数 |Microsoft ドキュメント
+title: SQLWriteDSNToIni 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLWriteDSNToIni
@@ -19,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a1ee3bdbdc14c01bf267c9dbb64ef10c93dfe1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9eed345d3d6483cd1b47f8141e00d2a0164eb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680820"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 関数
 **準拠**  
- 1.0 ODBC のバージョンで導入されました。  
+ ODBC のバージョンが導入されました: 1.0  
   
  **概要**  
  **SQLWriteDSNToIni**システム情報をデータ ソースを追加します。  
@@ -51,28 +48,28 @@ BOOL SQLWriteDSNToIni(
  [入力]追加するデータ ソースの名前です。  
   
  *lpszDriver*  
- [入力]ドライバーの名前 (通常は、関連付けられた DBMS の名前)、物理ドライバー名の代わりにユーザーに表示されます。  
+ [入力]ドライバーの名前 (通常は、関連付けられている DBMS の名前)、物理ドライバー名ではなくユーザーに表示されます。  
   
-## <a name="returns"></a>返します。  
- 関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
+## <a name="returns"></a>戻り値  
+ 関数は、成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLWriteDSNToIni**は FALSE を返します、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ ときに**SQLWriteDSNToIni** 、関連付けられている FALSE が返されます *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
   
-|*\*pfErrorCode*|[エラー]|Description|  
+|*\*pfErrorCode*|[エラー]|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーのエラー|エラーが発生する特定のインストーラーのエラーがなかった。|  
 |ODBC_ERROR_INVALID_DSN|無効な DSN|*LpszDSN*引数には、DSN に無効な文字列が含まれています。|  
-|ODBC_ERROR_INVALID_NAME|無効なドライバーまたは変換者の名前|*LpszDriver*引数が無効です。|  
-|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|インストーラーは、レジストリの DSN を作成できませんでした。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリの不足のため、関数を実行できませんでした。|  
+|ODBC_ERROR_INVALID_NAME|無効なドライバーまたは翻訳者名|*LpszDriver*引数が無効です。|  
+|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|インストーラーは、レジストリで、DSN を作成できませんでした。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリ不足のため、関数を実行できませんでした。|  
   
 ## <a name="comments"></a>コメント  
- **SQLWriteDSNToIni**システム情報 [ODBC データ ソース] セクションに、データ ソースを追加します。 データ ソースの仕様のセクションを作成し、1 つのキーワードを追加します (**ドライバー**) ドライバーの値として DLL の名前に置き換えます。 データ ソースの仕様のセクションで既に存在する場合、 **SQLWriteDSNToIni**新しいものを作成する前に、古いセクションを削除します。  
+ **SQLWriteDSNToIni**のシステム情報 [ODBC データ ソース] セクションに、データ ソースを追加します。 データ ソースの仕様のセクションを作成し、1 つのキーワードを追加します (**ドライバー**) ドライバーの値として DLL の名前に置き換えます。 データ ソースの仕様のセクションが既に存在する場合**SQLWriteDSNToIni**新しいを作成する前に、古いセクションを削除します。  
   
- この関数の呼び出し元は、システム情報のデータ ソースの仕様のセクションに、ドライバー固有のキーワードと値を追加する必要があります。  
+ この関数の呼び出し元では、システム情報のデータ ソースの仕様のセクションに、ドライバー固有のキーワードと値を追加する必要があります。  
   
- 場合は、データ ソースの名前は、既定**SQLWriteDSNToIni**もシステム情報 の既定のドライバーの仕様のセクションを作成します。  
+ データ ソースの名前が既定では場合、 **SQLWriteDSNToIni**システム情報の既定のドライバーの仕様のセクションも作成されます。  
   
  この関数は、DLL のセットアップからのみ呼び出す必要があります。  
   
@@ -80,6 +77,6 @@ BOOL SQLWriteDSNToIni(
   
 |詳細|参照先|  
 |---------------------------|---------|  
-|追加、変更、またはデータ ソースを削除します。|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)で DLL のセットアップ)|  
+|追加、変更、またはデータ ソースを削除します。|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(で DLL のセットアップ)|  
 |追加、変更、またはデータ ソースを削除します。|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |システム情報のデータ ソース名を削除します。|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|

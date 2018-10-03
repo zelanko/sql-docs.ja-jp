@@ -1,13 +1,11 @@
 ---
-title: Item プロパティ (ADO MD セルセット) |Microsoft ドキュメント
+title: Item プロパティ (ADO MD セルセット) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64de692b36cd2abda06402e5c0d55c250b9632f5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284081"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714377"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item プロパティ (ADO MD セルセット)
-セルを取得、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)の座標を使用します。  
+セルを取得します、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)の座標を使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,18 +37,18 @@ Cell = Cellset.Item ( Positions)
   
 ## <a name="parameters"></a>パラメーター  
  *位置*  
- A **VariantArray**のセルを一意に指定する値。 *位置*次のいずれかになります。  
+ A **VariantArray**のセルを一意に指定する値。 *位置*次のいずれかを指定できます。  
   
--   位置の番号の配列  
+-   位置の数値の配列  
   
 -   メンバー名の配列  
   
 -   序数の位置  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**項目**返されるプロパティを[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)オブジェクト内の[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト。 場合、**項目**に対応するセル プロパティを見つけられない、*位置*引数、エラーが発生します。  
+ 使用して、**項目**プロパティを返す、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)オブジェクト内を[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト。 場合、**項目**に対応するセル プロパティを見つけられない、*位置*引数、エラーが発生します。  
   
- **項目**プロパティは既定のプロパティを**セルセット**オブジェクト。 次の構文は同義です。  
+ **項目**プロパティの既定のプロパティは、**セルセット**オブジェクト。 次の構文形式は交換できます。  
   
 ```  
   
@@ -59,18 +56,18 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ```  
   
 ## <a name="remarks"></a>コメント  
- *位置*引数が返されるセルを指定します。 セルの序数位置または各軸に沿った位置によって指定できます。 各軸に沿った位置を指定してセルを指定する場合は、位置の数値の値または各位置のメンバーの名前を指定できます。  
+ *位置*引数が返されるセルを指定します。 セルの序数位置または各軸に沿った位置を指定できます。 各軸に沿った位置を指定してセルを指定する場合は、位置の数値の値または各位置のメンバーの名前を指定できます。  
   
- 内の 1 つのセルを一意に識別する数値は、序数位置は、**セルセット**です。 内のセルが概念的には、番号付けは、**セルセット**かのよう、**セルセット**された、 *p*-次元の配列場所*p*軸の数です。 セルは、行優先順で指定されます。 以下には、セルの序数を計算する式を示します。  
+ 序数の位置は内で 1 つのセルを一意に識別する番号、**セルセット**します。 内のセルの番号付け概念的には、**セルセット**場合と、**セルセット**された、 *p*-次元の配列場所*p*軸の数です。 セルは、行優先順で指定されます。 セルの序数を計算する数式を次に示します。  
   
- として文字列をメンバー名が渡された場合**項目**軸の数値識別子の増加順に、メンバーを一覧表示する必要があります。 軸には、ディメンションの入れ子の増加順にメンバーを表示: つまり、最も外側のディメンションのメンバーにするには、内部のディメンションのメンバーが従います。 別の文字列によって表される各ディメンションおよびメンバーの文字列のリストをコンマで区切る必要があります。  
+ として文字列をメンバー名が渡された場合**項目**軸の数値識別子の増加順に、メンバーを一覧表示する必要があります。 軸内のメンバーをディメンションの入れ子の増加順に表示する必要があります-これは、最も外側にあるディメンションのメンバーか早い方、内部のディメンションのメンバーが従います。 別個の文字列によって表される各ディメンションおよびメンバーの文字列のリストをコンマで区切る必要があります。  
   
 > [!NOTE]
->  データ プロバイダーによってメンバー名のセルの取得をサポートされていない可能性があります。 詳細については、プロバイダーのマニュアルを参照してください。  
+>  データ プロバイダーによってセル メンバー名の取得をサポートされていない可能性があります。 詳細については、プロバイダーのマニュアルを参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>参照  
- [セルのオブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

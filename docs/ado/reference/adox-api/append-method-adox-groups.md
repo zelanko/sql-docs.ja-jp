@@ -1,13 +1,11 @@
 ---
-title: Append メソッド (ADOX グループ) |Microsoft ドキュメント
+title: Append メソッド (ADOX Groups) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecd80b3c2affcbbed7bbd50f7e130fa84d1e86ea
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 171aaa250930d5563d8ce6ec3b08b5939710b881
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284901"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742530"
 ---
-# <a name="append-method-adox-groups"></a>Append メソッド (ADOX グループ)
+# <a name="append-method-adox-groups"></a>Append メソッド (ADOX Groups)
 新しく追加[グループ](../../../ado/reference/adox-api/group-object-adox.md)オブジェクトを[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)コレクション。  
   
 ## <a name="syntax"></a>構文  
@@ -39,25 +36,25 @@ Groups.Append Group
   
 #### <a name="parameters"></a>パラメーター  
  *[グループ]*  
- **グループ**追加するオブジェクトまたはグループを作成し、追加の名前。  
+ **グループ**オブジェクトを追加するか、グループを作成し、追加の名前。  
   
 ## <a name="remarks"></a>コメント  
- **グループ**のコレクション、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)のすべてのカタログのグループ アカウントを表します。 **グループ**のコレクション、[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)ユーザーが所属するグループのみを表します。  
+ **グループ**のコレクションを[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)すべてのカタログのグループ アカウントを表します。 **グループ**のコレクションを[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)ユーザーが所属するグループのみを表します。  
   
- プロバイダーがグループの作成をサポートしていない場合は、エラーが発生します。  
+ プロバイダーがグループの作成をサポートしていない場合、エラーが発生します。  
   
 > [!NOTE]
->  追加の前に、**グループ**オブジェクトを**グループ**のコレクション、**ユーザー**オブジェクト、**グループ**が同じオブジェクト[名前](../../../ado/reference/adox-api/name-property-adox.md)追加する 1 つに既に存在すると、**グループ**のコレクション、**カタログ**です。  
+>  追加の前に、**グループ**オブジェクトを**グループ**のコレクションを**ユーザー**オブジェクト、**グループ**オブジェクトと同じ[名前](../../../ado/reference/adox-api/name-property-adox.md)ように追加する 1 つに既に存在する必要があります、**グループ**のコレクション、**カタログ**します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [グループとユーザーの追加、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
- [Append メソッド (ADOX 列)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append メソッド (ADOX インデックス)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append メソッド (ADOX キー)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append メソッド (ADOX プロシージャ)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append メソッド (ADOX テーブル)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append メソッド (ADOX ユーザー)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Groups および Users Append、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
+ [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append メソッド (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Append メソッド (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Append メソッド (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Append メソッド (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append メソッド (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Append メソッド (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)

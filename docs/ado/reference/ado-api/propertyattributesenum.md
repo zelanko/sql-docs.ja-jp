@@ -1,13 +1,11 @@
 ---
-title: PropertyAttributesEnum |Microsoft ドキュメント
+title: PropertyAttributesEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - PropertyAttributesEnum enumeration [ADO]
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31260a4336954a2efa0cf001d244b7ad7ff7d6a0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0bb38a73008d86144751ee324eb442bf711d65a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280801"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835970"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-属性を指定、[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。  
+属性を指定します、[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|プロパティがプロバイダーによってサポートされていないことを示します。|  
-|**adPropRequired**|1|データ ソースが初期化される前にユーザーにこのプロパティの値を指定することを示します。|  
+|**adPropRequired**|1|データ ソースが初期化される前に、ユーザーにこのプロパティの値を指定する必要がありますを示します。|  
 |**adPropOptional**|2|ユーザーがデータ ソースが初期化される前に、このプロパティの値を指定する必要がないことを示します。|  
-|**adPropRead**|512|ユーザーが、プロパティを読み取ることができることを示します。|  
-|**adPropWrite**|1024|ユーザーが、プロパティを設定できますを示します。|  
+|**adPropRead**|512|ユーザーが、プロパティを読み取ることを示します。|  
+|**adPropWrite**|1024|ユーザーが、プロパティを設定できることを示します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

@@ -1,13 +1,11 @@
 ---
-title: 記述子 |Microsoft ドキュメント
+title: 記述子 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC]
@@ -15,26 +13,25 @@ helpviewer_keywords:
 - descriptor handles [ODBC]
 - handles [ODBC], descriptor
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e02316233f7e0c9722da90f4c2562282ce19bce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d50ce0c2023e187d63d08aa862398d18dc188fd1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818720"
 ---
 # <a name="descriptors"></a>記述子
-記述子ハンドルは、列または動的パラメーターのいずれかに関する情報を保持するデータ構造体を指します。  
+記述子ハンドルは、列または動的パラメーターのいずれかに関する情報を保持するデータ構造を表します。  
   
- 暗黙的に列やパラメーターのデータを操作する ODBC 関数を設定および記述子フィールドを取得します。 インスタンスのときに、 **SQLBindCol**が呼び出された列のデータをバインドするバインディングを完全に記述する記述子フィールドを設定します。 ときに**SQLColAttribute**が呼び出された列のデータを記述する記述子フィールドに格納されたデータを返します。  
+ 暗黙的に列とパラメーターのデータを操作する ODBC 関数を設定および記述子フィールドを取得します。 たとえば、 **SQLBindCol**と呼びます列のデータをバインドするバインディングを完全に記述する記述子フィールドを設定します。 ときに**SQLColAttribute**と呼ばれる列のデータを記述する記述子フィールドに格納されたデータを返します。  
   
- ODBC 関数を呼び出すアプリケーションでは、記述子を考慮が必要です。 アプリケーションにアクセスするダイレクト記述子データベース操作は不要です。 ただし、一部のアプリケーションでは、多くの操作を合理化記述子に直接アクセスできます。 たとえば、列のデータは、呼び出し元よりも効率的にすることができますを再バインドする方法を提供する記述子へのアクセスを指示**SQLBindCol**もう一度です。  
+ ODBC 関数を呼び出すアプリケーションでは、記述子で考慮する必要があります。 アプリケーションが記述子への直接アクセスを取得するデータベースの操作は不要です。 ただし、一部のアプリケーションは、多くの操作を合理化記述子に直接アクセスできます。 記述子へのアクセスは、列のデータは、呼び出すよりも効率的に再バインドする方法を提供します。 たとえば、直接**SQLBindCol**もう一度です。  
   
 > [!NOTE]  
->  記述子の物理的に表したものが定義されていません。 アプリケーションは、記述子ハンドルを使用して ODBC 関数を呼び出すことによって、フィールドを操作することによってのみ、記述子への直接アクセスを利用できます。  
+>  記述子の物理的に表したものが定義されていません。 アプリケーションは、記述子ハンドルを使用して ODBC 関数を呼び出すことによってそのフィールドを操作することによってのみ、記述子への直接アクセスを利用できます。  
   
  このセクションでは、次のトピックを扱います。  
   

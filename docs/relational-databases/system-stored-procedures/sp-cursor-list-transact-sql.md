@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 249b6789d6242a982e3b23b577740fdca9bafcdd
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43018084"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757820"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +69,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |cursor_scope|**smallint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|CURSOR_STATUS システム関数によってレポートされたものと同じ値です。<br /><br /> 1 = カーソル名または変数によって参照されたカーソルは開いています。 カーソルが状態非依存、静的、キーセットのいずれかの場合には、結果セットに少なくとも 1 行が含まれます。 カーソルが動的の場合には、結果セットに 0 行以上が含まれます。<br /><br /> 0 = カーソル名または変数によって参照されたカーソルは開いていますが、行は含まれていません。 動的カーソルがこの値を返すことはありません。<br /><br /> -1 = カーソル名または変数によって参照されたカーソルは閉じています。<br /><br /> -2 = カーソル変数にのみ適用されます。 変数に割り当てられたカーソルはありません。 おそらく、OUTPUT パラメーターによってカーソルを変数に割り当てましたが、戻る前にストアド プロシージャがカーソルを閉じました。<br /><br /> -3 = 指定された名前のカーソルまたはカーソル変数が存在しないか、またはカーソル変数にカーソルが割り当てられていません。|  
 |model|**smallint**|1 = 状態非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
-|同時実行 (concurrency)|**smallint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
+|コンカレンシー|**smallint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**smallint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**smallint**|0 = 閉じた状態<br /><br /> 1 = 開いた状態|  
 |cursor_rows|**int**|結果セット内の条件を満たす行の数です。 詳細については、次を参照してください。 [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)します。|  

@@ -1,32 +1,29 @@
 ---
-title: コマンドでストアド プロシージャを呼び出す |Microsoft ドキュメント
+title: コマンドを使用してストアド プロシージャを呼び出す |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63e2b0c1958f680b85bfe8b1df99442cc588b291
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9a05ec85e3fd22a6190df0e840bd69ca40fcde5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270451"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695740"
 ---
-# <a name="calling-a-stored-procedure-with-a-command"></a>コマンドでストアド プロシージャを呼び出す
-コマンドを使用して、ストアド プロシージャを呼び出すことができます。 このトピックの最後に、コード サンプルは、次のように定義されている CustOrdersOrders と呼ばれる、Northwind サンプル データベース内のストアド プロシージャを参照します。  
+# <a name="calling-a-stored-procedure-with-a-command"></a>Command を使用してストアド プロシージャを呼び出す
+ストアド プロシージャを呼び出すコマンドを使用することができます。 このトピックの最後のコード サンプルは、次のように定義されている、CustOrdersOrders と呼ばれる、Northwind サンプル データベース内のストアド プロシージャを参照します。  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -36,15 +33,15 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- ストアド プロシージャの呼び出しおよび定義する方法に関する詳細について、SQL Server のマニュアルを参照してください。  
+ ストアド プロシージャの詳細を定義して呼び出す方法については、SQL Server のドキュメントを参照してください。  
   
- このストアド プロシージャで使用されるコマンドのような[Command オブジェクトのパラメーター](../../../ado/guide/data/command-object-parameters.md)です。 顧客の ID パラメーターを受け取りし、その顧客の注文に関する情報を返します。 次のコード サンプルは、ADO のソースとしてこのストアド プロシージャを使用**Recordset**です。  
+ このストアド プロシージャで使用されるコマンドのような[コマンド オブジェクト パラメーター](../../../ado/guide/data/command-object-parameters.md)します。 これにより、顧客の ID パラメーターを受け取りし、その顧客の注文に関する情報を返します。 次のコード サンプルは、ソースとしてこのストアド プロシージャを使用して ado **Recordset**します。  
   
- ADO の別の機能にアクセスするストアド プロシージャを使用することができます。**パラメーター**コレクション**更新**メソッドです。 このメソッドを使用すると、実行時に、コマンドに必要なパラメーターに関するすべての情報で ADO 自動的に入力します。 は、パフォーマンスの低下、この方法で ADO は、パラメーターについては、データ ソースをクエリする必要があります。  
+ ストアド プロシージャを使用すると、ADO のもう 1 つの機能にアクセスできます。**パラメーター**コレクション**更新**メソッド。 このメソッドを使用すると、ADO に自動的に実行時に、コマンドによって必要なパラメーターのすべての情報を入力できます。 パフォーマンスの低下がある、この方法で ADO は、パラメーターに関する情報については、データ ソースを照会する必要がありますので。  
   
- 次のコード サンプルと内のコードの間で他の重要な相違点が存在[Command オブジェクトのパラメーター](../../../ado/guide/data/command-object-parameters.md)パラメーターを手動で入力した場所、します。 まず、このコードは設定されません、 **Prepared**プロパティを**True**のため、SQL Server のストアド プロシージャの定義でプリコンパイル済みです。 2 番目、 **CommandType**のプロパティ、**コマンド**にオブジェクトが変更された**adCmdStoredProc** ADO コマンドがストアド プロシージャをしたことを通知するために 2 番目の例です。  
+ その他の重要な相違点は、次のコード サンプルと、コードの間存在[コマンド オブジェクト パラメーター](../../../ado/guide/data/command-object-parameters.md)パラメーターを手動で入力した場所、します。 まず、このコードは設定されません、**準備**プロパティを**True**のため SQL Server ストアド プロシージャは、定義では、プリコンパイル済み。 2 つ目は、 **CommandType**のプロパティ、**コマンド**にオブジェクトが変更された**adCmdStoredProc** ADO コマンドがストアド プロシージャをしたことを通知するために 2 番目の例です。  
   
- 最後に、2 番目の例では、パラメーター参照する必要にインデックスを使用して、値を設定するときにデザイン時に、パラメーターの名前がわからないためです。 新しい設定することができる場合は、パラメーターの名前が分かって[NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)のプロパティ、**コマンド**を True にオブジェクトおよびプロパティの名前を参照してください。 ストアド プロシージャで最初のパラメーターの位置が示されている理由をでしょうか (@CustomerID) は、0 ではなく 1 (`objCmd(1) = "ALFKI"`)。 これは、パラメーター 0 には、SQL Server のストアド プロシージャからの戻り値が含まれているためです。  
+ 最後に、2 番目の例では、パラメーターする必要がありますを参照してインデックスを使用して、値を設定するときにデザイン時に、パラメーターの名前がわからないためです。 新しい設定することができます、パラメーターの名前がわかっている場合[NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)のプロパティ、**コマンド**を True にオブジェクトし、プロパティの名前を参照してください。 最初のパラメーターの位置が、ストアド プロシージャで説明されている理由なのでしょう (@CustomerID) は 0 ではなく 1 (`objCmd(1) = "ALFKI"`)。 これは、パラメーター 0 には、SQL Server ストアド プロシージャからの戻り値が含まれています。  
   
 ```  
 'BeginAutoParamCmd  
@@ -137,4 +134,4 @@ End Function
 ```  
   
 ## <a name="see-also"></a>参照  
- [サポート技術情報の記事 117500](http://go.microsoft.com/fwlink/?LinkId=117500)
+ [サポート技術情報記事 117500](http://go.microsoft.com/fwlink/?LinkId=117500)

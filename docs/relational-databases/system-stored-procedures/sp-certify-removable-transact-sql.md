@@ -1,14 +1,11 @@
 ---
-title: sp_certify_removable (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_certify_removable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9ff14bc26b18eaf80dff000f141502a01fcc7b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238732"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691410"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 ## <a name="arguments"></a>引数  
  [ **@dbname=**] **'***dbname***'**  
- 確認するデータベースを指定します。 *dbname*は**sysname**です。  
+ 確認するデータベースを指定します。 *dbname*は**sysname**します。  
   
  [  **@autofix=**] **'auto'**  
  データベースとすべてのデータベース オブジェクトの所有権をシステム管理者に与え、ユーザー作成のデータベース ユーザーと既定値以外の権限を削除します。 *自動*は**nvarchar (4)**、既定値は NULL です。  
@@ -57,8 +53,8 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- データベースが正しく構成されている場合**sp_certify_removable**は、次を実行します。  
+## <a name="remarks"></a>コメント  
+ データベースが正しく構成されている場合**sp_certify_removable**次を実行します。  
   
 -   データベースをオフラインに設定し、ファイルをコピーできるようにする。  
   
@@ -66,7 +62,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   データ ファイル グループを読み取り専用としてマークし、ファイルを読み取り専用メディアにコピーできるようにする。  
   
- システム管理者は、データベースとすべてのデータベース オブジェクトの所有者であることが必要です。 システム管理者が実行されているすべてのサーバー上に存在する既知のユーザー [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースが後で配布され、インストールされているときに存在するが予想されます。  
+ システム管理者は、データベースとすべてのデータベース オブジェクトの所有者であることが必要です。 システム管理者が実行されているすべてのサーバー上に存在する既知のユーザー [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、データベースが後で配布され、インストールされているときに存在するが期待できます。  
   
  実行する場合**sp_certify_removable**せず、**自動**値とは、次の条件のいずれかに関する情報を返します。  
   
@@ -80,14 +76,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  これらの問題は次の方法で解決できます。  
   
--   使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールおよびプロシージャを実行し**sp_certify_removable**もう一度です。  
+-   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールと手順、および実行し**sp_certify_removable**もう一度です。  
   
 -   実行するだけで**sp_certify_removable**で、**自動**値。  
   
  このストアド プロシージャでは、ユーザーとユーザーの権限だけがチェックされます。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   
-## <a name="permissions"></a>権限  
- 実行のアクセス許可がのメンバーに限定する、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ 実行のアクセス許可がのメンバーに制限されます、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`inventory` データベースを削除できるかどうかを確認します。  

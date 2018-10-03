@@ -1,45 +1,42 @@
 ---
-title: スクロール可能なカーソルの種類 |Microsoft ドキュメント
+title: スクロール可能なカーソルの種類 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54acbd1010d546649b1ad92a34289fa4d04da162
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6290d18ec26fcfa6e2960c3a2c1c408938d9e0e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720500"
 ---
 # <a name="scrollable-cursor-types"></a>スクロール可能なカーソルの種類
-次の 4 つの種類のスクロール可能なカーソルは静的、動的、キーセット ドリブン、混合です。 静的カーソルは、ほとんどまたはまったく変更の検出が、比較的負荷の少ないを実装するのには、します。 動的カーソルでは、すべての変更を検出が、実装にコストがかかります。 キーセット ドリブン カーソルと混合カーソルは、動的カーソルよりも少ない経費では、ほとんどの変更を検出する間にあります。  
+4 つの種類のスクロール可能なカーソルは、静的、動的、キーセット ドリブン、混合。 静的カーソルはほとんどまたはまったく変更を検出しますが、比較的負荷の実装には。 動的カーソルはすべての変更を検出しますが、実装にコストがかかります。 カーソルのキーセット ドリブン、混合は、動的カーソルよりも少ない費用でが、ほとんどの変更を検出する間にあります。  
   
  スクロール可能なカーソルの種類ごとの特性を定義する、次の用語が使用されます。  
   
--   **独自の更新、削除、および挿入します。** 更新、削除、およびへの呼び出しのいずれかと、カーソルによって行われた挿入**SQLBulkOperations**または**SQLSetPos**または位置指定の delete ステートメントまたは更新します。  
+-   **独自の更新、削除、および挿入します。** 更新、削除、および呼び出しを使用するか、カーソルによって行われた挿入**SQLBulkOperations**または**SQLSetPos**または位置指定の delete ステートメントまたは更新します。  
   
--   **削除すると、および挿入します。 他の更新します。** 更新、削除、およびいないなど、同じトランザクションでは、その他の操作によって行われた、カーソルによって行われた挿入、他のトランザクションを通じて行われますが、および他のアプリケーションによって行われたものです。  
+-   **更新プログラムの他、削除、および挿入します。** 更新、削除、およびしない同じトランザクション内でその他の操作によって行われたものも含め、カーソルによって行われた挿入、他のトランザクションによるものおよび他のアプリケーションによって行われたものです。  
   
 -   **メンバーシップ。** 結果セット内の行のセット。  
   
--   **順序です。** カーソルによって返される行の順序。  
+-   **順序。** 順序は、カーソルによって行が返されます。  
   
--   **値。** 結果セット内の各行の値。  
+-   **値。** 結果セットの各行の値。  
   
- 更新、削除、およびデータを挿入する方法については、次を参照してください。[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)です。  
+ 更新、削除、およびデータを挿入する方法については、次を参照してください。[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

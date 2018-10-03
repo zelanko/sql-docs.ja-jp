@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 11/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, msdb database
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - jobs [SQL Server], msdb database
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f3eef98f3440c54c5cd55fc922322d444c39a6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81debaec491c03873fceac894268d2c1b00e7f39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647400"
 ---
 # <a name="msdb-database"></a>msdb データベース
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,34 +52,34 @@ ms.locfileid: "32931235"
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|いいえ|  
-|ANSI_NULL_DEFAULT|OFF|はい|  
-|ANSI_NULLS|OFF|はい|  
-|ANSI_PADDING|OFF|はい|  
-|ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
-|AUTO_CLOSE|OFF|はい|  
-|AUTO_CREATE_STATISTICS|ON|はい|  
-|AUTO_SHRINK|OFF|はい|  
-|AUTO_UPDATE_STATISTICS|ON|はい|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
+|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
+|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
+|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
+|ARITHABORT|OFF|[ユーザー アカウント制御]|  
+|AUTO_CLOSE|OFF|[ユーザー アカウント制御]|  
+|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_SHRINK|OFF|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
-|CURSOR_DEFAULT|GLOBAL|はい|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> はい|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
-|DB_CHAINING|ON|はい|  
+|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
+|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> [ユーザー アカウント制御]|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
+|DB_CHAINING|ON|[ユーザー アカウント制御]|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|ON|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|はい|  
-|PAGE_VERIFY|CHECKSUM|はい|  
-|PARAMETERIZATION|SIMPLE|はい|  
-|QUOTED_IDENTIFIER|OFF|はい|  
+|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
+|PAGE_VERIFY|CHECKSUM|[ユーザー アカウント制御]|  
+|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
+|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
-|RECOVERY|SIMPLE|はい|  
-|RECURSIVE_TRIGGERS|OFF|はい|  
-|Service Broker のオプション|ENABLE_BROKER|はい|  
-|TRUSTWORTHY|ON|はい|  
+|RECOVERY|SIMPLE|[ユーザー アカウント制御]|  
+|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
+|Service Broker のオプション|ENABLE_BROKER|[ユーザー アカウント制御]|  
+|TRUSTWORTHY|ON|[ユーザー アカウント制御]|  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   

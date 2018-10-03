@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_statistics_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c96ec5ab4069deb4f5fe4f4a2411bb2950dd3b5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d72e2c9f79e2029e26275be46e200d476dbf621a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073405"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704550"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,14 +76,14 @@ sp_statistics [ @table_name = ] 'table_name'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 この列は、NULL の場合もあります。|  
-|**TABLE_OWNER**|**sysname**|テーブルの所有者名です。 この列は、常に値を返します。|  
-|**TABLE_NAME**|**sysname**|テーブル名です。 この列は、常に値を返します。|  
+|**TABLE_OWNER**|**sysname**|テーブルの所有者名です。 この列は常に値が返されます。|  
+|**TABLE_NAME**|**sysname**|テーブル名です。 この列は常に値が返されます。|  
 |**NON_UNIQUE**|**smallint**|NULL 以外です。<br /><br /> 0 = 一意<br /><br /> 1 = 一意ではない|  
 |**INDEX_QUALIFIER**|**sysname**|インデックス所有者の名前。 DBMS 製品の中には、テーブル所有者以外のユーザーでもインデックスを作成できるものがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は常に同じ**TABLE_NAME**します。|  
-|**INDEX_NAME**|**sysname**|インデックスの名前。 この列は、常に値を返します。|  
+|**INDEX_NAME**|**sysname**|インデックスの名前。 この列は常に値が返されます。|  
 |**TYPE**|**smallint**|この列は常に値を返します。<br /><br /> 0 = テーブルの統計<br /><br /> 1 = クラスター化<br /><br /> 2 = ハッシュ化<br /><br /> 3 = 非クラスター化|  
 |**SEQ_IN_INDEX**|**smallint**|インデックス内での列の位置。|  
-|**COLUMN_NAME**|**sysname**|各列の列名、 **TABLE_NAME**が返されます。 この列は、常に値を返します。|  
+|**COLUMN_NAME**|**sysname**|各列の列名、 **TABLE_NAME**が返されます。 この列は常に値が返されます。|  
 |**COLLATION**|**char(1)**|照合順序で使用されている並べ替え順。 次の値をとります。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし|  
 |**カーディナリティ**|**int**|テーブル内の行数またはインデックス内の一意な値の個数。|  
 |**ページ**|**int**|インデックスまたはテーブルを格納するページ数。|  

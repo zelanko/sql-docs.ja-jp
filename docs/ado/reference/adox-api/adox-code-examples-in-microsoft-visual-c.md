@@ -1,32 +1,29 @@
 ---
-title: Microsoft Visual C のコード例を ADOX |Microsoft ドキュメント
+title: Microsoft Visual C での ADOX のコード例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9e4e686ad1203675ea42d3bcf8291a863ae48
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e72c7714ad5aae30deace933a35f42002ecd3d26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709270"
 ---
-# <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C のコード例を ADOX
-これらのトピックでは、ADOX を使用する方法を理解するためのサンプル コードを提供します。 すべてのコード例は、Microsoft Visual C を使用して書き込まれます。  
+# <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ での ADOX のコード例
+これらのトピックでは、ADOX を使用する方法を理解するのに役立つサンプル コードを提供します。 すべてのコード例では、Microsoft Visual C を使用して書き込まれます。  
   
 > [!NOTE]
 >  全体のコード例は、最初から最後まで、コード エディターに貼り付けます。 部分的な例を使用する場合、または段落の書式設定が失われた場合、例が正しく動作しない可能性があります。  
@@ -47,7 +44,7 @@ ms.locfileid: "35284881"
   
 -   [Indexes Append メソッドの例 (VC++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
--   [キーを追加メソッド、キーの種類、RelatedColumn、RelatedTable、および UpdateRule プロパティの使用例 (vc++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、および UpdateRule プロパティの例 (vc++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 ## <a name="properties"></a>[プロパティ]  
   
@@ -59,7 +56,7 @@ ms.locfileid: "35284881"
   
 -   [Command プロパティおよび CommandText プロパティの例 (VC++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
--   [コマンドのプロパティ、パラメーター コレクションの例 (vc++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Command プロパティ、パラメーター コレクションの例 (vc++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
 -   [DateCreated および DateModified プロパティの例 (VC++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
@@ -69,9 +66,9 @@ ms.locfileid: "35284881"
   
 -   [IndexNulls プロパティの例 (VC++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
--   [キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティ、キーの追加メソッドの例 (vc++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティ、キーの Append メソッドの例 (vc++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
--   [Name プロパティ、列およびテーブルの追加方法の例 (vc++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Name プロパティ、Columns および Tables Append メソッドの例 (vc++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [NumericScale および Precision プロパティの例 (VC++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   

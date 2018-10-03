@@ -5,11 +5,7 @@ ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_usage_TSQL
@@ -22,17 +18,16 @@ helpviewer_keywords:
 - resource_usage
 - sys.resource_usage
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cc8f9c68bd6074439203c384c99b407022f90997
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0a79eed306e8920ece4cc6ea1de97352c4706622
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985054"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604620"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,7 +49,7 @@ ms.locfileid: "37985054"
 |-------------|---------------|-----------------|  
 |time|**datetime**|1 時間単位の時刻 (UTC)。|  
 |database_name|**nvarchar**|ユーザー データベースの名前。|  
-|sku|**nvarchar**|SKU の名前です。 使用できる値を次に示します。<br /><br /> Web<br /><br /> ビジネス<br /><br /> [標準]<br /><br /> Standard<br /><br /> Premium|  
+|sku|**nvarchar**|SKU の名前です。 使用できる値を次に示します。<br /><br /> Web<br /><br /> ビジネス<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
 |usage_in_seconds|**int**|1 時間の間隔において使用された CPU 時間の合計。<br /><br /> 注: この列は非推奨 v11 と V12 には適用されません。 **値は常に 0 に設定します。**|  
 |storage_in_megabytes|**decimal**|1 時間の間隔の最大ストレージ サイズ。これにはデータベースのデータ、インデックス、ストアド プロシージャ、メタデータが含まれます。|  
   

@@ -1,38 +1,33 @@
 ---
-title: data 関数 (XQuery) |Microsoft ドキュメント
+title: data 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:data function
 - data function [XQuery]
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 74f8e5b5df2b8a6a95766576bdf5a1c8d83a4027
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 949286cef32dd3c6c9e55e1ad34504afffc20989
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734051"
 ---
-# <a name="data-accessor-functions---data-xquery"></a>データ アクセサー関数のデータ (XQuery)
+# <a name="data-accessor-functions---data-xquery"></a>データ アクセサー関数 - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  指定された各項目の型指定された値を返します *$arg*です。  
+  指定された各項目の型指定された値を返します *$arg*します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +40,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  型指定された値を返す対象となるアイテムのシーケンス。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  型指定された値には、次のことが当てはまります。  
   
 -   アトミック値の型指定された値は、アトミック値になります。  
@@ -62,19 +57,19 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   属性ノードが XML スキーマ型で型指定されている場合、このノードの型指定された値は XML スキーマ型に応じた型の値になります。  
   
--   属性ノードが型指定された場合は、その型指定された値のインスタンスとして返される文字列値に等しい**xdt:untypedAtomic**です。  
+-   インスタンスとして返される文字列値をその型指定された値は属性ノードが型指定された場合は、 **xdt:untypedAtomic**します。  
   
--   要素ノードが型指定されていない場合、型指定された値のインスタンスとして返される文字列値に等しい**xdt:untypedAtomic**です。  
+-   インスタンスとして返される文字列値をその型指定された値は、要素ノードが型指定されていない場合**xdt:untypedAtomic**します。  
   
  型指定された要素ノードには、次のことが当てはまります。  
   
--   要素に単純なコンテンツの種類がある**data()** 要素の型指定された値を返します。  
+-   要素が単純なコンテンツの種類、 **data()** 要素の型指定された値を返します。  
   
 -   ノードが、xs:anyType などの複合型の場合**data()** 静的エラーが返されます。  
   
- 使用していますが、 **data()** を指定する、次の例に示すように、関数が頻繁に省略可能な**data()** 関数は、クエリの読みやすさを明示的に増加します。 詳細については、次を参照してください。 [XQuery の基礎](../xquery/xquery-basics.md)です。  
+ 使用していますが、 **data()** を指定する、次の例に示すように、関数は多くの場合、 **data()** 関数は、クエリの読みやすさを明示的に増加します。 詳細については、次を参照してください。 [XQuery の基礎](../xquery/xquery-basics.md)します。  
   
- 指定することはできません**data()** で、次のように、XML を構築します。  
+ 指定することはできません**data()** で、次に示すように、XML を構築します。  
   
 ```  
 declare @x xml  
@@ -83,7 +78,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>使用例  
- このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例**xml** AdventureWorks データベース内の列を入力します。  
+ このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. data() XQuery 関数によるノードの型指定された値の抽出  
  次のクエリを示していますが、どのように**data()** 関数を使用して、属性、要素、およびテキスト ノードの値を取得します。  
@@ -111,7 +106,7 @@ WHERE ProductModelID = 19
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- 前述のように、 **data()** 属性を作成するときに、関数は省略可能です。 指定しない場合、 **data()** 関数の場合、暗黙的と見なされます。 次のクエリは、前のクエリと同じ結果を生成します。  
+ 前述のように、 **data()** 属性を作成する場合は、関数は省略可能です。 指定しない場合、 **data()** 関数の場合、暗黙的と見なされます。 次のクエリは、前のクエリと同じ結果を生成します。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -132,7 +127,7 @@ WHERE ProductModelID = 19
   
  次の例では、インスタンスを**data()** 関数が必要です。  
   
- 次のクエリで **$pd/1: specifications/素材**を返します、<`Material`> 要素。 また、**データ ($pd/1: specifications/素材)** ため、xdt:untypedAtomic 型のデータの文字を返します <`Material`> は、型指定されていません。 入力が型指定された場合、結果の**data()** として型指定されて**xdt:untypedAtomic**です。  
+ 次のクエリで **$pd/1: specifications/素材**を返します、<`Material`> 要素。 また、**データ ($pd/1: specifications/素材)** ため、xdt:untypedatomic 型のデータの文字を返します <`Material`> は型指定されません。 入力が型指定された場合、結果の**data()** として型指定された**xdt:untypedAtomic**します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -156,7 +151,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- 次のクエリで**data($pd/p1:Features/wm:Warranty)** ため、静的なエラーが返されます <`Warranty`> は、複合型の要素。  
+ 次のクエリで**data($pd/p1:Features/wm:Warranty)** ために、静的なエラーを返します <`Warranty`> は複合型の要素です。  
   
 ```  
 WITH XMLNAMESPACES (  

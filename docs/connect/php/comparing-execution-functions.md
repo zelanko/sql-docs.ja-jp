@@ -1,27 +1,24 @@
 ---
-title: 実行関数の比較 |Microsoft ドキュメント
+title: 実行関数の比較 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - executing queries
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13e0e772a30480ffeb47266d83744f2488e28dba
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 46a1f3e53c4953f08400d5d5599bec348fb6b15c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749441"
 ---
 # <a name="comparing-execution-functions"></a>実行関数の比較
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,5 +42,5 @@ PDO_SQLSRV ドライバーを使用している場合は、次のいずれかで
 
 [PDO_SQLSRV ドライバー リファレンス](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
-[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
   

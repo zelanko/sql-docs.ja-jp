@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b70c19790ca3f9a09b2e18217f48190889c74624
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3c2a2ec4b26bdc216dc96080171ecd0cff0816e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821950"
 ---
 # <a name="data-mining-model-training-destination"></a>データ マイニング モデル トレーニング変換先
   データ マイニング モデル トレーニング変換先は、変換先が受け取るデータをデータ マイニング モデル アルゴリズムに渡すことにより、データ マイニング モデルのトレーニングを行います。 複数のデータ マイニング モデルが同じデータ マイニング構造に基づいて構築されている場合は、1 つの変換先を使用してトレーニングできます。 詳細については、「 [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md) 」と「 [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)」を参照してください。  
@@ -56,7 +53,7 @@ ms.locfileid: "35333136"
 ## <a name="data-mining-model-training-editor-connection-tab"></a>[データ マイニング モデル トレーニング エディター] ([接続] タブ)
   **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、トレーニング用のマイニング モデルを選択できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[ODBC 入力先エディター]**  
  既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続の一覧から選択するか、次に示す手順で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [新規作成] **ボタンを使用して新しい** 接続を作成します。  
   
@@ -75,7 +72,7 @@ ms.locfileid: "35333136"
 ## <a name="data-mining-model-training-editor-columns-tab"></a>[データ マイニング モデル トレーニング エディター] ([列] タブ)
   **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列をマイニング構造の列にマップできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 入力列をドラッグしてマイニング構造列にマップします。  
   

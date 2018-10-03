@@ -1,13 +1,11 @@
 ---
-title: ODBC SQL 文法 (Visual FoxPro ODBC ドライバー) をサポート |Microsoft ドキュメント
+title: ODBC SQL 文法 (Visual FoxPro ODBC ドライバー) のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native Visual FoxPro language syntax [ODBC]
@@ -18,34 +16,33 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 - FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7eccb1bbdb86ded6b949756b4e5762a83a59fc0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751020"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>サポートされている ODBC SQL 文法 (Visual FoxPro ODBC ドライバー)
 Microsoft Visual FoxPro ODBC ドライバーには、次のサポートされています。  
   
--   すべての SQL ステートメントと、ODBC SQL の文法で句  
+-   すべての SQL ステートメントと、ODBC SQL 文法で句  
   
--   ODBC core SQL 文法から追加の SQL ステートメント  
+-   ODBC core SQL 文法の他の SQL ステートメント  
   
- 次の表は、ODBC SQL 文法レベルによって、ドライバーでサポートされている項目を一覧表示します。  
+ 次の表には、ODBC SQL 文法のレベルによって、ドライバーでサポートされている項目が表示されます。  
   
-|レベル|要素|アイテム|  
+|Level|要素|アイテム|  
 |-----------|--------------|----------|  
 |最小|データ定義言語 (DDL)|CREATE TABLE、および DROP TABLE|  
 ||データ操作言語 (DML)|選択、挿入、更新、および削除|  
 ||式|単純な (A など > + C)|  
 ||データ型|CHAR、VARCHAR、LONG VARCHAR|  
   
- だけでなく、サポートされている ODBC SQL 文法は、Visual FoxPro ODBC ドライバーは、次の Visual FoxPro コマンドの完全なネイティブ Visual FoxPro 言語構文をサポートします。  
+ だけでなく、サポートされている ODBC SQL の文法は、Visual FoxPro ODBC ドライバーは、次の Visual FoxPro コマンドを完全なネイティブ Visual FoxPro 言語構文をサポートします。  
   
  [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   

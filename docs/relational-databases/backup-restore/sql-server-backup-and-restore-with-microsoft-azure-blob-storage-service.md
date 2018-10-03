@@ -5,21 +5,18 @@ ms.date: 07/25/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 437b6205bc76b97bd48ca0b617088750af0088d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920127"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805460"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.locfileid: "32920127"
   
 -   **Azure BLOB Storage 内のデータベース ファイルのファイル スナップショット バックアップ** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップでは、Azure のスナップショットを利用することで、Azure BLOB Storage サービスで格納されているデータベース ファイルのバックアップと復元をほぼ即時に実行できます。 この機能を利用すると、バックアップと復元のポリシーを簡素化し、ポイントインタイム リストアをサポートできます。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。 この機能は、SQL Server 2016 以降で使用できます。  
   
--   **SQL Server で Microsoft Azure にバックアップする方法:** SQL Server を構成することにより、単一データベースまたは複数データベースのバックアップ方法やスケジュールを管理することも、インスタンス レベルでの既定値を設定することもできます。 この機能は、 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** と呼ばれるものです。 詳細については、「 [Microsoft Azure への SQL Server マネージ バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。 この機能は、SQL Server 2014 以降で使用できます。  
+-   **SQL Server で Microsoft Azure にバックアップする方法:** SQL Server を構成することにより、単一データベースまたは複数データベースのバックアップ方法やスケジュールを管理することも、インスタンス レベルでの既定値を設定することもできます。 この機能は、 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** と呼ばれるものです。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。 この機能は、SQL Server 2014 以降で使用できます。  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Microsoft Azure BLOB Service を使用する利点  
   

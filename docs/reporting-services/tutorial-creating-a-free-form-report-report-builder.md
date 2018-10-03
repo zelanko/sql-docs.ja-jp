@@ -4,19 +4,16 @@ ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfd009008af99f853079c26e566a3b7194b4e304
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 249025217a11483d1538c7fe0c72ee1cf0832f3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265924"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717250"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル: 自由形式のレポートの作成 (レポート ビルダー)
 このチュートリアルでは、ニュースレターとして機能する、ページ分割されたレポートを作成します。 各ページには、固定テキスト、概要ビジュアル、詳細サンプル セールス データが表示されます。

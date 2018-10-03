@@ -1,13 +1,11 @@
 ---
-title: SeekEnum |Microsoft ドキュメント
+title: SeekEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f61e71b03a05a8e13c1b069e4880f362ff0985a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772730"
 ---
 # <a name="seekenum"></a>SeekEnum
 型を指定[シーク](../../../ado/reference/ado-api/seek-method.md)を実行します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|最初のキーと等しいをシーク*keyvalues とも*します。|  
-|**adSeekLastEQ**|2|最後のキーと等しいをシーク*keyvalues とも*します。|  
-|**adSeekAfterEQ**|4|等しいか、キーをシーク*keyvalues とも*または直後に一致するが発生したとします。|  
-|**adSeekAfter**|8|Where の直後に、キーをシークとの一致*keyvalues とも*発生します。|  
-|**adSeekBeforeEQ**|16|等しいか、キーをシーク*keyvalues とも*かその直前までと一致するが発生したとします。|  
-|**adSeekBefore**|32|場所と一致するキーの直前にシーク*keyvalues とも*発生します。|  
+|**adSeekFirstEQ**|1|等しい最初のキーをシーク*KeyValues*します。|  
+|**adSeekLastEQ**|2|最後のキーと等しいをシーク*KeyValues*します。|  
+|**adSeekAfterEQ**|4|等しいか、キーをシーク*KeyValues*またはと一致するが、発生した後だけです。|  
+|**adSeekAfter**|8|場所の直後に、キーをシークとの一致*KeyValues*発生します。|  
+|**adSeekBeforeEQ**|16|等しいか、キーをシーク*KeyValues*かその直前まで一致するが発生した場所。|  
+|**adSeekBefore**|32|キーの場所と一致する直前にシーク*KeyValues*発生します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

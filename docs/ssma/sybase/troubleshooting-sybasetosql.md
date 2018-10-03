@@ -1,34 +1,28 @@
 ---
-title: トラブルシューティング (SybaseToSQL) |Microsoft ドキュメント
+title: トラブルシューティング (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Sybase Console,Troubleshooting
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 38f374290f7580a25e0be38ba4921476fd821e7e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d2f8fa753623e9b7d978556c16c5c4bbeba6efe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664360"
 ---
 # <a name="troubleshooting-sybasetosql"></a>トラブルシューティング (SybaseToSQL)
-移行の問題中間にあるコンソール スクリプトまたはコマンドの実行に実行するは珍しいことはできません。  
+コンソールのスクリプトまたはコマンドを実行する移行の問題の途中に実行することは珍しくありません。  
   
-修正可能であるエラーの関連可能性があります。  
+修正可能であるエラーの関連する可能性があります。  
   
 1.  機能  
   
@@ -40,7 +34,7 @@ ms.locfileid: "34779428"
   
 5.  データ型を変更します。  
   
-6.  プロジェクト設定を変更します。  
+6.  プロジェクトの設定を変更します。  
   
-問題を解決するには、コンソールで作成されたプロジェクト ファイルを開いて、SSMA ユーザー インターフェイスを使用しています。  
+SSMA ユーザー インターフェイスを使用して、コンソールを使って作成されたプロジェクト ファイルを開き、問題を修正できます。  
   

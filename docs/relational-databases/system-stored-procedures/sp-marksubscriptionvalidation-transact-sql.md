@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_marksubscriptionvalidation
 - sp_marksubscriptionvalidation_TSQL
 helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b6dc308d98d56ed3ecdc88b53624d0842cc90c5
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c4d649403a04aa48475705059328656d81ae8597
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028719"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748910"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +73,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_marksubscriptionvalidation**します。  
   
 ## <a name="example"></a>例  
- 次のクエリは、サブスクリプションレベルの検証コマンドを通知するために、パブリッシング データベースに適用できます。 これらのコマンドは、指定されたサブスクライバーのディストリビューション エージェントによって処理されます。 最初のトランザクションがアーティクルを検証することに注意してください '**art1**'、2 番目に、トランザクションを検証します**art2**'。 またを注意への呼び出し**sp_marksubscriptionvalidation**と[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)トランザクションにカプセル化されました。 1 つだけの呼び出しをお勧め[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) (トランザクションあたり)。 これは、ため[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 、トランザクションの実行中のソース テーブルで、共有テーブル ロックを保持します。 同時実行性を最大限に高めるために、トランザクションは短くしてください。  
+ 次のクエリは、サブスクリプションレベルの検証コマンドを通知するために、パブリッシング データベースに適用できます。 これらのコマンドは、指定されたサブスクライバーのディストリビューション エージェントによって処理されます。 最初のトランザクションがアーティクルを検証することに注意してください '**art1**'、2 番目に、トランザクションを検証します**art2**'。 またを注意への呼び出し**sp_marksubscriptionvalidation**と[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)トランザクションにカプセル化されました。 1 つだけの呼び出しをお勧め[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) (トランザクションあたり)。 これは、ため[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 、トランザクションの実行中のソース テーブルで、共有テーブル ロックを保持します。 コンカレンシーを最大限に高めるために、トランザクションは短くしてください。  
   
 ```  
 begin tran  

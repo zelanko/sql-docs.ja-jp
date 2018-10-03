@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
@@ -17,23 +15,21 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc5ca43e247a0cf2114b471f4f5096066fa7b3cf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c69319c2962dc8158e1c2565faee65e982812f92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689530"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler のテンプレート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、トレースに含めるイベント クラスとデータ列を定義するテンプレートを作成できます。 テンプレートを定義して保存したら、選択したイベント クラスごとにデータを記録するトレースを実行できます。 テンプレートは多くのトレースで使用できますが、テンプレート自体は実行できません。  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、事前に定義済みのトレース テンプレートが用意されています。これにより、特定のトレースでよく使用するイベント クラスを簡単に構成できるようになります。 たとえば、Standard テンプレートは、ログイン、ログアウト、完了したバッチ、および接続に関する情報を記録するための汎用トレースの作成に役立ちます。 このテンプレートは、変更しないでトレースの実行に使用するか、異なるイベントの構成を持つ新たなテンプレートの基礎として使用できます。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、事前に定義済みのトレース テンプレートが用意されています。これにより、特定のトレースでよく使用するイベント クラスを簡単に構成できるようになります。 たとえば、Standard テンプレートは、ログイン、ログアウト、完了したバッチ、および接続に関する情報を記録するための汎用トレースの作成に役立ちます。 このテンプレートは、変更しないでトレースの実行に使用するか、異なるイベントの構成を持つ新たなテンプレートの基礎として使用できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、定義済みテンプレートからだけでなく、既定ではイベント クラスは含まれていない空のテンプレートからもトレース テンプレートを作成できます。 空のトレース テンプレートは、計画したトレースがどの定義済みテンプレートの構成とも似ていないときに使用します。  

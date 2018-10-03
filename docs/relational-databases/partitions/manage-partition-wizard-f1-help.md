@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: partitions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.managepartition.createjob.f1
@@ -27,12 +24,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98a2e2b5f9b752b01070898a72672c378f5d6e7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61cf0d2acb9dbe2e2f5a9ec68be92cecf16ce22b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332982"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731680"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>パーティションの管理ウィザードの F1 ヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +177,7 @@ ms.locfileid: "37332982"
 ##  <a name="NewJob"></a> [新しいジョブ スケジュール] ページ  
  **[新しいジョブ スケジュール]** ページを使用すると、スケジュールのプロパティを表示したり、変更したりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに必要なスケジュールの種類を選択します。  
   
  **名前**  
@@ -272,7 +269,7 @@ ms.locfileid: "37332982"
 ##  <a name="Progress"></a> [進行状況] ページ  
  **[進行状況]** ページを使用すると、 **パーティションの管理ウィザード**のアクションに関する状態情報を監視できます。 ウィザードで選択したオプションに応じて、 **[進行状況]** ページに 1 つまたは複数のアクションが含まれる可能性があります。 上部のボックスには、ウィザードの全体的な状態と受信した状態メッセージ、エラー メッセージ、および警告メッセージの数が表示されます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **詳細**  
  アクション、状態、およびウィザードで実行したアクションから返されたメッセージが提供されます。  
   

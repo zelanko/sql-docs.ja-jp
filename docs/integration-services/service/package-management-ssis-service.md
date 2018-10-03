@@ -5,9 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.dtsserver.importpackage.f1
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 719d14ccca346ee2f89aab62cc61887652db6fba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329296"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701630"
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
   パッケージの管理には、パッケージの監視、管理、インポートおよびエクスポートが含まれます。  
@@ -195,7 +192,7 @@ ms.locfileid: "35329296"
 ## <a name="import-package-dialog-box-ui-reference"></a>[パッケージのインポート] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのインポート] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをインポートしたり、パッケージの保護レベルの設定や変更を行ったりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[パッケージの場所]**  
  パッケージをインポートする格納場所の種類を選択します。 使用できるオプションは以下のとおりです。  
   
@@ -235,7 +232,7 @@ ms.locfileid: "35329296"
 ## <a name="export-package-dialog-box-ui-reference"></a>[パッケージのエクスポート] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのエクスポート] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを別の場所にエクスポートしたり、必要に応じてパッケージの保護レベルを変更したりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[パッケージの場所]**  
  パッケージをエクスポートする格納場所の種類を選択します。 使用できるオプションは以下のとおりです。  
   

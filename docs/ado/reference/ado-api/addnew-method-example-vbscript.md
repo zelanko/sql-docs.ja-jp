@@ -1,36 +1,33 @@
 ---
-title: AddNew メソッドの例 (VBScript) |Microsoft ドキュメント
+title: AddNew メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a67a9dd7ba9e280da6b361d7473ae8c6f6d2cac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e5d6db633a5c718ea38d2b8959fa54305ec02883
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275251"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701620"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew メソッドの例 (VBScript)
 この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。  
   
- アクティブ サーバー ページ (ASP) で次の例を使用します。 使用して**検索**Adovbs.inc ファイルを見つけて、使用する予定のディレクトリに配置します。 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**AddNewVBS.asp**です。 結果は、任意のクライアント ブラウザーで表示できます。  
+ 次の例を Active Server Page (ASP) で使用します。 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**AddNewVBS.asp**します。 結果は、任意のクライアント ブラウザーで表示できます。  
   
- 例を実行するには、HTML フォームで新しいレコードを追加します。 をクリックして**新規追加**です。 参照してください、[削除メソッドの例](../../../ado/reference/ado-api/delete-method-example-vbscript.md)不要なレコードを削除します。  
+ 例を実行するには、HTML フォームに新しいレコードを追加します。 クリックして**新規追加**します。 参照してください、[削除メソッドの例](../../../ado/reference/ado-api/delete-method-example-vbscript.md)不要なレコードを削除します。  
   
 ```  
 <!-- BeginAddNewVBS -->  

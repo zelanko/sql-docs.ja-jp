@@ -5,9 +5,7 @@ ms.date: 11/23/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5cabb4763e85f8f1d052aa797ec6f868d9dac0aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab08ae1055d18b036f34791cbb90ccc95071e16e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639960"
 ---
 # <a name="database-engine-service-startup-options"></a>データベース エンジン サービスのスタートアップ オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +49,14 @@ ms.locfileid: "32869737"
   
 ## <a name="list-of-startup-options"></a>スタートアップ オプションの一覧  
 ### <a name="default-startup-options"></a>既定のスタートアップ オプション  
-|および|Description|  
+|[変数]|[説明]|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|master データベース ファイルの完全修飾パス (通常は、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf)。 このオプションを省略すると、レジストリ内にあるパラメーターが使用されます。|  
 |**-e**  *error_log_path*|エラー ログ ファイルの完全修飾パス (通常は、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG) です。 このオプションを省略すると、レジストリ内にあるパラメーターが使用されます。|  
 |**-l**  *master_log_path*|master データベース ログ ファイルの完全修飾パス (通常は、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf)。 このオプションを指定しない場合は、レジストリ内にあるパラメーターが使用されます。|  
   
 ### <a name="other-startup-options"></a>他のスタートアップ オプション   
-|および |Description|   
+|[変数] |[説明]|   
 |---------------------------|-----------------|  
 |**-c**|コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動する場合に、起動時間を短縮します。 通常、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、サービス コントロール マネージャーを呼び出すことにより、サービスとして起動します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、コマンド プロンプトから起動した場合はサービスとして起動しないため、 **-c** を使用してこの手順を省略します。|  
 |**-f**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを最小構成で起動します。 設定値によりサーバーが起動できないとき (たとえば使用できるメモリが不足している場合) などに便利です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を最小構成モードで起動すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシングル ユーザー モードになります。 詳細については、後の **-m** の説明を参照してください。|  

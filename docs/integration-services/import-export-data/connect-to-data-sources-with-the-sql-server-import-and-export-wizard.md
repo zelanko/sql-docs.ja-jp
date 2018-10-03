@@ -5,21 +5,18 @@ ms.date: 02/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abbc9354d0df37f122aae398b45a35c4b40fee7c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 28fc6d66c9f64be96220154f011a62fe3af97676
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669530"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する
 このセクションのトピックでは、SQL Server インポートおよびエクスポート ウィザードを実行するときに、よく使用されるさまざまなデータ ソースに接続する方法を説明します。 ウィザードの **[データ ソースの選択]** ページと **[変換先の選択]** ページにデータ ソースの接続情報を入力する必要があります。

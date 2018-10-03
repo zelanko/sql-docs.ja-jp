@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.unionalltrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 076869a12f0c634bf73152a3685f82f52b1bdc2b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4fb378c8ec2021e856c654f57844de1d36a67746
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408214"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710140"
 ---
 # <a name="union-all-transformation"></a>全体結合変換
   全体結合変換は、複数の入力を 1 つの出力に結合します。 たとえば、5 つの異なるフラット ファイル ソースからの出力を全体結合変換への入力とし、1 つの出力に結合できます。  
@@ -55,7 +52,7 @@ ms.locfileid: "35408214"
 ## <a name="union-all-transformation-editor"></a>全体結合変換エディター
   **[全体結合変換エディター]** ダイアログ ボックスを使用すると、複数の入力行セットを 1 つの出力行セットにマージできます。 データ フローに全体結合変換を含めることで、複数のデータ フローのデータをマージしたり、全体結合変換を入れ子にして複雑なデータセットを作成したり、データ内のエラーを修正した後で行を再マージしたりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[出力列の名前]**  
  各列に対して別名を入力します。 既定では最初の (参照) 入力の入力列の名前が使用されますが、一意なわかりやすい名前を任意に付けることもできます。  
   

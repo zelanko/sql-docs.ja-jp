@@ -1,13 +1,11 @@
 ---
-title: 同時実行の種類 |Microsoft ドキュメント
+title: 同時実行の種類 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - optimistic concurrency [ODBC]
 - read-only concurrency control [ODBC]
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b5970995d3b8f881b62556b0f12eac96d302760
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12891d7ee674167157bcb02300d2e4181ef51734
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911857"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656456"
 ---
-# <a name="concurrency-types"></a>同時実行の種類
-カーソルの削減の同時実行の問題を解決するには、ODBC は、次の 4 つのさまざまな種類のカーソルの同時実行を公開します。  
+# <a name="concurrency-types"></a>コンカレンシーの種類
+削減カーソルの同時実行の問題を解決するためには、ODBC は、4 種類のカーソルの同時実行を公開します。  
   
--   **読み取り専用**カーソルことができますデータの読み取りができないデータ更新または削除します。 これは、既定の同時実行の種類です。 DBMS には、Repeatable Read と Serializable 分離レベルを適用する行をロックが、書き込みロックではなく読み取りロックを使用できます。 これは、結果、他のトランザクションでは、データを読み取ることができますには、少なくともため同時実行性。  
+-   **読み取り専用**カーソルからデータを読み取ることができますが、更新ことはできません、またはデータを削除します。 これは、既定の同時実行の種類です。 DBMS は、Repeatable Read と Serializable 分離レベルを適用する行をロックが書き込みロックではなく読み取りロックを使用できます。 これは、結果、他のトランザクションは、データを読み取るには少なくともできるため、高い同時実行性。  
   
--   **ロック**カーソルは、最低限のロックを更新したり、結果セット内の行を削除したりかどうかを確認するために必要なを使用します。 これは、通常、Repeatable Read および Serializable トランザクション分離レベルで特に、非常に低い同時実行レベルで発生します。  
+-   **ロック**カーソルは更新または削除の結果セット内の行かどうかを確認するために必要なロックの最下位のレベルを使用します。 通常、この結果、Repeatable Read および Serializable トランザクション分離レベルで特に、非常に低い同時実行レベル。  
   
--   **行のバージョンを使用してオプティミスティック同時実行と値を使用してオプティミスティック同時実行**カーソルはオプティミスティック同時実行制御を使用: 更新または最後の読み取り以降に変更されていない場合にのみ、行を削除します。 変更を検出するには、行のバージョンまたは値を比較します。 カーソルは更新または行を削除するようになりますが、同時実行性がロックを使用する場合より高い保証はありません。 詳細については、次のセクションを参照してください。[オプティミスティック同時実行制御](../../../odbc/reference/develop-app/optimistic-concurrency.md)です。  
+-   **行のバージョンを使用してオプティミスティック同時実行とオプティミスティック同時実行制御の値を使用して**カーソルはオプティミスティック同時実行制御を使用: 更新または最後の読み取り以降に変更されていない場合にのみ行を削除します。 変更を検出するために行バージョンまたは値を比較します。 カーソルは更新または行を削除できるようになりますが、同時実行がロックを使用する場合よりも大幅に上回ってことの保証はありません。 詳細については、次のセクションを参照してください。[オプティミスティック同時実行制御](../../../odbc/reference/develop-app/optimistic-concurrency.md)します。  
   
- アプリケーションでは、SQL_ATTR_CONCURRENCY ステートメント属性で使用するカーソルが同時実行の種類を指定します。 サポートされる種類を決定するには、呼び出し**SQLGetInfo** SQL_SCROLL_CONCURRENCY オプションを使用します。
+ アプリケーションでは、また、ステートメント属性 SQL_ATTR_CONCURRENCY を使用するカーソルが同時実行の種類を指定します。 呼び出しがサポートされる種類を判断する**SQLGetInfo** SQL_SCROLL_CONCURRENCY オプションを使用します。

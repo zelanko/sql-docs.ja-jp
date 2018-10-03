@@ -1,14 +1,11 @@
 ---
-title: sp_detach_db (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_detach_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0f17581782cea310bcfad9ec6d7ce4823d1d38c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825670"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,15 +50,15 @@ sp_detach_db [ @dbname= ] 'database_name'
  デタッチするデータベースの名前を指定します *database_name*は、 **sysname**値、既定値は NULL です。  
   
  [  **@skipchecks =** ] **'***skipchecks***'**  
- UPDATE STATISTIC をスキップするか、実行するかを指定します。 *skipchecks*は、 **nvarchar (10)** 値、既定値は NULL です。 UPDATE STATISTICS をスキップするには、指定**true**です。 UPDATE STATISTICS を明示的に実行する指定**false**です。  
+ UPDATE STATISTIC をスキップするか、実行するかを指定します。 *skipchecks*は、 **nvarchar (10)** 値、既定値は NULL です。 UPDATE STATISTICS をスキップするには、指定**true**します。 UPDATE STATISTICS を明示的に実行する指定**false**します。  
   
  既定では、UPDATE STATISTICS が実行されると、テーブルおよびインデックスにあるデータに関する情報が更新されます。 UPDATE STATISTICS の実行は、データベースを読み取り専用メディアに移動する場合に使用すると便利です。  
   
  [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- データベースをデタッチするとき、そのデータベースに関連付けられているフルテキスト インデックス ファイルを削除しないことを指定します。 *KeepFulltextIndexFile*は、 **nvarchar (10)** 値、既定値は**true**です。 場合*KeepFulltextIndexFile*は**false**データベースに関連付けられているすべてのフルテキスト インデックス ファイル、およびデータベースが読み取り専用でない限り、フルテキスト インデックスのメタデータを削除します。 NULL の場合または**true**フルテキストの関連するメタデータが保持されます。  
+ データベースをデタッチするとき、そのデータベースに関連付けられているフルテキスト インデックス ファイルを削除しないことを指定します。 *KeepFulltextIndexFile*は、 **nvarchar (10)** 値、既定値は**true**します。 場合*KeepFulltextIndexFile*は**false**データベースに関連付けられているフルテキスト インデックスのすべてのファイルおよびデータベースが読み取り専用でない限り、フルテキスト インデックスのメタデータを削除します。 NULL の場合、または**true**、フルテキスト関連するメタデータが保持されます。  
   
 > [!IMPORTANT]  
->  **@keepfulltextindexfile**パラメーターは、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新規の開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く修正してください。  
+>  **@keepfulltextindexfile**パラメーターは将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新規の開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く修正してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -70,11 +66,11 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- データベースがデタッチされると、そのすべてのメタデータが削除されます。 データベースの任意のログイン アカウントの既定のデータベース場合**マスター**既定のデータベースになります。  
+## <a name="remarks"></a>コメント  
+ データベースがデタッチされると、そのすべてのメタデータが削除されます。 データベースが、任意のログイン アカウントの既定のデータベースであった場合**マスター**既定のデータベースになります。  
   
 > [!NOTE]  
->  すべてのログイン アカウントの既定のデータベースを表示する方法については、次を参照してください。 [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)です。 使用することが必要なアクセス許可があれば、 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)に新しい既定のデータベースをログインに割り当てます。  
+>  すべてのログイン アカウントの既定のデータベースを表示する方法については、次を参照してください。 [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)します。 使用することが必要なアクセス許可があれば、 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)に新しい既定のデータベースをログインに割り当てます。  
   
 ## <a name="restrictions"></a>制限  
  次のいずれかに該当する場合は、データベースをデタッチできません。  
@@ -83,7 +79,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   データベースがレプリケートされ、パブリッシュ済みとなっている。  
   
-     実行してパブリッシングを無効にする必要があります、データベースをデタッチする前に[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)です。  
+     実行してパブリッシングを無効にする必要があります、データベースをデタッチする前に[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)します。  
   
     > [!NOTE]  
     >  **sp_replicationdboption**を使用できない場合、 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)を実行してレプリケーションを削除できます。  
@@ -108,7 +104,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="obtaining-exclusive-access"></a>排他アクセスの取得  
  データベースのデタッチには、データベースに対する排他アクセスが必要です。 デタッチするデータベースが使用されている場合、デタッチするには、データベースを SINGLE_USER モードに設定して排他アクセスを取得する必要があります。  
   
- たとえば、次`ALTER DATABASE`ステートメントへの排他アクセスの取得、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースの現在のすべてのユーザーがデータベースから切断した後です。  
+ たとえば、次`ALTER DATABASE`ステートメントへの排他アクセスの取得、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースの現在のすべてのユーザーがデータベースから切断した後。  
   
 ```  
 USE master;  
@@ -118,13 +114,13 @@ GO
 ```  
   
 > [!NOTE]  
->  現在ユーザー データベースから直ちに、または指定した秒数も使用して、ROLLBACK オプション: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
+>  現在ユーザー データベースから直ちに、または指定された数 (秒単位) の使用しても、ROLLBACK オプション: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 ## <a name="reattaching-a-database"></a>データベースの再アタッチ  
  デタッチされたファイルはそのまま残り、FOR ATTACH または FOR ATTACH_REBUILD_LOG オプションを指定した CREATE DATABASE によって再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **sysadmin**固定サーバー ロールのメンバーシップまたは、 **db_owner**データベースの役割です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **sysadmin**固定サーバー ロールのメンバーシップまたは、 **db_owner**データベースの役割。  
   
 ## <a name="examples"></a>使用例  
  次の例のデタッチ、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]のデータベースが*skipchecks*を true に設定します。  
@@ -133,7 +129,7 @@ GO
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
- 次の例のデタッチ、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースし、フルテキスト インデックス ファイルとフルテキスト インデックスのメタデータを保持します。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
+ 次の例のデタッチ、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースし、フルテキスト インデックス ファイルおよびフルテキスト インデックスのメタデータが保持されます。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
   
 ```  
 exec sp_detach_db @dbname='AdventureWorks2012'  

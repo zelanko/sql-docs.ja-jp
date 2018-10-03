@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e06181582c7a08a7165f7e8545a170b5eec27310
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 35e3b5d32676526f696d8b95b6894c8edb411ead
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323453"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754547"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.locfileid: "34323453"
   
 |状態|[説明]|  
 |---------|---------------|  
-|@shouldalert|RC4 キーは、encryptbykey() 組み込み関数で使用されます。 組み込み関数は NULL を返します。 このメッセージは、リング バッファーにのみ表示されます。|  
+|1|RC4 キーは、encryptbykey() 組み込み関数で使用されます。 組み込み関数は NULL を返します。 このメッセージは、リング バッファーにのみ表示されます。|  
 |2|RC4 キーは、decryptbykey() 組み込み関数で使用されます。 このメッセージは、リング バッファーにのみ表示されます。|  
 |3|非推奨の RC4 キーは、対称キーを使用して暗号化されています。 ユーザーとリング バッファーに表示されます。 非推奨の RC4 対称キーは、互換性レベル 110 では変更できません。 暗号化操作には、RC4 以外のキーを使用してください。 必要に応じて、旧バージョンとの互換性レベルを 90 または 100 に設定してください。|  
 |4|RC4 以外のキーは、非推奨の RC4 対称キーを使用して暗号化されています。 ユーザーとリング バッファーに表示されます。 RC4 以外の対称キーを使用するようにアプリケーションを変更するか、旧バージョンとの互換性レベルを 90 または 100 に設定してください。|  

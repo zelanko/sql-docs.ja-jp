@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_stop_collection_set (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_syscollector_stop_collection_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_stop_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1464a9dfac11cf6b84a3895b94881d4825f9758c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dd5c396db88a8377a46bd965b664bc2a667d51de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784970"
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +45,23 @@ sp_syscollector_stop_collection_set
   
 ## <a name="arguments"></a>引数  
  [ @collection_set_id = ] *collection_set_id*  
- コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**で、既定値は NULL です。 *collection_set_id*場合、値が必要*名前*は NULL です。  
+ コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**既定値は NULL です。 *collection_set_id*場合、値が必要*名前*は NULL です。  
   
  [ @name =] '*名前*'  
- コレクション セットの名前を指定します。 *名前*は**sysname**で、既定値は NULL です。 *名前*場合、値が必要*collection_set_id*は NULL です。  
+ コレクション セットの名前を指定します。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_set_id*は NULL です。  
   
  [ @stop_collection_job = ] *stop_collection_job*  
  コレクション セットのコレクション ジョブが実行されている場合に、停止を指定します。 *stop_collection_job*は**ビット**既定値は 1 です。  
   
- *stop_collection_job*コレクション モードを設定してキャッシュにコレクション セットにのみ適用されます。 詳細については、次を参照してください。 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)です。  
+ *stop_collection_job*コレクション モードを設定してキャッシュにコレクション セットにのみ適用されます。 詳細については、次を参照してください。 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_operator 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

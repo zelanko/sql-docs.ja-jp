@@ -1,13 +1,11 @@
 ---
-title: BOF、EOF、およびブックマークのプロパティの例 (VB) |Microsoft ドキュメント
+title: BOF、EOF、および Bookmark プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276001"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698220"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF、およびブックマークのプロパティの例 (VB)
-この例では、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ユーザーは、最初と最後のレコードのを越えて移動しようとした場合にメッセージを表示するプロパティ、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 使用して、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティをユーザーが内のレコードにフラグを設定できるように、 **Recordset**後でそれに戻る。  
+# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF、および Bookmark プロパティの例 (VB)
+この例では、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ユーザーでは、最初と最後のレコードのを越えて移動しようとすると、メッセージを表示するプロパティを[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用して、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)ユーザーが内のレコードにフラグを設定できるプロパティ、**レコード セット**し、後で戻ります。  
   
 ```  
 'BeginBOFVB  
@@ -133,7 +130,7 @@ End Sub
 'EndBOFVB  
 ```  
   
- この例では、**ブックマーク**と[フィルター](../../../ado/reference/ado-api/filter-property.md)ビューの一部を作成するプロパティ、 **Recordset**です。 ブックマークの配列によって参照される唯一のレコードにアクセスできます。  
+ この例では、**ブックマーク**と[フィルター](../../../ado/reference/ado-api/filter-property.md)ビューの一部を作成するプロパティ、 **Recordset**します。 ブックマークの配列によって参照される唯一のレコードはアクセスできます。  
   
 ```  
 Attribute VB_Name = "BOF"  
