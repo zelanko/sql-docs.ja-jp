@@ -1,32 +1,29 @@
 ---
-title: ステータスのプロパティの例 (フィールド) (VB) |Microsoft ドキュメント
+title: Status プロパティの例 (Field) (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58c71c4f69cdd25de960eacba7370aa64b67bfb7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f6554e76488cd83452c0ab1617c9bd65e9196c11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282041"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816370"
 ---
-# <a name="status-property-example-field-vb"></a>状態プロパティ (フィールド) (VB) の使用例
-次の例を使用して読み取り/書き込みフォルダーからドキュメントを開くと、[インターネット パブリッシング用プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)です。 [ステータス](../../../ado/reference/ado-api/status-property-ado-field.md)のプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)のオブジェクト、[レコード](../../../ado/reference/ado-api/record-object-ado.md)は最初に設定されます**adFieldPendingInsert**、し、を更新します。**adfieldok で**です。  
+# <a name="status-property-example-field-vb"></a>Status プロパティの例 (Field) (VB)
+次の例を使用して読み取り/書き込みフォルダーからドキュメントを開くと、[インターネット パブリッシング用プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 [状態](../../../ado/reference/ado-api/status-property-ado-field.md)のプロパティを[フィールド](../../../ado/reference/ado-api/field-object.md)のオブジェクト、[レコード](../../../ado/reference/ado-api/record-object-ado.md)は最初に設定されます**adFieldPendingInsert**に更新します。**adfieldok で**します。  
   
 ```  
 'BeginStatusFieldVB  
@@ -83,13 +80,13 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- 次の例は既知の削除**フィールド**から、**レコード**ドキュメントから開きます。 **ステータス**プロパティが最初に設定する**adfieldok で**、し**adFieldPendingUnknown**です。  
+ 次の例では、既知の削除**フィールド**から、**レコード**からドキュメントを開きます。 **状態**プロパティが最初に設定する**adfieldok で**、し**adFieldPendingUnknown**します。  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
- 次のコードを削除、**フィールド**から、**レコード**読み取り専用のドキュメントを開きます。 **ステータス**に設定されます**adFieldPendingDelete**です。 [更新](../../../ado/reference/ado-api/update-method.md)、削除は失敗して**ステータス**なります**adFieldPendingDelete** plus **adFieldPermissionDenied**です。 [ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)をクリア、保留中**ステータス**設定します。  
+ 次のコードの削除、**フィールド**から、**レコード**読み取り専用のドキュメントを開きます。 **ステータス**に設定されます**adFieldPendingDelete**します。 [Update](../../../ado/reference/ado-api/update-method.md)、削除は失敗と**状態**なります**adFieldPendingDelete** plus **adFieldPermissionDenied**します。 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)クリア、保留中**状態**設定します。  
   
 ```  
 Attribute VB_Name = "StatusField"  

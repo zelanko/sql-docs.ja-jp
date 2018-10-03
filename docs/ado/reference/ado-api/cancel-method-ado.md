@@ -1,13 +1,11 @@
 ---
-title: Cancel メソッド (ADO) |Microsoft ドキュメント
+title: Cancel メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ec9158cc318b8c89ce0ea64a73190cb6f48de46
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9723b28ff56f4fe8eced52cecc43d58921d101e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760786"
 ---
 # <a name="cancel-method-ado"></a>Cancel メソッド (ADO)
 保留中の非同期メソッド呼び出しの実行をキャンセルします。  
@@ -41,17 +38,17 @@ object.Cancel
 ```  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**キャンセル**非同期メソッド呼び出しの実行を終了する方法: には、メソッドが呼び出された、 **adAsyncConnect**、 **adAsyncExecute**、または**adAsyncFetch**オプション。  
+ 使用して、**キャンセル**非同期メソッド呼び出しの実行を終了するメソッド: には、メソッドが呼び出された、 **adAsyncConnect**、 **adAsyncExecute**、または**adAsyncFetch**オプション。  
   
- 次の表を使用するときにどのようなタスクが終了した、**キャンセル**オブジェクトの特定の型のメソッドです。  
+ 次の表を使用する場合は、どのようなタスクが終了した、**キャンセル**メソッドはオブジェクトの特定の種類。  
   
-|場合*オブジェクト*は、|このメソッドの最後の非同期呼び出しが終了しました|  
+|場合*オブジェクト*が、|このメソッドの最後の非同期呼び出しが終了しました|  
 |----------------------|-------------------------------------------------------------|  
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|[実行](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)または[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
-|[レコード](../../../ado/reference/ado-api/record-object-ado.md)|[つまり](../../../ado/reference/ado-api/copyrecord-method-ado.md)、[関係する](../../../ado/reference/ado-api/deleterecord-method-ado.md)、[後続](../../../ado/reference/ado-api/moverecord-method-ado.md)、または[開く](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|[開く](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[レコード](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)、 [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)、または[開く](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)|[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -61,14 +58,14 @@ object.Cancel
 |[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
 ## <a name="see-also"></a>参照  
- [キャンセル メソッドの例 (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
- [キャンセル メソッドの例 (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
- [キャンセル メソッドの例 (vc++)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
+ [Cancel メソッドの例 (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
+ [Cancel メソッドの例 (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
+ [Cancel メソッドの例 (vc++)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
  [Cancel メソッド (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [CancelBatch メソッド (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [ただしメソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [ただしメソッド (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Execute メソッド (ADO コマンド)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute メソッド (ADO 接続)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Open メソッド (ADO 接続)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [CancelUpdate メソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
+ [CancelUpdate メソッド (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+ [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)

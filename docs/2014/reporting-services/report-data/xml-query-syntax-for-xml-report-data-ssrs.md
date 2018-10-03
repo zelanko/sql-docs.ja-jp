@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7697f6bf230b3d37b145e56f6827895b44daa5c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65eed443f671f18944ce381a011498e3ca23af4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102892"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML レポート データの XML クエリ構文 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 XML をデータセット クエリの作成、データ ソースが参照する XML データの種類に応じて`Query`または要素パス。 XML`Query`で始まる、 **\<クエリ >** タグし、名前空間と、データ ソースによって異なります XML 要素が含まれています。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
@@ -91,7 +88,7 @@ ms.locfileid: "37227002"
   
 |XML Query 要素|データセットとして取得されるフィールド|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|A: 値http://schemas.microsoft.com/..します。<br /><br /> 値 b:http://schemas.microsoft.com/..します。<br /><br /> 値の c:http://schemas.microsoft.com/..します。|  
+|\<Query/>|A: 値 http://schemas.microsoft.com/..します。<br /><br /> 値 b:http://schemas.microsoft.com/..します。<br /><br /> 値の c:http://schemas.microsoft.com/..します。|  
 |\<xmldp:Query xmlns:xmldp ="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery"されます ="http://schemas.microsoft.com/.."。><br /><br /> \<xmldp:ElementPath > ルート{}/ns:Element2/ノード\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML document: DPNamespace.xml  

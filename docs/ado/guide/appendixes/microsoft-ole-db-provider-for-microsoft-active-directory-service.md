@@ -1,13 +1,11 @@
-﻿---
-title: Microsoft OLE DB Provider for Microsoft Active Directory Service |Microsoft ドキュメント
+---
+title: Microsoft OLE DB Provider for Microsoft Active Directory サービス |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f26d8a9aa58c45ddb5ac58a6415776a60ed5b80
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 16e7bbd20113c253cbd7a3da183750c8ff566da3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270651"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758590"
 ---
-# <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory サービスの Microsoft OLE DB プロバイダー
-Active Directory サービス インターフェイス (ADSI) プロバイダーでは、adsi エディターを使用した異種のディレクトリ サービスに接続する ADO が許可されます。 これにより、ADO アプリケーションは、Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory サービスに、すべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなく読み取り専用アクセスできるようにします。 ADSI 自体は、プロバイダー モデルに基づいて、できるように、別のディレクトリに新しいプロバイダーの提供アクセスがある場合、ADO アプリケーションはシームレスにアクセスします。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  
+# <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory サービス
+Active Directory サービス インターフェイス (ADSI) プロバイダーが ADSI による異種ディレクトリ サービスに接続するための ADO を許可します。 これにより、ADO アプリケーションは Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory services のすべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなくに読み取り専用アクセスできるようにします。 ADO アプリケーションがシームレスにアクセスできる、新しいプロバイダー アクセス権を付与する別のディレクトリがある場合、ADSI はプロバイダー モデルに基づきます。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  
   
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター  
  このプロバイダーに接続するには、設定、**Provider**の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)には、次のプロパティ。   
@@ -54,10 +51,10 @@ ADSDSOObject
 |**Password**|ユーザーのパスワードを指定します。 このキーワードを省略するとします。 現在のログオンが使用されます。|  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes** または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
   
 ## <a name="command-text"></a>コマンド テキスト  
- 4 部構成のコマンド テキストの文字列は、次の構文で、プロバイダーで認識されます。  
+ 4 部構成のコマンド テキストの文字列は、次の構文で、プロバイダーによって認識されます。  
   
 ```  
 "Root; Filter; Attributes[; Scope]"  
@@ -65,10 +62,10 @@ ADSDSOObject
   
 |値|説明|  
 |-----------|-----------------|  
-|*Root*|示します、 **ADsPath** (つまり、検索のルート) の検索を開始する対象のオブジェクト。|  
-|*Assert*|RFC 1960 形式の検索フィルターを示します。|  
+|*Root*|示す、 **ADsPath**オブジェクトを使用する (つまり、検索のルート) の検索を開始します。|  
+|*Assert*|RFC 1960 形式で検索フィルターを示します。|  
 |*Attributes*|返される属性のコンマ区切りの一覧を示します。|  
-|*Scope*|任意。 **文字列**検索のスコープを指定します。 次のいずれかになります。<br /><br />- Base -は、基本オブジェクト (検索のルート) のみを検索します。<br />- OneLevel-は、1 レベルのみを検索します。<br />- Subtree -は、サブツリー全体を検索します。|  
+|*Scope*|任意。 **文字列**検索のスコープを指定します 次のいずれかになります。<br /><br /> - Base -は、基本オブジェクト (検索のルート) のみを検索します。<br />- OneLevel-は、1 レベルのみを検索します<br />- Subtree -は、サブツリー全体を検索します。|  
   
  以下に例を示します。  
   
@@ -84,12 +81,12 @@ objectClass='user' AND objectCategory='Person'"
 ```  
   
 ## <a name="remarks"></a>コメント  
- プロバイダーはストアド プロシージャの呼び出しまたは単純なテーブル名を受け付けません (たとえば、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)プロパティが必ず**adCmdText**)。 コマンド テキスト要素の詳細については、Active Directory サービス インターフェイスのドキュメントを参照してください。  
+ プロバイダーはストアド プロシージャの呼び出しまたは単純なテーブル名を受け付けません (たとえば、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)プロパティが必ず**adCmdText**)。 コマンドのテキスト要素の詳しい説明については、Active Directory サービス インターフェイスのドキュメントを参照してください。  
   
 ## <a name="recordset-behavior"></a>レコード セットの動作  
- 次の表で使用できる機能の一覧、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)このプロバイダーを使用して開かれたオブジェクト。 静的カーソルの種類のみ (**adOpenStatic**) は使用できます。  
+ 次の表で使用できる機能、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)このプロバイダーを使用して開かれたオブジェクト。 静的カーソルの種類のみ (**adOpenStatic**) は使用できます。  
   
- 詳細については**Recordset**実行、プロバイダーの構成の動作、[Supports](../../../ado/reference/ado-api/supports-method.md) メソッドを列挙し、[Properties](../../../ado/reference/ado-api/properties-collection-ado.md) のコレクション **RecordSet** をプロバイダーに固有の動的なプロパティが存在するかどうかを判断します。  
+ 詳細については**Recordset**実行、プロバイダーの構成の動作、[Supports](../../../ado/reference/ado-api/supports-method.md)メソッドを列挙し、[Properties](../../../ado/reference/ado-api/properties-collection-ado.md) のコレクション**RecordSet** をプロバイダーに固有の動的なプロパティが存在するかどうかを判断します。  
   
  **標準の ADO レコード セットのプロパティの可用性:**  
   
@@ -107,7 +104,7 @@ objectClass='user' AND objectCategory='Person'"
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|  
 |[Assert](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|読み取り/書き込み|  
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|使用不可|  
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|使用できません。|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|読み取り/書き込み|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|読み取り専用|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|読み取り/書き込み|  
@@ -118,7 +115,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **標準の ADO レコード セット メソッドの可用性:**  
   
-|方法|使用できるか。|  
+|方法|使用できるでしょうか。|  
 |------------|----------------|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|いいえ|  
 |[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|いいえ|  
@@ -141,7 +138,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Update](../../../ado/reference/ado-api/update-method.md)|いいえ|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|いいえ|  
   
- Adsi エディターとプロバイダーの詳細については、Active Directory サービス インターフェイスのマニュアルを参照または ADSI Web ページを参照してください。  
+ ADSI とプロバイダーの詳細については、Active Directory サービス インターフェイスのマニュアルを参照または ADSI Web ページを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CommandType プロパティ (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   

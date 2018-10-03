@@ -1,14 +1,11 @@
 ---
-title: dbo.sysoperators (TRANSACT-SQL) |Microsoft ドキュメント
+title: dbo.sysoperators (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysoperators
@@ -20,27 +17,26 @@ dev_langs:
 helpviewer_keywords:
 - sysoperators system table
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a19301b897480e71fbaf62d502709e082d57da05
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3796714cbdfb55900447bf23904136ac5abefa9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678920"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ごとに 1 つの行を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントのオペレーターです。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|オペレーターの ID。|  
 |**name**|**sysname**|オペレーターの名前。|  
-|**enabled**|**tinyint**|警告通知の状態 (ブール値)。 場合**1**警告が発生したときに、このオペレーターが通知を受信できます。|  
+|**enabled**|**tinyint**|警告通知の状態 (ブール値)。 場合**1**アラートが発生した場合、このオペレーターが通知を受信できます。|  
 |**email_address**|**nvarchar(100)**|オペレーターの電子メール アドレス。|  
 |**last_email_date**|**int**|オペレーターが前回、電子メールによる警告通知を受信した日付。|  
 |**last_email_time**|**int**|オペレーターが前回、電子メールによる警告通知を受信した時刻。|  

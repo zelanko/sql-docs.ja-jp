@@ -1,13 +1,11 @@
 ---
-title: 主キーと一意のプロパティの例 (VB) |Microsoft ドキュメント
+title: PrimaryKey および Unique プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fdb442faab89d88577449c136ba4ffb1cf2781f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 10f5a1a5c1436181a75329bfb0371c8836d7ac6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286701"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730080"
 ---
-# <a name="primarykey-and-unique-properties-example-vb"></a>主キーと一意のプロパティの例 (VB)
-この例で、 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)と[Unique](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。 コードは、2 つの列を新しいテーブルを作成します。 **PrimaryKey**と**Unique**プロパティを使用して、1 つの列に重複する値が許可されていません、主キーを作成します。  
+# <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey および Unique プロパティの例 (VB)
+この例では、 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)と[Unique](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 コードでは、2 つの列を含む新しいテーブルを作成します。 **PrimaryKey**と**Unique**プロパティを使用して 1 つの列、主キーが重複する値が許可されていません。  
   
 ```  
 ' BeginPrimaryKeyVB  
@@ -118,5 +115,5 @@ End Sub
   
 ## <a name="see-also"></a>参照  
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [主キー プロパティ (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
+ [PrimaryKey プロパティ (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Unique プロパティ (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

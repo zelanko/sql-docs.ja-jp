@@ -1,35 +1,32 @@
 ---
-title: 相互運用可能な SQL ステートメントの作成 |Microsoft ドキュメント
+title: 相互運用可能な SQL ステートメントの構築 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 257440b78a466178d09e954e9aed5b9385325b8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809170"
 ---
-# <a name="constructing-interoperable-sql-statements"></a>相互運用可能な SQL ステートメントの作成
-前述の前のセクションで、相互運用可能アプリケーションは、ODBC SQL 文法を使用してください。 ただし、この文法を使用して、以外は他の問題の数が相互運用可能なアプリケーションが直面しています。 たとえば、アプリケーションのはたらきすべてのデータ ソースによってサポートされていない機能、外部結合などを使用する必要がある場合。  
+# <a name="constructing-interoperable-sql-statements"></a>相互運用可能な SQL ステートメントの構築
+前のセクションで説明したように、相互運用可能なアプリケーションは、ODBC SQL 文法を使用しないでください。 ただし、この文法を使用して、外はさまざまな他の問題が相互運用可能なアプリケーションが直面しています。 たとえばと、アプリケーションはすべてのデータ ソースでサポートされていない機能、外部結合などを使用する必要がある場合  
   
- この時点で、アプリケーション作成者必要がありますいくつか方法に関する意思言語機能が必要か、省略可能。 ほとんどの場合、特定のドライバーは、アプリケーションで必要な機能をサポートしていない場合、アプリケーションだけで退出をそのドライバーを使用して実行します。 ただし、機能が省略可能な場合は、アプリケーションできます回避機能。 たとえば、これは機能を使用するユーザーに許可するインターフェイスの一部を無効に可能性があります。  
+ この時点では、いくつかの判断が必要な言語機能とオプションについてのことに、アプリケーションの作成者を使用する必要があります。 ほとんどの場合、特定のドライバーは、アプリケーションで必要な機能をサポートしていない場合、アプリケーションだけを拒否ドライバーを使用して実行します。 ただし、機能が省略可能な場合は、アプリケーションが、機能を回避することができます。 たとえば、により、機能を使用して、ユーザー インターフェイス部分を無効にする可能性がありますに。  
   
- サポートされる機能を決定するには、アプリケーションの開始を呼び出して**SQLGetInfo** SQL_SQL_CONFORMANCE オプションを使用します。 SQL への準拠レベルは、SQL はサポートされているさまざまなビューをアプリケーションに提供します。 このビューでは、アプリケーションの呼び出しを設定し直す**SQLGetInfo**いくつかの他のオプションのいずれかとします。 これらのオプションの一覧については、次を参照してください。、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明。 最後に、 **SQLGetTypeInfo**データ ソースによってサポートされるデータ型に関する情報を返します。 次のセクションでは、相互運用可能な SQL ステートメントを構築するときにアプリケーションを監視する必要があります潜在的な要素の数を一覧表示します。  
+ サポートされている機能を確認するのにアプリケーションを呼び出すことによって開始**SQLGetInfo** SQL_SQL_CONFORMANCE オプションを使用します。 SQL への準拠レベルは、SQL はサポートされているさまざまなビューをアプリケーションに提供します。 このビューでは、アプリケーション呼び出しを絞り込む**SQLGetInfo**で多数の他のオプションのいずれか。 これらのオプションの完全な一覧を参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明。 最後に、 **SQLGetTypeInfo**データ ソースでサポートされるデータ型に関する情報を返します。 次のセクションでは、さまざまなアプリケーションは、相互運用可能な SQL ステートメントを構築するときの注意しなければならない可能性の要因を一覧表示します。  
   
  このセクションでは、次のトピックを扱います。  
   

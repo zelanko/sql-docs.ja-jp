@@ -1,13 +1,11 @@
 ---
-title: SetEOS メソッド |Microsoft ドキュメント
+title: SetEOS メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - SetEOS method [ADO]
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8821b58e5e111ad879c34f0d3d8177404945a72f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e0db8c7972d6b647cdd021d43dbb3cdee1ba0452
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281611"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678530"
 ---
 # <a name="seteos-method"></a>SetEOS メソッド
 ストリームの末尾の位置を設定します。  
@@ -38,12 +35,12 @@ Stream.SetEOS
 ```  
   
 ## <a name="remarks"></a>コメント  
- **SetEOS**の値を更新、 [EOS](../../../ado/reference/ado-api/eos-property.md)現在をすることで、プロパティ[位置](../../../ado/reference/ado-api/position-property-ado.md)ストリームの末尾。 任意のバイト数または文字の現在の位置は切り捨てられます。  
+ **SetEOS**の値を更新、 [EOS](../../../ado/reference/ado-api/eos-property.md)を現在のプロパティ[位置](../../../ado/reference/ado-api/position-property-ado.md)ストリームの末尾。 任意のバイトまたは現在の位置の文字は切り捨てられます。  
   
- [書き込み](../../../ado/reference/ado-api/write-method.md)、 [WriteText](../../../ado/reference/ado-api/writetext-method.md)、および[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)は既存の余分な値は切り詰められません**ストリーム**オブジェクトをこれらを切り捨てることができますバイトまたはキャラクター設定することにより、新しいストリームの終わりに**SetEOS**です。  
+ [書き込み](../../../ado/reference/ado-api/write-method.md)、 [WriteText](../../../ado/reference/ado-api/writetext-method.md)、および[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)既存、余分な値は切り捨てられません**Stream**オブジェクトの場合、これらを切り捨てることができますバイト数または文字のストリームの終わりの新しい位置を設定して**SetEOS**します。  
   
 > [!CAUTION]
->  設定した場合**EOS** 、ストリームの実際の終了前に、新しいすべてのデータが失われます**EOS**位置。  
+>  設定した場合**EOS**ストリームの実際の終了前に、新しいすべてのデータは失われます**EOS**位置。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

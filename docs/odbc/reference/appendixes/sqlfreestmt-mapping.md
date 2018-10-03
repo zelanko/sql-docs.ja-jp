@@ -1,31 +1,28 @@
 ---
-title: SQLFreeStmt マッピング |Microsoft ドキュメント
+title: SQLFreeStmt のマッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeStmt
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7ad5a362b7b193f1e6e6f8fae7cfb493131cc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1872806265470327f3e7bff468be2ba6d9011421
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792770"
 ---
-# <a name="sqlfreestmt-mapping"></a>SQLFreeStmt マッピング
-アプリケーションを呼び出すと**SQLFreeStmt**で、*オプション*SQL_DROP から ODBC 3 の引数 *.x*ドライバーへの呼び出し  
+# <a name="sqlfreestmt-mapping"></a>SQLFreeStmt のマッピング
+アプリケーションを呼び出すと**SQLFreeStmt**で、*オプション*SQL_DROP、ODBC 3 までの引数 *.x*ドライバーへの呼び出し  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   
@@ -37,4 +34,4 @@ SQLFreeStmt(hstmt, SQL_DROP)
 SQLFreeHandle(SQL_HANDLE_STMT,Handle)  
 ```  
   
- *処理*引数の値に設定されて*hstmt*です。
+ *処理*引数の値に設定*hstmt*します。

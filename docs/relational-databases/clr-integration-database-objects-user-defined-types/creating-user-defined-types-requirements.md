@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UDTs [CLR integration], requirements
@@ -19,18 +17,17 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d4143170685650d9149210cab906a93f646b1056
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697121"
 ---
-# <a name="creating-user-defined-types---requirements"></a>ユーザー定義型の要件を作成します。
+# <a name="creating-user-defined-types---requirements"></a>ユーザー定義型の作成 - 要件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   ユーザー定義型 (UDT) をインストールを作成するときに、いくつかの重要な設計上の決定を行う必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
   
@@ -122,7 +119,7 @@ ms.locfileid: "37351354"
  UDT のインスタンスの検証に使用するメソッドの名前。  
   
 ### <a name="setting-isbyteordered"></a>IsByteOrdered の設定  
- ときに、 **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered**プロパティに設定されて**true**、実際にシリアル化されたバイナリ データを使用できることを保証するセマンティック情報の順序付けします。 したがって、バイト順の UDT オブジェクトの各インスタンスは、シリアル化された表現を 1 つだけ持つことができます。 ph x="1" /&gt; でシリアル化されたバイト列の比較操作を行うときは、その比較結果がマネージド コードで同じ比較操作を実行した場合と同じになる必要があります。 次の機能もサポートされているときに**IsByteOrdered**に設定されている**true**:  
+ ときに、 **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered**プロパティに設定されて**true**、実際にシリアル化されたバイナリ データを使用できることを保証するセマンティック情報の順序付けします。 したがって、バイト順の UDT オブジェクトの各インスタンスは、シリアル化された表現を 1 つだけ持つことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でシリアル化されたバイト列の比較操作を行うときは、その比較結果がマネージド コードで同じ比較操作を実行した場合と同じになる必要があります。 次の機能もサポートされているときに**IsByteOrdered**に設定されている**true**:  
   
 -   この型の列にインデックスを作成する機能。  
   

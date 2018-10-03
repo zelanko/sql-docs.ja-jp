@@ -1,26 +1,23 @@
 ---
-title: SQL Server Express LocalDB エラー メッセージ リファレンス |Microsoft ドキュメント
+title: SQL Server Express LocalDB エラー メッセージ リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b19c9d16b22eb2a7c893d578214b48457482df7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: bb937510fcfb8bef049d90a254591958a54999ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768040"
 ---
-# <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB リファレンス、エラー メッセージ
+# <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB リファレンス - エラー メッセージ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   ここでは、次の SQL Server Express LocalDB エラー メッセージについての参照情報を示します。  
   
@@ -88,7 +85,7 @@ ms.locfileid: "34330663"
  指定した共有名は既に使用されています。  
   
  [LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED](../../relational-databases/express-localdb-error-messages/localdb-error-sql-server-startup-failed.md)  
- SQL Server プロセスが開始しましたが、SQL Server の起動に失敗しました。  
+ SQL Server プロセスが開始されたが、SQL Server の起動に失敗しました。  
   
  [LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES](../../relational-databases/express-localdb-error-messages/localdb-error-too-many-shared-instances.md)  
  共有インスタンスが多すぎます。  
@@ -109,7 +106,7 @@ ms.locfileid: "34330663"
  指定したパッチ レベルはインストールされていません。  
   
  [LOCALDB_ERROR_WAIT_TIMEOUT](../../relational-databases/express-localdb-error-messages/localdb-error-wait-timeout.md)  
- 同期ロックを取得しようとしているときにタイムアウトが発生しました。  
+ 同期ロックを取得中にタイムアウトが発生しました。  
   
  [LOCALDB_ERROR_XEVENT_FAILED](../../relational-databases/express-localdb-error-messages/localdb-error-xevent-failed.md)  
  LocalDB インスタンスの API 内で XEvent エンジンを開始できませんでした。  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd605179f7eb15783c90fa9bc3c72d08d16764c3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 72c72dc551aa31dc22def397fb38fe09793478ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084512"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
   ネイティブ コンパイル ストアド プロシージャには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラミングとクエリのセキュリティ構成が完全には実装されていません。 ネイティブ コンパイル ストアド プロシージャ内部で使用できない特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造が存在します。 詳細については、次を参照してください。[ネイティブ コンパイル ストアド プロシージャでサポートされる構造](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md)します。  
@@ -60,7 +57,7 @@ go
 |------------|-----------------|  
 |`SCHEMABINDING`|ネイティブ コンパイル ストアド プロシージャは、参照するオブジェクトのスキーマにバインドする必要があります。 つまり、プロシージャによってテーブル参照を削除することはできません。 プロシージャで参照されるテーブルは、そのスキーマ名、およびワイルドカードを含める必要があります (\*) クエリでは許可されません。 `SCHEMABINDING` このバージョンのネイティブ コンパイル ストアド プロシージャに対してのみサポートされますが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。|  
 |`EXECUTE AS`|ネイティブ コンパイル ストアド プロシージャでは、既定の実行コンテキストである `EXECUTE AS CALLER` はサポートされません。 したがって、実行コンテキストの指定は必須です。 オプション`EXECUTE AS OWNER`、 `EXECUTE AS`*ユーザー*、および`EXECUTE AS SELF`はサポートされています。|  
-|`BEGIN ATOMIC`|ネイティブ コンパイル ストアド プロシージャの本体は、厳密に 1 つの ATOMIC ブロックで構成されている必要があります。 ATOMIC ブロックでは、ストアド プロシージャのアトミック実行が保証されます。 プロシージャをアクティブなトランザクションのコンテキストの外部で呼び出した場合、新しいトランザクションが開始され、ATOMIC ブロックの末尾でコミットされます。 ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックには、次の 2 つの必須オプションがあります。<br /><br /> `TRANSACTION ISOLATION LEVEL` 。 参照してください[トランザクション分離レベル](../../database-engine/transaction-isolation-levels.md)の分離レベルをサポートします。<br /><br /> `LANGUAGE` 。 ストアド プロシージャの言語は、使用可能な言語または言語の別名の 1 つに設定されている必要があります。|  
+|`BEGIN ATOMIC`|ネイティブ コンパイル ストアド プロシージャの本体は、厳密に 1 つの ATOMIC ブロックで構成されている必要があります。 ATOMIC ブロックでは、ストアド プロシージャのアトミック実行が保証されます。 プロシージャをアクティブなトランザクションのコンテキストの外部で呼び出した場合、新しいトランザクションが開始され、ATOMIC ブロックの末尾でコミットされます。 ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックには、次の 2 つの必須オプションがあります。<br /><br /> `TRANSACTION ISOLATION LEVEL`。 参照してください[トランザクション分離レベル](../../database-engine/transaction-isolation-levels.md)の分離レベルをサポートします。<br /><br /> `LANGUAGE`。 ストアド プロシージャの言語は、使用可能な言語または言語の別名の 1 つに設定されている必要があります。|  
   
  `EXECUTE AS` と Windows ログインについては、`EXECUTE AS` を通じて行われた権限借用によって、エラーが発生する場合があります。 ユーザー アカウントに対して Windows 認証が使用される場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに使用されるサービス アカウントと Windows ログインのドメインとの間に完全信頼が必要です。 完全信頼がない場合は、ネイティブ コンパイル ストアド プロシージャの作成時に "メッセージ 15404、Windows NT グループまたはユーザー 'username' に関する情報を取得できませんでした。エラー コード 0x5。" というエラー メッセージが返されます。  
   

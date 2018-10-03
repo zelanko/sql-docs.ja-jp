@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addvariable.f1
 helpviewer_keywords:
 - Add Variable dialog box
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 767975a29cc870368bcafcdbf0fa84178ac66b62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e48c55f7aa303ed4f0842a48bd0796fef543221
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092214"
 ---
 # <a name="add-variable"></a>[変数の追加]
   **[変数の追加]** ダイアログ ボックスを使用すると、新しい変数のプロパティを指定できます。  

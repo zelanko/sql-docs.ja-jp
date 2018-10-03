@@ -1,13 +1,11 @@
 ---
-title: Size プロパティ (ADO パラメーター) |Microsoft ドキュメント
+title: Size プロパティ (ADO Parameter) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Parameter]
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c33004000e4f8f3099a53777a2941c442901ba7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 682a7aa30596af8a3727eec0daaba4e9fd412ac4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601620"
 ---
-# <a name="size-property-ado-parameter"></a>Size プロパティ (ADO パラメーター)
+# <a name="size-property-ado-parameter"></a>Size プロパティ (ADO Parameter)
 バイト数または文字で、最大サイズを示す、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクト。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**長い**バイトまたはキャラクターの値の最大サイズを示す値、**パラメーター**オブジェクト。  
+ 設定または取得を**長い**バイトまたは内の値の文字の最大サイズを示す値を**パラメーター**オブジェクト。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**サイズ**プロパティに書き込まれた値の最大サイズを決定またはからの読み取りを[値](../../../ado/reference/ado-api/value-property-ado.md)のプロパティ、**パラメーター**オブジェクト。  
+ 使用して、**サイズ**プロパティに書き込まれた値の最大サイズを決定したり読み取ったり、[値](../../../ado/reference/ado-api/value-property-ado.md)のプロパティを**パラメーター**オブジェクト。  
   
- 可変長データ型を指定するかどうか、**パラメーター**オブジェクト (たとえば、**文字列**など、入力**それぞれ**)、オブジェクトを設定する必要があります**サイズ**プロパティに追加する前に、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションです。 それ以外の場合、エラーが発生します。  
+ 可変長データ型を指定するかどうか、**パラメーター**オブジェクト (たとえば、いずれか**文字列**などの入力**adVarChar**)、オブジェクトを設定する必要があります**サイズ**プロパティに追加する前に、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションです。 それ以外の場合、エラーが発生します。  
   
- 既に追加した場合、**パラメーター**オブジェクトを**パラメーター**のコレクション、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトとする型を可変長データ型に変更を行う必要があります設定、**パラメーター**オブジェクトの**サイズ**を実行する前に、プロパティ、**コマンド**オブジェクトです。 それ以外の場合、エラーが発生します。  
+ 追加した場合、**パラメーター**オブジェクトを**パラメーター**のコレクションを[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトとする可変長データ型にその型を変更する必要があります設定、**パラメーター**オブジェクトの**サイズ**プロパティを実行する前に、**コマンド**オブジェクト。 それ以外の場合、エラーが発生します。  
   
- 使用する場合、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)プロバイダーからパラメーター情報を取得するメソッドが 1 つまたは複数の可変長データ型を返します**パラメーター**オブジェクト、ADO が基づくパラメーターのメモリを割り当てることがあります潜在的なサイズの最大の実行中にエラーが発生する可能性があります。 エラーを回避するのには明示的に設定する、**サイズ**コマンドを実行する前にこれらのパラメーター プロパティ。  
+ 使用する場合、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)プロバイダーからパラメーター情報を取得するメソッドが 1 つまたは複数の可変長データ型を返します**パラメーター**オブジェクトの場合、ADO が基づくパラメーターのメモリを割り当てることができます潜在的なサイズの最大の実行中にエラーが発生する可能性があります。 エラーを防ぐためを明示的に設定する、**サイズ**コマンドを実行する前にこれらのパラメーター プロパティ。  
   
  **サイズ**読み取り/書き込みプロパティです。  
   
@@ -48,6 +45,6 @@ ms.locfileid: "35281861"
   
 ## <a name="see-also"></a>参照  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの使用例 (vc++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (vc++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [Size プロパティ (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)
