@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 23f76cbefd4bd9c944928e2875dc59fe6f177955
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5236962c79175c67eabc854652394e73128bf834
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185369"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148832"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>レッスン 7 : 主要業績評価指標 (KPI) の定義
   このレッスンでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトで主要業績評価指標 (KPI) を定義する方法を学習します。 KPI は、ビジネスを測定するサーバー側の計算を定義するためのフレームワークを提供します。また、KPI を使用すれば、結果の情報を表示する方法を標準化できます。 KPI は、データ アクセス API や [!INCLUDE[msCoName](../includes/msconame-md.md)] ツール、またはサード パーティのツールを使用して、レポート、ポータル、およびダッシュボードに表示できます。 KPI は、通常のメジャーおよび他の多次元式 (MDX) に関するメタデータ ラッパーです。 詳細については、「[多次元モデルの主要業績評価指標 (KPI)](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)」を参照してください。  

@@ -1,28 +1,25 @@
 ---
-title: SQLSetStmtAttr |Microsoft Docs
+title: SQLSetStmtAttr |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ff0b12d2464ad9a792a9354503458408659da8e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208529"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、混合 (キーセット/動的) カーソル モデルをサポートしません。 SQL_ATTR_KEYSET_SIZE を使用してキーセットのサイズを設定する場合、0 以外の値を設定すると失敗します。  
@@ -109,7 +106,7 @@ ms.locfileid: "37409502"
 ### <a name="sqlsoptssquerynotificationoptions"></a>SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS  
  クエリ通知要求で使用するオプションを指定します。 オプションは、次に示すように、`name=value` 構文を使用した文字列で指定します。 アプリケーションがサービスを作成して、キューから通知を読み取る必要があります。  
   
- クエリ通知オプションの文字列の構文です。  
+ クエリ通知オプションの構文を次に示します。  
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   

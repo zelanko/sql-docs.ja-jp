@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], Table Designer
 - Table Designer, designing tables
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d131b91003b77bc5a7a2721e0935d1d0006f91c8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 53a8c63ab09a28083d564262183b975c6dbdb167
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136248"
 ---
 # <a name="design-tables-visual-database-tools"></a>テーブルのデザイン (Visual Database Tools)
   テーブル デザイナーでは、ウィンドウ全体を使用して 1 つのテーブルをデザインします。 このセクションの各トピックでは、テーブル デザイナーを使用してデータベース テーブルを作成および変更する方法について説明します。  

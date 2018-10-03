@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - states [SQL Server], database mirroring
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SUSPENDED state
 - database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 10cc3385d0bbcd7832533e1e375401b1b060c959
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320724"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225902"
 ---
 # <a name="mirroring-states-sql-server"></a>ミラーリング状態 (SQL Server)
   データベース ミラーリング セッション中、ミラー化されたデータベースは常に特定の状態 ( *ミラーリング状態*) にあります。 データベースの状態は、通信状態、データ フロー、およびパートナー間のデータの違いを反映します。 データベース ミラーリング セッションには、プリンシパル データベースと同じ状態が採用されます。  

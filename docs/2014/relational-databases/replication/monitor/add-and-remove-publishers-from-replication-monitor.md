@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, adding and removing Publishers
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7f8cbded499127107802136d2d2e4503cef24ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 217069061ea8169c3580e53de1d77462a85e29cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324222"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136012"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>レプリケーション モニターのパブリッシャーの追加および削除
   パブリッシャーになっているサーバーからレプリケーション モニターを起動すると、そのサーバーは自動的にモニターに追加されます。 その他のパブリッシャーを追加するには、 **[パブリッシャーの追加]** ダイアログ ボックスを使用します。 追加したパブリッシャーは、モニターの左ペインのグループの中に表示されます。 既定で **[マイ パブリッシャー]** グループが含まれていますが、新しいグループを作成して、1 つ以上のレプリケーション トポロジを管理できます。 レプリケーション モニターの開始の詳細については、「[レプリケーション モニターの開始](start-the-replication-monitor.md)」を参照してください。  

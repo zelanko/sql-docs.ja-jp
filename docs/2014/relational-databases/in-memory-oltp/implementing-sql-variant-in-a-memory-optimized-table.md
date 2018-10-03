@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0535f31daa0cab3fbc4e2aa221a0f7e3209c87f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e77025a5cc8e410c1bdbb36b0946dd3134c9ca1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155508"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの SQL_VARIANT の実装
   持つテーブルの例を考えて`SQL_VARIANT`列。  

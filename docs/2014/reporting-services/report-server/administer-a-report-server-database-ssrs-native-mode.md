@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef8be1c1777e51b14a0db38a15a5ff806a83443d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21f641d9bb33c918e8194ac7ed02af8c4c9469db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193262"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>レポート サーバー データベースを管理する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の環境では、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースが内部記憶域として使用されます。 既定では、データベース名がそれぞれ ReportServer と ReportServerTempdb になります。 ReportServerTempdb は、レポート サーバーのプライマリ データベースと共に作成され、一時データ、セッション情報、およびキャッシュされたレポートを格納する目的に使用されます。  
@@ -80,7 +77,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>データベースのバージョンについて  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 製品バージョンの情報[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイル バージョン情報のすべての SOAP 呼び出しのヘッダー内のログ ファイルに表示されると、レポート サーバーの URL に接続するときに示されます (たとえば、ブラウザーを開くhttp://localhost/reportserver)します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 製品バージョンの情報[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイル バージョン情報のすべての SOAP 呼び出しのヘッダー内のログ ファイルに表示されると、レポート サーバーの URL に接続するときに示されます (たとえば、ブラウザーを開く http://localhost/reportserver)します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

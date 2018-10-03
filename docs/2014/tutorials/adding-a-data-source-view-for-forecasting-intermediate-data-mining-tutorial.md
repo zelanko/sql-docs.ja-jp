@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2665040a-1291-4064-ba01-f458637dda57
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9cecd7cf22f5849e201aeca7779ceccb4a9e07dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b91be4b60c65a246b56a2d08142ce6937d80cea0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185340"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162582"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>予測用のデータ ソース ビューの追加 (中級者向けデータ マイニング チュートリアル)
   この作業では、予測シナリオに使用するデータ ソース ビューを追加します。 予測モデルでは、時系列内のステップを識別するための列がデータに含まれている必要があります。 複数の系列のデータを分析する場合は、すべての系列が終了する日付または時間ステップが同じである必要があります。  

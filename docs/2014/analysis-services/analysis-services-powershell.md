@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/11/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fe6625cf512586c5f5e42bb4d5d4f601db41a70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8effab0536063466efe25161949a0efeebd0038b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162552"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 移動、管理、および Analysis Services オブジェクトをクエリする Windows PowerShell を使用できるように、Analysis Services PowerShell (SQLAS) プロバイダーとコマンドレットが含まれています。  
@@ -207,7 +204,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  HTTP 接続はこのトピックの手順を使用して HTTP アクセス用にサーバーを構成した場合に便利です[インターネット インフォメーション サービスでの Analysis Services への HTTP アクセスの構成&#40;IIS&#41; 8.0。](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- サーバーの URL と仮定するとhttp://localhost/olap/msmdpump.dll接続は、次のようになります。  
+ サーバーの URL と仮定すると http://localhost/olap/msmdpump.dll接続は、次のようになります。  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

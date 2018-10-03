@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - validation [data mining]
 - mining models, testing
 ms.assetid: e245ac1f-1230-48e9-9091-e70b131aa2a8
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cf4beef0255948a416b5a8e8867a3608d7db151
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0a9ae056818b260ed00df9111d8b06b37378285d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148852"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>モデルの検証と予測用モデルの使用 (Excel 用データ マイニング アドイン)
   モデルのテストと検証は、データ マイニング プロセスにおける重要な手順です。 実際のデータに対するマイニング モデルの性能を、運用環境に配置する前に知っておく必要があります。  

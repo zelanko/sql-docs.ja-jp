@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1e38812dbdff6ecf36bd0c1398ce733d29af6e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1b842c891f69672511450ccaa389ca6ada01675
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315095"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218682"
 ---
 # <a name="create-a-date-type-dimension"></a>日付型ディメンションの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、時間ディメンションとは、属性が年、半期、四半期、月、日などの時間間隔を表すディメンションの種類を指します。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
@@ -55,7 +52,7 @@ ms.locfileid: "37315095"
   
  これらのさまざまなカレンダーは、ディメンション デザイナーで手動で作成できます。 ただし、ディメンション ウィザードに用意されている複数の階層テンプレートを使用すると、時間ディメンションまたはサーバー時間ディメンションを作成するときに何種類かのカレンダーを自動的に生成することができます。 次の表は、ディメンション ウィザードによって生成できる各カレンダーについて説明したものです。  
   
-|カレンダー|説明|  
+|予定表|説明|  
 |--------------|-----------------|  
 |標準カレンダー|1 月 1 日に始まって 12 月 31 日に終わる、12 か月構成のグレゴリオ暦カレンダーです。<br /><br /> ディメンション ウィザードでは、時間ディメンションまたはサーバー時間ディメンションのどちらを作成するかにかかわらず、ディメンションの時間間隔を表す属性を定義した後で標準カレンダーの階層が生成されます。 ディメンション ウィザードを使用してサーバー時間ディメンションを作成する場合は、標準カレンダーの開始日を 1 月 1 日以外の日付に設定することもできます。|  
 |[会計カレンダー]|12 か月構成の会計カレンダーです。 このカレンダーを選択する場合は、組織で採用されている会計年度の開始月日を指定する必要があります。<br /><br /> 注: このカレンダーを使用できるのは、ディメンション ウィザードを使用してサーバー時間ディメンションを作成する場合のみです。|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Value Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 054da002271711d4b86a08e694b18e01e796b3ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205718"
 ---
 # <a name="value-element-xmla"></a>Value 要素 (XMLA)
   目的の値が含まれています、[属性](attribute-element-xmla.md)によって追加される要素、[挿入](../xml-elements-commands/insert-element-xmla.md)コマンド、または[セル](cell-element-xmla.md)によって更新される要素、 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)コマンド。  

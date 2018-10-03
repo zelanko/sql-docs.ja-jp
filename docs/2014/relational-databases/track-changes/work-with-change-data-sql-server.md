@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: df86d149bcdf6d9e1619499edf2bc41137433392
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 881a32bbb21eeeef0e09eaedb98897f90a1c0d27
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215672"
 ---
 # <a name="work-with-change-data-sql-server"></a>変更データの処理 (SQL Server)
   変更データ キャプチャのコンシューマーは、テーブル値関数 (TVF) を使用することによって変更データを利用できるようになります。 これらの関数のすべてのクエリには、ログ シーケンス番号 (LSN) の範囲を定義する 2 つのパラメーターが必要です。これらのパラメーターは、返される結果セットを開発する際に検討の対象になります。 期間の両端を示す LSN の上限値と下限値は、期間内に含まれると見なされます。  

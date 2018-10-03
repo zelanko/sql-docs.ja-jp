@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - row level security described
@@ -18,12 +16,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 344497fea67a2bfdadf66095056ac9e909d945a2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e051e692361ab70d68103186dd24df8b5f7a6082
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017485"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188552"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
   Row-Level Security を使用すると、クエリを実行するユーザーの特性に基づき、データベース テーブルの行へのアクセスを制御できます (たとえば、グループのメンバーシップや実行コンテキストなど)。 行レベルのセキュリティがで使用できるようになりました[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016。 この機能の現在の説明については、現在のドキュメントの「 [行レベルのセキュリティ](https://msdn.microsoft.com/library/dn765131.aspx) 」を参照してください。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbe6bee60f4cee2ce99f5aadd1dc3cea14e85b1b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff8ae37c2caf34432acde8fab2235a3b83b372a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172152"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>[フィルター] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   **[データセットのプロパティ]** ダイアログ ボックスの **[フィルター]** を選択すると、データセットに対するフィルターを作成できます。  
@@ -63,7 +60,7 @@ ms.locfileid: "37258168"
   
 ## <a name="see-also"></a>参照  
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [データセットにフィルターを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
  [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

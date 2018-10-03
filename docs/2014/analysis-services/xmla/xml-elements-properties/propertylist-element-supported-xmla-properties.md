@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - XML for Analysis, properties
 - XMLA, properties
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04e2b96df0cc549acadd50d80356a62bf327b7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d7898c0f7263bf5355934ec072511bfd8483028
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215922"
 ---
 # <a name="supported-xmla-properties-xmla"></a>サポートされる XMLA プロパティ (XMLA)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 次の表に示したプロパティをサポートしています。 これらの一覧表示されているプロパティを使用する、[プロパティ](properties-element-xmla.md)の要素、 [Discover](../xml-elements-methods-discover.md)と[Execute](../xml-elements-methods-execute.md)メソッド。  
@@ -211,7 +208,7 @@ ms.locfileid: "37243962"
 |----------|-------------|  
 |Disable Prefetch Facts|*使用方法*<br /> 省略可能、読み取り/書き込み`Boolean`プロパティ<br /><br /> *[説明]*<br /> True に設定した場合、セッションの長さにあたる期間中、エンジンは値のプレフェッチをしなくなります。<br /><br /> このプロパティの既定値は`False`します。|  
 |EffectiveRoles|*使用方法*<br /> 省略可能な書き込み専用`String`プロパティ<br /><br /> *[説明]*<br /> 将来使用するために予約されています。<br /><br /> このプロパティの既定値はありません。<br /><br /> このプロパティは、`Discover` メソッドおよび `Execute` メソッドで使用できます。|  
-|EffectiveUserName|*使用方法*<br /> 省略可能な書き込み専用`String`プロパティ<br /><br /> *[説明]*<br /> ph x="1" /&gt; インスタンスに接続するときに使用する、ユーザー名をオーバーライドするために使用するアカウントの名前を指定します。 プロパティの値は正規化されませんが、MDX [UserName](/sql/mdx/username-mdx)関数は、このプロパティを使用する場合に、リテラル値を返します。 このプロパティは、サーバー管理者のみが使用できます。<br /><br /> このプロパティでサポートされる SID の種類は、User、Group、Alias、WellKnownGroup、Computer です。<br /><br /> このプロパティの既定値はありません。<br /><br /> このプロパティは、`Discover` メソッドおよび `Execute` メソッドで使用できます。|  
+|EffectiveUserName|*使用方法*<br /> 省略可能な書き込み専用`String`プロパティ<br /><br /> *[説明]*<br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスに接続するときに使用する、ユーザー名をオーバーライドするために使用するアカウントの名前を指定します。 プロパティの値は正規化されませんが、MDX [UserName](/sql/mdx/username-mdx)関数は、このプロパティを使用する場合に、リテラル値を返します。 このプロパティは、サーバー管理者のみが使用できます。<br /><br /> このプロパティでサポートされる SID の種類は、User、Group、Alias、WellKnownGroup、Computer です。<br /><br /> このプロパティの既定値はありません。<br /><br /> このプロパティは、`Discover` メソッドおよび `Execute` メソッドで使用できます。|  
 |EndRange|*使用方法*<br /> 省略可能な書き込み専用`Integer`プロパティ<br /><br /> *[説明]*<br /> `CellOrdinal` 属性値に対応する、0 から始まる整数値を指定します  (`CellOrdinal` 属性は、`Cell` の `CellData` セクションの、`MDDataSet` 要素の一部です)。<br /><br /> `BeginRange` プロパティと共に使用され、クライアント アプリケーションはこのプロパティを使用して、コマンドによって返される OLAP データセットを特定の範囲のセルに制限することができます。 -1 が指定されている場合、`BeginRange` プロパティで指定されたセルからのすべてのセルが返されます。<br /><br /> このプロパティの既定値は-1 です。<br /><br /> このプロパティは、`Execute` メソッドで使用できます。|  
 |ExecutionMode|*使用方法*<br /> 省略可能な書き込み専用`String`プロパティ<br /><br /> *[説明]*<br /> 将来使用するために予約されています。<br /><br /> このプロパティの既定値は*Execute*します。<br /><br /> このプロパティは、`Discover` メソッドおよび `Execute` メソッドで使用できます。|  
 |ForceCommitTimeout|*使用方法*<br /> 省略可能な書き込み専用`Integer`プロパティ<br /><br /> *[説明]*<br /> 現在実行中の XMLA コマンドのコミット フェーズが、以前に発行されたコマンドを強制的にロールバックするまでに待機する時間を、秒数で指定します。 コミット フェーズは、`Statement` や `Process` などの XMLA コマンドに対応します。<br /><br /> 値 0 は、インスタンスが無制限に待機することを意味します。<br /><br /> このプロパティの既定値は 0 です。<br /><br /> このプロパティは、`Discover` メソッドおよび `Execute` メソッドで使用できます。|  

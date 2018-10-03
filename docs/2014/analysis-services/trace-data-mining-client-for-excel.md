@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tracer
 - connections
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee0268eb960aab09029774b6ad26ccccd3d352e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 688357b2357cba8fa868eca18b5c100cfff1722d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326522"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161311"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>トレース (Excel 用のデータ マイニング クライアント)
   ![トレース ボタン](media/misc-trace.gif "トレース ボタン")  
@@ -76,6 +73,6 @@ ms.locfileid: "37326522"
   
  DMX 構文、および XMLA のコマンドや要素の詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
   
- サーバーに送信される一部のステートメントには、Analysis Services システム ストアド プロシージャを呼び出すクエリが含まれる場合があります。 詳細については、SQL Server オンライン ブックを参照してください。  
+ サーバーに送信される一部のステートメントには、Analysis Services システム ストアド プロシージャを呼び出すクエリが含まれる場合があります。 詳しくは、SQL Server オンライン ブックをご覧ください。  
   
   

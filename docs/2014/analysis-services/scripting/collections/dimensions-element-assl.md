@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Dimensions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Dimensions element
 ms.assetid: 104e3154-92e9-4c6b-9cf3-e3f3fc712b28
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ff15cecd5e5d4451a580d8ee73922dc4ab05364
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7c25008bd3f47a8efc9ebb0b57d2507667f9116
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241612"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163282"
 ---
 # <a name="dimensions-element-assl"></a>Dimensions 要素 (ASSL)
   親要素に関連付けられたディメンションのコレクションを格納します。  

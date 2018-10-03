@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207432"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>[資格情報] ([データ ソースのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   **[データ ソースのプロパティ]** ダイアログ ボックスの **[資格情報]** を選択すると、レポート内の埋め込みデータ ソースに接続するための資格情報を表示および変更できます。 指定した資格情報は、レポートのプレビュー時、データ ソースにアクセスする際に使用されます。 詳細については、「 [レポート ビルダーでの資格情報の指定](../../2014/reporting-services/specify-credentials-in-report-builder.md)」を参照してください。  

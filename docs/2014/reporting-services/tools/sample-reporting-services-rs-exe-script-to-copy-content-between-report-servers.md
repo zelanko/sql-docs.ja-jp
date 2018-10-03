@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5fb51019ffa016e76f4801d35578ffca0b2b6a11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116822"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>レポート サーバー間でコンテンツを移行するサンプル Reporting Services rs.exe スクリプト
   このトピックでが含まれていて、サンプルについて説明します[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]から 1 つのコンテンツのアイテムと設定をコピーする RSS スクリプト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]別のレポート サーバーにレポート サーバーを使用して、 **RS.exe**ユーティリティ。 RS.exe は、ネイティブ モードと SharePoint モードの両方で、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と共にインストールされます。 このスクリプトは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] アイテム (レポートやサブスクリプションなど) をサーバー間でコピーします。 スクリプトは SharePoint モードとネイティブ モードの両方のレポート サーバーをサポートしています。  

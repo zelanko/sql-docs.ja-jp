@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a85b29827973522684820600f3a93b19c58200
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208222"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] \(ピア ツー ピア レプリケーション)
   **[トポロジの構成]** ページを使用すると、新しいノードの追加、ノードの削除、既存のノード間の新しい接続の追加など、一般的な構成タスクを実行できます。 このウィザードの **[パブリケーション]** ページで選択したノードがデザイン画面に表示されます。 構成オプションを指定するには、ノード、接続、またはデザイン画面を右クリックします。  

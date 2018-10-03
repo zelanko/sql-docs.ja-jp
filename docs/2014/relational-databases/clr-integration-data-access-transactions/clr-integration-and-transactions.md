@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ADO.NET [CLR integration]
@@ -16,20 +14,18 @@ helpviewer_keywords:
 - System.Transactions namespace
 - transactions [CLR integration]
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d75762f7758ee6d34a5e212667915a644670920d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: c6d1b302d6ed0f35ce6fcb60e0afb90415c21d1e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130482"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 統合とトランザクション
-  `System.Transactions` 名前空間では、ADO.NET と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) 統合に完全に統合される新しいトランザクション フレームワークが提供されます。 
-  `System.Transactions` と ADO.NET は連携し、マネージド アプリケーションでのローカル トランザクションや分散トランザクションの用途を拡張および単純化します。  
+  `System.Transactions` 名前空間では、ADO.NET と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) 統合に完全に統合される新しいトランザクション フレームワークが提供されます。 `System.Transactions` と ADO.NET は連携し、マネージド アプリケーションでのローカル トランザクションや分散トランザクションの用途を拡張および単純化します。  
   
 > [!NOTE]  
 >  CLR ユーザー定義プロシージャ (UDP) は、このプロシージャが実行されているサーバーへの接続 (ループバック接続) を確立して、同じトランザクションに参加することができません。 この操作を試みると、接続試行がブロックされ、制御は UDP に返されません。 これにより、UDP でタイムアウト エラー (メッセージ 1206) が発生します。  

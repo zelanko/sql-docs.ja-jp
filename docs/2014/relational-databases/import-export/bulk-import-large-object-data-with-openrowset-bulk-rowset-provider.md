@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SINGLE_NCLOB option
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - large data, bulk imports
 - SINGLE_BLOB option
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d48b0af070e67ff1c77b8e5e2b0d32ce6e3aba4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 441c13a725b69d70b4267ec90d7eaeeace2b3070
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223432"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202702"
 ---
 # <a name="bulk-import-large-object-data-by-using-the-openrowset-bulk-rowset-provider-sql-server"></a>OPENROWSET 一括行セット プロバイダーを使用したラージ オブジェクト データの一括インポート (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET 一括行セット プロバイダーを使用すると、データ ファイルをラージ オブジェクト データとして一括インポートすることができます。  
@@ -35,8 +32,7 @@ ms.locfileid: "37223432"
  OPENROWSET 一括行セット プロバイダーがサポートするラージ オブジェクト データ型は、 **varbinary**(max) (または **image**)、 **varchar**(max) (または **text**)、および **nvarchar**(max) (または **ntext**) です。  
   
 > [!NOTE]  
->  
-  **image**、 **text** 、 **ntext** の各データ型は非推奨とされます。  
+>  **image**、 **text** 、 **ntext** の各データ型は非推奨とされます。  
   
  OPENROWSET BULK 句では、データ ファイルの内容を単一行、単一列の行セットとしてインポートするための 3 つのオプションがサポートされています。 フォーマット ファイルを使用する代わりに、ラージ オブジェクトのいずれかのオプションを指定できます。 これらのオプションを次に示します。  
   

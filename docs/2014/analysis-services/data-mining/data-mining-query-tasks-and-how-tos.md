@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e79d4ee05472de8be071cd47c1868d649f7e247b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189642"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>データ マイニングのクエリ タスクと操作方法
   データ マイニング モデルを利用する場合は、クエリを作成できることが不可欠です。 ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で提供されるツールを使用して、データ マイニング モデルに対するクエリの作成例のリンクを示します。 データ マイニング クエリとは何かに関する情報、または作成できるさまざまな種類のクエリに関する情報が必要な場合は、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - health monitor [SQL Server]
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce23580af011e536ed33a5612952b7bc2177480c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d4c2bbf0d59cce86debc955d8cf4cefade5ddb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150122"
 ---
 # <a name="replay-options-sql-server-profiler"></a>再生オプション (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、キャプチャされたトレースを再生するには、 **[構成の再生]** ダイアログ ボックスで、以下の再生オプションを指定します。 このダイアログ ボックスを表示するには、再生するトレース ファイルまたはトレース テーブルを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で開き、 **[再生]** メニューの **[開始]** をクリックします。 トレースの再生に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](sql-server-profiler.md)」を参照してください。  
@@ -32,7 +29,7 @@ ms.locfileid: "37251194"
  このトピックでは、 **[構成の再生]** ダイアログ ボックスで指定できるオプションについて説明します。  
   
 > [!NOTE]  
->  (アクティブな同時接続が多数ある、またはスループットが高い) 集中型の OLTP アプリケーションを再生する場合は、Distributed Replay Utility を使用することをお勧めします。 Distributed Replay Utility では、複数のコンピューターからのトレース データを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。 詳細については、「 [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
+>  (アクティブなコンカレント接続が多数ある、またはスループットが高い) 集中型の OLTP アプリケーションを再生する場合は、Distributed Replay Utility を使用することをお勧めします。 Distributed Replay Utility では、複数のコンピューターからのトレース データを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。 詳細については、「 [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
   
 ## <a name="basic-replay-options"></a>基本再生オプション  
  **[再生サーバー]**  

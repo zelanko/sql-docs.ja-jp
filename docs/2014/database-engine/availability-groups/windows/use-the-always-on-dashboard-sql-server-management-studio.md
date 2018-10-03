@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 207f67602fd55e5186a64ba9b30df7230a35d1b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40f53007ac70cce216e0dc30c9d72ce830050504
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123752"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>AlwaysOn ダッシュボードの使用 (SQL Server Management Studio)
   データベース管理者は AlwaysOn ダッシュボードを使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 AlwaysOn ダッシュボードの一般的な用途を次に示します。  

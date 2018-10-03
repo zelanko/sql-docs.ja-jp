@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - articles [SQL Server replication], stored procedures and
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0217a945e7197f44869c74b381eb61c75d6bf9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8dcdd88d8ce974acda7363ba0a7b2199ca2dd2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195658"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行
   パブリッシャー側で実行され、パブリッシュされたテーブルに影響を与えるストアド プロシージャがある場合、それらのストアド プロシージャをストアド プロシージャ実行アーティクルとしてパブリケーションに含めることを検討してください。 プロシージャの定義 (CREATE PROCEDURE ステートメント) はサブスクリプションが初期化されるときにサブスクライバーにレプリケートされます。プロシージャがパブリッシャーで実行されるときに、レプリケーションは対応するプロシージャをサブスクライバーで実行します。 これにより、各行の個別の変更のレプリケーションが回避されてプロシージャの実行のみがレプリケートされるため、大量のバッチ操作が実行される場合にはパフォーマンスが著しく向上します。 たとえば、パブリケーション データベースで次のストアド プロシージャを作成するとします。  
@@ -90,7 +87,7 @@ COMMIT TRANSACTION T2
   
  このプロシージャが、シリアル化可能なトランザクションの中で実行される場合には、トランザクション T2 で、T2 の SELECT ステートメントの範囲に挿入を行うことが許可されません。 T1 がコミットするまでブロックされて、サブスクライバーでの結果が同じになるようにします。  
   
- シリアル化可能なトランザクション内でプロシージャを実行するときにはロックがより長く保持されるので、同時実行が少なくなることもあります。  
+ シリアル化可能なトランザクション内でプロシージャを実行するときにはロックがより長く保持されるので、コンカレンシーが少なくなることもあります。  
   
 ## <a name="the-xactabort-setting"></a>XACT_ABORT の設定  
  ストアド プロシージャの実行をレプリケートする場合、ストアド プロシージャを実行するセッションの設定では XACT_ABORT を ON に指定する必要があります。 XACT_ABORT が OFF に設定されていて、パブリッシャーでプロシージャの実行中にエラーが発生した場合、サブスクライバーでも同じエラーが発生し、ディストリビューション エージェントは失敗します。 XACT_ABORT を  ON に指定すると、パブリッシャーでプロシージャの実行中にエラーが発生した場合、実行全体がロールバックされ、ディストリビューション エージェントの失敗を回避できます。 XACT_ABORT 設定の詳細については、「[SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql)」を参照してください。  

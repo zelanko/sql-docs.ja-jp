@@ -1,14 +1,12 @@
 ---
-title: 注釈付き XSD スキーマ (SQLXML 4.0) の概要 |Microsoft Docs
+title: 注釈付き XSD スキーマ (SQLXML 4.0) の概要 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 257b27033dfce5f9011da2786fdc7482a046b4d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d988713949f29671294f3897f62d2e0a2fb8677
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189522"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>注釈付き XSD スキーマの概要 (SQLXML 4.0)
   XML スキーマ定義 (XSD) 言語を使用して、リレーショナル データの XML ビューを作成することができます。 作成したビューには、XML パス言語 (XPath) クエリを実行できます。 これは、CREATE VIEW ステートメントを使用し、そのビューに対して SQL クエリを指定してビューの作成に似ています。  
@@ -49,7 +46,7 @@ ms.locfileid: "37216892"
 </xsd:schema>  
 ```  
   
- **\<Xsd:schema >** 要素は XML スキーマ名前空間の仕様にから派生http://www.w3.org/2001/XMLSchemaします。  
+ **\<Xsd:schema >** 要素は XML スキーマ名前空間の仕様にから派 生 http://www.w3.org/2001/XMLSchema します。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD スキーマへの注釈  
  データベースへのマッピングを記述する注釈付きの XSD スキーマを使用して、データベースにクエリを実行し、結果を XML ドキュメントの形式で返すことができます。 注釈は、データベースのテーブルと列に XSD スキーマをマップするために指定します。 XSD スキーマで作成した XML ビューに対して XPath クエリを指定すると、データベースにクエリが実行され、結果を XML として取得できます。  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a81a446b1635359853656305f0a8a5ee8ab3218
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 40ea7c27958fe2a245b2279dc35f2029f81e21d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396366"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147422"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>ハッシュ インデックスの適切なバケット数の決定
   値を指定する必要があります、`BUCKET_COUNT`パラメーター、メモリ最適化テーブルを作成するときにします。 このトピックでは、適切な値を決定するための推奨事項、`BUCKET_COUNT`パラメーター。 適切なバケット数を決定できない場合は、代わりに非クラスター化インデックスを使用してください。  `BUCKET_COUNT` の値が不適切な場合 (特に小さすぎる場合)、ワークロードのパフォーマンス、およびデータベースの復旧時間に大きな影響を与えることがあります。 バケット数は大きめに設定することをお勧めします。  

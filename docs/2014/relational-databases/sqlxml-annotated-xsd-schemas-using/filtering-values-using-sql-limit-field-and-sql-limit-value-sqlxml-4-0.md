@@ -1,14 +1,12 @@
 ---
-title: Sql:limit の値を使用してフィルター処理、および -(SQLXML 4.0) |Microsoft Docs
+title: Sql:limit の値を使用してフィルター処理、および -(SQLXML 4.0) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37e724d36094ceac2cb05b059a83de2a415e9476
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260558"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224166"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
   データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 制限の対象となるデータベース列を識別し、返されるデータのフィルター選択に使用する制限値を指定するには、`sql:limit-field` 注釈と `sql:limit-value` 注釈を使用します。  
@@ -311,7 +308,7 @@ ms.locfileid: "37260558"
   
 ## <a name="see-also"></a>参照  
  [float、real および #40 です。TRANSACT-SQL と #41 です。](/sql/t-sql/data-types/float-and-real-transact-sql)   
- [nchar および nvarchar &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
+ [nchar および nvarchar &#40;Transact SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [SQL Server Native Client をインストールします。](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [クエリでの XSD スキーマを使用して注釈が付けられた&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

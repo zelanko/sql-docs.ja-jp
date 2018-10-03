@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.profiles.f1
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdfd3f5d3e9fbf433f4c041a156adb31a4264fc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c216ce257c513d59a5007637ca4a5642104306f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194542"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>[属性のプロファイル] タブ (マイニング モデル ビューアー)
   Naive Bayes モデルにおける入力値の分布と、結果の属性の状態との関係を確認するには、**[属性のプロファイル]** タブを使用します。 値の分布はカラー ヒストグラムで表示され、すべての分布は値を簡単に比較できるように表形式で提示されます。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Collation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Collation element
 ms.assetid: 9b6dbe19-543e-43e6-abe9-1e8b4dfaa275
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92e4e7eaa9eb4d994fc225c9d3d1c9a0c941b1b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 410baddd86da9d6100cd3ef7342501fed955b847
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213932"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178072"
 ---
 # <a name="collation-element-assl"></a>Collation 要素 (ASSL)
   親要素によって使用される照合順序を指定します。  

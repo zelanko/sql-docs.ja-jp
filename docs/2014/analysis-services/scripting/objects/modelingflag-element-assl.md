@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ModelingFlag Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ModelingFlag element
 ms.assetid: c9af1b9a-506f-4cc1-acd7-e57698cb672c
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 611a93a27e5f668c9b367eb35d5df9eb454743b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8137da94a03e560fbed2c263e8e0a10b187fa569
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118132"
 ---
 # <a name="modelingflag-element-assl"></a>ModelingFlag 要素 (ASSL)
   マイニング構造またはマイニング モデル内の列のモデリング フラグを格納します。  

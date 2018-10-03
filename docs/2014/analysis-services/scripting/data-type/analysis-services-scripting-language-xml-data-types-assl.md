@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Analysis Services Scripting Language XML Data Types
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc773c4eda7b9f26b8ddafab5f6c80b068d32ec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ff2f0989aa2c88a69351d698c847ca6e835285
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179252"
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Analysis Services スクリプト言語の XML データ型 (ASSL)
   このリファレンス セクションでは、Analysis Services スクリプト言語 (ASSL) スキーマで型の役割を果たす各要素の構文と使い方について説明します。  
@@ -39,7 +36,7 @@ ms.locfileid: "37276638"
   
  型要素は、オブジェクト要素と同じように、ASSL スキーマのリーフ レベル要素ではありませんが、子要素とオブジェクト プロパティに対応する要素を含んでいます。  
   
- ただし、型の要素は表示されませんを定義または説明するスクリプト内の要素として[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクト。 他のオブジェクト要素の型として使用されるのではなく、通常、`type` または `xsi:type` を使用して XML スキーマのインスタンス スキーマの `xs:type` 属性と共にデザインされます。 たとえば、 `<Assembly xsi:type="ClrAssembly">...</Assembly>`のようにします。  
+ ただし、型の要素は表示されませんを定義または説明するスクリプト内の要素として[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクト。 他のオブジェクト要素の型として使用されるのではなく、通常、`type` または `xsi:type` を使用して XML スキーマのインスタンス スキーマの `xs:type` 属性と共にデザインされます。 たとえば、`<Assembly xsi:type="ClrAssembly">...</Assembly>` のようにします。  
   
  型は、別の型から派生する場合もあります。 たとえば、`CubeBinding` 型は、親である `Binding` 型から派生します。  
   

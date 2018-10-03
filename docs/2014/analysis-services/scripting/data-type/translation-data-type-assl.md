@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Translation Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Translation data type
 ms.assetid: d40039e1-3ff6-4e20-8d8b-5baf501f726f
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96c0f9a1ea7d6e3a081230c43fc95d785b1cf449
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6bf4fe33120a102239ccd54e7032e98719d0789
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300882"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213694"
 ---
 # <a name="translation-data-type-assl"></a>Translation データ型 (ASSL)
   ローカライズされた翻訳を表すプリミティブ データ型を定義します。  

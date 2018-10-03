@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144192"
 ---
 # <a name="full-text-search"></a>フルテキスト検索
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。 フルテキスト クエリをテーブルに対して実行するには、まずデータベース管理者がテーブル上にフルテキスト インデックスを作成する必要があります。 フルテキスト インデックスには、テーブルの 1 つ以上の文字ベースの列が含まれます。 これらの列は、次のデータ型のいずれかを持つことができます: `char`、 `varchar`、 `nchar`、 `nvarchar`、 `text`、 `ntext`、 `image`、 `xml`、または`varbinary(max)`および FILESTREAM です。 各フルテキスト インデックスによってテーブルの 1 つ以上の列にインデックスが設定され、列ごとに特定の言語を使用できます。  

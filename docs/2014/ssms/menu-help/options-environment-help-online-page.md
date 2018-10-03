@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5033a56981496455922967f2f1035dbd1245384
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: efa0ae0d1c6bc60ef0201d1e7d289f71102157e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807048"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185235"
 ---
 # <a name="options-environment-help-online-page"></a>オプション (環境-ヘルプ オンライン ページ)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 検索に使用するヘルプ ソース (F1 ヘルプなど) を指定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[ヘルプ]**、 **[オンライン]** の順にクリックします。 **[オンライン]** ページが一覧に表示されない場合は、 **[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにしてください。  

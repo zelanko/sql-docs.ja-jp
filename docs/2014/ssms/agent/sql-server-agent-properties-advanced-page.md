@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.agent.advanced.f1
 ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3e23c45859bb02baeec873f99392b318247bd69
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 30897ac21ba01262dfc2dc9ab08ffcf4f2148f32
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157892"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>[SQL Server エージェントのプロパティ] \([詳細設定] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの詳細プロパティを表示および変更できます。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Analysis Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3cb9b81c5125f8d4f0e9dd2e0760a072d655f6e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 175f3922a5c8d78f94db78cdbaf01534c5c7bc9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247772"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172352"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services の配置に関する要件と注意点
   あるソリューションのパフォーマンスと可用性は、多くの因子に左右されます。たとえば、基になるハードウェアの機能、サーバーの配置トポロジ、ソリューションの特性 (たとえば、パーティションが複数サーバーに分散されているとか、リレーショナル エンジンへの直接アクセスを必要とする ROLAP ストレージを使用するなど)、サービス レベル契約、データ モデルの複雑さなどです。  

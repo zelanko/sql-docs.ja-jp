@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DimensionAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionAttribute data type
 ms.assetid: 94349a87-b284-49d1-ac72-888f0375ceb8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9e07d7b7c313c4d9d21e8e562f2ed6893a08b42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4624e963a9bca0d7850d2936291d3a7515cac25f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106852"
 ---
 # <a name="dimensionattribute-data-type-assl"></a>DimensionAttribute データ型 (ASSL)
   ディメンション内の属性を表すプリミティブ データ型を定義します。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Missing Column Statistics event class
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9c4cdf1a3918bdf7e222d22b6e2cd9629caddc8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5491c68b5b4349387917bee9fed513ab294479cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131292"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics イベント クラス
   Missing Column Statistics イベント クラスは、オプティマイザーにとって役立つ列統計が使用できないことを示します。  

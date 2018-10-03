@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.table.tablerecreatenosave.f1
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba93400584d7f2fa338e2acb6fdd3468b835cc54
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3a7b7de396360fe029ad1b19ce06d628f6128dc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206612"
 ---
 # <a name="save-not-permitted-dialog-box"></a>[保存 (許可されない)] ダイアログ ボックス
   **[保存 (許可されない)]** ダイアログ ボックスには、変更を保存できないことを示す警告が表示されます。変更を行うには、一覧表示されているテーブルを削除して再作成する必要があります。  

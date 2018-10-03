@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58507594fa2872bc5433b63e0f932d2914291a31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107442"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>タスク 1: 照合ポリシーを定義する
   ここでは、1 つのルールを持つ照合ポリシーを作成します。 ルールでは 1 つの前提条件: **Supplier ID**、つまり、ルール内の他のドメインを使用する前に Supplier Id が一致する必要があります。 ルールでは、その他の 2 つのドメイン: **Supplier Name**で**類似性**値に設定**70%** と**Contact Email**で**類似性**値に設定**30%** します。  

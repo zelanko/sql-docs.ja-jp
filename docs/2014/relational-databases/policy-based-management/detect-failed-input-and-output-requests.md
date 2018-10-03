@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a96b1e1bd047f2a09a8969b1f57ef73520c11489
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 296ea3a8f3527a5117f50c0f445a7417434fb793
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215832"
 ---
 # <a name="detect-failed-input-output-request"></a>失敗した入出力要求を検出します。
   このルールでは、システム イベント ログの EventId 50 を確認します。 このエラーは、I/O 要求失敗によって発生します。  

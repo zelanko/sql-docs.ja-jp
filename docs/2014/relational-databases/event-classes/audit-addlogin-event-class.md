@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Addlogin event class
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d41dc017f9b412f944f218e55821f25b8b8c5889
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3022d760e5c55fe7ca2f3b857a090c06f3a461f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205382"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin イベント クラス
-   **Audit Addlogin** イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが追加または削除されたときに発生します。  
+  **Audit Addlogin** イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが追加または削除されたときに発生します。  
   
  このログインを追加するときに、既定のデータベースなど別のプロパティを設定すると、そのプロパティに関する情報がこのイベントの **TextData** 列に表示されます。 ログインの追加中にこれらのプロパティを設定した場合、 **Audit Login Change Property Event** は発生しません。  
   

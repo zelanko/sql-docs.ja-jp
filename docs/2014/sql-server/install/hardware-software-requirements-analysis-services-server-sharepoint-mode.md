@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fb86ca0a-518c-4c61-ae78-7680c57fae1f
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bd9afb97eae82bdb3bfe63859e9081dca5586b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5c405862dfb13bf8db1a619f052e6ca9206f1f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232672"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167748"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>SharePoint モードの Analysis Services サーバーのハードウェアとソフトウェアの要件 (SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、SharePoint 2010 と SharePoint 2013 の両方をサポートしています。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 は SharePoint ファームの外部で実行されますが、SharePoint サーバー上にインストールすることもできます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 は、SharePoint 2010 ファーム内のアプリケーション サーバー上で動作し、SharePoint の機能とインフラストラクチャを使用してサーバー操作をサポートします。 SharePoint のいずれかのバージョンの [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールするには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを使用します。 インストール後に、次の手順を完了します。  
@@ -50,8 +47,7 @@ ms.locfileid: "37232672"
   
  [SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](hardware-and-software-requirements-for-installing-sql-server.md)  
   
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、RAM のしきい値と処理能力が高い新世代のビジネス サーバー上で最適に動作します。 メモリへの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの格納には大量の RAM が使用されます。 RAM は構造の変化に対応できる機能をサポートしています。 追加のプロセッサでは、生の未集計データの実行時間の長いスキャンをサポートします。 このデータの構造は、ユーザーが Excel クライアントやフロントエンド インターフェイスを使用して開始したデータ分析に応じて動的に変化します。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、RAM のしきい値と処理能力が高い新世代のビジネス サーバー上で最適に動作します。 メモリへの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの格納には大量の RAM が使用されます。 RAM は構造の変化に対応できる機能をサポートしています。 追加のプロセッサでは、生の未集計データの実行時間の長いスキャンをサポートします。 このデータの構造は、ユーザーが Excel クライアントやフロントエンド インターフェイスを使用して開始したデータ分析に応じて動的に変化します。  
   
 > [!TIP]  
 >  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint では、L2 キャッシュと L3 キャッシュを使用します。 パフォーマンスを向上させるには、大容量の L2 および L3 キャッシュが搭載されたプロセッサを使用することを検討してください。  

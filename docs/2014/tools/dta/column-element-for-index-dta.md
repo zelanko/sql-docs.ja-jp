@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfd0483abe0b5c5134f34361040cb46e033e6214
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f22dcfcd6fe1cbd37a9383f429f9005b0590c446
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135363"
 ---
 # <a name="column-element-for-index-dta"></a>Index の Column 要素 (DTA)
   ユーザー指定の構成で、インデックスを作成する列を指定します。  

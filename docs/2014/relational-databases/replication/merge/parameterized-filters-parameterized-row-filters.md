@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 68
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a66dcf09bc64991be32b9d7bf66e2e1729de6c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fcc10aefddfe657e038f524f90075ae1fae0ce23
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225421"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216312"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   パラメーター化された行フィルターを使用すると、複数のパブリケーションを作成しなくても、パーティションの異なるデータを各サブスクライバーに送信できます (以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、パラメーター化されたフィルターは動的フィルターと呼ばれていました)。 パーティションとは、テーブル内の行のサブセットのことです。パラメーター化された行フィルターの作成時に選択した設定に基づき、パブリッシュされたテーブルの各行は、1 つのパーティションのみに属するか (重複しないパーティションが作成されます)、2 つ以上のパーティションに属します (重複するパーティションが作成されます)。  

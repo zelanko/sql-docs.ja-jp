@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2ed63bd9188dc25b6edfea09f8378d4243776b9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 156fa271582673d93cf2f76e92e447ea63b846c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323232"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200832"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 **認証の拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 でサポートされており、 **以前のオペレーティング システムでは、** 拡張保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] がサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。  
@@ -87,8 +84,7 @@ ms.locfileid: "37323232"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 以前のバージョンの**については、今後の更新によって一部で** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用できるようになります。 サーバー コンピューターで **拡張保護** を有効にした後、次の手順に従って **拡張保護**を有効にします。  
   
-1.  
-              **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 2.  **[SQL Server ネットワークの構成]** を展開し、**[*\<* InstanceName*>* のプロトコル]** を右クリックして、**[プロパティ]** をクリックします。  
   

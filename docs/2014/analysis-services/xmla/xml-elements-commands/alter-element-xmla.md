@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Alter Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Alter command
 ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e13819d301af842eb2094d7b6ad3367cde424c72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9bdf13c64834100db14357a5a0ac7f47a6f9bf3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192415"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205792"
 ---
 # <a name="alter-element-xmla"></a>Alter 要素 (XMLA)
   使用される Analysis Services スクリプト言語 (ASSL) 要素を含む、 [Execute](../xml-elements-methods-execute.md)メソッドのインスタンス上のオブジェクトを変更する[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom assemblies [Reporting Services], debugging
 - debugging custom assemblies [Reporting Services]
 - troubleshooting [Reporting Services], custom assemblies
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a810f5fd5296a109b266fdafc6033f9cb371032a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d151641736523457e4c22ea94f50fb0652a73aa3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159732"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>カスタム アセンブリをデバッグする方法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、カスタム アセンブリ コードを分析してエラーを探すのに役立ついくつかのデバッグ ツールが用意されています。 どのツールが最適であるかは、何を実行するかによって異なります。 この例では [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]を使用します。  

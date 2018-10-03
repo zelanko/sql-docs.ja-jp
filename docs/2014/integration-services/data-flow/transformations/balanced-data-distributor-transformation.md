@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 175f52195a20c965915e1d144f661f53fbb42573
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad7f9254cd62ee1d3efc5a02ed661cd63154c966
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187109"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154792"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Balanced Data Distributor (BDD) 変換
   Balanced Data Distributor (BDD) 変換では最新 CPU の同時処理機能を利用します。 この手法では、複数の着信バッファーを、個別のスレッド上に存在する出力に対して一様に分配します。 BDD コンポーネントは各出力パスに対応する個別のスレッドを使用することで、マルチコアまたはマルチプロセッサのコンピューターで SSIS パッケージのパフォーマンスを向上させます。 BDD コンポーネントは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Feature Pack の一部です。 ダウンロードしてインストールから[ここ](http://go.microsoft.com/fwlink/p/?LinkId=391999)します。  

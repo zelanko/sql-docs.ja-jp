@@ -1,12 +1,10 @@
 ---
-title: ストアド プロシージャを実行している |。Microsoft Docs
+title: ストアド プロシージャを実行しています。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, stored procedures
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, stored procedures
 - stored procedures [ODBC], executing
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5275dca79f7519a64b2ace936e5f91a6961819fd
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426361"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144862"
 ---
 # <a name="running-stored-procedures"></a>ストアド プロシージャの実行
   ストアド プロシージャは、データベースに保存される実行可能なオブジェクトです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
@@ -58,7 +55,7 @@ ms.locfileid: "37426361"
   
      拡張ストアド プロシージャは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは使用できない C や C++ の機能を使用できます。  
   
-     ストアド プロシージャを呼び出す方法の例は、次を参照してください。[プロセスのリターン コードと出力パラメーター &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)します。  
+     ストアド プロシージャを呼び出す方法の例を参照してください[プロセスのリターン コードと出力パラメーター &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

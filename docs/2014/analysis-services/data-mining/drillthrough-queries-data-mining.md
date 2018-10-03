@@ -4,37 +4,34 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AllowDrillThrough property
 - drillthrough [Analysis Services]
 - drillthrough [DMX]
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f49320313875576cad06168564344e4837ce03b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1f2371008e76b6315edb24cb92134fcca014a498
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149592"
 ---
 # <a name="drillthrough-queries-data-mining"></a>ドリルスルー クエリ (データ マイニング)
   *ドリルスルー クエリ*を使用すると、マイニング モデルにクエリを送信して、基になるケースまたは構造データから詳細を取得できます。 ドリルスルーは、モデルのトレーニングに使用されたケースとテストに使用されたケースを比較する際や、ケース データの詳細を確認する際に役立ちます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングは、ドリルスルーの次の 2 つのオプションを提供します。  
   
--    **モデル ケース**へのドリルスルー  
+-   **モデル ケース**へのドリルスルー  
   
      モデル ケースへのドリルスルーは、デシジョン ツリーのクラスターや分岐などのモデル内の特定のパターンからドリルし、個々のケースの詳細を表示するときに使用します。  
   
--    **構造ケース**へのドリルスルー  
+-   **構造ケース**へのドリルスルー  
   
      構造ケースのドリルスルーは、モデル内で使用できない情報が構造に含まれている際に使用します。 たとえば、構造のデータとして顧客の連絡先情報が含まれていても、クラスター モデルでは使用しません。 しかし、モデルを作成した後に、特定のクラスターにグループ化された顧客に関する連絡先情報を取得する必要が生じる場合もあります。  
   

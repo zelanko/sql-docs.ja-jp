@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a512c4e9f288c0e776b7ac6de91604da39d9f4d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acb86931d7343d375718efbae0186c67d7a38156
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106682"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>モデルへの予測関数の適用
   予測クエリを作成するには、クエリの基になるマイニング モデルを選択する必要があります。 現在のプロジェクトに存在するマイニング モデルを選択できます。  

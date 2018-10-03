@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - scrollable cursors [SQL Server]
@@ -19,26 +17,25 @@ helpviewer_keywords:
 - sensitivity behavior of cursor
 - ODBC cursors, cursor behaviors
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e762ea640293cd973bec2a5cde02b01f0f2a1c8e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6c5ded9f42da267cfd137f0adfd4465d965d9a06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430431"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108475"
 ---
-# <a name="cursor-behaviors"></a>カーソルの動作
+# <a name="cursor-behaviors"></a>カーソル動作
   ODBC では、カーソルのスクロールの可否と感度を設定することでカーソル動作を指定する、ISO オプションがサポートされます。 これらの動作は、SQL_ATTR_CURSOR_SCROLLABLE と SQL_ATTR_CURSOR_SENSITIVITY オプションへの呼び出しでの設定で指定された[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の特性を持つサーバー カーソルを要求して、これらのオプションを実装します。  
   
 |カーソル動作の設定|要求されるサーバー カーソルの特性|  
 |------------------------------|---------------------------------------------|  
-|SQL_SCROLLABLE と SQL_SENSITIVE|キーセット ドリブン カーソルとバージョンに基づくオプティミスティック同時実行制御|  
-|SQL_SCROLLABLE と SQL_INSENSITIVE|静的カーソルと読み取り専用同時実行|  
-|SQL_SCROLLABLE と SQL_UNSPECIFIED|静的カーソルと読み取り専用同時実行|  
-|SQL_NONSCROLLABLE と SQL_SENSITIVE|順方向専用カーソルとバージョンに基づくオプティミスティック同時実行制御|  
+|SQL_SCROLLABLE と SQL_SENSITIVE|キーセット ドリブン カーソルとバージョンに基づくオプティミスティック コンカレンシー|  
+|SQL_SCROLLABLE と SQL_INSENSITIVE|静的カーソルと読み取り専用コンカレンシー|  
+|SQL_SCROLLABLE と SQL_UNSPECIFIED|静的カーソルと読み取り専用コンカレンシー|  
+|SQL_NONSCROLLABLE と SQL_SENSITIVE|順方向専用カーソルとバージョンに基づくオプティミスティック コンカレンシー|  
 |SQL_NONSCROLLABLE と SQL_INSENSITIVE|既定の結果セット (順方向専用、読み取り専用)|  
 |SQL_NONSCROLLABLE と SQL_UNSPECIFIED|既定の結果セット (順方向専用、読み取り専用)|  
   

@@ -3,17 +3,17 @@ title: SQL Server のスタンドアロン R Server または Machine Learning S
 description: スタンドアロン R Server の概要概要と SQL Server セットアップでの Machine Learning Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 10/01/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240030"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176432"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (スタンドアロン) と SQL Server での Machine Learning Server (スタンドアロン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server では、スタンドアロン R Server または SQL Server とは�
 SQL Server 2016 では、この機能は呼**R Server (スタンドアロン)** であり、R 専用です。 SQL Server 2017 で呼び出されます**Machine Learning Server (スタンドアロン)** R と Python の両方が含まれています。  
 
 > [!Note]
-> スタンドアロン サーバーは、機能的には、SQL のブランド化されていないバージョンの SQL Server セットアップによってインストールされている、 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)、リモートの実行など、ユーザー シナリオをサポートしています。サービスの運用化と web サービス、および RevoScaleR と revoscalepy 関数の完全なコレクション。
+> スタンドアロン サーバーは、機能的には、SQL のブランド化されていないバージョンの SQL Server セットアップによってインストールされている、 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)、リモートの実行など、ユーザー シナリオをサポートしています。サービスの運用化と web サービス、および R と Python ライブラリの完全なコレクション。
 
 ## <a name="components"></a>Components
 
