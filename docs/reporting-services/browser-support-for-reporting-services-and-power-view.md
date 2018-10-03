@@ -4,7 +4,6 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -18,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1b5ec89582cc1c3cca66e9e6a594099209afbbe
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 96c7e313bea6d36d62267413618b4a90bfdd2d74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695910"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services と Power View のブラウザー サポート
 
@@ -95,7 +94,7 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 |**[Microsoft Internet Explorer]**|ネゴシエート、Kerberos、NTLM、基本|ネゴシエート|可能。 Internet Explorer の既定の認証設定を使用します。|
 |**Google Chrome**(+)|ネゴシエート、NTLM、基本|ネゴシエート|可能。 Chrome の既定の認証設定を使用します。|
 |**Mozilla Firefox**(+)|NTLM、基本|NTLM|可能。 Firefox の既定の認証設定を使用します。|
-|**Apple Safari**(+)|NTLM、基本|[標準]|可能。 Safari の既定の認証設定を使用します。|
+|**Apple Safari**(+)|NTLM、基本|Basic|可能。 Safari の既定の認証設定を使用します。|
 
  **(+)** 最新公開リリース バージョン
 

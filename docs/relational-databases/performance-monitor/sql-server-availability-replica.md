@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -17,22 +14,21 @@ helpviewer_keywords:
 - SQLServer:Availability Replica
 - Availability Groups [SQL Server], performance counters
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e254f66c396071dca0a9eca2ac1ff2e390ae700c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27038f80f725078d51ab6c723c895a2718004f19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951087"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749521"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server、Availability Replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:Availability Replica** パフォーマンス オブジェクトには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループの可用性レプリカに関する情報を報告するパフォーマンス カウンターが含まれています。 可用性レプリカのパフォーマンス カウンターはすべてプライマリ レプリカとセカンダリ レプリカの両方に適用され、送信/受信カウンターによってローカル レプリカの状態が示されます。 ほとんどの場合、プライマリ レプリカがデータの大部分を送信し、セカンダリ レプリカがデータを受信します。 ただし、セカンダリ レプリカは、ACK と他のバックグラウンド トラフィックをプライマリ レプリカに送信します。 可用性レプリカでは、ローカル レプリカの現在のロール (プライマリまたはセカンダリ) に応じて一部のカウンターが値 0 を示します。  
   
-|カウンター名|Description|  
+|カウンター名|[説明]|  
 |------------------|-----------------|  
 |**レプリカからの受信バイト数/秒**|可用性レプリカから 1 秒あたりに受信したバイト数。 ユーザーによる更新のないデータベースでも、ping と状態の更新でネットワーク トラフィックが発生します。|  
 |**レプリカへの送信バイト数/秒**|リモート可用性レプリカに 1 秒あたりに送信されたバイト数。 プライマリ レプリカの場合、これはセカンダリ レプリカに送信されたバイト数です。 セカンダリ レプリカの場合、これはプライマリ レプリカに送信されたバイト数です。|  

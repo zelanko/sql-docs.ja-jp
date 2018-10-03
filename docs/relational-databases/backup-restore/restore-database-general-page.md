@@ -1,29 +1,26 @@
-﻿---
+---
 title: '[データベースの復元] ([全般] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-caps.latest.revision: 89
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 94d50b36cf3873f4e183c52fa4a70c34be332071
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6016df6c051a7125bda2a50d853cd48876bb03b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923667"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729970"
 ---
-# <a name="restore-database-general-page"></a>[データベースの復元] ([全般] ページ)
+# <a name="restore-database-general-page"></a>[データベースの復元] \([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   **[全般]** ページを使用すると、データベースの復元操作における対象データベースとソース データベースに関する情報を指定できます。  
@@ -42,7 +39,7 @@ ms.locfileid: "32923667"
   
  暗号化されたバックアップから復元するには、バックアップ時の暗号化に使用された証明書または非対称キーに対する **VIEW DEFINITION** 権限が必要です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
   
 ### <a name="source"></a>Source  
  **[復元元]** パネルのオプションでは、データベースのバックアップ セットの場所と復元するバックアップ セットを指定します。  
@@ -50,7 +47,7 @@ ms.locfileid: "32923667"
 |項目|定義|  
 |----------|----------------|  
 |**[データベース]**|復元するデータベースをドロップダウン リストから選択します。 このリストには、 **msdb** バックアップ履歴に従ってバックアップされたデータベースのみが含まれます。|  
-|**[デバイス]**|復元対象のバックアップを含む論理バックアップ デバイスまたは物理バックアップ デバイス (テープ、URL、またはファイル) を選択します。 データベース バックアップが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスで作成された場合、これは必須です。<br /><br /> 1 つ以上の論理バックアップ デバイスまたは物理バックアップ デバイスを選択するには、参照ボタンをクリックして、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 このダイアログ ボックスで、1 つのメディア セットに属する最大 64 個のデバイスを選択できます。 テープ デバイスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスが動作しているコンピューターに物理的に接続している必要があります。 バックアップ ファイルは、ローカルまたはリモートのディスク デバイスに配置できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。 Windows Azure ストレージに格納されるバックアップ ファイルのデバイスの種類として **[URL]** を選択することもできます。<br /><br /> **[バックアップ デバイスの選択]** ダイアログ ボックスを終了すると、選択したデバイスが **[デバイス]** の一覧に読み取り専用の値として表示されます。|  
+|**[デバイス]**|復元対象のバックアップを含む論理バックアップ デバイスまたは物理バックアップ デバイス (テープ、URL、またはファイル) を選択します。 データベース バックアップが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスで作成された場合、これは必須です。<br /><br /> 1 つ以上の論理バックアップ デバイスまたは物理バックアップ デバイスを選択するには、参照ボタンをクリックして、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 このダイアログ ボックスで、1 つのメディア セットに属する最大 64 個のデバイスを選択できます。 テープ デバイスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスが動作しているコンピューターに物理的に接続している必要があります。 バックアップ ファイルは、ローカルまたはリモートのディスク デバイスに配置できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。 Windows Azure ストレージに格納されるバックアップ ファイルのデバイスの種類として **[URL]** を選択することもできます。<br /><br /> **[バックアップ デバイスの選択]** ダイアログ ボックスを終了すると、選択したデバイスが **[デバイス]** の一覧に読み取り専用の値として表示されます。|  
 |**[データベース]**|ドロップダウン リストから、バックアップを復元するデータベース名を選択します。<br /><br /> メモ: この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。|  
   
 ### <a name="destination"></a>[Destination]  

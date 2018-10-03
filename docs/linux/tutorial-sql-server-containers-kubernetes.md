@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: fba598abb0431d2e9a80b0cdc0976f72c6eadc15
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 44f81a23d341e549243b8e99366fef435be04ffa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712684"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808630"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes サービス (AKS) での Kubernetes での SQL Server のコンテナーをデプロイします。
 

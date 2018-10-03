@@ -3,17 +3,16 @@ title: Reporting Services の移行 (SharePoint モード) | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4092c9f0b91a8d2efb241efa6fc3ddacb13aea9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5710e60a5fec0577c3b36cc04c3d87d68f2ff80a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275323"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826840"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services の移行 (SharePoint モード)
 
@@ -59,7 +58,7 @@ ms.locfileid: "43275323"
 ####  <a name="bkmk_databases"></a> 移行の完了時に存在するデータベース  
  次の表に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint を正常に移行した後に存在する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連の SQL Server データベースを示します。  
   
-|[データベース]|名前の例||  
+|データベース|名前の例||  
 |--------------|------------------|-|  
 |カタログ データベース|ReportingService_[service application GUID] **(\*)**|ユーザーが移行。|  
 |一時データベース|ReportingService_[service application GUID]TempDB **(\*)**|ユーザーが移行。|  

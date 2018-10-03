@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE VIEW
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d9ffdfee5a7347570fc6797d43dabc0beb9d4a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 25b196ffefd3319b96865ebef92bd778bf72ceb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808460"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +148,7 @@ OR ALTER
  CREATE VIEW ステートメントのテキストが含まれている [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) のエントリを暗号化します。 WITH ENCRYPTION を使用すると、そのビューを SQL Server レプリケーションの一部としてパブリッシュできなくなります。  
   
  SCHEMABINDING  
- 基になるテーブルのスキーマにビューをバインドします。 SCHEMABINDING を指定した場合、ベース テーブルに対してビュー定義に影響を与えるような変更は行えません。 まずビュー定義を変更または削除して、変更するテーブルとの依存関係を解消する必要があります。 SCHEMABINDING を使用する場合は、*select_statement* に、参照されるテーブル、ビュー、またはユーザー定義関数の名前として、2 つの部分から構成される名前 (*schema ***.*** object*) を指定する必要があります。 参照されるオブジェクトは、すべて同じデータベース内にあることが必要です。  
+ 基になるテーブルのスキーマにビューをバインドします。 SCHEMABINDING を指定した場合、ベース テーブルに対してビュー定義に影響を与えるような変更は行えません。 まずビュー定義を変更または削除して、変更するテーブルとの依存関係を解消する必要があります。 SCHEMABINDING を使用する場合は、*select_statement* に、参照されるテーブル、ビュー、またはユーザー定義関数の名前として、2 つの部分から構成される名前 (_schema_**.**_object_) を指定する必要があります。 参照されるオブジェクトは、すべて同じデータベース内にあることが必要です。  
   
  SCHEMABINDING 句を指定して作成したビューに参加しているビューまたはテーブルは、そのビューが削除または変更されてスキーマ バインドがなくならない限り削除できません。 スキーマ バインドが残っている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]からエラーが返されます。 また、ビュー定義に影響を与える ALTER TABLE ステートメントを、スキーマ バインドを持つビューに参加しているテーブルに対して実行すると、ステートメントは失敗します。  
   

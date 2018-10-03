@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.backupdatabasetask.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01ca14b43e5ebad8bca1b821dd25bd0740a2ba5e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 147b8c560495f9484832ee969316511472f64152
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729410"
 ---
 # <a name="back-up-database-task"></a>データベースのバックアップ タスク
   データベースのバックアップ タスクは、さまざまな種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのバックアップを実行します。 詳細については、「 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  
@@ -37,7 +34,7 @@ ms.locfileid: "35411954"
 ## <a name="supported-recover-models-and-backup-types"></a>サポートされている復旧モデルとバックアップの種類  
  次の表に、データベースのバックアップ タスクがサポートする復旧モデルとバックアップの種類を示します。  
   
-|復旧モデル|[データベース]|データベースの差分|[トランザクション ログ]|ファイルまたはファイルの差分|  
+|復旧モデル|データベース|データベースの差分|[トランザクション ログ]|ファイルまたはファイルの差分|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
 |Simple|Required|省略可|サポートされていません|サポートされていません|  
 |[完全]|Required|省略可|Required|省略可|  

@@ -4,17 +4,16 @@ ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08682ef7985727e17aca84ee4013d2b0b90761ad
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: cef9239250bccd043d530917a284913db3e0d6e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795180"
 ---
 # <a name="previewing-reports-in-report-builder"></a>レポート ビルダーでのレポートのプレビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページページ分割されたレポートを作成する際は、レポートが思いどおりに表示されるかどうかを確認するために、レポートをたびたびプレビューすると効果的です。 レポートをプレビューするには、 **[実行]** をクリックします。 レポートがプレビュー モードで表示されます。  
@@ -66,7 +65,7 @@ ms.locfileid: "43273145"
   
  既定では、データ キャッシュに最大 5 つのデータセットを保持できます。 パラメーターの値の組み合わせを変えながら、さまざまなパターンでプレビューする場合は、それだけ多くのデータが必要になります。 結果的に、キャッシュを更新する必要が生じ、次回プレビュー時にレポートのレンダリング速度が低下します。 キャッシュ内のエントリ数は、レポート サーバーの管理者が変更できます。  
   
-## <a name="concurrency-of-report-updates"></a>レポートの更新の同時実行性  
+## <a name="concurrency-of-report-updates"></a>レポートの更新のコンカレンシー  
  レポートを更新してからレポート サーバーに保存する際の 1 つの手順としてレポートをプレビューすることがよくあります。 自分がレポートを更新しているときに、他のだれかがそのレポートを更新し、同時に保存する可能性もあります。 将来、閲覧と更新に使用できるレポートのバージョンは、最後に保存されたレポートです。 つまり、プレビューしたレポートのバージョンと、再度開いたときに表示されるバージョンとが必ずしも一致するとは限りません。 レポート ビルダー メニューの **[名前を付けて保存]** オプションを使用すると、レポートに新しい名前を付けて保存することができます。  
   
 ## <a name="external-report-items"></a>外部のレポート アイテム  

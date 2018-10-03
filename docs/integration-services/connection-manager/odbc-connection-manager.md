@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.odbcconnection.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data sources [Integration Services], connections
 - connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5738bb81defed287c9394b708487fac6a43e5ecd
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 84910634eb684335f42ed8c3c8c36d0b317f4e53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829410"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 接続マネージャー
   ODBC 接続マネージャーを使用すると、パッケージは Open Database Connectivity (ODBC) の仕様を使用して、さまざまなデータベース管理システムに接続できます。  
@@ -57,7 +54,7 @@ ms.locfileid: "35333386"
   
  ODBC 接続マネージャーの詳細については、「 [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[データ接続]**  
  既存の ODBC 接続マネージャーを一覧から選択します。  
   

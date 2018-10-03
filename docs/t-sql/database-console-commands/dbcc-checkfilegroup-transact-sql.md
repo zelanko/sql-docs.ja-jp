@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKFILEGROUP_TSQL
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 60
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 76189bd8ce8057d50671c93c09fbb7a5f0883544
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4ccb7299cd8bc1fc0d764499f783deb88dfdf005
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716840"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +95,7 @@ DBCC CHECKFILEGROUP
  MAXDOP  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで  
   
- ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションを無効にします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
 > [!CAUTION]  
 >  MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
@@ -112,7 +110,7 @@ DBCC CHECKALLOC または DBCC CHECKTABLE を DBCC CHECKFILEGROUP と分けて�
   
 ## <a name="internal-database-snapshot"></a>内部データベース スナップショット  
 DBCC CHECKFILEGROUP は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を実現します。 詳細については、次を参照してください。「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」および「[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)」の「DBCC 内部データベース スナップショットの使用」セクション。
-スナップショットを作成できない場合や TABLOCK オプションが指定されている場合、DBCC CHECKFILEGROUP はロックを取得して必要な一貫性を実現します。 この場合、割り当てのチェックを行うための排他データベース ロックと、テーブルのチェックを行うための共有テーブル ロックが必要です。 TABLOCK の作用によって負荷の高いデータベースでも DBCC CHECKFILEGROUP の実行速度が速くなりますが、DBCC CHECKFILEGROUP の実行中、データベースでの同時実行性は低下します。
+スナップショットを作成できない場合や TABLOCK オプションが指定されている場合、DBCC CHECKFILEGROUP はロックを取得して必要な一貫性を実現します。 この場合、割り当てのチェックを行うための排他データベース ロックと、テーブルのチェックを行うための共有テーブル ロックが必要です。 TABLOCK の作用によって負荷の高いデータベースでも DBCC CHECKFILEGROUP の実行速度が速くなりますが、DBCC CHECKFILEGROUP の実行中、データベースでのコンカレンシーは低下します。
   
 > [!NOTE]  
 >  tempdb に対して DBCC CHECKFILEGROUP を実行しても、割り当てのチェックは行われず、共有テーブル ロックを取得してテーブルのチェックを行う必要があります。 これは、パフォーマンス上の理由から、データベースのスナップショットが tempdb では利用できないためです。 つまり、必要なトランザクションの一貫性を実現できないためです。  
@@ -134,10 +132,10 @@ DBCC CHECKFILEGROUP は、内部データベースのスナップショットを
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて  
 DBCC CHECKFILEGROUP コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
   
-|状態|Description|  
+|状態|[説明]|  
 |-----------|-----------------|  
 |0|エラー番号 8930 が発生しました。 メタデータの破損が原因で DBCC コマンドが終了しました。|  
-|@shouldalert|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  
+|1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  
 |2|緊急モードのデータベース修復中にエラーが発生しました。|  
 |3|メタデータの破損が原因で DBCC コマンドが終了しました。|  
 |4|アサートまたはアクセス違反が検出されました。|  

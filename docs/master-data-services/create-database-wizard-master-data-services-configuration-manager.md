@@ -5,24 +5,21 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9a309694db3d06deae0892e9b2c59ad82752bda3
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 6cce05ab1b3511dca7258dd1ec5dfc61e965715b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787206"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>データベースの作成ウィザード (マスター データ サービス構成マネージャー)
 
@@ -41,7 +38,7 @@ ms.locfileid: "35329586"
 |**Password**|ユーザー アカウントに関連付けられているパスワードを指定します。<br /><br /> **[認証の種類]** が **[現在のユーザー - 統合セキュリティ]** の場合、 **[パスワード]** ボックスは読み取り専用で、指定した Windows ユーザー アカウントの資格情報が接続に使用されます。<br /><br /> **[認証の種類]** が **[SQL Server アカウント]** の場合、 **[パスワード]** ボックスが有効になり、指定したユーザー アカウントに関連付けられているパスワードを指定する必要があります。|  
 |**[接続テスト]**|指定したユーザー アカウントで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続でき、そのインスタンスの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成する権限がアカウントに与えられていることを確認します。 **[接続テスト]** をクリックしなかった場合、 **[次へ]** をクリックしたときに接続がテストされます。|  
   
-## <a name="database"></a>[データベース]  
+## <a name="database"></a>データベース  
  新しいデータベースのデータベース名と照合順序のオプションを指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 char や varchar などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 照合順序の詳細については、「 [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
 |コントロール名|[説明]|  

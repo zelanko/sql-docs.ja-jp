@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc49f453f2678d2ad5e7cd542242a00d60a80f31
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 105f32a1e95852a0c08b47da0632b53522718957
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401524"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780496"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service は、プログラム xdbcdcsvc.exe を実行する Windows サービスです。 それぞれ異なる Windows サービス名を持つ複数の Windows サービスを、同じコンピューターで実行するように構成できます。 1 つのコンピューターで複数の Oracle CDC Windows サービスを作成する場合としては、サービス間の分離を強化したい場合や、各サービスでそれぞれ異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する必要がある場合などが一般的です。  
@@ -56,7 +53,7 @@ GO
 ### <a name="protection-of-source-oracle-change-data"></a>ソース Oracle の変更データの保護  
  Oracle CDC Service には、Oracle データベースの任意のテーブルに対する変更をキャプチャできるログ マイニングの資格情報が与えられています。 変更データには、通常のテーブルのような詳細なアクセス許可はないため、変更データにアクセスするときには、Oracle に組み込まれているアクセス制御がバイパスされます。  
   
- CDC データベースには、キャプチャ対象のソース Oracle テーブルと同じスキーマ名とテーブル名を持つ空のミラー テーブルがあります。 キャプチャされたデータは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のキャプチャ インスタンスに格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからキャプチャされた変更と同じように保護されます。 キャプチャ インスタンスに関連付けられた変更データにアクセスするには、関連付けられたミラー テーブルのすべてのキャプチャ対象列に対する選択アクセスがユーザーに許可されている必要があります。 また、キャプチャ インスタンスの作成時にゲーティング ロールが指定されている場合、呼び出し元は、指定されたゲーティング ロールのメンバーである必要もあります。 メタデータにアクセスするためのその他の一般的な変更データ キャプチャ関数には、public ロールですべてのデータベース ユーザーがアクセスできます。ただし、通常は、返されるメタデータへのアクセスも、基になるソース テーブルに対する選択アクセス、および定義されたすべてのゲーティング ロールのメンバーシップに基づいて制限されます。  
+ CDC データベースには、キャプチャ対象のソース Oracle テーブルと同じスキーマ名とテーブル名を持つ空のミラー テーブルがあります。 キャプチャされたデータは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のキャプチャ インスタンスに格納され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからキャプチャされた変更と同じように保護されます。 キャプチャ インスタンスに関連付けられた変更データにアクセスするには、関連付けられたミラー テーブルのすべてのキャプチャ対象列に対する選択アクセスがユーザーに許可されている必要があります。 また、キャプチャ インスタンスの作成時にゲーティング ロールが指定されている場合、呼び出し元は、指定されたゲーティング ロールのメンバーである必要もあります。 メタデータにアクセスするためのその他の一般的な変更データ キャプチャ関数には、public ロールですべてのデータベース ユーザーがアクセスできます。ただし、通常は、返されるメタデータへのアクセスも、基になるソース テーブルに対する選択アクセス、および定義されたすべてのゲーティング ロールのメンバーシップに基づいて制限されます。  
   
  したがって、 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールを持つユーザーには、キャプチャされたデータへのフル アクセス権が (既定で) 与えられ、さらなるアクセスは、ゲーティング ロールを使用するか、キャプチャ対象列に対する選択アクセスを許可することによって許可できます。  
   

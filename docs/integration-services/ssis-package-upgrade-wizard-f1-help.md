@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.is.upgradewizard.ssisupgradewizard.f1
@@ -18,16 +16,15 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0595f04bd99e2cab2ef71694d170392fd505b76
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4c1d1da13379b9a273ca3b5e0c1809434c7ed165
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829490"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS パッケージ アップグレード ウィザードの F1 ヘルプ
   SSIS パッケージ アップグレード ウィザードを使用して、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で作成されたパッケージを、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のパッケージ形式にアップグレードします。  
@@ -38,7 +35,7 @@ ms.locfileid: "35329186"
 
 ## <a name="ssis-upgrade-wizard"></a>SSIS アップグレード ウィザード
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、このようこそページをスキップします。  
  
@@ -145,7 +142,7 @@ ms.locfileid: "35329186"
   
 -   [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[接続文字列を更新して新しいプロバイダー名を使用する]**  
  現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の次のプロバイダーの名前を使用するように、接続文字列を更新します。  
   
@@ -194,7 +191,7 @@ ms.locfileid: "35329186"
 ## <a name="select-packages-page"></a>[パッケージの選択] ページ
   **[パッケージの選択]** ページを使用すると、アップグレードするパッケージを選択できます。 このページには、ウィザードの **[ソースの場所を選択]** ページで指定した場所に格納されているパッケージが一覧表示されます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[既存のパッケージ名]**  
  アップグレードする 1 つ以上のパッケージを選択します。  
   
@@ -213,14 +210,14 @@ ms.locfileid: "35329186"
 ## <a name="complete-the-wizard-page"></a>[ウィザードの完了] ページ
   **[ウィザードの完了]** ページでは、選択したパッケージ アップグレード オプションを確認できます。 このページは、このセッションのウィザードのオプションを前に戻って変更できる、最後のウィザード ページです。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **オプションの概要**  
  ウィザードで選択したアップグレード オプションを確認します。 いずれかのオプションを変更するには、 **[戻る]** をクリックして前のウィザード ページに戻ります。
  
 ## <a name="upgrading-the-packages-page"></a>[パッケージをアップグレードしています] ページ
   **[パッケージをアップグレードしています]** ページでは、パッケージのアップグレードの進行状況を表示したり、アップグレード プロセスを中断したりできます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードでは、選択したパッケージが 1 つずつアップグレードされます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[メッセージ] ペイン**  
  アップグレード プロセス中に、進行状況メッセージと概要情報が表示されます。  
   

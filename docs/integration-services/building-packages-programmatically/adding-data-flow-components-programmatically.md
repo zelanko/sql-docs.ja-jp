@@ -6,11 +6,7 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -19,16 +15,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 420fd9d6204eb8bcbedaee7e7ef272d0ee88067a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 852f6e8580b59df5203ce7115c080254b78a7156
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35313091"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734660"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの追加
   データ フローを作成するには、最初にコンポーネントを追加します。 次に、追加したコンポーネントを構成して相互に接続し、実行時のデータ フローを確立します。 このセクションでは、データ フロー タスクへのコンポーネントの追加、コンポーネントのデザイン時インスタンスの作成、およびコンポーネントの構成について説明します。 コンポーネントの接続方法については、「[プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)」を参照してください。  
@@ -38,12 +33,12 @@ ms.locfileid: "35313091"
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティの値には、CLSID、PROGID、またはコンポーネントの <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> プロパティを指定できます。 CLSID は通常、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティの値として [プロパティ] ウィンドウに表示されます。 このプロパティ、および使用できるコンポーネントの他のプロパティの取得については、「[プログラムによるデータ フロー コンポーネントの検出](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)」を参照してください。  
   
-## <a name="adding-a-managed-component"></a>マネージ コンポーネントの追加  
- CLSID または PROGID を使用して、いずれかのマネージ データ フロー コンポーネントをデータ フローに追加することはできません。これらの値はコンポーネント自体ではなく、ラッパーを指しているためです。 代わりに、次のサンプルに示すように、**CreationName** プロパティまたは **AssemblyQualifiedName** プロパティを使用できます。  
+## <a name="adding-a-managed-component"></a>マネージド コンポーネントの追加  
+ CLSID または PROGID を使用して、いずれかのマネージド データ フロー コンポーネントをデータ フローに追加することはできません。これらの値はコンポーネント自体ではなく、ラッパーを指しているためです。 代わりに、次のサンプルに示すように、**CreationName** プロパティまたは **AssemblyQualifiedName** プロパティを使用できます。  
   
- **AssemblyQualifiedName** プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージ コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、**[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
+ **AssemblyQualifiedName** プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージド コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、**[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
   
- 組み込みマネージ データ フロー コンポーネントの要素は次のとおりです。  
+ 組み込みマネージド データ フロー コンポーネントの要素は次のとおりです。  
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ソース  
   
@@ -55,7 +50,7 @@ ms.locfileid: "35313091"
   
 -   スクリプト コンポーネント  
   
- 次のコード サンプルは、マネージ コンポーネントをデータ フローに追加するための 2 つの方法を示しています。  
+ 次のコード サンプルは、マネージド コンポーネントをデータ フローに追加するための 2 つの方法を示しています。  
   
 ```csharp  
 using System;  
@@ -136,7 +131,7 @@ End Module
 ```  
   
 ## <a name="creating-the-design-time-instance-of-the-component"></a>コンポーネントのデザイン時インスタンスの作成  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> メソッドを呼び出し、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティによって識別される、コンポーネントのデザイン時インスタンスを作成します。 このメソッドは、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> インターフェイスのマネージ ラッパーである <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> オブジェクトを返します。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> メソッドを呼び出し、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティによって識別される、コンポーネントのデザイン時インスタンスを作成します。 このメソッドは、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> インターフェイスのマネージド ラッパーである <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> オブジェクトを返します。  
   
  可能な限り、コンポーネントのメタデータを直接変更するのではなく、必ずデザイン時インスタンスのメソッドを使用して、コンポーネントを変更する必要があります。 メタデータには、接続など、直接設定する必要のあるアイテムがありますが、メタデータを直接変更すると、コンポーネントが変更を監視および検証する機能がバイパスされるため、一般的にはお勧めしません。  
   

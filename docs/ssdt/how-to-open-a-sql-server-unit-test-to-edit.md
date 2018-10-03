@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c2a7dfd1d5e9bafd023d2289c801758e9670629
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 480f5c487c5fb8f9db9f1db61dd7b4126b6c8bb4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787430"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>SQL Server の単体テストを開いて編集する方法
 SQL Server の単体テストを作成したら、**SQL Server 単体テスト デザイナー**を使用して Transact\-SQL ステートメントおよびテスト条件を追加します。 このデザイナーを使用して作成されたテストでは、Visual C# コードまたは Visual Basic コードが生成されます。 このコードが、テストの実行時に実行されます。  

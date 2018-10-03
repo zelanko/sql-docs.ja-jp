@@ -1,14 +1,11 @@
 ---
-title: 削除する拡張からストアド プロシージャの SQL Server |Microsoft ドキュメント
+title: SQL Server からプロシージャが格納されている拡張を削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deleting extended stored procedures
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], removing
 - dropping extended stored procedures
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
-caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc3d3c686c4f3d0f81dc2f2bb17eb3ba29090319
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f04a0baa52eff0ac5742769e9eb6bfd7bfc246c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32934807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717530"
 ---
 # <a name="removing-an-extended-stored-procedure-from-sql-server"></a>SQL Server からの拡張ストアド プロシージャの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +29,15 @@ ms.locfileid: "32934807"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
   
- ユーザー定義された拡張ストアド プロシージャの DLL、各拡張ストアド プロシージャ関数を削除する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム管理者が実行する必要があります、 **sp_dropextendedproc**システム ストアド プロシージャの名前を指定します関数とその関数が存在する DLL の名前。 このコマンドで関数を削除するなど、 **xp_hello**から xp_hello.dll という名前の DLL 内にある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ ユーザー定義拡張ストアド プロシージャ DLL では、各拡張ストアド プロシージャ関数を削除するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム管理者が実行する必要があります、 **sp_dropextendedproc**システム ストアド プロシージャの名前を指定します関数とその関数が存在する DLL の名前。 たとえば、このコマンドは、関数を削除します**xp_hello**から xp_hello.dll という名前の DLL に配置されている、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:。  
   
 ```  
 sp_dropextendedproc 'xp_hello'  
 ```  
   
- 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 **sp_dropextendedproc**もシステム拡張ストアド プロシージャは削除されません。 システム管理者が、拡張ストアド プロシージャに対する EXECUTE 権限を拒否する代わりに、**パブリック**ロール。  
+ 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 **sp_dropextendedproc**システム拡張ストアド プロシージャを削除できません。 代わりに、システム管理者がする拡張ストアド プロシージャに対する EXECUTE 権限を拒否する必要があります、**パブリック**ロール。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
   

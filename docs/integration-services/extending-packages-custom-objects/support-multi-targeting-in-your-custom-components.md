@@ -5,23 +5,18 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server (starting with 2016)
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c861f692dee1cb2fa56e5cbc4128ce4c617e500
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 49252f4743f3235275c93f504b44f4419941029d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797470"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントの複数バージョン対応のサポート
  SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 Visual Studio 2015 用の SSDT を入手する方法については、「[最新の SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。 
@@ -39,7 +34,7 @@ SSIS カスタム拡張機能の 5 種類すべてで、複数バージョン対
 -   ログ プロバイダー
 -   データ フロー コンポーネント
 
-マネージ拡張機能の場合、SSIS デザイナーが、指定されたターゲット バージョンの拡張機能のバージョンを読み込みます。 例 :
+マネージド拡張機能の場合、SSIS デザイナーが、指定されたターゲット バージョンの拡張機能のバージョンを読み込みます。 例 :
 -   対応バージョンが SQL Server 2012 の場合、デザイナーは、拡張機能の2012 バージョンを読み込みます。
 -   対応バージョンが SQL Server 2016 の場合、デザイナーは、拡張機能の2016 バージョンを読み込みます。
 

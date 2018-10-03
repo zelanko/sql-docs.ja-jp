@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76e46f9c9a157261f8341243583e855a0681756d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37360184"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739190"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle パブリッシャーのデータ型マッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,36 +30,36 @@ ms.locfileid: "37360184"
   
 |Oracle データ型|SQL Server データ型|代替|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|はい|  
-|BLOB|VARBINARY(MAX)|はい|  
-|CHAR([1-2000])|CHAR([1-2000])|はい|  
-|CLOB|VARCHAR(MAX)|はい|  
-|[DATE]|DATETIME|はい|  
+|BFILE|VARBINARY(MAX)|[ユーザー アカウント制御]|  
+|BLOB|VARBINARY(MAX)|[ユーザー アカウント制御]|  
+|CHAR([1-2000])|CHAR([1-2000])|[ユーザー アカウント制御]|  
+|CLOB|VARCHAR(MAX)|[ユーザー アカウント制御]|  
+|[DATE]|DATETIME|[ユーザー アカウント制御]|  
 |[FLOAT]|[FLOAT]|いいえ|  
 |FLOAT([1-53])|FLOAT([1-53])|いいえ|  
 |FLOAT([54-126])|[FLOAT]|いいえ|  
-|INT|NUMERIC(38)|はい|  
-|INTERVAL|DATETIME|はい|  
-|LONG|VARCHAR(MAX)|はい|  
-|LONG RAW|IMAGE|はい|  
+|INT|NUMERIC(38)|[ユーザー アカウント制御]|  
+|INTERVAL|DATETIME|[ユーザー アカウント制御]|  
+|LONG|VARCHAR(MAX)|[ユーザー アカウント制御]|  
+|LONG RAW|IMAGE|[ユーザー アカウント制御]|  
 |NCHAR([1-1000])|NCHAR([1-1000])|いいえ|  
-|NCLOB|NVARCHAR(MAX)|はい|  
-|NUMBER|[FLOAT]|はい|  
+|NCLOB|NVARCHAR(MAX)|[ユーザー アカウント制御]|  
+|NUMBER|[FLOAT]|[ユーザー アカウント制御]|  
 |NUMBER([1-38])|NUMERIC([1-38])|いいえ|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|はい|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|[ユーザー アカウント制御]|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|いいえ|  
 |RAW([1-2000])|VARBINARY([1-2000])|いいえ|  
 |real|[FLOAT]|いいえ|  
 |ROWID|CHAR(18)|いいえ|  
-|TIMESTAMP|DATETIME|はい|  
-|TIMESTAMP(0-7)|DATETIME|はい|  
-|TIMESTAMP(8-9)|DATETIME|はい|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|はい|  
+|TIMESTAMP|DATETIME|[ユーザー アカウント制御]|  
+|TIMESTAMP(0-7)|DATETIME|[ユーザー アカウント制御]|  
+|TIMESTAMP(8-9)|DATETIME|[ユーザー アカウント制御]|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|[ユーザー アカウント制御]|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|いいえ|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|はい|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|[ユーザー アカウント制御]|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|いいえ|  
 |UROWID|CHAR(18)|いいえ|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|はい|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|[ユーザー アカウント制御]|  
   
 ## <a name="considerations-for-data-type-mapping"></a>データ型マッピングに関する注意点  
  Oracle データベースからデータをレプリケートするときは、データ型に関する次の問題に注意してください。  

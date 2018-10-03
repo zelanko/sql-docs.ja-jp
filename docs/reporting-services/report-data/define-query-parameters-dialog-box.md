@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.definequeryparameters.f1
@@ -12,12 +11,12 @@ f1_keywords:
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b298290e694b8f77dea7fdaef157d717f847ea01
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 76f6abd2b517540c20a249eb4b6014f9fadcbc0d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277533"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795340"
 ---
 # <a name="define-query-parameters-dialog-box"></a>[クエリ パラメーターの定義] ダイアログ ボックス
   **[クエリ パラメーターの定義]** ダイアログ ボックスを使用すると、デザイン時にクエリ デザイナーでクエリを実行する際のパラメーター値を指定できます。この設定によって、サンプル データを表示させることができます。 クエリ パラメーターを使用すると、データ ソースのデータをフィルター処理し、レポートが処理するデータの量を制限できます。 これらの値は、レポート定義に保存されません。  

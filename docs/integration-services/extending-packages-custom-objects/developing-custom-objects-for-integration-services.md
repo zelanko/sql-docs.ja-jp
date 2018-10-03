@@ -5,26 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom user interface [Integration Services]
 - custom objects [Integration Services]
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41e255b2e5a7d66815b39e7fc1b44b5a87fae8cb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 031cf6907a2723db2cf9f5b5394ecdca13308577
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737370"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services 用のカスタム オブジェクトの開発
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる制御フロー オブジェクトおよびデータ フロー オブジェクトが、求める条件を満たしていない場合は、次のようなさまざまな種類のカスタム オブジェクトを独自に開発できます。  
@@ -41,14 +36,14 @@ ms.locfileid: "35401374"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルにはこのカスタム開発を容易にする複数の基本クラスがあります。これらの基本クラスによって、カスタム実装に対し、一貫した信頼性の高いフレームワークが提供されます。  
   
- カスタム機能を複数のパッケージで再利用する必要がない場合には、スクリプト タスクおよびスクリプト コンポーネントを使用すると、マネージ プログラミング言語を最大限に活用でき、記述するインフラストラクチャ コードが大幅に削減されます。 詳細については、「[スクリプティング ソリューションとカスタム オブジェクトとの比較](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)」を参照してください。  
+ カスタム機能を複数のパッケージで再利用する必要がない場合には、スクリプト タスクおよびスクリプト コンポーネントを使用すると、マネージド プログラミング言語を最大限に活用でき、記述するインフラストラクチャ コードが大幅に削減されます。 詳細については、「[スクリプティング ソリューションとカスタム オブジェクトとの比較](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)」を参照してください。  
   
 ## <a name="steps-in-developing-a-custom-object-for-integration-services"></a>Integration Services 用カスタム オブジェクトの開発手順  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用するカスタム オブジェクトを開発する際には、クラス ライブラリ (DLL) を開発します。このクラス ライブラリは、デザイン時に SSIS デザイナーによって、また実行時に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムによって、それぞれ読み込まれます。 実装の必要がある最も重要なメソッドは、独自のコードから呼び出すメソッドではなく、ランタイムによって適切な時点で呼び出され、コンポーネントの初期化および検証や、機能の呼び出しを行うメソッドです。  
   
  次に、カスタム オブジェクトの開発手順を示します。  
   
-1.  種類がクラス ライブラリの新規プロジェクトを、任意のマネージ プログラミング言語で作成します。  
+1.  種類がクラス ライブラリの新規プロジェクトを、任意のマネージド プログラミング言語で作成します。  
   
 2.  次の表に示す、適切な基本クラスを継承します。  
   
@@ -74,7 +69,7 @@ ms.locfileid: "35401374"
 |カスタム データ フロー コンポーネント|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>、 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>、 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|  
   
 ## <a name="providing-links-to-samples-and-help-content"></a>サンプルとヘルプ コンテンツへのリンクの提供  
- マネージ コードで記述されたカスタム オブジェクトのサンプルおよびヘルプ コンテンツへのリンクを **SSIS ツールボックス**に表示するには、次のプロパティを使用します。  
+ マネージド コードで記述されたカスタム オブジェクトのサンプルおよびヘルプ コンテンツへのリンクを **SSIS ツールボックス**に表示するには、次のプロパティを使用します。  
   
 -   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.SamplesTag%2A>  
   

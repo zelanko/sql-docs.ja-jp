@@ -1,13 +1,11 @@
-﻿---
+---
 title: SSMS を使用したデータベース バックアップの復元 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.locatebackupfileazure.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: 79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 01e55085d117541e2ecb8d8c4ee585afec205b03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cf13f7db56ff7fedd5252283a927f4daff0ec5fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923347"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664432"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>SSMS を使用してデータベース バックアップを復元する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +77,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 
             |メディアの種類|ダイアログ ボックス|Description|    
             |----------------|----------------|-----------------|    
-            |**[最近使ったファイル]**|**[バックアップ ファイルの検索]**|このダイアログ ボックスでは、ツリーからローカル ファイルを選択するか、完全修飾の汎用名前付け規則 (UNC) 名を使用したリモート ファイルを指定できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください|    
+            |**[最近使ったファイル]**|**[バックアップ ファイルの検索]**|このダイアログ ボックスでは、ツリーからローカル ファイルを選択するか、完全修飾の汎用名前付け規則 (UNC) 名を使用したリモート ファイルを指定できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|    
             |**[デバイス]**|**[バックアップ デバイスの選択]**|このダイアログ ボックスでは、サーバー インスタンスで定義された論理バックアップ デバイスの一覧から選択できます。|    
             |**[テープ]**|**[バックアップ テープの選択]**|このダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスが動作しているコンピューターに物理的に接続されているテープ ドライブの一覧から選択できます。|    
             |**[URL]**|**[バックアップ ファイルの場所を選択]**|このダイアログ ボックスで、既存の SQL Server 資格情報/Azure ストレージ コンテナーを選択し、共有アクセス署名で新しい Azure ストレージ コンテナーを追加するか、共有アクセス署名と既存のストレージ コンテナーの SQL Server 資格情報を生成します。  「 [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)」 (Microsoft Azure サブスクリプションへの接続) もご覧ください。|  
@@ -132,7 +129,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
     
     5.  復元操作と復元操作の間に、その都度、確認のメッセージを表示するには、 **[各バックアップを復元する前に確認する]** をオンにします。 通常は、その必要はありません。データベースが大きく、復元操作のステータスを監視する必要がある場合にのみ使用します。    
     
-     これらの復元オプションの詳細については、「 [[データベースの復元] &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。    
+     これらの復元オプションの詳細については、「 [[データベースの復元] &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)と呼ばれる) をバックアップする必要がある場合があります。    
     
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 

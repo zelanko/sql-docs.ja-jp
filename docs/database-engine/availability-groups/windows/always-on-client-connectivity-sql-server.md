@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5aa7de0039c5f0b438256a8ba727070964791ff2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ee9f18e30c19ed1318f28bb4ae97bf137ec679c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753870"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On クライアント接続 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +41,12 @@ ms.locfileid: "34768588"
   
 |Driver|マルチサブネット フェールオーバー|アプリケーションの目的|読み取り専用ルーティング|マルチサブネット フェールオーバー: より高速な単一サブネット エンドポイント フェールオーバー|マルチサブネット フェールオーバー: SQL クラスター インスタンスの名前付きインスタンスの解決|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|はい|はい|はい|はい|はい|  
+|SQL Native Client 11.0 ODBC|[ユーザー アカウント制御]|はい|はい|はい|[ユーザー アカウント制御]|  
 |SQL Native Client 11.0 OLEDB|いいえ|はい|はい|いいえ|いいえ|  
-|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム*|はい|はい|はい|はい|はい|  
-|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム**|はい|はい|はい|はい|はい|  
-|Microsoft JDBC Driver 4.0 for SQL Server|はい|はい|はい|はい|はい| 
-|Microsoft OLE DB Driver for SQL Server|はい|はい|はい|はい|はい| 
+|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム*|[ユーザー アカウント制御]|はい|はい|はい|[ユーザー アカウント制御]|  
+|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム**|[ユーザー アカウント制御]|はい|はい|はい|[ユーザー アカウント制御]|  
+|Microsoft JDBC Driver 4.0 for SQL Server|[ユーザー アカウント制御]|はい|はい|はい|[ユーザー アカウント制御]| 
+|Microsoft OLE DB Driver for SQL Server|[ユーザー アカウント制御]|はい|はい|はい|[ユーザー アカウント制御]| 
   
  * ADO .NET with .NET Framework 4.0 用の接続性に関する修正プログラムをダウンロードしてください ([http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211))。  
   

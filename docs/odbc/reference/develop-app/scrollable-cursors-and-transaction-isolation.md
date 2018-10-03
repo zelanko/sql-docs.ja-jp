@@ -1,13 +1,11 @@
 ---
-title: スクロール可能なカーソルとトランザクションの分離 |Microsoft ドキュメント
+title: スクロール可能なカーソルとトランザクションの分離 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - isolation levels [ODBC]
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbbcdf0c9ce2c7e37072502ae49b43dc20d15a9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662350"
 ---
-# <a name="scrollable-cursors-and-transaction-isolation"></a>スクロール可能なカーソルとトランザクションの分離
-次の表は、変化の見え方を規定する要因を一覧表示します。  
+# <a name="scrollable-cursors-and-transaction-isolation"></a>スクロール可能なカーソルとトランザクション分離
+次の表は、変更の可視性を規定する要因を一覧表示します。  
   
 |によって行われた変更:|可視性によって異なります。|  
 |----------------------|----------------------------|  
@@ -37,33 +34,33 @@ ms.locfileid: "32913657"
   
  これらの要因は、次の図に表示されます。  
   
- ![変化の見え方を規定する要因](../../../odbc/reference/develop-app/media/pr23.gif "pr23")  
+ ![変更の可視性を規定する要因](../../../odbc/reference/develop-app/media/pr23.gif "pr23")  
   
- 次の表は、単独で、独自のトランザクションで他の操作によって、および他のトランザクションによって加えられた変更を検出する各カーソルの種類の機能をまとめたものです。 後者の変更の可視性は、カーソルの種類と、カーソルを含むトランザクションの分離レベルによって異なります。  
+ 次の表は、単独で、独自のトランザクションで他の操作によって、および他のトランザクションによって加えられた変更を検出するカーソルの種類ごとの機能をまとめたものです。 後者の変更の可視性は、カーソルの種類と、カーソルを含むトランザクションの分離レベルによって異なります。  
   
-|カーソル type\action|Self|自分が所有します。<br /><br /> Txn|他<br /><br /> Txn<br /><br /> (RU[a])|他<br /><br /> Txn<br /><br /> (RC[a])|他<br /><br /> Txn<br /><br /> (RR[a])|他<br /><br /> Txn<br /><br /> (S[a])|  
+|カーソル type\action|self|所有<br /><br /> トランザクション|どうやって<br /><br /> トランザクション<br /><br /> (RU[a])|どうやって<br /><br /> トランザクション<br /><br /> (RC[a])|どうやって<br /><br /> トランザクション<br /><br /> (RR[a])|どうやって<br /><br /> トランザクション<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |静的|||||||  
 |Insert|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |Update|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|Del|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|DELETE|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |キーセット ドリブン|||||||  
 |Insert|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|Update|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|いいえ|いいえ|  
-|Del|おそらく [b]|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|いいえ|いいえ|  
+|Update|はい|はい|はい|はい|いいえ|いいえ|  
+|DELETE|おそらく [b]|はい|はい|はい|いいえ|いいえ|  
 |動的|||||||  
-|Insert|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|いいえ|  
-|Update|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|いいえ|いいえ|  
-|Del|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|いいえ|いいえ|  
+|Insert|はい|はい|はい|はい|はい|いいえ|  
+|Update|はい|はい|はい|はい|いいえ|いいえ|  
+|DELETE|はい|はい|はい|はい|いいえ|いいえ|  
   
- [a] かっこで囲まれた文字が、カーソルを含むトランザクションの分離レベルを示します(変更が行われた場所)、その他のトランザクションの分離レベルは無効です。  
+ [a] かっこで囲まれた文字は、カーソルを含むトランザクションの分離レベルを示します(これで、変更が行われた)、その他のトランザクションの分離レベルは関係ありません。  
   
- コミットされていない RU: 読み取り  
+ RU: 読み取りコミットされていません。  
   
- コミット RC: 読み取り  
+ コミットされた RC: 読み取り  
   
  RR: Repeatable read  
   
  %S: シリアル化可能です  
   
- [b] は、カーソルの実装に依存します。 SQL_STATIC_SENSITIVITY オプションによって、カーソルがこのような変更を検出するかどうかは報告**SQLGetInfo**です。
+ [b]、カーソルの実装方法に依存します。 SQL_STATIC_SENSITIVITY オプションを使用して、カーソルがこのような変更を検出するかどうかは報告**SQLGetInfo**します。

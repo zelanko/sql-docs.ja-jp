@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be17c584af2fc584be7d95ebcc4069fc9f545b97
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ce5a320baf91ddf028e93ea9560cc9f8c5add5cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770645"
 ---
 # <a name="audit-transformation"></a>監査変換
   監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
@@ -36,7 +33,7 @@ ms.locfileid: "35331076"
 |システム変数|インデックス|[説明]|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|パッケージの実行インスタンスを識別する GUID です。|  
-|**PackageID**|@shouldalert|パッケージの一意識別子です。|  
+|**PackageID**|1|パッケージの一意識別子です。|  
 |**PackageName**|2|パッケージの名前です。|  
 |**VersionID**|3|パッケージのバージョンです。|  
 |**ExecutionStartTime**|4|パッケージの実行を開始した時刻です。|  
@@ -63,7 +60,7 @@ ms.locfileid: "35331076"
 ## <a name="audit-transformation-editor"></a>監査変換エディター
   監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[出力列の名前]**  
  監査情報を格納する、新しい出力列の名前を入力します。  
   

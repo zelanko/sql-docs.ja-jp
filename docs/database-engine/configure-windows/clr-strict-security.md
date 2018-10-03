@@ -6,9 +6,7 @@ ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - clr strict security
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], strick security
 - clr strict security option
 ms.assetid: ''
-caps.latest.revision: 0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3889d749e7b50300a42a165c46a029daee5feb56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4816aade2a0b1ce76b56fcda6be9e7afff05114
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32871067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787420"
 ---
 # <a name="clr-strict-security"></a>CLR の厳密なセキュリティ   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "32871067"
 |ReplTest1 |Description | 
 |----- |----- | 
 |0 |無効 - 旧バージョンとの互換性のために提供されています。 `Disabled` 値の使用はお勧めしません。 | 
-|@shouldalert |有効 - [!INCLUDE[ssde-md](../../includes/ssde-md.md)]がアセンブリの `PERMISSION_SET` の情報を無視し、常に `UNSAFE` と解釈するようになります。  [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] の既定値は `Enabled` です。 | 
+|1 |有効 - [!INCLUDE[ssde-md](../../includes/ssde-md.md)]がアセンブリの `PERMISSION_SET` の情報を無視し、常に `UNSAFE` と解釈するようになります。  [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] の既定値は `Enabled` です。 | 
 
 >  [!WARNING]
 >  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者は、データベース エンジンが信頼するアセンブリのリストにアセンブリを追加することもできます。 詳細については、「[sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)」を参照してください。

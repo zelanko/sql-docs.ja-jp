@@ -5,12 +5,8 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1098a2cbb7efa9d60b103afb7a8f46db4e04857a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9470fdf09376f26945aae0462813921018dcb9a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820800"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>カスタム タスクにおけるデバッグのサポートの追加
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンでは、ブレークポイントを使用することにより、パッケージ、タスク、およびその他の種類のコンテナーを実行中に中断できます。 ブレークポイントを使用すると、アプリケーションまたはタスクの正しい動作を妨げるエラーを確認し、修正できます。 ブレークポイントのアーキテクチャにより、クライアントは、タスクの処理を中断している間にパッケージ内のオブジェクトのランタイム値を定義された実行地点で評価できます。  
@@ -95,7 +90,7 @@ End Function
 ## <a name="idtssuspend-interface"></a>IDTSSuspend インターフェイス  
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは、タスクの実行が一時停止または再開されるときに、ランタイム エンジンによって呼び出されるメソッドを定義します。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスによって実装され、この **Suspend** メソッドおよび **ResumeExecution** メソッドは、通常カスタム タスクによってオーバーライドされます。 ランタイム エンジンがタスクから **OnBreakpointHit** イベントを受け取ると、実行中の各タスクの **Suspend** メソッドを呼び出し、タスクに一時停止するよう通知します。 クライアントが実行を再開すると、ランタイム エンジンは中断しているタスクの **ResumeExecution** メソッドを呼び出します。  
   
- タスクの実行が中断および再開されると、タスクの実行スレッドも一時停止および再開されます。 マネージ コードでは、これは、.NET Framework の **System.Threading** 名前空間の **ManualResetEvent** クラスを使用することにより実現されます。  
+ タスクの実行が中断および再開されると、タスクの実行スレッドも一時停止および再開されます。 マネージド コードでは、これは、.NET Framework の **System.Threading** 名前空間の **ManualResetEvent** クラスを使用することにより実現されます。  
   
  次のコード サンプルは、タスクの実行を中断および再開します。 **Execute** メソッドは上記のコード サンプルから変更され、ブレークポイントが発生すると実行スレッドが一時停止します。  
   

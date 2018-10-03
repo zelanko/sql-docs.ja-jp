@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_PageResCracker
@@ -28,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 1fb895e2eb47493b49ee0431e25008b270b3841a
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a666e5d98d2c8ea0753981f05d1da20a6234251f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715271"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833340"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -61,7 +58,7 @@ sys.fn_PageResCracker ( page_resource )
 |file_id|**int**|ファイル ID|  
 |page_id|**int**|ページ ID|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 `sys.fn_PageResCracker` データベースの ID、ID と、ページのページ ID のファイルを含む行セットにデータベース ページの 8 バイトの 16 進形式を変換に使用されます。 有効なページのリソースを取得することができます、`page_resource`の列、 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動的管理ビューまたは[sys.sysprocesses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)システム ビュー。  主な用途`sys.fn_PageResCracker`、これらのビュー間の結合を容易にして、 [sys.dm_db_page_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)動的管理関数など、ページに関する情報を取得するには、所属するオブジェクト。
   
 ## <a name="permissions"></a>アクセス許可  
@@ -77,7 +74,7 @@ CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_db_page_info &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
  [sys.sysprocesses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  

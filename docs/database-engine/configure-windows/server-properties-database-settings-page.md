@@ -5,29 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 23c5d9bd47192b66f3e77913f9305665518fb7aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4703e861683f9447ecd44490ccd5dba06cb6ce44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632900"
 ---
 # <a name="server-properties---database-settings-page"></a>サーバーのプロパティ - [データベースの設定] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページを使用すると、データベースの設定を表示したり、変更したりできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **[既定のインデックス FILL FACTOR]**  
  既存のデータを使用して新しいインデックスを作成する際に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全体で各ページを作成する方法を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では各ページを埋めるときにページの分割に時間がかかるため、FILL FACTOR で指定する割合はパフォーマンスに影響します。  
   

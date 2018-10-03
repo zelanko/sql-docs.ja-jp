@@ -1,31 +1,28 @@
 ---
-title: SQLGetConnectOption マッピング |Microsoft ドキュメント
+title: SQLGetConnectOption のマッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLGetConnectOption
 - SQLGetConnectOption function [ODBC], mapping
 ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ec36a536732299337efde3cf58cc98fbf4c46e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8504709cb2cedb36c62bb9be74ffc8d12a4c811d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745790"
 ---
-# <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption マッピング
-アプリケーションを呼び出すと**SQLGetConnectOption**から ODBC 3 *.x*ドライバーへの呼び出し  
+# <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption のマッピング
+アプリケーションを呼び出すと**SQLGetConnectOption**を通じて、ODBC 3 *.x*ドライバーへの呼び出し  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -33,7 +30,7 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  次のようにマップされます。  
   
--   場合*fOption* ODBC で定義された接続オプション文字列、ドライバー マネージャーの呼び出しを返すことを示します  
+-   場合*fOption*ドライバー マネージャーの呼び出し、文字列を返す ODBC で定義された接続オプションを示します  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
@@ -45,14 +42,14 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, 0, NULL)  
     ```  
   
--   場合*fOption*ドライバー定義ステートメントのオプションでは、ドライバー マネージャーの呼び出しを示します  
+-   場合*fOption*ドライバー定義ステートメントのオプション、ドライバー マネージャーの呼び出しを示します  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- 上記の 3 つのケースで、 *ConnectionHandle*引数の値に設定されて*hdbc*、*属性*引数の値に設定されて*fOption*、および*ValuePtr*引数と同じ値に設定されて*pvParam*です。  
+ 上記の 3 つのケース、 *ConnectionHandle*引数の値に設定されて*hdbc*、*属性*引数の値に設定されて*fOption*、および*ValuePtr*引数と同じ値に設定されて*pvParam*します。  
   
- ODBC で定義された文字列の接続オプションでは、ドライバー マネージャーの設定、 *BufferLength*への呼び出しで引数**SQLGetConnectAttr**定義済みの最大長 (SQL_MAX_OPTION_STRING_LENGTH) です。文字列以外の接続オプション、 *BufferLength*は 0 に設定します。  
+ ODBC で定義された文字列の接続オプションは、ドライバー マネージャーの設定、 *BufferLength*への呼び出しで引数**SQLGetConnectAttr**定義済みの最大長 (SQL_MAX_OPTION_STRING_LENGTH)。文字列以外の接続オプション、 *BufferLength*は 0 に設定します。  
   
- ODBC 3 *.x*ドライバー、ドライバー マネージャーがチェックされなくなるかどうかを*オプション*SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。 ドライバーは、オプションの値の有効性をチェックする必要があります。
+ ODBC 3 の場合、*.x*ドライバー、ドライバー マネージャーは不要になったかどうかを確認します*オプション*SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きい。 ドライバーは、オプションの値の有効性を確認する必要があります。

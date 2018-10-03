@@ -4,10 +4,8 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKTABLE_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 148fcb3dd5970d84be7a0380c97ab0be7bd8ca92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831940"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +101,7 @@ NO_INFOMSGS
  すべての情報メッセージを表示しないようにします。  
     
 TABLOCK  
- DBCC CHECKTABLE が、内部データベースのスナップショットを使用するのではなく、共有テーブル ロックを取得します。 TABLOCK の作用によって負荷の高いテーブルでも DBCC CHECKTABLE の実行速度が速くなりますが、DBCC CHECKTABLE の実行中はテーブルでの同時実行性が低下します。  
+ DBCC CHECKTABLE が、内部データベースのスナップショットを使用するのではなく、共有テーブル ロックを取得します。 TABLOCK の作用によって負荷の高いテーブルでも DBCC CHECKTABLE の実行速度が速くなりますが、DBCC CHECKTABLE の実行中はテーブルでのコンカレンシーが低下します。  
     
 ESTIMATEONLY  
  必要な他のオプションをすべて指定した状態で、DBCC CHECKTABLE の実行時に必要となる tempdb 領域の予測サイズを表示します。  
@@ -129,7 +126,7 @@ DATA_PURITY
 MAXDOP  
  **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
  
- ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションを無効にします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
     
  > [!NOTE]  
  > MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
@@ -184,10 +181,10 @@ DBCC CHECKTABLE は、内部データベースのスナップショットを使�
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて    
 DBCC CHECKTABLE コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
     
-|状態|Description|    
+|状態|[説明]|    
 |-----------|-----------------|    
 |0|エラー番号 8930 が発生しました。 メタデータの破損が原因で DBCC コマンドが終了しました。|    
-|@shouldalert|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|    
+|1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|    
 |2|緊急モードのデータベース修復中にエラーが発生しました。|    
 |3|メタデータの破損が原因で DBCC コマンドが終了しました。|    
 |4|アサートまたはアクセス違反が検出されました。|    

@@ -5,9 +5,7 @@ ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca1571e89f1273e40f59fa8e680b8a0123efec19
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3a7c93c43a35f528030035e300624bacb4e72431
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333066"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690220"
 ---
 # <a name="excel-source"></a>Excel ソース
   Excel ソースは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック内のワークシートまたは範囲からデータを抽出します。  
@@ -120,7 +117,7 @@ ms.locfileid: "35333066"
 ## <a name="excel-source-editor-columns-page"></a>[Excel ソース エディター] ([列] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -133,7 +130,7 @@ ms.locfileid: "35333066"
 ## <a name="excel-source-editor-error-output-page"></a>[Excel ソース エディター] ([エラー出力] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **入力または出力**  
  データ ソースの名前を表示します。  
   

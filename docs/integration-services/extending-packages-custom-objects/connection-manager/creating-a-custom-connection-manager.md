@@ -5,25 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5d6f0ab3611de91388d1efb28cc8f07cb668840
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 6ad69ee69ee6a98456199bc0246fd4e1bc011fa4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719244"
 ---
 # <a name="creating-a-custom-connection-manager"></a>カスタム接続マネージャーの作成
   カスタム接続マネージャーを作成するために必要な手順は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の他のカスタム オブジェクトの作成手順と同様です。  
@@ -42,7 +37,7 @@ ms.locfileid: "35329386"
 ## <a name="getting-started-with-a-custom-connection-manager"></a>カスタム接続マネージャーの概要  
   
 ### <a name="creating-projects-and-classes"></a>プロジェクトおよびクラスの作成  
- すべてのマネージ接続マネージャーは <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基本クラスから派生するため、カスタム接続マネージャーを作成するには、最初に任意のマネージ プログラミング言語でクラス ライブラリ プロジェクトを作成してから、基本クラスを継承するクラスを作成します。 この派生クラスで、基本クラスのメソッドとプロパティをオーバーライドして、カスタム機能を実装します。  
+ すべてのマネージド接続マネージャーは <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基本クラスから派生するため、カスタム接続マネージャーを作成するには、最初に任意のマネージド プログラミング言語でクラス ライブラリ プロジェクトを作成してから、基本クラスを継承するクラスを作成します。 この派生クラスで、基本クラスのメソッドとプロパティをオーバーライドして、カスタム機能を実装します。  
   
  同じソリューション内に、もう 1 つのクラス ライブラリ プロジェクトをカスタム ユーザー インターフェイス用に作成します。 配置を容易にするため、ユーザー インターフェイス用に別個のアセンブリを使用することをお勧めします。そうすれば、接続マネージャーやそのユーザー インターフェイスの更新や再配置を個別に行うことができます。  
   
