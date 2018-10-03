@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.xmltask.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9726b86fd0d441b8e99a155b10abbd3804a7143
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 235572bf33c100ecb55fb7ce821f7028b1124595
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822420"
 ---
 # <a name="xml-task"></a>XML タスク
   XML タスクは、XML データの処理に使用します。 このタスクを使用すると、パッケージは、XML ドキュメントの取得、Extensible Stylesheet Language Transformations (XSLT) スタイル シートや XPath 式の使用によるドキュメントへの操作の適用、複数ドキュメントのマージ、または更新したドキュメントの検証、比較、およびファイルや変数への保存を行うことができます。  

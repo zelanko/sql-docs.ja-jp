@@ -1,13 +1,11 @@
 ---
-title: supportsUnion メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: supportsUnion メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsUnion
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60f0386584731b8e7d5dab4d2c6593e87aca5b08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: eb1fee2fd21db56b58db14122580c9ca43f4104b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715970"
 ---
 # <a name="supportsunion-method-sqlserverdatabasemetadata"></a>supportsUnion メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,8 +41,8 @@ public boolean supportsUnion()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この supportsUnion メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsUnion メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この supportsUnion メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsUnion メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

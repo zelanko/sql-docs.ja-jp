@@ -1,13 +1,11 @@
 ---
-title: ODBC コンポーネントのレジストリ エントリ |Microsoft ドキュメント
+title: ODBC コンポーネントのレジストリ エントリ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC]
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - subkeys [ODBC], for components
 - registry entries for components [ODBC], about registry entries
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cf61535ecda3e95f25dbd9e1b01a1d3ad25d4ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d0a654b70fb93020bbb0dcfde159b4884cb15c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651481"
 ---
 # <a name="registry-entries-for-odbc-components"></a>ODBC コンポーネントのレジストリ エントリ
 > [!NOTE]  
->  Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに ODBC が含まれます。 以前のバージョンの Windows で ODBC を明示的にのみインストールしてください。  
+>  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
   
- インストーラー DLL は、レジストリにインストールされている各 ODBC コンポーネントに関する情報を保持します。 Microsoft Windows NT および Microsoft Windows 95/98 を実行するコンピューターでこの情報は、次のレジストリ キーの下のサブキーに格納されます。  
+ インストーラー DLL では、レジストリでインストールされている各 ODBC コンポーネントに関する情報を保持します。 Microsoft Windows NT および Microsoft Windows 95/98 を実行するコンピューターでこの情報は、次のレジストリ キーの下のサブキーに格納されます。  
   
  HKEY_LOCAL_MACHINE  
   
@@ -41,7 +38,7 @@ ms.locfileid: "32915807"
   
  Odbcinst.ini  
   
- Odbcinst.ini には、サブキー HKEY_LOCAL_MACHINE ツリーのための ODBC コンポーネントに関する情報は、マシンのすべてのユーザーに利用可能なです。  
+ Odbcinst.ini に HKEY_LOCAL_MACHINE ツリーのサブキーがあるため、ODBC コンポーネントについては、マシンのすべてのユーザーにします。  
   
  このセクションでは、次のトピックを扱います。  
   

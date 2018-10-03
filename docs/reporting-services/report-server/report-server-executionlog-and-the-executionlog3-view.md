@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85ebd0ec4668387609781e72becad43e9b52a4a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273794"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808760"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>レポート サーバー ExecutionLog と ExecutionLog3 ビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  

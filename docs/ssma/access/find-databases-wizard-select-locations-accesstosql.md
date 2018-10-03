@@ -4,26 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ea7f401e2f78d954f92395069b7b53167294662d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395585"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812070"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>データベースのウィザード (場所の選択) を検索 (AccessToSQL)
 データベースの検出ウィザードの [場所の選択] ページで、Access データベースを検索するための検索パラメーターを入力します。  

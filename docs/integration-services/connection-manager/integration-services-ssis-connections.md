@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.connectionmanager.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 695e91fbc8ee3a99b4c203e208400069fb07dead
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333546"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820340"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
@@ -168,7 +165,7 @@ ms.locfileid: "35333546"
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
-    |[ODBC 入力元エディター]|および|  
+    |[ODBC 入力元エディター]|[変数]|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -204,7 +201,7 @@ ms.locfileid: "35333546"
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
-    |[ODBC 入力元エディター]|および|  
+    |[ODBC 入力元エディター]|[変数]|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -236,7 +233,7 @@ ms.locfileid: "35333546"
   
  接続マネージャーの詳細については、「[Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
-#### <a name="options"></a>および  
+#### <a name="options"></a>[変数]  
  **[接続マネージャーの種類]**  
  エディターを使用して接続の種類の接続プロパティを指定するには、接続の種類を選択して **[追加]** をクリックするか、接続の種類をダブルクリックします。  
   
@@ -313,7 +310,7 @@ ms.locfileid: "35333546"
   
 4.  **[接続マネージャー]** 領域で接続マネージャーをダブルクリックして、 **[接続マネージャー]** ダイアログ ボックスを開きます。 特定の種類の接続マネージャーおよび各種類で使用するオプションの詳細については、次の表を参照してください。  
   
-    |[接続マネージャー]|および|  
+    |[接続マネージャー]|[変数]|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  

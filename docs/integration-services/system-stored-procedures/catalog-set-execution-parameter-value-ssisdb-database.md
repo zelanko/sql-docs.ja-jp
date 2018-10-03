@@ -5,21 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43268b60d23a32c688363790a732a3ebff66cf8a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808670"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +77,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |0|なし<br /><br /> ログ記録をオフにします。 パッケージの実行状態のみがログに記録されます。|  
-|@shouldalert|Basic<br /><br /> カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これが既定値です。|  
+|1|Basic<br /><br /> カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これが既定値です。|  
 |2|[パフォーマンス]<br /><br /> パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。|  
 |3|"詳細"<br /><br /> カスタム イベントと診断イベントを含む、すべてのイベントをログに記録されます。 <br />カスタム イベントには、Integration Services タスクによってログに記録されるイベントを含みます。 詳細については、「[ログ記録用のカスタム メッセージ](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)」を参照してください。|  
 |4|ランタイムの系列<br /><br /> データ フロー内の系列を追跡するために必要なデータを収集します。|  
@@ -93,7 +90,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_ERROR|  
-|*parameter_value*|@shouldalert|  
+|*parameter_value*|1|  
   
  パッケージの実行中にイベントが発生した場合に、Integration Services サーバーによりダンプ ファイルを生成されるように指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。  
   
@@ -102,7 +99,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_EVENT|  
-|*parameter_value*|@shouldalert|  
+|*parameter_value*|1|  
   
  パッケージの実行中に、Integration Services サーバーによるダンプ ファイルの生成が行われる原因となるイベントを指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。 複数のイベント コードは、セミコロンで区切ります。  
   

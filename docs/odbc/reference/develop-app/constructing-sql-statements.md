@@ -1,28 +1,25 @@
 ---
-title: SQL ステートメントの作成 |Microsoft ドキュメント
+title: SQL ステートメントの構築 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9b9163afa4c6a0717dd9692cf9ee77718797cae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b38ff4066f7ff693d96f3ef239ef25948b2caf3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908747"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811300"
 ---
-# <a name="constructing-sql-statements"></a>SQL ステートメントの作成
-3 つの方法のいずれかで SQL ステートメントを構築できます: 開発中は、実行時に、構築、または、ユーザーが直接入力した、ハードコーディングします。  
+# <a name="constructing-sql-statements"></a>SQL ステートメントの構築
+3 つの方法のいずれかで、SQL ステートメントを構築できます。 開発、構築、実行時またはユーザーが直接入力中に、ハードコーディングします。  
   
  このセクションでは、次のトピックを扱います。  
   

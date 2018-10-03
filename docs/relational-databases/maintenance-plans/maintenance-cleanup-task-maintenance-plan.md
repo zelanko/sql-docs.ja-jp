@@ -4,36 +4,33 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.maint.cleanup.f1
 helpviewer_keywords:
 - Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 689b00b0da037fd5b72d5b8785c337781cc3e0b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d9398bfda4df50706d1767ce6e5114acbe34a63
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815980"
 ---
-# <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] (メンテナンス プラン)
+# <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] \(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[メンテナンス クリーンアップ タスク]** を使用すると、メンテナンス プランで作成されたテキスト レポートやデータベースのバックアップ ファイルなど、メンテナンス プランに関連する古いファイルを削除できます。  
   
 > [!NOTE]  
 >  メンテナンス クリーンアップ タスクでは、指定したディレクトリのサブフォルダーにあるファイルは自動的に削除されません。 この機能によって、メンテナンス クリーンアップ タスクを使ってファイルを削除するなど、悪意のある攻撃を受ける危険性を最小限に抑えることができます。 直下のサブフォルダーにあるファイルを削除する場合は、 **[直下のサブフォルダーを含める]** を選択する必要があります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>[変数]  
  **接続**  
  現在の接続を表示します。  
   

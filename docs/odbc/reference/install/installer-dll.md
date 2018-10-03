@@ -1,34 +1,31 @@
 ---
-title: インストーラー DLL |Microsoft ドキュメント
+title: インストーラー DLL |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing ODBC components [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: e2b92afb-64ce-4ce0-84ad-6a4276646e68
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b178e582d6368f10267ce0676e8c556b78e19bc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb73569f2f605a0ff8cbafa4982894200c8fa6ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811330"
 ---
 # <a name="installer-dll"></a>インストーラー DLL
 > [!NOTE]  
->  Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに ODBC が含まれます。 以前のバージョンの Windows で ODBC を明示的にのみインストールしてください。  
+>  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
   
- DLL のインストーラーには、インストール、ODBC コンポーネントを削除して、これらのコンポーネントに関するレジストリ情報を保持、およびデータ ソースに関するレジストリ情報を保持する関数が含まれています。 Microsoft によって書き込まれ、再配布できます。 インストーラー DLL 内の関数の詳細については、次を参照してください。[インストーラー DLL の API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)です。  
+ インストーラー DLL には、インストール、ODBC コンポーネントを削除して、これらのコンポーネントについては、レジストリを維持、およびデータ ソースについては、レジストリを維持関数が含まれています。 Microsoft によって書き込まれ、再配布できます。 インストーラー DLL 内の関数の詳細については、次を参照してください。 [Installer DLL API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC コンポーネントのレジストリ エントリ](../../../odbc/reference/install/registry-entries-for-odbc-components.md)   

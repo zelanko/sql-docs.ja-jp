@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0772e8230673a23412d880aef729d0a278c448bb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f112101ff9325f6f1551ab9f889251916d42e1ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822220"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
@@ -107,7 +104,7 @@ ms.locfileid: "35401624"
 > [!NOTE]  
 >  接続によって指定されるサーバーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が実行されている必要があります。 あいまいグループ化変換では、変換に対する完全な入力と同じサイズの一時データ オブジェクトが tempdb に作成されます。 変換の実行中は、これらの一時オブジェクトに対してサーバー クエリが発行されます。 この操作は、サーバーの全体のパフォーマンスに影響を与える可能性があります。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[キャッシュなし]**  
  既存の OLE DB 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -117,7 +114,7 @@ ms.locfileid: "35401624"
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>[あいまいグループ化変換エディター] ([列] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、重複する値を持つ行をグループ化するための列を指定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **使用できる入力列**  
  重複する値を持つ行をグループ化するために使用する入力列を、この一覧から選択します。  
   
@@ -164,7 +161,7 @@ ms.locfileid: "35401624"
 > [!NOTE]  
 >  あいまいグループ化変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまいグループ化変換エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 これらのプロパティの詳細については、「 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[入力キー列名]**  
  各入力行の一意の識別子を含む、出力列の名前を指定します。 **[_key_in]** 列は各行を一意に識別する値を持ちます。  
   

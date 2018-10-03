@@ -1,13 +1,11 @@
 ---
-title: カーソル ライブラリによって実行された ODBC 関数 |Microsoft ドキュメント
+title: カーソル ライブラリによって実行された ODBC 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursor library [ODBC], functions
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51e123ef04153579227f92e449c3dc4e46f6ac0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 611a79ece0da905c5fc12aeafdbcd7b8c54ee2bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638744"
 ---
-# <a name="odbc-functions-executed-by-the-cursor-library"></a>カーソル ライブラリによって実行された ODBC 関数
+# <a name="odbc-functions-executed-by-the-cursor-library"></a>カーソル ライブラリによって実行される ODBC 関数
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないように、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
   
- カーソル ライブラリは、次の関数を実行します。 アプリケーションがこの一覧に関数を呼び出すときに、ドライバー マネージャーは、ドライバーではなく、カーソル ライブラリを呼び出します。 関数を実行するときに、カーソル ライブラリにドライバーを呼び出すことがありますに注意してください。  
+ カーソル ライブラリは、次の関数を実行します。 アプリケーションがこの一覧に関数を呼び出すときに、ドライバー マネージャーは、カーソル ライブラリ、ドライバーではなくを呼び出します。 関数を実行するときに、カーソル ライブラリにドライバーを呼び出すことがありますに注意してください。  
   
 |||  
 |-|-|  
@@ -41,11 +38,11 @@ ms.locfileid: "32907757"
 |**SQLEndTran**|**SQLRowCount**|  
 |**SQLExtendedFetch**|**SQLSetConnectAttr**|  
 |**SQLFetchScroll**|**SQLSetConnectOption**|  
-|**SQLFreeHandle**|**Sqlsetdescfield による**|  
-|**SQLFreeStmt**|**Sqlsetdescrec による**|  
+|**SQLFreeHandle**|**SQLSetDescField**|  
+|**SQLFreeStmt**|**SQLSetDescRec**|  
 |**SQLGetData**|**SQLSetPos**|  
 |**SQLGetDescField**|**SQLSetScrollOptions**|  
-|**Sqlgetdescrec による**|**SQLSetStmtAttr**|  
+|**SQLGetDescRec**|**SQLSetStmtAttr**|  
 |**SQLGetFunctions**|**SQLSetStmtOption**|  
 |**SQLGetInfo**|**SQLTransact**|  
 |**SQLGetStmtAttr**||

@@ -4,23 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 7419d96be33d30768156faa69e194b8e3eb1c714
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394249"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631200"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>変換のための Oracle Schemas へのアクセス (OracleToSQL)
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、複雑な移行されるとどれ時間だけを決定する必要があります、移行にかかる時間します。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  

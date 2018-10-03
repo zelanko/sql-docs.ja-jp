@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_states_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5542402e7f81ff86812a152d9bf538265ba77a5c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 534134ddd778c500622af210301826c83863480f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637776"
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.locfileid: "38000844"
 |**redo_rate**|**bigint**|平均するログ レコードが再実行される (kb) の特定のセカンダリ データベースで速度/秒。|  
 |**filestream_send_rate**|**bigint**|FILESTREAM ファイルがセカンダリ レプリカに配布される速度 (KB/秒)。|  
 |**end_of_log_lsn**|**numeric(25,0)**|ローカルのログ LSN の末尾。 プライマリ データベースおよびセカンダリ データベースのログ キャッシュ内の最後のログ レコードに対応する実際の LSN。 プライマリ レプリカの場合、セカンダリ行には、セカンダリ レプリカがプライマリ レプリカに送信した最新の進捗状況メッセージからのログ LSN の末尾が反映されます。<br /><br /> **end_of_log_lsn** 0 が埋め込まれたログ ブロック ID が反映されます。 これは実際のログ シーケンス番号ではありません。 詳細については、次を参照してください。 [LSN 列の値について](#LSNcolumns)、このトピックで後述します。|  
-|**last_commit_lsn**|**Numeric(25,0)**|トランザクション ログの最終コミット レコードに対応する実際のログ シーケンス番号。<br /><br /> プライマリ データベースの場合、これは処理された最終コミット レコードに対応します。 セカンダリ データベースの行には、セカンダリ レプリカがプライマリ レプリカに送信したログ シーケンス番号が反映されます。<br /><br /> セカンダリ レプリカの場合、これは再実行された最終コミット レコードです。|  
+|**last_commit_lsn**|**numeric(25,0)**|トランザクション ログの最終コミット レコードに対応する実際のログ シーケンス番号。<br /><br /> プライマリ データベースの場合、これは処理された最終コミット レコードに対応します。 セカンダリ データベースの行には、セカンダリ レプリカがプライマリ レプリカに送信したログ シーケンス番号が反映されます。<br /><br /> セカンダリ レプリカの場合、これは再実行された最終コミット レコードです。|  
 |**last_commit_time**|**datetime**|最終コミット レコードに対応する時刻。<br /><br /> セカンダリ データベースの場合、この時刻はプライマリ データベースと同じになります。<br /><br /> プライマリ レプリカの場合、各セカンダリ データベースの行に、そのセカンダリ データベースをホストするセカンダリ レプリカがプライマリ レプリカに報告した時刻が表示されます。 プライマリ データベースの行と、特定のセカンダリ データベースの行の違いを時間で約目標復旧時点 (RPO)、再実行プロセスが解消されたことと、進行状況が、プライマリ レプリカに報告されていると仮定した場合を表しますでセカンダリ レプリカです。|  
 |**low_water_mark_for_ghosts**|**bigint**|プライマリ データベースでの非実体クリーンアップで使用される低レベルのウォーター マークを示すデータベースの単調に増加する数値。 この数値が時間の経過と共に増加しない場合は、非実体クリーンアップが行われない可能性があることを意味します。 プライマリ レプリカでは、クリーンアップする非実体行を決定するために、すべての可用性レプリカ (プライマリ レプリカを含む) でこのデータベースのこの列の最小値を使用します。|  
 |**secondary_lag_seconds**|**bigint**|同期中に、セカンダリ レプリカがプライマリ レプリカの内側にある秒数。<br /><br />**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
@@ -84,7 +81,7 @@ ms.locfileid: "38000844"
   
  によって返される LSN 値の**sys.dm_hadr_database_replica_states**だけ**last_redone_lsn**は実際の LSN。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

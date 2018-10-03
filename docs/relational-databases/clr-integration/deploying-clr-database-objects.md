@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -13,16 +12,15 @@ helpviewer_keywords:
 - deploying assemblies [CLR integration]
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e0fe80642941daa8604aff9a169eb4cba601af5
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 6b2fa1bdf96693a29f0e4e7b5d2d27b35a83c122
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349784"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639310"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR データベース オブジェクトの配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ ms.locfileid: "37349784"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定で CLR 統合機能は無効になっており、CLR アセンブリを使用するには、これを有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
   
 ## <a name="deploying-the-assembly-to-the-test-server"></a>テスト サーバーへのアセンブリの配置  
- Visual Studio を使用し、CLR 関数、プロシージャ、トリガー、ユーザー定義型 (UDT)、またはユーザー定義集計 (UDA) を開発したり、これらをテスト サーバーに配置することができます。 これらのマネージド データベース オブジェクトは、.NET Framework 再配布ファイルに含まれる csc.exe や vbc.exe などのコマンド ライン コンパイラによりコンパイルすることもできます。 ph x="1" /&gt; のマネージド データベース オブジェクトを開発するのに、Visual Studio 統合開発環境は必要ありません。  
+ Visual Studio を使用し、CLR 関数、プロシージャ、トリガー、ユーザー定義型 (UDT)、またはユーザー定義集計 (UDA) を開発したり、これらをテスト サーバーに配置することができます。 これらのマネージド データベース オブジェクトは、.NET Framework 再配布ファイルに含まれる csc.exe や vbc.exe などのコマンド ライン コンパイラによりコンパイルすることもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド データベース オブジェクトを開発するのに、Visual Studio 統合開発環境は必要ありません。  
   
  すべてのコンパイラ エラーおよび警告が解決されていることを確認してください。 これで、Visual Studio または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントを使用して、CLR ルーチンを含むアセンブリを [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースに登録できます。  
   
@@ -87,7 +85,7 @@ ms.locfileid: "37349784"
   
 #### <a name="to-generate-a-deployment-script-using-generate-scripts"></a>"スクリプトの生成" 機能を使用して配置スクリプトを生成するには  
   
-1.  ph x="1" /&gt; を開き、配置するマネージド アセンブリまたはデータベース オブジェクトを登録する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開き、配置するマネージド アセンブリまたはデータベース オブジェクトを登録する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
 2.  **オブジェクト エクスプ ローラー**、展開、 **\<サーバー名 >** と**データベース**ツリー。 マネージ データベース オブジェクトが登録されている、データベースを右クリックして**タスク**、し、**スクリプトの生成**します。 スクリプト作成ウィザードが開きます。  
   

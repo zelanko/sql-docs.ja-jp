@@ -1,13 +1,11 @@
 ---
-title: AbsolutePage プロパティ (ADO) |Microsoft ドキュメント
+title: AbsolutePage プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,42 +13,41 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePage property [ADO]
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4bd0696e18e7719038a1b87448477b1b7f4d5bdf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: efdbd68bf464fea3a0d59396380b082eb66375b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824150"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage プロパティ (ADO)
 現在のレコードがどのページが存在することを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 32 ビット コードの場合は、設定または取得、**長い**値を 1 ~ 内のページの数、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト ([PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)) のいずれかを返しますまたは、 [PositionEnum](../../../ado/reference/ado-api/positionenum.md)値。  
+ 32 ビット コードでは、設定または取得を**長い**1 からのページ数の値、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト ([PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)) のいずれかを返しますまたは、 [PositionEnum](../../../ado/reference/ado-api/positionenum.md)値。  
   
- 64 ビット コードでは、64 ビット値の記憶域を提供するデータ型を使用します。 いずれかを使用するなど、**長い**または別の値は 64 ビット長 DBORDINAL などを使用できます。 使用しないでください**PositionEnum**値は 32 ビットの長さに制限されるためです。  
+ 64 ビット コードでは、64 ビット値のストレージを提供するデータ型を使用します。 いずれかを使用するなど、**長い**または別の値は 64 ビット長 DBORDINAL などを使用できます。 使用しない**PositionEnum**値は 32 ビットの長さに制限されるためです。  
   
 ## <a name="remarks"></a>コメント  
- このプロパティは、現在のレコードが配置されているページ数を指定を使用できます。 使用して、 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)の行セットの合計数を論理的に分割するプロパティ、 **Recordset**オブジェクトを一連のページ、それぞれと等しいレコードの数を持つ**PageSize**(を除く、最後のページ、少数のレコードを持つ場合もあります)。 プロバイダーは、このプロパティを使用するための適切な機能をサポートする必要があります。  
+ このプロパティは、現在のレコードが配置されているページ番号を識別するために使用できます。 使用して、 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)の行セットの合計数を論理的に分割するプロパティ、**レコード セット**オブジェクトを一連のページで、それぞれに等しいレコードの数を持つ**PageSize**(を除く、最後のページ、レコードを減らすことがある)。 プロバイダーは、このプロパティを使用するための適切な機能をサポートする必要があります。  
   
--   取得または設定するときに、**と、AbsolutePage**プロパティ、ADO の使用、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティおよび[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)次のようにまとめてプロパティ。  
+-   取得または設定するときに、 **AbsolutePage**プロパティ、ADO は、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティおよび[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)として次のようにグループ化のプロパティ。  
   
--   取得する、**と、AbsolutePage**、ADO をまず取得、 **AbsolutePosition**、によってこれを分割し、 **PageSize**です。  
+-   取得する、 **AbsolutePage**、ADO をまず取得、 **AbsolutePosition**、を除算し、 **PageSize**します。  
   
--   設定する、**と、AbsolutePage**、ADO 移動、 **AbsolutePosition**次のように: これを乗算し、 **PageSize**によって新しい**と、AbsolutePage**値し、値に 1 を追加します。 内の現在の位置が結果として、 **Recordset**が正常に設定した後**と、AbsolutePage**は、そのページの最初のレコードです。  
+-   設定する、 **AbsolutePage**、ADO の移動、 **AbsolutePosition**次のように:、乗算、 **PageSize**新しい**AbsolutePage**値し、値に 1 を加算します。 その結果、内の現在位置、**レコード セット**正常に設定した後**AbsolutePage**はそのページの最初のレコード。  
   
- 同様に、 **AbsolutePosition**プロパティ、**と、AbsolutePage**は 1 に基づいており、現在のレコードが最初のレコードが 1 と等しい、 **Recordset**です。 特定のページの最初のレコードに移動するには、このプロパティを設定します。 ページの合計数を取得、 **PageCount**プロパティです。  
+ ように、 **AbsolutePosition**プロパティ、 **AbsolutePage**は 1 に基づいており、現在のレコードが最初のレコードは 1 に等しい、 **Recordset**します。 特定のページの最初のレコードに移動するには、このプロパティを設定します。 ページの合計数を取得、 **PageCount**プロパティ。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [AbsolutePage、PageCount、および PageSize のプロパティの例 (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [AbsolutePage、PageCount、および PageSize のプロパティの例 (vc++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+ [AbsolutePage、PageCount、PageSize プロパティの例 (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [AbsolutePage、PageCount、PageSize プロパティの例 (vc++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize プロパティ (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)

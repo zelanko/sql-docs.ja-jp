@@ -1,14 +1,11 @@
 ---
-title: sp_update_notification (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_update_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817549"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ sp_update_notification
  この通知に関連付けられている警告の名前を指定します。 *アラート*は**sysname**、既定値はありません。  
   
  [  **@operator_name =**] **'***演算子***'**  
- 警告が発生したときに通知するオペレーターです。 *演算子*は**sysname**、既定値はありません。  
+ 警告が発生したときに通知するオペレーター。 *演算子*は**sysname**、既定値はありません。  
   
  [  **@notification_method =**]*通知*  
  オペレーターが通知を受ける方法を指定します。 *通知*は**tinyint**, で、既定値はありませんはこれらの値の 1 つ以上指定します。  
@@ -67,16 +63,16 @@ sp_update_notification
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_update_notification**から実行する必要があります、 **msdb**データベース。  
   
- 通知を更新するには、指定されたを使用して必要なアドレス情報を持っていないユーザーのオペレーターの*notification_method*です。 電子メールのメッセージやポケットベルによる通知に失敗した場合は、Microsoft SQL Server エージェント エラー ログに失敗がレポートされます。  
+ 通知を更新するには、指定した必要なアドレス情報を持っていないユーザーの演算子の*notification_method*します。 電子メールのメッセージやポケットベルによる通知に失敗した場合は、Microsoft SQL Server エージェント エラー ログに失敗がレポートされます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例に送信される通知の通知方法を変更する`François Ajenstat`アラート`Test Alert`です。  
+ 次の例に送信される通知の通知方法を変更する`François Ajenstat`アラートの`Test Alert`します。  
   
 ```  
 USE msdb ;  

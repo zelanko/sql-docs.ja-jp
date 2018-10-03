@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.fileconnectionmanager.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - File connection manager
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f22b22f3134122b733a9d2f233054445d1898c3
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5862182467390962469a048057ad965804ed7e9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824830"
 ---
 # <a name="file-connection-manager"></a>ファイル接続マネージャー
   ファイル接続マネージャーを使用すると、パッケージで既存のファイルやフォルダーを参照したり、実行時にファイルやフォルダーを作成できます。 たとえば、Excel ファイルを参照できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の特定のコンポーネントでは、ファイルの情報を使用して作業を実行します。 たとえば、SQL 実行タスクでは、そのタスクで実行する SQL ステートメントが含まれるファイルを参照できます。 他のコンポーネントは、ファイルに対する操作を実行します。 たとえば、ファイル システム タスクは新しい場所にコピーするファイルを参照できます。  
@@ -75,7 +72,7 @@ ms.locfileid: "35333516"
   
  ファイル接続マネージャーの詳細については、「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[使用法の種類]**  
  **ファイル接続マネージャー** が既存のファイルまたはフォルダーに接続するか、新しいファイルまたはフォルダーを作成するかを指定します。  
   
