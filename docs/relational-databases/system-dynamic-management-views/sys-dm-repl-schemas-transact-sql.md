@@ -1,12 +1,10 @@
 ---
-title: sys.dm_repl_schemas (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_repl_schemas (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_repl_schemas_TSQL
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9dfbe8ca8cf3261e898731967aeec34e81c010c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2aa0b4e885d586e64c6c613e07d2969d77885715
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763383"
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 05/23/2018
   レプリケーションでパブリッシュされたテーブル列に関する情報を返します。  
   
  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|パブリッシュされたテーブル アーティクルに関する、キャッシュされたスキーマ構造のメモリ内アドレス。|  
 |**tabid**|**bigint**|レプリケートされたテーブルの ID。|  
@@ -84,10 +82,10 @@ ms.lasthandoff: 05/23/2018
 |**se_computed**|**smallint**|列が計算列かどうかを示します。|  
 |**se_nullBitInLeafRows**|**int**|列の値が NULL かどうかを示します。|  
   
-## <a name="permissions"></a>権限  
- 呼び出す、パブリケーション データベースに対する VIEW DATABASE STATE 権限が必要**dm_repl_schemas**です。  
+## <a name="permissions"></a>アクセス許可  
+ 呼び出すパブリケーション データベースに対する VIEW DATABASE STATE 権限が必要**dm_repl_schemas**します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  返される情報は、レプリケーション アーティクル キャッシュに現在読み込まれている、レプリケートされたデータベース オブジェクトの情報だけです。  
   
 ## <a name="see-also"></a>参照  

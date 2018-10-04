@@ -1,74 +1,71 @@
 ---
-title: インターフェイスへの準拠をコア |Microsoft ドキュメント
+title: コア インターフェイスの適合性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c45fdfe2b01ddfd34e7db391b799b95ce696da8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc3fc5502ee76cfd6aabb98eb719ca318026b73c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913987"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802466"
 ---
-# <a name="core-interface-conformance"></a>コア インターフェイスへの準拠
-すべての ODBC ドライバーは、少なくともコア レベルを示す必要がありますインターフェイスへの準拠です。 最も一般的な相互運用可能なアプリケーションで必要なものでは、コア レベルの機能、ために、ドライバーは、このようなアプリケーションで操作できます。 コア レベルの機能は、ISO CLI 仕様で定義されている機能と、開いているグループ CLI 仕様で定義されている nonoptional 機能にも対応しています。 コア レベル – インターフェイスに準拠する ODBC ドライバーは、以下のすべてを実行するようにアプリケーションを使用できます。  
+# <a name="core-interface-conformance"></a>コア インターフェイスの適合性
+すべての ODBC ドライバーは、少なくともコア レベルを示す必要がありますインターフェイスの適合性。 コア レベルの機能は、最も一般的な相互運用可能なアプリケーションに必要なものであるために、ドライバーは、このようなアプリケーションを操作できます。 コア レベルの機能には、ISO CLI 仕様で定義されている機能と、開いているグループ CLI 仕様で定義されている nonoptional 機能にも対応しています。 コア レベル インターフェイス – に準拠する ODBC ドライバーは、次のすべてのアプリケーションを使用できます。  
   
--   呼び出して、すべての種類のハンドルを解放の割り当てと**SQLAllocHandle**と**SQLFreeHandle**です。  
+-   割り当て、ハンドルのすべての種類を呼び出すことによって解放**SQLAllocHandle**と**SQLFreeHandle**します。  
   
--   すべてのフォームを使用して、 **SQLFreeStmt**関数。  
+-   すべての形式を使用して、 **SQLFreeStmt**関数。  
   
--   呼び出して結果セットの列をバインド**SQLBindCol**です。  
+-   呼び出すことにより、結果セットの列をバインド**SQLBindCol**します。  
   
--   呼び出して、入力方向にのみ、パラメーターの配列を含む、動的パラメーターを取り扱えません。 **SQLBindParameter**と**SQLNumParams**です。 (出力方向のパラメーターは、機能で 203[インターフェイスへの準拠レベル 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md))。  
+-   動的パラメーターを呼び出すことによってのみ、入力方向のパラメーターの配列を含む処理**SQLBindParameter**と**SQLNumParams**します。 (出力方向のパラメーターで 203 の機能は[レベル 2 インターフェイスの適合性](../../../odbc/reference/develop-app/level-2-interface-conformance.md))。  
   
 -   バインドのオフセットを指定します。  
   
--   呼び出しに関連する実行時データのダイアログ ボックスを使用して**SQLParamData**と**SQLPutData**です。  
+-   呼び出しに関連する実行時のデータのダイアログ ボックスを使用して、 **SQLParamData**と**SQLPutData**します。  
   
--   呼び出してカーソルやカーソル名を管理**SQLCloseCursor**、 **SQLGetCursorName**、および**SQLSetCursorName**です。  
+-   呼び出すことによって、カーソルやカーソル名を管理**SQLCloseCursor**、 **SQLGetCursorName**、および**SQLSetCursorName**します。  
   
--   呼び出して、結果セットの (メタデータ) の説明へのアクセスを取得**SQLColAttribute**、 **SQLDescribeCol**、 **SQLNumResultCols**、および**SQLRowCount**. (ブックマークのメタデータを取得する列番号を 0 にこれらの関数の使用がで 204 を機能[インターフェイスへの準拠レベル 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md))。  
+-   呼び出すことによって、結果セットの説明 (メタデータ) へのアクセスを得る**SQLColAttribute**、 **SQLDescribeCol**、 **SQLNumResultCols**、および**SQLRowCount**. (ブックマークのメタデータを取得する列番号 0 のこれらの関数の使用は 204 で機能が[レベル 2 インターフェイスの適合性](../../../odbc/reference/develop-app/level-2-interface-conformance.md))。  
   
--   カタログ関数を呼び出すことによって、データ ディクショナリをクエリ**SQLColumns**、 **SQLGetTypeInfo**、 **SQLStatistics**、および**SQLTables**です。  
+-   カタログ関数を呼び出すことによって、データ ディクショナリをクエリ**SQLColumns**、 **SQLGetTypeInfo**、 **SQLStatistics**、および**SQLTables**します。  
   
-     ドライバーは、データベース テーブルとビューのマルチパート名をサポートする必要はありません。 (詳細については、機能 101 を参照してください[インターフェイスへの準拠レベル 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md)で 201 の機能と[インターフェイスへの準拠レベル 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)。ただし、列名の修飾およびインデックスの名前など、SQL 92 仕様の特定の機能はマルチパート名前付けするために構文的に比較します。 ODBC の機能の存在の一覧は、SQL 92 のような側面に新しいオプションを紹介するものではありません。  
+     ドライバーは、データベース テーブルとビューのマルチパート名をサポートする必要はありません。 (詳細については、101 の機能を参照してください[レベル 1 インターフェイスの適合性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)で 201 の機能と[レベル 2 インターフェイスの適合性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)。ただし、列名の修飾やインデックスの名前など、SQL 92 仕様の特定の機能は、マルチパートの名前付けに相当する構文。 ODBC の機能の存在の一覧は、SQL 92 のこれらの側面に新しいオプションを導入するものではありません。  
   
--   呼び出してデータ ソースとの接続を管理**SQLConnect**、 **SQLDataSources**、 **SQLDisconnect**、および**SQLDriverConnect**です。 どの ODBC に関係なくレベル、サポートを呼び出してドライバーに関する情報を入手**SQLDrivers**です。  
+-   データ ソースとの接続を呼び出すことによって管理**SQLConnect**、 **SQLDataSources**、 **SQLDisconnect**、および**SQLDriverConnect**します。 ODBC に関係なくレベル、サポート、呼び出すことによって、ドライバーに関する情報を入手**SQLDrivers**します。  
   
--   準備し、呼び出すことによって、SQL ステートメントを実行**SQLExecDirect**、 **SQLExecute**、および**SQLPrepare**です。  
+-   準備して呼び出すことによって、SQL ステートメントを実行**SQLExecDirect**、 **SQLExecute**、および**SQLPrepare**します。  
   
--   呼び出して結果セットの 1 つの行または前方にのみ、複数の行をフェッチ**SQLFetch**または呼び出すことによって**SQLFetchScroll**で、 *FetchOrientation*引数SQL_FETCH_NEXT に設定されます。  
+-   呼び出すことによって結果セットの 1 つの行または順方向のみに、複数の行をフェッチ**SQLFetch**または呼び出すことによって**SQLFetchScroll**で、 *FetchOrientation*引数SQL_FETCH_NEXT に設定します。  
   
--   呼び出すことによって、部分に非バインド列を取得**SQLGetData**です。  
+-   パートでは、非バインド列を呼び出すことによって取得**SQLGetData**します。  
   
--   呼び出して、他のすべての属性の現在の値を取得**SQLGetConnectAttr**、 **SQLGetEnvAttr**、および**SQLGetStmtAttr**、し、既定値にすべての属性を設定し、既定以外の値を呼び出すことによって特定の属性を設定**SQLSetConnectAttr**、 **SQLSetEnvAttr**、および**SQLSetStmtAttr**です。  
+-   呼び出すことによって、すべての属性の現在の値を取得**SQLGetConnectAttr**、 **SQLGetEnvAttr**、および**SQLGetStmtAttr**、し、既定値にすべての属性を設定し、既定以外の値に特定の属性を呼び出すことによって設定**SQLSetConnectAttr**、 **SQLSetEnvAttr**、および**SQLSetStmtAttr**します。  
   
--   呼び出して、記述子の特定のフィールドを操作**SQLCopyDesc**、 **SQLGetDescField**、 **SQLGetDescRec**、 **SQLSetDescField**、および**SQLSetDescRec**です。  
+-   記述子の特定のフィールドを呼び出すことによって操作**SQLCopyDesc**、 **SQLGetDescField**、 **SQLGetDescRec**、 **SQLSetDescField**、**SQLSetDescRec**します。  
   
--   呼び出して、診断情報を取得**SQLGetDiagField**と**SQLGetDiagRec**です。  
+-   呼び出すことによって、診断情報を取得**SQLGetDiagField**と**SQLGetDiagRec**します。  
   
--   呼び出してドライバーの機能を検出**SQLGetFunctions**と**SQLGetInfo**です。 また、テキストの置換が呼び出すことによって、データ ソースに送信される前に、SQL ステートメントに加えられたすべての結果を検出**SQLNativeSql**です。  
+-   ドライバーの機能を呼び出すことによって検出**SQLGetFunctions**と**SQLGetInfo**します。 また、テキストの置換が呼び出すことによって、データ ソースに送信される前に、SQL ステートメントに加えられたすべての結果を検出**SQLNativeSql**します。  
   
--   構文を使用して**SQLEndTran**トランザクションをコミットします。 コア レベル ドライバー必要がある場合は true。 トランザクションをサポートしていませんそのため、アプリケーションを指定できません SQL_ROLLBACK も SQL_AUTOCOMMIT_OFF SQL_ATTR_AUTOCOMMIT 接続属性。 (詳細については、機能 109 を参照してください[インターフェイスへの準拠レベル 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)。  
+-   構文を使用して**SQLEndTran**トランザクションをコミットします。 コア レベルのドライバー必要がある場合は true。 トランザクションをサポートしていませんそのため、アプリケーションを指定できません SQL_ROLLBACK も SQL_AUTOCOMMIT_OFF SQL_ATTR_AUTOCOMMIT 接続属性。 (詳細については、109 の機能を参照してください[レベル 2 インターフェイスの適合性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)。  
   
--   呼び出す**SQLCancel**実行時のデータ ダイアログをキャンセルして、マルチ スレッド環境で、ODBC 関数別のスレッドで実行をキャンセルします。 コア レベル インターフェイスへの準拠させる必要はありません、関数の非同期実行もの使用のサポート**SQLCancel**を非同期的に実行する ODBC 関数を取り消します。 プラットフォームでも、ODBC ドライバーに独立したアクティビティを同時に実行するために、ドライバーのマルチ スレッドを使用する必要があります。 ただし、マルチ スレッド環境では、ODBC ドライバーがスレッド セーフなをする必要があります。 アプリケーションからの要求のシリアル化は、場合でも、パフォーマンスに重大な問題を作成する可能性がありますが、この仕様を実装するに準拠する方法です。  
+-   呼び出す**SQLCancel**実行時のデータ ダイアログをキャンセルして、マルチ スレッド環境で、ODBC 関数を実行して別のスレッドをキャンセルします。 コア レベルのインターフェイスの適合性、機能の非同期実行もの使用のサポートを必要としません**SQLCancel**を非同期的に実行する ODBC 関数を取り消します。 プラットフォームでも ODBC ドライバーにドライバーが個々 のアクティビティを同時に実行するためのマルチ スレッドを使用する必要があります。 ただし、マルチ スレッド環境で、ODBC ドライバーではスレッド セーフである必要があります。 アプリケーションからの要求のシリアル化は、パフォーマンスに重大な問題が発生する可能性がありますが、この仕様を実装するために準拠する方法です。  
   
--   呼び出して、テーブルの SQL_BEST_ROWID - 行を識別する列を入手**SQLSpecialColumns**です。 (SQL_ROWVER のサポートが機能で 208[インターフェイスへの準拠レベル 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md))。  
+-   呼び出すことによって、テーブルの SQL_BEST_ROWID の行を識別する列を取得**SQLSpecialColumns**します。 (SQL_ROWVER のサポートは、機能の 208 で[レベル 2 インターフェイスの適合性](../../../odbc/reference/develop-app/level-2-interface-conformance.md))。  
   
     > [!IMPORTANT]  
-    >  ODBC ドライバーでは、コア インターフェイスへの準拠レベルで関数を実装する必要があります。
+    >  ODBC ドライバーでは、コア インターフェイスの適合性レベルで関数を実装する必要があります。

@@ -1,14 +1,11 @@
 ---
-title: sys.availability_databases_cluster (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.availability_databases_cluster (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.availability_databases_cluster_TSQL
@@ -23,21 +20,20 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b0c0cd91b58c4e59cba2440d8f02cd01a93c870
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 7d312a5ecb60e1ab046b0108e01ef1834adaa900
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179188"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842310"
 ---
 # <a name="sysavailabilitydatabasescluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  インスタンスで可用性データベースごとに 1 つの行を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always On 可用性グループ、ローカル データベースにコピーするかどうかに関係なく、Windows Server フェールオーバー クラスタ リング (WSFC) クラスター内の可用性レプリカをホストしています。参加している可用性グループにまだです。  
+  インスタンスで可用性データベースごとに 1 つの行を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカルでデータベースをコピーするかどうかに関係なく、Windows Server フェールオーバー クラスタ リング (WSFC) クラスターで Always On 可用性グループの可用性レプリカをホストしています。可用性グループにまだ参加しています。  
   
 > [!NOTE]  
 >  データベースを可用性グループに追加すると、プライマリ データベースは自動的にそのグループに参加します。 セカンダリ データベースを可用性グループに参加させるには、各セカンダリ レプリカでそのデータベースを準備する必要があります。   
@@ -45,11 +41,11 @@ ms.locfileid: "33179188"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) の一意の識別子。<br /><br /> NULL = データベースは可用性グループの可用性レプリカの一部ではありません。|  
-|**group_database_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) 内のデータベースの一意の識別子。 **group_database_id**をデータベースが参加している可用性グループにすべてのセカンダリ レプリカとプライマリ レプリカでは、このデータベースに対して同じです。<br /><br /> NULL = データベースは、どの可用性グループの可用性レプリカの一部でもありません。|  
+|**group_database_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) 内のデータベースの一意の識別子。 **group_database_id**をデータベースが参加している可用性グループにすべてのセカンダリ レプリカとプライマリ レプリカでは、このデータベースに同じです。<br /><br /> NULL = データベースは、どの可用性グループの可用性レプリカの一部でもありません。|  
 |**database_name**|**sysname**|可用性グループに追加されたデータベースの名前。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 場合、呼び出し元の**sys.availability_databases_cluster**データベース、ALTER ANY DATABASE、対応する行を確認するために必要な最低限の権限または VIEW ANY DATABASE のサーバー レベルの権限、または作成の所有者ではありませんDATABASE の権限、**マスター**データベース。  
+ 場合、呼び出し元の**sys.availability_databases_cluster**データベース、ALTER ANY DATABASE、対応する行を確認するために必要最低限のアクセス許可または VIEW ANY DATABASE のサーバー レベルの権限、または作成の所有者ではないです。DATABASE 権限、**マスター**データベース。  
   
 ## <a name="see-also"></a>参照  
  [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   

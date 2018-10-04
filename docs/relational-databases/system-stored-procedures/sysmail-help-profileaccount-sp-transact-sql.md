@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_profileaccount_sp (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysmail_help_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16355eaa114c10a412db39940a8902d1b361d735
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260405"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700752"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +51,10 @@ sysmail_help_profileaccount_sp
  表示するプロファイルのプロファイル名を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
  [ **@account_id** =] *account_id*  
- 表示するアカウント ID を指定します。 *account_id*は**int**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示します。  
+ 表示するアカウント ID を指定します。 *account_id*は**int**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示されます。  
   
  [ **@account_name** =] **'***account_name***'**  
- 表示するアカウント名を指定します。 *account_name*は**sysname**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示します。  
+ 表示するアカウント名を指定します。 *account_name*は**sysname**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -68,23 +64,23 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |**profile_id**|**int**|プロファイルのプロファイル ID。|  
 |**profile_name**|**sysname**|プロファイルの名前。|  
 |**account_id**|**int**|アカウントのアカウント ID。|  
 |**account_name**|**sysname**|アカウントの名前。|  
 |**sequence_number**|**int**|プロファイ内のアカウントのシーケンス番号。|  
   
-## <a name="remarks"></a>解説  
- ない場合*profile_id*または*profile_name*を指定すると、このストアド プロシージャは、インスタンス内のプロファイルすべてについての情報を返します。  
+## <a name="remarks"></a>コメント  
+ ない場合*profile_id*または*profile_name*を指定すると、このストアド プロシージャがインスタンス内のすべてのプロファイル情報を返します。  
   
- ストアド プロシージャ**sysmail_help_profileaccount_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
+ ストアド プロシージャ**sysmail_help_profileaccount_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   
-## <a name="permissions"></a>権限  
- メンバーにこのプロシージャの既定の実行権限、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
- **A.名前で、特定のプロファイルのアカウントを一覧表示します。**  
+ **A.名前で、特定のプロファイルのアカウントを一覧表示**  
   
  次の例ではの情報を一覧表示、`AdventureWorks Administrator`プロファイル名を指定してプロファイルできます。  
   
@@ -102,7 +98,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B.アカウントを特定してプロファイルのプロファイル ID を一覧表示**  
+ **B.特定のプロファイルのプロファイル ID のアカウントを一覧表示**  
   
  次の例では、`AdventureWorks Administrator` プロファイルの情報を、プロファイル ID を指定して一覧表示します。  
   
@@ -120,7 +116,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **C.すべてのプロファイルのアカウントを一覧表示します。**  
+ **C.すべてのプロファイルのアカウントを一覧表示**  
   
  次の例では、インスタンスのすべてのプロファイルのアカウントを一覧表示します。  
   

@@ -1,30 +1,27 @@
 ---
-title: トランザクション (ADO) を制御する |Microsoft ドキュメント
+title: トランザクション (ADO) を制御する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270981"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603622"
 ---
-# <a name="controlling-transactions-ado"></a>トランザクション (ADO) を制御します。
-ADO のヘルプへの接続内のトランザクション処理をサポートする、 **BeginTrans**、 **CommitTrans**、および**RollbackTrans**のメソッド、 **接続**オブジェクト。 次の単純なコード スニペットは、ADO のトランザクション処理を実装する一般的なという概念を示しています。  
+# <a name="controlling-transactions-ado"></a>トランザクションの制御 (ADO)
+ADO 接続のヘルプを内のトランザクション処理をサポートする、 **BeginTrans**、 **CommitTrans**、および**RollbackTrans**メソッド、 **接続**オブジェクト。 ADO のトランザクション処理を実装する一般的なという概念は、次の単純なコード スニペットに示します。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -81,6 +78,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- ここでトランザクション処理は、ことを確認して、操作の 1 つの単位として 2 つのレコードが更新に交換またはまったく変更されていない 2 つの製品名であることに使用されます。  
+ ここでトランザクション処理を使用して、操作の 1 つの単位として 2 つのレコードが更新ことおよび交換、またはまったく変更されていないこと、2 つの製品名いることを確認します。  
   
- トランザクション処理の詳細な説明を参照してください[更新およびデータの永続化](../../../ado/guide/data/updating-and-persisting-data.md)です。
+ トランザクション処理の詳細に説明を参照してください[更新およびデータの永続化](../../../ado/guide/data/updating-and-persisting-data.md)します。

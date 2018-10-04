@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c9c96ca-81cb-48e2-a71b-0657439a4c51
-caps.latest.revision: 4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae3eb5ce2114c339b83fccaea0b24815ed23c5e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91ea8783ad9baf47bc927a40669ae01d7b008184
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068802"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>リーダー ロールおよびライター ロールをパッケージに割り当てる
   リーダー ロールおよびライター ロールをそれぞれのパッケージに割り当てることができます。  
@@ -34,6 +31,6 @@ ms.locfileid: "37283848"
   
 4.  **[パッケージのロール]** ダイアログ ボックスで、 **[リーダー ロール]** ボックスの一覧からリーダー ロールを選択し、 **[ライター ロール]** ボックスの一覧からライター ロールを選択します。  
   
-5.  [**OK**] をクリックします。  
+5.  **[OK]** をクリックします。  
   
   

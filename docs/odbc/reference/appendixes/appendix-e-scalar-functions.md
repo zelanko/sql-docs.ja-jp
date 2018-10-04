@@ -1,34 +1,31 @@
 ---
-title: '「付録 e: スカラー関数は |Microsoft ドキュメント'
+title: '付録 e: スカラー関数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - scalar functions [ODBC]
 - functions [ODBC], scalar
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: acaab68fab32c25ab101f65ccd196abe7ebceef2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631860"
 ---
-# <a name="appendix-e-scalar-functions"></a>スカラー関数は「付録 e:
-ODBC では、この付録の対応するセクションで提供されるこれらの関数型のそれぞれに関する詳細情報と共に、スカラー関数の次の種類を指定します。 関数の説明には、関連する構文が含まれます。  
+# <a name="appendix-e-scalar-functions"></a>付録 E: スカラー関数
+ODBC では、この付録の対応するセクションで提供されるこれらの関数型のそれぞれについて詳しい情報のスカラー関数は、次の種類を指定します。 関数の説明には、関連する構文が含まれます。  
   
- この付録の内容には、次のトピックが含まれています。  
+ この付録には、次のトピックが含まれています。  
   
 -   [文字列関数](../../../odbc/reference/appendixes/string-functions.md)  
   
@@ -42,11 +39,11 @@ ODBC では、この付録の対応するセクションで提供されるこれ
   
 -   [SQL-92 CAST 関数](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- ODBC 必須ではない戻り値のデータ型のスカラー関数から関数では多くの場合、データ ソース固有のためです。 アプリケーションでは、データ型の変換を強制的に可能な限り CONVERT のスカラー関数を使用する必要があります。  
+ ODBC を必要としません戻り値のデータ型のスカラー関数の関数では多くの場合、データ ソース固有のため。 アプリケーションでは、データ型の変換を強制的に可能な限りの CONVERT スカラー関数を使用する必要があります。  
   
-## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC と sql-92 のスカラー関数  
- この付録の表では、ODBC 3.0 では、sql-92 に合うように追加されている関数があります。 各セクションでは、特定の種類のスカラー関数、ODBC では、定義されている追加これらの関数が示されます。  
+## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC や SQL 92 のスカラー関数  
+ この付録でテーブルには、SQL 92 とを連携させる ODBC 3.0 で追加された関数が含まれます。 これらの関数、ODBC で定義されているスカラー関数の特定の型の追加は、各セクションで示されます。  
   
- ODBC と sql-92、スカラー関数を異なる方法で分類します。 ODBC スカラー関数は引数の型での分類します。SQL 92 戻り値によって分類を実行します。 たとえば、EXTRACT 関数によって分類される timedate 関数として ODBC では、フィールド抽出引数は、datetime キーワード、抽出元の引数が日付時刻または間隔式ためです。 Sql-92 は、戻り値が数値であるためその一方で、抽出と数値のスカラー関数として分類します。  
+ ODBC および SQL 92、スカラー関数を異なる方法で分類します。 ODBC スカラー関数の引数の型では、分類します。SQL 92 戻り値によって分類を実行します。 たとえば、EXTRACT 関数によって分類される timedate 関数として ODBC では、フィールドの抽出引数が datetime のキーワードで、抽出-変換元の引数が日付時刻または間隔の式であるためです。 Sql-92 は、戻り値が数値であるためその一方で、抽出と数値のスカラー関数として分類します。  
   
- アプリケーションが呼び出すことによって、ドライバーをサポートするスカラー関数を判断できます**SQLGetInfo**です。 情報の種類が ODBC とスカラー関数の SQL 92 分類の両方に含まれるです。 これらの分類が異なるために、ODBC および sql-92 に対応していない種類の情報でいくつかのスカラー関数のサポートを示す可能性があります。 たとえば、ODBC での抽出用のサポート型により示される、SQL_TIMEDATE_FUNCTIONS 情報です。その一方で、対応しており、sql-92 で抽出は SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 情報の種類で表されます。
+ アプリケーションが呼び出すことによって、ドライバーをサポートするスカラー関数を調べる**SQLGetInfo**します。 情報の種類が ODBC とスカラー関数の SQL 92 分類の両方に含まれています。 これらの分類が異なるために、ODBC および SQL 92 に対応していない情報の種類でいくつかのスカラー関数のサポートを示す可能性があります。 たとえば、ODBC での抽出のサポートは、SQL_TIMEDATE_FUNCTIONS 情報の種類。 で示されます。その一方で、抽出、sql-92 でのサポートは、SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 情報の種類で表されます。

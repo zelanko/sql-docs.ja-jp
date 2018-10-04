@@ -1,14 +1,11 @@
 ---
-title: sysdac_history_internal (TRANSACT-SQL) |Microsoft ドキュメント
+title: sysdac_history_internal (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
@@ -18,28 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 930a8a16a41af91a3e57a0f4c7e3053ef40bb794
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261971"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810394"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>データ層アプリケーション テーブル - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データ層アプリケーション (DAC) を管理するために実行したアクションについての情報を格納します。 次の表は、 **dbo**のスキーマ、 **msdb**データベース。  
+  データ層アプリケーション (DAC) を管理するために実行したアクションについての情報を格納します。 このテーブルに格納されます、 **dbo**のスキーマ、 **msdb**データベース。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|アクションの識別子。|  
 |**sequence_id**|**int**|アクション内のステップを識別します。|  
-|**instance_id**|**uniqueidentifier**|DAC インスタンスの識別子。 この列に結合できます、 **instance_id**内の列[dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)です。|  
-|**action_type**|**tinyint**|アクションの種類の識別子。<br /><br /> **0** = 展開<br /><br /> **1** = 作成<br /><br /> **2** = 名前の変更<br /><br /> **3** = デタッチ<br /><br /> **4** = 削除||  
+|**instance_id**|**uniqueidentifier**|DAC インスタンスの識別子。 この列に結合できます、 **instance_id**列[dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)します。|  
+|**action_type**|**tinyint**|アクションの種類の識別子。<br /><br /> **0** = デプロイ<br /><br /> **1** = 作成<br /><br /> **2** = 名前の変更<br /><br /> **3** = デタッチ<br /><br /> **4** = 削除||  
 |**action_type_name**|**varchar(19)**|アクションの種類の名前。<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** = dacpac<br /><br /> **1** = ログイン<br /><br /> **2** = データベース|  
 |**dac_object_type_name**|**varchar(8)**|アクションの影響を受けるオブジェクトの種類の名前。<br /><br /> **dacpac** = DAC インスタンス<br /><br /> **login**<br /><br /> **データベース (database)**|  
@@ -56,8 +52,8 @@ ms.locfileid: "33261971"
 |**date_created**|**datetime**|このエントリが作成された日時。|  
 |**date_modified**|**datetime**|エントリを前回変更した日時。|  
   
-## <a name="remarks"></a>解説  
- DAC 管理アクション (DAC の配置、削除など) では、複数のステップが生成されます。 各アクションには、アクション識別子が割り当てられます。 各ステップには、シーケンス番号と内の行が割り当てられている**sysdac_history_internal**ステップの状態が記録されます。 アクション ステップが開始されると各行が作成され、操作のステータスを反映する必要に応じて更新されます。 たとえば、DAC の配置アクションを割り当てることができます**action_id** 4 つの行では 12 と get **sysdac_history_internal**:  
+## <a name="remarks"></a>コメント  
+ DAC 管理アクション (DAC の配置、削除など) では、複数のステップが生成されます。 各アクションには、アクション識別子が割り当てられます。 各ステップは、シーケンス番号と行に割り当てられている**sysdac_history_internal**ステップの状態が記録されます。 アクション ステップが開始されると各行が作成され、操作のステータスを反映する必要に応じて更新されます。 たとえば、DAC の配置アクションを割り当てることが**action_id**内の 4 行 12 と get **sysdac_history_internal**:  
   
 |||||  
 |-|-|-|-|  
@@ -67,7 +63,7 @@ ms.locfileid: "33261971"
 |12|2|作成|[データベース]|  
 |12|3|名前の変更|[データベース]|  
   
- 削除などの DAC 操作がから行を削除しないでください**sysdac_history_internal**です。 次のクエリを使用するには不要になったのインスタンスに配置された Dac の行を手動で削除する、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
+ 削除などの DAC 操作がから行を削除しないでください**sysdac_history_internal**します。 次のクエリを使用して、不要になったのインスタンスに配置された dac の行を手動で削除することができます、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
 ```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
@@ -79,14 +75,14 @@ WHERE instance_id NOT IN
  アクティブな DAC の行を削除しても、DAC 操作には影響しません。唯一の影響は、DAC の完全な履歴をレポートできなくなる点のみです。  
   
 > [!NOTE]  
->  現時点では、削除するためのメカニズムがない**sysdac_history_internal**行 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+>  現時点では、削除するためのメカニズムはありません**sysdac_history_internal**行 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。 このビューに読み取り専用のアクセスは、master データベースに接続するアクセス許可を持つすべてのユーザーに使用できます。  
   
 ## <a name="see-also"></a>参照  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal に対応する&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [sysdac_instances_internal &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], logs
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
-caps.latest.revision: 31
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5517f2962bef05e560697c55348a5372a80aa62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75af6924104764f372eefd0731799ec3566d0a0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049152"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>トレースと Windows パフォーマンス ログ データの関連付け (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Microsoft Windows システム モニター カウンターを関連付けることができる[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]または[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]イベント。 Windows システム モニターでは、指定されたカウンターのシステムの利用状況がパフォーマンス ログに記録されます。  

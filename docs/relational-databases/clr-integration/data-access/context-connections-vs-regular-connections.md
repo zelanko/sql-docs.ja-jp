@@ -1,28 +1,26 @@
 ---
-title: 通常とは。コンテキスト接続 |Microsoft Docs
+title: 通常の接続とコンテキスト接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 938ae2b6a740f793a87a1ed634d2d02b061a6123
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 63fd25aa796be6f0fce27bfbfa5b7da36d35e2d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356324"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619600"
 ---
-# <a name="context-connections-vs-regular-connections"></a>コンテキスト接続とします。通常の接続
+# <a name="context-connections-vs-regular-connections"></a>コンテキスト接続と通常の接続の比較
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   リモート サーバーに接続している場合は、常に、コンテキスト接続ではなく通常の接続を使用します。 ストアド プロシージャや関数を実行している同一サーバーに接続する必要がある場合は、ほとんどの場合、コンテキスト接続を使用します。 コンテキスト接続には、同一のトランザクション領域で実行され、再認証が不要であるなどの利点があります。  
   

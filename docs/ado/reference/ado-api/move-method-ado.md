@@ -1,13 +1,11 @@
 ---
-title: Move メソッド (ADO) |Microsoft ドキュメント
+title: Move メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4cd82d1e3e18c408afb1771a5f0f3fa1557b8ae
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c8306a7d8e3247e77579d0bebc9147c3f9a1cc56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279371"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789330"
 ---
 # <a name="move-method-ado"></a>Move メソッド (ADO)
 現在のレコードの位置を移動、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -47,30 +44,30 @@ recordset.Move NumRecords, Start
 ## <a name="remarks"></a>コメント  
  **移動**メソッドがすべてでサポートされている**Recordset**オブジェクト。  
   
- 場合、 *NumRecords*引数は、0 より大きい値は、現在のレコードの位置を前方に移動 (の終了に向けて、 **Recordset**)。 場合*NumRecords*が現在のレコードの位置は後方に移動、0 より小さい (の先頭に向かって、 **Recordset**)。  
+ 場合、 *NumRecords*引数に 0 を超えると、現在のレコードの位置を前方に移動 (の終了に向けて、 **Recordset**)。 場合*NumRecords* 0、現在のレコードの位置は後方に移動します未満です (の先頭に向かって、 **Recordset**)。  
   
- 場合、**移動**呼び出しは先頭レコードの前に、のポイントに現在のレコードの位置を移動すると、ADO レコード セット内の最初のレコードの前に位置する現在のレコードの設定 ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). 旧バージョンとされる場合に移動しよう、 **BOF**プロパティが既に**True**でエラーが生成されます。  
+ 場合、**移動**呼び出しは、最初のレコードの前に、のポイントに現在のレコードの位置を移動、ADO レコード セット内の最初のレコードの前に位置する現在のレコードを設定する ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). 旧バージョンとのときに移動しよう、 **BOF**プロパティが既に**True**エラーが生成されます。  
   
- 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO レコード セットの最後のレコードの後に、現在のレコードを位置に設定する ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). ときに前方に移動しよう、 **EOF**プロパティが既に**True**でエラーが生成されます。  
+ 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO レコード セットの最後のレコードの後に、現在のレコードを位置に設定する ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). 転送時に移動しよう、 **EOF**プロパティが既に**True**エラーが生成されます。  
   
- 呼び出す、**移動**メソッドは空の**Recordset**オブジェクト、エラーが発生します。  
+ 呼び出す、**移動**メソッド空から**レコード セット**オブジェクト、エラーが発生します。  
   
- 渡す場合、*開始*引数は、このブックマーク レコードに対して相対的です。 移動と仮定した場合、**レコード セット**オブジェクトは、ブックマークをサポートしています。 指定しない場合、現在のレコード相対移動パスです。  
+ 渡す場合、*開始*レコード、このブックマークを基準とした引数では、この移動と仮定すると、**レコード セット**オブジェクトは、ブックマークをサポートしています。 指定しない場合、この移動は現在のレコードを基準とは。  
   
- 使用している場合、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)受け渡し、プロバイダーからのレコードをローカルにキャッシュするプロパティ、 *NumRecords*引数キャッシュされているレコードの現在のグループの外側、現在のレコードの位置を移動します。強制的にレコードを送信先レコードからの新しいグループを取得します。 **CacheSize**プロパティは、新たに取得したグループのサイズを決定し、送信先レコードは、最初のレコードを取得します。  
+ 使用する場合、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)渡す、プロバイダーからのレコードをローカルにキャッシュするプロパティを*NumRecords*引数キャッシュされたレコードの現在のグループの外側、現在のレコードの位置を移動します。強制的に目的のレコードからレコードの新しいグループを取得します。 **CacheSize**プロパティは、新たに取得したグループのサイズを決定し、目的のレコードが最初のレコードを取得します。  
   
- 場合、 **Recordset**オブジェクトは順方向専用、ユーザーに渡すことができますが、 *NumRecords* 0 より小さい引数がキャッシュされているレコードの現在のセット内に、変換先を指定します。 場合、**移動**呼び出しは、現在のレコードの位置のレコードに移動最初のキャッシュされたレコードの前に、エラーが発生します。 したがって、前方スクロールのみをサポートするプロバイダーで、完全スクロールをサポートしているレコードのキャッシュを使用できます。 キャッシュされているレコードがメモリに読み込まれ、ために、レコードのために必要な数のキャッシュを回避する必要があります。 順方向専用の場合でも**レコード セット**呼び出すオブジェクトでサポートされる旧バージョンとは、この方法で移動、 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドいずれかを順方向専用**レコード セット**オブジェクトがあります。エラーを生成します。  
+ 場合、 **Recordset**オブジェクトは順方向専用、ユーザーが受け渡すことができます、 *NumRecords* 0 より小さい引数がキャッシュされているレコードの現在のセット内に、変換先を提供します。 場合、**移動**呼び出しは、現在のレコードの位置に移動、最初のキャッシュされたレコードより前に、のレコード、エラーが発生します。 したがって、前方スクロールのみをサポートするプロバイダーには、完全なスクロールをサポートしているレコードのキャッシュを使用できます。 キャッシュ レコードはメモリに読み込まれる、ため、多くのレコードが必要以上のキャッシュを避ける必要があります。 順方向専用の場合でも**レコード セット**呼び出すオブジェクトでサポートされる旧バージョンとは、この方法で移動、 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドいずれかを順方向専用**レコード セット**オブジェクトがあります。エラーを生成します。  
   
 > [!NOTE]
->  順方向専用の逆行サポート**Recordset**プロバイダーによっては、予測可能ではありません。 現在のレコードは、後の最後のレコードに位置付けられている場合、 **Recordset**、**移動**後方されないことがある現在の位置が正しい。  
+>  順方向専用で後方に移動するためのサポート**Recordset**はプロバイダーによっては、予測できません。 現在のレコードは、後の最後のレコードに位置付けられている場合、**レコード セット**、**移動**内を後方に向かってされないことがある現在の正しい位置にします。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [メソッドの例 (VB) を移動します。](../../../ado/reference/ado-api/move-method-example-vb.md)   
- [メソッドの例 (VBScript) を移動します。](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
- [メソッドの例 (vc++) に移動します。](../../../ado/reference/ado-api/move-method-example-vc.md)   
- [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
+ [Move メソッドの例 (VB)](../../../ado/reference/ado-api/move-method-example-vb.md)   
+ [Move メソッドの例 (VBScript)](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
+ [Move メソッドの例 (vc++)](../../../ado/reference/ado-api/move-method-example-vc.md)   
+ [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [MoveRecord メソッド (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

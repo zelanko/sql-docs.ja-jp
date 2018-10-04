@@ -1,39 +1,33 @@
 ---
-title: contains 関数 (XQuery) |Microsoft ドキュメント
+title: contains 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - contains function (XQuery)
 - fn:contains function
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fceddcf918a99667e8c92fadc7aeddca59bb21a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 595d5fb7d98d85120fca3b96eedc5a83694dc1a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753920"
 ---
-# <a name="functions-on-string-values---contains"></a>文字列値で機能 - が含まれています
+# <a name="functions-on-string-values---contains"></a>文字列値に使用する関数 - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  示す xs:boolean 型の値を返すかどうかの値*ドル arg1*で指定された文字列値を含む*ドル arg2*です。  
+  示す xs:boolean 型の値を返すかどうかの値*ドル arg1*によって指定された文字列値を含む*ドル arg2*します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,19 +43,19 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg2*  
  検索するサブストリング。  
   
-## <a name="remarks"></a>解説  
- 場合の値*ドル arg2* 、長さゼロの文字列関数で返される**True**です。 場合の値*ドル arg1*が長さ 0 の文字列と値の*ドル arg2*は長さゼロの文字列を返します**False**です。  
+## <a name="remarks"></a>コメント  
+ 場合の値*ドル arg2* 、長さ 0 の文字列関数で返される**True**します。 場合の値*ドル arg1*長さ 0 の文字列の値が*ドル arg2*が長さ 0 の文字列を返します**False**します。  
   
- 場合の値*ドル arg1*または*ドル arg2*空のシーケンスでは、引数は長さゼロの文字列として扱われます。  
+ 場合の値*ドル arg1*または*ドル arg2*空のシーケンスでは、引数が長さ 0 の文字列として扱われます。  
   
  contains() 関数では、文字列の比較に XQuery の既定の Unicode コード ポイントの照合順序が使用されます。  
   
- 指定された部分文字列値*ドル arg2* 4000 文字未満であるがします。 指定された値が 4,000 文字よりも大きい場合は、動的なエラー状態が発生し、contains() 関数は、空のシーケンスのブール値ではなくを返します**True**または**False**です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では XQuery 式に対して動的なエラーは発生しません。  
+ 指定された部分文字列値*ドル arg2* 4000 文字未満である必要があります。 指定された値が 4,000 文字よりも大きい場合は、動的エラーが発生し、contains() 関数は空のシーケンスのブール値ではなくを返します**True**または**False**します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では XQuery 式に対して動的なエラーは発生しません。  
   
- 大文字と小文字の比較を取得するために、[大文字](../xquery/functions-on-string-values-upper-case.md)または lower-case 関数を使用することができます。  
+ 小文字の比較を取得するために、[大文字](../xquery/functions-on-string-values-upper-case.md)または lower-case 関数を使用できます。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
- XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照して[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)です。 参照してください[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)です。  
+ XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照してください。 [SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。 参照してください[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)します。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベース内のさまざまな xml 型列に格納されている XML インスタンスに対して XQuery の例を示します。  

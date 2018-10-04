@@ -1,13 +1,11 @@
 ---
-title: 保存して開く方法の例 (vc++) |Microsoft ドキュメント
+title: 保存および開く方法の例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735990"
 ---
-# <a name="save-and-open-methods-example-vc"></a>保存して開く方法の例 (vc++)
-これら 3 つの例を示す方法、[保存](../../../ado/reference/ado-api/save-method.md)と**開く**メソッドを併用することができます。  
+# <a name="save-and-open-methods-example-vc"></a>保存および開く方法の例 (vc++)
+これら 3 つの例を示す方法、[保存](../../../ado/reference/ado-api/save-method.md)と**オープン**メソッドを併用することができます。  
   
- 出張が起こってし、データベースからテーブルを実行すると仮定します。 としてデータにアクセスするにする前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)移動可能な形式で保存します。 アクセスする、転送先に到着したときに、**レコード セット**ローカル、切断されている**レコード セット**です。 変更を行い、 **Recordset**、してから再度保存します。 最後に、ホームを取得する場合は、データベースにもう一度接続し、外出先での変更で更新します。  
+ 出張しているし、データベースからテーブルを実行すると仮定します。 としてデータにアクセスするにする前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)移動可能な形式で保存します。 目的地に到着する場合にアクセスする、 **Recordset**として、ローカル切断**レコード セット**します。 変更を加える、**レコード セット**、もう一度保存します。 最後に、home、戻るときに再度データベースに接続し、外出先で行われた変更で更新します。  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -265,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)

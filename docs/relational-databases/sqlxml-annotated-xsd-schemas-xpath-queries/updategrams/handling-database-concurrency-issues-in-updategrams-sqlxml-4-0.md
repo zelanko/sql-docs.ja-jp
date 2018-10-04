@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -21,23 +18,22 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a50e9bfab3cd767c35ac64b5eda240389459543
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f7ded788c5aecff2445d7f3257f7c56957b9d0bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072095"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614520"
 ---
-# <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>アップデートグラムでのデータベースの同時実行に関する問題への対応 (SQLXML 4.0)
+# <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>アップデートグラムでのデータベース コンカレンシーに関する問題への対応 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  アップデートグラムは、他のデータベースの更新メカニズムと同様に、マルチサーバー環境での同時実行更新に対応しています。 アップデートグラムではオプティミスティック同時実行制御が使用されます。この機能では、更新するデータがデータベースからの読み取り後に他のユーザー アプリケーションによって変更され邸内事を確認するために、選択フィールド データの比較がスナップショットとして使用されます。 アップデート グラムでこれらのスナップショット値を含める、 **\<する前に >** アップデート グラムのブロック。 指定されている値をチェックするアップデート グラムでデータベースを更新する前に、 **\<する前に >** 更新が有効であることを確認するデータベースの現在の値に対してブロック。  
+  アップデートグラムは、他のデータベースの更新メカニズムと同様に、マルチサーバー環境での同時実行更新に対応しています。 アップデートグラムではオプティミスティック コンカレンシーが使用されます。この機能では、更新するデータがデータベースからの読み取り後に他のユーザー アプリケーションによって変更され邸内事を確認するために、選択フィールド データの比較がスナップショットとして使用されます。 アップデート グラムでこれらのスナップショット値を含める、 **\<する前に >** アップデート グラムのブロック。 指定されている値をチェックするアップデート グラムでデータベースを更新する前に、 **\<する前に >** 更新が有効であることを確認するデータベースの現在の値に対してブロック。  
   
- アップデートグラムでは、オプティミスティック同時実行制御による保護を低 (なし)、中、高の 3 レベルで使用できます。 必要な保護レベルを適用するには、アップデートグラムで適切に指定する必要があります。  
+ アップデートグラムでは、オプティミスティック コンカレンシーによる保護を低 (なし)、中、高の 3 レベルで使用できます。 必要な保護レベルを適用するには、アップデートグラムで適切に指定する必要があります。  
   
 ## <a name="lowest-level-of-protection"></a>最低レベルの保護  
  このレベルでは、最後のデータベースの読み取り後に行われたその他の更新を無視して更新操作を実行します。 このような場合は、主キー列でのみを指定する、 **\<する前に >** 、レコードを識別するためにブロックし、で更新された情報を指定する、 **\<後 >** ブロックです。  

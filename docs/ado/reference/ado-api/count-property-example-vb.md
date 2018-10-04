@@ -1,32 +1,29 @@
 ---
-title: Count プロパティの例 (VB) |Microsoft ドキュメント
+title: Count プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5e462bef0846b71a963c1e510fac1e23d00e010
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747220"
 ---
 # <a name="count-property-example-vb"></a>Count プロパティの例 (VB)
-この例で、[カウント](../../../ado/reference/ado-api/count-property-ado.md)で 2 つのコレクションを持つプロパティ、***従業員***データベース。 プロパティは、各コレクション内のオブジェクトの数を取得し、これらのコレクションを列挙するループの上限を設定します。 使用せずにこれらのコレクションを列挙する別の方法、**カウント**プロパティを使用すること`For Each...Next`ステートメントです。  
+この例では、[カウント](../../../ado/reference/ado-api/count-property-ado.md)で 2 つのコレクションのプロパティ、***従業員***データベース。 プロパティは、各コレクション内のオブジェクトの数を取得し、これらのコレクションを列挙するループの上限を設定します。 別の方法を使用せずにこれらのコレクションを列挙するために、**カウント**プロパティを使用すること`For Each...Next`ステートメント。  
   
 ```  
 'BeginCountVB  

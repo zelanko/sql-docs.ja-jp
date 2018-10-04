@@ -1,13 +1,11 @@
 ---
-title: メンバーのコレクション (ADO MD) |Microsoft ドキュメント
+title: Members コレクション (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,36 +15,35 @@ f1_keywords:
 helpviewer_keywords:
 - Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6b4a6902ebf9efae5b02eccb14f1d06e9279cc6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 541e1098dfd18210e7c07a0718ecd3add758c8a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284651"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616950"
 ---
-# <a name="members-collection-ado-md"></a>メンバーのコレクション (ADO MD)
+# <a name="members-collection-ado-md"></a>Members コレクション (ADO MD)
 含まれています、[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)レベル、または軸に沿った位置からのオブジェクト。  
   
 ## <a name="remarks"></a>コメント  
  A**メンバー**は次の種類のメンバーを格納するコレクションを使用します。  
   
--   キューブ内のレベルを構成するメンバー。 含まれる、**メンバー**のコレクション、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクト。 サンプルを使用するなど、[マルチ ディメンション スキーマの概要とデータ](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)国のレベルの 4 つのメンバーは、カナダ、アメリカ合衆国、英国、およびドイツです。  
+-   キューブ内のレベルを構成するメンバー。 含まれる、**メンバー**のコレクションを[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクト。 たとえばからサンプルを使用して[多次元スキーマの概要とデータ](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)、国レベルの 4 つのメンバーには、カナダ、米国、英国、およびドイツ。  
   
--   階層内で特定のメンバーの子であるメンバー。 これらのメンバーは、によって返される、[子](../../../ado/reference/ado-md-api/children-property-ado-md.md)、親**メンバー**オブジェクト。 たとえば、もう一度同じサンプルを使用して、Canada メンバーの 2 つの子はカナダ東部およびカナダ西部です。  
+-   階層内の特定のメンバーの子であるメンバー。 これらのメンバーがによって返される、[子](../../../ado/reference/ado-md-api/children-property-ado-md.md)、親**メンバー**オブジェクト。 たとえば、もう一度同じサンプルを使用して、Canada メンバーの 2 つの子は、カナダ東部、カナダ西部は。  
   
--   軸に沿った特定の位置を定義するメンバー、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)です。 セル セットを使用して[多次元データを扱う](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)バレンタインおよびシアトル例として、x 軸の最初の位置の 2 つのメンバーは、します。 これらのメンバーに含まれる、**メンバー**のコレクション、[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクト。  
+-   軸に沿った特定の位置を定義するメンバーを[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)します。 セル セットを使用して[多次元データを扱う](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)バレンタインとシアトル例として、x 軸の最初の位置の 2 つのメンバーは、します。 これらのメンバーに含まれる、**メンバー**のコレクションを[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクト。  
   
- **メンバー**標準 ADO コレクションです。 プロパティとメソッドのコレクションでは、次の操作を実行できます。  
+ **メンバー**は、標準の ADO のコレクションです。 プロパティとメソッドのコレクションでは、次の操作を実行できます。  
   
--   使用して、コレクション内のオブジェクトの数を取得、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティです。  
+-   使用して、コレクション内のオブジェクトの数を取得、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
   
--   既定値を使用してコレクションからオブジェクトを返す[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティです。  
+-   既定値は、コレクションからオブジェクトを返す[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
   
--   使用してプロバイダーから、コレクション内のオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドです。  
+-   コレクション内のプロバイダーからオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
   
  このセクションには、次のトピックが含まれています。  
   

@@ -1,13 +1,11 @@
 ---
-title: SQLAllocConnect 関数 |Microsoft ドキュメント
+title: SQLAllocConnect 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLAllocConnect
@@ -19,26 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLAllocConnect function [ODBC]
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b47e7aa1050d7d7b0f245ec6ef0bcfaed0aeccf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71ee58c89ba29e61e1a5e0db595f7b791a21fd46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776280"
 ---
 # <a name="sqlallocconnect-function"></a>SQLAllocConnect 関数
 **準拠**  
- バージョンで導入された: ODBC 1.0 標準準拠: 非推奨  
+ バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
   
  **概要**  
- ODBC 3 です。*x*、ODBC 2 *。x*関数**SQLAllocConnect**代わりました**SQLAllocHandle**です。 詳細については、次を参照してください。 [SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)です。  
+ ODBC 3。*x*、ODBC 2 *。x*関数**SQLAllocConnect**置き換わりました**SQLAllocHandle**します。 詳細については、次を参照してください。 [SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)します。  
   
 > [!NOTE]  
->  どのようなドライバー マネージャーの詳細と ODBC 2 には、この関数にマップします。*x* ODBC 3 を利用するアプリケーション *。x*ドライバーを参照してください[非推奨機能のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
+>  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

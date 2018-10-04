@@ -1,32 +1,29 @@
 ---
-title: 状態レコード |Microsoft ドキュメント
+title: 状態レコード |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic records
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 4a987f69-158f-4cc4-a31b-2b7dd8dcbb87
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d36b40394f3f968f2ab841006a82b7ccb2218bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 986cd3c48104bfe822934eb415b854b8e976f242
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813770"
 ---
 # <a name="status-records"></a>状態レコード
-状態レコード内のフィールドは、特定のエラーや、SQLSTATE、ネイティブ エラー番号、診断メッセージ、列番号、および行番号を含む、ドライバー マネージャー、ドライバー、またはデータ ソースによって返される警告についてを説明します。 関数に SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA、または SQL_STILL_EXECUTING が返された場合にのみ、ステータス レコードを作成することができます。 状態レコード内のフィールドの完全な一覧を参照してください、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明。  
+状態レコードのフィールドは、特定のエラーまたは SQLSTATE、ネイティブ エラー番号、診断メッセージ、列番号、および行番号を含む、ドライバー マネージャー、ドライバー、またはデータ ソースによって返される警告に関する情報を格納します。 状態レコードは、関数には、SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA、または SQL_STILL_EXECUTING が返される場合にのみ作成できます。 状態レコードのフィールドの完全な一覧を参照してください、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明。  
   
  このセクションでは、次のトピックを扱います。  
   

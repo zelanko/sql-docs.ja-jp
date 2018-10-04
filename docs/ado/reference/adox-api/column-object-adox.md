@@ -1,13 +1,11 @@
 ---
-title: Column オブジェクト (ADOX) |Microsoft ドキュメント
+title: 列オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,62 +13,61 @@ f1_keywords:
 helpviewer_keywords:
 - Column object [ADOX]
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc7319f20e50ccbdbc14d60f15c96af11b6188a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 890fd41c919e0911eef0257ae21fbcea72129249
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285293"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731430"
 ---
 # <a name="column-object-adox"></a>Column オブジェクト (ADOX)
 テーブル、インデックス、またはキーから列を表します。  
   
 ## <a name="remarks"></a>コメント  
- 次のコードが新たに作成**列**:  
+ 次のコード作成、新しい**列**:  
   
  `Dim obj As New Column`  
   
- プロパティのコレクションと、**列**オブジェクトをすることができます。  
+ プロパティのコレクションと、**列**オブジェクトのことができます。  
   
--   列を識別、[名プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)プロパティです。  
+-   列を識別、[名プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)プロパティ。  
   
--   列のデータ型の指定、 [Type プロパティ (キー) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)プロパティです。  
+-   列のデータ型を指定、 [Type プロパティ (キー) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)プロパティ。  
   
--   決定列が固定長の場合、または null 値を含めることができます、[属性プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)プロパティです。  
+-   決定列が固定長の場合、または null 値を含めることができる場合、[属性プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)プロパティ。  
   
--   列の最大サイズを指定する、 [DefinedSize プロパティ (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)プロパティです。  
+-   列の最大サイズを指定、 [DefinedSize プロパティ (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)プロパティ。  
   
--   数値データの値で小数点以下桁数を指定する、 [NumericScale プロパティ (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)プロパティです。  
+-   数値データの値の指定とスケール、 [NumericScale プロパティ (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)プロパティ。  
   
--   数値データ値と最大有効桁数を指定する、[精度プロパティ (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)プロパティです。  
+-   数値データの値と最大有効桁数を指定、[精度プロパティ (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)プロパティ。  
   
--   指定して、[カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)を持つ列を所有している、 [ParentCatalog プロパティ (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)プロパティです。  
+-   指定、[カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)で列を所有している、 [ParentCatalog プロパティ (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)プロパティ。  
   
--   キー列の場合、関連テーブルで関連する列の名前を指定します、 [RelatedColumn プロパティ (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)プロパティです。  
+-   関連テーブルに関連する列の名前を指定、キー列の[RelatedColumn プロパティ (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)プロパティ。  
   
--   インデックス列を指定するかどうか、並べ替え順序が昇順または降順で、 [SortOrder プロパティ (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)プロパティです。  
+-   インデックス列で並べ替え順序が昇順または降順でかどうかを指定、 [SortOrder プロパティ (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)プロパティ。  
   
--   プロバイダーに固有のプロパティへのアクセス、[プロパティ コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
+-   プロバイダー固有のプロパティにアクセス、[プロパティ コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
   
 > [!NOTE]
->  すべてのプロパティの**列**オブジェクトは、データ プロバイダーでサポートすることがあります。 プロバイダーがサポートしていないプロパティの値を設定した場合は、エラーが発生します。 新しい**列**オブジェクト、オブジェクトはコレクションに追加するときにエラーが発生します。 既存のオブジェクトのプロパティを設定するときにエラーが発生します。  
+>  すべてのプロパティの**列**オブジェクトは、データ プロバイダーによってサポート可能性があります。 プロバイダーがサポートされていないプロパティの値を設定している場合、エラーが発生します。 新しい**列**オブジェクト、オブジェクトは、コレクションに追加されると、エラーが発生します。 既存のオブジェクトは、プロパティの設定時に、エラーが発生します。  
 >   
->  作成するときに**列**オブジェクト、オプションのプロパティに適切な既定値が存在は、プロバイダーがプロパティをサポートしていることを保証されません。 詳細については、プロバイダーがサポートしているプロパティについて、プロバイダーのマニュアルを参照してください。  
+>  作成するときに**列**オブジェクトの場合、オプションのプロパティに適切な既定値が存在しないわけでは、プロバイダーが、プロパティをサポートします。 詳細については、プロバイダーでサポートされるプロパティについて、プロバイダーのマニュアルを参照してください。  
   
  このセクションには、次のトピックが含まれています。  
   
 -   [Column オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [列とテーブル名プロパティの例 (VB) のメソッドを追加します。](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [テーブル型のプロパティの例 (VB) である接続 Close メソッド](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [キーは、メソッド、キーの種類、RelatedColumn、RelatedTable および UpdateRule プロパティの例 (VB を) 追加します。](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ADOX コードの例: NumericScale し (VB) の有効桁数のプロパティの例](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close メソッド、Table Type プロパティの例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ADOX のコード例: NumericScale および Precision プロパティの例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [SortOrder プロパティの例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [列のコレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

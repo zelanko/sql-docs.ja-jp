@@ -1,14 +1,11 @@
 ---
-title: sp_delete_targetsvrgrp_member (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_delete_targetsvrgrp_member (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetsvrgrp_member_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetsvrgrp_member
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb2b4ce1e6013e7bd0499a0bd242609d638b1899
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c73ad5d550244306d2672120cfa32c9a3ed37bf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242424"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755770"
 ---
 # <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
   
 ## <a name="arguments"></a>引数  
  [ **@group_name=** ] **'***group_name***'**  
- グループの名前です。 *group_name*は**sysname**、既定値はありません。  
+ グループの名前。 *group_name*は**sysname**、既定値はありません。  
   
  [ **@server_name=** ] **'***server_name***'**  
  指定したグループから削除するサーバーの名前を指定します。 *server_name*は**nvarchar (30)**、既定値はありません。  
@@ -56,7 +52,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

@@ -1,51 +1,45 @@
 ---
-title: Legal Notice (SSMA for Sybase) | Microsoft Docs
+title: 法的通知 (SSMA for Sybase) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a1d0c2f47d975dce1350efc94aefb1595ec91b1b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 95377d761aa46073d7650a274f9ddbe6ccd44cc1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779048"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823970"
 ---
-# <a name="legal-notice-ssma-for-sybase"></a>Legal Notice (SSMA for Sybase)
-This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  
+# <a name="legal-notice-ssma-for-sybase"></a>法的通知 (SSMA for Sybase)
+このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  
   
-The primary purpose of a sample contained within this documentation is to illustrate a concept, or a reasonable use of a particular statement or clause. Most samples do not include all of the code that may normally be found in a full production system, as some of the usual data validation and error handling is removed to focus the sample on a particular concept or statement. Technical support is not available for these samples or for any included source code.  
+このマニュアルに含まれているサンプルは、概念や特定のステートメントまたは句の利用方法の説明を主目的として提供されています。 多くのサンプルは、特定の概念やステートメントの説明のみを目的としているため、通常の実稼働システムで必要となるようなデータ評価やエラー処理のコードは含んでいません。 提供されているサンプルおよびソース コードに対するテクニカル サポートは行っていません。  
   
-Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this documentation may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.  
+特に記載していない場合、このソフトウェアおよびマニュアルで使用している会社、組織、製品、ドメイン名、電子メール アドレス、人物、場所、出来事などの名称は架空のもので、実在する商品名、団体名、個人名などとは一切関係ありません。 お客様ご自身の責任において、適用されるすべての著作権関連法規に従ったご使用を願います。 このソフトウェアおよびマニュアルのいかなる部分も、米国 Microsoft Corporation の書面による許諾を受けることなく、その目的を問わず、どのような形態であっても、複製または譲渡することは禁じられています。ここでいう形態とは、複写や記録など、電子的な、または物理的なすべての手段を含みます。  
   
-Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this documentation. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this documentation does not give you any license to these patents, trademarks, copyrights, or other intellectual property.  
+マイクロソフトは、このマニュアルに記載されている内容に関し、特許、特許申請、商標、著作権、またはその他の無体財産権を有する場合があります。 このマニュアルはこれらの特許、商標、著作権、またはその他の無体財産権に関する権利をお客様に許諾するものではありません。  
   
 © 2016 Microsoft Corporation. All rights reserved.  
   
-Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System, and WinFX are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries/regions.  
+Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System、および WinFX は、米国 Microsoft Corporation の米国およびその他の国における登録商標または商標です。  
   
-SAP NetWeaver is the registered trademark of SAP AG in Germany and in several other countries/regions.  
+SAP NetWeaver は、ドイツ SAP AG のドイツおよびその他の国における登録商標または商標です。  
   
-All other trademarks are property of their respective owners.  
+記載されている会社名、製品名には、各社の商標のものもあります。  
   
-## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Documentation Policy for SQL Server Support and Upgrade  
-Content that appears in SQL Server documentation is published only after it has been tested sufficiently. Product documentation – SQL Server Books Online, readme files, known issues documents, and Knowledge Base articles – contains content regarding SQL Server features and functionality that is robust enough to be safe for general use by all customers. This policy applies to all SQL Server documentation, including readme files for releases and services packs; a readme file is considered an extension of Books Online.  
+## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server のサポートおよびアップグレードに関するドキュメント ポリシー  
+SQL Server のドキュメントに記載されている内容は、十分なテストを実施した後にはじめて公開されます。 製品のドキュメント (SQL Server オンライン ブック、Readme ファイル、既知の問題に関するドキュメント、サポート技術情報の資料) には、あらゆるお客様が一般的な用途に安心してご利用になれる SQL Server の機能に関する内容が記載されています。 このポリシーは、リリースおよびサービス パックの Readme ファイルを含む、すべての SQL Server のドキュメントに適用されます。Readme は、オンライン ブックの追加ファイルとして扱われます。  
   
-In some cases, a particular feature is not something that customers should use directly and, therefore, it is not documented. Unless a feature is also discussed in SQL Server documentation published by Microsoft, content from third-party books or Web sites is not supported by Microsoft customer support, and should not be used in production databases or applications.  
+機能によっては、お客様が直接使用しないものもあり、そのような機能に関してはドキュメントに記載されていません。 Microsoft が発行する SQL Server のドキュメントに記載されていない機能については、サード パーティの書籍や Web サイトの内容は Microsoft カスタマー サポートによってサポートされません。実稼働データベースやアプリケーションでは使用しないでください。  
   
-Customers must not use undocumented APIs, including but not limited to: stored procedures, extended stored procedures, functions, views, tables, columns, properties, or metadata. Microsoft customer support will not support databases or applications that leverage or use undocumented entry points.  
+お客様は、ドキュメントに記載されていない API、ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビュー、テーブル、列、プロパティ、メタデータなどを使用しないでください。 Microsoft カスタマー サポートでは、ドキュメントに記載されていないエントリ ポイントを応用または使用したデータベースやアプリケーションをサポートしません。  
   
-Server and database upgrades to future versions of SQL Server are not guaranteed for applications and databases that leverage and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature is not documented in Microsoft SQL Server documentation, it is not a supported part of SQL Server.  
+ドキュメントに記載されていないエントリ ポイントを応用または使用するアプリケーションやデータベースについては、将来のバージョンの SQL Server に対応させるためのサーバーおよびデータベースのアップグレードは保証されません。 SQL Server 機能の使用は、Microsoft SQL Server のドキュメントに記載されている方法に限定されます。 機能が Microsoft SQL Server のドキュメントに記載されていない場合は、SQL Server のサポート対象から除外されます。  
   

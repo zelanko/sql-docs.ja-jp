@@ -1,13 +1,11 @@
 ---
-title: State プロパティ (ADO MD) |Microsoft ドキュメント
+title: State プロパティ (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO MD]
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 975a9354734e0f6e5d0a2502b89b43c886be5fa3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 812863395c2980f341ed2419eee1d9d661f19dd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284561"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822166"
 ---
 # <a name="state-property-ado-md"></a>State プロパティ (ADO MD)
-セルセットの現在の状態を示します。  
+セル セットの現在の状態を示します。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**長い**の現在の状態を示す整数値、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトし、は読み取り専用です。 次の値が無効です:**取得のみ**(0) と**可能**(1)。  
+ 返します、**長い**の現在の状態を示す整数値、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)読み取り専用であり、オブジェクトします。 次の値が無効です:**取得のみ**(0) と**可能**(1)。  
   
 ## <a name="remarks"></a>コメント  
- 使用する、 [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)定数名は、プロジェクトで参照されている ADO タイプ ライブラリがある必要があります。 参照してください[ADO md を使用する ADO](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)詳細についてはします。  
+ 使用する、 [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)定数名は、プロジェクトで参照されている ADO タイプ ライブラリがある必要があります。 参照してください[ADO MD と ADO を使用する](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)詳細についてはします。  
   
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  

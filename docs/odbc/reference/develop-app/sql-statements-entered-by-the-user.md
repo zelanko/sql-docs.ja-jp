@@ -1,32 +1,29 @@
 ---
-title: SQL ステートメントが、ユーザーが入力した |Microsoft ドキュメント
+title: SQL ステートメントが、ユーザーが入力した |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-entered SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], entered by user
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1be7159d7f56226c94b6cbfa335883b73df15de1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612620"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>ユーザーが入力した SQL ステートメント
-また、一般アド ホック分析を実行するアプリケーションでは、SQL ステートメントを直接入力するユーザーを許可します。 以下に例を示します。  
+よくアド ホック分析を実行するアプリケーションでは、SQL ステートメントを直接入力するユーザーを許可します。 以下に例を示します。  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -52,4 +49,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- この手法では、アプリケーションのコーディング; 簡略化します。アプリケーションには、SQL ステートメントを作成して、ステートメントの有効性を確認するデータ ソースが依存しています。 十分に複雑な SQL を公開するグラフィカル ユーザー インターフェイスの作成が困難になっているため、SQL ステートメントのテキストを入力するユーザーに依頼するだけと、望ましい代替可能性があります。 ただし、SQL だけでなく、クエリ対象データ ソースのスキーマを知っているユーザーが必要です。 一部のアプリケーションでは、ユーザー基本的な SQL ステートメントを作成し、また使用する、ユーザーが変更できるテキスト インターフェイスを提供するのグラフィカル ユーザー インターフェイスを提供します。
+ この手法はアプリケーションのコーディングを簡略化します。アプリケーションでは、SQL ステートメントを作成しているユーザーに対する、ステートメントの有効性をチェックするデータ ソースに依存しています。 SQL の複雑な作業を適切に公開するグラフィカル ユーザー インターフェイスを記述するため、SQL ステートメントのテキストを入力するユーザーに依頼するだけと、ことをお勧めの代替可能性があります。 ただし、SQL だけでなく、クエリ対象のデータ ソースのスキーマを把握するユーザーが必要です。 一部のアプリケーションは、ユーザーが基本的な SQL ステートメントを作成しが、ユーザーが変更できるテキスト インターフェイスを提供するグラフィカル ユーザー インターフェイスを提供します。

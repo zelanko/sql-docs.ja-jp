@@ -1,33 +1,30 @@
 ---
-title: パラメーター (ADO - WFC 構文) |Microsoft ドキュメント
+title: パラメーター (ADO - WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb5ee000ca00031f35f27ec23dec3e284656f56a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720710"
 ---
-# <a name="parameter-ado---wfc-syntax"></a>パラメーター (ADO - WFC 構文)
+# <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
   
-### <a name="constructor"></a>コンス トラクター  
+### <a name="constructor"></a>コンストラクター  
   
 ```  
 public Parameter()  
@@ -69,13 +66,13 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>パラメーターのアクセサー メソッド  
- [値](../../../ado/reference/ado-api/value-property-ado.md)のプロパティ、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを取得またはそのオブジェクトの内容を設定します。 コンテンツは、値を割り当てることができるオブジェクトの型といくつかのデータ型のいずれかのバリアント型として表されます。  
+ [値](../../../ado/reference/ado-api/value-property-ado.md)のプロパティを[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを取得またはそのオブジェクトの内容を設定します。 コンテンツは、バリアントの値を割り当てることができるオブジェクトの型と任意のいくつかのデータ型として表されます。  
   
- ADO/WFC を実装して、**値**を持つプロパティ、 **getValue** 、バリアント型のオブジェクトを返すメソッド、および**setValue**を引数として VARIANT を受け取るメソッド。 バリアントは、Microsoft Visual Basic などの特定の言語に非常に効率的です。  
+ ADO と WFC を実装して、**値**プロパティを**getValue** 、バリアント オブジェクトを返すメソッドと**setValue**メソッドを引数としてのバリアント。 バリアントは、Microsoft Visual Basic などの特定の言語で効率的です。  
   
- 加え、**値**プロパティ、ADO/WFC 提供*アクセサー*を取得および設定の内容を Java データ型を使用するメソッド**パラメーター**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ **取得 * * * DataType*または **設定 * * * DataType*です。  
+ 加え、**値**プロパティ、ADO と WFC 提供*アクセサー*メソッドを取得および設定のコンテンツ Java データ型を使用する**パラメーター**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ **取得 * * * データ型*または **設定 * * * データ型*します。  
   
- 注目すべき 1 つの例外が発生: があるない**注意する必要**プロパティです。 代わりに、、 **isNull**フィールドが null かどうかを示すブール値を返します。  
+ 1 つの注目すべき例外が発生: がない**注意する必要**プロパティが代わりに、 **isNull**フィールドが null かどうかを示すブール値を返します。  
   
 ```  
 public boolean getBoolean()  

@@ -1,14 +1,11 @@
 ---
-title: SQL Server サービスの詳細プロパティ VBScript を使用して変更 |Microsoft ドキュメント
+title: SQL Server サービスの詳細プロパティ VBScript を使用して変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,20 +14,19 @@ helpviewer_keywords:
 - modifying SQL Server Service properties
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a49cc34f92a2dd35d5f85a6013a738184d913810
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60dc69dfa0077c5adc375aa11eba411ab4004345
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802100"
 ---
-# <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>VBScript を使用して構成管理の WMI プロバイダーにアクセス
+# <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>VBScript を使用した構成管理用 WMI プロバイダーへのアクセス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  このセクションのインストール済みインスタンスのバージョンをリストする VBScript プログラムを作成する方法について説明[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューターで実行されています。  
+  このセクションのインストール済みインスタンスのバージョンをリストする VBScript プログラムを作成する方法を説明します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューターで実行されています。  
   
  コード例では、コンピューター上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスおよびそのバージョンをリストします。  
   

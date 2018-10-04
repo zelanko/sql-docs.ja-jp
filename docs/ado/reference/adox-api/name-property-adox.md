@@ -1,13 +1,11 @@
 ---
-title: Name プロパティ (ADOX) |Microsoft ドキュメント
+title: Name プロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -41,32 +39,31 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9bb6d6e570de4595e2c6b3130432b8829da137b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f078f8664ce0386bba6069d771ba880b1c02e026
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737190"
 ---
 # <a name="name-property-adox"></a>Name プロパティ (ADOX)
 オブジェクトの名前を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**文字列**値。  
+ 設定または取得を**文字列**値。  
   
 ## <a name="remarks"></a>コメント  
- 名前をコレクション内で一意である必要はありません。  
+ 名は、コレクション内で一意である必要はありません。  
   
- **名前**プロパティが読み取り/書き込み[列](../../../ado/reference/adox-api/column-object-adox.md)、[グループ](../../../ado/reference/adox-api/group-object-adox.md)、[キー](../../../ado/reference/adox-api/key-object-adox.md)、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)、 [テーブル](../../../ado/reference/adox-api/table-object-adox.md)、および[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクト。 **名前**プロパティは読み取り専用で[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)、[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)、および[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクト。  
+ **名前**プロパティは読み取り/書き込み[列](../../../ado/reference/adox-api/column-object-adox.md)、[グループ](../../../ado/reference/adox-api/group-object-adox.md)、[キー](../../../ado/reference/adox-api/key-object-adox.md)、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)、 [テーブル](../../../ado/reference/adox-api/table-object-adox.md)、および[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクト。 **名前**プロパティは読み取り専用で[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)、[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)、および[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクト。  
   
- オブジェクトの読み取り/書き込み (**列**、**グループ**、**キー**、**インデックス**、**テーブル**と**ユーザー**オブジェクト)、既定値は空の文字列 ("") です。  
+ オブジェクトの読み取り/書き込み (**列**、**グループ**、**キー**、**インデックス**、**テーブル**と**ユーザー**オブジェクト)、既定値は空の文字列 ("")。  
   
 > [!NOTE]
->  キー、このプロパティは読み取り専用で**キー**オブジェクトをコレクションに既に追加されています。 テーブル、このプロパティは読み取り専用です**テーブル**オブジェクトをコレクションに既に追加されています。  
+>  このプロパティは読み取り専用で、キーの**キー**オブジェクトが既にコレクションに追加します。 このプロパティは読み取り専用のテーブルは、**テーブル**オブジェクトが既にコレクションに追加します。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -77,6 +74,6 @@ ms.locfileid: "35286607"
 |[Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>参照  
- [列とテーブル名プロパティの例 (VB) のメソッドを追加します。](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [キーは、メソッド、キーの種類、RelatedColumn、RelatedTable および UpdateRule プロパティの例 (VB を) 追加します。](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

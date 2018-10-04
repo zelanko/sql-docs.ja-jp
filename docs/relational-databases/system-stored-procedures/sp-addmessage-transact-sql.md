@@ -1,14 +1,11 @@
 ---
-title: sp_addmessage (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_addmessage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 964f0909c136eddc86571ce776b559083c8ce3e1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239182"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668330"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  インスタンスに新しいユーザー定義エラー メッセージを格納、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]です。 使用して格納されているメッセージ**sp_addmessage**を使用して表示できます、 **sys.messages**カタログ ビューです。  
+  インスタンスに新しいユーザー定義エラー メッセージを格納、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 使用して格納されているメッセージ**sp_addmessage**を使用して表示できます、 **sys.messages**カタログ ビューです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +44,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 ## <a name="arguments"></a>引数  
  [ **@msgnum****=** ] *msg_id*  
- メッセージの ID を指定します。 *msg_id*は**int**既定値は NULL です。 *msg_id*ユーザー定義エラー メッセージが 50,001 から 2,147, 483,647 までの整数を指定できます。 組み合わせ*msg_id*と*言語*一意である必要があります指定した言語の ID が既に存在する場合、エラーが返されます。  
+ メッセージの ID を指定します。 *msg_id*は**int**既定値は NULL です。 *msg_id*ユーザー定義エラー メッセージが 50,001 から 2,147, 483,647 までの整数を指定できます。 組み合わせた*msg_id*と*言語*一意である必要があります指定した言語の ID が既に存在する場合、エラーが返されます。  
   
  [ **@severity =** ]*severity*  
  エラーの重大度レベルを指定します。 *重大度*は**smallint**既定値は NULL です。 有効なレベルは 1 ～ 25 です。 重大度レベルの詳細については、「 [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)」を参照してください。  
@@ -57,16 +53,16 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  エラー メッセージのテキストを指定します。 *msg*は**nvarchar (255)** 既定値は NULL です。  
   
  [  **@lang =** ] **'***言語***'**  
- このメッセージの言語を指定します。 *言語*は**sysname**既定値は NULL です。 複数の言語は、同じサーバーにインストールできる*言語*各メッセージを記述する言語を指定します。 ときに*言語*は省略すると、言語が既定の言語のセッションです。  
+ このメッセージの言語を指定します。 *言語*は**sysname**既定値は NULL です。 複数の言語を同じサーバーにインストールできる*言語*各メッセージを記述する言語を指定します。 ときに*言語*は省略すると、言語が既定の言語のセッション。  
   
  [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
- メッセージを、発生時に Windows のアプリケーション ログに書き込むかどうかを指定します。 **@with_log** **varchar (5)** 既定値は FALSE。 TRUE の場合は、エラーは常に Windows のアプリケーション ログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 メンバーにのみ、 **sysadmin**サーバーの役割は、このオプションを使用できます。  
+ メッセージを、発生時に Windows のアプリケーション ログに書き込むかどうかを指定します。 **@with_log** **varchar (5)** 既定値は FALSE。 TRUE の場合は、エラーは常に Windows のアプリケーション ログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 メンバーのみ、 **sysadmin**サーバーの役割は、このオプションを使用できます。  
   
 > [!NOTE]  
 >  Windows のアプリケーション ログにメッセージを書き込む場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラー ログ ファイルにも同じ内容が書き込まれます。  
   
  [ **@replace** *=* ] **'***置換***'**  
- 文字列として指定されている場合*置換*、既存のエラー メッセージが新しいメッセージ テキストと重大度レベルで上書きされます。 *置き換える*は**varchar (7)** 既定値は NULL です。 場合、このオプションを指定する必要があります*msg_id*既に存在します。 英語版のすべてのメッセージが同じであるその他のすべての言語の英語版のメッセージの重大度レベルが置き換えられます*msg_id*です。  
+ 文字列として指定されている場合*置換*、既存のエラー メッセージが新しいメッセージ テキストと重大度レベルで上書きされます。 *置換*は**varchar (7)** 既定値は NULL です。 場合、このオプションを指定する必要があります*msg_id*既に存在します。 英語版のすべてのメッセージが同じであるその他のすべての言語の英語版のメッセージ重大度レベルが置き換えられます*msg_id*します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -74,7 +70,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  英語以外のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、米国 の英語以外のバージョンで、別の言語を使用してメッセージを追加するには、あらかじめ英語版のメッセージが存在している必要があります。 2 つのバージョンのメッセージの重大度は同じであることが必要です。  
   
  パラメーターが含まれたメッセージをローカライズする場合は、元のメッセージのパラメーターに相当するパラメーター番号を使用します。 各パラメーター番号の後に感嘆符 (!) を挿入します。  
@@ -85,13 +81,13 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
  言語の構文に相違があるため、ローカライズされたメッセージのパラメーター番号は、元のメッセージと同じ順に出現しないことがあります。  
   
-## <a name="permissions"></a>権限  
-メンバーシップが必要、 **sysadmin**または**serveradmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+メンバーシップが必要です、 **sysadmin**または**serveradmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-defining-a-custom-message"></a>A. カスタム メッセージを定義する  
- 次の例では、カスタム メッセージを**sys.messages**です。  
+ 次の例では、カスタム メッセージを**sys.messages**します。  
   
 ```  
 USE master;  

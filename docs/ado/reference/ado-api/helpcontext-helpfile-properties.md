@@ -1,13 +1,11 @@
 ---
-title: HelpContext、HelpFile プロパティ |Microsoft ドキュメント
+title: HelpContext、HelpFile プロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -21,35 +19,34 @@ helpviewer_keywords:
 - HelpContext property [ADO]
 - HelpFile property [ADO]
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 708ce57e129ed84dcbafa837916c299a76739e0d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 059bb0e945875d36582d08f8018bad485475639d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278911"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704940"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile プロパティ
-ヘルプ ファイルとに関連付けられているトピックを示します、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。  
+ヘルプ ファイルと関連付けられているトピックを示します、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。  
   
 ## <a name="return-values"></a>戻り値  
   
--   **ヘルプ コンテキスト Id**として、コンテキスト ID を返します、**長い**ヘルプ ファイルのトピックの値。  
+-   **ヘルプ コンテキスト Id**として、コンテキスト ID を返します、**長い**トピックでは、ヘルプ ファイル内の値。  
   
--   **HelpFile**を返します、**文字列**ヘルプ ファイルを完全に解決されたパスに評価される値。  
+-   **HelpFile**返します、**文字列**ヘルプ ファイルへの完全に解決されたパスに評価される値。  
   
 ## <a name="remarks"></a>コメント  
- ヘルプ ファイルが指定されている場合、 **HelpFile** 、プロパティ、 **HelpContext**プロパティの使用に自動的に識別するヘルプ トピックを表示します。 使用可能な関連するヘルプ トピックがない場合、 **HelpContext**プロパティは 0 を返しますと**HelpFile**プロパティが長さ 0 の文字列を返します ("") です。  
+ ヘルプ ファイルがで指定されている場合、 **HelpFile**プロパティ、 **HelpContext**プロパティが自動的に識別するヘルプ トピックを表示するために使用します。 使用可能な関連するヘルプ トピックがない場合、 **HelpContext**プロパティは 0 を返します、 **HelpFile**プロパティは、長さ 0 の文字列を返します ("")。  
   
 ## <a name="applies-to"></a>適用対象  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>参照  
- [説明、HelpContext、HelpFile、以下、数、ソース、および SQLState のプロパティの例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [説明、HelpContext、HelpFile、以下、数、ソース、および SQLState のプロパティの例 (vc++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description、HelpContext、HelpFile、NativeError、数、ソース、および SQLState プロパティの例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description、HelpContext、HelpFile、NativeError、数、ソース、および SQLState プロパティの例 (vc++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Description プロパティ](../../../ado/reference/ado-api/description-property.md)   
  [Number プロパティ (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source プロパティ (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)

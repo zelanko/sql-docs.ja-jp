@@ -1,13 +1,11 @@
 ---
-title: Visual C でのエラー処理 |Microsoft ドキュメント
+title: Visual C でのエラー処理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - errors [ADO], Visual C++
 - Visual C++ error handling [ADO]
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68ce5fb8cc94b130de5171a45b65743e86eec3da
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e33d28201e1a2e4f7df8ac330ac89b3f00194b14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271691"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630670"
 ---
-# <a name="handling-errors-in-visual-c"></a>Visual C でのエラーを処理
-COM では、ほとんどの操作は、関数が正常に完了したかどうかを示す HRESULT のリターン コードを返します。 #Import ディレクティブでは、各「生の」メソッドまたはプロパティの周囲にラッパー コードを生成し、返された HRESULT を確認します。 HRESULT エラーを示している場合、ラッパー コードは、引数として HRESULT のリターン コードの呼び出し元の _com_issue_errorex() によって COM エラーをスローします。 COM エラー オブジェクトをキャッチすることができます、 **try catch**ブロックします。 (効率性のためは、_com_error オブジェクトへの参照をキャッチします)。  
+# <a name="handling-errors-in-visual-c"></a>Visual C++ でエラーを処理する
+COM では、ほとんどの操作は、関数が正常に完了したかどうかを示す HRESULT のリターン コードを返します。 #Import ディレクティブでは、各「生」のメソッドまたはプロパティをラッパー コードを生成し、返された HRESULT を確認します。 場合は、HRESULT が障害を示してラッパー コードは、引数として HRESULT のリターン コードで呼び出し元の _com_issue_errorex() によって COM エラーをスローします。 COM エラー オブジェクトをキャッチ、 **try catch**ブロックします。 (効率性のためは、_com_error オブジェクトへの参照をキャッチします)。  
   
- ただし、これらは、ADO エラー: ADO 操作の失敗に起因します。 基になるプロバイダーから返されたエラーとして表示されます**エラー**内のオブジェクト、**接続**オブジェクトの**エラー**コレクション。  
+ ただし、これらは、ADO エラー: ADO 操作の失敗による結果です。 基になるプロバイダーから返されるエラーの表示として**エラー**内のオブジェクト、**接続**オブジェクトの**エラー**コレクション。  
   
- #Import ディレクティブでは、エラー処理ルーチンで、ADO .dll で宣言されたプロパティとメソッドのみを作成します。 ただし、独自のエラー チェック マクロまたはインライン関数を記述するこれと同じエラー処理メカニズムを活用を行うことができます。 例については、C++® Extensions トピックを参照してください。
+ #Import ディレクティブは、メソッド、および ado で宣言されたプロパティのエラー処理ルーチンを作成するだけです。 ただし、独自のエラー チェック マクロまたはインライン関数を記述することで、この同じエラー処理機構の利点を実行できます。 例についてはトピック C++® の拡張機能を参照してください。

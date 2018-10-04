@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327842"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063012"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>レッスン 4: Windows Azure ストレージにデータベースを作成する
   このレッスンでは、Windows Azure 機能で SQL Server データ ファイルを使用してデータベースを作成する方法を学びます。 このレッスンの前に、レッスン 1、2、および 3 を完了する必要があることに注意してください。 レッスン 3 は非常に重要な手順です。レッスン 4 の前に、SQL Server の資格情報ストアに、Windows Azure ストレージ コンテナーと関連するポリシー名、および SAS キーに関する情報を格納する必要があるためです。  

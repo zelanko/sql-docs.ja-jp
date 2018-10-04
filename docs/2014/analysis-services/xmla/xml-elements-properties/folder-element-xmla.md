@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Folder Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Folder element
 ms.assetid: 87b305b0-57e3-4ec3-9d80-f1bcf3ce7540
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9bc961679619f15211689b4f118f511edbadac8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70c5258edefa19d2858c40648aa742f75a9a1e49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283918"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055131"
 ---
 # <a name="folder-element-xmla"></a>Folder 要素 (XMLA)
   更新がファイル システム ストレージの場所が含まれています、[場所](location-element-xmla.md)中に要素を[復元](../xml-elements-commands/restore-element-xmla.md)または[同期](../xml-elements-commands/synchronize-element-xmla.md)コマンド。  

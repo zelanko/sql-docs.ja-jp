@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
-caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d9919d2d74bfa0fe26ca7f7ad915dd808f29382
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048634"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>[オプション] ([テキスト エディター]/[すべての言語]/[全般] ページ)
   このダイアログ ボックスを使用すると、全部で 5 つある [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のすべてのエディターの全般的な編集オプションを設定できます。 これらのオプションを表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[テキスト エディター]** フォルダーを選択し、**[すべての言語]** フォルダーを展開して、**[全般]** をクリックします。  

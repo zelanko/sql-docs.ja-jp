@@ -1,13 +1,11 @@
 ---
-title: ADCPROP_ASYNCTHREADPRIORITY_ENUM |Microsoft ドキュメント
+title: ADCPROP_ASYNCTHREADPRIORITY_ENUM |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_ASYNCTHREADPRIORITY_ENUM [ADO]
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7857e3b176191ba5b9c98a40c7f02abe666edec8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c0b9d4e0e6f844ef2dda18e95aadfcf3b910995d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275231"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824650"
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-RDS の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、データを取得する非同期スレッドの実行の優先順位を指定します。  
+RDS の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、データを取得する非同期のスレッドの実行の優先順位を指定します。  
   
- これらの定数を使用して、 **Recordset** "**バック グラウンド スレッドの優先順位**"動的なプロパティを ADO、OLE DB プロパティの動的インデックス内で参照されに記載されていますが、 [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)ドキュメント。  
+ これらの定数を使用して、**レコード セット**"**バック グラウンド スレッド優先順位**"動的プロパティを ADO、OLE DB の動的プロパティのインデックスで参照されていると記載されて、 [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)ドキュメント。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adPriorityAboveNormal**|4|標準と最高の優先順位を設定します。|  
-|**adPriorityBelowNormal**|2|最下位と通常の優先順位を設定します。|  
-|**adPriorityHighest**|5|可能な最高レベルを優先順位を設定します。|  
-|**AdPriorityLowest**|1|最下位に優先順位を設定します。|  
+|**adPriorityAboveNormal**|4|通常と最高の優先順位を設定します。|  
+|**adPriorityBelowNormal**|2|最も低いと通常の優先順位を設定します。|  
+|**adPriorityHighest**|5|指定できる最大の優先順位を設定します。|  
+|**AdPriorityLowest**|1|最下位の優先順位を設定します。|  
 |**adPriorityNormal**|3|優先度を normal に設定します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

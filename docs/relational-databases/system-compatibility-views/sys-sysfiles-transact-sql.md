@@ -1,14 +1,11 @@
 ---
-title: sys.sysfiles (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sysfiles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysfiles
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysfiles system table
 - sys.sysfiles compatibility view
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
-caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 74db81ffa2764f3243a80b504df84b9f6ffd6ec5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c2c139a914b511ab7ee80a0fdd180bab5654205a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220853"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721506"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +36,14 @@ ms.locfileid: "33220853"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**fileid**|**smallint**|各データベースで一意なファイル ID 番号です。|  
 |**groupid**|**smallint**|ファイル グループの識別番号です。|  
 |**size**|**int**|ファイルのサイズ (8 KB ページ単位) です。|  
-|**maxsize**|**int**|最大ファイル サイズ (8 KB ページ単位) です。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログ ファイルが最大 2 TB まで拡張することを表します。<br /><br /> 注: が無制限のログ ファイル サイズとアップグレードされたデータベースは、ログ ファイルの最大サイズに達すると-1 に報告されます。|  
-|**growth**|**int**|データベース サイズの増分値です。 ページ数またはの値に応じて、ファイル サイズのパーセンテージのいずれかを指定できます**ステータス**です。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。|  
-|**ステータス**|**int**|ステータス ビットです、**成長**メガバイト (MB) またはキロバイト (KB) のいずれかの値。<br /><br /> 0x2 = ディスク ファイル。<br /><br /> 0x40 = ログ ファイル。<br /><br /> 0x100000 = 拡張。 この値は、パーセンテージであり、ページ数ではありません。|  
+|**maxsize**|**int**|最大ファイル サイズ (8 KB ページ単位) です。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログ ファイルが最大 2 TB まで拡張することを表します。<br /><br /> 注: 無制限のログ ファイルのサイズにアップグレードしたデータベースは、ログ ファイルの最大サイズに達すると-1 に報告されます。|  
+|**growth**|**int**|データベース サイズの増分値です。 いずれかのページ数またはの値に応じて、ファイル サイズの割合を指定できます**状態**します。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。|  
+|**status**|**int**|ステータス ビットです、**成長**メガバイト (MB) またはキロバイト (KB) のいずれかの値。<br /><br /> 0x2 = ディスク ファイル。<br /><br /> 0x40 = ログ ファイル。<br /><br /> 0x100000 = 拡張。 この値は、パーセンテージであり、ページ数ではありません。|  
 |**perf**|**int**|予約されています。|  
 |**name**|**sysname**|ファイルの論理名です。|  
 |**filename**|**nvarchar(260)**|物理デバイスの名前です。 ファイルの完全なパスが含まれます。|  

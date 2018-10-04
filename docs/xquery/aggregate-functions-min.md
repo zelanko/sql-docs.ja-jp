@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:min function
 - min function [XQuery]
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8e5ce4f5ac16b337db62633d8b0a72ca98c708a5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c52144d2cef297109c3c8aef1751690edf723cf9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792476"
 ---
 # <a name="aggregate-functions---min"></a>集計関数 - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

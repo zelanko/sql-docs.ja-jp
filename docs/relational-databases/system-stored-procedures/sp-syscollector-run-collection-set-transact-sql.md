@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_run_collection_set (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_syscollector_run_collection_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_run_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_run_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 599cc4a9f8603b8248c7241cbb2ba68055e6fb55
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 706a10db6bc16deb34a428444b2918c5c1ff6b37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33260165"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716780"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +57,14 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- いずれか*collection_set_id*または*名前*必要があります値を持つ、どちらも NULL をすることはできません。  
+ いずれか*collection_set_id*または*名前*する必要があります値を持つ、どちらも NULL をすることはできません。  
   
- この手順は、コレクションを開始し、アップロード ジョブを指定されたコレクション セットおよびコレクション セットがある場合に、コレクション エージェント ジョブをすぐに開始されます、 **@collection_mode**非キャッシュ (1) に設定します。 詳細については、「 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)です。  
+ この手順は、コレクションを開始し、アップロード ジョブが、指定されたコレクションが設定され、コレクション セットがある場合、コレクション エージェント ジョブはすぐに開始、 **@collection_mode**非キャッシュ (1) に設定します。 詳細については、「 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)します。  
   
  sp_sycollector_run_collection_set は、スケジュールを持たないコレクション セットの実行にも使用できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要、 **dc_operator** (EXECUTE 権限) を持つ固定データベース ロールにこのプロシージャを実行します。  
+ メンバーシップが必要です、 **dc_operator** (EXECUTE 権限) を持つ固定データベース ロールにこのプロシージャを実行します。  
   
 ## <a name="example"></a>例  
  対応する ID を使ってコレクション セットを開始します。  

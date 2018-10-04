@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5765bc458f69fef3dc746bc1970c6555f7888b96
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: fadb1ba3a38c8379417ad04581adaec956e4ecd3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396559"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670320"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) への接続します。
 使用して、 **SQL サーバーへの接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行したいです。 アクセスする、 **SQL サーバーへの接続** ダイアログ ボックスで、**ファイル** メニューのをクリックして**SQL サーバーへの接続**します。  

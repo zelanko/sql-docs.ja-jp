@@ -1,10 +1,8 @@
 ---
-title: ADO 履歴 |Microsoft ドキュメント
+title: ADO 履歴 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,63 +10,62 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55a51c23b60f057d3aaf19270b9e814ea40dfce9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271461"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709560"
 ---
-# <a name="ado-features-for-each-release"></a>ADO の各リリースの機能
-このトピックでは、ADO、ADO MD および ADOX の各リリースで導入された新機能を示します。
+# <a name="ado-features-for-each-release"></a>各リリースの ADO の機能
+このトピックでは、ADO、ADO MD、および ADOX の各リリースで導入された新機能を使用します。
 
 ## <a name="ado-60"></a>ADO 6.0
- ADO 6.0 は Windows vista、Windows Data Access Components (Windows DAC) 6.0 の一部として含まれています。 ADO 6.0 は、ADO 2.8 に相当する機能。
+ ADO 6.0 は Windows Vista、Windows Data Access Components (Windows DAC) 6.0 の一部として含まれます。 ADO 6.0 は、ADO 2.8 に相当する機能。
 
 ## <a name="ado-28"></a>ADO 2.8
- ADO 2.8 は、Windows XP および Windows Server 2003 では、一部の Microsoft Data Access Components (MDAC) 2.8 として含まれています。 MDAC 2.8 の再頒布可能パッケージのバージョンも利用できます。Windows 2000 のみにこの再頒布可能パッケージのバージョンをインストールすることに注意してください。 ADO 2.8 は、いくつかのセキュリティ関連の懸案事項を説明します。
+ ADO 2.8 は、Windows XP および Windows Server 2003 では、一部の Microsoft Data Access Components (MDAC) 2.8 として含まれていました。 MDAC 2.8 の再頒布可能パッケージのバージョンも使用します。Windows 2000 のみにこの再頒布可能パッケージのバージョンをインストールすることに注意してください。 ADO 2.8 は、いくつかのセキュリティ関連の問題を説明します。
 
- *信頼済みゾーンの外部ハード ドライブへのアクセスが許可されていません。*
-ドメイン間スクリプト信頼されていないサイトが関係する、次の操作は無効になっています: **Stream.SaveToFile**、 **Stream.LoadFromFile**、 **Recordset.Save**、および**Recordset.Open**、と共に使用される、 **adCmdFile**フラグ、または、Microsoft OLE DB 永続化プロバイダー (MSPersist)。
+ *信頼済みゾーン外は、ハード ドライブへのアクセスが許可されていません。*
+クロス ドメインの信頼関係の低いサイトの関連するスクリプトは、次の操作が無効になります: **Stream.SaveToFile**、 **Stream.LoadFromFile**、 **Recordset.Save**と**Recordset.Open**と組み合わせて使用される、 **adCmdFile**フラグまたは、Microsoft OLE DB 永続化プロバイダーが (MSPersist)。
 
- **Recordset.Open** *、***Recordset.Save** *、***Stream.SaveToFile** *、および***Stream.LoadFromFile***物理ファイルのみで動作します。*
-これらのメソッドでは、ファイル ハンドルが物理ファイルのみを指しているようになりましたことを確認します。
+ **Recordset.Open** *、***Recordset.Save** *、***Stream.SaveToFile** *、および***Stream.LoadFromFile***物理ファイルのみで動作します。* 
+これらのメソッドは、ファイル ハンドルが指す物理ファイルのみを検証するようになりました。
 
- **Recordset.ActiveCommand***HTML/ASP ページから呼び出されたときにエラーが返されます。*
+ **Recordset.ActiveCommand***HTML/ASP ページから呼び出されたときにエラーが返されます。* 
 これにより、**コマンド**誤用されるオブジェクト。
 
- *数***レコード セット***、入れ子になったによって返される***図形***コマンドには上限値です。*
-入れ子になった shape コマンドは 512 の最大値を返すようになりました**レコード セット**です。 つまり、**図形**コマンドは、任意の深さでネスト不要になったことができます。 代わりに、最大レベルの深さは、512、各コマンドを実行する 1 つ (子) の場合**Recordset**です。 任意のレベルでは、場合、**図形**コマンドが複数返されます**レコード セット**、最大の深さのレベルは 512 未満になります。
+ *数***レコード セット***、入れ子になったによって返される***図形***コマンドには上限が設けられています。* 
+入れ子になった shape コマンドは 512 の最大値を返すようになりました**レコード セット**します。 つまり、**図形**コマンドは、任意の深さでネスト不要になったことができます。 最大レベルの深さは、512 文字です代わりに、各コマンドを実行する 1 つ (子) の場合**Recordset**します。 任意のレベルでは、場合、**図形**コマンドが複数返されます**レコード セット**レベルの深さの上限は 512 未満になります。
 
 ## <a name="ado-27"></a>ADO 2.7
- *64 ビット プラットフォームのサポート*ADO 2.7 64 ビット プロセッサのサポートが導入されています。
+ *64 ビット プラットフォーム サポート*ADO 2.7 には 64 ビット プロセッサのサポートが導入されています。
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)です。 親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)です。
+ **CubDef.GetSchemaObject***メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)します。   親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)します。
 
- *コマンド ストリーム*、**コマンド**オブジェクトでは、ストリームの形式でコマンドをサポートを使用する代わりに、 **CommandText**プロパティです。 [CommandStream プロパティ (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) XML テンプレートまたはアップデート グラムとしてを指定するために使用する、**コマンド**for SQL Server、Microsoft OLE DB プロバイダーで入力します。
+ *コマンド ストリーム*、**コマンド**オブジェクト ストリーム形式でのコマンドのサポートを使用する代わりに、 **CommandText**プロパティ。 [CommandStream プロパティ (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) XML テンプレートまたはとしてアップデート グラムを指定するために使用できる、**コマンド**for SQL Server、Microsoft OLE DB プロバイダーで入力します。
 
- **Dialect***プロパティ* [Dialect](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的な規則を文字列またはストリームを解析するプロバイダーを使用することです。
+ **言語***プロパティ*[言語](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的なルールを文字列またはストリームを解析するプロバイダーを使用することです。  
 
- **Command.Execute***メソッド*、[メソッドを実行する](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド**入力と出力にストリームを使用するオブジェクトが強化されました。
+ **Command.Execute***メソッド*、[メソッドの実行](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド**オブジェクトは入力と出力のストリームを使用して強化されています。  
 
- *フィールド statusvalues*ユーザーを変更する場合、DB_E_ERRORSOCCURRED エラーが発生した場合、**フィールド**の**Recordset**、ADO に収まるようになりました、 **Field.Status**プロパティを適切なステータス情報を使用できるように、ユーザーの詳細については、どのような問題が発生しました。 参照してください[Status プロパティ (ADO フィールド)](../../ado/reference/ado-api/status-property-ado-field.md)です。
+ *フィールド statusvalues*を変更する場合、ユーザーは DB_E_ERRORSOCCURRED エラーが発生した場合、**フィールド**の**レコード セット**、ADO に収まるようになりました、 **Field.Status**プロパティを適切な状態情報、ユーザーには、問題点の詳細についてがあるできるようにします。 参照してください[Status プロパティ (ADO Field)](../../ado/reference/ado-api/status-property-ado-field.md)します。
 
- **NamedParameters***プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティ、**コマンド**という名前のオブジェクトを示す、プロバイダーを使用する必要がありますパラメーター。
+ **NamedParameters***プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティである、**コマンド**という名前のプロバイダーを使用することを示すオブジェクトパラメーター。  
 
- *ストリームの結果セット*ADO は、データ ソースからの結果セットを返すことができます、**ストリーム**ではなく、 **Recordset**オブジェクト。 Microsoft OLE DB プロバイダーの最新バージョンを使用して、SQL Server 用、する XML 結果が得られますプロバイダーから"の XML"クエリを実行します。 A**ストリーム**結果セットを受け取る、ソースとして"XML の"コマンドを使用して開くことができます。 参照してください[ストリームに結果セットを取得する](../../ado/guide/data/retrieving-resultsets-into-streams.md)です。
+ *ストリームの結果セット*ADO は、データ ソースから結果セットを返すことができます、 **Stream**、なく**レコード セット**オブジェクト。 Microsoft OLE DB Provider の最新バージョンの SQL Server を使用して取得できます XML の結果、プロバイダーから"XML の"クエリを実行しています。 A **Stream**結果セットを受け取る、ソースとして"XML の"コマンドを使用して開くことができます。 参照してください[をストリームに結果セットを取得する](../../ado/guide/data/retrieving-resultsets-into-streams.md)します。
 
- *1 つの行の結果セット*、ADO**レコード**オブジェクト開くことができるコマンド文字列にまたは**コマンド**プロバイダーからの 1 行のデータを表すオブジェクト。 これにより、MDAC 2.6 プロバイダーによるパフォーマンスの向上。 参照してください[メソッド (ADO レコード) を開く](../../ado/reference/ado-api/open-method-ado-record.md)です。
+ *1 つの行の結果セット*、ADO**レコード**オブジェクトは、コマンド文字列では開くようになりましたまたは**コマンド**オブジェクトをプロバイダーからのデータの 1 つの行を返します。 これにより、MDAC 2.6 プロバイダーを使用したパフォーマンスの向上。 参照してください[Open メソッド (ADO Record)](../../ado/reference/ado-api/open-method-ado-record.md)します。
 
 ## <a name="ado-25"></a>ADO 2.5
- **レコード***オブジェクト*ADO 2.5 が導入されています、**レコード**表示してから行を管理するオブジェクト、**レコード セット**またはデータ プロバイダー、またはオブジェクトのカプセル化します。ファイルやディレクトリなど、半構造化データです。
+ **レコード***オブジェクト*ADO 2.5 が導入されています、**レコード**表示してから行を管理するオブジェクト、**レコード セット**またはデータ プロバイダー、またはオブジェクトのカプセル化します。ファイルやディレクトリなどの半構造化データ。
 
- **ストリーム***オブジェクト*ADO 2.5 にも導入されています、**ストリーム**バイナリまたはテキスト データのストリームを表すオブジェクト。
+ **Stream** *オブジェクト*ADO 2.5 も導入されています。、 **Stream**バイナリまたはテキスト データのストリームを表すオブジェクト。
 
- *URL バインディング*ADO 2.5 がデータ ストア オブジェクトの名前に、接続文字列とコマンド テキストの代わりとして、URL の使用方法を紹介します。 既存の URL を使用できます**接続**と**レコード セット**、オブジェクトに新しいとして**レコード**と**ストリーム**オブジェクト。
+ *URL バインディング*ADO 2.5 は、データ ストア オブジェクトの名前、接続文字列とコマンド テキストの代替として、URL の使用方法を紹介します。 既存の URL を使用できます**接続**と**レコード セット**、オブジェクトとして新しい**レコード**と**Stream**オブジェクト。
 
- *URL のバインディングをサポートするデータ プロバイダー* ADO 2.5 に URL スキームを認識する OLE DB プロバイダーがサポートされています。 これには、Windows 2000 のファイル システムにアクセスし、既存の HTTP スキームを認識する Internet Publishing の OLE DB プロバイダーが含まれます。
+ *データ プロバイダーの URL バインディングをサポートしている*ADO 2.5 には、URL スキームを認識する OLE DB プロバイダーがサポートされています。 これには、for Windows 2000 のファイル システムにアクセスし、既存の HTTP スキームを認識する Internet Publishing、OLE DB プロバイダーが含まれます。

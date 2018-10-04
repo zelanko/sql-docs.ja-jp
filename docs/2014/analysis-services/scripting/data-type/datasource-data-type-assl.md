@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSource Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DataSource data type
 ms.assetid: 05e8de8d-452d-4128-98a6-4437df227fec
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b498ddc2dcfb4ef2a93d1da98401b4e0c57bdfa7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0eecebc417a1ddf33f00cdaf5977ca8d3297aca7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069362"
 ---
 # <a name="datasource-data-type-assl"></a>DataSource データ型 (ASSL)
   内のデータ ソースを表す抽象プリミティブ データ型を定義、[データベース](../objects/database-element-assl.md)要素。  

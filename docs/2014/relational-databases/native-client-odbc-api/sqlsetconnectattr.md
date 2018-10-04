@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 105
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070589"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、SQL_ATTR_CONNECTION_TIMEOUT の設定が無視されます。  
@@ -170,7 +167,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  この属性を使用して接続を確立するには後からアプリケーションに照会できます[SQLGetConnectAttr](sqlgetconnectattr.md)フェールオーバー パートナーの id を確認します。 プライマリ サーバーのフェールオーバー パートナーが存在しないと、この属性は空文字列を返します。 アプリケーションでは最後に判別したバックアップ サーバーをキャッシュできますが、この情報は最初に接続を確立したとき、または接続がリセットされたとき (接続がプールされている場合) にだけ更新されることに注意する必要があります。接続が長期にわたると、この情報は古くなることがあります。  
   
- 詳細については、次を参照してください。 [Using Database Mirroring](../native-client/features/using-database-mirroring.md)します。  
+ 詳細については、「[データベース ミラーリングの使用](../native-client/features/using-database-mirroring.md)」を参照してください。  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY 属性は、サーバー ログインでアクセス違反を検出するために Windows 認証を使用することを強制します。 Windows 認証を使用すると、ドライバーがの一部として提供されるユーザー id とパスワードの値を無視**SQLConnect**、 [SQLDriverConnect](sqldriverconnect.md)、または[SQLBrowseConnect](sqlbrowseconnect.md)処理します。  

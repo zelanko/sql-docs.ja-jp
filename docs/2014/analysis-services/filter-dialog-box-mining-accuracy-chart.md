@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272608"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060178"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>[フィルター] ダイアログ ボックス (マイニング精度チャート)
   **[フィルター]** ダイアログ ボックスを使用すると、データセットに適用できる条件を作成できます。 データセットとして、テスト用の外部データセット、またはマイニング モデルのトレーニング用のケース データを使用できます。 このダイアログ ボックスで作成する条件は、 **[データセット フィルター]** ダイアログ ボックスまたは **[モデル フィルター]** ダイアログ ボックスで複雑なフィルター条件の一部として保存できます。  

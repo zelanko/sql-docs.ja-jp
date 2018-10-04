@@ -1,32 +1,29 @@
 ---
-title: 属性のプロパティの例 (VB) |Microsoft ドキュメント
+title: 属性のプロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa6c125a1d3e720647d06e7a33689e0c5e883946
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 010093a600b5432ae7ff7454cacba914d5bb8442
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285381"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789310"
 ---
-# <a name="attributes-property-example-vb"></a>属性プロパティの例 (VB)
-この例で、[属性](../../../ado/reference/adox-api/attributes-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)です。 設定すると**adColNullable**の値を設定することができます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [フィールド](../../../ado/reference/ado-api/field-object.md)に空の文字列。 このような状況では、ユーザーはデータが不明なレコードと、データが当てはまりませんレコード間区別できます。  
+# <a name="attributes-property-example-vb"></a>Attributes プロパティの例 (VB)
+この例では、[属性](../../../ado/reference/adox-api/attributes-property-adox.md)のプロパティを[列](../../../ado/reference/adox-api/column-object-adox.md)します。 設定すると**adColNullable**ユーザーの値を設定できるように、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)[フィールド](../../../ado/reference/ado-api/field-object.md)に空の文字列。 このような状況で、ユーザーは、データがないとわかっているレコードと、データが当てはまりませんレコード間で区別できます。  
   
 ```  
 ' BeginAttributesVB  
@@ -130,6 +127,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [属性プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
+ [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

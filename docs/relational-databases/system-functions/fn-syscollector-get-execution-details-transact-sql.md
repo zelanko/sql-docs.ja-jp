@@ -1,14 +1,11 @@
 ---
-title: fn_syscollector_get_execution_details (TRANSACT-SQL) |Microsoft ドキュメント
+title: fn_syscollector_get_execution_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4336b2bd20dbfb49996f6eb4edd5826533215b89
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 032b424c0ac7706962d17520b47d6b8ec447a536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230103"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845162"
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +41,11 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="arguments"></a>引数  
  *log_id*  
- 実行ログの一意なローカル識別子を指定します。 *log_id*は**int**です。  
+ 実行ログの一意なローカル識別子を指定します。 *log_id*は**int**します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |id|**int**|ログ エントリの一意識別子。|  
 |イベント|**sysname**|ログ エントリを生成したイベントの名前。|  
@@ -64,11 +60,11 @@ fn_syscollector_get_execution_details ( log_id )
 |databytes|**image**|戻り値を識別するバイト配列。|  
 |message|**nvarchar**|イベントおよびイベントに関連する情報の説明。|  
   
-## <a name="permissions"></a>権限  
- に対する SELECT 権限が必要です**dc_operator**です。  
+## <a name="permissions"></a>アクセス許可  
+ に対する SELECT 権限が必要です**dc_operator**します。  
   
 ## <a name="see-also"></a>参照  
- [パッケージで SQL Server データ ツールのログ記録を有効にします。](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)  
+ [パッケージの SQL Server データ ツールにログ記録を有効にします。](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

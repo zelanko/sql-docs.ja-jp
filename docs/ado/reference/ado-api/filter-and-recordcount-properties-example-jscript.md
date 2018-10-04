@@ -1,13 +1,11 @@
 ---
-title: フィルターおよび RecordCount のプロパティの例 (JScript) |Microsoft ドキュメント
+title: Filter および RecordCount プロパティの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 656c981dd242ad7f11768aac0bb79c7214845c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278611"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623980"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>フィルターおよび RecordCount のプロパティの例 (JScript)
-この例を開いて、**レコード セット**Northwind データベースおよび、使用の企業の表に、[フィルター](../../../ado/reference/ado-api/filter-property.md)られた CompanyName フィールドから始まり、文字表示されているレコードを制限するプロパティD. 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**貼り付けて filterjs.asp という名前**です。  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter および RecordCount プロパティの例 (JScript)
+この例を開いて、**レコード セット**Northwind データベースおよび、使用の企業のテーブルで、[フィルター](../../../ado/reference/ado-api/filter-property.md) CompanyName フィールドが文字で始まるこれらの場所に表示されているレコードを制限するプロパティD. 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**貼り付けて filterjs.asp という名前**します。  
   
 ```  
 <!-- BeginFilterJS -->  

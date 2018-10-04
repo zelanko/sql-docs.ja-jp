@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetInstanceInfo 関数 |Microsoft ドキュメント
+title: LocalDBGetInstanceInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetInstanceInfo
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5bb8e123f084b20fb16e3fd4e0e52bd482a2760b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 239dfd78fd2f1ce4721953c53efeb47cb29da4cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740336"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +97,7 @@ HRESULT LocalDBGetInstanceInfo(
  *dwInstanceInfoSize*  
  [入力]サイズを保持する、 *InstanceInfo*バッファー。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  S_OK  
  関数が正常に実行されました。  
   
@@ -133,11 +129,11 @@ HRESULT LocalDBGetInstanceInfo(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="details"></a>詳細  
- 導入根拠、**構造体**サイズ引数 (*lpInstanceInfoSize*) を返す別のバージョンの API を有効にするのには、 **LocalDBInstanceInfostruct**、効果的に上位および下位互換性を有効にします。  
+ 概要の背後にある"the rationale"、**構造体**サイズ引数 (*lpInstanceInfoSize*) を返す別のバージョンの API を有効にするのには、 **LocalDBInstanceInfostruct**実質的に、上位および下位互換性を有効にします。  
   
- 場合、**構造体**サイズ引数 (*lpInstanceInfoSize*) の既知のバージョンのサイズと一致する、 **LocalDBInstanceInfostruct**、そのバージョンの**構造体**が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
+ 場合、**構造体**サイズ引数 (*lpInstanceInfoSize*) の既知のバージョンのサイズに合った、 **LocalDBInstanceInfostruct**、そのバージョンの**構造体**が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
   
- 典型的な例**LocalDBGetInstanceInfo** API の使用率が次のように検索します。  
+ 典型的な例**LocalDBGetInstanceInfo**次のような API の使用量。  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -145,7 +141,7 @@ LocalDBInstanceInfo(L”Test”, &ii, sizeof(LocalDBInstanceInfo));
   
 ```  
   
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

@@ -1,31 +1,28 @@
 ---
-title: レコードにジャンプ |Microsoft ドキュメント
+title: レコードへのジャンプ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - record jumping [ADO]
 - jumping to record [ADO]
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4da5573ef2f96947f9d8660d8d3461df879398e4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7185dca3db146e7c17f41cb0f0c5376274fe3634
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747870"
 ---
-# <a name="jumping-to-a-record"></a>レコードにジャンプします。
-[移動](../../../ado/reference/ado-api/move-method-ado.md)メソッドでは、前方または後方に移動することができます、**レコード セット**次の構文を使用して、レコード数を指定します。  
+# <a name="jumping-to-a-record"></a>レコードへのジャンプ
+[移動](../../../ado/reference/ado-api/move-method-ado.md)メソッドでは、前方または後方に移動することができます、**レコード セット**次の構文を使用してレコード数を指定します。  
   
 ```  
 oRs.Move NumRecords, Start  
@@ -34,14 +31,14 @@ oRs.Move NumRecords, Start
 ## <a name="remarks"></a>コメント  
  **移動**メソッドがすべてでサポートされている**Recordset**オブジェクト。  
   
- 場合、 *NumRecords*引数は、0 より大きい値は、現在のレコードの位置を前方に移動 (の終了に向けて、 **Recordset**)。 場合*NumRecords*が現在のレコードの位置は後方に移動、0 より小さい (の先頭に向かって、 **Recordset**)。  
+ 場合、 *NumRecords*引数に 0 を超えると、現在のレコードの位置を前方に移動 (の終了に向けて、 **Recordset**)。 場合*NumRecords* 0、現在のレコードの位置は後方に移動します未満です (の先頭に向かって、 **Recordset**)。  
   
- 場合、**移動**呼び出しは先頭レコードの前に、のポイントに現在のレコードの位置を移動すると、現在のレコードの最初のレコードの前に、の位置を設定、 **Recordset** (**BOF**は**True**)。 旧バージョンとされる場合に移動しよう、 **BOF**プロパティが既に**True**でエラーが生成されます。  
+ 場合、**移動**呼び出しは最初のレコードの前に、現在のレコードの位置を移動するが、現在のレコードの最初のレコードの前に、の位置を設定、 **Recordset** (**BOF**は**True**)。 旧バージョンとのときに移動しよう、 **BOF**プロパティが既に**True**エラーが生成されます。  
   
- 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO は、後での最後のレコードの位置に、現在のレコードを設定、 **Recordset** (**EOF**は**True**)。 ときに前方に移動しよう、 **EOF**プロパティが既に**True**でエラーが生成されます。  
+ 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO は、最後のレコードの後の位置に、現在のレコードを設定、 **Recordset** (**EOF**は**True**)。 転送時に移動しよう、 **EOF**プロパティが既に**True**エラーが生成されます。  
   
- 呼び出す、**移動**メソッドは空の**Recordset**オブジェクト、エラーが発生します。  
+ 呼び出す、**移動**メソッド空から**レコード セット**オブジェクト、エラーが発生します。  
   
- 内のブックマークを渡した場合、*開始*引数は、このブックマーク レコードに対して相対的です。 移動と仮定した場合、**レコード セット**オブジェクトは、ブックマークをサポートしています。 使用して、ブックマークを取得、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティです。 指定しない場合、現在のレコード相対移動パスです。  
+ 内のブックマークを渡した場合、*開始*レコード、このブックマークを基準とした引数では、この移動と仮定すると、**レコード セット**オブジェクトは、ブックマークをサポートしています。 ブックマークを使用して取得されます、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティ。 指定しない場合、この移動は現在のレコードを基準とは。  
   
- 使用している場合、 **CacheSize**受け渡し、プロバイダーからのレコードをローカルにキャッシュするプロパティ、 *NumRecords*引数キャッシュされているレコードの現在のグループの外側、現在のレコードの位置を移動します。強制的にレコードを送信先レコードからの新しいグループを取得します。 **CacheSize**プロパティは、新たに取得したグループのサイズを決定し、送信先レコードは、最初のレコードを取得します。
+ 使用する場合、 **CacheSize**渡す、プロバイダーからのレコードをローカルにキャッシュするプロパティを*NumRecords*引数キャッシュされたレコードの現在のグループの外側、現在のレコードの位置を移動します。強制的に目的のレコードからレコードの新しいグループを取得します。 **CacheSize**プロパティは、新たに取得したグループのサイズを決定し、目的のレコードが最初のレコードを取得します。

@@ -1,13 +1,11 @@
 ---
-title: RecordOpenOptionsEnum |Microsoft ドキュメント
+title: RecordOpenOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0795d6eb942f10a97be1acda77954ae43fd4f2e4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ab648d7fe60a27d36e55cd3d859d0a8c442eef50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644814"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-開くのためのオプションを指定します、[レコード](../../../ado/reference/ado-api/record-object-ado.md)です。 使用してこれらの値を組み合わせることができますか。  
+開くのためのオプションを指定します、[レコード](../../../ado/reference/ado-api/record-object-ado.md)します。 使用して、これらの値を組み合わせることができますか。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adDelayFetchFields**|0x8000|フィールドが関連付けられているプロバイダーを示す、**レコード**最初に、取得する必要がありませんが、フィールドにアクセスする最初の試行に取得できます。 ない場合、このフラグで示される、既定の動作がすべて取得するには、**レコード**オブジェクトのフィールドです。|  
-|**adDelayFetchStream**|0x4000|既定のストリームが関連付けられているプロバイダーを示す、**レコード**最初に取得する必要がありません。 関連付けられている既定のストリームを取得することがない場合、このフラグで示される、既定の動作です、**レコード**オブジェクト。|  
+|**adDelayFetchFields**|0x8000|フィールドに関連付けられているプロバイダーに示します、**レコード**最初に、取得する必要がありませんが、フィールドにアクセスする最初の試行で取得できます。 ない場合、このフラグで示される、既定の動作がすべて取得するには、**レコード**フィールド オブジェクトします。|  
+|**adDelayFetchStream**|0x4000|既定のストリームに関連付けられているプロバイダーに示します、**レコード**最初に取得する必要がありません。 関連付けられている既定のストリームを取得するがない場合、このフラグで示された既定の動作は、**レコード**オブジェクト。|  
 |**adOpenAsync**|0x1000|示します、**レコード**オブジェクトは非同期モードで開きます。|  
-|**adOpenExecuteCommand**|0x10000|ソース文字列が実行されるコマンド テキストが含まれていることを示します。 この値は、 **adCmdText**オプションを**Recordset.Open**です。|  
+|**adOpenExecuteCommand**|0x10000|ソース文字列が実行されるコマンド テキストが含まれていることを示します。 この値は、 **adCmdText**オプション**Recordset.Open**します。|  
 |**adOpenRecordUnspecified**|-1|既定値です。 オプションが指定されていないことを示します。|  
-|**adOpenOutput**|0x800000|ソースが実行可能ファイルのスクリプトを含むノードを指している場合は、ことを示します (など、します。ASP ページの場合)、し、開かれている**レコード**実行されたスクリプトの結果にが含まれます。 この値は、コレクション以外のレコードを含む有効なのみです。|  
+|**adOpenOutput**|0x800000|ソースは、実行可能スクリプトを含むノードを指している場合は、ことを示します (など、します。ASP ページの場合)、開かれた**レコード**実行されたスクリプトの結果が含まれます。 この値はコレクションではないレコードのみです。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
- これらの定数には、対応する ADO/WFC はありません。  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
+ これらの定数には、ADO と WFC 対応はありません。  
   
 ## <a name="applies-to"></a>適用対象  
  [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)

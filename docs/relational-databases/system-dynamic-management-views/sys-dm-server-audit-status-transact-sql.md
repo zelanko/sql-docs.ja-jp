@@ -1,12 +1,10 @@
 ---
-title: sys.dm_server_audit_status (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_server_audit_status (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_audit_status_TSQL
@@ -18,37 +16,36 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4797a4e81a0fabd169111e979d661d17517ce3f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712512"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー監査ごとに 1 行を返し、監査の現在の状態を示します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|監査の ID。 マップ、 **audit_id**フィールドで、 **sys.audits**カタログ ビューです。|  
-|**name**|**sysname**|監査の名前です。 同じ、**名前**フィールドで、 **sys.server_audits**カタログ ビューです。|  
-|**ステータス**|**smallint**|サーバー監査の状態を表す数値。<br /><br /> 0 = 未開始<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      ランタイムの失敗<br /><br /> 3 = ターゲット作成失敗<br /><br /> 4 = シャット ダウンしています|  
+|**audit_id**|**int**|監査の ID。 マップ、 **audit_id**フィールドに、 **sys.audits**カタログ ビューです。|  
+|**name**|**sysname**|監査の名前。 同じ、**名前**フィールドに、 **sys.server_audits**カタログ ビューです。|  
+|**status**|**smallint**|サーバー監査の状態を表す数値。<br /><br /> 0 = 未開始状態<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      実行時の失敗<br /><br /> 3 = ターゲット作成失敗<br /><br /> 4 = シャット ダウンしています|  
 |**status_desc**|**nvarchar (256)**|サーバー監査の状態を表す文字列。<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|監査の状態が最後に変更された UTC のタイムスタンプ。|  
 |**event_session_address**|**varbinary(8)**|監査に関連付けられている拡張イベント セッションのアドレス。 関連する、 **sys.db_xe_sessions.address**カタログ ビューです。|  
 |**audit_file_path**|**nvarchar (256)**|現在使用されている監査ファイル ターゲットの完全なパスとファイル名。 ファイル監査にのみ設定されます。|  
 |**audit_file_size**|**bigint**|監査ファイルのおおよそのサイズ (バイト)。 ファイル監査にのみ設定されます。|  
   
-## <a name="permissions"></a>権限  
- プリンシパルがある必要があります**VIEW SERVER STATE**と**選択**アクセス許可。  
+## <a name="permissions"></a>アクセス許可  
+ プリンシパルが必要**VIEW SERVER STATE**と**選択**アクセス許可。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

@@ -1,15 +1,12 @@
 ---
-title: GeneralFlags プロパティ (ServerSettings クラス) |Microsoft ドキュメント
+title: GeneralFlags プロパティ (ServerSettings クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - GeneralFlags Property (ServerSettings Class)
@@ -19,15 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4620ca16824e33e38a82f8b671c40c7ad5d59df1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 054d17de46928a0e3b40a8741a1acf94711ade83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738680"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags プロパティ (ServerSettings クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +38,13 @@ object.GeneralFlags [= value]
 ```  
   
 ## <a name="parts"></a>要素  
- *オブジェクト*  
+ *object*  
  [のインスタンス上のサーバー設定を表す](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [のインスタンスに関連付けられた一般的なフラグを指定する](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) ServerSettingsGeneralFlag クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクトの配列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
  [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

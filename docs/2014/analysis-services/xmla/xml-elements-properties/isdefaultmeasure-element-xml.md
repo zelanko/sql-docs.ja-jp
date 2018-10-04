@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 523cf3d7-9df0-4f9d-8486-9109de8d3cca
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c89445c0e31187951b4b4a9f2bbd6f97733e9572
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 110acfb559b36e8bae77ca8860d59ca8963aaf87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058922"
 ---
 # <a name="isdefaultmeasure-element-xml"></a>IsDefaultMeasure 要素 (XML)
   このリレーションシップを他のテーブルまでナビゲートし、属性 DefaultMeasure を持っているメンバーをフェッチすることにより、このエンティティの既定のメジャーを取得できることを示します。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a17bdf5378fc0178651274eb2413deaccef4da90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe8e28d68ba516066d2124032133c9816b250564
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058507"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>非同期出力型のカスタム変換コンポーネントの開発
   非同期出力型変換コンポーネントは、変換が入力行をすべて受け取るまで行を出力できないようにする場合や、変換が入力として受信した各行に対して必ずしも 1 つずつ出力行を生成しない場合に使用します。 たとえば、集計変換では、行をすべて読み込むまではすべての行の合計を計算できません。 これに対し、同期出力型コンポーネントは、データが渡されるたびに各データ行を変更する場合に使用します。 各行のデータを順に変更したり、1 つまたは複数の列を新規作成して、各列にすべての入力行ごとの値を設定したりできます。 同期コンポーネントと非同期コンポーネントの相違点の詳細については、「[同期変換と非同期変換について](../understanding-synchronous-and-asynchronous-transformations.md)」を参照してください。  
@@ -323,7 +320,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [同期出力型のカスタム変換コンポーネントの開発](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

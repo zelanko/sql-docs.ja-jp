@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query-scoped named sets [MDX]
 - WITH keyword
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 86eb0725bb67df8af8244f587b45fbfbcc7d06b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068892"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>クエリ スコープの名前付きセットの作成 (MDX)
   1 つの多次元式 (MDX) クエリでのみ名前付きセットが必要な場合は、WITH キーワードを使用してその名前付きセットを定義できます。 WITH キーワードを使用して作成した名前付きセットは、そのクエリの実行が終了した時点で存在しなくなります。  

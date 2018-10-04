@@ -1,60 +1,54 @@
 ---
-title: Sybase (SybaseToSQL) への接続 |Microsoft ドキュメント
+title: Sybase (SybaseToSQL) への接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e1302d7e57d7ef2559d107039648e813e1292efa
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738077"
 ---
-# <a name="connect-to-sybase-sybasetosql"></a>Sybase (SybaseToSQL) への接続します。
-使用して、 **Sybase への接続**を移行する Sybase Adaptive Server Enterprise (ASE) インスタンスに接続する ダイアログ ボックス。  
+# <a name="connect-to-sybase-sybasetosql"></a>Sybase への接続 (SybaseToSQL)
+使用して、 **Sybase への接続**を移行する Sybase Adaptive Server Enterprise (ASE) のインスタンスに接続する ダイアログ ボックス。  
   
-このダイアログ ボックスにアクセスする、**ファイル**メニューの  **Sybase への接続**です。 以前接続した場合、コマンドは**sybase 再接続**です。  
+このダイアログ ボックスにアクセスする、**ファイル**メニューの  **Sybase への接続**します。 以前接続した場合、コマンドは**Sybase への再接続**します。  
   
 ## <a name="options"></a>および  
-**プロバイダー**  
+**Provider**  
 Sybase サーバーへの接続用のコンピューターにインストールされているプロバイダーのいずれかを選択します。  
   
 **モード**  
-どちらの標準または高度な接続モードを選択します。 標準モードでは、入力またはサーバー名、ポート、ユーザー名およびパスワードの値を選択します。 詳細設定モードでは、接続文字列を指定します。  
+いずれかの標準的なまたは高度な接続モードを選択します。 標準モードでは、入力またはサーバー名、ポート、ユーザー名、およびパスワードの値を選択します。 高度なモードでは、接続文字列を指定します。  
   
 **サーバー名**  
-入力するか、名前またはアダプティブ サーバーの IP アドレスを選択します。 既定のサーバー名は、コンピューター名と同じです。 標準モードのオプションです。  
+入力するか、またはアダプティブ サーバーの IP アドレスを選択します。 既定のサーバー名は、コンピューター名と同じです。 これは、標準モードのオプションです。  
   
 **[サーバー ポート]**  
-既定以外のポート ASE への接続を使用している場合は、ポート番号を入力します。 既定のポート番号は 5000 です。 標準モードのオプションです。  
+ASE への接続を既定以外のポートを使用している場合は、ポート番号を入力します。 既定のポート番号は、5000 です。 これは、標準モードのオプションです。  
   
 **ユーザー名**  
-ASE への接続に使用されるユーザー名を入力します。 標準モードのオプションです。  
+ASE への接続に使用されるユーザー名を入力します。 これは、標準モードのオプションです。  
   
 **Password**  
-ユーザー名に対応するパスワードを入力します。 標準モードのオプションです。  
+ユーザー名に対応するパスワードを入力します。 これは、標準モードのオプションです。  
   
 **[接続文字列]**  
-ASE を接続の完全な接続文字列を入力します。  
+ASE に、接続の完全な接続文字列を入力します。  
   
-接続文字列は、パラメーターの名前と値のペアで構成されます。 パラメーターの名前は、使用されているプロバイダーによって異なります。  
+接続文字列は、パラメーターの名前と値のペアで構成されます。 パラメーターの名前は、使用中のプロバイダーによって異なります。  
   
 **さまざまなプロバイダーの接続パラメーターは次のとおりです。**  
   
-1.  接続パラメーター **OLE DB プロバイダー**  
+1.  接続パラメーターを**OLE DB プロバイダー**  
   
     |設定|Sybase 12.5 パラメーター|Sybase 15 パラメーター|  
     |-----------|-------------------------|-----------------------|  
@@ -64,42 +58,42 @@ ASE を接続の完全な接続文字列を入力します。
     |パスワード|パスワード|パスワード|  
     |プロバイダー|プロバイダー|プロバイダー|  
   
-    Sybase ASE 12.5 の接続文字列の例のとおりです。  
+    Sybase ASE の 12.5 の接続文字列の例のとおりです。  
   
     `Server Name=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=Sybase.ASEOLEDBProvider;`  
   
-    For Sybase ASE 15 では、接続文字列の例のとおりです。  
+    Sybase ASE 15 では、接続文字列の例のとおりです。  
   
     `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=ASEOLEDB;Port=5000;`  
   
-2.  接続パラメーター **ODBC プロバイダー**  
+2.  接続パラメーターを**ODBC プロバイダー**  
   
     |設定|Sybase 12.5/15 パラメーター|  
     |-----------|-----------------------------|  
     |ドライバー名|ドライバー●どらいば○|  
     |[サーバー名]|[サーバー]|  
     |[ユーザー名]|uid|  
-    |パスワード|Pwd|  
+    |パスワード|pwd|  
     |[ポート番号]|Port|  
   
     Sybase ASE 12.5 または 15 では、接続文字列の例のとおりです。  
   
     `driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`  
   
-3.  接続パラメーター **ADO.NET プロバイダー**  
+3.  接続パラメーターを**ADO.NET プロバイダー**  
   
     |設定|Sybase 12.5/15 パラメーター|  
     |-----------|-----------------------------|  
     |[サーバー名]|[サーバー]|  
     |[ユーザー名]|uid|  
-    |パスワード|Pwd|  
+    |パスワード|pwd|  
     |[ポート番号]|Port|  
   
-    ADO.NET プロバイダーの接続文字列の例は、次のとおりです。  
+    ADO.NET プロバイダーの接続文字列の例は、次のようです。  
   
     `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
-詳細については、ASE ドキュメントを参照してください。  
+詳細については、ASE のドキュメントを参照してください。  
   
-これは、高度なモード オプションです。  
+これは、高度なモードのオプションです。  
   

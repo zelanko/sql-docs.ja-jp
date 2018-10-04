@@ -1,33 +1,30 @@
 ---
-title: ブックマーク (ODBC) |Microsoft ドキュメント
+title: ブックマーク (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63d4e9e7585cc9e85bb400b6ab369d0183a427f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854470"
 ---
 # <a name="bookmarks-odbc"></a>ブックマーク (ODBC)
-ブックマークは、データ行の識別に使われる値です。 ブックマーク値の意味を解釈できるのは、ドライバーまたはデータ ソースのみです。 たとえば、ブックマークは、行番号のような単純な値の場合も、ディスク アドレスのような複雑な値の場合もあります。 ODBC でのブックマークは、実際のブック内のブックマークとは少し異なります。 実際の書籍では、リーダーは、特定のページにブックマークを配置し、次に、ページに戻るには、そのブックマークを検索します。 ODBC では、アプリケーションが特定の行のブックマークを要求し、これを保存し、カーソルに戻して行に返します。 したがって、ODBC でのブックマークは、記憶し、もう一度ページを検索し、ページ番号を書き留めるリーダーに似ています。  
+ブックマークは、データ行の識別に使われる値です。 ブックマーク値の意味を解釈できるのは、ドライバーまたはデータ ソースのみです。 たとえば、ブックマークは、行番号のような単純な値の場合も、ディスク アドレスのような複雑な値の場合もあります。 ODBC でのブックマークは、実際のブック内のブックマークとは少し異なります。 実際の本のリーダーは特定のページにブックマークを配置し、ページに戻るには、そのブックマークを探します。 ODBC では、アプリケーションが特定の行のブックマークを要求し、これを保存し、カーソルに戻して行に返します。 したがって、ODBC でのブックマークは、記憶して、もう一度ページを検索し、ページ番号を書き留めるリーダーに似ています。  
   
- ブックマークのドライバーのサポートを確認するには、アプリケーションが呼び出す**SQLGetInfo** SQL_BOOKMARK_PERSISTENCE オプションを使用します。 この値のビットは、どのような操作のブックマークで回収されず、カーソルが閉じられた後にブックマークが現在も有効にはかどうかなどについて説明します。  
+ ブックマークのドライバーのサポートを確認するアプリケーションを呼び出す**SQLGetInfo** SQL_BOOKMARK_PERSISTENCE オプションを使用します。 この値のビットは、どのような操作のブックマーク存続しますが、カーソルが閉じられた後ブックマークがまだ有効にはかどうかなどについて説明します。  
   
  このセクションでは、次のトピックを扱います。  
   

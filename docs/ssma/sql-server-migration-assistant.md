@@ -1,47 +1,41 @@
 ---
-title: SQL Server Migration Assistant |Microsoft ドキュメント
+title: SQL Server Migration Assistant |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845794"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
-Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、MySQL、Oracle、および SAP ASE から SQL Server にデータベースの移行を自動化するためのツールです。  
+Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、MySQL、Oracle、および SAP ASE から SQL Server をデータベースの移行を自動化するためのツールです。  
   
 ## <a name="migration-sources"></a>移行元  
   
 -   [SQL Server Migration Assistant for Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
--   [SQL Server Migration Assistant for DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+-   [DB2 用の SQL Server Migration Assistant](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
--   [SQL Server Migration Assistant for MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+-   [MySQL の SQL Server Migration Assistant](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
--   [SQL Server Migration Assistant for Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+-   [Oracle の SQL Server Migration Assistant](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--   [SQL Server Migration Assistant SAP ASE for](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-   [SAP ASE の SQL Server Migration Assistant](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
-## <a name="supported-sources-and-target-versions"></a>サポートされているソースおよびターゲット バージョン
-サポートされているソースの場合は、SSMA ダウンロードするため、ダウンロード センターにある情報を確認します。
+## <a name="supported-sources-and-target-versions"></a>サポートされているソースとターゲットのバージョン
+サポートされているソースの場合に、SSMA ダウンロード ダウンロード センターから情報を確認します。
 
-次のターゲット バージョンは、SSMA に対してサポートされます。
+SSMA では、次のターゲット バージョンはサポートされます。
 
 - SQL Server 2008:
 - SQL Server 2008 R2
@@ -49,7 +43,7 @@ Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、M
 - SQL Server 2014
 - SQL Server 2016
 - Azure SQL データベース
-- Windows および Linux (Preview) で SQL Server 2017
+- SQL Server 2017 on Windows と Linux (プレビュー)
 - * * Azure SQL Data Warehouse
 
 * * このターゲットは、SSMA for Oracle でのみサポートされます。
@@ -62,21 +56,21 @@ Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、M
 - [SSMA for SAP ASE](http://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>SSMA サポートの入手  
-**ヘルプし、用 Microsoft SQL Server Migration Assistant (SSMA) をサポートします。**  
+**ヘルプとサポートの Microsoft SQL Server Migration Assistant (SSMA):**  
   
--   **製品ヘルプ**- へのアクセス製品のサポート、SSMA を起動し、[ヘルプ] メニューを選択または F1 キーを押します。  
+-   **製品ヘルプ**- を製品サポートにアクセスする、SSMA を起動し、[ヘルプ] メニューを選択します。 または F1 キーを押します。  
   
 -   **SQL Server コミュニティ フォーラム**– SQL Server コミュニティで質問します。  
   
     -   [SQL Server コミュニティ](http://go.microsoft.com/fwlink/?LinkId=42455)-SQL Server コミュニティが監視するニュースグループとフォーラム。 ブログや Web サイトなど、コミュニティ情報のソースも一覧表示されます。  
   
-    -   [SQL Server デベロッパー センター コミュニティ](http://go.microsoft.com/fwlink/?LinkId=42456)-ニュースグループ、フォーラム、および SQL Server の開発者に役立つその他のコミュニティ リソース  
+    -   [SQL Server デベロッパー センター コミュニティ](http://go.microsoft.com/fwlink/?LinkId=42456)ニュースグループ、フォーラム、および SQL Server の開発者に役立つその他のコミュニティ リソース  
   
--   サポート - へ移動[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) ' SQL Server Migration Assistant' を検索します。  バージョンを選択し、「要求を開始します」を選択  サポートは、SQL Server 移行アシスタント ツールに付属します。  
+-   サポート - へ移動[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) ' SQL Server Migration Assistant' を検索します。  バージョンを選択し、「要求を開始します。」を選択します。  サポートは、SQL Server 移行アシスタント ツールに含まれています。  
   
--   プレミア サポート - Premier 契約があれば取得できますプレミア サポートで、 [Premier Online のポータル](https://premier.microsoft.com/)です。  
+-   Premier サポートの Premier 契約がある場合すれば、Premier サポートで、 [Premier Online ポータル](https://premier.microsoft.com/)します。  
   
--   移行には、go を支援してコンサルティング サービス-パートナーの[パートナー ポータル](https://www.platformmodernization.org/Pages/default.aspx)です。  
+-   移行、移動を支援してコンサルティング サービス – パートナー、[パートナー ポータル](https://www.platformmodernization.org/Pages/default.aspx)します。  
   
 ## <a name="legal-notice-ssma"></a>免責事項 (SSMA)  
 このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  
@@ -100,6 +94,6 @@ SQL Server のドキュメントに記載されている内容は、十分なテ
   
 機能によっては、お客様が直接使用しないものもあり、そのような機能に関してはドキュメントに記載されていません。 Microsoft が発行する SQL Server のドキュメントに記載されていない機能については、サード パーティの書籍や Web サイトの内容は Microsoft カスタマー サポートによってサポートされません。実稼働データベースやアプリケーションでは使用しないでください。  
   
-お客様は、ドキュメントに記載されていない API、ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビュー、テーブル、列、プロパティ、メタデータなどを使用しないでください。 Microsoft カスタマー サポートでは、文書化されていないエントリ ポイントを使用または応用したデータベースやアプリケーションは使用できません。  
+お客様は、ドキュメントに記載されていない API、ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビュー、テーブル、列、プロパティ、メタデータなどを使用しないでください。 Microsoft カスタマー サポートは、利用するか、文書化されていないエントリ ポイントを使用したデータベースやアプリケーションをサポートしていません。  
   
 ドキュメントに記載されていないエントリ ポイントを応用または使用するアプリケーションやデータベースについては、将来のバージョンの SQL Server に対応させるためのサーバーおよびデータベースのアップグレードは保証されません。 SQL Server 機能の使用は、Microsoft SQL Server のドキュメントに記載されている方法に限定されます。 機能が Microsoft SQL Server のドキュメントに記載されていない場合は、SQL Server のサポート対象から除外されます。  

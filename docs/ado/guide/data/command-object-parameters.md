@@ -1,30 +1,27 @@
 ---
-title: オブジェクトのパラメーターをコマンド |Microsoft ドキュメント
+title: Command オブジェクトのパラメーター |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87854c3e048fc7fc5730ad8c1c475a32554fbab5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f4fb4128333f1fdc5865186a202188fc64b6109f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701740"
 ---
-# <a name="command-object-parameters"></a>コマンド オブジェクトのパラメーター
-前に説明したトピック[作成し、簡単なコマンドを実行する](../../../ado/guide/data/creating-and-executing-a-simple-command.md)です。 使用して、興味深い、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトが SQL コマンドのパラメーター化する、次の例で示すようにします。 この変更により、パラメーターのたびに、別の値を渡して、コマンドを再利用することです。 [プロパティの準備ができている](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを**コマンド**にオブジェクトが設定されている**true**、ADO で指定されたコマンドのコンパイルにプロバイダーが必要になります[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)を初めて実行する前にします。 メモリ内でコンパイル済みのコマンドも保持されます。 少しがパフォーマンスの向上、コマンドがその後呼び出されるたびに結果を準備するためのオーバーヘッドが原因で実行される最初の時間のコマンドの実行はこの低下します。 そのため、1 つ以上の時間を使用する場合にのみ、コマンドを準備する必要があります。  
+# <a name="command-object-parameters"></a>Command オブジェクトのパラメーター
+前のトピックで説明した[を作成して、単純なコマンドを実行する](../../../ado/guide/data/creating-and-executing-a-simple-command.md)します。 使用して、興味深い、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)で次の例では、SQL コマンドのパラメーター化するオブジェクトを表示します。 この変更により、パラメーターのたびに別の値を渡して、コマンドを再利用することです。 [プロパティの準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを**コマンド**にオブジェクトが設定されている**true**、ADO で指定されたコマンドをコンパイルするプロバイダーが必要になります[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)を初めて実行する前にします。 メモリ内のコンパイル済みのコマンドも保持されます。 少しそれがパフォーマンスの向上、コマンドがその後呼び出されるたびに結果を準備するために必要なオーバーヘッドが原因で実行される初めてのコマンドの実行はこの低下します。 そのため、1 つ以上の時間を使用する場合にのみ、コマンドを準備する必要があります。  
   
 ```  
 'BeginManualParamCmd  
@@ -122,4 +119,4 @@ End Function
 'EndNewConnection  
 ```  
   
- すべてのプロバイダーは、準備されたコマンドをサポートします。 このプロパティに設定するとすぐに、エラーを返す場合がありますが、プロバイダーがコマンドの準備をサポートしていない場合**True**です。 エラーが返されない場合、要求をコマンド ウィンドウとセットを準備するのには無視されます、 **Prepared**プロパティを**false**です。
+ すべてのプロバイダーは、準備されたコマンドをサポートします。 このプロパティに設定するとすぐには、エラーを返す可能性がありますが、プロバイダーがコマンドの準備をサポートしていない場合**True**します。 エラーを返さない場合、コマンド ウィンドウとセットを準備する要求は無視されます、**準備**プロパティを**false**します。

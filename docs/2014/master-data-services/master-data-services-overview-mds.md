@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 24
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 121113386ac42e689b2b8f73e60642c868c170f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f31402ae63b4e4f87a437d260ad6b12a7ccd7723
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329952"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066182"
 ---
-# <a name="master-data-services-overview"></a>マスター データ サービスの概要
+# <a name="master-data-services-overview"></a>マスター データ サービス概要
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデルはマスター データ構造の最上位のコンテナーです。 モデルを作成すると、類似したデータのグループを管理できます。たとえば、オンラインの製品データを管理するなどです。 モデルには 1 つ以上のエンティティが含まれています。エンティティにはメンバーが含まれており、これはデータ レコードです。  
   
 |||  

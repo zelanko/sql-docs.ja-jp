@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - default full-text language option
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12542af785a220858ca151ce1e64a2199436852c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 575acd7d4fb264ebb8cba218c1e37b45e9af5a33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062962"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>default full-text language サーバー構成オプションの構成
   このトピックでは、構成する方法を説明します、`default full-text language`サーバー構成オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 `default full-text language`オプションは、フルテキスト インデックスの既定の言語の値を指定します。 言語分析は、フルテキスト インデックスが作成されるすべてのデータに対して実行され、データの言語に依存します。 このオプションの既定値は、サーバーの言語です。 ローカライズされたバージョン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットのセットアップ、`default full-text language`適切な一致が存在する場合に、サーバーの言語オプションします。 ローカライズされていないバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、`default full-text language`オプションは英語です。  

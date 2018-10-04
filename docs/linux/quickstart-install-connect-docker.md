@@ -8,18 +8,16 @@ ms.date: 03/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: bdd0cd86d3a20e61712f40c97e688b0d3728bcb4
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
-ms.translationtype: MT
+ms.openlocfilehash: 6c1a6a7ef05a10662a878c9b0e86d336835af4a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775790"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Docker を使用したクイック スタート: SQL Server の実行のコンテナー イメージ
 
@@ -37,11 +35,11 @@ ms.locfileid: "46713734"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-このクイック スタートでプルして、SQL Server 2019 プレビュー コンテナー イメージを実行する Docker を使用して[mssql server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)します。 その後 **sqlcmd** で接続して最初のデータベースを作成し、クエリを実行します。
+このクイック スタートでプルして、SQL Server 2019 プレビュー コンテナー イメージを実行する Docker を使用して[mssql server](https://hub.docker.com/r/microsoft/mssql-server)します。 その後 **sqlcmd** で接続して最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 
-このイメージは、Ubuntu 16.04 の Linux で動作する SQL Server で構成されます。 Linux の Docker エンジン 1.8 + または Docker for Mac/Windows から使用できます。 このクイック スタートは mssql-server-**linux** イメージの使用に特にフォーカスしています。 Windows イメージについては触れていませんが、[mssql-server-windows-developer Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) で詳細情報を得ることができます。
+このイメージは、Ubuntu 16.04 の Linux で動作する SQL Server で構成されます。 Linux の Docker エンジン 1.8 + または Docker for Mac/Windows から使用できます。 このクイック スタートは、上の SQL Server の使用に特に注目**linux**イメージ。 Windows イメージについては触れていませんが、[mssql-server-windows-developer Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) で詳細情報を得ることができます。
 
 ## <a id="requirements"></a> 前提条件
 

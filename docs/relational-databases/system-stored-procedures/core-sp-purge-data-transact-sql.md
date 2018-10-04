@@ -1,14 +1,11 @@
 ---
-title: core.sp_purge_data (TRANSACT-SQL) |Microsoft ドキュメント
+title: core.sp_purge_data (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
@@ -21,21 +18,20 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 002ba9d499039651eecdd2d05c92cda63c9dab62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819240"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  保有ポリシーに基づいて、管理データ ウェアハウスからデータを削除します。 このプロシージャは、mdw_purge_data によって毎日実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理データ ウェアハウスに対して、エージェント ジョブは、指定されたインスタンスに関連付けられています。 このストアド プロシージャを使用すると、要求に応じて管理データ ウェアハウスからデータを削除できます。  
+  保有ポリシーに基づいて、管理データ ウェアハウスからデータを削除します。 この手順は、mdw_purge_data によって毎日実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理データ ウェアハウスに対して、エージェント ジョブは、指定したインスタンスに関連付けられています。 このストアド プロシージャを使用すると、要求に応じて管理データ ウェアハウスからデータを削除できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,12 +48,12 @@ core.sp_purge_data
   
 ## <a name="arguments"></a>引数  
  [@retention_days =] *retention_days*  
- データを管理データ ウェアハウスのテーブルに保管しておく日数を指定します。 古いタイムスタンプを持つデータ*retention_days*を削除します。 *retention_days*は**smallint**、既定値は NULL です。 指定する場合、値は正数にする必要があります。 NULL の場合は、core.snapshots ビューの valid_through 列の値によって、削除対象の行が判断されます。  
+ データを管理データ ウェアハウスのテーブルに保管しておく日数を指定します。 古いタイムスタンプを持つデータ*retention_days*が削除されます。 *retention_days*は**smallint**、既定値は NULL です。 指定する場合、値は正数にする必要があります。 NULL の場合は、core.snapshots ビューの valid_through 列の値によって、削除対象の行が判断されます。  
   
  [@instance_name =] '*instance_name*'  
  コレクション セットのインスタンスの名前を指定します。 *instance_name*は**sysname**、既定値は NULL です。  
   
- *instance_name* 、完全修飾名、コンピューター名と形式でインスタンス名で構成される必要があります*computername*\\*instancename*です。 NULL の場合は、ローカル サーバーの既定のインスタンスが使用されます。  
+ *instance_name*インスタンスの完全修飾名は、コンピューター名と形式でインスタンス名で構成される必要があります*computername*\\*instancename*します。 NULL の場合は、ローカル サーバーの既定のインスタンスが使用されます。  
   
  [@collection_set_uid =] '*collection_set_uid*'  
  コレクション セットの GUID を指定します。 *collection_set_uid*は**uniqueidentifier**、既定値は NULL です。 NULL の場合は、すべてのコレクション セットから条件を満たす行が削除されます。 この値を取得するには、syscollector_collection_sets カタログ ビューに対してクエリを実行します。  
@@ -68,15 +64,15 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロシージャでは、保有期間に基づいて削除対象となる core.snapshots ビューの行が選択されます。 削除対象となるすべての行が core.snapshots_internal テーブルから削除されます。 先行する行が削除されると、管理データ ウェアハウスのすべてのテーブルでカスケード削除操作が実行されます。 これは、収集されたデータを格納するすべてのテーブルに対して定義されている ON DELETE CASCADE 句を使って実行されます。  
   
- 各スナップショットとその関連データは、明示的なトランザクションで削除されてからコミットされます。 そのため、パージ操作を手動で停止すると、または指定した値のかどうかは@durationが経過すると、コミットされていないデータのみが残ります。 このデータは、ジョブの次回の実行時に削除できます。  
+ 各スナップショットとその関連データは、明示的なトランザクションで削除されてからコミットされます。 そのため、パージ操作を手動で停止すると、または指定された値のかどうか@durationを超えると、のみ コミットされていないデータが残ります。 このデータは、ジョブの次回の実行時に削除できます。  
   
  このプロシージャは、管理データ ウェアハウス データベースのコンテキストで実行してください。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **mdw_admin** (EXECUTE 権限) を持つ固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **mdw_admin** (EXECUTE 権限) を持つ固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
   
@@ -99,7 +95,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. インスタンス名とコレクション セットを指定する  
- 次の例は、設定の指定したインスタンスに指定したコレクションの管理データ ウェアハウスからデータを削除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 @retention_daysが指定されていない、core.snapshots ビューの valid_through 列の値は削除対象のコレクション セットの行を判断に使用します。  
+ 次の例は、設定の指定されたインスタンスで指定したコレクションの管理データ ウェアハウスからデータを削除します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 @retention_daysが指定されていない、core.snapshots ビューの valid_through 列の値は削除対象のコレクション セットの行を特定するために使用します。  
   
 ```  
 USE <management_data_warehouse>;  

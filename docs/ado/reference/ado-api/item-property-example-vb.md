@@ -1,34 +1,31 @@
 ---
-title: 項目のプロパティの例 (VB) |Microsoft ドキュメント
+title: 項目のプロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Item property [ADO], Visual Basic example
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdbddb4af085077b3aa86eec760253442dfefbd9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 941c6a8cf6c7ed57e0a28d5cb288d92ab8e231c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707580"
 ---
-# <a name="item-property-example-vb"></a>項目プロパティの例 (VB)
-この例を示す方法、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティは、コレクションのメンバーにアクセスします。 例では、表示、***作成者***のテーブル、 ***Pubs***パラメーター化コマンドを使用してデータベース。  
+# <a name="item-property-example-vb"></a>Item プロパティの例 (VB)
+この例では、どのように[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティは、コレクションのメンバーにアクセスします。 開く例を示します、***作成者***のテーブル、 ***Pubs***パラメーター化されたコマンドを使ってデータベース。  
   
- データベースに対して実行されたコマンドのパラメーターはからアクセス、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)インデックスと名前でのコレクション。 返されたフィールド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)はそのオブジェクトからアクセスし、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)インデックスと名前によってコレクション。  
+ データベースに対して発行されたコマンドのパラメーターはからアクセスする、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)インデックスと名前のコレクション。 返されたフィールド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)からそのオブジェクトのアクセスは[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)インデックスと名前のコレクション。  
   
 ```  
 'BeginItemVB  
@@ -140,7 +137,7 @@ End Sub
   
 ## <a name="see-also"></a>参照  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,13 +1,11 @@
 ---
-title: 保存して開く方法の例 (VB) |Microsoft ドキュメント
+title: 保存および開く方法の例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6541e8d8da07f956557d80d2f66144e56f216a24
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828850"
 ---
-# <a name="save-and-open-methods-example-vb"></a>保存して開く方法の例 (VB)
-これら 3 つの例を示す方法、[保存](../../../ado/reference/ado-api/save-method.md)と[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを併用することができます。  
+# <a name="save-and-open-methods-example-vb"></a>Save および Open メソッドの例 (VB)
+これら 3 つの例を示す方法、[保存](../../../ado/reference/ado-api/save-method.md)と[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを併用することができます。  
   
- 出張が起こってと、データベースからテーブルを実行することを想定しています。 としてデータにアクセスするにする前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)移動可能な形式で保存します。 アクセスする、転送先に到着したときに、**レコード セット**ローカル、切断されている**レコード セット**です。 変更を行い、 **Recordset**、し、もう一度保存します。 最後に、ホームを取得する場合は、データベースにもう一度接続し、外出先での変更で更新します。  
+ 出張していると、データベースからテーブルを実行することを想定しています。 としてデータにアクセスするにする前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)移動可能な形式で保存します。 目的地に到着する場合にアクセスする、 **Recordset**として、ローカル切断**レコード セット**します。 変更を加える、 **Recordset**、し、もう一度保存します。 最後に、home、戻るときに再度データベースに接続し、外出先で行われた変更で更新します。  
   
  最初に、アクセスし、保存、***作成者***テーブル。  
   
@@ -88,20 +85,20 @@ End Sub
 'EndSaveVB  
 ```  
   
- この時点で、転送先に到着しました。 場合は、アクセス、***作成者***として、ローカル テーブル切断**Recordset**です。 必要があります、 **MSPersist**保存したファイルへのアクセスを使用しているコンピューター上のプロバイダー a:\Pubs.xml です。  
+ この時点では、目的地に到着しました。 アクセス、***作成者***として、ローカル テーブル切断**レコード セット**します。 必要があります、 **MSPersist**保存したファイルへのアクセスに使用しているコンピューター上のプロバイダー a:\Pubs.xml します。  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
- 最後に、戻ってます。 今すぐ変更内容をデータベースを更新します。  
+ 最後に、戻っています。 変更内容をデータベースを更新ようになりました。  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
 ## <a name="see-also"></a>参照  
- [Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [レコード セットの保存に関する詳細情報](../../../ado/guide/data/more-about-recordset-persistence.md)   
+ [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [詳細については、レコード セットの保持](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)

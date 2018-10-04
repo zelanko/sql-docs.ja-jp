@@ -1,12 +1,10 @@
 ---
-title: sys.dm_cryptographic_provider_keys (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_cryptographic_provider_keys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_cryptographic_provider_keys_TSQL
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_keys dynamic management function
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26d789882ec717a2d69796a90284c22a3ad2aa44
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: d83a1a60162ba0124b8ff379f241b6bd64e89675
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627420"
 ---
 # <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +44,9 @@ dm_cryptographic_provider_keys ( provider_id )
  *provider_id*  
  EKM プロバイダーの識別番号。既定値はありません。  
   
-## <a name="tables-returned"></a>返されたテーブル  
+## <a name="tables-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|プロバイダーのキーの識別番号|  
 |**key_name**|**nvarchar(512)**|プロバイダーのキーの名前|  
@@ -58,13 +56,13 @@ dm_cryptographic_provider_keys ( provider_id )
 |**key_type**|**nchar(256)**|プロバイダーのキーの型|  
 |**key_length**|**int**|プロバイダーのキーの長さ|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このビューに対してクエリを実行すると、ユーザー コンテキストがプロバイダーで認証され、ユーザーに表示されるすべてのキーが列挙されます。  
   
  ユーザーが EKM プロバイダーで認証できない場合、キー情報は返されません。  
   
 ## <a name="examples"></a>使用例  
- 次の例の識別番号であるプロバイダーのキー プロパティを示しています`1234567`です。  
+ 次の例では、キーのプロパティを示しますの識別番号であるプロバイダーの`1234567`します。  
   
 ```  
 SELECT * FROM sys.dm_cryptographic_provider_keys(1234567);  

@@ -1,13 +1,11 @@
 ---
-title: Size プロパティ (ADO ストリーム) |Microsoft ドキュメント
+title: Size プロパティ (ADO Stream) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Stream]
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d39bb563acfde83a08f08c00fee66cc9b81967
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d35af0315460af8b110c7af38934e5d196a5c895
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696320"
 ---
 # <a name="size-property-ado-stream"></a>Size プロパティ (ADO Stream)
-バイト数でストリームのサイズを示します。  
+バイト数のストリームのサイズを示します。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**長い**ストリームのサイズをバイト数で指定する値。 既定値は、ストリームのサイズが不明の場合に、ストリーム、または-1 のサイズです。  
+ 返します、**長い**ストリームのサイズをバイト数を指定する値。 既定値は、ストリームのサイズが不明である場合に、ストリーム、または-1 のサイズは。  
   
 ## <a name="remarks"></a>コメント  
- **サイズ**開くでのみ使用できます[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+ **サイズ**オープンでのみ使用できます[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
   
 > [!NOTE]
->  任意のビット数を格納できる、**ストリーム**オブジェクト、システム リソースによってのみ制限されます。 場合、**ストリーム**で表現できる以上のビット数を含む、**長い**値、**サイズ**は切り捨てられ、そのため正確に表さない、の長さ**ストリーム**です。  
+>  格納できる任意の数のビットを**Stream**オブジェクト、システム リソースによってのみ制限されます。 場合、 **Stream**がより多くのビットで表せる数よりも含まれています、**長い**値、**サイズ**は切り捨てられ、したがってを正確に表さない、の長さ**Stream**します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
@@ -14,18 +12,17 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d4d9a3c2efa2bfcb8e3b1db44f43d525f0b067
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070588"
 ---
-# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>ページの自動修復 (可用性グループとデータベース ミラーリング) の
+# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>ページの自動修復 (可用性グループとデータベース ミラーリング)
   ページの自動修復は、データベース ミラーリングおよび [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]でサポートされます。 特定の種類のエラーによってページが破損し、読み取りができなくなると、データベース ミラーリング パートナー (プリンシパルまたはミラー) または可用性レプリカ (プライマリまたはセカンダリ) が自動的にページの修復を試みます。 ページの読み取りができないパートナー/レプリカは、そのページの新しいコピーを自分のパートナーまたは別のレプリカから要求します。 要求が受け入れられ、新しいコピーを取得できた場合は、読み取り不可能なページが読み取り可能なコピーに置き換えられます。通常、これによりエラーは解決します。  
   
  一般に、データベース ミラーリングと [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] は、I/O エラーが同じ方法で処理されます。 ただし、わずかながら異なる部分もあります。ここでは、そうした違いについて説明します。  
@@ -35,7 +32,7 @@ ms.locfileid: "37257938"
   
   
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a> ページの自動修復が試行されるエラーの種類  
  次の表に示すいずれかのエラーが原因でデータ ファイル操作が失敗した場合のみ、そのページにデータベース ミラーリングの自動修復が適用されます。  
   
 |エラー番号|説明|ページの自動修復の原因となるインスタンス|  
@@ -59,7 +56,7 @@ ms.locfileid: "37257938"
   
 
   
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> プリンシパル/プライマリ データベースでの I/O エラーの処理  
  プリンシパル/プライマリ データベースでページの自動修復が試行されるのは、データベースが SYNCHRONIZED 状態にあり、そのデータベースのログ レコードがプリンシパル/プライマリ サーバーからミラー/セカンダリへ送信され続けている場合だけです。 ページの自動修復が試行される場合の基本的な処理順序を次に示します。  
   
 1.  プリンシパル/プライマリ データベースのデータ ページで読み取りエラーが発生すると、プリンシパル/プライマリは、該当するエラー状態が記録された行を [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) テーブルに挿入します。 この後、データベース ミラーリングの場合は、プリンシパルがミラーに対してページのコピーを要求します。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]の場合は、プライマリが、すべてのセカンダリに要求をブロードキャストし、最初に応答したセカンダリからページを取得します。 この要求では、ページ ID と、現在フラッシュされたログの最後にある LSN を指定します。 要求対象のページは、 *復元待ち*としてマークされます。 これにより、ページの自動修復の試行時、このページにはアクセスできなくなります。 修復の試行時にこのページにアクセスしようとすると、エラー 829 (復元待ち) が発生して失敗します。  
@@ -74,7 +71,7 @@ ms.locfileid: "37257938"
   
 
   
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> ミラー/セカンダリ データベースでの I/O エラーの処理  
  ミラー/セカンダリ データベースで発生したデータ ページの I/O エラーは通常、データベース ミラーリングでも [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]でも同じように処理されます。  
   
 1.  データ ミラーリングでは、ミラーがログ レコードを再実行している最中にページ I/O エラーが 1 回でも検出されると、そのミラーリング セッションは SUSPENDED 状態になります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、セカンダリ レプリカがログ レコードを再実行している最中にページ I/O エラーが 1 回でも検出されると、そのセカンダリ データベースは SUSPENDED 状態になります。 この時点で、ミラー/セカンダリは、該当するエラー状態が記録された行を **suspect_pages** テーブルに挿入します。 次に、ミラー/セカンダリは、プリンシパル/プライマリにそのページのコピーを要求します。  

@@ -1,27 +1,24 @@
 ---
-title: レコード セット オブジェクトのプロパティ、メソッド、およびイベント |Microsoft ドキュメント
+title: レコード セット オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d00e286b1386d51e0bc854d48a14bc2f64555eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281181"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691320"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>レコード セット オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -41,7 +38,7 @@ ms.locfileid: "35281181"
   
  [CursorLocation プロパティ](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
   
- [プロパティのカーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)  
+ [CursorType プロパティ](../../../ado/reference/ado-api/cursortype-property-ado.md)  
   
  [DataMember プロパティ](../../../ado/reference/ado-api/datamember-property.md)  
   
@@ -57,7 +54,7 @@ ms.locfileid: "35281181"
   
  [LockType プロパティ](../../../ado/reference/ado-api/locktype-property-ado.md)  
   
- [スレッドのプロパティ](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
+ [MarshalOptions プロパティ](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
   
  [MaxRecords プロパティ](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
@@ -86,7 +83,7 @@ ms.locfileid: "35281181"
   
  [CancelBatch メソッド](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
   
- [ただしメソッド](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [CancelUpdate メソッド](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
   
  [Clone メソッド](../../../ado/reference/ado-api/clone-method-ado.md)  
   
@@ -104,7 +101,7 @@ ms.locfileid: "35281181"
   
  [Move メソッド](../../../ado/reference/ado-api/move-method-ado.md)  
   
- [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
  [NextRecordset メソッド](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   

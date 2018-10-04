@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_objects (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_xe_objects (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_objects
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34ce63f29a798db910115fae7db2e0c732dafdc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601370"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,25 +36,25 @@ ms.lasthandoff: 05/23/2018
   
 -   アクション。 アクションは、イベントの発生に同期して実行されます。 アクションを使用して、実行時データをイベントに追加することもできます。  
   
--   ターゲット。 ターゲットは、イベントを開始したスレッド上で同期的にまたはシステムによって提供されたスレッド上で非同期的に、イベントを使用します。  
+-   対象とします。 ターゲットは、イベントを開始したスレッド上で同期的にまたはシステムによって提供されたスレッド上で非同期的に、イベントを使用します。  
   
 -   述語。 述語ソースは、比較演算で使用する値をイベント ソースから取得します。 述語の比較では、特定のデータ型が比較され、ブール値が返されます。  
   
 -   型。 型は、データを解釈するために必要なバイト コレクションの長さと特性をカプセル化します。  
 
- |列名|データ型|Description|  
+ |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|オブジェクトの名前。 名前は、特定のオブジェクトの種類のパッケージ内で一意です。 NULL 値は許可されません。|  
-|object_type|**nvarchar(60)**|オブジェクトの古い型。 object_type では、次のいずれかです。<br /><br /> イベント<br /><br /> アクション (action)<br /><br /> ターゲット (target)<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 型<br /><br /> NULL 値は許可されません。|  
+|NAME|**nvarchar(60)**|オブジェクトの名前。 名前は、特定のオブジェクトの種類のパッケージ内で一意です。 NULL 値は許可されません。|  
+|object_type|**nvarchar(60)**|オブジェクトの古い型。 object_type は、次のいずれかです。<br /><br /> イベント<br /><br /> アクション (action)<br /><br /> ターゲット (target)<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> NULL 値は許可されません。|  
 |package_guid|**uniqueidentifier**|このアクションを公開するパッケージの GUID。 sys.dm_xe_packages.package_id との間に多対一のリレーションシップがあります。 NULL 値は許可されません。|  
-|description|**nvarchar (256)**|アクションの説明です。 説明については、パッケージの作成者によって設定されます。 NULL 値は許可されません。|  
+|description|**nvarchar (256)**|アクションの説明。 説明については、パッケージの作成者によって設定されます。 NULL 値は許可されません。|  
 |capabilities|**int**|オブジェクトの機能を表すビットマップ。 NULL 値が許可されます。|  
-|capabilities_desc|**nvarchar (256)**|オブジェクトのすべての機能を一覧表示します。 NULL 値が許可されます。<br /><br /> **すべてのオブジェクトの種類に適用される機能**<br /><br /> —<br />                                **プライベート**です。 内部的に使用できる唯一のオブジェクトであり、CREATE/ALTER EVENT SESSION DDL ではアクセスできません。 内部的に使用される少数のオブジェクトに加えて、監査イベントとターゲットがこのカテゴリに含まれます。<br /><br /> ===============<br /><br /> **イベント機能**<br /><br /> —<br />                                **No_block**です。 イベントは、どのような理由でもブロックできない重要なコード パス内にあります。 この機能を持つイベントは、NO_EVENT_LOSS が指定されているイベント セッションには追加できません。<br /><br /> ===============<br /><br /> **すべてのオブジェクトの種類に適用される機能**<br /><br /> —<br />                                **Process_whole_buffers**です。 ターゲットは、イベントごとではなく、イベントのバッファーをまとめて使用します。<br /><br /> —<br />                        **シングルトン**です。 プロセスにはターゲットのインスタンスが 1 つだけ存在できます。 複数のイベント セッションで同じシングルトン ターゲットを参照できますが、インスタンスは 1 つだけであり、そのインスタンスが一意の各イベントを 1 回だけ認識します。 これは、すべてが同じイベントを収集する複数のセッションにターゲットが追加される場合に重要です。<br /><br /> —<br />                                **Synchronous**。 ターゲットは、イベントを生成しているスレッドで、制御が呼び出し元のコード行に返される前に実行されます。|  
+|capabilities_desc|**nvarchar (256)**|オブジェクトのすべての機能を一覧表示します。 NULL 値が許可されます。<br /><br /> **すべてのオブジェクトの種類に適用する機能**<br /><br /> —<br />                                **プライベート**します。 内部的に使用できる唯一のオブジェクトであり、CREATE/ALTER EVENT SESSION DDL ではアクセスできません。 内部的に使用される少数のオブジェクトに加えて、監査イベントとターゲットがこのカテゴリに含まれます。<br /><br /> ===============<br /><br /> **イベントの機能**<br /><br /> —<br />                                **No_block**します。 イベントは、どのような理由でもブロックできない重要なコード パス内にあります。 この機能を持つイベントは、NO_EVENT_LOSS が指定されているイベント セッションには追加できません。<br /><br /> ===============<br /><br /> **すべてのオブジェクトの種類に適用する機能**<br /><br /> —<br />                                **Process_whole_buffers**します。 ターゲットは、イベントごとではなく、イベントのバッファーをまとめて使用します。<br /><br /> —<br />                        **シングルトン**します。 プロセスにはターゲットのインスタンスが 1 つだけ存在できます。 複数のイベント セッションで同じシングルトン ターゲットを参照できますが、インスタンスは 1 つだけであり、そのインスタンスが一意の各イベントを 1 回だけ認識します。 これは、すべてが同じイベントを収集する複数のセッションにターゲットが追加される場合に重要です。<br /><br /> —<br />                                **Synchronous**。 ターゲットは、イベントを生成しているスレッドで、制御が呼び出し元のコード行に返される前に実行されます。|  
 |type_name|**nvarchar(60)**|pred_source オブジェクトおよび pred_compare オブジェクトの名前。 NULL 値が許可されます。|  
 |type_package_guid|**uniqueidentifier**|このオブジェクトの対象となる型を公開するパッケージの GUID。 NULL 値が許可されます。|  
 |type_size|**int**|データ型のサイズ (バイト単位)。 有効なオブジェクト型に対してのみ使用できます。 NULL 値が許可されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  

@@ -1,13 +1,11 @@
 ---
-title: RDS のコード例 VBScript |Microsoft ドキュメント
+title: RDS のコード例では、VBScript |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - RDS samples [ADO], VBScript
 - VBScript RDS examples [ADO]
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34b8e900101d958a0ad7cbc94c5caf681bc4dae4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c134ab42c3433865ec20bd18da44604a27c7046a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735737"
 ---
-# <a name="rds-code-examples-in-vbscript"></a>RDS のコード例では、VBScript
+# <a name="rds-code-examples-in-vbscript"></a>VBScript での RDS のコード例
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  次のコード例を使用して、Microsoft Visual Basic Scripting Edition (VBScript) で記述するときに、RDS オブジェクト、メソッド、およびプロパティを使用する方法について説明します。  
   
@@ -39,15 +36,15 @@ ms.locfileid: "35288398"
   
 -   [DataControl オブジェクトの例](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
   
--   [データ領域オブジェクトの例](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [DataSpace オブジェクトの例](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
   
 -   [DataFactory オブジェクトの例](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
 ## <a name="methods"></a>メソッド  
   
--   [キャンセル メソッドの例](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)  
+-   [Cancel メソッドの例](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)  
   
--   [ただしメソッドの例](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
+-   [CancelUpdate メソッドの例](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
   
 -   [ConvertToString メソッドの例](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)  
   
@@ -57,28 +54,28 @@ ms.locfileid: "35288398"
   
 -   [クエリ メソッドの例](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
--   [メソッドの例を更新します。](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)  
+-   [Refresh メソッドの例](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)  
   
--   [メソッドの例をリセットします。](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Reset メソッドの例](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
 -   [SubmitChanges メソッドの例](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)  
   
 ## <a name="properties"></a>[プロパティ]  
   
--   [接続プロパティの使用例](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
+-   [接続プロパティの例](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
   
 -   [ExecuteOptions と FetchOptions プロパティの例](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
   
--   [FilterColumn、FilterCriterion、FilterValue、SortColumn、および SortDirection プロパティの使用例](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [FilterColumn、FilterCriterion、FilterValue、SortColumn、SortDirection プロパティの例](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [ReadyState プロパティの使用例](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
+-   [ReadyState プロパティの例](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
   
--   [レコード セットと SourceRecordset プロパティの使用例](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
+-   [レコード セットと SourceRecordset プロパティの例](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
   
--   [サーバー プロパティの使用例](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
+-   [サーバー プロパティの例](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
   
--   [SQL プロパティの使用例](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
+-   [SQL プロパティの例](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
   
--   [プロパティの URL の例](../../../ado/reference/rds-api/url-property-example-vbscript.md)
+-   [URL プロパティの例](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

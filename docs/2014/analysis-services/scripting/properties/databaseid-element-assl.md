@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DatabaseID Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec07be8832ef048ac6ddc2b6cc92a945ba9e2c2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13d1969af83e4fa4bfba07eead0f822c5a81ad43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066932"
 ---
 # <a name="databaseid-element-assl"></a>DatabaseID 要素 (ASSL)
   識別、[データベース](../objects/database-element-assl.md)の行外に関連付けられている要素[バインド](../data-type/binding-data-type-assl.md)要素。  

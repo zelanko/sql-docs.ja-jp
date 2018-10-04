@@ -1,51 +1,48 @@
 ---
-title: SQL の文法 |Microsoft ドキュメント
+title: SQL の文法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3e31f53abf8d8788f719adc9e00e180ca7aa96f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818906"
 ---
-# <a name="sql-minimum-grammar"></a>SQL の文法
+# <a name="sql-minimum-grammar"></a>SQL の最小限の文法
 このセクションでは、ODBC ドライバーのサポートが必要な最低限の SQL 構文について説明します。 このセクションで説明する構文は、SQL 92 のエントリ レベルの構文のサブセットです。  
   
- アプリケーションでは、このセクションの内容の構文のいずれかを使用することができ、任意の ODBC 準拠のドライバーがその構文をサポートする確実に実行します。 このセクションではなく、sql-92 の追加の機能がサポートされているかどうかを決定するには、アプリケーションを呼び出す必要があります**SQLGetInfo** SQL_SQL_CONFORMANCE 情報の種類とします。 ドライバーは、任意の sql-92 準拠レベルを準拠していない、場合でも、アプリケーションはこのセクションで説明する構文を使用できます。 その一方で、ドライバーは、SQL 92 レベルに準拠している場合、そのレベルに含まれるすべての構文をサポートします。 ここで説明されている最低限の文法が最下位の sql-92 準拠レベルの純粋なサブセットであるためここに、構文を含めます。 アプリケーションは、サポートされている SQL 92 レベルを知っていれば後、かどうかより高いレベルの機能はサポートされて (存在する場合) を呼び出してを決定できる**SQLGetInfo**とその機能に対応する個々 の情報の種類。  
+ アプリケーションでは、このセクションでは、構文のいずれかを使用でき、任意の ODBC に準拠したドライバーがその構文をサポートするを保証します。 このセクションではなく、sql-92 の他の機能がサポートされているかどうかを判断する、アプリケーションを呼び出す必要があります**SQLGetInfo** SQL_SQL_CONFORMANCE 情報の種類にします。 ドライバーは、任意の sql-92 準拠のレベルに準拠していない、場合でも、アプリケーションはこのセクションで説明する構文を使用できます。 その一方で、ドライバーは、SQL 92 レベルに準拠している場合、そのレベルに含まれるすべての構文をサポートします。 ここで説明されている最小限の文法最下位の sql-92 準拠レベルの純粋なサブセットであるため、このセクションに、構文を含めます。 かどうかをより高度な機能はサポートされて (あれば) 呼び出すことによって判断できるアプリケーションでは、サポートされている SQL 92 レベルがわかると**SQLGetInfo**とその機能に対応する個々 の情報の種類。  
   
- 読み取り専用のデータ ソースでのみ動作するドライバーがデータの変更を処理するこのセクションの内容の文法の一部をサポートしていません。 アプリケーションでは、呼び出すことによっては、読み取り専用に、データ ソースかどうかを判断できます**SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 情報の種類とします。  
+ 読み取り専用データ ソースでのみ動作するドライバーが、データの変更を処理するこのセクションに含まれる文法の一部をサポートしていません。 アプリケーションを調べるかどうか、データ ソースは読み取り専用呼び出して**SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 情報の種類にします。  
   
 ## <a name="statement"></a>ステートメントから削除してください。  
- *作成テーブル ステートメント*:: =  
+ *create table ステートメント*:: =  
   
  CREATE TABLE*ベース テーブル名*  
   
  (*列識別子のデータ型*[*、列識別子のデータ型*]...)  
   
 > [!IMPORTANT]  
->  として、*データ型*で、*作成 table ステートメント*、アプリケーションは、によって返される結果セットの TYPE_NAME 列からデータ型を使用する必要があります**SQLGetTypeInfo**です。  
+>  として、*データ型*で、 *create table ステートメント*、アプリケーションがによって返される結果セットの TYPE_NAME 列からデータ型を使用する必要があります**SQLGetTypeInfo**します。  
   
  *delete ステートメント検索*:: =  
   
  DELETE FROM*テーブル名*[場所*検索条件*]  
   
- *drop table ステートメント*:: =  
+ *drop-テーブル-ステートメント*:: =  
   
  DROP TABLE*ベース テーブル名*  
   
@@ -57,13 +54,13 @@ ms.locfileid: "32909967"
   
  [すべて &#124; を選択します。DISTINCT]*選択リスト*  
   
- *テーブル参照一覧*  
+ *テーブルの参照リスト*  
   
  [場所*検索条件*]  
   
  [*order by*]  
   
- *ステートメント*:: =*作成 table ステートメント*  
+ *ステートメント*:: = *create table ステートメント*  
   
  &#124; です。*delete ステートメントの検索*  
   
@@ -77,7 +74,7 @@ ms.locfileid: "32909967"
   
  *update ステートメントの検索*  
   
- 更新*テーブル名*  
+ UPDATE*テーブル名*  
   
  設定*列識別子*= {*式*&#124; です。NULL}  
   

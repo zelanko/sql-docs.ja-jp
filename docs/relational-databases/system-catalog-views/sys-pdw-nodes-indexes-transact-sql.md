@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7db4fcae2e341731ff3e56b8b5a11101d7db5da5
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 1eb00d935eccd8f6af4d4ffef1c01fe42824f355
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36875020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856410"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -34,7 +30,7 @@ ms.locfileid: "36875020"
 |object_id|**int**|このインデックスが属しているオブジェクトの id です。||  
 |NAME|**sysname**|インデックスの名前です。 名前は、オブジェクト内でのみ一意です。 NULL = ヒープ||  
 |index_id|**int**|インデックスの id です。 index_id は、オブジェクト内でのみ一意です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス||  
-|type|**tinyint**|インデックスの種類:<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = の非クラスター化<br /><br /> 5 = クラスター化 xVelocity メモリ最適化列ストア インデックス|  
+|type|**tinyint**|インデックスの種類です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = の非クラスター化<br /><br /> 5 = クラスター化 xVelocity メモリ最適化列ストア インデックス|  
 |type_desc|**nvarchar(60)**|インデックスの種類の説明。<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> クラスター化列ストア||  
 |is_unique|**bit**|0 = インデックスは一意ではありません。|常に 0 です。|  
 |data_space_id|**int**|このインデックスのデータ領域の id です。 データ領域は、ファイル グループまたはパーティション構成です。<br /><br /> 0 = object_id には、テーブル値関数です。||  

@@ -1,29 +1,26 @@
 ---
-title: OpenSchema メソッドの例 (VB) |Microsoft ドキュメント
+title: OpenSchema メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2ebcb40cc91f93c7810223304e0dde2ed45a21a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b8889cf8cf24ddc9befd356af98d8c982eb562ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778990"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema メソッドの例 (VB)
 この例では、 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)内の各テーブルの種類と名前を表示するメソッド、 ***Pubs***データベース。  
@@ -82,7 +79,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- この例で TABLE_TYPE クエリの制約を指定する、 **OpenSchema**メソッド***条件***引数。 ビューのスキーマ情報のみがで指定された結果として、 ***Pubs***データベースが返されます。 例は、名前と各テーブルの型を表示します。  
+ この例で TABLE_TYPE クエリの制約を指定する、 **OpenSchema**メソッド***条件***引数。 ビューのスキーマ情報のみがで指定された結果として、 ***Pubs***データベースが返されます。 例では、名前と各テーブルの型が表示されます。  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

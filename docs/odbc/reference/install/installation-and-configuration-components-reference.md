@@ -1,31 +1,28 @@
 ---
-title: インストールと構成コンポーネント リファレンス |Microsoft ドキュメント
+title: インストールと構成コンポーネントのリファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab0815d1822894f4c5e64c4103a713d98d6654b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aad19b3cb15c02e5db8e2635641a88f298c898c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713170"
 ---
 # <a name="installation-and-configuration-components-reference"></a>インストールと構成コンポーネントのリファレンス
 > [!NOTE]  
->  Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに ODBC が含まれます。 以前のバージョンの Windows で ODBC を明示的にのみインストールしてください。  
+>  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
   
- 次のセクションでは、インストールし、ODBC の構成に使用されるコンポーネントについてを説明します。  
+ 次のセクションでは、コンポーネントをインストールして、ODBC の構成に使用に関する情報を提供します。  
   
 -   [管理プログラム](../../../odbc/reference/install/administration-program.md)  
   

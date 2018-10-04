@@ -1,35 +1,32 @@
 ---
-title: 失敗した更新を処理する |Microsoft ドキュメント
+title: 失敗した更新プログラムを扱う |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updates [ADO], dealing with failed updates
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45e5a20e0527f8b30035aef7ff86a90378039b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6ba4b4189691bf907b3ad67db91a8534268a8ec0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616430"
 ---
-# <a name="dealing-with-failed-updates"></a>失敗した更新を処理します。
-更新プログラムは、エラーの終了時にエラーを解決する方法、種類と、エラーの重大度、およびアプリケーションのロジックに依存します。 ただし、データベースは他のユーザーと共有される場合、一般的なエラーを行う前に、フィールドを変更他のユーザーです。 この種類のエラーは、競合と呼ばれます。 ADO では、このような状況を検出し、エラーを報告します。  
+# <a name="dealing-with-failed-updates"></a>失敗した更新の処理
+更新プログラムは、エラーの終了時に、種類と、エラーの重大度、およびアプリケーションのロジックに依存、エラーを解決する方法。 ただし、データベースは、他のユーザーと共有される場合、一般的なエラーは実行する前に、フィールドを変更他のユーザー。 この種のエラーは、競合と呼ばれます。 ADO では、このような状況を検出し、エラーを報告します。  
   
 ## <a name="remarks"></a>コメント  
- 更新エラーがある場合は、エラー処理ルーチンにトラップされます。 競合する行のみが表示されるように競合定数とレコード セットをフィルター処理します。 この例では、エラーの解決方法は、単表示、著者の姓と名 (au_fname および au_lname)。  
+ 更新エラーがある場合は、エラー処理ルーチンにトラップされます。 競合する行のみが表示されるように、競合の定数を持つレコード セットをフィルター処理します。 この例で、エラーの解決方法は単なる作成者の印刷 (au_fname および au_lname) は、最初と最後の名前。  
   
- 更新の競合ユーザーに警告するコードは、次のようになります。  
+ 更新の競合をユーザーにアラートを生成するコードは、次のようになります。  
   
 ```  
 objRs.Filter = adFilterConflictingRecords  

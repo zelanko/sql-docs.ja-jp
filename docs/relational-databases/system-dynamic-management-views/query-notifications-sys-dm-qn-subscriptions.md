@@ -1,12 +1,10 @@
 ---
-title: sys.dm_qn_subscriptions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_qn_subscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -18,30 +16,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834710"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>クエリ通知 - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバーのアクティブ クエリ通知サブスクリプションに関する情報を返します。 このビューは、サーバーまたは指定したデータベース内のアクティブなサブスクリプションを確認したり、指定したサーバー プリンシパルを確認する際に使用できます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|サブスクリプションの ID。|  
 |**database_id**|**int**|通知クエリが実行されたデータベースの ID。 このデータベースには、サブスクリプションに関連する情報が格納されています。|  
 |**sid**|**varbinary(85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
 |**object_id**|**int**|サブスクリプションのパラメーターに関する情報を格納している内部テーブルの ID。|  
 |**created**|**datetime**|サブスクリプションを作成した日時。|  
-|**timeout**|**int**|サブスクリプションのタイムアウト値 (秒単位)。 この時間が経過した後、通知が行われます。<br /><br /> 注意: 実際の実行時間は、指定されたタイムアウトを超えることがあります。指定したタイムアウト時刻が経過してからサブスクリプションが起動するまでの間に、サブスクリプションが無効になる変更が発生した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの変更時に必ず通知が行われます。|  
-|**ステータス**|**int**|サブスクリプションの状態を示します。 コードの一覧については、「解説」の表を参照してください。|  
+|**timeout**|**int**|サブスクリプションのタイムアウト値 (秒単位)。 この時間が経過した後、通知が行われます。<br /><br /> 注: 実際の実行時間は、指定されたタイムアウトを超えることがあります。指定したタイムアウト時刻が経過してからサブスクリプションが起動するまでの間に、サブスクリプションが無効になる変更が発生した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの変更時に必ず通知が行われます。|  
+|**status**|**int**|サブスクリプションの状態を示します。 コードの一覧については、「解説」の表を参照してください。|  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップの基数  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 05/23/2018
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多対一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多対一|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  状態コードが 0 の場合は、未定義の状態であることを示します。  
   
  次の状態コードは、変更によりサブスクリプションが起動したことを示します。  
@@ -58,7 +56,7 @@ ms.lasthandoff: 05/23/2018
 |コード|マイナー状態|Info|  
 |----------|------------------|----------|  
 |65798|データが変更されたため、サブスクリプションが起動しました|挿入によってサブスクリプションがトリガーされました|  
-|65799|データが変更されたため、サブスクリプションが起動しました|Del|  
+|65799|データが変更されたため、サブスクリプションが起動しました|DELETE|  
 |65800|データが変更されたため、サブスクリプションが起動しました|Update|  
 |65801|データが変更されたため、サブスクリプションが起動しました|Merge|  
 |65802|データが変更されたため、サブスクリプションが起動しました|テーブルを切り捨てる|  
@@ -93,7 +91,7 @@ ms.lasthandoff: 05/23/2018
 |199168|サブスクリプションがアクティブです|未定義の info モード|  
 |199424|サブスクリプションが初期化されていますが、まだアクティブではありません|未定義の info モード|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 > [!NOTE]  
@@ -135,7 +133,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [通知関連の動的管理ビューに対してクエリ&#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [通知関連の動的管理ビューに対してクエリを&#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

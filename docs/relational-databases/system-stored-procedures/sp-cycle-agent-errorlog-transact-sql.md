@@ -1,14 +1,11 @@
 ---
-title: sp_cycle_agent_errorlog (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_cycle_agent_errorlog (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cycle_agent_errorlog
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_agent_errorlog
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74b0bc568dfa883b6b2eb4c6b19fcf3a38512e9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dfb1f3ef9dc8bdac81ed7c3a3a490ca91f73ff23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779240"
 ---
 # <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +45,12 @@ sp_cycle_agent_errorlog
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
- たびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントを起動すると、現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント エラー ログの名前を変更する**SQLAgent.1**です。**SQLAgent.1**なります**SQLAgent.2**、 **SQLAgent.2**なります**SQLAgent.3**のようにします。 **sp_cycle_agent_errorlog**を停止してから、サーバーを起動しないで、エラー ログ ファイルを使い回すことができます。  
+## <a name="remarks"></a>コメント  
+ 毎回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントを起動すると、現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント エラー ログの名前を変更する**SQLAgent.1**;**SQLAgent.1**なります**SQLAgent.2**、 **SQLAgent.2**なります**SQLAgent.3**など。 **sp_cycle_agent_errorlog**を停止して、サーバーを起動せず、エラー ログ ファイルを循環することができます。  
   
  このストアド プロシージャを実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  実行権限**sp_cycle_agent_errorlog**のメンバーに制限されます、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

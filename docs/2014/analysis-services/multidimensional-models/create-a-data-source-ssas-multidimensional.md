@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], creating
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 60
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049492"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元モデルでは、データ ソース オブジェクトが、処理 (またはインポート) するデータを持つデータ ソースへの接続を表します。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
@@ -109,7 +106,7 @@ ms.locfileid: "37310852"
   
          データ ソース ウィザードの **[接続の定義方法を選択します]** ページにある **[データ接続]** ペインに新しい接続が表示されます。  
   
-6.  [**次へ**] をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 7.  **[権限借用情報]** で、Analysis Services が外部データ ソースに接続する際に使用する Windows 資格情報またはユーザー ID を指定します。 データベース認証を使用する場合、接続でこれらの設定は無視されます。  
   
@@ -121,7 +118,7 @@ ms.locfileid: "37310852"
   
      指定するアカウントは、データ ソースに対する読み取り権限を持っている必要があります。  
   
-8.  [**次へ**] をクリックします。  **[ウィザードの完了]** で、データ ソースの名前を入力するか、既定の名前を使用します。 既定の名前は、接続で指定されたデータベース名になっています。 この新しいデータ ソースの接続文字列が **[プレビュー]** ペインに表示されます。  
+8.  **[次へ]** をクリックします。  **[ウィザードの完了]** で、データ ソースの名前を入力するか、既定の名前を使用します。 既定の名前は、接続で指定されたデータベース名になっています。 この新しいデータ ソースの接続文字列が **[プレビュー]** ペインに表示されます。  
   
 9. **[完了]** をクリックします。  ソリューション エクスプローラーの **[データ ソース]** フォルダーに、新しいデータ ソースが表示されます。  
   

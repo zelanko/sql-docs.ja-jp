@@ -1,43 +1,40 @@
 ---
-title: 外部結合エスケープ シーケンス |Microsoft ドキュメント
+title: 外部結合エスケープ シーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af6a98b3e1a7848fa242dfceb890c472e1d16f74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907527"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817675"
 ---
-# <a name="outer-join-escape-sequence"></a>外部結合エスケープ シーケンス
+# <a name="outer-join-escape-sequence"></a>外部結合のエスケープ シーケンス
 ODBC では、外部結合のエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
   
 ```  
 {oj outer-join}  
 ```  
   
-## <a name="remarks"></a>解説  
- BNF 表記で、構文のとおりです。  
+## <a name="remarks"></a>コメント  
+ BNF 表記では、構文がとおりです。  
   
- *ODBC outer で結合のエスケープ*:: =  
+ *ODBC の外部の結合のエスケープ*:: =  
   
- *ODBC esc イニシエーター* oj*外部結合 ODBC esc ターミネータ*  
+ *ODBC のイニシエーター esc* oj*外部結合 ODBC esc 終端*  
   
  *外部結合*:: =*テーブル名*[*相関名*] {左&#124;右&#124;完全}  
   
@@ -49,8 +46,8 @@ ODBC では、外部結合のエスケープ シーケンスを使用します�
   
  *相関名*:: =*ユーザー定義名*  
   
- *ODBC esc イニシエーター* :: = {  
+ *ODBC のイニシエーター esc* :: = {  
   
  *Esc 終端の ODBC* :: =}  
   
- アプリケーションが呼び出す調べるには、このステートメントのどの部分がサポートされている、 **SQLGetInfo** SQL_OJ_CAPABILITIES 情報の種類とします。 外部結合の*検索条件*間、指定された結合条件のみを含める必要があります*テーブル名*です。
+ このステートメントのどの部分がサポートされているかを判断するアプリケーションを呼び出す**SQLGetInfo** SQL_OJ_CAPABILITIES 情報の種類にします。 外部結合の*検索条件*間、指定された結合条件のみを含める必要があります*テーブル名*します。

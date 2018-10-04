@@ -1,35 +1,32 @@
 ---
-title: サーバー プロパティの例 (VBScript) |Microsoft ドキュメント
+title: サーバー プロパティの例 (VBScript) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d50633d3214f69a46b7de0112a0f3548d622db7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2ccb6bd2b61350c71f44b1580b790ec66cdfff89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288831"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599741"
 ---
-# <a name="server-property-example-vbscript"></a>サーバー プロパティの例 (VBScript)
+# <a name="server-property-example-vbscript"></a>Server プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- 次のコードを設定する方法を示しています、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)設計でパラメーター時間し、SQLOLEDB プロバイダーを使用してデータに対応するコントロールにバインドします。 切り取りと通常 ASP ドキュメントにこのコードを貼り付けるし、名前を付けます**ServerDesignVBS.asp**です。 ASP スクリプトは、サーバーで識別されます。  
+ 次のコードを設定する方法を示しています、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)デザインにパラメーターし、SQLOLEDB プロバイダーを使用してデータ対応のコントロールにバインドします。 標準の ASP 文書にこのコードを貼り付けしてという名前を付けます**ServerDesignVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -93,7 +90,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- 次の例は、のために必要なパラメーターを設定する方法を示します **.rds ですDataControl**実行時にします。 この例をテストして、通常の ASP ドキュメントにこのコードを貼り付けますを切り取ってという名前を付けます**ServerRuntimeVBS.asp**です。 ASP スクリプトは、サーバーで識別されます。  
+ 次の例は、の必要なパラメーターを設定する方法を示します**rds.DataControl**実行時にします。 この例をテストする切り取りと通常 ASP ドキュメントにこのコードを貼り付けるし、名前を付けます**ServerRuntimeVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  

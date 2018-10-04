@@ -3,8 +3,6 @@ title: WideWorldImporters データ - SQL サンプル データベースの生�
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -12,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ace1f771ef3a77a6f7db0072442affe181d7872
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b0fd90b553aaefad61d9285f8630650b2b38763d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810540"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters データ生成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,39 +1,36 @@
 ---
-title: Visual FoxPro データ ソースの削除 |Microsoft ドキュメント
+title: Visual FoxPro データ ソースの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing data sources [ODBC], Visual FoxPro
 - Visual FoxPro data source [ODBC], deleting
 - deleting data sources [ODBC], Visual FoxPro
 ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23ac02ffbe3f241f3abdd5b785bd53b4d33e2d4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9578e5a1b894078b3dfdd33b81893780afc804b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899424"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606130"
 ---
-# <a name="deleting-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースを削除します。
+# <a name="deleting-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースの削除
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースを削除するには  
   
-1.  Windows 2000 を実行するコンピューターで Windows のコントロール パネルを開くし、管理ツール をダブルクリックします。  
+1.  Windows 2000 を実行するコンピューターで Windows のコントロール パネルを開きし、管理ツールをダブルクリックします。  
   
-2.  ODBC データ ソース アドミニストレーター ダイアログ ボックスを開くデータ ソース (ODBC) をダブルクリックします。 このアイコンは、Visual FoxPro ODBC ドライバーまたは ODBC ドライバー ソフトウェアをインストールした後に使用できます。  
+2.  ODBC データ ソース アドミニストレーター ダイアログ ボックスを開きますデータ ソース (ODBC) をダブルクリックします。 このアイコンは、Visual FoxPro ODBC ドライバーまたは ODBC ドライバー ソフトウェアをインストールした後、使用できます。  
   
     > [!NOTE]  
-    >  以前のバージョンの Windows を実行している場合は、Windows のコントロール パネルを開き 32 ビット ODBC と ODBC を開くには、ODBC データ ソース アドミニストレーター ダイアログ ボックスをダブルクリックします。  
+    >  以前のバージョンの Windows を実行している場合は、Windows コントロール パネルを開き 32 ビット ODBC と ODBC、ODBC データ ソース アドミニストレーター ダイアログ ボックスを開くをダブルクリックします。  
   
 3.  ユーザー DSN またはシステム DSN タブで、削除するデータ ソースの名前を選択します。  
   

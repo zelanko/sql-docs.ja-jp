@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], errors
 - events [Reporting Services]
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0a09771deaff3f6996250840920675159209daf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c3a0dc2db7de79eb7fac8a54fa437ee66f1d365
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067812"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>エラーとイベントのリファレンス (Reporting Services)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のエラーとイベントについて説明します。 エラー情報は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のログ ファイルにも記録されます。 使用可能なログ ファイルとログを表示する方法の種類の詳細については、次を参照してください。 [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)します。  
@@ -44,7 +41,7 @@ ms.locfileid: "37255384"
 |109|[情報]|管理|レポート サーバー<br /><br /> レポート マネージャー|構成ファイルが変更されています。 詳細については、次を参照してください。 [Reporting Services 構成ファイル](../report-server/reporting-services-configuration-files.md)します。|  
 |110|警告|管理|レポート サーバー<br /><br /> レポート マネージャー|1 つの構成ファイルの設定が変更され、設定が無効になっています。 代わりに既定値が使用されます。 詳細については、次を参照してください。 [Reporting Services 構成ファイル](../report-server/reporting-services-configuration-files.md)します。|  
 |111|[エラー]|ログ記録|レポート サーバー<br /><br /> レポート マネージャー|*\<Source>* はトレース ログを作成できません。 詳細については、「 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)」を参照してください。|  
-|112|警告|Security|レポート サーバー|レポート サーバーは、サービス拒否攻撃 (DoS) の可能性を検出しました。 詳細については、次を参照してください。 [Reporting Services のセキュリティと保護](../security/reporting-services-security-and-protection.md)します。|  
+|112|警告|セキュリティ|レポート サーバー|レポート サーバーは、サービス拒否攻撃 (DoS) の可能性を検出しました。 詳細については、次を参照してください。 [Reporting Services のセキュリティと保護](../security/reporting-services-security-and-protection.md)します。|  
 |113|[エラー]|ログ記録|レポート サーバー|レポート サーバーでは、パフォーマンス カウンターを作成できません。|  
 |114|[エラー]|起動/シャットダウン|レポート マネージャー|レポート マネージャーは ReportServer サービスに接続できません。|  
 |115|警告|スケジューリング|スケジュールおよび配信のプロセッサ|SQL Server エージェント キューの定期タスクは、変更または削除されました。|  
@@ -63,8 +60,8 @@ ms.locfileid: "37255384"
 |128|[エラー]|アクティブ化|レポート サーバー|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのエディションが異なる場合は一緒に使用することはできません。|  
 |129|[エラー]|管理|レポート サーバー<br /><br /> スケジュールおよび配信のプロセッサ|暗号化された構成ファイルの設定の暗号化を解除できません。|  
 |130|[エラー]|管理|レポート サーバー<br /><br /> スケジュールおよび配信のプロセッサ|*\<Source>* は構成ファイルを見つけられません。 レポート サーバーでは、構成ファイルが必要です。|  
-|131|[エラー]|Security|レポート サーバー<br /><br /> スケジュールおよび配信のプロセッサ|暗号化されたユーザー データ値の暗号化を解除できませんでした。|  
-|132|[エラー]|Security|レポート サーバー|ユーザー データの暗号化中にエラーが発生しました。 値は保存されません。|  
+|131|[エラー]|セキュリティ|レポート サーバー<br /><br /> スケジュールおよび配信のプロセッサ|暗号化されたユーザー データ値の暗号化を解除できませんでした。|  
+|132|[エラー]|セキュリティ|レポート サーバー|ユーザー データの暗号化中にエラーが発生しました。 値は保存されません。|  
 |133|[エラー]|管理|レポート サーバー<br /><br /> レポート マネージャー<br /><br /> スケジュールおよび配信のプロセッサ|構成ファイルを読み込めませんでした。 このエラーは、XML が無効な場合に発生することがあります。|  
 |134|[エラー]|管理|レポート サーバー|レポート サーバーでは、構成ファイルの設定の値を暗号化できませんでした。|  
   

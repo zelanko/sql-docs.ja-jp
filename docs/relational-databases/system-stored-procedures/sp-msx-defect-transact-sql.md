@@ -1,14 +1,11 @@
 ---
-title: sp_msx_defect (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_msx_defect (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_defect
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffce49260f39c04665ec570e92a37e1783077dbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843350"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +44,9 @@ sp_msx_defect [@forced_defection =] forced_defection
   
 ## <a name="arguments"></a>引数  
  [  **@forced_defection =**] *forced_defection*  
- 強制的に、マスター SQLServerAgent が、致命的に破損した完全に失われた場合に発生する参加解除するかどうかを示す**msdb**データベース、または いいえ**msdb**データベースのバックアップ。 *forced_defection*は**ビット**、既定値は**0**、強制的な参加解除が発生しないことを示します。 値**1**強制的に参加解除します。  
+ 強制的に、マスター SQLServerAgent が、致命的に破損した完全に失われた場合に発生する参加解除するかどうかを指定します**msdb**データベース、または いいえ**msdb**データベースのバックアップ。 *forced_defection*は**ビット**、既定値は**0**、強制的な参加解除が発生しないことを示します。 値**1**強制的に参加解除します。  
   
- 実行することによって、参加解除の強制後**sp_msx_defect**のメンバー、 **sysadmin**マスター sqlserveragent の固定サーバー ロールは、参加解除を完了するには、次のコマンドを実行する必要があります。  
+ 強制的に実行することによって、参加解除した後は**sp_msx_defect**のメンバー、 **sysadmin**マスター sqlserveragent の固定サーバー ロールは、参加解除を完了するには、次のコマンドを実行する必要があります。  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  
@@ -62,10 +58,10 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ときに**sp_msx_defect**正常に完了すると、メッセージが返されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
 ## <a name="see-also"></a>参照  

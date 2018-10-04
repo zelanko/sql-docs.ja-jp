@@ -1,31 +1,28 @@
 ---
-title: 予約済みキーワード |Microsoft ドキュメント
+title: 予約済みキーワード |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b791ea7d4430e4f594079231926c41e02de1ed4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626340"
 ---
 # <a name="reserved-keywords"></a>予約済みキーワード
-次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、SQL 文法を制約はありません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保する、アプリケーションはこれらのキーワードのいずれかの方法を避ける必要があります。 #**定義**SQL_ODBC_KEYWORDS の値には、これらのキーワードのコンマ区切りの一覧が含まれています。  
+次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語 SQL 文法の制約はありません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保する、アプリケーションはこれらのキーワードのいずれかを使用を避ける必要があります。 #**定義**SQL_ODBC_KEYWORDS 値には、これらのキーワードのコンマ区切りの一覧が含まれています。  
   
 |||  
 |-|-|  
@@ -36,14 +33,14 @@ ms.locfileid: "32912826"
 |ALL|LANGUAGE|  
 |ALLOCATE|LAST|  
 |ALTER|LEADING|  
-|[AND]|[LEFT]|  
+|AND|[LEFT]|  
 |ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
 |ASC|[LOWER]|  
 |ASSERTION|MATCH|  
-|AT|[MAX]|  
-|AUTHORIZATION|[MIN]|  
+|AT|MAX|  
+|AUTHORIZATION|MIN|  
 |AVG|[MINUTE]|  
 |BEGIN|MODULE|  
 |BETWEEN|[MONTH]|  
@@ -54,7 +51,7 @@ ms.locfileid: "32912826"
 |CASCADE|NEXT|  
 |CASCADED|いいえ|  
 |CASE|なし|  
-|CAST|[NOT]|  
+|CAST|NOT|  
 |CATALOG|NULL|  
 |CHAR|NULLIF|  
 |CHAR_LENGTH|NUMERIC|  
@@ -64,7 +61,7 @@ ms.locfileid: "32912826"
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|または|  
+|COLLATION|OR|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
@@ -74,7 +71,7 @@ ms.locfileid: "32912826"
 |CONTINUE|PASCAL 形式|  
 |CONVERT|位置|  
 |CORRESPONDING|PRECISION|  
-|[COUNT]|PREPARE|  
+|COUNT|PREPARE|  
 |CREATE|PRESERVE|  
 |CROSS|PRIMARY|  
 |CURRENT|PRIOR|  
@@ -82,7 +79,7 @@ ms.locfileid: "32912826"
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |[DATE]|REFERENCES|  
 |[DAY]|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -92,7 +89,7 @@ ms.locfileid: "32912826"
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|[SECOND]|  
+|Del|[SECOND]|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -109,13 +106,13 @@ ms.locfileid: "32912826"
 |EXCEPT|SQLSTATE|  
 |EXCEPTION|SQLWARNING|  
 |EXEC|[SUBSTRING]|  
-|EXECUTE|[SUM]|  
+|EXECUTE|SUM|  
 |EXISTS|SYSTEM_USER|  
 |EXTERNAL|TABLE|  
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |[FLOAT]|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -131,9 +128,9 @@ ms.locfileid: "32912826"
 |GROUP|UPDATE|  
 |HAVING|[UPPER]|  
 |[HOUR]|USAGE|  
-|IDENTITY|USER|  
+|IDENTITY|User|  
 |IMMEDIATE|USING|  
-|IN|VALUE|  
+|IN|Value|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -141,7 +138,7 @@ ms.locfileid: "32912826"
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|INSERT|のすべてのメンションを|  
+|INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
 |INTERSECT|[YEAR]|  

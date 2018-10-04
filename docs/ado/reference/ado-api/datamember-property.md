@@ -1,13 +1,11 @@
 ---
-title: DataMember プロパティ |Microsoft ドキュメント
+title: DataMember プロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - DataMember property
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d194cea2dd1a7bbabf8acd2e9d89945772eddd31
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7a1bb2d55fbf4e8d2030c612a1d000b93ca1110
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603710"
 ---
 # <a name="datamember-property"></a>DataMember プロパティ
-取得されるデータ メンバーの名前を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)によって参照されている、[データソース](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティです。  
+取得するデータ メンバーの名前を示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)によって参照される、 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティ。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**文字列**値。 名前は、大文字と小文字が区別されません。  
+ 設定または取得を**文字列**値。 名前は大文字小文字を区別します。  
   
 ## <a name="remarks"></a>コメント  
- このプロパティは、データ環境とデータ バインド コントロールを作成する使用されます。 として表されるオブジェクト (データ メンバー) をという名前を含むデータ (データ ソース) のコレクションを管理、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
+ このプロパティは、データ環境でのデータ バインド コントロールの作成に使用されます。 データ環境の保持を含むデータ (データ ソース) のコレクションの名前付きのオブジェクト (データ メンバー) として表される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
   
- **DataMember**と**データソース**プロパティを同時に使用する必要があります。  
+ **DataMember**と**DataSource**プロパティを一緒に使用する必要があります。  
   
- **DataMember**プロパティで指定されたどのオブジェクトを決定する、**データソース**プロパティとして表されます、 **Recordset**オブジェクト。 **Recordset**オブジェクトは、このプロパティを設定する前に閉じる必要があります。 場合、エラーが生成、 **DataMember**する前にプロパティが設定されていない、**データソース**プロパティ、または、 **DataMember**名がで指定されたオブジェクトによって認識されていません、**データソース**プロパティです。  
+ **DataMember**プロパティで指定されたどのオブジェクトを決定する、 **DataSource**プロパティとして表されます、**レコード セット**オブジェクト。 **Recordset**オブジェクトは、このプロパティを設定する前に閉じる必要があります。 場合にエラーが生成されます、 **DataMember**する前にプロパティが設定されていない、 **DataSource**プロパティ、または、 **DataMember**で指定されたオブジェクトで名前が認識されない、**DataSource**プロパティ。  
   
 ## <a name="usage"></a>使用方法  
   

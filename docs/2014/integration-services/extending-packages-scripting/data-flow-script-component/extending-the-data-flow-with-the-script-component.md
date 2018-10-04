@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Script component [Integration Services]
 - data flow [Integration Services], components
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 393c4c4ffb5882b982f3a696c1fa4e625ff5b1ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0475bbe29899e6e282104610cdc2a6c96701ff82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071862"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>スクリプト コンポーネントによるデータ フローの拡張
   スクリプト コンポーネントを使用すると、カスタム コードを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述し、パッケージの実行時にコンパイル、実行することにより、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのデータ フロー処理能力を拡張できます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換元、変換、変換先を使用するだけでは完全に要求を満たせない場合でも、スクリプト コンポーネントを使用すれば、カスタムのデータ フロー変換元、変換、変換先を容易に開発できます。 コンポーネントに必要な入力および出力を設定すれば、必要なインフラストラクチャ コードが自動生成されるので、カスタム処理を実行するために必要なコードの記述に集中できます。  

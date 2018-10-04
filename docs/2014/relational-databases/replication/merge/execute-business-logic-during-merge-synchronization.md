@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - custom error resolution [SQL Server replication]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 - business logic handlers [SQL Server replication]
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55498ff8f1d9e5e82cd8eb93e6fd8fd8fc45a1fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fafdf2b889cd978a65f8bce2e087b6121bfb88c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050530"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>マージ同期中のビジネス ロジックの実行
   ビジネス ロジック ハンドラー フレームワークを使用すると、マネージド コードのアセンブリを記述して、マージ同期処理中に呼び出すことができます。 このアセンブリには、データの変更、競合、およびエラーなど、同期中に発生するさまざまな状況に対処するためのビジネス ロジックを記述できます。 ビジネス ロジック ハンドラー フレームワークには単純なプログラミング モデルが用意されており、マージ処理によってアセンブリに提供されるデータは ADO.NET データセットの形式になっています。このため、専用インターフェイスについての知識ではなく ADO.NET についての知識を活用できます。 ビジネス ロジック ハンドラーのプログラミングの詳細については、以下のトピックを参照してください。  

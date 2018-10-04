@@ -1,14 +1,11 @@
 ---
-title: sp_help_notification (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6499d3830859063af74417c84c7fe9e1855b3313
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261048"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833580"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,53 +46,53 @@ sp_help_notification
   
 ## <a name="arguments"></a>引数  
  [ **@object_type =**] **'***object_type***'**  
- 返される情報の種類を指定します。 *object_type*は**char (9)**、既定値はありません。 *object_type*指定されたオペレーター名に割り当てられている警告の一覧を表示するアラートを指定できます *、* または演算子では、指定された警告名を担当する演算子の一覧を表示する*です。*  
+ 返される情報の種類を指定します。 *object_type*は**char (9)**、既定値はありません。 *object_type*指定されたオペレーター名に割り当てられているアラートを一覧表示する、アラートは、*、* または演算子では、指定された警告名を担当する演算子の一覧を表示する*します。*  
   
  [  **@name =**] **'***名前***'**  
- 演算子名 (場合*object_type* is 演算子) または警告の名前 (場合*object_type*アラートは、)。 *名前*は**sysname**、既定値はありません。  
+ オペレーター名 (場合*object_type* is 演算子) または警告の名前 (場合*object_type* alerts)。 *名前*は**sysname**、既定値はありません。  
   
  [ **@enum_type =**] **'***enum_type***'**  
- *Object_type*返される情報です。 *enum_type*は「ACTUAL」は、ほとんどの場合。 *enum_type*は**char (10)**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+ *Object_type*返される情報。 *enum_type*は「ACTUAL」は、ほとんどの場合。 *enum_type*は**char (10)**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|ACTUAL|だけを表示、 *object_types*に関連付けられている*名前*です。|  
-|ALL|すべてを一覧表示、*object_types*に関連付けられていないものも含め*名前*です。|  
-|TARGET|だけを表示、 *object_types* 、指定された照合*target_name*との関連付けに関係なく、*名前*です。|  
+|ACTUAL|だけを表示、 *object_types*に関連付けられている*名前*します。|  
+|ALL|すべてを一覧表示、*object_types*に関連付けられていないものも含め*名前*します。|  
+|TARGET|だけを表示、 *object_types* 、指定された照合*target_name*との関連付けに関係なく、*名前*します。|  
   
  [  **@notification_method =**] *notification_method*  
  返される通知方法の列を表す数値を指定します。 *notification_method*は**tinyint**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**1**|電子メール: だけを返す、 **use_email**列です。|  
-|**2**|ポケットベル: だけを返す、 **use_pager**列です。|  
-|**4**|NetSend: だけを返す、 **use_netsend**列です。|  
+|**1**|電子メール: だけを返す、 **use_email**列。|  
+|**2**|ポケットベル: だけを返す、 **use_pager**列。|  
+|**4**|NetSend: だけを返す、 **use_netsend**列。|  
 |**7**|すべて: すべての列を返します。|  
   
  [ **@target_name =**] **'***target_name***'**  
- 検索する警告の名前 (場合*object_type*アラートは、) を検索するには、するオペレーター名を指定 (場合*object_type* is 演算子)。 *target_name*場合にのみ必要*enum_type*ターゲットです。 *target_name*は**sysname**、既定値は NULL です。  
+ 検索するアラートの名前 (場合*object_type*アラートは、) を検索するオペレーター名 (場合*object_type* is 演算子)。 *target_name*場合にのみ必要*enum_type*はターゲットです。 *target_name*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-valves"></a>戻り値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 場合*object_type*は**アラート**、結果セットには、指定した演算子のすべてのアラートが一覧表示します。  
+ 場合*object_type*は**アラート**、結果セットには、特定の演算子のすべてのアラートが表示されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警告識別番号。|  
 |**alert_name**|**sysname**|警告名。|  
-|**use_email**|**int**|電子メールを使用して、オペレーターに通知します。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
+|**use_email**|**int**|オペレーターに通知する電子メールを使用するとします。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**use_pager**|**int**|ポケットベルを使用して、オペレーターに通知します。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**use_netsend**|**int**|オペレーターへの通知にネットワーク ポップアップを使用するかどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**has_email**|**int**|この警告で送信する電子メール通知の数。|  
 |**has_pager**|**int**|この警告で送信するポケットベル通知の数。|  
-|**has_netsend**|**int**|数**net send**この警告で送信する通知。|  
+|**has_netsend**|**int**|数**net send**通知がこの警告で送信します。|  
   
- 場合**object_type**は**演算子**、結果セットには、指定された警告のすべての演算子が一覧表示します。  
+ 場合**object_type**は**演算子**、結果セットは指定された警告のすべての演算子の一覧です。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|オペレーター識別番号。|  
 |**operator_name**|**sysname**|オペレーター名。|  
@@ -107,10 +103,10 @@ sp_help_notification
 |**has_pager**|**int**|オペレーターがポケットベル アドレスを持っているかどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**has_netsend**|**int**|オペレーターに net send 通知が構成されているかどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このストアド プロシージャを実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -131,7 +127,7 @@ GO
 ```  
   
 ### <a name="b-listing-operators-for-a-specific-alert"></a>B. 特定の警告の送信先となるオペレーターを表示する  
- 次の例は、任意の種類の通知を受信するすべてのオペレーターを返して、`Test Alert`アラートです。  
+ 次の例は、任意の種類の通知を受信するすべてのオペレーターを返して、`Test Alert`アラート。  
   
 ```  
 USE msdb ;  

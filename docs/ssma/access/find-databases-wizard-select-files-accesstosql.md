@@ -1,62 +1,56 @@
 ---
-title: データベースのウィザード (ファイル) を検索 (AccessToSQL) |Microsoft ドキュメント
+title: データベースのウィザード (ファイルの選択) を検索 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: da8c4f3dbdfb374defe0144ef3accb004ee70b77
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3a8cbc5295f34e2b839598d4f459d6346f563a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780430"
 ---
-# <a name="find-databases-wizard-select-files-accesstosql"></a>データベースのウィザード (ファイル) を検索 (AccessToSQL)
-ファイルの選択 ウィザードのページ、検索データベースは、検索中に検出されたファイルを示します。 SSMA に追加するファイルを選択するには、ファイル名を含む行を選択します。 ファイルの選択が完了したらをクリックして**次**選択の確認 ページを表示します。  
+# <a name="find-databases-wizard-select-files-accesstosql"></a>データベースのウィザード (ファイルの選択) を検索 (AccessToSQL)
+データベースの検出ウィザードのファイルの選択 ページには、検索中に検出されたファイルが一覧表示されます。 SSMA を追加するファイルを選択するには、ファイル名を含む行を選択します。 ファイルの選択が完了したら、クリックして**次**選択の確認 ページを表示します。  
   
-ファイルのウィザードのネットワークのスキャンを開くには、**ファイル** メニューのをクリックして**検索データベース**です。  
+ファイル ウィザード のネットワークのスキャンを開くには、**ファイル** メニューのをクリックして**検索データベース**します。  
   
-SSMA に追加するファイルを選択するには、ファイル名の横にあるチェック ボックスを選択します。 ファイルの選択が完了したらをクリックして**次**完了 ページを表示します。  
+SSMA を追加するファイルを選択するには、ファイル名の横にあるチェック ボックスを選択します。 ファイルの選択が完了したら、クリックして**次**完了 ページを表示します。  
   
 ## <a name="options"></a>および  
 **[すべて選択] します。**  
-リスト内のすべてのデータベースを選択するには、このチェック ボックスを選択します。  
+一覧ですべてのデータベースを選択するには、このチェック ボックスを選択します。  
   
 **すべて選択解除します。**  
 一覧のすべてのデータベースの選択を解除するには、このチェック ボックスを選択します。  
   
 **[ファイル名]**  
-SSMA に追加する Access データベース ファイルの名前を示します。  
+SSMA を追加する Access データベース ファイルの名前が表示されます。  
   
 **[所有者]**  
 ファイルの所有者を表示します。  
   
 **[ファイル パス]**  
-Access データベース ファイルのパスを表示します。  
+Access データベース ファイルのパスが表示されます。  
   
-**[サイズ]**  
+**Size**  
 (バイト単位)、データベースのサイズ。  
   
 **Created**  
 日付と、データベースが作成された時刻。  
   
 **[更新日時]**  
-日付と、データベースが最後に更新された時刻。  
+日付と、データベースが最後に更新されました。  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ユーザー インターフェイスの Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

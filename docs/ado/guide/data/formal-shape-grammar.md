@@ -1,31 +1,28 @@
 ---
-title: 図形の正式な文法 |Microsoft ドキュメント
+title: Shape の正式文法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bb375b0b580bec75b1994a549a1a5815f4e34ec
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270371"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789270"
 ---
-# <a name="formal-shape-grammar"></a>図形の正式な文法
-これは、正式な文法任意図形のコマンドを作成するためです。  
+# <a name="formal-shape-grammar"></a>Shape の正式文法
+これは、任意図形のコマンドを作成するための正式な文法です。  
   
 -   必要な文法的な用語では、山かっこ ("<>") で区切られたテキスト文字列を示します。  
   
@@ -33,15 +30,15 @@ ms.locfileid: "35270371"
   
 -   代替手段は、縦棒で示されます ("&#124;") です。  
   
--   繰り返しの代替手段は、省略記号 ([...]) によって示されます。  
+-   繰り返しの代替手段は、省略記号 (「...」) によって示されます。  
   
 -   *アルファ*英文字の文字列を示します。  
   
--   *桁*数値の文字列を示します。  
+-   *数字*の数値の文字列を示します。  
   
--   *Unicode 桁*unicode の数字の文字列を示します。  
+-   *Unicode の数字*unicode の数字の文字列を示します。  
   
- その他のすべての用語は、リテラルを示します。  
+ その他のすべての用語は、リテラルです。  
   
 |項目|定義|  
 |----------|----------------|  
@@ -67,15 +64,15 @@ ms.locfileid: "35270371"
 |\<name>|アルファ [alpha &#124; 数字 &#124; 以外の場合は _ &#124; # &#124; : &#124;...]|  
 |\<number>|[数字] の数字|  
 |\<new-exp>|NEW \<field-type> [(\<number> [, \<number>])]|  
-|\<field-type>|OLE DB または ADO データ型です。|  
+|\<field-type>|OLE DB または ADO データ型。|  
 |\<string>|unicode char [unicode 文字...]|  
-|\<expression>|アプリケーションの式のオペランドが同じ行の場合は、他の非計算列用の Visual Basic の場合。|  
+|\<expression>|アプリケーションの式オペランドが同じ行の場合は、他の非計算列用の Visual Basic の場合。|  
   
 ## <a name="see-also"></a>参照  
- [階層のレコード セット内の行にアクセスします。](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [階層レコード セット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [データ シェイプの概要](../../../ado/guide/data/data-shaping-overview.md)   
  [データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [図形の APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
- [一般的な図形コマンド](../../../ado/guide/data/shape-commands-in-general.md)   
- [図形の COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md)   
+ [Shape の APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
+ [一般的な shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Shape COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md)   
  [Visual Basic for Applications の関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

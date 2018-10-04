@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoroption_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b3bb6500d4d1bc29859c428820d28ec48d6aa72
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1e043fd2ea37b9ff790a519311e8db78fa443422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659050"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +52,7 @@ sp_cursoroption cursor, code, value
 |0x0002|CURSOR_NAME|指定された名前を割り当てます*値*カーソルにします。 ODBC を使用する、これにより、さらに、 [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE または DELETE ステートメントを sp_cursoropen によって開かれるカーソルに配置されています。<br /><br /> 文字列は、任意の文字または Unicode データ型として指定できます。<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)]位置指定更新/削除ステートメント機能、既定でファット カーソルの場合の最初の行に対して sp_cursor SETPOSITION を位置指定の UPDATE または DELETE ステートメントを発行する前にカーソルを使用する必要があります。|  
 |0x0003|TEXTDATA|以降のフェッチで、特定の text 列または image 列のテキスト ポインターではなく実際のデータを返します (これにより、TEXTPTR_ONLY の効力が取り消されます)。<br /><br /> 特定の列で TEXTDATA が有効になると、行は再フェッチ (更新) されます。後で TEXTPTR_ONLY に戻すことができます。 TEXTPTR_ONLY と同様に、value パラメーターは列番号を指定する整数で、値が 0 の場合はすべての text 列および image 列が返されます。|  
 |0x0004|SCROLLOPT|スクロール オプションです。 詳細については、後の「戻り値」を参照してください。|  
-|0x0005|CCOPT|同時実行制御オプションです。 詳細については、後の「戻り値」を参照してください。|  
+|0x0005|CCOPT|コンカレンシー制御オプションです。 詳細については、後の「戻り値」を参照してください。|  
 |0x0006|ROWCOUNT|現在結果セット内にある行の数です。<br /><br /> 注: 非同期設定が使用されている場合は、sp_cursoropen から返される値以降、ROWCOUNT に変更された可能性があります。 行数が不明な場合は、値 -1 が返されます。|  
   
  *value*  

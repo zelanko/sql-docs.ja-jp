@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureBinding data type
 ms.assetid: f4dac8a6-7ad6-4edb-8e5b-744bb94ee34c
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1790eb5c24c61f2f20f22330768f70dde77c4355
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 976155f8156ac1eb4b3cebdca5f1de8d07b59a30
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312372"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048464"
 ---
 # <a name="measurebinding-data-type-assl"></a>MeasureBinding データ型 (ASSL)
   親要素へのメジャーのバインドを表す派生データ型を定義します。  

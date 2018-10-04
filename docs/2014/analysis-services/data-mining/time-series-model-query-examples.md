@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ec5161fab123b9a0b251cfc570318f58fd57ad3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 729f50c43b277b6456d834e7706c026b36cddfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319305"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067992"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、時系列モデルでコンテンツ クエリを使用すると、検出された周期的構造に関する追加情報を取得できます。一方、予測クエリを使用すると、次の 5 ～ 10 のタイム スライスの予測などを取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  

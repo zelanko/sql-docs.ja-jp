@@ -1,13 +1,11 @@
 ---
-title: ExecuteOptionEnum |Microsoft ドキュメント
+title: ExecuteOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06b6b6bff2c99d13811616a9d1ae5040e904656a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278101"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719120"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
-プロバイダーでのコマンドの実行方法を指定します。  
+プロバイダーがコマンドを実行する方法を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adAsyncExecute**|0x10|コマンドを非同期的に実行することを示します。<br /><br /> この値と組み合わせることはできません、 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)値**adCmdTableDirect**です。|  
-|**adAsyncFetch**|0x20|残りの行を後で指定した初期量を示す、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティを非同期に取得する必要があります。|  
-|**adAsyncFetchNonBlocking**|0x40|取得中にメイン スレッドがブロックされないことを示します。 要求された行が取得されなかった場合、現在の行は自動的にファイルの末尾に移動します。<br /><br /> 開く場合、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)から、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)永続的に格納されたを含む**Recordset**、 **adAsyncFetchNonBlocking**必要はありません効果。この操作は、同期およびブロックされます。<br /><br /> **adAsynchFetchNonBlocking**持たないされるときに有効、 [adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md)オプションを使用して、開く、**レコード セット**です。|  
-|**adExecuteNoRecords**|0x80|コマンド テキストがコマンドまたは行 (データの挿入のみコマンドなど) を返さないストアド プロシージャであることを示します。 すべての行が取得された場合、破棄され、返されません。<br /><br /> **adExecuteNoRecords**に省略可能なパラメーターとして渡されることができますのみ、**コマンド**または**接続実行**メソッドです。|  
-|**adExecuteStream**|0x400|コマンドの実行の結果をストリームとして返すことを示します。<br /><br /> **adExecuteStream**に省略可能なパラメーターとして渡されることができますのみ、**コマンド実行**メソッドです。|  
-|**adExecuteRecord**||示します、 **CommandText**コマンドまたはとして返される必要がありますが、1 つの行を返すストアド プロシージャ、**レコード**オブジェクト。|  
-|**adOptionUnspecified**|-1|コマンドは指定されていないことを示します。|  
+|**adAsyncExecute**|0x10|コマンドを非同期的に実行することを示します。<br /><br /> この値は組み合わせることができない、 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)値**adCmdTableDirect**します。|  
+|**adAsyncFetch**|0x20|残りの行を後で指定した初期量を示します、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティを非同期的に取得する必要があります。|  
+|**adAsyncFetchNonBlocking**|0x40|取得中にメイン スレッドがブロックされないことを示します。 要求された行が取得されていない、現在の行が自動的にファイルの末尾に移動します。<br /><br /> 開く場合、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)から、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)永続的に保存を含む**レコード セット**、 **adAsyncFetchNonBlocking**必要はありません効果。操作は、ブロックして同期されます。<br /><br /> **adAsynchFetchNonBlocking**にない場合は影響、 [adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md)オプションを使用して開く、**レコード セット**。|  
+|**adExecuteNoRecords**|0x80|コマンド テキストがコマンドまたは行 (データの挿入のみコマンドなど) を返さないストアド プロシージャであることを示します。 すべての行が取得される場合は破棄されていては返されません。<br /><br /> **adExecuteNoRecords**のみを任意のパラメーターとして渡すことができます、**コマンド**または**接続実行**メソッド。|  
+|**adExecuteStream**|0x400|コマンドの実行結果をストリームとして返すことを示します。<br /><br /> **adExecuteStream**のみを任意のパラメーターとして渡すことができます、 **Command Execute**メソッド。|  
+|**adExecuteRecord**||示します、 **CommandText**コマンドまたはストアド プロシージャを返す 1 つの行として返される必要がありますが、**レコード**オブジェクト。|  
+|**adOptionUnspecified**|-1|コマンドが指定されていないことを示します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
   
 |定数|  

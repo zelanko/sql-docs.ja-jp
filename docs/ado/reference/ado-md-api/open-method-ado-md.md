@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO MD]
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49d811ed0eb60bb02767579c604a6a4be3c5b337
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 237639f949b67d015cd37ccdf50a9e9a758a9210
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702062"
 ---
 # <a name="open-method-ado-md"></a>Open メソッド (ADO MD)
 多次元クエリの結果を取得しに結果を返します、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)します。  

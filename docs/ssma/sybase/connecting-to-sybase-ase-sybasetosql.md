@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Connecting to Sybase ASE
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a8411cdb507b27e69f86f0d853e1c98b4d24d29a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d9c76a33a650284fde21b28af3a61b197829ef98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807360"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Sybase ASE への接続 (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、移行するデータベースを含むアダプティブ サーバーに接続する必要があります。 接続するときに、SSMA はアダプティブ サーバー上のすべてのデータベースに関するメタデータを取得し、Sybase メタデータ エクスプ ローラー ウィンドウでデータベースのメタデータを表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  

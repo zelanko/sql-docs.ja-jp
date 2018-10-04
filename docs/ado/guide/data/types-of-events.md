@@ -1,13 +1,11 @@
 ---
-title: イベントの種類 |Microsoft ドキュメント
+title: イベントの種類 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EventComplete event [ADO]
@@ -16,33 +14,32 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2438d332e7276dcd06de0bf15984329d7c34469
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b324857816df774486716978425d1332a695952a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273111"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708470"
 ---
 # <a name="types-of-events"></a>イベントの種類
-2 つの基本的な種類のイベントがあります。 「は、イベント」と呼ばれる操作の開始前に、通常、名前に「は」を含める-たとえば、 **WillChangeRecordset**または**WillConnect**です。 通常、イベントが完了した後に呼び出されるイベントが、名前に「完了」を含める-たとえば、 **RecordChangeComplete**または**ConnectComplete**です。 例外の存在-など**InfoMessage** — がこれらは、関連する操作が完了した後にエラーが発生します。  
+2 つのイベントの種類があります。 「イベントは」操作を開始する前に呼び出され、通常、名前に「は」が含まれます: たとえば、 **WillChangeRecordset**または**WillConnect**。 イベントが通常は完了した後に呼び出されるイベントは、名前に"Complete"を含める-たとえば、 **RecordChangeComplete**または**ConnectComplete**します。 例外の存在-など**InfoMessage** — が関連付けられている操作が完了した後にこれらが発生します。  
   
 ## <a name="will-events"></a>イベントには  
- 操作の開始からの確認または操作のパラメーターを変更しし、操作をキャンセルまたは完了することを許可する機会を提供する前に、イベント ハンドラーが呼び出されます。 これらのイベント ハンドラー ルーチンは通常、フォームの名前を持つ **は*イベント * * *。  
+ 操作の開始が調査または操作のパラメーターを変更し、操作をキャンセルするかを完了することを許可する機会を提供する前に、イベント ハンドラーが呼び出されます。 これらのイベント ハンドラー ルーチンが、通常は、フォームの名前を持つ **は*イベント * * *。  
   
 ## <a name="complete-events"></a>完了イベント  
- 操作が完了した後に呼び出されるイベント ハンドラーは、操作の完了をアプリケーションに通知できます。 このようなイベント ハンドラーはイベント ハンドラーが保留中の操作をキャンセルしたときにも通知されます。 これらのイベント ハンドラー ルーチンは通常、フォームの名前を持つ ***イベント * 完了**です。  
+ 操作の完了後に呼び出されるイベント ハンドラーは、操作の完了をアプリケーションに通知できます。 イベント ハンドラーが保留中の操作をキャンセルしたときにも、このようなイベント ハンドラーが通知されます。 これらのイベント ハンドラー ルーチンが、通常は、フォームの名前を持つ ***イベント * 完了**します。  
   
- 完了イベントは、通常のペアで使用されます。  
+ 完了イベントがペアで通常使用されます。  
   
 ## <a name="other-events"></a>その他のイベント  
- 他のイベント ハンドラー: 名前を持つの形式ではないイベントは、**は * イベント*** または ***イベント * 完了**: 操作の完了後にのみと呼ばれます。 これらのイベントは**切断**、 **EndOfRecordset**、および**InfoMessage**です。  
+ 他のイベント ハンドラー: フォームの名前がないイベントは、**は * イベント*** または ***イベント * 完了**: 操作の完了後にのみと呼ばれます。 これらのイベントは**切断**、 **EndOfRecordset**、および**InfoMessage**します。  
   
 ## <a name="see-also"></a>参照  
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [言語によって、ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [イベントのパラメーター](../../../ado/guide/data/event-parameters.md)   
+ [言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+ [イベント パラメーター](../../../ado/guide/data/event-parameters.md)   
  [複数のイベント ハンドラーの連携方法](../../../ado/guide/data/how-event-handlers-work-together.md)

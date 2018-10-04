@@ -1,10 +1,8 @@
 ---
-title: ADO ライブラリを参照する |Microsoft ドキュメント
+title: ADO ライブラリを参照する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,22 +12,21 @@ helpviewer_keywords:
 - referencing libraries [ADO]
 - ADO, libraries
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4966f9446f87ea25cc5fdab5e658fd5a30c80fb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e22b5fa8d21ca693f0ea332714f2f594f8bd997c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614460"
 ---
-# <a name="referencing-the-ado-libraries"></a>ADO ライブラリを参照します。
-ADO の最新バージョンとしてパッケージ化*msado15.dll*です。 ADO MD と ADOX の最新バージョンとしてパッケージ化*msadom.dll*と*msadox.dll*、それぞれします。 既定でこれらのライブラリがインストールされている *$installDir*ここで、 *$installDir* ADO ライブラリがコンピューターにインストールされてされているディレクトリのパスを意味します。 ライブラリを使用するには、ADO アプリケーションで、する必要がありますに明示的に参照アプリケーション プロジェクトでします。  
+# <a name="referencing-the-ado-libraries"></a>ADO ライブラリを参照する
+ADO の最新バージョンとしてパッケージ化*msado15.dll*します。 最新のバージョンの ADO MD と ADOX としてパッケージ化*msadom.dll*と*msadox.dll*、それぞれします。 既定でこれらのライブラリがインストールされている *$installDir*ここで、 *$installDir* ADO ライブラリがコンピューターにインストールされてされているディレクトリのパスを意味します。 アプリケーションで ADO ライブラリを使用するには、必要がありますで参照するに明示的にアプリケーション プロジェクト。  
   
- ADO のライブラリを参照するために行える手順を次に示します。  
+ 以下は、ADO ライブラリを参照するために行える手順です。  
   
--   [Visual Basic アプリケーション](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
+-   [Visual Basic アプリケーションで](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
   
 -   [Visual C アプリケーションで](../../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md)

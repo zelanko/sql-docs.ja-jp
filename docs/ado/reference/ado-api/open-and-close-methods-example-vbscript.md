@@ -1,13 +1,11 @@
 ---
-title: メソッドの例 (VBScript) を開いたり閉じたり |Microsoft ドキュメント
+title: Open および Close メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Close method [ADO], VBScript example
 - Open method [ADO], VBScript example
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e876658bcdd8bd7595349bc2e4a559d21d7efa08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 375ebc025368551ccf9fda9dfba299027e6225ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279961"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709210"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open および Close メソッドの例 (VBScript)
-この例では、[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)と[閉じる](../../../ado/reference/ado-api/close-method-ado.md)両方のメソッド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)が開かれているオブジェクト。  
+この例では、[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)と[閉じる](../../../ado/reference/ado-api/close-method-ado.md)両方のメソッド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)が開かれているオブジェクト。  
   
- アクティブ サーバー ページ (ASP) で次の例を使用します。 使用して**検索**Adovbs.inc ファイルを見つけて、使用する予定のディレクトリに配置します。 次のコードをメモ帳または別のテキスト エディターに貼り付け切り取ってとして保存して**OpenVBS.asp**です。 結果は、任意のブラウザーで表示できます。  
+ 次の例を Active Server Page (ASP) で使用します。 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けるし、として保存**OpenVBS.asp**します。 任意のブラウザーで結果を表示できます。  
   
 ```  
 <!-- BeginOpenVBS -->  
@@ -168,6 +165,6 @@ BODY {
 ## <a name="see-also"></a>参照  
  [Close メソッド (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open メソッド (ADO 接続)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

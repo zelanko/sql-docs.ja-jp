@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f75f7f1d1296c3ad45bd65bfe19f066ee3cfdea9
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 20e52c835d54ec1cac31e1821bfe49876683e324
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631270"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) へのデータベース オブジェクトの変換後の読み込み
 DB2 スキーマに変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、結果のデータベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  

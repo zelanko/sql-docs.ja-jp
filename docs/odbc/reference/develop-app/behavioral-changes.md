@@ -1,50 +1,47 @@
 ---
-title: 動作の変更 |Microsoft ドキュメント
+title: 動作の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - behavioral changes [ODBC]
 - compatibility [ODBC], behavioral changes
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed9b06793abef5006e49b2f526d11ead798c7931
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757187"
 ---
 # <a name="behavioral-changes"></a>動作の変更
-動作の変更は、これらの変更を*構文*インターフェイスは同じですが、*セマンティクス*が変更されました。 これらの変更、ODBC 2 で使用されている機能です。*x* ODBC 3 で同じ機能の動作は異なります *。x*です。  
+動作の変更はそれらの変更を*構文*は同じインターフェイスが、*セマンティクス*が変更されました。 この変更では、ODBC 2 で使用される機能です。*x* ODBC 3 で同じ機能の動作は異なります *。x*します。  
   
- かどうか、アプリケーションでは、ODBC 2 が発生します。*x*動作または ODBC 3 *。x*動作また環境属性によって決定されます。 この 32 ビット値は、ODBC 2 が発生すること SQL_OV_ODBC2 に設定されます。*x*動作、および ODBC 3 が発生する SQL_OV_ODBC3 *。x*動作します。  
+ かどうかをアプリケーションには、ODBC 2 が発生します。*x*動作または ODBC 3 *。x* SQL_ATTR_ODBC_VERSION [環境] 属性で動作が決まります。 この 32 ビット値は、ODBC 2 が発生する SQL_OV_ODBC2 に設定されます。*x*動作、および ODBC 3 が発生する SQL_OV_ODBC3 *。x*動作します。  
   
- 呼び出しによって、また環境属性が設定されて**SQLSetEnvAttr**です。 アプリケーションが呼び出す後**SQLAllocHandle**環境ハンドルを割り当てるに呼び出す必要があります**SQLSetEnvAttr**すぐに動作を設定することが発生します。 (その結果は、新しい環境の状態を割り当て済みでは、versionless 環境ハンドルを記述する状態。)詳細については、次を参照してください。[付録 b: ODBC 状態遷移表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)です。  
+ 呼び出して SQL_ATTR_ODBC_VERSION 環境属性が設定**SQLSetEnvAttr**します。 アプリケーションから**SQLAllocHandle**環境ハンドルを割り当てるを呼び出す必要があります**SQLSetEnvAttr**従来の動作を設定するには、すぐにします。 (その結果は、新しい環境の状態、割り当て済みで、versionless、環境ハンドルを記述する状態)。詳細については、次を参照してください。[付録 b: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
   
- アプリケーションでは、また環境属性が属性は、どのような動作は、ODBC 2 とアプリケーションの接続に影響を与えませんを示しています。*x*または ODBC 3 *。x*ドライバー。 ODBC 3 です。*x*アプリケーションを ODBC 2 との接続のことができます *。x*または 3 つです *。x*環境属性の設定内容に関係なく、ドライバーです。  
+ アプリケーションでは、従来の SQL_ATTR_ODBC_VERSION 環境属性が属性にどのような動作は、ODBC 2 とアプリケーションの接続に影響を与えませんを示しています。*x*または ODBC 3 *。x*ドライバー。 ODBC 3。*x*アプリケーションに、ODBC 2 との接続のことができます *。x*または 3 *。x*環境の属性の設定に関係なく、ドライバー。  
   
- ODBC 3 です。*x*アプリケーションは呼び出さないで**SQLAllocEnv**です。 ドライバー マネージャーへの呼び出しを受信した場合、結果として**SQLAllocEnv**、ODBC 2 としてアプリケーションを認識します *。x*アプリケーションです。  
+ ODBC 3。*x*アプリケーションは呼び出さないで**SQLAllocEnv**します。 ドライバー マネージャーへの呼び出しを受信した場合、結果として**SQLAllocEnv**、ODBC 2 としてアプリケーションを認識します *。x*アプリケーション。  
   
- また属性では、ODBC 3 の 3 つのさまざまな側面に影響します。*x*ドライバーの動作。  
+ SQL_ATTR_ODBC_VERSION 属性は、ODBC 3 の 3 つのさまざまな側面に影響します。*x*ドライバーの動作。  
   
--   SQLSTATEs  
+-   SQLSTATE  
   
 -   日付、時刻、およびタイムスタンプのデータ型  
   
 -   *CatalogName*引数**SQLTables** ODBC 3 内の検索パターンを受け入れます *。x*、ODBC 2 ではなく *。x*  
   
- また環境属性の設定には影響しません**SQLSetParam**または**SQLBindParam**です。 **SQLColAttribute**も受けませんこのビットです。 **SQLColAttribute**の影響を受ける属性を返します、ODBC (date 型、有効桁数、小数点以下桁数、および長さ) のバージョンで目的の動作の値によって決まります、 *FieldIdentifier*引数。 ときに*FieldIdentifier* SQL_DESC_TYPE、等しく**SQLColAttribute** ODBC 3 が返されます *。x*日付、時刻、およびタイムスタンプのコードと*FieldIdentifier* SQL_COLUMN_TYPE、等しく**SQLColAttribute** ODBC 2 を返します *。x*日付、時刻、およびタイムスタンプのコード。  
+ SQL_ATTR_ODBC_VERSION 環境属性の設定には影響しません**SQLSetParam**または**SQLBindParam**します。 **SQLColAttribute**も受けませんこのビット。 **SQLColAttribute**影響を受ける属性を返します (日付型、有効桁数、小数点、および長さ)、ODBC のバージョンで、目的の動作がの値によって決まりますが、 *FieldIdentifier*引数。 ときに*FieldIdentifier* SQL_DESC_TYPE、等しく**SQLColAttribute** ODBC 3 が返されます *。x*日付、時刻、およびタイムスタンプのコードと*FieldIdentifier* SQL_COLUMN_TYPE、等しく**SQLColAttribute** ODBC 2 を返します *。x*日付、時刻、およびタイムスタンプのコード。  
   
  このセクションでは、次のトピックを扱います。  
   

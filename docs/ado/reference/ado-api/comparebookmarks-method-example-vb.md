@@ -1,34 +1,31 @@
 ---
-title: CompareBookmarks メソッドの例 (VB) |Microsoft ドキュメント
+title: CompareBookmarks メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff4e2c8c1e66ac7240e188e06ede5bb1295814de
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 99aadf2d532c6e42b2638aab34d19289617e7d38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276961"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705176"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks メソッドの例 (VB)
-この例で、 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッドです。 特定のブックマークは特別な何らかの理由でない限りは、ブックマークの相対値は必要ありません。  
+この例では、 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッド。 ブックマークの相対値が必要なは、特定のブックマークで特別な何らかの形でない限り、めったにありません。  
   
- ランダムな行を指定する、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)から派生した、***作成者***検索の対象としてテーブル。 各行をターゲットとする相対の位置に表示されます。  
+ ランダムな行を指定する[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)から派生した、***作成者***検索の対象としてテーブル。 各の行を対象とする相対の位置に表示されます。  
   
 ```  
 'BeginCompareBookmarksVB  

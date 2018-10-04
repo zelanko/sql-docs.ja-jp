@@ -1,13 +1,11 @@
 ---
-title: Append メソッド (ADOX Views) |Microsoft ドキュメント
+title: Append メソッド (ADOX Views) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a524be12a721d86e0e5afd1029f486ca7c8ecaa9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707460"
 ---
-# <a name="append-method-adox-views"></a>Append メソッド (ADOX ビュー)
+# <a name="append-method-adox-views"></a>Append メソッド (ADOX Views)
 新たに作成[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトに追加され、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)コレクション。  
   
 ## <a name="syntax"></a>構文  
@@ -38,29 +35,29 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Name*  
+ *名前*  
  A**文字列**を作成するビューの名前を指定する値。  
   
  *Command*  
  ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)を作成するビューを表すオブジェクト。  
   
 ## <a name="remarks"></a>コメント  
- 指定した属性と名前を持つデータ ソースに新しいビューを作成、**コマンド**オブジェクト。  
+ 指定された属性と名前を持つデータ ソースに新しいビューを作成、**コマンド**オブジェクト。  
   
- ユーザーが指定したコマンド テキストを表す場合、ビューではなく、プロシージャ、動作は、プロバイダーによって異なります。 **追加**プロバイダーは永続的なコマンドをサポートしていない場合は失敗します。  
+ ビューではなく、プロシージャをユーザーが指定するコマンド テキストを表している場合、動作は、プロバイダーによって異なります。 **追加**プロバイダーは永続的なコマンドをサポートしていない場合は失敗します。  
   
 > [!NOTE]
->  For Microsoft Jet OLE DB プロバイダーを使用する場合、**ビュー**コレクション**Append**を指定するメソッドを使用できる、**プロシージャ**ではなく、**ビュー**で、*コマンド*パラメーター。 **プロシージャ**がデータ ソースに追加されに追加されます、**ビュー**コレクション。 後に、 **Append**場合は、**プロシージャ**と**ビュー**コレクションが更新されると、**プロシージャ**でしなくなる**ビュー**コレクションに表示されます、**プロシージャ**コレクション。  
+>  Microsoft Jet OLE DB Provider を使用する場合、**ビュー**コレクション**Append**メソッドには、指定することが、**プロシージャ**なく**ビュー**で、*コマンド*パラメーター。 **プロシージャ**がデータ ソースに追加されに追加されます、**ビュー**コレクション。 後に、 **Append**場合、**プロシージャ**と**ビュー**コレクションが更新されると、**プロシージャ**でしなくなる**ビュー**コレクションに表示されますが、**プロシージャ**コレクション。  
   
 ## <a name="applies-to"></a>適用対象  
  [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [ビューの追加メソッドの例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Append メソッド (ADOX 列)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append メソッド (ADOX グループ)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append メソッド (ADOX インデックス)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append メソッド (ADOX キー)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append メソッド (ADOX プロシージャ)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append メソッド (ADOX テーブル)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Views Append メソッドの例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append メソッド (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Append メソッド (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Append メソッド (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Append メソッド (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append メソッド (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)

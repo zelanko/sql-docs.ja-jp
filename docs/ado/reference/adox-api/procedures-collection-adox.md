@@ -1,13 +1,11 @@
 ---
-title: プロシージャのコレクション (ADOX) |Microsoft ドキュメント
+title: Procedures コレクション (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,45 +14,44 @@ f1_keywords:
 helpviewer_keywords:
 - Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2690c2911fbd4824937c7153ba681cd5d77b703c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 60d967c6ace03180ae596a3e7f45c830d4bec54b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718100"
 ---
-# <a name="procedures-collection-adox"></a>プロシージャのコレクション (ADOX)
+# <a name="procedures-collection-adox"></a>Procedures コレクション (ADOX)
 すべてを含む[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)カタログのオブジェクト。  
   
 ## <a name="remarks"></a>コメント  
  [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)のメソッド、**プロシージャ**コレクションは ADOX に一意です。 可能な代替手段としては以下の方法があります。  
   
--   新しいプロシージャを使用して、コレクションに追加、 **Append**メソッドです。  
+-   新しいプロシージャを使用して、コレクションに追加、 **Append**メソッド。  
   
- 残りのプロパティとメソッドは、standard ADO コレクションには、 可能な代替手段としては以下の方法があります。  
+ 残りのプロパティとメソッドは、ADO のコレクションに標準的です。 可能な代替手段としては以下の方法があります。  
   
--   使用して、コレクション内のプロシージャのアクセス、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティです。  
+-   使用して、コレクション内のプロシージャのアクセス、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
   
--   使用して、コレクションに含まれるプロシージャの数を返す、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティです。  
+-   使用して、コレクションに含まれるプロシージャの数を返す、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
   
--   プロシージャを使用して、コレクションから削除、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドです。  
+-   使用して、コレクションからプロシージャを削除、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッド。  
   
--   現在のデータベース スキーマを反映するようにコレクション内のオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドです。  
+-   現在のデータベース スキーマを反映するようにコレクション内のオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
   
  このセクションには、次のトピックが含まれています。  
   
 -   [Indexes コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [コマンドと CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [パラメーターのコレクション、コマンドのプロパティの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [プロシージャは、メソッドの例 (VB) を追加します。](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [プロシージャの削除の方法の例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [プロシージャは、メソッドの例 (VB) の更新します。](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [プロシージャのコレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
- [カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Command プロパティおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Parameters コレクションおよび Command プロパティの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+ [Procedures Append メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Procedures Delete メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Procedures Refresh メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
+ [Procedures コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
+ [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Procedure オブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)

@@ -1,49 +1,46 @@
 ---
-title: Oracle ソフトウェアの更新プログラム |Microsoft ドキュメント
+title: Oracle ソフトウェアの修正プログラム |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], Oraclesoftware patches
 - Oracle software patches [ODBC]
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 773b7f179d70a4ba04b5516f930c4e1a39a31963
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: afd5a20d99692c1a623b13b53218f62c00cb218a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902427"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845920"
 ---
 # <a name="oracle-software-patches"></a>Oracle ソフトウェアの修正プログラム
 > [!IMPORTANT]  
 >  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
   
- いくつかの Microsoft 製品およびテクノロジ、Microsoft ODBC Driver for Oracle を Microsoft OLE DB Provider for Oracle の場合、インターネットから情報を含めて正しく機能するために必要な Oracle サーバー製品とそのクライアント コンポーネントの更新プログラムサービス (IIS)、コンポーネント サービス (または、Microsoft Transaction Server、Windows NT を使用している場合) などです。  
+ いくつかの Microsoft 製品とテクノロジ、Microsoft ODBC Driver for Oracle を Microsoft OLE DB Provider for Oracle では、インターネットの情報を含めて正しく機能するために必要な Oracle サーバーの製品とそのクライアント コンポーネントの更新プログラムサービス (IIS)、コンポーネント サービス (または、Microsoft Transaction Server、Windows NT を使用している場合) など。  
   
 > [!NOTE]  
->  Oracle の FTP サイトが変更される可能性があるために、次の手順を完全に正確できないがあります。  
+>  次の手順は、Oracle の FTP サイトが変更される可能性があるため正確で完全にできません。  
   
 ### <a name="to-download-the-oracle-software-patches"></a>Oracle ソフトウェアの修正プログラムをダウンロードするには  
   
-1.  Oracle ftp.oracle.com パブリック FTP サイトに接続します。ユーザー ID は「匿名」、パスワードは、電子メール アドレス。  
+1.  Oracle ftp.oracle.com パブリック FTP サイトに接続します。 ユーザー ID は"anonymous"で、パスワードは、電子メール アドレスです。  
   
-2.  次のディレクトリに移動:/server/wgt_tech/server/windowsNT です。  
+2.  次のディレクトリに移動します:/server/wgt_tech/server/windowsNT します。  
   
-3.  Windows 95、Windows 98 および Windows NT または Windows 2000 の最も重要な更新プログラムをダウンロードするには、Oracle のバージョンのサブディレクトリに移動: 7.3 または 8.0 です。 2 つのサブディレクトリは、/73patchsets/80patchsets です。  
+3.  Windows 95、Windows 98 および Windows NT または Windows 2000 の最も重要な修正プログラムをダウンロードするには、Oracle のバージョンのサブディレクトリに移動: 7.3 または 8.0。 2 つのサブディレクトリは、/73patchsets および/80patchsets です。  
   
-4.  Oracle のネットワーク テクノロジ、いずれかの SQL の修正プログラムをダウンロードする * Net または Net8、次のディレクトリに移動:/ネットワークです。  
+4.  Oracle のネットワーク テクノロジのいずれかの SQL の修正プログラムをダウンロードする * Net または Net8、次のディレクトリに移動します:/ネットワークします。  
   
- Web ブラウザーからこの FTP サイトへのアクセスが機能しません。 問題が発生する場合は、「従来からある」の FTP クライアントを使用して再試行してくださいまたは DOS コマンド プロンプトを使用します。  
+ Web ブラウザーからこの FTP サイトへのアクセスが機能しない可能性があります。 問題が発生した場合は、「従来の」の FTP クライアントを使用してお試しくださいまたは DOS コマンド プロンプトを使用します。  
   
 > [!NOTE]  
->  Oracle では、現在のバージョンでバグを修正し、ソフトウェアの修正プログラムを使用して以前のバージョンにし、それら retrofits、ために、使用可能な最新の修正プログラムをダウンロードすることをお勧めします。 これは、Oracle サーバーのクライアント コンポーネントに特に当てはまります。 これらの更新プログラムのインストールに関する質問がある場合は、Oracle のサポートに問い合わせてください。
+>  Oracle では、現在のバージョンでバグを修正し、ソフトウェアの修正プログラムを使用して以前のバージョンにし、それら retrofits、ため、最新の修正プログラムをダウンロードすることをお勧めします。 これは、Oracle Server クライアント コンポーネントに特に当てはまります。 これらの更新プログラムのインストールに関する質問がある場合は、Oracle のサポートにお問い合わせください。

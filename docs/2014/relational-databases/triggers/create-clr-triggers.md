@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CRL triggers
@@ -16,12 +14,12 @@ ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c91d1322b60fccc0c3eae16e88db828f153f9f01
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b68531b962b10785927c6212b2483f2d9c1d7d3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428201"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049202"
 ---
 # <a name="create-clr-triggers"></a>CLR トリガーの作成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) で作成されたアセンブリの形式でプログラミングされたデータベース オブジェクトを作成できます。 CLR で提供される豊富なプログラミング モデルを利用できるデータベース オブジェクトには、DML トリガー、DDL トリガー、ストアド プロシージャ、関数、集計関数、型などがあります。  

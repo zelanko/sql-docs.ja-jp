@@ -1,14 +1,11 @@
 ---
-title: sp_can_tlog_be_applied (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_can_tlog_be_applied (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_can_tlog_be_applied_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_can_tlog_be_applied
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c12b7b6147296d753c55a867db007ae6067a135
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e8d29c2a9b273425510342d87349091348c1c7d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806816"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +43,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
   
 ## <a name="arguments"></a>引数  
  [ **@backup_file_name=** ] **'***backup_file_name***'**  
- バックアップ ファイルの名前を指定します。 *@backup_file_name*は**nvarchar (128)** です。  
+ バックアップ ファイルの名前を指定します。 *backup_file_name*は**nvarchar (128)** します。  
   
  [ **@database_name=** ] **'***database_name***'**  
  データベースの名前です。 *database_name* は **sysname** です。  
   
  [ **@result=** ] *result* **OUTPUT**  
- トランザクション ログをデータベースに適用できるかどうかを示します。 *結果*は**ビット**です。  
+ トランザクション ログをデータベースに適用できるかどうかを示します。 *結果*は**ビット**します。  
   
  1 = ログを適用できる  
   
@@ -62,8 +58,8 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="permissions"></a>権限  
- メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_can_tlog_be_applied**です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_can_tlog_be_applied**します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、結果を格納するローカル変数 `@MyBitVar` を宣言します。  

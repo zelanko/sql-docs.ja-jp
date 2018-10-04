@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 489f2466c01ce32936eee06ac2fa51ab85b26848
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3aeb3065f9c032585dd4c445cecdd1e7c148b007
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763210"
 ---
 # <a name="overview-smo"></a>概要 (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -52,7 +48,7 @@ ms.locfileid: "43094470"
   
 -   SOAP 要求を管理するための HTTP エンドポイント。 詳細については、次を参照してください。[を実装するエンドポイント](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)します。  
   
--   同時実行性を高めるためのスナップショット分離と行レベルのバージョニング。 詳細については、「[スナップショット分離を使用した作業](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)」を参照してください。  
+-   コンカレンシーを高めるためのスナップショット分離と行レベルのバージョニング。 詳細については、「[スナップショット分離を使用した作業](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)」を参照してください。  
   
 -   XML データの検証と格納を可能にする、XML スキーマ コレクション、XML インデックス、および XML データ型。 詳細については、次を参照してください。 [XML スキーマ コレクション&#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md)と[を使用して XML スキーマ](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)します。  
   

@@ -1,13 +1,11 @@
 ---
-title: FieldStatusEnum |Microsoft ドキュメント
+title: FieldStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,57 +13,56 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 924ad7aa3d97138e771ed217b7b86b586c11bbce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4e2f08868aa581136bc155011671e0b8b1c55e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606674"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
-指定します、[ステータス](../../../ado/reference/ado-api/status-property-ado-field.md)の[フィールド オブジェクト](../../../ado/reference/ado-api/field-object.md)です。  
+指定します、[状態](../../../ado/reference/ado-api/status-property-ado-field.md)の[フィールド オブジェクト](../../../ado/reference/ado-api/field-object.md)します。  
   
- **AdFieldPending\*** 値は、操作を設定できる状態の原因となったはその他の状態の値と組み合わせることを示します。  
+ **AdFieldPending\*** 値は、設定されていない状態の原因し、その他の状態値と組み合わせることもなった操作を示します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|指定したフィールドが既に存在することを示します。|  
-|**adFieldBadStatus**|12|無効な状態値は、OLE DB プロバイダーに ADO から送信されたことを示します。 考えられる原因は、OLE DB 1.0 または 1.1 プロバイダーは、または、不適切な組み合わせの[値](../../../ado/reference/ado-api/value-property-ado.md)と[ステータス](../../../ado/reference/ado-api/status-property-ado-field.md)です。|  
+|**adFieldBadStatus**|12|ADO から OLE DB プロバイダーに、無効な状態の値が送信されたことを示します。 考えられる原因は、OLE DB 1.0 または 1.1 プロバイダー、または不適切な組み合わせた[値](../../../ado/reference/ado-api/value-property-ado.md)と[状態](../../../ado/reference/ado-api/status-property-ado-field.md)します。|  
 |**adFieldCannotComplete**|20|によって、サーバーの URL が指定されていることを示します[ソース](../../../ado/reference/ado-api/source-property-ado-record.md)操作を完了できませんでした。|  
-|**adFieldCannotDeleteSource**|23|示します、移動操作中にツリーまたはサブツリーを新しい場所に移動されたソースを削除できませんでした。|  
-|**adFieldCantConvertValue**|2|フィールドを取得またはデータを失うことがなく保存できないことを示します。|  
-|**adFieldCantCreate**|7|プロバイダーが許可されているフィールドの数) などの制限を超えたためには、フィールドを追加できませんでしたを示します。|  
-|**adFieldDataOverflow**|6|プロバイダーから返されるデータがフィールドのデータ型をオーバーフローしたことを示します。|  
-|**adFieldDefault**|13|フィールドの既定値がデータを設定するときに使用されることを示します。|  
+|**adFieldCannotDeleteSource**|23|示します、移動操作中にツリーまたはサブツリーは、新しい場所に移動された、ソースを削除できませんでした。|  
+|**adFieldCantConvertValue**|2|フィールドを取得またはデータの損失なしで保存できないことを示します。|  
+|**adFieldCantCreate**|7|プロバイダーが許可されているフィールドの数) などの制限を超えているためは、フィールドを追加できませんでしたを示します。|  
+|**adFieldDataOverflow**|6|プロバイダーから返されるデータが、フィールドのデータ型がオーバーフローしたことを示します。|  
+|**adFieldDefault**|13|データを設定するときに、フィールドの既定値が使用されたことを示します。|  
 |**adFieldDoesNotExist**|16|指定されたフィールドが存在しないことを示します。|  
-|**adFieldIgnore**|15|このフィールドが、ソースで値のデータを設定時にスキップされたことを示します。 プロバイダーには、値は設定されません。|  
-|**adFieldIntegrityViolation**|10|計算された、または派生エンティティであるため、フィールドを変更できないことを示します。|  
+|**adFieldIgnore**|15|ソースの値をデータを設定する場合に、このフィールドがスキップされたことを示します。 プロバイダーには、値は設定されていません。|  
+|**adFieldIntegrityViolation**|10|計算された、または派生エンティティであるフィールドを変更できないことを示します。|  
 |**adFieldInvalidURL**|17|データ ソースの URL に無効な文字が含まれていることを示します。|  
-|**adFieldIsNull**|3|プロバイダーに型 VT_ のバリアント値が返されることと、フィールドが空でないことを示します。|  
+|**adFieldIsNull**|3|プロバイダーに VT_ 型のバリアント値が返されることと、フィールドが空でないことを示します。|  
 |**adFieldOK**|0|既定値です。 フィールドが正常に追加または削除することを示します。|  
-|**adFieldOutOfSpace**|22|プロバイダーが、移動が完了またはコピー操作に十分な記憶域を入手することであることを示します。|  
-|**adFieldPendingChange**|0x40000|いずれかを示すフィールドを削除し、もう一度追加、おそらく別のデータ型、またはを以前の状態に配置すると、フィールドの値の**adfieldok で**が変更されました。 フィールドの最終的な形式の変更は、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)の後にコレクション、[更新](../../../ado/reference/ado-api/update-method.md)メソッドが呼び出されます。|  
-|**adFieldPendingDelete**|0x20000|示します、**削除**操作の原因となった状態を設定します。 削除にマークされているフィールド、**フィールド**の後にコレクション、**更新**メソッドが呼び出されます。|  
-|**adFieldPendingInsert**|0x10000|示します、 **Append**操作の原因となった状態を設定します。 **フィールド**に追加するがマークされて、**フィールド**の後にコレクション、**更新**メソッドが呼び出されます。|  
-|**adFieldPendingUnknown**|0x80000|プロバイダーがどのような原因となった操作フィールドの状態を設定するを判断できないことを示します。|  
-|**adFieldPendingUnknownDelete**|0x100000|プロバイダーがどのような操作の原因となったフィールドの状態を設定して、フィールドがから削除されることを判断できないことを示す、**フィールド**の後にコレクション、**更新**メソッドが呼び出されます。|  
+|**adFieldOutOfSpace**|22|プロバイダーが、移動が完了または操作をコピーするための十分な記憶域スペースを取得できないことを示します。|  
+|**adFieldPendingChange**|0x40000|いずれかを示します、フィールドが削除され、再追加されました、おそらくさまざまなデータ型、またはをされている状態を持っていた、フィールドの値の**adfieldok で**が変更されました。 フィールドの最終形式を変更、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)後のコレクション、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドが呼び出されます。|  
+|**adFieldPendingDelete**|0x20000|示します、**削除**操作の原因となった状態を設定します。 削除、フィールドがマークされて、**フィールド**後のコレクション、 **Update**メソッドが呼び出されます。|  
+|**adFieldPendingInsert**|0x10000|示します、 **Append**操作の原因となった状態を設定します。 **フィールド**に追加するのにはなって、**フィールド**後のコレクション、 **Update**メソッドが呼び出されます。|  
+|**adFieldPendingUnknown**|0x80000|プロバイダーがどのような操作の原因となったフィールドの状態を設定する判断できないことを示します。|  
+|**adFieldPendingUnknownDelete**|0x100000|どのような操作には、フィールドの状態を設定して、フィールドがから削除されることが原因となったプロバイダーが判断できないことを示します、**フィールド**後のコレクション、 **Update**メソッドが呼び出されます。|  
 |**adFieldPermissionDenied**|9|読み取り専用として定義されているため、フィールドを変更できないことを示します。|  
-|**adFieldReadOnly**|24|読み取り専用で、データ ソースのフィールドが定義されていることを示します。|  
-|**adFieldResourceExists**|19|プロバイダーがオブジェクトは、宛先 URL に既に存在して、オブジェクトを上書きすることはできませんので、操作を実行できなかったことを示します。|  
+|**adFieldReadOnly**|24|読み取り専用データ ソースのフィールドが定義されていることを示します。|  
+|**adFieldResourceExists**|19|プロバイダーが送信先 URL にオブジェクトが既にし、オブジェクトを上書きできないため、操作を実行できなかったことを示します。|  
 |**adFieldResourceLocked**|18|プロバイダーがデータ ソースが 1 つ以上の他のアプリケーションまたはプロセスによってロックされているため、操作を実行できなかったことを示します。|  
-|**adFieldResourceOutOfScope**|25|送信元または送信先の URL が、現在のレコードのスコープ外にあることを示します。|  
-|**adFieldSchemaViolation**|11|値がフィールドのデータ ソース スキーマの制約に違反したことを示します。|  
-|**adFieldSignMismatch**|5|プロバイダーによって返されるデータ値は署名されましたが、ADO フィールドの値のデータ型が署名されていないことを示します。|  
+|**adFieldResourceOutOfScope**|25|送信元または送信先の URL が現在のレコードの範囲外にことを示します。|  
+|**adFieldSchemaViolation**|11|値が、フィールドのデータ ソース スキーマの制約に違反したことを示します。|  
+|**adFieldSignMismatch**|5|プロバイダーによって返されるデータ値が署名された ADO フィールドの値のデータ型が署名されていないことを示します。|  
 |**adFieldTruncated**|4|データ ソースから読み取るときに、可変長のデータが切り捨てられたことを示します。|  
-|**adFieldUnavailable**|8|あるプロバイダーを特定できませんでした、値、データ ソースからの読み取り時に示します。 たとえば、行が作成した、列の既定値が使用可能なおよび新しい値が指定されていません。|  
-|**adFieldVolumeNotFound**|21|プロバイダーが URL で示されている記憶域ボリュームを特定することであることを示します。|  
+|**adFieldUnavailable**|8|エントリのデータ ソースから読み取るときに、プロバイダーでした値が決定しないことを示します。 たとえば、行が作成した、列の既定値が使用可能なおよび新しい値が指定されていません。|  
+|**adFieldVolumeNotFound**|21|プロバイダーが、URL で示される記憶域ボリュームを検出することであることを示します。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
- これらの定数には、対応する ADO/WFC はありません。  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
+ これらの定数には、ADO と WFC 対応はありません。  
   
 ## <a name="applies-to"></a>適用対象  
  [Status プロパティ (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)

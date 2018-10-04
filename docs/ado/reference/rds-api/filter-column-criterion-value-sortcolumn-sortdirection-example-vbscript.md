@@ -1,13 +1,11 @@
 ---
-title: セット .rds です。DataControl サーバーと HTML テーブル (VBScript) にバインド |Microsoft ドキュメント
+title: セットの rds.DataControl サーバーと HTML テーブル (VBScript) へのバインド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,22 +17,21 @@ helpviewer_keywords:
 - SortColumn property [RDS], VBScript example
 - FilterValue property [ADO], VBScript example
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 465cb7deef84e3b5e853df3ee4d14359babc4221
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c0cea18d6895363e1a264258c88d733fc3c5ab35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288393"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661120"
 ---
-# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn、FilterCriterion、FilterValue、SortColumn、および SortDirection プロパティおよびメソッドの例をリセット (VBScript)
+# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn、FilterCriterion、FilterValue、SortColumn、SortDirection プロパティおよび Reset メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- 次のコードを設定する方法を示しています、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **サーバー**パラメーターはデザイン モードとデータ ソースを使用してテーブル データに対応する HTML にバインドします。 メモ帳などのテキスト エディターに次のコードを貼り付けます切り取ってとして保存して**FilterColumnVBS.asp**です。  
+ 次のコードを設定する方法を示しています、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** designtime とデータ ソースを使用して、データ対応の HTML テーブルのバインド パラメーター。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**FilterColumnVBS.asp**します。  
   
 ```  
 <!-- BeginFilterColumnVBS -->  

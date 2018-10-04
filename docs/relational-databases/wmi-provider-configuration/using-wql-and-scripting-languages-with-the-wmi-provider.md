@@ -1,14 +1,11 @@
 ---
-title: WQL を使用して、スクリプティング言語での WMI プロバイダー |Microsoft ドキュメント
+title: WQL を使用して、スクリプティング言語での WMI プロバイダーと |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [WMI]
@@ -19,18 +16,17 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, WQL
 - WMI Provider for Configuration Management, scripts
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
-caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f399dd4045c1eea0465c6fe6f61a9a57ce7c8412
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e1090e1dcc94b37f4427b76199adcb14173acb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722270"
 ---
-# <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>WQL を使用して、スクリプティング言語での WMI プロバイダー
+# <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>WMI プロバイダーでの WQL とスクリプト言語の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   管理アプリケーションが、WMI (Windows Management Instrumentation) Provider for Configuration Management オブジェクトを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスおよびネットワーク設定にアクセスするには、次の 2 つの方法があります。  
   
@@ -38,12 +34,12 @@ ms.locfileid: "33011329"
   
 -   VBScript などのスクリプティング言語を使用する方法  
   
- または、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスおよびネットワーク設定は、SMO で WMI マネージ オブジェクトを使用してプログラムで管理することもできます。 WMI をプログラミングの詳細については、オブジェクトを管理を参照してください[Services の管理とネットワークの設定を使用して WMI プロバイダーによって](../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)です。  
+ または、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスおよびネットワーク設定は、SMO で WMI マネージド オブジェクトを使用してプログラムで管理することもできます。 WMI のプログラミングの詳細については、オブジェクトをマネージを参照してください。[管理サービスとネットワーク設定を使用して WMI プロバイダーによって](../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)します。  
   
- WMI provider for Configuration Management には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーおよび [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソールを使用してアクセスすることができます。 ユーザー インターフェイスから WMI プロバイダーへのアクセスの詳細については、次を参照してください。 [Services の操作方法に関するトピックを管理する&#40;SQL Server 構成マネージャー&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)です。  
+ WMI provider for Configuration Management には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーおよび [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソールを使用してアクセスすることができます。 ユーザー インターフェイスから WMI プロバイダーへのアクセスの詳細については、次を参照してください。[管理サービスの操作方法に関するトピック&#40;SQL Server 構成マネージャー&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)します。  
   
 ## <a name="see-also"></a>参照  
- [WQL を使用して構成管理の WMI プロバイダーにアクセス](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-wql.md)   
- [SQL Server サービスの詳細プロパティ VBScript を使用しての変更します。](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)  
+ [WQL を使用して構成管理用 WMI プロバイダーにアクセス](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-wql.md)   
+ [VBScript を使用して SQL Server サービスの詳細プロパティを変更する](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)  
   
   

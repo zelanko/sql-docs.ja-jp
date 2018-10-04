@@ -1,34 +1,31 @@
 ---
-title: データの編集 |Microsoft ドキュメント
+title: データの編集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, editing data
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80e6fe9c0e615311bfbc7ee9602aae9ed929a38d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270271"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823391"
 ---
 # <a name="editing-data"></a>データの編集
-について説明してきました ADO を使用してデータ ソースへの接続、コマンドの実行で、結果を得る方法、**レコード セット**オブジェクト内を移動したり、 **Recordset**です。 ここで、次の基本的な ADO 操作について説明します。 データを編集します。  
+説明しました ADO を使用してデータ ソースへの接続、コマンドを実行で、結果を得る方法、**レコード セット**オブジェクト内を移動したり、**レコード セット**します。 このセクションでは、次の基本的な ADO 操作について重点的に取り上げます。: データを編集します。  
   
- このセクションでは、サンプルを使用して引き続き**レコード セット**で導入された[データを調べる](../../../ado/guide/data/examining-data.md)、1 つの重要な変更とします。 開くには、次のコードが使用される、 **Recordset**:  
+ このセクションは、サンプルを使用して引き続き**レコード セット**で導入された[データを調べる](../../../ado/guide/data/examining-data.md)、1 つの重要な変更。 次のコードの使用を開く、 **Recordset**:  
   
 ```  
 'BeginEditIntro  
@@ -47,13 +44,13 @@ ms.locfileid: "35270271"
 'EndEditIntro  
 ```  
   
- コードに重要な変更は、設定、 **CursorLocation**のプロパティ、**接続**オブジェクトと等しい**adUseClient**で、 *GetNewConnection* (次の例に示すように) 関数で、クライアント カーソルの使用を示します。 クライアント側およびサーバー側のカーソルの違いの詳細については、次を参照してください。[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)です。  
+ コードに重要な変更は、設定、 **CursorLocation**のプロパティ、**接続**オブジェクトと等しい**adUseClient**で、 *GetNewConnection*クライアント カーソルの使用を示します (次の例で示すように) 関数。 クライアント側とサーバー側のカーソルの違いの詳細については、次を参照してください。[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)します。  
   
- **CursorLocation**プロパティの**adUseClient**設定、データ ソース (この場合は SQL Server) からクライアント コード (デスクトップ ワークステーション) の場所にカーソルの位置を移動します。 この設定は、作成し、カーソルを管理するためにクライアントで OLE DB 用のクライアント カーソル エンジンを起動する ADO を強制します。  
+ **CursorLocation**プロパティの**adUseClient**設定は、データ ソース (この場合は SQL Server) から、カーソルの位置をクライアント コード (デスクトップ ワークステーション) の場所に移動します。 この設定が強制的に作成し、カーソルを管理するためにクライアントで OLE DB 用のクライアント カーソル エンジンを起動します。  
   
- お気付きを**LockType**のパラメーター、**開く**方法に変更**adLockBatchOptimistic**です。 これにより、カーソルがバッチ モードで開きます。 (プロバイダーが複数の変更をキャッシュし、呼び出した場合にのみ、基になるデータ ソースに書き込みます、 **UpdateBatch**メソッドです)。加えられた変更、 **Recordset**までデータベースには更新されません、 **UpdateBatch**メソッドが呼び出されます。  
+ お気付きかもしれませんが、 **LockType**のパラメーター、**オープン**方法に変更**adLockBatchOptimistic**します。 これにより、カーソルがバッチ モードで開きます。 (プロバイダーが複数の変更をキャッシュし、呼び出すときにのみ、基になるデータ ソースに書き込む、 **UpdateBatch**メソッドです)。加えられた変更、 **Recordset**までデータベースには更新されません、 **UpdateBatch**メソッドが呼び出されます。  
   
- 最後に、このセクションのコードは、GetNewConnection 関数の変更バージョンを使用します。 このバージョンの関数は、クライアント側カーソルを返すようになりました。 関数は、次のようになります。  
+ 最後に、このセクションのコードでは、GetNewConnection 関数の変更バージョンを使用します。 このバージョンの関数は、クライアント側カーソルを返すようになりました。 関数のようになります。  
   
 ```  
 'BeginNewConnection  

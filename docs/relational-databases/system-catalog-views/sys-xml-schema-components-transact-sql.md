@@ -1,14 +1,11 @@
 ---
-title: sys.xml_schema_components (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.xml_schema_components (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xml_schema_components
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_components catalog view
 ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90fbd2b92ccfcf01da2c2742a3b5a083f30f1e03
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: d921ea244bbcc2464e68d32ff4176a694b9cede5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33221953"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828250"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ ms.locfileid: "33221953"
 |**xml_component_id**|**int**|データベース内の XML スキーマ コンポーネントの一意の ID。|  
 |**xml_collection_id**|**int**|コンポーネントの名前空間を含む XML スキーマ コレクションの ID。|  
 |**xml_namespace_id**|**int**|コレクション内の XML 名前空間の ID。|  
-|**is_qualified**|**bit**|1 = このコンポーネントには明示的な名前空間の修飾子があります。<br /><br /> 0 = これはローカル スコープのコンポーネントです。 この場合は、ペア**namespace_id**、 **collection_id**は、「ない名前空間」を参照**targetNamespace**です。<br /><br /> ワイルドカード コンポーネントでは、この値は 1 になります。|  
+|**is_qualified**|**bit**|1 = このコンポーネントには明示的な名前空間の修飾子があります。<br /><br /> 0 = これはローカル スコープのコンポーネントです。 この場合は、ペア**namespace_id**、 **collection_id**、「ない名前空間」を指す**targetNamespace**します。<br /><br /> ワイルドカード コンポーネントでは、この値は 1 になります。|  
 |**name**|**nvarchar**<br /><br /> **(4000)**|XML スキーマ コンポーネントの一意の名前。 コンポーネントに名前が付けられていない場合は NULL です。|  
 |**symbol_space**|**char(1)**|**kind**に基づいてこの記号名が一意にする領域:<br /><br /> N = なし<br /><br /> T = 種類<br /><br /> E = 要素<br /><br /> M = モデル - グループ<br /><br /> A = 属性<br /><br /> G = 属性 - グループ|  
 |**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|**kind**に基づいてこの記号名が一意にする空間の説明が:<br /><br /> なし<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  

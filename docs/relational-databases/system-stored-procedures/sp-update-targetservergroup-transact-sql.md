@@ -1,14 +1,11 @@
 ---
-title: sp_update_targetservergroup (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_update_targetservergroup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_targetservergroup_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_targetservergroup
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b6ba9e9e079c201c1f322b58aae861a0c30ae53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d38c9727995b20cd23087a0f944ccbfa28bf019d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260828"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788090"
 ---
 # <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +51,10 @@ sp_update_targetservergroup
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_update_targetservergroup**から実行する必要があります、 **msdb**データベース。  
   
 ## <a name="examples"></a>使用例  

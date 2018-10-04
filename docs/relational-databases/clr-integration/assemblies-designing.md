@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c26b6d0671feaf1638fecf9afe60744c5a2d1da
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 6d1fc46d8ccffa84ad820153a060b6b02c2deb71
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353514"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808030"
 ---
 # <a name="assemblies---designing"></a>アセンブリ - デザイン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +58,7 @@ ms.locfileid: "37353514"
  また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 メンバーのみ、 **sysadmin**固定サーバー ロールは、UNSAFE アセンブリを作成できます。  
   
 ## <a name="restrictions-on-assemblies"></a>アセンブリに関する制限事項  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アセンブリのマネージド コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アセンブリのマネージド コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
   
 ### <a name="disallowed-custom-attributes"></a>禁止されているカスタム属性  
  アセンブリには次のカスタム属性で注釈を付けることができません。  

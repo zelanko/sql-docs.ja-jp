@@ -1,13 +1,11 @@
 ---
-title: AbsolutePosition と CursorLocation プロパティの例 (vc++) |Microsoft ドキュメント
+title: AbsolutePosition および CursorLocation プロパティの例 (vc++) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CursorLocation property [ADO], VC++ example
 - AbsolutePosition property [ADO], VC++ example
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafee71e3b5fd70116260ad542a80085aaa845b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 922ccc2768b317d3ea0dac612bf965def9c7f2e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826789"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition と CursorLocation プロパティの例 (vc++)
-次の例でどのように[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティは、のすべてのレコードを列挙するループの進行状況を追跡できます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。 使用して、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)を有効にするプロパティ、 **AbsolutePosition**プロパティをクライアント カーソルにカーソルを設定します。  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition および CursorLocation プロパティの例 (vc++)
+この例では、どのように[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティのすべてのレコードを列挙するループの進行状況を追跡できます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用して、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを有効にする、 **AbsolutePosition**クライアント カーソルをカーソルを設定するプロパティ。  
   
 ```  
 // BeginAbsolutePositionCpp.cpp  

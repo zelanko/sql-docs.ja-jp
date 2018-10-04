@@ -1,13 +1,11 @@
 ---
-title: 日付、時刻、およびタイムスタンプ エスケープ シーケンス |Microsoft ドキュメント
+title: 日付、時刻、およびタイムスタンプ エスケープ シーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - ODBC escape sequences [ODBC], about escape sequences
 - ODBC escape sequences [ODBC]
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3e5edf5d233b4a6767eff6590fd2cea9923e640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9131e5fa8f16a137461bde5ecea3fd793b2cf9be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792710"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日付、時刻、およびタイムスタンプ エスケープ シーケンス
 ODBC では、日付、時刻、およびタイムスタンプのリテラルのエスケープ シーケンスを定義します。 これらのエスケープ シーケンスの構文は次のとおりです。  
@@ -36,7 +33,7 @@ ODBC では、日付、時刻、およびタイムスタンプのリテラルの
 {ts 'value'}  
 ```  
   
- BNF 表記で、構文のとおりです。  
+ BNF 表記では、構文がとおりです。  
   
 ```  
   
@@ -56,5 +53,5 @@ timestamp-separator ::=
      (The blank character)years-value ::= digit digit digit digitmonths-value ::= digit digitdays-value ::= digit digithours-value ::= digit digitminutes-value ::= digit digitseconds-value ::= digit digit[.digit...]  
 ```  
   
-## <a name="remarks"></a>解説  
- 日付、時刻、およびタイムスタンプのリテラルのエスケープ シーケンスは、日付、時刻、および timestamp データ型が、データ ソースによってサポートされている場合にサポートされます。 アプリケーションを呼び出す必要があります**SQLGetTypeInfo**をこれらのデータ型がサポートされているかどうかを判断します。
+## <a name="remarks"></a>コメント  
+ 日付、時刻、およびタイムスタンプのリテラルのエスケープ シーケンスは、日付、時刻、タイムスタンプ データ型が、データ ソースでサポートされている場合にサポートされます。 アプリケーションを呼び出す必要があります**SQLGetTypeInfo**をこれらのデータ型がサポートされているかどうかを判断します。

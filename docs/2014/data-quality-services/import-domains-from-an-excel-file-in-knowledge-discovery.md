@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70a5c80424f9260a1e6f6f69554b7f25e00789f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 479021af7c7e15b8f9d0a82a45b4f644f7a7c29b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293172"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051352"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>ナレッジ検出でドメインを Excel ファイルからインポートする
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ナレッジ検出アクティビティで Excel ファイルから 1 つまたは複数のドメインをインポートする方法について説明します。 インポート処理は、ナレッジの生成処理を簡略化し、時間と労力を節約します。 インポートにより、Excel ファイルまたはテキスト ファイルでデータを所有しているユーザーは、そのデータを使用してナレッジ ベースを作成できます。 (既存のナレッジ ベースのドメインへの値のインポートについて詳しくは、「[値を Excel ファイルからドメインへインポートする](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」をご覧ください。)Excel ファイルへのエクスポートはサポートされていません。  
@@ -56,7 +53,7 @@ ms.locfileid: "37293172"
   
 8.  列を選択し、既存のドメインを列にマップするか、新しいドメインを作成して列にマップします。新しいドメインを作成するには、 **[ドメインの作成]** アイコンをクリックし、 **[ドメインの作成]** ダイアログ ボックスでドメインを作成します。 ドメインのデータ型は列のデータ型と一致する必要があります。 スプレッドシートのすべての列について、この手順を繰り返します。  
   
-9. [**次へ**] をクリックします。  
+9. **[次へ]** をクリックします。  
   
 10. **[検出]** ページで、 **[開始]** をクリックして Excel スプレッドシート内のデータを分析します。  
   

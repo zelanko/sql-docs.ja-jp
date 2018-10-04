@@ -1,13 +1,11 @@
 ---
-title: Visual FoxPro データベースから Microsoft Excel にデータをインポート |Microsoft ドキュメント
+title: Visual FoxPro データベースから Microsoft Excel にデータをインポートする |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - importing data [ODBC]
@@ -16,33 +14,32 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], importing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d3e7b1b915e27bb1f687631c68cbea2ef5d8fd8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de81b606d31514cf6e7a518deeb68794d1011132
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809340"
 ---
-# <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Visual FoxPro データベースから Microsoft Excel にデータをインポートします。
-データ ソースを定義している場合は、Microsoft Excel ワークシートに Visual FoxPro データをインポートできます。 Visual FoxPro データ ソースを作成する方法の詳細については、次を参照してください。 [Visual FoxPro データ ソースから Microsoft Excel へのアクセス](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)です。  
+# <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Visual FoxPro データベースから Microsoft Excel へのデータのインポート
+そのデータ ソースを定義している場合は、Microsoft Excel ワークシートに Visual FoxPro データをインポートできます。 Visual FoxPro データ ソースを作成する方法の詳細については、次を参照してください。 [Microsoft Excel から Visual FoxPro データ ソースへのアクセス](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)します。  
   
-### <a name="to-import-visual-foxpro-data-into-an-microsoft-excel-worksheet"></a>Visual FoxPro データを Excel ワークシートにインポートするには  
+### <a name="to-import-visual-foxpro-data-into-an-microsoft-excel-worksheet"></a>Visual FoxPro データを Microsoft Excel ワークシートにインポートするには  
   
 1.  Microsoft Excel スプレッドシートを開きます。  
   
-2.  [データ] メニューから、外部データの取得を選択します。 Microsoft のクエリを開きます。  
+2.  [データ] メニューから外部データの取り込みを選択します。 Microsoft のクエリが開きます。  
   
 3.  データ ソースの選択 ダイアログ ボックスで、Visual FoxPro データ ソースを選択し、使用 をクリックします。  
   
 4.  データ ソースからアクセスされるデータベースには、テーブルが含まれている場合は、テーブルの追加 ダイアログ ボックスからテーブルを選択します。 Microsoft のクエリでは、クエリ デザイナーの上部に追加されたテーブルが表示されます。  
   
     > [!NOTE]  
-    >  所有者のリストは、ドライバーは所有者をサポートしていないために、このダイアログ ボックスで使用できません。 ドライバーは、データ ソース内の複数のデータベースをサポートしていないために、データベースの一覧は使用できません。  
+    >  ドライバーは所有者をサポートしていないためにも、所有者のリストはこのダイアログ ボックスでご利用いただけません。 ドライバーがデータ ソースで複数のデータベースをサポートしていないために、データベースの一覧は使用できません。  
   
-5.  ドラッグして、テーブルの下半分デザイナーのクエリのフィールドを選択します。  
+5.  ドラッグして、テーブルから、下半分のデザイナー、クエリのフィールドを選択します。  
   
 6.  Microsoft のクエリを閉じます。 選択したデータは、Microsoft Excel スプレッドシートにインポートされます。

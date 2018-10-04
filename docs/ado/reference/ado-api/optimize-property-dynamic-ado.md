@@ -1,41 +1,38 @@
 ---
-title: (ADO) のプロパティ-動的な最適化 |Microsoft ドキュメント
+title: Optimize プロパティ-動的 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bebc49795ff10a29cb3b367c98e9471bc7a2eaa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d461d0fad834dfc3c3c6f22ec64cc4987eca6fa5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280037"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662280"
 ---
-# <a name="optimize-property-dynamic-ado"></a>動的プロパティ (ADO) を最適化します。
-インデックスを作成する必要があるかどうかを指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)です。  
+# <a name="optimize-property-dynamic-ado"></a>Optimize プロパティ - 動的 (ADO)
+インデックスを作成する必要があるかどうかを指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、**ブール**インデックスを作成するかどうかを示す値。  
+ 設定または取得を**ブール**インデックスを作成するかどうかを示す値です。  
   
 ## <a name="remarks"></a>コメント  
- インデックスは、検索や内の値を並べ替え操作のパフォーマンスを向上させることができます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 インデックスが ADO; 内部明示的にアクセスできない、または、アプリケーションで使用します。  
+ インデックスは、検索や内の値を並べ替え操作のパフォーマンスを向上させることができます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 インデックスが ADO; 内部明示的にアクセスできない、またはアプリケーションで使用します。  
   
- フィールドにインデックスを作成するには設定、**最適化**プロパティを**True**です。 インデックスを削除するには、このプロパティを設定**False**です。  
+ フィールドのインデックスを作成するには設定、**最適化**プロパティを**True**します。 インデックスを削除するには、このプロパティを設定**False**します。  
   
- **最適化**に動的なプロパティが追加、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションと、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) にプロパティが設定されている**adUseClient**です。  
+ **最適化**に動的なプロパティが追加、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション時に、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) に設定されて**adUseClient**します。  
   
 ## <a name="usage"></a>使用方法  
   
@@ -54,8 +51,8 @@ fld.Properties("Optimize") = False   'Delete an index
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>参照  
- [プロパティの例 (VB) の最適化します。](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
- [プロパティの例 (vc++) を最適化します。](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
+ [Optimize プロパティの例 (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
+ [Optimize プロパティの例 (vc++)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   
  [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Sort プロパティ](../../../ado/reference/ado-api/sort-property.md)

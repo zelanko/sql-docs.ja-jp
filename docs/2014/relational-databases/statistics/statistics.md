@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
@@ -25,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 257abd70ea2b0f6345d40c7b6f009d50da5045c5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f69e594b1359e3d569c624243c15de2354468be1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428341"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063752"
 ---
 # <a name="statistics"></a>統計
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成したりクエリのデザインを変更したりする必要がある場合もあります。 このトピックでは、クエリ最適化に関する統計の概念と、それを効果的に使用するためのガイドラインについて説明します。  
@@ -151,7 +149,7 @@ CREATE STATISTICS LastFirst ON Person.Person (LastName, MiddleName, FirstName);
 GO  
 ```  
   
- この例では、統計オブジェクト `LastFirst` に、列プレフィックス (`LastName`)、(`LastName, MiddleName`)、および (`LastName, MiddleName, FirstName`) の密度が格納されています。 (`LastName, FirstName`) の密度は使用できません。 ph x="1" /&gt; を使用せずに `FirstName` と `MiddleName` を使用したクエリの場合は、カーディナリティの推定に密度を使用することはできません。  
+ この例では、統計オブジェクト `LastFirst` に、列プレフィックス (`LastName`)、(`LastName, MiddleName`)、および (`LastName, MiddleName, FirstName`) の密度が格納されています。 (`LastName, FirstName`) の密度は使用できません。 `LastName` を使用せずに `FirstName` と `MiddleName` を使用したクエリの場合は、カーディナリティの推定に密度を使用することはできません。  
   
 ### <a name="query-selects-from-a-subset-of-data"></a>データのサブセットから選択するクエリを使用する  
  クエリ オプティマイザーでは、1 列ずつおよびインデックスに対して統計を作成する際、すべての行の値に対する統計を作成します。 行のサブセットから選択するクエリの場合、その行のサブセットのデータ分布が一意であれば、フィルター選択された統計情報を使用することでクエリ プランを向上させることができます。 フィルター選択された統計情報は、CREATE STATISTICS ステートメントを WHERE 句と共に使用してフィルター述語の式を定義することで作成できます。  

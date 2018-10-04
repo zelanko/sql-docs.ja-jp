@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritydetailstable (TRANSACT-SQL) |Microsoft ドキュメント
+title: semanticsimilaritydetailstable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31e23931b0b4b22df06cde0981209c28aecef373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c7b6bdccdb0c9d84b7ad814c0342a6fe267522d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718060"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,13 +72,13 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>返されるテーブル  
  次の表に、この行セット関数から返されるキー フレーズに関する情報を示します。  
   
-|Column_name|型|Description|  
+|Column_name|型|説明|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|ソース ドキュメントと一致したドキュメント間の類似性に関係があるキー フレーズ。|  
 |**score**|**REAL**|類似した 2 つのドキュメントの関連性における、その他のすべてのキー フレーズとこのキー フレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、次を参照してください。[よる類似および関連したドキュメント セマンティック検索の](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)します。  
+ 詳細については、次を参照してください。[類似および関連ドキュメント セマンティック検索による](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)します。  
   
 ## <a name="metadata"></a>メタデータ  
  セマンティックな類似性の抽出および作成の詳細と状態については、次の動的管理ビューに対してクエリを実行してください。  
@@ -92,11 +89,11 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例で指定された候補間で最も類似スコアが 5 つのキー フレーズを取得する**HumanResources.JobCandidate** AdventureWorks2012 サンプル データベースのテーブルです。 @CandidateIdと@MatchedID変数は、フルテキスト インデックスのキー列の値を表します。  
+ 次の例で指定された候補間で最も類似スコアが 5 つのキー フレーズを取得する**HumanResources.JobCandidate** AdventureWorks2012 サンプル データベースのテーブル。 @CandidateIdと@MatchedID変数は、フルテキスト インデックスのキー列から値を表します。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

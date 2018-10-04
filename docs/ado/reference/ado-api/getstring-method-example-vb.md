@@ -1,34 +1,31 @@
 ---
-title: GetString メソッドの例 (VB) |Microsoft ドキュメント
+title: GetString メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a5a2ac54d8a177669d94613a2b612f6ce65f8d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9a7210c3680202a0e08e3096f7f58d32e876e1ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623140"
 ---
 # <a name="getstring-method-example-vb"></a>GetString メソッドの例 (VB)
-この例で、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドです。  
+この例では、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッド。  
   
- データ アクセスの問題をデバッグすると、小規模の現在の内容を印刷の迅速で簡単な方法が必要に[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
+ データ アクセスの問題をデバッグし、迅速で簡単な方法で、小規模の現在の内容を印刷[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
   
 ```  
 'BeginGetStringVB  

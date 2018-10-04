@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 057d80ade08d7d5266208b2d417e08d530a8d8df
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3eb6bbc5a3c08ca8668219dd3a11354c2fed2ca8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083894"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056512"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>SQL 実行タスクのパラメーターとリターン コード
   SQL ステートメントおよびストアド プロシージャを頻繁に使用`input`パラメーター、`output`パラメーター、およびリターン コード。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の SQL 実行タスクでは、`Input`、`Output`、および `ReturnValue` という、パラメーターの型がサポートされています。 使用する、 `Input` 、入力パラメーターの型`Output`の出力パラメーター、および`ReturnValue`リターン コード。  
@@ -49,16 +46,16 @@ ms.locfileid: "39083894"
 -   [構成パラメーターとリターン コードで、SQL 実行タスク エディター](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> パラメーター名とパラメーター マーカーを使用します。  
- SQL コマンドの構文では、SQL 実行タスクが使用する接続の種類によって、異なるパラメーター マーカーが使用されます。 たとえば、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーの種類では、SQL コマンドがの形式でパラメーター マーカーを使用する必要があります **\@varParameter**、OLE DB 接続の種類には、疑問符 (?) パラメーターが必要です。マーカー。  
+ SQL コマンドの構文では、SQL 実行タスクが使用する接続の種類によって、異なるパラメーター マーカーが使用されます。 たとえば、[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーの場合は、SQL コマンドが使用するパラメーター マーカーの形式を **\@varParameter** にする必要がありますが、OLE DB 接続の場合は疑問符 (?) パラメーター マーカーが必要です。  
   
- 変数とパラメーターの間でのマッピングでパラメーター名として使用できる名前も、接続マネージャーの種類によって異なります。 たとえば、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーの種類でユーザー定義の名前を使用して、\@プレフィックス、OLE DB 接続マネージャーの種類は、パラメーター名として 0 から始まる序数の数値の値を使用することが必要です。  
+ 変数とパラメーターの間でのマッピングでパラメーター名として使用できる名前も、接続マネージャーの種類によって異なります。 たとえば、[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーでは \@ プレフィックス付きのユーザー定義名を使用し、OLE DB 接続マネージャーではパラメーター名として 0 から始まる序数の数値を使用する必要があります。  
   
  次の表に、SQL 実行タスクで使用できる接続マネージャーの種類の SQL コマンドの要件をまとめます。  
   
 |接続の種類|パラメーター マーカー|[パラメーター名]|SQL コマンドの例|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO (ADO)|?|Param1、Param2、...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<パラメーター名>|\@\<パラメーター名>|FirstName、LastName、タイトルから Person.Contact、ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<パラメーター名>|\@\<パラメーター名>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL および OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -151,7 +148,7 @@ ms.locfileid: "39083894"
   
 -   ADO 接続では、Param1 や Param2 など、任意の 2 つのパラメーター名を使用します。ただし、これらのパラメーター名は、パラメーター リストの序数位置によってマップされる必要があります。  
   
--   [!INCLUDE[vstecado](../includes/vstecado-md.md)]接続の種類は、パラメーター名を使用して\@parmMinProductID と\@parmMaxProductID します。  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続では、パラメーター名 \@parmMinProductID と \@parmMaxProductID を使用します。  
   
 ##  <a name="Stored_procedures"></a> ストアド プロシージャでパラメーターを使用  
  ストアド プロシージャを実行する SQL コマンドでは、パラメーター マッピングを使用することもできます。 パラメーター マーカーとパラメーター名の使用方法に関する規則は、パラメーター化クエリの規則と同様に、SQL 実行タスクで使用される接続マネージャーの種類によって異なります。  

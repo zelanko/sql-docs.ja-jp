@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352814"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779190"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 統合のアーキテクチャ - CLR ホスト環境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,12 +65,11 @@ ms.locfileid: "37352814"
   
  このようにスレッド処理、スケジュール設定、およびメモリ管理のモデルが異なるため、数千の同時実行ユーザー セッションをサポートするまで規模が拡大された RDBMS (リレーショナル データベース管理システム) では統合が課題になります。 アーキテクチャでは、スレッド処理、メモリ、および同期プリミティブの API (アプリケーション プログラミング インターフェイス) を直接呼び出すユーザー コードによってシステムのスケーラビリティが損なわれないことを保証する必要があります。  
   
-###### <a name="security"></a>Security  
+###### <a name="security"></a>セキュリティ  
  データベースで実行されるユーザー コードがテーブルや列などのデータベース オブジェクトにアクセスする際には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の認証規則と承認規則に従う必要があります。 また、データベース管理者は、データベースで実行しているユーザー コードからファイルやネットワーク アクセスなどのオペレーティング システム リソースへのアクセスを制御できる必要があります。 (Transact-SQL などの非マネージド言語とは異なり) このようなリソースにアクセスする API が用意されているマネージド プログラミング言語ではこのことが重要になります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロセス外のコンピューター リソースにアクセスするユーザー コードには、システムによりセキュリティで保護された方法が提供される必要があります。 詳細については、「 [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)」を参照してください。  
   
 ###### <a name="performance"></a>[パフォーマンス]  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で実行されるマネージド ユーザー コードと、サーバーの外部で実行されるマネージド ユーザー コードのコンピューター処理パフォーマンスは同程度になる必要があります。 マネージド ユーザー コードからのデータ アクセスは、ネイティブ [!INCLUDE[tsql](../../includes/tsql-md.md)] ほど高速ではありません。 詳細については、次を参照してください。 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)します。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]で実行されるマネージド ユーザー コードと、サーバーの外部で実行されるマネージド ユーザー コードのコンピューター処理パフォーマンスは同程度になる必要があります。 マネージド ユーザー コードからのデータ アクセスは、ネイティブ [!INCLUDE[tsql](../../includes/tsql-md.md)] ほど高速ではありません。 詳細については、次を参照してください。 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)します。  
   
 ## <a name="clr-services"></a>CLR サービス  
  CLR により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との CLR 統合のデザイン目標を達成するのに役立つ多数のサービスが提供されます。  
@@ -142,7 +139,7 @@ ms.locfileid: "37352814"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ホストレベルの CAS ポリシー層を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カタログに格納されている権限セットに基づいて上記の 3 つの権限セットのうちのいずれかを許可するホスト ポリシーを構成します。 データベース内部で実行するマネージド コードには、これらのコード アクセス権限セットのうちのいずれかが必ず許可されます。  
   
 ### <a name="programming-model-restrictions"></a>プログラミング モデルの制限  
- ph x="1" /&gt; のマネージド コードのプログラミング モデルでは、通常、複数の呼び出し間で保持される状態の使用や複数のユーザー セッション間での状態の共有を必要としない関数、プロシージャ、および型の記述が必要になります。 さらに、既に説明したように、共有状態が存在すると、アプリケーションのスケーラビリティや信頼性に影響を与える重大な例外が発生する可能性があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド コードのプログラミング モデルでは、通常、複数の呼び出し間で保持される状態の使用や複数のユーザー セッション間での状態の共有を必要としない関数、プロシージャ、および型の記述が必要になります。 さらに、既に説明したように、共有状態が存在すると、アプリケーションのスケーラビリティや信頼性に影響を与える重大な例外が発生する可能性があります。  
   
  このような考慮事項を考えると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用するクラスの静的変数や静的なデータ メンバーを使用することはお勧めしません。 SAFE アセンブリと EXTERNAL_ACCESS アセンブリの場合、CREATE ASSEMBLY を使用するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でアセンブリのメタデータが調べられ、静的なデータ メンバーや変数の使用が検出された場合はこのようなアセンブリを作成できません。  
   

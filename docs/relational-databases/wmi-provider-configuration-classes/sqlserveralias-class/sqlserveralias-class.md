@@ -1,14 +1,11 @@
 ---
-title: SqlServerAlias クラス |Microsoft ドキュメント
+title: SqlServerAlias クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SqlServerAlias Class
@@ -18,15 +15,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fb5c8262739f89518ad92d8f09819c810167a659
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75ca27fc8c035a2b62cc70bbf740dd746f341d45
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603530"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +31,11 @@ ms.lasthandoff: 05/03/2018
   
  サーバー接続別名は、次の両方に該当する場合に必要となります。  
   
--   インスタンスに、クライアントが接続する[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定のネットワーク転送ではないネットワーク トランスポートを経由します。  
+-   インスタンスに、クライアントが接続して[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定のネットワーク トランスポートではないネットワーク トランスポートを経由します。  
   
 -   クライアントが接続されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが代替の名前付きパイプをリッスンする場合。  
   
- **注:** 、 [SqlServerAlias クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)継承、 **Put**プロバイダー クラスのメソッドです。 ただし、その結果は返されません任意に従い、 **Provider::Put**メソッドです。 詳細については、WMI のドキュメントを参照してください。  
+ **注:** 、 [SqlServerAlias クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)継承、**配置**プロバイダー クラスのメソッド。 ただし、これは結果を返しませんによって示される、 **Provider::Put**メソッド。 詳細については、WMI のドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](http://technet.microsoft.com/library/ms181035.aspx)  

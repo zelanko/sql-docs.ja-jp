@@ -1,71 +1,65 @@
 ---
-title: テスト_ケース準備 (SybaseToSQL) を終了 |Microsoft ドキュメント
+title: テスト_ケース準備 (SybaseToSQL) の終了 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1df39866e511664027f5a4991360ef2eabf085a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b31739bb4db23ccd2159ec8146ef857d7a5d66e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837367"
 ---
-# <a name="finishing-test-case-preparation-sybasetosql"></a>テスト_ケース準備 (SybaseToSQL) の終了
-ウィザードの最終ページには、テスト_ケースの説明と、テストに関連するオブジェクトに関する情報が表示されます。 さらに、このページで設定できます、テストの実行オプション。  
+# <a name="finishing-test-case-preparation-sybasetosql"></a>テスト ケースの準備の終了 (SybaseToSQL)
+ウィザードの最後のページには、テスト_ケースの説明と、テストに含まれるオブジェクトに関する情報が表示されます。 さらに、このページで設定できますテストの実行オプション。  
   
-**テスト_ケースについて**テスト_ケースの名前と説明 セクションを示しています。  
+**テスト_ケース情報**セクションには、テスト ケースの名前と説明が表示されます。  
   
-**テスト オブジェクト**セクションには、オブジェクトの種類でグループ化されたテスト済みのオブジェクトの名前付きの一覧が含まれています。  
+**テスト オブジェクト**セクションには、名前付きオブジェクトの種類によってグループ化されたテスト済みのオブジェクトの一覧が含まれています。  
   
-**分析するのには影響を受けるオブジェクト**セクションには、テスト対象のオブジェクトの実行後にどのデータの変更と比較するオブジェクトの名前付きの一覧が表示されます。  
+**分析対象のオブジェクトの影響を受ける**セクションには、テスト対象のオブジェクトの実行後にデータ変更と比較するオブジェクトの名前付きの一覧が表示されます。  
   
 ## <a name="test-case-settings"></a>テスト_ケースの設定  
-**テスト_ケース設定**セクション テスト オプションを次の実行に設定します。  
+**テスト_ケース設定**セクションの次の実行テスト オプションを設定できます。  
   
 ### <a name="stop-test-execution-after-first-failure"></a>最初のエラーの後にテストの実行を停止します。  
-テストの実行中にエラーが発生した場合、テストを中断するを指定します。  
+テストの実行中にエラーが発生した場合、テストを中断することを指定します。  
   
--   選択した場合**はい**エラーが発生する場合は、実行が中断をテストします。  
+-   選択した場合**はい**エラーが発生した場合は、実行が中断をテストします。  
   
 -   選択した場合**いいえ**、エラーが発生したテストの実行が続行されます。  
   
 ### <a name="perform-data-rollback"></a>データのロールバックを実行します。  
 テストの実行後、データの自動ロールバックを有効にします。  
   
--   選択した場合**はい**テストの実行後のデータ変更が失われます。  
+-   選択した場合**はい**テストの実行後のデータの変更が失われます。  
   
--   選択した場合**いいえ**、すべてのテストの実行データの変更は保存されます。  
+-   選択した場合**いいえ**、すべてのテスト実行データの変更は保存されます。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>補助テーブルの保存モード  
-テストの実行中に作成された補助テーブルの保存モードを定義します。 内の補助テーブルの説明を参照して、[テスト_ケースを実行している&#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md)トピックです。  
+テストの実行中に作成された補助テーブルの保存モードを定義します。 内の補助テーブルの説明を参照して、[テスト_ケースを実行している&#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md)トピック。  
   
--   選択した場合**は常に保存**、補助テーブル データは、後で使用するため常に格納されます。  
+-   選択した場合**常に保存**、後で使用するための補助テーブルのデータを格納する常にします。  
   
--   選択した場合**テーブルの比較に失敗した場合は、保存**エラーが発生する場合にのみの補助テーブルのデータを格納します。  
+-   選択した場合**テーブルの比較が失敗した場合の保存**、補助テーブルのデータは、エラーが発生する場合にのみ格納されます。  
   
--   選択した場合**をいつでも削除**、常に補助テーブルがテストの実行後に削除されます。  
+-   選択した場合**をいつでも削除**、常に補助テーブルがテストの実行の後に削除されます。  
   
--   選択した場合**テーブルの比較に失敗した場合にユーザーに依頼**ユーザーは、エラーが発生する場合に必要な操作を選択できます。  
+-   選択した場合**テーブルの比較が失敗した場合にユーザーを依頼**エラーが発生した場合、ユーザーが必要な操作を選択できます。  
   
-をクリックして、**完了**に準備されたテスト_ケースを保存するボタン[テスト リポジトリを使用して&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)です。  
+をクリックして、**完了**に準備されたテスト_ケースを保存するボタン[を使用してテスト リポジトリ&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)。  
   
 ## <a name="see-also"></a>参照  
-[テストのリポジトリを使用して&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[テスト_ケースを実行する&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[データベース オブジェクトを移行テスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[テスト リポジトリの使用&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[テスト_ケースを実行している&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

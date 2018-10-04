@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplist.general.f1
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2304b2b9a8711210117ffbb2a84abbf167694e71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066352"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>[新しいフルテキスト ストップリスト] ([全般] ページ)
   このダイアログ ボックスを使用すると、フルテキスト ストップリストを作成できます。 *ストップリスト* とは、一般的に使用される単語のセットのことです。これらの単語は *ストップワード*と呼ばれ、ストップリストを使用するテーブルのフルテキスト インデックスから省略されます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)」を参照してください。  

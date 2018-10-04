@@ -1,37 +1,34 @@
 ---
-title: データの更新 |Microsoft ドキュメント
+title: データの更新 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ADO], about data updates
 - updating data [ADO], about updating data
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ed34a235a489feb13d31ef38e84e821cce961dc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d593bd3ad745f316b833b375ceaae8b764d21ec2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828550"
 ---
 # <a name="updating-data"></a>データの更新
 更新プログラムの動作と機能に大きく依存モード (ロックの種類)、カーソルの種類、およびカーソルの場所を更新します。  
   
- 使用して、**更新**の現在のレコードに対して行った変更を保存する方法、**レコード セット**呼び出し元からのオブジェクト、 **AddNew**メソッドまたはフィールド値を変更した後既存のレコードです。 **Recordset**オブジェクトが更新をサポートする必要があります。  
+ 使用して、 **Update**の現在のレコードに加えた変更を保存する方法、**レコード セット**オブジェクトを呼び出した後、 **AddNew**メソッドまたは任意のフィールドの値を変更した後で既存のレコード。 **Recordset**オブジェクトは、更新プログラムをサポートする必要があります。  
   
- 場合、 **Recordset**オブジェクトは、バッチ更新をサポートしている、1 つまたは複数のレコードを複数の変更をキャッシュするには、ローカルで呼び出されるまで、 **UpdateBatch**メソッドです。 現在のレコードを編集または呼び出すときに、新しいレコードを追加する場合、 **UpdateBatch**メソッド、ADO の呼び出しは自動的に、**更新**する前に現在のレコードに保留中の変更を保存する方法プロバイダーにバッチ処理された変更を送信します。  
+ 場合、 **Recordset**オブジェクトは、バッチ更新をサポートしているを呼び出すまで、ローカルでは、1 つまたは複数のレコードに複数の変更をキャッシュすることができます、 **UpdateBatch**メソッド。 現在のレコードを編集または呼び出すときに新しいレコードを追加する場合、 **UpdateBatch**メソッド、ADO の呼び出しが自動的に、 **Update**メソッドの前に、現在のレコードに保留中の変更を保存するにはプロバイダーにバッチ処理された変更を送信します。  
   
- 現在のレコードを呼び出した後、**更新**または**UpdateBatch**メソッドです。  
+ 現在のレコードを呼び出した後は、最新の状態、 **Update**または**UpdateBatch**メソッド。  
   
  このセクションでは、次のトピックを扱います。  
   

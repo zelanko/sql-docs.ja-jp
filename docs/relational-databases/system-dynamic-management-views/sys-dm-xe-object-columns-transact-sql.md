@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_object_columns (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_xe_object_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_object_columns
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b7123f557674afe6016138f05803a8d13753c6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0a00c2aea93b77f65455024d15af13b153d7ebef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732178"
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +35,10 @@ ms.lasthandoff: 05/23/2018
 > [!NOTE]  
 >  イベント オブジェクトは、読み取り専用データと読み取り/書き込みデータの両方の固定スキーマを公開します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|列の名前です。 名前では、オブジェクト内で一意です。 NULL 値は許可されません。|  
-|column_id|**int**|列の識別子。 column_id は、column_type と共に使用すると、オブジェクト内で一意です。 NULL 値は許可されません。|  
+|NAME|**nvarchar(60)**|列の名前です。 名前では、オブジェクト内で一意です。 NULL 値は許可されません。|  
+|column_id|**int**|列の識別子。 column_id は、column_type と共に使用する場合、オブジェクト内で一意です。 NULL 値は許可されません。|  
 |object_name|**nvarchar(60)**|この列が所属するオブジェクトの名前。 sys.dm_xe_objects.id との間に多対一のリレーションシップがあります。NULL 値は許可されません。|  
 |object_package_guid|**uniqueidentifier**|オブジェクトを含むパッケージの GUID。 NULL 値は許可されません。|  
 |type_name|**nvarchar(60)**|この列の型の名前。 NULL 値は許可されません。|  
@@ -51,7 +49,7 @@ ms.lasthandoff: 05/23/2018
 |capabilities_desc|**nvarchar (256)**|このオブジェクトの列の機能の説明。 この値は次のいずれかになります。<br /><br /> Mandatory。 親オブジェクトをイベント セッションにバインドするときに値を設定する必要があります。<br /><br /> NULL|  
 |description|**nvarchar (256)**|このオブジェクトの列の説明。 NULL 値が許可されます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  

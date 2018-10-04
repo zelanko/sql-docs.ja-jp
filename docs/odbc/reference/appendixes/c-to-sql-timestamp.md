@@ -1,49 +1,46 @@
 ---
-title: 'C から SQL へ: タイムスタンプ |Microsoft ドキュメント'
+title: 'C から SQL へ: タイムスタンプ |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc9202f97100e2b6eb69776d7864c8bafbed20d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739900"
 ---
 # <a name="c-to-sql-timestamp"></a>C から SQL へ: タイムスタンプ
 Timestamp ODBC C データ型の識別子です。  
   
  SQL_C_TYPE_TIMESTAMP  
   
- 次の表は、ODBC SQL データ型が C のタイムスタンプ データを変換することがありますを示します。 列とテーブルの用語の詳細については、次を参照してください。[に変換するデータを C から SQL データ型を](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)です。  
+ 次の表は、ODBC SQL データ型が C のタイムスタンプ データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
   
-|SQL 型の識別子|テスト|SQLSTATE|  
+|SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|列のバイト長 > 文字バイトの長さを =<br /><br /> 19 < バイト長の列を = < バイトの長さを文字<br /><br /> 列のバイトの長さ < 19<br /><br /> データ値は有効なタイムスタンプではありません。|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|列の文字の長さ > データの文字の長さを =<br /><br /> 19 < 列の文字の長さを = < データの長さを文字<br /><br /> 列の長さ < 19 文字します。<br /><br /> データ値は有効なタイムスタンプではありません。|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|時刻フィールドは 0<br /><br /> 時刻フィールドは 0 以外の値<br /><br /> データ値に有効な日付が含まれていません|n/a<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIME|秒の小数部のフィールドは 0 を [a]<br /><br /> 秒の小数部のフィールドは、0 以外の値 [a]<br /><br /> データ値は有効な時刻を含んでいません|n/a<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|秒の小数部のフィールドは、切り捨てられません<br /><br /> 秒の小数部のフィールドは切り捨てられます<br /><br /> データ値は有効なタイムスタンプではありません。|n/a<br /><br /> 22008<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|列のバイト長 > バイト長の文字を =<br /><br /> 19 < = バイト長の列 < バイト長の文字<br /><br /> 列のバイトの長さ < 19<br /><br /> データの値が有効なタイムスタンプ|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|列の文字の長さ > データの文字の長さを =<br /><br /> 19 < 列の文字の長さを = < データの文字長<br /><br /> 列の長さ < 19 文字します。<br /><br /> データの値が有効なタイムスタンプ|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|時刻フィールドは 0<br /><br /> 時刻フィールドは 0 以外の場合<br /><br /> データ値に有効な日付が含まれていません|n/a<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIME|秒の小数部のフィールドは 0 を [a]<br /><br /> 秒の小数部のフィールドは、0 以外の場合 [a]<br /><br /> データ値に有効な時刻が含まれていません|n/a<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|フィールドの秒の小数部が切り捨てられていません。<br /><br /> 秒の小数部のフィールドは切り捨てられます<br /><br /> データの値が有効なタイムスタンプ|n/a<br /><br /> 22008<br /><br /> 22007|  
   
  [a] の日付のタイムスタンプの構造体のフィールドは無視されます。  
   
- SQL_C_TIMESTAMP 構造で有効な値については、次を参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)、前述の「します。  
+ SQL_C_TIMESTAMP 構造で有効な値については、次を参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)、この付録で以前のバージョン。  
   
- C のタイムスタンプ データが文字 SQL データに変換されると、結果の文字データは、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*]"の形式です。  
+ C のタイムスタンプ データは、SQL データの文字に変換するときに、結果の文字データは、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*]"の形式。  
   
- ドライバーは、タイムスタンプ C データ型からデータを変換するときに長さ/インジケーター値を無視し、データ バッファーのサイズが timestamp C データ型のサイズであると見なされます。 長さ/インジケーター値に渡されます、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー内の*StrLen_or_IndPtr* で引数**SQLBindParameter**です。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
+ ドライバーでは、タイムスタンプ C データ型からデータを変換するとき長さ/インジケーター値を無視し、データ バッファーのサイズがタイムスタンプ C データ型のサイズであると仮定します。 長さまたはインジケーターの値が渡さ、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー、 *StrLen_or_IndPtr* 引数**SQLBindParameter**します。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.

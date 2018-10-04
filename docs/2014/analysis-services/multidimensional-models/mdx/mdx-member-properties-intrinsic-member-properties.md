@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic member properties [MDX]
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9cbfcb8926d8d4b1ae71c5a3b6ed35c3beb7796c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1cac8e6a3538c9521a1a4cb04cd082de9d077460
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049333"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>固有メンバー プロパティ (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、カスタム アプリケーションで使用する追加のデータまたはメタデータを返したり、モデルの調査や構築を支援したりするために、クエリに含めることができるディメンション メンバーの固有プロパティを公開します。 SQL Server クライアント ツールを使用している場合は、SQL Server Management Studio (SSMS) で固有プロパティを表示できます。  
@@ -105,7 +102,7 @@ ms.locfileid: "37236032"
 |`IS_DATAMEMBER`|メンバーがデータ メンバーであるかどうかを示すブール値。|  
 |`IS_PLACEHOLDERMEMBER`|メンバーがプレースホルダーであるかどうかを示すブール値。|  
 |`KEYx`|メンバーのキー (x はキーの序数で、0 から始まります)。 KEY0 は複合キーおよび非複合キーに使用できます。<br /><br /> キーが複合ではない場合、KEY0 は等しく`Key`します。<br /><br /> 複合キーの場合、KEY0、KEY1、KEY2 などは、全体として複合キーを形成します。 クエリでそれぞれを個別に参照すると、複合キーのその部分を返すことができます。 たとえば、KEY0 を指定すると複合キーの最初の部分が返され、KEY1 を指定すると複合キーの次の部分が返されます。<br /><br /> `KEYx` は、コンテキストの有無にかかわらず使用できることに注意してください。 このため、両方の一覧に表示されます。<br /><br /> このメンバー プロパティの使用方法の例については、「 [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)」(単純な MDX の情報: Key0、Key1、Key2) を参照してください。|  
-|`LCID` *x*|ロケール ID の 16 進値で表現されたメンバー キャプションを変換したもの。 *x* はロケール ID の 10 進値です (たとえば、カナダ英語の場合は LCID1009)。 これは、データ ソースにバインドされたキャプション列が変換にある場合のみ使用できます。|  
+|`LCID` *X*|ロケール ID の 16 進値で表現されたメンバー キャプションを変換したもの。 *x* はロケール ID の 10 進値です (たとえば、カナダ英語の場合は LCID1009)。 これは、データ ソースにバインドされたキャプション列が変換にある場合のみ使用できます。|  
 |`LEVEL_NUMBER`|階層のルートからメンバーまでの距離。 ルートのレベルは 0 です。|  
 |`LEVEL_UNIQUE_NAME`|メンバーが所属するレベルの一意な名前。 修飾によって一意な名前を生成するプロバイダーの場合、この名前の各コンポーネントは区切り記号付きです。|  
 |`MEMBER_CAPTION`|メンバーに関連付けられたラベルまたはキャプション。 キャプションの主な用途は、表示用です。 キャプションが存在しない場合、クエリの結果として `MEMBER_NAME` が返されます。|  

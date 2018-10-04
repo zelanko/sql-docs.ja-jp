@@ -1,52 +1,49 @@
 ---
-title: スクリプト言語と ADO の併用 |Microsoft ドキュメント
+title: スクリプト言語と ADO の併用 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa90243680a59676f64f00cc4fd2b0c182c3d674
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600390"
 ---
-# <a name="using-ado-with-scripting-languages"></a>スクリプト言語と ADO の併用
-ADO では、スクリプト環境では、サーバー側のスクリプトを使用してデータを公開できます。 この場合は、ADO では、基になる OLE DB プロバイダーを使用して、特定のデータ ストアを参照するために必要なその他のコンポーネントは、インターネット インフォメーション サービス (IIS) を実行しているサーバーにインストールされています。 Active Server Pages (ASP) を使用して、ADO は、たとえば、HTML を生成するスクリプトで参照されるコンポーネントです。 この HTML コンテンツは、クライアントの Web ブラウザーに HTTP 経由で渡すことができます。 スクリプトを使用して Web ページは、サーバー側のスクリプトは、更新、移動、および特定のデータを表示することができますに戻す操作を送信できます。  
+# <a name="using-ado-with-scripting-languages"></a>スクリプト言語で ADO を使用する
+ADO では、スクリプトの環境では、サーバー側のスクリプトを使用してデータを公開できます。 このシナリオでは、ADO では、基になる OLE DB プロバイダーを使用して、特定のデータ ストアを参照するために必要なその他のコンポーネントは、インターネット インフォメーション サービス (IIS) を実行しているサーバーにインストールされています。 Active Server Pages (ASP) を使用して、ADO は、たとえば、HTML を生成するスクリプトで参照されているコンポーネントです。 この HTML コンテンツは、クライアント Web ブラウザーに HTTP 経由で渡されることができます。 スクリプトを使用して、Web ページはサーバー側スクリプトは、更新、移動、および特定のデータを表示することができますに戻すアクションを送信できます。  
   
- Web ページで、ActiveX オブジェクトを使用する前に、オブジェクトがスクリプトに対して安全かどうかを知る必要があります。 オブジェクトは、スクリプトを実行しても安全と見なされます、コントロールがユーザーのコンピューターの有害なアクションを実行することはできず、そのため、ユーザーの承認を求められることがなく実行できることを示します。 次の表は、ADO オブジェクトの一覧し、スクリプト作成のため安全であるかどうかを示します。  
+ ActiveX オブジェクトを使用するには、Web ページで、前に、オブジェクトが安全であるかどうかを知る必要があります。 オブジェクトがスクリプトにとって安全だと見なされると、コントロールがユーザーのコンピューターに対して有害なアクションを実行することはできず、ユーザーの承認を求められることがなく実行されることを意味します。 次の表では、ADO オブジェクトを一覧表示し、安全であるかどうかを示します。  
   
-|オブジェクト|スクリプト作成のため安全ですか。|  
+|オブジェクト|安全なスクリプトでしょうか。|  
 |------------|-------------------------|  
 |ADO 接続|はい|  
 |ADO コマンド|いいえ|  
 |ADO パラメーター|いいえ|  
 |ADO レコード セット|はい|  
 |ADO レコード|はい|  
-|ADO ストリーム|はい|  
+|ADO Stream|はい|  
 |ADO エラーです。|いいえ|  
-|ADOX カタログ|いいえ|  
-|ADOX セルセット|いいえ|  
+|ADOX のカタログ|いいえ|  
+|ADOX のセル セット|いいえ|  
 |RDS DataControl|はい|  
 |RDS DataSpace|はい|  
 |RDS DataFactory|いいえ|  
   
- 次の表は、Windows DAC/MDAC では、含まれているプロバイダーの一覧し、スクリプト作成のため安全であるかどうかを示します。  
+ 次の表では、Windows DAC/MDAC に含まれるプロバイダーの一覧し、安全であるかどうかを示します。  
   
-|プロバイダー|スクリプト作成のため安全ですか。|  
+|プロバイダー|安全なスクリプトでしょうか。|  
 |--------------|-------------------------|  
 |図形|はい|  
 |永続化します。|はい|  
@@ -55,15 +52,15 @@ ADO では、スクリプト環境では、サーバー側のスクリプトを�
 |OLE DB Provider for ODBC (MSDASQL)|いいえ|  
   
 ## <a name="odbc-data-sources"></a>ODBC データ ソース  
- ADO コードをスクリプト化し、非スクリプトの 1 つの大きな違いは、使用する場合に、ODBC データ ソースがします。 非スクリプト アプリケーションの ODBC データ ソース アドミニストレーターでユーザー DSN を作成できます。 IIS で実行されるスクリプトには、システム DSN を作成する必要があります。それ以外の場合、スクリプトには、作成したデータ ソースは認識されません。 これは、Microsoft IIS を介した ODBC 用 Microsoft OLE DB プロバイダーを使用する ADO スクリプト アプリケーションに適用されます。  
+ スクリプトとスクリプト以外の ADO コードの大きな違いの 1 つは、使用されている場合に、ODBC データ ソースが。 アプリケーションのスクリプト以外では、ODBC データ ソース アドミニストレーターのユーザー DSN を作成できます。 IIS で実行されているスクリプトでは、システム DSN を作成する必要があります。それ以外の場合、スクリプトには、作成したデータ ソースは認識されません。 これは、Microsoft IIS を通じて ODBC の Microsoft OLE DB プロバイダーを使用する ADO スクリプト アプリケーションに適用されます。  
   
 ## <a name="referencing-the-ado-library"></a>ADO ライブラリを参照します。  
  スクリプト言語では適用されません。  
   
-## <a name="handling-events"></a>イベントを処理  
+## <a name="handling-events"></a>イベントの処理  
  スクリプト言語では適用されません。  
   
- 次のトピックでは、スクリプト言語と ADO の併用の詳細についてを紹介します。  
+ 次のトピックでは、スクリプト言語で ADO の使用に関する詳細情報を紹介します。  
   
 -   [VBScript での ADO プログラミング](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   
@@ -71,5 +68,5 @@ ADO では、スクリプト環境では、サーバー側のスクリプトを�
   
 ## <a name="see-also"></a>参照  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Microsoft Visual Basic と ADO を使用します。](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [Microsoft Visual Basic で ADO を使用します。](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Microsoft Visual C++ での ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
