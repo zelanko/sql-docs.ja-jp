@@ -1,13 +1,11 @@
 ---
-title: 準拠レベル |Microsoft ドキュメント
+title: 適合性レベル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - conformance levels [ODBC]
 - conformance levels [ODBC], about conformance levels
 ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9342bbddb2e80f948922df5b26dee760662781a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4274188beb0b67fa5a49ce9e25b781c5b1cd95d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908127"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680582"
 ---
-# <a name="conformance-levels"></a>準拠レベル
-ODBC ドライバーでは、さまざまなデータ ソースへアプリケーション アクセス権を付与します。 各ドライバーにより、アプリケーションは実行時に決定 ODBC の機能とどのような SQL 文法ドライバーと、各データ ソースをサポートしています。 これらのアプリケーションはそのドライバーまたはドライバーの機能を提供するだけで書き込まれるので、1 つのドライバーまたはドライバーの既知の小さなセットを使用する設計されたアプリケーションの要件ではありません。 ドライバーとデータ ソースの機能を検出するアプリケーションのため、準拠の 2 つの領域を利用できます。 SQL 文法と ODBC インターフェイスです。  
+# <a name="conformance-levels"></a>適合性レベル
+ODBC ドライバーでは、多様なデータ ソースに、アプリケーション アクセスを付与します。 各ドライバーにより、アプリケーションは実行時に決定 ODBC 機能とどのような SQL 文法のドライバーと、各データ ソースをサポートしています。 これは、これらのアプリケーションは、そのドライバーまたはドライバーの機能に単純に書き込むことがあるために、1 つのドライバーや、ドライバーの既知の小さなセットを操作するようデザインされたアプリケーションの要件ではありません。 アプリケーションがドライバーとデータ ソースの機能を検出するために、準拠の 2 つの領域が使用可能な: ODBC インターフェイスと SQL の文法。  
   
  このセクションでは、次のトピックを扱います。  
   

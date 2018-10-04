@@ -1,31 +1,28 @@
 ---
-title: データを確認するためのレコード セットのサンプル |Microsoft ドキュメント
+title: データを確認するためのレコード セットのサンプル |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a6bb3eb784c3979dd136f237c5d153547d30027
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bfae67a14fb312f1b396cfc60f69e8cbe8babdf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272491"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811440"
 ---
-# <a name="sample-recordset-for-examining-data"></a>データを確認するためのサンプルのレコード セット
-最初に、見てみましょう、 **Recordset** Microsoft SQL server ベースの Northwind サンプル データに対して実行される次の SQL クエリを使用して返されるオブジェクトします。  
+# <a name="sample-recordset-for-examining-data"></a>データを確認するためのサンプルのレコードセット
+最初に、見て、**レコード セット**Microsoft SQL server ベースの Northwind サンプル データに対して実行される次の SQL クエリを使用して返されるオブジェクトします。  
   
 ```  
 SELECT ProductID,ProductName,UnitPrice   
@@ -37,7 +34,7 @@ WHERE CategoryID = 7
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
-|7|伯父さん Bob の有機乾燥なし|30.0000|  
+|7|おじさん Bob の有機的な乾燥なし|30.0000|  
 |14|階層|23.2500|  
 |28|Rssle ザワークラウト|45.6000|  
 |51|りんご|53.0000|  

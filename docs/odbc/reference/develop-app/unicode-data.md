@@ -1,13 +1,11 @@
 ---
-title: Unicode データ |Microsoft ドキュメント
+title: Unicode データ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], data
@@ -15,40 +13,39 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee404891b20f721cec0ea9e56b9eab1e78ad6f8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74de6c44aaf109a434f0cf76c6902abfba92efe1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655020"
 ---
 # <a name="unicode-data"></a>Unicode データ
-SQL の Unicode データ型は、Unicode、DBMS にネイティブで存在するデータを記述する提供されます。 C の Unicode データ型は、Unicode のバッファーにデータをバインドするアプリケーションを許可するものです。 ドライバー マネージャーは、Unicode C 型にするには、(SQL_C_WCHAR) からデータを変換できる関数、ANSI ドライバーを使用します。  
+SQL の Unicode データ型は、Unicode、DBMS にネイティブで存在するデータを記述する提供されます。 C の Unicode データ型は、Unicode バッファーにデータをバインドする、アプリケーションに提供されます。 ドライバー マネージャーは、Unicode C 型にするには、(SQL_C_WCHAR) からデータを変換できる関数は ANSI ドライバーを使用します。  
   
- ODBC 3.0 または 2 です。*x*アプリケーションは、必ず ANSI データ型にバインドします。 最適なパフォーマンスは、ODBC 3.5 (またはそれ以降) アプリケーションする必要があります、ANSI データ型にバインド C 場合は SQL 列の型は ansi、および SQL 列の型が Unicode の場合、Unicode の C データ型にバインドする必要があります。  
+ ODBC 3.0 または 2 です。*x*アプリケーションは常に ANSI データ型にバインドします。 最適なパフォーマンスを得るには、ODBC 3.5 (またはそれ以降) アプリケーションは ANSI C のデータ型にバインドする必要がある場合 SQL 列の型は ANSI、および SQL 列の型が Unicode の場合、Unicode の C データ型にバインドする必要があります。  
   
- SQL Unicode 型インジケーターは、SQL_WCHAR、SQL_WVARCHAR、SQL_WLONGVARCHAR です。 SQL_WCHAR データに、固定文字列の長さ、SQL_WVARCHAR、宣言された最大の可変長があり、SQL_WLONGVARCHAR データ ソースに依存している最大の可変長があります。  
+ SQL Unicode 型を表すインジケーターは、SQL_WCHAR、SQL_WVARCHAR、SQL_WLONGVARCHAR です。 SQL_WCHAR データの固定文字列の長さ、SQL_WVARCHAR が宣言されている最大の可変長と SQL_WLONGVARCHAR がデータ ソースに依存している最大の可変長です。  
   
- C Unicode 型インジケーターは、SQL_C_WCHAR です。 これは、それぞれの SQL Unicode 型インジケーターの既定値です。 すべての SQL 型は、SQL_C_WCHAR に変換できる SQL_C_WCHAR は、すべての SQL 型に変換することができます。 アプリケーションでは、3 つの方法のいずれかでデータを取得できます。  
+ C Unicode 型インジケーターは、SQL_C_WCHAR です。 これは、それぞれの SQL Unicode 型のインジケーターの既定値です。 すべての SQL 型は、SQL_C_WCHAR に変換できる SQL_C_WCHAR は、すべての SQL 型に変換することができます。 アプリケーションでは、3 つの方法のいずれかにデータを取得できます。  
   
 -   SQL_C_CHAR としてデータを取得します。  
   
 -   SQL_C_WCHAR としてデータを取得します。  
   
--   SQL_C_TCHAR としてデータを宣言します。 これは、アプリケーションの場合、Unicode アプリケーションとしてコンパイルや、ANSI アプリケーションとしてコンパイルされている場合、SQL_C_CHAR を挿入、SQL_C_WCHAR を挿入するマクロです。  
+-   SQL_C_TCHAR としてデータを宣言します。 これは、アプリケーションが Unicode アプリケーションとしてコンパイルされるまたは ANSI アプリケーションとしてコンパイルされている場合は、SQL_C_CHAR を挿入する場合は、SQL_C_WCHAR を挿入するマクロです。  
   
- SQL_C_TCHAR が次の関数の宣言は。  
+ SQL_C_TCHAR に関数で、次のように宣言されます。  
   
 ```  
 SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, NameLen, 0, Name, 0, &Name)  
 ```  
   
- Unicode アプリケーションとして、アプリケーションがコンパイルされるときに、 *ValueType* SQL_C_WCHAR に SQL_C_TCHAR から引数に変更します。 アプリケーションが、ANSI アプリケーションとしてコンパイルされるときに、 *ValueType* SQL_C_CHAR に引数が変更されます。  
+ Unicode アプリケーションとして、アプリケーションがコンパイルされるときに、 *ValueType* SQL_C_WCHAR に SQL_C_TCHAR から引数に変更します。 ANSI アプリケーションとして、アプリケーションがコンパイルされるときに、 *ValueType* SQL_C_CHAR に引数が変更されます。  
   
- Unicode のドライバーでは、SQL_CHAR を含む、ANSI データ型はサポートもする必要があります。 Unicode ドライバーで動作するアプリケーションは、SQL_CHAR にバインドした場合、ドライバー マネージャーは SQL_WCHAR に SQL_CHAR データをマップされません。 Unicode ドライバーでは、SQL_CHAR データを受け取る必要があります。  
+ Unicode ドライバーでは、SQL_CHAR をなど、ANSI データ型はサポートもする必要があります。 Unicode ドライバーで動作するアプリケーションは、SQL_CHAR にバインドした場合、ドライバー マネージャーは SQL_WCHAR を SQL_CHAR データをマップしません。 Unicode ドライバーには、SQL_CHAR データがそのまま使用する必要があります。  
   
- ドライバー マネージャーは、Unicode でドライバーおよび DSN 名を格納し、必要に応じて、ANSI にマッピングします。 文字を変換できませんでしたが既定の文字 sup によって表される場合は、Unicode 文字は、ANSI 文字 (ように、コンピューターのネイティブ コード ページではないコード ページから文字ドライバーと DSN 名で使用する場合に発生することができます) にマップすることはできません、システムによって plied です。
+ ドライバー マネージャーは、ドライバーと DSN 名を Unicode で格納し、必要に応じて ANSI にマッピングします。 文字を変換できませんでしたが、既定の文字の sup で表される場合は、Unicode 文字は、(ドライバーと DSN 名、コンピューターのネイティブ コード ページではないコード ページから文字を使用する場合に発生することができます)、ANSI 文字にマップすることはできません、システムによって plied します。

@@ -1,29 +1,26 @@
 ---
-title: オブジェクトのプロパティ、メソッド、およびイベントをストリーム配信 |Microsoft ドキュメント
+title: Stream オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 309dc7655ed7d586deace8869b2ebc245312ec6b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7f775bf1d77ed23e153610f7b6d6cbf5c17ce544
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282719"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697203"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>ストリーム オブジェクトのプロパティ、メソッド、およびイベント
+# <a name="stream-object-properties-methods-and-events"></a>Stream オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>[プロパティ]  
  [Charset プロパティ](../../../ado/reference/ado-api/charset-property-ado.md)  
   
@@ -33,7 +30,7 @@ ms.locfileid: "35282719"
   
  [Mode プロパティ](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [位置プロパティ](../../../ado/reference/ado-api/position-property-ado.md)  
+ [Position プロパティ](../../../ado/reference/ado-api/position-property-ado.md)  
   
  [Size プロパティ (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
