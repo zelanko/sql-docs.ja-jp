@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: eafcc3b69916ba253b430a61fb5b510eb3480d91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185372"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>高度な複数 Web サイト構成 (SSRS ネイティブ モード)
   このダイアログ ボックスは、レポート サーバーまたはレポート マネージャーへのアクセスに使用される URL を作成し、管理するために使用します。 **[高度な複数 Web サイト構成]** ダイアログ ボックスでは、追加の URL、つまりホスト ヘッダー名を含んだカスタム URL を作成することも、IPv4 または IPv6 形式の IP アドレスを指定することもできます。  
@@ -49,7 +46,7 @@ ms.locfileid: "37220732"
      複数のカードがある場合は、それぞれに IP アドレスが割り当てられます。 この値のみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。  
   
  **[ポート]**  
- レポート サーバーが要求を監視するポートを指定します。 既定のポートは、ポート 80 です。 ポート 80 を使用する場合は、URL にポートを含める必要はありません。 その他の任意のポート番号を使用する場合をする必要がありますに含める URL (たとえば、http://localhost:8181/reports)します。  
+ レポート サーバーが要求を監視するポートを指定します。 既定のポートは、ポート 80 です。 ポート 80 を使用する場合は、URL にポートを含める必要はありません。 その他の任意のポート番号を使用する場合をする必要がありますに含める URL (たとえば、 http://localhost:8181/reports)します。  
   
  **ホスト ヘッダー**  
  コンピューターに解決されるホスト ヘッダーをドメイン ネーム サーバーに既に定義している場合は、レポート サーバー アクセス用に構成する URL にそのホスト ヘッダーを指定できます。  

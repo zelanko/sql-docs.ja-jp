@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc3c6ab630680d3d0d5cf1e3998153ac3e3a66fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a22d59c38366d5010cc472bb5d86414849cf9e22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305232"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188742"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RsReportServer.config** ファイルには、レポート マネージャー、レポート サーバー Web サービス、およびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -107,15 +104,15 @@ ms.locfileid: "37305232"
 |設定|説明|モード|  
 |-------------|-----------------|----------|  
 |**Dsn**|レポート サーバー データベースをホストするデータベース サーバーへの接続文字列を指定します。 この値は、レポート サーバー データベースの作成時に、暗号化されて構成ファイルに追加されます。 SharePoint では、SharePoint 構成データベースからデータベース接続情報が取得されます。|N、S|  
-|**ConnectionType**|レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報のタイプを指定します。 有効な値は`Default`と`Impersonate`します。 `Default` は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたはサービス アカウントを使用してレポート サーバー データベースに接続するようにレポート サーバーを構成する場合に指定します。 `Impersonate` は、レポート サーバーが Windows アカウントを使用してレポート サーバー データベースに接続する場合に指定します。|×|  
-|**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 値を`LogonUser`、 `LogonDomain`、および`LogonCred`ドメイン アカウントを使用するレポート サーバーの接続が構成されているときに作成されます。 レポート サーバーのデータベース接続の詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。|×|  
+|**ConnectionType**|レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報のタイプを指定します。 有効値は `Default` または `Impersonate` です。 `Default` は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたはサービス アカウントを使用してレポート サーバー データベースに接続するようにレポート サーバーを構成する場合に指定します。 `Impersonate` は、レポート サーバーが Windows アカウントを使用してレポート サーバー データベースに接続する場合に指定します。|N|  
+|**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 値を`LogonUser`、 `LogonDomain`、および`LogonCred`ドメイン アカウントを使用するレポート サーバーの接続が構成されているときに作成されます。 レポート サーバーのデータベース接続の詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。|N|  
 |**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定では、この値は`MSRS12`  *\<instancename >* します。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
-|**InstallationID**|セットアップによって作成されるレポート サーバーのインストール用の識別子です。 この値は GUID に設定されます。 この設定は変更しないでください。|×|  
+|**InstallationID**|セットアップによって作成されるレポート サーバーのインストール用の識別子です。 この値は GUID に設定されます。 この設定は変更しないでください。|N|  
 |**SecureConnectionLevel**|Web サービス呼び出しにおける SSL (Secure Sockets Layer) の使用レベルを指定します。 この設定は、レポート サーバー Web サービスとレポート マネージャーの両方で使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、HTTP または HTTPS を使用するように URL を構成すると、この値が設定されます。 有効な値は、0 ～ 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「 [セキュリティで保護された Web サービス メソッドの使用](../report-server-web-service/net-framework/using-secure-web-service-methods.md) 」と「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|N、S|  
-|**DisableSecureFormsAuthenticationCookie**|既定値は False です。<br /><br /> フォーム認証とカスタム認証をセキュリティで保護されているものとしてマークするために使用するクッキーの強制を無効にするかどうかを指定します。 SQL Server 2012 以降、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって、カスタム認証拡張機能と共に使用されるフォーム認証クッキーが、クライアントへの送信時にセキュリティで保護されたクッキーとして自動的にマークされます。 このプロパティを変更することで、レポート サーバー管理者およびカスタム セキュリティ拡張機能の作成者は、カスタム セキュリティ拡張機能の作成者がクッキーをセキュリティで保護されたクッキーとしてマークするかどうかを指定できた以前の動作に戻すことができます。 ネットワーク スニッフィングや再生攻撃を防止するため、フォーム認証にはセキュリティで保護されたクッキーを使用することをお勧めします。|×|  
+|**DisableSecureFormsAuthenticationCookie**|既定値は False です。<br /><br /> フォーム認証とカスタム認証をセキュリティで保護されているものとしてマークするために使用するクッキーの強制を無効にするかどうかを指定します。 SQL Server 2012 以降、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって、カスタム認証拡張機能と共に使用されるフォーム認証クッキーが、クライアントへの送信時にセキュリティで保護されたクッキーとして自動的にマークされます。 このプロパティを変更することで、レポート サーバー管理者およびカスタム セキュリティ拡張機能の作成者は、カスタム セキュリティ拡張機能の作成者がクッキーをセキュリティで保護されたクッキーとしてマークするかどうかを指定できた以前の動作に戻すことができます。 ネットワーク スニッフィングや再生攻撃を防止するため、フォーム認証にはセキュリティで保護されたクッキーを使用することをお勧めします。|N|  
 |**CleanupCycleMinutes**|レポート サーバー データベースから古いセッションと期限切れのスナップショットを削除するまでの保持期間を分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 10 です。 値を 0 に設定すると、データベースによる処理のクリーンアップが無効になります。|N、S|  
 |**MaxActiveReqForOneUser**|ユーザーが同時に処理できる最大レポート数を指定します。 最大数に達すると、それ以降のレポート処理要求は拒否されます。 有効値は、1 から整数型の最大値までです。 既定値は 20 です。<br /><br /> 要求の大半はきわめて迅速に処理されるため、1 人のユーザーが任意の時点で 20 より多くの接続を開くということはまずありません。 ユーザーが 15 より多い処理集中型のレポートを同時に開く場合は、この値を増やす必要があります。<br /><br /> この設定は、SharePoint 統合モードで動作するレポート サーバーでは無視されます。|N、S|  
-|**DatabaseQueryTimeout**|レポート サーバー データベースへの接続がタイムアウトするまでの期間を秒単位で指定します。この値は、System.Data.SQLClient.SQLCommand.CommandTimeout プロパティに渡されます。 有効な値の範囲は 0 ～ 2147483647 です。 既定値は 120 です。 値を 0 に設定することはお勧めできません。0 にすると待ち時間が無制限になります。|×|  
+|**DatabaseQueryTimeout**|レポート サーバー データベースへの接続がタイムアウトするまでの期間を秒単位で指定します。この値は、System.Data.SQLClient.SQLCommand.CommandTimeout プロパティに渡されます。 有効な値の範囲は 0 ～ 2147483647 です。 既定値は 120 です。 値を 0 に設定することはお勧めできません。0 にすると待ち時間が無制限になります。|N|  
 |**AlertingCleanupCycleMinutes**|既定値は 20 です。<br /><br /> 警告データベースに格納されている一時データのクリーンアップが発生する頻度を指定します。|S|  
 |**AlertingDataCleanupMinutes**|既定値は 360 です。<br /><br /> 警告の定義を作成または編集するために使用するセッション データを警告データベース内で保持する期間を指定します。 既定値は 6 時間です。|S|  
 |**AlertingExecutionLogCleanup**Minutes|既定値は 10080 です。<br /><br /> 警告実行ログの値を保持する期間を指定します。 既定の日数は 7 日です。|S|  
@@ -144,13 +141,13 @@ ms.locfileid: "37305232"
   
 |設定|説明|モード|  
 |-------------|-----------------|----------|  
-|**アプリケーション**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションの設定を格納します。|×|  
-|**名前**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを指定します。 有効な値は ReportServerWebService または ReportManager です。|×|  
-|**VirtualDirectory**|アプリケーションの仮想ディレクトリ名を指定します。|×|  
-|**URLs、URL**|アプリケーションの 1 つまたは複数の URL 予約を格納します。|×|  
-|**UrlString**|HTTP.SYS の有効な URL 構文を指定します。 構文の詳細については、「[URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../install-windows/url-reservation-syntax-ssrs-configuration-manager.md)」を参照してください。|×|  
-|`AccountSid`|URL 予約の作成対象となったアカウントのセキュリティ ID (SID) を指定します。 これは、Report Server サービスの実行に使用されているアカウントである必要があります。 SID がサービス アカウントと一致しない場合、レポート サーバーが、その URL で要求をリッスンできない場合があります。|×|  
-|`AccountName`|`AccountSid` に対応するわかりやすいアカウント名を指定します。 実際に使用されることはありませんが、URL 予約に使用されたアカウントのサービス アカウントを容易に判別できるようにファイルに表示されます。|×|  
+|**アプリケーション**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションの設定を格納します。|N|  
+|**名前**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを指定します。 有効な値は ReportServerWebService または ReportManager です。|N|  
+|**VirtualDirectory**|アプリケーションの仮想ディレクトリ名を指定します。|N|  
+|**URLs、URL**|アプリケーションの 1 つまたは複数の URL 予約を格納します。|N|  
+|**UrlString**|HTTP.SYS の有効な URL 構文を指定します。 構文の詳細については、「[URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../install-windows/url-reservation-syntax-ssrs-configuration-manager.md)」を参照してください。|N|  
+|`AccountSid`|URL 予約の作成対象となったアカウントのセキュリティ ID (SID) を指定します。 これは、Report Server サービスの実行に使用されているアカウントである必要があります。 SID がサービス アカウントと一致しない場合、レポート サーバーが、その URL で要求をリッスンできない場合があります。|N|  
+|`AccountName`|`AccountSid` に対応するわかりやすいアカウント名を指定します。 実際に使用されることはありませんが、URL 予約に使用されたアカウントのサービス アカウントを容易に判別できるようにファイルに表示されます。|N|  
   
 ##  <a name="bkmk_Authentication"></a> Authentication (RSReportServer.config ファイル)  
  `Authentication` は、レポート サーバーで使用できる認証の種類 (複数可) を指定します。 既定の設定および値は、このセクションで定義できる設定と値のサブセットです。 既定の設定のみが自動的に追加されます。 他の設定を追加するには、テキスト エディターを使用して RSReportServer.config ファイルに要素構造を追加し、値を設定する必要があります。  
@@ -173,17 +170,17 @@ ms.locfileid: "37305232"
   
 |設定|説明|モード|  
 |-------------|-----------------|----------|  
-|**AuthenticationTypes**|1 つまたは複数の認証の種類を指定します。 有効値は `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM`、`RSWindowsBasic`、および `Custom` です。<br /><br /> `RSWindows` タイプと `Custom` は、相互に排他的です。<br /><br /> `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM`、および `RSWindowsBasic` は累積的に設定されるため、前述の既定値の例に示したように組み合わせて指定することができます。<br /><br /> 認証の種類が異なる複数のクライアント アプリケーションまたはブラウザーから要求を受け取る場合は、認証の種類を複数指定する必要があります。<br /><br /> `RSWindowsNTLM` は削除しないでください。削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。|×|  
-|`RSWindowsNegotiate`|レポート サーバーは、Kerberos または NTLM のいずれかのセキュリティ トークンを受け付けます。 これは、レポート サーバーがネイティブ モードで実行され、サービス アカウントが Network Service である場合の既定の設定です。 レポート サーバーがネイティブ モードで実行され、サービス アカウントがドメイン ユーザー アカウントとして構成されている場合、この設定は省略されます。<br /><br /> レポート サーバー サービス アカウントに対してドメイン アカウントが構成されており、レポート サーバーに対してサービス プリンシパル名 (SPN) が構成されていない場合、この設定により、ユーザーがサーバーにログオンできないことがあります。|×|  
+|**AuthenticationTypes**|1 つまたは複数の認証の種類を指定します。 有効値は `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM`、`RSWindowsBasic`、および `Custom` です。<br /><br /> `RSWindows` タイプと `Custom` は、相互に排他的です。<br /><br /> `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM`、および `RSWindowsBasic` は累積的に設定されるため、前述の既定値の例に示したように組み合わせて指定することができます。<br /><br /> 認証の種類が異なる複数のクライアント アプリケーションまたはブラウザーから要求を受け取る場合は、認証の種類を複数指定する必要があります。<br /><br /> `RSWindowsNTLM` は削除しないでください。削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。|N|  
+|`RSWindowsNegotiate`|レポート サーバーは、Kerberos または NTLM のいずれかのセキュリティ トークンを受け付けます。 これは、レポート サーバーがネイティブ モードで実行され、サービス アカウントが Network Service である場合の既定の設定です。 レポート サーバーがネイティブ モードで実行され、サービス アカウントがドメイン ユーザー アカウントとして構成されている場合、この設定は省略されます。<br /><br /> レポート サーバー サービス アカウントに対してドメイン アカウントが構成されており、レポート サーバーに対してサービス プリンシパル名 (SPN) が構成されていない場合、この設定により、ユーザーがサーバーにログオンできないことがあります。|N|  
 |`RSWindowsNTLM`|サーバーは、NTLM のセキュリティ トークンを受け付けます。<br /><br /> この設定を削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。|N、S|  
-|`RSWindowsKerberos`|サーバーは、Kerberos のセキュリティ トークンを受け付けます。<br /><br /> 制約付き委任の認証スキームで Kerberos 認証を使用する場合は、この設定か RSWindowsNegotiate を使用してください。|×|  
-|`RSWindowsBasic`|サーバーは基本資格情報を受け付けます。資格情報なしで接続が試みられた場合、チャレンジ/レスポンスを発行します。<br /><br /> 基本認証では、HTTP 要求において、資格情報がクリア テキストで渡されます。 基本認証を使用する場合は、レポート サーバーとの間でやり取りされるネットワーク トラフィックを SSL で暗号化してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で基本認証を構成するための構文例については、「 [レポート サーバーでの認証](../security/authentication-with-the-report-server.md)」を参照してください。|×|  
-|`Custom`|レポート サーバー コンピューターにカスタム セキュリティ拡張機能を配置した場合は、この値を指定します。 詳細については、「 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)」を参照してください。|×|  
-|**LogonMethod**|この値が、ログオンの種類を指定します`RSWindowsBasic`します。 指定した場合`RSWindowsBasic`、この値が必要です。 有効な値は 2 または 3 で、それぞれ次の意味になります。<br /><br /> `2` = ネットワーク ログオン プレーン テキスト パスワードを認証する高パフォーマンス サーバー<br /><br /> `3` = クリア テキスト ログオンは、各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報を保持するには、ネットワークの他のサーバーに接続するときにユーザーを偽装するサーバーを許可します。<br /><br /> 注: 値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]ではサポートされません。|×|  
-|**Realm**|この値は、の使用は`RSWindowsBasic`します。 組織内の保護されたリソースへのアクセスを制御するための承認機能や認証機能を含んだリソース パーティションを指定します。|×|  
-|**DefaultDomain**|この値は、の使用は`RSWindowsBasic`します。 サーバーがユーザーを認証する際のドメインを決定するために使用されます。 この値はオプションです。ただし、省略した場合、レポート サーバーでは、コンピューター名がドメインとして使用されます。 レポート サーバーをドメイン コントローラーにインストールした場合、そのコンピューターによって制御されるドメインを指定します。|×|  
-|**RSWindowsExtendedProtectionLevel**|既定値は **off**です。 詳細については、「 [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)」をご覧ください。|×|  
-|**RSWindowsExtendedProtectionScenario**|既定値は **Proxy**です。|×|  
+|`RSWindowsKerberos`|サーバーは、Kerberos のセキュリティ トークンを受け付けます。<br /><br /> 制約付き委任の認証スキームで Kerberos 認証を使用する場合は、この設定か RSWindowsNegotiate を使用してください。|N|  
+|`RSWindowsBasic`|サーバーは基本資格情報を受け付けます。資格情報なしで接続が試みられた場合、チャレンジ/レスポンスを発行します。<br /><br /> 基本認証では、HTTP 要求において、資格情報がクリア テキストで渡されます。 基本認証を使用する場合は、レポート サーバーとの間でやり取りされるネットワーク トラフィックを SSL で暗号化してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で基本認証を構成するための構文例については、「 [レポート サーバーでの認証](../security/authentication-with-the-report-server.md)」を参照してください。|N|  
+|`Custom`|レポート サーバー コンピューターにカスタム セキュリティ拡張機能を配置した場合は、この値を指定します。 詳細については、「 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)」を参照してください。|N|  
+|**LogonMethod**|この値が、ログオンの種類を指定します`RSWindowsBasic`します。 指定した場合`RSWindowsBasic`、この値が必要です。 有効な値は 2 または 3 で、それぞれ次の意味になります。<br /><br /> `2` = ネットワーク ログオン プレーン テキスト パスワードを認証する高パフォーマンス サーバー<br /><br /> `3` = クリア テキスト ログオンは、各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報を保持するには、ネットワークの他のサーバーに接続するときにユーザーを偽装するサーバーを許可します。<br /><br /> 注: 値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]ではサポートされません。|N|  
+|**Realm**|この値は、の使用は`RSWindowsBasic`します。 組織内の保護されたリソースへのアクセスを制御するための承認機能や認証機能を含んだリソース パーティションを指定します。|N|  
+|**DefaultDomain**|この値は、の使用は`RSWindowsBasic`します。 サーバーがユーザーを認証する際のドメインを決定するために使用されます。 この値はオプションです。ただし、省略した場合、レポート サーバーでは、コンピューター名がドメインとして使用されます。 レポート サーバーをドメイン コントローラーにインストールした場合、そのコンピューターによって制御されるドメインを指定します。|N|  
+|**RSWindowsExtendedProtectionLevel**|既定値は **off**です。 詳細については、「 [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)」をご覧ください。|N|  
+|**RSWindowsExtendedProtectionScenario**|既定値は **Proxy**です。|N|  
 |**EnableAuthPersistence**|要求ごとに接続の認証を実行するかどうかを指定します。<br /><br /> 有効な値は、`True` (既定値) または `False` です。 `True` に設定した場合、同じ接続の 2 回目以降の要求は、最初の要求の権限借用コンテキストと見なされます。<br /><br /> プロキシ サーバー ソフトウェア (ISA Server など) を使用してレポート サーバーにアクセスする場合は、この値を `False` に設定する必要があります。 プロキシ サーバーを使用すると、プロキシ サーバーからの単一接続を複数のユーザーが使用できるようになります。 このシナリオでは、認証の永続化を無効にして、各ユーザー要求が個別に認証されるようにする必要があります。 設定しない場合**EnableAuthPersistence**に`False`、すべてのユーザーは、最初の要求の権限借用コンテキストを使用して接続します。|N、S|  
   
 ##  <a name="bkmk_service"></a> Service (RSReportServer.config ファイル)  
@@ -205,12 +202,12 @@ ms.locfileid: "37305232"
 |**MaxAppDomainUnloadTime**|リサイクル中に、アプリケーション ドメインがアンロードを許可される間隔を指定します。 この間にリサイクルが完了しない場合、アプリケーション ドメインのすべての処理が停止します。 詳細については、「 [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)」を参照してください。<br /><br /> この値は分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は **30**です。|N、S|  
 |**MaxQueueThreads**|レポート サーバー Windows サービスがサブスクリプションと通知を同時に処理するために使用するスレッド数を指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 0 です。 0 を選択した場合は、レポート サーバーによってスレッドの最大数が決定されます。 整数を指定した場合は、指定した値が、一度に作成できるスレッド数の上限に設定されます。 レポート サーバー Windows サービスがプロセスを実行するためにメモリをどのように管理するかについては、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S|  
 |**UrlRoot**|電子メール サブスクリプションやファイル共有サブスクリプションで配信されたレポート用の URL を構築するために、レポート サーバーの配信拡張機能で使用されます。 パブリッシュされたレポートが置かれているレポート サーバーの有効な URL アドレスを指定する必要があります。 レポート サーバーは、この設定を使って、オフライン アクセスまたは自動アクセスに必要な URL を生成します。 これらの URL は、エクスポートされたレポートで使用されるほか、配信拡張機能が、リンクや電子メールなど、配信メッセージに追加される URL を構築する際に使用されます。 レポート サーバーは、次のようにして、レポート内の URL を決定します。<br /><br /> **[UrlRoot]** が空 (既定値) であり、URL 予約が存在する場合、レポート サーバーは、ListReportServerUrls メソッドによる URL 生成と同様の方法で、自動的に URL を決定します。 ListReportServerUrls メソッドで返される最初の URL が使用されます。 SecureConnectionLevel がゼロ (0) よりも大きい場合は、最初の SSL URL が使用されます。<br /><br /> **[UrlRoot]** が特定の値に設定された場合は、明示的な値が使用されます。<br /><br /> **[UrlRoot]** が空であり、URL 予約が構成されていない場合、レンダリングされたレポートや電子メール リンク内の URL に誤りが生じることになります。|N、S|  
-|**UnattendedExecutionAccount**|レポートを実行するために、レポート サーバーで使用されるユーザー名、パスワード、およびドメインを指定します。 これらの値は暗号化されます。 これらの値を設定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用します。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> SharePoint モードでは、SharePoint サーバーの全体管理を使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの実行アカウントを設定します。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../manage-a-reporting-services-sharepoint-service-application.md)｣を参照してください|×|  
+|**UnattendedExecutionAccount**|レポートを実行するために、レポート サーバーで使用されるユーザー名、パスワード、およびドメインを指定します。 これらの値は暗号化されます。 これらの値を設定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用します。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> SharePoint モードでは、SharePoint サーバーの全体管理を使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの実行アカウントを設定します。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../manage-a-reporting-services-sharepoint-service-application.md)｣を参照してください|N|  
 |**PolicyLevel**|セキュリティ ポリシーの構成ファイルを指定します。 有効な値は Rssrvrpolicy.config です。詳細については、「 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|N、S|  
 |**IsWebServiceEnabled**|レポート サーバー Web サービスが SOAP および URL アクセス要求に応答するかどうかを指定します。 ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用してサービスを有効または無効にすると、この値が設定されます。|N、S|  
-|**IsReportManagerEnabled**|レポート サーバー上でレポート マネージャー アプリケーションを使用できるかどうかを指定します。 有効な値は`True`(既定値) と`False`します。 値が設定されている場合`True`、レポート マネージャーは使用できます。 ただし、使用するには、あらかじめ Report Manager の URL 予約を構成しておく必要があります。|×|  
+|**IsReportManagerEnabled**|レポート サーバー上でレポート マネージャー アプリケーションを使用できるかどうかを指定します。 有効な値は`True`(既定値) と`False`します。 値が設定されている場合`True`、レポート マネージャーは使用できます。 ただし、使用するには、あらかじめ Report Manager の URL 予約を構成しておく必要があります。|N|  
 |**FileShareStorageLocation**|一時スナップショットの格納先となるファイル システム上のフォルダーを 1 つ指定します。 UNC パスとしてフォルダー パスを指定することはできますが、これはお勧めできません。 既定値は空です。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N、S|  
-|**IsRdceEnabled**|RDCE (Report Definition Customization Extension) が有効かどうかを指定します。 有効な値は`True`と`False`します。|N、S|  
+|**IsRdceEnabled**|RDCE (Report Definition Customization Extension) が有効かどうかを指定します。 有効値は `True` または `False` です。|N、S|  
   
 ##  <a name="bkmk_UI"></a> UI (RSReportServer.config ファイル)  
  `UI` は、レポート マネージャー アプリケーションに適用される構成設定を指定します。  

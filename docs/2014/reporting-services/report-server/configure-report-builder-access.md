@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, Report Builder
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e715595ae4ed8394fc4e30c2819af140eb8e3681
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0426c117011ed812d9c2d4e1fc9f4e76b06a989a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182452"
 ---
 # <a name="configure-report-builder-access"></a>レポート ビルダーへのアクセスの構成
   レポート ビルダーは、ネイティブ モードまたは SharePoint 統合モード用に構成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに付属しているカスタム レポート ツールです。  
@@ -164,7 +161,7 @@ ms.locfileid: "37328898"
 |ネゴシエート (既定)<br /><br /> NTLM (既定)|Windows 統合セキュリティでは、クライアントとサーバーが同じドメインに配置されており、ユーザーがレポート ビルダーへのアクセス権を持つドメイン アカウントを使用してクライアント コンピューターにログインしており、レポート サーバーが Windows 認証用に構成されている場合は、通常、ClickOnce とレポート ビルダーからの認証済み要求は成功します。<br /><br /> ClickOnce とブラウザーのレポート サーバーへの接続では同じユーザー ID が使用されるので、要求は成功します。<br /><br /> ユーザーが [実行するアカウント名] で Internet Explorer を開き、既定以外の資格情報を指定した場合、要求は失敗します。 レポート サーバー上のユーザー セッションが特定のアカウントで確立されている場合、ClickOnce を別のアカウントで実行すると、レポート サーバーによってファイルへのアクセスが拒否されます。|  
 |Kerberos|レポート ビルダーを使用するために必要な Internet Explorer では、Kerberos は直接サポートされていません。|  
 |[基本認証]|ClickOnce では基本認証はサポートされていません。 認証ヘッダーで基本認証を指定する要求は作成されません。 資格情報を渡したりユーザーに資格情報の入力を求めたりすることもありません。 これらの問題を回避するには、レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にします。<br /><br /> レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にすると、レポート サーバーで認証ヘッダーが無視されるので、要求は成功します。 レポート ビルダーへの匿名アクセスを有効にする方法の詳細については、次を参照してください。 [、レポート サーバーで基本認証を構成](../security/configure-basic-authentication-on-the-report-server.md)します。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。<br /><br /> レポート サーバーが基本認証用に構成されている場合、レポート ビルダーのプログラム ファイルへの匿名アクセスを有効にしないと、要求は失敗します。 ClickOnce は要求で Windows 統合セキュリティを指定するので、要求は失敗します。 レポート サーバーを基本認証用に構成すると、無効なセキュリティ パッケージが指定されること、およびレポート サーバーが想定する資格情報がないことが原因で、サーバーによって要求が拒否されます。<br /><br /> また、SharePoint 統合モードを使用するようにレポート サーバーが構成されている場合に SharePoint サイトで基本認証を使用すると、ClickOnce を使用してレポート ビルダーをクライアント コンピューターにインストールしようとしたときに 401 エラーが発生します。 このような状況が発生するのは、SharePoint ではセッションが継続している間はクッキーを使用してユーザーを認証された状態に維持しておくのに対して、ClickOnce ではクッキーがサポートされないためです。 ユーザーがレポート ビルダーなどの ClickOnce アプリケーションを起動した場合、アプリケーションはクッキーを SharePoint に渡さないため、SharePoint ではアクセスが拒否され、401 エラーが返されます。<br /><br /> この問題は、次のいずれかの方法を使用して回避できます。<br /><br /> 選択、**パスワードを保存する**オプション、ユーザーの資格情報を提供する場合。<br /><br /> SharePoint サイト コレクションへの匿名アクセスを有効にします。<br /><br /> ユーザーが資格情報を指定しないように環境を構成します。 たとえば、イントラネット環境で、ワークグループに属するように SharePoint サーバーを構成してから、ローカル コンピューターでユーザー アカウントを作成します。|  
-|Custom|カスタム認証を使用するようにレポート サーバーを構成すると、レポート サーバーで匿名アクセスが有効になり、認証チェックなしで要求が受け付けられます。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。|  
+|カスタム|カスタム認証を使用するようにレポート サーバーを構成すると、レポート サーバーで匿名アクセスが有効になり、認証チェックなしで要求が受け付けられます。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。|  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーでの認証](../security/authentication-with-the-report-server.md)   

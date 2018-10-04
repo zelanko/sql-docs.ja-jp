@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d4dc8cb04d2755f534b8ff4f13b113639a14f3b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bdae6fe44e416786e842eb2ecc36d213d771cf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306912"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179242"
 ---
 # <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
   次のパラメーターを URL の一部として使用すると、レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、次を参照してください。 [URL でデバイス情報設定を指定](specify-device-information-settings-in-a-url.md)します。  
@@ -82,7 +79,7 @@ ms.locfileid: "37306912"
 |*AsyncRender*|レポートが非同期に表示されるかどうかを制御します。 既定値は`true`レポートが非同期に表示されることを指定します。 この値には、`true` または `false` のブール値を指定する必要があります。|  
 |*ParamMode*|レポート ビューアー Web パーツのパラメーター プロンプト領域を全体表示で表示する方法を制御します。  既定値は `Full` です。 有効な値は、<br /><br /> `Full`: パラメーター プロンプト領域を表示します。<br /><br /> `Collapsed`: パラメーター プロンプト領域を折りたたみます。<br /><br /> `Hidden`: パラメーター プロンプト領域を非表示にします。<br /><br /> `SharePoint` モードで、パラメーター プロンプト領域を折りたたむ例。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed`|  
 |*DocMapMode*|レポート ビューアー Web パーツのドキュメント マップ領域を全体表示で表示する方法を制御します。 既定値は `Full` です。 有効な値は、<br /><br /> `Full`: ドキュメント マップ領域を表示します。<br /><br /> `Collapsed`: ドキュメント マップ領域を折りたたみます。<br /><br /> `Hidden`: ドキュメント マップ領域を非表示にします。|  
-|*DockToolBar*|レポート ビューアー Web パーツのツール バーを上部にドッキングするか、下部にドッキングするかを制御します。 有効な値は`Top`と`Bottom`します。 既定値は `Top` です。<br /><br /> <br /><br /> `SharePoint` モードで、下部にツール バーをドッキングする例。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom`|  
+|*DockToolBar*|レポート ビューアー Web パーツのツール バーを上部にドッキングするか、下部にドッキングするかを制御します。 有効値は `Top` または `Bottom` です。 既定値は `Top` です。<br /><br /> <br /><br /> `SharePoint` モードで、下部にツール バーをドッキングする例。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom`|  
 |*ToolBarItemsDisplayMode*|表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。  既定値は`-1`、すべてのツールバー項目が含まれます。 有効な値は、<br /><br /> 1 (0x1): **[戻る]** ボタン<br /><br /> 2 (0x2): テキスト検索コントロール<br /><br /> 4 (0x4): ページ ナビゲーション コントロール<br /><br /> 8 (0x8): **[更新]** ボタン<br /><br /> 16 (0x10): **[ズーム]** ボックスの一覧<br /><br /> 32 (0x20): **[Atom フィード]** ボタン<br /><br /> 64 (0x40): **[アクション]** の **[印刷]** メニュー オプション<br /><br /> 128 (0x80): **[アクション]** の **[エクスポート]** サブメニュー<br /><br /> 256 (0x100): **[アクション]** の **[レポート ビルダーで開く]** メニュー オプション<br /><br /> 512 (0x200): **[アクション]** の **[サブスクライブ]** メニュー オプション<br /><br /> 1024 (0x400): **[アクション]** の **[新しいデータの警告]** メニュー オプション<br /><br /> たとえば、`SharePoint`モードのみを表示する、**戻る**ボタン、テキスト検索コントロール、ページ ナビゲーション コントロールと**更新**ボタン。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15`|  
   
 ## <a name="see-also"></a>参照  
