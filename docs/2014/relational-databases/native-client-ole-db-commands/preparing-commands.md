@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 - command preparation [SQL Server Native Client]
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 231c749ec41e571de17e18405e805210e6dc4b0b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428641"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186432"
 ---
 # <a name="preparing-commands"></a>コマンドの準備
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、1 つのコマンドを最適化された状態で複数回実行できるように、コマンドを準備できます。ただし、コマンドを準備することでオーバーヘッドが生じるので、コンシューマーではコマンドを 2 回程度実行する場合は準備する必要はありません。 一般的には、コマンドを 4 回以上実行する場合に準備します。  
@@ -42,17 +39,17 @@ ms.locfileid: "37428641"
   
  一時ストアド プロシージャの作成は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー固有の初期化プロパティである SSPROP_INIT_USEPROCFORPREP によって制御されます。 プロパティ値が SSPROPVAL_USEPROCFORPREP_ON または SSPROPVAL_USEPROCFORPREP_ON_DROP の場合、コマンドが準備されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、ストアド プロシージャの作成を試みます。 ストアド プロシージャの作成は、アプリケーション ユーザーが適切な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 権限を所持している場合に成功します。  
   
- ほとんど切断しないコンシューマー、一時ストアド プロシージャの作成がの大量のリソースを要求できます**tempdb**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データベースの一時オブジェクトが作成されます。 SSPROP_INIT_USEPROCFORPREP の値が SSPROPVAL_USEPROCFORPREP_ ON の場合、コマンドを作成したセッションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続が失われたときにだけ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで作成された一時ストアド プロシージャが削除されます。 その接続がデータ ソースの初期化時に作成された既定の接続の場合は、データ ソースの初期化が解除されたときのみ、一時ストアド プロシージャが削除されます。  
+ ほとんど切断しないコンシューマーの場合、一時ストアド プロシージャの作成には、**tempdb** の大量のリソースが必要になることがあります。tempdb は、一時オブジェクトが作成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データベースです。 SSPROP_INIT_USEPROCFORPREP の値が SSPROPVAL_USEPROCFORPREP_ ON の場合、コマンドを作成したセッションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続が失われたときにだけ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで作成された一時ストアド プロシージャが削除されます。 その接続がデータ ソースの初期化時に作成された既定の接続の場合は、データ ソースの初期化が解除されたときのみ、一時ストアド プロシージャが削除されます。  
   
  SSPROP_INIT_USEPROCFORPREP の値が SSPROPVAL_USEPROCFORPREP_ON_DROP の場合、次のいずれかの時点で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの一時ストアド プロシージャが削除されます。  
   
--   コンシューマーは**icommandtext::setcommandtext**に新しいコマンドを指定します。  
+-   コンシューマーが **ICommandText::SetCommandText** を使用して新しいコマンドを指定したとき。  
   
--   コンシューマーは**ICommandPrepare::Unprepare**をコマンド テキストを必要がなくなったことを示します。  
+-   コンシューマーが **ICommandPrepare::Unprepare** を使用して、コマンド テキストが必要なくなったことを指定したとき。  
   
 -   コンシューマーが一時ストアド プロシージャを使用して、コマンド オブジェクトへのすべての参照を解放したとき。  
   
- コマンド オブジェクト最大で 1 つ一時ストアド プロシージャは、 **tempdb**します。 既存の一時ストアド プロシージャは、特定のコマンド オブジェクトに関する現在のコマンド テキストを表します。  
+ コマンド オブジェクトは、最大で 1 つだけ一時ストアド プロシージャを **tempdb** に保持します。 既存の一時ストアド プロシージャは、特定のコマンド オブジェクトに関する現在のコマンド テキストを表します。  
   
 ## <a name="see-also"></a>参照  
  [[コマンド]](commands.md)  

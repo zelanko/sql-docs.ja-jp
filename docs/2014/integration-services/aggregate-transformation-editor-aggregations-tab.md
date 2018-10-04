@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224462"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>[集計変換エディター] ([集計] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[集計]** タブを使用すると、集計列および集計プロパティを指定できます。 複数の集計を適用することができます。 この変換ではエラー出力を生成しません。  
@@ -70,7 +67,7 @@ ms.locfileid: "37221852"
  **操作**  
  使用可能な操作の一覧から選択します。次の表を指針として使用できます。  
   
-|演算|説明|  
+|操作|説明|  
 |---------------|-----------------|  
 |**GroupBy**|データセットをグループに分割します。 どのようなデータ型を持つ列でもグループ化に使用できます。 詳細については、「GROUP BY」を参照してください。|  
 |**Sum**|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「SUM」を参照してください。|  

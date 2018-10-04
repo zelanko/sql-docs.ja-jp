@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1c7ca8d5c2594668283887c23f7d976a1fc3359
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b58e73b7757e8288ff90f462be1868cb60e3af5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236232"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181466"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>[ポーリング クエリの作成] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[ストレージのオプション]** ダイアログ ボックスの **[通知]** タブから開く **[ポーリング クエリの作成]** ダイアログ ボックスを使用すると、ポーリング クエリを作成できます。 ポーリング クエリとは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でテーブルやその他のリレーショナル オブジェクトに変更が加えられているかどうかの判断に使用できる値を返す、単一クエリです。 **[ポーリング クエリの作成]** ダイアログ ボックスを表示するには、**[ストレージのオプション]** ダイアログ ボックスの **[通知]** タブで、**[定期ポーリング]** オプションのグリッドの **[ポーリング クエリ]** 列にある参照ボタン (**[...]**) をクリックします。 **[ストレージのオプション]** ダイアログ ボックスの **[通知]** タブの詳細については、「[[通知] ([ストレージのオプション] ダイアログ ボックス) (Analysis Services - 多次元データ)](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)」を参照してください。  

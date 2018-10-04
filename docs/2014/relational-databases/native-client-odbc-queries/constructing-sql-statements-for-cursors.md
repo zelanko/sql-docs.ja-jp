@@ -1,12 +1,10 @@
 ---
-title: カーソル用の SQL ステートメントの作成 |Microsoft Docs
+title: カーソルの SQL ステートメントを構築します。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], statement construction
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2911415122307216afc5f6ff7d41a8f54e46f059
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228762"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>カーソル用の SQL ステートメントの作成
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、サーバー カーソルを使用して、ODBC 仕様で定義されているカーソル機能を実装します。 ODBC アプリケーションを使用してカーソルの動作を制御する[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)別のステートメント属性を設定します。 次に、属性とその既定値を示します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは、ODBC の仕様で定義されているカーソル機能を実装するためにサーバー カーソルを使用します。 ODBC アプリケーションを使用して、カーソルの動作を制御する[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)別のステートメントの属性を設定します。 次に、属性とその既定値を示します。  
   
 |属性|既定|  
 |---------------|-------------|  
@@ -38,7 +35,7 @@ ms.locfileid: "37407480"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- SQL ステートメントの実行時にこれらのオプションが既定値に設定されて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、結果セットを実装するために、サーバー カーソルを使用しません。 代わりに、既定の結果セットを使用します。 これらのオプションは、SQL ステートメントの実行時にその既定値から変更された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは結果セットを実装するために、サーバー カーソルを使用しようとしています。  
+ これらのオプションは、SQL ステートメントの実行時にデフォルト値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の結果セットを実装するためにネイティブ クライアントの ODBC ドライバーがサーバー カーソルを使用できません; 代わりに、既定の結果セットを使用します。 これらのオプションのいずれかが、SQL ステートメントの実行時に既定値から変更された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは結果セットを実装するためにサーバー カーソルを使用しようとしています。  
   
  既定の結果セットは、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをサポートします。 既定の結果セットを使用するときに実行できる SQL ステートメントの種類に制限はありません。  
   
@@ -76,7 +73,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- このメッセージを受信する ODBC アプリケーションで呼び出すことができます[SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md)現在のカーソル設定を決定します。  
+ このメッセージが表示、ODBC アプリケーションが呼び出すことができます[SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md)現在のカーソルの設定を決定します。  
   
  サーバー カーソルを使用しているときに、複数の SELECT ステートメントから構成されるプロシージャを実行すると、次のエラーが発生します。  
   

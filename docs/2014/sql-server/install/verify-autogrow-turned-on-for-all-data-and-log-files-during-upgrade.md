@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tempdb [SQL Server], size
 - autogrow [SQL Server]
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33c94b0ac9145e5d36a9c744a3531155ae64b152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4d247156e4e37786e5822ed0ce3397c1cad7e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181469"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220502"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>アップグレード処理中、すべてのデータ ファイルとログ ファイルの自動拡張が有効になっていることを確認する
   アップグレード アドバイザーによって、自動拡張に設定されていないデータまたはログ ファイルが検出されました。 新しい強化された機能は、ユーザー データベースの追加のディスク領域を必要とし、 **tempdb**システム データベースです。 リソースがアップグレードし、その後の本番操作時にサイズの増加に対応できることを確認するをお勧めしますすべてのユーザー データとログ ファイルの自動拡張を ON に設定し、 **tempdb**アップグレードする前に、データとログ ファイル。  

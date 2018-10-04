@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76d7a8453cec686311f478a439af926ab0e5c690
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be69309ebf3f52246fd9ea5cb0fbc72edcdaa42e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207612"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204598"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Windows Azure への SQL Server マネージド バックアップ - 保有期間とストレージの設定
   このトピックでは、基本的な構成手順を説明します[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]データベースとインスタンスの既定の設定を構成します。 また、インスタンスの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] サービスを一時停止して再開するために必要な手順についても説明します。  
@@ -151,9 +148,7 @@ ms.locfileid: "37207612"
 > [!IMPORTANT]  
 >  構成する前に[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]インスタンス上に立つ可能性のある、既存の構成を確認する存在する場合。 データベースの構成設定を確認する手順については、後で説明します。  
   
- 
-  **SQL Server Management Studio:** SQL Server Management Studio でこのタスクを実行するには、オブジェクト エクスプローラーで **[管理]** ノードを展開し、 **[マネージド バックアップ]** を右クリックします。 **[構成]** を選択します。 
-  **[マネージド バックアップ]** ダイアログ ボックスが開きます。 このダイアログ ボックスを使用して、保持期間、SQL 資格情報、ストレージ URL、暗号化の設定を指定します。 このダイアログ ボックス、固有のヘルプを参照してください。[マネージ バックアップの構成&#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)します。  
+ **SQL Server Management Studio:** SQL Server Management Studio でこのタスクを実行するには、オブジェクト エクスプローラーで **[管理]** ノードを展開し、 **[マネージド バックアップ]** を右クリックします。 **[構成]** を選択します。 **[マネージド バックアップ]** ダイアログ ボックスが開きます。 このダイアログ ボックスを使用して、保持期間、SQL 資格情報、ストレージ URL、暗号化の設定を指定します。 このダイアログ ボックス、固有のヘルプを参照してください。[マネージ バックアップの構成&#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)します。  
   
 #### <a name="using-transact-sql"></a>Transact-SQL の使用  
   

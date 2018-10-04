@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d87a85927751b12e3f86d5ce2bc908da9d063b21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243252"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158952"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 実行モードは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]プログラムの開発者を対象とします。 `LocalDB` インストールが開始に必要なファイルの最小限のセットをコピー、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 1 回`LocalDB`がインストールされている場合、開発者の接続を開始、特殊な接続文字列を使用しています。 に接続するために必要なときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インフラストラクチャが自動的に作成され、開始、複雑な、または時間のかかる構成タスクなしのデータベースを使用するアプリケーションを有効にします。 開発者ツールによって、開発者は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを記述してテストすることができ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の完全なサーバー インスタンスを管理する必要はありません。 インスタンス[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`を使用して管理されている場合は、`SqlLocalDB.exe`ユーティリティ。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 代わりに使用する必要があります、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ユーザー インスタンスの機能は非推奨とされます。  

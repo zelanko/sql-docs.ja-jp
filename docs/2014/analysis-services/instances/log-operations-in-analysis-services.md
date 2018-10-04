@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89a99ed7f3f38abba8eeaaf8b2f420106dbbe790
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228373"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198432"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services でのログ操作
   Analysis Services インスタンスは、msmdsrv.log ファイルにサーバーの通知、エラー、および警告のログを記録します。インストールするインスタンスごとに実行します。 管理者は、ルーチンのイベントと異常なイベントのどちらの情報を得る場合でも、このログを参照します。 最近のリリースにおいては、ログ記録が機能拡張され、さらに多くの情報が含まれるようになりました。 ログ レコードには、製品のバージョンおよびエディション情報だけでなく、プロセッサ、メモリ、接続、およびブロック イベントも含まれるようになりました。 [ログ記録の機能強化](http://support.microsoft.com/kb/2965035)に関するページで、全体的な変更の一覧を確認できます。  

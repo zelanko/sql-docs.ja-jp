@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], quantity needed for restore sequence
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 287fbe416b7e0b824f9a6287b85e8dcb7aa17aa3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169392"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
   このトピックは完全復旧モデルと一括ログ復旧モデルのみに関連します。  
@@ -64,7 +61,7 @@ ms.locfileid: "37289118"
 ##  <a name="PITrestore"></a> ログ バックアップを使用して障害発生時点に復元するには  
  次のような一連のイベントが発生したとします。  
   
-|[時刻]|イベント|  
+|Time|イベント|  
 |----------|-----------|  
 |午前 8 時|データベースの完全バックアップを作成するために、データベースをバックアップします。|  
 |正午|トランザクション ログのバックアップ。|  
@@ -96,7 +93,7 @@ ms.locfileid: "37289118"
      この代替手順は、一連のデータベースの完全バックアップにまたがるトランザクション ログ バックアップのチェーンを保持することにより、冗長性を伴うセキュリティが提供されることになります。  
   
 > [!NOTE]  
->  場合によっては、トランザクション ログを使用して特定の時点までデータベースを復元することもできます。 詳細については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)と呼びます。  
+>  場合によっては、トランザクション ログを使用して特定の時点までデータベースを復元することもできます。 詳細については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログのバックアップを適用するには**  

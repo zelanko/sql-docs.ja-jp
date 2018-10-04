@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], creating
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1e29a5080b0c6646d093c26aa92766332e50d053
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8439c48f7379b983b46edcaf1111606c1a3fbcc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236252"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193202"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
   SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリケーションから、レポートを配信する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成することができます。 サブスクリプションは、ドキュメント ライブラリやファイル フォルダーに対して、または電子メールとしてレポートを配信できます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成するための要件と手順についてまとめます。  
@@ -59,7 +56,7 @@ ms.locfileid: "37236252"
   
  サブスクリプションを作成する際には、出力ファイル形式を選択できます。 形式によっては正しく機能しないレポートもあります。 サブスクリプションで形式を選択する前に、レポートを開き、別の形式にエクスポートして、期待どおりに表示されることを確認します。  
   
- ユーザーが **サブスクリプションを作成できるようにする場合は、そのユーザーは SharePoint の** アイテムの編集 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] リスト権限を必要とします。 詳細については、「[レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」をご覧ください。  
+ ユーザーが **サブスクリプションを作成できるようにする場合は、そのユーザーは SharePoint の** アイテムの編集 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] リスト権限を必要とします。 詳細については、「 [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」をご覧ください。  
   
 > [!IMPORTANT]  
 >  ライブラリまたは共有フォルダーにレポートを配信するサブスクリプションでは、元のレポートに基づいて新しく静的ファイルが作成されますが、これはレポート ビューアー Web パーツで実行される実際のレポート定義ではありません。 元のレポートに対話機能 (ドリルスルー リンクなど) や動的コンテンツが含まれている場合、対象の場所に配信される静的ファイルでは、これらの機能を使用できません。 "Web ページ" を選択すると、ある程度の対話機能を維持することができます。しかし、このドキュメントはレポート ビューアーで実行される .rdl ファイルではないため、レポートをクリックすると新しいページがブラウザー セッションで作成され、サイトに戻るにはそれらをスクロールする必要があります。  

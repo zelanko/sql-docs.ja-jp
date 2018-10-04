@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CalculationProperty Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CalculationProperty element
 ms.assetid: 5f0b4cfc-7d25-4c01-a517-cc2e89859be3
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 251cd4bd439fad70fd64e1c5ebf4be2965cf983d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfd8d16293314db4a9ca382d6a4042dd0a493f06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161702"
 ---
 # <a name="calculationproperty-element-assl"></a>CalculationProperty 要素 (ASSL)
   使用される計算のユーザー インターフェイスのプロパティのコレクションを格納する[MdxScript](mdxscript-element-assl.md)要素。  

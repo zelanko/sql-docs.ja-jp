@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - opening connections
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - connections [ADOMD.NET]
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d7bf4529df77545cf2d0acf69af5d0b570ef750
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a338d1902440fe6489b7c4c91176899999aa25fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172022"
 ---
 # <a name="establishing-connections-in-adomdnet"></a>ADOMD.NET での接続の確立
   ADOMD.NET では使用して、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>オブジェクトなど、分析データ ソース接続を開く[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 接続が不要になったときは、その接続を明示的に閉じる必要があります。  

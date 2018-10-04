@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DMSCHEMA_MINING_COLUMNS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f7d19a29ceb67f83742e19615d9086315b600b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232062"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200702"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS 行セット
   すべてのデータ マイニング モデルの個々 の列について説明します[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。 この行セットは、現在のカタログに制限されます。  
@@ -44,7 +41,7 @@ ms.locfileid: "37232062"
 |`COLUMN_PROPID`|`DBTYPE_UI4`||列のプロパティ ID。 この列は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でサポートされていないため、常に `NULL` が格納されます。|  
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||列の位置を表す序数。 列には 1 から始まる連番が付けられます。 列に安定した序数が付けられていない場合、この列には `NULL` が格納されます。|  
 |`COLUMN_HAS_DEFAULT`|`DBTYPE_BOOL`||列が既定値を持つかどうかを示すブール値。<br /><br /> 列に既定値がある場合は `TRUE`、それ以外の場合は `FALSE` になります。|  
-|`COLUMN_DEFAULT`|`DBTYPE_WSTR`||列の既定値。<br /><br /> 既定値が `NULL` 値である場合、`COLUMN_HASDEFAULT` には `TRUE` が格納され、この列には `NULL` が格納されます。|  
+|`COLUMN_DEFAULT`|`DBTYPE_WSTR`||列の既定値です。<br /><br /> 既定値が `NULL` 値である場合、`COLUMN_HASDEFAULT` には `TRUE` が格納され、この列には `NULL` が格納されます。|  
 |`COLUMN_FLAGS`|`DBTYPE_UI4`||列の特性を記述するビットマスクです。 `DBCOLUMNFLAGS` の列挙型は、ビットマスク内のビットを指定します。 この列が空になることはありません。|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||列で NULL 値が許容されるかどうかを示すブール値。<br /><br /> 列で NULL 値が許容されないことがわかっている場合は `FALSE`、それ以外の場合は `TRUE` になります。|  
 |`DATA_TYPE`|`DBTYPE_UI2`||列のデータ型のインジケーターです。 次の一覧に、返されるインジケーターの種類の例を示します。<br /><br /> "`TABLE`" は `DBTYPE_HCHAPTER` を返します。<br /><br /> "`TEXT`" は `DBTYPE_WCHAR` を返します。<br /><br /> "`LONG`" は `DBTYPE_I8` を返します。<br /><br /> "`DOUBLE`" は `DBTYPE_R8` を返します。<br /><br /> "`DATE`" は `DBTYPE_DATE` を返します。|  

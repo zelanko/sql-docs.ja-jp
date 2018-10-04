@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - DiscretizationMethod property
 - EQUAL_AREAS method
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138f416d6dc7e1408bd65d10da0a8538906da3b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195562"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>ニューラル ネットワーク構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
   データ マイニング モデルを作成するには、まずデータ マイニング ウィザードを使用して、新しいデータ ソース ビューに基づく新しいマイニング構造を作成する必要があります。 ここでは、ウィザードを使用してマイニング構造を作成し、同時に、[!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムに基づく関連マイニング モデルを作成します。  
@@ -87,7 +84,7 @@ ms.locfileid: "37304752"
     |LevelTwoOperators|入力|  
     |Orders|[入力]/[予測]|  
     |ServiceGrade|[入力]/[予測]|  
-    |Shift キー|入力|  
+    |shift キー|入力|  
     |TotalOperators|使用しない|  
     |WageType|入力|  
   
@@ -100,15 +97,15 @@ ms.locfileid: "37304752"
     |AutomaticResponses|Continuous|Long|  
     |AverageTimePerIssue|Continuous|Long|  
     |Calls|Continuous|Long|  
-    |DayOfWeek|Discrete|Text|  
+    |DayOfWeek|Discrete|テキスト|  
     |FactCallCenterID|Key|Long|  
     |IssuesRaised|Continuous|Long|  
     |LevelOneOperators|Continuous|Long|  
     |LevelTwoOperators|Continuous|Long|  
     |Orders|Continuous|Long|  
     |ServiceGrade|Continuous|Double|  
-    |Shift キー|Discrete|Text|  
-    |WageType|Discrete|Text|  
+    |shift キー|Discrete|テキスト|  
+    |WageType|Discrete|テキスト|  
   
 13. **テストの設定を作成** ページで、オプションのテキスト ボックスをオフ**テスト用データの割合**します。 **[次へ]** をクリックします。  
   
@@ -293,7 +290,7 @@ ms.locfileid: "37304752"
     |Orders|入力|入力|  
     |ServiceGrade Binned|Ignore|Predict (ServiceGrade)|  
     |ServiceGrade|Predict|Ignore|  
-    |Shift キー|入力|入力|  
+    |shift キー|入力|入力|  
     |Total Operators|入力|入力|  
     |WageType|入力|入力|  
   

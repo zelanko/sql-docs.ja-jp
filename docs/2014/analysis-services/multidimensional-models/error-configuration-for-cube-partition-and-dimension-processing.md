@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3edb4e923424def48ff3cacdd9eb8967f8cb6579
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ec0d1acbe1714159d6777f6cb91056e4e14b356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275918"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175372"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>キューブ、パーティション、およびディメンションに関する処理のエラー構成 (SSAS - 多次元)
   処理中にデータ整合性エラーが発生した場合、キューブ、パーティション、またはディメンション オブジェクトのエラー構成プロパティによって、サーバーの応答が決定します。 通常、キー列の重複キー、見つからないキー、および NULL 値がこのようなエラーをトリガーします。エラーの原因となるレコードはデータベースに追加されず、次の動作を指定するプロパティを設定することができます。 既定では、処理が停止します。 ただし、キューブの開発中に、不完全でもインポートされたデータのキューブの動作をテストできるように、エラーが発生した場合に処理を続行する必要がある場合もあります。  
@@ -107,7 +104,7 @@ ms.locfileid: "37275918"
   
  スタンドアロン操作として処理できるすべてのオブジェクトのエラー構成を設定できます。  
   
-#### <a name="sql-server-management-studio"></a>[SQL Server Management Studio]  
+#### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
   
 1.  オブジェクト エクスプローラーで、 **[プロパティ]** 、ディメンション、キューブ、パーティションのオブジェクトの 1 つを右クリックします。  
   

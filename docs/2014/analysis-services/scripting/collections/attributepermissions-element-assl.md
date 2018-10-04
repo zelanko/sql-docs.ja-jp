@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributePermissions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributePermissions element
 ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 98869453e0ecd50301e94cf5b7034173fc7a8a5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00abbc7be0b8efa045074773ee6e2a3526192694
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227962"
 ---
 # <a name="attributepermissions-element-assl"></a>AttributePermissions 要素 (ASSL)
   個々 の属性の権限のコレクションを格納[ロール](../objects/role-element-assl.md)の特定のディメンション上の要素を[キューブ](../objects/cube-element-assl.md)要素。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 63
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8234986c27b6bffc593d8eb7cc6c21c8988d7d0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71c35ad53fd9c90b8c7130bac104f370e466448f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154182"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   レプリケーション マージ エージェントは、データベース テーブルに保持された初期スナップショットをサブスクライバーに適用するユーティリティ実行可能ファイルです。 さらに、初期スナップショットの作成後にパブリッシャーで発生したデータの増分変更をマージし、ユーザーが構成したルールに従って、またはユーザーが作成したカスタム競合回避モジュールを使用して、競合を調整します。  
@@ -226,7 +223,7 @@ ms.locfileid: "37287148"
 |**0**|エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーをログに記録します。|  
 |**1**|各セッションの状態における増分セッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。|  
 |**2**|既定値です。 各セッションの状態における増分セッションの詳細、およびアーティクル レベルのセッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。 エージェントの状態のメッセージもログに記録されます。|  
-|**3**| **-HistoryVerboseLevel** = **2**と同じですが、より多くのエージェント進行状況メッセージがログに記録されます。|  
+|**3**|**-HistoryVerboseLevel** = **2**と同じですが、より多くのエージェント進行状況メッセージがログに記録されます。|  
   
  **-Hostname** *host_name*  
  ローカル コンピューターのネットワーク名です。 既定値は、ローカル コンピューターの名前になります。  
@@ -267,7 +264,7 @@ ms.locfileid: "37287148"
  **-MakeGenerationInterval** *make_generation_interval_seconds*  
  クライアントにダウンロードする生成結果 (変更のバッチ) を作成する間隔 (秒) です。 既定値は **1** 秒です。  
   
- Makegeneration は、パブリッシャーの変更をサブスクライバーにダウンロードするように準備するプロセスです。また、ダウンロード中にパフォーマンスのボトルネックになる場合があります。 makegeneration プロセスが **-MakeGenerationInterval**で指定された間隔で既に実行された場合、現在の同期セッションでは、このプロセスはスキップされます。 これは、同期の同時実行に役立つ場合があります。特に、サブスクライバーが変更をダウンロードしない場合に役立ちます。  
+ Makegeneration は、パブリッシャーの変更をサブスクライバーにダウンロードするように準備するプロセスです。また、ダウンロード中にパフォーマンスのボトルネックになる場合があります。 makegeneration プロセスが **-MakeGenerationInterval**で指定された間隔で既に実行された場合、現在の同期セッションでは、このプロセスはスキップされます。 これは、同期のコンカレンシーに役立つ場合があります。特に、サブスクライバーが変更をダウンロードしない場合に役立ちます。  
   
  **-MaxBcpThreads** *number_of_threads*  
  並列実行できる一括コピーの操作数を指定します。 同時に存在するスレッドおよび ODBC 接続の最大数は、 **MaxBcpThreads** 、またはパブリケーション データベース内のシステム テーブル **sysmergeschemachange** に表示される一括コピー要求数のいずれか少ない方の値になります。 **MaxBcpThreads** の値は、0 よりも大きくする必要がありますが、ハードコーディングされた上限はありません。 既定値は **1**です。  
@@ -354,7 +351,7 @@ ms.locfileid: "37287148"
  **-SubscriptionType**[ **0**| **1**| **2**]  
  ディストリビューションのサブスクリプションの種類を指定します。 値 **0** は、プッシュ サブスクリプション (既定値) を示します。値 **1** はプル サブスクリプションを示し、値 **2** は匿名サブスクリプションを示します。  
   
- **-SyncToAlternate** [ **0|1**]  
+ **-SyncToAlternate** **[0|1]**  
  マージ エージェントがサブスクリプションと代替パブリッシャー間での同期を実行しているかどうかを指定します。 値 **1** は、これが代替パブリッシャーであることを示します。 既定値は **0**です。  
   
  **-UploadGenerationsPerBatch** *upload_generations_per_batch*  

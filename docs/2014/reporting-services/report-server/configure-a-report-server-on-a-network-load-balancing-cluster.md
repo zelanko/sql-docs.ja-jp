@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d8d693e328aafb852e5878418401495ffd61a2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d3b8d3c1d86983b66379c31b556e9eb378b4dc51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223510"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>ネットワーク負荷分散クラスターにおけるレポート サーバーの構成
   レポート サーバーのスケールアウトをネットワーク負荷分散 (NLB) クラスターで実行するように構成する場合は、次の操作を行う必要があります。  
@@ -100,7 +97,7 @@ ms.locfileid: "37234732"
 6.  スケールアウト配置内の各レポート サーバーの RSReportServer.config ファイルごとに、これらの手順を繰り返します。  
   
 ##  <a name="Verify"></a> レポート サーバーへのアクセスの確認  
- 仮想サーバーの名前を使って、スケール アウト配置にアクセスできることを確認します (たとえば、https://MyVirtualServerName/reportserverとhttps://MyVirtualServerName/reports)します。  
+ 仮想サーバーの名前を使って、スケール アウト配置にアクセスできることを確認します (たとえば、 https://MyVirtualServerName/reportserverと https://MyVirtualServerName/reports)します。  
   
  レポート サーバーのログ ファイルを参照するか、または RS の実行ログを確認して、どのノードが実際にレポートを処理しているのかを確認できます (実行ログ テーブルには、 **InstanceName** という列があり、特定の要求がどのインスタンスによって処理されたのかを示しています)。 詳細については、次を参照してください。 [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   

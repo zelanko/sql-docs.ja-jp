@@ -4,32 +4,29 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 157f43f4646c6c935da7884a0fdae93c9676e6fe
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208432"
 ---
 # <a name="assemblies-database-engine"></a>アセンブリ (データベース エンジン)
   このセクションのトピックでは、アセンブリの理解、設計、および実装に役立つ情報について説明します。  
   
  アセンブリのインスタンスで使用される DLL ファイルは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]関数、ストアド プロシージャ、トリガー、ユーザー定義集計、およびによってホストされているマネージ コード言語のいずれかで記述されているユーザー定義型を展開する、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR) ではなく[!INCLUDE[tsql](../../../includes/tsql-md.md)]します。  
   
- ph x="1" /&gt; のアセンブリは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 共通言語ランタイムで作成されたマネージド アプリケーション モジュール (.dll ファイル) を参照するオブジェクトです。 アセンブリには、クラス メタデータとマネージド コードが含まれています。 SQL Server のインスタンスにアセンブリをアップロードすることが、次のいずれかのデータベース オブジェクトを作成するための最初の手順になります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアセンブリは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 共通言語ランタイムで作成されたマネージド アプリケーション モジュール (.dll ファイル) を参照するオブジェクトです。 アセンブリには、クラス メタデータとマネージド コードが含まれています。 SQL Server のインスタンスにアセンブリをアップロードすることが、次のいずれかのデータベース オブジェクトを作成するための最初の手順になります。  
   
 -   CLR 関数。 詳細については、次を参照してください。 [CLR 関数の作成](../user-defined-functions/create-clr-functions.md)です。  
   
@@ -39,7 +36,7 @@ ms.locfileid: "37354964"
   
 -   ユーザー定義集計関数。 詳細については、次を参照してください。[作成ユーザー定義集計](../user-defined-functions/create-user-defined-aggregates.md)します。  
   
--   ユーザー定義型。 詳細については、次を参照してください。[ユーザー種類](../native-client/features/using-user-defined-types.md)します。  
+-   ユーザー定義型。 詳細については、「[ユーザー定義型の使用](../native-client/features/using-user-defined-types.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、アセンブリによって次の関数が実行されます。  
   

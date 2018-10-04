@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReadDefinition Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReadDefinition element
 ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fed91c75bd717e67dd624fc16f7091be24fb030c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 176f1fa1f1a9f4fca3e773d65a5fda01c2f6752d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297232"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218112"
 ---
 # <a name="readdefinition-element-assl"></a>ReadDefinition 要素 (ASSL)
   メンバーがデータベースの定義やデータベース内のオブジェクトの定義を読み取ることができるかどうかを指定します。  

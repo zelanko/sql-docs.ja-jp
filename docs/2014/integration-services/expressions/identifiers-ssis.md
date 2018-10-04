@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 322a91c77eaac5433cada0cfef056e1688020dc6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bfcd429eeb6979fea8ba889212b5e56a7afee887
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154832"
 ---
 # <a name="identifiers-ssis"></a>識別子 (SSIS)
   識別子とは、式の内部で演算に使用できる列および変数のことです。 式では、標準識別子と修飾された識別子を使用できます。  
@@ -41,7 +38,7 @@ ms.locfileid: "39084004"
   
 -   名前の最初の文字は、Unicode Standard 2.0 で定義されている文字か、アンダースコア (_) である必要があります。  
   
--   2 文字目以降は文字または数字、アンダー スコア (_)、Unicode Standard 2.0 で定義されているとすることができます\@$、および # 文字。  
+-   2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (_)、\@、$、および # 文字を使用できます。  
   
 > [!IMPORTANT]  
 >  埋め込み型スペース、および上記の一覧に表示されていない特殊文字は、標準識別子では無効です。 スペースや特殊文字を使用するには、標準識別子ではなく修飾された識別子を使用する必要があります。  
@@ -89,15 +86,15 @@ ms.locfileid: "39084004"
 >  ドット付き表記の両方の要素が 1 組の角かっこで囲まれている場合、式エバリュエーターは、その組を、元の列の組み合わせとしてではなく、単一の識別子として解釈します。  
   
 ## <a name="variables-in-expressions"></a>式内部の変数  
- 式で参照されている場合、変数を含める必要があります、\@プレフィックス。 たとえば、**カウンター**を使用して変数が参照されている\@カウンター。 \@文字変数名の一部でない; のみ、変数、式エバリュエーターが識別されます。 式を構築する場合、ダイアログを使用してボックス[!INCLUDE[ssIS](../../includes/ssis-md.md)]デザイナーが提供する、\@文字は変数名に自動的に追加します。 間の空白文字を含めることはできません、\@文字と変数名。  
+ 変数が式の内部で参照される場合、変数には \@ プレフィックスを含める必要があります。 たとえば、**Counter** 変数を参照する場合、\@Counter を使用します。 \@ 文字は、変数名の一部ではなく、式の評価において変数を識別するためのものにすぎません。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで用意されているダイアログ ボックスを使用して式を構築する場合、\@ 文字が自動的に変数名に追加されます。 \@ 文字と変数名の間にスペースが含まれる場合は、無効になります。  
   
  変数名は、他の標準識別子の規則と同じく、次の規則に従います。  
   
 -   名前の最初の文字は、Unicode Standard 2.0 で定義されている文字か、アンダースコア (_) である必要があります。  
   
--   2 文字目以降は文字または数字、アンダー スコア (_)、Unicode Standard 2.0 で定義されているとすることができます\@$、および # 文字。  
+-   2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (_)、\@、$、および # 文字を使用できます。  
   
- 上記の一覧に表示されていない文字が変数名に含まれる場合、変数を角かっこで囲む必要があります。 たとえば、スペースが含まれる変数名は角かっこで囲みます。 始め角かっこの後、\@文字。 たとえば、 **My Name**として変数が参照されている\@[My Name]。 変数名と角かっこの間にスペースが含まれる場合は、無効になります。  
+ 上記の一覧に表示されていない文字が変数名に含まれる場合、変数を角かっこで囲む必要があります。 たとえば、スペースが含まれる変数名は角かっこで囲みます。 左角かっこは、\@ 文字の後ろに付けます。 たとえば、**My Name** 変数は、\@[My Name] として参照されます。 変数名と角かっこの間にスペースが含まれる場合は、無効になります。  
   
 > [!NOTE]  
 >  ユーザー定義変数およびシステム変数の名前では、大文字と小文字が区別されます。  

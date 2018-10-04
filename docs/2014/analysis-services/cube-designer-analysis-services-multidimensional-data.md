@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155422"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>キューブ デザイナー (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の**キューブ デザイナー**を使用すると、キューブに含まれているメジャー グループやメジャー、キューブ ディメンションやディメンション リレーションシップ、計算、主要業績評価指標 (KPI)、アクション、パーティション、パースペクティブ、および翻訳を含む、既存のキューブのさまざまなプロパティを編集したり、キューブに含まれているデータを参照したりできます。 **キューブ デザイナー** ダイアログ ボックスを表示するには、次の手順に従います。  

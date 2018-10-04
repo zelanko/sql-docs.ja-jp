@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19e99799eac66823d8b243470eb5540c94e22708
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258218"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180662"
 ---
 # <a name="use-column-sets"></a>列セットの使用
   スパース列を使用するテーブルでは、テーブル内のすべてのスパース列を返すための列セットを指定できます。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 列セットは、テーブルに物理的に保存されないという点で計算列に似ています。 計算列と異なるのは、列セットが直接更新できる点です。  
@@ -129,7 +126,7 @@ GO
   
  **  なし = 列セットでの選択操作時に、対象の属性に対して値が出力されません。 挿入または更新操作で列セットに対して指定された XML 表記で呼び出し元がこの属性に値を指定すると、エラーが発生します。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  列セットのセキュリティ モデルは、テーブルと列の間に介在するセキュリティ モデルと同じように機能します。 列セットはミニテーブルとして視覚化できます。選択操作は、このミニテーブルに対する SELECT * 操作と同様です。 ただし、列セットとスパース列は、厳密なコンテナーではなくグループ化の関係にあります。 セキュリティ モデルでは、列セットの列に対してセキュリティがチェックされ、基になるスパース列で DENY 操作が適用されます。 セキュリティ モデルには、これ以外に次のような特性があります。  
   
 -   列セットの列に対し、テーブル内の他の列と同様に、セキュリティ権限を与えたり取り消したりすることができます。  

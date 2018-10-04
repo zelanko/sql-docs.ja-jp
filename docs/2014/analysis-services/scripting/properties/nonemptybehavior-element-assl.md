@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NonEmptyBehavior Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 911b797b3f1d6ff2a8cd9fac1dfc88384d2cac7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227982"
 ---
 # <a name="nonemptybehavior-element-assl"></a>NonEmptyBehavior 要素 (ASSL)
   親に関連付けられている空でない動作を指定します、 [CalculationProperty](../objects/calculationproperty-element-assl.md)要素。  

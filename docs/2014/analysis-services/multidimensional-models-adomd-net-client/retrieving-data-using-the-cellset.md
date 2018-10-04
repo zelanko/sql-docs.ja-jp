@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - CellSet object
 - retrieving data
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9bce95fa12e7f5437d6d1f3872470a57114b76d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178899"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180344"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>セルセットを使用したデータの取得
   分析データを取得する際、対話性と柔軟性に最も優れている方法が <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトです。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは階層データおよびメタデータのインメモリ キャッシュであり、これらのデータの元の次元を保持します。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは、接続された状態でも、接続されていない状態でもスキャンすることができます。 非接続状態でもアクセス可能なことから、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用すれば、データやメタデータを任意の順序で表示することができ、データ取得の最も包括的なオブジェクト モデルといえます。 一方で、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトはオーバーヘッドが非常に大きく、最も低速な ADOMD.NET データ取得オブジェクト モデルでもあります。  
@@ -57,7 +54,7 @@ ms.locfileid: "37178899"
  前のクエリで返された XML を読み込むことにより、接続中でなくても、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用して分析データを包括的に参照することができます。  
   
 > [!NOTE]  
->  <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトからアクセスできるオブジェクトのプロパティの中には、非接続状態では使用できないものがあります。 詳細については、「<xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>」を参照してください。  
+>  <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトからアクセスできるオブジェクトのプロパティの中には、非接続状態では使用できないものがあります。 詳細については、「 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A> 」を参照してください。  
   
 ### <a name="example-of-retrieving-data-in-a-disconnected-state"></a>非接続状態でのデータの取得例  
  次の例は、このトピックで前述したメタデータとデータの例に似ています。 ただし、この例のコマンドは、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> への呼び出しを使用して実行され、結果は `System.Xml.XmlReader` として返されます。 その後、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> メソッドと共にこの `System.Xml.XmlReader` を使用して <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A> オブジェクトを設定します。 この例では `System.Xml.XmlReader` をすぐに読み込みますが、データをセルセットに読み込む前に、リーダーからハード ディスクに格納された XML をキャッシュするか、なんらかの方法でデータを別のアプリケーションに転送することもできます。  

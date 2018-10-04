@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Kpis Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Kpis element
 ms.assetid: da4e32a0-1416-4d32-8b7f-7d74be23c9d4
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0947535590d2484ac8022a3fa845dc4b85c96d4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1b0817a7419aa76d9a015c8409b2f09962e04ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168193"
 ---
 # <a name="kpis-element-assl"></a>Kpis 要素 (ASSL)
   主要業績評価指標のコレクションが含まれています ([Kpi](../objects/kpi-element-assl.md)要素)、親要素に関連付けられています。  

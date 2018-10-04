@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d97079ca400d92502cf3ff217137eb6f32d1920d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b77fefaad8ac573e526412f1c81be3969743a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180859"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178212"
 ---
 # <a name="establishing-secure-connections-in-adomdnet"></a>ADOMD.NET でのセキュリティ保護された接続の確立
   ADOMD.NET で接続を使用する場合、その接続に適用されるセキュリティ手段は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> の <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> メソッドを呼び出すときに使用する接続文字列の `ProtectionLevel` プロパティの値によって異なります。  
   
- ph x="1" /&gt; プロパティには、"認証なし"、"認証済み"、"署名済み"、"暗号化" の 4 つのセキュリティ レベルがあります。 これらの各セキュリティ レベルについて、次の表で説明します。  
+ `ProtectionLevel` プロパティには、"認証なし"、"認証済み"、"署名済み"、"暗号化" の 4 つのセキュリティ レベルがあります。 これらの各セキュリティ レベルについて、次の表で説明します。  
   
 > [!NOTE]  
 >  データベース接続のプール機能を使用する場合、データベースでセキュリティを管理することはできません。 これは、データベース接続のプールでは、接続文字列をプール接続と同じにする必要があるからです。 したがって、どこか他の場所でセキュリティを管理する必要があります。  

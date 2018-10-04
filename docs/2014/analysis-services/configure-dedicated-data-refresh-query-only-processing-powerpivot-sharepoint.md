@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168188"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>データ更新専用またはクエリ専用処理 (PowerPivot for SharePoint を) 構成します。
   SharePoint 統合モードでは、データ更新専用の処理やクエリ専用の処理など、特定の種類の処理要求をサポートするように Analysis Services サーバー インスタンスを構成できます。 既定では、どちらの種類の読み込み要求も有効になっています。 これらのどちらかの種類を無効にすることで、専用のクエリ エンジンまたはデータ更新サーバーを作成することができます。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL configuration [Reporting Services]
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc1acb83b6147d7767c87a04515239a0672e0e5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5aa69c9274ec529b87b2550454f2ce7df1d8e78
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204742"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>構成ファイル内の URL (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、RSReportServer.config ファイルにアプリケーション設定を格納します。 このファイルには、URL と URL 予約の両方の構成設定が含まれています。 これらの構成設定は、変更の目的とルールが大きく異なります。 構成ファイルの変更による配置のチューニングに慣れている場合、各 URL 設定の使用方法の理解にこのトピックが役立ちます。  
@@ -43,7 +40,7 @@ ms.locfileid: "37160093"
   
  `UrlRoot` 指定されて自動的に RSReportServer.config ファイルにアプリケーションへのアクセスの Url を構成する場合。 構成ファイルでこの値を変更する場合は、配信するレポートが格納されているレポート サーバー データベースに接続しているレポート サーバー Web サービスの有効な URL アドレスを指定する必要があります。 `UrlRoot` は、各レポート サーバー インスタンスにつき 1 つしか指定できません。RSReportServer.config ファイルに存在できる `UrlRoot` エントリは、レポート サーバー インスタンスごとに 1 つだけです。 複数の Url をレポート サーバー Web サービス用に予約した場合に使用できる値のいずれかを選択する必要があります`UrlRoot`します。  
   
- ほとんどの場合は変更する必要はありません`UrlRoot`します。 ただし、完全修飾 URL では、使用、レポート サーバーにアクセスする、完全修飾サイト名にホスト ヘッダーを使用する URL を構成していない場合は、設定を手動で RSReportServer.config を編集する必要があります、`UrlRoot`完全修飾するレポート、レポートを表示するために使用されるサーバーの URL (たとえば、https://www.adventure-works.com/mywebapp/reportserver)します。  
+ ほとんどの場合は変更する必要はありません`UrlRoot`します。 ただし、完全修飾 URL では、使用、レポート サーバーにアクセスする、完全修飾サイト名にホスト ヘッダーを使用する URL を構成していない場合は、設定を手動で RSReportServer.config を編集する必要があります、`UrlRoot`完全修飾するレポート、レポートを表示するために使用されるサーバーの URL (たとえば、 https://www.adventure-works.com/mywebapp/reportserver)します。  
   
 #### <a name="urls-connecting-report-manager-and-web-parts-to-the-report-server-web-service"></a>レポート マネージャーおよび Web パーツをレポート サーバー Web サービスに接続するための URL  
  Reporting Services のレポート マネージャーおよび SharePoint 2.0 Web パーツは、レポート サーバーに接続する Web フロントエンド コンポーネントです。 バックエンド レポート サーバーへの接続に使用される URL は次のとおりです。  

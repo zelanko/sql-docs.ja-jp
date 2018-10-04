@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9594eca6b955081be5689862d96d1c9d09a6a664
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d02f24574d6a49edcdbeca2ccfc6fea95893356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224212"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能は、レポートから利用できるデータ フィードを一覧表示する Atom サービス ドキュメントを生成およびレポートの領域、データ データからをフィードします。 この拡張機能を使用すると、レポートから生成されたデータ フィードを使用できるアプリケーションで読み取りおよび交換が可能な、Atom に準拠したデータ フィードを生成できます。 たとえば、Atom 表示拡張機能を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアントで使用できるデータ フィードを生成できます。  
@@ -180,7 +177,7 @@ ms.locfileid: "37202662"
 |----------|------------------------|  
 |テーブル|テーブルを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。 詳細レポートはサポートされません。|  
 |マトリックス|マトリックスを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。|  
-|一覧|一覧の詳細行またはインスタンスそれぞれに対応するレコードが表示されます。|  
+|リスト|一覧の詳細行またはインスタンスそれぞれに対応するレコードが表示されます。|  
 |サブレポート|親アイテムは、コンテンツのインスタンスごとに繰り返し表示されます。|  
 |グラフ|それぞれのグラフ値にすべてのグラフ ラベルを付けてレコードを表示します。 階層内の系列およびカテゴリのラベルは、フラット化され、グラフ値の行内に含まれています。|  
 |データ バー|グラフのように表示されます。 通常、データ バーには階層またはラベルは含まれません。|  

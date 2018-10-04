@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic Analysis Services administration
 - administering Analysis Services
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3d928ceb2fc390ee65ed413b6199965e1684823
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11385dd002acd7b0181422aaa571fe8fe46f188c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300952"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186072"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Analysis Services の管理タスクのスクリプト作成
   SQL Server エージェントで手動、またはスケジュールして実行できるスクリプトを記述または生成することで、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理タスクを自動化できます。 次の表は、使用可能なスクリプト作成オプションについてまとめ、詳細情報へのリンクを提供します。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - AllowPartiallyTrustedCallers attribute
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], security
 - partially trusted callers [CLR integration]
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: deb561ec43fda2e831f115b1c1a7f8eb21974e92
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e79e83263ab498a86a82fcdc65d56f6f8910d497
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265320"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222966"
 ---
 # <a name="allowing-partially-trusted-callers"></a>部分的に信頼される呼び出し元の許容
   コード ライブラリの共有は、共通言語ランタイム (CLR) 統合に関する共通のシナリオです。この場合、ユーザー定義型、ストアド プロシージャ、ユーザー定義関数、ユーザー定義集計、トリガー、またはユーティリティ クラスを含んだアセンブリは、しばしば別のアセンブリまたはアプリケーションによってアクセスされます。 複数のアプリケーションで共有されるコード ライブラリは、厳密な名前で署名する必要があります。  
   
- ph x="1" /&gt; 属性で明示的にマークされていない共有マネージド コード アセンブリにアクセスできるのは、ランタイム コード アクセス セキュリティ システムによって完全に信頼されるアプリケーションだけです。 部分的に信頼されるアセンブリ ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で `SAFE` または `EXTERNAL_ACCESS` 権限セットを使用して登録されているアセンブリ) が、この属性なしに、厳密な名前で署名されたアセンブリへのアクセスを試行すると、`System.Security.SecurityException` がスローされます。 表示されるエラー メッセージは、次のような。  
+ `System.Security.AllowPartiallyTrustedCallers` 属性で明示的にマークされていない共有マネージド コード アセンブリにアクセスできるのは、ランタイム コード アクセス セキュリティ システムによって完全に信頼されるアプリケーションだけです。 部分的に信頼されるアセンブリ ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で `SAFE` または `EXTERNAL_ACCESS` 権限セットを使用して登録されているアセンブリ) が、この属性なしに、厳密な名前で署名されたアセンブリへのアクセスを試行すると、`System.Security.SecurityException` がスローされます。 表示されるエラー メッセージは、次のような。  
   
 ```  
 Msg 6522, Level 16, State 1, Procedure usp_RSTest, Line 0  
