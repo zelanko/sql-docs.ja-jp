@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135153"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint サーバーの全体管理で管理されます。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。  
@@ -113,7 +110,7 @@ ms.locfileid: "37153873"
 |設定|コメント|  
 |-------------|--------------|  
 |レポート ビルダーのダウンロードを有効にする|既定値は TRUE です。<br /><br /> レポート ビルダー アプリケーションのダウンロード ボタンをクライアントに表示するかどうかを指定します。|  
-|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定は省略可能です。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 レポート ビルダー 3.0 を ClickOnce アプリケーションとして起動するには、「http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application」と入力します。|  
+|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定は省略可能です。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 レポート ビルダー 3.0 を ClickOnce アプリケーションとして起動するには、「 http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application」と入力します。|  
 |クライアントの印刷を有効にする|既定値は TRUE です。<br /><br /> ユーザーがクライアント側のコントロール (印刷オプションを提供します) をダウンロードできるかどうかを指定します。|  
 |セッション タイムアウトの編集|既定値は 7200 秒です。|  
 |セッション キャッシュ制限の編集|既定値は 5 です。|  

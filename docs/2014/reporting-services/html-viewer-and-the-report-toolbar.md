@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: eb889f5f518aa5371afb2604950ba0813f5c9c92
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182674"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用される HTML ビューアーが用意されています。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  

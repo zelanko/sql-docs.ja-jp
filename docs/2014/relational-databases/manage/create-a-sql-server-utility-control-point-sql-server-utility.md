@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f6b326cf19dde95a0b942a85c1d25bd6ac4a9456
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 753866ef0ddb01b42bbe6c5f03e007075568d53e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189272"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ)
   企業では、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを所有することができ、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスおよびデータ層アプリケーションを管理できます。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティには、ユーティリティ コントロール ポイント (UCP) を 1 つだけ含めることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに新しい UCP を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各マネージド インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。  

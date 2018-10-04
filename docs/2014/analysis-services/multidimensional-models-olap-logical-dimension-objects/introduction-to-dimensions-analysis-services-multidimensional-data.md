@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - dimensions [Analysis Services], about dimensions
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - storing data [Analysis Services], dimensions
 - storage [Analysis Services]
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 662e7d0402a26b2c6c71e3717673a3f7340dd34c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 807e02a03ada37b17a8c351ed9e535835755e6df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247612"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117242"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>ディメンションの概要 (Analysis Services - 多次元データ)
   すべての Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションは、データ ソース ビューのテーブルまたはビューから列に基づいて属性のグループ。 ディメンションには、キューブとは無関係に存在するもの、複数のキューブ内で使用できるもの、および 1 つのキューブ内で複数回使用できるものがあり、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス間でリンクできます。 キューブとは無関係に存在するディメンションをデータベース ディメンションといい、キューブ内のデータベース ディメンションとデータベース ディメンションのインスタンスをキューブ ディメンションといいます。  
@@ -57,7 +54,7 @@ ms.locfileid: "37247612"
 ## <a name="processing-a-dimension"></a>ディメンションの処理  
  ディメンションを作成した後、ディメンション内の属性および階層のメンバーを表示するには、あらかじめこのディメンションを処理しておく必要があります。 ディメンションの構造が変更されたり、その基になるテーブルの情報が更新された場合、ディメンションをもう一度処理しないと、変更内容を表示できません。 構造の変更後にディメンションを処理する際は、そのディメンションが含まれたキューブも処理する必要があります。これを行わないと、キューブを表示できません。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  ディメンションの従属オブジェクトは、階層、レベル、メンバーを含め、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロールを使用してすべてセキュリティで保護されています。 ディメンションのセキュリティは、そのディメンションを使用するデータベース内のすべてのキューブ、または特定のキューブにのみ適用できます。 ディメンション セキュリティの詳細については、次を参照してください。[ディメンションに対する権限を付与&#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)します。  
   
 ## <a name="see-also"></a>参照  

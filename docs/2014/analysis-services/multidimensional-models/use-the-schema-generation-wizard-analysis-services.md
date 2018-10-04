@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac0560032be47e1934eb111a13511cf579d63fe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237672"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210172"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>スキーマ生成ウィザードの使用 (Analysis Services)
   スキーマ生成ウィザードが生成フェーズで必要とする情報の量は限られています。 スキーマ生成ウィザードでリレーショナル スキーマを生成するために必要な情報のほとんどは、プロジェクトで既に作成した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションから抽出されます。 また、サブジェクト領域データベース スキーマの生成方法とスキーマ内のオブジェクトの名前付け方法をカスタマイズすることもできます。  

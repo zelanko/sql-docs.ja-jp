@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
-caps.latest.revision: 36
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31c9372674ab439c3435515c13f1d76518771328
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219272"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>SQL-DMO の SMO へのマッピング
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、SQL 分散管理オブジェクト (SQL-DMO) は含まれなくなりました。SQL-DMO アプリケーションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) で使用できるように変換する必要があります。 SMO オブジェクト モデルは SQL-DMO に似ているため、大半の SQL-DMO オブジェクトは SMO と同じ名前のオブジェクトにマップされます。 ただし、一部の SQL-DMO オブジェクトは SMO への移行で変更または削除されました。 次の表は、SMO に直接変換されなかった SQL-DMO オブジェクトに対して推奨される操作を示しています。  

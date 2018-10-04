@@ -3,77 +3,73 @@ title: CAB は、SQL Server の累積的更新プログラムのダウンロー�
 description: SQL Server 2017 Machine Learning Services と SQL Server 2016 R Services の CAB のダウンロード。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/28/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e1586f94e21304ce994e5e14bf1b4a57ee796a83
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 25568dc5a76283b18affd10ef0419f83515f6403
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232606"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>インスタンスの SQL Server データベース内分析の累積的更新プログラム用 CAB のダウンロードします。
 
-データベース内分析用に構成された SQL Server インスタンスには、CAB ファイル、インストールされ、サービスからの SQL Server セットアップに含まれている R と Python の機能が含まれます。 
+データベース内分析が構成されている SQL Server インスタンスには、R と Python の機能が含まれます。 これらの機能を出荷を CAB ファイル、インストールされているし、SQL Server セットアップでサービスを提供します。 インターネットに接続されたデバイスで、通常は Windows Update を通じてに CAB の更新が適用されます。 切断されたサーバーは、CAB ファイルをダウンロードして手動で適用する必要があります。 
 
-インターネットに接続されているサーバーで、通常は Windows Update を通じてに CAB の更新が適用されます。 切断されたサーバーを手動で更新する必要があります。 オフライン インストールに関する手順については、次を参照してください。 [SQL Server をインストールした機械学習のインターネット アクセスなしでコンポーネントを](sql-ml-component-install-without-internet-access.md)します。
+この記事では、各累積更新プログラム用の CAB ファイルのダウンロード リンクを提供します。 SQL Server 2017 Machine Learning サービス (R および Python) と SQL Server 2016 R Services の両方のリンクを示します。 オフライン インストールの詳細については、次を参照してください。 [SQL Server をインストールした機械学習のインターネット アクセスなしでコンポーネントを](sql-ml-component-install-without-internet-access.md#apply-cu)します。
 
-この記事では、インターネットから切断されているサーバーを手動で更新できるように、SQL Server 2017 Machine Learning サービス (R および Python) または SQL Server 2016 R Services の各累積更新プログラム用の CAB ファイルのダウンロード リンクを提供します。 
-
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 ベースライン インストールで開始します。
 
 + SQL Server 2017 Machine Learning Services では、最初のリリースは、基準インストールです。 
 + SQL Server 2016 R Services では、最初のリリース、SP1、または sp2 が適用を開始できます。 
 
-次に、適用[累積的更新プログラム](https://support.microsoft.com/help/4047329)for SQL Server データベース エンジン インスタンスです。
-
-ベースライン インストールされている SQL Server に累積的更新プログラムが適用して、後に行うことができます、[アップグレード スリップ ストリーム](sql-ml-component-install-without-internet-access.md#slipstream-upgrades)で CAB ファイルをインストールする機械学習機能を更新します。
-
-CAB ファイルは、逆時系列順に表示されます。 CAB ファイルをダウンロードしたり、ターゲット コンピューターに転送すると、フォルダーに配置する便利ななど**ダウンロード**またはセットアップのユーザーの %temp% フォルダー。
+スタンドアロン サーバーに累積的更新プログラムを適用することもできます。
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 の cab ファイル
 
+CAB ファイルは、逆時系列順に表示されます。 CAB ファイルをダウンロードしたり、ターゲット コンピューターに転送すると、フォルダーに配置する便利ななど**ダウンロード**またはセットアップのユーザーの %temp% フォルダー。
+
 リリース  |ダウンロード リンク  | 解決された問題 | 
 ---------|---------------|-------|
-**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 変更はありません。 これは、以前のバージョンです。 |
+**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 以前のバージョンから変更はありません。 |
 R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| 小さな修正。|
-Microsoft Python のオープン     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft Python のオープン     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 以前のバージョンから変更はありません。 |
 Python のサーバー    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| Python rx_data_step では、重複が削除されたときに、行の順序が失われます。 <br/>速度では、クラスター化列ストア インデックスのデータ型の検出が失敗します。 <br/>列には、すべての null 値が含まれている場合は、空のテーブルを返します。 |
 **[SQL Server 2017 CU8](https://support.microsoft.com/help/4338363)-[CU9](https://support.microsoft.com/help/4341265)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 以前のバージョンから変更はありません。 |
 R Server      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|
-Microsoft Python のオープン     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft Python のオープン     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 以前のバージョンから変更はありません。 |
 Python のサーバー    |[SPS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874707&clcid=1033)|
 **[SQL Server 2017 CU6](https://support.microsoft.com/help/4101464)-[cu7 以降](https://support.microsoft.com/help/4229789)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 以前のバージョンから変更はありません。 |
 R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
-Microsoft Python のオープン     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft Python のオープン     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 以前のバージョンから変更はありません。 |
 Python のサーバー    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)| SPEES クエリでの DateTime データ型。<br/>microsoftml のエラー メッセージは、事前トレーニング済みモデルが存在しない場合に向上します。<br/> Revoscalepy に修正プログラムは、関数および変数を変換します。|
 **[SQL Server 2017 CU5](https://support.microsoft.com/help/4092643)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 以前のバージョンから変更はありません。 |
 R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)| RxInstallPackages で時間の長いパスに関連するエラー。<br/>RxExec のループバックに接続します。
-Microsoft Python のオープン     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft Python のオープン    | 以前のバージョンから変更はありません。 |
 Python のサーバー    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)| <br/>Rx_exec のループバックに接続します。
 **[SQL Server 2017 CU4](https://support.microsoft.com/help/4056498)** |  |   |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 以前のバージョンから変更はありません。 |
 R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
-Microsoft Python のオープン     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft Python のオープン     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 以前のバージョンから変更はありません。 |
  Python のサーバー    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
 **[SQL Server 2017 CU3](https://support.microsoft.com/help/4052987)** |  |  |
 Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
-Microsoft Python のオープン     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft Python のオープン     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 以前のバージョンから変更はありません。 |
 Python のサーバー    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Python モデルの revoscalepy でのシリアル化を使用して、 [rx_serialize_model 関数](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)します。<br/>[ネイティブ スコアリング](../sql-native-scoring.md)サポート、plus の機能強化[リアルタイム スコアリング](../real-time-scoring.md)します。 
 **SQL Server 2017 [CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| 変更はありません。 これは、以前のバージョンです。 |
+Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| 以前のバージョンから変更はありません。 |
 R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Microsoft Python のオープン     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 変更はありません。 これは、以前のバージョンです。 
+Microsoft Python のオープン     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 以前のバージョンから変更はありません。 | 
 Python のサーバー    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | スキーマ情報を返す rx_create_col_info を追加します。 <br/>機能強化[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)を使用して並列のシナリオをサポートするために、`RxLocalParallel`コンピューティング コンテキスト。|
 **最初のリリース** |  |  |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
@@ -121,6 +117,10 @@ Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?
 
 .Tar 形式のアーカイブとしてダウンロードできますが、Microsoft R のソース コードを表示する場合は、: [R Server のダウンロードのインストーラー](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-# <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
-[SQL Server の学習インターネット アクセスのないコンポーネントのインストールします。](sql-ml-component-install-without-internet-access.md)
+[インターネットにアクセスできないコンピューターでの累積的更新プログラムを適用します。](sql-ml-component-install-without-internet-access.md#apply-cu)
+
+[インターネットに接続しているコンピューターでの累積的更新プログラムを適用します。](sql-ml-component-install-without-internet-access.md#apply-cu)
+
+[スタンドアロン サーバーに累積的更新プログラムを適用します。](sql-machine-learning-standalone-windows-install.md#apply-cu)

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d46187b7f92fb9bb02bb693b51bd13bcd12da1f6
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 76fbfdf3ae8752d4187c43c35d12278b0dbcb792
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216673"
 ---
 # <a name="supported-sql-server-features"></a>サポートされる SQL Server の機能
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の、メモリ最適化オブジェクトの使用に関してサポートされる機能またはサポートされない機能について説明します。  
@@ -34,7 +31,7 @@ ms.locfileid: "40395362"
   
 -   解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用してメモリ最適化テーブルにアクセスする機能。 解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] の対象領域は、ネイティブでコンパイルされていないストアド プロシージャおよび [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用してメモリ最適化されていないテーブルにアクセスする場合と同じです。 詳細については、「[解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)」を参照してください。  
   
--   複数バージョン管理とオプティミスティック同時実行制御。 詳細については、「 [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md)」をご覧ください。  
+-   複数バージョン管理とオプティミスティック コンカレンシー。 詳細については、「 [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md)」をご覧ください。  
   
 -   メモリ最適化データ ファイル グループを含むデータベースのバックアップと復元。 詳細については、「 [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  
   
@@ -42,7 +39,7 @@ ms.locfileid: "40395362"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト。 詳細については、「[インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート](sql-server-management-objects-support-for-in-memory-oltp.md)」を参照してください。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 詳細については、「[SQL Server Management Studio によるインメモリ OLTP のサポート](sql-server-management-studio-support-for-in-memory-oltp.md)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 詳細については、「[SQL Server Management Studio によるインメモリ OLTP のサポート](sql-server-management-studio-support-for-in-memory-oltp.md)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell。 詳細については、「 [SQL Server PowerShell の概要](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)」を参照してください。  
   

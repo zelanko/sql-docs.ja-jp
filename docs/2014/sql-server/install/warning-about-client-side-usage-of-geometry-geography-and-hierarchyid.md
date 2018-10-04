@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
-caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46e4f63ef0909ca07eeac5d09b8233fb509f87a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad1970ad7112910b190ee75974248405e0269646
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119412"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>幾何学、地理学、HIERARCHYID のクライアント側の使用に関する警告
   アセンブリ**Microsoft.SqlServer.Types.dll**、バージョン 11.0 に、バージョン 10.0 からアップグレードされましたが、空間データ型が含まれています。 このアセンブリを参照するカスタム アプリケーションは、特定の条件に該当する場合に失敗します。  

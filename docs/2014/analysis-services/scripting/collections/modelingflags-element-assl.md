@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ModelingFlags Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ModelingFlags element
 ms.assetid: 83968c1e-aae8-4657-aa53-d971de0dc834
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bcaab47515c02a2ba40a6fb837309a7f5bed4308
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 369af68b69c25d70ea80096947a0ecda4488418a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207912"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063262"
 ---
 # <a name="modelingflags-element-assl"></a>ModelingFlags 要素 (ASSL)
   コレクションを格納[ModelingFlag](../objects/modelingflag-element-assl.md)内の列の要素を[MiningStructure](../objects/miningstructure-element-assl.md)または[MiningModel](../objects/miningmodel-element-assl.md)します。  

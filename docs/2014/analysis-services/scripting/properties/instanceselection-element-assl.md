@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - InstanceSelection Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - InstanceSelection element
 ms.assetid: 908a2da9-274c-40d2-87dc-4641cb8d77e6
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9babb9e5066d00b8a396d52dfb2dbdfc2f0b4cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41587ee5acd29ca8038e188a3a3a5681bb7b91d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131462"
 ---
 # <a name="instanceselection-element-assl"></a>InstanceSelection 要素 (ASSL)
   クライアント アプリケーションにヒントを提供し、一覧の予期されたアイテム数に基づいて、アイテムの一覧の表示方法を提案します。  

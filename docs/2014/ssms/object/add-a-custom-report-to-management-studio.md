@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00fd7a19efcd0b6f78716026a01113c51aa7d04c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 89a427c841aa904565fae1fa8a0a1043778d58c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207232"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio へのカスタム レポートの追加
   ここでは、簡単な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを作成し、.rdl ファイルとして保存した後、そのファイルを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にカスタム レポートとして追加する方法について説明します。 [!INCLUDE[ssRS](../../includes/ssrs.md)] では、さまざまな高度なレポートを作成できます。 このトピックを使用してレポートを作成するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] がコンピューターにインストールされている必要があります。 [!INCLUDE[ssRS](../../includes/ssrs.md)] を使用してカスタム レポートを実行する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]をインストールする必要はありません。  

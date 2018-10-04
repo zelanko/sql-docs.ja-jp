@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c777c26de51c9e66244ce9be1931ea40da33a29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130832"
 ---
 # <a name="cache-connection-manager-editor"></a>[キャッシュ接続マネージャー エディター]
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) から参照データセットを読み取り、そのデータをキャッシュ ファイルに保存できます。 データは常にメモリに格納されます。  

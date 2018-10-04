@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2071c4d13fdaa26787c98dd3bc01123f235bacb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2c1579155bade7c2ddb3e3831e10ae1943cfd1f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141242"
 ---
 # <a name="data-collection"></a>データ コレクション
   データ コレクターは、さまざまなデータのセットを収集する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントです。 データ コレクションは、継続的に実行されるかユーザー定義のスケジュールに基づいて実行されます。 データ コレクターは、収集したデータを管理データ ウェアハウスというリレーショナル データベースに格納します。  

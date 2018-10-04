@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - disaster recovery [SQL Server], see restoring [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3aa3ba846b4ef18f01d9448ae5f0ab4ba1689684
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096792"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップする利点、バックアップと復元に関する基本的な用語、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元の方法を紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元のセキュリティに関する考慮事項についても取り上げます。  
@@ -160,7 +157,7 @@ ms.locfileid: "37169143"
  バックアップの実行によって、実行中のトランザクションが受ける影響はわずかです。したがってバックアップは、通常の運用時に実行できます。 実稼働ワークロードへの影響は最小限にとどめて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを実行できます。  
   
 > [!NOTE]  
->  バックアップ中の同時実行の制限については、「 [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)」を参照してください。  
+>  バックアップ中のコンカレンシーの制限については、「[バックアップの概要 &amp;#40;SQL Server&amp;#41;](backup-overview-sql-server.md)」を参照してください。  
   
  必要なバックアップの種類、および各種類のバックアップを実行する必要のある頻度を決定した後、データベースに対するデータベース メンテナンス プランの一部として、定期的なバックアップをスケジュールすることをお勧めします。 メンテナンス プランと、データベース バックアップおよびログ バックアップ用のメンテナンス プランの作成方法については、「 [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。  
   

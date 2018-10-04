@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningStructurePermission Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningStructurePermission element
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3789cd5b5b72048b9c9163c11bebf4fe5a77d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89521b4201e3956ab6d44d95d7234321a0948f56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197622"
 ---
 # <a name="miningstructurepermission-element-assl"></a>MiningStructurePermission 要素 (ASSL)
   そのメンバーのアクセス許可を定義、[ロール](role-element-assl.md)要素は、個々 のケースが[MiningStructure](miningstructure-element-assl.md)要素。  

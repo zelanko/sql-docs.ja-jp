@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c483e09f0136ec85ef9a5355a31b0fab733d1af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169612"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、1 つ以上のセカンダリ レプリカ (*読み取り可能なセカンダリ レプリカ*) への読み取り専用アクセスをサポートしています。 読み取り可能なセカンダリ レプリカは、すべてのセカンダリ データベースへの読み取り専用アクセスを許可します。 ただし、読み取り可能なセカンダリ データベースは読み取り専用に設定されません。 これらは動的です。 セカンダリ データベースは、対応するプライマリ データベースに対する変更がそのセカンダリ データベースに適用されると変更されます。 一般的なセカンダリ レプリカでは、持続性のあるメモリ最適化テーブルを含めて、セカンダリ データベースのデータはほぼリアルタイムです。 また、フルテキスト インデックスはセカンダリ データベースと同期されます。 多くの場合、プライマリ データベースと対応するセカンダリ データベース間のデータ待機時間は数秒です。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Name Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name element
 ms.assetid: cc1a93df-0b1b-4c38-9183-4f11c26fea6a
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 088dd6aa9ce8d9ecae3e3a8f293f64b3ddc93c70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 422bd152e82a471ce0f130a26aaa12a56026419a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194232"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127902"
 ---
 # <a name="name-element-xmla"></a>Name 要素 (XMLA)
   親の属性メンバーの名前を含む[属性](attribute-element-xmla.md)または[翻訳](translation-element-xmla.md)要素。  

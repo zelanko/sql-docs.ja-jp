@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f0b505e01e6b8334ed1a0baeaacbda7e29ba7407
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105682"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、Microsoft シーケンス クラスター アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -75,14 +72,11 @@ ms.locfileid: "37208152"
  CHILDREN_CARDINALITY  
  ノードの子の推定数。  
   
- 
-  **モデル ルート** カーディナリティの値はクラスター数に 1 を加算した値と等しくなります。 詳細については、「 [カーディナリティ](#bkmk_cardinality)」を参照してください。  
+ **モデル ルート** カーディナリティの値はクラスター数に 1 を加算した値と等しくなります。 詳細については、「 [カーディナリティ](#bkmk_cardinality)」を参照してください。  
   
- 
-  **クラスター ノード** カーディナリティは常に 1 です。これは、各クラスターに 1 つの子ノードが含まれるためです。子ノードには、クラスター内のシーケンスの一覧が含まれます。  
+ **クラスター ノード** カーディナリティは常に 1 です。これは、各クラスターに 1 つの子ノードが含まれるためです。子ノードには、クラスター内のシーケンスの一覧が含まれます。  
   
- 
-  **シーケンス ノード** カーディナリティは、そのクラスターに含まれる遷移の数を示します。 たとえば、モデル ルートのシーケンス ノードのカーディナリティは、モデル全体で検出された遷移の数を示します。  
+ **シーケンス ノード** カーディナリティは、そのクラスターに含まれる遷移の数を示します。 たとえば、モデル ルートのシーケンス ノードのカーディナリティは、モデル全体で検出された遷移の数を示します。  
   
  PARENT_UNIQUE_NAME  
  ノードの親の一意な名前です。  

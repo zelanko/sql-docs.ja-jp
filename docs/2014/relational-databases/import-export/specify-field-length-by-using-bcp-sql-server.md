@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3d4be0ba5a6b24174134fbef6f5dc2e87fa3af9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158573"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202872"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
   フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、`int` データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp**コマンドによってフィールド長、既定のフィールド長、および含んでいるデータ ファイル内のデータ ストレージに対するフィールド長の影響のプロンプトが`char`データ。  

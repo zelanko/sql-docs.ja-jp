@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - hybrid OLAP
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ROLAP
 - cache [Analysis Services]
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8a9d32557e9b9158f1fa5429b2bcaec7dd17ce2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f79c628c9c58c3fca2884cbdf330eb23178081e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223432"
 ---
 # <a name="proactive-caching-partitions"></a>プロアクティブ キャッシュ (パーティション)
   プロアクティブ キャッシュでは、自動 MOLAP キャッシュの作成と、OLAP オブジェクトの管理が可能です。 データベース内のデータに加えられた変更は、データベースからの通知に基づき、すぐにキューブに反映されます。 プロアクティブ キャッシュの目標は、従来の MOLAP のパフォーマンスを提供しながら、ROLAP の即時性と管理のしやすさを保つことです。  

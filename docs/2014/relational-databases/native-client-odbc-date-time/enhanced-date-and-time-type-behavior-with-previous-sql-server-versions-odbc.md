@@ -1,26 +1,23 @@
 ---
-title: 強化された日付と時刻型の以前の SQL Server バージョン (ODBC) での動作 |Microsoft Docs
+title: 強化された日付と時刻型の以前の SQL Server バージョン (ODBC) での動作 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91052172849df1cd0234fe73cd39130d4568f131
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 392e09bee33370116ba0c4ff6e0f9f13ce0fdad5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422961"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184197"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>以前のバージョンの SQL Server における、強化された日付型と時刻型の動作 (ODBC)
   このトピックでは、強化された日付や時刻の機能を使用するクライアント アプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] と通信する場合、および Microsoft Data Access Components、Windows Data Access Components、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用しているクライアント アプリケーションから、機能強化された日付や時刻をサポートするサーバーへコマンドを送信する場合に想定される動作について説明します。  
@@ -36,18 +33,18 @@ ms.locfileid: "37422961"
   
 |SQL Server 2005 の型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降)型|ODBC クライアントの型|結果の変換 (SQL から C へ)|パラメーターの変換 (C から SQL へ)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|date|SQL_C_TYPE_DATE|[OK]|[OK] (1)|  
-|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK] (1)|  
-|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time (7)|SQL_C_TIME|失敗します (時刻リテラルが無効です)。|[OK] (1)|  
-|||SQL_C_TYPE_TIMESTAMP|失敗します (時刻リテラルが無効です)。|[OK] (1)|  
-||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK] (1)|  
-||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|[OK]|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
+|DATETIME|date|SQL_C_TYPE_DATE|[OK]|[OK] \(1)|  
+|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK \(2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK] \(1)|  
+|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK \(2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+||Time(7)|SQL_C_TIME|失敗します (時刻リテラルが無効です)。|[OK] \(1)|  
+|||SQL_C_TYPE_TIMESTAMP|失敗します (時刻リテラルが無効です)。|[OK] \(1)|  
+||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK] \(1)|  
+||datetime2 (7)|SQL_C_TYPE_TIMESTAMP|[OK]|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|[OK]|[OK]|  
-|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK \(2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK]|  
-|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK \(2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK]|  
   
 ## <a name="key-to-symbols"></a>記号の説明  

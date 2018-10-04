@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - creating a login
@@ -14,12 +12,12 @@ ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d62f8c381fb11dc34de1e51e56e7aefa3e85e17e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221944"
 ---
 # <a name="creating-a-login"></a>ログインの作成
   [!INCLUDE[ssDE](../includes/ssde-md.md)]にアクセスするには、ユーザーのログインが必要です。 ログインは、ユーザーの ID を Windows のアカウントまたは Windows グループのメンバーとして表すか、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のみに存在する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログインを使用することができます。 できるだけ Windows 認証を使用してください。  

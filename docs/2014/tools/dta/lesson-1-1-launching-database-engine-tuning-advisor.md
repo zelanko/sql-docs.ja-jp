@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning databases [SQL Server]
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed2001ff159681f78a9287be8e1931ee5d432948
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70f3a447b4398bbd1141a357ea878966d5a443ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130618"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動
   まず、データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) を開きます。 初回起動時には、 **sysadmin** 固定サーバー ロールのメンバーがデータベース エンジン チューニング アドバイザーを起動し、アプリケーションを初期化する必要があります。 初期化が完了すると、 **db_owner** 固定データベース ロールのメンバーがデータベース エンジン チューニング アドバイザーを使用し、所有するデータベースをチューニングできるようになります。 データベース エンジン チューニング アドバイザーの初期化の詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/database-engine-tuning-advisor.md)」を参照してください。  

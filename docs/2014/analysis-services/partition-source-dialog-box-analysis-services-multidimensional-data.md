@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionsourcedialog.f1
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 43e370a9926e342f105b68bfceba943ad4298244
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f88f307f9cbace833a83603e0f24382b7e82e62f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214180"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203182"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>[パーティション ソース] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[パーティション ソース]** ダイアログ ボックスを使用すると、パーティションのファクト テーブル データのソースを指定できます。 **[パーティション ソース]** ダイアログ ボックスを表示するには、次の手順に従います。  

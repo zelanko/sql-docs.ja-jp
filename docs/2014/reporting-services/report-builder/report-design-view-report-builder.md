@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 435709e17b917c1b741e1bc619bb1dca106dbd4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244382"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225032"
 ---
 # <a name="report-design-view-report-builder"></a>レポート デザイン ビュー (レポート ビルダー)
   レポート ビルダーのウィンドウは、レポート リソースを整理しやすく、必要なレポートをすばやく作成できるように設計されています。 デザイン画面がウィンドウの中央にあり、その上にリボン、左にレポート データ ペイン、下にグループ化ペイン、右にプロパティ ペインおよびレポート パーツ ギャラリーが配置されています。 デザイン画面は、レポート アイテムの追加や整理を行うための領域です。 リボンには、従来のメニュー項目が、簡単に見つけて使用できるようにカテゴリ別に分類されて表示されます。 ペインでは、レポート リソースの追加、選択、整理や、レポート アイテムのプロパティの変更などを行うことができます。  
@@ -112,9 +109,9 @@ ms.locfileid: "37244382"
   
 -   [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
--   [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+-   [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
--   [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+-   [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
 ##  <a name="ReptPartGallery"></a> レポート パーツ ギャラリー  
@@ -170,7 +167,7 @@ ms.locfileid: "37244382"
  **[実行]** をクリックすると、レポート ビルダーは、レポート データ ソースに接続してデータをコンピューターにキャッシュします。その後、データとレイアウトを組み合わせてレポートを HTML ビューアーで表示します。 レポートは、レポートのデザイン作業中に何度でも実行できます。 レポートが完成したら、レポート サーバーにレポートを保存できます。レポート サーバーにレポートを保存すると、適切な権限を持つ他のユーザーはそのレポートを表示できます。  
   
 ### <a name="running-a-report-with-parameters"></a>パラメーターを指定したレポートの実行  
- レポートは、実行すると自動的に処理されます。 レポートにパラメーターが含まれている場合は、すべてのパラメーターに既定値があるときにのみレポートを自動的に実行できます。 パラメーターに既定値がない場合にレポートを実行するときは、パラメーターの値を選択してから、[実行] タブの **[レポートの表示]** をクリックする必要があります。詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ レポートは、実行すると自動的に処理されます。 レポートにパラメーターが含まれている場合は、すべてのパラメーターに既定値があるときにのみレポートを自動的に実行できます。 パラメーターに既定値がない場合にレポートを実行するときは、パラメーターの値を選択してから、[実行] タブの **[レポートの表示]** をクリックする必要があります。詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 ### <a name="print-preview"></a>印刷プレビュー  
  実行モードでプレビューしたレポートは、HTML で生成されるレポートと似ています。 プレビューは HTML 形式ではありませんが、レポートのレイアウトおよび改ページは HTML 出力と似ています。 印刷プレビュー モードに切り替えることによって、表示を変更し、印刷されるレポートを表示できます。 **[実行]** タブの **[印刷プレビュー]** ボタンをクリックします。レポートは、実際のページに近い状態で表示されます。 この表示は、画像表示拡張機能および PDF 表示拡張機能によって生成される出力と似ています。 印刷プレビューは画像または PDF ファイルではありませんが、レポートのレイアウトおよび改ページは、それらの形式での出力と似ています。  

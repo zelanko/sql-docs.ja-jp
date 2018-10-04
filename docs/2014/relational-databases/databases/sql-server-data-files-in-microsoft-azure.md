@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aac25e3bdab6ab5f52be0d5a443075ecbe05eb0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45e874ab6ed6f73ab5f0c27081daf200971603d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193354"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206192"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Windows Azure 内の SQL Server データ ファイル
   Windows Azure 内の SQL Server データ ファイルにより、Windows Azure BLOB として格納された SQL Server データベース ファイルに対するネイティブ サポートが有効になります。 この機能を使用すると、内部設置型の環境または Windows Azure 仮想マシンで実行されている SQL Server でデータベースを作成し、Windows Azure BLOB ストレージに専用のデータ保存場所を用意できます。 この機能強化では特に、デタッチとアタッチの操作を使用することにより、コンピューター間でのデータベース移動が容易になります。 また、Windows Azure ストレージを復元元または復元先として使用することで、データベースのバックアップ ファイルに代替の格納場所が提供されます。 このため、データの仮想化、移動、セキュリティ、および可用性の面での利点と、低コストと容易なメンテナンスで実現できる高可用性と柔軟なスケーリングにより、いくつかのハイブリッド ソリューションが有効になります。  
@@ -83,7 +80,7 @@ ON
   
  **重要な注意事項:** コンテナーのデータ ファイルに対するアクティブな参照が存在する場合、対応する SQL Server 資格情報を削除しようとすると失敗します。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>セキュリティ  
  Microsoft Azure ストレージに SQL Server データ ファイルを格納する場合のセキュリティに関する考慮事項と要件は次のとおりです。  
   
 -   Microsoft Azure BLOB ストレージ サービスのコンテナーを作成する際は、アクセス権を private に設定することをお勧めします。 アクセス権を private に設定すると、コンテナーと BLOB データを読み取ることができるのは Microsoft Azure アカウントの所有者だけになります。  

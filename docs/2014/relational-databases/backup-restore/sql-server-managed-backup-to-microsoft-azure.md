@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b7374cd96dac868ae6d3361ee34e18693c340cff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159802"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Windows Azure への SQL Server マネージ バックアップ
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は Windows Azure BLOB ストレージ サービスへの SQL Server バックアップを管理および自動化します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で使用されるバックアップ方法は、データベースの保有期間とトランザクション ワークロードに基づきます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] では、指定された保有期間の特定の時点への復元がサポートされています。   
@@ -147,8 +144,7 @@ ms.locfileid: "37254324"
   
 -   復旧モデル: 完全復旧モデルまたは一括ログ復旧モデルに設定されたデータベースのみがサポートされています。  単純復旧モデルに設定されたデータベースはサポートされていません。  
   
--   
-            [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure: 相互運用性と共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)します。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure: 相互運用性と共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)します。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   

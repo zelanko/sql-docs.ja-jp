@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157932"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)
   レポートおよび関連アイテムを SharePoint ライブラリにパブリッシュするには、レポート デザイナーなどの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作成ツールを使用してコンテンツをパブリッシュするか、SharePoint サイトのアクションを使用してコンテンツをアップロードします。  
@@ -53,16 +50,16 @@ ms.locfileid: "37214732"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL プロキシ エンドポイントの使用はサポートされていません。 プロキシ エンドポイントには、http:*//servername:8080/reportserver*のようにポート番号が含まれます。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint Server サイトまたはサブサイトの URL  
- レポートまたはレポート データ ソースを配置する場合は、SharePoint サイトおよびサブサイト (ある場合) の URL を使用する必要があります。 URL ではサーバー名のすぐ後にサイト名が示されます。たとえば、http://*servername/site* または http://*servername/site/subsite*のようになります。  
+ レポートまたはレポート データ ソースを配置する場合は、SharePoint サイトおよびサブサイト (ある場合) の URL を使用する必要があります。 URL ではサーバー名のすぐ後にサイト名が示されます。たとえば、 http://*servername/site* または http://*servername/site/subsite*のようになります。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web アプリケーションでは、サイトおよびサブサイトは一般的にメイン サイトのタブに対応します。 サイト名またはサブサイト名を見つけるには、 **[ホーム]** をクリックし、次に **[すべてのサイト コンテンツの表示]** をクリックします。 末尾までスクロールして **[サイトとワークスペース]** を選択します。 このセクションにサイトの一覧が表示されます。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint ライブラリの URL  
  レポートまたは関連アイテムを SharePoint ライブラリに配置する場合は、SharePoint ライブラリの URL を使用する必要があります。 ライブラリに使用する URL は、使用している SharePoint のバージョンによって異なります。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 または [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]では、ライブラリはサーバー名の後に示されます。たとえば、http://*servername/* Shared Documents のようになります。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 または [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]では、ライブラリはサーバー名の後に示されます。たとえば、 http://*servername/* Shared Documents のようになります。  
   
- [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]では、ライブラリはサイトおよびサブサイトの後に示されます。 たとえば、http://*servername/site/* Documents のようになります。  
+ [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]では、ライブラリはサイトおよびサブサイトの後に示されます。 たとえば、 http://*servername/site/* Documents のようになります。  
   
  新しい SharePoint ライブラリまたは使用したことがないサイトのパス情報を見つけるには、ブラウザーを開き、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 ライブラリが空である場合は、任意のファイルをアップロードします。 ファイルを右クリックして **[プロパティ]** をクリックし、 **[プロパティ]** ウィンドウを開きます。 ファイルのアドレスには、パブリッシュ操作に必要な URL 値が含まれています。  
   

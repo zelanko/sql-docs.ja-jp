@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f691cc55d7e8a6107e9c602d8edbb5c7d32d904c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 590d24fb56a91ce4bea13e5404c24a395986a397
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323882"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098812"
 ---
 # <a name="secure-shared-dataset-items"></a>共有データセット アイテムをセキュリティで保護する
   レポート サーバーでは、複数のレポートで共有データセット アイテムを使用できます。 共有データセットをセキュリティ保護することによって、共有データセットにユーザーがアクセスする度合いを制御できます。 既定では、あらかじめ登録された **Administrators** グループのメンバーであるユーザーのみが、共有データセットの表示、プロパティの変更、キャッシュの有効化、キャッシュ更新計画の作成、およびアイテムの削除を行えます。 他のすべてのユーザーについては、共有データセットへのアクセスを許可するロールの割り当てを作成する必要があります。  

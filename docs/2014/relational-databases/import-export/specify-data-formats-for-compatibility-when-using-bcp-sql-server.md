@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], compatibility
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42266e1f4ab136045c16d1e0f41d6ae802c3f1c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b05f01a5c8100f4c06d8cc6b294bdb49e5baed71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214773"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp を使用した互換性のためのデータ形式の指定 (SQL Server)
   このトピックでは、データ形式属性、フィールド固有のプロンプト、および xml 以外のフォーマット ファイルでフィールドのデータの格納について説明します、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp`コマンド。 このトピックの内容は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを一括エクポートして別のプログラム (別のデータベース プログラムなど) に一括インポートする場合に有用です。 ソース テーブルの既定のデータ形式 (ネイティブ、文字、または Unicode) が、他のプログラムで想定されているデータ レイアウトと互換性がない場合があります。互換性がない場合はデータをエクスポートするときに、データ レイアウトを記述する必要があります。  

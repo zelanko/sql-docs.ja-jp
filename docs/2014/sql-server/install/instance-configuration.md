@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202312"
 ---
 # <a name="instance-configuration"></a>インスタンスの構成
   **インストール ウィザードの** [インスタンスの構成] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスまたは名前付きインスタンスのどちらを作成するのかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがまだインストールされていない場合は、名前付きインスタンスを指定しない限り、既定のインスタンスが作成されます。  
@@ -90,7 +87,7 @@ ms.locfileid: "37274328"
   
  ディレクトリ、ファイルの場所、およびインスタンス ID の名前付けの詳細については、「[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。  
   
- ph x="1" /&gt; の特定のインスタンスを構成するすべてのコンポーネントは 1 つの単位として管理されます。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスを構成するすべてのコンポーネントは 1 つの単位として管理されます。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
  同じインスタンス名を持つすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは、次の条件を満たす必要があります。  
   

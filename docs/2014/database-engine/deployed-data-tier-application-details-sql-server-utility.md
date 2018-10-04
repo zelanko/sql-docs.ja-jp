@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.UE.dac.details.F1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], utility details
 - Multi-server management [SQL Server]
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
-caps.latest.revision: 6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54b12c13823acf51b5004eb43ee18ab8e1705135
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: eb7b23b6ff9bf81d9c156f52dd93797203c1161f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815908"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073300"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>配置済みのデータ層アプリケーションの詳細 (SQL Server ユーティリティ)
   ユーティリティ エクスプローラーの [配置済みのデータ層アプリケーション] ビュー内の情報では、個々のデータ層アプリケーションの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を確認できるほか、ポリシーのしきい値を表示および更新できます。 ポリシーのしきい値は、データ層アプリケーション レベルで CPU 使用率やデータベース データ ファイルおよびログ ファイルを対象に制御できます。 個々のデータ層アプリケーションについて、プロパティの詳細を表示することもできます。  

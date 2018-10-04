@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 856834aa8c29ebaba0661012383d52ad30e3ad59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa6994d4bcf01cc1de7036a45d52a7a090af80b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218173"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Deployment and Version Support in SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、次のシナリオがサポートされます。  
@@ -39,7 +36,7 @@ ms.locfileid: "37313234"
   
  レポートは、レポート デザイナーでプレビューとしてレンダリングされるか、レポート サーバーに配置される前にビルドされます。  
   
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **[プロジェクト プロパティ]** ダイアログ ボックスで、構成プロパティを設定します。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **[プロジェクト プロパティ]** ダイアログ ボックスで、構成プロパティを設定します。  
   
  ビルド プロパティと配置プロパティには、以下の項目が含まれます。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "37313234"
   
 -   [TargetServerVersion] は、TargetServerURL プロパティで指定された対象レポート サーバーにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の想定されるバージョンを識別する配置プロパティです。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ダイアログ ボックスで以前のバージョンの **[プロジェクト プロパティ]** を指定しても、レポートが自動的に以前のバージョンに戻ることはありません。 このような場合、レポート サーバー プロジェクトには、2 つの異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンのレポートが含まれることになります。 レポート サーバー プロジェクトが配置されると、プロジェクト内のレポートはすべて、TargetServerVersion で指定されたバージョンに変換されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ダイアログ ボックスで以前のバージョンの **[プロジェクト プロパティ]** を指定しても、レポートが自動的に以前のバージョンに戻ることはありません。 このような場合、レポート サーバー プロジェクトには、2 つの異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンのレポートが含まれることになります。 レポート サーバー プロジェクトが配置されると、プロジェクト内のレポートはすべて、TargetServerVersion で指定されたバージョンに変換されます。  
   
  プロジェクトには複数のプロジェクト構成を追加できます。各プロジェクト構成は、異なるバージョンのレポート サーバーへの配置など、さまざまなシナリオで使用されます。 詳細については、「[配置プロパティを設定する (Reporting Services)](set-deployment-properties-reporting-services.md)」および「[[プロパティ ページ] ダイアログ ボックス](project-property-pages-dialog-box.md)」を参照してください。  
   

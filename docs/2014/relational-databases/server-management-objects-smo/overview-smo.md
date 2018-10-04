@@ -1,26 +1,23 @@
 ---
-title: 概要 (SMO) |Microsoft Docs
+title: 概要 (SMO) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5a5b305bcf41cdf3f306c3fb15f0f123fd471e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164502"
 ---
 # <a name="overview-smo"></a>概要 (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) はオブジェクトのプログラムによる管理用に設計された[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SMO を使用すると、カスタマイズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理アプリケーションを作成することができます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理するための強力で高度なアプリケーションですが、SMO アプリケーションの方が適している場合もあります。  
@@ -51,7 +48,7 @@ ms.locfileid: "37315662"
   
 -   SOAP 要求を管理するための HTTP エンドポイント。 詳細については、次を参照してください。[を実装するエンドポイント](tasks/implementing-endpoints.md)します。  
   
--   同時実行性を高めるためのスナップショット分離と行レベルのバージョニング。 詳細については、次を参照してください。[スナップショット分離を使用した作業](../native-client/features/working-with-snapshot-isolation.md)します。  
+-   コンカレンシーを高めるためのスナップショット分離と行レベルのバージョニング。 詳細については、「[スナップショット分離を使用した作業](../native-client/features/working-with-snapshot-isolation.md)」を参照してください。  
   
 -   XML データの検証と格納を可能にする、XML スキーマ コレクション、XML インデックス、および XML データ型。 詳細については、次を参照してください。 [XML スキーマ コレクション&#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md)と[を使用して XML スキーマ](tasks/using-xml-schemas.md)します。  
   
@@ -181,9 +178,9 @@ ms.locfileid: "37315662"
 ## <a name="smo-and-sql-dmo"></a>SMO および SQL-DMO  
  SMO オブジェクト モデルは、SQL-DMO の代わりとなるものです。 SMO では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンがサポートされます。 SMO では、より多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理タスクがサポートされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の多くの新機能が含まれています。 SMO は、より効率的であり、より高度な制御を提供するようにデザインされています。  
   
- SMO が [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリとして実装されるのに対し、DMO ライブラリは COM オブジェクト モデルです。 COM コンポーネントは、アプリケーションおよびアンマネージ アプリケーション プログラミングに対して、再利用可能な機能を提供するライブラリです。 ph x="1" /&gt; アセンブリは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に対して再利用可能な機能を提供して、マネージド コード アプリケーションを作成します。  
+ SMO が [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリとして実装されるのに対し、DMO ライブラリは COM オブジェクト モデルです。 COM コンポーネントは、アプリケーションおよびアンマネージ アプリケーション プログラミングに対して、再利用可能な機能を提供するライブラリです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に対して再利用可能な機能を提供して、マネージド コード アプリケーションを作成します。  
   
- ph x="1" /&gt; テクノロジへの移行の際に、アプリケーションを部分的にマネージド コードで作成し、その他の部分をアンマネージド コードで作成することが可能です。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] では、COM コンポーネントとのやり取りが可能です。これには、プライマリ相互運用機能アセンブリが必要になります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ベースのアプリケーションから SQL-DMO を呼び出すには、ランタイム ラッパーが必要です。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] テクノロジへの移行の際に、アプリケーションを部分的にマネージド コードで作成し、その他の部分をアンマネージド コードで作成することが可能です。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] では、COM コンポーネントとのやり取りが可能です。これには、プライマリ相互運用機能アセンブリが必要になります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ベースのアプリケーションから SQL-DMO を呼び出すには、ランタイム ラッパーが必要です。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション管理オブジェクトの概念](../replication/concepts/replication-management-objects-concepts.md)  

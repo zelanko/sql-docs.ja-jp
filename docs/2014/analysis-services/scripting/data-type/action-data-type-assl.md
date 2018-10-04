@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Action Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Action data type
 ms.assetid: 8c4d2ff7-17e1-4e74-bec7-637e0b191acf
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77b4ef3f8507d67090b78c00807278d0d7dc6348
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21c13562fa53c0ba396a4c3826889e8d275f7d9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197492"
 ---
 # <a name="action-data-type-assl"></a>Action データ型 (ASSL)
   内のアクションを表す抽象プリミティブ データ型を定義、[キューブ](../objects/cube-element-assl.md)要素または[パースペクティブ](../objects/perspective-element-assl.md)要素。  

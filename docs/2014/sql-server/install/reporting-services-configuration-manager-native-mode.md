@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bc97beba507789ef821b8f69faa6f5db85822a00
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209792"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 構成マネージャー (ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のネイティブ モード インストールを構成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用します。 ファイルのみのインストール オプションを使用してレポート サーバーをインストールした場合は、構成マネージャーを使用して、サーバーを使用するための構成を行う必要があります。 既定の構成のインストール オプションを使用してレポート サーバーをインストールした場合は、構成マネージャーを使用して、セットアップ時に指定した設定の確認や変更を行うことができます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、ローカルまたはリモートのレポート サーバー インスタンスを構成できます。  

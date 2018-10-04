@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - WHERE clause, search criteria
 - excluding rows
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d2fb449a9f3fd677a9a42511f7cb82da9ee55d7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 57b266d8b5e825e784a74e25e5801b7bd9f0cc22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221922"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>同一クエリ内で HAVING 句および WHERE 句を使用する (Visual Database Tools)
   場合によっては、HAVING を使用してグループ全体に条件を適用する前に、WHERE 句を使用してグループから個別の行を除外する必要があります。  

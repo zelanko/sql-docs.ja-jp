@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - historical information [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - status information [SQL Server], source control files
 - historical information [SQL Server], source control files
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52fdedc502bc2d8c53a01b0bc69d8a3168957b97
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212142"
 ---
 # <a name="set-and-retrieve-version-information"></a>バージョン情報の設定と取得
   バージョン情報には、ソース管理の対象であるファイルの履歴と現在のステータスが記録されています。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe では、ソース管理の対象であるすべてのファイルについて包括的な履歴が保持されるため、1 つ以上のファイルの変化を論理的に追跡できます。 この情報を使用して、ファイルのあらゆるバージョンのローカル コピーを取得したり、任意の 2 つのファイル バージョンを比較したりすることができます。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - MaxThreads property
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b4b1b53558f27c3d86046c2ab71639e6d487ebc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116925"
 ---
 # <a name="thread-pool-properties"></a>スレッド プール プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、多くの操作でマルチスレッドを使用し、複数のジョブを並列実行することによって、サーバーの全体的なパフォーマンスを向上させます。 スレッドをより効率的に管理するために、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスレッド プールを使用してスレッドの事前割り当てを実行し、次のジョブがスレッドを容易に利用できるようにします。  
@@ -82,7 +79,7 @@ ms.locfileid: "40396164"
  要求を処理する際に、作業の実行に必要とされる場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスレッド プールの上限を超えて追加のスレッドを要求することもできます。 ただし、スレッドが自らのタスクの実行を完了した時点で、現在のスレッド数が上限を超えている場合は、そのスレッドはスレッド プールに返される代わりに、単純に終了されます。  
   
 > [!NOTE]  
->  特定のデッドロック状態が発生する場合のみ、スレッド プールの最大数を上回ると、保護が開始されます。 最大値を超えるランナウェイ スレッド作成を防止するために、最大値に達した後は (短い遅延の後) スレッドが徐々に作成されます。 スレッドの最大数を超えると、タスクの実行速度が低下する可能性があります。 パフォーマンス カウンターによって示されるスレッド数が常にスレッド プールの最大サイズを上回っている場合は、システムによって要求される同時実行の度合いに比べてスレッド プールのサイズが小さすぎることを示すインジケーターと見なすこともできます。  
+>  特定のデッドロック状態が発生する場合のみ、スレッド プールの最大数を上回ると、保護が開始されます。 最大値を超えるランナウェイ スレッド作成を防止するために、最大値に達した後は (短い遅延の後) スレッドが徐々に作成されます。 スレッドの最大数を超えると、タスクの実行速度が低下する可能性があります。 パフォーマンス カウンターによって示されるスレッド数が常にスレッド プールの最大サイズを上回っている場合は、システムによって要求されるコンカレンシーの度合いに比べてスレッド プールのサイズが小さすぎることを示すインジケーターと見なすこともできます。  
   
  既定では、スレッド プールのサイズは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって決まり、コアの数に基づく値になります。 サーバーの起動後に msmdsrv.log ファイルを参照すると、選択済みの既定値を確認できます。 パフォーマンス チューニングの練習として、クエリまたは処理のパフォーマンスを向上させる目的で、スレッド プールのサイズを大きくする方針を選択することもできます。  
   
@@ -248,7 +245,7 @@ ms.locfileid: "40396164"
  既定値`CoordinatorQueryMaxThreads`16 では、各パーティションに対して並列で実行できるセグメント ジョブの数を制限します。  
   
 ##  <a name="bkmk_currentsettings"></a> 現在のスレッド プールの設定の確認  
- 各サービスの起動時に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は現在のスレッド プール設定を msmdsrv.log ファイルに出力し、その中には最小スレッド数と最大スレッド数、プロセッサ関係マスク、および同時実行数が含まれます。  
+ 各サービスの起動時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は現在のスレッド プール設定を msmdsrv.log ファイルに出力し、その中には最小スレッド数と最大スレッド数、プロセッサ関係マスク、およびコンカレンシー数が含まれます。  
   
  次の例は、ログ ファイルからの抽出であり、ハイパースレッディングが有効になっている 4 コアのシステムでの Query スレッド プールに関する既定の設定 (MinThread=0、MaxThread=0、Concurrency=2) を示しています。 関係マスクは 0xFF であり、8 つの論理プロセッサを表しています。 マスクに対して先頭の 0 が追加されることに注意してください。 先頭の 0 は無視できます。  
   

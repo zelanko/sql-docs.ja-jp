@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f71c5ace41744221c740fc9c024124d2387ba527
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7b01e23f282f4b39043f23e70a98dab633806090
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425911"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228959"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
   `IRow` インターフェイスでは、結果セット内の単一行の列に直接アクセスできます。 つまり、`IRow` では、1 つの行の結果セットから効率的に列を取得できます。  
   
  `IRow` を使用して単一行をフェッチする方法を示したコード サンプルがあります。 このサンプルでは、行から一度に 1 つの列を取得します。 このサンプルでは、次の方法が示されています。  
   
--   (順番に) 列のグループをフェッチする方法。  
+-   列のグループを (順番に) フェッチする方法。  
   
 -   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体の場合は**pData** null と**cbMaxLen** 0 への呼び出しは、 `IRow` - `>GetColumns()`実際の列の長さだけを返します。 この場合、`IRow->GetColumns()` を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
   
@@ -53,11 +50,11 @@ ms.locfileid: "37425911"
   
  DBCOLUMNACCESS 構造体では、pData が NULL で cbMaxLen が 0 の場合、IRow->GetColumns を呼び出すと、列の実際の長さだけが返されます。 この場合、IRow->GetColumns を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。 このサンプルは IA64 ではサポートされていません。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
+ このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用したテーブルを削除します。  
   

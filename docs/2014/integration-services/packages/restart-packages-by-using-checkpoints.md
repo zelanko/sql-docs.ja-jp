@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02aa88c80200ece060204fc339e84560a069cc17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 703514e884ede08db13fbb70f5fa27247e75503b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133382"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、失敗したパッケージ全体を再実行する代わりに、失敗した時点から再開することができます。 パッケージがチェックポイントを使用するように設定されている場合、パッケージの実行に関する情報がチェックポイント ファイルに書き込まれます。 失敗したパッケージを再実行する場合、チェックポイント ファイルを使用して、失敗した時点からパッケージを再開します。 パッケージの実行が成功するとチェックポイント ファイルは削除され、次にパッケージが実行されるときに再度作成されます。  

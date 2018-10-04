@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], attributes
 - delivery extensions [Reporting Services], class creation
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f00fb1249254cf0adbcba84babe94e967b281b9
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ff309ae3964bf7346ddf131db61c5d6efea073fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40396269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143622"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>配信拡張機能に対する IDeliveryExtension インターフェイスの実装
   配信拡張機能のクラスは、通知のコンテンツに基づいてレポート通知をユーザーに配信する場合に使用します。 配信拡張機能のクラスは、配信拡張機能に渡すユーザー設定を検証するためのインフラストラクチャも提供します。 また、配信拡張機能のクラスには、クライアントが拡張機能の名前に関する情報を取得する場合に使用できる特定のプロパティ、拡張機能がサポートする設定、および配信拡張機能で使用できる表示形式が含まれている必要があります。  

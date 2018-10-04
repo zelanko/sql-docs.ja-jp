@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb38a6a9dfb411152ba17fdcf29e5a096a1c7ec2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1feeffea47ae383168f06edc357c7dbe69aaefe4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212392"
 ---
 # <a name="result-set-sample"></a>結果セットのサンプル
   新しい接続を開いたりすべての結果をメモリに読み取ったりせずに、クエリの結果を確認しながらコマンドを実行することができると便利な場合があります。 ADO.NET 2.0 の複数のアクティブな結果セット (MARS) 機能は、その実行を支援するテクノロジです。 現在、MARS は、サーバー側プログラミングに使用されるインプロセス プロバイダーには実装されていません。 この制限に対処するために、サーバー側カーソルを使用することができます。 このサンプルでは、サーバー側プログラミングで MARS がサポートされないことに対処するための、サーバー側カーソルの使用方法を示します。  

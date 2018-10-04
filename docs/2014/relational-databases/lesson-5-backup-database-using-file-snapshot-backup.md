@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0412dad97550d5a9aaf601488559ef7c91e1880a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207062"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215132"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>レッスン 6: 内部設置型のソース コンピューターから Windows Azure のターゲット コンピューターにデータベースを移行する
   このレッスンでは、別の内部設置型コンピューターまたは Windows Azure 仮想マシンに存在している別の SQL Server が既にあるものと仮定します。 Windows Azure で SQL Server の仮想マシンを作成する方法については、次を参照してください。 [Windows Azure で SQL Server 仮想マシンのプロビジョニング](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)します。 Windows Azure で SQL Server 仮想マシンを準備した後、別のコンピューターの SQL Server Management Studio 経由でこの仮想マシンの SQL Server インスタンスに接続できることを確認します。  

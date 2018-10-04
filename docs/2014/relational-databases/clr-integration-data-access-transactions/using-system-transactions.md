@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cf0f57f84e4b1838b9fd2da9838891640782266b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350064"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198342"
 ---
 # <a name="using-systemtransactions"></a>System.Transactions の使用
   `System.Transactions` 名前空間では、ADO.NET と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) 統合に完全に統合される新しいトランザクション フレームワークが提供されます。 `System.Transactions.TransactionScope` クラスは、接続を分散トランザクションに暗黙に参加させることで、コード ブロックをトランザクション対応にします。 `Complete` でマークされたコード ブロックの最後には、`TransactionScope` メソッドを呼び出す必要があります。 プログラムの実行がコード ブロックから離れる際には `Dispose` メソッドが呼び出され、このとき `Complete` メソッドが呼び出されなければ、トランザクションの続行が中止されます。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  

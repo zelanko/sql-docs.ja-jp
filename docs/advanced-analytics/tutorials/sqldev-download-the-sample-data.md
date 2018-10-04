@@ -3,118 +3,60 @@ title: R と Python (SQL Server Machine Learning) の埋め込みの NYC タク�
 description: ニューヨーク市タクシーのサンプル データをダウンロードして、データベースの作成の手順です。 データを R を埋め込む方法を示す SQL Server チュートリアルで使用して、SQL Server での Python にはストアド プロシージャと T-SQL 関数します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 700720f7538467dc3edc38414544eb2c402437a6
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712755"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232576"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>SQL Server 用の NYC タクシーのデモ データ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、SQL server データベース内分析に R と Python を使用する方法のチュートリアルについては、システムを準備します。
+この記事では、R と Python のチュートリアルでは、SQL Server データベース内分析のサンプル データを取得する方法について説明します。
 
-この演習では、サンプル データを環境を準備するための PowerShell スクリプトをダウンロードし、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルのいくつかのチュートリアルで使用します。 完了したら、 **NYCTaxi_Sample**データベースが実践的な学習のデモにデータを提供する、ローカルのインスタンスで使用できます。 
+データの発生元、 [NYC タクシーのデータセットとリムジン委員会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)パブリック データ セット。 しました、データセットのスナップショットと利用可能なデータのキャプチャの 1% のデモ データベース。 システム データベースのバックアップ ファイルはわずか 90 MB、170万主データ テーブルの行を提供することです。
+
+この記事の手順を実行が完了したら、 **NYCTaxi_Sample**データベースが実践的な学習のデモにデータを提供する、ローカルのインスタンスで使用できます。 データベース名にする必要があります**NYCTaxi_Sample**まま変更せずに、デモ スクリプトを実行する場合。
 
 ## <a name="prerequisites"></a>前提条件
 
-インターネット接続、PowerShell、およびコンピューターのローカル管理者権限を必要があります。 おく[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)やその他のツールをオブジェクトの作成を確認します。
+必要なは、インターネット接続をコンピューターと、データベース エンジンのインスタンスのローカルの管理者権限。
 
-## <a name="download-nyc-taxi-demo-data-and-scripts-from-github"></a>NYC タクシーのデモ データとスクリプトを Github からダウンロードします。
+ことが役立ちます[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)やその他のツールをオブジェクトの作成を確認します。
 
-1.  Windows PowerShell コマンド コンソールを開きます。
-  
-    使用して、**管理者として実行**先ディレクトリを作成するか、または指定したコピー先にファイルを書き込みます。
-  
-2.  パラメーター *DestDir* の値を任意のローカル ディレクトリに変更し、次の PowerShell コマンドを実行します。 ここで使用した既定値は **TempRSQL**です。
-  
-    ```ps
-    $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
-    $ps1_dest = “$pwd\Download_Scripts_SQL_Walkthrough.ps1”
-    $wc = New-Object System.Net.WebClient
-    $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir ‘C:\tempRSQL’
-    ```
-  
-    *DestDir* で指定したフォルダーが存在しない場合、PowerShell スクリプトによって作成されます。
-  
-    > [!TIP]
-    > エラーが発生する場合は PowerShell スクリプトの実行ポリシーを一時的に設定できます**無制限**を Bypass 引数を使用し、変更、現在のセッションにスコープには、このチュートリアルでのみです。
-    >   
-    >````
-    > Set\-ExecutionPolicy Bypass \-Scope Process
-    >````
-    > このコマンドを実行しても、構成は変更されません。
-  
-    インターネット接続によっては、ダウンロードに時間がかかる場合があります。
-  
-3.  すべてのファイルがダウンロードされると、PowerShell スクリプトが表示されます、 *DestDir*フォルダー。 PowerShell コマンド プロンプトで次のコマンドを実行し、ダウンロードされたファイルを確認します。
-  
-    ```
-    ls
-    ```
-  
-    **結果:**
-  
-    ![PowerShell スクリプトによってダウンロードされたファイルの一覧](media/rsql-devtut-filelist.png "PowerShell スクリプトによってダウンロードされたファイルの一覧")
+## <a name="download-demo-database"></a>デモのデータベースをダウンロードします。
 
-## <a name="create-nyctaxisample-database"></a>NYCTaxi_Sample データベースを作成します。
+サンプル データベースは、Microsoft によってホストされているバックアップ ファイルです。 ファイルのダウンロードは、リンクをクリックするとすぐに開始します。 
 
-ダウンロードしたファイルの間で PowerShell スクリプトを表示する必要があります (**RunSQL_SQL_Walkthrough.ps1**) データベースを作成して、一括読み込みデータ。 スクリプトによって実行されるアクションは次のとおりです。
+ファイル サイズは約 90 MB です。
 
-+ まだインストールされていない場合は、SQL Native Client と SQL のコマンド ライン ユーティリティをインストールします。 これらのユーティリティは、 **bcp**を使用して、データベースにデータを一括読み込みするために必要です。
+1. クリックして[NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)データベース バックアップ ファイルをダウンロードします。
 
-+ データベースとテーブルを作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス、および .csv ファイルをソースとデータを一括挿入します。
+2. C:\Program files \microsoft SQL server \mssql インスタンス name\MSSQL\Backup フォルダーにファイルをコピーします。
 
-+ 複数の SQL 関数およびいくつかのチュートリアルで使用されるストアド プロシージャを作成します。
+3. Management Studio で、右クリックして**データベース**選択と**復元ファイルおよびファイル グループ**します。
 
-### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>信頼できる Windows id を使用するスクリプトを変更します。
+4. 入力*NYCTaxi_Sample*としてデータベース名。
 
-既定では、スクリプトは、SQL Server データベースのユーザーのログインとパスワードを想定しています。 Windows ユーザー アカウントで db_owner 場合は、オブジェクトを作成する、Windows id を使用できます。 これを行うには、開く`RunSQL_SQL_Walkthrough.ps1`コード エディターで、追加**`-T`** 一括挿入 (行 238) のコマンドを bcp に。
+5. クリックして**デバイスから**し、バックアップ ファイルを選択するファイルの選択 ページを開きます。 クリックして**追加**NYCTaxi_Sample.bak を選択します。
 
-```text
-bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
-```
-
-### <a name="run-the-script-to-create-objects"></a>オブジェクトを作成するスクリプトを実行します。
-
-C:\tempRSQL で、管理者の PowerShell コマンド プロンプトを使用して、次のコマンドを実行します。
-  
-```ps
-.\RunSQL_SQL_Walkthrough.ps1
-```
-次の情報の入力を求められます。
-
-- サーバー インスタンスの[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]がインストールされています。 既定のインスタンスには、コンピューター名だけでこれができます。
-
-- データベース名。 このチュートリアルでは、スクリプトを想定して`NYCTaxi_Sample`します。
-
-- ユーザー名とユーザーのパスワード。 これらの値には、SQL Server データベースのログインを入力します。 または、信頼できる Windows id を受け入れるようにスクリプトを変更した場合は、これらの値を空白のままにするには Enter を押します。 Windows id は、接続で使用されます。
-
-- 前のレッスンでダウンロードしたサンプル データの完全修飾ファイル名。 例: `C:\tempRSQL\nyctaxi1pct.csv`
-
-これらの値を指定した後、スクリプトをすぐに実行します。 内のすべてのプレース ホルダー名、スクリプトの実行中に、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトを使用して、指定した入力を更新します。
+6. 選択、**復元**チェック ボックスをオン をクリック**OK**データベースを復元します。
 
 ## <a name="review-database-objects"></a>データベース オブジェクトを確認してください。
    
-スクリプトの実行が完了したら、データベース オブジェクトに存在の確認、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 データベース、テーブル、関数、およびストアド プロシージャを参照する必要があります。
+データベース オブジェクトに存在することを確認、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 データベース、テーブル、関数、およびストアド プロシージャを参照する必要があります。
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
 
-> [!NOTE]
-> データベース オブジェクトが既に存在する場合、それらを再作成することはできません。
->   
-> テーブルが既に存在する場合、データは追加され、上書きされません。 そのため、スクリプトを実行する前に、既存のオブジェクトを削除してください。
-
 ### <a name="objects-in-nyctaxisample-database"></a>NYCTaxi_Sample データベース内のオブジェクト
 
-次の表では、NYC タクシーのデモ データベースで作成されたオブジェクトをまとめたものです。 1 つの PowerShell スクリプトを実行するだけですが (`RunSQL_SQL_Walkthrough.ps1`)、そのスクリプトは、データベースにオブジェクトを作成するには、さらに他の SQL スクリプトを呼び出します。 説明では、各オブジェクトを作成するために使用するスクリプトが説明されています。
+次の表では、NYC タクシーのデモ データベースで作成されたオブジェクトをまとめたものです。
 
 |**オブジェクト名です。**|**オブジェクトの種類**|**[説明]**|
 |----------|------------------------|---------------|
@@ -132,9 +74,9 @@ C:\tempRSQL で、管理者の PowerShell コマンド プロンプトを使用�
 
 検証手順として、データがアップロードされたことを確認するためのクエリを実行します。
 
-1. オブジェクト エクスプ ローラーで、[データベース] で、 **NYCTaxi_Sample**データベース、[テーブル] フォルダーを開きます。
+1. データベースのオブジェクト エクスプ ローラーで右クリックし、 **NYCTaxi_Sample**データベース、および新しいクエリを開始します。
 
-2. 右クリックし、 **dbo.nyctaxi_sample**選択**上位 1000 行**をいくつかのデータを返します。
+2. 実行**`select * from dbo.nyctaxi_sample`** 170万のすべての行を返します。
 
 ## <a name="next-steps"></a>次の手順
 

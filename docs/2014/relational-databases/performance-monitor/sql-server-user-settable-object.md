@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7a125ae3057d3398f51034f9307d7dd62bcabec
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: cce5bf6a05cf84a66004066545a76cf8c7f00271
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214968"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server: User Settable オブジェクト
   Microsoft **の** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを使用すると、カスタムのカウンター インスタンスを作成できます。 カスタムのカウンター インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー独自のコンポーネントなど、既存のカウンターでは監視されないサーバーの特性を監視するために使用します。たとえば、ログに記録された顧客注文数や製品在庫数などを監視できます。  

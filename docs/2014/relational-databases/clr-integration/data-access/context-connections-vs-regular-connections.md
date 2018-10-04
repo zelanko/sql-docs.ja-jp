@@ -1,29 +1,26 @@
 ---
-title: 通常とは。コンテキスト接続 |Microsoft Docs
+title: 通常の接続とコンテキスト接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ba21a813e019b94a51ad6a43e45faf64cd9f7b2
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8271f3593da39727dc70c71b17cc032bdb0877e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097192"
 ---
-# <a name="regular-vs-context-connections"></a>通常とは。コンテキスト接続
+# <a name="regular-vs-context-connections"></a>通常の接続とコンテキスト接続
   リモート サーバーに接続している場合は、常に、コンテキスト接続ではなく通常の接続を使用します。 ストアド プロシージャや関数を実行している同一サーバーに接続する必要がある場合は、ほとんどの場合、コンテキスト接続を使用します。 コンテキスト接続には、同一のトランザクション領域で実行され、再認証が不要であるなどの利点があります。  
   
  また、コンテキスト接続を使用すると、通常、パフォーマンスが向上し、リソースの使用が抑えられます。 コンテキスト接続はインプロセスのみの接続なので、ネットワーク プロトコルやトランスポート層を迂回して Transact-SQL ステートメントを送信したり結果を受信することで、"直接" サーバーにアクセスできます。 認証プロセスも同様に迂回されます。 次の図に、`SqlClient` マネージド プロバイダーの主要なコンポーネントと、通常の接続を使用する場合とコンテキスト接続を使用する場合の、さまざまなコンポーネント相互の通信方法を示します。  

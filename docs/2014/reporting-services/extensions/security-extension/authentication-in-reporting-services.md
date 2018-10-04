@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], authentication
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5088cabad39f75fb1becd65a21c84133608e9a2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093322"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services での認証
   認証とは、ユーザーの本人性を立証するプロセスです。 ユーザー認証にはさまざまな方法がありますが、 最も一般的なのはユーザー パスワードを使用する方法です。 たとえば、フォーム認証を実装する場合は、ユーザーに対して資格情報の提示を要求し (通常は、ログイン名とパスワードを要求するインターフェイスを使用)、データベース テーブルや構成ファイルなどのデータ ストアと照合して、そのユーザーが本人かどうかを検証します。 資格情報の有効性を確認できない場合は、認証プロセスが失敗し、そのユーザーは匿名ユーザーであると見なされます。  

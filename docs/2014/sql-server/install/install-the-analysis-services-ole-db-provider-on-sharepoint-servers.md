@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8403b4a4d65f81ccc5b43e50f69d58efb71508ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c277319377fda81e0c1f6901b2d20a22b500415c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128569"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール
   Microsoft OLE DB Provider for Analysis Services (MSOLAP) は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データを操作するためにクライアント アプリケーションで使用されるインターフェイスです。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を含んだ SharePoint 環境では、このプロバイダーによって [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する接続要求が処理されます。  

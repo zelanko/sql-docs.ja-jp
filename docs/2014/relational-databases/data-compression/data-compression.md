@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data compression [Database Engine]
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204942"
 ---
 # <a name="data-compression"></a>Data Compression
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 行ストア テーブルおよびインデックス、行とページの圧縮をサポートし、列ストア テーブルおよびインデックスの列ストア インデックスと列ストアの保存用圧縮をサポートしています。  
@@ -105,8 +102,7 @@ ms.locfileid: "37320412"
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で vardecimal ストレージ形式を実装したテーブルは、アップグレード時にもその設定を保持します。 vardecimal ストレージ形式を使用するテーブルに行の圧縮を適用することができます。 ただし、行の圧縮は vardecimal ストレージ形式のスーパーセットなので、vardecimal ストレージ形式を保持する理由はありません。 vardecimal ストレージ形式と行の圧縮を組み合わせても、10 進値の圧縮は追加されません。 vardecimal ストレージ形式を使用するテーブルにページの圧縮を適用することができます。ただし、vardecimal ストレージ形式の列の圧縮が追加される可能性は低くなります。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は vardecimal ストレージ形式をサポートしていますが、行レベルの圧縮で同じ目的が果たされるので、vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は vardecimal ストレージ形式をサポートしていますが、行レベルの圧縮で同じ目的が果たされるので、vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>列ストアおよび列ストアの保存用圧縮の使用  
   

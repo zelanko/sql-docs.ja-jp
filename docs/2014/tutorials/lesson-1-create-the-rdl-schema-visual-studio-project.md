@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
-caps.latest.revision: 17
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc69b4bbcc40fa669ca9cf5f889944cb302e4b14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdf146743a74ff3e546072287848b033f365bc8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319812"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187332"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>レッスン 1 : RDL スキーマ Visual Studio プロジェクトの作成
   このチュートリアルでは、簡単なコンソール アプリケーションを作成します。 このチュートリアルで開発するいると想定[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]します。  
@@ -65,11 +62,11 @@ ms.locfileid: "37319812"
   
 8.  .Cs または .vb ファイルを生成した場所に移動し、ファイルを選択します をクリックし、**追加**します。  
   
-     また、Web 参照が動作するように、<xref:System.Web.Services> 名前空間への参照を追加する必要があります。  
+     また、Web 参照が動作するように、 <xref:System.Web.Services> 名前空間への参照を追加する必要があります。  
   
 9. [プロジェクト] メニューで、次のようにクリックします。**参照の追加**します。  
   
-     **参照の追加** ダイアログ ボックスで、 **.NET**  タブで  **System.Web.Services**、順にクリックします**OK**します。  
+     **参照の追加** ダイアログ ボックスで、 **.NET** タブで **System.Web.Services**、順にクリックします**OK**します。  
   
      レポート サーバー Web サービスに接続する方法の詳細については、次を参照してください。 [Web サービスと .NET Framework を使用してアプリケーションの構築](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)します。  
   

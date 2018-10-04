@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee5dfecc61bcc7717052417efaeb3120a7432c67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ebae86f0973da25b47c86f1be66181bc7b26ff2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213444"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>[ADO NET 変換先エディター] ([エラー出力] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  

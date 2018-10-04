@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToGrid
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
-caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 23e5634a67ff6daec4f6b0852905d8596b885c60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8719a91fada156d74003231abea67f2ae55f35c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318902"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224922"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>オプション (クエリ結果-SQL Server の結果をグリッド ページ)
   このページを使用すると、クエリ結果セットをグリッド形式で表示するためのオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ ウィンドウを右クリックして **[クエリ オプション]** をクリックします。 **[クエリ オプション]** ダイアログ ボックスの左ペインで、**[結果]** の **[グリッド]** をクリックします。  
@@ -30,19 +27,19 @@ ms.locfileid: "37318902"
  **結果セットにクエリを含める**  
  クエリのテキストをクエリ出力の一部として返します。  
   
- **コピーまたは結果を保存するときに、列ヘッダーを含める**  
+ **結果のコピーまたは保存時に列のヘッダーを含める**  
  結果をクリップボードにコピーしたりファイルに保存したりするときに列のヘッダーを含めるには、このチェック ボックスをオンにします。 保存またはコピーする結果データに列のヘッダーを含めずにデータだけを含めるには、このチェック ボックスをオフにします。  
   
- **実行後に結果を破棄します。**  
+ **実行後に結果を破棄する**  
  クエリの結果が変更履歴ウィンドウに表示されないようにします。 結果は実行後すぐに破棄されます。 このオプションを指定すると、メモリを節約できます。  
   
- **別のタブで結果を表示します。**  
+ **結果を別のタブに表示する**  
  クエリ ドキュメント ウィンドウの下部ではなく、新しいタブに結果セットを表示するには、このチェック ボックスをオンにします。  
   
- **クエリ実行後に [結果] タブに切り替えます**  
+ **クエリ実行後に [結果] タブに切り替える**  
  クエリの実行時に画面フォーカスを結果ペインに自動的に設定するには、これをクリックします。  
   
- **最大文字数を取得**  
+ **取得される最大文字数**  
  **XML 以外のデータ**:  
   
  1 ～ 65,535 の値を入力して、各セルに表示される最大文字数を指定します。  

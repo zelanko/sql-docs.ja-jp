@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4af6f6b3e80e05be05a4cb5aa5294edb8d2690f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ecc2c837001d5a05339ebe9b7eb3bdc9e6a7055
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188032"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services パッケージによってログに記録されるイベント
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、各種のイベント メッセージを Windows アプリケーション イベント ログに記録します。 これらのメッセージは、パッケージの起動時、パッケージの停止時、および特定の問題の発生時にログに記録されます。  
@@ -39,7 +36,7 @@ ms.locfileid: "37213292"
 > [!NOTE]  
 >  パッケージのログ記録が有効になっていない場合でも、次の表に示すメッセージはログに記録されます。  
   
-|イベント ID|シンボル名|Text|注|  
+|イベント ID|シンボル名|テキスト|注|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|パッケージ "" が起動されました。|パッケージの実行が開始されました。|  
 |12289|DTS_MSG_PACKAGESUCCESS|パッケージ "" が正常に完了しました。|パッケージが正常に実行され、現在は実行されていません。|  
@@ -59,7 +56,7 @@ ms.locfileid: "37213292"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>パッケージ実行の段階に関するメッセージ  
   
-|イベント ID|シンボル名|Text|注|  
+|イベント ID|シンボル名|テキスト|注|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|アプリケーション イベント ログへのログ記録を構成すると、さまざまなメッセージがこの一般的な形式で記録されます。|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|パッケージが開始されました。|  
@@ -72,7 +69,7 @@ ms.locfileid: "37213292"
 ### <a name="messages-about-events-that-occur"></a>発生したイベントに関するメッセージ  
  次の表に、イベントの結果として出力されるメッセージの一部を示します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用されるエラー メッセージ、警告メッセージ、および情報メッセージの詳細な一覧については、「[Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)」をご覧ください。  
   
-|イベント ID|シンボル名|Text|注|  
+|イベント ID|シンボル名|テキスト|注|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|タスクは失敗しました。|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|このメッセージは発生したエラーを報告します。|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -33,16 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093632"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[アクション]** ダイアログ ボックスでは、グラフ、ゲージ、およびリンクをサポートするマップ要素に対してハイパーリンク オプションを有効にできます。 ユーザーがレポート上でクリックして、URL、同じレポート サーバーまたはレポート サーバーと統合されている SharePoint サイト上の他のレポート、または同じレポート内の他の場所にリンクできるようにアクションを定義します。  
@@ -62,7 +59,7 @@ ms.locfileid: "37323762"
   
  ネイティブ モード用に構成されているレポート サーバーにレポートをパブリッシュする場合は、ファイル名の拡張子を含まない完全パスまたは相対パスを指定します。 レポートが現在のレポートと同じフォルダーに保存されている場合は、レポートの名前のみを使用します。 レポートが、同じレポート サーバー上の別のフォルダーに保存されている場合は、相対パスまたは完全パスを使用します。 相対パスは、現在のフォルダーから始まり、フォルダー階層を上に移動します (例: ../Folder2/Report1)。 完全パスは Home フォルダー「/」から始まります。 たとえば、「/Reports/Report1」のように指定します。  
   
- SharePoint 統合モードで構成されているレポート サーバーにレポートをパブリッシュする場合は、ファイル名の拡張子 (.rdl) を含めた完全修飾 URL を指定します。 たとえば、http://*\<SharePointservername >/\<サイト >*/Documents/Report1.rdl します。 相対パスはサポートされません。  
+ SharePoint 統合モードで構成されているレポート サーバーにレポートをパブリッシュする場合は、ファイル名の拡張子 (.rdl) を含めた完全修飾 URL を指定します。 たとえば、 http://*\<SharePointservername >/\<サイト >*/Documents/Report1.rdl します。 相対パスはサポートされません。  
   
  詳細については、msdn.microsoft.com の[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)の「[外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -102,12 +99,12 @@ ms.locfileid: "37323762"
  Web ページへのリンクを定義します。 Web ページの URL、または結果が Web ページの URL になる式を入力または選択します。 式を変更するには、 **式** (*[fx]*) ボタンをクリックします。 この式には、URL が格納されているフィールドを含めることができます。 **[URL に移動する]** をクリックすると、次のオプションが表示されます。  
   
  **URL を選択します。**  
- アイテムの URL を入力します。 ネイティブ モード用に構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、http://*\<servername >*/images/image1.jpg します。 アイテムを SharePoint 統合モードで構成されているレポート サーバーにパブリッシュする、完全修飾 URL を使用 (たとえば、http://*\<SharePointservername >/\<サイト >* ドキュメント/イメージ/image1.jpg)。  
+ アイテムの URL を入力します。 ネイティブ モード用に構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、 http://*\<servername >*/images/image1.jpg します。 アイテムを SharePoint 統合モードで構成されているレポート サーバーにパブリッシュする、完全修飾 URL を使用 (たとえば、 http://*\<SharePointservername >/\<サイト >* ドキュメント/イメージ/image1.jpg)。  
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [サブレポートおよびパラメーターの追加 &#40;レポート ビルダーおよび SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク&#40;レポート ビルダーおよび SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   

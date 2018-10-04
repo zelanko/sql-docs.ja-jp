@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-caps.latest.revision: 16
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aed7304b4e7e48eff1691970da5ff68b03fd0962
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e8a2fabc77b4b2ca5d8a27b83c29c233148032e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222942"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219498"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services クエリ デザイナー
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートで各データ ソースの種類のクエリを構築するためにはグラフィカルおよびテキスト ベースのクエリ デザイナーを提供します。  
@@ -36,7 +33,7 @@ ms.locfileid: "37222942"
   
 -   **クエリ言語のバリエーション。** たとえば、 [!INCLUDE[tsql](../includes/tsql-md.md)] などのクエリ言語は、データ ソースの種類によって構文が異なることがあります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 言語および Oracle SQL 言語には、クエリ コマンドの構文で若干のバリエーションがあります。  
   
--   **データベース オブジェクト名のスキーマの部分に対するサポート。** データ ソースでデータベース オブジェクト識別子の一部としてスキーマが使用されている場合、既定のスキーマを使用しない名前については、クエリにスキーマ名を指定する必要があります。 たとえば、 `SELECT FirstName, LastName FROM [Person].[Person]`のようにします。  
+-   **データベース オブジェクト名のスキーマの部分に対するサポート。** データ ソースでデータベース オブジェクト識別子の一部としてスキーマが使用されている場合、既定のスキーマを使用しない名前については、クエリにスキーマ名を指定する必要があります。 たとえば、`SELECT FirstName, LastName FROM [Person].[Person]` のようにします。  
   
 -   **クエリ パラメーターのサポート。** パラメーターのサポートは、データ プロバイダーによって異なります。 一部のデータ プロバイダーでは、 `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`のような名前付きパラメーターがサポートされます。 また別のデータ プロバイダーでは、 `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`のような無名パラメーターがサポートされます。 パラメーターの識別子は、データ プロバイダーによって異なる場合があります。たとえば、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用して、「アット」(@) 記号、Oracle は、コロン (:) を使用します。 パラメーターがサポートされないデータ プロバイダーもあります。  
   

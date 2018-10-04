@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb5a36175e735393e079cdf7b611a11d3d50a834
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44138cf39e7ed07120b85da6dfd708dee3e90182
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222592"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services と AlwaysOn 可用性グループ (SQL Server)
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) と [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を組み合わせて利用する方法について説明します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用するデータベースのシナリオとしては、レポート データ ソース、レポート サーバー データベース、レポート デザインの 3 つが考えられます。 3 つのシナリオでは、それぞれサポートされる機能と必要な構成が異なります。  
@@ -92,8 +89,7 @@ ms.locfileid: "37153123"
  読み取り専用のセカンダリ レプリカを [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ ソースとして使用する場合は、データ更新の時間差が、レポート ユーザーの想定を越えることのないように注意してください。  
   
 ##  <a name="bkmk_reportdesign"></a> レポート デザインと可用性グループ  
- 
-              [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]のレポート プロジェクトでレポートをデザインする際、ユーザーは、レポート データ ソースの接続文字列に、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の新しい接続プロパティを含めることができます。 新しい接続プロパティのサポート状況は、ユーザーがどこでレポートをプレビューするかによって異なります。  
+ [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]のレポート プロジェクトでレポートをデザインする際、ユーザーは、レポート データ ソースの接続文字列に、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の新しい接続プロパティを含めることができます。 新しい接続プロパティのサポート状況は、ユーザーがどこでレポートをプレビューするかによって異なります。  
   
 -   **ローカル プレビュー:** [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] と [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 と support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続文字列プロパティがサポートされます。  
   
@@ -148,9 +144,7 @@ ms.locfileid: "37153123"
   
 -   リスナーの DNS 名を使用するようにデータベース接続を更新します。 ネイティブ モードのレポート サーバーの場合、 **構成マネージャーで** [レポート サーバー データベース名] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を変更します。 SharePoint モードの場合、 **サービス アプリケーションの** データベース サーバー名 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を変更します。  
   
-###  
-            <a name="bkmk_steps_to_complete_failover">
-            </a> レポート サーバー データベースのディザスター リカバリーの手順  
+###  <a name="bkmk_steps_to_complete_failover"></a> レポート サーバー データベースのディザスター リカバリーの手順  
  次の手順は、セカンダリ レプリカへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバー後に実施する必要があります。  
   
 1.  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータベースをホストするプライマリ データベース エンジンによって使用されている SQL エージェント サービスのインスタンスを停止します。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78780e497ba67589dc3e227430f59ed1c536c36b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280778"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172602"
 ---
-# <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 で PowerPivot データ更新
+# <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 での PowerPivot データ更新
   SharePoint 2013 での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルの更新に対応する設計では、主要なコンポーネントとして Excel Services を使用し、SharePoint モードで実行されている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上でデータ モデルを読み込んで更新します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーは、SharePoint ファームの外部で実行されます。  
   
  前のデータ更新のアーキテクチャを読み込み、データ モデルを SharePoint モードの更新 PowerPivot System サービスに大きく依存[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスは、PowerPivot アプリケーション サーバーでローカルに実行されていました。 新しいアーキテクチャには、ドキュメント ライブラリのブック アイテムのメタデータとしてスケジュール情報を管理する新しい方法も導入されています。 SharePoint 2013 の Excel Services のアーキテクチャでは、 **対話型のデータ更新** と **定期データ更新**の両方がサポートされています。  

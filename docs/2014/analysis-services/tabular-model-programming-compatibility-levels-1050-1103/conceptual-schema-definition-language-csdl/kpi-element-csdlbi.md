@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a649ffffe6f2d9f5902ede9e6d7a6126fd09e25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09f42856788dffa45a03690c87e2383849c5f813
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189822"
 ---
 # <a name="kpi-element-csdlbi"></a>KPI 要素 (CSDLBI)
   Kpi 要素は、主要業績評価指標 (KPI) として使用できる計算を定義します。 ビジネス インテリジェンス データ モデルでは KPI はメジャーが基になっているので、KPI の定義には、メジャーと関連付けられているすべてのメタデータと共に、既定のグラフィックなどの KPI 値のプレゼンテーションに必要な情報が含まれます。  

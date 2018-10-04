@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8faaa92db8752329a489ee69fa4f9e82c62bc3c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b3c563360368f2bdc542e511812460aab623d39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229802"
 ---
 # <a name="extending-packages-with-custom-objects"></a>カスタム オブジェクトを使用したパッケージの拡張
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で提供されるコンポーネントがユーザーの要件を満たさない場合、独自の拡張機能をコーディングすることにより、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の機能を拡張できます。 パッケージを拡張するには 2 つの方法があります。1 つ目は、スクリプト タスクおよびスクリプト コンポーネントによって提供される強力なラッパー内でコードを記述する方法です。2 つ目は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルによって提供される基本クラスを基にカスタム [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 拡張機能を最初から作成する方法です。  
   
  ここでは、カスタム オブジェクトを使用してパッケージを拡張する 2 つの方法について詳しく説明します。  
   
- ph x="1" /&gt; カスタム ソリューションで、スクリプト タスクやスクリプト コンポーネントよりさらに柔軟な設定が必要な場合、または複数のパッケージで再利用できるコンポーネントが必要な場合は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルを使用すると、カスタム タスク、データ フロー コンポーネント、およびその他のパッケージ オブジェクトを、マネージド コードで最初から作成できます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カスタム ソリューションで、スクリプト タスクやスクリプト コンポーネントよりさらに柔軟な設定が必要な場合、または複数のパッケージで再利用できるコンポーネントが必要な場合は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルを使用すると、カスタム タスク、データ フロー コンポーネント、およびその他のパッケージ オブジェクトを、マネージド コードで最初から作成できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Integration Services 用のカスタム オブジェクトの開発](developing-custom-objects-for-integration-services.md)  

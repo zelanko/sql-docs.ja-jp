@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-caps.latest.revision: 85
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 79929bf3f9bebec61605ad173a460fbdbe2269f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96e21edc6c7207c2325ee1a6a3385ef92cad42e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219482"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188392"
 ---
 # <a name="restore-database-general-page"></a>[データベースの復元] \([全般] ページ)
   **[全般]** ページを使用すると、データベースの復元操作における対象データベースとソース データベースに関する情報を指定できます。  

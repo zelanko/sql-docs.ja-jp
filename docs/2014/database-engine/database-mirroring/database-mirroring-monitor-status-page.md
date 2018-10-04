@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b54eb6377a0d0816d186d612075b678e8eaadb7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef9b125cafb521461bfb17fcdf6fa31a5509411a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067872"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>[データベース ミラーリング モニター] ([状態] ページ)
   読み取り専用ページです。現在ナビゲーション ツリーで選択されているデータベースのプリンシパルおよびミラー サーバー インスタンスについて、最新のミラーリング状態が表示されます。 インスタンスに関する情報が利用できない場合、そのインスタンスに対応する **[状態]** グリッドのセルは " **不明**" とグレーで表示されます。  
