@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49576de626183ab603699311b9c18f02013685d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea2ab2db1d5afec5a8816c3e6dc857fd87081585
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050543"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix を使用した、有効な ID 型、IDREF 型、IDREFS 型の属性の作成 (SQLXML 4.0)
   属性を ID 型属性として指定することができます。 ID 型属性を指定すると、IDREF または IDREFS として指定した属性から ID 型属性を参照でき、ドキュメント間をリンクできるようになります。  
@@ -57,9 +54,9 @@ ms.locfileid: "37215032"
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 型と IDREFS 型を指定する  
- 次のスキーマで、 **\<顧客 >** 要素から成る、 **\<順序 >** 子要素。 **\<順序 >** 要素が子要素にも、 ** \<OrderDetail >** 要素。  
+ 次のスキーマで、 **\<顧客 >** 要素から成る、 **\<順序 >** 子要素。 **\<順序 >** 要素が子要素にも、  **\<OrderDetail >** 要素。  
   
- **OrderIDList**属性の**\<顧客 >** IDREFS 型の属性を参照するには、 **OrderID**の属性、 ** \<順序 >** 要素。  
+ **OrderIDList**属性の**\<顧客 >** IDREFS 型の属性を参照するには、 **OrderID**の属性、  **\<順序 >** 要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

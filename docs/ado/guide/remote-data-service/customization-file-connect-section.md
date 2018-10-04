@@ -1,31 +1,28 @@
 ---
-title: カスタマイズ ファイルのセクションの接続 |Microsoft ドキュメント
+title: カスタマイズ ファイルの Connect セクション |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6774d32587a2c6d5c969be4d56640d137972ddc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 04850440b9dd1a5da9270b7782c07dca93bbab54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757800"
 ---
-# <a name="customization-file-connect-section"></a>カスタマイズ ファイルのセクションを接続します。
-ハンドラーの既定の動作は、すべての接続を拒否するのにです。 **接続**セクションでは、その動作に例外を指定します。 たとえば、すべての場合、**接続**セクションがないか、空で、既定で接続を確立できませんでした。  
+# <a name="customization-file-connect-section"></a>カスタマイズ ファイルの Connect セクション
+ハンドラーの既定の動作では、すべての接続を拒否します。 **接続**セクションでは、その動作の例外を指定します。 たとえば、すべての場合、**接続**セクションが存在しない場合、または空の場合、既定で接続を確立できませんでした。  
   
  **接続**セクションに含めることができます。  
   
@@ -34,7 +31,7 @@ ms.locfileid: "35273851"
 -   クライアントの接続文字列を置換する新しい接続文字列。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="syntax"></a>構文  
  形式は、既定のアクセス エントリです。  
@@ -59,17 +56,17 @@ connectionString
   
 |要素|説明|  
 |----------|-----------------|  
-|**のインスタンスに接続するときには、**|このことを示すリテラル文字列は、接続文字列エントリです。|  
+|**Connect**|これを示すリテラル文字列は、接続文字列のエントリです。|  
 |***connectionString***|全体のクライアントの接続文字列を置換する文字列。|  
-|**アクセス**|このことを示すリテラル文字列は、アクセス エントリです。|  
-|***accessRight***|次のアクセス権のいずれか。<br /><br /> -   **NoAccess** -ユーザーがデータ ソースにアクセスできません。<br />-   **読み取り専用**-ユーザーは、データ ソースを読み取ることができます。<br />-   **ReadWrite** : ユーザーの読み取りまたはデータ ソースに書き込むことができます。|  
+|**アクセス**|これを示すリテラル文字列は、アクセス エントリです。|  
+|***accessRight***|次のアクセス権のいずれか:<br /><br /> -   **NoAccess** -ユーザーがデータ ソースにアクセスできません。<br />-   **読み取り専用**-ユーザーがデータ ソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーの読み取りまたはデータ ソースへの書き込みができます。|  
   
- (影響、既定のハンドラーの動作を無効にする) に任意の接続を許可する場合でアクセス エントリを設定、**接続既定**セクション`Access=ReadWrite`、削除したり、コメント アウト、他の**接続***識別子*セクションです。  
+ (影響-既定のハンドラーの動作を無効にする) で任意の接続を許可する場合でアクセス エントリを設定、**接続既定**セクションを`Access=ReadWrite`、および削除またはコメント アウト、他の**を接続***識別子*セクション。  
   
 ## <a name="see-also"></a>参照  
- [カスタマイズ ファイル ログ](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [カスタマイズ ファイル SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [カスタマイズ ファイル UserList に関するセクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [カスタマイズ ファイル Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [カスタマイズ ファイル UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [カスタマイズ ファイルの概要](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   

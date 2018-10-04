@@ -1,42 +1,39 @@
 ---
-title: SQLGetInfo (Excel ドライバー) |Microsoft ドキュメント
+title: SQLGetInfo (Excel ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Excel Driver
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14f6ade916baecc37e80e7a5eeea458ad89d0a20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802360"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Excel ドライバー)
 > [!NOTE]  
->  このトピックでは、Excel ドライバーに固有の情報を提供します。 この関数の概要については、下の該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)です。  
+>  このトピックでは、Excel ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- **SQLGetInfo** SQL_FILE_USAGE 情報の種類をサポートしています。 返される値は、ドライバーが直接データ ソース内のファイルを扱う方法を示す 16 ビット整数を示します。  
+ **SQLGetInfo** SQL_FILE_USAGE 情報の種類をサポートしています。 返される値は、ドライバーが直接データ ソース内のファイルを処理する方法を示す 16 ビット整数を示します。  
   
--   SQL_FILE_NOT_SUPPORTED —、ドライバーは、1 階層ドライバーではありません。  
+-   SQL_FILE_NOT_SUPPORTED-ドライバーは、1 階層のドライバーではありません。  
   
--   SQL_FILE_TABLE — 1 階層ドライバー データ ソース内のファイルはテーブルとして扱います。  
+-   SQL_FILE_TABLE — 1 階層のドライバーは、テーブルとしてデータ ソース内のファイルを扱います。  
   
--   SQL_FILE_QUALIFIER — 1 階層ドライバーでは修飾子としてデータ ソース内のファイルを扱います。  
+-   SQL_FILE_QUALIFIER — 1 階層のドライバーは、修飾子としてデータ ソース内のファイルを扱います。  
   
- ODBC ドライバーでは、各ファイルが、テーブルのために、マイクロソフト Exceldriver の SQL_FILE_TABLE を返します。  
+ ODBC ドライバーは、各ファイルは、テーブルでは、マイクロソフト Exceldriver の SQL_FILE_TABLE を返します。  
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   
@@ -48,7 +45,7 @@ ms.locfileid: "32904177"
 ||97/2000|08.00.0000|  
   
 ## <a name="sqlfileusage"></a>SQL_FILE_USAGE  
- SQL_FILE_TABLE (Excel 3.0 と 4.0)  
+ SQL_FILE_TABLE (Excel 3.0 または 4.0)  
   
  SQL_FILE_CATALOG (Excel 5.0 または 7.0)  
   
@@ -58,22 +55,22 @@ ms.locfileid: "32904177"
  65535 (Excel 97)  
   
 ## <a name="sqlmaxcolumnnamelen"></a>SQL_MAX_COLUMN_NAME_LEN  
- 30 (Excel 3.0 と 4.0)  
+ 30 (Excel 3.0 または 4.0)  
   
  64 (Excel 5.0/7.0/97)  
   
 ## <a name="sqlmaxtablenamelen"></a>SQL_MAX_TABLE_NAME_LEN  
- 12 (Excel 3.0 と 4.0)  
+ 12 (Excel 3.0 または 4.0)  
   
  31 (Excel 5.0/7.0/97)  
   
 ## <a name="sqlcatalognameseparator"></a>SQL_CATALOG_NAME_SEPARATOR  
- "\\"(Excel 3.0 と 4.0)  
+ "\\"(Excel 3.0 または 4.0)  
   
  "."(Excel 5.0/7.0/97)  
   
 ## <a name="sqlcatalogterm"></a>SQL_CATALOG_TERM  
- "Directory"(Excel 3.0 と 4.0)  
+ "Directory"(Excel 3.0 または 4.0)  
   
  「ブック」(Excel 5.0/7.0/97)  
   

@@ -1,14 +1,11 @@
 ---
-title: GetFileNamespacePath (TRANSACT-SQL) |Microsoft ドキュメント
+title: GetFileNamespacePath (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a31ca80ae50906f0789fdfef20fbf4fede9beea8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 72d1842f81a8a4a3558b96d1dbece16f8ea4352d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727160"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +39,20 @@ ms.locfileid: "33230733"
   
 ## <a name="arguments"></a>引数  
  *column-name*  
- 列名、varbinary (max) の**file_stream** FileTable 内の列です。  
+ 列名、varbinary (max) の**file_stream** FileTable 内の列。  
   
- *列名*値が有効な列名にする必要があります。 別のデータ型の列から変換またはキャストされた値や、式は指定できません。  
+ *列名*値は有効な列名である必要があります。 別のデータ型の列から変換またはキャストされた値や、式は指定できません。  
   
  *is_full_path*  
- 相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path*値は次のいずれかを持つことができます。  
+ 相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path*値は次のいずれかであることができます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**0**|データベース レベルのディレクトリ内の相対パスを返します。<br /><br /> これは既定値です。|  
-|**1**|以降で、完全な UNC パスを返します、`\\computer_name`です。|  
+|**1**|以降では、完全な UNC パスを返します、`\\computer_name`します。|  
   
  *@option*  
- パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option* 次の値のいずれかを持つことができます。  
+ パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option* 次の値のいずれかを設定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -67,7 +63,7 @@ ms.locfileid: "33230733"
 ## <a name="return-type"></a>戻り値の型  
  **nvarchar(max)**  
   
- 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このパスの一部として返されるコンピューター名は、クラスター化インスタンスの仮想ホスト名に、フェールオーバー クラスターのインスタンスがクラスター化されています。  
+ 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このパスの一部として返されるコンピューター名はクラスター化されたインスタンスの仮想ホスト名、インスタンスが、フェールオーバー クラスターでクラスター化します。  
   
  データベースが Always On 可用性グループに属している場合、 **FileTableRootPath**関数は、コンピューター名の代わりに、仮想ネットワーク名 (VNN) を返します。  
   
@@ -91,10 +87,10 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="examples"></a>使用例  
- 次の例を呼び出す方法を示して、 **GetFileNamespacePath**ファイルまたは FileTable 内のディレクトリの UNC パスを取得します。  
+ 次の例を呼び出す方法を示して、 **GetFileNamespacePath**ファイルまたは FileTable のディレクトリの UNC パスを取得します。  
   
 ```  
 -- returns the relative path of the form “\MyFileTable\MyDocDirectory\document.docx”  

@@ -1,38 +1,35 @@
 ---
-title: コレクションのプロパティ、メソッド、およびイベント フィールド |Microsoft ドキュメント
+title: フィールド コレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Fields collection [ADO], members
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3baa6859d7e5b54879582fa58d4eea109c37d9ba
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8c27dfd012f87d730999e0e03a5a8b96d97b3d7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278681"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851140"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>フィールド コレクションのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>[プロパティ]  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
  [Append メソッド](../../../ado/reference/ado-api/append-method-ado.md)  
   
- [ただしメソッド](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [CancelUpdate メソッド](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
   
  [Delete メソッド (ADO Fields コレクション)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
   

@@ -4,24 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Synchronization, Securing Objects in SQL Server
 - Synchronization,Scripting Objects
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: b1e1f8d4efe504680b5b6fb5decc8497e6ec7844
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: fa7e74d94fba34ebb3ae1e11ccaae308dd14e3e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685260"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (OracleToSQL)
 Oracle スキーマを SQL Server に変換した後は、SQL Server に結果のデータベース オブジェクトを読み込むことができます。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 また、SSMA には、SQL Server データベースの実際の内容で対象のメタデータを更新することができます。  

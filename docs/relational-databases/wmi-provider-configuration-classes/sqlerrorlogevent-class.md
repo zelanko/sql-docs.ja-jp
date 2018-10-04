@@ -1,29 +1,26 @@
 ---
-title: SqlErrorLogEvent Class |Microsoft ドキュメント
+title: SqlErrorLogEvent クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlErrorLogEvent class
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 724e07a08a0dd08efe47b6a9da8906e3ea49b66d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02bf982b6b154d99c5f3f153550c8531f23afa72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669660"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +40,8 @@ class SQLErrorLogEvent
 };  
 ```  
   
-## <a name="properties"></a>プロパティ  
- SQLErrorLogEvent クラスでは、次のプロパティを定義します。  
+## <a name="properties"></a>[プロパティ]  
+ SQLErrorLogEvent クラスは、次のプロパティを定義します。  
   
 |||  
 |-|-|  
@@ -54,16 +51,16 @@ class SQLErrorLogEvent
 |メッセージ|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベント メッセージ。|  
 |ProcessInfo|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベントのソース サーバー プロセス ID (SPID) に関する情報。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 |||  
 |-|-|  
 |MOF|Sqlmgmproviderxpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
-|名前空間|\root\Microsoft\SqlServer\ComputerManagement10|  
+|Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>例  
- 次の例では、指定したログ ファイルに記録されたすべてのイベントの値を取得する方法を示します。 実行するには例では、置換\< *Instance_Name*> のインスタンスの名前を持つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、置換 'errorlog.1' など、エラー ログ ファイルの名前を持つ ' File_Name'、'Instance1' などです。  
+ 次の例では、指定したログ ファイルに記録されたすべてのイベントの値を取得する方法を示します。 例を実行する\< *Instance_Name*> のインスタンスの名前を持つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を 'Instance1' など 'を 'errorlog.1' など、エラー ログ ファイルの名前を持つ ' File_Name' に置き換えます。  
   
 ```  
 on error resume next  
@@ -84,22 +81,22 @@ Next
 ```  
   
 ## <a name="comments"></a>コメント  
- ときに*InstanceName*または*FileName*が指定されていないステートメントでは、WQL クエリは、既定のインスタンスと現在の情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイルです。 たとえば、次の WQL ステートメントは、現在のログ ファイル (ERRORLOG) の既定のインスタンス (MSSQLSERVER) からすべてのログ イベントを返します。  
+ ときに*InstanceName*または*FileName*クエリが既定のインスタンスと現在の情報を返す WQL ステートメントで提供されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイル。 たとえば、次の WQL ステートメントは既定のインスタンス (MSSQLSERVER) の現在のログ ファイル (ERRORLOG) からすべてのログ イベントを返します。  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
 ## <a name="security"></a>セキュリティ  
- 接続する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイルは、WMI からは、ローカルおよびリモートの両方のコンピューターで次のアクセス許可が必要があります。  
+ 接続するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイルは、WMI からはローカルおよびリモートの両方のコンピューターで次のアクセス許可が必要があります。  
   
 -   読み取りアクセス、 **root \microsoft\sqlserver\computermanagement10** WMI 名前空間。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  
   
--   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラー ログは、次のパスにあります (ここで\<*ドライブ >* インストール先ドライブを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と\< *InstanceName*> は、インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
+-   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラー ログは、次のパスにあります (ここ\<*ドライブ >* インストール先ドライブを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と\< *InstanceName*> は、インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
   
      **\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL13** **.\<InstanceName > \MSSQL\Log**  
   
- ファイアウォール経由で接続する場合は、接続先のリモート コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、次を参照してください。 [WMI は、Windows Vista でリモート起動に接続する](http://go.microsoft.com/fwlink/?LinkId=178848)です。  
+ ファイアウォール経由で接続する場合は、接続先のリモート コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、次を参照してください。 [WMI は、Windows Vista でリモート起動に接続する](http://go.microsoft.com/fwlink/?LinkId=178848)します。  
   
 ## <a name="see-also"></a>参照  
  [SqlErrorLogFile クラス](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   

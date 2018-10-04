@@ -1,32 +1,29 @@
 ---
-title: 並べ替えプロパティの例 (VB) |Microsoft ドキュメント
+title: プロパティの例 (VB) を並べ替える |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29251f351302fc94c9f55c0ada9c4028408cbe44
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770090"
 ---
-# <a name="sort-property-example-vb"></a>並べ替えプロパティの例 (VB)
-この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[並べ替え](../../../ado/reference/ado-api/sort-property.md)の行の順序を変更するプロパティ、**レコード セット**から派生した、***作成者***のテーブル***Pubs***データベース。 セカンダリ ユーティリティ ルーチンは、各行を出力します。  
+# <a name="sort-property-example-vb"></a>Sort プロパティの例 (VB)
+この例では、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[並べ替え](../../../ado/reference/ado-api/sort-property.md)の行の順序を変更するプロパティを**Recordset**から派生した、***作成者***のテーブル***Pubs***データベース。 セカンダリ ユーティリティ ルーチンは、各行を出力します。  
   
 ```  
 'BeginSortVB  
@@ -107,12 +104,12 @@ End Sub
 'EndSortVB  
 ```  
   
- これは、指定したタイトル、および指定した内容を出力するセカンダリ ユーティリティ ルーチン**Recordset**です。  
+ これは、特定のタイトルと、指定の内容を出力するセカンダリ ユーティリティ ルーチン**Recordset**します。  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
 ## <a name="see-also"></a>参照  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort プロパティ](../../../ado/reference/ado-api/sort-property.md)

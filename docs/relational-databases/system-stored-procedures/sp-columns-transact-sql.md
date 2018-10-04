@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_columns_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 014e40b2e47ce50765febbb05445414c21d80fba
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c768b2d64c38fdda66d6abeea0aef2010b4dfe35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653001"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,10 +84,10 @@ sp_columns [ @table_name = ] object
 |**NULLABLE**|**smallint**|NULL 値を許容するかどうかを示します。<br /><br /> 1 = NULL 値を許容します。<br /><br /> 0 = NULL 値を許容しません。|  
 |**「解説」**|**varchar(254)**|このフィールドは常に NULL を返します。|  
 |**COLUMN_DEF**|**nvarchar (4000)**|列の既定値です。|  
-|**SQL_DATA_TYPE**|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 この列と同じ、 **DATA_TYPE**列を除き、 **datetime**と sql-92**間隔**データ型。 この列は、常に値を返します。|  
+|**SQL_DATA_TYPE**|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 この列と同じ、 **DATA_TYPE**列を除き、 **datetime**と sql-92**間隔**データ型。 この列は常に値が返されます。|  
 |**SQL_DATETIME_SUB**|**smallint**|サブタイプ コード**datetime**と sql-92**間隔**データ型。 他のデータ型の場合、この列は NULL を返します。|  
 |**CHAR_OCTET_LENGTH**|**int**|文字型または整数型の列の最大長 (バイト単位)。 他のすべてのデータ型では、この列は NULL を返します。|  
-|**ORDINAL_POSITION**|**int**|オブジェクト内での列の序数です。 オブジェクト内の最初の列は 1 です。 この列は、常に値を返します。|  
+|**ORDINAL_POSITION**|**int**|オブジェクト内での列の序数です。 オブジェクト内の最初の列は 1 です。 この列は常に値が返されます。|  
 |**IS_NULLABLE**|**varchar(254)**|オブジェクト内の列の NULL 値の許容属性です。 NULL 値の許容属性の検査は ISO の規則に従います。 ISO SQL に準拠している DBMS では、空文字列を返すことはできません。<br /><br /> YES = 列に NULL を含むことができます。<br /><br /> NO = 列に NULL を含むことができません。<br /><br /> NULL が許可されているかどうかがわからない列は、長さ 0 の文字列を返します。<br /><br /> この列は異なるに返される値から返される値、 **NULLABLE**列。|  
 |**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用されるデータ型は拡張ストアド プロシージャです。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
   

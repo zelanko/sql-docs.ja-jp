@@ -1,35 +1,32 @@
 ---
-title: 接続プロパティの例 (VBScript) |Microsoft ドキュメント
+title: プロパティの例 (VBScript) の接続 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55f60063261a600d57667cc94f6c514eb52af6b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287401"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730750"
 ---
-# <a name="connect-property-example-vbscript"></a>プロパティの例 (VBScript) の接続します。
+# <a name="connect-property-example-vbscript"></a>Connect プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- このコードを設定する方法を示しています、[接続](../../../ado/reference/rds-api/connect-property-rds.md)デザイン時のプロパティ。  
+ このコードを設定する方法を示しています、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)デザイン時のプロパティ。  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -41,9 +38,9 @@ ms.locfileid: "35287401"
 </OBJECT>  
 ```  
   
- 次の例は、設定する方法を示します、**接続**VBScript コードで実行時にプロパティです。  
+ 次の例は、設定する方法を示します、 **Connect** VBScript コードで実行時にプロパティ。  
   
- この例をテストするを切り取って貼り付ける、コードの間、\<本文 > と\</Body > で標準の HTML タグが文書化し、名前を付けます**ConnectVBS.asp**です。 ASP スクリプトは、サーバーで識別されます。  
+ この例をテストする切り取りし、の間のコードを貼り付け、\<本文 > と\</Body > の通常の HTML タグを文書化し、名前を**ConnectVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
   
 ```  
 <!-- BeginConnectVBS -->  

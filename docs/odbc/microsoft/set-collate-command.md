@@ -1,30 +1,27 @@
 ---
-title: SET COLLATE コマンド |Microsoft ドキュメント
+title: SET COLLATE コマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1ce3b75134da55286f40dc77cf6f6ba7de7e5b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801959"
 ---
 # <a name="set-collate-command"></a>SET COLLATE コマンド
-後続のインデックス作成と並べ替え操作では、文字列フィールドの照合順序を指定します。  
+後続のインデックス作成および並べ替え操作では、文字列フィールドの照合順序を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,45 +34,45 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  照合順序を指定します。 使用可能な照合シーケンスのオプションは、次の表で説明します。  
   
-|オプション|言語|  
+|および|[言語]|  
 |-------------|--------------|  
 |オランダ語|オランダ語|  
 |GENERAL|英語、フランス語、ドイツ語、最新のスペイン語、ポルトガル語、およびその他の西ヨーロッパ言語|  
-|ドイツ語|ドイツ語の電話帳順序 (DIN)|  
+|ドイツ語|ドイツの電話帳順序 (DIN)|  
 |アイスランド|アイスランド語|  
-|マシン|コンピューター (FoxPro の以前のバージョンの既定の照合順序)|  
+|マシン|マシン (以前のバージョンの FoxPro の既定の照合順序)|  
 |NORDAN|ノルウェー語、デンマーク語|  
 |スペイン語|従来のスペイン語|  
 |SWEFIN|スウェーデン語、フィンランド語|  
 |UNIQWT|一意の重み|  
   
 > [!NOTE]  
->  スペイン語のオプションを指定するときに*ch*間でソートする 1 つの文字は、 *c*と*d*、および*ll*間並べ替えます*l*と*m*です。  
+>  スペイン語のオプションを指定するときに*ch*を並べ替えるの間で 1 つの文字は、 *c*と*d*、および*ll*間並べ替えます*l*と*m*します。  
   
- リテラル文字列の照合順序のシーケンスのオプションを指定する場合は、引用符で囲むオプションを必ず。  
+ 照合順序のシーケンスのオプションをリテラル文字の文字列として指定した場合は、引用符で囲みますオプションを必ず。  
   
 ```  
 SET COLLATE TO "SWEFIN"  
 ```  
   
- コンピューターは既定の照合順序のシーケンスのオプション、シーケンス Xbase ユーザーが慣れています。 現在のコード ページに表示される、文字が並べ替えられています。  
+ マシンは既定の照合順序のシーケンスのオプションであり、シーケンス Xbase のユーザーが精通をします。 文字は、現在のコード ページに表示されるように並べ替えられています。  
   
- [全般] は、米国とヨーロッパのユーザーに適して可能性があります。 現在のコード ページに表示される、文字が並べ替えられています。 FoxPro バージョン 2.5 より前のインデックス作成されている場合を使用して、**上限**に関するページ () または**低い**文字フィールドを一貫性のあるケースに変換する () 関数です。 FoxPro バージョン 2.5 以降の場合は、代わりに、一般的な照合順序のシーケンス オプションを指定を省略できます、**上限**() 変換します。  
+ [全般] は、米国およびヨーロッパのユーザーの方が望ましい可能性があります。 文字は、現在のコード ページに表示されるように並べ替えられています。 FoxPro バージョン 2.5 より前のインデックスが作成されていてを使用して、**上限**() または**低い**() 関数の文字のフィールドを一貫性のある大文字と小文字に変換します。 FoxPro バージョン 2.5 以降は、代わりに、一般的な照合順序のシーケンス オプションを指定し、省略することができます、**上限**() 変換します。  
   
- コンピューターおよび .idx ファイルを作成するかどうか以外の照合順序のシーケンス オプションを指定すると、compact .idx が常に作成されます。  
+ マシンと .idx ファイルを作成するかどうか以外の照合順序オプションを指定する場合は、compact .idx が常に作成します。  
   
  SET("COLLATE") を使用して、現在の照合順序を返します。  
   
- 使用して、データ ソースの照合順序を指定することができます、 [ODBC Visual FoxPro 設定 ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)または Collate キーワードを使用、接続文字列でを使用して[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)です。 これは、次のコマンドを実行する同じです。  
+ 使用してデータ ソースの照合順序を指定することができます、 [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)または Collate キーワードで、接続文字列を使用して[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)します。 これは、次のコマンドを発行するのと同じです。  
   
 ```  
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>解説  
- 部単位印刷設定を使用すると、サポートされている言語のいずれかのアクセント記号付き文字を含む注文テーブルにします。 部単位印刷設定の設定を変更すると、既に開かれているインデックスの照合順序に影響しません。 Visual FoxPro 既存のインデックスを自動的に管理をさまざまな種類の同じフィールドに対しても、インデックスを作成する柔軟性を提供することができます。  
+## <a name="remarks"></a>コメント  
+ 部単位印刷設定は、サポートされている言語のいずれかのアクセント付き文字を含む注文テーブルにできます。 部単位印刷設定の設定を変更すると、既に開かれているインデックスの照合順序に影響しません。 Visual FoxPro には、さまざまな種類の同じフィールドの場合でも、インデックスを作成する柔軟性を提供する既存のインデックスを自動的に維持します。  
   
- たとえば、設定には、[全般] に設定部単位印刷とインデックスの作成し、スペイン語、部単位印刷設定の設定が変更された後で、インデックスには一般的な照合順序が保持されます。  
+ たとえば、[全般] に設定を部単位印刷設定でインデックスを作成し、部単位印刷設定設定がスペイン語に変更された後で、インデックスは一般的な照合順序を保持します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

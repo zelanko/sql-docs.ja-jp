@@ -1,13 +1,11 @@
 ---
-title: レコード セットの例 (VBScript) のレコードを指すポインターを移動 |Microsoft ドキュメント
+title: レコード セットの例 (VBScript) のレコード ポインターの移動 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - MovePrevious method [ADO], VBScript example
 - MoveFirst method [ADO], VBScript example
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff58806c899fbe111204923d0c5daac5b1c1c6c0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6f665cbaee72529e965d2e7f7d2ba7aec31c0154
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674132"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VBScript)
-この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) のレコードポインターを移動する方法[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)指定されたコマンドに基づきます。  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst、MoveLast、MoveNext、MovePrevious メソッドの例 (VBScript)
+この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) のレコードポインターを移動するメソッド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)指定されたコマンドに基づきます。  
   
- 次のコードをメモ帳または別のテキスト エディターに貼り付け切り取ってとして保存して**MoveFirstVBS.asp**です。 結果は、任意のブラウザーで表示できます。  
+ 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けるし、として保存**MoveFirstVBS.asp**します。 任意のブラウザーで結果を表示できます。  
   
 ```  
 <!-- BeginMoveFirstVBS -->  
@@ -188,5 +185,5 @@ ms.locfileid: "35279571"
 ```  
   
 ## <a name="see-also"></a>参照  
- [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

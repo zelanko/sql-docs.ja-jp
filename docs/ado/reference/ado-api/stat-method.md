@@ -1,13 +1,11 @@
 ---
-title: Stat メソッド |Microsoft ドキュメント
+title: Stat メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b900386c1890d54ec61d3bfd2328f3d173c9300
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 127aab5e00247ce5550f25e2a281e190472b0186
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282021"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828230"
 ---
 # <a name="stat-method"></a>Stat メソッド
-に関する情報を取得、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+に関する情報を取得、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,14 +34,14 @@ Long stream.Stat(StatStg, StatFlag)
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**長い**操作のステータスを示す値。  
+ A**長い**操作の状態を示す値。  
   
 #### <a name="parameters"></a>パラメーター  
  *StatStg*  
- ストリームに関する情報が格納される STATSTG 構造体。 実装、 **Stat** ADO ストリーム オブジェクトによって使用されるメソッドがすべての構造体のフィールドでいっぱいになりません。  
+ ストリームに関する情報が格納される、STATSTG 構造。 実装、 **Stat** ADO Stream オブジェクトによって使用されるメソッドがすべての構造体のフィールドでいっぱいになりません。  
   
  *StatFlag*  
- このメソッドで返されない一部のメンバーこれにより、メモリ割り当て操作が節約 STATSTG の構造体を指定します。 値は、STATFLAG 列挙体から取得されます。 STATFLAG 列挙体は 2 つの値  
+ このメソッドが返さないこと、メンバーの一部、メモリ割り当て操作を節約できるよう、STATSTG 構造を指定します。 値は、STATFLAG 列挙から取得されます。 STATFLAG 列挙体が 2 つの値  
   
 |定数|値|  
 |--------------|-----------|  
@@ -52,13 +49,13 @@ Long stream.Stat(StatStg, StatFlag)
 |STATFLAG_NONAME|1|  
   
 ## <a name="remarks"></a>コメント  
- Stat ADO ストリーム オブジェクトに対して実装されるメソッドのバージョンは、STATSTG 構造体の次のフィールドに入力します。  
+ Stat ADO Stream オブジェクトに対して実装されるメソッドのバージョンは、STATSTG 構造体の次のフィールドに入力します。  
   
  *pwcsName*  
- StatFlag 値 STATFLAG_NONAME と 1 つが利用可能な場合、ストリームの名前を含む文字列が指定されませんでした。  
+ STATFLAG_NONAME StatFlag 値とがある場合、ストリームの名前を含む文字列が指定されませんでした。  
   
  *cbSize*  
- ストリームまたはバイト配列のバイト単位のサイズを指定します。  
+ バイト ストリームまたはバイト配列のサイズを指定します。  
   
  *mtime*  
  このストレージ、ストリーム、またはバイト配列の最終変更時刻を示します。  
@@ -67,11 +64,11 @@ Long stream.Stat(StatStg, StatFlag)
  このストレージ、ストリーム、またはバイト配列の作成時間を示します。  
   
  *atime*  
- このストレージ、ストリームまたはバイト配列の最終アクセス時間を示します。  
+ このストレージ、ストリームまたはバイト配列の最終アクセス時刻を示します。  
   
  STATFLAG_NONAME が StatFlag パラメーターで指定されている場合、ストリームの名前は返されません。  
   
- STATFLAG_NONAME が StatFlag パラメーターで指定されていない、使用できる現在のストリーム名がない場合は、この値は E_NOTIMPL になります。  
+ STATFLAG_NONAME が StatFlag パラメーターで指定されていないと、現在のストリームの名前はありません、この値は E_NOTIMPL になります。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

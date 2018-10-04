@@ -1,33 +1,30 @@
 ---
-title: 接続 (ADO - WFC 構文) |Microsoft ドキュメント
+title: 接続 (ADO - WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb4fb9792fc59c6206328b23f97b9b2f3257228b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2f50c116060f5ef842cf359b958f9e6cedb5c716
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276853"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633650"
 ---
-# <a name="connection-ado---wfc-syntax"></a>接続 (ADO - WFC 構文)
+# <a name="connection-ado---wfc-syntax"></a>Connection (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
   
-### <a name="constructor"></a>コンス トラクター  
+### <a name="constructor"></a>コンストラクター  
   
 ```  
 public Connection()  
@@ -48,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **ExecuteUpdate**メソッドは、特殊なケース メソッドを呼び出す、基になる ADO**実行**特定のパラメーターを持つメソッドです。 **ExecuteUpdate**メソッドの戻り値をサポートしていません、 **Recordset**オブジェクト、ため、**実行**メソッドの*オプション*パラメーターは、使用して変更**AdoEnums.ExecuteOptions.NORECORDS**です。 後に、**実行**メソッド完了すると、その更新された*RecordsAffected*にパラメーターが渡される、 **executeUpdate** として最後に返されるメソッド**int**です。  
+ **ExecuteUpdate**メソッドは、特殊なケース メソッドを呼び出す、基になる ADO**実行**特定のパラメーターを持つメソッド。 **ExecuteUpdate**メソッドの戻り値をサポートしていません、**レコード セット**オブジェクト、そのため、**実行**メソッドの*オプション*パラメーターは、使用して変更**AdoEnums.ExecuteOptions.NORECORDS**します。 後に、**実行**メソッドが完了したら、その更新された*RecordsAffected*にパラメーターが渡される、 **executeUpdate**メソッドで、最後に、として返されます**int**します。  
   
 ```  
 public void open()   
@@ -90,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>イベント  
- ADO/WFC イベントの詳細については、次を参照してください。[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)です。  
+ ADO と WFC イベントの詳細については、次を参照してください。[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)します。  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  

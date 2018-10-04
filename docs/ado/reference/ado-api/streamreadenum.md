@@ -1,13 +1,11 @@
 ---
-title: StreamReadEnum |Microsoft ドキュメント
+title: StreamReadEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - StreamReadEnum enumeration [ADO]
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6dca9f57838f938e225790e164870b1bec834bd3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 26ccabf3e73a67c14e7201f26e4ebf739a6352cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644650"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
-ストリーム全体、または次の行をから読み取る必要があるかどうかを指定します、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+ストリーム全体、または次の行をから読み取る必要があるかどうかを指定します、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adReadAll**|-1|既定値です。 以降に現在の位置からのストリームからすべてのバイトを読み取り、 [EOS](../../../ado/reference/ado-api/eos-property.md)マーカー。 これは唯一の有効な**StreamReadEnum**とバイナリ ストリーム値 ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeBinary**)。|  
-|**adReadLine**|-2|ストリームから次の行を読み取ります (によって指定された、 [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)プロパティ)。|  
+|**adReadAll**|-1|既定値です。 以降に現在の位置から、ストリームからすべてのバイトを読み取り、 [EOS](../../../ado/reference/ado-api/eos-property.md)マーカー。 これは唯一の有効な**StreamReadEnum**バイナリ ストリーム値 ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeBinary**)。|  
+|**adReadLine**|-2|ストリームから次の行を読み取ります (で指定された、 [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)プロパティ)。|  
   
-## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
- これらの定数には、対応する ADO/WFC はありません。  
+## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
+ これらの定数には、ADO と WFC 対応はありません。  
   
 ## <a name="applies-to"></a>適用対象  
   

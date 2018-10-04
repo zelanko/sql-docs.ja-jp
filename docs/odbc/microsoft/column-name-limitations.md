@@ -1,38 +1,35 @@
 ---
-title: 列名の制限事項 |Microsoft ドキュメント
+title: 列名の制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f3f384b9a2080ab683c8148effe7c6a9a13fcd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751500"
 ---
 # <a name="column-name-limitations"></a>列名の制限
-列名は、有効な文字 (スペースなど) を含めることができます。 列名に文字、数字、およびアンダー スコアを除く任意の文字が含まれている場合は、逆引用符 (') で囲んだ名前を区切る必要があります。  
+列名は、任意の有効な文字 (スペースなど) を含めることができます。 列名に文字、数字、およびアンダー スコアを除くすべての文字が含まれている場合、バック引用符 (') で囲んで、名前を区切る必要があります。  
   
- Microsoft Access または Microsoft Excel のドライバーを使用する場合は、列名は 64 文字に制限されより長い名前がエラーを生成します。 Paradox ドライバーを使用すると、最大の列名は、25 文字です。 テキストのドライバーを使用すると最大の列名は 64 文字より長い名前は切り捨てられます。  
+ Microsoft Access や Microsoft Excel のドライバーを使用すると、列名は 64 文字に制限されていますし、長い名前は、エラーを生成します。 Paradox ドライバーを使用する場合、最大の列名は、25 文字です。 テキストのドライバーを使用すると最大の列名が、64 文字より長い名前は切り捨てられます。  
   
- DBASE ドライバーを使用すると、127 より大きい ASCII 値を持つ文字はアンダー スコアに変換されます。  
+ DBASE ドライバーを使用する場合は、ASCII 値は 127 を超える文字がアンダー スコアに変換されます。  
   
- Microsoft Excel ドライバーを使用すると、列名が存在する場合は、最初の行であることが必要です。 Microsoft excel を使用する名前、"!"文字は、逆引用符 (') で囲む必要があります。 "!"文字は、「$」文字に変換されますので、"!"文字は名前がバック引用符で囲まれている場合でも、ODBC 名では無効です。 その他のすべての有効な Excel 文字 (パイプ文字を除く (&#124;))、スペースを含めて、列名で使用できます。 区切られた識別子は、Microsoft Excel の列名のスペースを含めるにするために使用する必要があります。 指定されていない列の名前はドライバーで生成された名前、たとえば、"Col1"の最初の列に置き換えられます。  
+ Microsoft Excel のドライバーを使用すると、列名が存在する場合は、ときに、最初の行があります。 Microsoft excel を使用する名前、"!"文字は、バック引用符 (') で囲む必要があります。 "!"文字は、ため、「$」文字に変換されます、"!"文字は名前がバック引用符で囲まれている場合にも ODBC 名では無効です。 その他のすべての有効な Microsoft Excel 文字 (パイプ文字を除く (&#124;)) でスペースを含む列名を使用できます。 区切られた識別子は、Microsoft Excel の列名にスペースを含めるために使用する必要があります。 指定されていない列の名前はドライバーによって生成された名前、たとえば、"Col1"最初の列に置き換えられます。  
   
- パイプ文字 (&#124;) バック引用符で囲まれた名前が囲まれているかどうかどうか、列名では使用できません。  
+ パイプ文字 (&#124;) か名前がバック引用符で囲まれているかどうか、列名では使用できません。  
   
- テキストのドライバーを使用すると、ドライバーは、列名が指定されていない場合、既定の名前を提供します。 たとえば、ドライバーは、最初の列 F1、F2、2 列目となどを呼び出します。
+ テキストのドライバーを使用する場合、ドライバーは、列名が指定されていない場合、既定の名前を提供します。 たとえば、ドライバーは、最初の列 F1、F2、2 番目の列およびなどを呼び出します。

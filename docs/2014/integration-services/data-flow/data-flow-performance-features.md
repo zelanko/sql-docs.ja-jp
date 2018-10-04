@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a97e86b66efee24757f7f09f04e7016a93417c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049512"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -51,7 +48,7 @@ ms.locfileid: "37287666"
   
 -   タスクが使用するバッファーの既定のサイズを定義するには、DefaultBufferSize プロパティを設定します。各バッファーの最大行数を定義するには、DefaultBufferMaxRows プロパティを設定します。 既定のバッファー サイズは 10 MB、最大のバッファー サイズは 100 MB です。 既定の最大行数は 10,000 行です。  
   
--   EngineThreads プロパティを設定することによって、実行中にタスクが使用できるスレッド数を設定します。 このプロパティは、使用するスレッドの数に関する提案をデータ フロー エンジンに提供します。 既定値は 10 ですが、最小値は 3 です。 ただし、エンジンはこのプロパティの値に関係なく、必要以上のスレッドは使用しません。 また、エンジンは、同時実行の問題が発生しないように、このプロパティで指定されている数を超えるスレッドを使用する場合もあります。  
+-   EngineThreads プロパティを設定することによって、実行中にタスクが使用できるスレッド数を設定します。 このプロパティは、使用するスレッドの数に関する提案をデータ フロー エンジンに提供します。 既定値は 10 ですが、最小値は 3 です。 ただし、エンジンはこのプロパティの値に関係なく、必要以上のスレッドは使用しません。 また、エンジンは、コンカレンシーの問題が発生しないように、このプロパティで指定されている数を超えるスレッドを使用する場合もあります。  
   
 -   データ フロー タスクを最適化モードで実行するかどうかを示します (RunInOptimizedMode プロパティ)。 最適化モードでは、未使用の列、出力、およびコンポーネントをデータ フローから削除することによって、パフォーマンスが向上します。  
   

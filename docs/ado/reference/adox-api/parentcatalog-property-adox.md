@@ -1,13 +1,11 @@
 ---
-title: ParentCatalog プロパティ (ADOX) |Microsoft ドキュメント
+title: ParentCatalog プロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -40,27 +38,26 @@ f1_keywords:
 helpviewer_keywords:
 - ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dd0c1e0ccc1751e79d6ccfdafe89523ae8e8e00
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 10d6715a19212c87ece9c890ee99516571713d4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637060"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog プロパティ (ADOX)
 プロバイダー固有のプロパティへのアクセスを提供するテーブル、ユーザー、または列のオブジェクトの親のカタログを指定します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定を返します、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)オブジェクト。 設定**ParentCatalog**開いた**カタログ**テーブルまたは列を追加する前に、プロバイダー固有のプロパティにアクセスできるように、**カタログ**コレクション。  
+ 設定し、返します、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)オブジェクト。 設定**ParentCatalog**開いた**カタログ**テーブルまたは列を追加する前に、プロバイダー固有のプロパティにアクセスできるように、**カタログ**コレクション。  
   
 ## <a name="remarks"></a>コメント  
- 一部のデータ プロバイダーの作成時のみ書き込まれるプロバイダー固有のプロパティ値を許可する: つまり、ときにテーブルまたは列が追加されますをその**カタログ**コレクション。 これらのオブジェクトを追加する前にこれらのプロパティにアクセスする、**カタログ**を指定して、**カタログ**で、 **ParentCatalog**プロパティ最初。  
+ 一部のデータ プロバイダーは、作成時にのみ書き込まれるプロバイダー固有のプロパティの値を許可する: は、ときにテーブルまたは列が追加されますをその**カタログ**コレクション。 これらのオブジェクトを追加する前にこれらのプロパティにアクセスする、**カタログ**、指定、**カタログ**で、 **ParentCatalog**プロパティ最初。  
   
- テーブルまたは列は別に追加するときにエラーが発生した**カタログ**よりも、 **ParentCatalog**です。  
+ テーブルまたは列は別に追加するときにエラーが発生した**カタログ**よりも、 **ParentCatalog**します。  
   
 ## <a name="applies-to"></a>適用対象  
   

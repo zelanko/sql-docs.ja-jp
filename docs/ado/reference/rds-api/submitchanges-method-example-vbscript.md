@@ -1,36 +1,33 @@
 ---
-title: SubmitChanges メソッドの例 (VBScript) |Microsoft ドキュメント
+title: SubmitChanges メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SubmitChanges method [ADO], VBScript example
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a9f1d1455d0cfa393e40640ad188976d45532a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 521b6945c993aa699c09dc2dfc398ac07d4bde31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32807005"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707610"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- 次のコード フラグメントは、使用する方法を示します、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)メソッドを[.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
+ 次のコード フラグメントは、使用する方法を示します、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)メソッドを[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
- この例をテストして、通常の ASP ドキュメントにこのコードを貼り付けますを切り取ってという名前を付けます**SubmitChangesCtrlVBS.asp**です。 ASP スクリプトは、サーバーで識別されます。  
+ この例をテストする切り取りと通常 ASP ドキュメントにこのコードを貼り付けるし、名前を付けます**SubmitChangesCtrlVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

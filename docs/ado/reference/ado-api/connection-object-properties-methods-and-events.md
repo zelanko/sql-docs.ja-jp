@@ -1,31 +1,28 @@
 ---
-title: 接続オブジェクトのプロパティ、メソッド、およびイベント |Microsoft ドキュメント
+title: 接続オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a414ffc7fea1a269024a56dedd7221c2f5c5fda1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744030"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>接続オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [属性プロパティ](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes プロパティ](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [CommandTimeout プロパティ](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
   
@@ -37,7 +34,7 @@ ms.locfileid: "35276951"
   
  [DefaultDatabase プロパティ](../../../ado/reference/ado-api/defaultdatabase-property.md)  
   
- [Errors コレクション](../../../ado/reference/ado-api/errors-collection-ado.md)  
+ [エラーのコレクション](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
  [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)  
   
@@ -67,7 +64,7 @@ ms.locfileid: "35276951"
 ## <a name="events"></a>イベント  
  [BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete し、切断イベント](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [ConnectComplete および Disconnect イベント](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [ExecuteComplete イベント](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   
@@ -75,7 +72,7 @@ ms.locfileid: "35276951"
   
  [WillConnect イベント](../../../ado/reference/ado-api/willconnect-event-ado.md)  
   
- [アクティビ ティー イベント](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+ [WillExecute イベント](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

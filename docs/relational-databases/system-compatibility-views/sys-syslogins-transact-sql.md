@@ -1,14 +1,11 @@
 ---
-title: sys.syslogins (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.syslogins (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslogins_TSQL
@@ -21,15 +18,15 @@ helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 924ae2b530c719085e21d7b045e4a872255b3009
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 599781eb8d06ac08a1c13af1b17523b56b39cf2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755202"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +38,10 @@ ms.lasthandoff: 05/04/2018
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**sid**|**varbinary(85)**|セキュリティ識別子です。|  
-|**ステータス**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|ログインが追加された日付です。|  
 |**updatedate**|**datetime**|ログインが更新された日付です。|  
 |**accdate**|**datetime**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -62,8 +59,8 @@ ms.lasthandoff: 05/04/2018
 |**isntname**|**int**|1 = ログインは Windows ユーザーまたはグループです。<br /><br /> 0 = ログインは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインです。|  
 |**isntgroup**|**int**|1 = ログインは Windows グループです。|  
 |**isntuser**|**int**|1 = ログインは Windows ユーザーです。|  
-|**sysadmin**|**int**|1 = ログインのメンバーである、 **sysadmin**サーバーの役割です。|  
-|**securityadmin**|**int**|1 = ログインのメンバーである、 **securityadmin**サーバーの役割です。|  
+|**sysadmin**|**int**|1 = ログインのメンバーである、 **sysadmin**サーバーの役割。|  
+|**securityadmin**|**int**|1 = ログインのメンバーである、 **securityadmin**サーバーの役割。|  
 |**serveradmin**|**int**|1 = ログインのメンバーである、 **serveradmin**固定サーバー ロール。|  
 |**setupadmin**|**int**|1 = ログインのメンバーである、 **setupadmin**固定サーバー ロール。|  
 |**processadmin**|**int**|1 = ログインのメンバーである、 **processadmin**固定サーバー ロール。|  

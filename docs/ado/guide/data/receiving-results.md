@@ -1,33 +1,30 @@
 ---
-title: 結果を受け取る |Microsoft ドキュメント
+title: 結果の受信 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 950a4d88d525afd713209982cbeaa77ed060395a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 648fd220988a0b32837ddcdf2b4c1c23de5e9f69
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272401"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657110"
 ---
-# <a name="receiving-results"></a>結果を受信
-ADO ではほとんどのコマンドは、呼び出し元に返される一部の情報とは、します。 行セットを返すコマンドの結果の受信、**レコード セット**はおそらく、最も使用されている ADO オブジェクトのオブジェクト。  
+# <a name="receiving-results"></a>結果の受信
+ADO ではほとんどのコマンドは、呼び出し元に返される情報はいくつかの結果します。 行セットを返すコマンドの結果を受信してで、**レコード セット**でおそらく、最も使用されている ADO オブジェクトのあるオブジェクト。  
   
- いくつかの方法でデータを受信する、 **Recordset**オブジェクトを次の呼び出しなど、データ ソースから。  
+ いくつかの方法でデータを受信する、 **Recordset**次の呼び出しなど、データ ソースからのオブジェクト。  
   
 -   [Connection.Execute メソッド](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
@@ -39,8 +36,8 @@ ADO ではほとんどのコマンドは、呼び出し元に返される一部�
   
 -   [Connection.StoredProcedure](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
- 内のデータを受信、 **Recordset**オブジェクトでの参加による、データの取得のプロセスは終了、**接続**オブジェクトおよび**コマンド**オブジェクトを暗黙的にまたは明示的にします。 システムでは、一般的なクライアント/サーバー アプリケーション、データの取得のプロセス全体が必要です、ラウンド トリップ ネットワーク経由で入力ごとに**Recordset**です。  
+ 内のデータの受信、**レコード セット**オブジェクトでの参加で、データの取得のプロセスは終了です、**接続**オブジェクトと**コマンド**オブジェクトを暗黙的にまたは明示的にします。 一般的なクライアント/サーバー アプリケーション システムでのデータの取得のプロセス全体が必要ですラウンド トリップ ネットワーク経由で入力ごとに**Recordset**します。  
   
- 1 つ以上の結果セットを受信する手段がいくつか作成する必要がありますのラウンド トリップにカプセル化されたデータ セットごとに 1 つ、ネットワーク経由で、 **Recordset**オブジェクト。 低速か混雑しているネットワークでは、ラウンド トリップの数を減らすために役立つアプリケーションのパフォーマンスを向上させます。 一部のプロバイダーが複数の受信には、サポートを提供するそのため、 **Recordset**1 回のラウンド トリップで s。 これは、次のトピックについて説明します。  
+ カプセル化されている各データ セットのいずれかと、ネットワーク経由でいくつかのようにすることになることを意味ラウンド トリップを 1 つ以上の結果セットが表示される、 **Recordset**オブジェクト。 低速または混雑しているネットワークでは、ラウンド トリップの数を減らすことに役立つアプリケーションのパフォーマンスを向上します。 一部のプロバイダーが複数の受信のサポートを提供するそのため、 **Recordset**1 回のラウンド トリップで s。 これは、次のトピックについて説明します。  
   
 -   [複数のレコードセットの受信](../../../ado/guide/data/receiving-multiple-recordsets.md)
