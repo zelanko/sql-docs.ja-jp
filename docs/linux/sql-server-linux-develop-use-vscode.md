@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: be5a40a904389979c1646aab9d8b4420ac71356a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7775ece865eea62aad52f1c942c522ad21ed1108
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084744"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686620"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio Code を使用して SQL Server の Transact-SQL スクリプトを作成し、実行する
 
@@ -28,7 +26,7 @@ ms.locfileid: "39084744"
 Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカルなコード エディターで、拡張機能をサポートします。 [VS Code 用の **mssql** 拡張機能] により、SQL Server に接続し、 Transact-SQL (T-SQL) でクエリを行い、結果を表示することができます。
 
 ## <a name="install-vs-code"></a>VS Code をインストールします。
-1. VS Code をまだインストールしていない場合[ダウンロードし、VS Code をインストール]コンピューターにします。
+1. VS Code をまだインストールしていない場合[ダウンロードして、VS Code のインストール]コンピューターにします。
 
 2. VS Code を起動します。
 
@@ -60,7 +58,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
    >   ```
    
    > [!NOTE]
-   > Windows 8.1、Windows Server 2012、またはより下位のバージョンをダウンロードしてインストールする必要があります、 [Windows 10 Universal C Runtime]します。 ダウンロードして、zip ファイルを開きます。 (.Msu ファイル)、現在の OS 構成を対象とする、インストーラーを実行します。
+   > Windows 8.1、Windows Server 2012、またはより下位のバージョンをダウンロードしてインストールする必要があります、 [Windows 10 ユニバーサル C ランタイム]します。 ダウンロードして、zip ファイルを開きます。 (.Msu ファイル)、現在の OS 構成を対象とする、インストーラーを実行します。
 
 ## <a name="create-or-open-a-sql-file"></a>作成したり、SQL ファイルを開く
 
@@ -248,7 +246,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 500px;" />
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 実際のシナリオでは、保存および実行する必要のあるスクリプトを作成する場合があります (管理または大規模な開発プロジェクトの一部として) 以降。 ここでスクリプトを保存することができます、 **.sql**拡張機能。
 
@@ -259,7 +257,7 @@ T-SQL に慣れていない場合は、次を参照してください。[チュ�
 VS Code の使用に関する詳細については、次を参照してください。、 [Visual Studio Code のドキュメント](https://code.visualstudio.com/docs)します。
 
 [**mssql** VS Code 拡張機能]:https://aka.ms/mssql-marketplace
-[ダウンロードし、VS Code をインストール]:https://code.visualstudio.com/Download
+[ダウンロードして、VS Code のインストール]:https://code.visualstudio.com/Download
 [.Net Core のインストラクション]:https://www.microsoft.com/net/core
 [接続プロファイルの管理]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [接続のトラブルシューティングに関する推奨事項]:./sql-server-linux-troubleshooting-guide.md#connection
@@ -267,6 +265,6 @@ VS Code の使用に関する詳細については、次を参照してくださ
 [チュートリアル: Transact-SQL ステートメントの作成]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL リファレンス (データベース エンジン)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
-[Windows 10 Universal C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
+[Windows 10 ユニバーサル C ランタイム]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [拡張機能のオプションのカスタマイズ]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
 [mssql 拡張機能プロジェクトの wiki]: https://github.com/Microsoft/vscode-mssql/wiki

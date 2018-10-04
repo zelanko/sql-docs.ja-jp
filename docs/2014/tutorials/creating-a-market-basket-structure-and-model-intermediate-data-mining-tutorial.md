@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 659b7a4e-f687-44d9-a60a-86490ccbf90f
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67d047a9bb78a8c85d59131407cc85c6aa4769f7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 983f5547f816785e592aa27c442db6a92b519cae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177430"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Market Basket 構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
   前の作業では、データ ソース ビューを作成しました。次の作業では、データ マイニング ウィザードを使用して、新しいマイニング構造を作成します。 この作業では、[!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション アルゴリズムに基づくマイニング構造とマイニング モデルを作成します。  
@@ -59,11 +56,11 @@ ms.locfileid: "37238132"
   
     |[列]|コンテンツの種類|データ型|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Text|  
-    |Order Number|Key|Text|  
-    |Region|Discrete|Text|  
+    |IncomeGroup|Discrete|テキスト|  
+    |Order Number|Key|テキスト|  
+    |Region|Discrete|テキスト|  
     |vAssocSeqLineItems|||  
-    |[モデル]|Key|Text|  
+    |[モデル]|Key|テキスト|  
   
 12. **テストの設定を作成**ページのオプションの既定値**テスト用データの割合**は 30% です。 これを変更**0**します。 **[次へ]** をクリックします。  
   

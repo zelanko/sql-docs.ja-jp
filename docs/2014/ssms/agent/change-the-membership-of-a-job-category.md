@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - members [SQL Server], job categories
 ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ab51f2eac94875b510d9f998120e47fdd9b6180
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f956a6f87142a9b9bae2d8398d69e3fd3ae08c9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106172"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でジョブ カテゴリのメンバーシップを変更する方法について説明します。  

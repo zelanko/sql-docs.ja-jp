@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], read/write
 - databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1e082e96f5932fa56d4b71eea90d4ae9083cab8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb52c0d634a93a92d45f10c5bdeb5e2123b30106
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082692"
 ---
 # <a name="database-readwritemodes"></a>データベースの ReadWriteMode
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) がデータベースを、読み書き可能から読み取り専用に変更したり、読み取り専用から読み書き可能に変更したりすることは少なくありません。 こうした状況は、ソリューションのスケールアウトやパフォーマンスの向上のために 1 つのデータベース フォルダーを複数のサーバー間で共有するなど、ビジネス上のニーズによって頻繁に発生します。 このような場合は、`ReadWriteMode` データベース プロパティを使用すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA はデータベースの動作モードを容易に変更できます。  

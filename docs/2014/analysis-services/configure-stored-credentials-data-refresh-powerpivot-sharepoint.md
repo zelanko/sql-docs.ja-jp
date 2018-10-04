@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e2e6287e4631a2179fdfcac6dfc28506b21ef9cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149422"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>PowerPivot データ更新用の保存された資格情報の構成 (PowerPivot for SharePoint)
   使用する資格情報を保存するために、対象アプリケーションを Secure Store Service で作成してあれば、PowerPivot データ更新ジョブは任意の Windows ユーザー アカウントで実行できます。 同様に、PowerPivot for Excel のデータを最初にインポートするときに使用するものとは異なるデータベース ログインを提供する場合は、その資格情報を Secure Store Service の対象アプリケーションにマップし、データ更新スケジュールでその対象アプリケーションを指定できます。  

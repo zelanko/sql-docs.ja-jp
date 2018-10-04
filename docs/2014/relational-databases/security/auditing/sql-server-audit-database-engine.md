@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - audit
@@ -17,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022070"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175352"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
   [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] のインスタンスや個々のデータベースの *監査* を行うためには、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で発生するイベントの追跡およびログ記録が必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査では、サーバー レベルのイベントのためのサーバー監査仕様とデータベース レベルのイベントのためのデータベース監査仕様を含めることができる、サーバー監査を作成できます。 監査イベントは、イベント ログまたは監査ファイルへ書き込むことができます。  
@@ -104,7 +102,7 @@ ms.locfileid: "43022070"
   
 4.  Windows **イベント ビューアー**、 **[ログ ファイルの表示]**、または fn_get_audit_file 関数を使用して、監査イベントを閲覧します。  
   
- 詳細については、「 [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md) 」および「 [Create a Server Audit and Database Audit Specification](create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
+ 詳細については、「 [サーバー監査およびサーバー監査の仕様を作成する](create-a-server-audit-and-server-audit-specification.md) 」および「 [サーバー監査およびデータベース監査の仕様を作成する](create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
   
 ## <a name="considerations"></a>考慮事項  
  監査の開始時にエラーが発生すると、サーバーが起動しなくなります。 その場合にサーバーを起動するには、コマンド ラインで **–f** オプションを使用します。  

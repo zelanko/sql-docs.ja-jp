@@ -1,50 +1,47 @@
 ---
-title: 名前のプロパティ-動的 (ADO) の形状変更 |Microsoft ドキュメント
+title: Reshape Name プロパティ-動的 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4752609469ecad3a3a6631584e120de8cc4a7575
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6a07ec878b1198fbf23bfb251460d83869313c83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696831"
 ---
-# <a name="reshape-name-property-dynamic-ado"></a>名前のプロパティ-動的 (ADO) の形状変更します。
-名前を指定、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
+# <a name="reshape-name-property-dynamic-ado"></a>Reshape Name プロパティ - 動的 (ADO)
+名前を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**文字列**を表す値の名前、 **Recordset**です。  
+ 返します、**文字列**値の名前、 **Recordset**します。  
   
 ## <a name="remarks"></a>コメント  
- 接続のまたはまでの間、名前を保持、 **Recordset**が閉じられます。  
+ まで、または接続の間、名前を保持、 **Recordset**が閉じられました。  
   
- **変形名前**プロパティは、再整形の機能で使用するためのもので、主に、 [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)サービス プロバイダー。 名前は、再整形に参加する一意である必要があります。  
+ **Reshape Name**プロパティは、再整形の機能で使用する主な対象は、 [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)サービス プロバイダー。 名前は、再整形に参加するで一意である必要があります。  
   
- このプロパティは読み取り専用、設定することがない直接とき、 **Recordset**を作成します。 などの場合の句、図形が作成されます、**レコード セット**を使用してエイリアス名を提供し、 **AS**エイリアスが割り当てられているキーワード、**変形名前**プロパティです。 エイリアスが宣言されていない場合、**変形名前**プロパティには、データの整形を行うサービスによって生成される一意の名前が割り当てられます。 エイリアス名は、既存の名前と同じ場合**レコード セット**、どちらも**Recordset**うちの 1 つが解放されるまでに形状変更できます。 一意の名前を設定して、既定の動作を変更することができます、[変形名前](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)プロパティを ADO 接続を**True**です。 必要に応じて、一意性を保証する場合は、割り当てられたユーザー名を変更するサービスのアクセス許可を整形するデータは、このプロパティを設定します。 形状を変更の詳細については、次を参照してください。 [OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)です。  
+ このプロパティは読み取り専用設定することがない直接ときに、 **Recordset**が作成されます。 などの場合、句の Shape コマンドが作成されます。 を**レコード セット**を使用して、エイリアス名を割り当てます、 **AS**エイリアスが割り当てられているキーワード、、 **Reshape Name**プロパティ。 エイリアスが宣言されていない場合、 **Reshape Name**プロパティには、データのシェイプ サービスによって生成された一意の名前が割り当てられます。 エイリアス名は、既存の名前と同じ場合**レコード セット**、 **Recordset**うち 1 つが解放されるまでに形状変更できます。 一意の名前を設定して、既定の動作を変更することができます、 [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)プロパティを ADO 接続を**True**します。 データのシェイプの一意性を確保するために必要な場合は、割り当てられているユーザーの名前を変更するサービスのアクセス許可は、このプロパティを設定します。 形状を変更の詳細については、次を参照してください。 [OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)します。  
   
- 使用して、**変形名前**プロパティを参照するときに、**レコード セット**Shape コマンド、または Data Shaping Service によって作成されたため、名前がわからない場合。 その場合は、コマンドによって返される文字列を連結することにより図形コマンドを生成する可能性があります、**変形名前**プロパティです。  
+ 使用して、 **Reshape Name**プロパティを参照するときに、**レコード セット**図形コマンドで、または Data Shaping Service によって作成されたため、名前を判断できない場合。 その場合は、コマンドによって返される文字列を連結することによって SHAPE コマンドを生成する可能性があります、 **Reshape Name**プロパティ。  
   
- **名前の形状変更**に動的なプロパティが追加、 **Recordset**オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションときに、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) にプロパティが設定されています。**adUseClient**です。  
+ **名前を変形**動的プロパティに追加、**レコード セット**オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションと、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) に設定されて**adUseClient**します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Microsoft データ シェイプ OLE DB (ADO サービス プロバイダー) 用サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
- [一般的な図形コマンド](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Microsoft のデータ シェイプの OLE DB (ADO サービス プロバイダー) のサービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
+ [一般的な shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

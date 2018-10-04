@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63c244c74ac6039867834b7c289fd02de2e03b17
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: baca8a9c339ff55ad25f390ac73a2957fdd26447
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119372"
 ---
 # <a name="new-linked-report-page-report-manager"></a>[新しいリンク レポート] ページ (レポート マネージャー)
   [新しいリンク レポート] ページではリンク レポートを作成できます。 リンク レポートは、独自の設定やプロパティが含まれているレポートですが、別のレポートのレポート定義にリンクしています。 リンク レポートは、特定のグループまたはユーザーによって異なる基本レポート (たとえば、パラメーターとして指定された地域コードに基づいて別のデータを返す地域レポート) がある場合に役立ちます。 通常、リンク レポートは、各レポート インスタンスに異なるパラメーター値を設定して保存する場合に、パラメーター化されたレポートから作成します。 ただし、ユーザーがアクセスできる任意のレポートからリンク レポートを作成することもできます。  

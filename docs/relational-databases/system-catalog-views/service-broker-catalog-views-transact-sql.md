@@ -1,14 +1,11 @@
 ---
-title: サービスの Broker のカタログ ビュー (TRANSACT-SQL) |Microsoft ドキュメント
+title: Service Broker のカタログ ビュー (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Service Broker, catalog views
 - catalog views [SQL Server], Service Broker
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a4c80c642ab550ca46dd439ec92ff71cda7569f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 384bdc9bf2da72c32f309e1cdfbb4e624ec465a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649060"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker カタログ ビュー (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "33178658"
 |||  
 |-|-|  
 |[sys.conversation_endpoints](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)|[sys.service_contract_usages](../../relational-databases/system-catalog-views/sys-service-contract-usages-transact-sql.md)|  
-|[sys.conversation_groups](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)|[sys.service_contracts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)|  
+|[sys.conversation_groups](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)|[結合する&#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)|  
 |[sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)|[sys.service_message_types](../../relational-databases/system-catalog-views/sys-service-message-types-transact-sql.md)|  
 |[sys.message_type_xml_schema_collection_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-message-type-xml-schema-collection-usages-transact-sql.md)|[sys.service_queue_usages](../../relational-databases/system-catalog-views/sys-service-queue-usages-transact-sql.md)|  
 |[sys.remote_service_bindings](../../relational-databases/system-catalog-views/sys-remote-service-bindings-transact-sql.md)|[sys.service_queues &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.tablix.visibility.f1
@@ -35,16 +33,15 @@ f1_keywords:
 - "10043"
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8579071257a3f4026a111aaf16d7898bbd28cbb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf80cbb87916ccf6887f3d6508126c5770d7666c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323902"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220852"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、および一覧は、行と列で構成されたセルにレポート データを表示するデータ領域です。 セルには通常、テキスト、日付、数字などのテキスト データが含まれていますが、ゲージ、グラフ、または画像などのレポート アイテムも含めることができます。 テーブル、マトリックス、および一覧をまとめて Tablix データ領域と呼ぶことがあります。  
@@ -188,8 +185,8 @@ ms.locfileid: "37323902"
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)   
  [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)   
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)  
   

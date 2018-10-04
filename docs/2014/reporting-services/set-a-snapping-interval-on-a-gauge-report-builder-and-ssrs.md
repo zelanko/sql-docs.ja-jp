@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0ece7297-6e2f-47fb-835d-b9e9cce53fe2
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48dc33f7bf80aacb757e990987a58c86f932ccb4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fecae9ab27cdb354a4f1dad13f8e873e181ea789
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219982"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)
   スナップ間隔とは、値を丸める際の倍数を定義するものです。 既定では、ゲージは、データ ペインで指定したフィールドの正確な値を指し示します。 ただし必要であれば、事前に設定した間隔に合わせて、正確な値を切り上げたり、切り捨てたりすることができます。 たとえば、ゲージの値が 34.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 35 になります。 ゲージの値が 31.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 30 になります。  

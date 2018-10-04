@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.schema.databasechangesdetected
 - vdtsql.chm:65543
 - vdtsql.chm:65554
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63105d57b0c63f5877fd5af6b93f86b4f3b3121e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a28783185fd85ed2bb5e60867164f65b80dd3f0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816068"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174082"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>[データベースの変更を確認] ダイアログ ボックス (Visual Database Tools)
   このダイアログは、データベース ダイアグラムまたは選択したテーブルを保存しようとしたときに、保存によって影響を受けるデータベース オブジェクトの一部がデータベースの最新の内容と異なる場合に表示されます。 このダイアログ ボックスに表示された変更を受け入れると、ダイアグラムに一致するようにデータベースが更新され、他のユーザーが加えた変更が上書きされます。  

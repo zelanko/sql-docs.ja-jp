@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - forced service [SQL Server]
 - database mirroring [SQL Server], forcing service
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7312e93b61a4e4fca12f237b5eda073767b135ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef1a7101a0bd16c3ee2868f47a8dc15f29092621
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101422"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>データベース ミラーリング セッションでのサービスの強制 (Transact-SQL)
   高パフォーマンス モードおよび自動フェールオーバーを伴わない高い安全性モードでは、ミラー サーバーが使用可能であるときにプリンシパル サーバーで障害が発生した場合、データベース所有者はサービスを強制的にミラー データベースにフェールオーバーして、データベースを直ちに使用可能な状態にできます (ただし、データが損失する場合があります)。 この方法は、次のすべての条件に一致する場合にのみ使用できます。  

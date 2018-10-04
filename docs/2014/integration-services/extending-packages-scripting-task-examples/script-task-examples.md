@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5fc17272161d3f93618ddd4e559bb630efdd50ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc1b364fba3e6807672ecf72a65d7319f6a5cb45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100122"
 ---
 # <a name="script-task-examples"></a>スクリプト タスクの例
   スクリプト タスクは複数の用途を持つツールで、パッケージで使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に組み込まれているタスクでは満たせないほとんどすべての要件を満たすことができます。 このトピックでは、使用できる機能の一部を示すスクリプト タスクのコード例について説明します。  
@@ -81,6 +78,6 @@ ms.locfileid: "37322602"
  [スクリプト タスクでのログ記録](../extending-packages-scripting/task/logging-in-the-script-task.md)  
  タスクによって処理されたアイテム数を、有効なログ プロバイダーに記録します。  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
   

@@ -1,13 +1,11 @@
 ---
-title: 'Jet: 日付、時刻、およびタイムスタンプのリテラル |Microsoft ドキュメント'
+title: 'Jet: 日付、時刻、およびタイムスタンプのリテラル |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - literals [ODBC], SQL grammar
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - timestamp literals [ODBC]
 - time literals [ODBC]
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25064ec8edc48f99c1e68cd7df7a728ffa7673de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2325cd7e4a10e91f351aa2107c64c0978b843fa6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825840"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet: 日付、時刻、およびタイムスタンプのリテラル
-相互運用性を最大にするため、アプリケーションは、エスケープ句の構文を使用して ODBC 正規の形式で日付リテラルを渡す必要があります。  
+相互運用性を最大に、アプリケーションは、エスケープ句の構文を使用して ODBC 正規の形式で日付リテラルを渡す必要があります。  
   
--   日付リテラルの {d '*値*'} ここで、 *valu*電子メール形式は、"yyyy mm dd"  
+-   日付リテラル値、{d '*値*'} ここで、 *valu*e は"yyyy mm dd"の形式  
   
--   時刻リテラルの {t '*値*'} ここで、 *valu*"hh:mm:ss"形式では、e  
+-   時刻のリテラル値、{t '*値*'} ここで、 *valu*e は"hh:mm:ss"の形式  
   
- タイムスタンプのリテラルの {ts'*値*'} ここで、 *valu*電子メールの形式は"- yyyy-mm-dd hh:mm:ss [. f.]"です。
+ タイムスタンプのリテラルの {ts'*値*'} ここで、 *valu*e がフォームでは"- yyyy-mm-dd hh:mm:ss [. f.]"。

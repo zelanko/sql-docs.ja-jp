@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dc51a7149b1af55db3a79bc1dae811a2480e351f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 5ca907bb6ce3a1f8e298c5ecefa920815cf6a8be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712395"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA を Sybase Adaptive Server Enterprise (ASE) の構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の構文。  

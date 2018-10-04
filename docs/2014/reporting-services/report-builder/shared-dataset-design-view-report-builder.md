@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aff516055e1bfce27408aed1d0779d3956424b82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057771"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共有データセット デザイン ビュー (レポート ビルダー)
   共有データセット デザイン ウィンドウは、他のユーザーと共有できるデータセット クエリの作成に役立ちます。 このウィンドウで、共有データ ソースの選択、共有データセットのプロパティの指定、およびクエリ デザイナーによるクエリの作成を行います。  
@@ -90,7 +87,7 @@ ms.locfileid: "37249752"
   
  レポートにパラメーターが含まれている場合は、すべてのパラメーターに既定値があるときにのみレポートを自動的に実行できます。 パラメーターに既定値がない場合にレポートを実行するときは、パラメーターの値を選択してから、 **[実行]** タブの **[レポートの表示]** をクリックする必要があります。  
   
- 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 
   
@@ -101,7 +98,7 @@ ms.locfileid: "37249752"
   
 ## <a name="see-also"></a>参照  
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

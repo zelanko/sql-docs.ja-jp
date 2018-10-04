@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f19732c1287b1c915f8a49adc9f12938ebb9a744
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079142"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
@@ -51,7 +48,7 @@ ms.locfileid: "37273358"
 ## <a name="parallelism"></a>並列処理  
  並列実行できる ODBC 入力先コンポーネントの数に制限はありません。これは、同一テーブル上にある場合または異なるテーブル上にある場合、同一コンピューター上で実行する場合または異なるコンピューター上で実行する場合のいずれにも該当します (ただし、通常のグローバルなセッション制限を除きます)。  
   
- ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介する同時接続数が制限される場合があります。 これらの制限によって、ODBC 入力先で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
+ ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介するコンカレント接続数が制限される場合があります。 これらの制限によって、ODBC 入力先で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
   
  また、同一テーブルへの同時読み込みの場合、標準のレコード ロックのためにパフォーマンスが低下することがある点についても理解しておく必要があります。 これは、読み込まれているデータとテーブルの編成によって異なります。  
   

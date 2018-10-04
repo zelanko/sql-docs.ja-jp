@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SQL Server Native Client]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cbabe38f62a9bd581bd9e41ab508336332bc3983
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bba3322fdd55116cb872a8653a515ac449f5a112
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417951"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150994"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client のシステム要件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ アクセス機能 (MARS など) を使用するには、次のソフトウェアがインストールされている必要があります。  
@@ -69,12 +66,12 @@ ms.locfileid: "37417951"
   
 |データ型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC、<br /><br /> DataTypeCompatibility=80 が設定された SQL Server Native Client OLE DB アプリケーション|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<8 kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|image|  
-|varchar(max)|varchar|varchar|Text|  
+|CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
+|varbinary(max)|varbinary|varbinary|イメージ|  
+|varchar(max)|varchar|varchar|テキスト|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
-|CLR UDT (8 KB を超える)|udt|varbinary|image|  
+|CLR UDT (8 KB を超える)|udt|varbinary|イメージ|  
 |日付|日付|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

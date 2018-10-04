@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c1f322ee3d775605a0c9636c5da060044d35006
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259568"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154499"
 ---
 # <a name="use-a-template-to-create-an-action"></a>テンプレートを使用したアクションの作成
   キューブ デザイナーの **[アクション]** ビューには、一般的なアクションの作成に使用する数多くのテンプレートが用意されています。 キューブ デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  

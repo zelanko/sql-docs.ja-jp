@@ -1,13 +1,11 @@
 ---
-title: 実行、クエリを再実行、およびメソッドの例 (VBScript) をオフ |Microsoft ドキュメント
+title: Execute、Requery、および Clear のメソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - Clear method [ADO], VBScript example
 - Requery method [ADO], VBScript example
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 900bacb5c71a5a3ba7d55fa6d3e2d84d6e1c0e60
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 48028d073c7ab3d730a0af5c433d1a8f0c8f2de8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278081"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727130"
 ---
-# <a name="execute-requery-and-clear-methods-example-vbscript"></a>実行、クエリを再実行、およびメソッドの例 (VBScript) をオフに
-この例で、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトおよび[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 でも使用、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得する方法を[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[オフ](../../../ado/reference/ado-api/clear-method-ado.md)の内容を消去するメソッドを[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 ExecuteCommand と PrintOutput の手順は、この手順を実行する必要があります。  
+# <a name="execute-requery-and-clear-methods-example-vbscript"></a>Execute、Requery、および Clear のメソッドの例 (VBScript)
+この例では、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得するメソッドを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と[オフ](../../../ado/reference/ado-api/clear-method-ado.md)メソッドの内容を消去する、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 ExecuteCommand と PrintOutput プロシージャは、この手順を実行する必要があります。  
   
- アクティブ サーバー ページ (ASP) で次の例を使用します。 この完全に機能の使用例を表示するには、必要がありますか、データがある、C:\Program files \microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にある AdvWorks.mdb (SDK のサンプルと共にインストールされた) のソースまたはするコード例では、パスを編集このファイルの実際の場所を反映します。 これは、Microsoft Access データベース ファイルです。  
+ 次の例を Active Server Page (ASP) で使用します。 この完全に機能の例を表示するには、AdvWorks.mdb (SDK のサンプルと共にインストールされた) にある C:\Program files \microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb をソースまたは編集するコード例では、パスのデータかが必要このファイルの実際の場所を反映します。 これは、Microsoft Access データベース ファイルです。  
   
- 使用して**検索**Adovbs.inc ファイルを見つけて、使用する予定のディレクトリに配置します。 次のコードをメモ帳または別のテキスト エディターに貼り付け切り取ってとして保存して**ExecuteVBS.asp**です。 結果は、任意のクライアント ブラウザーで表示できます。  
+ 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けるし、として保存**ExecuteVBS.asp**します。 結果は、任意のクライアント ブラウザーで表示できます。  
   
 ```  
 <!-- BeginExecuteVBS -->  
@@ -186,8 +183,8 @@ BODY {
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)   
- [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Execute メソッド (ADO コマンド)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute メソッド (ADO 接続)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery メソッド](../../../ado/reference/ado-api/requery-method.md)

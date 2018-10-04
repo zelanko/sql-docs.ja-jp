@@ -4,28 +4,22 @@ ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Sybase Console,Launching SSMA Console
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394784"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853800"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>概要、SSMA for Sybase Console (SybaseToSQL)
 このセクションでは、起動、SSMA for Sybase のコンソール アプリケーションの概要と手順を説明します。 記載されている規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -72,5 +66,5 @@ SSMA スクリプト コマンドとオプションを実行すると、コン�
 |[緑]|ユーザー入力を求めるプロンプト|  
 |シアン|開始、終了、および操作の結果|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA for SAP ASE のインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

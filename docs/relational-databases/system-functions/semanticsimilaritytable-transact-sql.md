@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritytable (TRANSACT-SQL) |Microsoft ドキュメント
+title: semanticsimilaritytable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6b4b36580c35aead16780f4ada0f461dd58754
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791180"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,18 +70,18 @@ SEMANTICSIMILARITYTABLE
   
  結果が複数の列から要求される場合は、列ごとに一致したドキュメントが返されます。  
   
-|Column_name|型|Description|  
+|Column_name|型|説明|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|ソース ドキュメントを使用して類似したドキュメントを検出したときの、検出元の列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**matched_column_id**|**int**|類似したドキュメントの検出元の列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**matched_document_key**|**\***<br /><br /> このキーは、ソース テーブル内の一意キーの型と一致します。|クエリで指定したドキュメントに類似していることが判明したドキュメントまたは行の、フルテキストおよびセマンティックな抽出の一意のキー値。|  
-|**score**|**REAL**|類似した他のすべてのドキュメントとの関係における、このドキュメントの類似性の相対値。<br /><br /> 値の範囲内の小数値は、[0.0, 1.0] より高いスコアが一致することを表す、1.0 は完全なスコアです。|  
+|**score**|**REAL**|類似した他のすべてのドキュメントとの関係における、このドキュメントの類似性の相対値。<br /><br /> 値の範囲内の小数値は、[0.0, 1.0] より高いスコアより近い一致を表す、1.0 は完全なスコアです。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、次を参照してください。[よる類似および関連したドキュメント セマンティック検索の](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)します。  
+ 詳細については、次を参照してください。[類似および関連ドキュメント セマンティック検索による](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)します。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- 複数の列にわたって類似したドキュメントに対するクエリを実行することはできません。 **SEMANTICSIMILARITYTABLE**関数によって識別されるソース列と同じ列から類似したドキュメントだけを取得、 **source_key**引数。  
+ 複数の列にわたって類似したドキュメントに対するクエリを実行することはできません。 **SEMANTICSIMILARITYTABLE**関数により識別されるソース列と同じ列から類似したドキュメントのみを取得、 **source_key**引数。  
   
 ## <a name="metadata"></a>メタデータ  
  セマンティックな類似性の抽出および作成の詳細と状態については、次の動的管理ビューに対してクエリを実行してください。  
@@ -95,7 +92,7 @@ SEMANTICSIMILARITYTABLE
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

@@ -6,24 +6,21 @@ ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3143389d32e1cefcb925bde1b5a92ba2e83fb9fc
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 2fa770fad98918ab9e15231822b499787790a900
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745280"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインから Data Migration Assistant を実行します。
 Data Migration Assistant をインストールするバージョン 2.1 以降で、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft Data Migration Assistant\\*します。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 このメソッドは、いくつかのデータベースや巨大なデータベースを評価するときに便利です。 
@@ -45,14 +42,14 @@ DmaCmd.exe /AssessmentName="string"
 
 |引数  |説明  | 必須 (はい/いいえ)
 |---------|---------|---------------|
-| `/help or /?`     | Dmacmd.exe ヘルプ テキストを使用する方法        | ×
+| `/help or /?`     | Dmacmd.exe ヘルプ テキストを使用する方法        | N
 |`/AssessmentName`     |   評価プロジェクトの名前   | Y
 |`/AssessmentDatabases`     | 接続文字列のスペースで区切られた一覧。 データベース名 (初期カタログ) と小文字は区別されます。 | Y
-|`/AssessmentTargetPlatform`     | 評価では、サポートされている値のターゲット プラットフォーム: SqlServer2012、SqlServer2014、SqlServer2016、および AzureSqlDatabaseV12 します。 既定値は SqlServer2016   | ×
-|`/AssessmentEvaluateFeatureParity`  | 機能パリティ ルールを実行します。  | ×
+|`/AssessmentTargetPlatform`     | 評価では、サポートされている値のターゲット プラットフォーム: SqlServer2012、SqlServer2014、SqlServer2016、および AzureSqlDatabaseV12 します。 既定値は SqlServer2016   | N
+|`/AssessmentEvaluateFeatureParity`  | 機能パリティ ルールを実行します。  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 互換性規則を実行します。  | Y <br> (AssessmentEvaluateCompatibilityIssues または AssessmentEvaluateRecommendations が必要です)。
 |`/AssessmentEvaluateRecommendations`     | 機能のお勧めを実行します。        | Y <br> (AssessmentEvaluateCompatibilityIssues または必要な AssessmentEvaluateRecommendationsis)
-|`/AssessmentOverwriteResult`     | 結果ファイルを上書きします    | ×
+|`/AssessmentOverwriteResult`     | 結果ファイルを上書きします    | N
 |`/AssessmentResultJson`     | JSON の結果ファイルへの完全パス     | Y <br> (AssessmentResultJson または AssessmentResultCsv のいずれかが必要)
 |`/AssessmentResultCsv`    | CSV 結果ファイルへの完全パス   | Y <br>(AssessmentResultJson または AssessmentResultCsv のいずれかが必要)
 

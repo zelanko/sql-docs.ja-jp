@@ -1,35 +1,32 @@
 ---
-title: パラメーター化コマンドの操作 |Microsoft ドキュメント
+title: パラメーター化コマンドの操作 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea5f45e5f7fa1b60bb9f6b4884fcb1e480534d00
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7d2d2f8fce7b70c760707bd0d384ffa9b72f7a1d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272171"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751773"
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
-大規模な子で作業している場合**レコード セット**、特に、親のサイズに比べて**レコード セット**、いくつかの子チャプターのみにアクセスする必要がありますが、した方がより効果的に使用、パラメーター化コマンド。  
+大規模な子を使用する場合**レコード セット**、特に、親のサイズと比較**レコード セット**、いくつかの子章のみにアクセスする必要がある場合がありますを使用する方が効率的、パラメーター化されたコマンド。  
   
- A*コマンドのパラメーターのない*全体の親と子の両方を取得**レコード セット**親にチャプター列を追加して、親の行ごとに関連する子章への参照を割り当てます.  
+ A*コマンドのパラメーター化されていない*全体の親と子の両方を取得します**レコード セット**を親にチャプター列を追加します。 や、親の行ごとに関連する子章への参照を割り当てます.  
   
- A*コマンドをパラメーター化された*全体の親を取得**Recordset**、章のみを取得しますが、**レコード セット**チャプター列にアクセスするとします。 この取得方法の違いには、大幅なパフォーマンスのメリットが得られることができます。  
+ A*コマンドをパラメーター化された*全体の親を取得します。**レコード セット**、章のみを取得しますが、**レコード セット**チャプター列にアクセスするとします。 この違い取得方法の大幅なパフォーマンスのメリットが得ことができます。  
   
  たとえば、次のように指定できます。  
   
@@ -39,26 +36,26 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 親と子テーブルに、一般的な cust_id で列名がある*です。* *子コマンド*が、"?"プレース ホルダー、RELATE 句で参照する (つまり、".パラメーター 0") です。  
+ 親と子テーブルに、一般的な cust_id で列名がある*します。* *子コマンド*が、"でしょうか"プレース ホルダー、RELATE 句で参照する (つまり、"…。パラメーター 0")。  
   
 > [!NOTE]
->  パラメーターは、図形のコマンド構文にのみ関連します。 それに関連付けられていないか、ADO[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトまたは[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。  
+>  パラメーターの句は、shape コマンドの構文にのみ関連します。 ADO のいずれかに関連付けられてない[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトまたは[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。  
   
- パラメーター化された shape コマンドを実行すると、以下の処理が行われます。  
+ パラメーター化された図形のコマンドを実行すると、以下の処理が行われます。  
   
-1.  *親コマンド*を実行して、親を返します**Recordset** Customers テーブルからです。  
+1.  *親コマンド*が実行され、親を返します**Recordset** Customers テーブルから。  
   
-2.  親にチャプター列が追加されます**Recordset**です。  
+2.  チャプター列が、親に追加されます**Recordset**します。  
   
-3.  親行のチャプター列にアクセスする場合、*子コマンド*パラメーターの値として、customer.cust_id の値を使用して実行します。  
+3.  親行のチャプター列がアクセスされたとき、*子コマンド*パラメーターの値として、customer.cust_id の値を使用して実行します。  
   
-4.  手順 3 で作成したデータ プロバイダーの行セットのすべての行が、子の作成に使用されます**Recordset**です。 この例では、cust_id customer.cust_id の値に等しいを Orders テーブル内のすべての行です。 既定では、子**Recordset**s は、親へのすべての参照まで、クライアントでキャッシュされます**Recordset**解放されます。 この動作を変更するには、設定、**レコード セット**[動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-property-index.md)**キャッシュ子行**に**False**です。  
+4.  手順 3 で作成したデータ プロバイダーの行セットのすべての行は、子の作成に使用されます**Recordset**します。 この例では、cust_id customer.cust_id の値に等しいを Orders テーブルのすべての行です。 既定では、子**Recordset**s が、親に対するすべての参照まで、クライアントにキャッシュされる**レコード セット**リリースされます。 この動作を変更するには、設定、**レコード セット**[動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-property-index.md)**子行をキャッシュ**に**False**します。  
   
-5.  取得した子の行への参照を (つまり、子のチャプター**レコード セット**) は、親の現在の行のチャプター列に配置されます**レコード セット**です。  
+5.  取得した子の行への参照 (子の章では、**レコード セット**) は、親の現在の行のチャプター列に配置されます**レコード セット**します。  
   
-6.  別の行のチャプター列にアクセスする場合、手順 3. ~ 5. は繰り返されます。  
+6.  別の行のチャプター列にアクセスする場合は、手順 3 ~ 5 が繰り返されます。  
   
- **キャッシュ子行**動的プロパティに設定されて**True**既定です。 キャッシュの動作は、クエリのパラメーターの値によって異なります。 子の 1 つのパラメーターを持つクエリ**Recordset**特定のパラメーターの値をその値を持つ子に対する要求間でキャッシュされます。 次のコードでは、これを示しています。  
+ **子行をキャッシュ**動的プロパティに設定されて**True**既定。 キャッシュの動作は、クエリのパラメーターの値によって異なります。 子の 1 つのパラメーターを持つクエリで**Recordset**その値を持つ子に対する要求間で特定のパラメーターの値がキャッシュされます。 次のコードでは、これを示しています。  
   
 ```  
 SCmd = "SHAPE {select * from customer} " & _  
@@ -71,14 +68,14 @@ Rst1.MoveNext      ' Next cust_id passed to Param 0, & new rs fetched
 Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.  
 ```  
   
- 2 つ以上のパラメーターを持つクエリ、キャッシュされた子がすべてのパラメーター値がキャッシュされた値と一致する場合にのみ使用されます。  
+ 2 つ以上のパラメーターを持つクエリでは、キャッシュされた子をすべてのパラメーター値がキャッシュされた値と一致する場合にのみ使用します。  
   
 ## <a name="parameterized-commands-and-complex-parent-child-relations"></a>パラメーター化コマンドと複雑な親子関係  
- パラメーター化コマンドを使用して、等結合型階層のパフォーマンスを向上させるために、だけでなくより複雑な親子関係をサポートするためにパラメーター化コマンドを使用できます。 たとえば、次の 2 つのテーブルを持つほとんどリーグ データベース: チーム (team_id、チーム名)、もう一方がゲーム (日付、home_team、visiting_team) から成る 1 つです。  
+ パラメーター化コマンドを使用して、等結合型の階層のパフォーマンスを向上させるために、だけでなくより複雑なプロセスの親子関係をサポートするためにパラメーター化コマンドを使用できます。 たとえば、2 つのテーブルでの少年野球リーグ データベース: チーム (team_id、チーム名) と (日付、home_team、visiting_team) ゲームの他から成る 1 つ。  
   
- パラメーターのない階層を使用して、ないようにチームとゲームのテーブルを関連付けるを子**Recordset**チームごとに、完全なスケジュールが含まれています。 ホームのスケジュールと道路スケジュールだけが含まれている章を作成することができます。 これは、RELATE 句によって、フォームの親子関係に制限されているため (pc1 = cc1) AND (pc2 pc2 を =)。 そのため場合は、コマンドには、"RELATE team_id TO home_team、team_id TO visiting_team"が含まれている、する得られるゲームのみここで、チームが再生された自体です。 必要な"(team_id=home_team) または (team_id = visiting_team)"は Shape プロバイダーは、OR 句をサポートしていません。  
+ パラメーター化されていない階層を使用して、方法はありません、このような方法でチームやゲームのテーブルを関連付けるを子**Recordset**に各チームには、完全なスケジュールが含まれています。 ホーム スケジュールまたは道路のスケジュールが、両方が含まれている章を作成することができます。 RELATE 句に、フォームの親子関係を制限します。 これは (pc1 = cc1) AND (pc2 = pc2)。 そのため、コマンドに"関連付け team_id TO home_team、team_id TO visiting_team"が含まれている場合得ゲームのみで、チームが再生されて自体。 必要なの"(team_id=home_team) または (team_id = visiting_team)"、Shape プロバイダーで OR 句がサポートされていません。  
   
- 目的の結果を得るには、パラメーター化コマンドを使用できます。 以下に例を示します。  
+ 目的の結果を取得するには、パラメーター化されたコマンドを使用することができます。 以下に例を示します。  
   
 ```  
 SHAPE {SELECT * FROM teams}   
@@ -87,12 +84,12 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
                team_id TO PARAMETER 1)   
 ```  
   
- この例より柔軟に必要な結果を取得する SQL の WHERE 句を悪用します。  
+ この例では、必要のある結果を取得するには、SQL の WHERE 句の柔軟性を悪用します。  
   
 > [!NOTE]
->  ときに WHERE 句を使用して、パラメーターいないまたはを使用して SQL データ型 text、ntext および image のエラーが発生する、次の説明が含まれています:`Invalid operator for data type`です。  
+>  WHERE 句を使用して、パラメーターは使用できません、SQL データ型 text、ntext および image またはエラーが発生する場合は、次の説明が含まれています:`Invalid operator for data type`します。  
   
 ## <a name="see-also"></a>参照  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
- [図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

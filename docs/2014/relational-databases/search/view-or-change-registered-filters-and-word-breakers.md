@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], word breakers
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - filters [full-text search]
 - word breakers [full-text search]
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1ecb98029392ac474c11df46e9625c72db3c099
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd05102a9a146a4aa9439e86a76212872556a08d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329482"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071002"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>登録済みのフィルターおよびワード ブレーカーの表示または変更
   システム上で任意のワード ブレーカーまたはフィルターのインストールまたはアンインストールを行った後、その変更はサーバー インスタンスに自動的に反映されません。 このトピックでは、現在登録されているワード ブレーカーまたはフィルターを表示する方法と、新しくインストールされたワード ブレーカーおよびフィルターを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに登録する方法について説明します。  

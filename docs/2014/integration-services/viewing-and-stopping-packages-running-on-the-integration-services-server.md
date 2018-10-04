@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cef267dbb770c0ccb39ea40143ce9591f915db5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 993f5cc3cba13e9a7d2c6380f719d5e7b24ca0a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140562"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services サーバーで実行中のパッケージの表示と停止
   `SSISDB`データベースは、ユーザーに表示されない内部テーブルで実行履歴を格納します。 ただし、必要な情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、パッケージに関連した一般的なタスクを実行するために呼び出すことができるストアド プロシージャも用意されています。  

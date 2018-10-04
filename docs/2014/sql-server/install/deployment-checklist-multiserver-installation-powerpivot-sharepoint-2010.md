@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ae1d09ddc1df0d4ff33808c92b708f92b4f4820c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db0a090cd82e1bbcd9caa9ac5542662f67c5aecd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181265"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>配置のチェック リスト: PowerPivot for SharePoint 2010 のマルチサーバー インストール
   このチェックリストを追加する手順の手順を説明します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をゼロから構築される 3 層 SharePoint 2010 ファームをします。 3 層ファームには、データベース層、アプリケーション層、および Web 層が含まれています。 追加[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]このトポロジをインストールする SQL Server セットアップを実行する必要があります[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]アプリケーション層にします。 PowerPivot プログラム ファイルは、web アプリケーション ソリューションでデプロイするときに、web 層には、インストール後のタスクとしてのみ追加されます。 配置手順は必要ですが、Web 層またはデータ層のいずれかで実行する必要のある個別のインストール手順はありません。 のみのインストール手順を実行する必要のあるをインストールする[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]アプリケーション サーバーにします。  
@@ -193,11 +190,11 @@ ms.locfileid: "37240532"
   
  PowerPivot の SharePoint サイトとの統合を確認するには、次の操作を行います。  
   
-1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、http:// を指定できます\<コンピューター名 >、URL アドレス。  
+1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、 http:// を指定できます\<コンピューター名 >、URL アドレス。  
   
 2.  PowerPivot データ アクセス機能と PowerPivot データ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、PowerPivot によって提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
-    1.  サイトの操作をクリックします**オプション。**.  
+    1.  サイトの操作をクリックします**オプション**。  
   
     2.  ライブラリでは、表示する必要があります**データ フィード ライブラリ**と**PowerPivot ギャラリー**します。 これらのライブラリ テンプレートは PowerPivot 機能によって提供されるものであり、PowerPivot 機能が正しく統合されている場合に [ライブラリ] に表示されます。  
   

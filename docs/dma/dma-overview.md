@@ -6,24 +6,21 @@ ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fbf3441d82f2de405e1a227821834b3943db3285
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 38642f129d61f906e4856946a19f6dca8f11da6f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152693"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770800"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant の概要
 
@@ -49,7 +46,7 @@ Data Migration Assistant (DMA) を使用して、最新のデータ プラット
 - データベースがアップグレード後に活用できるターゲット SQL Server プラットフォームの新機能を検出します。 これらは、機能に関する推奨事項として説明し、次のカテゴリに分類されます。
 
   - [パフォーマンス]
-  - Security
+  - セキュリティ
   - ストレージ
 
 - オンプレミスの SQL Server インスタンスをオンプレミス ネットワークからアクセスできる Azure 仮想マシン (VM) またはオンプレミスでホストされている最新の SQL Server インスタンスに移行します。 Azure VM は、VPN またはその他のテクノロジを使用してアクセスできます。 移行のワークフローでは、次のコンポーネントを移行することができます。

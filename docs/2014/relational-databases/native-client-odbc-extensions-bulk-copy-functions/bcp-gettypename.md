@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_gettypename
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411731"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086812"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   指定された BCP 型トークンの SQL 型名を返します。  
@@ -79,8 +76,8 @@ fIsMaxType
 |`SQLTEXT`|接続前/接続後|**text**|  
 |`SQLBIGBINARY`|いいえ|**[バイナリ]**|  
 |`SQLBINARY`|いいえ|**Binary**|  
-|`SQLBIGVARBINARY`|いいえ|**Varbinary**|  
-|`SQLVARBINARY`|いいえ|**Varbinary**|  
+|`SQLBIGVARBINARY`|いいえ|**varbinary**|  
+|`SQLVARBINARY`|いいえ|**varbinary**|  
 |`SQLIMAGE`|接続前/接続後|**[イメージ]**|  
 |`SQLINTN`|接続前/接続後|**int-null**|  
 |`SQLDATETIMN`|接続前/接続後|**datetime-null**|  
@@ -92,12 +89,12 @@ fIsMaxType
 |`SQLAOPMIN`|接続前/接続後|**Min**|  
 |`SQLAOPMAX`|接続前/接続後|**Max**|  
 |`SQLDATETIM4`|接続前/接続後|**smalldatetime**|  
-|`SQLMONEY4`|接続前/接続後|**Smallmoney**|  
+|`SQLMONEY4`|接続前/接続後|**smallmoney**|  
 |`SQLFLT4`|接続前/接続後|**本当の**|  
 |`SQLUNIQUEID`|接続前/接続後|**uniqueidentifier**|  
-|`SQLNCHAR`|いいえ|**Nchar**|  
+|`SQLNCHAR`|いいえ|**nchar**|  
 |`SQLNVARCHAR`|いいえ|**Nvarchar**|  
-|`SQLNTEXT`|接続前/接続後|**Ntext**|  
+|`SQLNTEXT`|接続前/接続後|**ntext**|  
 |`SQLVARIANT`|接続前/接続後|**sql_variant**|  
 |`SQLINT8`|接続前/接続後|**Bigint**|  
 |`SQLCHARACTER`|はい|**varchar(max)**|  

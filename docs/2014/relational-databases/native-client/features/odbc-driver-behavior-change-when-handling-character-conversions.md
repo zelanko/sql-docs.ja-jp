@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93eb0a1bc48e070265b7137784c34396d0207694
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 61fc912e97ebdf5503cc3569df9ca8e763478494
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145832"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>文字変換処理での ODBC ドライバーの動作の変更
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC ドライバー (SQLNCLI11.dll) の変更方法での SQL_WCHAR * (NCHAR/NVARCHAR/NVARCHAR(MAX)) と SQL_CHAR\* (CHAR/VARCHAR/NARCHAR(MAX)) 変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC ドライバーを使用する場合、SQLGetData、SQLBindCol、SQLBindParameter などの ODBC 関数では長さまたはインジケーターのパラメーターとして (-4) SQL_NO_TOTAL が返されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは長さの値が返されましたが、これは誤りである可能性があります。  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 118493cdd526a8c62add06ca78c803ebac6540c1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 981b0b57debf6e1916adb65620feca7025bd3803
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393726"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063492"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>メモリ最適化テーブルの持続性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] により、メモリ最適化テーブルには完全な持続性が提供されます。 メモリ最適化テーブルを変更したトランザクションがコミットされると、基になるストレージが使用可能な場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、(ディスク ベース テーブルの場合と同様に) この変更が永続的である (データベースの再起動後も保持される) ことが保証されます。 持続性には、トランザクション ログとディスク上ストレージでのデータ変更の保持という、2 つの主なコンポーネントがあります。  

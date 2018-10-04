@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d253287d8eb5b774794114003682151ecd00c4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c91f05ef42f3840186ee758e733f73631c0d976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125052"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>スケールアウト配置に関する暗号化キーの追加と削除 (SSRS 構成マネージャー)
   1 つのレポート サーバー データベースを複数のレポート サーバーで共有するように構成すると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をスケールアウト配置モデルで実行できます。 スケールアウト配置でのメンバーシップは、レポート サーバーがレポート サーバー データベースに暗号化キーを格納するかどうかに基づいています。 特定のレポート サーバー インスタンスの暗号化キーを追加および削除することで、スケールアウト配置のメンバーシップを制御できます。 配置からノードを削除する場合は、それらを任意の順序で削除できます。 配置にノードを追加する場合は、既に配置の一部になっているレポート サーバーのすべての新しいインスタンスを結合する必要があります。  

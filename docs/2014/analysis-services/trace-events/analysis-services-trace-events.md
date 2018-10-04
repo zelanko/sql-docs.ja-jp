@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9d20abf0f811b06ec380b1d4ba984c2f6d7eb87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163444"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153492"
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services トレース イベント
   Microsoft SQL Server Analysis Services (SSAS) インスタンスのアクティビティは、インスタンスによって生成されるトレース イベントを取得し、分析することで追跡できます。  トレース イベントは、関連するトレース イベントをより簡単に見つけることができるようにグループ化されます。  各トレース イベントには、イベントに関連するデータのセットが含まれています。データのすべての部分がすべてのイベントに関連するわけではありません。  

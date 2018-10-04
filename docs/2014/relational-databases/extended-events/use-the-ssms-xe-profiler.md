@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], system health session
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system_health session [SQL Server extended events]
 - system health session [SQL Server extended events]
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
-caps.latest.revision: 15
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: cf223a6b352b8e1f2b9dd2e1d241214a1859a2e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e42fca332cf488d9a88494bb3e0eb11eca413965
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151252"
 ---
 # <a name="use-the-systemhealth-session"></a>system_health セッションの使用
   system_health セッションは、既定で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に含まれている拡張イベント セッションです。 このセッションは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の起動時に自動的に開始されます。実行中にパフォーマンスに大きな影響が及ぶことはありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のパフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 そのため、このセッションを停止または削除しないことをお勧めします。  

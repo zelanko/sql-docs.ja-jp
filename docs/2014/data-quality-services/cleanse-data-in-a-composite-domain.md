@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f03d5f5961bd09494fccde146a812ea07bb390c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ebef54890df839f0608865ba7951221d17485e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194672"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>複合ドメインでのデータのクレンジング
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での複合ドメインのクレンジングについて説明します。 複合ドメインは 2 つ以上の単一ドメインで構成され、複数の関連用語で構成されるデータ フィールドにマップされます。 複合ドメイン内の個々のドメインには、ナレッジの共通領域が必要です。 複合ドメインの詳細については、次を参照してください。[複合ドメインの管理](../../2014/data-quality-services/managing-a-composite-domain.md)します。  

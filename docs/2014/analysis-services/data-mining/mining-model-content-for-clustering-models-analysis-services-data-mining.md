@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining model content, clustering models
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc2d9ce1c0581d067b8a0a9be0ad52643ee6287a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190282"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、Microsoft クラスタリング アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)します。  

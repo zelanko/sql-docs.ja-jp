@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 47092d05e9908e68722dbebea88e110f58170000
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160752"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>データ処理拡張機能をレポート サーバーに配置する方法
   レポート サーバーは、表示レポートのデータを取得および処理するためにデータ処理拡張機能を使用します。 データ処理拡張機能のアセンブリは、プライベート アセンブリとしてレポート サーバーに配置してください。 また、レポート サーバーの構成ファイル RSReportServer.config にエントリを作成する必要もあります。  

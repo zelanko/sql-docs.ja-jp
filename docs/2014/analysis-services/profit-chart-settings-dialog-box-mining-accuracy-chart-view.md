@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.profitcostdialog.f1
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44e18791656240d2f6253d325d2151e49f5b890f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48deee5b5928ff812a67f26a780ea765b05d5097
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114189"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>[利益チャートの設定] ダイアログ ボックス ([マイニング精度チャート] ビュー)
   **[利益チャートの設定]** ダイアログ ボックスを使用すると、利益チャートの生成に関する設定を構成できます。 利益チャートの詳細については、「[リフト チャート &#40;Analysis Services - データ マイニング&#41;](data-mining/lift-chart-analysis-services-data-mining.md)」をご覧ください。  

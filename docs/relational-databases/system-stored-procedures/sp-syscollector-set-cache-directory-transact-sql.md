@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_cache_directory (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_syscollector_set_cache_directory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_directory_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fec21ffdac0ee58f6927935942fedadda563f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 825291445c0d31df8230793c3a5d6a1b7f272082
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726770"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +47,16 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- キャッシュ ディレクトリの構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このストアド プロシージャは失敗します。 詳細については、次を参照してください。[データ コレクションの無効化または有効に](../../relational-databases/data-collection/enable-or-disable-data-collection.md)、および[データ コレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)です。  
+## <a name="remarks"></a>コメント  
+ キャッシュ ディレクトリの構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このストアド プロシージャは失敗します。 詳細については、次を参照してください。[有効] または [データ コレクションの無効化](../../relational-databases/data-collection/enable-or-disable-data-collection.md)、および[データ コレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)します。  
   
  sp_syscollector_set_cache_directory の実行時には指定されたディレクトリが存在する必要はありませんが、ディレクトリが作成されるまで、データを正常にキャッシュしてアップロードすることはできません。 このストアド プロシージャを実行する前に、ディレクトリを作成することをお勧めします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、データ コレクターを無効になりますにデータ コレクターのキャッシュ ディレクトリを設定`D:\tempdata`、され、データ コレクターを有効になります。  
+ 次の例では、データ コレクターを無効にします、キャッシュ ディレクトリを設定するデータ コレクターの`D:\tempdata`、され、データ コレクターを有効になります。  
   
 ```sql  
 USE msdb;  

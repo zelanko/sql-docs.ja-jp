@@ -1,13 +1,11 @@
 ---
-title: 階層レコード セットを製造 |Microsoft ドキュメント
+title: 階層レコード セットの作成 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset fabrication [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770890"
 ---
-# <a name="fabricating-hierarchical-recordsets"></a>製造階層レコード セット
-次の例は、親、子、および孫の列の定義に文法を整形するデータを使用して、基になるデータ ソースが存在しない階層のレコード セットを作成する方法を示しています。**レコード セット**です。  
+# <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
+次の例は、データのシェイプの親、子、および孫の列を定義する文法を使用して、基になるデータ ソースのない階層レコード セットを作成する方法を示しています。**レコード セット**します。  
   
- 階層構造を作成する**Recordset**を指定する必要があります、 [Microsoft Data Shaping Service for OLE DB (ADO サービス プロバイダー)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape)、none でデータ プロバイダーの値を指定することができます、接続文字列パラメーター、[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 詳細については、次を参照してください。[データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)です。  
+ 階層構造を作成する**レコード セット**を指定する必要があります、 [OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) なしでのデータ プロバイダーの値を指定して、接続文字列パラメーター、[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 詳細については、次を参照してください。[データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)します。  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -56,11 +53,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- すぐに、 **Recordset**された作成、設定、操作、または、そのファイルに保存します。  
+ すぐに、 **Recordset**された作成、設定、操作、またはそのファイルに保存します。  
   
 ## <a name="see-also"></a>参照  
- [階層のレコード セット内の行にアクセスします。](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [階層レコード セット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [図形の APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
+ [Shape の APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

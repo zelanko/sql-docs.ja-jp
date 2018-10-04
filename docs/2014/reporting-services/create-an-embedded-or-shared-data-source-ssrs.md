@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-caps.latest.revision: 40
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cd820de9b6710e4524b39323bcc9837fad820b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109442"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)
   レポートのデータ ソースは名前と接続情報を指定します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、"埋め込み" と "共有" の 2 種類のデータ ソースをサポートしています。 埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、個別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、次を参照してください。[埋め込みと共有のデータ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)します。  

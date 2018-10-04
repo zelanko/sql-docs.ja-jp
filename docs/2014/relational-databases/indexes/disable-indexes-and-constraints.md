@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.disableindexes.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - index disabling [SQL Server]
 - indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2c263fd657d28d00904fbe73ae0219a1be64372
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050565"
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、インデックスまたは制約を無効にする方法について説明します。 インデックスを無効にすると、ユーザーはそのインデックスにアクセスできなくなります。クラスター化インデックスの場合は、基になるテーブルのデータにもアクセスできなくなります。 ただし、インデックス定義はメタデータに残り、インデックス統計は非クラスター化インデックス上に保持されます。 ビュー上で非クラスター化インデックスまたはクラスター化インデックスを無効にすると、インデックス データが物理的に削除されます。 テーブルのクラスター化インデックスを無効にすると、データにアクセスできなくなります。つまり、データはテーブルに残りますが、そのインデックスを削除するか再構築するまでは、データ操作言語 (DML) 操作で使用できなくなります。  

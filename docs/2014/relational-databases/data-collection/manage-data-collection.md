@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 770b7651aa9359677e610e610938cd33cc5fffa9
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2209c8de9c65e5740b9a6ebdd62972c93596e396
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104862"
 ---
 # <a name="manage-data-collection"></a>データ コレクションの管理
   使用することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]の有効化またはコレクションを変更するデータの収集を無効にする設定の構成、または管理データ ウェアハウスのデータの表示などに、プロシージャと、データ コレクションのさまざまな側面を管理する関数を格納します.  

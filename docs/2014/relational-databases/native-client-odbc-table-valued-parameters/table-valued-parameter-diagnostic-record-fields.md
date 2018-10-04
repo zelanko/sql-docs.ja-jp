@@ -1,26 +1,23 @@
 ---
-title: テーブル値パラメーターの診断レコードのフィールド |Microsoft Docs
+title: テーブル値パラメーターの診断レコードのフィールド |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), diagnostic records
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f41a5855528263183da14f95dc253a79269a42e8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c87e272b339357a18ef9f9a167672c1df4ed96e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179152"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>テーブル値パラメーターの診断レコードのフィールド
   SQL_DIAG_SS_TABLE_COLUMN_NUMBER および SQL_DIAG_SS_TABLE_ROW_NUMBER という 2 つの新しい診断フィールドが、診断レコードに追加されました。 これらのフィールドは、エラーと警告に関連するテーブル値パラメーターの列の値を特定するのに役立ちます。  

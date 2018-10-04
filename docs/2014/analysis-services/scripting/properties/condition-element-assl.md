@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Condition Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Condition element
 ms.assetid: 9c3cb31c-4aa1-49e4-aeb2-6cab54db0be3
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0b4b15f7b354b858ba1dfd91fff18963b288615
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fa61c470eaf39edc883aac73707e86c21a9e24c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227922"
 ---
 # <a name="condition-element-assl"></a>Condition 要素 (ASSL)
   決定する多次元式 (MDX) 式が含まれているかどうか、[アクション](../objects/action-element-assl.md)親要素がターゲットに適用されます。  

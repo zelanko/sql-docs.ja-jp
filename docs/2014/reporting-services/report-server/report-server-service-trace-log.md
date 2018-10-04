@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2621f9a8e69cc27d5012e0c6a6f90946bec07dc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161932"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポート サーバーのトレース ログはレポート サーバー サービスの操作に関する詳細な情報が含まれる ASCII テキスト ファイル、操作を含め、レポート サーバー Web によって実行されるサービス、レポート マネージャー、およびバック グラウンド処理します。 トレース ログ ファイルには、他のログ ファイルに記録されている冗長な情報、およびトレース ログ以外からは入手できない追加情報が含まれています。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81b6e932fb824d636b06dc92980114fbb956ff08
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 256f1add5399d3e9c5795440d80670f66a096cb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651692"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +80,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_scope|**tinyint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**int**|CURSOR_STATUS システム関数によって報告された、同じ値:<br /><br /> 1 = カーソル名または変数によって参照されたカーソルは開いています。 カーソルが状態非依存、静的、キーセットのいずれかの場合には、結果セットに少なくとも 1 行が含まれます。 カーソルが動的の場合には、結果セットに 0 行以上が含まれます。<br /><br /> 0 = カーソル名または変数によって参照されたカーソルは開いていますが、行は含まれていません。 動的カーソルがこの値を返すことはありません。<br /><br /> -1 = カーソル名または変数によって参照されたカーソルは閉じています。<br /><br /> -2 = カーソル変数にのみ適用されます。 変数に割り当てられたカーソルはありません。 おそらく、OUTPUT パラメーターによってカーソルを変数に割り当てましたが、戻る前にストアド プロシージャがカーソルを閉じました。<br /><br /> -3 = 指定された名前のカーソルまたはカーソル変数が存在しないか、またはカーソル変数にカーソルが割り当てられていません。|  
 |model|**tinyint**|1 = 状態非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
-|同時実行 (concurrency)|**tinyint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
+|コンカレンシー|**tinyint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**tinyint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**tinyint**|0 = 閉じた状態<br /><br /> 1 = 開いた状態|  
 |cursor_rows|**decimal(10,0)**|結果セット内の行を限定の数。 詳細については、「[@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)」を参照してください。|  

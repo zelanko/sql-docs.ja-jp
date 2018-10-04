@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 94f58681e368ce3eff15a5b6ec78afbc7be2018f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f1ab51a53e91a069e4d2a137d4908fa820df0f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186612"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>レッスン 2 : マージ パブリケーションへのサブスクリプションの作成
   このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してサブスクリプションを作成します。 次に、サブスクリプション データベースに権限を設定し、新しいサブスクリプション用のフィルター選択データのスナップショットを手動で作成します。 このレッスンを進めるには、前のレッスン「 [レッスン 1: マージ レプリケーションを使用したデータのパブリッシュ](lesson-1-publishing-data-using-merge-replication.md)」を完了している必要があります。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2d0093e96e4916ce2e23449bcc4044b86955a799
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3df6a97e37f301c4ac55b8e662e81098023a5064
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159512"
 ---
 # <a name="data-flow"></a>データ フロー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  

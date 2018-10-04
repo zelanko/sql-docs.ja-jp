@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation and upgrading
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-caps.latest.revision: 16
 author: mashamsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8da8551b85948f27f1e657cb70c4bb1140c5314b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 652cec720eae440106a0c8e30bd9910140dcff0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224798"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182622"
 ---
-# <a name="upgrade-lookup-transformations"></a>参照変換をアップグレードします。
+# <a name="upgrade-lookup-transformations"></a>参照変換のアップグレード
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードする場合、パッケージに変更を加え、参照変換でこれらの新しい機能を利用することを検討してください。 この変換では、[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] で使用可能なキャッシュの種類とデータ出力オプションがサポートされます。 詳細については追加のキャッシュとデータの出力を参照してください[参照変換](../../integration-services/data-flow/transformations/lookup-transformation.md)します。  
   
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] で使用可能なキャッシュの種類は、完全キャッシュ、部分キャッシュ、およびキャッシュなしです。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] では、これらのいずれかの種類のキャッシュを使用するように参照変換を構成できます。 部分的なキャッシュを実装する方法の詳細についてまたはキャッシュなしの場合、次を参照してください。[キャッシュなしモードまたは部分キャッシュ モードの参照を実装](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)します。 完全なキャッシュを実装する方法については、次を参照してください[キャッシュ接続マネージャーを使用してフル キャッシュ モードで参照変換を実装](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)と[フル キャッシュ モードを使用して、OLE で参照変換を実装します。DB 接続マネージャー](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)します。  

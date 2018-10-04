@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], nested FOR XML
 - XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f758f4fd51b3d9b6a5d8af9dd92ac816f2939f5d
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 917e6a4b5e354b95207e9293879bdb9fb1effb28
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155032"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>入れ子になった FOR XML クエリを使用した XML の構造化
   次の例では、`Production.Product` テーブルにクエリを実行し、特定の製品の `ListPrice` 値と `StandardCost` 値を取得します。 ここでは、例示を目的として、両方の価格を <`Price`> 要素に返します。各 <`Price`> 要素には、`PriceType` 属性があります。  

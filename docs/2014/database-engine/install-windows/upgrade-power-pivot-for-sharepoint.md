@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b01d05d497691d2790b9423265cf420f236065f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84a76e85aeb73138f2c633bfa361325c0423ca96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197252"
 ---
-# <a name="upgrade-powerpivot-for-sharepoint"></a>PowerPivot for SharePoint をアップグレードします。
+# <a name="upgrade-powerpivot-for-sharepoint"></a>PowerPivot for SharePoint のアップグレード
   このトピックでは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置を [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]にアップグレードするために必要な手順について説明します。 特定の手順は、環境が現在実行されている SharePoint のバージョンに依存および PowerPivot for SharePoint アドインは、(**spPowerPivot.msi**)。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  

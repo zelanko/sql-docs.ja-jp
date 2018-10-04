@@ -1,13 +1,11 @@
 ---
-title: マッピング関数の廃止 |Microsoft ドキュメント
+title: 非推奨の関数のマッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -17,32 +15,31 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b61a53eed35919f3ecd0422b376e029ee7ab232
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818373"
 ---
-# <a name="mapping-deprecated-functions"></a>使用されなくなった関数のマッピング
-このセクションの内容がどのように使用されなくなった関数について説明します、ODBC 3 でマッピングされます *.x* ODBC 3 の下位互換性を保証するためにドライバー マネージャー *.x* ODBC 2 で使用されるドライバー *。x*アプリケーションです。 ドライバー マネージャーでは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ODBC 2 の各します。*x*次の一覧内の関数は、対応する ODBC 3 にマップされて *.x*関数、ODBC 3 で呼び出されると *.x*ドライバー、ODBC 3 *.x*ドライバーは、ODBC 2 を実装する必要はありません。*x*関数。  
+# <a name="mapping-deprecated-functions"></a>非推奨の関数のマッピング
+このセクションには、どのように非推奨の関数がについて説明します、ODBC 3 によってマップされます *.x* ODBC 3 の旧バージョンとの互換性を保証するために、ドライバー マネージャー *.x*ドライバーは ODBC 2 で使用される *。x*アプリケーション。 ドライバー マネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ため、各 ODBC 2。*x*関数は、次の一覧は、対応する ODBC 3 にマップされて *.x*関数、ODBC 3 で呼び出されると *.x*ドライバー、ODBC 3 *.x*ドライバーは、ODBC 2 を実装する必要はありません。*x*関数。  
   
- リスト内のマッピングは、ドライバーは ODBC 3 ときにトリガーされる *.x*ドライバーとドライバーがマップされている関数をサポートしていません。  
+ リスト内のマッピングは、ドライバーは、ODBC 3 ときにトリガーされる *.x*ドライバーとドライバーがマップされる関数をサポートしていません。  
   
- 次の表に、ODBC 3 で導入された機能がすべての重複 *.x*です。  
+ 次の表に、ODBC 3 で導入された機能がすべての重複 *.x*します。  
   
-|ODBC 2 です。*x*関数|ODBC 3 *.x*関数|  
+|ODBC 2。*x*関数|ODBC 3 *.x*関数|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
 |**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
-|**SQLError**|**SQLGetDiagRec**|  
+|**Sqlerror 関数**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
 |**SQLFreeStmt**で、*オプション*SQL_DROP の|**SQLFreeHandle**|  
@@ -55,7 +52,7 @@ ms.locfileid: "32914107"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] この関数は、ODBC 2 には存在しなかった場合でも *.x*、Open Group および ISO 標準になっています。  
+ [1] この関数は、ODBC 2 には存在しなかった場合でも *.x*、Open Group と ISO 標準になっています。  
   
  [2] これは、ODBC 1.0 関数です。  
   

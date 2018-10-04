@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, AUTO mode
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ed5e1d620a5a56848a57f67b92345fc535db3cf
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 599707905c1d4c9693f1ccec53abf4933f4a6193
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187062"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>FOR XML での AUTO モードの使用
   「 [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)」で説明したように、AUTO モードを使用すると、入れ子構造の XML 要素としてクエリ結果が返されます。 AUTO モードでは、クエリ結果から生成される XML の構造はあまり制御されません。 AUTO モードのクエリは、単純な階層を生成する場合に役立ちます。 ただし、 [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md) や [FOR XML での PATH モードの使用](use-path-mode-with-for-xml.md) により、クエリ結果から XML の構造を決定するときに、より厳密な制御や高い柔軟性を実現できます。  

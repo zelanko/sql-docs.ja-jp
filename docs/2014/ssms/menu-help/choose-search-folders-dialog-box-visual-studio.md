@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4658d8bc6ec0733673f9cc4087e44da962c7733
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820258"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095152"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>[検索フォルダーの選択] ダイアログ ボックス (Visual Studio)
   固有の名前の付いた検索フォルダーのセットのアセンブリ、保存、および変更や、検索の順序の指定ができます。 このダイアログ ボックスを表示するには、[フォルダーを指定して検索]、[フォルダーを指定して置換]、または [検索と置換] のいずれかのウィンドウで、 **[検索対象]** ドロップダウン リストの横の **[...]** をクリックします。  

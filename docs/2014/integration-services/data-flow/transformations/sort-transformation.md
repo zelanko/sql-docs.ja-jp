@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5155e1bc61e5a02d29420d20b1e2970693dda1da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 177255d30cb0a667475108fb8e28a8100d3aceae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130592"
 ---
 # <a name="sort-transformation"></a>並べ替え変換
   並べ替え変換は、入力データを昇順または降順で並べ替え、並べ替えたデータを変換出力にコピーします。 入力には複数の並べ替えを適用できます。各並べ替えは、並べ替えの順序を決定する数値によって識別されます。 順序の数値が最も小さい列が最初に並べ替えられ、順序の数値の大きさの順に列が並べ替えられます。 たとえば、 **CountryRegion** という名前の列の並べ替え順序が 1 で、 **City** という名前の列の並べ替え順序が 2 の場合、出力は、国または地域、次に都市の順に並べ替えられます。 正の値は昇順の並べ替えを表し、負の値は降順の並べ替えを表します。 並べ替えを行わない列の並べ替え順序は 0 です。 並べ替えを選択されていない列は、並べ替えられた列と共に、自動的に変換出力にコピーされます。  

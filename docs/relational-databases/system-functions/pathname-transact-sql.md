@@ -1,14 +1,11 @@
 ---
-title: パス名 (TRANSACT-SQL) |Microsoft ドキュメント
+title: パス名 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80fc13baa2d538e054ed88607cd4b45c6477cb6e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233613"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852020"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  FILESTREAM バイナリ ラージ オブジェクト (BLOB) のパスを返します。 OpenSqlFilestream API では、このパスを使用して、Win32 Api を使用して、BLOB データを操作するアプリケーションで使用できるハンドルを返します。 PathName は読み取り専用です。  
+  FILESTREAM バイナリ ラージ オブジェクト (BLOB) のパスを返します。 OpenSqlFilestream API では、このパスを使用して、アプリケーションは、Win32 Api を使用して BLOB データを操作に使用できるハンドルを返します。 PathName は読み取り専用です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,27 +41,27 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>引数  
  *column_name*  
- 列名を指定、 **varbinary (max)** FILESTREAM 列です。 *column_name*列名にする必要があります。 式を指定したり、CAST ステートメントまたは CONVERT ステートメントの結果を指定したりすることはできません。  
+ 列の名前を指定する**varbinary (max)** FILESTREAM 列です。 *column_name*列名にする必要があります。 式を指定したり、CAST ステートメントまたは CONVERT ステートメントの結果を指定したりすることはできません。  
   
- その他のデータ型の列に対して PathName を要求する、 **varbinary (max)** columnthat には、クエリのコンパイル時エラーが発生する FILESTREAM ストレージ属性はありません。  
+ またはその他のデータ型の列に対して PathName を要求する**varbinary (max)** columnthat には、クエリのコンパイル時エラーが発生する FILESTREAM ストレージ属性はありません。  
   
  *@option*  
  整数[式](../../t-sql/language-elements/expressions-transact-sql.md)パスのサーバー コンポーネントの書式設定方法を定義します。 *@option* 次の値のいずれかを指定できます。 既定値は 0 です。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |0|サーバー名を BIOS 形式に変換して返します (例: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`)。|  
 |1|たとえば、サーバー名を変換せずが返されます。 `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
-|2|たとえば、完全なサーバー パスを返します。 `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|2|たとえば、サーバーの完全なパスが返されます。 `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
  Always On 可用性グループで、サーバー名を返される方法を定義するビット値。  
   
- データベースは、Always On 可用性グループには属していない、ときに、この引数の値は無視されます。 コンピューター名は、パスで常に使用されます。  
+ データベースは、Always On 可用性グループには属していない、ときにこの引数の値は無視されます。 コンピューター名は、パスで常に使用されます。  
   
- データベースが Always On 可用性に属しているグループ化、しの値*use_replica_computer_name*の出力には、次の影響、 **PathName**関数。  
+ Always On 可用性データベースが属している場合にグループ化、しの値*use_replica_computer_name*の出力には、次の影響、 **PathName**関数。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |指定されていません。|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
 |0|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
@@ -77,7 +73,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>戻り値  
  戻り値は、BLOB の完全修飾論理パスまたは NETBIOS パスです。 PathName は IP アドレスを返しません。 FILESTREAM BLOB が作成されていない場合は、NULL が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ROWGUID 列は、PathName を呼び出す任意のクエリでアクセスできる必要があります。  
   
  FILESTREAM BLOB は、[!INCLUDE[tsql](../../includes/tsql-md.md)] でのみ作成できます。  

@@ -1,15 +1,12 @@
 ---
-title: LocalDBUnshareInstance 関数 |Microsoft ドキュメント
+title: LocalDBUnshareInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBUnshareInstance
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1cc1928d77176d00b7d3b5dccb03c5fce4116dd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11746ec31e5ecd0fec63c727c002181fc625341f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691550"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ HRESULT LocalDBUnShareInstance(
  *dwFlags*  
  [入力] 将来の使用のために予約されています。 現時点では、0 に設定する必要があります。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  S_OK  
  関数が正常に実行されました。  
   
@@ -72,8 +68,8 @@ HRESULT LocalDBUnShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>解説  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)です。  
+## <a name="remarks"></a>コメント  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

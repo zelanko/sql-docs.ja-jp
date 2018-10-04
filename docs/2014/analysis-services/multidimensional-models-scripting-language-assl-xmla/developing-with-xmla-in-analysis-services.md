@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, data mining
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - XML for Analysis, Analysis Services tasks
 - XMLA, Analysis Services tasks
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4eef38459df5d2d872646a7bc64973028d25ac4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d88bbd891591b28db840b3b9e90ae74120ba625a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170202"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Analysis Services での XMLA による開発
   XML for Analysis (XMLA) は SOAP ベースの XML プロトコルで、HTTP 接続を使用してアクセスできるあらゆる標準的な多次元データ ソースへの汎用データ アクセスを提供することを目的に特別に設計されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、クライアント アプリケーションとの通信を行う場合に、XMLA を唯一のプロトコルとして使用します。 基本的に、Analysis Services によってサポートされるすべてのクライアント ライブラリでは、要求と応答は XMLA で作成されます。  

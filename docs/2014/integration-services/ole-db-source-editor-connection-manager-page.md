@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-caps.latest.revision: 41
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71b29c69425508e15ba306c6f9ae7d0319c8a6ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172982"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>[OLE DB ソース エディター] ([接続マネージャー] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、ソースの OLE DB 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  

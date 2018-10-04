@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e1daefbc5625aaf034a9be9218a59daf5286cc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320442"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094028"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、データベースの完全バックアップを作成する方法について説明します。  
@@ -202,7 +199,7 @@ ms.locfileid: "37320442"
     -   基本的なバックアップ セット WITH オプション  
   
          { COMPRESSION | NO_COMPRESSION }  
-         ph x="1" /&gt; 以降でのみ、このバックアップで [バックアップの圧縮](backup-compression-sql-server.md) を実行するかどうかを指定し、サーバー レベルの既定値をオーバーライドできます。  
+         [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] 以降でのみ、このバックアップで [バックアップの圧縮](backup-compression-sql-server.md) を実行するかどうかを指定し、サーバー レベルの既定値をオーバーライドできます。  
   
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          SQL Server 2014 以降でのみ、使用する暗号化アルゴリズムと暗号化の保護に使用する証明書または非対称キーを指定します。  

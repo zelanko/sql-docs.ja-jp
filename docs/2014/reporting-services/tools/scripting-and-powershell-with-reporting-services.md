@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - Reporting Services, scripting
 - scripting [Reporting Services]
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2b69a9713d015db66945a1c096f8896998459406
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 949ceb6b2aff0dd393cfa0c58e91355f20f4c741
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166522"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services を使ったスクリプトの作成と PowerShell
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] さまざまなスクリプトを rs.exe コマンド ライン ユーティリティ、SharePoint モードのレポート サーバーでは、PowerShell コマンドレットを活用することなどを開発および管理のシナリオをサポートしている、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]両方のネイティブの PowerShell からのオブジェクト モデルとSharePoint モード。  
@@ -64,7 +61,7 @@ ms.locfileid: "37212542"
   
 ## <a name="rsexe-scripting-samples"></a>RS.exe スクリプトのサンプル  
   
--   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+-   [レポート サーバー間でコンテンツを移行するサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)  
   
 -   その他のスクリプト、アプリケーション、および拡張機能の例については、「 [SQL Server Reporting Services の製品例](http://go.microsoft.com/fwlink/?LinkId=177889)」を参照してください。  
   

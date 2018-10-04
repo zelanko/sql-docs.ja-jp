@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restorefilesandfilegrps.general.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], restoring files and filegroups
 - restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59eb0adb6acd224388528857636b049fa6ecf4bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cc98f791b4d0a8cba9b2c1030cd207cc2f1092c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175142"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>ファイルとファイル グループの復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でファイルとファイル グループを復元する方法について説明します。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 647aef9c4cc3f06e9482d507791ff4c4fcc23a38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 153a7dfafea308c57dd933de633a016871e32e6e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221132"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>グラフ上で複数のデータ範囲を持つ系列の表示 (レポート ビルダーおよび SSRS)
   グラフでは、軸のスケールを計算するために、系列の最小値と最大値が使用されます。 グラフ上の系列に複数のデータ範囲が含まれていると、データ ポイントが重なり合って、少数のデータ ポイントしかグラフ上ではっきりと見えない場合があります。 たとえば、毎日の売上合計を 30 日分表示するレポートがあるとします。  

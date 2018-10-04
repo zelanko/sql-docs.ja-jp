@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], Reporting Services
 - high availability [Reporting Services]
 - Reporting Services, high availability
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0884a284e6d9169ce978d3c47330a683e2bb6b52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c71fd13052c02b36c7b725e4058fd827076d6a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058352"
 ---
 # <a name="high-availability-reporting-services"></a>高可用性 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、アプリケーションのデータ、コンテンツ、プロパティ、およびセッション情報を 2 つの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データベースに格納するステートレス サーバーです。 などの可用性を確保する最善の方法として[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]機能は、次の操作には。  

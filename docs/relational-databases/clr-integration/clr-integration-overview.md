@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - managed code [SQL Server], vs. extended stored procedures
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8f4fb83b806fe03bf1b68e7f9d70beb7ce876f7e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 956ddabb6101f524de052afb107e5434d6d87892
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351344"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850982"
 ---
 # <a name="clr-integration---overview"></a>CLR 統合 - 概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +31,7 @@ ms.locfileid: "37351344"
   
  Microsoft SQL Server でホストされる CLR のことを CLR 統合と呼びます。この CLR 統合を使用すると、マネージド コードで、ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、ユーザー定義集計を作成できます。 マネージド コードは実行前にネイティブ コードにコンパイルされるので、シナリオによってはパフォーマンスの大幅な向上を図ることができます。  
   
- マネージド コードでは、アセンブリが特定の操作を実行できないように、CAS (コード アクセス セキュリティ) が使用されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CAS を使用して、マネージド コードをセキュリティで保護し、オペレーティング システムやデータベース サーバーが危険にさらされる状況を回避しています。  
+ マネージド コードでは、アセンブリが特定の操作を実行できないように、CAS (コード アクセス セキュリティ) が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CAS を使用して、マネージド コードをセキュリティで保護し、オペレーティング システムやデータベース サーバーが危険にさらされる状況を回避しています。  
   
 ## <a name="advantages-of-clr-integration"></a>CLR 統合機能の利点  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] は、データに直接アクセスしたり、データベースを直接操作することを主眼に設計されています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] はデータへのアクセスやデータの管理に優れていますが、いわゆる本格的なプログラミング言語ではありません。 たとえば、[!INCLUDE[tsql](../../includes/tsql-md.md)] では、配列、コレクション、for-each ループ、ビット シフト、およびクラスはサポートされません。 このような構成要素の一部は [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して類似したものを作成することもできますが、マネージド コードにはこれらの構成要素に対するサポートが組み込まれています。 シナリオによっては、この特性が、特定のデータベースの機能をマネージド コードに実装するかどうかの決め手となることがあります。  
@@ -57,7 +54,7 @@ ms.locfileid: "37351344"
  ストアド プロシージャ、トリガー、およびユーザー定義関数を記述する際には、従来の [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用するか、Visual Basic .NET や Visual C# などの .NET Framework 言語を使用するかを判断する必要があります。 データ アクセスに使用する手続き型のロジックが、コード中にない場合や非常に少ない場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。 複雑なロジックで CPU を集中的に使用する関数やプロシージャ、または .NET Framework の BCL を使用する場合は、マネージド コードを使用します。  
   
 ### <a name="choosing-between-execution-in-the-server-and-execution-in-the-client"></a>サーバー側での実行とクライアント側での実行の選択  
- ph x="1" /&gt; とマネージド コードのどちらを使用するかを判断する際には、コードをサーバー コンピューターで実行するか、またはクライアント コンピューターで実行するかを判断する必要があります。 ph x="1" /&gt; とマネージド コードは、どちらもサーバー側で実行することができます。 サーバー側でコードを実行すると、コードとデータが近くにあるため、サーバーの処理能力を活用できます。 逆に、データベース サーバーでプロセッサを集中的に使用するタスクを実行することが好ましくない場合もあります。 現在、多くのクライアント コンピューターは高性能なので、できるだけ多くのコードをクライアント側で実行して、この処理能力を活用することもできます。 ph x="1" /&gt; はクライアント側で実行することはできませんが、マネージド コードはクライアント側で実行することができます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] とマネージド コードのどちらを使用するかを判断する際には、コードをサーバー コンピューターで実行するか、またはクライアント コンピューターで実行するかを判断する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] とマネージド コードは、どちらもサーバー側で実行することができます。 サーバー側でコードを実行すると、コードとデータが近くにあるため、サーバーの処理能力を活用できます。 逆に、データベース サーバーでプロセッサを集中的に使用するタスクを実行することが好ましくない場合もあります。 現在、多くのクライアント コンピューターは高性能なので、できるだけ多くのコードをクライアント側で実行して、この処理能力を活用することもできます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] はクライアント側で実行することはできませんが、マネージド コードはクライアント側で実行することができます。  
   
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>拡張ストアド プロシージャとマネージド コードの選択  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでは実行不可能な機能を実行するために、拡張ストアド プロシージャを構築できます。 ただし、拡張ストアド プロシージャでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性を侵害する可能性があります。一方、マネージド コードは、タイプ セーフなので、SQL Server プロセスの整合性を侵害することはありません。 さらに、CLR のマネージド コードと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間では、メモリ管理、スレッドやファイバーのスケジュール設定、同期サービスが、より密接に統合されます。 CLR 統合を使用すると、拡張ストアド プロシージャを使用するよりも安全に、[!INCLUDE[tsql](../../includes/tsql-md.md)] では記述できないタスクを実行するのに必要なストアド プロシージャを記述することができます。 CLR 統合と拡張ストアド プロシージャの詳細については、次を参照してください。 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)します。  
