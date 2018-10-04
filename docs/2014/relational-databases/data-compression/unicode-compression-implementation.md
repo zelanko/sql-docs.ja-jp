@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode data compression
 - compression [SQL Server], Unicode data
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 216e2278418747a713575c165f14390c7b785e71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 498bf394cb896f12a4b246edf42b9b741a0a99b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084714"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 圧縮の実装
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Standard Compression Scheme for Unicode (SCSU) アルゴリズムの実装を使用して、行またはページの圧縮オブジェクトに格納する Unicode 値を圧縮します。 これらの圧縮オブジェクトでは、`nchar(n)` 列および `nvarchar(n)` 列の Unicode 圧縮が自動的に行われます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ロケールに関係なく、Unicode データが 2 バイトで格納されます。 これは UCS-2 エンコードと呼ばれています。 ロケールによっては、SQL Server の SCSU 圧縮実装で保存できる最大領域がストレージ領域の 50% になる場合があります。  

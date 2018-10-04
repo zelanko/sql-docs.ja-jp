@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.general.f1
 helpviewer_keywords:
 - Transfer Logins Task Edito
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 304a619981f696a27acabd6f841295b8bdd9808f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54a2f38cee150a545562ca976ff83a2806b0b60a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298642"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084472"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>[ログイン転送タスク エディター] ([全般] ページ)
   **[ログイン転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ログイン転送タスクの名前と説明を入力します。 このタスクの詳細については、「 [ログイン転送タスク](control-flow/transfer-logins-task.md)」を参照してください。  

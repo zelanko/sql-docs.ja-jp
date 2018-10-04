@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - Snapshot Agent, about Snapshot Agent
 - Snapshot Agent
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4fe3b25fb570d305ba176d89f2f21413c19665e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 441bae8df8e15f5dd8df4ebf636bf5f879ab497c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081342"
 ---
 # <a name="replication-agents-overview"></a>レプリケーション エージェントの概要
   レプリケーションでは、エージェントと呼ばれる多数のスタンドアロン プログラムを使用して、変更の監視やデータの配信に関連するタスクを実行します。 既定では、レプリケーション エージェントは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでスケジュールされたジョブとして実行されるため、ジョブを実行するためには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントが実行中であることが必要です。 レプリケーション エージェントはコマンド ラインから実行することも、レプリケーション管理オブジェクト (RMO) を使用するアプリケーションから実行することもできます。 レプリケーション エージェントは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターおよび [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]から管理できます。  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services]
 - custom foreach enumerators [Integration Services], about custom foreach enumerators
 - foreach enumerators [Integration Services]
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b055244216ef6bc84f0a7448ba3938c1cb1c3bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07df48880932c5e40c2ce8923b87d5c5ddbef876
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213382"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085022"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>カスタム ForEach 列挙子の開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、foreach 列挙子を使用して、コレクション内のアイテムを繰り返し処理したり、各要素に対して同じタスクを実行したりします。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、フォルダー内のすべてのファイル、データベース内のすべてのテーブル、パッケージ変数に格納された一覧のすべての要素など、最もよく使用されるコレクションをサポートする、さまざまな foreach 列挙子が含まれています。 提供される foreach 列挙子とコレクションが、要件を必ずしも満たさない場合は、カスタム foreach 列挙子を作成できます。  

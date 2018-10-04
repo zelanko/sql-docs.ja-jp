@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - transaction logs [SQL Server], full log
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
-caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b3fa89db4f8fb95ca1f2e912c6ee1d131808f42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75677d897c714828e23205490d68fd2e691b9b39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084912"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
   このトピックでは、トランザクション ログが満杯になった場合の対処法について説明し、今後トランザクション ログが満杯になるのを防ぐ方法を示します。 トランザクション ログが満杯になると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]から 9002 エラーが発行されます。 データベースがオンラインまたは復旧中の場合、ログが満杯になることがあります。 データベースがオンラインの時にログが満杯になると、データベースはオンラインのままですが、読み取り専用になり、更新できません。 復旧中にログが満杯になった場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりデータベースが RESOURCE PENDING としてマークされます。 いずれの場合も、ログ領域を使用可能にするためのユーザー操作が必要です。  

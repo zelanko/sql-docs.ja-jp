@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 719a001aa4c15a36f33dbb44ff51e442d179e51b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8bc8f0d48b2f439b421f205187343b5ca0e2f010
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080192"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>PowerPivot サービス アカウントの構成
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のインストールには、サーバー処理をサポートする 2 つのサービスが含まれます。 **SQL Server Analysis Services (PowerPivot)** サービスは、アプリケーション サーバー上の PowerPivot データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
@@ -74,15 +71,13 @@ ms.locfileid: "37149953"
   
 2.  **[Windows サービス - SQL Server Analysis Services]** を選択して、Analysis Services サービス アカウントを変更します。  
   
-3.  
-  **[このサービスのアカウントを選択する]** で、既存の管理アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
+3.  **[このサービスのアカウントを選択する]** で、既存の管理アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
   
 4.  選択**サービス アプリケーション プール - SharePoint Web サービスのシステム**既定の PowerPivot サービス アプリケーションのアプリケーション プール id を変更します。 インストールの構成によっては、SharePoint サービス用に作成された既存のサービス アプリケーション プールでサービスが実行されている場合があります。 既定では、PowerPivot 構成ツールは、サービスを登録します**既定の PowerPivot サービス アプリケーション (PowerPivot サービス アプリケーション)** します。  
   
      サービスが SharePoint 管理者によって手動で構成された場合、サービスにはほとんどの場合に自身のサービス アプリケーション プールがあります。  
   
-5.  
-  **[このサービスのアカウントを選択する]** で、既存の管理アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
+5.  **[このサービスのアカウントを選択する]** で、既存の管理アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
   
 6.  **[OK]** をクリックします。  
   
@@ -175,8 +170,7 @@ ms.locfileid: "37149953"
   
 4.  SharePoint サーバーの全体管理で、[セキュリティ] の **[管理アカウントの構成]** をクリックします。  
   
-5.  
-  **[編集]** をクリックして、期限切れのパスワードを持つ管理アカウントの情報を更新します。  
+5.  **[編集]** をクリックして、期限切れのパスワードを持つ管理アカウントの情報を更新します。  
   
 6.  **[今すぐパスワードを変更]** をクリックします。  
   

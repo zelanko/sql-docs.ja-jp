@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cbec6a7aa6c1ac92dbf64fe018800a223084e4e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252794"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088102"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>AlwaysOn セカンダリ データベース上のデータ移動の開始 (SQLServer)
   このトピックでは、AlwaysOn 可用性グループにデータベースを追加した後、データの同期を開始する方法について説明します。 新しい各プライマリ レプリカに対して、セカンダリ レプリカをホストするサーバー インスタンス上でセカンダリ データベースを準備する必要があります。 その後、各セカンダリ データベースを手動で可用性グループに参加させる必要があります。  

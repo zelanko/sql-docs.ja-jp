@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ba8b1d1fb182ca0f16fe157630253b74b9580eb2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088092"
 ---
 # <a name="query-options-results-grid-page"></a>[クエリ オプション] の [結果] ([グリッド] ページ)
   このページを使用すると、クエリ結果セットをグリッド形式で表示するためのオプションを指定できます。  
@@ -30,19 +27,19 @@ ms.locfileid: "37312292"
  **結果セットにクエリを含める**  
  クエリのテキストを結果セットの一部として返します。  
   
- **コピーまたは結果を保存するときに、列ヘッダーを含める**  
+ **結果のコピーまたは保存時に列のヘッダーを含める**  
  結果をクリップボードにコピーしたりファイルに保存したりするときに、列のヘッダー (タイトル) を含めます。 保存またはコピーされる結果データに列の見出しを含めずに、データだけ保存またはコピーするには、このチェック ボックスをオフにします。  
   
- **実行後に結果を破棄します。**  
+ **実行後に結果を破棄する**  
  画面表示がクエリ結果を受け取った後にクエリ結果を破棄することによって、メモリを解放します。  
   
- **別のタブで結果を表示します。**  
+ **結果を別のタブに表示する**  
  結果セットを、クエリ ドキュメント ウィンドウの下部ではなく、新しいドキュメント ウィンドウに表示します。  
   
- **クエリ実行後に [結果] タブに切り替えます**  
+ **クエリ実行後に [結果] タブに切り替える**  
  画面のフォーカスを自動的に結果セットに設定します。  
   
- **最大文字数を取得**  
+ **取得される最大文字数**  
  **XML 以外のデータ**:  
   
  1 ～ 65,535 の値を入力して、各セルに表示される最大文字数を指定します。  

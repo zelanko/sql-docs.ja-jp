@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/11/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e027535f9b70acc518bd6fa3e3f4324007021311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 704897c5da43f3f48479e155d1679a002b586866
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086575"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
   インデックス操作をオンラインで実行するときは、次のガイドラインに従ってください。  
@@ -72,7 +69,7 @@ ms.locfileid: "37316132"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を実行するマルチプロセッサ コンピューターでは、他のクエリと同様に、インデックスのステートメントがこのステートメントに関連付けられているスキャン操作や並べ替え操作の実行に、より多くのプロセッサを使用する場合があります。 MAXDOP インデックス オプションを使用して、オンラインでのインデックス操作専用に使用するプロセッサ数を制御できます。 このようにすることで、インデックス操作が使用するリソースと他の同時実行ユーザーが使用するリソースのバランスをとることができます。 詳細については、「 [並列インデックス操作の構成](configure-parallel-index-operations.md)」を参照してください。 サポート並列インデックス操作をする SQL Server のエディションの詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
- S-Lock または Sch-M ロックはインデックス操作の最後のフェーズで保持されるので、BEGIN TRANSACTION...COMMIT ブロックなど、明示的なユーザー トランザクション内でのオンラインのインデックス操作を実行する場合は十分に注意してください。 この場合、ロックがトランザクションの最後まで保持され、その結果ユーザーの同時実行性が損なわれます。  
+ S-Lock または Sch-M ロックはインデックス操作の最後のフェーズで保持されるので、BEGIN TRANSACTION...COMMIT ブロックなど、明示的なユーザー トランザクション内でのオンラインのインデックス操作を実行する場合は十分に注意してください。 この場合、ロックがトランザクションの最後まで保持され、その結果ユーザーのコンカレンシーが損なわれます。  
   
  インデックスをオンラインで再構築すると、 `MAX DOP > 1` オプションと `ALLOW_PAGE_LOCKS = OFF` オプションでの実行が許可されたときに断片化が増加する可能性があります。 詳細については、「 [動作方法: オンラインでのインデックス再構築 - 断片化が増加する可能性](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)」を参照してください。  
   

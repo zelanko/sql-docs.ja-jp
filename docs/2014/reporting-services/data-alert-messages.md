@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2227a89a3e44934550a828dc9bc47db97b83e28c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b987446144cf63651e056cf49a5791bacce705b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085715"
 ---
 # <a name="data-alert-messages"></a>データ警告メッセージ
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告は、2 種類のデータ警告メッセージを電子メールで配信します。データ警告結果を含むメッセージと、エラー説明を含むメッセージです。 結果を含むメッセージは、すべての受信者に共通して関係し、かつ業務意思決定にとって重要なレポート データの変更について情報を提供します。 何かの理由でエラーが発生し、結果情報が取得できない場合は、代わりにエラー メッセージが送信されます。  

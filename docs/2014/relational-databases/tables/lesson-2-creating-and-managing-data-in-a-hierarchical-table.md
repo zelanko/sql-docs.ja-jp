@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e86268cb83887027159629069195fee60b5e85fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e17ad0f4f73ccec1875a57fc3263c4320c0625a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076741"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>レッスン 2 : 階層テーブルでのデータの作成と管理
   レッスン 1 では、既存のテーブルを変更して `hierarchyid` データ型を使用し、`hierarchyid` 列に既存のデータ表現でデータを設定しました。 このレッスンでは、まず新しいテーブルを作成し、次に階層的な手法を使用してデータを挿入します。 その後、階層的な手法を使用して、データのクエリおよび操作を実行します。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.advancedrestoresettings.f1
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21550167b2850d8e76daa74c0fdb860ca4e98cc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7677776bb1adf21d3234f770a9e2941edfa70ed0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074932"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>[リモート パーティション - 詳細設定] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で **[リモート パーティション - 詳細設定]** ダイアログ ボックスを使用すると、**[データベースの復元]** ダイアログ ボックスでリモート バックアップ ファイルから [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースへリモート パーティションを復元する際に、リモート パーティションを維持するリモート [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを表すデータ ソースの接続文字列などの詳細設定を編集できます。 **[リモート パーティション - 詳細設定]** ダイアログ ボックスを表示するには、 **[データベースの復元]** ダイアログ ボックスの **[パーティション]** ページで **[リモート パーティションを復元する]** オプションを選択した後、リモート パーティションの参照ボタン ( **[...]** ) をクリックします。  

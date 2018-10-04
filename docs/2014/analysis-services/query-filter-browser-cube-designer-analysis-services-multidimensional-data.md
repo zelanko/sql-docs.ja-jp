@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074902"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>クエリとフィルター (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[ブラウザー]** タブのこの領域には、参照目的で使用するデータやクエリに使用するデータをキューブから簡単に選択できるクエリ/フィルター領域があります。 キューブ オブジェクトは必要に応じていくつでも追加でき、その結果をデータ領域で確認することができます。また、"Excel で分析" を使用して結果をレポートにエクスポートすることにより、エンド ユーザーから見たデータの体裁を視覚的に確認することができます。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - clr enabled option
 - common language runtime [SQL Server], enabling
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f6f17415e13b3f0a9774a1e530756955f28c32dd
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1cb5f1f4bcc3a3e796cc99b4da7f14e5a5976b93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075652"
 ---
 # <a name="enabling-clr-integration"></a>CLR 統合の有効化
   CLR (共通言語ランタイム) 統合機能は既定では無効になっているので、CLR 統合を使用して実装されるオブジェクトを使用するには、この機能を有効にする必要があります。 CLR 統合を有効にするには使用、 **clr を有効になっている**のオプション、 **sp_configure**ストアド プロシージャ。  

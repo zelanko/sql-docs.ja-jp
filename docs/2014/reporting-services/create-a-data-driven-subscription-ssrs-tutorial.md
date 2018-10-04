@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081691"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が提供するデータ ドリブン サブスクリプションにより、動的なサブスクライバー データに基づいてレポートの配信をカスタマイズできます。 データ ドリブン サブスクリプションには次のような用途があります。  

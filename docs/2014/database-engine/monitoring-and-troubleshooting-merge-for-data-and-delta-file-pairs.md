@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6ab50676145c7a7e68976448c6a89b2dceadb45
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1f5febee69483b5f1a2e8aa5b7b48fdde0a7ada2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075282"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>データ ファイルとデルタ ファイルのペアのマージに関する監視とトラブルシューティング
   インメモリ OLTP は、マージ ポリシーを使用して、データ ファイルとデルタ ファイルの隣接するペアを自動的にマージします。 マージ操作を無効にすることはできません。  

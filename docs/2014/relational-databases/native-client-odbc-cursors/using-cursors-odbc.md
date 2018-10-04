@@ -1,12 +1,10 @@
 ---
-title: カーソルの使用 (ODBC) |Microsoft Docs
+title: カーソルの使用 (ODBC) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, cursors
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - cursors [ODBC]
 - ODBC cursors
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee00b752236032b7123eb557e82bed12de8ecb00
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416351"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084042"
 ---
 # <a name="using-cursors-odbc"></a>カーソルの使用 (ODBC)
   ODBC では、次のことを可能にするカーソル モデルがサポートされます。  
@@ -33,7 +30,7 @@ ms.locfileid: "37416351"
   
 -   カーソル内でのスクロールと位置指定  
   
--   複数の同時実行オプション  
+-   複数のコンカレンシー オプション。  
   
 -   位置指定更新します。  
   
