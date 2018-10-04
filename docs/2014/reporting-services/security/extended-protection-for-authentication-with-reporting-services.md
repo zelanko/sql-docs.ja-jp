@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e1de2e37101fe69c1593169d68f314e23e6b9775
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2a857d433a39958c6018ef8026de2ca3e1efba1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168262"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services での認証の拡張保護
   拡張保護は、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに追加された一連の拡張機能です。 拡張保護により、アプリケーションで資格情報と認証を保護する方法の幅が広がります。 機能自体が資格情報の転送などの特定の攻撃に対する保護を直接提供されませんなどのアプリケーション インフラストラクチャを提供、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]認証の拡張保護を適用します。  
@@ -47,7 +44,7 @@ ms.locfileid: "37288768"
 >   
 >  データ アクセス テクノロジのドキュメントには、拡張保護のサポートに関する情報が記載されています。  
   
-### <a name="upgrade"></a>UPGRADE  
+### <a name="upgrade"></a>アップグレード  
   
 -   アップグレードを[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]サーバーを[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]に既定値で構成設定を追加、`rsreportserver.config`ファイル。 存在する場合は、既に設定していた場合、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インストールはそれらを保持、`rsreportserver.config`ファイル。  
   

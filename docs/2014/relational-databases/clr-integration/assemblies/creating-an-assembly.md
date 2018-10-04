@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - creating assemblies
@@ -16,18 +14,17 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7dcaae61cdfa6466f8f7194b4f93977ec2e7d97
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e28871e93bd718063692a31a4a3462399517dfc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129002"
 ---
-# <a name="creating-an-assembly"></a>アセンブリを作成します。
+# <a name="creating-an-assembly"></a>アセンブリの作成
   ストアド プロシージャやトリガーなどのマネージド データベース オブジェクトは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 マネージ DLL アセンブリを登録する必要があります[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]アセンブリが提供する機能を使用する前にします。 アセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに登録するには、CREATE ASSEMBLY ステートメントを使用します。 ここでは、CREATE ASSEMBLY ステートメントを使用してアセンブリをデータベースに登録する方法と、アセンブリのセキュリティ設定を指定する方法について説明します。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY ステートメント  
@@ -70,7 +67,7 @@ CREATE ASSEMBLY SQLCLRTest
 FROM 'C:\MyDBApp\SQLCLRTest.dll';  
 ```  
   
- ph x="1" /&gt; 権限セットで実行されるアセンブリ内のコードでは、インプロセス マネージド プロバイダーを経由して、計算とサーバーのデータへのアクセスのみを実行できます。  
+ `SAFE` 権限セットで実行されるアセンブリ内のコードでは、インプロセス マネージド プロバイダーを経由して、計算とサーバーのデータへのアクセスのみを実行できます。  
   
 ### <a name="creating-externalaccess-and-unsafe-assemblies"></a>EXTERNAL_ACCESS および UNSAFE アセンブリの作成  
  `EXTERNAL_ACCESS` は、ファイル、ネットワーク、レジストリ、環境変数など、サーバー外部のリソースにコードからアクセスする必要がある場合に使用します。 サーバーから外部リソースにアクセスする場合、常にマネージド コードの呼び出し元のユーザーのセキュリティ コンテキストが借用されます。  

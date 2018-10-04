@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86396a835b68e9a6028bce45a68110e337ce9131
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82530d7707b6b93c2b4360ea4dd1fae27a868246
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143422"
 ---
-# <a name="migrate-query-plans"></a>クエリ プランを移行します。
+# <a name="migrate-query-plans"></a>クエリ プランの移行
   データベースを最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードすると、ほとんどの場合、クエリのパフォーマンスが向上します。 ただし、慎重にパフォーマンス チューニングされたミッションクリティカルなクエリがある場合は、アップグレードする前に、各クエリのプラン ガイドを作成してこれらのクエリのクエリ プランを保存しておくことをお勧めします。 アップグレード後に、効率性の劣るクエリ プランが 1 つ以上のクエリに対してクエリ オプティマイザーで選択される場合は、プラン ガイドを有効にし、強制的にアップグレード前のプランが使用されるように設定できます。  
   
  アップグレードする前にプラン ガイドを作成するには、次の手順を実行します。  

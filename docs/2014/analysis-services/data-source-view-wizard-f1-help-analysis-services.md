@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Source View Wizard
 ms.assetid: 0f5057a3-2d3a-4966-8b61-99c4b8ec3433
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: efc9c20cc6e79ae4e03838d9d4621fca383a5b43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebdb15312f78b624a6bb908baa519da6b920307d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171312"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>データ ソース ビュー ウィザードの F1 ヘルプ (Analysis Services)
   データ ソース ビュー ウィザードを使用して、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で次のビジネス インテリジェンス プロジェクトに使用するデータ ソース ビューを作成します。  

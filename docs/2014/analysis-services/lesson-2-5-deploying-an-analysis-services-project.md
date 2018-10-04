@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9426c3afabb53c158feffa22c9b3ee53166ceb5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 611b4cf87158be48cae3bc37ef7311de64c77ddf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126222"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Analysis Services プロジェクトの配置
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに含まれるオブジェクトのキューブ データおよびディメンション データを表示するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の指定のインスタンスにプロジェクトを配置し、キューブおよびそのディメンションを処理します。 *プロジェクトを* 配置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに定義済みオブジェクトが作成されます。 *のインスタンス内のオブジェクトを* 処理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] すると、基となるデータ ソースのデータがキューブ オブジェクトにコピーされます。 詳細については、「[Analysis Services プロジェクトの配置 (SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md)」および「[Analysis Services プロジェクトのプロパティの構成 (SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」を参照してください。  
@@ -41,7 +38,7 @@ ms.locfileid: "37301262"
     > [!NOTE]  
     >  プロジェクトの名前付きインスタンスをデプロイする[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ローカル コンピューターまたはリモート サーバー上のインスタンスには、変更、 **Server**プロパティを適切なインスタンス名など、 \< *ServerName**>\\<** InstanceName * * >* します。  
   
-3.  [**OK**] をクリックします。  
+3.  **[OK]** をクリックします。  
   
 4.  ソリューション エクスプローラーで、 **[Analysis Services Tutorial]** プロジェクトを右クリックし、 **[配置]** をクリックします。 場合によっては、しばらく待つ必要があります。  
   

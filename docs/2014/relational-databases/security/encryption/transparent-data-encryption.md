@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 70
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03971bcd487016fbc1fadc07203ebe2ab73555d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163172"
 ---
 # <a name="transparent-data-encryption-tde"></a>透過的なデータ暗号化 (TDE)
   *Transparent Data Encryption* (TDE) では暗号化[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]データ ファイル、静止したデータの暗号化と呼ばれます。 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合は、悪意のある人物によってデータベースが復元またはアタッチされ、データが参照されるおそれがあります。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  

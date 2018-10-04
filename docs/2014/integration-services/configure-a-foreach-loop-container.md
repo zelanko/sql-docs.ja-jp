@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Foreach Loop containers
 - containers [Integration Services], Foreach Loop
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
-caps.latest.revision: 36
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6eb60b4292ac3357ea2e2fcc27a6a36ae4bea608
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d63a4f168c4a426c06bb00c634f89e328735332
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298772"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159762"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Foreach ループ コンテナーを構成する
   この手順では、列挙子レベルおよびコンテナー レベルでのプロパティ式など、Foreach ループ コンテナーを構成する方法について説明します。  
@@ -87,7 +84,7 @@ ms.locfileid: "37298772"
   
 8.  必要に応じて **[式]** をクリックし、 **[式]** ページで Foreach ループ コンテナーのプロパティ用のプロパティ式を作成します。 詳細については、「 [プロパティ式を追加または変更する](expressions/add-or-change-a-property-expression.md)」を参照してください。  
   
-9. [**OK**] をクリックします。  
+9. **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)  

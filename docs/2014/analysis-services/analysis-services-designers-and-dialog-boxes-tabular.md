@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cd2af1f3-cd8b-4651-9e4d-7c4c94353d7e
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14c6ca0494c49b1a445f6d144d3a0a527f13b469
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bed90099c42383ea45ba6ad17459c7e0f6048b8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165432"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Analysis Services のデザイナーおよびダイアログ ボックス (テーブル)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のテーブル プロジェクト作成環境と、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のテーブル モデル管理ツールには、多くのダイアログ ボックス、プロパティ ページ、およびウィザード ページが含まれています。 詳細について調べるには、[ヘルプ] ボタンをクリックするか、F1 キーを押します。  

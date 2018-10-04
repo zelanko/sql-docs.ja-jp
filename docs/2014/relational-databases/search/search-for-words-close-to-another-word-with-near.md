@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179729"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149022"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
   [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述語または [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 関数で近接語句 (NEAR) を使用すると、互いに似た単語や語句を検索できます。 最初の検索語句と最後の検索語句を分離する非検索用語の最大数を指定することもできます。 さらに、任意の順序で語や句を検索したり、指定した順序で語や句を検索したりすることができます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 両方を以前サポート[汎用近接語句](#Generic_NEAR)が、非推奨となりましたが、[カスタム近接語句](#Custom_NEAR)、新機能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。  

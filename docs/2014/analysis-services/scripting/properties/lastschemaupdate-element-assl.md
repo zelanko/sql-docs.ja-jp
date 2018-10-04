@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LastSchemaUpdate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - LastSchemaUpdate element
 ms.assetid: 0634c105-91cc-4882-87be-97ca29a251a6
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94fe98ca4a898e3cb126dcddcd45f367999b7daf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8df6f7484cf358e498c57f625ba5fc22c8913b98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141762"
 ---
 # <a name="lastschemaupdate-element-assl"></a>LastSchemaUpdate 要素 (ASSL)
   親要素の読み取り専用のメタデータ更新タイムスタンプを格納します。  

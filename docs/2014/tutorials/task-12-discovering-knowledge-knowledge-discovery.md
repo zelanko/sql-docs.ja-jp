@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04508f02f6e7bf2daa19117406cace4944a32d36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d38af78e59a88e05fe874e4b4748b1f6f8b5049c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317422"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167702"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>タスク 12: ナレッジを検出する (ナレッジ検出)
   このタスクで実行して、**ナレッジ検出**でアクティビティ**Supplier ID**と**Supplier Name**ドメイン。 このシナリオでは、ナレッジ検出プロセスにより主にこれら 2 つのドメインの値をインポートします。  

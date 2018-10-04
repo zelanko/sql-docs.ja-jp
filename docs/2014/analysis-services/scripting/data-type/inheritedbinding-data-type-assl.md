@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - InheritedBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - InheritedBinding data type
 ms.assetid: a61f58c5-62d6-44e8-a02f-db2b17d1f256
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fb5895ab8435ed92717df8b2e016bc7458efa84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3859b2efa2f4847d9b45f124b1f8177b4e16dc68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168043"
 ---
 # <a name="inheritedbinding-data-type-assl"></a>InheritedBinding データ型 (ASSL)
   示す派生データ型を定義、 [MeasureGroupAttribute](measuregroupattribute-data-type-assl.md)要素が属性からバインドを継承します。  

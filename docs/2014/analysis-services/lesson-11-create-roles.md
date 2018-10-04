@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d3ca1e013ede0e8bd40c1ce5af36d44ea45122d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164082"
 ---
 # <a name="lesson-12-create-roles"></a>レッスン 12: ロールの作成
   このレッスンでは、ロールを作成します。 ロールを使用すると、ロール メンバーである Windows ユーザーのみにアクセスを制限することで、モデル データベース オブジェクトとデータにセキュリティを提供できます。 各ロールは、1 つの権限 (なし、読み取り、読み取りと実行、実行、または管理者) を使用して定義されます。 モデルのロールは、モデルの作成時に [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義できます。 モデルを配置した後は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用してロールを管理できます。 詳細については、「[ロール (SSAS テーブル)](tabular-models/roles-ssas-tabular.md)」 を参照してください。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Data Source View Wizard
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28d7dc1fe18ff942594b070074df853c196d98f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308552"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150392"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>データ ソース ビューの定義 (Analysis Services)
   データ ソース ビューには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元データベース オブジェクト (つまり、キューブ、ディメンション、およびマイニング構造) で使用されるスキーマの論理モデルが含まれます。 データ ソース ビューとは、XML 形式で格納されている、統合ディメンショナル モデル (UDM) とマイニング構造で使用されるこれらのスキーマ要素のメタデータ定義です。 データ ソース ビューには、次の特徴があります。  

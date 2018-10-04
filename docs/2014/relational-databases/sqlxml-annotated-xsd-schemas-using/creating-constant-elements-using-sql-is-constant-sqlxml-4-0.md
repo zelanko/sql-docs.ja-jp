@@ -1,14 +1,12 @@
 ---
-title: '定数要素を使用した作成: は定数 (SQLXML 4.0) |Microsoft Docs'
+title: '定数要素を使用した作成: は定数 (SQLXML 4.0) |マイクロソフトのドキュメント'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e475ad2cef5ef5729b5893f3218b0659528ffa14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28c95cabd8b2c47aa3d05f51526b3eb0921e4701
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317982"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137302"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant を使用した、定数要素の作成 (SQLXML 4.0)
   データベース テーブルまたは列にマップされない XSD スキーマの要素を定数要素といい、この要素を指定するには、`sql:is-constant` 注釈を使用します。 この注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。 `sql:is-constant` 注釈は、属性のない要素に指定できます。 この注釈を値 true (または 1) と共に要素に指定した場合、その要素は XML ドキュメント内に表示されますが、データベースにはマップされなくなります。  

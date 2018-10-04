@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0fb9e6b43faf8b3ff7e0b91ccb500b94547436aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eac4792762f96ce689d7b334a3b9584032f494de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305082"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148862"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>スタンドアロン バージョンのレポート ビルダーのインストール (レポート ビルダー)
   レポート ビルダーをインストールすることができます、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=168472)またはレポート ビルダーの Windows インストーラー パッケージである ReportBuilder3_x86.msi にあるパブリック フォルダーなどの場所ダウンロードされています。  

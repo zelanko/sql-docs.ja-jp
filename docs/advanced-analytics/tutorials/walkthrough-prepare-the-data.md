@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 416df50128170da643f3a6c3e4fabf8cfe9d3b42
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085054"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142092"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell (チュートリアル) を使用してデータを準備します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -265,9 +265,9 @@ GitHub リポジトリからファイルをダウンロードするときは、�
 
 このデータは、ニューヨーク市タクシー データ セットの代表的なサンプル データです。各乗車で支払われた乗車料金やチップなど、2013 年の 1 億 7,300 万件の乗車記録が含まれています。 データを使用しやすくするために、Microsoft データ サイエンス チームはダウンサンプリングを実行し、わずか 1% のデータを取得しました。  このデータは、Azure のパブリック BLOB ストレージ コンテナーに .CSV 形式で共有されています。 ソース データは、非圧縮ファイル、350 MB 未満です。
 
-+ パブリック データセット: [NYC タクシーのデータセットとリムジン委員会] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ パブリック データセット: [NYC タクシーのデータセットとリムジン委員会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [NYC タクシー データセットで Azure ML モデルの作成](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [NYC タクシー データセットで Azure ML モデルを構築](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/)します。
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell と R のスクリプト ファイル
 

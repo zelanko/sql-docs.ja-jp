@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152989"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>オプション (クエリ実行 SQL サーバー-[全般] ページ)
   このページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリを実行するためのオプションを指定できます。 これらのオプションに加えられた変更は、新しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリだけに適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ] ウィンドウで右クリックし、**[クエリ オプション]** を選択します。  
@@ -39,7 +36,7 @@ ms.locfileid: "37167153"
  **バッチ区切り記号**  
  [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントをバッチに分けるために使用する単語を入力します。 既定値は GO です。  
   
- **既定では、新しいクエリを SQLCMD モードで開始します。**  
+ **既定で、新しいクエリを SQLCMD モードで開始する**  
  新しいクエリを SQLCMD モードで開始するには、このチェック ボックスをオンにします。 SQLCMD モードに関する情報については、「[クエリ エディターによる SQLCMD スクリプトの編集](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。  
   
  このオプションを選択する場合は、次の制限事項に注意してください。  

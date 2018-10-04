@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, rowset creation
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9f223bbc3ae87173f98a00dc02f5fc3fcc1d13e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420271"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153683"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>テーブル値パラメーターの行セットの作成
   コンシューマーはテーブル値パラメーターに任意の行セット オブジェクトを使用できますが、通常の行セット オブジェクトはバックエンドのデータ ストアに対して実装されるため、パフォーマンスが制限されます。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマーがメモリ内データの上位に特殊な行セット オブジェクトを作成できます。 この特別なメモリ内の行セット オブジェクトは、テーブル値パラメーター行セットと呼ばれる新しい COM オブジェクトです。 このオブジェクトには、パラメーター セットと同様の機能が用意されています。  
@@ -30,15 +27,15 @@ ms.locfileid: "37420271"
 ## <a name="static-scenario"></a>静的なシナリオ  
  型情報がわかっている場合、コンシューマーは、テーブル値パラメーターに対応するテーブル値パラメーター行セット オブジェクトをインスタンス化するのに ITableDefinitionWithConstraints::CreateTableWithConstraints を使用します。  
   
- *Guid*フィールド (*pTableID*パラメーター) 特殊な GUID (CLSID_ROWSET_TVP) が含まれています。 *PwszName*メンバーには、コンシューマーがインスタンス化するテーブル値パラメーターの型の名前が含まれています。 *EKind*フィールドは、DBKIND_GUID_NAME に設定されます。 この名前は、ステートメントがアドホック SQL の場合に必要です。プロシージャ呼び出しの場合、名前は省略可能です。  
+ *Guid*フィールド (*pTableID*パラメーター) 特殊な GUID (CLSID_ROWSET_TVP) が含まれています。 *pwszName* メンバーには、コンシューマーがインスタンスを作成するテーブル値パラメーターの型の名前を含めます。 *eKind* フィールドは、DBKIND_GUID_NAME に設定されます。 この名前は、ステートメントがアドホック SQL の場合に必要です。プロシージャ呼び出しの場合、名前は省略可能です。  
   
  コンシューマーでは、集計、 *pUnkOuter* controlling IUnknown のパラメーター。  
   
  テーブル値パラメーター行セット オブジェクトのプロパティは読み取り専用に、コンシューマーは、プロパティを設定する必要はありません*rgPropertySets*します。  
   
- *RgPropertySets*各 DBCOLUMNDESC 構造体、コンシューマーのメンバーは、各列の追加のプロパティを指定できます。 これらのプロパティは、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに属しています。 これらのプロパティによって、列ごとに計算の設定と既定の設定を指定できます。 また、NULL 値の許容や ID など、列の既存のプロパティもサポートされます。  
+ 各 DBCOLUMNDESC 構造体の *rgPropertySets* メンバーの場合、コンシューマーは列ごとに追加のプロパティを指定できます。 これらのプロパティは、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに属しています。 これらのプロパティによって、列ごとに計算の設定と既定の設定を指定できます。 また、NULL 値の許容や ID など、列の既存のプロパティもサポートされます。  
   
- テーブル値パラメーター行セット オブジェクトから対応する情報を取得するには、は、コンシューマーは irowsetinfo::getproperties を使用します。  
+ コンシューマーでは、テーブル値パラメーターの行セット オブジェクトから対応する情報を取得するために、IRowsetInfo::GetProperties を使用します。  
   
  計算するには、null、一意、に関する情報を取得し、各列のステータスの更新、コンシューマーは、icolumnsrowset::getcolumnsrowset または icolumnsinfo::getcolumninfo を使用します。 これらのメソッドでは、各テーブル値パラメーターの行セットの列に関する詳細情報が取得できます。  
   
@@ -53,6 +50,6 @@ ms.locfileid: "37420271"
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
- [テーブル値パラメーターを使用して、 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [テーブル値パラメーターの使用 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

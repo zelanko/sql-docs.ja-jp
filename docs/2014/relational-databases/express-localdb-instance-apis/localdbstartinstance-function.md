@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LocalDBStartInstance
@@ -17,16 +15,15 @@ api_location:
 topic_type:
 - apiref
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4e2ecc8dbf59ddf108b8090bbcb5ad784b09fe67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 99bec66e77a8ac5fd742ffb85b6f87dfefe88510
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159562"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 関数
   指定した名前の SQL Server Express LocalDB インスタンスを起動します。  

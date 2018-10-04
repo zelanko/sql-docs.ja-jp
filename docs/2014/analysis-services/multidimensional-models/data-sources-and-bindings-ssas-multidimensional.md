@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d6009cfc820cb3eec8a0aa8499850546f31dba57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 606d3e19334e37ee418d4e99472845d24344d452
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148092"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>データ ソースとバインド (SSAS 多次元)
   キューブ、ディメンション、その他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトはデータ ソースにバインドできます。 データ ソースとは次のいずれかのオブジェクトです。  
@@ -63,7 +60,7 @@ ms.locfileid: "37230202"
 |Analysis Services のデータ型|説明|  
 |---------------------------------|-----------------|  
 |BigInt|64 ビットの符号付き整数です。 このデータ型は、Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int64 データ型と、OLE DB の DBTYPE_I8 データ型にマップされます。|  
-|Bool|ブール値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
+|Bool|ブール値。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
 |通貨|通貨単位の 1 万分の 1 までの精度を持つ -263 (-922,337,203,685,477.5808) ～ 263-1 (+922,337,203,685,477.5807) の通貨の値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Decimal データ型と、OLE DB の DBTYPE_CY データ型にマップされます。|  
 |date|倍精度浮動小数点数として保存される日付データです。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は日の端数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の DateTime データ型と、OLE DB の DBTYPE_DATE データ型にマップされます。|  
 |Double|-1.79E +308 ～ 1.79E +308 の範囲の倍精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Double データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  

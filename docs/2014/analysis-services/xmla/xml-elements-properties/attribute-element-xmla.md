@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Attribute Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Attribute element
 ms.assetid: 0df9cf44-dc5f-4234-8a5a-daac8aabc0d6
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 262114f7bbd9200bfab3a74bb14e8cea08400f5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b7baad7e154cda5ce52e67f08af46e7344f6af1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185119"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128212"
 ---
 # <a name="attribute-element-xmla"></a>Attribute 要素 (XMLA)
   定義またはとする属性のメンバーをフィルター処理を親[挿入](../xml-elements-commands/insert-element-xmla.md)、 [Update](../xml-elements-commands/update-element-xmla.md)、または[ドロップ](../xml-elements-commands/drop-element-xmla.md)コマンドを実行します。  

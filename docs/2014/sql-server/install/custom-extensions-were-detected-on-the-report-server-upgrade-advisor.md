@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], custom extensions
 - delivery extensions [Reporting Services]
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220842"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153102"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>レポート サーバーでカスタム拡張機能が検出された (アップグレード アドバイザー)
   構成ファイル内のカスタム拡張機能の設定がアップグレード アドバイザーによって検出されました。これは、データ処理、配信、表示、セキュリティ、または認証用のカスタム拡張機能が 1 つ以上インストールに含まれていることを示しています。 アップグレードによって、拡張機能の構成設定はアップグレード後のレポート サーバーに移動されます。 ただし、カスタム拡張機能を既存のレポート サーバーのインストール フォルダーにインストールした場合、アップグレードの処理中に、これらのカスタム拡張機能のアセンブリ ファイルは新しいインストール フォルダーに移動されません。 アップグレードの完了後、アセンブリ ファイルを新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストール フォルダーに移動する必要があります。  

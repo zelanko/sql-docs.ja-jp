@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d341f0b04b73c3edfa636e1e059a375965f7481d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c9ff2e1adad233d7bee51194858d1cca530bdfdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155282"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **Audit Broker Login** イベントを作成して、Service Broker トランスポートのセキュリティに関する監査メッセージを報告します。  

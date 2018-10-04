@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Attributes Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes element
 ms.assetid: c0393de8-44e8-46de-af78-1fd66c218521
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f064935032298e037938734fa5d3d1ac9fcbae84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d2d5b29116a2ad248540f51ed84d677048352c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140412"
 ---
 # <a name="attributes-element-xmla"></a>Attributes 要素 (XMLA)
   コレクションを格納[属性](attribute-element-xmla.md)親によって使用される要素[挿入](../xml-elements-commands/insert-element-xmla.md)または[Update](../xml-elements-commands/update-element-xmla.md)コマンド、または親[場所](where-element-xmla.md)要素。  

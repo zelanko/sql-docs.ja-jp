@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - measure groups [Analysis Services], cubes
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], cubes
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e88e2987bf456a3746b7c50fc986f10f6573ba0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88bd86cad9eaf3884b19c6a74f6594d8c71ca25d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295932"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177862"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>キューブのストレージ (Analysis Services - 多次元データ)
   ストレージには、キューブのメタデータのみが含まれている場合も、ファクト テーブルのすべてのソース データだけでなく、メジャー グループに関連付けられたディメンションによって定義されている集計も含まれている場合もあります。 格納されているデータ量は、選択したストレージ モードおよび集計の数によって異なります。 格納されているデータの量は、クエリのパフォーマンスに直接影響を与えます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブ データおよび集計の格納に必要な領域を最小限に抑えるためには、いくつかの手法を使用します。  

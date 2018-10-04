@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a22740aa92ee21eb76d1b4c3d61e207a9a903119
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ccd4469ef7bb52927213e27e72498afa961e81a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392861"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126332"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>SQL Server Integration Services によるインメモリ OLTP のサポート
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) パッケージの送信元または送信先として、メモリ最適化テーブル、メモリ最適化テーブルを参照するビュー、またはネイティブ コンパイル ストアド プロシージャを使用できます。 SSIS パッケージのデータ フロー内の [ADO NET ソース](../../integration-services/data-flow/ado-net-source.md)、 [OLE DB ソース](../../integration-services/data-flow/ole-db-source.md)、または [ODBC ソース](../../integration-services/data-flow/odbc-source.md) を使用してソース コンポーネントを構成することで、メモリ最適化テーブルまたはビューからデータを取得したり、ネイティブ コンパイル ストアド プロシージャを実行する SQL ステートメントを指定できます。 同様に、 [ADO NET 変換先](../../integration-services/data-flow/ado-net-destination.md)、 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)、または [ODBC 変換先](../../integration-services/data-flow/odbc-destination.md) を使用して、メモリ最適化テーブルまたはビューにデータを読み込んだり、ネイティブ コンパイル ストアド プロシージャを実行する SQL ステートメントを指定できます。  

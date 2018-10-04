@@ -1,28 +1,25 @@
 ---
-title: 作成、変更、およびインデックスの削除 |Microsoft Docs
+title: 作成、変更、およびインデックスを削除します。マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb90f4759e829526b53f38c4aa5714748b7ad62e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a335f0c62c4dcaa0ab69eac80488703c9372c3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136882"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>インデックスの作成、変更、および削除
   SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト) 階層では、インデックスは <xref:Microsoft.SqlServer.Management.Smo.Index> オブジェクトで表現します。 インデックス付き列は、<xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> プロパティによって表される <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> オブジェクトのコレクションで表現します。  
@@ -189,7 +186,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Visual Basic での XML インデックスの作成  
- このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 XML データ型は、XML スキーマ コレクションの作成、MySampleCollection と呼ばれる[を使用して XML スキーマ](using-xml-schemas.md)します。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
+ このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 作成された、MySampleCollection と呼ばれる XML スキーマ コレクションを XML データ型では[を使用して XML スキーマ](using-xml-schemas.md)です。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -252,7 +249,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Visual C# での XML インデックスの作成  
- このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 XML データ型は、XML スキーマ コレクションの作成、MySampleCollection と呼ばれる[を使用して XML スキーマ](using-xml-schemas.md)します。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
+ このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 作成された、MySampleCollection と呼ばれる XML スキーマ コレクションを XML データ型では[を使用して XML スキーマ](using-xml-schemas.md)です。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -315,7 +312,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>PowerShell での XML インデックスの作成  
- このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 XML データ型は、XML スキーマ コレクションの作成、MySampleCollection と呼ばれる[を使用して XML スキーマ](using-xml-schemas.md)します。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
+ このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 作成された、MySampleCollection と呼ばれる XML スキーマ コレクションを XML データ型では[を使用して XML スキーマ](using-xml-schemas.md)です。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

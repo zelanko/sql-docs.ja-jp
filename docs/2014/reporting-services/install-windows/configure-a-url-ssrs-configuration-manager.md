@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c22aac59568cac600904ebdd7e1508d0ada8bc98
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c23c3216bc7bdff86a9e508de87c2086f6f6b90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162772"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
   レポート マネージャーやレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。 SharePoint 統合モードを使用するように構成されているレポート サーバーを利用している場合に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用してレポート サーバー Web サービスの URL を変更するには、SharePoint サーバーの全体管理でも URL を更新する必要があります。  
@@ -132,11 +129,11 @@ ms.locfileid: "37288578"
   
 2.  **[追加]** をクリックします。  
   
-3.  [IP アドレス] または [ホスト ヘッダー名] をクリックします。 ホスト ヘッダーを指定する場合は、DNS サービスで解決できる名前を指定してください。 公のドメイン名を指定する場合は、http://www を含む URL 全体を指定します。  
+3.  [IP アドレス] または [ホスト ヘッダー名] をクリックします。 ホスト ヘッダーを指定する場合は、DNS サービスで解決できる名前を指定してください。 公のドメイン名を指定する場合は、 http://www を含む URL 全体を指定します。  
   
 4.  ポートを指定します。 カスタム ポートを指定する場合は、アプリケーションの URL に常にポート番号を含める必要があります。  
   
-5.  [**OK**] をクリックします。  
+5.  **[OK]** をクリックします。  
   
 6.  ブラウザー ウィンドウを開き、URL を入力して、URL をテストします。  
   

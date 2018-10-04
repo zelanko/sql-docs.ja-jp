@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroupAttributeBinding Data Type (out-of-line)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MeasureGroupAttributeBinding data type
 ms.assetid: bfe09a95-4e04-4f93-9389-7dd0b4c8f5e4
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 244656b0ae951ec5f8274f11e58153faef80957d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 247e96f7994fa076b8641394231b772e80685e32
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218212"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156582"
 ---
 # <a name="measuregroupattributebinding-data-type-out-of-line-assl"></a>MeasureGroupAttributeBinding データ型 (不一致) (ASSL)
   メジャー グループに含まれているディメンション内の属性の不一致バインドを表す派生データ型を定義します。  

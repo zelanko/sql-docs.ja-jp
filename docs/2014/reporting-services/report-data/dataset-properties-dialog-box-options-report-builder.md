@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e0fc786c5cf35dda0beec0800b1515c9e0a44ca0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 604a290e0f8ac64c9edbcba72c488c0ad67f7b9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255794"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167052"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>[オプション] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   **[データセットのプロパティ]** ダイアログ ボックスの **[オプション]** を選択すると、照合順序オプションや小計を詳細行として処理するオプションなど、クエリのデータ オプションを変更できます。 照合順序の詳細については、 [SQL Server オンライン ブック](../../relational-databases/collations/collation-and-unicode-support.md) の「 [照合順序と Unicode のサポート](http://go.microsoft.com/fwlink/?linkid=98335)」を参照してください。  
@@ -54,7 +51,7 @@ ms.locfileid: "37255794"
 ## <a name="see-also"></a>参照  
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [集計関数 (レポート ビルダーおよび SSRS)](../report-design/report-builder-functions-aggregate-function.md)   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [[クエリ] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)](dataset-properties-dialog-box-query-report-builder.md)  
   

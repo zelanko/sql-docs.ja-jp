@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5abc5bc02b2c7ee365886ba54a603890c4b2aa0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e4a8ef8c3b9d60040d6d9b5fcbff145a600cd88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167682"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>タスク 10: 参照データ サービスを使用して複合ドメインを構成する
   このタスクで構成する、 **Address Validation**複合ドメインを使用して、 **Melissa Data – Address Check**サービス。 実行時のクレンジング アクティビティでは、クレンジングのために Address Validation ドメインのドメイン値が DQS からこのサービスに渡されます。 参照してください[参照データにドメイン/複合ドメインをマップ](http://msdn.microsoft.com/library/hh213030.aspx)の詳細。  

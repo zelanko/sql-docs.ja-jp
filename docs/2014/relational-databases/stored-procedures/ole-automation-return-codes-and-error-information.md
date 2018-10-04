@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [SQL Server]
@@ -16,12 +14,12 @@ ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57614db23c50236c6af783d7f913c897fda3e8df
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414021"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132933"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE オートメーションのリターン コードとエラー情報
   OLE オートメーション システム ストアド プロシージャ、`int`リターン コードが、基になる OLE オートメーション操作から返される HRESULT です。 HRESULT 0 は成功を示しています。 0 以外の HRESULT は、0x800 という 16 進数形式の OLE エラー コード*nnnnn*、として返された場合は、 `int` HRESULT ストアド プロシージャのリターン コードの値が、形式は 214*nnnnnnn*します。  
