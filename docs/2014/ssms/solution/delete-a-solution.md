@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing solutions
 - solutions [SQL Server Management Studio], deleting
 - deleting solutions
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a48ce1c2bacb411caa4f7d6ee0c1b166a6013741
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c6106b8dd542f24bd937e581ca3dc26e0eb3b32e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125239"
 ---
 # <a name="delete-a-solution"></a>ソリューションを削除する
   ソリューションを完全に削除すると、ソリューションのファイル項目だけでなく、物理的な記憶域のファイルも完全に消去されます。  

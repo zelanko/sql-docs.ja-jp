@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d6b390a88a652da41623e49437fb2c022b7e3b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198182"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095642"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure のレプリカ追加ウィザードの使用 (SQL Server)
   Azure のレプリカ追加ウィザードは、ハイブリッド IT 環境で新しい Windows Azure VM を作成し、新規または既存の AlwaysOn 可用性グループのセカンダリ レプリカとして構成する場合に使用します。  
@@ -72,7 +69,7 @@ ms.locfileid: "37198182"
   
 4.  新しいセカンダリ レプリカをホストする Windows Azure 仮想マシンの設定を指定します。  
   
-     image  
+     イメージ  
      Windows Azure 仮想マシンに使用する SQL Server イメージの名前  
   
      [VM サイズ]  

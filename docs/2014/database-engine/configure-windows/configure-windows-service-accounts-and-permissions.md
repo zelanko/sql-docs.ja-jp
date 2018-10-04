@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - startup service states [SQL Server]
 - Setup [SQL Server], user accounts
@@ -52,16 +48,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 182
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd8ff6568129137f4e2167e514732a3b9af7ea8d
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: bd420632e4cac09a6549f504d4037582c766d5b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40394236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110742"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各サービスは、Windows で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作の認証を管理するための、1 つのプロセスまたはプロセス セットを表しています。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースにおける既定のサービス構成、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時およびインストール後に設定できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの構成オプションについて説明します。  
@@ -216,20 +211,14 @@ ms.locfileid: "40394236"
 ###  <a name="New_Accounts"></a> Windows 7 および Windows Server 2008 R2 で使用可能な新しいアカウントの種類  
  Windows 7 と Windows Server 2008 R2 には、管理されたサービス アカウント (MSA) と仮想アカウントという 2 つの新しい種類のサービス アカウントがあります。 管理されたサービス アカウントと仮想アカウントは、アカウントとは別に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などの重要なアプリケーションを提供するために設計され、管理者がこれらのアカウントのサービス プリンシパル名 (SPN) や資格情報を手動で管理する必要はありません。 これらにより、サービス アカウントのユーザー、パスワード、SPN の長期的な管理は非常に簡単になります。  
   
--   
-  <a name="MSA">
-  </a>
-  **Managed Service Accounts**  
+-   <a name="MSA"></a>**Managed Service Accounts**  
   
      管理されたサービス アカウント (MSA) は、ドメイン コント ローラーによって作成および管理されるドメイン アカウントの一種です。 管理されたサービス アカウントは、サービスの実行に使用する 1 つのメンバー コンピューターに割り当てられます。 パスワードは、ドメイン コント ローラーによって自動的に管理されます。 MSA を使用して、コンピューターにログインすることはできませんが、コンピューターは、MSA を使用して Windows サービスを開始することができます。 MSA には、サービス プリンシパル名 (SPN) を Active Directory に登録する機能があります。 MSA には、 **$** DOMAIN\ACCOUNTNAME$ **など、** サフィックスを伴う名前が付けられます。 MSA を指定する場合は、パスワードを空白のままにします。 MSA は、1 つのコンピューターに割り当てられているため、Windows クラスターの異なるノード上では使用できません。  
   
     > [!NOTE]  
     >  MSA は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが MSA を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスで使用する前に、ドメイン管理者が Active Directory に作成する必要があります。  
     
--  
-  <a name="GMSA">
-  </a>
-  **グループ管理サービス アカウント**  
+-  <a name="GMSA"></a>**グループ管理サービス アカウント**  
   
      グループ管理サービス アカウントは、複数サーバーのための MSA です。 Windows は、サーバーのグループで実行されているサービスのサービス アカウントを管理します。 Active Directory は、サービスを再起動することなくグループ管理サービス アカウントのパスワードを自動的に更新します。 グループ管理サービス アカウントのプリンシパルを使用するように SQL Server のサービスを構成できます。 SQL Server 2014 より、SQL Server はスタンドアロン インスタンス、フェールオーバー クラスター インスタンス、および可用性グループの Windows Server 2012 R2 以降で管理グループ サービス アカウントをサポートします。  
   

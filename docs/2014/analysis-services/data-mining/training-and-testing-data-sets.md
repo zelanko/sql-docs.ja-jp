@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d6c44c63236a351a69b38ef66f14141441c61f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120264"
 ---
 # <a name="training-and-testing-data-sets"></a>トレーニング データ セットとテスト データ セット
   トレーニング セットとテスト セットにデータを分割することは、データ マイニング モデルの評価における重要な部分です。 通常、データセットをトレーニング セットとテスト セットに分割すると、ほとんどのデータはトレーニングに使用され、テストに使用されるデータは少量になります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではデータのサンプルがランダムに抽出されるため、テスト セットとトレーニング セットが同様になるように分割されます。 トレーニングとテストに類似データを使用すると、データの差異による影響を最小限に抑えることができ、モデルの特性をよりよく理解できます。  

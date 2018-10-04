@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - support [data mining]
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db6b49c10441e08bb66256860550fc2447f6dcf3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120902"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   基になるマイニング構造のデータを使用してマイニング モデルをデザインおよび処理したら、マイニング モデルが完成し、そのモデルには *マイニング モデル コンテンツ*が含まれます。 このコンテンツを使用して、予測やデータの分析を行うことができます。  
@@ -81,7 +78,7 @@ ms.locfileid: "37282428"
 |NODE_TYPE ID|ノード ラベル|ノードのコンテンツ|  
 |-------------------|----------------|-------------------|  
 |1|[モデル]|メタデータおよびルート コンテンツ ノード。 すべての種類のモデルに適用されます。|  
-|2|trEE|分類ツリーのルート ノード。 デシジョン ツリー モデルに適用されます。|  
+|2|ツリー|分類ツリーのルート ノード。 デシジョン ツリー モデルに適用されます。|  
 |3|Interior|ツリーの内部分割ノード。 デシジョン ツリー モデルに適用されます。|  
 |4|Distribution|ツリーの末端のノード。 デシジョン ツリー モデルに適用されます。|  
 |5|クラスター|アルゴリズムにより検出されたクラスター。 クラスター モデルとシーケンス クラスター モデルに適用されます。|  
@@ -135,8 +132,7 @@ ms.locfileid: "37282428"
   
 -   データ マイニング拡張機能 (DMX) クエリ内で関数を使用して、特定のノードの子孫または親を検出することができます。 クエリでの関数の使用の詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」をご覧ください。  
   
- 
-  *カーディナリティ* は、セット内の項目数を指します。 処理済みのマイニング モデルのコンテキストでは、カーディナリティは特定のノードの子の数を表します。 たとえば、デシジョン ツリー モデルに [年収] というノードがあり、そのノードに条件 [年収] = 高と条件 [年収] = 低という 2 つの子ノードがある場合、[年収] ノードの CHILDREN_CARDINALITY の値は 2 になります。  
+ *カーディナリティ* は、セット内の項目数を指します。 処理済みのマイニング モデルのコンテキストでは、カーディナリティは特定のノードの子の数を表します。 たとえば、デシジョン ツリー モデルに [年収] というノードがあり、そのノードに条件 [年収] = 高と条件 [年収] = 低という 2 つの子ノードがある場合、[年収] ノードの CHILDREN_CARDINALITY の値は 2 になります。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ノードのカーディナリティの計算時には直接の子ノードのみがカウントされます。 ただし、カスタム プラグイン アルゴリズムを作成する場合は、CHILDREN_CARDINALITY をオーバーロードして異なる方法でカーディナリティをカウントすることができます。 これは、直接の子だけでなく子孫の総数をカウントする場合などに役立ちます。  

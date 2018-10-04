@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: abcd7a3ba58bd80c8fb14605d76764a7357f960c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098682"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>ヒープ (クラスター化インデックスなしのテーブル)
   ヒープとはクラスター化インデックスを使用しないテーブルのことです。 1 つまたは複数の非クラスター化インデックスを、ヒープとして格納されているテーブルに作成することができます。 ヒープには、順序を指定せずにデータが格納されます。 通常、最初にデータが格納される順序はテーブルに行が挿入された順序と同じですが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では行を効率的に格納できるようにヒープ内でデータが移動される場合があるため、データの順序は予測できません。 ヒープから返される行の順序を保証するために使用する必要があります、`ORDER BY`句。 テーブルにクラスター化インデックスを作成し、テーブルがヒープにならないようにすることで、行が格納される順序を指定することができます。  

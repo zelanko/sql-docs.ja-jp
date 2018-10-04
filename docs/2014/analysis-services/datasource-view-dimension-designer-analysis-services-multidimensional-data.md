@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 989b84d027db5dc1f5956aab6e2e4fec84ae6461
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246162"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112222"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[データ ソース ビュー] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[データ ソース ビュー]** ペインを使用すると、選択したディメンションに関連付けられているデータ ソース ビューからテーブルと列を表示できます。 **[データ ソース ビュー]** ペインでは、このペインから **[属性]** ペインまたは **[階層とレベル]** ペインに列をドラッグすることにより、属性、メンバー プロパティ、階層、およびレベルを作成します。  
@@ -79,7 +76,7 @@ ms.locfileid: "37246162"
   
      現在のディメンションに関連付けられたテーブルと列のダイアグラムを表示します。  
   
--   trEE  
+-   ツリー  
   
      現在のディメンションに関連付けられたテーブルと列を含むツリー ビューを表示します。  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-caps.latest.revision: 49
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 09c39bccc82df8539fc419180465739cf1ed8054
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe7bd725bc7fc9be7289c4834a3df8f44e36c41b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102202"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   パッケージ配置の最初の手順は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの配置ユーティリティを作成することです。 配置ユーティリティは、別のサーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトのパッケージを配置する際に必要となるファイルを格納したフォルダーです。 配置ユーティリティは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが格納されているコンピューター上に作成されます。  
@@ -57,7 +54,7 @@ ms.locfileid: "37273118"
   
 6.  必要に応じて、`DeploymentOutputPath` プロパティを変更して、配置ユーティリティの場所を更新します。  
   
-7.  [**OK**] をクリックします。  
+7.  **[OK]** をクリックします。  
   
 8.  ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[ビルド]** をクリックします。  
   

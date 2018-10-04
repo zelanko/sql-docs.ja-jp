@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df2305d3efa7896d8646be33a5f95ade8c4e7c00
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b75d3a772bfdb9b0d938691cd5bc92e3292a1e79
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247392"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096612"
 ---
-# <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>開始または PowerPivot を SharePoint サーバーの停止
+# <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>PowerPivot for SharePoint サーバーの開始または停止
   PowerPivot System サービスおよび[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンスは、SharePoint ファーム内の連携要求とデータ処理をサポートするために、同じローカル アプリケーション サーバーで同時に動作します。  
   
  このトピックには、次のセクションが含まれます。  

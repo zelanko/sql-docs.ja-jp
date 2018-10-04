@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.languageselection.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Language dialog box
 ms.assetid: a85a106f-ff47-4b9e-ac62-4942e214df3b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1213136b8d7ae2e40061bbe776c5ef8c70cf93
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f3e5023741793547a087f78e8591ce6063df445
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220112"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101308"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>[言語の選択] ダイアログ ボックス  (Analysis Services - 多次元データ)
   **の** [言語の選択] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、新しい翻訳の言語を選択できます。 **[言語の選択]** ダイアログ ボックスを表示するには、次の手順を行います。  

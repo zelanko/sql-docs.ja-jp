@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ec1f4499a76900684f541eba529b3e21afff5707
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd9604fb38d20e03f33623bacb606d1a9d114ae9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092488"
 ---
 # <a name="rendering-extensions-overview"></a>表示拡張機能の概要
   表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、7 種類の表示拡張機能 (HTML、Excel、Word、CSV (Text)、XML、Image、PDF) を備えています。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  
@@ -59,7 +56,7 @@ ms.locfileid: "37214692"
   
 -   XML 表現形式の出力に XSL 変換 (XSLT) を組み合わせることで、カスタムの形式と表現機能を追加する。  
   
- カスタム表示拡張機能の記述は難しい作業です。 表示拡張機能は、一般的には、レポートの要素のあらゆる組み合わせをサポートする必要があり、多くのクラス、インターフェイス、メソッド、およびプロパティを実装しなければなりません。 ph x="1" /&gt; によりサポートされていない形式でレポートを表示する必要があり、独自に表示拡張機能のコードを記述して実装する場合、開発する表示拡張機能のコードは `Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension` インターフェイスを実装する必要があります。このインターフェイスはレポート サーバーにより必要とされます。  
+ カスタム表示拡張機能の記述は難しい作業です。 表示拡張機能は、一般的には、レポートの要素のあらゆる組み合わせをサポートする必要があり、多くのクラス、インターフェイス、メソッド、およびプロパティを実装しなければなりません。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によりサポートされていない形式でレポートを表示する必要があり、独自に表示拡張機能のコードを記述して実装する場合、開発する表示拡張機能のコードは `Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension` インターフェイスを実装する必要があります。このインターフェイスはレポート サーバーにより必要とされます。  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に関する補足資料とホワイト ペーパーについては、[Reporting Services Web サイト](http://go.microsoft.com/fwlink/?LinkId=19951)の最新の技術文書を参照してください。  
   

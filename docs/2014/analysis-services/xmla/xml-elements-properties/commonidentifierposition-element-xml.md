@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: c3b64132-3b2e-46f5-ae11-a3cb3c42099c
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d648b09d5fa005a290150a8aef91b89a328938b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4cb7efbb9f77c3f753149e7069127ea34aa03b6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267068"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090632"
 ---
 # <a name="commonidentifierposition-element-xml"></a>CommonIdentifierPosition 要素 (XML)
   要素のコレクション内での要素の位置についての情報が含まれます。  

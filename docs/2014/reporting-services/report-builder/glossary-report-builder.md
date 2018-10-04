@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c9841b18565b6c07f88ed075a298cbe87275b5d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95b59bf6b406a4dcbaabc956147f4216cfdda0e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197062"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095382"
 ---
 # <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
@@ -82,7 +79,7 @@ ms.locfileid: "37197062"
 |共通言語ランタイム (common language runtime)|マネージド コードを実行する際に中核となるエンジン。 このランタイムにより、言語間の統合、コード アクセス セキュリティ、オブジェクトの有効期間の管理、デバッグとプロファイルのサポートなどのサービスがマネージド コードに提供されます。|  
 |複合式 (complex expression)|単一の組み込みフィールド参照として表現できず、デザイン画面に <\<Expr>> として表示される式。|  
 |連結 (concatenation)|2 つ以上の文字列や式を結合して、1 つの文字列や式にすること。または、2 つ以上のバイナリ文字列やバイナリ式を結合して、1 つのバイナリ文字列やバイナリ式にすること。|  
-|同時実行 (concurrency)|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 SQL Server ではロックを使用して、複数のユーザーが互いに競合することなく共有データに同時にアクセスや変更を行うことができます。|  
+|コンカレンシー|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 SQL Server ではロックを使用して、複数のユーザーが互いに競合することなく共有データに同時にアクセスや変更を行うことができます。|  
 |構成ファイル (config file)|「構成ファイル (configuration file)」を参照。|  
 |構成|単一のマイクロコンピューターに関連して、システムの内部/外部コンポーネント (メモリ、ディスク ドライブ、キーボード、ビデオなど) と、比較的に重要度の低い補足的ハードウェア (マウス、モデム、プリンターなど) の総称。|  
 |構成ファイル (configuration file)|コンピューターが認識できる形式でハードウェアやソフトウェアの動作仕様が格納されたファイル。または、別のファイルや特定のユーザーに関する情報を格納するファイル。|  

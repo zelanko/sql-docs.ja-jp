@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationPrefix Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6cb7355644a437b7427dcd366c5f102f469135a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121542"
 ---
 # <a name="aggregationprefix-element-assl"></a>AggregationPrefix 要素 (ASSL)
   関連する親要素全体にわたって集計名に使用する共通のプレフィックスを定義します。  
