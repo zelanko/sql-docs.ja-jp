@@ -1,38 +1,35 @@
 ---
-title: Unicode 関数の引数 |Microsoft ドキュメント
+title: Unicode 関数の引数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab660a9af95d6232f22c98a868da8fed9ebb0cae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0e67f437cd629411230daed17f6a39f24b7103d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669460"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 関数の引数
-ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI と Unicode の両方の引数の文字列や文字の SQLPOINTER へのポインターをそのまま使用するすべての関数のバージョンをサポートします。 Unicode 関数は、関数として実装されます (のサフィックスを持つ*W*) マクロではなく、します。 ANSI 関数 (のサフィックスの有無を呼び出すことができる*A*) 現在の ODBC API 関数と同じです。  
+ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、その引数の文字の文字列または SQLPOINTER へのポインターをそのまま使用するすべての関数の ANSI および Unicode の両方のバージョンをサポートします。 Unicode 関数の関数として実装されます (のサフィックスを持つ*W*) マクロではなく、します。 ANSI 関数 (サフィックスの有無を呼び出すことが*A*) は、現在の ODBC API 関数と同じです。  
   
-## <a name="remarks"></a>解説  
- 常に返したり、文字列、または長の引数を受け取る Unicode 関数は、文字の数をカウントとして渡されます。 サーバーのデータの長さの情報を返す関数、表示サイズと有効桁数に記載されている文字数。 長さ (データの転送サイズ) は、文字列または文字列以外のデータを参照できます、ときに、長さは、オクテットの長さの説明です。 たとえば、 **SQLGetInfoW**バイト数と長さが、実行中は**SQLExecDirectW**の文字の数をカウントを使用します。  
+## <a name="remarks"></a>コメント  
+ 常に返すか、文字列または長の引数を取得する Unicode 関数は、文字の数をカウントとして渡されます。 サーバーのデータの長さの情報を返す関数の場合、文字数で表示サイズと有効桁数がについて説明します。 長さ (データの転送サイズ) は、文字列または文字列以外のデータを参照できます、オクテット長の長さが説明します。 たとえば、 **SQLGetInfoW**バイト数と長さが、実行中は**SQLExecDirectW**文字の数をカウントを使用します。  
   
- 文字の数をカウントには、バイト数 (オクテット) 関数の ANSI および UNICODE 関数の WCHAR (16 ビット ワード) の数を指します。 具体的には、複数のバイトの 2 バイト文字のシーケンス (DBCS) またはマルチバイト文字シーケンス (MBCS) を構成することできます。 複数の WCHARs の utf-16 Unicode 文字のシーケンスを構成できます。  
+ 文字の数をカウントには、ANSI 関数 (オクテット) のバイト数および UNICODE 関数の WCHAR (16 ビット ワード) の数を指します。 具体的には、2 バイト文字のシーケンス (DBCS) またはマルチバイト文字シーケンス (MBCS) の複数のバイトを構成できます。 複数の WCHARs の utf-16 Unicode 文字のシーケンスを構成できます。  
   
- Unicode (W) や ANSI (A) の両方のバージョンをサポートする ODBC API 関数の一覧を次に示します。  
+ Unicode (W) および ANSI (A) の両方のバージョンをサポートする ODBC API 関数の一覧を次には。  
   
 |||  
 |-|-|  
@@ -46,16 +43,16 @@ ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI
 |**SQLDescribeCol**|**SQLProcedureColumns**|  
 |**SQLDriverConnect**|**SQLProcedures**|  
 |**SQLDrivers**|**SQLSetConnectAttr**|  
-|**SQLError**|**SQLSetConnectOption**|  
+|**Sqlerror 関数**|**SQLSetConnectOption**|  
 |**SQLExecDirect**|**SQLSetCursorName**|  
-|**SQLForeignKeys**|**Sqlsetdescfield による**|  
+|**SQLForeignKeys**|**SQLSetDescField**|  
 |**SQLGetConnectAttr**|**SQLSetStmtAttr**|  
 |**SQLGetConnectOption**|**SQLSpecialColumns**|  
 |**SQLGetCursorName**|**SQLStatistics**|  
 |**SQLGetDescField**|**SQLTablePrivileges**|  
-|**Sqlgetdescrec による**|**SQLTables**|  
+|**SQLGetDescRec**|**SQLTables**|  
   
- Unicode (W) や ANSI (A) の両方のバージョンをサポートする ODBC インストーラーと ODBC トランスレーター関数の一覧を次に示します。  
+ 次は Unicode (W) および ANSI (A) の両方のバージョンをサポートする ODBC インストーラーと ODBC トランスレーター関数の一覧です。  
   
 |||  
 |-|-|  
@@ -69,7 +66,7 @@ ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  使用されなくなった関数には Unicode から ANSI へのマッピングのサポートがあるため、ODBC 3 *.x*ドライバー マネージャーは、ODBC 2 を再コンパイルをサポートしています *。x* 、UNICODE を使用アプリケーション **#define**です。  
+>  非推奨の関数には Unicode から ANSI マッピングのサポートがあるため、ODBC 3 *.x*ドライバー マネージャーは、ODBC 2 を再コンパイルをサポートしています *。x* 、UNICODE を使用したアプリケーション **#define**します。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e993478f3ae593c2829a9e2cf39d46527a909a77
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1fe1a785314b30e0f6027c845da5ac2b34692966
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086094"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796720"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上の always On 可用性グループのフェールオーバー
 
@@ -169,7 +167,7 @@ ms.locfileid: "39086094"
 
 自動フェールオーバーでは、少なくとも 1 つの同期レプリカが必要です。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [SQL Server 可用性グループのクラスター リソースの Red Hat Enterprise Linux クラスターを構成します。](sql-server-linux-availability-group-cluster-rhel.md)
 

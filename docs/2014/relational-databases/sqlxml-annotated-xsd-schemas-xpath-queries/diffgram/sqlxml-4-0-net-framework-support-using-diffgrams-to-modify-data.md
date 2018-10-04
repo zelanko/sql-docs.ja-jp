@@ -1,14 +1,12 @@
 ---
-title: Diffgram を使用した SQLXML 4.0 でのデータを変更する |Microsoft Docs
+title: Diffgram を使用した SQLXML 4.0 でのデータを変更する |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data deletions [SQLXML]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - record updates [SQLXML]
 - record deletions [SQLXML]
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fbe2fcac8299f268922bcad815caf8a4b5cb3e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29880c52b0d5adb2fdc88b5b9ea30d8903f4ae82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128332"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0 での、DiffGram を使用したデータ変更
   DiffGram 形式がで導入された、**データセット**のコンポーネントである、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework です。 .NET Framework では、DiffGram を作成して、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルのデータを変更するときに使用できます。  
@@ -53,8 +50,7 @@ ms.locfileid: "37155833"
  [ADO を使用した、DiffGram の実行&#40;SQLXML 4.0&#41;](executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
  ADO (ActiveX Data Objects) での DiffGram の実行例を紹介します。  
   
- 
-  [SQLXML マネージド クラスを使用した DiffGram の実行](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
+ [SQLXML マネージド クラスを使用した DiffGram の実行](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  SQLXML マネージド クラスでの DiffGram の実行例を紹介します。  
   
   

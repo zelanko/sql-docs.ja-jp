@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d489ef9df3d6b1d54e34ccfc3ec1a9d190f816b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0def160bcbff26bb41d6041a244e7be6b25461b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071082"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>役割の交代後のログインとジョブの管理 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの高可用性ソリューションまたは災害復旧ソリューションを展開する場合、 **master** 内のデータベースまたは **msdb** データベースに格納されている関連情報を再現することが重要です。 通常、関連情報には、プライマリ/プリンシパル データベースのジョブおよびデータベースへの接続に必要なユーザーまたはプロセスのログインが含まれます。 セカンダリ/ミラー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のインスタンスでこの情報を複製する必要があります。 可能であれば、役割の交代後に、プログラムで新しいプライマリ/プリンシパル データベースに情報を再現することが最善の方法です。  

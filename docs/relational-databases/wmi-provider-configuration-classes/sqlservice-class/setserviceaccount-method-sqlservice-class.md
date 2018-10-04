@@ -1,15 +1,12 @@
 ---
-title: SetServiceAccount メソッド (SqlService クラス) |Microsoft ドキュメント
+title: SetServiceAccount メソッド (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetServiceAccount Method (SqlService Class)
@@ -19,15 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetServiceAccount method
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f44268f2c9d94a6336b516f1c259c1791767f3b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27985e94766a76efa755d05e81bce3ccb59ed6c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664333"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount メソッド (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>要素  
- *オブジェクト*  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -52,7 +49,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
   
 -   NULL が指定されている場合、サービスとしてログオンする、 **LocalSystem**アカウント。  
   
- カーネルまたはシステム レベルのドライバーの*StartName*ドライバー オブジェクト名を含む \FileSystem\Rdr または \Driver\Xns、I/O システムが、デバイス ドライバーの読み込みに使用します。 NULL が指定された場合、ドライバーは、I/O システムがサービス名に基づいて作成した既定のオブジェクト名 (たとえば、DWDOM\Admin) で実行されます。  
+ カーネルまたはシステム レベルのドライバーの*StartName*ドライバー オブジェクト名を含む \FileSystem\Rdr または \Driver\Xns の I/O システムが、デバイス ドライバーの読み込みに使用します。 NULL が指定された場合、ドライバーは、I/O システムがサービス名に基づいて作成した既定のオブジェクト名 (たとえば、DWDOM\Admin) で実行されます。  
   
  *ServiceStartPassword*  
  アカウント名のパスワードを指定する文字列値、 *StartName*パラメーター。 パスワードを変更しない場合は NULL を指定します。 サービスがパスワードを持っていない場合は、空の文字列を指定します。  
@@ -60,9 +57,9 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  A **uint32**値は、サービスが正常に変更された場合は 0 または 1 の場合は、要求はサポートされていません。 それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

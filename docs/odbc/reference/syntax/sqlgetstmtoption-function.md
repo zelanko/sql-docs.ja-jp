@@ -1,13 +1,11 @@
 ---
-title: SQLGetStmtOption 関数 |Microsoft ドキュメント
+title: SQLGetStmtOption 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLGetStmtOption
@@ -19,26 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC]
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f39787ad990e55d92265e93d579b3f10c1b415b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bff2abca6d68e2de225bdbb2bb806c531b50804f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672700"
 ---
 # <a name="sqlgetstmtoption-function"></a>SQLGetStmtOption 関数
 **準拠**  
- バージョンで導入された: ODBC 1.0 標準準拠: 非推奨  
+ バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
   
  **概要**  
- ODBC 3 です。*x*、ODBC 2.0 関数**SQLGetStmtOption**代わりました**SQLGetStmtAttr**です。 詳細については、次を参照してください。 [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)です。  
+ ODBC 3。*x*、ODBC 2.0 関数**SQLGetStmtOption**置き換わりました**SQLGetStmtAttr**します。 詳細については、次を参照してください。 [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)します。  
   
 > [!NOTE]  
->  どのようなドライバー マネージャーの詳細と ODBC 2 には、この関数にマップします。*x* ODBC 3 を利用するアプリケーション *。x*ドライバーを参照してください[非推奨機能のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
+>  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

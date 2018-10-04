@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 864f255556063ea5011e3d3954294edcbdd9cb5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222242"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)
   **マイニング精度チャート**タブ データ マイニング デザイナーの各は、モデルの予測は、どの程度を計算し、他のモデルの結果に対して直接には、各モデルの結果を比較します。 このメソッドの比較と呼ばれます、*リフト チャート*します。 通常、マイニング モデルの予測精度は、リフトまたは分類の精度によって測定します。 このチュートリアルでは、リフト チャートのみを使用します。  

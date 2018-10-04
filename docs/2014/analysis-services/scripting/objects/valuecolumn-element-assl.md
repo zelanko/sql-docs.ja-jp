@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ValueColumn Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ValueColumn element
 ms.assetid: 6c2d6822-8ecc-46df-9fa9-bb92ac716c36
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7279cb1f8f9bc5a7dc8c9e564081a227edc32f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 876d5efb4d4b84e8f42cfd3c360258c8cb67d865
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231902"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048143"
 ---
 # <a name="valuecolumn-element-assl"></a>ValueColumn 要素 (ASSL)
   親要素の値を指定する列を識別します。  

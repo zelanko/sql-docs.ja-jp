@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 115
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303442"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229972"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   `sqlcmd`ユーティリティを使用する入力[!INCLUDE[tsql](../includes/tsql-md.md)]でコマンド プロンプトでは、ステートメント、システム プロシージャ、およびスクリプト ファイル**クエリ エディター** SQLCMD モードで、Windows スクリプト ファイル、またはオペレーティング システム (Cmd.exe) ジョブ ステップの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]エージェント ジョブ。 このユーティリティでは、ODBC を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] バッチを実行します。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Translation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Translation element
 ms.assetid: fe715bab-050d-49e6-8ba6-801d0fa379a4
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4214f0fc64e121cecf40f4723d95e8c53d1e38bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a5a6adc6aa1a914855abeb61370d10db6db8117
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204112"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203538"
 ---
 # <a name="translation-element-assl"></a>Translation 要素 (ASSL)
   親のローカライズされた翻訳を提供します、[翻訳](../collections/translations-element-assl.md)コレクション。  

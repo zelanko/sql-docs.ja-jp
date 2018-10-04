@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300922"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126472"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの**ツール バー**にある機能は、キューブやそのオブジェクトをデザインまたは参照しているときと、MDX クエリを作成しているときに使用する共通の操作を実行するときに使用します。 デザイン時とクエリ ビューの両方に共通する操作としては、ユーザー コンテキストの設定、オブジェクトの処理、既定の言語の設定などがあります。  

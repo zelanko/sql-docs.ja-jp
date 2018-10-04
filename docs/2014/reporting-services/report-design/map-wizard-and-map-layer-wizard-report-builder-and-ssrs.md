@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98a6efa4bcac46a50de84c70fcfb49a0e202c860
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128872"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
   マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -201,7 +198,7 @@ ms.locfileid: "37299822"
   
  タイルの詳細については、「 [Bing Maps のタイル システム](http://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](http://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
   
- デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、次を参照してください[レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画内で、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックの「。.  
+ デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、次を参照してください[レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画内で、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックの「.  
   
  タイル レイヤーをカスタマイズするためのその他の方法については、「[マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   

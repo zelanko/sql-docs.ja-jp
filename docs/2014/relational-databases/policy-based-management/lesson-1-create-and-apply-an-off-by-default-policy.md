@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
-caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 33c272e01c4f7d4bd35e6c8c96b7be5c23926313
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3317fd4fec42665dc075bf57a9c739bb48a4deec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145132"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>レッスン 1 : "既定でオフ" ポリシーの作成と適用
   ポリシー ベースの管理ポリシーを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の複数のインスタンス、複数のインスタンス オブジェクト、1 つのサーバー インスタンス、複数のデータベース、または複数のデータベース オブジェクトを管理できます。 データベース管理者は、特定のサーバーでデータベース メールが有効化されないようにすることができます。 このレッスンでは、このようなサーバー オプションを設定する条件およびポリシーを作成し、 サーバーがこのポリシーに準拠しているかどうかを確認するためにサーバーをテストします。 次に、このポリシーを使用してサーバーを再構成し、サーバーがポリシーに準拠するようにします。  

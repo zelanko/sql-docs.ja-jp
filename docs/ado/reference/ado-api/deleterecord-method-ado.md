@@ -1,13 +1,11 @@
 ---
-title: 関係するメソッド (ADO) |Microsoft ドキュメント
+title: DeleteRecord メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 168b53d0ad68f55656e005f7523a0c09ba599004
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 23c66eb3ca786df27f856539e8bba026d2b1ea71
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674116"
 ---
-# <a name="deleterecord-method-ado"></a>関係するメソッド (ADO)
-によって表されるエンティティを削除、[レコード](../../../ado/reference/ado-api/record-object-ado.md)です。  
+# <a name="deleterecord-method-ado"></a>DeleteRecord メソッド (ADO)
+によって表されるエンティティを削除する[レコード](../../../ado/reference/ado-api/record-object-ado.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,24 +35,24 @@ Record.DeleteRecord Source, Async
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ソース*  
- 任意。 A**文字列**を削除する (たとえば、ファイルまたはディレクトリ) のエンティティを識別する URL を含む値です。 場合*ソース*を省略するか、空の文字列は、現在で表されるエンティティを示す[レコード](../../../ado/reference/ado-api/record-object-ado.md)を削除します。 場合は、レコードは、コレクション ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)の**adCollectionRecord**、ディレクトリなど) (たとえば、サブディレクトリ) のすべての子も削除されます。  
+ *Source*  
+ 任意。 A**文字列**を削除する (たとえば、ファイルまたはディレクトリ) のエンティティを識別する URL を含む値です。 場合*ソース*を省略するか、空の文字列を現在によって表されるエンティティを指定します[レコード](../../../ado/reference/ado-api/record-object-ado.md)は削除されます。 場合は、レコードがコレクションのレコード ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)の**adCollectionRecord**、ディレクトリなど) (たとえば、サブディレクトリ) のすべての子も削除されます。  
   
  *非同期*  
  任意。 A**ブール**値と**True**、削除操作を非同期に指定します。  
   
 ## <a name="remarks"></a>コメント  
- これによって表されるオブジェクトで操作**レコード**メソッドの完了後に失敗する可能性があります。 呼び出した後**関係する**、**レコード**ために閉じる必要がありますの動作、**レコード**予測に応じて、プロバイダーを更新したときになる可能性があります、**レコード**データ ソースとします。  
+ これによって表されるオブジェクトで操作**レコード**メソッドの完了後に失敗する可能性があります。 呼び出した後**DeleteRecord**、**レコード**ために閉じる必要がありますの動作、**レコード**予測によって、プロバイダーを更新したときになる可能性があります、**レコード**データ ソースとします。  
   
- この場合**レコード**から取得された、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、この操作の結果はすぐに反映されず、**レコード セット**です。 更新、 **Recordset**閉じ、再度開いたとき、またはを実行して、**レコード セット** [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを[更新](../../../ado/reference/ado-api/update-method.md)メソッド、または[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドです。  
+ 場合は、この**レコード**から取得された、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、この操作の結果はすぐに反映されませんし、**レコード セット**します。 更新、**レコード セット**を閉じてから再度開くこと、または実行することによって、**レコード セット** [Requery](../../../ado/reference/ado-api/requery-method.md)メソッド、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド、または[再同期](../../../ado/reference/ado-api/resync-method.md)メソッド。  
   
 > [!NOTE]
->  Http スキームを使用する Url が自動的に起動、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)です。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)です。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Delete メソッド (ADO フィールドのコレクション)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Delete メソッド (ADO パラメーターのコレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Delete メソッド (ADO Fields コレクション)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete メソッド (ADO Parameters コレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Delete メソッド (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)

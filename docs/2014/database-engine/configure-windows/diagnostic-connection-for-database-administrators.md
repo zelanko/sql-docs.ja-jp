@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c30258edc86afd1a4844580553ce6d059edcb279
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e379e8ebfded2175fe3c0c787c156bd131ef3e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147560"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>データベース管理者用の診断接続
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーへの標準の接続が確立できないときに、管理者向けの特殊な診断接続が用意されています。 診断接続を使用することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が標準の接続要求に応答していない場合でも、管理者は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアクセスして診断クエリを実行し、問題のトラブルシューティングを行うことができるようになります。  
