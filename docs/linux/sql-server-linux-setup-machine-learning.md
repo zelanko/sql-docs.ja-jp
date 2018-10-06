@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b61eb365cc818bafc3e0b584f91dd9e85b09cc24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770940"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782361"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>SQL Server 2019 の Machine Learning サービス (R、Python、Java) Linux 上のインストールします。
 
@@ -273,13 +273,19 @@ GO
 
 インストールして、1 つのプロシージャで R、Python、または Java のパッケージとデータベース エンジンをインストールするコマンドのパラメーターを追加して、データベース エンジンと Machine Learning サービスを構成することができます。 
 
-次の例では、結合されたパッケージのインストールがどのように Yum パッケージ マネージャーを使用しての「テンプレート」図を示します。
+次の例は、結合されたパッケージのインストールがどのように Yum パッケージ マネージャーを使用しての「テンプレート」図です。 データベース エンジンをインストールし、依存関係として extensibility framework パッケージを取得する Java 言語拡張機能を追加します。
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-この例では、データベース エンジンをインストールし、依存関係として extensibility framework パッケージを取得する Java 言語拡張機能を追加します。 この例で使用されるパッケージのすべてについては、同じパスにあります。 R パッケージを追加する場合は、microsoft オープン r パッケージ リポジトリの登録が必要があります。
+すべての拡張機能 (Java、R、Python) で展開された例のようになります。
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+R の前提条件を除くこの例で使用されるパッケージのすべてが同じパスが見つかりません。 ある R を追加する必要がある[microsoft オープン r パッケージ リポジトリを登録](#mro)MRO を取得する追加の手順として。 MRO は、R の機能拡張の前提条件です。 インターネットに接続されているコンピューターで、MRO が取得され、自動的にインストール、R 拡張機能の一部として両方のリポジトリを構成したと仮定した場合します。
 
 インストール後、mssql-conf ツールを使用して、インストール全体を構成し、ライセンス契約に同意することに注意してください。 オープン ソース R および Python コンポーネントの未承認の Eula が自動的に検出し、SQL Server の使用許諾契約書と共に、それらをそのまま使用するように求められます。
 

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724346"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798590"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>レッスン 3: 探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "44724346"
     GO
     ```
 
-ストアド プロシージャ**PlotHistogram2**の既存のストアド プロシージャと同じ**PlotHistogram**によって作成された、`RunSQL_SQL_Walkthrough.ps1`スクリプト。 
+ストアド プロシージャ**PlotHistogram2**の既存のストアド プロシージャと同じ**PlotHistogram** NYCTaxi_sample データベースに存在します。 
   
 + 変数 `@query` によりクエリ テキスト (`'SELECT tipped FROM nyctaxi_sample'`) が定義され、スクリプト入力変数 `@input_data_1`の引数として R スクリプトに渡されます。
   
@@ -164,7 +164,7 @@ ms.locfileid: "44724346"
 
 通常、データ サイエンティストは、さまざまな観点から、データに関する洞察を取得する複数のデータ視覚エフェクトを生成します。 この例では、ストアド プロシージャなど、一般的な形式にバイナリ データをエクスポート、ヒストグラムを作成するのに Hist 関数を使用します。JPG、します。PDF と。PNG。 
 
-1. 既存のストアド プロシージャを使用して、 **PlotInOutputFiles**ヒストグラム、や散布図など、およびその他の R グラフィックスを記述します。JPG とします。PDF 形式です。 `RunSQL_SQL_Walkthrough.ps1`作成**PlotInOutputFiles**し、データベースを追加します。 右クリックを使用して、**変更**ソースを表示します。
+1. 既存のストアド プロシージャを使用して、 **PlotInOutputFiles**ヒストグラム、や散布図など、およびその他の R グラフィックスを記述します。JPG とします。PDF 形式です。 右クリックを使用して、**変更**ソースを表示します。
 
 2. 必要に応じて、学習の演習では、プロシージャとしての独自のコピーを作成**PlotInOutputFiles2**、名前付けの競合を回避するために一意の名前。
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ad318c0f0967f26f5cfdf2c5ad9af2d94323bf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f713ed7dd5d0260df6441698371b33f94813d7e
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622840"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251979"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>SQL Server Always On 可用性グループの Kubernetes を管理します。
 
@@ -23,13 +23,15 @@ Always On 可用性グループで Kubernetes を管理するには、マニフ�
 
 この記事の例では、すべての Kubernetes クラスターに適用されます。 これらの例のシナリオは、Azure Kubernetes サービス上のクラスターに対して適用されます。
 
-例を参照してくださいでのエンド ツー エンド展開[このチュートリアル](tutorial-sql-server-ag-kubernetes.md)します。
+完全な展開の例を参照してください。 [Always On 可用性グループの SQL Server のコンテナー](sql-server-ag-kubernetes.md)します。
 
 ## <a name="fail-over---sql-server-availability-group-on-kubernetes"></a>フェールオーバー - Kubernetes 上の SQL Server 可用性グループ
 
 Kubernetes で別のノードに可用性グループ プライマリ レプリカをフェールオーバーするには、ジョブを使用します。 この記事では、このジョブの環境変数を識別します。
 
-マニフェスト ファイルの次の例では、Kubernetes レプリカで可用性グループのジョブを手動でフェールオーバーするジョブについて説明します。 例では、新しいファイルの内容と呼ばれるコピー`failover.yaml`します。
+次のマニフェスト ファイルでは、可用性グループを手動でフェールオーバーするジョブについて説明します。 
+
+例では、新しいファイルの内容と呼ばれるコピー`failover.yaml`します。
 
 [failover.yaml](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates/failover.yaml)
 
@@ -39,9 +41,9 @@ Kubernetes で別のノードに可用性グループ プライマリ レプリ�
 kubectl apply -f failover.yaml
 ```
 
-マニフェスト ファイルを適用すると、Kubernetes は、ジョブを実行します。 ジョブを実行すると、supervisor は新しいがリーダーを選出し、リーダーの SQL Server インスタンスにプライマリ レプリカを移動します。
+マニフェスト ファイルを適用した後、Kubernetes は、ジョブを実行します。 ジョブは、新しいリーダーを選定 supervisor を行い、リーダーの SQL Server インスタンスにプライマリ レプリカを移動します。
 
-ジョブを実行した後は、それを削除します。 Kubernetes でのジョブ オブジェクトは、その状態を表示できるように、完了した後は。 手動でそれらの状態を記録した後は古いジョブを削除する必要があります。 ジョブを削除すると、Kubernetes のログも削除されます。 ジョブを削除しないと、ジョブの名前と、ポッドのセレクターを変更しない限り、今後のフェールオーバー ジョブは失敗します。 詳細については、次を参照してください。 [- ジョブが完了するまで実行](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)します。
+ジョブを実行した後は、それを削除します。 Kubernetes でのジョブ オブジェクトは、その状態を表示できるように完了した後が維持されます。 それらの状態を記録した後、古いジョブを手動で削除する必要があります。 ジョブを削除すると、Kubernetes のログも削除されます。 ジョブを削除しない場合、ジョブの名前と、ポッドのセレクターを変更しない限り、今後のフェールオーバー ジョブは失敗します。 詳細については、次を参照してください。 [- ジョブが完了するまで実行](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)します。
 
 ## <a name="rotate-credentials"></a>資格情報を交換します。
 

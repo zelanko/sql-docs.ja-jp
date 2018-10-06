@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 44f81a23d341e549243b8e99366fef435be04ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808630"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252010"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes サービス (AKS) での Kubernetes での SQL Server のコンテナーをデプロイします。
 
@@ -22,7 +22,7 @@ ms.locfileid: "47808630"
 
 Azure Kubernetes Service (AKS) では、Kubernetes で高可用性 (HA) の永続的なストレージを SQL Server インスタンスを構成する方法について説明します。 ソリューションでは、回復性を提供します。 SQL Server インスタンスが失敗した場合は、Kubernetes に自動的にし再作成します新しいポッドにします。 Kubernetes では、ノードの障害に対する復元性も提供します。
 
-このチュートリアルでは、AKS でのコンテナーで高可用性 SQL Server インスタンスを構成する方法を示します。 できます[Kubernetes に SQL Server 可用性グループを作成](tutorial-sql-server-ag-kubernetes.md)です。 2 つの異なる Kubernetes ソリューションを比較するを参照してください。[の高可用性 SQL Server のコンテナーを](sql-server-linux-container-ha-overview.md)します。
+このチュートリアルでは、AKS でのコンテナーで高可用性 SQL Server インスタンスを構成する方法を示します。 作成することも[Always On 可用性グループの SQL Server のコンテナー](sql-server-ag-kubernetes.md)します。 2 つの異なる Kubernetes ソリューションを比較するを参照してください。[の高可用性 SQL Server のコンテナーを](sql-server-linux-container-ha-overview.md)します。
 
 > [!div class="checklist"]
 > * SA パスワードを作成します。

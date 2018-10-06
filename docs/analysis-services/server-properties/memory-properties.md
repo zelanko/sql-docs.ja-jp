@@ -1,6 +1,6 @@
 ---
 title: メモリのプロパティ |Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054874"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264882"
 ---
 # <a name="memory-properties"></a>メモリのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 要求がすぐに処理できるように、起動時のメモリ量が中程度のサイズを事前に割り当てます。 追加のメモリがクエリに割り当てられ、処理のワークロードが増大します。 
+  事前、analysis Services では、要求をすぐに処理するために起動時のメモリ量が中程度のサイズを割り当てます。 追加のメモリがクエリに割り当てられ、処理のワークロードが増大します。 
   
   構成設定を指定すると、メモリが解放されるしきい値を制御することができます。 たとえば、 **HardMemoryLimit** 設定では、メモリ不足の条件を自分で指定します (既定では、このしきい値は有効ではありません)。ここでは、新しい要求は追加のリソースが有効になるまで完全に拒否されます。
 
-エディションの Analysis Services インスタンスごとに使用される最大メモリの詳細については、次を参照してください。[エディションと SQL Server のサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)します。
+エディションの SQL Server Analysis Services インスタンスごとに使用される最大メモリの詳細については、次を参照してください。[エディションと SQL Server のサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)します。
   
- 次の設定は、それ以外の場合に記載されていない場合に、表形式および多次元サーバー モードの両方に適用されます。  
+ 次の設定は、それ以外の場合に記載されていない場合に、表形式と多次元の両方のサーバーに適用されます。  
  
 ## <a name="default-memory-configuration"></a>既定のメモリ構成
 
@@ -33,7 +33,7 @@ ms.locfileid: "38054874"
 
 構成設定はインスタンスごとであることに注意してください。 同じハードウェアのテーブルと多次元インスタンスなど、Analysis Services の複数のインスタンスを実行している場合、他のインスタンスとは関係なく、各インスタンスで固有のメモリを割り当てます。
 
-次の表では、(リファレンス セクションの詳細情報と共に) 一般的に使用されるメモリの設定について簡単に説明します。 これらの Analysis Services は、同じサーバー上の他のアプリケーションでメモリ消費している場合にのみ設定を構成する必要があります。
+次の表では、(リファレンス セクションの詳細情報と共に) 一般的に使用されるメモリの設定について簡単に説明します。 Analysis Services は、同じサーバー上の他のアプリケーションでメモリ消費している場合にのみ、これらの設定を構成します。
 
 設定 | 説明
 --------|------------
@@ -66,12 +66,10 @@ Azure Analysis Services の場合のみです。 メモリの量は、クエリ�
  **VertiPaqPagingPolicy**  
   テーブル インスタンスのみの場合、サーバーのメモリが不足したときのページングの動作を指定します。 有効な値は次のとおりです。  
   
-  
-
 設定  |説明  
 ---------|---------
-**0**     |  ページングを無効にします。 メモリが足りなくなると、メモリ不足エラーが発生し、処理は失敗します。 ページングを無効にする場合は、サービス アカウントに Windows 特権を付与する必要があります。 手順については、「[サービス アカウントの構成 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)」を参照してください。 
-**1**     |  (既定値) このプロパティを指定した場合、オペレーティング システムのページング ファイル (pagefile.sys) を使用してディスクへのページングが行われます。   
+**0**     |  (Azure Analysis Services の既定値)ページングを無効にします。 メモリが足りなくなると、メモリ不足エラーが発生し、処理は失敗します。 ページングを無効にする場合は、サービス アカウントに Windows 特権を付与する必要があります。 手順については、「[サービス アカウントの構成 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)」を参照してください。 
+**1**     |  (SQL Server Analysis Services の既定値)このプロパティは、オペレーティング システムのページファイル (pagefile.sys) を使用してディスクへのページングを使用できます。   
   
 1 に設定された場合、指定された方法を使用してサーバーがディスクへのページングを試行するので、メモリ制約によって処理が失敗する可能性は低くなります。 **VertiPaqPagingPolicy** プロパティを設定しても、メモリ エラーが発生しないことが保証されるわけではありません。 以下の状況では、メモリ不足エラーが発生する可能性があります。  
   
