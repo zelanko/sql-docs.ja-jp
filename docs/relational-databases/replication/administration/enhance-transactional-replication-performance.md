@@ -83,7 +83,7 @@ ms.locfileid: "47742580"
     - **SubscriptionStreams** の値を大きくすると、サブスクライバーへの複数の接続が変更のバッチを並列で適用するため、ディストリビューション エージェントの全体的なスループットの向上に役立ちます。 ただし、プロセッサの数および他のメタデータの条件 (主キー、外部キー、一意制約、インデックスなど) によっては、SubscriptionStreams の値を高くすると悪影響がある可能性があります。 さらに、ストリームの実行またはコミットが失敗した場合、ディストリビューション エージェントはフォールバックし、単一のストリームで失敗したバッチを再試行します。
 
 
-このテストについて詳しくは、ブログ「[Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/)」(パフォーマンス向上のためのレプリケーション エージェントのプロファイル パラメーターの最適化) をご覧ください。
+このテストについて詳しくは、ブログ「[レプリケーションエージェントのプロファイルパラメータを最適化してパフォーマンスを向上させる](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/)」(パフォーマンス向上のためのレプリケーション エージェントのプロファイル パラメーターの最適化) をご覧ください。
 
 
 ### <a name="log-reader-agent"></a>ログ リーダー エージェント (Log Reader Agent)
