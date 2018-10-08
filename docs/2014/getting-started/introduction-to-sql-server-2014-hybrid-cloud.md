@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
-caps.latest.revision: 8
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05f2e3ae157597f4c933e6c7cac710495171e8bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4b9f893a0a8711825062a05c5e78db0440d298c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077732"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 ハイブリッド クラウドの概要
  ほとんどのアプリケーションは、高い効率、ビジネス価値、複雑なハードウェア構成、非常に高いピーク性能の要求などの重要な課題に直面しており、業界と企業の規制に準拠する必要があります。 これらすべての要因を考慮に入れ、エンタープライズ グレードのテクノロジを構築する作業は、非常に困難になる可能性があります。 Microsoft ハイブリッド クラウド戦略は、従来型のプライベート クラウド、パブリック クラウド、およびハイブリッド クラウド環境に対して、これらの主要な課題を克服するためのサポートを提供します。 
@@ -111,7 +108,7 @@ ms.locfileid: "37149863"
  
  指定された推奨事項を確認することをお勧め (プレゼンテーション層、ビジネス層、データベース層など) のアプリケーション層を Azure Virtual Machines を移動する場合、[アプリケーション パターンと開発Azure Virtual Machines における SQL Server の戦略](http://msdn.microsoft.com/library/dn574746.aspx)記事。 この記事の目的では、ソリューション設計者および開発者の基盤を提供優れたアプリケーション アーキテクチャと設計で、Azure と Azure で新しいアプリケーションを開発する既存のアプリケーションを移行するときに従うことができます。 アプリケーション パターンごとに、この記事では内部設置型のシナリオ、それに相当するクラウド対応ソリューション、および関連する技術的な推奨事項について説明します。 さらに、アプリケーションを正しく設計できるように、この記事は、Azure 固有の開発戦略について説明します。 
  
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
  [SQL Server 2014 CTP2 製品ガイド](http://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](http://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Microsoft SQL Server ハイブリッド クラウドのブログ シリーズ](http://blogs.msdn.com/b/azure/archive/2013/10/16/microsoft-sql-server-hybrid-cloud-blog-series.aspx)  

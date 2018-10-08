@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f1a262a52bdc610da81c5b42785fa555967e8bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac0ffe016e2c88a381b230a26c58be2f6b2087a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136632"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
   OData 接続マネージャーを使用すると、パッケージは OData ソースに接続できます。 OData ソース コンポーネントは OData 接続マネージャーを使用して OData ソースに接続し、サービスから取得したデータを使用します。 参照してください[OData ソース](../data-flow/odata-source.md)これらのコンポーネントのインストール手順などの詳細セクション。  
@@ -58,7 +55,7 @@ ms.locfileid: "37239352"
 |パスワード|基本認証で使用するパスワード。|  
 |ConnectionString|接続マネージャーの他のプロパティを反映します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OData 接続マネージャー エディター](../odata-connection-manager-editor.md)  
   
   

@@ -8,20 +8,17 @@ ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: ''
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9cbbbc4dc73f2fabed274eb863f02cad17f33d6b
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 58cbcb648d6318b1b013082fc621c48e278f9186
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715101"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793580"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux 上の SQL Server レプリケーションを構成します。
 
@@ -85,7 +82,7 @@ SQL Server Management Studio (SSMS) または Transact SQL ストアド プロ�
 
 パブリケーションとアーティクルを作成します。
 
-1. オブジェクト エクスプ ローラーで次のようにクリックします**レプリケーション** > **ローカル パブリケーション**> **新しい公開しています**。
+1. オブジェクト エクスプ ローラーで次のようにクリックします**レプリケーション** > **ローカル パブリケーション**> **新しい公開しています。**.
 
 1. 手順に従い、**パブリケーションの新規作成ウィザード**レプリケーション、およびパブリケーションに属するアーティクルの種類を構成します。
 

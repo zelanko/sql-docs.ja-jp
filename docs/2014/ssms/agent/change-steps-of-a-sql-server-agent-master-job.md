@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67129c941da4bbba871ff0c32782d7d679f25b07
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f23c4817ff1a09c7d25b636049c22410003da002
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221162"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で SQL Server エージェントのマスター ジョブのステップに変更を加える方法について説明します。  
@@ -61,7 +58,7 @@ ms.locfileid: "43818208"
   
 5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。  
   
-6.  **[編集]** をクリックし、*[ジョブ ステップのプロパティ - <ジョブ ステップ名>]* ダイアログ ボックスを開きます。 このダイアログ ボックスで使用可能なオプションの詳細については、次を参照してください[ジョブ ステップのプロパティ: 新しいジョブ ステップ&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)と[ジョブ ステップのプロパティ: 新しいジョブ ステップ&#40;高度なページ&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  **[編集]** をクリックし、*[ジョブ ステップのプロパティ - <ジョブ ステップ名>]* ダイアログ ボックスを開きます。 このダイアログ ボックスで使用可能なオプションの詳細については、次を参照してください[ジョブ ステップのプロパティ: 新しいジョブ ステップ&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)と[ジョブ ステップのプロパティ: 新しいジョブ ステップ&#40;高度なページ&#41;。](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  完了したら、 **[OK]** をクリックします。  
   
