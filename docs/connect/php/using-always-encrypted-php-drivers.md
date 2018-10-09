@@ -3,19 +3,18 @@ title: SQL Server 用 PHP ドライバーと共に Always Encrypted を使用す
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 12f0427b4ff23452f244c830c9116913dfb03968
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695680"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "39174969"
 
 この記事を使用して PHP アプリケーションの開発方法に関する情報を提供します[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)と[PHP Drivers for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md)します。
 
-Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 Always Encrypted など、SQL Server 用 ODBC ドライバーは透過的に暗号化し、クライアント アプリケーション内の機密データを復号化ドライバーを有効になります。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、「 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。 SQL Server 用 PHP ドライバーでは、機密データを暗号化する SQL Server 用 ODBC ドライバーを利用します。
+Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 ODBC Driver for SQL Server など、Always Encrypted が有効なドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、「 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。 SQL Server 用 PHP ドライバーでは、機密データを暗号化する SQL Server 用 ODBC ドライバーを利用します。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -154,7 +153,7 @@ $stmt->execute();
 ### <a name="plaintext-data-retrieval-example"></a>プレーン テキスト データの取得の例
 
 次の例では、暗号化された値と SQLSRV と PDO_SQLSRV ドライバーを使用して暗号化された列からプレーン テキスト データの取得に基づくデータのフィルター処理を示します。 次の点に注意してください。
- -   SSN 列に対してフィルター処理する WHERE 句が必要で渡されるバインド パラメーターを使用して、ドライバーでは、サーバーに送信する前に暗号化透過的にするために使用される値。
+ -   SSN 列に対してフィルター処理するために WHERE 句で使用される値は、Microsoft JDBC Driver for SQL Server がデータベースに送信する前に透過的に暗号化できるように、パラメーターとして渡す必要があります。
  -   バインドされたパラメーターを持つクエリを実行するときに PHP ドライバーで、ユーザーが明示的に SQLSRV ドライバーを使用する場合に、SQL 型が指定されていない限り、ユーザーの SQL 型が自動的に決定します。
  -   プログラムで印刷されるすべての値は、プレーン テキストでは、ドライバーは、SSN と BirthDate 列から取得されたデータを透過的に暗号化解除するためです。
  
@@ -229,7 +228,7 @@ Always Encrypted では、暗号化されたデータ型に対するいくつか
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>暗号化された値の代わりにプレーンテキストを渡すことによるエラー
 
-暗号化された列を対象とする任意の値は、サーバーに送信される前に暗号化する必要があります。 挿入、変更、またはエラーで、暗号化された列の結果のプレーン テキスト値でフィルター処理を試行します。 このようなエラーを防ぐには、次のことを確認してください。
+暗号化された列を対象とする任意の値は、サーバーに送信される前に暗号化する必要があります。 暗号化された列でプレーンテキスト値の挿入、変更、フィルター処理を行おうとすると、エラーになります。 このようなエラーを防ぐには、次のことを確認してください。
  -   Always Encrypted が有効に (接続文字列に設定、`ColumnEncryption`キーワードを`Enabled`)。
  -   バインド パラメーターを使用して、暗号化された列をターゲットとするデータを送信すること。 次の例では、暗号化された列 (SSN) でリテラル/定数によって正しくフィルター処理するクエリを示しています。
 ```
@@ -266,7 +265,7 @@ ECEK のプレーン テキスト値を取得するドライバー最初に関�
 
 Microsoft driver 5.3.0 for PHP for SQL Server、Windows 証明書ストアのプロバイダーと Azure Key Vault のみがサポートされています。 ODBC ドライバー (カスタム キーストア プロバイダー) でサポートされるその他のキーストア プロバイダーはまだサポートされていません。
 
-### <a name="using-the-windows-certificate-store-provider"></a>Windows 証明書ストアのプロバイダーを使用します。
+### <a name="using-the-windows-certificate-store-provider"></a>Windows 証明書ストアのプロバイダー。
 
 Windows 上の SQL Server 用 ODBC ドライバーには、Windows 証明書ストア、という名前の組み込み列マスター キー ストア プロバイダーが含まれています。`MSSQL_CERTIFICATE_STORE`します。 (このプロバイダーは macOS または Linux で使用できません) です。このプロバイダーでは、CMK がクライアント コンピューターでローカルに格納されているし、ドライバーで使用するために必要な追加の構成、アプリケーションではありません。 ただし、アプリケーションと、ストアに証明書とその秘密キーにアクセスできる場合があります。 詳細については、 [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(列マスター キーの作成と格納 (Always Encrypted)) を参照してください。
 

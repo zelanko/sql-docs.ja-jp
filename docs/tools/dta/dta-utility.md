@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,15 +19,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8196476349cbe6f2e376a4ac651fb6b1eeb65b34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.openlocfilehash: 0ad46261f10c154c86cd020afdc2c0ca33be7434
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644361"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +168,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  **dta** が推奨設定に含む必要がある物理デザイン構造の種類を指定します。 次の表は、この引数で指定できる値の一覧と説明です。 値を指定しないと、 **dta** は既定の **-fa****IDX**を使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |IDX_IV|インデックスおよびインデックス付きビュー。|  
 |IDX|インデックスのみ。|  
@@ -182,7 +179,7 @@ dta -d AdventureWorks2012 ...
  フィルター選択されたインデックスが新しい推奨設定用と見なされるように指定します。 詳細については、「 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
   
 **-fc**  
- 列ストア インデックスが新しい推奨設定用と見なされるように指定します。 DTA には、両方のクラスター化および非クラスター化列ストア インデックスが考慮されます。 詳細については、「    
+ 列ストア インデックスが新しい推奨設定用と見なされるように指定します。 DTA では、両方のクラスター化と非クラスター化列ストア インデックスを検討します。 詳細については、「    
 「[データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)」を参照してください。
  ||  
 |-|  
@@ -192,7 +189,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  推奨設定を生成する際に **dta** が保持する必要のある既存の物理デザイン構造を指定します。 次の表は、この引数で指定できる値の一覧と説明です。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |なし|既存の構造なし|  
 |ALL|既存のすべての構造|  
@@ -203,7 +200,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  **dta** によって提示される新しい物理デザイン構造 (インデックスおよびインデックス付きビュー) をパーティション分割する必要があるかどうか、およびパーティション分割の方法を指定します。 次の表は、この引数で指定できる値の一覧と説明です。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |なし|パーティション分割しない。|  
 |FULL|完全パーティション分割 (選択するとパフォーマンスが向上します)。|  
@@ -220,8 +217,8 @@ dta -d AdventureWorks2012 ...
  **-ip**  
  プラン キャッシュをワークロードとして使用することを指定します。 明示的に選択したデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **–n** オプションを使用して変更できます。  
  
-**-iq**  
- クエリ ストアがワークロードとして使用することを指定します。 明示的に選択したデータベースのクエリのストアから上位 1,000 個のイベントが分析されます。 この値は **–n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
+IQ  
+ クエリ ストアをワークロードとして使用することを指定します。 明示的に選択したデータベースのクエリ ストアから上位 1,000 個のイベントが分析されます。 この値は **–n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
  ||  
 |-|  
 |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
@@ -245,7 +242,7 @@ dta -d AdventureWorks2012 ...
 >  *owner_name* は必ず **dbo** としてください。 それ以外の値を指定すると、 **dta** の実行は失敗し、エラーが返されます。 ワークロード ファイルまたはワークロード テーブルを 1 つ指定する必要があることにも注意してください。  
   
  **-ix** *input_XML_file_name*  
- **dta** の入力情報を含む XML ファイルの名前を指定します。 これは、DTASchema.xsd に従った有効な XML ドキュメントであることが必要です。 チューニング オプションのコマンド プロンプトから指定した引数と競合する場合、この XML ファイルの対応する値が上書きされます。 唯一の例外は、ユーザー定義の構成が XML 入力ファイルに評価モードで入力されている場合だけです。 たとえば、XML 入力ファイルの **Configuration** 要素に構成が入力されており、 **EvaluateConfiguration** 要素も同様にチューニング オプションの 1 つとして指定されている場合、XML 入力ファイルで指定されたチューニング オプションは、コマンド プロンプトから入力されるいずれのチューニング オプションよりも優先されます。  
+ **dta** の入力情報を含む XML ファイルの名前を指定します。 これは、DTASchema.xsd に従った有効な XML ドキュメントであることが必要です。 チューニング オプションのコマンド プロンプトから指定した引数と競合する場合、この XML ファイルの対応する値がオーバーライドされます。 唯一の例外は、ユーザー定義の構成が XML 入力ファイルに評価モードで入力されている場合だけです。 たとえば、XML 入力ファイルの **Configuration** 要素に構成が入力されており、**EvaluateConfiguration** 要素も同様にチューニング オプションの 1 つとして指定されている場合、XML 入力ファイルで指定されたチューニング オプションは、コマンド プロンプトから入力されるいずれのチューニング オプションをオーバーライドします。  
   
  **-m** *minimum_improvement*  
  推奨構成が満たす必要がある、最小向上率を指定します。  
@@ -253,7 +250,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  物理デザイン構造をオンラインで作成するかどうかを指定します。 次の表は、この引数で指定できる値の一覧と説明です。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |OFF|推奨される物理デザイン構造をオンラインで作成しません。|  
 |ON|推奨される物理デザイン構造をすべてオンラインで作成します。|  
@@ -271,11 +268,11 @@ dta -n number_of_events -A 0
  この場合、チューニング時間を無制限 (`-A 0`) に指定することが重要です。 無制限に指定しない場合、データベース エンジン チューニング アドバイザーでは、既定の 8 時間のチューニング時間が前提となります。
  
  **-I** *time_window_in_hours*   
-   時間ウィンドウの期間 (時間) を指定するときを使用する場合をチューニングするための DTA によってと見なされるには、クエリを実行する必要がありますが **-iq**オプション (クエリ ストアからのワークロード)。 
+   時間枠 (時間) を指定するときに、DTA チューニングを使用する場合の考慮のクエリを実行する必要がありますが **-iq**オプション (クエリ ストアからワークロード)。 
 ```  
 dta -iq -I 48  
 ```  
-ここでは、DTA はクエリ ストアのワークロードのソースとして使用し、のみ、過去 48 時間で実行したクエリを検討してください。  
+ここでは、DTA はクエリ ストアのワークロードのソースとして使用し、過去 48 時間で実行したクエリのみが考慮されます。  
   ||  
 |-|  
 |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  

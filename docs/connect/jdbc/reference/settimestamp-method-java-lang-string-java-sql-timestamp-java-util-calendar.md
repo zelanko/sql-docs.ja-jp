@@ -1,13 +1,11 @@
 ---
-title: setTimestamp メソッド タイムスタンプと予定表の値を |Microsoft ドキュメント
+title: setTimestamp メソッド タイムスタンプと予定表の値を |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar))
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 09dca1f9-225a-4acb-9857-9a947e0829be
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8012e6e9a9879e3d869c018992e7744920af0d83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 57ca359046cc6ac57b503c0cfd19fd4c99ee15fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844747"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726100"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp-javautilcalendar"></a>setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,24 +40,24 @@ public void setTimestamp(java.lang.String sCol,
 #### <a name="parameters"></a>パラメーター  
  *sCol*  
   
- A**文字列**パラメーター名を格納しています。  
+ パラメーターの名前を含む**文字列**です。  
   
  *x*  
   
- タイムスタンプ オブジェクトです。  
+ タイムスタンプのオブジェクト。  
   
  *c*  
   
- 予定表オブジェクトです。  
+ 暦オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この setTimestamp メソッドは、java.sql.CallableStatement インターフェイスの setTimestamp メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setTime メソッドは、java.sql.CallableStatement インターフェイスの setTime メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [setTimestamp メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
+ [getTimestamp メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

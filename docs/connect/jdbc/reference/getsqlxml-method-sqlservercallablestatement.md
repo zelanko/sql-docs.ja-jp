@@ -1,25 +1,22 @@
 ---
-title: getSQLXML メソッド (SQLServerCallableStatement) |Microsoft ドキュメント
+title: getSQLXML メソッド (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8bcf9eda-b36c-480c-8bf2-91c392d5a0ee
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bbdd2317d1e69489f928ef6e74d0254ea10f8f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04857d220696f857e9a51b3fe760ad2018079f7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837857"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795670"
 ---
 # <a name="getsqlxml-method-sqlservercallablestatement"></a>getSQLXML メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,10 +25,10 @@ ms.locfileid: "32837857"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getSQLXML メソッド&#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|パラメーターのインデックスを SQLXML オブジェクトとして指定されたパラメーターの値を取得します。|  
-|[getSQLXML メソッド&#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|パラメーター名を指定された SQLXML オブジェクトとして指定されたパラメーターの値を取得します。|  
+|[getSQLXML メソッド&#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を  オブジェクトとして取得します。|  
+|[getSQLXML (java.lang.String) メソッド](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|渡されたパラメーター名を使用して、指定されたパラメーターの値を  オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

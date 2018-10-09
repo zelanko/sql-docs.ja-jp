@@ -1,13 +1,11 @@
 ---
-title: executeQuery メソッド (SQLServerStatement) |Microsoft ドキュメント
+title: executeQuery メソッド (SQLServerStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.executeQuery
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 053446b9110ea080a8b6e021e4455c3a1215be5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5e60b24dd437ec100616da264b54997c9021554d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830597"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834732"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>executeQuery メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,17 +38,16 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを含むです。  
+ A**文字列**SQL ステートメントを格納しています。  
   
 ## <a name="return-value"></a>戻り値  
- 
-          SQLServerResultSet オブジェクトです。  
+ SQLServerResultSet オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- このさらに executeQuery メソッドは、java.sql.Statement インターフェイスの executeQuery メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドで規定されています。  
   
  渡された SQL ステートメントによって 1 つの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクト以外のものが生成された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) がスローされます。  
   

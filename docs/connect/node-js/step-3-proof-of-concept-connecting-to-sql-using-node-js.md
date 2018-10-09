@@ -1,37 +1,34 @@
 ---
-title: '手順 3: 概念実証の Node.js を使用して SQL への接続 |Microsoft ドキュメント'
+title: 'ステップ 3: Java を使用した SQL への接続を概念実証する | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d9e49b709396519a3eb08ce37fb802c66aa283
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288922"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834141"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>手順 3: 概念実証の Node.js を使用して SQL に接続します。
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>ステップ 3: Node.js を使用した SQL への接続を概念実証する
 
-![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[Node.js SQL ドライバーをダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード下方向丸](../../ssdt/media/download.png)[Node.js SQL ドライバーのダウンロード](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-この例は、概念実証ののみを考慮してください。  サンプル コードでは、わかりやすくするため、簡略化し、Microsoft によって推奨されるベスト プラクティスを必ずしもは表しません。 同じの重要な機能を使用するその他の例は、Github で利用可能。
+この例は、のみの概念実証を検討してください。  サンプル コードがわかりやすくするために、簡略化し、Microsoft によって推奨されるベスト プラクティスに表すとは限りません。 重要な同じ関数を使用するその他の例は、Github で入手できます。
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>手順 1: 接続  
   
-**新しい接続**関数は SQL データベースへの接続に使用します。  
+**新しい接続**関数を使用して、SQL Database に接続します。  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -49,10 +46,10 @@ ms.locfileid: "35288922"
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>手順 2: クエリを実行します。  
+## <a name="step-2--execute-a-query"></a>手順 2: クエリの実行  
   
   
-使用してすべての SQL ステートメントが実行される、**新しい Request()** 関数。 ステートメントが select ステートメントなどの行を返す場合、それらを取得できますを使用して、 **request.on()** 関数。 行が存在しない場合、request.on() 関数は、空のリストを返します。  
+使用してすべての SQL ステートメントが実行される、**新しい Request()** 関数。 ステートメントは、select ステートメントなどの行を返す場合取得するを使用して、 **request.on()** 関数。 行が存在しない場合、request.on() 関数は空のリストを返します。  
   
   
 ```javascript  
@@ -101,7 +98,7 @@ ms.locfileid: "35288922"
   
 ## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入します。  
   
-この例を実行する方法が表示されます、[挿入](../../t-sql/statements/insert-transact-sql.md)ステートメントは、安全にからアプリケーションを保護するためのパラメーターを渡す[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
+実行する方法がわかります。 この例では、[挿入](../../t-sql/statements/insert-transact-sql.md)ステートメントが安全に、からアプリケーションを保護するパラメーターを渡す[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
   
   
 ```javascript  

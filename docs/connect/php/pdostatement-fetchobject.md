@@ -1,25 +1,22 @@
 ---
-title: PDOStatement::fetchObject |Microsoft ドキュメント
+title: PDOStatement::fetchObject |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3749e218dd75d29974d0b84a0be598fc60d4a8f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 3925dfab04904e347f5c8bc428c4de89b3c78e52
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655310"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,14 +31,14 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$*class_name*: を作成するクラスの名前を指定する、省略可能な文字列。 既定値は、stdClass です。  
+$class*name*: 作成するクラスの名前を指定する省略可能な文字列。 既定値は、stdClass です。  
   
-$*ctor_args*: カスタム クラスのコンス トラクターの引数と省略可能な配列。  
+$ctor*args*: カスタム クラスのコンストラクターの引数と省略可能な配列です。  
   
 ## <a name="return-value"></a>戻り値  
 成功した場合、クラスのインスタンスを持つオブジェクトを返します。 プロパティは、列にマップします。 失敗した場合、false を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

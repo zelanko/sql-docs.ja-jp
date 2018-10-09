@@ -1,25 +1,22 @@
 ---
-title: Pdo::errorinfo |Microsoft ドキュメント
+title: Pdo::errorinfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4a5dc723d735436bde18b813a8716b054779971
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8216e6c9adbb2154a1e416510b989db252572cb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690580"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,15 +39,15 @@ array PDO::errorInfo();
   
 -   ドライバー固有のエラー メッセージ。  
   
-エラーがない場合、または SQLSTATE が設定されていない場合は、ドライバー固有のフィールドは NULL にします。  
+エラーがない場合、または SQLSTATE が設定されていない場合、ドライバー固有のフィールドは NULL になります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 PDO::errorInfo は、データベースで直接実行された操作のエラー情報だけを取得します。 PDO::prepare または PDO::query を使用して PDOStatement インスタンスを作成する場合は、PDOStatement::errorInfo を使用します。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  
-この例では、列の名前のスペルが正しい (`Cityx`の代わりに`City`)、結果、エラーが報告されます。  
+この例では、列の名前が間違っており (`City` ではなく `Cityx`)、エラーが発生します。そのエラーは報告されます。  
   
 ```  
 <?php  

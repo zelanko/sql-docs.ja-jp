@@ -1,13 +1,11 @@
 ---
-title: setDate メソッドの日付をカレンダー - int |Microsoft ドキュメント
+title: setDate メソッドの日付をカレンダー - int |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setDate (int, java.sql.Date, java.util.Calendar)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2c46f694-6dc4-429f-a037-a3bad369a7c8
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a1c995909200a7eef7173b3a642b6d19aa13547
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5abb09e3868de54fc924c434359b7af5ae393504
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842727"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596711"
 ---
 # <a name="setdate-method-int-javasqldate-javautilcalendar"></a>setDate (int, java.sql.Date, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,24 +40,24 @@ public final void setDate(int n,
 #### <a name="parameters"></a>パラメーター  
  *n*  
   
- **Int**パラメーター数を示すです。  
+ パラメーターの番号を示す **int** です。  
   
  *x*  
   
- Date オブジェクトです。  
+ Date オブジェクト。  
   
  *cal*  
   
- 予定表オブジェクトです。  
+ 暦オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- SetDate メソッドは、setDate、java.sql.PreparedStatement インターフェイスのメソッドで規定します。  
+## <a name="remarks"></a>Remarks  
+ この execute メソッドは、java.sql.PreparedStatement インターフェイスの execute メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [setDate メソッド&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
+ [execute メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

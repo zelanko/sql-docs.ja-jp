@@ -1,13 +1,11 @@
 ---
-title: getSQLStateType メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getSQLStateType メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getSQLStateType
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d5778b2b42af466ced101633a38ac9d0db83791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a4a01e2bb8ef76af91c4dede71ae7457351d430b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838257"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733200"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +36,17 @@ public int getSQLStateType()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **Int**を示す、SQLSTATE の種類を次の値のいずれかを指定することができます。  
+ SQLSTATE の種類を示す  です。次のいずれかの値になります。  
   
--   Java ランタイム環境バージョン 5.0: 場合、 **xopenStates**接続プロパティに設定**true**DatabaseMetaData.sqlStateXOpen を返します。 それ以外の場合、DatabaseMetaData.sqlStateSQL99 です。  
+-   Java ランタイム環境バージョン 5.0: 場合、 **xopenStates**接続プロパティに設定されて**true**DatabaseMetaData.sqlStateXOpen を返します。 それ以外の場合、DatabaseMetaData.sqlStateSQL99 します。  
   
--   Java ランタイム環境バージョン 6.0: 場合、 **xopenStates**接続プロパティに設定**true**DatabaseMetaData.sqlStateXOpen を返します。 それ以外の場合、DatabaseMetaData.sqlStateSQL です。  
+-   Java ランタイム環境バージョン 6.0: 場合、 **xopenStates**接続プロパティに設定されて**true**DatabaseMetaData.sqlStateXOpen を返します。 それ以外の場合、DatabaseMetaData.sqlStateSQL します。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getSQLStateType メソッドは、java.sql.DatabaseMetaData インターフェイスの getSQLStateType メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getSQLStateType メソッドは、java.sql.DatabaseMetaData インターフェイスで getSQLStateType メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

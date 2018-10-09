@@ -5,28 +5,25 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 395663802627a0dfac8f9fa314fe2a0fe51f8be7
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 2e8711d79b9e67be23c817d3996f451402c17d06
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786367"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759070"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-これは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]サンプル アプリケーションは、結果セットの getter メソッドを使用して取得する方法を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]'SQL データの検出と分類' テーブルからの情報、そのような情報を保持します。
+この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、結果セットの getter メソッドを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 'SQL データの検出と分類' の情報を取得する方法を示します。
   
-このサンプルのコード ファイルが、DataDiscoveryAndClassification.java をという名前し、次の場所で見つかります。  
+このサンプルのコード ファイルは DataDiscoveryAndClassification.java という名前で、次の場所で見つけることができます。  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  

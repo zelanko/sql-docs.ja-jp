@@ -1,13 +1,11 @@
 ---
-title: getBlob (int) メソッド |Microsoft ドキュメント
+title: getBlob (int) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBlob (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ade0d109f2f20edcd1a6a0ff2aca1e8ba71a00b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ef2ab07997f052a8ae97bd1f654fab08e51e02dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831217"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619210"
 ---
 # <a name="getblob-method-int"></a>getBlob (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された JDBC BLOB パラメーターの値を Java プログラミング言語のパラメーター インデックス内の Blob オブジェクトとして取得します。  
+  パラメーターに渡されたインデックスを使用して、指定された JDBC BLOB パラメーターの値を Java プログラミング言語の  オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,21 +36,21 @@ public java.sql.Blob getBlob(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *インデックス*  
+ *index*  
   
- **Int**パラメーター インデックスを示すです。  
+ パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- Blob オブジェクトです。  
+ Blob オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getBlob メソッドは、java.sql.CallableStatement インターフェイスの getBlob メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getInt メソッドは、java.sql.CallableStatement インターフェイスの getInt メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getBlob メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)   
+ [getInt メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

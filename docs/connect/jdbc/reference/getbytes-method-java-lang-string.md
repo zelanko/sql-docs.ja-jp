@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBytes (java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4d0dac7f-7f39-47a2-953e-80ab03688d82
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c97aceb39fb030a9f58371efc171cb88dafb5b66
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 78c7857744af4e7d1dd72e5323d48e8eb3bb0dbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784912"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812270"
 ---
 # <a name="getbytes-method-javalangstring"></a>getBytes (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +49,7 @@ public byte[] getBytes(java.lang.String sCol)
 ## <a name="remarks"></a>Remarks  
  以前のバージョンの [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、SQLServerCallableStatement.getBytes を使用してバイト配列と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型の **date**、**time**、**datetime2**、または **datetimeoffset** との間の変換を実行できました。 新しいバージョンでは、これらのデータ型に対してこのメソッドを使用すると、変換がサポートされていないことを示す例外が発生します。  
   
- この getBytes メソッドは、java.sql.CallableStatement インターフェイスの getBytes メソッドによって指定されます。  
+ この setBytes メソッドは、java.sql.CallableStatement インターフェイスの setBytes メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [getBytes メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   

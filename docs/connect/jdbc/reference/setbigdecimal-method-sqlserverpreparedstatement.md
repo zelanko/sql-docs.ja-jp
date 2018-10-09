@@ -1,13 +1,11 @@
 ---
-title: setBigDecimal メソッド (SQLServerPreparedStatement) |Microsoft ドキュメント
+title: setBigDecimal メソッド (SQLServerPreparedStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setBigDecimal
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 860f86db-d840-401a-a5c2-cd22e8cc1e4e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24de604f922f879d55920e9d6cd3086c79078185
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f73daf4d612193db273f525a34720771cd80dee7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729590"
 ---
 # <a name="setbigdecimal-method-sqlserverpreparedstatement"></a>setBigDecimal メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された BigDecimal オブジェクトに指定されたパラメーターを設定します。  
+  指定されたパラメーターの番号を、渡された  オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,16 +39,16 @@ public final void setBigDecimal(int n,
 #### <a name="parameters"></a>パラメーター  
  *n*  
   
- **Int**パラメーター数を示すです。  
+ パラメーターの番号を示す **int** です。  
   
  *x*  
   
- BigDecimal オブジェクトです。  
+ BigDecimal オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この setBigDecimal メソッドは、java.sql.PreparedStatement インターフェイスの setBigDecimal メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

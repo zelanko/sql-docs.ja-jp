@@ -1,37 +1,34 @@
 ---
-title: getSQLXML メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getSQLXML メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a07e0f30-cbc6-4ad7-b931-c30cad382e64
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5dabcf704310451ece914cc421986ef5edad59e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3d5311b9336336598cfabe15aea9fbd3ed5a79ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700110"
 ---
 # <a name="getsqlxml-method-sqlserverresultset"></a>getSQLXML メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  現在の行に指定された列の値を取得、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) SQLXML オブジェクトとしてオブジェクト。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、SQLXML オブジェクトとして取得されます。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getSQLXML メソッド&#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-int-sqlserverresultset.md)|現在の行に指定された列の値を取得、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) SQLXML オブジェクトとしてオブジェクト。|  
-|[getSQLXML メソッド&#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|現在の行に指定された列の値を取得、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) SQLXML オブジェクトとしてオブジェクト。|  
+|[getSQLXML メソッド&#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、SQLXML オブジェクトとして取得されます。|  
+|[getSQLXML (java.lang.String) メソッド](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、SQLXML オブジェクトとして取得されます。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

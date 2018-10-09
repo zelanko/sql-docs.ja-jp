@@ -1,25 +1,22 @@
 ---
-title: updateAsciiStream メソッド (java.io.InputStream, long) |Microsoft ドキュメント
+title: updateAsciiStream メソッド (java.io.InputStream, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d426e8b9-62b7-49f8-9863-8697fd3a7085
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4511a89fcd54767adbd3cfe4268b9c7fb2e7e72b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3bf3400a9cb3eb61a3ddfd6c3e85f0b660da28db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681240"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-long"></a>updateAsciiStream (java.lang.String, java.io.InputStream, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,30 +35,30 @@ public void updateAsciiStream(java.lang.String columnName,
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- A**文字列**列の名前を格納しています。  
+ 列名を含む**文字列**です。  
   
  *streamValue*  
   
  InputStream オブジェクト。  
   
- *長さ*  
+ *length*  
   
  ストリームの長さです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この updateAsciiStream メソッドは、java.sql.ResultSet インターフェイスの updateAsciiStream メソッドによって指定されます。  
   
- このメソッドでは、InputStream オブジェクトから ASCII 文字 (バイト単位) を渡しますに変換できる文字列は、ASCII の範囲 [0x00 – 0x7F] Unicode、および 874、932、936、949、950、1250 ~ 1258 コード ページのです。 このメソッドは、対象となる照合順序ページへの変換を実行します。 変換できない変換先列を更新しようとすると、例外がスローされます。 バイナリ列の場合、そのままのバイトが渡されます。  
+ このメソッドは、ASCII 文字 (バイト) を、InputStream オブジェクトから変換可能な文字型の列へ渡します。ASCII 文字の変換可能な文字型の列は、Unicode の 874、932、936、949、950、1250 - 1258 コード ページの ASCII の範囲 [0x00 – 0x7F] です。 このメソッドは、対象となる照合順序ページへの変換を実行します。 変換できない変換先列を更新しようとすると、例外がスローされます。 バイナリ列の場合、そのままのバイトが渡されます。  
   
- ストリームの長さが指定されたものと異なるかどうか、*長さ*パラメーター、JDBC ドライバーと例外をスロー、行が更新または挿入します。  
+ ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   
- ストリームの長さが、不明の場合、*長さ*ドライバーがその長さに関係なく、ストリームを受け入れることを示すために、パラメーターを-1 に設定することがあります。 Sqljdbc4.jar、ことをお勧め、JDBC 4.0 メソッドを使用する[updateAsciiStream メソッド&#40;java.lang.String, java.io.InputStream&#41; ](../../../connect/jdbc/reference/updateasciistream-method-java-lang-string-java-io-inputstream.md)アプリケーションが列の長さがストリームを更新するときに不明なです。  
+ ストリームの長さが不明である場合、*length* パラメーターを -1 に設定して、ドライバーが長さに関係なくストリームを受け入れるように指定できます。 sqljdbc4.jar を使用する場合、アプリケーションで長さが不明なストリームを使用して列を更新するときには、JDBC 4.0 メソッドの [updateBinaryStream &#40;java.lang.String, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-java-lang-string-java-io-inputstream.md) メソッドを使用することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
- [updateAsciiStream メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
+ [updateAsciiStream メソッド (SQLServerResultSet)](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

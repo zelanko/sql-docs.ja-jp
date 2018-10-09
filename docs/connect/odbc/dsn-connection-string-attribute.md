@@ -5,19 +5,17 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 8924fa356b10264bb3116bd1eb40e8fdc94d7334
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: 034efe241bb948c1e5739247e481a4057b0d7219
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020696"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838180"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列のキーワードと属性
 
@@ -178,7 +176,7 @@ SQL Server に接続するときに使用する認証モードを設定します
 
 | キーワードの値 | 属性値| [説明] |
 |-|-|-|
-|[ユーザー アカウント制御]|SQL_IS_ON|(既定値)透過ネットワーク IP 解決を有効にします。|
+|[ユーザー アカウント制御]|SQL_IS_ON|透過的なネットワーク IP の解決を無効にします。|
 |いいえ|SQL_IS_OFF|透過的なネットワーク IP の解決を無効にします。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY

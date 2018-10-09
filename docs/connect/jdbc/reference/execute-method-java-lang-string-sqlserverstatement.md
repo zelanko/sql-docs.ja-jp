@@ -1,13 +1,11 @@
 ---
-title: execute メソッド (java.lang.String) (SQLServerStatement) |Microsoft ドキュメント
+title: executeUpdate メソッド (java.lang.String) (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.execute (java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a26a986474576206180bb3154ea9d5e2c9eea550
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b303a9002194f05d1ceb2c3c9f154ed26f6524d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830912"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797890"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>execute (java.lang.String) (SQLServerStatement) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,19 +38,19 @@ public boolean execute(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを含むです。  
+ A**文字列**SQL ステートメントを格納しています。  
   
 ## <a name="return-value"></a>戻り値  
- **true**最初の結果が結果セットである場合。 それ以外の場合は、 **false**です。  
+ 最初の結果が結果セットの場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [メソッドを実行する&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
+ [execute メソッド&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: setString メソッド (SQLServerPreparedStatement) |Microsoft ドキュメント
+title: setString メソッド (SQLServerPreparedStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setString
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 25dabdc9-c60f-485a-87eb-306067964765
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2840875ab082962df97636f33caa00a52ee83b6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 65841c763e12d99148c1ab0549cb70312a6172d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844777"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733788"
 ---
 # <a name="setstring-method-sqlserverpreparedstatement"></a>setString メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを設定して、指定された**文字列**値。  
+  指定されたパラメーターを、渡された java 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,19 +37,19 @@ public final void setString(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *インデックス*  
+ *index*  
   
- **Int**パラメーター数を示すです。  
+ パラメーターの番号を示す **int** です。  
   
- *str*  
+ *STR*  
   
- A**文字列**値。  
+ **文字列**値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この setString メソッドは、java.sql.PreparedStatement インターフェイスの setString メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setString メソッドは、java.sql.PreparedStatement インターフェイスで、setString メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

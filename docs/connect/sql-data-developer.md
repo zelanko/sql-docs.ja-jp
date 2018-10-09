@@ -1,49 +1,46 @@
 ---
-title: SQL データ開発者 |Microsoft ドキュメント
+title: SQL データ開発者 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 609604e890052d742c99d8e12604abe7ce9e5259
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 181039ae52fc20c4b453d268b81cf4029cf6c473
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615500"
 ---
 # <a name="sql-data-developer"></a>SQL データ開発者
-Microsoft の SQL データ プラットフォームを使用すると、モバイル デバイスとデスクトップの web サーバー、エンタープライズ サーバー、およびクラウドの間でデータ中心のソリューションを作成できます。  
+Microsoft の SQL データ プラットフォームを使用すると、モバイル デバイスとデスクトップの web サーバー、エンタープライズ サーバー、およびクラウドの間でデータ中心のソリューションを作成します。  
 
-## <a name="sql-data-storage"></a>SQL データ ストレージ
+## <a name="sql-data-storage"></a>データ ストレージ
 * [SQL Server データベース エンジン](../database-engine/configure-windows/sql-server-database-engine.md): SQL Server データベース エンジンを使用して、オンライン トランザクション処理やオンライン分析処理のデータのリレーショナル データベースを作成します。 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/): SQL Azure を使用する、データベースをクラウドに移動するには 
-* [SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): SQL Server Compact をスタンドアロン アプリケーションとモバイル デバイス、デスクトップ、常時接続でのアプリケーションをビルドし、Web クライアントです。
-* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): を記述して SQL Server のフル サーバー インスタンスを管理することがなく TRANSACT-SQL コードをテストの開発中に LocalDB を使用します。
+* [SQL Azure](https://docs.microsoft.com/azure/sql-database/): 使用して SQL Azure のクラウドに移行するデータベースを移動するには 
+* [SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): SQL Server Compact をスタンドアロン アプリケーションとモバイル デバイス、デスクトップ、常時接続でアプリケーションをビルドし、Web クライアントです。
+* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): 記述して、SQL Server の完全なサーバー インスタンスを管理することがなく TRANSACT-SQL コードをテストする開発時に LocalDB を使用します。
 
-## <a name="sql-data-tools"></a>SQL Data tools
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : ビルドのリレーショナル データベース、Azure SQL データベース、Integration Services パッケージ、Analysis Services データ モデル、および Reporting Services を使用して SSDT を報告します。
-* [SQL Server 管理ツール](../ssms/download-sql-server-management-studio-ssms.md): を使用して SSMS の構成、監視、および SQL Server のインスタンスを管理します。
+## <a name="sql-data-tools"></a>SQL データ ツール
+* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : ビルドのリレーショナル データベース、Azure SQL database、Integration Services パッケージ、Analysis Services データ モデル、および Reporting Services を使用して SSDT を報告します。
+* [SQL Server Management Tools](../ssms/download-sql-server-management-studio-ssms.md): SSMS を使用した構成、監視、および SQL Server のインスタンスを管理します。
 
 ## <a name="sql-data-access"></a>SQL データ アクセス
-* [SQL クライアント ドライバー](sql-connection-libraries.md): に接続するを使用して SQL ドライバーはクエリ、更新、挿入、または SQL データベースからデータを削除します。
-* [Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx): LINQ を使用して、SQL Server と、Entity Data Model (EDM) および生のリレーショナル構造体の間のマッピングを制御するオプションに直接アクセスできるデータベースを簡単にアクセスする Entity Framework を使用します。 
-* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): 簡単に作成して、web とイントラネットの両方で OData サービスを使用するターンキー近くソリューションの Data Services の使用
-* [フレームワークの同期](https://msdn.microsoft.com/library/jj839436.aspx): 任意のデータ型、任意のデータ ストア、転送プロトコルのいずれかおよびどのようなネットワーク トポロジへのオフライン アクセスを有効にする、Sync Framework を使用します。
-* [Reactive Extensions](https://msdn.microsoft.com/library/hh242985.aspx): Reactive Extensions (Rx) を使用してイベント ストリームのプログラミングを実行し、監視可能なシーケンスおよび LINQ スタイルのクエリ演算子を使用して非同期のプログラミングを簡略化します。  JavaScript (RxJS) の事後対応型の拡張機能を使用して、監視可能なシーケンスを使用して、web での非同期コールバックに基づくし、イベント ドリブン プログラミングを簡略化します。
-* [CLR 統合](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md): を使用して CLR 統合ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数、ユーザー定義集計、およびストリーミング テーブル値関数を Microsoft を含めて、任意の .NET Framework 言語を使用して書き込むVisual Basic .NET や Microsoft Visual C# の場合。 
+* [SQL クライアント ドライバー](sql-connection-libraries.md): 接続には、ドライバーを使用して SQL クエリ、更新、挿入、または SQL database からデータを削除します。
+* [Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx): Entity Framework を使用して、SQL Server と Entity Data Model (EDM) と生のリレーショナル構造間のマッピングを制御するオプションに直接アクセスすると、LINQ を使用してデータベースを簡単にアクセスします。 
+* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): 簡単に作成して、web とイントラネットの両方での OData サービスを使用する、ターンキーに近いソリューションを使用してデータ サービス
+* [Framework の同期](https://msdn.microsoft.com/library/jj839436.aspx): 任意のデータ型、任意のデータ ストア、任意の転送プロトコル、およびどのようなネットワーク トポロジへのオフライン アクセスを有効にする、Sync Framework を使用します。
+* [Reactive Extensions](https://msdn.microsoft.com/library/hh242985.aspx): Reactive Extensions (Rx) を使用してイベント ストリームのプログラミングを実行し、監視可能なシーケンスおよび LINQ スタイルのクエリ演算子を使用して非同期プログラミングを簡略化します。  JavaScript (RxJS) Reactive Extensions を使用して、監視可能なシーケンスを使用して、web での非同期コールバックに基づくし、イベント ドリブン プログラミングを簡略化します。
+* つまり、[ Visual Basic .NET や ](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md) Visual C# などの .NET Framework 言語を使用して、ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数、ユーザー定義集計、およびストリーミング テーブル値関数を記述できます。 
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): リレーショナル データを XML にエクスポートする SQLXML 4.0 を使用します。
 
-## <a name="data-collection-processing-and-visualization"></a>データの収集、処理、および視覚エフェクト
+## <a name="data-collection-processing-and-visualization"></a>データの収集、処理、および視覚化
 * [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [マスター データ サービス](../master-data-services/develop/master-data-services-developer-documentation.md)

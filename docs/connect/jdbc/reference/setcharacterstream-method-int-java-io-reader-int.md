@@ -1,13 +1,11 @@
 ---
-title: setCharacterStream (int、java.io.Reader, int) メソッド |Microsoft ドキュメント
+title: setCharacterStream (int, java.io.Reader) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setCharacterStream
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06d5f6721efb91f3e92a9ba778bb4b43d8b08da4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 06e959f6fa9144c62ef79d60c6264ac5445febd6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652220"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>setCharacterStream (int, java.io.Reader, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された文字数は、指定されたリーダー オブジェクトを指定されたパラメーターを設定します。  
+  指定されたパラメーターを、渡された文字数である渡された  オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,25 +40,25 @@ public final void setCharacterStream(int n,
 #### <a name="parameters"></a>パラメーター  
  *n*  
   
- **Int**パラメーター数を示すです。  
+ パラメーターの番号を示す **int** です。  
   
- *リーダー*  
+ *reader*  
   
  リーダー オブジェクト。  
   
- *長さ*  
+ *length*  
   
  文字数です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この setCharacterStream メソッドは、setCharacterStream、java.sql.PreparedStatement インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setCharacterStream メソッドによって指定されます。  
   
- ストリームの長さがで指定されているとは異なる場合、*長さ*パラメーター、JDBC ドライバーと例外をスロー、行が更新または挿入します。  
+ ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   
- ストリームの長さが、不明の場合、*長さ*ドライバーがその長さに関係なく、ストリームを受け入れることを示すために、パラメーターを-1 に設定することがあります。 Sqljdbc4.jar、ことをお勧め、JDBC 4.0 メソッドを使用する[setCharacterStream メソッド&#40;int, java.io.Reader&#41; ](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)アプリケーションが列の長さが不明なストリームを更新するときにします。  
+ ストリームの長さが不明である場合、*length* パラメーターを -1 に設定して、ドライバーが長さに関係なくストリームを受け入れるように指定できます。 sqljdbc4.jar を使用する場合、アプリケーションで長さが不明なストリームを使用して列を更新するときには、JDBC 4.0 メソッドの [updateCharacterStream メソッド &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md) を使用することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

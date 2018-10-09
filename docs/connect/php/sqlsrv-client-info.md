@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_client_info |Microsoft ドキュメント
+title: sqlsrv_client_info |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_client_info
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 145249dc452cd7aeabb9b9667c337a4e17e39637
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9feacf047b9c949bae25958a3030fce4661c1583
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309241"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710450"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,21 +44,21 @@ sqlsrv_client_info( resource $conn)
   
 **PHP for SQL Server バージョン 3.2 および 3.1 用**:  
   
-|Key|説明|  
+|Key|[説明]|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (SQL Server 用 ODBC Driver 11)|  
 |DriverODBCVer|ODBC version (xx.yy)|  
-|DriverVer|次の SQL Server DLL バージョン用 ODBC Driver 11:<br /><br />xx.yy.zzzz ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]バージョン 3.2 または 3.1)|  
-|ExtensionVer|次の php_sqlsrv.dll バージョン:<br /><br />3.2.xxxx.x (の[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]バージョン 3.2)<br /><br />3.1.xxxx.x (の[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]バージョン 3.1)|  
+|DriverVer|次の SQL Server DLL バージョン用 ODBC Driver 11:<br /><br />xx.yy.zzzz [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] バージョン 3.2 または 3.1|  
+|ExtensionVer|次の php_sqlsrv.dll バージョン:<br /><br />3.2.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] バージョン 3.2 用<br /><br />3.1.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] バージョン 3.1 用|  
   
 **PHP for SQL Server バージョン 3.0 および 2.0 用**:  
   
-|Key|説明|  
+|Key|[説明]|  
 |-------|---------------|  
-|DriverDllName|SQLNCLI10 です。DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]バージョン 2.0)|  
+|DriverDllName|SQLNCLI10.DLL [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] バージョン 2.0|  
 |DriverODBCVer|ODBC version (xx.yy)|  
-|DriverVer|次の SQL Server Native Client DLL バージョン:<br /><br />10.50.xxx ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]バージョン 2.0)|  
-|ExtensionVer|次の php_sqlsrv.dll バージョン:<br /><br />2.0.xxxx.x ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]バージョン 2.0)|  
+|DriverVer|次の SQL Server Native Client DLL バージョン:<br /><br />10.50.xxx [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] バージョン 2.0|  
+|ExtensionVer|次の php_sqlsrv.dll バージョン:<br /><br />2.0.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] バージョン 2.0|  
   
 ## <a name="example"></a>例  
 次の例では、コマンドラインからこの例を実行すると、クライアント情報がコンソールに書き込まれます。 この例では、SQL Server がローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  

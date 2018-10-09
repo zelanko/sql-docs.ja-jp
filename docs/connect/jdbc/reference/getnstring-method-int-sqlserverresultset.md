@@ -1,30 +1,27 @@
 ---
-title: getNString (int) メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getNString (int) メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43d09a994239079a91d2a696e857a72e96cfede6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a956d1411ec99340ec3df2caec803dba7b57536c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828520"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>getNString (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  現在の行に指定された列の値を取得、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)された文字列オブジェクトのオブジェクト。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、SQLXML オブジェクトとして取得されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,13 +41,13 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getNString メソッドは、getNString、java.sql.SQLServerResultSet インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getNString メソッドは、java.sql.SQLServerResultSet インターフェイスで getNString メソッドによって指定されます。  
   
- このメソッドは、の値を取得するために使用できます、 **nvarchar**、 **nchar**、 **nvarchar (max)**、 **ntext**、または**xml**これの現在の行に列[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。 このメソッドを使用して他のデータ型の値を取得しようとすると、例外がスローされます。  
+ 値を取得するこのメソッドを使用できます、 **nvarchar**、 **nchar**、 **nvarchar (max)**、 **ntext**、または**xml**これの現在の行に列[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。 このメソッドを使用して他のデータ型の値を取得しようとすると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
- [getNString メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   
+ [getString メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   

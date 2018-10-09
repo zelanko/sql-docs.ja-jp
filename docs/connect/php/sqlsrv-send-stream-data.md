@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_send_stream_data |Microsoft ドキュメント
+title: sqlsrv_send_stream_data |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_send_stream_data
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99be2cc8d56cde6ce960b5fc8d6caa2fab156a74
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c1ce0db099046fb243151a7977823ab0fcf458ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309491"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790610"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-パラメーター ストリームからデータをサーバーに送信します。 呼び出しごとに最大 8 キロバイト (8 K) のデータが送信される**sqlsrv_send_stream_data**です。  
+パラメーター ストリームからデータをサーバーに送信します。 最大 8 キロバイト (8K) のデータが、sqlsrv_send_stream_data** の呼び出しごとに送信されます。  
   
 > [!NOTE]  
 > 既定では、クエリを実行すると、すべてのストリーム データがサーバーに送信されます。 この既定の動作を変更しない場合は、ストリーム データをサーバーに送信するために **sqlsrv_send_stream_data** を使用する必要はありません。 既定の動作を変更する方法の詳細については、 [sqlsrv_query](../../connect/php/sqlsrv-query.md) または [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)のパラメーター セクションを参照してください。  
@@ -50,7 +47,7 @@ sqlsrv_send_stream_data( resource $stmt)
 ブール値: 送信するデータがまだある場合は、 **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="example"></a>例  
-次の例では、製品のレビューをストリームとして開き、サーバーに送信します。 実行時にすべてのストリーム データを送信する既定の動作は無効になります。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、製品のレビューをストリームとして開き、サーバーに送信します。 実行時にすべてのストリーム データを送信する既定の動作は無効になります。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

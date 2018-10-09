@@ -5,20 +5,17 @@ ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: 3ee34b40af4f72b32286067e5853c673f62ad240
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 82a8576365889d02381e3b18b622fd541b5b9235
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268770"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728700"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server のサポート マトリックス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +23,7 @@ ms.locfileid: "39268770"
   このページには、Microsoft SQL Server 用 PHP Driver のサポート表とサポート ライフサイクル ポリシーがあります。
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Microsoft PHP ドライバーのサポート ライフ サイクルの表とポリシー
- マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 PHP ドライバーのバージョンは 3.x、4.x および 5.x 5 年間のドライバーのリリース日からメイン ストリーム サポートがあります。 メインストリーム サポートについては、[マイクロソフト サポート ライフサイクルの Web サイト](https://support.microsoft.com/lifecycle)で定義されています。
+ マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 JDBC ドライバーのバージョン 3.0、4.x、6.x、7.x には、ドライバーのリリース日から 5 年間のメインストリーム サポートが含まれています。 メインストリーム サポートについては、[マイクロソフト サポート ライフサイクルの Web サイト](https://support.microsoft.com/lifecycle)で定義されています。
 
  延長サポートとカスタム サポートのオプションは、Microsoft PHP Driver では使用できません。
 

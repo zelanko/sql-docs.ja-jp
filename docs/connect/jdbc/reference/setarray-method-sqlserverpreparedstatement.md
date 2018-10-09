@@ -1,13 +1,11 @@
 ---
-title: setArray メソッド (SQLServerPreparedStatement) |Microsoft ドキュメント
+title: setArray メソッド (SQLServerPreparedStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setArray
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b7fb66d4-6a42-43d0-ba68-8514816917cb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64aab9d7796cfcf9ddf209b5473ac0d389d9d29f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1fd6a0b0b0e60543beb6a943d80d5cf0cf40c7b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811620"
 ---
 # <a name="setarray-method-sqlserverpreparedstatement"></a>setArray メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された配列オブジェクトを指定されたパラメーターの数を設定します。  
+  指定されたパラメーターの番号を、渡された  オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,9 +37,9 @@ public final void setArray(int i,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *私*  
+ *i*  
   
- **Int**パラメーター数を示すです。  
+ パラメーターの番号を示す **int** です。  
   
  *x*  
   
@@ -51,7 +48,7 @@ public final void setArray(int i,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この setArray メソッドは、java.sql.PreparedStatement インターフェイスの setArray メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

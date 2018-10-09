@@ -5,21 +5,18 @@ ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfbf0ef8a02695a2bc3a1870a2660cf2bff23b7d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 0d0b1b34105df8568e12be170b0ab9afa8fdad88
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716570"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>インストール、ドライバー ファイルの基本的なシステム要件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,7 +54,7 @@ ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 - [Microsoft ODBC Driver 11 for SQL Server on Windows のダウンロード](https://www.microsoft.com/download/details.aspx?id=36434)。 
 
 [!NOTE]
-ドライバー インストール 17.1.0.1 を持っているものをお勧め、それをアンインストールする手動でドライバー 17.2.0.1 をインストールする前に、またはの上
+ドライバー 17.1.0.1 または以下をインストールした方をお勧め、ドライバーの最新バージョンをインストールする前に手動でアンインストールすること
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とサイド バイ サイドでインストールできます。  
 

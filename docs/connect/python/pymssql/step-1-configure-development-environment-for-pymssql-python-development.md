@@ -1,61 +1,58 @@
-﻿---
-title: '手順 1: pymssql Python 開発環境の構成 |Microsoft ドキュメント'
+---
+title: '手順 1: pymssql Python 開発環境の構成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a4a573ce609bfb5364a1dabac784eb760915b8a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b60c7aa0f53be6d9c9a249c69ace6780a318e6f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787450"
 ---
-# <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>手順 1: pymssql Python 開発用の開発環境を構成します。
-SQL Server 用 Python ドライバーを使用してアプリケーションを開発するために、前提条件と開発環境を構成する必要があります。    
+# <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>ステップ 1: pymssql Python 開発用に開発環境を構成する
+SQL Server 用 Python ドライバーを使用してアプリケーションを開発するために、前提条件、開発環境を構成する必要があります。    
   
-Python SQL ドライバーが既定では SQL Server と Azure SQL データベースで有効になっている TDS プロトコルを使用することに注意してください。  追加の構成は必要ありません。  
+Python SQL ドライバーが SQL Server と Azure SQL Database での既定で有効になっている TDS プロトコルを使用することに注意してください。  追加の構成は必要ありません。  
   
 ## <a name="windows"></a>Windows  
   
-1. **Python ランタイムおよび pip パッケージ マネージャーをインストール**
-a. [python.org](https://www.python.org/downloads/) へ移動します。
-B. Windows インストーラー msi の適切なリンクをクリックします。   
-c. ダウンロードしたら msi を実行して Python ランタイムをインストールします。
+1. **Python ランタイムをインストールし、pip パッケージ マネージャー**  
+A. 移動して[python.org](https://www.python.org/downloads/)  
+B. 適切な Windows インストーラーの msi リンクをクリックします。   
+c. 1 回ダウンロードした Python ランタイムをインストールする msi を実行  
   
-2. [こちら](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql) から **Pymssql モジュールをダウンロード**
+2. **Pymssql モジュールをダウンロード**から[ここ](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
-    正しい whl ファイルを選択していることを確認してください。 例: 64 ビット コンピューターで Python 2.7 を使用している場合は、pymssql‑2.1.1‑cp27‑none‑win_amd64.whl を選択します。.whl ファイルをダウンロードしたら、の配置、C:/Python27 フォルダーに配置します。
+    正しい whl ファイルを選択することを確認します。  例: 64 ビット コンピューター上の Python 2.7 を使用している場合は選択: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl します。 .Whl ファイルが配置でダウンロードすると、c:/python27 フォルダー。  
       
 3. **Cmd.exe を開きます**  
   
 4. **Pymssql モジュールをインストールします。**     
-    たとえば、64 ビット コンピューターで Python 2.7 を使用しているとします。
+    たとえば、64 ビット コンピューター上の Python 2.7 を使用するいるとします。  
 ```  
 > cd c:\Python27  
 > pip install pymssql‑2.1.1‑cp27‑none‑win_amd64.whl  
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux  
+## <a name="ubuntu-linux"></a>Ubuntu Linux 17.10  
   
-1. **Python ランタイムをインストールおよびパッケージ マネージャーの pip** Ubuntu のほとんどのディストリビューションに Python があらかじめインストールされています。  コンピューターでは、python をインストールすることはありません場合、入手できますかダウンロードからソース陥らない[python.org](https://www.python.org/downloads/)ローカルでビルドし、パッケージ マネージャーを使用することができます。  
+1. **Python ランタイムをインストールし、pip パッケージ マネージャー** Python は Ubuntu のほとんどのディストリビューションにプレインストールされています。  ソース ターボール ダウンロードするかを取得することができます、コンピューターがインストールされている python を持たない場合[python.org](https://www.python.org/downloads/)とローカルでビルドまたはパッケージ マネージャーを使用することができます。  
 ```  
 > sudo apt-get install python   
 ```  
   
-2.  **開いているターミナル**  
+2.  **ターミナルを開く**  
   
-3.  **Pymssql モジュールとの依存関係をインストールします。**  
+3.  **Pymssql モジュールをインストールして、依存関係**  
 ```  
 > sudo apt-get --assume-yes update  
 > sudo apt-get --assume-yes install freetds-dev freetds-bin  
@@ -65,12 +62,12 @@ c. ダウンロードしたら msi を実行して Python ランタイムをイ�
   
 ## <a name="mac"></a>Mac  
   
-1. **Python ランタイムおよび pip パッケージ マネージャーをインストール**  
-A. [python.org](https://www.python.org/downloads/) へ移動します。  
-B. Mac インストーラー パッケージの適切なリンクをクリックします。   
-c. 1 回ダウンロードした実行 Python ランタイムをインストールするパッケージ  
+1. **Python ランタイムをインストールし、pip パッケージ マネージャー**  
+A. 移動して[python.org](https://www.python.org/downloads/)  
+B. 適切な Mac インストーラー パッケージ リンクをクリックします。   
+c. 1 回ダウンロードした Python ランタイムをインストールするパッケージを実行  
   
-2.  **開いているターミナル**  
+2.  **ターミナルを開く**  
   
 3. **Homebrew パッケージ マネージャーをインストールします。**  
 ```  

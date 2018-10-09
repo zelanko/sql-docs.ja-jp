@@ -1,13 +1,11 @@
 ---
-title: getURL (java.lang.String) メソッド |Microsoft ドキュメント
+title: getURL (java.lang.String) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getURL (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: eb709f6b-64e1-4d0c-a704-290891627dd7
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6a8608e32d36246c513745004cd573f4e959b24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f5609842b486ea93907ba939b17e6a4a25c87f05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838787"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617050"
 ---
 # <a name="geturl-method-javalangstring"></a>getURL (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  パラメーター名を指定、Java プログラミング言語で URL オブジェクトとして指定されたパラメーターの値を取得します。  
+  パラメーターに渡された名前を使用して、指定されたパラメーターの値を Java プログラミング言語の  オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,9 +36,9 @@ public java.net.URL getURL(java.lang.String s)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *S*  
+ *s*  
   
- A**文字列**パラメーター名を格納しています。  
+ パラメーターの名前を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
  URL のオブジェクト。  
@@ -49,11 +46,11 @@ public java.net.URL getURL(java.lang.String s)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getURL メソッドは、java.sql.CallableStatement インターフェイスの getURL メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setURL メソッドは、java.sql.CallableStatement インターフェイスの setURL メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
- [getURL メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
+ [getInt メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

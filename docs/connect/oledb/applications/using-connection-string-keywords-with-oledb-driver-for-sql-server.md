@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|applications
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.connecttoserver.options.registeredservers.f1
@@ -21,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: cbc464d86f77c609ecc53bc6ed02bb5fff60e3a8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c96a65c3935e91204d562933ba4f5f0de932f3e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026111"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838306"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server での接続文字列キーワードの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +79,7 @@ ms.locfileid: "43026111"
 |Keyword|初期化プロパティ|[説明]|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|"Address" のシノニム。|  
-|**Address**|SSPROP_INIT_NETWORKADDRESS|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを実行しているサーバーのネットワーク アドレス。 **Address** は、通常、サーバーのネットワーク名ですが、パイプ、IP アドレス、または TCP/IP ポートとソケット アドレスなど、他の名前を指定してもかまいません。<br /><br /> IP アドレスを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認します。<br /><br /> 値**アドレス**に渡される値よりも優先**Server** for SQL Server OLE DB ドライバーを使用する場合、接続文字列にします。 `Address=;` の場合は、**Server** キーワードで指定されているサーバーに接続されますが、`Address= ;, Address=.;`、`Address=localhost;`、および `Address=(local);` の場合はすべて、ローカル サーバーに接続されることにも注意してください。<br /><br /> **Address** キーワードの完全な構文は次のとおりです。<br /><br /> [*プロトコル ***:**]* アドレス *[* *、* * * ポート&#124;\pipe\pipename*]<br /><br /> *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。 プロトコルの詳細については、次を参照してください。 [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)します。<br /><br /> どちらの場合*プロトコル*も**ネットワーク**キーワードを指定すると、OLE DB Driver for SQL Server がで指定されたプロトコルの順序を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* は、指定したサーバー上の接続先のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。|   
+|**Address**|SSPROP_INIT_NETWORKADDRESS|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを実行しているサーバーのネットワーク アドレス。 **Address** は、通常、サーバーのネットワーク名ですが、パイプ、IP アドレス、または TCP/IP ポートとソケット アドレスなど、他の名前を指定してもかまいません。<br /><br /> IP アドレスを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認します。<br /><br /> 値**アドレス**に渡される値よりも優先**Server** for SQL Server OLE DB ドライバーを使用する場合、接続文字列にします。 `Address=;` の場合は、**Server** キーワードで指定されているサーバーに接続されますが、`Address= ;, Address=.;`、`Address=localhost;`、および `Address=(local);` の場合はすべて、ローカル サーバーに接続されることにも注意してください。<br /><br /> **Address** キーワードの完全な構文は次のとおりです。<br /><br /> [_プロトコル_**:**]_アドレス_[**、**_ポート&#124;\pipe\pipename_]<br /><br /> _protocol_ には、**tcp** (TCP/IP)、**lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。 プロトコルの詳細については、次を参照してください。 [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)します。<br /><br /> どちらの場合_プロトコル_も**ネットワーク**キーワードを指定すると、OLE DB Driver for SQL Server がで指定されたプロトコルの順序を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* は、指定したサーバー上の接続先のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。|   
 |**APP**|SSPROP_INIT_APPNAME|アプリケーションを識別する文字列。|  
 |**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、**ReadOnly** と **ReadWrite** です。<br /><br /> 既定値は**ReadWrite**します。 詳細について OLE DB Driver for SQL Server のサポート[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL Server で高可用性、ディザスター リカバリーのためサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)します。|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|アタッチできるデータベースのプライマリ ファイルの名前 (完全なパス名を含む)。 **AttachDBFileName** を使用するには、プロバイダー文字列の Database キーワードでデータベース名を指定する必要もあります。 データベースが以前にアタッチされていた場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] により再アタッチされることはありません (アタッチされたデータベースがその接続の既定のデータベースとして使用されます)。|  
@@ -102,7 +99,7 @@ ms.locfileid: "43026111"
 |**PacketSize**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 "yes" と "no" を値として受け取ります。 "no" の場合、データ ソース オブジェクトには機密の認証情報を保存できません。|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
-|**[サーバー]**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前。 ネットワーク上のサーバーの名前、IP アドレス、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーの別名を指定する必要があります。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> **アドレス**キーワードよりも優先、 **Server**キーワード。<br /><br /> 次のいずれかを指定することで、ローカル サーバー上の既定のインスタンスに接続できます。<br /><br /> **サーバー = です。**<br /><br /> **サーバー =;。**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\**  *instancename* **;**<br /><br /> LocalDB のサポートの詳細については、次を参照してください。 [OLE DB Driver for SQL Server で LocalDB のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)します。<br /><br /> 名前付きインスタンスを指定する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、追加 **\\ ***InstanceName *.<br /><br />サーバーが指定されていない場合、ローカル コンピューターの既定のインスタンスへの接続が確立されます。<br /> <br /> IP アドレスを指定する場合で TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager<br /> 。<br />の完全な構文、 **Server**キーワードのとおりです:<br /> <br /> **Server =**[* プロトコル***:**]*Server*[**、* * * ポート*]<br /><br /> *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。<br /><br /> 名前付きパイプを指定する例を次に示します。<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> この行では、名前付きパイプのプロトコル、ローカル コンピューター上の名前付きパイプ (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前 (`MSSQL$MYINST01`)、および名前付きパイプの既定の名前 (`sql/query`) を指定しています。<br /><br /> どちらの場合、*プロトコル*も**ネットワーク**キーワードを指定すると、OLE DB Driver for SQL Server がで指定されたプロトコルの順序を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* は、指定したサーバー上の接続先のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。<br /><br /> 渡される値の先頭のスペースは無視されます**Server** for SQL Server OLE DB ドライバーを使用する場合、接続文字列にします。|   
+|**[サーバー]**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前。 ネットワーク上のサーバーの名前、IP アドレス、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーの別名を指定する必要があります。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> **アドレス**キーワードよりも優先、 **Server**キーワード。<br /><br /> 次のいずれかを指定することで、ローカル サーバー上の既定のインスタンスに接続できます。<br /><br /> **サーバー = です。**<br /><br /> **サーバー =;。**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\**  *instancename* **;**<br /><br /> LocalDB のサポートの詳細については、次を参照してください。 [OLE DB Driver for SQL Server で LocalDB のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)します。<br /><br /> 名前付きインスタンスを指定する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、追加**\\** _InstanceName_します。<br /><br /> サーバーを指定しなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続されます。<br /><br /> IP アドレスを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認します。<br /><br /> ** キーワードの完全な構文は次のとおりです。<br /><br /> **サーバー =**[_プロトコル_**:**]*Server*[**、**_ポート_]<br /><br /> _protocol_ には、**tcp** (TCP/IP)、**lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。<br /><br /> 名前付きパイプを指定する例を次に示します。<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> この行では、名前付きパイプのプロトコル、ローカル コンピューター上の名前付きパイプ (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前 (`MSSQL$MYINST01`)、および名前付きパイプの既定の名前 (`sql/query`) を指定しています。<br /><br /> どちらの場合、*プロトコル*も**ネットワーク**キーワードを指定すると、OLE DB Driver for SQL Server がで指定されたプロトコルの順序を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* は、指定したサーバー上の接続先のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。<br /><br /> 渡される値の先頭のスペースは無視されます**Server** for SQL Server OLE DB ドライバーを使用する場合、接続文字列にします。|   
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server の既定のプロバイダーで生成された SPN を使用するとします。|  
 |**Timeout**|DBPROP_INIT_TIMEOUT|データ ソースの初期化が完了するのを待機する秒数。|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|ときに、OLE DB Driver for SQL Server ログインの検証に Windows 認証モードを使用するを"yes"のように指示します。 それ以外の場合は、OLE DB Driver for SQL Server に対して、ログイン検証で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザー名とパスワードを使用するように指示し、UID キーワードと PWD キーワードの指定が必要になります。|  

@@ -1,25 +1,22 @@
 ---
-title: setNClob メソッド (SQLServerCallableStatement) |Microsoft ドキュメント
+title: setNClob メソッド (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fd972acc-57e5-4971-9744-0e8fca5f05a6
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f96cfac153820263eedf2739eda2274ea898e99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 03bd1bab1fc2cc380c35dbc8e138b9a40ae7bdad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679770"
 ---
 # <a name="setnclob-method-sqlservercallablestatement"></a>setNClob メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,11 +25,11 @@ ms.locfileid: "32845467"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setNClob メソッド&#40;java.lang.String, java.sql.NClob&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|指定した NClob オブジェクトを指定されたパラメーターを設定します。|  
-|[setNClob メソッド&#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|指定された Reader オブジェクトを指定されたパラメーターを設定します。|  
-|[setNClob メソッド&#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|指定された文字数は、指定したリーダー オブジェクトを指定されたパラメーターを設定します。|  
+|[setNClob (java.lang.String, java.sql.NClob) メソッド](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|指定されたパラメーターを、指定された  オブジェクトに設定します。|  
+|[setNClob (java.lang.String, java.io.Reader) メソッド](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
+|[setNClob (java.lang.String, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である指定された  オブジェクトに設定します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

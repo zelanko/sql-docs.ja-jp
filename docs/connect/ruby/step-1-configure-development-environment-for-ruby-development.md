@@ -1,55 +1,52 @@
 ---
-title: '手順 1: Ruby 開発のための開発環境の構成 |Microsoft ドキュメント'
+title: 'ステップ 1: Ruby 開発用に開発環境を構成する'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb14bee9528ad23b212bb0a7ffbbba02e1c39678
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 1de9ce8b14dd164ac24ac1bb7098494dbc134bfa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309701"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778260"
 ---
-# <a name="step-1-configure-development-environment-for-ruby-development"></a>手順 1: Ruby 開発のための開発環境を構成します。
-SQL Server の Ruby ドライバーを使用してアプリケーションを開発するために、前提条件と開発環境を構成する必要があります。    
+# <a name="step-1-configure-development-environment-for-ruby-development"></a>ステップ 1: Ruby 開発用に開発環境を構成する
+SQL Server 用 Ruby ドライバーを使用してアプリケーションを開発するために、前提条件、開発環境を構成する必要があります。    
   
-Ruby ドライバーが SQL Server と Azure SQL データベースで既定で有効になっている TDS プロトコルを使用することに注意してください。  追加の構成は必要ありません。  
+Ruby Driver が SQL Server と Azure SQL Database での既定で有効になっている TDS プロトコルを使用することに注意してください。  追加の構成は必要ありません。  
   
   
 ## <a name="windows"></a>Windows  
   
-1.  **ルビのインストーラーをダウンロードします。**  
-コンピューターには、インストールしてください Ruby はありません。 場合、 新しい ruby ユーザー Ruby 2.2.X インストーラーを使用することをお勧めします。 これらは、安定した言語と互換性があり、更新済みであるパッケージ (gems) の広範な一覧を提供します。 移動、 [Ruby ダウンロード ページ](http://rubyinstaller.org/downloads/)し、適切な 2.1.x インストーラーをダウンロードします。 例に、64 ビット コンピューター上にいる場合は、Ruby 2.1.6 (x64) のインストーラーをダウンロードします。   
+1.  **Ruby のインストーラーをダウンロードします。**  
+場合は、コンピューターには、Ruby をインストールしてくださいはありません。 新しい ruby ユーザーは、Ruby 2.2.X インストーラーの使用をお勧めします。 これらは、安定した言語とは互換性があり、更新されたパッケージ (gem) の広範な一覧を提供します。 移動、 [Ruby のダウンロード ページ](http://rubyinstaller.org/downloads/)し、適切な 2.1.x がインストールされたインストーラーをダウンロードします。 例に、64 ビット コンピューター上にいる場合は、Ruby 2.1.6 (x 64) インストーラーをダウンロードします。   
   
-2.  **ルビをインストールします。**  
-インストーラーをダウンロードすると、次の操作を行います。  
-A. ファイルをダブルクリックして、インストーラーを起動します。  
-B. 使用言語を選択し、条項に同意します。  
-c.  インストール設定画面で、このインストールにより Ruby パスと関連付ける .rb と .rbw ファイルに両方のルビの追加の実行可能ファイルの横にあるチェック ボックスを選択します。  
+2.  **Ruby をインストールします。**  
+インストーラーがダウンロードされると、次の操作を行います。  
+A. インストーラーを起動するファイルをダブルクリックします。  
+B. 言語を選択し、条項に同意します。  
+c.  インストールの設定画面で、この Ruby のインストール パスと関連付ける .rb と .rbw ファイルに両方のルビの追加の実行可能ファイルの横にあるチェック ボックスを選択します。  
   
-3.  **ルビの開発キットをダウンロードします。**  
-RubyInstaller ページから開発キットをダウンロードします。  
+3.  **Ruby DevKit をダウンロードします。**  
+DevKit を RubyInstaller ページからダウンロードします。  
   
-4.  **ルビの開発キットをインストールします。**  
-ダウンロードが完了したら、次の操作を行います。  
+4.  **DevKit の Ruby のインストールします。**  
+ダウンロードが完了したら後、は、次の操作を行います。  
 A. ファイルをダブルクリックします。 ファイルを抽出する場所を求められます。  
-B. [...] ボタンをクリックし、"C:\DevKit"を選択します。 「新しいフォルダーの作成」をクリックして、最初このフォルダーを作成する必要があります。  
-c. "OK"し、「抽出」、ファイルを抽出する をクリックします。  
+B. [...] ボタンをクリックし、"C:\DevKit"を選択します。 "新しいフォルダーの作成 をクリックして、最初このフォルダーを作成する必要があります。  
+c. ファイルを抽出する"OK"と「展開」をクリックします。  
   
 5. **Cmd.exe を開きます**  
   
-6. **ルビの開発キットを初期化します。**  
+6. **DevKit の Ruby の初期化します。**  
 ```  
 > chdir C:\DevKit  
 > ruby dk.rb init  
@@ -61,11 +58,11 @@ c. "OK"し、「抽出」、ファイルを抽出する をクリックします
 > gem inst tiny_tds
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux  
+## <a name="ubuntu-linux"></a>Ubuntu Linux 17.10  
   
-1. **開いているターミナル**  
+1. **ターミナルを開く**  
   
-2. **Ruby バージョン マネージャー (rvm) および前提条件をインストールします。**  
+2. **Ruby のバージョン マネージャー (rvm) と前提条件をインストールします。**  
 ```  
 > sudo apt-get --assume-yes update  
 > command curl -sSL https://rvm.io/mpapis.asc | gpg --import -  
@@ -80,9 +77,9 @@ c. "OK"し、「抽出」、ファイルを抽出する をクリックします
 > rvm use 2.3.0 --default  
 > ruby -v  
 ```  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;バージョン 2.3.0 を実行している最後のコマンドの出力を示すことを確認します。  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最後のコマンドの出力がバージョン 2.3.0 を実行していることを示すことを確認します。  
   
-4.  **インストール、FreeTDS**  
+4.  **FreeTDS をインストールします**  
 ```  
 > sudo apt-get --assume-yes install freetds-dev freetds-bin  
 ```  
@@ -94,16 +91,16 @@ c. "OK"し、「抽出」、ファイルを抽出する をクリックします
   
 ## <a name="mac"></a>Mac  
   
-Mac OS X は既にプレインストールされて、Ruby、OS が依存関係を持つように注意してください。    
+Mac OS X に既にある Ruby を事前にインストール、OS は、依存関係を持つように注意してください。    
   
-1.  **開いているターミナル**  
+1.  **ターミナルを開く**  
   
 2. **Homebrew パッケージ マネージャーをインストールします。**  
 ```  
 > ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 ```  
   
-3.  **インストール、FreeTDS**  
+3.  **FreeTDS をインストールします**  
 ```  
 > brew install FreeTDS  
 ```  

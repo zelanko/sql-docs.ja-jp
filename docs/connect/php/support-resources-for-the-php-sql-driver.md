@@ -1,27 +1,24 @@
 ---
-title: Microsoft drivers for PHP for SQL Server リソースをサポート |Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server リソースをサポート
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - support
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 125d571c30a201aa3934ea8e4d1e69b2cc88b263
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cc1b92962a13772c1b8ab8abdb4b2b1a776dd9d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638120"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server リソースをサポート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,5 +55,5 @@ PHP に関するドキュメントを参照してください。 [ http://www.ph
 サポートに関する質問に関連する、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、連絡先[Microsoft サポート](https://support.microsoft.com/contactus/)で求めるまたは、 [Github プロジェクト ページ](https://github.com/Microsoft/msphpsql/issues)。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server 用 Microsoft Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft SQL Server 用 Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md)
   

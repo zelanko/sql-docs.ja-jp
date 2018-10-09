@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc4e63a8900368c021b2e1a0638523243eae271a
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 103dcc54b470be5db744dc6b5bf7bed6660de787
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746910"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>SQLServerConnectionPoolDataSource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -77,7 +74,7 @@ ms.locfileid: "42784609"
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) を示す **int** 値が設定されます。|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) 接続の試行中に DataSource オブジェクトが待機する秒数が設定されます。|  
 |[setLogWriter](../../../connect/jdbc/reference/setlogwriter-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) すべてのログ メッセージとトレース メッセージで使用される文字出力ストリームが設定されます。|  
-|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|(から継承された[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) の値を設定、 **multiSubnetFailover**接続プロパティです。|  
+|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) **multiSubnetFailover** 接続プロパティの値が返されます。|  
 |[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続に使用されるパスワードが設定されます。|  
 |[setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との通信に使用されるポート番号が設定されます。|  
 |[setSelectMethod](../../../connect/jdbc/reference/setselectmethod-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) DataSource オブジェクトを使用して作成されるすべての結果セットで使用される、既定のカーソルの種類が設定されます。|  
@@ -86,7 +83,7 @@ ms.locfileid: "42784609"
 |[setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) データ ソースへの接続に使用される URL が設定されます。|  
 |[setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) データ ソースへの接続に使用されるユーザー名が設定されます。|  
 |[setWorkstationID](../../../connect/jdbc/reference/setworkstationid-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) データ ソースへの接続に使用されるクライアント コンピューターの名前が設定されます。|  
-|[setXopenStates](../../../connect/jdbc/reference/setxopenstates-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) XOPEN 互換の状態への SQL 状態の変換が有効になっているかどうかを示す **boolean** 値が設定されます。|  
+|[setXopenStates](../../../connect/jdbc/reference/setxopenstates-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) XOPEN 互換の状態への SQL 状態の変換が有効になっているかどうかを示す **Boolean** 値が設定されます。|  
 |[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)|指定されたインターフェイスを実装するオブジェクトを返します。このメソッドから返されたオブジェクトを使用することで、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドにアクセスできます。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  

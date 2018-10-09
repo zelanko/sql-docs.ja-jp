@@ -1,13 +1,11 @@
 ---
-title: executeBatch メソッド (SQLServerStatement) |Microsoft ドキュメント
+title: executeBatch メソッド (SQLServerStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.executeBatch
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb25a65508e2249a71e67e4db3f3e762476f33df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cbe50ae21da22b7b05d8d52d6de0e6305a8917ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643982"
 ---
 # <a name="executebatch-method-sqlserverstatement"></a>executeBatch メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +36,15 @@ public int[] executeBatch()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 配列**int**を含む更新プログラムをカウントします。  
+ 更新数を含む int 配列です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>解説  
- この executeBatch メソッドは、java.sql.Statement インターフェイスの executeBatch メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドで規定されています。  
   
  コマンドをデータベースに送信した後、このメソッドはバッチ内のすべてのコマンドをクリアします。  
   

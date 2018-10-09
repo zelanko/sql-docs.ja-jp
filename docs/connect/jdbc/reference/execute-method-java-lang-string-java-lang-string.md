@@ -1,13 +1,11 @@
 ---
-title: execute (java.lang.String, java.lang.String) メソッド |Microsoft ドキュメント
+title: updateString (java.lang.String, java.lang.String) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.execute (java.lang.String.java.lang.String[])
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4f566b1832ed88e933533f47b0b532fdc45bee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 91a8946980bc4b3ec2052a8deec97cf32c119fb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713990"
 ---
 # <a name="execute-method-javalangstring-javalangstring"></a>execute (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された SQL ステートメントを実行、複数の結果、および信号を返す可能性のある[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]渡された配列に示される自動生成キーを検索可能にする必要があることです。  
+  複数の結果を返す可能性のある渡された SQL ステートメントを実行し、渡された配列に示される自動生成キーを検索可能にするように、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,23 +39,23 @@ public final boolean execute(java.lang.String sql,
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを含むです。  
+ A**文字列**SQL ステートメントを格納しています。  
   
  *columnNames*  
   
  検索可能にする自動生成キーの列名を示す文字列の配列です。  
   
 ## <a name="return-value"></a>戻り値  
- **true**最初の結果が結果セットである場合。 それ以外の場合は、 **false**です。  
+ 最初の結果が結果セットの場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [メソッドを実行する&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
+ [execute メソッド&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

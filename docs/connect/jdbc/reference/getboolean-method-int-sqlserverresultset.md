@@ -1,13 +1,11 @@
 ---
-title: getBoolean (int) メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getBoolean (int) メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getBoolean (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 50fcc0c3-36a1-47b2-b18c-7aa2ac9b27d3
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a04b7fe51cdf2223c9799929d74c759499f0cbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5b51437d4e5ea8b7177a69c2b8d848f0fbfad61a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598070"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>getBoolean (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列インデックスの値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**ブール**Java プログラミング言語でします。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **boolean** として取得されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,10 +46,10 @@ public boolean getBoolean(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getBoolean メソッドは、java.sql.ResultSet インターフェイスの getBoolean メソッドによって指定されます。  
   
- このメソッドは、数値データ型および文字データ型のみでサポートされます。 1、「1」の値に変換と"**true**"に**true**、および値「0」で 0、および"**false**"に**false**です。 他の値については、動作が定義されていません。  
+ このメソッドは、数値データ型および文字データ型のみでサポートされます。 1、「1」の値に変換し、"**true**"に**true**と値「0」, 0, と"**false**"に**false**。 他の値については、動作が定義されていません。  
   
 ## <a name="see-also"></a>参照  
  [getBoolean メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   

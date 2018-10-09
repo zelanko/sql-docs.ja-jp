@@ -1,30 +1,27 @@
 ---
-title: リーダー オブジェクトの int setNCharacterStream メソッド |Microsoft ドキュメント
+title: setNCharacterStream メソッド リーダー オブジェクトの int に |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 875fc460dfb3d3c70978bd7897762b309e932d3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cc209770285226beb45342223c1e46ff3a2fec3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771320"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream (int, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された Reader オブジェクトを指定されたパラメーターを設定します。  
+  指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,22 +34,22 @@ public final void setNCharacterStream(int parameterIndex,
 #### <a name="parameters"></a>パラメーター  
  *parameterIndex*  
   
- **Int**パラメーター インデックスを示すです。  
+ パラメーターのインデックスを示す **int** です。  
   
  *value*  
   
- パラメーターの値を含むリーダー オブジェクト。  
+ パラメーター値を含む  オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この setNCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setNCharacterStream メソッドによって指定されます。  
   
  このメソッドを使用する必要があります**NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**データ型。  
   
 ## <a name="see-also"></a>参照  
- [setNCharacterStream メソッド&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
+ [setCharacterStream &#40;SQLServerPreparedStatement&#41; メソッド](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

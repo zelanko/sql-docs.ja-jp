@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d496016fc323bd0fc6616a019c9c3a4668b384d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 4e9e25a45940304b977623b0f009ed134b56caed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785490"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672330"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -77,7 +74,7 @@ ms.locfileid: "42785490"
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) を示す **int** 値が設定されます。|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) 接続の試行中に DataSource オブジェクトが待機する秒数が設定されます。|  
 |[setLogWriter](../../../connect/jdbc/reference/setlogwriter-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) すべてのログ メッセージとトレース メッセージで使用される文字出力ストリームが設定されます。|  
-|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|(から継承された[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) の値を設定、 **multiSubnetFailover**接続プロパティです。|  
+|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) **multiSubnetFailover** 接続プロパティの値が返されます。|  
 |[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続に使用されるパスワードが設定されます。|  
 |[setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との通信に使用されるポート番号が設定されます。|  
 |[setSelectMethod](../../../connect/jdbc/reference/setselectmethod-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) DataSource オブジェクトを使用して作成されるすべての結果セットで使用される、既定のカーソルの種類が設定されます。|  

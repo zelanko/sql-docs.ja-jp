@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42783905"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727490"
 ---
 # <a name="connection-options"></a>接続オプション
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "42783905"
 |ConnectionPooling|接続プールを有効にするには、1 または **true** 。<br /><br />接続プールを無効にするには、0 または **false** 。|接続を接続プールから割り当てる (1 または **true**) か、割り当てない (0 または **false**) かを指定します。<sup>1</sup>|**true** (1)|  
 |ConnectRetryCount|0 ~ 255 (両端を含む) の整数|を行う前に切断された接続を再確立を試みるの最大数。 既定では、発生した場合に、接続を再確立するため 1 回の試行が行われます。 値の 0 の場合は、再接続は試行されません。|1|  
 |ConnectRetryInterval|1 ~ 60 (包括) の整数|時間 (秒単位) の間には、接続が再確立を試行します。 アプリケーションでは、接続が破損を検出するとすぐに再接続を試み、再試行する前に ConnectRetryInterval 秒待機します。 このキーワードには、ConnectRetryCount が 0 に等しい場合は無視されます。|1|  
-|[データベース]|String|確立中の接続に使用されているデータベースの名前を指定します<sup>2</sup>。|使用されているログインの既定のデータベース。|  
+|データベース|String|確立中の接続に使用されているデータベースの名前を指定します<sup>2</sup>。|使用されているログインの既定のデータベース。|  
 |Driver|String|SQL Server と通信するために使用する Microsoft ODBC ドライバーを指定します。<br /><br />有効な値は次のとおりです。<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows のみ)。|Driver キーワードが指定されていないときに Microsoft Drivers for PHP for SQL Server しようとすると、システムでサポートされている Microsoft ODBC ドライバーを検索以降、最新の ODBC ではこれにします。|  
 |Encrypt|暗号化を有効にするには、1 または **true** 。<br /><br />暗号化を無効にするには、0 または **false** 。|SQL Server との通信を暗号化する (1 または **true**) か、暗号化しない (0 または **false**) かを指定します<sup>3</sup>。|**false** (0)|  
 |Failover_Partner|String|プライマリ サーバーが利用できないときに使用する、データベースのミラーのサーバーおよびインスタンス (有効かつ構成されている場合) を指定します。<br /><br />Failover_Partner を MultiSubnetFailover とともに使用する場合には、制限があります。 詳細については、次を参照してください。[高可用性、ディザスター リカバリーのサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)します。|値は設定されません。|  

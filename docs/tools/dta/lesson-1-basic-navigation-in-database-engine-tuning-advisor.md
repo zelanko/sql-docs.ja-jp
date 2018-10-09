@@ -4,27 +4,21 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7387db4f53c2872aa7d8f0592cb43efe4e35116
-ms.sourcegitcommit: 95093f8b4f3d02f8d55d415f03a241102a641cb3
+ms.openlocfilehash: 8ce412af15a39d00b488a5646f83c5c8e2a08bef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39654267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804340"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>レッスン 1: データベース エンジン チューニング アドバイザーでの基本操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +28,12 @@ ms.locfileid: "39654267"
 
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
-- [AdventureWorks2016 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)をダウンロードする。
+- [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)をダウンロードする。
 
 
-SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)に関するページを参照してください。
+SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)に関するページをご覧ください。
 
   >[!NOTE]
   > このチュートリアルは、SQL Server Management Studio と基本的なデータベース管理タスクの使用に慣れてユーザーのものでは。 

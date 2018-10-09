@@ -5,20 +5,17 @@ ms.custom: tools|sos
 ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
-ms.suite: sql
 ms.prod_service: sql-tools
-ms.component: sqlpackage
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 7d05ec161b89e548cf529bc82c6d714a1960fb0f
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080153"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754336"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage のリリース ノート
 
@@ -29,7 +26,7 @@ ms.locfileid: "37080153"
 リリース日: 2018 年 6 月 22 日  
 ビルド: 14.0.4079.2  
 
-リリースには、次の修正が含まれています。
+このリリースでは、次の問題点を修正しました。
 
 - SqlClient の例外メッセージを含む、接続エラーのエラー メッセージの改善。
 - データベース操作の並列処理の次数を指定する MaxParallelism コマンド ライン パラメーターに追加します。
@@ -42,7 +39,7 @@ ms.locfileid: "37080153"
 リリース日: 2018 年 1 月 25 日  
 ビルド: 14.0.3917.1
 
-リリースには、次の修正が含まれています。
+このリリースでは、次の問題点を修正しました。
 
 - オンプレミス インスタンスに、Azure SQL Database .bacpac をインポートするときに、'SQL Server のこのバージョンでは、パスワードを指定せず、データベース マスター _ キーはサポートされていません' に起因するエラーを修正しました。
 - データベース カタログ照合順序のサポート。
@@ -55,7 +52,7 @@ ms.locfileid: "37080153"
 リリース日: 2017 年 12 月 12 日  
 ビルド: 14.0.3881.1
 
-リリースには、次の修正が含まれています。
+このリリースでは、次の問題点を修正しました。
 
 - 理解しないデータベースの互換性レベルが発生した場合はブロックしません。 代わりに、最新の Azure SQL Database またはオンプレミス プラットフォームが想定されます。
 - SQL2017 + と Azure SQL Database でテンポラル リテンション期間ポリシーのサポートが追加されました。

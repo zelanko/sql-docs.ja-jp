@@ -1,13 +1,11 @@
 ---
-title: storesUpperCaseIdentifiers メソッド |Microsoft ドキュメント
+title: storesUpperCaseIdentifiers メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.storesUpperCaseIdentifiers
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16a32c65682c651c5b8fd6469501666afaf0f2bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 87093982fc165a6e1a2ad60fb83e554d7e35c5dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731930"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesUpperCaseIdentifiers メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +36,13 @@ public boolean storesUpperCaseIdentifiers()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**識別子が大文字で格納されている場合。 それ以外の場合は、 **false**です。  
+ 識別子を大文字で格納する場合は  です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この storesUpperCaseIdentifiers メソッドは、java.sql.DatabaseMetaData インターフェイスの storesUpperCaseIdentifiers メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この storesUpperCaseIdentifiers メソッドは、java.sql.DatabaseMetaData インターフェイスで storesUpperCaseIdentifiers メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

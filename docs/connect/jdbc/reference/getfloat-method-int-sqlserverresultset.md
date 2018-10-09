@@ -1,13 +1,11 @@
 ---
-title: getFloat (int) メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getFloat (int) メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getFloat (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08ab7c1d0431c6bb3af9ade14041982d1ada9fad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f50325b245a821b114e7f8d9ca3898f195eae7cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810660"
 ---
 # <a name="getfloat-method-int-sqlserverresultset"></a>getFloat (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列インデックスの値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、 **float** Java プログラミング言語でします。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **float** として取得されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,10 +46,10 @@ public float getFloat(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getFloat メソッドは、java.sql.ResultSet インターフェイスの getFloat メソッドによって指定されます。  
   
- このメソッドは、Java でのすべての数値ベースの型を返します**float**忠実性。  
+ このメソッドは、数値ベースのすべての型を、Java のの忠実性を使用して返します。  
   
 ## <a name="see-also"></a>参照  
  [getFloat メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   

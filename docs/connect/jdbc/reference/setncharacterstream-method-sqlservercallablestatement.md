@@ -1,37 +1,34 @@
 ---
-title: リーダー オブジェクトを setNCharacterStream メソッド |Microsoft ドキュメント
+title: setNCharacterStream メソッド リーダー オブジェクトを |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 77905630-0135-46ad-a419-215e648996e2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d0d0277ca877e350b4a35f0e579c713a1fe1e27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c70efc5220c5d09098d60eab19ae736fa2d87c44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617080"
 ---
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>setNCharacterStream メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された Reader オブジェクトを指定されたパラメーターを設定します。  
+  指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setNCharacterStream メソッド&#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|指定された Reader オブジェクトを指定されたパラメーターを設定します。|  
-|[setNCharacterStream メソッド&#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|指定された文字数は、指定したリーダー オブジェクトを指定されたパラメーターを設定します。|  
+|[setNCharacterStream (java.lang.String, java.io.Reader) メソッド](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
+|[setNCharacterStream (java.lang.String, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である指定された  オブジェクトに設定します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

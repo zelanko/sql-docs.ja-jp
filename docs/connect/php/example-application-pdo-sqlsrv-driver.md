@@ -1,58 +1,55 @@
 ---
-title: サンプル アプリケーション (PDO_SQLSRV ドライバー) |Microsoft ドキュメント
+title: サンプル アプリケーション (PDO_SQLSRV ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a75fd91a8ac3be76198e545a6d73237e976161b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: f0c3f2bd194d211ef3c48aa0fe9e37b09f44bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307631"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651980"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>サンプル アプリケーション (PDO_SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-AdventureWorks Product Reviews サンプル アプリケーションの PDO_SQLSRV ドライバーを使用する Web アプリケーション、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]です。 このアプリケーションを使用すると、キーワードを入力して製品を検索し、選択した製品のレビューを読み、選択した製品のレビューを書き、選択した製品の画像をアップロードできます。  
+AdventureWorks Product Reviews サンプル アプリケーションは、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーを使用する Web アプリケーションです。 このアプリケーションを使用すると、キーワードを入力して製品を検索し、選択した製品のレビューを読み、選択した製品のレビューを書き、選択した製品の画像をアップロードできます。  
   
 ### <a name="running-the-example-application"></a>サンプル アプリケーションの実行  
   
 1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]をインストールします。 詳細については、次を参照してください[Microsoft Drivers for PHP for SQL Server の概要。](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  後で示すコードを、2 つのファイル adventureworks_demo.php と photo.php にコピーします。  
 3.  adventureworks_demo.php および photo.php ファイルを Web サーバーのルート ディレクトリに置きます。  
-4.  アプリケーションを起動して実行 http://localhost/adventureworks_demo.php お使いのブラウザーからです。  
+4.  アプリケーションを起動して実行 http://localhost/adventureworks_demo.phpお使いのブラウザーから。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 AdventureWorks Product Reviews サンプル アプリケーションを実行するには、コンピューターが次のようになっている必要があります。  
   
--   システムが [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の要件を満たしていること。 詳細については、次を参照してください。 [Microsoft Drivers for PHP for SQL Server のシステム要件](../../connect/php/system-requirements-for-the-php-sql-driver.md)です。  
+-   システムが [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の要件を満たしていること。 詳細については、次を参照してください。 [Microsoft Drivers for PHP for SQL Server のシステム要件](../../connect/php/system-requirements-for-the-php-sql-driver.md)します。  
  -   adventureworks_demo.php および photo.php ファイルが Web サーバーのルート ディレクトリにあること。 ファイルにはこのドキュメントの後半に示すコードを含める必要があります。  
--   SQL Server 2005 または SQL Server 2008 で、 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがアタッチされたはローカル コンピューターにインストールします。  
+-   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがアタッチされた SQL Server 2005 または SQL Server 2008 がローカル コンピューターにインストールされていること。  
 -   Web ブラウザーがインストールされていること。  
   
 ## <a name="demonstrates"></a>使用例  
 AdventureWorks Product Reviews サンプル アプリケーションでは、以下のデモンストレーションを行います。  
   
 -   Windows 認証を使用して SQL Server への接続を開く方法。  
--   準備してパラメーター化クエリを実行する方法です。  
+-   準備してパラメーター化クエリを実行する方法。  
 -   データを取得する方法。  
 -   エラーをチェックする方法。  
   
 ## <a name="example"></a>例  
 AdventureWorks Product Reviews サンプル アプリケーションは、ユーザーが入力した文字列が名前に含まれる製品の情報をデータベースから返します。 返された製品の一覧から、ユーザーはレビューを表示し、画像を表示し、画像をアップロードし、選択した製品のレビューを書くことができます。  
   
-Adventureworks_demo_pdo.php をという名前のファイルに次のコードを配置します。  
+adventureworks_demo.php という名前のファイルに次のコードを追加します。  
   
 ```  
 <!--=============  
@@ -458,7 +455,7 @@ function PopulateProductsTable( $values )
 ## <a name="example"></a>例  
 photo.php スクリプトは、指定された **ProductID**の製品の写真を返します。 このスクリプトは、adventureworks_demo.php スクリプトから呼び出されます。  
   
-Photo_pdo.php をという名前のファイルに次のコードを配置します。  
+photo.php という名前のファイルに次のコードを追加します。  
   
 ```  
 <?php  
