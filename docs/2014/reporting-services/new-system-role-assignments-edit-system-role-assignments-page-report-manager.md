@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26a2ca4499787fce12508e55bb5197b6f0c6f527
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331272"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053992"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>[新しいシステム ロールの割り当て]: [システム ロールの割り当てを編集] ページ (レポート マネージャー)
   レポート サーバーのセキュリティを定義する場合には、[システム ロールの新規割り当て] ページまたは [システム ロールの割り当てを編集] ページを使用します。 すべてのセキュリティはロールの割り当てによって定義され、この割り当てを通じて、実行できるタスクに特定のユーザーまたはグループがマップされます。 タスク リストは、ロールの割り当ての作成時に選択するロールの定義を示します。  

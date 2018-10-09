@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7299359d6535a9a3378dc898fa61da62a969d438
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 433354cb123e8240bac47dcbb2e7dce82c4a0d64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116692"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
   スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、**[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。  
@@ -96,7 +93,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  スクリプト コンポーネントで 2 つの同期出力のうちのいずれかに行を送信する例については、「[スクリプト コンポーネントによる同期変換の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」を参照してください。  
   
 ### <a name="object-names-in-generated-script"></a>生成されたスクリプトのオブジェクト名  
- スクリプト コンポーネントは、入力と出力の名前を解析し、入力と出力内の列の名前を解析します。次に、これらの名前に基づいて、BufferWrapper プロジェクト アイテムにクラスとプロパティを生成します。 見つかった名前に、Unicode カテゴリの `UppercaseLetter`、`LowercaseLetter`、`TitlecaseLetter`、`ModifierLetter`、`OtherLetter`、または `DecimalDigitLetter` に属していない文字が含まれている場合、無効な文字は生成された名前から削除されます。 たとえば、スペースは削除されるため、**FirstName** と [**First Name**] という名前の 2 つの入力列は、どちらも列名 **FirstName** を持つと解釈され、予期しない結果が生じます。 このような状況を防ぐには、スクリプト コンポーネントで使用される入力と出力の名前、および入力と出力の列の名前には、このセクションで一覧表示されている Unicode カテゴリに属する文字のみが含まれるようにする必要があります。  
+ スクリプト コンポーネントは、入力と出力の名前を解析し、入力と出力内の列の名前を解析します。次に、これらの名前に基づいて、BufferWrapper プロジェクト アイテムにクラスとプロパティを生成します。 見つかった名前に、Unicode カテゴリの `UppercaseLetter`、`LowercaseLetter`、`TitlecaseLetter`、`ModifierLetter`、`OtherLetter`、または `DecimalDigitLetter` に属していない文字が含まれている場合、無効な文字は生成された名前から削除されます。 たとえば、スペースは削除されるため、**FirstName** と **[First Name]** という名前の 2 つの入力列は、どちらも列名 **FirstName** を持つと解釈され、予期しない結果が生じます。 このような状況を防ぐには、スクリプト コンポーネントで使用される入力と出力の名前、および入力と出力の列の名前には、このセクションで一覧表示されている Unicode カテゴリに属する文字のみが含まれるようにする必要があります。  
   
 ### <a name="script-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [スクリプト] ページ  
  **[スクリプト変換エディター]** の **[スクリプト]** ページでは、スクリプト タスクに一意の名前および説明を割り当てます。 また、次のプロパティの値を割り当てることができます。  
@@ -129,9 +126,9 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- 詳細については、[スクリプト Component]((connecting-to-data-sources-in-the-script-component.md) 内のデータ ソースへの接続を参照してください。。  
+ 詳細については、[スクリプト Component]((connecting-to-data-sources-in-the-script-component.md) 内のデータ ソースへの接続を参照してください。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [コーディングとスクリプト コンポーネントのデバッグ]((coding-and-debugging-the-script-component.md)  

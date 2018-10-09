@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3e1f202305cf540043a4af51af5f0618c80916f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076022"
 ---
 # <a name="understanding-the-script-component-object-model"></a>スクリプト コンポーネントのオブジェクト モデルについて
   [コーディングとスクリプト コンポーネントのデバッグ] で説明したように (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md、スクリプト コンポーネント プロジェクトには、3 つのプロジェクト項目。  
@@ -129,7 +126,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>プロジェクト アイテム ComponentWrapper が提供する機能  
  プロジェクト アイテム ComponentWrapper には、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> から派生する `UserComponent` という名前のクラスがあります。 また、カスタム コードを記述する `ScriptMain` クラスは、`UserComponent` から派生します。 `UserComponent` クラスには次のメソッドが含まれています。  
   
--   `ProcessInput` メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に `PreExecute` メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 `ProcessInput` 処理を** \<inputbuffer > _ProcessInput**メソッド。 次に `ProcessInput` メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 `MarkOutputsAsFinished` メソッドは、次に最後の出力バッファーの `SetEndOfRowset` を呼び出します。  
+-   `ProcessInput` メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に `PreExecute` メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 `ProcessInput` 処理を **\<inputbuffer > _ProcessInput**メソッド。 次に `ProcessInput` メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 `MarkOutputsAsFinished` メソッドは、次に最後の出力バッファーの `SetEndOfRowset` を呼び出します。  
   
 -   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行の間をループし、**\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
@@ -206,7 +203,7 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト コンポーネントで、スクリプト コンポーネント エディターの構成]((configuring-the-script-component-in-the-script-component-editor.md)   

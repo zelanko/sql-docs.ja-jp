@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], breaking changes
 - behavior changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-caps.latest.revision: 39
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f136a7016e1b17248a3b547da0561cc3d4b30c68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198692"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>フルテキスト検索の動作の変更
   このトピックでは、フルテキスト検索の動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の機能や操作方法が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のバージョンと異なっています。  
