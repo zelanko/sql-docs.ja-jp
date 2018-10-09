@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 782b254eca5a0fb60ab354e35b40eae5d5fd2640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810810"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851977"
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて」を参照してください。
 
@@ -59,7 +59,16 @@ ms.locfileid: "47810810"
 
 > [!NOTE]  
 > JDBC 分散トランザクション コンポーネントは、JDBC Driver のインストール先の xa ディレクトリに含まれます。 これらのコンポーネントには、xa_install.sql および sqljdbc_xa.dll のファイルが含まれます。  
-  
+
+> [!NOTE]  
+> SQL Server 2019 パブリック プレビュー CTP 2.0 以降では、分散トランザクション コンポーネントは、有効またはシステムで無効になっていることができる SQL Server エンジンに含まれる JDBC XA ストアド プロシージャを使用します。 JDBC ドライバーを使用して XA 分散トランザクションを実行する必要なコンポーネントを有効にするには、次のストアド プロシージャを実行します。
+>
+> EXEC sp_sqljdbc_xa_install
+>
+> 以前にインストールされたコンポーネントを無効にするには、次のストアド プロシージャを実行します。 
+>
+> EXEC sp_sqljdbc_xa_uninstall
+
 ### <a name="running-the-ms-dtc-service"></a>MS DTC サービスを実行する
 
 MS DTC サービスは、Service Manager で **[自動]** とマークされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始時に実行されている必要があります。 XA トランザクションで使用するために MS DTC を有効にするには、次の手順を実行する必要があります。  

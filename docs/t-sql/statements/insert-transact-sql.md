@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1ba74df9a4218424e7ed25a40bb6fc8e17b3d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb27c4ca77382887acdbfec788df40e5cbfd76c7
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816962"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798620"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -362,7 +362,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
   
 -   ユーザー定義型で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型からの暗黙的または明示的な変換がサポートされている場合は、そのシステム データ型の値を指定します。 次の例は、文字列からの明示的な変換によって、ユーザー定義型 `Point` の列に値を挿入する方法を示しています。  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( CONVERT(Point, '12.3:46.2') );  
     ```  
@@ -371,7 +371,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
   
 -   そのユーザー定義型の値を返すユーザー定義関数を呼び出します。 次の例では、ユーザー定義関数 `CreateNewPoint()` を使用してユーザー定義型 `Point` の新しい値を作成し、この値を `Cities` テーブルに挿入します。  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( dbo.CreateNewPoint(x, y) );  
     ```  
@@ -431,7 +431,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 1 行のデータを挿入する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルに 1 行を挿入します。 このテーブルの列は、`UnitMeasureCode`、`Name`、および `ModifiedDate` です。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません *。*  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
@@ -439,7 +439,7 @@ VALUES (N'FT', N'Feet', '20080414');
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. 複数行のデータを挿入する  
  次の例では、単一の INSERT ステートメントで[テーブル値コンストラクター](../../t-sql/queries/table-value-constructor-transact-sql.md)を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルに 3 行を挿入します。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません。  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
     , (N'Y3', N'Cubic Yards', '20080923');  
@@ -448,7 +448,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. テーブルの列と順序が異なるデータを挿入する  
  次の例では、列リストを使用して、各列に挿入する値を明示的に指定します。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルの列の順序は、`UnitMeasureCode`、`Name`、`ModifiedDate` です。ただし、*column_list* では列がその順序で並んでいません。  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
     ModifiedDate)  
 VALUES (N'Square Yards', N'Y2', GETDATE());  
@@ -460,7 +460,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 列が既定値に設定されているテーブルにデータを挿入する  
  次の例では、値が自動生成される列や既定値が設定される列を使用して、テーブルに行を挿入します。 `Column_1` は、文字列と `column_2` に挿入される値を連結して値を自動的に生成する計算列です。 `Column_2` は、既定の制約で定義されています。 この列の値が指定されていない場合、既定値が使用されます。 `Column_3` は **rowversion** データ型で定義されており、一意の増分する 2 進数を自動的に生成します。 `Column_4` は、値の自動生成を行いません。 この列の値が指定されていない場合、NULL が挿入されます。 INSERT ステートメントでは、すべての列ではなく一部の列の値を含む行を挿入します。 最後の INSERT ステートメントでは、どの列も指定されていないため、DEFAULT VALUES 句を使用して既定値のみが挿入されます。  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 AS 'Computed column ' + column_2,   
@@ -486,7 +486,7 @@ GO
 #### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>E. ID 列を持つテーブルにデータを挿入する  
  次の例では、ID 列にデータを挿入する方法をいくつか示します。 最初の 2 つの INSERT ステートメントで、新規の行に対して ID 値が生成されます。 3 番目の INSERT ステートメントは、SET IDENTITY_INSERT ステートメントで設定された列の IDENTITY プロパティをオーバーライドし、ID 列に値を明示的に挿入します。  
   
-```  
+```sql
 CREATE TABLE dbo.T1 ( column_1 int IDENTITY, column_2 VARCHAR(30));  
 GO  
 INSERT T1 VALUES ('Row #1');  
@@ -505,7 +505,7 @@ GO
 #### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>F. NEWID() を使用して uniqueidentifier 列にデータを挿入する  
  次の例では、[NEWID](../../t-sql/functions/newid-transact-sql.md)() 関数を使用して、`column_2` の GUID を取得します。 ID 列とは異なり、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) 型の列に対して自動的に値が生成されません。2 番目の `INSERT` ステートメントを参照してください。  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 int IDENTITY,   
@@ -524,7 +524,7 @@ FROM dbo.T1;
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. ユーザー定義型の列にデータを挿入する  
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、`Points` テーブルの `PointValue` 列に 3 行を挿入します。 この列は、[CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT) を使用しています。 `Point` データ型は、UDT のプロパティとして公開されている整数値 X と Y で構成されます。 コンマ区切りの X と Y の値を `Point` 型にキャストするには、CAST 関数または CONVERT 関数のいずれかを使用する必要があります。 最初の 2 つのステートメントでは、CONVERT 関数を使用し、3 つ目のステートメントでは CAST 関数を使用して、文字列値を `Point` 型に変換しています。 詳しくは、「[UDT データの操作](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)」をご覧ください。  
   
-```  
+```sql
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
@@ -538,7 +538,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
   
  1 番目の INSERT ステートメントでは、SELECT ステートメントを使用して [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのソース テーブル (`Employee`、`SalesPerson`、および `Person`) からデータを取得し、その結果セットを `EmployeeSales` テーブルに格納します。 2 番目の INSERT ステートメントは、EXECUTE 句を使用して SELECT ステートメントを含むストアド プロシージャを呼び出します。3 番目の INSERT ステートメントは、EXECUTE 句を使用して SELECT ステートメントをリテラル文字列として参照します。  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( DataSource   varchar(20) NOT NULL,  
   BusinessEntityID   varchar(11) NOT NULL,  
@@ -591,7 +591,7 @@ FROM dbo.EmployeeSales;
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>I. WITH 共通テーブル式を使用して挿入するデータを定義する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに `NewEmployee` テーブルを作成します。 共通テーブル式 (`EmployeeTemp`) で、`NewEmployee` テーブルに挿入する 1 つ以上のテーブルの行を定義します。 INSERT ステートメントは、共通テーブル式の列を参照します。  
   
-```  
+```sql
 CREATE TABLE HumanResources.NewEmployee  
 (  
     EmployeeID int NOT NULL,  
@@ -634,7 +634,7 @@ GO
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. TOP を使用してソース テーブルから挿入されるデータを制限する  
  次の例では、`EmployeeSales` テーブルを作成し、ランダムに選ばれた上位 5 人の従業員の名前と年度累計売り上げデータを [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HumanResources.Employee` テーブルから挿入します。 INSERT ステートメントにより、`SELECT` ステートメントで返された任意の 5 行が選択されます。 OUTPUT 句は、`EmployeeSales` テーブルに挿入される行を表示します。 上位 5 人の従業員を特定するために SELECT ステートメントの ORDER BY 句を使用することはありません。  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   nvarchar(11) NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -655,7 +655,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
   
  TOP を使用して意味のある順序で行を挿入する必要がある場合は、次の例に示すように、サブセレクト ステートメントで ORDER BY を指定して TOP を使用する必要があります。 OUTPUT 句は、`EmployeeSales` テーブルに挿入される行を表示します。 ランダムな行の代わりに、ORDER BY 句の結果に基づいて、上位 5 人の従業員が挿入されます。  
   
-```  
+```sql
 INSERT INTO dbo.EmployeeSales  
     OUTPUT inserted.EmployeeID, inserted.FirstName, 
         inserted.LastName, inserted.YearlySales  
@@ -673,7 +673,7 @@ INSERT INTO dbo.EmployeeSales
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. ビューを指定してデータを挿入する  
  次の例では、対象オブジェクトとしてビュー名を指定します。しかし、新しい行は基になるベース テーブルに挿入されます。 `INSERT` ステートメント内の値の順番は、ビューの列の順番に一致している必要があります。 詳細については、「[ビューを使用したデータ変更](../../relational-databases/views/modify-data-through-a-view.md)」を参照してください。  
   
-```  
+```sql
 CREATE TABLE T1 ( column_1 int, column_2 varchar(30));  
 GO  
 CREATE VIEW V1 AS   
@@ -694,7 +694,7 @@ GO
 #### <a name="l-inserting-data-into-a-table-variable"></a>L. テーブル変数を指定してデータを挿入する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの対象オブジェクトとしてテーブル変数を指定します。  
   
-```  
+```sql
 -- Create the table variable.  
 DECLARE @MyTableVar table(  
     LocationID int NOT NULL,  
@@ -721,7 +721,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -736,7 +736,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -750,7 +750,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-```  
+```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
      FROM AdventureWorks2012.HumanResources.Department')  
@@ -763,7 +763,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-```  
+```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
 -- Specify a valid server name for Data Source using the format 
 -- server_name or server_nameinstance_name.  
@@ -780,7 +780,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-```  
+```sql
 -- Create an external table.   
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
         [FirstName] char(25) NOT NULL,   
@@ -811,7 +811,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q.  最小ログ記録を行ってヒープにデータを挿入する  
  次の例では、新しいテーブル (ヒープ) を作成し、最小ログ記録を使用して、別のテーブルのデータをそのテーブルに挿入します。 この例では、`AdventureWorks2012` データベースの復旧モデルが FULL に設定されていると想定しています。 したがって、最小ログ記録が使用されるようにするために、行を挿入する前に `AdventureWorks2012` データベースの復旧モデルを BULK_LOGGED に設定し、INSERT INTO...SELECT ステートメントの後に FULL に戻しています。 また、対象テーブル `Sales.SalesHistory` に TABLOCK ヒントが指定されています。 これにより、ステートメントが使用するトランザクション ログの領域が最小化され、ステートメントが効率的に実行されるようになります。  
   
-```  
+```sql
 -- Create the target heap.  
 CREATE TABLE Sales.SalesHistory(  
     SalesOrderID int NOT NULL,  
@@ -856,7 +856,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-```  
+```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
 SELECT b.Name, b.GroupName   
 FROM OPENROWSET (  
@@ -876,7 +876,7 @@ FROM OPENROWSET (
   
 **適用対象**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
   
-```  
+```sql
 INSERT INTO Production.Location WITH (XLOCK)  
 (Name, CostRate, Availability)  
 VALUES ( N'Final Inventory', 15.00, 80.00);  
@@ -888,7 +888,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 #### <a name="t-using-output-with-an-insert-statement"></a>T.  OUTPUT を INSERT ステートメントで使用する  
  次の例では、`ScrapReason` テーブルに 1 行を挿入し、`OUTPUT` 句を使用してステートメントの結果を `@MyTableVar` テーブル変数に返します。 `ScrapReasonID` 列が `IDENTITY` プロパティで定義されているため、`INSERT` ステートメントではこの列の値を指定していません。 ただし、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってこの列用に生成された値が、`OUTPUT` 句で `INSERTED.ScrapReasonID` 列に返されます。  
   
-```  
+```sql
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -907,7 +907,7 @@ FROM Production.ScrapReason;
 #### <a name="u-using-output-with-identity-and-computed-columns"></a>U.  ID 列と計算列で OUTPUT を使用する  
  次の例では、`EmployeeSales` テーブルを作成し、INSERT ステートメントを使用してこのテーブルに複数行を挿入します。基になるテーブルからデータを取得するため、SELECT ステートメントも使用します。 `EmployeeSales` テーブルには、ID 列 (`EmployeeID`) および計算列 (`ProjectedSales`) があります。 これらの値は[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって挿入操作中に生成されるため、いずれの列も `@MyTableVar` で定義できません。  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   int IDENTITY (1,5)NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -944,7 +944,7 @@ FROM dbo.EmployeeSales;
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>V.  OUTPUT 句から返されたデータを挿入する  
  次の例では、MERGE ステートメントの OUTPUT 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 MERGE ステートメントは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesOrderDetail` テーブル内で処理される注文に基づいて、`ProductInventory` テーブルの `Quantity` 列を毎日更新します。 また、在庫が 0 になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
   
-```  
+```sql
 --Create ZeroInventory table.  
 CREATE TABLE Production.ZeroInventory (DeletedProductID int, RemovedOnDate DateTime);  
 GO  
@@ -974,7 +974,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
 #### <a name="w-inserting-data-using-the-select-option"></a>W. SELECT オプションを使用してデータを挿入する  
  次の例では、INSERT ステートメントと SELECT オプションを使って複数のデータ行を挿入する方法を示します。 1 番目の `INSERT` ステートメントでは、`SELECT` ステートメントを使用して、コピー元のテーブルからデータを直接取得し、結果セットを `EmployeeTitles` テーブルに格納します。  
   
-```  
+```sql
 CREATE TABLE EmployeeTitles  
 ( EmployeeKey   INT NOT NULL,  
   LastName     varchar(40) NOT NULL,  
@@ -989,7 +989,7 @@ INSERT INTO EmployeeTitles
 #### <a name="x-specifying-a-label-with-the-insert-statement"></a>X. INSERT ステートメントでラベルを指定する  
  次の例では、INSERT ステートメントでのラベルの使用を示します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCurrency   
@@ -1000,7 +1000,7 @@ OPTION ( LABEL = N'label1' );
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. INSERT ステートメントでラベルとクエリ ヒントを使用する  
  このクエリでは、INSERT ステートメントでラベルとクエリの結合ヒントを使用するための基本構文を示します。 クエリが、コントロール ノード に送信されたた後で、コンピューティング ノード上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プランを生成するときにハッシュ結合の方法を適用します。 結合ヒントと OPTION 句の使用方法の詳細については、「[OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)」を参照してください。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCustomer (CustomerKey, CustomerAlternateKey, 
