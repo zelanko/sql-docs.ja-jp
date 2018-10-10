@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publicationinfo.warningsandagents.snapshot.f1
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4de826e45d84493b24fbc2b1617c40c4f0a13b9
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 263f1b3a76a30c1ab220234b32dd55af1ab6cfac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674710"
 ---
-# <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] (スナップショット パブリケーション、SQL Server 2005 以降)
+# <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] \(スナップショット パブリケーション、SQL Server 2005 以降)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   

@@ -113,7 +113,7 @@ ms.locfileid: "47770900"
   
 8.  レポート サーバーを再起動して、現在開いているセッションを消去します。  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolving Kerberos Authentication Errors When Connecting to a Report Server  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a> レポート サーバーに接続するときに、Kerberos 認証エラーを解決します。  
  ネゴシエート認証または Kerberos 認証が構成されているレポート サーバーでは、Kerberos 認証エラーが発生すると、レポート サーバーへのクライアント接続が失敗します。 Kerberos 認証エラーは、次の場合に発生します。  
   
 -   サービス プリンシパル名 (SPN) を登録していない Windows ドメイン ユーザー アカウントでレポート サーバー サービスが実行されたとき。  

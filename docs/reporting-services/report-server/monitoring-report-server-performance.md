@@ -83,7 +83,7 @@ ms.locfileid: "47603650"
  [MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  レポート サーバー Windows サービスで使用するパフォーマンス カウンターについて説明します。  
   
- [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
+ [ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]における HTTP およびメモリに関連したパフォーマンス カウンターについて説明します。  
   
  SharePoint 統合モードにおけるレポート サーバーのイベント  
