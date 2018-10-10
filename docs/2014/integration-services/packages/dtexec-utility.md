@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a94da30fb0e52fdf75b58c1139b8d32a2fe80aa8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 116d82b57db147abc8b4b5ebecd5874f36a37001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106302"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
   `dtexec`コマンド プロンプト ユーティリティを使用して、構成および実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ。 `dtexec` ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 `dtexec`ユーティリティでは、これらのソースからパッケージを読み込むことができます。[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー、.ispac プロジェクト ファイルを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベース、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ ストア、およびファイル システム。  
@@ -67,7 +64,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> 64 ビット コンピューターでのインストールに関する注意点  
  64 ビット コンピューターには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって 64 ビット版の `dtexec` ユーティリティ (dtexec.exe) がインストールされます。 特定のパッケージを 32 ビット モードで実行する必要がある場合は、32 ビット版の `dtexec` ユーティリティをインストールする必要があります。 32 ビット版の `dtexec` ユーティリティをインストールするには、セットアップ中に [クライアント ツール] または [[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]] を選択する必要があります。  
   
- 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです  (通常、32 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn で、64 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Binn です)。  
+ 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです (通常、32 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn で、64 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Binn です)。  
   
 > [!NOTE]  
 >  SQL Server エージェントを使用してユーティリティを実行する場合は、SQL Server エージェントによって 64 ビット バージョンのユーティリティが自動的に使用されます。 SQL Server エージェントでは、PATH 環境変数ではなくレジストリを使用してユーティリティの適切な実行可能ファイルが特定されます。  
@@ -88,7 +85,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> 実行のフェーズ  
  このユーティリティの実行には、4 つのフェーズがあります。 それらのフェーズを次に示します。  
   
-1.  コマンド初期フェーズ: コマンド プロンプトによって、指定されたオプションおよび引数のリストが読み取られます。  **/?** オプション または **/HELP** オプションが指定されている場合、後続のフェーズはすべてスキップされます。  
+1.  コマンド初期フェーズ: コマンド プロンプトによって、指定されたオプションおよび引数のリストが読み取られます。 **/?** オプション または **/HELP** オプションが指定されている場合、後続のフェーズはすべてスキップされます。  
   
 2.  パッケージ読み込みフェーズ: によって指定されたパッケージ、 `/SQL`、 **/file**、または`/DTS`オプションが読み込まれます。  
   
