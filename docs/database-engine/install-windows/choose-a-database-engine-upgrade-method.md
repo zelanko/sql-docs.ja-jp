@@ -22,7 +22,7 @@ ms.locfileid: "47713920"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md.md)] のアップグレードを計画している場合、ダウンタイムとリスクを最小限に抑えるために、考慮すべきいくつかのアプローチがあります。 インプレース アップグレードの実行、新規インストールへの移行、またはローリング アップグレードの実行が可能です。 次の図は、これらのアプローチから選択する場合に役立ちます。 図の各アプローチについては、下でも説明しています。 図の意思決定ポイントに役立てるため、「 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」も参照してください。  
+  SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md.md)] のアップグレードを計画している場合、ダウンタイムとリスクを最小限に抑えるために、考慮すべきいくつかのアプローチがあります。 インプレース アップグレードの実行、新規インストールへの移行、またはローリング アップグレードの実行が可能です。 次の図は、これらのアプローチから選択する場合に役立ちます。 図の各アプローチについては、下でも説明しています。 図の意思決定ポイントに役立てるため、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」も参照してください。  
   
  ![データベース エンジンのアップグレード方法のデシジョン ツリー](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "データベース エンジンのアップグレード方法のデシジョン ツリー")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47713920"
   
 -   高可用性 (HA) 構成のない開発環境。  
   
--   ダウンタイムを許容でき、最新のハードウェアとソフトウェアで実行されている非ミッション クリティカル運用環境。 ダウンタイムの長さは、データベースのサイズと、I/O サブシステムの速度によって異なります。 メモリ最適化テーブルを使用している場合、SQL Server 2014 をアップグレードすると、余分な時間がかかることがあります。 詳細については、「 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」を参照してください。  
+-   ダウンタイムを許容でき、最新のハードウェアとソフトウェアで実行されている非ミッション クリティカル運用環境。 ダウンタイムの長さは、データベースのサイズと、I/O サブシステムの速度によって異なります。 メモリ最適化テーブルを使用している場合、SQL Server 2014 をアップグレードすると、余分な時間がかかることがあります。 詳細については、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」を参照してください。  
   
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムの実行中に、アップグレード前チェックの実行の一部として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが停止し、再起動します。  
@@ -73,7 +73,7 @@ ms.locfileid: "47713920"
  新しい   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境に既存の環境と同じシステム オブジェクトを設定したら、既存のシステムのダウンタイムを最小限に抑える方法で、ユーザー データベースを既存のシステムから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに移行します。 データベースの移行を実行するには、バックアップと復元を使用するか、SAN 環境内の場合は LUN を再指定します。 両方の方法の手順を下の図に示しています。  
   
 > [!CAUTION]  
->  ダウンタイムの長さは、データベースのサイズと、I/O サブシステムの速度によって異なります。 メモリ最適化テーブルを使用している場合、SQL Server 2014 をアップグレードすると、余分な時間がかかることがあります。 詳細については、「 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」を参照してください。  
+>  ダウンタイムの長さは、データベースのサイズと、I/O サブシステムの速度によって異なります。 メモリ最適化テーブルを使用している場合、SQL Server 2014 をアップグレードすると、余分な時間がかかることがあります。 詳細については、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」を参照してください。  
   
  ユーザー データベースの移行後、多様な方法 (サーバー名の変更、DNS エントリの使用、接続文字列の変更など) のいずれかを使用して、新しいユーザーを新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに指示します。  新規インストール アプローチは、インプレース アップグレードと比較して、リスクとダウンタイムを減らし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレードと同時のハードウェアとオペレーティング システムのアップグレードを容易にします。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47713920"
 -   SQL Server Reporting Services スケールアウト環境: この環境でローリング アップグレードを実行する詳細な手順については、「 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。  
   
 ## <a name="next-steps"></a>次の手順
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [データベース エンジンのアップグレードの完了](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   
