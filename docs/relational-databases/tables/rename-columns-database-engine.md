@@ -82,8 +82,8 @@ ms.locfileid: "47745097"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
+3.  次の例では、 `TerritoryID` テーブル内の `Sales.SalesTerritory` 列の名前を `TerrID`に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-3.  次の例では、 `Sales.SalesTerritory` テーブル内の `TerritoryID` 列の名前を `TerrID`に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
     ```  
     USE AdventureWorks2012;  
     GO  
