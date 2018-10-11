@@ -149,7 +149,7 @@ ms.locfileid: "47840991"
  ユーザー定義エラー メッセージは、 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) カタログ ビューに存在します。 このカタログ ビューは、 **master**データベースに格納されています。 データベース アプリケーションがユーザー定義エラー メッセージに依存していて、データベースを別のサーバー インスタンスで使用できる場合は、 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) を使用してユーザー定義エラー メッセージを対象のサーバー インスタンスに追加できます。  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> イベント通知と Windows Management Instrumentation (WMI) イベント (サーバー レベル)  
   
 ### <a name="server-level-event-notifications"></a>サーバーレベルのイベント通知  
  サーバーレベルのイベント通知は **msdb**に格納されます。 したがって、データベース アプリケーションがサーバーレベルのイベント通知に依存している場合、そのイベント通知を対象のサーバー インスタンスで再作成する必要があります。 サーバー インスタンスでイベント通知を表示するには、 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) カタログ ビューを使用します。 詳しくは、「 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)」をご覧ください。  
