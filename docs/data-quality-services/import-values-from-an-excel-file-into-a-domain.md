@@ -45,7 +45,7 @@ ms.locfileid: "47828590"
 ####  <a name="Permissions"></a> Permissions  
  Excel ファイルからドメイン値をインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Import"></a> Import values from an Excel file into a domain  
+##  <a name="Import"></a> 値を Excel ファイルからドメインへインポートします。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47828590"
   
 -   アプリケーションで何かの理由により手動で値を関連付けることができない場合、インポート操作で適用されません。  
   
-##  <a name="How"></a> How the import works  
+##  <a name="How"></a> インポートのしくみ  
  インポート操作でインポートされる値を次に示します。  
   
  DQS のインポート操作では、Excel ファイルからのインポートが次のように実行されます。  
