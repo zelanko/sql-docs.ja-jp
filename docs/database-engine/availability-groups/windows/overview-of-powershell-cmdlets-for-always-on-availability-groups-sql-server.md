@@ -48,7 +48,7 @@ ms.locfileid: "47597871"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のタスクを実行するコマンドレットの使用方法を説明している [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] オンライン ブックのトピックの一覧については、「[Always On 可用性グループ &#40;SQL Server&#41 の概要](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」の「関連タスク」を参照してください。  
   
-##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
+##  <a name="ConfiguringServerInstance"></a> Always On 可用性グループのサーバー インスタンスの構成  
   
 |コマンドレット|[説明]|サポート対象|  
 |-------------|-----------------|------------------|
@@ -58,7 +58,7 @@ ms.locfileid: "47597871"
 |[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|既存のデータベース ミラーリング エンドポイントの名前、状態、認証などのプロパティを変更します。|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] をサポートしていて、データベース ミラーリング エンドポイントが存在しないサーバー インスタンス。|  
 
   
-##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
+##  <a name="BnRcmdlets"></a> バックアップおよびデータベースとトランザクション ログを復元します。  
   
 |コマンドレット|[説明]|サポート対象|  
 |-------------|-----------------|------------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "47597871"
   
  これらのコマンドレッドを使用してセカンダリ データベースを準備する方法の詳細については、「[可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)」を参照してください。  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="DeployManageAGs"></a> 作成して、可用性グループの管理  
   
 |コマンドレット|[説明]|サポート対象|  
 |-------------|-----------------|------------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "47597871"
 |[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|可用性グループのプロパティを設定します。可用性グループをオンライン/オフラインにします。|プライマリ レプリカをホストするサーバー インスタンス|  
 |[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|以下のいずれかの形式のフェールオーバーを開始します。<br /><br /> 可用性グループの強制フェールオーバー (データ損失の可能性あり)。<br /><br /> 可用性グループの手動フェールオーバー。|対象のセカンダリ レプリカをホストするサーバー インスタンス|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="AGlisteners"></a> 作成して、可用性グループ リスナーの管理  
   
 |コマンドレット|[説明]|サポート対象|  
 |------------|-----------------|------------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "47597871"
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|既存の可用性グループ リスナーのポート設定を変更します。|プライマリ レプリカをホストするサーバー インスタンス|  
 |[**Add-SqlAvailabilityGroupListenerStaticIp**](/powershell/module/sqlserver/add-sqlavailabilitygrouplistenerstaticip)|既存の可用性グループ リスナー構成に静的 IP アドレスを追加します。 IP アドレスには、サブネットを含む IPv4 アドレス、または IPv6 アドレスを指定できます。|プライマリ レプリカをホストするサーバー インスタンス|  
   
-##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="DeployManageARs"></a> 作成して、可用性レプリカの管理  
   
 |コマンドレット|[説明]|サポート対象|  
 |-------------|-----------------|------------------|  
@@ -96,7 +96,7 @@ ms.locfileid: "47597871"
 |[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|可用性レプリカを削除します。|プライマリ レプリカをホストするサーバー インスタンス|  
 |[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|可用性レプリカのプロパティを設定します。|プライマリ レプリカをホストするサーバー インスタンス|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="DeployManageDbs"></a> 追加して、可用性データベースの管理  
   
 |コマンドレット|[説明]|サポート対象|  
 |-------------|-----------------|------------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "47597871"
 |[**Resume-SqlAvailabilityDatabase**](/powershell/module/sqlserver/resume-sqlavailabilitydatabase)|中断されている可用性データベースのデータ移動を再開します。|データベースが中断されたサーバー インスタンス|  
 |[**Suspend-SqlAvailabilityDatabase**](/powershell/module/sqlserver/suspend-sqlavailabilitydatabase)|可用性データベースのデータ移動を中断します。|可用性レプリカをホストする任意のサーバー インスタンス|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="MonitorTblshtAGs"></a> 可用性グループの正常性の監視  
  以下の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用すると、可用性グループとそのレプリカおよびデータベースの正常性を監視できます。  
   
 > [!IMPORTANT]  
