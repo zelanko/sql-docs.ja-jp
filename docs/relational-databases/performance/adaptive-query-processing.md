@@ -6,9 +6,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords: ''
 ms.assetid: ''
@@ -16,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2897b0bb371e68ab4e7cccaffe245191f21243ce
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171637"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851420"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Microsoft SQL データベースでのアダプティブ クエリの処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
 
 ## <a name="batch-mode-memory-grant-feedback"></a>バッチ モード メモリ許可フィードバック
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのクエリの実行後プランには、実行に最低限必要なメモリと、すべての行をメモリに収めるのに最適なメモリ許可サイズが含まれます。 メモリ許可サイズが正しくない場合、パフォーマンスが低下します。 メモリ許可が多すぎると、メモリが無駄になり、同時実行が制限されます。 メモリ許可が少なすぎると、負荷の高いディスクへの書き込みが発生する原因になります。 繰り返されるワークロードを処理することにより、バッチ モード メモリ許可フィードバックはクエリに実際に必要なメモリ量を再計算し、キャッシュされたプランの許可値を更新します。  同じクエリ ステートメントを実行するとき、クエリは、修正されたメモリ許可サイズを使うことで、同時実行性に影響を与える過剰なメモリ許可を減らし、負荷の高いディスクへの書き込みが発生する過少なメモリ許可を修正します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのクエリの実行後プランには、実行に最低限必要なメモリと、すべての行をメモリに収めるのに最適なメモリ許可サイズが含まれます。 メモリ許可サイズが正しくない場合、パフォーマンスが低下します。 メモリ許可が多すぎると、メモリが無駄になり、コンカレンシーが制限されます。 メモリ許可が少なすぎると、負荷の高いディスクへの書き込みが発生する原因になります。 繰り返されるワークロードを処理することにより、バッチ モード メモリ許可フィードバックはクエリに実際に必要なメモリ量を再計算し、キャッシュされたプランの許可値を更新します。  同じクエリ ステートメントを実行するとき、クエリは、修正されたメモリ許可サイズを使うことで、コンカレンシーに影響を与える過剰なメモリ許可を減らし、負荷の高いディスクへの書き込みが発生する過少なメモリ許可を修正します。
 次のグラフでは、バッチ モード アダプティブ メモリ許可フィードバックを使用する 1 つの例を示します。 最初のクエリ実行の場合、ディスクへの書き込みが多いため所要時間は "**88 秒**" でした。   
 
 ```sql

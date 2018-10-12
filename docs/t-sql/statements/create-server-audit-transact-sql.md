@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVER_AUDIT_TSQL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - CREATE SERVER AUDIT statement
 - audits [SQL Server], creating
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
-caps.latest.revision: 44
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 85ee3b6a5f674a9d4ee63cb54ffca867abca1f04
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: fb561e2001940fef59429236dd85d376a1c3c27f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171744"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834760"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -108,7 +105,7 @@ CREATE SERVER AUDIT audit_name
  ターゲットで監査ログへの書き込みができない場合に、ターゲットへのインスタンスの書き込みをエラーにするか、続行するか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止するかを示します。 既定値は CONTINUE です。  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 続行オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許可する場合があります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 続行オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許可する場合があります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
   
 SHUTDOWN  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がなんらかの理由で監査ターゲットへのデータの書き込みに失敗した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを強制的にシャットダウンします。 `CREATE SERVER AUDIT` ステートメントを実行しているログインには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内での `SHUTDOWN` 権限が必要です。 実行中のログインから `SHUTDOWN` アクセス許可が後で取り消された場合でも、シャットダウンの動作は継続します。 ユーザーがこのアクセス許可を持っていない場合は、ステートメントが失敗し、監査は作成されません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを使用します。 詳細については、「[SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)」を参照してください。  

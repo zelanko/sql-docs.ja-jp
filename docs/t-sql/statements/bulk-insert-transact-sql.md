@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BULK_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7409eb0c6c26b03309fbdbdd37b8d2255cfa5b75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620430"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +194,7 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
 >  MAX_ERRORS オプションは、制約チェックや **money** および **bigint** のデータ型の変換には適用されません。  
   
  ORDER ( { *column* [ ASC | DESC ] } [ **,**... *n* ] )  
- データ ファイル内のデータの並べ替え方法を指定します。 インポートするデータをテーブル上のクラスター化インデックスに従って並べ替えると、一括インポートのパフォーマンスが向上します。 データ ファイルが異なる順序で並んでいる場合、つまりクラスター化インデックス キーの順序以外の順で並んでいるか、テーブルにクラスター化インデックスが存在しない場合、ORDER 句は無視されます。 指定する列の名前は、インポート先のテーブル内で有効な列の名前であることが必要です。 既定では、一括挿入操作はデータ ファイルが並べ替えられていないことを前提に実行されます。 最適な一括インポートのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インポートするデータが並べ替えられているかどうかも検証されます。  
+ データ ファイル内のデータの並べ替え方法を指定します。 インポートするデータをテーブル上のクラスター化インデックスに従って並べ替えると、一括インポートのパフォーマンスが向上します。 データ ファイルが異なる順序で並んでいる場合、つまりクラスター化インデックス キーの順序以外の順で並んでいるか、テーブルにクラスター化インデックスが存在しない場合、ORDER 句は無視されます。 指定する列の名前は、インポート先のテーブル内で有効な列の名前であることが必要です。 既定では、一括挿入操作はデータ ファイルが並べ替えられていないことを前提に実行されます。 最適な一括インポートのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インポートするデータが並べ替えられているかどうかも検証されます。  
   
  *n*  
  複数の列を指定できることを示すプレースホルダーです。  
@@ -323,7 +320,7 @@ GO
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一括インポート操作ではコンマ区切り値 (CSV) ファイルがサポートされていません。 ただし、場合によっては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対してデータを一括インポートする際、CSV ファイルをデータ ファイルとして使用できます。 CSV データ ファイルからデータをインポートするための要件については、「[一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)」をご覧ください。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- 一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。  
+ 一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「 [一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。  
   
 ##  <a name="Limitations"></a> 制限  
  BULK INSERT でフォーマット ファイルを使用する場合、指定できるフィールド数は 1,024 個までです。 これは、テーブルに許容される最大列数と同じです。 1,024 個を超えるフィールドが含まれるデータ ファイルで BULK INSERT を使用すると、BULK INSERT によってエラー 4822 が生成されます。 [bcp ユーティリティ](../../tools/bcp-utility.md)にはこのような制限がないため、1,024 個を超えるフィールドを含むデータ ファイルには、**bcp** コマンドを使用してください。  

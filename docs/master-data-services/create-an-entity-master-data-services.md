@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 933c5a7f4eeae256ce9fafed6d5be53a1236e559
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811088"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702960"
 ---
 # <a name="create-an-entity-master-data-services"></a>エンティティを作成する (マスター データ サービス)
 
@@ -101,7 +98,7 @@ ms.locfileid: "43811088"
 ## <a name="see-also"></a>参照  
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)   
  [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [エンティティを編集する &#40;マスター データ サービス&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [エンティティを編集する (マスター データ サービス)](../master-data-services/edit-an-entity-master-data-services.md)   
  [エンティティを削除する (マスター データ サービス)](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

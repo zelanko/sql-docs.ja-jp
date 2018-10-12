@@ -5,9 +5,7 @@ ms.date: 09/07/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ASSEMBLY_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - adding files
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 32f8f0b6aaaa44dc42a52babae398845779961d3
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: fb8f59bca89bccd40f598bf5788ef3201145e323
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171804"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805580"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -132,16 +129,16 @@ ALTER ASSEMBLY assembly_name
 ## <a name="remarks"></a>Remarks  
  変更するアセンブリ内のコードが、現在実行中のセッションで実行されている場合、ALTER ASSEMBLY でセッションは中断されません。 現在のセッションは、アセンブリの変更されていないビット列を使用して最後まで実行されます。  
   
- FROM 句を指定した場合、ALTER ASSEMBLY では、指定したモジュールの最新コピーが反映されるようにアセンブリが更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に CLR 関数、ストアド プロシージャ、トリガー、データ型、ユーザー定義集計関数が存在し、それらがアセンブリに対して既に定義されている可能性があるため、ALTER ASSEMBLY ステートメントでは、これらがアセンブリの最新の実装に再バインドされます。 この再バインドを適切に行うには、CLR 関数、ストアド プロシージャ、およびトリガーにマップされるメソッドが、同じ署名を持つ変更済みのアセンブリ内に存在している必要があります。 CLR ユーザー定義型とユーザー定義集計関数が実装されているクラスは、ユーザー定義型または集計の要件を満たしている必要があります。  
+ FROM 句を指定した場合、ALTER ASSEMBLY では、指定したモジュールの最新コピーが反映されるようにアセンブリが更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に CLR 関数、ストアド プロシージャ、トリガー、データ型、およびユーザー定義集計関数が存在し、これらがアセンブリに対して既に定義されている場合があるため、ALTER ASSEMBLY ステートメントでは、これらがアセンブリの最新の実装に再バインドされます。 この再バインドを適切に行うには、CLR 関数、ストアド プロシージャ、およびトリガーにマップされるメソッドが、同じ署名を持つ変更済みのアセンブリ内に存在している必要があります。 CLR ユーザー定義型とユーザー定義集計関数が実装されているクラスは、ユーザー定義型または集計の要件を満たしている必要があります。  
   
 > [!CAUTION]  
->  WITH UNCHECKED DATA を指定せず、新しいバージョンのアセンブリによってテーブルの既存のデータ、インデックス、または他の固有サイトに影響が生じる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ALTER ASSEMBLY の実行回避が試みられます。 ただし、CLR アセンブリが更新された場合、計算列、インデックス、インデックス付きビュー、式と、基になるルーチンとデータ型との一貫性は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では保証されません。 式の結果と、アセンブリに格納されている式に基づく値に不一致がないかどうかを ALTER ASSEMBLY で確認する場合は注意してください。  
+>  WITH UNCHECKED DATA を指定せず、新しいバージョンのアセンブリによってテーブルの既存のデータ、インデックス、または他の固有サイトに影響が生じる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ALTER ASSEMBLY の実行回避が試みられます。 ただし、CLR アセンブリが更新された場合、計算列、インデックス、インデックス付きビュー、または式と、基になるルーチンおよびデータ型との一貫性は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では保証されません。 式の結果と、アセンブリに格納されている式に基づく値に不一致がないかどうかを ALTER ASSEMBLY で確認する場合は注意してください。  
   
  ALTER ASSEMBLY ではアセンブリのバージョンが変更されます。 アセンブリのカルチャおよび公開キー トークンは変更されません。  
   
  ALTER ASSEMBLY ステートメントを使用しても、次の情報は変更できません。  
   
--   アセンブリを参照する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の CLR 関数、集計関数、ストアド プロシージャ、およびトリガーの署名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データベース オブジェクトを新しいバージョンのアセンブリに再バインドできない場合、ALTER ASSEMBLY は失敗します。  
+-   アセンブリを参照する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の CLR 関数、集計関数、ストアド プロシージャ、およびトリガーの署名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトを新しいバージョンのアセンブリに再バインドできない場合、ALTER ASSEMBLY は失敗します。  
   
 -   別のアセンブリから呼び出されるアセンブリ内のメソッドの署名。  
   
