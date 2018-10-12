@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/19/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -31,19 +31,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f656953d814d53bf234ca890d56bf0ae0fa8eecb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7d0714bfff3de11ad36373f3ef710368169966e6
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091694"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171544"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースに証明書を追加します。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  この機能は、データ層アプリケーション フレームワーク (DACFx) を使用してデータベースのエクスポートとの互換性はありません。 エクスポートする前に、すべての証明書を削除する必要があります。  
   
@@ -127,6 +125,9 @@ CREATE CERTIFICATE certificate_name
   
  [ EXECUTABLE ] FILE ='*path_to_file*'  
  証明書が含まれる DER エンコード ファイルへの完全なパスを、ファイル名を含めて指定します。 EXECUTABLE オプションを使用する場合、ファイルはこの証明書によって署名された DLL になります。 *path_to_file* には、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 ファイルには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストでアクセスします。 このアカウントは、ファイル システムで必要となる権限を保持している必要があります。  
+
+> [!IMPORTANT]
+> Azure SQL Database では、ファイルからの証明書の作成や秘密キー ファイルの使用はサポートされません。
   
  WITH PRIVATE KEY  
  証明書の秘密キーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むように指定します。 この句は、ファイルから証明書を作成する場合にのみ有効です。 アセンブリの秘密キーを読み込むには、[ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) を使用します。  
@@ -134,8 +135,8 @@ CREATE CERTIFICATE certificate_name
  FILE ='*path_to_private_key*'  
  秘密キーへの完全なパスを、ファイル名を含めて指定します。 *path_to_private_key* には、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 ファイルには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストでアクセスします。 このアカウントは、ファイル システムで必要となる権限を保持している必要があります。  
   
-> [!NOTE]  
->  このオプションは、包含データベースでは使用できません。  
+> [!IMPORTANT]  
+>  このオプションは、包含データベースまたは Azure SQL Database では使用できません。  
   
  asn_encoded_certificate  
  バイナリ定数として指定された、ASN でエンコードされた証明書ビット。  
@@ -211,7 +212,10 @@ CREATE CERTIFICATE Shipping11
     DECRYPTION BY PASSWORD = 'sldkflk34et6gs%53#v00');  
 GO   
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL Database では、ファイルからの証明書の作成はサポートされません。
+   
 ### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>C. 署名付き実行可能ファイルから証明書を作成する  
   
 ```  
@@ -230,7 +234,9 @@ GO
 CREATE CERTIFICATE Shipping19 FROM ASSEMBLY Shipping19;  
 GO  
 ```  
-  
+> [!IMPORTANT]
+> Azure SQL Database では、ファイルからの証明書の作成はサポートされません。
+   
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 自己署名証明書を作成する  
  次の例では、暗号化パスワードを指定しないで、`Shipping04` という証明書を作成します。 この例は、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] で使用できます。
   
@@ -239,7 +245,6 @@ CREATE CERTIFICATE Shipping04
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  
 ```  
-  
   
 ## <a name="see-also"></a>参照  
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
