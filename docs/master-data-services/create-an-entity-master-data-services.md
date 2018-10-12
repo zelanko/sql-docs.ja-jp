@@ -18,12 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410464"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811088"
 ---
 # <a name="create-an-entity-master-data-services"></a>エンティティを作成する (マスター データ サービス)
 
@@ -57,7 +57,9 @@ ms.locfileid: "35410464"
      このフィールドに名前を入力しない場合は、エンティティ名が使用されます。  
   
     > [!TIP]  
-    >  ステージング テーブルの名前の一部にはモデル名を使用します。たとえば、 *Modelname_Entityname*のようにします。 こうすることで、データベースからテーブルを見つけやすくなります。 ステージング テーブルの詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+    >  ステージング テーブルの名前の一部にはモデル名を使用します。たとえば、 *Modelname_Entityname*のようにします。 こうすることで、データベースからテーブルを見つけやすくなります。 ステージング テーブルの詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。
+    > [!TIP]  
+    >  ステージング テーブルに既定の名前付けを使用している場合、他のモデルに同じ名前を持つエンティティが存在すると、MDS によってステージング テーブル名に識別子 (例: _1、_2) が自動的に追加されます。
   
 7.  **[トランザクション ログの種類]** フィールドで、ドロップダウン リストからトランザクション ログの種類を選択します。  
   

@@ -1,7 +1,7 @@
 ---
 title: ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/07/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,15 +27,15 @@ caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 10e01507c7c33f272872ecf5022ad287ccaeafa6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 32f8f0b6aaaa44dc42a52babae398845779961d3
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942928"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171804"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   アセンブリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カタログ プロパティを変更することにより、アセンブリを変更します。 ALTER ASSEMBLY では、アセンブリの実装を保持する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] モジュールの最新コピーが反映されるようにアセンブリを更新し、アセンブリに関連付けられているファイルを追加または削除します。 アセンブリは、[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) を使用して作成されます。  
 
@@ -79,6 +79,9 @@ ALTER ASSEMBLY assembly_name
  アセンブリを更新して、アセンブリの実装を保持する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] モジュールの最新コピーを反映させます。 このオプションを使用できるのは、指定したアセンブリに関連付けられているファイルが存在しない場合だけです。  
   
  \<client_assembly_specifier> には、更新するアセンブリが配置されているネットワーク上の場所またはローカルの場所を指定します。 ネットワーク上の場所を指定する場合は、コンピューター名、共有名、および共有内のパスを指定します *manifest_file_name* には、アセンブリのマニフェストを含むファイルの名前を指定します。  
+
+> [!IMPORTANT]
+> Azure SQL Database では、ファイルの参照はサポートされません。
   
  \<assembly_bits> は、アセンブリのバイナリ値です。  
   
@@ -118,13 +121,13 @@ ALTER ASSEMBLY assembly_name
  アセンブリに関連付けられているファイル名、またはアセンブリに関連付けられているすべてのファイルを、データベースから削除します。 続けて ADD FILE を指定する場合は、最初に DROP FILE が実行されます。 このため、同じファイル名でファイルを置き換えることができます。  
   
 > [!NOTE]  
->  このオプションは、包含データベースでは使用できません。  
+>  このオプションは、包含データベースまたは Azure SQL Database では使用できません。  
   
  [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  ソース コード、デバッグ ファイル、その他の関連情報など、アセンブリに関連付けられるファイルをサーバーにアップロードし、**sys.assembly_files** カタログ ビューに表示できるようにします。 *client_file_specifier* には、ファイルのアップロード元となる場所を指定します。 *file_bits* を代わりに使用し、ファイルを構成するバイナリ値の一覧を指定できます。 *file_name* には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに格納する必要があるファイルの名前を指定します。 *file_name* は、*file_bits* が指定されている場合は指定する必要があり、*client_file_specifier* が指定されている場合はオプションになります。 *file_name* が指定されていない場合、*client_file_specifier* の file_name の部分が *file_name* として使用されます。  
   
 > [!NOTE]  
->  このオプションは、包含データベースでは使用できません。  
+>  このオプションは、包含データベースまたは Azure SQL Database では使用できません。  
   
 ## <a name="remarks"></a>Remarks  
  変更するアセンブリ内のコードが、現在実行中のセッションで実行されている場合、ALTER ASSEMBLY でセッションは中断されません。 現在のセッションは、アセンブリの変更されていないビット列を使用して最後まで実行されます。  
@@ -205,6 +208,10 @@ ALTER ASSEMBLY assembly_name
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
+
+> [!IMPORTANT]
+> Azure SQL Database では、ファイルの参照はサポートされません。
+
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. ファイルを追加してアセンブリに関連付ける  
  次の例では、ソース コード ファイル `Class1.cs` をアップロードして、アセンブリ `MyClass` に関連付けます。 この例では、アセンブリ `MyClass` がデータベースに既に作成されていることを前提としています。  
   
@@ -212,7 +219,10 @@ ALTER ASSEMBLY assembly_name
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL Database では、ファイルの参照はサポートされません。
+
 ### <a name="c-changing-the-permissions-of-an-assembly"></a>C. アセンブリの権限を変更する  
  次の例では、アセンブリ `ComplexNumber` の権限セットを、SAFE から `EXTERNAL ACCESS` に変更します。  
   

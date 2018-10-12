@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,26 +15,107 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: edfb4248c5f5102742ab13d7a2615bb3c192481b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899502"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889798"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この記事では、SSMS の現在と以前のバージョンの更新、機能強化、およびバグの修正に関する詳細を提供します。 [SSMS の以前のバージョン](#previous-ssms-releases)は以下でダウンロードできます。
 
 
+## <a name="ssms-179download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.9](download-sql-server-management-studio-ssms.md)
 
 
-## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+ビルド番号: 14.0.17285.0<br>
+リリース日: 2018 年 9 月 4 日
+
+### <a name="whats-new"></a>新機能
+
+**SSMS 全般**
+
+
+プラン表示:
+
+- グラフィカルなプラン表示で、特定のプランに向けてこの機能をアクティブ化したときに、新しい行モード メモリ許可フィードバックの属性が表示されるようになりました: IsMemoryGrantFeedbackAdjusted と LastRequestedMemory が MemoryGrantInfo クエリ プランの XML 要素に追加されます。 行モード メモリ許可フィードバックについて詳しくは、「[Microsoft SQL データベースでのアダプティブ クエリの処理](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing)」をご覧ください。
+
+Azure SQL: 
+
+- Azure DB の作成に仮想コア SKU のサポートが追加されました。 詳細については、「[仮想コアベースの購入モデル](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model)」をご覧ください。
+ 
+
+### <a name="bug-fixes"></a>バグの修正
+
+**SSMS 全般**
+    
+レプリケーション モニター:
+
+- レプリケーション モニター (SqlMonitor.exe) が起動しない原因となっていた問題を修正しました (User Voice の項目: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+
+フラット ファイルのインポート ウィザード: 
+
+- "フラット ファイル ウィザード" ダイアログのヘルプ ページへのリンクを修正しました 
+- テーブルが既に存在しているときにウィザードでターゲット テーブルを変更できない問題を修正しました。これによってユーザーは、ウィザードを終了して失敗したテーブルを削除してから改めてウィザードに情報を入力することなく、再試行できるようになりました (User Voice の項目: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)。 
+
+データ層アプリケーションのインポート/エクスポート:
+
+- .bacpac のインポートが、"Error SQL72014: .Net SqlClient Data Provider: Msg 9108, Level 16, State 10, Line 1 This type of statistics is not supported to be incremental. (この統計の種類は増分にサポートされていません。)" のようなメッセージと共に失敗する場合があることの原因となっていた (DacFx の) 問題を修正しました。 この問題は、パーティションが定義されていてテーブルにインデックスが付いていないテーブルを扱うときに発生しました。 
+
+IntelliSense:
+
+- MFA で AAD を使用する場合に Intellisense の入力候補が動作しなかった問題を修正しました。 
+
+オブジェクト エクスプローラー: 
+
+- "フィルター ダイアログ" が、SSMS を稼働しているモニターではなくランダムなモニターに表示された問題を修正しました (マルチ モニター システム)。
+
+Azure SQL: 
+
+- [使用できるデータベース] でデータベースが列挙されるときに、特定のデータベースに接続しているとドロップダウンに "master" が表示されなかった問題を修正しました。 
+- MFA で AAD を使用して SQL Azure DB に接続している場合、スクリプトを生成 ([データ] または [スキーマとデータ]) しようとすると失敗した問題を修正しました。 
+- ビュー デザイナー (ビュー) において、SQL Azure DB に接続していると UI から [テーブルの追加] を選択できなかった問題を修正しました。 
+- MFA トークンの更新中に SSMS クエリ エディターによって接続が自動的に終了および再開された問題を修正しました。 これにより、ユーザーが気付かない副作用 (たとえば、トランザクションを終了して再開しない場合) の発生を回避できます。 この変更では、プロパティ ウィンドウにトークンの有効期限が追加されます。 
+- MFA ログインでの AAD で、インポートされた MSA アカウントに対して SSMS でパスワード プロンプトが適用されなかった問題を修正しました。 
+
+利用状況モニター: 
+
+- SQL 認証を使用して利用状況モニターから起動した場合に [ライブ クエリ統計] がハングする原因となっていた問題を修正しました。 
+
+Microsoft Azure との統合: 
+
+- SSMS によって最初の 50 個のサブスクリプション (Always Encrypted のダイアログ、BACKUP TO URL または RESTORE FROM URL のダイアログなど) しか表示されない問題を修正しました。 
+- (BACKUP TO URL または RESTORE FROM URL のダイアログで) ストレージ アカウントを持っていない Microsoft Azure アカウントにログオンしようとしているときに、SSMS によって例外 ("インデックスが範囲外") がスローされた問題を修正しました。 
+
+オブジェクト スクリプト作成: 
+
+- DROP および CREATE のスクリプトを作成するときに、SSMS によって動的 T-SQL が生成されなくなりました。
+- データベース オブジェクトのスクリプトを作成するときに、SSMS によってデータベース スコープ構成を設定するスクリプトが (それらが既定値に設定されていれば) 生成されなくなりました。
+
+Help:
+
+- [ヘルプに関するヘルプ] でオンライン/オフライン モードが考慮されないという、長い間未解決だった問題を修正しました。
+- [ヘルプ | コミュニティ プロジェクト && サンプル] をクリックすると、SSMS によって既定のブラウザーで Git ページが開かれるようになり、古いブラウザーの使用に関するエラーや警告が表示されなくなりました。
+
+### <a name="known-issues"></a>既知の問題
+
+- 現在、このリリースに既知の問題はありません。
+
+
+
+## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
+
+以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
+
+## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *17.8 では SQL データベースのプロビジョニングに関連するバグが検出されたため、17.8 は SSMS 17.8.1 に置き換えられました。*
-
 
 ビルド番号: 14.0.17277.0<br>
 リリース日: 2018 年 6 月 26 日
+
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>新機能
@@ -93,10 +174,6 @@ Always Encrypted:
 - XEvent ビューアーで待機時間が発生する場合があります。 これは、[.NET Framework における既知の問題](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)です。 NetFx 4.7.2 へのアップグレードを検討してください。
 
 
-
-## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
-
-以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)

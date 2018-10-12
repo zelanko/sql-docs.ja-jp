@@ -20,12 +20,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03aada845eaf77e83833f3cc3252bca4a2d49e42
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 84b01fb62721b624ffde822f041dd160671d0840
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405596"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343111"
 ---
 # <a name="model-database"></a>model データベース
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "40405596"
 |プライマリ データ|modeldev|model.mdf|ディスクがいっぱいになるまで 64 MB ずつ自動拡張|  
 |Log|modellog|modellog.ldf|最大 2 TB まで 64 MB ずつ自動拡張|  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]より前のバージョンでの既定のファイル拡張値については、「 [model データベース](model-database.md)」を参照してください。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンでの既定のファイル拡張値については、「[model データベース](../../2014/relational-databases/databases/model-database.md)」をご覧ください。  
   
  **model** データベースまたはログ ファイルを移動するには、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
   

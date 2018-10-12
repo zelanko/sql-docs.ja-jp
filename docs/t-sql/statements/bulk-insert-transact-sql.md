@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,19 +30,17 @@ caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782673"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171694"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、ユーザーが指定した形式で、データベース テーブルまたはビューにデータ ファイルをインポートします。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,6 +100,10 @@ BULK INSERT
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1 以降では、data_file は Azure Blob Storage に格納することができます。
 
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+
+
 **'** *data_source_name* **'**   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 インポートされるファイルの Azure Blob Storage の場所を指している名前付きの外部データ ソースです。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。    
@@ -146,8 +148,7 @@ BULK INSERT
 |**char** (既定値)|文字形式。<br /><br /> 詳細については、「[文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
 |**native**|ネイティブ (データベース) データ型。 **bcp** ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括インポートし、ネイティブ データ ファイルを作成します。<br /><br /> ネイティブ値を使用すると、char 型の値を使用するよりもパフォーマンスが向上します。<br /><br /> 詳細については、「[ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
 |**widechar**|Unicode 文字。<br /><br /> 詳細については、「 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
-|**widenative**|ネイティブ (データベース) データ型。ただし、データが Unicode として格納される **char**、**varchar**、**text** 列は除きます。 **bcp** ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括インポートし、**widenative** データ ファイルを作成します。<br /><br /> 
-  **widenative** 値を使用すると、**widechar** 値を使用するよりもパフォーマンスが向上します。 データ ファイルに [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 拡張文字が含まれている場合は、**widenative** を指定します。<br /><br /> 詳細については、「 [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
+|**widenative**|ネイティブ (データベース) データ型。ただし、データが Unicode として格納される **char**、**varchar**、**text** 列は除きます。 **bcp** ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括インポートし、**widenative** データ ファイルを作成します。<br /><br /> **widenative** 値を使用すると、**widechar** 値を使用するよりもパフォーマンスが向上します。 データ ファイルに [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 拡張文字が含まれている場合は、**widenative** を指定します。<br /><br /> 詳細については、「 [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
   
   ERRORFILE **='***file_name***'**  
  形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。  
@@ -294,7 +295,11 @@ BULK INSERT bulktest..t_float
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
   
+
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML ドキュメントの一括エクスポートまたは一括インポート用のデータ型  
  SQLXML データを一括エクスポートまたは一括インポートするには、フォーマット ファイルで次のいずれかのデータ型を使用します。  
   
@@ -368,6 +373,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
          ROWTERMINATOR =' |\n'  
       );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
   
 ### <a name="b-using-the-firetriggers-argument"></a>B. FIRE_TRIGGERS 引数を使用する  
  次の例では、`FIRE_TRIGGERS` 引数を指定します。  
@@ -382,6 +390,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
         FIRE_TRIGGERS  
       );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. 行ターミネータとしてライン フィードを使用する  
  次の例では、UNIX 出力などのように、ライン フィードを行ターミネータとして使用するファイルをインポートします。  
@@ -396,6 +407,9 @@ EXEC(@bulk_cmd);
   
 > [!NOTE]  
 >  Microsoft Windows によるテキスト ファイルの処理方法によって、**(\n** は自動的に **\r\n)** に置き換えられます。  
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
   
 ### <a name="d-specifying-a-code-page"></a>D. コード ページの指定  
  コード ページを指定する例を次に示します。  
@@ -409,6 +423,10 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+
 ### <a name="e-importing-data-from-a-csv-file"></a>E. CSV ファイルからデータをインポートする   
 CSV ファイルを指定する例を次に示します。   
 ```
@@ -416,6 +434,10 @@ BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Azure Blob Storage 内のファイルからデータをインポートする   
 次の例では、外部データ ソースとして構成されている Azure Blob Storage の場所に csv ファイルからデータを読み込む方法を示します。 これには、Shared Access Signature を使用したデータベース スコープ資格情報が必要です。    
@@ -426,6 +448,9 @@ FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Azure Blob Storage 内のファイルからデータをインポートし、エラー ファイルを指定する   
 次の例では、外部データ ソースとして構成されている Azure Blob Storage の場所に csv ファイルからデータを読み込み、エラー ファイルも指定する方法を示します。 これには、Shared Access Signature を使用したデータベース スコープ資格情報が必要です。 Azure SQL Database を実行している場合、ERRORFILE オプションと共に ERRORFILE_DATA_SOURCE も指定する必要があることに注意してください。指定しないと、アクセス許可エラーでインポートが失敗する可能性があります。 ERRORFILE で指定するファイルは、コンテナー内に存在していてはなりません。

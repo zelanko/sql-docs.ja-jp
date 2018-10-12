@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -50,20 +50,18 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40411022"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171894"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しいテーブルを作成します。  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!NOTE]   
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 構文については、「[CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)」をご覧ください。
   
@@ -412,7 +410,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database では、`FILESTREAM` はサポートされません。
  
  FILESTREAM データのファイル グループを指定します。  
   
@@ -852,7 +850,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Azure SQL Database では、`FILETABLE` はサポートされません。 
   
  FileTable の **Name** 列に適用される照合順序の名前を指定します。 照合順序は、Windows のファイル名のセマンティクスに準拠するために、大文字と小文字を区別しない設定にする必要があります。 この値が指定されていない場合、データベースの既定の照合順序が使用されます。 データベースの既定の照合順序で大文字と小文字が区別される場合は、エラーが発生し、CREATE TABLE 操作は失敗します。  
   
@@ -927,7 +925,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 Azure SQL Database Managed Instance では、メモリ最適化テーブルはサポートされません。 
   
  値が ON の場合は、テーブルがメモリ最適化されていることを示します。 メモリ最適化テーブルは、トランザクション処理のパフォーマンスの最適化に使用されるインメモリ OLTP 機能の一部です。 インメモリ OLTP の使用を開始するには、「[クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」をご覧ください。 メモリ最適化テーブルについて詳しくは、「[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)」をご覧ください。  
   

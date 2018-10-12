@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,41 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cf2952b907da3dc44046e57796de761e62336de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
+ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096121"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743505"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)
+ビルド番号: 14.0.16174.0  
+リリース日: 2018 年 9 月 5 日  
+
+### <a name="whats-new"></a>新機能
+
+**SSIS:**
+
+1. スクリプト タスクまたはコンポーネントを保存するとコンパイル エラーが発生する VS 15.8 の回帰を修正しました。
+1. 配置ウィザードが動作しない VS 15.8 の回帰を修正しました。
+1. ADO.NET 接続マネージャーでサード パーティの ADO.NET プロバイダーがサポートされない問題を修正しました。
+
+**インストーラー:**
+
+- Windows 10 に SSDT をインストールしているときに途中で再起動する機能を実装しました。
+
+
+### <a name="known-issues"></a>既知の問題:
+
+- ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+
+
 
 
 ## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT for Visual Studio 2017 (15.7.1)

@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのアダプティブ クエリの処理 | Microsoft Docs | Microsoft Docs
 description: SQL Server (2017 以降) および Azure SQL Database のクエリ パフォーマンスを向上させるためのアダプティブ クエリ処理の機能です。
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 705f8115ff773668993dbbc408f97946e3c9b180
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2897b0bb371e68ab4e7cccaffe245191f21243ce
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087488"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171637"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Microsoft SQL データベースでのアダプティブ クエリの処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,9 @@ USE HINT クエリ ヒントは、データベース スコープ構成または
 ## <a name="row-mode-memory-grant-feedback"></a>行モード メモリ許可フィードバック
 **適用対象:** SQL Database (パブリック プレビューの機能)
 
+> [!NOTE]
+> 行モード メモリ許可フィードバックはパブリック プレビューの機能です。  
+
 行モード メモリ許可フィードバックは、バッチ モードと行モード両方の演算子のメモリ許可サイズを調整することで、バッチ モード メモリ許可フィードバックの機能を拡張します。  
 
 Azure SQL Database で行モード メモリ許可フィードバックのパブリック プレビューを有効にするには、クエリを実行する際に接続されるデータベースのデータベース互換レベル 150 を有効にします。
@@ -129,7 +132,8 @@ LastRequestedMemory では、前のクエリの実行から許可されたメモ
 | Yes: Adjusting | メモリ許可フィードバックが適用されています。また、次の実行に向けてさらに調整される可能性があります。 |
 | Yes: Stable | メモリ許可フィードバックが適用されています。また、許可されたメモリが安定しています (つまり、前回の実行で許可されたメモリと今回の実行で許可されたメモリが同じです)。 |
 
-現在、メモリ許可フィードバックのプラン属性は、SQL Server Management Studio のグラフィカルなクエリ実行プランでは表示されません。ただし、初期テストのために、SET STATISTICS XML ON または query_post_execution_showplan XEvent を使用してこれらを表示することができます。  
+> [!NOTE]
+> パブリック プレビューの行モード メモリ許可フィードバック プランの属性は、バージョン 17.9 以降の SQL Server Management Studio のグラフィカルなクエリ実行プランで表示されます。 
 
 ## <a name="batch-mode-adaptive-joins"></a>バッチ モード アダプティブ結合
 バッチ モード アダプティブ結合機能を使うと、最初の入力のスキャンが "**終わる**" まで、[ハッシュ結合方法または入れ子になったループ結合](../../relational-databases/performance/joins.md)方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、実行中により適切な結合方法に動的に切り替えることができます。

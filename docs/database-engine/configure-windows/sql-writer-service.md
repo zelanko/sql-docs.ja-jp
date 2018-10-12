@@ -25,12 +25,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6fab60401596743dc1cc38dd0c115e42ec89c71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80eb04dfefca7903592ea391d915e140d93f479f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865567"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888348"
 ---
 # <a name="sql-writer-service"></a>SQL ライター サービス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "32865567"
  VSS は、システム上のアプリケーションがボリュームへの書き込みを続行している間に、ボリューム バックアップを実行できるようにするためのフレームワークとなる COM API セットです。 VSS には、一貫性のあるインターフェイスが用意されており、ディスク上のデータを更新するユーザー アプリケーション (ライター) とアプリケーションをバックアップするユーザー アプリケーション (リクエスター) 間の連携が可能になります。  
   
  VSS は、実行中のシステム (特にサーバー) で提供されているサービスのパフォーマンスや安定性を必要以上に低下させることなく、これらのシステム上で安定したバックアップ イメージをキャプチャしてコピーします。 VSS の詳細については、Windows ドキュメントを参照してください。  
+
+> [!NOTE]
+> VSS を使用して、基本的な可用性グループをホストしている仮想マシンをバックアップする際に、その仮想マシンがセカンダリ状態にあるデータベースを現在ホストしている場合、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 以降では、これらのデータベースは仮想マシンと共にバックアップ*されません*。  この理由は、基本的な可用性グループではセカンダリ レプリカ上にあるデータベースのバックアップがサポートされていないためです。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこれらのバージョン以前では、バックアップはエラーとなって失敗します。
   
 ## <a name="virtual-backup-device-interface-vdi"></a>Virtual Backup Device Interface (VDI)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、Virtual Backup Device Interface (VDI) と呼ばれる API が用意されています。これにより、独立系ソフトウェア ベンダーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を独自の製品に統合して、バックアップおよび復元操作のサポートを提供できます。 これらの API は、最高の信頼性とパフォーマンスを提供するほか、ホット バックアップ機能やスナップショット バックアップ機能など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあらゆるバックアップおよび復元機能をサポートするように設計されています。  
@@ -77,4 +80,6 @@ ms.locfileid: "32865567"
   
 -   ページ復元  
   
-  
+## <a name="remarks"></a>Remarks
+SQL ライター サービスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンとは異なるサービスです。これは、同じサーバー上にあるさまざまなバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス全体で共有されます。  SQL ライター サービス ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール パッケージに含まれ、付属する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンと同じバージョン番号が付けられます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをサーバーにインストールするか、既存のインスタンスをアップグレードするときに、インストールまたはアップグレードするインスタンスのバージョン番号が現在サーバー上にある SQL ライター サービスのバージョン番号よりも大きい場合、そのファイルはインストール パッケージに含まれるファイルに置き換えられます。  サービス パックまたは累積更新プログラムによって SQL ライター サービスが更新されており、RTM バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしようとしている場合、インストールがより大きいメジャー バージョン番号を持っていれば、新しいバージョンの SQL ライター サービスを古いバージョンで置き換えることができます。  たとえば、SQL ライター サービスが [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 で更新されているとします。  そのインスタンスを [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM にアップグレードする場合、更新された SQL ライター サービスは古いバージョンに置き換えられます。  この場合、新しいバージョンの SQL ライター サービスを取得するために、新しいインスタンスに最新の CU を適用する必要があります。
+

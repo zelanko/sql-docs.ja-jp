@@ -1,7 +1,7 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 72b83f3f127aa4d63e9e39b2c828ad604a0b483d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 2ff620929c51cde29b82096c6437f7a6bfeefa50
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454176"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171824"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "39454176"
   OLE DB データ ソースからリモート データへのアクセスに必要な、すべての接続情報をインクルードします。 これは、リンク サーバー内のテーブルにアクセスする代わりに、OLE DB を使用してリモート データに接続しアクセスする特別な方法です。 OLE DB データ ソースをより頻繁に参照する場合は、代わりにリンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。 `OPENROWSET` 関数は、テーブル名と同じように、クエリの FROM 句で参照できます。 `OPENROWSET` 関数は、`INSERT`、`UPDATE`、または `DELETE` ステートメントのターゲット テーブルとしても参照できます。ただしこれは OLE DB プロバイダーの機能により制限されます。 クエリでは複数の結果セットが返される場合がありますが、`OPENROWSET` では最初の 1 つだけが返されます。  
   
  `OPENROWSET` では、組み込みの BULK プロバイダーによる一括操作もサポートされ、ファイルのデータを行セットとして読み取り、返すことができます。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -110,6 +108,9 @@ OPENROWSET
   
  BULK  
  ファイルからのデータ読み取りに OPENROWSET の BULK 行セット プロバイダーを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、OPENROWSET を使用すると、データを対象テーブルに読み込むことなくデータ ファイルからの読み取りができます。 このため、OPENROWSET は簡単な SELECT ステートメントで使用できます。  
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
   
  BULK オプションの引数を使用すると、データの読み取りを開始および終了する場所や、エラーの取り扱い、データの解釈方法について、細かく制御することができます。 たとえば、データ ファイルを **varbinary**、**varchar**、**nvarchar** 型の単一行、単一列の行セットとして読み取るように指定できます。 既定の動作については、後の引数の説明を参照してください。  
   
@@ -123,7 +124,10 @@ OPENROWSET
  '*data_file*'  
  データを対象テーブルにコピーするデータ ファイルの完全なパスを指定します。   
  **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、data_file は Azure Blog Storage に格納することができます。 例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、data_file は Azure Blob Storage に格納することができます。 例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
   
  \<bulk_options>  
  BULK オプションの引数を 1 つ以上指定します。  
@@ -149,7 +153,7 @@ OPENROWSET
   
  エラー ファイルはコマンドの実行開始時に作成されます。 存在するファイルの場合にはエラーが発生し、 拡張子 .ERROR.txt の制御ファイルが作成されます。 このファイルにはエラー ファイルの各行と、エラーの診断が含まれています。 エラーが修正されると、データは読み込み可能になります。  
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blog Storage に格納することができます。 
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blob Storage に格納することができます。 
 
 'errorfile_data_source_name'   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
@@ -219,7 +223,7 @@ FORMAT **=** 'CSV'
  フォーマット ファイルについては、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」をご覧ください。  
 
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、format_file_path は Azure Blog Storage に格納することができます。 例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、format_file_path は Azure Blob Storage に格納することができます。 例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
 
 FIELDQUOTE **=** 'field_quote'   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -307,6 +311,8 @@ SELECT CustomerID, CompanyName
       'admin';'',Customers);  
 GO  
 ```  
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
   
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. OPENROWSET と INNER JOIN 内の別のテーブルを使用する  
  次の例では、ローカル インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` データベース内の `Customers` テーブル 、および同じコンピューター上に格納されている Access `Northwind` データベースのテーブル `Orders` から、すべてのデータを選択します。  
@@ -325,6 +331,10 @@ FROM Northwind.dbo.Customers AS c
    ON c.CustomerID = o.CustomerID ;  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+
   
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. OPENROWSET を使用して、ファイル データを varbinary(max) 列に一括挿入する  
  次の例では、小さなテーブルを作成し、ルート ディレクトリ `C:` にあるファイル `Text1.txt` から `varbinary(max)` 列にファイル データを挿入します。  
@@ -342,7 +352,11 @@ INSERT INTO myTable(FileName, FileType, Document)
       * FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_BLOB) AS Document;  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
   
+
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. OPENROWSET BULK プロバイダーをフォーマット ファイルと共に使用して、テキスト ファイルから行を取得する  
  次の例では、フォーマット ファイルを使用して、タブ区切りのテキスト ファイル `values.txt` から行を取得します。このテキスト ファイルには次のデータが含まれます。  
   
@@ -367,7 +381,11 @@ GO
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
   
+
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. フォーマット ファイルとコード ページを指定する  
  次の例では、フォーマット ファイルとコード ページの両方のオプションを同時に使用する方法を示します。  
   
@@ -386,6 +404,10 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMAT='CSV') AS cars;  
 ```
 
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+
+
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. フォーマット ファイルなしで CSV ファイルのデータにアクセスする
 
 ```sql
@@ -393,6 +415,10 @@ SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
 ```
+
+> [!IMPORTANT]
+> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Azure Blob Storage に格納されているファイルのデータにアクセスする   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   

@@ -1,7 +1,7 @@
 ---
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,20 +27,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99d7e5d69e560fd5d94c38bdab1d29f6d5e0860e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 44c9ba8b3514c1a28ef2bbe800e0bec0c41b1bba
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456756"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171563"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   クラス メタデータとマネージド コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のオブジェクトとして含む、マネージド アプリケーション モジュールを作成します。 データベース内では、このモジュールを参照することにより、共通言語ランタイム (CLR) 関数、ストアド プロシージャ、トリガー、ユーザー定義集計関数、ユーザー定義型を作成できます。  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 >  [!WARNING]
 >  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。  
   
@@ -71,6 +69,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  \<client_assembly_specifier>  
 アップロードされているアセンブリが置かれるローカル パスまたはネットワーク上の位置と、そのアセンブリに対応するマニフェスト ファイル名を指定します。  \<client_assembly_specifier> は、固定文字列または変数で固定文字列に評価される式で表すことができます。 CREATE ASSEMBLY では、マルチモジュール アセンブリの読み込みはサポートされません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこのアセンブリの依存アセンブリが同じ場所にないか検索され、同じ所有者の依存アセンブリがルート レベル アセンブリとしてアップロードされます。 これらの依存アセンブリが検出されず、現在のデータベースに読み込まれていない場合、CREATE ASSEMBLY は失敗します。 依存アセンブリが現在のアセンブリに既に読み込まれている場合、これらのアセンブリの所有者は、新しく作成されたアセンブリの所有者と同じであることが必要です。
+
+> [!IMPORTANT]
+> Azure SQL Database では、ファイルからのアセンブリの作成はサポートされません。
   
  ログインしたユーザーの権限が借用されている場合、\<client_assembly_specifier> は指定できません。  
   
@@ -181,6 +182,9 @@ CREATE ASSEMBLY HelloWorld
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database では、ファイルからのアセンブリの作成はサポートされません。
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>例 b: アセンブリ ビットからアセンブリを作成します。  
   

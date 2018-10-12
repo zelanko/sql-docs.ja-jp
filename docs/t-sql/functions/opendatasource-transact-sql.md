@@ -1,7 +1,7 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,21 +27,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 63619b21a6e82458a64128a4f892cac6c6220420
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457966"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171574"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   リンク サーバー名を使用せずに、4 つの要素で構成されるオブジェクト名の一部としてアドホック接続情報を提供します。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -75,12 +73,12 @@ OPENDATASOURCE ( provider_name, init_string )
   
  OPENDATASOURCE 関数は、[!INCLUDE[tsql](../../includes/tsql-md.md)] 構文内のリンク サーバー名と同じ位置で使用できます。 つまり、この関数は、4 つの要素で構成される名前の先頭で、SELECT、INSERT、UPDATE、および DELETE ステートメント内のテーブル名やビュー名、または EXECUTE ステートメント内のリモート ストアド プロシージャを参照する要素として使用できます。 リモート ストアド プロシージャを実行する場合、OPENDATASOURCE では別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを参照する必要があります。 OPENDATASOURCE の引数に変数は指定できません。  
   
- OPENROWSET 関数と同様に、OPENDATASOURCE では、あまり頻繁にアクセスされない OLE DB データ ソースだけを参照してください。 頻繁にアクセスされるデータ ソースに対してはリンク サーバーを定義します。 OPENDATASOURCE でも OPENROWSET でも、リンク サーバー定義のすべての機能は提供されず、たとえばセキュリティ管理やカタログ情報に対してクエリを実行することはできません。 すべての接続情報は、パスワードを含め、OPENDATASOURCE を呼び出すたびに指定する必要があります。  
+ OPENROWSET 関数と同様に、OPENDATASOURCE では、あまり頻繁にアクセスされない OLE DB データ ソースだけを参照してください。 頻繁にアクセスされるデータ ソースに対してはリンク サーバーを定義します。 OPENDATASOURCE でも OPENROWSET でも、リンク サーバー定義のすべての機能は提供されず、たとえばセキュリティを管理したりカタログ情報に対してクエリを実行したりすることはできません。 すべての接続情報は、パスワードを含め、OPENDATASOURCE を呼び出すたびに指定する必要があります。  
   
 > [!IMPORTANT]  
 >  Windows 認証は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証よりもはるかに安全性に優れています。 できるだけ Windows 認証を使用してください。 接続文字列では、OPENDATASOURCE と共に明示的なパスワードを指定しないでください。  
   
- 各プロバイダーの接続要件は、リンク サーバー作成時におけるこれらのパラメーターの要件に似ています。 多くの一般的なプロバイダーについて詳しくは、「[sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)」をご覧ください。  
+ 各プロバイダーの接続要件は、リンク サーバー作成時におけるこれらのパラメーターの要件に似ています。 多くの一般的なプロバイダーについて詳しくは、「[sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)」の一覧をご覧ください。  
   
  FROM 句での OPENDATASOURCE、OPENQUERY、または OPENROWSET の呼び出しは、更新の対象として使用されるこれらの関数の呼び出しとは別に評価されます。これは、両方の呼び出しに同じ引数が指定されている場合にも当てはまります。 特に、いずれか一方の呼び出しの結果に適用されるフィルター条件または結合条件は、もう一方の結果に影響しません。  
   

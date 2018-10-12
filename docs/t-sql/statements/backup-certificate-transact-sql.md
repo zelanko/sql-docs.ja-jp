@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -32,19 +32,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e324d8823176e8153a6536be7dcd0a1ca8baae77
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: acc945ee464ae143f5ae9b2fd9ce803a3045d1f0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105735"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171594"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
 
   証明書をファイルにエクスポートします。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,28 +74,32 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## <a name="arguments"></a>引数  
  *path_to_file*  
- 証明書を保存するファイルの完全なパスを、ファイル名を含めて指定します。 ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DATA フォルダーのパスです。  
+ 証明書を保存するファイルの完全なパスを、ファイル名を含めて指定します。 このパスには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DATA フォルダーのパスです。  
   
  *path_to_private_key_file*  
- 秘密キーを保存するファイルの完全なパスを、ファイル名を含めて指定します。 ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DATA フォルダーのパスです。  
+ 秘密キーを保存するファイルの完全なパスを、ファイル名を含めて指定します。 このパスには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DATA フォルダーのパスです。  
+
+> [!IMPORTANT]
+> Azure SQL Database では、証明書のファイルへのバックアップはサポートされません。
+
   
  *encryption_password*  
  バックアップ ファイルに秘密キーを書き込む前に、キーを暗号化するため使用するパスワードを指定します。 パスワードに対しては、複雑性がチェックされます。  
   
  *decryption_password*  
- 秘密キーをバックアップする前に、秘密キーの暗号化を解除するため使用するパスワードを指定します。 証明書がマスター キーによって暗号化されている場合、これは必要はありません。 
+ 秘密キーをバックアップする前に、秘密キーの暗号化を解除するため使用するパスワードを指定します。 証明書がマスター キーによって暗号化されている場合、この引数は必要ありません。 
   
 ## <a name="remarks"></a>Remarks  
  データベースで秘密キーがパスワードによって暗号化されている場合は、暗号化解除パスワードを指定する必要があります。  
   
- 秘密キーをファイルにバックアップする場合は、暗号化が必要です。 バックアップした証明書の保護に使用するパスワードは、証明書の秘密キーの暗号化に使用するパスワードとは異なります。  
+ 秘密キーをファイルにバックアップする場合は、暗号化が必要です。 証明書の保護に使用するパスワードは、証明書の秘密キーの暗号化に使用するパスワードとは異なります。  
   
  バックアップした証明書を復元するには、[CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) ステートメントを使います。
  
  バックアップを実行すると、ファイルは SQL Server インスタンスのサービス アカウントに対して ACL されます。 別のアカウントで実行しているサーバーに証明書を復元する必要がある場合は、ファイルに対するアクセス許可を調整して、新しいアカウントでファイルの読み取りを実行できるようにする必要があります。 
   
 ## <a name="permissions"></a>アクセス許可  
- 証明書に対する CONTROL 権限と、秘密キーの暗号化に使用するパスワードの情報が必要です。 証明書のパブリックの部分だけをバックアップする場合は、証明書の権限が必要です。また、呼び出し元に対して証明書の VIEW 権限が拒否されていないことも必要になります。  
+ 証明書に対する CONTROL 権限と、秘密キーの暗号化に使用するパスワードの情報が必要です。 証明書のパブリックの部分だけをバックアップする場合、このコマンドには証明書に関する権限の一部が必要です。また、呼び出し元に対して証明書の VIEW 権限が拒否されていないことも必要になります。  
   
 ## <a name="examples"></a>使用例  
   

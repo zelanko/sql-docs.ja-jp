@@ -1,7 +1,7 @@
 ---
 title: SQL Server の拡張イベントのターゲット | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d8a163b14cd44aab21a294fedee918b34fd95b0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533822"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171784"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ SQL Server の拡張イベントは、Event Tracing for Windows (ETW) と連携�
 この ETW ターゲットは受信したデータを *同期的* に処理しますが、ほとんどのターゲットは *非同期的*に処理します。
 
 > [!NOTE]
-> Azure SQL Database データベースでは、ETW ターゲットはサポートされていません。 また、Azure SQL Database Managed Instance もサポートされていません。
+> Azure SQL Database では、`etw_classic_sync_target target` はサポートされません。
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -157,7 +157,7 @@ CREATE EVENT SESSION [event_counter_1]
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
-> Microsoft Azure SQL Database では、**event_file** ターゲットはサポートされていますが、Azure Storage で出力に BLOB を使用している場合にのみサポートされます。 SQL Database は、イベント出力をローカル ハード ドライブ上のファイルに格納できません。
+> Azure SQL Database でサポートされるのは、Azure Blob Storage に `xel` ファイルを格納することのみです。 
 >
 > 特に SQL Database (および SQL Database Managed Instance) の **event_file** のコード例については、「[SQL Database の拡張イベントのためのイベント ファイル ターゲット コード](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)」を参照してください。
 

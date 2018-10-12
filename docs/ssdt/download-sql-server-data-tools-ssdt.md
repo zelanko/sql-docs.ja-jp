@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) のダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: e2a11a9b01f6c1f45ba6f10bda351441235f8247
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 907b8a7d11bbd7889f3796d3f56633caec22a529
+ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152613"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743485"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,19 +48,18 @@ AS、IS、RS プロジェクト サポートをインストールするには、
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (スタンドアロン インストーラー)
 
-[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.7.1) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=875613) 
+[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.8) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2014060) 
 
 > [!IMPORTANT]
-> - SSDT for Visual Studio 2017 (15.7.1) をインストールする前に、"*Analysis Services プロジェクト*" と "*Reporting Services プロジェクト*" 拡張機能を既にインストールしてある場合はアンインストールし、すべての VS インスタンスを閉じます。
-> - Windows 10 に SSDT をインストールし、**[新しい SQL Server Data Tools for Visual Studio 2017 インスタンスをインストールします]** を選択するときは、すべてのチェック ボックスをオフにして、最初に新しいインスタンスをインストールしてください。 新しいインスタンスをインストールした後、コンピューターを再起動し、SSDT インストーラーを再度開いて、インストールを続行してください。  
+> - SSDT for Visual Studio 2017 (15.8) をインストールする前に、"*Analysis Services プロジェクト*" と "*Reporting Services プロジェクト*" 拡張機能を既にインストールしてある場合はアンインストールし、すべての VS インスタンスを終了してください。
 
 
 
 **バージョン情報**  
   
-リリース番号: 15.7.1  
-ビルド番号: 14.0.16167.0  
-リリース日: 2018 年 7 月 2 日  
+リリース番号: 15.8  
+ビルド番号: 14.0.16174.0  
+リリース日: 2018 年 9 月 5 日  
 
 詳細な変更一覧については、[変更ログ](changelog-for-sql-server-data-tools-ssdt.md)を参照してください。
 
@@ -70,17 +69,17 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 **SSDT for VS 2017** の今回のリリースは、次の言語でインストールできます。  
 
-[中国語 (簡体字)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
-[中国語 (繁体字)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
-[英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
-[フランス語]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
-[ドイツ語]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
-[イタリア語]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x410) | 
-[日本語]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x411) | 
-[韓国語]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x412) | 
-[ポルトガル語 (ブラジル)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x416) | 
-[ロシア語]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x419) | 
-[スペイン語]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40a)  
+[中国語 (簡体字)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x804) | 
+[中国語 (繁体字)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x404) | 
+[英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x409) | 
+[フランス語]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40c)  
+[ドイツ語]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x407) | 
+[イタリア語]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x410) | 
+[日本語]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x411) | 
+[韓国語]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x412) | 
+[ポルトガル語 (ブラジル)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x416) | 
+[ロシア語]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x419) | 
+[スペイン語]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40a)  
 
 
 

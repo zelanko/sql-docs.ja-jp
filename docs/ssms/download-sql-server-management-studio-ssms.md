@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio (SSMS) のダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36acedbe323b1b28c4b8db11d3241e77b8a8f322
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: c226957b2bd8c0a66bda053795fa1bbe96ba042f
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899762"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694735"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,16 +45,16 @@ SQL Server Management Studio (SSMS) を使用すると、データベースと�
 
 SSMS 17.x は、*SQL Server Management Studio* の最新世代であり、SQL Server 2017 をサポートしています。
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=875802) (以前のバージョン SSMS 17.x はコンピューター上に必要ありません)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2014306) (以前のバージョン SSMS 17.x はコンピューター上に必要ありません)**
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 アップグレード パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=875804) (17.x から 17.8.1 へのアップグレード。以前のバージョン SSMS 17.x がコンピューター上に必要です)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9 アップグレード パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2014215) (17.x から 17.9 へのアップグレード。以前のバージョン SSMS 17.x がコンピューター上に必要です)**
 
 
 **バージョン情報**
 
-リリース番号: 17.8.1<br>
-ビルド番号: 14.0.17277.0<br>
-リリース日: 2018 年 6 月 26 日
+リリース番号: 17.9<br>
+ビルド番号: 14.0.17285.0<br>
+リリース日: 2018 年 9 月 4 日
 
 SSMS 17.x のインストールでは、16.x 以前のバージョンの SSMS がアップグレードまたは置き換えられることはありません。 SSMS 17.x は以前のバージョンとは別にサイド バイ サイドでインストールするので、両方のバージョンが使用できます。
 コンピューターに SSMS のサイド バイ サイドのインストールが含まれている場合は、特定のニーズに応じて適切なバージョンを起動してください。 最新バージョンには、*Microsoft SQL Server Management Studio 17* というラベルと新しいアイコンが付いています。 
@@ -70,11 +70,11 @@ SSMS 17.x のインストールでは、16.x 以前のバージョンの SSMS �
 
 SSMS の今回のリリースは、次の言語でインストールできます。
 
-SQL Server Management Studio 17.8.1:<br>
-[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
+SQL Server Management Studio 17.9:<br>
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
-SQL Server Management Studio 17.8.1 アップグレード パッケージ (17.x から 17.8.1 へのアップグレード):<br>
-[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
+SQL Server Management Studio 17.9 アップグレード パッケージ (17.x から 17.9 へのアップグレード):<br>
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールになりました。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。
@@ -84,27 +84,19 @@ SQL Server Management Studio 17.8.1 アップグレード パッケージ (17.x 
 
 ## <a name="new-in-this-release"></a>このリリースの新機能
 
-SSMS 17.8.1 は SQL Server Management Studio の最新バージョンです。 SSMS の 17.x 世代は、SQL Server 2008 から SQL Server 2017 までのほぼすべての機能領域をサポートしています。 バージョン 17.x は、SQL Analysis Service PaaS もサポートしています。
+SSMS 17.9 は SQL Server Management Studio の最新バージョンです。 SSMS の 17.x 世代は、SQL Server 2008 から SQL Server 2017 までのほぼすべての機能領域をサポートしています。 バージョン 17.x は、SQL Analysis Service PaaS もサポートしています。
 
-バージョン 17.8.1 の内容:
+バージョン 17.9 の内容:
 
 **SSMS 全般**
 
-データベースのプロパティ:
+プラン表示:
 
-- このバージョンでは、ファイル グループ用の "AUTOGROW_ALL_FILES" 構成オプションが公開されます。 この新しい構成オプションは、[データベースのプロパティ] > [ファイル グループ] ウィンドウにおいて、使用可能なファイル グループ (ファイルストリーム ファイル グループとメモリ最適化ファイル グループを除く) ごとにチェック ボックスの新しい列 ([すべてのファイルを自動拡張]) の形式で追加されます。 ユーザーは、対応する [すべてのファイルを自動拡張] チェック ボックスをオン/オフにすることで、特定のファイル グループに対して AUTOGROW_ALL_FILES を有効/無効にすることができます。 それに応じて、CREATE 用のデータベースのスクリプト化またはデータベース (SQL 2016 以上) 用のスクリプトの生成の際に、AUTOGROW_ALL_FILES オプションが適切にスクリプト化されます。
-    
-SQL エディター:
+- グラフィカルなプラン表示で、特定のプランに向けてこの機能をアクティブ化したときに、新しい行モード メモリ許可フィードバックの属性が表示されるようになりました: IsMemoryGrantFeedbackAdjusted と LastRequestedMemory が MemoryGrantInfo クエリ プランの XML 要素に追加されます。 行モード メモリ許可フィードバックについて詳しくは、「[Microsoft SQL データベースでのアダプティブ クエリの処理](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing)」をご覧ください。
 
-- ユーザーにマスターへのアクセス権がない場合の、Azure SQL Database における Intellisense のエクスペリエンスが向上しました。
+Azure SQL: 
 
-スクリプトの作成:
-
-- 全般的な (特に、待機時間の長い接続における) パフォーマンスが向上しました。
-    
-**Analysis Services (AS)**
-
-- Analysis Services クライアント ライブラリとデータ プロバイダーが最新バージョンに更新され、新しい Azure Government AAD 権限 (login.microsoftonline.us) のサポートが追加されました。
+- Azure DB の作成に仮想コア SKU のサポートが追加されました。 詳細については、「[仮想コアベースの購入モデル](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model)」をご覧ください。
 
 
 ## <a name="supported-sql-offerings"></a>サポートされる SQL 製品
@@ -142,16 +134,8 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 ## <a name="release-notes"></a>リリース ノート
 
-この 17.8.1 リリースの問題と制限事項を次に示します。
+現在、このリリースに既知の問題はありません。
 
-- *[プロパティ]* ウィンドウでファイル グループのプロパティを変更した後に *[スクリプト]* ボタンをクリックすると、2 つのスクリプトが生成されます。1 つ目は *USE<database>* ステートメントを使用したスクリプト、2 つ目は *USE master* ステートメントを使用したスクリプトです。  *USE master* を使用したスクリプトの生成時にはエラーが発生するため、このスクリプトを破棄する必要があります。 *USE <database>* ステートメントを含むスクリプトを実行してください。
-- 新しい *General Purpose* または *Business Critical* エディションの Azure SQL Database を使用するとき、無効なエディションであるというエラーが一部のダイアログに表示されます。
-- XEvent ビューアーで待機時間が発生する場合があります。 これは、[.NET Framework における既知の問題](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)です。 NetFx 4.7.2 へのアップグレードを検討してください。
-- レプリケーション モニターが "*ファイルまたはアセンブリを読み込めませんでした...*" というエラーと共にクラッシュします。 この問題は次の方法で回避できます。
-  1. *SqlMonitor.exe* (つまりレプリケーション モニター) と SSMS を閉じます。
-  2. 更新済みの *sqlmonitor.exe.config* を [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw) からダウンロードします。
-  3. *sqlmonitor.exe.config* (通常 "C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn" にあります) を、ダウンロードしたものと置き換えます。
-  4. SSMS とレプリケーション モニターを再起動します。
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>SSMS をアンインストールおよび再インストールする
