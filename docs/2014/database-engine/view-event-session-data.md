@@ -11,12 +11,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d25e4c745ba7cd5d937ed558283c21a49d6ec0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159492"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120299"
 ---
 # <a name="view-event-session-data"></a>イベント セッション データの表示
   このトピックでは、表示のユーザー インターフェイスを使用して、拡張イベント データを表示および分析する方法について説明します。  
@@ -26,7 +26,7 @@ ms.locfileid: "48159492"
 -   データの処理  
   
 ## <a name="view-target-data"></a>[ターゲット データの表示]  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 内で指定したターゲットに収集されたデータを表示することができます。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]内で指定したターゲットに収集されたデータを表示することができます。  
   
 ### <a name="view-target-data"></a>ターゲット データの表示  
  ターゲット データを表示するには:  
@@ -45,13 +45,13 @@ ms.locfileid: "48159492"
   
 -   event_file ターゲットの場合、ファイル ターゲット データ (.XEL ファイル) を表示するには、次のいずれかの方法を使用します。  
   
-    -   ファイルを使用するには [開く]-> [[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]します。  
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で [ファイル] -> [開く] を使用する。  
   
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] にファイルをドラッグ アンド ドロップする。  
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]にファイルをドラッグ アンド ドロップする。  
   
     -   .XEL ファイルをダブルクリックする。  
   
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で、実行中の拡張イベント セッションを右クリックし、[ターゲット データの表示] をクリックする。  
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、実行中の拡張イベント セッションを右クリックし、[ターゲット データの表示] をクリックする。  
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48159492"
  **[詳細]** ペインには、フィールドとアクションを含め、選択したイベントのすべての列が表示されます。 ターゲット データ テーブルに列を追加するには、 **[詳細]** ペインで行を右クリックし、 **[テーブルの列を表示する]** をクリックします。  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>結合列の作成、変更、および削除  
- 結合列を使用すると、一連のフィールドを結合して、1 つの列に表示することができます。 結合列には、NULL 以外の最初のフィールドのデータが、フィールド リストに追加されたときの順序で表示されます。 表示される内容に似ています[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Profiler、特定の列が、イベントに応じて、異なるデータを表示可能性があります (これの最も一般的な例は、TextData フィールド[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Profiler)。 たとえば、sql_statement_completed イベントのステートメントと sql_batch_completed イベントの batch_text フィールドを myStatement という名前のフィールドに結合できます。 テーブルに myStatement 列を表示すると、関連付けられているイベントの適切なデータが表示されます。  
+ 結合列を使用すると、一連のフィールドを結合して、1 つの列に表示することができます。 結合列には、NULL 以外の最初のフィールドのデータが、フィールド リストに追加されたときの順序で表示されます。 これは、イベントに応じて異なるデータが特定の列に表示される [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler の表示に似ています (これの最も一般的な例は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler の TextData フィールドです)。 たとえば、sql_statement_completed イベントのステートメントと sql_batch_completed イベントの batch_text フィールドを myStatement という名前のフィールドに結合できます。 テーブルに myStatement 列を表示すると、関連付けられているイベントの適切なデータが表示されます。  
   
  結合列を作成、変更、または削除するには、次の手順を実行します。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48159492"
  列がグループ化されている場合、データはグループ内のみで並べ替えられます。  
   
 ### <a name="group-results"></a>結果のグループ化  
- グループ化した結果が同等の機能に、`GROUP BY`句[!INCLUDE[tsql](../includes/tsql-md.md)]します。 ターゲット データ テーブルにはグループ化されたデータが表示され、データの展開と折りたたみを行うことができます。  
+ 結果のグループ化は、[!INCLUDE[tsql](../includes/tsql-md.md)] の `GROUP BY` 句と同等の機能です。 ターゲット データ テーブルにはグループ化されたデータが表示され、データの展開と折りたたみを行うことができます。  
   
  データは、集計する前にグループ化する必要があります。 たとえば、query_hash 値でグループ化し、実行時間を基準に降順に並べ替え、各グループの平均実行時間を取得した後、集計を基準に降順に並べ替えることができます。  これにより生成された一覧には、平均実行時間が長い方から順に並べ替えられた一意のステートメントの一覧が表示されます。 一番上のグループを展開すると、そのクエリの個々の実行時間が長い方から順に表示されます。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48159492"
   
     -   [テーブル列]。 トレース ウィンドウに表示されているすべての列を検索するには、このオプションを使用します。  
   
-    -   [詳細]。 **[拡張イベントで検索]** ダイアログ ボックスを開く前に選択したトレース ウィンドウのすべての (昇格および未昇格の) 列を検索するには、このオプションを使用します。  
+    -   [詳細]。 このオプションを使用して開始する前に選択されたトレース ウィンドウに (昇格および未昇格の) すべての列を検索、**拡張イベントで検索** ダイアログ ボックス。  
   
     -   *Event_column_name*。 ドロップダウン リストから特定のイベント列で検索するには、このオプションを使用します。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "48159492"
   
  トレース結果をコピーするには、セルまたは行 (行は複数可) を選択し、右クリックして、 **[コピー]** をクリックし、 **[セル]**、 **[行]**、または **[詳細]** をクリックします。 拡張イベントは、最大 1000 行のコピーをサポートしています。  
   
- トレース結果をエクスポートすることができます、します。XEL ファイル、テーブル、または。CSV ファイルを選択して**エクスポート**から、**拡張イベント**メニュー オプション[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]します。  
+ トレース結果を .XEL ファイル、テーブル、または .CSV ファイルにエクスポートするには、 **で** [拡張イベント] **メニュー オプションの** [エクスポート先] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]をクリックします。  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Deadlock Graph とクエリ プランの表示  
  [詳細] ペインで **xml_deadlock_report** のデッドロック グラフを表示して、デッドロックのトラブルシューティングを行うことができます。 次のイベントのクエリ プラン グラフを表示することもできます。  
