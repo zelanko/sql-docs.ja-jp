@@ -14,12 +14,12 @@ ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f96a07b6106667a06c492a368799994849cae10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf276d4abc28edc6f6d8d99f351752fb0c71856b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704807"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905743"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database の拡張ストアド プロシージャ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47704807"
  [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)  
  リモート Azure テーブルに格納されているバッチ ID を持つ最も最近移行したデータの SQL Server の拡張が有効なテーブルに格納されているバッチ ID を調整します。 
  
-[sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md)内の列に、リモート Azure テーブルの列を調整する、Stretch 対応 SQL Server テーブル。
+[sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) Stretch 対応 SQL Server テーブルの列に、リモート Azure テーブルの列を調整します。
  
  [sys.sp_rda_reconcile_indexes](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md)リモート テーブルのインデックスを調整するスキーマ タスク キューに配置します。
  

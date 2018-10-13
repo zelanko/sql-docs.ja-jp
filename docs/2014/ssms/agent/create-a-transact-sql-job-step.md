@@ -14,12 +14,12 @@ ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0cb55f71c38a0911b38b52fea426f0e09f47fef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 698e2d52746cd641a962e51bdc613b093ac6f9fb
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076282"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119509"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップを作成する方法について説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "48076282"
   
      [SQL Server 管理オブジェクト](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
  詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)」をご覧ください。  
@@ -80,7 +80,7 @@ ms.locfileid: "48076282"
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
-    -- creates a job step that that uses Transact-SQL  
+    -- creates a job step that uses Transact-SQL  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  

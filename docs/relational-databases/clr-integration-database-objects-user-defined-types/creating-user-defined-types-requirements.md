@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697121"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119750"
 ---
 # <a name="creating-user-defined-types---requirements"></a>ユーザー定義型の作成 - 要件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47697121"
   
  **bool**、**バイト**、 **sbyte**、**短い**、 **ushort**、 **int**、 **uint**、**長い**、 **ulong**、 **float**、**二重**、 **SqlByte**、**SqlInt16**、 **SqlInt32**、 **SqlInt64**、 **SqlDateTime**、 **SqlSingle**、 **SqlDouble**、 **SqlMoney**、 **SqlBoolean**  
   
- 値の型をこれらの型のフィールドで構成される適した候補となる**ネイティブ**書式設定など**構造体**Visual c# (または**構造**がで知られているとVisual Basic の場合)。 UDT を指定するなど、**ネイティブ**シリアル化形式で指定したもう 1 つの UDT のフィールドを含めることができます、**ネイティブ**形式。 指定する必要があるかどうか、UDT の定義がより複雑な上記の一覧にないデータ型が含まれています、 **UserDefined**シリアル化形式します。  
+ 上記の型のフィールドの値型で構成されているは候補として適して**ネイティブ**書式設定など**構造体**Visual c# では、(または**構造**で呼ばれています、Visual Basic の場合)。 UDT を指定するなど、**ネイティブ**シリアル化形式で指定したもう 1 つの UDT のフィールドを含めることができます、**ネイティブ**形式。 指定する必要があるかどうか、UDT の定義がより複雑な上記の一覧にないデータ型が含まれています、 **UserDefined**シリアル化形式します。  
   
  **ネイティブ**形式は、次の要件。  
   

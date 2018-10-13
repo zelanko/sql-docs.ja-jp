@@ -13,12 +13,12 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c298daa69c57c7771787c181cc0087927ff83f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163502"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119875"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>タスク 4: 結果を管理および表示する
   ここでは、コンピューター支援型のクレンジングの結果を確認し、仕入先データに対してインタラクティブなクレンジングを実行します。 参照してください[インタラクティブなクレンジング ステージ](http://msdn.microsoft.com/library/hh213061.aspx#Interactive)の詳細。  
@@ -55,7 +55,7 @@ ms.locfileid: "48163502"
   
     1.  注意**A. Datum Corp.** に修正が**A. Datum Corporation**と**理由**に設定されている**用語ベースのリレーション。A. datum Corporation** DQS に既知のドメイン値をナレッジ検出プロセス中に検出されたためにです。 そのため、DQS は**100% 確信があります**この修正に関してです。  
   
-    2.  注意を**Lazy Country Storex**に修正が**Lazy Country Store**、**信頼レベル**に設定されている**100%**、および、 **理由**に設定されている**ドメイン値**します。 設定する、ナレッジ検出プロセス中に**Lazy Country Storex**をエラーとして**Lazy Country Store**として、**修正**ので、DQS は**100%確信**この修正に関してです。  
+    2.  注意**Lazy Country Storex**に修正が**Lazy Country Store**、**信頼レベル**に設定されている**100%**、および、 **理由**に設定されている**ドメイン値**します。 設定する、ナレッジ検出プロセス中に**Lazy Country Storex**をエラーとして**Lazy Country Store**として、**修正**ので、DQS は**100%確信**この修正に関してです。  
   
     3.  DQS が一覧で、その他の値に精通していないが、これらの値を使用して修正を検出、**スペル チェッカー**され、適切な修正が提案されます。 DQS は**100%** DQS の修正候補を提示するために、修正を行うためのしきい値のレベルが 80% を超える信頼レベルが、これらの修正に確信が。  
   

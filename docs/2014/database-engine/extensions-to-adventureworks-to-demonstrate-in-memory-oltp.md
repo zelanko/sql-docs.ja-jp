@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ef00c8493ab700976e1ede1b6d6631b6d2fe8da
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
-ms.translationtype: MT
+ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192192"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
     
@@ -183,7 +180,7 @@ ms.locfileid: "40393734"
   
  Sales.SalesOrderHeader_inmem  
   
--   *既定の制約* はメモリ最適化テーブルでサポートされ、そのほとんどがそのまま移行されています。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 同時実行が多くスループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入する [!INCLUDE[hek_2](../includes/hek-2-md.md)] ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
+-   *既定の制約* はメモリ最適化テーブルでサポートされ、そのほとんどがそのまま移行されています。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 コンカレンシーが多くスループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入する [!INCLUDE[hek_2](../includes/hek-2-md.md)] ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
   
 -   *エイリアス UDT* - 元のテーブルでは、2 つのエイリアス ユーザー定義データ型 (UDT) が使用されます。1 つは dbo.OrderNumber で、これは PurchaseOrderNumber 列に対して使用されます。もう 1 つは dbo.AccountNumber で、AccountNumber 列に対して使用されます。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
   
@@ -462,7 +459,7 @@ END
   
  前のスクリプトでは、メモリ最適化テーブルに販売注文が挿入されます。 ディスク ベース テーブルに販売注文を挿入するスクリプトを取得するには、2 つある "_inmem" を "_ondisk" に置き換えます。  
   
- ostress ツールを使って、複数の同時接続を使用してスクリプトを実行します。 "- n" パラメーターで接続数を制御し、"r" パラメーターで各接続のスクリプト実行回数を制御します。  
+ ostress ツールを使って、複数のコンカレント接続を使用してスクリプトを実行します。 "- n" パラメーターで接続数を制御し、"r" パラメーターで各接続のスクリプト実行回数を制御します。  
   
 #### <a name="functional-validation-of-the-workload"></a>ワークロードの機能検証  
  動作しますが、サンプルのテストで開始することを確認するを同時に 10 を使用して接続と 10 * 5 の合計を挿入する 5 つのイテレーション\*20 = 1000 の販売注文します。  
@@ -540,13 +537,13 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
  デモの実行が完了するたびに、リセットすることをお勧めします。 このワークロードは挿入のみであるため、実行のたびに多くのメモリを消費します。このため、メモリ不足が発生しないようにリセットが必要です。 実行後に消費されるメモリ量について、セクション「 [ワークロード実行後のメモリ使用率](#Memoryutilizationafterrunningtheworkload)」で説明しています。  
   
 ###  <a name="Troubleshootingslow-runningtests"></a> 実行速度の遅いテストのトラブルシューティング  
- テスト結果は、通常、ハードウェアと、テスト実行で使用された同時実行のレベルによって変わります。 期待した結果を得られない場合に確認することをいくつか次に示します。  
+ テスト結果は、通常、ハードウェアと、テスト実行で使用されたコンカレンシーのレベルによって変わります。 期待した結果を得られない場合に確認することをいくつか次に示します。  
   
--   同時実行トランザクションの数: 1 つのスレッドでワークロードを実行すると、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルの同時実行がある場合、唯一大きな問題になるのがラッチ競合です。  
+-   同時実行トランザクションの数: 1 つのスレッドでワークロードを実行すると、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるコアが少ない: つまり、低レベルの同時実行がシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションを同時実行できないからです。  
+-   ph x="1" /&gt; で使用できるコアが少ない: つまり、低レベルのコンカレンシーがシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションをコンカレンシーできないからです。  
   
-    -   現象: ディスク ベース テーブルでワークロードを実行しているときに CPU 使用率が高い場合、競合の数はそれほど多くありません。これは、同時実行が不足していることを示します。  
+    -   現象: ディスク ベース テーブルでワークロードを実行しているときに CPU 使用率が高い場合、競合の数はそれほど多くありません。これは、コンカレンシーが不足していることを示します。  
   
 -   ログ ドライブの速度: ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 [!INCLUDE[hek_2](../includes/hek-2-md.md)]でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
   
@@ -875,7 +872,7 @@ ORDER BY state, file_type
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
   
- この場合、"under construction" 状態のチェックポイント ファイルのペアが 2 組あります。これは、複数のファイル ペアが、おそらくワークロードにおける高レベルの同時実行が原因で、"under construction" 状態に移行されたことを意味します。 一方、複数の同時実行スレッドには新しいファイル ペアが必要だったため、ペアの状態が "precreated" から "under construction" に移行されました。  
+ この場合、"under construction" 状態のチェックポイント ファイルのペアが 2 組あります。これは、複数のファイル ペアが、おそらくワークロードにおける高レベルのコンカレンシーが原因で、"under construction" 状態に移行されたことを意味します。 一方、複数の同時実行スレッドには新しいファイル ペアが必要だったため、ペアの状態が "precreated" から "under construction" に移行されました。  
   
 ## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
