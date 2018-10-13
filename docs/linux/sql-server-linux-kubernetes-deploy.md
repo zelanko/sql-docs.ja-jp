@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 776b4390c78a6bd228989b94dd76d4a269f94126
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: e062f97f5fe63966cf3b03b9727cd13a509d3ae5
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818060"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878105"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>Always On 可用性グループの Kubernetes クラスターで SQL Server をデプロイします。
 
@@ -39,7 +39,7 @@ Kubernetes で、展開には、SQL Server の演算子では、SQL Server の�
   >Kubernetes クラスターの任意の型を使用することができます。 Azure Kubernetes Service (AKS) での Kubernetes クラスターを作成するを参照してください。 [AKS クラスターの作成](http://docs.microsoft.com/azure/aks/create-cluster)です。
   > 次のスクリプトでは、Azure で 4 つのノードの Kubernetes クラスターを作成します。
   >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3
+  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
   >```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>演算子、SQL Server のコンテナー、およびサービスの負荷分散展開します。

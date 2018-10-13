@@ -17,12 +17,12 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9a8ef18dca7bf61907219d4a09882c62deb2712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80c7f690a4b24ef82cb3da34dea50c98cf836f4
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833360"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119659"
 ---
 # <a name="aggregate-functions---avg"></a>集計関数 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="remarks"></a>コメント  
  渡されるアトミック値の型をすべて**avg()** する 3 つの組み込み数値基本データ型または xdt:untypedAtomic のいずれかのサブタイプである必要があります。 これらの型を混在させることはできません。 xdt:untypedAtomic 型の値は、xs:double として扱われます。 結果**avg()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。  
   
- 入力が静的に空の場合、空になることが暗黙に示され、静的エラーが発生します。  
+ 入力が静的に空の場合は、結果が暗黙的に空になり、静的エラーが生成されます。  
   
  **Avg()** 関数は、計算される数値の平均値を返します。 以下に例を示します。  
   

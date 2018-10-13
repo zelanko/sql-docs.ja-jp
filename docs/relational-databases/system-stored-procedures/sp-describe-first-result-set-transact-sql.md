@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c538f7433034744e5a2799c38e6b5f5826ba48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705880"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072066"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,7 +44,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ## <a name="arguments"></a>引数  
  [  **\@tsql =** ] **'***Transact SQL_batch***'**  
- 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
+ 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
   
  [  **\@params =** ] **N'***パラメーター***'**  
  \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** します。  
@@ -61,7 +61,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   2 に設定すると、各クエリはカーソルを準備するか実行するために使用されているように分析されます。 ビュー名がソース列情報として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **sp_describe_first_result_set**常に成功した場合に 0 の状態を返します。 プロシージャは、エラーをスローします。 プロシージャが RPC として呼び出された場合は、状態の戻り値は sys.dm_exec_describe_first_result_set の error_type 列に記述されているエラーの種類が設定されます。 プロシージャが呼び出された場合[!INCLUDE[tsql](../../includes/tsql-md.md)]、戻り値は常に 0、エラーがある場合でもです。  
+ **sp_describe_first_result_set**常に成功した場合に 0 の状態を返します。 プロシージャは、エラーをスローします。 プロシージャが RPC として呼び出された場合は、状態の戻り値は sys.dm_exec_describe_first_result_set の error_type 列に記述されているエラーの種類が設定されます。 プロシージャが [!INCLUDE[tsql](../../includes/tsql-md.md)] から呼び出されると、エラーの場合であっても戻り値は常に 0 です。  
   
 ## <a name="result-sets"></a>結果セット  
  この共通メタデータは、結果のメタデータの各列に対する 1 行の結果セットとして返されます。 各行には、列の種類と NULL 値の許容属性が次のセクションに示す形式で記述されます。 最初のステートメントは、各コントロールのパスが存在しない場合は、0 行を含む結果セットが返されます。  
@@ -75,7 +75,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**system_type_id**|**int NOT NULL**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
 |**system_type_name**|**nvarchar(256) NULL**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
 |**max_length**|**smallint NOT NULL**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**します。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'** します。|  
-|**有効桁数**|**tinyint NOT NULL**|数値ベースの場合は、列の有効桁数です。 それ以外の場合 0 を返します。|  
+|**有効桁数 (precision)**|**tinyint NOT NULL**|数値ベースの場合は、列の有効桁数です。 それ以外の場合 0 を返します。|  
 |**scale**|**tinyint NOT NULL**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合 0 を返します。|  
 |**collation_name**|**sysname NULL**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合、NULL を返します。|  
 |**user_type_id**|**int NULL**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
@@ -113,7 +113,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  名前、NULL 値の許容属性、およびデータ型が異なる可能性があります。 場合**sp_describe_first_result_set**バッチ実行の結果セットが返される保証は、空の結果セットを返します。  
   
- この保証は、サーバー上で関連スキーマの変更がないことを前提としています。 サーバーに関連するスキーマ変更したりしないでください一時テーブルの作成は、テーブル間のバッチ A で変数を**sp_describe_first_result_set**呼びますと中に返される結果セット時刻B. バッチによるスキーマ変更をなどの実行  
+ この保証では、サーバーに関連するスキーマの変更がないと仮定します。 サーバーに関連するスキーマ変更したりしないでください一時テーブルの作成は、テーブル間のバッチ A で変数を**sp_describe_first_result_set**呼びますと中に返される結果セット時刻B. バッチによるスキーマ変更をなどの実行  
   
  **sp_describe_first_result_set**場合は、次のいずれかでエラーが返されます。  
   

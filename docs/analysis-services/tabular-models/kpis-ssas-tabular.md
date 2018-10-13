@@ -1,5 +1,5 @@
 ---
-title: Kpi |Microsoft ドキュメント
+title: Kpi |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6eaaf0fc4589fb07484dd10479ded4956650b245
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043726"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906432"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  *KPI* (主要業績評価指標) は、表形式モデルで、 *対象* の値に対する *ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 この記事は、表形式モデルの作成者が表形式モデルの Kpi の基本を理解を提供します。  
+  *KPI* (主要業績評価指標) は、表形式モデルで、 *対象* の値に対する *ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 この記事では、表形式モデルで Kpi の基本を理解を表形式モデルの作成者に提供します。  
   
 ##  <a name="bkmk_benefits"></a> 利点  
  ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネス目標を判断するための測定値のことです。 KPI は一定期間中頻繁に評価されます。 たとえば、組織の営業部門では KPI を使用して予測総利益に対する月間売上総利益を測定できます。 経理部門では、月間の収入に対する支出を測定してコストを評価し、人事部門では、四半期単位の従業員離職率を測定することができます。 これらはそれぞれ KPI の一例です。 企業のプロフェッショナルは、グループにまとめて事業のスコアカードに記録した KPI を頻繁に使用し、事業の成功度の履歴要約をすばやく正確に取得したり、傾向を把握したりします。  
@@ -35,9 +35,9 @@ ms.locfileid: "34043726"
  状態のしきい値は、低いしきい値と高いしきい値との間の範囲によって、または固定値によって定義されます。 状態のしきい値は、対象の値と比べたベース値の状態を簡単に判別できるようにグラフィックで表示されます。  
   
 ##  <a name="bkmk_example"></a> 例  
- Adventure Works の販売責任者は、販売担当者の一定期間 (年) の販売ノルマの達成状況がひとめでわかるようなピボットテーブルを作成しようとしています。 ピボットテーブルには販売担当者ごとの実績販売額 (ドル) と販売ノルマ額 (ドル) を表示し、各担当者がノルマを下回っているか、上回っているかの状態を示す簡単なグラフィックを表示することにします。 データは年単位でスライスできるようにしたいと考えています。  
+ Adventure Works の販売責任者は、販売担当者の一定期間 (年) の販売ノルマの達成状況がひとめでわかるようなピボットテーブルを作成しようとしています。 各販売の従業員の彼女ドルで実績販売額をドルの販売ノルマとかどうか、各営業担当者の下で、以上、販売ノルマのステータスを示す単純なグラフィック表示を表示するピボット テーブルが希望しています。 データは年単位でスライスできるようにしたいと考えています。  
   
- これを実現するために、組織の BI ソリューション開発者にサポートを依頼し、AdventureWorks 表形式モデルに販売 KPI を追加することにします。 販売責任者、Adventure Works 表形式モデル データ ソースに接続し、フィールド (メジャーと KPI) と、営業担当者がノルマを達成するかどうかを分析するスライサーをピボット テーブルを作成する Excel が使用されます。  
+ これを実現するために、組織の BI ソリューション開発者にサポートを依頼し、AdventureWorks 表形式モデルに販売 KPI を追加することにします。 営業マネージャーとしてデータ ソース Adventure Works 表形式モデルに接続し、フィールド (メジャーと KPI) と営業担当者がそのクォータに達しているかどうかを分析するスライサーをピボット テーブルを作成する Excel が使用されます。  
   
  モデルの FactResellerSales テーブルの SalesAmount 列に、各販売担当者の実績販売額をドル単位で表すメジャーが作成されます。 このメジャーは KPI のベース値を定義します。  
   
@@ -71,7 +71,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ##  <a name="bkmk_related_tasks"></a> 関連タスク  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[KPI の作成および管理](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|ベース メジャー、対象のメジャー、および状態のしきい値と共に KPI を作成する方法について説明します。|  
   

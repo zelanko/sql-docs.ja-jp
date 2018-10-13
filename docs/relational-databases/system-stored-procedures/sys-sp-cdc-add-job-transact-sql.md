@@ -20,12 +20,12 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 544f6d9f8610ff9845df4c417d880fd88c4c180c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812107"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168796"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_type=** ] **'***job_type***'**  
+ [  **@job_type=** ] **'**_ジョブ\_型_**'**  
  追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力は **'capture'** と **'cleanup'** します。  
   
  [  **@start_job=** ] *start_job*  
@@ -60,12 +60,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *max_trans*はキャプチャ ジョブでのみ有効です。  
   
- [ **@maxscans** ] **= * * * max_scans*  
+ [ **@maxscans** ] **=** _max\_スキャン_  
  ログからすべての行を抽出するために実行する最大スキャン サイクル数を指定します。 *max_scans*は**int**既定値は 10 です。  
   
  *max_scan*はキャプチャ ジョブでのみ有効です。  
   
- [ **@continuous** ] **= * * * 継続的な*  
+ [ **@continuous** ] **=**_継続的な_  
  キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を指定します。 *継続的な*は**ビット**既定値は 1 です。  
   
  ときに*連続*= 1、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブは、ログをスキャンし、最大処理 (*max_trans* \* *max_scans*)トランザクション。 指定された秒数待機し、 *polling_interval*次のログ スキャンを開始する前にします。  
@@ -74,17 +74,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *継続的な*はキャプチャ ジョブでのみ有効です。  
   
- [ **@pollinginterval** ] **= * * * polling_interval*  
+ [ **@pollinginterval** ] **=**_ポーリング\_間隔_  
  ログ スキャン サイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**既定値は 5 です。  
   
  *polling_interval*キャプチャに対してのみ有効ですがジョブの場合に*連続*が 1 に設定します。 指定する場合、値には負の数を指定できず、24 時間が上限になります。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
   
- [ **@retention** ] **= * * * 保有期間*  
+ [ **@retention** ] **=**_保有期間_  
  変更データ行が変更テーブルに保持される分数を指定します。 *保有期間*は**bigint**既定値は 4320 (72 時間)。 最大値は 52494800 (100 年) です。 指定する場合、値は正の整数にする必要があります。  
   
  *保有期間*はクリーンアップ ジョブでのみ有効です。  
   
- [  **@threshold =** ] **'***delete_threshold***'**  
+ [  **@threshold =** ] **'**_削除\_しきい値_**'**  
  クリーンアップ時に 1 つのステートメントを使用して削除できる最大削除エントリ数を指定します *delete_threshold*は**bigint**既定値は 5000 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -98,7 +98,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  クリーンアップ ジョブとキャプチャ ジョブは既定で作成されるため、このストアド プロシージャが必要となるのは、ジョブを明示的に削除した後で、再び作成する必要が生じた場合だけです。  
   
- ジョブの名前は**cdc ***。< database_name >***_cleanup**または**cdc ***。< database_name >***_capture**ここで、 *< database_name >* 現在のデータベースの名前を指定します。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 (**.**) などの一意の識別子が続く: **cdc です。AdventureWorks_capture します。A1ACBDED-13FC-428C-8302-10100EF74F52**します。  
+ ジョブの名前は**cdc** 。_\<データベース\_名前\>_**\_クリーンアップ**または**cdc** 。_\<データベース\_名前\>_**\_キャプチャ**ここで、 *< database_name >* 名前を指定します現在のデータベース。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 (**.**) などの一意の識別子が続く: **cdc です。AdventureWorks_capture します。A1ACBDED-13FC-428C-8302-10100EF74F52**します。  
   
  クリーンアップまたはキャプチャ ジョブの現在の構成を表示する使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)します。 ジョブの構成を変更する[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)します。  
   

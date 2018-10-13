@@ -14,49 +14,49 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a78f615493ad531b8607abb0764891ffcb2805f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28bbf84564060e2840e0f8c35c5e4679c085a29c
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194482"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906132"
 ---
 # <a name="polygon"></a>Polygon
   A`Polygon`は一連の外部境界リングと 0 個以上の内部リングを定義する点として格納される 2 次元表面です。  
   
 ## <a name="polygon-instances"></a>Polygon インスタンス  
- A`Polygon`インスタンスから少なくとも 3 つの異なる点を持つリングで形成できます。 A`Polygon`インスタンスが空にすることもできます。  
+ `Polygon` インスタンスは、3 つ以上の異なる点を持つリングで形成され、 `Polygon` インスタンスは空にすることもできます。  
   
- 外部および内部のリングの`Polygon`その境界を定義します。 リング内の空間は `Polygon` の内部を定義します。  
+ `Polygon` の外部および内部のリングは、その境界を定義します。 リング内の空間は `Polygon` の内部を定義します。  
   
- 次の図の例を示します`Polygon`インスタンス。  
+ 次の図は、`Polygon` インスタンスの例です。  
   
  ![geometry Polygon インスタンスの例](../../database-engine/media/polygon.gif "geometry Polygon インスタンスの例")  
   
  この図は次のことを示しています。  
   
-1.  図 1 は、`Polygon`外部リングによって境界が定義されているインスタンス。  
+1.  図 1 は、外部リングによって境界が定義されている `Polygon` インスタンスです。  
   
 2.  図 2 は、1 つの外部リングと 2 つの内部リングによって境界が定義されている `Polygon` インスタンスです。 内部リングの内側の領域は、`Polygon` インスタンスの外部の一部です。  
   
 3.  図 3 の `Polygon` インスタンスは、内部リングが 1 つの接点で交差しているため有効です。  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- 許容される `Polygon` インスタンスとは、例外をスローすることなく  `geometry` 変数または `geography` 変数に格納できるインスタンスです。 次が受け入れられる`Polygon`インスタンス。  
+ 許容される `Polygon` インスタンスとは、例外をスローすることなく  `geometry` 変数または `geography` 変数に格納できるインスタンスです。 次に示す `Polygon` インスタンスは許容されます。  
   
--   空`Polygon`インスタンス  
+-   空の `Polygon` インスタンス。  
   
 -   1 つの許容される外部境界リングと 0 個以上の許容される内部リングを持つ `Polygon` インスタンス。  
   
  リングが許容されるためには、次の条件を満たす必要があります。  
   
--   `LineString`インスタンスが許容する必要があります。  
+-   `LineString` インスタンスが許容されていること。  
   
 -   `LineString` インスタンスに 4 つ以上の点があること。  
   
 -   `LineString` インスタンスの始点と終点が同じであること。  
   
- 次の例は許容される`Polygon`インスタンス。  
+ 次の例は、許容される `Polygon` インスタンスを示しています。  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
@@ -66,7 +66,7 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- `@g4` および `@g5` が示すように、許容される `Polygon` インスタンスが有効な `Polygon` インスタンスではない場合があります。 `@g5` また、Polygon インスタンスが許容されるためには、4 つの点を持つリングのみが含まれている必要があることを示しています。  
+ `@g4` および `@g5` が示すように、許容される `Polygon` インスタンスが有効な `Polygon` インスタンスではない場合があります。 また、`@g5` は、Polygon インスタンスが許容されるためには、4 つの点を持つリングのみが含まれている必要があることを示しています。  
   
  次の例では、`Polygon` インスタンスが許容されないため、`System.FormatException` がスローされます。  
   
@@ -82,9 +82,9 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- 内部リングを`Polygon`両方自体をタッチし、1 つの接点で相互がの内部リングが、 `Polygon` 、クロス インスタンスが無効です。  
+ `Polygon` の内部リングは、1 つの接点で自身および他の内部リングと接することができますが、`Polygon` の内部リングが互いに交差しているとインスタンスが無効になります。  
   
- 次の例は有効な`Polygon`インスタンス。  
+ 次の例は、有効な `Polygon` インスタンスを示しています。  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
@@ -93,7 +93,7 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` 2 つの内部リングが 1 つの点で接し、互いに交差していないため、有効です。 次の例は、無効な `Polygon` インスタンスを示しています。  
+ `@g3` は、2 つの内部リングが 1 つの点で接し、互いに交差していないため、有効です。 次の例は、無効な `Polygon` インスタンスを示しています。  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -105,7 +105,7 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` 内部リングが 2 か所で外部リングに接しているため、無効です。 `@g2` 2 つ目の内部リングが 1 つ目の内部リングの内側にあるため、無効です。 `@g3` 有効でないため、2 つの内部リングが連続する複数の点で接しています。 `@g4` 2 つの内部リングの内部が交差しているため、無効です。 `@g5` 外部リングが 1 つ目のリングでないため、無効です。 `@g6` リングが 3 つ以上の異なる点を持たないため、無効です。  
+ `@g1` 内部リングが 2 か所で外部リングに接しているため、無効です。 `@g2` 2 つ目の内部リングが 1 つ目の内部リングの内側にあるため、無効です。 `@g3` 2 つの内部リングが連続する複数の点で接しているため、無効です。 `@g4` 2 つの内部リングの内部が交差しているため、無効です。 `@g5` 外部リングが 1 つ目のリングでないため、無効です。 `@g6` リングが 3 つ以上の異なる点を持たないため、無効です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、1 つの穴を持つ単純な `geometry``Polygon` インスタンスを作成しています。このインスタンスの SRID は 10 です。  

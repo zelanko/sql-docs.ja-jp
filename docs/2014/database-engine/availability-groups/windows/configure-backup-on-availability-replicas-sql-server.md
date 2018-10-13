@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 039961b8c2811d32fcf8544f395c527e7981abb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073012"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085338"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>可用性レプリカでのバックアップの構成 (SQLServer)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループのセカンダリ レプリカでバックアップを構成する方法について説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "48073012"
   
 
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
@@ -111,13 +111,13 @@ ms.locfileid: "48073012"
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **セカンダリ レプリカでバックアップを構成するには**  
   
-1.  既定の設定 (`cd`) プライマリ レプリカをホストするサーバー インスタンスにします。  
+1.  既定 (`cd`) を、プライマリ レプリカをホストするサーバー インスタンスに設定します。  
   
 2.  必要に応じて、追加または変更する各可用性レプリカのバックアップの優先順位を構成します。 この優先順位は、プライマリ レプリカをホストするサーバー インスタンスによって使用され、可用性グループ内のデータベースで自動バックアップ要求を処理するレプリカを決定します (優先順位の高いレプリカが選択されます)。 この優先順位には、0 ～ 100 の数値を指定できます。 優先順位が 0 の場合は、レプリカがバックアップ要求を処理する対象と見なされないことを示します。  既定の設定は 50 です。  
   
      可用性グループに可用性レプリカを追加する場合は、`New-SqlAvailabilityReplica` コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、`Set-SqlAvailabilityReplica` コマンドレットを使用します。 どちらの場合、 `BackupPriority` *n*パラメーター、場所*n*は 0 から 100 の値です。  
   
-     たとえば、次のコマンドは、可用性レプリカのバックアップの優先順位を設定します。`MyReplica`に`60`します。  
+     たとえば、次のコマンドは、可用性レプリカ `MyReplica` のバックアップの優先順位を `60` に設定します。  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -126,7 +126,7 @@ ms.locfileid: "48073012"
   
 3.  必要に応じて、作成または変更している可用性グループの自動バックアップ設定を構成します。 この優先設定は、バックアップを実行する場所を選択するときにバックアップ ジョブがプライマリ レプリカを評価する方法を指定します。 既定の設定では、セカンダリ レプリカが優先されます。  
   
-     可用性グループを作成する場合は、`New-SqlAvailabilityGroup` コマンドレットを使用します。 既存の可用性グループを変更するときに使用して、`Set-SqlAvailabilityGroup`コマンドレット。 どちらの場合、`AutomatedBackupPreference`パラメーター。  
+     可用性グループを作成する場合は、`New-SqlAvailabilityGroup` コマンドレットを使用します。 既存の可用性グループを変更する場合は、`Set-SqlAvailabilityGroup` コマンドレットを使用します。 どちらの場合も `AutomatedBackupPreference` パラメーターを指定します。  
   
      パラメーターの説明  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48073012"
     ```  
   
 > [!NOTE]  
->  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+>  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   

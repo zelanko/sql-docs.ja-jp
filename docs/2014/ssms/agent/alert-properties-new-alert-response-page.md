@@ -12,15 +12,15 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fe3e08d1d423afd6f54310dd3ba349c10534cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217882"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906222"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>アラートのプロパティ-新しいアラート ([応答] ページ)
-  このページを使用すると、実行するジョブや、オペレーターの一覧を取得するジョブを指定できます。この一覧のオペレーターは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に関する通知を受け取ります。  
+  このページを使用すると、実行するジョブや、オペレーターの一覧を取得するジョブを指定できます。この一覧のオペレーターは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に関する通知を受け取ります。  
   
 ## <a name="options"></a>および  
  **[ジョブの実行]**  
@@ -51,7 +51,7 @@ ms.locfileid: "48217882"
  **[新しいオペレーター]** ダイアログ ボックスを表示します。このダイアログ ボックスを使用して、新しいオペレーターを作成できます。  
   
  **[オペレーターの表示]**  
- 現在選択されているオペレーターの **[プロパティ]** ダイアログ ボックスを表示します。 **[オペレーターのプロパティ]** ダイアログ ボックスで、オペレーターのプロパティを表示および変更できます。  
+ 現在選択されているオペレーターの **[プロパティ]** ダイアログ ボックスを表示します。 表示することができ、オペレーターのプロパティを変更、**オペレーターのプロパティ** ダイアログ ボックス。  
   
 ## <a name="see-also"></a>参照  
  [Alerts](alerts.md)   

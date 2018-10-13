@@ -18,12 +18,12 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b0b66722189a42b4bd5f157900815a96a716f49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840696"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119530"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 言語リファレンス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47840696"
   
  変数またはの列に格納されている XML インスタンスを照会する**xml**種類を使用する、 [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)します。 変数を宣言する例: **xml**を入力しを使用してクエリを実行、 **query()** のメソッド、 **xml**データ型。  
   
-```  
+```sql
 DECLARE @x xml  
 SET @x = '<ROOT><a>111</a></ROOT>'  
 SELECT @x.query('/ROOT/a')  
@@ -46,7 +46,7 @@ SELECT @x.query('/ROOT/a')
   
  次の例では、クエリがの Instructions 列に対して指定された**xml** AdventureWorks データベースの ProductModel テーブルの型。  
   
-```  
+```sql
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   

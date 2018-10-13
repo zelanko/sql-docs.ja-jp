@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 002ef268bbb858db961862c1a30479a3e8462237
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136062"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072206"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services パッケージのアップグレード
   インスタンスをアップグレードすると[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]または[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]の現在のリリースに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、既存の[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]パッケージが、現在のリリースされるパッケージ形式に自動的にアップグレードされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用します。 アップグレード方法を選択して、パッケージを手動でアップグレードする必要があります。  
@@ -29,7 +29,7 @@ ms.locfileid: "48136062"
  プロジェクトをプロジェクトの配置モデルに変換する際のパッケージのアップグレードについては、「 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)」を参照してください。  
   
 ## <a name="sql-server-2000-data-transformation-services-packages"></a>SQL Server 2000 データ変換サービス パッケージ  
- 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ変換サービス (DTS) パッケージの移行または実行のサポートは廃止されました。 次の DTS 機能は廃止されました。  
+ 現在のリリースでの移行またはデータ変換サービス (DTS) パッケージの実行のサポートは廃止されました[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 次の DTS 機能は廃止されました。  
   
 -   DTS ランタイム  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48136062"
   
 |アップグレード方法|アップグレードの種類|  
 |--------------------|---------------------|  
-|現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共にインストールされる **dtexec** ユーティリティ (dtexec.exe) を使用して、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージを実行します。<br /><br /> 詳しくは、「 [dtexec Utility](../packages/dtexec-utility.md)」をご覧ください。|パッケージのアップグレードは一時的です。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] パッケージでは、スクリプトの移行は一時的です。<br /><br /> 変更を保存することはできません。|  
+|現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共にインストールされる **dtexec** ユーティリティ (dtexec.exe) を使用して、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージを実行します。<br /><br /> 詳細については、「 [dtexec Utility](../packages/dtexec-utility.md)」を参照してください。|パッケージのアップグレードは一時的です。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] パッケージでは、スクリプトの移行は一時的です。<br /><br /> 変更を保存することはできません。|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] パッケージ ファイルを開きます。|パッケージのアップグレードは、パッケージを保存した場合は永続的になり、パッケージを保存しなかった場合は一時的になります。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] パッケージでは、スクリプトの移行は、パッケージを保存した場合は永続的になり、パッケージを保存しなかった場合は一時的になります。|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の既存のプロジェクトに追加します。|パッケージのアップグレードは永続的です。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] パッケージでは、スクリプトの移行は永続的です。|  
 |[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] で [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] または [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクト ファイルを開き、[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してプロジェクト内の複数のパッケージをアップグレードします。<br /><br /> 詳細については、「[SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)」および [SSIS パッケージ アップグレード ウィザードの F1 ヘルプ](../ssis-package-upgrade-wizard-f1-help.md)」を参照してください。|パッケージのアップグレードは永続的です。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] パッケージでは、スクリプトの移行は永続的です。|  
@@ -99,7 +99,7 @@ ms.locfileid: "48136062"
   
 |コンポーネントまたは機能|アップグレード結果|  
 |--------------------------|---------------------|  
-|接続文字列|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージでは、特定のプロバイダーの名前が変更されているため、接続文字列の値を変更する必要があります。 接続文字列を更新するには、次のいずれかの手順を実行します。<br /><br /> [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してパッケージをアップグレードし、**[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[オプション] ダイアログ ボックスの [全般] ページにある **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。 このオプションの詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開き、ConnectionString プロパティのテキストを手動で変更します。<br /><br /> 注: 構成ファイルまたはデータ ソース ファイルでは、いずれかで接続文字列が格納されている場合、または式を設定すると、接続文字列を更新する前の手順を使用することはできません、`ConnectionString`プロパティ。 このような場合に接続文字列を更新するには、ファイルまたは式を手動で更新する必要があります。<br /><br /> 使用できるデータ ソースの詳細については、「[データ ソース](../connection-manager/data-sources.md)」を参照してください。|  
+|接続文字列|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージでは、特定のプロバイダーの名前が変更されているため、接続文字列の値を変更する必要があります。 接続文字列を更新するには、次のいずれかの手順を実行します。<br /><br /> [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してパッケージをアップグレードし、**[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[オプション] ダイアログ ボックスの [全般] ページにある **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。 このオプションの詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開き、ConnectionString プロパティのテキストを手動で変更します。<br /><br /> 注: 接続文字列が構成ファイルまたはデータ ソース ファイルに格納されている場合、または式で `ConnectionString` プロパティを設定する場合は、上記の手順を使用して接続文字列を更新することはできません。 このような場合に接続文字列を更新するには、ファイルまたは式を手動で更新する必要があります。<br /><br /> 使用できるデータ ソースの詳細については、「[データ ソース](../connection-manager/data-sources.md)」を参照してください。|  
 |参照変換|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]パッケージ、アップグレード プロセスに自動的にアップグレード参照変換の現在のリリース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 ただし、現在のリリースのこのコンポーネントには、それ以外にも利用できる機能がいくつか追加されています。<br /><br /> 詳細については、「 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)」を参照してください。|  
 |スクリプト タスクとスクリプト コンポーネント|スクリプト タスクおよびスクリプト コンポーネント内のスクリプトは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] パッケージのアップグレード プロセスで VSA から VSTA に自動的に移行されます。<br /><br /> 移行前に必要となる可能性があるスクリプトへの変更やスクリプトの変換エラーに関する詳細については、「[VSTA へのスクリプトの移行](../../sql-server/install/migrate-scripts-to-vsta.md)」を参照してください。|  
   

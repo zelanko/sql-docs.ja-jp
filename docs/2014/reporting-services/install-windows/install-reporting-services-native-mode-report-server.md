@@ -15,15 +15,15 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 02cdf6e739ff0feb8c60bec5b9bf3bc4a87ffb7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065692"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851867"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーのインストール
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード レポート サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードまたはコマンド ラインからインストールできます。 セットアップ ウィザードで、1) ファイルをインストールして既定の設定でサーバーを構成する、または 1) ファイルのインストールのみを行いインストール ウィザードではサーバーを構成しない、のいずれかを選択できます。 このトピックでは *ネイティブ モードの既定の構成* について確認します。このインストールでは、セットアップでレポート サーバー インスタンスのインストールと構成の両方が行われます。 セットアップが完了すると、レポート サーバーが実行され、使用できる状態になります。 ネイティブ モードのレポート サーバーは、スタンドアロンのアプリケーション サーバーとして実行されます。 ネイティブ モードは既定のサーバー モードです。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード レポート サーバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードまたはコマンド ラインからインストールできます。 セットアップ ウィザードで、1) ファイルをインストールして既定の設定でサーバーを構成する、または 1) ファイルのインストールのみを行いインストール ウィザードではサーバーを構成しない、のいずれかを選択できます。 このトピックでは *ネイティブ モードの既定の構成* について確認します。このインストールでは、セットアップでレポート サーバー インスタンスのインストールと構成の両方が行われます。 セットアップが完了すると、レポート サーバーが実行され、使用できる状態になります。 ネイティブ モードのレポート サーバーは、スタンドアロンのアプリケーション サーバーとして実行されます。 ネイティブ モードは既定のサーバー モードです。  
   
 ||  
 |-|  
@@ -52,7 +52,7 @@ ms.locfileid: "48065692"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コマンド ライン ユーティリティ (rsconfig.exe、rskeymgmt.exe、rs.exe)  
   
- このオプションはなどの共有機能に適用されません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]または[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、する場合は、それらをインストールする別のアイテムとして指定する必要があります。  
+ このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] や [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]などの共有機能には適用されません。これらの機能をインストールする場合は、別のアイテムとして指定する必要があります。  
   
  ネイティブ モードのレポート サーバーのインストールの場合は、セットアップで以下が構成されます。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48065692"
   
  コンピューターで、既定インストールの要件のうち満たされていないものがある場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をファイルのみのモードでインストールし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してセットアップの完了後に構成する必要があります。  
   
- 既定のインストールを続行できるようにするためだけにコンピューターを再構成しないでください。 再構成の作業には数時間かかる可能性があり、時間を節約できるというこのインストール オプションの利点が実質的に失われます。 最適なソリューションは、インストールする[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイル専用モードにし、特定の値を使用するレポート サーバーを構成します。  
+ 既定のインストールを続行できるようにするためだけにコンピューターを再構成しないでください。 再構成の作業には数時間かかる可能性があり、時間を節約できるというこのインストール オプションの利点が実質的に失われます。 このような場合は、ファイルのみのモードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールし、特定の値を使用するようにレポート サーバーを構成することをお勧めします。  
   
 ##  <a name="bkmk_defaultURLreservations"></a> 既定の URL 予約  
  URL 予約は、プレフィックス、ホスト名、ポート、および仮想ディレクトリで構成されます。  
@@ -121,11 +121,11 @@ ms.locfileid: "48065692"
   
     -   **Reporting Services-ネイティブ**します。  
   
-    -   **[管理ツール - 基本]**。 管理ツールは必須ではありませんが、その他の管理ツールがインストールされていない場合に推奨されています。 既定の構成オプションを使用してもレポート サーバーは機能しますが、構成オプションを後から変更しなければならない場合があります。 [個人用レポート] などのいくつかのオプションで管理します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **[管理ツール - 基本]**。 管理ツールは必須ではありませんが、その他の管理ツールがインストールされていない場合に推奨されています。 既定の構成オプションが機能しているレポート サーバーになりますが、構成オプションを変更したい場合があります。 [個人用レポート] などの一部のオプションは、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して管理されます。  
   
      ![機能の選択での SSRS ネイティブ モードの選択](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "機能の選択での SSRS ネイティブ モードの選択")  
   
-3.  使用する場合、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サブスクリプション機能を次に、**サーバー構成**SQL Server エージェントが構成されていることを確認する ページで、**自動**スタートアップの種類。  
+3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプション機能を使用する場合は、 **[サーバーの構成]** ページで、SQL Server エージェントのスタートアップの種類が **[自動]** に構成されていることを確認する必要があります。  
   
 4.  **[Reporting Services の構成]** ページで、 **[インストールと構成]** を選択します。  
   
@@ -135,9 +135,9 @@ ms.locfileid: "48065692"
   
     -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを開いて、レポート サーバーに接続できることを確認します。  
   
-    -   管理者特権を使用してブラウザーを開き、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート マネージャーに接続します。たとえば、「`http://loclahost/Reports`」と入力します。  
+    -   管理者特権を使用してブラウザーを開き、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート マネージャーに接続します。たとえば、「 `http://loclahost/Reports`」と入力します。  
   
-    -   管理者特権を使用してブラウザーを開き、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー ページにアクセスします。 例えば  `http://loclahost/ReportServer`  
+    -   管理者特権を使用してブラウザーを開き、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー ページにアクセスします。 例:  `http://loclahost/ReportServer`  
   
  詳細については、次の 2 つのトピックのネイティブ モードに関する説明を参照してください。  
   
@@ -158,13 +158,13 @@ SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services インストール時の問題解決](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [Reporting Services のインストール状態の検証](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
+ [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [ファイルのみのインストール &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [ネイティブ モードのレポート サーバーで SSL 接続を構成します。](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+ [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server 2014 のクイックスタート インストール](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  

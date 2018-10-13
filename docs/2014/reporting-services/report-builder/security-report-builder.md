@@ -11,12 +11,12 @@ ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 19d471febe43640325ae4f218dc1d0e66c3e0c9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c33524c5b526a0523fe866b6307e00cd52cf8003
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074658"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905816"
 ---
 # <a name="security-report-builder"></a>セキュリティ (レポート ビルダー)
   レポート ビルダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
@@ -115,7 +115,7 @@ ms.locfileid: "48074658"
   
 -   有効な値を提供する場合を除き、クエリ パラメーターに基づいた、型が **Text** のパラメーターは使用しないでください。 使用可能な値の一覧を使用すると、ユーザーが有効な値しか選択できないようにするのに役立ちます。 使用可能な値の一覧を使用しない場合は、ユーザーが入力できる値を制限できません。  
   
--   個人データをセキュリティで保護するためにグローバルな [&UserID] を使用しないでください。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、 [のドキュメント (](../url-access-parameter-reference.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   使用しないでください、グローバルな [& UserID] プライベート データをセキュリティで保護します。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、 [のドキュメント (](../url-access-parameter-reference.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  アイテムがレポート サーバーにパブリッシュされた後に、レポート サーバー管理者は、ロールベースのセキュリティまたはフォルダーおよびアイテム レベルのセキュリティを割り当てることでアイテムをセキュリティで保護できます。 詳細については、 [のドキュメント (](../security/secure-reports-and-resources.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   

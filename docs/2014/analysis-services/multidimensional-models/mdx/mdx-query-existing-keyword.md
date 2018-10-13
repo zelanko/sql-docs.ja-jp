@@ -15,12 +15,12 @@ ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8431c4b29f20b3c87e3b944736612d009426900a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceaeac711ed30028dab3bc09827df9b6ae1f0e0a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106552"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905972"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING キーワード (MDX)
   指定されたセットを現在のコンテキストで評価するように設定します。  
@@ -37,10 +37,10 @@ Existing Set_Expression
  有効な多次元式 (MDX) セット式です。  
   
 ## <a name="remarks"></a>コメント  
- 既定では、セットの評価は、そのセットのメンバーを含むキューブのコンテキストで実行されます。 `Existing`キーワードには、代わりに、現在のコンテキスト内で評価される指定されたセットが行われます。  
+ 既定では、セットの評価は、そのセットのメンバーを含むキューブのコンテキストで実行されます。 `Existing` キーワードを指定すると、指定されているセットの評価が現在のコンテキストで行われます。  
   
 ## <a name="example"></a>例  
- 次の例では、`Aggregate`  関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 関数および [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 関数を使用しています。 `Existing`キーワード力のセット、 `Filter` State-province 属性階層の Washington および Oregon メンバーには、現在のコンテキストで評価する関数。  
+ 次の例では、`Aggregate`  関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。 Product ディメンションに含まれる製品カテゴリに関して減少した売上の値を返すために、 [Hierarchize (MDX)](/sql/mdx/hierarchize-mdx) 関数および [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 関数を使用しています。 `Existing`キーワードのセットを強制する、 `Filter` State-province 属性階層の Washington および Oregon メンバーには、現在のコンテキストで評価する関数。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -78,13 +78,13 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [カウント&#40;設定&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [集計&#40;MDX&#41;](/sql/mdx/aggregate-mdx)   
- [フィルター &#40;MDX&#41;](/sql/mdx/filter-mdx)   
- [プロパティ&#40;MDX&#41;](/sql/mdx/properties-mdx)   
- [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [MDX 関数リファレンス&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [Count (セット) (MDX)](/sql/mdx/count-set-mdx)   
+ [AddCalculatedMembers (MDX)](/sql/mdx/addcalculatedmembers-mdx)   
+ [Aggregate (MDX)](/sql/mdx/aggregate-mdx)   
+ [Filter (MDX)](/sql/mdx/filter-mdx)   
+ [Properties (MDX)](/sql/mdx/properties-mdx)   
+ [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx)   
+ [Hierarchize (MDX)](/sql/mdx/hierarchize-mdx)   
+ [MDX 関数リファレンス (MDX)](/sql/mdx/mdx-function-reference-mdx)  
   
   

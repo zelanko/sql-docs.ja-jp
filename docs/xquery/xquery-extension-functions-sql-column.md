@@ -17,12 +17,12 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75980cf457d1422bba783c02f9978bdd9263f220
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17703c8a4c4839b977da9f4583a90ea3c3583b52
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627710"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119889"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery Extension Functions - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sql:column("columnName")
   
  クエリにより、次の形式で XML が構築されます。  
   
-```  
+```xml
 <Product ProductID="771" ProductName="Mountain-100 Silver, 38" ProductPrice="3399.99" ProductModelID="19"   
   ProductModelName="Mountain 100" />  
 ```  
@@ -65,9 +65,9 @@ sql:column("columnName")
   
 -   **ProductModelID**から属性値を取得、 **ProductModel**テーブル。  
   
--   さらに興味深いクエリを作成する、 **ProductModelName**属性値がから取得した、 **CatalogDescription**の列**xml 型**します。 すべての製品モデルの XML 製品モデル カタログ情報が格納されていないため、`if`ステートメントを使用して、存在する場合にのみ値を取得します。  
+-   さらに興味深いクエリを作成する、 **ProductModelName**属性値がから取得した、 **CatalogDescription**の列**xml 型**します。 XML 製品モデル カタログ情報が保存されていない製品モデルもあるため、`if` ステートメントを使用して、カタログ情報がある場合にのみその値を取得するようにしています。  
   
-    ```  
+    ```sql
     SELECT P.ProductID, CatalogDescription.query('  
     declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
@@ -109,7 +109,7 @@ ProductID               Result
   
  次のクエリは、製品固有の情報を保持する XML を構築します。 この情報には、ある特定の製品モデル (ProductModelID=19) に属するすべての製品について、ProductID、ProductName、ProductPrice、および取得可能な場合は ProductModelName が含まれます。 XML が割り当てられているし、@xの変数**xml**型。  
   
-```  
+```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -136,7 +136,7 @@ select @x
  [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML データのインスタンスの作成](../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)   
+ [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)   
  [XML データ変更言語 &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50294b936f211b3a841deb57e55b53f0994517a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611590"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168722"
 ---
 # <a name="source-property-ado-error"></a>Source プロパティ (ADO Error)
 オブジェクトまたはアプリケーション エラーの発生源の名前を示します。  
@@ -32,7 +32,7 @@ ms.locfileid: "47611590"
  返します、**文字列**オブジェクトまたはアプリケーションの名前を示す値。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、**ソース**プロパティを[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトまたはアプリケーション エラーの発生源の名前を決定するオブジェクト。 これは、オブジェクトのクラス名またはプログラム id です。 Ado エラーの場合、プロパティ値になります **ADODB。 * * * ObjectName*ここで、 *ObjectName*エラーを発生させたオブジェクトの名前を指定します。 ADOX と ADO MD の場合は、値になります **ADOX。 * * * ObjectName*と **ADOMD。 * * *、ObjectName*それぞれします。  
+ 使用して、**ソース**プロパティを[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトまたはアプリケーション エラーの発生源の名前を決定するオブジェクト。 これは、オブジェクトのクラス名またはプログラム id です。 Ado エラーは、プロパティ値に**ADODB** 。_ObjectName_ここで、 *ObjectName*エラーを発生させたオブジェクトの名前を指定します。 ADOX と ADO MD の場合は、値になります**ADOX** 。_ObjectName_と**ADOMD** 。_ObjectName_、それぞれします。  
   
  エラー ドキュメントに基づく、**ソース**、[数](../../../ado/reference/ado-api/number-property-ado.md)、および[説明](../../../ado/reference/ado-api/description-property.md)プロパティの**エラー**オブジェクトの場合、コードを記述することができますエラーが適切に処理するされます。  
   

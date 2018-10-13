@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6a86d2d45cecc2dce3275e28ca0fb9e06e0cba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713210"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169222"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini ファイル (テキスト ファイル ドライバー)
 テキストのドライバーを使用する場合、スキーマ情報ファイルを使用してテキスト ファイルの形式が決まります。 スキーマの情報ファイルは常に Schema.ini という名前し、常にテキスト データ ソースと同じディレクトリに保持されます。 スキーマの情報ファイルは、ファイル、列名とデータ型情報、およびその他のいくつかのデータの特性の一般的な形式に関する情報を IISAM を提供します。 Schema.ini ファイルは、固定長データにアクセスするために必要では常にします。 テキスト、テーブルには、DateTime、通貨、または 10 進数データ、またはいつでも、テーブル内のデータの処理を制御することが含まれている場合、Schema.ini ファイルを使用する必要があります。  
@@ -80,14 +80,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- 次のエントリは、列番号を使用してテーブル内のフィールドを指定 (**Col * * * n*) 文字で区切られたファイルの省略可能で、固定長ファイルに必要なのオプションです。 例では、2 つのフィールド、10 文字の列名を CustomerNumber テキスト フィールドおよび 30 文字 CustomerName テキスト フィールド、Schema.ini のエントリを示します。  
+ 次のエントリは、列番号を使用してテーブル内のフィールドを指定 (**Col**_n_) 文字で区切られたファイルの省略可能で、固定長ファイルに必要なのオプションです。 例では、2 つのフィールド、10 文字の列名を CustomerNumber テキスト フィールドおよび 30 文字 CustomerName テキスト フィールド、Schema.ini のエントリを示します。  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- 構文 **Col * * * n*は。  
+ 構文**Col**_n_は。  
   
 ```  
   
@@ -99,7 +99,7 @@ n=ColumnNametype [#]
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*ColumnName*|列のテキストの名前。 列名にスペースが含まれている場合は、二重引用符で囲む必要があります。|  
+|*[ColumnName]*|列のテキストの名前。 列名にスペースが含まれている場合は、二重引用符で囲む必要があります。|  
 |*type*|データ型は次のとおりです。<br /><br /> **Microsoft Jet データ型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 通貨<br /><br /> 単一<br /><br /> Double<br /><br /> DateTime<br /><br /> テキスト<br /><br /> メモ<br /><br /> **ODBC データ型**Char (テキストと同じ)<br /><br /> Float (Double と同じ)<br /><br /> 整数 (短い形式と同じ)<br /><br /> LongChar (メモ型と同じ)<br /><br /> 日付*日付形式*|  
 |**Width**|リテラル文字列値`Width`します。 次の数が列の幅を指定することを示します (ファイルの文字で区切られた省略可能です。 固定長ファイルに必要)。|  
 |*#*|列の幅を指定する整数値 (必要な場合**幅**を指定)。|  

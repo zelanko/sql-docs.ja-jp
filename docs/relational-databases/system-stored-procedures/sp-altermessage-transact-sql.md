@@ -18,17 +18,17 @@ ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b713b8970ecf38536da7e00b791dcef8a059a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f41f7b31f928a60342deefcc85a8f71bc707dba
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761970"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168862"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  インスタンスのシステム メッセージまたはユーザー定義の状態の変更、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 使用してユーザー定義メッセージを表示することができます、 **sys.messages**カタログ ビューです。  
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスでユーザー定義メッセージまたはシステム メッセージの状態を変更します。 使用してユーザー定義メッセージを表示することができます、 **sys.messages**カタログ ビューです。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,13 +45,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [**@message_id =** ] *message_number*  
  変更するメッセージのエラー番号は、 **sys.messages**します。 *message_number*は**int**で既定値はありません。  
   
- [ **@parameter =** ] **'***write_to_log*'  
+ [  **@parameter =** ] **'**_書き込み\_に\_ログ_'  
  併用**@parameter_value**に書き込まれるメッセージがあることを示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ。 *write_to_log*は**sysname**で既定値はありません。 *write_to_log* WITH_LOG または NULL に設定する必要があります。 場合*write_to_log* WITH_LOG または null の場合、しの値に設定されている**@parameter_value**は**true**メッセージは、Windows アプリケーション ログに書き込まれます。 場合*write_to_log* WITH_LOG または NULL との値に設定されている**@parameter_value**は**false**メッセージは、Windows アプリケーション ログには常に書き込まれませんが、可能性がありますエラーの発生状況によっては書き込まれます。 場合*write_to_log*が指定されている値**@parameter_value**も指定する必要があります。  
   
 > [!NOTE]  
 >  Windows のアプリケーション ログにメッセージを書き込む場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラー ログ ファイルにも同じ内容が書き込まれます。  
   
- [ **@parameter_value =** ]**'***value*'  
+ [  **@parameter_value =** ]**'**_値_'  
  併用**@parameter**にへの書き込みエラーがあることを示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ。 *値*は**varchar (5)** 既定値はありません。 場合**true**エラーが常に Windows アプリケーション ログに書き込まれます。 場合**false**エラーは、Windows アプリケーション ログには常に書き込まれませんが、エラーの発生状況によっては書き込まれる可能性があります。 場合*値*が指定されている*write_to_log*の**@parameter**も指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -69,7 +69,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  メンバーシップが必要です、 **serveradmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、既存のメッセージをさせます`55001`を Windows アプリケーション ログに記録します。  
+ 次の例では、既存のメッセージ `55001` のログを Windows のアプリケーション ログに記録します。  
   
 ```  
 EXECUTE sp_altermessage 55001, 'WITH_LOG', 'true';  

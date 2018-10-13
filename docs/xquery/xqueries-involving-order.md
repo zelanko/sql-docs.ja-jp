@@ -18,12 +18,12 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 408c33be421c0dc6792ee5ad76f69e6aa2f05423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df4b8f9b3c6c2a0a4e8aee3e6ff67998d3bef353
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642130"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120019"
 ---
 # <a name="xqueries-involving-order"></a>順序に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47642130"
 ### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>A. 2 番目のワーク センターの場所で製品の製造手順の取得  
  次のクエリでは、特定の製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で 2 番目のワーク センターの場所で製造手順が取得されます。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     <ManuStep ProdModelID = "{sql:column("Production.ProductModel.ProductModelID")}"  
@@ -65,7 +65,7 @@ WHERE ProductModelID=7
   
 -   **@\*** 2 番目のワーク センター拠点のすべての属性を取得します。  
   
--   FLWOR の繰り返し (FOR ...戻り値) には、すべてを取得します <`step`> 子要素、2 番目のワーク センターの場所。  
+-   FLWOR の繰り返し (FOR ...RETURN) は、2 番目のワーク センターの場所のすべての <`step`> 子要素を取得します。  
   
 -   [Sql:column() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)構築される XML にリレーショナル値が含まれています。  
   
@@ -88,7 +88,7 @@ WHERE ProductModelID=7
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 製品を製造する際の 2 番目のワーク センターの場所で使用されるすべての材料とツールの検索  
  次のクエリでは、特定の製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で 2 番目のワーク センターの場所で使用されるツールと材料が取得されます。  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <Location>  
@@ -117,13 +117,13 @@ where ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   クエリは、構築、< Loca`tion`> の属性の値がデータベースから要素を取得します。  
+-   クエリでは、<Loca`tion`> 要素が構築され、その属性値がデータベースから取得されます。  
   
 -   このとき 2 つの FLWOR (for...return) の繰り返しが使用されます。1 つはツールの取得のため、もう 1 つは使用される材料の取得のためです。  
   
  結果を次に示します。  
   
-```  
+```xml
 <Location LocationID="10" SetupHours=".5"   
           MachineHours="3" LaborHours="2.5" LotSize="100">  
   <Tools>  
@@ -141,7 +141,7 @@ where ProductModelID=7
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 製品カタログからの最初の 2 製品の機能説明の取得  
  次のクエリでは、特定の製品モデルに対して、製品モデル カタログの <`Features`> 要素から最初の 2 つの機能説明が取得されます。  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <ProductModel ProductModelID= "{ data( (/p1:ProductDescription/@ProductModelID)[1] ) }"  
@@ -159,13 +159,13 @@ where ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
- クエリの本文に XML を構築、<`ProductModel`> を ProductModelID 属性と ProductModelName 属性を持つ要素。  
+ クエリ本文では、ProductModelID 属性と ProductModelName 属性を備えた <`ProductModel`> 要素が含まれる XML が構築されます。  
   
 -   クエリでは、FOR ...RETURN ループを使用して、製品モデルの機能説明を取得します。 **Position()** 関数を使用して、最初の 2 つの機能を取得します。  
   
  結果を次に示します。  
   
-```  
+```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
  <p1:Warranty   
   xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
@@ -185,7 +185,7 @@ where ProductModelID=19
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. 製品の製造プロセス内にある最初のワーク センターの場所で使用される最初の 2 つのツールの検索  
  次のクエリでは、製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で、最初のワーク センターの場所で使用される最初の 2 つのツールが返されます。 格納された製造手順に対してクエリを指定、**指示**の列、 **Production.ProductModel**テーブル。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    for $Inst in (//AWMI:root/AWMI:Location)[1]  
@@ -208,7 +208,7 @@ where ProductModelID=7
   
  結果を次に示します。  
   
-```  
+```xml
 <Location LocationID="10" SetupHours=".5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
   <Tools>  
@@ -221,7 +221,7 @@ where ProductModelID=7
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. 特定の製品を製造する際の最初のワーク センターの場所で最後の 2 つの製造手順の検索  
  クエリを使用して、 **last()** 最後の 2 つの製造ステップを取得する関数。  
   
-```  
+```sql
 SELECT Instructions.query('   
 declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   <LastTwoManuSteps>  
@@ -238,7 +238,7 @@ where ProductModelID=7
   
  結果を次に示します。  
   
-```  
+```xml
 <LastTwoManuSteps>  
    <Last-1Step>When finished, inspect the forms for defects per   
                Inspection Specification .</Last-1Step>  

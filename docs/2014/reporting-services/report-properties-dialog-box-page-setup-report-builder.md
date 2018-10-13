@@ -13,15 +13,15 @@ ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4e7fa108ffbfc083b84460795e17515ae300302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207382"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905082"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>[ページ設定] ([レポートのプロパティ] ダイアログ ボックス) (レポート ビルダー)
-  **[レポートのプロパティ]** ダイアログ ボックスの **[ページ設定]** を選択すると、レポート全体のページ オプションを設定できます。  
+  選択**ページ設定**上、**レポートのプロパティ**、ダイアログ ボックスをレポート全体のページのオプションを設定します。  
   
 ## <a name="options"></a>および  
  **インチ**  

@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ac9b22a6f7157123ab233a6c10f24846eaca8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147572"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085518"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>パッケージ ワークフローでデータ プロファイル タスクを使用する
   データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ プロファイル タスクを出力する場合、通常、視覚的な分析とユーザーの判断によって、報告された違反が意味のあるものか過剰であるかを判断する必要があります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
@@ -265,13 +265,13 @@ ms.locfileid: "48147572"
 8.  スクリプト開発環境を閉じてから、スクリプト タスク エディターを閉じます。  
   
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>変数からプロファイル出力を読み込むコード  
- 上記の手順は、データ プロファイル タスクの出力をファイルから読み込む方法を示していますが、 この出力をパッケージ変数から読み込む方法もあります。 出力を変数から読み込むには、サンプル コードを次のように変更する必要があります。  
+ 前の手順では、ファイルからデータ プロファイル タスクの出力を読み込む方法を示します。 この出力をパッケージ変数から読み込む方法もあります。 出力を変数から読み込むには、サンプル コードを次のように変更する必要があります。  
   
--   呼び出す、`LoadXml`のメソッド、`XmlDocument`クラスの代わりに、`Load`メソッド。  
+-   `LoadXml` メソッドではなく、`XmlDocument` クラスの `Load` メソッドを呼び出します。  
   
--   スクリプト タスク エディターで、タスクのプロファイル出力を格納するパッケージ変数の名前を追加する`ReadOnlyVariables`一覧。  
+-   スクリプト タスク エディターで、プロファイル出力を格納するパッケージ変数の名前を、タスクの `ReadOnlyVariables` リストに追加します。  
   
--   変数の文字列値を渡す、`LoadXML`メソッドを次のコード例に示すようにします。 (この例では、プロファイル出力を格納するパッケージ変数の名前として "ProfileOutput" を使用しています)。  
+-   次のコード例で示すように、変数の文字列値を `LoadXML` メソッドに渡します  (この例では、プロファイル出力を格納するパッケージ変数の名前として "ProfileOutput" を使用しています)。  
   
     ```vb  
     Dim outputString As String  
@@ -328,8 +328,8 @@ ms.locfileid: "48147572"
   
 7.  スクリプト タスクをワークフロー内の下流の分岐に接続する優先順位制約では、変数の値を使用してワークフローを分ける式を作成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ プロファイル タスクのセットアップ](data-profiling-task.md)   
- [Data Profile Viewer](data-profile-viewer.md)  
+ [Data Profile Viewer (Data Profile Viewer)](data-profile-viewer.md)  
   
   

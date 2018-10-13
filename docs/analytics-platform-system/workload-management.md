@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394563"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100383"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System でのワークロード管理
 
@@ -107,7 +107,7 @@ SQL Server の PDW に 6 つの大規模な要求が送信され、既定の 10 
   
 SQL Server PDW のステートメントを実行する前に、要求のために必要な同時実行スロットを取得しようとします。 十分な同時実行スロットを取得できない場合は SQL Server PDW は、要求を待機しているをする--実行状態に移動します。 要求に既に割り当てられていたすべてのリソース システムがシステムに返されます。  
   
-ほとんどの SQL ステートメントでは、常に既定のリソース割り当てを必要し、そのため、リソース クラスによって制御されていません。 たとえば、CREATE LOGIN 少量のリソースを必要し、のみ CREATE LOGIN を呼び出してログインのメンバーである場合でも、既定のリソースを割り当てられている、リソース クラス。  たとえば、Anna largerc のリソース クラスのメンバーである、彼女は、CREATE LOGIN ステートメントを送信する場合は、CREATE LOGIN ステートメントは、リソースの既定の数で実行されます。  
+ほとんどの SQL ステートメントでは、常に既定のリソース割り当てを必要し、そのため、リソース クラスによって制御されていません。 たとえば、CREATE LOGIN はのみ少量のリソースの必要があり、CREATE LOGIN を呼び出してログインのリソース クラスのメンバーである場合でも、既定のリソースが割り当てられます。  たとえば、Anna largerc のリソース クラスのメンバーである、彼女は、CREATE LOGIN ステートメントを送信する場合は、CREATE LOGIN ステートメントは、リソースの既定の数で実行されます。  
   
 SQL ステートメントとリソース クラスによって管理される操作:  
   

@@ -11,23 +11,23 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82646e7dd6b51df00083e7eb175ab0dd99349173
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101462"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119209"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
   このトピックでは、DQS データベースのバックアップと復元を行う方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   DQS サーバーのインストール中に入力したデータベース マスター キーのパスワードを知っている必要があります。  
+-   知るか、DQS サーバーのインストール中に指定したデータベース マスター_キーのパスワードを保存する必要があります。  
   
--   DQS で実行中のアクティビティまたはプロセスがないことを確認します。 これは **[アクティビティ監視]** 画面を使用して確認できます。 この画面の操作の詳細については、次を参照してください。 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)します。  
+-   DQS で実行中のアクティビティまたはプロセスがないことを確認します。 これは **[アクティビティ監視]** 画面を使用して確認できます。 この画面の操作の詳細については、「 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)」を参照してください。  
   
 -   DQS サーバーにログオンしているユーザーがないことを確認します。  
   

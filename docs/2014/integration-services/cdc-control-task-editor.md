@@ -13,12 +13,12 @@ ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97d47bda8f3ceb98449392cda22d2a8152e08b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89062160d4836596dacaf9df88c0e87feb383129
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201302"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072166"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 制御タスク エディター
   **[CDC 制御タスク エディター]** ダイアログ ボックスを使用すると、CDC 制御タスクを構成できます。 CDC 制御タスクの構成では、CDC データベースへの接続、CDC タスクの操作、状態管理情報の定義などを行います。  
@@ -46,7 +46,7 @@ ms.locfileid: "48201302"
   
      (Oracle ではなく) **CDC での作業時に** [初期読み込みの終了をマーク] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin**である必要があります。  
   
--   **[CDC の開始をマーク]**: この操作は、初期読み込みがスナップショット データベースまたは休止データベースから行われるときに使用されます。 初期読み込みパッケージ内の任意のポイントで呼び出されます。 この操作は、スナップショット LSN またはスナップショット データベースの名前 (これからスナップショット LSN が動的に派生) が設定されるパラメーターを受け取ります。ただし、このパラメーターは空のままにすることもでき、その場合は、現在のデータベース LSN が変更処理パッケージの開始 LSN として使用されます。  
+-   **マーク CDC の開始を**: この操作は、スナップショット データベースまたは休止データベースから初期読み込みが行われるときに使用されます。 初期読み込みパッケージ内の任意のポイントで呼び出されます。 この操作は、スナップショット LSN またはスナップショット データベースの名前 (これからスナップショット LSN が動的に派生) が設定されるパラメーターを受け取ります。ただし、このパラメーターは空のままにすることもでき、その場合は、現在のデータベース LSN が変更処理パッケージの開始 LSN として使用されます。  
   
      この操作は、[初期読み込みの開始をマーク] または [初期読み込みの終了をマーク] 操作の代わりに使用されます。  
   

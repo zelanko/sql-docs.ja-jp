@@ -11,12 +11,12 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81119bcb31e46667e572c4d5cd2ea37858306876
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177042"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905042"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>手順 4: レッスン 6 のパッケージの展開
   パッケージを配置するには、SQL Server インスタンスの Integration Services の SSISDB カタログにパッケージを追加する必要があります。 このレッスンでは、SSISDB カタログへのレッスン 6 パッケージの追加、パラメーターの設定、パッケージの実行を行います。 このレッスンでは、SQL Server Management Studio を使用して SSISDB カタログにレッスン 6 パッケージを追加し、パッケージを配置します。 パッケージを配置したら、新しい場所を指すようにパラメーターを変更し、パッケージを実行します。  
@@ -31,7 +31,7 @@ ms.locfileid: "48177042"
   
 -   SSMS でパッケージを実行します。  
   
-### <a name="to-locate-or-add-the-the-ssisdb-catalog"></a>SSISDB カタログを検索または追加するには  
+### <a name="to-locate-or-add-the-ssisdb-catalog"></a>SSISDB カタログを検索または追加するには  
   
 1.  [スタート] ボタンをクリックし、[すべてのプログラム]、[Microsoft SQL Server] の順にポイントし、[SQL Server Management Studio] をクリックします。  
   

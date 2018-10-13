@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9d652bb9f722b33eb6a0bfa0f2aed324b5ecbfc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057552"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120099"
 ---
 # <a name="user-defined-type-requirements"></a>ユーザー定義型の要件
   ユーザー定義型 (UDT) をインストールを作成するときに、いくつかの重要な設計上の決定を行う必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
@@ -71,7 +71,7 @@ ms.locfileid: "48057552"
   
  **bool**、**バイト**、 **sbyte**、**短い**、 **ushort**、 **int**、 **uint**、**長い**、 **ulong**、 **float**、**二重**、 **SqlByte**、**SqlInt16**、 **SqlInt32**、 **SqlInt64**、 **SqlDateTime**、 **SqlSingle**、 **SqlDouble**、 **SqlMoney**、 **SqlBoolean**  
   
- Visual C# の `Native` (Visual Basic では `structs`) など、これらの型のフィールドから構成された値型は、`Structures` 形式に適しています。 たとえば、シリアル化形式に `Native` を指定した UDT には、`Native` 形式を指定した別の UDT のフィールドを含めることができます。 作成する UDT の定義が複雑で、上記の一覧にないデータ型が含まれている場合は、`UserDefined` シリアル化形式を指定する必要があります。  
+ 上記の型のフィールドの値型で構成されているは候補として適して`Native`書式設定など`structs`Visual c# では、(または`Structures`ように Visual Basic で呼ばれています)。 たとえば、シリアル化形式に `Native` を指定した UDT には、`Native` 形式を指定した別の UDT のフィールドを含めることができます。 作成する UDT の定義が複雑で、上記の一覧にないデータ型が含まれている場合は、`UserDefined` シリアル化形式を指定する必要があります。  
   
  `Native` 形式の要件を次に示します。  
   

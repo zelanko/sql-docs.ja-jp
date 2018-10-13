@@ -17,12 +17,12 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3296807e7470c84a4df2f3960ea01185c5915048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 469b4dece1dca9aca2aa584e60bd502034fc8645
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597061"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119089"
 ---
 # <a name="xqueries-involving-hierarchy"></a>階層に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "47597061"
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 製造命令ドキュメントから、ワーク センターの場所とその場所の最初の製造手順を取得  
  クエリに XML を構築、製品モデル 7 の <`ManuInstr`> 要素で**ProductModelID**と**ProductModelName**属性、および 1 つまたは複数 <`Location`>子要素。  
   
- 各 <`Location`> 要素には、一連の独自の属性と 1 つの <`step`> 子要素があります。 これは、<`step`> 子要素は、ワーク センター拠点で最初の製造手順です。  
+ 各 <`Location`> 要素には、一連の独自の属性と 1 つの <`step`> 子要素があります。 この <`step`> 子要素は、そのワーク センターの場所での最初の製造手順です。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    \<ManuInstr  ProdModelID = "{sql:column("Production.ProductModel.ProductModelID") }"   
@@ -69,7 +69,7 @@ WHERE ProductModelID=7
   
  これは、結果の一部です。  
   
-```  
+```xml
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
    <Location LocationID="10" SetupHours="0.5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
@@ -86,9 +86,9 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. AdditionalContactInfo 列のすべての電話番号の検索  
- 次のクエリは、階層全体を検索して特定の顧客の連絡先の追加の電話番号を取得します <`telephoneNumber`> 要素。 <`telephoneNumber`> 要素はどこにでも表示、階層では、クエリで子孫や自己演算子を使用 (//) で検索します。  
+ 次のクエリでは、<`telephoneNumber`> 要素の階層全体を検索することにより、特定の顧客の連絡先から追加の電話番号を取得します。 <`telephoneNumber`> 要素は階層内のどこにでも存在する可能性があるので、検索のクエリで子孫や自己演算子 (//) が使用されます。  
   
-```  
+```sql
 SELECT AdditionalContactInfo.query('  
  declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
  declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
@@ -102,7 +102,7 @@ WHERE ContactID = 1
   
  結果を次に示します。  
   
-```  
+```xml
 \<act:number   
   xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   111-111-1111  
@@ -113,9 +113,9 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- 具体的には、最上位レベルの電話番号のみを取得する、<`telephoneNumber`> の子要素 <`AdditionalContactInfo`>、クエリの FOR 式を変更するには  
+ 最上位レベルの電話番号、具体的には <`AdditionalContactInfo`> の <`telephoneNumber`> 子要素だけを取得するには、クエリの FOR 式を次のように変更します。  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`。  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber` 。  
   
 ## <a name="see-also"></a>関連項目  
  [XQuery の基礎](../xquery/xquery-basics.md)   

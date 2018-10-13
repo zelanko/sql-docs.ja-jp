@@ -11,12 +11,12 @@ ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0281fea7db32674296b21ba9e3d38cf6ea3c9d0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3476521227fd733c69bf83d3fc3122bb23040f13
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171092"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906462"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>テーブル モデル ソリューションの配置 (SSAS テーブル)
   テーブル モデル プロジェクトを作成した後、ユーザーがレポート クライアント アプリケーションを使用してモデルを参照できるように配置する必要があります。 このトピックでは、テーブル モデル ソリューションを環境に配置する際に使用できるさまざまなプロパティと方法について説明します。  
@@ -62,7 +62,7 @@ ms.locfileid: "48171092"
 |--------------|---------------------|-----------------|  
 |**[サーバー]**<br /><br /> プロジェクトの作成時に設定します。|**localhost**|このプロパティは、プロジェクトの作成時に設定し、モデルを配置する Analysis Services インスタンスの名前を指定します。 既定では、モデルは、ローカル コンピューター上の Analysis Services の既定のインスタンスに配置されます。 ただし、この設定を変更して、ローカル コンピューター上の名前付きインスタンスや、Analysis Services オブジェクトを作成する権限のあるリモート コンピューター上の任意のインスタンスを指定できます。|  
 |**のエディション**|ワークスペース サーバーがある場所のインスタンスと同じエディション。|このプロパティでは、モデルを配置する Analysis Services サーバーのエディションを指定します。 サーバー エディションにより、プロジェクトに組み込むことができるさまざまな機能が定義されます。 既定では、ローカルの Analysis Services サーバーのエディションになります。 Analysis Services の実稼働サーバーなど、別の Analysis Services サーバーを指定する場合は、その Analysis Services サーバーのエディションを指定する必要があります。|  
-|**[データベース]**|**\<projectname>**|このプロパティでは、配置時にモデル オブジェクトがインスタンス化される Analysis Services データベースの名前を指定します。 この名前は、レポート クライアント データ接続や .bism データ接続ファイルにも指定されます。<br /><br /> この名前は、モデルの作成中にいつでも変更できます。 モデルを配置した後に名前を変更した場合、配置後に行った変更は既に配置されているモデルには反映されません。 たとえば、という名前のソリューションを開く`TestDB`に既定のモデルのデータベース名のモデルでは、ソリューションを配置し、ソリューションを変更および model データベースの名前を変更`Sales`ソリューションが配置された Analysis Services のインスタンスデータベース、1 つの名前付きモデル、および 1 つには表示を区切る Sales という名前です。|  
+|**[データベース]**|**\<projectname>**|このプロパティでは、配置時にモデル オブジェクトがインスタンス化される Analysis Services データベースの名前を指定します。 この名前は、レポート クライアント データ接続や .bism データ接続ファイルにも指定されます。<br /><br /> この名前は、モデルの作成中にいつでも変更できます。 モデルを配置した後に名前を変更した場合、配置後に行った変更は既に配置されているモデルには反映されません。 たとえば、`TestDB` という名前のソリューションを開き、既定の model データベース名の Model という名前のソリューションを配置した後、ソリューションを変更して、model データベースの名前を `Sales` に変更すると、そのソリューションが配置された Analysis Services インスタンスには、Model という名前のデータベースと Sales という名前のデータベースが別々に表示されます。|  
 |**[キューブ名]**|**[モデル]**|このプロパティでは、クライアント ツール (Excel など) および分析管理オブジェクト (AMO) に表示するキューブ名を指定します。|  
   
 ### <a name="directquery-options-properties"></a>[DirectQuery オプション] のプロパティ  
@@ -70,17 +70,17 @@ ms.locfileid: "48171092"
   
 |プロパティ|既定の設定|説明|  
 |--------------|---------------------|-----------------|  
-|**権限借用設定**|**[既定]**|このプロパティでは、DirectQuery モードで実行されるモデルがデータ ソースに接続するときに使用される権限借用設定を指定します。 権限借用資格情報は、メモリ内キャッシュのクエリを実行するときには使用されません。 このプロパティの設定には、以下のオプションがあります。<br /><br /> **[既定]** – データ ソース接続がテーブルのインポート ウィザードにより作成されたとき、[権限借用情報] ページで指定されたオプションを Analysis Services が使用することを指定します。<br /><br /> **[ImpersonateCurrentUser]** – すべてのデータ ソースに接続するとき、現在ログオンしているユーザーのユーザー アカウントが使用されることを指定します。|  
+|**権限借用設定**|**[既定]**|このプロパティでは、DirectQuery モードで実行されるモデルがデータ ソースに接続するときに使用される権限借用設定を指定します。 権限借用資格情報は、メモリ内キャッシュのクエリを実行するときには使用されません。 このプロパティの設定には、以下のオプションがあります。<br /><br /> **[既定]** – データ ソース接続がテーブルのインポート ウィザードにより作成されたとき、[権限借用情報] ページで指定されたオプションを Analysis Services が使用することを指定します。<br /><br /> **ImpersonateCurrentUser** – この設定は、すべてのデータ ソースに接続するとき現在ログオンしているユーザーのユーザー アカウントが使用を指定します。|  
   
 ##  <a name="bkmk_meth"></a> 配置方法  
  テーブル モデル プロジェクトを配置する方法はいくつかあります。 多次元プロジェクトなど、他の Analysis Services プロジェクトに使用できる配置方法の多くは、テーブル モデル プロジェクトの配置にも使用できます。  
   
 |方法|説明|リンク|  
 |------------|-----------------|----------|  
-|**SQLServer データ ツールの Deploy コマンド**|Deploy コマンドは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 作成環境からテーブル モデル プロジェクトを配置する単純で直観的な方法です。<br /><br /> **\*\* 注意 \*\*** この方法は、運用サーバーへの配置には使用できません。 この方法を使用して、既存のモデル内の特定のプロパティを上書きできます。|[SQL Server Data Tools から配置&#40;SSAS 表形式&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|  
-|**分析管理オブジェクト (AMO) オートメーション**|AMO を使用すると、ソリューションの配置に使用できるコマンドを含む、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の完全なコマンド セットのプログラム インターフェイスを利用できます。 ソリューション配置の方法として最も柔軟に使用できるのは、AMO オートメーションですが、この方法ではプログラミング作業も必要になります。  AMO を使用する主な利点は、AMO アプリケーションでは SQL Server エージェントを使用して、あらかじめ設定したスケジュールに従って配置を実行できることです。|[分析管理オブジェクトを使用した開発&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**SQLServer データ ツールの Deploy コマンド**|Deploy コマンドは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 作成環境からテーブル モデル プロジェクトを配置する単純で直観的な方法です。<br /><br /> **\*\* 注意 \*\*** この方法は、運用サーバーへの配置には使用できません。 この方法を使用して、既存のモデル内の特定のプロパティを上書きできます。|[SQL Server データ ツールからの配置 &#40;SSAS テーブル&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|  
+|**分析管理オブジェクト (AMO) オートメーション**|AMO を使用すると、ソリューションの配置に使用できるコマンドを含む、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の完全なコマンド セットのプログラム インターフェイスを利用できます。 ソリューション配置の方法として最も柔軟に使用できるのは、AMO オートメーションですが、この方法ではプログラミング作業も必要になります。  AMO を使用する主な利点は、AMO アプリケーションでは SQL Server エージェントを使用して、あらかじめ設定したスケジュールに従って配置を実行できることです。|[分析管理オブジェクト &#40;AMO&#41; による開発](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのメタデータの XMLA スクリプトを生成し、別のサーバーでそのスクリプトを実行して初期データベースを再作成します。 XMLA スクリプトは、配置プロセスを定義し、それをコード化して XMLA スクリプトに保存することにより、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で簡単に作成できます。 XMLA スクリプトをファイルに保存すると、簡単に、スケジュールに基づいてスクリプトを実行したり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに直接接続しているアプリケーションにスクリプトを埋め込んだりすることができます。<br /><br /> SQL Server エージェントを使用すると、XMLA スクリプトもあらかじめ設定したスケジュールに従って実行できますが、XMLA スクリプトには AMO ほどの柔軟性はありません。 AMO では、さまざまなすべての管理コマンドをホストすることにより、広範にわたる機能を実現しています。|[XMLA を使用したモデル ソリューションの配置](../multidimensional-models/deploy-model-solutions-using-xmla.md)|  
-|**配置ウィザード**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトによって生成された XMLA 出力ファイルを使用して、プロジェクトのメタデータを宛先サーバーに配置するには、配置ウィザードを使用します。 配置ウィザードを使用すると、プロジェクト ビルドの出力ディレクトリによって作成される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ファイルからインスタンスを直接配置できます。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用する主な利点は利便性です。 後で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で使用するために XMLA スクリプトを保存できるのと同様に、配置ウィザード スクリプトも保存できます。 配置ウィザードは、対話的に実行することも、配置ユーティリティを使用してコマンド プロンプトから実行することもできます。|[配置ウィザードを使用したモデル ソリューションの配置](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
+|**配置ウィザード**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトによって生成された XMLA 出力ファイルを使用して、プロジェクトのメタデータを宛先サーバーに配置するには、配置ウィザードを使用します。 配置ウィザードを使用すると、プロジェクト ビルドの出力ディレクトリによって作成される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ファイルからインスタンスを直接配置できます。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用する主な利点は利便性です。 後で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で使用するために XMLA スクリプトを保存できるのと同様に、配置ウィザード スクリプトも保存できます。 配置ウィザードは、対話的に実行することも、配置ユーティリティを使用してコマンド プロンプトから実行することもできます。|[Deploy Model Solutions Using the Deployment Wizard](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**配置ユーティリティ**|配置ユーティリティを使用すると、コマンド プロンプトから Analysis Services の配置エンジンを起動することができます。|[配置ユーティリティを使用したモデル ソリューションの配置](../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  
 |**データベースの同期ウィザード**|2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース間でメタデータとデータを同期するには、データベースの同期ウィザードを使用します。<br /><br /> 同期ウィザードを使用すると、コピー元のサーバーからコピー先のサーバーにデータとメタデータをコピーできます。 配置するデータベースのコピーが、コピー先のサーバーにない場合、新しいデータベースがコピー先のサーバーにコピーされます。 コピー先のサーバーに同じデータベースのコピーが既にある場合、コピー先サーバー上のデータベースは、ソース データベースのメタデータとデータを使用するように更新されます。|[Analysis Services データベースの同期](../multidimensional-models/synchronize-analysis-services-databases.md)|  
 |**バックアップと復元**|バックアップは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを転送する最も簡単な方法です。 **[バックアップ]** ダイアログ ボックスを使用すると、オプション構成を設定した後で、ダイアログ ボックスから直接バックアップを実行できます。 また、スクリプトを作成して保存し、必要なときに実行することもできます。<br /><br /> バックアップと復元は、他の配置方法ほど頻繁には使用されませんが、インフラストラクチャの要件を最小限に抑えながら配置をすばやく完了することができます。|[Analysis Services データベースのバックアップと復元](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)|  
@@ -94,13 +94,13 @@ ms.locfileid: "48171092"
   
 |タスク|説明|  
 |----------|-----------------|  
-|[SQL Server Data Tools から配置&#40;SSAS 表形式&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で Deploy コマンドを使用して、配置プロパティを構成し、テーブル モデル プロジェクトを配置する方法について説明します。|  
+|[SQL Server データ ツールからの配置 &#40;SSAS テーブル&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で Deploy コマンドを使用して、配置プロパティを構成し、テーブル モデル プロジェクトを配置する方法について説明します。|  
 |[配置ウィザードを使用したモデル ソリューションの配置](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|このセクションの各トピックでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを使用して、テーブル モデル ソリューションと多次元モデル ソリューションの両方を配置する方法について説明します。|  
 |[配置ユーティリティを使用したモデル ソリューションの配置](../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ユーティリティを使用して、テーブル モデル ソリューションと多次元モデル ソリューションを配置する方法について説明します。|  
 |[XMLA を使用したモデル ソリューションの配置](../multidimensional-models/deploy-model-solutions-using-xmla.md)|XMLA を使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル ソリューションと多次元ソリューションを配置する方法について説明します。|  
 |[Analysis Services データベースの同期](../multidimensional-models/synchronize-analysis-services-databases.md)|データベースの同期ウィザードを使用して、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル データベースと多次元データベース間でメタデータとデータを同期する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [表形式モデル データベースへの接続&#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [テーブル モデル データベースへの接続 &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
   

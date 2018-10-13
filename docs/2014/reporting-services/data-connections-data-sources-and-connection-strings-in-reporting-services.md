@@ -20,15 +20,15 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c162693777c7231b5c91a43f536b97c0b221f508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 656fb3e4a0eca7ec791050d7be7fcef5e774fbae
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060592"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072316"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Reporting Services でのデータ接続、データ ソース、および接続文字列
-  データを含める、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポートを作成する必要がありますまず*データ ソース*と*データセット*。 このトピックでは、データ ソースの種類、データ ソースの作成方法、およびデータ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 データ ソースには、埋め込みと共有の 2 種類があります。 埋め込みデータ ソースは、レポート内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、レポートとは別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)」および「[埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートにデータを含めるには、最初に *データ ソース* および *データセット*を作成する必要があります。 このトピックでは、データ ソースの種類、データ ソースの作成方法、およびデータ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 データ ソースには、埋め込みと共有の 2 種類があります。 埋め込みデータ ソースは、レポート内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、レポートとは別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)」および「[埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
   
 ||  
 |-|  
@@ -42,7 +42,7 @@ ms.locfileid: "48060592"
 ##  <a name="bkmk_data_sources"></a> 埋め込みデータ ソースおよび共有データ ソース  
  埋め込みデータ ソースと共有データ ソースとでは、作成、格納、および管理の方法が異なります。  
   
--   レポート デザイナーで埋め込みまたは共有データ ソースの作成の一部として、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクト。 プレビュー用にローカルで使用するか、プロジェクトの一部としてレポート サーバーまたは SharePoint サイトに配置するかを制御することができます。 自分のコンピューターおよびレポート サーバー、さらにレポートの配置先の SharePoint サイトにインストールされているカスタム データ拡張機能を使用できます。  
+-   レポート デザイナーで、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクトの一部として、埋め込みデータ ソースまたは共有データ ソースを作成します。 プレビュー用にローカルで使用するか、プロジェクトの一部としてレポート サーバーまたは SharePoint サイトに配置するかを制御することができます。 自分のコンピューターおよびレポート サーバー、さらにレポートの配置先の SharePoint サイトにインストールされているカスタム データ拡張機能を使用できます。  
   
      システム管理者は、別のデータ処理拡張機能および .NET Framework データ プロバイダーをインストールおよび設定できます。 詳細については、「[データ処理拡張機能と .NET Framework データ プロバイダー (SSRS)](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)」を参照してください。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48060592"
   
 -   ODBC  
   
--   Power View 用 Microsoft BI セマンティック モデル: PowerPivot ギャラリー用に構成されている SharePoint のサイトと[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]、このデータ ソースの種類が使用できます。 このデータ ソースの種類は、[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] プレゼンテーションにのみ使用されます。 詳細については、「 [Power View に適した BI セマンティック表形式モデルの作成 (ビデオ)](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)」を参照してください。  
+-   Power View 用 Microsoft BI セマンティック モデル: PowerPivot ギャラリーおよび [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]用に構成されている SharePoint サイトでは、このデータ ソースの種類を使用できます。 このデータ ソースの種類は、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] プレゼンテーションにのみ使用されます。 詳細については、「 [Power View に適した BI セマンティック表形式モデルの作成 (ビデオ)](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)」を参照してください。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] でサポートされるデータ ソースおよびバージョンの一覧については、「[Reporting Services でサポートされるデータ ソース (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48060592"
     >  資格情報は、あえてデータ ソースとは別に管理されます。 ローカル システムでレポートのプレビューに使用する資格情報は、パブリッシュされたレポートの表示に必要な資格情報とは異なります。 レポート サーバーまたは SharePoint サイトにデータ ソースを保存した後は、その場所にあるデータを操作する関係上、資格情報の変更が必要となる場合があります。 詳細については、「 [データ ソースの資格情報](#bkmk_credentials)」を参照してください。  
   
 > [!NOTE]  
->  レポートの埋め込みデータ ソースを作成するときに[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、サーバー エクスプ ローラーではなくソリューション エクスプ ローラーまたはレポート データ ペインで、レポート デザイナーでデータ ソースを作成する必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レポート デザイナーがサポートしていません[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]サーバー エクスプ ローラーで作成されたデータ ソース。  
+>  レポートの埋め込みデータ ソースを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で作成する場合、データ ソースの作成は、レポート デザイナーのソリューション エクスプローラーまたはレポート データ ペインで行う必要があります。サーバー エクスプローラーでデータ ソースを作成することは避けてください。 サーバー エクスプローラーで作成された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ ソースは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] レポート デザイナーではサポートされません。  
   
  レポート データ ペインには、レポートに追加された共有データ ソースへの参照と埋め込みデータ ソースが表示されます。 レポート ビルダーにおける共有データ ソースの参照先は、レポート サーバー上または SharePoint サイト上の共有データ ソースです。 レポート デザイナーにおける共有データ ソースの参照先は、ソリューション エクスプローラーの [共有データ ソース] フォルダーに表示される共有データ ソースです。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48060592"
   
  ![注](media/rs-fyinote.png "注")データ ソース接続が引き続きレポートをパブリッシュした後、正常に接続することを確認するをお勧めします。 資格情報を変更する必要がある場合は、レポート サーバー上で直接変更できます。  
   
- レポート用のデータ ソースを変更するには、ネイティブ モードのレポート マネージャーで、または SharePoint モードのドキュメント ライブラリから、レポートのプロパティを変更します。 詳細については、以下を参照してください。  
+ レポートが使用するデータ ソースを変更するには、ネイティブ モードのレポート マネージャーまたは SharePoint モードでドキュメント ライブラリからレポートのプロパティを変更できます。 詳細については、以下を参照してください。  
   
 -   [Reporting Services データ ソース資格情報の格納](report-data/store-credentials-in-a-reporting-services-data-source.md) [Reporting Services データ ソース資格情報の格納](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
@@ -131,22 +131,22 @@ ms.locfileid: "48060592"
 |ローカル サーバーの SQL Server データベース|`data source="(local)";initial catalog=AdventureWorks`|データ ソースの種類を設定`Microsoft SQL Server`します。|  
 |SQL Server インスタンス<br /><br /> [データベース]|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|データ ソースの種類を設定`Microsoft SQL Server`します。|  
 |SQL Server Express データベース|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|データ ソースの種類を設定`Microsoft SQL Server`します。|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)] クラウドで|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|データ ソースの種類を設定`Windows Azure SQL Database`します。 詳細については、「[SQL Azure の接続の種類 (SSRS)](report-data/sql-azure-connection-type-ssrs.md)」を参照してください。|  
+|クラウド内の [!INCLUDE[ssSDS](../includes/sssds-md.md)]|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|データ ソースの種類を設定`Windows Azure SQL Database`します。 詳細については、「[SQL Azure の接続の種類 (SSRS)](report-data/sql-azure-connection-type-ssrs.md)」を参照してください。|  
 |SQL Server 並列データ ウェアハウス|`HOST=<IP address>;database= AdventureWorks; port=<port>`|データ ソースの種類を設定`Microsoft SQL Server Parallel Data Warehouse`します。 詳細については、「[SQL Server 並列データ ウェアハウスの接続の種類 &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)」を参照してください。|  
 |ローカル サーバーの Analysis Services データベース|`data source=localhost;initial catalog=Adventure Works DW`|データ ソースの種類を設定`Microsoft SQL Server Analysis Services`します。 詳細については、「[MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)」または「[DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)」を参照してください。|  
-|Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|データ ソースの種類を設定`Microsoft SQL Server Analysis Services`します。 cube= 設定にパースペクティブの名前を指定します。 詳しくは、「[パースペクティブ &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md)」をご覧ください。|  
+|Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|データ ソースの種類を設定`Microsoft SQL Server Analysis Services`します。 cube= 設定にパースペクティブの名前を指定します。 詳しくは、「 [パースペクティブ &#40;SSAS テーブル&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md)」をご覧ください。|  
 |ネイティブ モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。 詳細については、「[レポート モデルの接続 &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md)」を参照してください。|  
 |SharePoint 統合モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サーバー|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|データ ソースの種類を設定`OLE DB Provider for OLAP Services 8.0`します。<br /><br /> `ConnectTo` プロパティを `8.0` に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ ソースにより高速に接続できるようになります。 このプロパティを設定するには、 **[接続プロパティ]** ダイアログ ボックスの **[詳細プロパティ]** タブを使用します。|  
-|Oracle サーバー|`data source=myserver`|データ ソースの種類を設定`Oracle`します。 レポート デザイナーがインストールされているコンピューターとレポート サーバーに、Oracle クライアント ツールがインストールされている必要があります。 詳細については、「[Oracle の接続の種類 &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md)」を参照してください。|  
-|SAP NetWeaver BI データ ソース|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|データ ソースの種類を設定`SAP NetWeaver BI`します。 詳細については、「[SAP NetWeaver BI の接続の種類 &#40;SSRS&#41;](report-data/sap-netweaver-bi-connection-type-ssrs.md)」を参照してください。|  
-|Hyperion Essbase データ ソース|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|データ ソースの種類を設定`Hyperion Essbase`します。 詳細については、「[Hyperion Essbase の接続の種類 &#40;SSRS&#41;](report-data/hyperion-essbase-connection-type-ssrs.md)」を参照してください。|  
-|Teradata データ ソース|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|データ ソースの種類を設定`Teradata`します。 接続文字列は、各フィールドが 1 ～ 3 桁の 4 つのフィールドで構成されるインターネット プロトコル (IP) アドレスです。 詳細については、「[Teradata の接続の種類 &#40;SSRS&#41;](report-data/teradata-connection-type-ssrs.md)」を参照してください。|  
-|XML データ ソース、Web サービス|`data source=http://adventure-works.com/results.aspx`|データ ソースの種類を設定`XML`します。 接続文字列は、Web サービス記述言語 (WSDL) をサポートする Web サービスの URL です。 詳細については、「[XML の接続の種類 &#40;SSRS&#41;](report-data/xml-connection-type-ssrs.md)」を参照してください。|  
-|XML データ ソース、XML ドキュメント|`http://localhost/XML/Customers.xml`|データ ソースの種類を設定`XML`します。 接続文字列は XML ドキュメントへの URL です。|  
-|XML データ ソース、埋め込み XML ドキュメント|*空*|データ ソースの種類を設定`XML`します。 XML データはレポート定義に埋め込まれています。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバー|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|データ ソースの種類を `OLE DB Provider for OLAP Services 8.0` に設定します。<br /><br /> `ConnectTo` プロパティを `8.0` に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ ソースにより高速に接続できるようになります。 このプロパティを設定するには、 **[接続プロパティ]** ダイアログ ボックスの **[詳細プロパティ]** タブを使用します。|  
+|Oracle サーバー|`data source=myserver`|データ ソースの種類を `Oracle` に設定します。 レポート デザイナーがインストールされているコンピューターとレポート サーバーに、Oracle クライアント ツールがインストールされている必要があります。 詳細については、「[Oracle の接続の種類 &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md)」を参照してください。|  
+|SAP NetWeaver BI データ ソース|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|データ ソースの種類を `SAP NetWeaver BI` に設定します。 詳細については、「[SAP NetWeaver BI の接続の種類 &#40;SSRS&#41;](report-data/sap-netweaver-bi-connection-type-ssrs.md)」を参照してください。|  
+|Hyperion Essbase データ ソース|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|データ ソースの種類を `Hyperion Essbase` に設定します。 詳細については、「[Hyperion Essbase の接続の種類 &#40;SSRS&#41;](report-data/hyperion-essbase-connection-type-ssrs.md)」を参照してください。|  
+|Teradata データ ソース|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|データ ソースの種類を `Teradata` に設定します。 接続文字列は、各フィールドが 1 ～ 3 桁の 4 つのフィールドで構成されるインターネット プロトコル (IP) アドレスです。 詳細については、「[Teradata の接続の種類 &#40;SSRS&#41;](report-data/teradata-connection-type-ssrs.md)」を参照してください。|  
+|XML データ ソース、Web サービス|`data source=http://adventure-works.com/results.aspx`|データ ソースの種類を `XML` に設定します。 接続文字列は、Web サービス記述言語 (WSDL) をサポートする Web サービスの URL です。 詳細については、「[XML の接続の種類 &#40;SSRS&#41;](report-data/xml-connection-type-ssrs.md)」を参照してください。|  
+|XML データ ソース、XML ドキュメント|`http://localhost/XML/Customers.xml`|データ ソースの種類を `XML` に設定します。 接続文字列は XML ドキュメントへの URL です。|  
+|XML データ ソース、埋め込み XML ドキュメント|*空*|データ ソースの種類を `XML` に設定します。 XML データはレポート定義に埋め込まれています。|  
   
- 使用してレポート サーバーに接続できないかどうか`localhost`、TCP/IP プロトコルのネットワーク プロトコルが有効になっていることを確認します。 詳細については、次を参照してください。 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)します。  
+ `localhost` を使用してレポート サーバーに接続できない場合は、TCP/IP プロトコルのネットワーク プロトコルが有効になっていることを確認します。 詳細については、「 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
   
  これらの種類のデータ ソースへの接続に必要な設定の詳細については、「[外部データ ソースのデータを追加する (SSRS)](report-data/add-data-from-external-data-sources-ssrs.md)」または「[Reporting Services でサポートされるデータ ソース (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)」で、目的のデータ接続のトピックを参照してください。  
   
@@ -156,13 +156,13 @@ ms.locfileid: "48060592"
 ##  <a name="bkmk_Expressions_in_connection_strings"></a> 式に基づく接続文字列  
  式に基づく接続文字列は実行時に評価されます。 たとえば、データ ソースをパラメーターとして指定し、接続文字列にパラメーター参照を含めて、ユーザーがレポートのデータ ソースを選択できるようにすることができます。 たとえば、多国籍企業がいくつもの国にデータ サーバーを持っていると仮定します。 式ベースの接続文字列を使用すると、販売レポートを実行するユーザーは、レポートの実行前に特定の国のデータ ソースを選択することができます。  
   
- 次の例では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の接続文字列でデータ ソースの式を使用する方法を示します。 この例では、 `ServerName`というレポート パラメーターが作成されているものとします。  
+ 次の例では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の接続文字列でデータ ソースの式を使用する方法を示します。 この例では、 `ServerName`というレポート パラメーターが作成されているものとします。  
   
 ```  
 ="data source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks"  
 ```  
   
- データ ソースの式は、実行時またはレポートのプレビュー時に処理されます。 式を記述する必要があります[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]します。 データ ソースの式を定義する際には、次のガイドラインに従います。  
+ データ ソースの式は、実行時またはレポートのプレビュー時に処理されます。 式は、 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]で記述する必要があります。 データ ソースの式を定義する際には、次のガイドラインに従います。  
   
 -   静的な接続文字列を使用してレポートをデザインする。 静的な接続文字列とは、式を使わずに設定した接続文字列です (たとえば、レポート固有のデータ ソースまたは共有データ ソースの作成手順に従うと、静的な接続文字列を定義することになります)。 静的な接続文字列を使用することで、レポート デザイナーでデータ ソースに接続し、レポートの作成に必要なクエリ結果を取得することができます。  
   
@@ -177,12 +177,12 @@ ms.locfileid: "48060592"
 -   レポートをパブリッシュする前に、静的な接続文字列を式で置き換える。 レポートのデザインが完了するまでは、静的な接続文字列を式で置き換えません。 式を使用すると、レポート デザイナー内でクエリを実行できなくなります。 さらに、レポート データ ペイン内のフィールド一覧と、[パラメーター] の一覧が、自動的に更新されなくなります。  
   
 ## <a name="see-also"></a>参照  
- [埋め込みし、共有データ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [レポート データ ソースを管理します。](report-data/manage-report-data-sources.md)   
+ [埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [レポート データ ソースを管理する](report-data/manage-report-data-sources.md)   
  [データ ソースのプロパティ ダイアログ ボックスの資格情報](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
  [共有データ ソースのプロパティ ダイアログ ボックス、資格情報](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
- [作成、変更、および共有データ ソースを削除する&#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [配置プロパティを設定&#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
+ [共有データ ソースを作成、変更、および削除する (SSRS)](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [配置プロパティを設定する (Reporting Services)](tools/set-deployment-properties-reporting-services.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   

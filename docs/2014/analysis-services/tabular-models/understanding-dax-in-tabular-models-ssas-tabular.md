@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136022"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906382"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>テーブル モデルでの DAX について (SSAS テーブル)
   Data Analysis Expressions (DAX) は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel のブックおよび [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のテーブル モデル プロジェクトでカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
@@ -91,7 +91,7 @@ ms.locfileid: "48136022"
   
  行フィルターは、指定行と関連行に適用されます。 1 つのテーブルに複数のリレーションシップがある場合、フィルターによりセキュリティがアクティブなリレーションシップに適用されます。 行フィルターには、関連テーブルに対して定義された他の行フィルターと類似する点があります。  
   
- 詳しくは、「[ロール &#40;SSAS テーブル&#41;](roles-ssas-tabular.md)」をご覧ください。  
+ 詳細については、「 [ロール &#40;SSAS テーブル&#41;](roles-ssas-tabular.md)で作成したテーブル モデル プロジェクトでの利用を想定して取り上げます。  
   
 ##  <a name="bkmk_DAX_datatypes"></a> DAX データ型  
  多様なデータ型をサポートするさまざまなデータ ソースから、モデルにデータをインポートできます。 モデルにデータをインポートする場合、そのデータはいずれかのテーブル モデル データ型に変換されます。 モデル データが計算に使用される場合、そのデータは計算中および計算の出力時に DAX データ型に変換されます。 DAX の数式を作成すると、数式に使用されている語句によって、返される値のデータ型が自動的に判断されます。  
@@ -182,7 +182,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|Date テーブルの Date 列を指定します。 列は角かっこで囲みます。|  
 |`,`||  
 |`STARTOFQUARTER`|STARTOFQUARTER 関数は、四半期の開始日を返します。|  
-|`LASTDATE`|LASTDATE 関数は、四半期の最終日を返します。|  
+|`LASTDATE`|LASTDATE 関数では、四半期の最後の日付を返します。|  
 |`'Date'`|Date テーブルを指定します。|  
 |`[Date]`|Date テーブルの Date 列を指定します。|  
 |`,`||  
@@ -219,7 +219,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   DAX 関数には、さまざまな *タイム インテリジェンス* 関数が含まれます。 これらの関数を使用すると、日付範囲を定義または選択して、それらの日付または範囲に基づく動的な計算を実行できます。 たとえば、並列期間の合計を比較できます。  
   
 ### <a name="date-and-time-functions"></a>日付と時刻の関数  
- DAX の日付と時刻の関数は、Microsoft Excel の日付と時刻の関数に似ています。 ただし、DAX 関数に基づいて、 `datetime` Microsoft SQL Server で使用されるデータ型。 詳細については、次を参照してください。[日付と時刻関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)します。  
+ DAX の日付と時刻の関数は、Microsoft Excel の日付と時刻の関数に似ています。 ただし、DAX 関数は、Microsoft SQL Server で使用される `datetime` データ型に基づいています。 詳細については、次を参照してください。[日付と時刻関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)します。  
   
 ### <a name="filter-functions"></a>フィルター関数  
  DAX のフィルター関数を使用すると、特定のデータ型を返したり、関連テーブルで値を参照したり、関連する値によるフィルターを適用したりすることができます。 参照関数では、データベースと同様、テーブルおよびリレーションシップを使用します。 フィルター関数を使用すると、データ コンテキストを操作して、動的な計算を実行できます。 詳細については、次を参照してください。[フィルター関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx)します。  
@@ -393,7 +393,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  再計算の結果、異なる値が返され、ロール メンバーによる行のクエリの可否が変化しない限り、処理も再計算も行フィルターの数式には影響しません。  
   
- 詳細については、「[データの処理 &#40;SSAS テーブル&#41;](../process-data-ssas-tabular.md)」を参照してください。  
+ 詳細については、「 [データの処理 (SSAS テーブル)](../process-data-ssas-tabular.md)」を参照してください。  
   
 ##  <a name="bkmk_troubleshoot"></a> 数式内のエラーのトラブルシューティング  
  数式を定義するときにエラーが発生した場合は、その数式に *構文エラー*、 *セマンティック エラー*、または *計算エラー*が含まれている可能性があります。  
@@ -423,10 +423,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ## <a name="see-also"></a>参照  
  [Data Analysis Expressions &#40;DAX&#41;リファレンス](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
- [メジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)   
- [計算列&#40;SSAS 表形式&#41;](ssas-calculated-columns.md)   
- [ロール&#40;SSAS 表形式&#41;](roles-ssas-tabular.md)   
- [Kpi &#40;SSAS 表形式&#41;](kpis-ssas-tabular.md)   
+ [メジャー &#40;SSAS テーブル&#41;](measures-ssas-tabular.md)   
+ [計算列 &#40;SSAS テーブル&#41;](ssas-calculated-columns.md)   
+ [ロール &#40;SSAS テーブル&#41;](roles-ssas-tabular.md)   
+ [KPI &#40;SSAS テーブル&#41;](kpis-ssas-tabular.md)   
  [サポートされているデータ ソース &#40;SSAS テーブル&#41;](data-sources-supported-ssas-tabular.md)  
   
   

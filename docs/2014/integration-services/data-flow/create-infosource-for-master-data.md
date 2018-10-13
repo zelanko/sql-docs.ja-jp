@@ -11,12 +11,12 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e01694abcfc7576f9c5f1a91a1e795163d2f323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd05395098a6ce9a4dd23dc2f8dc886fe7273ece
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065449"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085070"
 ---
 # <a name="create-infosource-for-master-data"></a>[マスター データのインフォソースの作成]
   SAP Netweaver BW システムでマスター データ用の新しいインフォソースを作成するには、 **[マスター データのインフォソースの作成]** ダイアログ ボックスを使用します。  
@@ -48,7 +48,7 @@ ms.locfileid: "48065449"
  インフォオブジェクトを選択すると、選択したインフォオブジェクトの名前が **[インフォオブジェクトの名前]** ボックスに設定されます。  
   
  **[新規作成]**  
- 新しいインフォオブジェクトを作成します。 このオプションは、新しいインフォオブジェクトを作成できる **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを開きます。 このダイアログ ボックスの詳細については、「 [[新しいインフォオブジェクトの作成]](create-new-infoobject.md)」を参照してください。  
+ 新しいインフォオブジェクトを作成します。 このオプションを表示、**新しいインフォ オブジェクトの作成** ダイアログ ボックスが、新しいインフォ オブジェクトを作成することができます。 このダイアログ ボックスの詳細については、「 [[新しいインフォオブジェクトの作成]](create-new-infoobject.md)」を参照してください。  
   
  インフォオブジェクトを作成すると、新しいインフォオブジェクトの名前が **[インフォオブジェクトの名前]** ボックスに設定されます。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48065449"
  新しいインフォソースを保存してアクティブ化します。  
   
 ## <a name="see-also"></a>参照  
- [インフォ ソースを作成します。](create-infosource.md)   
+ [[インフォソースの作成]](create-infosource.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

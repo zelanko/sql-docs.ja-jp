@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 265bf3544f427f2dc23a437bc864cbac6dc53f1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d2a18c1f9f425ec7531c46299a5cf4c78278437
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052372"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120409"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの作成または構成 (SQL Server)
   このトピックでは、 *で* 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループに対して 1 つの [!INCLUDE[tsql](../../../includes/tsql-md.md)]可用性グループ リスナー [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を作成または構成する方法について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "48052372"
 >  可用性グループの最初の可用性グループ リスナーを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell を使用することを強くお勧めします。 必要な場合 (追加リスナーを作成する場合など) を除いて、WSFC クラスターでリスナーを直接作成することは避けてください。  
   
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="DoesListenerExist"></a> この可用性グループに既にリスナーが存在するか  
  **可用性グループにリスナーが既に存在するかどうかを確認するには**  
@@ -160,7 +160,7 @@ ms.locfileid: "48052372"
      `New-SqlAvailabilityGroupListener`  
      新しい可用性グループ リスナーを作成して、既存の可用性グループにアタッチします。  
   
-     たとえば、次`New-SqlAvailabilityGroupListener`コマンドでは、という名前の可用性グループ リスナーを作成します。 `MyListener` 、可用性グループの`MyAg`します。 このリスナーに渡された IPv4 アドレスを使用して、`-StaticIp`仮想 IP アドレスとしてパラメーター。  
+     たとえば、次の `New-SqlAvailabilityGroupListener` コマンドは、可用性グループ `MyListener` に対し、`MyAg` という名前の可用性グループ リスナーを作成します。 このリスナーは、`-StaticIp` パラメーターに渡された IPv4 アドレスを仮想 IP アドレスとして使用します。  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -210,7 +210,7 @@ ms.locfileid: "48052372"
 ##  <a name="FollowUp"></a> 補足情報: 可用性グループ リスナーの作成後  
   
 ###  <a name="MultiSubnetFailover"></a> MultiSubnetFailover のキーワードおよび関連機能  
- `MultiSubnetFailover` AlwaysOn 可用性グループと SQL Server 2012 の AlwaysOn フェールオーバー クラスター インスタンスの高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で `MultiSubnetFailover=True` が設定されていると、次の 3 つのサブ機能が有効になります。  
+ `MultiSubnetFailover` は、SQL Server 2012 の AlwaysOn 可用性グループおよび AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で `MultiSubnetFailover=True` が設定されていると、次の 3 つのサブ機能が有効になります。  
   
 -   AlwaysOn 可用性グループまたはフェールオーバー クラスター インスタンスに対する複数サブネット リスナーへのより高速なマルチサブネット フェールオーバー。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "48052372"
      **短所:** クロス サブネット フェールオーバーが発生した場合は、クライアントの復旧時間は 15 分になりますかによって、`HostRecordTTL`設定およびクロスサイト DNS/AD レプリケーション スケジュールの設定。  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP の設定  
- 使用すると[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または wsfc に可用性グループ リスナー、クライアント アクセス ポイントを作成する PowerShell が作成された、`RegisterAllProvidersIP`プロパティが 1 (true) に設定します。 このプロパティ値の効果は、次に示すように、クライアント接続文字列によって異なります。  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して可用性グループ リスナーを作成すると、WSFC にクライアント アクセス ポイントが作成され、その `RegisterAllProvidersIP` プロパティが 1 (true) に設定されます。 このプロパティ値の効果は、次に示すように、クライアント接続文字列によって異なります。  
   
 -   `MultiSubnetFailover` を true に設定する接続文字列  
   
@@ -258,16 +258,16 @@ ms.locfileid: "48052372"
   
 -   `MultiSubnetFailover` を true に設定しない接続文字列  
   
-     `RegisterAllProvidersIP = 1`の場合、接続文字列で `MultiSubnetFailover = True`を使用しないクライアントは、接続の待機時間が長くなります。 これが発生するのは、このようなクライアントはすべての IP への接続を順に試行するためです。 これに対し、`RegisterAllProvidersIP` を 0 に変更すると、WSFC クラスターのクライアント アクセス ポイントにアクティブな IP アドレスが登録され、レガシ クライアントの待機時間が短縮されます。 したがって、可用性グループ リスナーに接続する必要があるが、`MultiSubnetFailover` プロパティを使用できないレガシ クライアントがある場合は、`RegisterAllProvidersIP` を 0 に変更することをお勧めします。  
+     `RegisterAllProvidersIP = 1`の場合、接続文字列で `MultiSubnetFailover = True`を使用しないクライアントは、接続の待機時間が長くなります。 これが発生するのは、このようなクライアントはすべての IP への接続を順に試行するためです。 これに対し、`RegisterAllProvidersIP` を 0 に変更すると、WSFC クラスターのクライアント アクセス ポイントにアクティブな IP アドレスが登録され、レガシ クライアントの待機時間が短縮されます。 そのため、可用性グループ リスナーに接続する必要があるおり、使用できないレガシ クライアントがある場合、`MultiSubnetFailover`を変更することを推奨プロパティ、`RegisterAllProvidersIP`を 0 にします。  
   
     > [!IMPORTANT]  
-    >  WSFC クラスター (フェールオーバー クラスター マネージャーの GUI) を通して可用性グループ リスナーを作成するときに`RegisterAllProvidersIP`は既定で 0 (false) になります。  
+    >  WSFC クラスター (フェールオーバー クラスター マネージャーの GUI) を通してリスナーを作成すると、`RegisterAllProvidersIP` は既定で 0 (false) になります。  
   
 ###  <a name="HostRecordTTL"></a> HostRecordTTL の設定  
- 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  減らすことで`HostRecordTTL`、Time to Live (TTL)、キャッシュするレコードのレガシ クライアントはよりすばやく再接続します。  ただし、`HostRecordTTL`月もの結果を設定する、DN サーバーへのトラフィックが増加します。  
+ 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  `HostRecordTTL` の値 (キャッシュするレコードの有効期限 (TTL)) を小さくすると、レガシ クライアントはよりすばやく再接続できるようになります。  ただし、`HostRecordTTL` の設定を小さくすると、DN サーバーへのトラフィックが増加する可能性があります。  
   
 ###  <a name="SampleScript"></a> RegisterAllProvidersIP を無効にし、TTL を短縮する PowerShell サンプル スクリプト  
- 次の PowerShell の例は、両方を構成する方法を示します、`RegisterAllProvidersIP`と`HostRecordTTL`クラスター、リスナー リソース用のパラメーター。  DNS レコードは、既定の 20 分間ではなく、5 分間キャッシュされます。  両方のクラスター パラメーターを変更すると、`MultiSubnetFailover` パラメーターを使用できないレガシ クライアントのフェールオーバーが発生した後に、適切な IP アドレスに接続する時間が短縮される可能性があります。  `yourListenerName` は、変更対象のリスナーの名前に置き換えてください。  
+ 次の PowerShell の例では、リスナー リソースに対する `RegisterAllProvidersIP` クラスター パラメーターと `HostRecordTTL` クラスター パラメーターの両方を構成する方法を示しています。  DNS レコードは、既定の 20 分間ではなく、5 分間キャッシュされます。  両方のクラスター パラメーターを変更すると、`MultiSubnetFailover` パラメーターを使用できないレガシ クライアントのフェールオーバーが発生した後に、適切な IP アドレスに接続する時間が短縮される可能性があります。  `yourListenerName` は、変更対象のリスナーの名前に置き換えてください。  
   
 ```  
 Import-Module FailoverClusters  

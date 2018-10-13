@@ -14,12 +14,12 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db840abbf4caed344a1be055afd6432b4d2b18e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209482"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169202"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの PowerShell コマンドレットの概要 (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell は、特にシステム管理用に設計されている、タスク ベースのコマンド ライン シェルとスクリプト言語です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で一連の PowerShell コマンドレットを提供しており、それらを使用すると可用性グループ、可用性レプリカ、および可用性データベースの配置、管理、および監視ができます。  
@@ -50,21 +50,21 @@ ms.locfileid: "48209482"
   
 |コマンドレット|説明|サポート対象|  
 |-------------|-----------------|------------------|  
-|`Disable-SqlAlwaysOn`|サーバー インスタンス上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を無効にします。|`Path`、`InputObject`、または `Name` パラメーターによって指定されるサーバー インスタンス  ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をサポートしている [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のエディションである必要があります)。|  
+|`Disable-SqlAlwaysOn`|サーバー インスタンス上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を無効にします。|`Path`、`InputObject`、または `Name` パラメーターによって指定されるサーバー インスタンス  ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]をサポートしている [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のエディションである必要があります)。|  
 |`Enable-SqlAlwaysOn`|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能をサポートしている [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンス上で [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効化します。 サポートについて[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)します。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をサポートしている [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の任意のエディション。|  
 |`New-SqlHadrEndPoint`|サーバー インスタンス上に新しいデータベース ミラーリング エンドポイントを作成します。 このエンドポイントは、プライマリ データベースとセカンダリ データベース間のデータ移動のために必要です。|の任意のインスタンス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|既存のデータベース ミラーリング エンドポイントの名前、状態、認証などのプロパティを変更します。|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] をサポートしていて、データベース ミラーリング エンドポイントが存在しないサーバー インスタンス。|  
   
-##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
+##  <a name="BnRcmdlets"></a> バックアップおよびデータベースとトランザクション ログを復元します。  
   
 |コマンドレット|説明|サポート対象|  
 |-------------|-----------------|------------------|  
-|`Backup-SqlDatabase`|データまたはログ バックアップを作成します。|任意のオンライン データベース ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の場合、プライマリ レプリカをホストしているサーバー インスタンス上のデータベース)|  
-|`Restore-SqlDatabase`|バックアップを復元します。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の任意のインスタンス ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の場合、セカンダリ レプリカをホストしているサーバー インスタンス)<br /><br /> **\*\* 重要な\* \*** 使用する必要がありますセカンダリ データベースを準備する際、`-NoRecovery`内のパラメーターすべて`Restore-SqlDatabase`コマンド。|  
+|`Backup-SqlDatabase`|データまたはログ バックアップを作成します。|任意のオンライン データベース ([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の場合、プライマリ レプリカをホストしているサーバー インスタンス上のデータベース)|  
+|`Restore-SqlDatabase`|バックアップを復元します。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の任意のインスタンス ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の場合、セカンダリ レプリカをホストしているサーバー インスタンス)<br /><br /> **&#42;&#42;重要な&#42; &#42;** 使用する必要がありますセカンダリ データベースを準備する際、`-NoRecovery`内のパラメーターすべて`Restore-SqlDatabase`コマンド。|  
   
  これらのコマンドレッドを使用してセカンダリ データベースを準備する方法の詳細については、「[可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)」を参照してください。  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="DeployManageAGs"></a> 作成して、可用性グループの管理  
   
 |コマンドレット|説明|サポート対象|  
 |-------------|-----------------|------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "48209482"
 |`Set-SqlAvailabilityGroup`|可用性グループのプロパティを設定します。可用性グループをオンライン/オフラインにします。|プライマリ レプリカをホストするサーバー インスタンス|  
 |`Switch-SqlAvailabilityGroup`|以下のいずれかの形式のフェールオーバーを開始します。<br /><br /> 可用性グループの強制フェールオーバー (データ損失の可能性あり)。<br /><br /> 可用性グループの手動フェールオーバー。|対象のセカンダリ レプリカをホストするサーバー インスタンス|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="AGlisteners"></a> 作成して、可用性グループ リスナーの管理  
   
 |コマンドレット|説明|サポート対象|  
 |------------|-----------------|------------------|  
@@ -81,16 +81,16 @@ ms.locfileid: "48209482"
 |`Set-SqlAvailabilityGroupListener`|既存の可用性グループ リスナーのポート設定を変更します。|プライマリ レプリカをホストするサーバー インスタンス|  
 |`Add-SqlAvailabilityGroupListenerStaticIp`|既存の可用性グループ リスナー構成に静的 IP アドレスを追加します。 IP アドレスには、サブネットを含む IPv4 アドレス、または IPv6 アドレスを指定できます。|プライマリ レプリカをホストするサーバー インスタンス|  
   
-##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="DeployManageARs"></a> 作成して、可用性レプリカの管理  
   
 |コマンドレット|説明|サポート対象|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityReplica**|新しい可用性レプリカを作成します。 使用することができます、`-AsTemplate`パラメーターを新しい可用性レプリカごとにインメモリの可用性レプリカ オブジェクトを作成します。|プライマリ レプリカをホストするサーバー インスタンス|  
+|**New-SqlAvailabilityReplica**|新しい可用性レプリカを作成します。 `-AsTemplate` パラメーターを使用すると、新しい可用性レプリカごとにインメモリの可用性レプリカ オブジェクトを作成できます。|プライマリ レプリカをホストするサーバー インスタンス|  
 |`Join-SqlAvailabilityGroup`|セカンダリ レプリカを可用性グループに参加させます。|セカンダリ レプリカをホストするサーバー インスタンス|  
 |**Remove-SqlAvailabilityReplica**|可用性レプリカを削除します。|プライマリ レプリカをホストするサーバー インスタンス|  
 |`Set-SqlAvailabilityReplica`|可用性レプリカのプロパティを設定します。|プライマリ レプリカをホストするサーバー インスタンス|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="DeployManageDbs"></a> 追加して、可用性データベースの管理  
   
 |コマンドレット|説明|サポート対象|  
 |-------------|-----------------|------------------|  
@@ -99,7 +99,7 @@ ms.locfileid: "48209482"
 |`Resume-SqlAvailabilityDatabase`|中断されている可用性データベースのデータ移動を再開します。|データベースが中断されたサーバー インスタンス|  
 |`Suspend-SqlAvailabilityDatabase`|可用性データベースのデータ移動を中断します。|可用性レプリカをホストする任意のサーバー インスタンス|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="MonitorTblshtAGs"></a> 可用性グループの正常性の監視  
  以下の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用すると、可用性グループとそのレプリカおよびデータベースの正常性を監視できます。  
   
 > [!IMPORTANT]  

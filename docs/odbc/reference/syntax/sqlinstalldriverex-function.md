@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6e034ff8b17852b40a604beb8ce1d38bdd1612b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802470"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169339"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 関数
 **準拠**  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>コメント  
  *LpszDriver*引数は、キーワードと値のペアの形式で属性の一覧を示します。 各ペアは、null バイトで終了し、全体の一覧は null バイトで終了します。 (つまり、2 つの null バイトの末尾を示す一覧。)この一覧の形式は次のとおりです。  
   
- *ドライバー desc* **\\**0Driver**=***ドライバー-filename DLL***\\**0 [セットアップ**=***セットアップ-filename DLL***\\**0]  
+ _ドライバー desc_ **\\**0Driver**=**_ドライバー-filename DLL_ **\\**0 [セットアップ**=**_セットアップ-filename DLL_<b>\\</b>0]  
   
- [*ドライバー-attr-keyword1***=*** value1 ***\\**0] [* ドライバー-attr-keyword2***=*** value2 ***\\**0].**\\**0  
+ [_ドライバー-attr-keyword1_**=**_value1_<b>\\</b>0] [_ドライバー-attr-keyword2_ **=** _value2_<b>\\</b>0].<b> \\ </b>0  
   
  \0 の null バイトがあると*ドライバー-attr-keywordn*ドライバー属性のいずれかのキーワードは、します。 キーワードは、指定した順序で表示する必要があります。 たとえば、書式設定されたテキスト ファイル用のドライバーが個別のドライバーと Dll のセットアップとし、.txt および .csv の拡張子を持つファイルを使用できます。 *LpszDriver*引数のこのドライバーで次のようにある可能性があります。  
   

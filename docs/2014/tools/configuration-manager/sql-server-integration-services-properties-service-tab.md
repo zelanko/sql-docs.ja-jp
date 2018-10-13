@@ -11,21 +11,21 @@ ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d716dcebef94f3da17a01cc4a6aac95c1272b79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7dff47b3ebd6277a34a782b898f73dbec8a7ed3b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066202"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905702"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
   **[[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のプロパティ]** ダイアログ ボックスの **[サービス]** タブでは、以下のオプションの表示や指定を行います。  
   
 ## <a name="options"></a>および  
- **[バイナリ パス]**  
- 表示、このサービスで使用するプログラム ファイルの場所。  
+ **バイナリ パス**  
+ このサービスが使用するプログラム ファイルの場所が表示されます。  
   
- **[エラー制御]**  
+ **エラー制御**  
  1 は `SERVICE_ERROR_NORMAL`を示します。 コンピューターの起動時にこのサービスが開始しなかった場合は、スタートアップ プログラムによってログにエラーが記録され、ポップアップ メッセージ ボックスが表示されますが、スタートアップ操作は継続します。 この値は変更できません。  
   
  **終了コード**  

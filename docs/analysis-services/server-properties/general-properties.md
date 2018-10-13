@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033340"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906212"
 ---
 # <a name="general-properties"></a>全般プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38033340"
  Analysis Services のダイアログ ボックスでファイルを保存、開く、および検索するときに参照できるフォルダーを区切り記号で区切った一覧で指定する文字列プロパティです。 Analysis Services のサービス アカウントには、リストに追加するすべてのフォルダーの読み取り権限と書き込み権限が必要です。  
   
  **BackupDir**  
- Backup コマンドでパスが指定されていない場合に、既定によりバックアップ ファイルが格納されるディレクトリの名前を指定する文字列プロパティです。  
+ バックアップ コマンドの一部として、パスが指定されていない場合に、既定では、バックアップのファイルが格納されるディレクトリの名前を指定する文字列プロパティ。  
   
  **CollationName**  
  サーバーの照合順序を指定する文字列プロパティです。 詳細については、「[言語および照合順序 &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)」を参照してください。  

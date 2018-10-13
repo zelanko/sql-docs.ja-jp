@@ -11,12 +11,12 @@ ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce87b35d04b360168eb1d4070bb94d52c702f3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180052"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085398"
 ---
 # <a name="drillthrough-on-mining-models"></a>マイニング モデルでのドリルスルー
   *ドリルスルー* とは、マイニング モデルまたはマイニング構造に対してクエリを実行し、モデルで公開されていない詳細データを取得する機能です。  
@@ -24,7 +24,7 @@ ms.locfileid: "48180052"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、ケース データへのドリルスルーの 2 つのオプションを提供します。 データの作成に使用されたケースにドリルスルーすることも、マイニング構造のケースにドリルスルーすることもできます。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>モデル ケースへのドリルスルーと構造へのドリルスルー  
- **モデル ケース**へのドリルスルーは、モデル内のルール、パターン、またはクラスターに関する詳細情報を探すのに役立ちます。 たとえば、クラスター モデルの分析用の顧客連絡先情報は、データがあったとしても使用しません。ドリルスルーを使用すると、モデルからその情報にアクセスできます。  
+ **モデル ケース** へのドリルスルーは、モデル内のルール、パターン、またはクラスターに関する詳細情報を探すのに役立ちます。 顧客連絡先情報を使用するなどは、クラスタ リング モデルで分析するため、ドリルスルーを使用して、データが、使用可能な場合でもことができます、モデルからその情報にアクセスします。  
   
  対照的に、 **構造データへのドリルスルー** は、モデル内で使用できなかった情報へのアクセスを可能にすることが目的です。 たとえば、一部の構造列はデータ型に互換性がないかデータが分析に役立たないためにモデルから除外されていることがあります。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48180052"
 |処理手順|リンク|  
 |-----------|-----------|  
 |マイニング モデル ビューアーでドリルスルーを使用する|[モデル ビューアーからのドリルスルーの使用](use-drillthrough-from-the-model-viewers.md)|  
-|ドリルスルーを使用してモデルのケース データを取得する|[マイニング モデルからケース データにドリルスルーする](drill-through-to-case-data-from-a-mining-model.md)|  
+|ドリルスルーを使用してモデルのケース データを取得する|[マイニング モデルからケース データへのドリルスルー](drill-through-to-case-data-from-a-mining-model.md)|  
 |既存のマイニング モデルのドリルスルーを有効にする|[マイニング モデルのドリルスルーの有効化](enable-drillthrough-for-a-mining-model.md)|  
 |特定のモデルの種類に対するドリルスルー クエリの例|[データ マイニング クエリ](data-mining-queries.md)|  
 |マイニング モデル ウィザードでドリルスルーを有効にする|[[ウィザードの完了] (データ マイニング ウィザード)](../completing-the-wizard-data-mining-wizard.md)|  

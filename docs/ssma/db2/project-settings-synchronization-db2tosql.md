@@ -10,12 +10,12 @@ ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0aa572611a522e1a83f334e13c36a7fc178c6090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791770"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071766"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>プロジェクト設定 (同期) (DB2ToSQL)
 [同期] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA をロードし、へのデータベース テーブルとストアド プロシージャなどのオブジェクトを更新する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -57,7 +57,7 @@ SSMA でオブジェクトが変更されたときに、[同期] ダイアログ
 **ローカル オブジェクトのメタデータが見つからない場合にアクション**  
 ローカルのメタデータが見つからない場合に、[同期] ダイアログ ボックスで、既定の設定を指定します。 既定値のセットは**データベースからの更新**します。  
   
--   選択した場合**データベースからの更新**、SSMA SSMA は、条件が満たされたときに、メタデータのデータベースの定義を読み込まれます。  
+-   選択した場合**データベースからの更新**SSMA は、条件が満たされたときに、メタデータのデータベース定義が読み込むされます。  
   
 -   選択した場合**スキップ**SSMA では、更新動作は実行されません。  
   

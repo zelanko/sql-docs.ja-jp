@@ -18,12 +18,12 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e62a0452a5e7e31591d368cbbcb2050272df5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce8549b95348085699694c17027c2dd393f5b1f5
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734730"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169182"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_name** =] **'***profile_name***'**  
+ [ **@profile_name** =] **'**_プロファイル\_名前_**'**  
  新しいプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値はありません。  
   
- [ **@description** =] **'***説明***'**  
+ [ **@description** =] **'**_説明_**'**  
  新しいプロファイルの説明を指定します (省略可能)。 *説明*は**nvarchar (256)**、既定値はありません。  
   
- [ **@profile_id** = ] *new_profile_id***OUTPUT**  
+ [ **@profile_id** =]_新しい\_プロファイル\_id_**出力**  
  新しいプロファイルの ID を返します。 *new_profile_id*は**int**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -59,7 +59,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
   
  プロファイルの名前と説明は、ストアド プロシージャで変更できます**sysmail_update_profile_sp**プロファイル id は変わらず、プロファイルの有効期間中に、します。  
   
- プロファイル名は、Microsoft に対して一意である必要があります[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]またはストアド プロシージャがエラーを返します。  
+ プロファイル名は Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で一意になっている必要があります。一意でない場合、このストアド プロシージャではエラーが返されます。  
   
  ストアド プロシージャ**sysmail_add_profile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   
@@ -79,7 +79,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
   
  **B.プロファイル id を変数に保存、新しいプロファイルを作成します。**  
   
- 次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。 例では、プロファイル id 番号を変数に格納する`@profileId`し、新しいプロファイルのプロファイル id 番号を含む結果セットを返します。  
+ 次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。 この例では、プロファイル ID 番号を変数 `@profileId` に格納し、新しいプロファイルのプロファイル ID 番号を含む結果セットを返します。  
   
 ```  
 DECLARE @profileId INT ;  

@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: e44e6588cb58148c1474bc9e5ddda7527737ebba
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817990"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120459"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: Azure Kubernetes Service (AKS) での SQL Server のビッグ データ クラスターをデプロイします。
 
@@ -50,17 +50,12 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 少しビッグ データ クラスターをデプロイするために必要な環境変数の設定は、Windows または Linux と macOS のクライアントを使用しているかどうかによって異なります。  使用しているオペレーティング システムに応じて次の手順を選択します。
 
-> [!IMPORTANT]
-> 特殊文字が含まれている場合、二重引用符で囲まれた、パスワードをラップすることを確認します。 コマンドの bash でのみ二重引用符区切り記号の動作に注意してください。
->
-> 任意に、パスワード、環境変数を設定できますが必ず、十分に複雑な使用しないでください、 `!`、 `&`、または`‘`文字。
+続行する前に、次の重要なガイドラインに注意してください。
 
-[!IMPORTANT]
-**SA**アカウントは、システム管理者は、セットアップ中に作成される SQL Server マスター インスタンス。 実行して探索可能なは、MSSQL_SA_PASSWORD 環境変数を指定した、SQL Server のコンテナーを作成した後は、コンテナー内の $MSSQL_SA_PASSWORD をエコーします。 セキュリティのために、文書化のベスト プラクティスに従って、SA のパスワードを変更する[ここ](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)します。
-
-
-> [!NOTE]
-> CTP 2.0 のリリースでは、既定のポートは変更されません。
+- 特殊文字が含まれている場合、二重引用符で囲まれた、パスワードをラップすることを確認します。 コマンドの bash でのみ二重引用符区切り記号の動作に注意してください。
+- 任意に、パスワード、環境変数を設定できますが必ず、十分に複雑な使用しないでください、 `!`、 `&`、または`‘`文字。
+- CTP 2.0 リリースでは、既定のポートを変更できません。
+- **SA**アカウントは、システム管理者は、セットアップ中に作成される SQL Server マスター インスタンス。 実行して探索可能なは、MSSQL_SA_PASSWORD 環境変数を指定した、SQL Server のコンテナーを作成した後は、コンテナー内の $MSSQL_SA_PASSWORD をエコーします。 セキュリティのために、文書化のベスト プラクティスに従って、SA のパスワードを変更する[ここ](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)します。
 
 次の環境変数を初期化します。  ビッグ データ クラスターのデプロイに必要な。
 
@@ -109,7 +104,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 > [!NOTE]
 > 限定のパブリック プレビュー中に SQL Server のビッグ データ クラスターのイメージをダウンロードする Docker の資格情報は、Microsoft によって各顧客に提供されます。 アクセス権を要求するには、登録[ここ](https://aka.ms/eapsignup)、ビッグ データの SQL Server クラスターに関心を指定します。
 
-## <a name="deploy-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスターをデプロイします。
+## <a name="deploy-a-big-data-cluster"></a>ビッグ データ クラスターをデプロイします。
 
 Kubernetes クラスターで SQL Server 2019 CTP 2.0 のビッグ データ クラスターをデプロイするには、次のコマンドを実行します。
 
@@ -146,7 +141,7 @@ kubectl get svc service-proxy-lb -n <name of your cluster>
 > 自動生成された SSL 証明書を使用しているため、web ページにアクセスするとき、セキュリティ警告が表示されます。 将来のリリースは、独自の署名証明書を提供する機能。
  
 
-## <a name="connect-to-sql-server-master-instance-and-sql-server-big-data-cluster-hdfsspark-end-points"></a>SQL Server のマスター インスタンスと SQL Server ビッグ データ クラスターの HDFS/Spark 終了点への接続します。
+## <a name="connect-to-the-big-data-cluster"></a>ビッグ データ クラスターへの接続します。
 
 配置スクリプトが正常に完了したら後、は、SQL Server のマスター インスタンスと、次の手順を使用して Spark/HDFS 終点の IP アドレスを取得できます。 簡単に参照のほか、クラスター管理ポータルでサービス エンドポイント セクションでは、クラスターのすべてのエンドポイントが表示されます。
 
@@ -157,9 +152,9 @@ kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
-探して、 **EXTERNAL-IP**サービスに割り当てられている値。 IP アドレスを使用して、SQL Server マスター インスタンスへの接続、`service-master-pool-lb`ポート 31433 で (例:  **\<ip アドレス\>31433、**) との外部 ip アドレスを使用して SQL Server のビッグ データ クラスター エンドポイントに、`service-security-lb`サービス。   ビッグ データ クラスター エンドポイントのことは、Knox をジョブの HDFS との対話して Spark を送信する場所です。
+探して、 **EXTERNAL-IP**サービスに割り当てられている値。 IP アドレスを使用して、SQL Server マスター インスタンスへの接続、`service-master-pool-lb`ポート 31433 で (例:  **\<ip アドレス\>31433、**) との外部 ip アドレスを使用して SQL Server のビッグ データ クラスター エンドポイントに、`service-security-lb`サービス。   ビッグ データ クラスター エンドポイントのことは、HDFS との対話し、Knox を介した Spark ジョブを送信できます。
 
-# <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次の手順
 
 これで、SQL Server のビッグ データ クラスターをデプロイするは、いくつかの新しい機能を試してください。
 

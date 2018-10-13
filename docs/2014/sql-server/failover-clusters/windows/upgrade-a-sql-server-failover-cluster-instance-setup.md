@@ -17,12 +17,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d10eb18560574e647c443caf4887b8e893d7501
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132112"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906492"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] フェールオーバー クラスターにアップグレードするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール ウィザードまたはコマンド プロンプトを使用します。  
@@ -44,9 +44,9 @@ ms.locfileid: "48132112"
   
 -   セットアップでは、クラスター化されたオペレーティング システムに対して .NET Framework 4.0 がインストールされます。 ダウンタイムをできるだけ最小限に抑えるために、セットアップの実行前に .NET Framework 4.0 をインストールすることを検討してください。  
   
--   Visual Studio コンポーネントが正しくインストールするかどうかを確認する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]更新プログラムをインストールする必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは、更新プログラムが存在するかどうかを確認した後、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールを続行する前に更新プログラムをダウンロードしてインストールするよう要求します。 中に中断されないようにする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]セットアップをダウンロードして実行する前に、更新プログラムをインストールすることができます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以下に示すようにセットアップ (または .NET 3.5 SP1 が Windows Update で利用可能なため、すべての更新プログラムをインストール)。  
+-   Visual Studio コンポーネントを適切にインストールできる状態にするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は更新プログラムのインストールを要求します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは、更新プログラムが存在するかどうかを確認した後、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールを続行する前に更新プログラムをダウンロードしてインストールするよう要求します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップの中断を回避するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する前に、以下の説明に従って更新プログラムをダウンロードおよびインストールします (または Windows Update に用意されている .NET 3.5 SP1 のすべての更新プログラムをインストールします)。  
   
-     インストールする場合[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Widows Server 2008 SP2 オペレーティング システムでコンピューターから必要な更新プログラムを取得できます[ここ](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     インストールする場合[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]、Windows Server 2008 SP2 オペレーティング システムでコンピューターから必要な更新プログラムを取得できます[ここ](http://go.microsoft.com/fwlink/?LinkId=198093)  
   
      [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP1 または [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 オペレーティング システム搭載のコンピューターに [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] をインストールする場合は、この更新プログラムが含まれています。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48132112"
   
 4.  セットアップ サポート ファイルが必要な場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップによってインストールされます。 コンピューターの再起動を求めるメッセージが表示されたら、再起動してから続行します。  
   
-5.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、[!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 6.  [プロダクト キー] ページで、以前の製品バージョンのエディションに一致する新しいバージョンのエディション用の PID キーを入力します。 たとえば、エンタープライズ フェールオーバー クラスターをアップグレードするには、 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]用の PID キーを入力する必要があります。 **[次へ]** をクリックして次に進みます。 フェールオーバー クラスターのアップグレードに使用する PID キーは、同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス内のすべてのフェールオーバー クラスター ノードで一貫している必要があります。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../../editions-and-components-of-sql-server-2016.md)と[Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)します。  
   

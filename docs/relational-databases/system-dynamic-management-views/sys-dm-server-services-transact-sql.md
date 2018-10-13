@@ -19,17 +19,17 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee801da96f6281e5bf1775df1233ee85712ff74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856970"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072137"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server に関する情報を返します、フルテキスト、および SQL Server エージェント サービスの現在のインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 これらのサービスに関する状態情報を報告するには、この動的管理ビューを使用します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンス内の SQL Server サービス、フルテキスト サービス、SQL Server エージェント サービスに関する情報を返します。 これらのサービスに関する状態情報を報告するには、この動的管理ビューを使用します。  
   
  
 |列名|データ型|説明|  
@@ -45,7 +45,7 @@ ms.locfileid: "47856970"
 |filename|**nvarchar (256)**|サービス実行可能ファイルのパスおよびファイル名。 null にすることはできません。|  
 |is_clustered|**nvarchar(1)**|サービスがクラスター サーバーのリソースとしてインストールされているかどうかが表示されます。 null にすることはできません。|  
 |cluster_nodename|**nvarchar (256)**|サービスがインストールされているクラスター ノードの名前。 NULL 値が許可されます。|
-|instant_file_initialization_enabled|**nvarchar(1)**|ファイルの瞬時初期化が有効になっているかどうかを指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービス。<br /><br />Y = サービスのファイルの瞬時初期化を有効にします。<br /><br />N = サービスのファイルの瞬時初期化が無効になっています。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用されます:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4、および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]経由で SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
+|instant_file_initialization_enabled|**nvarchar(1)**|ファイルの瞬時初期化が有効になっているかどうかを指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービス。<br /><br />Y = サービスのファイルの瞬時初期化を有効にします。<br /><br />N = サービスのファイルの瞬時初期化が無効になっています。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用されます:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4、および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
 
 ## <a name="security"></a>セキュリティ  
   

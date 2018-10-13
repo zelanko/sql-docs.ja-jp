@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47eb98f064cfecf7cf18ddf0ba20023eda320346
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195632"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120140"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
   SSIS 開発者は、Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 用 Attunity 変更データ キャプチャ (CDC) コンポーネントを使用すると、CDC を操作し、CDC パッケージの複雑さを軽減できます。  
@@ -58,7 +58,7 @@ ms.locfileid: "48195632"
 -   Windows Server 2008 R2 64 ビット (x64)  
   
 ### <a name="running-the-installation-program"></a>インストール プログラムの実行  
- インストール ウィザードを実行する前に必ず、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]が閉じられました。 そのうえでインストール ウィザードの指示に従います。  
+ インストール ウィザードを実行する前に、必ず [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] を閉じてください。 そのうえでインストール ウィザードの指示に従います。  
   
 ### <a name="restart-ssis"></a>SSIS の再起動  
  CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]でのパッケージの開発時にコンポーネントが正常に機能するように、SSIS サービスを再起動する必要があります。  
@@ -68,10 +68,10 @@ ms.locfileid: "48195632"
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Microsoft CDC コンポーネントのアンインストール  
  CDC ソース、CDC スプリッター、または CDC 制御タスクをアンインストールするには、アンインストール ウィザードを使用します。 コンポーネントをアンインストールする前に、以下の点を確認してください。  
   
- 使用する場合、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]パッケージの開発のことを確認します、[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]を閉じてから、アンインストール ウィザードを実行します。  
+ パッケージの開発に [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] を使用している場合は、アンインストール ウィザードの実行前に [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] を閉じる必要があります。  
   
 ## <a name="benefits"></a>利点  
- 用の CDC コンポーネント[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]コンポーネントは、SSIS 開発者は、変更データを処理する SSIS パッケージを簡単にビルドを使用します。 これらのコンポーネントは、CDC に対処し、CDC パッケージの複雑さを軽減する SSIS 開発者の能力を高めます。  
+ SSIS 開発者は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] コンポーネント用の CDC コンポーネントを使用して、変更データを処理する SSIS パッケージを簡単に構築できます。 これらのコンポーネントは、CDC に対処し、CDC パッケージの複雑さを軽減する SSIS 開発者の能力を高めます。  
   
  SSIS CDC コンポーネントを使用すると、レプリケーション、データ ウェアハウスの読み込み、OLAP の緩やかに変化するディメンションの更新、変更の監査などの目的で処理しやすい形で変更データを提供できます。 後で行う処理の種類は、SSIS 開発者が決定します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48195632"
   
  ![トリクル フィード処理パッケージ制御フロー](../media/tricklefeedprocessing.gif "トリクル フィード処理パッケージ制御フロー")  
   
- これは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 2 つの CDC 制御タスクとデータ フロー タスクは、制御フローが含まれています。 **Get CDC Processing Range** (CDC 処理範囲の取得) という最初のタスクでは、 **Process Changes**(変更の処理) というデータ フロー タスクで処理される変更の LSN 範囲を設定します。 この範囲は、前回のパッケージ実行時に処理されて永続的なストアに保存された内容に基づいて設定されます。  
+ この [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 制御フローには、2 つの CDC 制御タスクとデータ フロー タスクが含まれています。 **Get CDC Processing Range** (CDC 処理範囲の取得) という最初のタスクでは、 **Process Changes**(変更の処理) というデータ フロー タスクで処理される変更の LSN 範囲を設定します。 この範囲は、前回のパッケージ実行時に処理されて永続的なストアに保存された内容に基づいて設定されます。  
   
  CDC 制御タスクの使用の詳細については、「 [CDC Control Task](../control-flow/cdc-control-task.md) 」と「 [CDC Control Task Editor](../cdc-control-task-editor.md)」を参照してください。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "48195632"
   
  [CDC ソース](cdc-source.md)  
   
- [[CDC ソース エディター&#40;接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
+ [[CDC ソース エディター] ([接続マネージャー] ページ)](../cdc-source-editor-connection-manager-page.md)  
   
- [[CDC ソース エディター&#40;列] ページ&#41;](../cdc-source-editor-columns-page.md)  
+ [[CDC ソース エディター] &#40;[列] ページ&#41;](../cdc-source-editor-columns-page.md)  
   
- [[CDC ソース エディター&#40;エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
+ [[CDC ソース エディター] ([エラー出力] ページ)](../cdc-source-editor-error-output-page.md)  
   
  CDC スプリッターの詳細については、以下のトピックを参照してください。  
   

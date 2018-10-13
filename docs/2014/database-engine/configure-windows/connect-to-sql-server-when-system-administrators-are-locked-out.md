@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6805a64e8f7fd27513d87bfdb87dec7087addfa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171992"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119789"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>システム管理者がロックアウトされた場合の SQL Server への接続
   このトピックでは、システム管理者が [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] へのアクセスを復旧する方法について説明します。 システム管理者は、次のいずれかの理由で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアクセスできなくなることがあります。  
@@ -62,11 +62,11 @@ ms.locfileid: "48171992"
 5.  **起動時のパラメーター**  タブで、**起動時のパラメーターを指定**ボックスに「`-m`順にクリックします`Add`します。 (入力文字はダッシュの後に小文字の m です)。  
   
     > [!NOTE]  
-    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 既存のパラメーターは、いずれも変更しないように注意してください。 最後に、新しいパラメーターを追加`;-m`し`OK`します。 (入力文字はセミコロンの後に小文字の m です)。  
+    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 [詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 既存のパラメーターは、いずれも変更しないように注意してください。 最後に、新しいパラメーター `;-m` を追加し、[`OK`] をクリックします  (入力文字はセミコロンの後に小文字の m です)。  
   
 6.  クリックして`OK`とを再起動するメッセージが表示されたら、サーバー名を右クリックし、順にクリックします**再起動**します。  
   
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動すると、サーバーはシングル ユーザー モードになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていないことを確認します。 起動した場合、それが唯一の接続となります。  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動すると、サーバーはシングル ユーザー モードになります。 必ず[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントが実行されていません。 起動した場合、それが唯一の接続となります。  
   
 8.  Windows 8 のスタート画面で、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のアイコンを右クリックします。 画面の下部で、 **[管理者として実行]** を選択します (これにより、管理者資格情報が SSMS に渡されます)。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48171992"
 11. **起動時のパラメーター**  タブで、**既存のパラメーター**ボックスで、`-m`順にクリックします`Remove`します。  
   
     > [!NOTE]  
-    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 削除、 `;-m` 、前に追加し、クリック`OK`します。  
+    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 [詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 削除、 `;-m` 、前に追加し、クリック`OK`します。  
   
 12. サーバー名を右クリックし、 **[再起動]** をクリックします。  
   

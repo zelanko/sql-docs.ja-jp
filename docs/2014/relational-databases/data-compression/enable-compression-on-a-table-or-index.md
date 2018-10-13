@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 809b0229e1f5d37ed285b8c5783f8c73a4af6056
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108582"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906442"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の有効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルまたはインデックスで圧縮を有効にする方法について説明します。  
@@ -46,7 +46,7 @@ ms.locfileid: "48108582"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -223,7 +223,7 @@ ms.locfileid: "48108582"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、最初に `sys.indexes` カタログ ビューを問い合わせて、 `index_id` テーブルの各インデックスの名前と `Production.TransactionHistory` を返します。 次に、ストアド プロシージャ `sp_estimate_data_compression_savings` を実行して、ページの圧縮設定を使用した場合の指定されたインデックス ID の推定サイズを返します。 最後に、インデックス ID 2 (`IX_TransactionHistory_ProductID`) を再構築し、ページの圧縮を指定します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、最初に `sys.indexes` カタログ ビューを問い合わせて、 `index_id` テーブルの各インデックスの名前と `Production.TransactionHistory` を返します。 これは、後、ストアド プロシージャを実行します`sp_estimate_data_compression_savings`をページの圧縮設定を使用した場合、指定したインデックスの ID の推定サイズを返します。 最後に、インデックス ID 2 (`IX_TransactionHistory_ProductID`) を再構築し、ページの圧縮を指定します。  
   
     ```  
     USE AdventureWorks2012;   

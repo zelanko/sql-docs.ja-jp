@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 330c21e6eb256bfe398bc707852eb9a66a183fb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142662"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878095"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>SQL Server Machine Learning では、Windows サービスをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -225,87 +225,20 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
 
 インスタンス レベルでは、追加の構成が含まれます。
 
-* [Windows ファイアウォールの着信接続を構成します。](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [SQL Server Machine Learning サービスのファイアウォールの構成](../../advanced-analytics/security/firewall-configuration.md)
 * [その他のネットワーク プロトコルを有効にします。](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [リモート接続を有効にします。](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 
-データベースでは、次の構成の更新する必要があります。
-
-* [リモート ユーザーに組み込みの権限を拡張します。](#bkmk_configureAccounts)
-* [外部スクリプトを実行するアクセス許可を付与](#permissions-external-script)
-* [個々 のデータベースへのアクセスを許可](#permissions-db)
-
-> [!NOTE]
-> 追加の構成が必要かどうかは、SQL Server、およびユーザーがデータベースに接続し、外部スクリプトの実行が予想される方法をインストールした、セキュリティ スキーマに依存します。 
-
 <a name="bkmk_configureAccounts"></a> 
-
-###  <a name="enable-implied-authentication-for-sql-restricted-user-group-sqlrusergroup-account-group"></a>SQL の制限されたユーザー グループ (SQLRUserGroup) アカウント グループの暗黙の認証を有効にします。
-
-リモート データ サイエンス クライアントでは、スクリプトを実行する必要があると Windows 認証を使用する、追加の構成は R を実行しているワーカー アカウントを提供するために必要と Python プロセスにサインインするためのアクセス許可がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あなたに代わってインスタンス。 この動作と呼ばれる*暗黙の認証*、SQL Server 2016 および SQL Server 2017 での外部スクリプトのセキュリティで保護された実行をサポートするために、データベース エンジンによって実装されます。
-
-> [!NOTE]
-> 使用する場合、 **SQL ログイン**のスクリプトを実行して、SQL Server のコンピューティング コンテキストで、この余分な手順は必要ありません。
-
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーを展開**セキュリティ**します。 右クリックし、**ログイン**、選択および**新しいログイン**します。
-2. **ログイン - 新規**ダイアログ ボックスで、**検索**します。
-3. 選択**オブジェクトの種類**、選び**グループ**します。 他のすべてをオフにします。
-4. **を選択するオブジェクト名を入力**、型*SQLRUserGroup*、選択および**名前の確認**します。
-5. インスタンスのスタート パッド サービスに関連付けられているローカル グループの名前が、" *インスタンス名\SQLRUserGroup*" などに解決されます。 **[OK]** を選択します。
-6. 既定では、グループが割り当てられている、**パブリック**ロール、データベース エンジンに接続する権限を持つとします。
-7. **[OK]** を選択します。
-
-セキュリティ トークンの下にタスクを実行するために、さまざまなローカルの Windows ユーザー アカウントが作成された SQL Server 2017 以降では、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]サービス。 これらのアカウントは、Windows ユーザー グループ **SQLRUserGroup**で見ることができます。 既定では、20 個のワーカー アカウントは作成になり、外部スクリプトを実行するための十分な数のジョブは通常します。 
-
-これらのアカウントは、次のように使用されます。 ユーザーは、外部のクライアントから Python または R スクリプトを送信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可能なワーカー アカウントをアクティブに、呼び出し元のユーザーの id にマップし、ユーザーの代理としてスクリプトを実行します。 SQL Server からデータやリソースを取得する、スクリプトでは、外部の SQL Server を実行する場合は、SQL Server への接続のログが必要です。 データベース ログインを作成する**SQLRUserGroup**接続が成功することもできます。
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-SQL Server の 2019 でワーカー アカウントは、SQL Server スタート パッド サービスの下で実行中のプロセスで AppContainers に置き換えられます。 データベース ログインを追加する必要がありますが、ワーカー アカウントは使用されなくが**SQLRUsergroup**暗黙の認証が必要な場合。 ワーカー アカウントには、ログインの権限があるありませんでしたと同様、でもはスタート パッド サービスの id。 ログインを作成する**SQLRUserGroup**、暗黙の認証が機能するは、このリリースで、スタート パッド サービスから構成されます。
-::: moniker-end
-
 <a name="permissions-external-script"></a> 
 
-### <a name="give-users-permission-to-run-external-scripts"></a>外部スクリプトを実行するアクセス許可をユーザーに与える
+データベースでは、次の構成の更新する必要があります。
 
-インストールした場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]して、自分で独自のインスタンスで R または Python スクリプトの実行は、通常、管理者としてスクリプトを実行します。 したがって、さまざまな操作と、データベース内のすべてのデータに対する暗黙的なアクセス許可があります。
-
-ただし、ほとんどのユーザーは、このような高度な権限を必要はありません。 たとえば、一般に、データベースにアクセスする SQL ログインを使用して、組織内のユーザーには、昇格されたアクセス許可がありません。 そのため、R または Python を使用しているユーザーごとにする必要がありますユーザーに付与する Machine Learning サービスの言語が使用されている各データベースで外部のスクリプトを実行するアクセス許可。 ここではどのように。
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
+* [SQL Server Machine Learning サービスへのアクセス許可をユーザーに付与します。](../../advanced-analytics/security/user-permission.md)
+* [データベース ユーザーとしての SQLRUserGroup の追加](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
-> 権限はサポートされているスクリプト言語に固有ではありません。 つまり、R スクリプトのスクリプトと Python スクリプトの個別のアクセス許可レベルがありません。 これらの言語の個別のアクセス許可を維持する必要がある場合は、個別のインスタンスに R と Python をインストールします。
-
-<a name="permissions-db"></a> 
-
-### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>ユーザー、読み取り、書き込み、またはデータ定義のデータベースへの言語 (DDL) のアクセス許可を付与します。
-
-ユーザーがスクリプトを実行中に、ユーザーが他のデータベースからデータを読み取る必要があります。 ユーザーは、結果の保存、およびテーブルにデータを記述する新しいテーブルを作成する必要もあります。
-
-Windows ユーザー アカウントまたは R または Python スクリプトを実行している SQL ログインごとに、特定のデータベースに対する適切なアクセス許可があることを確認します: `db_datareader`、 `db_datawriter`、または`db_ddladmin`します。
-
-たとえば、次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントは、SQL ログイン*MySQLLogin*で T-SQL クエリを実行する権限、 *ML_Samples*データベース。 このステートメントを実行するには、SQL ログインがサーバーのセキュリティ コンテキストに既に存在している必要があります。
-
-```SQL
-USE ML_Samples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-各ロールに含まれるアクセス許可の詳細については、次を参照してください。[データベース レベル ロール](../../relational-databases/security/authentication-access/database-level-roles.md)します。
-
-
-### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>データ サイエンス クライアント上のインスタンス用の ODBC データ ソースを作成する
-
-Machine learning のデータ サイエンス クライアント コンピューターでソリューションを作成する場合があります。 2 つのオプションがある場合は、計算コンテキストとして SQL Server コンピューターを使用してコードを実行する必要があります。 SQL ログインを使用して、インスタンスへのアクセスや、Windows を使用してアカウント。
-
-+ SQL ログインの場合: ログインがデータを読み取り、データベースで適切なアクセス許可を持っていることを確認します。 追加することでこれを行う*への接続*と*選択*アクセス許可、またはログインを追加することで、`db_datareader`ロール。 オブジェクトを作成するには、割り当てる`DDL_admin`権限。 テーブルにデータを保存する必要がある場合に追加、`db_datawriter`ロール。
-
-+ Windows 認証: インスタンス名と他の接続情報を指定するデータ サイエンス クライアントで ODBC データ ソースを作成する必要があります。 詳細については、次を参照してください。 [ODBC データ ソース アドミニストレーター](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)します。
+> 追加の構成が必要かどうかは、SQL Server、およびユーザーがデータベースに接続し、外部スクリプトの実行が予想される方法をインストールした、セキュリティ スキーマに依存します。
 
 ## <a name="suggested-optimizations"></a>提案されている最適化
 
@@ -313,7 +246,7 @@ Machine learning のデータ サイエンス クライアント コンピュー
 
 ### <a name="add-more-worker-accounts"></a>複数のワーカー アカウントを追加します。
 
-多くのユーザーがスクリプトを同時に実行される場合は、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server Machine Learning Services のユーザー アカウント プールを変更](../r/modify-the-user-account-pool-for-sql-server-r-services.md)します。
+多くのユーザーがスクリプトを同時に実行される場合は、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server Machine Learning Services のユーザー アカウント プールを変更](../administration/modify-user-account-pool.md)します。
 
 ### <a name="optimize-the-server-for-script-execution"></a>スクリプトの実行のサーバーを最適化します。
 
@@ -325,7 +258,7 @@ Machine learning ジョブは優先順位を設定しを適切にリソースを
   
 - データベースの予約済みメモリの量を変更するを参照してください。[サーバー メモリ構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)します。
   
-- によって開始できる R アカウントの数を変更する[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]を参照してください[machine learning のユーザー アカウント プールを変更する](../r/modify-the-user-account-pool-for-sql-server-r-services.md)します。
+- によって開始できる R アカウントの数を変更する[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]を参照してください[machine learning のユーザー アカウント プールを変更する](../administration/modify-user-account-pool.md)します。
 
 Standard Edition を使用している、リソース ガバナーがない場合は、動的管理ビュー (Dmv) は、拡張イベントと監視サーバーのリソースを管理するために、Windows イベントを使用することができます。 詳細については、次を参照してください。[の監視と R Services を管理](../r/managing-and-monitoring-r-solutions.md)と[監視と Python のサービスを管理する](../python/managing-and-monitoring-python-solutions.md)します。
 

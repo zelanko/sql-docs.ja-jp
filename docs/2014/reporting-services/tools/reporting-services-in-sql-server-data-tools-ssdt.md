@@ -13,17 +13,17 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7e245b5b97a9a65182a68dcc78102eaa6f33fe66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122382"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906302"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]が強化されたビジネス インテリジェンス ソリューションに固有の環境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に付属しています。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のレポートおよびレポート関連アイテムのソリューションやプロジェクトを作成および管理するには、[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] を使用します。 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] レポート デザイナー作成環境を提供します。 レポート デザイナーでは、レポート定義、共有データ ソース、共有データセット、およびレポート パーツを開き、それらを変更、プレビュー、保存、および配置できます。  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] のレポートおよびレポート関連アイテムのソリューションやプロジェクトを作成および管理するには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用します。 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] には、レポート デザイナー作成環境が用意されています。 レポート デザイナーでは、レポート定義、共有データ ソース、共有データセット、およびレポート パーツを開き、それらを変更、プレビュー、保存、および配置できます。  
   
  このトピックでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に使用される [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] のソリューション、プロジェクト、プロジェクト テンプレート、および構成と、レポート デザイナーで使用できるビュー、メニュー、ツール バー、およびショートカットについて説明します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48122382"
 ##  <a name="bkmk_ReportServerProjects"></a> レポート サーバープロジェクト  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]をインストールすると、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]で次のプロジェクト テンプレートを使用できるようになります。  
   
--   **レポート サーバー プロジェクト。** レポート サーバー プロジェクトを選択すると、レポート デザイナーが開きます。 レポート サーバー プロジェクトでインストールされているビジネス インテリジェンス プロジェクト テンプレートは、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]から提供される、**新しいプロジェクト** ダイアログ ボックス。 詳細については、「[新規または既存のレポートをレポート プロジェクトに追加する (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)」を参照してください。レポート サーバー プロジェクトのプロパティは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] プロジェクト内のすべてのレポートとすべての共有データ ソースに適用されます。 これらのプロパティには、レポート サーバーの URL、およびレポートと共有データ ソースのフォルダー名が含まれます。 現在のプロパティ値を確認するには、 **[プロジェクト プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスを開く、**プロジェクト** メニューのをクリックして*\<プロジェクト名 >* **プロパティ**します。  
+-   **レポート サーバー プロジェクト。** レポート サーバー プロジェクトを選択すると、レポート デザイナーが開きます。 レポート サーバー プロジェクトは、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] によってインストールされ、 **[新しいプロジェクト]** ダイアログ ボックスで使用できる、ビジネス インテリジェンス プロジェクト用のテンプレートです。 詳細については、「[新規または既存のレポートをレポート プロジェクトに追加する (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)」を参照してください。レポート サーバー プロジェクトのプロパティは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] プロジェクト内のすべてのレポートとすべての共有データ ソースに適用されます。 これらのプロパティには、レポート サーバーの URL、およびレポートと共有データ ソースのフォルダー名が含まれます。 現在のプロパティ値を確認するには、 **[プロジェクト プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスを開く、**プロジェクト** メニューのをクリックして*\<プロジェクト名 >* **プロパティ**します。  
   
 -   **レポート サーバー プロジェクト ウィザード。** レポート サーバー プロジェクト ウィザードを選択すると、レポート サーバー プロジェクトが自動的に作成され、レポート ウィザードが開きます。 このウィザードでは、各ページの手順に従ってレポートを作成し、データ ソースへの接続文字列の作成、データ ソースの資格情報の設定、クエリのデザイン、テーブルまたはマトリックス データ領域の追加、レポート データやグループの指定、フォントや色のスタイルの選択、レポート サーバーへのレポートのパブリッシュ、およびローカルでのレポートのプレビューを行うことができます。 ウィザードを使用してレポートを作成した後で、レポート サーバー プロジェクトでレポート デザイナーを使用して、レポート データおよびレポート デザイナーを変更できます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48122382"
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
- レポート デザイナーでは、レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューがサポートされています。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
+ レポート デザイナーは、2 つのビュー:**デザイン**レポート データとレポートのレイアウトを定義して**プレビュー**レポートのレンダリングされるビューを表示します。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
   
 ###  <a name="bkmk_ReportDataPane"></a> レポート データ ペイン  
  [レポート データ] ペインには、組み込みフィールド、データ ソース、データセット、フィールド コレクション、レポート パラメーター、および画像が表示されます。  
@@ -101,7 +101,7 @@ ms.locfileid: "48122382"
   
  次の場合、[プロパティ] ペインを使用します。  
   
--   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、 **[(コレクション)]** という値で示されます。 ほとんどのプロパティでは式を使用できます。複雑な式は **\<式>** という値で示されます。 **[式]** ダイアログ ボックスを開くには、 **\<式>** をクリックします。 詳細については、「[[式] ダイアログ ボックス](../expression-dialog-box.md)」を参照してください。  
+-   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、 **[(コレクション)]** という値で示されます。 ほとんどのプロパティでは式を使用できます。複雑な式は **\<式>** という値で示されます。 **[式]** ダイアログ ボックスを開くには、 **\<式>** をクリックします。 詳細については、「 [[式] ダイアログ ボックス](../expression-dialog-box.md)」を参照してください。  
   
 -   グリッドをカテゴリ別の表示からアルファベット順の表示に変更するには、[プロパティ] ペインのツール バー ボタンを使用します。 カテゴリ別の表示では、カテゴリのすべてのプロパティを表示するには、そのカテゴリを展開する必要があります。 アイテムの [プロパティ] ダイアログ ボックスを開くには、ツール バーの **[プロパティ ページ]** ボタンをクリックするか、アイテムを右クリックして **[プロパティ]** をクリックします。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "48122382"
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> ソース管理  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> カスタム レポート テンプレート  
  新しいレポートのテンプレートとしてカスタム レポートを使用するには、 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] がインストールされているコンピューターの ReportProject フォルダーにそれらのレポートをコピーするだけです。 既定では、このフォルダーは\<ドライブ >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private \projectitems\reportproject にあります。 レポート プロジェクトに新しいアイテムを追加すると、カスタム レポートが [テンプレート] ペインに表示されます。  
@@ -268,7 +268,7 @@ ms.locfileid: "48122382"
   
 -   少なくとも 1 セットの構成プロパティ (デバッグやリリースなど)。  
   
- 詳細については、次を参照してください。[発行のデータ ソースおよびレポート](../reports/publishing-data-sources-and-reports.md)します。  
+ 詳細については、「 [データ ソースとレポートのパブリッシュ](../reports/publishing-data-sources-and-reports.md)」を参照してください。  
   
  レポート サーバー プロジェクトの場合は、コマンド ラインから次のオプションを指定できます。  
   
@@ -295,7 +295,7 @@ ms.locfileid: "48122382"
 ##  <a name="bkmk_KeyboardShortcuts"></a> Reporting Services のキーボード ショートカット キー  
  次の場合、キーボード ショートカットを使用します。  
   
--   [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] でのウィンドウおよびモードの制御:  
+-   [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]でのウィンドウおよびモードの制御:  
   
     |説明|キーの組み合わせ|  
     |-----------------|---------------------|  
@@ -326,7 +326,7 @@ ms.locfileid: "48122382"
 ## <a name="see-also"></a>参照  
  [ソリューション エクスプ ローラー](../../ssms/solution/solution-explorer.md)   
  [Reporting Services レポート &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   
- [レポート定義言語 &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
- [SQL Server データ ツールの配置およびバージョン サポート &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+ [レポート定義言語 (SSRS)](../reports/report-definition-language-ssrs.md)   
+ [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

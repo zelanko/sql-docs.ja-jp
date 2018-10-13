@@ -8,12 +8,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f007549021fc246d943929f73a763e6343c5641a
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 2bd03c4c1dfb019238785b5284b4cceffc95c3a2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715236"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878155"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 で SQL Server Machine Learning Services のインストールの違い  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ AppContainer Sid に基づいて、新しいファイアウォール規則があ
 
 ## <a name="implied-authentication"></a>暗黙の認証
 
-前に、追加の構成は引き続き必要ですが、*暗黙の認証*内にスクリプトまたはコードが信頼済みの認証を使用して、データやリソースを取得する SQL Server に接続する場合。 追加の構成では、データベース ログインを作成する必要があります**SQLRUserGroup**、その唯一のメンバーは、複数のワーカー アカウントではなく、1 つの SQL Server スタート パッド サービス アカウントではようになりました。 このタスクの詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../r/add-sqlrusergroup-to-database.md)します。
+前に、追加の構成は引き続き必要ですが、*暗黙の認証*内にスクリプトまたはコードが信頼済みの認証を使用して、データやリソースを取得する SQL Server に接続する場合。 追加の構成では、データベース ログインを作成する必要があります**SQLRUserGroup**、その唯一のメンバーは、複数のワーカー アカウントではなく、1 つの SQL Server スタート パッド サービス アカウントではようになりました。 このタスクの詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../security/add-sqlrusergroup-to-database.md)します。
 
 
 ## <a name="symbolic-link-created-by-setup"></a>セットアップによって作成されたシンボリック リンク

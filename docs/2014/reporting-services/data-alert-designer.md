@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b4bf77cc626f78014ab139d3e27377c8f139e0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162242"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120119"
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
   データ警告の定義は、データ警告デザイナーで作成および編集します。 警告定義は、メタデータのコレクションです (関心のあるレポート データ、データ警告インスタンスの作成とデータ警告メッセージの送信のためにレポート データが満たさなければならないルール、警告メッセージの受信者など)。  
@@ -45,7 +45,7 @@ ms.locfileid: "48162242"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告機能は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が SharePoint モードでインストールされている場合にのみ使用できるため、警告を作成する対象のレポートは、SharePoint ドキュメント ライブラリに保存、配置、またはアップロードする必要があります。  
 >   
->  データ警告は、Windows 統合認証を使用するレポートや、資格情報の入力が求められるレポート上では作成できません。 レポートでは保存されている資格情報を使用する必要があります。 詳細については、次を参照してください。[資格情報の指定とレポート データ ソースに関する接続情報](report-data/specify-credential-and-connection-information-for-report-data-sources.md)します。  
+>  データ警告は、Windows 統合認証を使用するレポートや、資格情報の入力が求められるレポート上では作成できません。 レポートでは保存されている資格情報を使用する必要があります。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
  データ警告デザイナーを開くには、レポート ツール バーの **[アクション]** メニューの **[新しいデータの警告]** オプションをクリックします。 **[新しいデータの警告]** オプションが表示されない場合は、レポートが保存された資格情報を使用するように構成されていません。 資格情報の種類は、SharePoint ライブラリからレポート データ ソースを更新することで更新できます。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48162242"
 ### <a name="alert-name"></a>警告名  
  既定では、警告の定義の名前はレポートと同じです。 この警告名は、わかりやすい名前に変更できます。 これにより、どの警告に更新や削除を行うかを決定するなど、警告の管理が容易になります。  
   
- レポートには、複数の警告を作成できます。 同じ名前で複数の警告を定義できますが、警告名は一意にすることをお勧めします。 そうすることで、警告の定義を区別および管理することがより簡単になります。 データ警告マネージャーでは、作成したすべての警告の一覧を表示できます。 詳細については、次を参照してください。[警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)と[データ警告マネージャーでデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md)します。  
+ レポートには、複数の警告を作成できます。 同じ名前で複数の警告を定義できますが、警告名は一意にすることをお勧めします。 そうすることで、警告の定義を区別および管理することがより簡単になります。 データ警告マネージャーでは、作成したすべての警告の一覧を表示できます。 詳細については、「 [警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 」および「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md)」を参照してください。  
   
 ### <a name="rules-and-clauses"></a>ルールと句  
  警告をトリガーするデータ変更は、警告ルール内のデータ変更のスコープによって定義されます。 データ変更のスコープは、次のとおりです。  
@@ -172,7 +172,7 @@ ms.locfileid: "48162242"
  電子メールが生成される方法の詳細については、「 [Reporting Services Data Alerts](../ssms/agent/alerts.md)」を参照してください。  
   
 ##  <a name="CreateAlert"></a> データ警告定義の作成  
- SharePoint の "アイテムの表示" および "警告の作成" の権限が与えられている場合は、表示する権限を持つ任意のレポートに対してデータ警告定義を作成できます。ただし、保存された資格情報を使用するか、または資格情報を使用しないレポートに限られます。 レポートは、SharePoint ライブラリから実行します。 データ警告デザイナーで使用できるデータは、レポートからのデータです。 レポートがパラメーター化されている場合は、さまざまなパラメーター値を使用してレポートを実行し、対象データが確実にレポートに表示されるようにします。 レポートを開いた後で、レポート ツール バーの **[アクション]** メニューの **[新しいデータの警告]** をクリックして、データ警告デザイナーを開きます。 次の図は、データ警告デザイナーを開く方法を示しています。  
+ SharePoint の "アイテムの表示" および "警告の作成" の権限が与えられている場合は、表示する権限を持つ任意のレポートに対してデータ警告定義を作成できます。ただし、保存された資格情報を使用するか、または資格情報を使用しないレポートに限られます。 レポートは、SharePoint ライブラリから実行します。 データ警告デザイナーで使用できるデータは、レポートからのデータです。 レポートがパラメーター化された場合は、異なるパラメーター値を使用してデータをレポートの実行には必要に関心をレポートに表示されます。 レポートを開いた後で、レポート ツール バーの **[アクション]** メニューの **[新しいデータの警告]** をクリックして、データ警告デザイナーを開きます。 次の図は、データ警告デザイナーを開く方法を示しています。  
   
  ![SharePoint ライブラリから警告デザイナーを開く](media/rs-openalertdesigneriw.gif "SharePoint ライブラリから警告デザイナーを開く")  
   
@@ -207,7 +207,7 @@ ms.locfileid: "48162242"
   
   
 ## <a name="see-also"></a>参照  
- [Reporting Services のデータ警告](../ssms/agent/alerts.md)   
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)   
  [警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   
   

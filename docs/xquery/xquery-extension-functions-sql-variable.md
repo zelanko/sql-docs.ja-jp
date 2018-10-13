@@ -17,12 +17,12 @@ ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 299c762bc8c1487990402fc627d0d25268315947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 938560986eeaae29ee1d0a2b37f1b2bcceec5b53
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745340"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119769"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery Extension Functions - sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +52,15 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   XML 以外の列の値 (`ProductID`)。 [Sql:column() 関数](../xquery/xquery-extension-functions-sql-column.md)XML にこの値をバインドするために使用します。  
   
--   他のテーブルの XML 以外の列の値 (`ListPrice`)。 ここでも、 `sql:column()` XML にこの値をバインドするために使用します。  
+-   他のテーブルの XML 以外の列の値 (`ListPrice`)。 ここでも、XML にこの値をバインドするために、`sql:column()` を使用します。  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (`DiscountPrice`)。 `sql:variable()` XML にこの値をバインドするメソッドを使用します。  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (`DiscountPrice`)。 XML にこの値をバインドするために、`sql:variable()` メソッドを使用します。  
   
 -   値 (`ProductModelName`) から、 **xml**型の列で、クエリをさらに興味深いにするようにします。  
   
  クエリは次のとおりです。  
   
-```  
+```sql
 DECLARE @price money  
   
 SET @price=2500.00  
@@ -82,13 +82,13 @@ WHERE ProductID=771
   
  上のクエリに関して、次の点に注意してください。  
   
--   内の XQuery、`query()`メソッドは、XML を構築します。  
+-   `query()` メソッド内の XQuery により、XML が構築されます。  
   
--   `namespace`で名前空間プレフィックスを定義するキーワードが使用される、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)します。 これは、`ProductModelName`から属性値を取得、`CatalogDescription xml`型の列に関連付けられているスキーマがあります。  
+-   `namespace`で名前空間プレフィックスを定義するキーワードが使用される、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)します。 これは、関連付けられたスキーマを持つ xml 型の `ProductModelName` 列から `CatalogDescription xml` 属性値を取得するためです。  
   
  結果を次に示します。  
   
-```  
+```xml
 <Product ProductID="771" ProductModelID="19"   
          ProductModelName="Mountain 100"   
          ListPrice="3399.99" DiscountPrice="2500" />  
@@ -99,7 +99,7 @@ WHERE ProductID=771
  [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML データのインスタンスの作成](../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)   
+ [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)   
  [XML データ変更言語 &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

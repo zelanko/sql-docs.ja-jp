@@ -11,12 +11,12 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213882"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085478"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>シーケンス クラスター モデルの検証 (中級者向けデータ マイニング チュートリアル)
   これでビルドした、 **Sequence Clustering with Region**モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]でシーケンス クラスター ビューアー、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 [!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター ビューアーには、5 つのタブが含まれています:**クラスター ダイアグラム**、**クラスターのプロファイル**、**クラスターの特性**、 **ClusterDiscrimination**、および**状態遷移**します。 このビューアーを使用する方法の詳細については、次を参照してください。 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)します。  
@@ -47,7 +47,7 @@ ms.locfileid: "48213882"
   
 2.  選択**Cycling Cap**で、**状態**一覧。  
   
-     ダイアグラムが更新されて、選択した製品の各クラスターにおける集中度が表示されます。 最も色の濃いクラスターに、サイクリング キャップが最も高い密度で含まれます。 シェーディング変数は、任意の入力列の任意の状態を使用するように変更できます。  
+     ダイアグラムが更新されて、選択した製品の各クラスターにおける集中度が表示されます。 最も色の濃いクラスターに、サイクリング キャップが最も高い密度で含まれます。 どの入力列の任意の状態を使用する網掛け変数を変更することができます。  
   
 3.  **網掛け変数**一覧で、**母集団**します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48213882"
     > [!NOTE]  
     >  **再生**ボタンでは、データを再クエリすることができます。 ただし、クエリを再実行は変更されません、表示されているデータ モデルが更新されていない限り動的にバック グラウンドで他のプロセスでします。  
   
- [ページのトップへ](#bkmk_CDiagram)  
+ [トップに戻る](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CProfiles"></a> クラスターのプロファイル タブ  
  **クラスターのプロファイル**タブには、各クラスターに含まれるシーケンスが表示されます。 クラスターは、個々 の列の右側に記載されて、**状態**列。  
@@ -131,7 +131,7 @@ ms.locfileid: "48213882"
   
 6.  閉じる、**ドリル スルー**  ダイアログ ボックス。  
   
- [ページのトップへ](#bkmk_CDiagram)  
+ [トップに戻る](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CChars"></a> クラスターの特性 タブ  
  **クラスターの特性** タブは、選択したクラスターの属性の値の重要度を視覚的に表すバーを表示することで、クラスターにおける状態間の遷移をまとめたものです。 **変数**列は、モデルが選択されているクラスターや母集団重要見つかったを示して: 特定の値またはと呼ばれる値の間のリレーションシップのいずれか*遷移*します。 **値**列値または遷移の詳細については、および**確率**列が視覚的にこの属性または遷移の重みを表します。  
@@ -168,7 +168,7 @@ ms.locfileid: "48213882"
   
  属性に対する強力なクラスター化の効果があること、2 つ目は、`Region`がより困難に、シーケンスのグループを参照してください。 したがって、地域や収入の列を含まない、シーケンスのみを使用する別のモデルを作成することにします。  
   
- [ページのトップへ](#bkmk_CDiagram)  
+ [トップに戻る](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> クラスターの識別 タブ  
  **クラスターの識別** タブを使用して、どの属性が別のクラスターから特定のクラスターを区別する、2 つのクラスターを比較できます。 タブには、4 つの列が含まれる:**変数**、**値**、**クラスター 1**、および**クラスター 2**します。  任意のクラスターとして使用することができます**クラスター 1**と**クラスター 2**します。  
@@ -187,7 +187,7 @@ ms.locfileid: "48213882"
   
      内の項目、**値**列は、状態と遷移の両方を含めることができます。 各アイテムの色は識別スコアを表します。 さまざまなスコアの意味の詳細については、次を参照してください。[シーケンス クラスター モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)します。  
   
- [ページのトップへ](#bkmk_CDiagram)  
+ [トップに戻る](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_StateTran"></a> 状態遷移 タブ  
  **状態遷移** タブで、クラスターを選択し、参照状態が遷移することができます。 選択した場合**母集団 (すべて)** クラスター ドロップダウン リストから、図は、マイニング モデル全体の状態の分布を示しています。  
@@ -226,7 +226,7 @@ ms.locfileid: "48213882"
   
      最初は、Touring Tire を他の製品と結ぶ遷移の線が多数ありましたが、確率のしきい値を上げると、確率の低い遷移がグラフから取り除かれて、"Touring Tire > Touring Tire Tube" という遷移のみになります。 この遷移は、顧客が Touring Tire を買い物かごに入れた場合、その次に Touring Tire Tube をかごに入れる確率が高いことを示しています。  
   
- [ページのトップへ](#bkmk_CDiagram)  
+ [トップに戻る](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_Generic"></a> 汎用コンテンツ ツリー ビューアー  
  このビューアーは、アルゴリズムやモデルの種類に関係なく、すべてのモデルで使用できます。 **MicrosoftGeneric コンテンツ ツリー ビューアー**から利用できますが、**ビューアー**ドロップダウン リスト。  
@@ -251,13 +251,13 @@ ms.locfileid: "48213882"
   
  マイニング モデルの内容と、ビューアーで詳細を使用する方法の詳細については、次を参照してください。[シーケンス クラスター モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)します。  
   
- [ページのトップへ](#bkmk_CDiagram)  
+ [トップに戻る](#bkmk_CDiagram)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [関連するシーケンス クラスター モデルを作成する&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [Microsoft シーケンス クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [シーケンス クラスター モデルのクエリの例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

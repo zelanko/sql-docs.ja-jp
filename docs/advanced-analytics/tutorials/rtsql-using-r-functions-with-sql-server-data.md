@@ -3,17 +3,17 @@ title: R を示すクイック スタートは、SQL Server データ (SQL Serve
 description: このクイック スタートでは、SQL Server のデータを使用する R 関数を記述する方法を説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5785b8b8162fdde25dea13eb3aead55c10dbfc3b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 877c7ffd5cb67479eed0e2239cbe90d366934515
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086674"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878165"
 ---
 # <a name="quickstart-using-r-functions-with-sql-server-data"></a>クイック スタート: SQL Server データと R 関数の使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +99,7 @@ WITH RESULT SETS (([Col1] int not null));
 
 例については、[データ機能の作成](../tutorials/walkthrough-create-data-features.md)に関するチュートリアルをご覧ください。 このチュートリアルでは、R タイミング関数はデータから機能を作成するための 2 つのメソッドのパフォーマンスを比較するソリューションに埋め込まれて: R 関数とします。T-SQL 関数します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 次に、SQL Server で R を使用して予測モデルを作成します。
 

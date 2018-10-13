@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce22aad16b8a789c1224adf3421e61ad113a0ccb
-ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
+ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47178328"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906402"
 ---
 # <a name="dynamic-management-views-dmvs"></a>動的管理ビュー (DMV) 
 
@@ -210,4 +210,4 @@ DMV が指定された行セットは利用できない場合、サーバーが�
 |[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|セッション スコープのセットを含む、データベースで現在説明されているすべてのセットについて説明します。|  
 
 > [!NOTE]
-> 記憶域の Dmv で説明されているスキーマ行セットがない、プロトコル。
+> 記憶域の Dmv には、プロトコルで説明されているスキーマ行セットはありません。

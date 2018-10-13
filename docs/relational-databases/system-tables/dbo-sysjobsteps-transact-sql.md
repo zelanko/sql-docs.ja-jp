@@ -20,12 +20,12 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91973f7c98409df52afa18db09dfbdac689a34d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842680"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169354"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47842680"
 |**retry_attempts**|**int**|ステップが失敗するときに行う再試行の回数。|  
 |**retry_interval**|**int**|再試行の間隔。|  
 |**os_run_priority**|**int**|予約されています。|  
-|**output_file_name**|**nvarchar(200)**|ステップの出力ファイルの名前が保存された**サブシステム**が TSQL、PowerShell、または **CmdExec * * *。*|  
+|**output_file_name**|**nvarchar(200)**|ステップの出力ファイルの名前が保存された**サブシステム**が TSQL、PowerShell、または**CmdExec**_します。_|  
 |**last_run_outcome**|**int**|ジョブ ステップの前回の実行結果。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br /> **5** = unknown|  
 |**last_run_duration**|**int**|前回実行時のステップの実行時間 (hhmmss)。|  
 |**last_run_retries**|**int**|ジョブ ステップの前回の実行で行われた再試行の回数。|  

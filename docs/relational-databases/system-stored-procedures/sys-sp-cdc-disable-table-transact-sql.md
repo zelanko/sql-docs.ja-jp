@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 556d6f5a7513f08867c73ba26369861d9e960688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810310"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169172"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@source_schema=** ] **'***source_schema***'**  
+ [  **@source_schema=** ] **'**_ソース\_スキーマ_**'**  
  ソース テーブルが含まれるスキーマの名前です。 *source_schema*は**sysname**、既定値はありません、NULL にすることはできません。  
   
  *source_schema*現在のデータベースに存在する必要があります。  
   
- [  **@source_name=** ] **'***source_name***'**  
+ [  **@source_name=** ] **'**_ソース\_名前_**'**  
  変更データ キャプチャを無効にするソース テーブルの名前です。 *source_name*は**sysname**、既定値はありません、NULL にすることはできません。  
   
  *source_name*現在のデータベースに存在する必要があります。  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'** すべて **'**  
+ [  **@capture_instance=** ] **'**_キャプチャ\_インスタンス_**'** | **'** すべて **'**  
  指定されたソース テーブルで無効にするキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname** NULL にすることはできません。  
   
  'All' を指定した場合、すべてのキャプチャ インスタンスに対して定義されている*source_name*は無効になります。  
@@ -75,7 +75,7 @@ sys.sp_cdc_disable_table
  メンバーシップが必要です、 **db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例を無効に変更データ キャプチャを`HumanResources.Employee`テーブル。  
+ 次の例では、`HumanResources.Employee` テーブルの変更データ キャプチャを無効にします。  
   
 ```  
 USE AdventureWorks2012;  

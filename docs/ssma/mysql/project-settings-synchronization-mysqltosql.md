@@ -10,12 +10,12 @@ ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630700b4541bf804ca9dd5b1b6c6ca705412643c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792560"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072086"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>プロジェクトの設定 (同期) (MySQLToSQL)
 同期**プロジェクト設定**MySQL データベースのオブジェクトを SQL Server データベース オブジェクトと同期する方法を構成することができます。  
@@ -63,7 +63,7 @@ SSMA でオブジェクトが変更されたときに、[同期] ダイアログ
 ##### <a name="action-when-local-object-metadata-is-missing"></a>ローカル オブジェクトのメタデータが見つからない場合にアクション  
 ローカルのメタデータが見つからない場合に、[同期] ダイアログ ボックスで、既定の設定を指定します。  
   
--   選択した場合**データベースからの更新**、SSMA SSMA は、条件が満たされたときに、メタデータのデータベースの定義を読み込まれます。  
+-   選択した場合**データベースからの更新**SSMA は、条件が満たされたときに、メタデータのデータベース定義が読み込むされます。  
   
 -   選択した場合**スキップ**SSMA では、更新動作は実行されません  
   

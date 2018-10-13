@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 32a750ead87e8d775388d93c2ddc84ed12f2ca98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147936"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169402"
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
   **tablediff** ユーティリティは、2 つのテーブル内のデータを比較して非収束の発生を調べる場合に使用されます。これは、レプリケーション トポロジ内の非収束に対するトラブルシューティングを行うときに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
@@ -77,8 +77,8 @@ ms.locfileid: "48147936"
  [ **-?** ]  
  サポートされているパラメーターのリストを返します。  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの *source_server_name***\\***instance_name* を指定します。  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ ソース サーバー名を指定します。 指定_ソース\_server\_名前_の既定のインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 指定_ソース\_server\_名前_**\\**_インスタンス\_名前_の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  ソース データベース名を指定します。  
@@ -101,8 +101,8 @@ ms.locfileid: "48147936"
  **-sourcelocked**  
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、ソース テーブルがロックされます。  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの *destination_server_name***\\***instance_name* を指定します。  
+ **-destinationserver** *destination_server_name*[**\\**_インスタンス\_名前_]  
+ 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 指定_先\_server\_名前_**\\**_インスタンス\_名前_の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  対象データベース名を指定します。  
@@ -126,7 +126,7 @@ ms.locfileid: "48147936"
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、対象テーブルがロックされます。  
   
  **-b** *large_object_bytes*  
- ラージ オブジェクト データ型の列に対して比較するバイトの番号が含まれています: `text`、 `ntext`、 `image`、 `varchar(max)`、`nvarchar(max)`と`varbinary(max)`します。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
+ ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
   
  **-bf**  *number_of_statements*  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] オプションを使用する場合に、現在の **スクリプト ファイルに書き込む** ステートメントの数を指定します。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの数が *number_of_statements*で指定した値を超えると、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  
@@ -169,10 +169,10 @@ ms.locfileid: "48147936"
 |**1**|重大なエラー|  
 |**2**|テーブルの差分|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **tablediff** ユーティリティは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のサーバーでは使用できません。  
   
- 含むテーブル`sql_variant`データ型の列はサポートされていません。  
+ `sql_variant` データ型列を含むテーブルはサポートされていません。  
   
  **tablediff** ユーティリティでは、既定により、ソース列と対象列の間で次のデータ型のマッピングがサポートされます。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "48147936"
   
  **-o** または **-f** オプションを使用するには、指定されたファイル ディレクトリの場所に対する書き込み権限を持っている必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケートされたテーブルを比較して相違があるかどうかを確認する &#40;レプリケーション プログラミング&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

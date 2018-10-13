@@ -2,7 +2,7 @@
 title: Azure のデータ Studio の SQL Server 2019 拡張機能 (プレビュー) |Microsoft Docs
 description: Azure Data Studio 用 SQL Server 2019 Preview の拡張機能
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f9d10fbdec028549f9b23b23506882d5c5afe5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131232"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168799"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
 
@@ -24,23 +24,31 @@ SQL Server 2019 拡張機能 (プレビュー) の新機能とツールのサポ
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー) のインストールします。
 
-ダウンロードして、SQL Server 2019 拡張機能 (プレビュー) をインストールします。
+SQL Server 2019 拡張機能 (プレビュー) をインストールするには、ダウンロードして、関連付けられている .vsix ファイルをインストールします。
 
-  |プラットフォーム|ダウンロード|リリース日|
-  |:---|:---|:---|
-  |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 年 9 月 24 日|
-  |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 年 9 月 24 日 |
-  |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 年 9 月 24 日 |
+1. SQL Server 2019 拡張機能 (プレビュー) の .vsix ファイルをローカル ディレクトリにダウンロードするには。
 
+   |プラットフォーム|ダウンロード|リリース日|
+   |:---|:---|:---|
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 年 9 月 24 日|
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 年 9 月 24 日 |
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 年 9 月 24 日 |
 
-Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。 選択**はい**インストールを確認し、インストールが成功したことを示す通知を待機するように求められたらします。
+1. Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。
 
-**再読み込み**を選択して拡張機能を有効にします(初めて拡張機能をインストールするときのみ必要です)。
+1. 選択**はい**インストールを確認し、インストールが成功したことを示す通知を待機するように求められたらします。
 
+1. **再読み込み**を選択して拡張機能を有効にします(初めて拡張機能をインストールするときのみ必要です)。
+
+1. 再読み込みした後、拡張機能の依存関係がインストールされます。 [出力] ウィンドウで進行状況を表示して、まで時間がかかる可能性があります。
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 ビッグ データ クラスター サポート
 
 * クリックして**接続の追加**で*オブジェクト エクスプ ローラー*選択**ビッグ データの SQL Server クラスター**接続の種類として。
+
+   > [!TIP]
+   > 表示されない場合、 **SQL Server のビッグ データ クラスター**接続の種類、Azure データ Studio を再起動します。
+
 * ホスト名または IP アドレスのクラスター エンドポイントとのユーザー名と接続に使用するパスワードを入力します。
 * 必要に応じてでわかりやすい表示名を含める、**名前**フィールド。
 * をクリックして**Connect**一般的なタスクを起動することができますし、ダッシュ ボードで、[参照] **HDFS**オブジェクト エクスプ ローラーで、そこからタスクの実行コンテキスト内で。

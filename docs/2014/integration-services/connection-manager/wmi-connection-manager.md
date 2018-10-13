@@ -15,17 +15,17 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86ed0766091f62f8666316fd38274bf59b9f9adf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 406faef2e7d2392776370f3fb5da49daf3dc175a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114322"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119120"
 ---
 # <a name="wmi-connection-manager"></a>WMI 接続マネージャー
   WMI 接続マネージャーを使用すると、パッケージは Windows Management Instrumentation (WMI) を使用して、企業環境の情報を管理できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、WMI 接続マネージャーを使用します。  
   
- WMI 接続マネージャーをパッケージに追加すると[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを作成、実行時に WMI 接続を解決する、接続マネージャーのプロパティを設定し、接続マネージャーを追加します、`Connections`コレクションに、パッケージです。 `ConnectionManagerType`接続マネージャーのプロパティに設定されて`WMI`します。  
+ WMI 接続マネージャーをパッケージに追加すると[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを実行時に WMI 接続を解決するを接続マネージャーのプロパティを設定し、接続マネージャーを追加作成、`Connections`パッケージのコレクション. 接続マネージャーの `ConnectionManagerType` プロパティは、`WMI` に設定されます。  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>WMI 接続マネージャーの構成  
  WMI 接続マネージャーは、次の方法で構成できます。  
@@ -40,10 +40,10 @@ ms.locfileid: "48114322"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [[WMI 接続マネージャー エディター]](../wmi-connection-manager-editor.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)します。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
 ## <a name="see-also"></a>参照  
  [Web サービス タスク](../control-flow/web-service-task.md)   
- [Integration Services &#40;SSIS&#41;接続](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; の接続](integration-services-ssis-connections.md)  
   
   

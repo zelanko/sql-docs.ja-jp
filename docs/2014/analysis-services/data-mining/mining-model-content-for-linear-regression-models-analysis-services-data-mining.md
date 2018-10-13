@@ -15,18 +15,18 @@ ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4dcf25989915a7fc9c10b63b3521d7c0eb31a68c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200982"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120039"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)します。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」(マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>線形回帰モデルの構造について  
- 線形回帰モデルの構造は非常に単純です。 各モデルには、モデルとそのメタデータを表す 1 つの親ノードと、予測可能な各属性の回帰式を含む回帰ツリー ノード (NODE_TYPE = 25) があります。  
+ 線形回帰モデルの構造は非常に単純です。 各モデルは、モデルとそのメタデータを表す 1 つの親ノードと回帰ツリーのノード (NODE_TYPE = 25) 各予測可能な属性の回帰式を格納しています。  
   
  ![線形回帰モデルの構造](../media/modelcontentstructure-linreg.gif "線形回帰モデルの構造")  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48200982"
 ## <a name="model-content-for-a-linear-regression-model"></a>線形回帰モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、線形回帰に関連する列についてのみ詳細と例を紹介します。  
   
- スキーマ行セットの汎用の列については、次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)します。  
+ スキーマ行セットの汎用の列の詳細については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」(マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -188,7 +188,7 @@ ms.locfileid: "48200982"
  したがって、平均年齢が 45 歳前後である場合、回帰式の切片 (VALUETYPE = 11) は平均収入を示します。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 線形回帰アルゴリズム](microsoft-linear-regression-algorithm.md)   
  [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](microsoft-linear-regression-algorithm-technical-reference.md)   
  [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)  

@@ -10,12 +10,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f1dde13356f684d7fa6d7273156485bd6b5d07fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe71e5b301c016e25bb179e0104831285dab3ce1
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780730"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071786"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>プロジェクトの設定 (同期) (OracleToSQL)
 [同期] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA をロードし、へのデータベース テーブルとストアド プロシージャなどのオブジェクトを更新する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -57,7 +57,7 @@ SSMA でオブジェクトが変更されたときに、[同期] ダイアログ
 **ローカル オブジェクトのメタデータが見つからない場合にアクション**  
 ローカルのメタデータが見つからない場合に、[同期] ダイアログ ボックスで、既定の設定を指定します。 既定値のセットは**データベースからの更新**します。  
   
--   選択した場合**データベースからの更新**、SSMA SSMA は、条件が満たされたときに、メタデータのデータベースの定義を読み込まれます。  
+-   選択した場合**データベースからの更新**SSMA は、条件が満たされたときに、メタデータのデータベース定義が読み込むされます。  
   
 -   選択した場合**スキップ**SSMA では、更新動作は実行されません。  
   

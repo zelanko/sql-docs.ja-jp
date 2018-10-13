@@ -16,40 +16,42 @@ helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: AndrejsAnt
-ms.author: AndrejsAnt
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4972618d10d6d9e0f03a6211423fc1cd8628eeb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640510"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169142"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   クエリの待機情報についてを説明します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**wait_stats_id**|**bigint**|Plan_id、runtime_stats_interval_id、execution_type および wait_category の待機の統計情報を表す行の識別子です。 過去の実行時統計の間隔でののみ一意です。 現在アクティブな間隔の plan_id、によって execution_type wait_category によって表される待機のカテゴリで表された実行の種類で参照されるプランの待機の統計情報を表す複数の行があります。 通常、1 つの行を表しますがフラッシュ待機の統計をディスクに、その他 (s) がメモリ内状態を表します。 そのため、間隔の実際の状態を取得する必要があります集計メトリックは、plan_id、runtime_stats_interval_id、execution_type および wait_category でグループ化します。 |  
+|**wait_stats_id**|**bigint**|Plan_id、runtime_stats_interval_id、execution_type および wait_category の待機の統計情報を表す行の識別子です。 過去の実行時統計の間隔でののみ一意です。 現在アクティブな間隔で execution_type wait_category によって表される待機のカテゴリで表された実行の種類の plan_id、によって参照されるプランの待機の統計情報を表す複数の行があります。 通常、1 つの行を表しますがフラッシュ待機の統計をディスクに、その他 (s) がメモリ内状態を表します。 そのため、間隔の実際の状態を取得する必要があります集計メトリックは、plan_id、runtime_stats_interval_id、execution_type および wait_category でグループ化します。 |  
 |**plan_id**|**bigint**|外部キーです。 結合[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)します。|  
 |**runtime_stats_interval_id**|**bigint**|外部キーです。 結合[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)します。|  
-|**wait_category**|**tinyint**|待機の種類は、次の表を使用して、分類されにわたって待機時間を集計し、これらの待機のカテゴリ。 問題の解決に必要なフォローアップ分析は待機カテゴリによって異なりますが、同じカテゴリの待機種類からは非常によく似たトラブルシューティング エクスペリエンスが得られ、待機の先頭に影響受けたクエリを提供することは、このような調査の大部分を正常に完了するために不足している部分です。|
+|**wait_category**|**tinyint**|待機の種類は、次の表を使用して、分類されにわたって待機時間を集計し、これらの待機のカテゴリ。 待機カテゴリによって異なりますが、問題を解決するが、同じカテゴリの潜在顧客から同様のトラブルシューティング エクスペリエンスへの型を待機する場合は、さまざまなフォロー アップ分析を必要とし、不足している部分を完了するには、待機にさらに、影響を受けるクエリを提供する、このような調査の大半が正常にします。|
 |**wait_category_desc**|**nvarchar(128)**|待機のカテゴリ フィールドの説明テキストは、次の表を参照してください。|
 |**execution_type**|**tinyint**|クエリの実行の種類を決定します。<br /><br /> 0 ～ 通常の実行 (が正常に完了)<br /><br /> 3 – クライアントによって起動される実行を中止します。<br /><br /> 4-例外は、実行を中止します。|  
 |**execution_type_desc**|**nvarchar(128)**|実行の種類のフィールドの説明テキスト。<br /><br /> 0 – 標準<br /><br /> 3 – が中止されました<br /><br /> 4-例外|  
-|**total_query_wait_time_ms**|**bigint**|総 cpu 時間は、集計間隔内でクエリ プランの待機時間と、待機のカテゴリ (ミリ秒単位で報告されます)。|
+|**total_query_wait_time_ms**|**bigint**|合計`CPU wait`集計間隔内でクエリ プランの時間し、待機のカテゴリ (ミリ秒単位で報告されます)。|
 |**avg_query_wait_time_ms**|**float**|平均の待機時間 (ミリ秒単位で報告されます)、集計間隔と待機カテゴリ内の実行ごとのクエリ プラン。|
 |**last_query_wait_time_ms**|**bigint**|最後に、集計間隔内でクエリ プランの待機時間と待機のカテゴリ (ミリ秒単位で報告されます)。|
-|**min_query_wait_time_ms**|**bigint**|最小 CPU では、集計間隔内でクエリ プランの待機時間と、待機のカテゴリ (ミリ秒単位で報告されます)。|
-|**max_query_wait_time_ms**|**bigint**|最大 CPU では、集計間隔内でクエリ プランの待機時間と、待機のカテゴリ (ミリ秒単位で報告されます)。|
-|**stdev_query_wait_time_ms**|**float**|クエリでは、集計間隔内でクエリ プランの期間の標準偏差を待機し、待機のカテゴリ (ミリ秒単位で報告されます)。|
+|**min_query_wait_time_ms**|**bigint**|最小`CPU wait`集計間隔内でクエリ プランの時間し、待機のカテゴリ (ミリ秒単位で報告されます)。|
+|**max_query_wait_time_ms**|**bigint**|最大 'CPU 待機 ' は、集計間隔内でクエリ プランの時間し、待機のカテゴリ (ミリ秒単位で報告されます)。|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` クエリの実行時間の標準偏差では、集計間隔に含まれる計画し、待機のカテゴリ (ミリ秒単位で報告されます)。|
 
- ## <a name="wait-categories-mapping-table"></a>待機カテゴリのマッピング テーブル  
-  *「%」をワイルドカードとして使用します。*
+## <a name="wait-categories-mapping-table"></a>待機カテゴリのマッピング テーブル
+
+「%」をワイルドカードとして使用します。
   
 |整数値|待機のカテゴリ|待機の種類は、カテゴリに含める|  
 |-----------------|---------------|-----------------|  
@@ -78,21 +80,20 @@ ms.locfileid: "47640510"
 |**22**|**レプリケーション**|SE_REPL_ %、REPL_ %、HADR_ % **(がない HADR_THROTTLE_LOG_RATE_GOVERNOR)** PWAIT_HADR_ %、REPLICA_WRITES、FCB_REPLICA_WRITE、FCB_REPLICA_READ、PWAIT_HADRSIM|
 |**23**|**レート ガバナーについてログ**|LOG_RATE_GOVERNOR、POOL_LOG_RATE_GOVERNOR、HADR_THROTTLE_LOG_RATE_GOVERNOR、INSTANCE_LOG_RATE_GOVERNOR|
 
-***コンパイル**待機のカテゴリが現在サポートされていません。 
+**コンパイル**待機のカテゴリが現在サポートされていません。
 
-  
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
  必要があります、 **VIEW DATABASE STATE**権限。  
   
-## <a name="see-also"></a>参照  
- [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [クエリ ストアのストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+- [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [クエリ ストアのストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

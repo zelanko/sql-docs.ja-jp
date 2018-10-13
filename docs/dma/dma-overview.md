@@ -15,16 +15,16 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 38642f129d61f906e4856946a19f6dca8f11da6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 846fbfdcfb5d99363b98bad09c6efa3a2b46b4ab
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770800"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100371"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant の概要
 
-Data Migration Assistant (DMA) を使用して、最新のデータ プラットフォームで、新しいバージョンの SQL Server または Azure SQL Database のデータベースの機能に影響する可能性のある互換性の問題を検出してアップグレードするのに役立ちます。 DMA では、パフォーマンスと信頼性の向上、ターゲット環境のことをお勧めし、移行元サーバーからターゲット サーバーに、スキーマ、データ、および非包含オブジェクトを移動することができます。
+Data Migration Assistant (DMA) では、最新のデータ プラットフォームで、新しいバージョンの SQL Server または Azure SQL Database のデータベースの機能に影響する可能性のある互換性の問題を検出してアップグレードするが、のに役立ちます。 DMA では、パフォーマンスと信頼性の向上、ターゲット環境のことをお勧めし、移行元サーバーからターゲット サーバーに、スキーマ、データ、および非包含オブジェクトを移動することができます。
 
 > [!NOTE] 
 > (番号とデータベースのサイズ) 観点から大規模な移行をお勧めを使用すること、 [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview)、大規模なデータベースを移行することができます。
@@ -35,7 +35,7 @@ Data Migration Assistant (DMA) を使用して、最新のデータ プラット
 
   - 移行を妨げる問題: 互換性の問題のあるブロックを移行する、オンプレミス SQL Server データベースを Azure SQL データベースを検出します。 DMA では、これらの問題に対処するための推奨事項を提供します。
 
-  - 部分的にサポートされているか、サポートされていない機能: 検出ソース SQL Server インスタンスで使用されている機能が部分的にサポートされているか、サポートされていません。 DMA では、包括的なは、移行プロジェクトに組み込むように Azure、および軽減の手順で使用できる別の方法の推奨事項の設定を提供します。
+  - 部分的にサポートされているか、サポートされていない機能: 検出ソース SQL Server インスタンスで使用されている機能が部分的にサポートされているか、サポートされていません。 DMA では、包括的なは、移行プロジェクトにそれらを組み込むように Azure、および軽減の手順で使用できる別の方法の推奨事項の設定を提供します。
 
 - オンプレミスの SQL Server へのアップグレードに影響する問題を検出します。 これらは互換性の問題として説明し、次のカテゴリに分類されます。
 
@@ -45,7 +45,7 @@ Data Migration Assistant (DMA) を使用して、最新のデータ プラット
 
 - データベースがアップグレード後に活用できるターゲット SQL Server プラットフォームの新機能を検出します。 これらは、機能に関する推奨事項として説明し、次のカテゴリに分類されます。
 
-  - [パフォーマンス]
+  - パフォーマンス
   - セキュリティ
   - ストレージ
 

@@ -14,12 +14,12 @@ ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70f3a447b4398bbd1141a357ea878966d5a443ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad6b28f2e133abcc872186adc57fdd422687ddc5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130618"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906252"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動
   まず、データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) を開きます。 初回起動時には、 **sysadmin** 固定サーバー ロールのメンバーがデータベース エンジン チューニング アドバイザーを起動し、アプリケーションを初期化する必要があります。 初期化が完了すると、 **db_owner** 固定データベース ロールのメンバーがデータベース エンジン チューニング アドバイザーを使用し、所有するデータベースをチューニングできるようになります。 データベース エンジン チューニング アドバイザーの初期化の詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/database-engine-tuning-advisor.md)」を参照してください。  
@@ -35,7 +35,7 @@ ms.locfileid: "48130618"
  ![データベース エンジン チューニング アドバイザーの既定のウィンドウ](media/defaultdtagui.gif "データベース エンジン チューニング アドバイザーの既定のウィンドウ")  
   
 > [!NOTE]  
->  タブおよび **[セッション名]** ボックスに、コンピューターおよび接続しているインスタンスの名前が表示されます。 タブおよびボックスには、現在の日付と時刻も表示されます。  
+>  タブと**セッション名**ボックスに、コンピューターに接続しているインスタンスの名前が表示されます。 タブおよびボックスには、現在の日付と時刻も表示されます。  
   
  データベース エンジン チューニング アドバイザーの GUI を初めて開くと、2 つのメイン ペインが表示されます。  
   

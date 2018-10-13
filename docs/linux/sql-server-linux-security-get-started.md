@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786970"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906232"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のセキュリティ機能のチュートリアル
 
@@ -67,7 +67,7 @@ Larry ログインが複数のログインを作成するようになりまし�
 
 ## <a name="granting-access-with-least-privileges"></a>最小限の特権を持つアクセス権の付与
 
-ユーザー データベースに接続する最初のユーザーは、管理者およびデータベース所有者アカウントになります。 ただしこれらのユーザーがあるすべてのデータベースで使用可能なアクセスを許可します。 これは、多くのアクセス許可よりも、ほとんどのユーザーである必要があります。 
+ユーザー データベースに接続する最初のユーザーは、管理者およびデータベース所有者アカウントになります。 ただしこれらのユーザーでは、データベースに使用可能なすべての権限があります。 これは、多くのアクセス許可よりも、ほとんどのユーザーである必要があります。 
 
 組み込みを使用してアクセス許可のいくつかの一般的なカテゴリを割り当てることができますを始めたばかり、ときに*固定データベース ロール*します。 たとえば、`db_datareader`固定データベース ロールが、データベース内のすべてのテーブルが変更しない場合します。 使用しての固定データベース ロールのメンバーシップの付与、 [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)ステートメント。 次の例では、ユーザーを追加する`Jerry`を`db_datareader`固定データベース ロール。   
    
@@ -282,7 +282,7 @@ WITH
 GO  
 ```
 
-詳細については、次を参照してください。[バックアップの暗号化](../relational-databases/backup-restore/backup-encryption.md)します。
+詳細については、「 [バックアップの暗号化](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。
 
 
 ## <a name="next-steps"></a>次の手順

@@ -4,18 +4,18 @@ description: この記事では、Red Hat、Ubuntu 上の SQL Server Machine Lea
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 09/24/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: 8433f705b41782c61950cb74f76f694d61cd548d
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782361"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100453"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>SQL Server 2019 の Machine Learning サービス (R、Python、Java) Linux 上のインストールします。
 
@@ -41,34 +41,68 @@ R、Python、および Java 拡張機能のパッケージの場所は、SQL Ser
 
 <a name="mro"></a>
 
-### <a name="microsoft-r-open-mro"></a>Microsoft R Open (MRO)
+### <a name="microsoft-r-open-mro-installation"></a>Microsoft R Open (MRO) のインストール
 
 Microsoft の基本ディストリビューションの R は、RevoScaleR、MicrosoftML、および Machine Learning サービスでインストールされているその他の R パッケージを使用するための前提条件です。
 
-次のコマンドは、MRO を提供するリポジトリを登録します。 登録後、その他の R パッケージをインストールするためのコマンドにより、パッケージの依存関係として MRO は自動的に含めます。
+必要なバージョンは、MRO 3.4.4 です。
 
-#### <a name="on-ubuntu"></a>Ubuntu の場合
+MRO にインストールする次の 2 つの方法から選択します。
+
++ MRAN から MRO tarball をダウンロード、展開、および、install.sh スクリプトを実行します。 利用できる、[インストール手順については、MRAN](https://mran.microsoft.com/releases/3.4.4)このアプローチの場合。
+
++ または、登録、 **packages.microsoft.com** MRO 配布を構成する 3 つのパッケージをインストールする以下のようにリポジトリ: microsoft r オープン mro、microsoft r のオープン mkl とmicrosoft r のオープン foreachiterators します。 
+
+次のコマンドは、MRO を提供するリポジトリを登録します。 登録後、mssql mlservices-mml r などの他の R パッケージをインストールするためのコマンドにより、パッケージの依存関係として MRO は自動的に含めます。
+
+#### <a name="mro-on-ubuntu"></a>Ubuntu で MRO
 
 ```bash
+# Install as root
+sudo su
+
+# Optionally, if your system does not have the https apt transport option
+apt-get install apt-transport-https
+
+# Add the **azure-cli** repo to your apt sources list
+AZ_REPO=$(lsb_release -cs)
+
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+
 # Set the location of the package repo the "prod" directory containing the distribution.
-# This example specifies 16.04. Replace with 18.04 if you want that version
+# This example specifies 16.04. Replace with 14.04 if you want that version
 wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 
 # Register the repo
 dpkg -i packages-microsoft-prod.deb
 ```
 
-#### <a name="on-rhel"></a>RHEL で
+#### <a name="mro-on-rhel"></a>RHEL で MRO
 
 ```bash
+# Import the Microsoft repository key
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+# Create local `azure-cli` repository
+sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
+
 # Set the location of the package repo at the "prod" directory
+# The following command is for version 7.x
+# For 6.x, replace 7 with 6 to get that version
 rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 ```
-#### <a name="on-suse"></a>SUSE に
+#### <a name="mro-on-suse"></a>SUSE に MRO
 
 ```bash
-# Set the location of the package repo
+# Install as root
+sudo su
+
+# Set the location of the package repo at the "prod" directory containing the distribution
+# This example is for SLES12, the only supported version of SUSE in Machine Learning Server
 zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
+
+# Update packages on your system:
+zypper update
 ```
 
 ## <a name="package-list"></a>パッケージの一覧
@@ -80,7 +114,7 @@ zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 |mssql-サーバーの機能拡張  | All | 機能拡張フレームワークが R、Python、または Java コードを実行するために使用します。 |
 |mssql server extensibility java | Java | Java の実行環境を読み込むための Java 拡張機能。 その他のライブラリや Java のパッケージはありません。 |
 | microsoft openmpi  | Python、R | メッセージは Linux での並列処理の Revo のライブラリによって使用されるインターフェイスを渡します。 |
-| microsoft r のオープン | R | オープン ソース ディストリビューションは r です。 |
+| [microsoft の r のオープン *](#mro) | R | R のオープン ソース ディストリビューションは、3 つのパッケージで構成されます。 |
 | mssql-mlservices-python | Python | Anaconda と Python のオープン ソース ディストリビューション。 |
 |mssql mlservices mlm py  | Python | 完全をインストールします。 Revoscalepy、microsoftml、事前トレーニング済みの画像の特徴の生成とテキストのセンチメント分析のモデルを提供します。| 
 |mssql mlservices mml py  | Python | 部分インストールします。 Revoscalepy、microsoftml を提供します。 <br/>事前トレーニング済みモデルを除外します。 | 
@@ -133,14 +167,15 @@ sudo yum install mssql-server-extensibility-java
 > [!Tip]
 > 実行可能であれば、`apt-get update`をインストールする前に、システム上のパッケージを更新します。 さらに、Ubuntu のいくつかの docker イメージでは、https の apt トランスポート オプションがあります。 これをインストールするには使用`apt-get install apt-transport-https`します。
 
-### <a name="prerequisite-for-1804"></a>18.04 の前提条件
+<!---
+### Prerequisite for 18.04
 
-Ubuntu 18.04 上の mssql mlservices R ライブラリを実行する必要があります**libpng12** Linux カーネルにアーカイブします。 このパッケージは、標準の配布には含まれなくし、手動でインストールする必要があります。 このライブラリを取得するには、次のコマンドを実行します。
+Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from the Linux Kernel archives. This package is no longer included in the standard distribution and must be installed manually. To get this library, run the following commands:
 
 ```bash
 wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i libpng12-01_1.2.54-1ubuntu1_amd64.deb
-```
+dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+```--->
 
 ### <a name="example-1----full-installation"></a>例 1: フル インストール 
 

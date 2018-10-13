@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121752"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120069"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Windows Azure への SQL Server マネージド バックアップのトラブルシューティング
   このトピックでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の操作中に発生する可能性があるエラーのトラブルシューティングに使用できるツールとタスクについて説明します。  
@@ -56,7 +56,7 @@ ms.locfileid: "48121752"
   
 1.  **エラーを有効にするかを構成するときに[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     エラー: "ストレージ URL にアクセスできませんでした。 有効な SQL 資格情報を指定してください..." : これと他の同様のエラーを参照する SQL 資格情報を参照してくださいする可能性があります。  このような場合、指定した SQL 資格情報の名前と共に、SQL 資格情報に格納されている情報 (ストレージ アカウント名およびストレージ アクセス キー) も確認し、これらの情報が最新かつ有効であることを確認してください。  
+     エラー: "ストレージ URL にアクセスできませんでした。 有効な SQL 資格情報を指定してください..." : これと他の同様のエラーを参照する SQL 資格情報を参照してくださいする可能性があります。  このような場合は、指定した SQL 資格情報とも SQL 資格情報 – ストレージ アカウント名、およびストレージ アクセス キーに格納されている情報の名前を確認し、それらが最新かつ有効なことかどうかを確認します。  
   
      エラー:"... システム データベースであるために、... データベースを構成することはできません": 有効にしようとする場合、このエラーが表示されます[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]システム データベースです。  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、システム データベースのバックアップがサポートされません。  システム データベースのバックアップを構成するには、メンテナンス プランなどの別の SQL Server バックアップ テクノロジを使用してください。  
   

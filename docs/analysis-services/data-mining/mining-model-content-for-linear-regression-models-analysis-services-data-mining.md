@@ -1,5 +1,5 @@
 ---
-title: 線形回帰モデルのマイニング モデル コンテンツ |Microsoft ドキュメント
+title: 線形回帰モデルのマイニング モデル コンテンツ |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d1bfeedf1bcd394970b4c6f3e907926f53c54e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019399"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120182"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」(マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>線形回帰モデルの構造について  
- 線形回帰モデルの構造は非常に単純です。 各モデルには、モデルとそのメタデータを表す 1 つの親ノードと、予測可能な各属性の回帰式を含む回帰ツリー ノード (NODE_TYPE = 25) があります。  
+ 線形回帰モデルの構造は非常に単純です。 各モデルは、モデルとそのメタデータを表す 1 つの親ノードと回帰ツリーのノード (NODE_TYPE = 25) 各予測可能な属性の回帰式を格納しています。  
   
- ![線形回帰のモデルの構造](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "線形回帰のモデルの構造")  
+ ![線形回帰モデルの構造](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "線形回帰モデルの構造")  
   
  線形回帰モデルでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリーと同じアルゴリズムが使用されますが、ツリーを制約するために使用されるパラメーターが異なっており、また連続属性のみが入力として受け入れられます。 ただし、線形回帰モデルは [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいているため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー ビューアーで表示できます。 詳細については、「 [Microsoft ツリー ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)」を参照してください。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34019399"
  NODE_TYPE  
  線形回帰モデルでは次の種類のノードが出力されます。  
   
-|ノードの種類の ID|型|Description|  
+|ノードの種類の ID|型|説明|  
 |------------------|----------|-----------------|  
 |25|回帰ツリーのルート|入力変数と出力変数のリレーションシップを表す数式が含まれます。|  
   
@@ -134,7 +134,7 @@ ms.locfileid: "34019399"
  MSOLAP_NODE_SHORT_CAPTION  
  表示目的で使用されるラベル。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用してモデルを作成すると、データ マイニング エンジンにより、デシジョン ツリー モデルの特殊なインスタンスが作成され、1 つのノードにすべてのトレーニング データを格納するようにツリーを制約するパラメーターが設定されます。 連続する入力はすべて、リグレッサー候補としてフラグが付けられ、評価されます。ただし、リグレッサーとして最終的なモデルに保持されるのは、データに適合するリグレッサーだけです。 分析では、リグレッサーごとに 1 つの回帰式が生成されるか、回帰式がまったく生成されないかのいずれかです。  
   
  **Microsoft ツリー ビューアー**で **[(すべて)]** ノードをクリックすると、完全な回帰式が [[マイニング凡例]](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)に表示されます。  
@@ -183,7 +183,7 @@ ms.locfileid: "34019399"
  したがって、平均年齢が 45 歳前後である場合、回帰式の切片 (VALUETYPE = 11) は平均収入を示します。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 線形回帰アルゴリズム](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  

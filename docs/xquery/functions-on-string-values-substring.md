@@ -17,12 +17,12 @@ ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e31fb80768b6d8b025589d97ffbb635c36aa5556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07cb92947a79ca0ae9c152436e3f18b4f9cd4ad
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628690"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072076"
 ---
 # <a name="functions-on-string-values---substring"></a>文字列値に使用する関数 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47628690"
 ```  
   
 fn:substring($sourceString as xs:string?,  
-                          $startingLoc  as as xs:decimal?) as xs:string?  
+                          $startingLoc as xs:decimal?) as xs:string?  
   
 fn:substring($sourceString as xs:string?,  
                           $startingLoc as xs:decimal?,  
@@ -74,7 +74,7 @@ fn:substring($sourceString as xs:string?,
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. XQuery の substring() 関数を使用して製品モデルの説明の概要の一部を取得する  
- クエリでは、製品モデルを説明するテキストの最初の 50 文字の取得、<`Summary`> ドキュメント内の要素。  
+ このクエリは、製品モデルを説明するテキスト (XML ドキュメントの <`Summary`> 要素) から、最初の 50 文字を取得します。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -87,7 +87,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  上のクエリに関して、次の点に注意してください。  
   
--   **String()** 関数の文字列値を返します、<`Summary`> 要素。 この関数が使用されます、<`Summary`> 要素には、テキストとサブ要素 (html 要素の書式設定、) の両方が含まれます。 これらの要素をスキップし、すべてのテキストを取得するため。  
+-   **String()** 関数の文字列値を返します、<`Summary`> 要素。 <`Summary`> 要素にはテキストとサブ要素 (HTML の書式要素) の両方が含まれていますが、これらの要素を省いてテキストだけを取得するために、この関数が使われています。  
   
 -   **Substring()** 関数によって取得された文字列値からの最初の 50 文字の取得、 **string()** します。  
   

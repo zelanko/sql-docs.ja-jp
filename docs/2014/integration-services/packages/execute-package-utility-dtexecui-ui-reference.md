@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217432"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169334"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>パッケージ実行ユーティリティ (DtExecUI) の UI リファレンス
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 開くことができます、このユーザー インターフェイス[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または」と入力して`dtexecui`を使用してパッケージを実行する代わりには、コマンド プロンプトで、 **DTExec**コマンド プロンプト ツールです。  
@@ -52,7 +52,7 @@ ms.locfileid: "48217432"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>コマンド プロンプトでパッケージ実行ユーティリティを開くには  
   
--   コマンド プロンプト ウィンドウで実行`dtexecui`します。  
+-   コマンド プロンプト ウィンドウで、`dtexecui` を実行します。  
   
  ここでは、 **[パッケージ実行ユーティリティ]** ダイアログ ボックスのページについて説明します。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "48217432"
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
 ## <a name="logging-page"></a>[ログ記録] ページ  
- **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[ログ記録]** ページを使用すると、ログ プロバイダーの実行時にパッケージを利用できます。 パッケージのログ プロバイダーの種類とログに接続するための接続文字列を指定します。 ログ プロバイダーのエントリごとに、**/LOGGER***classid* オプションがコマンド プロンプトに追加されます。  
+ **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[ログ記録]** ページを使用すると、ログ プロバイダーの実行時にパッケージを利用できます。 パッケージのログ プロバイダーの種類とログに接続するための接続文字列を指定します。 ログ プロバイダーのエントリごとに、 **/LOGGER**_classid_ オプションがコマンド プロンプトに追加されます。  
   
 ### <a name="options"></a>および  
  **[ログ プロバイダー]**  
@@ -302,7 +302,7 @@ ms.locfileid: "48217432"
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
 ## <a name="set-values-page"></a>[値の設定] ページ  
- **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[値の設定]** ページを使用すると、プロパティのパスと値を入力することにより、パッケージ、実行可能ファイル、接続、変数、およびログ プロバイダーのプロパティ値を設定できます。 パスのエントリごとに、コマンド プロンプトに **/SET***propertypath;value* オプションが追加されます。  
+ **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[値の設定]** ページを使用すると、プロパティのパスと値を入力することにより、パッケージ、実行可能ファイル、接続、変数、およびログ プロバイダーのプロパティ値を設定できます。 パスのエントリごとに、コマンド プロンプトに **/SET**_propertypath;value_ オプションが追加されます。  
   
 ### <a name="options"></a>および  
  **[プロパティのパス]**  

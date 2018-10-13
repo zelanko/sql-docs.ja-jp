@@ -11,12 +11,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3282f801e8ced6ab51d0188e74eb854631c399c1
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108192"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120229"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成
   この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
@@ -130,7 +130,7 @@ ms.locfileid: "48108192"
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> 手順 2: IIS にアプリケーション プールと仮想ディレクトリを作成する  
- 次に、アプリケーション プールを作成して、ポンプへのエンドポイント。  
+ 次に、アプリケーション プールと、ポンプへのエンドポイントを作成します。  
   
 #### <a name="create-an-application-pool"></a>アプリケーション プールの作成  
   
@@ -257,7 +257,7 @@ ms.locfileid: "48108192"
 |Windows 認証|借用または委任によって Analysis Services データを要求する Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> Kerberos の制約付き委任を使用し、権限が必要なアカウントは、アクセスを要求する Windows ユーザー アカウントとグループ アカウントのみであることを想定しています。 アプリケーション プール ID のために必要な権限はありません。|  
 |[基本認証]|接続文字列で渡される Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> また、接続文字列で `EffectiveUserName` を使用して資格情報を渡している場合、アプリケーション プール ID には、Analysis Services インスタンスでの管理者権限が必要になります。 SSMS では、インスタンスを右クリックして&#124;**プロパティ** &#124; **セキュリティ** &#124; **追加**します。 アプリケーション プール ID を入力します。 組み込みの既定の id を使用した場合、アカウントは指定**IIS apppool \defaultapppool**します。<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
- アクセス許可の設定の詳細については、「[オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)」を参照してください。  
+ アクセス許可の設定の詳細については、「 [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)」を参照してください。  
   
 ##  <a name="bkmk_test"></a> 手順 6: 構成をテストする  
  MSMDPUMP の接続文字列構文は、MSMDPUMP.dll ファイルへの URL です。  
@@ -300,8 +300,8 @@ ms.locfileid: "48108192"
   
 ## <a name="see-also"></a>参照  
  [フォーラムの投稿 (msmdpump と基本認証を使用した HTTP アクセス)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [Analysis Services のアクセスを許可するための Windows ファイアウォールを構成します。](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [オブジェクトと操作へのアクセスの承認&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [IIS の認証方法](http://go.microsoft.com/fwlink/?LinkdID=208461)   
  [IIS 7 で SSL を設定する方法](http://go.microsoft.com/fwlink/?LinkId=207562)  
   

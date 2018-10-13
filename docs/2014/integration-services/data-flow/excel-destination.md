@@ -16,12 +16,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9ed39459d5302fa721c2e0eab176768bb66bc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130682"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905246"
 ---
 # <a name="excel-destination"></a>Excel 変換先
   Excel 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブックのワークシートまたは範囲にデータを読み込みます。  
@@ -49,7 +49,7 @@ ms.locfileid: "48130682"
   
      単一引用符が含まれることを回避する方法については、msdn.com のブログ投稿「 [Single quote is appended to all strings when data is transformed to excel when using Excel destination data flow component in SSIS package (SSIS パッケージで Excel 変換先データ フロー コンポーネントを使用すると、データが Excel に変換されるときに、すべての文字列に単一引用符が追加される)](http://go.microsoft.com/fwlink/?LinkId=400876)」を参照してください。  
   
--   **メモ (ntext) データの保存**。 255 文字を超える文字列を Excel 列に正常に保存するには、変換先の列のデータ型を **文字列型** ではなく **メモ型**としてドライバーが認識する必要があります。 変換先のテーブルに既にデータ行が含まれている場合、ドライバーによってサンプリングされた先頭の数行のメモ列に、255 文字を超える値のインスタンスが 1 つ以上含まれている必要があります。 変換先のテーブルがパッケージの設計時または実行時に作成される場合は、CREATE TABLE ステートメントで LONGTEXT (またはそのいずれかのシノニム) をメモ列のデータ型として使用する必要があります。  
+-   **メモ (ntext) データの保存**。 255 文字を超える文字列を Excel 列に正常に保存するには、変換先の列のデータ型を **文字列型** ではなく **メモ型**としてドライバーが認識する必要があります。 変換先のテーブルに既にデータ行が含まれている場合、ドライバーによってサンプリングされた先頭の数行のメモ列に、255 文字を超える値のインスタンスが 1 つ以上含まれている必要があります。 パッケージのデザイン中または実行時に、変換先テーブルを作成する場合、CREATE TABLE ステートメント必要がありますを使用して、LONGTEXT (またはそのシノニムのいずれか) メモ列のデータ型として。  
   
 -   **データ型**。 Excel ドライバーでは、データ型の限定されたセットのみを認識します。 たとえば、すべての数値列は倍精度浮動小数点型 (DT_R8) として解釈され、すべての文字列の列 (メモ列以外) は 255 文字の Unicode 文字列 (DT_WSTR) として解釈されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、Excel データ型を次のようにマップします。  
   
@@ -82,11 +82,11 @@ ms.locfileid: "48130682"
   
  **[Excel 変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Excel 変換先エディター&#40;接続マネージャー ページ&#41;](../excel-destination-editor-connection-manager-page.md)  
+-   [[Excel 変換先エディター] ([接続マネージャー] ページ)](../excel-destination-editor-connection-manager-page.md)  
   
--   [Excel 変換先エディター&#40;マッピング ページ&#41;](../excel-destination-editor-mappings-page.md)  
+-   [[Excel 変換先エディター] ([マッピング] ページ)](../excel-destination-editor-mappings-page.md)  
   
--   [Excel 変換先エディター&#40;エラー出力 ページ&#41;](../excel-destination-editor-error-output-page.md)  
+-   [[Excel 変換先エディター] ([エラー出力] ページ)](../excel-destination-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるすべてのプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48130682"
   
 -   [Excel のカスタム プロパティ](excel-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48130682"
   
 ## <a name="see-also"></a>参照  
  [Excel ソース](excel-source.md)   
- [Integration Services &#40;SSIS&#41;変数](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)   
  [データ フロー](data-flow.md)   
  [スクリプト タスクを使用した Excel ファイルの操作](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

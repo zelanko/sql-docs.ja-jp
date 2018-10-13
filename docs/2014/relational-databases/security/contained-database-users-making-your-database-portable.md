@@ -13,12 +13,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1eb00a83a33bea0f45a31ed157ea0b8c39ee4566
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e793680a5171493460ff1f66caf7a918103619cf
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066974"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851823"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含データベース ユーザー - データベースの可搬性を確保する
   包含データベース ユーザーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のデータベース レベルでの接続が認証されます。 包含データベースは、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (および master データベース) のインスタンスから分離されたデータベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方で包含データベース  ユーザーがサポートされます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]を使用して、包含データベース ユーザーとデータベース レベルのファイアウォール規則を結合します。 このトピックでは、従来のログイン/ユーザー モデルおよび Windows またはサーバー レベルのファイアウォール規則と比較して、包含データベース モデルの相違点とこれを使用する利点について説明します。 特定のシナリオ、管理の容易性、アプリケーションのビジネス ロジックでは、従来のログイン / ユーザー モデルとサーバー レベルのファイアウォール規則を引き続き使用する必要があります。  
@@ -27,14 +27,14 @@ ms.locfileid: "48066974"
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サービスが向上し、SLA の保証が高度になると、包含データベース ユーザー モデルとデータベース用ファイアウォール規則に切り替え、特定のデータベースに対する SLA の可用性と最大ログイン レートをさらに高める必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、今すぐこのような変化に対応することをお勧めします。  
   
 ## <a name="traditional-login-and-user-model"></a>従来のログイン / ユーザー モデル  
- 従来の接続モデルでは、Windows ユーザーまたは Windows グループのメンバーが [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続する際、Windows によって認証されているユーザーまたはグループの資格情報を指定します。 接続名とパスワードの両方を提供しを使用して接続または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証 (唯一のオプションに接続するときは[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 どちらの場合も、接続ユーザーの資格情報に対応するログインが master データベースに格納されている必要があります。 通常、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で Windows 認証の資格情報が確認されるか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の資格情報で本人性が確認されると、ユーザー データベースへの接続が試行されます。 ユーザー データベースに接続するには、そのデータベース内のユーザーに対してログインをマップ (関連付けることが) できなければなりません。 また、特定のデータベースへの接続を接続文字列で指定する方法もあります。この方法は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では任意ですが、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では必須です。  
+ 従来の接続モデルでは、Windows ユーザーまたは Windows グループのメンバーが [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続する際、Windows によって認証されているユーザーまたはグループの資格情報を指定します。 または、名前とパスワードが接続から指定され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続します ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続するときは、これが唯一の選択肢となります)。 どちらの場合も、接続ユーザーの資格情報に対応するログインが master データベースに格納されている必要があります。 通常、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で Windows 認証の資格情報が確認されるか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の資格情報で本人性が確認されると、ユーザー データベースへの接続が試行されます。 ユーザー データベースに接続するには、そのデータベース内のユーザーに対してログインをマップ (関連付けることが) できなければなりません。 また、特定のデータベースへの接続を接続文字列で指定する方法もあります。この方法は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では任意ですが、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では必須です。  
   
  重要なのは、(master データベース内の) ログインと (ユーザー データベース内の) ユーザーの両方が存在し、かつ相互に関連付けられていなければならない、ということです。 これは、ユーザー データベースへの接続が、master データベース内のログインに依存していることを意味します。そのことが、データベースのホストを別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] サーバーに切り替えることを困難にしています。 また、なんらかの理由で、master データベースへの接続が利用できないと (フェールオーバーが進行中であるなど)、全体的な接続時間が増えたり、接続がタイムアウトしたりする可能性もあります。そのため、接続のスケーラビリティが低下します。  
   
 ## <a name="contained-database-user-model"></a>包含データベース ユーザー モデル  
- 包含データベース ユーザー モデルでは、ログインが master データベースには存在しません。 認証プロセスはユーザー データベースで実行されます。master データベースには、ユーザー データベース内のデータベース ユーザーに関連付けられたログインは存在しません。 包含データベース ユーザー モデルは、両方の Windows 認証をサポートしています (で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証 (両方で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 包含データベース ユーザーとして接続するには必ず、ユーザー データベースのパラメーターが接続文字列に含まれている必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はそれを基に、認証プロセスがどちらのデータベースで管理されるかを判別します。 包含データベース ユーザーのアクティビティは、そのユーザーを認証するデータベースに限定されます。そのため包含データベース ユーザーとして接続しているときは、そのユーザーが必要とする個々のデータベースに、ユーザー アカウントを別々に作成する必要があります。 データベースを切り替えるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ユーザー側で新しい接続を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の包含データベース ユーザーは、別のデータベースに同一ユーザーが存在する場合、データベースを切り替えることができます。  
+ 包含データベース ユーザー モデルでは、ログインが master データベースには存在しません。 認証プロセスはユーザー データベースで実行されます。master データベースには、ユーザー データベース内のデータベース ユーザーに関連付けられたログインは存在しません。 包含データベース ユーザー モデルでは、Windows 認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の両方) がどちらもサポートされます。 包含データベース ユーザーとして接続するには必ず、ユーザー データベースのパラメーターが接続文字列に含まれている必要があります。[!INCLUDE[ssDE](../../includes/ssde-md.md)]はそれを基に、認証プロセスがどちらのデータベースで管理されるかを判別します。 包含データベース ユーザーのアクティビティは、そのユーザーを認証するデータベースに限定されます。そのため包含データベース ユーザーとして接続しているときは、そのユーザーが必要とする個々のデータベースに、ユーザー アカウントを別々に作成する必要があります。 データベースを切り替えるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ユーザー側で新しい接続を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の包含データベース ユーザーは、別のデータベースに同一ユーザーが存在する場合、データベースを切り替えることができます。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に関しては、従来のモデルから包含データベース ユーザー モデルに切り替える際、接続文字列に対する変更は不要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続の場合は、データベースの名前を接続文字列に追加する必要があります (既に存在する場合は不要)。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に関しては、従来のモデルから包含データベース ユーザー モデルに切り替える際、接続文字列に対する変更は不要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続の場合は、データベースの名前を接続文字列に追加する必要があります (既に存在する場合は不要)。  
   
 > [!IMPORTANT]  
 >  従来型のモデルを使用した場合、サーバー レベルのロールとサーバー レベルの権限ですべてのデータベースに対するアクセスを制限できます。 包含データベース モデルを使用した場合、データベース所有者と ALTER ANY USER 権限を持ったデータベース ユーザーとがデータベースに対するアクセス権を付与できます。 これにより高い権限を与えられたサーバー ログインのアクセス制御範囲は狭められ、高い権限を与えられたデータベース ユーザーのアクセス制御範囲は拡大します。  

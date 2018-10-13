@@ -11,12 +11,12 @@ ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a6dbe4b9133f5ce31d12b1f361cea859026b53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195922"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120385"
 ---
 # <a name="modify-the-trace-results-view"></a>トレース結果の表示の変更
   このトピックでは、次のタスクを実行して [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の拡張イベント セッションのトレース結果ビューを変更する方法について説明します。  
@@ -228,7 +228,7 @@ ms.locfileid: "48195922"
   
     -   **[テーブル列]**。 トレース ウィンドウに表示されているすべての列を検索するには、このオプションを使用します。  
   
-    -   **[詳細]**。 **[拡張イベントで検索]** ダイアログ ボックスを開く前に選択したトレース ウィンドウのすべての (昇格および未昇格の) 列を検索するには、このオプションを使用します。  
+    -   **[詳細]**。 このオプションを使用して開始する前に選択されたトレース ウィンドウに (昇格および未昇格の) すべての列を検索、**拡張イベントで検索** ダイアログ ボックス。  
   
     -   **\<イベント列の名前 >** します。 ドロップダウン リストから特定のイベント列で検索するには、このオプションを使用します。  
   

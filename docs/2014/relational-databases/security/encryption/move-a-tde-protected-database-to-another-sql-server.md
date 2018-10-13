@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 55c88228de170336fec7ecd24f5acb17851fdea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132942"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072276"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>別の SQL Server への TDE で保護されたデータベースの移動
-  このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、透過的なデータ暗号化 (TDE) によってデータベースを保護し、そのデータベースを別の [!INCLUDE[tsql](../../../includes/tsql-md.md)]インスタンスに移動する方法について説明します。 TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK とは、サーバーの `master` データベースに保存されている証明書を使用して保護される対称キー、または EKM モジュールによって保護される非対称キーのことです。  
+  このトピックでは、透過的なデータ暗号化 (TDE) を使用してデータベースを保護し、別のインスタンスにデータベースを移動する方法を説明します。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../../includes/tsql-md.md)]します。 TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK とは、サーバーの `master` データベースに保存されている証明書を使用して保護される対称キー、または EKM モジュールによって保護される非対称キーのことです。  
   
  **このトピックの内容**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48132942"
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48132942"
   
 -   必要があります`CREATE CERTIFICATE`に対する権限、 `master` DEK を保護する証明書を作成するデータベース。  
   
--   必要があります`CONTROL DATABASE`暗号化されたデータベースに対するアクセス許可と`VIEW DEFINITION`証明書またはデータベース暗号化キーの暗号化に使用される非対称キーに対する権限。  
+-   暗号化されたデータベースに対する `CONTROL DATABASE` 権限、およびデータベース暗号化キーの暗号化に使用する証明書または非対称キーに対する `VIEW DEFINITION` 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを作成するには  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48132942"
      **[データベース暗号化の管理]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
      **暗号化アルゴリズム**  
-     データベース暗号化で使用するアルゴリズムを表示または設定します。 `AES128` 既定のアルゴリズムです。 このフィールドを空白にすることはできません。 暗号化アルゴリズムの詳細については、「 [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)」をご覧ください。  
+     データベース暗号化で使用するアルゴリズムを表示または設定します。 既定の暗号化アルゴリズムは `AES128` です。 このフィールドを空白にすることはできません。 暗号化アルゴリズムの詳細については、「 [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)」をご覧ください。  
   
      **サーバー証明書の使用**  
      証明書によって保護するように暗号化を設定します。 一覧から選択します。 サーバー証明書に対する `VIEW DEFINITION` 権限がない場合、このリストは空になります。 証明書による暗号化方法が選択されている場合、この値を空にすることはできません。 証明書の詳細については、「 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  

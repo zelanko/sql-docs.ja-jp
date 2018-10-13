@@ -15,15 +15,15 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f53007ac70cce216e0dc30c9d72ce830050504
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123752"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120369"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>AlwaysOn ダッシュボードの使用 (SQL Server Management Studio)
-  データベース管理者は AlwaysOn ダッシュボードを使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 AlwaysOn ダッシュボードの一般的な用途を次に示します。  
+  データベース管理者は AlwaysOn ダッシュボードを使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 AlwaysOn ダッシュボードの一般的な用途を次に示します。  
   
 -   手動フェールオーバー用のレプリカの選択。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48123752"
   
  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  可能性グループのプライマリ レプリカまたはセカンダリ レプリカのどちらかをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス (サーバー インスタンス) に接続されている必要があります。  

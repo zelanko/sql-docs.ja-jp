@@ -13,15 +13,15 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30bb3496a2bd68ac94a702b6d7713b53cbc40bfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d206821fe3a54f71c61d383c19a0a0479a8321f0
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057692"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072186"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
-  計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して計算列に式を指定できます。  
+  計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 内の計算列の式を指定する[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。  
   
  **このトピックの内容**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48057692"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Limitations"></a> 制限事項と制約事項  
   
@@ -56,14 +56,14 @@ ms.locfileid: "48057692"
   
 1.  **オブジェクト エクスプローラー**で、新しい計算列を追加するテーブルを展開します。 **[列]** を右クリックして **[新しい列]** をクリックします。  
   
-2.  列名を入力し、既定のデータ型 (`nchar`(10)) をそのまま使用します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、計算列のデータ型は、数式で指定された式のデータ型のうち優先順位が高い方になります。 たとえば、式で `money` 型の列と `int` 型の列を参照する場合、`money` 型の方が優先順位が高いため、計算列はそのデータ型になります。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql)」を参照してください。  
+2.  列名を入力し、既定のデータ型 (`nchar`(10)) をそのまま使用します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]により、計算列のデータ型は、数式で指定された式のデータ型のうち優先順位が高い方になります。 たとえば、式で `money` 型の列と `int` 型の列を参照する場合、`money` 型の方が優先順位が高いため、計算列はそのデータ型になります。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql)」を参照してください。  
   
 3.  **[列のプロパティ]** タブの **[計算列の指定]** プロパティを展開します。  
   
 4.  **[(数式)]** 子プロパティで、列の式を右側のグリッド セルに入力します。 たとえば、 `SalesTotal` 列に `SubTotal+TaxAmt+Freight`という数式を入力した場合、テーブル内の各行のこれらの列の値が加算されます。  
   
     > [!IMPORTANT]  
-    >  数式でデータ型が異なる 2 つの式を結合すると、データ型の優先順位の規則によって、優先順位の低いデータ型を優先順位の高いデータ型に変換することが指定されます。 暗黙的な変換がサポートされていない場合は、「`Error validating the formula for column column_name.`」というエラーが返されます。 データ型の競合を解決するには、CAST 関数または CONVERT 関数を使用します。 たとえば、型の列`nvarchar`型の列と組み合わせて使用`int`、整数型に変換する必要があります`nvarchar`この数式で示すように`('Prod'+CONVERT(nvarchar(23),ProductID))`します。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
+    >  数式でデータ型が異なる 2 つの式を結合すると、データ型の優先順位の規則によって、優先順位の低いデータ型を優先順位の高いデータ型に変換することが指定されます。 暗黙的な変換がサポートされていない場合は、「`Error validating the formula for column column_name.`」というエラーが返されます。 データ型の競合を解決するには、CAST 関数または CONVERT 関数を使用します。 たとえば、`nvarchar` 型の列を `int` 型の列と結合する場合は、この数式 `('Prod'+CONVERT(nvarchar(23),ProductID))` のように、整数型を `nvarchar` に変換する必要があります。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
   
 5.  **[Is Persisted]** 子プロパティのドロップダウンの **[はい]** または **[いいえ]** をクリックし、データを永続化するかどうかを指定します。  
   

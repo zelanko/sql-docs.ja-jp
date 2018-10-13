@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5afd389288de04ec77f3258706bf8fd31b228ec
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177795"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120339"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>可用性グループの強制手動フェールオーバーの実行 (SQLServer)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の PowerShell を使用して、AlwaysOn 可用性グループに対する強制フェールオーバー (データ損失の可能性あり) を実行する方法について説明します。 強制フェールオーバーは、[計画的な手動フェールオーバー](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)を実行できない場合に、ディザスター リカバリーのみを目的として実行する手動フェールオーバーです。 非同期のセカンダリ レプリカに対して強制フェールオーバーを実行した場合、データ損失の可能性があります。 したがって、強制フェールオーバーは、データ損失のリスクを引き受けたうえで、可用性グループに対するサービスを直ちに復旧する必要がある場合のみ実行することを強くお勧めします。  
@@ -48,7 +48,7 @@ ms.locfileid: "48177795"
 >  強制フェールオーバーを実行するための前提条件と推奨事項の詳細、および強制フェールオーバーを使用して重大なエラーから復旧するサンプル シナリオについては、このトピックの「 [サンプル シナリオ: 致命的なエラーから復旧するための強制フェールオーバーの使用](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)」を参照してください。  
   
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48177795"
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **強制フェールオーバー (データ損失の可能性あり) を実行するには**  
   
-1.  フェールオーバーを行う必要がある可用性グループでロールが SECONDARY または RESOLVING 状態であるレプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
+1.  ロールが SECONDARY または RESOLVING 状態をフェールオーバーする必要がある可用性グループ内であるレプリカをホストするサーバー インスタンスに接続します。  
   
 2.  [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) ステートメントを使用します。次にその例を示します。  
   
@@ -151,15 +151,15 @@ ms.locfileid: "48177795"
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **強制フェールオーバー (データ損失の可能性あり) を実行するには**  
   
-1.  フェールオーバーを行う必要がある可用性グループでロールが SECONDARY または RESOLVING 状態であるレプリカをホストするサーバー インスタンスにディレクトリを変更 (`cd`) します。  
+1.  ディレクトリ変更コマンド (`cd`) ロールが SECONDARY または RESOLVING 状態をフェールオーバーする必要がある可用性グループ内であるレプリカをホストするサーバー インスタンスにします。  
   
 2.  次の形式のいずれかで `Switch-SqlAvailabilityGroup` パラメーターを指定して `AllowDataLoss` コマンドレットを使用します。  
   
     -   `-AllowDataLoss`  
   
-         既定では、`-AllowDataLoss` に `Switch-SqlAvailabilityGroup` パラメーターを指定した場合、強制フェールオーバーを実行するとコミットされていないトランザクションが失われる可能性があることが通知され、操作を続行するかどうかの確認を求められます。 続けるには、次のように入力します。`Y`するには、操作を取り消して、入力`N`します。  
+         既定では、`-AllowDataLoss` に `Switch-SqlAvailabilityGroup` パラメーターを指定した場合、強制フェールオーバーを実行するとコミットされていないトランザクションが失われる可能性があることが通知され、操作を続行するかどうかの確認を求められます。 続けるには「`Y`」を入力し、操作をキャンセルするには「`N`」を入力します。  
   
-         次の例では、可用性グループ `MyAg` に対して、 `SecondaryServer\InstanceName`というサーバー インスタンスのセカンダリ レプリカへの強制フェールオーバー (データ損失の可能性あり) が実行されます。 この操作の確認を求めるメッセージが表示されます。  
+         次の例では、可用性グループ `MyAg` に対して、`SecondaryServer\InstanceName` というサーバー インスタンスのセカンダリ レプリカへの強制フェールオーバー (データ損失の可能性あり) が実行されます。 この操作の確認を求めるメッセージが表示されます。  
   
         ```  
         Switch-SqlAvailabilityGroup `  
@@ -169,7 +169,7 @@ ms.locfileid: "48177795"
   
     -   **-AllowDataLoss-Force**  
   
-         確認を求めずに強制フェールオーバーを実行するには、`-AllowDataLoss` パラメーターと `-Force` パラメーターを両方とも指定します。 これは、コマンドをスクリプトに組み込んで自動的に実行する場合に役立ちます。  ただし、使用して、`-Force`オプションは、可用性グループに参加しているデータベースからのデータの損失、強制フェールオーバーが可能性がありますので、注意が必要です。  
+         確認を求めずに強制フェールオーバーを実行するには、`-AllowDataLoss` パラメーターと `-Force` パラメーターを両方とも指定します。 これは、コマンドをスクリプトに組み込んで自動的に実行する場合に役立ちます。  ただし、強制フェールオーバーによって可用性グループに参加しているデータベースでデータ損失が発生する可能性があるため、`-Force` オプションは慎重に使用する必要があります。  
   
          次の例では、可用性グループ `MyAg` に対して、 `SecondaryServer\InstanceName`というサーバー インスタンスへの強制フェールオーバー (データ損失の可能性あり) が実行されます。 `-Force` オプションにより、この操作の確認は表示されません。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48177795"
         ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 3.  可用性グループを強制的にフェールオーバーした後で、必要なフォローアップ手順を実行します。 詳細については、このトピックの「 [補足情報: 強制フェールオーバー後の必須タスク](#FollowUp)」を参照してください。  
   

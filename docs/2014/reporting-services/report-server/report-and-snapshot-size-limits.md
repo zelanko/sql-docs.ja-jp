@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 964c6dace976f54e053947c301b3093de5aa921f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217952"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119328"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "48217952"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、サーバーに対するサービス拒否攻撃 (DoS) の脅威を低減するために、送信ファイルに最大サイズを設けています。 最大サイズの制限の値を大きくした場合、この制限による保護がある程度弱められます。 値を大きくすることで得られるメリットが、それに伴うセキュリティ リスクの増大よりも重要であると確信できる場合のみ、値を大きくしてください。  
   
- `maxRequestLength` 要素に設定する値は、適用する実際のサイズ制限より大きい必要があることに注意してください。 すべてのパラメーターが SOAP エンベロープにカプセル化され、Base64 エンコードが <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> メソッドや <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> メソッドの定義パラメーターなどの特定のパラメーターに適用されると、必然的に HTTP 要求サイズまで増大するため、値を大きくする必要があります。 Base64 エンコードによって、元のデータのサイズより約 33% 大きくなります。 その結果、指定した値を`maxRequestLength`要素は、約 33% 使用可能なアイテムの実際のサイズよりも大きくする必要があります。 たとえば、`maxRequestLength` を 64 MB に指定した場合、実際にレポート サーバーに送信されるレポート ファイルの最大サイズは約 48 MB になると予測されます。  
+ `maxRequestLength` 要素に設定する値は、適用する実際のサイズ制限より大きい必要があることに注意してください。 すべてのパラメーターが SOAP エンベロープにカプセル化され、Base64 エンコードが <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> メソッドや <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> メソッドの定義パラメーターなどの特定のパラメーターに適用されると、必然的に HTTP 要求サイズまで増大するため、値を大きくする必要があります。 Base64 エンコードによって、元のデータのサイズより約 33% 大きくなります。 このため、`maxRequestLength` 要素に指定する値は、実際の使用可能なアイテムのサイズより約 33% 大きくする必要があります。 たとえば、`maxRequestLength` を 64 MB に指定した場合、実際にレポート サーバーに送信されるレポート ファイルの最大サイズは約 48 MB になると予測されます。  
   
 ## <a name="report-size-in-memory"></a>メモリ内のレポート サイズ  
  レポート実行時のレポート サイズは、レポートに返されるデータ量に出力ストリームのサイズを加えた値になります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レンダリングされたレポートのサイズに対する最大値が設定されません。 サイズの上限は、システム メモリによって決まります。既定では、構成された使用可能なメモリがすべてレポートのレンダリング時に使用されますが、メモリのしきい値およびメモリ管理ポリシーを設定するための構成設定を指定できます。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。  
@@ -60,7 +60,7 @@ ms.locfileid: "48217952"
   
  既定では、 **reportserver** と **reportservertempdb** データベースは、自動拡張に設定されます。 データベース サイズが自動的に大きくなりますが、自動的に小さくなることはありません。 スナップショットを削除したため、 **reportserver** データベースに余分な容量がある場合、手動でサイズを小さくして、ディスク領域を回復する必要があります。 同様に、非常に大きな対話型のレポートを格納するために **reportservertempdb** のサイズが大きくなっていても、ディスク領域の割り当ては、サイズを小さくするまでその設定のままです。  
   
- レポート サーバー データベースのサイズを測定するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行します。 定期的にデータベースの合計サイズを計算すると、時間の経過と共にレポート サーバー データベースの領域の割り当て方法に関する適切な推定値を算出できます。 次のステートメントは、現在使用されている領域を測定します (このステートメントでは、既定のデータベース名が使用されていると仮定します)。  
+ レポート サーバー データベースのサイズを測定するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行します。 定期的にデータベースの合計サイズを計算すると、時間の経過と共にレポート サーバー データベースの領域の割り当て方法に関する適切な推定値を算出できます。 次のステートメントは現在使用されている領域の量を測定 (ステートメントは、既定のデータベース名を使用するいると仮定)。  
   
 ```  
 USE ReportServer  
@@ -81,8 +81,8 @@ EXEC sp_spaceused
  レポート サーバー データベースに格納されているスナップショットの数量自体は、パフォーマンスに影響する要因にはなりません。 サーバーのパフォーマンスに影響を与えないで、多くのスナップショットを格納できます。 スナップショットは、無期限に保存できます。 ただし、レポート履歴は構成が可能なので注意が必要です。 レポート サーバー管理者がレポート履歴の制限値を低くした場合、保存したレポート履歴が失われることがあります。 レポートを削除すると、すべてのレポート履歴が一緒に削除されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート処理プロパティを設定します。](set-report-processing-properties.md)   
- [レポート サーバー データベース&#40;SSRS ネイティブ モード&#41;](report-server-database-ssrs-native-mode.md)   
+ [レポート処理プロパティの設定](set-report-processing-properties.md)   
+ [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](report-server-database-ssrs-native-mode.md)   
  [サイズの大きなレポートの処理](process-large-reports.md)  
   
   

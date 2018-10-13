@@ -15,12 +15,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cafc562581a5f34bf9b59b1ff7cde1c679abd726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fc5fc211d0f0c843ad16fb377fad2082bcf02c1
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228644"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120279"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの有効化と無効化 (SQL Server)
   サーバー インスタンスで可用性グループを使用するには、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効にする必要があります。 可用性グループを作成したり構成したりするためには、少なくとも 1 つの可用性グループの可用性レプリカがホストされる [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の各インスタンスで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能が有効になっている必要があります。  
@@ -38,11 +38,11 @@ ms.locfileid: "48228644"
   
     -   [かどうかの AlwaysOn 可用性グループが有効になっているかを決定します。](#IsEnabled)  
   
-    -   [AlwaysOn 可用性グループを有効にします。](#EnableAOAG)  
+    -   [[AlwaysOn 可用性グループを有効にする]](#EnableAOAG)  
   
     -   [AlwaysOn 可用性グループを無効にします。](#DisableAOAG)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> AlwaysOn 可用性グループを有効にするための前提条件  
   
@@ -50,12 +50,12 @@ ms.locfileid: "48228644"
   
 -   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートする SQL Server エディションが実行されている必要があります。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
   
--   一度に 1 つのサーバー インスタンスでのみ AlwaysOn 可用性グループを有効にします。 AlwaysOn 可用性グループを有効にした後まで待って、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]別のサーバー インスタンスを続行する前に、サービスが再起動します。  
+-   一度に 1 つのサーバー インスタンスでのみ AlwaysOn 可用性グループを有効にします。 AlwaysOn 可用性グループを有効にした後は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスが再起動するまで待ってから、次のサーバー インスタンスを有効にしてください。  
   
  追加の前提条件を作成すると、可用性グループの構成については、次を参照してください。[前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)します。  
   
 ###  <a name="Security"></a> セキュリティ  
- インスタンスで AlwaysOn 可用性グループが有効になっている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、サーバー インスタンスが WSFC クラスターに対するフル コントロール。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上で AlwaysOn 可用性グループが有効になっている限り、そのサーバー インスタンスには、WSFC クラスターに対するフル コントロール権限があります。  
   
 ####  <a name="Permissions"></a> Permissions  
  ローカル コンピューターの **Administrator** グループのメンバーシップおよび WSFC クラスターに対するフル コントロール権限が必要です。 PowerShell を使用して AlwaysOn を有効にする場合は、 **[管理者として実行]** オプションを使用してコマンド プロンプト ウィンドウを開いてください。  
@@ -92,9 +92,9 @@ ms.locfileid: "48228644"
   
      `IsHadrEnabled` サーバー プロパティの設定は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対して AlwaysOn 可用性グループが有効であるかどうかを示します。  
   
-    -   場合`IsHadrEnabled`= 1、AlwaysOn 可用性グループを有効にします。  
+    -   `IsHadrEnabled` = 1 の場合: AlwaysOn 可用性グループが有効  
   
-    -   場合`IsHadrEnabled`= 0、AlwaysOn 可用性グループが無効になっています。  
+    -   `IsHadrEnabled` = 0 の場合: AlwaysOn 可用性グループが無効  
   
     > [!NOTE]  
     >  詳細については、`IsHadrEnabled`サーバーのプロパティを参照してください[SERVERPROPERTY &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)します。  
@@ -111,7 +111,7 @@ ms.locfileid: "48228644"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
@@ -127,7 +127,7 @@ ms.locfileid: "48228644"
 ###  <a name="SQLCM2Procedure"></a> SQL Server 構成マネージャーの使用  
  **AlwaysOn 可用性グループを有効にするには**  
   
-1.  ホストする Windows Server フェールオーバー クラスタ リング (WSFC) ノードに接続する、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスの AlwaysOn 可用性グループを有効にします。  
+1.  対象の (AlwaysOn 可用性グループを有効にする) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスがホストされている Windows Server フェールオーバー クラスタリング (WSFC) ノードに接続します。  
   
 2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
@@ -139,16 +139,16 @@ ms.locfileid: "48228644"
   
 6.  **[AlwaysOn 可用性グループを有効にする]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
-     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーによって変更内容が保存されます。 その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを手動で再起動する必要があります。 業務上の要件に合った時間帯を選んで再起動することができます。 ときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスが再起動、AlwaysOn が有効にする、および`IsHadrEnabled`サーバー プロパティを 1 に設定されます。  
+     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーによって変更内容が保存されます。 その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを手動で再起動する必要があります。 業務上の要件に合った時間帯を選んで再起動することができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを再起動すると、AlwaysOn が有効になり、`IsHadrEnabled` サーバー プロパティが 1 に設定されます。  
   
 ###  <a name="PScmd2Procedure"></a> SQL Server PowerShell の使用  
  **AlwaysOn を有効にするには**  
   
 1.  ディレクトリ変更コマンド (`cd`) を使用して、AlwaysOn 可用性グループを有効にするサーバー インスタンスに移動します。  
   
-2.  使用して、 `Enable-SqlAlwaysOn` AlwaysOn 可用性グループを有効にするコマンドレットです。  
+2.  AlwaysOn 可用性グループを無効にするには、`Enable-SqlAlwaysOn` コマンドレットを使用します。  
   
-     コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+     コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
     > [!NOTE]  
     >  制御する方法についてはかどうか、`Enable-SqlAlwaysOn`コマンドレットでは再起動、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスを参照してください[コマンドレットは、SQL Server サービス再起動するとしますか?](#WhenCmdletRestartsSQL)、このトピックで後述します。  
@@ -179,7 +179,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 -   **補足情報:**  [AlwaysOn を無効にした後](#FollowUp)  
   
 > [!IMPORTANT]  
->  AlwaysOn を無効にできるサーバー インスタンスは一度に 1 つだけです。 AlwaysOn 可用性グループを無効にした後は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスが再起動するまで待ってから、次のサーバー インスタンスを有効にしてください。  
+>  AlwaysOn を無効にできるサーバー インスタンスは一度に 1 つだけです。 AlwaysOn 可用性グループを無効にした後は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスが再起動するまで待ってから、次のサーバー インスタンスを有効にしてください。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
  サーバー インスタンスで AlwaysOn を無効にする前に、次の操作を行うことをお勧めします。  
@@ -206,9 +206,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> SQL Server PowerShell の使用  
  **AlwaysOn を無効にするには**  
   
-1.  ディレクトリ変更コマンド (`cd`) を使用して、AlwaysOn 可用性グループを無効にするサーバー インスタンスに移動します。  
+1.  ディレクトリ変更コマンド (`cd`) AlwaysOn 可用性グループを使用する現在有効になっているサーバー インスタンスにします。  
   
-2.  使用して、 `Disable-SqlAlwaysOn` AlwaysOn 可用性グループを有効にするコマンドレットです。  
+2.  AlwaysOn 可用性グループを無効にするには、`Disable-SqlAlwaysOn` コマンドレットを使用します。  
   
      たとえば、次のコマンドは SQL Server のインスタンスで AlwaysOn 可用性グループを無効にします (*コンピューター*\\*インスタンス*)。  このコマンドの場合、インスタンスを再起動する必要があり、再起動するかどうかを確認するメッセージが表示されます。  
   
@@ -219,20 +219,20 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
     > [!IMPORTANT]  
     >  制御する方法についてはかどうか、`Disable-SqlAlwaysOn`コマンドレットでは再起動、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスを参照してください[コマンドレットは、SQL Server サービス再起動するとしますか?](#WhenCmdletRestartsSQL)、このトピックで後述します。  
   
-     コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+     コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a> 補足情報: AlwaysOn を無効にした後  
- AlwaysOn 可用性グループのインスタンスを無効にした後[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]再起動する必要があります。 サーバー インスタンスは、SQL 構成マネージャーによって自動的に再起動されます。 ただし、`Disable-SqlAlwaysOn` コマンドレットを使用した場合は、サーバー インスタンスを手動で再起動する必要があります。 詳細については、「 [sqlservr Application](../../../tools/sqlservr-application.md)」を参照してください。  
+ AlwaysOn 可用性グループを無効にした後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを無効にする必要があります。 サーバー インスタンスは、SQL 構成マネージャーによって自動的に再起動されます。 ただし、`Disable-SqlAlwaysOn` コマンドレットを使用した場合は、サーバー インスタンスを手動で再起動する必要があります。 詳細については、「 [sqlservr Application](../../../tools/sqlservr-application.md)」を参照してください。  
   
  再起動後のサーバー インスタンスに該当する状況を以下に示します。  
   
 -   SQL Server の起動時に可用性データベースは開始されず、アクセス不能となります。  
   
--   のみでサポートされる AlwaysOn[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントが[DROP AVAILABILITY GROUP](/sql/t-sql/statements/drop-availability-group-transact-sql)します。 CREATE AVAILABILITY GROUP と ALTER AVAILABILITY GROUP、および ALTER DATABASE の SET HADR オプションはサポートされません。  
+-   サポートされる AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは [DROP AVAILABILITY GROUP](/sql/t-sql/statements/drop-availability-group-transact-sql)のみとなります。 CREATE AVAILABILITY GROUP と ALTER AVAILABILITY GROUP、および ALTER DATABASE の SET HADR オプションはサポートされません。  
   
 -   AlwaysOn 可用性グループを無効にしても、WSFC 内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の構成データと [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のメタデータにその影響が及ぶことはありません。  
   

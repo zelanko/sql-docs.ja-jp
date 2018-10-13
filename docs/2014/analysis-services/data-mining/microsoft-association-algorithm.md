@@ -31,12 +31,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185032"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120029"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft アソシエーション アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で提供されているアソシエーション アルゴリズムであり、推奨エンジンで使用できます。 推奨エンジンでは、顧客が既に購入した製品または興味を示した製品に基づいて、顧客に製品が推奨されます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析にも使用できます。 マーケット バスケット分析の例は、次を参照してください。[レッスン 3: マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)データ マイニング チュートリアル」。  
@@ -78,8 +78,8 @@ ms.locfileid: "48185032"
   
  データ マイニング モデルに対するクエリの作成方法については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
   
-## <a name="performance"></a>[パフォーマンス]  
- アイテムセットを作成して相関関係をカウントするというプロセスには時間がかかる場合があります。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)]アソシエーション ルール アルゴリズムは、領域を節約し、処理の高速化のための最適化手法を使用して、パフォーマンスの問題は、次の条件下で発生する可能性があるとわかっている必要があります。  
+## <a name="performance"></a>パフォーマンス  
+ アイテムセットを作成して相関関係をカウントするというプロセスには時間がかかる場合があります。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)]アソシエーション ルール アルゴリズムは、領域を節約し、処理の高速化のための最適化手法を使用して、次などの条件下でパフォーマンスの問題が発生することを把握する必要があります。  
   
 -   多数のアイテムを含む大きなデータセットを使用する場合。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "48185032"
 -   データ マイニング ディメンションの作成がサポートされています。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft アソシエーション ルール ビューアーを使用してモデルを参照します。](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft アソシエーション ルール ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](microsoft-association-algorithm-technical-reference.md)   
  [結合モデルのクエリ例](association-model-query-examples.md)  
   

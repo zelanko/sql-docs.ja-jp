@@ -18,12 +18,12 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28a1b42780b57fb5807e0ff8f900bfe7b1fc7559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e8ada6daf4fc7e545856b52b163a2ff8f9e40db
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670460"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168662"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@class =**] **'***クラス***'**  
+ [  **@class =**] **'**_クラス_**'**  
  カテゴリのクラスを指定します。 *クラス*は**varchar (8)**, ない必要があり、既定で、これらの値のいずれかであります。  
   
 |値|説明|  
@@ -50,7 +50,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**アラートを生成します。**|警告カテゴリを削除します。|  
 |**演算子**|オペレーター カテゴリを削除します。|  
   
- [ **@name =**] **'***name***'**  
+ [  **@name =**] **'**_名前_**'**  
  削除するカテゴリの名前を指定します。 *名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

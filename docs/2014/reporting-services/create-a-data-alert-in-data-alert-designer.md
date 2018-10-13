@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144422"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071846"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
   データ警告の定義は、データ警告デザイナーで作成します。 作成した警告定義は、保存後、再度データ警告デザイナーで開いて編集し、保存し直すことができます。 警告定義の編集の詳細については、「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md) 」および「 [警告デザイナーでのデータ警告の編集](edit-a-data-alert-in-alert-designer.md)」を参照してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "48144422"
   
      レポートの名前が、警告定義の既定の名前として使用されます。 警告定義名は必ずしも一意である必要はありませんが、後でデータ警告マネージャーで警告の一覧を表示したときに区別しづらくなる可能性はあります。 警告定義には、一意でわかりやすい名前を使用することをお勧めします。  
   
-6.  必要に応じて、既定のデータ オプションを **[データ フィード内のいずれかのデータに次が含まれる]** から **[データ フィード内のどのデータにも次のものが含まれていません]** に変更します。  
+6.  必要に応じてから既定のデータ オプションを変更**データ フィード内の任意のデータが**に**データ フィード内のデータを持たない**します。  
   
 7.  **[ルールの追加]** をクリックします。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48144422"
      既定では、警告メッセージに停止日はありません。  
   
     > [!NOTE]  
-    >  通知メッセージを停止しても、警告定義は削除されません。 停止した警告メッセージは、開始日と停止日を更新することで再度開始できます。 警告の定義を削除する方法の詳細については、次を参照してください。[データ警告の管理データ警告マネージャーで](manage-my-data-alerts-in-data-alert-manager.md)します。  
+    >  通知メッセージを停止しても、警告定義は削除されません。 停止した警告メッセージは、開始日と停止日を更新することで再度開始できます。 警告定義の削除の詳細については、「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md)」を参照してください。  
   
 18. 必要に応じて、 **[結果が変更された場合にのみメッセージを送信]** チェック ボックスをオフにします。  
   
@@ -119,6 +119,6 @@ ms.locfileid: "48144422"
 ## <a name="see-also"></a>参照  
  [データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)   
  [警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services のデータ警告](../ssms/agent/alerts.md)  
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

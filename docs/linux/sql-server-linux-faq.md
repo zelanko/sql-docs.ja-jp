@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 6725f986a66020d0560c4e3f17be5da12a2cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745750"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851847"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux Frequently Asked Questions (FAQ)
 
@@ -103,7 +103,7 @@ ms.locfileid: "47745750"
 
 1. **SQL Server on Linux は、同じホストで複数のインスタンスをサポートしますか。**
 
-   複数のコンテナーを個別のインスタンスが複数存在するホストで実行されていることをお勧めします。 各コンテナーは、別のポートでリッスンする必要があります。 詳細については、次を参照してください。[複数の SQL Server のコンテナーを実行](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)します。
+   複数のコンテナーを個別のインスタンスが複数存在するホストで実行されていることをお勧めします。 Docker を使用してこれを簡単に行うが、各コンテナーは、別のポートでリッスンする必要があります。 詳細については、次を参照してください。[複数の SQL Server のコンテナーを実行](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)します。
 
 1. **Linux 上の Active Directory 認証はサポートされますか。**
 

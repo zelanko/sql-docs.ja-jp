@@ -16,12 +16,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7cc4dcb033a7baa86b81619f6e1dbb6dc37ddb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063448"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120359"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
   主キーと外部キーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
@@ -39,7 +39,7 @@ ms.locfileid: "48063448"
   
  主キー制約をテーブルに対して指定すると、重複のないインデックスを [!INCLUDE[ssDE](../../includes/ssde-md.md)] が主キー列に対して自動的に作成し、データが一意になるようにします。 また、クエリの中で主キーが使用された場合は、このインデックスによってデータに高速にアクセスできます。 複数の列に一意キー制約が定義されている場合は、1 つの列内で値が重複してもかまいませんが、一意キー制約が定義された列に格納される値の組み合わせは一意である必要があります。  
   
- 次の図に示すように、このテーブルの複合主キー制約は、 **Purchasing.ProductVendor** テーブルの **ProductID** 列と **VendorID** 列により作成されています。 そのため、 **ProductID** と **VendorID** の組み合わせは、 **ProductVendor**テーブル内のすべての行で一意になります。 これによって重複行の挿入が防止されます。  
+ 次の図に示すように、このテーブルの複合主キー制約は、 **Purchasing.ProductVendor** テーブルの **ProductID** 列と **VendorID** 列により作成されています。 そのため、**ProductID** と **VendorID** の組み合わせは、**ProductVendor** テーブル内のすべての行で一意になります。 これによって重複行の挿入が防止されます。  
   
  ![複合 PRIMARY KEY 制約](../../database-engine/media/fund04.gif "複合 PRIMARY KEY 制約")  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48063448"
  NO ACTION を指定すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラーが発生し、親テーブルでの行の削除操作または更新操作がロールバックされます。  
   
  CASCADE  
- 親テーブルで行が更新または削除された場合に、参照元のテーブルでも対応する行が更新または削除されます。 場合、CASCADE を指定することはできません、`timestamp`列は、外部キーまたは参照されるキーのいずれかの一部です。 INSTEAD OF DELETE トリガーが設定されているテーブルには、ON DELETE CASCADE を指定できません。 INSTEAD OF UPDATE トリガーが設定されているテーブルには、ON UPDATE CASCADE を指定できません。  
+ 親テーブルで行が更新または削除された場合に、参照元のテーブルでも対応する行が更新または削除されます。 CASCADE は、`timestamp` 型の列が外部キーまたは参照先キーの一部である場合は指定できません。 INSTEAD OF DELETE トリガーが設定されているテーブルには、ON DELETE CASCADE を指定できません。 INSTEAD OF UPDATE トリガーが設定されているテーブルには、ON UPDATE CASCADE を指定できません。  
   
  SET NULL  
  親テーブルの対応する行が更新または削除された場合、外部キーを形成するすべての値が NULL に設定されます。 この制約を実行するには、外部キー列が NULL 値を使用できる必要があります。 INSTEAD OF UPDATE トリガーが設定されているテーブルには指定できません。  

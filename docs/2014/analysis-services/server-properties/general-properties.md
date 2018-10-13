@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dab367196f1d4d80f965a2ff400fd6193b6e3508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171182"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905762"
 ---
 # <a name="general-properties"></a>全般プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -61,7 +61,7 @@ ms.locfileid: "48171182"
  Analysis Services のダイアログ ボックスでファイルを保存、開く、および検索するときに参照できるフォルダーを区切り記号で区切った一覧で指定する文字列プロパティです。 Analysis Services のサービス アカウントには、リストに追加するすべてのフォルダーの読み取り権限と書き込み権限が必要です。  
   
  `BackupDir`  
- Backup コマンドでパスが指定されていない場合に、既定によりバックアップ ファイルが格納されるディレクトリの名前を指定する文字列プロパティです。  
+ バックアップ コマンドの一部として、パスが指定されていない場合に、既定では、バックアップのファイルが格納されるディレクトリの名前を指定する文字列プロパティ。  
   
  `CollationName`  
  サーバーの照合順序を指定する文字列プロパティです。 詳細については、「[言語および照合順序 &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)」を参照してください。  
@@ -77,12 +77,12 @@ ms.locfileid: "48171182"
  `CoordinatorCancelCount`  
  キャンセル イベントが発生したかどうかを内部反復カウントに基づいてサーバーがチェックする頻度を定義する、符号付き 32 ビット整数のプロパティです。 キャンセルのチェック頻度を多くするには、この値を小さくしてください。ただし、全体的なパフォーマンスは低下します。  
   
- `CoordinatorCancelCount` 表形式サーバー モードでは無視されます。  
+ 表形式サーバー モードでは、`CoordinatorCancelCount` は無視されます。  
   
  `CoordinatorExecutionMode`  
  処理操作やクエリ操作など、サーバーによって試行される並列操作の最大数を定義する、符号付き 32 ビット整数のプロパティです。 0 を指定すると、サーバーの内部アルゴリズムに基づいて決定されます。 正の数値は、操作の最大総数を示します。 負の数値 (反対の符号) は、プロセッサあたりの操作の最大数を示します。  
   
- `CoordinatorExecutionMode` 表形式サーバー モードでは無視されます。  
+ 表形式サーバー モードでは、`CoordinatorExecutionMode` は無視されます。  
   
  このプロパティの既定値は -4 であり、サーバーのプロセッサあたりの並列操作が 4 に制限されることを示します。 このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48171182"
  このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` キューブ処理コマンドと書き戻し操作に適用されます。  
+>  `ForceCommitTimeout` は、キューブ処理コマンドと書き戻し操作に適用されます。  
   
  `IdleConnectionTimeout`  
  アクティブでない接続のタイムアウトを秒単位で指定する整数のプロパティです。  

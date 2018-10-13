@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6b1328b1d0a0832e9d412d1fcd908f3cdb0d349
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039036"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072306"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio リリース ノート
 
@@ -61,7 +61,7 @@ Azure Data Studio (SQL Operations Studio 以前) の一般的な可用性リリ�
 
 *0.32.8 には 0.32.7 で見つかったいくつかの回帰の修正プログラムが含まれています ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971)、 [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
-*年 8 月のパブリック プレビュー*のバグ修正、製品の安定化、既存のシナリオの矛盾点の入力に重点を置いています。  
+*年 8 月のパブリック プレビュー*バグの修正、製品の安定化、および既存のシナリオのギャップを入力します。  
 
 - SQL Server インポート拡張機能の発表
 - SQL Server Profiler のセッションの管理

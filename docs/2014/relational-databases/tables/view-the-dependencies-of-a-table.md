@@ -16,12 +16,12 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 313d128d0323c8400828e43c7d80f94614950ee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1ce3195b114969a44f818ca0eb69d2979087e55
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080842"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169122"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>テーブルの依存関係の表示
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルの依存関係を表示できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "48080842"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48080842"
   
 2.  テーブルを右クリックし、 **[依存関係の表示]** をクリックします。  
   
-3.  *[オブジェクトの依存関係 - \<オブジェクト名>]* ダイアログ ボックスで、**[** *\<オブジェクト名> に依存するオブジェクト]* または **[***\<object name>*** オブジェクト名> が依存するオブジェクト]** を選択します。  
+3.  **[オブジェクトの依存関係_\<object name>_]** ダイアログ ボックスで、**[*\<object name>* に依存するオブジェクト]** または **[**_\<object name>_ **が依存するオブジェクト]** を選択します。  
   
 4.  **[依存関係]** グリッドでオブジェクトをクリックします。 オブジェクトの種類 ("トリガー" や "ストアド プロシージャ" など) が、 **[種類]** ボックスに表示されます。  
   

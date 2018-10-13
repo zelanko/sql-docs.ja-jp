@@ -18,12 +18,12 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a845e4b4ce7cfa17a3f618501e2f270ca63dfea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10102e3c726a3703a3a9f3aa953171fb4a5dd79b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641490"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119280"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>xml データ型に対する XQuery の演算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47641490"
   
  クエリを使用して、 **=** 比較演算子。 右側にあるシーケンス内の各ノード、 **=** 演算子が左側にあるシーケンス内の各ノードと比較されます。 ノードの比較では、ノードが一致している場合**TRUE**します。 次に、シーケンスは int 型に変換されて 1 と比較され、クエリが顧客 ID を返します。  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
@@ -62,7 +62,7 @@ WHERE  AdditionalContactInfo.value('
 ### <a name="b-using-a-numeric-operator"></a>B. 数値演算子の使用  
  このクエリの + 演算子は 1 つのアイテムに適用されるので、値の演算子です。 たとえば、クエリによって返されたロット サイズに値 1 が加算されます。  
   
-```  
+```sql
 SELECT ProductModelID, Instructions.query('  
      declare namespace   
  AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
@@ -82,7 +82,7 @@ where ProductModelID=7
 ### <a name="c-using-a-value-operator"></a>C. 値の演算子の使用  
  次のクエリでは、写真のサイズが "small" である製品モデルの <`Picture`> 要素が取得されます。  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]  

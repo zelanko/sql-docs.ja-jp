@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb82c69119fd899410bb1fd8f24be65cc07dac4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852550"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072216"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ ms.locfileid: "47852550"
  ここでは、大きな CLR UDT をサポートするための、SQL Server Native Client の ODBC 関数に対する変更について説明します。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- UDT 結果列の値は、このトピックの「バインドと変換」で説明したように、SQL データ型から C データ型に変換されます。  
+ UDT 結果列の値は、SQL から C データ型「バインドと変換」セクションで、このトピックの「」の説明に従ってに変換されます。  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  UDT に必要な値は次のとおりです。  
@@ -201,13 +201,13 @@ ms.locfileid: "47852550"
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- UDT 結果列の値は、このトピックの「バインドと変換」で説明したように、SQL データ型から C データ型に変換されます。  
+ UDT 結果列の値は、SQL から C データ型「バインドと変換」セクションで、このトピックの「」の説明に従ってに変換されます。  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- UDT 結果列の値は、このトピックの「バインドと変換」で説明したように、SQL データ型から C データ型に変換されます。  
+ UDT 結果列の値は、SQL から C データ型「バインドと変換」セクションで、このトピックの「」の説明に従ってに変換されます。  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- UDT 結果列の値は、このトピックの「バインドと変換」で説明したように、SQL データ型から C データ型に変換されます。  
+ UDT 結果列の値は、SQL から C データ型「バインドと変換」セクションで、このトピックの「」の説明に従ってに変換されます。  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  新しい型で使用できる記述子フィールドは、このトピックの「パラメーターの記述子フィールド」および「結果の記述子フィールド」で説明したとおりです。  
@@ -227,7 +227,7 @@ ms.locfileid: "47852550"
  UDT に対して返される値は、このトピックの「SQLColumns および SQLProcedureColumns から返される列のメタデータ (カタログ メタデータ)」で説明したとおりです。  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- UDT パラメーターの値は、このトピックの「バインドと変換」で説明したように、C データ型から SQL データ型に変換されます。  
+ UDT パラメーターの値は、from C「バインドと変換」セクションで、このトピックの「」の説明に従って、SQL データ型に変換されます。  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  新しい型で使用できる記述子フィールドは「パラメーターの記述子フィールド」と「結果の記述子フィールド」セクションでは、このトピックの前に説明します。  

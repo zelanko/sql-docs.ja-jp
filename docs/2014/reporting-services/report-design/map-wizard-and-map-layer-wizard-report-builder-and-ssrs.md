@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 98a6efa4bcac46a50de84c70fcfb49a0e202c860
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128872"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072326"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
   マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -30,7 +30,7 @@ ms.locfileid: "48128872"
   
  マップをレポートに追加したりマップ レイヤーをマップに追加したりするには、次の情報を事前に用意しておく必要があります。  
   
--   **空間データ ソース :** 場所またはなど、空間データを提供するソースの名前への接続、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスと空間データ、または Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの名前を含むデータベース。  
+-   **空間データ ソース :** 空間データを提供するソースの場所またはソースへの接続です。たとえば、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前と空間データを格納しているデータベース、または Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。  
   
 -   **空間データとして提供しているサードパーティのサイト。** 位置を指定する座標セットを格納している空間データ ソースのフィールドです。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48128872"
   
  ウィザード ページのタイトルをクリックすると、対応するヘルプ コンテンツが表示されます。 表示されるページは、選択したマップの種類、空間データのソース、および分析データのソースによって異なります。  
   
-1.  [[空間データのソースを選択]](#SpatialDataSource): 空間データはマップ ギャラリー、Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの場合、または空間データを取得、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]リレーショナル データベース。  
+1.  [[空間データのソースを選択]](#SpatialDataSource): マップ ギャラリーの空間データ、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リレーショナル データベースの空間データを指定できます。  
   
     -   [空間データとは](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48128872"
   
  マップまたはマップ レイヤーを追加してレポートをプレビューした後、ウィザードで設定したマップ オプションおよびマップ レイヤー オプションを変更できます。 詳細については、「[マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
- マップの詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)します。 マップをレポートに追加する手順については、「[チュートリアル: マップ レポート (レポート ビルダー)](../tutorial-map-report-report-builder.md)」を参照してください。  
+ マップに関する詳細については、「 [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)をクリックします。 マップをレポートに追加する手順については、「[チュートリアル: マップ レポート (レポート ビルダー)](../tutorial-map-report-report-builder.md)」を参照してください。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "48128872"
 > [!NOTE]  
 >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、[http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
   
- マップ ギャラリーを拡張するには、マップ ギャラリー ディレクトリのレポートを追加または削除したり、マップを整理するためのフォルダーを追加したりします。 詳細については、「[マップ &#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)」を参照してください。  
+ マップ ギャラリーを拡張するには、マップ ギャラリー ディレクトリのレポートを追加または削除したり、マップを整理するためのフォルダーを追加したりします。 詳細については、「 [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)をクリックします。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
  ESRI シェープファイルは、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル空間データ形式に準拠するデータが格納されたファイルのセットです。 通常、ファイルのセットには、空間データが格納されている *\<filename>*.shp ファイルと、サポート ファイルの *\<filename>*.dbf が含まれます。  
@@ -198,7 +198,7 @@ ms.locfileid: "48128872"
   
  タイルの詳細については、「 [Bing Maps のタイル システム](http://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](http://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
   
- デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、次を参照してください[レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画内で、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックの「.  
+ デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、次を参照してください。[レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画で、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックの「します。  
   
  タイル レイヤーをカスタマイズするためのその他の方法については、「[マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "48128872"
   
  **[分析マップ]** には、それぞれのマップ要素の 1 つまたは複数の分析データの集計の相対値が示されます。 たとえば、店舗売上をマーカーのサイズで、製品カテゴリの利益率をマーカーの色で、販売が好調な製品をマーカーの種類で表示することができます。  
   
- 詳細については、「[マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
@@ -272,7 +272,7 @@ ms.locfileid: "48128872"
   
 ## <a name="see-also"></a>参照  
  [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
+ [マップ レポートの計画 (レポート ビルダーおよび SSRS)](plan-a-map-report-report-builder-and-ssrs.md)   
  [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)  
   
   

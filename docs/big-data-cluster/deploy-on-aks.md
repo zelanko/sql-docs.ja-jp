@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ea1ab30f9b3b8ef77834a56b059b2a56de4467b5
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48796761"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877935"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>SQL Server 2019 CTP 2.0 用 Azure Kubernetes サービスの構成します。
 
@@ -24,7 +24,10 @@ Azure Kubernetes Service (AKS) によって、作成、構成、およびコン�
 
 ## <a name="prerequisites"></a>前提条件
 
-- AKS 環境の場合は、最小の VM の要件は、最小サイズ Standard_DS3_V2 (マスター) だけでなく、少なくとも 2 つのエージェント Vm です。 VM ごとに必要な最小リソースとは、4 つの Cpu、14 GB のメモリです。
+- AKS 環境では、VM の最小要件は (マスターへの追加) での最小サイズの少なくとも 2 つのエージェント Vm [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series)します。 VM ごとに必要な最小リソースとは、4 つの Cpu、14 GB のメモリです。
+  
+   > [!NOTE]
+   > 最小サイズは、ビッグ データ ジョブまたは複数の Spark アプリケーションを実行する場合は、 [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup)、VM ごとに必要な最小リソースは、8 個の Cpu およびメモリとして 32 GB とします。
 
 - このセクションでは、ことが必要です実行、Azure CLI バージョン 2.0.4 以降。 インストールまたはアップグレードを表示する必要がある場合[Azure CLI 2.0 のインストール](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)します。 実行`az --version`必要な場合は、バージョンを確認します。
 
@@ -80,7 +83,7 @@ Azure リソース グループは、azure リソースのデプロイし、管�
     --kubernetes-version 1.10.7
     ```
 
-    増やすことも追加することで、既定のエージェント数を減らす`--node-count <n>`に、az aks create コマンド、`<n>`たいエージェント ノードの数です。
+    増やすことも変更することで、既定のエージェント数を減らす、`--node-count <n>`場所`<n>`たいエージェント ノードの数です。
 
     数分後、コマンドが完了し、クラスターに関する情報を JSON 形式を返します。
 

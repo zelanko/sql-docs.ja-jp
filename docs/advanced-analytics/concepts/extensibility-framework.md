@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fae8beb4f865c537f00fa8b58a01cafe09541d71
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892890"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878185"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services で拡張可能アーキテクチャ 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,6 +47,8 @@ SQL Server では、サーバー上の R や Python などの外部のスクリ�
   ![コンポーネント アーキテクチャ](../media/generic-architecture.png "コンポーネント アーキテクチャ")
 
 コンポーネントが含まれます、**スタート パッド**言語固有のランチャー (R または Python) の言語およびインタープリターとライブラリを読み込むためのライブラリに固有のロジックを呼び出すために使用するサービス。 起動プログラムには、言語の実行時間と、独自のモジュールが読み込まれます。 たとえば、コードには、RevoScaleR 関数が含まれている場合 RevoScaleR インタープリターが読み込まれます。 **BxlServer**と**SQL サテライト**SQL Server との通信やデータの転送を管理します。
+
+<a name="launchpad"></a>
 
 ## <a name="launchpad"></a>スタート パッド
 

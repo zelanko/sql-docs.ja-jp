@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c1da774f52f78b67e6adb34f33513930c316991
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229932"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878125"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -188,86 +188,22 @@ SQL Server の前提条件としてインストールされる特定のバージ
 
 コマンドの実行時にエラーを取得した場合は、このセクションでは追加の構成手順を確認します。 サービスまたはデータベースに追加の適切な構成を作成する必要があります。
 
-追加の変更を必要とする一般的なシナリオは次のとおりです。
+インスタンス レベルでは、追加の構成が含まれます。
 
-* [Windows ファイアウォールの着信接続を構成します。](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [SQL Server Machine Learning サービスのファイアウォールの構成](../../advanced-analytics/security/firewall-configuration.md)
 * [その他のネットワーク プロトコルを有効にします。](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [リモート接続を有効にします。](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [リモート ユーザーに組み込みの権限を拡張します。](#bkmk_configureAccounts)
-* [外部スクリプトを実行するアクセス許可を付与](#bkmk_AllowLogon)
-* [個々 のデータベースへのアクセスを許可](#permissions-db)
+
+<a name="bkmk_configureAccounts"></a>
+<a name="bkmk_AllowLogon"></a>
+
+データベースでは、次の構成の更新する必要があります。
+
+* [SQL Server Machine Learning サービスへのアクセス許可をユーザーに付与します。](../../advanced-analytics/security/user-permission.md)
+* [データベース ユーザーとしての SQLRUserGroup の追加](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > 表示されているすべての変更が必要ですと必要なしに可能性があります。 要件は、SQL Server、およびユーザーがデータベースに接続し、外部スクリプトの実行が予想される方法をインストールした、セキュリティ スキーマによって異なります。 追加のトラブルシューティングのヒントについてはこちら:[アップグレードとインストールに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-<a name="bkmk_configureAccounts"></a>
-
-### <a name="enable-implied-authentication-for-the-launchpad-account-group"></a>スタート パッド アカウントのグループの暗黙の認証を有効にします。
-
-セットアップ中に、いくつかの新しい Windows ユーザー アカウントを作成して、セキュリティ トークンの下でタスクを実行するため、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]サービス。 ユーザーは、外部のクライアントから R スクリプトを送信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可能なワーカー アカウントをアクティブに、呼び出し元のユーザーの id にマップし、ユーザーの代理として、R スクリプトを実行します。 データベース エンジンのこの新しいサービスが呼び出される外部のスクリプトを安全に実行をサポートしている*暗黙の認証*します。
-
-これらのアカウントを表示するには、Windows ユーザー グループで**SQLRUserGroup**します。 既定では、20 個のワーカー アカウントが作成になり、R を実行するための十分な数のジョブは通常します。
-
-ただし、リモート データ サイエンス クライアントから R スクリプトを実行する必要があります、Windows 認証を使用している場合は、する必要があります許可するこれらのワーカー アカウントにサインインするため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あなたに代わってインスタンス。
-
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[セキュリティ]** を展開し、 **[ログイン]** を右クリックして、 **[新しいログイン]** を選択します。
-2. **ログイン - 新規**ダイアログ ボックスで、**検索**します。
-3. 選択、**オブジェクトの種類**と**グループ**チェック ボックス、およびその他のすべてのチェック ボックスをオフにします。
-4. クリックして**詳細**を検索する場所がクリックして、現在のコンピューターであることを確認**検索開始**します。
-5. 以降の 1 つが表示されるまで、サーバー上のグループ アカウントの一覧をスクロール`SQLRUserGroup`します。
-    
-    + スタート パッド サービスに関連付けられているグループの名前、_既定のインスタンス_だけは常に**SQLRUserGroup**します。 このアカウントは、既定のインスタンスのみを選択します。
-    + 使用する場合、_名前付きインスタンス_、インスタンス名が、既定の名前に追加されます`SQLRUserGroup`します。 そのため、インスタンスは、"MLTEST"という名前は、このインスタンスの既定のユーザー グループ名なります**SQLRUserGroupMLTest**します。
-5. クリックして**OK**を高度な検索 ダイアログ ボックスを閉じ、インスタンスの正しいアカウントを選択したことを確認します。 各インスタンスには、独自のスタート パッド サービスだけとそのサービスに対して作成されたグループを使用できます。
-6. をクリックして**OK**を閉じるにはもう一度、 **[ユーザーまたはグループ**] ダイアログ ボックス。
-7. **ログイン - 新規**ダイアログ ボックスで、をクリックして**OK**。 既定では、ログインは **Public** ロールに割り当てられ、データベース エンジンに接続するためのアクセス許可を与えられます。
-
-<a name="bkmk_AllowLogon"></a>
-
-### <a name="give-users-permission-to-run-external-scripts"></a>外部スクリプトを実行するアクセス許可をユーザーに与える
-
-> [!NOTE]
-> SQL Server のコンピューティング コンテキストで R スクリプトを実行するために SQL ログインを使用する場合はこの手順は必要ありません。
-
-インストールした場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独自のインスタンスで、通常、スクリプトを実行する管理者は、少なくともデータベース所有者は、さまざまな操作、データベース、および新しいパッケージをインストールする機能のすべてのデータの暗黙的なアクセス許可を持たない必要に応じて。
-
-ただし、エンタープライズのシナリオで、SQL ログインを使用して、データベースにアクセスするユーザーを含むほとんどのユーザーはありませんこのような高度な権限。 したがって、R スクリプトを実行するユーザーごとに、外部スクリプトを使用する各データベースでスクリプトを実行するユーザーのアクセス許可を付与する必要があります。
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
-
-> [!TIP]
-> セットアップのヘルプが必要ですか。 すべての手順を実行したかわかりませんか。 インストールの状態を確認し、追加の手順を実行するには、これらのカスタム レポートを使用します。 
-> 
-> [カスタム レポートを使用して Machine Learning サービスの監視](../r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
-
-<a name="permissions-db"></a>
-
-###  <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>ユーザーの読み取り、書き込み、またはデータベースに DDL のアクセス許可を付与します。
-
-R を実行するために使用するユーザー アカウント可能性があります必要があります、他のデータベースからデータを読み取る結果を格納する新しいテーブルを作成し、テーブルにデータを書き込みます。 そのため、ユーザーごとに実行されるように R スクリプト、ユーザーがデータベースで適切な権限を持っていることを確認します*db_datareader*、 *db_datawriter*、または*db_ddladmin*。
-
-たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、SQL ログイン *MySQLLogin* に、 *RSamples* データベースで T-SQL クエリを実行する権限を与えています。 このステートメントを実行するには、SQL ログインがサーバーのセキュリティ コンテキストに既に存在している必要があります。
-
-```SQL
-USE RSamples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-各ロールに含まれるアクセス許可の詳細については、次を参照してください。[データベース レベル ロール](../../relational-databases/security/authentication-access/database-level-roles.md)します。
-
-
-### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>データ サイエンス クライアント上のインスタンス用の ODBC データ ソースを作成する
-
-データ サイエンス クライアント コンピューターで R ソリューションを作成し、計算コンテキストとして SQL Server コンピューターを使用してコードを実行する必要がある場合は、SQL ログインまたは統合 Windows 認証のいずれかを使用することができます。
-
-* SQL ログインの場合は、読み取るデータが存在するデータベースに対する適切なアクセス許可をログインが持っていることを確認します。 追加することによって行うことができます*への接続*と*選択*アクセス許可、またはログインを追加することで、 *db_datareader*ロール。 オブジェクトを作成する必要があるログインでは、追加*DDL_admin*権限。 ログインをテーブルにデータを保存する必要がありますが、ログインを追加、 *db_datawriter*ロール。
-
-* Windows 認証: インスタンス名と他の接続情報を指定するデータ サイエンス クライアントで ODBC データ ソースを構成する必要があります。 詳細については、次を参照してください。 [ODBC データ ソース アドミニストレーター](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)します。
 
 ## <a name="suggested-optimizations"></a>提案されている最適化
 
@@ -275,7 +211,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="add-more-worker-accounts"></a>複数のワーカー アカウントを追加します。
 
-頻度の高い、R を使用すると思われる場合、または実行中のスクリプトを同時に多くのユーザーが予想される場合は、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server Machine Learning Services のユーザー アカウント プールを変更](../r/modify-the-user-account-pool-for-sql-server-r-services.md)します。
+頻度の高い、R を使用すると思われる場合、または実行中のスクリプトを同時に多くのユーザーが予想される場合は、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server Machine Learning Services のユーザー アカウント プールを変更](../administration/modify-user-account-pool.md)します。
 
 <a name="bkmk_optimize"></a>
 
@@ -289,7 +225,7 @@ Machine learning ジョブは優先順位を設定しを適切にリソースを
   
 - データベースの予約済みメモリの量を変更するを参照してください。[サーバー メモリ構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)します。
   
-- によって開始できる R アカウントの数を変更する[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]を参照してください[machine learning のユーザー アカウント プールを変更する](../r/modify-the-user-account-pool-for-sql-server-r-services.md)します。
+- によって開始できる R アカウントの数を変更する[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]を参照してください[machine learning のユーザー アカウント プールを変更する](../administration/modify-user-account-pool.md)します。
 
 Standard Edition を使用している、リソース ガバナーがない場合は、動的管理ビュー (Dmv) は、拡張イベントと監視には、R で使用されているサーバーのリソースを管理するために Windows イベントを使用することができます。詳細については、次を参照してください。[の監視と R Services を管理](../r/managing-and-monitoring-r-solutions.md)します。
 

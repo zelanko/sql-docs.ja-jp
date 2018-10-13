@@ -1,26 +1,31 @@
 ---
 title: T-SQL (SQL Server Machine Learning) の"Hello World"基本的な R コード実行のクイック スタート |Microsoft Docs
-description: SQL Server で R スクリプトのこのクイック スタートでは、hello world の演習で sp_execute_external_script システム ストアド プロシージャの基本を学習します。
+description: SQL Server で R スクリプトのクイック スタートです。 Hello world の演習では、sp_execute_external_script のシステム ストアド プロシージャを使用して R スクリプトを呼び出すことの基礎について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1a51fcb9e67bef48346ff74ebfb1e911a6ee3365
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086885"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878085"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>SQL Server のクイック スタート:"Hello world"の R スクリプト 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server には、データベース内分析が常駐している SQL Server のデータでの R 言語機能のサポートが含まれています。 スケールで予測分析用のオープン ソース R 関数、サード パーティ製のパッケージおよび Microsoft R の組み込みパッケージを使用できます。
+SQL Server には、常駐の SQL Server データでのデータ サイエンス分析のための R 言語サポートが含まれています。 R スクリプトで構成できますのオープン ソース R 関数、サード パーティ製の R ライブラリ、または Microsoft R の組み込みライブラリなど[RevoScaleR](../r/revoscaler-overview.md)規模で予測分析用です。 
 
-このクイック スタートでを"Hello World"R を実行して、主要な概念スクリプト inT SQL の概要を学習します、 **sp_execute_external_script**システム ストアド プロシージャ。 R スクリプトの実行では、ストアド プロシージャを使用します。 使用するか、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)ストアド プロシージャと R のパスでこのクイック スタートのとおり、入力パラメーターとしてスクリプトを作成またはで R スクリプトをラップする[カスタム ストアド プロシージャ](sqldev-in-database-r-for-sql-developers.md)します。 
+スクリプトの実行は、次の方法のいずれかを使用して、ストアド プロシージャです。
+
++ 組み込み[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)ストアド プロシージャで R スクリプトを入力パラメーターとして渡します。
++ R スクリプトをラップする[カスタム ストアド プロシージャ](sqldev-in-database-r-for-sql-developers.md)作成します。
+
+このクイック スタートでを"Hello World"R を実行して、主要な概念スクリプト inT SQL の概要を学習します、 **sp_execute_external_script**システム ストアド プロシージャ。 
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -33,7 +38,7 @@ SQL Server には、データベース内分析が常駐している SQL Server 
 
 + SQL クエリを実行するためのツールです。 SQL Server データベースに接続して、T-SQL コードを実行できる任意のアプリケーションを使用することができます。 SQL のプロフェッショナルには、SQL Server Management Studio (SSMS) または Visual Studio を使用できます。
 
-このチュートリアルで、SQL Server 内で R を実行するがいかに簡単かを表示したを使用して、新しい**Visual Studio Code 用 mssql 拡張機能**します。 VS Code は、Linux、macOS、または Windows を実行できる無料の開発環境です。 **Mssql**拡張子は、T-SQL クエリを実行するための軽量の拡張子。 Visual Studio Code を取得するには、[Visual Studio Code のダウンロードとインストール](https://code.visualstudio.com/Download)に関するページをご覧ください。 追加する、 **mssql**拡張機能では、この記事を参照してください: [Visual Studio Code 用 mssql 拡張機能を使用して](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)します。
+このクイック スタートで、SQL Server 内で R を実行するがいかに簡単かを表示したを使用して、新しい**Visual Studio Code 用 mssql 拡張機能**します。 VS Code は、Linux、macOS、または Windows を実行できる無料の開発環境です。 **Mssql**拡張子は、T-SQL クエリを実行するための軽量の拡張子。 Visual Studio Code を取得するには、[Visual Studio Code のダウンロードとインストール](https://code.visualstudio.com/Download)に関するページをご覧ください。 追加する、 **mssql**拡張機能では、この記事を参照してください: [Visual Studio Code 用 mssql 拡張機能を使用して](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)します。
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>データベースに接続して Hello World テスト スクリプトを実行する
 
@@ -77,7 +82,7 @@ SQL Server には、データベース内分析が常駐している SQL Server 
 > ![rsql-basictut_hello1code](media/rsql-basictut-hello1code.PNG)
 > 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 インスタンスが R を使用する準備が確認した後、これで、詳しく見て入力と出力を構成します。
 

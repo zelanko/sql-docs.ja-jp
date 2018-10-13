@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03e6fd79540a4657f5f3d35ca7f3bfcff361d57d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77da6b8a6b4b81f6f7d05e6a64c58834a01b65c0
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761736"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072056"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 0  
   
-     結果セットには、cdc.capture_instance_CT 変更テーブル内の行のうち、関連するコミット時間が end_time より前の行だけが格納されます。  
+     Cdc.capture_instance_CT 内の行だけでは、テーブルが関連するコミット時間はその end_time が結果に含まれているよりも厳密に小さい設定を変更します。  
   
  この引数に NULL 値を指定した場合、クエリ範囲の上限は、キャプチャ インスタンスの有効な範囲の上限に対応します。  
   
@@ -101,9 +101,9 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 2.  スクリプトを実行して、実際にラッパー関数を作成します。  
   
- ラッパー関数は、体系的にクエリで範囲指定された期間内に発生する変更点についてユーザーを有効にする**datetime** LSN 値での値の代わりにします。 ラッパー関数が提供されている間、すべての必要な変換を実行**datetime**値およびクエリ関数の引数として内部的に必要な LSN 値です。 データが紛失または繰り返し、次の規則に準拠していることを確認しますが、ラッパー関数は変更データのストリームを処理する順番に使用する場合: @end_time として1回の呼び出しに関連付けられている間隔の値が指定されました。@start_time後続の呼び出しに関連付けられている間隔の値。  
+ ラッパー関数は、体系的にクエリで範囲指定された期間内に発生する変更点についてユーザーを有効にする**datetime** LSN 値での値の代わりにします。 ラッパー関数が提供されている間、すべての必要な変換を実行**datetime**値およびクエリ関数の引数として内部的に必要な LSN 値です。 ラッパー関数は、変更データのストリームを処理する順番に使用して、ときにデータがありませんが欠落や重複の次の規則が後に用意されていることが支えます。 @end_time として 1 回の呼び出しに関連付けられている期間の値が指定された、 @start_time 後続の呼び出しに関連付けられている間隔の値です。  
   
- 使用して、@closed_high_end_pointパラメーター、スクリプトを作成するときに、指定のクエリ ウィンドウで、閉じた上限または開いている上限のいずれかをサポートするラッパーを生成することができます。 つまり、抽出期間の上限とコミット時間が等しいエントリを、その期間に含めるかどうかを決定できます。 既定では、上限が含まれます。  
+ スクリプトの作成時に @closed_high_end_point パラメーターを使用すると、閉じた上限または開いた上限をサポートするラッパーを、指定のクエリ ウィンドウに生成できます。 つまり、抽出期間の上限とコミット時間が等しいエントリを、その期間に含めるかどうかを決定できます。 既定では、上限が含まれます。  
   
  によって返される結果セットは、**すべての変更**ラッパーを返します、_ _ $start_lsn と\_ \_$seqval 列を変更テーブルの列として\__CDC_STARTLSN と\__CDC_SEQVAL、それぞれします。 これらに含まれる追跡対象列のみを次に、 *@column_list*ラッパー生成時のパラメーター。 場合*@column_list*が null の場合、すべての追跡対象ソース列が返されます。 ソース列の後、操作列では\__CDC_OPERATION で、操作を識別する 1 つまたは 2 文字列です。  
   

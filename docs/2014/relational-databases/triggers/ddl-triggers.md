@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9f3033aefbb01787fe0001a860a870960d98f15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141573"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072036"
 ---
 # <a name="ddl-triggers"></a>DDL トリガー
   DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに対応して起動されます。 これらのイベントは主に、CREATE、ALTER、DROP、GRANT、DENY、REVOKE、UPDATE STATISTICS のいずれかのキーワードで始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対応します。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  
@@ -35,14 +35,14 @@ ms.locfileid: "48141573"
   
 ## <a name="types-of-ddl-triggers"></a>DDL トリガーの種類  
  Transact-SQL DDL トリガー  
- サーバー スコープまたはデータベース スコープのイベントに応答して [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント (複数可) を実行する特殊な [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャです。 たとえば、ALTER SERVER CONFIGURATION などのステートメントが実行されたときや、DROP TABLE を使用してテーブルが削除されたときに、DDL トリガーを起動させることができます。  
+ 特殊な種類の[!INCLUDE[tsql](../../includes/tsql-md.md)]1 つまたは複数を実行するストアド プロシージャ[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント サーバー スコープまたはデータベース スコープのイベントに応答します。 たとえば、ALTER SERVER CONFIGURATION などのステートメントが実行されたときや、DROP TABLE を使用してテーブルが削除されたときに、DDL トリガーを起動させることができます。  
   
  CLR DDL トリガー  
  CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージド コードに記述されている、1 つ以上のメソッドを実行します。  
   
  DDL トリガーは、起動元の DDL ステートメントが実行されるまで、起動されません。 DDL トリガーを INSTEAD OF トリガーの代わりに使用することはできません。 DDL トリガーは、ローカルまたはグローバルの一時テーブルおよびストアド プロシージャに影響するイベントに応答して起動されることはありません。  
   
- DDL トリガーを作成しないで、特殊な`inserted`と`deleted`テーブル。  
+ DDL トリガーでは、特殊な `inserted` テーブルや `deleted` テーブルは作成されません。  
   
  DDL トリガーを起動するイベントの情報と、起動したトリガーにより加えられる変更は、EVENTDATA 関数を使用してキャプチャします。  
   

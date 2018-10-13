@@ -1,5 +1,5 @@
 ---
-title: 比較演算子 |Microsoft ドキュメント
+title: 比較演算子 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31c73e25042df50fba9c1702e7834565c0284fbd
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae175665c2a62caa2d3b7b845c68fefebcfd4c32
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740901"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071663"
 ---
 # <a name="comparison-operators"></a>比較演算子
 
@@ -29,11 +29,11 @@ ms.locfileid: "34740901"
   
 |演算子|説明|  
 |--------------|-----------------|  
-|[= (等しい)](../mdx/equal-to-mdx.md)|NULL 以外の引数について、左の引数が右の引数に等しい場合に TRUE を返します。そうでない場合は、FALSE を返します。<br /><br /> しない限り、いずれかまたは両方の引数は、null 値に評価される場合、演算子は、null 値を返します比較`0=null`行われると、ブール値が TRUE を含む場合。|  
+|[= (等しい)](../mdx/equal-to-mdx.md)|NULL 以外の引数について、左の引数が右の引数に等しい場合に TRUE を返します。そうでない場合は、FALSE を返します。<br /><br /> 一方または両方の引数が NULL 値に評価される場合は、NULL 値が返されます。ただし、`0=null` の比較が行われる場合、ブール値は TRUE になります。|  
 |[<> (等しくない)](../mdx/not-equal-to-mdx.md)|NULL 以外の引数について、左の引数が右の引数に等しくない場合に TRUE を返します。そうでない場合は、FALSE を返します。<br /><br /> 一方または両方の引数が NULL 値に評価される場合は、NULL 値が返されます。|  
 |[> (より大きい)](../mdx/greater-than-mdx.md)|NULL 以外の引数について、左の引数の値が右の引数の値より大きい場合に TRUE を返します。そうでない場合は、FALSE を返します。<br /><br /> 一方または両方の引数が NULL 値に評価される場合は、NULL 値が返されます。|  
 |[>= (以上)](../mdx/greater-than-or-equal-to-mdx.md)|NULL 以外の引数について、左の引数の値が右の引数の値以上である場合に TRUE を返します。そうでない場合は、FALSE を返します。<br /><br /> 一方または両方の引数が NULL 値に評価される場合は、NULL 値が返されます。|  
-|[< (より小さい)](../mdx/less-than-mdx.md)|NULL 以外の引数について、左の引数の値が右の引数の値より小さい場合に TRUE を返します。そうでない場合は、FALSE を返します。<br /><br /> 一方または両方の引数が NULL 値に評価される場合は、NULL 値が返されます。|  
+|[< (より小さい)](../mdx/less-than-mdx.md)|Null 以外の引数の左辺の引数が右辺の引数より小さい値を持つ場合に TRUE を返しますそれ以外の場合、FALSE です。<br /><br /> 一方または両方の引数が NULL 値に評価される場合は、NULL 値が返されます。|  
 |[<= (以下)](../mdx/less-than-or-equal-to-mdx.md)|NULL 以外の引数について、左の引数の値が右の引数の値以下である場合に TRUE を返します。そうでない場合は、FALSE を返します。<br /><br /> 一方または両方の引数が NULL 値に評価される場合は、NULL 値が返されます。|  
   
 ## <a name="see-also"></a>参照  

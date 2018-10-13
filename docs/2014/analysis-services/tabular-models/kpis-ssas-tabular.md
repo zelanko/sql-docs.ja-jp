@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104622"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906062"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS テーブル)
   *KPI* (主要業績評価指標) は、表形式モデルで、*対象*の値に対する*ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 このトピックは、テーブル モデル作成者が表形式モデルの KPI の基本を理解できることを目的としています。  
@@ -46,7 +46,7 @@ ms.locfileid: "48104622"
  状態のしきい値は、低いしきい値と高いしきい値との間の範囲によって、または固定値によって定義されます。 状態のしきい値は、対象の値と比べたベース値の状態を簡単に判別できるようにグラフィックで表示されます。  
   
 ##  <a name="bkmk_example"></a> 例  
- Adventure Works の販売責任者は、販売担当者の一定期間 (年) の販売ノルマの達成状況がひとめでわかるようなピボットテーブルを作成しようとしています。 ピボットテーブルには販売担当者ごとの実績販売額 (ドル) と販売ノルマ額 (ドル) を表示し、各担当者がノルマを下回っているか、上回っているかの状態を示す簡単なグラフィックを表示することにします。 データは年単位でスライスできるようにしたいと考えています。  
+ Adventure Works の販売責任者は、販売担当者の一定期間 (年) の販売ノルマの達成状況がひとめでわかるようなピボットテーブルを作成しようとしています。 各販売の従業員の彼女ドルで実績販売額をドルの販売ノルマとかどうか、各営業担当者の下で、以上、販売ノルマのステータスを示す単純なグラフィック表示を表示するピボット テーブルが希望しています。 データは年単位でスライスできるようにしたいと考えています。  
   
  これを実現するために、組織の BI ソリューション開発者にサポートを依頼し、AdventureWorks 表形式モデルに販売 KPI を追加することにします。 次に、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] を使用してデータ ソースの Adventure Works 表形式モデルに接続し、ピボットテーブルを作成してフィールド (メジャーと KPI) およびスライサーを設定し、販売担当者がノルマを達成したかどうかを分析します。  
   
@@ -84,10 +84,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[作成し、管理 Kpi &#40;SSAS 表形式&#41;](kpis-ssas-tabular.md)|ベース メジャー、対象のメジャー、および状態のしきい値と共に KPI を作成する方法について説明します。|  
+|[KPI の作成および管理 &#40;SSAS テーブル&#41;](kpis-ssas-tabular.md)|ベース メジャー、対象のメジャー、および状態のしきい値と共に KPI を作成する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [メジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)   
- [パースペクティブ&#40;SSAS 表形式&#41;](perspectives-ssas-tabular.md)  
+ [メジャー &#40;SSAS テーブル&#41;](measures-ssas-tabular.md)   
+ [パースペクティブ &#40;SSAS テーブル&#41;](perspectives-ssas-tabular.md)  
   
   

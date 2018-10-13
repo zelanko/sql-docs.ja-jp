@@ -12,12 +12,12 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ef0667c28d87deb6c714a91bbe3605792c51c1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133152"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085268"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB テーブル値パラメーターの型のサポート
   このトピックでは、テーブル値パラメーターに対する OLE DB 型のサポートについて説明します。  
@@ -57,7 +57,7 @@ CoType RowsetTVP
  テーブル値パラメーターをサポートする OLE DB メソッドについては、次を参照してください。 [OLE DB Table-Valued パラメーター型のサポート&#40;メソッド&#41;](ole-db-table-valued-parameter-type-support-methods.md)します。  
   
 ## <a name="properties"></a>[プロパティ]  
- テーブル値パラメーターをサポートする OLE DB プロパティの詳細については、次を参照してください。 [OLE DB Table-Valued パラメーター型のサポート&#40;プロパティ&#41;](ole-db-table-valued-parameter-type-support-properties.md)します。  
+ テーブル値パラメーターをサポートする OLE DB プロパティについては、次を参照してください。 [OLE DB Table-Valued パラメーター型のサポート&#40;プロパティ&#41;](ole-db-table-valued-parameter-type-support-properties.md)します。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
