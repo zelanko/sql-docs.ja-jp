@@ -46,7 +46,7 @@ ms.locfileid: "47805610"
     >  
     >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
     >  
-    >接続文字列の詳細については、次を参照してください。 [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)をクリックします。  
+    >接続文字列の詳細については、次を参照してください。 [Reporting Services でのデータ接続、データ ソース、および接続文字列](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)をクリックします。  
      
   
 6.  左ペインで **[資格情報]** をクリックし、 **[Windows 認証 (統合セキュリティ) を使用する]** をクリックします。  
@@ -57,7 +57,7 @@ ms.locfileid: "47805610"
 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] サンプル データベースへの接続が正常に定義されました。 次に、レポートを作成します。 「[レッスン 3: テーブル レポートのデータセットの定義 &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[Reporting Services でのデータ接続、データ ソース、および接続文字列](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
   
