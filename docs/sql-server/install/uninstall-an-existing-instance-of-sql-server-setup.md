@@ -16,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d0f77947a1651d65021b219480c8432e53498a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f945fca69c73d0cf334085064fe76d77b2b55759
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773850"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169252"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server の既存のインスタンスのアンインストール (セットアップ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +30,11 @@ ms.locfileid: "47773850"
 
   ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスをアンインストールする方法について説明します。 また、この記事の手順を実行してシステムを準備し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再インストールできるようにします。  
   
->**重要:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをアンインストールするには、サービスとしてログオンする権限を持つローカル管理者である必要があります。  
+  >[!IMPORTANT]
+  > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをアンインストールするには、サービスとしてログオンする権限を持つローカル管理者である必要があります。  
   
-> **注:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアンインストールするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって提供されるノードの削除機能を使用して、各ノードを個別に削除します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
+ > [!NOTE]
+ > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアンインストールするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって提供されるノードの削除機能を使用して、各ノードを個別に削除します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアンインストールする前に、次の重要なシナリオに気を付けてください。  
   

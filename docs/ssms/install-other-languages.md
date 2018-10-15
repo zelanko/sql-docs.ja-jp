@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: febb1feb9a26f4f9e969d568975b331bc522c14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 706615794b7f3e88cc5228f56de1e388501494b5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722870"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48904923"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする 
 
-[SSMS は複数の言語で利用可能です](download-sql-server-management-studio-ssms.md#available-languages)が、コンピューターのシステム ロケールが SSMS の言語と一致しない場合は、SSMS のインストーラーによってコンピューターへのインストールがブロックされます。 
+[SSMS は複数の言語で利用可能です](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview)が、コンピューターのシステム ロケールが SSMS の言語と一致しない場合は、SSMS のインストーラーによってコンピューターへのインストールがブロックされます。 
 
 以下の手順は、Windows のバージョンによって異なります。 以下は、Windows 10 向けのものです。
 
@@ -28,7 +28,7 @@ ms.locfileid: "47722870"
 1. 次の手順で、SSMS で使用する言語の Windows 言語パックをインストールします。 
    - **[設定]** > **[時刻と言語]** > **[地域と言語]** > **[言語を追加する]** 
 2. インストールした言語をクリックし、前の手順でインストールした言語パックを使用するようにシステム ロケールを設定します。次に、**[既定として設定する]** を選択します。 (システム ロケールの設定は、SSMS のインストール後に英語に戻せます。)
-3. お使いのオペレーティング システムが目的の言語で実行されたら、[それと同じ言語のバージョンの SSMS をインストール](download-sql-server-management-studio-ssms.md#available-languages)します。 新しい言語の SSMS を初めてインストールする場合は、フル パッケージを使用します。 以降のインストールでは、アップグレード パッケージを使用できます。
+3. お使いのオペレーティング システムが目的の言語で実行されたら、[それと同じ言語のバージョンの SSMS をインストール](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview)します。 新しい言語の SSMS を初めてインストールする場合は、フル パッケージを使用します。 以降のインストールでは、アップグレード パッケージを使用できます。
 4. SSMS を実行すると、前の手順でインストールした言語で表示されます。
 5. コンピューターのシステム ロケールの設定を英語に戻します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "47722870"
 1. 次の手順で、SSMS で使用する言語の Windows 言語パックをインストールします。 
    - **[設定]** > **[時刻と言語]** > **[地域と言語]** > **[言語を追加する]** 
 2. インストールした言語をクリックし、前の手順でインストールした言語パックを使用するようにシステム ロケールを設定します。次に、**[既定として設定する]** を選択します。 
-3. お使いのオペレーティング システムが目的の言語で実行されたら、[それと同じ言語のバージョンの SSMS をインストール](download-sql-server-management-studio-ssms.md#available-languages)します。 新しい言語の SSMS を初めてインストールする場合は、フル パッケージを使用します。 以降のインストールでは、アップグレード パッケージを使用できます。
+3. お使いのオペレーティング システムが目的の言語で実行されたら、[それと同じ言語のバージョンの SSMS をインストール](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview)します。 新しい言語の SSMS を初めてインストールする場合は、フル パッケージを使用します。 以降のインストールでは、アップグレード パッケージを使用できます。
 4. インストールする各言語が、最初にインストールした SSMS のバージョンの言語と一致しない場合は、次の手順で対応する Visual Studio 2015 Shell (Isolated) Language Pack をインストールします。
    - [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) にアクセスしてください (サインインして *接続登録*プロセスを完了することが必要な場合があります)。
    - 目的の Visual Studio 2015 Shell (Isolated) Language Pack をダウンロードしてインストールします。
