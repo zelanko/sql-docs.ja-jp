@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28967819353769601e5ba8e760435f6d43aac3a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818501"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905773"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT および UNPIVOT の使用
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ FOR
 ## <a name="basic-pivot-example"></a>PIVOT の基本的な例  
  次のコード例では、4 行、2 列で構成されるテーブルを生成します。  
   
-```  
+```sql
 USE AdventureWorks2014 ;  
 GO  
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
@@ -93,7 +93,7 @@ GROUP BY DaysToManufacture;
   
  次のコードでは、同じ結果が、`DaysToManufacture` 値を列見出しにピボット処理して表示されます。 結果が `[3]` であっても、3 日目 `NULL` の列が表示されます。  
   
-```  
+```sql
 -- Pivot table with one row and five columns  
 SELECT 'AverageCost' AS Cost_Sorted_By_Production_Days,   
 [0], [1], [2], [3], [4]  
@@ -117,9 +117,9 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ```
   
 ## <a name="complex-pivot-example"></a>PIVOT の複雑な例  
- `PIVOT` 関係演算子が役立つ一般的なシナリオは、データをまとめるためにクロス集計レポートを生成する場合です。 たとえば、`AdventureWorks2014` サンプル データベースの `PurchaseOrderHeader` テーブルにクエリを実行し、特定の従業員の発注数を抽出するとします。 このレポートを仕入先別に返すクエリを次に示します。  
+ `PIVOT` 関係演算子が役立つ一般的なシナリオは、データをまとめるためにクロス集計レポートを生成する場合です。 たとえば、`PurchaseOrderHeader` サンプル データベースの `AdventureWorks2014` テーブルにクエリを実行し、特定の従業員の発注数を抽出するとします。 このレポートを仕入先別に返すクエリを次に示します。  
   
-```  
+```sql
 USE AdventureWorks2014;  
 GO  
 SELECT VendorID, [250] AS Emp1, [251] AS Emp2, [256] AS Emp3, [257] AS Emp4, [260] AS Emp5  
@@ -149,7 +149,7 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
   
  このサブセレクト ステートメントにより返される結果は `EmployeeID` 列でピボット処理されています。  
   
-```  
+```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
@@ -161,7 +161,7 @@ FROM PurchaseOrderHeader;
   
  `UNPIVOT` 関係演算子で行われる操作は、基本的に `PIVOT` 演算子の逆で、列を行に変換します。 上記の例で作成されたテーブルが `pvt` という名前でデータベースに保存されていて、列 ID `Emp1`、`Emp2`、`Emp3`、`Emp4`、および `Emp5` を、特定の仕入先に対応する行の値に行列変換するとします。 そのためには、さらに 2 つの列を指定する必要があります。 行列変換する列値 (`Emp1`、`Emp2`、...) を格納する列を `Employee` といい、行列変換する列に現在格納されている値を保持する列を `Orders` といいます。 これらの列は、それぞれ [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義の *pivot_column* と *value_column* に対応します。 このクエリは次のようになります。  
   
-```  
+```sql
 -- Create the table and insert values as portrayed in the previous example.  
 CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
     Emp3 int, Emp4 int, Emp5 int);  

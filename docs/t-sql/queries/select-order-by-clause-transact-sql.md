@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cbe41975f57e0294d936e0b8554b5d936f1474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840000"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906518"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ORDER BY order_by_expression
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. 選択リストで定義されている単一の列を指定する  
  次の例では、数値の `ProductID` 列を基準に結果セットを並べ替えます。 特定の並べ替え順序が指定されていないため、既定の順序 (昇順) が使用されます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -219,7 +219,7 @@ ORDER BY ProductID;
 #### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. 選択リストで定義されていない列を指定する  
  次の例では、選択リストではなく、FROM 句で指定したテーブルで定義されている列を基準に結果セットを並べ替えます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>C. 別名を並べ替え列として指定する  
  次の例では、列の別名 `SchemaName` を並べ替え列として指定します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -244,7 +244,7 @@ ORDER BY SchemaName;
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. 式を並べ替え列として指定する  
  次の例では、式を並べ替え列として使用します。 DATEPART 関数を使用して式を定義し、従業員の採用年で結果セットを並べ替えます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
 #### <a name="a-specifying-a-descending-order"></a>A. 降順を指定する  
  次の例では、数値列 `ProductID` を基準に、結果セットを降順で並べ替えます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -270,7 +270,7 @@ ORDER BY ProductID DESC;
 #### <a name="b-specifying-an-ascending-order"></a>B. 昇順を指定する  
  次の例では、`Name` 列を基準に、結果セットを昇順で並べ替えます。 文字は数字ではなくアルファベット順に並べ替えられます。 つまり、10 の位置は、2 の前になります。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -282,7 +282,7 @@ ORDER BY Name ASC ;
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>C. 昇順と降順の両方を指定する  
  次の例では、2 つの列を基準に結果セットを並べ替えます。 クエリの結果セットは、まず `FirstName` 列を基準に昇順で並べ替えられた後、`LastName` 列を基準に降順で並べ替えられます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -294,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a> 照合順序の指定  
  次の例では、ORDER BY 句での照合順序の指定により、クエリ結果が返される順序がどう変化するかを示します。 作成されるテーブルには、大文字と小文字、およびアクセントを区別しない照合順序で定義された列が含まれます。 大文字と小文字、およびアクセントが混じった値が挿入されます。 ORDER BY 句で照合順序が指定されていないため、最初のクエリでは、値を並べ替えるときに列の照合順序が使用されます。 2 番目のクエリでは、大文字と小文字、およびアクセントを区別する照合順序が ORDER BY 句で指定されているため、行が返される順序が変わります。  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -315,7 +315,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a> 条件に基づく順序の指定  
  次の例では、ORDER BY 句で CASE 式を使用して、指定された列の値に基づいて、条件に応じて行の並べ替え順序を決定しています。 最初の例では、`SalariedFlag` テーブルの `HumanResources.Employee` 列の値を評価します。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 `SalariedFlag` が 0 に設定されている従業員は `BusinessEntityID` の昇順で返されます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -324,7 +324,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -336,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a> 順位付け関数での ORDER BY の使用  
  次の例では、順序付け関数 ROW_NUMBER、RANK、DENSE_RANK、および NTILE で ORDER BY 句を使用しています。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -362,7 +362,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. OFFSET と FETCH の値として整数の定数を指定する  
  次の例では、OFFSET および FETCH 句の値として整数の定数を指定します。 最初のクエリにより、`DepartmentID` 列で並べ替えられたすべての行が返されます。 このクエリによって返される結果と、後の 2 つのクエリの結果を比べてみてください。 次のクエリは、`OFFSET 5 ROWS` 句を使用して最初の 5 行をスキップし、残りのすべての行を返します。 最後のクエリでは、`OFFSET 0 ROWS` 句を使用して最初の行から処理を開始した後、`FETCH NEXT 10 ROWS ONLY` を使用して、返される行を、並べ替えられた結果セットからの 10 行に制限します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -387,7 +387,7 @@ ORDER BY DepartmentID
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. OFFSET と FETCH の値として変数を指定する  
  次の例では、変数 `@StartingRowNumber` および `@FetchRows` を宣言し、これらの変数を OFFSET および FETCH 句で指定しています。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -404,7 +404,7 @@ ORDER BY DepartmentID ASC
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. OFFSET と FETCH の値として式を指定する  
  次の例では、`@StartingRowNumber - 1` という式を使用して OFFSET 値を指定し、`@EndingRowNumber - @StartingRowNumber + 1` という式を使用して FETCH 値を指定しています。 さらに、クエリ ヒントの OPTIMIZE FOR も指定しています。 このヒントにより、クエリをコンパイルおよび最適化するときにローカル変数に特定の値を指定できます。 この値はクエリを最適化する過程でのみ使用され、クエリの実行時には使用されません。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -423,7 +423,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. OFFSET と FETCH の値として定数スカラー サブクエリを指定する  
  次の例では、定数スカラー サブクエリを使用して FETCH 句に値を定義します。 サブクエリにより、`PageSize` テーブルの `dbo.AppSettings` 列から 1 つの値が返されます。  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -443,7 +443,7 @@ ORDER BY DepartmentID ASC
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. 単一のトランザクションで複数のクエリを実行する  
  次の例は、クエリのすべての要求で一貫性のある結果が返されるようにするページング ソリューションを実装する方法の 1 つを示しています。 このクエリは、スナップショット分離レベルを使用して単一のトランザクションで実行されます。また、ORDER BY 句で指定された列により、列の一意性が確保されます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -487,7 +487,7 @@ GO
 ###  <a name="Union"></a> UNION、EXCEPT、および INTERSECT と ORDER BY の併用  
  クエリで UNION、EXCEPT、または INTERSECT 演算子を使用する場合は、ORDER BY 句をステートメントの末尾に指定する必要があります。この場合、結合されたクエリの結果が並べ替えられます。 次の例では、赤色または黄色のすべての製品が返され、この結合リストが `ListPrice` 列を基準に並べ替えられます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -505,7 +505,7 @@ ORDER BY ListPrice ASC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例は、`EmployeeKey` の数値列を昇順で並べ替えた結果セットの順序付けを示しています。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -515,7 +515,7 @@ ORDER BY EmployeeKey;
   
  次の例では、`EmployeeKey` の数値列を基準に降順で結果セットを並べ替えます。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -525,7 +525,7 @@ ORDER BY EmployeeKey DESC;
   
  次の例では、`LastName` 列を基準に結果セットを並べ替えます。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -535,7 +535,7 @@ ORDER BY LastName;
   
  次の例では、2 つの列を基準に並べ替えます。 このクエリでは、`FirstName` 列で昇順に並べ替えを行ってから、`LastName` 列の共通の `FirstName` 値を降順に並べ替えます。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  

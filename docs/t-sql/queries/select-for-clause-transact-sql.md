@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cec143edb47f54e63d18a07991cb3b1d3c9ab7a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817080"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906272"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ JSON
   
 -   **NO_BROWSETABLE** オプションを使用してブラウズ モードをオンにするには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行する必要があります。  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON  
     ```  
   
@@ -123,7 +123,7 @@ JSON
   
 2.  SampleDB データベースに tleft テーブルと tright テーブルを作成し、両方に c1 という単一列が含まれるようにします。 tleft テーブルの c1 列に一意のインデックスを定義し、この列が NULL 値を許容するように設定します。 このためには、適切なクエリ ウィンドウで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-    ```  
+    ```sql
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
     GO   
     CREATE TABLE tright(c1 INT NULL) ;  
@@ -132,7 +132,7 @@ JSON
   
 3.  tleft テーブルと tright テーブルに複数の値を挿入します。 tleft テーブルに NULL 値を挿入します。 このためには、クエリ ウィンドウで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-    ```  
+    ```sql
     INSERT INTO tleft VALUES(2) ;  
     INSERT INTO tleft VALUES(NULL) ;  
     INSERT INTO tright VALUES(1) ;  
@@ -143,14 +143,14 @@ JSON
   
 4.  **NO_BROWSETABLE** オプションをオンにします。 このためには、クエリ ウィンドウで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON ;  
     GO  
     ```  
   
 5.  SELECT クエリで外部結合ステートメントを使用して、tleft テーブルと tright テーブルのデータにアクセスします。 tleft テーブルが外部結合ステートメントの内部に存在することを確認します。 このためには、クエリ ウィンドウで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-    ```  
+    ```sql
     SELECT tleft.c1   
     FROM tleft   
     RIGHT JOIN tright   
@@ -223,7 +223,7 @@ JSON
   
  次の例では、`FOR XML AUTO` を `TYPE` オプションおよび `XMLSCHEMA` オプションと共に指定しています。 `TYPE` オプションを指定しているため、結果セットはクライアントに **xml** 型として返されます。 `XMLSCHEMA` オプションは、返される XML データにインライン XSD スキーマが含まれることを指定し、`ELEMENTS` オプションは、結果の XML が要素中心であることを指定します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  

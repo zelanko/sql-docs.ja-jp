@@ -31,12 +31,12 @@ ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3344953d8956af1dd044960f7cce5c3d8fc12dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 558092ec5c5cfe587b9a7644561cc94a6a5c1610
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661746"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906092"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT の例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47661746"
   
  [!code-sql[Select#SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
   
- この例では、製品ラインが `R` で、製造所要日数が `4` 日未満の `Product` の行のみを返しています。  
+ この例では、製品ラインが `Product` で、製造所要日数が `R` 日未満の `4` の行のみを返しています。  
   
  [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
@@ -132,7 +132,7 @@ ms.locfileid: "47661746"
   
  次のクエリでは、`LIKE` 句の中で `HAVING` 句を使用しています。  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
 SELECT SalesOrderID, CarrierTrackingNumber   
@@ -144,7 +144,7 @@ GO
 ```  
   
 ## <a name="l-using-having-and-group-by"></a>L. HAVING と GROUP BY を使用する  
- 次の例では、1 つの `SELECT` ステートメントの中で `GROUP BY` 句、`HAVING` 句、`WHERE` 句、および `ORDER BY` 句を使用しています。 これによって、$25 より高く平均注文数量が 5 未満の製品を除外した、グループとサマリー値が作成されます。 この結果は `ProductID` 別にまとめられます。  
+ 次の例では、1 つの `GROUP BY` ステートメントの中で `HAVING` 句、`WHERE` 句、`ORDER BY` 句、および `SELECT` 句を使用しています。 これによって、$25 より高く平均注文数量が 5 未満の製品を除外した、グループとサマリー値が作成されます。 この結果は `ProductID` 別にまとめられます。  
   
  [!code-sql[Select#SelectExamples21](../../t-sql/queries/codesnippet/tsql/select-examples-transact_19.sql)]  
   
@@ -187,14 +187,14 @@ GO
  [!code-sql[Select#SelectExamples49](../../t-sql/queries/codesnippet/tsql/select-examples-transact_27.sql)]  
   
 ## <a name="r-using-union-of-two-select-statements-with-order-by"></a>R.  ORDER BY 句を指定した 2 つの SELECT ステートメントで UNION 句を使用する  
- UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `SELECT` ステートメントでの `UNION` の誤った使用法と正しい使用法を示しています。  
+ UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `UNION` ステートメントでの `SELECT` の誤った使用法と正しい使用法を示しています。  
   
  [!code-sql[Select#SelectExamples50](../../t-sql/queries/codesnippet/tsql/select-examples-transact_28.sql)]  
   
 ## <a name="s-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>S.  3 つの SELECT ステートメントで UNION を使用して、ALL とかっこの効果を示す  
- 次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`ALL` を指定せずに `UNION` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
+ 次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`UNION` を指定せずに `ALL` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
   
- 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションを使用せずに重複を削除するので、5 行を返します。 これらの 5 行は、`UNION ALL` キーワードを使用して最初の `SELECT` の結果と結合されます。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
+ 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションを使用せずに重複を削除するので、5 行を返します。 これらの 5 行は、`SELECT` キーワードを使用して最初の `UNION ALL` の結果と結合されます。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
   
  [!code-sql[Select#SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
   

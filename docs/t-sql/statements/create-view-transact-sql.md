@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25b196ffefd3319b96865ebef92bd778bf72ceb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794f6310185292224d68624a16493aa3e8d91fe3
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808460"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085498"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -164,7 +164,7 @@ OR ALTER
   
  ビューからクエリを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ステートメントで参照されているデータベース オブジェクトがすべて存在すること、データベース オブジェクトがステートメントのコンテキストで有効であること、およびデータ変更ステートメントがデータの整合性規則に違反していないことが確認されます。 確認に失敗すると、エラー メッセージが返されます。 確認に成功すると、指定した動作が、基になるテーブルに対する動作に変換されます。  
   
- 削除されたテーブル (またはビュー) に従属しているビューを使用すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラー メッセージが返されます。 テーブルの構造が以前のベース テーブルから変わっていなければ、削除されたテーブルやビューの代わりになる、新しいテーブルまたはビューを作成すると、ビューは再び使用可能になります。 新しいテーブルまたはビューの構造が変化した場合は、ビューを削除し、再作成する必要があります。  
+ 削除されたテーブル (またはビュー) に従属しているビューを使用すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではエラー メッセージが返されます。 テーブルの構造が以前のベース テーブルから変わっていなければ、削除されたテーブルやビューの代わりになる、新しいテーブルまたはビューを作成すると、ビューは再び使用可能になります。 新しいテーブルまたはビューの構造が変化した場合は、ビューを削除し、再作成する必要があります。  
   
  ビューが SCHEMABINDING 句を使用して作成したものでない場合、ビューの基になっているオブジェクトに対して、ビューの定義に影響するような変更が行われた際には、[sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) を実行する必要があります。 この操作を行わないと、ビューのクエリ時に、予期しない結果が表示される可能性があります。  
   
@@ -207,7 +207,7 @@ OR ALTER
 > [!NOTE]  
 >  1 台のサーバーに対してローカルでデータをパーティション分割する方法としては、パーティション テーブルをお勧めします。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
- パーティション分割構成の設計時には、各パーティションに所属するデータを明確にする必要があります。 たとえば、`Customers` テーブルのデータは、3 つのサーバー位置にある 3 つのメンバー テーブル、つまり、`Server1` の `Customers_33`、`Server2` の `Customers_66`、`Server3` の `Customers_99` に配分されます。  
+ パーティション分割構成の設計時には、各パーティションに所属するデータを明確にする必要があります。 たとえば、`Customers` テーブルのデータは、3 つのサーバー位置にある 3 つのメンバー テーブル、つまり、`Customers_33` の `Server1`、`Customers_66` の `Server2`、`Customers_99` の `Server3` に配分されます。  
   
  `Server1` のパーティション ビューは次のように定義されます。  
   
@@ -250,7 +250,7 @@ FROM Tn;
   
     -   それぞれの `select list` の同じ位置にある列は、照合順序も含めて同じ型であることが必要です。 列が暗黙的に変換される型であるという条件だけでは十分ではありません。これは UNION の場合とは異なります。  
   
-         また、すべての選択リストの同じ位置に、少なくとも 1 つの列 (たとえば `<col>`) が指定されている必要があります。 この `<col>` は、メンバー テーブル `T1, ..., Tn` の `<col>` にそれぞれ CHECK 制約 `C1, ..., Cn` を指定することで定義します。  
+         また、すべての選択リストの同じ位置に、少なくとも 1 つの列 (たとえば `<col>`) が指定されている必要があります。 この `<col>` は、メンバー テーブル `T1, ..., Tn` の `C1, ..., Cn` にそれぞれ CHECK 制約 `<col>` を指定することで定義します。  
   
          テーブル `C1` の制約 `T1` は、次の形式で定義する必要があります。  
   
@@ -442,11 +442,6 @@ supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 451 and 600),
 supplier CHAR(50)  
 );  
 GO  
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
-, ('231', 'FarEast'), ('280', 'NZ')  
-, ('321', 'EuroGroup'), ('442', 'UKArchip')  
-, ('475', 'India'), ('521', 'Afrique');  
-GO  
 --Create the view that combines all supplier tables.  
 CREATE VIEW dbo.all_supplier_view  
 WITH SCHEMABINDING  
@@ -462,6 +457,12 @@ SELECT supplyID, supplier
 UNION ALL  
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
+GO
+INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
+, ('231', 'FarEast'), ('280', 'NZ')  
+, ('321', 'EuroGroup'), ('442', 'UKArchip')  
+, ('475', 'India'), ('521', 'Afrique');  
+GO  
 ```  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 921322126bc11642bd2140784efb6ea4ae6a8550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703770"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085448"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーまたは SharePoint サイト上のフォルダーを参照して、レポート、共有データ ソース、モデル、その他の関連レポート アイテムを検索したり、自分のコンピューターを参照して、ローカル レポートを検索したりできます。 レポートを見つけやすくするため、レポート ビルダーでは最近使用されたサーバーとサイトの一覧を管理し、コンピューターのファイル システムの "デスクトップ"、"マイ ドキュメント"、および "マイ コンピューター" フォルダーに直接アクセスできるようにしています。  
@@ -67,7 +67,7 @@ ms.locfileid: "47703770"
   
  これらの作業のいくつかはレポート サーバーの管理者が行う場合があります。 レポート サーバーで行う作業の詳細については、「[Reporting Services Report Server (Native Mode)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)」をご覧ください。  
   
- レポート マネージャーには通常、フォルダー、レポート、データ ソース、およびレポート モデルと、[個人用レポート] フォルダーが含まれています。 [個人用レポート] は、所有しているレポートを保存したり操作したりできる作業領域です。 他のレポート サーバー フォルダーはパブリック フォルダーであり、通常、フォルダーのコンテンツの追加や変更を行うには高度な権限が必要になります。 [個人用レポート] 内にフォルダーを作成して、レポートをさらに細かく分類できます。 詳細については、「 [個人用レポートの使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)」を参照してください。  
+ レポート マネージャーには通常、フォルダー、レポート、データ ソース、およびレポート モデルと、[個人用レポート] フォルダーが含まれています。 [個人用レポート] は、所有しているレポートを保存したり操作したりできる作業領域です。 他のレポート サーバー フォルダーはパブリック フォルダーであり、通常、フォルダーのコンテンツの追加や変更を行うには高度な権限が必要になります。 [個人用レポート] 内にフォルダーを作成して、レポートをさらに細かく分類できます。  
   
  レポート マネージャーではレポートが Reporting Services HTML ビューアーに表示されます。 HTML ビューアーは、レポートを HTML で表示するためのフレームワークを提供し、レポートのツール バー、パラメーター セクション、資格情報セクション、ドキュメント マップなどが含まれています。 レポート ツール バーには、ページ ナビゲーション、拡大または縮小、更新、検索、エクスポート、印刷、データ フィードの機能があります。 URL を指定してレポートにアクセスした場合、[レポート] ツール バーはブラウザー ウィンドウのレポートの最上部に表示されます。 印刷機能はオプションで、管理者がオンにする必要があります。 この機能が使用可能なときは、プリンターのアイコンがレポート ツール バーに表示されます。 次の図は、[レポート マネージャー] ウィンドウのレポート ツール バーです。レポート ツール バーの機能が強調されています。  
   
@@ -141,12 +141,6 @@ ms.locfileid: "47703770"
   
  [ブラウザーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  URL を使用してレポートを検索および表示する方法について説明します。  
-  
- [レポートおよび他のアイテムの検索 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
- レポート マネージャーの検索機能を使用してレポート サーバーのアイテムを見つける方法について説明します。  
-  
- [個人用レポートの使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)  
- [個人用レポート] フォルダーを作業領域として使用し、所有しているレポートの保存や操作を行う方法について説明します。  
   
  [レポート ビルダーでのレポートのプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  作成中または更新中のレポートをプレビューする方法について説明します。  

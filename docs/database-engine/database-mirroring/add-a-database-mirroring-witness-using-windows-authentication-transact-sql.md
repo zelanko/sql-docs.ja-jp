@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0569a8f94232ec31e96024e798da6027e0c695a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742320"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168901"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ ms.locfileid: "47742320"
   
 3.  プリンシパル サーバーに接続し、次のステートメントを実行します。  
   
-     ALTER DATABASE *<database_name>* SET WITNESS **=***<server_network_address>*  
+     ALTER DATABASE *<database_name>* SET WITNESS **=**_<server_network_address>_  
   
      *<database_name>* はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、*<server_network_address>* はミラーリング監視サーバー インスタンスのサーバー ネットワーク アドレスです。  
   
      サーバー ネットワーク アドレスの構文は次のとおりです。  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<b>://</b>_\<system-address>_<b>:</b>_\<port>_  
   
      \<*system-address*> は目的のコンピューター システムを明確に指定する文字列です。また、\<*port>* はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   

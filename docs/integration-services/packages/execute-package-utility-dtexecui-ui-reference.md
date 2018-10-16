@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ae6db2bfa011defe472054b98243062b5bc93d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669430"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169112"
 ---
 # <a name="execute-package-utility-dtexecui"></a>パッケージ実行ユーティリティ (dtexecui)
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、** から開くか、またはコマンド プロンプトで「 **dtexecui** 」と入力して表示します。  
@@ -283,7 +283,7 @@ ms.locfileid: "47669430"
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
 ## <a name="logging-page"></a>[ログ記録] ページ  
- **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[ログ記録]** ページを使用すると、ログ プロバイダーの実行時にパッケージを利用できます。 パッケージのログ プロバイダーの種類とログに接続するための接続文字列を指定します。 ログ プロバイダーのエントリごとに、**/LOGGER***classid* オプションがコマンド プロンプトに追加されます。  
+ **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[ログ記録]** ページを使用すると、ログ プロバイダーの実行時にパッケージを利用できます。 パッケージのログ プロバイダーの種類とログに接続するための接続文字列を指定します。 ログ プロバイダーのエントリごとに、 **/LOGGER**_classid_ オプションがコマンド プロンプトに追加されます。  
   
 ### <a name="options"></a>[変数]  
  **[ログ プロバイダー]**  
@@ -302,7 +302,7 @@ ms.locfileid: "47669430"
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
 ## <a name="set-values-page"></a>[値の設定] ページ  
- **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[値の設定]** ページを使用すると、プロパティのパスと値を入力することにより、パッケージ、実行可能ファイル、接続、変数、およびログ プロバイダーのプロパティ値を設定できます。 パスのエントリごとに、コマンド プロンプトに **/SET***propertypath;value* オプションが追加されます。  
+ **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[値の設定]** ページを使用すると、プロパティのパスと値を入力することにより、パッケージ、実行可能ファイル、接続、変数、およびログ プロバイダーのプロパティ値を設定できます。 パスのエントリごとに、コマンド プロンプトに **/SET**_propertypath;value_ オプションが追加されます。  
   
 ### <a name="options"></a>[変数]  
  **[プロパティのパス]**  
