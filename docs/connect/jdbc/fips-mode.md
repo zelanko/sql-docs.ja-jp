@@ -1,33 +1,33 @@
 ---
-title: FIPS モード |Microsoft Docs
+title: JDBC で FIPS モード |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/12/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: craigg
 ms.technology: connectivity
 ms.topic: conceptual
-ms.assetid: ''
-author: v-nisidh
-ms.author: v-nisidh
-manager: andrela
-ms.openlocfilehash: cc13455e6f56950d6988909b53aa7664c7fd77f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: David-Engel
+ms.author: v-daveng
+manager: kenvh
+ms.openlocfilehash: 1708bf5d1fbd47f7fb2dcefbbb5150d4b5646343
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723830"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324572"
 ---
 # <a name="fips-mode"></a>FIPS モード
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Microsoft JDBC Driver for SQL Server サポート*FIPS 140 準拠モード*します。 For Oracle を参照してください、Sun JVM/、 [FIPS 140 準拠モード SunJSSE](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html) FIPS 構成に Oracle によって提供されるセクションには、JVM が有効になっています。 
 
-**前提条件**:
-* FIPS JVM を構成します。
-* 適切な SSL 証明書。
-* 適切なポリシー ファイルです。 
-* 適切な構成パラメーター。 
+#### <a name="prerequisites"></a>Prerequisites
+
+- FIPS JVM を構成します。
+- 適切な SSL 証明書。
+- 適切なポリシー ファイルです。 
+- 適切な構成パラメーター。 
 
 
 ## <a name="fips-configured-jvm"></a>FIPS JVM を構成します。
@@ -50,31 +50,41 @@ public boolean isFIPS() throws Exception {
 FIPS モードで SQL Server を接続するためには、有効な SSL 証明書が必要です。 インストールまたは FIPS が有効になっているクライアント マシン (JVM) での Java キー ストアにインポートします。
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>Java キーストアで SSL 証明書をインポートします。
-FIPS のほとんどの場合必要があります (.cert) 証明書をインポートするか PKCS またはプロバイダー固有の書式。 SSL 証明書をインポートし、適切なキーストア形式での作業ディレクトリに保存するには、次のスニペットを使用します。 _TRUST_STORE_PASSWORD_は Java キーストアのパスワードです。 
+FIPS のほとんどの場合必要があります (.cert) 証明書をインポートするか PKCS またはプロバイダー固有の書式。 SSL 証明書をインポートし、適切なキーストア形式での作業ディレクトリに保存するには、次のスニペットを使用します。 _信頼\_ストア\_パスワード_は Java キーストアのパスワードです。 
+
 
 ```java
-    public void saveGenericKeyStore(String provider, String trustStoreType, String certName, String certPath) throws KeyStoreException, CertificateException, NoSuchAlgorithmException, NoSuchProviderException, IOException {
-        KeyStore ks = KeyStore.getInstance(trustStoreType, provider);
-        FileOutputStream os = new FileOutputStream("./MyTrustStore_" + trustStoreType);
-        ks.load(null, null);
-        ks.setCertificateEntry(certName, getCertificate(certPath));
-        ks.store(os, TRUST_STORE_PASSWORD.toCharArray());
-        os.flush();
-        os.close();
-    }
+public void saveGenericKeyStore(
+        String provider,
+        String trustStoreType,
+        String certName,
+        String certPath
+        ) throws KeyStoreException, CertificateException,
+            NoSuchAlgorithmException, NoSuchProviderException,
+            IOException
+{
+    KeyStore ks = KeyStore.getInstance(trustStoreType, provider);
+    FileOutputStream os = new FileOutputStream("./MyTrustStore_" + trustStoreType);
+    ks.load(null, null);
+    ks.setCertificateEntry(certName, getCertificate(certPath));
+    ks.store(os, TRUST_STORE_PASSWORD.toCharArray());
+    os.flush();
+    os.close();
+}
 
-    private Certificate getCertificate(String pathName) throws FileNotFoundException, CertificateException {
-        FileInputStream fis = new FileInputStream(pathName);
-        CertificateFactory cf = CertificateFactory.getInstance("X.509");
-        return cf.generateCertificate(fis);
-    }
-
+private Certificate getCertificate(String pathName)
+        throws FileNotFoundException, CertificateException
+{
+    FileInputStream fis = new FileInputStream(pathName);
+    CertificateFactory cf = CertificateFactory.getInstance("X.509");
+    return cf.generateCertificate(fis);
+}
 ```
 
 
-次の例は BouncyCastle プロバイダーと PKCS12 形式で Azure SSL 証明書をインポートしています。 という名前の作業ディレクトリに証明書をインポート_MyTrustStore_PKCS12_次のスニペットを使用します。
+次の例は BouncyCastle プロバイダーと PKCS12 形式で Azure SSL 証明書をインポートしています。 という名前の作業ディレクトリに証明書をインポート_MyTrustStore\_PKCS12_次のスニペットを使用します。
 
-` saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer"); `
+`saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
 ## <a name="appropriate-policy-files"></a>適切なポリシー ファイル
 FIPS プロバイダーによっては、無制限のポリシーの jar が必要です。 このような場合は、sun、/、Oracle Java Cryptography Extension (JCE) 無制限強度管轄ポリシーのファイルをダウンロード[JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)または[JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)します。 
@@ -82,7 +92,7 @@ FIPS プロバイダーによっては、無制限のポリシーの jar が必�
 ## <a name="appropriate-configuration-parameters"></a>適切な構成パラメーター
 FIPS 準拠モードでは、JDBC ドライバーを実行するには、次の表に示すように、接続のプロパティを構成します。 
 
-**プロパティ**: 
+#### <a name="properties"></a>[プロパティ] 
 
 |プロパティ|型|既定|[説明]|注|
 |---|---|---|---|---|
@@ -93,7 +103,5 @@ FIPS 準拠モードでは、JDBC ドライバーを実行するには、次の�
 |fips|boolean ["true / false"]|"false"|このプロパティは、FIPS 対応 JVM**は true。**|6.1.4 で追加された (安定版 6.2.2 をリリース)||
 |fipsProvider|String|null|JVM で構成されている FIPS プロバイダー。 たとえば、BCFIPS または SunPKCS11 NSS |6.1.2 で追加 (安定した 6.2.2 をリリース)、詳細を参照してください - 6.4.0 で非推奨と[ここ](https://github.com/Microsoft/mssql-jdbc/pull/460)します。|
 |trustStoreType|String|JKS|FIPS モード セット信頼ストアの種類の PKCS12 または型プロバイダーによって定義された FIPS |6.1.2 で追加された (安定版 6.2.2 をリリース)||
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-
-
-  

@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a812aacbbbd87ba8fc38479be7d62a0fc9401b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731370"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119809"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>ステップ 4: ADO.NET で SQL に弾性的に接続する
 
@@ -39,7 +39,7 @@ ms.locfileid: "47731370"
   
 プログラムは、永続的なエラーと一時的なエラーを区別する必要があります。 一時的なエラーは、短時間、一時的なネットワークの問題などの解消がエラー状態です。  永続的なエラーの例はありますが、プログラムがターゲット データベース名のスペルミスがある - この場合は、「このようなデータベースが見つかりません」エラーは保持は、および、短時間で消去する可能性がない場合。  
   
-一時的なエラーとして分類されるエラー番号の一覧はで、 [SQL Database クライアント アプリケーションのエラー メッセージ](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+一時的な障害に分類されるエラー番号の一覧は[SQL Database クライアント アプリケーションのエラー メッセージ](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>手順 2: を作成し、サンプル アプリケーションを実行  
   
