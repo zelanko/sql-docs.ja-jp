@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 009433960a4662985d78c09c10b125cfb5f7100f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8780fd5714af5acb0405592f1700ab19004fd0b
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690666"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336301"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -258,7 +258,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 ##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
-   フィルター述語が呼び出されると、インデックスに含める行を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、フィルター選択されたインデックスのデータ行で、フィルター選択された統計情報を作成します。  
+   フィルター述語が呼び出されると、インデックスに含める行を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フィルター選択されたインデックス内のデータ行には、フィルター選択された統計を作成します。  
   
    フィルター述語では、単純な比較ロジックを使用します。 比較演算子では、NULL リテラルを使用する比較を実行できません。 代わりに、IS NULL 演算子と IS NOT NULL 演算子を使用します。  
   
@@ -318,7 +318,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 -   フィルター選択されたインデックスが作成されません。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりエラーが生成され、インデックスのデータを変更していた INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントがロールバックされます。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]によりエラーが生成され、インデックスのデータを変更していた INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントがロールバックされます。  
   
 -   Transact-SQL ステートメントの実行プランで、クエリ オプティマイザーがインデックスを無視します。  
   
@@ -443,7 +443,7 @@ GO
   
  非クラスター化インデックスを削除する場合は、列ストア インデックスを作成する前に、DROP INDEX ステートメントを使用します。 DROP EXISTING オプションは、変換されるクラスター化インデックスのみを削除します。 非クラスター化インデックスは削除されません。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] と [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスで非クラスター化インデックスを作成できませんでした。 この例は、どのようにを列ストア インデックスを作成する前に、非クラスター化インデックスを削除する必要する以前のリリースで表示されます。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] と [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], 、列ストア インデックスに非クラスター化インデックスを作成できませんでした。 この例は、どのようにを列ストア インデックスを作成する前に、非クラスター化インデックスを削除する必要する以前のリリースで表示されます。  
   
 ```sql  
 --Create the table for use with this example.  
@@ -626,7 +626,7 @@ GO
  パーティション テーブルを使用した、より複雑な例については、「[列ストア インデックス - 概要](../../relational-databases/indexes/columnstore-indexes-overview.md)」をご覧ください。  
   
 ### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. フィルター選択された述語で、非クラスター化列ストア インデックスを作成します。  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの Production.BillOfMaterials テーブルにフィルター選択された非クラスター化列ストア インデックスを作成します。 フィルター述語では、フィルター選択されたインデックスに非キー列を含めることができます。 この例の述語では、EndDate が NULL 以外の行だけを選択します。  
+ 次の例では、フィルター選択された非クラスター化列ストア インデックスを作成の Production.BillOfMaterials テーブルに対して、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース。 フィルター述語では、フィルター選択されたインデックスに非キー列を含めることができます。 この例の述語では、EndDate が NULL 以外の行だけを選択します。  
   
 ```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
