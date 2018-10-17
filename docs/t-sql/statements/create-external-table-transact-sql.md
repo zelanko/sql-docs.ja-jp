@@ -5,9 +5,7 @@ ms.date: 6/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30febe9ab31ac58bbdd993a3e5034e5abcb427c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649379"
 ---
 # <a name="create-external-table-transact-sql"></a>外部テーブル (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -147,37 +144,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、1 つまたは複数の列の定義を使用できます。 CREATE EXTERNAL TABLE と CREATE TABLE の両方の列を定義する同じ構文を使用します。 例外が次のようには、外部テーブルで、既定の制約を使用することはできません。 列の定義とそのデータ型の詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」と「[CREATE TABLE (Transact-SQL)](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)」を使用してください。  
   
- 列の定義には、外部ファイル内のデータを一致データ型と列の数を含む必要があります。 不一致がある場合、実際のデータを照会するときに、ファイルの行が拒否されます。  
+ データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータを照会するときに、ファイルの行が拒否されます。 さまざまな外部データソースのデータ型をマップする方法の詳細については、「[Type mapping with PolyBase](../../relational-databases/polybase/polybase-type-mapping.md)」 (PolyBase を使用した型のマッピング) を参照してください。  
   
- 外部データ ソース内のファイルを参照する外部のテーブルでは、列と型の定義は、外部ファイルの正確なスキーマにマップする必要があります。 Hadoop/ハイブに格納されているデータを参照するデータの種類を定義する場合は、SQL、および Hive のデータ型の間では、次のマッピングを使用し、そこから選択するときに、SQL のデータ型に型をキャストします。 型には、特にそれ以外の場合に記されていない、ハイブのすべてのバージョンが含まれます。
-
-> [!NOTE]  
->  SQL Server では、いずれの変換でも Hive の _infinity_のデータ値をサポートしていません。 PolyBase はデータ型変換エラーで失敗します。
-
-
-|SQL データ型|.NET データ型|データ型を hive します。|Hadoop と Java のデータ型|コメント|  
-|-------------------|--------------------|--------------------|----------------------------|--------------|  
-|TINYINT|Byte|TINYINT|ByteWritable|符号なし数値の場合のみです。|  
-|SMALLINT|Int16|SMALLINT|ShortWritable||  
-|ssNoversion|Int32|ssNoversion|IntWritable||  
-|BIGINT|Int64|BIGINT|LongWritable||  
-|bit|ブール値|boolean|BooleanWritable||  
-|FLOAT|Double|double|DoubleWritable||  
-|REAL|単一|FLOAT|FloatWritable||  
-|money|Decimal|double|DoubleWritable||  
-|SMALLMONEY|Decimal|double|DoubleWritable||  
-|NCHAR|String<br /><br /> Char[]|string|text||  
-|NVARCHAR|String<br /><br /> Char[]|string|Text||  
-|char|String<br /><br /> Char[]|string|Text||  
-|varchar|String<br /><br /> Char[]|string|Text||  
-|binary|Byte[]|binary|BytesWritable|Hive 0.8 およびそれ以降に適用されます。|  
-|varbinary|Byte[]|binary|BytesWritable|Hive 0.8 およびそれ以降に適用されます。|  
-|日付|DateTime|TIMESTAMP|TimestampWritable||  
-|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
-|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
-|DATETIME|DateTime|TIMESTAMP|TimestampWritable||  
-|time|TimeSpan|TIMESTAMP|TimestampWritable||  
-|Decimal|Decimal|Decimal|BigDecimalWritable|Hive0.11 以降が適用されます。|  
   
  LOCATION =  '*folder_or_filepath*'  
  Hadoop または Azure blob ストレージでは、フォルダーまたはファイル パスと、実際のデータのファイル名を指定します。 ルート フォルダーから、場所を開始します。ルート フォルダーは、外部データ ソースで指定されたデータの場所です。  
@@ -328,7 +296,7 @@ REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
   
  クエリの制限事項:  
   
- PolyBase は 32 の同時実行 PolyBase クエリを実行している場合、最大で 1 つのフォルダーの 33 k ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 同時実行の程度が 32 未満である場合は、ユーザーは、複数の 33 k ファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 短い外部ファイルのパスを維持して、1 つの HDFS フォルダー 30 個を超える k ファイルを使用することをお勧めします。 ファイルが多すぎますが参照されるときに、Java 仮想マシン (JVM) のメモリ不足の例外が発生する可能性があります。  
+ PolyBase は 32 の同時実行 PolyBase クエリを実行している場合、最大で 1 つのフォルダーの 33 k ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 コンカレンシーの程度が 32 未満である場合は、ユーザーは、複数の 33 k ファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 短い外部ファイルのパスを維持して、1 つの HDFS フォルダー 30 個を超える k ファイルを使用することをお勧めします。 ファイルが多すぎますが参照されるときに、Java 仮想マシン (JVM) のメモリ不足の例外が発生する可能性があります。  
 
 テーブルの幅の制限: SQL Server 2016 の PolyBase には、テーブル定義により、有効な 1 つの行の最大サイズに基づく 32 KB の行の幅の制限があります。 列のスキーマの合計が 32 KB を超えると、PolyBase はデータをクエリできなくなります。 
 

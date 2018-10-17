@@ -5,9 +5,7 @@ ms.date: 01/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - search
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - logical operators [SQL Server], precedence
 - LIKE comparisons
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 574fcfc180cb3f179d5f870051295328bcaa8e9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4d57063ee518574adbb5faf2070ef2cfd203885b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073343"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745330"
 ---
 # <a name="search-condition-transact-sql"></a>検索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,9 +57,12 @@ ms.locfileid: "43073343"
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-<search_condition> ::=   
-    { [ NOT ] <predicate> | ( <search_condition> ) }   
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
+<search_condition> ::=  
+    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
+
+<search_condition_without_match> ::= 
+    { [ NOT ] <predicate> | ( <search_condition_without_match> ) }   
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
 [ ,...n ]   
   
 <predicate> ::=   
@@ -78,6 +78,20 @@ ms.locfileid: "43073343"
     | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
   { ALL | SOME | ANY} ( subquery )   
     | EXISTS ( subquery )     }   
+    
+<graph_search_pattern> ::=
+    { <node_alias> { 
+                      { <-( <edge_alias> )- } 
+                    | { -( <edge_alias> )-> }
+                    <node_alias> 
+                   } 
+    }
+  
+<node_alias> ::=
+    node_table_name | node_table_alias 
+
+<edge_alias> ::=
+    edge_table_name | edge_table_alias
 ```  
   
 ```  
@@ -101,6 +115,9 @@ ms.locfileid: "43073343"
  \<search_condition>  
  SELECT ステートメント、クエリ式、またはサブクエリの場合、結果セットに返す行の条件を指定します。 UPDATE ステートメントの場合、更新する行を指定します。 DELETE ステートメントの場合、削除する行を指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの検索条件に含まれる述語の数に制限はありません。  
   
+ \<graph_search_pattern>  
+ グラフの一致パターンを指定します。 この句の引数の詳細については、「[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)」を参照してください。
+ 
  [NOT]  
  述語によって指定されたブール式を否定します。 詳細については、「[NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)」を参照してください。  
   

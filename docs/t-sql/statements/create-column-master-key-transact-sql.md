@@ -1,13 +1,11 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a4f7c950785268f1b462c8363e4fb9e5f426055b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 56af3e381d8466f7afe68a5a1e77584511de5422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993134"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609610"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,14 +40,19 @@ ms.locfileid: "37993134"
   データベースに列マスター キー メタデータ オブジェクトを作成します。 キーを表す列マスター キー メタデータ エントリ。外部キー ストアに格納され、[Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能を使うときに列暗号化キーを保護 (暗号化) するために使われます。 複数の列マスター キーは、キーのローテーション、つまりセキュリティ強化のためのキーの定期的な変更に対応します。 列マスター キーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または PowerShell のオブジェクト エクスプローラーを使って、キー ストアおよびそれに対応するデータベース内のメタデータ オブジェクトに作成できます。 詳しくは、「[Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)」をご覧ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+
+> [!IMPORTANT]
+> (ENCLAVE_COMPUTATIONS を使用した) エンクレーブ対応のキーの作成には、[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) が必要です。
+
 ## <a name="syntax"></a>構文  
-  
+
 ```  
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
         KEY_PATH = 'key_path'   
+        [,ENCLAVE_COMPUTATIONS (SIGNATURE = signature)]
          )   
 [;]  
 ```  
@@ -153,10 +155,12 @@ CREATE COLUMN MASTER KEY key_name
      *KeyUrl*  
      Azure Key Vault 内のキーの URL
 
+ENCLAVE_COMPUTATIONS  
+列マスター キーがエンクレーブ対応であることを指定します。これは、この列マスター キーで暗号化されているすべての列暗号化キーは、サーバー側の安全なエンクレーブを使用して共有でき、エンクレーブ内での計算に使用できることを意味します。 詳細については、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」 (セキュリティで保護されたエンクレーブが設定された Always Encrypted) を参照してください。
 
-例:
- 
-`N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700'`  
+ *signature*  
+*キー パス*と列マスター キーを含む ENCLAVE_COMPUTATIONS の設定のデジタル署名の結果であるバイナリ リテラルです (この署名には ENCLAVE_COMPUTATIONS が指定されているかどうかが反映されています)。 この署名は、承認されていないユーザーが符号付きの値を変更できないようにします。 Always Encrypted 対応のクライアント ドライバーでは、署名を検証して、署名が無効な場合、アプリケーションにエラーを返すことができます。 署名は、クライアント側のツールを使用して生成されている必要があります。 詳細については、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」 (セキュリティで保護されたエンクレーブが設定された Always Encrypted) を参照してください。
+  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -190,7 +194,7 @@ WITH (
 );  
 ```  
   
- プロバイダーを使用して、AZURE_KEY_VAULT、列のマスター_キーにアクセスするクライアント アプリケーションの場合、Azure のキー コンテナーに格納されている列マスター_キーを作成しています。  
+ AZURE_KEY_VAULT プロバイダーを使って列マスター キーにアクセスするクライアント アプリケーション用に、Azure Key Vault に格納される列マスター キーの列マスター キー メタデータ エントリを作成します。  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -200,7 +204,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- カスタムの列のマスター キー ストアに格納されている CMK を作成するには。  
+ カスタム列マスター キー ストアに格納される列マスター キーの列マスター キー メタデータ エントリを作成します。  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -208,6 +212,28 @@ WITH (
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
+```  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. エンクレーブ対応の列マスター キーを作成します  
+ MSSQL_CERTIFICATE_STORE プロバイダーを使って列マスター キーにアクセスするクライアント アプリケーション用に、証明書ストアに格納されるエンクレーブ対応の列マスター キーの列マスター キー メタデータ エントリを作成します。  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+     KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
+     KEY_PATH = 'Current User/Personal/f2260f28d909d21c642a3d8e0b45a830e79a1420'  
+     ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020542419990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );  
+```  
+  
+ AZURE_KEY_VAULT プロバイダーを使って列マスター キーにアクセスするクライアント アプリケーション用に、Azure Key Vault に格納されるエンクレーブ対応の列マスター キーの列マスター キー メタデータ エントリを作成します。  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+    KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
+    KEY_PATH = N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700');
+    ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020582413990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );
 ```  
   
 ## <a name="see-also"></a>参照

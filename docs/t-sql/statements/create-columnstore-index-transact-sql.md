@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4eef7eee4073a2c1b10633c043aec1b452c2d5a
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 009433960a4662985d78c09c10b125cfb5f7100f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690666"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -115,7 +112,19 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 ```  
   
 ## <a name="arguments"></a>引数  
-CREATE CLUSTERED COLUMNSTORE INDEX  
+
+一部のオプションは、すべてのデータベース エンジンのバージョンで使用できません。 次の表では、CLUSTERED COLUMNSTORE インデックスおよび NONCLUSTERED COLUMNSTORE インデックスに導入されているオプションのバージョンを示します。
+
+|オプション| CLUSTERED | NONCLUSTERED |
+|---|---|---|
+| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
+| WHERE 句 | なし | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+
+すべてのオプションは、Azure SQL Database で使用できます。
+
+### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX  
 すべてのデータが列ごとに圧縮されて格納されるクラスター化列ストア インデックスを作成します。 インデックスにはテーブル内の列がすべて含まれ、テーブル全体が格納されます。 既存のテーブルがヒープまたはクラスター化インデックスである場合、そのテーブルはクラスター化列ストア インデックスに変換されます。 テーブルが既にクラスター化列ストア インデックスとして格納されている場合、既存のインデックスは削除され、再構築されます。  
   
 *index_name*  
@@ -126,13 +135,16 @@ CREATE CLUSTERED COLUMNSTORE INDEX
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    クラスター化列ストア インデックスとして格納するテーブルの 1 部、2 部、または 3 部構成の名前を指定します。 テーブルがヒープかクラスター化インデックスの場合、テーブルは行ストアから列ストアに変換されます。 テーブルが既に列ストアである場合、このステートメントでクラスター化列ストア インデックスが再構築されます。  
   
-のすべてのメンションを  
-DROP_EXISTING = [オフ] |ON  
-   DROP_EXISTING = ON を使用する既存のクラスター化列ストア インデックスを削除して、新しい列ストア インデックスを作成します。  
-
+#### <a name="with-options"></a>WITH オプション  
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [オフ] |ON  
+   `DROP_EXISTING = ON` の場合、既存のインデックスを削除し、新しい列ストア インデックスを作成します。  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (DROP_EXISTING = ON);
+```
    既定では、DROP_EXISTING = OFF インデックス名は、既存の名前と同じが必要です。 指定したインデックス名が既に存在するは、エラーが発生します。  
   
-MAXDOP = *max_degree_of_parallelism*  
+##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    インデックス操作の間、既存の "並列処理の最大限度" サーバー構成をオーバーライドします。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
    *max_degree_of_parallelism* 値に指定できる値:  
@@ -140,27 +152,44 @@ MAXDOP = *max_degree_of_parallelism*
    - \>1 - 現在のシステム ワークロードに基づいて、並列インデックス操作で使用される最大プロセッサ数を指定の数以下に制限します。 たとえば、MAXDOP が 4 の場合、使用されるプロセッサの数は 4 以下になります。  
    - 0 (既定) - 現在のシステム ワークロードに基づいて、実際の数以下のプロセッサを使用します。  
   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (MAXDOP = 2);
+```
    詳細については、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 」と「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
  
-COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
-   適用対象: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-
-   ディスク ベースのテーブルの場合は、CLOSED 状態のデルタ行グループがそのデルタ行グループに留まる必要がある最低限の分数が*遅延*によって指定され、その時間が経過すると、SQL Server は行グループを、圧縮された行グループに圧縮できるようになります。 ディスク ベース テーブルでは個々の行において挿入時間と更新時間が追跡されないため、SQL Server は CLOSED 状態のデルタ行グループに遅延を適用します。  
+###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+   ディスク ベースのテーブルの場合は、CLOSED 状態のデルタ行グループがそのデルタ行グループに留まる必要がある最低限の分数が*遅延*によって指定され、その時間が経過すると、SQL Server は行グループを、圧縮された行グループに圧縮できるようになります。 ディスク ベース テーブルでは個々の行において挿入時間および更新時間が追跡されないため、SQL Server は CLOSED 状態のデルタ行グループに遅延を適用します。  
    既定値は、0 分です。  
+   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( COMPRESSION_DELAY = 10 Minutes );
+```
+
    COMPRESSION_DELAY を使用する場合の推奨事項については、「[列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)」をご覧ください。  
   
-DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   適用対象: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。   
-COLUMNSTORE  
-   列ストアでは、既定値は、し、ほとんどのパフォーマンスの高い列ストア圧縮で圧縮することを指定します。 これは、一般的な選択肢です。  
+##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+   指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。   
+- `COLUMNSTORE` は既定で、最もパフォーマンスの高い列ストア圧縮を使用して圧縮します。 これは、一般的な選択肢です。  
+- `COLUMNSTORE_ARCHIVE` では、さらにテーブルまたはパーティションを小さいサイズに圧縮します。 などの状況をこのオプションを使用してアーカイブを記憶域のサイズを必要とし、保存と取得に多くの時間に余裕があることができます。  
   
-COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE は、テーブルまたはパーティション サイズをより小さなサイズに圧縮します。 などの状況をこのオプションを使用してアーカイブを記憶域のサイズを必要とし、保存と取得に多くの時間に余裕があることができます。  
-  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
+```
    圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
 
-ON  
+###### <a name="online--on--off"></a>ONLINE = [ON | OFF]
+- `ON` の場合、インデックスの新しいコピーが構築されている間、列ストア インデックスはオンラインのままで、利用可能です。
+- `OFF` の場合、新しいコピーが構築されている間、インデックスは使用できません。
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( ONLINE = ON );
+```
+
+#### <a name="on-options"></a>ON オプション 
    ON オプションを使用すると、パーティション構成、特定のファイル グループ、既定のファイル グループなど、データ ストレージのオプションを指定できます。 ON オプションを指定しない場合、インデックスでは、既存のテーブルの設定パーティションまたはファイル グループ設定が使用されます。  
   
    *partition_scheme_name* **(** *column_name* **)**  
@@ -176,7 +205,7 @@ ON
   
    "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 QUOTED_IDENTIFIER は既定で ON です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
-CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+### <a name="create-nonclustered-columnstore-index"></a>CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 行ストア テーブルにメモリ内の非クラスター化列ストア インデックスを作成、ヒープまたはクラスター化インデックスとして格納します。 インデックスでは、フィルター選択された条件し、基になるテーブルの列のすべてを含める必要はありません。 列ストア インデックスでは、データのコピーを保存するには、十分な領域が必要です。 更新可能であり、基になるテーブルが変更されると更新されます。 クラスター化インデックスに非クラスター化列ストア インデックスでは、リアルタイム分析の機能を使用できます。  
   
 *index_name*  
@@ -189,12 +218,13 @@ CREATE [NONCLUSTERED] COLUMNSTORE INDEX
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    インデックスが含まれているテーブルの 1 部、2 部、または 3 部構成の名前を指定します。  
 
-WITH DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>WITH オプション
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [オフ] |ON  
    DROP_EXISTING = ON 既存のインデックスは削除され、再構築されます。 指定するインデックス名は、現在存在するインデックスと同じにする必要がありますが、インデックス定義は変更できます。 たとえば、異なる列またはインデックス オプションを指定できます。
   
    DROP_EXISTING = OFF 指定するインデックス名が既に存在する場合、エラーが表示されます。 DROP_EXISTING を使用してインデックスの種類を変更することはできません。 旧バージョンと互換性のある構文では、WITH DROP_EXISTING は WITH DROP_EXISTING = ON と同じです。  
 
-MAXDOP = *max_degree_of_parallelism*  
+###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    インデックス操作の間、[max degree of parallelism サーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)更新オプションをオーバーライドします。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
    *max_degree_of_parallelism* 値に指定できる値:  
@@ -207,29 +237,26 @@ MAXDOP = *max_degree_of_parallelism*
 > [!NOTE]  
 >  並列インデックス操作は、[!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
-ONLINE = [ON | OFF]   
-   適用対象: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]、非クラスター化インデックスのみ。
-ON の場合、インデックスの新しいコピーが構築されている間、非クラスター化インデックスはオンラインの状態を維持し、利用できます。
+###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
+- `ON` の場合、インデックスの新しいコピーが構築されている間、列ストア インデックスはオンラインのままで、利用可能です。
+- `OFF` の場合、新しいコピーが構築されている間、インデックスは使用できません。 非クラスター化インデックスでは、ベース テーブルは利用できます。新しいインデックスが完成するまで、非クラスター化インデックスのみクエリの応答に利用されません。 
 
-   OFF の場合、新しいコピーが構築されている間、インデックスは使用できません。 これは非クラスター化インデックスのみであり、ベース テーブルは利用できます。新しいインデックスが完成するまで、非クラスター化インデックスのみクエリの応答に利用されません。 
+```sql
+CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
+```
 
-COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   適用対象: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
-  
+##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    行がデルタ行グループに残る期間の下限を指定します。この下限までは、圧縮された行グループに移行できます。 たとえば、行が 120 分間変更されない場合、単票格納形式に圧縮するという顧客がいるかもしれません。 ディスクベース テーブルの列ストア インデックスの場合、行が挿入または更新された時刻は追跡しません。代わりに、行のプロキシとして、デルタ行グループの終了時刻を利用します。 既定の継続時間は 0 分です。 100 万行がデルタ行グループに累積されると、1 行が単票格納に移行されます。その行に終了の印が付きます。  
   
-DATA_COMPRESSION  
-   指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。  
-COLUMNSTORE  
-   適用対象: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 非クラスター化列ストア インデックスとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 列ストアでは、既定値は、し、ほとんどのパフォーマンスの高い列ストア圧縮で圧縮することを指定します。 これは、一般的な選択肢です。  
-  
-COLUMNSTORE_ARCHIVE  
-   適用対象: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-非クラスター化列ストア インデックスとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 COLUMNSTORE_ARCHIVE は、テーブルまたはパーティション サイズをより小さなサイズに圧縮します。 これは、保存用や、ストレージのサイズを減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
+###### <a name="datacompression"></a>DATA_COMPRESSION  
+   指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 非クラスター化列ストア インデックスとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 次のオプションがあります。
+   
+- 既定の `COLUMNSTORE` では、最もパフォーマンスの高い列ストア圧縮を使用して圧縮します。 これは、一般的な選択肢です。  
+- `COLUMNSTORE_ARCHIVE` COLUMNSTORE_ARCHIVE は、テーブルまたはパーティション サイズをより小さなサイズに圧縮します。 これは、保存用や、ストレージのサイズを減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
   
  圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
-WHERE \<filter_expression> [ AND \<filter_expression> ] 適用対象: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    フィルター述語が呼び出されると、インデックスに含める行を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、フィルター選択されたインデックスのデータ行で、フィルター選択された統計情報を作成します。  
   
@@ -242,7 +269,7 @@ WHERE \<filter_expression> [ AND \<filter_expression> ] 適用対象: [!INCLUDE[
    
    フィルター選択されたインデックスについては、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
   
-ON  
+#### <a name="on-options"></a>ON オプション  
    これらのオプションによって、インデックスが作成されるファイル グループが指定されます。  
   
 *partition_scheme_name* **(** *column_name* **)**  

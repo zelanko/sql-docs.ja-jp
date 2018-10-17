@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - properties [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, properties
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a000f4f4c9a73698f04a0bd88882db55b8661e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6371a751cdd5a4d647b781373ab74629103e0c44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061402"
 ---
 # <a name="properties-assl"></a>プロパティ (ASSL)
   このリファレンス セクションでは、Analysis Services スクリプト言語 (ASSL) スキーマでオブジェクト プロパティの役割を果たす各要素の構文と使い方について説明します。  
@@ -91,43 +88,43 @@ ms.locfileid: "37173503"
 |[ConnectionString 要素&#40;ASSL&#41;](connectionstring-element-assl.md)|暗号化された接続文字列を含む、 [DataSource](../objects/datasource-element-assl.md)要素。|  
 |[ConnectionStringSecurity 要素&#40;ASSL&#41;](connectionstringsecurity-element-assl.md)|セキュリティ上の目的で、ユーザーのパスワードをデータ ソースの接続文字列から取り除くかどうかを指定します。|  
 |[要素のコンテンツ&#40;ASSL&#41;](content-element-assl.md)|内の列のコンテンツについて説明します、 [MiningStructure](../objects/miningstructure-element-assl.md)要素。|  
-|[Source 要素&#40;ComAssembly&#41; &#40;ASSL&#41;](createdtimestamp-element-assl.md)|親要素の読み取り専用の作成タイムスタンプを格納します。|  
-|[Source 要素&#40;メジャー&#41; &#40;ASSL&#41;](cubedimensionid-element-assl.md)|識別、 [CubeDimension](../data-type/cubedimension-data-type-assl.md)親要素に関連付けられた要素。|  
-|[SourceAttributeID 要素&#40;ASSL&#41;](cubeid-element-assl.md)|基になる属性の ID を含む、`Cube`レベル[要素に基づきます。|  
-|[SourceColumnID 要素&#40;ASSL&#41;](storagemode-element-assl.md)|親要素の現在のストレージ モードを指定します。|  
-|[要素の状態&#40;ASSL&#41;](../objects/member-element-assl.md)|`Kpi` 要素に関連付けられている時間ディメンションの現在のメンバーを定義します。|  
-|[StatusGraphic 要素&#40;ASSL&#41;](../objects/aggregation-element-assl.md)|そのインスタンスで、`MeasureGroup` の持続データを集計するか、またはキャッシュされているデータを集計するかを指定します。|  
-|[StopTime 要素&#40;ASSL&#41;](databaseid-element-assl.md)|不一致 `Database` 要素に関連付けられている `Binding` 要素を識別します。|  
-|[StorageLocation 要素&#40;ASSL&#41;](datasize-element-assl.md)|バイト単位のサイズが含まれています、 [DataItem](../data-type/dataitem-data-type-assl.md)要素。|  
-|[StorageMode 要素&#40;ASSL&#41;](datasourceid-element-assl.md)|親要素に関連付けられている `DataSource` 要素を識別します。|  
+|[CreatedTimestamp 要素&#40;ASSL&#41;](createdtimestamp-element-assl.md)|親要素の読み取り専用の作成タイムスタンプを格納します。|  
+|[CubeDimensionID 要素&#40;ASSL&#41;](cubedimensionid-element-assl.md)|識別、 [CubeDimension](../data-type/cubedimension-data-type-assl.md)親要素に関連付けられた要素。|  
+|[CubeID 要素&#40;ASSL&#41;](cubeid-element-assl.md)|識別、`Cube`要素に関連付けられている、[バインド](../data-type/binding-data-type-assl.md)要素。|  
+|[CurrentStorageMode 要素&#40;ASSL&#41;](storagemode-element-assl.md)|親要素の現在のストレージ モードを指定します。|  
+|[CurrentTimeMember 要素&#40;ASSL&#41;](../objects/member-element-assl.md)|`Kpi` 要素に関連付けられている時間ディメンションの現在のメンバーを定義します。|  
+|[DataAggregation 要素&#40;ASSL&#41;](../objects/aggregation-element-assl.md)|そのインスタンスで、`MeasureGroup` の持続データを集計するか、またはキャッシュされているデータを集計するかを指定します。|  
+|[DatabaseID 要素&#40;ASSL&#41;](databaseid-element-assl.md)|不一致 `Database` 要素に関連付けられている `Binding` 要素を識別します。|  
+|[DataSize 要素&#40;ASSL&#41;](datasize-element-assl.md)|バイト単位のサイズが含まれています、 [DataItem](../data-type/dataitem-data-type-assl.md)要素。|  
+|[DataSourceID 要素&#40;ASSL&#41;](datasourceid-element-assl.md)|親要素に関連付けられている `DataSource` 要素を識別します。|  
 |[DataSourceImpersonationInfo 要素&#40;ASSL&#41;](impersonationinfo-element-assl.md)|`Database` 要素のデータ ソースに接続するときの権限借用動作の指定に使用される情報を格納します。|  
-|[TableID 要素&#40;ASSL&#41;](datasourceviewid-element-assl.md)|Target 要素&#40;ASSL&#41;|  
-|[TargetType 要素&#40;ASSL&#41;](datatype-element-assl.md)|関連する要素のデータ型を定義します。|  
-|[識別される項目の項目の種類を識別、[ターゲット](dbschemaname-element-assl.md)要素。](dbschemaname-element-assl.md)|によって識別されるテーブル内の親要素によって使用されるスキーマの名前を含む、 [DbTableName](dbtablename-element-assl.md)要素。|  
-|[テキスト要素&#40;ASSL&#41;](dbtablename-element-assl.md)|親要素がバインドされているテーブルの名前を格納します。|  
-|[Timeout 要素&#40;ASSL&#41;](default-element-assl.md)|`DrillThroughAction` が既定のドリルスルー アクションであるかどうかを指定します。|  
-|[TrendGraphic 要素&#40;ASSL&#41;](defaultmeasure-element-assl.md)|`Cube` または `Perspective` 要素の既定のメジャーを定義する MDX 言語の式を格納します。|  
-|[Trimming 要素&#40;ASSL&#41;](defaultmember-element-assl.md)|親要素の既定のメンバーを識別する MDX 式を格納します。|  
-|[Type 要素&#40;アクション&#41; &#40;ASSL&#41;](defaultscript-element-assl.md)|Type 要素&#40;バインド&#41; &#40;ASSL&#41;|  
-|[Type 要素&#40;ClrAssemblyFile&#41; &#40;ASSL&#41;](value-element-assl.md)|関連付けられている、読み取り専用の既定値が含まれる[ServerProperty](../objects/serverproperty-element-assl.md)要素。|  
-|[.NET Framework アセンブリに属しているファイルの 1 つのファイルの種類を指定します。](deniedset-element-assl.md)|関連属性で拒否される権限の一覧を定義するセット式を格納します。|  
-|[Type 要素&#40;ディメンション&#41; &#40;ASSL&#41;](dependsondimensionid-element-assl.md)|親ディメンションが依存する別のディメンションの ID を格納します。|  
-|[Type 要素&#40;DimensionAttribute&#41; &#40;ASSL&#41;](description-element-assl.md)|親要素の説明を格納します。|  
-|[Type 要素&#40;MeasureGroup&#41; &#40;ASSL&#41;](dimensionid-element-assl.md)|ディメンションの ID を格納します。|  
-|[型を指定します、[します。](discretizationbucketcount-element-assl.md)|分離対象のバケット数を示します。|  
-|[Type 要素&#40;MeasureGroupAttribute&#41; &#40;ASSL&#41;](discretizationmethod-element-assl.md)|分離に使用するメソッドを定義します。|  
-|[型を含む、 [MeasureGroupAttribute](displayflag-element-assl.md)要素。](displayflag-element-assl.md)|関連付けられている `ServerProperty` 要素をユーザー インターフェイス コンポーネントで表示する必要があるかどうかを示す読み取り専用のヒントを格納します。|  
-|[Type 要素&#40;MiningStructureColumn&#41; &#40;ASSL&#41;](displayfolder-element-assl.md)|親要素を一覧表示するフォルダーを指定します。 開発者および管理者向けの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] アプリケーションでは、表示フォルダーを使用して複数の要素を視覚的に分類できる場合があります。|  
-|[型を含む、 [MiningStructureColumn](distribution-element-assl.md)要素。](distribution-element-assl.md)|`MiningStructure` 要素の列内でスカラー値を分散する方法を記述したプロバイダー固有の値を格納します。|  
-|[Edition 要素&#40;ASSL&#41;](edition-element-assl.md)|Type 要素&#40;パーティション&#41; &#40;ASSL&#41;|  
-|[Type 要素&#40;PerspectiveCalculation&#41; &#40;ASSL&#41;](enabled-element-assl.md)|親要素が有効になっているかどうかを示します。|  
-|[UnknownMember 要素&#40;ASSL&#41;](../objects/data-element-assl.md)|Usage 要素&#40;DimensionAttribute&#41; &#40;ASSL&#41;|  
-|[Usage 要素&#40;MiningModelColumn&#41; &#40;ASSL&#41;](estimatedcount-element-assl.md)|属性のメンバーの推定数を格納します。|  
-|[Version 要素&#40;ASSL&#41;](estimatedperformancegain-element-assl.md)|パーティションの読み取り専用の推定パフォーマンス向上率を格納します。|  
-|[Visibility 要素&#40;ASSL&#41;](estimatedrows-element-assl.md)|親要素によって表される行の推定数を格納します。|  
-|[Visible 要素&#40;ASSL&#41;](estimatedsize-element-assl.md)|親要素の読み取り専用の推定サイズ (バイト単位) を格納します。|  
-|[VisualTotals 要素&#40;ASSL&#41;](eventid-element-assl.md)|要素を書き込む&#40;ASSL&#41;|  
-|[WriteEnabled 要素&#40;ASSL&#41;](expression-element-assl.md)|親要素のコンテンツを定義する MDX 式を格納します。|  
+|[DataSourceViewID 要素&#40;ASSL&#41;](datasourceviewid-element-assl.md)|識別、 [DataSourceView](../objects/datasourceview-element-assl.md)要素に関連付けられている、`Binding`親要素。|  
+|[DataType 要素&#40;ASSL&#41;](datatype-element-assl.md)|関連する要素のデータ型を定義します。|  
+|[DbSchemaName 要素&#40;ASSL&#41;](dbschemaname-element-assl.md)|によって識別されるテーブル内の親要素によって使用されるスキーマの名前を含む、 [DbTableName](dbtablename-element-assl.md)要素。|  
+|[DbTableName 要素&#40;ASSL&#41;](dbtablename-element-assl.md)|親要素がバインドされているテーブルの名前を格納します。|  
+|[要素の既定&#40;ASSL&#41;](default-element-assl.md)|`DrillThroughAction` が既定のドリルスルー アクションであるかどうかを指定します。|  
+|[DefaultMeasure 要素&#40;ASSL&#41;](defaultmeasure-element-assl.md)|`Cube` または `Perspective` 要素の既定のメジャーを定義する MDX 言語の式を格納します。|  
+|[DefaultMember 要素&#40;ASSL&#41;](defaultmember-element-assl.md)|親要素の既定のメンバーを識別する MDX 式を格納します。|  
+|[DefaultScript 要素&#40;ASSL&#41;](defaultscript-element-assl.md)|既定値を識別する[MdxScript](../objects/mdxscript-element-assl.md)内の要素、 [MdxScripts](../collections/mdxscripts-element-assl.md)コレクション。|  
+|[DefaultValue 要素&#40;ASSL&#41;](value-element-assl.md)|関連付けられている、読み取り専用の既定値が含まれる[ServerProperty](../objects/serverproperty-element-assl.md)要素。|  
+|[DeniedSet 要素&#40;ASSL&#41;](deniedset-element-assl.md)|関連属性で拒否される権限の一覧を定義するセット式を格納します。|  
+|[DependsOnDimensionID 要素&#40;ASSL&#41;](dependsondimensionid-element-assl.md)|親ディメンションが依存する別のディメンションの ID を格納します。|  
+|[Description 要素&#40;ASSL&#41;](description-element-assl.md)|親要素の説明を格納します。|  
+|[DimensionID 要素&#40;ASSL&#41;](dimensionid-element-assl.md)|ディメンションの ID を格納します。|  
+|[DiscretizationBucketCount 要素&#40;ASSL&#41;](discretizationbucketcount-element-assl.md)|分離対象のバケット数を示します。|  
+|[DiscretizationMethod 要素&#40;ASSL&#41;](discretizationmethod-element-assl.md)|分離に使用するメソッドを定義します。|  
+|[DisplayFlag 要素&#40;ASSL&#41;](displayflag-element-assl.md)|関連付けられている `ServerProperty` 要素をユーザー インターフェイス コンポーネントで表示する必要があるかどうかを示す読み取り専用のヒントを格納します。|  
+|[DisplayFolder 要素&#40;ASSL&#41;](displayfolder-element-assl.md)|親要素を一覧表示するフォルダーを指定します。 開発者および管理者向けの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] アプリケーションでは、表示フォルダーを使用して複数の要素を視覚的に分類できる場合があります。|  
+|[Distribution 要素&#40;ASSL&#41;](distribution-element-assl.md)|`MiningStructure` 要素の列内でスカラー値を分散する方法を記述したプロバイダー固有の値を格納します。|  
+|[Edition 要素&#40;ASSL&#41;](edition-element-assl.md)|インスタンスの読み取り専用エディションを含む[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]によって表される、 [Server](../objects/server-element-assl.md)要素。|  
+|[要素を有効になっている&#40;ASSL&#41;](enabled-element-assl.md)|親要素が有効になっているかどうかを示します。|  
+|[EndOfData 要素&#40;ASSL&#41;](../objects/data-element-assl.md)|受信したデータの末尾を示す、 [PushedDataSource](../data-type/datasource-data-type-assl.md)要素。|  
+|[EstimatedCount 要素&#40;ASSL&#41;](estimatedcount-element-assl.md)|属性のメンバーの推定数を格納します。|  
+|[EstimatedPerformanceGain 要素&#40;ASSL&#41;](estimatedperformancegain-element-assl.md)|パーティションの読み取り専用の推定パフォーマンス向上率を格納します。|  
+|[EstimatedRows 要素&#40;ASSL&#41;](estimatedrows-element-assl.md)|親要素によって表される行の推定数を格納します。|  
+|[EstimatedSize 要素&#40;ASSL&#41;](estimatedsize-element-assl.md)|親要素の読み取り専用の推定サイズ (バイト単位) を格納します。|  
+|[EventID 要素&#40;ASSL&#41;](eventid-element-assl.md)|一意に識別する、[イベント](../objects/event-element-assl.md)の一部としてキャプチャされる要素を`Trace`要素。|  
+|[Expression 要素&#40;ASSL&#41;](expression-element-assl.md)|親要素のコンテンツを定義する MDX 式を格納します。|  
 |[Filter 要素&#40;バインド&#41; &#40;ASSL&#41;](filter-element-binding-assl.md)|親要素のコンテンツをフィルター処理する MDX 式を格納します。|  
 |[Filter 要素&#40;トレース&#41; &#40;ASSL&#41;](filter-element-trace-assl.md)|`Trace` フィルターを記述する XML ドキュメント フラグメントを格納します。|  
 |[FirstDayOfWeek 要素&#40;ASSL&#41;](firstdayofweek-element-assl.md)|`TimeBinding` 要素に対して週の最初の曜日を定義します。|  
@@ -176,13 +173,13 @@ ms.locfileid: "37173503"
 |[LogFileName 要素&#40;ASSL&#41;](logfilename-element-assl.md)|`Trace` 要素のログ ファイルのファイル名を格納します。|  
 |[LogFileRollover 要素&#40;ASSL&#41;](logfilerollover-element-assl.md)|指定のログ記録するかどうか`Trace`出力は、新しいファイルにロール オーバーする必要がありますまたはで指定されている最大ログ ファイル サイズときに停止してください[LogFileSize](logfilesize-element-assl.md)に到達します。|  
 |[LogFileSize 要素&#40;ASSL&#41;](logfilesize-element-assl.md)|ログ ファイルの最大サイズを MB 単位で指定します。|  
-|[ManagedProvider 要素&#40;ASSL&#41;](managedprovider-element-assl.md)|ph x="1" /&gt; データ型から派生した要素によって使用されているマネージド プロバイダーの名前を格納します。|  
+|[ManagedProvider 要素&#40;ASSL&#41;](managedprovider-element-assl.md)|`DataSource` データ型から派生した要素によって使用されているマネージド プロバイダーの名前を格納します。|  
 |[ManufacturingExtraMonthQuarter 要素&#40;ASSL&#41;](manufacturingextramonthquarter-element-assl.md)|`TimeBinding` 要素について追加の月を割り当てる製造期間の月を定義します。|  
 |[ManufacturingFirstMonth 要素&#40;ASSL&#41;](manufacturingfirstmonth-element-assl.md)|`TimeBinding` 要素の最初の製造月を定義します。|  
 |[ManufacturingFirstWeekOfMonth 要素&#40;ASSL&#41;](manufacturingfirstweekofmonth-element-assl.md)|`TimeBinding` 要素に対して製造月の最初の週を定義します。|  
 |[MasterDatasourceID 要素&#40;ASSL&#41;](masterdatasourceid-element-assl.md)|`Database` 要素のマスター データ ソース ID を格納します。|  
 |[Materialization 要素&#40;ASSL&#41;](materialization-element-assl.md)|メジャー グループと参照ディメンションの間のリレーションシップの種類を示します。|  
-|[MaxActiveConnections 要素&#40;ASSL&#41;](maxactiveconnections-element-assl.md)|`DataSource` データ型から派生した要素によって許可されている同時接続の最大数を格納します。|  
+|[MaxActiveConnections 要素&#40;ASSL&#41;](maxactiveconnections-element-assl.md)|ph x="1" /&gt; データ型から派生した要素によって許可されているコンカレント接続の最大数を格納します。|  
 |[MdxMissingMemberMode 要素&#40;ASSL&#41;](mdxmissingmembermode-element-assl.md)|欠落しているメンバーを MDX ステートメントでどのように処理するかを指定します。|  
 |[MeasureExpression 要素&#40;ASSL&#41;](measureexpression-element-assl.md)|メジャーを定義する MDX 式を格納します。|  
 |[MeasureGroupID 要素&#40;ASSL&#41;](measuregroupid-element-assl.md)|親要素、バインド、または不一致バインドに `MeasureGroup` を関連付けます。|  

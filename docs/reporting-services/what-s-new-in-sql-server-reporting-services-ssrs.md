@@ -1,19 +1,18 @@
 ---
 title: Reporting Services (SSRS) の新機能 | Microsoft Docs
-ms.date: 05/24/2018
+ms.date: 09/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e427312fcc73596c709d54252b27286d09372ce
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639780"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
@@ -21,17 +20,22 @@ ms.locfileid: "43268090"
 
 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の新機能について説明します。 ここでは、主な機能領域を扱います。新しいアイテムがリリースされた場合は更新します。
 
-  SQL Server の他の領域の新機能については、「[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)」、または「[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)」を参照してください。
-
- **ダウンロード** ![download](../analysis-services/media/download.png "download")
-
-- SQL Server 2017 Reporting Services をダウンロードするには、「**[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)**」に移動します。
-
 最新のリリース ノートについては、「[SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)」を参照してください。 
 
 Power BI Report Server については、「[Power BI Report Server とは](https://docs.microsoft.com/power-bi/report-server/get-started)」を参照してください。
 
-## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
+**ダウンロード** ![download](../analysis-services/media/download.png "download")
+
+SQL Server 2017 Reporting Services をダウンロードするには、「**[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)**」に移動します。
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="sql-server-2019-ctp-20-reporting-services"></a>SQL Server 2019 CTP 2.0 Reporting Services
+
+SQL Server vNext CTP 2.0 Reporting Services はプレビューで提供されていません。 現在のバージョンである [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md) をインストールしてください。 
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+## <a name="ssrs-2017"></a>SSRS 2017
 
 ### <a name="comments-on-reports"></a>レポートのコメント
 
@@ -49,9 +53,9 @@ Power BI Report Server については、「[Power BI Report Server とは](http
 
 最新のアプリケーションとカスタマイズを開発できるようにするため、SQL Server Reporting Services は OpenAPI に完全に対応する RESTful API をサポートするようになりました。 API の完全な仕様とドキュメントは、[swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) で入手できます。
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>レポート ビルダーおよび SQL Server Data Tools での DAX に対するクエリ デザイナーのサポート
+### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>レポート ビルダーおよび SQL Server Data Tools での DAX に対するクエリ デザイナーのサポート
 
-レポート ビルダーと SQL Server Data Tools (リリース候補) の最新リリースで、サポートされている SQL Server Analysis Services 表形式データ モデルに対するネイティブの DAX クエリが作成できるようになりました。 両方のツールでクエリ デザイナーを使用して、必要なフィールドをドラッグ アンド ドロップしたり、DAX クエリを自分で記述する代わりに自動生成させることができます。  
+レポート ビルダーと SQL Server Data Tools で、サポートされている SQL Server Analysis Services 表形式データ モデルに対して、ネイティブの DAX クエリが作成できるようになりました。 両方のツールでクエリ デザイナーを使用して、必要なフィールドをドラッグ アンド ドロップしたり、DAX クエリを自分で記述する代わりに自動生成させることができます。  
  
 詳細については、[Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
 
@@ -59,8 +63,9 @@ Power BI Report Server については、「[Power BI Report Server とは](http
 * [SQL Server Data Tools - リリース候補](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)のダウンロード
 
 > **注**: DAX のクエリ デザイナーは、SQL Server 2016+ に組み込まれた SSAS 表形式のデータ ソースでのみ使用できます。
+::: moniker-end
  
-## <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
+## <a name="ssrs-2016"></a>SSRS 2016
   
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  新しい [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] を利用できます。 これは、KPI、モバイル レポート、ページ分割されたレポート、Excel および Power BI Desktop ファイルが組み込まれた最新のポータルです。 以前のリリースの Report Manager がこの [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] に置き換えられています。 Mobile Report Publisher と Report Builder を [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] からダウンロードすることもできます。ClickOnce テクノロジは必要ありません。
@@ -186,7 +191,6 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 ## <a name="next-steps"></a>次の手順
 
 [Analysis Services の新機能](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)   
 [旧バージョンとの互換性](reporting-services-backward-compatibility.md)   
 [SQL Server 2016 の各エディションがサポートする Reporting Services の機能](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Reporting Services のアップグレードと移行](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

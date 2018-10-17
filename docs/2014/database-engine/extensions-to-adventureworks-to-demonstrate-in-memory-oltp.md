@@ -10,24 +10,24 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192192"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120388"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
     
 ## <a name="overview"></a>概要  
- このサンプルでは、新しい紹介[!INCLUDE[hek_2](../includes/hek-2-md.md)]機能で、一部の[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 新しいメモリ最適化テーブルとストアド プロシージャのネイティブ コンパイルを示していて、パフォーマンス上の利点を示すために使用できる[!INCLUDE[hek_2](../includes/hek-2-md.md)]します。  
+ このサンプルでは、[!INCLUDE[hek_2](../includes/hek-2-md.md)] に含まれている[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] の新機能を紹介します。 このサンプルで取り上げるのは、新しいメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、 [!INCLUDE[hek_2](../includes/hek-2-md.md)]のパフォーマンス上の利点も示します。  
   
 > [!NOTE]  
 >  SQL Server 2016 のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](https://msdn.microsoft.com/en-US/library/mt465764.aspx)」をご覧ください。  
   
  このサンプルは、AdventureWorks データベースの 5 つのテーブルをメモリ最適化テーブルに移行します。販売注文処理のデモ ワークロードも含まれています。 このデモ ワークロードを使用して、サーバーで [!INCLUDE[hek_2](../includes/hek-2-md.md)] を使用するパフォーマンス上の利点を確認できます。  
   
- サンプルの説明では、テーブルを[!INCLUDE[hek_2](../includes/hek-2-md.md)] に移行することによって生じるトレードオフについて触れ、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] のメモリ最適化テーブルでは (まだ) サポートされていない機能について記載しています。  
+ サンプルの説明では、テーブルを [!INCLUDE[hek_2](../includes/hek-2-md.md)] に移行することによって生じるトレードオフについて触れ、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]のメモリ最適化テーブルでは (まだ) サポートされていない機能について記載しています。  
   
  このサンプルのドキュメントは、次の内容で構成されています。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48192192"
   
 ##  <a name="Prerequisites"></a> 前提条件  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM-Evaluation、Developer、または Enterprise edition  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM - Evaluation、Developer、または Enterprise Edition  
   
 -   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に使用できるメモリが 16 GB 以上必要です。 ハードウェアに関する一般的なガイドラインについて[!INCLUDE[hek_2](../includes/hek-2-md.md)]ブログの投稿を参照してください。[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -81,15 +81,15 @@ ms.locfileid: "48192192"
      GO  
     ```  
   
-4.  データベース所有者を変更して、サーバーにログインします。それには、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ ウィンドウで次のコマンドを実行します。  
+4.  データベース所有者を変更して、サーバーにログインします。それには、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のクエリ ウィンドウで次のコマンドを実行します。  
   
     ```  
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  サンプル スクリプトをダウンロード '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' から[SQL Server 2014 RTM のインメモリ OLTP のサンプル](http://go.microsoft.com/fwlink/?LinkID=396372)ローカル フォルダーにします。  
+5.  "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" サンプル スクリプトを、「 [SQL Server 2014 RTM のインメモリ OLTP のサンプル](http://go.microsoft.com/fwlink/?LinkID=396372) 」からローカル フォルダーにダウンロードします。  
   
-6.  "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" スクリプトで、[!INCLUDE[hek_2](../includes/hek-2-md.md)] チェックポイント ファイルの対象の場所を指すように、変数 "checkpoint_files_location" の値を更新します。 チェックポイント ファイルは、シーケンシャル IO パフォーマンスに優れたドライブに配置します。  
+6.  "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" スクリプトで、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] チェックポイント ファイルの対象の場所を指すように、変数 "checkpoint_files_location" の値を更新します。 チェックポイント ファイルは、シーケンシャル IO パフォーマンスに優れたドライブに配置します。  
   
      AdventureWorks2014 データベースを指すように変数 'database_name' の値を更新します。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48192192"
   
 -   *計算列* - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
   
--   *外部キー制約*メモリ最適化テーブルではサポートされていません[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 また、SalesOrderHeader_inmem はサンプル ワークロードのホット テーブルであり、外部キー制約には、すべての DML 操作に対して追加の処理が必要です。これは、このテーブルには、この制約で参照される他のすべてのテーブル内の参照が必要だからです。 したがって、アプリによって参照整合性が確保されているものと見なされ、行の挿入時には参照整合性は検証されません。 このテーブルのデータの参照整合性は、ストアド プロシージャ dbo.usp_ValidateIntegrity を使用して、次のスクリプトで確認できます。  
+-   *"外部キー制約"* は、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]のメモリ最適化テーブルではサポートされていません。 また、SalesOrderHeader_inmem はサンプル ワークロードのホット テーブルであり、外部キー制約には、すべての DML 操作に対して追加の処理が必要です。これは、このテーブルには、この制約で参照される他のすべてのテーブル内の参照が必要だからです。 したがって、アプリによって参照整合性が確保されているものと見なされ、行の挿入時には参照整合性は検証されません。 このテーブルのデータの参照整合性は、ストアド プロシージャ dbo.usp_ValidateIntegrity を使用して、次のスクリプトで確認できます。  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -223,7 +223,7 @@ ms.locfileid: "48192192"
   
 -   *エイリアス UDT* – 元のテーブルでは、ユーザー定義データ型 dbo.Flag が使用されます。これは、システム データ型 bit と同じです。 移行したテーブルでは、代わりに bit データ型が使用されます。  
   
--   *BIN2 照合順序*– 名前と ProductNumber 列は、インデックス キーに含まれ、BIN2 照合順序であるため[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 ここでは、アプリケーションが、照合順序の詳細 (大文字と小文字を区別など) に依存しないものと見なされます。  
+-   *"BIN2 照合順序"* – The columns Name and ProductNumber are included in index keys, and must thus have s in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]では BIN2 照合順序が必要です。 ここでは、アプリケーションが、照合順序の詳細 (大文字と小文字を区別など) に依存しないものと見なされます。  
   
 -   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
@@ -412,7 +412,7 @@ ms.locfileid: "48192192"
   
 -   -S 接続先の [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前  
   
--   -E Windows 認証を使用して接続 (既定)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、オプションとして –U および -P を使用して、ユーザー名とパスワードをそれぞれ指定  
+-   -E Windows 認証を使用して接続 (既定)。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、オプションとして –U および -P を使用して、ユーザー名とパスワードをそれぞれ指定  
   
 -   -d データベースの名前。この例では AdventureWorks2014  
   
@@ -541,7 +541,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
 -   同時実行トランザクションの数: 1 つのスレッドでワークロードを実行すると、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
   
--   ph x="1" /&gt; で使用できるコアが少ない: つまり、低レベルのコンカレンシーがシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションをコンカレンシーできないからです。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用できるコアが少ない: つまり、低レベルのコンカレンシーがシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションをコンカレンシーできないからです。  
   
     -   現象: ディスク ベース テーブルでワークロードを実行しているときに CPU 使用率が高い場合、競合の数はそれほど多くありません。これは、コンカレンシーが不足していることを示します。  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- データの合計サイズが約 6.5 GB であることがわかります。 SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem テーブルのインデックスのサイズが、販売注文を挿入する前のインデックスのサイズと同じであることに注意してください。 インデックスのサイズが変わらなかったのは、この両方のテーブルがハッシュ インデックスを使用しているからです。ハッシュ インデックスは静的です。  
+ データの合計サイズが約 6.5 GB であることがわかります。 SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem のインデックスのサイズが、インデックスのサイズと同じ販売注文を挿入する前に注目してください。 インデックスのサイズが変わらなかったのは、この両方のテーブルがハッシュ インデックスを使用しているからです。ハッシュ インデックスは静的です。  
   
 #### <a name="after-demo-reset"></a>デモのリセット後  
  ストアド プロシージャ Demo.usp_DemoReset を使用すると、デモをリセットできます。 これにより SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem テーブルのデータが削除され、元の SalesOrderHeader テーブルと SalesOrderDetail テーブルからデータが再送信されます。  

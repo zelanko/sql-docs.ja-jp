@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0e371ceef793daea080e3a588f6b87161083a6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205682"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208482"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、インターネット インフォメーション サービス (IIS) によってホストされる Web アプリケーションです。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のみで Internet Explorer (IE) 7 またはそれ以降は動作します。 IE 7 以前のバージョン、Microsoft Edge、Chrome はサポートされていません。  
@@ -51,7 +48,7 @@ ms.locfileid: "37205682"
   
 ||  
 |-|  
-|Web サーバー<br /><br /> HTTP 基本機能<br /><br /> 静的なコンテンツ<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> アプリケーション開発<br /><br /> ASP.NET<br /><br /> .NET 拡張性<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> Security<br /><br /> [Windows 認証]<br /><br /> 要求フィルター<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> 管理ツール<br /><br /> IIS 管理コンソール|  
+|Web サーバー<br /><br /> HTTP 基本機能<br /><br /> 静的なコンテンツ<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> アプリケーション開発<br /><br /> ASP.NET<br /><br /> .NET 拡張性<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> セキュリティ<br /><br /> [Windows 認証]<br /><br /> 要求フィルター<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> 管理ツール<br /><br /> IIS 管理コンソール|  
   
 ### <a name="role-and-role-services-windows-server-2012-or-windows-8-operating-systems"></a>ロールとロール サービス (Windows Server 2012 または Windows 8 オペレーティング システム)  
  Windows Server 2012 では、Microsoft 管理コンソール (MMC) にある **サーバー マネージャー**を使用して、 **Web サーバー (IIS)** ロールと、次に示す必要なロール サービスをインストールできます。  
@@ -61,7 +58,7 @@ ms.locfileid: "37205682"
   
 ||  
 |-|  
-|[インターネット インフォメーション サービス]<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注: WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> [パフォーマンス]<br /><br /> 静的なコンテンツの圧縮<br /><br /> Security<br /><br /> 要求フィルター<br /><br /> [Windows 認証]|  
+|[インターネット インフォメーション サービス]<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注: WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> [パフォーマンス]<br /><br /> 静的なコンテンツの圧縮<br /><br /> セキュリティ<br /><br /> 要求フィルター<br /><br /> [Windows 認証]|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>機能 (Windows Server 2008 または Windows Server 2008 R2、Windows 7 オペレーティング システム)  
  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]使用する Windows Server 2008 R2、または**サーバー マネージャー**次をインストールする機能に必要です。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d758ef319c61d7868c2114372f353a374c38230
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107482"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>レッスン 2: Market Basket マイニング構造へのマイニング モデルの追加
   このレッスンで作成した Market Basket マイニング構造に 2 つのマイニング モデルを追加[レッスン 1: Market Basket マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)します。 これらのマイニング モデルを使用すると、予測を作成できます。  
