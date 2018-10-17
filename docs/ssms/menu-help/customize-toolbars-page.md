@@ -1,31 +1,27 @@
 ---
-title: '[ユーザー設定] ([ツール バー] ページ) | Microsoft Docs'
+title: '[ユーザー設定] - ([ツール バー] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-menu
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.customize.toolbars
 - sql13.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5531cc4ab340bafb7ea72ee811f987e011974dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c904a5df91083b7a1bf5d9b6df0219bfaca213d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761070"
 ---
-# <a name="customize-toolbars-page"></a>[ユーザー設定] \([ツール バー] ページ)
+# <a name="customize-toolbars-page"></a>[ユーザー設定] - ([ツール バー] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[ツール バー]** タブを使用すると、ツール バーの作成、名前の変更、削除、リセットができます。 このタブを開くには、 **[ツール]** メニューの **[ユーザー設定]** をクリックした後、 **[ツール バー]** をクリックします。  
   
