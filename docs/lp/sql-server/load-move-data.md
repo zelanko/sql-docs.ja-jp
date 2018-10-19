@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure ドキュメント
-description: Microsoft Azure クラウド サービスを使用して強力なアプリケーションを構築および管理する方法について説明します。 ドキュメント、コード例、チュートリアルなどを取得します。
+title: SQL Server - データの読み込みと移動
+description: SQL Server を使用してデータベースとデータの読み込み、移動、移行を実行するのに役立つ機能について調べます。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: e217fb5094b4b277fd791053cc7eec1d211d23a8
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 50ad47c11ccba509399104f019aaa07080299fd8
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797872"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390854"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -142,6 +142,25 @@ ms.locfileid: "48797872"
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Database Experimentation Assistant (DEA)</h3>
+                                                    <p>既存のワークロードに対する SQL Server の対象バージョンの評価をサポートします。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>データの読み込みと移動</h2>
@@ -204,25 +223,6 @@ ms.locfileid: "48797872"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sql/relational-databases/replication/sql-server-replication/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/load-move-data/replication.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>のレプリケーション</h3>
-                                                    <p> あるデータベースから別のデータベースへのデータやデータベース オブジェクトのコピーおよび配布を行い、一貫性を維持するためにデータベース間の同期を行うための一連のテクノロジです。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="/sql/integration-services/sql-server-integration-services">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -241,6 +241,25 @@ ms.locfileid: "48797872"
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/relational-databases/replication/sql-server-replication/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/replication.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>のレプリケーション</h3>
+                                                    <p> あるデータベースから別のデータベースへのデータやデータベース オブジェクトのコピーおよび配布を行い、一貫性を維持するためにデータベース間の同期を行うための一連のテクノロジです。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -252,10 +271,16 @@ ms.locfileid: "48797872"
         <h2>情報を共有しましょう</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> SQL ドキュメントへの投稿 </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 投稿 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> SQL ドキュメントのフィードバック </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> ヘルプ </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> フィードバック </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> アンケート </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> ブログ </a>
