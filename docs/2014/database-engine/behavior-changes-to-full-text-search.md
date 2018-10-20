@@ -14,24 +14,24 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198692"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461017"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>フルテキスト検索の動作の変更
   このトピックでは、フルテキスト検索の動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の機能や操作方法が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のバージョンと異なっています。  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>におけるフルテキスト検索の動作の変更 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] におけるフルテキスト検索の動作の変更  
  今後、情報が追加されていきます。  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>におけるフルテキスト検索の動作の変更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] におけるフルテキスト検索の動作の変更  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、アメリカ英語 (LCID 1033) とイギリス英語 (LCID 2057) 用に新しいバージョンのワード ブレーカーとステミング機能がインストールされます。 ただし、以前の動作を維持する場合は、これらのコンポーネントの以前のバージョンに切り替えることができます。 詳細については、「[米国英語と英国英語に使用されるワード ブレーカーを変更する方法](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>新しいワード ブレーカーとステミング機能のインストール  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] すべてのワード ブレーカーとステミング機能、フルテキスト検索およびセマンティック検索で使用されるを更新します。 インデックスのコンテンツとクエリの結果の一貫性を保つために、既存のフルテキスト インデックスを再作成することをお勧めします。  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、フルテキスト検索とセマンティック検索で使用されるすべてのワード ブレーカーおよびステミング機能が更新されます。 インデックスのコンテンツとクエリの結果の一貫性を保つために、既存のフルテキスト インデックスを再作成することをお勧めします。  
   
 1.  英語向けの新しいワード ブレーカーがあります。 以前の動作を維持する必要がある場合は、「[米国英語と英国英語に使用されるワード ブレーカーの変更](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48198692"
      フルテキスト エンジンは、FILESTREAM BLOB の内容のインデックスを作成します。 イメージなど、インデックスを作成しても役に立たないファイルもあります。 FILESTREAM BLOB が更新されると、インデックスが再作成されます。  
   
 ## <a name="see-also"></a>参照  
- [フルテキスト検索]((../relational-databases/search/full-text-search.md)   
+ [フルテキスト検索](../relational-databases/search/full-text-search.md)   
  [フルテキスト検索の旧バージョンとの互換性](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [フルテキスト検索をアップグレードします。](../relational-databases/search/upgrade-full-text-search.md)   
  [フルテキスト検索の概要](../relational-databases/search/get-started-with-full-text-search.md)  

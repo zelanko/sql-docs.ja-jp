@@ -1,35 +1,31 @@
 ---
 title: データベース ユーザー (SQL Server Machine Learning) としての SQLRUserGroup の追加 |Microsoft Docs
-description: SQL Server Machine Learning Services のデータベース ユーザーとしての SQLRUserGroup を追加する方法。
+description: ループバック接続は暗黙の認証を使用して、ワーカー アカウントは id の変換、呼び出し元のユーザーに、サーバーにログインできるように、データベース ユーザーとして SQLRUserGroup を追加します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/10/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fc5294453def64d13cc43a74a8a5fb299c3e23e3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100323"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419087"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>データベース ユーザーとしての SQLRUserGroup の追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-データベース ログインを作成、 [SQLRUserGroup](../concepts/security.md#sqlrusergroup)ターゲットがデータまたは SQL Server インスタンスに対する操作の場合は、R と Python スクリプトから送信された信頼関係接続を許可します。 
+データベース ログインを作成[SQLRUserGroup](../concepts/security.md#sqlrusergroup)ときに、[ループバック接続をループ](../../advanced-analytics/concepts/security.md#implied-authentication)、スクリプトを指定します、*信頼関係接続*、およびオブジェクトの実行に使用される id含まれています、コードは、Windows ユーザー アカウント。
 
-SQL Server ログインで接続文字列、または完全に指定されたユーザー名とパスワードを含むスクリプトでは、ログインを作成する必要はありません。
+接続がある信頼された`Trusted_Connection=True`接続文字列にします。 SQL Server では、信頼関係接続を指定する要求を受信したときに、現在の Windows ユーザーの id が、ログインを持つかどうかをチェックします。 ワーカー アカウントとして実行すると、外部プロセス用 (から MSSQLSERVER01 など**SQLRUserGroup**)、それらのアカウントでは、既定では、ログインはありませんので、要求は失敗します。
 
-## <a name="when-a-login-is-required"></a>ログインが必要な場合
-
-R または Python スクリプトには、信頼関係接続を指定する接続文字列が含まれている場合 (たとえば、"Trusted_Connection = True")、追加の構成は、ユーザー id の適切なプレゼンテーションの SQL Server に必要です。 外部のプロセスで実行されているため、 **SQLRUserGroup** MSSQLSERVER01、信頼されたユーザーなどのワーカー アカウントは、worker の id として表示されます。 この id に SQL Server へのログイン権限があるないために、追加しない限り接続が失敗する信頼された**SQLRUserGroup**データベース ユーザーとして。 詳細については、次を参照してください。 [*暗黙の認証*](../../advanced-analytics/concepts/security.md#implied-authentication)します。
-
-スタート パッドがスクリプトとプロセスを実行するワーカー アカウントを起動した元のユーザーのマッピングを保持することを思い出してください。 ワーカー アカウントの信頼関係接続が完了すると、元の呼び出し元ユーザーの id が引き継ぎ、データを取得するために使用します。 Db_datareader 権限を付与する必要はありません**SQLRUserGroup**します。
+接続エラーを回避するには、提供することにより**SQLServerRUserGroup** SQL Server ログインをします。 Id と外部プロセスの詳細については、次を参照してください。[機能拡張フレームワークのセキュリティの概要](../concepts/security.md)します。
 
 > [!Note]
->  必ず**SQLRUserGroup** 「ローカル ログオンを許可」権限します。 既定では、すべての新しいローカル ユーザーにこの権限が与えられますが、一部の組織では、厳しいグループ ポリシーを適用する場合があります。
+>  必ず**SQLRUserGroup** 「ローカル ログオンを許可」権限します。 既定では、すべての新しいローカル ユーザーにこの権限が与えられますが、組織によっては、厳しいグループ ポリシーにはこの権限も無効にする可能性があります。
 
 ## <a name="create-a-login"></a>ログインを作成します
 
@@ -54,9 +50,9 @@ R または Python スクリプトには、信頼関係接続を指定する接�
 5. 以降の 1 つが表示されるまで、サーバー上のグループ アカウントの一覧をスクロール`SQLRUserGroup`します。
     
     + スタート パッド サービスに関連付けられているグループの名前、_既定のインスタンス_は常に**SQLRUserGroup**R または Python をインストールするかどうかに関係なく、します。 このアカウントの既定のインスタンスのみを選択します。
-    + 使用する場合、_名前付きインスタンス_、インスタンス名の既定の worker グループの名前、名前に追加されます`SQLRUserGroup`します。 そのため、インスタンスは、"MLTEST"という名前は、このインスタンスの既定のユーザー グループ名なります**SQLRUserGroupMLTest**します。
+    + 使用する場合、_名前付きインスタンス_、インスタンス名の既定の worker グループの名前、名前に追加されます`SQLRUserGroup`します。 たとえば場合は、インスタンスは、"MLTEST"という名前は、このインスタンスの既定のユーザー グループ名は**SQLRUserGroupMLTest**します。
  
-     ![サーバーのグループの例](media/implied-auth-login5.png "サーバー上のグループの例")
+ ![サーバーのグループの例](media/implied-auth-login5.png "サーバー上のグループの例")
    
 5. クリックして**OK**高度な検索 ダイアログ ボックスを閉じます。
 
@@ -66,3 +62,8 @@ R または Python スクリプトには、信頼関係接続を指定する接�
 6. をクリックして**OK**を閉じるにはもう一度、 **[ユーザーまたはグループ**] ダイアログ ボックス。
 
 7. **ログイン - 新規**ダイアログ ボックスで、をクリックして**OK**。 既定では、ログインは **Public** ロールに割り当てられ、データベース エンジンに接続するためのアクセス許可を与えられます。
+
+## <a name="next-steps"></a>次の手順
+
++ [セキュリティの概要](../concepts/security.md)
++ [機能拡張フレームワーク](../concepts/extensibility-framework.md)

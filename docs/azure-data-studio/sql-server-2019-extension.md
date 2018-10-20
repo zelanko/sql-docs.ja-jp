@@ -5,18 +5,18 @@ ms.custom: tools|sos
 ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168799"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411169"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
 
@@ -28,11 +28,11 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
 1. SQL Server 2019 拡張機能 (プレビュー) の .vsix ファイルをローカル ディレクトリにダウンロードするには。
 
-   |プラットフォーム|ダウンロード|リリース日|
-   |:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 年 9 月 24 日|
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 年 9 月 24 日 |
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 年 9 月 24 日 |
+   |プラットフォーム|ダウンロード|リリース日|バージョン
+   |:---|:---|:---|:---|
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|2018 年 10 月 18 日|0.7.2 です。
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|2018 年 10 月 18 日 |0.7.2 です。
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|2018 年 10 月 18 日 |0.7.2 です。
 
 1. Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。
 
@@ -41,6 +41,18 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 1. **再読み込み**を選択して拡張機能を有効にします(初めて拡張機能をインストールするときのみ必要です)。
 
 1. 再読み込みした後、拡張機能の依存関係がインストールされます。 [出力] ウィンドウで進行状況を表示して、まで時間がかかる可能性があります。
+
+## <a name="release-notes-v072"></a>リリース ノート (v0.7.2)
+* Azure リソース エクスプ ローラーでは、Azure Data Studio に組み込まれましたと、この拡張機能から削除されました。 これに関するフィードバックをありがとうございます。
+* Markdown の数のセルと notebook のパフォーマンスを改善しました。
+* ノートブックにコードの自動サイズ セルです。 セルのツールバーに基づく最小サイズはこのまだあります。
+* Notebook の依存関係をインストールするときにユーザーに通知します。 Windows で具体的にはこのことができます、長い時間がかかる、タスク ビューの通知が表示されるようになりましたので。
+* Notebook の依存関係を再インストールをサポートします。 これは、ユーザー以前閉じた Azure Data Studio 途中のインストールを使用する場合に便利です。
+* ノートブックのセルの実行の取り消しをサポートします。
+* 信頼性の向上と、外部データの作成ウィザードを使用して、具体的には接続エラーが発生した場合。
+* Polybase が有効になっているか、ターゲット サーバーで実行されている場合は、外部データの作成ウィザードの使用をブロックします。
+* スペル チェックし、SQL Server 2019 と外部データの作成に関連する修正プログラムの名前を付けします。
+* エラーの数が多い、Azure Data Studio デバッグ コンソールから削除されます。
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 ビッグ データ クラスター サポート
 
@@ -70,16 +82,6 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 * リモートで実行している場合に接続する SQL Server のビッグ データ クラスター エンドポイントを選択 (これは必要ありません Python 3 のローカル開発用)。
 * Notebook のヘッダーのボタンを使用してコードまたは markdown のセルを追加します。 各セルの左側にごみ箱のアイコンのセルを削除します。
 * 再生ボタン コードのセルを持つセルを実行し、マークダウンの編集を切り替え、目のアイコンでプレビュー
-
-
-## <a name="azure-resource-explorer"></a>Azure リソース エクスプ ローラー
-
-* Azure へのサインイン、Azure Data Studio の左下にあるユーザー アイコンをクリックして、Azure へのサインイン ダイアログに従って。
-* サインインすると、三角形の Azure アイコンの左側バーの Azure データ Studio でクリックし、サブスクリプションに関連付けられている SQL のリソースを表示するツリーを展開します。
-* 右クリックするか、SQL database または SQL Server 接続ダイアログを開くのプラグ アイコンをクリックします。 接続リソース、Azure Data Studio オブジェクト エクスプ ローラーを追加して、パスワードを入力します。
-
-詳細については、次を参照してください。 [Azure リソース エクスプ ローラー](azure-resource-explorer.md)します。
-
 
 ## <a name="polybase-create-external-table-wizard"></a>Polybase 外部テーブルのウィザードを作成します。
 

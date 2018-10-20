@@ -4,18 +4,18 @@ description: このチュートリアルでは、Azure Data Studio データベ�
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3c71ee636eead33ab1beefed8ddeb72135c2828
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038980"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355993"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>チュートリアル: テーブル領域使用状況分析ウィジェットを使用する例を有効にします。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

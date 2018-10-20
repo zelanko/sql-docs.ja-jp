@@ -3,18 +3,18 @@ title: SQL Server 2019 で Java 言語の拡張機能 |Microsoft Docs
 description: Java 言語の拡張機能を使用して SQL Server 2019 の Java コードを実行します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8acb0a72435306cdec8740ffb41ff499eea61fac
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 2d69a255c56c3b15051a393b74eb1492a4f830f4
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715157"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359339"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>SQL Server 2019 で Java 言語の拡張機能 
 
@@ -24,33 +24,118 @@ SQL Server 2019 以降で実行できるカスタムの Java コード、[拡張
 
 プログラミング言語拡張子と同様、システム ストアド プロシージャ[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)はコンパイル済みの Java コードを実行するためのインターフェイスです。
 
-## <a name="1---feature-installation"></a>1-機能のインストール
+## <a name="prerequisites"></a>前提条件
 
-Java 言語の拡張機能をインストールするには、Windows または Linux には、SQL Server 2019 セットアップを実行します。 SQL Server 2019 データベース エンジンのインスタンスが必要です。 以前のバージョンに Java の統合を追加することはできません。
+SQL Server の 2019 が必要です。 以前のバージョンの Java 統合ではありません。 
 
-Windows では、開始、[インストール ウィザード](../install/sql-machine-learning-services-windows-install.md)します。 機能の選択 で、次のように選択します。 **Machine Learning サービス (データベース)** します。 Java の統合は、機械学習ライブラリが付属していません、これは、機能拡張フレームワークを提供するセットアップ オプションです。 希望する場合は、R と Python を省略できます。
+Java バージョンの要件は、Windows および Linux 全体では異なります。 Java ランタイム環境 (JRE) が最低限の要件が、Jdk、Java コンパイラまたはパッケージを開発する必要がある場合に便利です。 JDK は、JDK をインストールする場合、すべて紹介するため、JRE の必要はありません。
 
-Linux では、インストール、[データベース エンジン](https://docs.microsoft.com/sql/linux/sql-server-linux-setup)、だけでなく[機能拡張のパッケージと Java の拡張機能パッケージ](../../linux/sql-server-linux-setup-machine-learning.md)します。
+| オペレーティング システム | Java のバージョン | JRE のダウンロード | JDK ダウンロード |
+|------------------|--------------|--------------|--------------|
+| Windows          | 1.10         | [JRE 10](http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
+| Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
 
-次の例では、各 Linux オペレーティング システムの構文を示します。
+Linux では、 **mssql server extensibility java**がインストールされていない場合にパッケージが JRE 1.8 に自動的にインストールされます。 インストール スクリプトは、JAVA_HOME という環境変数に JVM パスを追加する必要があります。
+
+Windows をお勧め/Program ファイルの既定の JDK をインストール/フォルダーを可能な場合。 それ以外の場合、実行可能ファイルへのアクセス許可を付与するには、追加の構成が必要です。 詳細については、次を参照してください。、 [(Windows) のアクセス許可を付与](#perms-nonwindows)このドキュメントの「します。
+
+> [!Note]
+> Java は、下位互換性があること、以前のバージョンは使えるかもしれませんが、この初期の CTP リリースのサポートされていると、テスト対象のバージョンは、表に示すを指定します。
+
+<a name="install-on-linux"></a>
+
+## <a name="install-on-linux"></a>Linux をインストールします。
+
+インストールすることができます、[データベース エンジンおよび Java 拡張機能をまとめて](../../linux/sql-server-linux-setup-machine-learning.md#chained-installation)、または既存のインスタンスに Java のサポートを追加します。 次の例では、既存のインストールに Java 拡張機能を追加します。  
 
 ```bash
 # RedHat install commands
-sudo yum install mssql-server-extensibility
 sudo yum install mssql-server-extensibility-java
 
 # Ubuntu install commands
-sudo apt-get install mssql-server-extensibility
 sudo apt-get install mssql-server-extensibility-java
 
 # USE install commands
-sudo zypper install mssql-server-extensibility
 sudo zypper install mssql-server-extensibility-java
 ```
 
-## <a name="2---configuration"></a>2-構成
+インストールするときに**mssql server extensibility java**がインストールされていない場合に、パッケージが JRE 1.8 に自動的にインストールされます。 JVM のパスは、JAVA_HOME という環境変数にそれも追加されます。
 
-SQL Server Management Studio または TRANSACT-SQL スクリプトを実行する別のツールを使用して、データベース エンジン インスタンスに対する外部スクリプトの実行を構成します。
+次の手順は、インストールを完了すると、[外部スクリプト実行を構成する](#configure-script-execution)します。
+
+> [!Note]
+> インターネットに接続されたデバイスで、パッケージの依存関係がダウンロードされ、メイン パッケージのインストールの一部としてインストールします。 詳細については、オフラインの設定などを参照してください[Linux に SQL Server Machine Learning をインストール](../../linux/sql-server-linux-setup-machine-learning.md)します。
+
+<a name="install-on-windows"></a>
+
+## <a name="install-on-windows"></a>Windows へのインストール
+
+1. [セットアップを実行](../install/sql-machine-learning-services-windows-install.md)SQL Server 2019 をインストールします。
+
+2. 機能の選択を取得するときに選択**Machine Learning サービス (データベース)** します。 
+
+   Java の統合は、機械学習ライブラリが付属していません、これは、機能拡張フレームワークを提供するセットアップ オプションです。 希望する場合は、R と Python を省略できます。
+
+3. インストール ウィザードを終了し、次の 2 つのタスクを続行します。
+
+### <a name="add-the-javahome-variable"></a>JAVA_HOME 変数を追加します。
+
+JAVA_HOME は、Java のインタープリターの場所を指定する環境変数です。 この手順で、Windows 上のシステム環境変数を作成します。
+
+1. 検索し、JDK と JRE のインストール パス (たとえば、C:\Program Files\Java\jdk-10.0.2) をコピーします。
+
+  CTP 2.0 で基本 jdk フォルダーに JAVA_HOME を設定だけが、Java 1.10 します。 
+
+  Java 1.8 の場合、JDK (たとえば、"C:\Program Files\Java\jdk1.8.0_181\bin\server"での Windows で jvm.dll に到達するパスを拡張します。 または、JRE のベース フォルダーをポイントすることができます:"C:\Program Files\Java\jre1.8.0_181"。
+
+2. コントロール パネルで、開く**システムとセキュリティ**、オープン**システム**、 をクリック**システム プロパティの高度な**します。
+
+3. クリックして**環境変数**します。
+
+4. JAVA_HOME の新しいシステム変数を作成します。
+
+   ![Java ホームの環境変数を](../media/java/env-variable-java-home.png "Java 用のセットアップ")
+
+<a name="perms-nonwindows"></a>
+
+### <a name="grant-permissions-to-java-executables"></a>Java 実行可能ファイルへのアクセス許可の付与
+
+既定では、外部プロセスを実行するアカウントがアクセスできない JRE または JDK のファイルにします。 このセクションでは、アクセスを許可するアクセス許可を付与する次の PowerShell スクリプトを実行します。
+
+1. 検索し、JDK または JRE のインストールの場所をコピーします。 たとえば、C:\Program Files\Java\jdk-10.0.2 があります。
+
+2. 管理者権限では、PowerShell を開きます。 このタスクを慣れていない場合は、次を参照してください。[今回](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/)ヒント。
+
+3. 次のスクリプトを許可する実行**SQLRUserGroup** Java 実行可能ファイルへのアクセス許可。 
+
+  **SQLRUserGroup**外部プロセスを実行する アクセス許可を指定します。 既定では、このグループのメンバーの権限を R と Python プログラム、SQL Server、Java がインストールされているファイル。 Java 実行可能ファイルを実行するに与える必要がある**SQLRUserGroup**そのアクセス許可。
+
+   ```powershell
+   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>"
+   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("SQLRUsergroup","FullControl","Allow")
+   $Acl.SetAccessRule($Ar)
+   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
+   ```
+4. 付与する次のスクリプトを実行**ALL APPLICATION PACKAGES**のアクセス許可。 
+
+  SQL Server の 2019 でコンテナーに置き換えますワーカー アカウント分離メカニズムとしてメンバーでは、スタート パッド サービス アカウントの id で、コンテナー内で実行中のプロセス、 **SQLRUserGroup**します。 詳細については、次を参照してください。[インストールの SQL Server の 2019 の相違](../install/sql-machine-learning-services-ver15.md)します。
+
+   ```powershell
+   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>" 
+   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("ALL APPLICATION PACKAGES","FullControl","Allow") 
+   $Acl.SetAccessRule($Ar) 
+   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
+   ```
+
+5. SQL Server で実行する .class または .jar ファイルを含む任意の Java classpath フォルダーの以前の 2 つの手順を繰り返します。 C:\JavaPrograms\my-app のようなパスでコンパイルされたプログラムを保持する場合の付与など**SQLRUserGroup**と**ALL APPLICATION PACKAGES**フォルダーに対する権限、プログラムを読み込むことができるようにします。
+
+  ルート フォルダーから始まる完全なパスでアクセス許可を付与してください。 含まれるフォルダーのみに対する権限をコードの読み込みのための十分なことはできません。
+
+<a name="configure-script-execution"></a>
+
+## <a name="configure-script-execution"></a>スクリプトの実行を構成します。
+
+この時点では、Linux または Windows での Java コードを実行するほぼ準備が完了したら。 最後の手順としては、SQL Server Management Studio または外部スクリプトの実行を有効にする TRANSACT-SQL スクリプトを実行している他のツールに切り替えます。
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1
@@ -58,69 +143,19 @@ SQL Server Management Studio または TRANSACT-SQL スクリプトを実行す�
 -- No restart is required after this step as of SQl Server 2019
  ```
 
-## <a name="3---bring-your-own-java"></a>3 - 独自の Java を表示します。
+## <a name="verify-installation"></a>インストールの確認
 
-R や Python などの以前の言語統合から 1 つの違いは、ユーザーが制御する JVM SQL Server で使用するためです。
+インストールが動作を確認するには、作成して実行を[サンプル アプリケーション](java-first-sample.md)JDK をインストールした、ファイルを配置する前に構成した classpath を使用します。
 
-| Java のバージョン | オペレーティング システム |
-|--------------|------------------|
-| [Java 1.10](http://jdk.java.net/10/)   | Windows |
-| Java 1.8   | Linux | 
+## <a name="differences-in-ctp-20"></a>CTP 2.0 での相違点
 
-Java は、下位互換性があること、以前のバージョンは使えるかもしれませんが、この初期の CTP リリースのサポートされていると、テスト対象のバージョンは、表に示すを指定します。
-
-> [!Note]
->Java で SQL Server を実行する技術的には必要なだけ、 [Java Runtime Environment](http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) (JRE) をインストールします。 JDK が開発キット、Java コンパイラおよびその他の開発を含むパッケージに関連します。 既にしている場合、開発環境だけで、サーバー コンピューターでの Java ランタイム、JDK のインストール手順を無視し、JRE にのみインストールできます。
-
-## <a name="jdk-on-windows"></a>JDK Windows
-
-Windows のバージョンのダウンロード、 [Java SE Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)します。
-
-/Program ファイルの既定の JDK をインストール/付与しなくてもすむようにする場合、フォルダーの読み取りアクセス許可を**ALL APPLICATION PACKAGES**と**SQLRUserGroup**別の場所でセキュリティ グループ. .Class または .jar ファイルを保存する場所、Java classpath フォルダーにアクセスするため、同じガイダンスが適用されます。 
-
-> [!Note]
-> 拡張機能の承認および分離モデルは、このリリースで変更されました。 詳細については、次を参照してください。 [SQL Server Machine 2019 Learning サービスのインストールの違い](../install/sql-machine-learning-services-ver15.md)します。
-
-<a name="perms-nonwindows"></a>
-
-### <a name="grant-access-to-non-default-jdk-folder-windows-only"></a>既定ではない JDK フォルダー (Windows のみ) にアクセスを許可
-
-既定のフォルダーで、JDK と JRE をインストールした場合は、この手順をスキップすることができます。 既定のフォルダー以外のインストールでは、アクセスを許可する次の PowerShell スクリプトを実行、 **SQLRUsergroup**と JVM と Java classpath にアクセスするため (ALL_APPLICATION_PACKAGES) での SQL Server サービス アカウント。
-
-#### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup のアクセス許可
-
-```powershell
-$Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>"
-$Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("SQLRUsergroup","FullControl","Allow")
-$Acl.SetAccessRule($Ar)
-Set-Acl ""<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-```
-
-#### <a name="appcontainer-permissions"></a>AppContainer アクセス許可
-
-```powershell
-$Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>" 
-$Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("ALL APPLICATION PACKAGES","FullControl","Allow") 
-$Acl.SetAccessRule($Ar) 
-Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-```
-
-### <a name="add-the-jdk-path-to-javahome"></a>JAVA_HOME に JDK パスを追加します。
-また、"JAVA_HOME"を名前で、システム環境変数を JDK と JRE のインストール パス (たとえば、"C:\Program Files\Java\jdk-10.0.2") を追加する必要があります。 
-
-システム変数を作成するには、コントロール パネルを使用 > システムとセキュリティ > にアクセスするシステム**システム プロパティの高度な**します。 クリックして**環境変数**し、JAVA_HOME を新しいシステム変数を作成します。
-
-![Java ホームの環境変数を](../media/java/env-variable-java-home.png "Java 用のセットアップ")
-
-## <a name="jdk-on-linux"></a>Linux 上の JDK
-
-Linux では、mssql server extensibility java パッケージがインストールされていない場合は、JRE 1.8 が自動的にインストールされます。 JVM のパスは、JAVA_HOME という環境変数にそれも追加されます。
+Machine Learning サービス理解している場合は、拡張機能の承認および分離モデルがこのリリースで変更されました。 詳細については、次を参照してください。 [SQL Server Machine 2019 Learning サービスのインストールの違い](../install/sql-machine-learning-services-ver15.md)します。
 
 ## <a name="limitations-in-ctp-20"></a>CTP 2.0 の制限事項
 
 * 入力と出力バッファーの値の数を超えることはできません`MAX_INT (2^31-1)`は Java で配列に割り当てることができる要素の最大数。
 
-* Sp_execute_external_script で出力パラメーターは、このバージョンではサポートされません。
+* 出力パラメーターで[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)は、このバージョンではサポートされていません。
 
 * LOB データ型がこのバージョンでは、入力と出力のデータ セットはサポートされません。 参照してください[Java および SQL Server データ型](java-sql-datatypes.md)詳細についてはこの CTP ではデータの種類がサポートされています。
 

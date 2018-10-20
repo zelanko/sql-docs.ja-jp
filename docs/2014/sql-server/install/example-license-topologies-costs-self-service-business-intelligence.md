@@ -11,15 +11,15 @@ ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e08f483f1f56dcab49391190fd1c6edc11f6db
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091402"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462058"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>ライセンスのトポロジの例と SQL Server 2014 セルフ サービス ビジネス インテリジェンスのコスト
-  このトピックでは、選択するための高度な考慮事項を示しています、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence edition または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition。 このトピックには、内部設置型の Microsoft セルフサービス Business Intelligence (BI) トポロジのサンプルがいくつか含まれています。 これらの例では、コストとパフォーマンスのバランスの最適化に利用できるエディションとライセンスが含まれています。 紹介されるトポロジ、サーバー数、およびライセンス コストは **例示のみ**を目的としています。 Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] および Microsoft SharePoint 2013 ではライセンスに関していくつかの変更が行われ、サーバー、ユーザー、およびデバイスについてライセンスを取得する際に、より多くのオプションを利用できるようになりました。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のライセンスでは、同じビジネス インテリジェンスに関連するシナリオがサポートされます。  
+  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence Edition または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition の選択に関する考慮事項の概要について説明します。 このトピックには、内部設置型の Microsoft セルフサービス Business Intelligence (BI) トポロジのサンプルがいくつか含まれています。 これらの例では、コストとパフォーマンスのバランスの最適化に利用できるエディションとライセンスが含まれています。 紹介されるトポロジ、サーバー数、およびライセンス コストは **例示のみ**を目的としています。 Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] および Microsoft SharePoint 2013 ではライセンスに関していくつかの変更が行われ、サーバー、ユーザー、およびデバイスについてライセンスを取得する際に、より多くのオプションを利用できるようになりました。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のライセンスでは、同じビジネス インテリジェンスに関連するシナリオがサポートされます。  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は Business Intelligence Edition で提供され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のいくつかのバージョン用にコア ベースのライセンスを提供します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48091402"
   
 -   ブラウザーの対話型 PowerPivot ブック。  
   
--   対話型[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]SharePoint でレポートします。  
+-   SharePoint の対話型 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポート。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー、データ更新スケジュール、管理ダッシュボード。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48091402"
   
 -   SQL Server BI Edition はサーバー ライセンスとクライアント アクセス ライセンス (CAL) の両方を使用します。  
   
--   CAL ライセンスは、接続するサーバー数に関係なく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するユーザーまたはデバイスの数に基づき計算します。  
+-   CAL ライセンスは、接続するサーバー数に関係なく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するユーザーまたはデバイスの数に基づき計算します。  
   
 -   コア ライセンスでは、サーバーのすべてのコアについてライセンスを取得する必要があります。 サーバーに搭載されている物理プロセッサごとに少なくとも **4** コア分のライセンスが必要です。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48091402"
 |Business Intelligence|**(対応)** $8592 + CAL ごとに $199|適用なし|  
 |Standard|**(はい)**|**(はい)**|  
   
- サンプルの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ライセンスの価格を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ライセンスの価格例に関する詳細については、次のページを参照してください。  
   
 -   [仮想環境におけるライセンス](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx)(http://www.microsoft.com/licensing/about-licensing/virtualization.aspx)します。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "48091402"
   
  サンプルの配置はすべてイントラネット環境のため、SharePoint CAL ライセンスの習得が必要になります。  
   
--   [ライセンスの完全な一覧を SharePoint](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise)します。  
+-   [ライセンスの完全な一覧を SharePoint](http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise)します。  
   
--   [SharePoint の購入方法](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx)(http://sharepoint.microsoft.com/en-in/Pages/buy.aspx)します。  
+-   [SharePoint の購入方法](http://sharepoint.microsoft.com/Pages/buy.aspx)(http://sharepoint.microsoft.com/Pages/buy.aspx)します。  
   
 ##  <a name="bkmk_3tier_powerpivot"></a> 3 層トポロジで[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サーバー  
  この例では、800 人以下のユーザーの場合について説明します。この場合、SharePoint アプリケーション サーバーと [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーに SQL Server BI Edition を使用するとコストが最も低くなります。 ただし、ユーザーが 800 人以上存在する場合は SQL Server Enterprise Edition が低コストです。 コア ライセンスの取得はユーザー数に関係ないため、コア ライセンスと CAL ライセンス、および増加ユーザー数を比較した場合に、コストの分岐点が存在することになります。 分岐点を越えた場合は、Enterprise Edition が低コストなソリューションになります。 コストのしきい値を判断するには、コアの数に基づいて取得されるライセンスのコストと、エンド ユーザーまたはエンド デバイスの数に基づいて取得される CAL のコストを比較します。  
@@ -158,7 +158,7 @@ ms.locfileid: "48091402"
   
 -   (2) の実行、ファームの外部 PowerPivot モードで analysis Services しますが、PowerPivot が実行されている**同じ物理**他のアプリケーション ロール内のサーバー。  
   
--   データベース ロール (3) は、SQL Server Enterprise を使用できるように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能、AlwaysOn 可用性グループは使用できます。  
+-   データベース ロール (3) は、SQL Server Enterprise を使用します。これによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能である AlwaysOn 可用性グループが利用できるようになります。  
   
  ![bi_license_3tiers](../../../2014/sql-server/install/media/bi-license-3tiers.gif "bi_license_3tiers")  
   

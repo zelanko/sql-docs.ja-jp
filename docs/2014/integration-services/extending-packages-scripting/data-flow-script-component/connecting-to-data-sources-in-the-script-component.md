@@ -14,17 +14,17 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a44f21359f5d35661115582ffc76a00365d2fe8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2943855784fccd869124a3dad1bc2dc72f6a8cf6
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215862"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460647"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>スクリプト コンポーネントでのデータ ソースへの接続
   接続マネージャーは、便宜上、特定の種類のデータ ソースに接続するために必要な情報をカプセル化して格納するユニットです。 詳細については、「[Integration Services (SSIS) の接続](../../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
- 既存の接続マネージャーを、変換元または変換先コンポーネントのカスタム スクリプトでアクセスできるようにするには、**[スクリプト変換エディター]** の **[接続マネージャー]**  ページで、**[追加]** および **[削除]**  ボタンをクリックします。 ただし、データの読み込みや保存、場合によってはデータ ソースとの接続や切断を行うためには、独自のカスタム コードを記述する必要があります。 詳細については、**接続マネージャー**のページ、**スクリプト変換エディター**、[スクリプト コンポーネントで、スクリプト コンポーネント エディターの構成] を参照してください ((configuring-the-script-component-in-the-script-component-editor.md) と[スクリプト変換エディター&#40;接続マネージャー ページ&#41;](../../script-transformation-editor-connection-managers-page.md)します。  
+ 既存の接続マネージャーを、変換元または変換先コンポーネントのカスタム スクリプトでアクセスできるようにするには、**[スクリプト変換エディター]** の **[接続マネージャー]**  ページで、**[追加]** および **[削除]**  ボタンをクリックします。 ただし、データの読み込みや保存、場合によってはデータ ソースとの接続や切断を行うためには、独自のカスタム コードを記述する必要があります。 **[スクリプト変換エディター]** の **[接続マネージャー]** ページの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](configuring-the-script-component-in-the-script-component-editor.md)」および「[スクリプト変換エディター &#40;[接続マネージャー] ページ&#41;](../../script-transformation-editor-connection-managers-page.md)」を参照してください。  
   
  スクリプト コンポーネントは、`Connections` プロジェクト アイテム内に `ComponentWrapper` コレクション クラスを作成します。ここには、各接続マネージャーに対して、接続マネージャー自体と同じ名前を持つ、厳密に型指定されたアクセサー プロパティが含まれています。 このコレクションは、`Connections` クラスの `ScriptMain` プロパティを介して公開されます。 アクセサー プロパティは、接続マネージャーへの参照を <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして返します。 たとえば、ダイアログ ボックスの [接続マネージャー] ページで `MyADONETConnection` という名前の接続マネージャーを追加した場合、次のコードを追加することで、スクリプト内のその接続マネージャーへの参照を取得できます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48215862"
   
  スクリプト コンポーネントを使用して接続マネージャーを使用する方法の詳細については、「[スクリプト コンポーネントによる変換元の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)」および「[スクリプト コンポーネントによる変換先の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」を参照してください。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の接続](../../connection-manager/integration-services-ssis-connections.md)   

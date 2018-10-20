@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802596"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390864"
 ---
 # <a name="sql-samples"></a>SQL のサンプル
 
@@ -51,3 +51,13 @@ AdventureWorks データベースが表示されます、 [SQL Server のサン�
 - [AdventureWorks for SQL Server 2014 以降のダウンロード](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)します。 2012 リリースの .bak ファイルが含まれています。
 - [SQL Server 2012 用 AdventureWorks のダウンロード](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)します。
 - [SQL Server 2008 r2 用の AdventureWorks ダウンロード](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)します。
+
+## <a name="azure-samples-and-templates"></a>Azure のサンプルとテンプレート
+いくつか、Microsoft Azure のコード サンプルと例の使用可能な .NET、Java、Python、Node.js、PHP、Ruby で Github の。 さらに、Azure Resource Manager を使用すると、宣言型のテンプレートを使用して、アプリケーションをプロビジョニングできます。 1 つのテンプレートでは、その依存関係と共に複数のサービスをデプロイできます。 繰り返しアプリケーション ライフ サイクルのあらゆる段階中にアプリケーションをデプロイするのにには、同じテンプレートを使用します。
+
+- [Azure のサンプル](https://github.com/Azure-Samples)
+- [Azure クイック スタート テンプレート](https://azure.microsoft.com/resources/templates/)
+
+
+
+

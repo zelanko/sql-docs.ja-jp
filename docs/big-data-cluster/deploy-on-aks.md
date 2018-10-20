@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877935"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460897"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>SQL Server 2019 CTP 2.0 用 Azure Kubernetes サービスの構成します。
 
@@ -22,6 +22,9 @@ Azure Kubernetes Service (AKS) によって、作成、構成、およびコン�
 
 この記事では、Azure CLI を使用して AKS で Kubernetes をデプロイする手順について説明します。 Azure サブスクリプションを持っていない場合は、開始する前に、無料のアカウントを作成します。
 
+> [!TIP] 
+> AKS と SQL Server の両方のビッグ データ クラスターをデプロイするサンプル python スクリプトについては、次を参照してください。[ビッグ データ クラスター Azure Kubernetes Service (AKS) で SQL Server 展開](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)します。
+
 ## <a name="prerequisites"></a>前提条件
 
 - AKS 環境では、VM の最小要件は (マスターへの追加) での最小サイズの少なくとも 2 つのエージェント Vm [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series)します。 VM ごとに必要な最小リソースとは、4 つの Cpu、14 GB のメモリです。
@@ -29,7 +32,7 @@ Azure Kubernetes Service (AKS) によって、作成、構成、およびコン�
    > [!NOTE]
    > 最小サイズは、ビッグ データ ジョブまたは複数の Spark アプリケーションを実行する場合は、 [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup)、VM ごとに必要な最小リソースは、8 個の Cpu およびメモリとして 32 GB とします。
 
-- このセクションでは、ことが必要です実行、Azure CLI バージョン 2.0.4 以降。 インストールまたはアップグレードを表示する必要がある場合[Azure CLI 2.0 のインストール](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)します。 実行`az --version`必要な場合は、バージョンを確認します。
+- このセクションでは、ことが必要です実行、Azure CLI バージョン 2.0.4 以降。 インストールまたはアップグレードを表示する必要がある場合[Azure CLI 2.0 のインストール](https://docs.microsoft.com/cli/azure/install-azure-cli)します。 実行`az --version`必要な場合は、バージョンを確認します。
 
 - インストール[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)します。 SQL Server のビッグ データ クラスターでは、kubernetes では、サーバーおよびクライアントの両方に 1.10 バージョンの範囲内のすべてのマイナー バージョンが必要です。 Kubectl クライアントでは、特定のバージョンをインストールするを参照してください。 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)します。 AKS を使用する必要があります`--kubernetes-version`既定とは異なるバージョンを指定するパラメーター。 CTP2.0 リリース タイム フレームで AKS のみをサポートしている 1.10.7 および 1.10.8 バージョンに注意してください。 
 
@@ -91,7 +94,7 @@ Azure リソース グループは、azure リソースのデプロイし、管�
 
 ## <a name="connect-to-the-cluster"></a>クラスターに接続します。
 
-1. Kubernetes クラスターに接続するように kubectl を構成するには、実行、 [az aks 資格情報の取得](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)コマンド。 この手順では、資格情報をダウンロードし、それらを使用する CLI kubectl を構成します。
+1. Kubernetes クラスターに接続するように kubectl を構成するには、実行、 [az aks 資格情報の取得](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)コマンド。 この手順では、資格情報をダウンロードし、それらを使用する CLI kubectl を構成します。
 
    ```bash
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster

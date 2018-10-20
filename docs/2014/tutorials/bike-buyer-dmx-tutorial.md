@@ -1,7 +1,7 @@
 ---
 title: Bike Buyer DMX のチュートリアル |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -17,12 +17,12 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d5b77952cd3476adddcdf0a528c2e12ab30cc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074962"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462018"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX のチュートリアル
   このチュートリアルでは、データ マイニング拡張機能 (DMX) クエリ言語を使用して、マイニング モデルを作成、トレーニング、および調査する方法を学習します。 その後、これらのマイニング モデルを使用して、顧客が自転車を購入するかどうかを判断する予測を作成します。  
@@ -69,7 +69,7 @@ ms.locfileid: "48074962"
  ALTER MINING STRUCTURE  
  このステートメントを使用すると、サーバー上に既に存在するマイニング構造にマイニング モデルを追加できます。 このステートメントは、複数の異なるマイニング モデルを含むマイニング構造を作成する場合に便利です。 1 つのマイニング構造に複数のマイニング モデルを追加すると、いくつかの作業に役立ちます。 たとえば、異なるアルゴリズムを使用する複数のマイニング モデルを作成し、最適なアルゴリズムを見つけ出すことができます。 また、同じアルゴリズムでそれぞれ異なるパラメーターを設定して複数のマイニング モデルを作成し、パラメーターの最適な設定を見つけ出すことができます。  
   
- 詳細については、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)。  
+ 詳細については、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)します。  
   
  このチュートリアルでは複数のマイニング モデルを含むマイニング構造を作成します。したがって、2 つ目の方法を使用します。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48074962"
 > [!NOTE]  
 >  追加することをお勧めのチュートリアルを確認するとき**次のトピック**と**前のトピック**ドキュメント ビューアーのツールバーのボタン。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マーケット バスケット DMX のチュートリアル](../../2014/tutorials/market-basket-dmx-tutorial.md)   
  [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)  
   

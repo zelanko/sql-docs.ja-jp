@@ -1,21 +1,21 @@
 ---
-title: レッスン 6 の Predict 潜在的な結果が R モデル (SQL Server Machine Learning) の使用 |Microsoft Docs
+title: レッスン 4 の Predict 潜在的な結果が R モデル (SQL Server Machine Learning) の使用 |Microsoft Docs
 description: SQL Server に R を埋め込む方法を示すチュートリアルはストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/08/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 03118cec4ee068f5615af7d3319ca8f3172de0c1
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798572"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462128"
 ---
-# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>レッスン 6: ストアド プロシージャで R モデルを使用して潜在的な結果を予測します。
+# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>レッスン 4: ストアド プロシージャで R モデルを使用して潜在的な結果を予測します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
@@ -200,4 +200,4 @@ GO
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 5: トレーニングし、T-SQL を使用して R モデルの保存](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[レッスン 3: トレーニングし、T-SQL を使用して R モデルの保存](sqldev-train-and-save-a-model-using-t-sql.md)

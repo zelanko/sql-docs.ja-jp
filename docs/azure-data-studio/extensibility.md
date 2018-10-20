@@ -5,17 +5,17 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b458234f0a166f3dc820cbfa58269bb90d7c33b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039076"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460247"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>概要[!INCLUDE[name-sos](../includes/name-sos-short.md)]機能拡張
 
@@ -112,7 +112,7 @@ Dashboard.tabs では、タブ セクションでは、ダッシュ ボード �
 
 `dashboard.insights`
 
-Dashboard.insights を使用してインサイトを登録することができます。 これはのような[チュートリアル: カスタム インサイト ウィジェットをビルド](https://docs.microsoft.com/en-us/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Dashboard.insights を使用してインサイトを登録することができます。 これはのような[チュートリアル: カスタム インサイト ウィジェットをビルド](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -273,8 +273,8 @@ Azure データ studio では、拡張機能の使用可能なデータベース
 
 |コンテキスト変数| description|
 |:---|:---|
-|`connectionProvider` | 現在の接続のプロバイダーの識別子の文字列。 例: `connectionProvider == 'MSSQL'`。|
-|`serverName`|現在の接続のサーバー名の文字列。 例: `serverName == 'localhost'`。|
-|`databaseName` | 現在の接続のデータベース名の文字列。 例: `databaseName == 'master'`。|
+|`connectionProvider` | 現在の接続のプロバイダーの識別子の文字列。 例: `connectionProvider == 'MSSQL'` 。|
+|`serverName`|現在の接続のサーバー名の文字列。 例: `serverName == 'localhost'` 。|
+|`databaseName` | 現在の接続のデータベース名の文字列。 例: `databaseName == 'master'` 。|
 |`connection` | 現在の接続 (IConnectionProfile) の完全な接続プロファイル オブジェクト|
 |`dashboardContext` | ダッシュ ボードのページのコンテキストの文字列は現在のです。 'Database' または 'server'。 例: `dashboardContext == 'database'`|

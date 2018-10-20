@@ -4,7 +4,7 @@ description: この記事では、Linux に SQL Server レプリケーション�
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734130"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390844"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux 上の SQL Server レプリケーション
 
@@ -34,7 +34,7 @@ SQL Server のインスタンスは、任意のレプリケーション ロー�
 * ディストリビューター
 * サブスクライバー (Subscriber)
 
-レプリケーション スキーマがオペレーティング システム プラットフォームを一致し、混在させることができます。 たとえば、レプリケーション スキーマはパブリッシャーおよびディストリビューター、Linux 上の SQL Server のインスタンスを使用することができ、サブスクライバーは、Windows 上の SQL Server のインスタンスを含めることができます。
+レプリケーション スキーマがオペレーティング システム プラットフォームを一致し、混在させることができます。 たとえば、レプリケーション スキーマがパブリッシャーおよびディストリビューターには、Linux 上の SQL Server のインスタンスを含めることができ、サブスクライバーは、Windows と Linux 上の SQL Server のインスタンスを含みます。
 
 Linux 上の SQL Server インスタンスは、任意の種類のレプリケーションに参加できます。
 
@@ -62,6 +62,7 @@ Linux 上の SQL Server インスタンスは、任意の種類のレプリケ�
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 次の機能をサポートしません。
 
 * 即時更新サブスクライバー
+* Oracle パブリッシュ
 
 ## <a name="next-steps"></a>次の手順
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3569b1026ab8eded80164610ab8581209de7e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669310"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390834"
 ---
 # <a name="configure-replication-with-t-sql"></a>T-SQL でレプリケーションを構成します。
 
@@ -50,15 +50,6 @@ ms.locfileid: "47669310"
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
-  ```
-
-1. SQL Server レプリケーションに参加している各 CTP1.5 インスタンスの msdb データベースに、SQL Server インスタンスを次のストアド プロシージャのレプリケーションの実行のために構成します。
-
-  ```sql
-  USE msdb
-  GO
-  exec sys.sp_MSrepl_createdatatypemappings;
-  GO
   ```
 
 1. サンプル データベースとテーブルで、パブリッシャーの作成、サンプル データベースとパブリケーションのアーティクルとして機能するテーブルを作成します。

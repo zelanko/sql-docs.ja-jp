@@ -17,12 +17,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b85c611b01727c21059d43d04cb65134c7f2fc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190182"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460978"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>可用性グループの監視 (Transact-SQL)
   [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して可用性グループ、可用性レプリカ、および関連付けられているデータベースを監視できるように、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] には、一連のカタログ ビュー、動的管理ビュー、およびサーバー プロパティが用意されています。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT ステートメントを使用すると、これらのビューで、可用性グループや、そのレプリカおよびデータベースを監視できます。 特定の可用性グループに対して返される情報は、接続している [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスにプライマリ レプリカとセカンダリ レプリカのどちらがホストされているかによって変わります。  
@@ -80,7 +80,7 @@ ms.locfileid: "48190182"
 > [!NOTE]  
 >  このトピックの「[可用性レプリカの監視](#AvReplicas)」セクションの **sys.dm_hadr_availability_replica_cluster_nodes** と **sys.dm_hadr_availability_replica_cluster_states** 、および「[可用性データベースの監視](#AvDbs)」セクションの **sys.availability_databases_cluster** と **sys.dm_hadr_database_replica_cluster_states** も参照してください。  
   
- については WSFC クラスターと[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください [Windows Server フェールオーバー クラスタ リング&#40;WSFC&#41;と SQL Server] ((../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) と[フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)します。  
+ については WSFC クラスターと[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[Windows Server フェールオーバー クラスタ リング&#40;WSFC&#41; SQL Server で](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)と[フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQLServer&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)します。  
   
 ##  <a name="AvGroups"></a> 可用性グループの監視  
  サーバー インスタンスが可用性レプリカをホストしている可用性グループを監視するには、次のビューを使用します。  

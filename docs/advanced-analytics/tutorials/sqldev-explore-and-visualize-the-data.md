@@ -1,21 +1,21 @@
 ---
-title: レッスン 3 の探索と R と T-SQL (SQL Server Machine Learning) を使用してデータの視覚化 |Microsoft Docs
+title: レッスン 1 の探索と R と T-SQL (SQL Server Machine Learning) を使用してデータの視覚化 |Microsoft Docs
 description: SQL Server に R を埋め込む方法を示すチュートリアルはストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798590"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461988"
 ---
-# <a name="lesson-3-explore-and-visualize-the-data"></a>レッスン 3: 探索し、データの視覚化
+# <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1: の探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
@@ -279,8 +279,8 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[レッスン 3: T-SQL を使用してデータ機能を作成します。](sqldev-create-data-features-using-t-sql.md)
+[レッスン 2: T-SQL を使用してデータ機能を作成します。](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 1: NYC タクシーのデモ データの設定します。](sqldev-download-the-sample-data.md)
+[NYC タクシーのデモ データを設定します。](demo-data-nyctaxi-in-sql.md)

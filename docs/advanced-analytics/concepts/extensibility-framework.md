@@ -3,17 +3,17 @@ title: SQL Server Machine Learning Services で拡張可能アーキテクチャ
 description: デュアル アーキテクチャ リレーショナル データを R と Python スクリプトを実行するために、SQL Server データベース エンジンの外部コードのサポート。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878185"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419220"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services で拡張可能アーキテクチャ 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ SQL Server では、サーバー上の R や Python などの外部のスクリ�
 
 ## <a name="launchpad"></a>スタート パッド
 
-SQL Server Trusted Launchpad は、管理し、フルテキスト インデックス作成とクエリ サービスが、フルテキスト クエリを処理するための別のホストを起動するのと同様に、外部のスクリプトを実行するサービスです。 スタート パッド サービスには、信頼済みのランチャーには、Microsoft によって公開されているか、パフォーマンスとリソース管理の要件を満たすとしてマイクロソフトによって認定されたを開始できます。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]は管理し、フルテキスト インデックス作成とクエリ サービスが、フルテキスト クエリを処理するための別のホストを起動するのと同様に、外部のスクリプトを実行するサービスです。 スタート パッド サービスには、信頼済みのランチャーには、Microsoft によって公開されているか、パフォーマンスとリソース管理の要件を満たすとしてマイクロソフトによって認定されたを開始できます。
 
 | 信頼済みランチャー | 拡張子 | SQL Server のバージョン |
 |-------------------|-----------|---------------------|
@@ -60,6 +60,8 @@ SQL Server Trusted Launchpad は、管理し、フルテキスト インデッ�
 | Python 3.5 用 Pythonlauncher.dll | [Python 拡張機能](extension-python.md) | SQL Server 2017 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスは、独自のユーザー アカウント下で実行されます。 スタート パッドを実行するアカウントを変更する場合は、そのファイルへの変更を書き込むことを確認する SQL Server 構成マネージャーを使用して関連するために必ず。
+
+個別の[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]SQL Server Machine Learning サービスを追加した各データベース エンジン インスタンスのサービスを作成します。 1 つのスタート パッドがあるため、それぞれのスタート パッド サービスがある外部スクリプトのサポートの複数のインスタンスがあれば、各データベース エンジン インスタンスのサービスです。 データベース エンジンのインスタンスは、スタート パッド サービスの作成にバインドされます。 ストアド プロシージャの外部のスクリプトまたは SQL Server サービスが、同じインスタンスに対して作成されたスタート パッド サービスの呼び出しで T-SQL の結果のすべての呼び出し。
 
 サポートされている特定の言語でタスクを実行するには、は、スタート パッドは、プールからセキュリティで保護されたワーカー アカウントを取得し、外部ランタイムを管理するサテライト プロセスを開始します。 各サテライト プロセスは、スタート パッドのユーザー アカウントを継承し、スクリプトの実行時間のワーカー アカウントを使用します。 スクリプトは、並列処理を使用している場合は、同じ、1 つのワーカー アカウントが作成されます。
 

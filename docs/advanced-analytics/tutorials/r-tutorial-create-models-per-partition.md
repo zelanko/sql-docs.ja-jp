@@ -10,12 +10,12 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232566"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462008"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル: SQL Server での R でのパーティションに基づくモデルを作成します。
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -42,7 +42,7 @@ SQL Server の 2019 でパーティション ベースのモデルを作成し�
 
 + T-SQL のツールなど、実行のクエリ[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)します。
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)、可能な[をダウンロードして復元](sqldev-download-the-sample-data.md)ローカル データベース エンジンのインスタンスにします。 ファイル サイズは約 90 MB です。
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)、可能な[をダウンロードして復元](demo-data-nyctaxi-in-sql.md)ローカル データベース エンジンのインスタンスにします。 ファイル サイズは約 90 MB です。
 
 + SQL Server 2019 プレビュー データベース エンジン インスタンス、Machine Learning サービスと R を統合します。
 
@@ -64,7 +64,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>データベースへの接続します。
 
-Management Studio を起動し、データベース エンジンのインスタンスに接続します。 オブジェクト エクスプ ローラーで確認、 [NYCTaxi_Sample データベース](sqldev-download-the-sample-data.md)存在します。 
+Management Studio を起動し、データベース エンジンのインスタンスに接続します。 オブジェクト エクスプ ローラーで確認、 [NYCTaxi_Sample データベース](demo-data-nyctaxi-in-sql.md)存在します。 
 
 ## <a name="create-calculatedistance"></a>CalculateDistance を作成します。
 

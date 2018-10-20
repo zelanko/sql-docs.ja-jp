@@ -4,18 +4,18 @@ description: このチュートリアルでは、カスタムの洞察のウィ�
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d14c8d9e4a17782464e13b380334c85c9ee1036c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039100"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356343"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>チュートリアル: カスタム インサイト ウィジェットを作成します。
 

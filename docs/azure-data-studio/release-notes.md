@@ -4,22 +4,36 @@ description: Azure Data Studio リリース ノート
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072306"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411199"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio リリース ノート
 
-**[ダウンロード、9 月*一般*(公開 GA) リリースです。](download.md)**
+**[10 月のリリースをダウンロードしてください。](download.md)**
+
+## <a name="october-2018-october-release"></a>10 月 2018 (年 10 月リリース)
+
+リリース日: 2018 年 10 月 18 日  
+バージョン: 1.1.3
+
+- Azure SQL データベースを参照する Azure リソース エクスプ ローラーの概要
+- オブジェクト エクスプ ローラーおよびクエリ エディターの接続の堅牢性を向上します。
+- SQL エージェント拡張機能の機能強化
+- 更新する、 [SQL Server 2019 プレビュー拡張機能](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+
+### <a name="bug-fixes"></a>バグの修正
+
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 
 ## <a name="september-2018-september-ga-release"></a>9 月 2018 (9 月 GA リリース)
 

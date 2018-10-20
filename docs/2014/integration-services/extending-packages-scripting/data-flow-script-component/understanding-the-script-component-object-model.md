@@ -16,12 +16,12 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3e1f202305cf540043a4af51af5f0618c80916f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 855278c35de37f2b02e1bb7b194e174c66c643d2
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076022"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460667"
 ---
 # <a name="understanding-the-script-component-object-model"></a>スクリプト コンポーネントのオブジェクト モデルについて
   [コーディングとスクリプト コンポーネントのデバッグ] で説明したように (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md、スクリプト コンポーネント プロジェクトには、3 つのプロジェクト項目。  
@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   入力行が渡されるたびにそのデータを処理するには、**\<inputbuffer>_ProcessInputRow** をオーバーライドします。  
   
--   入力行をループするときに追加の処理を行う必要がある場合にのみ、**\<inputbuffer>_ProcessInput** をオーバーライドします  (たとえば、すべての行が処理された後に他のアクションを実行するために `EndOfRowset` をテストする必要がある場合)。行の処理を実行するには、**\<inputbuffer>_ProcessInputRow** を呼び出します。  
+-   入力行をループするときに追加の処理を行う必要がある場合にのみ、**\<inputbuffer>_ProcessInput** をオーバーライドします  (たとえば、すべての行が処理された後に他のアクションを実行するために `EndOfRowset` をテストする必要がある場合)。行の処理を実行するには、\<** inputbuffer>_ProcessInputRow を呼び出します。  
   
 -   出力を閉じる前に、出力に対して何らかの処理を行う場合は、`FinishOutputs` をオーバーライドします。  
   
@@ -203,10 +203,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [スクリプト コンポーネントで、スクリプト コンポーネント エディターの構成]((configuring-the-script-component-in-the-script-component-editor.md)   
+ [スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](configuring-the-script-component-in-the-script-component-editor.md)   
  [コーディングとスクリプト コンポーネントのデバッグ](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

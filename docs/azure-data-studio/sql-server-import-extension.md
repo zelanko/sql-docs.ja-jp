@@ -5,23 +5,23 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 17bb33ddc366196d21f45a0dd6ec895c5ceaef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e113e2755a5d50fa7b8c5a06486227b3671347e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039164"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460620"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server インポート拡張機能 (プレビュー)
 
 SQL Server インポート拡張機能 (プレビュー) は、.txt、.csv ファイルを SQL テーブルに変換します。 このウィザードと呼ばれる Microsoft Research のフレームワークを利用して[Program Synthesis using 例 (PROSE)](https://microsoft.github.io/prose/)をインテリジェントに最小限のユーザー入力を使用してファイルを解析します。 これは、データの処理の強力なフレームワークと、Microsoft Excel で Flash Fill が作動するのと同じテクノロジが
 
-この機能の SSMS のバージョンに関する詳細についてを参照して[今回](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard)します。
+この機能の SSMS のバージョンに関する詳細についてを参照して[今回](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard)します。
 
 
 ## <a name="install-the-sql-server-import-extension"></a>SQL Server インポート拡張機能をインストールします。

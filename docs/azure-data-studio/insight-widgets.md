@@ -4,18 +4,18 @@ description: Azure Data Studio での洞察のウィジェットについて説�
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
-ms.technology: ssops
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d838147a29fc83723ac97267f6c0a0a6ccf3cc90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d669b72aadb9fe1ea2ec61c2059a1d932ee52d4d
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039172"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356333"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとの洞察のウィジェットでのデータベースを管理します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

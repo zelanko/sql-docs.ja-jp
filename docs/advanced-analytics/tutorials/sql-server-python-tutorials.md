@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 541675c22ddbe347f67119d8cba82f75955382e6
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 5cafb253cea118148bd654ea770234843f742838
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877986"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383337"
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server の Python のチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,29 +56,6 @@ ms.locfileid: "48877986"
 + [顧客を実行する Python と SQL Server を使用してクラスタ リング](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
     K-平均法アルゴリズムを使用して、顧客の教師なしのクラスタ リングを実行する方法について説明します。
-
-## <a name="bkmk_Prerequisites"></a>前提条件
-
-これらのチュートリアルを使用するには SQL Server 2017 が必要と明示的にインストールし、機能、Machine Learning サービス (In-database) を有効にする必要があります。 
-
-SQL Server 2017 は、R と Python の両方の言語をサポートしていますが、どちらもインストールされているか、既定で有効になっています。 Python を実行するにはの機能拡張フレームワークを有効にして、Python をインストールする言語として選択することが必要です。 
-
-### <a name="post-installation-configuration-tips"></a>インストール後の構成のヒント
-
-SQL Server セットアップを実行した後は、Python と SQL Server が通信していることを確認する追加の手順を実行する必要があります。
-
-+ 実行して、外部スクリプト実行機能を有効にする`sp_configure 'external scripts enabled', 1`します。
-+ サーバーを再起動します。 
-+ 開く、**サービス**パネルをスタート パッドが開始されているかどうかを確認します。 
-+ 外部ランタイムを呼び出して、サービスに必要なアクセス許可があることを確認します。 詳細については、次を参照してください。[暗黙の認証を有効にする](../security/add-sqlrusergroup-to-database.md)します。
-+ SQL server のファイアウォールでポートを開くし、必要なネットワーク プロトコルを有効にします。
-+ SQL ログインまたは Windows ユーザー アカウントがデータを読み取ると、このサンプルで必要なすべてのデータベース オブジェクトを作成する、サーバーへの接続に必要なアクセス許可を持つことを確認します。
-
-一般的な問題は、この記事を参照してください: [Machine Learning サービスのトラブルシューティング](../machine-learning-troubleshooting-faq.md)
-
-### <a name="resource-management"></a>リソース管理
-
-同じコンピューターでは、R と Python の両方をインストールすることができますが、両方の操作を実行している多くのリソースを要求できます。 「メモリ不足」エラーが発生した場合、またはサーバーの使用目的をプリンシパルは、machine learning ジョブを実行している場合は、データベース エンジンに割り当てられているメモリの量を減らすことができます。 詳細については、次を参照してください。[の管理と監視の SQL Server での Python](../python/managing-and-monitoring-python-solutions.md)します。
 
 ## <a name="see-also"></a>関連項目
 

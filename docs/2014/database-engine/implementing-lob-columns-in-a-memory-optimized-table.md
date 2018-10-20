@@ -10,15 +10,15 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 511e74f40931a22ac56bb27bde0c3fd87eec942b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166366"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356573"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの LOB 列の実装
-  メモリ最適化テーブルには行外またはラージ オブジェクト (LOB) ストレージがなく、行サイズの上限は 8060 バイトです。 大きなバイナリ値または文字列値を格納するには、次の 2 とおりの方法で行うことができます。  
+  メモリ最適化テーブルでは行外またはラージ オブジェクト (LOB) ストレージはありません (SQL Server 2016 以降を参照してください、この制限は削除されました[、インメモリ OLTP に対してサポートされるデータ型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md))、行サイズの上限は 8060 バイトとします。 大きなバイナリ値または文字列値を格納するには、次の 2 とおりの方法で行うことができます。  
   
 -   LOB 値を複数行に分割する。  
   
@@ -100,7 +100,7 @@ COMMIT
 END  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP への移行](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

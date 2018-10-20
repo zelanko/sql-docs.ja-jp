@@ -16,12 +16,12 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054319"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460297"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>派生列変換を使用して列の値を取得する
   派生列変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -60,11 +60,11 @@ ms.locfileid: "48054319"
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [派生列変換](derived-column-transformation.md)   
+ [Derived Column Transformation](derived-column-transformation.md)   
  [Integration Services のデータ型](../integration-services-data-types.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
- [データ フロー タスク]((../../control-flow/data-flow-task.md)   
- [Integration Services &#40;です。SSIS&#41; 式](../../expressions/integration-services-ssis-expressions.md)  
+ [データ フロー タスク](../../control-flow/data-flow-task.md)   
+ [Integration Services (SSIS) 式](../../expressions/integration-services-ssis-expressions.md)  
   
   

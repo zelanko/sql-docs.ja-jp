@@ -1,21 +1,22 @@
 ---
-title: クラスターの管理ポータルを使用してクラスターの監視 |Microsoft Docs
-description: ''
+title: クラスターの管理ポータルを使用したビッグ データ クラスター (プレビュー) SQL Server の監視 |Microsoft Docs
+description: クラスターの管理ポータルを使用して、SQL Server 2019 ビッグ データ クラスター (プレビュー) を監視する方法について説明します。
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3ae85c9e9078b91589b828d1bee9d3218b5316cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 764e1689b4b793e3a993c058517a892f93d6d439
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796406"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356053"
 ---
 # <a name="introduction-to-the-cluster-administration-portal"></a>クラスターの管理ポータルの概要
-監視や、SQL Server のビッグ データ クラスターをトラブルシューティングする場合は、クラスターの管理ポータルを使用します。 
+
+監視または SQL Server 2019 ビッグ データ クラスター (プレビュー) のトラブルシューティングを行う場合は、クラスターの管理ポータルを使用します。
 
 クラスターの管理ポータルを使用するできます。
 - ポッドが実行されていると、問題の数をすばやく表示します。
@@ -25,13 +26,16 @@ ms.locfileid: "48796406"
 - ポッド、Grafana ダッシュ ボードと Kibana ログへのアクセスなどについてをドリルダウンします。
 
 ## <a name="access-the-cluster-administration-portal"></a>クラスターの管理ポータルにアクセスします。
+
 に従って、 [、ビッグ データ クラスターをデプロイするクイック スタート](quickstart-big-data-cluster-deploy.md)に到達するまで、**クラスター管理ポータル**セクション。 Mssqlctl で実行されているビッグ データ クラスターを作成したら、次の手順に従います。
 
 コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
+
 > [!NOTE]
-> セキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときになるがあります。 将来のリリースは、独自の署名証明書を提供する機能。
+> CTP 2.0 の場合があるセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするとき。
 
 ## <a name="overview"></a>概要
+
 ![概要](./media/cluster-admin-portal/portal-overview.png)
 
 ポータルを最初に入力したときにで実行されるポッドの数をすばやく表示できます。
@@ -44,11 +48,13 @@ ms.locfileid: "48796406"
 問題があるか、既知の問題へのリンクが開くことができます。 左側のナビゲーション ウィンドウを使用すると、問題がある場合は、特定のプールに移動します。
 
 ## <a name="deployment"></a>展開
+
 ![展開](./media/cluster-admin-portal/portal-deployment.png)
 
 展開を監視するには、左側の [展開] タブをクリックします。 、デプロイのツリー ビューを表示し、展開で問題がある場合。
 
 ## <a name="service-endpoints"></a>サービス エンドポイント
+
 ![エンドポイント](./media/cluster-admin-portal/portal-endpoints.png)
 
 使用可能なサービス エンドポイントを表示するには、左側のナビゲーション ウィンドウで、[エンドポイント] タブをクリックします。
@@ -56,6 +62,7 @@ ms.locfileid: "48796406"
 Spark のエンドポイント、Grafana ダッシュ ボードへのリンクが含まれます、Kibana ログに記録します。
 
 ## <a name="controller"></a>コントローラー
+
 ![コント ローラー](./media/cluster-admin-portal/portal-controller.png)
 
 コント ローラーは、コント ローラーに関連するすべてのポッドを示しています。 コント ローラーに関する詳細については、[ここです。](concept-controller.md)
@@ -65,6 +72,7 @@ Spark のエンドポイント、Grafana ダッシュ ボードへのリンク�
 ログに問題があるポッドの詳細についてをクリックすることができます、**ログ**列。
 
 ## <a name="master-instance"></a>マスター インスタンス
+
 ![エンドポイント](./media/cluster-admin-portal/portal-master.png)
 
 マスター インスタンスは、SQL Server のマスター インスタンスに関連するすべてのポッドを示しています。 SQL Server のマスター インスタンスに関する詳細については、[ここです。](concept-master-instance.md)
@@ -74,6 +82,7 @@ Spark のエンドポイント、Grafana ダッシュ ボードへのリンク�
 ログに問題があるポッドの詳細についてをクリックすることができます、**ログ**列。
 
 ## <a name="pool-and-pod-pages"></a>プールと Pod ページ
+
 ![プール](./media/cluster-admin-portal/portal-data-pool.png)
 
 をクリックして (コンピューティング、ストレージ、およびデータ) は各プール ページ上の各ポッド ページにドリルダウンできます**既定**
@@ -92,6 +101,13 @@ Spark のエンドポイント、Grafana ダッシュ ボードへのリンク�
 - [データ プール](concept-data-pool.md)
 
 ## <a name="about-page"></a>ページについて
+
 ![に関しては](./media/cluster-admin-portal/portal-about.png)
 
 ここで、ドキュメントを別のバージョン番号、コンテナー、およびリンクなど、クラスターに関する情報を表示できます。
+
+## <a name="next-steps"></a>次の手順
+
+だけでなく、クラスターの管理ポータルの状態や、クラスターの正常性を調べるいくつかの便利な Kubernetes コマンドを実行することもできます。 詳細については、次を参照してください。[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)します。
+
+SQL Server 2019 ビッグ データ クラスターに関する詳細についてを参照してください。 [SQL Server 2019 ビッグ データ クラスターは?](big-data-cluster-overview.md)します。

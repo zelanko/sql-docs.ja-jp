@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d87ba02342948d140afb68c2d9d13a2aef9464eb
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450369"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460881"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>PolyBase で Hadoop の外部のデータにアクセスを構成します。
 
@@ -200,7 +200,5 @@ SQL Server Data tools、外部テーブルが別のフォルダーに表示さ�
 
 ## <a name="next-steps"></a>次の手順
 
-次の記事で PolyBase を構成する方法を詳細します。
-
-[PolyBase の構成と Hadoop のセキュリティ](../relational-databases/polybase/polybase-configuration.md)します。  
+PoliyBase の詳細については、次を参照してください。、 [PolyBase とは何ですか?](../relational-databases/polybase/polybase-guide.md)します。 
  

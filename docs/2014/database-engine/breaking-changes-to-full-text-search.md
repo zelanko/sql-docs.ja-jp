@@ -15,20 +15,20 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122402"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460697"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>フルテキスト検索の重大な変更
-  このトピックでは、フルテキスト検索の重要な変更について説明します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
+  このトピックでは、フルテキスト検索の重要な変更について説明します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
   
-## <a name="breaking-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>におけるフルテキスト検索の重大な変更 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="breaking-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] におけるフルテキスト検索の重大な変更  
  今後、情報が追加されていきます。  
   
-## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>におけるフルテキスト検索の重大な変更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] におけるフルテキスト検索の重大な変更  
   
 ### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>sys.fulltext_languages の名前列で変更された照合順序  
  [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) カタログ ビューの言語の **name** 列の照合順序は、Resource データベースの固定の照合順序から、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに対して選択した既定の照合順序に変更されました。 この変更により、[sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) ビューを **sys.fulltext_languages** と結合して、**name** 列の値を比較できるようになりました。 たとえば、既定のフルテキスト言語が既定のデータベース言語とは異なっているすべてのデータベースをクエリできます。  
@@ -59,6 +59,6 @@ ms.locfileid: "48122402"
   
 ## <a name="see-also"></a>参照  
  [フルテキスト検索の動作変更します。](../relational-databases/search/full-text-search.md)   
- [フルテキスト検索]((../relational-databases/search/full-text-search.md)  
+ [フルテキスト検索](../relational-databases/search/full-text-search.md)  
   
   
