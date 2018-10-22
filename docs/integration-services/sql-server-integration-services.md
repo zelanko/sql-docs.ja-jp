@@ -21,16 +21,14 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b4424cfb5311ee75bc6ea184b1fb25d0246b03b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b74a33bb9b81c930075b87fa0703014b079909f
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724210"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383287"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
-
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server Integration Services](sql-server-integration-services.md)」をご覧ください。
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、エンタープライズ レベルのデータ統合およびデータ変換ソリューションを構築するためのプラットフォームです。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用すると、ファイルのコピーやダウンロード、データ ウェアハウスの読み込み、データのクリーニングとマイニング、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のオブジェクトやデータの管理などにより、複雑なビジネスの問題を解決できます。
 

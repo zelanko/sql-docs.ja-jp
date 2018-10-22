@@ -15,19 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d704ef10542ab2ef4b9ef2669dc49d8beb2b5226
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687810"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383327"
 ---
 # <a name="install-sql-server"></a>SQL Server をインストールする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server 2014 のインストール](install-sql-server.md)」を参照してください。
-
  [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] は 64 ビット アプリケーションでのみ使用できるようになりました。 SQL Server の入手およびインストールの方法に関する重要な詳細情報を次に示します。
 
 ## <a name="installation-details"></a>インストールの詳細
