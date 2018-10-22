@@ -39,7 +39,7 @@ ms.locfileid: "48159622"
   
 2.  **Sales Orders** レポートを含むフォルダーを参照して、ショートカット メニューの **[管理]** をクリックします。  
   
-     ![レポートのコンテキスト メニューを開き、[管理](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "レポートのコンテキスト メニューを開き、管理] の選択")  
+     ![レポートのコンテキスト メニューを開き、管理](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "レポートのコンテキスト メニューを開き、管理 の選択")  
   
 3.  **[データ ソース]** タブをクリックします。  
   

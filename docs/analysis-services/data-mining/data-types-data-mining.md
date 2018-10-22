@@ -47,11 +47,11 @@ ms.locfileid: "34014639"
  列のデータ型を変更する場合は、マイニング構造およびその構造に基づくすべてのマイニング モデルを必ず再処理する必要があります。 データ型を変更する場合、特定のモデルでその列を使用できない場合があります。 その場合、Analysis Services は、モデルの再処理時にエラーを発生するか、またはその特定の列を除外してモデルを処理します。  
   
 ## <a name="see-also"></a>参照  
- [コンテンツの種類 (&) #40 です。 データ マイニング (&) #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [コンテンツの種類 (&) #40";"DMX"&"#41;](../../dmx/content-types-dmx.md)   
+ [コンテンツの種類 &#40;です。 データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [コンテンツの種類 &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング構造と #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [データ型 (&) #40";"DMX"&"#41;](../../dmx/data-types-dmx.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [データ型 &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)   
  [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)  
   
