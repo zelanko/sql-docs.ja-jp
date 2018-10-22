@@ -20,9 +20,9 @@ ms.locfileid: "37979105"
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Analysis Services のインスタンスから利用可能なデータベースまたは特定のオブジェクトに関する詳細情報の一覧などの情報を取得します。 取得するデータ、 **Discover**メソッドは渡されたパラメーターの値によって異なります。  
   
- **Namespace** urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-分析  
+ **Namespace** urn: schemas-microsoft-com:xml-analysis  
   
- **SOAP アクション**"urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-分析: 検出"  
+ **SOAP アクション**"urn: schemas-microsoft-com:xml-analysis:Discover"  
   
 ## <a name="syntax"></a>構文  
   

@@ -81,11 +81,9 @@ ms.locfileid: "38979584"
 |-|--------------|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の同期ミラーリングを同じファーム内で行うことによる可用性の確保|サポートはされますが、推奨はされません。 同期コミット モードの AlwaysOn を推奨します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 同期コミット モードの|サポートされ、なおかつ推奨されます。|  
-|
-            [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同期ミラーリングまたはログ配布を別のファームとの間で行うことによるディザスター リカバリー|サポートされています。|  
-|
-            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-            [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー|Supported|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同期ミラーリングまたはログ配布を別のファームとの間で行うことによるディザスター リカバリー|サポートされています。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー|Supported|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
@@ -98,11 +96,9 @@ ms.locfileid: "38979584"
   
 ##  <a name="bkmk_more_resources"></a> 詳細情報へのリンク  
   
--   
-            [サポートされている SharePoint データベース用の高可用性とディザスター リカバリーのオプション (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
+-   [サポートされている SharePoint データベース用の高可用性とディザスター リカバリーのオプション (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
--   
-            [ディザスター リカバリーを計画する (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
+-   [ディザスター リカバリーを計画する (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
   
 -   [SQL Server クラウドのバックアップと復旧に関するホワイト ペーパー](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   

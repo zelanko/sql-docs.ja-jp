@@ -32,7 +32,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
 
 特に、SQL Server 2016 SP1 Analysis Services は、以下の主要領域の機能を改善しています。
 
--   **NUMA 対応** - NUMA のサポートを改善するために、Analysis Services 内のインメモリ (VertiPaq) エンジンは各 NUMA ノードで別のジョブ キューを維持するようになりました。 これによって、セグメント スキャン ジョブを、セグメント データのメモリが割り当てられている同じノードで確実に実行することができます。 ただし、NUMA 対応は、既定で&4; つ以上の NUMA ノードがあるシステムで有効にすることができます。 2 ノード システムの場合、割り当て済みメモリにリモート アクセスするコストは、NUMA の詳細を管理するオーバーヘッドを保証しません。
+-   **NUMA 対応** - NUMA のサポートを改善するために、Analysis Services 内のインメモリ (VertiPaq) エンジンは各 NUMA ノードで別のジョブ キューを維持するようになりました。 これによって、セグメント スキャン ジョブを、セグメント データのメモリが割り当てられている同じノードで確実に実行することができます。 ただし、NUMA 対応は、既定で 4 つ以上の NUMA ノードがあるシステムで有効にすることができます。 2 ノード システムの場合、割り当て済みメモリにリモート アクセスするコストは、NUMA の詳細を管理するオーバーヘッドを保証しません。
 -   **メモリの割り当て** - Analysis Services は、Intel Threading Building Blocks (Intel TBB) で高速になりました。Intel TBB は、すべてのコアに別のメモリ プールを提供するスケーラブルな割り当てツールです。 コア数の増加に比例してシステムを拡張することができます。
 -   **ヒープの断片化** - Intel TBB ベースのスケーラブルな割り当てツールを使用すると、Windows ヒープで発生するヒープの断片化によるパフォーマンスの問題を軽減できます。
 
@@ -139,7 +139,7 @@ refresh|オブジェクトを処理します。 ASSL では PROCESS に相当し
 ### <a name="dax-variables"></a>DAX の変数    
 このリリースでは、DAX の変数のサポートが追加されました。 変数は、式の結果を名前付きの変数として保存できるようになりました。これは、他のメジャーの式に引数として渡すことができます。 結果の値が可変式に対して計算されると、その変数が別の式で参照される場合でも、それらの値は変更されません。 詳細については、「 [VAR 関数](http://msdn.microsoft.com/library/mt243785.aspx)」を参照してください。    
 ### <a name="new-dax-functions"></a>DAX の新しい関数
-このリリースでは、計算を高速化し、Power BI での視覚化機能を強化する&50; 以上の新しい関数が DAX に導入されました。 詳細については、「 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)」 (DAX の新しい関数) を参照してください。
+このリリースでは、計算を高速化し、Power BI での視覚化機能を強化する 50 以上の新しい関数が DAX に導入されました。 詳細については、「 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)」 (DAX の新しい関数) を参照してください。
 ### <a name="save-incomplete-measures"></a>不完全なメジャーを保存する
 不完全な DAX メジャーを表形式 1200 のモデル プロジェクトに直接保存できるようになりました。作業を続ける準備ができたときに、もう一度選択することができます。
 ### <a name="additional-dax-enhancements"></a>DAX の追加の拡張機能
