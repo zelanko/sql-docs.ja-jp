@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
-ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
+ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289313"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461107"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウトの MPP データ ウェアハウスの新機能新機能
 新機能については最新のアプライアンスの更新プログラム Microsoft® Analytics Platform System (APS) を参照してください。 アクセス ポイントは、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスです。 
@@ -25,7 +25,7 @@ ms.locfileid: "46289313"
 リリース日 - 2018 年 7 月
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC コマンドは、同時実行スロット (動作の変更) を使用しません。
-AP、T-SQL のサブセットをサポートする[DBCC コマンド](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)など[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)します。 以前は、これらのコマンドを消費する、[の同時実行スロット](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)実行することがユーザーの読み込み/クエリの数を減らします。 `DBCC`を全体的なクエリ実行のパフォーマンスを向上させるユーザー同時実行スロットを使用しないローカル キューにあるコマンドが実行されますようになりました。
+AP、T-SQL のサブセットをサポートする[DBCC コマンド](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)など[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)します。 以前は、これらのコマンドを消費する、[の同時実行スロット](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)実行することがユーザーの読み込み/クエリの数を減らします。 `DBCC`を全体的なクエリ実行のパフォーマンスを向上させるユーザー同時実行スロットを使用しないローカル キューにあるコマンドが実行されますようになりました。
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>カタログ オブジェクト メタデータの一部の呼び出しで置き換えます
 SMO を使用する代わりにメタデータの呼び出しのカタログ オブジェクトを使用して、パフォーマンスの向上が AP で説明しました。 CU7.1 から開始するこれらのメタデータの呼び出しのようになりましたオブジェクトを使用してカタログ既定で。 この動作がによってオフに[機能スイッチ](appliance-feature-switch.md)メタデータ クエリを使用しているお客様に問題が発生する場合。

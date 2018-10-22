@@ -1,34 +1,39 @@
 ---
-title: トレーニングとスコア付け用の SQL での Python モデルを使用する |Microsoft Docs
+title: SQL Server の Python のモデルを使用してトレーニングと予測の |Microsoft Docs
+description: 作成し、Python とクラシックあやめデータ セットを使用してモデルをトレーニングします。 SQL Server に、モデルを保存し、予測結果の生成に使用すること。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/18/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 02ffd5a25c076ef5a65a6e3a998aae485e37d982
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 839bcecdeaf7b5e2a7ea1297fe941353bffed20e
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085024"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461838"
 ---
-# <a name="use-python-model-in-sql-for-training-and-scoring"></a>Sql Python モデルを使用して、トレーニングとスコア付け
+# <a name="use-a-python-model-in-sql-server-for-training-and-scoring"></a>SQL Server の Python のモデルを使用するトレーニングとスコア付け
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[前のレッスン](wrap-python-in-tsql-stored-procedure.md)SQL と Python を使用するための一般的なパターンを学習しました。 Python コードが 1 つの明確に定義された data.frame を出力する必要があり、こともできますが、スカラーまたはバイナリの複数の変数を出力するについて説明しました。 Python に適切な種類のデータを渡すし、結果を処理する SQL ストアド プロシージャを設計する必要がありますを学習できました。
+この Python 演習では、作成、トレーニング、およびモデルを使用して、SQL Server での一般的なパターンを学習します。 この演習では、2 つのストアド プロシージャを作成します。 1 つ目は、単純ベイズ花の特性に基づき、Iris species を予測するモデルを生成します。 2 番目の手順では、スコア付けします。 予測のセットを出力する最初の手順で生成されたモデルを呼び出します。 この演習のステップでは、SQL Server データベース エンジンのインスタンスで Python コードを実行する基礎となる基本的な手法を学習します。
 
-このセクションでは、この同じパターンを使用して、SQL Server に追加したデータでモデルをトレーニングして、モデルを SQL Server テーブルに保存します。
+この演習で使用するサンプル データは、 [Iris データセット](demo-data-iris-in-sql.md)で、 **irissql**データベース。
 
-+ Python machine learning 関数を呼び出すストアド プロシージャを設計します。
-+ ストアド プロシージャには、モデルのトレーニングで使用する SQL Server からのデータが必要があります。
-+ ストアド プロシージャは、二項変数として、トレーニング済みモデルを出力します。 
-+ トレーニング済みモデルを保存するには、変数のモデルをテーブルに挿入します。 
+## <a name="create-a-model-using-a-sproc"></a>ストアド プロシージャを使用して、モデルを作成します。
 
-## <a name="create-the-stored-procedure-and-train-a-python-model"></a>ストアド プロシージャを作成し、Python モデルのトレーニング
+1. Management Studio で、新しいクエリ ウィンドウに接続を開いて、 **irissql**データベース。 
 
-1. モデルを作成するストアド プロシージャを作成する SQL Server Management Studio では、次のコードを実行します。
+    ```sql
+    USE irissql
+    GO
+    ```
+
+2. 構築し、モデルをトレーニングするストアド プロシージャを作成する新しいクエリ ウィンドウで、次のコードを実行します。 SQL Server で再利用するために格納されているモデルでは、バイト ストリームとしてシリアル化され、データベース テーブル内の varbinary (max) 列に格納されています。 モデルが作成されると、トレーニング、シリアル化、およびデータベースに保存できます呼び出すことが他の手順で、またはワークロードをスコア付けの T-SQL の予測関数から。
+
+   このコードでは、pickle を使用して、モデルと単純ベイズ アルゴリズムを提供する scikit シリアル化します。 データの列 0 ~ 4 を使用して、モデルがトレーニングされます、 **iris_data**テーブル。 プロシージャの 2 番目の部分に表示パラメーターのデータ入力を明示して、モデルが出力されます。 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -49,63 +54,39 @@ ms.locfileid: "39085024"
     GO
     ```
 
-2. このコマンドは、エラーなく実行する場合、新しいストアド プロシージャが作成され、データベースに追加します。 Management studio のストアド プロシージャを見つけることができます**オブジェクト エクスプ ローラー****プログラミング**します。
+3. ストアド プロシージャが存在することを確認します。 新しいストアド プロシージャと呼ばれる場合は、前の手順から T-SQL スクリプトの実行エラーが発生せず、 **generate_iris_model**が作成され、追加、 **irissql**データベース。 Management studio のストアド プロシージャを見つけることができます**オブジェクト エクスプ ローラー****プログラミング**します。
 
-3. ストアド プロシージャを実行するようになりました。
+## <a name="execute-the-sproc-to-create-and-train-models"></a>作成およびモデルをトレーニングするストアド プロシージャを実行します。
 
-    ```sql
-    EXEC generate_iris_model
-    ```
+1. ストアド プロシージャを作成した後は、次のコードを実行するために以下を実行します。 ストアド プロシージャを実行するための特定のステートメントは`EXEC`5 番目の行にします。
 
-    ストアド プロシージャの入力が必要とするかを指定していないため、エラーが表示されます。
-
-    "プロシージャまたは関数 'generate_iris_model' パラメーターが必要ですが '\@trained_model'、指定されませんでした"。
-
-4. 必要な入力でモデルを生成し、テーブルに保存するには、いくつか追加のステートメントが必要です。
-
-    ```sql
-    DECLARE @model varbinary(max);
-    EXEC generate_iris_model @model OUTPUT;
-    INSERT INTO iris_models (model_name, model) values('Naive Bayes', @model);
-    ```
-
-5. ここで、モデルの生成コードをもう一度実行してください。 
-
-    エラーが発生する必要があります:"PRIMARY KEY 制約の違反は重複するキーをオブジェクト 'dbo.iris_models' 内に挿入できません。 重複するキー値が (Naive Bayes)"。
-
-    モデル名は、INSERT ステートメントの一部として"Naive Bayes"に手動で入力によって提供されたためにです。 モデルに自動的に名前を付けるしより簡単に識別できるようには、実行のたびに異なるパラメーターや異なるアルゴリズムを使用して、モデルの多くを作成すると仮定すると、メタデータ スキームの設定を考慮する必要があります。
-
-6. このエラーを回避するには、SQL ラッパーにわずかな変更を行うことができます。 この例では、現在の日付と時刻を追加して一意のモデル名が生成されます。
+   このスクリプトは、("Naive Bayes") と同じ手順を再実行によって作成された新しいものを確保するために同じ名前の既存のモデルを削除します。 モデルの削除せずに、オブジェクトが既に存在することを示すエラーが発生しました。 
 
     ```sql
     DECLARE @model varbinary(max);
     DECLARE @new_model_name varchar(50)
-    SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)
+    SET @new_model_name = 'Naive Bayes '
     SELECT @new_model_name 
     EXEC generate_iris_model @model OUTPUT;
+    DELETE iris_models WHERE model_name = @new_model_name;
     INSERT INTO iris_models (model_name, model) values(@new_model_name, @model);
-    ```
-
-7. モデルを表示するには、単純な SELECT ステートメントを実行します。
-
-    ```sql
-    SELECT * FROM iris_models;
     GO
     ```
 
+2. 結果を出力領域に表示します。 スクリプトには、モデルが存在することを示す、SELECT ステートメントが含まれています。 モデルの一覧を取得する別の方法は`SELECT * FROM iris_models`で**irissql**します。
+
     **結果**
 
-    |model_name | model |
-    |------|------|
-    | Naive Bayes | 0x800363736B6C656172... |
-    | Naive Bayes Jan 01 2018 午前 9時 39分 | 0x800363736B6C656172... |
-    | Naive Bayes Feb 01 2018 午前 10時 51分 | 0x800363736B6C656172... |
+    |   | (列名なし |
+    |---|-----------------|
+    | 1 | Naive Bayes     | 
 
-## <a name="generate-scores-from-the-model"></a>モデルからスコアを生成します。
 
-最後に、みましょう、変数に、テーブルからこのモデルを読み込むし、スコアを生成する Python にそれを渡します。
+## <a name="create-and-execute-a-sproc-for-generating-predictions"></a>作成して予測を生成するためのストアド プロシージャの実行
 
-1. スコア付けを実行するストアド プロシージャを作成する次のコードを実行します。 
+作成し、トレーニング、モデルを保存したが、これで、次の手順移動します。 予測を生成するストアド プロシージャを作成します。 これを行うには、Python を開始し、前回の演習で作成し、スコア付けへのデータ入力にシリアル化されたモデルを読み込みます Python スクリプトに渡すを呼び出し元の sp_execute_external_script でします。
+
+1. スコア付けを実行するストアド プロシージャを作成する次のコードを実行します。 実行時に、このプロシージャはバイナリ モデルを読み込み、列を使用して`[1,2,3,4]`として入力し、列を指定`[0,5,6]`として出力します。
 
     ```sql
     CREATE PROCEDURE predict_species (@model varchar(100))
@@ -118,7 +99,7 @@ ms.locfileid: "39085024"
     irismodel = pickle.loads(nb_model)
     species_pred = irismodel.predict(iris_data[[1,2,3,4]])
     iris_data["PredictedSpecies"] = species_pred
-    OutputDataSet = iris_data.query( ''PredictedSpecies != SpeciesId'' )[[0, 5, 6]]
+    OutputDataSet = iris_data[[0,5,6]] 
     print(OutputDataSet)
     '
     , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
@@ -130,33 +111,33 @@ ms.locfileid: "39085024"
     GO
     ```
 
-    ストアド プロシージャでは、テーブルから、単純ベイズ モデルを取得し、モデルに関連付けられている関数を使用してスコアを生成します。 この例では、ストアド プロシージャは、モデル名を使用してテーブルからモデルを取得します。 ただし、モデルを保存するメタデータの種類、によっても取得できます、最新のモデルまたはモデル、最高精度。
-
-2. モデルの名前"Naive Bayes"スコア付けのコードを実行するストアド プロシージャに渡すには、次の行を実行します。 
+2. プロシージャを使用するモデルを認識できるように、"Naive Bayes"モデルの名前を与える、ストアド プロシージャを実行します。 
 
     ```sql
     EXEC predict_species 'Naive Bayes';
     GO
     ```
 
-    ストアド プロシージャを実行すると、Python data.frame を返します。 T-SQL の行は、返される結果のスキーマを指定します。 `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`
+    ストアド プロシージャを実行すると、Python data.frame を返します。 T-SQL の行が返される結果のスキーマを指定します:`WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`します。 結果を新しいテーブルに挿入またはアプリケーションに戻すことができます。
 
-    結果を新しいテーブルに挿入またはアプリケーションに戻すことができます。
+    ![ストアド プロシージャの実行からの結果セット](media/train-score-using-python-NB-model-results.png)
 
-    この例を作成できます簡単な Python iris データセットからデータをスコア付けを使用しています。 (行を参照してください`iris_data[[1,2,3,4]])`。)。ただし、多くの場合は、新しいデータを取得する SQL クエリを実行し、Python に渡す`InputDataSet`します。 
+    結果は、150 species フローラル特性を入力として使用する予測です。 観測のほとんどは、予測の種は実際の種と一致します。
 
-### <a name="remarks"></a>コメント
+    この例を作成できます簡単な Python iris データセットをトレーニングとスコア付けの両方を使用しています。 一般的な方法は必要に応じて、新しいデータを取得する SQL クエリを実行してとして Python に渡す`InputDataSet`します。 
 
-Python での作業に使用している場合は、データの読み込み、いくつかの概要と、グラフを作成し、モデルのトレーニングおよび同じ 250 行のコードですべてのスコアを生成することに慣れてする必要があります。
+## <a name="conclusion"></a>まとめ
 
-ただし、SQL Server のプロセス (モデルの作成、スコア付けなど) を運用化には場合、方法にパラメーターを使用して変更可能な手順を繰り返し可能なプロセスを分離できることを検討する必要があります。 ストアド プロシージャの入力と出力にマップされた入出力を明確に定義するストアド プロシージャで実行する Python コードを求める可能な限り、します。
+この演習でさまざまなタスクを各ストアド プロシージャが、システム ストアド プロシージャを使用するためのストアド プロシージャを作成する方法を学習しました[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Python プロセスを開始します。 Python プロセスへの入力は、パラメーターとして sp_execute_external スクリプトに渡されます。 Python スクリプト自体と SQL Server データベースのデータの変数は、入力として渡されます。
 
-さらに、モデルのトレーニングまたはスコアの生成のプロセスからのデータの探索プロセスを分離することでパフォーマンスを一般に向上できます。 
+Python での作業に使用している場合は、データの読み込み、いくつかの概要と、グラフを作成し、モデルのトレーニングおよび同じ 250 行のコードですべてのスコアを生成することに慣れてする必要があります。 この記事では、別々 のプロシージャに処理を編成することでよく使用されるアプローチとは異なります。 この方法はいくつかのレベルで便利です。
 
-得点の付け方とトレーニング プロセス多くの場合、最適化できるまたはでアルゴリズムを使用して、SQL Server の並列処理などの機能を活用することで[revoscalepy](../python/what-is-revoscalepy.md)または[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)そのサポートのストリーミング並列実行ではなく標準的な Python ライブラリを使用します。 
+利点の 1 つは、パラメーターを使用して変更できる繰り返し可能な手順にプロセスを分離することができます。 入力と出力ストアド プロシージャの入力にマップされると実行時に渡すことができる出力を明確に定義するストアド プロシージャで実行する Python コードを必要する可能な限り、します。 この演習では、(この例では"Naive Bayes"という名前) のモデルを作成する Python コードはスコア付けプロセスで、モデルで呼び出す 2 番目のストアド プロシージャへの入力として渡されます。
 
-## <a name="next-lesson"></a>次のレッスン
+2 番目の利点は、そのトレーニングとスコアリング プロセスを最適化できますまたはでアルゴリズムを使用して、SQL Server の並列処理、リソースの管理などの機能を活用することで[revoscalepy](../python/what-is-revoscalepy.md)または[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)ストリーミングをサポートして、並列実行します。 トレーニングとスコア付け、分離して特定のワークロードの最適化を対象にすることができます。
 
-最後のレッスンでは、計算コンテキストとして SQL Server を使用して、リモート クライアントから Python コードを実行します。 ストアド プロシージャの外部の Python を実行しないや、Python クライアントいない場合は、この手順は省略可能なです。
+## <a name="next-steps"></a>次の手順
+
+前のチュートリアルでは、ローカルでの実行に重点を置いています。 ただし、ことができますもコードを実行する Python クライアント ワークステーションでは、リモート計算コンテキストとして SQL Server を使用します。 SQL Server に接続するクライアント ワークステーションのセットアップに関する詳細については、次を参照してください。 [Python クライアント ツールのセットアップ](../python/setup-python-client-tools-sql.md)します。
 
 + [Python クライアントから revoscalepy モデルを作成します。](use-python-revoscalepy-to-create-model.md)

@@ -11,18 +11,18 @@ ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8efde3304c2aa0ff51936754e6cba255d3dce4de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158432"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461948"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>レッスン 2: 時系列マイニング構造へのマイニング モデルの追加
   このレッスンで作成したマイニング構造に新しいマイニング モデルを追加[レッスン 1: 時系列マイニング モデルおよびマイニング構造を作成する](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)します。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE ステートメント  
- 使用する既存のマイニング構造に新しいマイニング モデルを追加するには、[ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) ステートメントです。 ステートメント内のコードは、次の部分に分けることができます。  
+ 使用する既存のマイニング構造に新しいマイニング モデルを追加するには、 [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
   
 -   マイニング構造の指定  
   
@@ -96,7 +96,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>ARIMA 時系列マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
   
 2.  上の ALTER MINING STRUCTURE ステートメントの汎用例を空のクエリにコピーします。  
   

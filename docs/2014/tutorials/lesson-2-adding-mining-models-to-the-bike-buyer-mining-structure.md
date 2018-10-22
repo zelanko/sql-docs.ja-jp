@@ -11,12 +11,12 @@ ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222612"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462048"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>レッスン 2: Bike Buyer マイニング構造へのマイニング モデルの追加
   このレッスンでは、作成した Bike Buyer マイニング構造に 2 つのマイニング モデルを追加[レッスン 1: Bike Buyer マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)します。 これら 2 つのマイニング モデルを追加すると、一方のモデルでデータを調査でき、もう一方のモデルで予測を作成できます。  
@@ -26,7 +26,7 @@ ms.locfileid: "48222612"
  基づくマイニング モデルを作成する、潜在顧客が自転車を購入する可能性があるかどうかを予測する、 [Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)します。 このアルゴリズムではそれぞれの潜在顧客に関連付けられている情報を基に、自転車を購入するかどうかの予測に役立つ特性を見つけることができます。 特性が見つかったら、以前自転車を購入した顧客と新しい潜在顧客の特性値を比較して、新しい潜在顧客が自転車を購入する可能性を判定することができます。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE ステートメント  
- 使用するマイニング構造にマイニング モデルを追加するには、[ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) ステートメントです。 ステートメント内のコードは、次の部分に分けることができます。  
+ 使用するマイニング構造にマイニング モデルを追加するには、 [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
   
 -   マイニング構造の指定  
   
@@ -103,7 +103,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>デシジョン ツリー マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
   
 2.  上の ALTER MINING STRUCTURE ステートメントの汎用例を空のクエリにコピーします。  
   
@@ -209,7 +209,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-clustering-mining-model"></a>クラスター マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、順にクリックします**DMX**をクエリ エディターが開き、新しい空のクエリを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、順にクリックします**DMX**をクエリ エディターが開き、新しい空のクエリを開きます。  
   
 2.  上の ALTER MINING STRUCTURE ステートメントの汎用例を空のクエリにコピーします。  
   

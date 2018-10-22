@@ -71,6 +71,32 @@ items:
 - name: チュートリアル
   href: tutorials/machine-learning-services-tutorials.md
   items:
+  - name: data
+    items:
+    - name: アヤメ データ セット
+      href: tutorials/demo-data-iris-in-sql.md
+    - name: NYC タクシー データ セット
+      href: tutorials/demo-data-nyctaxi-in-sql.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: 最初のモデルのトレーニングと使用
+      href: tutorials/train-score-using-python-in-tsql.md
+    - name: データベース内分析について
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: データのインポート
+        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+      - name: データの調査と視覚化
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: データの機能の作成
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: モデルのトレーニングと保存
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: モデルを運用する
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: revoscalepy を使用したモデルの作成
+      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -79,15 +105,13 @@ items:
     - name: データベース内分析について
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - デモ データの設定
-        href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 - データの視覚化
+      - name: 1 - データの視覚化
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 3 - データの機能の作成
+      - name: 2 - データの機能の作成
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 4 - トレーニングと SQL への保存
-        href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 5 - 結果の予測
+      - name: 3 - トレーニングと SQL への保存
+        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: 4 - 結果の予測
         href: tutorials/sqldev-operationalize-the-model.md
     - name: データ サイエンスのエンドツーエンドチュートリアル
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -139,30 +163,6 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: 簡単なシミュレーションを作成する
         href: tutorials/deepdive-create-a-simple-simulation.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: SQL での Python の Iris データ
-      items:
-      - name: ストアド プロシージャで Python をラップする
-        href: tutorials/wrap-python-in-tsql-stored-procedure.md
-      - name: SQL Server の Python モデルからトレーニングおよびスコア付けする
-        href: tutorials/train-score-using-python-in-tsql.md
-    - name: revoscalepy を使用したモデルの作成
-      href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: データベース内分析について
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: データのインポート
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-      - name: データの調査と視覚化
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: データの機能の作成
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: モデルのトレーニングと保存
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: モデルを運用する
-        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: サンプル
   href: https://github.com/Microsoft/sql-server-samples
 - name: ソリューション
@@ -325,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: ed84c8ae7a1a1ef653decd2bf445aed053432323
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 15b60b36d87f9eab56616d66984237ef2f57f68d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383378"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461938"

@@ -11,12 +11,12 @@ ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107482"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461978"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>レッスン 2: Market Basket マイニング構造へのマイニング モデルの追加
   このレッスンで作成した Market Basket マイニング構造に 2 つのマイニング モデルを追加[レッスン 1: Market Basket マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)します。 これらのマイニング モデルを使用すると、予測を作成できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "48107482"
  変更した効果を表示、 *MINIMUM_PROBABILTY*後のレッスンでのパラメーター。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE ステートメント  
- 使用するマイニング構造に入れ子になったテーブルを含むマイニング モデルを追加するには [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) ステートメントです。 ステートメント内のコードは、次の部分に分けることができます。  
+ 使用するマイニング構造に入れ子になったテーブルを含むマイニング モデルを追加する、 [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
   
 -   マイニング構造の指定  
   
@@ -107,7 +107,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>Association マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -201,7 +201,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>Association マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   

@@ -4,33 +4,33 @@ description: ダウンロードと Windows 用の Azure データ Studio のイ�
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88b79feb3b04dcc7f872653b2e24a9f70c370f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07c5e65558bf4544da08f631a1d57290352bb451
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038996"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411139"
 ---
 # <a name="download-and-install-azure-data-studio"></a>ダウンロードし、Azure Data Studio のインストール
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
-ダウンロードして、最新のリリースでは、インストール、*年 9 月 GA リリース*:
+ダウンロードして、最新のリリースでは、インストール、*年 10 月リリース*:
 
 > [!NOTE]
 > SQL Operations Studio から更新しているし、設定、キーボード ショートカット、またはコード スニペットを保持する場合は、次を参照してください。[ユーザー設定の移動](#move-user-settings)します。
 
 |プラットフォーム|ダウンロード|リリース日| バージョン |
 |:---|:---|:---|:---|
-|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=2024683)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2024680)|2018 年 9 月 24 日 |1.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2024677)|2018 年 9 月 24 日 |1.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2024668)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2024672)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2024675)|2018 年 9 月 24 日 |1.0|
+|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|2018 年 10 月 18 日 |1.1.3|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|2018 年 10 月 18 日 |1.1.3|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|2018 年 10 月 18 日 |1.1.3|
 
 最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
@@ -40,20 +40,20 @@ ms.locfileid: "48038996"
 
 **インストーラー**
 
-1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] インストーラー](https://go.microsoft.com/fwlink/?linkid=2024683) ダウンロードして実行します。
+1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] インストーラー](https://go.microsoft.com/fwlink/?linkid=2030731) ダウンロードして実行します。
 1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 
 **.zip ファイル**
 
-1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=2024680) をダウンロードします。
+1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=2030736) をダウンロードします。
 2. ダウンロードしたファイルを参照し、展開します。
 3. `\azuredatastudio-windows\azuredatastudio.exe`を実行します。
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>MacOS 用の Azure データ Studio を入手します。
 
-1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2024677) をダウンロードします。
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2030738) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
 3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*Azure データ Studio.app*を*アプリケーション*フォルダー。
 
@@ -61,9 +61,9 @@ ms.locfileid: "48038996"
 ## <a name="get-azure-data-studio-for-linux"></a>Linux 用 Azure Data Studio を入手します。
 
 1. ダウンロード[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Linux を使用して、インストーラーまたは tar.gz アーカイブのいずれかで。
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2024668)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2024672)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2024675)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2030750)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)
 1. ファイルを展開し、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動するため、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **Debian のインストール:**
@@ -148,6 +148,10 @@ Windows インストーラーを使用して[!INCLUDE[name-sos-short](../include
 
 ## <a name="check-for-updates"></a>更新を確認する
 最新の更新を確認するには、ウィンドウの左下にある歯車アイコンをクリックして **更新を確認する** をクリックしてください。
+
+## <a name="supported-sql-offerings-ssms-180-preview"></a>サポートされる SQL 製品 (SSMS 18.0 プレビュー)
+
+* このバージョンの Azure データ Studio はすべて[サポート対象バージョンの SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) Azure SQL Database と Azure SQL Data Warehouse で最新のクラウド機能の使用をサポートしています。 Azure Data Studio には、Azure SQL マネージ インスタンスのプレビュー サポートも提供します。
 
 ## <a name="move-user-settings"></a>ユーザー設定を移動します。
 
