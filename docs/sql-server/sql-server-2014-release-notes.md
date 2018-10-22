@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2014 リリース ノート | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2018
+ms.date: 03/15/2018
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dafd722700fa0fe7f1d165d3120a6f35765f9bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7a72900cc62e8a517f437975691b858bb1401a5
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627020"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419497"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -294,7 +294,7 @@ instance_id の値の不一致という問題が既に発生している場合�
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services ネイティブ モード レポート サーバーを SQL Server 2014 Reporting Services SharePoint コンポーネントとサイド バイ サイドで実行できない  
 **問題点:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint コンポーネントが同じサーバーにインストールされている場合、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードの Windows サービス SQL Server Reporting Services (ReportingServicesService.exe) の起動に失敗します。  
   
-**回避策:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint コンポーネントをアンインストールし、Microsoft SQL Server 2012 Reporting Services の Windows サービスを再起動します。  
+**回避策:**  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint コンポーネントをアンインストールし、Microsoft SQL Server 2012 Reporting Services の Windows サービスを再起動します。  
   
 **詳細情報:**  
   

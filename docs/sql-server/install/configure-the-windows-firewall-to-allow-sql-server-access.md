@@ -23,18 +23,15 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 79b26af281fd55d9fdcda2c0e4cbf9b1de29460a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 516732cacc3f5f34b7faa1eecd31e82cd286fa61
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819710"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383727"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-
-
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。
 
 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールがオンになっているが、正しく構成されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続の試行がブロックされる可能性があります。  
   
@@ -119,7 +116,7 @@ ms.locfileid: "47819710"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス|HTTP エンドポイントの作成時に指定できます。 既定の TCP ポートは、CLEAR_PORT トラフィックでは 80、SSL_PORT トラフィックでは 443 です。|URL を使用した HTTP 接続に使用されます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンス|TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、Secure Sockets Layer (SSL) を使用した HTTP 接続です。|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP ポート 4022。 使用されるポートを確認するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]の既定のポートはありませんが、これがオンライン ブックの例で使用される通常の構成です。|  
-|データベース ミラーリング|管理者が選択したポート。 ポートを特定するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|データベース ミラーリングに既定のポートはありませんが、オンライン ブックの例では、TCP ポート 5022 または 7022 を使用しています。 特に自動フェールオーバーを伴う高い安全性モードでは、使用中のミラーリング エンドポイントが中断しないようにすることはきわめて重要です。 ファイアウォール構成によりクォーラムが分割されないようにする必要があります。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。|  
+|データベース ミラーリング|管理者が選択したポート。 ポートを特定するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|データベース ミラーリングに既定のポートはありませんが、オンライン ブックの例では、TCP ポート 5022 または 7022 を使用しています。 特に自動フェールオーバーを伴う高い安全性モードでは、使用中のミラーリング エンドポイントが中断しないようにすることはきわめて重要です。 ファイアウォール構成によりクォーラムが分割されないようにする必要があります。 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)」を参照してください。|  
 |のレプリケーション|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのレプリケーション接続では、一般的な正規の [!INCLUDE[ssDE](../../includes/ssde-md.md)] ポートを使用します (既定のインスタンスに使用される TCP ポート 1433 など)。<br /><br /> レプリケーション スナップショットのための Web 同期と FTP/UNC アクセスには、ファイアウォール上で追加のポートを開く必要があります。 ある場所から別の場所に初期データおよびスキーマを転送するために、レプリケーションでは FTP (TCP ポート 21)、HTTP (TCP ポート 80) を使用した同期、またはファイル共有を使用できます。 ファイル共有では、NetBIOS を使用する場合、UDP ポート 137 と 138、および TCP ポート 139 を使用します。 ファイル共有は TCP ポート 445 を使用します。|HTTP を使用した同期のために、レプリケーションでは IIS エンドポイント (既定ではポート 80 だが構成可能) を使用しますが、IIS プロセスは標準のポート (既定のインスタンスの場合は 1433) を使用してバックエンドの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。<br /><br /> FTP を使用した Web 同期時は、サブスクライバーと IIS の間ではなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 発行者と IIS の間で FTP 転送が行われます。|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。<br /><br /> [IPsec](#BKMK_IPsec) の例外が必要な場合もあります。|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ホスト コンピューターで [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用している場合は、 **Devenv.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ホスト コンピューターで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用している場合は、 **ssms.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。 詳細については、「 [Transact-SQL デバッガーの構成](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)」を参照してください。|  
   

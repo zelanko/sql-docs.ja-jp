@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) のダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 09/27/2018
+ms.date: 09/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 703990d0484240d602c34ca24262df38e7aadc5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736610"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419199"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,6 @@ AS、IS、RS プロジェクト サポートをインストールするには、
 > [!IMPORTANT]
 > - SSDT for Visual Studio 2017 (15.8.1) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
 > - Windows 10 1803 に SSDT をインストールし、SSIS のインストールを選択した場合、予期せず再起動することがあります。 その場合、再起動後、インストールを再度実行し、インストールを継続します。
-> - SSDT 15.8.1 は現在 Windows 7 SP1 をサポートしていないので、Windows 7 SP1 を使用している場合は、15.8.0 で継続してください。
 
 
 

@@ -21,16 +21,15 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8823f7fd346fdadfecb67c8db217894415b4e0a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d189ed1e434380f409fdec0fee799801934019a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764386"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383612"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 以前のバージョンの SQL Server に関するコンテンツについては、「[SQL Server の最大容量仕様](maximum-capacity-specifications-for-sql-server.md)」をご覧ください。
 
   次の各表に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントで定義される各種オブジェクトの最大サイズと最大数を示します。 各 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テクノロジの表に移動するには、それぞれのリンクをクリックしてください。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "47764386"
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション オブジェクト  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション (DAC) でテストされた各種オブジェクトの最大サイズと最大数。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC オブジェクト||最大サイズ/最大数 ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 64 ビットの場合)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC オブジェクト||最大サイズ/最大数 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 64 ビットの場合)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
 |DAC ごとのデータベース数||1|  
 |DAC ごとのオブジェクト数*||データベース内のオブジェクト数または使用可能なメモリによって制限されます。|  
