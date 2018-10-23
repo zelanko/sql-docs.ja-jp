@@ -55,7 +55,7 @@ recordset.AddNew FieldList, Values
   
  *即時更新モード*(をプロバイダーに変更を書き込みます、基になるデータ ソースを呼び出すと、**更新**メソッド) を呼び出すと、 **AddNew**メソッドなし引数のセット、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)プロパティを**adEditAdd** (、 [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)値)。 プロバイダーは、ローカル フィールド値の変更をキャッシュします。 呼び出す、 **Update**メソッドは、データベースに新しいレコードをポストし、リセット、 **EditMode**プロパティを**adEditNone** (、 **EditModeEnum**値)。 渡す場合、 *Fieldlist*と*値*引数、ADO はすぐに、新しいレコードをデータベースに投稿 (ありません**Update**呼び出しが必要)、 **EditMode**プロパティの値が変更されない (**adEditNone**)。  
   
- *バッチ更新モード*(をプロバイダーが複数の変更をキャッシュし、呼び出すときにのみ、基になるデータ ソースに書き込む、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッド) を呼び出すと、 **AddNew**メソッドの引数を設定せず、 **EditMode**プロパティを**adEditAdd**します。 プロバイダーは、ローカル フィールド値の変更をキャッシュします。 呼び出す、 **Update**メソッドは、現在、新しいレコードを追加**レコード セット**、プロバイダーが基になるデータベースへの変更を投稿またはリセットしていませんが、 **EditMode****adEditNone**を呼び出すまで、 **UpdateBatch**メソッド。 渡す場合、 *Fieldlist*と*値*引数、ADO プロバイダーに送信、新しいレコードの記憶域のキャッシュとセット、 **EditMode**に**adEditAdd**; を呼び出す必要があります、 **UpdateBatch**メソッドを基になるデータベースに新しいレコードを投稿します。  
+ *バッチ更新モード*(をプロバイダーが複数の変更をキャッシュし、呼び出すときにのみ、基になるデータ ソースに書き込む、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッド) を呼び出すと、 **AddNew**メソッドの引数を設定せず、 **EditMode**プロパティを**adEditAdd**します。 プロバイダーは、ローカル フィールド値の変更をキャッシュします。 呼び出す、 **Update**メソッドは、現在、新しいレコードを追加**レコード セット**、プロバイダーが基になるデータベースへの変更を投稿またはリセットしていませんが、 **EditMode** **adEditNone**を呼び出すまで、 **UpdateBatch**メソッド。 渡す場合、 *Fieldlist*と*値*引数、ADO プロバイダーに送信、新しいレコードの記憶域のキャッシュとセット、 **EditMode**に**adEditAdd**; を呼び出す必要があります、 **UpdateBatch**メソッドを基になるデータベースに新しいレコードを投稿します。  
   
 ## <a name="example"></a>例  
  次の例では、配列としてフィールドの一覧と値のリストを追加する方法についてに含まれる値のリストとフィールドの一覧で AddNew メソッドを使用する方法を示します。  
