@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 75ca694832c0509a4db5d422bbed79b2bef0f83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731490"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460687"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>SQL Server をインストール ウィザードからインストールする (セットアップ)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-この記事では、インストール ウィザードを使用して SQL Server をインストールする方法について説明します。 これは [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] および [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)] に適用されます。 以前のバージョンの SQL Server に関連するコンテンツについては、「[インストール ウィザードからの SQL Server 2014 のインストール (セットアップ)](install-sql-server-from-the-installation-wizard-setup.md)」を参照してください。
+この記事では、インストール ウィザードを使用して SQL Server をインストールする方法について説明します。 これは [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] および [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)] に適用されます。
 
 この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ インストール ウィザードを使って [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールする手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用してすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできるため、それらを個別にインストールする必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントの個別のインストール方法の詳細については、「[SQL Server をインストールする](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)」を参照してください。  
 
@@ -69,7 +69,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
 4.  [ライセンス条項] ページで使用許諾契約書を確認し、同意する場合は **[ライセンス条項に同意する]** チェック ボックスをオンにして、 **[次へ]** をクリックします。  
 
   >[!NOTE]
-  > SQL Server は、インストールの状態に関する情報および製品の機能向上に役立つその他の利用状況データとパフォーマンス データを送信します。 SQL Server のデータ処理とプライバシー管理の詳細については、「[プライバシーに関する声明](https://privacy.microsoft.com/en-us/privacystatement)」および「[SQL Server を構成して Microsoft にフィードバックを送信する](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)」を参照してください。 
+  > SQL Server は、インストールの状態に関する情報および製品の機能向上に役立つその他の利用状況データとパフォーマンス データを送信します。 SQL Server のデータ処理とプライバシー管理の詳細については、「[プライバシーに関する声明](https://privacy.microsoft.com/en-us/privacystatement)」および「[SQL Server を構成して Microsoft にフィードバックを送信する](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)」を参照してください。 
   
 5.  [グローバル ルール] ウィンドウ内で、ルール エラーが存在していない場合は、セットアップ手順は自動的に [製品の更新プログラム] ページに進みます。  
   

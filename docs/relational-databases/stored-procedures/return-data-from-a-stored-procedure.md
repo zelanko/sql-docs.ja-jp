@@ -14,16 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bad9832f2341b6c3a739a01ce8a9bed586b34a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662380"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383767"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャからデータを返す](return-data-from-a-stored-procedure.md)」を参照してください。
 
   プロシージャからのデータを呼び出し元のプログラムに返す手段には、結果セット、出力パラメーター、リターン コードの 3 つがあります。 このトピックでは、3 つのアプローチについて説明します。  
   

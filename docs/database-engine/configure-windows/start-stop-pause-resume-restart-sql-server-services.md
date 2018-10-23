@@ -41,16 +41,15 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bd7f88349097cd4308a962786d407c798ec77c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf944c001534a6b1dec008498122e5d020e1a0c1
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802300"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383827"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server サービスの開始、停止、一時停止、再開、再起動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx)」を参照してください。
 
   このトピックでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]構成マネージャー、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、コマンド プロンプトからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンド、  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 **、** エージェント、または [!INCLUDE[tsql](../../includes/tsql-md.md)]Browser サービスを開始、停止、一時停止、再開、または再起動する方法について説明します。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "47802300"
   
     -   [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Services"></a>[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスの概要  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは、Windows サービスとして実行される実行可能プログラムです。 Windows サービスとして実行されるプログラムは、コンピューター画面にアクティビティを表示することなく動作を続行できます。  
@@ -360,7 +359,7 @@ ms.locfileid: "47802300"
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)   
  [最小構成での SQL Server の起動](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   
- [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+ [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
 

@@ -11,18 +11,18 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726711458f62011fc7bcaef268887813c9c9c3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842010"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460547"
 ---
 # <a name="using-spatial-datatypes"></a>空間データ型の使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-空間データ型 (Geometry と Geography) は、プレビュー リリースの JDBC Driver 6.5.0 を起動サポートします。 空間データ型は、現在はストアド プロシージャ、テーブル値パラメーター (TVP)、BulkCopy、および Always Encrypted でサポートされません。 このページでは、JDBC ドライバーで Geometry と Geography データ型のケースを使用して、さまざまな表示されます。 空間データ型の概要については、確認[空間データ型の概要](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-types-overview)ページ。
+空間データ型 (Geometry と Geography) は、プレビュー リリースの JDBC Driver 6.5.0 を起動サポートします。 空間データ型は、現在はストアド プロシージャ、テーブル値パラメーター (TVP)、BulkCopy、および Always Encrypted でサポートされません。 このページでは、JDBC ドライバーで Geometry と Geography データ型のケースを使用して、さまざまな表示されます。 空間データ型の概要については、確認[空間データ型の概要](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview)ページ。
 
 ## <a name="creating-a-geometry--geography-object"></a>Geometry の作成/Geography オブジェクト
 

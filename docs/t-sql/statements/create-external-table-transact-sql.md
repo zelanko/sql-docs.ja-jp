@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803b1a72edb5a6c0a951eb9d199a4d7ff27526fe
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649379"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460945"
 ---
 # <a name="create-external-table-transact-sql"></a>外部テーブル (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "47649379"
   
  外部テーブルを使用します。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、Hadoop または Azure Blob Storage データをクエリします。  
+-   Hadoop または Azure の blob ストレージ データをクエリ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。  
   
--   Hadoop または Azure Blob Storage からデータをインポートして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納します。  
+-   インポートおよびに Hadoop または Azure の blob ストレージからデータを格納、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。  
   
 -   弾力性のあるデータベースで使用するため、外部テーブルを作成します。  
      クエリ。  
@@ -144,8 +144,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、1 つまたは複数の列の定義を使用できます。 CREATE EXTERNAL TABLE と CREATE TABLE の両方の列を定義する同じ構文を使用します。 例外が次のようには、外部テーブルで、既定の制約を使用することはできません。 列の定義とそのデータ型の詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」と「[CREATE TABLE (Transact-SQL)](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)」を使用してください。  
   
- データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータを照会するときに、ファイルの行が拒否されます。 さまざまな外部データソースのデータ型をマップする方法の詳細については、「[Type mapping with PolyBase](../../relational-databases/polybase/polybase-type-mapping.md)」 (PolyBase を使用した型のマッピング) を参照してください。  
-  
+ データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータを照会するときに、ファイルの行が拒否されます。  
   
  LOCATION =  '*folder_or_filepath*'  
  Hadoop または Azure blob ストレージでは、フォルダーまたはファイル パスと、実際のデータのファイル名を指定します。 ルート フォルダーから、場所を開始します。ルート フォルダーは、外部データ ソースで指定されたデータの場所です。  

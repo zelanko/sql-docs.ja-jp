@@ -1,7 +1,7 @@
 ---
 title: SQL Server セットアップ ログ ファイルの表示と読み取り | Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2016
+ms.date: 09/09/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: b4478c599de236930b0222b31cad4c5c6d5e4fa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 089464d0c92154a68c50f1c9d1e5c4a2156f5bed
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713130"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419417"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server セットアップ ログ ファイルの表示と読み取り
 

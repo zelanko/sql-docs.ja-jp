@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d201fb9d134f4066e0504056c208d2c1c0507fa3
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: f677d955541d32614dcfc60cebb0be1d1c438571
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782291"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460987"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) と Reporting Services
 
@@ -29,9 +29,9 @@ SQL Server Reporting Services SharePoint モードで SharePoint ファームの
 
 レポート ビューアー Web パーツを使用すると、SharePoint サイト内に SQL Server Reporting Services ネイティブ モード レポートを埋め込むことができます。 この Web パーツは、SharePoint 2013 と SharePoint 2016 に使用できます。 SharePoint 2013 と SharePoint 2016 のどちらも、要求認証を利用します。 結果として、C2WTS を適切に構成する必要があり、レポートを正しく表示するには Reporting Services を Kerberos 認証用に構成する必要があります。
 
-1. RSWindowsNegotiate 認証タイプを使用するために SSRS サービス アカウントを決定し、SPN を設定し、rsreportserver.config ファイルを更新して、Kerberos 認証用の Reporting Services (ネイティブ モード) インスタンスを構成します。 [レポート サーバーのサービス プリンシパル名 (SPN) の登録](https://docs.microsoft.com/en-us/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+1. RSWindowsNegotiate 認証タイプを使用するために SSRS サービス アカウントを決定し、SPN を設定し、rsreportserver.config ファイルを更新して、Kerberos 認証用の Reporting Services (ネイティブ モード) インスタンスを構成します。 [レポート サーバーのサービス プリンシパル名 (SPN) の登録](https://docs.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
 
-2. [C2WTS の構成に必要な手順](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)に従います
+2. [C2WTS の構成に必要な手順](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)に従います
  
 
 ## <a name="sharepoint-mode-integration"></a>SharePoint モードの統合
@@ -84,7 +84,7 @@ Kerberos の制約付き委任を使用する環境では、SharePoint Server �
     * **[ユーザーまたはコンピューター...&#42;]** を選択し、サービスをホストするアカウントを入力します。 たとえば、SQL Server が *sqlservice* というアカウントで実行されている場合は、`sqlservice` と入力します。 
       **レポート ビューアー Web パーツ**の場合は、Reporting Services (ネイティブ モード) インスタンスのサービス アカウントです。
 
-    * サービス一覧を選択します。 そのアカウントで使用できる SPN が表示されます。 そのアカウントのサービス一覧が表示されない場合は、サービスがないか、別のアカウントのサービスの可能性があります。 SPN の調整には、SetSPN ユーティリティを使用できます。 **レポート ビューアー Web パーツ**の場合は、「[レポート ビューアー Web パーツの構成](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration)」で構成した http SPN が表示されます。
+    * サービス一覧を選択します。 そのアカウントで使用できる SPN が表示されます。 そのアカウントのサービス一覧が表示されない場合は、サービスがないか、別のアカウントのサービスの可能性があります。 SPN の調整には、SetSPN ユーティリティを使用できます。 **レポート ビューアー Web パーツ**の場合は、「[レポート ビューアー Web パーツの構成](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration)」で構成した http SPN が表示されます。
 
     * [OK] を選択してダイアログを閉じます。
 
