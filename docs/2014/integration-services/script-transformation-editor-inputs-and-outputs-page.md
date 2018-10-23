@@ -28,7 +28,7 @@ ms.locfileid: "48084522"
 > [!NOTE]  
 >  基になるコンポーネントには出力はありますが、入力はありません。変換先のコンポーネントには入力はありますが、出力はありません。 変換には入力と出力の両方があります。  
   
- スクリプト コンポーネントの詳細については、「 [Script Component](data-flow/transformations/script-component.md) 」および「 [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
+ スクリプト コンポーネントの詳細については、「 [スクリプトコンポーネントt](data-flow/transformations/script-component.md) 」および「 [スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **Inputs and outputs**  
