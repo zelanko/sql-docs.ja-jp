@@ -1,7 +1,7 @@
 ---
 title: 'トラブルシューティング ツール: SQL Server トランザクション レプリケーションでのエラーを見つける | Microsoft Docs'
 ms.custom: ''
-ms.date: 04/26/2018
+ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 665ffbd6b0a36bc38a0e7f88b7fbff035a5f2b0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800980"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419457"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール: SQL Server トランザクション レプリケーションでのエラーを見つける 
 トランザクション レプリケーションがどのように動作するのかを基本的に理解していないと、レプリケーション エラーのトラブルシューティングはフラストレーションを感じることがあります。 パブリケーション作成の最初のステップは、スナップショット エージェントでスナップショットを作成し、スナップショット フォルダーにそれを保存することです。 次に、ディストリビューション エージェントがサブスクライバーにスナップショットを適用します。 
