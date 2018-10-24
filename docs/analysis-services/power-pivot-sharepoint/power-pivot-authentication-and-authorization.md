@@ -98,7 +98,7 @@ ms.locfileid: "38983467"
  Excel Services では、セキュリティ関連の構成設定は信頼できる場所、信頼できるデータ プロバイダー、および信頼できるデータ接続ライブラリで指定します。 次の表に、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスを有効化または拡張する設定について説明します。 ここに記載されていない設定は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー接続に影響しません。 これらの設定を指定する方法については、「 [初期構成(Power Pivot for SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)」の「Excel Services の有効化」を参照してください。  
   
 > [!NOTE]  
->  ほとんどのセキュリティ関連の設定は、信頼できる場所に適用されます。 既定値を保持するか、サイトごとに異なる値を使用する場合は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含むサイト用に信頼できる場所を追加作成し、そのサイトにのみ以下の設定を構成できます。 詳細については、「 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
+>  ほとんどのセキュリティ関連の設定は、信頼できる場所に適用されます。 既定値を保持するか、サイトごとに異なる値を使用する場合は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含むサイト用に信頼できる場所を追加作成し、そのサイトにのみ以下の設定を構成できます。 詳細については、「 [サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   
 |領域|設定|説明|  
 |----------|-------------|-----------------|  
