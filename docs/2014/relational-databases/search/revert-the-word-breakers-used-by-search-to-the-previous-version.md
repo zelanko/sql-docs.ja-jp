@@ -22,7 +22,7 @@ ms.locfileid: "48186452"
   
  このトピックでは、次の言語については説明しません。  
   
--   **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
+-   **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [米国英語と英国英語に使用されるワード ブレーカーの変更](change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
   
 -   **デンマーク語、ポーランド語、およびトルコ語**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のリリースに含まれていたデンマーク語、ポーランド語、およびトルコ語向けのサードパーティ製のワード ブレーカーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに置き換えられました。  
   
@@ -377,7 +377,7 @@ ms.locfileid: "48186452"
 |現在のファイル名|MsWb70804.dll|  
   
 ## <a name="see-also"></a>参照  
- [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [米国英語と英国英語に使用されるワード ブレーカーの変更](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [フルテキスト検索の動作の変更](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   
