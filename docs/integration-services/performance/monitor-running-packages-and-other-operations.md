@@ -45,7 +45,7 @@ ms.locfileid: "47623680"
 > [!NOTE]
 > この記事では、実行中の SSIS パッケージを監視する方法 (全般) と、オンプレミスで実行中のパッケージを監視する方法について説明します。 Azure SQL Database で SSIS を実行し、監視することもできます。 詳細については、「[Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」 (SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする) を参照してください。
 >
-> Linux でも SSIS パッケージを実行できますが、Linux では監視ツールが提供されません。 詳しくは、「[Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md)」(SSIS で Linux 上のデータの抽出、変換、読み込みを行う) をご覧ください。
+> Linux でも SSIS パッケージを実行できますが、Linux では監視ツールが提供されません。 詳しくは、「[SSIS で Linux 上のデータの抽出、変換、読み込みを行う](../../linux/sql-server-linux-migrate-ssis.md)」 をご覧ください。
 
 ## <a name="operation-types"></a>操作の種類  
  **サーバー上の** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでは、さまざまな種類の操作が監視されます。 各操作には、複数のメッセージを関連付けることができます。 各メッセージは、複数の種類のうちの 1 つに分類できます。 たとえば、メッセージの種類は、情報、警告、またはエラーとなります。 メッセージの種類の一覧については、Transact-SQL の [catalog.operation_messages &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ビューに関するドキュメントを参照してください。 操作の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。  

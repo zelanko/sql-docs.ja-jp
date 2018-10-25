@@ -40,7 +40,7 @@ ms.locfileid: "47799110"
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでのパッケージ実行中に発生するログ記録のスコープを構成できます。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](#server_logging)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでのパッケージ実行中に発生するログ記録のスコープを構成できます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](#server_logging)」を参照してください。  
   
  **dtexec** コマンド プロンプト ユーティリティを使用してパッケージを実行する際にも、ログ記録を使用できます。 ログ記録をサポートするコマンド プロンプトの引数の詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   

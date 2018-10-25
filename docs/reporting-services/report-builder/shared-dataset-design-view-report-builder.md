@@ -31,7 +31,7 @@ ms.locfileid: "47800150"
 > [!NOTE]  
 >  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
   
- 詳細については、「 [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
+ 詳細については、「 [データ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
   
 ### <a name="dataset"></a>データセット  
  共有データセット プロパティを設定するには、 **[オプションの設定]** ボタンを使用します。 その一部を次に示します。  

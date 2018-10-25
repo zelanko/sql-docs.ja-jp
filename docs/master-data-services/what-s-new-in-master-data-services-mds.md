@@ -41,7 +41,7 @@ ms.locfileid: "47855230"
   
  パフォーマンスが向上したことで、さらに大きなモデルを作成できます。また、データ読み込みの効率性と全体的なパフォーマンスも向上しました。 たとえば、Microsoft Excel 用アドインのパフォーマンスが改善したことでデータの読み込み時間が短縮され、より大きなエンティティをアドインが処理できます。  
   
- Microsoft Excel 用アドインの詳細については、「 [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)」を参照してください。  
+ Microsoft Excel 用アドインの詳細については、「 [Microsoft Excel 用マスター データ サービス アドイン](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)」を参照してください。  
   
  強化された機能を次に示します。  
   

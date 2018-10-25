@@ -116,7 +116,7 @@ Visual Studio がインストールされていない場合、あるいは Visua
 
     -   **スクリーン ショットを参照する場合。** この単純なエンド ツー エンドの例を 1 つのページ示した「[簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)」をご覧ください。
 
-    -   **ビデオを視聴する場合。** ウィザードを実行し、わかりやすく簡単な手順でデータを Excel にエクスポートする方法を説明した YouTube の 4 分間のビデオ「[Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049)」 (SQL Server インポートおよびエクスポート ウィザードを使用して Excel にエクスポートする) をご覧ください。
+    -   **ビデオを視聴する場合。** ウィザードを実行し、わかりやすく簡単な手順でデータを Excel にエクスポートする方法を説明した YouTube の 4 分間のビデオ「[SQL Server インポートおよびエクスポート ウィザードを使用して Excel にエクスポートする](https://go.microsoft.com/fwlink/?linkid=829049)」 をご覧ください。
 
 -   **ウィザードのしくみについては、以下を参照してください。**
 

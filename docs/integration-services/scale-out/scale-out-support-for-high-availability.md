@@ -29,7 +29,7 @@ Scale Out Master 側の高可用性は、[Always On for SSIS Catalog](../catalog
 SSIS カタログに Always On を使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 
 ## <a name="1-prerequisites"></a>1.Prerequisites
-Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 (Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール) を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
+Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2.プライマリ ノードに Scale Out Master をインストールする
 Scale Out Master のプライマリ ノードに SQL Server データベース エンジン サービス、Integration Services、Scale Out Master をインストールします。 

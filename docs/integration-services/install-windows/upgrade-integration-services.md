@@ -145,6 +145,6 @@ ms.locfileid: "47753800"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のアップグレード済みのインスタンスに格納されている [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージを実行する [!INCLUDE[ssDE](../../includes/ssde-md.md)]コンピューターでは使用できません。  
   
 ## <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ記事「 [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157)」  
+ blogs.msdn.com のブログ記事「 [既存のカスタムSSIS拡張機能とアプリケーションをデナリで動作させる](http://go.microsoft.com/fwlink/?LinkId=238157)」  
   
   

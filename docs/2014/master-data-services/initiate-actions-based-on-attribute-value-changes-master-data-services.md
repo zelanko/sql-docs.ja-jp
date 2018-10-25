@@ -31,7 +31,7 @@ ms.locfileid: "48151096"
   
 -   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
   
--   属性は、変更の追跡グループに含まれている必要があります。 詳細については、「 [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 」を参照してください。  
+-   属性は、変更の追跡グループに含まれている必要があります。 詳細については、「 [変更の追跡グループに属性を追加する &#40;マスター データ サービス&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 」を参照してください。  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>属性値の変更に基づいてアクションを開始するビジネス ルールを作成するには  
   
