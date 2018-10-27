@@ -12,12 +12,12 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d03d763bc0992973604f2b891492931d23415994
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13b703abc7c95523de9c8e2a5e06e984711f50bd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178652"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147937"
 ---
 # <a name="tabular-model-programming"></a>テーブル モデルのプログラミング
   テーブル モデルでは、リレーショナル構造を使用して、分析アプリケーションおよびレポート アプリケーションによって使用される Analysis Services のデータがモデル化されます。 これらのモデルは、ストレージ用のメモリ内分析エンジンおよび要求に応じてデータを集計して計算する高速テーブル スキャンを使用して、テーブル モード用に構成された Analysis Service インスタンスで実行されます。  
@@ -27,11 +27,11 @@ ms.locfileid: "48178652"
  ここでは、テーブル モデル エンティティとそのプロパティをプログラムで操作する方法について詳しく説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ビジネス インテリジェンス向け CSDL 注釈&#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [テーブル オブジェクト モデルについて](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [CSDL への BI 注釈のテクニカル リファレンス](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [CSDL への BI 注釈のテクニカル リファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded インターフェイス](imdembeddeddata-interface.md)  
   

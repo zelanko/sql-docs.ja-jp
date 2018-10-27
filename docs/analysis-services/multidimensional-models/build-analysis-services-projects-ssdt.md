@@ -1,5 +1,5 @@
 ---
-title: Analysis Services プロジェクト (SSDT) のビルド |Microsoft ドキュメント
+title: Analysis Services プロジェクト (SSDT) のビルド |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18c906c7dea3b57b2760a7bb5f44e69834906e6a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b00fecf6712d8ab1d4ba8b810485af6d432479ac
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022995"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147273"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services プロジェクトのビルド (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34022995"
   
  検証が成功すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] により XML ファイルが生成されます。 ファイルが作成されると、次の表に説明するファイルが出力フォルダー内に格納されます。  
   
-|ファイル (bin フォルダー内)|Description|  
+|ファイル (bin フォルダー内)|説明|  
 |-----------------------------|-----------------|  
 |*Projectname*.asdatabase|配置スクリプト ファイル内で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのオブジェクトのメタデータを定義している ASSL 要素が格納されます。 このファイルは、配置エンジンがオブジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに配置するときに使用されます。|  
 |*Projectname*.configsettings|配置の際に使用された構成設定値 (データ ソースの接続文字列など) が格納されます。この設定値は、直接変更したり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用して変更したりできます。|  
@@ -46,16 +46,16 @@ ms.locfileid: "34022995"
 |*Projectname*.deploymentoptions|配置の際に使用されたさまざまなオプション設定 (ストレージ場所など) が格納されます。この設定は、直接変更したり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用したりして変更できます。|  
 |*Assemblyname*/*dllname.* dll|参照されたアセンブリ別の個別のフォルダー。各フォルダーには、アセンブリの DLL、すべての参照されたアセンブリ、出力デバッグ情報が記録された関連 .pdb ファイルが格納されます。|  
   
-|ファイル (obj フォルダー内)|Description|  
+|ファイル (obj フォルダー内)|説明|  
 |-----------------------------|-----------------|  
 |\<構成名 > \LastBuilt.xml|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの最終作成時刻を表すタイム スタンプおよびハッシュ コードが含まれています。|  
   
- これらの XML ファイルに含まれていない\<Create > および\<Alter > タグで、配置時に作成します。  
+ これらの XML ファイルに含まれていない\<Create > および\<Alter > タグで、展開時に作成されます。  
   
  参照されたアセンブリ (標準システムと [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アセンブリを除く) も出力ディレクトリにコピーされます。 参照がソリューションの別のプロジェクト (複数) に対して行われる場合はまず、該当するプロジェクト構成を使用してそれらのプロジェクトが作成され、プロジェクト参照により確立された依存オブジェクトが作成され、その後、プロジェクトの出力フォルダーにコピーされます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services プロジェクトの展開 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services プロジェクトの配置 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

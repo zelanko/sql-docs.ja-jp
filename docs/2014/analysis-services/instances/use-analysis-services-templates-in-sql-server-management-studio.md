@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4860230697f5a65ada594060b738793ebea6202
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143802"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146752"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、XMLA スクリプト、DMX クエリ、または MDX クエリの迅速な作成、キューブまたはテーブル モデルの KPI の作成、バックアップ操作および復元操作のスクリプト作成、および他の多数のタスクを実行するためのテンプレートのセットを提供します。 テンプレートは、 **の** テンプレート エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]にあります。  
@@ -109,7 +109,7 @@ ms.locfileid: "48143802"
 5.  内のテキストをダブルクリックして、\<ファイル > 要素。 ファイル拡張子として .abf を使用し、バックアップ ファイル名を入力します。 既定のバックアップの場所を使用しない場合は、ファイルの完全パスを指定します。 詳細については、「[データベースのバックアップ、復元、および同期 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)」をご覧ください。  
   
 ##  <a name="bkmk_schemarowset"></a> XMLA テンプレートを使用してスキーマ行セット クエリを生成する  
- **テンプレート エクスプローラー** には、スキーマ行セット クエリのテンプレートが 1 つだけ含まれています。 このテンプレートを使用するには、必要な要素、制限として使用できる列など、使用する個々のスキーマ行セットの要件を把握している必要があります。 詳細については、「 [Analysis Services のスキーマ行セット](../schema-rowsets/analysis-services-schema-rowsets.md)」をご覧ください。  
+ **テンプレート エクスプローラー** には、スキーマ行セット クエリのテンプレートが 1 つだけ含まれています。 このテンプレートを使用するには、必要な要素、制限として使用できる列など、使用する個々のスキーマ行セットの要件を把握している必要があります。 詳細については、「 [Analysis Services のスキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)」をご覧ください。  
   
  使いやすさのために、スキーマ行セットの多くが動的管理ビュー (DMV) としても公開されています。 対応する DMV を使用することで、Transact-SQL などの構文を使用してスキーマ行セットのクエリを実行できます。 たとえば、次のクエリは同じ結果を返しますが、1 つは XML 形式で、1 つはテーブル形式で返されます。 DMV の詳細については、「[動的管理ビュー (DMV) を使用した Analysis Services の監視](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)」をご覧ください。  
   
@@ -144,7 +144,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  **テンプレート エクスプローラー**を開き、 **[スキーマ行セットの発見]** テンプレートを空のクエリ ウィンドウにドラッグします。  
   
-3.  テンプレートでは、置換、 [RequestType 要素&#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md) 、次のテキストを持つ要素。 `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  テンプレートでは、置換、 [RequestType 要素&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) 、次のテキストを持つ要素。 `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  **[実行]** をクリックします。  
   
@@ -196,39 +196,39 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||入れ子になった単一予測|DMX SELECT FROM を使用する方法を示します*\<モデル >* 列で、予測クエリで明示的に指定された、1 つの値を使用してマイニング モデルに対して予測クエリを実行する NATURAL PREDICTION JOIN 句名前、マイニング モデル内の列に一致して、マイニング モデルの入れ子になった列にも一致する名前、UNION ステートメントを使用して作成された入れ子になったテーブル内の値のセットを含むです。|  
 ||単一予測|DMX SELECT FROM を使用する方法を示します\<model > NATURAL PREDICTION JOIN ステートメントを名前の列に一致する列で、予測クエリで明示的に指定された 1 つの値を使用してマイニング モデルに対して予測クエリを実行するにはマイニング モデルです。|  
 ||ストアド プロシージャ コール|DMX CALL ステートメントを使用してストアド プロシージャを呼び出す方法を示します。|  
-|MDX\式|移動平均 - 固定|MDX を使用する方法を示します`ParallelPeriod`と`CurrentMember`固定数の時間間隔の時間ディメンションの階層に含まれているメジャーの移動平均を提供する、計算メジャーを作成する自然順序のセットを持つ関数です。|  
-||移動平均 - 可変|MDX を使用する方法を示します`CASE`内のステートメント、`Avg`可変期間において、時間ディメンションの階層のメジャーの移動平均を提供する、計算メジャーを作成する関数。|  
+|MDX\式|移動平均 - 固定|MDX `ParallelPeriod` 関数および `CurrentMember` 関数を自然な順序のセットと共に使用して、時間ディメンションの階層の一定期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|  
+||移動平均 - 可変|`CASE` 関数内の MDX `Avg` ステートメントを使用して、時間ディメンションの階層の可変期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|  
 ||期間取得|計算メンバー内の MDX `PeriodsToDate` 関数の使用方法を示します。|  
-||親に対する比率|MDX を使用する方法を示します`Parent`それぞれの子の指定された階層で親メンバーのメジャーの比率を表す、計算されるメジャーを作成する関数。|  
+||親に対する比率|MDX `Parent` 関数を使用して、指定された階層内の親メンバーのそれぞれの子のメジャーの比率を表す、計算メジャーを作成する方法を示します。|  
 ||合計に対する比率|すべてのメンバーを使用して、指定された階層内の各メンバーのメジャーの比率を表す、計算メジャーを作成する方法を示します。|  
 |MDX\クエリ|[基本のクエリ]|MDX クエリの構築に使用する基本の MDX SELECT ステートメントを示します。|  
-||KPI クエリ|MDX を使用する方法を示します`KPIValue`と`KPIGoal`MDX クエリで主要業績評価指標 (KPI) 情報を取得する関数。|  
+||KPI クエリ|MDX `KPIValue` 関数および `KPIGoal` 関数を使用して、MDX クエリ内の主要業績評価指標 (KPI) 情報を取得する方法を示します。|  
 ||副選択クエリ|別の SELECT ステートメントによって定義されたサブキューブから情報を取得する MDX SELECT ステートメントを作成する方法を示します。|  
 ||計算されるメンバーあり|SELECT ステートメントで MDX WITH 句を使用して、MDX クエリの計算メンバーを定義する方法を示します。|  
 ||名前付きセットあり|SELECT ステートメントで MDX WITH 句を使用して、MDX クエリの名前付きセットを定義する方法を示します。|  
-|XMLA\管理|バックアップ|XMLA を使用する方法を示します`Backup`をバックアップするコマンド、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ファイルへのデータベース。|  
-||キャンセル|XMLA を使用する方法を示します`Cancel`コマンド (管理者またはサーバー管理者以外のユーザー) の現在のセッションですべて実行している操作を取り消し、(管理者用)、データベースまたはインスタンス (サーバー管理者向けです)。|  
+|XMLA\管理|バックアップ|XMLA `Backup` コマンドを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをファイルにバックアップする方法を示します。|  
+||キャンセル|XMLA `Cancel` コマンドを使用して、現在のセッション、データベース、またはインスタンス上で実行しているすべての操作を取り消す方法を示します。現在のセッションは管理者またはサーバーの管理者以外のユーザー、データベースは管理者、インスタンスはサーバー管理者がキャンセルできます。|  
 ||リモート パーティション データベースの作成|XMLA `Create` コマンドを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) データベース要素と共に使用して、リモート パーティションを保存する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースおよびデータ ソースを作成する方法を示します。|  
-||DELETE|XMLA を使用する方法を示します`Delete`既存を削除するコマンド[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。|  
+||DELETE|XMLA `Delete` コマンドを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除する方法を示します。|  
 ||ディメンションの処理|XMLA `Batch` コマンドを `Parallel` 要素および `Process` コマンドと組み合わせ、並列バッチ操作を使用してディメンションの属性を更新する方法を示します。|  
-||パーティションの処理|XMLA を使用する方法を示します`Batch`コマンドを組み合わせて、`Parallel`要素と`Process`コマンドは、並列バッチ操作を使用してパーティションを完全に処理します。|  
-||[復元]|XMLA を使用する方法を示します`Restore`を復元するコマンド、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]既存のバックアップ ファイルからデータベース。|  
-||同期|XMLA を使用する方法を示します`Synchronize`を別の同期コマンド[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]と現在のデータベース[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]SynchronizeSecurity タグの SkipMembership オプションを使用してデータベースします。|  
+||パーティションの処理|XMLA `Batch` コマンドを `Parallel` 要素および `Process` コマンドと組み合わせ、並列バッチ操作を使用してパーティションを完全に処理する方法を示します。|  
+||[復元]|XMLA `Restore` コマンドを使用して、既存のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法を示します。|  
+||同期|XMLA `Synchronize` コマンドで、SynchronizeSecurity タグの SkipMembership オプションを使用して別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを現在の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースと同期させる方法を示します。|  
 |XMLA\スキーマ行セット|スキーマ行セットの発見|XMLA `Discover` メソッドを使用して、DISCOVER_SCHEMA_ROWSETS スキーマ行セットの内容を取得する方法を示します。|  
-|XMLA\サーバー ステータス|接続|XMLA を使用する方法を示します`Discover`DISCOVER_CONNECTIONS スキーマ行セットの内容を取得します。|  
-||Jobs|XMLA を使用する方法を示します`Discover`DISCOVER_JOBS スキーマ行セットの内容を取得します。|  
-||[場所]|XMLA を使用する方法を示します`Discover`場所バックアップ ファイルのパスを指定する、DISCOVER_LOCATIONS スキーマ行セットの内容を取得します。|  
+|XMLA\サーバー ステータス|接続|XMLA `Discover` メソッドを使用して、DISCOVER_CONNECTIONS スキーマ行セットの内容を取得する方法を示します。|  
+||Jobs|XMLA `Discover` メソッドを使用して、DISCOVER_JOBS スキーマ行セットの内容を取得する方法を示します。|  
+||[場所]|XMLA `Discover` メソッドを使用して、場所バックアップ ファイルのパスを指定して DISCOVER_LOCATIONS スキーマ行セットの内容を取得する方法を示します。|  
 ||Locks|XMLA `Discover` メソッドを使用して、DISCOVER_LOCKS スキーマ行セットの内容を取得する方法を示します。|  
 ||メモリ許可|XMLA `Discover` メソッドを使用して、DISCOVER_MEMORYGRANT スキーマ行セットの内容を取得する方法を示します。|  
-||パフォーマンス カウンター|XMLA を使用する方法を示します`Discover`DISCOVER_PERFORMANCE_COUNTERS スキーマ行セットの内容を取得します。|  
+||パフォーマンス カウンター|XMLA `Discover` メソッドを使用して、DISCOVER_PERFORMANCE_COUNTERS スキーマ行セットの内容を取得する方法を示します。|  
 ||セッション|XMLA `Discover` メソッドを使用して、DISCOVER_SESSIONS スキーマ行セットの内容を取得する方法を示します。|  
-||トレース|XMLA を使用する方法を示します`Discover`DISCOVER_TRACES スキーマ行セットの内容を取得します。|  
-||トランザクション|XMLA を使用する方法を示します`Discover`DISCOVER_TRANSACTIONS スキーマ行セットの内容を取得します。|  
+||トレース|XMLA `Discover` メソッドを使用して、DISCOVER_TRACES スキーマ行セットの内容を取得する方法を示します。|  
+||トランザクション|XMLA `Discover` メソッドを使用して、DISCOVER_TRANSACTIONS スキーマ行セットの内容を取得する方法を示します。|  
   
 ## <a name="see-also"></a>参照  
- [多次元式&#40;MDX&#41;リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [多次元式 (MDX) リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

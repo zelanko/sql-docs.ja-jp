@@ -1,5 +1,5 @@
 ---
-title: アタッチし、Analysis Services データベースをデタッチ |Microsoft ドキュメント
+title: アタッチし、Analysis Services データベースのデタッチ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7779a0ecac1a8a5d1e53b186e5b221477e20bdf9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020269"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144857"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services データベースのインポートとデタッチ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "34020269"
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Analysis Services データベースを移動します。](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [データベースの Readwritemode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [Analysis Services データベースの移動](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
+ [データベースの ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Detach 要素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Attach 要素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [Detach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Attach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

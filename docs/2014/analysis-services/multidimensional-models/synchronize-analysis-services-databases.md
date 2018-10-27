@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a627434141bd417d9801354a7879d0879e1c85cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174142"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147857"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に付属しているデータベースの同期機能は、同期元サーバー上のデータベースから同期先サーバー上のデータベースにデータおよびメタデータをコピーすることによって、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを同一にします。 データベースの同期機能は、次のタスクを達成するために使用します。  
@@ -46,7 +46,7 @@ ms.locfileid: "48174142"
 ## <a name="prerequisites"></a>前提条件  
  データベースの同期を開始する同期先 (またはターゲット) サーバーで、Analysis Services サーバー管理者ロールのメンバーである必要があります。 同期元サーバーで、使用している Windows ユーザー アカウントに、同期元データベースに対するフル コントロールの権限が付与されている必要があります。 データベースを対話形式で同期する場合は、自分の Windows ユーザー ID のセキュリティ コンテキストで同期が実行されることに注意してください。 自分のアカウントが特定のオブジェクトへのアクセスを拒否された場合は、そのようなオブジェクトは操作から除外されます。 サーバー管理者ロールとデータベース権限の詳細については、次を参照してください[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)と[データベース アクセス許可を付与&#40;。Analysis Services&#41;](grant-database-permissions-analysis-services.md)します。  
   
- 既定のインスタンス間のリモート接続を許可するために、両方のサーバーで TCP ポート 2383 を開く必要があります。 Windows ファイアウォールの例外を作成する方法の詳細については、「[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
+ 既定のインスタンス間のリモート接続を許可するために、両方のサーバーで TCP ポート 2383 を開く必要があります。 Windows ファイアウォールの例外を作成する方法の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
  ソースと宛先の両方のサーバーは、同じバージョンおよび service pack である必要があります。 モデルのメタデータが同期されていることもあるため、ビルドの互換性を確保する両方のサーバー数する必要があります同じであります。 各インストールのエディションが、データベースの同期をサポートしている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データベースの同期は、Enterprise、Developer、および Business Intelligence の各エディションでサポートされています。 各エディションで機能の詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
@@ -188,8 +188,8 @@ ms.locfileid: "48174142"
  ロールまたはロールのメンバーシップを同期しなかった場合は、この段階で、同期先データベースでユーザー アクセス権を指定してください。  
   
 ## <a name="see-also"></a>参照  
- [Synchronize 要素&#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [XMLA を使用したモデル ソリューションを配置します。](deploy-model-solutions-using-xmla.md)   
+ [Synchronize 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+ [XMLA を使用したモデル ソリューションの配置](deploy-model-solutions-using-xmla.md)   
  [配置ウィザードを使用したモデル ソリューションの配置](deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

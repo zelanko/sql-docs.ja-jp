@@ -2,7 +2,7 @@
 title: エンタープライズを評価し、評価レポート (SQL Server) の統合 |Microsoft Docs
 description: DMA を使用して、企業を評価し、Azure SQL Database に SQL Server をアップグレードまたは移行する前に評価レポートを統合する方法について説明します。
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 573e704402cfc8680497ab3a9d45ab7bf3c4ebf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721090"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960786"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -37,14 +37,14 @@ ms.locfileid: "47721090"
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)します。
 - ダウンロードして抽出します。
     - [DMA レポートの Power BI テンプレート](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)します。
-    - [LoadWarehouse スクリプト](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip)します。
+    - [LoadWarehouse スクリプト](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip)します。
 
 ## <a name="loading-the-powershell-modules"></a>PowerShell モジュールの読み込み
 PowerShell モジュールを PowerShell モジュールのディレクトリに保存するを使用する前にそれらを明示的に読み込むことがなくモジュールを呼び出すことができます。
 
 モジュールを読み込むには、次の手順に従います。
 1. C:\Program \windowspowershell\modules に移動し、という名前のフォルダーを作成し、 **DataMigrationAssistant**します。
-2. 開く、 [PowerShell モジュール](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip)、し、作成したフォルダーに保存します。
+2. 開く、 [PowerShell モジュール](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip)、し、作成したフォルダーに保存します。
 
       ![PowerShell モジュール](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -62,7 +62,7 @@ PowerShell モジュールを PowerShell モジュールのディレクトリに
 
     PowerShell が今すぐ自動的に読み込まこれらのモジュール、新しい PowerShell セッションの開始時にします。
 
-## <a name="create-an-inventory-of-sql-servers"></a>SQL サーバーのインベントリを作成します。
+## <a name="create-inventory"></a> SQL サーバーのインベントリを作成します。
 SQL Server を評価する PowerShell スクリプトを実行する前に評価する SQL サーバーのインベントリを作成する必要があります。
 
 このインベントリは、2 つの形式のいずれかにできます。
@@ -83,7 +83,7 @@ SQL Server を評価する PowerShell スクリプトを実行する前に評価
 
 ![SQL Server テーブルの内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
 
-ツール コンピューターにこのデータベースでない場合は、ツールのコンピューターにこの SQL Server インスタンスへのネットワーク接続を確認します。
+このデータベースがない場合、ツールのコンピューターで、ツールのコンピューターにこの SQL Server インスタンスへのネットワーク接続を確認します。
 
 SQL Server テーブルを CSV ファイルを使用する利点は、インスタンスを制御]、[データベースの評価より小さいチャンクに分割しやすく、評価の取得が選択する評価のフラグ列を使用することができます。  複数の評価をまたがることができますし (セクションを参照で、この記事の後半で、評価を実行している)、複数の CSV ファイルを管理するより簡単であります。
 
@@ -98,7 +98,7 @@ DmaDataCollector 関数に関連付けられているパラメーターは、次
 
 |パラメーター  |説明
 |---------|---------|
-|**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。 |
+|**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。<br/>詳細については、次を参照してください。 [SQL サーバーのインベントリ作成](#create-inventory)です。 |
 |**serverName** | SQL Server のインスタンス名を使用する場合は、在庫の**SqlServer**で、 **getServerListFrom**パラメーター。 |
 |**DatabaseName** | インベントリ テーブルをホストするデータベース。 |
 |**%Assessmentname** | DMA 評価の名前。 |
@@ -112,7 +112,7 @@ DmaDataCollector 関数に関連付けられているパラメーターは、次
 
 ## <a name="consuming-the-assessment-json-file"></a>評価の JSON ファイルの使用
 
-評価が完了した後は、する分析のため、データを SQL Server にインポートする準備ができました。 評価の JSON ファイルを使用するには、PowerShell を開き、dmaProcessor 関数を実行します。
+評価が完了すると、分析のための SQL Server にデータをインポートする準備がするようになりました。 評価の JSON ファイルを使用するには、PowerShell を開き、dmaProcessor 関数を実行します。
  
   ![dmaProcessor 関数の一覧](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
@@ -121,12 +121,12 @@ DmaProcessor 関数に関連付けられているパラメーターは、次の�
 |パラメーター  |説明
 |---------|---------|
 |**プロセス**  | JSON ファイルの処理される場所です。 指定できる値は**SQLServer**と**AzureSQLDatabase**します。 |
-|**serverName** | SQL Server インスタンスは、データを処理します。  指定した場合**AzureSQLDatabase**の**プロセス**パラメーター、SQL Server の名前のみを含める (含まれていません。 database.windows.net)。 Azure SQL データベースを対象とする場合に 2 つのログインする要求します。最初の 2 つ目は、Azure の SQL Server の管理者ログイン中に、Azure テナントの資格情報です。 |
-|**CreateDMAReporting** | JSON ファイルを処理するために作成するステージング データベースです。  既に指定したデータベースが存在する、いずれかにこのパラメーターを設定すると、し、オブジェクトは作成できません。  このパラメーターは、削除された 1 つのオブジェクトを再作成するために便利です。 |
+|**serverName** | SQL Server インスタンスは、データを処理します。  指定した場合**AzureSQLDatabase**の**プロセス**パラメーターでは、SQL Server の名前のみを含める (は含まれていません。 database.windows.net)。 求められます 2 つのログインの Azure SQL データベースを対象とする場合最初の 2 つ目は、Azure の SQL Server の管理者ログイン中に、Azure テナントの資格情報です。 |
+|**CreateDMAReporting** | JSON ファイルを処理するために作成するステージング データベースです。  既に指定したデータベースが存在する、いずれかにこのパラメーターを設定すると、オブジェクトを作成取得はありません。  このパラメーターは、削除された 1 つのオブジェクトを再作成するために便利です。 |
 |**CreateDataWarehouse** | Power BI レポートで使用されるデータ ウェアハウスを作成します。 |
 |**DatabaseName** | DMAReporting データベースの名前。 |
 |**warehouseName** | データ ウェアハウス データベースの名前。 |
-|**jsonDirectory** | 評価の JSON ファイルを含むディレクトリ。  ディレクトリに複数の JSON ファイルがある場合は、それらは 1 つずつ処理します。 |
+|**jsonDirectory** | 評価の JSON ファイルを含むディレクトリ。  ディレクトリに複数の JSON ファイルがあるかどうかは、それらを処理している 1 つずつです。 |
 
 DmaProcessor 関数は 1 つのファイルを処理するまで数秒かかる場合のみ必要があります。
 
@@ -135,7 +135,7 @@ DmaProcessor は、評価ファイルの処理の完了をデータは DMAReport
 
 1. LoadWarehouse スクリプトを使用して、次元内のすべての欠損値の設定。
 
-    このスクリプトは DMAReporting データベースの・ レポートデータ ・ テーブルからデータを取得し、ウェアハウスに読み込むこと。  この読み込みプロセス中にエラーがある場合は、ディメンション テーブル内の不足しているエントリの結果と可能性があります。
+    このスクリプトは DMAReporting データベースの・ レポートデータ ・ テーブルからデータを取得し、ウェアハウスに読み込むこと。  この読み込みプロセス中にエラーがある場合は、ディメンション テーブル内の不足しているエントリの結果と可能性です。
 
 2. データ ウェアハウスを読み込みます。
  
@@ -158,7 +158,7 @@ DmaProcessor は、評価ファイルの処理の完了をデータは DMAReport
 
       ![読み込まれた DMA レポートの Power BI テンプレート](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
-   レポートがからデータを更新した後、 **DMAWarehouse**データベースでは、次のようなレポートが表示されます。
+   レポートがからデータを更新した後、 **DMAWarehouse**データベース、次のようなレポートに表示されます。
 
    ![DMAWarehouse レポート ビュー](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
 

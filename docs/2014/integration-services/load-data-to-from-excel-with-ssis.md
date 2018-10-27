@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098520"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991255"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
@@ -254,9 +254,9 @@ Excel の列にテキスト データが含まているとドライバーが判�
 [スクリプト タスクを使用した Excel ファイルの操作](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードについて
-[Excel データ ソースに接続する](/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[簡単な例によるインポートおよびエクスポート ウィザードの概要](/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Excel データ ソースに接続する](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
+[簡単な例によるインポートおよびエクスポート ウィザードの概要](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>その他の記事
-[Excel から SQL Server または Azure SQL Database にデータをインポートする](/relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[Excel から SQL Server または Azure SQL Database にデータをインポートする](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

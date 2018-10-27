@@ -1,5 +1,5 @@
 ---
-title: バックアップ オプション |Microsoft ドキュメント
+title: バックアップのオプション |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 44251ff0abf155564102f0cf94ca8cd998718462
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 62f5bf26f80ea1018a5a3330efa0f055021ff0f5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020929"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145443"
 ---
 # <a name="backup-options"></a>バックアップ オプション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "34020929"
 >  Analysis Services サービス アカウントには、各ファイルに指定されたバックアップ場所に対する書き込み権限が必要です。 また、ユーザーが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの管理者ロールを持っているか、バックアップするデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーである必要があります。  
   
 ## <a name="see-also"></a>参照  
- [データベースのバックアップ ダイアログ ボックスと &#40; です。Analysis Services - 多次元データと &#41; です。](http://msdn.microsoft.com/library/7811ce7d-6c37-4189-bfa6-ef36fb4932db)   
+ [[データベースのバックアップ] ダイアログ ボックス (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/7811ce7d-6c37-4189-bfa6-ef36fb4932db)   
  [Analysis Services データベースのバックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
- [バックアップの要素と &#40; です。XMLA と &#41; です。](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [バックアップ、復元、およびデータベースとその &#40; の同期XMLA と &#41; です。](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Backup 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [データベースのバックアップ、復元、および同期 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

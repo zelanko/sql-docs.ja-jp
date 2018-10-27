@@ -1,5 +1,5 @@
 ---
-title: エラーと警告 (XMLA) 処理 |Microsoft ドキュメント
+title: エラーおよび警告 (XMLA) の処理 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f2ba225f749364101f800efc4316b941bf18aac5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021449"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144927"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>エラーおよび警告の処理 (XMLA)
-  XML for Analysis (XMLA) ときに、エラー処理が必要な[Discover](../../analysis-services/xmla/xml-elements-methods-discover.md)または[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しは実行されませんが、正常に実行されますが、エラーまたは警告が生成されますまたはが正常に実行結果を返しますエラーが含まれます。  
+  XML for Analysis (XMLA) の場合は、エラー処理が必要な[Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)または[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッドの呼び出しは実行されませんが正常に実行しますが、エラーまたは警告を生成またはが正常に実行、結果が返されますエラーを含みます。  
   
 |[エラー]|レポーティング|  
 |-----------|---------------|  
-|XMLA メソッド呼び出しを実行できない|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エラーの詳細を含む SOAP エラー メッセージを返します。<br /><br /> 詳細についてを参照してください、 [SOAP エラーの処理](#handling_soap_faults)です。|  
-|メソッド呼び出しは成功したが、エラーまたは警告が発生した|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 含まれています、[エラー](../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)または[警告](../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)のエラーまたは警告、要素でそれぞれ、[メッセージ](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)のプロパティ、[ルート](../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)要素メソッドの呼び出しの結果を含むです。<br /><br /> 詳細についてを参照してください、 [Handling Errors and Warnings](#handling_errors_and_warnings)です。|  
-|メソッド呼び出しは成功したが、結果にエラーが含まれる|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インラインを含む**エラー**または**警告**エラーまたは警告のための要素、適切な内で、それぞれ[セル](../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)または[行](../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)メソッドの呼び出しの結果の要素。<br /><br /> 詳細についてを参照してください、[処理インライン エラーおよび警告](#handling_inline_errors_and_warnings)です。|  
+|XMLA メソッド呼び出しを実行できない|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エラーの詳細を含む SOAP エラー メッセージを返します。<br /><br /> 詳細については、このセクションを参照してください。 [SOAP エラーの処理](#handling_soap_faults)します。|  
+|メソッド呼び出しは成功したが、エラーまたは警告が発生した|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 含まれています、[エラー](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla)または[警告](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla)要素のエラーまたは警告は、それぞれ、[メッセージ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla)のプロパティ、[ルート](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla)要素メソッド呼び出しの結果を格納するとします。<br /><br /> 詳細については、このセクションを参照してください。 [Handling Errors and Warnings](#handling_errors_and_warnings)します。|  
+|メソッド呼び出しは成功したが、結果にエラーが含まれる|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インラインを含む**エラー**または**警告**要素のエラーまたは警告を適切な内でそれぞれ[セル](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)または[行](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla)メソッドの呼び出しの結果の要素。<br /><br /> 詳細については、このセクションを参照してください。[処理インライン エラーおよび警告](#handling_inline_errors_and_warnings)します。|  
   
 ##  <a name="handling_soap_faults"></a> SOAP エラーの処理  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、以下の状況が発生した場合に、SOAP エラーを返します。  
@@ -39,15 +39,15 @@ ms.locfileid: "34021449"
 ### <a name="fault-code-information"></a>エラー コード情報  
  次の表は、SOAP 応答の詳細セクションに含まれる XMLA エラー コード情報を示しています。 列は、SOAP エラーの詳細セクションに含まれるエラーの属性です。  
   
-|列名|型|Description|Null を許容<sup>1</sup>|  
+|列名|型|説明|Null を許容<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|メソッドの成功または失敗を示すリターン コード。 16 進数値に変換する必要があります、 **UnsignedInt**値。|いいえ|  
-|**WarningCode**|**UnsignedInt**|警告の状況を示すリターン コード。 16 進数値に変換する必要があります、 **UnsignedInt**値。|はい|  
-|**Description**|**文字列**|エラーを生成したコンポーネントによって返されたエラーまたは警告のテキストと説明。|はい|  
-|**ソース**|**文字列**|エラーまたは警告を生成したコンポーネントの名前。|はい|  
-|**HelpFile**|**文字列**|エラーまたは警告について説明しているファイルまたはトピックへのパス、または URL。|はい|  
+|**ErrorCode**|**UnsignedInt**|メソッドの成功または失敗を示すリターン コード。 16 進数の値に変換する必要があります、 **UnsignedInt**値。|いいえ|  
+|**WarningCode**|**UnsignedInt**|警告の状況を示すリターン コード。 16 進数の値に変換する必要があります、 **UnsignedInt**値。|はい|  
+|**[説明]**|**String**|エラーを生成したコンポーネントによって返されたエラーまたは警告のテキストと説明。|はい|  
+|**Source**|**String**|エラーまたは警告を生成したコンポーネントの名前。|はい|  
+|**HelpFile**|**String**|エラーまたは警告について説明しているファイルまたはトピックへのパス、または URL。|はい|  
   
- <sup>1</sup>を示すかどうか、データが必要返す必要があるまたはかどうか、データが省略可能な列が適用されない場合、null 文字列は許可されています。  
+ <sup>1</sup>を示すかどうか、データが必要です返す必要があるまたはかどうか、データが省略可能な列が適用されない場合、null 文字列は許可されています。  
   
  次は、メソッド呼び出しが失敗した場合に発生した SOAP エラーの例です。  
   
@@ -72,25 +72,25 @@ HelpFile="" />
 ```  
   
 ##  <a name="handling_errors_and_warnings"></a> エラーおよび警告の処理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 返します、**メッセージ**プロパティに、**ルート**コマンドの実行後に、次の状況が発生する場合、コマンドの要素。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 返します、**メッセージ**プロパティ、**ルート**コマンドの実行後に、次の状況が発生する場合、コマンドの要素。  
   
 -   メソッド自体は失敗しなかったが、メソッドが成功した後に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスでエラーが発生した。  
   
 -   コマンドが成功したときに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスによって警告が返される。  
   
- **メッセージ**プロパティに含まれる他のすべてのプロパティに依存して、**ルート**要素、1 つ以上含めることができます**メッセージ**要素。 各**メッセージ**要素は、1 つを含めることができます**エラー**または**警告**で発生したエラーまたは警告をそれぞれ説明する要素の指定されたコマンド。  
+ **メッセージ**プロパティに含まれるその他のすべてのプロパティに依存して、**ルート**要素、1 つまたは複数含めることができます**メッセージ**要素。 各**メッセージ**要素は、1 つを含めることができます**エラー**または**警告**で発生したエラーまたは警告をそれぞれ説明する要素、指定されたコマンド。  
   
- 含まれるされたエラーと警告の詳細については、**メッセージ**プロパティを参照してください[メッセージ要素&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)です。  
+ エラーと警告に含まれているの詳細については、**メッセージ**プロパティを参照してください[メッセージ要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla)します。  
   
 ### <a name="handling-errors-during-serialization"></a>シリアル化実行時のエラーの処理  
- 後にエラーが発生した場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスが正常に実行のコマンドの出力のシリアル化を開始した[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を返します、[例外](../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md)エラーの時点で別の名前空間内の要素。 その後 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスは、クライアントに送信する XML ドキュメントが有効なドキュメントになるように、開いている要素をすべて閉じます。 インスタンスが返されます、**メッセージ**エラーの説明を格納する要素。  
+ 後にエラーが発生した場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスが正常に実行コマンドの出力をシリアル化を開始した[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を返します、[例外](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla)エラーの時点で別の名前空間内の要素。 その後 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスは、クライアントに送信する XML ドキュメントが有効なドキュメントになるように、開いている要素をすべて閉じます。 インスタンスを返します、**メッセージ**エラーの説明を含む要素。  
   
 ##  <a name="handling_inline_errors_and_warnings"></a> インライン エラーおよび警告の処理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インラインを返します**エラー**または**警告**XMLA メソッド自体は失敗しなかったのメソッドによって返される結果のデータ要素に固有のエラーが発生した場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]XMLA メソッド呼び出しが成功した後のインスタンス。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インライン返します**エラー**または**警告**XMLA メソッド自体は失敗しなかったで、メソッドによって返される結果のデータ要素に固有のエラーが発生した場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]XMLA メソッドの呼び出しが成功した後のインスタンス。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インラインの提供**エラー**と**警告**セルやその他のデータに特定の問題である場合、要素内に含まれる、**ルート**要素を使用して、 [MDDataSet](../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)セキュリティ エラーやセルのフォーマット エラーなどのデータ型が発生します。 このような場合は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を返します、**エラー**または**警告**内の要素、**セル**または**行**エラーを含む要素または警告、それぞれします。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インラインの提供**エラー**と**警告**問題の特定のセルやその他のデータにある場合は要素内に含まれる、**ルート**要素を使用して、 [MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla)セキュリティ エラーやセルの書式設定エラーなど、データ型が発生します。 このような場合は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を返します、**エラー**または**警告**内の要素、**セル**または**行**エラーを含む要素、または警告、それぞれします。  
   
- 次の例では、結果セットから返される行セットでエラーが発生した、 **Execute**メソッドを使用して、[ステートメント](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md)コマンド。  
+ 次の例から返される行セット内のエラーを含む結果セットを示しています、 **Execute**メソッドを使用して、[ステートメント](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla)コマンド。  
   
 ```  
 <return>  
@@ -115,6 +115,6 @@ HelpFile="" />
 ```  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

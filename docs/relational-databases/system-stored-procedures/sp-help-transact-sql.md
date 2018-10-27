@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40099bef14b2172205a18101036b57d71f3b5812
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c41449a9d8c1a85e283598a350f4372d8b3b0780
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830050"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146047"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help [ [ @objname = ] 'name' ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 返される結果セットが異なるかどうか*名前*を指定した場合とはどのようなデータベース オブジェクトを指定します。  
+ 返される結果セットが異なるかどうか*名前*を指定した場合とはどのデータベース オブジェクトを指定します。  
   
 1.  場合**sp_help**が実行される、引数なしで、現在のデータベース内に存在するすべての型のオブジェクトの概要情報が返されます。  
   
@@ -65,7 +65,7 @@ sp_help [ [ @objname = ] 'name' ]
     |列名|データ型|説明|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar(** 128 **)**|データ型の名前です。|  
-    |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型名。|  
+    |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型の名前です。|  
     |**Length**|**smallint**|データ型の物理バイト数です。|  
     |**prec**|**int**|有効桁数 (総桁数) です。|  
     |**Scale**|**int**|小数点の右側にある数字の数。|  
@@ -173,7 +173,7 @@ sp_help [ [ @objname = ] 'name' ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-information-about-all-objects"></a>A. すべてのオブジェクトに関する情報を返す  
- 次の例では、各オブジェクトに関する情報を一覧表示、`master`データベース。  
+ 次の例では、`master` データベースの各オブジェクトに関する情報を一覧表示します。  
   
 ```  
 USE master;  
@@ -183,7 +183,7 @@ GO
 ```  
   
 ### <a name="b-returning-information-about-a-single-object"></a>B. 特定のオブジェクトに関する情報を返す  
- 次の例では、に関する情報を表示、`Person`テーブル。  
+ 次の例では、`Person` テーブルに関する情報を表示します。  
   
 ```  
 USE AdventureWorks2012;  

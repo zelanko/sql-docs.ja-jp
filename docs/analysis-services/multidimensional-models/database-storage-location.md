@@ -1,5 +1,5 @@
 ---
-title: データベースのストレージ場所 |Microsoft ドキュメント
+title: データベースの記憶域の場所 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9f96b5a919a898f987892fb517ed9687b1d2498
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0544e7e7d552098806d4c3d93751631d03520139
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022519"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146297"
 ---
 # <a name="database-storage-location"></a>データベースの格納場所
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "34022519"
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
- [アタッチし、Analysis Services データベースのデタッチ](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
- [Analysis Services データベースを移動します。](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [DbStorageLocation 要素](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [要素 & #40; を作成します。XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)   
- [Attach 要素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [要素 & #40; を同期します。XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [Analysis Services データベースのインポートとデタッチ](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
+ [Analysis Services データベースの移動](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
+ [DbStorageLocation 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Create 要素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Attach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Synchronize 要素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

@@ -11,18 +11,18 @@ ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b729fb46b83617f0bcc9b0fc7ea7c93583513da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4c7b695882605eacd19d61bf6fe2cc71d8a6048
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188382"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148257"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー
   以前のリリースでは、計算されるメンバーは、サブセレクトまたはサブキューブで許可されませんでした。 しかし、SQL Server 2008 以降では、接続プロパティによって許可され有効になりました。 さらに、サブセレクトおよびサブキューブにおける計算されるメンバーの新しい動作が、SQL Server 2008 R2 で導入されました。  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー  
- `SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROPMSMDSUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)動作または許容値計算されるメンバーの定義または計算サブセレクトまたはサブキューブで設定します。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
+ `SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROPMSMDSUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)動作または許容値計算されるメンバーの定義または計算サブセレクトまたはサブキューブで設定します。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
   
  SubQueries プロパティでは次の値を指定できます。  
   
@@ -125,6 +125,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [クエリのサブセレクト](subselects-in-queries.md)   
- [サポートされる XMLA プロパティ&#40;XMLA&#41;](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [サポートされる XMLA プロパティ (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

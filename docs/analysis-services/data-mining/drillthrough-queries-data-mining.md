@@ -1,5 +1,5 @@
 ---
-title: ドリルスルー クエリ (データ マイニング) |Microsoft ドキュメント
+title: ドリルスルー クエリ (データ マイニング) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8b3afda19fbbf084223d0f597fe2893dce17049
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018299"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148017"
 ---
 # <a name="drillthrough-queries-data-mining"></a>ドリルスルー クエリ (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  *ドリルスルー クエリ* を使用すると、マイニング モデルにクエリを送信して、基になるケースまたは構造データから詳細を取得できます。 ドリルスルーは、モデルのトレーニングに使用されたケースとテストに使用されたケースを比較する際や、ケース データの詳細を確認する際に役立ちます。  
+  *ドリルスルー クエリ*を使用すると、マイニング モデルにクエリを送信して、基になるケースまたは構造データから詳細を取得できます。 ドリルスルーは、モデルのトレーニングに使用されたケースとテストに使用されたケースを比較する際や、ケース データの詳細を確認する際に役立ちます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングは、ドリルスルーの次の 2 つのオプションを提供します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34018299"
 ##  <a name="bkmk_DMX"></a> DMX を使用したドリルスルー クエリの作成  
  モデルまたは構造に対する権限がある場合は、DMX クエリを作成することでケース データをドリルスルーできます。 DMX でドリルスルー クエリを作成する構文の例については、次のトピックを参照してください。  
   
- [DMX を使用したドリルスルー クエリを作成します。](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
+ [DMX を使用したドリルスルー クエリの作成](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
   
 ##  <a name="bkmk_Considerations"></a> ドリルスルーの使用に関する注意点  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34018299"
 -   ドリルスルーがマイニング構造で許可されておらず、マイニング モデルでは許可されている場合、マイニング構造の情報は表示できず、モデル ケースの情報のみを表示できます。  
   
 ###  <a name="bkmk_Security"></a> ドリルスルーのセキュリティに関する問題  
- モデルから構造ケースにドリルスルーする場合は、マイニング構造とマイニング モデルの両方で [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) プロパティが **True**に設定されていることを確認する必要があります。 さらに、構造とモデルの両方に対するドリルスルー権限を持つロールのメンバーである必要があります。 ロールを作成する方法については、「[ロール デザイナー (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192)」を参照してください。 参照してください。  
+ モデルから構造ケースにドリルスルーする場合は、マイニング構造とマイニング モデルの両方で [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) プロパティが **True**に設定されていることを確認する必要があります。 さらに、構造とモデルの両方に対するドリルスルー権限を持つロールのメンバーである必要があります。 ロールを作成する方法については、「[ロール デザイナー (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192)」を参照してください。 参照してください。  
   
  ドリルスルー権限は、構造およびモデルで個別に設定されます。 構造で権限が与えられていない場合でも、モデル権限があればモデルからドリルスルーを行うことができます。 構造のドリルスルー権限がある場合は、[StructureColumn (DMX)](../../dmx/structurecolumn-dmx.md) 関数を使用して、構造列をモデルからドリルスルー クエリに含めることもできます。  
   
@@ -89,10 +89,10 @@ ms.locfileid: "34018299"
   
 |タスク|リンク|  
 |----------|----------|  
-|データ マイニング デザイナーでのドリルスルーの使用を記述するプロシージャ|[マイニング モデルからケース データにドリルスルーします。](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
-|既存のマイニング モデルを変更してドリルスルーを許可するには|[マイニング モデルのドリルスルーを有効にします。](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|DMX WITH DRILLTHROUGH 句を使用してマイニング構造のドリルスルーを有効にする|[マイニング構造 (&) #40";"DMX"&"#41; を作成します。](../../dmx/create-mining-structure-dmx.md)|  
-|マイニング構造とマイニング モデルにドリルスルーを適用する権限の割り当ての詳細について|[データ マイニング構造およびモデル & #40; に対する権限を付与します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|データ マイニング デザイナーでのドリルスルーの使用を記述するプロシージャ|[マイニング モデルからケース データにドリルスルーする](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|既存のマイニング モデルを変更してドリルスルーを許可するには|[マイニング モデルのドリルスルーの有効化](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
+|DMX WITH DRILLTHROUGH 句を使用してマイニング構造のドリルスルーを有効にする|[CREATE MINING STRUCTURE (DMX)](../../dmx/create-mining-structure-dmx.md)|  
+|マイニング構造とマイニング モデルにドリルスルーを適用する権限の割り当ての詳細について|[データ マイニング構造およびデータ マイニング モデルに対する権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   

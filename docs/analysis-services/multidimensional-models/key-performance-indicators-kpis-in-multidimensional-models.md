@@ -1,5 +1,5 @@
 ---
-title: 主要業績評価指標 (Kpi) 多次元モデルの |Microsoft ドキュメント
+title: 主要業績評価指標 (Kpi) では、多次元モデル |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7b7c036b09113711315ada3120538b5117931be7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027562"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147787"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多次元モデルの主要業績評価指標 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34027562"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]における KPI は、キューブ内のメジャー グループに関連付けられた、ビジネスの成功の評価に使用される計算のコレクションです。 これらの計算は通常、多次元式 (MDX) または計算されるメンバーの組み合わせです。 KPI には、KPI の計算結果をクライアント アプリケーションでどのように表示するかについての情報を提供する追加のメタデータもあります。  
   
- KPI で扱う情報は、設定された目標、キューブに記録された実際の業績の公式、および業績の傾向と状態を示す測定値です。 公式の定義と、KPI の値に関するその他の定義には AMO を使用します。 クライアント アプリケーションによる KPI 値の取得およびエンド ユーザーへの公開には、ADOMD.NET などのクエリ インターフェイスが使用されます。 詳細については、「 [ADOMD.NET での開発](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)」を参照してください。  
+ KPI で扱う情報は、設定された目標、キューブに記録された実際の業績の公式、および業績の傾向と状態を示す測定値です。 公式の定義と、KPI の値に関するその他の定義には AMO を使用します。 クライアント アプリケーションによる KPI 値の取得およびエンド ユーザーへの公開には、ADOMD.NET などのクエリ インターフェイスが使用されます。 詳細については、「 [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)」を参照してください。  
   
  簡単な <xref:Microsoft.AnalysisServices.Kpi> オブジェクトは、基本情報、目標、実際の達成値、状態値、傾向値、および KPI が表示されるフォルダーで構成されます。 基本情報には、KPI の名前および説明が含まれます。 目標は、数値に評価される MDX 式です。 実際の値は、数値に評価される MDX 式です。 状態と傾向の値は、数値に評価される MDX 式です。 フォルダーは、クライアントに表示される KPI の推奨される場所です。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34027562"
 |----------|----------------|  
 |[目標]|KPI のターゲット値を返す MDX 数値式または計算。|  
 |値|KPI の実際の値を返す MDX 数値式。|  
-|[状態]|特定時点の KPI の状態を示す MDX 式。<br /><br /> 状態 MDX 式は、-1 ～ 1 の正規化された値を返します。 -1 以下の値は "不良" または "低" と解釈されます。 値 0 は "許容値" または "中" と解釈されます。 1 以上の値は、"良" または "高" と解釈されます。<br /><br /> 中間値は数の制限なく返すことができ、クライアント アプリケーションでサポートされていれば、それを使用して任意の数の状態情報を表示できます。|  
+|状態|特定時点の KPI の状態を示す MDX 式。<br /><br /> 状態 MDX 式は、-1 ～ 1 の正規化された値を返します。 -1 以下の値は "不良" または "低" と解釈されます。 値 0 は "許容値" または "中" と解釈されます。 1 以上の値は、"良" または "高" と解釈されます。<br /><br /> 中間値は数の制限なく返すことができ、クライアント アプリケーションでサポートされていれば、それを使用して任意の数の状態情報を表示できます。|  
 |傾向|一定期間にわたり、KPI の値を評価する MDX 式。 傾向は、特定のビジネス コンテキストで役に立つ任意の時間ベースの条件です。<br /><br /> 傾向 MDX 式を使用すると、ビジネス ユーザーは、一定期間内の KPI の上下を判断できるようになります。|  
 |状態インジケーター|KPI の状態をわかりやすく示す視覚的要素。 要素の表示は、状態を評価する MDX 式の値によって決まります。|  
 |傾向インジケーター|KPI の傾向をわかりやすく示す視覚的要素。 要素の表示は、傾向を評価する MDX 式の値によって決まります。|  
@@ -51,7 +51,7 @@ ms.locfileid: "34027562"
 ## <a name="parent-kpis"></a>親 KPI  
  組織は、異なるレベルの異なるビジネス基準を追跡することがあります。 たとえば、会社全体のビジネス上の成功を計測するために 2 ～ 3 の KPI を使用し、それらの KPI が、会社内のビジネス単位で追跡したその他 3 ～ 4 の KPI に基づいている場合があります。 また、会社内のビジネス単位は、同じ KPI の計算に異なる統計を使用する可能性があり、その結果が会社全体の KPI にロール アップされます。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Kpi の間の親子リレーションシップを定義できます。 この親子リレーションシップにより、子 KPI の結果を親 KPI の結果の計算に使用できます。 さらに、クライアント アプリケーションはこのリレーションシップを使用して、親子 KPI を正しく表示できます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、KPI 間に親子リレーションシップを定義できます。 この親子リレーションシップにより、子 KPI の結果を親 KPI の結果の計算に使用できます。 さらに、クライアント アプリケーションはこのリレーションシップを使用して、親子 KPI を正しく表示できます。  
   
 ## <a name="weights"></a>重み  
  重みは子 KPI にも割り当てることができます。 重みにより、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、親 KPI の値の計算時に子 KPI の結果を比例的に調整できます。  

@@ -15,12 +15,12 @@ ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bee729056f1654e265e7e37d92dcfd0015381f71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8f07c94b986c697721188a50e2ec5d478ac0b1b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119919"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146858"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>[Analysis Services DDL 実行タスク エディター] ([DDL] ページ)
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[DDL]** ページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースへの接続を指定でき、データ定義言語 (DDL) ステートメントのソースについての情報を表示できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "48119919"
  **[接続]**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを一覧で選択するか、\<**[新しい接続...]**> をクリックして **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
- **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)  
+ **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、 [Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)  
   
  **[SourceType]**  
  DDL ステートメントのソースの種類を指定します。 このプロパティには、次の表に示すオプションがあります。  
@@ -62,10 +62,10 @@ ms.locfileid: "48119919"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services DDL 実行タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [Analysis Services DDL 実行タスク エディター ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
  [[式] ページ](expressions/expressions-page.md)   
  [制御フロー](control-flow/control-flow.md)   
- [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML for Analysis &#40;XMLA&#41;リファレンス](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+ [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [XML for Analysis (XML for Analysis) リファレンス](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

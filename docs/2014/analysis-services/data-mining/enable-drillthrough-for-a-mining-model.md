@@ -14,28 +14,28 @@ ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a743c0f6be94140efc8d12e90e04a62c31afd89f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b01cc021875e836d8c6c244f7436e7f869f8be6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202172"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147897"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>マイニング モデルのドリルスルーの有効化
   マイニング モデルのドリルスルーを有効にした場合は、モデルの参照時に、モデルの作成に使用されたケースに関する詳細情報を取得できます。 この情報を表示するには、必要な権限があり、構造が既に処理されている必要があります。  
   
- **権限** モデル データや構造データのドリルスルーを行うユーザーは、マイニング モデルまたはマイニング構造に対する [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) 権限を持つロールのメンバーである必要があります。 ドリルスルー権限は、構造およびモデルで個別に設定されます。  
+ **権限** モデル データや構造データのドリルスルーを行うユーザーは、マイニング モデルまたはマイニング構造に対する [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 権限を持つロールのメンバーである必要があります。 ドリルスルー権限は、構造およびモデルで個別に設定されます。  
   
 -   モデルのドリルスルー権限があれば、構造で権限が与えられていない場合でも、モデルからドリルスルーを行うことができます。  
   
 -   構造のドリルスルー権限がある場合は、[StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 関数を使用して、構造列をモデルからドリルスルー クエリに含めることもできます。 SELECT… \<構造 >。場合の構文です。  
   
- **トレーニング ケースのキャッシュ** マイニング構造内のトレーニング ケースに関する情報が取得されることで、ドリルスルーが機能します。 この情報は、構造が処理されるときにキャッシュされます。 そのためをクリアする場合は、すべてのキャッシュ データを変更して、<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>プロパティを`ClearAfterProcessing`ドリルスルーは機能しません。  
+ **トレーニング ケースのキャッシュ** マイニング構造内のトレーニング ケースに関する情報が取得されることで、ドリルスルーが機能します。 この情報は、構造が処理されるときにキャッシュされます。 そのため、<xref:Microsoft.AnalysisServices.MiningStructureCacheMode> プロパティを `ClearAfterProcessing` に変更して、キャッシュされたデータをすべて消去した場合、ドリルスルーは機能しません。  
   
 > [!NOTE]  
 >  トレーニング ケースがキャッシュされていない場合、ケース データを表示するには、 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> プロパティを **KeepTrainingCases** に変更してからモデルを再処理する必要があります。  
   
- 詳細については、「[ドリルスルー クエリ &#40;データ マイニング&#41;](drillthrough-queries-data-mining.md)」を参照してください。  
+ 詳細については、「 [ドリルスルー クエリ (データ マイニング)](drillthrough-queries-data-mining.md)」をご覧ください。  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>マイニング モデルのドリルスルーを有効にするには  
   
@@ -56,6 +56,6 @@ ms.locfileid: "48202172"
 4.  **[データベース]** メニューの **[処理]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー クエリ&#40;データ マイニング&#41;](drillthrough-queries-data-mining.md)  
+ [ドリルスルー クエリ &#40;データ マイニング&#41;](drillthrough-queries-data-mining.md)  
   
   

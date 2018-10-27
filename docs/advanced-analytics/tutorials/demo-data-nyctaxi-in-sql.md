@@ -1,6 +1,6 @@
 ---
 title: R と Python (SQL Server Machine Learning) の埋め込みの NYC タクシーのデモ データとスクリプトのダウンロード |Microsoft Docs
-description: ニューヨーク市タクシーのサンプル データをダウンロードして、データベースの作成の手順です。 データを R を埋め込む方法を示す SQL Server チュートリアルで使用して、SQL Server での Python にはストアド プロシージャと T-SQL 関数します。
+description: ニューヨーク市タクシーのサンプル データをダウンロードして、データベースの作成の手順です。 データは、SQL Server のストアド プロシージャおよび T-SQL 関数のスクリプトを埋め込む方法を示す SQL Server の Python および R 言語のチュートリアルで使用されます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9359bb9a441551d16bc5de3f57f0158e56a98626
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f9482a43a37f3c4feee497ae2fd93029143c84f9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463057"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806712"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server"></a>SQL Server 用の NYC タクシーのデモ データ
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC タクシーのデモ データの SQL Server の Python および R のチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事からパブリック データで構成されるサンプル データベースを設定する方法を説明します、[ニューヨーク市タクシーのデータセットとリムジン委員会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)します。 このデータは、SQL server データベース内分析のためのいくつかの R と Python のチュートリアルで使用されます。 サンプル データは、パブリック データ セットの 1% です。 システム データベースのバックアップ ファイルはわずか 90 MB、170万主データ テーブルの行を提供することです。
@@ -26,7 +26,7 @@ ms.locfileid: "49463057"
 
 +  [SQL Server の Python のモデルを使用するトレーニングとスコア付け](train-score-using-python-in-tsql.md)
 
-## <a name="download-demo-database"></a>デモのデータベースをダウンロードします。
+## <a name="download-files"></a>ファイルをダウンロードします。
 
 サンプル データベースは、Microsoft によってホストされているバックアップ ファイルです。 ファイルのダウンロードは、リンクをクリックするとすぐに開始します。 
 
@@ -66,7 +66,7 @@ ms.locfileid: "49463057"
 |**PredictTipSingleMode**  |ストアド プロシージャ (stored procedure)| PredictTipSingleMode.sql スクリプトによって作成されます。 モデルを使用して予測を作成するトレーニング済みモデルを呼び出します。 このストアド プロシージャは、インライン パラメーターとして渡された個々の機能の値と共に、入力として新しい監視を受け取り、新しい監視の結果を予測する値を返します。 このストアド プロシージャがで使用される[R モデルを運用する](sqldev-operationalize-the-model.md)します。|
 |**TrainTipPredictionModel**  |ストアド プロシージャ (stored procedure)|TrainTipPredictionModel.sql スクリプトによって作成されます。 R パッケージを呼び出すことによって、ロジスティック回帰モデルをトレーニングします。 モデルは、tipped 列の値を予測し、ランダムに選択した 70% のデータを使用してトレーニングされます。 ストアド プロシージャの出力は、テーブル nyc_taxi_models に保存されているトレーニング済みのモデルです。 このストアド プロシージャが使用される[トレーニング、モデルを保存および](sqldev-train-and-save-a-model-using-t-sql.md)します。|
 
-## <a name="query-data-for-verification"></a>検証のためのデータを照会します。
+## <a name="query-the-data"></a>データのクエリ
 
 検証手順として、データがアップロードされたことを確認するためのクエリを実行します。
 

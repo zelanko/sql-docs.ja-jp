@@ -1,5 +1,5 @@
 ---
-title: CREATE MEASURE ステートメント (MDX) |Microsoft ドキュメント
+title: CREATE MEASURE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aa895099420b022cf15d7cd3a91472511c1100e3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 37a8b8ef757184e7467c3551148c8c149bb45097
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741439"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144458"
 ---
-# <a name="mdx-data-definition---create-measure"></a>MDX データ定義のメジャーを作成します。
+# <a name="mdx-data-definition---create-measure"></a>MDX データ操作 - CREATE MEASURE
 
 
   テーブル モデルでメジャーを作成します。  
@@ -43,7 +43,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ## <a name="remarks"></a>コメント  
  *Measure_Name*角かっこで囲む必要があります。  
   
- CREATE MEASURE ステートメントは、MDX スクリプトの定義です。 内部でのみ使用できます。参照してください[MdxScript 要素&#40;ASSL&#41;](../analysis-services/scripting/objects/mdxscript-element-assl.md)です。  
+ CREATE MEASURE ステートメントは、MDX スクリプト定義; の内部でのみ使用できます。参照してください[MdxScript 要素&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl)します。  
   
  1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、次を参照してください。 [MDX でのメジャーの作成](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)です。  
   

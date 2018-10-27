@@ -17,25 +17,25 @@ ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 120326066a9145c6e223f9af5735c4b3435222c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1f518f846a6e0bb87f858d7a5798eb9a7e9c8d0
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219500"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146277"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>データベースのロックおよびロック解除 (XMLA)
-  ロックして、それぞれを使用してデータベースをロック解除することができます、[ロック](../xmla/xml-elements-commands/lock-element-xmla.md)と[Unlock](../xmla/xml-elements-commands/unlock-element-xmla.md) xml for Analysis (XMLA) コマンド。 通常、他の XMLA コマンドは、実行時にコマンドを完了させる必要に応じて、自動的にオブジェクトをロック/ロック解除します。 明示的にロックまたはなど、単一のトランザクション内で複数のコマンドを実行するデータベースのロックを解除することができます、[バッチ](../xmla/xml-elements-commands/batch-element-xmla.md)コマンドから、他のアプリケーション データベースへの書き込みトランザクションをコミットするを防止します。  
+  ロックして、それぞれを使用してデータベースをロック解除することができます、[ロック](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)と[Unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) xml for Analysis (XMLA) コマンド。 通常、他の XMLA コマンドは、実行時にコマンドを完了させる必要に応じて、自動的にオブジェクトをロック/ロック解除します。 明示的にロックまたはなど、単一のトランザクション内で複数のコマンドを実行するデータベースのロックを解除することができます、[バッチ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)コマンドから、他のアプリケーション データベースへの書き込みトランザクションをコミットするを防止します。  
   
 ## <a name="locking-databases"></a>データベースのロック  
- `Lock` コマンドは、現在アクティブなトランザクションのコンテキスト内で、共有オブジェクトまたは排他的に使用されるオブジェクトをロックします。 オブジェクトをロックすると、そのロックが解除されるまでトランザクションはコミットできません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2 種類の共有ロックと排他ロックをサポートしています。 サポートされているロックの種類の詳細については[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を参照してください[Mode 要素&#40;XMLA&#41;](../xmla/xml-elements-properties/mode-element-xmla.md)します。  
+ `Lock` コマンドは、現在アクティブなトランザクションのコンテキスト内で、共有オブジェクトまたは排他的に使用されるオブジェクトをロックします。 オブジェクトをロックすると、そのロックが解除されるまでトランザクションはコミットできません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2 種類の共有ロックと排他ロックをサポートしています。 サポートされているロックの種類の詳細については[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を参照してください[Mode 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/mode-element-xmla)します。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、データベースに対するロックだけが可能です。 [オブジェクト](../xmla/xml-elements-properties/object-element-xmla.md)要素へのオブジェクト参照を含める必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 `Object` 要素が指定されていない場合、またはデータベース以外のオブジェクトを `Object` 要素が参照している場合には、エラーが発生します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、データベースに対するロックだけが可能です。 [オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)要素へのオブジェクト参照を含める必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 `Object` 要素が指定されていない場合、またはデータベース以外のオブジェクトを `Object` 要素が参照している場合には、エラーが発生します。  
   
 > [!IMPORTANT]  
 >  `Lock` コマンドを明示的に発行できるのは、データベース管理者またはサーバー管理者だけです。  
   
- 他のコマンドは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対する `Lock` コマンドを暗黙的に発行します。 いずれかなど、データベースからデータまたはメタデータを読み取る操作[Discover](../xmla/xml-elements-methods-discover.md)メソッドまたは[Execute](../xmla/xml-elements-methods-execute.md)メソッドを実行している、[ステートメント](../xmla/xml-elements-commands/statement-element-xmla.md)コマンドで、共有を暗黙的に発行データベースをロックします。 オブジェクトへのデータまたはメタデータの変更をコミットするトランザクションを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]などのデータベース、`Execute`メソッドを実行している、 [Alter](../xmla/xml-elements-commands/alter-element-xmla.md)コマンドで、データベースに対する排他ロックを暗黙的に発行します。  
+ 他のコマンドは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対する `Lock` コマンドを暗黙的に発行します。 いずれかなど、データベースからデータまたはメタデータを読み取る操作[Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)メソッドまたは[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッドを実行している、[ステートメント](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla)コマンドで、共有を暗黙的に発行データベースをロックします。 オブジェクトへのデータまたはメタデータの変更をコミットするトランザクションを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]などのデータベース、`Execute`メソッドを実行している、 [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)コマンドで、データベースに対する排他ロックを暗黙的に発行します。  
   
 ## <a name="unlocking-objects"></a>データベースのロック解除  
  `Unlock` コマンドは、現在アクティブなトランザクションのコンテキスト内で確立されたロックを解除します。  
@@ -46,8 +46,8 @@ ms.locfileid: "48219500"
  すべてのロックは、現在のトランザクションのコンテキスト内で保持されます。 現在のトランザクションがコミットまたはロールバックされると、そのトランザクション内で定義されたすべてのロックは自動的に解放されます。  
   
 ## <a name="see-also"></a>参照  
- [要素をロック&#40;XMLA&#41;](../xmla/xml-elements-commands/lock-element-xmla.md)   
- [要素のロック解除&#40;XMLA&#41;](../xmla/xml-elements-commands/unlock-element-xmla.md)   
+ [要素をロック&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)   
+ [要素のロック解除&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)   
  [Analysis Services での XMLA による開発](developing-with-xmla-in-analysis-services.md)  
   
   

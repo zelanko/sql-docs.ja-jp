@@ -11,12 +11,12 @@ ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147772"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146744"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>クラスター モデルの検証 (基本的なデータ マイニング チュートリアル)
   [!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタ リング アルゴリズムは、類似した特性を持つクラスターにケースをグループ化します。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
@@ -89,7 +89,7 @@ ms.locfileid: "48147772"
  **クラスターの特性** タブで、する特徴を調べ、さらに詳しく、クラスターを構成します。 ([クラスターのプロファイル] タブのように) すべてのクラスターの特性を比較するのではなく、一度に 1 つのクラスターを検証することができます。 たとえば、選択した**自転車購入者率高**から、**クラスター**一覧で、このクラスター内の顧客の特性を確認できます。 [クラスターのプロファイル] ビューアーとは表示が異なりますが、結果は同じです。  
   
 > [!NOTE]  
->  初期値を設定しない限り**holdoutseed**結果は、モデルを処理するたびに異なります。 詳細については、次を参照してください[HoldoutSeed 要素。](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  初期値を設定しない限り**holdoutseed**結果は、モデルを処理するたびに異なります。 詳細については、次を参照してください[HoldoutSeed 要素。](https://docs.microsoft.com/bi-reference/assl/properties/holdoutseed-element)  
   
 
   

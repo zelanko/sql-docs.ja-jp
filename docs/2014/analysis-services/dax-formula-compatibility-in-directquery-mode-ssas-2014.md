@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100323"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery モードでの DAX 数式の互換性 (SSAS 2014)
 Analysis Services 表形式モデルでメジャーと使用するための他のカスタム式を作成する Data Analysis Expression (DAX) 言語を使用できます[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel ブックのデータ モデルと Power BI Desktop データ モデル。 多くの点では、これらの環境を作成するモデルが同じであり、同じメジャー、リレーションシップ、および Kpi を使用するなど。ただし、Analysis Services 表形式のモデルを作成して、DirectQuery モードで展開する場合は、使用できる数式に関していくつかの制限。 このトピックで、これらの違いの概要を説明します、互換性レベル 1100 または 1103 の SQL Server 2014 Analysis Services tabulars モデルおよび DirectQuery モードでは、サポートされていない関数を一覧表示およびサポートされている関数の一覧が可能性があります。異なる結果を返します。  
   
-このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、次を参照してください。 [DirectQuery モード (SSAS テーブル)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)します。  
+このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、次を参照してください。 [DirectQuery モード (SSAS テーブル)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)します。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>インメモリと DirectQuery モードの違い  
@@ -73,7 +73,7 @@ Transact-SQL では NULL と NULL は等しくならないことに注意して�
   
 ### <a name="bkmk_Casts"></a>キャスト  
   
-DAX のようなキャスト関数はありませんが、多くの比較演算および算術演算では暗黙のキャストが実行されます。 比較演算または数理演算により、結果のデータ型が決まります。 例を次に示します。  
+DAX のようなキャスト関数はありませんが、多くの比較演算および算術演算では暗黙のキャストが実行されます。 比較演算または数理演算により、結果のデータ型が決まります。 例えば以下のようにします。  
   
 -   ブール値は、算術演算では数値として扱われるか (TRUE + 1 など)、ブール値の列に関数 MIN が適用されます。 NOT 演算も数値を返します。  
   
@@ -92,7 +92,7 @@ DirectQuery モードでは、文字列表現の日時から実際の **datetime
 インメモリ データ ストアを使用するモデルで日付に対してサポートされるテキスト形式の範囲は、SQL Server でサポートされる日付の文字列形式より制限されます。 ただし、DAX では日付と時刻のカスタム形式がサポートされます。  
   
 **文字列から他の非ブール値へのキャスト**  
-文字列から非ブール値へのキャストの場合、DirectQuery モードは SQL Server と同じように動作します。 詳細については、「 [CAST および CONVERT &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)」を参照してください。  
+文字列から非ブール値へのキャストの場合、DirectQuery モードは SQL Server と同じように動作します。 詳細については、「 [CAST および CONVERT &#40;Transact-SQL&#41;](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)」を参照してください。  
   
 **認められない数値から文字列へのキャスト**  
 例: `CONCATENATE(102,”,345”)`  
@@ -265,7 +265,7 @@ DirectQuery モードでは、返される文字の大文字と小文字の使�
   
 既定で使用される Latin1_General 照合順序では、大文字と小文字は区別されませんが、アクセントは区別されます。 したがって、小文字だけ、大文字だけ、または小文字と大文字の混合を使用する、同じテキスト文字列の複数のインスタンスが存在する場合、すべてのインスタンスが同じ文字列と見なされて、文字列の最初のインスタンスだけがインデックスに格納されます。 格納された文字列を使用するすべてのテキスト関数は、インデックス形式の指定された部分を取得します。 したがって、例の数式では、最初のインスタンスを入力として使用し、列全体に対して同じ値を返します。  
   
-[テーブル モデルの文字列ストレージと照合順序](http://msdn.microsoft.com/en-us/8516f0ad-32ee-4688-a304-e705143642ca)  
+[テーブル モデルの文字列ストレージと照合順序](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 この動作は、RIGHT、MID などの他のテキスト関数にも適用されます。  
   
@@ -506,6 +506,6 @@ LASTDATE
 [DATEADD]  
   
 ## <a name="see-also"></a>関連項目  
-[DirectQuery モード (SSAS テーブル)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery モード (SSAS テーブル)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

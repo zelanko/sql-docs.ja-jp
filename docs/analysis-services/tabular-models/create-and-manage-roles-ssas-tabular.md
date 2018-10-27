@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: daeef8b6d8b6953e33605816940f81ec04e0d5ab
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: 883eab47796f5cb09d5993fa2b2570cdda3cd2ae
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975671"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099653"
 ---
 # <a name="create-and-manage-roles"></a>作成し、ロールの管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -66,8 +66,8 @@ ms.locfileid: "45975671"
 ## <a name="see-also"></a>関連項目  
  [ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Excel で分析します。](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 関数 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [[Excel で分析]](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
+ [USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

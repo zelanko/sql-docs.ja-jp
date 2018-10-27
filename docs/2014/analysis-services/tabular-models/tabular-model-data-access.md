@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 437cbd485f07a5d6ee8b367e209b18b09507a88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178472"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148407"
 ---
 # <a name="tabular-model-data-access"></a>テーブル モデル データ アクセス
   Analysis Services のテーブル モデル データベースは、多次元モデルからデータまたはメタデータを取得するときとほぼ同じクライアント、インターフェイス、および言語でアクセスできます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
@@ -24,7 +24,7 @@ ms.locfileid: "48178472"
  このトピックでは、テーブル モデルを操作するクライアント、クエリ言語、およびプログラム インターフェイスについて説明します。  
   
 ## <a name="clients"></a>クライアント  
- 次の Microsoft 製クライアント アプリケーションでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のテーブル モデル データベースに対するネイティブ接続がサポートされます。  
+ 次の Microsoft 製クライアント アプリケーションでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のテーブル モデル データベースに対するネイティブ接続がサポートされます。  
   
 ### <a name="excel"></a>[エクスポート]  
  テーブル モデルのデータベースには Excel から接続できます。Excel にあるデータの視覚エフェクトと分析機能を使用してデータを操作することができます。 データにアクセスするには、Analysis Services のデータ接続を定義し、表形式サーバー モードで動作するサーバーを指定してから、使用するデータベースを選択します。 詳細については、「 [SQL Server Analysis Services のデータに接続する、または SQL Server Analysis Services のデータをインポートする](http://go.microsoft.com/fwlink/?linkID=215150)」を参照してください。  
@@ -36,7 +36,7 @@ ms.locfileid: "48178472"
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クライアントは特定のモデルの構造を判断する際、指定されたデータ ソースに要求を送信し、データ ソースからスキーマを取得します。このスキーマを使用することで、データ ソースとしてのモデルに対するクエリを作成し、そのデータを基に処理を実行することができます。 以後、データのフィルター処理、計算や集計、関連付けられたデータの表示など、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ユーザー インターフェイスで実行される操作はクライアントによって制御され、プログラムから操作することはできません。  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クライアントからモデルへと送信されるクエリは DAX ステートメントとして発行され、モデルにトレースを設定することによって監視できます。  クライアントは、概念スキーマ定義言語 (CSDL) に従って提示される初期スキーマ定義をサーバーに要求しますが、その際にも、サーバーに要求を送信します。 詳細については、「 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クライアントからモデルへと送信されるクエリは DAX ステートメントとして発行され、モデルにトレースを設定することによって監視できます。  クライアントは、概念スキーマ定義言語 (CSDL) に従って提示される初期スキーマ定義をサーバーに要求しますが、その際にも、サーバーに要求を送信します。 詳細については、「 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、テーブル モデルをホストするインスタンスの管理や、テーブル モデル内のメタデータおよびデータに対するクエリを行うことができます。 モデルやモデル内のオブジェクトの処理、パーティションの作成と管理、さらには、データ アクセスを管理するためのセキュリティの設定を行うこともできます。 詳細については、次の各トピックを参照してください。  
@@ -53,7 +53,7 @@ ms.locfileid: "48178472"
   
 -   **[クエリ]** ウィンドウを開いた後で、[XMLA クエリ] ウィンドウのデータベース コンテキストを変更することはできません。 したがって、異なるデータベースまたは異なるインスタンスにクエリを送信する必要がある場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してデータベースまたはインスタンスを開き、そのコンテキスト内で新しい **[XMLA クエリ]** ウィンドウを開く必要があります。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル モデルに対するトレースは、多次元ソリューションと同様に作成することができます。 このリリースの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、メモリ使用量やクエリ操作、処理中の操作、ファイルの使用状況を追跡するための新しいイベントが数多く用意されています。 詳細については、「 [Analysis Services トレース イベント](../trace-events/analysis-services-trace-events.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル モデルに対するトレースは、多次元ソリューションと同様に作成することができます。 このリリースの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、メモリ使用量やクエリ操作、処理中の操作、ファイルの使用状況を追跡するための新しいイベントが数多く用意されています。 詳細については、「 [Analysis Services トレース イベント](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)」を参照してください。  
   
 > [!WARNING]  
 >  テーブル モデル データベースにトレースを設定した場合、DMX クエリとして分類されたイベントの存在に気付くことがあります。 しかし、テーブル モデル データでは、データ マイニングはサポートされません。データベースに対して実行する DMX クエリは、モデルのメタデータに対する SELECT ステートメントに限られます。 イベントが DMX として分類されるのは、単に同じパーサー フレームワークが MDX に使用されているためです。  
@@ -74,7 +74,7 @@ ms.locfileid: "48178472"
 ### <a name="csdl"></a>CSDL  
  概念スキーマ定義言語そのものはクエリ言語ではありませんが、モデルやモデルのメタデータに関する情報を取得することはできます。後でその情報を使用して、レポートを作成したり、モデルに対するクエリを作成したりすることができます。  
   
- テーブル モデルで CSDL を使用する方法については、「[ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)」を参照してください。  
+ テーブル モデルで CSDL を使用する方法については、「[ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)」を参照してください。  
   
 ## <a name="programmatic-interfaces"></a>プログラミング インターフェイス  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル モデルを操作する際の要となるインターフェイスには、スキーマ行セットと XMLA のほか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]に備わっているクエリ クライアントとクエリ ツールがあります。  
@@ -84,13 +84,13 @@ ms.locfileid: "48178472"
   
 -   Codeplex のテーブル モデル AMO サンプル  
   
--   [動的管理ビューを使用して&#40;Dmv&#41;サービス モニターは分析するには](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [動的管理ビュー (DMV) を使用した Analysis Services の監視](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  アンマネージ クライアント アプリケーションでは Analysis Services 9.0 OLE DB プロバイダーを使用して、テーブル モデルに対する OLE DB アクセスをサポートできます。 テーブル モデル アクセスを有効にするには、最新バージョンの Analysis Services OLE DB プロバイダーが必要です。 テーブル モデルで使用するプロバイダーの詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 」を参照してください。  
   
  XML ベース形式のデータを Analysis Services インスタンスから直接取得することもできます。 テーブル モデルのスキーマは DISCOVER_CSDL_METADATA 行セットを使用して取得できます。また、EXECUTE コマンドまたは DISCOVER コマンドを既存の ASSL 要素、オブジェクト、またはプロパティと組み合わせて使用することもできます。 詳細については、次のリソースを参照してください。  
   
--   [ビジネス インテリジェンス向け CSDL 注釈&#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+-   [ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Analysis Services オブジェクトの操作  
  テーブル モデルとそこに含まれるオブジェクト (テーブル、列、パースペクティブ、メジャー、パーティションなど) の作成、変更、削除、処理は、XMLA コマンドまたは AMO を使用して行うことができます。 AMO と XMLA は、テーブル モデルで使用される追加のプロパティをサポートするために更新され、レポートとモデリングの機能が強化されています。  
@@ -106,11 +106,11 @@ ms.locfileid: "48178472"
 ### <a name="schema-rowsets"></a>スキーマ行セット  
  クライアント アプリケーションは、スキーマ行セットを使用してテーブル モデルのメタデータを分析し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーからサポート情報および監視情報を取得することができます。 このリリースの SQL Server では、テーブル モデルに関連した機能をサポートし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]全体の監視とパフォーマンス分析を強化するために、新しいスキーマ行セットが追加され、既存のスキーマ行セットが拡張されています。  
   
--   [DISCOVER_CALC_DEPENDENCY 行セット](../schema-rowsets/xml/discover-calc-dependency-rowset.md)  
+-   [DISCOVER_CALC_DEPENDENCY 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
   
      テーブル モデルの列と参照における依存関係を追跡するための新しいスキーマ行セット  
   
--   [DISCOVER_CSDL_METADATA 行セット](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)  
+-   [DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
   
      テーブル モデルの CSDL 表現を取得するための新しいスキーマ行セット  
   
@@ -118,13 +118,13 @@ ms.locfileid: "48178472"
   
      SQL Server 拡張イベントを監視するための新しいスキーマ行セット。 詳細については、次を参照してください。[使用して SQL Server 拡張イベント&#40;Xevent&#41; Analysis Services の監視に](../instances/monitor-analysis-services-with-sql-server-extended-events.md)します。  
   
--   [DISCOVER_TRACES 行セット](../schema-rowsets/xml/discover-traces-rowset.md)  
+-   [DISCOVER_TRACES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
   
      新しい `Type` 列を使用すると、トレースをカテゴリ別にフィルター選択できます。 詳細については、「[再生用のプロファイラー トレースの作成 (Analysis Services)](../instances/create-profiler-traces-for-replay-analysis-services.md)」を参照してください。  
   
--   [MDSCHEMA_HIERARCHIES 行セット](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
+-   [MDSCHEMA_HIERARCHIES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)  
   
-     新しい`STRUCTURE_TYPE`列挙体は、表形式モデルで作成されたユーザー定義階層の id をサポートしています。 詳細については、「[階層 (SSAS テーブル)](hierarchies-ssas-tabular.md)」を参照してください。  
+     新しい `STRUCTURE_TYPE` 列挙体は、テーブル モデルで作成されたユーザー定義階層の識別をサポートします。 詳細については、「[階層 (SSAS テーブル)](hierarchies-ssas-tabular.md)」を参照してください。  
   
  このリリースでは、データ マイニング スキーマ行セットの OLE DB に対する更新はありません。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48178472"
 >  DirectQuery モードで配置されているデータベースでは MDX クエリや DMX クエリは使用できません。したがって、DirectQuery モデルに対し、スキーマ行セットを使用してクエリを実行する必要がある場合は、関連する DMV ではなく、XMLA を使用する必要があります。 SELECT * from $system.DBSCHEMA_CATALOGS (または DISCOVER_TRACES) など、サーバー全体の結果を返す DMV の場合、キャッシュ モードで配置されたデータベースの内容のクエリを実行できます。  
   
 ## <a name="see-also"></a>参照  
- [表形式モデル データベースへの接続&#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
+ [テーブル モデル データベースへの接続 (SSAS)](connect-to-a-tabular-model-database-ssas.md)   
  [PowerPivot データ アクセス](../power-pivot-sharepoint/power-pivot-data-access.md)   
  [Analysis Services への接続](../instances/connect-to-analysis-services.md)  
   

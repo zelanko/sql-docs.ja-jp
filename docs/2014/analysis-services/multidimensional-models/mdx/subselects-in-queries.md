@@ -11,12 +11,12 @@ ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212092"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148457"
 ---
 # <a name="subselects-in-queries"></a>クエリのサブセレクト
   サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
@@ -350,6 +350,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   HAVING 句は軸句では使用できません。代わりに [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) 関数式を使用します。  
   
--   既定で、計算されるメンバーはサブセレクト; で許可されませんただし、この制限は、セッション単位で値を割り当てることで、`SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROP_MSMD_SUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 参照してください[サブセレクトとサブキューブで計算されるメンバー](calculated-members-in-subselects-and-subcubes.md)の値によって計算されるメンバーの動作の詳細については`SubQueries`または`DBPROP_MSMD_SUBQUERIES`します。  
+-   既定で、計算されるメンバーはサブセレクト; で許可されませんただし、この制限は、セッション単位で値を割り当てることで、`SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROP_MSMD_SUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). 参照してください[サブセレクトとサブキューブで計算されるメンバー](calculated-members-in-subselects-and-subcubes.md)の値によって計算されるメンバーの動作の詳細については`SubQueries`または`DBPROP_MSMD_SUBQUERIES`します。  
   
   

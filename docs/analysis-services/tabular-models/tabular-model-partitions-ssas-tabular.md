@@ -1,5 +1,5 @@
 ---
-title: テーブル モデル パーティション |Microsoft ドキュメント
+title: テーブル モデル パーティション |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55e056a0703e9f81d02138f2942d4782d81ee9b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045262"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146287"
 ---
 # <a name="tabular-model-partitions"></a>テーブル モデル パーティション 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時にあるモデルのために定義されたパーティションが、配置済みモデルで複製されます。 いったん配置されると、 **の** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスまたはスクリプトを使用して、それらのパーティションを管理したり、新しいパーティションを作成したりできます。 このトピックでは、配置済みのテーブル モデル データベースにおけるパーティションについて説明します。 作成して、モデル作成時にパーティションの管理に関する詳細については、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)です。  
+  パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時にあるモデルのために定義されたパーティションが、配置済みモデルで複製されます。 いったん配置されると、 **の** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスまたはスクリプトを使用して、それらのパーティションを管理したり、新しいパーティションを作成したりできます。 このトピックでは、配置済みのテーブル モデル データベースにおけるパーティションについて説明します。 作成して、モデル作成時にパーティションの管理の詳細については、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)します。  
   
  このトピックのセクション:  
   
 -   [利点](#bkmk_benefits)  
   
--   [Permissions](#bkmk_permissions)  
+-   [権限](#bkmk_permissions)  
   
 -   [パーティションの処理](#bkmk_process_partitions)  
   
@@ -57,16 +57,16 @@ ms.locfileid: "34045262"
 |権限|アクション|  
 |----------------|-------------|  
 |管理者|読み取り、処理、作成、コピー、マージ、削除|  
-|[処理]|読み取り、処理|  
-|[読み取り専用]|読み取り|  
+|Process|読み取り、処理|  
+|[読み取り専用]|Read|  
   
- 使用してモデルの作成時にロールの作成の詳細について[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を参照してください[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)です。 使用してテーブル モデル ロールをデプロイのロールのメンバーの管理に関する詳細については[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を参照してください[表形式モデル ロール](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)です。  
+ 使用してモデルの作成時にロールの作成方法の詳細は[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を参照してください[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)します。 使用して配置済みテーブル モデル ロールのロールのメンバーを管理の詳細について[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を参照してください[テーブル モデル ロール](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)します。  
   
 ##  <a name="bkmk_parallelProc"></a> 並列処理  
-Analysis Services には、処理パフォーマンスが向上する 2 つまたは複数のパーティションを持つテーブルへの並行処理が含まれています。 並行処理には構成設定はありません (メモを参照)。 テーブルを処理する場合、または同じテーブルに複数のパーティションを選択して処理する場合、既定で並列処理が行われます。 テーブルのパーティションを個別に処理することもできます。  
+Analysis Services には、処理パフォーマンスを強化する 2 つ以上のパーティションを持つテーブルの並列処理が含まれています。 並行処理には構成設定はありません (メモを参照)。 テーブルを処理する場合、または同じテーブルに複数のパーティションを選択して処理する場合、既定で並列処理が行われます。 テーブルのパーティションを個別に処理することもできます。  
   
 > [!NOTE]  
->  更新操作を順次実行するか並列して実行するかを指定するには、 **maxParallism** プロパティ オプションで [Sequence コマンド (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)を指定します。
+>  更新操作を順次実行するか並列して実行するかを指定するには、 **maxParallism** プロパティ オプションで [Sequence コマンド (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/sequence-command-tmsl)を指定します。
 
 > [!NOTE]  
 >  再エンコードが検出されると、並列処理が原因で、システム リソースの使用量が増える場合があります。 これは、同時に行われる新しいエンコードにより、、複数のパーティションの操作を中断し、再開する必要があるためです。  
@@ -74,7 +74,7 @@ Analysis Services には、処理パフォーマンスが向上する 2 つま�
 ##  <a name="bkmk_process_partitions"></a> パーティションの処理  
  **の** [パーティション] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ダイアログ ボックスを使用するか、スクリプトを使用すると、パーティションの処理 (更新) を他のパーティションに影響を与えずに行うことができます。 処理には次のオプションがあります。  
   
-|モード|Description|  
+|モード|説明|  
 |----------|-----------------|  
 |既定の処理|パーティション オブジェクトの処理状態を検出して、未処理または部分的に処理されたパーティション オブジェクトを完全に処理された状態にするために必要な処理を実行します。 空のテーブルとパーティションのデータが読み込まれ、階層、計算列、およびリレーションシップが構築または再構築されます。|  
 |完全処理|パーティション オブジェクトとそこに含まれているすべてのオブジェクトを処理します。 既に処理されたオブジェクトに対して完全処理を実行すると、そのオブジェクト内のすべてのデータが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって削除されてから、オブジェクトが処理されます。 この種の処理は、構造上の変更をオブジェクトに加えた場合に必要となります。|  
@@ -84,7 +84,7 @@ Analysis Services には、処理パフォーマンスが向上する 2 つま�
   
 ##  <a name="bkmk_related_tasks"></a> 関連タスク  
   
-|タスク|Description|  
+|タスク|説明|  
 |----------|-----------------|  
 |[テーブル モデル パーティションの作成および管理](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを作成および管理する方法について説明します。|  
 |[テーブル モデル パーティションの処理](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを処理する方法について説明します。|  

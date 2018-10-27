@@ -1,5 +1,5 @@
 ---
-title: 多次元モデル内のアクション |Microsoft ドキュメント
+title: 多次元モデルのアクション |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024279"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145707"
 ---
 # <a name="actions-in-multidimensional-models"></a>多次元モデルのアクション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "34024279"
   
 -   [ディメンションのメンバー]  
   
--   階層  
+-   Hieararchy  
   
 -   [階層メンバー]  
   
--   レベル  
+-   Level  
   
 -   [レベル メンバー]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34024279"
  **[アクションの内容]**  
  アクションの種類を選択します。 次の表は、使用できる種類をまとめたものです。  
   
-|型|Description|  
+|型|説明|  
 |----------|-----------------|  
 |[データ セット]|データセットを取得します。|  
 |[専用]|この一覧に表示されていないインターフェイスを使用して操作を実行します。|  
@@ -65,16 +65,16 @@ ms.locfileid: "34024279"
  **[追加のプロパティ]**  
  プロパティを選択します。 次の表は、使用できるプロパティをまとめたものです。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**[呼び出し]**|アクションを実行する方法を指定します。 既定の [インタラクティブ] を指定すると、アクションはユーザーがオブジェクトにアクセスしたときに実行されます。 次の設定が可能です。<br /><br /> [バッチ]<br /><br /> Interactive<br /><br /> [オープン時]|  
 |**アプリケーション**|アクションのアプリケーションについて説明します。|  
-|**Description**|アクションについて説明します。|  
+|**[説明]**|アクションについて説明します。|  
 |**Caption**|アクションに関して表示されるキャプションを指定します。 キャプションが MDX の場合は、 **[キャプションに MDX を使用]** に **True**を指定します。|  
 |**True**|キャプションが MDX の場合は **True** 、MDX でない場合は **False** を指定します。|  
   
 > [!NOTE]  
->  HTML およびコマンド ラインのアクションの種類を定義するには、Analysis Services スクリプト言語 (ASSL) または分析管理オブジェクト (AMO) を使用する必要があります。 詳細については、「[アクション要素 &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md)」「[Type 要素 &#40;アクション&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md)」、および「[高度な AMO OLAP オブジェクトのプログラミング](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)」を参照してください。  
+>  HTML およびコマンド ラインのアクションの種類を定義するには、Analysis Services スクリプト言語 (ASSL) または分析管理オブジェクト (AMO) を使用する必要があります。 詳細については、「[アクション要素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)」「[Type 要素 &#40;アクション&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl)」、および「[高度な AMO OLAP オブジェクトのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)」を参照してください。  
   
 ## <a name="creating-a-reporting-action"></a>レポート アクションの作成  
  レポート サーバーは、レポートに関する URL ベースの要求に応答します。 レポート アクションを作成するには、 **[キューブ]** メニューの **[新しいレポート アクション]** をクリックします。 次のオプションは、レポート アクションに固有です。  
@@ -82,7 +82,7 @@ ms.locfileid: "34024279"
  **レポート サーバー**  
  次の表で説明するプロパティは、レポート サーバーに対して指定されます。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**サーバー名**|サポート サーバーを稼働しているコンピューターの名前です。|  
 |**[サーバー パス]**|レポート サーバーによって公開されたパスです。|  

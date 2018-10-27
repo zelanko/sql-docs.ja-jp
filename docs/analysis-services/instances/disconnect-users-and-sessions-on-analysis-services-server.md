@@ -1,5 +1,5 @@
 ---
-title: ユーザーを切断する Analysis Services サーバーとセッション |Microsoft ドキュメント
+title: ユーザーを切断 Analysis Services サーバーとセッション |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99072a36fe65679dbf81aa0ba3f4efdb3b487533
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e4868a7ff2e8b03835988cd4517909c722eaf4a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014349"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144776"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Analysis Services サーバー上のユーザーとセッションの切断
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,12 +65,12 @@ ms.locfileid: "34014349"
   
  まれに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で接続に関連付けられているすべてのセッションおよび SPID を追跡できない場合 (HTTP シナリオで複数のセッションが開かれている場合など) は、接続を閉じることができません。  
   
- このトピックで参照された XMLA の詳細については、[「Execute メソッド (XMLA)」](../../analysis-services/xmla/xml-elements-methods-execute.md) および [「Cancel 要素 (XMLA)」](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) を参照してください。  
+ このトピックで参照された XMLA の詳細については、[「Execute メソッド (XMLA)」](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) および [「Cancel 要素 (XMLA)」](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [管理接続およびセッション (&) #40 です。XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [BeginSession 要素 & #40 です。XMLA & #41;](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [EndSession 要素 & #40 です。XMLA & #41;](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Session 要素 & #40 です。XMLA & #41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
+ [接続およびセッションの管理 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [BeginSession 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/beginsession-element-xmla)   
+ [EndSession 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/endsession-element-xmla)   
+ [Session 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/session-element-xmla)  
   
   

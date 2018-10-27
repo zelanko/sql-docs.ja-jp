@@ -12,15 +12,15 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 615e36534923244202a6525f0a4881767ace9e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164712"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148435"
 ---
 # <a name="understanding-the-tabular-object-model"></a>テーブル オブジェクト モデルについて
-  テーブル モデルは、テーブル、リレーションシップ、階層、パースペクティブ、メジャー、および主要業績に関する論理的表現です。 ここでは、AMO を使用した内部実装について説明します。 参照してください[Analysis Management Objects を使用した開発&#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)までに AMO を使用していない場合。  
+  テーブル モデルは、テーブル、リレーションシップ、階層、パースペクティブ、メジャー、および主要業績に関する論理的表現です。 ここでは、AMO を使用した内部実装について説明します。 参照してください[Analysis Management Objects を使用した開発&#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)までに AMO を使用していない場合。  
   
  ここで使用するアプローチはトップダウンであり、テーブル モデルに関連するすべてのオブジェクトを論理的に AMO オブジェクトにマップし、必須の対話型操作やワークフローについて説明します。 AMO、AMO to Tabular を使用して表形式モデルを作成するソース コード サンプルは Codeplex から入手できます。 サンプル内のコードに関する重要な注意: コードはここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。 サンプルは、サポートや保証なしで提供されます。  
   

@@ -1,5 +1,5 @@
 ---
-title: 多次元データベースのプロパティ (Analysis Services) を設定 |Microsoft ドキュメント
+title: 多次元データベースの設定 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c055267aa2436a59e75a68c1b9bf1b15ff3d6387
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 489d738ac8d654477687528ad64c2fed76877dde
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023799"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147177"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>多次元データベースのプロパティ設定 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース プロパティには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベース デザイナーで構成できるものが多数あります。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース プロパティには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベース デザイナーで構成できるものが多数あります。  
   
  このデザイナーでは、次の種類のタスクを実行できます。  
   
@@ -33,17 +33,17 @@ ms.locfileid: "34023799"
 ## <a name="database-properties"></a>データベース プロパティ  
  上記に加え、データベースのプロパティには、[プロパティ] ウィンドウで構成できるものが複数あります。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
-|[集計プレフィックス]|データベース内のすべてのパーティションの集計名に使用される共通のプレフィックスです。 詳細については、「[AggregationPrefix 要素 (ASSL)](../../analysis-services/scripting/properties/aggregationprefix-element-assl.md)」を参照してください。|  
+|[集計プレフィックス]|データベース内のすべてのパーティションの集計名に使用される共通のプレフィックスです。 詳細については、「[AggregationPrefix 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl)」を参照してください。|  
 |[照合順序]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置すると、ここで別の値を指定しない限り、データベースには Collation サーバー プロパティの値が継承されます。|  
 |DataSourceImpersonationInfo|データベース内のすべてのデータ ソース オブジェクトに対して既定の権限借用モードを指定します。 これは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスで、オブジェクトの処理、サーバーの同期、および OpenQuery や SystemOpenSchema のデータ マイニング ステートメントの実行に使用するモードです。|  
 |[推定サイズ]|ディスク上のデータベース ファイルの推定サイズを提供します。 データが複数の場所に格納されている場合、この推定値はデータベース フォルダーの下に格納されているデータ ファイルのみに制限されます。<br /><br /> **EstimatedSize** は、メモリの推定の基礎としても使用できます。 通常、メモリ要件は、データベースがメモリに読み込まれるときに作成される追加のデータ構造により、ディスク上のデータのサイズよりも大きくなります。<br /><br /> メモリ要件を詳しく推定するには、データベースのメモリ要件を把握する手段として、タスク マネージャーを使用してデータベースを処理する前後の Analysis Services プロセス メモリを確認し、使用されたメモリを調べることもできます。|  
-|言語|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置すると、ここで別の値を指定しない限り、データベースには Language サーバー プロパティの値が継承されます。|  
+|[言語]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置すると、ここで別の値を指定しない限り、データベースには Language サーバー プロパティの値が継承されます。|  
 |MasterDataSource ID|リモート パーティションで使用します。 詳細については、「 [リモート パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [データベースのプロパティ ダイアログ ボックス & #40 です。SSAS - 多次元 & #41;](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
- [Analysis Services プロジェクトのプロパティ & #40; を構成します。SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+ [[データベースのプロパティ] ダイアログ ボックス (SSAS - 多次元)](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
+ [Analysis Services プロジェクトのプロパティの構成 (SSDT)](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8d1e4f8b036a21becde793f2d4fdde89913e7b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9eb585f756c03388bfe5b280a75b85f57d35394d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146032"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146687"
 ---
 # <a name="drillthrough-on-mining-structures"></a>マイニング構造でのドリルスルー
   *ドリルスルー* とは、マイニング モデルまたはマイニング構造に対してクエリを実行し、モデルで公開されていない詳細データを取得する機能です。  
@@ -33,13 +33,13 @@ ms.locfileid: "48146032"
 ## <a name="enabling-drillthrough-to-structure-data"></a>構造データへのドリルスルーの有効化  
  マイニング構造でドリルスルーを使用するには、次の条件が満たされている必要があります。  
   
--   モデルでのドリルスルーも有効にする必要があります。 既定では、両方の種類のドリルスルーが無効になっています。 データ マイニング ウィザードでドリルスルーを有効にするには、最終ページでモデル ケースへのドリルスルーを有効にするオプションを選択します。 追加することも、機能モデルでドリルスルーを後で変更することで、`AllowDrillthrough`プロパティ。  
+-   モデルでのドリルスルーも有効にする必要があります。 既定では、両方の種類のドリルスルーが無効になっています。 データ マイニング ウィザードでドリルスルーを有効にするには、最終ページでモデル ケースへのドリルスルーを有効にするオプションを選択します。 `AllowDrillthrough` プロパティを変更することで、モデルのドリルスルー機能を後で追加することもできます。  
   
 -   DMX を使用してマイニング構造を作成する場合は、WITH DRILLTHROUGH 句を使用します。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)」を参照してください。  
   
--   マイニング構造を処理したときにキャッシュされたトレーニング ケースに関する情報が取得されることで、ドリルスルーが機能します。 そのため、変更することで、構造の処理後、キャッシュされたデータを消去した場合、<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>プロパティを`ClearAfterProcessing`ドリルスルーは機能しません。 構造列へのドリルスルーを有効にすることを変更する必要があります、<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>プロパティを`KeepTrainingCases`と、構造を再処理します。  
+-   マイニング構造を処理したときにキャッシュされたトレーニング ケースに関する情報が取得されることで、ドリルスルーが機能します。 そのため、変更することで、構造の処理後、キャッシュされたデータを消去した場合、<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>プロパティを`ClearAfterProcessing`ドリルスルーは機能しません。 構造列へのドリルスルーを有効にするには、<xref:Microsoft.AnalysisServices.MiningStructureCacheMode> プロパティを `KeepTrainingCases` に変更してから構造を再処理する必要があります。  
   
--   マイニング構造とマイニング モデルの両方があることを確認して、 [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md)プロパティに設定`True`します。 さらに、構造とモデルの両方に対するドリルスルー権限を持つロールのメンバーである必要があります。  
+-   マイニング構造とマイニング モデルの両方があることを確認して、 [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)プロパティに設定`True`します。 さらに、構造とモデルの両方に対するドリルスルー権限を持つロールのメンバーである必要があります。  
   
 ## <a name="security-issues-for-drillthrough"></a>ドリルスルーのセキュリティに関する問題  
  ドリルスルー権限は、構造およびモデルで個別に設定されます。 構造で権限が与えられていない場合でも、モデル権限があればモデルからドリルスルーを行うことができます。 構造のドリルスルー権限がある場合は、[StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 関数を使用して、構造列をモデルからドリルスルー クエリに含めることもできます。  
@@ -56,7 +56,7 @@ ms.locfileid: "48146032"
 |-|-|  
 |マイニング モデル ビューアーから構造へのドリルスルーの使用|[モデル ビューアーからのドリルスルーの使用](use-drillthrough-from-the-model-viewers.md)|  
 |特定のモデルの種類に対するドリルスルー クエリの例|[データ マイニング クエリ](data-mining-queries.md)|  
-|特定のマイニング構造とマイニング モデルに適用される権限の詳細|[データ マイニング構造およびモデルに対する権限の付与&#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|特定のマイニング構造とマイニング モデルに適用される権限の詳細|[データ マイニング構造およびデータ マイニング モデルに対する権限の付与 (Analysis Services)](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデルでのドリルスルー](drillthrough-on-mining-models.md)  

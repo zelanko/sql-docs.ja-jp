@@ -17,21 +17,21 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8056842eb19bfa81cfdcf7494e058108f3e836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077882"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146467"
 ---
 # <a name="monitoring-traces-xmla"></a>トレースの監視 (XMLA)
-  使用することができます、[購読](../xmla/xml-elements-commands/subscribe-element-xmla.md)XML for Analysis (XMLA) のインスタンスで定義されている既存のトレースを監視するためにコマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 `Subscribe` コマンドは、トレースの結果を行セットとして返します。  
+  使用することができます、[購読](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)XML for Analysis (XMLA) のインスタンスで定義されている既存のトレースを監視するためにコマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 `Subscribe` コマンドは、トレースの結果を行セットとして返します。  
   
 ## <a name="specifying-a-trace"></a>トレースの指定  
- [オブジェクト](../xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、`Subscribe`コマンドは、いずれかへのオブジェクト参照を含める必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスまたはでトレースを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス。 `Object` プロパティが指定されていない場合、またはトレース識別子が `Object` プロパティで指定されていない場合、`Subscribe` コマンドは、コマンドの SOAP ヘッダーで指定されている明示的なセッションに対する既定のセッション トレースを監視します。  
+ [オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)のプロパティ、`Subscribe`コマンドは、いずれかへのオブジェクト参照を含める必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスまたはでトレースを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス。 `Object` プロパティが指定されていない場合、またはトレース識別子が `Object` プロパティで指定されていない場合、`Subscribe` コマンドは、コマンドの SOAP ヘッダーで指定されている明示的なセッションに対する既定のセッション トレースを監視します。  
   
 ## <a name="returning-results"></a>結果の返送  
- `Subscribe` コマンドは、指定されたトレースによってキャプチャされたトレース イベントを含む行セットを返します。 `Subscribe`によってコマンドが取り消されるまでトレース結果を返します、[キャンセル](../xmla/xml-elements-commands/cancel-element-xmla.md)コマンド。  
+ `Subscribe` コマンドは、指定されたトレースによってキャプチャされたトレース イベントを含む行セットを返します。 `Subscribe`によってコマンドが取り消されるまでトレース結果を返します、[キャンセル](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)コマンド。  
   
  行セットに含まれる列は、次の表のとおりです。  
   

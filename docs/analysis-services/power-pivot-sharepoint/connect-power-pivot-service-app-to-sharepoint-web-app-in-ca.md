@@ -1,5 +1,5 @@
 ---
-title: CA での SharePoint Web アプリに Power Pivot サービス アプリケーションを接続 |Microsoft ドキュメント
+title: CA での SharePoint Web アプリに Power Pivot サービス アプリケーションを接続する |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4699746404fcc7e5f4384f2ce9871232d9aa44a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd72f62cc513064e01c04e5a501b18a070f4c7a8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024149"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098975"
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>CA での SharePoint Web アプリに Power Pivot サービス アプリケーションを接続します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34024149"
 4.  **[OK]** をクリックします。  
   
 ##  <a name="custom"></a> カスタム サービス関連付けリストへの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの追加  
- 既定のグループは、カスタム リストで置き換えることができます。 カスタム リストは、SharePoint Web アプリケーションごとに作成します。 カスタム リストは既定のグループよりも優先され、既定のグループは、ファームまたはサービスの管理者が指定したサービス関連付けとのみ置き換えられます。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成した場合は、使用するサービス アプリケーションをカスタム リストで指定する必要があります。 カスタム リストを他の Web アプリケーションで再利用することはできません。 カスタム リストは、作成対象の Web アプリケーションにのみ適用されます。  
+ 既定のグループは、カスタム リストで置き換えることができます。 カスタム リストは、SharePoint Web アプリケーションごとに作成します。 カスタム リストは既定のグループをオーバーライドし、既定のグループは、ファームまたはサービスの管理者が指定したサービス関連付けとのみ置き換えられます。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成した場合は、使用するサービス アプリケーションをカスタム リストで指定する必要があります。 カスタム リストを他の Web アプリケーションで再利用することはできません。 カスタム リストは、作成対象の Web アプリケーションにのみ適用されます。  
   
 1.  サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[Web アプリケーションの管理]** をクリックします。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "34024149"
   
 ## <a name="see-also"></a>参照  
  [サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [初期構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
+ [初期構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   
   

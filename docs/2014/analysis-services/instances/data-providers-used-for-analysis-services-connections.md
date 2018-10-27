@@ -11,17 +11,17 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70a13f23a303ee87d3d4169f4b626d618d5a5b0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137002"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145226"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Analysis Services 接続に使用するデータ プロバイダー
   Analysis Services では、サーバーとデータにアクセスするために 3 種類のデータ プロバイダーを用意しています。 Analysis Services に接続するすべてのアプリケーションでは、これらのプロバイダーのいずれかを使用します。 これらのプロバイダーのうち、ADOMD.NET および Analysis Services 管理オブジェクト (AMO) の 2 つは、マネージド データ プロバイダーです。 Analysis Services OLE DB Provider (MSOLAP DLL) は、ネイティブ データ プロバイダーです。  
   
- 複数のバージョンの Analysis Services を運用している組織では、Analysis Services データに接続しているユーザー ワークステーションに、最新バージョンのデータ プロバイダーをインストールする必要が生じることがあります。 新しいバージョンの Analysis Services に接続するには、それと同じメジャー リリースのデータ プロバイダーが必要です。 たとえばへの接続に[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]、各ワークステーションは、2014年リリースのデータ プロバイダーが必要です。 Excel では、接続する必要のあるデータ プロバイダーがインストールされますが、提供されるプロバイダーは、使用している Analysis Services と比べて古いことがあります。  
+ 複数のバージョンの Analysis Services を運用している組織では、Analysis Services データに接続しているユーザー ワークステーションに、最新バージョンのデータ プロバイダーをインストールする必要が生じることがあります。 新しいバージョンの Analysis Services に接続するには、それと同じメジャー リリースのデータ プロバイダーが必要です。 たとえば、[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] に接続するには、各ワークステーションに、2014 リリースのデータ プロバイダーが必要です。 Excel では、接続する必要のあるデータ プロバイダーがインストールされますが、提供されるプロバイダーは、使用している Analysis Services と比べて古いことがあります。  
   
  このトピックの内容は次のとおりです。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48137002"
   
 -   SQL Server Management Studio で Analysis Services インスタンスに接続します。 チェック、 をポイントするインスタンスを右クリックして**レポート**、 をクリック**全般**します。 エディションとバージョンのビルド情報がレポートに表示されます。  
   
- メジャー ビルド番号の最初のリリースの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は 12.0.2000.9 です。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の初回リリースのメジャー ビルド番号は 12.0.2000.9 です。  
   
  バージョンおよびビルド情報の取得の詳細については、次を参照してください。[バージョンとエディションの SQL Server とそのコンポーネントを確認する方法](http://support.microsoft.com/kb/321185)します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48137002"
   
  データベースに接続する場合、3 つすべてのライブラリの接続文字列プロパティはほぼ同じです。 ADOMD.NET (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>) 用に定義した接続文字列のほとんどは、AMO および Analysis Services OLE DB Provider にも使用できます。 詳細については、「[接続文字列プロパティ (Analysis Services)](connection-string-properties-analysis-services.md)」を参照してください。  
   
- プログラムからの接続の詳細については、「[ADOMD.NET での接続の確立](../multidimensional-models-adomd-net-client/connections-in-adomd-net.md)」を参照してください。  
+ プログラムからの接続の詳細については、「 [ADOMD.NET での接続の確立](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net)」を参照してください。  
   
 ##  <a name="blkmk_AMO"></a> AMO  
  AMO は、サーバー管理およびデータ定義に使用するマネージド データ プロバイダーです。 たとえば、SQL Server Management Studio では AMO を使用して Analysis Services に接続します。  
@@ -109,7 +109,7 @@ ms.locfileid: "48137002"
   
  AMO を使用して接続は通常ごくわずかで構成される"データ ソース =\<servername >"。 接続が確立されたら、API を使用して、データベース コレクションおよび主要なオブジェクトを操作します。 SSDT と SSMS では、どちらも AMO を使用して、Analysis Services インスタンスに接続します。  
   
- プログラムによる接続の詳細については、「 [AMO 基本オブジェクトのプログラミング](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)」を参照してください。  
+ プログラムによる接続の詳細については、「 [AMO 基本オブジェクトのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services への接続](connect-to-analysis-services.md)  

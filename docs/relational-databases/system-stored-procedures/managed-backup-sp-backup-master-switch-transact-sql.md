@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_ backup_master_switch (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup.sp_backup_master_switch (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -9,31 +9,31 @@ ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_ backup_master_switch
-- smart_admin.sp_ backup_master_switch
+- smart_admin.sp_backup_master_switch
 - sp_ backup_master_switch_TSQL
-- smart_admin.sp_ backup_master_switch_TSQL
+- smart_admin.sp_backup_master_switch_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - sp_ backup_master_switch
-- smart_admin.sp_ backup_master_switch
+- smart_admin.sp_backup_master_switch
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0044a88527b57f2e815bac7cd34a8a38181bfa16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a575a83d0e41dfb39dae33040d367188c4ce2200
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752670"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099673"
 ---
-# <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ backup_master_switch (TRANSACT-SQL)
+# <a name="managedbackupspbackupmasterswitch-transact-sql"></a>managed_backup.sp_backup_master_switch (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  一時停止または再開、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を一時停止または再開します。  
   
- このストアド プロシージャを一時的に停止を使用して、それらの再開[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。 これにより、すべての構成設定はそのまま保持され、サービスの再開時にもその設定は維持されています。 ときに[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が一時停止、保有期間は適用されません。 つまり、ファイルをストレージから削除する必要があるかどうか、またはバックアップ ファイルが壊れていたりログ チェーンが分断されたりしているかどうかがチェックされることはありません。  
+ このストアド プロシージャを使用すると、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を一時的に停止してから再開できます。 これにより、すべての構成設定はそのまま保持され、サービスの再開時にもその設定は維持されています。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が一時停止されると、保持期間は適用されなくなります。 つまり、ファイルをストレージから削除する必要があるかどうか、またはバックアップ ファイルが壊れていたりログ チェーンが分断されたりしているかどうかがチェックされることはありません。  
   
 
   
@@ -43,12 +43,12 @@ ms.locfileid: "47752670"
   
 ```sql  
 EXEC managed_backup.sp_backup_master_switch   
-                     [@state = ] { 0 | 1}  
+                     [@new_state = ] { 0 | 1}  
 ```  
   
 ##  <a name="Arguments"></a> 引数  
  @state  
- 状態を設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。 @stateパラメーターが**ビット**します。 値を 0 に設定した場合は操作が一時停止し、値を 1 に設定した場合は操作が再開されます。  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の状態を設定します。 @stateパラメーターが**ビット**します。 値を 0 に設定した場合は操作が一時停止し、値を 1 に設定した場合は操作が再開されます。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_master_switch
 ```  
 Use msdb;  
 GO  
-EXEC managed_backup.sp_master_switch @state=0;  
+EXEC managed_backup.sp_backup_master_switch @new_state=0;  
 Go  
   
 ```  
@@ -75,7 +75,7 @@ Go
 ```  
 Use msdb;  
 GO  
-EXEC managed_backup.sp_master_switch @state=1;  
+EXEC managed_backup.sp_backup_master_switch @new_state=1;  
 Go  
   
 ```  

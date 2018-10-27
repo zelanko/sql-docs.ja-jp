@@ -1,22 +1,22 @@
 ---
 title: SQL のビッグ データ クラスターのデータ プールとは何ですか。 | Microsoft Docs
-description: ''
+description: この記事では、SQL Server 2019 のビッグ データ クラスター内のデータ プールについて説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a75f47148ff59d58d0d0d1397ba445b064c028f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf47aa1734e2b1a849fb8333da9c914ea4244f41
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050765"
 ---
 # <a name="what-is-a-sql-big-data-clusters-data-pool"></a>SQL のビッグ データ クラスターのデータ プールとは何ですか。
 
-この記事では、の役割を説明します。 *SQL Server のデータ プール*SQL Server の 2019 でビッグ データ クラスターをプレビューします。 次のセクションでは、アーキテクチャと SQL のデータ プールの機能について説明します。
+この記事では、の役割を説明します。 *SQL Server のデータ プール*で SQL Server 2019 プレビューのビッグ データ クラスター。 次のセクションでは、アーキテクチャと SQL のデータ プールの機能について説明します。
 
 ## <a name="data-pool-architecture"></a>プールのデータ アーキテクチャ
 
@@ -32,4 +32,4 @@ ms.locfileid: "48796301"
 
 SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは何ですか。](big-data-cluster-overview.md)
+- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)

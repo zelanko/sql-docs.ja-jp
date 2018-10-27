@@ -14,12 +14,12 @@ ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b3100fc8ccf9f21a6c0cf760d799dcf1b15cbb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8df7e950f300028b2246450bf29ed0e8776f2cd4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202212"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145297"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>サーバーの管理権限の許可 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス内のサーバー管理者ロールのメンバーは、そのインスタンスのすべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトとデータに制限なくアクセスできます。 データベースの作成または処理、サーバーのプロパティの変更、トレースの起動など、イベントの処理を除くサーバー全体のタスクを実行するためには、ユーザーがサーバー管理者ロールのメンバーである必要があります。  
@@ -38,10 +38,10 @@ ms.locfileid: "48202212"
   
  既定では、ローカルの Administrators グループのメンバーにも、Analysis Services の管理者権限が付与されます。 ローカル グループには [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のサーバー管理者ロールのメンバーシップが明示的に付与されているわけではありませんが、ローカル管理者はデータベースの作成、ユーザーとアクセス許可の追加、およびシステム管理者に許可されたその他のタスクを実行できます。 この動作は構成可能です。 によって決定されます、`BuiltinAdminsAreServerAdmins`に設定されているサーバー プロパティ**true**既定。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのプロパティを変更できます。 詳細については、「 [Security Properties](../server-properties/security-properties.md)」を参照してください。  
   
- また、分析管理オブジェクト (AMO) を使用してもサーバー ロールを管理できます。 詳細については、「[分析管理オブジェクト (AMO) による開発](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)」を参照してください。  
+ また、分析管理オブジェクト (AMO) を使用してもサーバー ロールを管理できます。 詳細については、「[分析管理オブジェクト (AMO) による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクトと操作へのアクセスの承認&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [セキュリティ ロール&#40;Analysis Services - 多次元データ&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [オブジェクトと操作へのアクセスの承認 (Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [セキュリティ ロール (Analysis Services - 多次元データ)](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

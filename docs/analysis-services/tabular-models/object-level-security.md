@@ -1,5 +1,5 @@
 ---
-title: 表形式モデル オブジェクト レベルのセキュリティ |Microsoft ドキュメント
+title: 表形式モデル オブジェクト レベルのセキュリティ |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98caa08ef6c3dcba37043124d0263507097a4374
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 54384e050f4e45ad5d89d66111ecdcc851076d76
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148207"
 ---
 # <a name="object-level-security"></a>オブジェクト レベルのセキュリティ
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-データ モデルのセキュリティを効果的に実装するための開始[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)および行レベル フィルターのデータ モデル オブジェクトとデータに対するユーザーのアクセス許可を定義します。 以降 1400 の表形式モデルでは、定義することも、テーブル レベルのセキュリティおよび列レベルのセキュリティを含むオブジェクト レベルのセキュリティ、[ロール オブジェクト](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)です。
+データ モデルのセキュリティを効果的に実装すると開始[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)と行レベル フィルターのデータ モデル オブジェクトおよびデータにユーザーのアクセス許可を定義します。 以降表形式 1400 モデルでは、定義することも、テーブル レベルのセキュリティとの列レベルのセキュリティを含むオブジェクト レベルのセキュリティ、[ロール オブジェクト](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)します。
 
 ## <a name="table-level-security"></a>テーブルレベルのセキュリティ
 
-テーブル レベルのセキュリティできましていないのみアクセスを制限するテーブルのデータが悪意のあるユーザーがテーブルの場合を検出するを防ぐことができ、機密性の高いテーブル名が存在しても。 
+テーブル レベルのセキュリティできましていないのみアクセスを制限するテーブルのデータも悪意のあるユーザーがテーブルを検出するを防ぐため、機密性の高いテーブル名が存在します。 
 
- テーブル レベルのセキュリティは、Model.bim の JSON ベースのメタデータで設定[Tabular Model Scripting Language (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)、または[表形式オブジェクト モデル (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)です。 設定、 **metadataPermission**のプロパティ、**テーブル アクセス許可**クラス内で、[ロール オブジェクト](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)に**none**です。
+ テーブル レベルのセキュリティは、Model.bim で JSON ベースのメタデータで設定[Tabular Model Scripting Language (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)、または[表形式オブジェクト モデル (TOM)](https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo)します。 設定、 **metadataPermission**のプロパティ、**テーブル アクセス許可**クラス、[ロール オブジェクト](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)に**none**します。
 
-この例では、Product テーブルに関するテーブル アクセス許可クラスの metadataPermission プロパティが none に設定します。
+この例での Product テーブルのテーブル アクセス許可クラスの metadataPermission プロパティが none に設定します。
 
 ```
 "roles": [
@@ -44,11 +45,11 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="column-level-security"></a>列レベルのセキュリティ
 
-列レベルのセキュリティと、テーブル レベルのセキュリティに似ていますいないのみアクセスを制限できますに列のデータも機密性の高い列の名前、悪意のあるユーザーが列を検出しないように支援します。
+列レベルのセキュリティと、テーブル レベルのセキュリティのようなことができますされませんのみアクセスを制限する列のデータも機密性の高い列の名前、悪意のあるユーザーが列を検出しないように支援します。
 
- 列レベルのセキュリティは、Model.bim の JSON ベースのメタデータで設定[Tabular Model Scripting Language (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)、または[表形式オブジェクト モデル (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)です。 設定、 **metadataPermission**のプロパティ、 **columnPermissions**クラス内で、[ロール オブジェクト](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)に**none**です。
+ 列レベルのセキュリティは、Model.bim で JSON ベースのメタデータで設定[Tabular Model Scripting Language (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)、または[表形式オブジェクト モデル (TOM)](https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo)します。 設定、 **metadataPermission**のプロパティ、 **columnPermissions**クラス、[ロール オブジェクト](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)に**none**します。
 
-この例では従業員テーブル内の基本率列に対して columnPermissions クラスの metadataPermission プロパティが none に設定します。
+この例での Employees テーブルの基本料金列 columnPermissions クラスの metadataPermission プロパティが none に設定します。
 
 ```
 "roles": [
@@ -72,25 +73,25 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="restrictions"></a>制限
 
-*  リレーションシップ チェーンが壊れた場合、モデルのテーブル レベルのセキュリティを設定できません。 デザイン時にエラーが生成されます。
- たとえば、テーブル A と B、および B および C の間のリレーションシップがある場合は、テーブル B を保護できません。テーブルに対するクエリがテーブル A と B、および B および C. 間のリレーションシップを通過できないテーブル B のセキュリティ保護されている場合この例では、個別の関係するようにテーブル A と B. 間
+*  リレーションシップ チェーンが中断している場合、モデルのテーブル レベルのセキュリティを設定できません。 デザイン時にエラーが生成されます。
+ たとえば、テーブル A と B、および B および C の間のリレーションシップがある場合は、テーブル B を保護できません。テーブルに対するクエリ テーブル B のセキュリティ保護されている場合は、テーブル A と B、および B および C. 間のリレーションシップを移行できません。ここでは、別のリレーションシップはテーブル A と B. 間構成でした。
 
     ![テーブルレベルのセキュリティ](../../analysis-services/tabular-models/media/ssas-ols.png)  
 
 
-*  セキュリティで保護されたデータへの意図しないアクセスに起こる可能性がありますので行レベルのセキュリティとオブジェクト レベルのセキュリティの異なるロール組み合わせることはできません。 このような組み合わせのロールのメンバーであるユーザーのクエリ時にエラーが生成されます。
+*  セキュリティで保護されたデータに意図しないアクセスが入り込む可能性があるために、行レベルのセキュリティとオブジェクト レベルのセキュリティがさまざまなロールから組み合わせることはできません。 このような組み合わせは、ロールのメンバーであるユーザーのクエリ時にエラーが生成されます。
 
-*  動的な計算 (メジャー、Kpi、DetailRows) は、セキュリティで保護されたテーブルまたは列を参照する場合に自動的に制限されます。 メジャーを明示的にセキュリティで保護するためのメカニズムはありませんが、可能であれば暗黙的にセキュリティで保護されたテーブルまたは列を参照する式を更新することで、メジャーをセキュリティで保護します。
+*  動的な計算 (メジャー、Kpi、DetailRows) は、セキュリティで保護されたテーブルまたは列を参照する場合に自動的に制限されます。 メジャーを明示的にセキュリティで保護するためのメカニズムはありませんは、暗黙的にセキュリティで保護されたテーブルまたは列を参照する式を更新することで、メジャーをセキュリティで保護できます。
 
-*  セキュリティで保護された列を参照するリレーションシップは、保護されていない列はテーブルが提供された作業します。
+*  セキュリティで保護された列を参照するリレーションシップは、列はテーブルが保護されていない限り機能します。
 
 
 
 
 ## <a name="see-also"></a>参照  
 [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
-[Roles オブジェクト (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
-[テーブル モデルのスクリプト言語 (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
-[表形式オブジェクト モデル (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)です。
+[Roles オブジェクト (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)  
+[テーブル モデルのスクリプト言語 (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)  
+[表形式オブジェクト モデル (TOM)](https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo)します。
 
   

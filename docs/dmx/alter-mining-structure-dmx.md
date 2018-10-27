@@ -1,5 +1,5 @@
 ---
-title: マイニング構造 (DMX) を ALTER |Microsoft ドキュメント
+title: マイニング構造 (DMX) を ALTER |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842695"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145927"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  既存のマイニング構造に基づいて新しいマイニング モデルを作成します。  使用すると、 **ALTER MINING STRUCTURE**を次のように新しいマイニング モデル構造を作成するステートメントが既に存在する必要があります。 ステートメントを使用する場合にこれに対し、 [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)、モデルを作成し、その基になるマイニング構造を同時に自動的に生成します。  
+  既存のマイニング構造に基づいて新しいマイニング モデルを作成します。  使用すると、 **ALTER MINING STRUCTURE**新しいマイニング モデルでは、構造体を作成するステートメントが既に存在する必要があります。 これに対し、ステートメントを使用する[CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)、モデルを作成し、その基になるマイニング構造を同時に自動的に生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,7 +56,7 @@ USING <algorithm> [(<parameter list>)]
  プロバイダーによって定義されているデータ マイニング アルゴリズムの名前。  
   
 > [!NOTE]  
->  使用して現在のプロバイダーでサポートされているアルゴリズムの一覧を取得できる[DMSCHEMA_MINING_SERVICES 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)です。 現在のインスタンスでサポートされているアルゴリズムを表示する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[データ マイニング プロパティ](../analysis-services/server-properties/data-mining-properties.md)です。  
+>  使用して現在のプロバイダーでサポートされているアルゴリズムの一覧を取得できる[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)します。 現在のインスタンスでサポートされているアルゴリズムを表示する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[データ マイニング プロパティ](../analysis-services/server-properties/data-mining-properties.md)します。  
   
  *パラメーター リスト*  
  任意。 アルゴリズムのプロバイダー定義パラメーターのコンマ区切りのリストです。  
@@ -67,15 +67,15 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="remarks"></a>コメント  
  マイニング構造に複合キーが含まれる場合、マイニング モデルは、構造に定義されているすべてのキー列を含む必要があります。  
   
- モデルが予測可能列、たとえばを使用して作成されたモデルが必要としない場合、[!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタ リングと[!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター アルゴリズムをする必要はありません、ステートメントに列の定義を含めます。 結果モデルのすべての属性は入力として処理されます。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムと [!INCLUDE[msCoName](../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されるモデルなど、モデルに予測可能列が必要ない場合、ステートメントに列定義を含める必要はありません。 結果モデルのすべての属性は入力として処理されます。  
   
  **WITH**句、ケース テーブルに適用されるフィルター選択とドリルスルーの両方のオプションを指定することができます。  
   
 -   追加、**フィルター**キーワードとフィルター条件。 フィルターはマイニング モデルのケースに適用されます。  
   
--   追加、**ドリル スルー**マイニング モデルのユーザーは、モデルの結果からケース データにドリル ダウンできるようにするキーワードです。 データ マイニング拡張機能 (DMX)、ドリルスルーはモデルを作成する場合にのみ利用できます。  
+-   追加、**ドリルスルー**マイニング モデルのユーザーは、モデルの結果からケース データにドリル ダウンできるようにするキーワード。 データ マイニング拡張機能 (DMX)、モデルを作成する場合にのみ、ドリルスルーを有効にできます。  
   
- ケース フィルター選択とドリルスルーの両方を使用するのには、1 つのキーワードを組み合わせて**WITH**の次の例に示す構文を使用して句。  
+ 1 つのキーワードを組み合わせるケース フィルター選択とドリルスルーの両方を使用する**WITH**の次の例に示す構文を使用して句。  
   
  `WITH DRILLTHROUGH, FILTER(Gender = 'Male')`  
   
@@ -88,7 +88,7 @@ USING <algorithm> [(<parameter list>)]
   
 -   モデリング フラグ  
   
--   によって示される予測の要求は、列には、予測可能な値が含まれるかどうかは、アルゴリズムに示す、 **PREDICT**または**PREDICT_ONLY**句  
+-   示される列には、予測可能な値が含まれるかどうかをアルゴリズムに示す、予測の要求、 **PREDICT**または**PREDICT_ONLY**句  
   
  列定義リストの次の構文を使用して、単一列を定義します。  
   
@@ -97,14 +97,14 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>列名と別名  
- 列定義リストで使用する列名は、マイニング構造で使用されている列の名前にする必要があります。 ただし、マイニング モデルの構造列を表すために、必要に応じて別名を定義できます。 同じ構造列に複数の列定義を作成し、列の各コピーに異なる別名と予測の使用方法を割り当てることもできます。 既定では、別名を定義しない場合、構造列の名前が使用されます。 詳細については、次を参照してください。[モデル列の別名を作成する](../analysis-services/data-mining/create-an-alias-for-a-model-column.md)です。  
+ 列定義リストで使用する列名は、マイニング構造で使用されている列の名前にする必要があります。 ただし、マイニング モデルの構造列を表すために、必要に応じて別名を定義できます。 同じ構造列に複数の列定義を作成し、列の各コピーに異なる別名と予測の使用方法を割り当てることもできます。 既定では、別名を定義しない場合、構造列の名前が使用されます。 詳細については、次を参照してください。[モデル列の別名を作成](../analysis-services/data-mining/create-an-alias-for-a-model-column.md)です。  
   
- 入れ子になったテーブル列の場合は、入れ子になったテーブルの名前を指定、データ型として指定する**テーブル**かっこで囲まれた、モデルに含める入れ子になった列の一覧を提供します。  
+ 入れ子になったテーブル列の場合、入れ子になったテーブルの名前を指定、データ型として指定**テーブル**、かっこで囲まれた、モデルに含める入れ子になった列の一覧を指定します。  
   
  入れ子になったテーブル列の定義の後にフィルター条件式を配置することで、入れ子になったテーブルに適用されるフィルター式を定義できます。  
   
 ### <a name="modeling-flags"></a>ModelingFlags  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] マイニング モデル列で使用するためには、次のモデリング フラグをサポートします。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、マイニング モデル列で使用する次のモデリング フラグをサポートしています。  
   
 > [!NOTE]  
 >  NOT_NULL モデリング フラグは、マイニング構造列に適用されます。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
@@ -115,7 +115,7 @@ USING <algorithm> [(<parameter list>)]
 |**REGRESSOR**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
 |**MODEL_EXISTENCE_ONLY**|属性列の値が属性の有無ほど重要ではないことを示します。|  
   
- 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、次を参照してください。[モデリング フラグ&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)です。  
+ 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、次を参照してください。[モデリング フラグ&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)します。  
   
 ### <a name="prediction-clause"></a>予測句  
  予測句では、予測列の使用方法を説明します。 次の表は、使用可能な句を示しています。  
@@ -130,15 +130,15 @@ USING <algorithm> [(<parameter list>)]
   
  フィルター条件式は、簡略化された DMX 述語で、WHERE 句に似ています。 フィルター式は、基本的な算術演算子、スカラー、および列名を使用する式に制限されます。 ただし、EXISTS 演算子は例外です。これは、サブクエリに対して少なくとも 1 行が返される場合は true に評価されます。 述語は、AND、OR、および NOT という一般的な論理演算子を使用して組み合わせることができます。  
   
- マイニング モデルを使用するフィルターの詳細については、次を参照してください。[マイニング モデル フィルターの&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)です。  
+ マイニング モデルで使用されるフィルターの詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
   
 > [!NOTE]  
 >  フィルター内の列は、マイニング構造列である必要があります。 モデル列または別名の列に対してフィルターを作成することはできません。  
   
- DMX の演算子と構文の詳細については、次を参照してください。[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)です。  
+ DMX の演算子と構文の詳細については、次を参照してください。[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)します。  
   
 ## <a name="parameter-definition-list"></a>パラメーター定義リスト  
- アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)です。  
+ アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)します。  
   
  パラメーター リストの構文は次のとおりです。  
   
@@ -162,7 +162,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>例 2: 構造へのフィルター選択されたモデルの追加  
- 次の例では、マイニング モデル、`Naive Bayes Women`を**New Mailing**マイニング構造です。 新しいモデルの基本構造は、例 1 で追加されたマイニング モデルと同じです。ただし、このモデルでは、マイニング構造のケースを 51 歳以上の女性の顧客だけに制限します。  
+ 次の例では、マイニング モデルでは、`Naive Bayes Women`を**New Mailing**マイニング構造です。 新しいモデルの基本構造は、例 1 で追加されたマイニング モデルと同じです。ただし、このモデルでは、マイニング構造のケースを 51 歳以上の女性の顧客だけに制限します。  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -178,7 +178,7 @@ WITH FILTER([Gender] = 'F' AND [Age] >50)
 ```  
   
 ## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>例 3: 入れ子になったテーブルを含む構造へのフィルター選択されたモデルの追加  
- 次の例では、変更した Market Basket マイニング構造にマイニング モデルを追加します。 追加の例で使用されるマイニング構造が変更された、**領域**列で、顧客の地域の属性が含まれていると、 **Income Group** 、値を使用して顧客の収入を分類する**高**、**中程度**、または**低**です。  
+ 次の例では、変更した Market Basket マイニング構造にマイニング モデルを追加します。 追加する例で使用されるマイニング構造が変更された、**リージョン**列は、顧客の地域の属性が含まれていると、 **Income Group**を使用して顧客の収入を分類します。値**高**、**中程度**、または**低**します。  
   
  マイニング構造には、顧客が購入した品目を一覧表示する、入れ子になったテーブルも含まれます。  
   

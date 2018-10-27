@@ -1,5 +1,5 @@
 ---
-title: データ マイニング クエリ ツール |Microsoft ドキュメント
+title: データ マイニング クエリ ツール |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e24cab61196e8d16f8bb79caeb47e075725d6ab2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015179"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147947"
 ---
 # <a name="data-mining-query-tools"></a>データ マイニング クエリ ツール
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34015179"
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用して、DMX クエリを作成して実行できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続して、データベース、マイニング構造列、およびマイニング モデルを選択できます。 **メタデータ エクスプ ローラー** には、参照できる予測関数の一覧が含まれています。  
   
 ##  <a name="bkmk_Templates"></a> [DMX テンプレート]  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]DMX クエリの作成に使用できる対話型の DMX クエリ テンプレートを提供します。 テンプレートの一覧を表示するには、ツール バーの **[表示]** をクリックし、 **[テンプレート エクスプローラー]** を選択します。 DMX、MDX、および XMLA のテンプレートを含むすべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テンプレートを表示するには、キューブ アイコンをクリックします。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、DMX クエリの作成に使用できる対話型の DMX クエリ テンプレートが提供されます。 テンプレートの一覧を表示するには、ツール バーの **[表示]** をクリックし、 **[テンプレート エクスプローラー]** を選択します。 DMX、MDX、および XMLA のテンプレートを含むすべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テンプレートを表示するには、キューブ アイコンをクリックします。  
   
  テンプレートを使用してクエリをビルドするには、開いているクエリ ウィンドウにテンプレートをドラッグするか、テンプレートをダブルクリックして新しい接続と新しいクエリ ペインを開きます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34015179"
 ##  <a name="bkmk_SSIS"></a> Integration Services データ マイニング コンポーネント  
  予測クエリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの一部として含めることもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の次のタスクおよび変換では、DMX 予測クエリと DMX ステートメントの作成と実行がサポートされます。  
   
-|コンポーネント|Description|  
+|コンポーネント|説明|  
 |---------------|-----------------|  
 |データ マイニング クエリ タスク|DMX クエリおよびその他の DMX ステートメントを制御フローの一部として実行します。<br /><br /> タスク エディターには、予測クエリ ビルダーと、手動で DMX クエリを変更するためのテキスト ボックスがあります。 ただし、タスク エディターでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションでのオブジェクトに対するクエリを検証できません。 このため、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] または [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でクエリを作成してから、ステートメントまたはクエリのテキストをタスク エディターに貼り付けることをお勧めします。|  
 |データ マイニング クエリ変換|データ フロー ソースから渡されるデータを使用してデータ フロー内で予測クエリを実行します。<br /><br /> タスク エディターには、予測クエリ ビルダーと、手動で DMX クエリを変更するためのテキスト ボックスがあります。<br /><br /> 変換を使用できるのは、データ フローのデータを使用するクエリ (つまり、PREDICTION JOIN 構文を使用するクエリ) を作成する場合のみです。 このコンポーネントは、コンテンツ クエリまたはその他の種類の DMX ステートメントの実行には使用できません。|  
@@ -63,16 +63,16 @@ ms.locfileid: "34015179"
   
  ただし、XMLA は、Analysis Service サーバーとのすべてのやり取りのもとになるメッセージ形式を構成します。 XMLA メッセージ内では、DMX に基づく予測クエリ、コンテンツ クエリ、またはデータ マイニング スキーマ行セットを使用してモデル メタデータを取得するクエリのどれを送信しているかにより、クエリの表示の方法が異なります。  
   
--   **予測クエリ** (および他のすべての DMX ステートメント) のテキストは、[Execute (XMLA)](../../analysis-services/xmla/xml-elements-methods-execute.md) メソッドを使用し、XMLA [Command (XMLA)](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md) 要素の [Statement (XMLA)](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) 要素内のテキストとして配置される DMX クエリと共に、XMLA で送信されます。  
+-   **予測クエリ** (および他のすべての DMX ステートメント) のテキストは、[Execute (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) メソッドを使用し、XMLA [Command (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla) 要素の [Statement (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) 要素内のテキストとして配置される DMX クエリと共に、XMLA で送信されます。  
   
--   クラスター数、デシジョン ツリーで使用される属性、モデルの最終処理日、モデル作成時に使用されるアルゴリズム パラメーターなどの**モデル コンテンツ**および**モデル メタデータ**を取得するには、[Discover (XMLA)](../../analysis-services/xmla/xml-elements-methods-discover.md) メソッドを使用し、[RequestType (XMLA)](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) ヘッダーでデータ マイニング スキーマ行セットの 1 つを指定します。 クエリの範囲を絞り込むには、基準を [RestrictionList (XMLA)](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) 要素の制限として入力します。  
+-   クラスター数、デシジョン ツリーで使用される属性、モデルの最終処理日、モデル作成時に使用されるアルゴリズム パラメーターなどの**モデル コンテンツ**および**モデル メタデータ**を取得するには、[Discover (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) メソッドを使用し、[RequestType (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla) ヘッダーでデータ マイニング スキーマ行セットの 1 つを指定します。 クエリの範囲を絞り込むには、基準を [RestrictionList (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla) 要素の制限として入力します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)   
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)   
- [DMX の Select ステートメントを理解します](../../dmx/understanding-the-dmx-select-statement.md)   
- [構造と DMX 予測クエリの使用状況](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [予測クエリ ビルダーを使用して予測クエリを作成します。](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
- [SQL Server Management Studio で、DMX クエリを作成します。](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ [DMX 選択ステートメントについて](../../dmx/understanding-the-dmx-select-statement.md)   
+ [構造と DMX 予測クエリの使用](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [予測クエリ ビルダーを使用した予測クエリの作成](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [SQL Server Management Studio で DMX クエリを作成する](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

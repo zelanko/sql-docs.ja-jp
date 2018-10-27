@@ -1,26 +1,26 @@
 ---
-title: Minikube を SQL Server 2019 CTP 2.0 の展開の構成 |Microsoft Docs
-description: ''
+title: Minikube を SQL Server 2019 ビッグ データ クラスターのデプロイの構成 |Microsoft Docs
+description: Minikube を単一のコンピューターに SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイを構成する方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050784"
 ---
-# <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>Minikube を SQL Server 2019 CTP 2.0 を構成します。
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Minikube を SQL Server 2019 ビッグ データ クラスターのデプロイの構成します。
 
-Minikube は、ラップトップやデスクトップなどの単一のコンピューター上で Kubernetes を実行しやすくツールです。 Minikube は実行 Kubernetes を試すか、それを使用した開発を検討しているユーザーのラップトップ コンピューターで、VM 内で単一ノードの Kubernetes クラスターを日常的なされます。 
+この記事では、構成する方法を説明**minikube**単一のコンピューターの SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイにします。 Minikube は、ラップトップやデスクトップなどの単一のコンピューター上で Kubernetes を実行しやすくツールです。 Minikube は実行 Kubernetes を試すか、それを使用した開発を検討しているユーザーのラップトップ コンピューターで、VM 内で単一ノードの Kubernetes クラスターを日常的なされます。 
 
 ## <a name="prerequisites"></a>前提条件
 
-- SQL のビッグ データ クラスター構成では、SQL Server 2019 CTP 2.0 Minikube クラスターを実行するには、コンピューターに少なくとも 32 GB の RAM があることをお勧めします。
+- SQL ビッグ データ クラスター構成では、SQL Server 2019 CTP 2.0 Minikube クラスターを実行するには、コンピューターに少なくとも 32 GB の RAM があることをお勧めします。
 
    > [!TIP] 
    > コンピューターに推奨されるメモリの最小値のみがある場合は、プールのコンピューティング インスタンスの 1 つだけ、1 つのデータ プール インスタンスと 1 の記憶域プールのインスタンスがクラスターのデプロイを構成します。 この構成のみ使用してください評価環境の持続性とデータの可用性が重要です。 参照してください、[のデプロイに関するドキュメント](deployment-guidance.md#define-environment-variables)データ プールのレプリカの数を構成する設定を環境変数の詳細については、プール、および記憶域プールを計算します。
@@ -72,6 +72,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>次の手順
 
-この記事の手順では、Minikube クラスターを構成します。 次の手順では、クラスターに SQL Server 2019 CTP 2.0 を展開します。
+この記事の手順では、Minikube クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データのクラスターにデプロイします。 手順については、次の記事を参照してください。
 
 [SQL Server 2019 CTP 2.0 では、Kubernetes をデプロイします。](deployment-guidance.md#deploy)

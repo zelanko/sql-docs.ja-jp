@@ -1,5 +1,5 @@
 ---
-title: セル プロパティ (MDX) の使用 |Microsoft ドキュメント
+title: セル プロパティ (MDX) の使用 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023429"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145307"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>MDX のセル プロパティのセル プロパティの使用
+# <a name="mdx-cell-properties---using-cell-properties"></a>MDX セル プロパティ - セル プロパティの使用
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   多次元式 (MDX) でのセル プロパティには、キューブなどの多次元データ  ソース内のセルの内容や書式に関する情報が含まれます。  
   
@@ -42,7 +42,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>サポートされる固有セル プロパティ  
  次の表は、 `<property>` 値の中で使用可能な固有セル プロパティを示しています。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|セルに対するアクションの種類を示すビットマスク。 このプロパティの値は、次のいずれか 1 つです。<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注: WHERE 句内にセットを含むクエリの場合、ドリルスルー アクションは含まれません。|  
 |**BACK_COLOR**|**VALUE** または **FORMATTED_VALUE** プロパティを表示するときの背景色。 詳しくは、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)」をご覧ください。|  
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   マイニング モデル ディメンション、間接ディメンション、データ マイニング ディメンションでは更新がサポートされないため、セルは更新できません。|  
 |**VALUE**|書式設定されていないセルの値。|  
   
- 必須のセル プロパティは、 **CELL_ORDINAL**、 **FORMATTED_VALUE**、および **VALUE** のみです。 固有またはプロバイダー固有を問わず、すべてのセル プロパティは、そのデータ型およびプロバイダーのサポートを含めて、 **PROPERTIES** スキーマ行セットで定義します。 **PROPERTIES** スキーマ行セットの詳細については、「 [MDSCHEMA_PROPERTIES 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)」を参照してください。  
+ 必須のセル プロパティは、 **CELL_ORDINAL**、 **FORMATTED_VALUE**、および **VALUE** のみです。 固有またはプロバイダー固有を問わず、すべてのセル プロパティは、そのデータ型およびプロバイダーのサポートを含めて、 **PROPERTIES** スキーマ行セットで定義します。 **PROPERTIES** スキーマ行セットの詳細については、「 [MDSCHEMA_PROPERTIES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)」を参照してください。  
   
  既定では、 **CELL PROPERTIES** キーワードが使用されない場合、返されるセル プロパティは **VALUE**、 **FORMATTED_VALUE**、および **CELL_ORDINAL** です (順序もこのとおり)。 **CELL PROPERTIES** キーワードが使用されている場合は、キーワードで明示的に記述されたセル プロパティだけが返されます。  
   
@@ -101,6 +101,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX クエリの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b95231d3065a07339bd5b4817bb614d97a9a91ca
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 616cc1e633d6683283d62d6fb3b3434780d9a919
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034790"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147247"
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 拡張イベントを使用した Analysis Services の監視
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "38034790"
  このトレースに付ける名前を指定します (通常は、人間が判読できるトレースの定義です)。 *trace_id* の値を名前として使用するのが一般的です。  
   
  *AS_event*  
- 公開する Analysis Services イベントを指定します。 イベントの名前については、「 [Analysis Services トレース イベント](../../analysis-services/trace-events/analysis-services-trace-events.md) 」を参照してください。  
+ 公開する Analysis Services イベントを指定します。 イベントの名前については、「 [Analysis Services トレース イベント](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 」を参照してください。  
   
  *data_filename*  
  イベント データを含むファイルの名前を指定します。 この名前には、トレースを繰り返し送信する場合にデータが上書きされないように、タイムスタンプを使用したサフィックスが付けられます。  

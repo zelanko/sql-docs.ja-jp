@@ -2,7 +2,7 @@
 title: (Data Migration Assistant)、オンプレミス データベースの適切な Azure SQL データベース SKU の識別 |Microsoft Docs
 description: Data Migration Assistant を使用して、オンプレミス データベースの右側の Azure SQL データベースの SKU を特定する方法について説明します
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684450"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49644000"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>オンプレミス データベースの適切な Azure SQL データベース SKU の識別します。
 
@@ -141,7 +141,7 @@ TSV の出力ファイルには次の図に表示される列が含まれます�
 - **MetricValue** -Azure SQL Database の SKU をお勧めします。
 - **SQLMiEquivalentCores** -Azure SQL Database マネージ インスタンスに移動する場合は、コア数のこの値を使用できます。
 - **IsTierRecommended**の各レベルの最小 SKU の推奨事項をいたします。 データベースの適切なレベルを決定するためのヒューリスティックを適用します。 
-- **ExclusionReasons** -この値は、階層が推奨される場合は空白です。 各層は推奨されませんが、なぜこれが選択されません。 上の理由から提供されています。
+- **ExclusionReasons** -この値は、階層が推奨される場合は空白です。 各層はお勧めしませんが、理由が選択されなかった理由を提供されています。
 - **AppliedRules** -適用された規則の短い表記します。
 
 推奨値は、Azure、オンプレミス データベースのような成功率で実行するようにクエリに必要な最小の SKU。 たとえば、S3 を選択し、または以下の推奨される SKU の最小の standard レベルの S4 場合をにより、クエリがタイムアウトまたは実行に失敗します。

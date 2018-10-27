@@ -1,5 +1,5 @@
 ---
-title: CA でのサイト コレクションの Power Pivot の統合をアクティブ化 |Microsoft ドキュメント
+title: CA でのサイト コレクションの Power Pivot の統合をアクティブ化 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77c8cb0d9e9617bfa0560ae1e9bc6389a297a5c2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 564ff616ec13b5f7f669db4cf6402114175f5670
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026119"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100063"
 ---
 # <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>CA でのサイト コレクションの Power Pivot の統合をアクティブ化します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34026119"
   
 1.  SharePoint サイトで、 **[サイトの操作]** をクリックします。  
   
-     既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 つまり、多くの場合、http:// を入力することで SharePoint サイトにアクセスすることができます、\<コンピューター名 > を開くには、ルート サイト コレクション。  
+     既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 つまり http:// を入力して、SharePoint サイトを多くの場合、アクセスできる\<コンピューター名 > をルート サイト コレクションを開きます。  
   
 2.  **[サイトの設定]** をクリックします。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34026119"
   
 ## <a name="see-also"></a>参照  
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [初期構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
- [Power Pivot for SharePoint 2010 のインストール](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [初期構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
+ [Power Pivot for SharePoint 2010 のインストール](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

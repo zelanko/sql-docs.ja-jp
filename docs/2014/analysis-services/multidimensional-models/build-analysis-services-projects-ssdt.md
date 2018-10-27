@@ -14,12 +14,12 @@ ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c077da81b20444a71b28a2f604cdb7cc485de123
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1a0afbd256b26a3743d85f2e8e5d09bba428fff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129473"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147677"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services プロジェクトのビルド (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成方法は、Visual Studio を使用したプログラミング プロジェクトの作成方法とほとんど同じです。 プロジェクトを作成する場合、出力ディレクトリ内に XML ファイルのセットが作成されます。 この XML ファイルは、Analysis Services Scripting Language (ASSL) を使用したファイルです。ASSL は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] や [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] などのクライアント アプリケーションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと接続して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの作成や変更に使用する XML 言語仕様です。 この XML ファイルを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト定義が、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置されます。  
@@ -59,7 +59,7 @@ ms.locfileid: "48129473"
  参照されたアセンブリ (標準システムと [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アセンブリを除く) も出力ディレクトリにコピーされます。 参照がソリューションの別のプロジェクト (複数) に対して行われる場合はまず、該当するプロジェクト構成を使用してそれらのプロジェクトが作成され、プロジェクト参照により確立された依存オブジェクトが作成され、その後、プロジェクトの出力フォルダーにコピーされます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services プロジェクトの配置&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services プロジェクトの配置 (SSDT)](deploy-analysis-services-projects-ssdt.md)  
   
   

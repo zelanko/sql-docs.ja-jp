@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050899"
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL を使用した Python の実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,6 +64,33 @@ ms.locfileid: "49461918"
     
     さらに、無効になっているネットワーク プロトコルを有効にまたは SQL Server が外部クライアントと通信できるようにファイアウォールを開く必要があります。 詳細については、次を参照してください。[セットアップのトラブルシューティング](../common-issues-external-script-execution.md)します。
 
+### <a name="call-revoscalepy-functions"></a>Revoscalepy 関数を呼び出す
+
+確認する**revoscalepy**を含むスクリプトの実行が使用できる[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)統計概要データを生成します。 このスクリプトでは、revoscalepy に含まれている組み込みのサンプルからサンプル .xdf データ ファイルを取得する方法を示します。 RxOptions 関数は、提供、 **sampleDataDir**サンプル ファイルの場所を返すパラメーターです。
+
+Rx_summary 型のオブジェクトを返すため`class revoscalepy.functions.RxSummary.RxSummaryResults`、複数の要素が含まれています、pandas を使用して表形式でデータ フレームだけを抽出することができます。
+
+```SQL
+EXEC sp_execute_external_script @language = N'Python', 
+@script = N'
+import os
+from pandas import DataFrame
+from revoscalepy import rx_summary
+from revoscalepy import RxXdfData
+from revoscalepy import RxOptions
+
+sample_data_path = RxOptions.get_option("sampleDataDir")
+print(sample_data_path)
+
+ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+summary = rx_summary("ArrDelay + DayOfWeek", ds)
+print(summary)
+dfsummary = summary.summary_data_frame
+OutputDataSet = dfsummary
+'
+WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
+```
+
 ## <a name="basic-python-interaction"></a>基本的な Python の対話
 
 SQL Server での Python コードを実行する 2 つの方法はあります。
@@ -102,7 +129,7 @@ SQL Server での Python コードを実行する 2 つの方法はあります�
 ここでは、これらのルールに注意してください。
 
 + 内のすべて、`@script`引数は有効な Python コードである必要があります。 
-+ コードは、インデントや、変数名などに関するすべてのらしい規則に従う必要があります。 エラーが発生したときに、ホワイト スペースと大文字小文字の区別を確認します。
++ コードは、インデント、変数名、およびなどに関するすべての Python ルールに従う必要があります。 エラーが発生したときに、ホワイト スペースと大文字小文字の区別を確認します。
 + 既定で読み込まれていないすべてのライブラリを使用している場合は、読み込みに、スクリプトの先頭に import ステートメントを使用する必要があります。 SQL Server では、いくつかの製品に固有のライブラリを追加します。 詳細については、次を参照してください。 [Python ライブラリ](../python/python-libraries-and-data-types.md)します。
 + ライブラリがインストールされていない場合は停止し、」の説明に従って、SQL Server の外部での Python パッケージをインストール: [SQL Server に新しい Python パッケージをインストール](../python/install-additional-python-packages-on-sql-server.md)
 

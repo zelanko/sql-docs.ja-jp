@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120388"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100413"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120388"
  このサンプルでは、[!INCLUDE[hek_2](../includes/hek-2-md.md)] に含まれている[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] の新機能を紹介します。 このサンプルで取り上げるのは、新しいメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、 [!INCLUDE[hek_2](../includes/hek-2-md.md)]のパフォーマンス上の利点も示します。  
   
 > [!NOTE]  
->  SQL Server 2016 のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](https://msdn.microsoft.com/en-US/library/mt465764.aspx)」をご覧ください。  
+>  SQL Server 2016 のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](https://msdn.microsoft.com/library/mt465764.aspx)」をご覧ください。  
   
  このサンプルは、AdventureWorks データベースの 5 つのテーブルをメモリ最適化テーブルに移行します。販売注文処理のデモ ワークロードも含まれています。 このデモ ワークロードを使用して、サーバーで [!INCLUDE[hek_2](../includes/hek-2-md.md)] を使用するパフォーマンス上の利点を確認できます。  
   

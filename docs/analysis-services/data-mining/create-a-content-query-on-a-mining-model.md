@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルに対するコンテンツ クエリを作成 |Microsoft ドキュメント
+title: マイニング モデルに対するコンテンツ クエリの作成 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a0bc8d9a216f55f04cab4a4012945d2b11cf429
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019969"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145077"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>マイニング モデルのコンテンツ クエリの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "34019969"
   
      コード エディターに **[コンテンツ クエリ]** テンプレートが表示されます。 メタデータ ペインに、現在のデータベースで使用可能なモデルが一覧表示されます。 データベースを変更するには、 **[使用できるデータベース]** の一覧から別のデータベースを選択します。  
   
-5.  行で、マイニング モデルの名前を入力`FROM`[*\<マイニング モデル, name, MyModel >*]`.CONTENT`です。 マイニング モデル名にスペースが含まれる場合は、名前を角かっこで囲む必要があります。  
+5.  行で、マイニング モデルの名前を入力します。 `FROM` [*\<マイニング モデル, name, MyModel >*]`.CONTENT`します。 マイニング モデル名にスペースが含まれる場合は、名前を角かっこで囲む必要があります。  
   
      名前を入力せずに、 **オブジェクト エクスプローラー** でマイニング モデルを選択してテンプレートにドラッグすることもできます。  
   
-6.  行で、 `SELECT` *\<選択リスト、expr、 \* >* 、マイニング モデル コンテンツ スキーマ行セットの列の名前を入力します。  
+6.  行で、 `SELECT` *\<expr 一覧で、選択リストの\* >*、マイニング モデル コンテンツ スキーマ行セット内の列の名前を入力します。  
   
-     マイニング モデル コンテンツ クエリで返すことができる列の一覧については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+     マイニング モデル コンテンツ クエリで返すことができる列の一覧については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)によって提供される DMV を使用してクエリを作成することにより、データ マイニング スキーマ行セットに対するクエリを作成することもできます。  
   
 7.  必要に応じて、テンプレートの WHERE 句に条件を入力し、特定のノードや値に対して返される行を制限します。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "34019969"
      結果ペインにモデルのコンテンツが表示されます。  
   
     > [!NOTE]  
-    >  現在のインスタンスでクエリを実行できるすべてのスキーマ行セットを一覧表示するには、 `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS というクエリを使用します。 データ マイニング固有のスキーマ行セットの一覧については、「 [データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)」を参照してください。  
+    >  現在のインスタンスでクエリを実行できるすべてのスキーマ行セットを一覧表示するには、 `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS というクエリを使用します。 データ マイニング固有のスキーマ行セットの一覧については、「 [データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

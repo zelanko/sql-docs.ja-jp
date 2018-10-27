@@ -1,18 +1,18 @@
 ---
 title: マスター インスタンスの SQL Server のビッグ データ クラスターとは何ですか。 | Microsoft Docs
-description: ''
+description: この記事では、SQL Server 2019 ビッグ データ クラスター内のマスター インスタンスについて説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3b17330f38d30400564171ba09328dc4f8c8be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796609"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051064"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>マスター インスタンスをクラスター、SQL Server のビッグ データとは何ですか。
 
@@ -65,4 +65,4 @@ SQL Server 2019 ビッグ データのクラスターで行うことができま
 
 SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは何ですか。](big-data-cluster-overview.md)
+- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)

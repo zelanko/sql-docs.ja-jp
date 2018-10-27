@@ -15,12 +15,12 @@ ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2999a98efa64f84ad01671d156745801b7bdadc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c451111875b2e1a638f49ad710b7456d3ba5eb17
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110352"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148447"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Analysis Services サーバー上のユーザーとセッションの切断
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者は、ワークロード管理の一環としてユーザー操作を終了できます。 ユーザー操作を終了するには、セッションと接続を取り消します。 セッションは、クエリの実行時に自動的に作成される場合 (暗黙的) と、管理者が作成時に名前を付ける場合 (明示的) があります。 接続は、クエリを実行できる開かれたパイプのようなものです。 セッションと接続は両方とも、アクティブなときに終了できます。 たとえば、処理に時間がかかりすぎる場合や、実行中のコマンドが正しく記述されているかどうかについて疑問が生じた場合、管理者はセッションの処理を終了できます。  
@@ -70,12 +70,12 @@ ms.locfileid: "48110352"
   
  まれに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で接続に関連付けられているすべてのセッションおよび SPID を追跡できない場合 (HTTP シナリオで複数のセッションが開かれている場合など) は、接続を閉じることができません。  
   
- このトピックで参照された XMLA の詳細については、[「Execute メソッド (XMLA)」](../xmla/xml-elements-methods-execute.md) および [「Cancel 要素 (XMLA)」](../xmla/xml-elements-commands/cancel-element-xmla.md) を参照してください。  
+ このトピックで参照された XMLA の詳細については、[「Execute メソッド (XMLA)」](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) および [「Cancel 要素 (XMLA)」](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [接続およびセッション管理&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [BeginSession 要素&#40;XMLA&#41;](../xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [EndSession 要素&#40;XMLA&#41;](../xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Session 要素&#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)  
+## <a name="see-also"></a>参照  
+ [接続およびセッションの管理 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [BeginSession 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/beginsession-element-xmla)   
+ [EndSession 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/endsession-element-xmla)   
+ [Session 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/session-element-xmla)  
   
   

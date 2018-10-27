@@ -19,17 +19,17 @@ ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fe3f6ed0e5a1760d70040a573376cc0306000a0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 628ef2cde5b345366a7ba0fb7ffff6c8e5143a0c
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663370"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806692"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>sys.dm_exec_valid_use_hints (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-返します[USE HINT](../../t-sql/queries/hints-transact-sql-query.md)ヒント名がサポートされています。 行ごとに 1 つのヒント名が一覧表示します。  
+返します[USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)ヒント名がサポートされています。 行ごとに 1 つのヒント名が一覧表示します。  
   
 この DMV を使用して、USE HINT 表記法でサポートされているすべてのヒントの一覧を参照してください。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47663370"
 |-----------------|---------------|-----------------|  
 |NAME|**sysname**|ヒントの名前。|
 
-参照してください[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)の各ヒントについて説明します。
+参照してください[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)の各ヒントについて説明します。
 
 導入された[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。
   

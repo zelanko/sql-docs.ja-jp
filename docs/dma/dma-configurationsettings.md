@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server) の設定の構成 |Microsoft Docs
 description: 構成ファイル内の値を更新することで、Data Migration Assistant の設定を構成する方法について説明します
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 87e81a1b73ac8b3af9b9c35449dc4966fc4cf285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755580"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643820"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant の設定を構成します。
 
 Dma.exe.config ファイルで構成値を設定して、Data Migration Assistant の特定の動作を微調整できます。 この記事では、キーの構成値について説明します。
 
-コンピューターに次のフォルダーに、Data Migration Assistant のデスクトップ アプリケーションと、コマンド ライン ユーティリティ dma.exe.config ファイルを見つけることができます。
+コンピューターに次のフォルダーに、Data Migration Assistant のデスクトップ アプリケーションと、コマンド ライン ユーティリティでは、dma.exe.config ファイルを見つけることができます。
 
 - デスクトップ アプリケーション
 
@@ -40,9 +40,9 @@ Dma.exe.config ファイルで構成値を設定して、Data Migration Assistan
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>並列で評価するためのデータベースの数
 
-Data Migration Assistant は、並列で複数のデータベースを評価します。 評価時に Data Migration Assistant は、データベース スキーマを理解するのには、データ層アプリケーション (dacpac) を抽出します。 この操作には、同じサーバー上の複数のデータベースが並列で評価される場合のタイムアウトことができます。 
+Data Migration Assistant は、並列で複数のデータベースを評価します。 評価時に Data Migration Assistant は、データベース スキーマを理解するのには、データ層アプリケーション (dacpac) を抽出します。 この操作では、同じサーバー上の複数のデータベースが並列で評価される場合は、タイムアウトになることができます。 
 
-Data Migration Assistant の v2.0 以降、変更できます制御、parallelDatabases 構成値を設定しています。 既定値は 8 です。
+Data Migration Assistant のバージョン 2.0 以降では、制御できますこの、parallelDatabases 構成値を設定しています。 既定値は 8 です。
 
 ```
 <advisorGroup>
@@ -87,15 +87,15 @@ Data Migration Assistant は移行を並列に複数のデータベースが前�
 
 - commandTimeout
 
-   これ IDbCommand.CommandTimeout プロパティを設定*秒*します。 (既定 = 60)
+   このパラメーター IDbCommand.CommandTimeout プロパティを設定する*秒*します。 (既定 = 60)
 
 - databaseLockTimeout
 
-   これに相当[SET LOCK\_タイムアウト タイムアウト\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)で*ミリ秒*します。 (既定 = 5000)
+   このパラメーターは[SET LOCK\_タイムアウト タイムアウト\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)で*ミリ秒*します。 (既定 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   使用する SQL 接続プールの接続の数。 (既定値 = 8)
+  このパラメーターは、使用する SQL 接続プールの接続の数を設定します。 (既定値 = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorGroup>
 ```
-
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: 推奨事項のしきい値
 

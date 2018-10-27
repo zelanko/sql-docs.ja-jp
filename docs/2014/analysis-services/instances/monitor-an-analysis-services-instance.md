@@ -16,12 +16,12 @@ ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 669703a6f086c760f669d58bb167f1bddd19f97c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a988044b258eb114a0a58ed7902e58c41d340e3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075626"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144249"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analysis Services インスタンスの監視
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] またはパフォーマンス モニター ( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **とも呼ばれるアプリケーション) を使用して、** のパフォーマンスを監視できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] レースを作成および管理し、トレースの結果を分析および再生できます。 パフォーマンス モニターでは、特定のカウンターでインデックスを付けたサーバーの状態が報告されます。これについては、次のセクションで説明します。  
@@ -32,14 +32,14 @@ ms.locfileid: "48075626"
 ## <a name="in-this-section"></a>このセクションの内容  
  監視の詳細については、次のリンクを参照してください。  
   
- [Analysis Services トレース イベント](../trace-events/analysis-services-trace-events.md)  
+ [Analysis Services トレース イベント](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  
   
  [SQL Server Profiler を使用した Analysis Services の監視](use-sql-server-profiler-to-monitor-analysis-services.md)  
   
  [SQL Server 拡張イベントを使用して、 &#40;Xevent&#41;サービス モニターは分析するには](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [動的管理ビューを使用して&#40;Dmv&#41;サービス モニターは分析するには](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [動的管理ビュー (DMV) を使用した Analysis Services の監視](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [パフォーマンス カウンター &#40;SSAS&#41;](performance-counters-ssas.md)  
+ [パフォーマンス カウンター (SSAS)](performance-counters-ssas.md)  
   
   

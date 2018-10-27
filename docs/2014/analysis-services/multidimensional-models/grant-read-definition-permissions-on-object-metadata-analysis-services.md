@@ -15,18 +15,18 @@ ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c517445eaf8fd82e42ffa6250b9958ef3afdc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dca06ce28f496c2ac85417c9ca4326d2ff66cf7b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087702"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148357"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>オブジェクト メタデータに対する定義の読み取り権限の付与 (Analysis Services)
   管理者は、選択したオブジェクトのオブジェクト定義またはメタデータを読み取る権限を使用して、オブジェクトの定義の変更、オブジェクトの構造の変更、またはオブジェクトの実際のデータの表示を行う権限を付与することなく、オブジェクト情報を表示する権限を付与できます。 `Read Definition` データベース、データ ソース、ディメンション、マイニング構造およびマイニング モデルの各レベルでは、アクセス許可を付与できます。 必要な場合`Read Definition`有効にする必要があります、キューブのアクセス許可、`Read Definition`データベース。アクセス許可は付加的に使用します。 たとえば、あるロールではキューブのメタデータを読み取るための権限を付与し、別のロールでは同じユーザーにディメンションのメタデータを読み取るための権限を付与します。 これら 2 つの異なるロールの権限は組み合わされ、キューブのメタデータを読み取る権限と、そのデータベース内のディメンションのメタデータを読み取る権限をユーザーに与えることになります。  
   
 > [!NOTE]  
->  データベースのメタデータを読み取る権限は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]データベースに接続するために必要な最小限の権限です。 また、メタデータを読み取る権限を持つユーザーは、DISCOVER_XML_METADATA スキーマ行セットを使用して、オブジェクトのクエリを行い、そのメタデータを表示できます。 詳細については、「 [DISCOVER_XML_METADATA 行セット](../schema-rowsets/xml/discover-xml-metadata-rowset.md)」を参照してください。  
+>  データベースのメタデータを読み取る権限は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]データベースに接続するために必要な最小限の権限です。 また、メタデータを読み取る権限を持つユーザーは、DISCOVER_XML_METADATA スキーマ行セットを使用して、オブジェクトのクエリを行い、そのメタデータを表示できます。 詳細については、「 [DISCOVER_XML_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset)」を参照してください。  
   
 ## <a name="set-read-definition-permissions-on-a-database"></a>データベースに対する定義の読み取り権限の設定  
  データベース メタデータを読み取る権限を付与すると、データベース内のすべてのオブジェクトのメタデータを読み取るための権限も付与されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "48087702"
 5.  **[OK]** をクリックして、ロールの作成を終了します。  
   
 ## <a name="see-also"></a>参照  
- [データベースのアクセス許可を付与&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [プロセスのアクセス許可を付与&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [データベース権限の付与 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

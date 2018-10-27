@@ -1,5 +1,5 @@
 ---
-title: モデル列の別名を作成 |Microsoft ドキュメント
+title: モデル列の別名の作成 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c7f7a6139adb75c9a041238e4c8f911bb88ff711
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e051c454223fc7fc710f45b97a1a76ecceb10f2b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019099"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147447"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>モデル列の別名の作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、モデル列の別名を作成できます。 この機能は、マイニング構造名が長すぎて扱いにくい場合や、内容またはモデル内での使い方をわかりやすくするために列名を変更する場合に便利です。 たとえば、構造列のコピーを作成して特定のモデル専用に列を分離すると、列名を変更して内容を正確に反映できます。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、モデル列の別名を作成できます。 この機能は、マイニング構造名が長すぎて扱いにくい場合や、内容またはモデル内での使い方をわかりやすくするために列名を変更する場合に便利です。 たとえば、構造列のコピーを作成して特定のモデル専用に列を分離すると、列名を変更して内容を正確に反映できます。  
   
- モデル列の別名を作成するには、 **[プロパティ]** ペインを使用し、列の [Name](../../analysis-services/scripting/properties/name-element-assl.md) プロパティを設定します。  
+ モデル列の別名を作成するには、 **[プロパティ]** ペインを使用し、列の [Name](https://docs.microsoft.com/bi-reference/assl/properties/name-element-assl) プロパティを設定します。  
   
  データ マイニング デザイナーの **[マイニング モデル]** タブに、列の使用法のラベルの横にかっこで囲まれて別名が表示されます。  
   

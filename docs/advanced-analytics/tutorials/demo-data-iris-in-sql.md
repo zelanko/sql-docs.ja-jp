@@ -1,6 +1,6 @@
 ---
-title: SQL Server のデモ データ セットを Iris |Microsoft Docs
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
+title: あやめのデモ データ セットの SQL Server の Python および R のチュートリアル |Microsoft Docs
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48cc9f5424cb196e37dc3f263d6b55c8666f0292
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463054"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806672"
 ---
-#  <a name="iris-demo-data-for-sql-server"></a>SQL Server 用あやめのデモ データ
+#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>あやめのデモ データの SQL Server の Python および R のチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この演習でのテーブルを含む SQL Server データベースの準備、[あやめデータ セット](https://en.wikipedia.org/wiki/Iris_flower_data_set)とモデルのストレージ。 Iris データは、SQL Server がインストールされている、R と Python のディストリビューションに含まれます。 SQL server machine learning のチュートリアルで使用されます。 
+この演習でデータを格納する SQL Server データベースを作成、[あやめデータ セット](https://en.wikipedia.org/wiki/Iris_flower_data_set)と同じデータに基づくモデルです。 あやめデータは、SQL Server がインストールされている、R と Python のディストリビューションに含まれているし、SQL Server の machine learning のチュートリアルに使用されます。 
 
 この手順を完了しておく[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)または T-SQL クエリを実行できる他のツール。
 
@@ -26,7 +26,7 @@ ms.locfileid: "49463054"
 
 +  [SQL Server の Python のモデルを使用するトレーニングとスコア付け](train-score-using-python-in-tsql.md)
 
-## <a name="prepare-the-database-and-tables"></a>データベースとテーブルを準備します。
+## <a name="create-the-database"></a>データベースの作成
 
 1. SQL Server Management Studio を起動し、新しく開きます**クエリ**ウィンドウ。  
 
@@ -139,7 +139,7 @@ ms.locfileid: "49463054"
     > ストアド プロシージャを変更した後で必要ありませんを削除して再作成します。 使用して、 [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql)ステートメント。 
 
 
-## <a name="query-data-for-verification"></a>検証のためのデータを照会します。
+## <a name="query-the-data"></a>データのクエリ
 
 検証手順として、データがアップロードされたことを確認するためのクエリを実行します。
 

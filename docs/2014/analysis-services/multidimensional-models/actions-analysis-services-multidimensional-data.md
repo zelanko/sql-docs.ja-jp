@@ -17,12 +17,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193662"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146590"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>アクション (Analysis Services - 多次元データ)
   アクションにはさまざまな種類があり、適切に作成する必要があります。 アクションの種類は次のとおりです。  
@@ -33,13 +33,13 @@ ms.locfileid: "48193662"
   
 -   標準アクション。このアクションは、実行されたキューブで選択されているセクションに関連付けられたアクション要素 (URL、HTML、DataSet、RowSet などの要素) を返します。  
   
- アクションを取得してエンド ユーザーに公開する際、クライアント アプリケーションでは ADOMD.NET などのクエリ インターフェイスが使用されます。 詳細については、「 [ADOMD.NET での開発](adomd-net/developing-with-adomd-net.md)」を参照してください。  
+ アクションを取得してエンド ユーザーに公開する際、クライアント アプリケーションでは ADOMD.NET などのクエリ インターフェイスが使用されます。 詳細については、「 [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)」を参照してください。  
   
  簡単な <xref:Microsoft.AnalysisServices.Action> オブジェクトは、基本情報、アクションが実行される対象、アクション スコープの限定条件、およびアクションの種類で構成されます。 基本情報には、アクションの名前、アクションの説明、アクションに推奨されるキャプションなどが含まれます。  
   
  対象は、アクションが実行されるキューブ内の実際の場所です。 対象は、対象の種類および対象オブジェクトで構成されます。 対象の種類は、アクションが有効化されるキューブ内のオブジェクトの種類を表します。 対象の種類には、レベル メンバー、セル、階層、階層メンバーなどがあります。 対象オブジェクトは、その対象の種類に属する特定のオブジェクトです。対象の種類が階層の場合、対象オブジェクトは、キューブ内で定義された階層のうちの 1 つです。  
   
- 条件が、`Boolean`アクション イベント時に評価される MDX 式です。 条件の評価が場合`true`アクションが実行されます。 それ以外の場合、アクションは実行されません。  
+ 条件は、アクション イベント時に評価される、`Boolean` 型の MDX 式です。 条件が `true` と評価された場合に、アクションが実行されます。 それ以外の場合、アクションは実行されません。  
   
  種類は、実行されるアクションの種類です。 <xref:Microsoft.AnalysisServices.Action> は抽象クラスであるため、これを使用するにはその派生クラスのいずれかを使用する必要があります。 2 種類のアクションが事前定義されています。ドリルスルーおよびレポートです。 これらのアクションには次の対応する派生クラスがあります: <xref:Microsoft.AnalysisServices.DrillThroughAction> と <xref:Microsoft.AnalysisServices.ReportAction>」を参照してください。 その他のアクションは、 <xref:Microsoft.AnalysisServices.StandardAction> クラスに含まれます。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48193662"
 ## <a name="resolving-and-executing-actions"></a>アクションの競合回避と実行  
  コマンド オブジェクトが定義されているオブジェクトにビジネス ユーザーがアクセスすると、アクションに関連付けられているステートメントが自動的に解決されます。このため、クライアント アプリケーションでそのステートメントを利用できるようになりますが、アクションが自動的に実行されるわけではありません。 アクションは、ビジネス ユーザーがそのアクションを開始するクライアント固有の操作をしたときにのみ実行されます。 たとえば、クライアント アプリケーションでは、ビジネス ユーザーが特定のメンバーまたはセルを右クリックしたときに、ポップアップ メニューとしてアクションの一覧を表示できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [多次元モデルのアクション](actions-in-multidimensional-models.md)  
   
   

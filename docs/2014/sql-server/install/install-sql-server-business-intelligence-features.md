@@ -1,32 +1,31 @@
 ---
-title: SQL Server 2014 の BI 機能のインストール |Microsoft Docs
+title: SQL Server 2014 の BI 機能のインストール
 ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
 ms.topic: conceptual
-ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3fec33fe160d5ee901eefda541133e6c7b9610b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.date: 10/24/2018
+ms.openlocfilehash: a1d8d4c96ec6008b66e8b1be65767e413b0a4db7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116962"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051144"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>SQL Server 2014 の BI 機能のインストール
+
   Microsoft Business Intelligence プラットフォームに含まれる SQL Server 機能には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および分析データの作成または操作に使用されるいくつかのクライアント アプリケーションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのドキュメントのこのセクションでは、これらの機能のインストール方法について説明します。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、スタンドアロン サーバーとして、スケールアウト構成で、または SharePoint ファームの共有サービス アプリケーションとしてインストールできます。 サービスをファームにインストールすると、SharePoint のみで使用できる BI 機能が有効になります。これらの機能には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint と、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の表形式モデルのデータベースで実行される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を対話形式でアドホック実行したレポート デザイナーの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が含まれます。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、または PowerPivot for SharePoint のインストール手順について詳しく理解している場合は、特定のシナリオを有効にする手順のチェック リストに進みます。 詳細については、次を参照してください。[と SharePoint の BI 機能のインストールのチェックリスト](checklists-for-installing-bi-features-with-sharepoint.md)します。  
   
-## <a name="contents"></a>目次  
- このセクションの内容:  
+## <a name="contents"></a>目次
+
+このセクションの内容:
   
 |リンク|タスク|  
 |----------|----------|  
@@ -42,10 +41,12 @@ ms.locfileid: "48116962"
 |[SQL Server 2014 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)<br /><br /> [Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)<br /><br /> [PowerPivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)<br /><br /> [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)|このセクションの手順では、サーバーとコンテンツを以前のリリースから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードします。|  
 |[SQL Server 2014 のアンインストール](uninstall-sql-server.md)<br /><br /> [PowerPivot for SharePoint のアンインストール](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)<br /><br /> [Reporting Services のアンインストール](../../../2014/sql-server/install/uninstall-reporting-services.md)|このセクションの手順では、BI 機能をアンインストールします。|  
   
-## <a name="see-also"></a>参照  
- [新機能については&#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)   
- [新しい Analysis Services と Business Intelligence の新機能](../../analysis-services/what-s-new-in-analysis-services.md)   
- [SQL Server 2014 をインストールします。](../../database-engine/install-windows/install-sql-server.md)   
- [SQL Server 2014 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+* [新機能については&#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)
+
+* [新しい Analysis Services と Business Intelligence の新機能](../../analysis-services/what-s-new-in-analysis-services.md)
+
+* [SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server.md)
+
+* [SQL Server 2014 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)

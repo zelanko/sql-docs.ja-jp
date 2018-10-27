@@ -1,5 +1,5 @@
 ---
-title: 多次元モデル (Analysis Services) での翻訳 |Microsoft ドキュメント
+title: 多次元モデル (Analysis Services) での翻訳 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ac278f3e254e353d9ab7b6dc6d6fd7850b442c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026679"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147077"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多次元モデルの翻訳 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "34026679"
   
 1.  デザイナーで、Adventure Works 多次元モデルを開きます。  
   
-2.  ソリューション エクスプ ローラーで、データ ソース ビューを開くし、Adventure Works DW をダブルクリック\<バージョン > .dsv です。  
+2.  ソリューション エクスプ ローラーでデータ ソース ビューを開くし、Adventure Works DW をダブルクリックして\<バージョン > .dsv します。  
   
 3.  dimDate、dimProduct、dimProductCategory、または dimProductSubcateogry を検索します。 これらのすべてのディメンションには、月、曜日、製品名、カテゴリ名などの、翻訳されたメンバーの属性が含まれています。  
   
 4.  任意のフィールドを右クリックし、 **[データの探索]** を選択します。 各メンバーの英語、スペイン語、およびフランス語の翻訳が表示されます。  
   
- 日付、時刻、通貨の形式は、翻訳を通じては実装されません。 クライアントのロケールに基づいてカルチャに固有の形式を動的に提供するには、通貨変換ウィザードと **FormatString** プロパティを使用します。 「[通貨換算 (Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md)」および「[FormatString 要素 (ASSL)](../../analysis-services/scripting/properties/formatstring-element-assl.md)」をご覧ください。  
+ 日付、時刻、通貨の形式は、翻訳を通じては実装されません。 クライアントのロケールに基づいてカルチャに固有の形式を動的に提供するには、通貨変換ウィザードと **FormatString** プロパティを使用します。 「[通貨換算 (Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md)」および「[FormatString 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)」をご覧ください。  
   
  Analysis Services のチュートリアルの「[Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) 」では、翻訳を作成してテストする手順について説明しています。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34026679"
   
 4.  プロジェクトをビルドし、配置します。  
   
-5.  Excel などのクライアント アプリケーションを使用してデータベースに接続し、ロケール識別子を使用するように接続文字列を変更します。 詳細については、「[グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md)」をご覧ください。  
+5.  Excel などのクライアント アプリケーションを使用してデータベースに接続し、ロケール識別子を使用するように接続文字列を変更します。 詳細については、「 [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>ディメンションおよび属性に翻訳を追加する  
  翻訳は、データベース ディメンション、属性、階層、および階層内のレベルに追加できます。  
@@ -119,6 +119,6 @@ ms.locfileid: "34026679"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のグローバリゼーションのシナリオ](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [言語および照合順序&#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [言語および照合順序 (Analysis Services)](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

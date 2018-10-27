@@ -14,12 +14,12 @@ ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164292"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147577"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>データ マイニング ソリューションおよびオブジェクトの管理
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、既存のマイニング構造とマイニング モデルの管理に使用できるクライアント ツールがあります。 ここでは、それぞれの環境を使用して実行できる管理操作について説明します。  
@@ -29,9 +29,9 @@ ms.locfileid: "48164292"
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ マイニング オブジェクトの移動](moving-data-mining-objects.md)  
   
- [処理の要件および注意事項&#40;データ マイニング&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項 (データ マイニング)](processing-requirements-and-considerations-data-mining.md)  
   
- [データ マイニングの監視する SQL Server Profiler を使用して&#40;Analysis Services - データ マイニング&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [SQL Server Profiler を使用したデータ マイニングの監視 (Analysis Services - データ マイニング)](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>データ マイニング オブジェクトの場所  
  処理されたマイニング構造およびマイニング モデルは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに格納されます。  
@@ -52,7 +52,7 @@ ms.locfileid: "48164292"
   
 -   [マイニング モデルのプロパティの変更](change-the-properties-of-a-mining-model.md)  
   
--   [モデリング フラグの変更を表示または&#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
+-   [モデリング フラグの表示または変更 &#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
   
 -   [アルゴリズム パラメーターの表示または変更](view-or-change-algorithm-parameters.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48164292"
 > [!WARNING]  
 >  名前や説明などのメタデータの変更を含め、マイニング構造またはマイニング モデルに対して変更を加えた場合は、構造またはモデルを再処理する必要があります。  
   
- データ マイニング プロジェクトまたはオブジェクトの作成に使用されたソリューション ファイルがない、Analysis Services のインポート ウィザードを使用して、サーバーから既存のプロジェクトをインポート、オブジェクトへの変更を加えるして使用して再デプロイ、、 `Incremental`オプション。 詳細については、「 [Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)」を参照してください。  
+ データ マイニング プロジェクトまたはオブジェクトの作成に使用したソリューション ファイルがない場合は、Analysis Services のインポート ウィザードを使用してサーバーから既存のプロジェクトをインポートし、オブジェクトに変更を加え、`Incremental` オプションを使用して再配置できます。 詳細については、「 [Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)」を参照してください。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのデータ マイニング オブジェクトの管理  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、マイニング構造とマイニング モデルのスクリプト処理、処理、または削除を行うことができます。 オブジェクト エクスプローラーを使用した場合はプロパティ セットの一部のみが表示されます。ただし、 **[DMX クエリ]** ウィンドウを開き、マイニング構造を選択すると、マイニング モデルに関する追加のメタデータを表示できます。  
@@ -76,7 +76,7 @@ ms.locfileid: "48164292"
 ### <a name="analysis-management-objects-amo"></a>分析管理オブジェクト (AMO)  
  分析管理オブジェクト (AMO) は、データ マイニング オブジェクトを完全に制御できる、XMLA に基づいて構築されたオブジェクト モデルです。 AMO を使用して、マイニング構造とマイニング モデルを作成、配置、および監視できます。  
   
--   [AMO の概念とオブジェクト モデル](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [AMO の概念とオブジェクト モデル](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164292"
 ### <a name="data-mining-extensions-dmx"></a>データ マイニング拡張機能 (DMX)  
  データ マイニング拡張機能 (DMX) は、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] や ADOMD.Net などの他のコマンド インターフェイスと組み合わせて、マイニング構造とマイニング モデルを作成、削除、およびクエリできます。  
   
--   [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](/sql/dmx/dmx-statements-data-definition)  
+-   [データ マイニング拡張機能 (DMX) データ定義ステートメント](/sql/dmx/dmx-statements-data-definition)  
   
  **制限事項:** DMX を使用した場合、一部のプロパティを変更できません。  
   

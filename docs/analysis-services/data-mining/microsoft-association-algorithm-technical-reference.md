@@ -1,5 +1,5 @@
 ---
-title: Microsoft アソシエーション アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft アソシエーション アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9cba8f282e1f355b7b4265298890eccb0a4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017389"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145907"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34017389"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
- マイニング モデルのパラメーターは、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでは使用してもパラメーターを変更することができます、<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>コレクション AMO、またはを使用して、 [MiningModels 要素&#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) XMLA でします。 次の表では、各パラメーターについて説明します。  
+ マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでを使用してもパラメーターを変更することができます、 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> AMO、またはを使用して、コレクション、 [MiningModels 要素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA でします。 次の表では、各パラメーターについて説明します。  
   
 > [!NOTE]  
 >  DMX ステートメントを使用して既存のモデルのパラメーターを変更することはできません。パラメーターは、モデルを作成するときに DMX CREATE MODEL または ALTER STRUCTURE… ADD MODEL で指定する必要があります。  
@@ -137,13 +137,13 @@ ms.locfileid: "34017389"
   
  マイニング モデル列に適用されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  アソシエーション モデルには、キー列、入力列、および 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Cyclical、Discrete、Discretized、Table、Ordered|  
@@ -153,7 +153,7 @@ ms.locfileid: "34017389"
   
 ## <a name="see-also"></a>参照  
  [Microsoft アソシエーション アルゴリズム](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [アソシエーション モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)   
- [アソシエーション モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)   
+ [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

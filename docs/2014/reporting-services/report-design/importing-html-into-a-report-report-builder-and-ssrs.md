@@ -11,12 +11,12 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4176e9dc902ae4c83024ba5e659a2467585d71c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b586dae30582b5438d249ce719196b146721bc2
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099520"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>レポートへの HTML のインポート (レポート ビルダーおよび SSRS)
   テキスト ボックスを使用すると、データセットのフィールドから取得した HTML 形式のテキストをレポートに挿入できます。 正しい形式の HTML に評価される単純型または複合型の式のテキストを使用できます。 書式付きのテキストは、PDF などのサポートされている出力形式すべてにレンダリングできます。  
@@ -61,7 +61,7 @@ ms.locfileid: "48115712"
   
     -   CSS の相対的な長さ単位はサポートされず、無視されます。 サポートされない単位は、em、ex、px、%、rem などです。  
   
-     CSS の単位の詳細については、「[CSS Values and Units Reference](http://msdn.microsoft.com/en-us/library/ms531211\(VS.85\).aspx)」(CSS の値と単位のリファレンス) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx) を参照してください。  
+     CSS の単位の詳細については、「[CSS Values and Units Reference](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)」(CSS の値と単位のリファレンス) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx) を参照してください。  
   
 -   color  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48115712"
 -   属性と CSS スタイルでは、プロパティが 2 回以上指定されている場合、最後のインスタンスのみが適用されます。 たとえば、テキストが **\<p align="left" align="right">** の場合、テキストは右揃えになります。  
   
 ## <a name="see-also"></a>参照  
- [HTML にレンダリング&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [HTML での表示 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

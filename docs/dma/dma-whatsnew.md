@@ -1,7 +1,7 @@
 ---
 title: Data Migration Assistant (SQL Server) の新 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,18 +11,33 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655660"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643950"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 この記事では、各リリースで追加の Data Migration Assistant (DMA) を示します。
+
+## <a name="dma-v41"></a>DMA v4.1
+DMA の v4.1 リリースには、オンプレミス SQL Server データベースを Azure SQL Database マネージ インスタンスへの移行の包括的な評価のためのサポートが導入されています。
+
+評価ワークフローでは、Azure SQL Database マネージ インスタンスへの移行に影響を与えることができます、次の問題を検出できます。
+
+- **サポートされていないか、部分的にサポートされる**します。 DMA では、部分的にサポートされているか、ターゲット Azure SQL Database マネージ インスタンスでサポートされていない使用中の機能のソース SQL Server データベースを評価します。 ツールは、Azure での手順を移行プロジェクトを計画する際、お客様がアカウントには、この情報を実行できるように問題を緩和する使用可能な別の方法の推奨事項の包括的なセットを提供します。
+
+- **互換性の問題**します。 DMA では、次の領域に関連する互換性の問題も識別します。
+
+    - 重大な変更: 特定のスキーマ オブジェクトをターゲット データベースへの移行機能が損なわれる可能性があります。  データベースの移行後にこれらのスキーマ オブジェクトを修正することをお勧めします。
+    - 動作変更: 報告されるスキーマ オブジェクトが引き続き機能しますが、パフォーマンスの低下など、異なる動作を発生する可能性があります。
+    - 情報の問題: これらのオブジェクトは、移行に影響しませんが機能の SQL Server リリースから非推奨可能性があります。
+
+使用して、評価が完了した後、 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) を Azure SQL Database マネージ インスタンスの SQL Server データベースの移行を実行します。  DMS は両方ともサポート[オフライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)(1 回限り) と[オンライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)(最小限のダウンタイム) データベースの移行を Azure SQL Database マネージ インスタンス。
 
 ## <a name="dma-v40"></a>DMA v4.0
 DMA の v4.0 のリリースでは、データベースをホストしているコンピューターから収集されたパフォーマンス カウンターに基づいて、Azure SQL データベース SKU の推奨最小値を識別するためにユーザーが Azure SQL データベースの SKU の推奨事項機能について説明します。 この機能は、1 か月あたりの推定コストに加え、レベル、コンピューティング レベル、および最大データ サイズ、価格に関連する推奨事項を提供します。 一括で Azure にすべてのデータベースをプロビジョニングする機能も提供します。
@@ -35,7 +50,7 @@ DMA の v4.0 のリリースでは、データベースをホストしている�
 ## <a name="dma-v36"></a>DMA v3.6
 DMA の v3.6 のリリースでは、最も一般的な移行ブロックによって影響を受けるスキーマ オブジェクトの「自動修正」について説明します。
 
-このリリースでは、次の移行ブロックの自動修正を提供し、動作が問題を変更します。
+このリリースでは、次の移行ブロックの autofix と動作の変更の問題。
 - 非修飾結合の構文を使用するスキーマ オブジェクト。
 - レガシ RAISEERROR ステートメントを使用して、スキーマ オブジェクト。
 - 整数リテラルで順序を使用する SQL ステートメント。
@@ -105,7 +120,7 @@ DMA の v1.0 リリースは初期のリリースとを提供します。
     - 動作の変更
     - 非推奨の機能
 - データベースのアップグレードから恩恵を受けるターゲット SQL Server プラットフォームの新機能の検出。 機能の推奨事項として、結果が記載されているし、これらは、次の領域に分類しています。
-    - [パフォーマンス]
+    - パフォーマンス
     - セキュリティ
     - ストレージ
 -   評価を実行する最新のユーザー エクスペリエンス。

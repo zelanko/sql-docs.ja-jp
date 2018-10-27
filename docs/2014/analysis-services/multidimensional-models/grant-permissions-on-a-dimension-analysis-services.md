@@ -18,12 +18,12 @@ ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c230750377d2667d70d239a7a90a7a69d4ff209
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20893db4e26824b06a1e21e47f74147312a7257d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068332"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146327"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>ディメンションに対する権限の付与 (Analysis Services)
   ディメンション セキュリティは、ディメンション データではなくディメンション オブジェクトに対する権限を設定するために使用します。 通常、ディメンションに対する権限を設定する場合は、処理操作へのアクセスを許可または拒否することが主な目的です。  
@@ -66,13 +66,13 @@ ms.locfileid: "48068332"
      既定では、権限は対応するデータベース ディメンションから継承されます。 **[継承]** チェック ボックスをオフにして、権限を **[読み取り]** から **[読み取り/書き込み]** に変更します。 **[読み取り/書き込み]** を使用する前に、前のセクションの注意事項を必ずお読みください。  
   
 > [!IMPORTANT]  
->  分析管理オブジェクト (AMO) を使用してデータベース ロール権限を構成する場合、キューブの DimensionPermission 属性内のキューブ ディメンションを参照することによって、データベースの DimensionPermission 属性からの権限継承は行われなくなります。 詳細については、「[分析管理オブジェクト &#40;AMO&#41; による開発](analysis-management-objects/developing-with-analysis-management-objects-amo.md)」を参照してください。  
+>  分析管理オブジェクト (AMO) を使用してデータベース ロール権限を構成する場合、キューブの DimensionPermission 属性内のキューブ ディメンションを参照することによって、データベースの DimensionPermission 属性からの権限継承は行われなくなります。 詳細については、「[分析管理オブジェクト &#40;AMO&#41; による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [ロールとアクセス許可&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [キューブまたはモデル アクセス許可を付与&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [データ マイニング構造およびモデルに対する権限の付与&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [ディメンション データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [セル データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+## <a name="see-also"></a>参照  
+ [ロールと権限 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [データ マイニング構造およびデータ マイニング モデルに対する権限の付与 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

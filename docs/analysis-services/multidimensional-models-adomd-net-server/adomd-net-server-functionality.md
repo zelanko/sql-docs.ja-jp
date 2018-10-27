@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET サーバー機能 |Microsoft ドキュメント
+title: ADOMD.NET のサーバー機能 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 003e50efa8ed21720410830a3d02134df15c3c97
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6c1f37be45b702828d3c663eac0fb575a0af3bbd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023779"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146940"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET のサーバー機能
   すべての ADOMD.NET サーバー オブジェクトは、サーバー上のデータやメタデータへの読み取り専用アクセスを提供します。 データやメタデータを取得するには、ADOMD.NET サーバー オブジェクト モデルを使用します。スキーマ行セットはサポートされていません。  
   
- ADOMD.NET サーバー オブジェクトを使用または作成するユーザー定義関数 (UDF) のストアド プロシージャを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 これらのインプロセス メソッドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、SQL などの言語で作成されたクエリ ステートメントを通じて呼び出されます。 また、これらのインプロセス メソッドを使用すると、ネットワーク通信に関連する待機時間なしに追加の機能を利用できます。  
+ ユーザー定義関数 (UDF) またはのストアド プロシージャを作成する、ADOMD.NET サーバー オブジェクトと[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 これらのインプロセス メソッドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、SQL などの言語で作成されたクエリ ステートメントを通じて呼び出されます。 また、これらのインプロセス メソッドを使用すると、ネットワーク通信に関連する待機時間なしに追加の機能を利用できます。  
   
 > [!NOTE]  
 >  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> オブジェクトでサポートされているのは DMX だけです。  
@@ -44,9 +44,9 @@ FROM SalesModel
 ## <a name="what-is-a-stored-procedure"></a>ストアド プロシージャとは  
  A*ストアド プロシージャ*は、次の特性を持つメソッドです。  
   
--   呼び出すストアド プロシージャに、MDX を使用した独自[呼び出す](../../mdx/mdx-data-manipulation-call.md)ステートメントです。  
+-   呼び出すストアド プロシージャに、MDX を使用した独自[呼び出す](../../mdx/mdx-data-manipulation-call.md)ステートメント。  
   
--   ストアド プロシージャは、パラメーターの任意の数を受け取ることができます。  
+-   ストアド プロシージャには、パラメーターの任意の数を取得できます。  
   
 -   ストアド プロシージャは、データセットを返すことができます、 **IDataReader**、または空の結果。  
   
@@ -57,6 +57,6 @@ CALL FinalSalesNumbers()
 ```  
   
 ## <a name="see-also"></a>参照  
- [ADOMD.NET サーバー プログラミング](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [ADOMD.NET サーバー プログラミング](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

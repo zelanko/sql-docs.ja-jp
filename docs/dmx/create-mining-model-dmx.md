@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980592"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148047"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  現在のプロバイダーによって定義された、データ マイニング アルゴリズムの名前です。  
   
 > [!NOTE]  
->  使用して現在のプロバイダーでサポートされているアルゴリズムの一覧を取得できる[DMSCHEMA_MINING_SERVICES 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)します。 現在のインスタンスでサポートされているアルゴリズムを表示する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[データ マイニング プロパティ](../analysis-services/server-properties/data-mining-properties.md)します。  
+>  使用して現在のプロバイダーでサポートされているアルゴリズムの一覧を取得できる[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)します。 現在のインスタンスでサポートされているアルゴリズムを表示する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[データ マイニング プロパティ](../analysis-services/server-properties/data-mining-properties.md)します。  
   
  *パラメーター リスト*  
  任意。 アルゴリズムのプロバイダー定義パラメーターのコンマ区切りのリストです。  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  構造列の定義に使用できる、データ型、コンテンツの種類、列分布、モデリング フラグのリストについては、次のトピックを参照してください。  
   
--   [データ型&#40;データ マイニング&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [データ型 (データ マイニング)](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [コンテンツの種類&#40;データ マイニング&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [コンテンツの種類 (データ マイニング)](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [列の分布&#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列の分布 (データ マイニング)](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [モデリング フラグ&#40;データ マイニング&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [モデリング フラグ (データ マイニング)](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  ステートメントに句を追加して、2 つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 次の使用をサポートする\<Column relationship > 句。  
   
@@ -130,7 +130,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  CREATEMODEL ステートメントを使用してマイニング モデルを作成する方法のチュートリアルは、次を参照してください。[時系列予測の DMX チュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)します。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes の例  
- 次の例では、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes アルゴリズムを新しいマイニング モデルを作成します。 Bike Buyer の列は、予測可能属性として定義されています。  
+ 次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して、新しいマイニング モデルを作成しています。 Bike Buyer の列は、予測可能属性として定義されています。  
   
 ```  
 CREATE MINING MODEL [NBSample]  
@@ -172,7 +172,7 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>時系列の例  
- 次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)]タイム シリーズ アルゴリズムを ARTxp アルゴリズムを使用して新しいマイニング モデルを作成します。 ReportingDate は時系列のキー列で、ModelRegion はデータ系列のキー列です。 この例では、データの周期を 12 か月としています。 そのため、 *PERIODICITY_HINT*パラメーター 12 に設定されます。  
+ 次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムで、ARTxp アルゴリズムを使用して新しいマイニング モデルを作成しています。 ReportingDate は時系列のキー列で、ModelRegion はデータ系列のキー列です。 この例では、データの周期を 12 か月としています。 そのため、 *PERIODICITY_HINT*パラメーター 12 に設定されます。  
   
 > [!NOTE]  
 >  指定する必要があります、 *PERIODICITY_HINT*中かっこ文字を使用してパラメーター。 さらに、値は文字列であるため、囲む必要があります単一引用符で:"{\<数値 >}"。  

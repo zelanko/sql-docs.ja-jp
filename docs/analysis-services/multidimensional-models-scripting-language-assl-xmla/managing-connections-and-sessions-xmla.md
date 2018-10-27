@@ -1,5 +1,5 @@
 ---
-title: 接続およびセッション (XMLA) の管理 |Microsoft ドキュメント
+title: 接続およびセッション (XMLA) の管理 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52351646759b6354411de094152c2faceb8fe598
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ad9be579d37cc8c75375b373ae8ecb624067ad50
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023139"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144887"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>接続およびセッションの管理 (XMLA)
-  *状態保持*id とメソッドの呼び出しの間のクライアントのコンテキスト、サーバーを保持する状態します。 *状態を保持しない*をサーバーが保存されていません id およびクライアントのコンテキストをメソッド呼び出しの完了後に、条件は、します。  
+  *状態保持*は id およびコンテキストをメソッド呼び出しの間でのクライアントのサーバーを保持する条件です。 *状態を保持しない*は、サーバーは覚えていない id とクライアントのコンテキスト メソッドの呼び出しが完了したら条件です。  
   
- XML for Analysis (XMLA) をサポートしている状態を保持する場合は、*セッション*一連のステートメントをまとめて実行するための使用が許可されます。 そのような一連のステートメントの例としては、後続のクエリで使用するための計算されるメンバーの作成があります。  
+ XML for Analysis (XMLA) のサポート状態保持を提供する*セッション*一連のステートメントをまとめて実行できるようにします。 そのような一連のステートメントの例としては、後続のクエリで使用するための計算されるメンバーの作成があります。  
   
  一般に、XMLA のセッションは、OLE DB 2.6 の仕様で概説されている以下の動作に従います。  
   
@@ -27,13 +27,13 @@ ms.locfileid: "34023139"
   
 -   複数のコマンドを単一のセッションのコンテキストで実行できます。  
   
--   経由で送信されるプロバイダー固有のコマンドは、XMLA のコンテキストにおけるトランザクションのサポート、 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
+-   XMLA のコンテキストにおけるトランザクションのサポートはプロバイダー固有のコマンドで送信される、 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッド。  
   
  XMLA は、Distributed Authoring and Versioning (DAV) プロトコルが疎結合環境でロックを実装するために使用しているアプローチと同様の手法で、Web 環境のセッションをサポートする方法を定義します。 この実装は、プロバイダーがさまざまな理由 (たとえば、タイムアウトや接続エラーなど) でセッションの有効期限を終了させることができるという点で、DAV と類似しています。 セッションがサポートされる場合、Web サービスは、中断されて再開が必要なコマンドのセットを認識し、処理する準備を整えている必要があります。  
   
  World Wide Web Consortium (W3C) による Simple Object Access Protocol (SOAP) 仕様は、新しいプロトコルを作成するには SOAP メッセージの先頭に SOAP ヘッダーを使用することを推奨しています。 次の表は、XMLA がセッションの開始、維持、終了のために定義する SOAP ヘッダー要素と属性の一覧を示しています。  
   
-|SOAP ヘッダー|Description|  
+|SOAP ヘッダー|説明|  
 |-----------------|-----------------|  
 |BeginSession|プロバイダーに新しいセッションの作成を要求します。 プロバイダーは、新しいセッションを作成し、SOAP 応答の Session ヘッダーの一部としてセッション ID を返すことによって応答します。|  
 |SessionId|値域には、セッションの残りの部分での各メソッド呼び出しで使用する必要のあるセッション ID が含まれます。 プロバイダーは SOAP 応答の中でこのタグを送信します。クライアントも、Session ヘッダー要素ごとに、この属性を送信する必要があります。|  
@@ -64,7 +64,7 @@ ms.locfileid: "34023139"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  プロバイダーからの SOAP 応答メッセージが含まれています、セッション ID には、戻り値のヘッダー領域で、XMLA ヘッダー タグを使用して\<SessionId >。  
+2.  プロバイダーからの SOAP 応答メッセージは XMLA ヘッダー タグを使用しての戻り値のヘッダー領域で、セッション ID を含む\<SessionId >。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -85,7 +85,7 @@ ms.locfileid: "34023139"
     </SOAP-ENV:Header>  
     ```  
   
-4.  セッションの完了時に、 \<EndSession > タグを使用すると、関連するセッション ID 値を格納します。  
+4.  セッションが完了すると、 \<EndSession > タグを使用すると、関連するセッション ID 値を格納します。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -98,6 +98,6 @@ ms.locfileid: "34023139"
     ```  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

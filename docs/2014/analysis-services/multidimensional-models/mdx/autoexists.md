@@ -11,12 +11,12 @@ ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 090a7cdb4958dacdaebcdcc0db176991d6bebaa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142702"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148297"
 ---
 # <a name="autoexists"></a>Autoexists
   *autoexists* の概念を導入すると、このキューブ空間を、同じ階層から属性階層メンバーの可能なすべての組み合わせを作成した結果として存在するセルでなく、実際に存在するセルのみに限定できます。 これは、1 つの属性階層のメンバーは、同じディメンション内の別の属性階層のメンバーと共存できないためです。 SELECT ステートメントに同じディメンションの属性階層を複数使用した場合、こうした属性のメンバーは、Analysis Services が属性の式を評価する際、それ以外のすべての属性の条件を満たすよう、適切に絞り込まれます。  
@@ -89,7 +89,7 @@ WHERE (Measures.[Internet Sales Amount],
  これら 3 つのクエリはいずれも、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の autoexist の効果を示しています。  
   
 ## <a name="deep-and-shallow-autoexists"></a>Deep および Shallow Autoexists  
- Autoexists は、式に対して深く (deep) または浅く (shallow) 適用できます。 `Deep Autoexists` では、スライサーの式、軸の下位選択式などを適用した後、可能な限り深い場所に到達するように、すべての式が評価されます。 `Shallow Autoexists` 外部の式は、現在の式の前に評価され、その結果が現在の式に渡されますことを意味します。 既定の設定は deep autoexists です。  
+ Autoexists は、式に対して深く (deep) または浅く (shallow) 適用できます。 `Deep Autoexists` では、スライサーの式、軸の下位選択式などを適用した後、可能な限り深い場所に到達するように、すべての式が評価されます。 `Shallow Autoexists` では、現在の式より前に外部の式が評価され、その結果が現在の式に渡されます。 既定の設定は deep autoexists です。  
   
  以下のシナリオとサンプルでは、さまざまな種類の Autoexists について説明します。 この例では 2 つのセットを 1 つは計算式として、もう 1 つは定数式として作成します。  
   
@@ -309,15 +309,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
+ Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
   
 ## <a name="see-also"></a>参照  
  [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [キューブ空間](cube-space.md)   
- [タプル](tuples.md)   
- [メンバー、組、およびセットの操作&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [組](tuples.md)   
+ [メンバー、組、およびセットの操作 (MDX)](working-with-members-tuples-and-sets-mdx.md)   
  [表示部分の合計と非表示部分の合計](visual-totals-and-non-visual-totals.md)   
- [MDX 言語リファレンス&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [多次元式&#40;MDX&#41;リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [MDX 言語リファレンス &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [多次元式 &#40;MDX&#41; リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

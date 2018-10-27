@@ -11,17 +11,17 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3cbb873693a80b284e263594bfbcd4cb2046b216
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079802"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148124"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>動的管理ビュー (DMV) を使用した Analysis Services の監視
   Analysis Services 動的管理ビュー (DMV) は、ローカル サーバーの操作やサーバーの正常性に関する情報を公開するクエリ構造です。 クエリ構造は、Analysis Services インスタンスのメタデータと監視情報を返すためのスキーマ行セットへのインターフェイスです。  
   
- 使用するほとんどの DMV クエリを`SELECT`ステートメントおよび`$System`xml/a スキーマ行セットを含むスキーマ。  
+ ほとんどの DMV クエリでは、XML/A スキーマ行セットと合わせて `SELECT` ステートメントと `$System` スキーマを使用します。  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -103,69 +103,69 @@ ORDER BY TABLE_NAME ASC
   
 |[行セット]|説明|  
 |------------|-----------------|  
-|[DBSCHEMA_CATALOGS 行セット](../schema-rowsets/ole-db/dbschema-catalogs-rowset.md)|現在の接続の Analysis Services データベースの一覧を返します。|  
-|[DBSCHEMA_COLUMNS 行セット](../schema-rowsets/ole-db/dbschema-columns-rowset.md)|現在のデータベース内のすべての列の一覧を返します。 DMV クエリを作成するために、この一覧を使用できます。|  
-|[DBSCHEMA_PROVIDER_TYPES 行セット](../schema-rowsets/ole-db/dbschema-provider-types-rowset.md)|OLE DB データ プロバイダーでサポートされる基本データ型に関するプロパティを返します。|  
-|[DBSCHEMA_TABLES 行セット](../schema-rowsets/ole-db/dbschema-tables-rowset.md)|現在のデータベース内のすべてのテーブルの一覧を返します。 DMV クエリを作成するために、この一覧を使用できます。|  
-|[DISCOVER_CALC_DEPENDENCY 行セット](../schema-rowsets/xml/discover-calc-dependency-rowset.md)|他の列およびテーブルとの依存関係があるモデルで使用されている列およびテーブルの一覧を返します。|  
-|[DISCOVER_COMMAND_OBJECTS 行セット](../schema-rowsets/xml/discover-command-objects-rowset.md)|参照先のコマンドによって使用されているオブジェクトに関するリソース使用量と利用状況の情報を提供します。|  
-|[DISCOVER_COMMANDS 行セット](../schema-rowsets/xml/discover-commands-rowset.md)|現在実行されているコマンドのリソース使用状況とアクティビティ情報を提供します。|  
-|[DISCOVER_CONNECTIONS 行セット](../schema-rowsets/xml/discover-connections-rowset.md)|Analysis Services に対して開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。|  
-|[DISCOVER_CSDL_METADATA 行セット](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)|テーブル モデルに関する情報を返します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
-|[DISCOVER_DB_CONNECTIONS 行セット](../schema-rowsets/xml/discover-db-connections-rowset.md)|たとえば処理中またはインポート中に、Analysis Services から外部データ ソースに対して開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。|  
-|[DISCOVER_DIMENSION_STAT 行セット](../schema-rowsets/xml/discover-dimension-stat-rowset.md)|モデルの種類により、テーブルのディメンションまたは列の属性を返します。|  
-|[DISCOVER_ENUMERATORS 行セット](../schema-rowsets/xml/discover-enumerators-rowset.md)|特定のデータ ソースについてサポートされている列挙子に関するメタデータを返します。|  
-|[DISCOVER_INSTANCES 行セット](../schema-rowsets/ole-db-olap/discover-instances-rowset.md)|指定したインスタンスに関する情報を返します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
-|[DISCOVER_JOBS 行セット](../schema-rowsets/xml/discover-jobs-rowset.md)|現在のジョブに関する情報を返します。|  
-|[DISCOVER_KEYWORDS 行セット&#40;XMLA&#41;](../schema-rowsets/xml/discover-keywords-rowset-xmla.md)|予約されているキーワードの一覧を返します。|  
-|[DISCOVER_LITERALS 行セット](../schema-rowsets/xml/discover-literals-rowset.md)|XMLA によってサポートされているデータ型や値など、リテラルの一覧を返します。|  
-|[DISCOVER_LOCKS 行セット](../schema-rowsets/xml/discover-locks-rowset.md)|特定の時点で使用されているロックのスナップショットを返します。|  
-|[DISCOVER_MEMORYGRANT 行セット](../schema-rowsets/xml/discover-memorygrant-rowset.md)|スタートアップ時に Analysis Services によって割り当てられたメモリに関する情報を返します。|  
-|[DISCOVER_MEMORYUSAGE 行セット](../schema-rowsets/xml/discover-memoryusage-rowset.md)|特定のオブジェクトによるメモリ使用量を示しています。|  
-|[DISCOVER_OBJECT_ACTIVITY 行セット](../schema-rowsets/xml/discover-object-activity-rowset.md)|サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。|  
-|[DISCOVER_OBJECT_MEMORY_USAGE 行セット](../schema-rowsets/xml/discover-object-memory-usage-rowset.md)|オブジェクトによるメモリ消費についてレポートします。|  
-|[DISCOVER_PARTITION_DIMENSION_STAT 行セット](../schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|ディメンションの属性に関する情報を提供します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
-|[DISCOVER_PARTITION_STAT 行セット](../schema-rowsets/xml/discover-partition-stat-rowset.md)|ディメンション、テーブル、またはメジャー グループのパーティションに関する情報を提供します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
-|[DISCOVER_PERFORMANCE_COUNTERS 行セット](../schema-rowsets/xml/discover-performance-counters-rowset.md)|パフォーマンス カウンターで使用される列を示します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
-|[DISCOVER_PROPERTIES 行セット](../schema-rowsets/xml/discover-properties-rowset.md)|指定されたデータ ソースの XMLA によってサポートされるプロパティに関する情報を返します。|  
-|[DISCOVER_SCHEMA_ROWSETS 行セット](../schema-rowsets/xml/discover-schema-rowsets-rowset.md)|XMLA によってサポートされているすべての列挙値について、名前、制限、説明、その他の情報を返します。|  
-|[DISCOVER_SESSIONS 行セット](../schema-rowsets/xml/discover-sessions-rowset.md)|セッションのユーザーや期間など、アクティブ セッションについてレポートします。|  
-|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット](../schema-rowsets/xml/discover-storage-table-column-segments-rowset.md)|テーブル モードまたは SharePoint モードで動作している Analysis Services データベースに関して、使用されているストレージ テーブルについての列およびセグメント レベルの情報を提供します。|  
-|[DISCOVER_STORAGE_TABLE_COLUMNS 行セット](../schema-rowsets/xml/discover-storage-table-columns-rowset.md)|クライアントは、テーブル モードまたは SharePoint モードで動作している Analysis Services データベースによって使用されるストレージ テーブルに対する列の割り当てを確認できます。|  
-|[DISCOVER_STORAGE_TABLES 行セット](../schema-rowsets/xml/discover-storage-tables-rowset.md)|テーブル モデル データベース内のモデルを格納するためのテーブルに関する情報を返します。|  
-|[DISCOVER_TRACE_COLUMNS 行セット](../schema-rowsets/xml/discover-trace-columns-rowset.md)|トレースに表示される列の XML 記述を返します。|  
-|[DISCOVER_TRACE_DEFINITION_PROVIDERINFO 行セット](../schema-rowsets/xml/discover-trace-definition-providerinfo-rowset.md)|プロバイダーの名前とバージョン情報を返します。|  
-|[DISCOVER_TRACE_EVENT_CATEGORIES 行セット](../schema-rowsets/xml/discover-trace-event-categories-rowset.md)|使用できるカテゴリの一覧を返します。|  
-|[DISCOVER_TRACES 行セット](../schema-rowsets/xml/discover-traces-rowset.md)|現在の接続でアクティブに実行しているトレースの一覧を返します。|  
-|[DISCOVER_TRANSACTIONS 行セット](../schema-rowsets/xml/discover-transactions-rowset.md)|現在の接続でアクティブに実行しているトランザクションの一覧を返します。|  
+|[DBSCHEMA_CATALOGS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|現在の接続の Analysis Services データベースの一覧を返します。|  
+|[DBSCHEMA_COLUMNS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|現在のデータベース内のすべての列の一覧を返します。 DMV クエリを作成するために、この一覧を使用できます。|  
+|[DBSCHEMA_PROVIDER_TYPES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-provider-types-rowset)|OLE DB データ プロバイダーでサポートされる基本データ型に関するプロパティを返します。|  
+|[DBSCHEMA_TABLES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|現在のデータベース内のすべてのテーブルの一覧を返します。 DMV クエリを作成するために、この一覧を使用できます。|  
+|[DISCOVER_CALC_DEPENDENCY 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|他の列およびテーブルとの依存関係があるモデルで使用されている列およびテーブルの一覧を返します。|  
+|[DISCOVER_COMMAND_OBJECTS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|参照先のコマンドによって使用されているオブジェクトに関するリソース使用量と利用状況の情報を提供します。|  
+|[DISCOVER_COMMANDS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|現在実行されているコマンドのリソース使用状況とアクティビティ情報を提供します。|  
+|[DISCOVER_CONNECTIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Analysis Services に対して開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。|  
+|[DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|テーブル モデルに関する情報を返します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
+|[DISCOVER_DB_CONNECTIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|たとえば処理中またはインポート中に、Analysis Services から外部データ ソースに対して開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。|  
+|[DISCOVER_DIMENSION_STAT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-dimension-stat-rowset)|モデルの種類により、テーブルのディメンションまたは列の属性を返します。|  
+|[DISCOVER_ENUMERATORS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-enumerators-rowset)|特定のデータ ソースについてサポートされている列挙子に関するメタデータを返します。|  
+|[DISCOVER_INSTANCES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/discover-instances-rowset)|指定したインスタンスに関する情報を返します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
+|[DISCOVER_JOBS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|現在のジョブに関する情報を返します。|  
+|[DISCOVER_KEYWORDS 行セット (XMLA)](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|予約されているキーワードの一覧を返します。|  
+|[DISCOVER_LITERALS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|XMLA によってサポートされているデータ型や値など、リテラルの一覧を返します。|  
+|[DISCOVER_LOCKS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|特定の時点で使用されているロックのスナップショットを返します。|  
+|[DISCOVER_MEMORYGRANT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|スタートアップ時に Analysis Services によって割り当てられたメモリに関する情報を返します。|  
+|[DISCOVER_MEMORYUSAGE 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memoryusage-rowset)|特定のオブジェクトによるメモリ使用量を示しています。|  
+|[DISCOVER_OBJECT_ACTIVITY 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-activity-rowset)|サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。|  
+|[DISCOVER_OBJECT_MEMORY_USAGE 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-memory-usage-rowset)|オブジェクトによるメモリ消費についてレポートします。|  
+|[DISCOVER_PARTITION_DIMENSION_STAT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-dimension-stat-rowset)|ディメンションの属性に関する情報を提供します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
+|[DISCOVER_PARTITION_STAT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-stat-rowset)|ディメンション、テーブル、またはメジャー グループのパーティションに関する情報を提供します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
+|[DISCOVER_PERFORMANCE_COUNTERS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-performance-counters-rowset)|パフォーマンス カウンターで使用される列を示します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
+|[DISCOVER_PROPERTIES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-properties-rowset)|指定されたデータ ソースの XMLA によってサポートされるプロパティに関する情報を返します。|  
+|[DISCOVER_SCHEMA_ROWSETS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-schema-rowsets-rowset)|XMLA によってサポートされているすべての列挙値について、名前、制限、説明、その他の情報を返します。|  
+|[DISCOVER_SESSIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-sessions-rowset)|セッションのユーザーや期間など、アクティブ セッションについてレポートします。|  
+|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-column-segments-rowset)|テーブル モードまたは SharePoint モードで動作している Analysis Services データベースに関して、使用されているストレージ テーブルについての列およびセグメント レベルの情報を提供します。|  
+|[DISCOVER_STORAGE_TABLE_COLUMNS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-columns-rowset)|クライアントは、テーブル モードまたは SharePoint モードで動作している Analysis Services データベースによって使用されるストレージ テーブルに対する列の割り当てを確認できます。|  
+|[DISCOVER_STORAGE_TABLES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-tables-rowset)|テーブル モデル データベース内のモデルを格納するためのテーブルに関する情報を返します。|  
+|[DISCOVER_TRACE_COLUMNS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-columns-rowset)|トレースに表示される列の XML 記述を返します。|  
+|[DISCOVER_TRACE_DEFINITION_PROVIDERINFO 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-definition-providerinfo-rowset)|プロバイダーの名前とバージョン情報を返します。|  
+|[DISCOVER_TRACE_EVENT_CATEGORIES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-event-categories-rowset)|使用できるカテゴリの一覧を返します。|  
+|[DISCOVER_TRACES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)|現在の接続でアクティブに実行しているトレースの一覧を返します。|  
+|[DISCOVER_TRANSACTIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-transactions-rowset)|現在の接続でアクティブに実行しているトランザクションの一覧を返します。|  
 |[DISCOVER_XEVENT_TRACE_DEFINITION 行セット](../dev-guide/discover-xevent-trace-definition-rowset.md)|現在の接続でアクティブに実行している XEvent トレースの一覧を返します。|  
-|[DMSCHEMA_MINING_COLUMNS 行セット](../schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|現在の接続で利用可能な、すべてのマイニング モデルの個々の列を一覧表示します。|  
-|[DMSCHEMA_MINING_FUNCTIONS 行セット](../schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|サーバー上のデータ マイニング アルゴリズムによってサポートされる関数の一覧を返します。|  
-|[DMSCHEMA_MINING_MODEL_CONTENT 行セット](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|現在のモデルを説明する列で構成される行セットを返します。|  
-|[DMSCHEMA_MINING_MODEL_CONTENT_PMML 行セット](../schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|PMML 形式で現在のモデルを説明する列で構成される行セットを返します。|  
-|[DMSCHEMA_MINING_MODEL_XML 行セット](../schema-rowsets/data-mining/dmschema-mining-model-xml-rowset.md)|PMML 形式で現在のモデルを説明する列で構成される行セットを返します。|  
-|[DMSCHEMA_MINING_MODELS 行セット](../schema-rowsets/data-mining/dmschema-mining-models-rowset.md)|現在のデータベース内のマイニング モデルの一覧を返します。|  
-|[DMSCHEMA_MINING_SERVICE_PARAMETERS 行セット](../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)|サーバー上のアルゴリズムのパラメーターの一覧を返します。|  
-|[DMSCHEMA_MINING_SERVICES 行セット](../schema-rowsets/data-mining/dmschema-mining-services-rowset.md)|サーバー上で使用可能なデータ マイニング アルゴリズムの一覧を返します。|  
-|[DMSCHEMA_MINING_STRUCTURE_COLUMNS 行セット](../schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset.md)|現在の接続で使用できるすべてのマイニング モデルのすべての列の一覧を返します。|  
-|[DMSCHEMA_MINING_STRUCTURES 行セット](../schema-rowsets/data-mining/dmschema-mining-structures-rowset.md)|現在の接続で利用可能なマイニング構造を一覧表示します。|  
-|[MDSCHEMA_CUBES 行セット](../schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|現在のデータベースで定義されるキューブに関する情報を返します。|  
-|[MDSCHEMA_DIMENSIONS 行セット](../schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|現在のデータベースで定義されるディメンションに関する情報を返します。|  
-|[MDSCHEMA_FUNCTIONS 行セット](../schema-rowsets/ole-db-olap/mdschema-functions-rowset.md)|データベースに接続されているクライアント アプリケーションで利用できる関数の一覧を返します。|  
-|[MDSCHEMA_HIERARCHIES 行セット](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)|現在のデータベースで定義される階層に関する情報を返します。|  
-|[MDSCHEMA_INPUT_DATASOURCES 行セット](../schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)|現在のデータベースで定義されるデータ ソース オブジェクトに関する情報を返します。|  
-|[MDSCHEMA_KPIS 行セット](../schema-rowsets/ole-db-olap/mdschema-kpis-rowset.md)|現在のデータベースで定義される KPI に関する情報を返します。|  
-|[MDSCHEMA_LEVELS 行セット](../schema-rowsets/ole-db-olap/mdschema-levels-rowset.md)|現在のデータベースで定義される階層内のレベルに関する情報を返します。|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 行セット](../schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|メジャー グループのディメンションを一覧表示します。|  
-|[MDSCHEMA_MEASUREGROUPS 行セット](../schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|現在の接続にあるメジャー グループの一覧を返します。|  
-|[MDSCHEMA_MEASURES 行セット](../schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|現在の接続にあるメジャーの一覧を返します。|  
-|[MDSCHEMA_MEMBERS 行セット](../schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|現在の接続にあるすべてのメンバーの一覧を返し、データベース、キューブ、およびディメンションごとに一覧表示します。|  
-|[MDSCHEMA_PROPERTIES 行セット](../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|プロパティの型、データ型、その他のメタデータと共に、各プロパティの完全修飾名を返します。|  
-|[MDSCHEMA_SETS 行セット](../schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|現在の接続で定義されるセットの一覧を表示します。|  
+|[DMSCHEMA_MINING_COLUMNS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-columns-rowset)|現在の接続で利用可能な、すべてのマイニング モデルの個々の列を一覧表示します。|  
+|[DMSCHEMA_MINING_FUNCTIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-functions-rowset)|サーバー上のデータ マイニング アルゴリズムによってサポートされる関数の一覧を返します。|  
+|[DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)|現在のモデルを説明する列で構成される行セットを返します。|  
+|[DMSCHEMA_MINING_MODEL_CONTENT_PMML 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|PMML 形式で現在のモデルを説明する列で構成される行セットを返します。|  
+|[DMSCHEMA_MINING_MODEL_XML 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-xml-rowset)|PMML 形式で現在のモデルを説明する列で構成される行セットを返します。|  
+|[DMSCHEMA_MINING_MODELS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-models-rowset)|現在のデータベース内のマイニング モデルの一覧を返します。|  
+|[DMSCHEMA_MINING_SERVICE_PARAMETERS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset)|サーバー上のアルゴリズムのパラメーターの一覧を返します。|  
+|[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)|サーバー上で使用可能なデータ マイニング アルゴリズムの一覧を返します。|  
+|[DMSCHEMA_MINING_STRUCTURE_COLUMNS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset)|現在の接続で使用できるすべてのマイニング モデルのすべての列の一覧を返します。|  
+|[DMSCHEMA_MINING_STRUCTURES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structures-rowset)|現在の接続で利用可能なマイニング構造を一覧表示します。|  
+|[MDSCHEMA_CUBES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-cubes-rowset)|現在のデータベースで定義されるキューブに関する情報を返します。|  
+|[MDSCHEMA_DIMENSIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset)|現在のデータベースで定義されるディメンションに関する情報を返します。|  
+|[MDSCHEMA_FUNCTIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-functions-rowset)|データベースに接続されているクライアント アプリケーションで利用できる関数の一覧を返します。|  
+|[MDSCHEMA_HIERARCHIES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)|現在のデータベースで定義される階層に関する情報を返します。|  
+|[MDSCHEMA_INPUT_DATASOURCES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|現在のデータベースで定義されるデータ ソース オブジェクトに関する情報を返します。|  
+|[MDSCHEMA_KPIS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|現在のデータベースで定義される KPI に関する情報を返します。|  
+|[MDSCHEMA_LEVELS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|現在のデータベースで定義される階層内のレベルに関する情報を返します。|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|メジャー グループのディメンションを一覧表示します。|  
+|[MDSCHEMA_MEASUREGROUPS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|現在の接続にあるメジャー グループの一覧を返します。|  
+|[MDSCHEMA_MEASURES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|現在の接続にあるメジャーの一覧を返します。|  
+|[MDSCHEMA_MEMBERS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|現在の接続にあるすべてのメンバーの一覧を返し、データベース、キューブ、およびディメンションごとに一覧表示します。|  
+|[MDSCHEMA_PROPERTIES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|プロパティの型、データ型、その他のメタデータと共に、各プロパティの完全修飾名を返します。|  
+|[MDSCHEMA_SETS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|現在の接続で定義されるセットの一覧を表示します。|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [制限された行セットと Dmv の新しい SYSTEMRESTRICTEDSCHEMA 関数](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [制限された行セットと DMV の新しい SYSTEMRESTRICTEDSCHEMA 関数](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

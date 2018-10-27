@@ -1,5 +1,5 @@
 ---
-title: 1103 を通じてレベル 1050 に表形式オブジェクト モデルを理解する |Microsoft ドキュメント
+title: レベル 1050 表形式オブジェクト モデルを 1103 から理解 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5ff9348f28d8791d7a9cc6c571a3a4f05bbab58f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 16808ae1ceccd64a109a78c33d861ab45076b98d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045486"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146417"
 ---
-# <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>1103 を通じてレベル 1050 に表形式オブジェクト モデルを理解します。
+# <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>レベル 1050 から 1103 の表形式オブジェクト モデルについて
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
 
-  テーブル モデルは、テーブル、リレーションシップ、階層、パースペクティブ、メジャー、および主要業績に関する論理的表現です。 ここでは、AMO を使用した内部実装について説明します。 参照してください[Analysis Management Objects を使用した開発&#40;AMO&#41; ](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)までに AMO を使用していない場合。  
+  テーブル モデルは、テーブル、リレーションシップ、階層、パースペクティブ、メジャー、および主要業績に関する論理的表現です。 ここでは、AMO を使用した内部実装について説明します。 参照してください[Analysis Management Objects を使用した開発&#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)までに AMO を使用していない場合。  
   
- ここで使用するアプローチはトップダウンであり、テーブル モデルに関連するすべてのオブジェクトを論理的に AMO オブジェクトにマップし、必須の対話型操作やワークフローについて説明します。 AMO、AMO to Tabular サンプルを使用して表形式モデルを作成するソース コード サンプルは、Codeplex から入手できます。 サンプル内のコードに関する重要な注意: コードはここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。 サンプルは、サポートや保証なしで提供されます。  
+ ここで使用するアプローチはトップダウンであり、テーブル モデルに関連するすべてのオブジェクトを論理的に AMO オブジェクトにマップし、必須の対話型操作やワークフローについて説明します。 AMO、AMO to Tabular サンプルを使用して表形式モデルを作成するソース コード サンプルは Codeplex から入手できます。 サンプル内のコードに関する重要な注意: コードはここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。 サンプルは、サポートや保証なしで提供されます。  
   
 ## <a name="database-representation"></a>データベース表現  
  データベースは、テーブル モデルに対応するコンテナー オブジェクトを提供します。 テーブル モデル内のすべてのオブジェクトは、データベースに格納されます。 AMO オブジェクトの場合、データベース表現は `xref:Microsoft.AnalysisServices.Database` と一対一マッピングのリレーションシップにあり、その他の主要 AMO オブジェクトを必要としません。 これは AMO データベース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
@@ -31,15 +31,15 @@ ms.locfileid: "34045486"
 ## <a name="connection-representation"></a>接続表現  
  接続によって、テーブル モデル ソリューションに含めるデータとモデル自体の間のリレーションシップが確立されます。 AMO オブジェクトの場合、接続は `xref:Microsoft.AnalysisServices.DataSource` と一対一マッピングのリレーションシップにあり、その他の主要 AMO オブジェクトを必要としません。 これは AMO データソース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
- 参照してください[接続表現&#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md)作成し、データ ソースの表現を操作する方法の詳細についてはします。  
+ 参照してください[接続表現&#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md)作成し、データ ソース表現を操作する方法の詳細についてはします。  
   
 ## <a name="table-representation"></a>テーブル表現  
- テーブルは、データベースのデータを格納するデータベース オブジェクトです。 AMO オブジェクトでは、テーブルは一対多マッピングのリレーションシップを持ちます。 テーブルは、次の AMO オブジェクトを使用して表現: `xref:Microsoft.AnalysisServices.DataSourceView`、 `xref:Microsoft.AnalysisServices.Dimension`、 `xref:Microsoft.AnalysisServices.Cube`、 `xref:Microsoft.AnalysisServices.CubeDimension`、`xref:Microsoft.AnalysisServices.MeasureGroup`と`xref:Microsoft.AnalysisServices.Partition`メインの必要なオブジェクトです。 ただし、モデリングの際に、上記の AMO オブジェクトに含まれるすべてのオブジェクトを使用できることをという意味しないことに注意する必要です。  
+ テーブルは、データベースのデータを格納するデータベース オブジェクトです。 AMO オブジェクトでは、テーブルは一対多マッピングのリレーションシップを持ちます。 テーブルは、次の AMO オブジェクトの使用法で表される: `xref:Microsoft.AnalysisServices.DataSourceView`、 `xref:Microsoft.AnalysisServices.Dimension`、 `xref:Microsoft.AnalysisServices.Cube`、 `xref:Microsoft.AnalysisServices.CubeDimension`、`xref:Microsoft.AnalysisServices.MeasureGroup`と`xref:Microsoft.AnalysisServices.Partition`が必要な主要オブジェクトです。 ただしは、モデリングの際に、上記の AMO オブジェクトに含まれるすべてのオブジェクトを使用できることをという意味しないことに注意してください。  
   
  参照してください[テーブル表現&#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md)作成し、テーブルの表現を操作する方法の詳細についてはします。  
   
 ### <a name="calculated-column-representation"></a>計算列表現  
- 計算列はテーブル内の列を生成する評価式であり、新しい値が計算されてテーブル内の各行に格納されます。 AMO オブジェクトでは、計算列は、一対多マッピングのリレーションシップを持ちます。 計算列は、必要な主要オブジェクトである次の AMO オブジェクトを使用して表現されます。`xref:Microsoft.AnalysisServices.Dimension` および `xref:Microsoft.AnalysisServices.MeasureGroup`。 これは上記の AMO オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
+ 計算列はテーブル内の列を生成する評価式であり、新しい値が計算されてテーブル内の各行に格納されます。 AMO オブジェクトでは、計算列は一対多マッピングのリレーションシップを持ちます。 計算列は、必要な主要オブジェクトである次の AMO オブジェクトを使用して表現されます。`xref:Microsoft.AnalysisServices.Dimension` および `xref:Microsoft.AnalysisServices.MeasureGroup`。 これは上記の AMO オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
  参照してください[計算列表現&#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-column-representation.md)作成し、計算列表現を操作する方法の詳細についてはします。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34045486"
  参照してください[階層表現&#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md)を作成して階層表現を操作する方法の詳細についてはします。  
   
 ### <a name="key-performance-indicator-kpi--representation"></a>主要業績評価指標 (KPI) 表現  
- KPI は、対象の値に対するベース メジャーによって定義される値のパフォーマンスの測定に使用されます。 AMO オブジェクトでは、KPI 表現は一対多マッピングのリレーションシップを持ちます。 KPI は、次の AMO オブジェクトを使用して表現:`xref:Microsoft.AnalysisServices.MdxScript.Commands%2A`と`xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A`メインの必要なオブジェクトです。  これは上記の AMO オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
+ KPI は、対象の値に対するベース メジャーによって定義される値のパフォーマンスの測定に使用されます。 AMO オブジェクトでは、KPI 表現は一対多マッピングのリレーションシップを持ちます。 KPI は、次の AMO オブジェクトの使用法で表される:`xref:Microsoft.AnalysisServices.MdxScript.Commands%2A`と`xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A`が必要な主要オブジェクトです。  これは上記の AMO オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
 > [!NOTE]  
 >  また、`xref:Microsoft.AnalysisServices.Kpi` オブジェクトはテーブル モデル内の KPI とリレーションシップを持たないことにも注意してください。 さらに、このオブジェクトはテーブル モデルではサポートされません。  
@@ -65,7 +65,7 @@ ms.locfileid: "34045486"
  参照してください[キー業績評価指標表現&#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-key-performance-indicator-representation.md)を作成して、KPI 表現を操作する方法の詳細についてはします。  
   
 ### <a name="partition-representation"></a>パーティション表現  
- 運用目的で、異なるのサブセットにテーブルを分割することができます行を結合させるとテーブルを形成します。 それぞれのサブセットがテーブルのパーティションです。 AMO オブジェクトでは、パーティション表現は一対一のマッピングのリレーションシップに`xref:Microsoft.AnalysisServices.Partition`とその他の主要 AMO オブジェクトは必要ありません。 これは AMO データベース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
+ 運用のためのさまざまなサブセットにテーブルを分けることが行を組み合わせると、テーブルを形成します。 それぞれのサブセットがテーブルのパーティションです。 AMO オブジェクトでは、パーティション表現は、一対一マッピングのリレーションシップ`xref:Microsoft.AnalysisServices.Partition`とその他の主要 AMO オブジェクトは必要ありません。 これは AMO データベース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
  参照してください[パーティション表現&#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-partition-representation.md)作成し、パーティション表現を操作する方法の詳細についてはします。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34045486"
  参照してください[リレーションシップ表現&#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md)作成し、リレーションシップ表現を操作する方法の詳細についてはします。  
   
 ## <a name="perspective-representation"></a>パースペクティブ表現  
- パースペクティブは、モデルを簡素化したり絞りこんだりするメカニズムです。 AMO オブジェクトの場合、リレーションシップ表現は `xref:Microsoft.AnalysisServices.Perspective` と一対一マッピングのリレーションシップにあり、その他の主要 AMO オブジェクトを必要としません。 テーブル モデリングを実施する際に、AMO パースペクティブ オブジェクトに含まれるすべてのオブジェクトを使用できることをという意味しないことに注意してください。 重要です。  
+ パースペクティブは、モデルを簡素化したり絞りこんだりするメカニズムです。 AMO オブジェクトの場合、リレーションシップ表現は `xref:Microsoft.AnalysisServices.Perspective` と一対一マッピングのリレーションシップにあり、その他の主要 AMO オブジェクトを必要としません。 AMO パースペクティブ オブジェクトに含まれるすべてのオブジェクトがテーブル モデリングを実施する際に使用できることという意味しないことに注意してください。  
   
  参照してください[パースペクティブ表現&#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md)を作成して、パースペクティブ表現を操作する方法の詳細についてはします。  
   

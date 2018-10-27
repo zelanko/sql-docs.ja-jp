@@ -14,12 +14,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edddafdbc51c9f67beb7b0f92efddf1e14f9fc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118472"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146307"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>処理するためのツールと方法 (Analysis Services)
   "処理" とは、Analysis Services がリレーショナル データ ソースにクエリを実行し、そのデータを使用して Analysis Services オブジェクトを設定する操作です。  
@@ -42,7 +42,7 @@ ms.locfileid: "48118472"
   
 -   SQL Server Profiler の処理の監視  
   
--   AMO を使用した、カスタム ソリューションのプログラム 詳細については、「 [AMO OLAP 基本オブジェクトのプログラミング](analysis-management-objects/programming-amo-olap-basic-objects.md)」を参照してください。  
+-   AMO を使用した、カスタム ソリューションのプログラム 詳細については、「 [AMO OLAP 基本オブジェクトのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects)」を参照してください。  
   
  処理は、柔軟に構成できる操作で、オブジェクト レベルで発生する完全処理や増分処理の一連の処理オプションを使用して制御します。 オプションとオブジェクトの処理に関する詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」および「[Analysis Services オブジェクトの処理](processing-analysis-services-objects.md)」を参照してください。  
   

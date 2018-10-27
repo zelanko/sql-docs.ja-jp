@@ -20,12 +20,12 @@ ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a08e0c44d4e5a05e140c0215997c2193fedd8e59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16d4b84c5d1dec2a09300fe23dab58774bf74cdb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178022"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146257"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>オブジェクトの作成と変更 (XMLA)
   主要なオブジェクトは、個別に作成、変更、削除することができます。 主要なオブジェクトには以下のオブジェクトが含まれます。  
@@ -52,27 +52,27 @@ ms.locfileid: "48178022"
   
 -   データ ソース  
   
- 使用する、[作成](../xmla/xml-elements-commands/create-element-xmla.md)のインスタンスで、主要なオブジェクトを作成するコマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および[Alter](../xmla/xml-elements-commands/alter-element-xmla.md)インスタンス上の既存の主要なオブジェクトを変更するコマンド。 使用して両方のコマンドを実行、 [Execute](../xmla/xml-elements-methods-execute.md)メソッド。  
+ 使用する、[作成](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)のインスタンスで、主要なオブジェクトを作成するコマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および[Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)インスタンス上の既存の主要なオブジェクトを変更するコマンド。 使用して両方のコマンドを実行、 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッド。  
   
 ## <a name="creating-objects"></a>オブジェクトを作成します。  
- `Create` メソッドを使用してオブジェクトを作成する場合は、まず、作成する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを含む親オブジェクトを識別する必要があります。 内のオブジェクト参照を提供することで、親オブジェクトを識別する、 [ParentObject](../xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、`Create`コマンド。 それぞれのオブジェクト参照には、`Create` コマンドの対象の親オブジェクトを一意に識別するのに必要なオブジェクト識別子が含まれます。 オブジェクト参照の詳細については、次を参照してください。[を識別するオブジェクトの定義および&#40;XMLA&#41;](../xmla/xml-elements-objects.md)します。  
+ `Create` メソッドを使用してオブジェクトを作成する場合は、まず、作成する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを含む親オブジェクトを識別する必要があります。 内のオブジェクト参照を提供することで、親オブジェクトを識別する、 [ParentObject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)のプロパティ、`Create`コマンド。 それぞれのオブジェクト参照には、`Create` コマンドの対象の親オブジェクトを一意に識別するのに必要なオブジェクト識別子が含まれます。 オブジェクト参照の詳細については、次を参照してください。[を識別するオブジェクトの定義および&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)します。  
   
  たとえば、キューブに新しいメジャー グループを作成するには、キューブへのオブジェクト参照を指定する必要があります。 `ParentObject` プロパティでのキューブへのオブジェクト参照には、データベース識別子とキューブ識別子の両方が含まれます。別のデータベースでも同じキューブ識別子が使用されている可能性があるためです。  
   
- [ObjectDefinition](../xmla/xml-elements-properties/objectdefinition-element-xmla.md)要素には作成する主要なオブジェクトを定義する Analysis Services スクリプト言語 (ASSL) 要素が含まれています。 ASSL の詳細については、次を参照してください。 [Analysis Services スクリプト言語を使用した開発&#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)します。  
+ [ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla)要素には作成する主要なオブジェクトを定義する Analysis Services スクリプト言語 (ASSL) 要素が含まれています。 ASSL の詳細については、次を参照してください。 [Analysis Services スクリプト言語を使用した開発&#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)します。  
   
  `AllowOverwrite` コマンドの `Create` 属性を true に設定すると、指定された識別子を持つ既存の主要なオブジェクトを上書きできます。 そうしない場合、親オブジェクト内に指定された識別子を持つ主要なオブジェクトが既に存在するときに、エラーが発生します。  
   
- 詳細については、`Create`コマンドを参照してください[要素の作成&#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)します。  
+ 詳細については、`Create`コマンドを参照してください[要素の作成&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)します。  
   
 ### <a name="creating-session-objects"></a>セッション オブジェクトの作成  
  セッション オブジェクトは一時オブジェクトであり、クライアント アプリケーションで使用される明示的または暗黙的なセッションでのみ使用でき、セッションの終了時には削除されます。 セッション オブジェクトを作成するには設定して、`Scope`の属性、`Create`コマンドを*セッション*します。  
   
 > [!NOTE]  
->  使用する場合、*セッション*を設定する、`ObjectDefinition`要素に含めることができますのみ[ディメンション](../scripting/objects/dimension-element-assl.md)、[キューブ](../scripting/objects/cube-element-assl.md)、または[MiningModel](../scripting/objects/miningmodel-element-assl.md) ASSL要素。  
+>  使用する場合、*セッション*を設定する、`ObjectDefinition`要素に含めることができますのみ[ディメンション](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl)、[キューブ](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)、または[MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL要素。  
   
 ## <a name="altering-objects"></a>オブジェクトの変更  
- 使用してオブジェクトを変更するときに、`Alter`メソッド、オブジェクト参照を提供することによって変更されるオブジェクト最初に識別する必要があります、[オブジェクト](../xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、`Alter`コマンド。 それぞれのオブジェクト参照には、`Alter` コマンドの対象のオブジェクトを一意に識別するのに必要なオブジェクト識別子が含まれます。 オブジェクト参照の詳細については、次を参照してください。[を識別するオブジェクトの定義および&#40;XMLA&#41;](../xmla/xml-elements-objects.md)します。  
+ 使用してオブジェクトを変更するときに、`Alter`メソッド、オブジェクト参照を提供することによって変更されるオブジェクト最初に識別する必要があります、[オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)のプロパティ、`Alter`コマンド。 それぞれのオブジェクト参照には、`Alter` コマンドの対象のオブジェクトを一意に識別するのに必要なオブジェクト識別子が含まれます。 オブジェクト参照の詳細については、次を参照してください。[を識別するオブジェクトの定義および&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)します。  
   
  たとえば、キューブの構造を変更するためには、キューブへのオブジェクト参照を指定する必要があります。 `Object` プロパティでのキューブへのオブジェクト参照には、データベース識別子とキューブ識別子の両方が含まれます。別のデータベースでも同じキューブ識別子が使用されている可能性があるためです。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48178022"
  によって作成されたセッション オブジェクトを変更する、`Create`コマンド、設定、`Scope`の属性、`Alter`コマンドを*セッション*します。  
   
 > [!NOTE]  
->  使用する場合、*セッション*を設定する、`ObjectDefinition`要素に含めることができますのみ[ディメンション](../scripting/objects/dimension-element-assl.md)、[キューブ](../scripting/objects/cube-element-assl.md)、または[MiningModel](../scripting/objects/miningmodel-element-assl.md) ASSL要素。  
+>  使用する場合、*セッション*を設定する、`ObjectDefinition`要素に含めることができますのみ[ディメンション](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl)、[キューブ](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)、または[MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL要素。  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>下位オブジェクトの作成または変更  
  `Create` または `Alter` コマンドで作成または変更できるのは最上位の主要なオブジェクトだけですが、作成中または変更中の主要なオブジェクトには、囲んでいる `ObjectDefinition` プロパティの中に、従属する他の主要なオブジェクトや副次オブジェクトの定義を含めることができます。 たとえば、キューブを定義する場合、`ParentObject` で親データベースを指定します。`ObjectDefinition` でのキューブ定義にはキューブのメジャー グループを定義でき、さらにメジャー グループ内ではそれぞれのメジャー グループのパーティションを定義できます。 副次オブジェクトは、それを格納する主要なオブジェクトの中でのみ定義できます。 メジャーおよびマイナー オブジェクトの詳細については、次を参照してください。[データベース オブジェクト&#40;Analysis Services - 多次元データ&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)します。  
@@ -145,11 +145,11 @@ ms.locfileid: "48178022"
 ```  
   
 ### <a name="comments"></a>コメント  
- `ObjectExpansion`の属性、`Alter`コマンドに設定された*objectproperties です*します。 この設定では、 [ImpersonationInfo](../scripting/properties/impersonationinfo-element-assl.md)要素で定義されているデータ ソースから除外する、補助オブジェクトを使用して`ObjectDefinition`します。 そのため、そのデータ ソースに関する権限借用情報は、最初の例で指定したとおりにサービス アカウントに対して設定されたままになります。  
+ `ObjectExpansion`の属性、`Alter`コマンドに設定された*objectproperties です*します。 この設定では、 [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)要素で定義されているデータ ソースから除外する、補助オブジェクトを使用して`ObjectDefinition`します。 そのため、そのデータ ソースに関する権限借用情報は、最初の例で指定したとおりにサービス アカウントに対して設定されたままになります。  
   
 ## <a name="see-also"></a>参照  
- [Execute メソッド&#40;XMLA&#41;](../xmla/xml-elements-methods-execute.md)   
- [Services スクリプト言語の分析を使用した開発&#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Execute メソッド&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   
+ [Analysis Services スクリプト言語 (ASSL) での開発](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Analysis Services での XMLA による開発](developing-with-xmla-in-analysis-services.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25d79370893dc2d3bfef06890baf5ffd88f0da53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 718b51025b8cd62fbf61290430cc203e9d5b0c6f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171262"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146173"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
   このトピックでは、接続文字列プロパティについて説明します。接続文字列プロパティは、いずれかのデザイナー ツールまたは管理ツールで設定できます。また、Analysis Services データに接続および照会するクライアント アプリケーションによって作成された接続文字に表示されることもあります。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
@@ -67,14 +67,14 @@ ms.locfileid: "48171262"
 |**Encrypt Password**|ローカル キューブを暗号化するためにローカル パスワードを使用するかどうかを指定します。 有効な値は True または False です。 既定値は False です。|  
 |`Encryption Password`|暗号化されたローカル キューブの暗号化を解除するために使用するパスワード。 既定値は空です。 この値は、ユーザーが明示的に設定する必要があります。|  
 |`Impersonation Level`|サーバーがクライアントの権限を借用するときに使用できる権限借用レベルを示します。 有効な値は次のとおりです。<br /><br /> **匿名**: クライアントがサーバーに対して匿名です。 サーバー プロセスではクライアントに関する情報を取得できず、クライアントの権限を借用できません。<br /><br /> **識別**: サーバー プロセスは、クライアント id を取得できます。 また、サーバーでは承認のためにクライアント ID の権限を借用できますが、クライアントとしてシステム オブジェクトにアクセスすることはできません。<br /><br /> **権限を借用**: これは既定値です。 クライアント ID の権限を借用できますが、接続を確立する場合に限られ、すべての呼び出しで借用できるわけではありません。<br /><br /> **デリゲート**: サーバー プロセスは、クライアントに代わってアクションを実行中にクライアントのセキュリティ コンテキストを偽装できます。 また、他のサーバーに対する呼び出しを送信することもできます。|  
-|`Integrated Security`|Analysis Services に接続するために使用する呼び出し元の Windows ID。 有効な値は、空白、SSPI、および BASIC です。<br /><br /> `Integrated Security`=`SSPI` NTLM、Kerberos、または匿名認証を許可する TCP 接続の既定値です。 空白は、HTTP 接続の既定値です。<br /><br /> 使用する場合`SSPI`、 `ProtectionLevel` 、次のいずれかに設定する必要があります: `Connect`、 `PktIntegrity`、`PktPrivacy`します。|  
+|`Integrated Security`|Analysis Services に接続するために使用する呼び出し元の Windows ID。 有効な値は、空白、SSPI、および BASIC です。<br /><br /> `Integrated Security`=`SSPI` NTLM、Kerberos、または匿名認証を許可する TCP 接続の既定値です。 空白は、HTTP 接続の既定値です。<br /><br /> `SSPI` を使用する場合、`ProtectionLevel` を `Connect`、`PktIntegrity`、`PktPrivacy` のいずれかに設定する必要があります。|  
 |`Persist Encrypted`|クライアント アプリケーションでデータ ソース オブジェクトに暗号化された形式で秘密の認証情報 (パスワードなど) を保存する必要がある場合に、このプロパティを設定します。 既定では、認証情報は保存されません。|  
 |`Persist Security Info`|有効値は True および False です。 True に設定した場合、以前に接続文字列に指定したユーザー ID やパスワードなどのセキュリティ情報を接続の確立後に接続から取得できます。 既定値は False です。|  
-|`ProtectionLevel`|接続で使用するセキュリティ レベルを指定します。 有効な値は、<br /><br /> `None`。 未認証の接続または匿名接続。 サーバーに送信されるデータの認証は行われません。<br /><br /> `Connect`。 認証された接続。 クライアントがサーバーとのリレーションシップを確立するときにのみ認証が行われます。<br /><br /> `PktIntegrity`。 暗号化された接続。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されていないことが確認されます。<br /><br /> `PktPrivacy`。 署名された暗号化 (XMLA でのみサポートされます)。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されておらず、暗号化することでデータのプライバシーが保護されていることが確認されます。<br /><br /> <br /><br /> 詳細については、「 [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)」をご覧ください。|  
+|`ProtectionLevel`|接続で使用するセキュリティ レベルを指定します。 有効な値は、<br /><br /> `None` 。 未認証の接続または匿名接続。 サーバーに送信されるデータの認証は行われません。<br /><br /> `Connect` 。 認証された接続。 クライアントがサーバーとのリレーションシップを確立するときにのみ認証が行われます。<br /><br /> `PktIntegrity` 。 暗号化された接続。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されていないことが確認されます。<br /><br /> `PktPrivacy` 。 署名された暗号化 (XMLA でのみサポートされます)。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されておらず、暗号化することでデータのプライバシーが保護されていることが確認されます。<br /><br /> <br /><br /> 詳細については、「 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)」をご覧ください。|  
 |`Roles`|定義済みロールのコンマ区切りの一覧を指定します。そのロールによって与えられる権限を使用して、サーバーまたはデータベースに接続します。 このプロパティを省略した場合、すべてのロールを使用し、有効な権限はすべてのロールの組み合わせになります。 Roles=' ' のように、プロパティを空の値に設定した場合、クライアント接続にロールのメンバーシップは与えられません。<br /><br /> このプロパティを使用した管理者は、ロールによって与えられた権限を使用して接続します。 ロールによって与えられた権限が十分でない場合、コマンドが失敗することがあります。|  
 |`SSPI`|`Integrated Security` が `SSPI` に設定されているときにクライアント認証に使用するセキュリティ パッケージを明示的に指定します。 SSPI では複数のパッケージがサポートされていますが、このプロパティを使用すると特定のパッケージを指定できます。 有効な値は、Negotiate、Kerberos、NTLM、および Anonymous User です。 このプロパティを設定しない場合、接続ですべてのパッケージを使用できます。|  
 |`Use Encryption for Data`|データ転送を暗号化します。 有効な値は True および False です。|  
-|`User ID`=…。 `Password`=|`User ID` `Password`一緒に使用されます。 Analysis Services では、これらの資格情報によって指定されたユーザー ID の権限を借用します。 Analysis Services 接続では、サーバーが HTTP アクセス用に構成されており、IIS 仮想ディレクトリに統合セキュリティではなく基本認証を指定した場合にのみ、コマンド ラインで資格情報を入力します。<br /><br /> ユーザー名とパスワードは、Windows ID (ローカルまたはドメイン ユーザー アカウント) の資格情報である必要があります。 `User ID` には空白が挿入されていることに注意してください。 このプロパティの他の別名には、 `UserName` (スペースなし)、および`UID`します。 別名`Password`は`PWD`します。|  
+|`User ID`=…。 `Password`=|`User ID` と `Password` を一緒に使用します。 Analysis Services では、これらの資格情報によって指定されたユーザー ID の権限を借用します。 Analysis Services 接続では、サーバーが HTTP アクセス用に構成されており、IIS 仮想ディレクトリに統合セキュリティではなく基本認証を指定した場合にのみ、コマンド ラインで資格情報を入力します。<br /><br /> ユーザー名とパスワードは、Windows ID (ローカルまたはドメイン ユーザー アカウント) の資格情報である必要があります。 `User ID` には空白が挿入されていることに注意してください。 このプロパティの他の別名には、`UserName` (空白なし) および `UID` があります。 `Password` の別名は、`PWD` です。|  
   
 ##  <a name="bkmk_special"></a> 特別な用途のパラメーター  
  ここでは、残りの接続文字列パラメーターについて説明します。 これらは、アプリケーションで必要な特定の接続動作を実現するために使用します。  
@@ -83,11 +83,11 @@ ms.locfileid: "48171262"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|`Application Name`|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、接続文字列に Application Name='test' を追加すると、次のスクリーン ショットに示すように、SQL Server Profiler トレースに 'test' が表示されます。<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、 `sspropinitAppName`、`AppName`します。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](http://go.microsoft.com/fwlink/?LinkId=301699)」をご覧ください。|  
+|`Application Name`|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、接続文字列に Application Name='test' を追加すると、次のスクリーン ショットに示すように、SQL Server Profiler トレースに 'test' が表示されます。<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、`sspropinitAppName` および `AppName` があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](http://go.microsoft.com/fwlink/?LinkId=301699)」をご覧ください。|  
 |`AutoSyncPeriod`|クライアントとサーバーのキャッシュを同期する頻度 (ミリ秒単位) を設定します。 ADOMD.NET には、最小限のメモリ オーバーヘッドが発生する、よく使用されるオブジェクトのために、クライアント キャッシュが用意されています。 これは、サーバーへのラウンド トリップを減らすのに役立ちます。 既定値は 10,000 ミリ秒 (10 秒) です。 null または 0 に設定した場合、自動同期は無効になります。|  
 |`Character Encoding`|要求での文字をエンコードする方法を定義します。 有効な値は、Default または UTF-8 (これらは同じです) と、UTF-16 です。|  
 |`CompareCaseSensitiveStringFlags`|指定されたロケールの大文字と小文字を区別する文字列の比較を調整します。 このプロパティの設定の詳細については、「 [CompareCaseSensitiveStringFlags プロパティ](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx)」をご覧ください。|  
-|`Compression Level`|場合`TransportCompression`が XPRESS の場合、どのくらい圧縮の使用を制御する圧縮レベルを設定することができます。 有効値は 0 ～ 9 です。0 の場合に圧縮率が最も低く、9 の場合に圧縮率が最も高くなります。 圧縮率を上げると、パフォーマンスが低下します。 既定値は 0 です。|  
+|`Compression Level`|`TransportCompression` が XPRESS の場合、圧縮レベルを設定して、圧縮率を制御できます。 有効値は 0 ～ 9 です。0 の場合に圧縮率が最も低く、9 の場合に圧縮率が最も高くなります。 圧縮率を上げると、パフォーマンスが低下します。 既定値は 0 です。|  
 |`Connect Timeout`|クライアントの接続試行がタイムアウトするまでの最長時間 (秒単位) を指定します。接続がこの期間内に成功しなかった場合、クライアントは接続試行を終了し、エラーが発生します。|  
 |`MDX Compatibility`|このプロパティの目的は、MDX クエリを発行するアプリケーションの MDX 動作の一貫性を確保することです。 Excel で MDX クエリを使用して、Analysis Services に接続されたピボットテーブルを設定および計算する場合は、このプロパティを 1 に設定し、不規則階層のプレースホルダー メンバーがピボットテーブルに表示されるようにします。 有効な値は、0、1、および 2 です。<br /><br /> 0 および 1 では、プレースホルダー メンバーが公開されます。2 では、公開されません。 このプロパティが空の場合は、0 と見なされます。|  
 |`MDX Missing Member Mode=Error`|欠落したメンバーを MDX ステートメントで無視するかどうかを示します。 有効な値は、Default、Error、および Ignore です。 既定では、サーバーで定義されている値を使用します。 Error では、メンバーが存在しない場合、エラーが発生します。 Ignore では、欠落した値を無視するように指定します。|  
@@ -98,7 +98,7 @@ ms.locfileid: "48171262"
 |`Safety Options`|ユーザー定義関数とユーザー定義アクションの安全性レベルを設定します。 有効な値は、0、1、2 です。 Excel 接続では、このプロパティは Safety Options=2 です。 このオプションの詳細については、「 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>」をご覧ください。|  
 |`SQLQueryMode`|SQL クエリに計算を含めるかどうかを指定します。 有効な値は、Data、Calculated、IncludeEmpty です。 Data は、計算を許可しないことを示します。 Calculated では、計算を許可します。 IncludeEmpty では、クエリ結果で計算および空の行を返すことができます。|  
 |`Timeout`|エラーが発生するまでに、クライアント ライブラリがコマンドの完了を待機する時間 (ミリ秒単位) を指定します。|  
-|`Transport Compression`|`Protocol Format` プロパティで圧縮を指定した場合に、クライアントとサーバーの通信を圧縮する方法を定義します。 有効な値は、Default、None、Compressed、および `gzip` です。 Default では、TCP の場合は圧縮なしに、HTTP の場合は `gzip` になります。 None は、圧縮を使用しないことを示します。 Compressed では、XPRESS 圧縮を使用します (SQL Server 2008 以降)。 `gzip` HTTP 要求の HTTP 接続で有効なを含む Accept-encoding = gzip のみです。|  
+|`Transport Compression`|`Protocol Format` プロパティで圧縮を指定した場合に、クライアントとサーバーの通信を圧縮する方法を定義します。 有効な値は、Default、None、Compressed、および `gzip` です。 Default では、TCP の場合は圧縮なしに、HTTP の場合は `gzip` になります。 None は、圧縮を使用しないことを示します。 Compressed では、XPRESS 圧縮を使用します (SQL Server 2008 以降)。 `gzip` は、HTTP 要求に Accept-Encoding=gzip が含まれる HTTP 接続でのみ有効です。|  
 |`UseExistingFile`|ローカル キューブに接続する場合に使用します。 このプロパティでは、ローカル キューブを上書きするかどうかを指定します。 有効な値は True または False です。 True に設定した場合、キューブ ファイルが存在する必要があります。 既存のファイルが接続の対象となります。 False に設定した場合、キューブ ファイルが上書きされます。|  
 |`VisualMode`|ディメンションのセキュリティを適用する場合に、メンバーを集計する方法を制御するには、このプロパティを設定します。<br /><br /> すべてのユーザーが表示できるキューブ データでは、合計に合算されるすべての値を表示できるため、すべてのメンバーを集計することは適切です。 ただし、ユーザー ID に基づいてディメンションをフィルター選択または制限している場合は、すべてのメンバーに基づいた合計を表示すると、制限されている値と許可されている値の両方が単一の合計に合算されるため、わかりにくくなることや、必要以上の情報が表示されることになります。<br /><br /> ディメンションのセキュリティを適用する場合に、メンバーを集計する方法を指定するには、このプロパティを True に設定して、集計に許可されている値のみを使用するか、False に設定して、制限されている値を合計から除外します。<br /><br /> 接続文字列で設定した場合、この値はキューブ レベルまたはパースペクティブ レベルに適用されます。 モデル内では、より細かなレベルで表示部分の合計を制御できます。<br /><br /> 有効な値は 0、1、および 2 です。<br /><br /> 既定値は 0 です。 現在、既定の動作は 2 と同じです。集計には、ユーザーに対して表示されない値が含まれます。<br /><br /> 1 では、表示されない値を合計から除外します。 これは、Excel での既定値です。<br /><br /> 2 では、表示されない値を合計に含めます。 これは、サーバーでの既定値です。<br /><br /> <br /><br /> このプロパティの別名には、`Visual Total` または `Default MDX Visual Mode` があります。|  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48171262"
   
  **msmdpump.dll への Http(s) 接続**  
   
- `Data Source=<URL>`。URL には、msmdpump.dll が格納された仮想 IIS フォルダーの HTTP アドレスまたは HTTPS アドレスを指定します。 詳細については、「[インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](configure-http-access-to-analysis-services-on-iis-8-0.md)」を参照してください。  
+ `Data Source=<URL>`。URL には、msmdpump.dll が格納された仮想 IIS フォルダーの HTTP アドレスまたは HTTPS アドレスを指定します。 詳細については、「 [インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](configure-http-access-to-analysis-services-on-iis-8-0.md)」をご覧ください。  
   
  **PowerPivot ブック (.xlsx、.xlsb、または .xlsm ファイル) への http (s) 接続**  
   

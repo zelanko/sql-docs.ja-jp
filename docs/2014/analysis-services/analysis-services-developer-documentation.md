@@ -15,12 +15,12 @@ ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a23859191c8a1dfaf5f81a38d5a07c92e3a6394a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9296e5270fc3cb6114595dd1709b1a90e69a12ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225309"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147137"
 ---
 # <a name="developer39s-guide-analysis-services"></a>開発者&#39;ガイド (Analysis Services)
     
@@ -34,13 +34,13 @@ ms.locfileid: "48225309"
  [多次元モデルのプログラミング](multidimensional-models/multidimensional-model-programming.md)  
  カスタム ソリューションに多次元モデル オブジェクトを統合するための開発タスクおよび開発方法について説明します。  
   
- [Analysis Services のスキーマ行セット](schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Analysis Services のスキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  サーバーの状態、サーバーの操作、およびデータベース オブジェクトに関する情報を提供するスキーマ行セットについて説明します。  
   
- [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  XMLA に対する ASSL 拡張について説明します。 ASSL では、XMLA 仕様を補完する、Analysis Services 多次元モデルのデータ定義と操作言語を提供します。  
   
- [XML for Analysis &#40;XMLA&#41;リファレンス](xmla/xml-for-analysis-xmla-reference.md)  
+ [XML for Analysis (XML for Analysis) リファレンス](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  XMLA のカスタム ソリューションへの関わり方を理解するのに役立つ XMLA の概念について説明します。 XMLA 1.1 仕様への準拠のレベルについても説明します。  
   
   

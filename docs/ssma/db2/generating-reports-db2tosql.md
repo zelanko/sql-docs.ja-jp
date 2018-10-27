@@ -10,12 +10,12 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbcd28bde611ece919c9a4f2ab0c65a4d646cd7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4ff4fdcf07b84455b76994d23cc2c9b0f738106
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594020"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100103"
 ---
 # <a name="generating-reports-db2tosql"></a>レポートの生成 (DB2ToSQL)
 オブジェクト ツリーのレベルでの SSMA コンソールのコマンドを使用して実行される特定のアクティビティ レポートが生成されます。  
@@ -138,5 +138,5 @@ ms.locfileid: "47594020"
 -   フェールオーバー スクリプト  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[SSMA コンソールの実行](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

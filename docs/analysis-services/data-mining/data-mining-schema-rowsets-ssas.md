@@ -1,5 +1,5 @@
 ---
-title: データ マイニング スキーマ行セット (SSAs) |Microsoft ドキュメント
+title: データ マイニング スキーマ行セット (SSAs) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f29f8578fad9fe1f9ed50bf23a5aba80e14c560a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017729"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144288"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>データ マイニング スキーマ行セット (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、既存の OLE DB データ マイニング スキーマ行セットの多くが、データ マイニング拡張機能 (DMX) ステートメントを使用して照会できるシステム テーブルのセットとして公開されます。 データ マイニング スキーマ行セットに対するクエリを作成することによって、利用可能なサービスの特定、モデルおよび構造の状態の更新、モデル コンテンツまたはパラメーターに関する詳細の確認を行うことができます。 データ マイニング スキーマ行セットの説明については、「 [データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)」を参照してください。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、既存の OLE DB データ マイニング スキーマ行セットの多くが、データ マイニング拡張機能 (DMX) ステートメントを使用して照会できるシステム テーブルのセットとして公開されます。 データ マイニング スキーマ行セットに対するクエリを作成することによって、利用可能なサービスの特定、モデルおよび構造の状態の更新、モデル コンテンツまたはパラメーターに関する詳細の確認を行うことができます。 データ マイニング スキーマ行セットの説明については、「 [データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)」を参照してください。  
   
 > [!NOTE]  
 >  データ マイニング スキーマ行セットに対するクエリは、XMLA を使用して実行することもできます。 これを SQL Server Management Studio で実行する方法については、「 [XMLA を使用したデータ マイニング クエリの作成](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)」を参照してください。  
@@ -26,7 +26,7 @@ ms.locfileid: "34017729"
 ## <a name="list-of-data-mining-schema-rowsets"></a>データ マイニング スキーマ行セットの一覧  
  次の表に、クエリおよび監視に役立つデータ マイニング スキーマ行セットの一覧を示します。  
   
-|行セット名|Description|  
+|行セット名|説明|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|現在のコンテキスト内のすべてのマイニング モデルの一覧が表示されます。<br /><br /> 作成日、モデルの作成に使用されたパラメーター、トレーニング セットのサイズなどの情報が含まれます。|  
 |DMSCHEMA_MINING_COLUMNS|現在のコンテキスト内のマイニング モデルで使用されるすべての列の一覧が表示されます。<br /><br /> マイニング構造ソース列へのマッピング、データ型、有効桁数、列で使用できる予測関数などの情報が含まれます。|  

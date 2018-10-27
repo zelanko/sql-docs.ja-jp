@@ -1,5 +1,5 @@
 ---
-title: 手順 6 は、SQL Server を使用して、Python モデルを運用 |Microsoft Docs
+title: SQL Server を使用して、Python モデルを運用化 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,14 +7,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1af856e020228850a9311c5c4fa823d58908b57e
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: d95edb081edc0f18a3734025a5902d13f8e9a295
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888958"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806812"
 ---
-# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>手順 6: SQL Server を使用して、Python モデルを運用します。
+# <a name="operationalize-the-python-model-using-sql-server"></a>SQL Server を使用して、Python モデルを運用化します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、チュートリアルの一部[SQL 開発者向けの in-database Python analytics](sqldev-in-database-python-for-sql-developers.md)します。 
@@ -361,7 +361,7 @@ SQL Server 2017 のプレリリース バージョンを使用して Python Serv
 
 ## <a name="previous-step"></a>前の手順
 
-[手順 5: トレーニングし、Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[トレーニングし、Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="see-also"></a>関連項目
 

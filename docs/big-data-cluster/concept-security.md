@@ -1,22 +1,22 @@
 ---
 title: SQL Server のビッグ データ クラスターのセキュリティの概念 |Microsoft Docs
-description: ''
+description: この記事では、SQL Server 2019 ビッグ データ クラスターのセキュリティの概念について説明します。
 author: nelgson
 ms.author: negust
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bd9e49344108b65898e38065ed88fd06467803cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77ffea6b2507bde65b914c52eaf225e1fd1dbd31
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796620"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050884"
 ---
 # <a name="security-concepts-for-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスターのセキュリティの概念
 
-セキュリティで保護されたビッグ データ クラスターは、SQL Server と HDFS/Spark の両方で認証と承認のシナリオを首尾一貫したサポートを意味します。 認証は、ユーザーまたはサービスの id を確認し、それらがあると主張するユーザーはことを確認するプロセスです。 承認は、許可または要求しているユーザーの id に基づいて特定のリソースへのアクセスを拒否するを参照します。 ユーザーが認証によって特定した後は、この手順を実行します。
+ビッグ データをセキュリティで保護されたクラスターでは、SQL Server と HDFS/Spark の両方で認証と承認のシナリオを首尾一貫したサポートを意味します。 認証は、ユーザーまたはサービスの id を確認し、それらがあると主張するユーザーはことを確認するプロセスです。 承認は、許可または要求しているユーザーの id に基づいて特定のリソースへのアクセスを拒否するを参照します。 ユーザーが認証によって特定した後は、この手順を実行します。
 
 ビッグ データのコンテキストでの承認は通常、特定のアクセス許可を持つユーザーの id を関連付けるアクセス制御リスト (Acl) を実行します。 HDFS では、サービスの Api、HDFS のファイルとジョブの実行へのアクセスを制限することで承認をサポートしています。
 
@@ -80,5 +80,5 @@ HDFS/Spark エンドポイントへのアクセスのパスワード:
 
 SQL Server のビッグ データ クラスターに関する詳細については、次の記事を参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは何ですか。](big-data-cluster-overview.md)
+- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
 - [クイック スタート: Kubernetes 上の SQL Server のビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)

@@ -20,19 +20,19 @@ ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2a12e1d65cf08edf31b7f40653e5de59020b9211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134012"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145224"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多次元モデルの主要業績評価指標 (KPI)
   ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネスの成功度を判断するための測定値のことです。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]における KPI は、キューブ内のメジャー グループに関連付けられた、ビジネスの成功の評価に使用される計算のコレクションです。 これらの計算は通常、多次元式 (MDX) または計算されるメンバーの組み合わせです。 KPI には、KPI の計算結果をクライアント アプリケーションでどのように表示するかについての情報を提供する追加のメタデータもあります。  
   
- KPI で扱う情報は、設定された目標、キューブに記録された実際の業績の公式、および業績の傾向と状態を示す測定値です。 公式の定義と、KPI の値に関するその他の定義には AMO を使用します。 クライアント アプリケーションによる KPI 値の取得およびエンド ユーザーへの公開には、ADOMD.NET などのクエリ インターフェイスが使用されます。 詳細については、「 [ADOMD.NET での開発](adomd-net/developing-with-adomd-net.md)」を参照してください。  
+ KPI で扱う情報は、設定された目標、キューブに記録された実際の業績の公式、および業績の傾向と状態を示す測定値です。 公式の定義と、KPI の値に関するその他の定義には AMO を使用します。 クライアント アプリケーションによる KPI 値の取得およびエンド ユーザーへの公開には、ADOMD.NET などのクエリ インターフェイスが使用されます。 詳細については、「 [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)」を参照してください。  
   
  簡単な <xref:Microsoft.AnalysisServices.Kpi> オブジェクトは、基本情報、目標、実際の達成値、状態値、傾向値、および KPI が表示されるフォルダーで構成されます。 基本情報には、KPI の名前および説明が含まれます。 目標は、数値に評価される MDX 式です。 実際の値は、数値に評価される MDX 式です。 状態と傾向の値は、数値に評価される MDX 式です。 フォルダーは、クライアントに表示される KPI の推奨される場所です。  
   

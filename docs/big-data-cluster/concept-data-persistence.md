@@ -1,18 +1,18 @@
 ---
 title: Kubernetes クラスターのビッグ データ、SQL Server でのデータ永続化 |Microsoft Docs
-description: ''
+description: SQL Server 2019 のビッグ データ クラスター内のデータ永続化のしくみについて説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050837"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server のビッグ データ クラスターでのデータ永続化
 
@@ -31,7 +31,7 @@ ms.locfileid: "49460577"
 永続的なストレージを使用するには、デプロイ時に構成する、 **USE_PERSISTENT_VOLUME**と**STORAGE_CLASS_NAME**実行する前に環境変数`mssqlctl create cluster`コマンド。 **USE_PERSISTENT_VOLUME**に設定されている`true`既定。 既定値をオーバーライドしてに設定`false`と、ここでは、SQL Server のビッグ データ クラスターが emptyDir マウントを使用します。 
 
 > [!WARNING]
-> 非機能的なクラスターは、永続的な記憶域のない実行中の可能性があります。 ポッドが再起動するとクラスター メタデータ、またはユーザー データは完全に失われます。
+> 永続的な記憶域のない実行中は、テスト環境で作業できますが、非機能的なクラスターになる可能性があります。 ポッドが再起動するとクラスター メタデータ、またはユーザー データは完全に失われます。
 
 指定する必要があるフラグを true に設定した場合**STORAGE_CLASS_NAME**デプロイ時にパラメーターとして。
 
@@ -41,20 +41,25 @@ AKS が付属して[2 つの組み込みストレージ クラス](https://docs.
 
 ## <a name="minikube-storage-class"></a>Minikube ストレージ クラス
 
-呼ばれる組み込みストレージ クラスが付属して Minikube**標準**その動的プロビジョナーと共にします。 場合、Minikube 上なお USE_PERSISTENT_VOLUME = true (既定)、既定値が異なるために、STORAGE_CLASS_NAME 環境変数の既定値を上書きすることも必要があります。 値を設定`standard`: 
-```
+呼ばれる組み込みストレージ クラスが付属して Minikube**標準**その動的プロビジョナーと共にします。 場合、minikube を注意`USE_PERSISTENT_VOLUME=true`(既定値) の既定値もオーバーライドする必要があります、 **STORAGE_CLASS_NAME**環境変数既定値が異なるためです。 値を設定`standard`: 
+
+Windows では、次のコマンドを使用してください。
+
+```cmd
 SET STORAGE_CLASS_NAME=standard
 ```
 
-または、永続ボリュームを使用して Minikube 上を抑制することができます。
-```
-SET USE_PERSISTENT_VOLUME=false
+Linux では、次のコマンドを使用します。
+
+```cmd
+export STORAGE_CLASS_NAME=standard
 ```
 
+永続ボリュームを設定して minikube を使用してを抑制する代わりに、`USE_PERSISTENT_VOLUME=false`します。
 
 ## <a name="kubeadm"></a>Kubeadm
 
-Kubeadm が組み込みストレージ クラスが付属していません永続ボリュームとストレージ クラスのローカル ストレージを使用して設定するスクリプトを作成したため、または[ルーク](https://github.com/rook/rook)ストレージ。
+Kubeadm は、組み込みストレージ クラスが付属していません。 永続ボリュームとローカル ストレージまたは、優先のプロビジョナーをなどを使用して、ストレージ クラスを作成することもできます[ルーク](https://github.com/rook/rook)します。 その場合は、設定、 **STORAGE_CLASS_NAME**構成した記憶域クラスへ。 または、設定`USE_PERSISTENT_VOLUME=false`テスト環境で、前の警告がメモ、**展開設定**この記事の「します。  
 
 ## <a name="on-premises-cluster"></a>オンプレミス クラスター
 

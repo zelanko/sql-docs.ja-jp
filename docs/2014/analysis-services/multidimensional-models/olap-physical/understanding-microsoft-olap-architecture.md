@@ -14,12 +14,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5940856a7d3c5854017af7169ab24939e3b4c3c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d168b898368aa2219fdf47faa1fed52152797b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084482"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145047"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP アーキテクチャについて
   以下のトピックを参照して、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多次元データベースを十分に理解し、ビジネス インテリジェンス ソリューションに多次元データベースを実装する計画を立てます。  
@@ -41,11 +41,11 @@ ms.locfileid: "48084482"
  [詳細情報](understanding-microsoft-olap-physical-architecture.md)  
   
  ![小さいファイル フォルダー アイコン](../../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**プログラミング アーキテクチャ**  
- [分析管理オブジェクトを使用した開発&#40;AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [分析管理オブジェクト &#40;AMO&#41; による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [Services スクリプト言語の分析を使用した開発&#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Analysis Services スクリプト言語 (ASSL) での開発](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [ADOMD.NET での開発](../adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![小さいファイル フォルダー アイコン](../../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**国際化に関する考慮事項**  
  [Analysis Services 多次元のグローバリゼーションのシナリオ](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  

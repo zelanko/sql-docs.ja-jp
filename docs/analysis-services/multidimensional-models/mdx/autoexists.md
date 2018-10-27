@@ -1,5 +1,5 @@
 ---
-title: Autoexists |Microsoft ドキュメント
+title: Autoexists |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5f7c111f85e3b43a560b70171f8af470a9fc505a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3c156f9e0d6df2afbf7710b1ed5c19fb60034e92
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024769"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146253"
 ---
 # <a name="autoexists"></a>Autoexists
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -136,9 +136,9 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**道路 650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
+|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring 1000**|**$6,723,794.29**|**$166,144.17**|**2.47%**|  
-|**道路-w 550**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
+|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
 |**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
@@ -188,9 +188,9 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**道路 650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
+|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring 1000**|**$6,723,794.29**|**$166,144.17**|**2.47%**|  
-|**道路-w 550**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
+|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
 |**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
@@ -220,7 +220,7 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
-|**Mountain ～ 300**|**$1,907,249.38**|**$876.95**|**0.05%**|  
+|**Mountain-300**|**$1,907,249.38**|**$876.95**|**0.05%**|  
 |**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1.62%**|  
 |**Mountain-400-W**|**$592,450.05**|**$303.49**|**0.05%**|  
 |**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0.05%**|  
@@ -308,15 +308,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列です。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
+ Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
   
 ## <a name="see-also"></a>参照  
- [MDX & #40; の主な概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX の主な概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [キューブ空間](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [組](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [メンバー、組、およびセット & #40; の操作MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [メンバー、組、およびセットの操作 (MDX)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [表示部分の合計と非表示部分の合計](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 言語リファレンス & #40 です。MDX と #41 です。](../../../mdx/mdx-language-reference-mdx.md)   
- [多次元式 & #40 です。MDX と #41 です。参照](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX 言語リファレンス &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [多次元式 &#40;MDX&#41; リファレンス](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

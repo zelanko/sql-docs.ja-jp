@@ -11,12 +11,12 @@ ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16f7e8f89a2b5067f00ebd27fa1c59d1595a8c6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173102"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146067"
 ---
 # <a name="remote-processing-analysis-services"></a>リモート処理 (Analysis Services)
   あるコンピューターから発行された処理要求を同じネットワーク上の別のコンピューターで実行する場合、スケジュールされた処理や自動処理をリモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで実行できます。  
@@ -92,10 +92,10 @@ ms.locfileid: "48173102"
 2.  最後の手順として、ジョブを管理するために必要な警告や通知を追加して、定義したスケジュールで実行するようにジョブを変更します。 また、処理スクリプトを調整したり、ジョブ内に複数のステップを作成してオブジェクトを個別に処理したりできます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server エージェント コンポーネント](../../ssms/agent/sql-server-agent.md#Components)   
- [SQL Server エージェントで SSAS 管理タスクのスケジュール設定](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [バッチ処理&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [sysadmin](../../ssms/agent/sql-server-agent.md#Components)   
+ [SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [バッチ処理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)   
- [オブジェクトの処理&#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
+ [オブジェクトの処理 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: データ更新履歴 (Power Pivot for SharePoint) の表示 |Microsoft ドキュメント
+title: データ更新履歴 (Power Pivot for SharePoint) の表示 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b05a5f8fa173699aebe8567a329e7a93ee58975
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028653"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099683"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>データ更新履歴の表示 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "34028653"
 ##  <a name="pageelements"></a> 履歴情報の使用  
  データ更新の履歴ページには、各更新操作に関する詳細な情報が表示されます。 このページの情報を使用すると、更新が行われたかどうかを確認したり、更新が失敗した理由を調べたりすることができます。  
   
-|アイテム|Description|  
+|アイテム|説明|  
 |----------|-----------------|  
 |名前|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれている Excel ブックのファイル名を示します。|  
 |現在の状態|値は、 **[スケジュール]**、 **[更新中]**、 **[成功]**、 **[失敗]** のいずれかです。<br /><br /> **[スケジュール]** は、初めてスケジュールを作成するときに表示されます。 データ更新が初めて実行された後は、この状態メッセージは表示されなくなります。<br /><br /> **[更新中]** は、データ更新が進行中であることを示します。 要求が処理キューにあるか、サーバーで現在実行中です。<br /><br /> **[成功]** は、前回のデータ更新操作が完了したことを示しており、更新後のブックは SharePoint ライブラリにチェックインされて戻されます。<br /><br /> **[失敗]** は、前回のデータ更新操作が成功しなかったことを示します。 更新後のデータは保存されませんでした。 ブックには、データ更新が開始される前と同じデータが含まれています。|  
@@ -63,12 +63,12 @@ ms.locfileid: "34028653"
 |スケジュールされている次回の更新|次回のデータ更新の実行がスケジュールされている日付を示します。<br /><br /> **[スケジュールの構成]** リンクから、スケジュール定義ページに移動できます。 ブックに対する投稿権限がある場合、このリンクをクリックして、ブック内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する自動データ更新を制御するスケジュール情報を表示および変更することができます。|  
 |Started|履歴の詳細セクション内の **[開始]** は、実際の処理時間を示します。 実際の処理時間は、スケジュールとは異なることもあります。 処理が開始されるのは、サーバー上に使用可能なメモリが十分にあるときです。 サーバーの負荷が高い場合、指定した開始時刻よりも数時間遅れて処理が開始されることもあります。|  
 |[完了]|履歴の詳細セクション内の **[完了]** は、データ更新操作がいつ終了したかを示します。 日付と時刻は、ブックがライブラリにチェックインされて戻されたときを示します。<br /><br /> データ更新が失敗すると、1 つ以上のエラー メッセージによって、失敗の原因が説明されます。 各レコードを展開して詳細な状態を表示できます。 各データ ソースは、成功メッセージ、またはデータ更新が完了しなかった理由を説明する失敗メッセージと共に、別々に表示されます。|  
-|[時刻]|データ更新が開始されてから完了するまでの累積時間を示します。|  
-|[状態]|更新操作が成功したか失敗したかの履歴レコードを示します。|  
+|Time|データ更新が開始されてから完了するまでの累積時間を示します。|  
+|状態|更新操作が成功したか失敗したかの履歴レコードを示します。|  
   
 ## <a name="see-also"></a>参照  
  [使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [データ更新 (Power Pivot for SharePoint) のスケジュールします。](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [データ更新のスケジュール (Power Pivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Power Pivot データ更新](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

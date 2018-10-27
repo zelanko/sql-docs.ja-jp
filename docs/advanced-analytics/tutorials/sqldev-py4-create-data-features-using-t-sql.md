@@ -1,5 +1,5 @@
 ---
-title: T-SQL を使用して、4 つ作成型データ機能のステップ |Microsoft ドキュメント
+title: T-SQL を使用してデータ機能の作成 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a0f77a624a94ca78b92539d8f098506246ac45e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202074"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806682"
 ---
-# <a name="step-4-create-data-features-using-t-sql"></a>手順 4: T-SQL を使用してデータ機能を作成する
+# <a name="create-data-features-using-t-sql"></a>T-SQL を使用してデータ機能を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-データ探索後から、データをある程度の知見を収集および上に移動する準備が整いました*機能のエンジニア リング*です。 生データから機能を作成するには、このプロセスは、高度な分析のモデリングの重要なステップを指定できます。
+データの探索の後に、データからインサイトが収集したおよび上に移動する準備が整いました*特徴エンジニア リング*します。 生データから機能を作成するには、このプロセスは、高度な分析のモデリングの重要なステップを指定できます。
 
-この記事では、チュートリアルのパート[SQL 開発者のためのデータベースでの Python analytics](sqldev-in-database-python-for-sql-developers.md)です。 
+この記事では、チュートリアルの一部[SQL 開発者向けの in-database Python analytics](sqldev-in-database-python-for-sql-developers.md)します。 
 
 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数を利用し、生データから機能を作成する方法について説明します。 その後、その関数をストアド プロシージャから呼び出し、機能の値を含むテーブルを作成します。
 
@@ -29,9 +29,9 @@ ms.locfileid: "31202074"
 
 1 つ目のカスタム T-SQL 関数、 _fnCalculateDistance_を利用し、Haversine 式で距離を計算し、2 つ目のカスタム T-SQL 関数、 _fnEngineerFeatures_を利用し、すべての機能を含むテーブルを作成します。
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>FnCalculateDistance を使用してのトリップ距離を計算します。
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>FnCalculateDistance を使用して、乗車距離を計算します。
 
-1.  このチュートリアルの準備の一環として関数 _fnCalculateDistance_ がダウンロードされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されているはずです。 コードを確認してみましょう。
+1.  このチュートリアルの準備の一環として関数 _fnCalculateDistance_ がダウンロードされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されているはずです。 時間がかかるコードを確認します。
   
     [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]**、 **[関数]** 、 **[スカラー値関数]** の順に展開します。
     _fnCalculateDistance_を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
@@ -59,7 +59,7 @@ ms.locfileid: "31202074"
     END
     GO
     ```
-**Notes:**
+**注**
 
 - この関数はスカラー値関数であり、事前定義されている種類の単一データ値を返します。
 - 乗車場所と降車場所から取得した緯度値と経度値を入力値として受け取ります。 Haversine 式は場所をラジアンに変換し、その値を利用して 2 場所間の直接距離をマイルで計算します。
@@ -108,14 +108,14 @@ ms.locfileid: "31202074"
   
     ご覧のとおり、メーターによって報告された距離と地理的距離は常に一致しているわけではありません。 これは、特徴エンジニア リングが重要な理由です。
 
-次の手順では、これらのデータの機能を使用して作成および Python を使用する機械学習モデルをトレーニングする方法を学習します。
+次の手順では、これらのデータ機能を使用して作成および Python を使用して機械学習モデルをトレーニングする方法を学習します。
 
 ## <a name="next-step"></a>次の手順
 
-[手順 5: トレーニングおよび T-SQL を使用して、Python モデルを保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[トレーニングし、T-SQL を使用して Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>前の手順
 
-[手順 3: データの探索と視覚化](sqldev-py3-explore-and-visualize-the-data.md)
+[探索し、データの視覚化](sqldev-py3-explore-and-visualize-the-data.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: IIS 8.0 で Analysis Services への HTTP アクセスの構成 |Microsoft ドキュメント
+title: IIS 8.0 での Analysis Services への HTTP アクセスの構成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5386b47f246483763066e7dc7a17721c5929113e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b3d45b5f1e3dc47aa47a4478cb8408626ad73de3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019759"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148147"
 ---
-# <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスの構成します。
+# <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスを構成します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "34019759"
   
  MSMDPUMP が Analysis Services に接続するときには、Windows のユーザー ID を使用して接続を行います。 このアカウントは、仮想ディレクトリが匿名接続用に構成されている場合は匿名アカウント、それ以外の場合は Windows のユーザー アカウントになります。 アカウントには、Analysis Services サーバーとデータベースでの適切なデータ アクセス権限が与えられている必要があります。  
   
- ![コンポーネント間の接続を示す図](../../analysis-services/instances/media/ssas.gif "コンポーネント間の接続の表示をダイアグラム")  
+ ![コンポーネント間の接続を示す図](../../analysis-services/instances/media/ssas.gif "コンポーネント間の接続を示す図")  
   
  次の表には、さまざまなシナリオで HTTP アクセスを有効にするときに検討する必要がある追加の検討事項が示されています。  
   
-|Scenario|構成|  
+|シナリオ|構成|  
 |--------------|-------------------|  
 |IIS と Analysis Services が同じコンピューター上にある場合|これが、既定の構成 (サーバー名は localhost)、ローカルの Analysis Services OLE DB プロバイダー、および NTLM を使用した Windows 統合セキュリティを使用できるため最も簡単な構成となります。 クライアントも同じドメインにあることを前提としているため、認証はユーザーにはわからないように内部的に行われ、追加の作業も必要ありません。|  
 |IIS と Analysis Services が異なるコンピューター上にある場合|このトポロジでは、Web サーバーに Analysis Services OLE DB プロバイダーをインストールする必要があります。 msmdpump.ini ファイルを編集して、リモート コンピューター上の Analysis Services インスタンスの場所を指定する必要もあります。<br /><br /> このトポロジでは、ダブルホップ認証ステップが追加されます。この認証では、資格情報がクライアントから Web サーバーに渡され、バックエンドの Analysis Services サーバーまで到達する必要があります。 Windows 資格情報と NTLM を使用している場合、NTLM では 2 番目のサーバーへのクライアント資格情報の委任が許可されないためにエラーが発生します。 最も一般的なソリューションは、SSL (Secure Sockets Layer) で基本認証を使用する方法です。ただし、この場合、MSMDPUMP 仮想ディレクトリにアクセスするときにユーザー名とパスワードの入力が必要となります。 さらにわかりやすい方法として、Kerberos を有効にし、Analysis Services 制約付き委任を構成することによって認証を内部的に処理して Analysis Services にアクセスできるようにすることもできます。 詳細については、「 [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 」を参照してください。<br /><br /> Windows ファイアウォールでどのポートのブロックを解除するかを検討してください。 両方のサーバー上のポートのブロックを解除して IIS 上の Web アプリケーションと、リモート サーバー上の Analysis Services にアクセスできるようにする必要があります。|  
@@ -74,7 +74,7 @@ ms.locfileid: "34019759"
   
 2.  **[Web サーバー]**  |  **[アプリケーション開発]** を開き、**[CGI]** と **[ISAPI 拡張機能]** を選択します。  
   
-     ![Web サーバーの役割の ISAPI および CGI の機能](../../analysis-services/instances/media/ssas-httpaccess-isapcgi.png "Web サーバーの役割の ISAPI および CGI の機能")  
+     ![ISAPI および CGI の機能を Web サーバーの役割](../../analysis-services/instances/media/ssas-httpaccess-isapcgi.png "ISAPI および CGI の機能を Web サーバーの役割")  
   
  **IIS がリモート サーバーにある場合**  
   
@@ -96,11 +96,11 @@ ms.locfileid: "34019759"
   
  ドライブは、NTFS ファイル システム用にフォーマットされている必要があります。 作成するフォルダーへのパスには、スペースを使用することはできません。  
   
-1.  次のファイルをコピーで見つかった\<ドライブ >: \Program Files\Microsoft SQL Server\\< インスタンス\>\OLAP\bin\isapi: MSMDPUMP です。DLL、MSMDPUMP です。INI、および Resources フォルダーです。  
+1.  次のファイルをコピー\<ドライブ >: \Program Files\Microsoft SQL Server\\< インスタンス\>\OLAP\bin\isapi: MSMDPUMP です。DLL、MSMDPUMP です。INI、および Resources フォルダー。  
   
      ![MSMDPUMP ファイルのフォルダー構造](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "MSMDPUMP ファイルのフォルダー構造")  
   
-2.  Web サーバーに新しいフォルダーを作成します\<ドライブ >: \inetpub\wwwroot\\**OLAP。**  
+2.  Web サーバーで新しいフォルダーを作成します\<ドライブ >: \inetpub\wwwroot\\**OLAP。**  
   
 3.  この新しいフォルダーに、コピーしておいたファイルを貼り付けます。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "34019759"
   
 1.  IIS マネージャーを起動します。  
   
-2.  サーバーのフォルダーを開き、 **[アプリケーション プール]** を右クリックし、 **[アプリケーション プールの追加]** をクリックします。 マネージ パイプライン モードを **[クラシック]** に設定し、.NET Framework を使用して、 **OLAP**という名前のアプリケーション プールを作成します。  
+2.  サーバーのフォルダーを開き、 **[アプリケーション プール]** を右クリックし、 **[アプリケーション プールの追加]** をクリックします。 マネージド パイプライン モードを **[クラシック]** に設定し、.NET Framework を使用して、 **OLAP**という名前のアプリケーション プールを作成します。  
   
-     ![スクリーン ショットのアプリケーション プールの追加 ダイアログ](../../analysis-services/instances/media/ssas-httpaccess.PNG "スクリーン ショットのアプリケーション プールの追加 ダイアログ")  
+     ![スクリーン ショットのアプリケーション プールの追加ダイアログ](../../analysis-services/instances/media/ssas-httpaccess.PNG "スクリーン ショットのアプリケーション プールの追加 ダイアログ")  
   
 3.  既定では、IIS はセキュリティ ID として **ApplicationPoolIdentity** を使用してアプリケーション プールを作成します (これは、Analysis Services への HTTP アクセスの有効な選択肢です)。 ID を変更しなければならない特別な理由があれば、 **[OLAP]** を右クリックし **[詳細設定]** を選択します。 **[ApplicationPoolIdentity]** を選択します。 このプロパティの **[変更]** をクリックして、ビルトイン アカウントを目的のカスタム アカウントに置き換えます。  
   
@@ -133,17 +133,17 @@ ms.locfileid: "34019759"
   
 1.  IIS マネージャで、**[サイト]** を開き、**[既定の Web サイト]** を開きます。 **Olap**という名前のフォルダーが表示されます。 これは \inetpub\wwwroot の下に作成した OLAP フォルダーへの参照です。  
   
-     ![アプリにする前に、OLAP フォルダーが変換](../../analysis-services/instances/media/ssas-httpaccess-convertfolderbefore.png "アプリに変換する前に、OLAP フォルダー")  
+     ![アプリに変換する前に、OLAP フォルダー](../../analysis-services/instances/media/ssas-httpaccess-convertfolderbefore.png "アプリに変換する前に、OLAP フォルダー")  
   
 2.  フォルダーを右クリックし、 **[アプリケーションに変換]** を選択します。  
   
 3.  [アプリケーションの追加] でエイリアスの **OLAP** を入力します。 **[選択]** をクリックして、OLAP アプリケーション プールを選択します。 C:\inetpub\wwwroot\OLAP に物理パスを設定する必要があります。  
   
-     ![アプリケーションへの変換の設定を](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "アプリケーションへの変換の設定")  
+     ![アプリケーションへの変換の設定](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "アプリケーションへの変換の設定")  
   
 4.  **[OK]** をクリックします。 Web サイトを更新し、OLAP フォルダーが既定の Web サイトでアプリケーションになっていることを確認します。 これで、MSMDPUMP ファイルへの仮想パスが確立されました。  
   
-     ![アプリケーションに変換後の OLAP フォルダー](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "アプリケーションへの変換後の OLAP フォルダー")  
+     ![アプリケーションへの変換後の OLAP フォルダー](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "アプリケーションへの変換後の OLAP フォルダー")  
   
 > [!NOTE]  
 >  以前のバージョンのこれらの手順には、仮想ディレクトリを作成する手順が含まれていました。 その手順は必要なくなりました。  
@@ -179,7 +179,7 @@ ms.locfileid: "34019759"
   
 3.  Windows 統合セキュリティを使用している場合は、 **[Windows 認証]** を有効にします。  
   
-     ![スクリーン ショット Vdir 認証設定の](../../analysis-services/instances/media/ssas-httpaccess-iisauth.png "スクリーン ショットの Vdir 認証設定")  
+     ![スクリーン ショットの Vdir 認証設定](../../analysis-services/instances/media/ssas-httpaccess-iisauth.png "スクリーン ショットの Vdir 認証設定")  
   
 4.  または、クライアント アプリケーションとサーバー アプリケーションが異なるドメインにある場合、 **[基本認証]** を有効にします。 このモードでは、ユーザーがユーザー名とパスワードを入力する必要があります。 ユーザー名とパスワードは HTTP 接続経由で IIS に送信されます。 IIS は MSMDPUMP に接続するときに、指定された資格情報を使用してユーザーの権限を借用しようとしますが、その資格情報は Analysis Services に委任されません。 代わりに、このドキュメントの手順 6. で説明するように、接続の有効なユーザー名とパスワードを渡す必要があります。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "34019759"
   
 6.  **OLAP** 仮想ディレクトリをクリックして、メイン ページを開きます。 **[ハンドラー マッピング]** をダブルクリックします。  
   
-     ![ハンドラー マッピング アイコン](../../analysis-services/instances/media/ssas-httpaccess-handlermapping.png "ハンドラー マッピング アイコン")  
+     ![ハンドラー マッピング アイコン](../../analysis-services/instances/media/ssas-httpaccess-handlermapping.png "機能のハンドラー マッピング アイコン")  
   
 7.  ページ上の任意の場所を右クリックし、 **[スクリプト マップの追加]** を選択します。 [スクリプト マップの追加] ダイアログ ボックスで、要求パスとして「 **\*.dll** 」を指定し、実行可能ファイルとして「c:\inetpub\wwwroot\OLAP\msmdpump.dll」を指定し、名前として「 **OLAP** 」を入力します。 このスクリプト マップに関連付けられている既定のすべての制限を維持します。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "34019759"
   
 8.  ISAPI 拡張機能を許可するように求めるメッセージが表示されたら、 **[はい]** をクリックします。  
   
-     ![ISAPI 拡張機能を追加する確認のスクリーン ショット](../../analysis-services/instances/media/ssas-httpaccess-isapiprompt.png "ISAPI 拡張機能を追加する確認のスクリーン ショット")  
+     ![ISAPI 拡張機能の追加確認のスクリーン ショット](../../analysis-services/instances/media/ssas-httpaccess-isapiprompt.png "ISAPI 拡張機能の追加確認のスクリーン ショット")  
   
 ##  <a name="bkmk_edit"></a> 手順 4: MSMDPUMP.INI ファイルを編集して対象サーバーを設定する  
  MSMDPUMP.INI ファイルを使用して、MSMDPUMP.DLL が接続する Analysis Services インスタンスを指定します。 これには、ローカルまたはリモートの、既定のインスタンスまたは名前付きのインスタンスとしてインストールされているインスタンスを指定できます。  
@@ -221,11 +221,11 @@ ms.locfileid: "34019759"
   
 ```  
   
- HTTP アクセスを構成している Analysis Services インスタンスがローカル コンピューター上にあり、既定のインスタンスとしてインストールされている場合は、この設定を変更する理由はありません。 それ以外の場合、サーバー名を指定する必要があります (たとえば、 \<ServerName > ADWRKS SRV01\</ServerName >)。 名前付きインスタンスとしてインストールされているサーバーの場合、インスタンス名を追加することを確認する (たとえば、 \<ServerName > ADWRKS srv01 \tabular\</ServerName >)。  
+ HTTP アクセスを構成している Analysis Services インスタンスがローカル コンピューター上にあり、既定のインスタンスとしてインストールされている場合は、この設定を変更する理由はありません。 それ以外の場合、サーバー名を指定する必要があります (たとえば、 \<ServerName > ADWRKS SRV01\</ServerName >)。 名前付きインスタンスとしてインストールされているサーバーの場合は、インスタンス名を追加することを確認する (たとえば、 \<ServerName > ADWRKS srv01 \tabular\</ServerName >)。  
   
- Analysis Services の既定のインスタンスは TCP/IP ポート 2383 をリッスンします。 既定のインスタンスとして Analysis Services をインストールした場合は内の任意のポートを指定する必要はありません\<ServerName > Analysis Services が自動的にポート 2383 でリッスンする方法を認識しているためです。 ただし、Windows ファイアウォールでそのポートへの着信接続を許可する必要があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
+ Analysis Services の既定のインスタンスは TCP/IP ポート 2383 をリッスンします。 既定のインスタンスとして Analysis Services をインストールした場合は 任意のポートを指定する必要はありません\<ServerName > Analysis Services が自動的にポート 2383 でリッスンする方法を知っているためです。 ただし、Windows ファイアウォールでそのポートへの着信接続を許可する必要があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
- 名前付きのように構成した場合、または既定の固定ポートでリッスンするように Analysis Services のインスタンスの場合は、サーバー名にポート番号を追加する必要があります (たとえば、 \<ServerName > AW-SRV01:55555\</ServerName >) を許可する必要がありますと受信Windows ファイアウォールでそのポートに接続します。  
+ 既定の固定ポートでリッスンするように Analysis Services のインスタンスまたは名前付き構成しているの場合は、サーバー名にポート番号を追加する必要があります (たとえば、 \<ServerName > AW-SRV01:55555\</ServerName >) し、許可する必要があります受信Windows ファイアウォールでそのポートに接続します。  
   
 ## <a name="step-5-grant-data-access-permissions"></a>手順 5: データ アクセス権限を付与する  
  前に説明したように、Analysis Services インスタンスの権限を付与する必要があります。 各データベース オブジェクトには特定レベルの権限 (読み取り、または読み取り/書き込み) を付与するロールがあり、各ロールに Windows ユーザー ID で構成されるメンバーが割り当てられます。  
@@ -238,26 +238,26 @@ ms.locfileid: "34019759"
 |-|-|  
 |匿名|IIS の **[匿名認証資格情報の編集]** で指定されたアカウントをメンバーシップ一覧に追加します。 詳細については、「 [匿名認証](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)」を参照してください。|  
 |Windows 認証|借用または委任によって Analysis Services データを要求する Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> Kerberos の制約付き委任を使用し、権限が必要なアカウントは、アクセスを要求する Windows ユーザー アカウントとグループ アカウントのみであることを想定しています。 アプリケーション プール ID のために必要な権限はありません。|  
-|[基本認証]|接続文字列で渡される Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> また、接続文字列で **EffectiveUserName** を使用して資格情報を渡している場合、アプリケーション プール ID には、Analysis Services インスタンスでの管理者権限が必要になります。 SSMS では、インスタンスを右クリックして&#124;**プロパティ** &#124; **セキュリティ** &#124; **追加**です。 アプリケーション プール ID を入力します。 組み込みの既定の id を使用した場合、アカウント名を指定は**IIS apppool \defaultapppool**です。<br /><br /> ![AppPoolIdentity アカウントを入力する方法を示します](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "AppPoolIdentity アカウントを入力する方法を示します")|  
+|[基本認証]|接続文字列で渡される Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> また、接続文字列で **EffectiveUserName** を使用して資格情報を渡している場合、アプリケーション プール ID には、Analysis Services インスタンスでの管理者権限が必要になります。 SSMS では、インスタンスを右クリックして&#124;**プロパティ** &#124; **セキュリティ** &#124; **追加**します。 アプリケーション プール ID を入力します。 組み込みの既定の id を使用した場合、アカウントは指定**IIS apppool \defaultapppool**します。<br /><br /> ![AppPoolIdentity アカウントを入力する方法を示しています](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "AppPoolIdentity アカウントを入力する方法を示しています")|  
   
  アクセス許可の設定の詳細については、「 [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)」を参照してください。  
   
 ##  <a name="bkmk_test"></a> 手順 6: 構成をテストする  
  MSMDPUMP の接続文字列構文は、MSMDPUMP.dll ファイルへの URL です。  
   
- Web アプリケーションが固定ポートでリッスンしている場合は、サーバー名または IP アドレスにポート番号を追加 (たとえば、`http://my-web-srv01:8080/OLAP/msmdpump.dll`または`http://123.456.789.012:8080/OLAP/msmdpump.dll`です。  
+ Web アプリケーションは、固定ポートでリッスンしているが場合に、サーバー名または IP アドレスにポート番号を追加 (たとえば、`http://my-web-srv01:8080/OLAP/msmdpump.dll`または`http://123.456.789.012:8080/OLAP/msmdpump.dll`します。  
   
  接続をすばやくテストするために、Internet Explorer、Microsoft Excel、または SQL Server Management Studio を使用して接続を開くことができます。  
   
  **Internet Explorer を使用した接続テスト**  
   
- エラーで終了する接続要求得ることができない」に進みますをあまり:"に、いずれかの接続を確立できません '\<サーバー名 >'、または分析サービスがサーバーで実行されていません"です。  
+ このエラーで終了する接続要求を得ることができない多く移動:"へのいずれかの接続を確立できません '\<サーバー名 >'、または分析サービスがサーバーで実行されていません"。  
   
  エラーに関する詳細情報を取得するには、次の操作を行います。  
   
 1.  **Internet Explorer**  >  **[インターネット オプション]**  >  **[詳細設定]** の順に選択し、**[HTTP エラー メッセージを簡易表示する]** チェック ボックスをオフにします。  
   
-2.  接続を再試行してください (たとえば、 `http://my-web-srv01:8080/OLAP/msmdpump.dll`)  
+2.  接続を再試行します (たとえば、 `http://my-web-srv01:8080/OLAP/msmdpump.dll`)  
   
  ブラウザー ウィンドウに ERROR XML が表示される場合は、原因である可能性がある MSMDPUMP を排除して、証明書にフォーカスを移動できます。  
   
@@ -267,7 +267,7 @@ ms.locfileid: "34019759"
   
      オブジェクト エクスプ ローラーには、次の HTTP 接続が表示されます:  
   
-     ![SSMS に表示された HTTP 接続](../../analysis-services/instances/media/ssas-httpaccess-ssms.PNG "SSMS に表示された HTTP 接続")  
+     ![SSMS で示すように HTTP 接続](../../analysis-services/instances/media/ssas-httpaccess-ssms.PNG "SSMS に表示された HTTP 接続")  
   
 2.  認証には Windows 認証を使用し、Management Studio を使用するユーザーが Analysis Services 管理者であることが必要です。 管理者は、さらに権限を付与して、他のユーザーがアクセスできるようにすることができます。  
   
@@ -289,14 +289,14 @@ ms.locfileid: "34019759"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- プログラムからの接続の設定の詳細については、「 [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)」を参照してください。  
+ プログラムからの接続の設定の詳細については、「 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)」を参照してください。  
   
  最後に、接続が開始されるネットワーク環境内で実行されているクライアント コンピューターを使用して、より厳密な事後テストを必ず実行するようにしてください。  
   
 ## <a name="see-also"></a>参照  
  [フォーラムの投稿 (msmdpump と基本認証を使用した HTTP アクセス)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [Analysis Services のアクセスを許可するための Windows ファイアウォールを構成します。](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [オブジェクトと操作へのアクセスの承認 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [IIS の認証方法](http://go.microsoft.com/fwlink/?LinkdID=208461)   
  [IIS 7 で SSL を設定する方法](http://go.microsoft.com/fwlink/?LinkId=207562)  
   

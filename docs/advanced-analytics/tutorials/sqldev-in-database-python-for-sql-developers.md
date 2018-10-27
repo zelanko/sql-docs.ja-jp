@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 250d2efd6d212348083f5dc3bbc355c466f4811b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 26703f73312b5531490afc7d01319d4ac290bebe
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461858"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806762"
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 開発者向けの In-database Python 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,30 +37,23 @@ Machine learning ソリューションを構築するプロセスをいくつか
 
 すべてのタスクを行うことができますを使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い慣れた環境でのストアド プロシージャ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [手順 1: サンプル データのダウンロード](demo-data-nyctaxi-in-sql.md)
 
-    サンプル データセットとすべてのスクリプト ファイルをローカル コンピューターにダウンロードします。
-
-- [手順 2: PowerShell を使用した SQL Server へのデータのインポート](sqldev-py2-import-data-to-sql-server-using-powershell.md)
-
-    指定されたインスタンスでデータベースとテーブルを作成し、テーブルにサンプル データを読み込む PowerShell スクリプトを実行します。
-
-- [手順 3: 探索し、Python を使用してデータを視覚化](sqldev-py3-explore-and-visualize-the-data.md)
+- [探索し、Python を使用してデータを視覚化します。](sqldev-py3-explore-and-visualize-the-data.md)
 
     基本的なデータ探索とビジュアル化から Python を呼び出し元によって、実行[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャ。
 
-- [手順 4: T-SQL で Python を使用してデータ機能を作成します。](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [T-SQL で Python を使用してデータ機能を作成します。](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     カスタム SQL 関数を使用して新しいデータ機能を作成します。
   
-- [手順 5: トレーニングし、T-SQL を使用して Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [トレーニングし、T-SQL を使用して Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     構築し、ストアド プロシージャで Python を使用して、機械学習モデルを保存します。
   
     このチュートリアルは、二項分類タスクを実行する方法を示します回帰または多クラス分類モデルを構築するのにデータを使用することもできます。
 
   
--  [手順 6: Python モデルを運用します。](sqldev-py6-operationalize-the-model.md)
+-  [ Python モデルを運用します。](sqldev-py6-operationalize-the-model.md)
 
     モデルをデータベースに保存した後は、予測を使用するため、モデルを呼び出す[!INCLUDE[tsql](../../includes/tsql-md.md)]します。
 

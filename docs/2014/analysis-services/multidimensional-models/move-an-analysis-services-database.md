@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4471bba7b99010c2138acd2c49d0ad650945724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055155"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145327"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services データベースの移動
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) が多次元式またはテーブル モデル データベースを別の場所に移動することは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。  
@@ -140,15 +140,15 @@ ms.locfileid: "48055155"
   
 2.  XMLA コマンドを実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [アタッチし、Analysis Services データベースのデタッチ](attach-and-detach-analysis-services-databases.md)   
+ [Analysis Services データベースのインポートとデタッチ](attach-and-detach-analysis-services-databases.md)   
  [データベースの格納場所](database-storage-location.md)   
- [データベースの Readwritemode](database-readwritemodes.md)   
- [Attach 要素](../xmla/xml-elements-commands/attach-element.md)   
- [Detach 要素](../xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode 要素](../xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation 要素](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [データベースの ReadWriteMode](database-readwritemodes.md)   
+ [Attach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

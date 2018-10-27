@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6f65ecd222adfbadab453084d2b5a0dfbfa171ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bca6dcb1287918901f3bfb11a8e33e9c8917e84
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136142"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100073"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] は、ディスク ベース テーブルとは異なるパターンでメモリを消費します。 メモリおよびガベージ コレクション サブシステムに提供される DMV またはパフォーマンス カウンターを使用して、データベース内のメモリ最適化テーブルとインデックス向けに割り当てられて使用されているメモリの量を監視できます。  これによって、システム レベルとデータベース レベルの両方で状況を表示でき、メモリの枯渇による問題を回避できます。  
@@ -170,7 +170,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 詳細については、「 [sys.dm_db_xtp_table_memory_stats](http://msdn.microsoft.com/en-us/99b8a95f-d04b-4edb-a764-17b95581d071)」 を参照してください。  
+ 詳細については、「 [sys.dm_db_xtp_table_memory_stats](http://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071)」 を参照してください。  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>内部システム構造によるメモリ消費  
  メモリは、トランザクション構造、データ ファイルとデルタ ファイルのバッファー、ガベージ コレクション構造などのシステム オブジェクトによっても消費されます。 次に示すように、 `sys.dm_xtp_system_memory_consumers` にクエリを実行することで、これらのシステム オブジェクトに使用されるメモリを確認できます。  

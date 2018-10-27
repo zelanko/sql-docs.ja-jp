@@ -15,12 +15,12 @@ ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a25bcc56bdd0a0f07c0ebaa6e59de0b44979661d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fb601bdbf190c84401c64f5f469bc6b5b6956ef
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165852"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148267"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多次元モデル内のディメンション
   データベース ディメンションとは、ファクト データに関する情報を 1 つまたは複数のキューブで提供するための、属性と呼ばれる関連オブジェクトが集まったものです。 たとえば、Product ディメンションの一般的な属性としては、製品名、製品カテゴリ、製品ライン、製品サイズ、製品価格などがあります。 これらのオブジェクトは、データ ソース ビューのテーブル内の列にバインドされており、 既定では、これらの属性は、属性階層として表示され、キューブ内のファクト データを理解する際に使用できます。 属性はユーザー定義階層にまとめることができます。これらの階層には、ユーザーがキューブ内のデータを参照する際に使用できるナビゲーション パスが含まれています。  
@@ -36,7 +36,7 @@ ms.locfileid: "48165852"
  キューブを作成するときは、データベースに既に存在するディメンションを新しいキューブに追加することもできます。 これらのディメンションは、別のキューブやディメンション ウィザードで以前に定義されている場合があります。 データベース ディメンションは、定義した後に、ディメンション デザイナーで変更および構成できます。 またキューブ ディメンションは、キューブ デザイナーで、限られた範囲内でカスタマイズできます。  
   
 > [!NOTE]  
->  XMLA または分析管理オブジェクト (AMO) のいずれかを使用すると、ディメンション、属性、および階層をプログラムによってデザインおよび構成することもできます。 詳細については、次を参照してください。 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](../scripting/analysis-services-scripting-language-assl-for-xmla.md)と[Analysis Management Objects を使用した開発&#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md)します。  
+>  XMLA または分析管理オブジェクト (AMO) のいずれかを使用すると、ディメンション、属性、および階層をプログラムによってデザインおよび構成することもできます。 詳細については、次を参照してください。 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)と[Analysis Management Objects を使用した開発&#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  このトピックでは、次の内容について紹介します。  
@@ -50,7 +50,7 @@ ms.locfileid: "48165852"
  [属性リレーションシップの定義](attribute-relationships-define.md)  
  ディメンション デザイナーを使用して、属性リレーションシップを定義、変更、および構成する方法について説明します。  
   
- [ユーザー定義階層を作成します。](user-defined-hierarchies-create.md)  
+ [ユーザー定義階層の作成](user-defined-hierarchies-create.md)  
  ディメンション デザイナーを使用してユーザー定義階層のディメンション属性を定義、変更、および構成する方法について説明します。  
   
  [ビジネス インテリジェンス ウィザードを使用したディメンションの拡張](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  

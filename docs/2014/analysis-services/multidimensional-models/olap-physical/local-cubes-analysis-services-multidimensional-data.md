@@ -14,12 +14,12 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f334a0282a27d707e0c1ec99817ddee3d318fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b84fe6ed1b6b06eee783aef0f214017cca8bca
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216652"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145877"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>ローカル キューブ (Analysis Services - 多次元データ)
   ローカル キューブを作成、更新、または削除するには、ASSL スクリプトまたは AMO プログラムを作成して実行する必要があります。  
@@ -40,8 +40,8 @@ ms.locfileid: "48216652"
   
 |ローカル キューブ用データのソース|作成方法|  
 |------------------------------------|---------------------|  
-|サーバーベースのキューブ|CREATE GLOBAL CUBE ステートメントを使用するまたは[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]スクリプト言語 (ASSL) スクリプトを作成して、サーバー ベースのキューブからのキューブを設定します。 詳細については、次を参照してください。[グローバル キューブの作成ステートメント&#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube)または[Analysis Services スクリプト言語&#40;ASSL&#41;参照](../../scripting/analysis-services-scripting-language-assl-for-xmla.md)します。|  
-|リレーショナル データ ソース|ASSL スクリプトを使用して、OLE DB リレーショナル データベースからキューブを作成して設定します。 ASSL を使用してローカル キューブを作成するには、ローカル キューブ ファイル (*.cub) に接続して、サーバー キューブを作成するときに [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスで ASSL スクリプトを実行するのと同じ要領で ASSL スクリプトを実行するだけです。 詳細については、次を参照してください。 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](../../scripting/analysis-services-scripting-language-assl-for-xmla.md)します。|  
+|サーバーベースのキューブ|CREATE GLOBAL CUBE ステートメントを使用するまたは[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]スクリプト言語 (ASSL) スクリプトを作成して、サーバー ベースのキューブからのキューブを設定します。 詳細については、次を参照してください。[グローバル キューブの作成ステートメント&#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube)または[Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)します。|  
+|リレーショナル データ ソース|ASSL スクリプトを使用して、OLE DB リレーショナル データベースからキューブを作成して設定します。 ASSL を使用してローカル キューブを作成するには、ローカル キューブ ファイル (*.cub) に接続して、サーバー キューブを作成するときに [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスで ASSL スクリプトを実行するのと同じ要領で ASSL スクリプトを実行するだけです。 詳細については、次を参照してください。 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)します。|  
   
  ローカル キューブを再構築してデータを更新するには、REFRESH CUBE ステートメントを使用します。 詳細については、次を参照してください。 [CUBE ステートメントの更新&#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)します。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48216652"
   
 ## <a name="see-also"></a>参照  
  [CREATE GLOBAL CUBE ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
- [Services スクリプト言語の分析を使用した開発&#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Analysis Services スクリプト言語 (ASSL) での開発](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [更新の CUBE ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)  
   
   

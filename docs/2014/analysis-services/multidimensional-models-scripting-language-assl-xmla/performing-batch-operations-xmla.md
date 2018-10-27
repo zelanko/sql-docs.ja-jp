@@ -21,15 +21,15 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: caa4083d1a35f710cbbfb87ecb904b1dafc346af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44ffc8084af6917a8df84c5a204df96112441723
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213272"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148327"
 ---
 # <a name="performing-batch-operations-xmla"></a>バッチ操作の実行 (XMLA)
-  使用することができます、[バッチ](../xmla/xml-elements-commands/batch-element-xmla.md)XML for Analysis (XMLA) 単一の XMLA を使用して複数の XMLA コマンドを実行するコマンド[Execute](../xmla/xml-elements-methods-execute.md)メソッド。 `Batch` コマンドに含まれる複数のコマンドは、単一のトランザクションとして実行することも、あるいはコマンドごとに別個のトランザクションとして直列または並列で実行することもできます。 アウトオブ ライン バインドおよびその他のプロパティを指定することも、`Batch`の複数の処理コマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  
+  使用することができます、[バッチ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)XML for Analysis (XMLA) 単一の XMLA を使用して複数の XMLA コマンドを実行するコマンド[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッド。 `Batch` コマンドに含まれる複数のコマンドは、単一のトランザクションとして実行することも、あるいはコマンドごとに別個のトランザクションとして直列または並列で実行することもできます。 アウトオブ ライン バインドおよびその他のプロパティを指定することも、`Batch`の複数の処理コマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>トランザクションおよび非トランザクション バッチ コマンドの実行  
  `Batch` コマンドは、コマンドを以下の 2 つのいずれかの方法で実行します。  
@@ -45,13 +45,13 @@ ms.locfileid: "48213272"
  `Batch` コマンドに含まれるコマンドが返す結果はすべて、それらのコマンドが `Batch` コマンド内に含まれている順序と同じ順序で返されます。 `Batch` コマンドによって返される結果は、`Batch` コマンドがトランザクション バッチまたは非トランザクション バッチのいずれであるかによって異なります。  
   
 > [!NOTE]  
->  場合、`Batch`コマンドにはなどの出力を返さないコマンドが含まれています、[ロック](../xmla/xml-elements-commands/lock-element-xmla.md)コマンドと、コマンドが正常に実行を`Batch`コマンドは、空白を返します[ルート](../xmla/xml-elements-properties/root-element-xmla.md)要素内の結果の要素。 空の `root` 要素があることにより、`Batch` コマンドに含まれるそれぞれのコマンドが、そのコマンドの結果の適切な `root` 要素と確実に対応します。  
+>  場合、`Batch`コマンドにはなどの出力を返さないコマンドが含まれています、[ロック](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)コマンドと、コマンドが正常に実行を`Batch`コマンドは、空白を返します[ルート](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla)要素内の結果の要素。 空の `root` 要素があることにより、`Batch` コマンドに含まれるそれぞれのコマンドが、そのコマンドの結果の適切な `root` 要素と確実に対応します。  
   
 ### <a name="returning-results-from-transactional-batch-results"></a>トランザクション バッチの結果から結果を返す処理  
- トランザクション バッチ内で実行されたコマンドの結果は、`Batch` コマンド全体が完了するまで返されません。 それぞれのコマンドが実行された後に結果が返されないのは、トランザクション バッチ内のいずれかのコマンドが失敗すれば、`Batch` コマンド全体、および含まれるすべてのコマンドがロールバックされるためです。 すべてのコマンドを開始して正常に実行すると、[を返す](../xmla/xml-elements-properties/return-element-xmla.md)の要素、 [ExecuteResponse](../xmla/xml-elements-objects-executeresponse.md)によって返される要素、`Execute`のメソッド、`Batch`コマンドには 1 つ[結果](../xmla/xml-elements-properties/results-element-xmla.md)要素、1 つを格納する`root`要素に含まれている正常に実行コマンドごとに、`Batch`コマンド。 `Batch` コマンド内のいずれかのコマンドが起動できない場合、または完了に失敗した場合、`Execute` メソッドは、失敗したコマンドのエラーを含む SOAP エラーを `Batch` コマンドについて返します。  
+ トランザクション バッチ内で実行されたコマンドの結果は、`Batch` コマンド全体が完了するまで返されません。 それぞれのコマンドが実行された後に結果が返されないのは、トランザクション バッチ内のいずれかのコマンドが失敗すれば、`Batch` コマンド全体、および含まれるすべてのコマンドがロールバックされるためです。 すべてのコマンドを開始して正常に実行すると、[を返す](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/return-element-xmla)の要素、 [ExecuteResponse](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects-executeresponse)によって返される要素、`Execute`のメソッド、`Batch`コマンドには 1 つ[結果](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/results-element-xmla)要素、1 つを格納する`root`要素に含まれている正常に実行コマンドごとに、`Batch`コマンド。 `Batch` コマンド内のいずれかのコマンドが起動できない場合、または完了に失敗した場合、`Execute` メソッドは、失敗したコマンドのエラーを含む SOAP エラーを `Batch` コマンドについて返します。  
   
 ### <a name="returning-results-from-nontransactional-batch-results"></a>非トランザクション バッチの結果から結果を返す処理  
- 非トランザクション バッチ内のコマンドによる結果は、それらのコマンドが `Batch` コマンド内に含まれている順序で、各コマンドごとに返されます。 `Batch` コマンド内のいずれのコマンドも正常に起動できなかった場合、`Execute` メソッドは、その `Batch` コマンドについてのエラーを含む SOAP エラーを返します。 少なくとも 1 つのコマンドが正常に起動された場合、その `return` コマンドに対する `ExecuteResponse` メソッドによって返される `Execute` 要素の `Batch` 要素には、1 つの `results` 要素が含まれます。この要素には、`root` コマンドに含まれる各コマンドに対して 1 つの `Batch` 要素が含まれています。 非トランザクション バッチ内の 1 つまたは複数のコマンドが開始することはできませんまたは完了するには失敗した場合、`root`その失敗したコマンドの要素が含まれています、[エラー](../xmla/xml-elements-properties/error-element-xmla.md)エラーを説明する要素。  
+ 非トランザクション バッチ内のコマンドによる結果は、それらのコマンドが `Batch` コマンド内に含まれている順序で、各コマンドごとに返されます。 `Batch` コマンド内のいずれのコマンドも正常に起動できなかった場合、`Execute` メソッドは、その `Batch` コマンドについてのエラーを含む SOAP エラーを返します。 少なくとも 1 つのコマンドが正常に起動された場合、その `return` コマンドに対する `ExecuteResponse` メソッドによって返される `Execute` 要素の `Batch` 要素には、1 つの `results` 要素が含まれます。この要素には、`root` コマンドに含まれる各コマンドに対して 1 つの `Batch` 要素が含まれています。 非トランザクション バッチ内の 1 つまたは複数のコマンドが開始することはできませんまたは完了するには失敗した場合、`root`その失敗したコマンドの要素が含まれています、[エラー](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla)エラーを説明する要素。  
   
 > [!NOTE]  
 >  非トランザクション バッチ内の少なくとも 1 つのコマンドが起動できれば、その非トランザクション バッチに含まれるすべてのコマンドが `Batch` コマンドの結果にエラーを返した場合であっても、その非トランザクション バッチは正常に実行されたものと見なされます。  
@@ -59,7 +59,7 @@ ms.locfileid: "48213272"
 ## <a name="using-serial-and-parallel-execution"></a>直列および並列実行の使用  
  `Batch` コマンドでは、含まれるコマンドを直列または並列で実行することができます。 コマンドが直列に実行される場合、`Batch` コマンド内に含まれる次のコマンドは、`Batch` コマンド内で現在実行中のコマンドが完了するまで起動できません。 コマンドが並列で実行される場合、`Batch` によって複数のコマンドを同時に実行することができます。  
   
- 並行して実行するコマンドを追加するコマンドを並列で実行する、[並列](../xmla/xml-elements-properties/parallel-element-xmla.md)のプロパティ、`Batch`コマンド。 現時点では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]だけなは、シーケンシャルに実行できる[プロセス](../xmla/xml-elements-commands/process-element-xmla.md)コマンドを並列でします。 などの他の任意の XMLA コマンド[作成](../xmla/xml-elements-commands/create-element-xmla.md)または[Alter](../xmla/xml-elements-commands/alter-element-xmla.md)に含まれる、`Parallel`プロパティが連続して実行します。  
+ 並行して実行するコマンドを追加するコマンドを並列で実行する、[並列](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/parallel-element-xmla)のプロパティ、`Batch`コマンド。 現時点では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]だけなは、シーケンシャルに実行できる[プロセス](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)コマンドを並列でします。 などの他の任意の XMLA コマンド[作成](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)または[Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)に含まれる、`Parallel`プロパティが連続して実行します。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、`Process` プロパティに含まれるすべての `Parallel` コマンドの並列実行を試みますが、すべての `Process` コマンドが並列で実行されるとは限りません。 各 `Process` コマンドはインスタンスによって分析され、並列で実行できないとインスタンスが判断した `Process` コマンドは直列に実行されます。  
   
@@ -110,20 +110,20 @@ ms.locfileid: "48213272"
   
 -   `ProcessAffectedObjects` コマンドの `Batch` 属性は、指定したオブジェクトを処理する `Process` コマンドに含まれる `Batch` コマンドの結果、再処理が必要になったオブジェクトがある場合に、インスタンスがそれらのオブジェクトも処理するかどうかを示します。  
   
--   [バインド](../xmla/xml-elements-properties/bindings-element-xmla.md)プロパティにはにより、すべての使用の不一致バインドのコレクションが含まれています、`Process`コマンド、`Batch`コマンド。  
+-   [バインド](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla)プロパティにはにより、すべての使用の不一致バインドのコレクションが含まれています、`Process`コマンド、`Batch`コマンド。  
   
--   [DataSource](../xmla/xml-elements-properties/source-element-xmla.md)プロパティには、すべてのによって使用されるデータ ソースのアウトオブ ライン バインドにはが含まれています、`Process`コマンド、`Batch`コマンド。  
+-   [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)プロパティには、すべてのによって使用されるデータ ソースのアウトオブ ライン バインドにはが含まれています、`Process`コマンド、`Batch`コマンド。  
   
--   [DataSourceView](../xmla/xml-elements-properties/datasourceview-element-xmla.md)プロパティにはすべてで使用されるデータ ソース ビューのアウトオブ ライン バインドが含まれています、`Process`コマンド、`Batch`コマンド。  
+-   [DataSourceView](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla)プロパティにはすべてで使用されるデータ ソース ビューのアウトオブ ライン バインドが含まれています、`Process`コマンド、`Batch`コマンド。  
   
--   [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md)プロパティでは、方法を指定する、`Batch`コマンドがすべてで発生したエラーを処理`Process`に含まれるコマンド、`Batch`コマンド。  
+-   [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla)プロパティでは、方法を指定する、`Batch`コマンドがすべてで発生したエラーを処理`Process`に含まれるコマンド、`Batch`コマンド。  
   
     > [!IMPORTANT]  
     >  `Process` コマンドが `Bindings` コマンドに含まれている場合、その `DataSource` コマンドには `DataSourceView`、`ErrorConfiguration`、`Process`、および `Batch` プロパティを含めることができません。 `Process` コマンドにこれらのプロパティを含める必要がある場合、その `Batch` コマンドを含む `Process` の対応するプロパティに、必要な情報を指定してください。  
   
 ## <a name="see-also"></a>参照  
- [要素をバッチ&#40;XMLA&#41;](../xmla/xml-elements-commands/batch-element-xmla.md)   
- [要素を処理&#40;XMLA&#41;](../xmla/xml-elements-commands/process-element-xmla.md)   
+ [要素をバッチ&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)   
+ [要素を処理&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)   
  [多次元モデル オブジェクトの処理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Analysis Services での XMLA による開発](developing-with-xmla-in-analysis-services.md)  
   

@@ -19,12 +19,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428eb8165a89cff4210096e993f3140066a8e759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062809"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146237"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>接続およびセッションの管理 (XMLA)
   *状態保持*は id およびコンテキストをメソッド呼び出しの間でのクライアントのサーバーを保持する条件です。 *状態を保持しない*は、サーバーは覚えていない id とクライアントのコンテキスト メソッドの呼び出しが完了したら条件です。  
@@ -37,7 +37,7 @@ ms.locfileid: "48062809"
   
 -   複数のコマンドを単一のセッションのコンテキストで実行できます。  
   
--   XMLA のコンテキストにおけるトランザクションのサポートはプロバイダー固有のコマンドで送信される、 [Execute](../xmla/xml-elements-methods-execute.md)メソッド。  
+-   XMLA のコンテキストにおけるトランザクションのサポートはプロバイダー固有のコマンドで送信される、 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッド。  
   
  XMLA は、Distributed Authoring and Versioning (DAV) プロトコルが疎結合環境でロックを実装するために使用しているアプローチと同様の手法で、Web 環境のセッションをサポートする方法を定義します。 この実装は、プロバイダーがさまざまな理由 (たとえば、タイムアウトや接続エラーなど) でセッションの有効期限を終了させることができるという点で、DAV と類似しています。 セッションがサポートされる場合、Web サービスは、中断されて再開が必要なコマンドのセットを認識し、処理する準備を整えている必要があります。  
   

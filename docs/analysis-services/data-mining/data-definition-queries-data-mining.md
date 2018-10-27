@@ -1,5 +1,5 @@
 ---
-title: データ定義クエリ (データ マイニング) |Microsoft ドキュメント
+title: データ定義クエリ (データ マイニング) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 562a3c0fd3b73c60f3e729afe926d61d68e55b1b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a38c0fb30533e0569d14cec0387d362fa4cabc87
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015664"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148277"
 ---
 # <a name="data-definition-queries-data-mining"></a>データ定義クエリ (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,14 +81,14 @@ ms.locfileid: "34015664"
   
 |||  
 |-|-|  
-|DMX クエリ用のテンプレートの使用|[SQL Server Management Studio で Analysis Services テンプレートを使用します。](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|予測クエリ ビルダーを使用した、あらゆる種類のクエリの設計|[予測クエリ ビルダーを使用して予測クエリを作成します。](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|SQLServer Profiler を使用したクエリ定義のキャプチャ、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を監視するためのトレースの使用|[SQL Server Profiler を使用して、Analysis Services の監視を](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で提供されるスクリプト言語やプログラム言語の詳細|[XML for Analysis & #40 です。XMLA & #41;参照](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [分析管理オブジェクト & #40; を使用した開発AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でのモデルの管理の詳細。|[エクスポートし、インポートのデータ マイニング オブジェクト](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [エクスポート (&) #40";"DMX"&"#41;](../../dmx/export-dmx.md)<br /><br /> [インポート (&) #40";"DMX"&"#41;](../../dmx/import-dmx.md)|  
+|DMX クエリ用のテンプレートの使用|[SQL Server Management Studio での Analysis Services テンプレートの使用](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|予測クエリ ビルダーを使用した、あらゆる種類のクエリの設計|[予測クエリ ビルダーを使用した予測クエリの作成](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
+|SQLServer Profiler を使用したクエリ定義のキャプチャ、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を監視するためのトレースの使用|[SQL Server Profiler を使用した Analysis Services の監視](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で提供されるスクリプト言語やプログラム言語の詳細|[XML for Analysis (XML for Analysis) リファレンス](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [分析管理オブジェクト (AMO) による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
+|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのモデルの管理の詳細。|[データ マイニング オブジェクトのエクスポートおよびインポート](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT (DMX)](../../dmx/export-dmx.md)<br /><br /> [IMPORT (DMX)](../../dmx/import-dmx.md)|  
 |OPENROWSET、および外部データへのクエリのための他の方法の詳細|[<ソース データ クエリ>](../../dmx/source-data-query.md)|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング ウィザードと &#40; です。Analysis Services - データ マイニング &#41; です。](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ [データ マイニング ウィザード (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

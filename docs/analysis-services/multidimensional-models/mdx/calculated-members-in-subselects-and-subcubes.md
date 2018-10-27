@@ -1,5 +1,5 @@
 ---
-title: 計算されるメンバーはサブセレクトとサブキューブで |Microsoft ドキュメント
+title: 計算されるメンバーはサブセレクトとサブキューブで |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 673f73c91f4cf3206e9f9df15f248b059a4e78d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8bae68e24f6a7f2dfd42e335a9e003f56cf1d610
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023829"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145317"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   計算メンバーは実行時に式から値が計算されるディメンション メンバーで、クエリのキューブ空間をより正確に定義するためにサブセレクトとサブキューブで使用されます。  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>サブ空間で計算メンバーを有効にする  
- **サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROPMSMDSUBQUERIES**プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)サブセレクトの動作や計算されるメンバーまたは計算されるセットの許容期間を定義またはサブキューブです。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
+ **サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROPMSMDSUBQUERIES**プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)サブセレクトの動作や計算されるメンバーまたは計算されるセットの許容量を定義またはサブキューブです。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
   
  SubQueries プロパティでは次の値を指定できます。  
   
 |||  
 |-|-|  
-|値|説明|  
+|値|Description|  
 |0|計算されるメンバーは、サブセレクトまたはサブキューブで許可されません。<br /><br /> 計算されるメンバーが参照されている場合にサブセレクトまたはサブキューブを評価すると、エラーが発生します。|  
 |1|計算されるメンバーはサブセレクトまたはサブキューブで許可されますが、返されるサブ空間に先祖メンバーは含まれません。|  
 |2|計算されるメンバーはサブセレクトまたはサブキューブで許可され、返されるサブ空間に先祖メンバーが含まれます。 また、混合粒度は、計算されるメンバーの選択で許可されます。|  
@@ -81,7 +81,7 @@ Where [Measures].[Reseller Sales Amount]
 |||||||  
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
-|All Geographies|(null)|(null)|(null)|(null)|(null)|  
+|すべての都市|(null)|(null)|(null)|(null)|(null)|  
 |United States|(null)|(null)|(null)|(null)|(null)|  
 |Washington|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
@@ -119,12 +119,12 @@ Where [Measures].[Reseller Sales Amount]
   
  上記の結果では、[All Geographies]、[United States]、[Oregon]、および [Washington] の集計値は、&[Portland]&[OR] および &[Spokane]&[WA] の子孫の集計から取得されます。 計算されるメンバーから取得されるものはありません。  
   
-### <a name="remarks"></a>解説  
+### <a name="remarks"></a>コメント  
  サブセレクトまたはサブキューブ式で許可されるのは、グローバルまたはセッションで計算されるメンバーのみです。 MDX 式にクエリで計算されるメンバーが含まれている場合に、サブセレクトまたはサブキューブ式を評価すると、エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [クエリのサブセレクト](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [サポートされる XMLA プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [サポートされる XMLA プロパティ (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 903c12bd13660af2cde0333e783d5dc22cc4a76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a328e2b7af2fb1e743c81e23a0f80e7530f3810
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207702"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146007"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>マイニング モデル (Analysis Services - データ マイニング)
   *マイニング モデル* は、データにアルゴリズムを適用することによって作成されますが、単なるアルゴリズムまたはメタデータ コンテナーではなく、予測を生成し、リレーションシップを推定するために新しいデータに適用されるデータ、統計情報、およびパターンのセットです。  
@@ -93,7 +93,7 @@ ms.locfileid: "48207702"
   
 -   **Algorithm プロパティ** モデルの作成に使用するアルゴリズムを指定します。 使用できるアルゴリズムは、使用しているプロバイダーによって異なります。 含まれているアルゴリズムの一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を参照してください[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)します。 `Algorithm` プロパティはマイニング モデルに適用し、各モデルに対して 1 回だけ設定できます。 後でアルゴリズムを変更できますが、選択したアルゴリズムによってサポートされていないために、マイニング モデルの列が無効になる場合があります。 このプロパティを変更した後は、モデルを再処理する必要があります。  
   
--   **Usage プロパティ** モデルによる各列の使用方法を定義します。 として列の使用法を定義する`Input`、 `Predict`、 `Predict Only`、または`Key`します。 `Usage` プロパティは、マイニング モデルの個別の列に適用し、モデルに含まれるすべての列に個別に設定する必要があります。 モデルで使用しない列が構造に含まれる場合は、使用法を `Ignore` に設定します。 顧客名や電子メール アドレスなどは、マイニング構造に含まれていても分析には使用されないデータの例です。 このように、後でクエリを実行する場合、分析フェーズで列を含める必要はありません。  
+-   **Usage プロパティ** モデルによる各列の使用方法を定義します。 列の使用法は、`Input`、`Predict`、`Predict Only`、`Key` のいずれかに定義できます。 `Usage` プロパティは、マイニング モデルの個別の列に適用し、モデルに含まれるすべての列に個別に設定する必要があります。 モデルで使用しない列が構造に含まれる場合は、使用法を `Ignore` に設定します。 顧客名や電子メール アドレスなどは、マイニング構造に含まれていても分析には使用されないデータの例です。 このように、後でクエリを実行する場合、分析フェーズで列を含める必要はありません。  
   
  マイニング モデルのプロパティの値は、マイニング モデルの作成後に変更できます。 ただし、たとえマイニング モデルの名前の変更であっても、なんらかの変更を加えた場合はマイニング モデルの再処理が必要になります。 モデルを再処理すると、結果が変化する場合があります。  
   
@@ -126,10 +126,10 @@ ms.locfileid: "48207702"
   
 |トピック|リンク|  
 |------------|-----------|  
-|複数のマイニング モデルをサポートするマイニング構造の構築方法について説明します。 モデルにおける列の使用法についても説明します。|[マイニング構造列](mining-structure-columns.md)<br /><br /> [マイニング モデル列](mining-model-columns.md)<br /><br /> [コンテンツの種類&#40;データ マイニング&#41;](content-types-data-mining.md)|  
-|さまざまなアルゴリズム、およびアルゴリズムの選択がモデル コンテンツに与える影響について説明します。|[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
-|モデルのコンポジションと動作に影響を与えるプロパティの設定方法について説明します。|[マイニング モデルのプロパティ](mining-model-properties.md)<br /><br /> [モデリング フラグ&#40;データ マイニング&#41;](modeling-flags-data-mining.md)|  
-|データ マイニングのプログラミング可能なインターフェイスについて説明します。|[分析管理オブジェクトを使用した開発&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)|  
+|複数のマイニング モデルをサポートするマイニング構造の構築方法について説明します。 モデルにおける列の使用法についても説明します。|[マイニング構造列](mining-structure-columns.md)<br /><br /> [マイニング モデル列](mining-model-columns.md)<br /><br /> [コンテンツの種類 (データ マイニング)](content-types-data-mining.md)|  
+|さまざまなアルゴリズム、およびアルゴリズムの選択がモデル コンテンツに与える影響について説明します。|[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|モデルのコンポジションと動作に影響を与えるプロパティの設定方法について説明します。|[マイニング モデルのプロパティ](mining-model-properties.md)<br /><br /> [モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)|  
+|データ マイニングのプログラミング可能なインターフェイスについて説明します。|[分析管理オブジェクト &#40;AMO&#41; による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でのカスタム データ マイニング ビューアーの使用方法について説明します。|[データ マイニング モデル ビューアー](data-mining-model-viewers.md)|  
 |データ マイニング モデルに対して使用できるさまざまな種類のクエリの例について説明します。|[データ マイニング クエリ](data-mining-queries.md)|  
   
@@ -141,11 +141,11 @@ ms.locfileid: "48207702"
 |マイニング モデルを追加および削除する|[既存のマイニング構造へのマイニング モデルの追加](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [マイニング構造からのマイニング モデルの削除](delete-a-mining-model-from-a-mining-structure.md)|  
 |マイニング モデルの列を操作する|[マイニング モデルからの列の除外](exclude-a-column-from-a-mining-model.md)<br /><br /> [モデル列の別名の作成](create-an-alias-for-a-model-column.md)<br /><br /> [マイニング モデルでの列の分離の変更](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [モデルでリグレッサーとして使用する列の指定](specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |モデルのプロパティを変更する|[マイニング モデルのプロパティの変更](change-the-properties-of-a-mining-model.md)<br /><br /> [マイニング モデルへのフィルターの適用](apply-a-filter-to-a-mining-model.md)<br /><br /> [マイニング モデルからのフィルターの削除](delete-a-filter-from-a-mining-model.md)<br /><br /> [マイニング モデルのドリルスルーの有効化](enable-drillthrough-for-a-mining-model.md)<br /><br /> [アルゴリズム パラメーターの表示または変更](view-or-change-algorithm-parameters.md)|  
-|モデルをコピー、 移動、または管理する|[マイニング モデルのコピーの作成](make-a-copy-of-a-mining-model.md)<br /><br /> [マイニング モデルの表示のコピー](copy-a-view-of-a-mining-model.md)<br /><br /> [エクスポート&AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)<br /><br /> [インポート&AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)|  
+|モデルをコピー、 移動、または管理する|[マイニング モデルのコピーの作成](make-a-copy-of-a-mining-model.md)<br /><br /> [マイニング モデルの表示のコピー](copy-a-view-of-a-mining-model.md)<br /><br /> [エクスポート &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [インポート &#40;DMX&#41;](/sql/dmx/import-dmx)|  
 |モデルにデータを入力する、またはモデルのデータを更新する|[マイニング モデルの処理](process-a-mining-model.md)|  
 |OLAP モデルを操作する|[データ マイニング ディメンションの作成](create-a-data-mining-dimension.md)|  
   
 ## <a name="see-also"></a>参照  
- [データベース オブジェクト&#40;Analysis Services - 多次元データ&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [データベース オブジェクト &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

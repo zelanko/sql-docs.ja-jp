@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016089"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145997"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services の新機能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -94,7 +94,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
  ### <a name="powershell-for-tabular-models"></a>表形式モデル用の PowerShell    
  このリリースには、互換性レベル 1200 の表形式モデル用の PowerShell の拡張機能が含まれています。 すべての該当するコマンドレットに加えて、表形式モードに固有の [Invoke ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) コマンドレットと [Invoke ProcessTable コマンドレット](../analysis-services/powershell/invoke-processtable-cmdlet.md)を使用できます。    
  ### <a name="ssms-scripting-database-operations"></a>SSMS スクリプトのデータベース操作    
- [最新の SQL Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)では、スクリプトで Create、Alter、Delete、Backup、Restore、Attach、Detach などのデータベース コマンドを使用できるようになりました。 Output は、JSON での表形式モデルのスクリプト言語 (TMSL) です。 詳細については、「[表形式モデルのスクリプト言語 &#40;TMSL&#41; リファレンス](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)」を参照してください。    
+ [最新の SQL Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)では、スクリプトで Create、Alter、Delete、Backup、Restore、Attach、Detach などのデータベース コマンドを使用できるようになりました。 Output は、JSON での表形式モデルのスクリプト言語 (TMSL) です。 詳細については、「[表形式モデルのスクリプト言語 &#40;TMSL&#41; リファレンス](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)」を参照してください。    
  ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク    
  [Analysis Services DDL 実行タスク](../integration-services/control-flow/analysis-services-execute-ddl-task.md) は、表形式モデルのスクリプト言語 (TMSL) コマンドも受け入れられるようになりました。     
  ### <a name="ssas-powershell-cmdlet"></a>SSAS PowerShell コマンドレット    
@@ -103,7 +103,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>SSMS でサポートされる表形式モデルのスクリプト言語 (TMSL)    
   [最新バージョンの SSMS](http://msdn.microsoft.com/library/mt238290.aspx)を使用して、表形式モデル 1200 のほとんどの管理タスクを自動化するスクリプトを作成できるようになりました。 現時点では、次のタスクをスクリプト化できます。すべてのレベルの Process、およびデータベース レベルの CREATE、ALTER、DELETE。    
     
- 機能的には、TMSL は、表形式のメタデータを説明する **model**、 **table**、および **relationship** などのネイティブ記述子を使用する TMSL を除いて、多次元オブジェクトの定義を提供する XMLA ASSL の拡張機能と同じです。 スキーマの詳細については、「[表形式モデルのスクリプト言語 &#40;TMSL&#41; リファレンス](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)」を参照してください。    
+ 機能的には、TMSL は、表形式のメタデータを説明する **model**、 **table**、および **relationship** などのネイティブ記述子を使用する TMSL を除いて、多次元オブジェクトの定義を提供する XMLA ASSL の拡張機能と同じです。 スキーマの詳細については、「[表形式モデルのスクリプト言語 &#40;TMSL&#41; リファレンス](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)」を参照してください。    
     
  表形式モデル用に作成された JSON ベースのスクリプトは、次のようになります。    
     
@@ -121,7 +121,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
 }    
 ```    
 
-ペイロードは、上述の例のように最小限に抑えた、または完全なセットのオブジェクト定義で高水準に装飾された JSON ドキュメントです。 構文については、「[表形式モデルのスクリプト言語 &#40;TMSL&#41; リファレンス](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)」で説明しています。
+ペイロードは、上述の例のように最小限に抑えた、または完全なセットのオブジェクト定義で高水準に装飾された JSON ドキュメントです。 構文については、「[表形式モデルのスクリプト言語 &#40;TMSL&#41; リファレンス](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)」で説明しています。
 
 データベース レベルで、CREATE、ALTER、および DELETE コマンドは、TMSL スクリプトを使い慣れた XMLA ウィンドウに出力します。  Process などの他のコマンドは、このリリースでもスクリプトを作成できます。 将来のリリースで、その他の多くのアクションに対するスクリプトのサポートが追加される可能性があります。    
 

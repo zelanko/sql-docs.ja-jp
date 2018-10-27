@@ -1,5 +1,5 @@
 ---
-title: コマンド (XMLA) のキャンセル |Microsoft ドキュメント
+title: コマンドのキャンセル (XMLA) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,46 +9,46 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0894379d301cc38084c3ee5e8d48e181d9d91dd4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020259"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145018"
 ---
 # <a name="canceling-commands-xmla"></a>コマンドのキャンセル (XMLA)
-  コマンドを実行しているユーザーの管理権限に応じて、[キャンセル](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)Analysis (XMLA) は、セッション、セッション、接続、サーバー プロセス、または関連付けられているセッションでコマンドを取り消すことができますの XML でコマンドまたは接続です。  
+  コマンドを発行したユーザーの管理アクセス許可に応じて、[キャンセル](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)Analysis (XMLA) は、コマンドをキャンセルして、セッション、セッション、接続、サーバー プロセス、または、関連付けられているセッションでの XML でコマンドまたは接続します。  
   
 ## <a name="canceling-commands"></a>コマンドのキャンセル  
- ユーザーが送信することによって、現在の明示的なセッションのコンテキスト内で現在実行中のコマンドを取り消すことができます、**キャンセル**コマンド プロパティを指定せずにします。  
+ ユーザーが送信することによって、現在の明示的なセッションのコンテキスト内で現在実行中のコマンドをキャンセルできます、**キャンセル**コマンド プロパティを指定せずにします。  
   
 > [!NOTE]  
 >  暗黙のセッション内で実行中のコマンドは、ユーザー操作によって取り消すことはできません。  
   
 ### <a name="canceling-batch-commands"></a>バッチ コマンドのキャンセル  
- ユーザーが取り消された場合、**バッチ**コマンド、し、残りのすべてのコマンド内で実行されていない、**バッチ**コマンドが取り消されました。 場合、**バッチ**コマンドがトランザクション型でいずれかのコマンドの前に実行されたこと、**キャンセル**コマンドの実行がロールバックされます。  
+ ユーザーがキャンセルした場合、**バッチ**コマンドを次に残りのすべてのコマンドを内で実行されていない、**バッチ**コマンドが取り消されました。 場合、**バッチ**コマンドがトランザクション型でいずれかのコマンドの前に実行されたが、**キャンセル**コマンドの実行がロールバックされます。  
   
 ## <a name="canceling-sessions"></a>セッションのキャンセル  
- 明示的なセッションのセッション識別子を指定することによって、 [SessionID](../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)のプロパティ、**キャンセル**コマンドでは、データベース管理者またはサーバー管理者は、セッションを取り消すことができますも含め、現在のコマンドを実行しています。 データベース管理者は、自分が管理権限を持つデータベースに対するセッションだけをキャンセルできます。  
+ 明示的なセッションのセッション識別子を指定することによって、 [SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla)のプロパティ、**キャンセル**コマンドをデータベース管理者またはサーバー管理者がセッションをキャンセルなど、現在のコマンドを実行します。 データベース管理者は、自分が管理権限を持つデータベースに対するセッションだけをキャンセルできます。  
   
- データベース管理者は、DISCOVER_SESSIONS スキーマ行セットを取得することにより、指定されたデータベースに対するアクティブ セッションを取得することができます。 データベース管理者が、XMLA を使用する、DISCOVER_SESSIONS スキーマ行セットを取得する**Discover**メソッド、のSESSION_CURRENT_DATABASE制限列の適切なデータベース識別子を指定して[制限](../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)のプロパティ、 **Discover**メソッドです。  
+ データベース管理者は、DISCOVER_SESSIONS スキーマ行セットを取得することにより、指定されたデータベースに対するアクティブ セッションを取得することができます。 データベース管理者が、XMLA を使用するには、DISCOVER_SESSIONS スキーマ行セットを取得するには、 **Discover**メソッドをのSESSION_CURRENT_DATABASE制限列の適切なデータベースの識別子を指定します[。制限](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla)のプロパティ、 **Discover**メソッド。  
   
 ## <a name="canceling-connections"></a>接続のキャンセル  
- 接続識別子を指定することによって、 [ConnectionID](../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md)のプロパティ、**キャンセル**コマンド、サーバー管理者は、すべてのすべてを含む特定の接続に関連付けられているセッションを取り消すことができます、コマンドを実行し、接続をキャンセルします。  
+ 接続識別子を指定することによって、 [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla)のプロパティ、**キャンセル**コマンド、サーバー管理者は、すべてのセッションをすべて含む、特定の接続に関連付けられているをキャンセルできます、コマンドを実行し、接続をキャンセルします。  
   
 > [!NOTE]  
->  場合、インスタンスの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]見つけてデータ ポンプでは、HTTP 接続しつつ、複数のセッションが開いたら、インスタンスが接続を取り消すことはできませんの接続に関連付けられているセッションを取り消すことはできません。 この場合が実行中に発生した場合、**キャンセル**コマンドでエラーが発生します。  
+>  場合、インスタンスの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]見つけてインスタンスが接続を取り消すことはできません、データ ポンプでは、HTTP 接続を提供しながら複数のセッションが開いたらなど、接続に関連付けられているセッションを取り消すことはできません。 このケースがの実行中に発生した場合、**キャンセル**コマンドでエラーが発生します。  
   
- サーバー管理者のアクティブな接続を取得できる、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA を使用して DISCOVER_CONNECTIONS スキーマ行セットを取得することによってインスタンス**Discover**メソッドです。  
+ サーバー管理者のアクティブな接続を取得できます、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、XMLA を使用して DISCOVER_CONNECTIONS スキーマ行セットを取得することによってインスタンス**Discover**メソッド。  
   
 ## <a name="canceling-server-processes"></a>サーバー プロセスのキャンセル  
- サーバー プロセス識別子 (SPID) を指定することによって、 [SPID](../../analysis-services/xmla/xml-elements-properties/spid-element-xmla.md)のプロパティ、**キャンセル**コマンド、サーバー管理者は、特定の SPID に関連付けられているコマンドを取り消すことができます。  
+ サーバー プロセス識別子 (SPID) を指定することによって、 [SPID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla)のプロパティ、**キャンセル**コマンド、サーバー管理者は、特定の SPID に関連付けられているコマンドを取り消すことができます。  
   
 ## <a name="canceling-associated-sessions-and-connections"></a>関連するセッションおよび接続のキャンセル  
- 設定することができます、 [CancelAssociated](../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)プロパティ接続、セッション、および接続、セッション、またはで指定した SPID に関連付けられているコマンドをキャンセルする場合は true を**キャンセル**コマンド。  
+ 設定することができます、 [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla)プロパティを接続、セッション、および接続、セッション、またはで指定された SPID に関連付けられているコマンドをキャンセルする場合は true、**キャンセル**コマンド。  
   
 ## <a name="see-also"></a>参照  
- [Discover メソッド&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
- [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Discover メソッド&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
+ [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

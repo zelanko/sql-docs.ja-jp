@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112027"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145597"
 ---
 # <a name="impersonation-ssas-tabular"></a>権限借用 (SSAS テーブル)
   このトピックでは、データのインポートおよび処理 (更新) のためにデータ ソースに接続するときに、ログオン資格情報が Analysis Services によってどのように使用されるかについて、テーブル モデルの作成者を対象に説明しています。  
@@ -71,7 +71,7 @@ ms.locfileid: "48112027"
 |**特定の Windows ユーザー名とパスワード** <sup>2</sup>|ImpersonateWindowsUserAccount|データ ソースのデータをインポートまたは処理する際に、モデルで Windows ユーザー アカウントが使用されるように指定します。 ドメインとユーザー アカウントの名前は、次の形式:**\<ドメイン名 >\\< ユーザー アカウント名\>** します。 テーブルのインポート ウィザードを使用して新しいモデルを作成する場合は、これが既定のオプションです。|  
 |**[サービス アカウント]**|ImpersonateServiceAccount|モデルを管理している Analysis Services サービス インスタンスに関連付けられているセキュリティ資格情報をモデルで使用するように指定します。|  
   
- <sup>1</sup>ImpersonationMode の値を指定する、 [DataSourceImpersonationInfo 要素&#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md)データ ソースのプロパティ。  
+ <sup>1</sup>ImpersonationMode の値を指定する、 [DataSourceImpersonationInfo 要素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)データ ソースのプロパティ。  
   
  <sup>2</sup>を再起動するか、メモリからワークスペース データベースが削除された場合、このオプションを使用する場合、または**ワークスペースの保有期間**プロパティに設定されて**メモリからアンロード**または**ワークスペースから削除**、し、モデル プロジェクトを閉じると、後続のセッションでテーブル データを処理しようとした場合は、求められますの各データ ソースの資格情報を入力します。 同様に、配置されたモデル データベースがメモリから削除されると、各データ ソースの資格情報の入力を求められるようになります。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48112027"
   
 ## <a name="see-also"></a>参照  
  [DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)   
- [データ ソース&#40;SSAS 表形式&#41;](../data-sources-ssas-tabular.md)   
- [表形式モデル ソリューションの配置&#40;SSAS 表形式&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [データ ソース &#40;SSAS テーブル&#41;](../data-sources-ssas-tabular.md)   
+ [テーブル モデル ソリューションの配置 &#40;SSAS テーブル&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

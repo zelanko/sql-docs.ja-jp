@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348643"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147959"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -88,6 +88,6 @@ ms.locfileid: "43348643"
 ## <a name="see-also"></a>参照  
  [MDX の予約語](../../../mdx/mdx-reserved-words.md)   
  [Analysis Services での翻訳のサポート](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML for Analysis への準拠&#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis への準拠&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

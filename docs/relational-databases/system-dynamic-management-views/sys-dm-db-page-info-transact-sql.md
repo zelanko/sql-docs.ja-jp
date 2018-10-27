@@ -20,12 +20,12 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f2e2d0b49f58eff2eac52103bddc6fda818aeb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849281"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150203"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -59,58 +59,58 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|database_id |ssNoversion |データベース ID |
-|file_id |ssNoversion |ファイル ID |
-|page_id |ssNoversion |ページ ID |
-|page_type |ssNoversion |ページの種類 |
-|page_type_desc |nvarchar(64) |ページの種類の説明 |
-|page_flag_bits |nvarchar(64) |ページ ヘッダー フラグのビット |
-|page_flag_bits_desc |nvarchar (256) |ページ ヘッダー フラグ ビット説明 |
-|page_type_flag_bits |nvarchar(64) |ページ ヘッダーの型のフラグのビット |
-|page_type_flag_bits_desc |nvarchar(64) |ページ ヘッダー内の型フラグのビットの説明 |
-|object_id |ssNoversion |ページを所有するオブジェクトの ID |
-|index_id |ssNoversion |インデックス (ヒープ データ ページの場合は 0) の ID |
-|partition_id |BIGINT |パーティションの ID |
-|alloc_unit_id |BIGINT |アロケーション ユニットの ID |
-|page_level |ssNoversion |インデックスのページのレベル (リーフ = 0) |
-|slot_count |SMALLINT |スロット数の合計 (使用済みおよび未使用) <br> データ ページでは、この値は行の数に相当します。 |
-|ghost_rec_count |SMALLINT |ページ上のゴーストとしてマークされたレコードの数 <br> ゴースト レコードは、削除対象としてマークされていますが、削除するのにはまだ 1 つです。 |
-|torn_bits |ssNoversion |データの欠落を検出するためのセクターごとに 1 ビット。 チェックサムの格納にも使用 <br> この値は、データの破損を検出するために使用されます。 |
-|is_iam_pg |bit |ページが IAM ページかどうかを示すビット  |
-|is_mixed_ext |bit |指定する場合にビット混合エクステントの割り当てください。 |
-|pfs_file_id |SMALLINT |対応する PFS ページのファイル ID |
-|pfs_page_id |ssNoversion |対応する PFS ページのページ ID |
-|pfs_alloc_percent |ssNoversion |PFS バイトで示されている割り当て % |
-|pfs_status |nvarchar(64) |PFS バイト |
-|pfs_status_desc |nvarchar(64) |PFS バイトの説明 |
-|gam_file_id |SMALLINT |対応する GAM ページのファイル ID |
-|gam_page_id |ssNoversion |対応する GAM ページのページ ID |
-|gam_status |bit |GAM に割り当てられた指定する場合のビット |
-|gam_status_desc |nvarchar(64) |状態の GAM のビットの説明 |
-|sgam_file_id |SMALLINT |ファイルの対応する SGAM ページの ID |
-|sgam_page_id |ssNoversion |対応する SGAM ページのページ ID |
-|sgam_status |bit |SGAM で割り当てを指定する場合にビット |
-|sgam_status_desc |nvarchar(64) |状態の SGAM のビットの説明 |
-|diff_map_file_id |SMALLINT |対応する差分ビットマップ ページのファイル ID |
-|diff_map_page_id |ssNoversion |対応する差分ビットマップ ページのページ ID |
-|diff_status |bit |差分の状態が変更されたかどうかを示すビット |
-|diff_status_desc |nvarchar(64) |差分の状態のビットの説明 |
-|ml_file_id |SMALLINT |最小ログ記録ビットマップの該当するページのファイル ID |
-|ml_page_id |ssNoversion |最小ログ記録ビットマップの該当するページのページ ID |
-|ml_status |bit |ビットを示すかどうか、ページは、最小ログ記録 |
-|ml_status_desc |nvarchar(64) |ビットが最小ログ記録の状態の説明 |
-|free_bytes |SMALLINT |ページ上の空きバイト数 |
-|free_data_offset |ssNoversion |データ領域の最後に空き領域のオフセットします。 |
-|reserved_bytes |SMALLINT |すべてのトランザクションによって予約された空きバイト数 (場合ヒープ) <br> (インデックスのリーフ) の場合、非実体行の数 |
-|reserved_xdes_id |SMALLINT |M_xdesID m_reservedCnt に起因する領域 <br> デバッグの目的でのみ |
-|xdes_id |nvarchar(64) |M_reserved から提供された最新のトランザクション <br> デバッグの目的でのみ |
-|prev_page_file_id |SMALLINT |前のページのファイル ID |
-|prev_page_page_id |ssNoversion |前のページのページ ID |
-|next_page_file_id |SMALLINT |次のページのファイル ID |
-|next_page_page_id |ssNoversion |次のページのページ ID |
-|min_len |SMALLINT |固定サイズの行の長さ |
-|lsn |nvarchar(64) |ログ シーケンス番号/タイムスタンプ |
-|header_version |ssNoversion |ページ ヘッダーのバージョン |
+|database_id |ssNoversion |データベース ID |
+|file_id |ssNoversion |ファイル ID |
+|page_id |ssNoversion |ページ ID |
+|page_type |ssNoversion |ページの種類 |
+|page_type_desc |nvarchar(64) |ページの種類の説明 |
+|page_flag_bits |nvarchar(64) |ページ ヘッダー フラグのビット |
+|page_flag_bits_desc |nvarchar (256) |ページ ヘッダー フラグ ビット説明 |
+|page_type_flag_bits |nvarchar(64) |ページ ヘッダーの型のフラグのビット |
+|page_type_flag_bits_desc |nvarchar(64) |ページ ヘッダー内の型フラグのビットの説明 |
+|object_id |ssNoversion |ページを所有するオブジェクトの ID |
+|index_id |ssNoversion |インデックス (ヒープ データ ページの場合は 0) の ID |
+|partition_id |BIGINT |パーティションの ID |
+|alloc_unit_id |BIGINT |アロケーション ユニットの ID |
+|page_level |ssNoversion |インデックスのページのレベル (リーフ = 0) |
+|slot_count |SMALLINT |スロット数の合計 (使用済みおよび未使用) <br> データ ページでは、この値は行の数に相当します。 |
+|ghost_rec_count |SMALLINT |ページ上のゴーストとしてマークされたレコードの数 <br> ゴースト レコードは、削除対象としてマークされていますが、削除するのにはまだ 1 つです。 |
+|torn_bits |ssNoversion |データの欠落を検出するためのセクターごとに 1 ビット。 チェックサムの格納にも使用 <br> この値は、データの破損を検出するために使用されます。 |
+|is_iam_pg |bit |ページが IAM ページかどうかを示すビット  |
+|is_mixed_ext |bit |指定する場合にビット混合エクステントの割り当てください。 |
+|pfs_file_id |SMALLINT |対応する PFS ページのファイル ID |
+|pfs_page_id |ssNoversion |対応する PFS ページのページ ID |
+|pfs_alloc_percent |ssNoversion |PFS バイトで示されている割り当て % |
+|pfs_status |nvarchar(64) |PFS バイト |
+|pfs_status_desc |nvarchar(64) |PFS バイトの説明 |
+|gam_file_id |SMALLINT |対応する GAM ページのファイル ID |
+|gam_page_id |ssNoversion |対応する GAM ページのページ ID |
+|gam_status |bit |GAM に割り当てられた指定する場合のビット |
+|gam_status_desc |nvarchar(64) |状態の GAM のビットの説明 |
+|sgam_file_id |SMALLINT |ファイルの対応する SGAM ページの ID |
+|sgam_page_id |ssNoversion |対応する SGAM ページのページ ID |
+|sgam_status |bit |SGAM で割り当てを指定する場合にビット |
+|sgam_status_desc |nvarchar(64) |状態の SGAM のビットの説明 |
+|diff_map_file_id |SMALLINT |対応する差分ビットマップ ページのファイル ID |
+|diff_map_page_id |ssNoversion |対応する差分ビットマップ ページのページ ID |
+|diff_status |bit |差分の状態が変更されたかどうかを示すビット |
+|diff_status_desc |nvarchar(64) |差分の状態のビットの説明 |
+|ml_file_id |SMALLINT |最小ログ記録ビットマップの該当するページのファイル ID |
+|ml_page_id |ssNoversion |最小ログ記録ビットマップの該当するページのページ ID |
+|ml_status |bit |ビットを示すかどうか、ページは、最小ログ記録 |
+|ml_status_desc |nvarchar(64) |ビットが最小ログ記録の状態の説明 |
+|free_bytes |SMALLINT |ページ上の空きバイト数 |
+|free_data_offset |ssNoversion |データ領域の最後に空き領域のオフセットします。 |
+|reserved_bytes |SMALLINT |すべてのトランザクションによって予約された空きバイト数 (場合ヒープ) <br> (インデックスのリーフ) の場合、非実体行の数 |
+|reserved_xdes_id |SMALLINT |M_xdesID m_reservedCnt に起因する領域 <br> デバッグの目的でのみ |
+|xdes_id |nvarchar(64) |M_reserved から提供された最新のトランザクション <br> デバッグの目的でのみ |
+|prev_page_file_id |SMALLINT |前のページのファイル ID |
+|prev_page_page_id |ssNoversion |前のページのページ ID |
+|next_page_file_id |SMALLINT |次のページのファイル ID |
+|next_page_page_id |ssNoversion |次のページのページ ID |
+|min_len |SMALLINT |固定サイズの行の長さ |
+|lsn |nvarchar(64) |ログ シーケンス番号/タイムスタンプ |
+|header_version |ssNoversion |ページ ヘッダーのバージョン |
 
 ## <a name="remarks"></a>コメント
 `sys.dm_db_page_info`動的管理関数のようなページの情報を返します`page_id`、 `file_id`、 `index_id`、`object_id`ページ ヘッダーに存在するなど。 この情報は、トラブルシューティングとさまざまなパフォーマンス (ロックとラッチの競合) や破損の問題をデバッグする場合に便利です。
@@ -143,7 +143,7 @@ FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 SELECT page_info.* 
 FROM sys.dm_exec_requests AS d  
 CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r  
-CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
+CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
 ## <a name="see-also"></a>参照  

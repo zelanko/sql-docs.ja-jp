@@ -13,12 +13,12 @@ ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bf218f229ad8f97e1bdcda086f19bd7517896873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd954964af9c2495311423620c95af621021a5b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608620"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099244"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>サーバー接続ファイルの作成 (MySQLToSQL)
 スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバーの情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターがで`-c <serverconnectionfile>`します。 同じサーバー id がスクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
@@ -92,5 +92,5 @@ ms.locfileid: "47608620"
 コンソールの運用には、次の手順は[SSMA コンソールの実行&#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソール (MySQL) の実行](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[SSMA コンソール (MySQL) の実行](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

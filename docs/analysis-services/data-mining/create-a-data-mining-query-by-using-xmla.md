@@ -1,5 +1,5 @@
 ---
-title: XMLA を使用して、データ マイニング クエリを作成 |Microsoft ドキュメント
+title: XMLA を使用してデータ マイニング クエリの作成 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a786279915b38abb93941d7485f2b8c3a3413d6f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9741a81c10a71623f6e336795bb47ae199ee13d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017409"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146957"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA を使用したデータ マイニング クエリの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "34017409"
   
      **[結果]** ペインに返されるスキーマ行セットの一覧には、現在のインスタンスで入手できるすべての行セットの行セット名と行セット列が含まれます。  
   
-2.  **クエリ** ウィンドウで、後にカーソルを置き**\<制限一覧 >** し、enter キーを押して新しい行を追加します。  
+2.  **クエリ**ウィンドウで、後にカーソルを置き **\<Restriction List >** し、enter キーを押して新しい行を追加します。  
   
-3.  カーソルを置き、空白行と種類 **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  種類と空白行にカーソルを置き **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      制限のセクション全体は次のようになります。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34017409"
      [結果] ペインに、スキーマ定義および指定したモデルの値が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

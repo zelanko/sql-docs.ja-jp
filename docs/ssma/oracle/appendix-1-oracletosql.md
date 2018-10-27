@@ -10,12 +10,12 @@ ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: c7e4b188d72e52608f8768a3d50c0d0af2af747d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f667b429cc86eaf7055433f3c8bfdaf8fdf041
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807810"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099426"
 ---
 # <a name="appendix---1-oracletosql"></a>付録 - 1 (OracleToSQL)
 SSMA コンソールのコマンド ライン オプションを簡単に確認します。  
@@ -31,6 +31,6 @@ SSMA コンソールのコマンド ライン オプションを簡単に確認�
 |7|-p/securepassword|いいえ|-、/add {< server_id > [,... n] &#124; すべて} – c &#124; serverconnection < サーバー接続ファイル > [-v &#124; 変数 < 変数値ファイル >] [-o/上書き]<br /><br />または<br /><br />-、/add {< server_id > [,... n] &#124; すべて} – s&#124; スクリプト < スクリプト ファイル > [-v &#124; 変数 < 変数値ファイル >] [-o/上書き]<br /><br />– r/削除 {< server_id > [,... n] &#124; すべて}<br /><br />-l/一覧表示<br /><br />– e/エクスポート {< サーバー id > [,... n] &#124; すべて} < 暗号化パスワード - ファイル ><br /><br />– i/インポート {< サーバー id > [,... n] &#124; すべて} < 暗号化パスワード ファイルに >|指定した場合、このオプションをその他のオプションと組み合わされていない必要があります。<br /><br />サーバー id: {string} サーバーの一意の ID が提供されます。<br /><br />サーバー接続ファイル: サーバーの定義ファイル (serverconnectionfile または scriptfile)。<br /><br />変数値のファイル: これは変数の定義ファイルであり、サーバー接続ファイルで使用します。<br /><br />暗号化されたパスワード ファイル: これは、サーバーのパスワード ファイルをユーザーが指定したパス フレーズを使用して暗号化します。|  
 |8|-?|いいえ|該当なし|該当なし|  
   
-## <a name="see-also"></a>関連項目  
-[SSMA コンソール (Oracle) の実行](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+## <a name="see-also"></a>参照  
+[SSMA コンソール (Oracle) の実行](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

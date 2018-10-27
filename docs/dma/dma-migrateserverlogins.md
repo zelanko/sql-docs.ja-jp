@@ -2,7 +2,7 @@
 title: Data Migration Assistant で SQL Server ログインの移行 |Microsoft Docs
 description: Data Migration Assistant で SQL Server ログインを移行する方法について説明します
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e52fdcd55cddea31e317afe04833f5413c006325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836940"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643810"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant で SQL Server ログインを移行します。
 
@@ -44,7 +44,7 @@ ms.locfileid: "47836940"
 
 - ログインの移行の一環として、Data Migration Assistant、アクセス許可に割り当てます、ターゲット SQL Server でセキュリティ保護可能なソース SQL Server 上に存在します。 
 
-  ターゲット SQL Server で、ログインが既に存在する場合は、Data Migration Assistant セキュリティ保護可能リソースに割り当てられた権限のみを移行および全体のログインを再作成することはできません。
+  ターゲット SQL Server で、ログインが既に存在する場合は、Data Migration Assistant セキュリティ保護可能リソースに割り当てられた権限のみを移行して全体のログインを再作成されません。
 
 - Data Migration Assistant は、対象サーバーで、ログインが既に存在する場合は、データベース ユーザーにログインをマップするベスト エフォートです。
 

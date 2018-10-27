@@ -1,5 +1,5 @@
 ---
-title: オブジェクトとデータ マイニング ソリューションの管理 |Microsoft ドキュメント
+title: データ マイニング ソリューションおよびオブジェクトの管理 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed8768dc456f1805b139138e8591f6f9749525eb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015819"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145687"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>データ マイニング ソリューションおよびオブジェクトの管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "34015819"
   
  次のリンクでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してデータ マイニング オブジェクトを変更する方法について説明しています。  
   
--   [マイニング構造に使用されるデータ ソース ビューの編集します。](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [マイニング構造に使用されるデータ ソース ビューの編集](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [マイニング構造のプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [マイニング モデルのプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [モデリング フラグ (&) #40";"データ マイニング"&"#41 です。 表示または変更](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [モデリング フラグの表示または変更 &#40;データ マイニング&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [アルゴリズム パラメーターの表示または変更](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34015819"
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのデータ マイニング オブジェクトの管理  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、マイニング構造とマイニング モデルのスクリプト処理、処理、または削除を行うことができます。 オブジェクト エクスプローラーを使用した場合はプロパティ セットの一部のみが表示されます。ただし、 **[DMX クエリ]** ウィンドウを開き、マイニング構造を選択すると、マイニング モデルに関する追加のメタデータを表示できます。  
   
--   [SQL Server Management Studio で、DMX クエリを作成します。](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+-   [SQL Server Management Studio で DMX クエリを作成する](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="managing-data-mining-objects-programmatically"></a>データ マイニング オブジェクトのプログラムによる管理  
  次のプログラミング言語を使用すると、データ マイニング オブジェクトの作成、変更、処理、および削除の操作を行うことができます。 各言語は別々のタスクを対象として設計されています。結果として、実行できる操作の種類に制限があります。 たとえば、データ マイニング オブジェクトの一部のプロパティはデータ マイニング拡張機能 (DMX) では変更できず、XMLA または AMO を使用する必要があります。  
@@ -72,7 +72,7 @@ ms.locfileid: "34015819"
 ### <a name="analysis-management-objects-amo"></a>分析管理オブジェクト (AMO)  
  分析管理オブジェクト (AMO) は、データ マイニング オブジェクトを完全に制御できる、XMLA に基づいて構築されたオブジェクト モデルです。 AMO を使用して、マイニング構造とマイニング モデルを作成、配置、および監視できます。  
   
--   [AMO の概念とオブジェクト モデル](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [AMO の概念とオブジェクト モデル](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   

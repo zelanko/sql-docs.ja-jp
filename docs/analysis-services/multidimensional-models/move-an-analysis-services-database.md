@@ -1,5 +1,5 @@
 ---
-title: Analysis Services データベースを移動 |Microsoft ドキュメント
+title: Analysis Services データベースの移動 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 984430962e9df6c3efdb04d66ef255baed814a0b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026419"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148437"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services データベースの移動
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -138,12 +138,12 @@ ms.locfileid: "34026419"
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.Core.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [アタッチし、Analysis Services データベースのデタッチ](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
+ [Analysis Services データベースのインポートとデタッチ](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [データベースの格納場所](../../analysis-services/multidimensional-models/database-storage-location.md)   
- [データベースの Readwritemode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Attach 要素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Detach 要素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode 要素](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation 要素](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [データベースの ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [Attach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

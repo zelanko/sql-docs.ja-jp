@@ -1,22 +1,22 @@
 ---
 title: SQL ビッグ データ クラスター コンピューティング プールとは何ですか。 | Microsoft Docs
-description: ''
+description: この記事では、SQL Server 2019 ビッグ データ クラスターでコンピューティング プールについて説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c17f6ac604edc021299f473137dcf6c5e470e3d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050800"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>SQL ビッグ データ クラスター コンピューティング プールとは何ですか。
 
-この記事では、の役割を説明します。 *SQL のサーバー プールのコンピューティング*SQL Server の 2019 でビッグ データ クラスターをプレビューします。 コンピューティング プールは、ビッグ データ クラスターのスケール アウトのコンピューティング リソースを提供します。 次のセクションでは、アーキテクチャとコンピューティング プールの機能について説明します。
+この記事では、の役割を説明します。 *SQL のサーバー プールのコンピューティング*で SQL Server 2019 プレビューのビッグ データ クラスター。 コンピューティング プールは、ビッグ データ クラスターのスケール アウトのコンピューティング リソースを提供します。 次のセクションでは、アーキテクチャとコンピューティング プールの機能について説明します。
 
 ## <a name="compute-pool-architecture"></a>コンピューティング プール アーキテクチャ
 
@@ -33,4 +33,4 @@ Kubernetes で実行されるポッド コンピューティングまたはい�
 
 SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは何ですか。](big-data-cluster-overview.md)
+- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)

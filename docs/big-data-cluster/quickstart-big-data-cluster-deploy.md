@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384107"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050994"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: Azure Kubernetes Service (AKS) での SQL Server のビッグ データ クラスターをデプロイします。
 
@@ -26,9 +26,9 @@ AKS での開発/テスト環境に適した既定の構成でのビッグ デ�
 
 SQL Server のビッグ データ クラスターをインストールするコマンドを実行しているコンピューターにインストール[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)します。 SQL Server のビッグ データ クラスターでは、kubernetes では、サーバーとクライアント (kubectl) の両方で、最小の 1.10 バージョンが必要です。 Kubectl をインストールするを参照してください。 [kubectl のインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)します。 
 
-インストールする、 `mssqlctl` SQL Server のビッグ データを管理するための CLI ツールは、クライアント コンピューターのクラスター、最初にインストールする必要があります[Python](https://www.python.org/downloads/) v3.0 の最小バージョンと[pip3](https://pip.pypa.io/en/stable/installing/)します。 `pip` ダウンロードした 3.4 以上での Python バージョンを使用している場合に既にインストールされて[python.org](https://www.python.org/)します。
+インストールする、 **mssqlctl** SQL Server のビッグ データを管理するための CLI ツールは、クライアント コンピューターのクラスター、最初にインストールする必要があります[Python](https://www.python.org/downloads/) v3.0 の最小バージョンと[pip3](https://pip.pypa.io/en/stable/installing/)します。 `pip` ダウンロードした 3.4 以上での Python バージョンを使用している場合に既にインストールされて[python.org](https://www.python.org/)します。
 
-Python のインストール環境がない場合、`requests`パッケージをインストールする必要がある`requests`を使用して`python -m pip install requests`。 既にある場合、`requests`パッケージ、使用して最新バージョンにアップグレードする`python -m pip install requests --upgrade`します。
+Python インストールがない場合、`requests`パッケージをインストールする必要がある`requests`を使用して`python -m pip install requests`(を使用して、 `python3` Linux 上のこれらのコマンド)。 既にある場合、`requests`パッケージ、使用して最新バージョンにアップグレードする`python -m pip install requests --upgrade`します。
 
 ## <a name="verify-aks-configuration"></a>AKS の構成を確認します。
 
@@ -40,11 +40,14 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>Mssqlctl CLI 管理ツールをインストールします。
 
-次のコマンドをインストールする実行`mssqlctl`クライアント コンピューターにツール。 このコマンドは、Windows と Linux クライアントの両方から機能しますが、Windows で管理者特権で実行されているコマンド ウィンドウから実行しているかどうかを確認またはプレフィックス`sudo`on Linux:
+次のコマンドをインストールする実行**mssqlctl**クライアント コンピューターにツール。 このコマンドは、Windows と Linux クライアントの両方から機能しますが、Windows で管理者特権で実行されているコマンド ウィンドウから実行しているかどうかを確認またはプレフィックス`sudo`on Linux:
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
 ```
+
+> [!TIP]
+> 場合**mssqlctl**が正常にインストール、記事の前提条件の手順を確認しない[mssqlctl インストール](deployment-guidance.md#mssqlctl)。
 
 ## <a name="define-environment-variables"></a>環境変数を定義します。
 

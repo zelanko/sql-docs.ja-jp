@@ -16,12 +16,12 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 115ee695d8e5ae509499850113851f7bc565f562
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19da5b920b31791eacaf362819ce731d2822c0c4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190672"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148107"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクは、データ定義言語 (DDL) ステートメントを実行します。DDL ステートメントを使用すると、マイニング モデルや多次元オブジェクト (キューブおよびディメンションなど) を作成、削除、または変更できます。 たとえば DDL ステートメントは、 **Adventure Works** キューブ内にパーティションを作成したり、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]に含まれるサンプルの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のディメンションを削除したりできます。  
@@ -39,9 +39,9 @@ ms.locfileid: "48190672"
 ## <a name="ddl-statements"></a>DDL ステートメント  
  DDL ステートメントは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) のステートメントとして表され、XML for Analysis (XMLA) コマンドで構成されます。  
   
--   ASSL は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、それに含まれるデータベースやデータベース オブジェクトの定義、および記述に使用されます。 詳細については、次を参照してください。 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)します。  
+-   ASSL は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、それに含まれるデータベースやデータベース オブジェクトの定義、および記述に使用されます。 詳細については、次を参照してください。 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)します。  
   
--   XMLA は、Create、Alter、Process などのアクション コマンドを、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに送信する場合に使用されるコマンド言語です。 詳細については、「[XML for Analysis (XMLA) リファレンス](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)」を参照してください。  
+-   XMLA は、Create、Alter、Process などのアクション コマンドを、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに送信する場合に使用されるコマンド言語です。 詳細については、「[XML for Analysis (XMLA) リファレンス](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)」を参照してください。  
   
  DDL コードが別のファイルに格納されている場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクはファイル接続マネージャーを使用して、そのファイルのパスを指定します。 詳しくは「 [File Connection Manager](../connection-manager/file-connection-manager.md)」をご覧ください。  
   
@@ -219,9 +219,9 @@ ms.locfileid: "48190672"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Analysis Services DDL 実行タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[Analysis Services DDL 実行タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services DDL 実行タスク エディター &#40;[DDL] ページ&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [[Analysis Services DDL 実行タスク エディター] ([DDL] ページ)](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

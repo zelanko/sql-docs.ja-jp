@@ -13,12 +13,12 @@ ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e08cccf573d86d7904e695afdab289084f65604
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 338eb4766573cf99d3070fe91cdd276721df79b8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113434"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147977"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>多次元データベースのプロパティ設定 (Analysis Services)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース プロパティには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベース デザイナーで構成できるものが多数あります。  
@@ -38,7 +38,7 @@ ms.locfileid: "48113434"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|[集計プレフィックス]|データベース内のすべてのパーティションの集計名に使用される共通のプレフィックスです。 詳細については、「[AggregationPrefix 要素 (ASSL)](../scripting/properties/aggregationprefix-element-assl.md)」を参照してください。|  
+|[集計プレフィックス]|データベース内のすべてのパーティションの集計名に使用される共通のプレフィックスです。 詳細については、「[AggregationPrefix 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl)」を参照してください。|  
 |[照合順序]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置すると、ここで別の値を指定しない限り、データベースには Collation サーバー プロパティの値が継承されます。|  
 |DataSourceImpersonationInfo|データベース内のすべてのデータ ソース オブジェクトに対して既定の権限借用モードを指定します。 これは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスで、オブジェクトの処理、サーバーの同期、および OpenQuery や SystemOpenSchema のデータ マイニング ステートメントの実行に使用するモードです。|  
 |[推定サイズ]|ディスク上のデータベース ファイルの推定サイズを提供します。 データが複数の場所に格納されている場合、この推定値はデータベース フォルダーの下に格納されているデータ ファイルのみに制限されます。<br /><br /> `EstimatedSize` は、メモリの推定の基礎としても使用できます。 通常、メモリ要件は、データベースがメモリに読み込まれるときに作成される追加のデータ構造により、ディスク上のデータのサイズよりも大きくなります。<br /><br /> メモリ要件を詳しく推定するには、データベースのメモリ要件を把握する手段として、タスク マネージャーを使用してデータベースを処理する前後の Analysis Services プロセス メモリを確認し、使用されたメモリを調べることもできます。|  
@@ -46,7 +46,7 @@ ms.locfileid: "48113434"
 |MasterDataSource ID|リモート パーティションで使用します。 詳細については、「 [リモート パーティション](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [データベースのプロパティ ダイアログ ボックス&#40;SSAS - 多次元&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
- [Analysis Services プロジェクトのプロパティを構成する&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
+ [[データベースのプロパティ] ダイアログ ボックス (SSAS - 多次元)](../database-properties-dialog-box-ssas-multidimensional.md)   
+ [Analysis Services プロジェクトのプロパティの構成 (SSDT)](configure-analysis-services-project-properties-ssdt.md)  
   
   

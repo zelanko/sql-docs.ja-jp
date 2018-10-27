@@ -1,5 +1,5 @@
 ---
-title: 固有メンバー プロパティ (MDX) |Microsoft ドキュメント
+title: 固有メンバー プロパティ (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97e1507617d710373dea39b546b74fc77a1d90de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025739"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146174"
 ---
-# <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX メンバーのプロパティ - 固有メンバー プロパティ
+# <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX メンバー プロパティ - 固有メンバー プロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、カスタム アプリケーションで使用する追加のデータまたはメタデータを返したり、モデルの調査や構築を支援したりするために、クエリに含めることができるディメンション メンバーの固有プロパティを公開します。 SQL Server クライアント ツールを使用している場合は、SQL Server Management Studio (SSMS) で固有プロパティを表示できます。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34025739"
 ## <a name="context-sensitive-member-properties"></a>状況依存メンバー プロパティ  
  すべてのディメンション メンバーとレベル メンバーでは、状況に依存する固有メンバー プロパティがいくつかサポートされます。 次の表は、それらの状況依存プロパティを示しています。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**ID**|内部的に管理されるメンバー ID。|  
 |**Key**|元のデータ型でのメンバー キーの値。 MEMBER_KEY は、旧バージョンとの互換性のために用意されています。  MEMBER_KEY プロパティの値は、非複合キーについては KEY0 と等しく、複合キーについては NULL です。|  
@@ -85,9 +85,9 @@ ms.locfileid: "34025739"
  次の表は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]でサポートされる非状況依存の固有プロパティを示しています。  
   
 > [!NOTE]  
->  MEMBERS スキーマ行セット内の列は、以下の表に示されている固有メンバー プロパティをサポートします。 **MEMBERS** スキーマ行セットの詳細については、「 [MDSCHEMA_MEMBERS 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)」を参照してください。  
+>  MEMBERS スキーマ行セット内の列は、以下の表に示されている固有メンバー プロパティをサポートします。 **MEMBERS** スキーマ行セットの詳細については、「 [MDSCHEMA_MEMBERS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)」を参照してください。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|このメンバーが所属するキューブの名前。|  
 |**CHILDREN_CARDINALITY**|メンバーが持つ子の数。 これは推定値の場合があります。したがって、この数値を正確な数として使用しないでください。 プロバイダーは、正確な数に最も近い推定値を返します。|  
@@ -205,15 +205,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
- [子&#40;MDX&#41;](../../../mdx/children-mdx.md)   
- [Hierarchize (& a) #40 です。MDX と #41 です。](../../../mdx/hierarchize-mdx.md)   
- [カウント & #40 です。セット & #41;& #40 です。MDX と #41 です。](../../../mdx/count-set-mdx.md)   
- [フィルターと #40 です。MDX と #41 です。](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40 です。MDX と #41 です。](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40 です。MDX と #41 です。](../../../mdx/drilldownlevel-mdx.md)   
- [プロパティ & #40 です。MDX と #41 です。](../../../mdx/properties-mdx.md)   
+ [Children &#40;MDX&#41;](../../../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
- [メンバーのプロパティ & #40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
+ [メンバー プロパティの使用 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

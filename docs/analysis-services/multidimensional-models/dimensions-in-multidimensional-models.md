@@ -1,5 +1,5 @@
 ---
-title: 多次元モデル内のディメンション |Microsoft ドキュメント
+title: 多次元モデル内のディメンション |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cdae19df652c081290f04d6227a394aa6d90676f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f5f58f5c771d176cedf332e51a33c354bbaf652c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027239"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145447"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多次元モデル内のディメンション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,21 +31,21 @@ ms.locfileid: "34027239"
  キューブを作成するときは、データベースに既に存在するディメンションを新しいキューブに追加することもできます。 これらのディメンションは、別のキューブやディメンション ウィザードで以前に定義されている場合があります。 データベース ディメンションは、定義した後に、ディメンション デザイナーで変更および構成できます。 またキューブ ディメンションは、キューブ デザイナーで、限られた範囲内でカスタマイズできます。  
   
 > [!NOTE]  
->  XMLA または分析管理オブジェクト (AMO) のいずれかを使用すると、ディメンション、属性、および階層をプログラムによってデザインおよび構成することもできます。 詳細については、「[Analysis Services スクリプト言語 (XMLA 用 ASSL)](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)」および「[分析管理オブジェクト (AMO) による開発](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)」を参照してください。  
+>  XMLA または分析管理オブジェクト (AMO) のいずれかを使用すると、ディメンション、属性、および階層をプログラムによってデザインおよび構成することもできます。 詳細については、「[Analysis Services スクリプト言語 (XMLA 用 ASSL)](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)」および「[分析管理オブジェクト (AMO) による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  このトピックでは、次の内容について紹介します。  
   
- [データベース ディメンションを定義します。](../../analysis-services/multidimensional-models/define-database-dimensions.md)  
+ [データベース ディメンションの定義](../../analysis-services/multidimensional-models/define-database-dimensions.md)  
  ディメンション デザイナーを使用して、データベース ディメンションを変更および構成する方法について説明します。  
   
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  ディメンション デザイナーを使用して、データベース ディメンションの属性を定義、変更、および構成する方法について説明します。  
   
- [属性リレーションシップを定義します。](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
+ [属性リレーションシップの定義](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  ディメンション デザイナーを使用して、属性リレーションシップを定義、変更、および構成する方法について説明します。  
   
- [ユーザー定義階層を作成します。](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+ [ユーザー定義階層の作成](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  ディメンション デザイナーを使用してユーザー定義階層のディメンション属性を定義、変更、および構成する方法について説明します。  
   
  [ビジネス インテリジェンス ウィザードを使用したディメンションの拡張](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  

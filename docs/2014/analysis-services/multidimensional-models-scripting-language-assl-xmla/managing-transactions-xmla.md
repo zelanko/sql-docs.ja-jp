@@ -22,15 +22,15 @@ ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 846c6adfc9af94e79d8605c8d051e6e18d597e0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c9bb93b30b7c2b080c3770e71552d5882ae61d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223082"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148347"
 ---
 # <a name="managing-transactions-xmla"></a>トランザクションの管理 (XMLA)
-  すべての XML for Analysis (XMLA) コマンドがのインスタンスに送信される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]現在暗黙的または明示的なセッションで、トランザクションのコンテキスト内で実行します。 使用するこれらの各トランザクションを管理する、 [BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md)、 [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md)、および[RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)コマンド。 これらのコマンドを使用して、暗黙の、または明示的なトランザクションの作成や、トランザクション参照カウントの変更、およびトランザクションの開始、コミット、ロールバックを行えます。  
+  すべての XML for Analysis (XMLA) コマンドがのインスタンスに送信される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]現在暗黙的または明示的なセッションで、トランザクションのコンテキスト内で実行します。 使用するこれらの各トランザクションを管理する、 [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla)、 [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)、および[RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla)コマンド。 これらのコマンドを使用して、暗黙の、または明示的なトランザクションの作成や、トランザクション参照カウントの変更、およびトランザクションの開始、コミット、ロールバックを行えます。  
   
 ## <a name="implicit-and-explicit-transactions"></a>暗黙のトランザクションと明示的なトランザクション  
  トランザクションには、暗黙のものと明示的なものがあります。  

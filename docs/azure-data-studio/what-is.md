@@ -10,12 +10,12 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 296274548b725a620d577916d2c76d31c923c4c0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356533"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099784"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>新機能[!INCLUDE[name-sos](../includes/name-sos.md)]とは?
 
@@ -47,7 +47,7 @@ T-SQL コード スニペットでは、データベース、テーブル、ビ�
 
 ## <a name="integrated-terminal"></a>統合ターミナル
 
-お気に入りのコマンド ライン ツールを使用して (たとえば、Bash、PowerShell、sqlcmd、bcp、ssh で接続) 内で適切な統合ターミナル ウィンドウで、[!INCLUDE[name-sos](../includes/name-sos-short.md)]ユーザー インターフェイス。 統合ターミナル詳細については、 [統合ターミナル統合](terminal.md) を参照してください。
+お気に入りのコマンド ライン ツールを使用して (たとえば、Bash、PowerShell、sqlcmd、bcp、ssh で接続) 内で適切な統合ターミナル ウィンドウで、[!INCLUDE[name-sos](../includes/name-sos-short.md)]ユーザー インターフェイス。 統合ターミナルの詳細については、次を参照してください。[統合ターミナル](integrated-terminal.md)します。
 
 ## <a name="extensibility-and-extension-authoring"></a>拡張機能と拡張機能の作成
 

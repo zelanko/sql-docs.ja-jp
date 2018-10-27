@@ -13,12 +13,12 @@ ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf3b448db7f61064a99f059186fcd2408fab42a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7ac547ffe8a4e102b4e3c4b0c29c6783e0c4857
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088172"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148037"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>マイニング モデルのコンテンツ クエリの作成
   AMO や XML/A を使用すると、プログラムでマイニング モデル コンテンツにクエリを実行できますが、DMX を使用してクエリを作成する方が簡単です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を確立し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって提供される DMV を使用してクエリを作成することにより、データ マイニング スキーマ行セットに対するクエリを作成することもできます。  
@@ -47,7 +47,7 @@ ms.locfileid: "48088172"
   
 6.  行で、 `SELECT` *\<expr 一覧で、選択リストの\* >*、マイニング モデル コンテンツ スキーマ行セット内の列の名前を入力します。  
   
-     マイニング モデル コンテンツ クエリで返すことができる列の一覧については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+     マイニング モデル コンテンツ クエリで返すことができる列の一覧については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)によって提供される DMV を使用してクエリを作成することにより、データ マイニング スキーマ行セットに対するクエリを作成することもできます。  
   
 7.  必要に応じて、テンプレートの WHERE 句に条件を入力し、特定のノードや値に対して返される行を制限します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48088172"
     >  現在のインスタンスでクエリを実行できるすべてのスキーマ行セットを一覧表示するには、 `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS というクエリを使用します。 データ マイニング固有のスキーマ行セットの一覧については、「 [データ マイニング スキーマ行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
- [データ マイニング スキーマ行セット](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

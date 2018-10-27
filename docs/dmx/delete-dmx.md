@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e5b11bda21fe877af419442cb8b98acd4d29c21b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989914"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144548"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 |マイニング構造から削除*\<構造 >* します。場合|マイニング構造に対して ProcessClearStructureOnly を実行します。 関連するマイニング モデルは保存したまま、すべての内容がマイニング構造から削除されます。 マイニング構造が削除された後では、関連するマイニング モデルでのドリルスルーは失敗します。|  
 |マイニング モデルから削除*\<モデル >*<br /><br /> または<br /><br /> マイニング モデルから削除*\<モデル >* します。コンテンツ|マイニング モデルに ProcessClear を実行しますが、状態の値をそのまま残されます。 状態値は、その列で使用できる状態を表します。 たとえば、性別の列の状態値は、男性と女性です。|  
   
- 処理の種類の詳細については、次を参照してください。 [Type 要素&#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)します。  
+ 処理の種類の詳細については、次を参照してください。 [Type 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、すべての内容が NB_Sample モデルから削除されます。  

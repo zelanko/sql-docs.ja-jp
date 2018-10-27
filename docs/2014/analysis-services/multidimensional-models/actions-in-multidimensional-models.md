@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084682"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146427"
 ---
 # <a name="actions-in-multidimensional-models"></a>多次元モデルのアクション
   アクションは、選択したキューブまたはキューブの一部でエンド ユーザーが行う操作です。 この操作では、選択されているアイテムをパラメーターとして設定してアプリケーションを起動したり、選択されているアイテムに関する情報を取得したりすることができます。 アクションの詳細については、「[アクション &#40;Analysis Services - 多次元データ&#41;](actions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -53,7 +53,7 @@ ms.locfileid: "48084682"
  対象になるオブジェクトの種類を選択したら、指定した種類のキューブ オブジェクトを **[対象になるオブジェクト]** から選択します。  
   
  **[条件 (省略可能)]**  
- ブール値に解決される多次元式 (MDX) を指定します。省略可能です。 値の場合`True`、指定された対象で、アクションを実行します。 値が場合`False`アクションは実行されません。  
+ ブール値に解決される多次元式 (MDX) を指定します。省略可能です。 値が `True` の場合、アクションは指定された対象オブジェクトに対して実行されます。 値が `False` の場合、アクションは実行されません。  
   
  **[アクションの内容]**  
  アクションの種類を選択します。 次の表は、使用できる種類をまとめたものです。  
@@ -77,10 +77,10 @@ ms.locfileid: "48084682"
 |**アプリケーション**|アクションのアプリケーションについて説明します。|  
 |**[説明]**|アクションについて説明します。|  
 |**Caption**|アクションに関して表示されるキャプションを指定します。 キャプションが MDX の場合は、指定`True`の**キャプションに MDX**します。|  
-|**True**|指定`True`場合は、キャプションが MDX または`False`でない場合。|  
+|**True**|キャプションが MDX の場合は `True`、MDX でない場合は `False` を指定します。|  
   
 > [!NOTE]  
->  HTML およびコマンド ラインのアクションの種類を定義するには、Analysis Services スクリプト言語 (ASSL) または分析管理オブジェクト (AMO) を使用する必要があります。 詳細については、「[アクション要素 &#40;ASSL&#41;](../scripting/objects/action-element-assl.md)」「[Type 要素 &#40;アクション&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md)」、および「[高度な AMO OLAP オブジェクトのプログラミング](analysis-management-objects/programming-amo-olap-advanced-objects.md)」を参照してください。  
+>  HTML およびコマンド ラインのアクションの種類を定義するには、Analysis Services スクリプト言語 (ASSL) または分析管理オブジェクト (AMO) を使用する必要があります。 詳細については、「[アクション要素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)」「[Type 要素 &#40;アクション&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl)」、および「[高度な AMO OLAP オブジェクトのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)」を参照してください。  
   
 ## <a name="creating-a-reporting-action"></a>レポート アクションの作成  
  レポート サーバーは、レポートに関する URL ベースの要求に応答します。 レポート アクションを作成するには、 **[キューブ]** メニューの **[新しいレポート アクション]** をクリックします。 次のオプションは、レポート アクションに固有です。  

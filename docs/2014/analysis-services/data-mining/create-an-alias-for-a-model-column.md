@@ -15,17 +15,17 @@ ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae3e9f2d0ecf1a5a4fe41f053d8c6cc582663857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d73461578a939c11771ba329524ef36d2b52cc83
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148762"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147477"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>モデル列の別名の作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、モデル列の別名を作成できます。 この機能は、マイニング構造名が長すぎて扱いにくい場合や、内容またはモデル内での使い方をわかりやすくするために列名を変更する場合に便利です。 たとえば、構造列のコピーを作成して特定のモデル専用に列を分離すると、列名を変更して内容を正確に反映できます。  
   
- モデル列の別名を作成するには、 **[プロパティ]** ペインを使用し、列の [Name](../scripting/properties/name-element-assl.md) プロパティを設定します。  
+ モデル列の別名を作成するには、 **[プロパティ]** ペインを使用し、列の [Name](https://docs.microsoft.com/bi-reference/assl/properties/name-element-assl) プロパティを設定します。  
   
  データ マイニング デザイナーの **[マイニング モデル]** タブに、列の使用法のラベルの横にかっこで囲まれて別名が表示されます。  
   

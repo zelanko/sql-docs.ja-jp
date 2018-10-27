@@ -11,12 +11,12 @@ ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5716541be57191cd6bb3e6e6399a354889b2cf58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3fc1b8aa5c6a2f76ebdfe98fd8aa98e5a593919
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179672"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144907"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 拡張イベント (XEvent) を使用した Analysis Services の監視
   Analysis Services の使用を通じてトレース機能を提供する[拡張イベント](../../relational-databases/extended-events/extended-events.md)します。  
@@ -67,7 +67,7 @@ ms.locfileid: "48179672"
  このトレースに付ける名前を指定します (通常は、人間が判読できるトレースの定義です)。 *trace_id* の値を名前として使用するのが一般的です。  
   
  *AS_event*  
- 公開する Analysis Services イベントを指定します。 イベントの名前については、「 [Analysis Services トレース イベント](../trace-events/analysis-services-trace-events.md) 」を参照してください。  
+ 公開する Analysis Services イベントを指定します。 イベントの名前については、「 [Analysis Services トレース イベント](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 」を参照してください。  
   
  *data_filename*  
  イベント データを含むファイルの名前を指定します。 この名前には、トレースを繰り返し送信する場合にデータが上書きされないように、タイムスタンプを使用したサフィックスが付けられます。  

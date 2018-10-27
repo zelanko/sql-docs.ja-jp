@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8d5a8e800b961406231e0f0e515b250a17cb3ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091082"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146017"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、よく知られている Apriori アルゴリズムの直接的な実装です。  
@@ -74,7 +74,7 @@ ms.locfileid: "48091082"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
- マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでを使用してもパラメーターを変更することができます、 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> AMO、またはを使用して、コレクション、 [MiningModels 要素&#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) XMLA でします。 次の表では、各パラメーターについて説明します。  
+ マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでを使用してもパラメーターを変更することができます、 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> AMO、またはを使用して、コレクション、 [MiningModels 要素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA でします。 次の表では、各パラメーターについて説明します。  
   
 > [!NOTE]  
 >  DMX ステートメントを使用して既存のモデルのパラメーターを変更することはできません。パラメーターは、モデルを作成するときに DMX CREATE MODEL または ALTER STRUCTURE… ADD MODEL で指定する必要があります。  
@@ -144,7 +144,7 @@ ms.locfileid: "48091082"
  マイニング構造列に適用されます。  
   
  MODEL_EXISTENCE_ONLY  
- 2 つの状態を持つものとして扱わ列があることを示します:`Missing`と`Existing`します。 NULL は Missing 値になります。  
+ 列が、`Missing` および `Existing` の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は Missing 値になります。  
   
  マイニング モデル列に適用されます。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48091082"
   
 ## <a name="see-also"></a>参照  
  [Microsoft アソシエーション アルゴリズム](microsoft-association-algorithm.md)   
- [アソシエーション モデルのクエリ例](association-model-query-examples.md)   
- [アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [結合モデルのクエリ例](association-model-query-examples.md)   
+ [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

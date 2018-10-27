@@ -1,5 +1,5 @@
 ---
-title: 多次元モデルの Power View を理解する |Microsoft ドキュメント
+title: 多次元モデルの Power View の理解 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300500"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147457"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34300500"
   
  **多次元モデルの Power View のアーキテクチャ**  
   
- ![Power View の多次元モデル アーキテクチャ](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View の多次元モデル アーキテクチャ")  
+ ![Power View の多次元モデル アーキテクチャ](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View の多次元モデルのアーキテクチャ")  
   
 ## <a name="prerequisites"></a>前提条件  
  **サーバーの要件**  
@@ -39,7 +39,7 @@ ms.locfileid: "34300500"
   
 -   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
   
-## <a name="features"></a>機能のインストール  
+## <a name="features"></a>[機能]  
  **Power View のネイティブ サポート**  
   
  このリリースでは、多次元モデルで、SharePoint モードの Power View を使用した分析とビジュアル化がサポートされています。 多次元モデルで特別な構成は必要ありません。 ただし、Microsoft Excel や Microsoft Performance Point など、その他のクライアント ツールと比較すると、Power View での多次元モデル オブジェクトの表示形式にはいくつか違いがあります。 このリリースでは、Excel の Power View を使用した多次元モデルの分析とビジュアル化はサポートされていません。  
@@ -56,15 +56,15 @@ ms.locfileid: "34300500"
 |多次元オブジェクト|表形式オブジェクト|  
 |-----------------------------|--------------------|  
 |Cube|[モデル]|  
-|キューブ ディメンション|Table|  
-|ディメンション属性 (キー、名前)|列|  
-|[メジャー グループ]|Table|  
+|キューブ ディメンション|テーブル|  
+|ディメンション属性 (キー、名前)|[列]|  
+|[メジャー グループ]|テーブル|  
 |[メジャー]|[メジャー]|  
 |メジャー グループのないメジャー|Measures という名前のテーブル内|  
 |メジャー グループとキューブ ディメンションのリレーションシップ|リレーションシップ|  
 |Perspective|Perspective|  
 |KPI (KPI)|KPI (KPI)|  
-|ユーザー階層/親子階層|階層|  
+|ユーザー階層/親子階層|Hieararchy|  
 |表示フォルダー|表示フォルダー|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>メジャー、メジャー グループ、および KPI  
@@ -76,7 +76,7 @@ ms.locfileid: "34300500"
   
  **Power View のフィールド リスト内のメジャー グループ**  
   
- ![フィールドの Power View で一覧](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "フィールドの Power View での一覧")  
+ ![フィールドの一覧で、Power View](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "フィールドの Power View での一覧")  
   
  メジャー グループ内のメジャーは、メジャーとして表示されます。 メジャー グループに関連付けられていない計算されるメジャーがある場合、そのメジャーは Measures と呼ばれる特殊なテーブルでグループ化されます。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34300500"
  ![Power View での集計可能ではない階層](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Power View での集計可能ではない階層")  
   
 ### <a name="implicit-measures"></a>暗黙のメジャー  
- 表形式モデルでは、ユーザーはフィールドに COUNT、SUM、AVERAGE などの *暗黙の* メジャーを作成できます。 多次元モデルは、ディメンション属性のデータは異なるため、暗黙的なメジャーのクエリを実行することができます、長い時間がかかります。 このため、暗黙のメジャーは Power View では使用できません。  
+ 表形式モデルでは、ユーザーはフィールドに COUNT、SUM、AVERAGE などの *暗黙の* メジャーを作成できます。 多次元モデルは、ディメンション属性のデータが異なる方法で格納されているため、暗黙的なメジャーのクエリを実行することができます、長い時間がかかります。 このため、暗黙のメジャーは Power View では使用できません。  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>ディメンション、属性、および階層  
  キューブ ディメンションは、表形式のメタデータにテーブルとして公開されます。 Power View のフィールド リストでは、ディメンション属性が表示フォルダー内の列として表示されます。  AttributeHierarchyEnabled プロパティが false に設定されたディメンション属性 (Customer ディメンションの Birth Date 属性など)、または AttributeHierarchyVisible プロパティが false に設定されたディメンション属性は、Power View のフィールド リストに表示されません。 複数階層またはユーザー階層 (Customer ディメンションの Customer Geography など) は Power View のフィールド リストに階層として公開されます。 ディメンション属性の非表示の UnknownMember は DAX クエリおよび Power View では公開されます。  
@@ -125,7 +125,7 @@ ms.locfileid: "34300500"
   
  **計算されるメンバーを含む Power View レポート**  
   
- ![計算されるメンバーは Power View で](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "計算されるメンバーの Power view")  
+ ![計算されるメンバーは Power View で](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "計算されるメンバーは Power View")  
   
 ### <a name="default-members"></a>既定メンバー  
  多次元モデルでは、ディメンション属性の既定のメンバーがサポートされています。 既定のメンバーは、クエリのデータ集計時に Analysis Services によって使用されます。 ディメンション属性の既定のメンバーは、表形式のメタデータで対応する列の既定値または既定のフィルターとして公開されます。  
@@ -147,7 +147,7 @@ ms.locfileid: "34300500"
   
  **SSDT でのディメンション属性の ImageURL 型**  
   
- ![ディメンションの属性のプロパティ](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "ディメンションの属性のプロパティ")  
+ ![ディメンション属性プロパティ](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "ディメンション属性のプロパティ")  
   
 ## <a name="parent-child-hierarchies"></a>親子階層  
  多次元モデルでは、表形式のメタデータの階層として公開される親子階層がサポートされています。 親子階層の各レベルは、非表示の列として公開されます。 親子ディメンションのキー属性は、表形式のメタデータでは公開されません。  
@@ -217,7 +217,7 @@ ms.locfileid: "34300500"
   
  DISCOVER_CSDL_METADATA 要求には、次の制限があります。  
   
-|名前|必須|Description|  
+|名前|必須|説明|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|はい|カタログ\データベース名。|  
 |PERSPECTIVE_NAME|キューブに複数のパースペクティブが含まれている場合は必須。 キューブが 1 つしかない場合や既定のパースペクティブがある場合は省略可能。|多次元データベース内のキューブ名またはパースペクティブ名。|  
@@ -225,7 +225,7 @@ ms.locfileid: "34300500"
   
  返される CSDL 出力ドキュメントは、モデルを名前空間として表し、エンティティ、アソシエーション、およびプロパティを示しています。  
   
- 表形式モデルの CSDLBI 注釈の詳細については、MSDN の「 [CSDL への BI 注釈のテクニカル リファレンス](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) 」および「 [\[[MS-CSDLBI]\]: ビジネス インテリジェンスの概念スキーマ定義ファイル形式の注釈](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)」を参照してください。  
+ 表形式モデルの CSDLBI 注釈の詳細については、MSDN の「 [CSDL への BI 注釈のテクニカル リファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 」および「 [\[[MS-CSDLBI]\]: ビジネス インテリジェンスの概念スキーマ定義ファイル形式の注釈](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)」を参照してください。  
   
 ## <a name="client-help-on-officecom"></a>Office.com のクライアント ヘルプ  
  Power View での多次元モデル オブジェクトの表示およびサンプル レポートの作成方法については、Office.com で提供されている次の記事を参照してください。  

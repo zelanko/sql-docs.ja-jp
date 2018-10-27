@@ -2,7 +2,7 @@
 title: Data Migration Assistant 評価レポートを Power BI (SQL Server) の統合の分析 |Microsoft Docs
 description: Power BI を使用して、インポートして、SQL Server に統合したデータ移行の評価レポートを分析する方法について説明します
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35cd161d29977d97ab3da650de5afdb46ab748a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832239"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643970"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Data Migration Assistant を Power BI で作成された統合評価レポートを分析します。
 
@@ -52,7 +52,7 @@ Data Migration Assistant によって作成された移行評価を統合する�
 
 - [Azure SQL DB がサポートされていない機能](#azure-sql-db-unsupported-features--details)
 
-  Azure SQL DB (V12) でサポートされていない、既存のデータベース機能を示します。
+  Azure SQL DB (V12) でサポートされていない既存のデータベース機能を示します。
 
 これらのレポートを Power BI でデータ ソースを変更することで、環境で作業を変更することができます。 
 

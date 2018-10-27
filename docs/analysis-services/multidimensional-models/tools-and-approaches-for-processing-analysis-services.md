@@ -1,5 +1,5 @@
 ---
-title: ツールとアプローチの処理 (Analysis Services) |Microsoft ドキュメント
+title: ツールとアプローチの処理 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ecb64ddf6caedc2353541ab5d4aa7229b9a120f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027319"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147737"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>処理するためのツールと方法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "34027319"
   
 -   SQL Server Profiler の処理の監視  
   
--   AMO を使用した、カスタム ソリューションのプログラム 詳細については、「 [AMO OLAP 基本オブジェクトのプログラミング](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)」を参照してください。  
+-   AMO を使用した、カスタム ソリューションのプログラム 詳細については、「 [AMO OLAP 基本オブジェクトのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects)」を参照してください。  
   
  処理は、柔軟に構成できる操作で、オブジェクト レベルで発生する完全処理や増分処理の一連の処理オプションを使用して制御します。 オプションとオブジェクトの処理に関する詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)」および「[Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)」を参照してください。  
   
 > [!NOTE]  
->  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理の詳細については、次を参照してください。[データベースの処理、テーブル、またはパーティション&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)と[プロセス データ](../../analysis-services/tabular-models/process-data-ssas-tabular.md)です。  
+>  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理に関する詳細については、次を参照してください。[データベースの処理、テーブル、またはパーティション&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)と[データを処理する](../../analysis-services/tabular-models/process-data-ssas-tabular.md)します。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのオブジェクトの処理  
   

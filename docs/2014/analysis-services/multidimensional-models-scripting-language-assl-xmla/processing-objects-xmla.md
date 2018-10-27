@@ -23,17 +23,17 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fdfd3ce4393fef5ae2574e5ec151cd345f59bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117822"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145667"
 ---
 # <a name="processing-objects-xmla"></a>オブジェクトの処理 (XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]処理は、手順、または、ビジネス分析のための情報に手順を有効にするデータを一連の。 処理内容はオブジェクトの種類によって異なりますが、データを情報に変換する処理の一部として必ず実行されます。  
   
- プロセスに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトを使用することができます、[プロセス](../xmla/xml-elements-commands/process-element-xmla.md)コマンド。 `Process` コマンドでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの以下のオブジェクトを処理できます。  
+ プロセスに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトを使用することができます、[プロセス](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)コマンド。 `Process` コマンドでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの以下のオブジェクトを処理できます。  
   
 -   キューブ  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48117822"
  `Process` コマンドには、オブジェクトの処理を制御するために設定できるさまざまなプロパティが用意されています。 `Process` コマンドには、行う処理の程度、処理対象のオブジェクト、不一致バインドを使用するかどうか、エラー処理の方法、および書き戻しテーブルの管理方法を制御するプロパティがあります。  
   
 ## <a name="specifying-processing-options"></a>処理オプションの指定  
- [型](../xmla/xml-elements-properties/type-element-xmla.md)のプロパティ、`Process`コマンド オブジェクトの処理時に使用する処理オプションを指定します。 処理オプションの詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)」を参照してください。  
+ [型](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)のプロパティ、`Process`コマンド オブジェクトの処理時に使用する処理オプションを指定します。 処理オプションの詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)」を参照してください。  
   
  次の表は、`Type` プロパティの定数と、各定数を使用して処理できるさまざまなオブジェクトの一覧を示しています。  
   
@@ -72,14 +72,14 @@ ms.locfileid: "48117822"
  処理の詳細については[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、オブジェクトを参照してください[多次元モデル オブジェクトの処理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)します。  
   
 ## <a name="specifying-objects-to-be-processed"></a>処理対象のオブジェクトの指定  
- [オブジェクト](../xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、`Process`コマンドには、処理するオブジェクトのオブジェクト識別子が含まれています。 `Process` コマンドで指定できるオブジェクトは 1 つだけですが、1 つのオブジェクトを処理すると、その子オブジェクトも処理されます。 たとえば、キューブ内のメジャー グループを処理すると、そのメジャー グループのすべてのパーティションが処理されます。また、データベースを処理すると、キューブ、ディメンション、およびマイニング構造など、そのデータベースに含まれるすべてのオブジェクトが処理されます。  
+ [オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)のプロパティ、`Process`コマンドには、処理するオブジェクトのオブジェクト識別子が含まれています。 `Process` コマンドで指定できるオブジェクトは 1 つだけですが、1 つのオブジェクトを処理すると、その子オブジェクトも処理されます。 たとえば、キューブ内のメジャー グループを処理すると、そのメジャー グループのすべてのパーティションが処理されます。また、データベースを処理すると、キューブ、ディメンション、およびマイニング構造など、そのデータベースに含まれるすべてのオブジェクトが処理されます。  
   
  `ProcessAffectedObjects` コマンドの `Process` 属性を true に設定すると、指定されたオブジェクトを処理することによって影響を受ける関連オブジェクトもすべて処理されます。 たとえばを使用して、ディメンションの増分更新、 *ProcessUpdate*処理オプション、`Process`コマンドを任意のパーティションの集計はメンバーの追加、削除によって無効になるもによって処理される[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]場合`ProcessAffectedObjects`設定が true にします。 この場合、1 つの `Process` コマンドで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの複数のオブジェクトを処理することができますが、`Process` コマンドで指定された単一のオブジェクトの他に処理する必要があるオブジェクトは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって決定されます。  
   
  しかし、`Process` コマンドの中で複数の `Batch` コマンドを使用することによって、ディメンションなどの複数のオブジェクトを同時に処理することもできます。 バッチ操作では、`ProcessAffectedObjects` 属性を使用する場合よりも詳細なレベルで、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのオブジェクトの直列または並列処理を制御することができ、大規模な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの処理方法をチューニングすることができます。 バッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行&#40;XMLA&#41;](performing-batch-operations-xmla.md)します。  
   
 ## <a name="specifying-out-of-line-bindings"></a>不一致バインドの指定  
- 場合、`Process`コマンドが含まれていない、`Batch`コマンド、アウトオブ ライン バインドで必要に応じて指定できます、[バインド](../xmla/xml-elements-properties/bindings-element-xmla.md)、 [DataSource](../xmla/xml-elements-properties/source-element-xmla.md)、および[DataSourceView](../xmla/xml-elements-properties/datasourceview-element-xmla.md)のプロパティ、`Process`コマンドを処理するオブジェクト。 不一致バインドは、バインドが `Process` コマンドの実行時のみに存在する、データ ソース、データ ソース ビュー、および他のオブジェクトへの参照であり、処理中のオブジェクトに関連付けられている既存のバインドをオーバーライドします。 不一致バインドが指定されていない場合、処理対象のオブジェクトに現在関連付けられているバインドが使用されます。  
+ 場合、`Process`コマンドが含まれていない、`Batch`コマンド、アウトオブ ライン バインドで必要に応じて指定できます、[バインド](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla)、 [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)、および[DataSourceView](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla)のプロパティ、`Process`コマンドを処理するオブジェクト。 不一致バインドは、バインドが `Process` コマンドの実行時のみに存在する、データ ソース、データ ソース ビュー、および他のオブジェクトへの参照であり、処理中のオブジェクトに関連付けられている既存のバインドをオーバーライドします。 不一致バインドが指定されていない場合、処理対象のオブジェクトに現在関連付けられているバインドが使用されます。  
   
  不一致バインドは以下の状況で使用されます。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48117822"
  XML for Analysis (XMLA) を使用してパーティションのマージの詳細については、次を参照してください。[パーティションのマージ&#40;XMLA&#41;](merging-partitions-xmla.md)します。  
   
 ## <a name="handling-processing-errors"></a>処理エラーの処理  
- [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md)のプロパティ、`Process`コマンドを使用して、オブジェクトの処理中に発生したエラーを処理する方法を指定できます。 たとえば、ディメンションの処理時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] がキー属性のキー列で重複した値を検出したとします。 属性キーは一意である必要があるため、重複するレコードは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって破棄されます。 に基づいて、 [KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md)プロパティの`ErrorConfiguration`、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でした。  
+ [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla)のプロパティ、`Process`コマンドを使用して、オブジェクトの処理中に発生したエラーを処理する方法を指定できます。 たとえば、ディメンションの処理時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] がキー属性のキー列で重複した値を検出したとします。 属性キーは一意である必要があるため、重複するレコードは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって破棄されます。 に基づいて、 [KeyDuplicate](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl)プロパティの`ErrorConfiguration`、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でした。  
   
 -   エラーを無視し、ディメンションの処理を続行する。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48117822"
  `ErrorConfiguration` によって `Process` コマンドの実行時のオプションが指定される同様の状況は、他にも多くあります。  
   
 ## <a name="managing-writeback-tables"></a>書き戻しテーブルの管理  
- `Process` コマンドで、まだ完全に処理されていない書き込み許可パーティション、または完全に処理されていない書き込み許可パーティションに対するキューブやメジャー グループが見つかった場合、そのパーティションには書き戻しテーブルがまだ存在していない可能性があります。 [WritebackTableCreation](../xmla/xml-elements-properties/writebacktablecreation-element-xmla.md)のプロパティ、`Process`コマンドを決定するかどうか[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]書き戻しテーブルを作成する必要があります。  
+ `Process` コマンドで、まだ完全に処理されていない書き込み許可パーティション、または完全に処理されていない書き込み許可パーティションに対するキューブやメジャー グループが見つかった場合、そのパーティションには書き戻しテーブルがまだ存在していない可能性があります。 [WritebackTableCreation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/writebacktablecreation-element-xmla)のプロパティ、`Process`コマンドを決定するかどうか[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]書き戻しテーブルを作成する必要があります。  
   
 ## <a name="examples"></a>使用例  
   

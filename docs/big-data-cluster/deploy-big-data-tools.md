@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 971fc2f8e8a77b00f3d2c5cd6390fec351ffc0f3
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827303"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643790"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターに接続します。
 
@@ -32,22 +32,31 @@ Azure Data Studio をインストールするを参照してください。[を�
 
 ビッグ データ クラスターに接続するときに、SQL Server に接続するオプションがある[マスター インスタンス](concept-master-instance.md)または HDFS/Spark ゲートウェイ。 次のセクションでは、それぞれに接続する方法を示します。
 
-## <a name="master-instance"></a>マスター インスタンス
+## <a id="master"></a> マスター インスタンス
 
 1. Azure Data Studio でキーを押して**F1** > **新しい接続**します。
+
 1. **接続の種類**、 **Microsoft SQL Server**します。
+
 1. SQL Server のマスター インスタンスの IP アドレスを入力**サーバー名**(例:  **\<IP アドレス\>31433、**)。
+
+1. SQL ログインを入力**ユーザー名**と**パスワード**します。
+
 1. 変更、**データベース名**を**high_value_data**データベース。
 
    ![マスター インスタンスに接続します。](./media/deploy-big-data-tools/connect-to-cluster.png)
 
 1. キーを押して**Connect**、および**Server ダッシュ ボード**が表示されます。
 
-## <a name="hdfsspark-gateway"></a>HDFS/Spark ゲートウェイ
+## <a id="hdfs"></a> HDFS/Spark ゲートウェイ
 
 1. Azure Data Studio でキーを押して**F1** > **新しい接続**します。
+
 1. **接続の種類**、**ビッグ データの SQL Server クラスター**します。
+
 1. ビッグ データのクラスターの IP アドレスを入力**サーバー名**します。
+
+1. 入力`root`の**ユーザー**を指定し、**パスワード**ビッグ データ クラスターにします。
 
    ![HDFS/Spark ゲートウェイへの接続します。](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
 

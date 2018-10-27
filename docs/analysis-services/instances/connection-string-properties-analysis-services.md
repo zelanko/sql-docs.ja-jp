@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 198f2f184a703f270c4fb52a775c47330c68888b
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: b224b70c8985b23568d24f6230b138d6c43f5928
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563848"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148167"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "45563848"
 |**統合セキュリティ**|Analysis Services に接続するために使用する呼び出し元の Windows ID。 有効な値は、空白、SSPI、および BASIC です。<br /><br /> **Integrated Security**=**SSPI** は、TCP 接続の既定値です。NTLM、Kerberos、または匿名認証を許可します。 空白は、HTTP 接続の既定値です。<br /><br /> **SSPI**を使用する場合、 **ProtectionLevel** を **Connect**、 **PktIntegrity**、 **PktPrivacy**のいずれかに設定する必要があります。|  
 |**Persist Encrypted**|クライアント アプリケーションでデータ ソース オブジェクトに暗号化された形式で秘密の認証情報 (パスワードなど) を保存する必要がある場合に、このプロパティを設定します。 既定では、認証情報は保存されません。|  
 |**Persist Security Info**|有効値は True および False です。 True に設定した場合、以前に接続文字列に指定したユーザー ID やパスワードなどのセキュリティ情報を接続の確立後に接続から取得できます。 既定値は False です。|  
-|**保護レベル**|接続で使用するセキュリティ レベルを指定します。 有効な値は、<br /><br /> -   **None**。 未認証の接続または匿名接続。 サーバーに送信されるデータの認証は行われません。<br />-   **Connect**。 認証された接続。 クライアントがサーバーとのリレーションシップを確立するときにのみ認証が行われます。<br />-   **パケット整合性**。 暗号化された接続。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されていないことが確認されます。<br />-   **パケット プライバシー**。 署名された暗号化 (XMLA でのみサポートされます)。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されておらず、暗号化することでデータのプライバシーが保護されていることが確認されます。<br /><br /> 詳細については、「 [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)」をご覧ください。|  
+|**保護レベル**|接続で使用するセキュリティ レベルを指定します。 有効な値は、<br /><br /> -   **None**。 未認証の接続または匿名接続。 サーバーに送信されるデータの認証は行われません。<br />-   **Connect**。 認証された接続。 クライアントがサーバーとのリレーションシップを確立するときにのみ認証が行われます。<br />-   **パケット整合性**。 暗号化された接続。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されていないことが確認されます。<br />-   **パケット プライバシー**。 署名された暗号化 (XMLA でのみサポートされます)。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されておらず、暗号化することでデータのプライバシーが保護されていることが確認されます。<br /><br /> 詳細については、「 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)」をご覧ください。|  
 |**Roles**|定義済みロールのコンマ区切りの一覧を指定します。そのロールによって与えられる権限を使用して、サーバーまたはデータベースに接続します。 このプロパティを省略した場合、すべてのロールを使用し、有効な権限はすべてのロールの組み合わせになります。 Roles=' ' のように、プロパティを空の値に設定した場合、クライアント接続にロールのメンバーシップは与えられません。<br /><br /> このプロパティを使用した管理者は、ロールによって与えられた権限を使用して接続します。 ロールによって与えられた権限が十分でない場合、コマンドが失敗することがあります。|  
 |**SSPI**|**Integrated Security** が **SSPI**に設定されているときにクライアント認証に使用するセキュリティ パッケージを明示的に指定します。 SSPI では複数のパッケージがサポートされていますが、このプロパティを使用すると特定のパッケージを指定できます。 有効な値は、Negotiate、Kerberos、NTLM、および Anonymous User です。 このプロパティを設定しない場合、接続ですべてのパッケージを使用できます。|  
 |**Use Encryption for Data**|データ転送を暗号化します。 有効な値は True および False です。|  

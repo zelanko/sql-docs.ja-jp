@@ -2,40 +2,28 @@
 title: SQL Server Machine Learning Services のチュートリアル |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/22/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b692b9660c3caec18c689f56ba382f8df194a9cc
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 08528f3459022bdcb97b97e22d6f6c474c31a715
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384127"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960746"
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services のチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、チュートリアル、デモ、および SQL Server 2016 または SQL Server 2017 での機械学習機能を使用するサンプル アプリケーションの包括的な一覧を示します。 ここで T-SQL から R または Python を実行する方法、リモートとローカル コンピューティング コンテキストを使用する方法、および運用環境の SQL R と Python コードを最適化する方法について説明します。
+この記事では、チュートリアル、デモ、および SQL Server 2016 または SQL Server 2017 での機械学習機能を使用するサンプル アプリケーションの包括的な一覧を示します。 ここで、リモートとローカル計算コンテキストを使用する方法、および運用環境の SQL R と Python コードを運用化 T-SQL から R または Python を実行する方法について説明します。
 
 + [Python のチュートリアル](../tutorials/sql-server-python-tutorials.md)
 
 + [R のチュートリアル](../tutorials/sql-server-r-tutorials.md)
 
-要件と設定を取得する方法の詳細については、次を参照してください。[の前提条件](#bkmk_prerequisites)します。
-
-## <a name="samples-and-solutions"></a>サンプルとソリューション
-
-+ [サンプル](#bkmk_samples) 
-
-    SQL Server 開発チームからこれらの実際のシナリオでは、アプリケーションに機械学習を埋め込む方法を示します。 すべてのサンプルには、実稼働環境でのダウンロード、変更、および使用するコードが含まれます。
-
-+ [ソリューション](#bkmk_solutions) 
-
-    Microsoft データ サイエンス チームからのテンプレートはカスタマイズ可能な機械学習をすぐに開始するためです。 各ソリューションは、特定のタスクまたは業界の問題にお応えします。 SQL server、または Azure Machine Learning などのクラウド環境で実行するほとんどのソリューションが設計されています。 他のソリューションは、Microsoft R Server または Machine Learning Server を使用して、または Spark や Hadoop のクラスターで linux を実行できます。
-
-### <a name ="bkmk_samples"></a>SQL Server 製品サンプル
+## <a name ="bkmk_samples"></a>R と Python のサンプル
 
 これらのサンプルとデモの SQL Server と R Server 開発チームによって提供されることは、実際のアプリケーションで埋め込み分析を使用する方法を選択します。
 
@@ -47,9 +35,11 @@ ms.locfileid: "49384127"
 | [Python と SQL Server を使用して予測モデルを構築します。](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 今後の需要を計画するために、Python を使用して、スキー レンタル分析アプリケーションをビルドします。 この例は、新しい Python ライブラリを使用して**revoscalepy**、線形回帰モデルを作成します。 | SQL Server 2017 |
 | [SQL Server Machine Learning Services で Tableau を使用する方法](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | ソーシャル メディアを分析し、SQL Server を R. Tableau グラフの作成 | SQL Server 2016 または SQL Server 2017 |
 
-### <a name="bkmk_solutions"></a>ソリューション テンプレート
+## <a name="bkmk_solutions"></a>ソリューション テンプレート
 
-Microsoft データ サイエンス チームは、一般的なシナリオ ソリューションをすぐに使用できるソリューション テンプレートを提供しています。 すべてのコードは、トレーニングおよび SQL Server のストアド プロシージャを使用してスコア付けのモデルをデプロイする方法の指示と共に提供されます。
+Microsoft データ サイエンス チームは、一般的なシナリオ ソリューションをすぐに使用できるカスタマイズ可能なソリューション テンプレートを提供しています。 各ソリューションは、特定のタスクまたは業界の問題にお応えします。 SQL server、または Azure Machine Learning などのクラウド環境で実行するほとんどのソリューションが設計されています。 他のソリューションは、Microsoft R Server または Machine Learning Server を使用して、または Spark や Hadoop のクラスターで linux を実行できます。
+
+すべてのコードは、トレーニングおよび SQL Server のストアド プロシージャを使用してスコア付けのモデルをデプロイする方法の指示と共に提供されます。
 
 + [不正行為の検出](https://gallery.cortanaanalytics.com/Tutorial/Online-Fraud-Detection-Template-with-SQL-Server-R-Services-1)
 + [顧客離れ予測](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
@@ -58,7 +48,7 @@ Microsoft データ サイエンス チームは、一般的なシナリオ ソ�
 
 詳細については、「[Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/)」 (SQL Server 2016 R Services の機械学習テンプレート) を参照してください。
 
-## <a name="more-resources-and-reading"></a>複数のリソースと読み取り
+## <a name="recommended-reading"></a>推奨資料
 
 + [なぜして開発したことでしょうか。](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)
 

@@ -1,5 +1,5 @@
 ---
-title: 論理アーキテクチャ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: 論理アーキテクチャ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fa39b3e6e0bce7596ea38c6aa049fd7e942a08d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2fe6eb33c95c54f7762c8c5c0feb08db87c01df3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018589"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145528"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>論理アーキテクチャ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "34018589"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  データ マイニング構造は、マイニング モデルの作成元のデータ ドメインを定義する論理データ コンテナーです。 1 つのマイニング構造で複数のマイニング モデルをサポートできます。  
   
- データ マイニング ソリューションでデータを使用する必要がある場合、Analysis Services ではソースからデータを読み込み、集計およびその他の情報のキャッシュを生成します。 既定では、トレーニング データを再利用して追加のモデルをサポートできるように、このキャッシュは保持されます。 キャッシュを削除する必要がある場合は、マイニング構造オブジェクトの **CacheMode** プロパティを値 **ClearAfterProcessing**に変更します。 詳細については、「 [AMO データ マイニング クラス](../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)」を参照してください。  
+ データ マイニング ソリューションでデータを使用する必要がある場合、Analysis Services ではソースからデータを読み込み、集計およびその他の情報のキャッシュを生成します。 既定では、トレーニング データを再利用して追加のモデルをサポートできるように、このキャッシュは保持されます。 キャッシュを削除する必要がある場合は、マイニング構造オブジェクトの **CacheMode** プロパティを値 **ClearAfterProcessing**に変更します。 詳細については、「 [AMO データ マイニング クラス](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)」を参照してください。  
   
- Analysis Services には、代表的なランダムに選択されたデータのセットでマイニング モデルをテストできるように、トレーニング セットとテスト データ セットにデータを分割する機能も用意されています。 データは、実際には別々に格納されません。構造キャッシュ内のケース データには、その特定のケースがトレーニングに使用されるかテストに使用されるかを示すプロパティが設定されます。 キャッシュを削除すると、その情報を取得できなくなります。  
+ Analysis Services には、代表的なランダムに選択したデータのセットでマイニング モデルをテストできるように、トレーニング セットとテスト データ セットには、データを分割する機能も提供します。 データは、実際には別々に格納されません。構造キャッシュ内のケース データには、その特定のケースがトレーニングに使用されるかテストに使用されるかを示すプロパティが設定されます。 キャッシュを削除すると、その情報を取得できなくなります。  
   
  詳細については、「[マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)」を参照してください。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34018589"
  詳細については、「 [多次元モデルのアセンブリの管理](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)」を参照してください。  
   
  **カスタム ストアド プロシージャ**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングには、データ マイニング オブジェクトを使用するストアド プロシージャの使用がサポートされています。 独自のストアド プロシージャを作成して、機能を拡張し、予測クエリおよびコンテンツ クエリから返されるデータをより簡単に操作できます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニングでは、ストアド プロシージャを使用して、データ マイニング オブジェクトを操作できます。 独自のストアド プロシージャを作成して、機能を拡張し、予測クエリおよびコンテンツ クエリから返されるデータをより簡単に操作できます。  
   
  [ストアド プロシージャの定義](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "34018589"
  また、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、内部でデータ マイニングに使用されるシステム ストアド プロシージャが多数用意されています。 システム ストアド プロシージャは内部で使用するためのものですが、それらを応用することもできます。 これらのストアド プロシージャは、マイクロソフトによって随時変更される場合があります。そのため、実際の運用では、DMX、AMO、または XMLA を使用してクエリを作成することをお勧めします。  
   
  **カスタム プラグイン アルゴリズム**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 独自のアルゴリズムを作成し、追加するアルゴリズムは、新しいデータ マイニング サービスとして、サーバー インスタンスのメカニズムを提供します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、独自のアルゴリズムを作成し、そのアルゴリズムを新しいデータ マイニング サービスとしてサーバー インスタンスに追加するためのメカニズムが用意されています。  
   
  Analysis Services では、COM インターフェイスを使用して、プラグイン アルゴリズムと通信します。 新しいアルゴリズムの実装方法の詳細については、「 [プラグイン アルゴリズム](../../analysis-services/data-mining/plugin-algorithms.md)」を参照してください。  
   
@@ -101,6 +101,6 @@ ms.locfileid: "34018589"
   
 ## <a name="see-also"></a>参照  
  [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

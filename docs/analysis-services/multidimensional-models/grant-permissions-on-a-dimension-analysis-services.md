@@ -1,5 +1,5 @@
 ---
-title: ディメンション (Analysis Services) に対するアクセス許可を与える |Microsoft ドキュメント
+title: ディメンション (Analysis Services) に対する権限の付与 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 396969e35cff70f94bfe07ea1cf57d5221f485e2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 834cfe3629aed196c27391c48829b6b66884b82d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022579"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147727"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>ディメンションに対する権限の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34022579"
  ディメンションのロールを定義する場合、使用可能な権限は、オブジェクトがスタンドアロンのデータベース ディメンション (データベースにとっては内部、キューブにとっては外部であるディメンション) であるか、キューブ ディメンションであるかによって異なります。  
   
 > [!NOTE]  
->  既定では、データベース ディメンションに対する権限はキューブ ディメンションに継承されます。 たとえば、Customer データベース ディメンションに対する **[読み取り/書き込み]** を有効にすると、Customer キューブ ディメンションは現在のロールのコンテキストで **[読み取り/書き込み]** を継承します。 権限設定を上書きする場合は、継承された権限を消去できます。  
+>  既定では、データベース ディメンションに対する権限はキューブ ディメンションに継承されます。 たとえば、Customer データベース ディメンションに対する **[読み取り/書き込み]** を有効にすると、Customer キューブ ディメンションは現在のロールのコンテキストで **[読み取り/書き込み]** を継承します。 権限設定をオーバーライドする場合は、継承された権限を消去できます。  
   
 ## <a name="set-permissions-on-a-database-dimension"></a>データベース ディメンションに対する権限の設定  
  データベース ディメンションはデータベース内のスタンドアロン オブジェクトであり、同じモデル内でディメンションを再利用できます。 あるモデルで Order Date、Ship Date、Due Date の各キューブ ディメンションとして複数回使用される DATE データベース ディメンションがあるとします。 キューブおよびデータベース ディメンションはデータベースのピア オブジェクトであるため、各オブジェクトに個別に処理権限を設定できます。  
@@ -44,8 +44,7 @@ ms.locfileid: "34022579"
   
      既定では、権限は **[読み取り]** に設定されます。  
   
-     **[読み取り/書き込み]** が使用可能ですが、この権限は使用しないことをお勧めします。 
-  **[読み取り/書き込み]** はディメンションの書き戻しシナリオに使用されますが、このシナリオは非推奨とされました。 「 [SQL Server 2016 に含まれている非推奨の Analysis Services 機能](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)」を参照してください。  
+     **[読み取り/書き込み]** が使用可能ですが、この権限は使用しないことをお勧めします。 **[読み取り/書き込み]** はディメンションの書き戻しシナリオに使用されますが、このシナリオは非推奨とされました。 「 [SQL Server 2016 に含まれている非推奨の Analysis Services 機能](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)」を参照してください。  
   
      必要に応じて、個々のディメンション オブジェクトに対して **[定義の読み取り]** 権限および **[処理]** 権限を設定できますが、それらの権限がまだデータベース レベルで設定されていない場合に限ります。 詳細については、「[処理権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)」と「[オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)」を参照してください。  
   
@@ -54,18 +53,18 @@ ms.locfileid: "34022579"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーで適切なデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、新しいデータベース ロールを作成します。  
   
-2.  **ディメンション**ディメンションに設定 ウィンドウで、変更\<キューブ名 >**キューブ ディメンション**です。  
+2.  **ディメンション**ディメンションに設定 ウィンドウで、変更\<キューブ名 >**キューブ ディメンション**します。  
   
      既定では、権限は対応するデータベース ディメンションから継承されます。 **[継承]** チェック ボックスをオフにして、権限を **[読み取り]** から **[読み取り/書き込み]** に変更します。 **[読み取り/書き込み]** を使用する前に、前のセクションの注意事項を必ずお読みください。  
   
 > [!IMPORTANT]  
->  分析管理オブジェクト (AMO) を使用してデータベース ロール権限を構成する場合、キューブの DimensionPermission 属性内のキューブ ディメンションを参照することによって、データベースの DimensionPermission 属性からの権限継承は行われなくなります。 詳細については、「[分析管理オブジェクト &#40;AMO&#41; による開発](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)」を参照してください。  
+>  分析管理オブジェクト (AMO) を使用してデータベース ロール権限を構成する場合、キューブの DimensionPermission 属性内のキューブ ディメンションを参照することによって、データベースの DimensionPermission 属性からの権限継承は行われなくなります。 詳細については、「[分析管理オブジェクト &#40;AMO&#41; による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ロールと権限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [キューブまたはモデル権限 & #40; を許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [データ マイニング構造およびモデルに対する権限を与える&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [データ & #40; をディメンションにカスタムのアクセスを許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [セルのデータ & #40; へのカスタム アクセスを許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [データ マイニング構造およびデータ マイニング モデルに対する権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

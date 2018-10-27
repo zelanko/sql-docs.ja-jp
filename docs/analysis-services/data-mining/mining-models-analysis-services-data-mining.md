@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: マイニング モデル (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8febdd6f68cae6f28182a5734e46717a3b597624
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 78c4085a674bce6cca75394ee2c7f376c14d6a93
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018139"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146027"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>マイニング モデル (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34018139"
   
  マイニング モデルは、マイニング構造から提供されたデータの処理と分析が完了するまでは空の状態です。 処理後のマイニング モデルには、メタデータ、結果、およびマイニング構造へのバインドが含まれています。  
   
- ![モデルには、メタデータ、パターン、およびバインドが含まれている](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "モデルには、メタデータ、パターン、およびバインドが含まれています。")  
+ ![モデルには、メタデータ、パターン、およびバインドが含まれている](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "モデルには、メタデータ、パターン、およびバインドが含まれます。")  
   
  メタデータは、モデルの名前、モデルが格納されているサーバー、モデルの定義 (モデルの構築に使用されたマイニング構造の列、モデルの処理時に適用されたフィルターの定義、データの分析に使用されたアルゴリズムなど) を示します。 データ列およびそのデータ型、フィルター、およびアルゴリズムの選択は分析結果に多大な影響を及ぼします。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34018139"
   
  さらに、それぞれのマイニング モデルには、 <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> と <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>という 2 つの特殊なプロパティが含まれます。  
   
--   **Algorithm プロパティ** モデルの作成に使用するアルゴリズムを指定します。 使用できるアルゴリズムは、使用しているプロバイダーによって異なります。 含まれているアルゴリズムの一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を参照してください[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)です。 **Algorithm** プロパティはマイニング モデルに適用し、各モデルに対して 1 回だけ設定できます。 後でアルゴリズムを変更できますが、選択したアルゴリズムによってサポートされていないために、マイニング モデルの列が無効になる場合があります。 このプロパティを変更した後は、モデルを再処理する必要があります。  
+-   **Algorithm プロパティ** モデルの作成に使用するアルゴリズムを指定します。 使用できるアルゴリズムは、使用しているプロバイダーによって異なります。 含まれているアルゴリズムの一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を参照してください[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)します。 **Algorithm** プロパティはマイニング モデルに適用し、各モデルに対して 1 回だけ設定できます。 後でアルゴリズムを変更できますが、選択したアルゴリズムによってサポートされていないために、マイニング モデルの列が無効になる場合があります。 このプロパティを変更した後は、モデルを再処理する必要があります。  
   
 -   **Usage プロパティ** モデルによる各列の使用方法を定義します。 列の使用法は、 **[入力]**、 **[予測]**、 **[予測のみ]**、または **[キー]** のいずれかに定義できます。 **Usage** プロパティは、マイニング モデルの個別の列に適用し、モデルに含まれるすべての列に個別に設定する必要があります。 モデルで使用しない列が構造に含まれる場合は、使用法を **Ignore**に設定します。 顧客名や電子メール アドレスなどは、マイニング構造に含まれていても分析には使用されないデータの例です。 このように、後でクエリを実行する場合、分析フェーズで列を含める必要はありません。  
   
@@ -118,24 +118,24 @@ ms.locfileid: "34018139"
   
 |トピック|リンク|  
 |------------|-----------|  
-|複数のマイニング モデルをサポートするマイニング構造の構築方法について説明します。 モデルにおける列の使用法についても説明します。|[マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [コンテンツの種類 (&) #40 です。 データ マイニング (&) #41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
-|さまざまなアルゴリズム、およびアルゴリズムの選択がモデル コンテンツに与える影響について説明します。|[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|複数のマイニング モデルをサポートするマイニング構造の構築方法について説明します。 モデルにおける列の使用法についても説明します。|[マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)|  
+|さまざまなアルゴリズム、およびアルゴリズムの選択がモデル コンテンツに与える影響について説明します。|[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |モデルのコンポジションと動作に影響を与えるプロパティの設定方法について説明します。|[マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [モデリング フラグ &#40;データ マイニング&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
-|データ マイニングのプログラミング可能なインターフェイスについて説明します。|[分析管理オブジェクト & #40; を使用した開発AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)|  
+|データ マイニングのプログラミング可能なインターフェイスについて説明します。|[分析管理オブジェクト &#40;AMO&#41; による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でのカスタム データ マイニング ビューアーの使用方法について説明します。|[データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |データ マイニング モデルに対して使用できるさまざまな種類のクエリの例について説明します。|[データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  データ マイニング モデルの操作方法の詳細については、次のリンクを参照してください。  
   
 |タスク|リンク|  
 |----------|----------|  
-|マイニング モデルを追加および削除する|[既存のマイニング構造にマイニング モデルを追加します。](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [マイニング構造からのマイニング モデルの削除](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
-|マイニング モデルの列を操作する|[マイニング モデルからの列の除外](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [モデル列の別名を作成します。](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [マイニング モデル内の列の分離の変更](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [モデルでリグレッサーとして使用する列の指定](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|モデルのプロパティを変更する|[マイニング モデルのプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [マイニング モデルにフィルターを適用します。](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [マイニング モデルからフィルターを削除します。](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [マイニング モデルのドリルスルーを有効にします。](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [ビューまたはアルゴリズム パラメーターの変更](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
-|モデルをコピー、 移動、または管理する|[マイニング モデルのコピーを作成します。](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [マイニング モデルのビューをコピーします。](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [エクスポート &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [インポート &#40;DMX&#41;](../../dmx/import-dmx.md)|  
-|モデルにデータを入力する、またはモデルのデータを更新する|[マイニング モデルを処理します。](../../analysis-services/data-mining/process-a-mining-model.md)|  
-|OLAP モデルを操作する|[データ マイニング ディメンションを作成します。](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
+|マイニング モデルを追加および削除する|[既存のマイニング構造へのマイニング モデルの追加](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [マイニング構造からのマイニング モデルの削除](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
+|マイニング モデルの列を操作する|[マイニング モデルからの列の除外](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [モデル列の別名の作成](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [マイニング モデルでの列の分離の変更](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [モデルでリグレッサーとして使用する列の指定](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|モデルのプロパティを変更する|[マイニング モデルのプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [マイニング モデルへのフィルターの適用](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [マイニング モデルからのフィルターの削除](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [マイニング モデルのドリルスルーの有効化](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [アルゴリズム パラメーターの表示または変更](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
+|モデルをコピー、 移動、または管理する|[マイニング モデルのコピーの作成](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [マイニング モデルの表示のコピー](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [エクスポート &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [インポート &#40;DMX&#41;](../../dmx/import-dmx.md)|  
+|モデルにデータを入力する、またはモデルのデータを更新する|[マイニング モデルの処理](../../analysis-services/data-mining/process-a-mining-model.md)|  
+|OLAP モデルを操作する|[データ マイニング ディメンションの作成](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
 ## <a name="see-also"></a>参照  
  [データベース オブジェクト &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  

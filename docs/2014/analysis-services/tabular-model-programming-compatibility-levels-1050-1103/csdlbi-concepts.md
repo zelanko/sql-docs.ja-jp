@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098142"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146518"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI の概念
   BI 注釈付き概念スキーマ定義言語 (CSDLBI) は、さまざまなデータセットにプログラムでアクセスしてクエリやエクスポートを実行できるように各種のデータを抽象的に表す、Entity Data Framework に基づく言語です。 CSDLBI はリッチ形式でデータ ドリブンのレポートとアプリケーションをサポートしているため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用して作成されたデータ モデルを表すために CSDLBI が使用されます。  
@@ -131,7 +131,7 @@ ms.locfileid: "48098142"
   
  **ディメンション:** ディメンションは列とプロパティを持つエンティティ (テーブル) として CSDLBI で表現されます。 パースペクティブに含まれていない場合でも、モデルに含まれるディメンションは、`Hidden` とマークされて CSDL 出力で表現されます。  
   
- **パースペクティブ:** クライアントは、個々 のパースペクティブに対する CSDL を要求できます。 詳細については、次を参照してください。 [DISCOVER_CSDL_METADATA 行セット](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)します。  
+ **パースペクティブ:** クライアントは、個々 のパースペクティブに対する CSDL を要求できます。 詳細については、次を参照してください。 [DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)します。  
   
  **階層:** 階層がサポートされているし、一連のレベルとして CSDLBI で表現されます。  
   
@@ -148,6 +148,6 @@ ms.locfileid: "48098142"
  **制限事項:** セルのセキュリティはサポートされていません。  
   
 ## <a name="see-also"></a>参照  
- [ビジネス インテリジェンス向け CSDL 注釈&#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

@@ -2,7 +2,7 @@
 title: (Data Migration Assistant) SQL Server の移行評価の実行 |Microsoft Docs
 description: Data Migration Assistant を使用して、別の SQL Server または Azure SQL Database に移行する前に、オンプレミスの SQL Server を評価する方法について説明します
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0131c267d3a26782d0f32df3a3555afcbc43d22d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706190"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643980"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant で移行評価を SQL Server を実行します。
 
@@ -32,7 +32,7 @@ ms.locfileid: "47706190"
 
 2.  ソースとターゲット サーバーの種類を設定します。
 
-    オンプレミスで最新の SQL Server インスタンスまたは Azure VM でホストされている SQL Server のオンプレミスの SQL Server インスタンスをアップグレードする場合は、ソースとターゲット サーバーの種類を設定**SQL Server**します。 Azure SQL Database に移行する場合、ターゲット サーバーの種類を設定代わりに**Azure SQL Database**します。
+    アップグレードする場合、オンプレミスの SQL Server インスタンスをオンプレミスで最新の SQL Server インスタンスまたは Azure VM でホストされている SQL Server、ソースとターゲット サーバーの種類を設定**SQL Server**します。 Azure SQL Database に移行する場合、ターゲット サーバーの種類を設定代わりに**Azure SQL Database**します。
 
 3.  **[作成]** をクリックします。
 
@@ -44,7 +44,7 @@ ms.locfileid: "47706190"
 
 2. レポートの種類を選択します。
 
-   ターゲットの Azure VM でホストされている SQL Server にオンプレミスの SQL Server に移行するため、ソース SQL Server のインスタンスを評価するときは、次の評価レポート タイプの一方または両方を選択できます。
+   ターゲットの Azure VM でホストされている SQL Server にオンプレミスの SQL Server に移行するため、ソース SQL Server のインスタンスを評価している、ときに、次の評価レポート タイプの一方または両方を選択できます。
 
     -   **互換性の問題**
 
@@ -52,7 +52,7 @@ ms.locfileid: "47706190"
 
     ![SQL Server のターゲットの評価レポートの種類を選択します。](../dma/media/AssessmentTypes.png)
 
-   Azure SQL Database に移行するため、ソース SQL Server のインスタンスを評価するときは、次の評価レポート タイプの一方または両方を選択できます。
+   Azure SQL Database に移行するため、ソース SQL Server のインスタンスを評価している、するときは、次の評価レポート タイプの一方または両方を選択できます。
 
     -   **データベースの互換性を確認してください。**
 
@@ -77,7 +77,7 @@ ms.locfileid: "47706190"
 
 ## <a name="view-results"></a>結果を表示します。
 
-評価の実行時間は、追加したデータベースの数と各データベースのスキーマのサイズによって異なります。 使用するとすぐに、データベースごとに結果が表示されます。
+評価の実行時間は、追加したデータベースの数と各データベースのスキーマのサイズによって異なります。 利用可能になるとすぐに、データベースごとに結果が表示されます。
 
 1.  評価が完了したデータベースを選択し、切り替える**互換性の問題**と**機能に関する推奨事項**スイッチャーを使用しています。
 

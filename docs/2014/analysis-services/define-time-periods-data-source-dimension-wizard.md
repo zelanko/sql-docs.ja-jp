@@ -13,12 +13,12 @@ ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2086fa86f65cd467b84bf77e57123ded51e3dd4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacc0e61ca3db517b5f05aa93ed43b3268e40529
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161462"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144617"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>[時間間隔の定義] (データ ソース) (ディメンション ウィザード)
   **[時間間隔の定義]** ページを使用すると、 **[ディメンションの種類の選択]** ページで指定されたテーブル内の列を使用して、時間ディメンション内の期間を表す属性を指定できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "48161462"
   
 ## <a name="options"></a>および  
  **Time プロパティ名**  
- 時間ディメンション内の時間間隔を示すために使用される属性の種類を表示します。 属性の種類の詳細については、[「Type 要素 (DimensionAttribute) (ASSL)」](scripting/properties/type-element-dimensionattribute-assl.md) を参照してください。  
+ 時間ディメンション内の時間間隔を示すために使用される属性の種類を表示します。 属性の種類の詳細については、[「Type 要素 (DimensionAttribute) (ASSL)」](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl) を参照してください。  
   
 > [!NOTE]  
 >  `Date` 属性の種類は、DateTime データ型を持つ列に対してのみ使用してください。  

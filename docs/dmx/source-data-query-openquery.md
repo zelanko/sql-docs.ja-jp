@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6f7b4744c3f521ed4c51e461f2b01a748b9b6496
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 895c28f0989debb899c1e01c80a18483d3cda5a1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989760"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147817"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;ソース データ クエリ&gt;-OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ OPENQUERY(<named datasource>, <query syntax>)
 ## <a name="remarks"></a>コメント  
  **OPENQUERY**データ ソースのアクセス許可をサポートすることによって外部データにアクセスするより安全な方法を提供します。 接続文字列はデータ ソースに格納されるので、管理者はデータ ソースのプロパティを使用して、データへのアクセスを管理することができます。 データ ソースの詳細については、次を参照してください。[サポートされるデータ ソース&#40;SSAS - 多次元&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)します。  
   
- クエリを実行して、サーバーで使用できるデータ ソースの一覧を取得することができます、 **MDSCHEMA_INPUT_DATASOURCES**スキーマ行セット。 使用しての詳細については**MDSCHEMA_INPUT_DATASOURCES**を参照してください[MDSCHEMA_INPUT_DATASOURCES 行セット](../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)します。  
+ クエリを実行して、サーバーで使用できるデータ ソースの一覧を取得することができます、 **MDSCHEMA_INPUT_DATASOURCES**スキーマ行セット。 使用しての詳細については**MDSCHEMA_INPUT_DATASOURCES**を参照してください[MDSCHEMA_INPUT_DATASOURCES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)します。  
   
  また、次の DMX クエリを使用すると、現在の Analysis Services データベース内のデータ ソースの一覧を返すこともできます。  
   

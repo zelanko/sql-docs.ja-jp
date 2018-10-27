@@ -2,7 +2,7 @@
 title: アップグレード オンプレミス SQL Server または SQL Server Data Migration Assistant を使用して Azure Vm 上に SQL Server |Microsoft Docs
 description: Data Migration Assistant を使用して、以降のバージョンの SQL Server または Azure Vm 上の SQL Server には、オンプレミスの SQL Server をアップグレードする方法について説明します
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833130"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643840"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server または Data Migration Assistant を使用して Azure Vm 上の SQL Server にオンプレミスの SQL Server のアップグレードします。
 
@@ -81,7 +81,7 @@ Data Migration Assistant は、Azure Vm または Azure SQL Database で SQL Ser
 
 5. **[次へ]** を選択します。
 
-Data Migration Assistant の検証を行います、バックアップ フォルダーのデータとログ ファイルの場所。 いずれかの検証に失敗した場合、オプションを修正してください、クリックして**次**します。
+Data Migration Assistant は、バックアップ フォルダー、データ、およびログ ファイルの場所での検証を実行します。 いずれかの検証に失敗した場合、オプションを修正し、**次**します。
 
 ## <a name="select-logins"></a>ログインを選択します。
 

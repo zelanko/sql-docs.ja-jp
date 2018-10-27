@@ -13,12 +13,12 @@ ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 1e69780efa7342175e0cf9b63484a08af522e4c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 568e42fef097ead1958cf7c767227bb8863e2b16
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840240"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100083"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>変数値ファイルの作成 (OracleToSQL)
 変数値ファイルは、別に 1 つのサーバーの移行から頻繁に変更されるように、送信元または送信先のサーバー名のコマンドのパラメーターの値を構成する XML ファイルです。 各ソース サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている多数のデータベースの移行が発生すると、 **– v**コマンド ライン スイッチします。 これにより、複数の変数ファイルの変数の値をいくつかのスクリプト ファイルの静的な値を維持するためにします。  
@@ -91,5 +91,5 @@ ms.locfileid: "47840240"
 コンソールの運用には、次の手順は[サーバー接続ファイルを作成する&#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[サーバー ファイル (Oracle) の作成](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[サーバー ファイル (Oracle) の作成](http://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

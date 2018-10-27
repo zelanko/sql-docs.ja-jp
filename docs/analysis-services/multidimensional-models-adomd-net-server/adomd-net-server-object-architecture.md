@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET サーバー オブジェクト アーキテクチャ |Microsoft ドキュメント
+title: ADOMD.NET サーバー オブジェクト アーキテクチャ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f3806faf430f5909397a3b805433ddaca402b78f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021219"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144967"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET サーバー オブジェクト アーキテクチャ
-  ADOMD.NET サーバー オブジェクトは、ユーザー定義関数 (Udf) やストアド プロシージャの作成に使用できるヘルパー オブジェクト[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。  
+  ADOMD.NET サーバー オブジェクトはユーザー定義関数 (Udf) やストアド プロシージャを作成するために使用できるヘルパー オブジェクト[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。  
   
 > [!NOTE]  
 >  使用する、 **Microsoft.AnalysisServices.AdomdServer**名前空間 (およびこれらのオブジェクト)、UDF プロジェクトやストアド プロシージャに msmgdsrv.dll への参照を追加する必要があります。  
   
- ![ADOMD.NET サーバー オブジェクトのリレーションシップが表示](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "ADOMD.NET サーバーにおけるオブジェクトのリレーションシップを示しています。")  
+ ![ADOMD.NET サーバーにおけるオブジェクトの関係を示しています。](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "ADOMD.NET サーバーにおけるオブジェクトの関係を示しています。")  
 ADOMD.NET オブジェクト モデル  
   
  ADOMD.NET オブジェクト階層との対話は、通常、次の表で説明するように、最上位層の 1 つまたは複数のオブジェクトで開始されます。  
@@ -36,6 +36,6 @@ ADOMD.NET オブジェクト モデル
 |MDX 言語の 6 つの基本的な型の間で暗黙の変換とキャストをサポートする|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue> オブジェクトでは、次の型の間で暗黙の変換とキャストが行われます。<br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Level><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Member><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Set><br /><br /> スカラー型 (値型)|  
   
 ## <a name="see-also"></a>参照  
- [ADOMD.NET サーバー プログラミング](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [ADOMD.NET サーバー プログラミング](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

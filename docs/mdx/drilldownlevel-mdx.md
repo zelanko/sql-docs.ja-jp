@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevel (MDX) |Microsoft ドキュメント
+title: DrilldownLevel (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2aa0ae2406b7e53445c9c84c98b4240f834f01c6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740221"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145657"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
 
   セットで表される最低レベルより 1 つ下のレベルに、セットのメンバーをドリルダウンします。  
   
- レベルを指定すると、ドリル ダウン オプションですが、レベルを設定する場合は、いずれかを使用、**レベル式**または**インデックス レベル**です。 これらの引数を両方同時に指定することはできません。 最後に、計算されるメンバーがクエリに存在する場合は、引数を行セットに含めるよう指定できます。  
+ レベルを指定する位置をドリル ダウン オプションですのレベルを設定する場合は、いずれかを使用する**レベル式**または**インデックス レベル**。 これらの引数を両方同時に指定することはできません。 最後に、計算されるメンバーがクエリに存在する場合は、引数を行セットに含めるよう指定できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,9 +43,9 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  (省略可)。 計算されるメンバーがドリルダウン レベルに存在する場合にそれらを含めるかどうかを示すフラグです。  
   
 ## <a name="remarks"></a>コメント  
- **DrilldownLevel**関数は、指定したセットに含まれるメンバーに基づいて階層の順序で子のセットにメンバーを返します。 指定したセットの元のメンバーの間の順序はそのまま保持されます。ただし、この関数の結果セットに組み込まれるすべての子メンバーは、それぞれの親メンバーの直下に組み込まれます。  
+ **DrilldownLevel**関数は、指定されたセットに含まれるメンバーに基づいて階層の順序で一連の子メンバーを返します。 指定したセットの元のメンバーの間の順序はそのまま保持されます。ただし、この関数の結果セットに組み込まれるすべての子メンバーは、それぞれの親メンバーの直下に組み込まれます。  
   
- 複数レベルの階層データ構造の場合は、ドリルダウンするレベルを明示的に選択できます。 レベルを指定する方法は 2 つあります。両方の方法を同時に使用することはできません。 最初の方法を設定、 **level_expression**は、レベル、その他の方法を取得する MDX 式を使用して引数を指定、**インデックス**引数を番号でレベルを指定する数値式を使用します。  
+ 複数レベルの階層データ構造の場合は、ドリルダウンするレベルを明示的に選択できます。 レベルを指定する方法は 2 つあります。両方の方法を同時に使用することはできません。 最初の方法を設定するのには、 **level_expression**は、レベル、別のアプローチを返す MDX 式を使用して引数を指定、**インデックス**引数、数値式を使用しています。番号でレベルを指定します。  
   
  レベル式が指定された場合は、指定されたレベルにあるメンバーの子メンバーだけを取得し、階層の順序でセットを構築します。 レベル式が指定された場合に、そのレベルにメンバーが存在しなければ、レベル式は無視されます。  
   
@@ -53,14 +53,14 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  レベル式もインデックス値も指定されていない場合、指定されたセット内で参照されている最初のディメンションの最下位レベルにあるメンバーの子メンバーだけを取得し、階層内の順序でセットを構築します。  
   
- XMLA プロパティの mdpropmdxdrillfunctions にクエリを使用すると、サーバーがドリル関数以外が提供するサポートのレベルを確認するには参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)詳細についてはします。  
+ XMLA プロパティの MdpropMdxDrillFunctions にクエリを実行、サーバーがドリル関数; が提供するサポートのレベルを確認することができます。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)詳細についてはします。  
   
 ## <a name="examples"></a>使用例  
  SSMS の MDX クエリ ウィンドウで Adventure Works キューブを使用して以下の例を試すことができます。  
   
  **例 1-最小構文をデモします。**  
   
- 最初の例では、最小構文**DrilldownLevel**です。 唯一必要な引数は、セット式です。 このクエリを実行するとなる、親のすべてのカテゴリと、次のレベルのメンバーに注意してください。 [アクセサリ]、[Bikes]、具合にします。 この例では、単純の基本的な目的を示しています、 **DrilldownLevel**関数で、下のレベルまでドリルダウンします。  
+ 最初の例では、最小構文**DrilldownLevel**します。 唯一必要な引数は、セット式です。 このクエリを実行するとなる、親のすべてのカテゴリと、次のレベルのメンバーに注意してください。 [アクセサリ]、[Bikes]、具合にします。 この例は、単純な基本的な目的を示しています、 **DrilldownLevel**関数で、下のレベルをドリルダウンします。  
   
 ```  
 SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sales Territory]}}) ON COLUMNS  
@@ -83,7 +83,7 @@ FROM [Adventure Works]
   
  次の例は、レベル式の使用方法を示しています。 階層構造を表すセットの場合は、レベル式を使用して、ドリルダウンを開始する階層のレベルを選択できます。  
   
- この例でのドリル ダウン レベルから開始 [市区町村] の 2 番目の引数として、 **DrilldownLevel**関数。 このクエリを実行すると、ワシントン州およびオレゴン州の [City] レベルからドリルダウンされます。 ごと、 **DrilldownLevel**関数、結果セットも [Postal codes] 下のレベルのメンバーが含まれています。  
+ この例でのドリル ダウン レベルから開始 [市区町村] の 2 番目の引数として、 **DrilldownLevel**関数。 このクエリを実行すると、ワシントン州およびオレゴン州の [City] レベルからドリルダウンされます。 ごと、 **DrilldownLevel**関数場合、結果セットもには [Postal codes] 下のレベルのメンバーが含まれています。  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
@@ -118,6 +118,6 @@ FROM [Adventure Works]
  このフラグだけを削除してクエリを再実行すると、計算されるメンバー [West Coast] が除かれた、同じ結果が返されます。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

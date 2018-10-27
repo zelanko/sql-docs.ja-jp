@@ -13,12 +13,12 @@ ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: df03cfe48fe66b359cb9ec054a82b24b4a8ce3dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6122efd4340fb223e42ffa77b5851380be23b0c0
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783781"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099373"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>プロジェクトの設定 (変換) (AccessToSQL)
 変換のプロジェクト設定では、Access データベース オブジェクトからオブジェクトに変換する方法を構成できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースのオブジェクト。  
@@ -112,5 +112,5 @@ SSMA により、オブジェクト識別子の名前が変更されたときに
 -   **フル モード**: True  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイスの Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ユーザー インターフェイスの Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

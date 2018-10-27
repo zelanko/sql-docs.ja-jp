@@ -18,19 +18,19 @@ ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8454d379bcce879ed444a98bf5938e0736ea30e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153063"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145957"
 ---
 # <a name="translations-analysis-services"></a>翻訳 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多次元のみ  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の多次元データ モデルでは、キャプションに複数の翻訳を埋め込み、LCID に基づいてロケール固有の文字列を提供することができます。 データベース名、キューブ オブジェクト、およびデータベース ディメンション オブジェクトに翻訳を追加できます。  
   
- 翻訳を定義するには、メタデータと翻訳されたキャプションをモデル内に作成します。しかし、クライアント アプリケーションでローカライズされた文字列をレンダリングするには、`Language` プロパティをオブジェクトに設定するか、または接続文字列で `Locale Identifier` パラメーターを渡す (たとえば、`LocaleIdentifier=1036` を設定するとフランス語の文字列が返されます) 必要があります。 同じオブジェクトでさまざまな言語の翻訳を同時にサポートする場合は、`Locale Identifier` を使用するように計画してください。 設定、`Language`プロパティは、処理やでしたが、クエリにも影響が、予期しない結果。 設定`Locale Identifier`翻訳された文字列を返すのみ使用されているのでをお勧めします。  
+ 翻訳を定義するには、メタデータと翻訳されたキャプションをモデル内に作成します。しかし、クライアント アプリケーションでローカライズされた文字列をレンダリングするには、`Language` プロパティをオブジェクトに設定するか、または接続文字列で `Locale Identifier` パラメーターを渡す (たとえば、`LocaleIdentifier=1036` を設定するとフランス語の文字列が返されます) 必要があります。 同じオブジェクトでさまざまな言語の翻訳を同時にサポートする場合は、`Locale Identifier` を使用するように計画してください。 `Language` プロパティを設定する方法でも機能しますが、処理やクエリにも影響が出るため、意図しない結果になる恐れがあります。 `Locale Identifier` は翻訳した文字列を返すためにのみ使用されるため、それを設定する方が適切です。  
   
  翻訳は、ロケール識別子 (LCID)、オブジェクトの翻訳されたキャプション (たとえば、ディメンションまたは属性の名前)、およびオプションとして対象言語でのデータ値を提供する列へのバインドで構成されます。 複数の翻訳を保持できますが、特定の接続で使用できる翻訳は 1 つのみです。 モデルに埋め込むことができる翻訳の数に理論上の制限はありませんが、翻訳を 1 つ追加するごとにテストの複雑さが増すことと、すべての翻訳で同じ照合順序を共有する必要があることから、ソリューションを設計する際にはこれらの当然の制約に注意してください。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48153063"
   
 4.  任意のフィールドを右クリックし、 **[データの探索]** を選択します。 各メンバーの英語、スペイン語、およびフランス語の翻訳が表示されます。  
   
- 日付、時刻、通貨の形式は、翻訳を通じては実装されません。 クライアントのロケールに基づいてカルチャに固有の形式を動的に提供するには、通貨変換ウィザードと `FormatString` プロパティを使用します。 「[通貨換算 (Analysis Services)](currency-conversions-analysis-services.md)」および「[FormatString 要素 (ASSL)](scripting/properties/formatstring-element-assl.md)」をご覧ください。  
+ 日付、時刻、通貨の形式は、翻訳を通じては実装されません。 クライアントのロケールに基づいてカルチャに固有の形式を動的に提供するには、通貨変換ウィザードと `FormatString` プロパティを使用します。 「[通貨換算 (Analysis Services)](currency-conversions-analysis-services.md)」および「[FormatString 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)」をご覧ください。  
   
  Analysis Services のチュートリアルの「[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) 」では、翻訳を作成してテストする手順について説明しています。  
   
@@ -72,12 +72,12 @@ ms.locfileid: "48153063"
   
 4.  プロジェクトをビルドし、配置します。  
   
-5.  Excel などのクライアント アプリケーションを使用してデータベースに接続し、ロケール識別子を使用するように接続文字列を変更します。 詳細については、「[グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)」をご覧ください。  
+5.  Excel などのクライアント アプリケーションを使用してデータベースに接続し、ロケール識別子を使用するように接続文字列を変更します。 詳細については、「 [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>ディメンションおよび属性に翻訳を追加する  
  翻訳は、データベース ディメンション、属性、階層、および階層内のレベルに追加できます。  
   
- 翻訳されたキャプションは、キーボードまたはコピー/貼り付けを使用して手動でモデルに追加しますが、ディメンションの属性メンバーについては、翻訳された値を外部データベースから取得できます。 具体的には、`CaptionColumn`属性のプロパティは、データ ソース ビュー内の列にバインドできます。  
+ 翻訳されたキャプションは、キーボードまたはコピー/貼り付けを使用して手動でモデルに追加しますが、ディメンションの属性メンバーについては、翻訳された値を外部データベースから取得できます。 具体的には、属性の `CaptionColumn` プロパティをデータ ソース ビューの列にバインドできます。  
   
  照合順序の設定は、属性レベルでオーバーライドできます。たとえば、特定の属性について文字幅の区別で調整したり、バイナリ並べ替えを使用したりできます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、データ バインドが定義されている場所で照合順序が公開されます。 ディメンション属性の翻訳は DSV 内の別のソース列にバインドするので、ソース列で使用する照合順序を指定できるように、照合順序の設定が可能になっています。 リレーショナル データベース内の列の照合順序について詳しくは、「 [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) 」を参照してください。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48153063"
   
 2.  [翻訳] 内で、対象言語 (LCID に解決される)、キャプションの翻訳、および説明の翻訳を指定します。 Management Studio でサーバーの言語を設定したとしても、1 つの属性に対して翻訳のオーバーライドを追加したとしても、言語の一覧は Analysis Services 全体で一貫性が保たれます。  
   
-3.  データベースのプロパティ ページで、次のように設定します。 `Language` 、翻訳に対して指定したのと同じ LCID をします。 必要に応じて、設定、`Collation`の既定値が不要になったなさなく場合にもします。  
+3.  データベースの [プロパティ] ページで、翻訳に対して指定したのと同じ LCID を `Language` に設定します。 必要であれば、`Collation` にも値を設定します (既定値が意味をなさなくなった場合)。  
   
 4.  データベースをビルドして配置します。  
   
@@ -119,8 +119,8 @@ ms.locfileid: "48153063"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services 多次元のグローバリゼーションのシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [言語および照合順序&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
+ [言語および照合順序 (Analysis Services)](languages-and-collations-analysis-services.md)   
  [列の照合順序の設定または変更](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [グローバリゼーションのヒントし、ベスト プラクティス&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)  
   
   

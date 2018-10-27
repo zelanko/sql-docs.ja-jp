@@ -19,12 +19,12 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0baf445580017ba976d788c402e81aa06cbb2643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110532"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148237"
 ---
 # <a name="data-mining-query-interfaces"></a>データ マイニング クエリ インターフェイス
   データ マイニング クエリは、データ マイニング拡張機能 (DMX) の言語に基づいています。 DMX は、分類、リスク分析、推奨設定の生成、線形回帰などのすべての予測およびモデリングのタスクに使用できます。 またモデル処理時に生成されたパターンおよび統計を取得することもできます。  
@@ -87,16 +87,16 @@ ms.locfileid: "48110532"
   
  ただし、XMLA は、Analysis Service サーバーとのすべてのやり取りのもとになるメッセージ形式を構成します。 XMLA メッセージ内では、DMX に基づく予測クエリ、コンテンツ クエリ、またはデータ マイニング スキーマ行セットを使用してモデル メタデータを取得するクエリのどれを送信しているかにより、クエリの表示の方法が異なります。  
   
--   **予測クエリ** (および他のすべての DMX ステートメント) のテキストは、[Execute (XMLA)](../xmla/xml-elements-methods-execute.md) メソッドを使用し、XMLA [Command (XMLA)](../xmla/xml-elements-properties/command-element-xmla.md) 要素の [Statement (XMLA)](../xmla/xml-elements-commands/statement-element-xmla.md) 要素内のテキストとして配置される DMX クエリと共に、XMLA で送信されます。  
+-   **予測クエリ** (および他のすべての DMX ステートメント) のテキストは、[Execute (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) メソッドを使用し、XMLA [Command (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla) 要素の [Statement (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) 要素内のテキストとして配置される DMX クエリと共に、XMLA で送信されます。  
   
--   クラスター数、デシジョン ツリーで使用される属性、モデルの最終処理日、モデル作成時に使用されるアルゴリズム パラメーターなどの**モデル コンテンツ**および**モデル メタデータ**を取得するには、[Discover (XMLA)](../xmla/xml-elements-methods-discover.md) メソッドを使用し、[RequestType (XMLA)](../xmla/xml-elements-properties/type-element-xmla.md) ヘッダーでデータ マイニング スキーマ行セットの 1 つを指定します。 クエリの範囲を絞り込むには、基準を [RestrictionList (XMLA)](../xmla/xml-elements-properties/restrictionlist-element-xmla.md) 要素の制限として入力します。  
+-   クラスター数、デシジョン ツリーで使用される属性、モデルの最終処理日、モデル作成時に使用されるアルゴリズム パラメーターなどの**モデル コンテンツ**および**モデル メタデータ**を取得するには、[Discover (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) メソッドを使用し、[RequestType (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) ヘッダーでデータ マイニング スキーマ行セットの 1 つを指定します。 クエリの範囲を絞り込むには、基準を [RestrictionList (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla) 要素の制限として入力します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [データ マイニング拡張機能 (DMX) リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   
  [データ マイニング ソリューション](data-mining-solutions.md)   
- [DMX 選択ステートメントをについてください。](/sql/dmx/understanding-the-dmx-select-statement)   
+ [DMX 選択ステートメントについて](/sql/dmx/understanding-the-dmx-select-statement)   
  [構造と DMX 予測クエリの使用](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
- [予測クエリ ビルダーを使用して予測クエリを作成します。](create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [予測クエリ ビルダーを使用した予測クエリの作成](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [SQL Server Management Studio で DMX クエリを作成する](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

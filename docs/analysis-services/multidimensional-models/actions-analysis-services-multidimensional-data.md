@@ -1,5 +1,5 @@
 ---
-title: 操作 (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: アクション (Analysis Services - 多次元データ) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020489"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146367"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>アクション (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020489"
   
 -   標準アクション。このアクションは、実行されたキューブで選択されているセクションに関連付けられたアクション要素 (URL、HTML、DataSet、RowSet などの要素) を返します。  
   
- アクションを取得してエンド ユーザーに公開する際、クライアント アプリケーションでは ADOMD.NET などのクエリ インターフェイスが使用されます。 詳細については、「 [ADOMD.NET での開発](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)」を参照してください。  
+ アクションを取得してエンド ユーザーに公開する際、クライアント アプリケーションでは ADOMD.NET などのクエリ インターフェイスが使用されます。 詳細については、「 [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)」を参照してください。  
   
  簡単な <xref:Microsoft.AnalysisServices.Action> オブジェクトは、基本情報、アクションが実行される対象、アクション スコープの限定条件、およびアクションの種類で構成されます。 基本情報には、アクションの名前、アクションの説明、アクションに推奨されるキャプションなどが含まれます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34020489"
 ## <a name="types-of-actions"></a>アクションの種類  
  次の表に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に含まれているアクションの種類を示します。  
   
-|アクションの種類|Description|  
+|アクションの種類|説明|  
 |-----------------|-----------------|  
 |CommandLine|コマンド プロンプトでコマンドを実行します。|  
 |データセット|データセットをクライアント アプリケーションに返します。|  
@@ -66,6 +66,6 @@ ms.locfileid: "34020489"
  コマンド オブジェクトが定義されているオブジェクトにビジネス ユーザーがアクセスすると、アクションに関連付けられているステートメントが自動的に解決されます。このため、クライアント アプリケーションでそのステートメントを利用できるようになりますが、アクションが自動的に実行されるわけではありません。 アクションは、ビジネス ユーザーがそのアクションを開始するクライアント固有の操作をしたときにのみ実行されます。 たとえば、クライアント アプリケーションでは、ビジネス ユーザーが特定のメンバーまたはセルを右クリックしたときに、ポップアップ メニューとしてアクションの一覧を表示できます。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル内のアクション](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
+ [多次元モデルのアクション](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

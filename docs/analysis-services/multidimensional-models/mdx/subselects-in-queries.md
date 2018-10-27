@@ -1,5 +1,5 @@
 ---
-title: クエリのサブセレクト |Microsoft ドキュメント
+title: クエリのサブセレクト |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a74ddce096d58ba7b350617515bae3edc5b80c45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025269"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147887"
 ---
 # <a name="subselects-in-queries"></a>クエリのサブセレクト
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -328,7 +328,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Australia|Canada|Northwest|Southwest|United Kingdom|  
+||All Sales Territories|Australia|Canada|Northwest|Southwest|イギリス|  
 |All Products|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 Silver, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 Silver, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  
@@ -338,7 +338,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  両方のセットの結果には、違いがあることがわかります。 最初のクエリは、上位 5 販売地域の最も販売された製品は何かという質問に対する結果を返し、2 番目のクエリは、上位 5 販売製品が最も販売された場所はどこかという質問に対する結果を返しています。  
   
-### <a name="remarks"></a>解説  
+### <a name="remarks"></a>コメント  
  サブセレクトには、次の制限事項と制約事項があります。  
   
 -   WHERE 句はサブ空間に対してフィルターを適用しません。  
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   HAVING 句は軸句では使用できません。代わりに [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) 関数式を使用します。  
   
--   既定では計算されるメンバーでは許可されませんサブセレクトです。ただし、この制限は、セッション単位でに値を割り当てることによって、**サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROP_MSMD_SUBQUERIES** 内のプロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) または **DBPROP_MSMD_SUBQUERIES** の値に基づく計算されたメンバーの動作の詳細については、「 **サブセレクトとサブキューブで計算されるメンバー**」を参照してください。  
+-   既定で、計算されるメンバーはサブセレクト; で許可されませんただし、この制限は、セッション単位で値を割り当てることで、**サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROP_MSMD_SUBQUERIES** プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)します。 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) または **DBPROP_MSMD_SUBQUERIES** の値に基づく計算されたメンバーの動作の詳細については、「 **サブセレクトとサブキューブで計算されるメンバー**」を参照してください。  
   
   

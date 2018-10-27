@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159802"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100253"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Windows Azure への SQL Server マネージ バックアップ
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は Windows Azure BLOB ストレージ サービスへの SQL Server バックアップを管理および自動化します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で使用されるバックアップ方法は、データベースの保有期間とトランザクション ワークロードに基づきます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] では、指定された保有期間の特定の時点への復元がサポートされています。   
@@ -72,7 +72,7 @@ ms.locfileid: "48159802"
 |-|-|  
 |システム オブジェクト|説明|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって作成されたすべてのバックアップに対するメタデータとバックアップ履歴を格納します。|  
-|[smart_admin.set_db_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|データベースの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にして構成するためのシステム ストアド プロシージャです。|  
+|[smart_admin.set_db_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|データベースの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にして構成するためのシステム ストアド プロシージャです。|  
 |[smart_admin.set_instance_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|システム ストアド プロシージャを有効にすると、既定の設定を構成する[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]SQL Server インスタンス。|  
 |[smart_admin.sp_ backup_master_switch &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を一時停止および再開するためのシステム ストアド プロシージャです。|  
 |[smart_admin.sp_set_parameter &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の監視を有効にして構成するためのシステム ストアド プロシージャです。 たとえば、拡張イベントの有効化、通知の電子メール設定があります。|  

@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: マイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ecf592968e6bd025a0096d0ed3369029cbf4eec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 64aeaec2c78360fa082f98db33ebd47a91171348
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019529"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146227"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34019529"
  ルート ノードに含まれる子ノードの数は、モデルの作成に使用したアルゴリズムによって異なります。 アルゴリズムやデータの深さおよび複雑さによって子ノードの意味は異なり、子ノードに含まれるコンテンツも異なります。  
   
 ##  <a name="bkmk_Nodes"></a> マイニング モデル コンテンツ内のノード  
- マイニング モデルでは、ノードは、モデルの全体または一部に関する情報を格納する汎用コンテナーです。 各ノードの構造は常に同じで、この構造にはデータ マイニング スキーマ行セットで定義される列が含まれます。 詳しくは、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)」をご覧ください。  
+ マイニング モデルでは、ノードは、モデルの全体または一部に関する情報を格納する汎用コンテナーです。 各ノードの構造は常に同じで、この構造にはデータ マイニング スキーマ行セットで定義される列が含まれます。 詳しくは、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)」をご覧ください。  
   
  各ノードには、各モデル内で一意な識別子、親ノードの ID、ノードに含まれている子ノードの数などのノードに関するメタデータが含まれています。 メタデータによって、ノードが属しているモデルおよびその特定のモデルが格納されているデータベース カタログが識別されます。 ノードに含まれる追加コンテンツは、モデルの作成に使用したアルゴリズムの種類によって異なります。追加コンテンツには次のようなものがあります。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34019529"
 |NODE_TYPE ID|ノード ラベル|ノードのコンテンツ|  
 |-------------------|----------------|-------------------|  
 |1|[モデル]|メタデータおよびルート コンテンツ ノード。 すべての種類のモデルに適用されます。|  
-|2|trEE|分類ツリーのルート ノード。 デシジョン ツリー モデルに適用されます。|  
+|2|ツリー|分類ツリーのルート ノード。 デシジョン ツリー モデルに適用されます。|  
 |3|Interior|ツリーの内部分割ノード。 デシジョン ツリー モデルに適用されます。|  
 |4|Distribution|ツリーの末端のノード。 デシジョン ツリー モデルに適用されます。|  
 |5|クラスター|アルゴリズムにより検出されたクラスター。 クラスター モデルとシーケンス クラスター モデルに適用されます。|  
@@ -121,8 +121,7 @@ ms.locfileid: "34019529"
   
 -   データ マイニング拡張機能 (DMX) クエリ内で関数を使用して、特定のノードの子孫または親を検出することができます。 クエリでの関数の使用の詳細については、「 [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」をご覧ください。  
   
- 
-  *カーディナリティ* は、セット内の項目数を指します。 処理済みのマイニング モデルのコンテキストでは、カーディナリティは特定のノードの子の数を表します。 たとえば、デシジョン ツリー モデルに [年収] というノードがあり、そのノードに条件 [年収] = 高と条件 [年収] = 低という 2 つの子ノードがある場合、[年収] ノードの CHILDREN_CARDINALITY の値は 2 になります。  
+ *カーディナリティ* は、セット内の項目数を指します。 処理済みのマイニング モデルのコンテキストでは、カーディナリティは特定のノードの子の数を表します。 たとえば、デシジョン ツリー モデルに [年収] というノードがあり、そのノードに条件 [年収] = 高と条件 [年収] = 低という 2 つの子ノードがある場合、[年収] ノードの CHILDREN_CARDINALITY の値は 2 になります。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ノードのカーディナリティの計算時には直接の子ノードのみがカウントされます。 ただし、カスタム プラグイン アルゴリズムを作成する場合は、CHILDREN_CARDINALITY をオーバーロードして異なる方法でカーディナリティをカウントすることができます。 これは、直接の子だけでなく子孫の総数をカウントする場合などに役立ちます。  
@@ -263,15 +262,15 @@ ms.locfileid: "34019529"
   
 |アルゴリズムまたはモデルの種類|model content|マイニング モデルのクエリ|  
 |-----------------------------|-------------------|----------------------------|  
-|アソシエーション ルール モデル|[アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[アソシエーション モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|クラスター モデル|[デシジョン ツリー モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[クラスタ リング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|デシジョン ツリー モデル|[デシジョン ツリー モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|アソシエーション ルール モデル|[アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)|  
+|クラスター モデル|[デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|デシジョン ツリー モデル|[デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |線形回帰モデル|[線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |ロジスティック回帰モデル|[ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Naïve Bayes モデル|[Naive Bayes モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
+|Naïve Bayes モデル|[Naive Bayes モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |ニューラル ネットワーク モデル|[ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |シーケンス クラスター|[シーケンス クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|タイム シリーズ モデル|[タイム シリーズ モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|タイム シリーズ モデル|[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> マイニング モデル コンテンツを表示するためのツール  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でモデルを参照または調査する場合、 **Microsoft 汎用コンテンツ ツリー ビューアー**で情報を表示できます。このビューアーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で使用できます。  
@@ -294,7 +293,7 @@ SELECT * FROM [<mining model name>].CONTENT
  また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を開き、システム テーブルにクエリを実行することにより、データ マイニング スキーマ行セットの情報にアクセスできます。 詳細については、「[データ マイニング スキーマ行セット &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft 汎用コンテンツ ツリー ビューアー (&) #40";"データ マイニング"&"#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
- [データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Microsoft 汎用コンテンツ ツリー ビューアー &#40;データ マイニング&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

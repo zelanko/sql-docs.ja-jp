@@ -11,12 +11,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10d93a9894fe9d325f20303ecad4b4a8415e1c61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d2e51be57b608ab9befd537c997d31b893ec6a9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169012"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148077"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
   この記事では、Power View では、Microsoft SQL Server 2014 では、多次元モデル機能について説明し、BI プロフェッショナルと管理者向けの多次元モデルでの Power View を実装するために重要な情報を提供します、組織。  
@@ -92,7 +92,7 @@ ms.locfileid: "48169012"
   
  **variant 型のメジャー**  
   
- ![Power View での非集約可能な階層](../media/daxmd-nonaggrattrib.gif "Power View での非集約可能な階層")  
+ ![Power View での集計可能ではない階層](../media/daxmd-nonaggrattrib.gif "Power View での集計可能ではない階層")  
   
 ### <a name="implicit-measures"></a>暗黙のメジャー  
  表形式モデルでは、ユーザーはフィールドに COUNT、SUM、AVERAGE などの *暗黙の* メジャーを作成できます。 多次元モデルの場合、ディメンション属性データの格納先は異なるため、暗黙のメジャーに対してクエリを実行すると時間がかかることがあります。 このため、暗黙のメジャーは Power View では使用できません。  
@@ -141,7 +141,7 @@ ms.locfileid: "48169012"
   
  **Power View での集計可能ではない階層**  
   
- ![Power View での非集約可能な階層](../media/daxmd-nonaggrattrib.gif "Power View での非集約可能な階層")  
+ ![Power View での集計可能ではない階層](../media/daxmd-nonaggrattrib.gif "Power View での集計可能ではない階層")  
   
 ## <a name="images"></a>画像  
  Power View には、画像を表示する機能が用意されています。 多次元モデルでは、Power View に画像を提供する方法の 1 つとして、画像の URL (Uniform Resource Locator) が含まれる列を公開します。 このリリースに含まれる Analysis Services では、ディメンション属性を ImageURL 型としてタグ付けできます。 タグ付けすると、このデータ型は表形式のメタデータで Power View に提供されます。 その後、Power View では、視覚エフェクト内の URL で指定された画像をダウンロードして表示できます。  
@@ -226,12 +226,12 @@ ms.locfileid: "48169012"
   
  返される CSDL 出力ドキュメントは、モデルを名前空間として表し、エンティティ、アソシエーション、およびプロパティを示しています。  
   
- 表形式モデルの CSDLBI 注釈の詳細については、MSDN の「 [CSDL への BI 注釈のテクニカル リファレンス](../tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) 」および「 [\[[MS-CSDLBI]\]: ビジネス インテリジェンスの概念スキーマ定義ファイル形式の注釈](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)」を参照してください。  
+ 表形式モデルの CSDLBI 注釈の詳細については、MSDN の「 [CSDL への BI 注釈のテクニカル リファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 」および「 [\[[MS-CSDLBI]\]: ビジネス インテリジェンスの概念スキーマ定義ファイル形式の注釈](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)」を参照してください。  
   
 ## <a name="client-help-on-officecom"></a>Office.com のクライアント ヘルプ  
  Power View での多次元モデル オブジェクトの表示およびサンプル レポートの作成方法については、Office.com で提供されている次の記事を参照してください。  
   
- [Power View の多次元モデル オブジェクトをについてください。](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Power View の多次元モデル オブジェクトについて](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
  [Power View を使用した Adventure Works 多次元モデルの探索](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090972"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145897"
 ---
 # <a name="data-mining-services-and-data-sources"></a>データ マイニング サービスおよびデータ ソース
   データ マイニングでは、SQL Server Analysis Services のインスタンスへの接続が必要になります。 キューブからのデータは、データ マイニングには必須ではなく、リレーショナル ソースの使用をお勧めします。ただし、データ マイニングでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エンジンによって提供されるコンポーネントが使用されます。  
@@ -78,7 +78,7 @@ ms.locfileid: "48090972"
 -   `AllowAdHocOpenRowsetQueries` サーバーのメモリ領域に直接読み込まれる OLE DB プロバイダーへのアドホック アクセスを制御します。  
   
     > [!IMPORTANT]  
-    >  セキュリティを強化するため、このプロパティは `false` に設定することをお勧めします。 既定値は `false` です。 ただし、この場合でもプロパティに設定`false`ユーザーは、単一クエリを作成することが引き続きし、許可されているデータ ソースに対して OPENQUERY を使用できます。  
+    >  セキュリティを強化するため、このプロパティは `false` に設定することをお勧めします。 既定値は `false` です。 このプロパティが `false` に設定されていても、ユーザーは単一クエリを作成したり、許可されているデータ ソースに対して OPENQUERY を使用したりできます。  
   
 -   **AllowedProvidersInOpenRowset** アドホック アクセスが有効な場合にプロバイダーを指定します。 ProgID のコンマ区切りのリストを入力することにより、複数のプロバイダーを指定できます。  
   
@@ -118,14 +118,14 @@ ms.locfileid: "48090972"
   
  プロシージャがデータセットを返した場合、クライアントは、行を含む入れ子になったテーブルを持つデータセットまたはデータ テーブルを受け取ります。 たとえば、モデル コンテンツに対するクエリを作成すると、そのクエリではモデル全体が返されます。 あまり多くの行が返されないようにするには、ADOMD+ オブジェクト モデルを使用してストアド プロシージャを作成します。  
   
- サーバー ストアド プロシージャを記述するには、Microsoft.AnalysisServices.AdomdServer 名前空間を参照する必要があります。 ストアド プロシージャを作成および使用する方法の詳細については、「 [ユーザー定義関数およびストアド プロシージャ](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)」を参照してください。  
+ サーバー ストアド プロシージャを記述するには、Microsoft.AnalysisServices.AdomdServer 名前空間を参照する必要があります。 ストアド プロシージャを作成および使用する方法の詳細については、「 [ユーザー定義関数およびストアド プロシージャ](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)」を参照してください。  
   
 > [!NOTE]  
 >  ストアド プロシージャを使用してデータ サーバー オブジェクトのセキュリティを変更することはできません。 ストアド プロシージャの実行時には、ユーザーの現在のコンテキストを使用してすべてのサーバー オブジェクトへのアクセスが決定されます。 したがって、ユーザーは、アクセスするすべてのデータベース オブジェクトに対する適切な権限を持っている必要があります。  
   
 ## <a name="see-also"></a>参照  
- [物理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [物理アーキテクチャ&#40;Analysis Services - データ マイニング&#41;](physical-architecture-analysis-services-data-mining.md)   
+ [物理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [物理アーキテクチャ &#40;Analysis Services - データ マイニング&#41;](physical-architecture-analysis-services-data-mining.md)   
  [データ マイニング ソリューションおよびオブジェクトの管理](management-of-data-mining-solutions-and-objects.md)  
   
   

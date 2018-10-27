@@ -14,12 +14,12 @@ ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 119b06da83da044f2ab8663433f76312540c72a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5047647ef5f440987b4b20db99ad42dacf4fc4d0
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141752"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147927"
 ---
 # <a name="backup-options"></a>バックアップ オプション
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップする方法は数多くありますが、これらすべての方法では、サーバー管理者とデータベース管理者の権限が必要です。 **で** [バックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを開き、適切なオプション構成を選択し、ダイアログ ボックスから直接バックアップを実行できます。 または、ファイルに既に指定されている設定を使用してスクリプトを作成できます。このスクリプトを保存して、必要に応じて実行できます。  
@@ -31,9 +31,9 @@ ms.locfileid: "48141752"
 >  Analysis Services サービス アカウントには、各ファイルに指定されたバックアップ場所に対する書き込み権限が必要です。 また、ユーザーが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの管理者ロールを持っているか、バックアップするデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーである必要があります。  
   
 ## <a name="see-also"></a>参照  
- [[データベース] ダイアログ ボックスをバックアップ&#40;Analysis Services - 多次元データ&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [[データベースのバックアップ] ダイアログ ボックス (Analysis Services - 多次元データ)](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services データベースのバックアップと復元](backup-and-restore-of-analysis-services-databases.md)   
- [バックアップ要素&#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
- [バックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Backup 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [データベースのバックアップ、復元、および同期 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

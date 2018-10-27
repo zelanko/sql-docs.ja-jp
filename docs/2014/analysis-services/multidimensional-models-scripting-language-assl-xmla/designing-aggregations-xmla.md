@@ -20,40 +20,40 @@ ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71abb7339a45e86e39329f6f5e9478d03889c71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1128fccb209c38f4b33009b3045f0f3ad2aebb1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094762"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148157"
 ---
 # <a name="designing-aggregations-xmla"></a>集計のデザイン (XMLA)
-  集計デザインは、集計の格納時に複数のパーティションで同じ構造を確実に使用するようにするため、特定のメジャー グループのパーティションに関連付けられるものです。 使用して後でマージできるパーティションを簡単に定義することができるパーティションに対して同じストレージ構造を使用して、 [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md)コマンド。 集計デザインの詳細については、次を参照してください。[集計と集計デザイン](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)します。  
+  集計デザインは、集計の格納時に複数のパーティションで同じ構造を確実に使用するようにするため、特定のメジャー グループのパーティションに関連付けられるものです。 使用して後でマージできるパーティションを簡単に定義することができるパーティションに対して同じストレージ構造を使用して、 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)コマンド。 集計デザインの詳細については、次を参照してください。[集計と集計デザイン](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)します。  
   
- 使用することができます、集計デザインの集計を定義する、 [DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) XML for Analysis (XMLA) コマンド。 `DesignAggregations` コマンドには、参照として使用する集計デザインを識別し、その参照に基づいたデザイン プロセスを制御するためのプロパティがあります。 `DesignAggregations` コマンドとそのプロパティを使用すると、集計を反復処理またはバッチ処理でデザインし、その結果のデザイン統計を表示してデザイン プロセスを評価することができます。  
+ 使用することができます、集計デザインの集計を定義する、 [DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) XML for Analysis (XMLA) コマンド。 `DesignAggregations` コマンドには、参照として使用する集計デザインを識別し、その参照に基づいたデザイン プロセスを制御するためのプロパティがあります。 `DesignAggregations` コマンドとそのプロパティを使用すると、集計を反復処理またはバッチ処理でデザインし、その結果のデザイン統計を表示してデザイン プロセスを評価することができます。  
   
 ## <a name="specifying-an-aggregation-design"></a>集計デザインの指定  
- [オブジェクト](../xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、`DesignAggregations`コマンドは、既存の集計デザインへのオブジェクト参照を含める必要があります。 オブジェクト参照には、データベース識別子、キューブ識別子、メジャー グループ識別子、および集計デザイン識別子が含まれます。 既存の集計デザインがない場合、エラーが発生します。  
+ [オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)のプロパティ、`DesignAggregations`コマンドは、既存の集計デザインへのオブジェクト参照を含める必要があります。 オブジェクト参照には、データベース識別子、キューブ識別子、メジャー グループ識別子、および集計デザイン識別子が含まれます。 既存の集計デザインがない場合、エラーが発生します。  
   
 ## <a name="controlling-the-design-process"></a>デザイン プロセスの制御  
  `DesignAggregations` コマンドの以下のプロパティを使用して、集計デザインに対応した集計を定義するために使用するアルゴリズムを制御できます。  
   
--   [手順](../xmla/xml-elements-properties/steps-element-xmla.md)プロパティは、反復回数を指定します、`DesignAggregations`コントロールをクライアント アプリケーションに返す前にコマンドを実行する必要があります。  
+-   [手順](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/steps-element-xmla)プロパティは、反復回数を指定します、`DesignAggregations`コントロールをクライアント アプリケーションに返す前にコマンドを実行する必要があります。  
   
--   [時間](../xmla/xml-elements-properties/time-element-xmla.md)プロパティは、ミリ秒数を決定します。、`DesignAggregations`コントロールをクライアント アプリケーションに返す前にコマンドを実行する必要があります。  
+-   [時間](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/time-element-xmla)プロパティは、ミリ秒数を決定します。、`DesignAggregations`コントロールをクライアント アプリケーションに返す前にコマンドを実行する必要があります。  
   
--   [最適化](../xmla/xml-elements-properties/optimization-element-xmla.md)プロパティは、パフォーマンス向上の推定割合を決定します。、`DesignAggregations`達成を図るコマンド。 集計を反復的にデザインする場合、このプロパティは最初のコマンドで送信するだけで十分です。  
+-   [最適化](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla)プロパティは、パフォーマンス向上の推定割合を決定します。、`DesignAggregations`達成を図るコマンド。 集計を反復的にデザインする場合、このプロパティは最初のコマンドで送信するだけで十分です。  
   
--   [ストレージ](../xmla/xml-elements-properties/storage-element-xmla.md)プロパティで使用されるバイト単位のディスク ストレージの推定量を決定する、`DesignAggregations`コマンド。 集計を反復的にデザインする場合、このプロパティは最初のコマンドで送信するだけで十分です。  
+-   [ストレージ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla)プロパティで使用されるバイト単位のディスク ストレージの推定量を決定する、`DesignAggregations`コマンド。 集計を反復的にデザインする場合、このプロパティは最初のコマンドで送信するだけで十分です。  
   
--   [具体化](../xmla/xml-elements-properties/materialize-element-xmla.md)プロパティを決定するかどうか、`DesignAggregations`コマンドは、デザイン プロセス中に定義されている集計を作成する必要があります。 集計を反復的にデザインする場合、デザインした集計を保存する用意ができるまで、このプロパティは false に設定しておく必要があります。 true に設定した場合、現在のデザイン プロセスが終了し、定義された集計は指定した集計デザインに追加されます。  
+-   [具体化](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/materialize-element-xmla)プロパティを決定するかどうか、`DesignAggregations`コマンドは、デザイン プロセス中に定義されている集計を作成する必要があります。 集計を反復的にデザインする場合、デザインした集計を保存する用意ができるまで、このプロパティは false に設定しておく必要があります。 true に設定した場合、現在のデザイン プロセスが終了し、定義された集計は指定した集計デザインに追加されます。  
   
 ## <a name="specifying-queries"></a>クエリを指定します。  
- DesignAggregations コマンドは、1 つまたは複数を含めることによって最適化の使用量ベースのコマンドをサポートしている`Query`内の要素、[クエリ](../xmla/xml-elements-properties/queries-element-xmla.md)プロパティ。 `Queries`プロパティは、1 つまたは複数含めることができます[クエリ](../xmla/xml-elements-properties/query-element-xmla.md)要素。 `Queries` プロパティに `Query` 要素が含まれていない場合、`Object` 要素で指定された集計デザインでは、一般的な集計のセットを含む既定の構造が使用されます。 この一般的な集計のセットは、`Optimization` コマンドの `Storage` および `DesignAggregations` プロパティで指定される条件を満たすようにデザインされています。  
+ DesignAggregations コマンドは、1 つまたは複数を含めることによって最適化の使用量ベースのコマンドをサポートしている`Query`内の要素、[クエリ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla)プロパティ。 `Queries`プロパティは、1 つまたは複数含めることができます[クエリ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)要素。 `Queries` プロパティに `Query` 要素が含まれていない場合、`Object` 要素で指定された集計デザインでは、一般的な集計のセットを含む既定の構造が使用されます。 この一般的な集計のセットは、`Optimization` コマンドの `Storage` および `DesignAggregations` プロパティで指定される条件を満たすようにデザインされています。  
   
- 各`Query`要素は、デザイン プロセスを使用して、最もよく使用されるクエリを対象とする集計を定義する、目標クエリを表します。 独自のクエリを指定するか、またはのインスタンスが格納されている情報を使用する[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に関する、最も頻繁に情報を取得するクエリのログ クエリを使用します。 使用法に基づく最適化ウィザードでは、`DesignAggregations` コマンドの送信時にクエリ ログを使用して、時間、使用法、または指定されたユーザーに基づいて目標クエリを取得します。 詳細については、次を参照してください。[使用法に基づく最適化ウィザードの F1 ヘルプ](../usage-based-optimization-wizard-f1-help.md)します。  
+ 各 `Query` 要素は、最もよく使用するクエリを対象とする集計を定義するためにデザイン プロセスが使用する、目標クエリを表します。 ユーザー独自のクエリを指定することもできますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスによってクエリ ログに格納されている情報を使用して、最もよく使用されるクエリに関する情報を取得することもできます。 使用法に基づく最適化ウィザードでは、`DesignAggregations` コマンドの送信時にクエリ ログを使用して、時間、使用法、または指定されたユーザーに基づいて目標クエリを取得します。 詳細については、次を参照してください。[使用法に基づく最適化ウィザードの F1 ヘルプ](../usage-based-optimization-wizard-f1-help.md)します。  
   
- 最初の目標クエリを渡すが繰り返し集計をデザインする場合のみ`DesignAggregations`コマンドのため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスは、これらの目標クエリを保存し、後続の中にこれらのクエリを使用して`DesignAggregations`コマンド。 反復処理の最初の `DesignAggregations` コマンドで目標クエリを渡した場合、後続の `DesignAggregations` コマンドの `Queries` プロパティに目標クエリが含まれていると、エラーが発生します。  
+ 集計を反復的にデザインする場合、目標クエリは最初の `DesignAggregations` コマンドで送信するだけで十分です。これは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスがこれらの目標クエリを保存し、後続の `DesignAggregations` コマンドでそれらのクエリを使用するためです。 反復処理の最初の `DesignAggregations` コマンドで目標クエリを渡した場合、後続の `DesignAggregations` コマンドの `Queries` プロパティに目標クエリが含まれていると、エラーが発生します。  
   
  `Query` 要素には、以下の引数を含むコンマ区切りの値が含まれます。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48094762"
  たとえば文字列 "011" は、3 つの属性を持つディメンションを処理するクエリの中に、2 番目と 3 番目の属性が含まれることを示しています。  
   
 > [!NOTE]  
->  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外された属性の詳細については、次を参照してください。 [Query 要素&#40;XMLA&#41;](../xmla/xml-elements-properties/query-element-xmla.md)します。  
+>  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外された属性の詳細については、次を参照してください。 [Query 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)します。  
   
  集計デザインを含むメジャー グループ内の各ディメンションがによって表される、*データセット*値、`Query`要素。 *Dataset* の値の順序は、メジャー グループに含まれるディメンションの順序と一致している必要があります。  
   

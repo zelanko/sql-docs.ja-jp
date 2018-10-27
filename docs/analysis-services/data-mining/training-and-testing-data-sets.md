@@ -1,5 +1,5 @@
 ---
-title: トレーニング セットとテスト データ セット |Microsoft ドキュメント
+title: トレーニング セットとテスト データ セット |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe6d39614bbeaca70f8e0e6d205be5cbcbc05bbc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018243"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145617"
 ---
 # <a name="training-and-testing-data-sets"></a>トレーニング データ セットとテスト データ セット
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34018243"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>テスト データセットの作成のための構造のプロパティの変更  
  マイニング構造を作成および処理した後にテスト データセットを確保する場合は、マイニング構造のプロパティを変更できます。 データのパーティション分割方法を変更するには、次のプロパティを編集します。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|テスト セットに含めるケースの最大数を指定します。|  
 |**HoldoutMaxPercent**|テスト セットに含めるケースの数を、データセット全体に対する割合で指定します。 データセットを含めないようにするには、0 を指定します。|  
@@ -97,15 +97,15 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |トピック|リンク|  
 |------------|-----------|  
 |モデルに対するフィルターとトレーニング データセットおよびテスト データセットとの間の対話方法について説明します。|[マイニング モデルのフィルター (Analysis Services - データ マイニング)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|トレーニング データとテスト データの使用が相互検証に与える影響について説明します。|[クロス検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|マイニング構造でのトレーニング セットとテスト セットの操作のためのプログラム インターフェイスに関する情報を提供します。|[AMO の概念とオブジェクト モデル](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure 要素 (ASSL)](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|提示セットを作成するための DMX 構文について説明します。|[マイニング構造 (&) #40";"DMX"&"#41; を作成します。](../../dmx/create-mining-structure-dmx.md)|  
-|トレーニング セットとテスト セットのケースに関する情報を取得します。|[データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [データ マイニング スキーマ行セット (SSAS)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
+|トレーニング データとテスト データの使用が相互検証に与える影響について説明します。|[相互検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|マイニング構造でのトレーニング セットとテスト セットの操作のためのプログラム インターフェイスに関する情報を提供します。|[AMO の概念とオブジェクト モデル](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|提示セットを作成するための DMX 構文について説明します。|[CREATE MINING STRUCTURE (DMX)](../../dmx/create-mining-structure-dmx.md)|  
+|トレーニング セットとテスト セットのケースに関する情報を取得します。|[データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)<br /><br /> [データ マイニング スキーマ行セット (SSAS)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)   
  [データ マイニングの概念](../../analysis-services/data-mining/data-mining-concepts.md)   
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)   
- [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

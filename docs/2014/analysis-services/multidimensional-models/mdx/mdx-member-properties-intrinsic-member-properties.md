@@ -13,17 +13,17 @@ ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1cac8e6a3538c9521a1a4cb04cd082de9d077460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92a9bd2db457b4bf9ea18c73daf2bdf1978ea836
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049333"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148377"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>固有メンバー プロパティ (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、カスタム アプリケーションで使用する追加のデータまたはメタデータを返したり、モデルの調査や構築を支援したりするために、クエリに含めることができるディメンション メンバーの固有プロパティを公開します。 SQL Server クライアント ツールを使用している場合は、SQL Server Management Studio (SSMS) で固有プロパティを表示できます。  
   
- 固有プロパティには `ID`、`KEY`、`KEYx`、および `NAME` があります。これらは、各メンバーによって任意のレベルで公開されるプロパティです。 など、位置情報を取得することもできます。`LEVEL_NUMBER`または`PARENT_UNIQUE_NAME`、他のユーザーの間で。  
+ 固有プロパティには `ID`、`KEY`、`KEYx`、および `NAME` があります。これらは、各メンバーによって任意のレベルで公開されるプロパティです。 また、特に `LEVEL_NUMBER` や `PARENT_UNIQUE_NAME` などの位置情報を返すこともできます。  
   
  クエリの作成方法や、クエリの実行に使用しているクライアント アプリケーションに応じて、メンバー プロパティが結果セットに表示される場合と表示されない場合があります。 クエリのテストまたは実行に SQL Server Management Studio を使用している場合は、結果セットのメンバーをダブルクリックして [メンバーのプロパティ] ダイアログ ボックスを開くと、各固有メンバー プロパティの値が表示されます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48049333"
  非状況依存メンバー プロパティ  
  この種類のメンバー プロパティは、特定のディメンションまたはレベルのコンテキストで使用できず、軸上のすべてのメンバーに関する値を返します。  
   
- 非状況依存のプロパティはスタンドアロンであり、パス情報を含みません。 ディメンションまたはレベルが指定されて方法がありますいないに注意してください。 `PARENT_UNIQUE_NAME` 、次の例。 `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
+ 非状況依存のプロパティはスタンドアロンであり、パス情報を含みません。 次の例で、`PARENT_UNIQUE_NAME` にディメンションまたはレベルが指定されていないことを確認してください: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
   
  固有メンバー プロパティが状況依存/非状況依存のどちらの場合にも、次のような使用上の規則があります。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48049333"
 |--------------|-----------------|  
 |`ID`|内部的に管理されるメンバー ID。|  
 |`Key`|元のデータ型でのメンバー キーの値。 MEMBER_KEY は、旧バージョンとの互換性のために用意されています。  MEMBER_KEY プロパティの値は、非複合キーについては KEY0 と等しく、複合キーについては NULL です。|  
-|`KEYx`|メンバーのキー (x はキーの序数で、0 から始まります)。 KEY0 は複合キーおよび非複合キーで使用できますが、主に複合キーで使用されます。<br /><br /> 複合キーの場合、KEY0、KEY1、KEY2 などは、全体として複合キーを形成します。 クエリでそれぞれを個別に使用すると、複合キーのその部分を返すことができます。 たとえば、KEY0 を指定すると複合キーの最初の部分が返され、KEY1 を指定すると複合キーの次の部分が返されます。<br /><br /> キーが複合ではない場合、KEY0 は等しく`Key`します。<br /><br /> `KEYx` は、コンテキストの有無にかかわらず使用できることに注意してください。 このため、両方の一覧に表示されます。<br /><br /> このメンバー プロパティの使用方法の例については、「 [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)」(単純な MDX の情報: Key0、Key1、Key2) を参照してください。|  
+|`KEYx`|メンバーのキー (x はキーの序数で、0 から始まります)。 KEY0 は複合キーおよび非複合キーで使用できますが、主に複合キーで使用されます。<br /><br /> 複合キーの場合、KEY0、KEY1、KEY2 などは、全体として複合キーを形成します。 クエリでそれぞれを個別に使用すると、複合キーのその部分を返すことができます。 たとえば、KEY0 を指定すると複合キーの最初の部分が返され、KEY1 を指定すると複合キーの次の部分が返されます。<br /><br /> キーが非複合キーの場合、KEY0 は `Key` と同じです。<br /><br /> `KEYx` は、コンテキストの有無にかかわらず使用できることに注意してください。 このため、両方の一覧に表示されます。<br /><br /> このメンバー プロパティの使用方法の例については、「 [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)」(単純な MDX の情報: Key0、Key1、Key2) を参照してください。|  
 |`Name`|メンバーの名前。|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>状況依存プロパティの PROPERTIES の構文  
@@ -88,7 +88,7 @@ ms.locfileid: "48049333"
  次の表は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]でサポートされる非状況依存の固有プロパティを示しています。  
   
 > [!NOTE]  
->  MEMBERS スキーマ行セット内の列は、以下の表に示されている固有メンバー プロパティをサポートします。 詳細については、`MEMBERS`スキーマ行セットを参照してください[MDSCHEMA_MEMBERS 行セット](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md)します。  
+>  MEMBERS スキーマ行セット内の列は、以下の表に示されている固有メンバー プロパティをサポートします。 詳細については、`MEMBERS`スキーマ行セットを参照してください[MDSCHEMA_MEMBERS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -101,14 +101,14 @@ ms.locfileid: "48049333"
 |`HIERARCHY_UNIQUE_NAME`|階層の一意な名前。 メンバーが複数の階層に所属している場合は、そのメンバーが所属する階層ごとに対応する行があります。 修飾によって一意な名前を生成するプロバイダーの場合、この名前の各コンポーネントは区切り記号付きです。|  
 |`IS_DATAMEMBER`|メンバーがデータ メンバーであるかどうかを示すブール値。|  
 |`IS_PLACEHOLDERMEMBER`|メンバーがプレースホルダーであるかどうかを示すブール値。|  
-|`KEYx`|メンバーのキー (x はキーの序数で、0 から始まります)。 KEY0 は複合キーおよび非複合キーに使用できます。<br /><br /> キーが複合ではない場合、KEY0 は等しく`Key`します。<br /><br /> 複合キーの場合、KEY0、KEY1、KEY2 などは、全体として複合キーを形成します。 クエリでそれぞれを個別に参照すると、複合キーのその部分を返すことができます。 たとえば、KEY0 を指定すると複合キーの最初の部分が返され、KEY1 を指定すると複合キーの次の部分が返されます。<br /><br /> `KEYx` は、コンテキストの有無にかかわらず使用できることに注意してください。 このため、両方の一覧に表示されます。<br /><br /> このメンバー プロパティの使用方法の例については、「 [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)」(単純な MDX の情報: Key0、Key1、Key2) を参照してください。|  
+|`KEYx`|メンバーのキー (x はキーの序数で、0 から始まります)。 KEY0 は複合キーおよび非複合キーに使用できます。<br /><br /> キーが非複合キーの場合、KEY0 は `Key` と同じです。<br /><br /> 複合キーの場合、KEY0、KEY1、KEY2 などは、全体として複合キーを形成します。 クエリでそれぞれを個別に参照すると、複合キーのその部分を返すことができます。 たとえば、KEY0 を指定すると複合キーの最初の部分が返され、KEY1 を指定すると複合キーの次の部分が返されます。<br /><br /> `KEYx` は、コンテキストの有無にかかわらず使用できることに注意してください。 このため、両方の一覧に表示されます。<br /><br /> このメンバー プロパティの使用方法の例については、「 [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)」(単純な MDX の情報: Key0、Key1、Key2) を参照してください。|  
 |`LCID` *X*|ロケール ID の 16 進値で表現されたメンバー キャプションを変換したもの。 *x* はロケール ID の 10 進値です (たとえば、カナダ英語の場合は LCID1009)。 これは、データ ソースにバインドされたキャプション列が変換にある場合のみ使用できます。|  
 |`LEVEL_NUMBER`|階層のルートからメンバーまでの距離。 ルートのレベルは 0 です。|  
 |`LEVEL_UNIQUE_NAME`|メンバーが所属するレベルの一意な名前。 修飾によって一意な名前を生成するプロバイダーの場合、この名前の各コンポーネントは区切り記号付きです。|  
 |`MEMBER_CAPTION`|メンバーに関連付けられたラベルまたはキャプション。 キャプションの主な用途は、表示用です。 キャプションが存在しない場合、クエリの結果として `MEMBER_NAME` が返されます。|  
 |`MEMBER_KEY`|元のデータ型でのメンバー キーの値。 MEMBER_KEY は、旧バージョンとの互換性のために用意されています。  MEMBER_KEY プロパティの値は、非複合キーについては KEY0 と等しく、複合キーについては NULL です。|  
 |`MEMBER_NAME`|メンバーの名前。|  
-|`MEMBER_TYPE`|メンバーの種類。 このプロパティの値は、次のいずれか 1 つです。 <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA は MDMEMBER_TYPE_MEASURE より優先順位が上です。 したがって、メジャー ディメンションに対する数式 (計算される) メンバーがある場合、`MEMBER_TYPE`計算されるメンバーのプロパティは MDMEMBER_TYPE_FORMULA です。|  
+|`MEMBER_TYPE`|メンバーの種類。 このプロパティの値は、次のいずれか 1 つです。 <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA は MDMEMBER_TYPE_MEASURE より優先順位が上です。 したがって、数式メンバー (計算されるメンバー) がメジャー ディメンションに存在する場合、計算されるメンバーの `MEMBER_TYPE` プロパティは MDMEMBER_TYPE_FORMULA です。|  
 |`MEMBER_UNIQUE_NAME`|メンバーの一意な名前。 修飾によって一意な名前を生成するプロバイダーの場合、この名前の各コンポーネントは区切り記号付きです。|  
 |`MEMBER_VALUE`|元の型でのメンバーの値。|  
 |`PARENT_COUNT`|このメンバーが持つ親の数。|  
@@ -119,13 +119,13 @@ ms.locfileid: "48049333"
 |`UNIQUE_NAME`|[dimension].[level].[key6] 形式で表す、メンバーの完全修飾名。|  
   
 ### <a name="properties-syntax-for-non-context-sensitive-properties"></a>非状況依存プロパティの PROPERTIES の構文  
- 使用して、組み込みの非状況依存メンバー プロパティを指定する、次の構文を使用して、`PROPERTIES`キーワード。  
+ `PROPERTIES` キーワードを使用して固有の非状況依存メンバー プロパティを指定するには、次の構文を使用します。  
   
  `DIMENSION PROPERTIES Property`  
   
  この構文では、プロパティをディメンションまたはレベルで修飾できないことに注意してください。 プロパティを修飾できない理由は、非状況依存の固有メンバー プロパティが軸上のすべてのメンバーに適用されるためです。  
   
- 指定する MDX ステートメントなど、`DESCRIPTION`固有メンバー プロパティは、次の構文になります。  
+ たとえば、`DESCRIPTION` 固有メンバー プロパティを指定する MDX ステートメントは次のような構文になります。  
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
@@ -208,15 +208,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
- [子&#40;MDX&#41;](/sql/mdx/children-mdx)   
+ [Children &#40;MDX&#41;](/sql/mdx/children-mdx)   
  [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [カウント&#40;設定&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [フィルター &#40;MDX&#41;](/sql/mdx/filter-mdx)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
  [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
  [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [プロパティ&#40;MDX&#41;](/sql/mdx/properties-mdx)   
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
- [メンバー プロパティを使用して&#40;MDX&#41;](mdx-member-properties.md)   
- [MDX 関数リファレンス&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [メンバー プロパティの使用 &#40;MDX&#41;](mdx-member-properties.md)   
+ [MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング サービスとデータ ソース |Microsoft ドキュメント
+title: データ マイニング サービスおよびデータ ソース |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ddcf169206e795899861e7b7fe8be6430ad9cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016589"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145887"
 ---
 # <a name="data-mining-services-and-data-sources"></a>データ マイニング サービスおよびデータ ソース
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34016589"
 ### <a name="xmla-listener"></a>XMLA リスナー  
  XMLA リスナー コンポーネントでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] とそのクライアントの間のすべての XMLA 通信が処理されます。 msmdsrv.ini ファイルの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Port** 構成設定を使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスがリッスンするポートを指定できます。 このファイルの 0 の値は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が既定のポートをリッスンすることを示します。 特に指定がなければ、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では次の既定の TCP ポートが使用されます。  
   
-|Port|Description|  
+|Port|説明|  
 |----------|-----------------|  
 |2383|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の既定のインスタンスです。|  
 |2382|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
@@ -88,7 +88,7 @@ ms.locfileid: "34016589"
  そのほか、サーバーをチューニングしたりクライアントの利用に関するセキュリティを制御したりするためのプロパティを設定することもできます。 詳細については、「 [機能プロパティ](../../analysis-services/server-properties/feature-properties.md)」を参照してください。  
   
 > [!NOTE]  
->  各エディションによるプラグイン アルゴリズムのサポートの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
+>  各エディションによるプラグイン アルゴリズムのサポートの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)します。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>データ マイニング オブジェクトへのプログラムによるアクセス  
  以下のオブジェクト モデルを使用して、Analysis Services データベースへの接続を作成し、データ マイニング オブジェクトを操作できます。  
@@ -97,7 +97,7 @@ ms.locfileid: "34016589"
   
  **ADO.NET** 特に SQL Server プロバイダーとのやり取りに適しています。 データ アダプターを使用して動的な行セットを格納したり、 データセット オブジェクトを使用したりできます。データセット オブジェクトは、XML として更新したり保存したりできるデータ テーブルとして格納されるサーバー データのキャッシュです。  
   
- **ADOMD.NET** データ マイニングと OLAP の操作に最適化されたマネージ データ プロバイダーです。 ADOMD.NET は ADO.NET より高速で、メモリ効率も ADO.NET より優れています。 サーバー オブジェクトに関するメタデータを取得することもできます。 クライアント アプリケーションでは、.NET が使用できない場合以外は ADOMD.NET を使用することをお勧めします。  
+ **ADOMD.NET** データ マイニングと OLAP の操作に最適化されたマネージド データ プロバイダーです。 ADOMD.NET は ADO.NET より高速で、メモリ効率も ADO.NET より優れています。 サーバー オブジェクトに関するメタデータを取得することもできます。 クライアント アプリケーションでは、.NET が使用できない場合以外は ADOMD.NET を使用することをお勧めします。  
   
  **Server ADOMD** サーバー上で直接 Analysis Services オブジェクトにアクセスするためのオブジェクト モデルです。 Analysis Services ストアド プロシージャで使用されます。クライアントでは使用しません。  
   
@@ -117,14 +117,14 @@ ms.locfileid: "34016589"
   
  プロシージャがデータセットを返した場合、クライアントは、行を含む入れ子になったテーブルを持つデータセットまたはデータ テーブルを受け取ります。 たとえば、モデル コンテンツに対するクエリを作成すると、そのクエリではモデル全体が返されます。 あまり多くの行が返されないようにするには、ADOMD+ オブジェクト モデルを使用してストアド プロシージャを作成します。  
   
- サーバー ストアド プロシージャを記述するには、Microsoft.AnalysisServices.AdomdServer 名前空間を参照する必要があります。 ストアド プロシージャを作成および使用する方法の詳細については、「 [ユーザー定義関数およびストアド プロシージャ](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)」を参照してください。  
+ サーバー ストアド プロシージャを記述するには、Microsoft.AnalysisServices.AdomdServer 名前空間を参照する必要があります。 ストアド プロシージャを作成および使用する方法の詳細については、「 [ユーザー定義関数およびストアド プロシージャ](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)」を参照してください。  
   
 > [!NOTE]  
 >  ストアド プロシージャを使用してデータ サーバー オブジェクトのセキュリティを変更することはできません。 ストアド プロシージャの実行時には、ユーザーの現在のコンテキストを使用してすべてのサーバー オブジェクトへのアクセスが決定されます。 したがって、ユーザーは、アクセスするすべてのデータベース オブジェクトに対する適切な権限を持っている必要があります。  
   
 ## <a name="see-also"></a>参照  
  [物理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [物理アーキテクチャ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
- [オブジェクトとデータ マイニング ソリューションの管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [物理アーキテクチャ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [データ マイニング ソリューションおよびオブジェクトの管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

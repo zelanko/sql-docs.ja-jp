@@ -1,5 +1,5 @@
 ---
-title: SQL Server Always On 可用性グループに Kubernetes クラスターをデプロイします。
+title: Kubernetes クラスター上の SQL Server Always On 可用性グループをデプロイします。
 description: この記事では、要件については、SQL Server Kubernetes Always On 可用性グループ演算子グローバル パラメーターを説明します。
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,106 +10,106 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d4a2786a795b20e9c2f943824027859230b2c85
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 117faab160c512f4732b0709b0b2e1024a196893
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460467"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991185"
 ---
-# <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>Always On 可用性グループの Kubernetes クラスターで SQL Server をデプロイします。
+# <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Kubernetes クラスター上の SQL Server Always On 可用性グループをデプロイします。
 
 この記事の例では、3 つのレプリカでの Kubernetes クラスター上の SQL Server Always On 可用性グループをデプロイします。 セカンダリ レプリカは同期コミット モードです。
 
 Kubernetes で、展開には、SQL Server の演算子では、SQL Server のコンテナー、および負荷が含まれていますバランサー サービス。 演算子は、可用性グループを自動的に調整します。 この記事で説明する方法。
 
-- 演算子、SQL Server のコンテナー、およびサービスの負荷分散展開します。
-- サービスと可用性グループへの接続します。
-- 可用性グループにデータベースを追加する
+- 演算子、SQL Server のコンテナー、および負荷分散サービスをデプロイします。
+- サービスと可用性グループに接続します。
+- データベースを可用性グループに追加します。
 
 ## <a name="requirements"></a>要件
 
 - Kubernetes クラスター
 - Kubernetes バージョン 1.11.0 以降
 - 少なくとも 3 つのノード
-- [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/)します。
-- アクセス、 [sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)github リポジトリ
+- [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- アクセス、 [sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)GitHub リポジトリ
 
-  >[!NOTE]
-  >Kubernetes クラスターの任意の型を使用することができます。 Azure Kubernetes Service (AKS) での Kubernetes クラスターを作成するを参照してください。 [AKS クラスターの作成](http://docs.microsoft.com/azure/aks/create-cluster)です。
-  > 次のスクリプトでは、Azure で 4 つのノードの Kubernetes クラスターを作成します。
-  >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
-  >```
+>[!NOTE]
+>Kubernetes クラスターの任意の型を使用することができます。 Azure Kubernetes Service (AKS) での Kubernetes クラスターを作成するを参照してください。 [AKS クラスターの作成](http://docs.microsoft.com/azure/aks/create-cluster)です。
+> 次のスクリプトでは、Azure で 4 つのノードの Kubernetes クラスターを作成します。
+>```azure-cli
+az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+>```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>演算子、SQL Server のコンテナー、およびサービスの負荷分散展開します。
 
 1. 作成、[名前空間](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)します。
 
-  この例と呼ばれる名前空間を使用して`ag1`します。 名前空間を作成するには、次のコマンドを実行します。
-
-  ```azurecli
-  kubectl create namespace ag1
-  ```
-
-  このソリューションに属するすべてのオブジェクトは、`ag1`名前空間。
+      この例と呼ばれる名前空間を使用して`ag1`します。 名前空間を作成するには、次のコマンドを実行します。
+    
+      ```azurecli
+      kubectl create namespace ag1
+      ```
+    
+      このソリューションに属するすべてのオブジェクトは、`ag1`名前空間。
 
 1. 構成し、SQL Server の演算子のマニフェストをデプロイします。
 
-  SQL Server のコピー [ `operator.yaml` ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/operator.yaml)ファイルから[sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)します。
+      SQL Server のコピー [ `operator.yaml` ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/operator.yaml)ファイルから[sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)します。
+    
+      `operator.yaml`ファイルは、Kubernetes の演算子の配置マニフェスト。
+    
+      マニフェストは、Kubernetes クラスターに適用されます。
+    
+      ```azurecli
+      kubectl apply -f operator.yaml --namespace ag1
+      ```
+    
+1. Kubernetes 用のパスワードを持つシークレットの作成、`sa`アカウントと SQL Server インスタンスのマスター _ キー。
 
-  `operator.yaml`ファイルは、Kubernetes の演算子の配置マニフェスト。
-
-  マニフェストは、Kubernetes クラスターに適用されます。
-
-  ```azurecli
-  kubectl apply -f operator.yaml --namespace ag1
-  ```
-
-1. Kubernetes シークレットを作成するパスワードを持つ、`sa`アカウントと SQL Server インスタンスのマスター _ キー。
-
-  シークレットの作成`kubectl`です。
-  
-  次の例では、という名前のシークレットを作成する`sql-secrets`で、`ag1`名前空間。 シークレットは、2 つのパスワードを格納します。
-  
-  - `sapassword` SQL Server のパスワードを格納`sa`アカウント。
-  - `masterkeypassword` SQL Server のマスター _ キーの作成に使用するパスワードを格納します。 
-
-  ターミナルに、スクリプトをコピーします。 各を置き換える`<>`複雑なパスワードおよびシークレットを作成するスクリプトを実行します。
-
-  >[!NOTE]
-  >パスワードは使用できません`&`、または`` ` ``文字。
-
-  ```azurecli
-  kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
-  ```
+      シークレットの作成`kubectl`です。
+      
+      次の例では、という名前のシークレットを作成する`sql-secrets`で、`ag1`名前空間。 シークレットは、2 つのパスワードを格納します。
+      
+      - `sapassword` SQL Server のパスワードを格納`sa`アカウント。
+      - `masterkeypassword` SQL Server のマスター _ キーの作成に使用するパスワードを格納します。 
+    
+   ターミナルに、スクリプトをコピーします。 各を置き換える`<>`複雑なパスワードおよびシークレットを作成するスクリプトを実行します。
+    
+   >[!NOTE]
+   >パスワードは使用できません`&`または`` ` ``文字。
+    
+   ```azurecli
+   kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
+   ```
 
 1. SQL Server のカスタム リソースをデプロイします。
 
-  SQL Server のマニフェストをコピー [ `sqlserver.yaml` ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/sqlserver.yaml)から[sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)します。
+      SQL Server のマニフェストをコピー [ `sqlserver.yaml` ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/sqlserver.yaml)から[sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)します。
+    
+      >[!NOTE]
+      >`sqlserver.yaml`ファイルは、SQL Server のコンテナー、永続ボリューム要求、永続ボリューム、および SQL Server インスタンスごとに必要な負荷分散サービスについて説明します。
+    
+      マニフェストは、Kubernetes クラスターに適用されます。
+    
+      ```azurecli
+      kubectl apply -f sqlserver.yaml --namespace ag1
+      ```
+      
+次の図は、成功したアプリケーションの`kubectl apply`この例です。
 
-  >[!NOTE]
-  >`sqlserver.yaml`ファイルは、SQL Server のコンテナー、永続ボリューム要求、永続ボリューム、および SQL Server インスタンスごとに必要な負荷分散サービスについて説明します。
+![sqlservers を作成します。](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png)
 
-  マニフェストは、Kubernetes クラスターに適用されます。
+SQL Server のマニフェストを適用した後、演算子は、SQL Server のコンテナーを展開します。
 
-  ```azurecli
-  kubectl apply -f sqlserver.yaml --namespace ag1
-  ```
-  
-  次の図は、成功したアプリケーションの`kubectl apply`この例です。
+Kubernetes では、pod でコンテナーを配置します。 使用`kubectl get pods --namespace ag1`ポッドの状態を確認します。 次の図は、SQL Server のポッドを展開した後に、展開の例を示します。 
 
-  ![sqlservers を作成します。](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png)
-
-  SQL Server のマニフェストを適用した後、演算子は、SQL Server のコンテナーを展開します。
-
-  Kubernetes では、pod でコンテナーを配置します。 使用`kubectl get pods --namespace ag1`ポッドの状態を確認します。 次の図は、SQL Server のポッドを展開した後に、展開の例を示します。 
-
-  ![ポッドの構築](./media/sql-server-linux-kubernetes-deploy/builtpods.png)
+![ポッドの構築](./media/sql-server-linux-kubernetes-deploy/builtpods.png)
 
 ### <a name="monitor-the-deployment"></a>展開を監視します。
 
-使用することができます[Azure Kubernetes Service (AKS) での Kubernetes ダッシュ ボード](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)展開の監視。
+使用することができます、 [Azure Kubernetes Service の Kubernetes ダッシュ ボード](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)展開の監視。
 
 使用`az aks browse`をダッシュ ボードを起動します。 
 
@@ -136,43 +136,43 @@ IP アドレスを持つことができますに接続する SQL Server イン�
 
 - 出力`kubectl get services`名前空間の`ag1`します。
 
- SQL Server の各コンテナーに対して作成された負荷分散サービスのサービスです。 エンドポイントとしてこれらの IP アドレスを使用して、クラスター内の SQL Server のインスタンスに直接接続します。
+- SQL Server の各コンテナーに対して作成された負荷分散サービスです。 エンドポイントとしてこれらの IP アドレスを使用して、クラスター内の SQL Server のインスタンスに直接接続します。
 
 - `sqlcmd` 、プライマリ レプリカへの接続で、`sa`ロード バランサーのエンドポイントを使用してアカウント。
 
-![connect](./media/sql-server-linux-kubernetes-deploy/connect.png)
+![接続](./media/sql-server-linux-kubernetes-deploy/connect.png)
 
 ## <a name="add-a-database-to-the-availability-group"></a>可用性グループにデータベースを追加する
 
 >[!NOTE]
 >現時点では、SQL Server Management Studio は、可用性グループにデータベースを追加することはできません。 TRANSACT-SQL を使用します。
 
-Kubernetes では、SQL Server のコンテナーが作成されたら、データベースを可用性グループに追加するには、次の手順を行います。
+Kubernetes では、SQL Server のコンテナーが作成された後は、データベースを可用性グループに追加する次の手順を完了します。
 
 1. [接続](sql-server-linux-kubernetes-connect.md)クラスター内の SQL Server インスタンスにします。
 
 1. データベースの作成。
 
-  ```sql
-  CREATE DATABASE [demodb]
-  ```
+      ```sql
+      CREATE DATABASE [demodb]
+      ```
 
 1. 完全なログ チェーンを開始するデータベースのバックアップを実行します。
 
-  ```sql
-  USE MASTER
-  GO
-  BACKUP DATABASE [demodb] 
-  TO DISK = N'/var/opt/mssql/data/demodb.bak'
-  ```
+      ```sql
+      USE MASTER
+      GO
+      BACKUP DATABASE [demodb] 
+      TO DISK = N'/var/opt/mssql/data/demodb.bak'
+      ```
 
 1. データベースを可用性グループに追加します。
 
-  ```sql
-  ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [demodb]
-  ```
-
-SQL Server がセカンダリ レプリカを自動的に作成するため、自動シード処理では、可用性グループが作成されます。
+      ```sql
+      ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [demodb]
+      ```
+    
+SQL Server がセカンダリ レプリカを自動的に作成できるように、自動シード処理では、可用性グループが作成されます。
 
 SQL Server Management Studio の可用性グループ ダッシュ ボードから可用性グループの状態を表示することができます。
 
@@ -180,8 +180,8 @@ SQL Server Management Studio の可用性グループ ダッシュ ボードか�
 
 ## <a name="next-steps"></a>次の手順
 
-[Kubernetes クラスター上の SQL Server 可用性グループへの接続します。](sql-server-linux-kubernetes-connect.md)
+- [Kubernetes クラスター上の SQL Server 可用性グループへの接続します。](sql-server-linux-kubernetes-connect.md)
 
-[Kubernetes クラスター上の SQL Server 可用性グループを管理します。](sql-server-linux-kubernetes-manage.md)
+- [Kubernetes クラスター上の SQL Server 可用性グループを管理します。](sql-server-linux-kubernetes-manage.md)
 
-[Kubernetes クラスター上の SQL Server 可用性グループ](sql-server-ag-kubernetes.md)
+- [SQL Server は、Kubernetes クラスター内のコンテナーの可用性グループをサポートしています](sql-server-ag-kubernetes.md)

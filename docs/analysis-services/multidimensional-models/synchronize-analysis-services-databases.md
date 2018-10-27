@@ -1,5 +1,5 @@
 ---
-title: Analysis Services データベースの同期 |Microsoft ドキュメント
+title: Analysis Services データベースの同期 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b50cdb2a9b6a32fbd2794e3265dc009f6c6e6bd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025369"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145917"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025369"
   
  既定のインスタンス間のリモート接続を許可するために、両方のサーバーで TCP ポート 2383 を開く必要があります。 Windows ファイアウォールの例外を作成する方法の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
- ソースと変換先の両方のサーバーには、同じバージョンおよびサービス パックがあります。 モデルのメタデータも同期されているため、ビルドの互換性を確保する両方のサーバーの数、同じはずです。 各インストールのエディションが、データベースの同期をサポートしている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データベースの同期は、Enterprise、Developer、および Business Intelligence の各エディションでサポートされています。 各エディションで機能の詳細については、次を参照してください。[エディションと SQL Server 2016 のサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)します。  
+ ソースと宛先の両方のサーバーは、同じバージョンおよび service pack である必要があります。 モデルのメタデータが同期されていることもあるため、ビルドの互換性を確保する両方のサーバー数する必要があります同じであります。 各インストールのエディションが、データベースの同期をサポートしている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データベースの同期は、Enterprise、Developer、および Business Intelligence の各エディションでサポートされています。 各エディションで機能の詳細については、次を参照してください。[エディションと SQL Server 2016 でサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)します。  
   
  サーバー配置モードは、各サーバーで同じである必要があります。 同期するデータベースが多次元である場合は、同期元サーバーと同期先サーバーの両方が、多次元サーバー モードで構成されている必要があります。 配置モードの詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "34025369"
     > [!NOTE]  
     >  同期元インスタンスの既定の場所に格納されているローカル パーティションを選択した場合、この列は変更できません。  
   
-     **サイズ**  
+     **Size**  
      ローカル パーティションの推定サイズが表示されます。  
   
      **[選択した場所のパーティション]** オプションでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [場所] **で選択した行の** [同期元フォルダー] **列で指定した同期元**インスタンス上の場所に格納されたローカル パーティションについて、グリッドに説明が表示されます。  
@@ -117,7 +117,7 @@ ms.locfileid: "34025369"
      **[サイズ (MB)]**  
      パーティションのサイズ (MB) が表示されます。  
   
-5.  必要に応じて、リモート パーティションの場所を変更します。 **[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
+5.  必要に応じて、リモート パーティションの場所を変更します。**[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
   
     > [!NOTE]  
     >  このページは、同期元の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの指定されたデータベースによって 1 つ以上のリモート パーティションが管理されている場合にのみ表示されます。  
@@ -146,7 +146,7 @@ ms.locfileid: "34025369"
   
      **[...]** ボタンをクリックして、 **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、選択した場所に格納されたリモート パーティションを同期する同期先インスタンス上のフォルダーを指定します。  
   
-     **サイズ**  
+     **Size**  
      この場所に格納されたリモート パーティションの推定サイズが表示されます。  
   
      **[選択した場所のパーティション]** では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [場所] **で選択した行の** [同期元フォルダー] **列で指定した同期元の**インスタンス上の場所に格納されたリモート パーティションについて、グリッドに説明が表示されます。 このグリッドには次の列が含まれています。  
@@ -182,8 +182,8 @@ ms.locfileid: "34025369"
  ロールまたはロールのメンバーシップを同期しなかった場合は、この段階で、同期先データベースでユーザー アクセス権を指定してください。  
   
 ## <a name="see-also"></a>参照  
- [Synchronize 要素 (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [XMLA を使用したモデル ソリューションを配置します。](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [配置ウィザードを使用したモデル ソリューションを配置します。](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Synchronize 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+ [XMLA を使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [配置ウィザードを使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

@@ -17,15 +17,15 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6be578d76164e597fe7057bc02f69bf9d9bcce74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142452"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145850"
 ---
 # <a name="merging-partitions-xmla"></a>パーティションのマージ (XMLA)
-  使用して、パーティションをマージするには、同じ集計デザインと構造のパーティションがある場合、 [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) XML for Analysis (XMLA) コマンド。 パーティション管理において、パーティションのマージは重要な操作です。日付によってパーティション分割された履歴データを含むパーティションの場合は特に重要です。  
+  使用して、パーティションをマージするには、同じ集計デザインと構造のパーティションがある場合、 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) XML for Analysis (XMLA) コマンド。 パーティション管理において、パーティションのマージは重要な操作です。日付によってパーティション分割された履歴データを含むパーティションの場合は特に重要です。  
   
  たとえば、次の 2 つのパーティションを使用する財務キューブがあるとします。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48142452"
  2 つのパーティションは異なるストレージ設定を使用しますが、集計デザインは同じものを使用します。 年の終わりに複数年にわたる履歴データについてキューブを処理する代わりに、`MergePartitions` コマンドを使用して、現在の年のパーティションを過去の年のパーティションにマージできます。 こうすれば、多くの時間をかけてキューブを詳細に処理しなくても、集計データを保持できます。  
   
 ## <a name="specifying-partitions-to-merge"></a>マージするパーティションの指定  
- ときに、`MergePartitions`コマンドの実行で指定されたソース パーティションに格納された集計データ、[ソース](../xmla/xml-elements-properties/source-element-xmla.md)プロパティで指定された対象パーティションに追加されます、[ターゲット](../xmla/xml-elements-properties/target-element-xmla.md)プロパティ。  
+ ときに、`MergePartitions`コマンドの実行で指定されたソース パーティションに格納された集計データ、[ソース](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)プロパティで指定された対象パーティションに追加されます、[ターゲット](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)プロパティ。  
   
 > [!NOTE]  
 >  `Source` プロパティには複数のパーティション オブジェクト参照を含めることができます。 しかし、`Target` プロパティには複数を含めることができません。  

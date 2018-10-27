@@ -24,12 +24,12 @@ ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b1feb34dca2fba1bad8829edff24ef1ce54e1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc9d8f4396be64de2160b39b57374dd1ab1bf3cf
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161562"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099273"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>データ マイニング アルゴリズム (SQL Server データ マイニング アドイン)
   Office 用データ マイニング アドインは、次のデータ マイニング アルゴリズムを使用して分析モデルの作成をサポートします。 すべてのアルゴリズムは、よく知られている機械学習メソッドに基づいており、Microsoft Research によって実装されたものです。  
@@ -43,7 +43,7 @@ ms.locfileid: "48161562"
 |Microsoft デシジョン ツリー アルゴリズム|データ内のさまざまな要素間で、従来は不明だったリレーションシップを識別し、意思決定を下すためにより適切な情報を提供するか、特定の結果につながる要因を見つけます。<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
 |Microsoft 線形回帰アルゴリズム|数値形式の結果に寄与する要因を表す算術式を見つけます。<br /><br /> [http://msdn.microsoft.com/library/ms174824.aspx](http://msdn.microsoft.com/library/ms174824.aspx)|  
 |Microsoft ロジスティック回帰アルゴリズム|バイナリ結果に寄与する要素を見つけ、それらの要素が結果にどのような影響を及ぼすかを研究します。<br /><br /> [http://msdn.microsoft.com/library/ms174828.aspx](http://msdn.microsoft.com/library/ms174828.aspx)|  
-|Microsoft Naïve Bayes アルゴリズム|データ内のリレーションシップを探索し、結果との関連性が最も強いリレーションシップを見つけます。<br /><br /> [http://msdn.microsoft.com/en-us/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
+|Microsoft Naïve Bayes アルゴリズム|データ内のリレーションシップを探索し、結果との関連性が最も強いリレーションシップを見つけます。<br /><br /> [http://msdn.microsoft.com/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
 |Microsoft ニューラル ネットワーク アルゴリズム|複数の入力と複数の出力の間に存在する隠されたリレーションシップを見つけます。 探索または予測の目的で使用します。<br /><br /> [http://msdn.microsoft.com/library/ms174941.aspx](http://msdn.microsoft.com/library/ms174941.aspx)|  
 |Microsoft タイム シリーズ アルゴリズム (Microsoft Time Series algorithm)|履歴データを使用して将来の値を予測します。<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
   

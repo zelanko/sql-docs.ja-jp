@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abe054c97e13ffe5428eddfded09fa18b5060aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063392"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147848"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
   このトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のコードまたはスクリプトにおけるオブジェクトの名前付け規則、および、オブジェクト名で使用できない予約語と文字について説明します。  
@@ -92,6 +92,6 @@ ms.locfileid: "48063392"
 ## <a name="see-also"></a>参照  
  [MDX の予約語](/sql/mdx/mdx-reserved-words)   
  [翻訳&#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML for Analysis への準拠&#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis への準拠&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   
