@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9b61ca423f79f95ab24ae59b398b5d4a834126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a961db30963ded59af447ad1a1cc916d663628e
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782850"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643930"
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,6 +60,9 @@ ms.locfileid: "47782850"
 ## <a name="related-content"></a>関連コンテンツ  
  [SQL Server の保護](../../../relational-databases/security/securing-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プラットフォームを保護する方法、およびユーザーとセキュリティ保護可能なオブジェクトを操作する方法の概要を説明します。  
+
+[Azure SQL Database のセキュリティ機能の概要](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+</br>データの保護、アクセスの制御、プロアクティブな監視に関する Azure SQL Database のセキュリティの概要を説明します。
   
  [暗号化関数 &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  暗号化機能を実装する方法について説明します。  

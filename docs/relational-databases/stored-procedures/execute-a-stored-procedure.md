@@ -20,16 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db923d432be92abfea17ee12a2bcdf61601c9fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802920"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419278"
 ---
 # <a name="execute-a-stored-procedure"></a>ストアド プロシージャの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャの実行](execute-a-stored-procedure.md)」を参照してください。
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを実行する方法について説明します。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "47802920"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -69,7 +68,7 @@ ms.locfileid: "47802920"
   
 -   システム ストアド プロシージャの実行  
   
-     システム ストアド プロシージャは、 **sp_** というプレフィックスで始まります。 システム ストアド プロシージャは、論理的にすべてのユーザー定義データベースおよびシステム定義データベースに表示されるため、プロシージャ名を完全修飾する必要なく、任意のデータベースから実行できます。 ただし、名前の競合を回避するためには、すべてのシステム プロシージャ名を **sys** スキーマ名でスキーマ修飾することをお勧めします。 次の例は、システム ストアド プロシージャの呼び出しに関して推奨されている方法を示しています。  
+     システム ストアド プロシージャは、 **sp_** というプレフィックスで始まります。 それらは論理的にすべてのユーザー定義データベースおよびシステム定義データベースに表示されるため、プロシージャ名を完全修飾する必要なく、任意のデータベースから実行できます。 ただし、名前の競合を回避するためには、すべてのシステム プロシージャ名を **sys** スキーマ名でスキーマ修飾することをお勧めします。 次の例は、システム ストアド プロシージャの呼び出しに関して推奨されている方法を示しています。  
   
     ```sql  
     EXEC sys.sp_who;  

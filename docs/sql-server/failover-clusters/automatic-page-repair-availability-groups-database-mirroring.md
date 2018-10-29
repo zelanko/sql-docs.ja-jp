@@ -16,12 +16,12 @@ ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4c674c7a100d5a757ef0d7d3d1f06349f0ec5e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844649"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383567"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>ページの自動修復 (可用性グループ: データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "47844649"
   
 1.  データ ミラーリングでは、ミラーがログ レコードを再実行している最中にページ I/O エラーが 1 回でも検出されると、そのミラーリング セッションは SUSPENDED 状態になります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、セカンダリ レプリカがログ レコードを再実行している最中にページ I/O エラーが 1 回でも検出されると、そのセカンダリ データベースは SUSPENDED 状態になります。 この時点で、ミラー/セカンダリは、該当するエラー状態が記録された行を **suspect_pages** テーブルに挿入します。 次に、ミラー/セカンダリは、プリンシパル/プライマリにそのページのコピーを要求します。  
   
-2.  プリンシパル/プライマリは、そのデータベースのコピーに存在する該当ページにアクセスを試みます。 該当ページにアクセスできた場合は、そのページのコピーをミラー/セカンダリに送信します。  
+2.  プリンシパル/プライマリは、そのデータベースのコピーに存在する該当ページにアクセスを試みます。 ページにアクセスできた場合、プリンシパル/プライマリによって、そのページのコピーがミラー/セカンダリに送信されます。  
   
 3.  要求したすべてのページのコピーを受け取った時点で、ミラー/セカンダリはミラーリング セッションの再開を試行します。 ページの自動修復機能によって問題のあるページが修正されると、 **suspect_pages** テーブルで、そのページが復元済み (**event_type** = 4) としてマークされます。  
   

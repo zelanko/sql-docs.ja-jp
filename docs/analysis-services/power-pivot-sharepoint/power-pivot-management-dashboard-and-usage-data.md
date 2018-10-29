@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 管理ダッシュ ボードと使用状況データ |Microsoft ドキュメント
+title: Power Pivot 管理ダッシュ ボードと使用状況データ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099933"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理ダッシュボードと使用状況データ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34030343"
 ##  <a name="items"></a> ダッシュボードのセクションの概要  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードには、特定の情報カテゴリにドリル ダウンする Web パーツおよび埋め込みレポートが用意されています。 ダッシュボードの各部分の説明を次に示します。  
   
-|ダッシュボード|Description|  
+|ダッシュボード|説明|  
 |---------------|-----------------|  
 |インフラストラクチャ - サーバーの状態|CPU 使用率、メモリ消費量、およびクエリ応答時間の時間の経過に伴う変化の傾向を表示し、システム リソースが最大容量に近づいていないかどうか、または使用率が低くなっていないかどうかを評価できるようにします。|  
 |アクション|現在のサービス アプリケーション、サービス アプリケーションの一覧、および使用状況ログを含む、サーバーの全体管理内の他のページへのリンクを示します。|  
@@ -35,7 +35,7 @@ ms.locfileid: "34030343"
 |ブックの利用状況 - リスト|データ アクセスの頻度をレポートします。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データ ソースへの接続が発生する頻度を日単位または週単位で確認できます。|  
 |データ更新 - 最近の利用状況|データ更新ジョブの状態をレポートします (実行に失敗したジョブを含む)。 このレポートは、データ更新操作をアプリケーション レベルで総合的に理解するのに役立ちます。 管理者は、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション全体に対して定義されているデータ更新ジョブの数が一目でわかります。|  
 |データ更新 - 最近のエラー|データ更新が正常に完了しなかった [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックを一覧表示します。|  
-|レポート|Excel で開くことができるレポートへのリンクを示します。|  
+|[レポート]|Excel で開くことができるレポートへのリンクを示します。|  
   
 ##  <a name="open"></a> Power Pivot 管理ダッシュボードを開く  
  ダッシュボードには、一度に 1 つの [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションの情報が表示されます。 管理ダッシュボードは、異なる 2 つの場所から開くことができます。  
@@ -68,7 +68,7 @@ ms.locfileid: "34030343"
   
 -   [Power Pivot 使用状況データ収集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
--   [使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+-   [使用状況データ収集の構成 &#40;対象は Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
  Power Pivot サーバー システムに関するデータをキャプチャするために、イベント メッセージング、データ更新の履歴、およびその他の使用状況履歴が各 Power Pivot サービス アプリケーションに対して有効になっていることを確認してください。 通常のサーバー操作中に収集されるサーバーおよび使用状況のデータは、最終的に、内部データ モデルに格納されるソース データになります。 **注:** イベントまたは使用状況履歴を無効にすると、複合レポートは不完全またはエラーになります。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34030343"
   
 5.  テキスト エディターで .odc ファイルを開きます。  
   
-6.  **\<Odc:ConnectionString >** 要素、削除の行の最後までスクロール**データが埋め込まれた = False**、し、削除**編集モードの 0 を =** です。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
+6.  **\<Odc:ConnectionString >** 要素、削除、行の最後までスクロール**埋め込みデータ = False**、し、削除**Edit Mode = 0**。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
   
 7.  このファイルを保存します。 残りの手順は、使用している [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] と Excel のバージョンによって異なります。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "34030343"
     9. [MDX クエリの指定] で、 **[デザイン]** をクリックして MDX クエリ デザイナーを開き、操作するデータを収集してから、ピボットテーブル レポートまたはピボットグラフ レポートを作成して、データを Excel で表示します。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint 2010 での PowerPivot データの更新](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [SharePoint 2010 での PowerPivot データの更新](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

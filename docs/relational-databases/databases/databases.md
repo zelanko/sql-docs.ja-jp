@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c181aa25c7bf06a107ff4fc8a0b0bcd39f66cc2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c5995a59cc226700ccdc0aea15a8fe16a28d75
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775610"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356143"
 ---
 # <a name="databases"></a>データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47775610"
  データベースへのアクセス権を持つユーザーには、そのデータベース内のオブジェクトへのアクセス権を与えることができます。 個々のユーザーに権限を付与することもできますが、データベース ロールを作成して、データベース ユーザーを追加したうえで、ロールへのアクセス権を付与することをお勧めします。 ユーザーではなくロールに対して権限を付与した方が、ユーザー数の増加や絶え間ない変更の中で、権限の一貫性を保ちやすく理解もしやすくなります。 ロールの権限の詳細については、「[CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)」および「[プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)」をご覧ください。  
   
 ## <a name="working-with-databases"></a>データベースの操作  
- データベースを操作するユーザーの多くは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ツールを使用します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ツールには、データベースおよびデータベース内のオブジェクトを作成するためのグラフィカル ユーザー インターフェイスが備わっています。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] には、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを記述することでデータベースを対話的に操作できるクエリ エディターも用意されています。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール ディスクからインストールすることも、MSDN からダウンロードすることもできます。  
+ データベースを操作するユーザーの多くは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ツールを使用します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ツールには、データベースおよびデータベース内のオブジェクトを作成するためのグラフィカル ユーザー インターフェイスが備わっています。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] には、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを記述することでデータベースを対話的に操作できるクエリ エディターも用意されています。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール ディスクからインストールすることも、MSDN からダウンロードすることもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ツールについて詳しくは、「[SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)」をご覧ください。
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716555"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636441"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +42,9 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>引数  
  *integer_expression*  
- データベースの照合順序に補助文字 (SC) フラグが含まれない場合、これは 0 ～ 65535 (0 ～ 0xFFFF) の正の整数です。 この範囲外の値を指定すると、NULL が返されます。 補助文字の詳細については、次を参照してください。 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)です。  
+ データベースの照合順序に[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) フラグが含まれない場合、これは 0 から 65535 (0 から 0xFFFF) までの正の整数です。 この範囲外の値を指定すると、NULL が返されます。 補助文字の詳細については、次を参照してください。 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)です。  
   
- データベースの照合順序が補助文字 (SC) フラグをサポートする場合、これは 0 ～ 1114111 (0 ～ 0x10FFFF) の正の整数です。 この範囲外の値を指定すると、NULL が返されます。  
+ データベースの照合順序が SC フラグをサポートする場合、これは 0 から 1114111 (0 から 0x10FFFF) までの正の整数です。 この範囲外の値を指定すると、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  既定のデータベースの照合順序が補助文字をサポートしない場合は **nchar(1)**。  
@@ -53,7 +53,7 @@ NCHAR ( integer_expression )
   
  パラメーター *integer_expression* が 0 ～ 0 xFFFF の範囲内にある場合、1 つの文字だけが返されます。 値が大きい場合、NCHAR は対応するサロゲート ペアを返します。 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` を使用してサロゲート ペアを作成しないでください。 代わりに、補助文字をサポートするデータベース照合順序を使用し、サロゲート ペアの Unicode コード ポイントを指定します。 次の例では、サロゲート ペアを作成する古いスタイルの方法と、Unicode コード ポイントを指定する推奨される方法の両方を示します。  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>A. NCHAR と UNICODE を使用する  
  次の例では、`UNICODE` 関数と `NCHAR` 関数を使用して、`UNICODE` という文字列の 2 番目の文字の `NCHAR` 値と `København` (Unicode 文字) を出力することによって、`ø` という実際の 2 番目の文字を出力します。  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. SUBSTRING、UNICODE、CONVERT、および NCHAR を使用する  
  次の例では、`SUBSTRING` 関数、`UNICODE` 関数、`CONVERT` 関数、および `NCHAR` 関数を使用して、`København` という文字列の中の各文字の文字番号、Unicode 文字、および UNICODE 値を出力します。  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

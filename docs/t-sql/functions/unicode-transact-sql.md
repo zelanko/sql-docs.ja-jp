@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae9988ac496800cca11139e562a9ba57dc62fe8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fb572b4afd20a946d71460ae5f60b52d0c236ba
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845020"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636451"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,14 +49,14 @@ UNICODE ( 'ncharacter_expression' )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前の [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のバージョンおよび [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、UNICODE 関数は UCS-2 コード ポイントを 0 から 0xFFFF までの範囲で返します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のエディションでは、SC 照合順序を使用すると、UNICODE は UTF-16 コード ポイントを 0 から 0x10FFFF までの範囲で返します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前の [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のバージョンおよび [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、UNICODE 関数は UCS-2 コード ポイントを 0 から 0xFFFF までの範囲で返します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序を使用すると、UNICODE では 0 から 0x10FFFF の範囲の UTF-16 コード ポイントが返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-unicode-and-the-nchar-function"></a>A. UNICODE 関数と NCHAR 関数を使用する  
  次の例では、`UNICODE` と `NCHAR` の各関数を使用して、文字列 `Åkergatan` 24 の先頭文字を表す UNICODE 値と実際の先頭文字 `Å` を出力します。  
   
-```  
+```sql  
 DECLARE @nstring nchar(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
@@ -72,7 +72,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ### <a name="b-using-substring-unicode-and-convert"></a>B. SUBSTRING、UNICODE、CONVERT の各関数を使用する  
  次の例では、`SUBSTRING`、`UNICODE`、および `CONVERT` の各関数を使用して、文字列 `Åkergatan 24` の各文字の文字番号、Unicode 文字、および UNICODE 値を出力します。  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

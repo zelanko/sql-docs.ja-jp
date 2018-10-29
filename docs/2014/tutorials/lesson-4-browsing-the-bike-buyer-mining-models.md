@@ -11,17 +11,17 @@ ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c92e5ebd4ad0e8757d47fd8ce2b58995140670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171422"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147347"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>レッスン 4: Bike Buyer マイニング モデルの参照
   このレッスンでは、使用、 [SELECT (DMX)](/sql/dmx/select-dmx)デシジョン ツリー モデルとマイニングをクラスタ リングでコンテンツを参照するステートメントをモデル化で作成した[レッスン 2:予測マイニング構造にマイニングモデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- マイニング モデルに含まれる列は、マイニング構造で定義されている列ではなく、アルゴリズムによって検出された傾向とパターンを記述している、特定の列のセットです。 これらのマイニング モデル列に記載されて、 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)スキーマ行セット。 たとえば、コンテンツ スキーマ行セットの MODEL_NAME 列には、マイニング モデルの名前が含まれます。 クラスター マイニング モデルの場合、NODE_CAPTION 列には各クラスターの名前が含まれ、NODE_DESCRIPTION 列には各クラスターの特性の説明が含まれます。 SELECT FROM を使用してこれらの列を参照する\<モデル >。DMX でコンテンツのステートメント。 このステートメントを使用すると、マイニング モデルの作成に使用されたデータを調査することもできます。 このステートメントを使用するには、マイニング構造上でドリルスルーを有効にする必要があります。 ステートメントの詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)します。  
+ マイニング モデルに含まれる列は、マイニング構造で定義されている列ではなく、アルゴリズムによって検出された傾向とパターンを記述している、特定の列のセットです。 これらのマイニング モデル列に記載されて、 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)スキーマ行セット。 たとえば、コンテンツ スキーマ行セットの MODEL_NAME 列には、マイニング モデルの名前が含まれます。 クラスター マイニング モデルの場合、NODE_CAPTION 列には各クラスターの名前が含まれ、NODE_DESCRIPTION 列には各クラスターの特性の説明が含まれます。 SELECT FROM を使用してこれらの列を参照する\<モデル >。DMX でコンテンツのステートメント。 このステートメントを使用すると、マイニング モデルの作成に使用されたデータを調査することもできます。 このステートメントを使用するには、マイニング構造上でドリルスルーを有効にする必要があります。 ステートメントの詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)します。  
   
  SELECT DISTINCT ステートメントを使用することにより、不連続列のすべての状態を返すこともできます。 たとえば、性別の列でこの操作を実行すると、クエリでは `male` と `female` が返されます。  
   
@@ -50,7 +50,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- マイニング モデル名の後の .CONTENT 句は、マイニング モデルから内容を返すことを示します。 マイニング モデルに含まれる列に関する詳細については、次を参照してください。 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)します。  
+ マイニング モデル名の後の .CONTENT 句は、マイニング モデルから内容を返すことを示します。 マイニング モデルに含まれる列に関する詳細については、次を参照してください。 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)します。  
   
  コードの最終行では、ステートメントで返される結果をフィルター選択します。この行は省略可能です。  
   
@@ -68,7 +68,7 @@ WHERE NODE_SUPPORT > 100
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>クラスター マイニング モデルの内容を返すには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -86,7 +86,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     置換することもできます * のいずれかに含まれる列の一覧で、 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)します。  
+     置換することもできます * のいずれかに含まれる列の一覧で、 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)します。  
   
 4.  次の部分を探します。  
   
@@ -143,7 +143,7 @@ WHERE IsInNode('<node id>')
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>マイニング モデルのトレーニングに使用されたケースを返すには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -210,7 +210,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>不連続列の状態を返すには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   

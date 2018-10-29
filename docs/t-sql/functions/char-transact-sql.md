@@ -1,7 +1,7 @@
 ---
 title: CHAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 10/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 737ea3c8553d6d994096fc30a2a944483b2027b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637900"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643780"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,13 +44,16 @@ ms.locfileid: "47637900"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```
 CHAR ( integer_expression )  
 ```  
   
 ## <a name="arguments"></a>引数  
 *integer_expression*  
-0 ～ 255 の整数です。 整数式がこの範囲から外れている場合、`CHAR` は `NULL` 値を返します。
+0 ～ 255 の整数です。 整数式がこの範囲から外れている場合、または整数が 2 バイト文字の最初のバイトのみを表している場合は、`CHAR` では `NULL` 値が返されます。
+
+> [!NOTE]
+> ただし、[Shift_JIS](http://www.wikipedia.org/wiki/Shift_JIS) など、一部のヨーロッパ以外の文字セットには 1 バイトのコード体系では表現しきれない文字が含まれ、マルチバイトのエンコードが必要になります。 文字セットについて詳しくは、「[1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)」をご覧ください。 
   
 ## <a name="return-types"></a>戻り値の型
 **char(1)**
@@ -88,7 +91,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ----------- -
 78          N  
 ----------- -  
@@ -112,9 +115,9 @@ GO
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
-FROM Person.Person p JOIN Person.EmailAddress pe  
-ON p.BusinessEntityID = pe.BusinessEntityID  
-AND p.BusinessEntityID = 1;  
+FROM Person.Person p 
+INNER JOIN Person.EmailAddress pe ON p.BusinessEntityID = pe.BusinessEntityID  
+  AND p.BusinessEntityID = 1;  
 GO  
 ```
   
@@ -127,8 +130,6 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. ASCII と CHAR を使用して、文字列から ASCII 値を印刷するには  
 この例では、ASCII 文字セットを使用します。 6 種類の ASCII 文字番号の値に対応する文字値が返されます。
   
@@ -140,7 +141,7 @@ CHAR(49) AS [49], CHAR(50) AS [50];
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 65   66   97   98   49   50  
 ---- ---- ---- ---- ---- ----  
 A    B    a    b    1    2  
@@ -157,15 +158,46 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
+```
+name                                      create_date               name                                  state_desc  
+--------------------------------------------------------------------------------------------------------------------  
+master                    was created on  2003-04-08 09:13:36.390   master                  is currently  ONLINE 
+tempdb                    was created on  2014-01-10 17:24:24.023   tempdb                  is currently  ONLINE   
+AdventureWorksPDW2012     was created on  2014-05-07 09:05:07.083   AdventureWorksPDW2012   is currently  ONLINE 
+```
+
+### <a name="e-using-char-to-return-single-byte-characters"></a>E. CHAR を使用して 1 バイト文字を返す  
+この例では、ASCII の有効な範囲内の整数と 16 進値が使用されます。 CHAR 関数は、1 バイトの日本語の文字を出力できます。
+  
 ```sql
-name     create_date    name    state_desc  
-------------------------------------------------------------  
-master                   was created on  2003-04-08 09:13:36.390   
-master                   is currently  ONLINE  
-tempdb                   was created on  2014-01-10 17:24:24.023   
-tempdb                   is currently  ONLINE  
-AdventureWorksPDW2012    was created on  2014-05-07 09:05:07.083 
-AdventureWorksPDW2012    is currently  ONLINE  
+SELECT CHAR(188) AS single_byte_representing_complete_character, 
+  CHAR(0xBC) AS single_byte_representing_complete_character;  
+GO  
+```
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```
+single_byte_representing_complete_character single_byte_representing_complete_character
+------------------------------------------- -------------------------------------------
+ｼ                                           ｼ                                         
+```
+
+### <a name="f-using-char-to-return-multibyte-characters"></a>F. CHAR を使用してマルチバイト文字を返す  
+この例では、ASCII の有効な範囲内の整数と 16 進値が使用されます。 ただし、パラメーターではマルチバイト文字の最初のバイトのみが表されるため、CHAR 関数は NULL を返します。
+  
+```sql
+SELECT CHAR(129) AS first_byte_of_double_byte_character, 
+  CHAR(0x81) AS first_byte_of_double_byte_character;  
+GO  
+```
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```
+first_byte_of_double_byte_character first_byte_of_double_byte_character
+----------------------------------- -----------------------------------
+NULL                                NULL                                         
 ```
   
 ## <a name="see-also"></a>参照

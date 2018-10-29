@@ -1,7 +1,7 @@
 ---
 title: char および varchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,42 +19,49 @@ helpviewer_keywords:
 - varchar(max) data type
 - variable-length data types [SQL Server]
 - varchar data type
+- utf8
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6699c1b1c02f071dd95cd642f15a9b449de8e815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824800"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49644010"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char および varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-これらのデータ型は、固定長または可変長です。  
+固定長 (**char**)、または可変長 (**varchar**) の文字データ型です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、UTF-8 が有効になっている照合順序を使用する場合、これらのデータ型には [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 文字データの全範囲が格納され、[UTF-8](http://www.wikipedia.org/wiki/UTF-8) 文字エンコードが使用されます。 UTF-8 が無効の照合順序を指定する場合、これらのデータ型には、対応するその照合順序のコード ページでサポートされている文字のサブセットのみが格納されます。
   
 ## <a name="arguments"></a>引数  
-**char** [ ( *n* ) ] 固定長の Unicode 以外の文字列データです。 *n* では文字列の長さを定義し、指定できる値の範囲は 1 ～ 8,000 です。 ストレージのサイズは *n* バイトです。 **char** の ISO シノニムは、**character** です。
-  
-**varchar** [ ( *n* | **max** ) ] 可変長の Unicode 以外の文字列データです。 *n* では文字列の長さを定義し、指定できる値の範囲は 1 ～ 8,000 です。 **max** は最大格納サイズが 2^31-1 バイト (2 GB) であることを示します。 格納サイズは、入力したデータの実際の長さ + 2 バイトとなります。 **varchar** の ISO シノニムは、**charvarying** または **charactervarying** です。
-  
+**char** [ ( *n* ) ] 固定長の文字列データです。 *n* によってバイト単位での文字列の長さが定義されます。1 から 8,000 までの値にする必要があります。 *Latin* などの 1 バイト エンコード文字セットの場合、ストレージのサイズは *n* バイトとなり、格納できる文字数もまた *n* となります。 マルチバイト エンコード文字セットの場合、ストレージのサイズは引き続き *n* バイトですが、格納できる文字数が *n* よりも少なくなる場合があります。 **char** の ISO シノニムは、**character** です。 文字セットについて詳しくは、「[1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)」をご覧ください。
+
+**varchar** [ ( *n* | **max** ) ] 可変長の文字列データです。 *n* によってバイト単位での文字列の長さが定義されます。1 から 8,000 までの値を指定できます。 **max** は最大格納サイズが 2^31-1 バイト (2 GB) であることを示します。 *Latin* などの 1 バイト エンコード文字セットの場合、ストレージのサイズは *n* バイト + 2 バイトとなり、格納できる文字数もまた *n* となります。 マルチバイト エンコード文字セットの場合、ストレージのサイズは引き続き *n* バイト + 2 バイトですが、格納できる文字数が *n* よりも少なくなる場合があります。 **varchar** の ISO シノニムは、**charvarying** または **charactervarying** です。 文字セットについて詳しくは、「[1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)」をご覧ください。
+
 ## <a name="remarks"></a>Remarks  
 データ定義または変数宣言ステートメントで *n* を指定しないと、既定の長さは 1 になります。 CAST 関数および CONVERT 関数で *n* を指定しない場合は、既定の長さは 30 になります。
   
 COLLATE 句で特定の照合順序を指定しない限り、**char** 型または **varchar** 型を使用するオブジェクトにはデータベースの既定の照合順序が割り当てられます。 照合順序によって、文字型データの格納に使用されるコード ページが制御されます。
-  
-サイトで複数の言語をサポートする場合は、文字変換から生じる問題を最小限にするために、Unicode の **nchar** 型または **nvarchar** 型を使用することを検討してください。 **char** 型または **varchar** 型を使用する場合は、次のように使い分けます。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマルチバイト エンコードには以下が含まれます。
+-   一部の東アジア言語に向けた 2 バイト文字セット (DBCS)。コード ページ 936 および 950 (中国語)、932 (日本語)、または 949 (韓国語) を使用します。
+-   コード ページ 65001 を使用する UTF 8。 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降))
+
+複数言語をサポートするサイトがある場合:
+- [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、Unicode をサポートして文字変換の問題を最小限に抑えるために、UTF-8 が有効になっている照合順序の使用を検討してください。 
+- 古いバージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用する場合、文字変換の問題を最小限に抑えるために、Unicode の **nchar** データ型または **nvarchar** データ型を使用することを検討してください。   
+
+**char** 型または **varchar** 型を使用する場合は、次のことをお勧めします。
 - 列データ エントリのサイズが一定の場合は、**char** を使用します。  
 - 列データ エントリのサイズが大幅に変化する場合は、**varchar** を使用します。  
-- 列データ エントリのサイズが大幅に異なり、また 8,000 バイトを超える可能性がある場合は、**varchar(max)** 型を使用します。  
+- 列データ エントリのサイズが大幅に変化し、かつ文字列の長さが 8,000 バイトを超える可能性がある場合は、**varchar(max)** を使用します。  
   
 CREATE TABLE または ALTER TABLE 実行時に SET ANSI_PADDING が OFF に設定されている場合、NULL として定義されている **char** 型の列は **varchar** 型として扱われます。
   
-照合順序のコード ページで 2 バイト文字が使用されている場合、記憶領域のサイズは *n* バイトのままです。 文字列によって、*n* バイトのストレージ サイズは *n* 文字未満になる可能性があります。
-
 > [!WARNING]
 > Null 以外の varchar(max) または nvarchar(max) の各列には、24 バイトの追加の固定割り当てが必要で、これは並べ替え操作中の 8,060 バイトの行制限におけるカウント対象となります。 これにより、テーブル内に作成できる Null 以外の varchar(max) または nvarchar(max) の列数について、暗黙的な制限が生じます。  
 テーブルの作成時やデータ挿入時に、最大行サイズが許容最大値の 8060 バイトを超えるという通常の警告以外の、特別なエラーは提供されません。 この大きな行サイズが原因で、クラスター化インデックス キーの更新や列セット全体の並べ替えなどの通常操作の一部でエラー (エラー 512 など) が発生する可能性があります。これは操作を実行するまでユーザーは予測することができません。
@@ -65,7 +72,7 @@ CREATE TABLE または ALTER TABLE 実行時に SET ANSI_PADDING が OFF に設�
 文字式がデータ型やサイズが異なる文字式に変換される場合 (**char(5)** から **varchar(5)** や、**char(20)** から **char(15)** など)、入力値の照合順序が変換後の値に割り当てられます。 文字式でない式が文字型に変換される場合、現在のデータベースの既定の照合順序が変換後の値に割り当てられます。 どちらの場合でも、[COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 句を使用して特定の照合を割り当てることができます。
   
 > [!NOTE]  
->  コード ページ変換は **char** および **varchar** データ型に対してはサポートされていますが、**text** データ型に対してはサポートされていません。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同様に、コード ページ変換中のデータの喪失は報告されません。  
+> コード ページ変換は **char** および **varchar** データ型に対してはサポートされていますが、**text** データ型に対してはサポートされていません。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同様に、コード ページ変換中のデータの喪失は報告されません。  
   
 文字式を **numeric** 型の概算値に変換する場合、その文字式は指数表記を含むことができます。指数表記とは、小文字の e または大文字の E の後に必要に応じてプラス記号 (+) またはマイナス記号 (-) を付け、その後に数字を付けた表記です。
   
@@ -115,7 +122,7 @@ WHERE CAST(SalesYTD AS varchar(20) ) LIKE '1%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID SalesYTD              DisplayFormat CurrentDate             DisplayDateFormat  
 ---------------- --------------------- ------------- ----------------------- -----------------  
 278              1453719.4653          1,453,719.47  2011-05-07 14:29:01.193 07/05/11  
@@ -144,7 +151,7 @@ SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  
@@ -158,6 +165,7 @@ String                                       TruncatedValue
 [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [データ型の変換 (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[データベース サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-database.md)
-  
+[データベース サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-database.md)     
+[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)    
+[1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)
   

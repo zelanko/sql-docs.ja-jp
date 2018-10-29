@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c05e5d59dd303f6f0c74eaab0e749fe6c8252f32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042360"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145987"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services の新機能新機能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -64,7 +64,7 @@ SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースから�
 
 * ハッシュのエンコードは、group by の列 (ディメンション テーブルの値では多くの場合) と外部キーの優先です。 文字列型の列は、常に、エンコードされたハッシュです。
 
-数値列には、これらのエンコード方法のいずれかを使用できます。 Analysis Services が、いずれかのテーブルが空の (パーティションの有無にかかわらず) の場合、テーブルの処理を開始または、テーブル全体の処理操作が実行される、サンプルの値は、各数値の列値またはハッシュ エンコードを適用するかどうかを判断するの取得します. 既定では、値のエンコード選択ときに十分では、列の個別の値のサンプル:、それ以外の場合圧縮効率の改善が提供通常ハッシュ エンコードされます。 Analysis Services データの分散の詳細に基づいて列が部分的に処理した後、エンコード方式を変更し、エンコード プロセス; を再起動する可能性があります。ただし、この処理時間を向上し、効率的ではありません。 パフォーマンス チューニングに関するホワイト ペーパーでは、さらに詳しく再エンコードについて説明し、SQL Server Profiler を使用してそれを検出する方法について説明します。
+数値列には、これらのエンコード方法のいずれかを使用できます。 Analysis Services が、いずれかのテーブルが空の (パーティションの有無にかかわらず) の場合、テーブルの処理を開始または、テーブル全体の処理操作が実行される、サンプルの値は、各数値の列値またはハッシュ エンコードを適用するかどうかを判断するの取得します。 既定では、値のエンコード選択ときに十分では、列の個別の値のサンプル:、それ以外の場合圧縮効率の改善が提供通常ハッシュ エンコードされます。 Analysis Services データの分散の詳細に基づいて列が部分的に処理した後、エンコード方式を変更し、エンコード プロセス; を再起動する可能性があります。ただし、この処理時間を向上し、効率的ではありません。 パフォーマンス チューニングに関するホワイト ペーパーでは、さらに詳しく再エンコードについて説明し、SQL Server Profiler を使用してそれを検出する方法について説明します。
 
 エンコードのヒントからデータ プロファイルやトレース イベントを再エンコードへの応答に関する予備知識を指定するエンコード方式の優先順位を指定するモデルを使用できます。 以降、列のハッシュ エンコードでの集計は、列の値でエンコードされた値のエンコードがヒントとして指定する、このような列のよりも遅くなります。 優先順位が適用されることは保証されません。 設定ではなく、ヒントになります。 エンコードのヒントを指定するには、列に EncodingHint プロパティを設定します。 使用可能な値は、"Default"、"Value"および「ハッシュ」です。 Model.bim ファイルから JSON ベースのメタデータの次のスニペットでは、Sales Amount 列のエンコード値を指定します。
 
@@ -173,9 +173,9 @@ db.Update(UpdateOptions.ExpandFull);
 [Dmv](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)はローカル サーバーの操作やサーバーの正常性に関する情報を返す SQL Server Profiler でクエリします。
 このリリースには機能強化が含まれています[動的管理ビュー](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV)、互換性レベル 1200 と 1400 の表形式モデル用です。
 
-[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md) 1200 と 1400 の表形式モデルを使用したようになりました。 表形式 1400 モデルでは、M パーティション、M 式および構造化データ ソース間の依存関係を表示します。 詳細についてを参照してください、 [Analysis Services ブログ](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)します。
+[DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset) 1200 と 1400 の表形式モデルを使用したようになりました。 表形式 1400 モデルでは、M パーティション、M 式および構造化データ ソース間の依存関係を表示します。 詳細についてを参照してください、 [Analysis Services ブログ](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)します。
 
-[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)の向上は、この DMV には、メジャーの次元を表示するさまざまなクライアント ツールで使用されるために含まれています。 たとえば、Excel ピボット テーブルの探索機能により、ユーザーが選択されているメジャーに関連付けられたディメンションをクロス ドリルします。 このリリースでは、正しくない値が表示されていた以前基数の列を修正します。
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)の向上は、この DMV には、メジャーの次元を表示するさまざまなクライアント ツールで使用されるために含まれています。 たとえば、Excel ピボット テーブルの探索機能により、ユーザーが選択されているメジャーに関連付けられたディメンションをクロス ドリルします。 このリリースでは、正しくない値が表示されていた以前基数の列を修正します。
 
 ## <a name="dax-enhancements"></a>DAX の機能強化
 このリリースには、新しい DAX 関数と機能のサポートが含まれています。 を利用するためには、最新バージョンの SSDT を使用する必要があります。 詳細についてを参照してください。[新しい DAX 関数](https://msdn.microsoft.com/library/mt704075.aspx)します。
@@ -245,6 +245,6 @@ Filtered Sales:=CALCULATE (
 
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [SQL Server 2017 リリース ノートします。](../sql-server/sql-server-2017-release-notes.md)   
 [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)
