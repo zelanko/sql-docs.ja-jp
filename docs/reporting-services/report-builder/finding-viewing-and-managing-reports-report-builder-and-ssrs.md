@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 2d28ffb546476d2e18fd1dc57d04c837f7176142
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085448"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029697"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーまたは SharePoint サイト上のフォルダーを参照して、レポート、共有データ ソース、モデル、その他の関連レポート アイテムを検索したり、自分のコンピューターを参照して、ローカル レポートを検索したりできます。 レポートを見つけやすくするため、レポート ビルダーでは最近使用されたサーバーとサイトの一覧を管理し、コンピューターのファイル システムの "デスクトップ"、"マイ ドキュメント"、および "マイ コンピューター" フォルダーに直接アクセスできるようにしています。  
@@ -77,7 +77,7 @@ ms.locfileid: "49085448"
  ![レポート ツールバー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツールバー")  
 レポート ツール バー  
   
- レポートを実行した後は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel や PDF など、レポートを別の形式にエクスポートできます。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートの詳細については、「[レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」および「[別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)」を参照してください。  
+ レポートを実行した後は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel や PDF など、レポートを別の形式にエクスポートできます。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートの詳細については、「[レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」および「[別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)」を参照してください。  
   
  レポートを選択して実行するには、レポート マネージャーを起動して、表示するレポートを検索または参照する方法が最も簡単です。 レポートを開く方法の手順を追った説明については、「[レポートを開閉する (レポート マネージャー)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)」をご覧ください。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "49085448"
   
  アプリケーション ページにアクセスするには、SharePoint ライブラリに既に追加したレポートまたは他のレポート サーバー アイテムのドロップダウン メニューから、アイテム固有のアクションを選択します。 アイテムと権限に応じて、レポート ビルダーでレポートを作成したり、モデルを生成したり、モデル アイテムのセキュリティを設定することもできます。  
   
- Reporting Services および SharePoint テクノロジの詳細については、msdn.microsoft.com で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=154888)の「[レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」をご覧ください。  
+ Reporting Services および SharePoint テクノロジの詳細については、msdn.microsoft.com で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=154888)の「[レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」をご覧ください。  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトでのレポート サーバー アイテムの場所  
  プロパティを設定するには、まずアイテムを探し出せることが必要です。 レポート サーバー アイテムは、常にライブラリまたはライブラリ内のフォルダーに格納されています。  
@@ -148,6 +148,6 @@ ms.locfileid: "49085448"
 ## <a name="see-also"></a>参照  
  [レポートの保存 (レポート ビルダー)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [レポート ビルダーのインストールとアンインストール](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [レポート ビルダーのインストールとアンインストール](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf01ea0fda03d38291c8a41a044fc409406fa89b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b727b8ff0bdfcca2af46cf1df56b5080c0a56215
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027951"
 ---
 # <a name="rendering-extensions-overview"></a>表示拡張機能の概要
   表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、7 種類の表示拡張機能 (HTML、Excel、Word、CSV (Text)、XML、Image、PDF) を備えています。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  
@@ -54,7 +54,7 @@ ms.locfileid: "47679340"
   
  カスタム表示拡張機能の記述は難しい作業です。 表示拡張機能は、一般的には、レポートの要素のあらゆる組み合わせをサポートする必要があり、多くのクラス、インターフェイス、メソッド、およびプロパティを実装しなければなりません。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によりサポートされていない形式でレポートを表示する必要があり、独自の表示拡張機能のマネージド コードを記述して実装する場合、開発する表示拡張機能のコードは **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** インターフェイスを実装する必要があります。このインターフェイスはレポート サーバーにより必要とされます。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に関する補足資料とホワイト ペーパーについては、[Reporting Services Web サイト](http://go.microsoft.com/fwlink/?LinkId=19951)の最新の技術文書を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に関する補足資料とホワイト ペーパーについては、[Reporting Services Web サイト](https://go.microsoft.com/fwlink/?LinkId=19951)の最新の技術文書を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [表示拡張機能の実装](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

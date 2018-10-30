@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12c0dda2fb1a9a01cdaf0d3a1077aef54e388ebe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840280"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021456"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -37,7 +37,7 @@ ms.locfileid: "47840280"
 > [!TIP]  
 >  SQL Server に関する問題の最新情報については、以下を参照してください。  
 >   
->  -   [SQL Server 2016 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=398124)をダウンロードする。  
+>  -   [SQL Server 2016 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=398124)をダウンロードする。  
   
   
 ##  <a name="bkmk_side_by_side"></a> サイド バイ サイド インストール  
@@ -230,17 +230,17 @@ ms.locfileid: "47840280"
   
 -   [SharePoint 2016 へのアップグレード プロセスの概要](https://technet.microsoft.com/library/cc262483\(v=office.16\))
 
--   [SharePoint 2013 へのアップグレード プロセスの概要](http://go.microsoft.com/fwlink/p/?LinkId=256688)。
+-   [SharePoint 2013 へのアップグレード プロセスの概要](https://go.microsoft.com/fwlink/p/?LinkId=256688)。
   
--   [SharePoint 2013 へのアップグレードの前に環境をクリーンアップする](http://go.microsoft.com/fwlink/p/?LinkId=256689)  
+-   [SharePoint 2013 へのアップグレードの前に環境をクリーンアップする](https://go.microsoft.com/fwlink/p/?LinkId=256689)  
   
 -   [SharePoint 2013 から SharePoint Server 2016 にデータベースをアップグレードする](https://technet.microsoft.com/library/cc303436\(v=office.16\))
 
--   [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレードする](http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレードする](https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
 
 ## <a name="next-steps"></a>次の手順
 
 [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)   
 [インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

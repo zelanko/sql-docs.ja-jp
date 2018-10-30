@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a590a8f0738a5717f7982cdd095d73bfcc18dc55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379f8a3cc95df4bfb2ed55ac639516d025abc32f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029211"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>数値と日付の書式設定 (レポート ビルダーおよび SSRS)
   データ領域の数値と日付の書式を設定するには、対応するデータ領域の **[プロパティ]** ダイアログ ボックスの **[数値]** ページを使用します。  
@@ -44,7 +44,7 @@ ms.locfileid: "47803760"
   
 -   既定では、数値の書式はクライアント コンピューターのカルチャ設定を反映して設定されます。 数値の表示方法を指定するために書式設定の文字列を使用すると、レポートを参照するユーザーの地域に関係なく、一貫した書式を指定できます。  
   
--   **[数値]** ページで指定された書式は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準の数値書式設定文字列のサブセットです。 ダイアログ ボックスに表示されないカスタム書式を使用して数値や日付の書式を設定するには、数値または日付の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列を使用します。 カスタム書式設定文字列の詳細については、MSDN のトピック「 [型の書式設定](http://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。  
+-   **[数値]** ページで指定された書式は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準の数値書式設定文字列のサブセットです。 ダイアログ ボックスに表示されないカスタム書式を使用して数値や日付の書式を設定するには、数値または日付の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列を使用します。 カスタム書式設定文字列の詳細については、MSDN のトピック「 [型の書式設定](https://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。  
   
 -   カスタム書式設定文字列が指定されている場合、既定のカルチャ固有の設定よりも優先度が高くなります。 たとえば、カスタム書式設定文字列 "#,###" を設定して、数値 1234 を 1,234 と表すとします。 これは、米国のユーザーとヨーロッパのユーザーで意味が異なる場合があります。 カスタム書式設定を指定する前に、レポートを参照する異なるカルチャのユーザーに対して選択した書式設定がどのような影響を与えるか考慮するようにしてください。  
   

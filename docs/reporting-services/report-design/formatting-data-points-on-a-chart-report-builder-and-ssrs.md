@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c132829009fb8212919434dff77f8ceb5710be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624570"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021226"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、データ ポイントは、グラフにおける最小単位のエンティティです。 図形以外のグラフのデータ ポイントは、そのグラフの種類に応じて表されます。 たとえば、線系列は 1 つまたは複数の連続したデータ ポイントで構成されます。 図形グラフのデータ ポイントは、個々のスライスやセグメントによって表され、これらのスライスやセグメントがグラフ全体を形成します。 たとえば、円グラフでは、それぞれのピースがデータ ポイントです。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
@@ -74,7 +74,7 @@ ms.locfileid: "47624570"
 |#MAX|系列内のすべての Y 値の最大値|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|系列内のすべての Y 値の最初の値|All|`=First(Fields!MyDataField.Value)`|  
   
- キーワードを書式設定するには、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列をかっこで囲みます。 たとえば、ツールヒントでデータ ポイントの値を小数点以下 2 桁の数値として指定するには、書式設定文字列 "N2" を中かっこで囲みます。たとえば、系列の **ToolTip** プロパティで "#VALY{N2}" のようになります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列の詳細については、MSDN の「 [型の書式設定](http://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の数値を書式設定する方法については、「[数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)」を参照してください。  
+ キーワードを書式設定するには、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列をかっこで囲みます。 たとえば、ツールヒントでデータ ポイントの値を小数点以下 2 桁の数値として指定するには、書式設定文字列 "N2" を中かっこで囲みます。たとえば、系列の **ToolTip** プロパティで "#VALY{N2}" のようになります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列の詳細については、MSDN の「 [型の書式設定](https://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の数値を書式設定する方法については、「[数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)」を参照してください。  
   
  グラフにキーワードを追加する方法の詳細については、「[系列へのツールヒントの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)」、「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)」を参照してください。  
   

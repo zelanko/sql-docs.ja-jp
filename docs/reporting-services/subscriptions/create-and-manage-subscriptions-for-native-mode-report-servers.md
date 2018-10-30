@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fc05bd786594cc70836bc6d39e86143d16089979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617440"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021686"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>ネイティブ モード レポート サーバーのサブスクリプションの作成と管理
   標準のサブスクリプションは、電子メールまたは共有フォルダーを使用してレポートを配信する個々のユーザーによって作成されるサブスクリプションです。 このトピックでは、個別のユーザーが作成および管理する標準のサブスクリプションに関する情報を記載しています。 データ ドリブン サブスクリプションについては、必要条件および手順が異なるため、別のトピックで説明します。 詳細については、「 [データ ドリブン サブスクリプションを作成、変更、および削除する](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)」を参照してください。  
@@ -40,7 +40,7 @@ ms.locfileid: "47617440"
   
 -   電子メール配信を使用する場合は、サブスクリプションを作成する前に、SMTP サーバーまたはゲートウェイ接続用にレポート サーバーを構成する必要があります。  
   
--   ファイル共有配信を使用するには、対象フォルダーを定義しておく必要があります。 詳細については、「[電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)」をご覧ください。  
+-   ファイル共有配信を使用するには、対象フォルダーを定義しておく必要があります。 詳細については、「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)」を参照してください。  
   
  レポートをサブスクライブするには、保存された資格情報を使用するか、資格情報を使用しないように、レポートのデータ ソースを構成しておく必要があります。 詳細については、「 [Reporting Services データ ソースに資格情報を保存する](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)」を参照してください。 レポートのデータ ソースをそのように構成しない場合は、 **[新しいサブスクリプション]** ボタンが使用できない状態になります。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47617440"
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> ファイル共有サブスクリプションを作成するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
 2.  サブスクライブするレポートを開きます。 レポート メニューをクリックし、 **[サブスクライブ]** をクリックします。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47617440"
   
 ###  <a name="bkmk_create_email_subscription"></a> 電子メール サブスクリプションを作成するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
 2.  サブスクライブするレポートを開きます。 レポート メニューをクリックし、 **[サブスクライブ]** をクリックします。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "47617440"
   
 4.  **[所有者]**: [所有者] フィールドには、既定で現在のユーザーが表示され、サブスクリプションの作成時には編集できません。 ただし、サブスクリプションの保存後に、所有者や説明など、サブスクリプションのプロパティは変更できます。  
   
-5.  **[配信者]**: **[電子メール]** を選択します。 **[電子メール]** を選択できない場合、レポート サーバーが電子メール サブスクリプション用に構成されていません。 「[電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)」をご覧ください。  
+5.  **[配信者]**: **[電子メール]** を選択します。 **[電子メール]** を選択できない場合、レポート サーバーが電子メール サブスクリプション用に構成されていません。 「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)」を参照してください。  
   
-6.  **[宛先]**: [宛先] フィールドの受信者名は、ドメイン ユーザー アカウントを使用して自動的に指定されます。 [user name]@[domain.com] という形式であることを確認します。ユーザー アカウントを使用して **[宛先]** フィールドが自動的に指定されるかどうかは、レポート サーバーの構成設定によって決まります。 構成設定の電子メール アドレスの変更について詳しくは、「[電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)」をご覧ください。  
+6.  **[宛先]**: [宛先] フィールドの受信者名は、ドメイン ユーザー アカウントを使用して自動的に指定されます。 [user name]@[domain.com] という形式であることを確認します。ユーザー アカウントを使用して **[宛先]** フィールドが自動的に指定されるかどうかは、レポート サーバーの構成設定によって決まります。 構成設定の電子メール アドレスの変更の詳細については、「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)」を参照してください。  
   
     > [!NOTE]  
     >  権限によっては、レポートの配信先の電子メール アドレスを入力できます。 電子メール アドレスを複数指定するには、セミコロン (;) で区切ります。 **[CC]**、 **[BCC]**、および **[返信先]** テキスト ボックスに、追加の電子メール アドレスを入力することもできます。 このためには、すべてのサブスクリプションを管理する権限が必要です。  
@@ -163,7 +163,7 @@ ms.locfileid: "47617440"
 ##  <a name="bkmk_delete_subscription"></a> サブスクリプションを削除するには  
  サブスクリプションを削除するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
 2.  レポート マネージャーのツール バーで、 **[個人用サブスクリプション]** をクリックし、変更または削除するサブスクリプションに移動します。  
   
@@ -179,10 +179,10 @@ ms.locfileid: "47617440"
   
 ## <a name="see-also"></a>参照  
  [SharePoint モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [PowerShell を使用した Reporting Services サブスクリプション所有者の変更および一覧表示とサブスクリプションの実行](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [レポート マネージャー (SSRS ネイティブ モード)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [個人用サブスクリプションを使用する (ネイティブ モードのレポート サーバー)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

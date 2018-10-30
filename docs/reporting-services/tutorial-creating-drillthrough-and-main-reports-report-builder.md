@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 656cf55483947a17696fdaf4c09f7ebe08124d20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029167"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
 このチュートリアルでは、詳細レポートとメイン レポートという、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の 2 種類のページ分割されたレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 
@@ -25,7 +25,7 @@ ms.locfileid: "47654322"
 このチュートリアルの推定所要時間: 30 分。  
   
 ## <a name="requirements"></a>必要条件  
-このチュートリアルでは、詳細レポートとメイン レポートの両方で Contoso Sales キューブにアクセスする必要があります。 このデータセットは、ContosoDW データ ウェアハウスと Contoso_Retail オンライン分析処理 (OLAP) データベースで構成されています。 このチュートリアルで作成するレポートは、Contoso Sales キューブからレポート データを取得します。 Contoso_Retail OLAP データベースは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=191575)からダウンロードできます。 ダウンロードする必要があるファイルは、ContosoBIdemoABF.exe だけです。 このファイルに OLAP データベースが含まれています。  
+このチュートリアルでは、詳細レポートとメイン レポートの両方で Contoso Sales キューブにアクセスする必要があります。 このデータセットは、ContosoDW データ ウェアハウスと Contoso_Retail オンライン分析処理 (OLAP) データベースで構成されています。 このチュートリアルで作成するレポートは、Contoso Sales キューブからレポート データを取得します。 Contoso_Retail OLAP データベースは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=191575)からダウンロードできます。 ダウンロードする必要があるファイルは、ContosoBIdemoABF.exe だけです。 このファイルに OLAP データベースが含まれています。  
   
 もう一方のファイル (ContosoBIdemoBAK.exe) は、ContosoDW データ ウェアハウスのファイルです。ContosoDW データ ウェアハウスは、このチュートリアルでは使用しません。  
   
@@ -82,7 +82,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 10. **[資格情報の種類]** をクリックします。  
   
     > [!NOTE]  
-    > データ ソースの権限の構成によっては、既定の認証オプションを変更する必要があります。 詳細については、「[セキュリティ (レポート ビルダー)](../reporting-services/report-builder/security-report-builder.md)」を参照してください。  
+    > データ ソースの権限の構成によっては、既定の認証オプションを変更する必要があります。 詳細については、「 [セキュリティ (レポート ビルダー)](../reporting-services/report-builder/security-report-builder.md)で作成するモバイル レポートで使用できます。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

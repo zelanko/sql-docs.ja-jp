@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 797b174427fa5a23542c26131dc3a74cd81fbba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d343831a702a3301cdff7b6c18bcd39318cd6241
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021336"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート サーバー Web サービス、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]、およびスケジュールされたレポート処理とサブスクリプションの配信に使用されるバックグラウンド処理アプリケーションを含んだ単一のサービスとして実装されます。 このトピックでは、サービス アカウントを最初に構成する方法と、Reporting Services 構成ツールを使用してアカウントやパスワードを変更する方法について説明します。  
@@ -88,7 +88,7 @@ ms.locfileid: "47603010"
   
 -   SQL Server のオンライン ブックの「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 」。  
   
--   MSDN の「[サービスおよびサービス アカウントのセキュリティ計画ガイド](http://go.microsoft.com/fwlink/?LinkId=69155) 」。  
+-   MSDN の「[サービスおよびサービス アカウントのセキュリティ計画ガイド](https://go.microsoft.com/fwlink/?LinkId=69155) 」。  
   
 ## <a name="updating-an-expired-password"></a>期限切れのパスワードの更新  
  レポート サーバー サービスがドメイン アカウントで実行されている場合に、Reporting Services 構成マネージャーでパスワードを更新する前にパスワードの有効期限が切れると、新しいパスワードを指定するまでこのサービスが開始されなくなります。  

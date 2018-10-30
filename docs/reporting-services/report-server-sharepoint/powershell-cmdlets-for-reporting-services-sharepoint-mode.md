@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3936b2918f9bc5dae127d44fe9001944ac7e3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e7f739f0d7dfe8e47b8053a37db327ee6b49a4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799460"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031651"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード用の PowerShell コマンドレット
 
@@ -34,7 +34,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 
 ## <a name="cmdlet-summary"></a>コマンドレットの概要
 
- コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](http://technet.microsoft.com/library/hh847814.aspx)) を使用することもできます。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、Reporting Services サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
+ コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://technet.microsoft.com/library/hh847814.aspx)) を使用することもできます。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、Reporting Services サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
@@ -51,7 +51,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 詳細については、「 [Windows PowerShell を使用して SharePoint 2013 を管理する](http://technet.microsoft.com/library/ee806878.aspx)) を使用することもできます。  
+ 詳細については、「 [Windows PowerShell を使用して SharePoint 2013 を管理する](https://technet.microsoft.com/library/ee806878.aspx)) を使用することもできます。  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開いてコマンドレットを実行する
   
@@ -293,4 +293,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [チェック リスト: PowerShell を使用して Power Pivot for SharePoint を確認する](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [SQL Server PowerShell のヘルプの参照](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

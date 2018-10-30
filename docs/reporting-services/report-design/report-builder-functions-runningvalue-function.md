@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e779abdd10eb5b71fa7d7bbf7a6d6938bf469c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 221fde16d239fa304c6f8dccbd90720d24b4b36d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742570"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021516"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>レポート ビルダー関数 - RunningValue 関数
   式で指定された NULL 以外のすべての数値の実行中の集計を、指定されたスコープに対して評価して返します。  
@@ -46,7 +46,7 @@ RunningValue(expression, function, scope)
   
  **RunningValue** は、フィルター式または並べ替え式では使用できません。  
   
- 実行中の値が計算される一連のデータは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、 **CInt**、 **CDbl** 、 **CDec**などの変換関数を使用します。 詳細については、「 [データ型変換関数](http://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
+ 実行中の値が計算される一連のデータは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、 **CInt**、 **CDbl** 、 **CDec**などの変換関数を使用します。 詳細については、「 [データ型変換関数](https://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
   
  *Scope* には、式を指定することはできません。  
   

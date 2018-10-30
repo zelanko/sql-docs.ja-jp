@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97345e896dc3df2af8f6441fead1a0d9cd7ba617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a7823a0757cb4980a52b9ab9577829ce9d6102f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802634"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029981"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>複数の値を持つパラメーターのレポートへの追加
   ユーザーがパラメーター値として複数の値を選択できるパラメーターをレポートに追加できます。  
   
  レポート URL に複数のパラメーター値を含めてレポートに渡すことができます。 複数の値を持つパラメーターを含む URL の例は、「 [URL 内でレポート パラメーターを渡す](../../reporting-services/pass-a-report-parameter-within-a-url.md)」を参照してください。  
   
- 複数のパラメーター値をストアド プロシージャに渡す方法については、mssqltips.com の「 [SSRS レポートでの複数選択パラメーターの操作](http://go.microsoft.com/fwlink/?LinkId=321529) 」を参照してください。  
+ 複数のパラメーター値をストアド プロシージャに渡す方法については、mssqltips.com の「 [SSRS レポートでの複数選択パラメーターの操作](https://go.microsoft.com/fwlink/?LinkId=321529) 」を参照してください。  
   
 ## <a name="to-add-a-multi-value-parameter"></a>複数の値を持つパラメーターを追加するには  
   

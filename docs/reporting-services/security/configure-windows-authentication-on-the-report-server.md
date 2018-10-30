@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5662157cebcc5cf66c8b30dee24028d24d58568a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031611"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、既定では、ネゴシエート認証または NTLM 認証を指定する要求を受け入れます。 これらのセキュリティ プロバイダーを使用するクライアント アプリケーションおよびブラウザーが配置に含まれている場合は、追加の構成なしで既定値を使用できます。 Windows 統合セキュリティの別のセキュリティ プロバイダーを使用する場合 (たとえば Kerberos を直接使用する場合)、または既定値を変更した後に元の設定を復元する場合は、このトピックの情報を使用して、レポート サーバーで認証設定を指定できます。  
@@ -130,7 +130,7 @@ ms.locfileid: "47770900"
   
 -   ドメイン ユーザー アカウントでレポート サーバー サービスの SPN を登録します。 詳細については、「[レポート サーバーのサービス プリンシパル名 &#40;SPN&#41; の登録](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)」を参照してください。  
   
--   ネットワーク サービスなどのビルトイン アカウントで実行されるように、サービス アカウントを変更します。 ビルトイン アカウントは、HTTP SPN を Host SPN にマップします。これは、コンピューターをネットワークに追加するときに定義されます。 詳細については、「[サービス アカウントの構成 (SSRS 構成マネージャー)](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)」を参照してください。  
+-   ネットワーク サービスなどのビルトイン アカウントで実行されるように、サービス アカウントを変更します。 ビルトイン アカウントは、HTTP SPN を Host SPN にマップします。これは、コンピューターをネットワークに追加するときに定義されます。 詳細については、「[サービス アカウントの構成 (SSRS 構成マネージャー)](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)」を参照してください。  
   
 -   NTLM を使用します。 NTLM は一般に、Kerberos 認証が失敗した場合に機能します。 NTLM を使用するには、RSReportServer.config ファイルから **RSWindowsNegotiate** を削除し、 **RSWindowsNTLM** のみが指定されていることを確認します。 この方法を選択すれば、SPN を定義していないドメイン ユーザー アカウントでも、引き続きレポート サーバー サービスに使用できます。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "47770900"
   
 -   10 進値を 16 進形式に変換する 1 つの方法として、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の電卓を使用することができます。 Windows の電卓では、[10 進] オプションと [16 進] オプションを表示するいくつかのモードがサポートされています。 [10 進] オプションを選択し、ログ ファイルで見つけた 10 進値を貼り付けるか入力して、[16 進] オプションを選択します。  
   
--   次に、「 [User-Account-Control 属性](http://go.microsoft.com/fwlink/?LinkId=183366) 」を参照して、サービス アカウントの属性を取得します。  
+-   次に、「 [User-Account-Control 属性](https://go.microsoft.com/fwlink/?LinkId=183366) 」を参照して、サービス アカウントの属性を取得します。  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Reporting Services サービス アカウントに対して Active Directory で構成された SPN  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスのトレース ログ ファイルに SPN が記録されるようにするために、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を一時的に有効にすることができます。  
@@ -202,7 +202,7 @@ ms.locfileid: "47770900"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   Kerberos とレポート サーバーの詳細については、 [SharePoint、Reporting Services、PerformancePoint Monitoring Server と Kerberos を使用したビジネス インテリジェンス ソリューションの展開](http://go.microsoft.com/fwlink/?LinkID=177751)に関する記事を参照してください。  
+-   Kerberos とレポート サーバーの詳細については、 [SharePoint、Reporting Services、PerformancePoint Monitoring Server と Kerberos を使用したビジネス インテリジェンス ソリューションの展開](https://go.microsoft.com/fwlink/?LinkID=177751)に関する記事を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   

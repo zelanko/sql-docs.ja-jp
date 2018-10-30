@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a01fc40e8946c9d6b9620dc0c17e51d1dd0db6e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b0d32e2705b63ddc5f12af84e0589a9c940582d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620480"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029681"
 ---
 # <a name="upload-files-to-a-folder"></a>フォルダーへのファイルのアップロード
   ファイル システムからファイルをアップロードし、それらを管理対象アイテムとしてレポート サーバー データベースに格納できます。 ファイルのアップロード時に行われる処理は、ファイルの種類によって異なります。  
@@ -57,9 +57,9 @@ ms.locfileid: "47620480"
 |フォルダーのコンテンツの表示|リソースの表示、レポートの表示|  
   
 ## <a name="see-also"></a>参照  
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [レポート マネージャー (SSRS ネイティブ モード)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)   
- [ファイルまたはレポートをアップロードする &#40;レポート マネージャー&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [ファイルまたはレポートをアップロードする (レポート マネージャー)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   

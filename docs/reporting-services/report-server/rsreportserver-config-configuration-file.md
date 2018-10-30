@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776080"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020346"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -57,7 +57,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  次の表では、ファイルの最初の部分に出現する全般的な構成設定について説明します。 構成ファイルに出現する順に、設定を示します。 表の最後の列は、設定がネイティブ モードのレポート サーバーに適用されるか **(N)** 、SharePoint モードのレポート サーバーに適用されるか **(S)** 、両方に適用されるかを示しています。  
   
 > [!NOTE]  
->  このトピックの "最大値" は INT_MAX の値 (2147483647) を示します。  詳細については、「[整数の制限](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx)」(http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx) を参照してください。  
+>  このトピックの "最大値" は INT_MAX の値 (2147483647) を示します。  詳細については、「[整数の制限](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx)」(https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx) を参照してください。  
   
 |設定|[説明]|モード|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  **URLReservations** は、現在のインスタンスについて、レポート サーバー Web サービスおよび Web ポータルへの HTTP アクセスを定義します。 URL は、レポート サーバーの構成時に予約されて HTTP.SYS に格納されます。  
   
 > [!WARNING]  
->  SharePoint モードでは、SharePoint サーバーの全体管理で URL 予約が構成されます。 詳細については、「[代替アクセス マッピングを構成する」(http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx) を参照してください。  
+>  SharePoint モードでは、SharePoint サーバーの全体管理で URL 予約が構成されます。 詳細については、「[代替アクセス マッピングを構成する」(https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx) を参照してください。  
   
  URL 予約を構成ファイル内で直接編集することは避けてください。 ネイティブ モードのレポート サーバーの URL 予約を作成または変更する場合は、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーまたはレポート サーバー WMI プロバイダーを使用します。 構成ファイルで値を変更すると、予約が破損して実行時にサーバー エラーが発生する場合や、HTTP.SYS 内に予約が取り残されて、ソフトウェアをアンインストールしても削除されなくなる場合があります。 詳細については、「[レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」と「[構成ファイル内の URL &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)」を参照してください。  
   
@@ -236,7 +236,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ExcludedRenderFormats**、 **RenderingExtension**|ファイル共有配信でうまく使用できないエクスポート形式を意図的に除外する場合に使用します。 通常、これらの形式は、対話型のレポートやプレビューに使用されるほか、レポートを事前にキャッシュする場合に使用されます。 デスクトップ アプリケーションから簡単に閲覧できるアプリケーション ファイルは生成されません。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
   
 ####  <a name="bkmk_email_extension"></a> レポート サーバーの電子メール拡張機能の構成設定  
- レポート サーバーの電子メールでは、SMTP ネットワーク デバイスを使用して、レポートを電子メール アドレスに送信します。 使用するには、この配信拡張機能があらかじめ構成されている必要があります。 詳細については、「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 」および「 [Reporting Services 構成ファイル](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
+ レポート サーバーの電子メールでは、SMTP ネットワーク デバイスを使用して、レポートを電子メール アドレスに送信します。 使用するには、この配信拡張機能があらかじめ構成されている必要があります。 詳細については、「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 」および「 [Reporting Services 構成ファイル](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
 |設定|[説明]|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |-------------|-----------------|  
 |**MaxConnections**|Bing Maps Web サービスに対する接続の最大数を指定します。|  
 |**Timeout**|Bing Maps Web サービスからの応答を待つ時間のタイムアウトを秒数で指定します。|  
-|**AppID**|Bing Maps Web サービスに使用するアプリケーション識別子 (AppID) を指定します。 **(Default)** は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定の AppID を指定します。<br /><br /> レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](http://go.microsoft.com/fwlink/?LinkId=151371)」を参照してください。<br /><br /> 固有の Bing Maps 使用許諾契約書にカスタム AppID を指定する必要があるとき以外は、この値を変更しないでください。 AppID を変更する場合は、変更を有効にするために [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を再起動する必要はありません。|  
-|**CacheLevel**|System.Net.Cache の HttpRequestCacheLevel 列挙から値を指定します。 既定値は **Default**です。 詳細については、「 [HttpRequestCacheLevel 列挙体](http://go.microsoft.com/fwlink/?LinkId=153353)」を参照してください。|  
+|**AppID**|Bing Maps Web サービスに使用するアプリケーション識別子 (AppID) を指定します。 **(Default)** は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定の AppID を指定します。<br /><br /> レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371)」を参照してください。<br /><br /> 固有の Bing Maps 使用許諾契約書にカスタム AppID を指定する必要があるとき以外は、この値を変更しないでください。 AppID を変更する場合は、変更を有効にするために [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を再起動する必要はありません。|  
+|**CacheLevel**|System.Net.Cache の HttpRequestCacheLevel 列挙から値を指定します。 既定値は **Default**です。 詳細については、「 [HttpRequestCacheLevel 列挙体](https://go.microsoft.com/fwlink/?LinkId=153353)」を参照してください。|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> ネイティブ モード レポート サーバーの既定の構成ファイル  
  既定では、rsreportserver.config ファイルは次の場所にインストールされます。  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- その他のご不明な点は、 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)
+ その他のご不明な点は、 [Reporting Services のフォーラムにアクセスします](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

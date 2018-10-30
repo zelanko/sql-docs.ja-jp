@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8994681f816de7d1f7b8d35eaee87d58b77c04ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711260"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021856"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>レポート サーバーへのユーザー アクセスを許可する
 
@@ -96,9 +96,9 @@ ms.locfileid: "47711260"
 ## <a name="next-steps"></a>次の手順
 
 [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[[新しいロールの割り当て]: [ロールの割り当てを編集] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[[新しいロールの割り当て]: [ロールの割り当てを編集] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [ロールの割り当て](../../reporting-services/security/role-assignments.md)   
 [ロールの定義](../../reporting-services/security/role-definitions.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

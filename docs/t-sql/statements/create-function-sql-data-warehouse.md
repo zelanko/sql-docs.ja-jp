@@ -14,17 +14,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a48d45c417217c446eba6c5c8bb4b73afe1c1204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb741485b28d050129c4a9d6acc673c69b874ab7
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818410"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100303"
 ---
 # <a name="create-function-sql-data-warehouse"></a>関数 (SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でユーザー定義関数を作成します。 ユーザー定義の関数は、パラメーターを受け取り、複雑な計算などの操作を実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンであり、そのアクションの結果を値として返します。 戻り値は、スカラー (単一) 値である必要があります。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でユーザー定義関数を作成します。 ユーザー定義の関数は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチン パラメーターを受け取るが、複雑な計算などの操作を実行し、値としては、そのアクションの結果を返します。 戻り値は、スカラー (単一) 値である必要があります。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   
 -   SELECT などの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で使用する  
   
@@ -86,7 +86,7 @@ RETURNS return_data_type
 >  ストアド プロシージャまたはユーザー定義関数でパラメーターを渡すとき、あるいはバッチ ステートメントで変数を宣言して設定するときには、ANSI_WARNINGS が無視されます。 たとえば、変数を **char(3)** と定義し、これに 4 文字以上の値を設定すると、データが定義されたサイズに合わせて切り捨てられてから、INSERT または UPDATE ステートメントが成功します。  
   
  *parameter_data_type*  
- パラメーター データ型。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数は、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でサポートされるすべてのスカラー データ型を許可します。 タイムスタンプ (rowversion) データ型はサポートされていません。  
+ パラメーター データ型。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数でサポートされるすべてのスカラー データ型 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は許可します。 タイムスタンプ (rowversion) データ型はサポートされていません。  
   
  [ =*default* ]  
  パラメーターの既定値です。 *default* 値が定義されている場合は、パラメーターに値を指定せずに関数を実行できます。  
@@ -193,8 +193,8 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
+ [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
 

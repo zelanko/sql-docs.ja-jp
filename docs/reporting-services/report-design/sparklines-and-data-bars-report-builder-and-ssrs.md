@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71458d579b710b282f75fd10d4006b737632d266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50d198fc0f16cc8cfda844f7e037d46e3e845f1a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710820"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021266"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バー (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、インライン テキストが含まれています。   
@@ -25,7 +25,7 @@ ms.locfileid: "47710820"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- スパークラインをすぐに使用するには、「 [チュートリアル: レポートへのスパークラインの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 」、「 [テーブルにスパークラインを作成する方法 (ビデオ)](http://go.microsoft.com/fwlink/?LinkId=197092) 」、および「 [レポート ビルダーのスパークライン、横棒グラフ、およびインジケーター (ビデオ)](http://technet.microsoft.com/bi/video/ff877165) 」を参照してください。  
+ スパークラインをすぐに使用するには、「 [チュートリアル: レポートへのスパークラインの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 」、「 [テーブルにスパークラインを作成する方法 (ビデオ)](https://go.microsoft.com/fwlink/?LinkId=197092) 」、および「 [レポート ビルダーのスパークライン、横棒グラフ、およびインジケーター (ビデオ)](https://technet.microsoft.com/bi/video/ff877165) 」を参照してください。  
   
 > [!NOTE]  
 >  親テーブル、マトリックス、または一覧を含むスパークラインとデータ バーは、レポート パーツとしてレポートとは別にパブリッシュできます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  

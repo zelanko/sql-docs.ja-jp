@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906ff754691e70bbaf9d3ccc641906411de4a76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3777d43e44819b8c9882a381b5814a69ac116fbb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031911"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用して Reporting Services の改ページ調整されたレポートをデザインする (SSRS)
 
 レポート デザイナーを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のフル機能付きのページ分割レポートおよびレポート ソリューションを作成できます。 レポート デザイナーには、データ ソース、データセット、およびクエリ、データ領域とフィールドのレポート レイアウトの配置、連携するパラメーターとレポートのセットなどの対話機能を定義できるグラフィカル インターフェイスが用意されています。  
 
-レポート デザイナーは、Microsoft Visual Studio のビジネス インテリジェンス ソリューション作成環境である  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
+レポート デザイナーは、Microsoft Visual Studio のビジネス インテリジェンス ソリューション作成環境である  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
   
 ## <a name="benefits-of-report-projects"></a>レポート プロジェクトの利点  
 レポート プロジェクトは、レポート定義およびリソース用のコンテナーの役割を果たします。 プロジェクトを使用する目的  
@@ -69,7 +69,7 @@ ms.locfileid: "47739230"
   
 -   **既存のアイテムを追加します。** 既存のレポート定義 (.rdl) がレポート デザイナーに表示されます。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] からレポートまたはプロジェクトを開くと、プロジェクトが現在のバージョンに、レポートが現在のスキーマに自動的にアップグレードされます。 詳細については、「 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)」を参照してください。  
   
--   **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access レポートをインポートします。** Access データベース (.mdb、.accdb) またはプロジェクト (.adp) ファイルからすべてのレポートをインポートします。 レポート デザイナーによって、データベースまたはプロジェクト ファイル内の各レポートが RDL に変換され、レポート プロジェクト内に保存されます。 Access レポートのすべての機能がレポート定義 (.rdl) ファイルに転送されるわけではありません。 詳細については、「[Microsoft Access からレポートをインポートする &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646)」および「[サポートされる Access レポート機能 &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)」を参照してください。  
+-   **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access レポートをインポートします。** Access データベース (.mdb、.accdb) またはプロジェクト (.adp) ファイルからすべてのレポートをインポートします。 レポート デザイナーによって、データベースまたはプロジェクト ファイル内の各レポートが RDL に変換され、レポート プロジェクト内に保存されます。 Access レポートのすべての機能がレポート定義 (.rdl) ファイルに転送されるわけではありません。 詳細については、「[Microsoft Access からレポートをインポートする &#40;Reporting Services&#41;](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646)」および「[サポートされる Access レポート機能 &#40;SSRS&#41;](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)」を参照してください。  
   
     > [!NOTE]  
     >  インポート機能を使用するには、レポート デザイナーがインストールされているコンピューターに Access 2002 以降のバージョンがインストールされている必要があります。 レポートのインポート時に、Access レポートのデータ ソースが使用可能な状態である必要があります。  
@@ -180,9 +180,9 @@ ms.locfileid: "47739230"
 
 ## <a name="next-steps"></a>次の手順
 
-[SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[SQL Server Data Tools のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [SQL Server Data Tools の Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [クエリ デザイン ツール](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [SQL Server Data Tools の配置およびバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

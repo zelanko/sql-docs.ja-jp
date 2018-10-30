@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 039d1bc435103800151a29c790f19584f3721603
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c0ab1cae8f3b99cb148096e272a1fd38f91ca31
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021026"
 ---
 # <a name="working-with-snapshots-web-portal"></a>スナップショットの操作 (Web ポータル)
 
@@ -76,4 +76,4 @@ ms.locfileid: "47595741"
 [ページ分割されたレポートの使用](working-with-paginated-reports-web-portal.md)  
 [共有データセットの操作](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cec608dc1dd168ebfc86b1f8d945e5f90d9d7b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 283ed465cf38b0653e24dfc8503a1dd98e4df9f9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850431"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021708"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
 
-  このチュートリアルでは、ウィザードを使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のページ分割されたレポートに円グラフを作成します。 次に、パーセンテージを追加し、円グラフを少し変更します。 
+  このチュートリアルでは、ウィザードを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]の改ページ調整されたレポートに円グラフを作成します。 次に、パーセンテージを追加し、円グラフを少し変更します。 
   
 このチュートリアルは 2 つの異なる方法で実行できます。 どちらの方法でも、次の図に示すような円グラフが作成されます。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "47850431"
  グラフのラベルと凡例をカスタマイズする方法の詳細については、「[円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)」および「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)」を参照してください。  
   
 ##  <a name="WhatsNext"></a> 次の課題  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を実行するには、データベースなどのデータ ソースにアクセスする権限と、実際にデータ ソースに接続するための*接続文字列* が必要です。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]を実行するには、データベースなどのデータ ソースにアクセスする権限と、実際にデータ ソースに接続するための *接続文字列*が必要です。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
   
  他のチュートリアルを実行するには、SQL Server のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 これもシステム管理者が設定できます。  
   
@@ -233,4 +233,4 @@ ms.locfileid: "47850431"
 [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

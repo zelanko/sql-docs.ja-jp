@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd18d9586dd7777b306b7c25cf67124026ce8255
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba27d665c40e84cd8240f996d3f6b8f5e782e7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031141"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>新規または既存のレポートをレポート プロジェクトに追加する (SSRS)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、レポート ウィザードを使用するか、新しい空のレポートをプロジェクトに追加することによって、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割された新しいレポートを追加できます。 既存のレポートを追加することもできます。 レポートを追加すると、そのレポートの名前が、プロジェクトの **[レポート]** フォルダーに表示されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "47727050"
   
     -   **データ ソースの選択** レポート作成の最初の手順は、データ ソースを定義することです。 レポート ウィザードにより、レポート プロジェクト内のすべての共有データ ソースが表示されます。同時に、新しいデータ ソースを作成するオプションも表示されます。  
   
-    -   **クエリのデザイン** 次の手順は、クエリを設計することです。 クエリの作成方法としては、クエリ文字列を入力する以外にも、クエリ デザイナーを使用する方法や、別のレポートからクエリをインポートする方法もあります。 クエリ デザイナーの詳細については、「 [Reporting Services クエリ デザイナー](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)」を参照してください。  
+    -   **クエリのデザイン** 次の手順は、クエリを設計することです。 クエリの作成方法としては、クエリ文字列を入力する以外にも、クエリ デザイナーを使用する方法や、別のレポートからクエリをインポートする方法もあります。 クエリ デザイナーの詳細については、「 [Reporting Services クエリ デザイナー](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)」を参照してください。  
   
     -   **レポートの種類の選択** 次の手順は、作成するレポートの種類を選択することです。 表形式のレポートか、マトリックス形式のレポートを選択することができます。 表形式のレポートは、列数が固定されます。 マトリックス形式のレポート (クロス集計レポート) は、クエリの結果により列数が変化します。 マップ レポートには、地理的背景に対する分析が表示されます。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "47727050"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- その他の質問 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)
+ その他の質問 [Reporting Services のフォーラムにアクセスします](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

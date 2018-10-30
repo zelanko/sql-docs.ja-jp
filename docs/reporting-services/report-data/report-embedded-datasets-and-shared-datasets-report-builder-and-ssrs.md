@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b818182169bc3b8ad0a9256621107552a3def04a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7df7fc799411c7aaf8ba8b5c8179457196f21d1d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793680"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020386"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  
@@ -73,7 +73,7 @@ ms.locfileid: "47793680"
   
 -   登録および構成されている [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーの結果セット。  
   
--   定義済みエンティティ、エンティティ関係、およびフィールドを持つ特定のデータ ソースに指定されたレポート モデルのデータ。 詳細については、 [Reporting Services 関連ドキュメント](http://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) のデータソースとしてのレポートモデルの使用に関するトピックを参照してください。  
+-   定義済みエンティティ、エンティティ関係、およびフィールドを持つ特定のデータ ソースに指定されたレポート モデルのデータ。 詳細については、 [Reporting Services 関連ドキュメント](https://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) のデータソースとしてのレポートモデルの使用に関するトピックを参照してください。  
   
  実行時にレポートを処理した場合、クエリで返される実際の結果セットに 0 個以上の行があることがあります。 また、クエリで定義された列がデータ ソースに見つからない可能性もあります。 データ ソースの Null 値は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 値の **System.DBNull.Value**にマップされます。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "47793680"
 |フィールド|クエリ コマンドのフィールド<br /><br /> データセット定義の一部を構成しない計算フィールド|フィールドの表示 (変更は不可)<br /><br /> フィールド コレクションは静的で、共有データセットをレポートに追加したときのクエリに基づきます。 更新するには、 **[データセットのプロパティ]** ダイアログ ボックスの **[フィールドの更新]** をクリックします。 定義内の現在のクエリから返されるコレクションが、実際のフィールド コレクションです。<br /><br /> 計算フィールドの追加|  
 |データセット|大文字と小文字の区別などのデータ オプション|インスタンスのデータ オプションのオーバーライド|  
   
- データセットの作成の詳細については、SQL Server オンライン ブックの [Reporting Services 関連ドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)「[共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」と「[Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
+ データセットの作成の詳細については、SQL Server オンライン ブックの [Reporting Services 関連ドキュメント](https://go.microsoft.com/fwlink/?linkid=121312)「[共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」と「[Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
   
 ##  <a name="SortGroupFilter"></a> データセット内のデータのフィルター処理、並べ替え、グループ化  
  データセット内のデータは、外部データ ソースに対してクエリ コマンドを実行することによって取得されたものです。 データ拡張機能のクエリ コマンド構文によって、データを並べ替えできるか、グループ化できるかどうかが決まります。 並べ替えとグループ化は、レポートのデータが取得される前にクエリで実行されます。 フィルター処理は、レポートのデータを取得した後に実行されます。  
@@ -219,7 +219,7 @@ ms.locfileid: "47793680"
   
 ## <a name="see-also"></a>参照  
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
- [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

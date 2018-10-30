@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b6b443d1cdba9a72d6117465fd5c350d79abd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 809d427a6644a95a9f86ec3fbc9bf0d19023cc32
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611880"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030017"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)
 
@@ -50,7 +50,7 @@ ms.locfileid: "47611880"
   
      <xref:Microsoft.ReportingServices.DataProcessing> API を使ってデータ処理拡張機能を作成すると、その他の種類のデータ ソースもサポートできます。  
   
--   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]で、レポート サーバーまたは SharePoint サイト上の保存先を参照して共有データ ソースを選択するか、または、レポートに埋め込みデータ ソースを作成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] で共有データ ソースを作成することはできません。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] でカスタム データ拡張機能を使用することはできません。  
+-   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]で、レポート サーバーまたは SharePoint サイト上の保存先を参照して共有データ ソースを選択するか、または、レポートに埋め込みデータ ソースを作成します。 共有データ ソースは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]で作成することはできません。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でカスタム データ拡張機能を使用することはできません。  
   
  次の表は、埋め込みデータ ソースと共有データ ソースの違いをまとめたものです。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47611880"
   
 -   ODBC  
   
--   Power View 用 Microsoft BI セマンティック モデル: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーおよび [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]用に構成されている SharePoint サイトでは、このデータ ソースの種類を使用できます。 このデータ ソースの種類は、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] プレゼンテーションにのみ使用されます。 詳細については、「 [Power View に適した BI セマンティック表形式モデルの作成 (ビデオ)](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)」を参照してください。  
+-   Power View 用 Microsoft BI セマンティック モデル: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーおよび [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]用に構成されている SharePoint サイトでは、このデータ ソースの種類を使用できます。 このデータ ソースの種類は、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] プレゼンテーションにのみ使用されます。 詳細については、「 [Power View に適した BI セマンティック表形式モデルの作成 (ビデオ)](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)」を参照してください。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でサポートされるデータ ソースおよびバージョンの一覧については、「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
   
@@ -158,4 +158,4 @@ ms.locfileid: "47611880"
 [配置プロパティを設定する](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

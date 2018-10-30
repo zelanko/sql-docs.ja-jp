@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f83bc956d1483b3901a8883c18f7199985cc6f1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98f2445d65f4071b17cd9fac1fd3485418eaaa7f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779930"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028181"
 ---
 # <a name="report-builder-functions---stdev-function"></a>レポート ビルダー関数 - StDev 関数
   式で指定された NULL 以外のすべての数値の標準偏差を、指定されたスコープで評価して返します。  
@@ -42,7 +42,7 @@ StDev(expression, scope, recursive)
  10 進数型の式には **Decimal** 値が、その他すべての式には **Double** 値が返されます。  
   
 ## <a name="remarks"></a>Remarks  
- 式で指定されたデータセットは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、 **CInt**、 **CDbl** 、 **CDec**などの変換関数を使用します。 詳細については、「 [データ型変換関数](http://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
+ 式で指定されたデータセットは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、 **CInt**、 **CDbl** 、 **CDec**などの変換関数を使用します。 詳細については、「 [データ型変換関数](https://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
   

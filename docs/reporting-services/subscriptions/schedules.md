@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b36a4528ac1a12ec1a59528e515530b1e009ba2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779670"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029571"
 ---
 # <a name="schedules"></a>Schedules
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する **共有スケジュール** と **レポート固有スケジュール** が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。
@@ -29,7 +29,7 @@ ms.locfileid: "47779670"
   
 -   レポート固有スケジュールは、サブスクリプションを定義するとき、またはレポート実行プロパティを設定するときに作成されます。スケジュール情報の入力は、サブスクリプションの定義またはプロパティの設定の一部です。 レポート固有スケジュールを定義するには、そのスケジュールを使用するレポートまたはサブスクリプションを開きます。  
   
- 共有スケジュールには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー上で実行され、パブリッシュされた任意の数のレポートおよびサブスクリプションが使用できるスケジュールや定期実行情報が含まれています。 同時に実行されるレポートおよびサブスクリプションが多数存在する場合は、それらのジョブに対する共有スケジュールを作成できます。 後で定期実行パターンや終了日を変更する必要性が生じた場合でも、それらを一度に変更できます。  
+ 共有スケジュールには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー上で実行され、パブリッシュされた任意の数のレポートおよびサブスクリプションが使用できるスケジュールや定期実行情報が含まれています。 同時に実行されるレポートおよびサブスクリプションが多数存在する場合は、それらのジョブに対する共有スケジュールを作成できます。 後で定期実行パターンや終了日を変更する必要性が生じた場合でも、それらを一度に変更できます。  
   
  共有スケジュールは管理が容易であり、スケジュールされている操作をより柔軟に管理できます。 たとえば、共有スケジュールを一時停止したり再開したりできます。 また、同時に実行される操作が多数スケジュールされていることに気付いた場合は、異なるタイミングで実行される複数の共有スケジュールを作成して、スケジュール情報を調整し、処理負荷をレポート サーバーに対して均等に配分することも可能です。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47779670"
  スケジュールを作成および管理する方法の詳細については、「 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)」を参照してください。  
   
 > [!NOTE]  
->  スケジュール操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)」を参照してください。  
+>  スケジュール操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)」を参照してください。  
   
 ##  <a name="bkmk_compare"></a> 共有スケジュールとレポート固有スケジュールの比較  
  どちらの種類のスケジュールも同じ出力を返します。  
@@ -133,9 +133,9 @@ ms.locfileid: "47779670"
 ## <a name="see-also"></a>参照  
  [レポート履歴のスナップショットの作成、変更および削除](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [レポートのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [共有データセットのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   

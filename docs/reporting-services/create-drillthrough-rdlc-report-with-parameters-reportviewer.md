@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b49ec38fd8cedb7d55608d455d2b009ca62f978c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68ea91137c584959c53ee8de010dbff92106c119
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028061"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>パラメーターを含む詳細 (RDLC) レポートを作成する - ReportViewer
-[詳細](http://technet.microsoft.com/library/ff519554.aspx) レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 このチュートリアルでは、次のレッスンを通じて、[ローカル モード レポート](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)でパラメーターとクエリを使用した詳細レポートを作成します。  
+[詳細](https://technet.microsoft.com/library/ff519554.aspx) レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 このチュートリアルでは、次のレッスンを通じて、 [ローカル モード レポート](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)でパラメーターとクエリを使用した詳細レポートを作成します。  
   
 ## <a name="requirements"></a>必要条件  
 このチュートリアルを使用するには、 **AdventureWorks2014** サンプル データベースへのアクセス権が必要です。 **AdventureWorks2014** サンプル データベースの取得方法の詳細については、「[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)」 (AdventureWorks のサンプル データベース) を参照してください。  
   
-このチュートリアルでは、Transaction-SQL クエリおよび ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) および [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) オブジェクトを理解していることを前提とします。  
+このチュートリアルでは、Transaction-SQL クエリおよび ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) および [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) オブジェクトを理解していることを前提とします。  
   
 Visual Studio 2015 と ASP.NET Web アプリケーションを使用して、ReportViewer コントロールを含む ASP.NET Web ページを作成します。 このコントロールは、ここで作成するレポートを表示するように構成されています。 このチュートリアルでは、Microsoft Visual C# でアプリケーションを作成します。  
   

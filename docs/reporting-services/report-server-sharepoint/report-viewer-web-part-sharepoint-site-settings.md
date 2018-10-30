@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 4bf85cde9cedd9995fb3092c43f4b2f68e33d2ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 517a73d2b972cab7295a2a1d1710658d26685484
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021556"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>レポート ビューアー Web パーツに関する SharePoint サイト設定
 
@@ -37,5 +37,5 @@ ms.locfileid: "47824320"
 
 |設定|コメント|  
 |-------------|--------------|  
-|使用状況データの収集|エラーおよび使用状況の情報を Microsoft に送信して製品の品質向上に協力します。 Microsoft のエラー報告データ収集のポリシーについては、「[Microsoft SQL Server のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。|  
+|使用状況データの収集|エラーおよび使用状況の情報を Microsoft に送信して製品の品質向上に協力します。 Microsoft のエラー報告データ収集のポリシーについては、「[Microsoft SQL Server のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。|  
 |レポートのアクセシビリティ メタデータを有効にする|表示レポート用の [ `AccessibleTablix`デバイス情報](../html-device-information-settings.md)を設定します。| 

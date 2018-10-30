@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5f848443fbfcbbb1c45aadf910f6493f408bf59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021877"
 ---
 # <a name="preload-the-cache-report-manager"></a>キャッシュの事前読み込み (レポート マネージャー)
   共有データセットのキャッシュ更新計画を作成することによって、共有データセットのキャッシュを事前に読み込むことができます。  
@@ -37,7 +37,7 @@ ms.locfileid: "47849320"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>キャッシュ更新計画を作成してキャッシュを事前に読み込むには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
 2.  レポート マネージャーで、 **[コンテンツ]** ページに移動して、キャッシュするアイテムに移動します。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47849320"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>ユーザー固有のレポートでデータ ドリブン サブスクリプションを使用してキャッシュを事前に読み込むには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
 2.  レポート マネージャーで **[コンテンツ]** ページに移動し、サブスクリプションを作成するレポートに移動します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47849320"
      カスタム スケジュールを作成する場合は、 **[このサブスクリプション用に作成されたスケジュールで実行します]** をクリックし、 **[次へ]** をクリックします。 スケジュールを構成し、 **[完了]** をクリックします。  
   
     > [!NOTE]  
-    >  サブスクライバーが最新のレポートを受け取るには、構成するスケジュールが、サブスクライバーに対して定義したレポート配信スケジュールと一致する必要があります。 詳細については、「[レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)」を参照してください。  
+    >  サブスクライバーが最新のレポートを受け取るには、構成するスケジュールが、サブスクライバーに対して定義したレポート配信スケジュールと一致する必要があります。 詳細については、「[レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)」を参照してください。  
   
 14. 以下のように、レポートの実行オプションを構成します。 レポート ページで、 **[プロパティ]** タブをクリックします。  
   
@@ -118,10 +118,10 @@ ms.locfileid: "47849320"
 18. **[適用]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [パフォーマンス、スナップショット、キャッシュ &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [パフォーマンス、スナップショット、キャッシュ (Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
- [レポートのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
+ [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   

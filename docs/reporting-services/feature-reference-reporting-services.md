@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8eaada7d40896156dee1ba51b9a02b90b1ff9e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741390"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021046"
 ---
 # <a name="feature-reference-reporting-services"></a>機能リファレンス (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポートを作成、管理、表示できるツールとアプリケーションが数種類用意されています。 ここでは、これらのツールとアプリケーションのダイアログ ボックス、Web ページ、およびウィザードに関する特有のトピックを紹介します。  
@@ -29,7 +29,7 @@ ms.locfileid: "47741390"
  [レポート デザイナーの F1 ヘルプ](../reporting-services/tools/report-designer-f1-help.md)  
  レポート デザイナーと関連するダイアログ ボックス、レポート ウィザード、および画像ウィザードのヘルプについて説明します。  
   
- [Reporting Services 構成マネージャーのヘルプ トピック](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
+ [Reporting Services 構成マネージャーのヘルプ トピック](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  レポート サーバー インスタンスの配置と管理に使用される [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成ツールのヘルプについて説明します。  
   
  [Management Studio のレポート サーバーの F1 ヘルプ](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
@@ -40,9 +40,9 @@ ms.locfileid: "47741390"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の概念 (SSRS)](../reporting-services/reporting-services-concepts-ssrs.md)   
- [Reporting Services レポート &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
+ [Reporting Services レポート (SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [レポート データセット (SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)   
  [レポート ビルダーの概要](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [レポート ビルダー 1.0 を使用したレポートのデザインと実装](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [レポート ビルダー 1.0 を使用したレポートのデザインと実装](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

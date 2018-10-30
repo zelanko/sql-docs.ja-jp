@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6e047ff8c5a6c898ed902fa4d52de6db797da3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73268c03ef80b13a28d8011f9b6860abcfac79e2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677000"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030371"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)
   カスタマイズされた目次を指定したり、レポートにカスタマイズされた内部ナビゲーション リンクを指定したりする場合は、レポートにブックマークおよびブックマーク リンクを追加します。 通常、各テーブルやグラフ、テーブルやマトリックスに表示される固有のグループ値など、ユーザーが直接アクセスするレポート内の場所にブックマークを追加します。 ブックマークとして使用する独自の文字列を作成できます。また、グループの場合はブックマークをグループ式に設定できます。  
@@ -22,7 +22,7 @@ ms.locfileid: "47677000"
   
  たとえば、レポートに色別にグループ化されたテーブルが表示される場合、グループ ヘッダーにグループ式に基づくブックマークを追加します。 次に、色の値が表示されたレポートの先頭に単一のテキスト ボックスのあるテーブルを追加し、そのテキスト ボックスにブックマーク リンクを設定します。 色をクリックすると、レポートはその色のグループ ヘッダー行が表示されるページにジャンプします。  
   
- 任意のレポート アイテムにブックマークを追加したり、グラフのテキスト ボックス、画像、計算系列など、 **Action** プロパティのある任意のアイテムへのブックマーク リンクを追加したりできます。 詳細については、「[[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)」を参照してください。  
+ 任意のレポート アイテムにブックマークを追加したり、グラフのテキスト ボックス、画像、計算系列など、 **Action** プロパティのある任意のアイテムへのブックマーク リンクを追加したりできます。 詳細については、「[[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

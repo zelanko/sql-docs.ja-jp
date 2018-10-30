@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aee90d29082f2c4ba3d6d609e0ea68e3e986d3b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028841"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング
 このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」と「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
@@ -31,7 +31,7 @@ ms.locfileid: "47699711"
 SQL Server に接続している場合、既定の設定では SQL Server によるリモート接続が許可されていないために、このエラーが発生した可能性があります。 (プロバイダー: 名前付きパイプ プロバイダー、エラー: 40 - SQL Server への接続を開けませんでした)。 このエラーは、レポート サーバー データベースをホストするデータベース エンジンのインスタンスによって返されます。 ほとんどの場合、このエラーが発生すると SQL Server サービスが停止します。 また、SQL Server Express with Advanced Services または名前付きインスタンスを使用している場合、レポート サーバーの URL かレポート サーバー データベースの接続文字列に誤りがあるとこのエラーが発生します。 これらの問題を解決するには、次のことを行います。  
   
 * SQL Server (**MSSQLSERVER**) サービスが開始されていることを確認します。 データベース エンジンのインスタンスをホストするコンピューターで、[スタート] ボタンをクリックします。次に、[管理ツール] をクリックして、[サービス] をクリックし、[SQL Server (**MSSQLSERVER**)] までスクロールします。 まだ開始していなかった場合は、サービスを右クリックして [プロパティ] を選択し、[スタートアップの種類] で [自動] をクリックして、[適用]、[開始]、[OK] の順にクリックします。   
-* レポート サーバーの URL およびレポート サーバー データベースの接続文字列が正しいことを確認します。 Reporting Services またはデータベース エンジンが名前付きインスタンスとしてインストールされている場合、セットアップ中に作成された既定の接続文字列にインスタンス名が含まれています。 たとえば、DEVSRV01 というサーバー上に SQL Server Express with Advanced Services の既定のインスタンスをインストールした場合、レポート マネージャーの URL は DEVSRV01\Reports$SQLEXPRESS になります。 さらに、接続文字列内のデータベース サーバー名は、DEVSRV01\SQLEXPRESS のようになります。 SQL Server Express の URL とデータ ソース接続文字列については、「 [SQL Server Express with Advanced Services の Reporting Services](http://technet.microsoft.com/library/ms365166(v=sql.105).aspx)」を参照してください。 レポート サーバー データベースの接続文字列を確認するには、Reporting Services 構成ツールを起動し、[データベースのセットアップ] ページを確認します。  
+* レポート サーバーの URL およびレポート サーバー データベースの接続文字列が正しいことを確認します。 Reporting Services またはデータベース エンジンが名前付きインスタンスとしてインストールされている場合、セットアップ中に作成された既定の接続文字列にインスタンス名が含まれています。 たとえば、DEVSRV01 というサーバー上に SQL Server Express with Advanced Services の既定のインスタンスをインストールした場合、レポート マネージャーの URL は DEVSRV01\Reports$SQLEXPRESS になります。 さらに、接続文字列内のデータベース サーバー名は、DEVSRV01\SQLEXPRESS のようになります。 SQL Server Express の URL とデータ ソース接続文字列については、「 [SQL Server Express with Advanced Services の Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)」を参照してください。 レポート サーバー データベースの接続文字列を確認するには、Reporting Services 構成ツールを起動し、[データベースのセットアップ] ページを確認します。  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>接続できません。 サーバーが実行中であることを確認してください。  
 このエラーは ADOMD.NET プロバイダーから返されます。 このエラーの発生原因はいくつかあります。 サーバーを "localhost" と指定した場合は、代わりにサーバー名を指定してください。 新しい接続にメモリを割り当てることができない場合にも、このエラーが発生します。 詳細については、サポート技術情報の記事 912017「 [Error message when you connect to an instance of SQL Server 2005 Analysis Services (SQL Server 2005 Analysis Services のインスタンスに接続するときのエラー メッセージ)](http://support.microsoft.com/kb/912017)」を参照してください。  

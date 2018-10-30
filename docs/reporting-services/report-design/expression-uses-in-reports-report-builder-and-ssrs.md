@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733170"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100313"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>レポートでの式の使用 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義を通して式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 (**[fx]**) ボタンが表示されるダイアログ ボックスや、**[\<式...>]** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  
@@ -53,7 +53,7 @@ ms.locfileid: "47733170"
 |-------------------|---------------------------------------|--------------------|  
 |データセットの集計値を計算します。|テキスト ボックス内のプレースホルダーの Value プロパティ。 [プレースホルダーのプロパティ] ダイアログ ボックスの **[全般]** を使用します。|`=First(Fields!Sales.Value,"DataSet1")`|  
 |同じテキスト ボックス内のテキストと式を連結します。|ページ ヘッダーまたはページ フッターに配置されるテキスト ボックス内のプレースホルダーの値。 [プレースホルダーのプロパティ] ダイアログ ボックスの **[全般]** を使用します。|`="This report began processing at " & Globals!ExecutionTime`|  
-|異なるスコープ内のデータセットの集計値を計算します。|Tablix グループに配置されるテキスト ボックス内のプレースホルダーの値。 [プレースホルダーのプロパティ] ダイアログ ボックスの **[全般]** を使用します。|`=Max(Fields!Total.Value,"DataSet2)`|  
+|異なるスコープ内のデータセットの集計値を計算します。|Tablix グループに配置されるテキスト ボックス内のプレースホルダーの値。 [プレースホルダーのプロパティ] ダイアログ ボックスの **[全般]** を使用します。|`=Max(Fields!Total.Value,"DataSet2")`|  
 |値に応じてテキスト ボックス内のデータを書式設定します。|Tablix の詳細行のテキスト ボックス内のプレースホルダーの色。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[フォント]** を使用します。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |レポート全体で参照される値を 1 回計算します。|レポート変数の値。 [レポートのプロパティ] ダイアログ ボックスの **[変数]** を使用します。|`=Variables!MyCalculation.Value`|  
 |データセットからの複数のフィールドの特定の値が含まれます。|Tablix のグループの式にフィルターを適用します。 [Tablix のプロパティ] ダイアログ ボックスの **[フィルター]** を使用します。|データ型には、 **[ブール]** を選択します。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
@@ -70,10 +70,10 @@ ms.locfileid: "47733170"
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [フィルター式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [アイテムを非表示にする (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

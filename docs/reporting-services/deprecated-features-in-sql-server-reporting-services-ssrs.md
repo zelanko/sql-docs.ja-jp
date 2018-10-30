@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38401a47ecb5c14682e0866c32d62a873a52d773
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aee888aa086908ddbaf120bf4a62d1f23ce4948
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031271"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 における SQL Server Reporting Services の非推奨の機能
 
@@ -48,4 +48,4 @@ SQL Server の次のバージョンでは、以下の SQL Server Reporting Servi
  [SQL Server 2016 における SQL Server Reporting Services の動作変更](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
  [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

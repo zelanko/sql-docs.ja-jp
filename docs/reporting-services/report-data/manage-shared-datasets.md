@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a2282d6475d8f76fe1a479f16ad0b24f67d2189f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee065317d06fbf19ce03c6a9be3b67ff03a0edd5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817510"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030591"
 ---
 # <a name="manage-shared-datasets"></a>共有データセットを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、共有データセットによって、外部データ ソースに接続された共有データ ソースからデータを取得します。 共有データセットを使用するとクエリを共有できるので、複数のレポートに同じデータ セットを取り込むことができます。 データセット クエリにはデータセット パラメーターが含まれる場合があります。 初回使用時または指定したスケジュールに従い、特定のパラメーターの組み合わせによるクエリ結果をキャッシュするよう共有データセットを構成できます。 レポート キャッシュおよびレポート データ フィードと共に共有データセットのキャッシュを使用すると、データ ソースへのアクセスの管理に役立ちます。  
@@ -31,7 +31,7 @@ ms.locfileid: "47817510"
   
  共有データセット定義には、クエリ、既定値を含むデータセット パラメーター、大文字と小文字の区別などのデータ オプション、およびデータセット フィルターが含まれています。 共有データセット定義に設定した値は、共有データセットがレポートに組み込まれるときに必ず使用されます。  
   
- レポート内で共有データセットを使用するには、レポート ビルダーなどのアプリケーションを開き、レポート サーバーまたは SharePoint サイトを参照して、共有データセットを選択します。 これにより、共有データセットのインスタンスがレポートに追加されます。 レポートでは、共有データセットのクエリや共有データ ソースを表示または変更することはできません。 レポート内のインスタンスに適用する、追加のデータセット プロパティ値のセットを指定できます。 たとえば、フィルターを追加したり、大文字と小文字の区別などのデータ オプションを変更したりできます。 詳細については、msdn.microsoft.com の[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)の「[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
+ レポート内で共有データセットを使用するには、レポート ビルダーなどのアプリケーションを開き、レポート サーバーまたは SharePoint サイトを参照して、共有データセットを選択します。 これにより、共有データセットのインスタンスがレポートに追加されます。 レポートでは、共有データセットのクエリや共有データ ソースを表示または変更することはできません。 レポート内のインスタンスに適用する、追加のデータセット プロパティ値のセットを指定できます。 たとえば、フィルターを追加したり、大文字と小文字の区別などのデータ オプションを変更したりできます。 詳細については、msdn.microsoft.com の[レポート ビルダーに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=154494)の「[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="managing-shared-datasets"></a>共有データセットの管理  
  パブリッシュされた共有データセットのプロパティを管理するには、ネイティブ モードのレポート サーバーの場合はレポート マネージャーを使用し、レポート サーバーを SharePoint 統合モードで配置した場合は SharePoint サイト上のアプリケーション ページを使用します。 共有データセットに対して実行できるタスクは、ロールの割り当てや、サイト レベルおよびアイテム レベルの権限 (権限の継承が有効な場合はフォルダー レベルの権限も含む) に応じて異なります。 共有データセットのアイテム レベルのセキュリティは、レポートのアイテム レベルのセキュリティと同じモデルに準拠しています。 詳細については、「 [共有データセット アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-dataset-items.md)」を参照してください。  
@@ -86,13 +86,13 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 |タスク|ツール|リンク|  
 |----------|----------|----------|  
-|共有データセットの追加、または共有データセット定義プロパティの変更|レポート ビルダーでの保存<br /><br /> レポート デザイナーでの配置<br /><br /> レポート マネージャーでの .rsd ファイルのアップロード|msdn.microsoft.com の[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)の「[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」<br /><br /> [[ファイルのアップロード] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)<br /><br /> 依存する共有データ ソースがパブリッシュされる前に共有データセットをアップロードする場合は、共有データセットを共有データ ソースに手動でバインドする必要があります。 詳細については、msdn.microsoft.com の [[全般] プロパティ ページ、共有データセット (レポート マネージャー)](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)」を参照してください。|  
-|共有データセット アイテムのプロパティの変更|レポート マネージャー|[[全般] プロパティ ページ、共有データセット (レポート マネージャー)](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
-|レポート内の共有データセット インスタンスに対する、追加の共有データセット プロパティの指定|レポート ビルダー、レポート デザイナー|[[クエリ] ([データセットのプロパティ] ダイアログ ボックス)](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
-|共有データセットでの、異なる共有データ ソースへのバインド|レポート マネージャー|[[データ ソースの選択] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
+|共有データセットの追加、または共有データセット定義プロパティの変更|レポート ビルダーでの保存<br /><br /> レポート デザイナーでの配置<br /><br /> レポート マネージャーでの .rsd ファイルのアップロード|msdn.microsoft.com の[レポート ビルダーに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=154494)の「[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」<br /><br /> [[ファイルのアップロード] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)<br /><br /> 依存する共有データ ソースがパブリッシュされる前に共有データセットをアップロードする場合は、共有データセットを共有データ ソースに手動でバインドする必要があります。 詳細については、msdn.microsoft.com の [[全般] プロパティ ページ、共有データセット (レポート マネージャー)](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)」を参照してください。|  
+|共有データセット アイテムのプロパティの変更|レポート マネージャー|[[全般] プロパティ ページ、共有データセット (レポート マネージャー)](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
+|レポート内の共有データセット インスタンスに対する、追加の共有データセット プロパティの指定|レポート ビルダー、レポート デザイナー|[[クエリ] ([データセットのプロパティ] ダイアログ ボックス)](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
+|共有データセットでの、異なる共有データ ソースへのバインド|レポート マネージャー|[[データ ソースの選択] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
 |データセット パラメーターの既定値の検証|レポート ビルダーでのオープン、または URL アクセスの構文の使用|例 :<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|キャッシュの有効化|レポート マネージャー|[共有データセットのキャッシュ (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [共有データセットの [キャッシュ] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
-|キャッシュ更新計画の作成または編集|レポート マネージャー|[キャッシュ更新オプション (レポート マネージャー)](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
+|キャッシュの有効化|レポート マネージャー|[共有データセットのキャッシュ (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [共有データセットの [キャッシュ] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
+|キャッシュ更新計画の作成または編集|レポート マネージャー|[キャッシュ更新オプション (レポート マネージャー)](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
 |共有データセット定義スキーマの表示|レポート マネージャー|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |SharePoint 統合モードでの、レポート サーバーと SharePoint サイト間における共有データセット定義の同期|SharePoint アプリケーション ページ|共有データセット アイテムのプロパティの変更<br /><br /> キャッシュ オプションの変更<br /><br /> 共有データ ソースの変更|  
   

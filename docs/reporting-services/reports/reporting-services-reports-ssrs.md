@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db0e7b193a21824f9eeb8e0745c60708cd660f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657170"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030331"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services レポート (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートは、レポート データ要素とレポート レイアウト要素を含む XML ベースのレポート定義です。 クライアント ファイル システムでは、レポート定義に .rdl というファイル拡張子が付きます。 改ページ調整されたレポートをパブリッシュすると、そのレポートによって、レポート サーバーまたは SharePoint サイトに格納されたレポート アイテムが使用されます。 改ページ調整されたレポートは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によって提供されるサーバー ベースのレポート プラットフォームの一部です。 また、 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)操作も可能です。  
@@ -122,7 +122,7 @@ ms.locfileid: "47657170"
 ## <a name="view-reports"></a>レポートの表示  
  ローカル保存されたレポートやレポート サーバーにパブリッシュされたレポートのプレビューに加えて、ユーザーのためにさまざまなレポート表示方法を提供できます。 レポートを表示するには:  
   
--   **ブラウザー。**  レポート サーバー Web サービスまたは SharePoint サイトを使用してパブリッシュされたレポートを表示します。 SharePoint サイトでは、Web パーツを構成してパブリッシュされたレポートを表示することもできます。 詳細については、「[Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」(Reporting Services と Power View のブラウザー サポート)、「[Report Manager  (SSRS Native Mode)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)」(Report Manager (SSRS Native Mode))、「[URL Access (SSRS)](../../reporting-services/url-access-ssrs.md)」(URL のアクセス (SSRS)) を参照してください。  
+-   **ブラウザー。**  レポート サーバー Web サービスまたは SharePoint サイトを使用してパブリッシュされたレポートを表示します。 SharePoint サイトでは、Web パーツを構成してパブリッシュされたレポートを表示することもできます。 詳細については、「[Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」(Reporting Services と Power View のブラウザー サポート)、「[Report Manager  (SSRS Native Mode)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)」(Report Manager (SSRS Native Mode))、「[URL Access (SSRS)](../../reporting-services/url-access-ssrs.md)」(URL のアクセス (SSRS)) を参照してください。  
   
 -   **配信。**  サブスクリプションを構成して、レポートを電子メールでレポートのユーザーに配信するか、共有ファイル フォルダーに配信します。  詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47657170"
   
 -   **印刷。**  レポートを表示するユーザーは、表示方法に応じてレポートまたはレポートのページを印刷できます。 詳細については、「[Print Reports (Report Builder and SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)」(レポートの印刷(レポート ビルダーと SSRS)) を参照してください。  
   
--   **Web または Windows フォーム アプリケーション。**  Visual Studio を使用して、レポート ビューアー コントロールをホストする ASP.NET AJAX アプリケーションまたは Windows フォーム アプリケーションを開発します。 このコントロールは、レポート サーバー上にパブリッシュされたレポートを指すことができます。 詳細については、「 [Microsoft レポート](http://go.microsoft.com/fwlink/?LinkID=205399)」を参照してください。  
+-   **Web または Windows フォーム アプリケーション。**  Visual Studio を使用して、レポート ビューアー コントロールをホストする ASP.NET AJAX アプリケーションまたは Windows フォーム アプリケーションを開発します。 このコントロールは、レポート サーバー上にパブリッシュされたレポートを指すことができます。 詳細については、「 [Microsoft レポート](https://go.microsoft.com/fwlink/?LinkID=205399)」を参照してください。  
   
 ## <a name="manage-reports"></a>レポートの管理  
  パブリッシュされたレポートを管理するには:  

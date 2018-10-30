@@ -19,12 +19,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777647d3e558327eb635a0ae8d2794d82d453c25
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776560"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150173"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.locfileid: "47776560"
 1.  データベースをデタッチします。 詳細については、「 [データベースのデタッチ](../../relational-databases/databases/detach-a-database.md)」を参照してください。  
   
 2.  Windows エクスプローラーまたは Windows コマンド プロンプト ウィンドウで、デタッチされたデータベース ファイルとログ ファイルを新しい場所に移動します。  
-  
-    > [!NOTE]  
-    >  単一ファイルのデータベースを移動する場合は、電子メールを使用できます。ただし、ファイル サイズが電子メールで対応できる大きさである場合に限られます。  
   
      新しいログ ファイルを作成する場合でも、ログ ファイルを移動する必要があります。 場合によっては、データベースの再アタッチに既存のログ ファイルが必要になります。 したがって、デタッチしたログ ファイルを使わずにデータベースを正常にアタッチできるまで、デタッチしたログ ファイルは必ずすべて保管しておいてください。  
   

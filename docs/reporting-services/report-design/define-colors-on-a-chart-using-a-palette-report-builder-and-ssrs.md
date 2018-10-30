@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3a9af2803b8e0ba5047c841bca531e5afd544236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f716dc0189ea509d48888c0dde25ea77e87f4a97
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651730"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027391"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>パレットを使用したグラフの色の定義 (レポート ビルダーおよび SSRS)
   グラフの色パレットは、定義済みのパレットを選択するかカスタム パレットを定義すると、変更できます。 カスタム パレットはレポート固有です。  
@@ -46,7 +46,7 @@ ms.locfileid: "47651730"
   
 5.  **[追加]** をクリックして、色を追加します。 ドロップダウン リストから色を選択するか、[式] を選択して具体的な色の 16 進値 (たとえば "オレンジ" の場合は ff6600) を指定します。  
   
-     16 進値の詳細については、MSDN の「 [カラー テーブル](http://go.microsoft.com/fwlink/?linkid=9258) 」を参照してください。  
+     16 進値の詳細については、MSDN の「 [カラー テーブル](https://go.microsoft.com/fwlink/?linkid=9258) 」を参照してください。  
   
 6.  さらにパレットに色を追加するには、 **[追加]** をクリックします。  
   

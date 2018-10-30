@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32b6a0b6748dbbd88c45c64ef3a3174d30d134a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833600"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028541"
 ---
 # <a name="report-definition-language-ssrs"></a>レポート定義言語 (SSRS)
   レポート定義言語 (RDL) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート定義の XML 表現です。 レポート定義には、レポートのデータ取得とレイアウトの情報が含まれます。 RDL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用に作成された XML 文法に準拠する XML 要素で構成されます。 レポート定義ファイル内のコード アセンブリにアクセスすることによって、レポート アイテムの値、スタイル、および書式設定を制御するために独自のカスタム機能を追加できます。  
@@ -36,12 +36,12 @@ ms.locfileid: "47833600"
 -   追加の名前空間とカスタム要素をサポートする拡張可能で開放型のスキーマ  
   
 ##  <a name="bkmk_RDL_Specifications"></a> RDL の仕様  
- 特定のスキーマ バージョンの仕様をダウンロードするには、「 [レポート定義言語の仕様](http://go.microsoft.com/fwlink/?linkid=116865)」を参照してください。  
+ 特定のスキーマ バージョンの仕様をダウンロードするには、「 [レポート定義言語の仕様](https://go.microsoft.com/fwlink/?linkid=116865)」を参照してください。  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML スキーマ定義  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポート定義言語 (RDL) ファイルは、XML スキーマ定義 (XSD) ファイルを使用して検証されます。 スキーマでは、.rdl ファイル内で RDL 要素を使用できる場所に関する規則を定義しています。 要素には、データ型とカーディナリティ (要素を使用できる回数) が含まれます。 要素には、単純なものも複雑なものもあります。 単純な要素には、子要素または属性がありません。 複雑な要素には、子要素のほか、必要に応じて属性を指定できます。  
   
- たとえば、スキーマには、 **ReportParametersType**複合型の RDL 要素 **ReportParameters**が含まれます。 通常、要素の複合型の名前は、要素名の後に **Type**という単語が続きます。 **ReportParameters** 要素は、 **Report** 要素 (複合型) に含めることができ、 **ReportParameter** 要素を含むことができます。 **ReportParameterType** は単純型で、 **Boolean**、 **DateTime**、 **Integer**、 **Float**、または **String**のいずれかの値のみを指定できます。 XML スキーマ データ型の詳細については、「 [XML スキーマ第 2 部: データ型 (第 2 版)](http://go.microsoft.com/fwlink/?linkid=4871)」を参照してください。  
+ たとえば、スキーマには、 **ReportParametersType**複合型の RDL 要素 **ReportParameters**が含まれます。 通常、要素の複合型の名前は、要素名の後に **Type**という単語が続きます。 **ReportParameters** 要素は、 **Report** 要素 (複合型) に含めることができ、 **ReportParameter** 要素を含むことができます。 **ReportParameterType** は単純型で、 **Boolean**、 **DateTime**、 **Integer**、 **Float**、または **String**のいずれかの値のみを指定できます。 XML スキーマ データ型の詳細については、「 [XML スキーマ第 2 部: データ型 (第 2 版)](https://go.microsoft.com/fwlink/?linkid=4871)」を参照してください。  
   
  RDL XSD は、ReportDefinition.xsd ファイルから入手できます。このファイルは製品 CD-ROM の Extras フォルダーにあります。 また、次の URL からレポート サーバーで入手することもできます: `http://servername/reportserver/reportdefinition.xsd`  
   
@@ -61,14 +61,14 @@ ms.locfileid: "47833600"
 |----------|-----------------|  
 |**Binary**|base-64 でエンコードされたバイナリ値を持つプロパティです。|  
 |**Boolean**|オブジェクトの値として **true** または **false** を持つプロパティです。 特に指定しない限り、オプションのブール値オブジェクトを省略した場合の値は **False**です。|  
-|**日付**|ISO8601 の日付形式 (YYYY-MM-DD[THH:MM[:SS[.S]]]) で指定した、完全指定の日付または datetime の値を持つプロパティです。|  
+|**Date**|ISO8601 の日付形式 (YYYY-MM-DD[THH:MM[:SS[.S]]]) で指定した、完全指定の日付または datetime の値を持つプロパティです。|  
 |**Enum**|文字列テキストの値を持つプロパティです。値は指定値の一覧のうちのいずれかである必要があります。|  
 |**Float**|浮動小数点数値を持つプロパティです。 オプションの 10 進区切り記号として、ピリオド (.) が使用されます。|  
 |**Integer**|整数 (int32) 値を持つプロパティです。|  
 |**言語**|米国英語を表す "en-us" などの言語文化コードを含むテキスト値を持つプロパティです。 値は、特定の言語か、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]で既定の言語が定義されたニュートラル言語である必要があります。|  
 |**名前**|文字列テキストの値を持つプロパティです。 名前は、アイテムの名前空間内で一意である必要があります。 指定しない場合、名前を持つ最も内側のオブジェクトが、アイテムの名前空間となります。|  
 |**NormalizedString**|正規化された文字列テキストの値を持つプロパティです。|  
-|**[サイズ]**|サイズ要素には、数値が含まれている必要があります (小数点としてピリオドを使用)。 数値の後には、cm、mm、in、pt、pc など、CSS 長さ単位の指定子を入力する必要があります。 数値と指定子の間のスペースは省略可能です。 サイズ指定子の詳細については、「 [CSS の長さ単位リファレンス](http://go.microsoft.com/fwlink/?LinkId=9257)」を参照してください。<br /><br /> RDL では、 **Size** の最大値は 160 インチで、 最小サイズは 0 インチです。|  
+|**[サイズ]**|サイズ要素には、数値が含まれている必要があります (小数点としてピリオドを使用)。 数値の後には、cm、mm、in、pt、pc など、CSS 長さ単位の指定子を入力する必要があります。 数値と指定子の間のスペースは省略可能です。 サイズ指定子の詳細については、「 [CSS の長さ単位リファレンス](https://go.microsoft.com/fwlink/?LinkId=9257)」を参照してください。<br /><br /> RDL では、 **Size** の最大値は 160 インチで、 最小サイズは 0 インチです。|  
 |**String**|文字列テキストの値を持つプロパティです。|  
 |**UnsignedInt**|符号なし整数 (uint32) 値を持つプロパティです。|  
 |**Variant**|任意の単純な XML 型を持つプロパティです。|  

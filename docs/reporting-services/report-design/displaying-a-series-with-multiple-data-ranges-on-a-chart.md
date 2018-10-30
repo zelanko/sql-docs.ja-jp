@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94cb190dd6933f7a226734b3110f9620c782d0d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567a22114f04644b2a20d8d2653f859c10ae5534
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613800"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029311"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>グラフ上で複数のデータ範囲を持つ系列の表示
 
@@ -57,7 +57,7 @@ ms.locfileid: "47613800"
   
 -   グラフの種類が極座標グラフ、レーダー グラフ、円グラフ、ドーナツ グラフ、じょうごグラフ、ピラミッド グラフ、または積み上げグラフである場合  
   
- スケール区切り付きのグラフについては、サンプル レポートに例が含まれています。 このサンプル レポートおよびその他のサンプル レポートをダウンロードする方法の詳細については、 [レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)に関するページを参照してください。  
+ スケール区切り付きのグラフについては、サンプル レポートに例が含まれています。 このサンプル レポートおよびその他のサンプル レポートをダウンロードする方法の詳細については、 [レポート ビルダーおよびレポート デザイナーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=198283)に関するページを参照してください。  
 
 ## <a name="next-steps"></a>次の手順
 
@@ -65,7 +65,7 @@ ms.locfileid: "47613800"
 [グラフの書式設定](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [グラフの 3D、傾斜、その他の効果](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [グラフ](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[[軸のプロパティ] ダイアログ ボックス、[軸のオプション]](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[[軸のプロパティ] ダイアログ ボックス、[軸のオプション]](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
 [円グラフの小さいスライスをまとめる](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

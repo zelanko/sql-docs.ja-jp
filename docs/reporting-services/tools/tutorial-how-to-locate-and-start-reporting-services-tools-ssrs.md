@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 76bd175c9461e1781502471d0ed17037c168c041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60db1fe9f00084ce95d94af131e72a14f1e3988e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856805"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021166"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)
 
@@ -86,7 +86,7 @@ ms.locfileid: "47856805"
 4.  ローカル レポート サーバーで Web ポータルを実行する場合は、「[Configure a Native Mode Report Server for Local Administration (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」(ローカル管理用のネイティブ モード レポート サーバーの構成 (SSRS)) を参照してください。  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- レポート サーバー管理者は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、レポート サーバーと共に他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント サーバーを管理できます。 詳細については、「 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)」を参照してください。  
+ レポート サーバー管理者は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、レポート サーバーと共に他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント サーバーを管理できます。 詳細については、「 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)」を参照してください。  
   
 ### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio を起動するには  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47856805"
   
  レポート デザイナーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio で使用できます。 レポート デザイナーのデザイン画面にはタブ付きウィンドウ、ウィザード、メニューが用意されており、これらを使ってレポートの作成機能にアクセスできます。 レポート デザイナー ツールは、レポート サーバー プロジェクトまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート サーバー ウィザードのテンプレートを選択すると使用可能になります。 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。 
  
-[SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。  
+[SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。  
   
 ### <a name="to-start-report-designer"></a>レポート デザイナーを起動するには  
   
@@ -134,7 +134,7 @@ ms.locfileid: "47856805"
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) はスタンドアロンのアプリケーションであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部で改ページ調整されたレポートを作成するために使用できます。 レポート デザイナーで作成したレポートであっても、以前のバージョンの [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でデザインしたレポートであっても、あらゆる既存レポートのカスタマイズおよび更新が可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
   
- Microsoft ダウンロード センターから[レポート ビルダーをダウンロード](http://go.microsoft.com/fwlink/?LinkID=219138) します。  
+ Microsoft ダウンロード センターから[レポート ビルダーをダウンロード](https://go.microsoft.com/fwlink/?LinkID=219138) します。  
   
 ### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>を開始するには [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -146,14 +146,14 @@ ms.locfileid: "47856805"
   
      スイッチまたは  
   
-     Microsoft ダウンロード センターから[レポート ビルダーをダウンロード](http://go.microsoft.com/fwlink/?LinkID=219138) します。  
+     Microsoft ダウンロード センターから[レポート ビルダーをダウンロード](https://go.microsoft.com/fwlink/?LinkID=219138) します。  
   
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] が開き、改ページ調整されたレポートを作成したり開いたりできます。  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- [Web ポータルおよび iPad や iPhone などのモバイル デバイスで表示できるモバイル レポートを作成するには、](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) SQL Server Mobile Report Publisher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用します。   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
+ [Web ポータルおよび iPad や iPhone などのモバイル デバイスで表示できるモバイル レポートを作成するには、](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) SQL Server Mobile Report Publisher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用します。   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
   
- Microsoft ダウンロード センターから[SQL Server Mobile Report Publisher をダウンロード](http://go.microsoft.com/fwlink/?LinkID=733527) します。  
+ Microsoft ダウンロード センターから[SQL Server Mobile Report Publisher をダウンロード](https://go.microsoft.com/fwlink/?LinkID=733527) します。  
   
 ### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>を開始するには [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
@@ -165,18 +165,18 @@ ms.locfileid: "47856805"
   
      スイッチまたは  
   
-     Microsoft ダウンロード センターから[SQL Server Mobile Report Publisher をダウンロード](http://go.microsoft.com/fwlink/?LinkID=733527) します。  
+     Microsoft ダウンロード センターから[SQL Server Mobile Report Publisher をダウンロード](https://go.microsoft.com/fwlink/?LinkID=733527) します。  
   
 3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] が開き、モバイル レポートを作成したり開いたりできます。  
 
 ## <a name="next-steps"></a>次の手順
 
-[SQL Server Mobile Report Publisher をダウンロード](http://go.microsoft.com/fwlink/?LinkID=733527)   
-[レポート ビルダーをダウンロード](http://go.microsoft.com/fwlink/?LinkID=219138)  
-[SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[SQL Server Mobile Report Publisher をダウンロード](https://go.microsoft.com/fwlink/?LinkID=733527)   
+[レポート ビルダーをダウンロード](https://go.microsoft.com/fwlink/?LinkID=219138)  
+[SQL Server Data Tools のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714) 
 [Reporting Services SharePoint モードのインストール](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [クエリ デザイン ツール](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Reporting Services のチュートリアル](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

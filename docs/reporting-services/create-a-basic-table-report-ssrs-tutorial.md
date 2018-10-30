@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dbd62baf7b4c9951357a5a206b42ebf87ee6661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 426648f277ad5134a38dfa9cc7fb6948db6f918a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031641"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>基本的なテーブル レポートの作成 (SSRS チュートリアル)
 
@@ -32,9 +32,9 @@ ms.locfileid: "47824230"
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] (ネイティブ モード)。  
   
--   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベース。  詳細については、[Adventure Works 2014 のサンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)に関する記述を参照してください。  
+-   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベース。  詳細については、「 [Adventure Works 2014 Sample Databases](https://github.com/Microsoft/sql-server-samples/releases)」(Adventure Works 2014 サンプル データベース) を参照してください。  
   
- -   レポート デザイナーが必要なため、"SQL Server Reporting Services" コンポーネントがインストールされた [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。    
+ -   レポート デザイナーが必要なため、"SQL Server Reporting Services" コンポーネントがインストールされた[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) 。    
   
 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベースからデータを取得するには読み取り専用権限も必要です。
 
@@ -57,4 +57,4 @@ ms.locfileid: "47824230"
 
 [Reporting Services のチュートリアル](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

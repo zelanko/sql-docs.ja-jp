@@ -8,12 +8,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: add4499483ce463c73a6ba7b82bd79befa784485
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 853d40be782355841d68d3ace92e4228b0631057
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020666"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>カスタム セキュリティ拡張機能をインストールする方法
 
@@ -122,4 +122,4 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 [レポート サーバーでカスタム認証またはフォーム認証を構成する](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
 [カスタム認証クッキーを送信するようにレポート マネージャーを構成する](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

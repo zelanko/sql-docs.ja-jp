@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: f677d955541d32614dcfc60cebb0be1d1c438571
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 7d45e74b7d4079094c37b449eece3b62406ae13f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460987"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020596"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) と Reporting Services
 
@@ -44,7 +44,7 @@ SharePoint ファームの外部にあるデータ ソースに対して Windows
 
 C2WTS によって作成されたトークンは、制約付き委任 (特定のサービスへの制約) と "認証プロトコルの使用" (プロトコル遷移) 構成オプションでのみ機能します。
 
-Kerberos の制約付き委任を使用する環境では、SharePoint Server サービスと外部データ ソースが同じ Windows ドメインに属している必要があります。 Claims to Windows Token Service (c2WTS) に依存する任意のサービスでは、Kerberos の **制約付き** 委任を使用して、c2WTS が Kerberos プロトコル遷移を使用して要求を Windows 資格情報に変換できるようにする必要があります。 これらの要件は、すべての SharePoint 共有サービスに共通です。 詳細については、「 [SharePoint 2013 で Kerberos 認証を計画する](http://technet.microsoft.com/library/ee806870.aspx)」を参照してください。  
+Kerberos の制約付き委任を使用する環境では、SharePoint Server サービスと外部データ ソースが同じ Windows ドメインに属している必要があります。 Claims to Windows Token Service (c2WTS) に依存する任意のサービスでは、Kerberos の **制約付き** 委任を使用して、c2WTS が Kerberos プロトコル遷移を使用して要求を Windows 資格情報に変換できるようにする必要があります。 これらの要件は、すべての SharePoint 共有サービスに共通です。 詳細については、「 [SharePoint 2013 で Kerberos 認証を計画する](https://technet.microsoft.com/library/ee806870.aspx)」を参照してください。  
 
 1. C2WTS サービス ドメイン アカウントを構成します。 
 
@@ -115,4 +115,4 @@ Kerberos の制約付き委任を使用する環境では、SharePoint Server �
 
 4. **[サーバーのサービスの管理]** ページの [SharePoint サーバーの全体管理] から Claims to Windows Token Service を起動します (既に開始している場合は停止して起動します)。 このサービスは、アクションを実行するサーバーで起動する必要があります。 たとえば、WFE サーバーと SQL Server Reporting Services 共有サービスを実行しているアプリケーション サーバーを持っている場合は、アプリケーション サーバーで C2WTS を起動するだけでかまいません。 レポート ビューアー Web パーツを実行している場合、C2WTS は WFE サーバー上でのみ必要です。
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

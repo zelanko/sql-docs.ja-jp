@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f7e2565f5c2eaa493fe371b0f0a590618e06f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73bc8332e4a0c6d86e9ef57b5fc6c94d39cbafae
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686030"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021658"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>フォルダーの作成、削除、または変更 (Web ポータル)
   フォルダーを作成すると、レポート サーバーにパブリッシュするアイテムを整理して管理できます。 フォルダーを作成することには、関心のあるレポートをユーザーが見つけやすくなるという利点があります。 コンテンツ マネージャーは、権限を適用するためのフレームワークとしてフォルダーを利用できます。 特定のフォルダーに対してロールの割り当てを作成することで、開発中のレポートや限定されたユーザーのみを対象としたレポートへのアクセスを制限できます。  
   
 #### <a name="to-create-a-folder"></a>フォルダーを作成するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
 2.  Web ポータルの **[新規]** メニュー ドロップダウンで **[フォルダー]** を選択します。 既存のフォルダーの下にフォルダーを作成する場合には、そのフォルダーに移動し、 **[新規]** メニュー ドロップダウンで **[フォルダー]** を選択します。  
   

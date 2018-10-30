@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d93386e89797d75a2e8139f4f7edb558bc64c6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031871"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -69,9 +69,9 @@ ms.locfileid: "47779760"
  レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリの関数や、<xref:System.Convert> 名前空間および <xref:System.Math> 名前空間の関数を使用する式を記述できます。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]などの <xref:System.Text.RegularExpressions>」を参照してください。  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic の関数  
- [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数を使用して、テキスト ボックスに表示されるデータや、レポートのパラメーター、プロパティ、または他の領域に使用されるデータを操作できます。 ここでは、このような関数のうち、いくつかの例を紹介します。 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](http://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
+ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数を使用して、テキスト ボックスに表示されるデータや、レポートのパラメーター、プロパティ、または他の領域に使用されるデータを操作できます。 ここでは、このような関数のうち、いくつかの例を紹介します。 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](https://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、日付固有の書式など、さまざまなカスタム書式が用意されています。 詳細については、MSDN の「 [型の書式設定](http://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、日付固有の書式など、さまざまなカスタム書式が用意されています。 詳細については、MSDN の「 [型の書式設定](https://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。  
   
 ### <a name="math-functions"></a>算術関数  
   
@@ -514,7 +514,7 @@ ms.locfileid: "47779760"
  レポート内では、カスタム コードを使用できます。 カスタム コードは、レポート内に埋め込むか、レポートで使用されるカスタム アセンブリに格納します。 カスタム コードの詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>グループ変数を使用したカスタム集計  
- 特定のグループ スコープ内のローカルなグループ変数の値を初期化し、その変数を式の中で参照することができます。 カスタム コードでグループ変数を使用するシナリオとしては、カスタム集計の実装が挙げられます。 詳細については、「 [グループ変数を使ったカスタム集計 (Reporting Services 2008)](http://go.microsoft.com/fwlink/?LinkId=128714)」を参照してください。  
+ 特定のグループ スコープ内のローカルなグループ変数の値を初期化し、その変数を式の中で参照することができます。 カスタム コードでグループ変数を使用するシナリオとしては、カスタム集計の実装が挙げられます。 詳細については、「 [グループ変数を使ったカスタム集計 (Reporting Services 2008)](https://go.microsoft.com/fwlink/?LinkId=128714)」を参照してください。  
   
  変数の詳細については、「 [レポート変数コレクションとグループ変数コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)」を参照してください。  
   

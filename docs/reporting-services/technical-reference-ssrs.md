@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 378c5baad5b1527c76cfb26496dca71a98a4ce03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8ed5f298da17422e90cb6ab29fba596a0422079
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721800"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021036"
 ---
 # <a name="technical-reference-ssrs"></a>テクニカル リファレンス (SSRS)
 
@@ -31,11 +31,11 @@ ms.locfileid: "47721800"
  ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **機能リファレンス**  
  [レポート デザイナーの F1 ヘルプ](../reporting-services/tools/report-designer-f1-help.md)  
   
- [レポート マネージャー F1 ヘルプ](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [レポート マネージャー F1 ヘルプ](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [レポート ウィザードのヘルプ](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [レポート ウィザードのヘルプ](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
  [HTML ビューアーとレポート ツールバー](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
@@ -51,4 +51,4 @@ ms.locfileid: "47721800"
  ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **Reporting Services WMI プロバイダー クラス ライブラリ**  
  [Reporting Services WMI プロバイダー ライブラリ リファレンス &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

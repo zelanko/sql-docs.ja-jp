@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 559bfe5a33697aad946c5859a598ceaa5bde4ff6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eaa61ab4f13bb96b2ee9d00bae31f76056929622
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769000"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031241"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの配置およびバージョン サポート (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、次のシナリオがサポートされます。  
@@ -50,7 +50,7 @@ ms.locfileid: "47769000"
 ##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
->  レポート サーバー プロジェクトの 32 ビット開発環境である [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] ベースのコンピューターで実行できるようにデザインされていないため、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] ベースのサーバーにはインストールされません。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート サーバー プロジェクトの 32 ビット開発環境であり、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのコンピューターで実行できるようにデザインされていないため、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのサーバーにはインストールされません。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
   
  次の表では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのレポートの作成およびパブリッシュをサポートするバージョンについて説明します。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47769000"
 |レポート サーバー プロジェクト<br /><br /> 内の複数の<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL スキーマ|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |レポート サーバー プロジェクト<br /><br /> 内の複数の<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL スキーマ|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのみ|2003 RDL および 2005 RDL を 2008 RDL スキーマにローカルでアップグレードします。|  
   
- 以前のバージョンのレポート定義スキーマでレポートを開く方法の詳細については、「 [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)」を参照してください。 特定のレポート定義スキーマの詳細については、「 [レポート定義言語の仕様](http://go.microsoft.com/fwlink/?linkid=116865)」を参照してください。  
+ 以前のバージョンのレポート定義スキーマでレポートを開く方法の詳細については、「 [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)」を参照してください。 特定のレポート定義スキーマの詳細については、「 [レポート定義言語の仕様](https://go.microsoft.com/fwlink/?linkid=116865)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ ソースとレポートのパブリッシュ](../../reporting-services/reports/publishing-data-sources-and-reports.md)  

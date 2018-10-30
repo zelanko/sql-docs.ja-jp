@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec6c893548c8353be0ae79f98f47880fe9e3a85b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa8731c0f7438c1272e7a0cee3119d81b5c57c0e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756410"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031601"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
   レポート サーバーは、資格情報を使用して、レポートにコンテンツを提供したり、データ ドリブン サブスクリプションに受信者の情報を提供する外部データ ソースに接続します。 Windows 認証、データベース認証、認証なし、またはカスタム認証を使用する資格情報を指定できます。 ネットワーク経由で接続要求を送信するときに、レポート サーバーはユーザー アカウントまたは自動実行アカウントのいずれかの権限を借用します。 接続要求の実行時に使用されるセキュリティ コンテキストの詳細については、このトピックの「 [データ ソースの構成とネットワーク接続](#DataSourceConfigurationConnections) 」をご覧ください。  
@@ -48,7 +48,7 @@ ms.locfileid: "47756410"
   
      レポート サーバーまたは SharePoint サイトに対して最初に保存、パブリッシュ、または参照を実行するとき、資格情報を入力する必要がある場合があります。 入力した資格情報は、レポート ビルダー セッションが終了するまで使用されます。 資格情報の保存を選択した場合、資格情報はユーザー設定と共に、使用しているコンピューターに安全に格納されます。 以降のレポート ビルダー セッションでは、同じレポート サーバーまたは SharePoint サイトへの接続に、保存した資格情報が使用されます。 レポート サーバーの管理者または SharePoint 管理者は、使用する資格情報を指定します。  
   
--   埋め込みデータ ソースの [[資格情報] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) ページで入力するデータ ソースの資格情報。  
+-   埋め込みデータ ソースの [[資格情報] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) ページで入力するデータ ソースの資格情報。  
   
      これらの資格情報は、外部データ ソースへのデータ接続を行うために、レポート サーバーによって使用されます。 一部の種類のデータ ソース用に、資格情報をレポート サーバーに安全に格納できます。 これらの資格情報により、他のユーザーは基になるデータ接続の資格情報を指定することなく、レポートを実行できます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47756410"
   
      共有データ ソースの場合は、 **[パスワードを保存する]** オプションを使用して、資格情報をユーザー設定と共に、使用しているコンピューターにローカルに保存します。 レポート ビルダーは、対応する外部データ ソースに接続するたびに、保存されている資格情報を使用します。  
   
- 詳細については、「[[全般] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)」および「[レポート ビルダーでのレポートのプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)」を参照してください。  
+ 詳細については、「[[全般] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)」および「[レポート ビルダーでのレポートのプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)」を参照してください。  
   
 ## <a name="using-remote-data-sources"></a>リモート データ ソースの使用  
  リモートのデータベース サーバーのデータをレポートに取得する場合、次の点を確認します。  

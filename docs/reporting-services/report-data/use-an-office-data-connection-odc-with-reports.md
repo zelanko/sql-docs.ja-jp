@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c638b35676966bdb899b0537f410a8c5552179b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3b79fb66dcb582a95d3b19d327e6b716ee20bd7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028171"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>レポートで Office Data Connection (.odc) を使用する
   限られたシナリオでは、既存の Office データ接続 (.odc) ファイルを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに接続情報を提供できます。 共有データ ソースの作成時には、.rsds ファイルの代わりに .odc ファイルを使用できます。 レポート サーバーでは、.rsds ファイルの場合と同様に .odc ファイルを使用して、データ ソースの種類、接続文字列、および資格情報をファイルから読み取ります。  
@@ -44,7 +44,7 @@ ms.locfileid: "47657121"
   
  .odc ファイルに関する知識があまりなくても、次の手順を使用して .odc ファイルを作成およびエクスポートすることができます。 OLE DB データ ソース用に .odc ファイルを作成する簡単な方法の 1 つは、Excel 2007 とデータ接続ウィザードを使用することです。 ただし、このウィザードではデータ ソースが作成されないので、定義済みの外部データ ソースを用意しておく必要があります。  
   
- 既存の .odc ファイルは、レポートやクエリと完全な互換性がある場合にのみ使用してください。 レポートまたは .odc ファイルに対して大幅な変更が必要になるようなエラーが発生する場合は、レポート用に .rsds ファイルを新しく作成します。 .rsds ファイルを使用する共有データ ソースを作成する方法の詳細については、「[共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)」を参照してください。  
+ 既存の .odc ファイルは、レポートやクエリと完全な互換性がある場合にのみ使用してください。 レポートまたは .odc ファイルに対して大幅な変更が必要になるようなエラーが発生する場合は、レポート用に .rsds ファイルを新しく作成します。 .rsds ファイルを使用する共有データ ソースを作成する方法の詳細については、「[共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)」を参照してください。  
   
 ### <a name="to-create-and-export-an-odc-file"></a>.odc ファイルを作成してエクスポートするには  
   

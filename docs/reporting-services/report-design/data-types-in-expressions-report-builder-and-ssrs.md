@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 168bd862f78b10726b3d62146fa41a6a3620d16d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619981"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030671"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
   データを効率よく格納し、処理できるように、さまざまなデータの種類を表すデータ型が用意されています。 代表的なデータ型としては、テキスト (文字列) 型、数値型 (小数点以下桁数を含む)、数値型 (小数点以下桁数を含まない)、日付/時刻型、イメージ型などがあります。 レポート内の値は、レポート定義言語 (RDL) データ型である必要があります。 値は、レポートに表示する場合に目的に応じて書式設定できます。 たとえば、通貨を表すフィールドの場合、データを浮動小数点数としてレポート定義に格納しておき、実際には、指定した書式設定プロパティに従ってさまざまな形式で表示することができます。  
@@ -87,7 +87,7 @@ ms.locfileid: "47619981"
 |DateTimeOffset 値から DateTime 部分のみを抽出|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |DateTimeOffset 値から Offset 部分のみを抽出|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- Format 関数を使用して、値の表示形式を制御することもできます。 詳細については、「 [関数 (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483)」を参照してください。  
+ Format 関数を使用して、値の表示形式を制御することもできます。 詳細については、「 [関数 (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483)」を参照してください。  
   
 ## <a name="advanced-examples"></a>高度な例  
  データ ソースへの接続に使用するデータ プロバイダーが、すべてのデータ型の変換をサポートしているとは限りません。このような場合、サポートされていないデータ ソースの種類に対する既定のデータ型は String になります。 次の例では、データ型が文字列として返される場合の対処方法について説明します。  
@@ -116,7 +116,7 @@ ms.locfileid: "47619981"
   
          `MyDateTime.Value` の文字列に UTC オフセットが含まれている場合、まず、 `DateTime.Parse` 関数によって UTC オフセットの調整が行われます (ここでは、午前 7 時から [`+08:00`] を差し引いて、前日の午後 11 時という UTC 時刻が 求められます)。 次に、 `DateTime.Parse` 関数は、レポート サーバーのローカル UTC オフセットを適用し、必要に応じて夏時間のために再度時刻調整を行います。 たとえば、ワシントン州レドモンドの場合、夏時間調整後のローカル時刻オフセットは `[-07:00]`(午後 11 時の 7 時間前) になります。 したがって、 **(2007 年 7 月 6 日午後 4 時 07 分) という** DateTime `2007-07-06 04:07:07 PM` 値が得られます。  
   
- 文字列から **DateTime** へのデータ型の変換の詳細については、MSDN の「 [日付と時刻文字列の解析](http://go.microsoft.com/fwlink/?LinkId=89703)」、「 [固有カルチャの日付と時刻の形式指定](http://go.microsoft.com/fwlink/?LinkId=89704)」、および「 [DateTime、DateTimeOffset、および TimeZoneInfo の使い分け](http://go.microsoft.com/fwlink/?linkid=110652) 」を参照してください。  
+ 文字列から **DateTime** へのデータ型の変換の詳細については、MSDN の「 [日付と時刻文字列の解析](https://go.microsoft.com/fwlink/?LinkId=89703)」、「 [固有カルチャの日付と時刻の形式指定](https://go.microsoft.com/fwlink/?LinkId=89704)」、および「 [DateTime、DateTimeOffset、および TimeZoneInfo の使い分け](https://go.microsoft.com/fwlink/?linkid=110652) 」を参照してください。  
   
 -   レポート データセットに、文字列の一部分を抽出する式を使った新しい計算フィールドを追加します。 詳細については、「[レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。  
   

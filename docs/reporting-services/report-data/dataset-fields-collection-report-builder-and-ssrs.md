@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1acafd612881dfc107d72239c1e521a4edead043
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853389"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031861"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>データセット フィールド コレクション (レポート ビルダーおよび SSRS)
   データセット フィールドは、データ接続のデータを表します。 フィールドは数値データまたは非数値データを表すことができます。 売上高、売上合計、顧客名、データベース識別子、URL、画像、空間データ、電子メール アドレスなどがその例です。 デザイン画面では、フィールドがテキスト ボックス、テーブル、グラフなどのレポート アイテムの式として表示されます。  
@@ -76,9 +76,9 @@ ms.locfileid: "47853389"
   
 -   **データ ソース** 接続先のデータ ソースの種類のバージョンでサポートされるデータ型。  
   
-     たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの一般的なデータ型には、 **int**、 **datetime**、および **varchar**が含まれます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] によって導入されたデータ型のために、 **date**、 **time**、 **datetimetz**、および **datetime2**のサポートが追加されています。 詳細については、「 [データ型 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362)」を参照してください。  
+     たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの一般的なデータ型には、 **int**、 **datetime**、および **varchar**が含まれます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] によって導入されたデータ型のために、 **date**、 **time**、 **datetimetz**、および **datetime2**のサポートが追加されています。 詳細については、「 [データ型 (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362)」を参照してください。  
   
--   **データ プロバイダーまたはデータ処理拡張機能** データ ソースに接続するときに選択したデータ処理拡張機能のデータ プロバイダーのバージョンによってサポートされるデータ型。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に基づくデータ プロバイダーは、CLR でサポートされるデータ型を使用します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーのデータ型の詳細については、MSDN の「 [データ型のマッピング (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) 」および「 [基本型の操作](http://go.microsoft.com/fwlink/?LinkId=112177) 」を参照してください。  
+-   **データ プロバイダーまたはデータ処理拡張機能** データ ソースに接続するときに選択したデータ処理拡張機能のデータ プロバイダーのバージョンによってサポートされるデータ型。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に基づくデータ プロバイダーは、CLR でサポートされるデータ型を使用します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーのデータ型の詳細については、MSDN の「 [データ型のマッピング (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) 」および「 [基本型の操作](https://go.microsoft.com/fwlink/?LinkId=112177) 」を参照してください。  
   
      たとえば、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] でサポートされる一般的なデータ型には、 **Int32** および **String**が含まれます。 カレンダー日付および時刻は **DateTime** 構造体でサポートされています。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 で、タイム ゾーン オフセットを含む日付の **DateTimeOffset** 構造体のサポートが追加されました。  
   
@@ -91,12 +91,12 @@ ms.locfileid: "47853389"
   
     |SQL データ型|CLR データ型|[説明]|  
     |-------------------|-------------------|-----------------|  
-    |**日付**|**DateTime**|日付のみ|  
+    |**Date**|**DateTime**|日付のみ|  
     |**Time**|**TimeSpan**|時刻のみ|  
     |**DateTimeTZ**|**DateTimeOffset**|タイム ゾーン オフセットを含む日付と時刻|  
     |**DateTime2**|**DateTime**|小数ミリ秒を含む日付と時刻|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、「 [データ型 (データベース エンジン)](http://go.microsoft.com/fwlink/?linkid=98362) 」および「 [日付と時刻のデータ型および関数 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、「 [データ型 (データベース エンジン)](https://go.microsoft.com/fwlink/?linkid=98362) 」および「 [日付と時刻のデータ型および関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360)」を参照してください。  
   
  式のデータセット フィールドへの参照を含める方法については、「[式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -106,8 +106,8 @@ ms.locfileid: "47853389"
   
   
 ## <a name="see-also"></a>参照  
- [[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

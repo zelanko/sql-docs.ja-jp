@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2959b333de3c183394a46e580101489f6eed87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0524ee3eab63c2be21ff4196a2c68a3c30bd13ba
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845670"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028471"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 における SQL Server Reporting Services の動作変更
 
@@ -45,4 +45,4 @@ ms.locfileid: "47845670"
 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
 [SQL Server 2016 における SQL Server Reporting Services における重大な変更](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

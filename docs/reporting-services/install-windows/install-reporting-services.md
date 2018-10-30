@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: baf7f555f7856422674f41f006cd02a4c730ba10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785350"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028203"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services のインストール (2017 以降)
 
@@ -130,6 +130,6 @@ SQL Server 2016 Reporting Services ネイティブ モードをインストー�
 
 インストールされたレポート サーバーを使用して、レポートの作成を開始し、自分のレポート サーバーに配置します。 レポート ビルダーの使用を開始する方法については、「[レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。
 
-SQL Server Data Tools を使用してレポートを作成するには、[SQL Server Data Tools をダウンロードします](http://go.microsoft.com/fwlink/?LinkID=616714)。
+SQL Server Data Tools を使用してレポートを作成するには、[SQL Server Data Tools をダウンロードします](https://go.microsoft.com/fwlink/?LinkID=616714)。
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

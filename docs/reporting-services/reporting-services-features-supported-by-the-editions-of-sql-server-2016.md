@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 757e8652993e4bed8df1095eaec7252be9df13b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a57f466df8b404455234dde9635448b1a9ebb86
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779650"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031902"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 の各エディションがサポートする Reporting Services の機能
 
@@ -44,25 +44,25 @@ Evaluation Edition および Developer Edition でサポートされている機
 |モバイル レポートと KPI|はい||||||はい|  
 |サポートされているカタログ DB の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Standard 以上|Standard 以上|Web|Express|||Standard 以上|  
 |サポートされているデータ ソースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Web|Express|||すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|  
-|レポート サーバー|はい|はい|はい|はい|||はい|  
-|レポート デザイナー|はい|はい|はい|はい|||はい|  
-|レポート デザイナー Web ポータル|はい|はい|はい|はい|||はい|  
-|ロール ベース セキュリティ|はい|はい|はい|はい|||はい|  
-|Excel、PowerPoint、Word、PDF、およびイメージへのエクスポート|はい|はい|はい|はい|||はい|  
-|強化されたゲージとグラフ|はい|はい|はい|はい|||はい|  
-|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]ダッシュボードへのレポート アイテムのピン留め|はい|はい|はい|はい|||はい|  
-|カスタム認証|はい|はい|はい|はい|||はい|  
-|データ フィードとしてのレポート|はい|はい|はい|はい|||はい|  
-|モデルのサポート|はい|はい|はい||||はい|  
-|ロールベースのセキュリティのカスタム ロールの作成|はい|はい|||||はい|  
-|モデル アイテムのセキュリティ|はい|はい|||||はい|  
-|無限クリック スルー|はい|はい|||||はい|  
-|共有コンポーネント ライブラリ|はい|はい|||||はい|  
-|電子メールおよびファイル共有のサブスクリプションとスケジュール設定|はい|はい|||||はい|  
-|レポート履歴、実行スナップショット、およびキャッシュ|はい|はい|||||はい|  
-|SharePoint 統合|はい|はい|||||はい|  
-|リモートおよび非 SQL データ ソースのサポート<sup>1</sup>|はい|はい|||||はい|  
-|データ ソース、配信およびレンダリング、RDCE の拡張性|はい|はい|||||はい|  
+|レポート サーバー|はい|[はい]|[はい]|[はい]|||はい|  
+|レポート デザイナー|はい|[はい]|[はい]|[はい]|||はい|  
+|レポート デザイナー Web ポータル|はい|[はい]|[はい]|[はい]|||はい|  
+|ロール ベース セキュリティ|はい|[はい]|[はい]|[はい]|||はい|  
+|Excel、PowerPoint、Word、PDF、およびイメージへのエクスポート|はい|[はい]|[はい]|[はい]|||はい|  
+|強化されたゲージとグラフ|はい|[はい]|[はい]|[はい]|||はい|  
+|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]ダッシュボードへのレポート アイテムのピン留め|はい|[はい]|[はい]|[はい]|||はい|  
+|カスタム認証|はい|[はい]|[はい]|[はい]|||はい|  
+|データ フィードとしてのレポート|はい|[はい]|[はい]|[はい]|||はい|  
+|モデルのサポート|はい|[はい]|[はい]||||はい|  
+|ロールベースのセキュリティのカスタム ロールの作成|はい|[はい]|||||はい|  
+|モデル アイテムのセキュリティ|はい|[はい]|||||はい|  
+|無限クリック スルー|はい|[はい]|||||はい|  
+|共有コンポーネント ライブラリ|はい|[はい]|||||はい|  
+|電子メールおよびファイル共有のサブスクリプションとスケジュール設定|はい|[はい]|||||はい|  
+|レポート履歴、実行スナップショット、およびキャッシュ|はい|[はい]|||||はい|  
+|SharePoint 統合|はい|[はい]|||||はい|  
+|リモートおよび非 SQL データ ソースのサポート<sup>1</sup>|はい|[はい]|||||はい|  
+|データ ソース、配信およびレンダリング、RDCE の拡張性|はい|[はい]|||||はい|  
 |カスタム ブランド化|はい||||||はい|  
 |データ ドリブン レポート サブスクリプション|はい||||||はい|  
 |スケール アウト配置 (Web ファーム)|はい||||||はい|  
@@ -89,7 +89,7 @@ Evaluation Edition および Developer Edition でサポートされている機
   
 |ツール名|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl、.rds)|はい|はい|||||はい|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl、.rds)|はい|[はい]|||||はい|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|はい||||||はい|  
 |モバイル デバイス (iOS、Windows 10、Android) 用 Power BI アプリ (.rsmobile)|はい||||||はい|  
   
@@ -101,7 +101,7 @@ Evaluation Edition および Developer Edition でサポートされている機
 ## <a name="next-steps"></a>次の手順
 
 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
-[SQL Server 2016 の製品仕様](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+[SQL Server 2016 の製品仕様](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [SQL Server 2016 のインストール](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0aada8f512db681b4522dcaa24d71c1903901947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651880"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020186"
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
   サイズの大きなレポートは、処理が困難となる場合があり、正常に実行するには特定の構成が必要です。 サイズの大きなレポートは、ページ割り当てをサポートするように構成されている場合以外は、要求時に実行しないでください。  
@@ -31,7 +31,7 @@ ms.locfileid: "47651880"
   
  変化しやすいデータを含むレポートの場合、レポートのサイズはレポートを実行するたびに大きく変化する可能性があります。 この場合、データ ソースを監視し、データの変化がレポートへ及ぼす影響を見極めた上で、このトピックに記載されている手順に従う必要があるかどうかを判断する必要があります。  
   
- タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.com の記事「 [レポート サーバーでのレポート実行の問題を診断する方法](http://go.microsoft.com/fwlink/?LinkId=85634) 」を参照してください。  
+ タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.com の記事「 [レポート サーバーでのレポート実行の問題を診断する方法](https://go.microsoft.com/fwlink/?LinkId=85634) 」を参照してください。  
   
 ## <a name="configuration-recommendations"></a>構成に関する推奨事項  
  レポートの実行、レポートの表示、およびレポートのアクセスに関する推奨事項としては、次の事項が挙げられます。  
@@ -70,7 +70,7 @@ ms.locfileid: "47651880"
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

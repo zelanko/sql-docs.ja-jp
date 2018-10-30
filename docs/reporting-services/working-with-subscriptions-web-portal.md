@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0ca85ac478ee47500aaa948da5b0cceeac13bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0c94ab62231ba2167e52c9999f18cf4bd1e9ca5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028131"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>サブスクリプションの操作 (Web ポータル)
 
@@ -88,4 +88,4 @@ ms.locfileid: "47614560"
 [ページ分割されたレポートの使用](working-with-paginated-reports-web-portal.md)  
 [共有データセットの操作](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

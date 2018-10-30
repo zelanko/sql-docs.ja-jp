@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26c2a900a8e8e39ed6f7d89555dd040945bc57b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2754521a136369995bc0ba6ab93c2fe958dc9e5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629500"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031431"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>データ マイニング モデル (DMX) からデータを取得する (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング モデルのデータをレポートで使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースと 1 つ以上のレポート データセットを定義する必要があります。 データ ソース定義を作成する場合、クライアント コンピューターからデータ ソースにアクセスできるように接続文字列と資格情報を指定する必要があります。  
   
- 単一のレポートで使用するように埋め込みデータ ソースの定義を作成することも、複数のレポートで使用できる共有データ ソースの定義を作成することもできます。 このトピックでは、埋め込みデータ ソースを作成する手順について説明します。 共有データ ソースの詳細については、「[埋め込みデータ接続/データ ソースおよび共有データ接続/データ ソース (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)」および「[共有データ ソースを作成、変更、および削除する (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
+ 単一のレポートで使用するように埋め込みデータ ソースの定義を作成することも、複数のレポートで使用できる共有データ ソースの定義を作成することもできます。 このトピックでは、埋め込みデータ ソースを作成する手順について説明します。 共有データ ソースの詳細については、「[埋め込みデータ接続/データ ソースおよび共有データ接続/データ ソース (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)」および「[共有データ ソースを作成、変更、および削除する (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースを作成したら、1 つ以上のデータセットを作成できます。 データセットごとに、データ マイニング予測式 (DMX) クエリ デザイナーを使用して、フィールド コレクションを指定する DMX クエリを作成します。 詳細については、「 [Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)」をご覧ください。  
   

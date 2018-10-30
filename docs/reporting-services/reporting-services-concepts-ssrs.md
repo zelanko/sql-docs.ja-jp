@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8df4078262868615b9a6e28948b255f753384503
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780960"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031897"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services の概念 (SSRS)
   このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の概念を簡単に説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "47780960"
  レポート サーバーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインスタンスがインストールされているコンピューターです。 レポート サーバーには、改ページ調整されたレポートおよびモバイル レポート、レポート関連のアイテムやリソース、スケジュール、サブスクリプションなどのアイテムが内部的に保存されます。 レポート サーバーは、スタンドアロンの単一サーバーまたはスケールアウト ファームとして構成したり、SharePoint Server と統合したりすることができます。 レポート サーバーのアイテムは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web サービス、WMI プロバイダー、URL アクセス、またはプログラムからスクリプトを使用して操作します。 レポート サーバーを操作する方法は、配置トポロジと構成によって異なります。  
   
 ### <a name="native-mode-report-servers"></a>ネイティブ モードのレポート サーバー
- ネイティブ モードで構成されたレポート サーバーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされ、スタンドアロン サーバーとして構成されているコンピューターです。 レポート サーバー、レポート、およびレポート関連アイテムは、ブラウザーで [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] または URL アクセス コマンドを使用する、SQL Server Management Studio を使用する、またはプログラムからスクリプトを使用して操作します。 詳細については、「[Reporting Services レポート サーバー &#40;ネイティブ モード&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
+ ネイティブ モードで構成されたレポート サーバーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされ、スタンドアロン サーバーとして構成されているコンピューターです。 レポート サーバー、レポート、およびレポート関連アイテムは、ブラウザーで [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] または URL アクセス コマンドを使用する、SQL Server Management Studio を使用する、またはプログラムからスクリプトを使用して操作します。 詳細については、「 [Reporting Services レポート サーバー (ネイティブ モード)](../reporting-services/report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
   
 ### <a name="sharepoint-mode-report-servers"></a>SharePoint モードのレポート サーバー  
  SharePoint と統合されたレポート サーバーは、2 種類の構成が可能です。 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]の場合、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は SharePoint Server と共に SharePoint 共有サービスとしてインストールされます。 以前のリリースのレポート サーバーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint アドインをインストールすることで SharePoint Server と統合されます。 どちらの場合も、レポート サーバー、レポート、およびレポート関連アイテムは、SharePoint サイトでアプリケーション ページを使用して操作します。 レポートに関連するコンテンツの種類を保存するには、SharePoint ドキュメント ライブラリや独自に作成するその他のライブラリを使用します。 詳細については、「[Reporting Services レポート サーバー &#40;SharePoint モード&#41;](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)」を参照してください。  
@@ -98,7 +98,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
   
 -   **資格情報。** 資格情報は、外部データにアクセスするために指定する必要がある認証情報です。  
   
-     資格情報は、埋め込みデータ ソースの作成、クエリの実行、またはレポート処理時のデータ取得のために使用されます。 データ ソースの所有者が、データへのアクセスに使用する必要がある資格情報の種類を決定します。 資格情報は、データ接続とは別に、レポート作成環境内のレポート サーバー、SharePoint サイト、またはローカル コンピューターで管理されます。 データ ソースの種類に応じて、資格情報を保存して各ユーザーに入力を求めないようにすることも、入力を求めるように設定することもできます。 必要とされる資格情報は、データ ソースへの接続に、自分のコンピューターを使用しているかレポート サーバーを使用しているかに応じて異なる場合があります。 詳細については、「 [レポート ビルダーでの資格情報の指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
+     資格情報は、埋め込みデータ ソースの作成、クエリの実行、またはレポート処理時のデータ取得のために使用されます。 データ ソースの所有者が、データへのアクセスに使用する必要がある資格情報の種類を決定します。 資格情報は、データ接続とは別に、レポート作成環境内のレポート サーバー、SharePoint サイト、またはローカル コンピューターで管理されます。 データ ソースの種類に応じて、資格情報を保存して各ユーザーに入力を求めないようにすることも、入力を求めるように設定することもできます。 必要とされる資格情報は、データ ソースへの接続に、自分のコンピューターを使用しているかレポート サーバーを使用しているかに応じて異なる場合があります。 詳細については、「 [レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
   
 ### <a name="report-datasets"></a>レポート データセット 
  レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 外部データ ソースに関する情報はデータ接続に含まれており、データセットは、そのデータ接続によって異なります。 レポート定義にデータそのものは含まれていません。 データセットには、クエリ コマンド、フィールド コレクション、パラメーター、フィルター、および大文字と小文字の区別と照合順序を含むデータ オプションがあります。 データセットには次の 2 種類があります。  
@@ -120,13 +120,13 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
   
  データ領域を使用すると、一般的なデータ視覚化機能 (テーブル、マトリックス、または一覧内の数値やテキスト、グラフまたはゲージ内のグラフィック表示、マップに対する地理的表示) を有効にできます。 テーブル、マトリックス、および一覧は、Tablix データ領域に基づいており、データセットのデータをすべて表示するために必要に応じて拡張されます。 Tablix データ領域では、複数の行グループおよび列グループと、静的および動的な行と列がサポートされます。 グラフでは、複数の系列グループとカテゴリ グループをさまざまなグラフ形式で表示します。 ゲージでは、データセットの単一の値または集計値を表示します。 マップでは、データセットの集計データに基づいて表示を変更できるマップ要素として空間データを表示します。  
   
--   **テーブル。** テーブルは、データを行ごとに表示するデータ領域です。 テーブルの列は静的です。列数はレポートのデザイン時に指定します。 テーブルの行は動的であり、データに応じて下方向に拡張されます。 テーブルにグループを追加すると、選択したフィールドまたは式ごとにデータを整理できます。 詳細については、「 [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)」を参照してください。  
+-   **テーブル。** テーブルは、データを行ごとに表示するデータ領域です。 テーブルの列は静的です。列数はレポートのデザイン時に指定します。 テーブルの行は動的であり、データに応じて下方向に拡張されます。 テーブルにグループを追加すると、選択したフィールドまたは式ごとにデータを整理できます。 詳細については、「 [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)」を参照してください。  
   
--   **マトリックス。** マトリックスは、クロス集計ともいいます。 マトリックス データ領域では、動的な列と行の両方がデータに応じて拡張されます。 マトリックスには、動的な列と行、および静的な列と行を含めることができます。 列または行には、他の列または行を含めることができ、データのグループ化にも使用できます。 詳細については、「 [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)」を参照してください。  
+-   **マトリックス。** マトリックスは、クロス集計ともいいます。 マトリックス データ領域では、動的な列と行の両方がデータに応じて拡張されます。 マトリックスには、動的な列と行、および静的な列と行を含めることができます。 列または行には、他の列または行を含めることができ、データのグループ化にも使用できます。 詳細については、「 [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)」を参照してください。  
   
--   **一覧。** 一覧は、任意の形式で配置されたデータを表すデータ領域です。 レポート アイテムを配置して、テキスト ボックス、画像、およびその他のデータ領域が一覧内の任意の場所に配置されたフォームを作成できます。 詳細については、「 [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)」を参照してください。  
+-   **一覧。** 一覧は、任意の形式で配置されたデータを表すデータ領域です。 レポート アイテムを配置して、テキスト ボックス、画像、およびその他のデータ領域が一覧内の任意の場所に配置されたフォームを作成できます。 詳細については、「 [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)」を参照してください。  
   
--   **グラフ。** グラフを使用すると、データをグラフィカルに表示できます。 グラフの例としては、棒グラフ、円グラフ、折れ線グラフなどがありますが、その他にも多くの形式がサポートされています。 グラフ要素の詳細については、「[グラフ &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
+-   **グラフ。** グラフを使用すると、データをグラフィカルに表示できます。 グラフの例としては、棒グラフ、円グラフ、折れ線グラフなどがありますが、その他にも多くの形式がサポートされています。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **ゲージ。** ゲージは、特定の値を指すインジケーターを内部に含む領域としてデータを表示します。 ゲージは、主要業績評価指標 (KPI) やその他の基準を表示するために使用されます。 ゲージの例として、線形ゲージや円形ゲージなどがあります。 詳しくは、「 [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)」をご覧ください。  
   
@@ -205,12 +205,12 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
  完全に処理されたレポートは、レポート レンダラーに送信され、対象の表示形式の各ページ上のデータとレイアウトを結合します。 表示拡張機能は、カスタマイズおよび拡張できます。 レポートの既定の表示形式は HTML 4.0 です。 詳細については、「[ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)」と「[拡張機能 &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)」を参照してください。  
   
 ### <a name="exported-report"></a>エクスポートされたレポート
- エクスポートされたレポートは、特定のファイル形式で保存された、完全にページ分割されたレポートです。 エクスポート形式は、インストールされている表示拡張機能によって異なり、カスタマイズできます。 既定のエクスポート形式には、Excel、Word、XML、PDF、TIFF、CSV などがあります。 詳しくは、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」をご覧ください。  
+ エクスポートされたレポートは、特定のファイル形式で保存された、完全にページ分割されたレポートです。 エクスポート形式は、インストールされている表示拡張機能によって異なり、カスタマイズできます。 既定のエクスポート形式には、Excel、Word、XML、PDF、TIFF、CSV などがあります。 詳しくは、「 [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)におけるページ割り付けの制御規則を理解しておく必要があります。  
   
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の機能とタスク &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
- [テクニカル リファレンス (SSRS)](../reporting-services/technical-reference-ssrs.md)   
+ [テクニカル リファレンス &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

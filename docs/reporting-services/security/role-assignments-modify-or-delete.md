@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d533acbbc99d02c644d910e1b2ee3555d58bece0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2cc79176f0c52cd1fdceae0d04d46b4279e9d50
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699500"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030751"
 ---
 # <a name="role-assignments---modify-or-delete"></a>ロールの割り当て - 変更または削除
   ロールの割り当てとは、実行できるタスクがあらかじめ規定されたロール定義に、グループまたはユーザー アカウントをマップすることです。 ユーザーが実行できる操作の種類は、フォルダー、レポート、モデルなど、コンテンツの種類に基づいて決定されます。 ロールの割り当てを作成、変更、または削除するには、レポート マネージャーを使用します。 特定のユーザーまたはグループに対して作成したロールの割り当ては、後で異なるロールを選択することによって変更できます。 レポート サーバーに対する権限を取り消したい場合は、ロールの割り当てをレポート サーバーから削除します。  
@@ -34,7 +34,7 @@ ms.locfileid: "47699500"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>システム ロールの割り当てを変更または削除するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
 2.  **[サイトの設定]** をクリックします。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47699500"
 ## <a name="see-also"></a>参照  
  [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [ロールの割り当て](../../reporting-services/security/role-assignments.md)   
- [[サイトの設定] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [[新しいシステム ロールの割り当て]: [システム ロールの割り当てを編集] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [[サイトの設定] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [[新しいシステム ロールの割り当て]: [システム ロールの割り当てを編集] ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

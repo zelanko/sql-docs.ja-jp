@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1d79e8d0be544ca6d9606bcee97112a0c0f42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2896ebfae8b785aff35e3f484c4d695f3b48409a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723910"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021156"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WinForms ReportViewer コントロールを使用して Windows アプリケーションでレポートを表示します。  
@@ -151,7 +151,7 @@ End Class
   
 3.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples プロジェクトをインストールした場所を参照します。  
   
-     レポート サンプルをダウンロードするには、「[AdventureWorks 2012 Report Samples](http://go.microsoft.com/fwlink/?LinkId=404153)」 (AdventureWorks 2012 のレポート サンプル) を参照してください  
+     レポート サンプルをダウンロードするには、「[AdventureWorks 2012 Report Samples](https://go.microsoft.com/fwlink/?LinkId=404153)」 (AdventureWorks 2012 のレポート サンプル) を参照してください  
   
 4.  Sales Order Detail.rdl ファイルを選択して **[追加]** ボタンをクリックします。  
   

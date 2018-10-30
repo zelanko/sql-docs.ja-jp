@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52e879b6b5cbfcd38b2532391f1640f2b8f85681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681490"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032081"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
-  このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] やレポート デザイナーで作成するページ分割されたレポートのほか、[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  
+  このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] やレポート デザイナーで作成する改ページ調整されたレポートのほか、 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードおよびネイティブ モード|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードおよびネイティブ モード|  
   
  ご自分でレポートにパラメーターを追加してみる場合には、「 [チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)で作成するモバイル レポートで使用できます。  
     
@@ -159,7 +159,7 @@ ms.locfileid: "47681490"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリの場合、データ ソースごとに異なるパラメーター構文がサポートされています。 サポートは、位置または名前によってクエリ内で識別されるパラメーターに応じて異なります。 詳細については、「[レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」で特定の外部データ ソースのトピックを参照してください。 リレーショナル クエリ デザイナーで、フィルターのパラメーター オプションを選択してパラメーター化クエリを作成する必要があります。 詳細については、「[リレーショナル クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)」を参照してください。  
   
--   Microsoft SQL Server Analysis Services、SAP NetWeaver BI、Hyperion Essbase などの多次元データ ソースに基づくクエリの場合は、クエリ デザイナーで指定したフィルターに基づくパラメーターを作成するかどうかを指定できます。 詳細については、「[クエリ デザイナー (レポート ビルダー)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」で、データ拡張機能に対応するクエリ デザイナーのトピックを参照してください。  
+-   Microsoft SQL Server Analysis Services、SAP NetWeaver BI、Hyperion Essbase などの多次元データ ソースに基づくクエリの場合は、クエリ デザイナーで指定したフィルターに基づくパラメーターを作成するかどうかを指定できます。 詳細については、「[クエリ デザイナー (レポート ビルダー)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」で、データ拡張機能に対応するクエリ デザイナーのトピックを参照してください。  
   
 ##  <a name="bkmk_Manage_Parameters"></a> パブリッシュ済みレポートのパラメーターの管理  
  レポートをデザインするときは、レポート パラメーターはレポート定義に保存されます。 レポートをパブリッシュするときは、レポート パラメーターはレポート定義とは別に保存され管理されます。  
@@ -233,13 +233,13 @@ ms.locfileid: "47681490"
   
 
 ##  <a name="bkmk_Related_Topics"></a> 関連項目  
- [SSRS レポート パラメーターの構成 (クイズ)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [SSRS レポート パラメーターの構成 (クイズ)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
  [チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
- [レポート サンプル (レポート ビルダーおよび SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fdde81c9e1fc044bef965695158bf3fcb8aa5dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb425c4f9ec8ada6e5d2b7d6df88127f88762564
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675520"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028026"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services ツール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、管理環境での機能豊富なレポートの開発と使用をサポートするグラフィカル ツールとスクリプト ツールのセットが用意されています。 このツール セットには、開発ツール、構成と管理ツール、およびレポート表示ツールが含まれています。 ここでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の各ツール、およびツールへのアクセス方法について簡単に説明します。  
@@ -36,10 +36,10 @@ ms.locfileid: "47675520"
   
 |ツール|[説明]|アクセス方法|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]|[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] を使用すると、画面やブラウザー ウィンドウに応じてコンテンツを動的に調整し、任意の画面サイズに合わせて拡大または縮小できるモバイル レポートを作成できます。<br /><br /> 調整可能なグリッド行とグリッド列、柔軟なモバイル レポート要素を備えたデザイン領域でモバイル レポートを作成します。<br /><br /> 詳細については、「 [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)」をご覧ください。|[SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=733527)をダウンロードする|  
+|[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]|[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]を使用すると、画面やブラウザー ウィンドウに応じてコンテンツを動的に調整し、任意の画面サイズに合わせて拡大または縮小できるモバイル レポートを作成できます。<br /><br /> 調整可能なグリッド行とグリッド列、柔軟なモバイル レポート要素を備えたデザイン領域でモバイル レポートを作成します。<br /><br /> 詳細については、「 [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)」をご覧ください。|[SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=733527)をダウンロードする|  
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表形式モデルに基づいてレポートを作成し、対話できるようにデザインされた、対話型データの探索およびビジュアル化が可能です。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードの Silverlight がインストールされているブラウザー|  
 |レポート デザイナー|このツールを使用してレポートをデザインします。 次の機能があります。<br /><br /> ネイティブ モードまたは SharePoint モードのレポート サーバーに配置する<br /><br /> でホストされる [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> レポートで使用されるデータを編成するためのレポート データ ペイン<br /><br /> 対話型のレポート デザインのデザインおよびプレビューに使用するタブ付きビュー<br /><br /> データ ソースから取得するデータを指定できるクエリ デザイナー、および [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)内のデータ ソースの種類に関連付けられているクエリ デザイナー<br /><br /> レポートのコンテンツと外観をカスタマイズする [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 式を作成するための IntelliSense 対応の式エディター<br /><br /> カスタム レポート アイテムとカスタム クエリ デザイナーをサポート<br /><br /> <br /><br /> 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
-|レポート ビルダー|このツールを使用してレポートをデザインします。 次の機能があります。<br /><br /> ネイティブ モードまたは SharePoint モードのレポート サーバーに配置する<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office と同様の作成環境[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]<br /><br /> レポート アイテムをレポート パーツとして保存する機能<br /><br /> マップを作成するウィザード<br /><br /> 集計の集計<br /><br /> 式のサポート強化<br /><br /> 選択した組み込みのデータ ソースの種類から取得するデータを指定できるクエリ デザイナー<br /><br /> 詳細については、「 [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)」を参照してください。|[レポート ビルダーのスタンドアロン バージョン](http://go.microsoft.com/fwlink/?LinkID=219138)をダウンロードする<br /><br /> または、レポート マネージャー/SharePoint から開く|  
+|レポート ビルダー|このツールを使用してレポートをデザインします。 次の機能があります。<br /><br /> ネイティブ モードまたは SharePoint モードのレポート サーバーに配置する<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office と同様の作成環境[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]<br /><br /> レポート アイテムをレポート パーツとして保存する機能<br /><br /> マップを作成するウィザード<br /><br /> 集計の集計<br /><br /> 式のサポート強化<br /><br /> 選択した組み込みのデータ ソースの種類から取得するデータを指定できるクエリ デザイナー<br /><br /> 詳細については、「 [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)」を参照してください。|[レポート ビルダーのスタンドアロン バージョン](https://go.microsoft.com/fwlink/?LinkID=219138)をダウンロードする<br /><br /> または、レポート マネージャー/SharePoint から開く|  
   
 ## <a name="tools-for-report-server-administration"></a>レポート サーバー管理用のツール  
  グラフィカル ツールとスクリプト ツールのセットを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のレポート サーバーを管理できます。 使用するツールは、レポート サーバーの配置モードによって異なります。  

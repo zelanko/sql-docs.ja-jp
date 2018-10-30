@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0dfa183f3df88bb53074407c62ea57aa2a3a3cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31c1b8e60f6baeea276a38669a42e07ecbf18479
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710600"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029621"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>レポート履歴のスナップショットの作成、変更および削除
   レポート履歴は、一連のレポート スナップショットです。 スナップショットの追加と削除、またはレポート履歴の記憶域に影響するプロパティの変更を行うことで、レポート履歴を管理できます。 レポート履歴は手動で、またはスケジュールに従って作成できます。  
@@ -26,7 +26,7 @@ ms.locfileid: "47710600"
  レポート履歴のスナップショットは、スナップショットの作成日時で識別されます。 その日時は、クエリが実行された日時に基づいています。  
   
 ## <a name="creating-snapshots-in-report-history"></a>レポート履歴でのスナップショットの作成  
- スナップショットは、自動的に実行できる任意のレポートに、手動で、またはスケジュールされた間隔で、作成できます。 レポートを自動的に実行するには、保存されている資格情報を使用するか、資格情報を使用しないようにする必要があります。 また、レポートでパラメーターを使用する場合、レポートの実行時に使用する既定値を指定する必要があります。 レポートのプロパティ ページで、格納された資格情報とパラメーター値を指定できます。 詳細については、「[[パラメーター] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)」を参照してください。  
+ スナップショットは、自動的に実行できる任意のレポートに、手動で、またはスケジュールされた間隔で、作成できます。 レポートを自動的に実行するには、保存されている資格情報を使用するか、資格情報を使用しないようにする必要があります。 また、レポートでパラメーターを使用する場合、レポートの実行時に使用する既定値を指定する必要があります。 レポートのプロパティ ページで、格納された資格情報とパラメーター値を指定できます。 詳細については、「[[パラメーター] プロパティ ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)」を参照してください。  
   
  レポート スナップショットを作成すると、レポート スナップショットと共に、以下の要素がレポート サーバー データベースに格納されます。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "47710600"
   
 ## <a name="see-also"></a>参照  
  [レポート履歴の作成 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [レポート履歴を制限する &#40;レポート マネージャー&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+ [レポート履歴へのスナップショットの追加 (レポート マネージャー)](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴を制限する (レポート マネージャー)](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   

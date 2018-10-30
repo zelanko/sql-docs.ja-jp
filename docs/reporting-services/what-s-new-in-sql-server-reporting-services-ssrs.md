@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639780"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029501"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
@@ -70,7 +70,7 @@ SQL Server vNext CTP 2.0 Reporting Services はプレビューで提供されて
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  新しい [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] を利用できます。 これは、KPI、モバイル レポート、ページ分割されたレポート、Excel および Power BI Desktop ファイルが組み込まれた最新のポータルです。 以前のリリースの Report Manager がこの [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] に置き換えられています。 Mobile Report Publisher と Report Builder を [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] からダウンロードすることもできます。ClickOnce テクノロジは必要ありません。
  
- モバイル レポートを作成するには、[!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)] が必要です。  
+ モバイル レポートを作成するには、 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)]が必要です。  
   
  [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]の詳細については、「 [Web ポータル (SSRS ネイティブ モード)](../reporting-services/web-portal-ssrs-native-mode.md)」を参照してください。  
   
@@ -79,7 +79,7 @@ SQL Server vNext CTP 2.0 Reporting Services はプレビューで提供されて
  #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   ブランド化パックを使用して、組織のロゴや色で [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] をカスタマイズできます。  
   
-  カスタムブランド化の詳細については、「[Web ポータルのブランド化](http://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)」を参照してください。
+  カスタムブランド化の詳細については、「 [Web ポータルのブランド化](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)」を参照してください。
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -87,7 +87,7 @@ SQL Server vNext CTP 2.0 Reporting Services はプレビューで提供されて
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- 詳細については、「[Reporting Services で KPI を使用する](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)」を参照してください。
+ 詳細については、「 [Reporting Services で KPI を使用する](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)」を参照してください。
   
  
  ### <a name="mobile-reports"></a>モバイル レポート
@@ -95,7 +95,7 @@ SQL Server vNext CTP 2.0 Reporting Services はプレビューで提供されて
 Reporting Services モバイル レポートは、多様なフォーム ファクター用に最適化された専用レポートであり、モバイル デバイスでレポートにアクセスするユーザーに最適なエクスペリエンスを提供します。 モバイル レポートでは、時間グラフ、カテゴリ グラフ、比較グラフ、ツリーマップ、カスタム マップなどの多種多様な視覚エフェクトを使用できます。 モバイル レポートは、オンプレミスの SQL Server Analysis Services 多次元およびテーブル データを含むさまざまなデータ ソースに接続できます。 調整可能なグリッド行とグリッド列と柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応するモバイル レポートをレイアウトできます。 その後、これらのモバイル レポートを Reporting Service サーバーに保存しておき、iPad、iPhone、Android フォン、および Windows 10 デバイスのブラウザーまたはPower BI モバイル アプリで表示と操作を実行できます。
   
 #### <a name="mobile-report-publisher"></a>Mobile Report Publisher  
- [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
+ [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -166,7 +166,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**ファイル共有サブスクリプションの共有資格情報**: [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、現在 2 つのワークフローがあります。<br /><br /> このリリースでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理者が 1 つのファイル共有アカウントを構成し、そのアカウントを 1 つ以上のサブスクリプションで使用できるようになりました。 ファイル共有アカウントは、ネイティブ モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーで **[ファイル共有アカウントの指定]** を使用して構成します。その後、サブスクリプション構成ページで、ユーザーが **[ファイル共有アカウントの使用]** を選択します。<br /><br /> 個々のサブスクリプションに、宛先のファイル共有の資格情報を具体的に構成します。<br /><br /> この 2 つの方法を組み合わせて、一部のファイル共有サブスクリプションでは管理者が構成したファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用することもできます。|ネイティブ モード|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
- 新しいリリースの SSDT には、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]用のプロジェクト テンプレート (レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト) が含まれています。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
+ 新しいリリースの SSDT には、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]用のプロジェクト テンプレート (レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト) が含まれています。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
 
 ### <a name="report-builder-improvements"></a>レポート ビルダーの機能強化
 
@@ -177,7 +177,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |ボタンを使用して新しい|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**カスタム パラメーター ペイン:** ペインをカスタマイズできるようになりました。 レポート ビルダーのデザイン サーフェイスを使用して、パラメーター ペインの特定の列や行にパラメーターをドラッグできます。 列を追加または削除して、ペインのレイアウトを変更することもできます。   詳細については、「[レポートのパラメーター ペインをカスタマイズする &#40;レポート ビルダー&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)」を参照してください。  
+**カスタム パラメーター ペイン:** ペインをカスタマイズできるようになりました。 レポート ビルダーのデザイン サーフェイスを使用して、パラメーター ペインの特定の列や行にパラメーターをドラッグできます。 列を追加または削除して、ペインのレイアウトを変更することもできます。   詳細については、「 [レポートのパラメーター ペインをカスタマイズする (レポート ビルダー)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)で作成するモバイル レポートで使用できます。  
   
  ![レポート データ ペインとパラメーター ペインのパラメーター リスト](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "レポート データ ペインとパラメーター ペインのパラメーター リスト")  
 
@@ -186,14 +186,14 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [Windows 8.1 の DPI スケーリング拡張機能](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
--   [高 DPI と Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
+-   [高 DPI と Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
 
 ## <a name="next-steps"></a>次の手順
 
-[Analysis Services の新機能](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Analysis Services の新機能](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [旧バージョンとの互換性](reporting-services-backward-compatibility.md)   
-[SQL Server 2016 の各エディションがサポートする Reporting Services の機能](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[SQL Server 2016 の各エディションがサポートする Reporting Services の機能](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Reporting Services のアップグレードと移行](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)
