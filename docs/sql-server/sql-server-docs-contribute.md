@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3628c3b8e3e740beb93c5da744f0336a1409d167
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461067"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146057"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
 
@@ -89,7 +89,7 @@ SQL Server の各記事には、タイトルの後に **applies-to** インク�
 
 ![適用対象のテキスト](./media/sql-server-docs-contribute/applies-to.png)
 
-記事の適切な applies-to インクルードを探すには、次のヒントを参考にしてください。
+記事の適切な applies-to インクルード ファイルを探すには、次のヒントを参考にしてください。
 
 - 一般的に使用されるインクルードの一覧は、[SQL Server のバージョンと applies-to インクルード ファイル](applies-to-includes.md)に関するページを参照してください。
 - 同じ機能または関連タスクをカバーしている他の記事を探します。 その記事を編集する場合は、applies-to インクルード リンクの Markdown をコピーできます (送信しないで編集をキャンセルできます)。
