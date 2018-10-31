@@ -34,7 +34,7 @@ ms.locfileid: "48096792"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元コンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている大切なデータを保護するうえで不可欠な保護対策を提供します。 致命的なデータ損失のリスクを最小限に抑えるには、データベースをバックアップして、データに対する変更内容を定期的に保存しておく必要があります。 バックアップと復元方法を十分に計画することで、さまざまな障害に起因するデータの損失からデータベースを保護できます。 バックアップを復元し、データベースを復旧するテストを実施することで、障害発生時に適切に対応できるようになります。  
   
- バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Windows Azure BLOB ストレージ サービスからの復元がサポートされます。 詳しくは、「 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
+ バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Windows Azure BLOB ストレージ サービスからの復元がサポートされます。 詳しくは、「 [Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
   
 
   
@@ -67,7 +67,7 @@ ms.locfileid: "48096792"
  障害の発生後、データの復元と復旧に使用できるデータのコピー。 データベースのバックアップを使用して、コピー (データベース) を新しい場所に復元することもできます。  
   
  バックアップ デバイス (backup device)  
- SQL Server のバックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Windows Azure BLOB ストレージ サービスに書き込むことができます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳しくは、「 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
+ SQL Server のバックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Windows Azure BLOB ストレージ サービスに書き込むことができます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳しくは、「 [Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
   
  バックアップ メディア (backup media)  
  バックアップの書き込み先となる 1 つまたは複数のテープまたはディスク ファイル。  

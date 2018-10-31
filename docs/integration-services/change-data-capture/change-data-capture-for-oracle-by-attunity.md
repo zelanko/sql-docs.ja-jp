@@ -23,7 +23,7 @@ Change Data Capture for Oracle by Attunity のダウンロードには、次の 
 
 -   [Attunity の Change Data Capture Designer for Oracle](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)
 
--   [6.0 Change Data Capture Service for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)   
+-   [6.0 AttunityによるOracle用データ変更サービスの変更](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)   
 
 ## <a name="get-the-change-data-capture-for-oracle-by-attunity-download"></a>Change Data Capture for Oracle by Attunity のダウンロードを入手する
 Microsoft® Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL Server® 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](http://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  

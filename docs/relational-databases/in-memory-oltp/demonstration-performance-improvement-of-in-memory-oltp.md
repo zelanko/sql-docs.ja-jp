@@ -38,7 +38,7 @@ ms.locfileid: "47626440"
   
 1.  SQL Server Management Studio (SSMS.exe) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続します。 または、SSMS.exe に類似した任意のツールも使用できます。  
   
-2.  **C:\data\\\** という名前のディレクトリを手動で作成します。 サンプルの Transact-SQL コードでは、ディレクトリがあらかじめ存在することが想定されています。  
+2.  **C:\data\\** という名前のディレクトリを手動で作成します。 サンプルの Transact-SQL コードでは、ディレクトリがあらかじめ存在することが想定されています。  
   
 3.  短い T-SQL を実行して、データベースおよびそのメモリ最適化ファイル グループを作成します。  
   

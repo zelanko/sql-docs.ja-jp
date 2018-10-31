@@ -125,7 +125,7 @@ ms.locfileid: "47699292"
   
 1.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)を実行します。 **@publisher** および **@publication** を指定します。  
   
-    -   サブスクライバー側のサブスクリプション データベースに対して、 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)を実行します。 **@publisher**、**@publisher_db**、**@publication**を指定し、**@job_login****@job_password** にサブスクライバーでディストリビューション エージェントが実行するときの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を指定し、**@use_ftp** に **true** を指定します。  
+    -   サブスクライバー側のサブスクリプション データベースに対して、 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)を実行します。 **@publisher**、**@publisher_db**、**@publication**を指定し、**@job_login** **@job_password** にサブスクライバーでディストリビューション エージェントが実行するときの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を指定し、**@use_ftp** に **true** を指定します。  
   
 2.  パブリッシャー側のパブリケーション データベースに対して [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) を実行し、プル サブスクリプションを登録します。 詳細については、「 [プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   

@@ -84,7 +84,7 @@ ms.locfileid: "34019619"
   
 4.  [ユーザーまたはコンピューターの選択] ページで、Analysis Services のテーブル モデル データベースにデータを提供する SQL Server インスタンスを実行するために使用するアカウントを入力します。 **[OK]** をクリックして、サービス アカウントを受け入れます。  
   
-     目的のアカウントを選択できない場合は、SQL Server が実行されていて、そのアカウント用に SPN が登録されていることを確認します。 データベース エンジンの SPN の詳細については、「 [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」をご覧ください。  
+     目的のアカウントを選択できない場合は、SQL Server が実行されていて、そのアカウント用に SPN が登録されていることを確認します。 データベース エンジンの SPN の詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」をご覧ください。  
   
      ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   
