@@ -1,5 +1,5 @@
 ---
-title: 照合順序 | Microsoft Docs
+title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,17 +20,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f946b99567f93ee21a4eab5106e72265e8381d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702190"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960766"
 ---
-# <a name="collations"></a>照合順序
+# <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データベース定義または列定義に適用して照合順序を定義したり、文字列式に適用して照合順序キャストを適用することができる句です。  
+データベースまたはテーブル列の照合順序、または文字列式に適用されたときの照合順序のキャスト操作を定義します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 データベースの作成時に指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定の照合順序が割り当てられます。 テーブル列の作成時に指定しない場合、データベースの既定の照合順序に列が割り当てられます。
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,24 +50,22 @@ COLLATE { <collation_name> | database_default }
   
  *SQL_collation_name* は、「[SQL Server 照合順序名](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」の照合順序名です。  
   
- データベース定義レベルで照合順序を適用している場合、Unicode 専用の Windows 照合順序を COLLATE 句で使用することはできません。  
-  
  **database_default**  
  COLLATE 句によって、現在のデータベースの照合順序が継承されます。  
   
 ## <a name="remarks"></a>Remarks  
- COLLATE 句は、さまざまなレベルで指定できます。 その一部を次に示します。  
+COLLATE 句は、さまざまなレベルで指定できます。 その一部を次に示します。  
   
 1.  データベースの作成または変更  
   
-     CREATE DATABASE または ALTER DATABASE ステートメントの COLLATE 句を使用して、データベースの既定の照合順序を指定できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してデータベースを作成するときに、照合順序も指定できます。 照合順序を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定の照合順序がデータベースに指定されます。  
+     `CREATE DATABASE` または `ALTER DATABASE` ステートメントの COLLATE 句を使用して、データベースの既定の照合順序を指定できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してデータベースを作成するときに、照合順序も指定できます。 照合順序を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定の照合順序がデータベースに指定されます。  
   
     > [!NOTE]  
-    >  Unicode 専用の Windows 照合順序は、COLLATE 句で **nchar**、**nvarchar**、および **ntext** の各データ型を列レベルおよび式レベルのデータに適用する場合にのみ使用できます。COLLATE 句でデータベースまたはサーバー インスタンスの照合順序を変更するために使用することはできません。  
+    > Unicode 専用の Windows 照合順序は、COLLATE 句で **nchar**、**nvarchar**、および **ntext** の各データ型を列レベルおよび式レベルのデータに適用する場合にのみ使用できます。COLLATE 句でデータベースまたはサーバー インスタンスの照合順序を定義または変更するために使用することはできません。
   
 2.  テーブル列の作成または変更  
   
-     CREATE TABLE または ALTER TABLE ステートメントの COLLATE 句を使用して、文字型の各列に対して照合順序を指定できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してテーブルを作成するときに、照合順序も指定できます。 照合順序を指定しない場合、列には、データベースの既定の照合順序が指定されます。  
+     `CREATE TABLE` または `ALTER TABLE` ステートメントの COLLATE 句を使用して、文字型の各列に対して照合順序を指定できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してテーブルを作成するときに、照合順序も指定できます。 照合順序を指定しない場合、列には、データベースの既定の照合順序が指定されます。  
   
      また、COLLATE 句の `database_default` オプションを使用して、一時テーブルの列で、**tempdb** の代わりに、接続に対する現在のユーザー データベースの既定の照合順序が使用されるように指定することもできます。  
   
@@ -75,24 +73,24 @@ COLLATE { <collation_name> | database_default }
   
      COLLATE 句を使用して、文字式を特定の照合順序に適用できます。 文字リテラルと変数には、現在のデータベースの既定の照合順序が指定されます。 列参照には、列の既定の照合順序が指定されます。  
   
- 識別子の照合順序は、識別子が定義されているレベルによって異なります。 ログイン名やデータベース名など、インスタンスレベルのオブジェクトの識別子には、インスタンスの既定の照合順序が指定されます。 テーブル名、ビュー名、列名など、データベース内のオブジェクトの識別子には、データベースの既定の照合順序が指定されます。 たとえば、大文字と小文字においてのみ名前が異なる 2 つのテーブルを作成する場合、大文字と小文字が区別される照合順序が指定されたデータベースでは作成できますが、大文字と小文字が区別されない照合順序が指定されたデータベースでは作成できません。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
+識別子の照合順序は、識別子が定義されているレベルによって異なります。 ログイン名やデータベース名など、インスタンスレベルのオブジェクトの識別子には、インスタンスの既定の照合順序が指定されます。 テーブル名、ビュー名、列名など、データベース内のオブジェクトの識別子には、データベースの既定の照合順序が指定されます。 たとえば、大文字と小文字においてのみ名前が異なる 2 つのテーブルを作成する場合、大文字と小文字が区別される照合順序が指定されたデータベースでは作成できますが、大文字と小文字が区別されない照合順序が指定されたデータベースでは作成できません。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
- 接続コンテキストが 1 つのデータベースに関連付けられたときに変数、GOTO ラベル、一時ストアド プロシージャおよび一時テーブルを作成し、コンテキストを別のデータベースに切り替えたときに、それらを参照することができます。 変数、GOTO ラベル、一時ストアド プロシージャ、および一時テーブルの各識別子は、サーバー インスタンスの既定の照合順序に従います。  
+接続コンテキストが 1 つのデータベースに関連付けられたときに変数、GOTO ラベル、一時ストアド プロシージャおよび一時テーブルを作成し、コンテキストを別のデータベースに切り替えたときに、それらを参照することができます。 変数、GOTO ラベル、一時ストアド プロシージャ、および一時テーブルの各識別子は、サーバー インスタンスの既定の照合順序に従います。  
   
- COLLATE 句は、**char**、**varchar**、**text**、**nchar**、**nvarchar**、および **ntext** データ型にのみ適用できます。  
+COLLATE 句は、**char**、**varchar**、**text**、**nchar**、**nvarchar**、および **ntext** データ型にのみ適用できます。  
   
- COLLATE は *collate_name* を使用して、式、列定義、データベース定義に適用される SQL Server 照合順序または Windows 照合順序の名前を参照します。 *collation_name* に指定できるのは、指定された *Windows_collation_name* または *SQL_collation_name* だけで、パラメーターにはリテラル値を含める必要があります。 *collation_name* を変数または式で表すことはできません。  
+COLLATE は *collate_name* を使用して、式、列定義、データベース定義に適用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序または Windows 照合順序のいずれかの名前を参照します。 *collation_name* に指定できるのは、指定された *Windows_collation_name* または *SQL_collation_name* だけで、パラメーターにはリテラル値を含める必要があります。 *collation_name* を変数または式で表すことはできません。  
   
- 照合順序は、通常、照合順序名によって識別します。ただし、セットアップ時は例外です。 セットアップ時には、Windows 照合順序にルート照合順序指定子 (照合ロケール) を指定してから、大文字と小文字の区別やアクセントの区別に関する並べ替えオプションを指定します。  
+照合順序は、通常、照合順序名によって識別します。ただし、セットアップ時は例外です。 セットアップ時には、Windows 照合順序にルート照合順序指定子 (照合ロケール) を指定してから、大文字と小文字の区別やアクセントの区別に関する並べ替えオプションを指定します。  
   
- システム関数の [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) を実行すると、Windows 照合順序および SQL Server 照合順序のすべての有効な照合順序名の一覧を取得できます。  
+システム関数の [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) を実行すると、Windows 照合順序および SQL Server 照合順序のすべての有効な照合順序名の一覧を取得できます。  
   
 ```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、動作しているオペレーティング システムがサポートしているコード ページのみをサポートすることができます。 照合順序に依存するアクションを実行する場合、参照されるオブジェクトが使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序は、コンピューター上で実行されているオペレーティング システムがサポートしているコード ページを使用する必要があります。 このようなアクションには、次のものがあります。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、動作しているオペレーティング システムがサポートしているコード ページのみをサポートすることができます。 照合順序に依存するアクションを実行する場合、参照されるオブジェクトが使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序は、コンピューター上で実行されているオペレーティング システムがサポートしているコード ページを使用する必要があります。 このようなアクションには、次のものがあります。  
   
 -   データベースの作成または変更時に、データベースの既定の照合順序を指定する。  
   
@@ -101,7 +99,7 @@ FROM fn_helpcollations();
 -   データベースの復元または接続を行う場合、データベースの既定の照合順序、およびデータベース内の **char** 型、**varchar** 型、および **text** 型の任意の列またはパラメーターの照合順序は、オペレーティング システムでサポートされている必要があります。  
   
 > [!NOTE]
-> Azure SQL Database Managed Instance サーバーの照合順序は **SQL_Latin1_General_CP1_CI_AS** であり、変更できません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス サーバーの照合順序は、**SQL_Latin1_General_CP1_CI_AS** であり、変更できません。
 
 > [!NOTE]
 > コード ページ変換は **char** および **varchar** データ型に対してはサポートされていますが、**text** データ型に対してはサポートされていません。 コード ページ変換時のデータ損失はレポートされません。  
@@ -111,7 +109,7 @@ FROM fn_helpcollations();
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-specifying-collation-during-a-select"></a>A. 選択時に照合順序を指定する  
+### <a name="a-specifying-collation-during-a-select"></a>A. SELECT 時に照合順序を指定する  
  次の例では、単純なテーブルを作成し、4 つの行を挿入します。 次に、テーブルからデータを選択するときに 2 つの照合順序を適用して、`Chiapas` が異なる方法で格納されることを示します。  
   
 ```sql  

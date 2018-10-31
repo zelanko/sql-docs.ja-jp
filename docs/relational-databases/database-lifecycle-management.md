@@ -33,18 +33,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f289beef87a16f518e993b80045cd98c5828b5d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1427cea1e6a920b0c3705a5a305e165b4ccb99be
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730310"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991096"
 ---
 # <a name="database-lifecycle-management"></a>データベースのライフサイクル管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   データベース ライフ サイクル管理 (DLM) は、データベースとデータ資産を管理するためのポリシー ベースのアプローチです。 DLM は製品ではなく、データベース アプリケーションのデータベース スキーマ、データ、およびメタデータを管理するための包括的なアプローチです。 DLM に対するよく考えられた積極的なアプローチにより、組織では、パフォーマンス、保護、可用性、およびコストの適切なレベルに応じてデータ リソースを管理できます。  
   
- DLM では、まずプロジェクトのデザインと目的を考察することから始めます。次に、データベースの開発、テスト、構築、配置、管理、監視、およびバックアップの各操作を行ってから、最後にデータをアーカイブします。 このトピックでは、データベースの開発から始まり、構築、配置、監視の各操作を進める、DLM の段階の概要を示します (図 1)。 また、データ管理作業や、インポートとエクスポート、バックアップ、移行、同期などのデータ移行操作も示します。  
+ DLM では、まずプロジェクトのデザインと目的を考察することから始めます。次に、データベースの開発、テスト、構築、配置、管理、監視、およびバックアップの各操作を行ってから、最後にデータをアーカイブします。 このトピックでは、データベースの開発から始まり、構築、配置、監視の各操作を進める、DLM の段階の概要を示します。 また、データ管理作業や、インポートとエクスポート、バックアップ、移行、同期などのデータ移行操作も示します。  
   
  トピック全体を確認するには、「 [データベース ライフ サイクル管理 (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949)」を参照してください。  
   

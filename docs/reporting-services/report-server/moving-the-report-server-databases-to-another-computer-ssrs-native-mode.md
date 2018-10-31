@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1e144c70a1ceca4097597a8a87d639865f96b68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742942"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100223"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
 
-  インストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されているレポート サーバー データベースは、別のコンピューター上のインスタンスに移動できます。 reportserver と reportservertempdb データベースは、一緒に移動またはコピーする必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の使用環境には、両方のデータベースが必要です。reportservertempdb データベースは、移動する reportserver プライマリ データベースに名前を関連付ける必要があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインストールで使用されるレポート サーバー データベースは、別のコンピューター上のインスタンスに移動できます。 reportserver と reportservertempdb データベースは、一緒に移動またはコピーする必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の使用環境には、両方のデータベースが必要です。reportservertempdb データベースは、移動する reportserver プライマリ データベースに名前を関連付ける必要があります。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のネイティブ モード。  
   
@@ -226,4 +226,4 @@ GO
 [暗号化キーの構成と管理](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [レポート サーバー データベース](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

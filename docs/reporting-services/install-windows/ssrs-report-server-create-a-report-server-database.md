@@ -1,17 +1,17 @@
 ---
 title: レポート サーバー データベースの作成 (SSRS 構成マネージャー) | Microsoft Docs
-ms.date: 09/20/2017
+ms.date: 10/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c2a0a6391e1eeecf6f5831072528840c3257d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768240"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050906"
 ---
 # <a name="create-a-report-server-database"></a>レポート サーバー データベースの作成
 
@@ -66,10 +66,10 @@ ms.locfileid: "47768240"
 >  レポート サーバーと、レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、同じドメインに属していなくてもかまいません。 インターネット配置では、ファイアウォール内にあるサーバーを使用するのが一般的です。 レポート サーバーをインターネット アクセス用に構成する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の資格情報を使用してファイアウォール内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、IPSEC を使用して接続をセキュリティで保護してください。  
   
 ## <a name="database-server-edition-requirements"></a>データベース サーバー エディションの要件  
- レポート サーバー データベースを作成するときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 詳細については、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」の「レポート サーバー データベースのサーバー エディションの要件」を参照してください。  
+ レポート サーバー データベースを作成するときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 詳細については、「[SQL Server 2016 の各エディションがサポートする Reporting Services の機能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」の「[レポート サーバー データベースのサーバー エディション](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)」を参照してください。  
 
 ## <a name="next-steps"></a>次の手順
 
-[Reporting Services 構成マネージャー](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Reporting Services 構成マネージャー](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

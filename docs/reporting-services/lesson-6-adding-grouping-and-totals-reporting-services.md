@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720510"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051015"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 このチュートリアルのレッスンでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートにグループ化と合計を追加して、データを整理して要約します。  
@@ -33,9 +33,9 @@ ms.locfileid: "47720510"
   
 4.  **レポート データ** ペインから **行グループ** ペインに **[Order]** フィールドをドラッグします。 **詳細**の上、日付の下に配置します。
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    2 つのグループを示す場合、行ハンドルには 2 個の角かっこ ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png) が表示されることに注意してください。 テーブルにも 2 つの **注文** 列が表示されます。  
   
 5.  二重線の **右側** にある元の **日付** 列と **注文** 列を削除します。 これにより、この個別のレコード値が削除されるので、グループ値のみが表示されます。 2 つの列の列ハンドルを選択し、右クリックして **[列の削除]** をクリックします。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47720510"
   
 4.  **[書式]** メニューの **[背景色]** をクリックし、 **[オレンジ]** をクリックして、 **[OK]** をクリックします。  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![背景色をオレンジ色に設定する](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>レポートに総計を追加するには  
   
@@ -113,9 +113,9 @@ ms.locfileid: "47720510"
 2.  **[プロジェクト]** メニューの **[チュートリアルのプロパティ]** をクリックします。  
   
 3.  **TargetServerURL** に、レポート サーバーの名前を入力します。たとえば、次のように入力します。   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` は、レポート サーバーでレポートを設計している場合に動作します。  
+    - `http://localhost/reportserver` は、レポート サーバーでレポートを設計している場合に動作します。  
   
   
 4. TargetReportFolder がチュートリアルのプロジェクトの名前であることに注意してください。  これは、次のステップでレポートが配置されるフォルダーの名前です。  
@@ -143,15 +143,15 @@ ms.locfileid: "47720510"
   
     [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルの URL を参照します。   
     **注:** *ポータル* URL は "Reports" です。Report *Server* の URL "Reportserver" ではありません。  例 :   
-    - `http://<server name>/reports`をクリックします。  
-     - `http://localhost/reports` は、レポート サーバーでレポートを設計している場合に動作します。  
+    `http://<server name>/reports`」をご覧ください。  
+    `http://localhost/reports` は、レポート サーバーでレポートを設計している場合に動作します。  
   
 8.  レポートが含まれているフォルダーを参照します。 既定の名前の *tutorial*、プロジェクトの名前、またはプロジェクトのプロパティで TargetReportFolder フィールドに入力した名前です。   
 レポートの名前 **Sales Orders** をクリックして、表示レポートをブラウザーで表示します。  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-**これで、「基本的なテーブル レポートの作成」チュートリアルを終了します。**  
+これで、「基本的なテーブル レポートの作成」チュートリアルを終了します。  
   
 ## <a name="see-also"></a>参照  
 [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

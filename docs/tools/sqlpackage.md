@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 715839a584561c38fb08b3e217016ef3cc27e9b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721750"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051224"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -51,8 +51,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |パラメーター|短い形式|ReplTest1|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|実行する操作を指定します。 |
+|**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
+|**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。 |
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。 |
@@ -97,10 +99,12 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |パラメーター|短い形式|ReplTest1|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|パブリッシュ|実行する操作を指定します。 |
+|**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/AzureKeyVaultAuthMethod:**|**/akv**|{対話型&#124;ClientIdSecret}|Azure Key Vault にアクセスするためにどの認証方法を使用するかを指定します |
 |**/ClientId:**|**/cid**|{string}|必要な場合、Azure Key Vault に対する認証に使用されるクライアント ID を指定します |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
+|**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Profile:**|**/pr**|{string}|DAC 公開プロファイルのファイル パスを指定します。 出力の生成時に使用するプロパティと変数のコレクションをプロファイルで定義します。|
 |**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。|
@@ -236,8 +240,10 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
 |パラメーター|短い形式|ReplTest1|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|[エクスポート]|実行する操作を指定します。 |
+|**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
+|**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。|
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
@@ -272,8 +278,10 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |パラメーター|短い形式|ReplTest1|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|[インポート]|実行する操作を指定します。 |
+|**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
+|**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。|
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
 |**/Sourcefile:**|**/sf**|{string}|ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
@@ -308,8 +316,10 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |パラメーター|短い形式|ReplTest1|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|実行する操作を指定します。 |
+|**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
+|**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OutputPath:**|**/op**|{string}|出力ファイルが生成されるファイル パスを指定します。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Profile:**|**/pr**|{string}|DAC 公開プロファイルのファイル パスを指定します。 出力の生成時に使用するプロパティと変数のコレクションをプロファイルで定義します。 |
@@ -438,8 +448,10 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |パラメーター|短い形式|ReplTest1|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|実行する操作を指定します。 |
+|**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
+|**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OutputPath:**|**/op**|{string}|出力ファイルが生成されるファイル パスを指定します。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
@@ -463,8 +475,10 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |パラメーター|短い形式|ReplTest1|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|[スクリプト]|実行する操作を指定します。 |
+|**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
+|**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OutputPath:**|**/op**|{string}|出力ファイルが生成されるファイル パスを指定します。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Profile:**|**/pr**|{string}|DAC 公開プロファイルのファイル パスを指定します。 出力の生成時に使用するプロパティと変数のコレクションをプロファイルで定義します。|

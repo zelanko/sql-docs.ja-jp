@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: e8b54eff8007a5edd33ed36f40514a2e53b579f5
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644010"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960796"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char および varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ COLLATE 句で特定の照合順序を指定しない限り、**char** 型また
 
 複数言語をサポートするサイトがある場合:
 - [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、Unicode をサポートして文字変換の問題を最小限に抑えるために、UTF-8 が有効になっている照合順序の使用を検討してください。 
-- 古いバージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用する場合、文字変換の問題を最小限に抑えるために、Unicode の **nchar** データ型または **nvarchar** データ型を使用することを検討してください。   
+- 下位バージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用する場合、文字変換の問題を最小限に抑えるために、Unicode の **nchar** データ型または **nvarchar** データ型を使用することを検討してください。   
 
 **char** 型または **varchar** 型を使用する場合は、次のことをお勧めします。
 - 列データ エントリのサイズが一定の場合は、**char** を使用します。  
@@ -64,12 +64,12 @@ CREATE TABLE または ALTER TABLE 実行時に SET ANSI_PADDING が OFF に設�
   
 > [!WARNING]
 > Null 以外の varchar(max) または nvarchar(max) の各列には、24 バイトの追加の固定割り当てが必要で、これは並べ替え操作中の 8,060 バイトの行制限におけるカウント対象となります。 これにより、テーブル内に作成できる Null 以外の varchar(max) または nvarchar(max) の列数について、暗黙的な制限が生じます。  
-テーブルの作成時やデータ挿入時に、最大行サイズが許容最大値の 8060 バイトを超えるという通常の警告以外の、特別なエラーは提供されません。 この大きな行サイズが原因で、クラスター化インデックス キーの更新や列セット全体の並べ替えなどの通常操作の一部でエラー (エラー 512 など) が発生する可能性があります。これは操作を実行するまでユーザーは予測することができません。
+テーブルの作成時やデータ挿入時に、最大行サイズが許容最大値の 8,060 バイトを超えるという通常の警告以外の、特別なエラーは提供されません。 この大きな行サイズが原因で、クラスター化インデックス キーの更新や列セット全体の並べ替えなどの通常操作の一部でエラー (エラー 512 など) が発生する可能性があります。これは操作を実行するまでユーザーは予測することができません。
   
 ##  <a name="_character"></a> 文字データの変換  
 文字式を異なるサイズの文字型に変換する場合、値が新しいデータ型にとって長すぎるときは、切り捨てられます。 **uniqueidentifier** 型は、文字式からの変換のための文字型と見なされるため、文字型に変換する場合は切り捨てルールが適用されます。 例については、後の「例」のセクションを参照してください。
   
-文字式がデータ型やサイズが異なる文字式に変換される場合 (**char(5)** から **varchar(5)** や、**char(20)** から **char(15)** など)、入力値の照合順序が変換後の値に割り当てられます。 文字式でない式が文字型に変換される場合、現在のデータベースの既定の照合順序が変換後の値に割り当てられます。 どちらの場合でも、[COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 句を使用して特定の照合を割り当てることができます。
+文字式がデータ型やサイズが異なる文字式に変換される場合 (**char(5)** から **varchar(5)** や、**char(20)** から **char(15)** など)、入力値の照合順序が変換後の値に割り当てられます。 文字式でない式が文字型に変換される場合、現在のデータベースの既定の照合順序が変換後の値に割り当てられます。 どちらの場合でも、[COLLATE](../../t-sql/statements/collations.md) 句を使用して特定の照合を割り当てることができます。
   
 > [!NOTE]  
 > コード ページ変換は **char** および **varchar** データ型に対してはサポートされていますが、**text** データ型に対してはサポートされていません。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同様に、コード ページ変換中のデータの喪失は報告されません。  
@@ -162,7 +162,7 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>参照
 [nchar および nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)  
 [データ型の変換 (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [データベース サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-database.md)     

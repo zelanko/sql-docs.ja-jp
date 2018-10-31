@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 666ff4eeb05aa7dd913706cad19e8f3047453eb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 537df591affabf79be0b47aadd0b43a7e424f444
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031351"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨の機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |バックアップと復元|RESTORE { DATABASE &amp;#124; LOG } WITH [MEDIA]PASSWORD はこれまでどおり非推奨とされます。 BACKUP { DATABASE &#124; LOG } WITH PASSWORD および BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD は廃止されました。|[なし] :|BACKUP DATABASE または LOG WITH PASSWORD<br /><br /> BACKUP DATABASE または LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|互換性レベル|バージョン 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]) からのアップグレード。|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バージョンが[サポート](http://aka.ms/sqllifecycle)対象外になったとき、関連するデータベース互換性レベルには非推奨の印が付きます。 しかしながら、Microsoft は、アップグレードを簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|Database compatibility level 100|108|  
+|互換性レベル|バージョン 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]) からのアップグレード。|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バージョンが[サポート](http://aka.ms/sqllifecycle)対象外になったとき、関連するデータベース互換性レベルには非推奨の印が付きます。 しかしながら、Microsoft は、アップグレードを簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|Database compatibility level 100|108|  
 |データベース オブジェクト|トリガーから結果セットを返す機能|なし|トリガーから結果を返す|12|  
 |暗号化|RC4 または RC4_128 を使用した暗号化は非推奨とされており、次のバージョンで削除される予定です。 RC4 および RC4_128 の暗号化解除は非推奨とされます。|AES など、別の暗号化アルゴリズムを使用してください。|非推奨の暗号化アルゴリズム|253|  
 |リモート サーバー|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|リンク サーバーを使用してリモート サーバーを置き換えてください。 sp_addserver は、ローカル オプションでのみ使用できます。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -67,7 +67,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |互換性レベル|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL です。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|sp_dbcmptlevel|80|  
-|互換性レベル|データベース互換性レベル 110 および 120。|今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。|データベース互換性レベル 110<br /><br /> データベース互換性レベル 120||  
+|互換性レベル|データベース互換性レベル 110 および 120。|今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。 しかしながら、Microsoft は、アップグレードを簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|データベース互換性レベル 110<br /><br /> データベース互換性レベル 120||  
 |XML|インライン XDR スキーマの生成|FOR XML オプションに対する XMLDATA ディレクティブは非推奨とされます。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。|XMLDATA|181|  
 |バックアップと復元|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE または LOG TO TAPE|235|  
 |バックアップと復元|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
@@ -176,6 +176,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
   
 

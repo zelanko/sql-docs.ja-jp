@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830740"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150193"
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ ASP.NET セッションの状態のメモリ最適化を始めるには、GitHub
 #### <a name="customer-case-studies"></a>お客様の導入事例
 
 - あるお客様は、従来の TVP をメモリ最適化 TVP に置き換えるだけでパフォーマンスを 40% 改善できました (「 [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)」(Azure でのインメモリ OLTP を使用した高速 IoT 取り込み))。
+- SentryOne では、エンタープライズ スケーラビリティの改善の一部として、tempdb をインメモリ OLTP テーブルに入れ替えることで、監視するソリューションの待機時間がほぼゼロになり、データ インジェストの能力が大幅に改善されました: 「[Solution provider breaks through performance ceiling with data monitoring innovation](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)」 (ソリューション プロバイダーがデータの監視の技術革新でパフォーマンスの壁を突破する)
 
 ### <a name="etl-extract-transform-load"></a>ETL (抽出、変換、読み込み)
 

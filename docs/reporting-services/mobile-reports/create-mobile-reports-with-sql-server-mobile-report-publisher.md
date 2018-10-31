@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 412669834546ddd7583b8f7bd3f7eeaef3cb0348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4572d5c325dbfb36a17ce2c987140ab56b6626e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031631"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する
 多様なデータ視覚エフェクトが含まれる [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートについて学びます。これらのレポートはモバイル デバイス用に最適化されており、オンプレミス データに接続します。 
 
 >[!NOTE]
->  Datazen Server のコンテンツ (ダッシュボードや KPI など) を SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] サーバーに移行する必要がありますか。 [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)を使ってみてください。 
+>  Datazen Server のコンテンツ (ダッシュボードや KPI など) を SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] サーバーに移行する必要がありますか。 [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)を使ってみてください。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "47739340"
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  モバイル レポートの作成  
   
 操作を開始するために次の記事が役立ちます。
--  [SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527)のダウンロード  
+-  [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)のダウンロード  
 -  [Reporting Services モバイル レポートの作成](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [詳細なチュートリアル: SQL Server 2016 Reporting Services でのモバイル レポートと KPI の作成](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan のブログ)  
 - [デザイン優先、またはデータ優先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): シミュレートされたデータで最初にレポートをデザインするか、独自のデータで開始するかどうかを決定します。  

@@ -9,6 +9,18 @@ items:
   items:
   - name: SQL Server ビッグ データ クラスターを展開する
     href: quickstart-big-data-cluster-deploy.md
+- name: チュートリアル
+  items:
+  - name: 1_クエリ HDFS データ
+    href: tutorial-query-hdfs-storage-pool.md
+  - name: 2_クエリ Oracle データ
+    href: tutorial-query-oracle.md
+  - name: 3_SQL を使用したデータ プールの読み込み
+    href: tutorial-data-pool-ingest-sql.md
+  - name: 4_Spark を使用したデータ プールの読み込み
+    href: tutorial-data-pool-ingest-spark.md
+  - name: 5_Spark ノートブックの実行
+    href: tutorial-notebook-spark.md
 - name: 概念
   items:
   - name: コントローラー
@@ -35,6 +47,8 @@ items:
       href: deploy-on-minikube.md
     - name: AKS 上に展開する
       href: deploy-on-aks.md
+    - name: Kubeadm でのデプロイ
+      href: deploy-with-kubeadm.md
     - name: Azure Data Studio に接続する
       href: deploy-big-data-tools.md
   - name: データの仮想化
@@ -77,9 +91,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: ビッグ データ クラスターへのアクセスを要求する
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 9ec65a5d9312996be55ef57ca3bdbdd068d58b9e
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 002406f8631806d30c8c1c3d4600bf19d5512dd9
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356174"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050836"
