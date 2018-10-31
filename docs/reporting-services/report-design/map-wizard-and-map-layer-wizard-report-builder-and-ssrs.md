@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3489f33890438577f20a6e7a5341fe9766f42c1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8b90d0eddd10825abc2e05fd97da236a5049293
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645170"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021056"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -128,13 +128,13 @@ ms.locfileid: "47645170"
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで、.shp ファイルと .dbf ファイルの両方をレポート プロジェクトに追加し、空間データ ソースとして .shp ファイルの名前を指定します。  
   
 ###  <a name="GetShapefiles"></a> ESRI シェープファイルを取得できる場所  
- ESRI シェープファイルは Web 上で入手できます。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](http://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
+ ESRI シェープファイルは Web 上で入手できます。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](https://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
   
 ###  <a name="SqlServerSpatial"></a> SQL Server 空間クエリとは  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間クエリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースの SQLGeometry データ型または SQLGeography データ型のデータを指定するデータセット クエリです。  
   
 > [!NOTE]  
->  ウィザードでデータ ソースを定義するときに [クエリのデザイン] ページに表示されるクエリ デザイナーは、接続先のデータ ソースの種類によって異なります。 詳細については、「[クエリ デザイナー (レポート ビルダー)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」を参照してください。  
+>  ウィザードでデータ ソースを定義するときに [クエリのデザイン] ページに表示されるクエリ デザイナーは、接続先のデータ ソースの種類によって異なります。 詳細については、「[クエリ デザイナー (レポート ビルダー)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」を参照してください。  
   
  クエリ デザイナーでクエリを実行すると、空間データをテキストとして含む列が結果セットに表示されます。 たとえば、ある行には、単独のポイントである空間データが含まれ、次の行には、ポイントのセットを定義する空間データが含まれます。 それぞれの行が 1 つのマップ要素となります。 それぞれのマップ要素の表示は、分割不可能な単位として変更することができます。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "47645170"
   
 -   **[ハイブリッド] :** **[道路]** ビューと **[航空写真]** ビューの組み合わせを表示します。  
   
- タイルの詳細については、「 [Bing Maps のタイル システム](http://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](http://go.microsoft.com/fwlink/?LinkId=151371)をクリックします。  
+ タイルの詳細については、「 [Bing Maps のタイル システム](https://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371)をクリックします。  
   
  デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「 [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) ビューと [マップ レポートの計画](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)をクリックします。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "47645170"
   
 ## <a name="see-also"></a>参照  
  [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
+ [マップ レポートの計画 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   
