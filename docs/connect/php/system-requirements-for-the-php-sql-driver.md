@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c01d4f6af72fdc487b559a12f31bfcb447971cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 3784a3ba9b05bde0fafea486ddfdf3a968f96914
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603802"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461127"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のシステム要件
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47603802"
 
 ## <a name="odbc-driver"></a>ODBC ドライバー
 
-PHP が実行されているコンピューターに Microsoft ODBC Driver for SQL Server の正しいバージョンが必要です。 サポートされているプラットフォーム用のドライバーのサポートされているすべてのバージョンをダウンロードする[このページ](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017)します。
+PHP が実行されているコンピューターに Microsoft ODBC Driver for SQL Server の正しいバージョンが必要です。 サポートされているプラットフォーム用のドライバーのサポートされているすべてのバージョンをダウンロードする[このページ](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017)します。
 
 Windows のバージョンの Windows の 64 ビット バージョンのドライバーをダウンロードする場合は、ODBC 64 ビットのインストーラーには、32 ビットと 64 ビットの両方の ODBC ドライバーがインストールされます。 Windows の 32 ビット バージョンを使用する場合は、x86 の ODBC を使用してインストーラー。 Windows 以外のプラットフォームでのみ、64 ビット バージョンのドライバーは使用できます。
 
@@ -74,7 +74,7 @@ Azure SQL Database がサポートされています。 詳細については、
 |---|---|---|---|---|---|---|
 |Azure SQL データベース        |Y|Y|Y| | | |
 |Azure SQL Managed Instance|Y|Y|Y| | | |
-|Azure SQL データ ウェアハウス  |Y|Y|Y| | | |
+|Azure SQL Data Warehouse  |Y|Y|Y| | | |
 |SQL Server 2017           |Y|Y|Y| | | |
 |SQL Server 2016           |Y|Y|Y|Y| | |
 |SQL Server 2014           |Y|Y|Y|Y|Y|Y|

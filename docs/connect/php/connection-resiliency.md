@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 2e66db8c4f821d3401ab354f705cebb81c3b3b36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 34d4bc2342397f5809ef16ef59ed342d6c86d421
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666800"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460377"
 ---
 # <a name="idle-connection-resiliency"></a>アイドル状態の接続の回復性
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -131,4 +131,4 @@ Statement 2 successful.
 ```
 
 ## <a name="see-also"></a>参照
-[Windows ODBC ドライバーの接続の復元性](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Windows ODBC ドライバーの接続の復元性](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5585266d4c326c00a1211c1148f80d2a875a00ba
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fd9d5095b2d0361ec1da121b987d2a7d84944ad0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905656"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021497"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>複数の共有データセットのキャッシュ (SSRS)
   共有データセットのクエリ結果をキャッシュにコピーしておくと、複数のレポートに一貫性のあるデータを提供し、データセット クエリの応答時間を短縮できます。 レポートと同様に、初回使用時または指定されたスケジュールによってキャッシュされるように共有データセットを構成できます。  
@@ -51,7 +51,7 @@ ms.locfileid: "48905656"
   
  パラメーターの特定の組み合わせに対するクエリ結果がキャッシュ内にある間、それらのパラメーター値を持つ共有データセットを参照するレポートが起動されて処理されると、キャッシュされたデータが使用されます。  
   
- キャッシュ内にデータを保持する有効期限が切れるまでの期間を指定できます。 詳細については、「[共有データセットの [キャッシュ] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)」を参照してください。  
+ キャッシュ内にデータを保持する有効期限が切れるまでの期間を指定できます。 詳細については、「[共有データセットの [キャッシュ] ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)」を参照してください。  
   
 ## <a name="preloading-the-cache"></a>キャッシュを事前に読み込む  
  キャッシュ更新計画を作成することによって、キャッシュを事前に読み込むことができます。 更新計画を使用すると、アイテム固有のスケジュールまたは共有スケジュールを使用して、キャッシュを更新する頻度を指定できます。 同一アイテムに対して複数のキャッシュ エントリが作成されることを防ぐため、スケジュールでは、外部データ ソースに対するクエリ処理が実行されるのに十分な時間を指定する必要があります。 たとえば、クエリの実行に 20 分かかる場合は、更新スケジュール間隔も 20 分より長くする必要があります。 詳細については、「 [Schedules](../../reporting-services/subscriptions/schedules.md)」を参照してください。  
@@ -68,7 +68,7 @@ ms.locfileid: "48905656"
   
 -   共有データセットに対して ReadPolicy 権限および UpdatePolicy 権限が必要です。  
   
- キャッシュ更新計画は、共有データセットおよびレポートの両方に適用されます。 詳細については、「[キャッシュ更新オプション &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)」を参照してください。  
+ キャッシュ更新計画は、共有データセットおよびレポートの両方に適用されます。 詳細については、「[キャッシュ更新オプション &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)」を参照してください。  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>キャッシュが有効期限切れとなる条件  
  次の状況においては、共有データセット キャッシュが無効になる可能性があります。  

@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a8f0b9a18627da1e7d407b396686cb756ca5a4b
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 75263ad68af90f0dfd8035cc943a194c344f90fa
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852110"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461036"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル: SSMS を使用したセキュア エンクレーブを使用する Always Encrypted の概要
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -311,6 +311,6 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 ## <a name="next-steps"></a>Next Steps
 その他のユース ケースについては、「[Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)」(セキュア エンクレーブを使用する Always Encrypted の構成) をご覧ください。 次のことを試すこともできます。
 
-- [TPM 構成証明を構成する。](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [HGS インスタンスに対して HTTPS を構成する。](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
+- [TPM 構成証明を構成する。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
+- [HGS インスタンスに対して HTTPS を構成する。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
 - 暗号化された列に対して高度なクエリを発行するアプリケーションを開発する。

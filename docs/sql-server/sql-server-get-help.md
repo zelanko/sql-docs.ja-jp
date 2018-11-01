@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b3e6d4e898e00682a67084d70b6706af3951fa4
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336371"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384097"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server のヘルプとフィードバック
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,10 +77,9 @@ SQL チームにもアクセスできるソーシャル メディア アウト�
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>SQL ドキュメント コンテンツのフィードバックを送る
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>SQL ドキュメント コンテンツのフィードバックを送る 
-
-### <a name="editing-content"></a>コンテンツの編集
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![コンテンツの編集](../includes/media/edit-topic-pencil.png) コンテンツの編集
 ドキュメントに誤りを見つけた場合、 コンテンツを自分で編集できることはご存じですか。 そうすることで、ドキュメントが改善されるだけでなく、ページの共同作成者としてもクレジットされます。 詳細については、[http://aka.ms/editsqldocs](http://aka.ms/editsqldocs)を参照してください。 
 
 ### <a name="surveys"></a>アンケート

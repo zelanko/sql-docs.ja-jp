@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: casualoak
 ms.author: edugonz
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fa40e17381622862ea2a5b5e6fac594f6a42f6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ec82a6808b7591603154b7831192598cac34243
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728797"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030128"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 以降の変更ログ
 
@@ -33,15 +33,15 @@ ms.locfileid: "47728797"
 
 以下のバグが修正されました。
 
-- rc:Toolbar=False で、テキストが長い場合、四角形の内部にあるテキスト ボックスのために四角形が垂直方向に拡大しない 
-- pageHeight が 0.5 インチ未満の場合、テキストのサイズが拡大縮小しない 
-- CRM で使用したときの、SSRS カタログ データベースでのデッドロック 
-- レポートを下にスクロールしたときの、誤って表示される垂直方向に整列された列見出し 
-- SCOM レポートの役割に追加されたユーザーが、SSRS Web ポータルへのアクセスをブロックされる 
-- タイ語の文字が PDF に正しくエクスポートされない 
-- ブラウザーの役割の動作の変更 
-- Express Edition で rc:Toolbar=false が機能しない 
-- パラメーター プロンプト領域に垂直スクロール バーが表示されない 
+- rc:Toolbar=False で、テキストが長い場合、四角形の内部にあるテキスト ボックスのために四角形が垂直方向に拡大しない 
+- pageHeight が 0.5 インチ未満の場合、テキストのサイズが拡大縮小しない 
+- CRM で使用したときの、SSRS カタログ データベースでのデッドロック 
+- レポートを下にスクロールしたときの、誤って表示される垂直方向に整列された列見出し 
+- SCOM レポートの役割に追加されたユーザーが、SSRS Web ポータルへのアクセスをブロックされる 
+- タイ語の文字が PDF に正しくエクスポートされない 
+- ブラウザーの役割の動作の変更 
+- Express Edition で rc:Toolbar=false が機能しない 
+- パラメーター プロンプト領域に垂直スクロール バーが表示されない 
 - 更新されたモバイル レポート ランタイム 
 
 ### <a name="version-140600744-released-april-25-2018"></a>バージョン 14.0.600.744、リリース日: 2018 年 4 月 25 日 
@@ -82,4 +82,4 @@ ms.locfileid: "47728797"
 
 [Reporting Services (SSRS) の新機能](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)
