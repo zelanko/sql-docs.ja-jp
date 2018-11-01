@@ -1,13 +1,11 @@
 ---
-title: executeUpdate (java.lang.String) メソッド |Microsoft ドキュメント
+title: executeUpdate (java.lang.String) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.executeUpdate (java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a48df94bb417825aba64699443de6e43fced0d12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d3a976f9e953729be7b9f993139a7603fe8444cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804856"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate (java.lang.String) メソッド
 
@@ -39,22 +36,22 @@ public final int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター
 *sql*
 
-A**文字列**SQL ステートメントを含むです。
+**文字列**SQL ステートメントを格納しています。
 
 ## <a name="return-value"></a>戻り値
-**Int** DDL ステートメントを使用する場合、影響を受ける行または 0 の数を示すです。
+影響を受けた行数を示す **int** です。DDL ステートメントを使用している場合は 0 です。
 
 ## <a name="exceptions"></a>例外
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>解説
-この executeUpdate メソッドは、java.sql.PreparedStatement インターフェイスの executeUpdate メソッドによって指定されます。
+## <a name="remarks"></a>Remarks
+この executeUpdate メソッドは、java.sql.PreparedStatement インターフェイスの executeUpdate メソッドで規定されています。
 
-オブジェクトが作成されるとき、SQLServerPreparedStatement オブジェクトの SQL ステートメントが指定されてためこのメソッドを呼び出すが、例外が発生します。
+SQLServerPreparedStatement オブジェクトが作成される際、オブジェクトの SQL ステートメントが指定されるため、このメソッドを呼び出すと例外が発生します。
 
 ## <a name="see-also"></a>参照
 
-[executeUpdate メソッド&#40;SQLServerPreparedStatement&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
+[executeUpdate メソッド &#40;SQLServerPreparedStatement&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
 
 [SQLServerPreparedStatement のメンバー](./sqlserverpreparedstatement-members.md)
 

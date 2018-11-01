@@ -1,36 +1,33 @@
 ---
-title: SQLServerSavepoint のメンバー |Microsoft ドキュメント
+title: SQLServerSavepoint のメンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d347f887ff171553f519a08753470c59c12ebde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f2cd95f2747f60a1a4377ab799e29961f94eae5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848797"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632760"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  次の表に、によって公開されるメンバー、 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラスです。  
+  次の表では、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) クラスによって公開されるメンバーを示します。  
   
-## <a name="constructors"></a>コンス トラクター  
+## <a name="constructors"></a>コンストラクター  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|新しいインスタンスを初期化、 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラスでは、特定の接続と名前に基づいて。|  
+|[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|渡された接続と名前に基づいて、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) クラスの新しいインスタンスを初期化します。|  
   
 ## <a name="fields"></a>フィールド  
  [なし] :  
@@ -40,7 +37,7 @@ ms.locfileid: "32848797"
   
 ## <a name="methods"></a>メソッド  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|セーブポイント ラベルの名前を取得します。|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|セーブポイントの ID を取得します。|  

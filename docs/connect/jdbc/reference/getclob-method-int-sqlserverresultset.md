@@ -26,7 +26,7 @@ ms.locfileid: "47798102"
 # <a name="getclob-method-int-sqlserverresultset"></a>getClob (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の CLOB オブジェクトとして取得されます。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Java プログラミング言語の Clob オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +50,7 @@ public java.sql.Clob getClob(int columnIndex)
  この getClob メソッドは、java.sql.ResultSet インターフェイスの getClob メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateNClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   
+ [getClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

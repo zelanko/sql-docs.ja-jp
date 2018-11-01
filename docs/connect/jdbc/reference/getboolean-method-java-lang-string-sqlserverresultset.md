@@ -1,5 +1,5 @@
 ---
-title: getShort (java.lang.String) メソッド (SQLServerResultSet) | Microsoft Docs
+title: getBoolean メソッド (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47839830"
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>getBoolean (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **boolean** として取得されます。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値が、Java プログラミング言語の **boolean** として取得されます。  
   
 ## <a name="syntax"></a>構文  
   

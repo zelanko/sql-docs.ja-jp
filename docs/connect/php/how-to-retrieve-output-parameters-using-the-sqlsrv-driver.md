@@ -1,5 +1,5 @@
 ---
-title: '方法: SQLSRV ドライバーを使用して出力パラメーターを取得する'
+title: '方法: SQLSRV ドライバーを使用して出力パラメーターを取得する | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql

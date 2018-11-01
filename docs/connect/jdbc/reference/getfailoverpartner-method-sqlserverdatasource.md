@@ -1,13 +1,11 @@
 ---
-title: getFailoverPartner メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: getFailoverPartner メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getFailoverPartner
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 885f927f-9c48-42e0-a7fb-fd936d2b8130
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7633fd2fe5137ee7c04bf10ebe0c40b367c35f64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 39195742d8b6a2a03b0b2c835f47d0ba42735791
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730460"
 ---
 # <a name="getfailoverpartner-method-sqlserverdatasource"></a>getFailoverPartner メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,10 +36,10 @@ public string getFailoverPartner()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**が設定されていない場合、フェールオーバー パートナーの名前を含むです。  
+ フェールオーバー パートナーの名前を含む**文字列**です。何も設定されていない場合は null です。  
   
-## <a name="remarks"></a>解説  
- フェールオーバー パートナー名セットを使用して、このメソッドによって返される値の反映、 [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドによって返された値は、[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) メソッドを使用して設定されたフェールオーバー パートナー名を反映しています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

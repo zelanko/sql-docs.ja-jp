@@ -26,7 +26,7 @@ ms.locfileid: "47850510"
 # <a name="getarray-method-int-sqlserverresultset"></a>getArray (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Array オブジェクトとして取得されます。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Array オブジェクトとして取得されます。  
   
 ## <a name="syntax"></a>構文  
   

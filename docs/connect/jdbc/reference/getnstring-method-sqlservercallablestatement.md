@@ -28,7 +28,7 @@ ms.locfileid: "47633660"
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[getNString メソッド&#40;int&#41;](../../../connect/jdbc/reference/getnstring-method-int.md)|指定された値を取得**NCHAR**、 **NVARCHAR**、または**LONGNVARCHAR** Java プログラミング言語の文字列としてパラメーター。|  
-|[getNString (java.lang.String) メソッド](../../../connect/jdbc/reference/getnstring-method-java-lang-string.md)|指定された値を取得**NCHAR**、 **NVARCHAR**、または**LONGNVARCHAR** Java プログラミング言語の文字列としてパラメーター。|  
+|[getNString &#40;java.lang.String&#41; メソッド](../../../connect/jdbc/reference/getnstring-method-java-lang-string.md)|指定された値を取得**NCHAR**、 **NVARCHAR**、または**LONGNVARCHAR** Java プログラミング言語の文字列としてパラメーター。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

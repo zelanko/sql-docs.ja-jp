@@ -1,13 +1,11 @@
 ---
-title: position (java.sql.Clob, long) メソッド |Microsoft ドキュメント
+title: position (java.sql.Clob, long) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.position (java.sql.Clob, long)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4b8f909b22119a9897513b1b0694ded060fdc90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2a99157558ef3a4728e122a90021ff98640c28d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843687"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823400"
 ---
 # <a name="position-method-javasqlclob-long"></a>position (java.sql.Clob, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,13 +51,13 @@ public long position(java.sql.Clob searchstr,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この位置メソッドは、位置、java.sql.Clob インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この位置のメソッドは、java.sql.Clob インターフェイスでの位置のメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [position メソッド&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
  [SQLServerClob のメソッド](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
- [SQLServerClob のメンバー](../../../connect/jdbc/reference/sqlserverclob-members.md)   
+ [SQLServerClob メンバー](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob クラス](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

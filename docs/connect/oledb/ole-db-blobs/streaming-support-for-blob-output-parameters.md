@@ -1,6 +1,6 @@
 ---
 title: 出力パラメーターの BLOB のストリーミング サポート |Microsoft Docs
-description: BLOB 出力パラメーターのストリーミング サポート
+description: 出力パラメーターの BLOB のストリーミング サポート
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -25,7 +25,7 @@ ms.locfileid: "47635280"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このトピックでは、BLOB 出力パラメーターのストリーミング サポートを示すサンプルを紹介します。このストリーミング サポートでは、BLOB 出力パラメーターを ISequentialStreams としてバインドします。  
+  この記事では、BLOB 出力パラメーターのストリーミング サポートを示すサンプルを紹介します。このストリーミング サポートでは、BLOB 出力パラメーターを ISequentialStreams としてバインドします。  
   
  IMultipleResults::GetResult の出力パラメーターがブロックされ、DB_E_OBJECTOPEN 戻り値が返される場合があります。 呼び出し元は保留中の BLOB パラメーターをチェックし、これらのパラメーターを完全に読み取るか、または解放する必要があります。  
   

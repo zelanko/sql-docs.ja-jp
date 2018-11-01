@@ -5,9 +5,7 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_BIG
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b309bb7411d3c75aa1c98a219123efffc5dbca3e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4516965f66256e21e5e68310f7668770e17cabb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644850"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**dayofyear**|**dy、y**|  
 |**day**|**dd, d**|  
 |**week**|**wk, ww**|  
-|**hour**|**mm**|  
+|**hour**|**hh**|  
 |**minute**|**mi、n**|  
 |**second**|**ss, s**|  
 |**millisecond**|**ms**|  
@@ -79,7 +76,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 + **smalldatetime**
 + **time**
 
-*date* の場合、`DATEDIFF_BIG` では、列式、式、文字列リテラル、ユーザー定義の変数が受け入れられます。 文字列リテラル値は **datetime** に解決する必要があります。 あいまいさの問題を排除するために、4 桁の西暦を使用してください。 `DATEDIFF_BIG` では、*startdate* から *enddate* を減算します。 こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 2 桁の西暦については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を参照してください。
+*date* の場合、`DATEDIFF_BIG` では、列式、式、文字列リテラル、ユーザー定義の変数が受け入れられます。 文字列リテラル値は **datetime** に解決する必要があります。 あいまいさの問題を排除するために、4 桁の西暦を使用してください。 `DATEDIFF_BIG` では、*enddate* から *startdate* が減算されます。 こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 2 桁の西暦については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を参照してください。
   
 *enddate*  
 「*startdate*」をご覧ください。
@@ -92,7 +89,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 startdate と enddate で指定された 2 つの日付間の差を、指定された datepart 境界の数で (符号付き多倍長整数値として) 返します。
 -   特定の各 *datepart* と、その *datepart* の省略形では、同じ値が返されます。  
   
-**bigint** の範囲外の戻り値 (-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807) の場合、`DATEDIFF_BIG` はエラーを返します。 **millisecond** の場合、*startdate* と *enddate* の差の最大値は 24 日 20 時間 31 分 23.647 秒です。 **second** の場合、差の最大値は 68 年です。
+**bigint** の範囲外の戻り値 (-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807) の場合、`DATEDIFF_BIG` はエラーを返します。 **millisecond** の場合、*enddate* と *startdate* の差の最大値は 24 日 20 時間 31 分 23.647 秒です。 **second** の場合、差の最大値は 68 年です。
   
 *startdate* と *enddate* の両方に時刻値のみが割り当てられており、*datepart* が時刻の *datepart* でない場合、`DATEDIFF_BIG` は 0 を返します。
   

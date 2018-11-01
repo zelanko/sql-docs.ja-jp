@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: linked-servers
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], linked servers
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76c1666b70f7df6b5aa0939dd469be444d865ed7
-ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
+ms.openlocfilehash: 3a6b69707626c67ae1d96f305a46bf5b0fd09317
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618056"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +83,7 @@ ms.locfileid: "39349990"
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、リンク サーバーを定義することもできます。 オブジェクト エクスプローラーで **[サーバー オブジェクト]** を右クリックし、 **[新規作成]** をポイントして、 **[リンク サーバー]** をクリックします。 リンク サーバー名を右クリックして **[削除]** をクリックすると、リンク サーバーの定義を削除できます。  
   
- リンク サーバーに対して分散クエリを実行する場合は、クエリを実行するデータ ソースごとに 4 つの部分で構成される完全修飾テーブル名を指定します。 この 4 つの部分で構成される名前は、*<リンク サーバー名>.<カタログ>***.<*** スキーマ ***>.<*** オブジェクト名*> という形式にする必要があります。  
+ リンク サーバーに対して分散クエリを実行する場合は、クエリを実行するデータ ソースごとに 4 つの部分で構成される完全修飾テーブル名を指定します。 この 4 つの部分で構成される名前は、<_リンク サーバー名>.<カタログ_>**.**<_スキーマ_>**.**<_オブジェクト名_> という形式にする必要があります。  
   
 > [!NOTE]  
 > リンク サーバーは、どのサーバーで定義されたかを示す (ループ バックする) ように定義することができます。 ループバック サーバーは、単一のサーバー ネットワークで分散クエリを使用するアプリケーションをテストする際に最も有効です。 ループバック リンク サーバーはテスト用であり、分散トランザクションなどの多くの操作ではサポートされていません。  

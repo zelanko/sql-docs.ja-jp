@@ -27,12 +27,12 @@ ms.locfileid: "47677210"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[updateNClob (int, java.sql.NClob) メソッド](../../../connect/jdbc/reference/updatenclob-method-int-java-sql-nclob.md)|指定された列を **NClob** 値で更新します。|  
-|[updateNClob (java.lang.String, java.sql.NClob) メソッド](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-sql-nclob.md)|指定された列を **NClob** 値で更新します。|  
-|[updateNClob (int, java.io.Reader) メソッド](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader.md)|指定された Reader オブジェクトを使用して、指定された列を更新します。|  
-|[updateNClob (int, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader-long.md)|指定された文字数である指定された Reader オブジェクトを使用して、指定された列を更新します。|  
-|[updateNClob (java.lang.String, java.io.Reader) メソッド](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader.md)|指定された Reader オブジェクトを使用して、指定された列を更新します。|  
-|[updateNClob (java.lang.String, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader-long.md)|指定された文字数である指定された Reader オブジェクトを使用して、指定された列を更新します。|  
+|[updateNClob &#40;int, java.sql.NClob&#41; メソッド](../../../connect/jdbc/reference/updatenclob-method-int-java-sql-nclob.md)|指定された列を **NClob** 値で更新します。|  
+|[updateNClob &#40;java.lang.String, java.sql.NClob&#41; メソッド](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-sql-nclob.md)|指定された列を **NClob** 値で更新します。|  
+|[updateNClob &#40;int, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader.md)|指定された **Reader** オブジェクトを使用して、指定された列を更新します。|  
+|[updateNClob &#40;int, java.io.Reader, long&#41; メソッド](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader-long.md)|指定された文字数である指定された **Reader** オブジェクトを使用して、指定された列を更新します。|  
+|[updateNClob &#40;java.lang.String, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader.md)|指定された **Reader** オブジェクトを使用して、指定された列を更新します。|  
+|[updateNClob &#40;java.lang.String, java.io.Reader, long&#41; メソッド](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader-long.md)|指定された文字数である指定された **Reader** オブジェクトを使用して、指定された列を更新します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

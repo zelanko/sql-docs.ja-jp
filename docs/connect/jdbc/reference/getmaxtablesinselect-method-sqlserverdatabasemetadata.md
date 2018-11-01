@@ -36,7 +36,7 @@ public int getMaxTablesInSelect()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 許容されるテーブル数の最大値を示すです。  
+ 許容されるテーブル数の最大値を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

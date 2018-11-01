@@ -1,13 +1,11 @@
 ---
 title: OData ソース | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 09/17/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
@@ -15,29 +13,40 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692130"
 ---
 # <a name="odata-source"></a>OData ソース
-Open Data Protocol (OData) サービスからのデータを使用するには、SSIS パッケージの OData ソース コンポーネントを使用します。 このコンポーネントは、OData v3 プロトコルと v4 プロトコルをサポートします。  
+Open Data Protocol (OData) サービスからのデータを使用するには、SSIS パッケージの OData ソース コンポーネントを使用します。
+
+## <a name="supported-protocols-and-data-formats"></a>サポートされるプロトコルとデータ形式
+
+このコンポーネントは、OData v3 プロトコルと v4 プロトコルをサポートします。  
   
 -   OData V3 プロトコルでは、コンポーネントは ATOM および JSON データ形式をサポートします。  
   
 -   OData V4 プロトコルでは、コンポーネントは JSON データ形式をサポートします。  
 
+## <a name="supported-data-sources"></a>サポートされるデータ ソース
+
 OData ソースには、次のデータ ソースのサポートが含まれます。
 -   Microsoft Dynamics AX Online および Microsoft Dynamics CRM Online
--   SharePoint リスト。 SharePoint サーバーのすべてのリストを表示するには、http://\<server>/_vti_bin/ListData.svc という URL を使用します。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](http://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。
+-   SharePoint リスト。 SharePoint サーバーのすべてのリストを表示するには、 http://\<server>/_vti_bin/ListData.svc という URL を使用します。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](http://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。
 
-> [!NOTE]
+## <a name="supported-data-types"></a>サポートされるデータ型
+
+OData ソースは、次の単純なデータ型をサポートしています: int、byte[]、bool、byte、DateTime、DateTimeOffset、decimal、double、Guid、Int16、Int32、Int64、sbyte、float、string、TimeSpan。
+
+データ ソース内の列のデータ型を確認するには、`http://<OData feed endpoint>/$metadata` ページをチェックしてください。
+
+> [!IMPORTANT]
 > SharePoint リストでは、複数選択項目など、複雑な種類を OData ソース コンポーネントで利用できません。
 
 ## <a name="odata-format-and-performance"></a>OData の形式とパフォーマンス
@@ -98,7 +107,7 @@ OData ソースには、次のデータ ソースのサポートが含まれま�
 ## <a name="odata-source-editor-columns-page"></a>[OData ソース エディター] ([列] ページ)
   出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、**[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **使用できる外部列**  
  データ ソース内にある使用可能なソース列の一覧を表示します。 ページの下部にあるテーブルに対して列を追加または削除するには、一覧にあるチェック ボックスを使用します。 選択した列が出力に追加されます。  
   
@@ -111,7 +120,7 @@ OData ソースには、次のデータ ソースのサポートが含まれま�
 ## <a name="odata-source-editor-error-output-page"></a>[OData ソース エディター] ([エラー出力] ページ)
   **[OData ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[変数]  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   

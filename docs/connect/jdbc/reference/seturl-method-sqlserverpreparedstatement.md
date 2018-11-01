@@ -49,7 +49,7 @@ public final void setURL(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setURL メソッドは、java.sql.CallableStatement インターフェイスの setURL メソッドで指定されています。  
+ この setURL メソッドは、java.sql.PreparedStatement インターフェイスの setURL メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

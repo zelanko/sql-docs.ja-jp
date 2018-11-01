@@ -27,9 +27,9 @@ ms.locfileid: "47716270"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setBinaryStream (int, java.io.InputStream) メソッド](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream.md)|指定されたパラメーターを、指定された入力ストリームに設定します。|  
-|[setBinaryStream (int, java.io.InputStream, int) メソッド](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-int.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
-|[setBinaryStream (int, java.io.InputStream, long) メソッド](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-long.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
+|[setBinaryStream メソッド &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream.md)|指定されたパラメーターを、指定された入力ストリームに設定します。|  
+|[setBinaryStream メソッド &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-int.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
+|[setBinaryStream メソッド &#40;int, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-long.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

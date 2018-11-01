@@ -507,7 +507,7 @@ Linux および MacOS 上の ODBC ドライバーは、次のコンポーネン�
 
 |コンポーネント|[説明]|  
 |---------------|-----------------|  
-|libmsodbcsql 17。X.so.X.X または libmsodbcsql 13。X.so.X.X|ドライバーのすべての機能を含むダイナミック ライブラリ (`so`) ファイル。 このファイルがインストールされている`/opt/microsoft/msodbcsql17/lib64/`Driver 17 for し`/opt/microsoft/msodbcsql/lib64/`Driver 13 の。|  
+|libmsodbcsql 17。X.so.X.X または libmsodbcsql 13。X.so.X.X|ドライバーのすべての機能を含む共有オブジェクト (`so`) ダイナミック ライブラリ ファイル。 このファイルがインストールされている`/opt/microsoft/msodbcsql17/lib64/`Driver 17 for し`/opt/microsoft/msodbcsql/lib64/`Driver 13 の。|  
 |`msodbcsqlr17.rll` または `msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルにインストールされます。 `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> 内 msodbcsql.h がインストールされている`/opt/microsoft/msodbcsql17/include/`Driver 17 for し`/opt/microsoft/msodbcsql/include/`Driver 13 の。 |
 |LICENSE.txt|使用許諾契約書の用語を含むテキスト ファイル。 このファイルが配置されます`/usr/share/doc/msodbcsql17/`Driver 17 for し`/usr/share/doc/msodbcsql/`Driver 13 の。|

@@ -1,13 +1,11 @@
 ---
-title: getSavepointName メソッド (SQLServerSavepoint) |Microsoft ドキュメント
+title: getSavepointName メソッド (SQLServerSavepoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerSavepoint.getSavepointName
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 224dffd4f99695bb50845a42b697d9672244bab8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b2894c91caf18c9719912e2db2562e78be0fff1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837077"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665030"
 ---
 # <a name="getsavepointname-method-sqlserversavepoint"></a>getSavepointName メソッド (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +36,13 @@ public java.lang.String getSavepointName()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**セーブポイントの名前を格納しています。  
+ セーブポイントの名前を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getSavepointName メソッドは、java.sql.Savepoint インターフェイスの getSavepointName メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getSavepointName メソッドは、java.sql.Savepoint インターフェイスで getSavepointName メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerSavepoint のメソッド](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

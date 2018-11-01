@@ -1,5 +1,5 @@
 ---
-title: OLE DB Driver for SQL Server のスパース列のサポート | Microsoft Docs
+title: OLE DB Driver for SQL Server の UTF-16 のサポート | Microsoft Docs
 description: OLE DB Driver for SQL Server の UTF-16 のサポート
 ms.custom: ''
 ms.date: 06/12/2018

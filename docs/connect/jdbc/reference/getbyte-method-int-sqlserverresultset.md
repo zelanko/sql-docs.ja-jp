@@ -52,7 +52,7 @@ public byte getByte(int columnIndex)
  このメソッドは、tinyint や bit などのバイト値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされています。 その他のデータ型では例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
- [getBytes メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   
+ [getByte メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

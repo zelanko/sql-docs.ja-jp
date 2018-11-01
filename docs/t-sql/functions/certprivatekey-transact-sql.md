@@ -18,19 +18,19 @@ ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d5605a133c4edb9a54b919522d17ffd65478a82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f58f6859c57a16f5715d8a0f54c30775277b0c8d
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652100"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071826"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 この関数は、証明書の秘密キーをバイナリ形式で返します。 この関数は 3 つの引数を受け取ります。
 -   証明書 ID。  
--   関数によって返される秘密キーのビットの暗号化に使用される暗号化パスワード。 この方法では、ユーザーにクリア テキストとしてキーを公開しません。  
+-   関数によって返される秘密キーのビットの暗号化に使用される暗号化パスワード。 この方法では、キーはユーザーにクリア テキストとして公開されません。  
 -   オプションの暗号化解除パスワード。 証明書の秘密キーを暗号化解除するために指定された暗号化解除パスワードが使用されます。 それ以外の場合、データベース マスター キーが使用されます。  
   
 証明書の秘密キーへのアクセス権を持つユーザーだけが、この関数を使用できます。 この関数は、秘密キーを PVK 形式で返します。

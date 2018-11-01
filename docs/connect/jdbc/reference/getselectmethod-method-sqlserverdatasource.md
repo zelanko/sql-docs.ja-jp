@@ -36,7 +36,7 @@ public java.lang.String getSelectMethod()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 既定のカーソルの種類を含む値です。  
+ 既定のカーソルの種類を含む**文字列**値です。  
   
 ## <a name="remarks"></a>Remarks  
  selectMethod プロパティは、結果セットで使用される既定のカーソルの種類を指定します。 このプロパティは、大きな結果セットを処理しているときに、クライアント側のメモリに結果セット全体を格納したくない場合に役立ちます。 このプロパティを "cursor" に設定することで、一度にフェッチするデータのチャンクを小さくできるサーバー側のカーソルを作成できます。 selectMethod プロパティが設定されていない場合、getSelectMethod は既定値の "direct" を返します。  

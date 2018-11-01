@@ -36,7 +36,7 @@ public java.lang.String getDriverVersion()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- JDBC ドライバーのバージョンを含むです。  
+ JDBC ドライバーのバージョンを含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

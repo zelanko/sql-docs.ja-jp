@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,15 +14,15 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1edb9d9834489b1bb1626009deacc6a6a82a6eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fbbf4c1f23740bdce710f137e8dad26a4346b5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653441"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>テーブルの作成クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +67,7 @@ WHERE country = 'UK'
   
     他のデータベースにコピー先テーブルを作成するには、目的のデータベース名、所有者 (必要な場合)、およびテーブル名を含む完全なテーブル名を指定します。  
   
-4.  コピーする列を指定するために、クエリに列を追加します。 詳しくは、「 [クエリに列を追加する方法 (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)」をご覧ください。 クエリに追加した列だけがコピーされます。 すべての行をコピーする場合は、 **\&#42; (すべての列)** を選択します。  
+4.  コピーする列を指定するために、クエリに列を追加します。 詳しくは、「 [クエリに列を追加する方法 (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)」をご覧ください。 クエリに追加した列だけがコピーされます。 すべての行をコピーする場合は、**[&#42; (すべての列)]** を選択します。  
   
     クエリおよびビュー デザイナーにより、選択した列が、抽出条件ペインの **[列]** 列に追加されます。  
   

@@ -36,9 +36,9 @@ public boolean supportsTransactionIsolationLevel(int level)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *レベル*  
+ *level*  
   
- トランザクション分離レベルを示すです。  
+ トランザクション分離レベルを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
  **true**サポートされている場合。 それ以外の場合は、 **false**です。  

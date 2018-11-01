@@ -1,5 +1,5 @@
 ---
-title: 'ステップ 1: Java 開発用に開発環境を構成する'
+title: 'ステップ 1: Java 開発用に開発環境を構成する | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

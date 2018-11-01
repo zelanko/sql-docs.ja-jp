@@ -30,7 +30,7 @@ ms.locfileid: "47809910"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマーが  のデータを含む変更可能な行セットを更新するときに、該当するデータが更新されます。 コンシューマーが IRowsetChange **インターフェイスまたは IRowsetUpdate** インターフェイスのいずれかのサポートを要求すると、変更可能な行セットが作成されます。  
+  SQL Server 用の OLE DB ドライバーでは、コンシューマーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータを含む変更可能な行セットを更新するときに、該当するデータが更新されます。 コンシューマーが **IRowsetChange** インターフェイスまたは **IRowsetUpdate** インターフェイスのいずれかのサポートを要求すると、変更可能な行セットが作成されます。  
   
  すべて OLE DB Driver for SQL Server が変更可能な行セットの使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]行セットをサポートするカーソル。 行セット プロパティ DBPROP_LOCKMODE は、カーソルでの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のコンカレンシー制御動作を変更し、更新可能な行セット内の行をフェッチする動作や、その行セット内のデータの整合性に関するエラーを生成する動作を決定します。  
   

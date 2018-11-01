@@ -1,36 +1,33 @@
 ---
-title: SQLServerDriver のメンバー |Microsoft ドキュメント
+title: SQLServerDriver のメンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3a8bf94221b81badd94f87a5bacbbb1602afeb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2efb7a32cd9a5fddd3de17aef724eb4555cce79c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749628"
 ---
 # <a name="sqlserverdriver-members"></a>SQLServerDriver のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  次の表に、によって公開されるメンバー、 [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)クラスです。  
+  次の表は、[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md) クラスによって公開されるメンバーを示しています。  
   
-## <a name="constructors"></a>コンス トラクター  
+## <a name="constructors"></a>コンストラクター  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[SQLServerDriver)](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|新しいインスタンスを初期化、 [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)クラスです。|  
+|[SQLServerDriver ()](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md) クラスの新しいインスタンスを初期化します。|  
   
 ## <a name="fields"></a>フィールド  
  [なし] :  
@@ -40,13 +37,13 @@ ms.locfileid: "32846607"
   
 ## <a name="methods"></a>メソッド  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[acceptsURL](../../../connect/jdbc/reference/acceptsurl-method-sqlserverdriver.md)|渡された URL が有効であることを確認します。|  
-|[接続](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|データベースへの接続を確立します。|  
+|[connect](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|データベースへの接続を確立します。|  
 |[getMajorVersion](../../../connect/jdbc/reference/getmajorversion-method-sqlserverdriver.md)|JDBC ドライバーのメジャー バージョン番号を返します。|  
 |[getMinorVersion](../../../connect/jdbc/reference/getminorversion-method-sqlserverdriver.md)|JDBC ドライバーのマイナー バージョン番号を返します。|  
-|[GetPropertyInfo](../../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)|データベースへの接続に必要なプロパティを検出するために使用します。|  
+|[getPropertyInfo](../../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)|データベースへの接続に必要なプロパティを検出するために使用します。|  
 |[jdbcCompliant](../../../connect/jdbc/reference/jdbccompliant-method-sqlserverdriver.md)|JDBC ドライバーが JDBC 仕様に準拠しているかどうかを確認します。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  

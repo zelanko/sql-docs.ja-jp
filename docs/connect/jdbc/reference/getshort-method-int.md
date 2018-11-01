@@ -41,13 +41,13 @@ public short getShort(int index)
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- A**短い**値。  
+ **短い**値。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getInt メソッドは、java.sql.CallableStatement インターフェイスの getInt メソッドで規定されています。  
+ この getShort メソッドは、java.sql.CallableStatement インターフェイスの getShort メソッドで規定されています。  
   
  このメソッドは、**smallint**、**tinyint**、**bit** などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   

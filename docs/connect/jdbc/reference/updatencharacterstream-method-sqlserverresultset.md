@@ -27,10 +27,10 @@ ms.locfileid: "47675380"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[updateNCharacterStream (int, java.io.Reader) メソッド](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md)|指定された列を文字ストリームの値で更新します。|  
-|[updateNCharacterStream (int, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader-long.md)|指定された列を文字ストリームの値で更新します。文字ストリームの値は、指定されたバイト数を持ちます。|  
-|[updateNCharacterStream (java.lang.String, java.io.Reader) メソッド](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md)|指定された列を文字ストリームの値で更新します。|  
-|[updateNCharacterStream (java.lang.String, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader-long.md)|指定された列を文字ストリームの値で更新します。文字ストリームの値は、指定されたバイト数を持ちます。|  
+|[updateNCharacterStream &#40;int, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md)|指定された列を文字ストリームの値で更新します。|  
+|[updateNCharacterStream &#40;int, java.io.Reader, long&#41; メソッド](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader-long.md)|指定された列を文字ストリームの値で更新します。文字ストリームの値は、指定されたバイト数を持ちます。|  
+|[updateNCharacterStream &#40;java.lang.String, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md)|指定された列を文字ストリームの値で更新します。|  
+|[updateNCharacterStream &#40;java.lang.String, java.io.Reader, long&#41; メソッド](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader-long.md)|指定された列を文字ストリームの値で更新します。文字ストリームの値は、指定されたバイト数を持ちます。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

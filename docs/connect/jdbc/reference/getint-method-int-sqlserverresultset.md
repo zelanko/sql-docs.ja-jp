@@ -47,7 +47,7 @@ public int getInt(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getInt メソッドは、java.sql.CallableStatement インターフェイスの getInt メソッドで規定されています。  
+ この getInt メソッドは、java.sql.ResultSet インターフェイスの getInt メソッドで規定されています。  
   
  このメソッドは、int、smallint、tinyint、bit などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   

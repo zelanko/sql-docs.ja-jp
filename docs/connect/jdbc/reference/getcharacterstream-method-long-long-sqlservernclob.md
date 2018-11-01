@@ -1,30 +1,27 @@
 ---
-title: getCharacterStream (long, long) メソッド (SQLServerNClob) |Microsoft ドキュメント
+title: getCharacterStream (long, long) メソッド (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d54808511d4bdfe6c464cd6deee989757521266
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5071cf1e570418723ced2602f6b88a5a2227069c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633620"
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>getCharacterStream (long, long) メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  取得、 **NCLOB**データとして、**リーダー**オブジェクトまたは指定した位置と長さを持つ文字のストリームとして。  
+  指定された位置と長さを使用して、**NCLOB** データを **Reader** オブジェクトまたは文字のストリームとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,23 +34,23 @@ public java.io.Reader getCharacterStream(long pos,
 #### <a name="parameters"></a>パラメーター  
  *pos*  
   
- A**長い**を取得する部分的な値の最初の文字のオフセットを示すです。  
+ 取得する部分的な値の最初の文字へのオフセットを示す **long** です。  
   
- *長さ*  
+ *length*  
   
- A**長い**を取得する部分的な値の文字の長さを示すです。  
+ 取得する部分的な値の文字の長さを示す **long** です。  
   
 ## <a name="return-value"></a>戻り値  
- リーダー オブジェクトを含む、 **NCLOB**データ。  
+ **NCLOB** データを含む Reader オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getCharacterStream メソッドは、getCharacterStream メソッド java.sql.NClob インターフェイスで指定します。  
   
 ## <a name="see-also"></a>参照  
- [getCharacterStream メソッド&#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
+ [getCharacterStream メソッド &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
  [SQLServerNClob のメソッド](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob のメンバー](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob クラス](../../../connect/jdbc/reference/sqlservernclob-class.md)  

@@ -47,7 +47,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- この commit メソッドは、javax.transaction.xa.XAResource インターフェイスの commit メソッドで規定されています。  
+ この recover メソッドは、javax.transaction.xa.XAResource インターフェイスの recover メソッドで規定されています。  
   
  場合、パラメーター**フラグ**XAResource.TMSTARTRSCAN または XAResource.TMSTARTRSCAN ではありません |XAResource.TMENDRSCAN、リカバリ スキャンは、進行状況でなければなりません。  
   

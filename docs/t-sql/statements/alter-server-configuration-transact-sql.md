@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0782f5739bb6ed86dfa2d58e0e84ce2ea496802f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d93d1ea55e06e1ee6b1a36bc9f2e3a341db58cfe
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713898"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169053"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -186,7 +186,7 @@ SQLDUMPEREDUMPFLAGS
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
+ HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
  サーバー インスタンスの HADR クラスター コンテキストを、指定した Windows Server フェールオーバー クラスター (WSFC) に切り替えます。 *HADR クラスター コンテキスト*は、サーバー インスタンスによってホストされる可用性レプリカのメタデータを管理する WSFC を決定します。 SET HADR CLUSTER CONTEXT オプションは、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を新しい WSFC 上の [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降のバージョンのインスタンスに移行するクラスター間での移行中にのみ使用してください。  
   
  HADR クラスター コンテキストの切り替えは、ローカル WSFC とリモート WSFC 間でのみ実行できます。 HADR クラスター コンテキストは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが可用性レプリカをホストしていない場合のみリモート クラスターに切り替えることができます。  

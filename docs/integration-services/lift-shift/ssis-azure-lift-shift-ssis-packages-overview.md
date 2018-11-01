@@ -1,26 +1,25 @@
 ---
 title: Azure で SSIS パッケージをデプロイし、実行する | Microsoft Docs
 description: SQL Server Integration Services (SSIS) プロジェクト、パッケージ、ワークロードを Microsoft Azure クラウドに移動する方法について説明します。
-ms.date: 07/01/2018
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
-ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
+ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39482663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829679"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする
-SQL Server Integration Services (SSIS) プロジェクト、パッケージ、ワークロードを Azure クラウドに移動できるようになりました。 SQL Server Management Studio (SSMS) などのよく使われるツールを利用して、SSIS プロジェクトとパッケージを Azure SQL Database の SSIS カタログ (SSISDB) または SQL Database Managed Instance (プレビュー) でデプロイ、実行、管理します。
+SQL Server Integration Services (SSIS) プロジェクト、パッケージ、ワークロードを Azure クラウドに移動できるようになりました。 SQL Server Management Studio (SSMS) などのよく使われるツールを利用して、SSIS プロジェクトとパッケージを Azure SQL Database の SSIS カタログ (SSISDB) または SQL Database Managed Instance でデプロイ、実行、管理します。
 
 ## <a name="benefits"></a>利点
 オンプレミスの SSIS ワークロードを Azure に移動すると、次の潜在的な利点があります。
@@ -36,7 +35,7 @@ SQL Server Integration Services (SSIS) プロジェクト、パッケージ、�
 | 場所 | ストレージ | ランタイム | スケーラビリティ |
 |---|---|---|---|
 | オンプレミス | SQL Server | SQL Server でホストされている SSIS ランタイム | SSIS Scale Out (SQL Server 2017 以降)<br/><br/>カスタム ソリューション (SQL Server の以前のバージョン) |
-| Azure 上 | SQL Database または Azure SQL Database Managed Instance (プレビュー) | Azure SSIS 統合ランタイム、Azure Data Factory のコンポーネント | Azure SSIS 統合ランタイムのスケーリング オプション |
+| Azure 上 | SQL Database または Azure SQL Database Managed Instance | Azure SSIS 統合ランタイム、Azure Data Factory のコンポーネント | Azure SSIS 統合ランタイムのスケーリング オプション |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>Azure での SSIS のプロビジョニング

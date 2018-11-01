@@ -5,9 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitwise
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44b9d4acd20051477779edd721089340114c7fb1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 34c2bd981869095df9cb4b4e79c383a9c58fd479
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077384"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716816"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp; (ビットごとの AND) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +59,7 @@ expression & expression
 ## <a name="remarks"></a>Remarks  
  ビットごとの **&** 演算子は、2 つの式の対応するビットを対象にビットごとの論理積演算を実行します。 入力式の中で現在処理の対象にあるビットについて、両方のビットが 1 という値を持つ場合だけ、結果セットのビットは 1 に設定されます。それ以外の場合、結果は 0 に設定されます。  
   
- 左側の式と右側の式が異なる整数型の場合 (たとえば、左側の*式*が **smallint** 型で、右側の*式*が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この場合、**smallint***expression* は **int** に変換されます。  
+ 左側の式と右側の式が異なる整数型の場合 (たとえば、左側の*式*が **smallint** 型で、右側の*式*が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この場合、**smallint**_expression_ は **int** に変換されます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、**int** 型で値を格納するテーブルを作成し、1 行に 2 つの値を挿入します。  

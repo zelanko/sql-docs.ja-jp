@@ -1,13 +1,11 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0cdf8b03a5169d5067bdfc07dbd3f3cc99d2d58
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 820a11940cfd3ee904979420acb0c766a6b32fb0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664050"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,9 +205,11 @@ SPARSE
 ENCRYPTION_TYPE = {決定的 |ランダム化}  
  **確定的な暗号化** は常に任意のプレーン テキストを指定した値の場合は、同じ暗号化された値を生成するメソッドを使用します。 確定的な暗号化を使用すると、グループ化、および暗号化された値に基づいて、等しいかどうかの結合を使用して、テーブルへの参加の等値比較を使用して検索をできますも確認するには、暗号化された列のパターンについては、暗号化された値を推測する承認されていないユーザーを許可することができます。 確定的に暗号化された列に 2 つのテーブルを結合すると、両方の列が同じ列の暗号化キーを使用して暗号化されている場合にのみ可能なです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。  
   
- **暗号化をランダム化** は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダムな暗号化より安全になりますが、により、等しいかどうかの検索、グループ化、および暗号化された列を結合します。 ランダムな暗号化を使用して列のインデックスを付けることはできません。  
+ **暗号化をランダム化** は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダム化された暗号化は、より安全ですが、SQL Server インスタンスで[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) がサポートされる場合を除き、暗号化された列に対する計算とインデックス作成はすべて阻止されます。
   
- 検索パラメーターまたは政府の ID 番号など、グループ化のパラメーターとなる列には、確定的な暗号化を使用します。 ランダムな暗号化を使用して、クレジット カード番号などのデータ、これが、他のレコードとグループ化されたかテーブル、およびこれは検索されませんの (トランザクションの数) などの他の列を使用して、関心のある暗号化された列を含む行を検索するために参加するために使用します。  
+ Always Encrypted (セキュア エンクレーブなし) を使用している場合、政府の ID 番号などのパラメーターまたはグループ化パラメーターで検索される列には、決定論的な暗号化を使用します。 ランダムな暗号化を使用して、クレジット カード番号などのデータ、これが、他のレコードとグループ化されたかテーブル、およびこれは検索されませんの (トランザクションの数) などの他の列を使用して、関心のある暗号化された列を含む行を検索するために参加するために使用します。  
+
+ セキュア エンクレーブを使用する Always Encrypted を使用する場合は、ランダム化された暗号化が推奨される暗号化の種類です。  
   
  列は、該当するデータ型である必要があります。  
   

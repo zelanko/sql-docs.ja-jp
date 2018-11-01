@@ -5,9 +5,7 @@ ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 99
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b9796266ff1c5ff8d7e42ffbc3a94e44fd4b142
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3b84acd01f7291ad420cf2a643ffb9bc350e0a6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072652"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777970"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -183,7 +180,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  オンラインでのインデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
- MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] はファイル グループの名前として "default" をサポートしています。  
   
  現在クラスター化インデックスのリーフ レベルにあるデータ行を移動する場所を指定します。 データは、ヒープの形式で新しい場所に移動されます。 新しい場所としてパーティション構成またはファイル グループを指定できますが、このパーティション構成やファイル グループはあらかじめ存在している必要があります。 MOVE TO は、インデックス付きビューまたは非クラスター化インデックスに対しては有効ではありません。 パーティション構成やファイル グループを指定しないと、結果のテーブルは、クラスター化インデックスに対して定義されているのと同じパーティション構成またはファイル グループに配置されます。  
@@ -234,7 +231,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  インデックス付きビューのクラスター化インデックスを削除すると、同じビューのすべての非クラスター化インデックスと自動作成された統計情報が自動的に削除されます。 手動で作成した統計情報は削除されません。  
   
- 構文 *table_or_view_name ***.*** index_name* は、旧バージョンとの互換性のために維持されます。 XML インデックスまたは空間インデックスは、旧バージョンとの互換性のための構文を使用して削除することはできません。  
+ 構文 _table\_or\_view\_name_**.**_index\_name_ は旧バージョンとの互換性のために維持されます。 XML インデックスまたは空間インデックスは、旧バージョンとの互換性のための構文を使用して削除することはできません。  
   
  128 以上のエクステントを持つインデックスを削除すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、トランザクションがコミットされるまで実際のページの割り当て解除と関連するロックを遅らせます。  
   
@@ -264,10 +261,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 OFFLINE でクラスター化インデックスを削除すると、クラスター化インデックスの上位レベルだけが削除されます。そのため、操作はとても高速です。 ONLINE でクラスター化インデックスを削除すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、ヒープが手順 1. で 1 回、手順 2. で 1 回の計 2 回再構築されます。 データ圧縮の詳細については、「[データの圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
 ## <a name="xml-indexes"></a>XML インデックス  
- AnXML インデックスを削除するときに、オプションを指定することはできません。 また、*table_or_view_name ***.*** index_name* 構文を使用することはできません。 プライマリ XML インデックスを削除すると、関連するすべてのセカンダリ XML インデックスが自動的に削除されます。 詳細については、「[XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)」をご覧ください。  
+ AnXML インデックスを削除するときに、オプションを指定することはできません。 また、_table\_or\_view\_name_**.**_index\_name_ 構文を使用することはできません。 プライマリ XML インデックスを削除すると、関連するすべてのセカンダリ XML インデックスが自動的に削除されます。 詳細については、「[XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)」をご覧ください。  
   
 ## <a name="spatial-indexes"></a>空間インデックス  
- 空間インデックスはテーブルでのみサポートされます。 空間インデックスを削除する場合、オプションを指定することも、**.***index_name* を使用することもできません。 正しい構文は次のとおりです。  
+ 空間インデックスはテーブルでのみサポートされます。 空間インデックスを削除する場合、オプションを指定することも、**.**_index\_name_ を使用することもできません。 正しい構文は次のとおりです。  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   

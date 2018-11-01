@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670276"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169292"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  *language_term* を指定すると、それが表す言語が、**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext** 列のデータのインデックス付けに使われます。 クエリ実行時に、列に対するフルテキスト述語の一部として *language_term* を指定しない場合は、ここで指定した言語がクエリでの既定の言語になります。  
   
- *language_term* を文字列で指定する場合は、syslanguages システム テーブルの alias 列の値と同じ値を指定します。 文字列は、**'***language_term***'** のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数値で指定する場合は、「0x」の後に LCID の 16 進数値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ *language_term* を文字列で指定する場合は、syslanguages システム テーブルの alias 列の値と同じ値を指定します。 文字列は、**'**_language\_term_**'** のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数値で指定する場合は、「0x」の後に LCID の 16 進数値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
  値を 2 バイト文字セット (DBCS) の形式で指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で Unicode に変換されます。  
   
@@ -184,7 +184,7 @@ CREATE FULLTEXT INDEX ON table_name
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>A. 一意のインデックス、フルテキスト カタログ、およびフルテキスト インデックスを作成する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの `HumanResources.JobCandidate` テーブルの `JobCandidateID` 列に一意のインデックスを作成します。 その後、既定のフルテキスト カタログ、`ft` を作成します。 そして最後に、`Resume` カタログおよびシステム ストップリストを使用して `ft` 列にフルテキスト インデックスを作成します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの `JobCandidateID` テーブルの `HumanResources.JobCandidate` 列に一意のインデックスを作成します。 その後、既定のフルテキスト カタログ、`ft` を作成します。 そして最後に、`Resume` カタログおよびシステム ストップリストを使用して `ft` 列にフルテキスト インデックスを作成します。  
   
 ```  
 CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  

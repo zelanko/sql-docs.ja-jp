@@ -5,9 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e044f1555019aca5f50694f1367ee79b6237cc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094856"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618090"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +162,7 @@ CREATE USER user_name
  データベース内でユーザーを識別する名前を指定します。 *user_name* は、**sysname** です。 半角 128 文字まで指定できます。 Windows プリンシパルに基づいてユーザーを作成する場合、別のユーザー名を指定しないと、Windows プリンシパル名がユーザー名になります。  
   
  LOGIN *login_name*  
- 作成するデータベース ユーザーのログインを指定します。 *login_name* は、サーバーで有効なログインである必要があります。 Windows プリンシパルに基づくログイン (ユーザーまたはグループ) か、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用したログインを指定できます。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインをデータベースに対して入力すると、データベースでは、作成されるデータベース ユーザーの名前と ID が取得されます。 Windows プリンシパルからマップされたログインを作成する場合は、**[***\<domainName>***\\***\<loginName>***]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。  
+ 作成するデータベース ユーザーのログインを指定します。 *login_name* は、サーバーで有効なログインである必要があります。 Windows プリンシパルに基づくログイン (ユーザーまたはグループ) か、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用したログインを指定できます。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインをデータベースに対して入力すると、データベースでは、作成されるデータベース ユーザーの名前と ID が取得されます。 Windows プリンシパルからマップされたログインを作成する場合は、**[**_\<domainName\>_**\\**_\<loginName\>_**]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。  
   
  CREATE USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Windows Azure SQL データベースでは WITH LOGIN 句がサポートされます。 CREATE USER ステートメントが SQL のバッチ内の唯一のステートメントではない場合、または動的 SQL で実行されていない場合、WITH LOGIN 句はサポートされません。  
   
@@ -173,7 +170,7 @@ CREATE USER user_name
  このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。  
   
  '*windows_principal*'  
- データベース ユーザーを作成する Windows プリンシパルを指定します。 *windows_principal* には、Windows ユーザーまたは Windows グループを指定できます。 *windows_principal* がログインを持たない場合でも、ユーザーは作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに、*windows_principal* がログインを持たない場合、ログインを持つ Windows グループのメンバーシップを介して [!INCLUDE[ssDE](../../includes/ssde-md.md)] で Windows プリンシパルを認証するか、または接続文字列で包含データベースを初期カタログとして指定する必要があります。 Windows プリンシパルからユーザーを作成する場合は、**[***\<domainName>***\\***\<loginName>***]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。 Active Directory ユーザーに基づくユーザーは、21 文字未満の名前に制限されます。    
+ データベース ユーザーを作成する Windows プリンシパルを指定します。 *windows_principal* には、Windows ユーザーまたは Windows グループを指定できます。 *windows_principal* がログインを持たない場合でも、ユーザーは作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに、*windows_principal* がログインを持たない場合、ログインを持つ Windows グループのメンバーシップを介して [!INCLUDE[ssDE](../../includes/ssde-md.md)] で Windows プリンシパルを認証するか、または接続文字列で包含データベースを初期カタログとして指定する必要があります。 Windows プリンシパルからユーザーを作成する場合は、**[**_\<domainName\>_**\\**_\<loginName\>_**]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。 Active Directory ユーザーに基づくユーザーは、21 文字未満の名前に制限されます。    
   
  '*Azure_Active_Directory_principal*'  
  **適用対象**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  

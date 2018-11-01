@@ -1,5 +1,5 @@
 ---
-title: '方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得'
+title: '方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -37,10 +37,10 @@ UTF-8 でエンコードされたデータを送信または取得するには:
   
     接続オプションの一部として文字セットを指定すると、ドライバーは、その他の接続オプション文字列で同じ文字セットを使用すると見なします。 サーバー名およびクエリ文字列も同じ文字セットを使用すると見なします。  
   
-UTF-8 または SQLSRV_ENC_CHAR はCharacterSet** に渡すことができることに注意してください (SQLSRV_ENC_BINARY を渡すことはできません)。 既定のエンコーディングは SQLSRV_ENC_CHAR です。  
+UTF-8 または SQLSRV_ENC_CHAR を **CharacterSet** に渡すことはできますが、SQLSRV_ENC_BINARY を渡すことはできません。 既定のエンコーディングは SQLSRV_ENC_CHAR です。  
   
 ## <a name="example"></a>例  
-次の例では、接続の作成時に、UTF-8 文字セットを指定して、UTF-8 でエンコードされたデータを送信および取得する方法を示します。 この例では、Production.ProductReview テーブルの指定したレビュー ID の Comments 列を更新します。 この例では、新規に更新したデータも取得し、それを表示します。 なお、Comments 列は、nvarcahr(3850)** 型です。 また、サーバーに送信される前に、データは PHP utf8_encode** 関数を使用して UTF-8 エンコードに変換されます。 これはデモンストレーションのみを目的としています。 実際のアプリケーションのシナリオでは、UTF-8 でエンコード済みのデータで開始します。  
+次の例では、接続の作成時に、UTF-8 文字セットを指定して、UTF-8 でエンコードされたデータを送信および取得する方法を示します。 この例では、Production.ProductReview テーブルの指定したレビュー ID の Comments 列を更新します。 この例では、新規に更新したデータも取得し、それを表示します。 なお、Comments 列は、**nvarchar(3850)** 型です。 また、サーバーに送信される前に、データは PHP **utf8_encode** 関数を使用して UTF-8 エンコードに変換されます。 これはデモンストレーションのみを目的としています。 実際のアプリケーションのシナリオでは、UTF-8 でエンコード済みのデータで開始します。  
   
 この例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
   
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Unicode データを格納する方法の詳細については、「 [Unicode データを使用した作業](https://msdn.microsoft.com/library/ms175180.aspx)」を参照してください。  
+Unicode データを格納する方法の詳細については、「[Unicode データを使用した作業](https://msdn.microsoft.com/library/ms175180.aspx)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例は最初のサンプルと似ていますが、このサンプルでは接続で UTF-8 文字セットを指定する代わりに、列に UTF-8 文字セットを指定する方法を示します。  

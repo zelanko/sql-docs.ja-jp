@@ -59,9 +59,9 @@ public boolean supportsResultSetConcurrency(int type,
   
  TYPE_SS_SCROLL_DYNAMIC  
   
- コンカレンシー  
+ *concurrency*  
   
- 結果セットのコンカレンシー レベルを示します。java.sql.ResultSet または SQLServerResultSet での定義に従って、次のいずれかの値を指定します。  
+ 結果セットのコンカレンシー レベルを示す **int**。java.sql.ResultSet または SQLServerResultSet での定義に従って、次のいずれかの値を指定します。  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet の種類  
  CONCUR_READ_ONLY  

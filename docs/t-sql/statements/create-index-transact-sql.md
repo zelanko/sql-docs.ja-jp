@@ -1,13 +1,11 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/15/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -53,17 +51,16 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd2ee86fe01f568f6eb2a91800632f6f896ed3e5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777730"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,7 +241,7 @@ CLUSTERED
  *column*  
  インデックスの基準となる 1 列または複数列を指定します。 指定した列を組み合わせた値で複合インデックスを作成するには、2 つ以上の列名を指定します。 複合インデックスに含まれる列は、*table_or_view_name* の後のかっこ内に、並べ替えの優先順序に従って指定します。  
   
- 1 つの複合インデックス キーには、最大 32 の列を結合できます。 複合インデックス キーに含まれる列はすべて、同じテーブルまたはビュー内に存在する必要があります。 複合インデックスの値の最大許容サイズは、クラスター化インデックスの場合は、900 バイトまたは非クラスター化インデックスの 1,700 です。 16 列とより前に、のバージョンの 900 バイトに制限は [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。  
+ 1 つの複合インデックス キーには、最大 32 の列を結合できます。 複合インデックス キーに含まれる列はすべて、同じテーブルまたはビュー内に存在する必要があります。 複合インデックスの値の最大許容サイズは、クラスター化インデックスの場合は、900 バイトまたは非クラスター化インデックスの 1,700 です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前のバージョンの場合、制限は列数が 16、サイズが 900 バイトになります。  
   
  ラージ オブジェクト (LOB) データ型の列 **ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、または **image** 、インデックスのキー列として指定することはできません。 また、ビュー定義に含めることはできません**ntext**、**text**、または **image** 列では、CREATE INDEX ステートメントで参照されていない場合でも。  
   
@@ -253,7 +250,7 @@ CLUSTERED
  [ **ASC** | DESC ]  
  特定のインデックス列に対して、昇順または降順の並べ替えの方向を指定します。 既定値は ASC です。  
   
- INCLUDE **(***column* [ **,**... *n* ] **)**  
+ INCLUDE **(**_column_ [ **,**... *n* ] **)**  
  非クラスター化インデックスのリーフ レベルに、非キー列を追加します。 非クラスター化インデックスは、一意であっても一意でなくてもかまいません。  
   
  列名は INCLUDE リスト内で繰り返すことはできず、キー列と非キー列両方で同時に使用することはできません。 テーブルにクラスター化インデックスが定義されている場合、非クラスター化インデックスには常にクラスター化インデックスの列が含まれます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
@@ -337,9 +334,9 @@ ON *partition_scheme_name* **( *column_name* )**
   
  以降で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 、オブジェクトは、クラスター化列ストア インデックスに格納されたテーブルを指定できます。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、*database_name* が現在のデータベースの場合、または *database_name* が tempdb で、*object_name* が # で始まる場合に、3 つの要素で構成された名前形式 *database_name***.**[* schema_name *]**.***object_name* をサポートします。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、*database_name* が現在のデータベースの場合、または *database_name* が tempdb で、*object_name* が # で始まる場合に、3 つの要素で構成された名前形式 _database\_name_**.**[*schema_name*]**.**_object\_name_ をサポートします。  
   
- **\<relational_index_option>::=**  
+ **\<relational_index_option\>::=**  
   
  インデックスを作成するときに使用するオプションを指定します。  
   
@@ -358,7 +355,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  旧バージョンと互換性のある構文では、WITH PAD_INDEX は WITH PAD_INDEX = ON と同じです。  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  インデックスの作成時または再構築時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 値には、1 ～ 100 の整数値を指定してください。 *fillfactor* が 100 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では全容量を使用するリーフ ページでインデックスが作成されます。  
@@ -465,7 +462,7 @@ ONLINE = { ON | **OFF** }
  
 RESUMABLE **=** { ON | **OFF**}
 
-**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (パブリック プレビューの機能)
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
 
  オンラインでのインデックス操作が再開可能かどうかを指定します。
 
@@ -475,7 +472,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* **[MINUTES]** は **RESUMABLE = ON** (**ONLINE = ON** が必須) と共に使用。
  
-**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (パブリック プレビューの機能) 
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
 
 再開可能なオンラインでのインデックス操作が、一時停止までに実行される時間 (分単位で指定する整数値) を示します。 
 
@@ -647,7 +644,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  XML インデックスについては、「[CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)」および「[XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)」をご覧ください。  
   
 ## <a name="index-key-size"></a>インデックス キーのサイズ  
- インデックス キーの最大サイズは 900 バイトをクラスター化インデックスと非クラスター化インデックスの 1,700 バイトです。 (前に [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、制限が 900 バイトでは常にします)。インデックス **varchar** 既存のデータ列には、インデックスの作成時の制限を超えない場合をバイトの制限を超える列を作成することができます。 ただし、後続の挿入や更新操作を、制限を超える合計サイズとなる列には失敗します。 クラスター化インデックスのインデックス キーには、ROW_OVERFLOW_DATA アロケーション ユニットに既存のデータを持つ **varchar** 列を含めることはできません。 クラスター化インデックスが **varchar** 列に作成され、既存のデータが IN_ROW_DATA アロケーション ユニットにある場合に、データを行外に押し出すような挿入処理や更新処理をその列に対して行うと失敗します。  
+ インデックス キーの最大サイズは 900 バイトをクラスター化インデックスと非クラスター化インデックスの 1,700 バイトです。 ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前では、制限は常に 900 バイトでした)。インデックス **varchar** 既存のデータ列には、インデックスの作成時の制限を超えない場合をバイトの制限を超える列を作成することができます。 ただし、後続の挿入や更新操作を、制限を超える合計サイズとなる列には失敗します。 クラスター化インデックスのインデックス キーには、ROW_OVERFLOW_DATA アロケーション ユニットに既存のデータを持つ **varchar** 列を含めることはできません。 クラスター化インデックスが **varchar** 列に作成され、既存のデータが IN_ROW_DATA アロケーション ユニットにある場合に、データを行外に押し出すような挿入処理や更新処理をその列に対して行うと失敗します。  
   
  非クラスター化インデックスのリーフ レベルに非キー列を含めることができます。 インデックス キー サイズを計算するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではこれらの列は考慮されません。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
@@ -691,7 +688,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="specifying-index-options"></a>インデックス オプションの指定  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では新しいインデックス オプションが導入され、オプションの指定方法も変更になりました。 旧バージョンとの互換性のある構文では、WITH *option_name* は WITH **(** \<option_name> **= ON )** と同じです。 インデックス オプションを設定する場合は、次の規則が適用されます。 
   
--   新しいインデックス オプションは、WITH (***option_name* = ON | OFF**) を使用してのみ指定できる。  
+-   新しいインデックス オプションは、WITH (**_option\_name_ = ON | OFF**) を使用してのみ指定できる。  
 -   同じステートメントで、旧バージョンとの互換性がある構文と新しい構文の両方を使ってオプションを指定することはできない。 たとえば、WITH (**DROP_EXISTING, ONLINE = ON**) を指定すると、ステートメントは失敗します。  
 -   XML インデックスを作成するとき、オプションは WITH (***option_name*= ON | OFF**) を使用して指定する必要がある。  
   
@@ -719,7 +716,7 @@ INSERT INTO t1 VALUES (1, 0);
  
 ### <a name="resumable-indexes"></a>再開可能なインデックス操作
 
-**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (パブリック プレビューの機能)。
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
 
 次のガイドラインは再開可能なインデックス操作に適用されます。
 
@@ -731,14 +728,12 @@ INSERT INTO t1 VALUES (1, 0);
 - 再開可能なインデックスに対する元の CREATE INDEX ステートメントを再実行すると、一時停止されていたインデックス作成操作が自動的に再開されます。
 - SORT_IN_TEMPDB=ON オプションは、再開可能なインデックスに対してはサポートされていません。 
 - RESUMABLE=ON を指定した DDL コマンドを、示的なトランザクション内で実行することはできません (BEGIN TRAN ... COMMIT ブロックの一部にすることはできません)。
-- インデックスの構築/再構築を再開/中止するには、[ALTER INDEX](alter-index-transact-sql.md) T-SQL 構文を使用します
+- インデックスの作成/再構築を再開/中止するには、[ALTER INDEX](alter-index-transact-sql.md) T-SQL 構文を使用します
 
 > [!NOTE]
 > DDL コマンドは、完了するか、一時停止するか、または失敗するまで実行されます。 コマンドが一時停止した場合は、操作が一時停止され、インデックスの作成が完了しなかったことを示すエラーが発行されます。 現在のインデックスの状態の詳細については、[sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md) を参照してください。 前と同様に、障害が発生した場合はエラーも発行されます。 
 
-インデックス作成が再開可能な操作として実行されることを示し、現在の実行状態を確認する方法については、「[sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)」をご覧ください。 パブリック プレビューでは、このビューの次の列は 0 に設定されます。
-- total_execution_time
-- percent_complete、page_count
+インデックス作成が再開可能な操作として実行されることを示し、現在の実行状態を確認する方法については、「[sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)」をご覧ください。 
 
 **リソース** 再開可能なオンライン インデックス作成操作には、次のリソースが必要です
 - インデックスが一時停止されている期間など、構築されているインデックスを保持するために追加の領域が必要である。
@@ -748,17 +743,12 @@ INSERT INTO t1 VALUES (1, 0);
 
 **現在の機能上の制限**
 
-> [!IMPORTANT]
-> **再開可能なオンライン インデックス作成**は、現在、非クラスター化インデックスでのみサポートされます。
-
 再開可能なインデックス作成操作に対して次の機能は無効になります
-- 再開可能なインデックス作成は、パブリック プレビューではクラスター化インデックスについてはサポートされません。
 - 再開可能なオンライン インデックス作成操作が一時停止された後、MAXDOP の初期値を変更することはできません。
-- DROP EXISTING 句はサポートされていません。
 - 次のものを含むインデックスの作成 
  - キー列としての計算列または TIMESTAMP 列
  - 再開可能なインデックス作成に含まれる列としての LOB 列
-- フィルター選択されたインデックス
+ - フィルター選択されたインデックス
  
 ## <a name="row-and-page-locks-options"></a>行およびページ ロック オプション  
  ALLOW_ROW_LOCKS = ON かつ ALLOW_PAGE_LOCK = ON の場合は、インデックスにアクセスするときに、行、ページ、およびテーブル レベルのロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。  
@@ -1048,6 +1038,8 @@ GO
 ```  
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. 再開可能なインデックス操作を作成、再開、一時停止、中止する
 
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
+
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
 CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
@@ -1074,6 +1066,8 @@ ALTER INDEX test_idx2 on test_table ABORT
   
 ### <a name="n-basic-syntax"></a>N. 基本構文  
   ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>再開可能なインデックス操作を作成、再開、一時停止、中止する
+
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

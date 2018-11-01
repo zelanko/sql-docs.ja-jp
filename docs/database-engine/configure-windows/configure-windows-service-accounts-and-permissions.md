@@ -5,9 +5,7 @@ ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -50,16 +48,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2794fb22369bc00f8758778ea6952bea7e94ebd6
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694997"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -306,7 +303,8 @@ ms.locfileid: "43348573"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント:**|**サービスとしてログオン** (SeServiceLogonRight)|  
 |**PolyBase エンジンと DMS**| **サービスとしてログオン** (SeServiceLogonRight)  |   
 |**スタート パッド:**|**サービスとしてログオン** (SeServiceLogonRight) <br /><br /> **プロセス レベル トークンを置き換える** (SeAssignPrimaryTokenPrivilege)<br /><br />**スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br />**プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)|     
-|**R Services:** **SQLRUserGroup**  |**ローカル ログオンを許可する** |   
+|**R Services:** **SQLRUserGroup** (SQL 2016 および 2017)  |**ローカル ログオンを許可する** |   
+|**Machine Learning** '**すべてのアプリケーション パッケージ [AppContainer]** (SQL 2019)  |SQL Server 'Binn'、R_Services、および PYTHON_Services ディレクトリに対する**読み取り権限と実行権限** |   
 
  \* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスで無効になっています。  
   

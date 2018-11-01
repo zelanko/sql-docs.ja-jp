@@ -5,9 +5,7 @@ ms.date: 04/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9faa9de82ed9b5db0ba2ccac071d038fb430f096
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c0097d1b2b6accad7283a1f97d4f28f9ec289c0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43061575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749090"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,12 +130,12 @@ ALTER LOGIN login_name
  ENABLE | DISABLE  
  このログインを有効にするか無効にするかを指定します。 ログインを無効にしても、既に接続されているログインの動作には影響しません。 (`KILL` ステートメントを使用して、既存の接続を終了します。)無効にしたログインの権限を保持したまま、偽装を継続することができます。  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 変更するログインのパスワードを指定します。 パスワードでは大文字と小文字が区別されます。  
   
  SQL データベースに対するアクティブな接続が (データベース エンジンによって実行されます) を再認証を必要と継続的に、少なくとも 10 時間。 データベース エンジンは、最初に送信されたパスワードを使用して再認証を試行して、ユーザー入力は必要ありません。 パフォーマンス上の理由から、SQL データベースで、パスワードがリセットされたとき、接続はできません、再認証場合でも、接続プールのために、接続がリセットします。 これは、内部設置型 SQL Server の動作と異なります。 接続が最初に承認されているために、パスワードは変更されている場合、は、接続を終了する必要があり、新しいパスワードを使用して新しい接続が作成します。 KILL DATABASE CONNECTION 権限を持つユーザーは、KILL コマンドを使用して SQL データベースへの接続を明示的に終了できます。 詳しくは、「[KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)」をご覧ください。  
   
- PASSWORD **=***hashed_password*  
+ PASSWORD **=**_hashed\_password_  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  HASHED キーワードにのみ適用されます。 作成するログインのパスワードのハッシュ値を指定します。  
@@ -152,7 +149,7 @@ ALTER LOGIN login_name
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのみに適用されます。 PASSWORD 引数の後に入力されたパスワードが、ハッシュ済みであることを示します。 このオプションを選択しなかった場合、パスワードはハッシュされてからデータベースに格納されます。 このオプションは、2 つのサーバー間でログインを同期する場合にのみ使用してください。 パスワードを定期的に変更する場合は HASHED オプションを使用しないでください。  
   
- OLD_PASSWORD **='***oldpassword***'**  
+ OLD_PASSWORD **='**_oldpassword_**'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 新しいパスワードを割り当てるログインの、現在のパスワードを指定します。 パスワードでは大文字と小文字が区別されます。  
   
  MUST_CHANGE   
@@ -160,12 +157,12 @@ ALTER LOGIN login_name
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 このオプションを指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で変更後のログインを最初に使用するときには新しいパスワードの入力が求められます。  
   
- DEFAULT_DATABASE **=***database*  
+ DEFAULT_DATABASE **=**_database_  
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  既定のデータベースをログインに割り当てます。  
   
- DEFAULT_LANGUAGE **=***language*  
+ DEFAULT_LANGUAGE **=**"_言語_"  
  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -300,7 +297,7 @@ GO
 ```  
   
 ### <a name="f-unlocking-a-login"></a>F. ログインのロックを解除する  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのロックを解除するには、**** を必要なアカウントのパスワードに置き換えて、次のステートメントを実行します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのロックを解除するには、\*\*\*\* を必要なアカウントのパスワードに置き換えて、次のステートメントを実行します。  
   
   
 ```sql  

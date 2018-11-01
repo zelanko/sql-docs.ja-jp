@@ -36,7 +36,7 @@ public java.lang.String getNumericFunctions()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 使用可能な数学関数を含むです。  
+ 使用可能な数学関数を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

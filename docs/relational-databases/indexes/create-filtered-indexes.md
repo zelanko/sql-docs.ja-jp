@@ -5,9 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36ce8bf525cb02a2ddee85e02fba8947bc6d1e95
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603250"
 ---
 # <a name="create-filtered-indexes"></a>フィルター選択されたインデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,9 @@ ms.locfileid: "43065469"
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   フィルター選択されたインデックスをビューに作成することはできません。 ただし、クエリ オプティマイザーにとって、ビューで参照されているテーブルに定義されたフィルター選択されたインデックスは役立ちます。 クエリ オプティマイザーでは、クエリ結果が正しくなる場合、ビューから選択するクエリに対してフィルター選択されたインデックスが検討されます。  
+-   フィルター選択されたインデックスをビューに作成することはできません。 ただし、クエリ オプティマイザーにとって、ビューで参照されているテーブルに定義されたフィルター選択されたインデックスは役立ちます。 クエリ オプティマイザーでは、クエリ結果が正しくなる場合、ビューから選択するクエリに対してフィルター選択されたインデックスが検討されます。
+
+-   フィルター式でアクセスされる列が CLR データ型の場合、テーブルにフィルター選択されたインデックスを作成することはできません。
   
 -   フィルター選択されたインデックスは、インデックス付きビューよりも次の点で優れています。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "43065469"
   
 6.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
   
-7.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+7.  **[_table\_name_ から列を選択]** ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   

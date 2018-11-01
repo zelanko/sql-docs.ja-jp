@@ -52,7 +52,7 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
   
  *typeNamePattern*  
   
- テーブル名のパターンを含む**文字列**です。  
+ 型名のパターンを含む **String** です。  
   
  *types*  
   
@@ -65,7 +65,7 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getURL メソッドは、java.sql.DatabaseMetaData インターフェイスの getURL メソッドで規定されています。  
+ この getUDTs メソッドは、java.sql.DatabaseMetaData インターフェイスの getUDTs メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

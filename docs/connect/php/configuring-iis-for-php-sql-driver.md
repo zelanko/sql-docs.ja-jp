@@ -1,5 +1,5 @@
 ---
-title: SQL Server 用 Microsoft Drivers for PHP に対する IIS の構成
+title: SQL Server 用 Microsoft Drivers for PHP に対する IIS の構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql

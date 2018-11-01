@@ -27,8 +27,8 @@ ms.locfileid: "47615391"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setClientInfo (java.util.Properties) メソッド](../../../connect/jdbc/reference/setclientinfo-method-java-util-properties.md)|接続のクライアント情報のプロパティの値を設定します。|  
-|[setClientInfo (java.lang.String, java.lang.String) メソッド](../../../connect/jdbc/reference/setclientinfo-method-java-lang-string-java-lang-string.md)|指定されたクライアント情報のプロパティの値を設定します。|  
+|[setClientInfo &#40;java.util.Properties&#41; メソッド](../../../connect/jdbc/reference/setclientinfo-method-java-util-properties.md)|接続のクライアント情報のプロパティの値を設定します。|  
+|[setClientInfo &#40;java.lang.String, java.lang.String&#41; メソッド](../../../connect/jdbc/reference/setclientinfo-method-java-lang-string-java-lang-string.md)|指定されたクライアント情報のプロパティの値を設定します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

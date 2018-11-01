@@ -1,5 +1,5 @@
 ---
-title: 'ステップ 1: Ruby 開発用に開発環境を構成する'
+title: 'ステップ 1: Ruby 開発用に開発環境を構成する | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -58,7 +58,7 @@ c. ファイルを抽出する"OK"と「展開」をクリックします。
 > gem inst tiny_tds
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux 17.10  
+## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
 1. **ターミナルを開く**  
   

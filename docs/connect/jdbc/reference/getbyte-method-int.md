@@ -26,7 +26,7 @@ ms.locfileid: "47734646"
 # <a name="getbyte-method-int"></a>getByte (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を値として取得します。  
+  パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を**バイト**値として取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,10 +47,10 @@ public byte getByte(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getDate メソッドは、java.sql.CallableStatement インターフェイスの getDate メソッドで規定されています。  
+ この getByte メソッドは、java.sql.CallableStatement インターフェイスの getByte メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
- [getDate メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
+ [getByte メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

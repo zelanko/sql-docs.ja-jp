@@ -36,7 +36,7 @@ public boolean nullsAreSortedAtEnd()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 最後に並べ替える場合は  です。 それ以外の場合は、 **false**です。  
+ 最後に並べ替える場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -26,7 +26,7 @@ ms.locfileid: "47660320"
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>getLockTimeout メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) を示す値を返します。  
+  データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) を示す **int** 値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +36,7 @@ public int getLockTimeout()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- データベースが待機する時間 (ミリ秒) を含む値です。  
+ データベースが待機する時間 (ミリ秒) を含む **int** 値です。  
   
 ## <a name="remarks"></a>Remarks  
  ロック タイムアウトは、データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) です。既定値の -1 は、無制限に待機することを意味します。 値を指定した場合、接続上のすべてのステートメントに対する既定値になります。  

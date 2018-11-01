@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 84a52fb481fce992d9b51bdb6e566f305dc174b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821990"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120239"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの作成または構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47821990"
   
      [可用性グループの追加のリスナーの作成 (省略可能)](#CreateAdditionalListener)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="DoesListenerExist"></a> この可用性グループに既にリスナーが存在するか  
  **可用性グループにリスナーが既に存在するかどうかを確認するには**  
@@ -303,7 +303,7 @@ ms.locfileid: "47821990"
   
 -   **MultiSubnetFailover** を true に設定しない接続文字列  
   
-     `RegisterAllProvidersIP = 1`の場合、接続文字列で `MultiSubnetFailover = True`を使用しないクライアントは、接続の待機時間が長くなります。 これが発生するのは、このようなクライアントはすべての IP への接続を順に試行するためです。 これに対し、 **RegisterAllProvidersIP** を 0 に変更すると、WSFC クラスターのクライアント アクセス ポイントにアクティブな IP アドレスが登録され、レガシ クライアントの待機時間が短縮されます。 したがって、可用性グループ リスナーに接続する必要があるが、 **MultiSubnetFailover** プロパティを使用できないレガシ クライアントがある場合は、 **RegisterAllProvidersIP** を 0 に変更することをお勧めします。  
+     `RegisterAllProvidersIP = 1`の場合、接続文字列で `MultiSubnetFailover = True`を使用しないクライアントは、接続の待機時間が長くなります。 これが発生するのは、このようなクライアントはすべての IP への接続を順に試行するためです。 これに対し、 **RegisterAllProvidersIP** を 0 に変更すると、WSFC クラスターのクライアント アクセス ポイントにアクティブな IP アドレスが登録され、レガシ クライアントの待機時間が短縮されます。 したがって、可用性グループ リスナーに接続する必要がり、**MultiSubnetFailover** プロパティを使用できないレガシ クライアントがある場合は、**RegisterAllProvidersIP** を 0 に変更することをお勧めします。  
   
     > [!IMPORTANT]  
     >  WSFC クラスター (フェールオーバー クラスター マネージャーの GUI) を通して可用性グループ リスナーを作成すると、 **RegisterAllProvidersIP** は既定で 0 (false) になります。  

@@ -44,7 +44,7 @@ public void forget(javax.transaction.xa.Xid xid)
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- この commit メソッドは、javax.transaction.xa.XAResource インターフェイスの commit メソッドで規定されています。  
+ この forget メソッドは、javax.transaction.xa.XAResource インターフェイスの forget メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAResource のメソッド](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

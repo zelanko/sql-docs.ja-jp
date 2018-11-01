@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 04/15/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], TDE using an EKM
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-caps.latest.revision: 26
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b70e78455aca3f25ba880d3a4fb8ad5bd8ed32c8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 62d910ed7b43d0334c8bf15c49c47d2214e81b85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627460"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>EKM の使用による TDE の有効化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護する透過的なデータ暗号化 (TDE) を可能にする方法について説明します。  
+  この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護するために、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で Transparent Data Encryption (TDE) を有効にする方法について説明します。  
   
  TDE では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 データベース暗号化キーは、master データベースのデータベース マスター キーによって保護される証明書を使用して保護することもできます。 データベース マスター キーを使用してデータベース暗号化キーを保護する方法の詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されているときに TDE を構成する方法については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。 Azure Key Vault でキーを使用して TDE を構成する方法の詳細については、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」を参照してください。 
 
@@ -40,7 +37,7 @@ ms.locfileid: "43084208"
   
 -   データベース暗号化キーの作成およびデータベースの暗号化は、高い特権を持つユーザー (システム管理者など) が行う必要があります。 このユーザーは、EKM モジュールが認証できるユーザーである必要があります。  
   
--   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は、起動時にデータベースを開く必要があります。 これを行うには、EKM によって認証される資格情報を作成し、非対称キーに基づくログインにその資格情報を追加する必要があります。 ユーザーがこのログインを使用してログインすることはできませんが、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は EKM デバイスで自身を認証することができます。  
+-   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は、起動時にデータベースを開く必要があります。 これを行うには、EKM によって認証される資格情報を作成し、非対称キーに基づくログインにその資格情報を追加する必要があります。 ユーザーがこのログインを使用してログインすることはできませんが、[!INCLUDE[ssDE](../../../includes/ssde-md.md)] は EKM デバイスで自身を認証することができます。  
   
 -   EKM モジュールに格納されている非対称キーが失われている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]はデータベースを開くことができません。 EKM プロバイダーを使用して非対称キーをバックアップできる場合は、バックアップを作成して安全な場所に保存しておく必要があります。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "43084208"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- このトピックでは、次の権限を使用します。  
+ この記事では、次の権限を使用します。  
   
 -   構成オプションを変更して RECONFIGURE ステートメントを実行するには、ALTER SETTINGS サーバーレベル権限が与えられている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   

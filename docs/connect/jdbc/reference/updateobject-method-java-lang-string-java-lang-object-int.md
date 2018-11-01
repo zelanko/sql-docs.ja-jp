@@ -1,5 +1,5 @@
 ---
-title: setObject メソッド (java.lang.String, java.lang.Object, int) | Microsoft Docs
+title: updateObject (java.lang.String, java.lang.Object, int) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47654918"
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject (java.lang.String, java.lang.Object, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された列インデックスおよび小数点以下桁数を使用して、指定された列を **Object** 値で更新します。  
+  渡された列名および小数点以下桁数を使用して、指定された列を **Object** 値で更新します。  
   
 ## <a name="syntax"></a>構文  
   

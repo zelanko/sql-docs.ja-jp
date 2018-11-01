@@ -36,7 +36,7 @@ public int[] executeBatch()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 更新数を含む int 配列です。  
+ 更新数を含む **int** の配列です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +44,7 @@ public int[] executeBatch()
  java.sql.BatchUpdateException  
   
 ## <a name="remarks"></a>Remarks  
- この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドで規定されています。  
+ この executeBatch メソッドは、java.sql.Statement インターフェイスの executeBatch メソッドで規定されています。  
   
  コマンドをデータベースに送信した後、このメソッドはバッチ内のすべてのコマンドをクリアします。  
   

@@ -6,25 +6,22 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85a5f5a6eda29264baee432a1b8c8b17dee8f6ae
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: edad80b1e0172073f6be494519d2ae68f3a1dc90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855140"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server の単体テストでのテスト条件の使用
-SQL Server 単体テストでは、1 つ以上の Transact\-SQL テスト スクリプトが実行されます。 結果は Transact\-SQL スクリプト内で評価することができ、エラーを返してテストに失敗するには THROW または RAISERROR が使用されます。また、結果を評価するテスト内でテスト条件を定義することもできます。 テスト結果として、 [SqlExecutionResult](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) クラスのインスタンスが返されます。 このクラスのインスタンスには、1 つ以上のデータセット、実行時間、およびスクリプトの影響を受けた行数が含まれます。 この情報すべては、スクリプトの実行中に収集されます。 これらの結果は、テスト条件を使用して評価できます。 SQL Server Data Tools には、定義済みのテスト条件が用意されています。 また、カスタム条件を作成して使用することもできます (「[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)」をご覧ください)。  
+SQL Server 単体テストでは、1 つ以上の Transact\-SQL テスト スクリプトが実行されます。 結果は Transact\-SQL スクリプト内で評価することができ、エラーを返してテストに失敗するには THROW または RAISERROR が使用されます。また、結果を評価するテスト内でテスト条件を定義することもできます。 テスト結果として、[SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) クラスのインスタンスが返されます。 このクラスのインスタンスには、1 つ以上のデータセット、実行時間、およびスクリプトの影響を受けた行数が含まれます。 この情報すべては、スクリプトの実行中に収集されます。 これらの結果は、テスト条件を使用して評価できます。 SQL Server Data Tools には、定義済みのテスト条件が用意されています。 また、カスタム条件を作成して使用することもできます (「[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)」をご覧ください)。  
   
 ## <a name="predefined-test-conditions"></a>定義済みテスト条件  
 次の表に、SQL Server 単体テスト デザイナーの [テスト条件] ウィンドウを使用して追加できる定義済みテスト条件を示します。  

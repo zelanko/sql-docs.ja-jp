@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087144"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797360"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Team Foundation ビルドから SQL Server の単体テストを実行する方法
 Team Foundation ビルドを使用すると、SQL Server の単体テストをビルド確認テスト (BVT) の一環として実行できます。 データベースを配置し、テスト データを生成して、選択したテストを実行するように単体テストを構成できます。 Team Foundation ビルドを使い慣れていない場合は、このトピックの手順を実行する前に、次の情報を確認してください。  
@@ -118,7 +115,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 3.  **"app.config のコピー"** というファイルを右クリックし、[名前の変更] をクリックします。  
   
-4.  「*BuildComputer***.sqlunitttest.config**」と入力して、Enter キーを押します。*BuildComputer* は、ビルド エージェントが実行されるコンピューターの名前です。  
+4.  「_BuildComputer_**.sqlunitttest.config**」と入力して、Enter キーを押します。*BuildComputer* は、ビルド エージェントが実行されるコンピューターの名前です。  
   
 5.  *BuildComputer*.sqlunitttest.config をダブルクリックします。  
   
@@ -277,7 +274,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 1.  チーム エクスプローラーで、チーム プロジェクトのノード、[ビルド] ノードの順に展開し、実行するビルド定義を右クリックして、[新しいビルドをキューに配置] をクリックします。  
   
-    **[ビルド {***TeamProjectName***} をキューに配置]** ダイアログ ボックスが表示され、既存のすべてのビルドの種類の一覧が表示されます。  
+    **[ビルド {**_TeamProjectName_**} をキューに配置]** ダイアログ ボックスが表示され、既存のすべてのビルドの種類の一覧が表示されます。  
   
 2.  必要に応じて、**[ビルド定義]** で、新しいビルド定義をクリックします。  
   

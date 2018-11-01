@@ -1,5 +1,5 @@
 ---
-title: updateString (java.lang.String, java.lang.String) メソッド | Microsoft Docs
+title: execute メソッド (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

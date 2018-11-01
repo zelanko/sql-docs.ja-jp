@@ -62,7 +62,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getURL メソッドは、java.sql.DatabaseMetaData インターフェイスの getURL メソッドで規定されています。  
+ この getColumns メソッドは、java.sql.DatabaseMetaData インターフェイスの getColumns メソッドで規定されています。  
   
  getColumns メソッドによって返される結果セットには、次の情報が含まれます。  
   

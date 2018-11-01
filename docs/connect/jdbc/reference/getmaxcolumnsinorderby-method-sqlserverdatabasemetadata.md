@@ -36,7 +36,7 @@ public int getMaxColumnsInOrderBy()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 許容される最大の列数を示すです。  
+ 許容される最大の列数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

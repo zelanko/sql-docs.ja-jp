@@ -1,5 +1,5 @@
 ---
-title: 'ステップ 1: PHP 開発用に開発環境を構成する'
+title: 'ステップ 1: PHP 開発用に開発環境を構成する | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql

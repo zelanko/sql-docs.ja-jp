@@ -26,7 +26,7 @@ ms.locfileid: "47771010"
 # <a name="setworkstationid-method-sqlserverdatasource"></a>setWorkstationID メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  データ ソースへの接続に使用されるクライアント コンピューターの名前を返します。  
+  データ ソースへの接続に使用されるクライアント コンピューターの名前を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,9 +36,9 @@ public void setWorkstationID(java.lang.String workstationID)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- workstationID  
+ *workstationID*  
   
- クライアント コンピューターの名前を含むです。  
+ クライアント コンピューターの名前を含む**文字列**です。  
   
 ## <a name="remarks"></a>Remarks  
  workstationID は、クライアント コンピューターまたはワークステーションの名前です。 WorkstationID プロパティが設定されていない場合、既定値は InetAddress.getLocalHost().getHostName() メソッドを呼び出すことによって構築されます。 空白の値を返す getHostName getHostAddress().toString() メソッドが呼び出されます。  

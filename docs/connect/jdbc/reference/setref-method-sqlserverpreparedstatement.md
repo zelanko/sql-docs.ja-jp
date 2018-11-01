@@ -26,7 +26,7 @@ ms.locfileid: "47677926"
 # <a name="setref-method-sqlserverpreparedstatement"></a>setRef メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された  オブジェクトに設定します。  
+  指定されたパラメーターを、渡された Ref オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public final void setRef(int i,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- メソッドは、java.sql.PreparedStatement インターフェイスの  メソッドで規定されています。  
+ この setRef メソッドは、java.sql.PreparedStatement インターフェイスの setRef メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

@@ -27,9 +27,9 @@ ms.locfileid: "47706280"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setCharacterStream (java.lang.String, java.io.Reader) メソッド](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
-|[setCharacterStream (java.lang.String, java.io.Reader, int) メソッド](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-int.md)|指定されたパラメーターを、指定された文字数である指定された  オブジェクトに設定します。|  
-|[setCharacterStream (java.lang.String, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である指定された  オブジェクトに設定します。|  
+|[setCharacterStream メソッド &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
+|[setCharacterStream メソッド &#40;java.lang.String, java.io.Reader, int&#41;](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-int.md)|指定されたパラメーターを、指定された文字数である指定された java.io.Reader オブジェクトに設定します。|  
+|[setCharacterStream メソッド &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である指定された java.io.Reader オブジェクトに設定します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

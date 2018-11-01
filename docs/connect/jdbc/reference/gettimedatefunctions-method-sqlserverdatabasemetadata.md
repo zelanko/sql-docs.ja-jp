@@ -36,7 +36,7 @@ public java.lang.String getTimeDateFunctions()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 時間関数および日付関数の一覧を含むです。  
+ 時間関数および日付関数の一覧を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

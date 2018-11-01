@@ -1,5 +1,5 @@
 ---
-title: getShort (java.lang.String) メソッド (SQLServerResultSet) | Microsoft Docs
+title: getSQLXML メソッド (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -45,7 +45,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String columnLabel)
  この getSQLXML メソッドは、java.sql.ResultSet インターフェイスの getSQLXML メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateSQLXML メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   
+ [getSQLXML メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   

@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ccc1b9d142bb88af046415f76d91073c539d1f17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697980"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169030"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ WITH
  WITH  
  変更するルート情報を定義するための句を、WITH の後に指定します。  
   
- SERVICE_NAME **='***service_name***'**  
+ SERVICE_NAME **='**_service\_name_**'**  
  このルートが示すリモート サービスの名前を指定します。 *service_name* はリモート サービスで使用される名前と正確に一致する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は *service_name* をバイト単位で照合します。 つまり、この比較では大文字と小文字が区別され、現在の照合順序は考慮されません。 **'SQL/ServiceBroker/BrokerConfiguration'** というサービス名を持つルートは、Broker Configuration Notice サービスへのルートです。 このサービスへのルートは、ブローカー インスタンスを指定できない場合があります。  
   
  SERVICE_NAME 句を省略した場合、ルートのサービス名は変更されません。  
   
- BROKER_INSTANCE **='***broker_instance***'**  
+ BROKER_INSTANCE **='**_broker\_instance_**'**  
  発信先サービスをホストするデータベースを指定します。 *broker_instance* パラメーターは、リモート データベース用のブローカー インスタンス識別子である必要があります。これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
 ```  
@@ -79,10 +79,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- LIFETIME **=***route_lifetime*  
+ LIFETIME **=**_route\_lifetime_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がルーティング テーブルにルートを保持する時間を秒単位で指定します。 有効期間が終了するとルートは期限切れとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいメッセージ交換用のルートを選択するときに、そのルートは考慮されなくなります。 この句を省略した場合、ルートの有効期限は変更されません。  
   
- ADDRESS **='***next_hop_address'*  
+ ADDRESS **='**_next\_hop\_address_'  
 
  Azure SQL Database Managed Instance の場合、`ADDRESS` はローカルである必要があります。
 
@@ -109,7 +109,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
  プリンシパル サーバーが *next_hop_address* となっているミラーリング ペアのミラー サーバーのネットワーク アドレスを指定します。 *next_hop_mirror_address* は、次の形式で TCP/IP アドレスを指定します。  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  

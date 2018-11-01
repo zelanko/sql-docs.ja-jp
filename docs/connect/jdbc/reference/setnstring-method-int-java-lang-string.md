@@ -21,7 +21,7 @@ ms.locfileid: "47650020"
 # <a name="setnstring-method-int-javalangstring"></a>setNString (int, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、指定された  オブジェクトに設定します。  
+  指定されたパラメーターを、指定された **String** オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ public final void setNString(int parameterIndex,
   
  *value*  
   
- パラメーター値を含む  オブジェクトです。  
+ パラメーター値を含む **String** オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 57c63acb4de381e89484ffc356592dfb2b57bbc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817560"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120429"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | 引数 | 説明 |
  | -------- | ----------- |
  | *constraint_name* | (省略可能) 制約の名前です。 制約名は、データベース内で一意です。 名前は、他のデータベース内で再利用できます。 |
- | *constant_expression* | 列の既定値。 式は、リテラル値である必要があります、または定数。 たとえば、`'CA'` や `4` などの定数式は許可されます。 `2+3` や `CURRENT_TIMESTAMP` などは許可されません。 |
+ | *constant_expression* | 列の既定値。 式は、リテラル値または定数である必要があります。 たとえば、`'CA'` や `4` などの定数式は許可されます。 `2+3` や `CURRENT_TIMESTAMP` などは許可されません。 |
   
 
 ### <a name="TableOptions"></a> テーブル構造のオプション
@@ -514,7 +514,7 @@ WITH
 ```  
   
 ### <a name="DatePartition"></a> J. 日付でパーティション分割テーブルを作成します。  
- 次の例では、`myTable` という名前の新しいテーブルを作成し、`date` 列に基づいてパーティション分割を行います。 境界値の範囲の右側と日付を使用するは、各パーティション内の月のデータを格納します。  
+ 次の例は、という名前の新しいテーブルを作成 `myTable`, にパーティション分割、 `date` 列です。 境界値の範囲の右側と日付を使用するは、各パーティション内の月のデータを格納します。  
   
 ```  
 CREATE TABLE myTable (  

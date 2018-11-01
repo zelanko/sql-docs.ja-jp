@@ -49,7 +49,7 @@ public byte[] getBytes(int index)
 ## <a name="remarks"></a>Remarks  
  以前のバージョンの [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、SQLServerCallableStatement.getBytes を使用してバイト配列と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型の **date**、**time**、**datetime2**、または **datetimeoffset** との間の変換を実行できました。 新しいバージョンでは、これらのデータ型に対してこのメソッドを使用すると、変換がサポートされていないことを示す例外が発生します。  
   
- この setBytes メソッドは、java.sql.CallableStatement インターフェイスの setBytes メソッドで指定されています。  
+ この getBytes メソッドは、java.sql.CallableStatement インターフェイスの getBytes メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [getBytes メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   

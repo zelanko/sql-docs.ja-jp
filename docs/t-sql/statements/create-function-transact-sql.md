@@ -36,12 +36,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4e29041776bb0b4c9edde3d2e839b89b8e88100a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596881"
+ms.locfileid: "47864290"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -338,7 +338,7 @@ RETURNS return_data_type
  *select_stmt*  
  インライン テーブル値関数の戻り値を定義する単一の SELECT ステートメントです。  
   
- ORDER (\<order_clause>) は、テーブル値関数から結果が返される順序を指定します。 詳細については、このトピックで後述する「並べ替え順序の使用に関するガイダンス」を参照してください。  
+ ORDER (\<order_clause>) は、テーブル値関数から結果が返される順序を指定します。 詳細については、このトピックで後述する「[並べ替え順序の使用に関するガイダンス](#using-sort-order-in-clr-table-valued-functions)」を参照してください。  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   

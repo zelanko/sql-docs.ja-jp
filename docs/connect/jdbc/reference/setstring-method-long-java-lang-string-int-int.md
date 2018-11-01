@@ -1,13 +1,11 @@
 ---
-title: setString メソッド (long, java.lang.String, int, int) |Microsoft ドキュメント
+title: setString (long, java.lang.String, int, int) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.setString (long, java.lang.String, int, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef844ff6d9ce4d9868345b56c6e0f39dceeb8839
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ba5046a2036b88c3ec55499a6e86609d8b050f7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611060"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString (long, java.lang.String, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,15 +61,15 @@ public int setString(long pos,
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>解説  
- この setString メソッドは、setString、java.sql.Clob インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setString メソッドは、java.sql.Clob インターフェイスで、setString メソッドによって指定されます。  
   
  文字データは、指定された開始位置から上書きされ、CLOB の初期データの長さを上書きできます。 開始位置に CLOB の長さ + 1 の値を指定すると、文字列が追加されます。 開始位置に CLOB の長さ + 2 以上 (または 0 以下) の値を指定すると、位置エラーがスローされます。  
   
 ## <a name="see-also"></a>参照  
  [setString メソッド&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob のメソッド](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
- [SQLServerClob のメンバー](../../../connect/jdbc/reference/sqlserverclob-members.md)   
+ [SQLServerClob メンバー](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob クラス](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

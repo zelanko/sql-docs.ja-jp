@@ -21,7 +21,7 @@ ms.locfileid: "47754590"
 # <a name="setsqlxml-method-sqlserverpreparedstatement"></a>setSQLXML メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、指定された  オブジェクトに設定します。  
+  指定されたパラメーターを、指定された SQLXML オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ public final void setSQLXML(int parameterIndex,
   
  *xmlObject*  
   
- パラメーター値を含む  オブジェクトです。  
+ パラメーター値を含む SQLXML オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

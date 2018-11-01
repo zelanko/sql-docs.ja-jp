@@ -26,7 +26,7 @@ ms.locfileid: "47610730"
 # <a name="updatebyte-method-int-byte"></a>updateByte (int, byte) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された列インデックスを使用して、指定された列を日付の値で更新します。  
+  渡された列インデックスを使用して、指定された列を **byte** の値で更新します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,7 +52,7 @@ public void updateByte(int index,
  この updateByte メソッドは、java.sql.ResultSet インターフェイスの updateByte メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateBytes メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)   
+ [updateByte メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

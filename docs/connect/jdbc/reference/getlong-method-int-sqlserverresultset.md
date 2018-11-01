@@ -47,7 +47,7 @@ public long getLong(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getLong メソッドは、java.sql.CallableStatement インターフェイスの getLong メソッドで規定されています。  
+ この getLong メソッドは、java.sql.ResultSet インターフェイスの getLong メソッドで規定されています。  
   
  このメソッドは、bigint、int、smallint、tinyint、bit などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   

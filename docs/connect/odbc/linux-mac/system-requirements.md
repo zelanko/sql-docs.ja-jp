@@ -1,5 +1,5 @@
 ---
-title: OLE DB Driver for SQL Server のシステム要件 | Microsoft Docs
+title: システム要件 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql

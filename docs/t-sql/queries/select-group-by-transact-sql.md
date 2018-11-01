@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -35,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105913"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906022"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -312,19 +310,19 @@ ROLLUP、CUBE、または GROUPING SETS を使用する GROUP BY 句の場合、
  
 -   次の例では、4097 (2<sup>12</sup> + 1) 個のグループ化セットが生成され、失敗します。  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
 -   次の例では、4097 (2<sup>12</sup> + 1) 個のグループが生成され、失敗します。 `CUBE ()` と `()` の両方のグループ化セットで総計行が生成され、重複したグループ化セットは削除されません。  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
     ```  
 
 -   この例では、下位互換性のある構文を使用します。 8192 (2<sup>13</sup>) 個のグループ化セットが生成され、失敗します。  
   
-    ```  
+    ```sql
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
@@ -346,7 +344,7 @@ GROUP BY 句では、SQL-2006 標準規格に含まれているすべての GROU
 |機能|SQL Server Integration Services|SQL Server 互換性レベル 100 以上|SQL Server 2008 以降で互換性レベル 90|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 集計|WITH CUBE および WITH ROLLUP ではサポートされていません。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE、および ROLLUP でサポートされています。|互換性レベル 100 と同じです。|  
-|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|GROUP BY 句では、ユーザー定義関数 **dbo.cube(***arg1***,***...argN***)** または **dbo.rollup(***arg1***,**...*argN***)* が使用できます。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (***arg1***,**...argN **)** または **dbo.rollup(** arg1 **,***...argN***)** は使用できません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 「キーワード 'cube'&#124;'rollup' の周辺に正しくない構文があります」というエラー メッセージが返されます。<br /><br /> この問題を回避するには、`dbo.cube` を `[dbo].[cube]` に、または `dbo.rollup` を `[dbo].[rollup]` に置き換えます。<br /><br /> 次の例は使用できます: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (***arg1***,***...argN*) または **dbo.rollup(***arg1***,***...argN***)** が使用できます<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|GROUP BY 句では、ユーザー定義関数 **dbo.cube(**_arg1_**,**_...argN_**)** または **dbo.rollup(**_arg1_**,**..._argN_**)** を使用できます。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (**_arg1_**,**...argN **)** または **dbo.rollup(** arg1 **,**_...argN_**)** は使用できません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 「キーワード 'cube'&#124;'rollup' の周辺に正しくない構文があります」というエラー メッセージが返されます。<br /><br /> この問題を回避するには、`dbo.cube` を `[dbo].[cube]` に、または `dbo.rollup` を `[dbo].[rollup]` に置き換えます。<br /><br /> 次の例は使用できます: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (**_arg1_**,**_...argN_) または **dbo.rollup(**_arg1_**,**_...argN_**)** を使用できます<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|サポートされていません|Supported|Supported|  
 |CUBE|サポートされていません|Supported|サポートされていません|  
 |ROLLUP|サポートされていません|Supported|サポートされていません|  

@@ -27,8 +27,8 @@ ms.locfileid: "47706090"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[updateNString (int, java.lang.String) メソッド](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|指定された列ラベルを使用して、指定された列を **String** 値で更新します。|  
-|[updateNString (java.lang.String, java.lang.String) メソッド](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|指定された列ラベルを使用して、指定された列を **String** 値で更新します。|  
+|[updateNString メソッド &#40;int, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|指定された列インデックスを使用して、指定された列を **String** 値で更新します。|  
+|[updateNString メソッド &#40;java.lang.String, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|指定された列ラベルを使用して、指定された列を **String** 値で更新します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

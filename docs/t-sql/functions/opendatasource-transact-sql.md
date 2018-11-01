@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENDATASOURCE
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 8764d1e8b8ae4facebf49fa746740f69fb8148e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752760"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  データ ソースにアクセスするときに使用される、OLE DB プロバイダーの PROGID として登録されている名前を指定します。 *provider_name* のデータ型は **char** であり、既定値はありません。  
   
  *init_string*  
- 接続先のプロバイダーの IDataInitialize インターフェイスに渡される接続文字列を指定します。 プロバイダーの文字列には、**'***keyword1*=* value***;***keyword2*=* value***'** のように、セミコロンで区切ったキーワードと値の組を指定します。  
+ 接続先のプロバイダーの IDataInitialize インターフェイスに渡される接続文字列を指定します。 プロバイダーの文字列には、**'**_keyword1_=_value_**;***keyword2*=* value***'** のように、セミコロンで区切ったキーワードと値の組を指定します。  
   
  プロバイダーでサポートされる、特定のキーワードと値の組み合わせについては、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK を参照してください。 このドキュメントには、基本構文が定義されています。 次の表は、*init_string* 引数で最もよく使われるキーワードの一覧です。  
   
@@ -86,7 +83,7 @@ OPENDATASOURCE ( provider_name, init_string )
  すべてのユーザーが OPENDATASOURCE を実行できます。 リモート サーバーへの接続に使用される権限は、接続文字列によって決まります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、サーバー `London` 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `Payroll` インスタンスにアドホック接続を作成し、`AdventureWorks2012.HumanResources.Employee` テーブルをクエリします。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。  
+ 次の例では、サーバー `Payroll` 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `London` インスタンスにアドホック接続を作成し、`AdventureWorks2012.HumanResources.Employee` テーブルをクエリします。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。  
   
 ```  
 SELECT *  

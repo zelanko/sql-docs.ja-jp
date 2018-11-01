@@ -36,7 +36,7 @@ public final int getUpdateCount()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 更新数を含むです。 返された結果が結果セット オブジェクトである場合、または結果がなくなった場合は、-1 が返されます。  
+ 更新数を含む **int** です。 返された結果が結果セット オブジェクトである場合、または結果がなくなった場合は、-1 が返されます。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -5,9 +5,7 @@ ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6924a66746699e429ef2cd45d1692ced5c9bf44d
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630360"
 ---
 # <a name="create-a-login"></a>ログインの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -168,9 +165,9 @@ ms.locfileid: "43118539"
   
 1.  **[検索]** をクリックします。  
   
-2.  **[オブジェクトの追加]** ダイアログ ボックスで、**[特定のオブジェクト]**、**[この種類のすべてのオブジェクト]**、**[サーバー***server_name]* のいずれかのオプションを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  **[オブジェクトの追加]** ダイアログ ボックスで、**[特定のオブジェクト]**、**[この種類のすべてのオブジェクト…]**、**[サーバー _server\_name_]** のいずれかのオプションを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **注:** *[サーバー***server_name]* を選択すると、そのサーバーのセキュリティ保護可能なすべてのオブジェクトが上のグリッドに自動的に入力されます。  
+    > **注:** **[サーバー _server\_name_]** を選択すると、そのサーバーのセキュリティ保護可能なすべてのオブジェクトが上のグリッドに自動的に入力されます。  
   
 3.  **[特定のオブジェクト]** を選択した場合:  
   

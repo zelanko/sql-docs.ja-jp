@@ -26,7 +26,7 @@ ms.locfileid: "47733788"
 # <a name="setstring-method-sqlserverpreparedstatement"></a>setString メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された java 値に設定します。  
+  指定されたパラメーターを、渡された**文字列**値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ public final void setString(int index,
   
  パラメーターの番号を示す **int** です。  
   
- *STR*  
+ *str*  
   
  **文字列**値です。  
   

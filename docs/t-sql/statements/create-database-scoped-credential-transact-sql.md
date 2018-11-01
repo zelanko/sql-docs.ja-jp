@@ -5,9 +5,7 @@ ms.date: 02/28/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE SCOPED CREDENTIAL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0e356fc4e62fb07cff0f08c375488a759d01712
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 2220349cf0ab3db2a31e2c520fc8ef92acb48eb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762420"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>データベース スコープ ベースの資格情報 (TRANSACT-SQL) の作成します。
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +51,10 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  作成するデータベース スコープの資格情報の名前を指定します。 *credential_name* はシャープ (#) 記号で始めることはできません。 ## で始まる資格情報はシステム資格情報です。  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  サーバーの外部に接続するときに使用するアカウントの名前を指定します。 共有キーを使用して Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。 データを SQL DW に読み込むには、任意の有効な値を ID に使用できます。 Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。  
   
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  送信の認証に必要なシークレットを指定します。 `SECRET` は、Azure Blob Storage からファイルをインポートするために必要です。 Azure Blob Storage から SQL DW または Parallel Data Warehouse に読み込むには、シークレットが Azure Storage キーである必要があります。  
 >  [!WARNING]
 >  SAS キーの値は '?' (疑問符) で始まる可能性があります。 SAS キーを使用する場合は、先頭の '?' を削除する必要があります。 そうしないと、作業がブロックされる可能性があります。  

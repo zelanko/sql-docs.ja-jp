@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a57110500cc51bda0ddaea459d69af7a127ec67c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82df0d5ba110bd7e7f26699ad9b34f3ac50cfacb
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605970"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119910"
 ---
 # <a name="report-server-web-service-endpoints"></a>レポート サーバー Web サービスのエンドポイント
   レポート サーバー Web サービスでは、レポートの実行およびナビゲーションに加えて、レポート サーバーの管理に利用できる複数のエンドポイントが提供されます。  

@@ -35,7 +35,7 @@ public boolean isSparseColumnSet(int column)
  列の (1 から始まる) インデックス。  
   
 ## <a name="return-value"></a>戻り値  
- 結果セットの列がスパース列セットである場合は 、それ以外の場合は 。  
+ 結果セットの列がスパース列セットである場合は **true**、それ以外の場合は **false**。  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドは、データベースから情報を取得しません。  

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server リソースをサポート
+title: Microsoft Drivers for PHP for SQL Server リソースをサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql

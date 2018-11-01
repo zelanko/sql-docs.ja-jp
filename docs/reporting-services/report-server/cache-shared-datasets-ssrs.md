@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 536e0a5e46c6d0650c68ddc41f492365895b31c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5585266d4c326c00a1211c1148f80d2a875a00ba
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617420"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905656"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>複数の共有データセットのキャッシュ (SSRS)
   共有データセットのクエリ結果をキャッシュにコピーしておくと、複数のレポートに一貫性のあるデータを提供し、データセット クエリの応答時間を短縮できます。 レポートと同様に、初回使用時または指定されたスケジュールによってキャッシュされるように共有データセットを構成できます。  

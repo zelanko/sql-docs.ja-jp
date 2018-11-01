@@ -36,7 +36,7 @@ public java.lang.String getDatabaseProductName()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- データベース製品名を含むです。  
+ データベース製品名を含む**文字列**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

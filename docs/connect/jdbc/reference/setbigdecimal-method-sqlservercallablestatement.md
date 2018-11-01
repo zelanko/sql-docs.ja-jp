@@ -26,7 +26,7 @@ ms.locfileid: "47702020"
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>setBigDecimal メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターの番号を、渡された  オブジェクトに設定します。  
+  指定されたパラメーターの番号を、渡された BigDecimal オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ public void setBigDecimal(java.lang.String sCol,
   
  パラメーターの名前を含む**文字列**です。  
   
- BD  
+ *bd*  
   
  BigDecimal オブジェクト。  
   

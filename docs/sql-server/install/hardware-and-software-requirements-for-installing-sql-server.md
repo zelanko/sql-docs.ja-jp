@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9cf9e877f29e00e7f3299cabf555f9ea73b75e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd5f30d426b4d807d91bc500f1c475b71c3289ae
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701820"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383638"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server のインストールに必要なハードウェアおよびソフトウェア
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47701820"
 
 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] では、Linux での [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] が新たにサポートされています。 詳細については、[Linux での [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに必要なハードウェアおよびソフトウェア](../../linux/sql-server-linux-setup.md#system)に関するページを参照してください。 
 
-> この記事は、[!INCLUDE[ss2016](../../includes/sssql15-md.md)] 以降に適用されます。 以前のバージョンの SQL Server に関するコンテンツについては、「[SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](hardware-and-software-requirements-for-installing-sql-server.md)」をご覧ください。 
+> この記事は、[!INCLUDE[ss2016](../../includes/sssql15-md.md)] 以降に適用されます。 
   
 **お試しください:**  
   

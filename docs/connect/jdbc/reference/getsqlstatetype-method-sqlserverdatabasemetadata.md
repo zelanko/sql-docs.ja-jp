@@ -36,7 +36,7 @@ public int getSQLStateType()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- SQLSTATE の種類を示す  です。次のいずれかの値になります。  
+ SQLSTATE の種類を示す **int** です。次のいずれかの値になります。  
   
 -   Java ランタイム環境バージョン 5.0: 場合、 **xopenStates**接続プロパティに設定されて**true**DatabaseMetaData.sqlStateXOpen を返します。 それ以外の場合、DatabaseMetaData.sqlStateSQL99 します。  
   

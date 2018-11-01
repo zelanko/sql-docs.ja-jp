@@ -1,38 +1,35 @@
 ---
-title: '方法: エラーと警告の SQLSRV ドライバーを使用して処理 |Microsoft ドキュメント'
+title: '方法: SQLSRV ドライバーを使用してエラーと警告を処理する | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16791a307fe317aa9495c5b4173cb1ebbb23d719
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: cc7a80e7c63a92863abdbcbba0475fe74f05a3c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799102"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してエラーと警告を処理する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-既定では、SQLSRV ドライバーの警告をエラーとして扱います。呼び出し、 **sqlsrv**エラーまたは警告を生成する関数を返します**false**です。 このトピックでは、この既定の動作を無効にする方法と、エラーとは別に警告を処理する方法について説明します。  
+既定で、SQLSRV ドライバーは警告をエラーとして扱います。エラーまたは警告を生成する **sqlsrv** 関数の呼び出しは **false**を返します。 このトピックでは、この既定の動作を無効にする方法と、エラーとは別に警告を処理する方法について説明します。  
   
 > [!NOTE]  
 > 警告をエラーとして扱う既定の動作にはいくつかの例外があります。 SQLSTATE 値 01000、01001、01003、および 01S02 に対応する警告はエラーとして扱われません。  
   
 ## <a name="example"></a>例  
-次のコード例は、2 つのユーザー定義関数を使用して**DisplayErrors**と**DisplayWarnings**エラーと警告を処理します。 この例は、次の手順で警告とエラーを別に処理する方法を示しています。  
+以下のコード例では、**DisplayErrors** と **DisplayWarnings** という 2 つのユーザー定義関数を使用して、エラーと警告を処理しています。 この例は、次の手順で警告とエラーを別に処理する方法を示しています。  
   
 1.  警告をエラーとして扱う既定の動作を無効にします。  
   
@@ -42,11 +39,11 @@ ms.locfileid: "35307421"
   
 4.  各従業員の残りの休暇時間を表示します。  
   
-最初の呼び出しで、 **sqlsrv**関数 ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md))、警告はエラーとして扱われます。 警告はエラー コレクションに追加されるので、エラーとは別に警告を確認する必要はありません。 ただし、2 回目以降の **sqlsrv** 関数の呼び出しでは、警告はエラーとして扱われなくなるので、警告とエラーを明示的に確認する必要があります。  
+最初の **sqlsrv** 関数の呼び出し ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)) では、警告はエラーとして扱われています。 警告はエラー コレクションに追加されるので、エラーとは別に警告を確認する必要はありません。 ただし、2 回目以降の **sqlsrv** 関数の呼び出しでは、警告はエラーとして扱われなくなるので、警告とエラーを明示的に確認する必要があります。  
   
 また、このコード例では、 **sqlsrv** 関数の各呼び出しの後に、エラーを確認しています。 これは推奨される方法です。  
   
-この例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。 AdventureWorks データベースの新規インストールに対してこの例を実行すると、3 つの警告と 2 つのエラーが生成されます。 最初の 2 つの警告は標準の警告であり、データベースへの接続時に発行されます。 3 つ目の警告は、従業員の使用可能な休暇時間が 0 未満の値に更新された場合に発生します。 エラーは、従業員の使用可能な球形時間が -40 時間未満の値に更新された場合に発生します。-40 は、テーブルの制限に違反している値です。  
+この例では、SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。 AdventureWorks データベースの新規インストールに対してこの例を実行すると、3 つの警告と 2 つのエラーが生成されます。 最初の 2 つの警告は標準の警告であり、データベースへの接続時に発行されます。 3 つ目の警告は、従業員の使用可能な休暇時間が 0 未満の値に更新された場合に発生します。 エラーは、従業員の使用可能な球形時間が -40 時間未満の値に更新された場合に発生します。-40 は、テーブルの制限に違反している値です。  
   
 ```  
 <?php  

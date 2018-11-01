@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 167011e2b54b4cf06bbc627b20cd206fdd7f91f9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b065fd332f45898a728edf7abc2bafb814b6555d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774237"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708110"
 ---
 # <a name="assign-alerts-to-an-operator"></a>オペレーターへの警告の割り当て
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -79,7 +75,7 @@ ms.locfileid: "42774237"
   
 4.  警告を割り当てるオペレーターを右クリックし、 **[プロパティ]** を選択して、 **[通知]** ページを選択します。  
   
-5.  *[<オペレーター名> のプロパティ]* ダイアログ ボックスで、**[ページの選択]** の **[通知]** を選択します。  
+5.  _[operator\_name_ **のプロパティ]** ダイアログ ボックスで、**[ページの選択]** の **[通知]** を選択します。  
   
 6.  **[このユーザーに送信された通知の表示方法]** で、 **[警告]** を選択してこのオペレーターに送信する警告の一覧を表示するか、または **[ジョブ]** を選択してこのオペレーターに通知を送信するジョブの一覧を表示します。 **[電子メール]**、 **[ポケットベル]**、 **[Net Send]** のチェック ボックスの中から 1 つ以上を選択し、必要に応じて通知ごとに通知方法を定義します。  
   

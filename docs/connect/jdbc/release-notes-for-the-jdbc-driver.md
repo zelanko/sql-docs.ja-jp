@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662464"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737260"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC Driver のリリース ノート
 
@@ -114,7 +111,8 @@ Java Database Connectivity API 4.1 および 4.2 だけでなく、4.3 の仕様
 
 JDBC Driver は、SQL Server で使用される sql_variant データ型をサポートします。 Sql_variant は制限事項の下で BulkCopy テーブル値パラメーター (TVP) などの機能でもサポートされています。
 
-1. 日付の値: TVP を使用して値を入れるテーブルで datetime/smalldatetime/date の値が sql_variant 列に格納されているときは、getDateTime()/getSmallDateTime()/getDate() メソッドを結果セットに対して呼び出しても機能せず、次の例外が返されます。`java java.lang.String cannot be cast to java.sql.Timestamp` 回避策: "getString()" メソッドまたは "getObject()" メソッドを代わりに使用します。
+1. 日付の値: TVP を使用して値を入れるテーブルで datetime/smalldatetime/date の値が sql_variant 列に格納されているときは、getDateTime()/getSmallDateTime()/getDate() メソッドを結果セットに対して呼び出しても機能せず、次の例外が返されます: `java java.lang.String cannot be cast to java.sql.Timestamp`
+    回避策: "getString()" メソッドまたは "getObject()" メソッドを代わりに使用します。
 
 2. TVP を null 値の SQL VARIANT とともに使用する
 

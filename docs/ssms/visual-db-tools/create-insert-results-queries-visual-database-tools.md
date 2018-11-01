@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,15 +14,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c84391103acc56a4602bb91d960557f190cb52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845010"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>結果の挿入クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,11 +78,11 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     > クエリおよびビュー デザイナーは、更新できるテーブルおよびビューを事前に判別できません。 そのため、 **[挿入先のテーブル選択]** ダイアログ ボックスの **[テーブル名]** ボックスには、クエリを実行するデータ接続で使用できるテーブルおよびビューがすべて表示されます。行をコピーできないテーブルおよびビューも表示されます。  
   
-4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 すべての行をコピーする場合は、 **\&#42; (すべての列)** を選択します。  
+4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 すべての行をコピーする場合は、**&#42; (すべての行)** を選択します。  
   
     選択した列が、抽出条件ペインの **[列]** 列に追加されます。  
   
-5.  抽出条件ペインの **[追加]** 列で、コピーする各列に対してコピー先テーブルの目的の列を選択します。 すべての行をコピーする場合は、*tablename.\&#42;* を選択します。 コピー先テーブルの列は、コピー元テーブルの列と同じデータ型か、互換性のあるデータ型である必要があります。  
+5.  抽出条件ペインの **[追加]** 列で、コピーする各列に対してコピー先テーブルの目的の列を選択します。 すべての行をコピーする場合は、*tablename.&#42;* を選択します。 コピー先テーブルの列は、コピー元テーブルの列と同じデータ型か、互換性のあるデータ型である必要があります。  
   
 6.  特定の順序で行をコピーする場合は、並べ替え順序を指定します。 詳細については、「[クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)」を参照してください。  
   

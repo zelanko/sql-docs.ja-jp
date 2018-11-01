@@ -41,7 +41,7 @@ public int getPrecision(int column)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- 列の有効桁数を示すです。  
+ 列の有効桁数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -36,7 +36,7 @@ public int getFetchSize()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 現在のフェッチ サイズを示すです。  
+ 現在のフェッチ サイズを示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

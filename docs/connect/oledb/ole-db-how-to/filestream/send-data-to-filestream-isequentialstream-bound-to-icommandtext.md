@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
+title: FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream | Microsoft Docs
 description: FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018

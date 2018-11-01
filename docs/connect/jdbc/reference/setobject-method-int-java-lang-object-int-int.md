@@ -59,7 +59,7 @@ public final void setObject(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setObject メソッドは、java.sql.CallableStatement インターフェイスの setObject メソッドで指定されています。  
+ この setObject メソッドは、java.sql.PreparedStatement インターフェイスの setObject メソッドで指定されています。  
   
  以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC Driver 3.0 では、このメソッドの動作は変更、**で sendTimeAsDatetime**接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) と[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)します。  
   

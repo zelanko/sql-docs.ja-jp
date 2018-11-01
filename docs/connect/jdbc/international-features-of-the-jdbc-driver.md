@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6de0bde02cf07d80195f5419f690a06d435bbbcc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 5b56b2b415479ed6a290fe87f52befb5a5331521
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682570"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC ドライバーの国際対応機能」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +34,7 @@ ms.locfileid: "42786827"
 ## <a name="handling-of-character-data"></a>文字データの処理  
  Java の文字データは、既定で Unicode として処理されます。Java **String** オブジェクトは Unicode 文字データを表します。 JDBC ドライバーにおいてこの規則の唯一の例外となるのは、ASCII ストリームの getter メソッドと setter メソッドです。暗黙の仮定で既知のコード ページの 1 つ (ASCII) によるバイト ストリームが使用されるため、これは特殊なケースです。  
   
- また、JDBC ドライバーには、 **sendStringParametersAsUnicode**接続文字列プロパティ。 このプロパティを使用して、文字データに対して準備されたパラメーターを Unicode ではなく ASCII またはマルチバイト文字セット (MBCS) で送信するように指定できます。 詳細については、 **sendStringParametersAsUnicode**接続文字列のプロパティを参照してください[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)します。  
+ また、JDBC ドライバーには、 **sendStringParametersAsUnicode**接続文字列プロパティ。 このプロパティを使用して、文字データに対して準備されたパラメーターを Unicode ではなく ASCII またはマルチバイト文字セット (MBCS) で送信するように指定できます。 **sendStringParametersAsUnicode** 接続文字列プロパティについて詳しくは、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」をご覧ください。  
   
 ### <a name="driver-incoming-conversions"></a>ドライバーの受信変換  
  サーバーから受信する Unicode テキスト データは、変換する必要はありません。 データは Unicode として直接渡されます。 サーバーから受信する Unicode 以外のデータは、データベースまたは列レベルでデータのコード ページから Unicode に変換されます。 JDBC ドライバーは、Java 仮想マシン (JVM) 変換ルーチンを使用してこのような変換を実行します。 変換は、あらゆる型の文字列および文字のストリームの getter メソッドで実行されます。  

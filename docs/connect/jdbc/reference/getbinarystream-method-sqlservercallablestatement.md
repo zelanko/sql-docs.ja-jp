@@ -32,7 +32,7 @@ ms.locfileid: "47731090"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を連続するバイトのバイナリ ストリームとして取得します。|  
+|[getBinaryStream &#40;int&#41;](../../../connect/jdbc/reference/getbinarystream-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を連続するバイトのバイナリ ストリームとして取得します。|  
 |[getBinaryStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getbinarystream-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値を連続するバイトのバイナリ ストリームとして取得します。|  
   
 ## <a name="see-also"></a>参照  

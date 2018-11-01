@@ -1,12 +1,10 @@
 ---
 title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 09/11/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL RESOURCE POOL
@@ -23,22 +21,21 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-ms.openlocfilehash: 7e4ae3239332c004ad6ceda624b641b7bf7603be
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c74b693bb813970aa795837b568af66a04847c61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999294"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805560"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 外部プロセス用のリソースの定義に使われる外部プールを作成します。 リソース プールは、データベース エンジンのインスタンスに関する物理リソース (メモリと CPU) のサブセットを表します。 データベース管理者は、リソース ガバナーを使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。
 
 + [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 
-+ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] の [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] の外部プールは、SQL Server 2016 および `python.exe`、`BxlServer.exe`、それらにより生成された他のプロセスに対してリストされている R プロセスを管理します。
++ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] の [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] の場合、外部プールは `rterm.exe`、`python.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  

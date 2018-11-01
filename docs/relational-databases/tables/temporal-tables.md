@@ -5,22 +5,19 @@ ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4171beb8274ab12235b435c7c7fc4a2eab048bb5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856720"
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -122,7 +119,7 @@ CREATE TABLE dbo.Employee
 >  システム datetime2 列に記録されている時間は、トランザクション自体の開始時間に基づいています。 たとえば、1 つのトランザクションで挿入されたすべての行の、 **SYSTEM_TIME** 期間の開始に対応する列の UTC 時間は同じになります。  
   
 ## <a name="how-do-i-query-temporal-data"></a>テンポラル データのクエリ方法  
- **SELECT** ステートメントの **FROM***\<table>* 句には、現行および履歴テーブルのデータをクエリする新しい **FOR SYSTEM_TIME** 句が導入されました。これには、テンポラル専用のサブ句が 5 つあります。 この新しい **SELECT** ステートメントの構文は、1 つのテーブルで直接サポートされており、複数の結合を介して、また複数のテンポラル テーブル上のビューを介して反映されます。  
+ **SELECT** ステートメントの **FROM**_\<table\>_ 句には、現行および履歴テーブルのデータをクエリする新しい **FOR SYSTEM_TIME** 句が導入されました。これには、テンポラル専用のサブ句が 5 つあります。 この新しい **SELECT** ステートメントの構文は、1 つのテーブルで直接サポートされており、複数の結合を介して、また複数のテンポラル テーブル上のビューを介して反映されます。  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -152,7 +149,7 @@ SELECT * FROM Employee
 |**ALL**|すべての行|現行および履歴テーブルに属する行の和を返します。|  
   
 > [!NOTE]  
->  必要に応じて、これらの期間列を明示的に参照しないクエリがこれらの列を返さないよう、これらの期間列を隠すこともできます (**SELECT \* FROM***\<table>* シナリオ)。 非表示の列を返すには、クエリで非表示の列を単純に明示的に参照してください。 同様に、 **INSERT** および **BULK INSERT** ステートメントでも、これらの新しい期間列が存在しないかのように続行されます (そして列値は自動入力されます)。 **HIDDEN** 句の使用方法の詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」と「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
+>  必要に応じて、これらの期間列を明示的に参照しないクエリがこれらの列を返さないよう、これらの期間列を隠すこともできます (**SELECT \* FROM**_\<table\>_ シナリオ)。 非表示の列を返すには、クエリで非表示の列を単純に明示的に参照してください。 同様に、 **INSERT** および **BULK INSERT** ステートメントでも、これらの新しい期間列が存在しないかのように続行されます (そして列値は自動入力されます)。 **HIDDEN** 句の使用方法の詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」と「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [システム バージョン管理されたテンポラル テーブルの概要](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

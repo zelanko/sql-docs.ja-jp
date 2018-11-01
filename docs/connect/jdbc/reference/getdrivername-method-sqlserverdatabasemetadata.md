@@ -36,7 +36,7 @@ public java.lang.String getDriverName()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- JDBC ドライバー名を含むです。  
+ JDBC ドライバー名を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -26,7 +26,7 @@ ms.locfileid: "47820730"
 # <a name="updatelong-method-javalangstring-long"></a>updateLong (java.lang.String, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された列名を使用して、指定された列を null 値で更新します。  
+  渡された列名を使用して、指定された列を **long** 値で更新します。  
   
 ## <a name="syntax"></a>構文  
   

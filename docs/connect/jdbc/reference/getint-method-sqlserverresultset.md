@@ -1,13 +1,11 @@
 ---
-title: getInt メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getInt メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getInt
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d70950e0-53fb-4f85-a74a-c31882d4dfd6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf5197a627eca5ff9735d2808d21ff75824a1004
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 164867bd3d8d20ba993a0a54bcac6018009e6d70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726400"
 ---
 # <a name="getint-method-sqlserverresultset"></a>getInt メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、 **int** Java プログラミング言語でします。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **int** として取得されます。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getInt (int)](../../../connect/jdbc/reference/getint-method-int-sqlserverresultset.md)|この現在の行に指定された列インデックスの値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、 **int** java プログラミング言語です。|  
-|[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string-sqlserverresultset.md)|この現在の行に指定された列名の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、 **int** java プログラミング言語です。|  
+|[getInt (int)](../../../connect/jdbc/reference/getint-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Java プログラミング言語の **int** として取得されます。|  
+|[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Java プログラミング言語の **int** として取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623830"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +94,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 |スレッド スタック メモリ|いいえ|いいえ|
 |Windows からの直接割り当て|いいえ|いいえ|
 
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory 設定に指定されている値より多いメモリを割り当てる場合があります。 そのような動作は、***Total Server Memory (KB)*** が (max server memory によって指定される) ***Target Server Memory (KB)*** 設定に既に到達しているときに発生することがあります。 メモリの断片化によって、複数ページ メモリ要求 (8 KB 超) を満たすだけの連続した空き容量がない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はメモリ要求を拒否せず、オーバーコミットを実行できます。 
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory 設定に指定されている値より多いメモリを割り当てる場合があります。 そのような動作は、**_Total Server Memory (KB)_** の値が (max server memory によって指定される) **_Target Server Memory (KB)_** の設定に既に到達しているときに発生することがあります。 メモリの断片化によって、複数ページ メモリ要求 (8 KB 超) を満たすだけの連続した空き容量がない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はメモリ要求を拒否せず、オーバーコミットを実行できます。 
 
 この割り当ての実行直後、バックグラウンド タスクの*リソース モニター*がすべてのメモリ コンシューマーに信号を送り、割り当てられているメモリの解放を求め、*Total Server Memory (KB)* が *Target Server Memory (KB)* 仕様を下回るように手配します。 そのため、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ使用量が短い時間だけ max server memory 設定を超えることがあります。 このような状況では、*Total Server Memory (KB)* パフォーマンス カウンター読み取り値が max server memory 設定と*Target Server Memory (KB)* 設定を超えます。
 
@@ -111,7 +107,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降の "memory_to_reserve" の変更点
 以前のバージョンの SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーは、**複数ページ アロケータ (MPA)**、**CLR アロケータ**、SQL Server プロセスの**スレッド スタック**のメモリ割り当て、**直接 Windows 割り当て (DWA)** で使用するために、プロセス VAS (Virtual Address Space/仮想アドレス空間) の一部を予約しました。 仮想アドレス空間のこの部分は、"Mem-To-Leave" または "non-Buffer Pool" 領域とも呼ばれています。
 
-このような割り当てのために予約される仮想アドレス空間は、構成オプションの ***memory_to_reserve*** によって決定されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用される初期値は 256 MB です。 初期値をオーバーライドするには、スタートアップ パラメーターの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* を使用します。 スタートアップ パラメーター *-g* の詳細については、ドキュメント ページの「[データベース エンジン サービスのスタートアップ オプション](../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。
+このような割り当てのために予約される仮想アドレス空間は、構成オプション _**memory\_to\_reserve**_ によって決定されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用される初期値は 256 MB です。 初期値をオーバーライドするには、スタートアップ パラメーターの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* を使用します。 スタートアップ パラメーター *-g* の詳細については、ドキュメント ページの「[データベース エンジン サービスのスタートアップ オプション](../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、新しい "あらゆるサイズの" ページ アロケータは 8 KB を超える割り当ても処理するため、*memory_to_reserve* 値には複数ページ割り当てが含まれません。 この変更を除き、他のすべてはこの構成オプションと引き続き同じになります。
 
@@ -132,8 +128,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
   
 **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のメモリ割り当て、コンパイル メモリ、すべてのキャッシュ (バッファー プールを含む)、[クエリ実行メモリ許可](#effects-of-min-memory-per-query)、[ロック マネージャー メモリ](#memory-used-by-sql-server-objects-specifications)、CLR<sup>1</sup> メモリ (基本的に、**[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** で見つかったメモリ クラーク) を制御します。 
 
-
-  <sup>1</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
+<sup>1</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
 
 次のクエリでは、現在割り当てられているメモリに関する情報を返します。  
   
@@ -163,8 +158,7 @@ FROM sys.dm_os_process_memory;
 |x64 (64 ビット)|x64 (64 ビット)|2048 KB|
 |IA64 (Itanium)|IA64 (Itanium)|4096 KB|
 
-
-  <sup>2</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
+<sup>2</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、メモリ通知 API **QueryMemoryResourceNotification** を使用して、いつ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Manager がメモリの割り当てまたは解放を行うことができるかを判断します。  
 
@@ -202,7 +196,7 @@ min server memory と max server memory の両方に同じ値を指定した場�
 > [!IMPORTANT]
 > 稼働率が非常に高いシステムでは特に、min memory per query サーバー構成オプションの値を高く設定しすぎないでください。そうしないと、次の状況を招く可能性があります。         
 > - メモリ リソースの競合が増加します。         
-> - 実行時に必要なメモリがこの構成より少ない場合でも、すべての単一クエリのメモリ量を増やすことで、同時実行性が低下します。    
+> - 実行時に必要なメモリがこの構成より少ない場合でも、すべての単一クエリのメモリ量を増やすことで、コンカレンシーが低下します。    
 >    
 > この構成の使い方の推奨事項については、「[min memory per query サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations)」を参照してください。
 

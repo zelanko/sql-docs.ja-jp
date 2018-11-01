@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e3337d0912e0249c7ac49523bb4159458ba36e8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ab817b7529bf13e738b3110e5f876b3287f32ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775046"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>SOAP を使用した Reporting Services の統合 - Windows アプリケーション
   Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスです。したがって、SOAP API に容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 Windows アプリケーションの Web サービスにアクセスするには、サービスへの呼び出しを作成するコードを記述します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用すると、プロキシ クラスを生成して、Web サービスのプロパティとメソッドを表示し、使い慣れたインフラストラクチャとツールを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の技術に基づいたビジネス アプリケーションを構築できます。  
@@ -90,11 +87,11 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  ただし、SOAP API の <xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドを使用すると、プログラムによってさまざまな出力形式でレポートを表示および保存できます。 これは、ユーザーとの対話を必要とする URL アクセスよりも優れた点です。 SOAP API の <xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドを使用してレポートを表示すると、サポートされている出力形式のいずれでも表示できます。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] に含まれている配信可能な ReportViewer コントロールも自由に使用できます。 ReportViewer コントロールでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能をカスタム アプリケーションに容易に埋め込むことができます。 ReportViewer コントロールは、事前にデザインして完全な形にしあげたレポートを、アプリケーションの機能セットの一部として提供することを予定している開発者を対象にしています (たとえば、Web サイト管理アプリケーションであれば、企業の Web サイトに関するクリックストリーム分析を表示するレポートなどが考えられます)。 これらのコントロールをアプリケーションに埋め込む方法は、アプリケーションの配置に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー コンポーネントを組み込む方法を簡略化したものと言えます。 これらのコントロールではレポート機能が提供されますが、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれる他の機能 (レポートの作成、パブリッシュ、配布、配信のためのサポート) はありません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] に含まれている配信可能なレポート ビューアー コントロールも自由に使用できます。 レポート ビューアー コントロールでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能をカスタム アプリケーションに容易に埋め込むことができます。 レポート ビューアー コントロールは、事前にデザインして完全な形にしあげたレポートを、アプリケーションの機能セットの一部として提供することを予定している開発者を対象にしています (たとえば、Web サイト管理アプリケーションであれば、企業の Web サイトに関するクリックストリーム分析を表示するレポートなどが考えられます)。 これらのコントロールをアプリケーションに埋め込む方法は、アプリケーションの配置に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー コンポーネントを組み込む方法を簡略化したものと言えます。 これらのコントロールではレポート機能が提供されますが、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれる他の機能 (レポートの作成、パブリッシュ、配布、配信のためのサポート) はありません。  
   
- ReportViewer コントロールには 2 つのバージョンがあります。1 つは Windows リッチ クライアント アプリケーション、もう 1 つは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションを対象にしています。 また、これらのコントロールは、ローカル処理モードとリモート処理モードの両方をサポートしています。 ローカル処理モードの場合は、アプリケーションによってレポートの定義とデータセットを提供し、レポートの処理を起動します。 リモート処理モードの場合は、データの取得とレポートの処理をレポート サーバー側で実行し、これらのコントロールをレポートの表示とナビゲーションのために使用します。 このモデルを使用すれば、デスクトップの規模にもエンタープライズの規模にも対応できるスケーラビリティの高いリッチ アプリケーションを作成できます。  
+ レポート ビューアー コントロールには 2 つのバージョンがあります。1 つは Windows リッチ クライアント アプリケーション、もう 1 つは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションを対象にしています。 また、これらのコントロールは、ローカル処理モードとリモート処理モードの両方をサポートしています。 ローカル処理モードの場合は、アプリケーションによってレポートの定義とデータセットを提供し、レポートの処理を起動します。 リモート処理モードの場合は、データの取得とレポートの処理をレポート サーバー側で実行し、これらのコントロールをレポートの表示とナビゲーションのために使用します。 このモデルを使用すれば、デスクトップの規模にもエンタープライズの規模にも対応できるスケーラビリティの高いリッチ アプリケーションを作成できます。  
   
- ReportViewer コントロールの説明は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のオンライン ヘルプにあります。 詳細については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の製品ドキュメントを参照してください。  
+ レポート ビューアー コントロールの説明は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のオンライン ヘルプにあります。 詳細については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の製品ドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

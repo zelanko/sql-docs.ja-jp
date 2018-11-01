@@ -45,7 +45,7 @@ ms.locfileid: "47794210"
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|データベース名を返します。|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|値を返します**disableStatementPooling**接続プロパティです。 この設定は、ステートメントのプールが有効になっているかどうか、またはこの接続ではなくを制御します。|  
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|値を返します**enablePrepareOnFirstPreparedStatementCall**接続プロパティです。|  
-|[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|lastUpdateCount プロパティが有効であるかどうかを示す**ブール**値が返されます。|  
+|[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|encrypt プロパティが有効であるかどうかを示す **Boolean** 値を返します。|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|データ ソースの記述を返します。|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|データベース ミラーリング構成で使用されるフェールオーバー サーバーの名前を返します。|  
 |[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)|SQL Server の SSL (Secure Sockets Layer) 証明書の検証に使用されるホスト名を返します。|  
@@ -82,11 +82,11 @@ ms.locfileid: "47794210"
 |[setDescription](../../../connect/jdbc/reference/setdescription-method-sqlserverdatasource.md)|データ ソースの記述を設定します。|  
 |[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverdatasource.md)|ステートメントのプールを true または false に設定します。|  
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|新しい値を指定します、 **enablePrepareOnFirstPreparedStatementCall**接続プロパティです。|  
-|[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|lastUpdateCount プロパティが有効であるかどうかを示す**ブール** 値を設定します。|  
+|[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|encrypt プロパティが有効であるかどうかを示す **Boolean** 値を設定します。|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|データベース ミラーリング構成で使用されるフェールオーバー サーバーの名前を設定します。|  
 |[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|SQL Server の SSL (Secure Sockets Layer) 証明書の検証に使用されるホスト名を設定します。|  
 |[setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名が設定されます。|  
-|[setIntegratedSecurity](../../../connect/jdbc/reference/setintegratedsecurity-method-sqlserverdatasource.md)|integratedSecurity プロパティが有効であるかどうかを示す **Boolean** 値が設定されます。|  
+|[setIntegratedSecurity](../../../connect/jdbc/reference/setintegratedsecurity-method-sqlserverdatasource.md)|integratedSecurity プロパティが有効であるかどうかを示す **Boolean** 値を設定します。|  
 |[setLastUpdateCount](../../../connect/jdbc/reference/setlastupdatecount-method-sqlserverdatasource.md)|lastUpdateCount プロパティが有効であるかどうかを示す**ブール** 値を設定します。|  
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) を示す **int** 値を設定します。|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|接続の試行中にこの [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) オブジェクトが待機する秒数を設定します。|  

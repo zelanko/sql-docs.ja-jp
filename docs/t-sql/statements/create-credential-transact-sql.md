@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREDENTIAL_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: fb335a8be8f5006421c98ac98ac6974a1603f640
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171614"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608844"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,13 +56,13 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  作成する資格情報の名前を指定します。 *credential_name* はシャープ (#) 記号で始めることはできません。 ## で始まる資格情報はシステム資格情報です。  共有アクセス署名 (SAS) を使用する場合、この名前は、コンテナーのパスを一致する必要があります https で起動し、スラッシュを含めることはできません。 D は次の例を参照してください。  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Key Vault へのアクセスに資格情報を使うときは、**IDENTITY** はキー コンテナーの名前です。 後半の例 C を参照してください。 資格情報で Shared Access Signature (SAS) を使っているときは、**IDENTITY** は *SHARED ACCESS SIGNATURE* です。 D は次の例を参照してください。  
  
 > [!IMPORTANT]
 > Azure SQL Database でサポートされるのは、Azure Key Vault と Shared Access Signature の ID のみです。 Windows ユーザー ID はサポートされません。
  
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  送信の認証に必要なシークレットを指定します。  
   
  Azure Key Vault へのアクセスに資格情報を使うときは、**CREATE CREDENTIAL** の **SECRET** 引数に、Azure Active Directory の**サービス プリンシパル**の \<*クライアント ID*> (ハイフンなし) と \<*シークレット*> を間のスペースなしで渡す必要があります。 後半の例 C を参照してください。 資格情報が Shared Access Signature を使っている場合は、**SECRET** は Shared Access Signature トークンです。 D は次の例を参照してください。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成する方法について詳しくは、「[レッスン 1: Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)」をご覧ください。  

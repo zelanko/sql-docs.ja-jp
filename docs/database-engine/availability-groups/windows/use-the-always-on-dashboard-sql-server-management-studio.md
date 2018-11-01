@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4e526fb8b2bb72bd670b1c21d6734b23ad601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704525"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120199"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -324,6 +324,10 @@ ms.locfileid: "47704525"
  **[最終再実行時間]**  
  セカンダリ データベースでログ レコードが最後に再実行された時刻を示します。 この値は既定で非表示になります。  
  
+
+   > [!NOTE]  
+   >  ほとんどのデータは sys.dm_hadr_database_replica_states に基づいているため、いくつかの制限が適用される場合があります。 詳細については、「[sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)」を参照してください。
+
 
 ## <a name="always-on-availability-group-latency-reports"></a>Always On 可用性グループ待機時間レポート
 可用性グループ待機時間レポートは、可用性グループ ダッシュボードに組み込まれているレポート ツールであり、[SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) リリースで使用できます。 この機能では、ログ転送プロセスのさまざまなフェーズで費やされる時間を詳細に示すわかりやすいレポートが提供されます。 これにより、同期プロセス中の待機時間の潜在的な原因を絞り込むことができます。 

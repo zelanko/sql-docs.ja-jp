@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], creating
 - SQL Server Agent, aliases
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 926a3e3850172acb653a9ea49b1876d204103d81
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 29de1d807a300e8c33bf9437b1756a37fd9187ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815457"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +71,7 @@ ms.locfileid: "42776020"
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  *[SQL Server エージェントのプロパティ - <サーバー名>]* ダイアログ ボックスの **[ページの選択]** で **[接続]** を選択します。  
+3.  [**SQL Server エージェントのプロパティ**_server\_name_] ダイアログ ボックスの **[ページの選択]** で **[接続]** を選択します。  
   
 4.  **[別名ローカル ホスト サーバー]** ボックスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが接続するサーバーの別名を入力します。  
   

@@ -1,30 +1,27 @@
 ---
-title: unwrap メソッド (SQLServerCallableStatement) |Microsoft ドキュメント
+title: unwrap メソッド (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85f1e7364f5037817b4b49b31c387d3be83f7c43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 40a1072776d2f926d353012656c921f217528d92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666790"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  アクセス許可を指定したインターフェイスを実装するオブジェクトを返します、 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特定のメソッドです。  
+  指定されたインターフェイスを実装するオブジェクトを返します。このメソッドから返されたオブジェクトを使用することで、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドにアクセスできます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +33,7 @@ public <T> T unwrap(Class<T> iface)
 #### <a name="parameters"></a>パラメーター  
  *iface*  
   
- 型のクラス**T**インターフェイスを定義します。  
+ インターフェイスを定義する **T** 型のクラスです。  
   
 ## <a name="return-value"></a>戻り値  
  指定されたインターフェイスを実装するオブジェクトです。  
@@ -44,16 +41,16 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- [Unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) JDBC 4.0 仕様で導入された java.sql.Wrapper インターフェイスでメソッドが定義されています。  
+## <a name="remarks"></a>Remarks  
+ [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) メソッドは、JDBC 4.0 仕様で導入された java.sql.Wrapper インターフェイスで定義されています。  
   
- アプリケーションに固有の JDBC api 拡張機能にアクセスする必要があります、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]です。 Unwrap メソッドは、クラスがベンダー拡張機能を公開する場合のこのオブジェクトを拡張するクラスをパブリックにアンラッピングをサポートします。  
+ アプリケーションは [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能にアクセスする必要がある場合があります。 unwrap メソッドは、クラスがベンダー拡張を公開する場合、このオブジェクトが拡張するパブリック クラスへのアンラッピングをサポートします。  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)実装[ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)から拡張は、 [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)です。 オブジェクトが、次のクラスにアンラップこのメソッドが呼び出されると、: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)です。  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) は、[ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスから拡張された [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスを実装します。 このメソッドが呼び出されると、オブジェクトは [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) の各クラスにアンラップされます。  
   
- 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)です。  
+ 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
   
- 次のコード例を使用して、isWrapperFor メソッドと unwrap メソッド ドライバーの拡張機能を確認しなどのベンダー固有のメソッドを起動する方法を示しています[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)と[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)です。  
+ 次のコード例では、isWrapperFor メソッドと unwrap メソッドを使用してドライバー拡張を確認し、[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) や [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) などのベンダー固有メソッドを呼び出す方法を示します。  
   
 ```  
 public static void executeStoredProcedure(Connection con) {  
@@ -110,7 +107,7 @@ public static void executeStoredProcedure(Connection con) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [isWrapperFor メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
+ [isWrapperFor メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

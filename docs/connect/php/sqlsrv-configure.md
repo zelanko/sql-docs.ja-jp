@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_configure |Microsoft ドキュメント
+title: sqlsrv_configure |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_configure
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sqlsrv_configure
 - API Reference, sqlsrv_configure
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fde39c9d64ec23e13c83c8c85a3de05c1417194a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 98c3848ad344fcbb964d1b3a5e9ec1a6afe8703f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618691"
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,23 +43,23 @@ sqlsrv_configure( string $setting, mixed $value )
   
 |設定|$value パラメーターに使用可能な値 (かっこ内と同等の整数)|既定値|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
-|ClientBufferMaxKBSize<sup>1</sup>|PHP メモリの上限に達するまでの負以外の数値。<br /><br />0、負の数値は許可されていません。|10240 KB|  
+|ClientBufferMaxKBSize<sup>1</sup>|PHP メモリの上限に達するまでの負以外の数値。<br /><br />ゼロおよび負の数値は許可できません。|10240 KB|  
 |LogSeverity<sup>2</sup>|SQLSRV_LOG_SEVERITY_ALL (-1)<br /><br />SQLSRV_LOG_SEVERITY_ERROR (1)<br /><br />SQLSRV_LOG_SEVERITY_NOTICE (4)<br /><br />SQLSRV_LOG_SEVERITY_WARNING (2)|SQLSRV_LOG_SEVERITY_ERROR (1)|  
 |LogSubsystems<sup>2</sup>|SQLSRV_LOG_SYSTEM_ALL (-1)<br /><br />SQLSRV_LOG_SYSTEM_CONN (2)<br /><br />SQLSRV_LOG_SYSTEM_INIT (1)<br /><br />SQLSRV_LOG_SYSTEM_OFF (0)<br /><br />SQLSRV_LOG_SYSTEM_STMT (4)<br /><br />SQLSRV_LOG_SYSTEM_UTIL (8)|SQLSRV_LOG_SYSTEM_OFF (0)|  
-|WarningsReturnAsErrors<sup>3</sup>|**true** (1) または**false** (0)|**true** (1)|  
+|WarningsReturnAsErrors<sup>3</sup>|**true** (1) または **false** (0)|**true** (1)|  
   
 ## <a name="return-value"></a>戻り値  
 サポートされていない設定または値を使用して **sqlsrv_configure** 関数を呼び出すと、この関数は **false**を返します。 それ以外の場合は、 **true**を返します。  
   
-## <a name="remarks"></a>コメント  
-(1) のクライアント側クエリの詳細については、次を参照してください。[カーソルの種類&#40;SQLSRV ドライバー&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)です。  
+## <a name="remarks"></a>Remarks  
+(1) クライアント側クエリの詳細については、「[カーソルの種類 &#40;SQLSRV ドライバー&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)」を参照してください。  
   
-(2) のログ記録アクティビティの詳細については、次を参照してください。 [Logging Activity](../../connect/php/logging-activity.md)です。  
+(2) ログ記録アクティビティの詳細については、「[アクティビティのログ記録](../../connect/php/logging-activity.md)」を参照してください。  
   
-(3) のエラーおよび警告の処理の構成に関する詳細については、次を参照してください。[する方法: エラーおよび警告の処理、SQLSRV ドライバーを使用して構成する](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)です。  
+(3) エラーの設定および警告の処理の詳細については、「[方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md) 
+[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md) 
   

@@ -1,6 +1,6 @@
 ---
 title: トランザクション |Microsoft Docs
-description: OLE DB Driver for SQL Server のセッション
+description: OLE DB Driver for SQL Server でのトランザクション
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql

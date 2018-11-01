@@ -36,7 +36,7 @@ public boolean nullsAreSortedHigh()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 値が上位に並べ替えられる場合は  です。 それ以外の場合は、 **false**です。  
+ 値が上位に並べ替えられる場合は **true**。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

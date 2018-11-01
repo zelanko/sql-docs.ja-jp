@@ -1,33 +1,47 @@
 ---
 title: SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743505"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072176"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+
+## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT for Visual Studio 2017 (15.8.1)
+ビルド番号: 14.0.16179.0  
+リリース日: 2018 年 9 月 27 日  
+
+### <a name="whats-new"></a>新機能
+
+**SSIS:**
+
+1. [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] のサポートが追加されます。
+2. SQL Server 2012 のサポートが削除されます。
+
+### <a name="known-issues"></a>既知の問題:
+
+- ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+- SSDT 15.8.1 では現在 Windows 7 SP1 がサポートされていないので、Windows 7 SP1 を使用している場合は引き続き 15.8.0 を使用してください
+
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)
 ビルド番号: 14.0.16174.0  
@@ -487,7 +501,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
         - Json 
         - フォルダー 
         - Access データベース 
-        - Azure BLOB ストレージ 
+        - Azure Blob Storage 
     - ローカライズされた PowerQuery ユーザー インターフェイス
 - DAX エディター ツール ウィンドウ
     - SSDT の [表示] > [その他のウィンドウ] メニューで利用可能な DAX 編集エクスペリエンスがメジャー、計算列、詳細行の式に関して改良されました

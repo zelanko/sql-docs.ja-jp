@@ -27,9 +27,9 @@ ms.locfileid: "47621450"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[updateAsciiStream &#40;java.lang.String, java.io.InputStream&#41; メソッド](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)|指定されたパラメーターを、指定された入力ストリームに設定します。|  
-|[setAsciiStream (java.lang.String, java.io.InputStream, int) メソッド](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream-int.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
-|[updateAsciiStream &#40;java.lang.String, java.io.InputStream, long&#41; メソッド](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream-long.md)|指定されたパラメーターの番号を、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
+|[setAsciiStream &#40;java.lang.String, java.io.InputStream&#41; メソッド](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)|指定されたパラメーターを、指定された入力ストリームに設定します。|  
+|[setAsciiStream &#40;java.lang.String, java.io.InputStream, int&#41; メソッド](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream-int.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
+|[setAsciiStream &#40;java.lang.String, java.io.InputStream, long&#41; メソッド](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream-long.md)|指定されたパラメーターの番号を、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

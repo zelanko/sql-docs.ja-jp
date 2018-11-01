@@ -36,7 +36,7 @@ public boolean isReadOnly()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- データベースが読み取り専用モードである場合は  です。 それ以外の場合は、 **false**です。  
+ データベースが読み取り専用モードである場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

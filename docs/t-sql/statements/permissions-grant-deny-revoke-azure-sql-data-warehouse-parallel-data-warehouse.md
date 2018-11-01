@@ -5,24 +5,21 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 734d7558f8193879d13c4567d75a7ba269c114fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406751"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613130"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>アクセス許可: GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,7 +83,7 @@ REVOKE
   
  ON [ \<class_type> :: ] *securable* **ON** 句は、アクセス許可を許可、拒否、または削除するセキュリティ保護可能なパラメーターを記述します。  
   
- \<class_type> セキュリティ保護可能なクラス型。 これは、**LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE**、または **USER** です。 **SERVER***class_type* にアクエス許可を付与することもできますが、**SERVER** は、これらのアクセス許可に対して指定されません。 **DATABASE** は、アクセス許可に **DATABASE** という単語が含まれる場合 (たとえば **ALTER ANY DATABASE**) 指定されません。 *class_type* が指定されておらず、アクセス許可のタイプがサーバーまたはデータベースのクラスに制限されていない場合、クラスは **OBJECT** と見なされます。  
+ \<class_type> セキュリティ保護可能なクラス型。 これは、**LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE**、または **USER** です。 **SERVER**_class\_type_ にアクエス許可を付与することもできますが、**SERVER** は、これらのアクセス許可に対して指定されません。 **DATABASE** は、アクセス許可に **DATABASE** という単語が含まれる場合 (たとえば **ALTER ANY DATABASE**) 指定されません。 *class_type* が指定されておらず、アクセス許可のタイプがサーバーまたはデータベースのクラスに制限されていない場合、クラスは **OBJECT** と見なされます。  
   
  *securable*  
  ログイン、データベース、テーブル、ビュー、スキーマ、プロシージャ、ロール、またはを与えるには、ユーザーの名前は、拒否、または、アクセス許可を取り消します。 「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」で説明されている 3 部構成の名前付け規則を使用してオブジェクトの名前を指定することができます。  

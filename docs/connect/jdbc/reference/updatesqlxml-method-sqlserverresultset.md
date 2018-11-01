@@ -27,8 +27,8 @@ ms.locfileid: "47805050"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[updateSQLXML (int, java.sql.SQLXML) メソッド](../../../connect/jdbc/reference/updatesqlxml-method-int-java-sql-sqlxml.md)|指定された列を **SQLXML** 値で更新します。|  
-|[updateSQLXML (java.lang.String, java.sql.SQLXML) メソッド](../../../connect/jdbc/reference/updatesqlxml-method-java-lang-string-java-sql-sqlxml.md)|指定された列を **SQLXML** 値で更新します。|  
+|[updateSQLXML メソッド &#40;int, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-int-java-sql-sqlxml.md)|指定された列を **SQLXML** 値で更新します。|  
+|[updateSQLXML メソッド &#40;java.lang.String, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-java-lang-string-java-sql-sqlxml.md)|指定された列を **SQLXML** 値で更新します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

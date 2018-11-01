@@ -36,7 +36,7 @@ public java.lang.String getDescription()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- データ ソースの記述を含むです。値が設定されていない場合は null です。  
+ データ ソースの記述を含む**文字列**です。値が設定されていない場合は null です。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

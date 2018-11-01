@@ -36,7 +36,7 @@ public int getJDBCMajorVersion()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- JDBC メジャー バージョンを示すです。  
+ JDBC メジャー バージョンを示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

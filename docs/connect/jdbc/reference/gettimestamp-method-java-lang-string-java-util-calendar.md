@@ -52,7 +52,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getTime メソッドは、java.sql.CallableStatement インターフェイスの getTime メソッドで規定されています。  
+ この getTimestamp メソッドは、java.sql.CallableStatement インターフェイスの getTimestamp メソッドで規定されています。  
   
  このメソッドでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **datetime** 列と **smalldatetime** 列からのみ値が返されます。  
   

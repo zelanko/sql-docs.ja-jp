@@ -1,30 +1,27 @@
 ---
-title: setString (long, java.lang.String) - メソッド NClob |Microsoft ドキュメント
+title: setString (long, java.lang.String) - メソッド NClob |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc953a2026bf4fca9401b1eb9484ff9f34435e2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 151ff8f36ad3397321dc168b46a949de38e10bd6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689900"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>setString (long, java.lang.String) メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  書き込み、指定した**文字列**を**NCLOB**開始位置から指定します。  
+  書き込み、指定した**文字列**を**NCLOB**の指定した位置から始まります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,11 +34,11 @@ public int setString(long pos,
 #### <a name="parameters"></a>パラメーター  
  *pos*  
   
- 書き込みを開始する位置の**NCLOB**; 最初の位置は 1 です。  
+ **NCLOB** 値への書き込みを開始する位置です。最初の位置は 1 です。  
   
  *str*  
   
- 書き込まれる文字列、 **NCLOB**です。  
+ **NCLOB** に書き込む文字列です。  
   
 ## <a name="return-value"></a>戻り値  
  書き込まれる文字数です。  
@@ -49,8 +46,8 @@ public int setString(long pos,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この setString メソッドは、setString、java.sql.NClob インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setString メソッドは、java.sql.NClob インターフェイスで、setString メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerNClob のメソッド](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

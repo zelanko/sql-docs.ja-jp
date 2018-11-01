@@ -5,21 +5,18 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b1e12a4586cc063f6f4e556894b5da1e7f99eff
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7486e97fb0efe9fffa9fe6eb49ee75cc6d75bfce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983678"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635010"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC ドライバーでの Azure Active Directory の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,6 +24,9 @@ ms.locfileid: "38983678"
 ## <a name="purpose"></a>用途
 
 Microsoft ODBC Driver for SQL Server バージョン 13.1 以降は、ユーザー名/パスワード、Azure Active Directory アクセス トークン、または Windows Azure Active Directory でフェデレーション id を使用して SQL Azure のインスタンスに接続する ODBC アプリケーション統合認証 (_Windows ドライバーのみ_)。 ODBC ドライバー バージョン 13.1、トークン認証は、Azure Active Directory のアクセスの_Windows のみ_します。 ODBC ドライバー バージョン 17 の上には、すべてのプラットフォーム (Windows、Linux および Mac) でこの認証をサポートしています。 ログイン id と新しい Azure Active Directory 対話型認証は、Windows の ODBC ドライバー バージョン 17.1 の内容で導入されました。 これらすべては、新しい DSN と接続文字列キーワード、および接続属性を使用して行います。
+
+> [!NOTE]
+> Linux および macOS 上の ODBC ドライバーは、Active Directory フェデレーション サービスをサポートしていません。 Linux から Azure Active Directory ユーザー名/パスワード認証を使用している、または macOS のクライアントと、Active Directory の構成は、フェデレーション サービスが含まれています、認証が失敗する可能性があります。
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>新規作成または変更された DSN と接続文字列キーワード
 

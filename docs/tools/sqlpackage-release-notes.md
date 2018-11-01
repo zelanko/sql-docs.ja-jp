@@ -12,7 +12,7 @@ ms.author: broneill
 manager: kenvh
 ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47754336"

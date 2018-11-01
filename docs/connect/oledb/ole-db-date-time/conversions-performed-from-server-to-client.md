@@ -25,7 +25,7 @@ ms.locfileid: "47736470"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (以降) と OLE DB Driver for SQL Server を使用して作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
+  この記事では、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (以降) と OLE DB Driver for SQL Server を使用して作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
   
 ## <a name="conversions"></a>コンバージョン  
  次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 Icommandwithparameters::setparameterinfo が呼び出され、型がで指定された場合、出力パラメーターの*して*サーバーによって実行される暗黙的な変換をサーバー上の実際の型と一致しません、と、クライアントに返される型の icommandwithparameters::setparameterinfo を通じて指定された型が一致します。 これにより、サーバーの変換規則がこの記事の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  

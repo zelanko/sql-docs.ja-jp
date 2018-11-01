@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_fetch |Microsoft ドキュメント
+title: sqlsrv_fetch |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_fetch
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3aeff30e84deed5f66eb65d778aa4c154eef98
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604234"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-結果セットの次の行を読み取り可能にします。 使用して[sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)行のフィールドを読み取れません。  
+結果セットの次の行を読み取り可能にします。 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、行のフィールドを読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > 結果を取得するには、ステートメントを実行する必要があります。 ステートメントを実行する方法の詳細については、「 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 」と「 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)」を参照してください。  
   
-*行*[省略可能]: スクロール可能なカーソルを使用して結果セットにアクセスする行を指定する、次の値のいずれか。  
+*row* [省略可能]: 次の値のいずれかで、スクロール可能なカーソルを使用して結果セットにアクセスする行を指定します。  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -62,13 +59,13 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。  
   
-*オフセット*[省略可能]: SQLSRV_SCROLL_ABSOLUTE と SQLSRV_SCROLL_RELATIVE と共に取得する行を指定するために使用します。 結果セットの最初のレコードは 0 です。  
+*offset* [省略可能]: SQLSRV_SCROLL_ABSOLUTE と SQLSRV_SCROLL_RELATIVE と共に使用し、取得する行を指定します。 結果セットの最初のレコードは 0 です。  
   
 ## <a name="return-value"></a>戻り値  
 結果セットの次の行が正常に取得された場合は、 **true** が返されます。 結果セットに他に結果がない場合は、 **null** が返されます。 エラーが発生した場合は、 **false** が返されます。  
   
 ## <a name="example"></a>例  
-次の例では、 **sqlsrv_fetch** を使用して、製品レビューとレビュー担当者の名前を含むデータの行を取得します。 結果セットからデータを取得する[sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)を使用します。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、 **sqlsrv_fetch** を使用して、製品レビューとレビュー担当者の名前を含むデータの行を取得します。 結果セットからデータを取得するには、[sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用します。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

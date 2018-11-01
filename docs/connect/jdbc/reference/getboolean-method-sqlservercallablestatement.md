@@ -1,13 +1,11 @@
 ---
-title: getBoolean メソッド (SQLServerCallableStatement) |Microsoft ドキュメント
+title: getBoolean メソッド (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBoolean
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4ad50e54-8246-4012-bd88-4aaaaf7f0f77
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ef0d049b0d4b1d07858eb3ecfc5036da7c8b35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c12d4538d593988a01ae24e0e3b9ce769694930e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832027"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773047"
 ---
 # <a name="getboolean-method-sqlservercallablestatement"></a>getBoolean メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  として指定されたパラメーターの値を取得、**ブール**値。  
+  指定されたパラメーターの値を **boolean** 値として取得します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getBoolean (int)](../../../connect/jdbc/reference/getboolean-method-int.md)|として指定されたパラメーターの値を取得、**ブール**パラメーター インデックスを指定された値。|  
-|[getBoolean (java.lang.String)](../../../connect/jdbc/reference/getboolean-method-java-lang-string.md)|として指定されたパラメーターの値を取得、**ブール**値パラメーターの名前を指定します。|  
+|[getBoolean (int)](../../../connect/jdbc/reference/getboolean-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を **boolean** 値として取得します。|  
+|[getBoolean (java.lang.String)](../../../connect/jdbc/reference/getboolean-method-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値を **boolean** 値として取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

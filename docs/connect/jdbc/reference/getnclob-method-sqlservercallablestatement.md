@@ -21,14 +21,14 @@ ms.locfileid: "47634630"
 # <a name="getnclob-method-sqlservercallablestatement"></a>getNClob メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された JDBC BLOB パラメーターの値を Java プログラミング言語の  オブジェクトとして取得します。  
+  指定された JDBC **NCLOB** パラメーターの値を Java プログラミング言語の **NClob** オブジェクトとして取得します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getNClob メソッド&#40;int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|指定された JDBC BLOB パラメーターの値を Java プログラミング言語の  オブジェクトとして取得します。|  
-|[getNClob (java.lang.String) メソッド](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|JDBC  パラメーターの値を Java プログラミング言語の  オブジェクトとして取得します。|  
+|[getNClob メソッド&#40;int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|指定された JDBC **NCLOB** パラメーターの値を Java プログラミング言語の **NClob** オブジェクトとして取得します。|  
+|[getNClob &#40;java.lang.String&#41; メソッド](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|JDBC の **NCLOB** パラメーターの値を Java プログラミング言語の **NClob** オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

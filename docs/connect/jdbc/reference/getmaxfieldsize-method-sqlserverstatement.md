@@ -1,13 +1,11 @@
 ---
-title: getMaxFieldSize メソッド (SQLServerStatement) |Microsoft ドキュメント
+title: getMaxFieldSize メソッド (SQLServerStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getMaxFieldSize
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77db7a486929d71492f6dea5494d912805d1dc5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: de123b3c6c8f0105a7280c87a4983fadc657ad93
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836767"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795610"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  文字やバイナリ列の値に返されるバイトの最大数を取得、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)これによって生成されるオブジェクト[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト。  
+  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの文字列やバイナリ列の値に対して返すことができる最大バイト数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,16 +36,16 @@ public final int getMaxFieldSize()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **Int**制限がない場合は、バイト列を含めることができる、または 0 の最大数を示すです。  
+ 列に格納できる最大バイト数を示す **int** です。制限しない場合は 0 です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getMaxFieldSize メソッドは、java.sql.Statement インターフェイスの getMaxFieldSize メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [SQLServerStatement メソッド](../../../connect/jdbc/reference/sqlserverstatement-methods.md)   
+ [SQLServerStatement のメソッド](../../../connect/jdbc/reference/sqlserverstatement-methods.md)   
  [SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

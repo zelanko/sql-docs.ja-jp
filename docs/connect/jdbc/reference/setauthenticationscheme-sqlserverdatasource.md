@@ -30,7 +30,7 @@ public void setAuthenticationScheme(String authenticationScheme);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- authenticationScheme  
+ *authenticationScheme*  
   
  値は **"java Kerberos"** と既定 **"NativeAuthentication"** します。 詳細については、「[Kerberos 統合認証による SQL Server への接続](../../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」をご覧ください。  
   

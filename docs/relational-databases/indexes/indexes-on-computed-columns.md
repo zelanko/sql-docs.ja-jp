@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3144520a5473a913dbc50f6002f69954042bcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff278b06fcc964ec95b57bfc8f4685d22c420e0a
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789860"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851877"
 ---
 # <a name="indexes-on-computed-columns"></a>計算列のインデックス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47789860"
 > [!IMPORTANT]  
 >  指定された一連の入力に対して式から必ず同じ結果が返される場合、その式は決定的です。 **COLUMNPROPERTY** 関数の [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) プロパティは、 *computed_column_expression* が決定的であるかどうかを示します。  
   
- *computed_column_expression* は、決定的である必要があります。 次の 1 つ以上の条件に該当する場合、 *computed_column_expression* は決定的です。  
+ *computed_column_expression* は、決定的である必要があります。 次のすべての条件に該当する場合、*computed_column_expression* は決定的です。  
   
 -   式で参照される関数が決定的かつ正確である場合。 このような関数には、ユーザー定義関数と組み込み関数の両方があります。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。 計算列が PERSISTED の場合、関数は不正確になる場合があります。 詳細については、このトピックの後半の「 [保存される計算列でのインデックスの作成](#BKMK_persisted) 」を参照してください。  
   

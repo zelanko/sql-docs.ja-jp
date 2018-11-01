@@ -26,7 +26,7 @@ ms.locfileid: "47811620"
 # <a name="setarray-method-sqlserverpreparedstatement"></a>setArray メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターの番号を、渡された  オブジェクトに設定します。  
+  指定されたパラメーターの番号を、渡された Array オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   

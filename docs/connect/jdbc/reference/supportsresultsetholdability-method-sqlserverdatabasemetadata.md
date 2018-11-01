@@ -36,9 +36,9 @@ public boolean supportsResultSetHoldability(int holdability)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 保持可能性 (holdability)  
+ *holdability*  
   
- 結果セットの保持機能を示すです。次のいずれかの値になります。  
+ 結果セットの保持機能を示す **int** です。次のいずれかの値になります。  
   
  ResultSet.HOLD_CURSORS_OVER_COMMIT  
   

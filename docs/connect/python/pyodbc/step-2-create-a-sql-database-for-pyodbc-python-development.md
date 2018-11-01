@@ -1,5 +1,5 @@
 ---
-title: 'ステップ 2: pymssql Python 開発用の SQL データベースを作成する | Microsoft Docs'
+title: 'ステップ 2: pyodbc Python 開発用の SQL データベースを作成する | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql

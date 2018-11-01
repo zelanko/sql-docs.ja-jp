@@ -27,8 +27,8 @@ ms.locfileid: "47734580"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getNCharacterStream (int) メソッド](../../../connect/jdbc/reference/getncharacterstream-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
-|[getNCharacterStream (java.lang.String) メソッド](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
+|[getNCharacterStream メソッド &#40;int&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
+|[getNCharacterStream メソッド &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

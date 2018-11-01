@@ -36,7 +36,7 @@ public boolean isCatalogAtStart()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- カタログ名が先頭に現れる場合は  です。 それ以外の場合は、 **false**です。  
+ カタログ名が先頭に現れる場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

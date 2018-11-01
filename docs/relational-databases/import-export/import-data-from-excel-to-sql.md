@@ -1,26 +1,23 @@
 ---
 title: Excel から SQL にデータをインポートする | Microsoft Docs
 ms.custom: ''
-ms.date: 06/29/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: import-export
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8613f9fc6a92519f2ffaf584919ab3d65c88f3de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5d2947097545c2ddcd53dd9e5dda75dcd98c3769
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083335"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826456"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel から SQL Server または Azure SQL Database にデータをインポートする
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +68,7 @@ SSIS パッケージをビルドする方法の学習を開始するには、チ
 ## <a name="openrowset"></a>OPENROWSET およびリンク サーバー
 
 > [!NOTE]
-> Azure では、OPENROWSET および OPENDATASOURCE 関数は SQL Database Managed Instance (プレビュー) でのみ使用できます。
+> Azure では、OPENROWSET および OPENDATASOURCE 関数は SQL Database Managed Instance でのみ使用できます。
 
 > [!NOTE]
 > Excel データ ソースに接続する ACE プロバイダー (旧称 Jet プロバイダー) は、対話型のクライアント側での使用を対象としています。 特に自動化されたプロセスまたは並列で実行中のプロセスで、サーバー上の ACE プロバイダーを使用すると、予期しない結果になることがあります。

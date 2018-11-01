@@ -1,34 +1,31 @@
 ---
-title: 取得日付と時刻、SQLSRV ドライバーを使用して文字列として入力 |。Microsoft ドキュメント
+title: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as strings
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62ad28ed5316f0be403f63af2acd7e4090faa75a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 29e36f2246556da7a43c3b8335f7a4e3479ae63c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686990"
 ---
 # <a name="how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを利用し、日付/時刻型を取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 この機能は [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン 1.1 に追加されました。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーの利用時にのみ有効です。 PDO_SQLSRV ドライバーと共に ReturnDatesAsStrings 接続オプションを使用することは間違いです。  
   
-日付と時刻型を取得することができます (**datetime**、**日付**、**時間**、 **datetime2**、および**datetimeoffset**)として文字列、接続文字列で、オプションを指定します。  
+接続文字列にオプションを指定し、日付/時刻型 (**datetime**、**date**、**time**、**datetime2**、**datetimeoffset**) を文字列として取得できます。  
   
 ### <a name="to-retrieve-date-and-time-types-as-strings"></a>日付と時刻型を文字列として取得する方法  
   
@@ -59,7 +56,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>例  
-次の例を使用して接続した場合でも、文字列を取得するときに、utf-8 を指定することで日付を文字列としてを取得できる`"ReturnDatesAsStrings" => false`です。  
+次の例では、文字列の取得時に UTF-8 を指定することで、接続が `"ReturnDatesAsStrings" => false` で行われていても、日付を文字列として取得できます。  
   
 ```  
 <?php  
@@ -96,7 +93,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>例  
-次の例では、utf-8 を指定することによって文字列としての日付を取得する方法と`"ReturnDatesAsStrings" => true`接続文字列にします。  
+次の例は、接続文字列に UTF-8 と `"ReturnDatesAsStrings" => true` を指定し、日付を文字列として取得する方法を示しています。  
   
 ```  
 <?php  

@@ -1,5 +1,5 @@
 ---
-title: getLong (java.lang.String) メソッド (SQLServerResultSet) | Microsoft Docs
+title: getString (java.lang.String) メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47642890"
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **String** として取得されます。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値が、Java プログラミング言語の **String** として取得されます。  
   
 ## <a name="syntax"></a>構文  
   

@@ -1,13 +1,11 @@
 ---
-title: getBestRowIdentifier メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+title: getBestRowIdentifier メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getBestRowIdentifier
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c36b69543f5253a4d62c1d4b149933febcf0b4b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730326"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,19 +42,19 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 #### <a name="parameters"></a>パラメーター  
  *catalog*  
   
- A**文字列**カタログ名を格納しています。  
+ カタログ名を含む**文字列**です。  
   
  *schema*  
   
- A**文字列**スキーマ名を格納しています。  
+ スキーマ名を含む**文字列**です。  
   
  *テーブル*  
   
- A**文字列**テーブル名を格納しています。  
+ テーブル名を含む**文字列**です。  
   
  *スコープ (scope)*  
   
- **Int**目的のスコープを示すです。 次のいずれかの値を含みます。  
+ 目的のスコープを示す **int** です。 次のいずれかの値を含みます。  
   
  bestRowTemporary (0)  
   
@@ -65,34 +62,34 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  bestRowSession (2)  
   
- *Null 許容型*  
+ *nullable*  
   
- **true** null 許容の列を含めるようにします。 それ以外の場合は、 **false**です。  
+ null を許容する列を含める場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="return-value"></a>戻り値  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getBestRowIdentifier メソッドは、java.sql.DatabaseMetaData インターフェイスの getBestRowIdentifier メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getBestRowIdentifier メソッドは、java.sql.DatabaseMetaData インターフェイスで getBestRowIdentifier メソッドによって指定されます。  
   
- GetBestRowIdentifier メソッドによって返される結果セットには、次の情報が含まれます。  
+ getBestRowIdentifier メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  
-|SCOPE|short|返される結果のスコープです。 次の値のいずれかを指定できます。<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
-|COLUMN_NAME|文字列|列の名前です。|  
+|SCOPE|short|返される結果のスコープです。 次のいずれかの値を指定できます。<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
+|COLUMN_NAME|String|列の名前です。|  
 |DATA_TYPE|short|java.sql.Types の SQL データ型です。|  
-|TYPE_NAME|文字列|データ型の名前です。|  
-|COLUMN_SIZE|int|列の完全桁数です。|  
-|BUFFER_LENGTH|int|バッファーの長さです。|  
+|TYPE_NAME|String|データ型の名前です。|  
+|COLUMN_SIZE|ssNoversion|列の完全桁数です。|  
+|BUFFER_LENGTH|ssNoversion|バッファーの長さです。|  
 |DECIMAL_DIGITS|short|列の小数点以下の桁数です。|  
-|PSEUDO_COLUMN|short|列が擬似列かどうかを示します。 次の値のいずれかを指定できます。<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
+|PSEUDO_COLUMN|short|列が擬似列かどうかを示します。 次のいずれかの値を指定できます。<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   
 ## <a name="example"></a>例  
- 次の例では Person.Contact テーブル内の最適な行識別子に関する情報を返す getBestRowIdentifier メソッドを使用する方法、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース。  
+ 次の例では、getBestRowIdentifier メソッドを使用して、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースの Person.Contact テーブルの最適な行識別子に関する情報を返す方法を示します。  
   
 ```  
 public static void executeGetBestRowIdentifier(Connection con) {  

@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 314e7c2c454c7ef885b66340c9a609cd1ab15125
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5f5eea2555792f5c25338407144df53d5784ed39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756566"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (TRANSACT-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,13 +82,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > Azure SQL Database Managed Instance では SQL 監査はサーバー レベルで動作し、Azure Blob Storage に `.xel` ファイルを格納します。
   
- FILEPATH **= '***os_file_path***'**  
+ FILEPATH **= '**_os\_file\_path_**'**  
  監査記録のパス。 ファイル名は、監査名と監査 GUID に基づいて生成されます。  
   
- MAXSIZE **=***max_size*  
+ MAXSIZE **=**_max\_size_  
  監査ファイルのサイズの上限を指定します。 *max_size* の値は、整数の後に **MB**、**GB**、**TB** を付けて指定するか、または **UNLIMITED** を指定します。 *max_size* に指定できる最小サイズは 2 **MB**、最大サイズは 2,147,483,647 **TB** です。 **UNLIMITED** を指定した場合、ファイルはディスクがいっぱいになるまで拡張されます。 2 MB 未満の値を指定すると、MSG_MAXSIZE_TOO_SMALL エラーが発生します。 既定値は **UNLIMITED** です。  
   
- MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
  ファイル システム内に保持するファイルの最大数を指定します。 MAX_ROLLOVER_FILES=0 が設定されている場合、作成されるロールオーバー ファイルの数は制限されません。 既定値は 0 です。 指定できるファイルの最大数は 2,147,483,647 です。  
   
  MAX_FILES =*integer*  
@@ -101,14 +98,14 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  このオプションは、ディスク上のファイルを MAXSIZE 値に事前に割り当てます。 MAXSIZE が UNLIMITED でない場合にのみ適用されます。 既定値は OFF です。  
   
- QUEUE_DELAY **=***integer*  
+ QUEUE_DELAY **=**_integer_  
  監査アクションの処理が強制されるまでの経過時間 (ミリ秒) を指定します。 値 0 は同期配信を表します。 クエリ遅延に設定可能な最小値は 1000 (1 秒) で、これが既定値です。 最大値は 2,147,483,647 (2,147,483.647 秒、つまり 24 日、20 時間、31 分、23.647 秒) です。 無効な数値を指定すると、MSG_INVALID_QUEUE_DELAY エラーが発生します。  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が監査ログに書き込むことができない場合に、ターゲットへのインスタンスの書き込みをエラーにするか、続行するか、停止するかを示します。  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 続行オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許可する場合があります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 続行オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許可する場合があります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
   
 SHUTDOWN  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がなんらかの理由で監査ターゲットへのデータの書き込みに失敗した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを強制的にシャットダウンします。 `ALTER` ステートメントを実行しているログインには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内での `SHUTDOWN` 権限が必要です。 実行中のログインから `SHUTDOWN` 権限が後で取り消された場合でも、シャットダウンの動作は継続します。 ユーザーがこの権限を持っていない場合は、ステートメントが失敗し、監査は変更されません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを使用します。 詳細については、「[SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)」を参照してください。 

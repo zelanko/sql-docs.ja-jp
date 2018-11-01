@@ -26,7 +26,7 @@ ms.locfileid: "47637090"
 # <a name="getref-method-javalangstring"></a>getRef (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  パラメーターに渡された名前を使用して、指定されたパラメーターの値を Java プログラミング言語の  オブジェクトとして取得します。  
+  パラメーターに渡された名前を使用して、指定されたパラメーターの値を Java プログラミング言語の Ref オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,10 +47,10 @@ public java.sql.Ref getRef(java.lang.String sCol)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getInt メソッドは、java.sql.CallableStatement インターフェイスの getInt メソッドで規定されています。  
+ この getRef メソッドは、java.sql.CallableStatement インターフェイスの getRef メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
- [getInt メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)   
+ [getRef メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

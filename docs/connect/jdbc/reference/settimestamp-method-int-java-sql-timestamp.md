@@ -1,5 +1,5 @@
 ---
-title: updateTimestamp (int, java.sql.Timestamp) メソッド | Microsoft Docs
+title: setTimestamp メソッド (int, java.sql.Timestamp) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

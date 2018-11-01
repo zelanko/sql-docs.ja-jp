@@ -15,17 +15,15 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a221283f40f53260f9ebe8903b87d19da2963cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c629fec392dd286c0828aa5a34b282e71b19bfb
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828510"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383877"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](configure-a-windows-firewall-for-database-engine-access.md)」をご覧ください。
-
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server 構成マネージャーを使用して、データベース エンジン アクセスのための Windows ファイアウォールを構成する方法について説明します。 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールを経由して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスにアクセスするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターで、アクセスを許可するようにファイアウォールを構成する必要があります。  
   
@@ -51,7 +49,7 @@ ms.locfileid: "47828510"
   
      [Security](#Security)  
   
--   **データベース エンジン アクセスのための Windows ファイアウォールを構成する方法:**  
+-   **データベース エンジン アクセスを有効にするように Windows ファイアウォールを構成するには、次のものを使用します。**  
   
      [SQL Server 構成マネージャー](#SSMSProcedure)  
   

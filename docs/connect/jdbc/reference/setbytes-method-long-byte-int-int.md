@@ -1,13 +1,11 @@
 ---
-title: setBytes メソッド (long, バイト、int, int) |Microsoft ドキュメント
+title: setBytes (long, byte, int, int) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerBlob.setBytes (long.byte[], int, int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b18005c16cd62358eb5f269504fc9d80eadb6de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 178c41970407e6104181207396a5baefb5ed282e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843727"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713430"
 ---
-# <a name="setbytes-method-long-byte-int-int"></a>setBytes (long, バイト、int, int) メソッド
+# <a name="setbytes-method-long-byte-int-int"></a>setBytes (long, byte, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された位置、オフセット、および長さで始まる BLOB に渡された byte 配列のすべてまたは一部を書き込みます書き込まれたバイト数を返します。  
+  渡された byte 配列全体またはその一部を、渡された開始位置やオフセットおよび長さを使用して BLOB に書き込み、書き込んだバイト数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,28 +43,28 @@ public int setBytes(long pos,
   
  データの書き込みを開始する BLOB 内の位置 (1 から開始) です。  
   
- *バイト数*  
+ *bytes*  
   
  BLOB に書き込む byte 配列です。  
   
  *offset*  
   
- 内のオフセット配列からのデータの読み取りを開始する場所、**バイト**配列。  
+ **byte** 配列からのデータの読み取りを開始する byte 配列内のオフセットです。  
   
  *len*  
   
  byte 配列から BLOB に読み込むバイト数です。  
   
 ## <a name="return-value"></a>戻り値  
- **Int**書き込まれたバイト数を格納します。  
+ 書き込んだバイト数を含む **int** です。  
   
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>解説  
- この setBytes メソッドは、setBytes、java.sql.Blob インターフェイスのメソッドでによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setBytes メソッドは、java.sql.Blob インターフェイスの setBytes メソッドで指定されています。  
   
- データは、指定した位置からは上書きされ、BLOB の初期の長さをオーバーランことができます。 開始位置に BLOB の長さ + 1 の値を指定すると、バイトが追加されます。 開始位置に BLOB の長さ + 2 以上 (または 0 以下) の値を渡すと、位置のエラーがスローされます。 長さ 0 を渡す**バイト**配列がバイトが書き込まために 0 が返されます。  
+ データは指定された開始位置から上書きされ、BLOB の初期データの長さをオーバーランすることができます。 開始位置に BLOB の長さ + 1 の値を指定すると、バイトが追加されます。 開始位置に BLOB の長さ + 2 以上 (または 0 以下) の値を渡すと、位置のエラーがスローされます。 長さ 0 の **byte** 配列を渡すと、0 が返されます。これはバイトが書き込まれなかったためです。  
   
 ## <a name="see-also"></a>参照  
  [setBytes メソッド&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   

@@ -26,7 +26,7 @@ ms.locfileid: "47667780"
 # <a name="setbyte-method-sqlservercallablestatement"></a>setByte メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された日付の値に設定します。  
+  指定されたパラメーターを、渡された **byte** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public void setByte(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setBytes メソッドは、java.sql.CallableStatement インターフェイスの setBytes メソッドで指定されています。  
+ この setByte メソッドは、java.sql.CallableStatement インターフェイスの setByte メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

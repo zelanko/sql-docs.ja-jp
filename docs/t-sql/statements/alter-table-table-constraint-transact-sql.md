@@ -1,13 +1,11 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONSTRAINT_TSQL
@@ -16,16 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - table_constraint
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: ed7329979efebd35e9979fe0ea37e3651149a12a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106728"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607910"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,6 +49,12 @@ ms.locfileid: "39106728"
         [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]   
         [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]   
         [ NOT FOR REPLICATION ]   
+    | CONNECTION
+        ( { node_table TO node_table } 
+          [ , {node_table TO node_table }]
+          [ , ...n ]
+        )
+        [ ON DELETE NO ACTION]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -83,13 +86,13 @@ ms.locfileid: "39106728"
  [ **ASC** | DESC ]  
  テーブル制約に参加している 1 つ以上の列が並べ替えられる順序を指定します。 既定値は ASC です。  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  インデックス データの格納に使用される個々のインデックス ページを [!INCLUDE[ssDE](../../includes/ssde-md.md)] がどの程度埋めるかを指定します。 ユーザーが指定できる *fillfactor* の値は、1 ～ 100 です。 値を指定しない場合の既定値は 0 です。  
   
 > [!IMPORTANT]  
 >  マニュアルには、WITH FILLFACTOR = *fillfactor* が PRIMARY KEY 制約または UNIQUE 制約に適用される唯一のインデックス オプションとして記述されていますが、これは旧バージョンとの互換性を維持するために記載されており、将来のリリースではこのような記述はなくなります。 ALTER TABLE の [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 句で他のインデックス オプションも指定できます。  
   
- ON { *partition_scheme_name ***(*** partition_column_name***)** | *filegroup*| **"** default **"** }  
+ ON { _partition\_scheme\_name_**(**_partition\_column\_name_**)** | _filegroup_| **"** default **"** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  制約に対して作成されるインデックスの格納場所を指定します。 *partition_scheme_name* を指定した場合、インデックスがパーティション分割され、分割後のパーティションは *partition_scheme_name* で指定したファイル グループにマップされます。 *filegroup* を指定すると、インデックスは指定されたファイル グループに作成されます。 **"** default **"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに作成されます。 PRIMARY KEY 制約または UNIQUE 制約のクラスター化インデックスを追加する場合に ON を指定すると、クラスター化インデックスの作成時に、指定したファイル グループにテーブル全体が移動します。  
@@ -159,7 +162,9 @@ ms.locfileid: "39106728"
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  FOREIGN KEY 制約と CHECK 制約に対して指定できます。 制約でこの句を指定すると、レプリケーション エージェントが挿入、更新、削除操作を行う際に制約が適用されません。  
-  
+
+ CONNECTION 特定のエッジ制約が接続を許可されるノード テーブルのペアを指定します。  
+ 
  DEFAULT  
  列の既定値を指定します。 DEFAULT 定義を使用すると、既存のデータ行に新しい列の値を設定できます。 DEFAULT 定義は、**timestamp** データ型、IDENTITY プロパティ、既存の DEFAULT 定義、またはバインドされている既定値が指定されている列には追加できません。 列に既定値が既に存在する場合、新しい既定値を追加するには既存の既定値をあらかじめ削除する必要があります。 ユーザー定義型の列に既定値を指定する場合は、その型で *constant_expression* 型からユーザー定義型への暗黙的な変換がサポートされている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンとの互換性を保つため、DEFAULT に制約名を割り当てることができます。  
   

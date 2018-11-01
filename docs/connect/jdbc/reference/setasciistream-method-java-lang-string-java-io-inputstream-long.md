@@ -1,30 +1,27 @@
 ---
-title: setAsciiStream メソッドの入力には、バイト数 - を長時間ストリーム) |Microsoft ドキュメント
+title: setAsciiStream メソッドの入力には、バイト数 - を時間の長いストリーム) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e1fc8cd3b54ad78bdfea395f7fd6c7b6724a429
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3259cf29f487c24b82ec8cd27227cca651b78577
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843597"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687690"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>setAsciiStream (java.lang.String, java.io.InputStream, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定したバイト数を持つ specifiedinput ストリームを指定されたパラメーターを設定します。  
+  指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,27 +33,27 @@ public final void setAsciiStream(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *パラメーター名*  
+ *parameterName*  
   
- A**文字列**パラメーター名を格納しています。  
+ パラメーターの名前を含む**文字列**です。  
   
  *x*  
   
  InputStream オブジェクト。  
   
- *長さ*  
+ *length*  
   
- A**長い**のバイト数を示すです。  
+ バイト数を示す **long** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この setAsciiStream メソッドは、java.sql.PreparedStatement インターフェイスの setAsciiStream メソッドによって指定されます。  
   
- ストリームの長さが指定されたものと異なるかどうか、*長さ*パラメーター、JDBC ドライバーと例外をスロー、行が更新または挿入します。  
+ ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   
- ストリームの長さが、不明の場合、*長さ*ドライバーがその長さに関係なく、ストリームを受け入れることを示すために、パラメーターを-1 に設定することがあります。 Sqljdbc4.jar、ことをお勧め、JDBC 4.0 メソッドを使用する[setAsciiStream (java.lang.String, java.io.InputStream) メソッド](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)アプリケーションが列の長さが不明なストリームを更新するときにします。  
+ ストリームの長さが不明である場合、*length* パラメーターを -1 に設定して、ドライバーが長さに関係なくストリームを受け入れるように指定できます。 sqljdbc4.jar を使用する場合、アプリケーションで長さが不明なストリームを使用して列を更新するときは、JDBC 4.0 メソッドの [setAsciiStream (java.lang.String, java.io.InputStream) メソッド](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)を使用することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  [setAsciiStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   

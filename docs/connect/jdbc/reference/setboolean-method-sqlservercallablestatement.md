@@ -26,7 +26,7 @@ ms.locfileid: "47652720"
 # <a name="setboolean-method-sqlservercallablestatement"></a>setBoolean メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された  値に設定します。  
+  指定されたパラメーターを、渡された **boolean** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public void setBoolean(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setURL メソッドは、java.sql.CallableStatement インターフェイスの setURL メソッドで指定されています。  
+ この setBoolean メソッドは、java.sql.CallableStatement インターフェイスの setBoolean メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

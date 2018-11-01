@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: osql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 683bffc470aba863d25b252c7e7d305976631da8
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b2f6a7406fb500f3e909761c4c632587748c1df8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847478"
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,8 +97,8 @@ C:\>osql
  **-E**  
  パスワードを要求せずに、セキュリティ接続を使用します。  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を指定します。 サーバー上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスに接続するには、*server_name***\\***instance_name* を指定します。 サーバーを指定しない場合、 **osql** は、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **osql** を実行するときは、このオプションが必要です。  
+ **-S** _server\_名前_[ **\\**_インスタンス\_名前_]  
+ 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を指定します。 サーバー上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、_server\_name_**\\**_instance\_name_ を指定します。 サーバーを指定しない場合、 **osql** は、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **osql** を実行するときは、このオプションが必要です。  
   
  **-H** *wksta_name*  
  ワークステーション名を指定します。 ワークステーション名は **sysprocesses.hostname** に格納され、 **sp_who**により表示されます。 このオプションが指定されていない場合は、現在のコンピューター名であると見なされます。  
@@ -202,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Remarks  
  **osql** ユーティリティは、ここに記載された、大文字と小文字では異なる機能を持つオプションを使用して、オペレーティング システムから直接起動されます。 起動されると、 **osql**は SQL ステートメントを受け取り、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対話的に送ります。 結果はフォーマットされ、画面に表示されます (**stdout**)。 **osql**を終了するには、QUIT または EXIT を使用します。  
   
- ユーザー名を指定せずに **osql** を起動すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、**osqluser=(***user***)** や **osqlserver=(***server***)** などの環境変数が確認され、それらの値が使用されます。 環境変数が設定されていない場合は、ワークステーションのユーザー名が使用されます。 サーバーを指定していない場合は、ワークステーション名が使用されます。  
+ ユーザー名を指定せずに **osql**を起動すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、 **osqluser=(**_user_**)** や **osqlserver=(**_server_**)** などの環境変数が確認され、それらの値が使用されます。 環境変数が設定されていない場合は、ワークステーションのユーザー名が使用されます。 サーバーを指定していない場合は、ワークステーション名が使用されます。  
   
  **-U** と **-P** のどちらのオプションも使用しない場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では接続時に [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証モードが使用されます。 認証は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **を実行しているユーザーの**Windows アカウントに基づいて行われます。  
   
@@ -261,7 +257,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  可能であれば、 **-E**オプションを使用します (信頼関係接続)。  
   
- 対話的に **osql** を使用している場合、**:r***file_name* を使って、オペレーティング システム ファイルをコマンド バッファーに読み取ることができます。 これにより、 *file_name* 内の SQL スクリプトが単一のバッチとして直接サーバーへ送信されます。  
+ 対話的に **osql** を使用している場合、**:r**_file\_name_を使用して、オペレーティング システム ファイルをコマンド バッファーに読み取ることができます。 これにより、 *file_name* 内の SQL スクリプトが単一のバッチとして直接サーバーへ送信されます。  
   
 > [!NOTE]  
 >  **osql**を使用するとき、GO によって SQL スクリプト ファイルに構文エラーが発生する場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は GO をバッチ区切り記号として処理しています。  
@@ -302,7 +298,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  バッチを実行してから終了し、値を返しません。  
   
--   EXIT **(***query***)**  
+-   EXIT **(**_query_**)**  
   
 > [!NOTE]  
 >  クエリを含むバッチを実行し、クエリの結果を返して終了します。  

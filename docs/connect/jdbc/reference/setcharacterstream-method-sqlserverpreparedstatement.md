@@ -21,15 +21,15 @@ ms.locfileid: "47726430"
 # <a name="setcharacterstream-method-sqlserverpreparedstatement"></a>setCharacterStream メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。  
+  指定されたパラメーターを、渡された java.io.Reader オブジェクトに設定します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setCharacterStream (int, java.io.Reader) メソッド](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
-|[setCharacterStream (int, java.io.Reader, int) メソッド](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-int.md)|指定されたパラメーターを、指定された文字数である指定された  オブジェクトに設定します。|  
-|[setCharacterStream (int, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である指定された  オブジェクトに設定します。|  
+|[setCharacterStream メソッド &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
+|[setCharacterStream メソッド &#40;int, java.io.Reader, int&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-int.md)|指定されたパラメーターを、指定された文字数である指定された java.io.Reader オブジェクトに設定します。|  
+|[setCharacterStream メソッド &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である指定された java.io.Reader オブジェクトに設定します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

@@ -5,9 +5,7 @@ ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84bfd4050ba971d74532f9a8b8adc6abbfae57c5
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118134"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699360"
 ---
 # <a name="join-a-role"></a>ロールの追加
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +79,9 @@ ms.locfileid: "43118134"
   
 4.  編集するロールを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[サーバー ロールのプロパティ – ***server_role_name]* ダイアログ ボックスの **[メンバー]** ページで、**[追加]** をクリックします。  
+5.  **[サーバー ロールのプロパティ –**_server\_role\_name]_ ダイアログ ボックスの **[メンバー]** ページで、**[追加]** をクリックします。  
   
-6.  **[サーバー ログインまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このサーバー ロールに追加するログインまたはサーバー ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **[サーバー ロールのプロパティ –**server_role_name]* ダイアログ ボックスに戻ります。  
+6.  **[サーバー ログインまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このサーバー ロールに追加するログインまたはサーバー ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **[サーバー ロールのプロパティ –**_server\_role\_name]_ ダイアログ ボックスに戻ります。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -104,9 +101,9 @@ ms.locfileid: "43118134"
   
 7.  編集するロールを右クリックし、 **[プロパティ]** をクリックします。  
   
-8.  **[データベースロールのプロパティ –***database_role_name]* ダイアログ ボックスの **[全般]** ページで、**[追加]** をクリックします。  
+8.  **[データベースロールのプロパティ –**_database\_role\_name]_ ダイアログ ボックスの **[全般]** ページで、**[追加]** をクリックします。  
   
-9. **[データベース ユーザーまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このデータベース ロールに追加するログインまたはデータベース ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **[データベースロールのプロパティ –***database_role_name]* ダイアログ ボックスに戻ります。  
+9. **[データベース ユーザーまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このデータベース ロールに追加するログインまたはデータベース ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **[データベースロールのプロパティ –**_database\_role\_name]_ ダイアログ ボックスに戻ります。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

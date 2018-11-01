@@ -35,7 +35,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
   
  設定する列のインデックスです。  
   
- *DateTimeOffset*  
+ *dateTimeOffset*  
   
  DateTimeOffset オブジェクトです。  
   
@@ -54,7 +54,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 |datetime2|挿入できる唯一の形式: "YYYY-MM-DD hh:mm:ss[.nnnnnnn]"|  
   
 ## <a name="see-also"></a>参照  
- [updateDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   
+ [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

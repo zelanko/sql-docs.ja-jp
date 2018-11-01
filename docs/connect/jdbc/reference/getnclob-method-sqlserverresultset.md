@@ -21,14 +21,14 @@ ms.locfileid: "47795523"
 # <a name="getnclob-method-sqlserverresultset"></a>getNClob メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **NClob** オブジェクトとして取得されます。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値を、Java プログラミング言語の **NClob** オブジェクトとして取得します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getNClob メソッド&#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **NClob** オブジェクトとして取得されます。|  
-|[getNClob メソッド&#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **NClob** オブジェクトとして取得されます。|  
+|[getNClob メソッド&#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値を、Java プログラミング言語の **NClob** オブジェクトとして取得します。|  
+|[getNClob メソッド&#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値を、Java プログラミング言語の **NClob** オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

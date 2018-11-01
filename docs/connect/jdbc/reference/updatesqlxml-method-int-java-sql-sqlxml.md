@@ -21,7 +21,7 @@ ms.locfileid: "47643861"
 # <a name="updatesqlxml-method-int-javasqlsqlxml"></a>updateSQLXML (int, java.sql.SQLXML) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された列を java.sql.SQLXML 値で更新します。  
+  指定された列を java.sql.SQLXML 値で更新します  
   
 ## <a name="syntax"></a>構文  
   

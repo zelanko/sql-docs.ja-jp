@@ -44,7 +44,7 @@ public void rollback(javax.transaction.xa.Xid xid)
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- この commit メソッドは、javax.transaction.xa.XAResource インターフェイスの commit メソッドで規定されています。  
+ この rollback メソッドは、javax.transaction.xa.XAResource インターフェイスの rollback メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAResource のメソッド](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

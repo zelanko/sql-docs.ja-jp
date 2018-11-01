@@ -5,9 +5,7 @@ ms.date: 01/22/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2983be97fa3d0f3ab33ed00fc98e48d155396912
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097305"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650970"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,11 +89,11 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
   
 -   インデックスを作成する場合は、`IGNORE_DUP_KEY` オプションを OFF に設定する必要があります (既定の設定)。    
   
--   ビュー定義では、*schema ***.*** tablename* という 2 つの部分から構成される名前でテーブルが参照される必要があります。    
+-   ビュー定義では、 _schema_**.**_tablename_ という 2 つの部分から構成される名前でテーブルが参照されていること。    
   
 -   ビューで参照されるユーザー定義関数は、`WITH SCHEMABINDING` オプションを使用して作成する必要があります。    
   
--   ビューで参照されるユーザー定義関数は、 *\<スキーマ>***.***\<関数>* という 2 つの部分から構成される名前で参照される必要があります。   
+-   ビューで参照されるユーザー定義関数は、\<_スキーマ_\>**.**\<_関数_\> という 2 つの部分から構成される名前で参照される必要があります。   
   
 -   ユーザー定義関数のデータ アクセス プロパティが `NO SQL` で、外部アクセス プロパティが `NO` である必要があります。   
   

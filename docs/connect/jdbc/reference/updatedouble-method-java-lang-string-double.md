@@ -26,7 +26,7 @@ ms.locfileid: "47709150"
 # <a name="updatedouble-method-javalangstring-double"></a>updateDouble (java.lang.String, double) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された列インデックスを使用して、指定された列を **double** の値で更新します。  
+  渡された列名を使用して、指定された列を **double** の値で更新します。  
   
 ## <a name="syntax"></a>構文  
   

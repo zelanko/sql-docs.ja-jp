@@ -1,25 +1,22 @@
 ---
-title: SQLServerXAConnection クラス |Microsoft ドキュメント
+title: SQLServerXAConnection クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6563ca27d1e2abfbabf30374e410cdd970651d34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1f2cc7956f36ee6fad113efd1cfe5afd5f58baff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846347"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782990"
 ---
 # <a name="sqlserverxaconnection-class"></a>SQLServerXAConnection クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,14 +36,14 @@ ms.locfileid: "32846347"
 public class SQLServerXAConnection  
 ```  
   
-## <a name="remarks"></a>解説  
- SQLServerXAConnection オブジェクトは、の分散トランザクションに参加させることができます、 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)オブジェクト。 中間層サーバーの一部では通常、トランザクション マネージャーは、SQLServerXAResource オブジェクトを通じて SQLServerXAConnection オブジェクトを管理します。  
+## <a name="remarks"></a>Remarks  
+ SQLServerXAConnection オブジェクトは、[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) オブジェクトを使用して分散トランザクションに参加させることができます。 中間層サーバーの一部は、通常、トランザクション マネージャーは、SQLServerXAResource オブジェクトを介して SQLServerXAConnection オブジェクトを管理します。  
   
 > [!NOTE]  
 >  通常、アプリケーション プログラマがこのインターフェイスを直接使用することはありません。 このインターフェイスは主に、中間層サーバーで動作しているトランザクション マネージャーによって使用されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAConnection のメンバー](../../../connect/jdbc/reference/sqlserverxaconnection-members.md)   
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

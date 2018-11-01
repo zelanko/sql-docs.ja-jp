@@ -1,13 +1,11 @@
 ---
-title: setString メソッド (SQLServerCallableStatement) |Microsoft ドキュメント
+title: setString メソッド (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setString
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a2fa007aa6edfc764534f745029ae6107edd6d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b36100c0a2b87abad223c47fc4c81dd802c16cc7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682610"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>setString メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを指定し、Java に設定**文字列**値。  
+  指定されたパラメーターを、渡された Java **String** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,19 +39,19 @@ public void setString(java.lang.String sCol,
 #### <a name="parameters"></a>パラメーター  
  *sCol*  
   
- A**文字列**パラメーターの名前を格納しています。  
+ パラメーターの名前を表す**文字列**です。  
   
- *S*  
+ *s*  
   
- A**文字列**値。  
+ **文字列**値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この setString メソッドは、java.sql.CallableStatement インターフェイスの setString メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この setString メソッドは、java.sql.CallableStatement インターフェイスの setString メソッドで規定されています。  
   
- 文字列バイナリへの変換からが実行される場合にのみ[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]変換先の型がバイナリことを認識します。 ここで、JDBC ドライバーには基になる型はわからない場合に合格、**文字列**リテラルし、サーバーは、変換を実行できない場合、サーバー エラーを返します。  
+ 文字列からバイナリへの変換を実行できるのは、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] で変換先の型がバイナリであることが認識されている場合のみです。 JDBC ドライバーで基になる型が認識されていない場合、JDBC ドライバーは **String** リテラルを渡し、サーバーで変換を実行できないときは、サーバー エラーを返します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

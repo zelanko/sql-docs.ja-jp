@@ -38,7 +38,7 @@ public void setDescription(java.lang.String description)
 #### <a name="parameters"></a>パラメーター  
  *description*  
   
- 説明を表す文字列です。  
+ 説明を表す**文字列**です。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -36,7 +36,7 @@ public int getMaxBinaryLiteralLength()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 16 進文字の最大数を示すです。  
+ 16 進文字の最大数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

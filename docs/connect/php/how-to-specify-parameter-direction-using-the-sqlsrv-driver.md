@@ -1,32 +1,29 @@
 ---
-title: '方法: SQLSRV ドライバーを使用してパラメーターの方向を指定 |Microsoft ドキュメント'
+title: '方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4738ce4f8071c5fc1485fad608e00f5e47d9abb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 64c73b14f0195441979891f626976648b56d583d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642370"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-このトピックでは、ストアド プロシージャを呼び出す際に、SQLSRV ドライバーを使用して、パラメーターの方向を指定する方法について説明します。 パラメーターの方向に渡されるパラメーター配列 (手順 3) を構築する場合は、指定された[sqlsrv_query](../../connect/php/sqlsrv-query.md)または[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)です。  
+このトピックでは、ストアド プロシージャを呼び出す際に、SQLSRV ドライバーを使用して、パラメーターの方向を指定する方法について説明します。 パラメーターの方向は、[sqlsrv_query](../../connect/php/sqlsrv-query.md) または [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) に渡されるパラメーター配列を構築する (手順 3) ときに指定します。  
   
 ### <a name="to-specify-parameter-direction"></a>パラメーターの方向を指定するには  
   
@@ -37,7 +34,7 @@ ms.locfileid: "35307841"
     ```  
   
     > [!NOTE]  
-    > 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、次を参照してください。[ストアド プロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)です。  
+    > 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、「[ストアド プロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)」を参照してください。  
   
 2.  Transact-SQL クエリ内のプレースホルダーに対応する PHP 変数を初期化または更新します。 たとえば、次のコードは、UpdateVacationHours ストアド プロシージャの 2 つのパラメーターを初期化します。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "35307841"
     > [!NOTE]  
     > **null**、 **DateTime**、またはストリーム型に初期化または更新される変数は出力パラメーターとして使用できません。  
   
-3.  手順 2 からの PHP 変数を使用して、Transact-SQL 文字列内のパラメーター プレースホルダーに順番に対応するパラメーター値の配列を作成または更新します。 配列に各パラメーターの方向を指定します。 2 つの方法のいずれかで各パラメーターの方向が決定されます: 入力パラメーターの) (既定でまたはを使用して**sqlsrv_param _\*** 定数です。 出力および双方向のパラメーター)。 たとえば、次のコードは、入力パラメーターとして *$employeeId* パラメーターおよび双方向パラメーターとして *$usedVacationHours* パラメーターを指定しています。  
+3.  手順 2 からの PHP 変数を使用して、Transact-SQL 文字列内のパラメーター プレースホルダーに順番に対応するパラメーター値の配列を作成または更新します。 配列に各パラメーターの方向を指定します。 各パラメーターの方向は、(入力パラメーターの) 既定か、または (出力および双方向パラメーターの) **SQLSRV_PARAM_\*** 定数を使用する 2 つの方法のいずれかで決定されます。 たとえば、次のコードは、入力パラメーターとして *$employeeId* パラメーターおよび双方向パラメーターとして *$usedVacationHours* パラメーターを指定しています。  
   
     ```  
     $params = array(  
@@ -60,7 +57,7 @@ ms.locfileid: "35307841"
   
     一般に、パラメーターの方向を指定する構文を理解するため、 *$var1*、 *$var2*、および *$var3* はそれぞれ入力、出力、および双方向のパラメーターに対応するものとします。 パラメーターの方向は、次の方法のいずれかで指定できます。  
   
-    -   暗黙的にパラメーターを指定、入力、出力パラメーターを明示的に指定して双方向のパラメーターを明示的に指定します。  
+    -   暗黙的に入力パラメーターを指定し、明示的に出力パラメーターを指定し、明示的に双方向のパラメーターを指定します。  
   
         ```  
         array(   
@@ -70,7 +67,7 @@ ms.locfileid: "35307841"
                );  
         ```  
   
-    -   入力パラメーターを明示的に指定、出力パラメーターを明示的に指定および双方向のパラメーターを明示的に指定します。  
+    -   明示的に入力パラメーターを指定し、明示的に出力パラメーターを指定し、明示的に双方向のパラメーターを指定します。  
   
         ```  
         array(   
@@ -80,7 +77,7 @@ ms.locfileid: "35307841"
                );  
         ```  
   
-4.  クエリを実行[sqlsrv_query](../../connect/php/sqlsrv-query.md)または[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)と[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)です。 たとえば、次のコードは接続 *$conn* を使用して、 *$params* に指定されたパラメーター値でクエリ *$tsql*を実行します。  
+4.  [sqlsrv_query](../../connect/php/sqlsrv-query.md) または [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) と [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) でクエリを実行します。 たとえば、次のコードは接続 *$conn* を使用して、 *$params* に指定されたパラメーター値でクエリ *$tsql*を実行します。  
   
     ```  
     sqlsrv_query($conn, $tsql, $params);  

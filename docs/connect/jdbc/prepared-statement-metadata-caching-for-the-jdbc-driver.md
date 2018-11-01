@@ -1,95 +1,92 @@
 ---
-title: JDBC Driver のキャッシュ ステートメント メタデータの準備 |Microsoft ドキュメント
+title: JDBC Driver の準備されたステートメント メタデータ キャッシュ | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a291cfb9497cee4fea87db915ca088069c1ec3cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3c412a4364e18a70cf10d9896138c5056318ae20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833157"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767340"
 ---
-# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC Driver のキャッシュの準備されたステートメント メタデータ
+# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC Driver の準備されたステートメント メタデータ キャッシュ
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 この記事では、ドライバーのパフォーマンスを強化するために実装されている 2 つの変更について説明します。
 
 ## <a name="batching-of-unprepare-for-prepared-statements"></a>準備されたステートメント用 Unprepare のバッチ処理
-バージョン 6.1.6-preview、パフォーマンスが向上が最小限に抑えることで実装されていたためサーバーのラウンド トリップを SQL Server。 以前は、各 prepareStatement クエリの unprepare への呼び出しも送信されました。 ドライバーがここで、バッチ処理が最大しきい値"ServerPreparedStatementDiscardThreshold"は、10 の既定値を持つクエリの準備を解除します。
+サーバーのラウンド トリップを SQL Server をバージョン 6.1.6-preview、パフォーマンスの向上が最小限に抑えることで実装されるためです。 以前は、各 prepareStatement クエリの unprepare への呼び出しも送信されました。 ドライバーが次に、バッチ処理が最大しきい値"ServerPreparedStatementDiscardThreshold"は、10 の既定値を持つクエリを準備解除します。
 
 > [!NOTE]  
 >  ユーザーは次のメソッドを使用して既定値を変更することができます: setServerPreparedStatementDiscardThreshold (int 値)
 
-6.1.6-preview から導入された 1 つ以上の変更は、前に、このドライバーは常に呼び出すこと sp_prepexec です。 ここで、準備されたステートメントの最初の実行、ドライバーは、sp_executesql を呼び出すし、残りの部分に sp_prepexec を実行しハンドルを割り当てます。 詳細を参照して[ここ](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching)です。
+6.1.6-preview から導入されたもう 1 つの変更は、その前に、ドライバーが常に呼び出される sp_prepexec です。 ここで、最初に、準備されたステートメントの実行、ドライバーは、sp_executesql を呼び出すし、rest、sp_prepexec を実行し、識別するハンドルを割り当てます。 詳細を参照して[ここ](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching)します。
 
 > [!NOTE]  
->  ユーザーは、既定の動作を変更する設定 enablePrepareOnFirstPreparedStatementCall sp_prepexec 常に呼び出すことは、以前のバージョンに**true**次のメソッドを使用します。setEnablePrepareOnFirstPreparedStatementCall (ブール値)
+>  ユーザーは、以前のバージョンを設定する enablePrepareOnFirstPreparedStatementCall、sp_prepexec を常に呼び出しを既定の動作を変更することができます**true**次のメソッドを使用して。setEnablePrepareOnFirstPreparedStatementCall (ブール値)
 
-### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>この変更によりのバッチ処理の導入された新しい Api の一覧の準備されたステートメントの準備を解除
+### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>準備されたステートメント用のバッチ処理のため、この変更で導入された新しい Api の一覧が Unprepare
 
  **SQLServerConnection**
  
-|新しいメソッド|Description|  
+|新しいメソッド|[説明]|  
 |-----------|-----------------|  
-|int getDiscardedServerPreparedStatementCount()|準備済み現在未解決の数を返しますステートメント操作の準備を解除します。|
-|void closeUnreferencedPreparedStatementHandles()|実行する、未処理破棄された準備されたステートメント用 unprepare 要求を強制します。|
-|ブール getEnablePrepareOnFirstPreparedStatementCall()|特定の接続のインスタンスの動作を返します。 False の場合は最初の実行が sp_executesql を呼び出すと sp_prepexec を呼び出す 2 つ目の実行の動作と、ステートメントを準備できず、実際に準備されたステートメント ハンドルをセットアップします。 次の実行呼び出し sp_execute します。 これから解放 sp_unprepare 準備されたステートメントでの必要性閉じる場合は、ステートメントは 1 回だけ実行します。 このオプションの既定値は、呼び出し元 setDefaultEnablePrepareOnFirstPreparedStatementCall() で変更できます。|
-|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|特定の接続のインスタンスの動作を指定します。 値が false の場合、最初に実行が sp_executesql を呼び出すと sp_prepexec を呼び出す 2 つ目の実行の動作と、ステートメントを準備できず、実際に準備されたステートメント ハンドルをセットアップします。 次の実行呼び出し sp_execute します。 これから解放 sp_unprepare 準備されたステートメントでの必要性閉じる場合は、ステートメントは 1 回だけ実行します。|
-|int getServerPreparedStatementDiscardThreshold()|特定の接続のインスタンスの動作を返します。 この設定は、どのくらい未処理準備操作 (sp_unprepare) 保留にできる 1 つの接続、サーバー上の保留状態のハンドルをクリーンアップする呼び出しが実行される前にステートメントの破棄を制御します。 場合は、設定は、< = 1, unprepare アクションは、準備されたステートメント閉じるですぐに実行されます。 設定されている場合は、{@literal >} 1、これらの呼び出しは、まとめてバッチ処理が多すぎるため呼び出し sp_unprepare のオーバーヘッドを回避します。 このオプションの既定値は、呼び出し元 getDefaultServerPreparedStatementDiscardThreshold() で変更できます。|
-|void setServerPreparedStatementDiscardThreshold(int value)|特定の接続のインスタンスの動作を指定します。 この設定は、どのくらい未処理準備操作 (sp_unprepare) 保留にできる 1 つの接続、サーバー上の保留状態のハンドルをクリーンアップする呼び出しが実行される前にステートメントの破棄を制御します。 場合は、設定は、< = 1 のアクションを準備解除準備されたステートメントを閉じるには直ちに実行されます。 > 1 に設定されている場合は、これらの呼び出しはまとめてバッチ処理 sp_unprepare の多くの呼び出しのオーバーヘッドを回避します。|
+|int getDiscardedServerPreparedStatementCount()|準備された現在未解決の数を返すステートメント unprepare アクション。|
+|void closeUnreferencedPreparedStatementHandles()|強制的に実行される、卓越した破棄された準備されたステートメント用 unprepare 要求をします。|
+|ブール getEnablePrepareOnFirstPreparedStatementCall()|特定の接続のインスタンスの動作を返します。 False の場合、最初の実行が sp_executesql を呼び出すと sp_prepexec を呼び出す 2 番目の実行が発生すると、ステートメントは準備および準備されたステートメント ハンドルを実際にセットアップします。 次の実行呼び出し sp_execute します。 これによって準備されたステートメントで sp_unprepare の必要性閉じる場合は、ステートメントは 1 回だけ実行します。 このオプションの既定値は、呼び出し元 setDefaultEnablePrepareOnFirstPreparedStatementCall() で変更できます。|
+|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|特定の接続のインスタンスの動作を指定します。 値が false の場合、最初の実行が sp_executesql を呼び出すと sp_prepexec を呼び出す 2 番目の実行が発生すると、ステートメントは準備および準備されたステートメント ハンドルを実際にセットアップします。 次の実行呼び出し sp_execute します。 これによって準備されたステートメントで sp_unprepare の必要性閉じる場合は、ステートメントは 1 回だけ実行します。|
+|int getServerPreparedStatementDiscardThreshold()|特定の接続のインスタンスの動作を返します。 この設定は、数未処理準備操作 (sp_unprepare) は、サーバー上で未処理のハンドルをクリーンアップする呼び出しが実行される前に 1 接続あたりの未処理できますステートメントの破棄を制御します。 設定の場合 < = 1、unprepare 準備のステートメントを閉じる操作が直ちに実行されます。 設定されている場合は、{@literal >} 1、これらの呼び出しはまとめて頻度が高すぎる sp_unprepare 呼び出しのオーバーヘッドを回避するためにします。 このオプションの既定値は、呼び出し元 getDefaultServerPreparedStatementDiscardThreshold() で変更できます。|
+|void setServerPreparedStatementDiscardThreshold(int value)|特定の接続のインスタンスの動作を指定します。 この設定は、数未処理準備操作 (sp_unprepare) は、サーバー上で未処理のハンドルをクリーンアップする呼び出しが実行される前に 1 接続あたりの未処理できますステートメントの破棄を制御します。 設定の場合 < = 1 unprepare アクション準備されたステートメントを閉じるには直ちに実行されます。 > 1 に設定されている場合の頻度が高すぎる sp_unprepare の呼び出しのオーバーヘッドを回避するためにこれらの呼び出しはまとめてバッチします。|
 
  **SQLServerDataSource**
  
-|新しいメソッド|Description|  
+|新しいメソッド|[説明]|  
 |-----------|-----------------|  
-|void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|この構成が false の場合、準備されたステートメントの最初の実行が sp_executesql を呼び出すと sp_prepexec を呼び出す 2 つ目の実行の動作と、ステートメントを準備できず、実際に準備されたステートメント ハンドルをセットアップします。 次の実行呼び出し sp_execute します。 これから解放 sp_unprepare 準備されたステートメントでの必要性閉じる場合は、ステートメントは 1 回だけ実行します。|
-|ブール getEnablePrepareOnFirstPreparedStatementCall()|この構成は、準備されたステートメントの最初の実行が sp_executesql を呼び出す場合は false を返し、2 つ目の実行後、ステートメントを準備できません、sp_prepexec を呼び出すし、実際に準備されたステートメント ハンドルをセットアップします。 次の実行呼び出し sp_execute します。 これから解放 sp_unprepare 準備されたステートメントでの必要性閉じる場合は、ステートメントは 1 回だけ実行します。|
-|void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|この設定は、どのくらい未処理準備操作 (sp_unprepare) 保留にできる 1 つの接続、サーバー上の保留状態のハンドルをクリーンアップする呼び出しが実行される前にステートメントの破棄を制御します。 場合は、設定は、< = 1 のアクションを準備解除準備されたステートメントを閉じるには直ちに実行されます。 設定されている場合は、{@literal >} 1 これらの呼び出しが頻繁すぎる sp_unprepare の呼び出しのオーバーヘッドを避けるためにまとめてバッチ処理|
-|int getServerPreparedStatementDiscardThreshold()|この設定は、どのくらい未処理準備操作 (sp_unprepare) 保留にできる 1 つの接続、サーバー上の保留状態のハンドルをクリーンアップする呼び出しが実行される前にステートメントの破棄を制御します。 場合は、設定は、< = 1 のアクションを準備解除準備されたステートメントを閉じるには直ちに実行されます。 設定されている場合は、{@literal >} 1 これらの呼び出しが頻繁すぎる sp_unprepare の呼び出しのオーバーヘッドを避けるためにまとめてバッチ処理します。|
+|void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|この構成が false の場合、準備されたステートメントの最初の実行が sp_executesql を呼び出すと sp_prepexec を呼び出す 2 番目の実行が発生すると、ステートメントは準備および準備されたステートメント ハンドルを実際にセットアップします。 次の実行呼び出し sp_execute します。 これによって準備されたステートメントで sp_unprepare の必要性閉じる場合は、ステートメントは 1 回だけ実行します。|
+|ブール getEnablePrepareOnFirstPreparedStatementCall()|この構成が、準備されたステートメントの最初の実行は、sp_executesql を呼び出す場合は false を返し、2 番目の実行が発生すると、ステートメントを準備できない場合は、sp_prepexec を呼び出すし、実際に準備されたステートメント ハンドルをセットアップします。 次の実行呼び出し sp_execute します。 これによって準備されたステートメントで sp_unprepare の必要性閉じる場合は、ステートメントは 1 回だけ実行します。|
+|void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|この設定は、数未処理準備操作 (sp_unprepare) は、サーバー上で未処理のハンドルをクリーンアップする呼び出しが実行される前に 1 接続あたりの未処理できますステートメントの破棄を制御します。 設定の場合 < = 1 unprepare アクション準備されたステートメントを閉じるには直ちに実行されます。 設定されている場合は、{@literal >} 1 sp_unprepare の頻度が高すぎる呼び出しのオーバーヘッドを回避するためにこれらの呼び出しがまとめてバッチ処理|
+|int getServerPreparedStatementDiscardThreshold()|この設定は、数未処理準備操作 (sp_unprepare) は、サーバー上で未処理のハンドルをクリーンアップする呼び出しが実行される前に 1 接続あたりの未処理できますステートメントの破棄を制御します。 設定の場合 < = 1 unprepare アクション準備されたステートメントを閉じるには直ちに実行されます。 設定されている場合は、{@literal >} 1 sp_unprepare の頻度が高すぎる呼び出しのオーバーヘッドを回避するためにこれらの呼び出しがまとめてバッチ処理します。|
 
-## <a name="prepared-statement-metatada-caching"></a>準備済みステートメント メタデータのキャッシュ
-6.3.0-preview バージョンの時点では、Microsoft SQL Server 用 JDBC driver は、準備されたステートメント キャッシュをサポートします。 V6.3.0-プレビューする前に既に準備ができているおよび、キャッシュに格納されているクエリが実行されるいずれかの場合、同じクエリを再度呼び出すことは発生しません準備します。 ここで、ドライバーはキャッシュにクエリを検索ハンドルを取得して sp_execute を実行します。
-準備済みステートメント メタデータ キャッシュが**無効になっている**既定です。 これを有効にするためには、接続オブジェクトで、次のメソッドを呼び出す必要があります。
+## <a name="prepared-statement-metatada-caching"></a>準備されたステートメント メタデータ キャッシュ
+6.3.0-preview のバージョンの時点では、Microsoft SQL Server 用 JDBC driver は、準備されたステートメント キャッシュをサポートします。 V6.3.0-preview では、前に既に準備され、キャッシュに格納されているクエリを実行する 1 つの場合、同じクエリをもう一度呼び出すことは発生しませんに準備します。 ここで、ドライバー キャッシュでクエリを検索ハンドルと sp_execute でそれを実行します。
+準備されたステートメント メタデータ キャッシュが**無効になっている**既定。 これを有効にするためには、接続オブジェクトで、次のメソッドを呼び出す必要があります。
 
 `setStatementPoolingCacheSize(int value)   //value is the desired cache size (any value bigger than 0)`
 `setDisableStatementPooling(boolean value) //false allows the caching to take place`
 
-例えば： `connection.setStatementPoolingCacheSize(10)`
+例: `connection.setStatementPoolingCacheSize(10)`
 `connection.setDisableStatementPooling(false)`
 
-### <a name="list-of-the-new-apis-introduced-with-this-change-for-prepared-statement-metadata-caching"></a>この変更により、準備されたステートメントの導入された新しい Api の一覧のメタデータのキャッシュ
+### <a name="list-of-the-new-apis-introduced-with-this-change-for-prepared-statement-metadata-caching"></a>準備されたステートメントのこの変更で導入された新しい Api の一覧のメタデータのキャッシュ
 
  **SQLServerConnection**
  
-|新しいメソッド|Description|  
+|新しいメソッド|[説明]|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean value)|ステートメントのプールを true または false に設定します。|
-|boolean getDisableStatementPooling()|ステートメントのプールが無効になっている場合は true を返します。|
-|void setStatementPoolingCacheSize(int value)|この接続の準備されたステートメント キャッシュのサイズを指定します。 1 より小さい値には、キャッシュ、なしです。|
-|int getStatementPoolingCacheSize()|この接続の準備されたステートメント キャッシュのサイズを返します。 1 より小さい値には、キャッシュ、なしです。|
+|ブール getDisableStatementPooling()|ステートメントのプールが無効になっている場合は true を返します。|
+|void setStatementPoolingCacheSize(int value)|この接続の準備されたステートメント キャッシュのサイズを指定します。 1 より小さい値には、キャッシュがありません。|
+|int getStatementPoolingCacheSize()|この接続の準備されたステートメント キャッシュのサイズを返します。 1 より小さい値には、キャッシュがありません。|
 |int getStatementHandleCacheEntryCount()|プールされた準備されたステートメント ハンドルの現在の数を返します。|
-|boolean isPreparedStatementCachingEnabled()|ステートメントのプールが有効になっているかどうか、またはこの接続ではありません。|
+|ブール isPreparedStatementCachingEnabled()|ステートメントのプールが有効になっているかどうか、またはこの接続ではありません。|
 
  **SQLServerDataSource**
  
-|新しいメソッド|Description|  
+|新しいメソッド|[説明]|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean disableStatementPooling)|ステートメント プーリングを true または false に設定します。|
-|boolean getDisableStatementPooling()|ステートメントのプールが無効になっている場合は true を返します。|
-|void setStatementPoolingCacheSize(int statementPoolingCacheSize)|この接続の準備されたステートメント キャッシュのサイズを指定します。 1 より小さい値には、キャッシュ、なしです。|
-|int getStatementPoolingCacheSize()|この接続の準備されたステートメント キャッシュのサイズを返します。 1 より小さい値には、キャッシュ、なしです。|
+|ブール getDisableStatementPooling()|ステートメントのプールが無効になっている場合は true を返します。|
+|void setStatementPoolingCacheSize(int statementPoolingCacheSize)|この接続の準備されたステートメント キャッシュのサイズを指定します。 1 より小さい値には、キャッシュがありません。|
+|int getStatementPoolingCacheSize()|この接続の準備されたステートメント キャッシュのサイズを返します。 1 より小さい値には、キャッシュがありません。|
 
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーによるパフォーマンスと信頼性の強化](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  

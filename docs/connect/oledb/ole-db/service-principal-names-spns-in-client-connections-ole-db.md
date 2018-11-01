@@ -24,7 +24,7 @@ ms.locfileid: "47702230"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
-  このトピックでは、クライアント アプリケーションでサービス プリンシパル名 (SPN) をサポートする OLE DB のプロパティとメンバー関数について説明します。 SPN および Kerberos 認証の詳細については、「[クライアント接続でのサービス プリンシパル名 &#40;SPN&#41; のサポート](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。 サンプルについては、次を参照してください。[統合 Kerberos 認証&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)します。  
+  このトピックでは、クライアント アプリケーションでサービス プリンシパル名 (SPN) をサポートする OLE DB のプロパティとメンバー関数について説明します。 クライアント アプリケーションでの SPN の詳細については、「[クライアント接続でのサービス プリンシパル名 &#40;SPN&#41; のサポート](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。 サンプルについては、次を参照してください。[統合 Kerberos 認証&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)します。  
   
 ## <a name="provider-initialization-string-keywords"></a>プロバイダー初期化文字列のキーワード  
  次に示すプロバイダー初期化文字列のキーワードは、OLE DB アプリケーションで SPN をサポートします。 次の表の "キーワード" 列の値は、IDBInitialize::Initialize のプロバイダー文字列に使用されます。 "説明" 列の値は、ADO または IDataInitialize::GetDataSource を使用して接続するときに初期化文字列で使用されます。  

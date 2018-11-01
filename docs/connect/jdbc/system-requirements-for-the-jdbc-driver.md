@@ -41,7 +41,7 @@ ms.locfileid: "47724300"
   
 **Microsoft JDBC Driver 7.0 for SQL Server:**  
 
-  JDBC Driver 6.2 の各インストール パッケージには、2 つの JAR クラス ライブラリ (**mssql-jdbc-6.2.2.jre7.jar** および **mssql-jdbc-6.2.2.jre8.jar**) が含まれています。
+  JDBC Driver 7.0 の各インストール パッケージには、2 つの JAR クラス ライブラリ (**mssql-jdbc-7.0.0.jre8.jar** および **mssql-jdbc-7.0.0.jre10.jar**) が含まれています。
 
   JDBC Driver 7.0 は、Sun と同等のすべての主要な Java 仮想マシンで操作とサポートができるよう設計されていますが、テストが実行されるのは Sun JRE 8.0 と 10.0 上のみです。
   
@@ -65,7 +65,7 @@ ms.locfileid: "47724300"
   
 **Microsoft JDBC Driver 6.4 for SQL Server:**  
 
-  JDBC Driver 6.2 の各インストール パッケージには、2 つの JAR クラス ライブラリ (**mssql-jdbc-6.2.2.jre7.jar** および **mssql-jdbc-6.2.2.jre8.jar**) が含まれています。
+  JDBC Driver 6.4 の各インストール パッケージには、3 つの JAR クラス ライブラリ (**mssql-jdbc-6.4.0.jre7.jar**、**mssql-jdbc-6.4.0.jre8.jar**、**mssql-jdbc-6.4.0.jre9.jar**) が含まれています。
 
   JDBC Driver 6.4 は、Sun と同等のすべての主要な Java 仮想マシンで操作とサポートができるよう設計されていますが、Sun JRE 7.0、8.0、9.0 のみでテストされます。
   

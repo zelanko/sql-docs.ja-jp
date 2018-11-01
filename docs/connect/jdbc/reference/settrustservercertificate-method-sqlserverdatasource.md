@@ -26,7 +26,7 @@ ms.locfileid: "47793740"
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  trustServerCertificate プロパティが有効であるかどうかを示す**ブール**値を設定します。  
+  trustServerCertificate プロパティが有効であるかどうかを示す **Boolean** 値を設定します。  
   
 ## <a name="syntax"></a>構文  
   

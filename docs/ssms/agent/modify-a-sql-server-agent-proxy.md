@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], modifying
 - modifying SQL Server Agent proxy
 ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 213eba99b7774cf1000d413a719eed02198ed099
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 64cc72a6c44a310b308fd031b179f351560f4fce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42776368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783440"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ ms.locfileid: "42776368"
   
 5.  変更するプロキシ アカウントを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  *[<プロキシ名> - プロキシ アカウントのプロパティ]* ダイアログ ボックスで、必要に応じてプロキシ アカウントを変更します。 このダイアログ ボックスのオプションについては、「 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
+6.  _[proxy\_name_**プロキシ アカウントのプロパティ]** ダイアログ ボックスで、必要に応じてプロキシ アカウントを変更します。 このダイアログ ボックスのオプションについては、「 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: f5443268f025b5bb30f673993819ab584230b676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749498"
+ms.locfileid: "47864390"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>チュートリアル: SSMS を使用するためのヒントとテクニック
 このチュートリアルでは、SQL Server Management Studio (SSMS) の使用時に便利なその他のテクニックを紹介します。 この記事で取り上げるテクニック: 
@@ -82,12 +82,19 @@ ms.locfileid: "47749498"
 7. **Alter Database** コマンド以外をすべて強調表示し、**[コメント]** ボタンを選択します。
 
     ![すべてをコメント化する](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > テキストをコメント化するためのキーボード ショートカットは **CTRL + K、CTRL + C** です。 
 
 8. テキストの **Alter Database** 部分を強調表示し、ツール バーの **[Uncomment]\(コメントを解除する\)** ボタンを選択してコメントを解除します。
 
     ![テキストのコメントを解除する](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > テキストのコメントを解除するためのキーボード ショートカットは **CTRL + K、CTRL + C** です。 
+    
 9. **[実行]** を選択し、テキストのコメント解除された部分を実行します。 
+
 
 ## <a name="indent-your-text"></a>テキストをインデントする
 ツール バーのインデント ボタンを使用し、テキストのインデントを増減できます。 

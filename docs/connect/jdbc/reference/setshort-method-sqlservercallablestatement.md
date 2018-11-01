@@ -26,7 +26,7 @@ ms.locfileid: "47662240"
 # <a name="setshort-method-sqlservercallablestatement"></a>setShort メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された java 値に設定します。  
+  指定されたパラメーターを、渡された **short** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public void setShort(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setObject メソッドは、java.sql.CallableStatement インターフェイスの setObject メソッドで指定されています。  
+ この setShort メソッドは、java.sql.CallableStatement インターフェイスの setShort メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

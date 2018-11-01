@@ -21,7 +21,7 @@ ms.locfileid: "47597140"
 # <a name="overview-of-the-jdbc-driver"></a>JDBC ドライバーの概要
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Microsoft JDBC Driver 6.0 (プレビュー) for SQL Server は、SQL Server 2016 (プレビュー)、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、および Azure SQL Database への堅牢なデータ アクセスを提供する Type 4 Java Database Connectivity (JDBC) 4.2 準拠のドライバーです。  
+  Microsoft JDBC Driver for SQL Server は、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、および Azure SQL Database への堅牢なデータ アクセスを提供する Type 4 Java Database Connectivity (JDBC) 4.2 準拠のドライバーです。  
   
  このセクションのトピックでは、JDBC ドライバーの使用に必要なシステム要件、JDBC ドライバーの使用方法、および追加情報の入手先など、JDBC ドライバーの概要について説明します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47597140"
 |[JDBC ドライバーの追加情報の検索](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|外部リソースへのリンクを含む、Microsoft JDBC ドライバーに関する追加リソースの取得先について説明しています。|  
 |[Microsoft SQL Server 用 JDBC Driver のサポート表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft SQL Server 用 JDBC Driver のサポート表とサポート ライフサイクル ポリシー。|  
 |[よく寄せられる質問&#40;FAQ&#41; JDBC driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC ドライバーのよく寄せられる質問。|  
-|[Microsoft JDBC Driver for SQL Server の機能依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server の機能依存関係|
+|[Microsoft JDBC Driver for SQL Server の機能依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server の機能依存関係。|
 
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーの GitHub リポジトリ](https://github.com/microsoft/mssql-jdbc)  

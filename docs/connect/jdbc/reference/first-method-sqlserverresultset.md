@@ -36,13 +36,13 @@ public boolean first()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- カーソルが先頭行に移動した場合は、 です。 それ以外の場合は、 **false**です。  
+ カーソルが先頭行に移動した場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- メソッドは、java.sql.ResultSet インターフェイスの  メソッドで規定されています。  
+ この first メソッドは、java.sql.ResultSet インターフェイスの first メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

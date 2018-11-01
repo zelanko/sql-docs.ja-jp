@@ -26,7 +26,7 @@ ms.locfileid: "47619210"
 # <a name="getblob-method-int"></a>getBlob (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  パラメーターに渡されたインデックスを使用して、指定された JDBC BLOB パラメーターの値を Java プログラミング言語の  オブジェクトとして取得します。  
+  パラメーターに渡されたインデックスを使用して、指定された JDBC BLOB パラメーターの値を Java プログラミング言語の BLOB オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,10 +47,10 @@ public java.sql.Blob getBlob(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getInt メソッドは、java.sql.CallableStatement インターフェイスの getInt メソッドで規定されています。  
+ この getBlob メソッドは、java.sql.CallableStatement インターフェイスの getBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getInt メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)   
+ [getBlob メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

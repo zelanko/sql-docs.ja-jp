@@ -36,7 +36,7 @@ public java.lang.String getProcedureTerm()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- プロシージャの用語を含むです。  
+ プロシージャの用語を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

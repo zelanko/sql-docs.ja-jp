@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql13.tsqlref.f1
@@ -18,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eb5600c0989fd3384d2a7e7dc22fc18f613071f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fe4a2a137c55487203d3e2f55ea30cf1283fe595
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641660"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL リファレンス (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +35,7 @@ Microsoft のツールのうち、T-SQL のコマンドを発行する主なも�
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)  
 - [sqlcmd](../tools/sqlcmd-utility.md)  
-- [SQL Operations Studio (プレビュー)](https://docs.microsoft.com/sql/sql-operations-studio/download)  
+- [Azure Data Studio (プレビュー)](../azure-data-studio/what-is.md).  
   
  
 ## <a name="locate-the-transact-sql-reference-topics"></a>Transact-SQL のリファレンス トピックを見つける  

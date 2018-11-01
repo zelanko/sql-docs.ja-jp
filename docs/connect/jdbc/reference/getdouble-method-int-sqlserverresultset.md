@@ -26,7 +26,7 @@ ms.locfileid: "47635220"
 # <a name="getdouble-method-int-sqlserverresultset"></a>getDouble (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **double** として取得されます。  
+  この [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Java プログラミング言語の **double** として取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,10 +49,10 @@ public double getDouble(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  この getDouble メソッドは、java.sql.ResultSet インターフェイスの getDouble メソッドによって指定されます。  
   
- このメソッドは、数値ベースのすべてのデータ型を、Java のの忠実性を使用して返します。  
+ このメソッドは、数値ベースのすべてのデータ型を、Java の**double** の忠実性を使用して返します。  
   
 ## <a name="see-also"></a>参照  
- [updateDouble メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)   
+ [getDouble メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

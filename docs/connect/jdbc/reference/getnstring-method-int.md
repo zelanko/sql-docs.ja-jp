@@ -42,10 +42,10 @@ public final java.lang.String getNString(int parameterIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getLong メソッドは、java.sql.CallableStatement インターフェイスの getLong メソッドで規定されています。  
+ この getNString メソッドは、java.sql.CallableStatement インターフェイスの getNString メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getString メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)   
+ [getNString メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

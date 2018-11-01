@@ -36,7 +36,7 @@ public int getRow()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 現在の行番号を示すです。行がない場合は 0 です。  
+ 現在の行番号を示す **int** です。行がない場合は 0 です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

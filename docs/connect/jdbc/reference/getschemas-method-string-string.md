@@ -47,7 +47,7 @@ public ResultSet getSchemas(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getURL メソッドは、java.sql.DatabaseMetaData インターフェイスの getURL メソッドで規定されています。  
+ この getSchemas メソッドは、java.sql.DatabaseMetaData インターフェイスの getSchemas メソッドで規定されています。  
   
  GetSchemas メソッドによって返される結果セットには、次の情報が含まれています。  
   
@@ -56,7 +56,7 @@ public ResultSet getSchemas(java.lang.String catalog,
 |TABLE_SCHEM|**String**|スキーマの名前です。|  
 |TABLE_CATALOG|**String**|スキーマのカタログ名です。|  
   
- 結果は、TABLE_CATALOG および TABLE_SCHEM で順序付けされます。 各行の最初の列は TABLE_SCHEM、次の列は TABLE_CATALOG です。  
+ 結果は、TABLE_CATALOG、TABLE_SCHEM の順に順序付けされます。 各行の最初の列は TABLE_SCHEM、次の列は TABLE_CATALOG です。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

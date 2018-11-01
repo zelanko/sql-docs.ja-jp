@@ -21,7 +21,7 @@ ms.locfileid: "47651980"
 # <a name="example-application-pdosqlsrv-driver"></a>サンプル アプリケーション (PDO_SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-AdventureWorks Product Reviews サンプル アプリケーションは、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーを使用する Web アプリケーションです。 このアプリケーションを使用すると、キーワードを入力して製品を検索し、選択した製品のレビューを読み、選択した製品のレビューを書き、選択した製品の画像をアップロードできます。  
+AdventureWorks Product Reviews サンプル アプリケーションは、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の PDO_SQLSRV ドライバーを使用する Web アプリケーションです。 このアプリケーションを使用すると、キーワードを入力して製品を検索し、選択した製品のレビューを読み、選択した製品のレビューを書き、選択した製品の画像をアップロードできます。  
   
 ### <a name="running-the-example-application"></a>サンプル アプリケーションの実行  
   
@@ -49,7 +49,7 @@ AdventureWorks Product Reviews サンプル アプリケーションでは、以
 ## <a name="example"></a>例  
 AdventureWorks Product Reviews サンプル アプリケーションは、ユーザーが入力した文字列が名前に含まれる製品の情報をデータベースから返します。 返された製品の一覧から、ユーザーはレビューを表示し、画像を表示し、画像をアップロードし、選択した製品のレビューを書くことができます。  
   
-adventureworks_demo.php という名前のファイルに次のコードを追加します。  
+adventureworks_demo_pdo.php という名前のファイルに次のコードを追加します。  
   
 ```  
 <!--=============  
@@ -455,7 +455,7 @@ function PopulateProductsTable( $values )
 ## <a name="example"></a>例  
 photo.php スクリプトは、指定された **ProductID**の製品の写真を返します。 このスクリプトは、adventureworks_demo.php スクリプトから呼び出されます。  
   
-photo.php という名前のファイルに次のコードを追加します。  
+photo_pdo.php という名前のファイルに次のコードを追加します。  
   
 ```  
 <?php  

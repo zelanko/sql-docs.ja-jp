@@ -5,9 +5,7 @@ ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c316c7a1e2e2913c5f0b4ce2e2bb4f63a2f5246
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719260"
 ---
 # <a name="create-external-file-format-transact-sql"></a>外部のファイルの形式 (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -125,7 +122,7 @@ WITH (
    -   DELIMITEDTEXT: フィールド ターミネータとも呼ばれる、列の区切り記号付きのテキスト形式を指定します。
   
  FIELD_TERMINATOR = *field_terminator*  
-区切られたテキスト ファイルにのみ適用されます。 フィールド ターミネータは、テキスト区切りファイルでの各フィールド (列) の終了を示す 1 つ以上の文字を指定します。 既定では、パイプ文字 ꞌ|ꞌ です。 サポートが保証されるよう、1 つまたは複数の Ascii 文字を使うことをお勧めします。
+区切られたテキスト ファイルにのみ適用されます。 フィールド ターミネータは、テキスト区切りファイルでの各フィールド (列) の終了を示す 1 つ以上の文字を指定します。 既定では、パイプ文字 | です。 サポートが保証されるよう、1 つまたは複数の Ascii 文字を使うことをお勧めします。
   
   
  例 :  
@@ -134,7 +131,7 @@ WITH (
   
 -   FIELD_TERMINATOR = ' '  
   
--   FIELD_TERMINATOR ꞌ\tꞌ を =  
+-   FIELD_TERMINATOR \t を =  
   
 -   FIELD_TERMINATOR = ' ~ | ~'  
   
@@ -150,7 +147,7 @@ WITH (
   
 -   STRING_DELIMITER = ' *'  
   
--   STRING_DELIMITER Ꞌ、Ꞌ を =  
+-   STRING_DELIMITER 、 を =  
   
 -   STRING_DELIMITER = '0x7E0x7E' -- 2 個のチルダ (~~)
  
@@ -291,7 +288,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
   
  サポートされる SerDe メソッドと RCFile の組み合わせ、およびサポートされるデータ圧縮方法は、この記事で前に示しました。 すべての組み合わせがサポートされます。
   
- PolyBase の同時実行クエリの最大数は、32 です。 32 の同時実行クエリが実行しているときに、各クエリは、外部のファイルの場所から 33,000 ファイルの最大を読み取ることができます。 ルート フォルダーと各サブフォルダーは、また、ファイルとしてカウントされます。 同時実行の程度が 32 未満である場合は、外部のファイルの場所は 33,000 複数のファイルを含めることができます。
+ PolyBase の同時実行クエリの最大数は、32 です。 32 の同時実行クエリが実行しているときに、各クエリは、外部のファイルの場所から 33,000 ファイルの最大を読み取ることができます。 ルート フォルダーと各サブフォルダーは、また、ファイルとしてカウントされます。 コンカレンシーの程度が 32 未満である場合は、外部のファイルの場所は 33,000 複数のファイルを含めることができます。
   
  制限のため、外部テーブル内のファイルの数を 30,000 より小さいファイルを保存するルートと、外部のファイルの場所のサブフォルダーをお勧めします。 また、ルート ディレクトリの下のサブフォルダーの数を小さい数にすることをお勧めします。 参照されているファイルが多すぎる場合、Java 仮想マシンのメモリ不足例外が発生する可能性があります。
   
@@ -303,7 +300,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
 ## <a name="performance"></a>[パフォーマンス]
  常に圧縮されたファイルを使用してには、バランスを取るようにして、データの圧縮 CPU 使用率の向上と、外部データ ソースと SQL Server の間でのデータを転送する間あります。
   
- Gzip で圧縮されたテキスト ファイルは分割可能ではありません。 Gzip で圧縮されたテキスト ファイルのパフォーマンスを向上させるには、複数のファイルを生成し、そのすべてを外部データ ソースの同じディレクトリに格納することをお勧めします。 このようなファイル構造にすると、PolyBase は、複数のリーダー プロセスと圧縮解除プロセスを使って、より速くデータを圧縮解除できます。 圧縮されたファイルの理想的な数は、計算ノードあたりのデータ リーダー プロセスの最大数です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の現在のリリースでは、データ リーダー プロセスの最大数はノードあたり 8 個です。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、ノードごとのデータ リーダー プロセスの最大数は SLO によって変化します。 詳しくは、「[Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)」(Azure SQL Data Warehouse の読み込みパターンと戦略) をご覧ください。  
+ Gzip で圧縮されたテキスト ファイルは分割可能ではありません。 Gzip で圧縮されたテキスト ファイルのパフォーマンスを向上させるには、複数のファイルを生成し、そのすべてを外部データ ソースの同じディレクトリに格納することをお勧めします。 このようなファイル構造にすると、PolyBase は、複数のリーダー プロセスと圧縮解除プロセスを使って、より速くデータを圧縮解除できます。 圧縮されたファイルの理想的な数は、計算ノードあたりのデータ リーダー プロセスの最大数です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、データ リーダー プロセスの最大数はノードあたり 8 個です。ただし、Azure SQL Data Warehouse Gen2 のリーダー数はノードあたり 20 個です。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、ノードごとのデータ リーダー プロセスの最大数は SLO によって変化します。 詳しくは、「[Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)」(Azure SQL Data Warehouse の読み込みパターンと戦略) をご覧ください。  
   
 ## <a name="examples"></a>使用例  
   

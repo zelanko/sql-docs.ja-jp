@@ -5,9 +5,7 @@ ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0046c563fdf979b3d2ce00f1e4ccac74eb133507
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595690"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -70,10 +67,10 @@ WITH
  のすべてのメンションを  
  作成されるルートを定義するための句を、WITH の後に指定します。  
   
- SERVICE_NAME = **'***service_name***'**  
+ SERVICE_NAME = **'**_service\_name_**'**  
  このルートが示すリモート サービスの名前を指定します。 *service_name* はリモート サービスで使用される名前と正確に一致する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は *service_name* をバイト単位で照合します。 つまり、この比較では大文字と小文字が区別され、現在の照合順序は考慮されません。 SERVICE_NAME が省略されると、このルートはすべてのサービス名と照合されることになりますが、SERVICE_NAME が指定されたルートより照合の優先度が下がります。 **'SQL/ServiceBroker/BrokerConfiguration'** というサービス名を持つルートは、Broker Configuration Notice サービスへのルートです。 このサービスへのルートは、ブローカー インスタンスを指定できない場合があります。  
   
- BROKER_INSTANCE = **'***broker_instance_identifier***'**  
+ BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
  発信先サービスをホストするデータベースを指定します。 *broker_instance_identifier* パラメーターは、リモート データベースのブローカー インスタンス識別子である必要があります。この識別子は選択したデータベースで、次のクエリを実行して取得できます。  
   
 ```  
@@ -84,15 +81,15 @@ WHERE database_id = DB_ID()
   
  BROKER_INSTANCE 句を省略すると、このルートはすべてのブローカー インスタンスと照合されます。 ブローカー インスタンスを指定しないメッセージ交換では、すべてのブローカー インスタンスと照合されるルートは、明示的なブローカー インスタンスを持つルートよりも照合の優先度が高くなります。 ブローカー インスタンスを指定するメッセージ交換では、ブローカー インスタンスを持つルートの方が、すべてのブローカー インスタンスと照合されるルートより優先度が高くなります。  
   
- LIFETIME **=***route_lifetime*  
+ LIFETIME **=**_route\_lifetime_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がルーティング テーブルにルートを保持する時間を秒単位で指定します。 有効期間が終了するとルートは期限切れとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいメッセージ交換用のルートを選択するときに、そのルートは考慮されなくなります。 この句を省略した場合、*route_lifetime* は NULL になり、ルートの有効期限が切れることはありません。  
   
- ADDRESS **='***next_hop_address***'**  
+ ADDRESS **='**_next\_hop\_address_**'**  
 SQL Database Managed Instance の場合、`ADDRESS` はローカルである必要があります。 
 
 ルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:**_port\_number_  
   
  指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
@@ -110,7 +107,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  ルートの *next_hop_address* が **'TRANSPORT'** になっている場合、ネットワーク アドレスは、サービス名の中にあるネットワーク アドレスに基づいて決まります。 **'TRANSPORT'** を指定するルートは、サービス名やブローカー インスタンスを指定できない場合があります。  
   
- MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
  *next_hop_address* でホストされているミラー化されたデータベースを 1 つ含んでいる、ミラー化されたデータベースのネットワーク アドレスを指定します。 *next_hop_mirror_address* は、次の形式で TCP/IP アドレスを指定します。  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  

@@ -21,7 +21,7 @@ ms.locfileid: "47612120"
 # <a name="updatenclob-method-int-javaioreader"></a>updateNClob (int, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された Reader オブジェクトを使用して、指定された列を更新します。  
+  指定された **Reader** オブジェクトを使用して、指定された列を更新します。  
   
 ## <a name="syntax"></a>構文  
   

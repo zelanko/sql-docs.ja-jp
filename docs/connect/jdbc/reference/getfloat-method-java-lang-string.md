@@ -26,7 +26,7 @@ ms.locfileid: "47711870"
 # <a name="getfloat-method-javalangstring"></a>getFloat (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  パラメーターに渡された名前を使用して、指定されたパラメーターの値が Java プログラミング言語の **short** オブジェクトとして取得されます。  
+  パラメーターに渡された名前を使用して、指定されたパラメーターの値を Java プログラミング言語の **float** として取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,12 +47,12 @@ public float getFloat(java.lang.String sCol)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getInt メソッドは、java.sql.CallableStatement インターフェイスの getInt メソッドで規定されています。  
+ この getFloat メソッドは、java.sql.CallableStatement インターフェイスの getFloat メソッドで規定されています。  
   
- このメソッドは、数値ベースのすべての型を、Java のの忠実性を使用して返します。  
+ このメソッドは、数値ベースのすべての型を、Java の **float** の忠実性を使用して返します。  
   
 ## <a name="see-also"></a>参照  
- [getInt メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)   
+ [getFloat メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

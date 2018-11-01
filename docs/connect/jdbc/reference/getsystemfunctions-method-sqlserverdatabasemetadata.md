@@ -36,7 +36,7 @@ public java.lang.String getSystemFunctions()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- システム関数の一覧を含むです。  
+ システム関数の一覧を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

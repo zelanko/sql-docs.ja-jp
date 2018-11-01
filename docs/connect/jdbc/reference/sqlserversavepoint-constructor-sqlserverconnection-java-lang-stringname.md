@@ -1,13 +1,11 @@
 ---
-title: SQLServerSavepoint のコンス トラクターのセーブポイント |Microsoft ドキュメント
+title: SQLServerSavepoint のコンス トラクターのセーブポイント |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection, java.lang.StringName.SQLServerSavepoint
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fb77db6b-ebf8-4b12-8153-2c4bdb8d72f7
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0804c08158e9089d471f8e7e346928d76513a1ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 97119b0f89ae0fc3851a20c04aec3a5de6dfddc7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655250"
 ---
 # <a name="sqlserversavepoint-constructor-sqlserverconnection-javalangstringname"></a>SQLServerSavepoint (SQLServerConnection, java.lang.StringName) コンストラクター
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  新しいインスタンスを初期化、 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラスでは、特定の接続と名前に基づいて。  
+  渡された接続と名前に基づいて、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) クラスの新しいインスタンスを初期化します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,14 +39,14 @@ public SQLServerSavepoint(SQLServerConnection con,
 #### <a name="parameters"></a>パラメーター  
  *con*  
   
- A [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。  
+ [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトです。  
   
  *sName*  
   
- A**文字列**セーブポイントの名前を格納しています。  
+ セーブポイントの名前を含む **String** です。  
   
 ## <a name="see-also"></a>参照  
- [SQLServerSavepoint のコンス トラクター](../../../connect/jdbc/reference/sqlserversavepoint-constructors.md)   
+ [SQLServerSavepoint のコンストラクター](../../../connect/jdbc/reference/sqlserversavepoint-constructors.md)   
  [SQLServerSavepoint のメンバー](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
  [SQLServerSavepoint クラス](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   

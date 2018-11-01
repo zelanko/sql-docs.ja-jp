@@ -5,9 +5,7 @@ ms.date: 10/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVAILABILITY GROUP
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e0fc36645020d8dd349ad4239f4ed811eca4bfe
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 4099355964a7b778073493f943ff9962bc24e149
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662940"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -231,12 +228,12 @@ CREATE AVAILABILITY GROUP group_name
   
  WSFC ノードとサーバーのインスタンスの前提条件については、「[AlwaysOn 可用性グループの前提条件、制限事項、推奨事項 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
- ENDPOINT_URL **='** TCP **://***system-address***:***port***'**  
+ ENDPOINT_URL **='** TCP **://**_system-address_**:**_port_**'**  
  現在の REPLICA ON 句で定義している可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上の[データベース ミラーリング エンドポイント](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)の URL パスを指定します。  
   
  ENDPOINT_URL 句は必須です。 詳細については、「 [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  エンドポイントの URL または読み取り専用のルーティングの URL を指定するための URL を指定します。 URL のパラメーターは次のとおりです。  
   
  *system-address*  
@@ -319,7 +316,7 @@ CREATE AVAILABILITY GROUP group_name
   
  詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
- READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  読み取りを目的とした接続要求をこの可用性レプリカにルーティングするために使用する URL を指定します。 これは、SQL Server データベース エンジンがリッスンしている URL です。 通常、SQL Server データベース エンジンの既定のインスタンスは、TCP ポート 1433 でリッスンします。  
   
  名前付きインスタンスの場合は、[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 動的管理ビューの **port** 列と **type_desc** 列をクエリすることで、ポート番号を取得できます。 サーバー インスタンスでは Transact-SQL リスナーを使用します (**type_desc='TSQL'**)。  
@@ -375,12 +372,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name> 分散可用性グループの半分を占める可用性グループの名前を指定します。  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
  可用性グループに関連付けられているリスナーの URL パスを指定します。  
   
  LISTENER 句は必須です。  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  可用性グループに関連付けられているリスナーの URL を指定します。 URL のパラメーターは次のとおりです。  
   
  *system-address*  
@@ -417,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  手動シード処理を指定します (既定)。 この方法では、プライマリ レプリカでデータベースのバックアップを作成し、セカンダリ可用性グループのレプリカでそのバックアップを手動で復元する必要があります。  
   
- LISTENER **‘***dns_name***’(** \<listener_option> **)** この可用性グループの新しい可用性グループ リスナーを定義します。 LISTENER は省略可能な引数です。  
+ LISTENER **‘**_dns\_name_**’(** \<listener_option\> **)** この可用性グループの新しい可用性グループ リスナーを定義します。 LISTENER は省略可能な引数です。  
   
 > [!IMPORTANT]  
 >  最初のリスナーを作成する前に、「[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」をお読みになることを強くお勧めします。  
@@ -439,7 +436,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER は次のいずれかの \<listener_option> オプションを受け取ります。 
   
- WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
+ WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
  可用性グループ リスナーが動的ホスト構成プロトコル (DHCP) を使用することを指定します。  必要に応じて、ON 句を使用して、このリスナーが作成されるネットワークを識別します。 DHCP は、可用性グループのレプリカをホストする各サーバー インスタンスに使用される単一のサブネットに限定されます。  
   
 > [!IMPORTANT]  
@@ -449,7 +446,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
  可用性グループ リスナーが、DHCP を使用する代わりに、1 つ以上の静的 IP アドレスを使用することを指定します。 複数のサブネットにわたる可用性グループを作成するには、各サブネットのリスナー構成に静的 IP アドレスが 1 つ必要です。 サブネットの静的 IP アドレスには、IPv4 アドレスまたは IPv6 アドレスを使用できます。 ネットワーク管理者に連絡し、新しい可用性グループのレプリカをホストする各サブネットの静的 IP アドレスを入手してください。  
   
  例 :  

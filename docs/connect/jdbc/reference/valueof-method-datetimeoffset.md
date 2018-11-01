@@ -28,7 +28,7 @@ ms.locfileid: "47676610"
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[valueOf(java.sql.Timestamp, int)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-int.md)|引数に java.sql.Timestamp 値とオフセット (分) を示す値を受け取って、GMT からの特定のオフセットで特定の時点を表す **DateTimeOffset** オブジェクトを作成します。|  
-|[valueOf(java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|引数に java.sql.Timestamp 値とオフセット (分) を示す値を受け取って、GMT からの特定のオフセットで特定の時点を表す **DateTimeOffset** オブジェクトを作成します。|  
+|[valueOf(java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|引数に java.sql.Timestamp 値とオフセットを示す java.util.Calendar 値を受け取って、GMT からの特定のオフセットで特定の時点を表す **DateTimeOffset** オブジェクトを作成します。|  
   
 ## <a name="see-also"></a>参照  
  [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)   

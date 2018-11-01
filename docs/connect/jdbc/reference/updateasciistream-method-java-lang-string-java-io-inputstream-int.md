@@ -60,7 +60,7 @@ public void updateAsciiStream(java.lang.String columnName,
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   
- ストリームの長さが不明である場合、*length* パラメーターを -1 に設定して、ドライバーが長さに関係なくストリームを受け入れるように指定できます。 sqljdbc4.jar を使用する場合、アプリケーションで長さが不明なストリームを使用して列を更新するときには、JDBC 4.0 メソッドの [updateBinaryStream &#40;java.lang.String, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-java-lang-string-java-io-inputstream.md) メソッドを使用することをお勧めします。  
+ ストリームの長さが不明である場合、*length* パラメーターを -1 に設定して、ドライバーが長さに関係なくストリームを受け入れるように指定できます。 sqljdbc4.jar を使用する場合、アプリケーションで長さが不明なストリームを使用して列を更新するときは、JDBC 4.0 メソッドの [updateAsciiStream &#40;java.lang.String, java.io.InputStream&#41; メソッド](../../../connect/jdbc/reference/updateasciistream-method-java-lang-string-java-io-inputstream.md)を使用することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  [updateAsciiStream メソッド (SQLServerResultSet)](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

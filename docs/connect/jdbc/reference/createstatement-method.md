@@ -1,13 +1,11 @@
 ---
-title: createStatement () メソッド |Microsoft ドキュメント
+title: createStatement () メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.createStatement ()
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 480f21b6-50cc-4b1e-a0b0-8774ecfe94f1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2c2deab8140ded0a5ba7886adc25174e803ce7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a36cae30e7a32b6045756eabb76d8d55daf2f030
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830647"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658790"
 ---
 # <a name="createstatement-method-"></a>createStatement () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  作成、 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)データベースに SQL ステートメントを送信するためのオブジェクト。  
+  SQL ステートメントをデータベースに送信するための [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,11 +41,11 @@ public java.sql.Statement createStatement()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この createStatement メソッドは、java.sql.Connection インターフェイスの createStatement メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [createStatement メソッド&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   
+ [createStatement メソッド &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

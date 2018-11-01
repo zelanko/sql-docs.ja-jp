@@ -48,7 +48,7 @@ SQLSRV ドライバーでは、カーソルの種類に基づき、任意の順�
 |SQLSRV_SCROLL_NEXT|次の行を指定します。 これは、指定しない場合の既定値は、*行*スクロール可能な結果セットのパラメーター。|  
 |SQLSRV_SCROLL_PRIOR|現在の行の前に、の行を指定します。|  
 |SQLSRV_SCROLL_FIRST|結果セットの最初の行を指定します。|  
-|SQLSRV_SCROLL_LAST|結果セットの最初の行を指定します。|  
+|SQLSRV_SCROLL_LAST|結果セットの最後の行を指定します。|  
 |SQLSRV_SCROLL_ABSOLUTE|指定された行を指定します、*オフセット*パラメーター。|  
 |SQLSRV_SCROLL_RELATIVE|指定された行を指定します、*オフセット*現在の行からのパラメーター。|  
   

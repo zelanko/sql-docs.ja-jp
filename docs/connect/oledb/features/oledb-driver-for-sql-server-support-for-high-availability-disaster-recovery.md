@@ -13,7 +13,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: b50dcb3713ba92e000791a70cc6cb7c8100c36d1
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47674820"
@@ -82,7 +82,7 @@ ms.locfileid: "47674820"
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
   
- 接続文字列キーワードの詳細については、「[OLE DB Driver for SQL Server での接続文字列キーワードの使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)」を参照してください。  
+ OLE DB Driver for SQL Server での接続文字列キーワードについて詳しくは、「[OLE DB Driver for SQL Server での接続文字列キーワードの使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)」をご覧ください。  
 
 ### <a name="application-intent"></a>アプリケーションの目的 
 

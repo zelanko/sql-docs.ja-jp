@@ -47,7 +47,7 @@ public int executeUpdate(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドで規定されています。  
+ この executeUpdate メソッドは、java.sql.Statement インターフェイスの executeUpdate メソッドで規定されています。  
   
  更新数が 1 より大きくなる (または複数の結果セットが生成される) ストアド プロシージャは [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドを使用して実行してください。  
   

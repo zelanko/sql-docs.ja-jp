@@ -27,9 +27,9 @@ ms.locfileid: "47690730"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setBinaryStream (java.lang.String, java.io.InputStream) メソッド](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream.md)|指定されたパラメーターを、指定された入力ストリームに設定します。|  
-|[setBinaryStream (java.lang.String, java.io.InputStream, int) メソッド](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream-int.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
-|[setBinaryStream (java.lang.String, java.io.InputStream, long) メソッド](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream-long.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
+|[setBinaryStream メソッド &#40;java.lang.String, java.io.InputStream&#41;](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream.md)|指定されたパラメーターを、指定された入力ストリームに設定します。|  
+|[setBinaryStream メソッド &#40;java.lang.String, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream-int.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
+|[setBinaryStream メソッド &#40;java.lang.String, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream-long.md)|指定されたパラメーターを、指定された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

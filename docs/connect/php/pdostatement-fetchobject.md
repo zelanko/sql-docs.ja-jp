@@ -31,9 +31,9 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$class*name*: 作成するクラスの名前を指定する省略可能な文字列。 既定値は、stdClass です。  
+$*class_name*: 作成するクラスの名前を指定する省略可能な文字列。 既定値は、stdClass です。  
   
-$ctor*args*: カスタム クラスのコンストラクターの引数と省略可能な配列です。  
+$*ctor_args*: カスタム クラスのコンストラクターの引数と省略可能な配列です。  
   
 ## <a name="return-value"></a>戻り値  
 成功した場合、クラスのインスタンスを持つオブジェクトを返します。 プロパティは、列にマップします。 失敗した場合、false を返します。  

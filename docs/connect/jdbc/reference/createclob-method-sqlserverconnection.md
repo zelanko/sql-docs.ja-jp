@@ -21,7 +21,7 @@ ms.locfileid: "47830570"
 # <a name="createclob-method-sqlserverconnection"></a>createClob メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  データが含まれていない  オブジェクトを作成します。  
+  データが含まれていない Clob オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   

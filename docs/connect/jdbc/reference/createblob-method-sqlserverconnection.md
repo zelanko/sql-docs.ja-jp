@@ -21,7 +21,7 @@ ms.locfileid: "47619161"
 # <a name="createblob-method-sqlserverconnection"></a>createBlob メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  データが含まれていない  オブジェクトを作成します。  
+  データが含まれていない Blob オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   

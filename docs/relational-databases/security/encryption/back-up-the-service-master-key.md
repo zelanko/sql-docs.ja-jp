@@ -3,10 +3,8 @@ title: サービス マスター キーのバックアップ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
@@ -14,18 +12,18 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: d5c8455e24d892be9a12d2ade2a8d2f88d0b97b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5eafe9bfc66dca1949d308b307addad059d3bef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237712"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856930"
 ---
 # <a name="back-up-the-service-master-key"></a>サービス マスター キーのバックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用してサービス マスター キーをバックアップする方法について説明します。 サービス マスター キーは、暗号化階層のルートになります。 サービス マスター キーは、バックアップして安全な別の場所に保存してください。 このバックアップの作成は、サーバー管理操作の最初の段階で実行します。  
+  この記事では、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用してサービス マスター キーをバックアップする方法について説明します。 サービス マスター キーは、暗号化階層のルートになります。 サービス マスター キーは、バックアップして安全な別の場所に保存してください。 このバックアップの作成は、サーバー管理操作の最初の段階で実行します。  
   
- **このトピックの内容**  
+ **この記事の内容**  
   
 -   **作業を開始する準備:**  
   

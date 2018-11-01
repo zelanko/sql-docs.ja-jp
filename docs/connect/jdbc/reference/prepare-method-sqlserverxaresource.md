@@ -26,7 +26,7 @@ ms.locfileid: "47743650"
 # <a name="prepare-method-sqlserverxaresource"></a>prepare メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された  オブジェクトによって指定されたトランザクションのコミットに対する準備を行うように、リソース マネージャーに要求します。  
+  渡された Xid オブジェクトによって指定されたトランザクションのコミットに対する準備を行うように、リソース マネージャーに要求します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ public int prepare(javax.transaction.xa.Xid xid)
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- メソッドは、javax.transaction.xa.XAResource インターフェイスの  メソッドで規定されています。  
+ prepare メソッドは、javax.transaction.xa.XAResource インターフェイスの prepare メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAResource のメソッド](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

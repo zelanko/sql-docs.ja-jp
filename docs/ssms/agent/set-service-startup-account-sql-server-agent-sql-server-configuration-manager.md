@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, service accounts
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 041143d7b55876386e3384060e0da2b340646b76
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1acdb92933bfaaf73b68fa4101dd882d14f0dca1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764430"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,9 +78,9 @@ ms.locfileid: "42776283"
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーのコンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-6.  詳細ペインで、サービス開始アカウントを変更する *[SQL Server エージェント - <サーバー名>]* (*サーバー名*は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント インスタンスの名前) を右クリックし、**[プロパティ]** をクリックします。  
+6.  詳細ペインで、サービス開始アカウントを変更する **[SQL Server エージェント**_(server\_name)]_ (*server_name* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント インスタンスの名前) を右クリックし、**[プロパティ]** をクリックします。  
   
-7.  *[SQL Server エージェントのプロパティ - <サーバー名>]** ダイアログ ボックスの **[ログオン]** タブで、**[次のアカウントでログオン]** から以下のいずれかのオプションを選択します。  
+7.  **[SQL Server エージェント**_(server\_name)_ **のプロパティ]** ダイアログ ボックスの **[ログオン]** タブで、**[次のアカウントでログオン]** から以下のいずれかのオプションを選択します。  
   
     -   **[ビルトイン アカウント]**: ジョブがローカル サーバーのリソースだけを必要とする場合はこのオプションを選択します。 Windows ビルトイン アカウントの選択方法については、「 [SQL Server エージェント サービスのアカウントの選択](http://msdn.microsoft.com/library/ms191543.aspx)」をご覧ください。  
   

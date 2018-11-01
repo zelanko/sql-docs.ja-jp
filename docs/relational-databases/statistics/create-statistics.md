@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.stat.properties.f1
@@ -21,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcccb4f911bd3067694ff959bea49f1838924172
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672100"
 ---
 # <a name="create-statistics"></a>統計の作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "43070845"
   
 4.  **[統計]** フォルダーを右クリックし、 **[新しい統計]** をクリックします。  
   
-     **[全般]** ページの *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスに次のプロパティが表示されます。  
+     **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページに、以下のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -93,7 +91,7 @@ ms.locfileid: "43070845"
      **[サイズ]**  
      各列のデータ型のサイズが表示されます。  
   
-     **Identity**  
+     **[ID]**  
      オンの場合、ID 列を示します。  
   
      **[NULL を許容]**  
@@ -117,12 +115,12 @@ ms.locfileid: "43070845"
      **[この列の統計を更新する]**  
      オンにすると、ダイアログ ボックスを閉じたときに統計を更新します。  
   
-     **[フィルター]** ページの *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスに次のプロパティが表示されます。  
+     **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[フィルター]** ページに、以下のプロパティが表示されます。  
   
      **[フィルター式]**  
      フィルター処理された統計情報にどのデータ行を含めるかを定義します。 たとえば、IPv4 アドレスの場合、「 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  **[全般]** ページの *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスで **[追加]** をクリックします。  
+5.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページで、**[追加]** をクリックします。  
   
      **[列の選択]** ダイアログ ボックスに次のプロパティが表示されます。 この情報は読み取り専用です。  
   
@@ -135,7 +133,7 @@ ms.locfileid: "43070845"
      **[サイズ]**  
      各列のデータ型のサイズが表示されます。  
   
-     **Identity**  
+     **[ID]**  
      オンの場合、ID 列を示します。  
   
      **Allow NULLs**  
@@ -143,7 +141,7 @@ ms.locfileid: "43070845"
   
 6.  **[列の選択]** ダイアログ ボックスで、統計を作成する列のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
-7.  *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスで、**[OK]** をクリックします。  
+7.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスで、**[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

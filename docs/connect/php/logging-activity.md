@@ -50,13 +50,13 @@ pdo_sqlsrv.log_severity = <number>
 PHP では、初期化時に構成ファイルを読み取り、データをキャッシュに格納します。また、PHP では、これらの設定を更新してすぐに使用するための API も提供し、構成ファイルに書き込まれます。 この API は、PHP を初期化した後でも、アプリケーションのスクリプトで設定を変更できるようにします。  
   
 ## <a name="logging-activity-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用したアクティビティのログ記録  
-ログ記録をオンにするには、 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用するか、php.ini ファイルを変更することができます。 初期化、接続、ステートメント、またはエラー関数のアクティビティをログ記録できます。 また、エラー、警告、通知、または 3 つすべてをログ記録するかどうかも指定できます。  
+ログ記録をオンにするには、[sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用するか、php.ini ファイルを変更することができます。 初期化、接続、ステートメント、またはエラー関数のアクティビティをログ記録できます。 また、エラー、警告、通知、または 3 つすべてをログ記録するかどうかも指定できます。  
   
 > [!NOTE]  
 > ログ ファイルの場所は php.ini ファイルで構成できます。  
   
 ### <a name="turning-logging-on"></a>ログ記録をオンにする  
-[sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用して、 **LogSubsystems** 設定の値を指定し、ログ記録をオンにすることができます。 たとえば、次のコードの行は、接続時のアクティビティをログ記録するようにドライバーを構成します。  
+[sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用して、**LogSubsystems** 設定の値を指定し、ログ記録をオンにすることができます。 たとえば、次のコードの行は、接続時のアクティビティをログ記録するようにドライバーを構成します。  
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN);`  
   
@@ -71,11 +71,11 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
 |SQLSRV_LOG_SYSTEM_STMT (4)|ステートメント アクティビティのログ記録をオンにします。|  
 |SQLSRV_LOG_SYSTEM_UTIL (8)|エラー関数アクティビティ (handle_error や handle_warning など) のログ記録をオンにします。|  
   
-論理 OR 演算子  を使用して、**LogSubsystems** 設定に一度に複数の値を設定することができます。 たとえば、次のコードの行は、接続とステートメントの両方のアクティビティのログ記録をオンにします。  
+論理 OR 演算子 (|) を使用して、**LogSubsystems** の設定に一度に複数の値を設定することができます。 たとえば、次のコードの行は、接続とステートメントの両方のアクティビティのログ記録をオンにします。  
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN | SQLSRV_LOG_SYSTEM_STMT);`  
   
-また、php.ini ファイルの **LogSubsystems** 設定に整数値を指定して、ログ記録をオンにすることもできます。 たとえば、次の行を php.ini ファイルの `[sqlsrv]` セクションに追加すると、接続アクティビティのログ記録がオンになります。  
+また、php.ini ファイルの **LogSubsystems** の設定に整数値を指定して、ログ記録をオンにすることもできます。 たとえば、次の行を php.ini ファイルの `[sqlsrv]` セクションに追加すると、接続アクティビティのログ記録がオンになります。  
   
 `sqlsrv.LogSubsystems = 2`  
   
@@ -89,7 +89,7 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_WARNING);`  
   
 > [!NOTE]  
-> 既定の LogSeverity **の設定は、SQLSRV_LOG_SEVERITY_ERROR** です。 ログ記録がオンで、 **LogSeverity** の設定が指定されていない場合、エラーのみがログ記録されます。  
+> **LogSeverity** の既定の設定は、**SQLSRV_LOG_SEVERITY_ERROR** です。 ログ記録がオンで、 **LogSeverity** の設定が指定されていない場合、エラーのみがログ記録されます。  
   
 次の表では、 **LogSeverity** 設定の値として使用できる定数について説明します。  
   
@@ -100,12 +100,12 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
 |SQLSRV_LOG_SEVERITY_WARNING (2)|警告を記録することを指定します。|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|通知を記録することを指定します。|  
   
-論理 OR 演算子  を使用して、**LogSeverity** 設定に一度に複数の値を設定することができます。 たとえば、次のコードの行では、エラーと警告をログ記録することを指定します。  
+論理 OR 演算子 (|) を使用して、**LogSeverity** の設定に一度に複数の値を設定することができます。 たとえば、次のコードの行では、エラーと警告をログ記録することを指定します。  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_ERROR | SQLSRV_LOG_SEVERITY_WARNING);`  
   
 > [!NOTE]  
-> **LogSeverity** 設定の値を指定しても、ログ記録は有効になりません。 **LogSubsystems** 設定の値を指定してログ記録をオンにし、 **LogSeverity**の値を設定してログ内容の重大度を指定します。  
+> **LogSeverity** の設定の値を指定しても、ログ記録は有効になりません。 **LogSubsystems** の設定の値を指定してログ記録をオンにし、**LogSeverity** の値を設定してログ内容の重大度を指定します。  
   
 また、php.ini ファイルの整数値を使用して、 **LogSeverity** 設定の設定を指定することもできます。 たとえば、次の行を php.ini ファイルの `[sqlsrv]` セクションに追加すると、警告のログ記録のみが有効になります。  
   

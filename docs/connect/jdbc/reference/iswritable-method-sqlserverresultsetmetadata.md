@@ -41,7 +41,7 @@ public boolean isWritable(int column)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- 列への書き込みが正常に行える場合は  です。 それ以外の場合は、 **false**です。  
+ 列への書き込みが正常に行える場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

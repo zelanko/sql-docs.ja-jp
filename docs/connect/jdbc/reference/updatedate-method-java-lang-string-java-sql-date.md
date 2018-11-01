@@ -1,5 +1,5 @@
 ---
-title: updateDate (java.lang.String, java.sql.Date) メソッド
+title: updateDate メソッド (java.lang.String, java.sql.Date) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

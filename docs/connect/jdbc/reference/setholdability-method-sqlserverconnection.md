@@ -1,13 +1,11 @@
 ---
-title: setHoldability メソッド (SQLServerConnection) |Microsoft ドキュメント
+title: setHoldability メソッド (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setHoldability
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9002320c0c275965c654c08a5febceefb53e832
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 37181dfc2a2fa7b3e166d00e83130c2758e28533
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842507"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638650"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  変更の保持機能[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)これを使用して作成されるオブジェクト[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)指定の保持機能するオブジェクト。  
+  [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの保持機能を、渡された保持機能に変更します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +38,7 @@ public void setHoldability(int nNewHold)
 #### <a name="parameters"></a>パラメーター  
  *nNewHold*  
   
- **Int**保持機能レベルは次のいずれかを含む値です。  
+ 次のいずれかの保持機能レベルを含む **int** 値です。  
   
  HOLD_CURSORS_OVER_COMMIT  
   
@@ -50,7 +47,7 @@ public void setHoldability(int nNewHold)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この setHoldability メソッドは、java.sql.Connection インターフェイスの setHoldability メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

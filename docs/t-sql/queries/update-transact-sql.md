@@ -5,9 +5,7 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cf48e61dd83eb7d0bc802a8b176c2bd91679336
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2730d1bfc6418a9cc92dd8bea2e87541c6665e51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776970"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +121,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  共通テーブル式は、SELECT、INSERT、DELETE、CREATE VIEW の各ステートメントでも使用できます。 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。  
   
- TOP **(** *expression***)** [ PERCENT ]  
+ TOP **(** _expression_**)** [ PERCENT ]  
  更新する行の数または比率 (%) を指定します。 *expression* は行数または行の比率 (%) にすることができます。  
   
  INSERT、UPDATE、または DELETE を使用する TOP 式で参照される行は、順序付けされません。  
@@ -190,7 +187,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  1 つ以上の引数を使用する *udt_column_name* の静的でないパブリック ミューテーター メソッドです。  
   
- **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.** WRITE **(**_expression_**,**_@Offset_**,**_@Length_**)**  
  *column_name* の値のセクションを変更することを指定します。 *expression* で *column_name* の *@Offset* から始まる *@Length* 単位が置き換えられます。 **varchar(max)**、**nvarchar(max)**、**varbinary(max)** の列だけこの句で指定できます。 *column_name* では NULL 値は許容されません。また、テーブル名やテーブル別名で修飾することもできません。  
   
  *expression* は *column_name* にコピーされる値です。 *expression* は、*column_name* 型に評価されるか、この型に暗黙的にキャストできる必要があります。 *expression* に NULL が設定されている場合、*@Length* は無視され、*column_name* 内の値は指定された *@Offset* で切り捨てられます。  
@@ -204,7 +201,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  **@** *variable*  
  *expression* で返される値を設定する、宣言された変数です。  
   
- SET **@***variable* = *column* = *expression* は、列と同じ値に変数を設定します。 一方、SET **@***variable* = *column*, *column* = *expression* は、列の更新前の値に変数を設定します。  
+ SET **@**_variable_ = *column* = *expression* は、列と同じ値に変数を設定します。 一方、SET **@**_variable_ = _column_, _column_ = _expression_ は、列の更新前の値に変数を設定します。  
   
  \<OUTPUT_Clause>  
  更新されたデータまたはそれに基づく式を、UPDATE 操作の一部として返します。 OUTPUT 句は、リモート テーブルまたはリモート ビューを対象とした DML ステートメントではサポートされません。 詳細については、を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/output-clause-transact-sql.md).  
@@ -334,7 +331,7 @@ GO
 >  **ntext**、**text**、**image** データ型は、将来の [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。  
   
 ### <a name="updating-large-value-data-types"></a>大きな値のデータ型を更新する  
- **.** WRITE (*expression***,** *@Offset ***,***@Length*) 句を使用し、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** データ型の部分または完全更新を実行します。 たとえば、**varchar(max)** 列の部分的な更新では、列の最初の 200 文字だけを削除または変更しますが、完全な更新では、列のすべてのデータを削除または変更します。 データベースの復旧モデルに一括ログ復旧モデルまたは単純復旧モデルが設定されている場合、**.** WRITE で新しいデータを挿入または追加する際には、最小限しかログに記録されません。 既存の値を更新するときには、最小限のログ記録は使用されません。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+ **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) 句を使用し、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** データ型の部分または完全更新を実行します。 たとえば、**varchar(max)** 列の部分的な更新では、列の最初の 200 文字だけを削除または変更しますが、完全な更新では、列のすべてのデータを削除または変更します。 データベースの復旧モデルに一括ログ復旧モデルまたは単純復旧モデルが設定されている場合、**.** WRITE で新しいデータを挿入または追加する際には、最小限しかログに記録されません。 既存の値を更新するときには、最小限のログ記録は使用されません。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、UPDATE ステートメントで次のいずれかのアクションが発生するとき、部分更新が完全更新に変更されます。  
 -   パーティション ビューまたはパーティション テーブルのキー列が変更される場合  
@@ -346,7 +343,7 @@ GO
   
 最高のパフォーマンスが得られるよう、8,040 バイトの倍数の単位でデータを挿入または更新することをお勧めします。  
   
-**.** WRITE 句で変更される列が OUTPUT 句で参照されている場合は、列の完全な値 (**deleted.***column_name* の前イメージまたは **inserted.***column_name* の後イメージのどちらか) が、テーブル変数内の指定された列に返されます。 後述する例 R を参照してください。  
+**.** WRITE 句で変更される列が OUTPUT 句で参照されている場合は、列の完全な値 (**deleted.**_column\_name_ の前イメージまたは **inserted.**_column\_name_ の後イメージのどちらか) が、テーブル変数内の指定された列に返されます。 後述する例 R を参照してください。  
   
 他の文字型またはバイナリ データ型で **.** WRITE と同じ機能を実現するには、[STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md) を使用します。  
   
@@ -938,9 +935,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  
-  <a name="TableHints">
-  </a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
+###  <a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
  このセクションの例では、テーブル ヒントとクエリ ヒントを使用して、UPDATE ステートメントを処理する際のクエリ オプティマイザーの既定の動作を一時的にオーバーライドする方法を示します。  
   
 > [!CAUTION]  

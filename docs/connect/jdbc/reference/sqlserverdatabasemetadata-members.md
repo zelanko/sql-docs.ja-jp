@@ -1,32 +1,29 @@
 ---
-title: SQLServerDatabaseMetaData のメンバー |Microsoft ドキュメント
+title: SQLServerDatabaseMetaData のメンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99e11d827cfc8e81f00a471b06521f33e872d64e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 95948680f7bd7bb1766207fa8894d274b5e09daf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788082"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  次の表に、によって公開されるメンバー、 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)クラスです。  
+  次の表は、[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) クラスによって公開されるメンバーを示しています。  
   
-## <a name="constructors"></a>コンス トラクター  
+## <a name="constructors"></a>コンストラクター  
  [なし] :  
   
 ## <a name="fields"></a>フィールド  
@@ -34,25 +31,25 @@ ms.locfileid: "32853247"
   
 ## <a name="inherited-fields"></a>継承されたフィールド  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |java.sql.DatabaseMetaData|attributeNoNulls、attributeNullable、attributeNullableUnknown、bestRowNotPseudo、bestRowPseudo、bestRowSession、bestRowTemporary、bestRowTransaction、bestRowUnknown、columnNoNulls、columnNullable、columnNullableUnknown、importedKeyCascade、importedKeyInitiallyDeferred、importedKeyInitiallyImmediate、importedKeyNoAction、importedKeyNotDeferrable、importedKeyRestrict、importedKeySetDefault、importedKeySetNull、procedureColumnIn、procedureColumnInOut、procedureColumnOut、procedureColumnResult、procedureColumnReturn、procedureColumnUnknown、procedureNoNulls、procedureNoResult、procedureNullable、procedureNullableUnknown、procedureResultUnknown、procedureReturnsResult、sqlStateSQL、sqlStateSQL99、sqlStateXOpen、tableIndexClustered、tableIndexHashed、tableIndexOther、tableIndexStatistic、typeNoNulls、typeNullable、typeNullableUnknown、typePredBasic、typePredChar、typePredNone、typeSearchable、versionColumnNotPseudo、versionColumnPseudo、versionColumnUnknown|  
   
 ## <a name="methods"></a>メソッド  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|現在のユーザーがによって返されるすべてのプロシージャを呼び出すアクセス許可を持っているかどうかを取得、 [getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md)メソッドです。|  
-|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|現在のユーザーがによって返されるすべてのテーブルを使用するアクセス許可を持っているかどうかを取得、 [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) SELECT ステートメント内のメソッドです。|  
+|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|現在のユーザーが、[getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md) メソッドによって返されたすべてのプロシージャを呼び出すアクセス許可を持っているかどうかを取得します。|  
+|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|現在のユーザーが、[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) メソッドで返されたすべてのテーブルを SELECT ステートメントで使用するアクセス許可を持っているかどうかを取得します。|  
 |[autoCommitFailureClosesAllResultSets](../../../connect/jdbc/reference/autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata.md)|自動コミットが有効である場合に例外が発生したとき、保持可能な結果セットも含め、開いているすべての結果セットを JDBC ドライバーで閉じるかどうかを示します。|  
 |[dataDefinitionCausesTransactionCommit](../../../connect/jdbc/reference/datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata.md)|トランザクション内のデータ定義ステートメントがトランザクションを強制的にコミットさせるかどうかを取得します。|  
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|データベースがトランザクション内のデータ定義ステートメントを無視するかどうかを取得します。|  
-|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|表示されている行を削除するかどうかを取得しますを呼び出すことによって検出できる、 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)クラスです。|  
-|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|取得の場合、戻り値の値かどうか、 [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md)メソッドには、SQL データ型 LONGVARCHAR と LONGVARBINARY が含まれています。|  
-|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|渡されたスキーマおよびカタログで使用できる、ユーザー定義型である渡された型の渡された属性の記述を取得します。|  
+|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) メソッドを呼び出すことで可視の行が削除されたことを検出できるかどうかを取得します。|  
+|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) メソッドの戻り値に SQL データ型 LONGVARCHAR と LONGVARBINARY が含まれるかどうかを取得します。|  
+|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|渡されたスキーマおよびカタログで使用できる、ユーザー定義型である渡された型の渡された属性の記述を取得します。|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|行を一意に識別する、テーブルの最適な列のセットの記述を取得します。|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|接続されたサーバーで使用できるカタログ名を取得します。|  
-|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|取得、**文字列**カタログとテーブル名の間の区切り記号としてこのデータベースを使用します。|  
+|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|このデータベースでカタログ名とテーブル名の間の区切り記号として使用している **String** が取得されます。|  
 |[getCatalogTerm](../../../connect/jdbc/reference/getcatalogterm-method-sqlserverdatabasemetadata.md)|データベース ベンダーが "カタログ" の代わりに使用している用語を取得します。|  
 |[getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md)|ドライバーがサポートしているクライアント情報のプロパティの一覧を取得します。|  
 |[getColumnPrivileges](../../../connect/jdbc/reference/getcolumnprivileges-method-sqlserverdatabasemetadata.md)|テーブルの列に対するアクセス権の記述を取得します。|  
@@ -69,10 +66,10 @@ ms.locfileid: "32853247"
 |[getDriverName](../../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md)|JDBC ドライバーの名前を取得します。|  
 |[getDriverVersion](../../../connect/jdbc/reference/getdriverversion-method-sqlserverdatabasemetadata.md)|JDBC ドライバーのバージョン番号を取得します。|  
 |[getExportedKeys](../../../connect/jdbc/reference/getexportedkeys-method-sqlserverdatabasemetadata.md)|渡されたテーブルの主キー列を参照する外部キー列の記述を取得します。|  
-|[getExtraNameCharacters](../../../connect/jdbc/reference/getextranamecharacters-method-sqlserverdatabasemetadata.md)|A ~ z、A ~ Z、0 ~ 9、および _ 以外、たとえば、囲まれていない識別子名に使用できるすべての余分な文字を取得します。|  
+|[getExtraNameCharacters](../../../connect/jdbc/reference/getextranamecharacters-method-sqlserverdatabasemetadata.md)|引用符で囲まれていない識別子名に使用できるすべての特殊文字 (a ～ z、A ～ Z、0 ～ 9、および _ 以外) を取得します。|  
 |[getFunctions](../../../connect/jdbc/reference/getfunctions-method-sqlserverdatabasemetadata.md)|システム関数およびユーザー関数の記述を取得します。|  
 |[getFunctionColumns](../../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)|指定されたカタログのシステム関数またはユーザー関数のパラメーターと戻り値の型に関する記述を取得します。|  
-|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|取得、**文字列**SQL 識別子を引用するために使用されます。|  
+|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|SQL 識別子を引用するために使用する**文字列**を取得します。|  
 |[getImportedKeys](../../../connect/jdbc/reference/getimportedkeys-method-sqlserverdatabasemetadata.md)|テーブルの外部キー列によって参照される、主キー列の記述を取得します。|  
 |[getIndexInfo](../../../connect/jdbc/reference/getindexinfo-method-sqlserverdatabasemetadata.md)|渡されたテーブルのインデックスと統計情報の記述を取得します。|  
 |[getJDBCMajorVersion](../../../connect/jdbc/reference/getjdbcmajorversion-method-sqlserverdatabasemetadata.md)|ドライバーの JDBC メジャー バージョン番号を取得します。|  
@@ -86,16 +83,16 @@ ms.locfileid: "32853247"
 |[getMaxColumnsInOrderBy](../../../connect/jdbc/reference/getmaxcolumnsinorderby-method-sqlserverdatabasemetadata.md)|データベースで ORDER BY 句に許容される最大の列数を取得します。|  
 |[getMaxColumnsInSelect](../../../connect/jdbc/reference/getmaxcolumnsinselect-method-sqlserverdatabasemetadata.md)|データベースで SELECT リストに許容される最大の列数を取得します。|  
 |[getMaxColumnsInTable](../../../connect/jdbc/reference/getmaxcolumnsintable-method-sqlserverdatabasemetadata.md)|データベースでテーブルに許容される最大の列数を取得します。|  
-|[getMaxConnections](../../../connect/jdbc/reference/getmaxconnections-method-sqlserverdatabasemetadata.md)|データベースへの可能な同時接続の最大数を取得します。|  
+|[getMaxConnections](../../../connect/jdbc/reference/getmaxconnections-method-sqlserverdatabasemetadata.md)|データベースへの可能なコンカレント接続の最大数を取得します。|  
 |[getMaxCursorNameLength](../../../connect/jdbc/reference/getmaxcursornamelength-method-sqlserverdatabasemetadata.md)|データベースで許容されるカーソル名の最大文字数を取得します。|  
 |[getMaxIndexLength](../../../connect/jdbc/reference/getmaxindexlength-method-sqlserverdatabasemetadata.md)|データベースで、インデックスのすべての部分を含めて、インデックスに許容される最大バイト数を取得します。|  
 |[getMaxProcedureNameLength](../../../connect/jdbc/reference/getmaxprocedurenamelength-method-sqlserverdatabasemetadata.md)|データベースでプロシージャ名に許容される最大文字数を取得します。|  
 |[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md)|データベースで許容される 1 行の最大バイト数を取得します。|  
 |[getMaxSchemaNameLength](../../../connect/jdbc/reference/getmaxschemanamelength-method-sqlserverdatabasemetadata.md)|データベースでテーブル名に許容される最大文字数を取得します。|  
-|[getMaxStatementLength](../../../connect/jdbc/reference/getmaxstatementlength-method-sqlserverdatabasemetadata.md)|このデータベースで SQL ステートメントに許容される文字の最大数を取得します。|  
+|[getMaxStatementLength](../../../connect/jdbc/reference/getmaxstatementlength-method-sqlserverdatabasemetadata.md)|データベースで SQL ステートメントに許容される最大文字数を取得します。|  
 |[getMaxStatements](../../../connect/jdbc/reference/getmaxstatements-method-sqlserverdatabasemetadata.md)|データベースの同時に開くことができるアクティブなステートメントの最大数を取得します。|  
-|[getMaxTableNameLength](../../../connect/jdbc/reference/getmaxtablenamelength-method-sqlserverdatabasemetadata.md)|このデータベースでテーブル名に許容される文字の最大数を取得します。|  
-|[getMaxTablesInSelect](../../../connect/jdbc/reference/getmaxtablesinselect-method-sqlserverdatabasemetadata.md)|このデータベースで SELECT ステートメントに許容されるテーブルの最大数を取得します。|  
+|[getMaxTableNameLength](../../../connect/jdbc/reference/getmaxtablenamelength-method-sqlserverdatabasemetadata.md)|データベースでテーブル名に許容される最大文字数を取得します。|  
+|[getMaxTablesInSelect](../../../connect/jdbc/reference/getmaxtablesinselect-method-sqlserverdatabasemetadata.md)|データベースで SELECT ステートメントに許容される最大のテーブル数を取得します。|  
 |[getMaxUserNameLength](../../../connect/jdbc/reference/getmaxusernamelength-method-sqlserverdatabasemetadata.md)|データベースでユーザー名に許容される最大文字数を取得します。|  
 |[getNumericFunctions](../../../connect/jdbc/reference/getnumericfunctions-method-sqlserverdatabasemetadata.md)|データベースで使用できる、数学関数のコンマ区切りの一覧を取得します。|  
 |[getPrimaryKeys](../../../connect/jdbc/reference/getprimarykeys-method-sqlserverdatabasemetadata.md)|渡されたテーブルの主キー列の記述を取得します。|  
@@ -106,10 +103,10 @@ ms.locfileid: "32853247"
 |[getRowIdLifetime](../../../connect/jdbc/reference/getrowidlifetime-method-sqlserverdatabasemetadata.md)|SQL RowId データ型がサポートされているかどうかを示す状態を返します。 サポートされている場合は、RowId オブジェクトの有効期間を返します。|  
 |[getSchemas](../../../connect/jdbc/reference/getschemas-method.md)|現在のデータベースで使用できるスキーマ名を取得します。|  
 |[getSchemaTerm](../../../connect/jdbc/reference/getschematerm-method-sqlserverdatabasemetadata.md)|データベースで "スキーマ" の代わりに使用している用語を取得します。|  
-|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|取得、**文字列**ワイルドカード文字をエスケープするために使用できます。|  
+|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|ワイルドカード文字のエスケープに使用できる**文字列**を取得します。|  
 |[getSQLKeywords](../../../connect/jdbc/reference/getsqlkeywords-method-sqlserverdatabasemetadata.md)|データベースの SQL キーワードであって、SQL92 キーワードではない、すべてのキーワードのコンマ区切りの一覧を取得します。|  
-|[getSQLStateType](../../../connect/jdbc/reference/getsqlstatetype-method-sqlserverdatabasemetadata.md)|SQLException.getSQLState メソッドによって返される SQLSTATE が X であるかどうかを示す開きます (今すぐと呼ばれる Open Group)、SQL CLI、SQL99 (JDBC 3.0)、sql:2003 (JDBC 4.0)。|  
-|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|コンマ区切りの一覧を取得**文字列**データベースで使用される関数。|  
+|[getSQLStateType](../../../connect/jdbc/reference/getsqlstatetype-method-sqlserverdatabasemetadata.md)|SQLException.getSQLState メソッドによって返される SQLSTATE が、X/Open (現在は Open Group)、SQL CLI、SQL99 (JDBC 3.0)、SQL:2003 (JDBC 4.0) のいずれであるかを示します。|  
+|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|データベースで使用できる**文字列**関数のコンマ区切りの一覧を取得します。|  
 |[getSuperTables](../../../connect/jdbc/reference/getsupertables-method-sqlserverdatabasemetadata.md)|データベース内の特定のスキーマで定義されたテーブルの階層の記述を取得します。|  
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|データベース内の特定のスキーマで定義されたユーザー定義型の階層の記述を取得します。|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|データベースで使用できる、システム関数のコンマ区切りの一覧を取得します。|  
@@ -117,12 +114,12 @@ ms.locfileid: "32853247"
 |[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|渡されたカタログ、スキーマ、またはテーブル名のパターンで使用可能なテーブルの記述を取得します。|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|現在のデータベースで使用できるテーブルの型を取得します。|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|データベースで使用可能な時間関数および日付関数のコンマ区切りの一覧を取得します。|  
-|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|現在のデータベースによってサポートされる、すべての標準 SQL 型に関する記述を取得します。|  
+|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|現在のデータベースによってサポートされる、すべての標準 SQL 型に関する記述を取得します。|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|特定のスキーマで定義されているユーザー定義型の記述を取得します。|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|データベースの URL を取得します。|  
-|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|データベースに対する既知のユーザー名を取得します。|  
+|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|データベースに対する既知のユーザー名を取得します。|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|行の任意の値が更新された場合に自動的に更新されるテーブルの列の記述を取得します。|  
-|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|メソッドを呼び出すことで可視の行を挿入するを検出できるかどうかを取得[rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)クラスです。|  
+|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) メソッドを呼び出すことで、可視の行が挿入されたことを検出できるかどうかが取得されます。|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|カタログが完全修飾テーブル名の先頭に現れるかどうかを取得します。|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverdatabasemetadata.md)|データベースが読み取り専用モードであるかどうかを取得します。|  
 |[locatorsUpdateCopy](../../../connect/jdbc/reference/locatorsupdatecopy-method-sqlserverdatabasemetadata.md)|LOB に対する更新が、コピーに対して行われたか、LOB に直接行われたかを示します。|  
@@ -166,7 +163,7 @@ ms.locfileid: "32853247"
 |[supportsFullOuterJoins](../../../connect/jdbc/reference/supportsfullouterjoins-method-sqlserverdatabasemetadata.md)|データベースが完全に入れ子状態になった外部結合をサポートするかどうかを取得します。|  
 |[supportsGetGeneratedKeys](../../../connect/jdbc/reference/supportsgetgeneratedkeys-method-sqlserverdatabasemetadata.md)|ステートメントの実行後に自動生成キーを取得できるかどうかを取得します。|  
 |[supportsGroupBy](../../../connect/jdbc/reference/supportsgroupby-method-sqlserverdatabasemetadata.md)|データベースが GROUP BY 句をサポートするかどうかを取得します。|  
-|[supportsGroupByBeyondSelect](../../../connect/jdbc/reference/supportsgroupbybeyondselect-method-sqlserverdatabasemetadata.md)|データベースが GROUP BY 句で SELECT ステートメント内の列のすべてが含まれますが、GROUP BY 句で SELECT ステートメントに含まれていない列の使用をサポートするかどうかを取得します。|  
+|[supportsGroupByBeyondSelect](../../../connect/jdbc/reference/supportsgroupbybeyondselect-method-sqlserverdatabasemetadata.md)|SELECT ステートメント内のすべての列が GROUP BY 句に含まれる場合に、データベースが GROUP BY 句で SELECT ステートメントに含まれていない列の使用をサポートするかどうかを取得します。|  
 |[supportsGroupByUnrelated](../../../connect/jdbc/reference/supportsgroupbyunrelated-method-sqlserverdatabasemetadata.md)|データベースが GROUP BY 句で SELECT ステートメントにない列の使用をサポートするかどうかを取得します。|  
 |[supportsIntegrityEnhancementFacility](../../../connect/jdbc/reference/supportsintegrityenhancementfacility-method-sqlserverdatabasemetadata.md)|データベースが SQL Integrity Enhancement Facility をサポートするかどうかを取得します。|  
 |[supportsLikeEscapeClause](../../../connect/jdbc/reference/supportslikeescapeclause-method-sqlserverdatabasemetadata.md)|データベースが LIKE エスケープ句の指定をサポートするかどうかを取得します。|  
@@ -174,8 +171,8 @@ ms.locfileid: "32853247"
 |[supportsMinimumSQLGrammar](../../../connect/jdbc/reference/supportsminimumsqlgrammar-method-sqlserverdatabasemetadata.md)|データベースが ODBC Minimum SQL 文法をサポートするかどうかを取得します。|  
 |[supportsMixedCaseIdentifiers](../../../connect/jdbc/reference/supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata.md)|引用符で囲まれていない大文字と小文字が混在する SQL 識別子を、データベースが大文字と小文字を区別しないで扱うかどうか、およびそれらの識別子を大文字小文字混在で格納するかどうかを取得します。|  
 |[supportsMixedCaseQuotedIdentifiers](../../../connect/jdbc/reference/supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md)|引用符で囲まれた大文字と小文字が混在する SQL 識別子を、データベースが大文字と小文字を区別しないで扱うかどうか、およびそれらの識別子を大文字小文字混在で格納するかどうかを取得します。|  
-|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|複数を設定することがあるかどうかを取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)から返されるオブジェクト、 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)オブジェクトを同時にします。|  
-|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|このデータベースは、複数の取得をサポートしているかどうかを取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)に 1 回の呼び出しからのオブジェクト、[実行](../../../connect/jdbc/reference/execute-method.md)のメソッド、 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)クラスです。|  
+|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトから同時に返された複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを持つことが可能かどうかを取得します。|  
+|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの [execute](../../../connect/jdbc/reference/execute-method.md) メソッドへの 1 回の呼び出しから複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを取得することを、データベースがサポートするかどうかを取得します。|  
 |[supportsMultipleTransactions](../../../connect/jdbc/reference/supportsmultipletransactions-method-sqlserverdatabasemetadata.md)|データベースが、異なる接続で複数のトランザクションを同時に開くことができるかどうかを取得します。|  
 |[supportsNamedParameters](../../../connect/jdbc/reference/supportsnamedparameters-method-sqlserverdatabasemetadata.md)|データベースが呼び出し可能ステートメントで名前付きパラメーターをサポートするかどうかを取得します。|  
 |[supportsNonNullableColumns](../../../connect/jdbc/reference/supportsnonnullablecolumns-method-sqlserverdatabasemetadata.md)|データベースの列を null を許容しない列として定義できるかどうかを取得します。|  
@@ -187,7 +184,7 @@ ms.locfileid: "32853247"
 |[supportsOuterJoins](../../../connect/jdbc/reference/supportsouterjoins-method-sqlserverdatabasemetadata.md)|データベースが外部結合をサポートするかどうかを取得します。|  
 |[supportsPositionedDelete](../../../connect/jdbc/reference/supportspositioneddelete-method-sqlserverdatabasemetadata.md)|データベースが位置指定された DELETE ステートメントをサポートするかどうかを取得します。|  
 |[supportsPositionedUpdate](../../../connect/jdbc/reference/supportspositionedupdate-method-sqlserverdatabasemetadata.md)|データベースが位置指定された UPDATE ステートメントをサポートするかどうかを取得します。|  
-|[supportsResultSetConcurrency](../../../connect/jdbc/reference/supportsresultsetconcurrency-method-sqlserverdatabasemetadata.md)|データベースが、渡された同時実行の種類と結果セットの種類の組み合わせをサポートするかどうかを取得します。|  
+|[supportsResultSetConcurrency](../../../connect/jdbc/reference/supportsresultsetconcurrency-method-sqlserverdatabasemetadata.md)|データベースが、渡されたコンカレンシーの種類と結果セットの種類の組み合わせをサポートするかどうかを取得します。|  
 |[supportsResultSetHoldability](../../../connect/jdbc/reference/supportsresultsetholdability-method-sqlserverdatabasemetadata.md)|データベースが渡された結果セットの保持機能をサポートするかどうかを取得します。|  
 |[supportsResultSetType](../../../connect/jdbc/reference/supportsresultsettype-method-sqlserverdatabasemetadata.md)|データベースが渡された結果セットの種類をサポートするかどうかを取得します。|  
 |[supportsSavepoints](../../../connect/jdbc/reference/supportssavepoints-method-sqlserverdatabasemetadata.md)|データベースがセーブポイントをサポートするかどうかを取得します。|  
@@ -209,7 +206,7 @@ ms.locfileid: "32853247"
 |[supportsTransactions](../../../connect/jdbc/reference/supportstransactions-method-sqlserverdatabasemetadata.md)|データベースがトランザクションをサポートするかどうかを取得します。|  
 |[supportsUnion](../../../connect/jdbc/reference/supportsunion-method-sqlserverdatabasemetadata.md)|データベースが SQL UNION をサポートするかどうかを取得します。|  
 |[supportsUnionAll](../../../connect/jdbc/reference/supportsunionall-method-sqlserverdatabasemetadata.md)|データベースが SQL UNION ALL をサポートするかどうかを取得します。|  
-|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|呼び出して表示される行の更新プログラムを検出できるかどうかを取得、 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)クラスです。|  
+|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) メソッドを呼び出すことで表示されている行が更新されたことを検出できるかどうかを取得します。|  
 |[usesLocalFilePerTable](../../../connect/jdbc/reference/useslocalfilepertable-method-sqlserverdatabasemetadata.md)|データベースがテーブルごとにファイルを使用するかどうかを取得します。|  
 |[usesLocalFiles](../../../connect/jdbc/reference/useslocalfiles-method-sqlserverdatabasemetadata.md)|データベースがテーブルをローカル ファイルに格納するかどうかを取得します。|  
   

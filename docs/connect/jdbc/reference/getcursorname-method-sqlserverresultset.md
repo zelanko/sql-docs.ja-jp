@@ -39,7 +39,7 @@ public java.lang.String getCursorName()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- カーソル名を含む  です。  
+ カーソル名を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

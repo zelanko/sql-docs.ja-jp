@@ -32,8 +32,8 @@ ms.locfileid: "47610350"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
-|[getCharacterStream (java.lang.String)](../../../connect/jdbc/reference/getcharacterstream-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
+|[getCharacterStream &#40;int&#41;](../../../connect/jdbc/reference/getcharacterstream-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
+|[getCharacterStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getcharacterstream-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unique indexes
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a075fbf585435cc449d120d7a96bd72e45399a0d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680490"
 ---
 # <a name="create-unique-indexes"></a>一意のインデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,7 +128,7 @@ ms.locfileid: "43074279"
   
 13. **[閉じる]** をクリックします。  
   
-14. **[ファイル]** メニューの *[<テーブル名> の保存]* をクリックします。  
+14. **[ファイル]** メニューの **[_table\_name_ の保存]** をクリックします。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>オブジェクト エクスプ ローラーを使用して一意のインデックスを作成する  
   
@@ -149,7 +146,7 @@ ms.locfileid: "43074279"
   
 7.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
   
-8.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+8.  **[_table\_name_ から列を選択]** ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 9. **[OK]** をクリックします。  
   

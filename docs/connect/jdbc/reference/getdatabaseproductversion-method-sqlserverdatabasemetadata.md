@@ -36,7 +36,7 @@ public java.lang.String getDatabaseProductVersion()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- データベース製品のバージョン番号を含む  です。  
+ データベース製品のバージョン番号を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

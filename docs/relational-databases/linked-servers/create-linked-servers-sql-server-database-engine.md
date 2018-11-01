@@ -19,12 +19,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8caee5d7de5b348d6673636ac5cfc4704c3c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625520"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120009"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47625520"
     > [!NOTE]  
     >  **SQL Server** インスタンスが既定のインスタンスの場合は、 **SQL Server**インスタンスをホストするコンピューターの名前を入力します。 **SQL Server** が名前付きインスタンスの場合は、コンピューターの名前とインスタンスの名前を入力します (例: **Accounting\SQLExpress**)。  
   
-3.  **[サーバーの種類]** で **[SQL Server]** をクリックし、リンク サーバーが別の **SQL Server**インスタンスであることを指定します。  
+3.  **[サーバーの種類]** 領域で **[SQL Server]** をクリックし、リンク サーバーが別の **SQL Server** インスタンスであることを指定します。  
   
 4.  **[セキュリティ]** ページで、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリンク サーバーに接続するときに使用するセキュリティ コンテキストを指定します。 ユーザーがドメイン ログインを使用して接続するドメイン環境では、 **[ログインの現在のセキュリティ コンテキストを使用する]** を選択することが最適な場合が多くあります。 ユーザーが **SQL Server** ログインを使用して元の **SQL Server** に接続する場合は、 **[このセキュリティ コンテキストを使用する]** をクリックして、リンク サーバーでの認証に必要な資格情報を指定することが最適です。  
   

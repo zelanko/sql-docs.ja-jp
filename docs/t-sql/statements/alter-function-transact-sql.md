@@ -5,9 +5,7 @@ ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d24ea0f9548968723aa195211e268d97bde9788
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8ab29f84194e2f277c6a0b5843038e87a6211a30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065995"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643410"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -236,7 +233,7 @@ RETURNS return_data_type
   
 -   現在のデータベースの **dbo** スキーマ。  
   
- [ **=***default* ]  
+ [ **=**_default_ ]  
  パラメーターの既定値です。 *default* 値が定義されている場合は、パラメーターに値を指定せずに関数を実行できます。  
   
 > [!NOTE]  
@@ -258,11 +255,11 @@ RETURNS return_data_type
  スカラー関数がスカラー値を返すように指定します。  
   
  TABLE  
- テーブル値関数の戻り値がテーブルになるように指定します。 テーブル値関数に渡すことができるのは、定数および **@***local_variables* だけです。  
+ テーブル値関数の戻り値がテーブルになるように指定します。 テーブル値関数に渡すことができるのは、定数および **@**_local\_variables_ だけです。  
   
  インライン テーブル値関数の TABLE 戻り値は、単一の SELECT ステートメントを使用して定義します。 インライン関数には、関連付けられている戻り変数はありません。  
   
- 複数ステートメントのテーブル値関数の **@***return_variable* は TABLE 変数で、その関数の値として返される行の格納および蓄積に使用されます。 **@***return_variable* は [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数にのみ指定でき、CLR 関数には指定できません。  
+ 複数ステートメントのテーブル値関数の **@**_return\_variable_ は TABLE 変数で、その関数の値として返される行の格納および蓄積に使用されます。 **@**_return\_variable_ は [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数にのみ指定でき、CLR 関数には指定できません。  
   
  *select-stmt*  
  インライン テーブル値関数の戻り値を定義する単一の SELECT ステートメントです。  
@@ -278,10 +275,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- *\<* table_type_definition *>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のテーブル データ型を定義します。 テーブルの定義には、列の定義、および列またはテーブルの制約が含まれます。  
   
-\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部のリージョンではプレビュー](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
  CLR 関数のテーブル データ型を定義します。 テーブルの定義には、列名およびデータ型のみが含まれます。  
   

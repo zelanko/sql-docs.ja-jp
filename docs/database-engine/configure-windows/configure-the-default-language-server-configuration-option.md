@@ -5,23 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default language option
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d23377ab94d14be40be698089aea48b71b1ed906
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e15ad7915b33c67e09325a38b7975430c5c8ce85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866257"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784460"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>default language サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.locfileid: "32866257"
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   ログインの既定の言語は、CREATE LOGIN または ALTER LOGIN で無効にできます。 セッションの既定の言語が、Open Database Connectivity (ODBC) API または OLE DB API でセッションごとに無効にされない限り、そのセッションのログインの言語になります。 **default language** オプションには、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) で定義されている言語 ID (0 ～ 32) しか設定できないことに注意してください。 包含データベースを使用している場合、既定の言語をデータベースに対して設定するには CREATE DATABASE または ALTER DATABASE を使用し、包含データベース ユーザーに対して設定するには CREATE USER または ALTER USER を使用します。 包含データベースにおける既定の言語を設定する際は、 **sys.syslanguages** に格納されている **langid**値、言語の名前、または言語の別名を指定できます。  
+-   ログインの既定の言語は、CREATE LOGIN または ALTER LOGIN でオーバーライドできます。 セッションの既定の言語が、Open Database Connectivity (ODBC) API または OLE DB API でセッションごとにオーバーライドされない限り、そのセッションのログインの言語になります。 **default language** オプションには、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) で定義されている言語 ID (0 ～ 32) しか設定できないことに注意してください。 包含データベースを使用している場合、既定の言語をデータベースに対して設定するには CREATE DATABASE または ALTER DATABASE を使用し、包含データベース ユーザーに対して設定するには CREATE USER または ALTER USER を使用します。 包含データベースにおける既定の言語を設定する際は、 **sys.syslanguages** に格納されている **langid**値、言語の名前、または言語の別名を指定できます。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -61,9 +58,9 @@ ms.locfileid: "32866257"
   
 1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[全般設定]** ノードをクリックします。  
+2.  **[詳細設定]** タブをクリックします。  
   
-3.  **[ユーザーの既定の言語]** ボックスで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシステム メッセージの表示に使用する言語を選択します。  
+3.  **[既定の言語]** ボックスで、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシステム メッセージの表示に使用する言語を選択します。  
   
      既定の言語は English (英語) です。  
   

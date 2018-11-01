@@ -1,9 +1,8 @@
 ---
 title: SQL Server オブジェクトとバージョンの DAC サポート | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/13/2018
 ms.prod: sql
-ms.component: data-tier-applications
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -14,19 +13,28 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a907b72d8e8433c3db7854e3e7c441cfb16525f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 708ffe100c9dae44fb96134a47981b3353e2626d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793020"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server オブジェクトとバージョンの DAC サポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   データ層アプリケーション (DAC) では、よく使用される [!INCLUDE[ssDE](../../includes/ssde-md.md)] オブジェクトがサポートされます。  
   
  **このトピックの内容**  
-  
+
+
+> [!IMPORTANT]
+> この記事の内容は、SQL Server 2012 を対象にしたものであり、SQL Server 2014 以降については当てはまりません。
+> SQL 2012 以前の DAC の記事については、次のリンクを参照してください。
+>
+> - https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ee240739(v=sql.105)
+> - https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh753459(v=sql.110)
+
+
 -   [サポート対象の SQL Server オブジェクト](#SupportedObjects)  
   
 -   [SQL Server の各バージョンでのデータ層アプリケーション サポート](#SupportByVersion)  

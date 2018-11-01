@@ -27,9 +27,9 @@ ms.locfileid: "47624860"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setClob (int, java.io.Reader) メソッド](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Java.sql.Clob オブジェクトに指定されたパラメーターを設定します。|  
-|[setClob (int, java.sql.Clob) メソッド](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|指定されたパラメーターを、渡された java 値に設定します。|  
-|[setClob (int, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である  オブジェクトに設定します。|  
+|[setClob &#40;int, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Java.sql.Clob オブジェクトに指定されたパラメーターを設定します。|  
+|[setClob &#40;int, java.sql.Clob&#41; メソッド](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|指定されたパラメーターを、渡された java.sql.Clob オブジェクトに設定します。|  
+|[setClob &#40;int, java.io.Reader, long&#41; メソッド](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である java.sql.Clob オブジェクトに設定します。|  
   
 ## <a name="remarks"></a>Remarks  
  サーバー側のドライバーの動作はありません。 詳細については、JSE 6 API 仕様を参照してください。  

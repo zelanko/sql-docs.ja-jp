@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3da4c5ab6d1286c908a0f39807d1a3dc7e9017b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1ed788e3ae49ae227c904221a2998dba7908f8f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633400"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> は、名前空間として宣言されます。 異なる複数の FOR XML クエリで複数の XML-Data スキーマを要求するときに、名前空間の競合を避けるために、名前空間識別子 (この例では `Schema1` ) はクエリを実行するたびに変わります。 名前空間識別子は、**Schema*n*** (***n*** は整数) で構成されます。  
+>  <`Schema`> は、名前空間として宣言されます。 異なる複数の FOR XML クエリで複数の XML-Data スキーマを要求するときに、名前空間の競合を避けるために、名前空間識別子 (この例では `Schema1` ) はクエリを実行するたびに変わります。 名前空間識別子は、**Schema**_**n**_ (_**n**_ は整数) で構成されます。  
   
  `XMLSCHEMA` オプションを指定することにより、結果の XSD スキーマを要求できます。  
   

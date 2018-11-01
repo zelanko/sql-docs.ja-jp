@@ -1,5 +1,5 @@
 ---
-title: SQL Server 用 Microsoft Drivers for PHP を読み込む | Microsoft Docs
+title: SQL Server 用 Microsoft Drivers for PHP をダウンロードする | Microsoft Docs
 ms.custom: ''
 ms.date: 07/20/2018
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.locfileid: "47847340"
 - [Microsoft SQL Server 用 Drivers 5.3 for PHP](https://www.microsoft.com/en-us/download/details.aspx?id=57163)
 - [Microsoft SQL Server 用 Drivers 5.2 for PHP](https://www.microsoft.com/en-us/download/details.aspx?id=56729)
 - [Microsoft SQL Server 用 Drivers 4.3 for PHP](https://www.microsoft.com/en-us/download/details.aspx?id=55642)
-- [Microsoft SQL Server 用 Drivers 3.1 for PHP](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
+- [Microsoft SQL Server 用 Drivers 4.0、3.2、3.1、and 3.0 for PHP](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
 
 ## <a name="linux-and-macos"></a>Linux および macOS
 

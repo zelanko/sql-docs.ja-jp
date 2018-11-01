@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+title: OLE DB Driver for SQL Server での ADO の使用 | Microsoft Docs
 description: OLE DB Driver for SQL Server での ADO の使用
 ms.custom: ''
 ms.date: 06/12/2018

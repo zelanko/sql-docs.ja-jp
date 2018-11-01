@@ -1,47 +1,44 @@
 ---
-title: SSL 暗号化用のクライアントの構成 |Microsoft ドキュメント
+title: SSL 暗号化用のクライアントの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7a45a0da57be9df27d205b644e1d7156151982f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d80c9d8103e7a0a0eeea766487e1fc013ae5e100
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726630"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>SSL 暗号化のためのクライアントの構成
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]またはクライアントでは、サーバーは、正しいサーバーと、その証明書がクライアントが信頼する証明機関によって発行されたことを検証します。 サーバー証明書を検証するためには、接続時にトラスト マテリアルを指定する必要があります。 また、サーバー証明書の発行者が、クライアントによって信頼されている証明機関である必要があります。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]またはクライアントでは、サーバーは、正しいサーバーと、その証明書が、クライアントが信頼している証明機関によって発行されたことを検証します。 サーバー証明書を検証するためには、接続時にトラスト マテリアルを指定する必要があります。 また、サーバー証明書の発行者が、クライアントによって信頼されている証明機関である必要があります。  
   
  このトピックでは、まず、クライアント コンピューターのトラスト マテリアルを提供する方法を説明します。 次に、SQL Server のインスタンスの SSL (Secure Sockets Layer) 証明書が民間の証明機関によって発行されている場合にサーバー証明書をクライアント コンピューターのトラスト ストアにインポートする方法を説明します。  
   
- サーバー証明書の検証の詳細については、サーバー SSL 証明書の検証」セクションを参照してください。[について SSL サポート](../../connect/jdbc/understanding-ssl-support.md)です。  
+ サーバー証明書の検証の詳細については、「[SSL のサポートについて](../../connect/jdbc/understanding-ssl-support.md)」の「サーバーの SSL 証明書の検証」を参照してください。  
   
 ## <a name="configuring-the-client-trust-store"></a>クライアントのトラスト ストアの構成  
- サーバー証明書を検証する必要がありますを使用するか、接続時にトラスト マテリアルを指定する必要があります**trustStore**と**trustStorePassword**接続のプロパティに明示的に、または基になる Java 仮想マシン (JVM) の既定のトラスト ストアを暗黙的に使用します。 設定する方法について、 **trustStore**と**trustStorePassword** 、接続文字列のプロパティを参照してください[SSL 暗号化を使用した接続](../../connect/jdbc/connecting-with-ssl-encryption.md)です。  
+ サーバー証明書を検証するには、**trustStore** 接続プロパティと **trustStorePassword** 接続プロパティを明示的に使用するか、または基になる Java 仮想マシンのトラスト ストアを暗黙的に使用して、接続時にトラスト マテリアルを提供する必要があります。 接続文字列内に **trustStore** プロパティと **trustStorePassword** プロパティを設定する方法の詳細については、「[SSL 暗号化を使用した接続](../../connect/jdbc/connecting-with-ssl-encryption.md)」を参照してください。  
   
- 場合、 **trustStore**プロパティが未定義または null に設定を[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]は基になる JVM のセキュリティ プロバイダー Java Secure Socket Extension (sunjsse を信頼) に依存します。 によって提供既定 TrustManager、これは、トラスト ストアで提供されるトラスト マテリアルに対して SQL Server によって返される X.509 証明書の検証に使用します。  
+ **trustStore** プロパティが指定されていないか null に設定されている場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、基になる JVM のセキュリティ プロバイダー Java Secure Socket Extension (SunJSSE) を信頼します。 SunJSSE プロバイダーによって提供される既定の TrustManager を使用して、SQL Server から返される X.509 証明書を、トラスト ストアで提供されるトラスト マテリアルに対して検証します。  
   
- TrustManager は、次の検索順序内での既定の trustStore の検索を試みます。  
+ TrustManager は、次の順序で既定の trustStore を検索します。  
   
--   "Javax.net.ssl.trustStore"システム プロパティが定義されている場合、TrustManager は、そのシステム プロパティによって指定されたファイル名を使用して、既定の trustStore ファイルを見つけようと試みます。  
+-   システム プロパティ "javax.net.ssl.trustStore" が定義されている場合、TrustManager は、そのシステム プロパティによって指定されているファイル名を使用して既定の trustStore ファイルを見つけようとします。  
   
--   "Javax.net.ssl.trustStore"システム プロパティが指定されていない場合、ファイル"\<java ホーム >/ライブラリ/セキュリティ/jssecacerts"が存在する場合、そのファイルを使用します。  
+-   "javax.net.ssl.trustStore" システム プロパティが指定されていない場合に、ファイル "\<java-home>/lib/security/jssecacerts" が存在する場合は、そのファイルが使用されます。  
   
--   場合、ファイル"\<java ホーム >/ライブラリ/セキュリティ/cacerts"が存在する場合、そのファイルを使用します。  
+-   ファイル "\<java-home>/lib/security/cacerts" が存在する場合は、そのファイルが使用されます。  
   
  詳細については、Sun Microsystems の Web サイトで SunX509 TrustManager Interface についてのドキュメントを参照してください。  
   
@@ -52,16 +49,16 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- この場合、この JVM 上で実行されるすべてのアプリケーションが既定でこれらの設定を使用します。 アプリケーションの既定の設定をオーバーライドするために設定する必要があります、 **trustStore**と**trustStorePassword**接続文字列にするか、適切な接続のプロパティset アクセス操作子メソッド、 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)クラスです。  
+ この場合、この JVM 上で実行されるすべてのアプリケーションが既定でこれらの設定を使用します。 アプリケーションでこの既定の設定をオーバーライドするには、接続文字列か、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスの該当する setter メソッドで、接続プロパティの **trustStore** および **trustStorePassword** を設定する必要があります。  
   
- さらに、構成し、既定のトラスト ストア ファイルなどの管理"\<java ホーム >/ライブラリ/セキュリティ/jssecacerts"と"\<java ホーム >/ライブラリ/セキュリティ/cacerts"です。 そのためには、JRE (Java ランタイム環境) と共にインストールされる JAVA "keytool" ユーティリティを使用します。 "keytool" ユーティリティの詳細については、Sun Microsystems の Web サイトで keytool についてのドキュメントを参照してください。  
+ これ以外に、"\<java-home>/lib/security/jssecacerts" や "\<java-home>/lib/security/cacerts" など、既定のトラスト ストア ファイルを構成および管理することもできます。 そのためには、JRE (Java ランタイム環境) と共にインストールされる JAVA "keytool" ユーティリティを使用します。 "keytool" ユーティリティの詳細については、Sun Microsystems の Web サイトで keytool についてのドキュメントを参照してください。  
   
 ### <a name="importing-the-server-certificate-to-trust-store"></a>トラスト ストアへのサーバー証明書のインポート  
  サーバーは、SSL ハンドシェイクの際にクライアントに公開キー証明書を送信します。 公開キー証明書の発行者は証明機関 (CA) と呼ばれます。 クライアントは、その証明機関が信頼されている証明機関であることを確認する必要があります。 この確認は、信頼されている CA の公開キーを事前に把握しておくことによって行われます。 通常、JVM では、一連の信頼されている証明機関があらかじめ定義されています。  
   
  SQL Server のインスタンスの SSL 証明書が私的な証明機関によって発行されている場合は、クライアント コンピューターのトラスト ストアの信頼された証明書の一覧にその証明機関の証明書を追加する必要があります。  
   
- そのためには、JRE (Java ランタイム環境) と共にインストールされる JAVA"keytool"ユーティリティを使用します。 次のコマンド プロンプトは、"keytool" ユーティリティを使用してファイルから証明書をインポートする方法を示しています。  
+ そのためには、JRE (Java ランタイム環境) と共にインストールされる JAVA "keytool" ユーティリティを使用します。 次のコマンド プロンプトは、"keytool" ユーティリティを使用してファイルから証明書をインポートする方法を示しています。  
   
 ```  
 keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore truststore.ks  
@@ -88,7 +85,7 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
 9. [次へ] をクリックし、[完了] をクリックすると、証明書がエクスポートされます。  
   
 ## <a name="see-also"></a>参照  
- [SSL 暗号化を使用します。](../../connect/jdbc/using-ssl-encryption.md)   
+ [SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)   
  [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

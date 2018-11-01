@@ -1,13 +1,11 @@
 ---
-title: getTransactionTimeout メソッド (SQLServerXAResource) |Microsoft ドキュメント
+title: getTransactionTimeout メソッド (SQLServerXAResource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerXAResource.getTransactionTimeout
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9baeb6c1892f4e3d3c71c109d3ce32fec2406f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2e71469a271050e3a5c9e053ed6446d8d603f5a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701360"
 ---
 # <a name="gettransactiontimeout-method-sqlserverxaresource"></a>getTransactionTimeout メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  値が現在のトランザクションのタイムアウト値を取得[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)オブジェクト。  
+  [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) オブジェクトに設定された現在のトランザクション タイムアウト値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +38,7 @@ public int getTransactionTimeout()
 ## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getTransactionTimeout メソッドは、javax.transaction.xa.XAResource インターフェイスの getTransactionTimeout メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

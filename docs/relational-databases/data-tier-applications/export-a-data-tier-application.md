@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4624b3444c41fee413429ebd729d7f05512a02f8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808508"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47441756"
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,10 @@ ms.locfileid: "43808508"
  DAC でサポートされていないオブジェクトまたは包含ユーザーが存在するデータベースはエクスポートできません。 DAC でサポートされるオブジェクトの種類の詳細については、「 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)」を参照してください。  
   
 ###  <a name="Permissions"></a> Permissions  
- DAC をエクスポートするには、少なくとも ALTER ANY LOGIN 権限とデータベース スコープの VIEW DEFINITION 権限、および **sys.sql_expression_dependencies**に対する SELECT 権限が必要です。 DAC をエクスポートできるのは、DAC をエクスポートするデータベースの database_owner 固定データベース ロールのメンバーでもある、securityadmin 固定サーバー ロールのメンバーです。 sysadmin 固定サーバー ロールのメンバーまたは **sa** という組み込みの SQL Server システム管理者アカウントも DAC をエクスポートできます。  
+ DAC をエクスポートするには、少なくとも ALTER ANY LOGIN 権限とデータベース スコープの VIEW DEFINITION 権限、および **sys.sql_expression_dependencies**に対する SELECT 権限が必要です。 DAC をエクスポートできるのは、DAC をエクスポートするデータベースの database_owner 固定データベース ロールのメンバーでもある、securityadmin 固定サーバー ロールのメンバーです。 sysadmin 固定サーバー ロールのメンバーまたは **sa** という組み込みの SQL Server システム管理者アカウントも DAC をエクスポートできます。
+ 
+Azure SQL DB で、**データベースごとに**、すべてのテーブルまたは特定のテーブルに対する VIEW DEFINITION および SELECT アクセス許可を付与する必要があります
+
   
 ##  <a name="UsingDeployDACWizard"></a> データ層アプリケーションのエクスポート ウィザードの使用  
  **ウィザードを使用して DAC をエクスポートするには**  

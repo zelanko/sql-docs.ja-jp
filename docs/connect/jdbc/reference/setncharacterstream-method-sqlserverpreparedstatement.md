@@ -21,14 +21,14 @@ ms.locfileid: "47598469"
 # <a name="setncharacterstream-method-sqlserverpreparedstatement"></a>setNCharacterStream メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。  
+  指定されたパラメーターを、渡された java.io.Reader オブジェクトに設定します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setNCharacterStream (int, java.io.Reader) メソッド](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
-|[setNCharacterStream (int, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
+|[setNCharacterStream &#40;int, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
+|[setNCharacterStream &#40;int, java.io.Reader, long&#41; メソッド](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

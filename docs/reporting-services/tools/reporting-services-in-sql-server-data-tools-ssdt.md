@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6fdf62f6fca674d6c4b3753e92e99f2e4f2cd67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030381"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成するための [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成するための [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
   
  このトピックでは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] に使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のソリューション、プロジェクト、プロジェクト テンプレート、および構成と、レポート デザイナーで使用できるビュー、メニュー、ツール バー、およびショートカットについて説明します。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47609740"
   
  次の場合、[プロパティ] ペインを使用します。  
   
--   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、 **[(コレクション)]** という値で示されます。 ほとんどのプロパティでは式を使用できます。複雑な式は **\<式>** という値で示されます。 **[式]** ダイアログ ボックスを開くには、 **\<式>** をクリックします。 詳細については、「 [[式] ダイアログ ボックス](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)」を参照してください。  
+-   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、 **[(コレクション)]** という値で示されます。 ほとんどのプロパティでは式を使用できます。複雑な式は **\<式>** という値で示されます。 **[式]** ダイアログ ボックスを開くには、 **\<式>** をクリックします。 詳細については、「 [[式] ダイアログ ボックス](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)」を参照してください。  
   
 -   グリッドをカテゴリ別の表示からアルファベット順の表示に変更するには、[プロパティ] ペインのツール バー ボタンを使用します。 カテゴリ別の表示では、カテゴリのすべてのプロパティを表示するには、そのカテゴリを展開する必要があります。 アイテムの [プロパティ] ダイアログ ボックスを開くには、ツール バーの **[プロパティ ページ]** ボタンをクリックするか、アイテムを右クリックして **[プロパティ]** をクリックします。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "47609740"
   
 
 ##  <a name="bkmk_SourceControl"></a> ソース管理  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> カスタム レポート テンプレート  
  新しいレポートのテンプレートとしてカスタム レポートを使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がインストールされているコンピューターの ReportProject フォルダーにそれらのレポートをコピーするだけです。 既定では、このフォルダーは次の場所にあります: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 レポート プロジェクトに新しいアイテムを追加すると、カスタム レポートが [テンプレート] ペインに表示されます。  
@@ -305,10 +305,10 @@ ms.locfileid: "47609740"
   
 ## <a name="next-steps"></a>次の手順
 
-[SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)
+[SQL Server Data Tools のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)   
 [Reporting Services レポート](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [レポート定義言語](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server Data Tools の配置およびバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

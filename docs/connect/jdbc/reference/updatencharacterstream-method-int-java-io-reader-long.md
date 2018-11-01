@@ -1,5 +1,5 @@
 ---
-title: updateNCharacterStream (int, java.io.Reader) メソッド | Microsoft Docs
+title: updateNCharacterStream (int, java.io.Reader, long) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -55,7 +55,7 @@ public void updateNCharacterStream(int columnIndex,
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   
- ストリームの長さが不明である場合、*length* パラメーターを -1 に設定して、ドライバーが長さに関係なくストリームを受け入れるように指定できます。 sqljdbc4.jar を使用する場合、アプリケーションで長さが不明なストリームを使用して列を更新するときには、JDBC 4.0 メソッドの [updateCharacterStream メソッド &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md) を使用することをお勧めします。  
+ ストリームの長さが不明である場合、*length* パラメーターを -1 に設定して、ドライバーが長さに関係なくストリームを受け入れるように指定できます。 sqljdbc4.jar を使用する場合、アプリケーションで長さが不明なストリームを使用して列を更新するときには、JDBC 4.0 メソッドの [updateNCharacterStream &#40;int, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md)を使用することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  [updateNCharacterStream メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

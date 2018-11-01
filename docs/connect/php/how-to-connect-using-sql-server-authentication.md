@@ -1,27 +1,24 @@
 ---
-title: '方法: SQL Server 認証を使用して接続 |Microsoft ドキュメント'
+title: '方法: SQL Server 認証を使用して接続する | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2eca3084ccdabf2ecd0f5be9ca707fb5f5f3387f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9d2188b99a43dbf26d97871535204f3da69c23af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307301"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731800"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>方法: SQL Server 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +31,7 @@ SQL Server 認証を使用して SQL Server に接続する場合は、次の点
   
 -   サーバーで SQL Server の混合モード認証を有効にする必要があります。  
   
--   ユーザー ID とパスワード (*UID*と*PWD* SQLSRV ドライバーで接続属性) の接続を確立するときに設定する必要があります。 ユーザー ID とパスワードは、有効な SQL Server ユーザー名とパスワードにマップする必要があります。  
+-   接続の確立を試みる際に、ユーザー ID とパスワード (SQLSRV ドライバーの *UID* と *PWD* の接続属性) を設定する必要があります。 ユーザー ID とパスワードは、有効な SQL Server ユーザー名とパスワードにマップする必要があります。  
   
 > [!NOTE]  
 > 右中かっこ (}) を含むパスワードは、2 つ目の右中かっこでエスケープする必要があります。 たとえば、SQL Server のパスワードが "pass}word" の場合、 *PWD* 接続属性の値を "pass}}word" に設定する必要があります。  
@@ -54,9 +51,9 @@ SQL Server 認証を使用して SQL Server に接続する場合は、次の予
 > 接続を確立するときに、ユーザー ID とパスワードに加え、接続属性を設定できます。 サポートされている接続属性の一覧については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
   
 ## <a name="example"></a>例  
-次の例では、SQL Server 認証で SQLSRV ドライバーを使用して、SQL Server のローカル インスタンスに接続します。 必須の値は、 *UID*と*PWD*接続属性は、アプリケーション固有のテキスト ファイルから取得*uid.txt*と*pwd.txt*で、 *C:\AppData*ディレクトリ。 接続が確立されると、ユーザーのログインを確認するためにサーバーが照会されます。  
+次の例では、SQL Server 認証で SQLSRV ドライバーを使用して、SQL Server のローカル インスタンスに接続します。 *UID* と *PWD* の必須接続属性の値は、*C:\AppData* ディレクトリ内のアプリケーション固有のテキスト ファイル (*uid.txt* と *pwd.txt*) から取得されます。 接続が確立されると、ユーザーのログインを確認するためにサーバーが照会されます。  
   
-例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
+この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
   
 ```  
 <?php  
@@ -136,19 +133,19 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>参照  
 [方法: SQL Server 認証を使用して接続する](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[SUSER_SNAME (TRANSACT-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
-[方法: SQL Server ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)
+[SQL Server ログインを作成する方法](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[方法: データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[データベース ユーザーを作成する方法](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [ユーザー、ロール、およびログインの管理](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
 [ユーザーとスキーマの分離](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[オブジェクト アクセス許可 (TRANSACT-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+[GRANT (オブジェクトの権限の許可) (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

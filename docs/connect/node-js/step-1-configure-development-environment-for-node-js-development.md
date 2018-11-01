@@ -1,5 +1,5 @@
 ---
-title: 'ステップ 1: Node.js 開発用に開発環境を構成する'
+title: 'ステップ 1: Node.js 開発用に開発環境を構成する | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -47,7 +47,7 @@ c. Node.js をインストールする msi をダウンロードしたら、実�
 > npm install tedious  
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux 17.10  
+## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
 1.  **ターミナルを開く**  
   

@@ -52,11 +52,11 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
   
  *typeNamePattern*  
   
- テーブル名のパターンを含む**文字列**です。  
+ 型名のパターンを含む**文字列**です。  
   
  *attributePattern*  
   
- 属性名を含む文字列。  
+ 属性名のパターンを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  

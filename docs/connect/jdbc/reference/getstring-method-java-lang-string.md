@@ -47,7 +47,7 @@ public java.lang.String getString(java.lang.String sCol)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getLong メソッドは、java.sql.CallableStatement インターフェイスの getLong メソッドで規定されています。  
+ この getString メソッドは、java.sql.CallableStatement インターフェイスの getString メソッドで規定されています。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内のすべての列を文字列として返すことができます。 つまり、数値ベースと文字ベースのすべての型の文字列表現、および binary、varbinary、varbinary(max)、image、timestamp、uniqueidentifier などのバイナリ列の 16 進形式の文字列表現を返すことができます。  
   

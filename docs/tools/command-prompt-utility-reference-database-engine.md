@@ -28,7 +28,7 @@ ms.locfileid: "47598880"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL コマンド プロンプト ユーティリティ (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  コマンド プロンプト ユーティリティを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の操作のスクリプトを作成できます。 次の表は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に付属するコマンド プロンプト ユーティリティの一覧です。  
+  コマンド プロンプト ユーティリティを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の操作のスクリプトを作成できます。 次の表は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に付属する多くのコマンド プロンプト ユーティリティの一覧です。  
 
 については、*メイン*SQL gui ツールとコマンド ライン ツールを参照してください。 [SQL ツールの概要](overview-sql-tools.md)します。
 

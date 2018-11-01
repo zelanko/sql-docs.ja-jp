@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/24/2018
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67919bf72fa411aedb7709ef81c6af9ac4cb5121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839760"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100463"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,6 +127,44 @@ table 変数は、作成後に変更できません。
 テーブル変数の遅延コンパイルによって**再コンパイルの頻度が増加することはありません**。  最初のコンパイルを行った場所でシフトします。 結果として得られるキャッシュされたプランは、最初の遅延コンパイルのテーブル変数の行数に基づいて生成されます。 キャッシュされたプランは、プランが削除されるか再コンパイルされるまで、連続するクエリによって再利用されます。 
 
 最初のプランのコンパイルに使用されるテーブル変数の行数が、固定された行数の推定値と大きく異なる標準値を表す場合は、ダウンストリームの演算が役立ちます。  テーブル変数の行数が実行全体で大幅に変化する場合は、この機能を使用してもパフォーマンスが改善しない可能性があります。
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>互換性レベルを変更することなく、テーブル変数の遅延コンパイルを無効にする
+テーブル変数の遅延コンパイルは、データベースの互換性レベル 150 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。 データベースを発生源とするすべてのクエリ実行に対してテーブル変数の遅延コンパイルを無効にするには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+データベースを発生源とするすべてのクエリ実行に対してテーブル変数の遅延コンパイルをもう一度有効にするには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+DISABLE_DEFERRED_COMPILATION_TV を USE HINT クエリ ヒントとして指定することで、特定のクエリに対してテーブル変数の遅延コンパイル無効にすることもできます。  例 :
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## <a name="examples"></a>使用例  

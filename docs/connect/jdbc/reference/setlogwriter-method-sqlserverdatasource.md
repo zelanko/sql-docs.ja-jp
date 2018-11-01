@@ -36,7 +36,7 @@ public void setLogWriter(java.io.PrintWriter out)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *out  
+ *out*  
   
  PrintWriter オブジェクト。  
   

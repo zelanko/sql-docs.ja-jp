@@ -49,10 +49,10 @@ public void setTimestamp(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setTime メソッドは、java.sql.CallableStatement インターフェイスの setTime メソッドで規定されています。  
+ この setTimestamp メソッドは、java.sql.CallableStatement インターフェイスの setTimestamp メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getTimestamp メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
+ [setTimestamp メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

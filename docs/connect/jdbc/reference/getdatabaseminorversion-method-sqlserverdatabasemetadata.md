@@ -36,7 +36,7 @@ public int getDatabaseMinorVersion()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- データベースのマイナー バージョンを示す  です。  
+ データベースのマイナー バージョンを示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

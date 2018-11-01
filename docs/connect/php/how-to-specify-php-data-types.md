@@ -1,28 +1,25 @@
 ---
-title: '方法: PHP データ型を指定 |Microsoft ドキュメント'
+title: '方法: PHP データ型の指定 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d41612ee46f791ef5a130e82d7f75b7afecea3a9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691820"
 ---
 # <a name="how-to-specify-php-data-types"></a>方法: PHP データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,18 +28,18 @@ PDO_SQLSRV ドライバーを使用する場合、PDOStatement::bindColumn と P
   
 次の手順では、SQLSRV ドライバーを使用してサーバーからデータを取得するときに PHP データ型を指定する方法をまとめています。  
   
-1.  設定しで TRANSACT-SQL クエリを実行[sqlsrv_query](../../connect/php/sqlsrv-query.md)またはの組み合わせ[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)です。  
+1.  [sqlsrv_query](../../connect/php/sqlsrv-query.md) または [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md) の組み合わせで Transact-SQL クエリを設定して実行します。  
   
 2.  データの行を [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)を使用した読み取りに使用できるようにします。  
   
-3.  省略可能な 3 つ目のパラメーターとして指定した目的の PHP データ型の [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、返される行のフィールド データを取得します。 省略可能な 3 番目のパラメーターが指定されていない場合は、既定の PHP 型に従ってデータが返されます。 既定の PHP の戻り値の型については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。  
+3.  省略可能な 3 つ目のパラメーターとして指定した目的の PHP データ型の [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、返される行のフィールド データを取得します。 省略可能な 3 つ目のパラメーターが指定されていない場合、既定の PHP 型に従ってデータが返されます。 既定の PHP の戻り値の型については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。  
   
-    PHP データ型の指定に使用される定数については、の Phptype のセクションを参照してください。[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。  
+    PHP データ型の指定に使用される定数については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」の PHPTYPE のセクションを参照してください。  
   
 ## <a name="example"></a>例  
-次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルから行を取得します。 返される各行で、 *ReviewDate*フィールドは文字列として取得され、*コメント*フィールドはストリームとして取得します。 ストリーム データを表示するには、PHP の [fpassthru](http://php.net/manual/en/function.fpassthru.php) 関数を使用します。  
+次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルから行を取得します。 返される各行で、 *ReviewDate* フィールドは文字列として取得され、 *Comments* フィールドはストリームとして取得されます。 ストリーム データを表示するには、PHP の [fpassthru](http://php.net/manual/en/function.fpassthru.php) 関数を使用します。  
   
-例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -101,9 +98,9 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-例では、2 番目のフィールドを取得する (*ReviewDate*) 文字列で SQL Server の DATETIME データ型のミリ秒の精度が保持されます。 既定では、SQL Server の DATETIME データ型は PHP DateTime オブジェクトとして取得され、ミリ秒の精度は失われます。  
+この例では、2 つ目のフィールド (*ReviewDate*) を文字列として取得すると、SQL Server の DATETIME データ型のミリ秒の精度が保持されます。 既定では、SQL Server の DATETIME データ型は PHP DateTime オブジェクトとして取得され、ミリ秒の精度は失われます。  
   
-4 番目のフィールドを取得する (*コメント*) ストリームはデモンストレーションを目的とします。 既定では、SQL Server データ型 nvarchar(3850) は文字列として取得されるので、ほとんどの場合に使用できます。  
+4 つ目のフィールド (*Comments*) をストリームとして取得するのは、例として示すためです。 既定では、SQL Server データ型 nvarchar(3850) は文字列として取得されるので、ほとんどの場合に使用できます。  
   
 > [!NOTE]  
 > クエリを実行する前に、 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 関数を使用して、型情報などのフィールド情報を取得することもできます。  

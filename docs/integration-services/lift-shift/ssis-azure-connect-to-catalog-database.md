@@ -1,23 +1,22 @@
 ---
 title: Azure の SSIS カタログ (SSISDB) に接続する | Microsoft Docs
 description: Azure SQL Database サーバーでホストされている SSIS カタログ (SSISDB) に接続するために必要な接続情報を確認します。
-ms.date: 09/25/2017
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c498f71be24d3f9e26aa1f6854dc048e0c9d6b89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36798267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698120"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Azure の SSIS カタログ (SSISDB) に接続する
 
@@ -30,7 +29,7 @@ Azure SQL Database サーバーでホストされている SSIS カタログ (SS
 > この時点では、Azure Data Factory での Azure SSIS Integration Runtime の作成とは切り離して、Azure SQL Database に SSISDB カタログ データベースを作成することはできません。 Azure SSIS IR は、Azure 上で SSIS パッケージを実行するランタイム環境です。 プロセスのチュートリアルについては、「[Azure で SSIS パッケージをデプロイし、実行する](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。 
 
 ## <a name="prerequisites"></a>Prerequisites
-始める前に、バージョン 17.2 以降の SQL Server Management Studio (SSMS) があることを確認します。 SSISDB カタログ データベースが SQL Database Managed Instance (プレビュー) でホストされている場合は、SSMS のバージョンが 17.6 以降であることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
+始める前に、バージョン 17.2 以降の SQL Server Management Studio (SSMS) があることを確認します。 SSISDB カタログ データベースが SQL Database Managed Instance でホストされている場合は、SSMS のバージョンが 17.6 以降であることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure Portal から接続情報を取得する
 1. [Azure ポータル](https://portal.azure.com/)にログインします。

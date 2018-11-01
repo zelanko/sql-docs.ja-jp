@@ -5,9 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb3becf8e8bee70f9a06bd570094771fa6fcde20
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 90acf990b3e498c73d8b25cc4a11f414f6e24c31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717940"
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,13 +90,13 @@ ms.locfileid: "43074572"
   
 6.  **[インデックス キー列]** タブで、 **[追加]** をクリックします。  
   
-7.  *[テーブル名から列を選択]* ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+7.  _[table\_name_ **から列を選択]** ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
 9. **[付加列]** タブで、 **[追加]** をクリックします。  
   
-10. *[<テーブル名> から列を選択]* ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+10. _[table\_name_ **から列を選択]** ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 11. **[OK]** をクリックします。  
   

@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec0aabb38edc0446728569648dde0a4f4bafedc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697420"
 ---
 # <a name="understanding-ssl-support"></a>SSL のサポートについて
 
@@ -82,7 +79,7 @@ encrypt プロパティが **true** に設定されている場合、[!INCLUDE[j
   
 - 証明書の Subject の Common Name (CN) または Subject Alternate Name (SAN) の DNS 名が、接続文字列に指定された **serverName** の値 (または **hostNameInCertificate** プロパティの値が指定されている場合はその値) と厳密に一致している。  
   
-- DNS 名にはワイルドカード文字を含めることができます。 ただし、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、ワイルドカードでのマッチングがサポートされません。 つまり、abc.com は *.com とは一致せず、\*.com は \*.com と一致します。  
+- DNS 名にはワイルドカード文字を含めることができます。 ただし、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、ワイルドカードでのマッチングがサポートされません。 つまり、abc.com は \*.com とは一致せず、\*.com は \*.com と一致します。  
   
 ## <a name="see-also"></a>参照
 

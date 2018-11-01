@@ -32,8 +32,8 @@ ms.locfileid: "47703920"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getArray (int) メソッド](../../../connect/jdbc/reference/getarray-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Array オブジェクトとして取得されます。|  
-|[getArray (java.lang.String) メソッド](../../../connect/jdbc/reference/getarray-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Array オブジェクトとして取得されます。|  
+|[getArray (int) メソッド](../../../connect/jdbc/reference/getarray-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Array オブジェクトとして取得されます。|  
+|[getArray (java.lang.String) メソッド](../../../connect/jdbc/reference/getarray-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値が、Array オブジェクトとして取得されます。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

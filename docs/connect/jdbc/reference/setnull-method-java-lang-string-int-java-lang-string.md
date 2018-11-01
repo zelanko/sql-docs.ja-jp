@@ -1,5 +1,5 @@
 ---
-title: setNull (java.lang.String, int, java.lang.String) メソッド
+title: setNull メソッド (java.lang.String, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -48,16 +48,16 @@ public void setNull(java.lang.String sCol,
   
  *sTypeName*  
   
- 設定するパラメーターの完全修飾名を示すです。  
+ 設定するパラメーターの完全修飾名を示す **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setURL メソッドは、java.sql.CallableStatement インターフェイスの setURL メソッドで指定されています。  
+ この setNull メソッドは、java.sql.CallableStatement インターフェイスの setNull メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
- [getInt メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
+ [setNull メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: relative メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: relative メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.relative
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ede86bd361d4ca496eb4d99cd7b01b1e7a7ee886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04f353734f6053808972c5cb977658e512222ddb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637130"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,20 +38,20 @@ public boolean relative(int nRows)
 #### <a name="parameters"></a>パラメーター  
  *nRows*  
   
- **Int**を移動する行の数を示すです。  
+ 移動する行数を示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **true**カーソルの行がある場合。 それ以外の場合は、 **false**です。  
+ カーソルが行にある場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この相対メソッドは、java.sql.ResultSet インターフェイスの相対的なメソッドによって指定されます。  
   
- 結果セット内の先頭行または最終行を越えて移動しようとすると、先頭行の前または最終行の後にカーソルが配置されます。 呼び出す`relative(0)`が有効では、カーソルの位置を変更しません。  
+ 結果セット内の先頭行または最終行を越えて移動しようとすると、先頭行の前または最終行の後にカーソルが配置されます。 `relative(0)` の呼び出しは有効ですが、カーソルの位置は変更されません。  
   
- メソッドを呼び出す`relative(1)`を呼び出すことと同じ、[次](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)メソッドです。 メソッドを呼び出す`relative(-1)`を呼び出すことと同じ、[以前](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)メソッドです。  
+ `relative(1)` メソッドを呼び出すことは、[next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md) メソッドを呼び出すことと同じです。 `relative(-1)` メソッドを呼び出すことは、[previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md) メソッドを呼び出すことと同じです。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

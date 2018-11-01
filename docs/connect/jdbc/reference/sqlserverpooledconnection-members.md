@@ -1,32 +1,29 @@
 ---
-title: SQLServerPooledConnection のメンバー |Microsoft ドキュメント
+title: SQLServerPooledConnection のメンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f1d3d24d71f8764274de465d55ebae950a5f9d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ad4ee3752b321803b4d2c3e05bbf317775e859e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847077"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695850"
 ---
 # <a name="sqlserverpooledconnection-members"></a>SQLServerPooledConnection のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  次の表に、によって公開されるメンバー、 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)クラスです。  
+  次の表は、[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) クラスによって公開されるメンバーを示しています。  
   
-## <a name="constructors"></a>コンス トラクター  
+## <a name="constructors"></a>コンストラクター  
  [なし] :  
   
 ## <a name="fields"></a>フィールド  
@@ -37,11 +34,11 @@ ms.locfileid: "32847077"
   
 ## <a name="methods"></a>メソッド  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|これで、イベントが発生したときに通知されるように渡されたイベント リスナーを登録[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)オブジェクト。|  
-|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|物理的な接続を閉じますこの[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)オブジェクトが表すです。|  
-|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|物理的な接続用のオブジェクト ハンドルを作成これ[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)オブジェクトを表します。|  
+|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) オブジェクトでイベントが発生した場合に通知を受けるように、渡されたイベント リスナーを登録します。|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) オブジェクトが表す物理的な接続を終了します。|  
+|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) オブジェクトが表す物理的な接続用のオブジェクト ハンドルを作成します。|  
 |[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|渡されたイベント リスナーを削除します。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  

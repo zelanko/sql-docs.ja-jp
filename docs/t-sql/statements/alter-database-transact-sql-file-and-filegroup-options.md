@@ -1,13 +1,11 @@
 ---
 title: ALTER DATABASE の File および Filegroup オプション (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
@@ -41,17 +39,16 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44090002"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252149"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) の File および Filegroup オプション 
 
@@ -69,6 +66,8 @@ ms.locfileid: "44090002"
 > |||
 > |-|-|-|
 > |**_\* SQL Server \*_**<br />&nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+
+&nbsp;
 
 # <a name="sql-server"></a>SQL Server
 
@@ -190,7 +189,7 @@ NEWNAME *new_logical_file_name*
 *new_logical_file_name*  
 既存の論理ファイル名と置換する新しい名前を指定します。 論理ファイル名は、データベース内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 この名前は、文字定数、Unicode 定数、標準の識別子、区切られた識別子のいずれでもかまいません。  
   
-FILENAME { **'***os_file_name***'** | **'***filestream_path***'** | **'***memory_optimized_data_path***'**}  
+FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**}  
 オペレーティング システムの (物理) ファイル名を指定します。  
   
 ' *os_file_name* '  
@@ -295,7 +294,7 @@ REMOVE FILEGROUP *filegroup_name*
 > [!NOTE]  
 > FILESTREAM ガベージ コレクターによって FILESTREAM コンテナーからすべてのファイルが削除されない限り、ALTER DATABASE REMOVE FILE 操作で FILESTREAM コンテナーを削除する試みは失敗し、エラーが返されます。 このトピックの「解説」の「FILESTREAM コンテナーの削除」を参照してください。  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。  
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。  
   
 \<filegroup_updatability_option>  
 ファイル グループに読み取り専用、または読み取り/書き込みのプロパティを設定します。  
@@ -674,20 +673,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
-> </tr>
-> </table>
+> |||
+> |-|-|-|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;|
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 このステートメントは、Azure SQL Database Managed Instance 内のデータベースで使います。
 
@@ -829,7 +821,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 REMOVE FILEGROUP *filegroup_name*  
 データベースからファイル グループを削除します。 ファイル グループが空でない場合は削除できません。 最初に、ファイル グループからすべてのファイルを削除してください。 詳細については、前の「REMOVE FILE *logical_file_name*」を参照してください。  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。  
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。  
   
 \<filegroup_updatability_option>  
 ファイル グループに読み取り専用、または読み取り/書き込みのプロパティを設定します。  

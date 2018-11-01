@@ -1,13 +1,11 @@
 ---
-title: getRef メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getRef メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getRef
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7c176547-daae-405e-8fbe-3cdab87ab5e7
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5432823ef6c649404af6d16bc665951bca06903c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d33a4ad94a5d654003b9debe9f02e5b1330d1ac0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837787"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687462"
 ---
 # <a name="getref-method-sqlserverresultset"></a>getRef メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語で Ref オブジェクトとして。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の Ref オブジェクトとして取得されます。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getRef (int)](../../../connect/jdbc/reference/getref-method-int-sqlserverresultset.md)|この現在の行に指定された列インデックスの値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語で Ref オブジェクトとして。|  
-|[getRef (java.lang.String)](../../../connect/jdbc/reference/getref-method-java-lang-string-sqlserverresultset.md)|この現在の行に指定された列名の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語で Ref オブジェクトとして。|  
+|[getRef (int)](../../../connect/jdbc/reference/getref-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Java プログラミング言語の Ref オブジェクトとして取得します。|  
+|[getRef (java.lang.String)](../../../connect/jdbc/reference/getref-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Java プログラミング言語の Ref オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -5,9 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '|'
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - bitwise OR (|)
 - '| (bitwise OR operator)'
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62c626c1b36c40c6f0cf42200fa9982c5ea87d26
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 87f5fb49e67a93aa5b00cf45053b608444789709
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692410"
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (ビット演算子 OR) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +57,7 @@ expression | expression
 ## <a name="remarks"></a>Remarks  
  ビットごとの | 演算子は、2 つの式の対応するビットを対象にビットごとの論理和演算を実行します。 入力式の中で現在処理の対象にあるビットについて、いずれかのビットまたは両方のビットが 1 の値を持つ場合、結果セットのビットは 1 に設定されます。入力式のビットが両方とも 1 の値を持たない場合、結果セットのビットは 0 に設定されます。  
   
- 左側の式と右側の式が異なる整数型の場合 (たとえば、左側の*式*が **smallint** 型で、右側の*式*が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この例では、**smallint***expression* は **int** に変換されます。  
+ 左側の式と右側の式が異なる整数型の場合 (たとえば、左側の*式*が **smallint** 型で、右側の*式*が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この例では、**smallint**_expression_ は **int** に変換されます。  
   
 ## <a name="examples"></a>使用例  
  この例では、元の値を示すために **int** データ型を使用するテーブルを作成し、このテーブルに 1 行挿入します。  

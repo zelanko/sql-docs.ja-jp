@@ -46,7 +46,7 @@ public void registerOutParameter(java.lang.String s,
   
  JDBC の型コード java.sql.Types で定義されています。  
   
- S1  
+ *s1*  
   
  完全修飾 SQL 型名を含む**文字列**です。  
   

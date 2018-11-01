@@ -1,29 +1,26 @@
 ---
-title: SQL Server 用の Microsoft ADO.NET |Microsoft ドキュメント
+title: SQL Server 向けの Microsoft ADO.NET |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11b52720be2b22b3bef6839623e960f205fe509f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: a237531d89aee072c234f57024a09fd1774f99f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765531"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
-![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[ADO.NET をダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード下方向丸](../../ssdt/media/download.png)[ADO.NET をダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET は、.NET 言語の主要なデータ アクセス テクノロジです。 System.Data.SqlClient 名前空間を使って SQL Server にアクセスするか、他のサプライヤーのプロバイダーを使ってそのストアにアクセスします。 System.Data.Odbc や System.Data.Oledb を使って、.NET 言語から他のデータ アクセス テクノロジを活用するデータにアクセスします。 クライアント アプリケーション内のオフライン データ キャッシュが必要な場合は、System.Data.Dataset を使います。 Web サービスで活用できるローカル保存と XML 機能も提供します。  
   
@@ -36,16 +33,16 @@ ADO.NET は、.NET 言語の主要なデータ アクセス テクノロジで�
 ## <a name="documentation"></a>ドキュメント  
 * [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
 * [SQL Server と ADO.NET](https://msdn.microsoft.com/library/kb9s9ks0.aspx)  
-* [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
+* [System.Data.SqlClient 名前空間](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>コミュニティ  
-* [ADO.NET マネージ プロバイダー フォーラム](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
+* [ADO.NET マネージド プロバイダー フォーラム](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
 * [ADO.NET データセット フォーラム](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
   
-## <a name="more-samples"></a>他のサンプル  
-* [ADO.NET のコード例](https://msdn.microsoft.com/library/dw70f090.aspx)  
+## <a name="more-samples"></a>その他のサンプル  
+* [ADO.NET コード例](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [Windows 上の .NET Framework の概要](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [Macos .NET Core の概要](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [Ubuntu で .NET Core の概要](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
-* [.NET Core は、Red Hat Enterprise Linux (RHEL) の使用を開始します。](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
+* [macOS での .NET Core の概要](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
+* [Ubuntu での .NET Core の概要](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL) で .NET Core の概要](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

@@ -27,9 +27,9 @@ ms.locfileid: "47679770"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[setNClob (java.lang.String, java.sql.NClob) メソッド](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|指定されたパラメーターを、指定された  オブジェクトに設定します。|  
-|[setNClob (java.lang.String, java.io.Reader) メソッド](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
-|[setNClob (java.lang.String, java.io.Reader, long) メソッド](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である指定された  オブジェクトに設定します。|  
+|[setNClob &#40;java.lang.String, java.sql.NClob&#41; メソッド](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|指定されたパラメーターを、指定された NClob オブジェクトに設定します。|  
+|[setNClob &#40;java.lang.String, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|指定されたパラメーターを、指定された Reader オブジェクトに設定します。|  
+|[setNClob &#40;java.lang.String, java.io.Reader, long&#41; メソッド](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である指定された Reader オブジェクトに設定します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

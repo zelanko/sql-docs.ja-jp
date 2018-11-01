@@ -26,7 +26,7 @@ ms.locfileid: "47683140"
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>getSendStringParametersAsUnicode メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  サーバーへの文字列パラメーターの UNICODE 形式による送信が有効になっているかどうかを示す値を返します。  
+  サーバーへの文字列パラメーターの UNICODE 形式による送信が有効になっているかどうかを示す **boolean** 値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,12 +36,12 @@ public boolean getSendStringParametersAsUnicode()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サーバーに文字列パラメーターが UNICODE 形式で送信される場合は  です。 それ以外の場合は、 **false**です。  
+ サーバーに文字列パラメーターが UNICODE 形式で送信される場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="remarks"></a>Remarks  
- sendStringParametersAsUnicode プロパティが  (既定値) に設定されている場合、文字列パラメーターは、UNICODE 形式でサーバーに送信されます。 sendStringParametersAsUnicode が  に設定されている場合、UNICODE ではなく ASCII/MBCS 形式で、文字列パラメーターがサーバーに送信されます。 sendStringParametersAsUnicode が設定されていない場合、getSendStringParametersAsUnicode は既定値の  を返します。  
+ sendStringParametersAsUnicode プロパティが **true** (既定値) に設定されている場合、文字列パラメーターは、UNICODE 形式でサーバーに送信されます。 sendStringParametersAsUnicode が **false** に設定されている場合、UNICODE ではなく ASCII/MBCS 形式で、文字列パラメーターがサーバーに送信されます。 sendStringParametersAsUnicode が設定されていない場合、getSendStringParametersAsUnicode は既定値の **true** を返します。  
   
- [sendStringParametersAsUnicode](../../../connect/jdbc/setting-the-connection-properties.md)接続文字列プロパティ の詳細については [接続プロパティの設定] を参照してください。  
+ sendStringParametersAsUnicode 接続プロパティについて詳しくは、「[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

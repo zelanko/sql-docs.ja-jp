@@ -36,7 +36,7 @@ public java.lang.String getDatabaseName()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- データベース名を含むです。値が設定されていない場合は null です。  
+ データベース名を含む**文字列**です。値が設定されていない場合は null です。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

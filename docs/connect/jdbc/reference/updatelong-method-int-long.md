@@ -26,7 +26,7 @@ ms.locfileid: "47706160"
 # <a name="updatelong-method-int-long"></a>updateLong (int, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された列インデックスを使用して、指定された列を日付の値で更新します。  
+  渡された列インデックスを使用して、指定された列を **long** 値で更新します。  
   
 ## <a name="syntax"></a>構文  
   

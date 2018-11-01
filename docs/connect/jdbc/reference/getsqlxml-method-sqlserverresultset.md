@@ -28,7 +28,7 @@ ms.locfileid: "47700110"
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[getSQLXML メソッド&#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、SQLXML オブジェクトとして取得されます。|  
-|[getSQLXML (java.lang.String) メソッド](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、SQLXML オブジェクトとして取得されます。|  
+|[getSQLXML メソッド &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、SQLXML オブジェクトとして取得されます。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

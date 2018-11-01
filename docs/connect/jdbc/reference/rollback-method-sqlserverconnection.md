@@ -1,13 +1,11 @@
 ---
-title: rollback メソッド (SQLServerConnection) |Microsoft ドキュメント
+title: rollback メソッド (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.rollback
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 532a0cf7022aea086880f49ff0936f4957614509
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 911236962aac0c4bc6ad9640a7813367143df62a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795680"
 ---
 # <a name="rollback-method-sqlserverconnection"></a>rollback メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  現在のトランザクションで行われたすべての変更が取り消され、これによって現在保持されているデータベース ロックは解放[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。  
+  現在のトランザクションで行われた変更をすべて元に戻し、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトによって現在保持されているデータベース ロックをすべて解除します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[rollback)](../../../connect/jdbc/reference/rollback-method.md)|現在のトランザクションで行われたすべての変更が取り消され、これによって現在保持されているデータベース ロックは解放[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[rollback (java.sql.Savepoint)](../../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md)|後で行われたすべての変更を元に戻します、指定された[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)オブジェクトを設定します。|  
+|[rollback ()](../../../connect/jdbc/reference/rollback-method.md)|現在のトランザクションで行われた変更をすべて元に戻し、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトによって現在保持されているデータベース ロックをすべて解除します。|  
+|[rollback (java.sql.Savepoint)](../../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md)|渡された [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトが設定された後で行われた変更を、すべて元に戻します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

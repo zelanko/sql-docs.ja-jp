@@ -26,7 +26,7 @@ ms.locfileid: "47725600"
 # <a name="setbyte-method-sqlserverpreparedstatement"></a>setByte メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された日付の値に設定します。  
+  指定されたパラメーターを、渡された **byte** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public final void setByte(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この execute メソッドは、java.sql.PreparedStatement インターフェイスの execute メソッドで規定されています。  
+ この setByte メソッドは、java.sql.PreparedStatement インターフェイスの setByte メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

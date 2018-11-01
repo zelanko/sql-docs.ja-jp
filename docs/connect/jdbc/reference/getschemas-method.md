@@ -42,7 +42,7 @@ public java.sql.ResultSet getSchemas()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getURL メソッドは、java.sql.DatabaseMetaData インターフェイスの getURL メソッドで規定されています。  
+ この getSchemas メソッドは、java.sql.DatabaseMetaData インターフェイスの getSchemas メソッドで規定されています。  
   
  GetSchemas メソッドによって返される結果セットには、次の情報が含まれています。  
   

@@ -64,7 +64,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ## <a name="remarks"></a>Remarks  
  この getColumnPrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスで getColumnPrivileges メソッドによって指定されます。  
   
- getTablePrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
+ getColumnPrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
   
 |[オブジェクト名]|型|[説明]|  
 |----------|----------|-----------------|  

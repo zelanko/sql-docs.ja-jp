@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
-caps.latest.revision: 12
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c62a0eb58db1a57d68ca1e43980f23a799fe277f
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a22a07d05fa6286eb88089393d563e746ee9def5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118089"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787180"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>プリンシパルに対する権限の許可
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +68,7 @@ ms.locfileid: "43118089"
   
 4.  ストアド プロシージャを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[ストアド プロシージャのプロパティ –***stored_procedure_name]* ダイアログ ボックスの [ページの選択] で、**[権限]** を選択します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
+5.  **[ストアド プロシージャのプロパティ –**_stored\_procedure\_name]_ ダイアログ ボックスの [ページの選択] で、**[権限]** を選択します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

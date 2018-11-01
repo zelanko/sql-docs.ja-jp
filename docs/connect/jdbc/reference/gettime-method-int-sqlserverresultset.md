@@ -47,7 +47,7 @@ public java.sql.Time getTime(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getTime メソッドは、java.sql.CallableStatement インターフェイスの getTime メソッドで規定されています。  
+ この getTime メソッドは、java.sql.ResultSet インターフェイスの getTime メソッドで規定されています。  
   
  このメソッドでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な時間部分が返されます。日付部分は、Java のベースラインの日付である 1970/01/01 に設定されます。  
   

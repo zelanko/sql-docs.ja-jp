@@ -1,26 +1,25 @@
 ---
 title: ReportViewer 2016 Cortana の概要 | Microsoft Docs
-ms.date: 06/12/2017
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33225be23805250df8b59f6d71f0a98dfb917294
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 67955e82dc7e0a9fa85b064ed27781ee7b546090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268784"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831130"
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>ReportViewer コントロールを使用した Reporting Services の統合 - 概要
+# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>ReportViewer コントロールを使用した Reporting Services の統合 - 概要
 
-開発者が Reporting Services 2016 ReportViewer コントロールを使用して ASP.NET Web サイトと Windows フォーム アプリにページ分割されたレポートを埋め込む方法について説明します。 このコントロールは、新しいプロジェクトに追加するか、既存のプロジェクトを更新して追加することができます。
+Report Viewer コントロールを使用して、Reporting Services の RDL レポートを WebForms アプリと WinForms アプリに統合できます。 最新の更新プログラムの詳細については、[changelog](changelog.md) を参照してください。
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>新しい Web プロジェクトに ReportViewer コントロールを追加する
+## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>新しい Web プロジェクトに ReportViewer コントロールを追加する
 
 1. 新しい **[ASP.NET 空の Web サイト]** を作成するか、既存の ASP.NET プロジェクトを開きます。
 
@@ -34,7 +33,7 @@ ms.locfileid: "43268784"
 3. 新しい .aspx パッケージをプロジェクトに追加し、ページ内で使用できるように ReportViewer コントロール アセンブリを登録します。
 
     ```
-    <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+    <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
     ```
     
 4. ページに **ScriptManagerControl** を追加します。
@@ -52,7 +51,7 @@ ms.locfileid: "43268784"
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 
@@ -73,9 +72,9 @@ ms.locfileid: "43268784"
 
 ```
 
-## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>ReportViewer コントロールを使用するように既存のプロジェクトを更新する
+## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>ReportViewer コントロールを使用するように既存のプロジェクトを更新する
 
-既存のプロジェクトで ReportViewer 2016 コントロールを利用するには、NuGet を使用してコントロールを追加し、アセンブリの参照をバージョン *14.0.0.0* に更新します。 これで、プロジェクトの web.config と、ReportViewer コントロールを参照するすべての .aspx ページの更新が含まれるようになります。
+すべてのアセンブリ参照がバージョン *15.0.0.0* に更新されていることを確認します。ビューア― コントロールを参照しているプロジェクトの web.config とすべての .aspx ページも含めて確認してください。
 
 ### <a name="sample-webconfig-changes"></a>サンプル web.config の変更
 
@@ -89,26 +88,26 @@ ms.locfileid: "43268784"
   <system.web>
     <compilation debug="true" targetFramework="4.5.2">
       <assemblies>
-        <!-- All assemblies updated to version 14.0.0.0. -->
-        <add assembly="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <!-- All assemblies updated to version 15.0.0.0. -->
+        <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </assemblies>
       <buildProviders>
-        <!-- Version updated to 14.0.0.0. -->
+        <!-- Version updated to 15.0.0.0. -->
         <add extension=".rdlc"
-          type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+          type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
     <httpRuntime targetFramework="4.5.2"/>
     <httpHandlers>
-      <!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
-        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"
+        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"
         validate="false"/>
     </httpHandlers>
   </system.web>
@@ -116,9 +115,9 @@ ms.locfileid: "43268784"
     <validation validateIntegratedModeConfiguration="false"/>
     <modules runAllManagedModulesForAllRequests="true"/>
     <handlers>
-      <!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 15.0.0.0 -->
       <add name="ReportViewerWebControlHandler" verb="*" path="Reserved.ReportViewerWebControl.axd" preCondition="integratedMode"
-        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
     </handlers>
   </system.webServer>
 </configuration>
@@ -129,13 +128,13 @@ ms.locfileid: "43268784"
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
 
-<!-- Update version to 14.0.0.0 -->
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<!-- Update version to 15.0.0.0 -->
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>新しい Windows フォーム プロジェクトに ReportViewer コントロールを追加する
+## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>新しい Windows フォーム プロジェクトに ReportViewer コントロールを追加する
 
 1. 新しい **Windows フォーム アプリケーション**を作成するか、既存のプロジェクトを開きます。
 
@@ -170,13 +169,11 @@ ms.locfileid: "43268784"
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>ReportViewer 2016 コントロールで 100% の高さを設定する方法
+## <a name="how-to-set-100-height-on-the-report-viewer-control"></a>ReportViewer コントロールで 100% の高さを設定する方法
 
-新しい ReportViewer 2016 コントロールは、HTML5 標準モードのページに合わせて最適化されており、すべての最新ブラウザー上で動作します。 これまで、以前のバージョンの RVC コントロールでは、高さのプロパティを 100% に設定すると、親要素に高さが指定されていない場合でも機能していました。 この動作は HTML5 で変更されました。 新しい RVC コントロールでこのプロパティを設定すると、親要素に定義済みの高さがある場合 (つまり、自動の値ではない場合)、または RVC のすべての親要素も 100% の高さの場合にのみ、正しく機能するようになります。
+ビューア― コントロールの高さが 100% に設定されている場合、親要素は定義済みの高さであるか、すべての祖先はパーセントによって定義される高さである必要があります。
 
-この処理を実行する 2 つの例を紹介します。
-
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>すべての親要素の高さを 100% に設定する
+### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>すべての先祖の高さを 100% に設定
 
 ```
 <!DOCTYPE html>
@@ -202,7 +199,7 @@ ms.locfileid: "43268784"
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>ReportViewer コントロールの親要素に style の height 属性を設定する
+### <a name="setting-the-parents-height-attribute"></a>親の height 属性を設定
 
 ビューポートの割合の長さについては、「[Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths)」(ビューポートの割合の長さ) を参照してください。
 
@@ -227,11 +224,11 @@ ms.locfileid: "43268784"
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>Visual Studio ツール バーにコントロールを追加する
 
-ReportViewer コントロールは NuGet パッケージに含まれるようになりました。 そのため、既定の Visual Studio ツールボックスに ReportViewer コントロールは表示されません。 コントロールをツールボックスに追加するには、次の手順を実行します。
+Report Viewer コントロールは NuGet パッケージとして出荷されるようになったため、既定では Visual Studio ツールボックスに表示されません。 コントロールをツールボックスに手動で追加できます。
 
 1. 前述のように、WinForms または WebForms 用の NuGet パッケージをインストールします。
 
-2. ツールボックスに表示されている ReportViewer コントロールを削除します。 これはバージョン 12.x のコントロールです。
+2. ツールボックスに表示されている ReportViewer コントロールを削除します。
 
     ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
@@ -252,27 +249,20 @@ ReportViewer コントロールは NuGet パッケージに含まれるように
 
     ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### <a name="things-to-be-aware-of"></a>注意事項
-
-- この手順で、インストールされている NuGet パッケージへの参照が現在のプロジェクトに追加されます。 このツールボックスの項目は、他のプロジェクトにも表示されます。 新しいソリューション/プロジェクトに NuGet パッケージをインストールすると、ツールボックスの項目は以前のバージョンを参照する可能性があります。 
-
-- そのアセンブリを使用できなくなっても、コントロールはツールボックスに残ります。 プロジェクトを削除した場合、ツールボックスからこのコントロールを追加しようとすると、Visual Studio からエラーがスローされます。 このエラーを修正するには、ツールボックスからコントロールを削除し、前述の手順を使用して追加し直してください。
-
-
 ## <a name="common-issues"></a>一般的な問題
     
-- ReportViewer 2016 コントロールは、最新のブラウザーで使用するように設計されています。 IE 互換モードで Web ページを表示するブラウザーの場合、コントロールが機能しない可能性があります。 イントラネット サイトの場合、状況によっては、互換モードでイントラネット ページを表示するように促す設定をメタ タグでオーバーライドする必要があります。
+ビューアー コントロールは、モダン ブラウザー向けに設計されています。 IE 互換モードを使用してブラウザーにページを表示すると、コントロールが想定どおりに動作しない場合があります。 イントラネット サイトでは、既定のブラウザーの動作をオーバーライドするメタ タグが必要な場合があります。
 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="providing-feedback"></a>フィードバックの送信
+## <a name="feedback"></a>フィードバック
 
-このコントロールで問題が発生した場合は、[Reporting Services MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)か、電子メール ([RVCFeedback@microsoft.com](mailto:RVCFeedback@microsoft.com)) でチームにお知らせください。
+問題が発生した場合は、[Reporting Services フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) でチームにお知らせください。
 
 ## <a name="see-also"></a>参照
 
-[2016 ReportViewer コントロールのデータ コレクション](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
+[Report Viewer コントロールのデータ コレクション](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 その他の質問 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)
 

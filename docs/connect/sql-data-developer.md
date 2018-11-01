@@ -21,7 +21,7 @@ ms.locfileid: "47615500"
 # <a name="sql-data-developer"></a>SQL データ開発者
 Microsoft の SQL データ プラットフォームを使用すると、モバイル デバイスとデスクトップの web サーバー、エンタープライズ サーバー、およびクラウドの間でデータ中心のソリューションを作成します。  
 
-## <a name="sql-data-storage"></a>データ ストレージ
+## <a name="sql-data-storage"></a>SQL データ ストレージ
 * [SQL Server データベース エンジン](../database-engine/configure-windows/sql-server-database-engine.md): SQL Server データベース エンジンを使用して、オンライン トランザクション処理やオンライン分析処理のデータのリレーショナル データベースを作成します。 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): 使用して SQL Azure のクラウドに移行するデータベースを移動するには 
 * [SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): SQL Server Compact をスタンドアロン アプリケーションとモバイル デバイス、デスクトップ、常時接続でアプリケーションをビルドし、Web クライアントです。
@@ -37,7 +37,7 @@ Microsoft の SQL データ プラットフォームを使用すると、モバ�
 * [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): 簡単に作成して、web とイントラネットの両方での OData サービスを使用する、ターンキーに近いソリューションを使用してデータ サービス
 * [Framework の同期](https://msdn.microsoft.com/library/jj839436.aspx): 任意のデータ型、任意のデータ ストア、任意の転送プロトコル、およびどのようなネットワーク トポロジへのオフライン アクセスを有効にする、Sync Framework を使用します。
 * [Reactive Extensions](https://msdn.microsoft.com/library/hh242985.aspx): Reactive Extensions (Rx) を使用してイベント ストリームのプログラミングを実行し、監視可能なシーケンスおよび LINQ スタイルのクエリ演算子を使用して非同期プログラミングを簡略化します。  JavaScript (RxJS) Reactive Extensions を使用して、監視可能なシーケンスを使用して、web での非同期コールバックに基づくし、イベント ドリブン プログラミングを簡略化します。
-* つまり、[ Visual Basic .NET や ](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md) Visual C# などの .NET Framework 言語を使用して、ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数、ユーザー定義集計、およびストリーミング テーブル値関数を記述できます。 
+* [CLR 統合](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md): Microsoft Visual Basic .NET や Microsoft Visual C# などの .NET Framework 言語を使用して、ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数、ユーザー定義集計、およびストリーミング テーブル値関数を記述するには、CLR 統合 を使用します。 
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): リレーショナル データを XML にエクスポートする SQLXML 4.0 を使用します。
 
 ## <a name="data-collection-processing-and-visualization"></a>データの収集、処理、および視覚化

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlmaint
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 12be5a2f822fb2b49100103032e7268f9f35b1cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997144"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625190"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,8 +82,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  **sqlmaint** の構文ダイアグラムが返されます。 このパラメーターは単独で使用する必要があります。  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 対象となる [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 そのサーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] を指定します。 サーバー上の [!INCLUDE[ssDE](../includes/ssde-md.md)]の名前付きインスタンスに接続するには、*server_name***\\***instance_name* を指定します。 サーバーを指定しない場合、 **sqlmaint** は、ローカル コンピューター上にある [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに接続します。  
+ **-S** *server_name*[ **\\**_instance\_name_]  
+ 対象となる [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 サーバー上の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定のインスタンスに接続するには、_server\_name_ を指定します。 サーバー上の [!INCLUDE[ssDE](../includes/ssde-md.md)]の名前付きインスタンスに接続するには、_server\_name_**\\**_instance\_name_ を指定します。 サーバーを指定しない場合、 **sqlmaint** は、ローカル コンピューター上にある [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに接続します。  
   
  **-U** *login_ID*  
  サーバーに接続するときに使用するログイン ID を指定します。 指定しない場合、 **sqlmaint** は [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証の使用を試みます。 *login_ID* に特殊文字が含まれる場合、特殊文字を二重引用符 (") で囲む必要があります。特殊文字が含まれない場合は、二重引用符は省略可能です。  
@@ -177,8 +173,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
  **-BkUpDB** [ *backup_path*] |  **-BkUpLog** [ *backup_path* ]  
  バックアップ操作を指定します。 **-BkUpDb** はデータベース全体をバックアップします。 **-BkUpLog** はトランザクション ログのみをバックアップします。  
   
- *backup_path* には、バックアップを格納するディレクトリを指定します。 
-  *backup_path* は、**-UseDefDir** も指定されている場合は必要ありません。ただし両方が指定されている場合は、**-UseDefDir** によってオーバーライドされます。 バックアップは、ディレクトリまたはテープ デバイス アドレス ( \\\\.\TAPE0 など) に格納することができます。 データベース バックアップのファイル名は、次のように自動的に生成されます。  
+ *backup_path* には、バックアップを格納するディレクトリを指定します。 *backup_path* は、**-UseDefDir** も指定されている場合は必要ありません。ただし両方が指定されている場合は、**-UseDefDir** によってオーバーライドされます。 バックアップは、ディレクトリまたはテープ デバイス アドレス ( \\\\.\TAPE0 など) に格納することができます。 データベース バックアップのファイル名は、次のように自動的に生成されます。  
   
 ```  
 dbname_db_yyyyMMddhhmm.BAK  
@@ -210,12 +205,10 @@ dbname_log_yyyymmddhhmm.BAK
  ディスク バックアップの場合で、バックアップ作成後の期間が \<*time_period*> を超える場合、バックアップ ディレクトリ内にあるすべてのバックアップ ファイルを削除します。  
   
  **-CrBkSubDir**  
- ディスク バックアップの場合で、[*backup_path*] ディレクトリ内、または **-UseDefDir** が指定されている場合は、既定のバックアップ ディレクトリ内にサブディレクトリを作成します。 サブディレクトリの名前は、 **-D**に指定されるデータベース名を基に生成されます。 
-  **-CrBkSubDir** を使用すると、 *backup_path* パラメーターを変更せずに、異なるデータベースのすべてのバックアップを、個別のサブディレクトリに簡単に格納することができます。  
+ ディスク バックアップの場合で、[*backup_path*] ディレクトリ内、または **-UseDefDir** が指定されている場合は、既定のバックアップ ディレクトリ内にサブディレクトリを作成します。 サブディレクトリの名前は、 **-D**に指定されるデータベース名を基に生成されます。 **-CrBkSubDir** を使用すると、 *backup_path* パラメーターを変更せずに、異なるデータベースのすべてのバックアップを、個別のサブディレクトリに簡単に格納することができます。  
   
  **-UseDefDir**  
- ディスク バックアップの場合、既定のバックアップ ディレクトリにバックアップ ファイルを作成します。 
-  **UseDefDir** は、*backup_path* をオーバーライドします (両方が指定されている場合)。 既定の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップでは、既定のバックアップ ディレクトリは C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup です。  
+ ディスク バックアップの場合、既定のバックアップ ディレクトリにバックアップ ファイルを作成します。 **UseDefDir** は、*backup_path* をオーバーライドします (両方が指定されている場合)。 既定の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップでは、既定のバックアップ ディレクトリは C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup です。  
   
  **TAPE**  
  バックアップ メディアがテープであることを指定します。  

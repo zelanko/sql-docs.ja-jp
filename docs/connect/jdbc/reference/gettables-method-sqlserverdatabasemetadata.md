@@ -62,7 +62,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getURL メソッドは、java.sql.DatabaseMetaData インターフェイスの getURL メソッドで規定されています。  
+ この getTables メソッドは、java.sql.DatabaseMetaData インターフェイスの getTables メソッドで規定されています。  
   
  getTables メソッドによって返される結果セットには、次の情報が含まれます。  
   

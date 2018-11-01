@@ -59,7 +59,7 @@ public boolean ownDeletesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>戻り値  
- 削除が可視の場合は  です。 それ以外の場合は、 **false**です。  
+ 削除が可視の場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

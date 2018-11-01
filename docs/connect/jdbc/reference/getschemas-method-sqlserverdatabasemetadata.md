@@ -27,7 +27,7 @@ ms.locfileid: "47811730"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getSchemas () メソッド](../../../connect/jdbc/reference/getschemas-method.md)|現在のデータベースで使用できるスキーマ名を取得します。|  
+|[getSchemas メソッド &#40;&#41;](../../../connect/jdbc/reference/getschemas-method.md)|現在のデータベースで使用できるスキーマ名を取得します。|  
 |[getSchemas メソッド&#40;String, String&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|指定されたカタログ名とスキーマ名を使用して、現在のデータベースで使用できるスキーマ名を取得します。|  
   
 ## <a name="see-also"></a>参照  

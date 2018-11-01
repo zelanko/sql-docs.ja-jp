@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+title: OLE DB Driver for SQL Server をいつ使用するか | Microsoft Docs
 description: OLE DB Driver for SQL Server をいつ使用するか
 ms.custom: ''
 ms.date: 06/14/2018

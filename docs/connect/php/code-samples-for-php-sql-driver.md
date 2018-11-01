@@ -1,5 +1,5 @@
 ---
-title: SQL Server 用 Microsoft Drivers for PHP を読み込む | Microsoft Docs
+title: SQL Server 用 Microsoft Drivers for PHP のコード サンプル | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql

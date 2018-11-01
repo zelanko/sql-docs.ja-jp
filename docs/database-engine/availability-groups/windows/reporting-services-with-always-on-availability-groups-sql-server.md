@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40412604"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120289"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services と Always On 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "40412604"
     -   [フェールオーバー時のレポート サーバーの動作](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Reporting Services と Always On 可用性グループを使用するための要件  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では .Net framework 4.0 を使用し、データ ソースでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 接続文字列プロパティの使用をサポートします。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と Power BI Report Server では .Net framework 4.0 を使用し、データ ソースでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 接続文字列プロパティの使用をサポートします。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 で  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用するためには、.Net 3.5 SP1 の修正プログラムをダウンロードしてインストールする必要があります。 この修正プログラムを適用すると、AG 機能を使う SQL クライアントが新たにサポートされ、さらに、接続文字列プロパティとして **ApplicationIntent** および **MultiSubnetFailover**がサポートされます。 レポート サーバーをホストする各コンピューターにこの修正プログラムがインストールされていない場合、ユーザーがレポートをプレビューしようとすると、以下のようなエラー メッセージが表示され、レポート サーバーのトレース ログに記録されます。  
   
@@ -112,8 +109,7 @@ ms.locfileid: "40412604"
  読み取り専用のセカンダリ レプリカを [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ ソースとして使用する場合は、データ更新の時間差が、レポート ユーザーの想定を越えることのないように注意してください。  
   
 ##  <a name="bkmk_reportdesign"></a> レポート デザインと可用性グループ  
- 
-              [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] または [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]のレポート プロジェクトでレポートをデザインする際、ユーザーは、レポート データ ソースの接続文字列に、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の新しい接続プロパティを含めることができます。 新しい接続プロパティのサポート状況は、ユーザーがどこでレポートをプレビューするかによって異なります。  
+ [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] または [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]のレポート プロジェクトでレポートをデザインする際、ユーザーは、レポート データ ソースの接続文字列に、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の新しい接続プロパティを含めることができます。 新しい接続プロパティのサポート状況は、ユーザーがどこでレポートをプレビューするかによって異なります。  
   
 -   **ローカル プレビュー:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] と [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 と support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続文字列プロパティがサポートされます。  
   
@@ -122,7 +118,7 @@ ms.locfileid: "40412604"
 > **エラー メッセージ:** "キーワードはサポートされていません:'applicationintent'"  
   
 ##  <a name="bkmk_reportserverdatabases"></a> レポート サーバー データベースと可用性グループ  
- Reporting Services は、レポート サーバー データベースへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の使用をサポートしていますが、これには一定の制限があります。 レポート サーバー データベースをレプリカの一部として AG 内に構成することはできますが、フェールオーバーが発生しても、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、レポート サーバー データベースに対して別のレプリカを自動的には使用しません。 MultiSubnetFailover とレポート サーバー データベースの使用はサポートされていません。  
+ Reporting Services と Power BI Report Server は、レポート サーバー データベースへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の使用をサポートしていますが、これには制限があります。 レポート サーバー データベースをレプリカの一部として AG 内に構成することはできますが、フェールオーバーが発生しても、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、レポート サーバー データベースに対して別のレプリカを自動的には使用しません。 MultiSubnetFailover とレポート サーバー データベースの使用はサポートされていません。  
   
  フェールオーバーと復旧を完了させるには、手動でのアクションまたはカスタム オートメーション スクリプトが必要です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のフェールオーバー後は、これらのアクションが完了するまで、レポート サーバーの機能が正常に動作しない可能性があります。  
   

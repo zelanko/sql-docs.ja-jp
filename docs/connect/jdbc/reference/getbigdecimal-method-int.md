@@ -1,13 +1,11 @@
 ---
-title: getBigDecimal (int) メソッド |Microsoft ドキュメント
+title: getBigDecimal (int) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBigDecimal Method (int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f74030d8-3789-463b-b414-2eb01cef8a30
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f325eae85e1bc48e40914e5a5f32d2fd50caed6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 796abf5116ef5641cb00c2f77a3f54bd93cd6ec8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809830"
 ---
 # <a name="getbigdecimal-method-int"></a>getBigDecimal (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,21 +36,21 @@ public java.math.BigDecimal getBigDecimal(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *インデックス*  
+ *index*  
   
- **Int**パラメーター インデックスを示すです。  
+ パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- BigDecimal オブジェクトです。  
+ BigDecimal オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この getBigDecimal メソッドは、java.sql.CallableStatement インターフェイスの getBigDecimal メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この getBigDecimal メソッドは、java.sql.CallableStatement インターフェイスに、getBigDecimal メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [getBigDecimal メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   
+ [getBigDecimal メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

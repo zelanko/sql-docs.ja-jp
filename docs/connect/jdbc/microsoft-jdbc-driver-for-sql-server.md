@@ -1,31 +1,28 @@
 ---
-title: Microsoft JDBC Driver for SQL Server |Microsoft ドキュメント
+title: Microsoft SQL Server 用 JDBC Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e5a25cf3d51ff54e650de30b654887b3f949119
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 19e8cf2e5c4aeaa2eab8c49d61a05a0eaa434e3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611040"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft SQL Server 用 JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-相互運用性を継続的な取り組みでは、Microsoft は、SQL Server、および Azure SQL データベースで使用する Java Database Connectivity (JDBC) ドライバーを提供します。 このドライバーは追加料金なしで利用でき、あらゆる Java アプリケーション、アプリケーション サーバー、Java 対応アプレットからデータベースに接続できます。 このドライバーは、標準の JDBC アプリケーション プログラム インターフェイス (API) によってデータベース接続が提供される Type 4 JDBC ドライバーです。
+相互運用性の実現に向けた取り組みの一環として、SQL Server および Azure SQL Database で使用するための Java Database Connectivity (JDBC) ドライバーがリリースされました。 このドライバーは追加料金なしで利用でき、あらゆる Java アプリケーション、アプリケーション サーバー、Java 対応アプレットからデータベースに接続できます。 このドライバーは、標準の JDBC アプリケーション プログラム インターフェイス (API) によってデータベース接続が提供される Type 4 JDBC ドライバーです。
 
 Microsoft JDBC Driver for SQL Server は、IBM WebSphere や SAP NetWeaver などの主要なアプリケーション サーバーに対してテスト済みです。
   
@@ -38,22 +35,22 @@ Microsoft JDBC Driver for SQL Server は、IBM WebSphere や SAP NetWeaver な�
 * [作業の開始](getting-started-with-the-jdbc-driver.md)
 * [概要](overview-of-the-jdbc-driver.md)  
 * [プログラミング ガイド](programming-guide-for-jdbc-sql-driver.md)
-* [セキュリティ](securing-jdbc-driver-applications.md)  
+* [Security](securing-jdbc-driver-applications.md)  
 * [パフォーマンスと信頼性](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [トラブルシューティング](diagnosing-problems-with-the-jdbc-driver.md)
 * [コード サンプル](sample-jdbc-driver-applications.md) 
-* [コンプライアンス、法的](compliance-and-legal-for-the-jdbc-sql-driver.md)  
+* [準拠と法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>コミュニティ
 [JDBC ドライバーの追加情報の検索](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>ダウンロード
-[SQL Server 用 Microsoft JDBC Driver のダウンロード](download-microsoft-jdbc-driver-for-sql-server.md)-Maven プロジェクト、および詳細に関する追加情報が含まれています。
+[SQL Server 用 Microsoft JDBC Driver のダウンロード](download-microsoft-jdbc-driver-for-sql-server.md)-Maven プロジェクトでは、その他に関する情報が追加されます。
   
 ## <a name="samples"></a>サンプル  
 * [サンプル JDBC Driver アプリケーション](sample-jdbc-driver-applications.md)  
 * [Windows 上の Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Macos Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Ubuntu で Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Red Hat Enterprise linux (RHEL) Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [SUSE Linux Enterprise Server (SLES) で Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [MacOS で Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Ubuntu 上の Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL) 上の Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [SUSE Linux Enterprise Server (SLES) 上の Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

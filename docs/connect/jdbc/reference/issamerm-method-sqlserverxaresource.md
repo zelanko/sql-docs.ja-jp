@@ -26,7 +26,7 @@ ms.locfileid: "47633780"
 # <a name="issamerm-method-sqlserverxaresource"></a>isSameRM メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  対象オブジェクトが表すリソース マネージャー インスタンスと、渡された  オブジェクトが表すリソース マネージャー インスタンスとが同一であるかどうかを示します。  
+  対象オブジェクトが表すリソース マネージャー インスタンスと、渡された XAResource オブジェクトが表すリソース マネージャー インスタンスとが同一であるかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
  XAResource オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- インスタンスが同一である場合は  です。 それ以外の場合は、 **false**です。  
+ インスタンスが同一である場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  

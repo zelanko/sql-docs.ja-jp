@@ -49,10 +49,10 @@ public void setNull(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setURL メソッドは、java.sql.CallableStatement インターフェイスの setURL メソッドで指定されています。  
+ setNull メソッドは、java.sql.CallableStatement インターフェイスの setNull メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getInt メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
+ [setNull メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

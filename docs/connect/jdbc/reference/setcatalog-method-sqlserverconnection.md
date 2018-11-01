@@ -1,13 +1,11 @@
 ---
-title: setCatalog メソッド (SQLServerConnection) |Microsoft ドキュメント
+title: setCatalog メソッド (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setCatalog
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91597c7a995fb0ecf810d3b0f58760c12784564e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a123f6d8a51bdb20f5a90bec39eb4b44b19f110e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622770"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  このサブ空間を選択する特定のカタログ名を設定[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトのデータベースの作業を行う。  
+  渡されたカタログ名を設定し、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトのデータベースの作業用サブスペースを選択します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,15 +38,15 @@ public void setCatalog(java.lang.String catalog)
 #### <a name="parameters"></a>パラメーター  
  *catalog*  
   
- A**文字列**カタログ名を格納しています。  
+ カタログ名を含む**文字列**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この setCatalog メソッドは、java.sql.Connection インターフェイスの setCatalog メソッドによって指定されます。  
   
- *カタログ*引数はエスケープ、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]自動的にします。 このメソッドを使用して、接続オブジェクトのカタログのプロパティを設定します。 このプロパティは、他の方法で暗黙的に設定されることはありません。  
+ *カタログ*引数はエスケープ、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]自動的にします。 このメソッドを使用すると、Connection オブジェクトのカタログ プロパティが設定されます。 このプロパティは、他の方法で暗黙的に設定されることはありません。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

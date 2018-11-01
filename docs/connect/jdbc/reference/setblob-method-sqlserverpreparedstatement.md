@@ -26,7 +26,7 @@ ms.locfileid: "47643530"
 # <a name="setblob-method-sqlserverpreparedstatement"></a>setBlob メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された  オブジェクトに設定します。  
+  指定されたパラメーターを、渡された Blob オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public final void setBlob(int i,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この execute メソッドは、java.sql.PreparedStatement インターフェイスの execute メソッドで規定されています。  
+ この setBlob メソッドは、java.sql.PreparedStatement インターフェイスの setBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

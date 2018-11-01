@@ -36,7 +36,7 @@ public int getType()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 現在のカーソルの種類を示すです。次のいずれかの値になります。  
+ 現在のカーソルの種類を示す **int** です。次のいずれかの値になります。  
   
  ResultSet.TYPE_FORWARD_ONLY  
   

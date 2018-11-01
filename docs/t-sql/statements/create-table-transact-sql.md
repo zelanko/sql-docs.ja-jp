@@ -1,13 +1,11 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -46,16 +44,15 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171894"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461157"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -120,7 +117,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -267,7 +264,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -393,7 +391,7 @@ column_name <data_type>
 >  ここでは、default はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
 > [!NOTE]  
->  パーティション テーブルを作成した後、テーブルの LOCK_ESCALATION オプションを AUTO に設定することを検討してください。 テーブルではなくパーティション (HoBT) レベルにロックをエスカレートできるようにすることで、同時実行性が向上します。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
+>  パーティション テーブルを作成した後、テーブルの LOCK_ESCALATION オプションを AUTO に設定することを検討してください。 テーブルではなくパーティション (HoBT) レベルにロックをエスカレートできるようにすることで、コンカレンシーが向上します。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
  **text** 列、**ntext** 列、**image** 列、**xml** 列、**varchar(max)** 列、**nvarchar(max)** 列、**varbinary(max)**、および CLR ユーザー定義型の列 (geometry 型や geography 型など) が、指定したファイル グループに格納されることを示します。  
@@ -430,7 +428,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
  FILESTREAM の関連トピックについては、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」をご覧ください。  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] *type_name*  
  列のデータ型と、そのデータ型が所属するスキーマを指定します。 ディスク ベース テーブルの場合、データ型は次のいずれかです。  
   
 -   システム データ型。  
@@ -496,7 +494,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
  指定した datetime2 列が、システムによって、レコードの有効期限の開始時刻またはレコードの有効期限の終了時刻のいずれかを記録する使用されることを指定します。 列を定義する必要があります、NOT NULL とします。 NULL として指定できるようにしようとすると、システムには、エラーがスローされます。 期間の列に対して NOT NULL を明示的に指定しない場合、システムは、列を既定で NOT NULL として定義します。 この引数を使用して、期間 FOR SYSTEM_TIME とで SYSTEM_VERSIONING と組み合わせて = テーブルにシステムのバージョン管理を有効にする引数にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
   
- 1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM***`<table>`* がこれらの列の値を返さないようにすることができます。 既定では、期間の列は非表示にします。 を使用するために非表示の列を時間的なテーブルを直接参照するすべてのクエリに明示的に含まする必要があります。 変更する、 **HIDDEN** を既存の**期間**列の属性 期間 削除し、別の非表示フラグを再作成する必要があります。  
+ 1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM**_`<table>`_ がこれらの列の値を返さないようにすることができます。 既定では、期間の列は非表示にします。 を使用するために非表示の列を時間的なテーブルを直接参照するすべてのクエリに明示的に含まする必要があります。 変更する、 **HIDDEN** を既存の**期間**列の属性 期間 削除し、別の非表示フラグを再作成する必要があります。  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -518,7 +516,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
  非クラスター化列ストア インデックスが格納され、クラスター化列ストア インデックスとして管理します。 非クラスター化列ストア インデックスは、列が制限されることがあり、テーブルのセカンダリ インデックスとして存在しているために呼び出されます。  
   
- ON *partition_scheme_name ***(*** column_name***)**  
+ ON _partition\_scheme\_name_**(**_column\_name_**)**  
  ファイル グループが定義されているパーティション構成を指定します。このファイル グループは、パーティション インデックスのパーティションのマップ先となります。 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) または [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) を実行して、パーティション構成がデータベース内に存在するようにする必要があります。 *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、*partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、および有効桁数に一致する必要があります。 *column_name* インデックス定義内の列に限定されません。 UNIQUE インデックスをパーティション分割する場合、*column_name* は一意のキーとして使用されている列から選択する必要がありますが、それ以外の場合はベース テーブルの任意の列を指定できます。 この制限により、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、単一のパーティション内だけでキー値の一意性を確認できます。  
   
 > [!NOTE]  
@@ -569,9 +567,11 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
  ENCRYPTION_TYPE = {決定的 |ランダム化}  
  **確定的な暗号化** は常に任意のプレーン テキストを指定した値の場合は、同じ暗号化された値を生成するメソッドを使用します。 確定的な暗号化を使用すると、グループ化、および暗号化された値に基づいて、等しいかどうかの結合を使用して、テーブルへの参加の等値比較を使用して検索をできますも確認するには、暗号化された列のパターンについては、暗号化された値を推測する承認されていないユーザーを許可することができます。 確定的に暗号化された列に 2 つのテーブルを結合すると、両方の列が同じ列の暗号化キーを使用して暗号化されている場合にのみ可能なです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。  
   
- **暗号化をランダム化** は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダムな暗号化より安全になりますが、により、等しいかどうかの検索、グループ化、および暗号化された列を結合します。 ランダムな暗号化を使用して列のインデックスを付けることはできません。  
+ **暗号化をランダム化** は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダム化された暗号化は、より安全ですが、SQL Server インスタンスでセキュア エンクレーブを使用する Always Encrypted がサポートされる場合を除き、暗号化された列に対する計算とインデックス作成はすべて阻止されます。 詳しくは、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」(セキュア エンクレーブを使用する Always Encrypted) をご覧ください。
   
- 検索パラメーターまたは政府の ID 番号など、グループ化のパラメーターとなる列には、確定的な暗号化を使用します。 ランダムな暗号化を使用して、クレジット カード番号などのデータ、これが、他のレコードとグループ化されたかテーブル、およびこれは検索されませんの (トランザクションの数) などの他の列を使用して、関心のある暗号化された列を含む行を検索するために参加するために使用します。  
+ Always Encrypted (セキュア エンクレーブなし) を使用している場合、政府の ID 番号などのパラメーターまたはグループ化パラメーターで検索される列には、決定論的な暗号化を使用します。 ランダム化された暗号化は、他のレコードとグループ化されたりテーブルの結合に使用されたりせず、関心のある暗号化された列を含む行の検索に他の列 (トランザクション番号など) を使用するため検索されない、クレジット カード番号などのデータに使用します。
+
+ セキュア エンクレーブを使用する Always Encrypted を使用する場合は、ランダム化された暗号化が推奨される暗号化の種類です。
   
  列は、該当するデータ型である必要があります。  
   
@@ -653,7 +653,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  FOREIGN KEY REFERENCES  
  1 つ以上の列内のデータに参照整合性を持たせる制約です。 FOREIGN KEY 制約では、列内の各値が、参照されるテーブル内のその値に対応する参照される列に存在している必要があります。 FOREIGN KEY 制約は、参照されるテーブル内の PRIMARY KEY 制約または UNIQUE 制約である列、または参照されるテーブルの UNIQUE INDEX で参照される列のみを参照できます。 計算列の外部キーには、PERSISTED も設定する必要があります。  
   
- [ *schema_name***.**] *referenced_table_name*]  
+ [ _schema\_name_**.**] *referenced_table_name*]  
  FOREIGN KEY 制約で参照されるテーブル名と、そのテーブルが所属するスキーマ名です。  
   
  **(** *ref_column* [ **,**... *n* ] **)**  
@@ -663,7 +663,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  作成されたテーブルの行が参照関係を持ち、参照される行が親テーブルから削除された場合に、その行に対して実行される操作を指定します。 既定値は NO ACTION です。  
   
  NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] がエラーを生成し、親テーブルでの行の削除操作がロールバックされます。  
+ NO ACTION を指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではエラーが発生し、親テーブルでの行の削除操作がロールバックされます。  
   
  CASCADE  
  親テーブルから行が削除された場合に、参照元テーブルからもその行が削除されます。  
@@ -724,13 +724,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *partition_scheme_name*  
  パーティション テーブルの各パーティションがマップされるファイル グループを定義するパーティション構成の名前を指定します。 パーティション構成はデータベース内に存在している必要があります。  
   
- [ *partition_column_name***.** ]  
+ [ _partition\_column\_name_**.** ]  
  パーティション テーブルに対して、パーティション分割する列を指定します。 ここで指定する列は、*partition_scheme_name* が使用しているパーティション関数で指定した列と、データ型、長さ、有効桁数が同じであることが必要です。 パーティション関数に関与する計算列は、明示的に PERSISTED とマークされている必要があります。  
   
 > [!IMPORTANT]  
 >  パーティション テーブルのパーティション分割列に加え、ALTER TABLE...SWITCH 操作のソースまたはターゲットとなっているパーティション分割されていないテーブルの列にも、NOT NULL を指定することをお勧めします。 こうすることで、パーティション分割列の CHECK 制約で NULL 値のチェックを行う必要がなくなります。  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  インデックス データの格納に使用される個々のインデックス ページを[!INCLUDE[ssDE](../../includes/ssde-md.md)]がどの程度埋めるかを指定します。 ユーザーが指定できる *fillfactor* の値は、1 ～ 100 です。 値を指定しない場合の既定値は 0 です。 FILL FACTOR 値 0 と 100 の機能は、まったく同じです。  
   
 > [!IMPORTANT]  
@@ -815,7 +815,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | **OFF** }  
  ON の場合、FILLFACTOR で指定された空き領域の割合が、インデックスの中間レベル ページに適用されます。 OFF の場合や、FILLFACTOR 値が指定されていない場合は、中間レベル ページは、中間ページの一連のキーを考慮しつつ、インデックスが持つことのできる最大サイズの行が少なくとも 1 つ格納できる領域を残して、ほぼ容量いっぱいに使用されます。 既定値は OFF です。  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  インデックスの作成時または変更時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 値には、1 ～ 100 の整数値を指定してください。 既定値は 0 です。 FILL FACTOR 値 0 と 100 の機能は、まったく同じです。  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  
@@ -1055,7 +1055,7 @@ GO
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Azure SQL Database のグローバル一時テーブルのトラブルシューティング 
 
-tempdb のトラブルシューティングについては、「[tempdb のディスク領域の不足に関するトラブルシューティング](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105))」をご覧ください。 
+tempdb のトラブルシューティングについては、「[tempdb のディスク領域の不足に関するトラブルシューティング](http://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105))」をご覧ください。 
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の DMV のトラブルシューティングにアクセスできるのは、サーバー管理者のみです。
@@ -1252,7 +1252,7 @@ SELECT * FROM tempdb.sys.database_files
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-create-a-primary-key-constraint-on-a-column"></a>A. 列に PRIMARY KEY 制約を作成する  
- 次の例では、`Employee` テーブルの `EmployeeID` 列にクラスター化インデックスを持つ PRIMARY KEY 制約の列定義を示しています。 制約名を指定していないため、制約名はシステムによって提供されます。  
+ 次の例では、`EmployeeID` テーブルの `Employee` 列にクラスター化インデックスを持つ PRIMARY KEY 制約の列定義を示しています。 制約名を指定していないため、制約名はシステムによって提供されます。  
   
 ```sql  
 CREATE TABLE dbo.Employee (EmployeeID int  
@@ -1260,7 +1260,7 @@ PRIMARY KEY CLUSTERED);
 ```  
   
 ### <a name="b-using-foreign-key-constraints"></a>B. FOREIGN KEY 制約を使用する  
- FOREIGN KEY 制約は、他のテーブルを参照するために使用します。 外部キーは単一列キーの場合も複数列キーの場合もあります。 次の例では、`SalesPerson` テーブルを参照する `SalesOrderHeader` テーブルに対する単一列 FOREIGN KEY 制約を示しています。 単一列 FOREIGN KEY 制約では、REFERENCES 句のみが必要とされます。  
+ FOREIGN KEY 制約は、他のテーブルを参照するために使用します。 外部キーは単一列キーの場合も複数列キーの場合もあります。 次の例では、`SalesOrderHeader` テーブルを参照する `SalesPerson` テーブルに対する単一列 FOREIGN KEY 制約を示しています。 単一列 FOREIGN KEY 制約では、REFERENCES 句のみが必要とされます。  
   
 ```sql  
 SalesPersonID int NULL  
@@ -1309,7 +1309,7 @@ DEFAULT USER
 ```  
   
 ### <a name="e-using-check-constraints"></a>E. CHECK 制約を使用する  
- 次の例は、`Vendor` テーブルの `CreditRating` 列に入力する値に対する制限を示しています。 制約には名前がありません。  
+ 次の例は、`CreditRating` テーブルの `Vendor` 列に入力する値に対する制限を示しています。 制約には名前がありません。  
   
 ```sql  
 CHECK (CreditRating >= 1 and CreditRating <= 5)  
@@ -1386,7 +1386,7 @@ CREATE TABLE PartitionTable (col1 int, col2 char(10))
 GO  
 ```  
   
- `PartitionTable` の列 `col1` の値に基づき、各パーティションは次のように割り当てられます。  
+ `col1` の列 `PartitionTable` の値に基づき、各パーティションは次のように割り当てられます。  
   
 |[ファイル グループ]|test1fg|test2fg|test3fg|test4fg|  
 |---------------|-------------|-------------|-------------|-------------|  
@@ -1394,7 +1394,7 @@ GO
 |**値**|col 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1,000|col1 > 1000|  
   
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. 列で uniqueidentifier データ型を使用する  
- 次の例では、`uniqueidentifier` 列を含むテーブルを作成します。 この例では、PRIMARY KEY 制約を使って、重複値を挿入するユーザーからテーブルを保護し、`DEFAULT` 制約で `NEWSEQUENTIALID()` 関数を使って、新しい行の値を指定します。 また、$ROWGUID キーワードを使用して参照できるように、この `uniqueidentifier` 列に ROWGUIDCOL プロパティを適用します。  
+ 次の例では、`uniqueidentifier` 列を含むテーブルを作成します。 この例では、PRIMARY KEY 制約を使って、重複値を挿入するユーザーからテーブルを保護し、`NEWSEQUENTIALID()` 制約で `DEFAULT` 関数を使って、新しい行の値を指定します。 また、$ROWGUID キーワードを使用して参照できるように、この `uniqueidentifier` 列に ROWGUIDCOL プロパティを適用します。  
   
 ```sql  
 CREATE TABLE dbo.Globally_Unique_Data  
@@ -1422,7 +1422,7 @@ CREATE TABLE UDTypeTable
 ```  
   
 ### <a name="l-using-the-username-function-for-a-computed-column"></a>L. 計算列に USER_NAME 関数を使用する  
- 次の例では、`myuser_name` 列で `USER_NAME()` 関数を使用します。  
+ 次の例では、`USER_NAME()` 列で `myuser_name` 関数を使用します。  
   
 ```sql  
 CREATE TABLE dbo.mylogintable  
@@ -1430,7 +1430,7 @@ CREATE TABLE dbo.mylogintable
 ```  
   
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>M. FILESTREAM 列を含むテーブルを作成する  
- 次の例では、`Photo` という `FILESTREAM` 列を含むテーブルを作成します。 テーブルに 1 つ以上の `FILESTREAM` 列が含まれる場合、テーブルには `ROWGUIDCOL` 列が 1 つ存在する必要があります。  
+ 次の例では、`FILESTREAM` という `Photo` 列を含むテーブルを作成します。 テーブルに 1 つ以上の `FILESTREAM` 列が含まれる場合、テーブルには `ROWGUIDCOL` 列が 1 つ存在する必要があります。  
   
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  

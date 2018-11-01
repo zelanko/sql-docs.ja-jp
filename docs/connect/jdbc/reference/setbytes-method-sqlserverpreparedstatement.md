@@ -49,7 +49,7 @@ public final void setBytes(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setBytes メソッドは、java.sql.CallableStatement インターフェイスの setBytes メソッドで指定されています。  
+ この setBytes メソッドは、java.sql.PreparedStatement インターフェイスの setBytes メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

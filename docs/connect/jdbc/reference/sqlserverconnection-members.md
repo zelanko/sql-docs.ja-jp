@@ -1,95 +1,92 @@
 ---
-title: SQLServerConnection のメンバー |Microsoft ドキュメント
+title: SQLServerConnection のメンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a0d90e2b6b6c0faaa1dd8d6376b11b95a2ad523
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 77065f64067ef505714bbd5e831d63abf41337bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804970"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  次の表に、によって公開されるメンバー、 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)クラスです。  
+  次の表は、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) クラスによって公開されるメンバーを示しています。  
   
-## <a name="constructors"></a>コンス トラクター  
+## <a name="constructors"></a>コンストラクター  
  [なし] :  
   
 ## <a name="fields"></a>フィールド  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|スナップショット トランザクションの分離レベルを指定する場合に使用します。|  
   
 ## <a name="inherited-fields"></a>継承されたフィールド  
   
-|継承元のクラス|Description|  
+|継承元のクラス|[説明]|  
 |---------------------------|-----------------|  
 |java.sql.Connection|TRANSACTION_NONE、TRANSACTION_READ_COMMITTED、TRANSACTION_READ_UNCOMMITTED、TRANSACTION_REPEATABLE_READ、TRANSACTION_SERIALIZABLE|  
   
 ## <a name="methods"></a>メソッド  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|この報告されたすべての警告をクリア[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|このデータベースを解放[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトと JDBC リソースを待たずにすぐに自動的に解放します。|  
-|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|強制的に非公開-すべて未処理破棄された準備されたステートメントで実行される要求を準備します。| 
-|[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|前回のコミットまたはロールバック以降を恒久的に、すべての変更が行われ、これによって現在保持されているデータベース ロックは解放[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|作成、 **java.sql.Blob**データを含まないオブジェクト。|  
-|[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|作成、 **java.sql.Clob**データを含まないオブジェクト。|  
-|[createNClob](../../../connect/jdbc/reference/createnclob-method-sqlserverconnection.md)|作成、 **java.sql.NClob**データを含まないオブジェクト。|  
-|[createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)|作成、 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)データベースに SQL ステートメントを送信するためのオブジェクト。|  
-|[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|作成、 **java.sql.SQLXML**データを含まないオブジェクト。|  
-|[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|この現在の自動コミット モードを取得[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|この現在のカタログ名を取得する[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[getClientConnectionID メソッド&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|接続に成功したか失敗したかにかかわらず、直近に試行された接続の ID を取得します。|  
+|[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトについて報告されたすべての警告をクリアします。|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクト用のデータベースと JDBC リソースを、自動的に解放されるまで待たずに直ちに解放します。|  
+|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|非公開を強制的に実行される、卓越した破棄された準備されたステートメント用の要求を準備します。| 
+|[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|前回のコミットまたはロールバック以降のすべての変更を永続的にして、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトによって現在保持されているデータベース ロックをすべて解除します。|  
+|[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|作成、 **java.sql.Blob**オブジェクトをデータなし。|  
+|[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|作成、 **java.sql.Clob**オブジェクトをデータなし。|  
+|[createNClob](../../../connect/jdbc/reference/createnclob-method-sqlserverconnection.md)|作成、 **java.sql.NClob**オブジェクトをデータなし。|  
+|[createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)|SQL ステートメントをデータベースに送信するための [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを作成します。|  
+|[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|作成、 **java.sql.SQLXML**オブジェクトをデータなし。|  
+|[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトの現在の自動コミット モードを取得します。|  
+|[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトの現在のカタログ名を取得します。|  
+|[getClientConnectionID メソッド &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|接続に成功したか失敗したかにかかわらず、直近に試行された接続の ID を取得します。|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|JDBC ドライバーでサポートされているクライアント情報のプロパティに関する情報を取得します。|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|値を返します**disableStatementPooling**接続プロパティです。 この設定は、ステートメントのプールが有効になっているかどうか、またはこの接続ではなくを制御します。|
-|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|準備済み現在未解決の数を返しますステートメント操作の準備を解除します。|
+|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|準備された現在未解決の数を返すステートメント unprepare アクション。|
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|値を返します**enablePrepareOnFirstPreparedStatementCall**接続プロパティです。|
-|[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|現在の保持機能を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)これを使用して作成されるオブジェクト[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|取得、 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)先であるデータベースについてのメタデータを格納しているオブジェクト[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトが接続を表します。|  
+|[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の保持機能を取得します。|  
+|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) オブジェクトが表す接続の接続先データベースについてのメタデータを含む [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを取得します。|  
 |[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|値を返します**serverPreparedStatementDiscardThreshold**接続プロパティです。|  
 |[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|プールされた準備されたステートメント ハンドルの現在の数を返します。|  
 |[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|この接続の準備されたステートメント キャッシュのサイズを返します。|  
-|[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|この現在のトランザクション分離レベルを取得[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|これに関連付けられているマップ オブジェクトを取得します[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|この呼び出しによって報告された最初の警告取得[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|示すかどうかこの[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトが閉じられました。|  
-|[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverconnection.md)|示すかどうかこの[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトは読み取り専用モードにします。|  
+|[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトの現在のトランザクション分離レベルを取得します。|  
+|[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトに関連付けられている Map オブジェクトを取得します。|  
+|[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトでの呼び出しによって報告された最初の警告を取得します。|  
+|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトが閉じられているかどうかを示します。|  
+|[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトが読み取り専用モードかどうかを示します。|  
 |[isStatementPoolingEnabled](../../../connect/jdbc/reference/isstatementpoolingenabled-method-sqlserverconnection.md)|ステートメントのプールが有効になっているかどうか、またはこの接続ではなくを返します。|  
-|[isValid](../../../connect/jdbc/reference/isvalid-method-sqlserverconnection.md)|示すかどうかこの[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトが閉じられていないは現在も有効です。|  
+|[isValid](../../../connect/jdbc/reference/isvalid-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトが閉じられておらず、有効であるかどうかを示します。|  
 |[nativeSQL](../../../connect/jdbc/reference/nativesql-method-sqlserverconnection.md)|渡された SQL ステートメントを、データベース サーバーのネイティブな SQL 文法に変換します。|  
-|[prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)|作成、 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)データベースのストアド プロシージャを呼び出すためのオブジェクト。|  
-|[prepareStatement](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)|作成、 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)化されたデータベースに SQL ステートメントを送信するためのオブジェクト。|  
-|[releaseSavepoint](../../../connect/jdbc/reference/releasesavepoint-method-sqlserverconnection.md)|指定された削除[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)現在のトランザクションからのオブジェクト。|  
-|[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)|現在のトランザクションで行われたすべての変更が取り消され、これによって現在保持されているデータベース ロックは解放[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
-|[setAutoCommit](../../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md)|自動コミット モードを設定[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトを特定の状態にします。|  
-|[setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md)|このサブ空間を選択する指定したカタログ名を設定[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトのデータベースの作業を行う。|  
+|[prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)|データベースのストアド プロシージャを呼び出すための [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを作成します。|  
+|[prepareStatement](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)|パラメーター化された SQL ステートメントをデータベースに送信するための [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトを作成します。|  
+|[releaseSavepoint](../../../connect/jdbc/reference/releasesavepoint-method-sqlserverconnection.md)|現在のトランザクションから、指定された [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトを削除します。|  
+|[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)|現在のトランザクションで行われた変更をすべて元に戻し、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトによって現在保持されているデータベース ロックをすべて解除します。|  
+|[setAutoCommit](../../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトの自動コミット モードを、渡された状態に設定します。|  
+|[setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md)|指定されたカタログ名を設定し、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトのデータベースの作業用サブスペースを選択します。|  
 |[setClientInfo](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)|クライアント情報のプロパティの値を設定します。|  
 |[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverconnection.md)|ステートメントのプールを true または false に設定します。|  
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|新しい値を指定します、 **enablePrepareOnFirstPreparedStatementCall**接続プロパティです。|  
-|[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|変更の保持機能[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)これを使用して作成されるオブジェクト[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)指定の保持機能するオブジェクト。|  
-|[setReadOnly](../../../connect/jdbc/reference/setreadonly-method-sqlserverconnection.md)|これは、 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトをデータベースの最適化を有効にするには、JDBC driver にヒントとしての読み取り専用モードにします。|  
-|[setSavepoint](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)|現在のトランザクションで、名前のないセーブポイントを作成し、新しい返します[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)を表すオブジェクト。|  
+|[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの保持機能を、渡された保持機能に変更します。|  
+|[setReadOnly](../../../connect/jdbc/reference/setreadonly-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを読み取り専用モードにして、データベースの最適化を有効にするヒントを JDBC ドライバーに提供します。|  
+|[setSavepoint](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)|名前を割り当てられていないセーブポイントを現在のトランザクションに作成し、そのセーブポイントを表す新しい [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトを返します。|  
 |[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|新しい値を設定、 **serverPreparedStatementDiscardThreshold**接続プロパティです。|  
 |[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverconnection.md)|この接続の準備されたステートメント キャッシュのサイズを設定します。|  
-|[setTransactionIsolation](../../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md)|このトランザクションの分離レベルを変更しようとしています。 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)に指定されたオブジェクト。|  
-|[setTypeMap](../../../connect/jdbc/reference/settypemap-method-sqlserverconnection.md)|この型マップとして指定された TypeMap オブジェクトをインストール[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。|  
+|[setTransactionIsolation](../../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトのトランザクション分離レベルについて、渡されたレベルへの変更を試行します。|  
+|[setTypeMap](../../../connect/jdbc/reference/settypemap-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトの型マップとして、渡された TypeMap オブジェクトをインストールします。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  
   

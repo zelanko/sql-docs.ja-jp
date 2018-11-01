@@ -46,7 +46,7 @@ ms.locfileid: "47597985"
   
 2.  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC ドライバーのダウンロードで `msodbcsql-11.0.2270.0.tar.gz` という名前のファイルを配置したディレクトリに移動します。 使用している Linux のバージョンに対応する \*.tar.gz ファイルがあることを確認します。 ファイルを解凍するには、コマンド **tar xvzf msodbcsql-11.0.2270.0.tar.gz** を実行します。  
 
-3.  `msodbcsql-11.0.2270.0` のディレクトリに移動すると、ディレクトリ内に `build_dm.sh`install.sh というファイルがあることを確認できます。 実行することができます`build_dm.sh`unixODBC ドライバー マネージャーをインストールします。
+3.  `msodbcsql-11.0.2270.0` ディレクトリに移動すると、ディレクトリ内に `build_dm.sh` というファイルがあることを確認できます。 実行することができます`build_dm.sh`unixODBC ドライバー マネージャーをインストールします。
 
 4.  使用可能なオプションの一覧を表示するには、コマンド **./build_dm.sh --help** を実行します。  
   

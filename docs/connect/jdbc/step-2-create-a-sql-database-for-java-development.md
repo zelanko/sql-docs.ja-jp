@@ -1,5 +1,5 @@
 ---
-title: 'ステップ 2: PHP 開発用の SQL データベースを作成する | Microsoft Docs'
+title: 'ステップ 2: Java 開発用の SQL データベースを作成する | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

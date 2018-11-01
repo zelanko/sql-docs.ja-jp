@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 19bf9ad54bee8b14796144d002e97c6eead541aa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 189ffb02217d85d77cee524658cd35a2d2cff034
+ms.sourcegitcommit: 677a75e7d149ff257ed8376a392806d17dca0640
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38069973"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46488297"
 ---
 各可用性グループにはプライマリ レプリカが 1 つだけあります。 プライマリ レプリカは読み書きができます。 プライマリになっているレプリカの変更は、フェールオーバーで行うことができます。 高可用性の可用性グループでは、クラスター マネージャーによってフェールオーバー プロセスが自動化されます。 クラスターの種類が NONE の可用性グループでは、フェールオーバー プロセスは手動です。 
 
@@ -29,6 +29,12 @@ ms.locfileid: "38069973"
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
+```
+
+以前のプライマリ レプリカが復旧するときは、プライマリ ロールも想定されます。 確実に以前のプライマリ レプリカをセカンダリ ロールに移行するには、以前のプライマリ レプリカで次のコマンドを実行します。
+
+```SQL
+ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 ```
 
 ### <a name="manual-failover-without-data-loss"></a>データ損失のない手動フェールオーバー

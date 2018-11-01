@@ -43,7 +43,7 @@ public void setBinaryStream(java.lang.String parameterName,
   
  *length*  
   
- 長さをバイト数で示す  です。  
+ 長さをバイト数で示す **long** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

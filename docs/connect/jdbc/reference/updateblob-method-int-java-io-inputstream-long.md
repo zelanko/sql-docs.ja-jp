@@ -1,5 +1,5 @@
 ---
-title: updateBlob (int, java.io.InputStream, long) メソッド
+title: updateBlob (int, java.io.InputStream, long) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -37,7 +37,7 @@ public void updateBlob(int columnIndex,
   
  列インデックスを示す **int** です。  
   
- InputStream  
+ *inputStream*  
   
  InputStream オブジェクト。  
   
@@ -52,7 +52,7 @@ public void updateBlob(int columnIndex,
  この updateBlob メソッドは、java.sql.ResultSet インターフェイスの updateBlob メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateNClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
+ [updateBlob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

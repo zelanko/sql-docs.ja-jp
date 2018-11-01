@@ -1,13 +1,11 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/142018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3287045867598d3707c2d98e593207e395c36c56
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405707"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085388"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,9 +43,10 @@ ms.locfileid: "40405707"
 - バッチが初めてコンパイルされるとき、コンパイルしたプラン スタブのキャッシュ保存を有効または無効にします。  
 - ネイティブ コンパイル T-SQL モジュールの実行統計コレクションを有効または無効にします。
 - ONLINE= 構文に対応している DDL ステートメントの既定のオプションでオンラインの有効/無効を変更します。
-- RESUMABLE= 構文に対応している DDL ステートメントの既定のオプションで再開可能性の有効/無効を変更します。 
+- RESUMABLE= 構文に対応している DDL ステートメントの既定のオプションで再開可能性の有効/無効を変更します。
+- グローバル一時テーブルの自動削除機能を有効または無効にします 
 
- ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -73,6 +71,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 }  
 ```  
   
@@ -100,7 +99,7 @@ PRIMARY
   
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }  
 
-データベースの互換性レベルに関係なく、クエリ オプティマイザーのカーディナリティ推定モデルを SQL Server 2012 以前のバージョンに設定できます。 既定値は **OFF** であり、クエリ オプティマイザーのカーディナリティ推定モデルがデータベースの互換性レベルに基づいて設定されます。 これを **ON** に設定することは、[トレース フラグ 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にすることと同じです。 
+データベースの互換性レベルに関係なく、クエリ オプティマイザーのカーディナリティ推定モデルを SQL Server 2012 以前のバージョンに設定できます。 既定値は **OFF** であり、クエリ オプティマイザーのカーディナリティ推定モデルがデータベースの互換性レベルに基づいて設定されます。 LEGACY_CARDINALITY_ESTIMATION を **ON** に設定することは、[トレース フラグ 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にすることと同じです。 
 
 > [!TIP] 
 > これをクエリ レベルで行うには、**QUERYTRACEON** [クエリ ヒント](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を追加してください。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、クエリ レベルでこれを行うには、トレース フラグの代わりに、**USE HINT** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加してください。 
@@ -111,14 +110,14 @@ PRIMARY
   
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}  
 
-[パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)を有効にするか無効にします。 既定値は ON です。 これは、 [トレース フラグ 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を指定した場合と同じです。   
+[パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)を有効にするか無効にします。 既定値は ON です。 PARAMETER_SNIFFING を ON に設定することは、[トレース フラグ 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にすることと同じです。   
 
 > [!TIP] 
 > クエリ レベルでこれを行う方法については、「**OPTIMIZE FOR UNKNOWN** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、クエリ レベルでこれを行うには、**USE HINT** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)も利用できます。 
   
 PRIMARY  
   
-データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリでこの設定の値がプライマリに設定されている値になることを示します。 [パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)の使用に関するプライマリの構成が変更されると、セカンダリの値も適宜変更されます。セカンダリの値を明示的に設定する必要はありません。 これはセカンダリの初期設定です。  
+データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリでこの設定の値がプライマリに設定されている値になることを示します。 [パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)の使用に関するプライマリの構成が変更されると、セカンダリの値も適宜変更されます。セカンダリの値を明示的に設定する必要はありません。 PRIMARY はセカンダリの既定の設定です。  
   
 QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }  
 
@@ -129,11 +128,11 @@ QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
   
 PRIMARY  
   
-データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリでこの設定の値がプライマリに設定されている値になることを示します。 プライマリの構成が変更されると、セカンダリの値も適宜変更されます。セカンダリの値を明示的に設定する必要はありません。 これはセカンダリの初期設定です。  
+データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリでこの設定の値がプライマリに設定されている値になることを示します。 プライマリの構成が変更されると、セカンダリの値も適宜変更されます。セカンダリの値を明示的に設定する必要はありません。 PRIMARY はセカンダリの既定の設定です。  
   
 CLEAR PROCEDURE_CACHE  
 
-データベースのプロシージャ (プラン) キャッシュを消去します。 これはプライマリとセカンダリの両方で実行されます。  
+データベースのプロシージャ (プラン) キャッシュがクリアされ、プライマリとセカンダリの両方で実行することができます。  
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
@@ -166,13 +165,13 @@ XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
 このオプションが ON の場合、または統計コレクションが [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) によって有効化されている場合は、ネイティブ コンパイル T-SQL モジュールのステートメント レベルの実行統計が収集されます。
 
-ネイティブ コンパイル T-SQL モジュールのパフォーマンスの監視の詳細については、「[ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)」を参照してください。
+ネイティブ コンパイル T-SQL モジュールのパフォーマンスの監視について詳しくは、「[ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)」をご覧ください。
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
 **適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
-サポートされている操作からオンラインにエンジンを自動的に昇格させるオプションを選択できます。 既定は OFF であり、ステートメントで指定されない限り、操作はオンラインに昇格されません。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) は ELEVATE_ONLINE の現在の値を反映します。 これらのオプションは、オンラインで一般的にサポートされている操作にのみ適用されます。  
+サポートされている操作からオンラインにエンジンを自動的に昇格させるオプションを選択できます。 既定は OFF であり、ステートメントで指定されない限り、操作はオンラインに昇格されません。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) は ELEVATE_ONLINE の現在の値を反映します。 これらのオプションは、オンラインでサポートされている操作にのみ適用されます。  
 
 FAIL_UNSUPPORTED
 
@@ -187,9 +186,9 @@ WHEN_SUPPORTED
  
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
+***適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
 
-サポートされている操作から再開可能にエンジンを自動的に昇格させるオプションを選択できます。 既定は OFF であり、ステートメントで指定されない限り、操作は再開可能に昇格されません。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) は ELEVATE_RESUMABLE の現在の値を反映します。 これらのオプションは、再開可能実行で一般的にサポートされている操作にのみ適用されます。 
+サポートされている操作から再開可能にエンジンを自動的に昇格させるオプションを選択できます。 既定は OFF であり、ステートメントで指定されない限り、操作は再開可能に昇格されません。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) は ELEVATE_RESUMABLE の現在の値を反映します。 これらのオプションは、再開可能実行でサポートされている操作にのみ適用されます。 
 
 FAIL_UNSUPPORTED
 
@@ -202,6 +201,15 @@ WHEN_SUPPORTED
 > [!NOTE]
 > RESUMABLE オプションが指定されたステートメントを送信することで、既定の設定をオーバーライドできます。 
 
+GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+
+**適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
+
+[グローバル一時テーブル](create-table-transact-sql.md)の自動削除機能を設定できます。 既定値は ON で、グローバル一時テーブルはどのセッションでも使用中でないときに自動的に削除されることを意味します。 OFF に設定すると、グローバル一時テーブルは、DROP TABLE ステートメントを使用して明示的に削除する必要があります。または、サーバーの再起動時に自動的に削除されます。 
+
+- Azure SQL Database 論理サーバー上では、このオプションを論理サーバーの個々のユーザー データベース内で設定できます。
+- SQL Server および Azure SQL Database Managed Instance 上では、このオプションは TEMPDB 内で設定され、個々のユーザー データベースの設定に影響を与えません。
+
 ##  <a name="Permissions"></a> Permissions  
  データベースで ALTER ANY DATABASE SCOPE CONFIGURATION を   
 必要とします。 この権限は、データベース上で CONTROL 権限を持つユーザーが付与できます。  
@@ -213,9 +221,9 @@ WHEN_SUPPORTED
   
  3 部構成の名前のクエリの場合、現在のデータベース コンテキストでコンパイルされる SQL モジュール (プロシージャ、関数、トリガーなど) ではなく、クエリに対する現在のデータベース接続の設定が適用されます。そのため、そのような設定が置かれているデータベースのオプションが使用されます。  
   
- ALTER_DATABASE_SCOPED_CONFIGURATION イベントは、DDL トリガーの始動に利用できる DDL イベントとして追加されます。 これは ALTER_DATABASE_EVENTS トリガー グループの子になります。  
+ ALTER_DATABASE_SCOPED_CONFIGURATION イベントは、DDL トリガーの始動に利用できる DDL イベントとして追加され、ALTER_DATABASE_EVENTS トリガー グループの子です。  
  
- データベース スコープ構成設定はデータベースで継承されます。 つまり、特定のデータベースが復元されたり、アタッチされたりしたとき、既存の構成設定が残ります。
+ データベース スコープ構成設定がデータベースに継承されるので、特定のデータベースが復元またはアタッチされたときに、既存の構成設定が残ります。
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
 **MAXDOP**  
@@ -238,11 +246,11 @@ WHEN_SUPPORTED
   
 **GeoDR**  
   
- AlwaysOn 可用性グループや GeoReplication など、読み取り可能なセカンダリ データベースは、データベースの状態を確認し、セカンダリ値を使用します。 フェールオーバーで再コンパイルが行われず、技術的に、セカンダリ設定を使用しているクエリが新しいプライマリに与えられる場合でも、プライマリとセカンダリの間の設定はワークロードが異なるときにのみ変わるというのがその考えです。そのため、キャッシュされたクエリでは最適設定が使用されるが、新しいクエリはそれに適した新しい設定を選択します。  
+ 読み取り可能なセカンダリ データベース (AlwaysOn 可用性グループや Azure SQL Database の geo レプリケートされたデータベース) では、データベースの状態を確認することでセカンダリ値が使用されます。 フェールオーバーで再コンパイルが行われず、技術的に、セカンダリ設定を使用しているクエリが新しいプライマリに与えられる場合でも、プライマリとセカンダリの間の設定はワークロードが異なるときにのみ変わるというのがその考えです。そのため、キャッシュされたクエリでは最適設定が使用されるが、新しいクエリはそれに適した新しい設定を選択します。  
   
 **DacFx**  
   
- ALTER DATABASE SCOPED CONFIGURATION は Azure SQL Database と SQL Server 2016 以降の SQL Server の新しい機能であり、データベース スキーマに影響を与えます。スキーマのエクスポートは (データがあってもなくても)、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] や [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] など、以前のバージョンの SQL Server にはインポートできません。 たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] データベースから [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) または [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) にエクスポートしたものは、下位レベルのサーバーにインポートできません。  
+ALTER DATABASE SCOPED CONFIGURATION は Azure SQL Database と SQL Server 2016 以降の SQL Server の新しい機能であり、データベース スキーマに影響を与えます。スキーマのエクスポートは (データがあってもなくても)、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] や [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] など、以前のバージョンの SQL Server にはインポートできません。 たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] データベースから [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) または [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) にエクスポートしたものは、下位レベルのサーバーにインポートできません。  
 
 **ELEVATE_ONLINE** 
 
@@ -250,8 +258,7 @@ WHEN_SUPPORTED
 
 **ELEVATE_RESUMABLE**
 
-このオプションは、WITH(ONLINE= 構文) 対応の DDL ステートメントにのみ適用されます。 XML インデックスは影響を受けません。 
-
+このオプションは、WITH(RESUMABLE = 構文) 対応の DDL ステートメントにのみ適用されます。 XML インデックスは影響を受けません。 
   
 ## <a name="metadata"></a>メタデータ  
 
@@ -356,7 +363,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i--set-elevateonline"></a>I.  ELEVATE_ONLINE を設定する 
 
-**適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] および  (パブリック プレビュー機能)
  
 この例では、ELEVATE_ONLINE が FAIL_UNSUPPORTED に設定されます。  tsqlCopy 
 
@@ -366,7 +373,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevateresumable"></a>J. ELEVATE_RESUMABLE を設定する 
 
-**適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
 
 この例では、ELEVEATE_RESUMABLE が WHEN_SUPPORTED に設定されます。  tsqlCopy 
 
@@ -381,10 +388,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 * [SQL Server の "max degree of parallelism" 構成オプションの推奨事項とガイドライン](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION リソース    
-* 
-  [カーディナリティ推定 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-* 
-  [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)
+* [カーディナリティ推定 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
+* [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING リソース    
 * [パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
@@ -403,8 +408,13 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 - [オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
  
 ## <a name="more-information"></a>詳細情報  
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [データベースとファイルのカタログ ビュー](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [サーバー構成オプション](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+- [データベースとファイルのカタログ ビュー](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+- [サーバー構成オプション](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
+- [オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+  
  

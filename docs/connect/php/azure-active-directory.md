@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47814830"
 ---
-# <a name="connect-using-azure-active-directory-authentication"></a>方法: Azure Active Directory 認証を使用して接続する
+# <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) は、サーバーの全体のユーザー ID 管理テクノロジの代替として動作する[SQL Server 認証](../../connect/php/how-to-connect-using-sql-server-authentication.md)します。 Azure AD はユーザー名とパスワード、Windows 統合認証、または; Azure AD アクセス トークンを使用の Azure AD でフェデレーション id を持つ Microsoft Azure SQL Database と SQL Data Warehouse への接続を許可します。SQL Server 用 PHP ドライバーでは、これらの機能の部分的なサポートを提供します。

@@ -26,7 +26,7 @@ ms.locfileid: "47837770"
 # <a name="geturl-method-int"></a>getURL (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を Java プログラミング言語の  オブジェクトとして取得します。  
+  パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を Java プログラミング言語の URL オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,10 +47,10 @@ public java.net.URL getURL(int n)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setURL メソッドは、java.sql.CallableStatement インターフェイスの setURL メソッドで指定されています。  
+ この getURL メソッドは、java.sql.CallableStatement インターフェイスの getURL メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
- [getInt メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
+ [getURL メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,31 +1,27 @@
 ---
 title: ページとエクステントのアーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 10/21/2016
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af33c1a357342a04d086ce0dee33856f9c7138e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9dc6bc734f81f9bba423f51591815f3eee676996
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43103822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857140"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +38,7 @@ ms.locfileid: "43103822"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、ページのサイズは 8 KB です。 したがって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースには 1 MB あたり 128 ページあります。 各ページの先頭には 96 バイトのヘッダーがあり、ここには各ページに関するシステム情報が格納されています。 この情報には、ページ番号、ページの種類、ページ上の空き容量、そのページを所有しているオブジェクトのアロケーション ユニット ID が含まれます。
 
-次の表に、SQL Server データベースのデータ ファイルで使用されるページの種類を示します。
+次の表に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのデータ ファイルで使用されるページの種類を示します。
 
 |ページの種類 | 目次 |
 |-------|-------|
@@ -68,20 +64,25 @@ ms.locfileid: "43103822"
 
 varchar 型、nvarchar 型、varbinary 型、または sql_variant 型の列を含むテーブルでは、この制限は緩和されます。 テーブル内のすべての固定長列と可変長列の行サイズの合計が、8,060 バイトの制限を超過した場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、サイズの最も大きなものから順に動的に 1 つ以上の可変長列を ROW_OVERFLOW_DATA アロケーション ユニットのページに移動します。 
 
-挿入操作または更新操作により行の合計サイズが 8,060 バイトの制限を超えると、必ずこの処理が実行されます。 列が ROW_OVERFLOW_DATA アロケーション ユニットのページに移動された場合、IN_ROW_DATA アロケーション ユニットに元のページの 24 バイトのポインターが保持されます。 その後の操作により行サイズが削減されると、SQL Server は動的に列を元のデータ ページに戻します。 
+挿入操作または更新操作により行の合計サイズが 8,060 バイトの制限を超えると、必ずこの処理が実行されます。 列が ROW_OVERFLOW_DATA アロケーション ユニットのページに移動された場合、IN_ROW_DATA アロケーション ユニットに元のページの 24 バイトのポインターが保持されます。 その後の操作により、行サイズが削減されると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は動的に列を元のデータ ページに戻します。 
 
 ### <a name="extents"></a>Extents 
 
 エクステントは、領域を管理する際の基本単位です。 1 つのエクステントは物理的に連続した 8 ページ、つまり 64 KB です。 したがって、SQL Server データベースには 1 MB あたり 16 のエクステントがあります。
 
-領域の割り当てを効率的にするために、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではデータ量が少ないテーブルにエクステント全体が割り当てられることはありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、2 種類のエクステントがあります。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、2 種類のエクステントがあります。 
 
 * **単一**エクステントは、単一のオブジェクトに所有され、所有しているオブジェクトだけがエクステント内の 8 ページすべてを使用できます。
 * **混合**エクステントは最大 8 つのオブジェクトによって共有されます。 エクステント内の各 8 ページを、それぞれ異なるオブジェクトが所有できます。
 
-新規テーブルや新規インデックスには、通常、混合エクステントからページが割り当てられます。 そのテーブルやインデックスが 8 ページまで拡張された時点で、その後の割り当てには単一エクステントが使用されるように切り替えられます。 インデックスに 8 ページ分を生成できるだけの行がある既存のテーブルのインデックスを作成すると、インデックスへのすべての割り当ては単一エクステントになります。
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] までは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、データ量が少ないテーブルにエクステント全体が割り当てられることはありません。 新規テーブルや新規インデックスには、通常、混合エクステントからページが割り当てられます。 そのテーブルやインデックスが 8 ページまで拡張された時点で、その後の割り当てには単一エクステントが使用されるように切り替えられます。 インデックスに 8 ページ分を生成できるだけの行がある既存のテーブルのインデックスを作成すると、インデックスへのすべての割り当ては単一エクステントになります。 ただし、[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降、データベース内のすべての割り当ての既定値は単一エクステントです。
 
 ![Extents](../relational-databases/media/extents.gif)
+
+> [!NOTE]
+> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] までは、トレース フラグ 1118 を使用して、常に単一エクステントを使用するように既定の割り当てを変更できます。 このトレースフラグの詳細については、「[DBCC TRACEON - トレース フラグ](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。   
+>   
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降は、TF 1118 によって提供される機能が TempDB に対して自動的に有効になります。 ユーザー データベースの場合、この動作は `ALTER DATABASE` の `SET MIXED_PAGE_ALLOCATION` オプションによって制御され、既定値は OFF に設定され、トレース フラグ 1118 には効果がありません。 詳細については、「[ALTER DATABASE SET オプション (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。
 
 ## <a name="managing-extent-allocations-and-free-space"></a>エクステント割り当てと空き領域の管理 
 
@@ -98,7 +99,7 @@ varchar 型、nvarchar 型、varbinary 型、または sql_variant 型の列を�
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、エクステントの割り当てを記録するために次の 2 種類のアロケーション マップを使用します。 
 
 - **GAM (Global Allocation Map)**   
-  GAM ページには、どのエクステントが既に割り当てられているかが記録されます。 1 つの GAM で 64,000 のエクステント、つまり約 4 GB のデータが対象となります。 GAM では対象とする範囲内のエクステント 1 つにつき 1 ビットが使用されます。 このビットが 1 の場合、そのエクステントは空いており、0 の場合は割り当て済みです。 
+  GAM ページには、どのエクステントが既に割り当てられているかが記録されます。 1 つの GAM で 64,000 のエクステント、つまり約 4 ギガバイト (GB) のデータが対象となります。 GAM では対象とする範囲内のエクステント 1 つにつき 1 ビットが使用されます。 このビットが 1 の場合、そのエクステントは空いており、0 の場合は割り当て済みです。 
 
 - **SGAM (Shared Global Allocation Map)**   
   SGAM ページには、混合エクステントとして使用中であり、1 ページ以上が未使用であるエクステントが記録されます。 1 つの SGAM で 64,000 のエクステント、つまり約 4 GB のデータが対象となります。 SGAM では対象とする範囲内のエクステント 1 つにつき 1 ビットが使用されます。 このビットが 1 の場合、そのエクステントは混合エクステントとして使用されており、空きページが含まれています。 ビットが 0 の場合、混合エクステントとして使用されていないエクステントか、すべてのページが使用されている混合エクステントです。 
@@ -115,15 +116,15 @@ varchar 型、nvarchar 型、varbinary 型、または sql_variant 型の列を�
 -   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が単一エクステントを割り当てる際には、GAM の中から 1 のビットを検索し、そのビットを 0 に設定します。 
 -   空きページがある混合エクステントを見つける際には、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は SGAM の中から 1 のビットを検索します。 
 -   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が混合エクステントを割り当てる際には、GAM の中から 1 のビットを検索してそのビットを 0 に設定し、SGAM 中の対応するビットを 1 に設定します。 
--   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、エクステントの割り当てを解除するために、GAM のビットが 1 に、SGAM のビットが 0 に設定されます。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]によりデータベース内のデータが均等に分散されるので、実際にはさらに高度なアルゴリズムが[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の内部で使用されます。 この高度なアルゴリズムも、エクステント割り当て情報のチェーンを管理する必要がないので簡素化されています。
+-   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、エクステントの割り当てを解除するために、GAM のビットが 1 に、SGAM のビットが 0 に設定されます。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] によりデータベース内のデータが均等に分散されるので、実際には、この記事の説明よりもさらに高度なアルゴリズムが [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の内部で使用されます。 この高度なアルゴリズムも、エクステント割り当て情報のチェーンを管理する必要がないので簡素化されています。
 
 ### <a name="tracking-free-space"></a>空き領域の追跡
 
 **PFS (Page Free Space)** ページには各ページの割り当て状態、個々のページが割り当て済みかどうか、および各ページの空き領域の量が記録されます。 PFS では 1 ページにつき 1 バイトを使用してページが割り当て済みかどうかを示し、割り当て済みの場合はそのページの使用率を 0%、1 ～ 50%、51 ～ 80%、81 ～ 95%、96 ～ 100% の 5 段階で示します。
 
-エクステントがオブジェクトに割り当てられると、データベース エンジンは、エクステント内のどのページが割り当て済みでどのページが空いているかを PFS ページに記録します。 この情報は、データベース エンジンで新しいページを割り当てる必要が生じたときに使用されます。 ページ内の空き領域の量は、ヒープおよび Text/Image ページに関してのみ管理されます。 この情報は、データベース エンジンが、新しく挿入された行を保持するための空き領域があるページを検索する際に使用されます。 新しい行を挿入する場所がインデックス キーの値で設定されるので、インデックスは PFS の追跡を必要としません。
+エクステントがオブジェクトに割り当てられた後は、エクステント内のどのページが割り当て済みでどのページが空いているかを[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が PFS ページに記録します。 この情報は、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]で新しいページを割り当てる必要が生じたときに使用されます。 ページ内の空き領域の量は、ヒープおよび Text/Image ページに関してのみ管理されます。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が新しく挿入された行を保持するための空き領域があるページを検索する際に、この情報が使用されます。 新しい行を挿入する場所がインデックス キーの値で設定されるので、インデックスは PFS の追跡を必要としません。
 
-PFS ページはデータ ファイル内でファイル ヘッダー ページの直後に位置するページ (ページ ID 1) です。 その次が GAM ページ (ページ ID 2) で、さらに SGAM ページ (ページ ID 3) が続きます。 最初の PFS ページの後、約 8,000 ページごとに 1 つの PFS ページがあります。 ページ 2 の最初の GAM ページの後に 64,000 エクステント分の GAM ページがあり、ページ 3 の最初の SGAM ページの後に 64,000 エクステント分の SGAM ページがあります。 下図に、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]がエクステントの割り当てと管理に使用する一連のページを示します。
+PFS ページはデータ ファイル内でファイル ヘッダー ページの直後に位置するページ (ページ ID 1) です。 その次が GAM ページ (ページ ID 2) で、さらに SGAM ページ (ページ ID 3) が続きます。 最初の PFS ページの後ろに約 8,000 ページの新しい PFS ページがあり、以降 8,000 ページの間隔で追加の PFS があります。 ページ 2 の最初の GAM ページの後に 64,000 エクステント分の GAM ページがあり、ページ 3 の最初の SGAM ページの後に 64,000 エクステント分の SGAM ページがあり、以降 64,000 エクステントの間隔で追加の GAM ページと SGAM ページがあります。 下図に、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]がエクステントの割り当てと管理に使用する一連のページを示します。
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
@@ -140,7 +141,7 @@ PFS ページはデータ ファイル内でファイル ヘッダー ページ�
 - ROW_OVERFLOW_DATA   
    varchar、nvarchar、varbinary、sql_variant のいずれかの型の、行サイズの上限である 8,060 バイトを超える列に格納された可変長のデータを保存します。 
 
-ヒープまたはインデックスの各パーティションには、IN_ROW_DATA アロケーション ユニットが必ず含まれています。 ヒープまたはインデックスのスキーマによっては、LOB_DATA アロケーション ユニットまたは ROW_OVERFLOW_DATA アロケーション ユニットが含まれる場合もあります。 アロケーション ユニットの詳細については、「テーブルとインデックスの編成」を参照してください。
+ヒープまたはインデックスの各パーティションには、IN_ROW_DATA アロケーション ユニットが必ず含まれています。 ヒープまたはインデックスのスキーマによっては、LOB_DATA アロケーション ユニットまたは ROW_OVERFLOW_DATA アロケーション ユニットが含まれる場合もあります。
 
 IAM 1 ページで、GAM ページまたは SGAM ページと同じ 4 GB 分のファイルを管理できます。 複数のファイルのエクステントまたは 1 ファイル内でも 4 GB の単位の複数にまたがるエクステントがアロケーション ユニットに含まれている場合、1 つの IAM チェーンに複数の IAM ページがリンクされます。 したがって、各アロケーション ユニットには、含まれているエクステントが所属するファイル 1 つについて、IAM が少なくとも 1 ページ存在します。 アロケーション ユニットに割り当てられているファイルのエクステントの範囲が 1 ページの IAM に記録できる範囲を超えている場合、1 つのファイルに複数の IAM ページが存在する場合もあります。 
 
@@ -149,13 +150,13 @@ IAM 1 ページで、GAM ページまたは SGAM ページと同じ 4 GB 分の�
 IAM ページはアロケーション ユニットごとに必要に応じて割り当てられ、そのファイル内での配置はランダムです。 アロケーション ユニットの最初の IAM ページはシステム ビュー sys.system_internals_allocation_units のポインターが指しています。 アロケーション ユニットのすべての IAM ページは 1 つのチェーンにリンクされています。
 
 > [!IMPORTANT]
-> sys.system_internals_allocation_units システム ビューは内部専用であり、変更されることがあります。 互換性は保証されません。
+> `sys.system_internals_allocation_units` システム ビューは内部専用であり、変更されることがあります。 互換性は保証されません。
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
 アロケーション ユニットのチェーンにリンクされている IAM ページIAM ページには、その IAM ページによってマップされるエクステントの範囲の開始エクステントを示すヘッダーがあります。 また、1 ビットが 1 つのエクステントを表す大きな 1 つのビットマップがあります。 マップ内の最初のビットは、その範囲で最初のエクステントを表し、2 番目のビットは第 2 エクステントを表し、それ以降のビットも同様の順でエクステントを表します。 ビットが 0 の場合、そのビットが表すエクステントは、IAM を所有するアロケーション ユニットに割り当てられていません。 ビットが 1 の場合、そのビットが表すエクステントは、IAM ページを所有するアロケーション ユニットに割り当てられています。
 
-新しい行を挿入する必要があるのに現在のページに使用できる領域がない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では IAM ページおよび PFS ページで割り当てのためのページを検索するか、ヒープあるいは Text 型または Image 型のページについては行を格納するのに必要な空き領域があるページを検索します。 まず、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は IAM ページを使用してそのアロケーション ユニットに割り当てられているエクステントを検索します。 それぞれのエクステントについて、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は使用可能なページがあるかどうかを PFS ページの中で検索します。 IAM ページおよび PFS ページは 1 ページで多数のデータ ページを管理できるので、データベース内の IAM ページおよび PFS ページの数はわずかです。 このため、IAM ページおよび PFS ページは一般的に SQL Server バッファー プールのメモリに入っており、高速に検索できます。 インデックスについては、インデックス キーで新しい行の挿入ポイントを設定します。 インデックスでは既に説明したような検索処理は行われません。
+新しい行を挿入する必要があるのに現在のページに使用できる領域がない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では IAM ページおよび PFS ページで割り当てのためのページを検索するか、ヒープあるいは Text 型または Image 型のページについては行を格納するのに必要な空き領域があるページを検索します。 まず、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は IAM ページを使用してそのアロケーション ユニットに割り当てられているエクステントを検索します。 それぞれのエクステントについて、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は使用可能なページがあるかどうかを PFS ページの中で検索します。 IAM ページおよび PFS ページは 1 ページで多数のデータ ページを管理できるので、データベース内の IAM ページおよび PFS ページの数はわずかです。 このため、IAM ページおよび PFS ページは一般的に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バッファー プールのメモリに入っており、高速に検索できます。 インデックスについては、インデックス キーで新しい行の挿入ポイントを設定します。 インデックスでは既に説明したような検索処理は行われません。
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]によりアロケーション ユニットに新しいエクステントが割り当てられるのは、挿入する行を格納するのに必要な空き領域のあるページが既存のエクステントの中ですぐに見つからない場合のみです。 
 
@@ -174,4 +175,7 @@ IAM ページはアロケーション ユニットごとに必要に応じて割
 DCM ページと BCM ページ間の間隔は、GAM ページと SGAM ページの間隔と同じで 64,000 エクステントです。 DCM ページと BCM ページは、物理ファイル内の GAM ページと SGAM ページの後に配置されます。
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
- 
+
+## <a name="see-also"></a>参照
+[sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+[ヒープ &#40;クラスター化インデックスなしのテーブル&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    

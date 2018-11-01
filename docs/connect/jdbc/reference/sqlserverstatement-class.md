@@ -1,25 +1,22 @@
 ---
-title: SQLServerStatement クラス |Microsoft ドキュメント
+title: SQLServerStatement クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14add0b451947092946129c9388366eb10186dce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7488efcb3392623e6f54cff440a16494c10e0a69
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846277"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705350"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +34,13 @@ ms.locfileid: "32846277"
 public class SQLServerStatement  
 ```  
   
-## <a name="remarks"></a>解説  
- SQLServerStatement クラスでは、準備されたステートメントや呼び出し可能ステートメント、JDBC の基本クラスの実装方法の数も提供します。 SQLServerStatement クラスの基本的な役割は、SQL ステートメントを実行して、戻り値の更新プログラムの数と結果セットをユーザー アプリケーションにします。  
+## <a name="remarks"></a>Remarks  
+ SQLServerStatement クラスには、JDBC の準備されたステートメントや呼び出し可能ステートメントの基本クラスの実装メソッドも各種用意されています。 SQLServerStatement クラスの基本的な役割は、SQL ステートメントを実行し、更新数と結果セットをユーザー アプリケーションに返すことです。  
   
- このクラスは、SQLServerStatement クラス、ISQLServerStatement インターフェイスおよび java.sql.Statement インターフェイスへのアンラッピングをサポートします。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)です。  
+ このクラスは、SQLServerStatement クラス、ISQLServerStatement インターフェイス、および java.sql.Statement インターフェイスへのアンラッピングをサポートしています。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
- [JDBC ドライバー API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

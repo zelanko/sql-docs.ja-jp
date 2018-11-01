@@ -45,7 +45,7 @@ public final java.sql.SQLXML getSQLXML(int columnIndex)
  この getSQLXML メソッドは、java.sql.ResultSet インターフェイスの getSQLXML メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateSQLXML メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   
+ [getSQLXML メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   

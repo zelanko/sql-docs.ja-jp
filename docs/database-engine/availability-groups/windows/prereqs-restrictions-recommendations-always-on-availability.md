@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
-ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37934904"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852027"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>前提条件、制限事項、推奨事項 - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の展開に関して、各種コンポーネント (ホスト コンピューター、Windows Server フェールオーバー クラスタリング (WSFC)、サーバー インスタンス、可用性グループ) の前提条件、制限、推奨事項などの考慮事項について説明します。 各コンポーネントのセキュリティに関する考慮事項のほか、要求される権限 (該当する場合) にも触れています。  
+  この記事では、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の展開に関して、各種コンポーネント (ホスト コンピューター、Windows Server フェールオーバー クラスタリング (WSFC)、サーバー インスタンス、可用性グループ) の前提条件、制限、推奨事項などの考慮事項について説明します。 各コンポーネントのセキュリティに関する考慮事項のほか、要求される権限 (該当する場合) にも触れています。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を配置する前に、このトピックのすべてのセクションを読むことを強くお勧めします。  
@@ -44,19 +41,7 @@ ms.locfileid: "37934904"
 |------|-----------------------|------------|----------|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 の修正プログラムは、SQL クライアントに読み取り目的、読み取り専用、multisubnetfailover の Always On 機能のサポートを追加します。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347: [Always On 機能のサポートを追加する .Net 3.5 SP1 の修正プログラム](http://go.microsoft.com/fwlink/?LinkId=242896)|  
   
-##  <a name="SystemReqsForAOAG"></a> Windows のシステム要件と推奨事項  
- **このセクションの内容**  
-  
--   [チェック リスト: 要件](#SystemRequirements)  
-  
--   [可用性レプリカをホストするコンピューターに関する推奨事項 (Windows システム)](#ComputerRecommendations)  
-  
--   [アクセス許可](#PermissionsWindows)  
-  
--   [関連タスク](#RelatedTasksWindows)  
-  
--   [関連コンテンツ](#RelatedContentWS)  
-  
+
 ###  <a name="SystemRequirements"></a> チェック リスト: 要件 (Windows システム)  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の機能を利用するには、1 つまたは複数の可用性グループに参加するすべてのコンピューターが、次の基本要件を満たしている必要があります。  
   
@@ -148,8 +133,8 @@ ms.locfileid: "37934904"
 |-|------------------|-----------|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|このホスト コンピューターは WSFC ノードである必要があります。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、クラスターの別のノードに存在します。 別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができます。 SQL Server 2016 には分散型可用性グループが導入されています。 分散型可用性グループでは、2 つの可用性グループが別々のクラスターに存在します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分散型可用性グループ (Always On 可用性グループ)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループで Kerberos を操作するには:<br /><br /> 可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで、同じ SQL Server サービス アカウントを使用する必要があります。<br /><br /> ドメイン管理者は、可用性グループ リスナーの仮想ネットワーク名 (VNN) の SQL Server サービス アカウントに、Active Directory でサーバー プリンシパル名 (SPN) を手動で登録する必要があります。 SQL Server サービス アカウント以外のアカウントに SPN が登録されている場合は、認証が失敗します。<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> SQL Server サービス アカウントを変更した場合は、ドメイン管理者が SPN を手動で再登録する必要があります。|[Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡単な説明:**<br /><br /> Kerberos と SPN は相互認証を行います。 SPN は、SQL Server サービスを起動する Windows アカウントにマップされます。 SPN が正常に登録されていないか登録に失敗した場合、Windows セキュリティ レイヤーは、SPN に関連するアカウントを決定することができず、Kerberos 認証は使用できません。<br /><br /> <br /><br /> 注: NTLM には、この要件はありません。|  
-|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と要件](#FciArLimitations) (このトピックの後半)|  
-|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|すべてのサーバー インスタンスで Enterprise Edition の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]が実行されている必要があります。|[SQL Server 2016 の各エディションとサポートされる機能](../../../sql-server/editions-and-supported-features-for-sql-server-2016.md)|  
+|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と要件](#FciArLimitations) (この記事の後半)|  
+|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|Always On 可用性グループに参加するために、各サーバー インスタンスで同じバージョンの SQL Server が実行されている必要がある。|[SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014)、[SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016)、[SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017) の各エディションとサポートされる機能|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|特定の可用性グループの可用性レプリカをホストするすべてのサーバー インスタンス間で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の照合順序を統一する必要があります。|[サーバーの照合順序の設定または変更](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を有効にします。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のサーバー インスタンスは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 環境がサポートする範囲内であれば、1 台のコンピューターでいくつでも有効にすることができます。|[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> WSFC を破棄してから再作成した場合は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効にしていた、元のクラスター上の各サーバー インスタンスについて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を無効にしてからもう一度有効にする必要があります。|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|すべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。 このエンドポイントは、サーバー インスタンス上のミラーリング監視サーバーとデータベース ミラーリング パートナー、および可用性レプリカすべてによって共有されます。<br /><br /> 可用性レプリカのホストとして選んだサーバー インスタンスがドメイン ユーザー アカウントで実行されていて、まだデータベース ミラーリング エンドポイントが存在しない場合、 [新しい可用性グループ ウィザード](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (または [可用性グループへのレプリカの追加ウィザード](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) でエンドポイントを作成し、サーバー インスタンス サービス アカウントに CONNECT 権限を許可することができます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。ウィザードは、サーバー インスタンス上でデータベース ミラーリング エンドポイントを作成できなくなります。 この場合は、データベース ミラーリング エンドポイントを手動で作成してからウィザードを起動することをお勧めします。<br /><br /> <br /><br /> <b>\*\* セキュリティに関する注意 \*\*</b> [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のトランスポート セキュリティは、データベース ミラーリングと同じです。|[データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
@@ -193,7 +178,7 @@ ms.locfileid: "37934904"
   
 ###  <a name="RelatedTasksSI"></a> 関連タスク (サーバー インスタンス)  
   
-|タスク|トピック|  
+|タスク|[アーティクル]|  
 |----------|-----------|  
 |データベース ミラーリング エンドポイントが存在するかどうかを確認する|[sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)|  
 |データベース ミラーリング エンドポイントを作成する (まだ存在しない場合)|[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
@@ -227,9 +212,13 @@ ms.locfileid: "37934904"
 > [!NOTE]  
 > フェールオーバー クラスター インスタンスは、クラスター化共有ボリューム (CSV) をサポートしています。 CSV の詳細については、「 [フェールオーバー クラスターのクラスターの共有ボリュームについて](http://technet.microsoft.com/library/dd759255.aspx)」を参照してください。  
   
--   **FCI のクラスター ノードでホストできるレプリカは、特定の可用性グループに対して 1 つだけである:** FCI に可用性レプリカを追加する場合、FCI の有効な所有者である WSFC ノードで、同じ可用性グループに対して別のレプリカをホストすることはできません。  
+-   **FCI のクラスター ノードでホストできるレプリカは、特定の可用性グループに対して 1 つだけである:** FCI に可用性レプリカを追加する場合、FCI の有効な所有者である WSFC ノードで、同じ可用性グループに対して別のレプリカをホストすることはできません。  競合を避けるために、フェールオーバー クラスター インスタンスの所有者を構成することをお勧めします。 これにより、1 つの WSFC によって同じ可用性グループの 2 つの可用性レプリカがホストされる可能性がなくなります。
   
-     さらに、その他の各レプリカは、同じ Windows Server フェールオーバー クラスター内の別のクラスター ノードに存在する SQL Server 2016 のインスタンスによってホストされている必要があります。 唯一の例外は、別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。  
+     さらに、その他の各レプリカは、同じ Windows Server フェールオーバー クラスター内の別のクラスター ノードに存在する SQL Server 2016 のインスタンスによってホストされている必要があります。 唯一の例外は、別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。 
+
+  >[!WARNING]
+  > フェールオーバー クラスター マネージャーを使用して、可用性グループをホストしている*フェールオーバー クラスター インスタンス*を、同じ可用性グループのレプリカを "*すでに*" ホストしているノードに移動すると、可用性グループのレプリカが失われ、それによってターゲット ノード上でオンラインにできなくなる可能性があります。 フェールオーバー クラスターの 1 つのノードでは、同じ可用性グループの複数のレプリカをホストすることはできません。 これがどのように発生し、どのように回復するかの詳細については、ブログ記事の「[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)」(可用性グループでレプリカが予想外に削除される) を参照してください。 
+
   
 -   **可用性グループによる自動フェールオーバーは FCI ではサポートされない:**  FCI は可用性グループによる自動フェールオーバーをサポートしないため、FCI によってホストされる可用性レプリカは手動フェールオーバー用にのみ構成できます。  
   
@@ -243,7 +232,7 @@ ms.locfileid: "37934904"
   
 ###  <a name="RelatedTasksFCIs"></a> 関連タスク (FCI)  
   
-|タスク|トピック|  
+|タスク|[アーティクル]|  
 |----------|-----------|  
 |SQL Server フェールオーバー クラスターのインストール|[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |既存の SQL Server フェールオーバー クラスターのインプレース アップグレード|[SQL Server フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
@@ -320,7 +309,7 @@ ms.locfileid: "37934904"
   
 ###  <a name="RelatedTasksAGs"></a> 関連タスク (可用性グループ)  
   
-|タスク|トピック|  
+|タスク|[アーティクル]|  
 |----------|-----------|  
 |可用性グループの作成|[可用性グループ (新しい可用性グループ ウィザード)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [可用性グループの作成 (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)<br /><br /> [可用性グループの作成 (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)<br /><br /> [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)|  
 |可用性レプリカの数の変更|[可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [可用性グループからのセカンダリ レプリカの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -385,7 +374,7 @@ ms.locfileid: "37934904"
   
 ###  <a name="RelatedTasksADb"></a> 関連タスク (可用性データベース)  
   
-|タスク|トピック|  
+|タスク|[アーティクル]|  
 |----------|-----------|  
 |セカンダリ データベースの準備 (手動)|[可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)|  
 |可用性グループへのセカンダリ データベースの参加 (手動)|[可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  

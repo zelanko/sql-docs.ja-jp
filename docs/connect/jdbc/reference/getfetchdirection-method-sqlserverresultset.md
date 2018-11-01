@@ -1,13 +1,11 @@
 ---
-title: getFetchDirection メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: getFetchDirection メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getFetchDirection
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5ab385c2-e18c-4b75-ac2d-2402af5c52a5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 594d59adc33decf67118fd680d6aeaa32a38ebe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dd40f1a3bc218093f8a34215d15291bd152310be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726120"
 ---
 # <a name="getfetchdirection-method-sqlserverresultset"></a>getFetchDirection メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  このフェッチ方向を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトのフェッチ方向を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,15 +36,15 @@ public int getFetchDirection()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **Int**現在のフェッチ方向を示すです。  
+ 現在のフェッチ方向を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この getFetchDirection メソッドは、java.sql.ResultSet インターフェイスの getFetchDirection メソッドによって指定されます。  
   
- このメソッドは、順方向専用カーソルへの呼び出しによって行われた最後の設定の FETCH_FORWARD を返します、 [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md)他のカーソルの種類では、メソッドは FETCH_UNKNOWN を返しますこれらの種類のカーソル場合および setFetchDirection メソッド呼び出されたことはありません。  
+ このメソッドは、順方向専用カーソルの場合は FETCH_FORWARD を返し、他の種類のカーソルの場合は [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md) メソッドの呼び出しによって行われた直前の設定を返し、setFetchDirection メソッドが呼び出されていないときは FETCH_UNKNOWN を返します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

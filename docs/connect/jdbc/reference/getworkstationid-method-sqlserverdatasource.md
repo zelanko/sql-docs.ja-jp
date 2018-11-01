@@ -36,7 +36,7 @@ public java.lang.String getWorkstationID()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- クライアント コンピューターの名前を含むです。  
+ クライアント コンピューターの名前を含む **String** です。  
   
 ## <a name="remarks"></a>Remarks  
  workstationID は、クライアント コンピューターまたはワークステーションの名前です。 WorkstationID プロパティが設定されていない場合、既定値は InetAddress.getLocalHost().getHostName() メソッドを呼び出すことによって構築されます。 空白の値を返す getHostName getHostAddress().toString() メソッドが呼び出されます。  

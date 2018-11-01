@@ -31,7 +31,7 @@ public boolean autoCommitFailureClosesAllResultSets()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 自動コミットが有効である場合に例外が発生したとき、保持可能な結果セットも含め、開いているすべての結果セットを閉じる場合は  です。 それ以外の場合は、 **false**です。  
+ 自動コミットが有効である場合に例外が発生したとき、保持可能な結果セットも含め、開いているすべての結果セットを閉じる場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

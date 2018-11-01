@@ -26,7 +26,7 @@ ms.locfileid: "47784190"
 # <a name="updateobject-method-int-javalangobject"></a>updateObject (int, java.lang.Object) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された列名を使用して、指定された列を **Object** 値で更新します。  
+  渡された列インデックスを使用して、指定された列を **Object** 値で更新します。  
   
 ## <a name="syntax"></a>構文  
   

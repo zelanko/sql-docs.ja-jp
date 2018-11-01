@@ -36,7 +36,7 @@ public void setDisableStatementPooling(boolean disableStatementPooling)
 ```  
 
 #### <a name="parameters"></a>パラメーター  
- disableStatementPooling  
+ *disableStatementPooling*  
   
  新しい値、 **disableStatementPooling**接続プロパティです。  
  

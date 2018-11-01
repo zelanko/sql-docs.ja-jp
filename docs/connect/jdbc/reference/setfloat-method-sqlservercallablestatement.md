@@ -26,7 +26,7 @@ ms.locfileid: "47722950"
 # <a name="setfloat-method-sqlservercallablestatement"></a>setFloat メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された java 値に設定します。  
+  指定されたパラメーターを、渡された **float** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ public void setFloat(java.lang.String sCol,
   
  パラメーターの名前を含む**文字列**です。  
   
- *-F*  
+ *f*  
   
  A **float**値。  
   
@@ -49,7 +49,7 @@ public void setFloat(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setObject メソッドは、java.sql.CallableStatement インターフェイスの setObject メソッドで指定されています。  
+ この setFloat メソッドは、java.sql.CallableStatement インターフェイスの setFloat メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

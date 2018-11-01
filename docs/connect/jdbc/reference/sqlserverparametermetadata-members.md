@@ -1,32 +1,29 @@
 ---
-title: SQLServerParameterMetaData のメンバー |Microsoft ドキュメント
+title: SQLServerParameterMetaData のメンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f9ebb203-2013-4feb-94f5-494b7f098f9a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ce99e161c3b825c88c4eee33fa6778b5444db07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: abd82d1a5da6e64962ee10edac0e3ad4ed2db0eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849367"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621810"
 ---
 # <a name="sqlserverparametermetadata-members"></a>SQLServerParameterMetaData のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  次の表に、によって公開されるメンバー、 [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)クラスです。  
+  次の表では、[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) クラスによって公開されるメンバーを示します。  
   
-## <a name="constructors"></a>コンス トラクター  
+## <a name="constructors"></a>コンストラクター  
  [なし] :  
   
 ## <a name="fields"></a>フィールド  
@@ -34,22 +31,22 @@ ms.locfileid: "32849367"
   
 ## <a name="inherited-fields"></a>継承されたフィールド  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |java.sql.ParameterMetaData|parameterModeIn、parameterModeInOut、parameterModeOut、parameterModeUnknown、parameterNoNulls、parameterNullable、parameterNullableUnknown|  
   
 ## <a name="methods"></a>メソッド  
   
-|名前|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|そのインスタンスを渡す必要があります、Java クラスの完全修飾名を取得、 [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)のメソッド、 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)クラスです。|  
-|[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|内のパラメーターの数を取得、 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)対象のオブジェクト[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)オブジェクト情報を格納します。|  
+|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスの [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) メソッドにインスタンスを渡す必要のある、Java クラスの完全修飾名を取得します。|  
+|[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) オブジェクトに情報が含まれる [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトのパラメーター数を取得します。|  
 |[getParameterMode](../../../connect/jdbc/reference/getparametermode-method-sqlserverparametermetadata.md)|指定されたパラメーターのモードを取得します。|  
 |[getParameterType](../../../connect/jdbc/reference/getparametertype-method-sqlserverparametermetadata.md)|指定されたパラメーターの SQL 型を取得します。|  
 |[getParameterTypeName](../../../connect/jdbc/reference/getparametertypename-method-sqlserverparametermetadata.md)|指定されたパラメーターのデータベース固有の型名を取得します。|  
 |[getPrecision](../../../connect/jdbc/reference/getprecision-method-sqlserverparametermetadata.md)|指定されたパラメーターの 10 進の桁数を取得します。|  
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverparametermetadata.md)|指定されたパラメーターの小数点以下の桁数を取得します。|  
-|[IsNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverparametermetadata.md)|指定されたパラメーターで null 値が許可されるかどうかを取得します。|  
+|[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverparametermetadata.md)|指定されたパラメーターで null 値が許可されるかどうかを取得します。|  
 |[isSigned](../../../connect/jdbc/reference/issigned-method-sqlserverparametermetadata.md)|指定されたパラメーターの値が符号付き数値かどうかを取得します。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  

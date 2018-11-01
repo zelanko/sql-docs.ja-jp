@@ -5,22 +5,19 @@ ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c8aa3a14937c0855b3cd91ba35dd4868af075f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 765e480e8fa01daf99036c2526ee9b5dc0dccfe2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075975"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679480"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのスキーマを変更する
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ ALTER TABLE dbo.Department
   
 -   **ALTER TABLE** 操作中は、システムが両方のテーブルのスキーマ ロックを保持します。  
   
--   指定したスキーマ変更は、(変更の種類に応じて) 適切な方法で履歴テーブルに反映されます。  
+-   指定したスキーマ変更は、適切に (変更の種類に応じて) 履歴テーブルに反映されます。  
   
 -   NULL 値を許容しない列を追加する、または既存の列を NULL 値を許容しない列に変更する場合、既存の行に既定値を指定する必要があります。 システムは同じ値で追加の既定値を生成し、その既定値を履歴テーブルに適用します。 **DEFAULT** を空でないテーブルに追加すると、(メタデータの操作がある) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 以外のすべてのエディション上でのデータ操作のサイズは 1 つになります。  
   

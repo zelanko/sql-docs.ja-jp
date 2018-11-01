@@ -1,13 +1,11 @@
 ---
-title: close メソッド (SQLServerResultSet) |Microsoft ドキュメント
+title: close メソッド (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.close
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: deea90b13bb4bb99c504f5eaa344babdf4a1c680
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ec9b51d08e10df0f829308d163b573c0670c78e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637260"
 ---
 # <a name="close-method-sqlserverresultset"></a>close メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  このリリース[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトのデータベースと JDBC リソースを待たずにすぐに自動的に閉じられているときにします。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトのデータベースと JDBC リソースを、オブジェクトが自動的に閉じるときに解放されるのを待機しないで直ちに解放します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,12 +38,12 @@ public void close()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- このメソッドは、java.sql.ResultSet インターフェイスの close メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ close メソッドは、java.sql.ResultSet インターフェイスの close メソッドで規定されています。  
   
- SQLServerResultSet オブジェクトがによって自動的に閉じられる、 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)それを生成した SQLServerStatement オブジェクトが閉じられている、再実行するために使用のいずれかの取得時に次の結果複数の結果のシーケンスからオブジェクト. SQLServerResultSet オブジェクトはガベージ コレクションである場合にも自動的に閉じられます。  
+ SQLServerResultSet オブジェクトは、生成元の [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトが閉じられたとき、再実行されたとき、または複数の結果のシーケンスから次の結果を取得するために使用されたときに、その SQLServerStatement オブジェクトによって自動的に閉じられます。 SQLServerResultSet オブジェクトは、ガベージ コレクションの際にも自動的に閉じられます。  
   
- 順方向専用、読み取り専用の大きな結果セットを 1 つだけ生成するようなステートメントを実行する場合、必要な行は、返された結果セットのうち、先頭のいくつかの行だけであるケースが少なくありません。 この場合、アプリケーションが呼び出す可能性があります、[キャンセル](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)残りの不要な行を破棄するために必要な処理時間を最小限に抑えるために、結果を閉じる前に、関連するステートメント オブジェクトのメソッドを設定します。 この手法を用いるかどうかは、短縮できる処理時間と、実行の取り消しに伴って生じる、サーバーに対するラウンド トリップ時間とのトレードオフを考慮したうえで判断することをお勧めします。  
+ 順方向専用、読み取り専用の大きな結果セットを 1 つだけ生成するようなステートメントを実行する場合、必要な行は、返された結果セットのうち、先頭のいくつかの行だけであるケースが少なくありません。 このような場合は、関連するステートメント オブジェクトの [cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md) メソッドを呼び出してから結果セットを閉じることによって、残りの不要な行を破棄するために必要な処理時間を最小限に抑えることが可能です。 この手法を用いるかどうかは、短縮できる処理時間と、実行の取り消しに伴って生じる、サーバーに対するラウンド トリップ時間とのトレードオフを考慮したうえで判断することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

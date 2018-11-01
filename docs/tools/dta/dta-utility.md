@@ -217,7 +217,7 @@ dta -d AdventureWorks2012 ...
  **-ip**  
  プラン キャッシュをワークロードとして使用することを指定します。 明示的に選択したデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **–n** オプションを使用して変更できます。  
  
-IQ  
+**-iq**  
  クエリ ストアをワークロードとして使用することを指定します。 明示的に選択したデータベースのクエリ ストアから上位 1,000 個のイベントが分析されます。 この値は **–n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
  ||  
 |-|  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7237049744fe105c7570ed27790b930f935fef32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce603b38e1e210944cc27b7d25c9ee5df3c3c027
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755890"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030101"
 ---
 # <a name="security-report-builder"></a>セキュリティ (レポート ビルダー)
   レポート ビルダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
@@ -43,7 +43,7 @@ ms.locfileid: "47755890"
   
      レポート サーバーのアイテムを表示またはパブリッシュするために、レポート関連アイテムおよび操作に適用される権限セットがロールに分類されています。 レポート サーバー管理者が 1 つ以上のロールへの割り当てを行います。 たとえば、定義済みロール "閲覧者" に割り当てられると、レポート、フォルダー、モデル、およびリソースを表示できるようになります。  
   
-     レポート サーバーに接続したりレポート サーバーを参照したりすることができない場合は、レポート サーバー管理者に問い合わせてください。 詳細については、 [のドキュメント (](../../reporting-services/security/reporting-services-security-and-protection.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+     レポート サーバーに接続したりレポート サーバーを参照したりすることができない場合は、レポート サーバー管理者に問い合わせてください。 詳細については、 [のドキュメント (](../../reporting-services/security/reporting-services-security-and-protection.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   SharePoint 統合モードで構成されたレポート サーバー  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47755890"
   
  共有するためにパブリッシュしたアイテムを他のユーザーが参照して見つけることができるようにするには、レポート サーバー管理者と共に、ユーザーがアクセスできるフォルダー編成を設定する必要があります。 アクセスは、レポートの作成とパブリッシュされたレポートの実行に利用できる必要があります。  
   
- 詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ 詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [ロールと権限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -88,13 +88,13 @@ ms.locfileid: "47755890"
   
  資格情報は、レポート定義に保存されません。 レポート サーバーまたは SharePoint サイトおよびレポート作成クライアントでレポートとは別に管理されます。  
   
- レポートのデザイン時は、データセット クエリの実行とレポートのプレビューに資格情報が使用されます。 実行時は、レポートの実行とクエリ結果のキャッシュに資格情報が使用されます。 共有データセット クエリ結果を個別にキャッシュすることもできます。 デザイン時の資格情報と実行時の資格情報は異なる場合があります。 詳細については、「 [レポート ビルダーでの資格情報の指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
+ レポートのデザイン時は、データセット クエリの実行とレポートのプレビューに資格情報が使用されます。 実行時は、レポートの実行とクエリ結果のキャッシュに資格情報が使用されます。 共有データセット クエリ結果を個別にキャッシュすることもできます。 デザイン時の資格情報と実行時の資格情報は異なる場合があります。 詳細については、「 [レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
   
- データのセキュリティ保護の詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ データのセキュリティ保護の詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- データ ソースの詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
+ データ ソースの詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
   
   
 ##  <a name="Models"></a> モデルとセキュリティ フィルターについて  
@@ -108,13 +108,13 @@ ms.locfileid: "47755890"
   
 -   有効な値を提供する場合を除き、クエリ パラメーターに基づいた、型が **Text** のパラメーターは使用しないでください。 使用可能な値の一覧を使用すると、ユーザーが有効な値しか選択できないようにするのに役立ちます。 使用可能な値の一覧を使用しない場合は、ユーザーが入力できる値を制限できません。  
   
--   個人データをセキュリティで保護するためにグローバルな [&UserID] を使用しないでください。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、 [のドキュメント (](../../reporting-services/url-access-parameter-reference.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   個人データをセキュリティで保護するためにグローバルな [&UserID] を使用しないでください。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、 [のドキュメント (](../../reporting-services/url-access-parameter-reference.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- アイテムがレポート サーバーにパブリッシュされた後に、レポート サーバー管理者は、ロールベースのセキュリティまたはフォルダーおよびアイテム レベルのセキュリティを割り当てることでアイテムをセキュリティで保護できます。 詳細については、 [のドキュメント (](../../reporting-services/security/secure-reports-and-resources.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ アイテムがレポート サーバーにパブリッシュされた後に、レポート サーバー管理者は、ロールベースのセキュリティまたはフォルダーおよびアイテム レベルのセキュリティを割り当てることでアイテムをセキュリティで保護できます。 詳細については、 [のドキュメント (](../../reporting-services/security/secure-reports-and-resources.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダーのインストールとアンインストール](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [レポート ビルダーのインストールとアンインストール](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

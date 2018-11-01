@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11534581d2c9dfab36aa8b3a75d6f425f11a67d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26a078bd0e34344cfa84abc336a125e79af18bab
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776510"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336221"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,20 +40,12 @@ ms.locfileid: "47776510"
 ## <a name="syntax"></a>構文  
   
 ```sql
--- Syntax for SQL Server and Azure SQL Database  
-  
-COUNT_BIG ( { [ ALL | DISTINCT ] expression } | * )  
-   [ OVER ( [ partition_by_clause ] [ order_by_clause ] ) ]  
-```  
-  
-```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  
   
 -- Analytic Function Syntax  
-COUNT_BIG ( { expression | * } ) OVER ( [ <partition_by_clause> ] )  
+COUNT_BIG ( [ ALL ] { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -67,7 +59,7 @@ DISTINCT
 任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。 `COUNT_BIG` は、式の集計関数またはサブクエリをサポートしていません。
   
 *\**  
-`COUNT_BIG` ですべての行をカウントし、返すテーブルの合計行数を決定することを指定します。 `COUNT_BIG(*)` はパラメーターを受け取らず、DISTINCT の使用をサポートしていません。 `COUNT_BIG(*)` では、この関数の定義上、特定の列についての情報は使用されないため、*expression* パラメーターは必要ありません。 `COUNT_BIG(*)` は、指定されたテーブル内の行数を返し、重複する行を保持します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。
+`COUNT_BIG` ですべての行をカウントし、返すテーブルの合計行数を決定することを指定します。 `COUNT_BIG(*)` はパラメーターを受け取らず、DISTINCT の使用をサポートしていません。 `COUNT_BIG(*)` では、この関数の定義上、特定の列についての情報は使用されないため、*expression* パラメーターは必要ありません。 `COUNT_BIG(*)` は、指定されたテーブル内の行数を返し、重複する行を保持します。 null 値の行を含め、各行が別々にカウントされます。
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
 *partition_by_clause* は、`FROM` 句で生成された結果セットをパーティションに分割します。このパーティションに `COUNT_BIG` 関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、操作の論理的順序を決定します。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関するページを参照してください。
@@ -82,7 +74,7 @@ COUNT_BIG (ALL *expression*) はグループ内の各行に対して *expression
   
 COUNT_BIG (DISTINCT *expression*) はグループ内の各行に対して *expression* を評価し、一意の非 NULL 値の数を返します。
   
-COUNT_BIG は、OVER 句や ORDER BY 句***なし***で使用される場合は決定的関数です。 OVER 句や ORDER BY 句と***共に***使用される場合は、非決定的関数です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
+COUNT_BIG は、OVER 句や ORDER BY 句***なし***で使用される場合は決定的関数です。 COUNT_BIG が OVER 句や ORDER BY 句と***共に***使用される場合は非決定的関数です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
 例については、「[COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)」を参照してください。

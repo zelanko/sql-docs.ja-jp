@@ -49,10 +49,10 @@ public final void setDate(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この execute メソッドは、java.sql.PreparedStatement インターフェイスの execute メソッドで規定されています。  
+ この setDate メソッドは、java.sql.PreparedStatement インターフェイスの setDate メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [execute メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
+ [setDate メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

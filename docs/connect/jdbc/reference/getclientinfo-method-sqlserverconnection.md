@@ -27,8 +27,8 @@ ms.locfileid: "47837688"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getClientInfo () メソッド](../../../connect/jdbc/reference/getclientinfo-method.md)|JDBC ドライバーでサポートされている、各クライアント情報のプロパティの名前と現在の値を含む一覧を取得します。|  
-|[getClientInfo (java.lang.String) メソッド](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|指定されたクライアント情報のプロパティの値を取得します。|  
+|[getClientInfo メソッド &#40;&#41;](../../../connect/jdbc/reference/getclientinfo-method.md)|JDBC ドライバーでサポートされている、各クライアント情報のプロパティの名前と現在の値を含む一覧を取得します。|  
+|[getClientInfo メソッド &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|指定されたクライアント情報のプロパティの値を取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

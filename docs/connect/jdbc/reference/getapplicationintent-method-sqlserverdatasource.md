@@ -1,25 +1,22 @@
 ---
-title: getApplicationIntent メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: getApplicationIntent メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 19411e6c-c456-4533-8252-54569a2a6b1f
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 675378378eb58fc673ec23cd269ca3febc629733
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 01fa56d2afb8465f582cf5fda5579565f04013c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829332"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727500"
 ---
 # <a name="getapplicationintent-method-sqlserverdatasource"></a>getApplicationIntent メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,8 +32,8 @@ public java.lang.String getApplicationIntent();
 ## <a name="return-value"></a>戻り値  
  値を返します、 **applicationIntent**接続プロパティです。  
   
-## <a name="remarks"></a>解説  
- 詳細については、 **applicationIntent**接続プロパティを参照してください[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)です。  
+## <a name="remarks"></a>Remarks  
+ 詳細については、 **applicationIntent**接続のプロパティを参照してください[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource.setApplicationIntent](../../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)   

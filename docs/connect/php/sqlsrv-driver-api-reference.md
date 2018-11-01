@@ -21,7 +21,7 @@ ms.locfileid: "47756590"
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV ドライバー API リファレンス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の SQLSRV ドライバーの API 名は **sqlsrv**です。 すべての **sqlsrv** 関数は、先頭に **sqlsrv** が付き、動詞または名詞が続きます。 動詞が続く関数は何らかのアクションを実行し、名詞が続く関数は、何らかの形式のメタデータを返します。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の SQLSRV ドライバーの API 名は **sqlsrv**です。 すべての **sqlsrv** 関数は、先頭に **sqlsrv_** が付き、動詞または名詞が続きます。 動詞が続く関数は何らかのアクションを実行し、名詞が続く関数は、何らかの形式のメタデータを返します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 SQLSRV ドライバーには、次の関数が含まれています。  

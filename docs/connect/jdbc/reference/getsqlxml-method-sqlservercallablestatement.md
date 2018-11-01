@@ -27,8 +27,8 @@ ms.locfileid: "47795670"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[getSQLXML メソッド&#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を  オブジェクトとして取得します。|  
-|[getSQLXML (java.lang.String) メソッド](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|渡されたパラメーター名を使用して、指定されたパラメーターの値を  オブジェクトとして取得します。|  
+|[getSQLXML メソッド&#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を SQLXML オブジェクトとして取得します。|  
+|[getSQLXML メソッド &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|渡されたパラメーター名を使用して、指定されたパラメーターの値を SQLXML オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

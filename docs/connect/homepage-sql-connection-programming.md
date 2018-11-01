@@ -5,18 +5,17 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: 6269a92ea3ad33ed4501856cc7745ac4f9fad4df
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e2c3da2ba71661602f69f85f5eb79ba6d550be9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633800"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>クライアントの Microsoft SQL server プログラミングのホーム ページ
 
@@ -270,7 +269,7 @@ Ruby を使用して、SQL Server にやり取りすることができます。 
 
 |||
 | :-- | :-- |
-| [Ruby での SQL 接続の概念実証](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
+| [Ruby を使用した SQL への接続を概念実証する](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
 | [Azure SQL database: Ruby クエリを使用](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database の例です。 |
 | [MacOS での SQL Server を使用する Ruby アプリを作成します。](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | コード例も構成情報。 |
 | &nbsp; | <br /> |

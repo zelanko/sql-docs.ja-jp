@@ -1,5 +1,5 @@
 ---
-title: setObject メソッド (int, java.lang.Object, int, int) | Microsoft Docs
+title: setObject (int, java.lang.Object) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -49,7 +49,7 @@ public final void setObject(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setObject メソッドは、java.sql.CallableStatement インターフェイスの setObject メソッドで指定されています。  
+ この setObject メソッドは、java.sql.PreparedStatement インターフェイスの setObject メソッドで指定されています。  
   
  この setObject メソッドを呼び出す前に、指定したパラメーターが次のいずれかのメソッドを使用してアプリケーションで設定されている場合があります。  
   

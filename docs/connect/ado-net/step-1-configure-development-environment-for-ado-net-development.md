@@ -1,45 +1,42 @@
 ---
-title: '手順 1: ADO.NET の開発のための開発環境の構成 |Microsoft ドキュメント'
+title: 'ステップ 1: ADO.NET 開発用に開発環境を構成する | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a7163a7cd0062313d1e0dbdf23cd96c7b61d5f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: f4c78d9001a802b60963f9c02ad03b84b431a025
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288901"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617000"
 ---
-# <a name="step-1-configure-development-environment-for-adonet-development"></a>手順 1: ADO.NET の開発のための開発環境を構成します。
+# <a name="step-1-configure-development-environment-for-adonet-development"></a>ステップ 1: ADO.NET 開発用に開発環境を構成する
 
-- 次の記事:&nbsp;&nbsp;&nbsp;[手順 2: ADO.NET の開発用の SQL データベースの作成](step-2-create-a-sql-database-for-ado-net-development.md)  
+- 次の記事:&nbsp;&nbsp;&nbsp;[ステップ 2: ADO.NET 開発用の SQL データベースを作成する](step-2-create-a-sql-database-for-ado-net-development.md)  
 
 ## <a name="download-a-net-sql-driver"></a>.NET SQL driver をダウンロードします。
 
-この現在のコード例では、.NET Framework の ADO.NET を使用して Windows 用です。 .NET Core は、Linux および MacOS (Windows) だけでなく使用できます。
+現在のコード例では、Windows の .NET Framework、ADO.NET を使用します。 .NET Core では、Linux および MacOS (Windows) だけでなく使用できます。
 
-### <a name="adonet-for-windows"></a>Windows 用の ADO.NET
+### <a name="adonet-for-windows"></a>Windows 向けの ADO.NET
 
-1. ![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[をダウンロードして、ADO.NET を含む、.NET Framework をインストールするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+1. ![ダウンロード下方向丸](../../ssdt/media/download.png)[をダウンロードして ADO.NET を含む、.NET Framework のインストール](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-2. Visual Studio Community をインストール、または同様の作成および c# ソース コードをコンパイルする開発環境 (IDE) に統合されています。 Microsoft 提供の Visual Studio Community*空き*です。  
-    - [Visual Studio Community をダウンロードします。](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [Visual Studio を解放するための詳細オプション](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+2. Visual Studio Community のインストール、または類似の書き込みおよび c# ソース コードをコンパイルするための開発環境 (IDE) に統合されています。 Microsoft は、Visual Studio Community for*無料*します。  
+    - [Visual Studio Community をダウンロードする](http://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [多くの方法で無料の Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET core、Ubuntu Linux や MacOS 用
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>-Ubuntu Linux、MacOS 用の .NET core
 
-さまざまなオペレーティング システム用の .NET Core のダウンロード リンクを紹介します。
+さまざまなオペレーティング システムでの .NET Core のダウンロード リンクは利用いただけます。
 
-- ![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[をダウンロードして .NET Core のインストール](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![ダウンロード下方向丸](../../ssdt/media/download.png)[をダウンロードして .NET Core のインストール](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

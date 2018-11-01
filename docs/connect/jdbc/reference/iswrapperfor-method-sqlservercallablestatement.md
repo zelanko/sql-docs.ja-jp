@@ -1,25 +1,22 @@
 ---
-title: isWrapperFor メソッド (SQLServerCallableStatement) |Microsoft ドキュメント
+title: isWrapperFor メソッド (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4b0474c6301b450bcb8f43ffaaad66cfdcb56aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 587c1217d42aa02c269b986837997dfbe89be278
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737020"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>isWrapperFor メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,20 +36,20 @@ public boolean isWrapperFor(Class iface)
  A**クラス**インターフェイスを定義します。  
   
 ## <a name="return-value"></a>戻り値  
- **true**か、このオブジェクト インターフェイスを実装するインターフェイスを実装するオブジェクトをラップします。 それ以外の場合は、 **false**です。  
+ このオブジェクトがインターフェイスを実装しているか、インターフェイスを実装しているオブジェクトをラップしている場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- [IsWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)メソッドおよび[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)メソッドは、JDBC 4.0 で導入された java.sql.Wrapper インターフェイスによって定義されます。  
+## <a name="remarks"></a>Remarks  
+ [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md) メソッドと [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) メソッドは、JDBC 4.0 で導入された java.sql.Wrapper インターフェイスで定義されています。  
   
- このメソッドが戻る場合**true**、呼び出し元[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)同じ引数では成功します。  
+ このメソッドが **true** を返す場合、同じ引数を使用した [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) の呼び出しは成功します。  
   
- 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)です。  
+ 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
   
 ## <a name="see-also"></a>参照  
- [unwrap メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)   
+ [unwrap メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

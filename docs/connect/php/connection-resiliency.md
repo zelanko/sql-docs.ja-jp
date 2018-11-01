@@ -1,54 +1,53 @@
 ---
-title: アイドル接続の回復
+title: アイドル状態の接続の回復性
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 2e66db8c4f821d3401ab354f705cebb81c3b3b36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666800"
 ---
-# <a name="idle-connection-resiliency"></a>アイドル接続の回復
+# <a name="idle-connection-resiliency"></a>アイドル状態の接続の回復性
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[接続の回復](https://msdn.microsoft.com/library/dn632678.aspx)いるアイドル状態の接続を切断された再確立する、特定の制約内での原則がします。 Microsoft SQL Server への接続に失敗した場合は、自動的に接続を再確立しようとするクライアントが、接続の回復できます。 接続の回復は、データ ソースのプロパティ唯一の SQL Server 2014 以降と Azure SQL データベースは、接続の回復をサポートします。
+[接続の回復性](https://msdn.microsoft.com/library/dn632678.aspx)は、壊れているアイドル状態の接続を再確立する、特定の制約内で原則です。 Microsoft SQL Server への接続に失敗した場合は、自動的に接続を再確立しようとするクライアントが、接続の回復できます。 接続の回復性は、データ ソースのプロパティ唯一の SQL Server 2014 以降と Azure SQL Database は、接続の回復性をサポートします。
 
-接続の回復は接続文字列に追加できる 2 つの接続キーワードと実装: **ConnectRetryCount**と**ConnectRetryInterval**です。
+接続文字列に追加できる 2 つの接続キーワードを持つ接続の回復性が実装されている: **ConnectRetryCount**と**ConnectRetryInterval**します。
 
-|Keyword|値|既定|説明|
+|Keyword|値|既定|[説明]|
 |-|-|-|-|
-|**ConnectRetryCount**| 0 ~ 255 (包括) の整数|1|渡す前に切断された接続を再確立を試みるの最大数。 既定では、1 回の試行が壊れている場合、接続を再確立しようとするは。 値の 0 の場合は、再接続は試行されません。|
-|**ConnectRetryInterval**| 1 ~ 60 (包括) の整数|1| 時間 (秒)、間には、接続が再確立を試みます。 アプリケーションで、途切れた接続を検出するとすぐに再接続を試みますあり待機し、 **ConnectRetryInterval**してから再試行するまでの秒。 場合、このキーワードは無視されます**ConnectRetryCount**が 0 です。
+|**ConnectRetryCount**| 0 ~ 255 (両端を含む) の整数|1|を行う前に切断された接続を再確立を試みるの最大数。 既定では、発生した場合に、接続を再確立するため 1 回の試行が行われます。 値の 0 の場合は、再接続は試行されません。|
+|**ConnectRetryInterval**| 1 ~ 60 (包括) の整数|1| 時間 (秒単位) の間には、接続が再確立を試行します。 アプリケーションで、途切れた接続を検出するとすぐに再接続を試みますあり待機し**ConnectRetryInterval**してから再試行するまでの秒。 場合、このキーワードは無視されます**ConnectRetryCount**が 0 です。
 
-場合、製品の**ConnectRetryCount**を掛けた**ConnectRetryInterval**よりも大きい**LoginTimeout**クライアントは、1 回の接続を試行しなくなりますし、 **LoginTimeout**に達するまで再接続しようとしています。 引き続きそれ以外の場合、その**ConnectRetryCount**に達した。
+場合、製品の**ConnectRetryCount**を乗算して**ConnectRetryInterval**よりも大きい**LoginTimeout**、1 回の接続を試みているクライアントが停止し、 **LoginTimeout**に達するまで再接続しようとするそれ以外の場合、これは引き続き**ConnectRetryCount**に到達します。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
-接続の回復は、接続がアイドル状態のときに適用されます。 たとえば、トランザクションを実行する – の再接続試行をトリガーしません中に発生するエラーが失敗が予想とします。 不可能のセッションの状態と呼ばれる、次の状況では、再接続の試行はトリガーされません。
+接続がアイドル状態のとき、接続の回復性が適用されます。 たとえば、トランザクションの実行は再接続の試行はトリガーされません中に発生する障害が予想とは失敗します。 回復不可能のセッションの状態と呼ばれる、次の状況では、再接続の試行はトリガーされません。
 
 * 一時テーブル
-* グローバル カーソルとローカル カーソル
-* トランザクションのコンテキストおよびセッション レベル トランザクションのロック
+* グローバルとローカル カーソル
+* トランザクションのコンテキストとセッション レベルのトランザクションのロック
 * アプリケーション ロック
-* EXECUTE AS のセキュリティ コンテキストを元に戻す/
-* OLE オートメーション ハンドル
+* EXECUTE AS]、[セキュリティ コンテキストを元に戻す
+* OLE オートメーション処理します。
 * 準備済みの XML ハンドル
 * トレース フラグ
 
 ## <a name="example"></a>例
 
-次のコードでは、データベースに接続し、クエリを実行します。 セッションを強制終了して、接続が中断され、切断された接続を使用して、新しいクエリを試行します。 この例では、 [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx)サンプル データベース。
+次のコードでは、データベースに接続し、クエリを実行します。 セッションを強制終了して、接続が中断され、切断された接続を使用して新しいクエリを試行します。 この例では、[AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) サンプル データベースを使用します。
 
-この例では、接続を解除する前に、バッファー内のカーソルを指定します。 場合は、バッファー内のカーソルは指定しないと、接続が再確立できないこと、アクティブなサーバー側カーソルがあるし、そのため、接続はありませんが壊れているアイドル状態であるためです。 ただし、その場合は sqlsrv_free_stmt() シンプロビジョニング、カーソル位置への接続を解除する前に呼び出すことが、接続が正常に再確立します。
+この例では、接続を解除する前に、バッファー内のカーソルを指定します。 バッファー内のカーソルを指定していない場合、アクティブなサーバー側カーソルがあるし、そのため、接続がアイドル状態にならないが壊れているため、接続が再確立されませんが。 ただし、場合 sqlsrv_free_stmt()、カーソルのシンプロビジョニングへの接続を解除する前に呼び出すことが、接続が正常に再確立します。
 
 ```php
 <?php

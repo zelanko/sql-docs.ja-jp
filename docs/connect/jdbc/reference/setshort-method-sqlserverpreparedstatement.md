@@ -26,7 +26,7 @@ ms.locfileid: "47621670"
 # <a name="setshort-method-sqlserverpreparedstatement"></a>setShort メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された java 値に設定します。  
+  指定されたパラメーターを、渡された **short** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   

@@ -1,5 +1,5 @@
 ---
-title: OLE DB Driver for SQL Server (OLE DB) リファレンス
+title: OLE DB Driver for SQL Server (OLE DB) リファレンス | Microsoft Docs
 description: OLE DB Driver for SQL Server (OLE DB) リファレンス
 ms.custom: ''
 ms.date: 06/14/2018

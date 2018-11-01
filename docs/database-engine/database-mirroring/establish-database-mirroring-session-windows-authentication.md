@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
-caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 61fe97f28fc399ac261c06a962bd19bfe9efcd25
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e3a8430437bd4a4dae43e9a9b99f98c004a1b3c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988154"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838940"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>データベース ミラーリング セッションの確立 - Windows 認証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ ms.locfileid: "37988154"
     |------------|--------------|-----------------|  
     |**[高パフォーマンス (非同期)]**|Null (存在しても使用されませんが、セッションにクォーラムが必要になります)|最適なパフォーマンスを提供するために、ミラー データベースが常にプリンシパル データベースから多少遅延されます。完全に時間差がなくなることはありません。 ただし、データベース間の時間差は、通常はわずかです。 パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、セッションにミラーリング監視サーバーがない場合 (推奨) やミラーリング監視サーバーがミラー サーバーに接続されている場合、ミラー サーバーはウォーム スタンバイとしてアクセスできます。つまり、データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。|  
     |**[自動フェールオーバーを伴わない高い安全性 (同期)]**|いいえ|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、ウォーム スタンバイとしてアクセスできます。データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)のすべてのエディションで使用できるわけではありません。|  
-    |**[自動フェールオーバーを伴う高い安全性 (同期)]**|指定あり (必須)|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> 自動フェールオーバーをサポートするミラーリング監視サーバー インスタンスを含めることによって、可用性は最大限に高まります。 **[自動フェールオーバーを伴う高い安全性 (同期)]** オプションを選択できるのは、最初にミラーリング監視サーバーのアドレスを指定した場合のみです。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> ミラーリング監視サーバーが存在する場合、パートナーの損失による影響は次のとおりです。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなった場合、自動フェールオーバーが発生します。 ミラー サーバー インスタンスはプリンシパル サーバー インスタンスの役割に切り替わり、ミラー データベースがプリンシパル データベースとして提供されます。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)のすべてのエディションで使用できるわけではありません。<br /><br /> **\*\* 重要 \*\*** ミラーリング監視サーバーが切断された場合、データベースを使用できるようにするには、パートナーが相互に接続されている必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。|  
+    |**[自動フェールオーバーを伴う高い安全性 (同期)]**|指定あり (必須)|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> 自動フェールオーバーをサポートするミラーリング監視サーバー インスタンスを含めることによって、可用性は最大限に高まります。 **[自動フェールオーバーを伴う高い安全性 (同期)]** オプションを選択できるのは、最初にミラーリング監視サーバーのアドレスを指定した場合のみです。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> ミラーリング監視サーバーが存在する場合、パートナーの損失による影響は次のとおりです。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなった場合、自動フェールオーバーが発生します。 ミラー サーバー インスタンスはプリンシパル サーバー インスタンスの役割に切り替わり、ミラー データベースがプリンシパル データベースとして提供されます。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** ミラーリング監視サーバーが切断された場合、データベースを使用できるようにするには、パートナーが相互に接続されている必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。|  
   
 7.  次のすべての条件に当てはまる場合は、 **[ミラーリングの開始]** をクリックしてミラーリングを開始します。  
   

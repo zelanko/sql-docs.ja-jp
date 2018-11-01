@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d3c44a31a25379e142b87428ad8ef3f2e60b8b8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599100"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>データベース ミラーリング - セッションの確立 - Windows 認証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,15 +65,15 @@ ms.locfileid: "38020805"
   
 4.  プリンシパル サーバーをミラー データベースのパートナーとして設定するには、ミラー サーバーに接続し、次のステートメントを実行します。  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
   
-     *<database_name>* はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、*<server_network_address>* はプリンシパル サーバーのサーバー ネットワーク アドレスです。  
+     _\<database\_name\>_ はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、_\<server\_network\_address\>_ はプリンシパル サーバーのサーバー ネットワーク アドレスです。  
   
      サーバー ネットワーク アドレスの構文は次のとおりです。  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<b>\://</b>_\<system-address\>_<b>\:</b>_\<port\>_  
   
-     \<*system-address*> は目的のコンピューター システムを明確に指定する文字列です。また、\<*port>* はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
+     _\<system-address_> は目的のコンピューター システムを明確に指定する文字列です。また、_\<port>_ はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   
      たとえば、ミラーリング サーバー インスタンスで、次の ALTER DATABASE ステートメントは元のプリンシパル サーバー インスタンスとしてパートナーを設定します。 データベース名は **AdventureWorks**、システムのアドレスは DBSERVER1 (パートナーのシステム名)、パートナーのデータベース ミラーリング エンドポイントが使用するポートは 7022 です。  
   
@@ -89,7 +86,7 @@ ms.locfileid: "38020805"
   
 5.  ミラー サーバーをプリンシパル データベースのパートナーとして設定するには、プリンシパル サーバーに接続し、次のステートメントを実行します。  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
   
      詳細については、手順 4. を参照してください。  
   

@@ -5,23 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f318a0d82a2fc131554f12d0d15f049d588a3928
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abc5cb2557c3620ff9088520113a33b4f1a06bcc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768580"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>cost threshold for parallelism サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +57,9 @@ ms.locfileid: "32867267"
   
     -   **max degree of parallelism** オプションが 1 に設定されている場合。  
   
- 論理プロセッサは、オペレーティング システムでのタスクのディスパッチまたはスレッド コンテキストの実行を可能にするプロセッサ ハードウェアの基本単位です。 各論理プロセッサは一度に 1 つのスレッド コンテキストのみを実行できます。 プロセッサのコアは、命令をデコードして実行する能力を提供する回路です。 プロセッサのコアには 1 つ以上の論理プロセッサが含まれます。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリは、システムの CPU 情報の取得に使用できます。  
+論理プロセッサは、オペレーティング システムでのタスクのディスパッチまたはスレッド コンテキストの実行を可能にするプロセッサ ハードウェアの基本単位です。 各論理プロセッサは一度に 1 つのスレッド コンテキストのみを実行できます。 プロセッサのコアは、命令をデコードして実行する能力を提供する回路です。 プロセッサのコアには 1 つ以上の論理プロセッサが含まれます。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリは、システムの CPU 情報の取得に使用できます。  
   
-```  
+```sql  
 SELECT (cpu_count / hyperthread_ratio) AS PhysicalCPUs,   
 cpu_count AS logicalCPUs   
 FROM sys.dm_os_sys_info  
@@ -72,9 +69,9 @@ FROM sys.dm_os_sys_info
   
 -   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロフェッショナルだけが変更するようにしてください。  
   
--   クエリのコスト プランが **cost threshold for parallelism** の現在の値より小さくても、並列プランが選択されることがあります。 並列プランまたは直列プランのどちらを使用するかが、完全な最適化が完了する前に算出されたコストの推定値に基づいて決定された場合に、このようなことが起こります。  
+-   クエリのコスト プランが **cost threshold for parallelism** の現在の値より小さくても、並列プランが選択されることがあります。 並列プランまたは直列プランのどちらを使用するかが、最適化プロセスの初期段階で算出されたコストの推定値に基づいて決定された場合に、このようなことが起こります。 詳細については、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)」をご覧ください。  
 
--   下位互換性のために既定値の 5 が保持されていますが、最新のシステムではより高い値が適切な可能性があります。 多くの SQL Server プロフェッショナルは、開始点として 25 または 50 の値を使用し、アプリケーションのパフォーマンスを最適化するために、より高い値と低い値のアプリケーション テストを実行することを提案しています。
+-   ほとんどのシステムでは既定値の 5 で適切ですが、別の値が適切な場合もあります。 アプリケーション パフォーマンスを最適化するために必要であれば、より高い値や低い値でアプリケーションのテストを行ってください。
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -89,7 +86,7 @@ FROM sys.dm_os_sys_info
   
 2.  **[詳細設定]** ノードをクリックします。  
   
-3.  **[並列処理]** で、 **[CostThresholdForParallelism]** オプションを目的の値に変更します。 0 ～ 32767 の値を、入力または選択します。  
+3.  **[並列処理]** で、 **[並列処理のコストしきい値]** オプションを目的の値に変更します。 0 ～ 32767 の値を、入力または選択します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
