@@ -12,24 +12,24 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ce0224caa590149c32263df59bef370b8b8c6e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 532a19a4fca82e200b9499672cf48f736cfd3f4b
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618772"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226324"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 特定の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 計算ノードまたは制御ノードで実行されているクエリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行プランを表示します。 クエリの計算ノードと管理 ノードで実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うには、これを使用します。
   
-計算ノードで実行されている SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリについて、クエリのパフォーマンスに問題があることがわかった場合、パフォーマンスを向上する方法がいくつかあります。 複数列統計を作成する、非クラスター化インデックスを作成する、またはクエリ ヒントを使用してコンピューティング ノードでのクエリのパフォーマンスを向上させる方法が含まれます。
+SMP のクエリ パフォーマンスの問題が認識されたら [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、コンピューティング ノードで実行されているクエリのパフォーマンスを向上させるためにいくつかの方法があります。 複数列統計を作成する、非クラスター化インデックスを作成する、またはクエリ ヒントを使用してコンピューティング ノードでのクエリのパフォーマンスを向上させる方法が含まれます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
-SQL Server の構文:
+Azure SQL Data Warehouse の構文:
 
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  

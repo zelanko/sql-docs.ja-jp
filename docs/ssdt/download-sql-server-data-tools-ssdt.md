@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419199"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226304"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,16 +87,18 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 1. [SSDT スタンドアロン インストーラーをダウンロードします](#ssdt-for-vs-2017-standalone-installer)。
 2. [Download vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe)。
-3. 引き続き、オンラインのときに、次のコマンドのいずれかを実行し、オフライン インストールに必要なすべてのファイルをダウンロードします。 `--layout` オプションの使用が重要です。 <filepath> はファイルを保存する実際のパスに置き換えます。
+3. 引き続き、オンラインのときに、次のコマンドのいずれかを実行し、オフライン インストールに必要なすべてのファイルをダウンロードします。 `--layout` の使用がキーとなり、オフライン インストールのために実際のファイルがダウンロードされます。 <filepath> はファイルを保存する実際のレイアウトのパスに置き換えます。
 
+   
    A.   特定の言語には、`vs_sql.exe --layout c:\<filepath> --lang en-us` のようにロケールを渡します (1 つの言語は 1 GB まで)。  
    B. すべての言語には、`vs_sql.exe --layout c:\<filepath>` のように `--lang` 引数を省略します (すべての言語は 3.9 GB まで)。
 
+4. `SSDT-Setup-ENU.exe /layout c:\<filepath>` を実行して、VS2017 ファイルがダウンロードされたのと同じ `<filepath>` の場所に SSDT ペイロードを抽出します。 これにより、両方からのすべてのファイルが 1 つのレイアウト フォルダーにまとめられます。
+
 前述の手順を完了したら、オフラインで次を実行します。
 
-1. VS2017 ペイロードを SSDT ペイロード フォルダーにコピーします。 両方からのすべてのファイルが 1 つのレイアウト フォルダーにまとめられるようにします。
-2. `vs_setup.exe --NoWeb` を実行して、VS2017 Shell と SQL Server Data Project をインストールします。
-3. `SSDT-Setup-ENU.exe /install` を実行し、SSIS、SSRS、SSAS を選択します。
+1. `vs_setup.exe --NoWeb` を実行して、VS2017 Shell と SQL Server Data Project をインストールします。
+2. レイアウト フォルダーから `SSDT-Setup-ENU.exe /install` を実行し、SSIS/SSRS/SSAS を選択します。
 
    - また、無人インストールを実行する場合は、`SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive` を実行します。  
 
