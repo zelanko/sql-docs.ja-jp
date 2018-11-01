@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7b598d4fe860c0d0eb1cb95730bb483be5470a
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252109"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461087"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -103,7 +103,7 @@ CREDENTIAL **=**_credential\_name_
 新しい SQL Server ログインにマップする資格情報の名前。 この資格情報はサーバー内に存在する必要があります。 現在このオプションは、資格情報をログインに関連付けるだけです。 資格情報をシステム管理者 (sa) ログインにマップすることはできません。 
   
 SID = *sid*  
-ログインを再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Server ログイン SID: GUID に基づく 16 バイト (**binary (16)**) のリテラル値。 たとえば、 `SID = 0x14585E90117152449347750164BA00A7`のようにします。 
+ログインを再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Server ログイン SID: GUID に基づく 16 バイト (**binary (16)**) のリテラル値。 たとえば、`SID = 0x14585E90117152449347750164BA00A7` のようにします。 
   
 DEFAULT_DATABASE **=**_database_  
 ログインに割り当てられる既定のデータベースを指定します。 このオプションを指定しない場合は、既定のデータベースが master に設定されます。 
@@ -290,7 +290,7 @@ PASSWORD **='** password**'*
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。 
 
 SID = *sid*  
-ログインを再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`のようにします。 
+ログインを再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようにします。 
   
 ## <a name="remarks"></a>Remarks  
 - パスワードでは大文字と小文字が区別されます。
@@ -326,7 +326,7 @@ SQL Database では、接続の認証に必要なログイン データおよび
 ログインが作成されたら、ログインは SQL Database に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 
   
 - データベースに接続するには、そのデータベースにログイン用のデータベース ユーザーを作成する必要があります。 詳細については、[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) に関するページを参照してください。 
-- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ...  **ADD MEMBER** ステートメントを使用して組み込みのデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT]((../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
+- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ...  **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
 - サーバー全体の権限を付与するには、master データベースにデータベース ユーザーを作成し、**ALTER SERVER ROLE** ...  **ADD MEMBER** ステートメントを使用して、管理サーバー ロールのいずれかにユーザーを追加します。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および[サーバー ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)に関するページを参照してください。
 - 新しいログインまたはログインを含むロールにサーバー レベルの権限を許可するには、**GRANT** ステートメントを使用します。 詳細については、「[GRANT](../../t-sql/statements/grant-transact-sql.md)」を参照してください。
   
@@ -408,7 +408,7 @@ PASSWORD **='** password**'*
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。 
 
 SID = *sid*  
-ログインを再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`のようにします。 
+ログインを再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようにします。 
   
 ## <a name="remarks"></a>Remarks  
 - パスワードでは大文字と小文字が区別されます。
@@ -444,7 +444,7 @@ SQL Database では、接続の認証に必要なログイン データおよび
 ログインが作成されたら、ログインは SQL Database に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 
   
 - データベースに接続するには、そのデータベースにログイン用のデータベース ユーザーを作成する必要があります。 詳細については、[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) に関するページを参照してください。 
-- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ...  **ADD MEMBER** ステートメントを使用して組み込みのデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT]((../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
+- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ...  **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
 - サーバー全体の権限を付与するには、master データベースにデータベース ユーザーを作成し、**ALTER SERVER ROLE** ...  **ADD MEMBER** ステートメントを使用して、管理サーバー ロールのいずれかにユーザーを追加します。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および[サーバー ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)に関するページを参照してください。
 - 新しいログインまたはログインを含むロールにサーバー レベルの権限を許可するには、**GRANT** ステートメントを使用します。 詳細については、「[GRANT](../../t-sql/statements/grant-transact-sql.md)」を参照してください。
   
@@ -502,7 +502,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL データ ウェアハウス
+## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
   
 ## <a name="syntax"></a>構文 
   
@@ -526,7 +526,7 @@ PASSWORD **='** password**'*
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。 
 
  SID = *sid*  
- ログインを再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Data Warehouse の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`のようにします。 
+ ログインを再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Data Warehouse の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようにします。 
   
 ## <a name="remarks"></a>Remarks  
 - パスワードでは大文字と小文字が区別されます。

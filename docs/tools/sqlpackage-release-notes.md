@@ -10,16 +10,34 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050854"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage のリリース ノート
 
 **[最新バージョンのダウンロード](sqlpackage-download.md)**
+
+## <a name="sqlpackage-180"></a>sqlpackage 18.0
+
+リリース日: 2018 年 10 月 24 日  
+ビルド: 15.0.4200.1 
+
+リリースには、次の機能と修正プログラムが含まれています。
+
+- 150 のデータベース互換性レベルのサポートが追加されました。
+- マネージ インスタンスのサポートが追加されました。
+- データベース操作の並列処理の次数を指定する MaxParallelism コマンド ライン パラメーターに追加します。
+- SQL Server に接続するときに認証トークンを指定する AccessToken コマンド ライン パラメーターを追加します。
+- ストリームの BLOB/CLOB データ型をインポートするサポートが追加されました。
+- スカラー UDF のサポートが追加されました 'INLINE' オプション。
+- グラフ テーブル 'MERGE' 構文に関するサポートが追加されました。
+- 固定未解決擬似テーブルの列のグラフ。
+- データベースを作成するときに、メモリ最適化テーブルのグループを使用してメモリ最適化されたファイルを修正しました。
+- 外部テーブルの拡張プロパティを含むを修正しました。
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
@@ -29,7 +47,6 @@ ms.locfileid: "47754336"
 このリリースでは、次の問題点を修正しました。
 
 - SqlClient の例外メッセージを含む、接続エラーのエラー メッセージの改善。
-- データベース操作の並列処理の次数を指定する MaxParallelism コマンド ライン パラメーターに追加します。
 - インポート/エクスポートの 1 つのパーティション インデックスのインデックスの圧縮をサポートします。
 - SQL 2017 以降のバージョンと、XML 列セットのリバース エンジニア リングの問題を修正しました。
 - 場所は Azure SQL Database の無視されましたスクリプト データベース互換性レベル 140 問題を修正しました。

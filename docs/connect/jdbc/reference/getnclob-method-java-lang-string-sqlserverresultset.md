@@ -11,12 +11,12 @@ ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ee88668cd930fa83f27f1fa4d3eace212e8419e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 0a7241be8ab1c8ffcaf6b4eb143740f3ca09161d
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787950"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991135"
 ---
 # <a name="getnclob-method-javalangstring-sqlserverresultset"></a>getNClob (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *columnLable*  
+ *columnLabel*  
   
  列ラベルを含む**文字列**です。  
   
@@ -42,7 +42,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getNClob メソッドは、java.sql.ResultSet インターフェイスの getNClob メソッドによって指定されます。  
+ この getNClob メソッドは、java.sql.ResultSet インターフェイスの getNClob メソッドで規定されています。  
   
  このメソッドでのみサポートされます**nvarchar (max)**、 **ntext**、および**xml**列。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   

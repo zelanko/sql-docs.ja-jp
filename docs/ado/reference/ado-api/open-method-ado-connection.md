@@ -51,7 +51,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="remarks"></a>コメント  
  使用して、**オープン**メソッドを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトは、データ ソースへの物理接続を確立します。 このメソッドが正常に完了したら、接続はライブとに対してコマンドを発行し、結果を処理することができます。  
   
- オプションを使用して、 *ConnectionString*一連を含む接続文字列を指定する引数*引数**値 =* ステートメントをセミコロンで区切られた、またはURL で識別されるファイルまたはディレクトリのリソース。 **ConnectionString**プロパティで使用される値を自動的に継承する、 *ConnectionString*引数。 そのため、いずれかに設定できます、 **ConnectionString**のプロパティ、**接続**、開く前にオブジェクトまたはを使用して、 *ConnectionString*引数を設定またはオーバーライドするには現在の接続パラメーター中に、**オープン**メソッドの呼び出し。  
+ オプションを使用して、 *ConnectionString*一連を含む接続文字列を指定する引数*引数* *値 =* ステートメントをセミコロンで区切られた、またはURL で識別されるファイルまたはディレクトリのリソース。 **ConnectionString**プロパティで使用される値を自動的に継承する、 *ConnectionString*引数。 そのため、いずれかに設定できます、 **ConnectionString**のプロパティ、**接続**、開く前にオブジェクトまたはを使用して、 *ConnectionString*引数を設定またはオーバーライドするには現在の接続パラメーター中に、**オープン**メソッドの呼び出し。  
   
  ユーザー名とパスワード両方の情報を渡す場合、 *ConnectionString*引数と省略可能な*UserID*と*パスワード*、引数、 *UserID*と*パスワード*引数で指定された値をオーバーライドは*ConnectionString*します。  
   
