@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d0b1b34105df8568e12be170b0ab9afa8fdad88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716570"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084930"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>インストール、ドライバー ファイルの基本的なシステム要件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -48,13 +48,13 @@ ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 
 実行すると、ドライバーがインストールされている`msodbcsql.msi`から、次のリンクのいずれか。
 
-- [Windows で Microsoft ODBC Driver 17 for SQL Server をダウンロードする](https://www.microsoft.com/download/details.aspx?id=56567)
+- [Microsoft ODBC Driver 17 for SQL Server on Windows のダウンロード](https://www.microsoft.com/download/details.aspx?id=56567)
 - [Microsoft ODBC Driver 13.1 for SQL Server on Windows のダウンロード](https://www.microsoft.com/download/details.aspx?id=53339)
 - [Microsoft ODBC Driver 13 for SQL Server on Windows のダウンロード](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Microsoft ODBC Driver 11 for SQL Server on Windows のダウンロード](https://www.microsoft.com/download/details.aspx?id=36434)。 
 
-[!NOTE]
-ドライバー 17.1.0.1 または以下をインストールした方をお勧め、ドライバーの最新バージョンをインストールする前に手動でアンインストールすること
+> [!NOTE]
+> ドライバー 17.1.0.1 または以下をインストールした方をお勧め、ドライバーの最新バージョンをインストールする前に手動でアンインストールすること
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とサイド バイ サイドでインストールできます。  
 
@@ -101,7 +101,7 @@ ODBC アプリケーションをコンパイルすると、`msodbcsql11.lib`と`
 |msodbcdiag17.dll または <br> msodbcdiag13.dll または <br> msodbcdiag11.dll|ドライバーの診断 (トレース) インターフェイスが含まれるダイナミック リンク ライブラリ (DLL) ファイル。 このファイルは、SYSTEMROOT%\System32 にインストールされます。|
 |msodbcsqlr17.rll または <br> msodbcsqlr13.rll または <br> msodbcsqlr11.rll|ドライバー ライブラリに付随するリソース ファイル。 このファイルは、SYSTEMROOT%\System32\1033 にインストールされます。| 
 |s13ch_msodbcsql.chm または <br> s11ch_msodbcsql.chm |ドライバーのデータ ソースを作成する方法が説明されているデータ ソース ウィザードのヘルプ ファイル。 このファイルは %SYSTEMROOT%\System32\1033 にインストールされます。 <br /> <br /> **注:** ODBC Driver 17 for chm ファイルはありません。 |  
-|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> ODBC Driver 11 用の msodbcsql.h は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK にインストールされます。 <br /> ODBC Driver 11 用の msodbcsql.h は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK にインストールされます。| 
+|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> ODBC Driver 17 または 13 用の msodbcsql.h は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK にインストールされます。 <br /> ODBC Driver 11 用の msodbcsql.h は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK にインストールされます。| 
 |msodbcsql17.lib または <br> msodbcsql13.lib または <br> msodbcsql11.lib|ドライバーの一部である **bcp** ユーティリティ関数を呼び出すために必要なライブラリ ファイル。<br /><br /> **注:**  ご利用のプログラムでこのライブラリ ファイルを参照する場合は、ライブラリ ファイルがシステム パス、およびアプリケーションを使用するプログラムのシステム パスに含まれることを確認してください。<br /><br /> msodbcsql17.lib や msodbcsql13.lib は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK にインストールされます。<br /> msodbcsql11.lib は %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK にインストールされます。|
 
   

@@ -1,13 +1,11 @@
 ---
-title: setLastUpdateCount メソッド (SQLServerDataSource) |Microsoft ドキュメント
+title: setLastUpdateCount メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.setLastUpdateCount
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5487631a-1107-4169-84ca-b77fd09bea66
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0df8131bc286a4ffbc0fefb6f5dcb54f8447c26f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3369fbc84cb16ed0f9b587ed20fe7fe368d11b02
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842807"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084915"
 ---
 # <a name="setlastupdatecount-method-sqlserverdatasource"></a>setLastUpdateCount メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  セット、**ブール**lastUpdateCount プロパティが有効かどうかを示す値。  
+  lastUpdateCount プロパティが有効であるかどうかを示す **Boolean** 値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,10 +38,10 @@ public void setLastUpdateCount(boolean lastUpdateCount)
 #### <a name="parameters"></a>パラメーター  
  *lastUpdateCount*  
   
- **true** lastUpdateCount が有効になっている場合。 それ以外の場合は、 **false**です。  
+ lastUpdateCount が有効な場合は **true** です。 それ以外の場合は、 **false**です。  
   
-## <a name="remarks"></a>解説  
- LastUpdateCount プロパティ設定されている場合**true**、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]最後だけを返すから SQL ステートメントからの更新数が、サーバーに渡されます。 LastUpdateCount プロパティ設定されている場合**false**ドライバーはすべての更新数が発生した可能性があるすべてのトリガーによって返されるものなどを返します。 LastUpdateCount プロパティが設定されていない場合、 [getLastUpdateCount](../../../connect/jdbc/reference/getlastupdatecount-method-sqlserverdatasource.md)メソッドの既定値を返します**true**です。  
+## <a name="remarks"></a>Remarks  
+ lastUpdateCount プロパティが **true** に設定されている場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] は、サーバーに渡された SQL ステートメントから最終的な更新数のみを返します。 lastUpdateCount プロパティが **false** に設定されている場合、ドライバーは、発生した可能性があるすべてのトリガーが返した更新数を含む、すべての更新数を返します。 lastUpdateCount プロパティが設定されていない場合、[getLastUpdateCount](../../../connect/jdbc/reference/getlastupdatecount-method-sqlserverdatasource.md) メソッドは既定値の **true** を返します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -31,12 +31,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa181fba5468b88586a4d69f5a361a64112b2018
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9644b055e57c3a08c551c2eb0544ca77b083456
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833120"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169162"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -297,7 +297,7 @@ SQLDIAG STOP /A Instance1
 >  **SQLdiag** サービスを停止するには、 **SQLDiag STOP** または **SQLDIAG STOP_ABORT** を使用します。 **SQLdiag** またはその他の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを停止する場合は、Windows サービス コンソールを使用しないでください。  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>SQLdiag の自動開始と停止  
- 指定された時間に診断データ収集を自動的に開始および停止するには、**/B***start_time* 引数と **/E***stop_time* 引数を使用します (24 時間形式を使用)。 たとえば、ほぼ 02:00:00 に定期的に発生する問題のトラブルシューティングを行う場合、01:00 に診断データの収集を自動的に開始して、03:00:00 に自動的に終了するように **SQLdiag** を構成することができます。 開始時間および終了時間を指定するには、 **/B** 引数と **/E** 引数を使用します。 24 時間表記を使用して、YYYYMMDD_HH:MM:SS 形式で開始日時と終了日時を正確に指定します。 開始時間や終了時間を相対的に指定するには、次の例のように、開始時間および終了時間の前に **+** を付け、日付部分 (YYYYMMDD_) を省略します。次の例では、 **SQLdiag** は情報の収集を開始する前に 1 時間待機し、それから情報の収集を 3 時間行い、停止して終了します。  
+ 指定された時間に診断データ収集を自動的に開始および停止するには、**/B**_start\_time_ 引数と **/E**_stop\_time_ 引数を使用します (24 時間形式を使用)。 たとえば、ほぼ 02:00:00 に定期的に発生する問題のトラブルシューティングを行う場合、01:00 に診断データの収集を自動的に開始して、03:00:00 に自動的に終了するように **SQLdiag** を構成することができます。 開始時間および終了時間を指定するには、 **/B** 引数と **/E** 引数を使用します。 24 時間表記を使用して、YYYYMMDD_HH:MM:SS 形式で開始日時と終了日時を正確に指定します。 開始時間や終了時間を相対的に指定するには、次の例のように、開始時間および終了時間の前に **+** を付け、日付部分 (YYYYMMDD_) を省略します。次の例では、 **SQLdiag** は情報の収集を開始する前に 1 時間待機し、それから情報の収集を 3 時間行い、停止して終了します。  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -358,7 +358,7 @@ SQLDIAG START /A Instance1
  **SQLdiag** サービスの一時停止はサポートされていません。  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>複数の SQLdiag インスタンスの実行  
- 同一コンピューター上で複数の **SQLdiag** インスタンスを実行するには、コマンド ラインで **/A***SQLdiag_application_name* を指定します。 これは、同一の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから別の診断セットを同時に収集する場合に便利です。 たとえば、簡単なデータ収集を連続して実行するように、 **SQLdiag** の名前付きインスタンスを構成できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で特定の問題が発生した場合は、既定の **SQLdiag** インスタンスを実行し、その問題に対する診断データを収集したり、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスが収集を要望している問題に対する一連の診断データを収集したりできます。  
+ 同一コンピューター上で複数の **SQLdiag** インスタンスを実行するには、コマンド ラインで **/A**_SQLdiag\_application\_name_ を指定します。 これは、同一の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから別の診断セットを同時に収集する場合に便利です。 たとえば、簡単なデータ収集を連続して実行するように、 **SQLdiag** の名前付きインスタンスを構成できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で特定の問題が発生した場合は、既定の **SQLdiag** インスタンスを実行し、その問題に対する診断データを収集したり、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスが収集を要望している問題に対する一連の診断データを収集したりできます。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>クラスター化された SQL Server インスタンスからの診断データの収集  
  **SQLdiag** は、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスからの診断データの収集をサポートしています。 クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから診断データを収集するには、構成ファイル SQLDiag.Xml 内にある **\<Machine>** 要素の **name** 属性に **"."** が指定されていることを確認してください。コマンド ラインで **/G** 引数は指定しないでください。 既定では、構成ファイル内の **name** 属性に対して **"."** が指定されていて、 **/G** 引数はオフになっています。 通常、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから収集する場合、構成ファイルの編集やコマンド ライン引数の変更は必要ありません。  
