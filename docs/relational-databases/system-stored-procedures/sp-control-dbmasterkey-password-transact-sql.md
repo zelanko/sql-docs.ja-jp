@@ -48,10 +48,10 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  マスター キーのパスワードを指定します。 *パスワード*は**nvarchar**します。  
   
  @action= N'add'  
- 指定したデータベースの資格情報を、資格情報ストアに追加します。 資格情報には、データベースのマスター キーのパスワードが格納されます。 渡される値@actionは**nvarchar**します。  
+ 指定したデータベースの資格情報を、資格情報ストアに追加します。 資格情報には、データベースのマスター キーのパスワードが格納されます。 渡される値@actionは **nvarchar** します。  
   
  @action=N'drop'  
- 指定したデータベースの資格情報を、資格情報ストアから削除します。 渡される値@actionは**nvarchar**します。  
+ 指定したデータベースの資格情報を、資格情報ストアから削除します。 渡される値@actionは **nvarchar** します。  
   
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、キーの暗号化解除や暗号化にデータベースのマスター キーが必要となる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインスタンスのサービス マスター キーを使用して、データベースのマスター キーの暗号化解除が試行されます。 復号化に失敗した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマスター _ キー資格情報をマスター _ キーを必要なデータベースと同じファミリ GUID を持つ資格情報ストアを検索します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。  
