@@ -1,30 +1,27 @@
 ---
-title: unwrap メソッド (SQLServerStatement) |Microsoft ドキュメント
+title: unwrap メソッド (SQLServerStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0439fe23c859caf5884925f881c5bbc4167c164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7a6823a9f6f57e1ebf1348f35d4a1478100962bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785556"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>unwrap メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  アクセス許可を指定したインターフェイスを実装するオブジェクトを返します、 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特定のメソッドです。  
+  指定されたインターフェイスを実装するオブジェクトを返します。このメソッドから返されたオブジェクトを使用することで、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドにアクセスできます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +33,7 @@ public <T> T unwrap(Class<T> iface)
 #### <a name="parameters"></a>パラメーター  
  *iface*  
   
- 型のクラス**T**インターフェイスを定義します。  
+ インターフェイスを定義する **T** 型のクラスです。  
   
 ## <a name="return-value"></a>戻り値  
  指定されたインターフェイスを実装するオブジェクトです。  
@@ -44,19 +41,19 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- [Unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) JDBC 4.0 仕様で導入された java.sql.Wrapper インターフェイスでメソッドが定義されています。  
+## <a name="remarks"></a>Remarks  
+ [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) メソッドは、JDBC 4.0 仕様で導入された java.sql.Wrapper インターフェイスで定義されています。  
   
- アプリケーションに固有の JDBC api 拡張機能にアクセスする必要があります、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]です。 Unwrap メソッドは、クラスがベンダー拡張機能を公開する場合のこのオブジェクトを拡張するクラスをパブリックにアンラッピングをサポートします。  
+ アプリケーションは [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能にアクセスする必要がある場合があります。 unwrap メソッドは、クラスがベンダー拡張を公開する場合、このオブジェクトが拡張するパブリック クラスへのアンラッピングをサポートします。  
   
- このメソッドが呼び出されると、オブジェクトにアンラップ、 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)クラスです。  
+ このメソッドが呼び出されると、オブジェクトは [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスにアンラップされます。  
   
- コード例を参照してください[大規模なデータの更新のサンプル](../../../connect/jdbc/updating-large-data-sample.md)、または[unwrap メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)です。  
+ コード例は、「[大規模なデータ サンプルの更新](../../../connect/jdbc/updating-large-data-sample.md)、または[unwrap メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)します。  
   
- 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)です。  
+ 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
   
 ## <a name="see-also"></a>参照  
- [isWrapperFor メソッド&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   
+ [isWrapperFor メソッド &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

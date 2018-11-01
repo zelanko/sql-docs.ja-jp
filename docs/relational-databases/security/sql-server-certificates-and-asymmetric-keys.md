@@ -14,16 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11dde12055fd45d78db1d55a15f6547798aa213a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8a477f90842e7aa6c1fb9da5347e0555927a036
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689140"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874330"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  公開キー暗号化 (PKI) は、メッセージを秘匿する方法の 1 つです。この方法では、ユーザーが *公開* キーと *秘密* キーを作成します。 秘密キーは秘匿されますが、公開キーは他のユーザーに配布できます。 2 つのキーは数学的に相関していますが、公開キーを使用して秘密キーを簡単に導出することはできません。 公開キーはデータの暗号化に使用され、秘密キーはデータの暗号化解除に使用されます。 公開キーを使用して暗号化されたメッセージは、正しい秘密キーを使用しないと暗号化解除できません。 2 つの異なるキーが存在するので、これらのキーは *非対称*です。  
+
+ 公開キー暗号化は、メッセージを秘匿する方法の 1 つです。この方法では、ユーザーが "*公開*" キーと "*秘密*" キーを作成します。 秘密キーは秘匿されますが、公開キーは他のユーザーに配布できます。 2 つのキーは数学的に相関していますが、公開キーを使用して秘密キーを簡単に導出することはできません。 公開キーを使用して、対応する秘密キーでのみ復号化できるデータ暗号化を行うことができます。 これは、秘密キーの所有者へのメッセージの暗号化に使用できます。 同様に、秘密キーの所有者は、公開キーでのみ復号化できるデータ暗号化を行うことができます。 このような使い方により、証明書に含まれる情報が秘密キーの所有者によって暗号化される、コンテンツの作成者を保証するデジタル証明書の基礎が形成されます。 暗号化キーと復号化キーは異なるので、これらは "*非対称*" キーと呼ばれます。
   
  証明書と非対称キーは、どちらも非対称暗号化を使用するための手段です。 証明書は、有効期限や発行者などの詳細情報を格納できることから、非対称キーのコンテナーとしてよく使用されます。 この 2 つのメカニズムに暗号化アルゴリズムの違いはなく、同じキー長が指定された場合の強度にも違いはありません。 一般に、データベース内の他の種類の暗号化キーを暗号化する場合や、コード モジュールに署名する場合は、証明書を使用します。  
   

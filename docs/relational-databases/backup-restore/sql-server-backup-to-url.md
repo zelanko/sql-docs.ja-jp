@@ -5,21 +5,18 @@ ms.date: 11/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 71766cb569c2a9f6302783472f564636368e1bae
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175295"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072226"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +59,24 @@ ms.locfileid: "40175295"
   
  このプロセスでは、まず、Azure サブスクリプション内に Windows Azure ストレージ アカウントを作成します。 このストレージ アカウントは、このストレージ アカウントで作成されたすべてのコンテナーとオブジェクトに対する完全な管理者権限を持つ管理者アカウントです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows Azure ストレージ アカウントの名前とアクセス キー値を使用して認証し、Microsoft Azure BLOB ストレージ サービスに対して BLOB の書き込みと読み取りを実行することも、特定のコンテナーで生成された Shared Access Signature トークンを使用して読み取り/書き込み権限を付与することもできます。 Azure ストレージ アカウントの詳細については、「 [Azure ストレージ アカウントについて](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) 」をご覧ください。Shared Access Signature の詳細については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報はこの認証情報を格納するため、バックアップ操作または復元操作中に使用されます。  
   
+###  <a name="blockbloborpageblob"></a> ブロック BLOB とページ BLOB へのバックアップ 
+ Microsoft Azure BLOB ストレージ サービスに格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 SQL Server のバックアップでは、使用されている Transact-SQL 構文に応じていずれかの BLOB タイプを使用できます。資格情報内でストレージ キーが使用されている場合は、ページ BLOB が使用されます。Shared Access Signature が使用されている場合は、ブロック BLOB が使用されます。
+ 
+ ブロック BLOB へのバックアップは、SQL Server 2016 またはそれ以降のバージョンでのみ使用できます。 SQL Server 2016 またはそれ以降のバージョンを実行している場合は、ページ ブロックではなくブロック BLOB にバックアップすることをお勧めします。 主な理由は次のとおりです。
+- BLOB アクセスを承認する方法としては、ストレージ キーよりも Shared Access Signature の方が安全です。
+- 複数のブロック BLOB にバックアップしてバックアップと復元のパフォーマンスを向上させ、より大きなデータベースのバックアップをサポートすることができます。
+- [ブロック BLOB](https://azure.microsoft.com/pricing/details/storage/blobs/) は[ページ BLOB](https://azure.microsoft.com/pricing/details/storage/page-blobs/) よりも安価です。 
+
+ブロック BLOB にバックアップする場合、指定できる最大ブロック サイズは 4 MB です。 1 つのブロック BLOB ファイルの最大サイズは、4 MB * 50000 = 195 GB です。 データベースが 195 GB を超える場合は、以下をお勧めします。
+- バックアップの圧縮の使用
+- 複数のブロック BLOB へのバックアップ
+
 ###  <a name="Blob"></a> Microsoft Azure BLOB ストレージ サービス  
  **ストレージ アカウント:** ストレージ アカウントは、すべてのストレージ サービスの開始点となります。 Microsoft Azure BLOB ストレージ サービスにアクセスするには、まず Windows Azure ストレージ アカウントを作成します。 詳細については、「 [ストレージ アカウントの作成](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。  
   
  **コンテナー:** コンテナーは一連の BLOB をグループ化します。コンテナーには BLOB を無制限に格納できます。 Microsoft Azure BLOB ストレージ サービスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを書き込むには、少なくともルート コンテナーを作成しておく必要があります。 コンテナーで Shared Access Signature トークンを生成し、特定のコンテナーでのみオブジェクトへのアクセス権を付与できます。  
   
- **BLOB:** 任意の種類とサイズのファイルです。 Microsoft Azure BLOB ストレージ サービスに格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、使用する Transact-SQL 構文に応じていずれかの BLOB の種類を使用できます。 BLOB は、https://\<ストレージ アカウント>.blob.core.windows.net/\<コンテナー>/\<BLOB> という URL 形式を使用してアドレス指定できます。 Microsoft Azure BLOB ストレージ サービスの詳細については、「 [.NET を使用して Azure Blob Storage を使用する](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)」をご覧ください。 ページ BLOB とブロック BLOB の詳細については、「 [Understanding Block and Page Blobs](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)」 (ブロック BLOB とページ BLOB について) をご覧ください。  
+ **BLOB:** 任意の種類とサイズのファイルです。 Microsoft Azure BLOB ストレージ サービスに格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、使用する Transact-SQL 構文に応じていずれかの BLOB の種類を使用できます。 BLOB は、 https://\<ストレージ アカウント>.blob.core.windows.net/\<コンテナー>/\<BLOB> という URL 形式を使用してアドレス指定できます。 Microsoft Azure BLOB ストレージ サービスの詳細については、「 [.NET を使用して Azure Blob Storage を使用する](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)」をご覧ください。 ページ BLOB とブロック BLOB の詳細については、「 [Understanding Block and Page Blobs](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)」 (ブロック BLOB とページ BLOB について) をご覧ください。  
   
  ![Azure BLOB ストレージ](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure BLOB ストレージ")  
   

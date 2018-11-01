@@ -41,7 +41,7 @@ public final void setCursorName(java.lang.String name)
 #### <a name="parameters"></a>パラメーター  
  *name*  
   
- カーソル名を含む  です。  
+ カーソル名を含む **String** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

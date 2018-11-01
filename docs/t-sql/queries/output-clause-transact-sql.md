@@ -5,9 +5,7 @@ ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088364"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336291"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +134,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 明示的な列参照です。 変更するテーブルへのすべての参照は、たとえば INSERTED**.***column_name* のように、INSERTED プレフィックスまたは DELETED プレフィックスで正しく修飾されている必要があります。  
+ 明示的な列参照です。 変更するテーブルへのすべての参照は、たとえば INSERTED **.**_column\_name_ のように、INSERTED プレフィックスまたは DELETED プレフィックスで正しく修飾されている必要があります。  
   
  $action  
  MERGE ステートメントでのみ使用できます。 MERGE ステートメントの OUTPUT 句に **nvarchar(10)** 型の列を指定します。この MERGE ステートメントは、行に対して実行されたアクションに従って 'INSERT'、'UPDATE'、'DELETE' のいずれかの値をそれぞれの行について返します。  
   
 ## <a name="remarks"></a>Remarks  
- OUTPUT \<dml_select_list> 句と OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } 句を単一の INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントで定義することができます。  
+ OUTPUT \<dml_select_list> 句と OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } 句を単一の INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントで定義することができます。  
   
 > [!NOTE]  
 >  特に指定しない限り、OUTPUT 句への参照は、OUTPUT 句と OUTPUT INTO 句の両方を参照します。  
@@ -357,7 +354,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. OUTPUT INTO を UPDATE ステートメントと共に使用する  
- 次の例では、`VacationHours` テーブル内の最初の 10 個の行について、`Employee` 列を 25% 増しに更新します。 `OUTPUT` 句は、`UPDATE` ステートメントを適用する前の `deleted.VacationHours` 列の `VacationHours` の値と、`inserted.VacationHours` 列の更新後の値を `@MyTableVar``table` 変数に返します。  
+ 次の例では、`VacationHours` テーブル内の最初の 10 個の行について、`Employee` 列を 25% 増しに更新します。 `OUTPUT` 句は、`VacationHours` を適用する前の `UPDATE` 列の `deleted.VacationHours` の値と、`inserted.VacationHours` 列の更新後の値を `@MyTableVar` テーブル変数に返します。  
   
  この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。  
   
@@ -514,7 +511,7 @@ GO
 ```  
   
 ### <a name="h-using-output-in-an-instead-of-trigger"></a>H. OUTPUT を INSTEAD OF トリガー内で使用する  
- 次の例では、トリガー内で `OUTPUT` 句を使用し、トリガー操作の結果を返しています。 まず、`ScrapReason` テーブルでビューを作成し、次にそのビューに対して `INSTEAD OF INSERT` トリガーを定義して、ユーザーがベース テーブルの `Name` 列しか変更できないようにします。 列 `ScrapReasonID` はベース テーブルの `IDENTITY` 列であるため、トリガーはユーザーが指定した値を無視します。 これにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は正しい値を自動的に生成できるようになります。 また、ユーザーが `ModifiedDate` に指定した値も無視され、現在の日付が設定されます。 `OUTPUT` 句は、`ScrapReason` テーブルに実際に挿入された値を返します。  
+ 次の例では、トリガー内で `OUTPUT` 句を使用し、トリガー操作の結果を返しています。 まず、`ScrapReason` テーブルでビューを作成し、次にそのビューに対して `INSTEAD OF INSERT` トリガーを定義して、ユーザーがベース テーブルの `Name` 列しか変更できないようにします。 列 `ScrapReasonID` はベース テーブルの `IDENTITY` 列であるため、トリガーはユーザーが指定した値を無視します。 これにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は正しい値を自動的に生成できるようになります。 また、ユーザーが `ModifiedDate` に指定した値も無視され、現在の日付が設定されます。 `OUTPUT` 句は、`ScrapReason` テーブルに実際に挿入された値を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -632,7 +629,7 @@ GO
 ```  
   
 ### <a name="k-inserting-data-returned-from-an-output-clause"></a>K. OUTPUT 句から返されたデータを挿入する  
- 次の例では、`OUTPUT` ステートメントの `MERGE` 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 `MERGE` ステートメントは、`SalesOrderDetail` テーブル内で処理された注文に基づいて、`ProductInventory` テーブルの `Quantity` 列を毎日更新します。 また、在庫が `0` 以下になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
+ 次の例では、`OUTPUT` ステートメントの `MERGE` 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 `MERGE` ステートメントは、`Quantity` テーブル内で処理された注文に基づいて、`ProductInventory` テーブルの `SalesOrderDetail` 列を毎日更新します。 また、在庫が `0` 以下になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,13 +1,11 @@
 ---
 title: クエリ ヒント (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -53,17 +51,17 @@ helpviewer_keywords:
 - MIN_GRANT_PERCENT query hint
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
+- QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e0840861f98a9d178bbee29d9c6b7e82433dd97
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 521a3a19ce2e1278d856cc3ade5feed67b4182c5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44089992"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906312"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.locfileid: "44089992"
   | NO_PERFORMANCE_SPOOL   
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
-  | PARAMETERIZATION { SIMPLE | FORCED }  
+  | PARAMETERIZATION { SIMPLE | FORCED }   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -155,7 +153,7 @@ ms.locfileid: "44089992"
   
  このクエリ ヒントは、インデックス付きビューを直接使用することを実質的に禁止し、クエリ プラン内のインデックス付きビューにインデックスを指定します。  
   
- クエリの SELECT 要素でビューが直接参照され、WITH (NOEXPAND) または WITH (NOEXPAND, INDEX( *index_value* [ **,***...n* ] ) ) が指定されている場合のみ、インデックス付きビューは展開されません。 クエリ ヒント WITH (NOEXPAND) の詳細については、「[FROM](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
+ クエリの SELECT 要素でビューが直接参照され、WITH (NOEXPAND) または WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) が指定されている場合のみ、インデックス付きビューは展開されません。 クエリ ヒント WITH (NOEXPAND) の詳細については、「[FROM](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
  INSERT、UPDATE、MERGE、DELETE ステートメントなど、ステートメントの SELECT 要素内のビューのみが、ヒントの影響を受けます。  
   
@@ -241,7 +239,7 @@ ms.locfileid: "44089992"
 > 詳細については、「[プラン ガイドを使用したクエリのパラメーター化動作の指定](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)」を参照してください。
   
  SIMPLE は、クエリ オプティマイザーに対して簡易パラメーター化を試行するように指示します。 FORCED は、クエリ オプティマイザーに対して強制パラメーター化を試行するように指示します。 詳細については、「クエリ処理アーキテクチャ ガイド」の「[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)」および「クエリ処理アーキテクチャ ガイド」の「[簡易パラメーター化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)」を参照してください。  
-  
+
  RECOMPILE  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に、クエリの新しい一時的なプランを生成し、クエリ実行完了直後にそのプランを破棄するよう指示します。 生成されたクエリ プランは、RECOMPILE ヒントを指定しないで同じクエリを実行したときにキャッシュに格納されるプランを置き換えません。 RECOMPILE を指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はクエリ プランをキャッシュして再利用します。 クエリ プランをコンパイルする場合、RECOMPILE クエリ ヒントは、クエリ内のローカル変数の現在値を使用し、クエリがストアド プロシージャ内にある場合は任意のパラメーターに渡された現在値を使用します。  
   
@@ -252,7 +250,7 @@ ms.locfileid: "44089992"
   
  このようなプランが可能でない場合は、クエリ実行の後でエラー検出を行うのではなく、クエリ オプティマイザーがエラーを返します。 行は可変長列で構成されている可能性があります。[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が処理できる範囲を超えた最大可能サイズを持つように、行を定義できます。 通常、可能な最大サイズに関係なく、アプリケーションは[!INCLUDE[ssDE](../../includes/ssde-md.md)]の処理能力で実際に対応できるサイズの行を格納します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]が長すぎる行を検出した場合は、実行エラーが返されます。  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+<a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
  
  ヒント名を**単一引用符で囲んで**指定し、1 つ以上の追加のヒントをクエリ プロセッサに指定します。   
@@ -261,20 +259,16 @@ ms.locfileid: "44089992"
  
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  クエリ プランを生成するときに、最適化された入れ子になったループ結合に対して並べ替え操作 (バッチ ソート) を使用しないように、クエリ プロセッサに指示します。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 を指定した場合と同じです。
-*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンの [基数推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を LEGACY_CARDINALITY_ESTIMATION=ON に設定した場合と同じです。
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  <a name="use_hint_ce70"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンの[カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を LEGACY_CARDINALITY_ESTIMATION=ON に設定した場合と同じです。
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
  クエリ オプティマイザー修正プログラム (SQL Server の累積的な更新プログラムとサービス パックでリリースされた変更) を有効にします。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を QUERY_OPTIMIZER_HOTFIXES=ON に設定した場合と同じです。
 *  'DISABLE_PARAMETER_SNIFFING'  
  クエリをコンパイルするときに最初に使用されていたパラメーター値にクエリ プランが依存しないようにするため、1 つまたは複数のパラメーターを指定してクエリをコンパイルする際に、平均データ分布を使用するようにクエリ オプティマイザーに指示します。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を PARAMETER_SNIFFING=OFF に設定した場合と同じです。
-*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'  
- 相関関係を考慮する AND 述語フィルターを見積もるときに、最低限の選択度を使用して SQL Server にプランを生成させます。 これは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンのカーディナリティ推定モデルで[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 を使用した場合と同じで、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のバージョンのカーディナリティ推定モデルで使用した場合と同じ効果があります。
-*  'DISABLE_OPTIMIZER_ROWGOAL'  
- TOP、OPTION (FAST N)、IN、EXISTS のいずれかのキーワードを含むクエリで行の目標の調整を使用しないプランを SQL Server に生成させます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 を指定した場合と同じです。
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'    <a name="use_hint_correlation"></a> 相関関係を考慮する AND 述語を見積もるときに、最低限の選択度を使用して SQL Server にプランを生成させます。 これは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンのカーディナリティ推定モデルで[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 を使用した場合と同じで、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のバージョンのカーディナリティ推定モデルで使用した場合と同じ効果があります。
+*  'DISABLE_OPTIMIZER_ROWGOAL'  <a name="use_hint_rowgoal"></a> TOP、OPTION (FAST N)、IN、EXISTS のいずれかのキーワードを含むクエリで行の目標の調整を使用しないプランを SQL Server に生成させます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 を指定した場合と同じです。
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  カーディナリティ推定が必要なすべての先頭のインデックス列に対して、クイック統計情報 (ヒストグラム修正) を自動的に生成できるようにします。 カーディナリティを推定するために使用されるヒストグラムは、この列の実際の最大値または最小値を考慮するクエリのコンパイル時に調整されます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 を指定した場合と同じです。 
-*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のクエリ オプティマイザーの[基数推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルで、結合に対して、既定の基本含有の推定の代わりに、単純な含有の推定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にクエリ プランを生成させます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 を指定した場合と同じです。 
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'    <a name="use_hint_join_containment"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のクエリ オプティマイザーの[カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルで、結合に対して、既定の基本含有の推定の代わりに、単純な含有の推定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にクエリ プランを生成させます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 を指定した場合と同じです。 
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  現在のデータベース互換性レベルに対応する[カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒントを使用して、[データベース スコープ構成](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)の LEGACY_CARDINALITY_ESTIMATION=ON 設定または[トレース フラグ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 をオーバーライドします。
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
@@ -284,13 +278,23 @@ ms.locfileid: "44089992"
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  バッチ モード アダプティブ結合を無効にします。 詳細については、「[バッチ モード アダプティブ結合](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)」を参照してください。
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
- クエリがデータベース互換レベル *n* でコンパイルされている場合と同じように、クエリ レベルでのクエリ オプティマイザーの動作を設定します。*n* はサポートされているデータベース互換レベルです。 現在サポートされている *n* の値の一覧については、「[sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)」をご覧ください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 以降)。   
+ クエリがデータベース互換レベル *n* でコンパイルされている場合と同じように、クエリ レベルでのクエリ オプティマイザーの動作を設定します。*n* はサポートされているデータベース互換レベルです。 現在サポートされている *n* の値の一覧については、「[sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)」をご覧ください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 以降)。    
  
-    > [!NOTE]
-    > 既定またはレガシのカーディナリティ推定の設定が、データベース スコープ構成、トレース フラグ、または QUERYTRACEON などの別のクエリ ヒントによって適用されている場合、QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ヒントはそれをオーバーライドしません。   
-    > このヒントは、クエリ オプティマイザーの動作にのみ影響します。 特定のデータベース機能の可用性など、[データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)に依存する可能性のある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他の機能には影響しません。   
-  
-  サポートされているすべての USE HINT 名の一覧は、動的管理ビューの [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) を使用して照会できます。    
+   > [!NOTE]
+   > 既定またはレガシのカーディナリティ推定の設定が、データベース スコープ構成、トレース フラグ、または QUERYTRACEON などの別のクエリ ヒントによって適用されている場合、QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ヒントはそれをオーバーライドしません。   
+   > このヒントは、クエリ オプティマイザーの動作にのみ影響します。 特定のデータベース機能の可用性など、[データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)に依存する可能性のある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他の機能には影響しません。  
+   > このヒントについて詳しくは、「[Developer’s Choice: Hinting Query Execution model](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)」(開発者の選択: クエリ ヒント実行モデル) をご覧ください。
+    
+*  'QUERY_PLAN_PROFILE'      
+ クエリの軽量プロファイリングを有効にします。 この新しいヒントを含むクエリが完了したら、新しい拡張イベントである query_plan_profile が起動されます。 この拡張イベントでは、実行の統計と query_post_execution_showplan 拡張イベントのような実際の実行プラン XML が公開されますが、新しいヒントを含むクエリのみが対象です。 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降)。 
+ 
+  > [!NOTE]
+  > query_post_execution_showplan 拡張イベントの収集を有効にした場合は、サーバー上で実行しているすべてのクエリに標準的なプロファイリング インフラストラクチャが追加されるので、全体的なサーバー パフォーマンスに影響する可能性があります。      
+  > *query_thread_profile* 拡張イベントのコレクションを有効にして軽量プロファイリング インフラストラクチャを代わりに使用する場合、パフォーマンス オーバーヘッドがはるかに少なくなりますが、依然として全体的なサーバー パフォーマンスに影響します。       
+  > query_plan_profile 拡張イベントを有効にした場合、軽量プロファイリング インフラストラクチャは QUERY_PLAN_PROFILE を使用して実行されるクエリに対してのみ有効になるので、サーバー上の他のワークロードには影響しません。 このヒントを使用して、サーバー ワークロードの他の部分に影響を与えずに特定のクエリをプロファイリングします。
+  > 軽量プロファイリングについて詳しくは、「[Developers Choice: Query progress - anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」(開発者の選択: クエリの進行状況 - いつでも、どこでも) をご覧ください。
+ 
+サポートされているすべての USE HINT 名の一覧は、動的管理ビューの [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) を使用して照会できます。    
 
 > [!TIP]
 > ヒント名では大文字と小文字が区別されません。   
@@ -298,10 +302,10 @@ ms.locfileid: "44089992"
 > [!IMPORTANT] 
 > 一部の USE HINT ヒントは、グローバルまたはセッション レベルで有効になっているトレース フラグや、データベース スコープ構成設定と競合する場合があります。 この場合、クエリ レベル ヒント (USE HINT) が常に優先されます。 USE HINT が別のクエリ ヒントまたはクエリ レベルで (QUERYTRACEON などによって) 有効になっているトレース フラグと競合する場合、クエリを実行しようとすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成されます。 
 
- USE PLAN N **'***xml_plan***'**     
- **'***xml_plan***'** で指定されているクエリの既存のクエリ プランを使用するように、クエリ オプティマイザーを設定します。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
+ USE PLAN N **'**_xml\_plan_**'**     
+ **'**_xml\_plan_**'** で指定されているクエリの既存のクエリ プランを使用するように、クエリ オプティマイザーを設定します。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
   
-TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** 指定されたテーブル ヒントを *exposed_object_name* に対応するテーブルまたはビューに適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
+TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint>  **[,]**..._n_ ] ] **)** *exposed_object_name* に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
   
  *exposed_object_name* には、次のいずれかの参照を指定できます。  
   
@@ -311,7 +315,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
   
  テーブル ヒントを指定しないで *exposed_object_name* を指定した場合、オブジェクトのテーブル ヒントの一部としてクエリに指定された任意のインデックスは無視され、インデックスの使用はクエリ オプティマイザーによって決定されます。 この手法を使用すると、元のクエリに変更を加えることができない場合に INDEX テーブル ヒントの効果を除去できます。 例 J を参照してください。  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } *exposed_object_name* に対応するテーブルまたはビューにクエリ ヒントとして適用するテーブル ヒントを指定します。 これらのヒントの説明については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } *exposed_object_name* に対応するテーブルまたはビューにクエリ ヒントとして適用するテーブル ヒントを指定します。 これらのヒントの説明については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 詳細については、「解説」を参照してください。  
   

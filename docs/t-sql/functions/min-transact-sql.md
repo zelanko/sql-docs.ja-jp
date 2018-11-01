@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MIN
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - minimum values [SQL Server]
 - values [SQL Server], minimum
 ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
-caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 748719839738d5e6f013acb827304909c709b594
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3113f1ef74472f0f3d745eaf0b9205154e1408c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089106"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142682"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,21 +37,13 @@ ms.locfileid: "43089106"
   
 ## <a name="syntax"></a>構文  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-MIN ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```sql  
   
 -- Aggregation Function Syntax  
 MIN ( [ ALL | DISTINCT ] expression )  
   
--- Aggregation Function Syntax   
-MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
+-- Analytic Function Syntax   
+MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -69,7 +58,7 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
   
  詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* は必須です。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  

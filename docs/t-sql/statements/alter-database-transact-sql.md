@@ -1,12 +1,10 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_TSQL
@@ -29,20 +27,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "42802571"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252139"
 ---
-# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
+# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
 データベースの特定の構成オプションを変更します。 
 
 この記事では、選択した SQL 製品について、構文、引数、注釈、アクセス許可、例を紹介します。
 
-構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。 
+構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
 ## <a name="click-a-product"></a>製品をクリックしてください
 
@@ -53,16 +51,16 @@ ms.locfileid: "42802571"
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />論理サーバー](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[SQL Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />論理サーバー](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="overview"></a>概要
 
 SQL Server では、このステートメントはデータベース、またはそのデータベースに関連付けられているファイルおよびファイル グループを変更します。 データベースに対するファイルやファイル グループの追加と削除、データベースおよびデータベースのファイルやファイル グループの属性の変更、データベースの照合順序の変更、データベース オプションの設定を行えます。 データベース スナップショットは変更できません。 レプリケーションに関連するデータベース オプションを変更するには、[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を使用してください。  
-   
+
 解説が長くなるため、ALTER DATABASE の構文は複数の記事に分けて説明します。  
 
 ALTER DATABASE  
@@ -85,7 +83,7 @@ ALTER DATABASE のデータベース互換レベルに関連した SET オプシ
   
 ## <a name="syntax"></a>構文  
   
-```  
+```
 -- SQL Server Syntax  
 ALTER DATABASE { database_name  | CURRENT }  
 {  
@@ -105,20 +103,20 @@ ALTER DATABASE { database_name  | CURRENT }
   <filegroup_updatability_option>::=  
   
 <option_spec>::=  
-  <auto_option> ::=   
+  <auto_option> ::=
   <change_tracking_option> ::=  
-  <cursor_option> ::=   
-  <database_mirroring_option> ::=   
+  <cursor_option> ::=
+  <database_mirroring_option> ::=
   <date_correlation_optimization_option> ::=  
   <db_encryption_option> ::=  
   <db_state_option> ::=  
   <db_update_option> ::=  
   <db_user_access_option> ::=  <delayed_durability_option> ::=  <external_access_option> ::=  
   <FILESTREAM_options> ::=  
-  <HADR_options> ::=    
+  <HADR_options> ::=
   <parameterization_option> ::=  
   <query_store_options> ::=  
-  <recovery_option> ::=   
+  <recovery_option> ::=
   <service_broker_option> ::=  
   <snapshot_option> ::=  
   <sql_option> ::=   
@@ -179,7 +177,7 @@ ALTER DATABASE ステートメントは自動コミット モード (既定の�
 |COLLATE|MODIFY FILEGROUP READ_ONLY|  
 |READ_ONLY|PAGE_VERIFY|  
   
-プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
+プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
 プロシージャ キャッシュは、次のシナリオでもフラッシュされます。  
   
@@ -276,27 +274,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />論理サーバー *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />論理サーバー\*_** &nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 論理サーバー
+## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 論理サーバー
 
 ## <a name="overview"></a>概要
 
@@ -335,7 +320,7 @@ ALTER DATABASE { database_name | CURRENT }
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical'} 
+  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
   | SERVICE_OBJECTIVE = 
        {  <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) } 
@@ -355,8 +340,10 @@ ALTER DATABASE { database_name | CURRENT }
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
       }
 
 <option_spec> ::= 
@@ -397,7 +384,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])    
 
 データベースのサービス階層を変更します。 
 
@@ -412,8 +399,11 @@ ALTER DATABASE current
 
 MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
 
-データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。 次の表では、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サービス層でサポートされる MAXSIZE 値と既定値 (D) を示します。  
-  
+データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。 
+
+> [!NOTE]
+> **MAXSIZE** 引数は、ハイパースケール サービス層の単一データベースには適用されません。 ハイパースケール層のデータベースは、必要に応じて 100 TB まで拡張できます。 SQL Database サービスによってストレージが自動的に追加されます。最大サイズを設定する必要はありません。
+
 **DTU に基づくモデル**
 
 |**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
@@ -484,7 +474,7 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80` です。  
+パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0``S1``S2`、`S3``S4``S6``S7``S9``S12``P1``P2``P4``P6``P11``P15``GP_GEN4_1``GP_GEN4_2``GP_GEN4_4``GP_GEN4_8``GP_GEN4_16``GP_GEN4_24``BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16``BC_GEN4_24``GP_Gen5_2``GP_Gen5_4``GP_Gen5_8``GP_Gen5_16``GP_Gen5_24``GP_Gen5_32``GP_Gen5_48``GP_Gen5_80``BC_Gen5_2``BC_Gen5_4``BC_Gen5_8``BC_Gen5_16``BC_Gen5_24``BC_Gen5_32``BC_Gen5_48``BC_Gen5_80``HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16``HS_GEN4_24`、`HS_Gen5_2``HS_Gen5_4``HS_Gen5_8``HS_Gen5_16``HS_Gen5_24``HS_Gen5_32``HS_Gen5_48``HS_Gen5_80` です。  
 
 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL Database サービス レベル概要](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」、「[DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(DTU に基づくリソースの制限)、「[vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(vCore に基づくリソースの制限) を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。 
   
@@ -492,9 +482,15 @@ MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)
 
 柔軟なプールには、既存のデータベースを追加するには、ELASTIC_POOL にデータベースの SERVICE_OBJECTIVE を設定し、柔軟なプールの名前を指定します。 同じサーバー内の別の柔軟なプールにデータベースを変更するのに、このオプションを使用することもできます。 詳しくは、[SQL Database エラスティック プールの作成と管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)に関するページをご覧ください。 柔軟なプールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を 1 つのデータベースのパフォーマンス レベルに設定します。  
 
+> [!NOTE]
+> ハイパースケール サービス層のデータベースをエラスティック プールに追加することはできません。
+
 ADD SECONDARY ON SERVER \<partner_server_name>  
 
 主キー、地理的レプリケーションにローカルのデータベースを作成して、パートナー サーバーで同じ名前での地理的レプリケーションのセカンダリ データベースを作成し、非同期的に新しいセカンダリへのプライマリからのデータのレプリケーションを開始します。 セカンダリ上に同じ名前のデータベースが既に存在する場合、コマンドは失敗します。 コマンドは、プライマリとなるローカル データベースをホストしているサーバーの master データベースで実行されます。  
+
+> [!IMPORTANT]
+> ハイパースケール サービス層では、geo レプリケーションは現在サポートされていません。
   
 WITH ALLOW_CONNECTIONS { **ALL** | NO }  
 
@@ -557,7 +553,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS
   
 ALTER DATABASE ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクション モードでは許可されません。  
   
-プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
+プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
 次のシナリオではプロシージャ キャッシュもフラッシュされます。既定のオプションを使用しているデータベースに対して、複数のクエリを実行します。 データベースはその後削除されます。    
   
@@ -640,27 +636,14 @@ ALTER DATABASE db1 FAILOVER
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />論理サーバー</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 ## <a name="overview"></a>概要
 
@@ -731,7 +714,7 @@ CURRENT
   
 ALTER DATABASE ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクション モードでは許可されません。  
   
-プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
+プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
 次のシナリオではプロシージャ キャッシュもフラッシュされます。既定のオプションを使用しているデータベースに対して、複数のクエリを実行します。 データベースはその後削除されます。    
   
@@ -776,27 +759,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />論理サーバー</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL データ ウェアハウス
+## <a name="azure-sql-data-warehouse"></a>Azure SQL データ ウェアハウス
 
 ## <a name="overview"></a>概要
 
@@ -850,9 +820,9 @@ SERVICE_OBJECTIVE
 これらのアクセス許可が必要です。  
   
 - サーバー レベル プリンシパル ログイン (プロビジョニング処理で作成されたもの) または  
-- `dbmanager` データベース ロールのメンバー。  
+- メンバー、 `dbmanager` データベース ロール。  
   
-所有者が `dbmanager` ロールのメンバーである場合を除き、データベースの所有者はデータベースを変更することはできません。  
+所有者のメンバーである場合を除き、データベースの所有者は、データベースを変更ことはできません、 `dbmanager` ロールです。  
   
 ## <a name="general-remarks"></a>全般的な解説  
 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。  
@@ -903,29 +873,16 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 [SQL Data Warehouse の参照記事](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />論理サーバー</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+## <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
 
 ## <a name="overview"></a>概要
 

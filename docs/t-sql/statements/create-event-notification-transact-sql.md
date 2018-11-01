@@ -24,12 +24,12 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ea3d835790ad9a438a2b98e5f4b1fb90fc20f14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e5d4242d33cba22b4921997f11b8738b1423611
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629150"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169272"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,14 +95,14 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  メッセージ交換は、イベント通知が削除されるまで開いたままになります。 特定のエラーが発生すると、メッセージ交換が予定よりも早く閉じる場合があります。 明示的にメッセージ交換の一部または全部を終了することで、対象サービスでそれ以上メッセージを受信しないようにできます。  
   
- { **'***broker_instance_specifier***'** | **'current database'** }  
+ { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
  *broker_service* を解決する Service Broker インスタンスを指定します。 **sys.databases** カタログ ビューの **service_broker_guid** 列にクエリを実行することで、特定の Service Broker の値を取得できます。 現在のデータベースの Service Broker インスタンスを指定するには、**'current database'** を使用します。 **'current database'** は大文字と小文字を区別しない文字列リテラルです。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] には、イベント通知用のメッセージ型とコントラクトが含まれています。 したがって、コントラクト名 (`http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`) を指定する Service Broker 開始サービスが既に存在するため、開始サービスを作成する必要はありません  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] には、イベント通知用のメッセージ型とコントラクトが含まれています。 したがって、コントラクト名 (`http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`) を指定する Service Broker 開始サービスが既に存在するため、開始サービスを作成する必要はありません。  
   
  イベント通知を受け取る対象サービスは、この既存のコントラクトに従う必要があります。  
   
@@ -131,7 +131,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  以下に示す A と B の例では、`TO SERVICE 'NotifyService'` 句の GUID ('8140a771-3c4b-4479-8ac0-81008ab17984') は、例をセットアップしたコンピューターに固有の値です。 ここで示した例の場合は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの GUID です。  
 >   
->  これらの例をコピーして実行するには、この GUID をお使いのコンピューターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの GUID に置き換える必要があります。 上述の「引数」セクションで説明したように、**'***broker_instance_specifier***'** は、sys.databases カタログ ビューの service_broker_guid 列にクエリを実行することで取得できます。  
+>  これらの例をコピーして実行するには、この GUID をお使いのコンピューターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの GUID に置き換える必要があります。 前述の「引数」セクションで説明したように、sys.databases カタログ ビューの service_broker_guid 列に対してクエリを実行することで **'**_broker\_instance\_specifier_**'** を取得することができます。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. サーバー スコープのイベント通知を作成する  
  次の例では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用する対象サービスの設定で必要となるオブジェクトを作成します。 対象サービスでは、イベント通知専用の開始サービスのメッセージ型とコントラクトが参照されます。 作成後は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで `Object_Created` トレース イベントが発生するたびに通知を送信する対象サービスに対して、イベント通知が作成されます。  

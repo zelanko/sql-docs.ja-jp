@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
 - alerts [SQL Server], responding to
 - responding to alerts
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37ddfc40c4037174dde0967b2ae9687ee47c03cd
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c7d801e08c7426b0dda2bfe08d791a384d22a880
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774240"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845770"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,9 +72,9 @@ ms.locfileid: "42774240"
   
 4.  応答を定義する警告を右クリックし、 **[プロパティ]** を選択します。  
   
-5.  *[<アラート名> 警告のプロパティ]* ダイアログ ボックスの **[ページの選択]** で **[応答]** を選択します。  
+5.  [_alert\_name_ **警告のプロパティ]** ダイアログ ボックスで、**[ページの選択]** から **[応答]** を選択します。  
   
-6.  **[ジョブの実行]** チェック ボックスをオンにし、 **[ジョブの実行]** チェック ボックスの下に表示されている一覧から、警告の発生時に実行するジョブを選択します。 **[新しいジョブ]** をクリックすることで、新しいジョブを作成できます。 **[ジョブの表示]** をクリックすると、ジョブに関するより詳しい情報を表示できます。 **[新しいジョブ]** ダイアログ ボックスと *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで使用できるオプションの詳細については、「[ジョブの作成](../../ssms/agent/create-a-job.md)」と「[ジョブの表示](../../ssms/agent/view-a-job.md)」を参照してください。  
+6.  **[ジョブの実行]** チェック ボックスをオンにし、 **[ジョブの実行]** チェック ボックスの下に表示されている一覧から、警告の発生時に実行するジョブを選択します。 **[新しいジョブ]** をクリックすることで、新しいジョブを作成できます。 **[ジョブの表示]** をクリックすると、ジョブに関するより詳しい情報を表示できます。 **[新しいジョブ]** ダイアログ ボックスと [**ジョブのプロパティ**_job\_name_] ダイアログ ボックスで使用できるオプションの詳細については、「[ジョブの作成](../../ssms/agent/create-a-job.md)」と「[ジョブの表示](../../ssms/agent/view-a-job.md)」を参照してください。  
   
 7.  警告がアクティブになったときにオペレーターに通知する場合は、 **[オペレーターに通知する]** チェック ボックスをオンにします。 **[オペレーター一覧]** の **[電子メール]**、 **[ポケットベル]**、 **[Net Send]** から、オペレーターに通知する方法を選択します (複数選択可)。 **[新しいオペレーター]** をクリックすることで、新しいオペレーターを作成できます。 **[オペレーターの表示]** をクリックすることで、オペレーターに関するより詳しい情報を表示できます。 **[新しいオペレーター]** ダイアログ ボックスと **[オペレーターのプロパティの表示]** ダイアログ ボックスで使用できるオプションの詳細については、「 [Create an Operator](../../ssms/agent/create-an-operator.md) 」と「 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)」を参照してください。  
   

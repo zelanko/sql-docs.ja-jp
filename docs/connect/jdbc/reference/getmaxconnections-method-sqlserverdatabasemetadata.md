@@ -36,7 +36,7 @@ public int getMaxConnections()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 許容されるコンカレント接続の最大数を示すです。  
+ 許容されるコンカレント接続の最大数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

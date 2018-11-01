@@ -26,7 +26,7 @@ ms.locfileid: "47801850"
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>getStringFunctions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  データベースで使用できる、システム関数のコンマ区切りの一覧を取得します。  
+  データベースで使用できる**文字列**関数のコンマ区切りの一覧を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +36,7 @@ public java.lang.String getStringFunctions()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**を格納している、**文字列**関数。  
+ **文字列**を格納している、**文字列**関数。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

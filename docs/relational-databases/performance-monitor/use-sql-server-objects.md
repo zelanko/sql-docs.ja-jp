@@ -32,12 +32,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db97dcaf1b8ad8833127fd5e4907d3c553629247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 995728047e02ccf2127ba8c85949bde3031007dd
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788050"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324625"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,6 +113,7 @@ ms.locfileid: "47788050"
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続しているユーザーの数など、一般的なサーバー全体の利用状況についての情報を提供します。|  
 |[SQL Server:HADR Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|現在割り当てられているロック構造の総数など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性レプリカについての情報を提供します。|  
 |[SQL Server:HADR Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] データベース レプリカについての情報を提供します。|  
+|[SQL Server:HTTP Storage](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)|「[Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を使用するときに Microsoft Azure Storage アカウントを監視するための情報を提供します。|  
 |[SQLServer:Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用されるデータベース ページなど、内部リソースのラッチについての情報を提供します。|  
 |[SQLServer:Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)|ロック タイムアウトやデッドロックなど、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]による各ロック要求についての情報を提供します。 このオブジェクトには、複数のインスタンスが存在することがあります。|  
 |[SQLServer:LogPool FreePool](../../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md)|ログ プール内の空きプールに関する統計を説明します。|

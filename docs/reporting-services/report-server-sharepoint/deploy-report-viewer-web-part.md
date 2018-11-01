@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 566b8c860f097ae46de84076b0f355f8115bde6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769010"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085178"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
@@ -27,7 +27,8 @@ SharePoint Server 2013 または SharePoint Server 2016 環境にレポート �
 ## <a name="requirements"></a>必要条件
 
 > [!IMPORTANT]
-> Reporting Services SharePoint 統合モードを既に構成している場合は、現時点でこの Web パーツをインストールすることはできません。
+> バージョン "15.X.X.X" 以降では、ReportViewerWebPart を既存の Reporting Services SharePoint 統合モード共有サービス アプリケーションとサイド バイ サイドでインストールできます。
+> .wsp ソリューションのこの更新プログラムでは、新しいファイルが導入されているので、Uninstall-SPSolution コマンドレットを使用して以前のソリューションを取り下げ、Install-SPSolution コマンドレットを使用して新しい .wsp を配置し直す必要があります。
 >
 
 **サポートされている SharePoint Server のバージョン:**

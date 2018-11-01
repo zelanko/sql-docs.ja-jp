@@ -23,7 +23,7 @@ ms.locfileid: "47772606"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このトピックでは、スパース列の SQL Server サポート用の OLE DB ドライバーについて説明します。 スパース列の詳細については、次を参照してください。 [OLE DB Driver for SQL Server でスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)します。 [スパース列に対する列およびカタログ メタデータの表示 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+  このトピックでは、スパース列の SQL Server サポート用の OLE DB ドライバーについて説明します。 スパース列の詳細については、次を参照してください。 [OLE DB Driver for SQL Server でスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)します。 サンプルについては、「[スパース列に対する列およびカタログ メタデータの表示 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)」を参照してください。  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB ステートメント メタデータ  
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降では、新しい DBCOLUMNFLAGS フラグ値である DBCOLUMNFLAGS_SS_ISCOLUMNSET を使用できます。 この値は、**column_set** 値である列に対して設定する必要があります。 DBCOLUMNFLAGS フラグを使用して取得できます、 *dwFlags* icolumnsinfo::getcolumnsinfo と icolumnsrowset::getcolumnsrowset によって返される行セットの DBCOLUMN_FLAGS 列のパラメーター。  

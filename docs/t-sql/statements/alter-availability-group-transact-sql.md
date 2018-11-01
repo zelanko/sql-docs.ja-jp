@@ -5,9 +5,7 @@ ms.date: 01/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cb006fec0248d22f5ec49e166e767787044a345
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 02ba00fe35a31237ddf86f0782f63f822a0f5935
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713874"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776960"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -276,7 +273,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL は、ADD REPLICA ON 句では必須で、MODIFY REPLICA ON 句では省略可能です。  詳細については、「 [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  エンドポイントの URL または読み取り専用のルーティングの URL を指定するための URL を指定します。 URL のパラメーターは次のとおりです。  
   
  *system-address*  
@@ -331,7 +328,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  手動シード処理を指定します (既定)。 この方法では、プライマリ レプリカでデータベースのバックアップを作成し、セカンダリ レプリカでそのバックアップを手動で復元する必要があります。  
   
- BACKUP_PRIORITY **=***n*  
+ BACKUP_PRIORITY **=**_n_  
  同じ可用性グループ内の他のレプリカと比較して、このレプリカでバックアップを実行する優先順位を指定します。 値は 0 ～ 100 の範囲の整数です。 これらの値には次の意味があります。  
   
 -   1 ～ 100 は、その可用性レプリカがバックアップの実行に対して選択される可能性があることを示します。 1 は最も低い優先順位を示し、100 は最も高い優先順位を示します。 たとえば、BACKUP_PRIORITY = 1 の場合、現在使用可能な可用性レプリカにそれより高い優先順位のものがない場合にのみ、その可用性レプリカがバックアップの実行に対して選択されます。  
@@ -359,7 +356,7 @@ ALTER AVAILABILITY GROUP group_name
   
  詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
- READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  読み取りを目的とした接続要求をこの可用性レプリカにルーティングするために使用する URL を指定します。 これは、SQL Server データベース エンジンがリッスンしている URL です。 通常、SQL Server データベース エンジンの既定のインスタンスは、TCP ポート 1433 でリッスンします。  
   
  名前付きインスタンスの場合は、[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 動的管理ビューの **port** 列と **type_desc** 列をクエリすることで、ポート番号を取得できます。 サーバー インスタンスは Transact-SQL リスナーを使用します (**type_desc='TSQL'**)。  
@@ -402,7 +399,7 @@ ALTER AVAILABILITY GROUP group_name
  なし  
  この可用性レプリカがプライマリ レプリカの場合は、読み取り専用のルーティングをサポートしないことを指定します。 これは既定の動作です。 MODIFY REPLICA ON と併せて使用すると、この値は既存のリスト (ある場合) を無効にします。  
   
- SESSION_TIMEOUT **=***seconds*  
+ SESSION_TIMEOUT **=**_seconds_  
  セッション タイムアウト期間を秒単位で指定します。 このオプションを指定しない場合、この時間は既定で 10 秒に設定されます。 最小値は 5 秒です。  
   
 > [!IMPORTANT]  
@@ -453,7 +450,7 @@ ALTER AVAILABILITY GROUP group_name
   
  強制フェールオーバーの制限、前提条件、推奨事項について、およびフェールオーバー グループ内の以前のプライマリ データベースに対する強制フェールオーバーの影響については、「[可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)」を参照してください。  
   
- ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
+ ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
  この可用性グループの新しい可用性グループ リスナーを定義します。 プライマリ レプリカでのみサポートされます。  
   
 > [!IMPORTANT]  
@@ -480,12 +477,12 @@ ALTER AVAILABILITY GROUP group_name
  \<ag_name>  
  分散可用性グループの半分を占める可用性グループの名前を指定します。  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
  可用性グループに関連付けられているリスナーの URL パスを指定します。  
   
  LISTENER 句は必須です。  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  可用性グループに関連付けられているリスナーの URL を指定します。 URL のパラメーターは次のとおりです。  
   
  *system-address*  
@@ -537,7 +534,7 @@ ALTER AVAILABILITY GROUP group_name
  \<add_listener_option>  
  ADD LISTENER には、次のいずれかのオプションを指定できます。  
   
- WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
+ WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
  可用性グループ リスナーが動的ホスト構成プロトコル (DHCP) を使用することを指定します。  必要に応じて、ON 句を使用して、このリスナーを作成するネットワークを識別します。 DHCP は、可用性グループの可用性レプリカをホストする各サーバー インスタンスに使用される単一のサブネットに限定されます。  
   
 > [!IMPORTANT]  
@@ -547,7 +544,7 @@ ALTER AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  可用性グループ リスナーが、DHCP を使用する代わりに、1 つ以上の静的 IP アドレスを使用することを指定します。 複数のサブネットにわたる可用性グループを作成するには、各サブネットのリスナー構成に静的 IP アドレスが 1 つ必要です。 サブネットの静的 IP アドレスには、IPv4 アドレスまたは IPv6 アドレスを使用できます。 ネットワーク管理者に連絡し、新しい可用性グループの可用性レプリカをホストする各サブネットの静的 IP アドレスを入手してください。  
   
  例 :  
@@ -570,22 +567,22 @@ ALTER AVAILABILITY GROUP group_name
   
  例: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
+ MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
  この可用性グループに対する既存の可用性グループ リスナーを変更します。 プライマリ レプリカでのみサポートされます。  
   
- \<modify_listener_option>  
+ \<modify\_listener\_option\>  
  MODIFY LISTENER には、次のいずれかのオプションを指定できます。  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
- 指定した IP アドレスを *dns_name* で指定されている可用性グループ リスナーに追加します。  
+ ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ 指定した IP アドレスを *dns\_name* で指定されている可用性グループ リスナーに追加します。  
   
  PORT **=** *listener_port*  
  このセクションで既に説明したこの引数に関する説明を参照してください。  
   
- RESTART LISTENER **‘***dns_name***’**  
+ RESTART LISTENER **‘**_dns\_name_**’**  
  指定した DNS 名に関連付けられたリスナーを再起動します。 プライマリ レプリカでのみサポートされます。  
   
- REMOVE LISTENER **‘***dns_name***’**  
+ REMOVE LISTENER **‘**_dns\_name_**’**  
  指定した DNS 名に関連付けられたリスナーを削除します。 プライマリ レプリカでのみサポートされます。  
   
  OFFLINE  

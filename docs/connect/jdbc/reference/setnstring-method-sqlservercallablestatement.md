@@ -21,7 +21,7 @@ ms.locfileid: "47833909"
 # <a name="setnstring-method-sqlservercallablestatement"></a>setNString メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、指定された  オブジェクトに設定します。  
+  指定されたパラメーターを、指定された String オブジェクトに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,7 +33,7 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
 #### <a name="parameters"></a>パラメーター  
  *parameterName*  
   
- パラメーターの名前を示す  です。  
+ パラメーターの名前を示す **String** です。  
   
  *value*  
   
@@ -45,7 +45,7 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
 ## <a name="remarks"></a>Remarks  
  このメソッドを使用する必要があります**NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**データ型。  
   
- この setBytes メソッドは、java.sql.CallableStatement インターフェイスの setBytes メソッドで指定されています。  
+ この setNString メソッドは、java.sql.CallableStatement インターフェイスの setNString メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

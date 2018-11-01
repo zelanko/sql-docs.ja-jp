@@ -5,25 +5,22 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085774"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864300"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   **SSISDB** カタログは、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバーに配置した [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) プロジェクトを操作するための中核となります。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -602,7 +599,7 @@ ms.locfileid: "39085774"
 > -   SSISDB を Always On 可用性グループに追加した "*後に*"、**Always On の SSIS サポート**を有効にする必要があります。  
 
 > [!NOTE]
-> この手順の詳細については、SQL Server MVP である Marcos Freccia 氏による、スクリーン ショットが追加されたチュートリアル「[Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/)」 (AG for SQL Server 2016 に SSISDB を追加する) をご覧ください。
+> この手順の詳細については、データ プラットフォームの MVP である Marcos Freccia 氏による、スクリーン ショットが追加されたチュートリアル「[Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/)」(AG for SQL Server 2016 に SSISDB を追加する) をご覧ください。
 
 ####  <a name="Step1"></a> 手順 1: Integration Services カタログを作成する  
   

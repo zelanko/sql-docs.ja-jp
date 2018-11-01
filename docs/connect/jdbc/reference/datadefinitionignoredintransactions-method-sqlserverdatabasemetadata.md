@@ -36,7 +36,7 @@ public boolean dataDefinitionIgnoredInTransactions()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- トランザクション内の DDL ステートメントが無視される場合は、 です。 それ以外の場合は、 **false**です。  
+ トランザクション内の DDL ステートメントが無視される場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

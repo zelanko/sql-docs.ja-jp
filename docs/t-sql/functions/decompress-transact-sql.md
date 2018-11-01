@@ -1,13 +1,11 @@
 ---
 title: DECOMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2015
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECOMPRESS
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2eb8c020127211b25b762d96e6e376be7e234c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d66bede3868b836c47527f51d527ba6b68282e79
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002694"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168772"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 この関数は GZIP アルゴリズムを使用して、入力式の値の圧縮を解除します。 `DECOMPRESS` はバイト配列 (VARBINARY(MAX) 型) を返します。  
   
@@ -41,7 +38,7 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
-**varbinary(***n***)**、**varbinary(max)**、**binary(***n***)** 値。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
+**varbinary(**_n_**)**、**varbinary(max)**、または **binary(**_n_**)** 値。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
 データ型 **varbinary(max)** の値。 `DECOMPRESS` は ZIP アルゴリズムを使用し、入力引数の圧縮を解除します。 ユーザーは、必要な場合、結果をターゲットの型に明示的にキャストする必要があります。  

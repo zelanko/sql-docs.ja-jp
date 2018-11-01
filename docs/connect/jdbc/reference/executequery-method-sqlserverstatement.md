@@ -47,7 +47,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドで規定されています。  
+ この executeQuery メソッドは、java.sql.Statement インターフェイスの executeQuery メソッドで規定されています。  
   
  渡された SQL ステートメントによって 1 つの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクト以外のものが生成された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) がスローされます。  
   

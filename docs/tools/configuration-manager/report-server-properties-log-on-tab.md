@@ -1,5 +1,5 @@
 ---
-title: '[SQL Server のプロパティ] ダイアログ ボックス ([ログオン] タブ) | Microsoft Docs'
+title: レポート サーバーのプロパティ ([ログオン] タブ) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql

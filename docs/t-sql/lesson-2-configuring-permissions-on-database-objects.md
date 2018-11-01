@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aca79a451c925b9c8c7734ecf3545152328a65f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4faa36c3cbef3d0ae84ac62a6cb7e866998ee064
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683760"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878135"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>レッスン 2: データベース オブジェクトに対するアクセス許可の構成
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ Mary にアクセス権を与えるには、 **TestData** データベースに�
 ## <a name="create-views-and-stored-procedures"></a>ビューとストアド プロシージャの作成
 管理者は **Products** テーブルおよび **vw_Names** ビューから SELECT を実行し、 **pr_Names** プロシージャを実行できますが、ユーザー Mary は実行できません。 Mary に必要な権限を付与するには、GRANT ステートメントを使用します。  
 
-### <a name="grant-permission-to-stored-prcoedure"></a>ストアド プロシージャへのアクセス許可の付与  
+### <a name="grant-permission-to-stored-procedure"></a>ストアド プロシージャへのアクセス許可の付与  
 次のステートメントを実行して、 `Mary` ストアド プロシージャの `EXECUTE` 権限を `pr_Names` に与えます。
   
   ```sql  

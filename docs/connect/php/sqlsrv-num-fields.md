@@ -43,7 +43,7 @@ sqlsrv_num_fields( resource $stmt)
 アクティブな結果セットのフィールド数を表す整数値。 エラーが発生すると、ブール値 **false** が返されます。  
   
 ## <a name="example"></a>例  
-次の例では、Adventureworks データベースの *HumanResources.Department* テーブル内にある先頭の 3 つの行について、すべてのフィールドを取得するクエリを実行します。 sqlsrv_num_fields** 関数で、結果セットのフィールド数を判断します。 この結果を利用して、返される各行のフィールドを反復処理してデータを表示します。  
+次の例では、AdventureWorks データベースの *HumanResources.Department* テーブル内にある先頭の 3 つの行について、すべてのフィールドを取得するクエリを実行します。 **sqlsrv_num_fields** 関数で、結果セットのフィールド数を判断します。 この結果を利用して、返される各行のフィールドを反復処理してデータを表示します。  
   
 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   

@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2ff620929c51cde29b82096c6437f7a6bfeefa50
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171824"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838500"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -146,7 +143,7 @@ OPENROWSET
 |ACP|**char**、**varchar**、または **text** データ型の列を、ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コード ページ (ISO 1252) から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|  
 |OEM (既定値)|**char**、**varchar**、または **text** データ型の列を、システムの OEM コード ページから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|  
 |RAW|コード ページの変換は行われません。 これは最も高速なオプションです。|  
-|*code_page*|データ ファイルの文字データのエンコードに使用されているソースのコード ページを示します (例 : 850)。<br /><br /> **\*\* 重要 \*\*** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンはコード ページ 65001 (UTF-8 エンコード) をサポートしません。|  
+|*code_page*|データ ファイルの文字データのエンコードに使用されているソースのコード ページを示します (例 : 850)。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンはコード ページ 65001 (UTF-8 エンコード) をサポートしません。|  
   
  ERRORFILE ='*file_name*'  
  形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。  
@@ -235,7 +232,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
   
  リモートの OLE DB データ ソースにアクセスするとき、信頼関係接続のログイン ID は、クライアントの接続先サーバーからクエリの対象サーバーに自動的に委任されるわけではありません。 したがって、認証の委任を構成する必要があります。  
   
- 指定したデータ ソースにおいて、OLE DB プロバイダーが複数のカタログとスキーマをサポートする場合は、カタログ名とスキーマ名を指定する必要があります。 値を *カタログ* と *スキーマ* OLE DB プロバイダーではサポートしていない場合は省略できます。 プロバイダーがスキーマ名しかサポートしていない場合は、<*スキーマ ***>.<*** オブジェクト*> という形式の 2 部構成の名前を指定する必要があります。 プロバイダーがカタログ名しかサポートしていない場合は、<*カタログ ***>.<*** スキーマ ***>.<*** オブジェクト*> という形式の 3 部構成の名前を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するパススルー クエリには、3 つの部分で構成される名前を指定する必要があります。 詳しくは、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」をご覧ください。  
+ 指定したデータ ソースにおいて、OLE DB プロバイダーが複数のカタログとスキーマをサポートする場合は、カタログ名とスキーマ名を指定する必要があります。 _カタログ_と_スキーマ_の値は、OLE DB プロバイダーではサポートしていない場合は省略できます。 プロバイダーがスキーマ名しかサポートしていない場合は、_スキーマ_**.**_オブジェクト_ という形式の 2 部構成の名前を指定する必要があります。 プロバイダーがカタログ名しかサポートしていない場合は、_カタログ_**.**_スキーマ_**.**_オブジェクト_ という形式の 3 部構成の名前を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するパススルー クエリには、3 つの部分で構成される名前を指定する必要があります。 詳しくは、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」をご覧ください。  
   
  `OPENROWSET` の引数に変数は指定できません。  
   
@@ -262,7 +259,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
   
 -   `INSERT` ステートメントと共に使用する `OPENROWSET BULK` オプションでは、BULK 句でテーブル ヒントがサポートされます。 `TABLOCK` などの通常のテーブル ヒントに加えて、`BULK` 句では、次の特殊なテーブル ヒントを使用できます: `IGNORE_CONSTRAINTS` (`CHECK` および `FOREIGN KEY` 制約のみ無視します)、`IGNORE_TRIGGERS`、`KEEPDEFAULTS`、`KEEPIDENTITY`。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
- `INSERT...SELECT * FROM OPENROWSET(BULK...)` ステートメントの使用方法については、「[データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」をご覧ください。 一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。  
+ `INSERT...SELECT * FROM OPENROWSET(BULK...)` ステートメントの使用方法については、「[データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」をご覧ください。 一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「 [一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。  
   
 > [!NOTE]  
 >  `OPENROWSET` を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 セキュリティの考慮事項については、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。  
@@ -299,7 +296,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 ```  
   
 ### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Microsoft OLE DB Provider for Jet を使用する  
- 次の例では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet を介して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Northwind` データベース内のテーブル `Customers` にアクセスします。  
+ 次の例では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet を介して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Customers` データベース内のテーブル `Northwind` にアクセスします。  
   
 > [!NOTE]  
 >  この例では、Access がインストールされていることを前提としています。 この例を実行するには、Northwind データベースをインストールする必要があります。  

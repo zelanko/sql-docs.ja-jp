@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのアダプティブ クエリの処理 | Microsoft Docs | Microsoft Docs
 description: SQL Server (2017 以降) および Azure SQL Database のクエリ パフォーマンスを向上させるためのアダプティブ クエリ処理の機能です。
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851420"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324635"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Microsoft SQL データベースでのアダプティブ クエリの処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>メモリ許可フィードバック、リソース ガバナー、クエリ ヒント
 実際に許可されるメモリは、リソース ガバナーまたはクエリ ヒントによって決定されるクエリ メモリ制限に従います。
 
-### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>互換性レベルを変更せず、メモリ許可フィードバックを無効にする
+### <a name="disabling-batch-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>互換性レベルを変更せず、バッチ モード メモリ許可フィードバックを無効にする
 メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。 データベースを発生源とするすべてのクエリ実行に対してバッチ モード メモリ許可フィードバックを無効にするには、該当するデータベースとの関連で次を実行します。
 
 ```sql
@@ -132,6 +132,30 @@ LastRequestedMemory では、前のクエリの実行から許可されたメモ
 
 > [!NOTE]
 > パブリック プレビューの行モード メモリ許可フィードバック プランの属性は、バージョン 17.9 以降の SQL Server Management Studio のグラフィカルなクエリ実行プランで表示されます。 
+
+### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>互換性レベルを変更せず、行モード メモリ許可フィードバックを無効にする
+行モード メモリ許可フィードバックは、データベースの互換性レベル 150 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。 データベースを発生源とするすべてのクエリ実行に対して行モード メモリ許可フィードバックを無効にするには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+データベースを発生源とするすべてのクエリ実行に対して行モード メモリ許可フィードバックを再び有効にするには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK を USE HINT クエリ ヒントとして指定することで、特定のクエリの行モード メモリ許可フィードバックを無効にすることもできます。  例 :
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
+
 
 ## <a name="batch-mode-adaptive-joins"></a>バッチ モード アダプティブ結合
 バッチ モード アダプティブ結合機能を使うと、最初の入力のスキャンが "**終わる**" まで、[ハッシュ結合方法または入れ子になったループ結合](../../relational-databases/performance/joins.md)方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、実行中により適切な結合方法に動的に切り替えることができます。

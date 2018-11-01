@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801700"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874370"
 ---
 # <a name="system-settings-master-data-services"></a>システム設定 (マスター データ サービス)
 
@@ -102,6 +102,7 @@ ms.locfileid: "47801700"
 |-----------------------------------|--------------------|-----------------|  
 |**[新しいビジネス ルールの増分数]**|**BusinessRuleDefaultPriorityIncrement**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[システム管理]** 機能領域で、新しい各ビジネス ルールの優先度の増分数を示します。 既定値は **10**です。|  
 |**[ビジネス ルールを適用するメンバーの数]**|**BusinessRuleRealtimeMemberCount**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[エクスプローラー]** 機能領域で、ビジネス ルールを適用するグリッド内のメンバーの最大数を示します。 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]では、ビジネス ルールを適用するアクティブなワークシート内のメンバーの最大数を示します。 既定値は **10000**です。|  
+|**[Business Rule User Script Execute First]\(ビジネス ルール ユーザー スクリプトを最初に実行\)**|**BusinessRuleUserScriptExecuteFirst**|通常、ビジネス ルール アクションは、"既定値"、"値の変更"、"検証"、"外部アクション"、"ユーザー定義アクション スクリプト" の順に実行します。 この設定が **1** に変更されると、"ユーザー定義アクション スクリプト" がビジネス ルール アクションの最初に実行される手順になります。 この設定は、非表示の設定です。 既定値は **0**です。|  
   
  詳細については、「[ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)」を参照してください。  
   

@@ -16,12 +16,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd3a3c2b4461a08a9945af2536a572fb8369f7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f47900bba2230acb18b5e5459c6849b5b9b2c7c8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733928"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905992"
 ---
 # <a name="data-profile-viewer"></a>Data Profile Viewer (Data Profile Viewer)
   データのプロファイル処理では、次に、データ プロファイルを表示して分析します。 このプロファイルは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内でデータ プロファイル タスクを実行してデータ プロファイルを計算した後に表示できます。 データ プロファイル タスクの設定方法および実行方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」をご覧ください。  
@@ -63,7 +63,7 @@ ms.locfileid: "47733928"
 > [!IMPORTANT]  
 >  Data Profile Viewer に用意されているドリル ダウン機能は、元のデータ ソースにライブ クエリを送信します。 これらのクエリは、サーバーのパフォーマンスに悪影響を及ぼす場合があります。  
 >   
->  最近作成されたものではない出力ファイルからドリル ダウンした場合、ドリル ダウン クエリは、元の出力の計算に使用された行セットとは異なる行セットを返す場合があります。  
+>  最近作成されたものではない出力ファイルからドリル ダウンした場合、ドリルダウン クエリは、元の出力の計算に使用された行セットとは異なる行セットを返す場合があります。  
   
  Data Profile Viewer のユーザー インターフェイスの詳細については、「 [Data Profile Viewer の F1 ヘルプ](../../integration-services/control-flow/data-profile-viewer-f1-help.md)」をご覧ください。  
   

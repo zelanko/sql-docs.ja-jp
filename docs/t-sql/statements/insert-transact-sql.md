@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb27c4ca77382887acdbfec788df40e5cbfd76c7
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: 743496bde8f92203232c76ee9dddfc19d98be8d3
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798620"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100503"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -942,7 +942,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>V.  OUTPUT 句から返されたデータを挿入する  
- 次の例では、MERGE ステートメントの OUTPUT 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 MERGE ステートメントは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesOrderDetail` テーブル内で処理される注文に基づいて、`ProductInventory` テーブルの `Quantity` 列を毎日更新します。 また、在庫が 0 になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
+ 次の例では、MERGE ステートメントの OUTPUT 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 MERGE ステートメントは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Quantity` テーブル内で処理される注文に基づいて、`ProductInventory` テーブルの `SalesOrderDetail` 列を毎日更新します。 また、在庫が 0 になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
   
 ```sql
 --Create ZeroInventory table.  

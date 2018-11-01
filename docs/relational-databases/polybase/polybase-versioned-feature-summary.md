@@ -1,31 +1,32 @@
 ---
-title: PolyBase のバージョン管理機能の概要 | Microsoft Docs
+title: PolyBase の機能と制限事項 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/29/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc95156f93b6b87d317348f56e1b06f57439ada2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102110"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874350"
 ---
-# <a name="polybase-versioned-feature-summary"></a>PolyBase のバージョン管理機能の概要
+# <a name="polybase-features-and-limitations"></a>PolyBase の機能と制限事項
+
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
 SQL Server の製品やサービスで利用可能な PolyBase 機能の概要です。  
   
-## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要  
- PolyBase の主な機能と、これらの機能を利用できる製品をまとめた表を次に示します。  
+## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要
+
+PolyBase の主な機能と、これらの機能を利用できる製品をまとめた表を次に示します。  
   
 ||||||
 |-|-|-|-|-|   
@@ -41,8 +42,8 @@ SQL Server の製品やサービスで利用可能な PolyBase 機能の概要�
 |Azure Data Lake Store からデータをエクスポートする|いいえ|いいえ|はい|いいえ|
 |Microsoft BI ツールから PolyBase クエリを実行する|はい|いいえ|はい|はい|   
 
-
 ## <a name="pushdown-computation-supported-t-sql-operators"></a>プッシュダウン計算でサポートされる T-SQL 演算子
+
 SQL Server および APS では、すべての T-SQL 演算子を hadoop クラスターにプッシュダウンできるわけではありません。 次の表は、すべてサポートされている演算子と、サポートされていない演算子のサブセットを示しています。 
 
 ||||
@@ -56,7 +57,36 @@ SQL Server および APS では、すべての T-SQL 演算子を hadoop クラ�
 |並べ替え|いいえ|いいえ|
 
 部分的な集計は、データが SQL Server に達しても Hadoop で集計の一部が発生した後に、最終的な集計を行う必要があることを意味します。 これは、超並列処理システムで一般的な集計の計算方法です。  
+
+## <a name="known-limitations"></a>既知の制限事項
+
+PolyBase には次の制限事項があります。
+
+- 可変長列の全長を含め、最大行サイズは SQL Server で 32 KB 以下、または Azure SQL Data Warehouse で 1 MB 以下にする必要があります。
+
+- PolyBase では、Hive 0.12 以降のデータ型 (つまり、Char(), VarChar()) はサポートされません。
+
+- SQL Server または Azure SQL データ ウェアハウスから ORC ファイル形式にデータをエクスポートするとき、java のメモリ不足エラーに起因し、テキストでいっぱいの列はわずか 50 列に制限されることがあります。 この問題を回避するには、列の一部だけをエクスポートします。
+
+- Hadoop に保存されている暗号化されたデータの読み取りまたは書き込みができません。 これには、HDFS 暗号化ゾーンまたは透過的な暗号化が含まれます。
+
+- KNOX が有効になっている場合、PolyBase は、Hortonworks インスタンスに接続できません。
+
+- transactional = true の Hive テーブルを使用している場合、PolyBase は Hive テーブルのディレクトリにあるデータにアクセスできません。
+
+<!--SQL Server 2016-->
+::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
+
+- [SQL Server 2016 のフェールオーバー クラスターにノードを追加すると、PolyBase の機能をインストールできません](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+::: moniker-end
+- 統合認証はサポートされていません。 現在は、ユーザー名とパスワードのみがサポートされています。  
+- 暗号化は既定で有効になります。 暗号化を無効にするには、... を行う必要があります (thanh と話す)
+- [型マッピングの制限](polybase-type-mapping.md)
+
+
+## <a name="security-and-authentication"></a>セキュリティと認証 
+
 ## <a name="see-also"></a>参照  
- [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)  
-  
-  
+
+[PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)  

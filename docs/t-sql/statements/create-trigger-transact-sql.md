@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40a5424c8c2add69404842c5d7d287dec1b99680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719640"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120439"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -329,7 +329,7 @@ SELECT * FROM deleted;
 ### <a name="optimizing-dml-triggers"></a>DML トリガーの最適化
  トリガーは、トランザクションで (黙示的に、またはそれ以外の方法で) 機能し、開いている間はリソースをロックします。 トランザクションが (COMMIT で) 確認されるか、(ROLLBACK で) 拒否されるまで、ロックされた状態のままになります。 トリガーの実行時間が長くなるほど、別のプロセスがブロックされる可能性が高くなります。 そのため、可能な限り実行時間が短くなるようにトリガーを記述する必要があります。 これを実現するための 1 つの方法は、DML ステートメントが 0 行を変更する際にトリガーを解放することです。 
 
-どの行も変更しないコマンドに対してトリガーを解放するには、システム変数 [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql) を使用します。 
+どの行も変更しないコマンドに対してトリガーを解放するには、システム変数 [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md) を使用します。 
 
 これを行うには、次の T-SQL コード スニペットを使用します。これは各 DML トリガーの先頭にある必要があります。
 
@@ -355,7 +355,7 @@ RETURN;
 >  サーバー スコープの DDL トリガーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーの **[トリガー]** フォルダーに表示されます。 このフォルダーは、 **[Server Objects]** フォルダーにあります。 データベース スコープの DDL トリガーは、**[データベース トリガー]** フォルダーに表示されます。 このフォルダーは対応するデータベースの **[Programmability]** フォルダーにあります。  
   
 ## <a name="logon-triggers"></a>ログオン トリガー  
- ログオン トリガーは、LOGON イベントに応答してストアド プロシージャを実行します。 このイベントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでユーザー セッションが確立されるときに発生します。 ログオン トリガーは、ログインの認証段階が終了した後、ユーザー セッションが実際に確立されるまでの間に発生します。 したがって、通常、エラー メッセージや PRINT ステートメントからのメッセージはユーザーに通知されますが、このトリガー内で発生したすべてのメッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに記録されます。 詳細については、「[ログオン トリガー](../../relational-databases/triggers/logon-triggers.md)」を参照してください。  
+ ログオン トリガーは、LOGON イベントに応答してストアド プロシージャを実行します。 このイベントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでユーザー セッションが確立されるときに発生します。 ログオン トリガーは、ログインの認証段階が終了した後、ユーザー セッションが実際に確立されるまでの間に発生します。 したがって、通常、エラー メッセージや PRINT ステートメントからのメッセージはユーザーに通知されますが、このトリガー内で発生したすべてのメッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに記録されます。 詳細については、「[ログオン トリガー](../../relational-databases/triggers/logon-triggers.md)」を参照してください。  
   
  認証に失敗した場合は、ログオン トリガーが作動しません。  
   

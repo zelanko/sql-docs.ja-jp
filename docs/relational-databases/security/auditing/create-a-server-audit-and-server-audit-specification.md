@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.SQLAUDIT.FILTER.F1
@@ -20,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 71af9860ae7af711c9c8e1cac4132f0046d8e01c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023217"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845410"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +97,7 @@ ms.locfileid: "43023217"
      **[監査の出力先]** にファイルが指定されている場合に、監査データが書き込まれるフォルダーの場所を指定します。  
   
      **省略記号 [...]**  
-     ファイル パスを指定したり監査ファイルの書き込み先フォルダーを作成したりするための **[フォルダーの検索 –***server_name]* ダイアログ ボックスを開きます。  
+     ファイル パスを指定したり監査ファイルの書き込み先フォルダーを作成したりするための **[フォルダーの検索 –**_server\_name]_ ダイアログ ボックスを開きます。  
   
      **[監査ファイルの最大限度]**  
      **[ロールオーバー ファイルの最大数]**  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 249025217a11483d1538c7fe0c72ee1cf0832f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717250"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021926"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル: 自由形式のレポートの作成 (レポート ビルダー)
 このチュートリアルでは、ニュースレターとして機能する、ページ分割されたレポートを作成します。 各ページには、固定テキスト、概要ビジュアル、詳細サンプル セールス データが表示されます。
@@ -505,7 +505,7 @@ ms.locfileid: "47717250"
 * [一覧がある請求書とフォームを作成する](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-クエリ デザイナーの詳細については、「[クエリ デザイナー (レポート ビルダー)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」と「[テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
+クエリ デザイナーの詳細については、「[クエリ デザイナー (レポート ビルダー)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」と「[テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 775880471620acaac5c46bf1efd04d961f60ce6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608660"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085418"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>モバイル レポートから他のモバイル レポートまたは URL にドリルスルーを追加する
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポート内の任意のゲージ、グラフ、またはデータ グリッドから、別のモバイル レポートまたはカスタム URL にドリルスルーを追加することができます。 
@@ -52,7 +52,7 @@ URL または別のモバイル レポートに対するドリルスルーがあ
 1. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]のレイアウト ビューで、ドリルスルー ターゲットをサポートする視覚化を選択します。    
 2. **[ビジュアルのプロパティ]** ウィンドウで **[ドリルスルー ターゲット]** > **[カスタム URL]** の順に選択します。  これにより、ドリルスルー構成用のダイアログ ボックスが開きます。  
   
-3. **[Set drillthrough URL (ドリルスルー URL の設定)]** で、視覚化がクリックされたときに移動する URL を入力し、右側に一覧されている **使用可能なパラメーター** の中から必要なものを選択します。 サンプルの解決済みパラメーター (取り込まれている場合) と組み合わせられたカスタム URL のプレビューが下のパネルに表示されます。  
+3. **[ドリルスルー URL の設定]** で、視覚化がクリックされたときに移動する先の URL を入力し、右側に一覧されている **[使用可能なパラメーター]** の中から必要なものを選択します。 サンプルの解決済みパラメーター (取り込まれている場合) と組み合わせられたカスタム URL のプレビューが下のパネルに表示されます。  
   
    ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   

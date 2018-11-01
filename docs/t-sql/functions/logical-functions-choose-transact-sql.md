@@ -18,12 +18,12 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f3b28d6c3b731a25103c950c784594325f095a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a05685d8bb2e71630f06f155b30e0bbaec7b44
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853320"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906012"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>論理関数 - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,8 +55,11 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  CHOOSE は、配列へのインデックスと同じように機能します。ここで、配列はインデックス引数の後に続く引数で構成されます。 インデックス引数は、後続の値のうちどの値が返されるのかを決定します。  
   
 ## <a name="examples"></a>使用例  
+
+### <a name="a-simple-choose-example"></a>A. 単純な CHOOSE の例
+
  次の例では、入力される値のリストの 3 番目の項目が返されます。  
-  
+ 
 ```  
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
@@ -70,7 +73,9 @@ Developer
   
 (1 row(s) affected)  
 ```  
-  
+
+### <a name="b-simple-choose-example-based-on-column"></a>B. 列に基づく単純な CHOOSE の例
+
  次の例では、`ProductCategoryID` 列の値に基づく単純な文字列が返されます。  
   
 ```  
@@ -94,8 +99,10 @@ ProductCategoryID Expression1
 (4 row(s) affected)  
   
 ```  
+
+### <a name="c-choose-in-combination-with-month"></a>C. MONTH と組み合わせた CHOOSE
   
- 次の例では、従業員が採用された四半期が返されます。 `HireDate` 列から月の値を返すために MONTH 関数が使用されています。  
+ 次の例では、従業員が採用された季節が返されます。 `HireDate` 列から月の値を返すために MONTH 関数が使用されています。  
   
 ```  
 USE AdventureWorks2012;  

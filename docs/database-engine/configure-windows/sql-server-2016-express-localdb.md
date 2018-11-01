@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4d4378091a58ac3f67704c4acff30196963b5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 723d35453dcc01fb333a8c3a212a6a1b288cce8b
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608610"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851787"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,10 @@ Microsoft SQL Server 2016 Express **LocalDB** は、開発者を対象とした 
  
  ## <a name="try-it-out"></a>お試しください 
   
--   SQL Server 2016 Express は、「**[SQL Server ダウンロード](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**」からダウンロードしてインストールできます。 LocalDB は、インストール中に選択する機能で、メディアをダウンロードするときに使用できます。 メディアをダウンロードする場合は、 **[Express Advanced]** または **[LocalDB]** パッケージを選択します。 
+-   SQL Server 2016 Express は、「**[SQL Server ダウンロード](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**」からダウンロードしてインストールできます。 LocalDB は、インストール中に選択する機能で、メディアをダウンロードするときに使用できます。 メディアをダウンロードする場合は、**Visual Studio インストーラー** で **[Express Advanced]** または **[LocalDB]** パッケージを選択します。 **Visual Studio インストーラー**で、**.NET デスクトップ開発** ワークロードの一部として、または個別のコンポーネントとして、SQL Server Express LocalDB をインストールできます。
+
+   > [!TIP]
+   > LocalDB は、Visual Studio 2017 の一部としてインストールすることもできます。 Visual Studio のインストール中に、SQL Server Express LocalDB が含まれている **[.NET デスクトップ開発]** ワークロードを選択します。
   
 -   Azure アカウントをすでにお持ちですか?  すでにお持ちの場合は、 **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
@@ -129,6 +132,5 @@ REM Gather information about the instance of LocalDB
 >  **LocalDB** は、常にユーザーのセキュリティ コンテキストに基づいて実行されます。つまり、 **LocalDB** は、ローカル管理者グループの資格情報で実行されることはありません。 そのため、 **LocalDB** インスタンスで使用されるすべてのデータベース ファイルは、ローカルの Administrators グループのメンバーシップを考慮することなく、所有するユーザーの Windows アカウントを使用してアクセスできる必要があります。  
   
 ## <a name="see-also"></a>参照  
- [SqlLocalDB ユーティリティ](../../tools/sqllocaldb-utility.md)  
-  
-  
+
+[SqlLocalDB ユーティリティ](../../tools/sqllocaldb-utility.md)

@@ -49,7 +49,7 @@ public void end(javax.transaction.xa.Xid xid,
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- メソッドは、javax.transaction.xa.XAResource インターフェイスの  メソッドで規定されています。  
+ end メソッドは、javax.transaction.xa.XAResource インターフェイスの end メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAResource のメソッド](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

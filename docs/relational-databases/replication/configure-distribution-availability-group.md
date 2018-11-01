@@ -1,7 +1,7 @@
 ---
 title: 可用性グループの SQL Server ディストリビューション データベースの構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,18 +20,18 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1af1ffe2423fad7e8b9b2b07f2085bdf0efed1f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
+ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615381"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48818000"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
 
 この記事では、Always On 可用性グループ (AG) の SQL Server レプリケーション ディストリビューション データベースを設定する方法について説明します。
 
-SQL Server 2017 CU 6 では、次のメカニズムを使用して AG のレプリケーション ディストリビューション データベースをサポートするようになりました。
+SQL Server 2017 CU 6 と SQL Server 2016 SP2-CU3 では、次のメカニズムを使用して AG のレプリケーション ディストリビューション データベースをサポートするようになりました。
 
 - ディストリビューション データベース AG にはリスナーが必要です。 パブリッシャーでは、ディストリビューターを追加する場合、リスナー名をディストリビューター名として使用します。
 - レプリケーション ジョブの作成では、リスナー名をディストリビューター名として使用します。
@@ -190,13 +190,15 @@ PUB 上で、このパブリッシャー用のサブスクリプションとパ�
    sp_adddistributiondb 'distribution'
    ```
 
-1. DIST3 上で次を実行します。 
+4. DIST3 上で次を実行します。 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    `@working_directory` の値は、DIST1 および DIST2 に対して指定したものと同じにする必要があります。
+
+4. DIST3 では、サブスクライバ―に対してリンク サーバーを再作成する必要があります。
 
 ## <a name="remove-a-replica-from-distribution-database-ag"></a>ディストリビューション データベース AG からレプリカを削除する
 

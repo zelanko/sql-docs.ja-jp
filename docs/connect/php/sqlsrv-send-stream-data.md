@@ -28,7 +28,7 @@ ms.locfileid: "47790610"
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-パラメーター ストリームからデータをサーバーに送信します。 最大 8 キロバイト (8K) のデータが、sqlsrv_send_stream_data** の呼び出しごとに送信されます。  
+パラメーター ストリームからデータをサーバーに送信します。 最大 8 キロバイト (8K) のデータが、**sqlsrv_send_stream_data** の呼び出しごとに送信されます。  
   
 > [!NOTE]  
 > 既定では、クエリを実行すると、すべてのストリーム データがサーバーに送信されます。 この既定の動作を変更しない場合は、ストリーム データをサーバーに送信するために **sqlsrv_send_stream_data** を使用する必要はありません。 既定の動作を変更する方法の詳細については、 [sqlsrv_query](../../connect/php/sqlsrv-query.md) または [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)のパラメーター セクションを参照してください。  

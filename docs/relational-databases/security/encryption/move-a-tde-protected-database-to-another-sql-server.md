@@ -13,16 +13,16 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 27a66ab0882c057bbaa4aa48962a15e68aeb7abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b4036967c0e542aa418fe80cf42c60c602a1ae1
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612710"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169302"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>別の SQL Server への TDE で保護されたデータベースの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、透過的なデータ暗号化 (TDE) によってデータベースを保護し、そのデータベースを別の [!INCLUDE[tsql](../../../includes/tsql-md.md)]インスタンスに移動する方法について説明します。 TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK は、サーバーの **master** データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。  
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、Transparent Data Encryption (TDE) によってデータベースを保護し、そのデータベースを別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに移動する方法について説明します。 TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK は、サーバーの **master** データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。  
    
 ##  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -172,7 +172,7 @@ ms.locfileid: "47612710"
   
     -   データベースがレプリケーションに含まれている場合、 **[状態]** は **[準備ができていません]** になり、 **[メッセージ]** 列に **[データベースがレプリケートされました]** と表示されます。  
   
-    -   データベースにアクティブな接続が 1 つ以上ある場合、**[状態]** は **[準備ができていません]** になり、**[メッセージ]** 列に [*<number_of_active_connections>*** のアクティブな接続]** (例: **[1 のアクティブな接続]**) と表示されます。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
+    -   データベースにアクティブな接続が 1 つ以上ある場合、**[状態]** は **[準備ができていません]** になり、**[メッセージ]** 列に _[\<number\_of\_active\_connections\>_ **のアクティブな接続]** (例: **[1 のアクティブな接続]**) と表示されます。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
   
      メッセージについてより詳しい情報を得るには、ハイパーリンクのテキストをクリックして利用状況モニターを開きます。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "47612710"
   
 8.  **[データベースのインポート]** ダイアログ ボックスで、 **[アタッチするデータベース]** の下の **[追加]** をクリックします。  
   
-9. **[データベース ファイルの検索:***server_name]* ダイアログ ボックスで、新しいサーバーにアタッチするデータベース ファイルを選択し、**[OK]** をクリックします。  
+9. **[データベース ファイルの検索 –**_server\_name_] ダイアログ ボックスで、新しいサーバーにアタッチするデータベース ファイルを選択し、**[OK]** をクリックします。  
   
      **[データベースのインポート]** ダイアログ ボックスでは、次のオプションを使用できます。  
   

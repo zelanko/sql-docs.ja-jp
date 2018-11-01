@@ -1,5 +1,5 @@
 ---
-title: 'ステップ 3: Java を使用した SQL への接続を概念実証する | Microsoft Docs'
+title: 'ステップ 3: Ruby を使用した SQL への接続を概念実証する | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql

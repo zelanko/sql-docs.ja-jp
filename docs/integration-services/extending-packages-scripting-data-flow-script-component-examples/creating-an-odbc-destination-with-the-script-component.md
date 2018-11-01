@@ -1,7 +1,7 @@
 ---
 title: スクリプト コンポーネントによる ODBC 変換先の作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20cef2b6e736a54d92d18e2a63cf0db9be294b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4678c0230a58f53bd56aa973db94fb97f753dbd1
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816266"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100443"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>スクリプト コンポーネントによる ODBC 変換先の作成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、通常、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 変換先および [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC を使用して、ODBC 変換先にデータを保存します。 ただし、単一のパッケージで使用するアドホックな ODBC 変換先を作成することもできます。 このアドホックな ODBC 変換先を作成するには、次の例に示すように、スクリプト コンポーネントを使用します。  
@@ -38,7 +38,7 @@ ms.locfileid: "47816266"
   
 -   **OdbcCommand** には、位置パラメーターが必要です。 パラメーターの位置は、コマンドのテキストの疑問符 (?) で示されます  (一方、**SqlCommand** では名前付きパラメーターが必要です)。  
   
- この例では、**AdventureWorks** サンプル データベースの **Person.Address** テーブルを使用します。 この例では、このテーブルの第 1 列と第 4 列、つまり **int*AddressID*** 列と **nvarchar(30)City** 列をデータ フローに渡します。 「[特定の種類のスクリプト コンポーネントの開発](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」の変換元、変換、および変換先の例でも、同じデータが使用されます。  
+ この例では、**AdventureWorks** サンプル データベースの **Person.Address** テーブルを使用します。 この例では、このテーブルの第 1 列と第 4 列、つまり **int _AddressID_** 列と **nvarchar(30) _City_** 列をデータ フローに渡します。 「[特定の種類のスクリプト コンポーネントの開発](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」の変換元、変換、および変換先の例でも、同じデータが使用されます。  
   
 #### <a name="to-configure-this-script-component-example"></a>このスクリプト コンポーネントの例を構成するには  
   
@@ -167,6 +167,6 @@ ms.locfileid: "47816266"
     ```  
   
 ## <a name="see-also"></a>参照  
- [スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [スクリプト コンポーネントによる変換先の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

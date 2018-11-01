@@ -3,21 +3,19 @@ title: SQL Server のプライバシーの補足情報 | Microsoft Docs
 ms.date: 4/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40c6bfb24ea3e711ca6b14509921d5599b316ebf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975289"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878115"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server のプライバシーの補足情報
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +25,7 @@ ms.locfileid: "37975289"
 - Azure SQL データベース
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
-- SQL Operations Studio
+- Azure Data Studio
 - Database Migration Assistant
 - SQL Server Migration Assistant
 - MS-SQL の拡張機能
@@ -130,6 +128,7 @@ SQL Server の使用許諾契約ごとに、インターネット ベースの�
 - サーバー構成データ (sp_configure の設定など)
 - 機能構成データ
 - イベント名とエラー コード
+- ハードウェア設定と、OEM 製造元などの識別
 
 Microsoft は SQL Server を使用するその他のプログラムで設定されたアプリケーション名の値を調べます (例: SharePoint またはサードパーティでパッケージ化されたプログラム。この情報は使用状況データが有効になっている場合に Microsoft に送信されるシステム メタデータに含まれます)。 顧客は、システム メタデータ フィールドのエンド ユーザーを特定できる情報などの個人データを配置したり、これらのフィールドに個人データを格納したりするように設計されたアプリケーションを作成することはできません。 
 
@@ -162,6 +161,6 @@ Microsoft は SQL Server を使用するその他のプログラムで設定さ�
 
 ## <a name="telemetry-controls"></a>テレメトリのコントロール
 
-製品のテレメトリのオン/オフを切り替える方法については、https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft を参照してください。
+製品のテレメトリのオン/オフを切り替える方法については、 https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft を参照してください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

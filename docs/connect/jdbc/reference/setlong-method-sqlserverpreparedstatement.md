@@ -26,7 +26,7 @@ ms.locfileid: "47804900"
 # <a name="setlong-method-sqlserverpreparedstatement"></a>setLong メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された java 値に設定します。  
+  指定されたパラメーターを、渡された **long** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,13 +43,13 @@ public final void setLong(int n,
   
  *x*  
   
- A**長い**値。  
+ **長い**値。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この execute メソッドは、java.sql.PreparedStatement インターフェイスの execute メソッドで規定されています。  
+ この setLong メソッドは、java.sql.PreparedStatement インターフェイスの setLong メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

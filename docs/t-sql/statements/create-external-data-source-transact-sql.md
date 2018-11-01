@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39dd5cf772bebf66f8d2a5e827badf4ef0981b66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee5d96f3cc8f73b500643cf405982b242e347a74
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708738"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461057"
 ---
 # <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -194,8 +194,22 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 RDBMS のチュートリアルについては、[クロスデータベース クエリの概要 (列方向のパーティション分割)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/) のトピックを参照してください。  
 
 **BLOB_STORAGE**   
-一括操作の場合のみ、`LOCATION` は Azure Blob Storage とコンテナーの有効な URL にする必要があります。 `LOCATION` URL の末尾に、**/**、ファイル名、または Shared Access Signature パラメーターを配置しないでください。   
-使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 Blob ストレージへのアクセスの例については、例 F の「[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。 
+この型は、一括操作にのみ使用されます。`LOCATION` は Azure Blob Storage とコンテナーの有効な URL にする必要があります。 `LOCATION` URL の末尾に、**/**、ファイル名、または Shared Access Signature パラメーターを配置しないでください。 `CREADENTIAL` は、BLOB オブジェクトがパブリックでない場合に必須です。 例 : 
+```sql
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH (  TYPE = BLOB_STORAGE, 
+        LOCATION = 'https://****************.blob.core.windows.net/invoices', 
+        CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
+);
+```
+使用される資格情報は、`SHARED ACCESS SIGNATURE` を ID として使用して作成する必要があり、SASS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付が UTC 時刻です)。 例 :
+```sql
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+```
+
+Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 Blob ストレージへのアクセスの例については、例 F の「[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。 
 >[!NOTE] 
 >Azure Blob Storage から SQL DW または Parallel Data Warehouse に読み込むには、シークレットが Azure Storage キーである必要があります。
 
@@ -417,7 +431,7 @@ WITH (
 ## <a name="examples-azure-sql-data-warehouse"></a>例: Azure SQL Data Warehouse
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Azure Data Lake Store を参照する外部データ ソースを作成する
-Azure Data Lake Store の接続は、お使いの ADLS URI と Azure Acitve Directory アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションの作成に関するドキュメントは、「[Data Lake Store での Azure Active Directory を使用したサービス間認証](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)」で見つかります。
+Azure Data Lake Store の接続は、お使いの ADLS URI と Azure Acitve Directory アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションの作成に関するドキュメントは、「[Data Lake Store での Azure Active Directory を使用したサービス間認証](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)」で見つかります。
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -466,8 +480,12 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-bulk-operations"></a>例: 一括操作   
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。   
-[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) を使用する一括操作に対し、次のデータ ソースを使用します。 使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。   
+[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) を使用する一括操作に対し、次のデータ ソースを使用します。 使用される資格情報は、`SHARED ACCESS SIGNATURE` を ID として使用して作成する必要があり、SASS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付が UTC 時刻です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。   
 ```sql
+CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '(REMOVE ? FROM THE BEGINING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -475,7 +493,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
         CREDENTIAL = AccessAzureInvoices
     );   
 ```   
-この使用例については、「[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」をご覧ください。
+この使用例については、「[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage)」をご覧ください。
   
 ## <a name="see-also"></a>参照
 [ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  

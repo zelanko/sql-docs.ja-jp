@@ -42,7 +42,7 @@ public boolean last()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- メソッドは、java.sql.ResultSet インターフェイスの  メソッドで規定されています。  
+ この last メソッドは、java.sql.ResultSet インターフェイスの last メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

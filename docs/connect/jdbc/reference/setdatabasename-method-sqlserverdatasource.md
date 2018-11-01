@@ -36,9 +36,9 @@ public void setDatabaseName(java.lang.String databaseName)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *DatabaseName*  
+ *databaseName*  
   
- データベース名を示す ** 値です。  
+ データベース名を示す **String** です。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

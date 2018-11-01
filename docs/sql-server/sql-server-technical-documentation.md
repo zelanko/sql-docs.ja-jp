@@ -3,10 +3,8 @@ title: SQL Server のドキュメント | Microsoft Docs
 ms.date: 08/10/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.portal.f1
@@ -23,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f199e904967d5a0420baed584ec73c5b2fd5b933
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 17598c6692ccb2b90a45fbee3d8cf5bae5245fe8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42774197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857311"
 ---
 # <a name="sql-server-documentation"></a>SQL Server のドキュメント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +46,26 @@ SQL Server は Microsoft データ プラットフォームの中心部です。
 ::: moniker range="= sqlallproducts-allversions"
 |新機能  | リリース ノート  |
 |---------|---------|
+|[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 リリース ノート](../sql-server/sql-server-ver15-release-notes.md)        |
 |[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server **2014** のドキュメントは、[こちら](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)で入手できます。
 ::: moniker-end
 
+::: moniker range="= sql-server-ver15"
+|新機能  | リリース ノート  |
+|---------|---------|
+|[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 リリース ノート](../sql-server/sql-server-ver15-release-notes.md)        |
+::: moniker-end
+
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 |新機能  | リリース ノート  |
 |---------|---------|
 |[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)        |
+
+> [!NOTE]
+> SQL Server 2019 のプレビューがご利用いただけるようになりました。 詳細については、「[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)」(SQL Server 2019 の新機能) を参照してください。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"

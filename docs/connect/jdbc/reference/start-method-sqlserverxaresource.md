@@ -26,7 +26,7 @@ ms.locfileid: "47810170"
 # <a name="start-method-sqlserverxaresource"></a>start メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  オブジェクトで指定されたトランザクション ブランチのために処理を開始します。  
+  Xid オブジェクトで指定されたトランザクション ブランチのために処理を開始します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public void start(javax.transaction.xa.Xid xid,
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- この commit メソッドは、javax.transaction.xa.XAResource インターフェイスの commit メソッドで規定されています。  
+ この start メソッドは、javax.transaction.xa.XAResource インターフェイスの start メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAResource のメソッド](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

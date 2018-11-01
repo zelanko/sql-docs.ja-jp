@@ -1,13 +1,11 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -58,17 +56,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171874"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085538"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -465,12 +462,14 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 >  
 > 主キー制約に含まれている列は、**NOT NULL** から **NULL** に変更できません。  
   
-変更する列が `ENCRYPTED WITH` を使用して暗号化されている場合は、データ型を互換性のあるデータ型に変更することはできますが (INT から BIGINT への変更など)、暗号化設定を変更することはできません。  
+(セキュア エンクレーブなしの) Always Encrypted を使用している場合、変更する列が 'ENCRYPTED WITH' を使用して暗号化されている場合は、データ型を互換性のあるデータ型に変更することはできますが (INT から BIGINT への変更など)、暗号化設定を変更することはできません。  
+
+セキュア エンクレーブを使用する Always Encrypted を使用している場合、列を保護する列暗号化キー (および、キーを変更している場合は新しい列暗号化キー) によってエンクレーブ計算がサポートされている (エンクレーブ対応の列マスター キーで暗号化される) 限り、暗号化設定を変更できます。 詳しくは、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」(セキュア エンクレーブを使用する Always Encrypted) をご覧ください。  
   
  *column_name*  
  変更、追加、または削除する列の名前を指定します。 *column_name* には、最大 128 文字まで指定できます。 **timestamp** データ型で作成された新しい列の場合、*column_name* は省略できます。 **timestamp** データ型列に *column_name* が指定されていない場合は、**timestamp** という名前が使用されます。  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  更新する列の新しいデータ型、または追加する列のデータ型を指定します。 *type_name* は、パーティション テーブルの既存の列には指定できません。 *type_name* には次のいずれかを指定できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型。  
@@ -544,7 +543,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
  ROWGUIDCOL では列に一意な値が格納されるわけではなく、またテーブルに挿入される新しい行に対して値は自動的に生成されません。 各列に対して一意な値を生成するには、INSERT ステートメントで NEWID 関数または NEWSEQUENTIALID 関数を使用するか、NEWID 関数または NEWSEQUENTIALID 関数を列の既定値として使用します。  
   
  [ {ADD | DROP} PERSISTED ]  
- 指定した列に対して PERSISTED プロパティが追加または削除されます。 列は、決定的な式で定義される計算列であることが必要です。 PERSISTED として指定した列では、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって物理的にテーブルに計算値が格納され、計算列が依存している他の列が更新されるとその計算値も更新されます。 計算列を PERSISTED とマークすることにより、決定的であるが不正確な式によって定義されている計算列にインデックスを作成できます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。  
+ 指定した列に対して PERSISTED プロパティが追加または削除されます。 列は、決定的な式で定義される計算列であることが必要です。 PERSISTED として指定した列では、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって物理的にテーブルに計算値が格納され、計算列が依存している他の列が更新されるとその計算値も更新されます。 計算列を PERSISTED とマークすることにより、決定的であるが不正確な式によって定義されている計算列にインデックスを作成できます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。  
   
  パーティション テーブルのパーティション分割列として使用する計算列には、明示的に PERSISTED とマークする必要があります。  
   
@@ -634,7 +633,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
   
  SYSTEM_VERSIONING の設定の引数と組み合わせてこの引数を使用して、既存のテーブルにシステムのバージョン管理を有効にします。 詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[Azure SQL Database のテンポラル テーブルの概要](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)」を参照してください。  
   
- [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 以降、1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM***\<table>* がこのような列の値を返さないようにすることができるようになります。 既定では、期間の列は非表示にします。 を使用するために非表示の列を時間的なテーブルを直接参照するすべてのクエリに明示的に含まする必要があります。  
+ [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 以降、1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM**_\<table/>_ がこのような列の値を返さないようにすることができます。 既定では、期間の列は非表示にします。 を使用するために非表示の列を時間的なテーブルを直接参照するすべてのクエリに明示的に含まする必要があります。  
   
 DROP  
 指定のある 1 つまたは複数の列の定義、計算列の定義、またはテーブルの制約を削除すると、システムは、システムのバージョン管理を使用する列の仕様を削除したりします。  
@@ -716,7 +715,7 @@ COLUMN *column_name*
 > [!NOTE]  
 > オンラインでのインデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 詳細については、「[SQL Server 2016 の各エディションでサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
- MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  現在クラスター化インデックスのリーフ レベルに格納されているデータ行を移動する場所を指定します。 テーブルは新しい位置に移動します。 このオプションは、クラスター化インデックスを作成する制約にのみ適用されます。  
@@ -753,7 +752,7 @@ COLUMN *column_name*
   
  更新された変更の追跡対象の列を [!INCLUDE[ssDE](../../includes/ssde-md.md)] が追跡するかどうかを指定します。 既定値は OFF です。  
   
- SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  次のいずれかの方法でデータのブロックを切り替えます。  
@@ -800,7 +799,7 @@ COLUMN *column_name*
  SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- テーブルのシステムのバージョン管理を無効にするか、テーブルのシステムのバージョン管理を使用します。 テーブルのシステムのバージョン管理を有効にするのには、システムは、データ型、null 値許容制約、およびシステムのバージョン管理の主キー制約の要件を満たしていることを確認します。 HISTORY_TABLE 引数を使用しない場合、システムは 2 つのテーブル間のリンクを作成するには、現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、により、システムは、履歴テーブルには、現在のテーブル内の各レコードの履歴を記録するします。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 HISTORY_TABLE 引数を介してへのリンクを作成し、既存の履歴テーブルを使用する場合に、現在のテーブルと、指定したテーブルの間のリンクが作成されます。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
+ テーブルのシステムのバージョン管理を無効にするか、テーブルのシステムのバージョン管理を使用します。 テーブルのシステムのバージョン管理を有効にするのには、システムは、データ型、null 値許容制約、およびシステムのバージョン管理の主キー制約の要件を満たしていることを確認します。 HISTORY_TABLE 引数を使用しない場合、システムは 2 つのテーブル間のリンクを作成するには、現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、により、システムは、履歴テーブルには、現在のテーブル内の各レコードの履歴を記録するします。 この履歴テーブルの名前になります `MSSQL_TemporalHistoryFor<primary_table_object_id>`です。 HISTORY_TABLE 引数を介してへのリンクを作成し、既存の履歴テーブルを使用する場合に、現在のテーブルと、指定したテーブルの間のリンクが作成されます。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
   
 HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
@@ -812,7 +811,7 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS |
  許可されるテーブル ロックのエスカレーション方法を指定します。  
   
  AUTO  
- このオプションを指定すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で、テーブル スキーマに適したロック エスカレーションの粒度が選択されます。  
+ このオプションを指定すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で、テーブル スキーマに適したロック エスカレーションの粒度が選択されます。  
   
 -   テーブルがパーティション分割されている場合は、ロック エスカレーションをパーティション分割できます。 パーティション レベルにエスカレートされたロックが、後で TABLE 粒度にエスカレートされることはありません。  
   
@@ -822,7 +821,7 @@ TABLE
  テーブルがパーティション分割されているかどうかに関係なく、ロック エスカレーションはテーブルレベルの粒度で行われます。 TABLE は既定値です。  
   
  DISABLE  
- ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] でテーブル ロックを実行して、データの整合性を保護します。  
+ ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でテーブル ロックを実行して、データの整合性を保護します。  
   
  REBUILD  
  パーティション テーブル内のすべてのパーティションを含めたテーブル全体を再構築するには、REBUILD WITH 構文を使用します。 テーブルにクラスター化インデックスが含まれている場合、REBUILD オプションを指定すると、クラスター化インデックスが再構築されます。 REBUILD は ONLINE 操作として実行できます。  
@@ -1446,6 +1445,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### <a name="d-encrypting-a-column"></a>D. 列の暗号化  
+ 次の例では、[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) を使用して列を暗号化する方法を示します。 
+
+最初に、暗号化された列のないテーブルが作成されます。  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ 次に、CEK1 という名前の列暗号化キーとランダム化された暗号化を使用して列 'C2' が暗号化されます。 以下のステートメントを成功させるには、次のことにご注意ください。
+- 列暗号化キーはエンクレーブ対応である必要があります。つまり、エンクレーブ計算を許可する列マスター キーを使用して暗号化する必要があります。
+- ターゲットの SQL Server インスタンスでは、セキュア エンクレーブを使用する Always Encrypted がサポートされている必要があります。
+- ステートメントは、セキュア エンクレーブを使用する Always Encrypted 用に設定された接続経由で、サポートされているクライアント ドライバーを使用して発行される必要があります。
+- 呼び出し元のアプリケーションでは、CEK1 を保護する列マスター キーへのアクセスが必要です。
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> テーブル定義を変更する  
  このセクションの例では、テーブルの定義を変更する方法を示します。  
@@ -1666,7 +1692,7 @@ GO
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. システムのバージョン管理を既存のテーブルに追加します。  
- 次の例では、既存のテーブルをシステムのバージョン管理を追加し、将来の履歴テーブルを作成する方法を示します。 この例では、主キーが定義された `InsurancePolicy` という既存のテーブルがあることを前提としています。 この例では、これらの値を null にすることはできませんので、開始時刻と終了の既定値を使用してシステムのバージョン管理の場合は、新しく作成された期間列を設定します。 この例では、非表示の句を使用して、既存のアプリケーションが、現在のテーブルとの対話に与える影響がないことを確認します。  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] でのみ利用できる HISTORY_RETENTION_PERIOD も使用します。 
+ 次の例では、既存のテーブルをシステムのバージョン管理を追加し、将来の履歴テーブルを作成する方法を示します。 この例では、既存のテーブルと呼ばれるが `InsurancePolicy` 、主キーを定義します。 この例では、これらの値を null にすることはできませんので、開始時刻と終了の既定値を使用してシステムのバージョン管理の場合は、新しく作成された期間列を設定します。 この例では、非表示の句を使用して、既存のアプリケーションが、現在のテーブルとの対話に与える影響がないことを確認します。  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] でのみ利用できる HISTORY_RETENTION_PERIOD も使用します。 
   
 ```sql  
 --Alter non-temporal table to define periods for system versioning  
@@ -1705,7 +1731,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSIS
 ```  
   
 #### <a name="c-disabling-and-re-enabling-system-versioning-to-change-table-schema"></a>C. 無効にして、テーブルのスキーマを変更するシステムのバージョン管理を再度有効にします。  
- この例は、`Department` テーブルでシステムのバージョン管理を無効にし、列を追加し、システムのバージョン管理を再度有効にする方法を示しています。 テーブルのスキーマを変更するのには、システムのバージョン管理を無効化が必要です。 有効にする、DBA は、データの整合性をスキップするは、システムのバージョン管理を再度有効にするときに確認して、パフォーマンスを得るためのメリットを得る、テーブルのスキーマの更新中に、両方のテーブルに更新プログラムを防ぐために、トランザクション内で次の手順を実行します。 統計を作成する、パーティションの切り替え、圧縮を 1 つまたは両方のテーブルに適用するなどのタスクをシステムのバージョン管理を無効にする必要がないことに注意してください。  
+ この例は、システムのバージョン管理を無効にする方法を示しています。、 `Department` テーブル、列を追加、およびシステムのバージョン管理を再び有効にします。 テーブルのスキーマを変更するのには、システムのバージョン管理を無効化が必要です。 有効にする、DBA は、データの整合性をスキップするは、システムのバージョン管理を再度有効にするときに確認して、パフォーマンスを得るためのメリットを得る、テーブルのスキーマの更新中に、両方のテーブルに更新プログラムを防ぐために、トランザクション内で次の手順を実行します。 統計を作成する、パーティションの切り替え、圧縮を 1 つまたは両方のテーブルに適用するなどのタスクをシステムのバージョン管理を無効にする必要がないことに注意してください。  
   
 ```sql  
 BEGIN TRAN  
@@ -1726,7 +1752,7 @@ COMMIT
 ```  
   
 #### <a name="d-removing-system-versioning"></a>D. システムのバージョン管理を削除します。  
- この例は、Department テーブルからシステムのバージョン管理を完全に削除し、`DepartmentHistory` テーブルを削除する方法を示しています。 必要に応じて、システムのバージョン管理情報を記録する、システムによって使用される期間の列を削除することがもできます。 システムのバージョン管理が有効な場合は、`Department` か `DepartmentHistory` のいずれかのテーブルを削除できないことに注意してください。  
+ この例では、Department テーブルとドロップダウンから、システムのバージョン管理を完全に削除を `DepartmentHistory` テーブルです。 必要に応じて、システムのバージョン管理情報を記録する、システムによって使用される期間の列を削除することがもできます。 システムのバージョン管理が有効な場合は、`Department` か `DepartmentHistory` のいずれかのテーブルを削除できないことに注意してください。  
   
 ```sql  
 ALTER TABLE Department  

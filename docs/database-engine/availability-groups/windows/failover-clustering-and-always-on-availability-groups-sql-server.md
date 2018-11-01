@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e75e0f70138c2ef6d783e72e80cfd0544f1bfa5e
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40406048"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864310"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)
 
@@ -37,13 +34,6 @@ ms.locfileid: "40406048"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の概念については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
   
- **このトピックの内容**  
-  
--   [Windows Server フェールオーバー クラスタリング](#WSFC)  
-  
--   [SQL Server フェールオーバー クラスタリング](#SQLServerFC)  
-  
--   [WSFC フェールオーバー クラスター マネージャーを使用した可用性グループの操作に関する制限事項](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Windows Server フェールオーバー クラスタリングと可用性グループ  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を配置するには、Windows Server フェールオーバー クラスタリング (WSFC) クラスターが必要です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を有効にするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが WSFC ノード上に存在し、WSFC クラスターとノードがオンライン状態である必要があります。 さらに、特定の可用性グループの各可用性レプリカが、同じ WSFC クラスターの異なるノード上に存在する必要があります。 唯一の例外は、別の WSFC クラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。  
@@ -114,7 +104,10 @@ ms.locfileid: "40406048"
   
 -   可用性グループのプロパティ (たとえば、有効な所有者、優先所有者) を変更しないでください。 これらのプロパティは、可用性グループによって自動的に設定されます。  
   
--   フェールオーバー クラスター マネージャーを使用して可用性グループを他のノードに移動したり可用性グループをフェールオーバーしたりしないでください。 フェールオーバー クラスターは可用性レプリカの同期状態を認識しないため、そのような操作を行うとダウンタイムが長くなることがあります。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用する必要があります。  
+-   **フェールオーバー クラスター マネージャーを使用して可用性グループを他のノードに移動したり可用性グループをフェールオーバーしたりしないでください。** フェールオーバー クラスターは可用性レプリカの同期状態を認識しないため、そのような操作を行うとダウンタイムが長くなることがあります。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用する必要があります。  
+
+  >[!WARNING]
+  > フェールオーバー クラスター マネージャーを使用して、可用性グループをホストしている*フェールオーバー クラスター インスタンス*を、同じ可用性グループのレプリカを "*すでに*" ホストしているノードに移動すると、可用性グループのレプリカが失われ、それによってターゲット ノード上でオンラインにできなくなる可能性があります。 フェールオーバー クラスターの 1 つのノードでは、同じ可用性グループの複数のレプリカをホストすることはできません。 これがどのように発生し、どのように回復するかの詳細については、ブログ記事の「[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)」(可用性グループでレプリカが予想外に削除される) を参照してください。 
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   

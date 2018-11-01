@@ -41,7 +41,7 @@ public boolean isReadOnly(int column)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- 列が読み取り専用の場合は  です。 それ以外の場合は、 **false**です。  
+ 列が読み取り専用の場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

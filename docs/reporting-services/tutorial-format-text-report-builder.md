@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1af1b9b6e1e9f78469522a90cf589f484f2964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97a3cac8090852d39f1b995cc414e43666246aa8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741510"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906482"
 ---
 # <a name="tutorial-format-text-report-builder"></a>チュートリアル: テキストの書式設定 (レポート ビルダー)
 
@@ -197,7 +197,7 @@ ms.locfileid: "47741510"
   
 8.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-9. **[LinkText]** 列の **[合計]** セルを選択し、Shift キーを押しながらこのセルの右にある 2 つのセル ( **[Product]** 列の [合計] セルと `[Sum(Sales)]` [Sales] **列の [** ] セル) を選択します。  
+9. **[LinkText]** 列の **[合計]** セルを選択し、Shift キーを押しながらこのセルの右にある 2 つのセル (**[Product]** 列の空のセルと **[Sales]** 列の [`[Sum(Sales)]`] セル) を選択します。  
   
 11. これらの 3 つのセルが選択された状態で、3 つのうちのいずれか 1 つのセルを右クリックして、 **[行の削除]** をクリックします。  
 

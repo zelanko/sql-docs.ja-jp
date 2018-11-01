@@ -26,7 +26,7 @@ ms.locfileid: "47755461"
 # <a name="setint-method-sqlserverpreparedstatement"></a>setInt メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された  値に設定します。  
+  指定されたパラメーターを、渡された **int** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public final void setInt(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- メソッドは、java.sql.PreparedStatement インターフェイスの  メソッドで規定されています。  
+ この setInt メソッドは、java.sql.PreparedStatement インターフェイスの setInt メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

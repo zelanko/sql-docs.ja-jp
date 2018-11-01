@@ -1,7 +1,7 @@
 ---
 title: SQL Server PowerShell モジュールのダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2018
+ms.date: 10/08/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -12,20 +12,25 @@ ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d41d03c3bba51b919a71f195de75a7ec29f51b7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40873fe63b897da52fc9a7d440a8568872431d72
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621560"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851757"
 ---
 # <a name="install-sql-server-powershell-module"></a>SQL Server PowerShell モジュールのインストール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 この記事は、**SqlServer** PowerShell モジュールをインストールする手順を説明しています。
-
 > [!NOTE]
-> SQL Server PowerShell モジュールには **SqlServer** と **SQLPS** の 2 つがあります。 **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。 **SqlServer** モジュールには **SQLPS** のコマンドレットの更新バージョンだけでなく、最新の SQL 機能をサポートする新しいコマンドレットも含まれています。 SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを PowerShell ギャラリーからインストールする必要があります。
+> 2 つの SQL Server PowerShell モジュールがあります。 
+> * **SQLPS**: このモジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。
+> * **SqlServer**: このモジュールには、最新の SQL 機能をサポートする新しいコマンドレットが含まれています。 モジュールには、**SQLPS** 内のコマンドレットの更新バージョンも含まれています。 
+
+SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを [PowerShell ギャラリー](https://www.powershellgallery.com/packages/Sqlserver)からインストールする必要があります。
+**SqlServer** モジュールの現在のバージョンは 21.0.17279 です。 これは、Microsoft.SQLServer.SMO のバージョン v140 に基づいています。  
+SQL Server の (Microsoft.SQLServer.SMO のバージョン v150 に基づく) 次のバージョンをサポートするバージョンのモジュールを探している場合は、このページの最後のセクション (モジュールのプレリリース バージョンを取得する方法) を参照してください。 モジュールの最新のプレリリース バージョンは 21.1.18040-preview です。
 
 PowerShell ギャラリーから **SqlServer** モジュールをインストールするには、[PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) セッションを開始し、次のコマンドを使用します。 インストールに問題が発生した場合は、[Install-module のドキュメント](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module)と [Install-Module の参照](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)をご覧ください。
 
@@ -53,6 +58,17 @@ PowerShell ギャラリーから **SqlServer** モジュールをインストー
 
 ```Import-Module SqlServer -Version 21.0.17178```
 
+> [!NOTE]
+> モジュールのプレリリース ("プレビュー") バージョンは、PowerShell ギャラリーで入手できます。 [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) モジュール) の一部である、更新された *Find-Module* コマンドレットと *Install-Module* コマンドレットを使用して *-AllowPrerelease* スイッチを渡すことで、これらを検出してインストールできます。
+>
+> モジュールのプレリリース/プレビュー バージョンを検出するには、次のコマンドを実行できます。
+>
+> ```Find-Module SqlServer -AllowPrerelease```
+>
+> モジュールの特定のプレリリース/プレビュー バージョンをインストールするには、次のような特定のバージョン番号でインストールできます。
+>
+> ```Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease```
+> 
 
 PowerShell ギャラリーの **SqlServer** モジュールのバージョンは、バージョン管理をサポートし、PowerShell バージョン 5.0 以降が必要です。 
 

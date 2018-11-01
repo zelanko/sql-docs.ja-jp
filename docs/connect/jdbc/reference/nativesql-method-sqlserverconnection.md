@@ -41,10 +41,10 @@ public java.lang.String nativeSQL(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- $**: SQL ステートメントを含む文字列。  
+ SQL ステートメントを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- 変換された SQL ステートメントを含む  です。  
+ 変換された SQL ステートメントを含む**文字列**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

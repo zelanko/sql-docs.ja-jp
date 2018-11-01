@@ -1,7 +1,7 @@
 ---
 title: Windows 認証でデータ ソースとファイル共有に接続する | Microsoft Docs
 description: この記事では、Azure SQL Database で SSIS カタログを構成し、Windows 認証を使用してデータ ソースとファイル共有に接続するパッケージを実行するように Azure-SSIS 統合ランタイムを構成する方法について説明します。
-ms.date: 06/27/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608644"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119979"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Azure の SSIS パッケージから Windows 認証を使用してデータ ソースとファイル共有に接続する
 Windows 認証を使用して、オンプレミスと Azure の仮想マシンの両方、さらに Azure Files で Azure SSIS 統合ランタイム (IR) と同じ仮想ネットワーク内のデータ ソースとファイル共有に接続できます。 Azure SSIS IR で実行されている SSIS パッケージから Windows 認証を使用してデータ ソースとファイル共有に接続する方法は次の 3 とおりです。
@@ -34,7 +34,7 @@ Windows 認証を使用して、オンプレミスと Azure の仮想マシン�
 この記事の以降の部分では、Azure SQL Database で SSIS カタログを構成して、Windows 認証を使用するパッケージを実行し、データ ソースとファイル共有に接続する方法について説明します。 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>使用できる資格情報は 1 セットのみ
-この方法では、パッケージで使用できる資格情報は 1 セットだけです。 この記事の手順を実行するときに指定したドメインの資格情報は、資格情報を変更または削除するまで、Azure-SSIS IR のすべてのパッケージの実行 (インタラクティブまたはスケジュール) に適用されます。 パッケージを資格情報のセットが異なる複数のデータ ソースおよびファイル共有に接続しなければならない場合は、前述の別の方法の検討が必要になる可能性があります。
+SSIS パッケージ内の Windows 認証を使用する場合は、パッケージ内の資格情報のセットを 1 つだけ使用できます。 この記事の手順を実行するときに指定したドメインの資格情報は、資格情報を変更または削除するまで、Azure-SSIS IR のすべてのパッケージの実行 (インタラクティブまたはスケジュール) に適用されます。 パッケージを資格情報のセットが異なる複数のデータ ソースおよびファイル共有に接続しなければならない場合は、前述の別の方法の検討が必要になる可能性があります。
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Windows 認証のドメイン資格情報を提供する
 パッケージが Windows 認証を使用して、オンプレミスのデータ ソース/ファイル共有に接続できるようにするドメイン資格情報を提供するには、次のことを行います。
@@ -100,7 +100,7 @@ Azure で実行されるパッケージからオンプレミスの SQL Server �
 3.  Windows 認証で接続するには、Azure-SSIS IR がオンプレミスの SQL Server も含む仮想ネットワークに属していることを確認します。  詳しくは、「[Azure-SSIS 統合ランタイムを仮想ネットワークに参加させる](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)」をご覧ください。 次に、この記事で説明されているように `catalog.set_execution_credential` を使用して資格情報を提供します。
 
 ## <a name="connect-to-an-on-premises-file-share"></a>オンプレミスのファイル共有への接続
-オンプレミスのファイル共有に接続できるかどうかを確認するには、次のことを行います。
+オンプレミスのファイル共有に接続できるかどうかをテストするには、次のことを行います。
 
 1.  このテストを実行するには、ドメインに参加していないコンピューターを見つけます。
 

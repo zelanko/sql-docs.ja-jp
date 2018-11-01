@@ -26,7 +26,7 @@ ms.locfileid: "47798860"
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>setBoolean メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された  値に設定します。  
+  指定されたパラメーターを、渡された **boolean** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   

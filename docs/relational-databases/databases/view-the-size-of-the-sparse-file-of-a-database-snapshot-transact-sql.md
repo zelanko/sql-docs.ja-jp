@@ -20,12 +20,12 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53849f61b723d3881716a4ef24e3f0054871eaf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 323560bbca3b4914dd9f72bad6f781973d3a34e7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606607"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119710"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>データベース スナップショットのスパース ファイルのサイズを表示する方法 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47606607"
   
  スナップショットの各スパース ファイルが現在ディスク上で使用しているバイト数を表示するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 動的管理ビューの **size_on_disk_bytes** 列に対してクエリを実行します。  
   
- スパース ファイルが使用するディスク領域を表示するには、Microsoft Windows でファイルを右クリックして **[プロパティ]** をクリックし、**[ディスク上のサイズ]** の値を確認します。  
+ スパース ファイルが使用するディスク領域を表示するには、Microsoft Windows でファイルを右クリックして **[プロパティ]** をクリックし、 **[ディスク上のサイズ]** の値を確認します。  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>スパース ファイルの最大サイズを調べる  
  スパース ファイルの最大サイズは、スナップショット作成時点での対応するソース データベース ファイルのサイズです。 このサイズを調べるには、次のいずれかを実行します。  

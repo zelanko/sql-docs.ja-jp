@@ -36,7 +36,7 @@ public int getColumnCount()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 列の数を示すです。  
+ 列の数を示す **int**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

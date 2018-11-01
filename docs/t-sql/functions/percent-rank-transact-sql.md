@@ -5,9 +5,7 @@ ms.date: 10/20/2015
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PERCENT_RANK_TSQL
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - PERCENT_RANK function
 - analytic functions, PERCENT_RANK
 ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8444320cdfe2acdebd65610010eee3c19d48fbf4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 84c0143fe79636fd8d9fc75b69fc25f1ebb84148
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43107890"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831890"
 ---
 # <a name="percentrank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -44,8 +41,8 @@ PERCENT_RANK( )
 ```  
   
 ## <a name="arguments"></a>引数  
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* が必要です。 OVER 構文の \<rows or range clause> は、PERCENT_RANK 関数では指定できません。  詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 _order\_by\_clause_ は、操作が実行される論理的順序を決定します。 *order_by_clause* が必要です。 OVER 構文の \<rows または range 句\>は、PERCENT_RANK 関数では指定できません。  詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
  **float(53)**  

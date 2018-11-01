@@ -26,7 +26,7 @@ ms.locfileid: "47830670"
 # <a name="close-method-sqlserverpreparedstatement"></a>close メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  オブジェクトのデータベースと JDBC リソースを、自動的に解放されるまで待たずに直ちに解放します。  
+  Statement オブジェクトのデータベースと JDBC リソースを、自動的に解放されるまで待たずに直ちに解放します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ public void close()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- メソッドは、java.sql.Statement インターフェイスの  メソッドで規定されています。  
+ close メソッドは、java.sql.Statement インターフェイスの close メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

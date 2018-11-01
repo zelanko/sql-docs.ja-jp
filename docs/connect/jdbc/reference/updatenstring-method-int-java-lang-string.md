@@ -21,7 +21,7 @@ ms.locfileid: "47834130"
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString (int, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された列ラベルを使用して、指定された列を **String** 値で更新します。  
+  指定された列インデックスを使用して、指定された列を **String** 値で更新します。  
   
 ## <a name="syntax"></a>構文  
   

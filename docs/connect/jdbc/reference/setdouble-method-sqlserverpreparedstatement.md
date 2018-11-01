@@ -26,7 +26,7 @@ ms.locfileid: "47839090"
 # <a name="setdouble-method-sqlserverpreparedstatement"></a>setDouble メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定されたパラメーターを、渡された日付の値に設定します。  
+  指定されたパラメーターを、渡された **double** 値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
