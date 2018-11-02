@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a51842a1682b5e02db4ea216bddefbabbf0a7f56
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 39889d49702394f0aec8f79c328e28ba318c9864
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874310"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806742"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB 上の外部データにアクセスするための PolyBase の構成
 
@@ -25,13 +25,11 @@ ms.locfileid: "48874310"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。
+PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。
 
 ## <a name="configure-an-external-table"></a>外部テーブルの構成
 
 MongoDB データ ソースのデータに対してクエリを実行するには、外部テーブルを作成して外部データを参照する必要があります。 このセクションでは、これらの外部テーブルを作成するサンプル コードを示します。
-
-クエリのパフォーマンスを最適にするために、外部テーブルの列、特に結合、フィルター、集計に使用される列に対して統計を作成することをお勧めします。
 
 このセクションでは、次のオブジェクトを作成します。
 
@@ -40,43 +38,41 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
 - 外部テーブル (TRANSACT-SQL) を作成します。
 - CREATE STATISTICS (Transact-SQL)
 
-1.    データベースにマスター キーを作成します。 これは、資格情報シークレットの暗号化に必要です。
+1. まだ存在しない場合は、データベースにマスター キーを作成します。 これは、資格情報のシークレットの暗号化に必須です。
 
-      ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-      ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>引数
+    PASSWORD ='password'
 
-1.   データベース スコープ資格情報を作成します。
+    データベース内のマスター キーの暗号化に使用されているパスワードを指定します。 パスワードは、SQL Server のインスタンスをホストしている、コンピューターの Windows パスワード ポリシー要件を満たす必要があります。
+
+1.   MongoDB ソースにアクセスするために、データベース スコープ資格情報を作成します。
 
      ```sql
      /*  specify credentials to external data source
      *  IDENTITY: user name for external source.  
      *  SECRET: password for external source.
      */
-     CREATE DATABASE SCOPED CREDENTIAL MongoDBCredentials 
+     CREATE DATABASE SCOPED CREDENTIAL credential_name 
      WITH IDENTITY = 'username', Secret = 'password';
      ```
 
-1.  [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。 外部データ ソースの場所と、MongoDB データ ソースの資格情報を指定します。
+1.  [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
      ```sql
-     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
-    CREATE EXTERNAL DATA SOURCE MongoInstance
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH (
-    LOCATION = mongodb://MongoServer,
+    LOCATION = mongodb://<server>[:<port>],
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = MongoDBCredentials
+      CREDENTIAL = credential_name
     );
-     ```
-
-1. 外部データのスキーマを作成します
-
-     ```sql
-     CREATE SCHEMA MongoDB;
-     GO
      ```
 
 1.  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) を使用して、外部の MongoDB システムに格納されているデータを表す外部テーブルを作成します。
@@ -85,7 +81,7 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
      /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
      *  DATA_SOURCE: the external data source, created above.
      */
-     CREATE EXTERNAL TABLE MongoDB.orders(
+     CREATE EXTERNAL TABLE customers(
      [O_ORDERKEY] DECIMAL(38) NOT NULL,
      [O_CUSTKEY] DECIMAL(38) NOT NULL,
      [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
@@ -94,19 +90,22 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
      [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
      )
      WITH (
-     LOCATION='TPCH..ORDERS',
-     DATA_SOURCE= MongoDBInstance
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
      );
      ```
 
-1. パフォーマンスを最適化するために外部テーブルに対する統計を作成します。
+1. **省略可能:** 外部テーブルの統計を作成します。
+
+    最適なクエリのパフォーマンスを得るために、外部テーブルの列、特に結合、フィルター、集計に使用される列に対して統計を作成することをお勧めします。
 
      ```sql
-      CREATE STATISTICS OrdersOrderKeyStatistics ON MongoDB.orders(O_ORDERKEY) WITH FULLSCAN;
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
+
 ## <a name="flattening"></a>フラット化
- フラット化は、MongoDB ドキュメント コレクションの入れ子になったデータと繰り返しデータに対して有効になります。 ユーザーは、入れ子になったデータや繰り返しデータを含む可能性のある MongoDB ドキュメント コレクションに対して外部テーブルの作成を有効にし、リレーショナル スキーマを明示的に指定する必要があります。 その後のマイルストーンで、mongo ドキュメント コレクションに対する自動スキーマ検出を有効にします。
+ フラット化は、MongoDB ドキュメント コレクションの入れ子になったデータと繰り返しデータに対して有効になります。 ユーザーは、入れ子になったデータや繰り返しデータを含む可能性のある MongoDB ドキュメント コレクションに対して `create an external table` を有効にし、リレーショナル スキーマを明示的に指定する必要があります。 その後のマイルストーンで、mongo ドキュメント コレクションに対する自動スキーマ検出を有効にします。
 JSON の入れ子になったデータ型/繰り返しデータ型は次のようにフラット化されます
 
 * オブジェクト: 中かっこで囲まれている順序付けられていないキー/値のコレクション (入れ子)
@@ -151,6 +150,10 @@ JSON の入れ子になったデータ型/繰り返しデータ型は次のよ�
 |1322006400000|A |9|
 |1299715200000 |B |14|
 
+## <a name="cosmos-db-connection"></a>Cosmos DB 接続
+
+Cosmos DB の Mongo API および Mongo DB PolyBase コネクタを使用すると、**Cosmos DB インスタンス**の外部テーブルを作成することができます。 これは、上記と同じ手順に従って行います。 データベースのスコープ資格情報、サーバーのアドレス、ポート、および場所の文字列が Cosmos DB サーバーのものを反映していることを確認してください。 
+
 ## <a name="next-steps"></a>次の手順
 
-PolyBase について詳しくは、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。
+PolyBase の詳細については、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。

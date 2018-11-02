@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: e30cded830401c589c62d1e6301d5be78720c07f
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874360"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806752"
 ---
 # <a name="install-polybase-on-windows"></a>Windows への PolyBase のインストール
 
@@ -35,27 +35,28 @@ SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.
 - 最小メモリ: 4 GB。  
    
 - 最小ハード ディスク容量: 2 GB。  
+- **推奨:** 16 GB 以上の RAM
    
 - Polybase が正常に機能するは、TCP/IP を有効にする必要があります。 TCP/IP は、Developer Edition と Express Edition を除く SQL Server のすべてのエディションで、既定で有効です。 Developer Edition および Express Edition で Polybase が正常に機能するためには、TCP/IP 接続を有効にする必要があります (「[Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」 (サーバー ネットワーク プロトコルを有効または無効にする) を参照してください)。
 
-- Azure blob または Hadoop クラスターのいずれかである外部データ ソース。 Hadoop のサポートされているバージョンについては、「[PolyBase を構成する](#supported)」を参照してください。 
-- MSVC++ 2012 のインストール  
-
-> [!NOTE]
-> Hadoop に対して計算プッシュダウン機能を使用する予定の場合、ターゲットの Hadoop クラスターに HDFS のコア コンポーネントの Yarn/MapReduce があり、Jobhistory サーバーが有効であることを確認する必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、JobHistory Server からステータスをプルします。 いずれかのコンポーネントがない場合、クエリは失敗します。
+- MSVC++ 2012 
 
 **注**  
 
-PolyBase は各マシンで 1 つの SQL Server インスタンスにのみインストールできます。  
-   
+PolyBase は各マシンで 1 つの SQL Server インスタンスにのみインストールできます。
+
+> **重要**
+>
+> Hadoop に対して計算プッシュダウン機能を使用する予定の場合、ターゲットの Hadoop クラスターに HDFS のコア コンポーネントの Yarn/MapReduce があり、Jobhistory サーバーが有効であることを確認する必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、JobHistory Server からステータスをプルします。 いずれかのコンポーネントがない場合、クエリは失敗します。
+  
 ## <a name="single-node-or-polybase-scaleout-group"></a>シングル ノードまたは PolyBase スケールアウト グループ
 
-SQL Server インスタンスに PolyBase をインストールする前に、シングル ノード インストールが必要なのか、PolyBase スケールアウト グループが必要なのか検討することが推奨されます。 
+SQL Server インスタンスに PolyBase をインストールする前に、シングル ノード インストールが必要なのか、[PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)が必要なのか検討することをお勧めします。
 
-PolyBase スケールアウト グループの場合、次のように手配する必要があります。 
+PolyBase スケールアウト グループの場合、次のように手配する必要があります。
 
 - すべてのマシンが同じドメインにある。
-- インストール時、同じサービス アカウントとパスワードを使用する。
+- PolyBase のインストール時、同じサービス アカウントとパスワードを使用する。
 - SQL Server インスタンスがネットワーク経由で互いと通信できる。
 - SQL Server インスタンスがすべて同じバージョンの SQL Server である。
 
@@ -63,7 +64,7 @@ PolyBase をスタンドアロンとスケールアウト グループのいず�
 
 ## <a name="install-using-the-installation-wizard"></a>インストール ウィザードを使用したインストール  
    
-1. **SQL Server インストール センター**を実行します。 SQL Server インストール メディアを挿入し、 **Setup.exe**をダブルクリックします。  
+1. SQL Server の setup.exe を実行します。   
    
 2. **[インストール]** をクリックし、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** をクリックします。  
    
@@ -71,10 +72,11 @@ PolyBase をスタンドアロンとスケールアウト グループのいず�
 
  ![PolyBase サービス](../../relational-databases/polybase/media/install-wizard.png "PolyBase サービス")  
    
-4. [Server の構成] ページで、 **SQL Server PolyBase エンジン サービス** と SQL Server PolyBase データ移動サービスを同じアカウントで実行するように構成します。  
+4. [Server の構成] ページで、**SQL Server PolyBase エンジン サービス**と SQL Server PolyBase Data Movement Service を同じアカウントで実行するように構成します。  
    
-   > **重要:** PolyBase スケールアウト グループで、すべてのノード上の PolyBase エンジンおよび PolyBase データ移動サービスを、同じドメイン アカウントで実行する必要があります。  
-   > PolyBase のスケール アウトを参照してください。  
+ > **重要:** 
+>
+>PolyBase スケールアウト グループで、すべてのノード上の PolyBase エンジンおよび PolyBase データ移動サービスを、同じドメイン アカウントで実行する必要があります。 「[PolyBase スケールアウト グループ](#Enable)」を参照してください
    
 5. **[PolyBase の構成]** ページで、次の 2 つのオプションのいずれかを選択します。 詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md) 」を参照してください。  
    
@@ -82,20 +84,16 @@ PolyBase をスタンドアロンとスケールアウト グループのいず�
    
      SQL Server インスタンスをスタンドアロンのヘッド ノードとして使用するには、このオプションを選択します。  
    
-   - PolyBase スケールアウト グループの一部として、SQL Server インスタンスを使用します  このオプションを選択すると、ファイアウォールが開かれ、SQL Server データベース エンジン、SQL Server PolyBase エンジン、SQL Server PolyBase データ移動サービス、および SQL ブラウザーへの着信接続が許可されます。 ファイアウォールが開かれて、PolyBase スケールアウト グループ内の他のノードからの着信接続が許可されます。  
+   - PolyBase スケールアウト グループの一部として、SQL Server インスタンスを使用します  このオプションを選択すると、ファイアウォールが開かれ、SQL Server データベース エンジン、SQL Server PolyBase エンジン、SQL Server PolyBase Data Movement Service、および SQL ブラウザーへの着信接続が許可されます。 ファイアウォールが開かれて、PolyBase スケールアウト グループ内の他のノードからの着信接続が許可されます。  
    
      このオプションを選択すると、Microsoft Distributed Transaction Coordinator (MSDTC) ファイアウォール接続も有効になり、MSDTC レジストリの設定が変更されます。  
    
 6. **[PolyBase の構成]** ページで、少なくとも 6 つのポートを含むポート範囲を指定します。 SQL Server セットアップにより、この範囲の最初の 6 つの利用可能なポートが割り当てられます。  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
   > **重要:**
   >
   > インストール後に、[PolyBase 機能を有効にする](#enable)必要があります。
 
-::: moniker-end
 
 ##  <a name="installing"></a> コマンド プロンプトを使用してインストールする  
 
@@ -134,12 +132,9 @@ PolyBase をスタンドアロンとスケールアウト グループのいず�
 
 ::: moniker-end
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
 インストール後に、[PolyBase 機能を有効にする](#enable)必要があります。
 
-::: moniker-end
+
 
 **例**
 
@@ -156,10 +151,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> PolyBase を有効にする
-
 
 インストールが完了したら、Polybase を有効にしてその機能にアクセスできるようにする必要があります。 SQL Server 2019 CTP 2.0 に接続し、次の Transact-SQL コマンドを使用してインストール後に PolyBase を有効にする必要があります。
 
@@ -170,8 +162,6 @@ RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
 インスタンスを**再起動**する必要があります 
 
-
-::: moniker-end
 
 ## <a name="post-installation-notes"></a>インストール後の注意  
 
@@ -195,7 +185,7 @@ SQL Server PolyBase のセットアップでは、コンピューターに次の
 
 - SQL Server PolyBase - SQL Browser - (UDP-In)  
    
-インストール時に、PolyBase スケールアウト グループの一部として SQL Server インスタンスを使用することを選択した場合、これらの規則が有効になり、ファイアウォールが開かれて、SQL Server データベース エンジン、SQL Server PolyBase エンジン、SQL Server PolyBase Data Movement サービス、SQL Browser への着信接続が許可されます。 ただし、インストール中にコンピューターでファイアウォール サービスが実行していない場合、SQL Server セットアップはこれらの規則を有効にできません。 その場合は、コンピューターでファイアウォール サービスを開始し、これらの規則をインストール後に有効にする必要があります。  
+インストール時に、PolyBase スケールアウト グループの一部として SQL Server インスタンスを使用することを選択した場合、これらの規則が有効になり、ファイアウォールが開かれて、SQL Server データベース エンジン、SQL Server PolyBase エンジン、SQL Server PolyBase Data Movement Service、SQL Browser への着信接続が許可されます。 ただし、インストール中にコンピューターでファイアウォール サービスが実行していない場合、SQL Server セットアップはこれらの規則を有効にできません。 その場合は、コンピューターでファイアウォール サービスを開始し、これらの規則をインストール後に有効にする必要があります。  
    
 #### <a name="to-enable-the-firewall-rules"></a>ファイアウォール規則を有効にするには  
 

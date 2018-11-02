@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072176"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991305"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "49072176"
 ### <a name="known-issues"></a>既知の問題:
 
 - ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
-- SSDT 15.8.1 では現在 Windows 7 SP1 がサポートされていないので、Windows 7 SP1 を使用している場合は引き続き 15.8.0 を使用してください
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)
@@ -492,16 +491,16 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
     - PowerQuery での例示による列の追加
     - 1400 モデルでのデータ アクセス オプション (M エンジンによって使われるモデル レベルのプロパティ)
         - 高速結合の有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンはデータを結合するときにデータ ソースのプライバシー レベルを無視します)
-        - 従来のリダイレクトの有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンは安全ではない可能性のある HTTP リダイレクトに従います。  たとえば、HTTPS から HTTP URI へのリダイレクト)  
-        - エラー値を null として返します (既定値は false です。true にすると、セル レベルのエラーが null として返されます。 false の場合、セルにエラーが含まれると例外が発生します)  
+        - 従来のリダイレクトの有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンは安全ではない可能性のある HTTP リダイレクトに従います。  たとえば、HTTPS から HTTP URI へのリダイレクト)  
+        - エラー値を null として返します (既定値は false です。true にすると、セル レベルのエラーが null として返されます。 false の場合、セルにエラーが含まれると例外が発生します)  
     - PowerQuery を使う追加データ ソース (ファイル データ ソース)
-        - [エクスポート] 
-        - テキスト/CSV 
-        - Xml 
-        - Json 
-        - フォルダー 
-        - Access データベース 
-        - Azure Blob Storage 
+        - [エクスポート] 
+        - テキスト/CSV 
+        - Xml 
+        - Json 
+        - フォルダー 
+        - Access データベース 
+        - Azure Blob Storage 
     - ローカライズされた PowerQuery ユーザー インターフェイス
 - DAX エディター ツール ウィンドウ
     - SSDT の [表示] > [その他のウィンドウ] メニューで利用可能な DAX 編集エクスペリエンスがメジャー、計算列、詳細行の式に関して改良されました
@@ -610,24 +609,24 @@ SqlPackage の発行アクションとスクリプト アクションには、2 
 DacFx では、2 つの新しい API (DacServices.Publish() および DacServices.Script()) が追加されました。 これらは、発行 + スクリプト + レポートの各アクションを 1 回の操作で実行できるようサポートします。 使用例:
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -662,7 +661,7 @@ SSAS 表形式デザイナーの DAX パーサーにおいて、大きな DAX �
 
 **統合サービス**
 
-* 接続のバグ [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) の修正: 複数の統合サービス パッケージのタスクの移動
+* 接続のバグ  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) の修正: 複数の統合サービス パッケージのタスクの移動
 
 
 
@@ -675,7 +674,7 @@ SSAS 表形式デザイナーの DAX パーサーにおいて、大きな DAX �
 
 **新機能**
 
-SqlPackage.exe および Data-Tier Application Framework (DacFx) API でスキーマ比較がサポートされるようになりました。 詳しくは、「[Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)」(SqlPackage および Data-Tier Application Framework におけるスキーマ比較) をご覧ください。
+SqlPackage.exe および Data-Tier Application Framework (DacFx) API でスキーマ比較がサポートされるようになりました。 詳しくは、「 [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)」(SqlPackage および Data-Tier Application Framework におけるスキーマ比較) をご覧ください。
 
 **Analysis Services – SSDT テーブル (SSAS) 統合のワークスペース モード**
 

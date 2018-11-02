@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307146"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226394"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "49307146"
 
 SSMS 18.x は、新しい Visual Studio 2017 Isolated Shell に基づくようになりました。
 
-- つまり最新のシェルです (Visual Studio 2107 15.6.4 を選択しました)。 新しいシェルで、SSMS と Visual Studio の両方に行われたアクセシビリティに関するすべての修正のロックが解除されます。
+- つまり最新のシェルです (Visual Studio 2017 15.6.4 を選択しました)。 新しいシェルで、SSMS と Visual Studio の両方に行われたアクセシビリティに関するすべての修正のロックが解除されます。
 
 アクセシビリティの機能強化:
 
@@ -127,7 +127,8 @@ Always On:
 監査ファイル:
 
 - 認証方法をストレージ アカウント キー ベースから Azure AD ベースの認証に変更しました。
-AD ベースの Always Encrypted:
+
+Always Encrypted:
 
 - *[Always Encrypted を有効にする]* チェックボックスがある [Always Encrypted] タブを (*[サーバーに接続]* ダイアログに) 追加し、データベース接続に Always Encrypted の有効/無効を簡単に切り替えられるようになりました。
 - セキュリティで保護されたエンクレーブが設定された Always Encrypted をサポートするためにいくつかの機能強化が加えられました。
@@ -1128,7 +1129,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Azure SQL データベースに対する [スクリプトの生成...] が失敗する問題を修正しました。
 - [スクリプト化] と [スクリプトの生成] ウィザードが修正され、ストアド プロシージャなどのオブジェクトのスクリプト化の際に余分な改行が追加されないようになります ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3115850)を参照)。
 - SQLAS PowerShell プロバイダー: Dimension フォルダーと MeasureGroup フォルダーに LastProcessed プロパティが追加されます ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3111879)を参照)。
-- ライブ クエリ統計: バッチの最初のクエリしか表示されないという問題が修正されました ( [Connect アイテム] (http://connect.microsoft.com/SQLServer/feedback/details/3114221) を参照)。  
+- ライブ クエリ統計: バッチの最初のクエリしか表示されないという問題が修正されました ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3114221)を参照)。  
 - プラン表示: プロパティ ウィンドウにスレッド全体の合計ではなく、最大値が表示される。
 - クエリ ストア: 豊富な実行バリエーションの新しいレポートがクエリに追加される。
 - オブジェクト エクスプローラーのパフォーマンスの問題: [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3114074) テーブルのコンテキスト メニューがすぐにハングする。テーブルのインデックスを右クリックすると SSMS の動作が遅くなる (リモート (インターネット) 接続経由の場合)。 サーバーでのテーブルの並べ替えクエリの発行を避ける。
@@ -1139,8 +1140,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - データベースに対するアクセス許可を表示しようとすると SSMS がクラッシュする場合があるという問題が修正されました。
 - クエリ ストア: クエリ ストア レポートの結果グリッドのコンテキスト メニュー項目が全体的に改善されました。
 - 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3103181)を参照)。
-- 複数のスキーマを持つ既存のデータベースに対して Always Encrypted を構成できない ( [Connect アイテム] (http://connect.microsoft.com/SQLServer/feedback/details/3109591) を参照)。
-- データベースにシステム ビューを参照するビューが含まれているため、Always Encrypted の暗号化された列ウィザードでエラーが発生する ( [Connect アイテム] (http://connect.microsoft.com/SQLServer/feedback/details/3111925) を参照)。
+- 複数のスキーマを持つ既存のデータベースに対して Always Encrypted を構成できない ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3109591)を参照)。
+- データベースにシステム ビューを参照するビューが含まれているため、Always Encrypted の暗号化された列ウィザードでエラーが発生する ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3111925)を参照)。
 - Always Encrypted を使用して暗号化する場合、暗号化が正しく処理されていない状態でモジュールを更新するとエラーが発生する。
 - [新規サーバーの登録] ダイアログで UI が切り捨てられる問題が修正されました。
 - 引用符で囲まれた文字列定数値を含む式が DMF 条件 UI で正しく更新されない問題が修正されます。

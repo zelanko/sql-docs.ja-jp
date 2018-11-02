@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085178"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030621"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
@@ -171,4 +171,4 @@ Web パーツでサポートされている言語は以下のとおりです。
 
 レポート ビューアー Web パーツを展開してアクティブ化したら、SharePoint ページに Web パーツを追加できます。 詳細については、「[SharePoint ページへのレポート ビューアー Web パーツの追加](add-report-viewer-web-part-to-page.md)」を参照してください。
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

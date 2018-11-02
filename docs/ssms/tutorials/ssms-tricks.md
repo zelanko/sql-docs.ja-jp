@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 190d354ffc7f5e0c0c0bd3fb4cf5c99a69890271
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864390"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150183"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>チュートリアル: SSMS を使用するためのヒントとテクニック
 このチュートリアルでは、SQL Server Management Studio (SSMS) の使用時に便利なその他のテクニックを紹介します。 この記事で取り上げるテクニック: 
@@ -133,7 +133,7 @@ ms.locfileid: "47864390"
 
 
 ## <a name="filter-objects-in-object-explorer"></a>オブジェクト エクスプローラーでオブジェクトにフィルターを適用する
-データベースにオブジェクトがたくさんある場合、オブジェクトにフィルターを適用することで特定のオブジェクトが見つけやすくなります。 このセクションでは、テーブルにフィルターを適用する方法について説明しますが、次の手順はオブジェクト エクスプローラーの他のノードでも利用できます。
+多くのオブジェクトが含まれるデータベースの場合は、フィルターを使用して特定のテーブル、ビューなどを検索できます。このセクションでは、テーブルにフィルターを適用する方法について説明しますが、次の手順はオブジェクト エクスプローラーの他のノードでも利用できます。
 
 1. SQL Server に接続します。
 2. **[データベース]** > **[AdventureWorks]** > **[テーブル]** の順に展開します。 データベース内のすべてのテーブルが表示されます。

@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4729d78f0cfecf80f65dbff0f7bc2d6abe2ebbfa
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874260"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806642"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server 上の外部データにアクセスするための PolyBase の構成
 
@@ -38,7 +38,7 @@ SQL Server データ ソースのデータに対してクエリを実行する�
 - データベース スコープ ベースの資格情報 (TRANSACT-SQL) の作成します。 
 - 外部データ ソース (TRANSACT-SQL) を作成します。 
 - 外部テーブル (TRANSACT-SQL) を作成します。 
-- CREATE STATISTICS (Transact-SQL)。
+- CREATE STATISTICS (Transact-SQL)
 
 1. データベースにマスター キーを作成します。 これは、資格情報シークレットの暗号化に必要です。
 
@@ -68,7 +68,7 @@ SQL Server データ ソースのデータに対してクエリを実行する�
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SQLServerCredentials
     );
 
      ```
@@ -102,12 +102,16 @@ SQL Server データ ソースのデータに対してクエリを実行する�
      );
       ```
 
-1. 外部テーブルに対する統計を作成します。
+1. 外部テーブルの統計を作成します。
 
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
+## <a name="sql-server-connector-compatible-types"></a>SQL Server コネクタの互換性のある型
+
+SQL Server の接続を認識するその他のデータ ソースに接続することができます。 SQL Server PolyBase のコネクタを使用して、**Azure SQL Data Warehouse と Azure SQL Database** の両方の外部テーブルを作成できます。 これは、上記と同じ手順に従って行います。 データベース スコープ資格情報、サーバーのアドレス、ポート、場所の文字列が接続先の互換データ ソースのものと関連付けられていることを確認してください。
+
 ## <a name="next-steps"></a>次の手順
 
-PolyBase について詳しくは、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。
+PolyBase の詳細については、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。

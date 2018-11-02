@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc81d7a915a79af3406d5fc90ef9920d5e19055a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757051"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636481"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47757051"
     
 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの結果は、それぞれ異なる照合順序が設定されている複数のデータベースのコンテキストでステートメントが実行される場合には、データベースごとに異なります。 可能であれば、組織全体で同じ照合順序を使用してください。 これにより、それぞれの文字または Unicode 表現について、照合順序を明示的に指定する必要がなくなります。 異なる照合順序とコード ページが設定されたオブジェクトを操作する場合は、照合の優先順位の規則を考慮してクエリを作成します。 詳細については、「 [照合順序の優先順位 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)」を参照してください。    
     
-照合順序に関連するオプションは、大文字と小文字の区別、アクセントの区別、かなの区別、および文字幅の区別、バリエーションの選択の区別です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、UTF-8 エンコードのための追加のオプションが導入されています。 これらのオプションは、照合順序の名前に付加することによって指定されます。 たとえば、 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` という照合順序では、大文字と小文字、アクセント、かな、文字幅、および UTF-8 エンコードが区別されます。 また、 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` という照合順序では、大文字小文字とアクセントが区別されず、かな、文字幅、異体字セレクターが区別され、非 Unicode エンコードが使用されます。 次の表は、これらの各オプションに関連付けられている動作を示しています。    
+照合順序に関連するオプションは、大文字と小文字の区別、アクセントの区別、かなの区別、および文字幅の区別、バリエーションの選択の区別です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[UTF-8](http://www.wikipedia.org/wiki/UTF-8) エンコードのための追加のオプションが導入されています。 これらのオプションは、照合順序の名前に付加することによって指定されます。 たとえば、 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` という照合順序では、大文字と小文字、アクセント、かな、文字幅、および UTF-8 エンコードが区別されます。 また、 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` という照合順序では、大文字小文字とアクセントが区別されず、かな、文字幅、異体字セレクターが区別され、非 Unicode エンコードが使用されます。 次の表は、これらの各オプションに関連付けられている動作を示しています。    
     
 |オプション|[説明]|    
 |------------|-----------------|    

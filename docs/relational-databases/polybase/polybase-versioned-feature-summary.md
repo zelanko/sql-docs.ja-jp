@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874350"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226264"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase の機能と制限事項
 
@@ -64,11 +64,7 @@ PolyBase には次の制限事項があります。
 
 - 可変長列の全長を含め、最大行サイズは SQL Server で 32 KB 以下、または Azure SQL Data Warehouse で 1 MB 以下にする必要があります。
 
-- PolyBase では、Hive 0.12 以降のデータ型 (つまり、Char(), VarChar()) はサポートされません。
-
 - SQL Server または Azure SQL データ ウェアハウスから ORC ファイル形式にデータをエクスポートするとき、java のメモリ不足エラーに起因し、テキストでいっぱいの列はわずか 50 列に制限されることがあります。 この問題を回避するには、列の一部だけをエクスポートします。
-
-- Hadoop に保存されている暗号化されたデータの読み取りまたは書き込みができません。 これには、HDFS 暗号化ゾーンまたは透過的な暗号化が含まれます。
 
 - KNOX が有効になっている場合、PolyBase は、Hortonworks インスタンスに接続できません。
 
@@ -80,13 +76,7 @@ PolyBase には次の制限事項があります。
 - [SQL Server 2016 のフェールオーバー クラスターにノードを追加すると、PolyBase の機能をインストールできません](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
-- 統合認証はサポートされていません。 現在は、ユーザー名とパスワードのみがサポートされています。  
-- 暗号化は既定で有効になります。 暗号化を無効にするには、... を行う必要があります (thanh と話す)
-- [型マッピングの制限](polybase-type-mapping.md)
 
+## <a name="next-steps"></a>次の手順
 
-## <a name="security-and-authentication"></a>セキュリティと認証 
-
-## <a name="see-also"></a>参照  
-
-[PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)  
+PolyBase について詳しくは、「[PolyBase とは](polybase-guide.md)」をご覧ください。
