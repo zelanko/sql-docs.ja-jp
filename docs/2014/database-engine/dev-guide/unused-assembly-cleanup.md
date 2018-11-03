@@ -12,12 +12,12 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad8d959ae622d743de02d996c280af37eddc9bf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0ad2e58c7c261d191adf7d48b157e42f13d8d37
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184082"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743167"
 ---
 # <a name="unused-assembly-cleanup"></a>未使用のアセンブリのクリーンアップ
   `AssemblyCleanup` サンプルには、メタデータ カタログに対してクエリを実行して現在のデータベース内で使用されていないアセンブリをクリーンアップする .NET ストアド プロシージャが含まれています。 唯一のパラメーターである `visible_assemblies` を使用して、表示される未使用のアセンブリを削除するかどうかを指定します。 既定値は false で、表示されない未使用のアセンブリのみが削除されます。それ以外の値の場合、未使用のアセンブリがすべて削除されます。 未使用のアセンブリとは、エントリ ポイントが定義されておらず (ルーチンまたは型と集計)、そのアセンブリを直接的または間接的に参照するアセンブリが使用されていないアセンブリです。  
@@ -155,9 +155,9 @@ using Microsoft.SqlServer.Server;
             /// <summary>  
             /// Returns the comma-separated list of assembly ids contained in this instance  
             /// </summary>  
-            /// <returns>string value that represents a comma-seperated list   
+            /// <returns>string value that represents a comma-separated list   
             /// of assembly ids</returns>  
-            public string ToCommaSeperatedList()  
+            public string ToCommaSeparatedList()  
             {  
                 StringBuilder sb = new StringBuilder();  
   
@@ -240,7 +240,7 @@ using Microsoft.SqlServer.Server;
   
                 cmd.CommandText = String.Format(CultureInfo.InvariantCulture,  
                     "SELECT name FROM sys.assemblies WHERE assembly_id IN ({0});",  
-                    unusedAssemblySet.ToCommaSeperatedList());  
+                    unusedAssemblySet.ToCommaSeparatedList());  
                 using (SqlDataReader rd = cmd.ExecuteReader())  
                 {  
                     while (rd.Read())  
@@ -407,8 +407,8 @@ Public NotInheritable Class AssemblyCleanup
         ''' <summary>  
         ''' Returns the comma-separated list of assembly ids contained in this instance  
         ''' </summary>  
-        ''' <returns>string value that represents a comma-seperated list of assembly ids</returns>  
-        Public Function ToCommaSeperatedList() As String  
+        ''' <returns>string value that represents a comma-separated list of assembly ids</returns>  
+        Public Function ToCommaSeparatedList() As String  
             Dim sb As New StringBuilder()  
   
             If m_dictionary.Count > 0 Then  
@@ -486,7 +486,7 @@ Public NotInheritable Class AssemblyCleanup
   
             cmd.CommandText = String.Format(CultureInfo.InvariantCulture, _  
                 "SELECT name FROM sys.assemblies WHERE assembly_id IN ({0});", _  
-                unusedAssemblySet.ToCommaSeperatedList())  
+                unusedAssemblySet.ToCommaSeparatedList())  
             Dim rd As SqlDataReader = cmd.ExecuteReader()  
             Try  
                 While rd.Read()  

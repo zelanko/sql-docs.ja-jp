@@ -1,7 +1,7 @@
 ---
 title: レプリケーション ログ リーダー エージェント | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7704a37bf8d3972944a17cc5ca1d3a6b209faf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202432"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226344"
 ---
 # <a name="replication-log-reader-agent"></a>レプリケーション ログ リーダー エージェント
   レプリケーション ログ リーダー エージェントは、トランザクション レプリケーション用に構成した各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーする実行可能ファイルです。  
@@ -101,8 +101,11 @@ ms.locfileid: "48202432"
 |**0**|SSL は使用されません。|  
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
 |**2**|SSL が使用され、証明書の確認が行われます。|  
-  
- 詳細については、「[Security Overview &#40;Replication&#41;](../security/security-overview-replication.md)」(セキュリティの概要 (レプリケーション)) を参照してください。  
+
+ > [!NOTE]  
+ >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
+ 
+ 詳細については、「[セキュリティの概要 &#40;レプリケーション&#41;](../security/security-overview-replication.md)」を参照してください。  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
  拡張イベントの XML 構成ファイルのパスとファイル名を指定します。 拡張イベントの構成ファイルによって、追跡に必要なセッションを構成し、イベントを有効にすることができます。  

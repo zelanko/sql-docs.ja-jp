@@ -1,6 +1,6 @@
 ---
 title: SQL Server on Linux でのサード パーティの Active Directory プロバイダーを使用して |Microsoft Docs
-description: このチュートリアルでは、サード パーティ プロバイダーでの AD 認証の構成手順
+description: このチュートリアルでは、サード パーティ プロバイダーを使用した Active Directory 認証の構成手順
 author: dylan-MSFT
 ms.date: 07/25/2018
 ms.author: dygray
@@ -11,155 +11,156 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AD authentication
-ms.openlocfilehash: beb342156098ebb5516466ad7fd4a771cc5a0616
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ffe146de3a842f9c273b4dbba2a9fe4d9ff7ff5
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787300"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757997"
 ---
 # <a name="use-third-party-active-directory-providers-with-sql-server-on-linux"></a>SQL Server on Linux でサード パーティの Active Directory プロバイダーを使用します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事は、構成する方法を説明します、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]など、サード パーティ製 AD プロバイダーを使用する場合の AD 認証を使用した Linux ホスト マシンで[PowerBroker Identity サービス (PBI)](https://www.beyondtrust.com/)、[いる Vintela 認証サービス (VAS)](https://www.oneidentity.com/products/authentication-services/)、および[Centrify](https://www.centrify.com/)します。 このガイドの AD 構成を確認する手順について説明し、マシンをドメインに参加させる方法について説明するものではありません。 詳細な手順への参加について、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]領域と SSSD を使用してドメインにホストを参照してください[SQL Server on Linux での Active Directory を使用して認証](sql-server-linux-active-directory-authentication.md)します。
+この記事は、構成する方法を説明します、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サード パーティの Active Directory プロバイダーを使用する場合、Active Directory 認証を使用した Linux のホスト コンピューターにします。 例としては、 [PowerBroker Identity サービス (PBI)](https://www.beyondtrust.com/)、 [1 つの Id](https://www.oneidentity.com/products/authentication-services/)、および[Centrify](https://www.centrify.com/)します。 このガイドには、Active Directory の構成を確認する手順が含まれます。 マシンをドメインに参加させる方法について説明するためのものではありません。 詳細な手順への参加について、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] realmd と SSSD を使用してドメインにホストを参照してください[SQL Server on Linux での Active Directory を使用して認証](sql-server-linux-active-directory-authentication.md)します。
 
 ## <a name="prerequisites"></a>前提条件
 
-ネットワークと結合の AD ドメイン コント ローラー (Windows) を設定する必要が AD 認証を構成する前に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD ドメインに Linux ホストにします。 使用することができます[PBI](https://www.beyondtrust.com/)、 [VAS](https://www.oneidentity.com/products/authentication-services/)、または[Centrify](https://www.centrify.com/)します。
+Active Directory 認証を構成する前に、Active Directory ドメイン コント ローラーを Windows、ネットワーク上を設定する必要があります。 参加し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux ホストは、Active Directory ドメインにします。 使用することができます[PBI](https://www.beyondtrust.com/)、 [VAS](https://www.oneidentity.com/products/authentication-services/)、または[Centrify](https://www.centrify.com/)します。
 
 > [!NOTE]
 >
->このチュートリアルでは"contoso.com"と"CONTOSO.COM"ドメインおよび領域名の例としてそれぞれします。 "DC1 また、使用します。CONTOSO.COM"ドメイン コント ローラーの完全修飾ドメイン名の例として。 これらを独自の値を置き換える必要があります。
+>このチュートリアルでは**`contoso.com`** と**`CONTOSO.COM`** ドメインおよび領域名の例としてそれぞれします。 またを使用して**`DC1.CONTOSO.COM`** 例の完全修飾ドメイン名、ドメイン コント ローラーのようにします。 これらの名前は、独自の値で置き換える必要があります。
 
-## <a name="check-connection-to-domain-controller"></a>ドメイン コント ローラーへの接続を確認してください。
+## <a name="check-the-connection-to-a-domain-controller"></a>ドメイン コント ローラーへの接続を確認してください。
 
-ドメインの短いおよび完全修飾名の両方でドメイン コント ローラーに接続することができますを確認します。
+ドメインの短期的および完全修飾の名前を持つドメイン コント ローラーに接続できることを確認します。
 
-   ```bash
-   ping contoso
+```bash
+ping contoso
 
-   ping contoso.com
-   ```
+ping contoso.com
+```
 
-   これらのいずれかに失敗した場合は、ドメイン検索の一覧を更新します。
+これらの名前のチェックのいずれかが失敗した場合は、ドメイン検索の一覧を更新します。
 
-   - **Ubuntu**:
+- **Ubuntu**
 
-     編集、`/etc/network/interfaces`ファイルに、AD ドメインがドメインの検索リストには。 
+  編集、`/etc/network/interfaces`ファイル、Active Directory ドメインがドメインの検索リスト含まれるようにします。 
 
-     ```/etc/network/interfaces
-     <...>
-     # The primary network interface
-     auto eth0
-     iface eth0 inet dhcp
-     dns-nameservers **<AD domain controller IP address>**
-     dns-search **<AD domain name>**
-     ```
+  ```/etc/network/interfaces
+  <...>
+  # The primary network interface
+  auto eth0
+  iface eth0 inet dhcp
+  dns-nameservers **<AD domain controller IP address>**
+  dns-search **<AD domain name>**
+  ```
 
-     > [!NOTE]
-     > さまざまなコンピューターのネットワーク インターフェイス (eth0) が異なる場合があります。 使用しているかを確認するには、ifconfig を実行し、IP アドレスと送信および受信したバイト数を持つインターフェイスをコピーします。
+  > [!NOTE]  
+  > ネットワーク インターフェイス、 **eth0**、さまざまなマシンが異なる場合があります。 使用しているかを確認するには、実行**ifconfig**します。 次に、IP アドレスと送信および受信したバイト数を持つインターフェイスをコピーします。
 
-     このファイルを編集した後、ネットワーク サービスを再起動します。
+  このファイルを編集した後、ネットワーク サービスを再起動します。
 
-     ```bash
-     sudo ifdown eth0 && sudo ifup eth0
-     ```
+  ```bash
+  sudo ifdown eth0 && sudo ifup eth0
+  ```
 
-     これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
+  これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
 
-     ```/etc/resolv.conf
-     search contoso.com com  
-     nameserver **<AD domain controller IP address>**
-     ```
+  ```/etc/resolv.conf
+  search contoso.com com  
+  nameserver **<AD domain controller IP address>**
+  ```
 
-   - **RHEL**:
+- **RHEL**
 
-     編集、`/etc/sysconfig/network-scripts/ifcfg-eth0`ファイル (またはその他のインターフェイス構成を必要に応じてファイル)、AD ドメインがドメインの検索リスト含まれるようにします。
+  編集、`/etc/sysconfig/network-scripts/ifcfg-eth0`ファイル、Active Directory ドメインがドメインの検索リスト含まれるようにします。 または、必要に応じて別のインターフェイス構成ファイルを編集します。
 
-     ```/etc/sysconfig/network-scripts/ifcfg-eth0
-     <...>
-     PEERDNS=no
-     DNS1=**<AD domain controller IP address>**
-     DOMAIN="contoso.com com"
-     ```
+  ```/etc/sysconfig/network-scripts/ifcfg-eth0
+  <...>
+  PEERDNS=no
+  DNS1=**<AD domain controller IP address>**
+  DOMAIN="contoso.com com"
+  ```
 
-     このファイルを編集した後、ネットワーク サービスを再起動します。
+  このファイルを編集した後、ネットワーク サービスを再起動します。
 
-     ```bash
-     sudo systemctl restart network
-     ```
+  ```bash
+  sudo systemctl restart network
+  ```
 
-     これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
+  これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
 
-     ```/etc/resolv.conf
-     search contoso.com com  
-     nameserver **<AD domain controller IP address>**
-     ```
+  ```/etc/resolv.conf
+  search contoso.com com  
+  nameserver **<AD domain controller IP address>**
+  ```
 
-   でも、ドメイン コント ローラーを ping できない場合は、完全修飾ドメイン名 (例: DC1 を検索します。CONTOSO.COM) とドメイン コント ローラーの IP アドレスと、次のエントリを追加 `/etc/hosts`
+  まだドメイン コント ローラーを ping できない場合は、完全修飾ドメイン名とドメイン コント ローラーの IP アドレスを検索します。 ドメイン名の例は、`DC1.CONTOSO.COM`します。 次のエントリを追加`/etc/hosts`:
 
-   ```/etc/hosts
-   **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
-   ```
+  ```/etc/hosts
+  **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
+  ```
 
-   - **SLES**:
+- **SLES**
 
-     編集、`/etc/sysconfig/network/config`ファイルに、AD ドメイン コント ローラー IP が DNS クエリに使用して、AD ドメインがドメインの検索リストには。
+  編集、`/etc/sysconfig/network/config`ように DNS クエリでは、Active Directory ドメイン コント ローラー IP が使用され、Active Directory ドメインがドメイン検索の一覧では、ファイルします。
 
-     ```/etc/sysconfig/network/config
-     <...>
-     NETCONFIG_DNS_STATIC_SEARCHLIST=""
-     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
-     ```
+  ```/etc/sysconfig/network/config
+  <...>
+  NETCONFIG_DNS_STATIC_SEARCHLIST=""
+  NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
+  ```
 
-     このファイルを編集した後、ネットワーク サービスを再起動します。
-     ```bash
-     sudo systemctl restart network
-     ```
+  このファイルを編集した後、ネットワーク サービスを再起動します。
 
-     これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。
+  ```bash
+  sudo systemctl restart network
+  ```
 
-     ```/etc/resolv.conf
-     search contoso.com com
-     nameserver **<AD domain controller IP address>**
-     ```
+  これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。
 
-## <a name="check-reverse-dns-is-properly-configured"></a>逆引き DNS が正しく構成されていることを確認します。
+  ```/etc/resolv.conf
+  search contoso.com com
+  nameserver **<AD domain controller IP address>**
+  ```
 
-次のコマンド (例: SQL Server を実行しているホストの完全修飾ドメイン名を返す必要があります。"SqlHost.contoso.com")。
+## <a name="check-that-the-reverse-dns-is-properly-configured"></a>逆引き DNS が正しく構成されていることを確認します。
 
-   ```bash
-   host **<IP address of SQL Server host>**
-   # **<reversed IP address>**.in-addr.arpa domain name pointerSqlHost.contoso.com.
-   ```
+次のコマンドは、SQL Server を実行するホストの完全修飾ドメイン名を返す必要があります。 例としては、  **`SqlHost.contoso.com`** します。
 
-   これが、ホストの FQDN を返さない場合、または FQDN が正しい場合は、逆引き DNS エントリを追加、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux ホスト、DNS サーバーにします。
+```bash
+host **<IP address of SQL Server host>**
+# **<reversed IP address>**.in-addr.arpa domain name pointerSqlHost.contoso.com.
+```
 
-## <a name="check-your-krb5-configuration-is-correct"></a>KRB5 構成が正しいことを確認します。
+このコマンドは、ホストの FQDN で返されない場合、または FQDN が正しい場合はの逆引き DNS エントリを追加[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux ホスト、DNS サーバーにします。
 
-チェック、`/etc/krb5.conf`が正しく構成されています。 ほとんどのサード パーティ製 AD プロバイダーでは、この自動的に行われます。 ただし、チェック`/etc/krb5.conf`を将来発生する問題を防ぐために次の値。
+## <a name="check-that-your-krb5-configuration-is-correct"></a>KRB5 構成が正しいことを確認します。
 
-   ```/etc/krb5.conf
-   [libdefaults]
-   default_realm = CONTOSO.COM
+いることを確認、`/etc/krb5.conf`が正しく構成されています。 ほとんどのサードパーティの Active Directory プロバイダーでは、この構成は自動的に行われます。 ただし、チェック`/etc/krb5.conf`を将来発生する問題を防ぐために次の値。
 
-   [realms]
-   CONTOSO.COM = {
-   }
+```/etc/krb5.conf
+[libdefaults]
+default_realm = CONTOSO.COM
 
-   [domain_realm]
-   contoso.com = CONTOSO.COM
-   .contoso.com = CONTOSO.COM
-   ```
+[realms]
+CONTOSO.COM = {
+}
+
+[domain_realm]
+contoso.com = CONTOSO.COM
+.contoso.com = CONTOSO.COM
+```
 
 ## <a name="next-steps"></a>次の手順
 
-この記事で構成する方法について説明、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サード パーティ製 AD プロバイダーを使用する場合の AD 認証を使用した Linux のホスト コンピューターにします。 構成を完了する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD アカウントをサポートするために linux では、次の手順に[SQL Server on Linux での Active Directory を使用して認証](sql-server-linux-active-directory-authentication.md)します。
+この記事では、構成する方法を説明します、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上の Linux ホスト マシン サード パーティの Active Directory プロバイダーを使用する場合、Active Directory 認証を使用します。 構成を完了する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Active Directory アカウントをサポートするために linux では、次の手順に[SQL Server on Linux での Active Directory を使用して認証](sql-server-linux-active-directory-authentication.md)します。
 
 > [!div class="nextstepaction"]
 > [SQL Server on Linux で Active Directory 認証を使用します。](sql-server-linux-active-directory-authentication.md)
 
 > [!NOTE]
 >
-> "AD ドメインに結合の SQL Server host"のセクションをスキップする[SQL Server on Linux での Active Directory を使用して認証](sql-server-linux-active-directory-authentication.md)ようにこのチュートリアルでは作業のだけです。
+> スキップすることができます、 **Active Directory ドメインに参加させる SQL Server ホスト**セクション[SQL Server on Linux での Active Directory を使用して認証](sql-server-linux-active-directory-authentication.md)このチュートリアルで完了したとします。

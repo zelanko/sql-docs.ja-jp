@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643980"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965957"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant で移行評価を SQL Server を実行します。
 
@@ -47,15 +47,13 @@ ms.locfileid: "49643980"
    ターゲットの Azure VM でホストされている SQL Server にオンプレミスの SQL Server に移行するため、ソース SQL Server のインスタンスを評価している、ときに、次の評価レポート タイプの一方または両方を選択できます。
 
     -   **互換性の問題**
-
     -   **新機能のお勧め**
 
     ![SQL Server のターゲットの評価レポートの種類を選択します。](../dma/media/AssessmentTypes.png)
 
-   Azure SQL Database に移行するため、ソース SQL Server のインスタンスを評価している、するときは、次の評価レポート タイプの一方または両方を選択できます。
+   Azure SQL Database に移行するため、ソース SQL Server のインスタンスを評価するときは、次の評価レポート タイプの一方または両方を選択できます。
 
     -   **データベースの互換性を確認してください。**
-
     -   **機能パリティを確認してください。**
 
     ![SQL Database のターゲットの評価レポートの種類を選択します。](../dma/media/AssessmentTypes_Azure.png)
@@ -89,17 +87,17 @@ ms.locfileid: "49643980"
 
 同様に、全体の機能の推奨事項を確認できます**パフォーマンス**、**ストレージ**、および**セキュリティ**領域。
 
-機能に関する推奨事項では、さまざまなインメモリ OLTP と列ストア、Stretch Database、Always Encrypted、動的データ マスク、および Transparent Data Encryption などの機能について説明します。
+機能に関する推奨事項では、さまざまなインメモリ OLTP で、列ストア、Stretch Database、Always Encrypted、動的データ マスク、および Transparent Data Encryption などの機能について説明します。
 
 ![機能の推奨事項の表示](../dma/media/FeatureRecommendations.png)
 
-Azure SQL database では、評価は、移行を妨げる問題と機能パリティに関する問題を提供します。 特定のオプションを選択して、両方のカテゴリの結果を確認します。
+Azure SQL database では、評価は、移行を妨げる問題と機能パリティに関する問題を提供します。 特定のオプションを選択して、両方のカテゴリの結果を確認します。
 
 - **SQL Server 機能パリティ**カテゴリは、Azure と軽減の手順で使用できる別の方法の推奨事項の包括的なセットを提供します。 移行プロジェクトでこの作業を計画できます。
 
   ![SQL Server 機能パリティ情報の表示](../dma/media/SQLFeatureParity.png)
 
-- **互換性の問題**カテゴリには、Azure SQL データベースへのオンプレミス SQL Server データベースの移行をブロックする機能が部分的にサポートされているか、サポートされていません。 それらの問題に対処するための推奨事項を提供します。
+- **互換性の問題**カテゴリには、Azure SQL データベースへのオンプレミス SQL Server データベースの移行をブロックする機能が部分的にサポートされているか、サポートされていません。 それらの問題に対処するための推奨事項を提供します。
 
   ![ビューの互換性の問題](../dma/media/CompatibilityIssues.png)
 

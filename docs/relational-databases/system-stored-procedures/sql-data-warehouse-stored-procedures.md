@@ -3,7 +3,7 @@ title: SQL Data Warehouse のストアド プロシージャ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.service: sql-data-warehouse
-ms.component: system-objects
+ms.component: design
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,17 +13,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 42a0058703333bce0b4454a9d32f750dff4ae7ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3369dfd653f1a0485f60145779b5691e200493a3
+ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679331"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254408"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL データ ウェアハウスのストアド プロシージャ
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベース ロールに関連する操作を実行するのに使用できる組み込みの手順を示します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 次のシステム プロシージャが含まれます。  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベース ロールに関連する操作を実行するのに使用できる組み込みの手順を示します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 次のシステム プロシージャが含まれています。  
   
 ##  <a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47679331"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  いくつかその他のシステム ストアド プロシージャのインスタンス内でのみ使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Api 想定されてません一般的なクライアントを使用します。 これらの手順が紹介[システム ストアド プロシージャ (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms187961.aspx)します。 これらの手順が変更され、互換性は保証されません。 一覧のすべての手順では使用できない[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。  
+>  いくつかその他のシステム ストアド プロシージャのインスタンス内でのみ使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Api 想定されていません一般的なクライアントを使用します。 これらの手順が紹介[システム ストアド プロシージャ (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms187961.aspx)します。 これらの手順が変更され、互換性は保証されません。 一覧にすべてのプロシージャでは使用できない [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   

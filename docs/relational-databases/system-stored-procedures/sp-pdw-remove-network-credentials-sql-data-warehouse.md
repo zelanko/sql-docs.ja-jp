@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-objects
+ms.component: design
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,17 +14,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 27c91a2e67f8bd9c71ee0dc5ce088ee596c7c765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ab5e9ed459e9abbd67b15010be35e9cc873db36
+ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254395"
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  これによりネットワークの資格情報に格納されている[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ネットワーク ファイル共有にアクセスします。 たとえば、このストアド プロシージャを使用して権限を削除する[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]バックアップと復元操作は、独自のネットワーク内に存在するサーバーで実行します。  
+  これにより、ネットワークの資格情報に格納されている [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ネットワーク ファイル共有にアクセスします。 たとえば、このストアド プロシージャを使用して権限を削除する [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] バックアップと復元操作は、自社のネットワーク内に存在するサーバーで実行します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,7 +38,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
   
 ## <a name="arguments"></a>引数  
  '*target_server_name*'  
- 対象サーバーのホスト名または IP アドレスを指定します。 このサーバーへのアクセスに資格情報はから削除されます[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。 これは変更または削除、チームで管理されている実際のターゲット サーバーですべてのアクセスを許可します。  
+ 対象サーバーのホスト名または IP アドレスを指定します。 このサーバーへのアクセスに資格情報が削除される予定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 これは変更または削除、チームで管理されている実際のターゲット サーバーですべてのアクセスを許可します。  
   
  *target_server_name* nvarchar (337) として定義されます。  
   
@@ -52,7 +52,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  [管理] ノードとすべての計算ノードには資格情報の削除が成功しなかった場合、エラーが発生します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- このストアド プロシージャの NetworkService アカウントからネットワーク資格情報を削除する[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。 SMP の各インスタンスを実行する、NetworkService アカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コントロールのノードとコンピューティング ノード上。 たとえば、バックアップ操作を実行すると、[管理] ノードおよびすべての計算ノード使用されます NetworkService アカウントの資格情報ターゲット サーバーにアクセスします。  
+ このストアド プロシージャでは、ネットワーク資格情報を削除の NetworkService アカウントから [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 SMP の各インスタンスを実行する、NetworkService アカウント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コントロールのノードと計算ノードにします。 たとえば、バックアップ操作を実行すると、[管理] ノードおよびすべての計算ノード使用されます NetworkService アカウントの資格情報ターゲット サーバーにアクセスします。  
   
 ## <a name="metadata"></a>メタデータ  
  すべての資格情報を一覧表示し、資格情報が削除されていることを確認するには、使用[sys.dm_pdw_network_credentials &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)します。  

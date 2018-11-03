@@ -1,5 +1,5 @@
 ---
-title: PolyBase で Hadoop の外部のデータにアクセスを構成する |Microsoft Docs
+title: Hadoop 内の外部データにアクセスするように PolyBase を構成する | Microsoft Docs
 description: 外部の Hadoop に接続するための Parallel Data Warehouse で PolyBase を構成する方法について説明します。
 author: mzaman1
 manager: craigg
@@ -9,31 +9,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460881"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236938"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>PolyBase で Hadoop の外部のデータにアクセスを構成します。
+# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
 
 この記事では、Hadoop の外部データのクエリを APS アプライアンスで PolyBase を使用する方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
-PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop プロバイダーをサポートしています。 Hadoop がその新しいリリースでの"Major.Minor.Version"パターンに依存して、サポートされているメジャーおよびマイナー リリース内のすべてのバージョンがサポートされています。 次の Hadoop プロバイダーがサポートされています。
+PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop プロバイダーをサポートしています。 Hadoop では、新規リリースについて "Major.Minor.Version" パターンを採用しており、サポートされているメジャーおよびマイナー リリース内のすべてのバージョンがサポートされています。 次の Hadoop プロバイダーがサポートされています。
  - Linux/Windows Server 上の Hortonworks HDP 1.3  
  - Linux 上の Hortonworks HDP 2.1 ～ 2.6
  - Windows Server 上の Hortonworks HDP 2.1 - 2.3  
  - Linux 上の Cloudera CDH 4.3  
  - Linux 上の Cloudera CDH 5.1 – 5.5、5.9 - 5.13
 
-### <a name="configure-hadoop-connectivity"></a>Hadoop 接続を構成します。
+### <a name="configure-hadoop-connectivity"></a>Hadoop 接続を構成する
 
 最初に、APS、特定の Hadoop プロバイダーを使用するを構成します。
 
-1. 実行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' とは、プロバイダーのセットを適切な値を使用します。 プロバイダーの値を検索する、次を参照してください。 [PolyBase 接続構成](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)します。 
+1. 'hadoop connectivity' を使用して [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を実行し、プロバイダーに対する適切な値を設定します。 プロバイダーの値を見つけるには、[PolyBase 接続構成 ](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)に関する記事を参照してください。 
 
    ```sql  
    -- Values map to various external data sources.  
@@ -48,9 +48,9 @@ PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (
 
 2. APS リージョンのサービスの状態のページを使用して再起動[アプライアンス Configuration Manager](launch-the-configuration-manager.md)します。
   
-## <a id="pushdown"></a> プッシュ ダウン計算を有効にします。  
+## <a id="pushdown"></a> プッシュダウン計算を有効にする  
 
-クエリのパフォーマンスを向上させるのには、Hadoop クラスターへのプッシュ ダウン計算を有効にします。  
+クエリ パフォーマンスを高めるには、Hadoop クラスターへのプッシュダウン計算を有効にします。  
   
 1. PDW 管理ノードへのリモート デスクトップ接続を開きます。
 
@@ -66,11 +66,11 @@ PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (
   
 5. すべての CDH 5.X バージョンで、yarn.site.xml file の最後か mapred-site.xml file に mapreduce.application.classpath 構成パラメーターを追加する必要があります。 HortonWorks では、yarn.application.classpath 構成内にこれらの構成が含まれます。 例については、「[PolyBase の構成](../relational-databases/polybase/polybase-configuration.md)」を参照してください。
 
-## <a name="configure-an-external-table"></a>外部テーブルを構成します。
+## <a name="configure-an-external-table"></a>外部テーブルを構成する
 
-Hadoop のデータ ソース内のデータを照会するには、TRANSACT-SQL クエリで使用する外部テーブルを定義する必要があります。 次の手順では、外部テーブルを構成する方法について説明します。
+Hadoop データ ソース内のデータのクエリを実行するには、Transact-SQL クエリで使用する外部テーブルを定義する必要があります。 次の手順では、外部テーブルを構成する方法を説明します。
 
-1. データベースのマスター _ キーを作成します。 資格情報シークレットを暗号化することが必要です。
+1. データベースにマスター キーを作成します。 資格情報シークレットを暗号化することが必要です。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -85,7 +85,7 @@ Hadoop のデータ ソース内のデータを照会するには、TRANSACT-SQL
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. 外部データ ソースの作成[CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)します。
+3. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -99,7 +99,7 @@ Hadoop のデータ ソース内のデータを照会するには、TRANSACT-SQL
    );  
    ```
 
-4. 外部ファイル形式を作成する[CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)します。
+4. [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) を使用して外部ファイル形式を作成します。
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -109,7 +109,7 @@ Hadoop のデータ ソース内のデータを照会するには、TRANSACT-SQL
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-5. 使用した Hadoop に格納されたデータを指す外部テーブルを作成する[CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)します。 この例では、外部のデータには、車のセンサー データが含まれています。
+5. [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)を使用して、Hadoop に格納されているデータをポイントする外部テーブルを作成します。 この例では、外部のデータには、車のセンサー データが含まれています。
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -126,7 +126,7 @@ Hadoop のデータ ソース内のデータを照会するには、TRANSACT-SQL
    );  
    ```
 
-6. 外部テーブルに対する統計を作成します。
+6. 外部テーブルの統計を作成します。
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -137,10 +137,10 @@ Hadoop のデータ ソース内のデータを照会するには、TRANSACT-SQL
 PolyBase が適している機能には、次の 3 つがあります。  
   
 - 外部テーブルに対するアドホック クエリ。  
-- データをインポートします。  
-- データをエクスポートします。  
+- データのインポート。  
+- データのエクスポート。  
 
-次のクエリでは、架空の車両センサー データの例を提供します。
+次のクエリでは、架空の車両センサー データの例を示します。
 
 ### <a name="ad-hoc-queries"></a>アドホック クエリ  
 
@@ -200,5 +200,6 @@ SQL Server Data tools、外部テーブルが別のフォルダーに表示さ�
 
 ## <a name="next-steps"></a>次の手順
 
-PoliyBase の詳細については、次を参照してください。、 [PolyBase とは何ですか?](../relational-databases/polybase/polybase-guide.md)します。 
+Hadoop セキュリティの設定」をご覧ください[Hadoop セキュリティの構成](polybase-configure-hadoop-security.md)します。<br>
+PolyBase について詳しくは、「[PolyBase とは](../relational-databases/polybase/polybase-guide.md)」をご覧ください。 
  

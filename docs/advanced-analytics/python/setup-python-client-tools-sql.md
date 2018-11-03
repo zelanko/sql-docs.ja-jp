@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 326676d1be684b90784351de316590ebdb1ff29f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: b328d6c44dd8f75e3d74a3abe74f3324f31e1409
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051154"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216626"
 ---
 # <a name="set-up-a-python-client-for-use-with-sql-server-machine-learning"></a>SQL Server Machine Learning で使用するための Python クライアントの設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python の統合では、Machine Learning サービス (In-database) のインストールに Python のオプションを含めると、SQL Server 2017 またはそれ以降の開始使用できます。 詳細については、次を参照してください。 [SQL Server Machine Learning のサービスをインストール](../install/sql-machine-learning-services-windows-install.md)します。
+Python の統合での Python のオプションを追加するときに、SQL Server 2017 またはそれ以降の開始がある、 [Machine Learning サービス (In-database) インストール](../install/sql-machine-learning-services-windows-install.md)します。 
 
-この記事では、machine learning と Python の統合を有効になっているリモート SQL Server に接続できるように、クライアントの開発ワークステーションを構成する方法について説明します。 最後に、SQL Server 上のリモート セッションをローカル セッションからの機能に加えて SQL Server の機能と同じ Python ライブラリをプッシュ計算にがあります。
+この記事では、machine learning と Python の統合を有効になっているリモート SQL Server に接続できるように、Python クライアントの開発ワークステーションを構成する方法について説明します。 この演習では、Jupyter Notebook を使用して、Python コードを実行します。 この記事の手順を完了すると、SQL Server のものと同じ Python ライブラリがあります。 SQL Server での Python のリモート セッションにローカルの Python セッションからの計算をプッシュする方法もわかります。
 
 > [!Tip]
-> ビデオ デモについては、次を参照してください。 [R を実行し、Jupyter Notebook から SQL Server にリモートで Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)します。
+> この記事で行う演習のビデオ デモについては、次を参照してください。 [R を実行し、Jupyter Notebook から SQL Server にリモートで Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)します。
 
 > [!Note]
 > クライアント ライブラリだけをインストールする代わりには、スタンドアロン サーバーを使用しています。 スタンドアロンを使用して、リッチ クライアントとサーバーは、一部のお客様がエンド ツー エンドのシナリオの多くの作業を好むオプションです。 ある場合、[スタンドアロン サーバー](../install/sql-machine-learning-standalone-windows-install.md) SQL Server データベース エンジンのインスタンスから完全に分離された Python のサーバーがある SQL Server セットアップで提供されるため、します。 Standalon サーバーには、Anaconda と Microsoft 固有のライブラリのオープン ソース ベースのディストリビューションが含まれています。 この場所に、Python の実行可能ファイルを見つけることができます:`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`します。 リッチ クライアント インストールの検証、として開きます、 [Jupyter notebook](#python-tools) Python.exe を使用して、サーバーでコマンドを実行します。
@@ -127,7 +127,7 @@ Python を使用するデータベースで、アカウントの次のアクセ�
 
 この次の手順を試す前に、SQL Server インスタンスへの接続文字列での権限があることを確認します、 [Iris サンプル データベース](../tutorials/demo-data-iris-in-sql.md)します。 データベースが存在しないための十分なアクセス許可がある場合は、[これらインライン命令を使用してデータベースを作成](#create-iris-remotely)です。
 
-接続文字列を有効な値に置き換えます。 サンプル コードを使用して`"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"`が、コードはインスタンス名で、リモート サーバーを可能性があります指定する必要があります。
+接続文字列を有効な値に置き換えます。 サンプル コードを使用して`"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"`が、コードは、インスタンス名とデータベース ユーザー ログインにマップする資格情報オプションで、リモート サーバーを可能性があります指定する必要があります。
 
 ### <a name="define-a-function"></a>関数を定義します。
 
@@ -237,7 +237,7 @@ iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 ```
 
-### <a name="3---use-recoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-RecoscalePy Api を使用してテーブルを作成およびあやめデータの読み込み
+### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-Revoscalepy Api を使用してテーブルを作成およびあやめデータの読み込み
 
 ```Python
 from revoscalepy import RxSqlServerData, rx_data_step

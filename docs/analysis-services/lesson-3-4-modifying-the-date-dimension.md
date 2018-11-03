@@ -1,5 +1,5 @@
 ---
-title: Date ディメンションの変更 |Microsoft ドキュメント
+title: Date ディメンションの変更 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e45dbb5f33ba17211fcb60bc6d8cca9e47aa1ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019669"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753569"
 ---
-# <a name="lesson-3-4---modifying-the-date-dimension"></a>レッスン 3、4、Date ディメンションの変更
+# <a name="lesson-3-4---modifying-the-date-dimension"></a>レッスン 3-4-Date ディメンションの変更
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 このトピックの実習では、ユーザー定義階層を作成し、Date、Month、Calendar Quarter、および Calendar Semester 属性に表示されるメンバー名を変更します。 また、属性の複合キーの定義、ディメンション メンバーの並べ替え順序の制御、および属性リレーションシップの定義も行います。  
@@ -86,7 +86,7 @@ ms.locfileid: "34019669"
   
 5.  **[属性]** ペインの **[Date Key]** 属性を、 **<new level>** [階層] **ペインの** セル ( **[English Month Name]** レベルの下) にドラッグします。  
   
-6.  **[階層]** ペインで、 **[Hierarchy]** 階層のタイトル バーを右クリックし、 **[名前の変更]** をクリックして「 **Calendar Date**」と入力します。  
+6.  **階層**ウィンドウのタイトル バーを右クリックし、**階層**階層、 をクリックして**の名前を変更**、し、入力**Calendar Date**。  
   
 7.  右クリックのショートカット メニューを使用して、 **Calendar Date** 階層で、 **English Month Name** レベルの名前を **Calendar Month**に、 **Date Key** レベルの名前を **Date**に変更します。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "34019669"
   
     この SQL スクリプトは、テーブルの各半期に表示されている半期と年度を連結し、連結した名前を新しい列に表示します。  
   
-10. クリックして **OK.**  
+10. **[OK]** をクリックします。  
   
 11. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   

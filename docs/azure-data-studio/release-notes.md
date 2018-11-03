@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411199"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237068"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio リリース ノート
 
@@ -23,8 +23,8 @@ ms.locfileid: "49411199"
 
 ## <a name="october-2018-october-release"></a>10 月 2018 (年 10 月リリース)
 
-リリース日: 2018 年 10 月 18 日  
-バージョン: 1.1.3
+リリース日: 2018 年 10 月 29 日  
+バージョン: 1.1.4
 
 - Azure SQL データベースを参照する Azure リソース エクスプ ローラーの概要
 - オブジェクト エクスプ ローラーおよびクエリ エディターの接続の堅牢性を向上します。
@@ -32,6 +32,12 @@ ms.locfileid: "49411199"
 - 更新する、 [SQL Server 2019 プレビュー拡張機能](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### <a name="bug-fixes"></a>バグの修正
+- 修正[発行 #2717](https://github.com/Microsoft/azuredatastudio/issues/2717): XML 列の結果は、書式設定 をクリックして
+- 修正[発行 #2993](https://github.com/Microsoft/azuredatastudio/issues/2993): 幅の結果の windows が完了していません
+- 修正[発行 #2999](https://github.com/Microsoft/azuredatastudio/issues/2999): DB に接続するときに、Mac 上のファイル System.Diagnostics.Tracing を読み込めませんでした
+- 修正[発行 #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): 時系列グラフが正しくレンダリングされません。
+- 修正[発行 #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): 一時的なセッションが突然変更によるテーブルの損失
+- [...]
 
 詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 

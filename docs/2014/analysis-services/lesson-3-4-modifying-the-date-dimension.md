@@ -11,18 +11,18 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05314c09c64232c469b88e4522934d2a4d713dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168162"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753579"
 ---
 # <a name="modifying-the-date-dimension"></a>Date ディメンションの変更
   このトピックの実習では、ユーザー定義階層を作成し、Date、Month、Calendar Quarter、および Calendar Semester 属性に表示されるメンバー名を変更します。 また、属性の複合キーの定義、ディメンション メンバーの並べ替え順序の制御、および属性リレーションシップの定義も行います。  
   
 ## <a name="adding-a-named-calculation"></a>名前付き計算の追加  
- 名前付き計算 (計算列として表される SQL 式) をデータ ソース ビューに追加できます。 この式は、テーブルの列として表示され、動作します。 名前付き計算を使用すると、基になるデータ ソースのテーブルを変更せずに、データ ソース ビュー内の既存のテーブルのリレーショナル スキーマを拡張できます。 詳細については、「[データ ソース ビューでの名前付き計算の定義 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)」を参照してください。  
+ 名前付き計算 (計算列として表される SQL 式) をデータ ソース ビューに追加できます。 この式は、テーブルの列として表示され、動作します。 名前付き計算を使用すると、基になるデータ ソースのテーブルを変更せずに、データ ソース ビュー内の既存のテーブルのリレーショナル スキーマを拡張できます。 詳細については、「 [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>名前付き計算を追加するには  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48168162"
   
 5.  ドラッグ、 **Date Key**属性を**属性**ペイン、 **\<新しいレベル >** セル、**階層**ウィンドウ、の下に、 **English Month Name**レベル。  
   
-6.  **階層**ウィンドウのタイトル バーを右クリックし、**階層**階層、 ボタンをクリック**の名前を変更**、し、入力`Calendar Date`。  
+6.  **階層**ウィンドウのタイトル バーを右クリックし、**階層**階層、 をクリックして**の名前を変更**、し、入力`Calendar Date`。  
   
 7.  右クリック コンテキスト メニューを使用して、`Calendar Date`階層の名前を変更、 **English Month Name**レベルを`Calendar Month`、名前を変更し、 **Date Key**レベルを`Date`。  
   

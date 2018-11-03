@@ -1,7 +1,7 @@
 ---
 title: レプリケーション ディストリビューション エージェント | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 29/10/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93648144c2da900c88888b78bbb77dab9bbc5233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ba109b21eb8af1f4260aee43f8a9c5f8d3a3bdb
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222627"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226334"
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
   レプリケーション ディストリビューション エージェントは、ディストリビューション データベース テーブルに登録されたスナップショット (スナップショット レプリケーションの場合) とトランザクション (トランザクション レプリケーションの場合) を、サブスクライバーのレプリケーション先のテーブルに移動する実行可能ファイルです。  
@@ -140,7 +140,10 @@ ms.locfileid: "48222627"
 |**0**|SSL は使用されません。|  
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
 |**2**|SSL が使用され、証明書の確認が行われます。|  
-  
+ 
+ > [!NOTE]  
+ >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
+
  詳細については、「[セキュリティの概要 &#40;レプリケーション&#41;](../security/security-overview-replication.md)」を参照してください。  
   
  **-ErrorFile** *error_path_and_file_name*  

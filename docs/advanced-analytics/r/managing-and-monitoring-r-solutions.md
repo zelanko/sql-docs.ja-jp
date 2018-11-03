@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169082"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743207"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理し、SQL server machine learning ワークロードの統合
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ Dba では、SQL Server データのセキュリティを使用するには、�
 
 > [!NOTE]
 > R パッケージの代替メソッドを使用する場合は、サーバー管理者権限はパッケージのインストールの具体的には必要ありません。 参照してください[SQL Server で R のインストール パッケージ](install-additional-r-packages-on-sql-server.md)詳細についてはします。
+
+## <a name="monitoring-script-execution"></a>スクリプトの実行を監視します。
+
+R と Python スクリプトで実行される[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]によって開始された、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]インターフェイス。 ただし、スタート パッドは、リソースの管理またはリソースを適切に管理する Microsoft によって提供されるセキュリティで保護されたサービスは個別に監視ではありません。
+
+スタート パッド サービスを実行する外部のスクリプトの管理を使用して、 [Windows ジョブ オブジェクト](/windows/desktop/ProcThread/job-objects)します。 ジョブ オブジェクトによって、プロセス グループをユニットとして管理できます。 各ジョブ オブジェクトは階層的であり、それに関連付けられているすべてのプロセスの属性を制御します。 ジョブ オブジェクトに対して実行される操作は、そのジョブ オブジェクトに関連付けられているすべてのプロセスに影響します。
+
+したがって、オブジェクトに関連付けられている 1 つのジョブを終了する必要がある場合は、関連するすべてのプロセスも終了されることに注意してください。 Windows ジョブ オブジェクトに割り当てられている R スクリプトを実行しているときに、終了する必要がある関連する ODBC ジョブをそのスクリプトが実行している場合は、親の R スクリプトのプロセスも終了します。
+
+並列処理を使用する外部のスクリプトを開始する場合、1 つの Windows ジョブ オブジェクトには、すべての並列の子プロセスが管理されます。
+
+プロセスがジョブで実行されているかどうかを調べるには、`IsProcessInJob` 関数を使用します。
 
 ## <a name="next-steps"></a>次の手順
 

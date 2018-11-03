@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050914"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216682"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>SQL Server 2019 (プレビュー) の展開用 Azure Kubernetes サービスを構成します。
 
@@ -27,11 +27,8 @@ AKS によって、作成、構成、およびコンテナー化されたアプ�
 
 ## <a name="prerequisites"></a>前提条件
 
-- AKS 環境では、VM の最小要件は (マスターへの追加) での最小サイズの少なくとも 2 つのエージェント Vm [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series)します。 VM ごとに必要な最小リソースとは、4 つの Cpu、14 GB のメモリです。
+- AKS 環境では、VM の最小要件は少なくとも 4 つの Cpu および 32 GB のメモリが各 (マスター) だけでなく、少なくとも 2 つのエージェント Vm。 Azure インフラストラクチャ Vm のサイズの複数のオプションを参照してください[ここ](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)の展開を計画しているリージョンの選択項目。
   
-   > [!NOTE]
-   > 最小サイズは、ビッグ データ ジョブまたは複数の Spark アプリケーションを実行する場合は、 [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup)、VM ごとに必要な最小リソースは、8 個の Cpu およびメモリとして 32 GB とします。
-
 - このセクションでは、ことが必要です実行、Azure CLI バージョン 2.0.4 以降。 インストールまたはアップグレードを表示する必要がある場合[Azure CLI 2.0 のインストール](https://docs.microsoft.com/cli/azure/install-azure-cli)します。 実行`az --version`必要な場合は、バージョンを確認します。
 
 - インストール[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)します。 SQL Server のビッグ データのクラスターでは、kubernetes では、サーバーおよびクライアントの両方に 1.10 バージョンの範囲内のすべてのマイナー バージョンが必要です。 Kubectl クライアントでは、特定のバージョンをインストールするを参照してください。 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)します。 AKS を使用する必要があります`--kubernetes-version`既定とは異なるバージョンを指定するパラメーター。 CTP2.0 リリース タイム フレームで AKS のみをサポートしている 1.10.7 および 1.10.8 バージョンに注意してください。 
@@ -81,7 +78,7 @@ Azure リソース グループは、azure リソースのデプロイし、管�
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_DS3_v2 \
+    --node-vm-size Standard_E4s_v3 \
     --node-count 2 \
     --kubernetes-version 1.10.7
     ```

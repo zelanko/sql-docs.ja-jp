@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-objects
+ms.component: design
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e9fc8ed13d62ec1417c5a5326053ef3af02fa06a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 205d731e262514c0782cad09af6bf36d24b25bc5
+ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774300"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254418"
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -50,10 +50,10 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  [ @table_owner=] '*table_owner*'  
  カタログ情報を返すために使用するテーブルのテーブル所有者です。 *所有者*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*所有者*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーが指定した名前のテーブルを所有している場合、そのテーブルの列が返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定のテーブルを所有していない*名前*、この手順は、指定のテーブルを探します*名前*データベースによって所有されています。所有者。 テーブルが存在する場合は、その列が返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定された名前のテーブルを現在のユーザーが所有している場合、そのテーブルの列が返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定のテーブルを所有していない*名前*、この手順は、指定のテーブルを探します*名前*データベースによって所有されています。所有者。 テーブルが存在する場合は、その列が返されます。  
   
  [ @qualifier=] '*修飾子*'  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 製品によっては、テーブルのデータベース環境のサーバー名を表す場合があります。  
+ テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列はデータベース名を表します。 製品によっては、テーブルのデータベース環境のサーバー名を表す場合があります。  
   
  [ @col_type=] '*col_type*'  
  列の種類です。 *col_type*は**char (** 1 **)**、既定値は r です種類 R 最適な列または列のセットを返します、または複数の列から値を取得することによって、指定した任意の行では、。一意に識別するテーブル。 列は、この目的のために特別に設計された疑似列、または、テーブルでインデックスが一意な 1 つ以上の列になります。 種類 V は、指定したテーブルに自動更新される列が 1 つ以上存在する場合、該当する列または列のセットを返します。この列は、トランザクションによって行の値が更新されると、データ ソースによって自動的に更新される列です。  
@@ -81,7 +81,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |PRECISION|**Int**|データ ソース上の列の有効桁数。 このフィールドは常に値を返します。|  
 |LENGTH|**Int**|データ ソース内のバイナリ形式でのデータ型の長さ (バイト単位) の必須の 10 **char (** 10 **)**、4 の**整数**、および 2 の**smallint**.|  
 |SCALE|**smallint**|データ ソース上の列の小数点以下桁数。 NULL は、小数点以下桁数を適用できないデータ型に対して返されます。|  
-|PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 1 を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
+|PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に 1 を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
 ## <a name="remarks"></a>コメント  
  sp_special_columns は、odbc SQLSpecialColumns と同じです。 返される結果は、SCOPE の順序に従って並べ替えられます。  
@@ -90,7 +90,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例は、内の行を一意に識別する列についての情報を返します、`FactFinance`テーブル。  
+ 次の例では、`FactFinance` テーブルの行を一意に識別する列に関する情報が返されます。  
   
 ```  
 -- Uses AdventureWorks  

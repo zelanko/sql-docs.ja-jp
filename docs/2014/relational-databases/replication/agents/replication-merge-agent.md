@@ -1,7 +1,7 @@
 ---
 title: レプリケーション マージ エージェント | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71c35ad53fd9c90b8c7130bac104f370e466448f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154182"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237108"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   レプリケーション マージ エージェントは、データベース テーブルに保持された初期スナップショットをサブスクライバーに適用するユーティリティ実行可能ファイルです。 さらに、初期スナップショットの作成後にパブリッシャーで発生したデータの増分変更をマージし、ユーザーが構成したルールに従って、またはユーザーが作成したカスタム競合回避モジュールを使用して、競合を調整します。  
@@ -169,12 +169,15 @@ ms.locfileid: "48154182"
 |**0**|SSL は使用されません。|  
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
 |**2**|SSL が使用され、証明書の確認が行われます。|  
+
+ > [!NOTE]  
+ >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
   
  詳細については、「[セキュリティの概要 &#40;レプリケーション&#41;](../security/security-overview-replication.md)」を参照してください。  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] アップロードを制限するには、使用、`@subscriber_upload_options`の`sp_addmergearticle`代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]アップロードを制限するには、`@subscriber_upload_options` の `sp_addmergearticle` を代わりに使用します。  
   
  同期中のデータ交換の種類を指定します。次のいずれかを指定できます。  
   
