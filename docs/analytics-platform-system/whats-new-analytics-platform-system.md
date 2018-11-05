@@ -9,17 +9,69 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461107"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237078"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウトの MPP データ ウェアハウスの新機能新機能
 新機能については最新のアプライアンスの更新プログラム Microsoft® Analytics Platform System (APS) を参照してください。 アクセス ポイントは、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスです。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.2"></a>
+## <a name="aps-cu72"></a>APS CU7.2
+リリース日 - 2018 の年 10 月
+
+### <a name="support-for-tls-12"></a>TLS 1.2 のサポート
+APS CU7.2 では、TLS 1.2 をサポートします。 クライアント マシン AP と AP にイントラ ノード通信できるようになりましたに設定する TLS1.2 経由でのみ通信します。 SSDT、SSIS、および TLS 1.2 経由でのみ通信するために設定されているクライアント コンピューターにインストールされている Dwloader などのツールは、TLS 1.2 を使用して AP に接続できます。 既定では、AP は旧バージョンとの互換性のため TLS (1.0、1.1、1.2) のすべてのバージョンをサポートします。 APS アプライアンスを設定する場合は、stictly に TLS 1.2 を使用して、レジストリ設定を変更することによって行うことができます。 
+
+参照してください[AP で TLS1.2 を構成する](configure-tls12-aps.md)詳細についてはします。
+
+### <a name="hadoop-encryption-zone-support-for-polybase"></a>PolyBase の Hadoop 暗号化ゾーンをサポートします。
+PolyBase は Hadoop 暗号化ゾーンを通信できるようになりました。 必要なアクセス ポイントの構成の変更を参照してください。 [Hadoop セキュリティの構成](polybase-configure-hadoop-security.md#encryptionzone)します。
+
+### <a name="insert-select-maxdop-options"></a>Insert Select maxdop オプション
+追加されました、[機能スイッチ](appliance-feature-switch.md)insert select 操作の 1 より大きい maxdop 設定を選択することができます。 0、1、2、または 4 に、maxdop 設定を設定できます。 既定値は 1 です。
+
+> [!IMPORTANT]  
+> 低速操作やデッドロック エラーでは、maxdop の増加は発生可能性がある場合があります。 発生する場合は、maxdop 1 に設定を変更、操作を再試行してください。
+
+### <a name="columnstore-index-health-dmv"></a>列ストア インデックスの状態を DMV
+列ストア インデックスの正常性を使用して情報を表示する**dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv。 次のビューを使用して、断片化を確認し、再構築または列ストア インデックスを再構成するタイミングを決定します。
+
+```sql
+create view dbo.vCS_rg_physical_stats
+as 
+with cte
+as
+(
+select   tb.[name]                    AS [logical_table_name]
+,        rg.[row_group_id]            AS [row_group_id]
+,        rg.[state]                   AS [state]
+,        rg.[state_desc]              AS [state_desc]
+,        rg.[total_rows]              AS [total_rows]
+,        rg.[trim_reason_desc]        AS trim_reason_desc
+,        mp.[physical_name]           AS physical_name
+FROM    sys.[schemas] sm
+JOIN    sys.[tables] tb               ON  sm.[schema_id]          = tb.[schema_id]                             
+JOIN    sys.[pdw_table_mappings] mp   ON  tb.[object_id]          = mp.[object_id]
+JOIN    sys.[pdw_nodes_tables] nt     ON  nt.[name]               = mp.[physical_name]
+JOIN    sys.[dm_pdw_nodes_db_column_store_row_group_physical_stats] rg      ON  rg.[object_id]     = nt.[object_id]
+                                                                            AND rg.[pdw_node_id]   = nt.[pdw_node_id]
+                                        AND rg.[pdw_node_id]    = nt.[pdw_node_id]                                          
+)
+select *
+from cte;
+```
+
+### <a name="polybase-date-range-increase-for-orc-and-parquet-files"></a>PolyBase ORC、Parquet ファイルの日付範囲を増やす
+読み取り、インポート、現在、PolyBase を使用して日付データ型をエクスポート、ORC、Parquet ファイルの種類の日付 2038-01-20 の前後に 1970-01-01 をサポートしています。
+
+### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>ターゲットとして SQL Server 2017 の SSIS 変換先アダプター
+配置ターゲットをからダウンロードできるように SQL Server 2017 をサポートする新しい AP SSIS 変換先アダプター[ダウンロード サイト](https://www.microsoft.com/en-us/download/details.aspx?id=57472)します。
+
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
 リリース日 - 2018 年 7 月

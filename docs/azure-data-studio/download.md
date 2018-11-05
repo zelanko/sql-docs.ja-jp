@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07c5e65558bf4544da08f631a1d57290352bb451
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411139"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965956"
 ---
 # <a name="download-and-install-azure-data-studio"></a>ダウンロードし、Azure Data Studio のインストール
 
@@ -28,9 +28,9 @@ ms.locfileid: "49411139"
 
 |プラットフォーム|ダウンロード|リリース日| バージョン |
 |:---|:---|:---|:---|
-|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|2018 年 10 月 18 日 |1.1.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|2018 年 10 月 18 日 |1.1.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|2018 年 10 月 18 日 |1.1.3|
+|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|2018 年 10 月 30 日 |1.1.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|2018 年 10 月 30 日 |1.1.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|2018 年 10 月 30 日 |1.1.4|
 
 最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
@@ -44,7 +44,7 @@ ms.locfileid: "49411139"
 1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 
-**.zip ファイル**
+**zip ファイル**
 
 1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=2030736) をダウンロードします。
 2. ダウンロードしたファイルを参照し、展開します。
@@ -146,10 +146,19 @@ Windows インストーラーを使用して[!INCLUDE[name-sos-short](../include
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
+## <a name="recommended-system-requirements"></a>推奨システム要件
+最適なエクスペリエンスは、推奨システム要件を使用してください。
+
+|             | CPU コア | メモリと RAM |
+|:-----------:|:---------:|:----------:|
+| 推奨 |     4     |      8     |
+|   最小   |     2     |      4     |
+|             |           |            |
+
 ## <a name="check-for-updates"></a>更新を確認する
 最新の更新を確認するには、ウィンドウの左下にある歯車アイコンをクリックして **更新を確認する** をクリックしてください。
 
-## <a name="supported-sql-offerings-ssms-180-preview"></a>サポートされる SQL 製品 (SSMS 18.0 プレビュー)
+## <a name="supported-sql-offerings"></a>サポートされる SQL 製品
 
 * このバージョンの Azure データ Studio はすべて[サポート対象バージョンの SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) Azure SQL Database と Azure SQL Data Warehouse で最新のクラウド機能の使用をサポートしています。 Azure Data Studio には、Azure SQL マネージ インスタンスのプレビュー サポートも提供します。
 

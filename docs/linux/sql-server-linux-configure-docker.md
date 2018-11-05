@@ -4,19 +4,19 @@ description: さまざまな方法を使用して、SQL Server 2017 と 2019 CTP
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/02/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 169ca2d6afc9d6061af0021d97062d12f19c9854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef759f41dd481510524d541751417a4dbe1c02c7
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596550"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753559"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -74,7 +74,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
       docker login
       ```
 
-   2. 次に、無料の開発者のストアの Docker でコンテナー イメージを取得する必要があります。 移動して[ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux)、] をクリックして**チェック アウトを続行**指示に従います。
+   2. 次に、無料の開発者のストアの Docker でコンテナー イメージを取得する必要があります。 移動して[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)、 をクリックして**チェック アウトを続行**指示に従います。
 
    3. プロシージャを実行し、要件を確認、[クイック スタート](quickstart-install-connect-docker.md)します。 2 つの違いがあります。 イメージをプルする必要があります**ストア、microsoft、mssql-サーバー-linux:\<タグ名\>** Docker ストアから。 実稼働エディションを指定する必要があり、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
 

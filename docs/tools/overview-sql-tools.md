@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1ff16d7a8b2253fc793db00cb46282539415ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767370"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643940"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL Server、Azure SQL Database、および Azure SQL Data Warehouse の SQL ツールとユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47767370"
 | ツール | [説明] | 上で実行します。 |
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 実行されている任意の場所にデータベースを管理するための無料の軽量ツールです。 このプレビュー リリースでは、拡張 TRANSACT-SQL エディターと、データベースの操作状態のカスタマイズ可能な洞察を含む、データベースの管理機能を提供します。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows、macOS、Linux で実行される**します。|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | クエリ、設計、および SQL Server、Azure SQL Database、Azure SQL Data Warehouse を管理するには、SQL Server Management Studio (SSMS) を使用します。 | **Windows で SSMS を実行**します。|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | クエリ、設計、および SQL Server、Azure SQL Database、Azure SQL Data Warehouse を管理するには、SQL Server Management Studio (SSMS) を使用します。 | **SSMS は Windows 上で実行**されます。|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server、Azure SQL Database、および Azure SQL Data Warehouse の強力な開発環境に Visual Studio を有効にします。| **SSDT は、Windows で実行**します。|
 | [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio Code をインストールすると、インストール、 [mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)Microsoft SQL Server、Azure SQL Database、および SQL Data Warehouse を開発するためです。| **Visual Studio Code は、Windows、macOS、Linux で実行される**します。|
 
@@ -72,6 +72,7 @@ ms.locfileid: "47767370"
 |:--|:--|
 | [構成マネージャー](../tools/configuration-manager/sql-server-configuration-manager-help.md) | SQL Server サービスを構成して、ネットワーク接続を構成するは、SQL Server の構成マネージャーを使用します。 Windows 上の configuration Manager の実行|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | SQL Server Migration Assistant を使用して、Microsoft Access、DB2、MySQL、Oracle、Sybase から SQL Server へのデータベースの移行を自動化します。|
+| [Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md) | データベース実験アシスタントを使用して、特定のワークロードの対象バージョンの SQL を評価します。 |
 | [分散再生](../tools/distributed-replay/install-distributed-replay-overview.md) | SQL Server の将来のアップグレードの影響を評価するためには、分散再生の機能を使用します。 Distributed Replay を使用してもハードウェアとオペレーティング システムのアップグレード、および SQL Server のチューニングの影響を評価します。 |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose ユーティリティでは、Service Broker メッセージ交換または Service Broker サービスの構成に関する問題を報告します。 |
 
