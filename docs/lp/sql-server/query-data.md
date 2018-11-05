@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure ドキュメント
-description: Microsoft Azure クラウド サービスを使用して強力なアプリケーションを構築および管理する方法について説明します。 ドキュメント、コード例、チュートリアルなどを取得します。
+title: SQL Server - クエリ データ
+description: ご利用の SQL Server データベースのデータへのクエリが簡単になる機能について調査します。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 1b24beb3957c0f385797f893073f7d22df63848b
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 6506311cd20587ae4db11f99691bcf2639458b18
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797844"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970333"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -81,25 +81,6 @@ ms.locfileid: "48797844"
                     <li class="panelItem" data-index="0">
                         <a class="singlePanelNavItem selected" href="#products1" data-linktype="self-bookmark"></a>
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
-                            <li>
-                                <a href="/sql/relational-databases/cursors/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/query-data/cursors.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>カーソル</h3>
-                                                    <p> 結果セットを 1 行ずつ処理できます </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                             <li>
                                 <a href="/sql/relational-databases/search/full-text-search/">
                                     <div class="cardSize">
@@ -244,10 +225,16 @@ ms.locfileid: "48797844"
         <h2>情報を共有しましょう</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> SQL ドキュメントへの投稿 </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 投稿 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> SQL ドキュメントのフィードバック </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> ヘルプ </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> フィードバック </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> アンケート </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> ブログ </a>

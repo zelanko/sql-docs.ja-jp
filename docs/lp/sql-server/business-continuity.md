@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure ドキュメント
-description: Microsoft Azure クラウド サービスを使用して強力なアプリケーションを構築および管理する方法について説明します。 ドキュメント、コード例、チュートリアルなどを取得します。
+title: SQL Server のビジネス継続性
+description: 高可用性、ディザスター リカバリー、また、状況に関係なく、ビジネスを継続するための、SQL Server のさまざまな機能を確認します。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 673c50c9c37a8dbe061e9695b8529e720b94217d
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 72f1eecdbf419685a747489a3eca95e8a386cf31
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797852"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336191"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -205,10 +205,16 @@ ms.locfileid: "48797852"
         <h2>情報を共有しましょう</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> SQL ドキュメントへの投稿 </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 投稿 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> SQL ドキュメントのフィードバック </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> ヘルプ </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> フィードバック </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> アンケート </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> ブログ </a>

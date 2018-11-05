@@ -4,7 +4,11 @@ items:
 - name: 概要
   items:
   - name: リリース ノート
-    href: sql-server-linux-release-notes.md
+    items:
+    - name: SQL Server 2017
+      href: sql-server-linux-release-notes.md
+    - name: SQL Server 2019 CTP 2.0
+      href: sql-server-linux-release-notes-2019.md
   - name: 新機能
     href: sql-server-linux-whats-new.md
   - name: エディションとサポートされる機能
@@ -46,15 +50,19 @@ items:
       href: sql-server-linux-shared-disk-cluster-configure-nfs.md
     - name: SMB
       href: sql-server-linux-shared-disk-cluster-configure-smb.md
+  - name: フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
+    href: sql-server-linux-shared-disk-cluster-operate.md
   - name: 7_ペースメーカー クラスターの配置
     href: sql-server-linux-deploy-pacemaker-cluster.md
   - name: 8_可用性グループの作成と構成
     href: sql-server-linux-create-availability-group.md
-  - name: 9_高可用性のための Kubernetes の構成
+  - name: 9_Kubernetes への配置
     href: tutorial-sql-server-containers-kubernetes.md
+  - name: 10_レプリケーションの構成
+    href: sql-server-linux-replication-tutorial-tsql.md
 - name: 概念
   items:
-  - name: Install
+  - name: インストール
     items:
     - name: SQL Server をインストールする
       href: sql-server-linux-setup.md
@@ -66,6 +74,8 @@ items:
       href: sql-server-linux-setup-full-text-search.md
     - name: SQL Server Integration Services のインストール
       href: sql-server-linux-setup-ssis.md
+    - name: SQL Server Machine Learning Services のインストール
+      href: sql-server-linux-setup-machine-learning.md
     - name: リポジトリの構成
       href: sql-server-linux-change-repo.md
   - name: '[構成]'
@@ -76,6 +86,14 @@ items:
       href: sql-server-linux-configure-environment-variables.md
     - name: Docker コンテナーの構成
       href: sql-server-linux-configure-docker.md
+    - name: MSDTC
+      items:
+      - name: MSDTC の構成
+        href: sql-server-linux-configure-msdtc.md
+      - name: MSDTC 用の Docker の構成
+        href: sql-server-linux-configure-msdtc-docker.md
+    - name: 永続的なメモリ PMEM の構成
+      href: sql-server-linux-configure-pmem.md
     - name: カスタマー フィードバック
       href: sql-server-linux-customer-feedback.md
   - name: 開発
@@ -165,6 +183,20 @@ items:
           href: sql-server-linux-availability-group-configure-rs.md
       - name: クロス プラットフォーム (Windows と Linux) の構成
         href: sql-server-linux-availability-group-cross-platform.md
+    - name: コンテナーの高可用性
+      href: sql-server-linux-container-ha-overview.md
+      items:
+      - name: SQL Server のコンテナー用の Always On 可用性グループ
+        href: sql-server-ag-kubernetes.md
+        items:
+        - name: 配置
+          href: sql-server-linux-kubernetes-deploy.md
+        - name: '[管理]'
+          href: sql-server-linux-kubernetes-manage.md
+        - name: '[接続]'
+          href: sql-server-linux-kubernetes-connect.md
+        - name: 配置スクリプトを作成する
+          href: sql-server-linux-kubernetes-create-deployment.md
   - name: Security
     href: sql-server-linux-security-overview.md
     items:
@@ -182,6 +214,15 @@ items:
       href: sql-server-linux-performance-best-practices.md
     - name: パフォーマンス機能の概要
       href: sql-server-linux-performance-get-started.md
+  - name: のレプリケーション
+    href: sql-server-linux-replication.md
+    items:
+    - name: '[構成]'
+      href: sql-server-linux-replication-configure.md
+    - name: '[スナップショット フォルダー]'
+      href: sql-server-linux-replication-snapshot-shares.md
+    - name: 既定以外のポート
+      href: sql-server-linux-replication-non-default-ports.md
 - name: サンプル
   items:
   - name: 無人インストール
@@ -220,9 +261,9 @@ items:
     href: https://feedback.azure.com/forums/908035-sql-server
   - name: Reddit
     href: https://www.reddit.com/r/SQLServer
-ms.openlocfilehash: d97b776239a5f349077a13b1e5c628dec1af8a63
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 719a4b93cc470a20fe297755273cabace5ba7cfd
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381147"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252059"
