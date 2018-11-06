@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b1bd34a017cc067a93e8b307adc5c8069ac8e0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8df74aceaf08bd030fe092d4c18cd38fc0559cb7
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831340"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970831"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob Storage 上の外部データにアクセスするように PolyBase を構成する
 
@@ -88,7 +88,7 @@ Hadoop データ ソース内のデータのクエリを実行するには、Tra
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
          FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
-               USE_TYPE_DEFAULT = TRUE)  
+               USE_TYPE_DEFAULT = TRUE))  
    ```
 
 1. [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)を使用して、Azure ストレージに格納されているデータをポイントする外部テーブルを作成します。 この例では、外部データには車両センサー データが含まれています。
@@ -196,5 +196,5 @@ SSMS では、外部テーブルが別のフォルダー **[外部テーブル]*
 
 次の記事を参照して、PolyBase を使用して監視するための方法をさらに調べます。
 
-[PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)  
-[PolyBase のトラブルシューティング](polybase-troubleshooting.md)  
+[PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
+[PolyBase のトラブルシューティング](polybase-troubleshooting.md)。  

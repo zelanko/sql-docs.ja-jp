@@ -2,11 +2,9 @@
 title: SQL Server でのセカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト -Always On 可用性グループ | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2018
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod: sql
 ms.reviewer: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.topic: article
 helpviewer_keywords:
 - connection access to availability replicas
@@ -19,14 +17,13 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ed23533850897e34e3411ac041585a351e2b287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f4a29f67c474ff30a7da0512d89b106769e90c
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840900"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018137"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,7 +34,7 @@ ms.locfileid: "47840900"
 
 ## <a name="use-cases"></a>ユース ケース
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] より前のバージョンでは、プライマリ レプリカへのユーザー トラフィックは、AG リスナーおよび対応するクラスター リソースによってリダイレクトされ、フェールオーバー後に再接続されるようになっています。 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、この AG リスナー機能は引き続きサポートされますが、リスナーを含めることができないシナリオのためにレプリカの接続のリダイレクトが追加されています。 次に例を示します。
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] より前のバージョンでは、プライマリ レプリカへのユーザー トラフィックは、AG リスナーおよび対応するクラスター リソースによってリダイレクトされ、フェールオーバー後に再接続されるようになっています。 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、この AG リスナー機能は引き続きサポートされますが、リスナーを含めることができないシナリオのためにレプリカの接続のリダイレクトが追加されています。 例 :
 
 * SQL Server の可用性グループに統合されているクラスター テクノロジでは、リスナーに似た機能が提供されない 
 * 構成が複雑になり、エラーが発生しがちであり、複数のコンポーネントが関係するせいでトラブルシューティングが困難な、クラウドや Pacemaker を使用するマルチサブネット フローティング IP のようなマルチサブネット構成である
