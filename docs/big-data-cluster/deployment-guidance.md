@@ -4,15 +4,15 @@ description: Kubernetes での SQL Server 2019 ビッグ データ クラスタ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/08/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: de19577b4a83bc10875bf56f4c0f2924828a00ea
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051184"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269865"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>SQL Server のビッグ データは、kubernetes クラスターをデプロイする方法
 
@@ -26,7 +26,7 @@ SQL Server のビッグ データ クラスターは、Kubernetes クラスタ�
 
 ## <a id="prereqs"></a> Kubernetes クラスターの前提条件
 
-SQL Server のビッグ データのクラスターでは、kubernetes では、サーバーおよびクライアントの両方に v1.10 の最小バージョンが必要です。 Kubectl クライアントでは、特定のバージョンをインストールするを参照してください。 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)します。  Minikube と AKS の最新バージョンとは、少なくとも 1.10 です。 For AKS を使用する必要があります`--kubernetes-version`既定とは異なるバージョンを指定するパラメーター。
+SQL Server のビッグ データのクラスターでは、kubernetes では、サーバーおよびクライアントの両方に v1.10 の最小バージョンが必要です。 Kubectl クライアントでは、特定のバージョンをインストールするを参照してください。 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)します。 Minikube と AKS の最新バージョンとは、少なくとも 1.10 です。 For AKS を使用する必要があります`--kubernetes-version`既定とは異なるバージョンを指定するパラメーター。
 
 > [!NOTE]
 > クライアントとサーバーの Kubernetes のバージョンで +1 または-1 のマイナー バージョンがあることに注意してください。 詳細については、次を参照してください。 [Kubernetes がサポートされるのは、リリースと傾斜コンポーネント](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)します。
@@ -54,7 +54,12 @@ SQL Server のビッグ データのクラスターでは、kubernetes では、
 
 ## <a id="deploy"></a> SQL Server のビッグ データ クラスターをデプロイします。
 
-Kubernetes クラスターを構成した後は、SQL Server のビッグ データ クラスターの配置を続行することができます。 開発/テスト環境のすべての既定の構成で Azure でビッグ データ クラスターをデプロイするには、この記事の手順に従います。
+Kubernetes クラスターを構成した後は、SQL Server のビッグ データ クラスターの配置を続行することができます。 
+
+> [!NOTE]
+> 以前のリリースからアップグレードする場合を参照してください、[この記事の「アップグレード](#upgrade)します。
+
+開発/テスト環境のすべての既定の構成で Azure でビッグ データ クラスターをデプロイするには、この記事の手順に従います。
 
 [クイック スタート: Kubernetes 上の SQL Server のビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
 
@@ -71,6 +76,9 @@ kubectl config view
 ## <a id="mssqlctl"></a> Mssqlctl をインストールします。
 
 **mssqlctl**は Python で記述された、により、クラスター管理者のブートス トラップし、REST Api を使用してビッグ データ クラスターを管理するコマンド ライン ユーティリティです。 必要な最小の Python バージョン v3.5 です。 必要がある`pip`をダウンロードしてインストールに使用される**mssqlctl**ツール。 
+
+> [!IMPORTANT]
+> 以前のリリースをインストールした場合は、クラスターを削除する必要があります*する前に*アップグレード**mssqlctl**と新しいリリースをインストールします。 詳細については、次を参照してください。[新しいリリースにアップグレードする](deployment-guidance.md#upgrade)します。
 
 ### <a name="windows-mssqlctl-installation"></a>Windows mssqlctl インストール
 
@@ -89,7 +97,7 @@ kubectl config view
 1. インストール**mssqlctl**次のコマンドを使用します。
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### <a name="linux-mssqlctl-installation"></a>Linux mssqlctl のインストール
@@ -105,17 +113,10 @@ Linux では、インストールする必要があります、 **python3**と**
    sudo -H pip3 install --upgrade pip
    ```
 
-1. 最新であることを確認**要求**パッケージ。
-
-   ```bash
-   sudo -H python3 -m pip install requests
-   sudo -H python3 -m pip install requests --upgrade
-   ```
-
 1. インストール**mssqlctl**次のコマンドを使用します。
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## <a name="define-environment-variables"></a>環境変数を定義します。
@@ -224,7 +225,7 @@ export STORAGE_CLASS_NAME=standard
 
 Kubernetes ストレージ クラスの事前プロビジョニングし、を使用して通過する必要があります、独自の物理または仮想マシンに kubeadm を展開している場合、`STORAGE_CLASS_NAME`します。 永続ボリュームを使用して設定を抑制する代わりに、`USE_PERSISTENT_VOLUME=false`します。 永続的なストレージの詳細については、次を参照してください。[を Kubernetes クラスターのビッグ データ、SQL Server でのデータ永続化](concept-data-persistence.md)します。
 
-## <a name="deploy-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスターをデプロイします。
+## <a name="deploy-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターを展開する
 
 Kubernetes 名前空間を初期化して、名前空間にすべてのアプリケーション ポッドをデプロイする作成クラスター API が使用されます。 Kubernetes クラスターで SQL Server のビッグ データ クラスターをデプロイするには、次のコマンドを実行します。
 
@@ -275,6 +276,29 @@ minikube ip
 ```bash
 kubectl get svc -n <name of your cluster>
 ```
+
+## <a id="upgrade"></a> 新しいリリースにアップグレードします。
+
+現時点では、ビッグ データ クラスターを新しいリリースにアップグレードする唯一の方法は、手動で削除してクラスターを再作成します。 各リリースでは、一意のバージョンの**mssqlctl**ですが、以前のバージョンと互換性がありません。 また、古いクラスターを新しいノードにイメージをダウンロードする場合は、最新のイメージ可能性がありますと互換性がない、クラスター上で古いイメージ。 最新のリリースにアップグレードするには、次の手順を使用します。
+
+1. 以前のクラスターを削除する前に、HDFS と SQL Server のマスター インスタンスにデータをバックアップします。 使用することができます、SQL Server のマスター インスタンスの[SQL Server のバックアップと復元](data-ingestion-restore-databse.md)します。 HDFS のする[で、データをコピーできます**curl**](data-ingestion-curl.md)します。
+
+1. 以前のクラスターを削除、`mssqlctl delete cluster`コマンド。
+
+   ```bash
+    mssqlctl delete cluster <old-cluster-name>
+   ```
+
+1. 最新バージョンのインストール**mssqlctl**します。
+   
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > 各リリースへのパス**mssqlctl**変更します。 以前にインストールした場合でも**mssqlctl**、新しいクラスターを作成する前に最新のパスから再インストールする必要があります。
+
+1. 」の手順に従って、最新リリースをインストール、[セクションを展開](#deploy)に改訂された記事。 
 
 ## <a name="next-steps"></a>次の手順
 

@@ -1,6 +1,6 @@
 ---
 title: Docker で SQL Server の構成オプション |Microsoft Docs
-description: さまざまな方法を使用して、SQL Server 2017 と 2019 CTP 2.0 のコンテナー イメージを Docker での対話について説明します。 これには、データ永続化ファイルのコピー、およびトラブルシューティングにはが含まれます。
+description: さまざまな方法を使用して、SQL Server 2017 と Docker の 2019 プレビュー コンテナー イメージとの対話について説明します。 これには、データ永続化ファイルのコピー、およびトラブルシューティングにはが含まれます。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef759f41dd481510524d541751417a4dbe1c02c7
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 0dbc72cf39e1dee5abad6ceb961f1b437287e5ba
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753559"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270025"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -29,10 +29,10 @@ ms.locfileid: "50753559"
 
 ## <a name="pull-and-run-the-container-image"></a>コンテナー イメージのプルと実行
 
-でプルして、SQL Server 2017 と SQL Server 2019 CTP 2.0 の Docker コンテナー イメージを実行するには、前提条件と次のクイック スタートの手順に従います。
+プルし、Docker コンテナー イメージの SQL Server 2017 と SQL Server 2019 のプレビューを実行、前提条件と次のクイック スタートの手順に従います。
 
 - [Docker を使用した SQL Server 2017 コンテナー イメージを実行します。](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Docker を使用した SQL Server 2019 CTP 2.0 コンテナー イメージを実行します。](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Docker を使用した SQL Server 2019 プレビューのコンテナー イメージを実行します。](quickstart-install-connect-docker.md?view=sql-server-ver15)
 
 この構成に関する記事では、次のセクションでは、追加の使用シナリオを提供します。
 
@@ -41,9 +41,9 @@ ms.locfileid: "50753559"
 
 ## <a id="rhel"></a> RHEL ベースのコンテナー イメージを実行します。
 
-すべての SQL Server Linux コンテナー イメージのドキュメントは、Ubuntu ベースのコンテナーをポイントします。 SQL Server 2019 CTP 2.0 以降では、Red Hat Enterprise Linux (RHEL) に基づくコンテナーを使用できます。 コンテナー リポジトリから変更**mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu**に**mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0**ですべての docker コマンド。
+すべての SQL Server Linux コンテナー イメージのドキュメントは、Ubuntu ベースのコンテナーをポイントします。 SQL Server 2019 プレビュー以降、Red Hat Enterprise Linux (RHEL) に基づくコンテナーを使用できます。 コンテナー リポジトリから変更**mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu**に**mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0**ですべての docker コマンド。
 
-たとえば、次のコマンドでは、RHEL を使用する最新の SQL Server 2019 CTP 2.0 コンテナーは取得します。
+たとえば、次のコマンドでは、RHEL を使用する最新の SQL Server 2019 プレビュー コンテナーは取得します。
 
 ```bash
 sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
@@ -74,7 +74,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
       docker login
       ```
 
-   2. 次に、無料の開発者のストアの Docker でコンテナー イメージを取得する必要があります。 移動して[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)、 をクリックして**チェック アウトを続行**指示に従います。
+   2. 次に、無料の開発者のストアの Docker でコンテナー イメージを取得する必要があります。 移動して[ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux)、 をクリックして**チェック アウトを続行**指示に従います。
 
    3. プロシージャを実行し、要件を確認、[クイック スタート](quickstart-install-connect-docker.md)します。 2 つの違いがあります。 イメージをプルする必要があります**ストア、microsoft、mssql-サーバー-linux:\<タグ名\>** Docker ストアから。 実稼働エディションを指定する必要があり、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
 
@@ -134,7 +134,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 ### <a name="tools-inside-the-container"></a>コンテナー内のツール
 
-SQL Server 2017 CTP 2.0 以降、 [SQL Server コマンド ライン ツール](sql-server-linux-setup-tools.md)コンテナー イメージに含まれます。 対話型コマンド プロンプトで、イメージをアタッチする場合は、ローカルのツールを実行できます。
+SQL Server 2017 のプレビュー以降、 [SQL Server コマンド ライン ツール](sql-server-linux-setup-tools.md)コンテナー イメージに含まれます。 対話型コマンド プロンプトで、イメージをアタッチする場合は、ローカルのツールを実行できます。
 
 1. コマンド `docker exec -it` を使用して、実行中のコンテナー内の対話型 bash シェルを起動します。 次の例では`e69e056c702d`はコンテナーの ID です。
 
@@ -178,7 +178,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-次の例は、SQL Server 2019 CTP 2.0 の 2 つのコンテナーを作成し、ポートにマッピング**1401**と**1402**ホスト コンピューターにします。
+次の例は、2 つの SQL Server 2019 プレビュー コンテナーを作成し、ポートにマッピング**1401**と**1402**ホスト コンピューターにします。
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu

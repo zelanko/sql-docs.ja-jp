@@ -4,15 +4,15 @@ description: SQL Server 2019 のビッグ データ クラスター内のデー�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050837"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221788"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server のビッグ データ クラスターでのデータ永続化
 
@@ -24,7 +24,7 @@ ms.locfileid: "50050837"
 
 > [!NOTE]
 
-> CTP 2.0 でのみ`ReadWriteOnce`クラスター全体のアクセス モードがサポートされています。
+> CTP 2.1 のみ`ReadWriteOnce`クラスター全体のアクセス モードがサポートされています。
 
 ## <a name="deployment-settings"></a>展開の設定
 

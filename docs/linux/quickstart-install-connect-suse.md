@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 988205e5f81b463d52bc2c2ec809e45c7d712856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833070"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269625"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート: SQL Server をインストールし、SUSE Linux Enterprise Server 上のデータベースの作成
 
@@ -24,13 +24,13 @@ ms.locfileid: "47833070"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-このクイック スタートでは、SUSE Linux Enterprise Server (SLES) v12 SP2 に SQL Server 2017 または SQL Server 2019 CTP 2.0 をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+このクイック スタートで SUSE Linux Enterprise Server (SLES) v12 sp2、SQL Server 2017 または SQL Server 2019 preview をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-このクイック スタートでは、SUSE Linux Enterprise Server (SLES) v12 SP2 で SQL Server 2019 CTP 2.0 をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+このクイック スタートでは、SUSE Linux Enterprise Server (SLES) v12 SP2 の SQL Server 2019 preview をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 
@@ -155,7 +155,7 @@ Sles SQL Server を構成するには、インストールするターミナル�
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-この時点では、SQL Server 2019 CTP 2.0 は、SLES マシン上で実行しを使用する準備ができました!
+この時点では、SQL Server 2019 プレビューは SLES コンピューター上で実行しを使用する準備ができました!
 
 ::: moniker-end
 

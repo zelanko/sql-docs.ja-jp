@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: f488e4141d6479f7b26af66e5924d00fa71a68e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f0ac8fe36994630f42d7ec41287c9ddcb76c9fc
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599526"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269845"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート: SQL Server をインストールし、Red Hat でデータベースを作成します。
 
@@ -30,7 +30,7 @@ ms.locfileid: "47599526"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-このクイック スタートで SQL Server 2019 CTP 2.0 にで Red Hat Enterprise Linux (RHEL) 7.3 以降をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+このクイック スタートで SQL Server 2019 プレビューにで Red Hat Enterprise Linux (RHEL) 7.3 以降をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 
@@ -142,7 +142,7 @@ RHEL で SQL Server を構成するためには、ターミナルで次のコマ
    sudo firewall-cmd --reload
    ```
 
-この時点では、SQL Server 2019 CTP 2.0 は、RHEL マシン上で実行しを使用する準備ができました!
+この時点では、SQL Server 2019 プレビューでは、RHEL コンピューターで実行しているしを使用する準備ができました!
 
 ::: moniker-end
 

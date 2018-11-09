@@ -2,7 +2,7 @@
 title: Azure Data Studio リリース ノート |Microsoft Docs
 description: Azure Data Studio リリース ノート
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,16 +10,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
-ms.translationtype: MT
+ms.openlocfilehash: 8a330c046d5e8398d03302863013ab9b0c1df37f
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237068"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269965"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio リリース ノート
 
-**[10 月のリリースをダウンロードしてください。](download.md)**
+**[11 月のリリースをダウンロードしてください。](download.md)**
+
+## <a name="november-2018-november-release"></a>2018 年 11 月 (11 月のリリース)
+
+リリース日: 2018 年 11 月 6 日  
+バージョン: 1.2.4
+
+- Idera 拡張機能の概要
+- 更新する、 [SQL Server 2019 プレビュー拡張機能](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- 貼り付けプランの拡張機能の概要
+- SSMS のエディター テーマを含め、High Color クエリ拡張機能の概要
+- SQL Server エージェント、Profiler、およびインポートの拡張機能での修正します。
+- .Net Core を修正する macOS で非アクティブな接続を削除するソケット KeepAlive 問題の原因
+- .Net Core へのアップグレードの SQL ツール サービス 2.2 Preview 3 (の最終的な AAD サポート)
+
+### <a name="bug-fixes"></a>バグの修正
+- 修正[発行 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Azure SQL DB に接続が失われました
+- 修正[発行 #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): OE データベース ノードを展開する「無効な引数」例外
+- 修正[発行 #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): クエリ結果に複数行のメッセージを正しく表示
+- 修正[発行 #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): テーブル名に特殊文字が含まれている場合、データの編集の修正ドキュメント名
+- 修正[発行 #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): ビルドの変更ログが VSCode のリリース ノートの変更を確認するという拡張機能で
+- 修正[発行 #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): ハイ コントラスト テーマが 2 倍に/3 要素のアイコン
+- 修正[発行 #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): SQL Server に接続するためのコマンド ライン インターフェイスの追加
+- 修正[発行 #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): クエリ プランのテーマのサポートを追加
+- [...]
+
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 
 ## <a name="october-2018-october-release"></a>10 月 2018 (年 10 月リリース)
 
@@ -58,7 +84,7 @@ Azure Data Studio (SQL Operations Studio 以前) の一般的な可用性リリ�
     - ノートブックで PROSE コード アクセラレータ ライブラリを使用して、高速なデータ準備のためのファイル形式とデータ型を参照してください。
   - Azure リソース エクスプ ローラー
     - Azure リソース エクスプ ローラー ビューでは、Azure アカウントのデータに関連するエンドポイントを参照し、オブジェクト エクスプ ローラーでそれらへの接続を作成できます。 このリリースでは、Azure SQL データベースとサーバーをサポートします。
-  - SQL Server Polybase 外部テーブルのウィザードを作成します。
+  - SQL Server PolyBase 外部テーブルのウィザードを作成します。
     - 使いやすいウィザードでは、外部テーブルとその関連のメタデータ構造体を作成します。 このリリースでは、リモートの SQL Server、Oracle サーバーがサポートされます。
 - クエリ結果グリッド パフォーマンスおよび結果セットの数が多いため、UX の機能強化。
 - Visual Studio Code のソース コードは、1.23 から 1.26.1 とグリッド レイアウトと向上の設定エディター (プレビュー) を更新します。
