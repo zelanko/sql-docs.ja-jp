@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Domains
@@ -13,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 076d2ab9b8c542594c4a13043f591dc679a269ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 585639067bd75c12be1b580ecd210171dff848a8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178763"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030988"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services の概要
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で提供されているデータ品質ソリューションを使用すると、データ スチュワードまたは IT プロフェッショナルは、データの品質を維持し、データをビジネス使用に適したものにすることができます。 DQS は、データ ソースの整合性と品質を管理する、コンピューター支援型のインタラクティブなナレッジ ドリブン ソリューションです。 DQS を利用すると、データについてのナレッジを発見し、構築して、管理できます。 その後、そのナレッジを使用して、データのクレンジング、マッチング、プロファイリングを実行できます。 また、DQS データ品質プロジェクトに含まれる参照データ プロバイダーのクラウド ベースのサービスを利用することもできます。  
@@ -35,15 +34,15 @@ ms.locfileid: "48178763"
   
  DQS は、データ品質の問題を解決するための以下の機能を備えています。  
   
--   **データ クレンジング:** コンピューター支援型と対話形式の両方のプロセスを使用して、不正確または不完全なデータを修正、削除、補強します。 詳しくは、「 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)」をご覧ください。  
+-   **データ クレンジング:** コンピューター支援型と対話形式の両方のプロセスを使用して、不正確または不完全なデータを修正、削除、補強します。 詳細については、「 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)」をご参照ください。  
   
--   **マッチング:** 一致を構成するものを決定して重複除去を実行できるようにするルール ベースのプロセスで、セマンティックな重複を識別します。 詳しくは、「 [Data Matching](../../2014/data-quality-services/data-matching.md)」をご覧ください。  
+-   **マッチング:** 一致を構成するものを決定して重複除去を実行できるようにするルール ベースのプロセスで、セマンティックな重複を識別します。 詳細については、「 [Data Matching](../../2014/data-quality-services/data-matching.md)」をご参照ください。  
   
--   **参照データ サービス:** 参照データ プロバイダーのサービスを使用して、データの品質を検証します。 Windows Azure Marketplace DataMarket の参照データ サービスを使用すると、データのクレンジング、検証、マッチング、補強を簡単に行うことができます。 詳細については、「 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
+-   **参照データ サービス:** 参照データ プロバイダーのサービスを使用して、データの品質を検証します。 Windows Azure Marketplace DataMarket の参照データ サービスを使用すると、データのクレンジング、検証、マッチング、補強を簡単に行うことができます。 詳細については、「 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)」をご参照ください。  
   
--   **プロファイリング:** ナレッジ発見、ドメイン管理、マッチング、データ クレンジングの各プロセスのすべてのステージにおいて、データ ソースを分析してデータの品質の内部状況がわかる情報を提供します。 プロファイリングは DQS データ品質ソリューションの強力なツールです。 ナレッジ管理、マッチング、データ クレンジングと同程度にプロファイリングが重要性を持つデータ品質ソリューションを作成できます。 詳細については、次を参照してください。 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)します。  
+-   **プロファイリング:** ナレッジ発見、ドメイン管理、マッチング、データ クレンジングの各プロセスのすべてのステージにおいて、データ ソースを分析してデータの品質の内部状況がわかる情報を提供します。 プロファイリングは DQS データ品質ソリューションの強力なツールです。 ナレッジ管理、マッチング、データ クレンジングと同程度にプロファイリングが重要性を持つデータ品質ソリューションを作成できます。 詳細については、「 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)」をご参照ください。  
   
--   **監視:** データ品質活動の状態を追跡して特定します。 監視により、データ品質ソリューションが設計意図のとおりに動作していることを確認できます。 詳細については、次を参照してください。 [DQS 管理](../../2014/data-quality-services/dqs-administration.md)します。  
+-   **監視:** データ品質活動の状態を追跡して特定します。 監視により、データ品質ソリューションが設計意図のとおりに動作していることを確認できます。 詳細については、「 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)」をご参照ください。  
   
 -   **ナレッジ ベース:** Data Quality Services は、DQS で構築されたナレッジに基づいてデータを分析するナレッジ ドリブン ソリューションです。 これにより、データについてのナレッジを継続的に拡充し、それによってデータの品質を継続的に向上させる、データ品質プロセスを作成できます。  
   

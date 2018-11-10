@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 0de0286065166137ebe83ce2a46dfb41d1670fc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816060"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033579"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して、Linux 上の SQL Server のデータベースを作成するには
 
@@ -107,7 +107,7 @@ Linux 上の SQL Server インスタンスに新しいデータベースを作�
 
 ## <a name="next-steps"></a>次の手順
 
-T-SQL に慣れていない場合は、次を参照してください。[チュートリアル: TRANSACT-SQL ステートメントの作成]と[TRANSACT-SQL リファレンス (データベース エンジン)]します。
+T-SQL を初めて使う場合は、「[チュートリアル: Transact-SQL ステートメントの作成]」 (チュートリアル: Transact-SQL ステートメントの記述) と「[TRANSACT-SQL リファレンス (データベース エンジン)]」 (Transact-SQL リファレンス (データベース エンジン)) を参照してください。
 
 SQL Data Tools でのデータベース開発の詳細については、次を参照してください[SSDT MSDN ドキュメント]
 

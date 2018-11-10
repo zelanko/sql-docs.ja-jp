@@ -1,7 +1,7 @@
 ---
 title: sys.sql_modules (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6e5929ac379b4e20ee4f25bf7e3ede42e980082
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705600"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221538"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SQL 言語定義モジュールであるオブジェクトごとの行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ネイティブを含むユーザー定義のスカラー関数をコンパイルします。 種類が P、RF、V、TR、FN、IF、TF、および R のオブジェクトには、SQL モジュールが関連付けられています。 スタンドアロンの既定値である種類 D のオブジェクトにも、このビューで SQL モジュール定義が関連付けられています。 これらの型の説明は、次を参照してください。、**型**内の列、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビューです。  
+  SQL 言語定義モジュールであるオブジェクトごとに 1 行を返します [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 、ネイティブを含むユーザー定義のスカラー関数をコンパイルします。 種類が P、RF、V、TR、FN、IF、TF、および R のオブジェクトには、SQL モジュールが関連付けられています。 スタンドアロンの既定値である種類 D のオブジェクトにも、このビューで SQL モジュール定義が関連付けられています。 これらの型の説明は、次を参照してください。、**型**内の列、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビューです。  
   
  詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
@@ -47,6 +47,9 @@ ms.locfileid: "47705600"
 |**null_on_null_input**|**bit**|モジュールは、任意の NULL 入力上で NULL 出力を生成するように宣言されました。|  
 |**execute_as_principal_id**|**Int**|EXECUTE AS データベース プリンシパルの ID です。<br /><br /> 既定値または EXECUTE AS CALLER の場合は、NULL になります。<br /><br /> 場合は、指定したプリンシパルの ID または EXECUTE AS SELF の実行\<プリンシパル >。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 0 = ネイティブでコンパイルされていない<br /><br /> 1 = ネイティブでコンパイルされている<br /><br /> 既定値は 0 です。|  
+|**is_inlineable**|**bit**|**適用対象**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降。<br/><br />かどうかには、モジュールが lineable いないかどうかを示します。 変換が指定された条件に基づいて[ここ](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)します。<br /><br /> 0 = inlineable しません<br /><br /> 1 = lineable ではありません。 <br /><br /> スカラー udf の場合、値は、UDF inlineable、および 0 それ以外の場合 1 になります。 インライン Tvf、およびその他のすべてのモジュール型の場合は 0 1 の値を常に含まれています。<br />|  
+|**inline_type**|**bit**|**適用対象**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降。<br /><br />示すインライン化するかどうか、モジュールの現在オンします。 <br /><br />0 = インライン化はオフになります<br /><br /> 1 = インライン展開がオンにします。<br /><br /> スカラー Udf は、値は 1 にインライン化 (明示的または暗黙的に) がオンします。 値は、インライン Tvf、1 およびその他のモジュール型の場合は 0 に常になります。<br />|  
+
   
 ## <a name="remarks"></a>コメント  
  既定の制約では、種類 D のオブジェクトの SQL 式がある、 [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)カタログ ビューです。 CHECK 制約、C の型のオブジェクトの SQL 式がある、 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)カタログ ビューです。  

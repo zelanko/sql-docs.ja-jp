@@ -25,17 +25,20 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4aa14bf055805a7dc779fe6c489694d2d0815934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696370"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970523"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  ソース テーブルとの結合結果に基づき、挿入、更新、削除のいずれかの操作を対象テーブルに対して実行します。 たとえば、他のテーブルとの違いに基づいて、あるテーブル内の行を挿入、更新、または削除することにより、2 つのテーブルを同期できます。  
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+ソース テーブルとの結合結果に基づき、挿入、更新、削除のいずれかの操作を対象テーブルに対して実行します。 たとえば、他のテーブルとの違いに基づいて、あるテーブル内の行を挿入、更新、または削除することにより、2 つのテーブルを同期できます。  
   
  **パフォーマンスのヒント:** 説明した MERGE ステートメントの条件付きの動作は、一致する特性が 2 つのテーブルで複雑に組み合わされている場合に最適です。 たとえば、存在しない場合は行を挿入し、一致しない場合は行を更新します。 別のテーブルの行に基づいて 1 つのテーブルを更新するだけで、基本的な INSERT、UPDATE、および DELETE ステートメントのパフォーマンスとスケーラビリティが向上します。 例 :  
   

@@ -47,17 +47,20 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461157"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970843"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しいテーブルを作成します。  
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しいテーブルを作成します。  
   
 > [!NOTE]   
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 構文については、「[CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)」をご覧ください。
@@ -1048,7 +1051,7 @@ GO
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] は、tempdb にも保存されてスコープがデータベース レベルに設定されるグローバル一時テーブルをサポートしています。 これは、グローバル一時テーブルが同じ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 内ですべてのユーザーのセッションで共有されることを意味します。 他のデータベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のグローバル一時テーブルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が一時テーブルに使用するのと同じ構文およびセマンティクスに従います。 同様に、グローバル一時ストアド プロシージャも、スコープが [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 内のデータベース レベルに設定されます。 ローカル一時テーブル (テーブル名が # で始まる) も [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でサポートされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるのと同じ構文およびセマンティクスに従います。  [一時テーブル](#temporary-tables)に関する上のセクションをご覧ください。  
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のグローバル一時テーブルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が一時テーブルに使用するのと同じ構文およびセマンティクスに従います。 同様に、グローバル一時ストアド プロシージャも、スコープが [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 内のデータベース レベルに設定されます。 ローカル一時テーブル (テーブル名が # で始まる) も [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でサポートされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるのと同じ構文およびセマンティクスに従います。  [一時テーブル](#temporary-tables)に関する上のセクションをご覧ください。  
 
 > [!IMPORTANT]
 > この機能は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で使用できます。

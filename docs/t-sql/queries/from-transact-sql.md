@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753430"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966040"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -217,7 +217,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  データベースから行を取得するサブクエリです。 *derived_table* は 1 つ上のレベルのクエリへの入力として使用されます。  
   
- *derived* *_table* では、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクター機能を使用して、複数の行を指定できます。 たとえば、 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`のようにします。 詳細については、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」を参照してください。  
+ *derived* *_table* では、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクター機能を使用して、複数の行を指定できます。 たとえば、`SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);` のようにします。 詳細については、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」を参照してください。  
   
  *column_alias*  
  派生テーブルの結果セット内の列名に対する別名です。このパラメーターは省略可能です。 選択リストの各列の別名を 1 つずつ含みます。列の別名リスト全体をかっこで囲みます。  
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>APPLY の使用  
  APPLY 演算子の左右両方のオペランドはテーブル式です。 これらのオペランドの主な相違点は、*right_table_source* は関数の引数として *left_table_source* から列を取得するテーブル値関数を使用できるということです。 *left_table_source* には、テーブル値関数を含めることができますが、*right_table_source* からの列である引数を含めることはできません。  
   
- APPLY 演算子は、FROM 句のテーブル ソースを作成するために、次の方法で動作します。  
+APPLY 演算子は、FROM 句のテーブル ソースを作成するために、次の方法で動作します。  
   
 1.  *left_table_source* の各行に対して *right_table_source* を評価し、行セットを作成します。  
   
-     *right_table_source* の値は *left_table_source* に依存します。 *right_table_source* はほぼ `TVF(left_table_source.row)` の方式で表記できます (`TVF` はテーブル値関数)。  
+    *right_table_source* の値は *left_table_source* に依存します。 *right_table_source* はほぼ `TVF(left_table_source.row)` の方式で表記できます (`TVF` はテーブル値関数)。  
   
 2.  UNION ALL 操作を実行し、*right_table_source* の評価の各行に対して作成された結果セットを *left_table_source* に結合します。  
   
-     APPLY 演算子の結果として作成される列の一覧は、*right_table_source* からの列の一覧と結合された *left_table_source* からの列セットです。  
+    APPLY 演算子の結果として作成される列の一覧は、*right_table_source* からの列の一覧と結合された *left_table_source* からの列セットです。  
   
 ## <a name="using-pivot-and-unpivot"></a>PIVOT および UNPIVOT の使用  
  *pivot_column* および *value_column* は、PIVOT 演算子によって使用されるグループ化列です。 PIVOT は、次のプロセスに従って出力結果セットを取得します。  
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>K. APPLY の使用  
- 次の例では、次のスキーマを使用した次のテーブルがデータベース内に存在することを前提としています。  
+次の例では、次のテーブルとテーブル値関数がデータベース内に存在することを前提としています。  
+
+|[オブジェクト名]|[列名]|      
+|---|---|   
+|Departments|DeptID、DivisionID、DeptName、DeptMgrID|      
+|EmpMgr|MgrID、EmpID|     
+|Employees|EmpID、EmpLastName、EmpFirstName、EmpSalary|  
+|GetReports(MgrID)|EmpID、EmpLastName、EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+指定された `MgrID` の直接または間接の監督下にあるすべての従業員の一覧を返す、`GetReports` テーブル値関数。  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- 指定された `MgrID` の直接または間接の監督下にあるすべての従業員の一覧 (`EmpID`、`EmpLastName`、`EmpSalary`) を返すテーブル値関数 `GetReports(MgrID)` もあります。  
-  
- この例では、`APPLY` を使用して、すべての部門と、各部門内のすべての従業員を返します。 特定の部門に従業員が存在しない場合は、その部門には行が返されません。  
+この例では、`APPLY` を使用して、すべての部門と、各部門内のすべての従業員を返します。 特定の部門に従業員が存在しない場合は、その部門には行が返されません。  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- `EmpID`、`EmpLastName`、および `EmpSalary` 列に対して NULL 値を作成する、従業員が存在しない部門に対してもクエリによって行を作成する場合は、代わりに `OUTER APPLY` を使用します。  
+`EmpID`、`EmpLastName`、および `EmpSalary` 列に対して NULL 値を作成する、従業員が存在しない部門に対してもクエリによって行を作成する場合は、代わりに `OUTER APPLY` を使用します。  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. CROSS APPLY を使用する  
- 次の例では、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得することによって、プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得します。 これにより、プラン ハンドルを `sys.dm_exec_query_plan` に渡すように `CROSS APPLY` 演算子が指定されます。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
+次の例では、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得することによって、プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得します。 これにより、プラン ハンドルを `CROSS APPLY` に渡すように `sys.dm_exec_query_plan` 演算子が指定されます。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
 ```sql
 USE master;  

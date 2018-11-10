@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f98b8ba6a5396af70c0475f177e719a39a48b388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088282"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019047"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>SQL Server 2014 の別のエディションへのアップグレード (セットアップ)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のさまざまなエディション間でのエディションのアップグレードをサポートしています。 各エディションでサポートされるアップグレード パスについては、「 [サポートされているバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)」をご覧ください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスのエディションのアップグレードを開始する前に、次のトピックを確認してください。  
@@ -64,7 +63,7 @@ ms.locfileid: "48088282"
   
 11. [完了] ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。  
   
-12. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](view-and-read-sql-server-setup-log-files.md)」を参照してください。  
+12. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](view-and-read-sql-server-setup-log-files.md)」をご覧ください。  
   
 13. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]からアップグレードした場合は、アップグレード済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用する前に、追加の手順を実行する必要があります。  
   

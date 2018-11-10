@@ -1,11 +1,9 @@
 ---
 title: 空間インデックスの概要 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113639"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018677"
 ---
 # <a name="spatial-indexes-overview"></a>空間インデックスの概要
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、空間データと空間インデックスがサポートされています。 *空間インデックス* は拡張インデックスの一種で、空間列にインデックスを設定することができます。 空間列とは、空間データ型 (`geometry` や `geography` など) のデータを含むテーブル列です。  
@@ -103,7 +101,7 @@ ms.locfileid: "48113639"
  既定では、オブジェクトごとのセル数の制限は 16 です。この値は、ほとんどの空間インデックスで、スペースと精度のバランスが取れた値になります。 ただし、 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントのサポート、CELLS_PER_OBJECT`=`*n*句オブジェクトごとのセル制限を 1 から 8192 の範囲を指定することができます包括的です。  
   
 > [!NOTE]  
->  空間インデックスの **cells_per_object** の設定は、[sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューで確認できます。  
+>  空間インデックスの **cells_per_object** の設定は、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューで確認できます。  
   
 #### <a name="deepest-cell-rule"></a>最下位のセルのルール  
  最下位のセルのルールでは、下位レベルのセルはすべてその上のセルに属しているという事実が利用されています。レベル 4 のセルはレベル 3 のセルに、レベル 3 のセルはレベル 2 のセルに、レベル 2 のセルはレベル 1 のセルにそれぞれ属しています。 たとえば、セル 1.1.1.1 に属しているオブジェクトは、セル 1.1.1、セル 1.1、およびセル 1 にも属しています。 こうしたセルの階層関係の情報はクエリ プロセッサに組み込まれているため、 インデックスに記録するのは最下位レベルのセルだけで済みます。これにより、インデックスに格納する情報を最小限に抑えられます。  
@@ -123,7 +121,7 @@ ms.locfileid: "48113639"
 >  空間インデックスの **tessellation_scheme** 設定は、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューで確認できます。  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>ジオメトリ グリッド テセレーション スキーム  
- GEOMETRY_AUTO_GRID テセレーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以降の `geometry` データ型用の既定のテセレーション スキームです。  GEOMETRY_GRID テセレーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の geometry データ型で使用できる唯一のテセレーション スキームです。 ここでは、空間インデックスの操作に関連するジオメトリ グリッド テセレーションの特徴 (サポートされるメソッドと境界ボックス) について説明します。  
+ GEOMETRY_AUTO_GRID テセレーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以降の `geometry` データ型用の既定のテセレーション スキームです。  GEOMETRY_GRID テセレーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の geometry データ型で使用できる唯一のテセレーション スキームです。 ここでは、空間インデックスの操作に関連するジオメトリ グリッド テセレーションの特徴 (サポートされるメソッドと境界ボックス) について説明します。  
   
 > [!NOTE]  
 >  このテセレーション スキームを明示的に指定するには、[CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 句を使用します。  
@@ -156,7 +154,7 @@ ms.locfileid: "48113639"
 >  空間インデックスのグリッド密度は、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューの bounding_box_xmin、bounding_box_ymin、bounding_box_xmax、および bounding_box_ymax columns の各列で確認できます。  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>地理グリッド テセレーション スキーム  
- このテセレーション スキームにのみ適用されます、`geography`列。 ここでは、地理グリッド テセレーションによってサポートされるメソッドの概要と、測地空間が平面に投影されてグリッド階層に分解されるしくみを説明します。  
+ このテセレーション スキームは、`geography` 列のみに適用されます。 ここでは、地理グリッド テセレーションによってサポートされるメソッドの概要と、測地空間が平面に投影されてグリッド階層に分解されるしくみを説明します。  
   
 > [!NOTE]  
 >  このテセレーション スキームを明示的に指定するには、[CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) 句を使用します。  
@@ -223,7 +221,7 @@ ms.locfileid: "48113639"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *数値*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>空間インデックスを使用するクエリ  
- 空間インデックスでのインデックス付き空間演算子を含むクエリでのみサポート、`WHERE`句。 たとえば、次のような構文を考えてみます。  
+ 空間インデックスは、`WHERE` 句にインデックス付き空間演算子を含むクエリのみでサポートされています。 たとえば、次のような構文を考えてみます。  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

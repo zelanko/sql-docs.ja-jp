@@ -1,11 +1,9 @@
 ---
 title: MultiPolygon | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
@@ -14,33 +12,33 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35618fe95194a2c8fe256720bbfb3bb223390e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d941425b1faa2fcbc23b48555dce12846a7fd52e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076864"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018987"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-  A`MultiPolygon`インスタンスは、0 個以上のコレクション`Polygon`インスタンス。  
+  `MultiPolygon` インスタンスは、0 個以上の `Polygon` インスタンスのコレクションです。  
   
 ## <a name="polygon-instances"></a>Polygon インスタンス  
- 次の図の例を示します`MultiPolygon`インスタンス。  
+ 次の図は、`MultiPolygon` インスタンスの例です。  
   
  ![geometry MultiPolygon インスタンスの例](../../database-engine/media/multipolygon.gif "geometry MultiPolygon インスタンスの例")  
   
  この図は次のことを示しています。  
   
--   図 1 は、 `MultiPolygon` 2 つのインスタンス`Polygon`要素。 境界は、2 つの外部リングと 3 つの内部リングによって定義されています。  
+-   図 1 は、2 つの `Polygon` 要素を持つ `MultiPolygon` インスタンスです。 境界は、2 つの外部リングと 3 つの内部リングによって定義されています。  
   
 -   図 2 は、2 つの `MultiPolygon` 要素を持つ `Polygon` インスタンスです。 境界は、2 つの外部リングと 3 つの内部リングによって定義されています。 2 つの `Polygon` 要素は接点で交差しています。  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- A`MultiPolygon`インスタンスは、次の条件のいずれかが満たされる許容されます。  
+ 次のいずれかの条件が満たされている場合、`MultiPolygon` インスタンスは許容されます。  
   
--   空`MultiPolygon`インスタンス。  
+-   空の `MultiPolygon` インスタンスである。  
   
--   構成するすべてのインスタンス、`MultiPolygon`インスタンスが許容されている`Polygon`インスタンス。 詳細については、受け入れられる`Polygon`インスタンスを参照してください[多角形](../spatial/polygon.md)します。  
+-   `MultiPolygon` インスタンスを構成するすべてのインスタンスが、許容される `Polygon` インスタンスである。 詳細については、受け入れられる`Polygon`インスタンスを参照してください[多角形](../spatial/polygon.md)します。  
   
  次の例に示す許容される`MultiPolygon`インスタンス。  
   
@@ -74,7 +72,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` 有効ではため、2 つ`Polygon`インスタンスが接点のみで接しています。 `@g3` 有効でないため、2 つの内部を塗りつぶす`Polygon`インスタンスが重なるの他のです。  
+ `@g2` は、2 つの `Polygon` インスタンスが 1 つの接点のみで接しているため有効です。 `@g3` は、2 つの `Polygon` インスタンスの内部が互いに重なっているため無効です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、 `geometry``MultiPolygon` インスタンスを作成し、2 つ目の構成要素の Well-Known Text (WKT) を返します。  

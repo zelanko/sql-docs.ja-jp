@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df2436acdf9a7f039d8b3886c3f8f5a1e539bc5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dd8bb116523e653e27a10e708fb60e090b76232
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122478"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031829"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインストールを完了した後で、DQSInstaller.exe ファイルを実行する必要があります。 このトピックでは、 **[スタート]** 画面、 **[スタート]** メニュー、Windows エクスプローラー、またはコマンド プロンプトから DQSInstaller.exe を実行する方法について説明します。DQSInstaller.exe ファイルの実行には、これらの方法のいずれも使用できます。  
@@ -53,7 +52,7 @@ ms.locfileid: "48122478"
 3.  データベース マスター キーのパスワードの入力を求めるメッセージが表示されます。 後で [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) に参照データ プロバイダーを設定するときに DQS_MAIN データベースに保存される参照データ サービス プロバイダー キーを暗号化するには、データベース マスター キーが必要です。  
   
     > [!IMPORTANT]  
-    >  パスワードは、8 文字以上にする必要があり、次の 4 つのカテゴリのうち 3 つカテゴリの文字を含める必要があります。英語の大文字 (A、B、C、... Z)、英語の小文字 (a、b、c、... z)、数字 (0 1、2、... 9) と英数字以外の特殊文字 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/) です。 たとえば、「 P@ssword」のように入力します。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
+    >  パスワードは、8 文字以上にする必要があり、次の 4 つのカテゴリのうち 3 つカテゴリの文字を含める必要があります。英語の大文字 (A、B、C、... Z)、英語の小文字 (a、b、c、... z)、数字 (0 1、2、... 9) と英数字以外の特殊文字 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/) です。 たとえば、 P@sswordのようにします。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
   
 4.  パスワードを入力し、さらに確認のためにもう一度そのパスワードを入力してから、Enter キーを押してインストールを続行します。  
   
@@ -105,6 +104,6 @@ ms.locfileid: "48122478"
 ## <a name="see-also"></a>参照  
  [Data Quality Services のインストール](install-data-quality-services.md)   
  [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
+ [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
   
   

@@ -224,7 +224,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**回避策:** &2; つの回避策が推奨されます。  
+**回避策:** 2 つの回避策が推奨されます。  
   
 1.  次の例のように、式にかっこを追加します。  
   
@@ -240,7 +240,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
     ```  
   
-2.  SHOWPLAN を対象にして、わずかに簡略化した式を使用する&2; 番目のプロシージャを作成します。プランの全般的な形式は同じままにします。 たとえば、次の表記の代わりに、  
+2.  SHOWPLAN を対象にして、わずかに簡略化した式を使用する 2 番目のプロシージャを作成します。プランの全般的な形式は同じままにします。 たとえば、次の表記の代わりに、  
   
     ```  
     SELECT @v0 +@v1 +@v2 +...+@v199  

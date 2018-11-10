@@ -23,17 +23,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63015c938366936b9b0997a08b69cfc49ae3c3a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f19e41bb14179dcf0a01de36c86a9f4ff5fdfc88
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595180"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970482"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  NULL 値を、指定された値に置き換えます。  
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+NULL 値を、指定された値に置き換えます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +65,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-isnull-with-avg"></a>A. AVG で ISNULL を使用する  
- 次の例では、すべての製品の重量の平均を求めます。 `Product` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `50` を代入します。  
+ 次の例では、すべての製品の重量の平均を求めます。 `50` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `Product` を代入します。  
   
 ```  
 USE AdventureWorks2012;  

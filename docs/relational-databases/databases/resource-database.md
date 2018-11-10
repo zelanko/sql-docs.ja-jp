@@ -45,14 +45,14 @@ ms.locfileid: "47748500"
 ## <a name="accessing-the-resource-database"></a>Resource データベースへのアクセス  
  Resource データベースの変更は、マイクロソフト カスタマー サポート サービス (CSS) のサポート スタッフの指示がある場合にのみ行ってください。 Resource データベースの ID は、常に 32767 です。 Resource データベースに関する他の重要な値には、バージョン番号とデータベースの最終更新時刻があります。  
   
- Resource **データベースの****バージョン番号を確認するには、次のステートメントを使用します**。  
+ Resource **データベースの** **バージョン番号を確認するには、次のステートメントを使用します** 。  
   
 ```  
 SELECT SERVERPROPERTY('ResourceVersion');  
 GO  
 ```  
   
- Resource **データベースの****最終更新時刻を確認するには、次のステートメントを使用します**。  
+ Resource **データベースの** **最終更新時刻を確認するには、次のステートメントを使用します**。  
   
 ```  
 SELECT SERVERPROPERTY('ResourceLastUpdateDateTime');  

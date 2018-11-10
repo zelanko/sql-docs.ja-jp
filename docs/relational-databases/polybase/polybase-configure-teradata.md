@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 7abd9873b3aeefb5644ade0497fe89c47d7cd343
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806632"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757957"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Teradata 上の外部データにアクセスするための PolyBase の構成
 
@@ -29,26 +29,27 @@ PolyBase をインストールしていない場合は、「[PolyBase のイン�
 
 Teradata に対して PolyBase を使用するには、VC++ 再頒布可能パッケージが必要です。
  
-## <a name="configure-an-external-table"></a>外部テーブルの構成
+## <a name="configure-an-external-table"></a>外部テーブルを構成する
 
 Teradata データ ソースのデータに対してクエリを実行するには、外部テーブルを作成して外部データを参照する必要があります。 このセクションでは、これらの外部テーブルを作成するサンプル コードを示します。 
 
-このセクションでは、次のオブジェクトを作成します。
+このセクションでは、次のオブジェクトが作成されます。
 
 - データベース スコープ ベースの資格情報 (TRANSACT-SQL) の作成します。
 - 外部データ ソース (TRANSACT-SQL) を作成します。 
 - 外部テーブル (TRANSACT-SQL) を作成します。 
 - CREATE STATISTICS (Transact-SQL)
 
-1. まだ存在しない場合は、データベースにマスター キーを作成します。 これは、資格情報のシークレットの暗号化に必須です。
+1. データベースにマスター キーがまだない場合は、作成します。 資格情報シークレットを暗号化するには、マスター キーが必要です。
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## <a name="arguments"></a>引数
+    **引数**
+
     PASSWORD ='password'
 
-    データベース内のマスター キーの暗号化に使用されているパスワードを指定します。 パスワードは、SQL Server のインスタンスをホストしている、コンピューターの Windows パスワード ポリシー要件を満たす必要があります。
+    データベース内のマスター キーの暗号化に使用されているパスワードを指定します。 パスワードは、SQL Server のインスタンスをホストする、コンピューターの Windows パスワード ポリシー要件を満たす必要があります。
 
 1. データベース スコープ資格情報を作成します。
  
@@ -108,9 +109,9 @@ Teradata データ ソースのデータに対してクエリを実行するに�
      );
      ```
 
-1. **省略可能:** 外部テーブルの統計を作成します。
+1. *省略可能:* 外部テーブルの統計を作成します。
 
-    最適なクエリのパフォーマンスを得るために、外部テーブルの列、特に結合、フィルター、集計に使用される列に対して統計を作成することをお勧めします。
+    最適なクエリのパフォーマンスを得るために、外部テーブルの列、特に結合、フィルター、集計に使用される列に対して統計を作成します。
 
      ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

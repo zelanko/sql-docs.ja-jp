@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
@@ -14,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06ffc2c8633407ddcc3f7c6d8a55933d05a3d26a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060572"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018317"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server 2014 へのアップグレード (セットアップ)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアップグレードできます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を以前のバージョンと並列でインストールすることもできます。または、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から既存データベース設定と構成の設定を移行し、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに適用することもできます。  
@@ -125,7 +124,7 @@ ms.locfileid: "48060572"
   
 -   **サーバーの登録** : アップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのレジストリ設定が削除されます。 アップグレード後、サーバーを再登録する必要があります。  
   
--   **統計の更新** : クエリ パフォーマンスを最適化するため、アップグレードに続いてすべてのデータベース上で統計を更新することをお勧めします。 使用して、`sp_updatestats`ストアド プロシージャ内のユーザー定義テーブルの統計を更新する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
+-   **統計の更新** : クエリ パフォーマンスを最適化するため、アップグレードに続いてすべてのデータベース上で統計を更新することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー定義テーブル内の統計を更新するには、`sp_updatestats` ストアド プロシージャを使用します。  
   
 -   **新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール内容の構成**: システムのセキュリティを向上させるため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、主要なサービスと機能を個別にインストールし、有効化できるようになっています。 外部からのアクセスの設定の詳細については、このリリースの Readme ファイルを参照してください。  
   

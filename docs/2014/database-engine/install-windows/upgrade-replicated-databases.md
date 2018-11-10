@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
@@ -17,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 697f0d59cb912aef549288073922d555c3c21057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d26bb248705ddce8932264701fbb7b9c09f64fcb
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050022"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018597"
 ---
 # <a name="upgrade-replicated-databases"></a>レプリケートされたデータベースのアップグレード
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、レプリケートされたデータベースを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアップグレードすることができます。ノードのアップグレード中は、その他のノードでの操作を停止する必要はありません。 トポロジでサポートされるバージョンに関して、以下の規則が守られていることを確認してください。  
@@ -70,7 +69,7 @@ ms.locfileid: "48050022"
   
 -   [初期スナップショットの作成および適用](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [レプリケーション エージェント実行可能ファイルの概念](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  マージ エージェントの実行の詳細については、次のトピックを参照してください。  
   

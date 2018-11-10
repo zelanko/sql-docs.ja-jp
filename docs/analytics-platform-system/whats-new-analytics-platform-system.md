@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237078"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269755"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウトの MPP データ ウェアハウスの新機能新機能
 新機能については最新のアプライアンスの更新プログラム Microsoft® Analytics Platform System (APS) を参照してください。 アクセス ポイントは、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスです。 
@@ -137,7 +137,7 @@ APS AU6 では、これらの T-SQL での互換性の改善をサポートし�
 
 **データ型**
 
-- [Varchar (max)][]、 [NVARCHAR(MAX)][]と[varbinary (max)][]します。 これらの LOB データ型では、2 GB の最大サイズがあります。 オブジェクトによって使用されるこれらの読み込みに[bcp ユーティリティ][]します。 Polybase と dwloader は、これらのデータ型を現在サポートされません。 
+- [Varchar (max)][]、 [NVARCHAR(MAX)][]と[varbinary (max)][]します。 これらの LOB データ型では、2 GB の最大サイズがあります。 オブジェクトによって使用されるこれらの読み込みに[bcp ユーティリティ][]します。 PolyBase と dwloader は、これらのデータ型を現在サポートされません。 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][]と 10 進データ型。

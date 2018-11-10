@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
@@ -13,12 +12,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 086d66a1503c988c8962203681b58706ec5281f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4162f2d0bd4662221fe8a9d32f3eb741155a302
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200532"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033359"
 ---
 # <a name="change-domain-values"></a>ドメイン値の変更
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのメタデータを変更および拡張する方法について説明します。 ナレッジ検出でナレッジを生成したり、ナレッジ ベースまたはドメインにナレッジをインポートしたり、別のナレッジ ベースに基づいてナレッジ ベースを作成した後に、データ値を対話形式で変更することができます。 ナレッジ ベースを生成するときは、コンピューター支援型のプロセスを利用するほかに、独自のナレッジを使用してデータ値を確認したり、次のように変更したりできます。  
@@ -33,7 +32,7 @@ ms.locfileid: "48200532"
   
 -   Excel ファイルからドメイン値をインポートします。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ドメイン値を変更するには、ドメイン管理アクティビティでナレッジ ベースとドメインを開いておく必要があります。  
@@ -86,7 +85,7 @@ ms.locfileid: "48200532"
   
     -   **[選択したドメイン値をグループの先頭の値として設定]**: グループの先頭の値を変更するには、先頭の値として指定されていないグループ内の値を選択し、 **[選択したドメイン値をグループの先頭の値として設定]** をクリックします。 先頭の値が他の値の置換値として設定されます。 この操作は、2 つ以上の値がグループ化されていて、DQS によって指定された値から先頭の値を変更する場合にのみ実行できます。 先頭の値は青色の行で太字で示されます。  
   
-7.  **スペル チェック**: 値に赤い波線の下線が付いている場合は、スペル チェックで値の修正が提案されています。 その値を右クリックし、必要に応じて修正を選択します。 修正を選択すると、値の種類が "エラー" になり (最初から "エラー" の場合はそのまま)、その修正が **[次に修正]** 列に追加されます。 下矢印をクリックすると、その他の修正案が表示されます。 手動で修正を入力してスペル チェックの辞書に追加すると、修正として選択できるようになります。 詳細については、「 [DQS のスペル チェックの使用](../../2014/data-quality-services/use-the-dqs-speller.md) 」および「 [ドメインのプロパティを設定する](../../2014/data-quality-services/set-domain-properties.md)」を参照してください。  
+7.  **スペル チェック**: 値に赤い波線の下線が付いている場合は、スペル チェックで値の修正が提案されています。 その値を右クリックし、必要に応じて修正を選択します。 修正を選択すると、値の種類が "エラー" になり (最初から "エラー" の場合はそのまま)、その修正が **[次に修正]** 列に追加されます。 下矢印をクリックすると、その他の修正案が表示されます。 手動で修正を入力してスペル チェックの辞書に追加すると、修正として選択できるようになります。 詳細については、「 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) 」および「 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)」を参照してください。  
   
     > [!NOTE]  
     >  スペル チェックを使用するには、 **[ドメインのプロパティ]** ページで有効にする必要があります。 **[ドメインのプロパティ]** ページで無効になっている場合は、 **[ドメイン値]** ページで **[スペル チェックを有効/無効にします]** アイコンをクリックして有効にすることもできます。  

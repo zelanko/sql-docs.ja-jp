@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createcd.f1
@@ -14,12 +13,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6362196706e3c37ffbd325aeb8ff5576ca897c02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b72ee81d92629baa657ffb3bde2596cdb2abb96a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105372"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030329"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインを作成する方法について説明します。 複合ドメインは、1 つのデータ フィールドに適用される 1 つ以上の単一ドメインで構成されます。 複合ドメインについて詳しくは、「[複合ドメインの管理](../../2014/data-quality-services/managing-a-composite-domain.md)」をご覧ください。  
@@ -28,7 +27,7 @@ ms.locfileid: "48105372"
   
  複合ドメインを作成したら、複合ドメインのプロパティの変更、ドメインへの参照データ サービスのアタッチ、ドメイン間のルールの作成、または値のリレーションの作成を行うことができます。 そのためには、 **[ドメイン管理]** ページの **[ドメイン リスト]** で複合ドメインを選択し、適切なタブを選択します。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  複合ドメインを作成するには、ナレッジ ベースを作成して開いておく必要があります。また、複合ドメインに追加する単一ドメインを少なくとも 2 つ作成しておく必要があります。  
@@ -46,7 +45,7 @@ ms.locfileid: "48105372"
   
 3.  アクティビティとして **[ナレッジ検出]** を選択した後に、 **[作成]** をクリックして新しいナレッジ ベースを作成するか、 **[開く]** をクリックして既存のナレッジ ベースを開きます。  
   
-4.  **[マップ]** ページで、データ ソースへの接続を指定します。 詳細については、次を参照してください。 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)します。  
+4.  **[マップ]** ページで、データ ソースへの接続を指定します。 詳細については、「 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)」をご参照ください。  
   
 5.  **"マッピング"** テーブルで、空の行の **[ソース列]** 列のドロップダウン リストからソース列を選択します。 ソース列に、既存の 2 つの単一ドメインで構成される複合ドメインが含まれていることを確認します。 対応する単一ドメインが存在しない場合は、 **[ドメインの作成]** アイコンをクリックします。  
   

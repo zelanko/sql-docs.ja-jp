@@ -48,11 +48,11 @@ ms.locfileid: "47626670"
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**text***\*|**T****[ext]**|  
+    |**text**\*\*|**T****[ext]**|  
     |**ntext2**|**W**|  
     |**[バイナリ]**|**x**|  
     |**varbinary**|**x**|  
-    |**image***\*|**I****[mage]**|  
+    |**image**\*\*|**I****[mage]**|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
@@ -76,9 +76,9 @@ ms.locfileid: "47626670"
     |**UDT** (ユーザー定義データ型)|**U**|  
     |**XML**|**X**|  
   
-     \***char** ファイル ストレージ型でエクスポートされた非文字データのデータ ファイルの場合、このファイルに割り当てられる格納領域のサイズは、フィールド長、プレフィックス長、およびターミネータの相互関係で決まります。  
+     \* **char** ファイル ストレージ型でエクスポートされた非文字データのデータ ファイルの場合、このファイルに割り当てられる格納領域のサイズは、フィールド長、プレフィックス長、およびターミネータの相互関係で決まります。  
   
-     \*\***ntext**、 **text**、および **image** データ型は、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに、 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)** を使用してください。  
+     \*\* **ntext**、 **text**、および **image** データ型は、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに、 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)** を使用してください。  
   
 ## <a name="native-file-storage-types"></a>ネイティブのファイル ストレージ型  
  各ネイティブのファイル ストレージ型は、対応するホスト ファイル データ型として、フォーマット ファイルに記録されます。  
@@ -89,11 +89,11 @@ ms.locfileid: "47626670"
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**text***\*|SQLCHAR|  
-|**ntext***\*|SQLNCHAR|  
+|**text**\*\*|SQLCHAR|  
+|**ntext**\*\*|SQLNCHAR|  
 |**[バイナリ]**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**image***\*|SQLBINARY|  
+|**image**\*\*|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  

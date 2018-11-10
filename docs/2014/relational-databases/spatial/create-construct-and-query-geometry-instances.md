@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
@@ -14,17 +13,17 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 259a55908c97286805566ad0642391487aab77cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 036ce2fe942866092ba774f98d6b306c8f0ea254
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158972"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018193"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry インスタンスの作成、構築、およびクエリ
-  平面空間データ型、 `geometry`、ユークリッド (平面) 座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では共通言語ランタイム (CLR) のデータ型として実装されています。  
+  平面空間データ型の `geometry` は、ユークリッド (平面) 座標系のデータを表します。 この型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では共通言語ランタイム (CLR) のデータ型として実装されています。  
   
- `geometry`型は定義済みの各データベースで使用できます。 型のテーブル列を作成する`geometry`操作と`geometry`他の CLR 型を使用すると同じ方法でデータ。  
+ `geometry` 型は、各データベースで使用できるように事前に定義されています。 `geometry` 型のテーブル列を作成し、他の CLR 型を使用するときと同じように `geometry` データを操作できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってサポートされている `geometry` データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 に準拠しています。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48158972"
 ##  <a name="creating"></a> 新しい geometry インスタンスの作成または構築  
   
 ###  <a name="existing"></a> 既存のインスタンスからの新しい geometry インスタンスの作成  
- `geometry`データ型は、新しいを作成するに使用できる組み込みメソッドが数多く`geometry`に基づいて既存のインスタンスのインスタンス。  
+ `geometry` データ型には、既存のインスタンスに基づいて新しい `geometry` インスタンスを作成するために使用できる組み込みメソッドが数多く用意されています。  
   
  **geometry の周りにバッファーを作成するには**  
  [STBuffer &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -101,7 +100,7 @@ ms.locfileid: "48158972"
   
   
 ###  <a name="wkb"></a> Well-Known Binary 入力からの geometry インスタンスの構築  
- WKB はで、Open Geospatial Consortium (OGC) ことができる指定されたバイナリ形式`geometry`クライアント アプリケーションと SQL データベース間で交換されるデータ。 次の関数は、WKB 入力を受け入れてジオメトリを構築します。  
+ WKB は、`geometry` データをアプリケーションと SQL データベース間で交換することができる、Open Geospatial Consortium (OGC) で指定されたバイナリ形式です。 次の関数は、WKB 入力を受け入れてジオメトリを構築します。  
   
  **WKB 入力から任意の型の geometry インスタンスを構築するには**  
  [STGeomFromWKB &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  
@@ -138,7 +137,7 @@ ms.locfileid: "48158972"
   
   
 ##  <a name="returning"></a> geometry インスタンスからの Well-Known Text および Well-Known Binary の取得  
- 返すか、WKT 形式または WKB 形式の次のメソッドを使用することができます、`geometry`インスタンス。  
+ 次のメソッドを使用して、`geometry` インスタンスの WKT 形式または WKB 形式のいずれかを取得できます。  
   
  **geometry インスタンスの WKT 表現を取得するには**  
  [STAsText &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stastext-geometry-data-type)  
@@ -160,7 +159,7 @@ ms.locfileid: "48158972"
  すべて`geometry`インスタンスがあるさまざまなメソッドを使用して取得できるプロパティを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を提供します。 以下のトピックでは、geometry 型のプロパティおよび動作と、geometry 型のクエリを実行するためのメソッドについて説明します。  
   
 ###  <a name="valid"></a> 有効性、インスタンスの型、および GeometryCollection 情報  
- 1 回、`geometry`インスタンスが構築された、次のメソッドを使用するには適切な形式では、インスタンスの型を取得を返したりする、コレクション インスタンスの場合、特定`geometry`インスタンス。  
+ `geometry` インスタンスを構築したら、次のメソッドを使用して、そのインスタンスが適切な形式であるかどうかを確認したり、インスタンスの型を取得することができます。また、コレクション インスタンスの場合は、特定の `geometry` インスタンスを取得できます。  
   
  **geometry のインスタンスの型を取得するには**  
  [STGeometryType &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -212,7 +211,7 @@ ms.locfileid: "48158972"
   
   
 ###  <a name="dimension"></a> [ディメンション]  
- 空でない`geometry`インスタンスには 0-1-2 次元またはします。 0 次元`geometries`など`Point`と`MultiPoint`長さや面積あるありません。 1 次元のオブジェクトなど`LineString, CircularString, CompoundCurve`、および`MultiLineString`は長さがあります。 2 次元のインスタンス (`Polygon`、`CurvePolygon`、`MultiPolygon` など) には面積と長さがあります。 空のインスタンスの次元は -1 としてレポートされます。`GeometryCollection` でレポートされる面積は、その内容の型によって異なります。  
+ 空でない `geometry` インスタンスの次元は、0 次元、1 次元、2 次元のいずれかになります。 0 次元の `geometries` (`Point` や `MultiPoint` など) には長さや面積はありません。 1 次元のオブジェクト (`LineString, CircularString, CompoundCurve`、`MultiLineString` など) には長さがあります。 2 次元のインスタンス (`Polygon`、`CurvePolygon`、`MultiPolygon` など) には面積と長さがあります。 空のインスタンスの次元は -1 としてレポートされます。`GeometryCollection` でレポートされる面積は、その内容の型によって異なります。  
   
  **インスタンスの次元を取得するには**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -226,7 +225,7 @@ ms.locfileid: "48158972"
   
   
 ###  <a name="empty"></a> 空  
- *空*`geometry`インスタンスには、すべてのポイントはありません。 空の長さ`LineString, CircularString`、 `CompoundCurve`、および`MultiLineString`インスタンスは 0 になります。 空の領域`Polygon`、 `CurvePolygon`、および`MultiPolygon`インスタンスは 0 です。  
+ *空*`geometry`インスタンスには、すべてのポイントはありません。 空の長さ`LineString, CircularString`、 `CompoundCurve`、および`MultiLineString`インスタンスは 0 になります。 空の `Polygon`、`CurvePolygon`、および `MultiPolygon` インスタンスの面積は 0 です。  
   
  **インスタンスが空かどうかを調べるには**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)。  
@@ -263,7 +262,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');
 SELECT @g.STBoundary().ToString();  
 ```  
   
- 境界を`Polygon`または`MultiPolygon`インスタンスがそのリングの集合です。  
+ `Polygon` インスタンスや `MultiPolygon` インスタンスの境界は、そのリングの集合です。  
   
 ```  
 DECLARE @g geometry;  
@@ -285,9 +284,9 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> 閉鎖性  
- A*閉じた*`geometry`インスタンスは、始点と終点が同じです。 `Polygon` インスタンスが閉じられたと見なされます。 `Point` インスタンスは閉じていないと見なされます。  
+ A*閉じた*`geometry`インスタンスは、始点と終点が同じです。 `Polygon` インスタンスは閉じていると見なされます。 `Point` インスタンスは閉じていないと見なされます。  
   
- リングは、単純な閉じて`LineString`インスタンス。  
+ リングは、単純な閉じている `LineString` インスタンスです。  
   
  **インスタンスが閉じているかどうかを調べるには**  
  [STIsClosed](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)  
@@ -317,7 +316,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="rel"></a> geometry インスタンス間の関係の特定  
- `geometry`データ型は、2 つの間の関係の決定に使用できる組み込みメソッドが数多く`geometry`インスタンス。  
+ `geometry` データ型には、2 つの `geometry` インスタンスの関係を調べるために使用できる組み込みメソッドが数多く用意されています。  
   
  **2 つのインスタンスが同じ点の集合で構成されているかどうかを調べるには**  
  [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  

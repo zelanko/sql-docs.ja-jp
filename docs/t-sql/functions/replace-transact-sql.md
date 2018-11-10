@@ -23,17 +23,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d15805342b06baf55751d399eb64335084db76f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7059099beb306ad5ee74ce779a7861edc04d40d
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792670"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970873"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定した文字列値をすべて別の文字列値に置き換えます。  
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+指定した文字列値をすべて別の文字列値に置き換えます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +69,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、REPLACE に含めることができません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`abcdefghi` にある文字列 `cde` を `xxx` に置換します。  
+ 次の例では、`cde` にある文字列 `abcdefghi` を `xxx` に置換します。  
   
 ```sql  
 SELECT REPLACE('abcdefghicde','cde','xxx');  

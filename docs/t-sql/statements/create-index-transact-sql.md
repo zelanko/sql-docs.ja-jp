@@ -55,15 +55,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777730"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971033"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 テーブルまたはビューにリレーショナル インデックスを作成します。 クラスター化または非クラスター化 B ツリー インデックスであるため、行ストア インデックスとも呼ばれます。 行ストア インデックスは、テーブルにデータが設定される前に作成することができます。 クエリが特定の列から選択するか、特定の順序での値の並べ替えを要求する場合は特に、クエリのパフォーマンスを向上させるために行ストア インデックスを使用します。  
   
@@ -632,7 +636,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  SET オプションが正しくないと、次の状態が発生する場合があります。  
   
 -   フィルター選択されたインデックスが作成されません。  
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりエラーが生成され、インデックスのデータを変更していた INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントがロールバックされます。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]によりエラーが生成され、インデックスのデータを変更していた INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントがロールバックされます。  
 -   Transact-SQL ステートメントの実行プランで、クエリ オプティマイザーがインデックスを無視します。  
   
  フィルター選択されたインデックスについて詳しくは、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」をご覧ください。  
@@ -656,8 +660,8 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  計算列のインデックスを作成するには、計算列が決定的で正確である必要があります。 ただし、PERSISTED プロパティを使用した場合、インデックス作成が可能となる計算列の種類は、次のようになります。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]、CLR 関数、およびユーザーによって決定的とマークされた CLR ユーザー定義型メソッドに基づく計算列。  
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)]の定義によると決定的であるが、正確でない式に基づく計算列。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]、CLR 関数、およびユーザーによって決定的とマークされた CLR ユーザー定義型メソッドに基づく計算列  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]の定義によると決定的であるが、正確でない式に基づく計算列  
   
  保存される計算列に対しては、前の「インデックス付きビューに必要な SET オプション」で示すように、次の SET オプションを設定する必要があります。  
   

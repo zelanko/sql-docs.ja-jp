@@ -1,11 +1,9 @@
 ---
 title: MultiLineString | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 053af2980857e1bde0ea4b3812b64a276ee9e171
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c755752aaa2e4cac795b277c0cdba070d7b2f6d5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157262"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019057"
 ---
 # <a name="multilinestring"></a>MultiLineString
   A `MultiLineString` 0 個以上のコレクションである`geometry`または**geographyLineString**インスタンス。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString インスタンス  
- 次の図の例を示します`MultiLineString`インスタンス。  
+ 次の図は、`MultiLineString` インスタンスの例です。  
   
  ![geometry MultiLineString インスタンスの例](../../database-engine/media/multilinestring.gif "geometry MultiLineString インスタンスの例")  
   
@@ -35,16 +33,16 @@ ms.locfileid: "48157262"
   
 -   図 2 の `MultiLineString` インスタンスは、`LineString` 要素の終点のみで交差しているため単純です。 このインスタンスの境界は、重なっていない 2 つの終点です。  
   
--   図 3 の `MultiLineString` インスタンスは、一方の `LineString` 要素の内部で交差しているため単純ではありません。 この境界`MultiLineString`インスタンスが 4 つのエンドポイント。  
+-   図 3 の `MultiLineString` インスタンスは、一方の `LineString` 要素の内部で交差しているため単純ではありません。 この `MultiLineString` インスタンスの境界は 4 つの終点です。  
   
 -   図 4 は、単純でなく、閉じていない `MultiLineString` インスタンスです。  
   
--   図 5 は、単純な閉じていない `MultiLineString` です。 それが閉じていないため、その`LineStrings`要素が閉じられていません。 簡単ですので、none のいずれかの内部を塗りつぶすの`LineStrings`インスタンスが交差します。  
+-   図 5 は、単純な閉じていない `MultiLineString` です。 それが閉じていないため、その`LineStrings`要素が閉じられていません。 このインスタンスが単純なのは、内部で交差している `LineStrings` インスタンスがないからです。  
   
--   図 6 は、単純な閉じて`MultiLineString`インスタンス。 このインスタンスが閉じているのは、そのすべての要素が閉じているからです。 このインスタンスが単純なのは、内部で交差している要素がないからです。  
+-   図 6 は、単純な閉じている `MultiLineString` インスタンスです。 このインスタンスが閉じているのは、そのすべての要素が閉じているからです。 このインスタンスが単純なのは、内部で交差している要素がないからです。  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- `MultiLineString`かする必要があります許容されるためにインスタンスが空であるかで構成されてのみ`LineString`が受け入れられるためです。 詳細については、受け入れられる`LineString`インスタンスを参照してください[LineString](../spatial/linestring.md)します。 次の例に、許容される `MultiLineString` インスタンスを示します。  
+ MultiLineString`MultiLineString` インスタンスが許容されるためには、空であるか、許容される `LineString` インスタンスのみで構成されている必要があります。 詳細については、受け入れられる`LineString`インスタンスを参照してください[LineString](../spatial/linestring.md)します。 次の例に、許容される `MultiLineString` インスタンスを示します。  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -53,7 +51,7 @@ DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- 次の例では、スロー、`System.FormatException`ため、2 つ目`LineString`インスタンスが無効です。  
+ 次の例では、2 番目の `LineString` インスタンスが有効ではないため、`System.FormatException` がスローされます。  
   
 ```  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
@@ -76,7 +74,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` 無効ですので、2 つ目`LineString`インスタンスが 1 つ目と重なる`LineString`間隔でインスタンス。 有限数の接点で接しています。  
+ `@g4` は、2 番目の `LineString` インスタンスが最初の `LineString` インスタンスと内部で重なっているため、有効ではありません。 有限数の接点で接しています。  
   
 ## <a name="examples"></a>使用例  
  次の例では、2 つの `geometry``MultiLineString` 要素を含む SRID 0 の単純な `LineString` インスタンスを作成しています。  

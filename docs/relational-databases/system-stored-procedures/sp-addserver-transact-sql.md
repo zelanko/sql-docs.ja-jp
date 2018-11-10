@@ -51,7 +51,7 @@ sp_addserver [ @server = ] 'server' ,
  ときに複数のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされている別のサーバー上にある場合、コンピューターでは、インスタンスが動作します。 参照することで、名前付きインスタンスを指定*server*として*servername \instancename*します。  
   
  [ **@local =** ] **'LOCAL'**  
- 追加するサーバーをローカル サーバーとして指定します。 **@local** **varchar (10)**、既定値は NULL です。 指定する**@local**として**ローカル**定義**@server**原因として、ローカル サーバーの名前として、@@SERVERNAME値を返す関数*server*します。  
+ 追加するサーバーをローカル サーバーとして指定します。 **@local** **varchar (10)**、既定値は NULL です。 指定する**@local**として**ローカル**定義**@server**原因として、ローカル サーバーの名前として、@@SERVERNAME値を返す関数 *server* します。  
   
  インストール中、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによってこの変数がコンピューター名に設定されます。 インスタンスに接続するユーザーがコンピューター名、既定では[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]追加構成は必要ありません。  
   

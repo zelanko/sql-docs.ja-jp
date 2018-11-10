@@ -4,15 +4,15 @@ description: この記事では、SQL Server 2019 ビッグ データ クラス�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050800"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221798"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>SQL ビッグ データ クラスター コンピューティング プールとは何ですか。
 
@@ -23,7 +23,7 @@ ms.locfileid: "50050800"
 Kubernetes で実行されるポッド コンピューティングまたはいずれかのコンピューティング プールが行われます。 によって調整が自動作成されるとこれらのポッドの管理、 [SQL Server のマスター インスタンス](concept-master-instance.md)します。 それぞれのポッドには、一連の基本サービスと、SQL Server データベース エンジンのインスタンスが含まれています。
 
 > [!NOTE]
-> CTP 2.0 は、クラスターあたり 1 つのコンピューティング プールのみをサポートします。
+> CTP 2.1 は、クラスターあたり 1 つのコンピューティング プールのみをサポートします。
 
 ## <a name="scale-out-groups"></a>スケール アウト グループ
 

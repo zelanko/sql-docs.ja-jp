@@ -1,22 +1,20 @@
 ---
 title: 空間データに対するニアレスト ネイバーのクエリ | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c70c341317648f6d981f40b38d39d2f2ab4b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a32f277378f48ffd61cce141f8fe7074c8204e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164722"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018697"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>空間データに対するニアレスト ネイバーのクエリ
   空間データで使用される一般的なクエリの 1 つに、ニアレスト ネイバー クエリがあります。 ニアレスト ネイバー クエリは、特定の空間オブジェクトに最も近い空間オブジェクトを検索するために使用されます。 たとえば、Web サイトのストア ロケーターは、多くの場合、顧客の場所に最も近い店舗の場所を検索する必要があります。  
@@ -52,7 +50,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>ニアレスト ネイバー クエリと空間インデックス  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`TOP` および `ORDER BY` 句は、空間データ列にニアレスト ネイバー クエリを実行するために使用されます。 `ORDER BY`句への呼び出しが含まれている、`STDistance()`空間列のデータ型のメソッド。 `TOP`句は、クエリで返されるオブジェクトの数を示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`TOP` および `ORDER BY` 句は、空間データ列にニアレスト ネイバー クエリを実行するために使用されます。 `ORDER BY` 句には、空間列データ型の `STDistance()` メソッドの呼び出しが含まれます。 `TOP` 句は、クエリで返されるオブジェクトの数を示します。  
   
  ニアレスト ネイバー クエリで空間インデックスを使用するには、次の要件を満たす必要があります。  
   
@@ -62,7 +60,7 @@ SELECT TOP ( number )
   
 3.  `WHERE` 句は `STDistance()` メソッドを含む必要があります。  
   
-4.  `WHERE` 句に複数の述語がある場合、`STDistance()` メソッドを含む述語は、`AND` 結合で他の述語と接続する必要があります。 `STDistance()`メソッドは、のオプションの一部にすることはできません、`WHERE`句。  
+4.  `WHERE` 句に複数の述語がある場合、`STDistance()` メソッドを含む述語は、`AND` 結合で他の述語と接続する必要があります。 `STDistance()` メソッドは、`WHERE` 句のオプションの一部にすることはできません。  
   
 5.  `ORDER BY` 句の最初の式では `STDistance()` メソッドを使用する必要があります。  
   
@@ -102,7 +100,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- ない、`WHERE`句を使用する`STDistance()`のため、クエリは、空間インデックスを使用できません、構文で指定した形式です。  
+ このクエリは、構文で指定した形式の `STDistance()` を使用する `WHERE` 句がないため、空間インデックスを使用できません。  
   
 ## <a name="see-also"></a>参照  
  [空間データ &#40;SQL Server&#41;](spatial-data-sql-server.md)  

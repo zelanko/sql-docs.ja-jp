@@ -19,12 +19,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93ccc48a8dc85bc788bb8ea35de6e6c57e031fa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676380"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031269"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -203,6 +203,10 @@ GO
 - **tempdb** 内のすべての割り当てで単一エクステントが使用されます。 [トレース フラグ 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) は必須ではなくなりました。  
 - プライマリ ファイル グループの場合は、AUTOGROW_ALL_FILES プロパティがオンで、プロパティは変更できません。 
 
+tempdb でのパフォーマンスの向上の詳細については、次のブログ記事を参照してください。
+
+[TEMPDB – ファイル、トレース フラグ、更新プログラム](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server の tempdb に使用するディスク領域の計画
  SQL Server 運用環境での tempdb の適切なサイズを判断するには、多くの要因が関係します。 この記事で前述されているように、これらの要因には既存のワークロードや使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能などがあります。 SQL Server のテスト環境で次のタスクを実行して、既存のワークロードを分析することをお勧めします。
 - tempdb に自動拡張を設定する。
@@ -273,5 +277,5 @@ GO
  [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2005 での tempdb の使用](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [SQL Server 2005 での tempdb の使用](https://technet.microsoft.com/library/cc966545.aspx)  
  [tempdb のディスク領域の不足に関するトラブルシューティング](http://msdn.microsoft.com/library/ms176029.aspx) 

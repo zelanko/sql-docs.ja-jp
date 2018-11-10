@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 37d50985338f6ac0e3cabdebf53b289e77716e39
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: bcc0382f7203f3b53ed78da075ae0fa4c4c2d9e9
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852097"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971123"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -116,7 +116,7 @@ ms.locfileid: "48852097"
   
 -   フェールオーバー クラスター インスタンスのインストール、アップグレード、または削除を行う場合。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあるエディションから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のエディションにアップグレードする場合。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあるエディションから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のエディションにアップグレードする場合。  
   
 -   構成ファイルに指定された構文とパラメーターを使用して、ローカル コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをインストールする場合。 この方法を使用すると、インストール構成を複数のコンピューターにコピーしたり、フェールオーバー クラスターのインストールで複数のノードをインストールしたりすることができます。  
   
@@ -244,12 +244,12 @@ ms.locfileid: "48852097"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **省略可**|現在のユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールに追加します。 /ADDCURRENTUSERASSQLADMIN パラメーターは、Express エディションをインストールする場合、または /Role=ALLFeatures_WithDefaults が指定されている場合に使用できます。 詳細については、後述の /ROLE をご覧ください。<br /><br /> /ADDCURRENTUSERASSQLADMIN の使用はオプションですが、/ADDCURRENTUSERASSQLADMIN または /SQLSYSADMINACCOUNTS のどちらかを指定する必要があります。 既定値:<br /><br /> **のエディション:** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 他のすべてのエディション:**False** |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] モードを指定します。 サポートされる値:<br /><br /> **自動**<br /><br /> **無効**<br /><br /> **手動**|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外の [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの場合、/SQLSYSADMINACCOUNTS は必須です。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションの場合、/SQLSYSADMINACCOUNTS の使用はオプションですが、/SQLSYSADMINACCOUNTS または /ADDCURRENTUSERASSQLADMIN のどちらかを指定する必要があります。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外の [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの場合、/SQLSYSADMINACCOUNTS は必須です。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの場合、/SQLSYSADMINACCOUNTS の使用はオプションですが、/SQLSYSADMINACCOUNTS または /ADDCURRENTUSERASSQLADMIN のどちらかを指定する必要があります。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|tempdb データ ファイルのディレクトリを指定します。 複数のディレクトリを指定する場合、各ディレクトリを空白で区切ります。 複数のディレクトリが指定されている場合、tempdb データ ファイルはラウンド ロビン形式ですべてのディレクトリにまたがるようになります。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (システム データ ディレクトリ)<br /><br /> 注: このパラメーターは、RebuildDatabase シナリオにも追加されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (システム データ ディレクトリ)<br /><br /> 注: このパラメーターは、RebuildDatabase シナリオにも追加されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **省略可**|セットアップで追加する tempdb データ ファイルの数を指定します。 この値はコアの数まで増やすことができます。 既定値:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 他のすべてのエディション: 8 またはコアの数のうち、小さい方の値<br /><br /> **重要** tempdb のプライマリ データベース ファイルは引き続き tempdb.mdf になります。 その他の tempdb ファイルには、tempdb_mssql_#.ndf という名前が付けられます。# は、セットアップ中に作成されたその他の各 tempdb データベース ファイルの一意の番号を表します。 この名前付け規則は、各データベース ファイルを一意にすることを目的としています。 SQL Server のインスタンスをアンインストールすると、tempdb_mssql_#.ndf 名前付け規則を使用するファイルが削除されます。 ユーザー データベース ファイルには tempdb_mssql_\*.ndf 名前付け規則を使用しないでください。|  
@@ -354,7 +354,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] モードを指定します。 サポートされる値:<br /><br /> **自動**<br /><br /> **無効**<br /><br /> **手動**|  
@@ -560,7 +560,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|**sysadmin**ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。|  
@@ -697,7 +697,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
@@ -879,10 +879,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |パラメーターおよび値|[説明]| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|レプリケーションおよびフルテキストなしの [!INCLUDE[ssDE](../../includes/ssde-md.md)] をインストールします。|  
-|/FEATURES=SQLEngine, FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] とフルテキストをインストールします。|  
-|/FEATURES=SQL, Tools|完全な [!INCLUDE[ssDE](../../includes/ssde-md.md)] およびすべてのツールをインストールします。|  
+|/FEATURES=SQLEngine,FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] とフルテキストをインストールします。|  
+|/FEATURES=SQL,Tools|完全な [!INCLUDE[ssDE](../../includes/ssde-md.md)] およびすべてのツールをインストールします。|  
 |/FEATURES=BOL|ヘルプ コンテンツを表示および管理するための SQL Server オンライン ブック コンポーネントをインストールします。|  
-|/FEATURES=SQLEngine, PolyBase|PolyBase エンジンをインストールします。|  
+|/FEATURES=SQLEngine,PolyBase|PolyBase エンジンをインストールします。|  
   
 ##  <a name="RoleParameters"></a> ロール パラメーター  
  セットアップ ロール パラメーター (/Role パラメーター) は、あらかじめ構成された機能の選択内容をインストールするために使用されます。 SSAS ロールでは、既存の SharePoint ファーム、または新規の未構成ファームのどちらかに SSAS インスタンスがインストールされます。 これらのシナリオをサポートするために、2 つのセットアップ ロールが用意されています。 インストールするために選択できるセットアップ ロールは一度に 1 つだけです。 セットアップ ロールを選択すると、そのロールに所属する機能とコンポーネントがセットアップによってインストールされます。 ロールに指定されている機能とコンポーネントは変更できません。 機能ロール パラメーターの使用方法の詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)」をご覧ください。 

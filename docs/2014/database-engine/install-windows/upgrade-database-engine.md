@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
@@ -15,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4767b695f0c2c3668278e30f47f389664b4a4ef0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189552"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018567"
 ---
 # <a name="upgrade-database-engine"></a>データベース エンジンのアップグレード
   ここでは、アップグレード プロセスの準備および理解に必要な情報を提供します。内容は以下のとおりです。  
@@ -47,7 +46,7 @@ ms.locfileid: "48189552"
 >  以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise Edition から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードする場合は、"Enterprise Edition: コアベースのライセンス" または "Enterprise Edition" を選択してください。 これらの Enterprise エディションは、ライセンス モードのみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
 ## <a name="pre-upgrade-checklist"></a>アップグレード前のチェック リスト  
- 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアップグレードは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムでサポートされています。 また、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンのデータベースを移行することもできます。 移行は、同じコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で行うことも、別のコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから行うこともできます。 移行オプションには、データベース コピー ウィザード、バックアップと復元の機能の使用、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]メソッドをインポートおよびエクスポート ウィザード、および一括エクスポート/一括インポートします。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアップグレードは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムでサポートされています。 また、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンのデータベースを移行することもできます。 移行は、同じコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で行うことも、別のコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから行うこともできます。 移行オプションには、データベース コピー ウィザードの使用、バックアップ機能と復元機能、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インポート/エクスポート ウィザードの使用、一括エクスポート/一括インポート方式があります。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする前に、次のトピックを確認してください。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48189552"
  アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレード前の互換性レベルが 90 の場合、アップグレードされたデータベースの互換性レベルは 100 に設定されます。これは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でサポートされている下限の互換性レベルです。  
   
 > [!NOTE]  
->  新しいユーザー データベースの互換性レベルが継承されます、`model`データベース。  
+>  新しいユーザー データベースには、`model` データベースの互換性レベルが継承されます。  
   
 ## <a name="migrating-databases"></a>データベースの移行  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップと復元またはデタッチとアタッチの機能を使用して、ユーザー データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに移行することができます。 詳細については、「[バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」または「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)」を参照してください。  
@@ -133,7 +132,7 @@ ms.locfileid: "48189552"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] によって生成され、パーティション テーブルおよびパーティション インデックスに対するクエリに適用される USE PLAN ヒントを検証または削除します。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パーティション テーブルとパーティション インデックスに対するクエリを処理する方法を変更します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で生成されたプランに USE PLAN ヒントを使用する、パーティション分割されたオブジェクトのクエリには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で使用できないプランが含まれる場合があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした後は、次の手順を実行することをお勧めします。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パーティション テーブルとインデックスでのクエリの処理方法が異なります。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で生成されたプランに USE PLAN ヒントを使用する、パーティション分割されたオブジェクトのクエリには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で使用できないプランが含まれる場合があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした後は、次の手順を実行することをお勧めします。  
   
      **USE PLAN ヒントをクエリで直接指定した場合。**  
   

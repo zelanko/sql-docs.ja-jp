@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
@@ -16,15 +15,15 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6045b6e54758a210014c302d1d1301d29aae073d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199587"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018587"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>サポートされるバージョンとエディションのアップグレード
-  アップグレードできます[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、および[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、および[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。 このトピックでは、これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンからのサポートされているアップグレード パスと、サポートされている [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]へのエディションのアップグレードを示します。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からアップグレードできます。 このトピックでは、これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンからのサポートされているアップグレード パスと、サポートされている [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]へのエディションのアップグレードを示します。  
   
 ## <a name="pre-upgrade-checklist"></a>アップグレード前のチェック リスト  
   
@@ -53,16 +52,16 @@ ms.locfileid: "48199587"
 ## <a name="upgrades-from-earlier-versions-to-includesssql14includessssql14-mdmd"></a>以前のバージョンから [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 > [!NOTE]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のサポート状況は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]'に対する '[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のサポートを取り扱う次のセクションで詳細に説明します。  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のサポート状況は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 'に対する ' [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のサポートを取り扱う次のセクションで詳細に説明します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 ビット エディションにアップグレードできます[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]64 ビット サーバーの 32 ビット サブシステム (WOW64) 上。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 ビット エディションは 64 ビット サーバーの 32 ビット サブシステム (WOW64) 上の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 ビット バージョンにアップグレードできます[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]64 ビット サーバーのみです。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 ビット エディションは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 ビット サーバーにのみアップグレードできます。  
   
 > [!NOTE]  
 >  以前のバージョンの [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Edition から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードする場合は、"Enterprise Edition: コアベースのライセンス" または "Enterprise Edition" を選択してください。 これらの Enterprise Edition は、ライセンス モードとサポートされるコアの最大数のみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 次のバージョンからのアップグレードをサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、次のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からのアップグレードがサポートされます。  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 以降  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48199587"
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 以降  
   
- 次の表に示すのは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]への、サポートされるアップグレード シナリオです。  
+ 次の表に示すのは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] への、サポートされるアップグレード シナリオです。  
   
 |アップグレード元|サポートされているアップグレード パス|  
 |------------------|----------------------------|  
@@ -101,28 +100,28 @@ ms.locfileid: "48199587"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express、<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools、および<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio、および<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 のビジネス インテリジェンス|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
-### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] サポート [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- ここでは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のサポートについて説明します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]では、次の作業を実行できます。  
+### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] に対する [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のサポート  
+ ここでは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のサポートについて説明します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]では、次の作業を実行できます。  
   
--   アップグレードを[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]データベース エンジンのインスタンス[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を実行して[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]セットアップ ウィザードまたはコマンド プロンプトからインストールを使用します。  
+-   インストール ウィザードを使用するか、コマンド プロンプトから . [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] セットアップを実行して、データベース エンジンの [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] インスタンスを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードします。  
   
 -   データベース エンジンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスに、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] データベース (mdf/ldf ファイル) をアタッチします。  
   
 -   バックアップからデータベース エンジンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスに [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] データベースを復元します。  
   
--   [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードします。 自動化されたインプレース アップグレードを使用してパッケージを実行します。  
+-   [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]にアップグレードします。 自動化されたインプレース アップグレードを使用してパッケージを実行します。  
   
--   アップグレードを[!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)]に[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を実行して[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]セットアップします。  
+-   [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] セットアップを実行して、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードします。  
   
 -   [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] キューブをバックアップし、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]に復元します。  
   
--   [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] セットアップを実行して、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードします。  
+-   [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] セットアップを実行して、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードします。  
   
--   接続する[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を使用して[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]2014 です。  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]2014 を使用して [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] に接続します。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  (で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]データベースの互換性レベルの有効な値は 100、110 および 120)。[ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のデータベース互換性レベルの有効な値は 100、110、120 です。)[ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
   
  上記の一覧で説明されていないどのシナリオもサポートされていませんが、以下のシナリオに限定されるものではありません。  
   

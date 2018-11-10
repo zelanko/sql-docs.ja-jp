@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050994"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269557"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: Azure Kubernetes Service (AKS) での SQL Server のビッグ データ クラスターをデプロイします。
 
@@ -28,8 +28,6 @@ SQL Server のビッグ データ クラスターをインストールするコ�
 
 インストールする、 **mssqlctl** SQL Server のビッグ データを管理するための CLI ツールは、クライアント コンピューターのクラスター、最初にインストールする必要があります[Python](https://www.python.org/downloads/) v3.0 の最小バージョンと[pip3](https://pip.pypa.io/en/stable/installing/)します。 `pip` ダウンロードした 3.4 以上での Python バージョンを使用している場合に既にインストールされて[python.org](https://www.python.org/)します。
 
-Python インストールがない場合、`requests`パッケージをインストールする必要がある`requests`を使用して`python -m pip install requests`(を使用して、 `python3` Linux 上のこれらのコマンド)。 既にある場合、`requests`パッケージ、使用して最新バージョンにアップグレードする`python -m pip install requests --upgrade`します。
-
 ## <a name="verify-aks-configuration"></a>AKS の構成を確認します。
 
 実行することができます、AKS クラスターをデプロイした後、次の kubectl コマンドをクラスター構成を表示します。 その kubectl が適切なクラスター コンテキストを指すことを確認します。
@@ -43,8 +41,11 @@ kubectl config view
 次のコマンドをインストールする実行**mssqlctl**クライアント コンピューターにツール。 このコマンドは、Windows と Linux クライアントの両方から機能しますが、Windows で管理者特権で実行されているコマンド ウィンドウから実行しているかどうかを確認またはプレフィックス`sudo`on Linux:
 
 ```
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
 ```
+
+> [!IMPORTANT]
+> 以前のリリースをインストールした場合は、クラスターを削除する必要があります*する前に*アップグレード**mssqlctl**と新しいリリースをインストールします。 詳細については、次を参照してください。[新しいリリースにアップグレードする](deployment-guidance.md#upgrade)します。
 
 > [!TIP]
 > 場合**mssqlctl**が正常にインストール、記事の前提条件の手順を確認しない[mssqlctl インストール](deployment-guidance.md#mssqlctl)。
@@ -58,7 +59,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 - [コマンド ウィンドウ](http://docs.microsoft.com/visualstudio/ide/reference/command-window)、環境変数に引用符が含まれます。 パスワードをラップする引用符を使用する場合は、パスワードに、引用符が含まれます。
 - Bash では、引用符は、変数に含まれていません。 この例は、二重引用符を使用`"`します。
 - 任意に、パスワード、環境変数を設定できますが必ず、十分に複雑な使用しないでください、 `!`、 `&`、または`'`文字。
-- CTP 2.0 リリースでは、既定のポートを変更できません。
+- CTP 2.1 のリリースでは、既定のポートを変更できません。
 - `sa`アカウントは、システム管理者は、セットアップ中に作成される SQL Server マスター インスタンス。 SQL Server のコンテナーを作成した後、そのコンテナーで `echo $MSSQL_SA_PASSWORD` を実行すると、指定した環境変数 `MSSQL_SA_PASSWORD` が検索できるようになります。 セキュリティのため、変更、`sa`記載されているベスト プラクティスに従ってパスワード[ここ](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)します。
 
 次の環境変数を初期化します。  ビッグ データ クラスターのデプロイに必要な。
@@ -110,7 +111,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 ## <a name="deploy-a-big-data-cluster"></a>ビッグ データ クラスターをデプロイします。
 
-Kubernetes クラスターで SQL Server 2019 CTP 2.0 のビッグ データ クラスターをデプロイするには、次のコマンドを実行します。
+Kubernetes クラスター上の SQL Server 2019 CTP 2.1 ビッグ データ クラスターをデプロイするには、次のコマンドを実行します。
 
 ```bash
 mssqlctl create cluster <name of your cluster>

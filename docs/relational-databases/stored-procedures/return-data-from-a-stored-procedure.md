@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411792"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49383767"
  ### <a name="examples-of-returning-data-using-a-result-set"></a>結果セットを使用してデータを返す例 
   次の例のストアド プロシージャでは、vEmployee ビューにも表示されるすべての SalesPerson 行に対して LastName 値と SalesYTD 値が返されます。
   
- ```  
+ ```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -59,7 +59,7 @@ GO
 ### <a name="examples-of-output-parameter"></a>出力パラメーターの例  
  次の例では、入力パラメーターと出力パラメーターを使用するプロシージャを示します。 `@SalesPerson` パラメーターは、呼び出し元のプログラムによって指定された入力値を受け取ります。 SELECT ステートメントは、入力パラメーターに渡された値を使用して、適切な `SalesYTD` 値を取得します。 また、SELECT ステートメントは、その値を `@SalesYTD` 出力パラメーターに代入します。これにより、プロシージャの終了時にその値が呼び出し元のプログラムに返されます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -82,7 +82,7 @@ GO
   
  次の例では、最初の例で作成したプロシージャを呼び出し、そのプロシージャから返された出力値を `@SalesYTD` 変数に保存します。これは、呼び出し元のプログラムに対してローカルです。  
   
-```  
+```sql
 -- Declare the variable to receive the output value of the procedure.  
 DECLARE @SalesYTDBySalesPerson money;  
 -- Execute the procedure specifying a last name for the input parameter  
@@ -138,7 +138,7 @@ GO
  
  まず、Currency テーブルに対してカーソルを宣言し、そのカーソルを開くプロシージャを作成します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -159,7 +159,7 @@ GO
   
  次に、cursor 型のローカル変数を宣言し、そのローカル変数にカーソルを代入するプロシージャを実行し、代入したカーソルから行をフェッチするというバッチを実行します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyCursor CURSOR;  
@@ -177,7 +177,7 @@ GO
 ## <a name="returning-data-using-a-return-code"></a>リターン コードを使用してデータを返す処理  
  プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 プロシージャのリターン コードを指定するには、RETURN ステートメントを使用します。 OUTPUT パラメーターと同様に、呼び出し元のプログラムでリターン コード値を使用するには、プロシージャの実行時にリターン コードを変数に保存する必要があります。 たとえば、次のように、 `@result` int **データ型の代入変数** を使用して、 `my_proc`プロシージャからのリターン コードを格納します。  
   
-```  
+```sql
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
@@ -195,7 +195,7 @@ EXECUTE @result = my_proc;
 |3|売上高の値を取得中にエラーが発生しました。|  
 |4|販売員の売上高の値に NULL 値が検出されました。|  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
@@ -255,7 +255,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
  次の例では、 `usp_GetSalesYTD` プロシージャから返されるリターン コードを処理するプログラムを作成します。  
   
-```  
+```sql
 -- Declare the variables to receive the output value and return code   
 -- of the procedure.  
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  

@@ -1,11 +1,9 @@
 ---
 title: 空間データ (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server], spatial storage design
@@ -19,12 +17,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f25de7e1aa60d482d5256470d3fb2e1ada08f356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f18e84ac46d4647c3bcd884b98196faf58bef636
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222172"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018097"
 ---
 # <a name="spatial-data-sql-server"></a>空間データ (SQL Server)
   空間データは、幾何オブジェクトの物理的な位置と形状に関する情報を表します。 それらのオブジェクトは、点の位置である場合もあれば、国、道、湖などのより複雑なオブジェクトである場合もあります。  
@@ -33,7 +31,7 @@ ms.locfileid: "48222172"
   
 -   `geometry` 型は、ユークリッド (平面) 座標系のデータを表します。  
   
--   `geography`型は、球体地球座標系のデータを表します。  
+-   `geography` 型は、球体地球座標系のデータを表します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、どちらのデータ型も .NET 共通言語ランタイム (CLR) のデータ型として実装されています。  
   

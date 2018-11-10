@@ -1,11 +1,9 @@
 ---
 title: 空間インデックスの作成、変更、および削除 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -18,12 +16,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122352"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018657"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
   空間インデックスは、の列で特定の操作をより効率的に実行できる、`geometry`または`geography`データ型 (、*列 spatial*)。 1 つの空間列に対して複数の空間インデックスを指定できます。 たとえば、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
@@ -85,7 +83,7 @@ ms.locfileid: "48122352"
   
      テーブル デザイナーにテーブルが表示されます。  
   
-2.  選択、`geometry`または`geography`インデックスの列。  
+2.  インデックスを作成する `geometry` 列または `geography` 列を選択します。  
   
 3.  **[テーブル デザイナー]** メニューの **[空間インデックス]** をクリックします。  
   

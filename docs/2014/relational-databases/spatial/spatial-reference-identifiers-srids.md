@@ -1,11 +1,9 @@
 ---
 title: SRID (Spatial Reference Identifier) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Spatial Reference Identifiers (SRIDs)
@@ -15,12 +13,12 @@ ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba0aa0cb97d94eddf422d03cb1918940e915670a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cba308c746bd3cec33742cbdf8231371d18aab3
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229652"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018997"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>SRID (Spatial Reference Identifier)
   各空間インスタンスには SRID (spatial reference identifier) があります。 SRID は、平面地球マッピングまたは球体地球マッピングに使用される特定の楕円体に基づく空間参照系に対応します。  

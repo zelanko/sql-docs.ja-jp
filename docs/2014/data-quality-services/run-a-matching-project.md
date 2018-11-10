@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
@@ -15,21 +14,21 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27a77ac21cf9ffacf2c4d5dd52759479668152f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091752"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031509"
 ---
 # <a name="run-a-matching-project"></a>照合プロジェクトの実行
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でデータ照合を実行する方法について説明します。 照合プロセスでは、照合ポリシーの照合ルールに基づいて一致レコードのクラスターを特定し、サバイバーシップ ルールに基づいて各クラスターで保持するレコードを 1 つ特定し、結果をエクスポートします。 照合プロセス (重複除去とも呼ばれます) はコンピューター支援型のプロセスで実行されますが、照合ルールを対話形式で作成し、いくつかの選択肢の中からサバイバーシップ ルールを選択することで、照合プロセスを制御します。  
   
  照合を実行する手順は、データ ソースを特定してドメインをデータ ソースにマップするマップ プロセス、照合分析を実行する照合プロセス、およびサバイバーシップ ルールを指定して照合結果をエクスポートするサバイバーシップとエクスポート プロセスの 3 つのステージで構成されます。 照合アクティビティのウィザードでは、これらの各プロセスをそれぞれ異なるページで実行します。前後の各ページに移動したり、プロセスを再実行したり、特定の照合プロセスを完了した後にそのプロセスの同じステージに戻ることも可能です。 DQS から提供されるソース データ、照合ルール、および照合結果に関する統計情報に基づいて照合に関する決定を行い、照合プロセスを調整することができます。  
   
- 照合を実行する準備として、1 つ以上の照合ルールを含む照合ポリシーを作成し、そのポリシーをサンプル データに対して実行する必要があります。 照合プロジェクトは照合ポリシー プロセスとは別のプロセスであり、照合プロジェクトから得られた照合のナレッジはナレッジ ベースに取り込まれません。 照合ポリシーの作成の詳細については、次を参照してください。[照合ポリシーを作成](../../2014/data-quality-services/create-a-matching-policy.md)です。  
+ 照合を実行する準備として、1 つ以上の照合ルールを含む照合ポリシーを作成し、そのポリシーをサンプル データに対して実行する必要があります。 照合プロジェクトは照合ポリシー プロセスとは別のプロセスであり、照合プロジェクトから得られた照合のナレッジはナレッジ ベースに取り込まれません。 照合ポリシーの作成の詳細については、「 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   

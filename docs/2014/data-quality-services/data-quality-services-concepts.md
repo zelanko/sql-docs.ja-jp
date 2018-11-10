@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 623db4fff3bbafeb0da09899527406b0d4686181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170982"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032121"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services の概念
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ マネージメント、データ品質プロジェクト、およびデータ品質管理の概念を簡単に説明します。  
@@ -34,13 +33,13 @@ ms.locfileid: "48170982"
   
  **[照合ポリシー]**  
   
- 照合ポリシーには、データ重複除去の実行に使用される照合ルールが含まれます。 照合ポリシー プロセスでは、照合ルールを作成し、照合結果やプロファイル データに基づいてそれらを調整したり、ナレッジ ベースにポリシーを追加したりできます。 詳しくは、「 [Data Matching](../../2014/data-quality-services/data-matching.md)」をご覧ください。  
+ 照合ポリシーには、データ重複除去の実行に使用される照合ルールが含まれます。 照合ポリシー プロセスでは、照合ルールを作成し、照合結果やプロファイル データに基づいてそれらを調整したり、ナレッジ ベースにポリシーを追加したりできます。 詳細については、「 [データ照合](../../2014/data-quality-services/data-matching.md)」をご覧ください。  
   
  **参照データ サービス**  
   
  参照データを使用すると、参照データの品質を保証する企業のサービスを利用して、データを検証、修正、および強化することができます。 参照データ プロバイダーには、Windows Azure MarketPlace のサービスを使用して接続できます。また、プロバイダーに直接接続することもできます。 詳細については、「 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
   
- DQS のナレッジ マネージメントの詳細については、次を参照してください。 [DQS のナレッジ ベースとドメイン](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)します。  
+ DQS のナレッジ マネージメントの詳細については、「 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)」をご覧ください。  
   
 ##  <a name="Projects"></a> データ品質プロジェクトの概念  
  データ スチュワードは、データ品質に関する操作 (クレンジングおよび照合) を [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションでデータ品質プロジェクトを使用して実行します。  
@@ -53,7 +52,7 @@ ms.locfileid: "48170982"
   
 -   **インタラクティブなクレンジング**: データ スチュワードは、インタラクティブなクレンジング プロセスを実行して、コンピューター支援型のデータ クレンジング プロセスで提示されたデータ修正を変更したり拡張したりできます。 このプロセスでは、データ クレンジング プロセスで識別された信頼レベルや統計情報を使用することも、プロジェクトにおける独自の変更を手動で入力することもできます。  
   
- データ クレンジングの後で、データ スチュワードは、処理されたデータを SQL Server データベース、.csv ファイル、または Excel ファイルにエクスポートできます。 詳しくは、「 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)」をご覧ください。  
+ データ クレンジングの後で、データ スチュワードは、処理されたデータを SQL Server データベース、.csv ファイル、または Excel ファイルにエクスポートできます。 詳細については、「 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)」をご覧ください。  
   
  **データ照合**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48170982"
   
  **プロファイルと通知**  
   
- データ プロファイリングでは、データ品質プロジェクト実行中のクレンジングおよび照合アクティビティのために DQS で処理されているデータに関する統計と情報が、データ スチュワードに対してリアルタイムに表示されます。 データ プロファイルは、データ品質プロジェクトのクレンジングおよび照合アクティビティの有効性を評価するときに役立ちます。通知は、ユーザーがデータ クレンジングおよびデータ照合アクティビティを拡張する手段として使用できます。 詳細については、次を参照してください。 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)します。  
+ データ プロファイリングでは、データ品質プロジェクト実行中のクレンジングおよび照合アクティビティのために DQS で処理されているデータに関する統計と情報が、データ スチュワードに対してリアルタイムに表示されます。 データ プロファイルは、データ品質プロジェクトのクレンジングおよび照合アクティビティの有効性を評価するときに役立ちます。通知は、ユーザーがデータ クレンジングおよびデータ照合アクティビティを拡張する手段として使用できます。 詳細については、「 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)」をご参照ください。  
   
  DQS のデータ品質プロジェクトについて詳しくは、「[データ品質プロジェクト &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)」をご覧ください。  
   
@@ -70,25 +69,25 @@ ms.locfileid: "48170982"
   
  **[アクティビティ監視]**  
   
- アクティビティ監視では、データ範囲内で実行された各アクティビティの状態が表示され、DQS 管理者は各アクティビティのデータを確認しながらアクティビティを制御することができます。 詳細については、次を参照してください。 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)します。  
+ アクティビティ監視では、データ範囲内で実行された各アクティビティの状態が表示され、DQS 管理者は各アクティビティのデータを確認しながらアクティビティを制御することができます。 詳細については、「 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)」をご覧ください。  
   
  **Configuration**  
   
  構成オプションでは、次の操作を実行できます。  
   
--   参照データ サービスの設定を構成する。 詳細については、次を参照してください。 [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)します。  
+-   参照データ サービスの設定を構成する。 詳細については、「 [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)」をご覧ください。  
   
 -   クレンジングおよび照合アクティビティのしきい値を設定する。 詳細については、「 [クレンジングと照合のしきい値の構成](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)」をご参照ください。  
   
 -   プロファイル通知を有効または無効にする。 詳しくは、「[DQS のプロファイル通知の有効化または無効化](../../2014/data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)」をご覧ください。  
   
--   アクティビティ ベース レベルまたはより詳細なモジュール ベース レベルで、DQS ログ ファイルの重大度レベルを構成する。 詳細については、次を参照してください。 [Configure Severity Levels for DQS ログ ファイル](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)します。  
+-   アクティビティ ベース レベルまたはより詳細なモジュール ベース レベルで、DQS ログ ファイルの重大度レベルを構成する。 詳細については、「 [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)」をご覧ください。  
   
  **DQS セキュリティ**  
   
- DQS のセキュリティの設定には、SQL Server のセキュリティ メカニズムのロールを使用します。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにおけるユーザーのアクセス レベルを決定する、3 つの DQS ロール (dqs_administrator、dqs_kb_editor、および dqs_kb_operator) があります。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用して、ユーザーにロールを付与することはできません。SQL Server Management Studio を使用して行います。 詳細については、次を参照してください。 [DQS セキュリティ](../../2014/data-quality-services/dqs-security.md)します。  
+ DQS のセキュリティの設定には、SQL Server のセキュリティ メカニズムのロールを使用します。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにおけるユーザーのアクセス レベルを決定する、3 つの DQS ロール (dqs_administrator、dqs_kb_editor、および dqs_kb_operator) があります。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用して、ユーザーにロールを付与することはできません。SQL Server Management Studio を使用して行います。 詳細については、「 [DQS Security](../../2014/data-quality-services/dqs-security.md)」をご覧ください。  
   
- DQS 管理の詳細については、次を参照してください。 [DQS 管理](../../2014/data-quality-services/dqs-administration.md)します。  
+ DQS 管理の詳細については、「 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
@@ -14,33 +13,33 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101732"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018437"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 の Server Core インストールで [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] を構成する方法について詳しく説明します。 次のセクションを参照してください。  
   
--   [Windows Server の Server Core 構成し、管理](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
+-   [Windows Server の Server Core の構成と管理](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
   
--   [SQL Server 更新プログラムをインストールします。](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
+-   [SQL Server 更新プログラムのインストール](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
 -   [SQL Server サービスの開始/停止](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
   
--   [AlwaysOn 可用性グループを有効にします。](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
+-   [[AlwaysOn 可用性グループを有効にする]](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
--   [Server Core で実行されている SQL Server のリモート アクセスの構成](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
+-   [Server Core で実行する SQL Server のリモート アクセスの構成](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
   
 -   [SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
--   [SQL Server の監査](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
+-   [SQL Server 監査](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
   
 -   [コマンド プロンプト ユーティリティ](configure-sql-server-on-a-server-core-installation.md#bkmk_cmd)  
   
--   [トラブルシューティング ツールを使用します。](configure-sql-server-on-a-server-core-installation.md#bkmk_troubleshoot)  
+-   [トラブルシューティング ツールの使用](configure-sql-server-on-a-server-core-installation.md#bkmk_troubleshoot)  
   
 ##  <a name="BKMK_ConfigureWindows"></a> Windows Server の Server Core の構成と管理  
  ここでは、Server Core インストールの構成および管理に役立つトピックへのリンクを示します。  
@@ -117,7 +116,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  AlwaysOn 可用性グループが有効になっていることは、サーバー インスタンスが高可用性ディザスター リカバリー ソリューションとして可用性グループを使用するための前提条件です。 AlwaysOn 可用性グループの管理に関する詳細については、「[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」参照してください。  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーをリモートで使用する  
- クライアント エディションを実行している PC で実行するものは次の手順[!INCLUDE[win7](../../includes/win7-md.md)]またはそれ以降、またはサーバー グラフィック シェルがインストールされている別のサーバー (つまりフル インストール[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]またはサーバーと Windows Server 8 のインストールグラフィック シェル機能を有効になっている)。  
+ 次の手順は、[!INCLUDE[win7](../../includes/win7-md.md)] 以降のクライアント エディションを実行している PC、またはサーバー グラフィック シェルがインストールされている別のサーバー ([!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の完全インストールやサーバー グラフィック シェル機能を有効にした Windows Server 8 インストールなど) に対して実行してください。  
   
 1.  [コンピューターの管理] を開きます。 [コンピューターの管理] を開くには、次のいずれかの操作を行います。  
   
@@ -141,7 +140,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー] をダブルクリックします。  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration manager、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスを右クリックして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<インスタンス名 >) ここで、\<インスタンス名 > AlwaysOn を有効にするローカル サーバー インスタンスの名前を指定します可用性グループのプロパティ] をクリックします。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration manager、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスを右クリックして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<インスタンス名 >) ここで、\<インスタンス名 > AlwaysOn を有効にするローカル サーバー インスタンスの名前を指定します可用性グループのプロパティ をクリックします。  
   
 7.  [AlwaysOn 高可用性] タブを選択します。  
   

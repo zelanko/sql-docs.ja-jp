@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.General
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 77d7d1616147a1461ac163a4a99e05c2b1c61e73
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a7f41e13024f059677fe7015a3a89e4ff7028258
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904915"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029101"
 ---
 # <a name="options-text-editor---xml---general-page"></a>[オプション] ([テキスト エディター]/[XML]/[全般] ページ)
   このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターの全般的な編集の動作を変更できます。 これらの設定を変更するには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[XML]** サブフォルダーを展開します。次に、 **[全般]** をクリックします。  

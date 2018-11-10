@@ -1,11 +1,9 @@
 ---
 title: LineString | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059752"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018477"
 ---
 # <a name="linestring"></a>LineString
   `LineString` は、一連の点と、それらを結ぶ線分を表す 1 次元のオブジェクトです。  
   
 ## <a name="linestring-instances"></a>LineString インスタンス  
- 次の図の例を示します`LineString`インスタンス。  
+ 次の図は、`LineString` インスタンスの例です。  
   
  ![geometry LineString インスタンスの例](../../database-engine/media/linestring.gif "geometry LineString インスタンスの例")  
   
@@ -33,7 +31,7 @@ ms.locfileid: "48059752"
   
 -   図 1 は、単純な閉じていない `LineString` インスタンスです。  
   
--   図 2 は単純でない、閉じていない`LineString`インスタンス。  
+-   図 2 は、単純でない、閉じていない `LineString` インスタンスです。  
   
 -   図 3 は、閉じている単純な `LineString` インスタンスです。したがって、このインスタンスはリングです。  
   
@@ -50,20 +48,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` の場合、`LineString` インスタンスは許容されますが、有効ではありません。  
   
- 次`LineString`インスタンスは許容されません。 `System.FormatException`がスローされます。  
+ 次に示す `LineString` インスタンスは許容されません。 `System.FormatException` がスローされます。  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- `LineString`インスタンスを有効に、次の条件を満たす必要があります。  
+ `LineString` インスタンスを有効にするためには、次の条件を満たす必要があります。  
   
-1.  `LineString`インスタンスが許容する必要があります。  
+1.  `LineString` インスタンスが許容されていること。  
   
 2.  `LineString` インスタンスが空でない場合は、2 つ以上の異なる点が含まれていること。  
   
-3.  `LineString`インスタンスは 2 つ以上の連続する点の特定の期間自体を重ねることはできません。  
+3.  `LineString` インスタンスは、それ自体を 2 つ以上の連続する点の区間に重ねることはできない。  
   
  次に示す `LineString` インスタンスは有効です。  
   
@@ -76,7 +74,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- 次`LineString`インスタンスが無効です。  
+ 次に示す `LineString` インスタンスは無効です。  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

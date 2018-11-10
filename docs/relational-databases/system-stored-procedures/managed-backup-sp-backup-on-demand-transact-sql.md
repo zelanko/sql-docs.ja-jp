@@ -51,7 +51,7 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> 引数  
  @database_name  
- バックアップの実行対象となるデータベースの名前。 @database_nameは**SYSNAME**します。  
+ バックアップの実行対象となるデータベースの名前。 @database_nameは **SYSNAME** します。  
   
  @type  
  実行するバックアップの種類: Database または Log。 @typeパラメーターが**nvarchar (32)** します。  

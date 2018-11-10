@@ -19,17 +19,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c6e39fd7946e0045a6074d0def388d058ff1026
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 929557d51c90f3cac86fd98d331fdbc6bc47fbac
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625060"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971103"
 ---
 # <a name="string-functions-transact-sql"></a>文字列関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  以下のスカラー関数は、文字列型の入力値に対して操作を行い、文字列値または数値を返します。  
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+
+以下のスカラー関数は、文字列型の入力値に対して操作を行い、文字列値または数値を返します。  
   
 ||||  
 |-|-|-| 

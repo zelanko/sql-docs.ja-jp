@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cea5f9c80eb8fa6cba29c451b4b6b20e16d559c
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: de3eb008d9411c33a8c9559e2633236265c493b4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419537"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270235"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "49419537"
   
 |サーバー コンポーネント|[説明]|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] には [!INCLUDE[ssDE](../includes/ssde-md.md)]が含まれています。これは、データの格納、処理、およびセキュリティ保護、レプリケーション、フルテキスト検索、リレーショナルおよび XML データを管理するツール、データベース内分析機能の統合、および Hadoop とその他の異種データ ソースにアクセスするための Polybase 統合、および [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) サーバー用のコア サービスです。|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] には[!INCLUDE[ssDE](../includes/ssde-md.md)]が含まれています。これは、データの格納、処理、およびセキュリティ保護、レプリケーション、フルテキスト検索、リレーショナルおよび XML データを管理するツール、データベース内分析機能の統合、および Hadoop とその他の異種データ ソースにアクセスするための PolyBase 統合、および [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) サーバー用のコア サービスです。|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、オンライン分析処理 (OLAP) アプリケーションおよびデータ マイニング アプリケーションを作成および管理するためのツールが含まれます。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、表形式、マトリックス形式、グラフィカル形式、および自由形式のレポートを作成、管理、配置するためのサーバー コンポーネントとクライアント コンポーネントが含まれます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、レポート アプリケーション開発用の拡張可能プラットフォームとしても使用できます。|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、データを移動、コピー、変換するためのグラフィカル ツールおよびプログラミング可能なオブジェクトのセットです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 用の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) コンポーネントも含まれています。|  
@@ -299,8 +299,8 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |基本的な Python 統合|[ユーザー アカウント制御]|[はい]|[はい]|[はい]|いいえ|
 |高度な Python 統合|[ユーザー アカウント制御]|いいえ|いいえ|いいえ|いいえ| 
 |Machine Learning Server (スタンドアロン)|[ユーザー アカウント制御]|いいえ|いいえ|いいえ|いいえ|   
-|Polybase コンピューティング ノード|[ユーザー アカウント制御]|はい <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|はい <sup>3</sup> | 
-|Polybase ヘッド ノード|はい|いいえ|いいえ|いいえ|いいえ| 
+|PolyBase コンピューティング ノード|[ユーザー アカウント制御]|はい <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|はい <sup>3</sup> | 
+|PolyBase ヘッド ノード|[ユーザー アカウント制御]|いいえ|いいえ|いいえ|いいえ| 
 |JSON|はい|[はい]|[はい]|[はい]|はい|   
 |クエリ ストア|はい|[はい]|[はい]|[はい]|はい|   
 |テンポラル|はい|[はい]|[はい]|[はい]|はい|   

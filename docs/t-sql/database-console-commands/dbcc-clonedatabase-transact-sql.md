@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84ac455efb9a5babe801d11218659730382dab8d
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666680"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965980"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
 )  
 ```  
   
@@ -72,16 +72,21 @@ DBCC CLONEDATABASE
 NO_STATISTICS  
 テーブル/インデックス統計をクローンから除外する必要があるかどうかを指定します。 このオプションが指定されていない場合、テーブル/インデックス統計は自動的に含まれます。 このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 と [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で使用できます。
 
-NO_QUERYSTORE クエリ ストア データをクローンから除外する必要があるかどうかを指定します。 このオプションが指定されていない場合、クエリ ストアが複製元データベースで有効になっていれば、クエリ ストア データがクローンに複製されます。 このオプションは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で使用できます。
+NO_QUERYSTORE<br>
+クエリ ストア データをクローンから除外する必要があるかどうかを指定します。 このオプションが指定されていない場合、クエリ ストアが複製元データベースで有効になっていれば、クエリ ストア データがクローンに複製されます。 このオプションは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で使用できます。
 
 VERIFY_CLONEDB  
-新しいデータベースの一貫性を確認します。  このオプションは、実稼働で使用する目的でデータベースが複製される場合に必要です。  また、VERIFY_CLONEDB を有効にすると、統計とクエリ ストア コレクションが無効になります。そのため、WITH VERIFY_CLONEDB、NO_STATISTICS、NO_QUERYSTORE の実行と等しくなります。  このオプションは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降で使用できます。
+新しいデータベースの一貫性を確認します。  このオプションは、実稼働で使用する目的でデータベースが複製される場合に必要です。  また、VERIFY_CLONEDB を有効にすると、統計とクエリ ストア コレクションが無効になります。そのため、WITH VERIFY_CLONEDB、NO_STATISTICS、NO_QUERYSTORE の実行と等しくなります。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
 
 > [!NOTE]  
 > 次のコマンドは、複製されたデータベースが実稼働対応であることを確認する目的で使用できます。 <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+Service Broker の関連システム カタログを複製に含めるかどうかを指定します。  SERVICEBROKER オプションは、VERIFY_CLONEDB と組み合わせて使用することはできません。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
+
 BACKUP_CLONEDB  
-クローン データベースのバックアップを作成し、検証します。  VERIFY_CLONEDB と組み合わせて使用した場合、バックアップが作成される前にクローン データベースが検証されます。  このオプションは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降で使用できます。
+クローン データベースのバックアップを作成し、検証します。  VERIFY_CLONEDB と組み合わせて使用した場合、バックアップが作成される前にクローン データベースが検証されます。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
   
 ## <a name="remarks"></a>Remarks
 次の検証は、DBCC CLONEDATABASE によって実行されます。 いずれかの検証に失敗すると、コマンドは失敗となります。

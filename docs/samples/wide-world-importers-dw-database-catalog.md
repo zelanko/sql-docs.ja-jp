@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c329594ad6349f58c4ed910bdb1b86b040a07c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627116"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270165"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW データベース カタログ
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -49,11 +49,11 @@ WideWorldImportersDW には、次のディメンション テーブルがあり�
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |date|日付、会計年度などに関する情報を含む新しいテーブル (11 月 1 日に基づく会計年度の開始)。|
-|Employee|`Application.People`。|
+|Employee|`Application.People` 。|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |業者|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`。|
-|TransactionType|`Application.TransactionTypes`。|
+|PaymentMethod|`Application.PaymentMethods` 。|
+|TransactionType|`Application.TransactionTypes` 。|
 
 ### <a name="fact-tables"></a>ファクト テーブル
 
@@ -83,7 +83,7 @@ WideWorldImportersDW が次のファクト テーブルです。 説明には、
 |Configuration_ApplyPartitionedColumnstoreIndexing|ファクト テーブルのパーティション分割と列ストア インデックスに適用されます。|
 |Configuration_ConfigureForEnterpriseEdition|パーティション分割、インデックス作成とインメモリ列ストアに適用されます。|
 |Configuration_EnableInMemory|SCHEMA_ONLY メモリ最適化テーブルは、ETL のパフォーマンスを向上させるには、統合ステージング テーブルを置き換えます。|
-|Configuration_ApplyPolybase|外部データ ソース、ファイル形式、およびテーブルを構成します。|
+|Configuration_ApplyPolyBase|外部データ ソース、ファイル形式、およびテーブルを構成します。|
 |Configuration_PopulateLargeSaleTable|Enterprise edition の変更を適用し、追加の履歴と 2012年のカレンダー年度の大量のデータを設定します。|
 |Configuration_ReseedETL|既存のデータを削除し、ETL のシードを再起動します。 これにより、OLAP データベースを再作成、OLTP データベースの更新された行と一致します。|
 

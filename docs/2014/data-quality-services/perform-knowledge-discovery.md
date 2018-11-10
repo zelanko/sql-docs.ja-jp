@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
@@ -16,19 +15,19 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0c7809182a67707055cb595ed2dc9a51a0067b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491d87d9c37026fbdac57dde8144a2226f93bbb2
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076052"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032469"
 ---
 # <a name="perform-knowledge-discovery"></a>ナレッジ検出の実行
   このトピックでは、ナレッジ検出を使用してナレッジ ベースを構築する方法について説明します。 検出プロセスでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) によって、コンピューター支援型のプロセスを使用してサンプル データ ソースのデータが分析され、取得されたナレッジがナレッジ ベースに追加されます。 そのナレッジは、ナレッジ検出アクティビティの **[ドメイン値の管理]** 手順か、ドメイン管理アクティビティで変更および強化できます。  
   
  ナレッジ検出は、3 つの手順を含むウィザード ベースのプロセスです。それぞれの手順を完了する必要があります。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  検出を実行する対象のソース データが Excel ファイルに含まれている場合は、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] コンピューターに Microsoft Excel がインストールされている必要があります。 Excel がインストールされていないと、マップ ステージで Excel ファイルを選択できません。 Microsoft Excel で作成されるファイルの拡張子は、.xlsx、.xls、または .csv です。 64 ビット バージョンの Excel を使用する場合は、Excel 2003 ファイル (.xls) のみがサポートされます。Excel 2007 または 2010 ファイル (.xlsx) はサポートされません。 64 ビット バージョンの Excel 2007 または 2010 を使用している場合は、ファイルを .xls ファイルまたは .csv ファイルとして保存するか、32 ビット バージョンの Excel をインストールしてください。  
@@ -67,12 +66,12 @@ ms.locfileid: "48076052"
   
 4.  **"マッピング"** テーブルで、次の手順に従って、ナレッジ検出を実行する各ソース列をナレッジ ベースのドメインにマップします。  
   
-    1.  マッピングを作成するには、空の行の **[ソース列]** ボックスの一覧からソース列を選択し、同じ行の **[ドメイン]** ボックスの一覧からドメインを選択します。 ドメインが存在しない場合は、 **[ドメインの作成]** または **[複合ドメインの作成]** をクリックしてドメインを作成します。 詳細については、「 [ドメイン ルールを作成](../../2014/data-quality-services/create-a-domain-rule.md) 」または「 [複合ドメインの作成](../../2014/data-quality-services/create-a-composite-domain.md)」を参照してください。  
+    1.  マッピングを作成するには、空の行の **[ソース列]** ボックスの一覧からソース列を選択し、同じ行の **[ドメイン]** ボックスの一覧からドメインを選択します。 ドメインが存在しない場合は、 **[ドメインの作成]** または **[複合ドメインの作成]** をクリックしてドメインを作成します。 詳細については、「 [Create a Domain Rule](../../2014/data-quality-services/create-a-domain-rule.md) 」または「 [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)」を参照してください。  
   
     2.  作成するマッピングごとに前の手順を繰り返します。 テーブルの行の数を変更するには、 **[列マッピングの追加]** をクリックするか、行を選択して **[選択した列マッピングを削除します]** をクリックします。 値が設定された行を選択した状態で **[選択した列マッピングを削除します]** をクリックすると、値が設定されていない行がある場合でも、選択した行が削除されます。  
   
         > [!NOTE]  
-        >  ソース データを DQS ドメインにマッピングし、ナレッジ検出を実行できるのは、ソースのデータ型が DQS でサポートされていて、なおかつ DQS ドメインのデータ型と一致する場合だけです。 サポートされているデータ型の詳細については、「 [DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」を参照してください。  
+        >  ソース データを DQS ドメインにマッピングし、ナレッジ検出を実行できるのは、ソースのデータ型が DQS でサポートされていて、なおかつ DQS ドメインのデータ型と一致する場合だけです。 サポートされているデータ型の詳細については、「 [Supported SQL Server and SSIS Data Types for DQS Domains](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」を参照してください。  
   
     3.  **[複合ドメインの表示と選択]** をクリックすると、定義されている複合ドメインが表示されます。 複合ドメインが定義されていない場合、このコントロールは使用できません。  
   
@@ -172,7 +171,7 @@ ms.locfileid: "48076052"
   
     -   **[選択したドメイン値をグループの先頭の値として設定]**: グループの先頭の値を変更するには、先頭の値として指定されていないグループ内の値を選択し、 **[選択したドメイン値をグループの先頭の値として設定]** をクリックします。  
   
-6.  **[スペル チェック]**: [ドメインのプロパティ] ページで [スペル チェック] を有効にした場合は、修正案がある値の下に赤い波線が表示されます。 その値を右クリックし、必要に応じて修正を選択します。 修正を選択すると、値の種類が "エラー" になり (最初から "エラー" の場合はそのまま)、その修正が **[次に修正]** 列に追加されます。 下矢印をクリックすると、その他の修正案が表示されます。 手動で修正を入力してスペル チェックの辞書に追加すると、修正として選択できるようになります。 詳細については、「 [DQS のスペル チェックの使用](../../2014/data-quality-services/use-the-dqs-speller.md) 」および「 [ドメインのプロパティを設定する](../../2014/data-quality-services/set-domain-properties.md)」を参照してください。  
+6.  **[スペル チェック]**: [ドメインのプロパティ] ページで [スペル チェック] を有効にした場合は、修正案がある値の下に赤い波線が表示されます。 その値を右クリックし、必要に応じて修正を選択します。 修正を選択すると、値の種類が "エラー" になり (最初から "エラー" の場合はそのまま)、その修正が **[次に修正]** 列に追加されます。 下矢印をクリックすると、その他の修正案が表示されます。 手動で修正を入力してスペル チェックの辞書に追加すると、修正として選択できるようになります。 詳細については、「 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) 」および「 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)」を参照してください。  
   
     > [!NOTE]  
     >  スペル チェックを使用するには、 **[ドメインのプロパティ]** ページで有効にする必要があります。 **[ドメインのプロパティ]** ページで無効になっている場合は、 **[データの検出結果を管理します]** ページで **[スペル チェックを有効/無効にします]** アイコンをクリックして有効にすることもできます。  

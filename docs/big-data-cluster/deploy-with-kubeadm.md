@@ -4,15 +4,15 @@ description: 複数の Ubuntu 16.04 上の Kubernetes または 18.04 のマシ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70ba143bf01336dbd77718007ccd0fb61acc21bb
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051385"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221778"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>SQL Server 2019 展開用の複数のコンピューターでの Kubernetes を構成します。
 
@@ -143,4 +143,4 @@ kubectl get nodes
 
 この記事の手順では、複数の Ubuntu コンピューターで Kubernetes クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データのクラスターにデプロイします。 手順については、次の記事を参照してください。
 
-[SQL Server 2019 CTP 2.0 では、Kubernetes をデプロイします。](deployment-guidance.md#deploy)
+[SQL Server 2019 CTP 2.1 では、Kubernetes をデプロイします。](deployment-guidance.md#deploy)

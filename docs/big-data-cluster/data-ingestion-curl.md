@@ -1,22 +1,22 @@
 ---
-title: Curl を使用して、SQL Server 2019 CTP 2.0 での HDFS にデータを読み込む |Microsoft Docs
+title: Curl を使用して、SQL Server 2019 CTP 2.1 での HDFS にデータを読み込む |Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 05ce2d4d848b7c244d672f6ab43cbcf09224e63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5f580ab39ef7338f424975d9667745131ee748f
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796593"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221628"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-ctp-20"></a>Curl を使用して、SQL Server 2019 CTP 2.0 での HDFS にデータを読み込む
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-ctp-21"></a>Curl を使用して、SQL Server 2019 CTP 2.1 での HDFS にデータを読み込む
 
-この記事は、使用する方法を説明します**curl** SQL Server 2019 CTP 2.0 での HDFS にデータを読み込みます。
+この記事は、使用する方法を説明します**curl** SQL Server 2019 CTP 2.1 での HDFS にデータを読み込みます。
 
 ## <a name="obtain-the-service-external-ip"></a>サービスの外部 ip アドレスを取得します。
 

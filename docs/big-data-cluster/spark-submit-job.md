@@ -8,17 +8,17 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.date: 11/06/2018
+ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050844"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221608"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio で SQL Server のビッグ データ クラスターで Spark ジョブの送信します。
 
-主なシナリオの 1 つは、SQL Server 2019 CTP 2.0 の Spark ジョブを送信する機能です。 Spark ジョブの送信機能では、SQL Server 2019 ビッグ データ クラスターへの参照を含むローカル Jar、Py ファイルを送信できます。 HDFS ファイル システムに既にあるは、Jar または Py のファイルを実行することもできます。 
+主なシナリオの 1 つは、SQL Server 2019 CTP 2.1 の Spark ジョブを送信する機能です。 Spark ジョブの送信機能では、SQL Server 2019 ビッグ データ クラスターへの参照を含むローカル Jar、Py ファイルを送信できます。 HDFS ファイル システムに既にあるは、Jar または Py のファイルを実行することもできます。 
 
 ## <a name="prerequisite"></a>前提条件 
 SQL Server のビッグ データ ツールをインストールし、Spark ジョブを送信する前に、ビッグ データ クラスターに接続します。 インストールの詳細については、リンクを参照してください[ビッグ データ ツールの展開](deploy-big-data-tools.md)します。

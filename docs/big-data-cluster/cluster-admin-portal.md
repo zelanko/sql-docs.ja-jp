@@ -4,15 +4,15 @@ description: クラスターの管理ポータルを使用して、SQL Server 20
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 764e1689b4b793e3a993c058517a892f93d6d439
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356053"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221468"
 ---
 # <a name="introduction-to-the-cluster-administration-portal"></a>クラスターの管理ポータルの概要
 
@@ -32,7 +32,7 @@ ms.locfileid: "49356053"
 コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
 
 > [!NOTE]
-> CTP 2.0 の場合があるセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするとき。
+> CTP 2.1 ではセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
 
 ## <a name="overview"></a>概要
 

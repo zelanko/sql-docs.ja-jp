@@ -1,11 +1,9 @@
 ---
 title: ポイント | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
@@ -14,15 +12,15 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c74251c9c1224dbbd376b57d81d5d180d03cb9c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c680f40a27f0a0ba450d061dae3127872d1262a7
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146872"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51017989"
 ---
 # <a name="point"></a>ポイント
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、空間データ、 `Point` 1 つの場所を表す 0 次元のオブジェクトは、Z (標高) 値および M (メジャー) 値を含めることができます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間データの `Point` は、1 つの場所を表す 0 次元のオブジェクトです。 には、Z (昇格) 値と M (メジャー) 値が含まれる場合もあります。  
   
 ## <a name="geography-data-type"></a>geography データ型  
  geography データ型の Point 型は、 *Lat* が緯度、 *Long* が経度を表している 1 つの場所を表します。 緯度と経度の値は度数で測定されます。 緯度の値は、常に [-90, 90] の範囲内になります。この範囲外の値が入力されると、例外がスローされます。 経度の値は、常に [-180, 180] の範囲内になります。この範囲外の入力値は、この範囲に収まるように調整されます。 たとえば、経度の値として 190 を入力した場合は、値 -170 に調整されます。 *SRID* は、返される **geography** インスタンスの空間参照 ID を表します。  

@@ -18,17 +18,20 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91e56555e83afdb97745bc180bbba4b2bb2b0921
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b14bf08c311ba39ed1a3d232e60f24dff72cfa55
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169152"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970223"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  指定した区切り記号を使用して文字式を分割します。  
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+指定した区切り記号を使用して文字式を分割します。  
   
 > [!NOTE]  
 > **STRING_SPLIT** 関数は、互換性レベル 130 以上でのみ使用できます。 データベースの互換性レベルが 130 よりも低い場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **STRING_SPLIT** 関数を見つけて実行することができません。 データベースの互換性レベルを変更するには、「[データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)」を参照してください。

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079675"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019017"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  CTP2 へのアップグレード シナリオは 4 つあります。 状況に適したシナリオを選択してください。  
@@ -34,7 +33,7 @@ ms.locfileid: "48079675"
 > -   アップグレードを実行する前にデータベースをバックアップしてください。  
 > -   アップグレード プロセスでは、ストアド プロシージャを再作成し、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]で使用されるテーブルをアップグレードします。 これらのコンポーネントのいずれかに加えたカスタマイズは失われる場合があります。  
 > -   モデル配置パッケージは作成されたエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のみで使用できます。 作成されたモデル配置パッケージを展開することはできません[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。  
-> -   使用し続けることができます、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]マスター データ サービス アドインの Excel 用マスター データ サービスおよび Data Quality Services をアップグレードした後の SP1 バージョン[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]CTP2 します。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 ダウンロードすることができます、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 バージョンのマスター データ サービス アドインを使用して Excel の[ここ](http://go.microsoft.com/fwlink/?LinkId=328664)します。  
+> -   マスター データ サービスおよび Data Quality Services を [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 にアップグレードした後も、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 バージョンの Excel 用マスター データ サービス アドインを使用し続けることができます。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 ダウンロードすることができます、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 バージョンのマスター データ サービス アドインを使用して Excel の[ここ](http://go.microsoft.com/fwlink/?LinkId=328664)します。  
   
 ##  <a name="noengine"></a> データベース エンジンのアップグレードを伴わないアップグレード  
  このシナリオと見なす、サイド バイ サイドでインストールのため両方[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]と[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]同じコンピューターまたは別のコンピューターに同時にインストールされます。  
@@ -108,7 +107,7 @@ ms.locfileid: "48079675"
   
 1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**: **[コントロール パネル]** > **[プログラムと機能]** の順に開き、Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をアンインストールします。  
   
-2.  データベース エンジンを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードします。  
+2.  データベース エンジンを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードします。  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを開きます。  
   

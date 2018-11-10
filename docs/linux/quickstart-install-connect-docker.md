@@ -4,7 +4,7 @@ description: このクイック スタートでは、Docker を使用して、SQ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 11/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: d48493cb2075f8b6961ed29a0f898055eeff7794
+ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753549"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51272610"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Docker を使用したクイック スタート: SQL Server の実行のコンテナー イメージ
 
@@ -137,20 +137,20 @@ SELECT @@SERVERNAME,
 
 ## <a id="pullandrun2019"></a> プルし、コンテナー イメージを実行します。
 
-1. SQL Server 2019 CTP 2.0 Linux コンテナー イメージを Docker Hub からプルします。
+1. SQL Server 2019 プレビューの Linux コンテナー イメージを Docker Hub からプルします。
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!TIP]
-   > このクイック スタートでは、SQL Server 2019 CTP 2.0 の Docker イメージを使用します。 SQL Server 2017 のイメージを実行する場合を参照してください、[この記事の SQL Server 2017 バージョン](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)します。
+   > このクイック スタートでは、SQL Server 2019 プレビュー Docker イメージを使用します。 SQL Server 2017 のイメージを実行する場合を参照してください、[この記事の SQL Server 2017 バージョン](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)します。
 
-   前のコマンドは、ubuntu ベースの最新の SQL Server 2019 CTP 2.0 コンテナー イメージをプルします。 RedHat に基づいてコンテナー イメージを代わりに使用する、次を参照してください。[実行 RHEL ベースのコンテナー イメージ](sql-server-linux-configure-docker.md#rhel)します。 特定のイメージをプルするには、コロンとタグ名を追加します (たとえば、 `mcr.microsoft.com/mssql/server:2017-GA`)。 利用可能なすべてのイメージを表示するには [mssql-server-linux Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) を参照してください。
+   前のコマンドは、ubuntu ベースの最新の SQL Server 2019 プレビュー コンテナー イメージをプルします。 RedHat に基づいてコンテナー イメージを代わりに使用する、次を参照してください。[実行 RHEL ベースのコンテナー イメージ](sql-server-linux-configure-docker.md#rhel)します。 特定のイメージをプルするには、コロンとタグ名を追加します (たとえば、 `mcr.microsoft.com/mssql/server:2017-GA`)。 利用可能なすべてのイメージを表示するには [mssql-server-linux Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) を参照してください。
 
    この記事での bash コマンドの`sudo`使用されます。 Macos で`sudo`は必要ないかもしれません。 Linux では、使用しない場合`sudo`Docker を実行するには、構成、 **docker**をグループ化し、そのグループにユーザーを追加します。 詳細については、次を参照してください。 [Linux のインストール後のステップ](https://docs.docker.com/install/linux/linux-postinstall/)します。
 
@@ -159,20 +159,20 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!NOTE]
    > パスワードは SQL Server の既定のパスワード ポリシーに従う必要があります。従わない場合、コンテナーで SQL Server をセットアップできず、動作が停止します。 既定では、パスワードの長さは少なくとも 8 文字で、大文字、小文字、十進数字、記号の 4 種類のうち 3 種類を含んでいる必要があります。 [docker ログ](https://docs.docker.com/engine/reference/commandline/logs/) コマンドを実行することでエラー ログを調査することができます。
 
    > [!NOTE]
-   > 既定では、これは、コンテナーを作成、Developer edition の SQL Server 2019 CTP 2.0 で。
+   > 既定では、これは、コンテナーを作成 Developer edition の SQL Server 2019 プレビューされます。
 
    次の表では、前述の `docker run` の例におけるパラメーターを説明しています。
 
@@ -182,7 +182,7 @@ SELECT @@SERVERNAME,
    | **-e ' SA_PASSWORD =\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージに必須の設定です。 |
    | **-p 1433:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) にマップします。 この例では、SQL Server がコンテナー内の TCP 1433 でリッスンしていると、ホスト上の 1433 ポートにこの公開されます。 |
    | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 2 つ以上のコンテナーを実行する場合、同じ名前を再利用することはできません。 |
-   | **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** | SQL Server 2019 CTP 2.0 Linux コンテナー イメージ。 |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu** | SQL Server 2019 CTP 2.1 Linux コンテナー イメージ。 |
 
 3. Docker コンテナーを表示するには、 `docker ps` コマンドを使用します。
 

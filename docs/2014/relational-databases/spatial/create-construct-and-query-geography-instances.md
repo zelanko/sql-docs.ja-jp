@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
@@ -15,22 +14,22 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9fdb6d7b2c5649908b31a958238572aa6b8b0285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a576a6d047148675fd50730bcb4a5e76a5684b14
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218316"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018747"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography インスタンスの作成、構築、およびクエリ
   地理空間データ型の `geography` は、球体地球座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `geography` データ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
   
- `geography`型は定義済みの各データベースで使用できます。 `geography` 型のテーブル列を作成し、システムが提供する他のデータ型を使用するときと同じように `geography` データを操作できます。  
+ `geography` 型は、各データベースで使用できるように事前に定義されています。 `geography` 型のテーブル列を作成し、システムが提供する他のデータ型を使用するときと同じように `geography` データを操作できます。  
   
 ##  <a name="creating"></a> 新しい geography インスタンスの作成または構築  
   
 ###  <a name="existing"></a> 既存のインスタンスからの新しい geography インスタンスの作成  
- `geography`データ型は、新しいを作成するに使用できる組み込みメソッドが数多く`geography`に基づいて既存のインスタンスのインスタンス。  
+ `geography` データ型には、既存のインスタンスに基づいて新しい `geography` インスタンスを作成するために使用できる組み込みメソッドが数多く用意されています。  
   
  **geography の周りにバッファーを作成するには**  
  [STBuffer &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stbuffer-geography-data-type)  
@@ -48,7 +47,7 @@ ms.locfileid: "48218316"
  [STDifference &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
   
 ###  <a name="wkt"></a> Well-Known Text 入力からの geography インスタンスの構築  
- `geography`データ型は、Open Geospatial Consortium (OGC) WKT 表現から geography を生成する組み込みのメソッドを提供します。 WKT 標準は geography データをテキスト形式で交換できるテキスト文字列です。  
+ `geography` データ型には、Open Geospatial Consortium (OGC) WKT 表現から geography を生成する組み込みのメソッドが数多く用意されています。 WKT 標準は geography データをテキスト形式で交換できるテキスト文字列です。  
   
  **WKT 入力から任意の型の geography インスタンスを構築するには**  
  [STGeomFromText &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stgeomfromtext-geography-data-type)  
@@ -77,7 +76,7 @@ ms.locfileid: "48218316"
  [STGeomCollFromText &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
   
 ###  <a name="wkb"></a> Well-Known Binary 入力からの geography インスタンスの構築  
- WKB はことができる、OGC で指定されたバイナリ形式`Geography`クライアント アプリケーションと SQL データベース間で交換されるデータ。 次の関数は、WKB 入力を受け入れて geography インスタンスを構築します。  
+ WKB は、`Geography` データをアプリケーションと SQL データベース間で交換することができる、OGC で指定されたバイナリ形式です。 次の関数は、WKB 入力を受け入れて geography インスタンスを構築します。  
   
  **WKB 入力から任意の型の geography インスタンスを構築するには**  
  [STGeomFromWKB &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  
@@ -112,7 +111,7 @@ ms.locfileid: "48218316"
  [GeomFromGML &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
   
 ##  <a name="returning"></a> geography インスタンスからの Well-Known Text および Well-Known Binary の取得  
- 返すか、WKT 形式または WKB 形式の次のメソッドを使用することができます、`geography`インスタンス。  
+ 次のメソッドを使用して、`geography` インスタンスの WKT 形式または WKB 形式のいずれかを取得できます。  
   
  **geography インスタンスの WKT 表現を取得するには**  
  [STAsText &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stastext-geography-data-type)  
@@ -162,7 +161,7 @@ ms.locfileid: "48218316"
  [STEndpoint &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a> [ディメンション]  
- 空でない`geography`インスタンスには 0-1-2 次元またはします。 0 次元`geography`インスタンスなど、`Point`と`MultiPoint`長さや面積あるありません。 1 次元のオブジェクト (`LineString, CircularString`、`CompoundCurve`、`MultiLineString` など) には長さがあります。 2 次元のインスタンスなど`Polygon, CurvePolygon`、および`MultiPolygon`面積と長さがあります。 空のインスタンスの次元は -1 としてレポートされます。`GeometryCollection` ではその内容の最も大きな次元がレポートされます。  
+ 空でない `geography` インスタンスの次元は、0 次元、1 次元、2 次元のいずれかになります。 0 次元`geography`インスタンスなど、`Point`と`MultiPoint`長さや面積あるありません。 1 次元のオブジェクト (`LineString, CircularString`、`CompoundCurve`、`MultiLineString` など) には長さがあります。 2 次元のインスタンス (`Polygon, CurvePolygon`、`MultiPolygon` など) には面積と長さがあります。 空のインスタンスの次元は -1 としてレポートされます。`GeometryCollection` ではその内容の最も大きな次元がレポートされます。  
   
  **インスタンスの次元を取得するには**  
  [STDimension &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -174,15 +173,15 @@ ms.locfileid: "48218316"
  [STArea &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a> 空  
- *空*`geography`インスタンスには、すべてのポイントはありません。 空の `LineString, CircularString`、`CompoundCurve`、および `MultiLineString` インスタンスの長さは 0 です。 空の領域`Polygon, CurvePolygon`と`MultiPolygon`インスタンスは 0 です。  
+ *空*`geography`インスタンスには、すべてのポイントはありません。 空の `LineString, CircularString`、`CompoundCurve`、および `MultiLineString` インスタンスの長さは 0 です。 空の `Polygon, CurvePolygon`、および `MultiPolygon` インスタンスの面積は 0 です。  
   
  **インスタンスが空かどうかを調べるには**  
  [STIsEmpty &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a> 閉鎖性  
- A*閉じた*`geography`インスタンスは、始点と終点が同じです。 `Polygon` インスタンスが閉じられたと見なされます。 `Point` インスタンスは閉じていないと見なされます。  
+ A*閉じた*`geography`インスタンスは、始点と終点が同じです。 `Polygon` インスタンスは閉じていると見なされます。 `Point` インスタンスは閉じていないと見なされます。  
   
- リングは、単純な閉じて`LineString`インスタンス。  
+ リングは、単純な閉じている `LineString` インスタンスです。  
   
  **インスタンスが閉じているかどうかを調べるには**  
  [STIsClosed &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stisclosed-geography-data-type)  
@@ -194,7 +193,7 @@ ms.locfileid: "48218316"
  [RingN &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/ringn-geography-data-type)  
   
 ###  <a name="srid"></a> SRID (spatial reference ID)  
- Spatial reference ID (SRID) がどの楕円体座標系を指定する識別子、`geography`でインスタンスが表されます。 SRID が異なる 2 つの `geography` インスタンスを比較することはできません。  
+ SRID (spatial reference ID) は、`geography` インスタンスがどの楕円体座標系で表されているかを示す識別子です。 SRID が異なる 2 つの `geography` インスタンスを比較することはできません。  
   
  **インスタンスの SRID を設定または取得するには**  
  [STSrid &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stsrid-geography-data-type)  
@@ -202,7 +201,7 @@ ms.locfileid: "48218316"
  このプロパティは変更できます。  
   
 ##  <a name="rel"></a> geography インスタンスの関係の特定  
- `geography`データ型は、2 つの間の関係の決定に使用できる組み込みメソッドが数多く`geography`インスタンス。  
+ `geography` データ型には、2 つの `geography` インスタンスの関係を調べるために使用できる組み込みメソッドが数多く用意されています。  
   
  **2 つのインスタンスが同じ点の集合で構成されているかどうかを調べるには**  
  [STEquals &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  
@@ -226,7 +225,7 @@ ms.locfileid: "48218316"
  [STSymDifference &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
   
 ##  <a name="supportedsrid"></a> geography インスタンスでは必ずサポート対象の SRID を使用  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] EPSG 標準に基づく SRID をサポートします。 地理空間データを使用して計算を実行したりメソッドを使用したりする際には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている SRID を `geography` インスタンスで使用する必要があります  その SRID が、 **sys.spatial_reference_systems** カタログ ビューに表示される SRID のいずれかに一致する必要があります。 前述のように、実行する場合の計算を使用して、空間データ、`geography`データ型の結果によって異なります、データの作成に使用がどの楕円体各楕円体には、特定の空間参照識別子 (が割り当てられています。SRID)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] EPSG 標準に基づく SRID をサポートします。 地理空間データを使用して計算を実行したりメソッドを使用したりする際には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている SRID を `geography` インスタンスで使用する必要があります  その SRID が、 **sys.spatial_reference_systems** カタログ ビューに表示される SRID のいずれかに一致する必要があります。 既に説明したように、`geography` データ型を使用して空間データの計算を実行する場合、計算結果は、データの作成に使用された楕円体によって異なります。これは、各楕円体に特定の SRID (spatial reference identifier) が割り当てられているからです。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される既定の SRID は 4326 です。SRID 4326 は、`geography` インスタンスのメソッドを使用する際に WGS 84 空間参照系にマップされます。 WGS 84 (SRID 4326) 以外の空間参照系のデータを使用する場合は、その地理空間データの SRID を確認する必要があります。  
   

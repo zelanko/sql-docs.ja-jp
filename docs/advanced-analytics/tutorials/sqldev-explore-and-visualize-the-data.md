@@ -3,17 +3,17 @@ title: レッスン 1 の探索と R と T-SQL (SQL Server Machine Learning) を
 description: SQL Server に R を埋め込む方法を示すチュートリアルはストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461988"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032219"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1: の探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "49461988"
 
 このレッスンでが、サンプル データを確認しを使用していくつかのプロットを生成し、 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)から[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)および一般的な[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基本 R での関数これらの R 関数が既に含まれている[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]します。
 
-主な目的がから R 関数を呼び出す方法を示す[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャおよびアプリケーション ファイル形式で結果を保存します。
+このレッスンの主な目的がから R 関数を呼び出す方法を示す[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャおよびアプリケーション ファイル形式で結果を保存します。
 
 + ストアド プロシージャを使用して作成**RxHistogram** varbinary データとして R プロットを生成します。 使用**bcp**バイナリ ストリームをイメージ ファイルにエクスポートします。
 + ストアド プロシージャを使用して作成**Hist** JPG、PDF の出力としての結果を保存し、プロットを生成します。
@@ -34,7 +34,7 @@ ms.locfileid: "49461988"
 
 データ科学ソリューションの開発には、通常、集中的なデータの探索とデータの視覚化が伴います。 まだ行っていない場合は、まずサンプル データの確認に少し時間がかかります。
 
-元のデータセットでは、タクシーの識別子と乗車記録が別々のファイルに入力されていましたが、 ただし、サンプル データを使用しやすくするには、2 つの元のデータセットが結合されている列_medallion_、 _hack\_ライセンス_、および_pickup\_datetime_します。  レコードもサンプリングされており、元のレコード数の 1% だけが取得されています。 結果的にダウンサンプリングされたデータセットは 1,703,957 行と 23 列です。
+元のパブリック データセット タクシーの識別子と乗車記録が、個別のファイルに指定されました。 ただし、サンプル データを使用しやすくするには、2 つの元のデータセットが結合されている列_medallion_、 _hack\_ライセンス_、および_pickup\_datetime_します。  レコードもサンプリングされており、元のレコード数の 1% だけが取得されています。 結果的にダウンサンプリングされたデータセットは 1,703,957 行と 23 列です。
 
 **タクシーの識別子**
   
@@ -61,16 +61,14 @@ ms.locfileid: "49461988"
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>RxHistogram を使用してデータをプロットするストアド プロシージャを作成します。
 
-使用して、プロットを作成する[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)で提供される拡張 R 関数のいずれかの[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)します。 この手順からのデータに基づいてヒストグラムをプロットする[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 この関数をラップするには、ストアド プロシージャで**PlotHistogram**します。
+使用して、プロットを作成する[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)で提供される拡張 R 関数のいずれかの[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)します。 この手順からのデータに基づいてヒストグラムをプロットする[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 この関数をラップするには、ストアド プロシージャで**PlotRxHistogram**します。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーで右クリックし、 **NYCTaxi_Sample**データベースを展開**プログラミング**、順に展開**Stored Procedures**を表示する、レッスン 2 で作成されたプロシージャ。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーで右クリックし、 **NYCTaxi_Sample**データベースし、選択**新しいクエリ**します。
 
-2. 右クリック**PlotHistogram**選択**変更**ソースを表示します。 呼び出すには、この手順を実行できる**rxHistogram** tipped nyctaxi_sample テーブルの列に含まれるデータにします。
-
-3. 必要に応じて、学習の演習では、次の例を使用してこのストアド プロシージャのコピーを作成します。 新しいクエリ ウィンドウを開き、ヒストグラムをプロットするストアド プロシージャを作成する次のスクリプトに貼り付けます。 この例の名前は**PlotHistogram2**名前の既存のプロシージャでの競合を回避するためにします。
+2. ヒストグラムをプロットするストアド プロシージャを作成する次のスクリプトを貼り付けます。 この例の名前は **RPlotRxHistogram*します。
 
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotHistogram2]
+    CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -92,13 +90,15 @@ ms.locfileid: "49461988"
     GO
     ```
 
-ストアド プロシージャ**PlotHistogram2**の既存のストアド プロシージャと同じ**PlotHistogram** NYCTaxi_sample データベースに存在します。 
+このスクリプトで理解する重要なポイントを以下に示します。 
   
-+ 変数 `@query` によりクエリ テキスト (`'SELECT tipped FROM nyctaxi_sample'`) が定義され、スクリプト入力変数 `@input_data_1`の引数として R スクリプトに渡されます。
++ 変数 `@query` によりクエリ テキスト (`'SELECT tipped FROM nyctaxi_sample'`) が定義され、スクリプト入力変数 `@input_data_1`の引数として R スクリプトに渡されます。 R スクリプトの外部プロセスとして実行されるため、スクリプトへの入力とへの入力間の一対一のマッピングが必要、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)システム ストアド プロシージャを SQL Server で R セッションを開始します。
   
-+ R スクリプトは非常に単純な: R 変数 (`image_file`)、イメージを格納するように定義し、 **rxHistogram**関数が呼び出され、プロットを生成します。
++ R スクリプトの変数内で (`image_file`) のイメージを格納するように定義します。 
+
++ **RxHistogram** RevoScaleR ライブラリから関数が呼び出され、プロットを生成します。
   
-+ 設定されている R デバイス**オフ**SQL Server の外部のスクリプトとしてこのコマンドを実行しているためです。 通常、R で高レベルのプロット コマンドを発行するときに R グラフィックス、ウィンドウを開きますと呼ばれる、*デバイス*します。 ウィンドウのサイズ、色、その他の特徴を変更できます。あるいは、ファイルに書き込み、別の方法で出力を処理する場合、デバイスをオフにできます。
++ 設定されている R デバイス**オフ**SQL Server の外部のスクリプトとしてこのコマンドを実行しているためです。 通常、R で高レベルのプロット コマンドを発行するときに R グラフィックス、ウィンドウを開きますと呼ばれる、*デバイス*します。 ファイルへの書き込みまたはその他の何らかの方法で出力を処理する場合は、デバイスをオフにできます。
   
 + R グラフィックス オブジェクトは、出力のために R data.frame にシリアル化されます。
 
@@ -109,7 +109,7 @@ ms.locfileid: "49461988"
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のステートメントを実行します。
   
     ```SQL
-    EXEC [dbo].[PlotHistogram]
+    EXEC [dbo].[RxPlotHistogram]
     ```
   
     **結果**
@@ -120,7 +120,7 @@ ms.locfileid: "49461988"
 2.  PowerShell コマンド プロンプトを開き、適切なインスタンス名、データベース名、ユーザー名、および引数としての資格情報を提供する、次のコマンドを実行します。 Windows id を使用してそれらを置き換えることができます **-u**と **-p**で **-t**します。
   
      ```text
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password>
+     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
     > [!NOTE]
@@ -162,16 +162,16 @@ ms.locfileid: "49461988"
   
 ## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Hist と複数の出力形式を使用してストアド プロシージャを作成します。
 
-通常、データ サイエンティストは、さまざまな観点から、データに関する洞察を取得する複数のデータ視覚エフェクトを生成します。 この例では、ストアド プロシージャなど、一般的な形式にバイナリ データをエクスポート、ヒストグラムを作成するのに Hist 関数を使用します。JPG、します。PDF と。PNG。 
+通常、データ サイエンティストは、さまざまな観点から、データに関する洞察を取得する複数のデータ視覚エフェクトを生成します。 この例では、呼び出されるストアド プロシージャを作成します**RPlotHist**ヒストグラム、や散布図など、およびその他の R グラフィックスを記述します。JPG とします。PDF 形式です。
 
-1. 既存のストアド プロシージャを使用して、 **PlotInOutputFiles**ヒストグラム、や散布図など、およびその他の R グラフィックスを記述します。JPG とします。PDF 形式です。 右クリックを使用して、**変更**ソースを表示します。
+これは、ストアド プロシージャは、 **Hist**など、一般的な形式にバイナリ データをエクスポート、ヒストグラムを作成する関数。JPG、します。PDF と。PNG。 
 
-2. 必要に応じて、学習の演習では、プロシージャとしての独自のコピーを作成**PlotInOutputFiles2**、名前付けの競合を回避するために一意の名前。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーで右クリックし、 **NYCTaxi_Sample**データベースし、選択**新しいクエリ**します。
 
-    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、新しく開きます**クエリ**ウィンドウ、および貼り付けでは、次に[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。
+2. ヒストグラムをプロットするストアド プロシージャを作成する次のスクリプトを貼り付けます。 この例の名前は**RPlotHist**します。
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
+    CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
       SET NOCOUNT ON;  
@@ -234,9 +234,9 @@ ms.locfileid: "49461988"
      END
     ```
   
-+ ストアド プロシージャ内の SELECT クエリの出力が既定の R データ フレーム `InputDataSet`に保存されます。 さまざまな R プロット関数を呼び出し、実際のグラフィックス ファイルを生成できます。 埋め込み R スクリプトのほとんどがそのようなグラフィックス関数のオプションを表します。`plot` や `hist` などです。
++ ストアド プロシージャ内の SELECT クエリの出力が既定の R データ フレーム `InputDataSet`に保存されます。 さまざまな R プロット関数を呼び出し、実際のグラフィックス ファイルを生成できます。 埋め込み R スクリプトのほとんどがそのようなグラフィックス関数のオプションを表します。 `plot` や `hist`などです。
   
-+ すべてのフォルダーがローカル フォルダー _C:\temp\Plots\\_ に保存されます。 宛先フォルダーはストアド プロシージャの一部として R スクリプトに渡された引数により定義されます。  変数 `mainDir`の値を変更して宛先フォルダーを変更できます。
++ すべてのファイルは、C:\temp\Plots のローカル フォルダーに保存されます。 宛先フォルダーはストアド プロシージャの一部として R スクリプトに渡された引数により定義されます。  変数 `mainDir`の値を変更して宛先フォルダーを変更できます。
 
 + ファイルを別のフォルダーに出力するには、ストアド プロシージャに埋め込まれている R スクリプトの `mainDir` 変数の値を変更します。 スクリプトを変更し、さまざまなフォーマットを出力したり、出力するファイルを増やしたりできます。
 
@@ -245,7 +245,7 @@ ms.locfileid: "49461988"
 プロットをバイナリ データを JPEG、PDF ファイル形式にエクスポートするのには、次のステートメントを実行します。
 
 ```SQL
-EXEC PlotInOutputFiles
+EXEC RPlotHist
 ```
 
 **結果**

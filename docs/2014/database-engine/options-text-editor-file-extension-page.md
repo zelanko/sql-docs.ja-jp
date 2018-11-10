@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 440576ae4c4d89639ec2ca44c9bfec7142a4326d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076865"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031789"
 ---
 # <a name="options-text-editor---file-extension-page"></a>[オプション] ([テキスト エディター]/[ファイル拡張子] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、特定のファイル拡張子を持つすべてのファイルを [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で処理するときの方法を指定できます。 入力したそれぞれの拡張子について、エディターを選択できます。 つまり、特定の種類のドキュメントを開く [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] エディターを選択できます。 ファイル拡張子のオプションを開くには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** を展開し、**[ファイル拡張子]** をクリックします。  

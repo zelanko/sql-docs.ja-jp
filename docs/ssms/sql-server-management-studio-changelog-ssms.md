@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226394"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270275"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1093,7 +1093,7 @@ RestoreDefaultFonts: 既定の設定に戻ります。
 複数の AAD があるときに Azure Key Vault のサインイン ページに Azure サブスクリプションが表示されないという AE ウィザードの問題を修正しました。Azure Key Vault のサインイン ページに、ユーザーが閲覧者アクセス許可を持っている Azure サブスクリプションが表示されないという AE ウィザードの問題を修正しました。
   - リソース ファイルを正しく読み込めず、不正確なエラー メッセージを表示していた問題を修正しました
 - SSMS の [セットアップ] ページ上のハイパーリンクのコントラストを改善しました。
-- SQL Server Express (2016 SP1) に接続したときに Polybase ノードが表示されない問題を修正しました。
+- SQL Server Express (2016 SP1) に接続したときに PolyBase ノードが表示されない問題を修正しました
 - SSMS が Azure DB の互換性レベルを v140 に変更できない問題を修正しました
 - Azure データベースの一覧を展開するときのオブジェクト エクスプローラーのパフォーマンスを強化しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3100675)を参照)。
 - リレーショナル サーバー以外の種類のサーバー (AS\RS\IS) で [SQL Server ログの表示] コンテキスト メニュー項目が間違って表示される問題を修正しました。 
@@ -1136,7 +1136,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - SSMS から (Azure VM にデータベースを展開するための) Azure 展開ウィザードが削除されました。
 - SSMS の実行プランに不足しているインデックスが表示されないという問題が修正されました ([Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3114194)を参照)。
 - SSMS での一般的なシャットダウン時のクラッシュの問題が修正されました。
-- オブジェクト エクスプローラーで、PolyBase|スケールアウト グループ ノードのコンテキスト メニューを表示したときにエラーが発生する問題が修正されました ([Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3115128)を参照)。
+- オブジェクト エクスプローラーで、PolyBase|スケールアウト グループ ノードのコンテキスト メニューを表示したときにエラーが発生する問題が修正されました ([Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3115128)を参照)
 - データベースに対するアクセス許可を表示しようとすると SSMS がクラッシュする場合があるという問題が修正されました。
 - クエリ ストア: クエリ ストア レポートの結果グリッドのコンテキスト メニュー項目が全体的に改善されました。
 - 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3103181)を参照)。

@@ -2,7 +2,7 @@
 title: Azure のデータ Studio の SQL Server 2019 拡張機能 (プレビュー) |Microsoft Docs
 description: Azure Data Studio 用 SQL Server 2019 Preview の拡張機能
 ms.custom: tools|sos
-ms.date: 10/11/2018
+ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411169"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269815"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
 
@@ -30,9 +30,9 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
    |プラットフォーム|ダウンロード|リリース日|バージョン
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|2018 年 10 月 18 日|0.7.2 です。
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|2018 年 10 月 18 日 |0.7.2 です。
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|2018 年 10 月 18 日 |0.7.2 です。
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|2018 年 11 月 6 日 |0.8.0 以降
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|2018 年 11 月 6 日 |0.8.0 以降
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|2018 年 11 月 6 日 |0.8.0 以降
 
 1. Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。
 
@@ -42,6 +42,27 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
 1. 再読み込みした後、拡張機能の依存関係がインストールされます。 [出力] ウィンドウで進行状況を表示して、まで時間がかかる可能性があります。
 
+## <a name="release-notes-v080"></a>リリース ノート (v0.8.0)
+*Notebook*:
+* セルを追加する前に、/後の既存のセルを「その他のアクション」セルのボタンをクリックしてなりました
+* **新しい接続の追加**"Attach To"のドロップダウン リストに接続するオプションが追加されました
+* A **Notebook の依存関係を再インストール**Python パッケージの更新を支援し、アプリケーションを終了してインストールを途中まで停止した場所の場合の解決にコマンドが追加されました。 これは、コマンド パレットから実行することができます (を使用して、`Ctrl/Cmd+Shift+P`と種類`Reinstall Notebook Dependencies`)
+* PROSE の python パッケージは、1.1.0 が更新され、多くバグ修正にはが含まれています。 使用して、 **Notebook の依存関係を再インストール**このパッケージを更新するコマンド
+* A**出力データをクリア**をクリックしてコマンドがサポートされているようになりました、**その他のアクション**セルのボタン
+* 次の修正に関して報告された問題。
+  * パスの問題のための Windows セッションの notebook を開始できません。
+  * C:\ または D:\ など、ドライブのルート フォルダーから、notebook を開始できませんでした。
+  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) VS Code での広告から作成されたノートブックを編集できません。
+  * Spark UI リンクは Spark カーネルを実行するときに今すぐ動作します。
+  * 「パッケージ管理」の名前を変更「パッケージのインストール」する
+
+*外部データを作成する*:
+
+* エラー メッセージはコピー可能およびの概要や詳細ビューに簡単に分割されています
+* UI レイアウトの向上と大幅に向上した信頼性とエラー処理
+* 次の修正に関して報告された問題。
+  * 無効になっている、無効な列マッピングを持つテーブルが表示され、警告、エラーを説明します。
+
 ## <a name="release-notes-v072"></a>リリース ノート (v0.7.2)
 * Azure リソース エクスプ ローラーでは、Azure Data Studio に組み込まれましたと、この拡張機能から削除されました。 これに関するフィードバックをありがとうございます。
 * Markdown の数のセルと notebook のパフォーマンスを改善しました。
@@ -50,7 +71,7 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 * Notebook の依存関係を再インストールをサポートします。 これは、ユーザー以前閉じた Azure Data Studio 途中のインストールを使用する場合に便利です。
 * ノートブックのセルの実行の取り消しをサポートします。
 * 信頼性の向上と、外部データの作成ウィザードを使用して、具体的には接続エラーが発生した場合。
-* Polybase が有効になっているか、ターゲット サーバーで実行されている場合は、外部データの作成ウィザードの使用をブロックします。
+* PolyBase が有効になっているか、ターゲット サーバーで実行されている場合は、外部データの作成ウィザードの使用をブロックします。
 * スペル チェックし、SQL Server 2019 と外部データの作成に関連する修正プログラムの名前を付けします。
 * エラーの数が多い、Azure Data Studio デバッグ コンソールから削除されます。
 
@@ -83,7 +104,7 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 * Notebook のヘッダーのボタンを使用してコードまたは markdown のセルを追加します。 各セルの左側にごみ箱のアイコンのセルを削除します。
 * 再生ボタン コードのセルを持つセルを実行し、マークダウンの編集を切り替え、目のアイコンでプレビュー
 
-## <a name="polybase-create-external-table-wizard"></a>Polybase 外部テーブルのウィザードを作成します。
+## <a name="polybase-create-external-table-wizard"></a>PolyBase 外部テーブルのウィザードを作成します。
 
 * SQL Server 2019 インスタンスから、*外部テーブルの作成ウィザード*3 つの方法で開くことができます。
   * サーバーを右クリックして選択**管理**の SQL Server 2019 (プレビュー)、タブをクリックし、選択、 **Create External Table**します。
@@ -106,3 +127,5 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
 * 接続の作成時にパスワードが保存されていない場合は、Spark ジョブの送信など一部の操作が成功しません。
 * 既存の notebook の .ipynb は、ビューアーの内容を読み込むには、4 以降のバージョンにアップグレードする必要があります。
+* 実行している、 **Notebook の依存関係を再インストール**コマンドはその 1 つが失敗したタスク ビューで 2 つのタスクを表示することがあります。 インストールが失敗は発生しません
+* 選択**新しい接続の追加**[キャンセル] をクリックすると、Notebook が**接続の選択**が既に接続されている場合でも、表示します。

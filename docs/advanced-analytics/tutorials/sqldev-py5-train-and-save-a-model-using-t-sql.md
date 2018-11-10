@@ -2,17 +2,17 @@
 title: トレーニングし、T-SQL を使用して Python モデルの保存 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/01/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2b098af69a454b19cd768995107b3f8c0ec3e141
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: d3917678cb16462f065754dd389be53ae8cd6016
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806792"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032719"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>トレーニングし、T-SQL を使用して Python モデルの保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,20 +22,19 @@ ms.locfileid: "49806792"
 この手順で Python パッケージを使用して、機械学習モデルをトレーニングする方法について説明します**scikit-学習**と**revoscalepy**。 SQL Server Machine Learning Services では、これらの Python ライブラリはインストールされています。
 
 モジュールを読み込むし、作成および SQL Server ストアド プロシージャを使用して、モデルをトレーニングするために必要な関数を呼び出します。 モデルでは、前のレッスンでエンジニア リング データ機能が必要です。 最後に、トレーニング済みモデルを保存、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。
-
-> [!IMPORTANT]
-> いくつかの変更があった、 **revoscalepy**パッケージで、このチュートリアルでは、コードの小さな変更が必要です。 参照してください、[変更リスト](sqldev-py6-operationalize-the-model.md#changes)このチュートリアルの最後にします。 
-> 
-> SLq Server 2017 のプレリリース バージョンを使用して Python Services をインストールした場合は、最新バージョンにアップグレードすることをお勧めします。 
+ 
 
 ## <a name="split-the-sample-data-into-training-and-testing-sets"></a>サンプル データをトレーニング セットとテスト セットに分割します。
 
-1. ストアド プロシージャを使用する**TrainTestSplit** 、nyctaxi 内のデータを分割する\_サンプル テーブルを 2 つの部分に: nyctaxi\_サンプル\_トレーニングと nyctaxi\_サンプル\_テストします。 
+1. 呼び出されるストアド プロシージャを作成する**PyTrainTestSplit** nyctaxi_sample テーブル内のデータを 2 つの部分に分割する: nyctaxi_sample_training nyctaxi_sample_testing とします。 
 
     このストアド プロシージャは、既に作成する必要がありますが、作成時に次のコードを実行することができます。
 
     ```SQL
-    CREATE PROCEDURE [dbo].[TrainTestSplit] (@pct int)
+    DROP PROCEDURE IF EXISTS PyTrainTestSplit;
+    GO
+
+    CREATE PROCEDURE [dbo].[PyTrainTestSplit] (@pct int)
     AS
     
     DROP TABLE IF EXISTS dbo.nyctaxi_sample_training
@@ -50,58 +49,68 @@ ms.locfileid: "49806792"
 2. カスタム分割を使用してデータを分割するには、ストアド プロシージャを実行し、トレーニング セットに割り当てられたデータの割合を表す整数を入力します。 たとえば、次のステートメントでは、データをトレーニング セットの 60% を割り当てます。
 
     ```SQL
-    EXEC TrainTestSplit 60
+    EXEC PyTrainTestSplit 60
     GO
     ```
+
+## <a name="add-a-name-column-in-nyctaximodels"></a>Nyc_taxi_models で name 列を追加します。
+
+このチュートリアルではスクリプトでは、生成されたモデルのラベルとしてモデル名を格納します。 モデル名は、revoscalepy または SciKit モデルを選択するクエリで使用されます。
+
+1. Management studio で開く、 **nyc_taxi_models**テーブル。
+
+2. 右クリック**列**クリック**新しい列**します。 列名を設定*名前*、型を持つ**nchar(250)** null を許容するとします。
+
+    ![モデル名を格納するための名前列](media/sqldev-python-newcolumn.png)
 
 ## <a name="build-a-logistic-regression-model"></a>ロジスティック回帰モデルを構築します。
 
 データが準備できたので後、は、モデルのトレーニングに使用できます。 保存を呼び出すことによって、これを行う手順として、いくつかの Python コードを実行しているが、トレーニング データのテーブルを入力します。 このチュートリアルでは、2 つのモデル、両方の二項分類モデルを作成します。
 
++ ストアド プロシージャ**PyTrainScikit**するヒント予測モデルを作成、 **scikit-学習**パッケージ。
 + ストアド プロシージャ**TrainTipPredictionModelRxPy**するヒント予測モデルを作成、 **revoscalepy**パッケージ。
-+ ストアド プロシージャ**TrainTipPredictionModelSciKitPy**するヒント予測モデルを作成、 **scikit-学習**パッケージ。
 
 入力データを使用する各ストアド プロシージャを作成し、ロジスティック回帰モデルのトレーニングを提供します。 すべての Python コードは、システム ストアド プロシージャにラップされて[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)します。
 
 新しいデータでモデルを再トレーニングを容易にできるようには、別のストアド プロシージャで sp_execute_exernal_script への呼び出しをラップし、新しいトレーニング データをパラメーターとして渡します。 このセクションでそのプロセスを説明します。
 
-### <a name="traintippredictionmodelscikitpy"></a>TrainTipPredictionModelSciKitPy
+### <a name="pytrainscikit"></a>PyTrainScikit
 
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、新しく開きます**クエリ**ウィンドウとストアド プロシージャを作成する次のステートメントを実行_TrainTipPredictionModelSciKitPy_します。  ストアド プロシージャには、入力クエリを提供する必要はありませんので、入力データの定義が含まれています。
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、新しく開きます**クエリ**ウィンドウとストアド プロシージャを作成する次のステートメントを実行**PyTrainScikit**します。  ストアド プロシージャには、入力クエリを提供する必要はありませんので、入力データの定義が含まれています。
 
     ```SQL
-    DROP PROCEDURE IF EXISTS TrainTipPredictionModelSciKitPy;
+    DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModelSciKitPy] (@trained_model varbinary(max) OUTPUT)
+    CREATE PROCEDURE [dbo].[PyTrainScikit] (@trained_model varbinary(max) OUTPUT)
     AS
     BEGIN
-      EXEC sp_execute_external_script
+    EXEC sp_execute_external_script
       @language = N'Python',
       @script = N'
-      import numpy
-      import pickle
-      from sklearn.linear_model import LogisticRegression
-      
-      ##Create SciKit-Learn logistic regression model
-      X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
-      y = numpy.ravel(InputDataSet[["tipped"]])
-      
-      SKLalgo = LogisticRegression()
-      logitObj = SKLalgo.fit(X, y)
-      
-      ##Serialize model
-      trained_model = pickle.dumps(logitObj)
-      ',
-      @input_data_1 = N'
-      select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, 
-      dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance
-      from nyctaxi_sample_training
-      ',
-      @input_data_1_name = N'InputDataSet',
-      @params = N'@trained_model varbinary(max) OUTPUT',
-      @trained_model = @trained_model OUTPUT;
-      ;
+    import numpy
+    import pickle
+    from sklearn.linear_model import LogisticRegression
+    
+    ##Create SciKit-Learn logistic regression model
+    X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
+    y = numpy.ravel(InputDataSet[["tipped"]])
+    
+    SKLalgo = LogisticRegression()
+    logitObj = SKLalgo.fit(X, y)
+    
+    ##Serialize model
+    trained_model = pickle.dumps(logitObj)
+    ',
+    @input_data_1 = N'
+    select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, 
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance
+    from nyctaxi_sample_training
+    ',
+    @input_data_1_name = N'InputDataSet',
+    @params = N'@trained_model varbinary(max) OUTPUT',
+    @trained_model = @trained_model OUTPUT;
+    ;
     END;
     GO
     ```
@@ -110,7 +119,7 @@ ms.locfileid: "49806792"
 
     ```SQL
     DECLARE @model VARBINARY(MAX);
-    EXEC TrainTipPredictionModelSciKitPy @model OUTPUT;
+    EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
@@ -121,7 +130,7 @@ ms.locfileid: "49806792"
 
 3. テーブルを開く*nyc\_taxi_models*します。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561.*
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561.*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -170,12 +179,11 @@ ms.locfileid: "49806792"
     - 二項変数_tipped_として提供される、*ラベル*結果列とモデルの機能列を使用してが調整または: _passenger_count_、 _trip_距離_、 _trip_time_in_secs_、および_direct_distance_します。
     - トレーニング済みモデルはシリアル化され、Python の変数に格納されている`logitObj`します。 T-SQL OUTPUT キーワードを追加すると、ストアド プロシージャの出力として、変数を追加できます。 次の手順で、データベース テーブルに、モデルのバイナリ コードを挿入する変数を使用_nyc_taxi_models_します。 このメカニズムは、簡単に格納してモデルの再利用できます。
 
-2. 次のように、トレーニング済みの挿入にストアド プロシージャを実行**revoscalepy**テーブル _nyc にモデル\_タクシー\_モデル。
+2. 次のように、トレーニング済みの挿入にストアド プロシージャを実行**revoscalepy**モデル テーブルに*nyc_taxi_models*します。
 
     ```SQL
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
-    
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
@@ -186,13 +194,13 @@ ms.locfileid: "49806792"
 
 3. テーブル *nyc_taxi_models*を開きます。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
-    *rx_model* *0x8003637265766F7363616c....*
+    *revoscalepy_model* *0x8003637265766F7363616c.*
 
 次の手順では、トレーニング済みモデルを使用して予測を作成します。
 
 ## <a name="next-step"></a>次の手順
 
-[SQL Server を使用して、Python モデルを運用化します。](sqldev-py6-operationalize-the-model.md)
+[ストアド プロシージャに埋め込まれた Python を使用して予測を実行します。](sqldev-py6-operationalize-the-model.md)
 
 ## <a name="previous-step"></a>前の手順
 

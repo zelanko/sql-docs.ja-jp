@@ -1,18 +1,19 @@
 ---
-title: 探索し、データの視覚化 |Microsoft Docs
+title: レッスン 1 の探索と、Python、T-SQL (SQL Server Machine Learning) を使用してデータを視覚化する |Microsoft Docs
+description: 埋め込む方法を示すチュートリアル SQL Server での Python ストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/01/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f6c9b42016d180c68741d00f761339f0ff1cd707
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806852"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030982"
 ---
 # <a name="explore-and-visualize-the-data"></a>探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,18 +69,19 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
 
 ### <a name="create-a-plot-as-varbinary-data"></a>Varbinary データとしてプロットを作成します。
 
-**Revoscalepy**モジュールに含まれている SQL Server 2017 Machine Learning Services と同様に機能をサポートしている、 **RevoScaleR** R 向けパッケージ この例は、Python と同等を使用して`rxHistogram`からのデータに基づいてヒストグラムをプロットする、[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 
-
 ストアド プロシージャが返すシリアル化された Python`figure`オブジェクトのストリームとして**varbinary**データ。 直接、バイナリ データを表示することはできませんが、逆シリアル化し、数値を表示するクライアントでの Python コードを使用して、クライアント コンピューターにイメージ ファイルを保存します。
 
-1. ストアド プロシージャを作成_SerializePlots_PowerShell スクリプトは、既にしなかった場合は、します。
+1. ストアド プロシージャを作成**PyPlotMatplotlib**PowerShell スクリプトは、既にしなかった場合は、します。
 
     - 変数`@query`クエリ テキストを定義します。 `SELECT tipped FROM nyctaxi_sample`、Python のコード ブロックに、スクリプトの入力変数を引数として渡される`@input_data_1`します。
     - Python スクリプトは非常に単純: **matplotlib** `figure`オブジェクトを使用して、ヒストグラム、散布図のプロットを作成し、これらのオブジェクトを使用してシリアル化は、`pickle`ライブラリ。
     - シリアル化する Python のグラフィック オブジェクト、 **pandas**出力データ フレーム。
   
     ```SQL
-    CREATE PROCEDURE [dbo].[SerializePlots]
+    DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
+    GO
+
+    CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -134,7 +136,7 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
 2. 今すぐ入力クエリとしてハード コードされたデータからプロットを生成する引数なしで、ストアド プロシージャを実行します。
 
     ```
-    EXEC [dbo].[SerializePlots]
+    EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. 結果は、次のようになります。
@@ -148,19 +150,20 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
     ```
 
   
-4. Python クライアントからバイナリ プロット オブジェクトを生成する SQL Server インスタンスに接続し、プロットを表示することができますようになりました。 
+4. [Python クライアント](../python/setup-python-client-tools-sql.md)、バイナリ プロット オブジェクトを生成する SQL Server インスタンスに接続し、プロットを表示できますようになりました。 
 
     これを行うには、サーバー名、データベース名、および適切な資格情報に置き換えて、次の Python コードを実行します。 Python のバージョンが、クライアントとサーバーで同じことを確認します。 また、Python ライブラリ (matplotlib など)、クライアントがサーバーにインストールされているライブラリを基準と同等以上のバージョンであることを確認してください。
   
     **SQL Server 認証を使用します。**
     
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
     cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])
@@ -171,12 +174,13 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
     **Windows 認証を使用します。**
 
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])

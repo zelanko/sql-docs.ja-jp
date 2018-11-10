@@ -4,15 +4,15 @@ description: この記事では、SQL Server 2019 のビッグ データ クラ�
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: abf8c174379ad444cd29b5115240ad7c404b2c4b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050874"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221518"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>SQL Server のビッグ データ クラスター コント ローラーとは何ですか。
 
@@ -26,8 +26,8 @@ ms.locfileid: "50050874"
 - クラスターの状態を監視する監視ツールを公開します。
 - トラブルシューティング ツールを検出し、予期しない問題の修復の公開します。
 - クラスターのセキュリティの管理: セキュリティで保護されたクラスター エンドポイントを確認、ユーザーとロールの管理、クラスター内通信の資格情報構成
-- 安全に実装されているため、アップグレードのワークフローの管理 (CTP 2.0 では使用できません)
-- (CTP 2.0 では使用できません)、クラスター内のステートフル サービスの高可用性と災害復旧を管理します。
+- 安全に実装されているため、アップグレードのワークフローの管理 (CTP 2.1 では使用できません)
+- (CTP 2.1 では使用できません)、クラスター内のステートフル サービスの高可用性と災害復旧を管理します。
 
 ## <a name="deploying-the-controller-service"></a>コント ローラー サービスのデプロイ
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - log files,advanced settings
@@ -14,12 +13,12 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2969547bdd20a8f65b5715dfe1acbfccbf13e3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d375857e0f2603814c6cf35a73b55a0a422b3e49
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054982"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030129"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>DQS ログ ファイルの詳細設定の構成
   このトピックでは、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ ファイルと [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ ファイルの詳細設定を構成する方法 (ログ ファイルのローリング ファイル サイズの制限の設定、イベントのタイム スタンプ パターンの設定など) について説明します。  
@@ -27,7 +26,7 @@ ms.locfileid: "48054982"
 > [!NOTE]  
 >  これらのアクティビティは [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]を使用して実行できません。また、これらのアクティビティは上級ユーザーだけが実行できます。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -122,7 +121,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  必要な変更を行い、ファイルを保存して、新しいログの変更を適用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS ログ ファイルの重大度レベルの構成](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

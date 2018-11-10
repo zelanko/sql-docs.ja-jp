@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 7775ece865eea62aad52f1c942c522ad21ed1108
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686620"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033629"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio Code を使用して SQL Server の Transact-SQL スクリプトを作成し、実行する
 
@@ -250,7 +250,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
 実際のシナリオでは、保存および実行する必要のあるスクリプトを作成する場合があります (管理または大規模な開発プロジェクトの一部として) 以降。 ここでスクリプトを保存することができます、 **.sql**拡張機能。
 
-T-SQL に慣れていない場合は、次を参照してください。[チュートリアル: TRANSACT-SQL ステートメントの作成]と[TRANSACT-SQL リファレンス (データベース エンジン)]します。
+T-SQL を初めて使う場合は、「[チュートリアル: Transact-SQL ステートメントの作成]」 (チュートリアル: Transact-SQL ステートメントの記述) と「[TRANSACT-SQL リファレンス (データベース エンジン)]」 (Transact-SQL リファレンス (データベース エンジン)) を参照してください。
 
 またはを使用して、mssql 拡張機能に影響する詳細については、次を参照してください。 [mssql 拡張機能プロジェクトの wiki]します。
 

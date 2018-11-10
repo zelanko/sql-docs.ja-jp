@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbmatchingresults.f1
@@ -15,19 +14,19 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2313708f4669b9cde09233d6a87d66eaf5662fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dc7379ef20846309872c6faf707aab04fb6a364
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090952"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033119"
 ---
 # <a name="create-a-matching-policy"></a>照合ポリシーの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの照合ポリシーを作成する方法について説明します。 サンプル データに対して照合ポリシー アクティビティを実行して、DQS の照合プロセスの準備を行います。 このアクティビティでは、まず、ポリシーの照合ルールを 1 つ以上作成してテストします。次に、ナレッジ ベースを発行して、それらの照合ルールを使用できるように公開します。 ナレッジ ベースで作成できる照合ポリシーは 1 つだけですが、そのポリシーに複数の照合ルールを含めることができます。  
   
  照合ポリシーを作成する手順は、データ ソースを特定してドメインを列にマップするマップ プロセス、1 つ以上の照合ルールを作成してそれぞれを個別にテストする照合ポリシー プロセス、およびすべての照合ルールをまとめて実行し、問題がなければポリシーをナレッジ ベースに追加する照合結果プロセスの 3 つのステージで構成されます。 照合ポリシー アクティビティのウィザードでは、これらの各プロセスをそれぞれ異なるページで実行します。前後の各ページに移動したり、プロセスを再実行したり、特定の照合ポリシー プロセスを完了した後にそのプロセスの同じステージに戻ることも可能です。 すべてのルールをまとめてテストした後、必要に応じて **[照合ポリシー]** ページに戻り、個々のルールを調整して再び個別にテストすることもできます。その後、 **[照合結果]** ページに戻り、もう一度すべてのルールをまとめて実行します。 DQS から提供されるソース データ、照合ルール、および照合結果に関する統計情報に基づいて照合ポリシーに関する決定を行い、照合ポリシーを調整することができます。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ソース データが Excel ファイルに含まれている場合は、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] コンピューターに Microsoft Excel がインストールされている必要があります。 Excel がインストールされていないと、マップ ステージで Excel ファイルを選択できません。 Microsoft Excel で作成されるファイルの拡張子は、.xlsx、.xls、または .csv です。 64 ビット バージョンの Excel を使用する場合は、Excel 2003 ファイル (.xls) のみがサポートされます。Excel 2007 または 2010 ファイル (.xlsx) はサポートされません。 64 ビット バージョンの Excel 2007 または 2010 を使用している場合は、ファイルを .xls ファイルまたは .csv ファイルとして保存するか、32 ビット バージョンの Excel をインストールしてください。  

@@ -3,17 +3,17 @@ title: レッスン 3 のトレーニングと R と T-SQL (SQL Server Machine L
 description: SQL Server に R を埋め込む方法を示すチュートリアルはストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 73e1b2ef70821af2247de000eba45a495075e614
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 23387a6074f0c4a1dd6b4cb675b84f7aaced2a06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463047"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033560"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>レッスン 3: トレーニングし、T-SQL を使用してモデルを保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,12 +24,14 @@ ms.locfileid: "49463047"
 
 ## <a name="create-the-stored-procedure"></a>ストアド プロシージャを作成します。
 
-システム ストアド プロシージャを使用する T-SQL から R を呼び出すときに[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)します。 ただし、モデルを再トレーニングなど多くの場合、繰り返し実行するプロセスの方が簡単に呼び出しをカプセル化`sp_execute_exernal_script`別のストアド プロシージャ。
+システム ストアド プロシージャを使用する T-SQL から R を呼び出すときに[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)します。 一方、プロセスを繰り返して、モデルを再トレーニングなど多くの場合、別のストアド プロシージャで sp_execute_exernal_script への呼び出しをカプセル化する簡単です。
 
-1.  最初に、チップの予測モデルを構築する R コードを含むストアド プロシージャを作成します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、新しく開きます**クエリ**ウィンドウとストアド プロシージャを作成する次のステートメントを実行_TrainTipPredictionModel_します。 このストアド プロシージャでは、入力データを定義し、R パッケージを使用してロジスティック回帰モデルを作成します。
+1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、新しく開きます**クエリ**ウィンドウ。
+
+2. ストアド プロシージャを作成する次のステートメントを実行して**RxTrainLogitModel**します。 このストアド プロシージャは、入力データを定義しを使用して**rxLogit** RevoScaleR ロジスティック回帰モデルを作成するからです。
 
     ```SQL
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModel]
+    CREATE PROCEDURE [dbo].[RxTrainLogitModel]
     
     AS
     BEGIN
@@ -60,17 +62,15 @@ ms.locfileid: "49463047"
     GO
     ```
 
-    - ただし、一部のデータが残されていることをモデルをテストするためには、データの 70% はからランダムに選択タクシーのデータ テーブル。
-    
-    - SELECT クエリによって、カスタムのスカラー関数 _fnCalculateDistance_ が使用され、乗車位置と降車位置直線距離が計算されます。  クエリの結果は R の既定の入力変数 `InputDataset`に格納されます。
+    -をいくつかのデータが残されていることをモデルをテストすることを確認するには、データの 70% がトレーニングのためのタクシー データ テーブルからランダムに選択します。
+
+    - SELECT クエリによって、カスタムのスカラー関数 *fnCalculateDistance* が使用され、乗車位置と降車位置直線距離が計算されます。 クエリの結果が、既定の R の入力変数に格納されている`InputDataset`します。
   
-    - R スクリプトの呼び出し、`rxLogit`関数、拡張 R 関数のいずれかに含まれる[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]、ロジスティック回帰モデルを作成します。
+    - R スクリプトの呼び出し、 **rxLogit**関数、拡張 R 関数のいずれかに含まれる[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]、ロジスティック回帰モデルを作成します。
   
         二項変数 _tipped_ が *ラベル* または結果列として使用され、モデルは、  _passenger_count_、 _trip_distance_、 _trip_time_in_secs_、および _direct_distance_の機能列を使用して調整されます。
   
     -   R 変数 `logitObj`に保存されたトレーニング済みのモデルはシリアル化され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に出力するためにデータ フレームに入れられます。 その出力は、将来の予測に使用できるようにデータベース テーブル _nyc_taxi_models_に挿入されます。
-  
-2.  存在しない場合は、ストアド プロシージャを作成するステートメントを実行します。
 
 ## <a name="generate-the-r-model-using-the-stored-procedure"></a>ストアド プロシージャを使用して、R モデルを生成します。
 
@@ -79,7 +79,7 @@ ms.locfileid: "49463047"
 1. R モデルを生成するには、他のパラメーターなしのストアド プロシージャを呼び出します。
 
     ```SQL
-    EXEC TrainTipPredictionModel
+    EXEC RxTrainLogitModel
     ```
 
 2. ウォッチ、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]に R のパイプ メッセージ**stdout**このメッセージのように、ストリーム。 
@@ -98,11 +98,11 @@ ms.locfileid: "49463047"
     0x580A00000002000302020....
     ```
 
-次の手順では、トレーニング済みのモデルを使用して予測を作成します。
+次の手順では、予測を生成するのにトレーニング済みモデルを使用します。
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[レッスン 4: モデルを運用します。](../tutorials/sqldev-operationalize-the-model.md)
+[レッスン 4: ストアド プロシージャで R モデルを使用して潜在的な結果を予測します。](../tutorials/sqldev-operationalize-the-model.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f369ac83237e2e903515a168506e9b08ef396f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19adfe90d99e0d40408951e09ce9de6893382897
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205548"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030169"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>ナレッジ ベースへのナレッジの追加
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ ベースにナレッジを追加する方法について説明します。 データ品質操作を実行するには、データに関するナレッジを事前に用意しておく必要があります。 このナレッジを取得するには、データ品質ナレッジ ベースを構築および管理し、特定の種類のデータ ソースに関連するナレッジをそのナレッジベースに追加します。 ナレッジ ベースはデータに関するナレッジのリポジトリです。ナレッジ ベースを使用して、データを理解し、その整合性を維持できます。  
@@ -40,14 +39,14 @@ ms.locfileid: "48205548"
 ##  <a name="Discovery"></a> ナレッジ検出の実行  
  ナレッジ検出では、データ品質基準を取得するためにデータのサンプルを分析し、取得したナレッジをナレッジ ベースに追加します。 これは、データの不整合と構文エラーを識別し、データへの変更を提案するコンピューター支援型のプロセスです。 ナレッジ検出アクティビティは、ドメイン値を対話的に管理できるページを含むウィザードです。  
   
--   ドキュメントの詳細については、次を参照してください。 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)します。  
+-   ドキュメント化された詳細情報については、「 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)」を参照してください。  
   
 -   ナレッジ検出の実行方法を示すビデオについては、 [ここ](http://msdn.microsoft.com/sqlserver/hh323825.aspx)をクリックしてください。  
   
 ##  <a name="ManageDomain"></a> ドメイン内のデータ値の管理  
  DQS では、コンピューター支援型のナレッジ検出アクティビティで生成されたメタデータを対話的に変更および拡張することができます。 これはドメイン管理アクティビティで行います。ドメイン管理アクティビティでは、特定のデータ値に変更を適用することができます。  
   
--   ドキュメントの詳細については、次を参照してください。 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)します。  
+-   ドキュメント化された詳細情報については、「 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)」を参照してください。  
   
 -   ドメイン管理の実行方法を示すビデオについては、 [ここ](http://msdn.microsoft.com/sqlserver/hh323825.aspx)をクリックしてください。 このビデオでは、ナレッジ検出ウィザードの [ドメイン値の管理] ページでドメイン値を変更します。 この手順は、ドメイン管理アクティビティの [ドメイン値] ページでも行うことができます。  
   
@@ -69,6 +68,6 @@ ms.locfileid: "48205548"
 ##  <a name="Default"></a> 既定の DQS ナレッジ ベースの使用  
  DQS には、DQS データと呼ばれる構築済みのナレッジ ベースが同梱されています。このナレッジ ベースには、米国の会社および住所データのドメインが含まれています。 このナレッジ ベースを使用すると、新しいナレッジ ベースを作成することなく、プロジェクトをすばやく開始できます。 DQS データ ナレッジ ベースは読み取り専用ですが、データ スチュワードはこれに基づいて新しいナレッジ ベースを作成できます。  
   
--   ドキュメントの詳細については、次を参照してください。 [DQS の既定のナレッジ ベースを使用して](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)します。  
+-   ドキュメント化された詳細情報については、「 [Using the DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)」を参照してください。  
   
   

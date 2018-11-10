@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f60de14fe4414bcb7cc9a09656f7d472785bda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679380"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018337"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,8 +107,8 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|対象ログインの SID。 NULL 値が許可されます。 該当しない場合は NULL を返します。|  
 |target_database_principal_name|**sysname**|アクションの対象ユーザー。 NULL 値が許可されます。 該当しない場合は NULL を返します。|  
 |server_instance_name|**sysname**|監査が発生したサーバー インスタンスの名前。 標準の server\instance の形式が使用されます。|  
-|database_name|**sysname**|アクションが発生したデータベース コンテキスト。 NULL 値が許可されます。 監査がサーバー レベルで発生した場合は NULL を返します。|  
-|schema_name|**sysname**|アクションが発生したスキーマ コンテキスト。 NULL 値が許可されます。 監査がスキーマの外部で発生した場合は NULL を返します。|  
+|database_name|**sysname**|アクションが発生したデータベース コンテキスト。 NULL 値が許可されます。 サーバー レベルの監査には、NULL を返します。|  
+|schema_name|**sysname**|アクションが発生したスキーマ コンテキスト。 NULL 値が許可されます。 監査がスキーマの外部で発生しているは、NULL を返します。|  
 |object_name|**sysname**|監査が発生したエンティティの名前。 これには、次の内容が含まれます。<br /> Server オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値が許可されます。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。|  
 |statement|**nvarchar (4000)**|TSQL ステートメント (存在する場合)。 NULL 値が許可されます。 該当しない場合は NULL を返します。|  
 |additional_information|**nvarchar (4000)**|単一のイベントに対してだけ適用される固有の情報が XML として返されます。 この種類の情報は、少数の監査可能なアクションに含まれます。<br /><br /> TSQL スタックが関連付けられているアクションに関して、XML 形式には、1 レベルの TSQL スタックが表示されます。 この XML 形式は次のとおりです。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は 3 つの部分 (database_name、schema_name、object_name) から成る形式で表されます。  モジュール名を解析してなどの無効な xml 文字をエスケープ`'\<'`、 `'>'`、 `'/'`、`'_x'`します。 としてエスケープする必要がある`_xHHHH\_`します。 HHHH は、その文字の 4 桁の 16 進数 UCS-2 コードを表しています。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。|  

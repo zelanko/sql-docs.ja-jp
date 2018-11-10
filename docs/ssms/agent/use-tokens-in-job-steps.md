@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675570"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743227"
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,8 @@ ms.locfileid: "47675570"
 |**(A-ERR)**|エラー番号。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にエラー番号の値に置き換えられます。|  
 |**(A-SEV)**|エラーの重大度。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にエラー重大度の値に置き換えられます。|  
 |**(A-MSG)**|メッセージ テキスト。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にメッセージ テキストの値に置き換えられます。|  
-|**(JOBNAME)**|ジョブの名前を指定します。|  
-|**(STEPNAME)**|ステップの名前。|  
+|**(JOBNAME)**|ジョブの名前を指定します。 このトークンは、SQL Server 2016 以降でのみ利用できます。|  
+|**(STEPNAME)**|ステップの名前。 このトークンは、SQL Server 2016 以降でのみ利用できます。|  
 |**(DATE)**|YYYYMMDD 形式で表す現在の日付。|  
 |**(INST)**|インスタンス名。 既定のインスタンスの場合、このトークンは既定のインスタンス名、MSSQLSERVER になります。|  
 |**(JOBID)**|ジョブ ID。|  

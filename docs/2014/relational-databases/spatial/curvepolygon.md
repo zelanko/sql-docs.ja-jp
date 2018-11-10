@@ -1,22 +1,20 @@
 ---
 title: CurvePolygon | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1555c2375ae3b1e8145618516b1033fd42722000
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7783517c21317c8d0a162b869f7d57329d89b15c
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214918"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018927"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   A`CurvePolygon`は外部境界リングと 0 によって定義された、位相的に閉じた表面または以上の内部リング  
@@ -30,13 +28,13 @@ ms.locfileid: "48214918"
   
 -   `CurvePolygon` インスタンスの内部は、外部リングとすべての内部リングとの間にある空間です。  
   
- A`CurvePolygon`インスタンスとは異なります、`Polygon`インスタンス、`CurvePolygon`インスタンスは、次の円弧セグメントを含めることができます:`CircularString`と`CompoundCurve`します。  
+ `CurvePolygon` インスタンスが `Polygon` インスタンスと異なるのは、`CurvePolygon` インスタンスは円弧 (`CircularString` および `CompoundCurve`) を含む場合があるという点です。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス  
- 次の図に示した有効`CurvePolygon`の数値。  
+ 有効な `CurvePolygon` の図を次に示します。  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- `CurvePolygon`インスタンスが許容いずれかを指定する必要があるに空であるか、許容される円弧リングのみを含めることができます。 許容される円弧リングは、次の要件を満たしています。  
+ `CurvePolygon` インスタンスが許容されるためには、空であるか、または許容される円弧リングのみを含んでいる必要があります。 許容される円弧リングは、次の要件を満たしています。  
   
 1.  許容される `LineString` インスタンス、`CircularString` インスタンス、または `CompoundCurve` インスタンスであること。 許容されるインスタンスの詳細については、「 [LineString](linestring.md)」、「 [CircularString](circularstring.md)」、および「 [CompoundCurve](compoundcurve.md)」を参照してください。  
   
@@ -47,7 +45,7 @@ ms.locfileid: "48214918"
     > [!NOTE]  
     >  Z 値および M 値は無視されます。  
   
- 次の例は許容される`CurvePolygon`インスタンス。  
+ 次の例は、許容される `CurvePolygon` インスタンスを示しています。  
   
 ```  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
@@ -69,7 +67,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` 始点と終点の Y 値が同じでないため、許容されません。 `@g2` リングに十分な数の点が含まれていないため、許容されません。  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- `CurvePolygon`を有効にするインスタンス両方外部リングと内部リングは、次の条件を満たす必要があります。  
+ `CurvePolygon` インスタンスを有効にするためには、外部リングと内部リングの両方が次の条件を満たす必要があります。  
   
 1.  1 つの接点でのみ接していること。  
   
@@ -79,7 +77,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  それぞれのリングは許容される curve 型であること。  
   
- `CurvePolygon` インスタンスがいるかどうかに応じて、特定の条件を満たすためにも必要がある`geometry`または`geography`データ型。  
+ さらに、`CurvePolygon` インスタンスは、`geometry` データ型であるかまたは `geography` データ型であるかに応じて、特定の条件を満たす必要があります。  
   
 #### <a name="geometry-data-type"></a>geometry データ型  
  有効な **geometryCurvePolygon** インスタンスは、次の属性を持つ必要があります。  
@@ -133,14 +131,14 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ```  
   
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. CurvePolygon を同じステートメント内で使用して geometry インスタンスを宣言およびインスタンス化する  
- このコード スニペットを宣言および使用して geometry インスタンスを初期化する方法を示しています、`CurvePolygon`同じステートメント内で。  
+ このコード スニペットは、`CurvePolygon` を同じステートメント内で使用して geometry インスタンスを宣言およびインスタンス化する方法を示しています。  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. CurvePolygon を使用して geography インスタンスをインスタンス化する  
- このコード スニペットを宣言して初期化する方法を示しています、`geography`インスタンス、 `CurvePolygon`:  
+ このコード スニペットは、`geography` を使用して `CurvePolygon` インスタンスを宣言およびインスタンス化する方法を示しています。  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -156,7 +154,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. 内部リングを含む CurvePolygon を格納する  
- この例は、内にドーナツを作成、`CurvePolygon`インスタンス (ドーナツを定義する、両方の外部境界リングと内部リングを使用します)。  
+ この例では、`CurvePolygon` インスタンス内にドーナツを作成しています (ドーナツは外部境界リングと内部リングの両方を使用して定義されています)。  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -164,7 +162,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), 
 SELECT @g.STArea() AS Area;  
 ```  
   
- この例ではどちらも、有効な`CurvePolygon`インスタンスと内部リングを使用する場合は、無効なインスタンス。  
+ 次の例は、内部リングを使用した場合の有効な `CurvePolygon` インスタンスと無効なインスタンスの両方を示しています。  
   
 ```tsql  
 DECLARE @g1 geometry, @g2 geometry;  

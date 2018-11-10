@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22b930ecab06ef6bd635cddd21af8ebbf8f1b11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44169d3d7b2744b06af31eb6212383db3a0f8b36
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168652"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032779"
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のスペル チェックでは、ドメイン内の文字列値の構文、スペル、および文構造をチェックします。 スペル チェックは、サーバー側のエンジンと統合されないクライアント側のスタンドアロンの機能で、現在のフローや状態には影響しません。 スペル チェックで誤りの可能性がある文字列値が見つかると、対応する各ページでドメイン値に対するその他の手動の変更を行うときに、それらの文字列値が赤い下線で示されます。 対象となるページは次のとおりです。  
@@ -29,7 +28,7 @@ ms.locfileid: "48168652"
   
  スペル チェックは、string データ型の単一ドメインでのみ機能します。 単一ドメイン内の string データ型のすべての値がスペル チェックに送られて検証されます。 スペル チェックは複合ドメインに対しては機能しません。また、string 型以外のドメイン、複合値 (文字と数字がスペースなしで連結された値など)、ローマ数字、単一の文字、および大文字のみの値も検証されません。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  スペル チェックを実行するには、ナレッジ検出アクティビティまたはドメイン管理アクティビティでナレッジ ベースとドメインを開いておく必要があります。また、スペル チェックを実行するドメインおよびページでスペル チェックを有効にし、ドメインの言語プロパティを指定する必要があります。  

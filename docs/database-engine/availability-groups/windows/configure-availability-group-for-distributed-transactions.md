@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2338ab3c9648af64e772f93639635abf504dafac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595846"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411772"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47595846"
 分散トランザクションを保証するには、分散トランザクション リソース マネージャーとしてデータベースを登録するように、可用性グループを構成する必要があります。  
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループのデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
+>[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループのデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] での構成手順は [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] の場合と同じです。
 
@@ -147,10 +147,10 @@ RMID の変更中に存在しているアクティブなトランザクション
 Microsoft Distributed Transaction Coordinator (MS DTC) 
 failed to reenlist citing that the database RMID does 
 not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
-associated with the transaction.  Please manually resolve
+associated with the transaction.  Please manually resolve
 the transaction.
     
-SQL Server detected a DTC/KTM in-doubt transaction with UOW 
+SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 {yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
 following the guideline for Troubleshooting DTC Transactions.
 ```

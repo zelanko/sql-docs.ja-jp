@@ -35,9 +35,9 @@ Microsoft Visual Basic 6 アプリケーションには、ADO ライブラリを
   
 3.  **使用可能な参照**、チェック ボックスをオン**Microsoft ActiveX Data Objects *n.n*ライブラリ**ここで、 ***n.n***最新を表しますバージョン番号です。 **場所**下にあるフィールドとして選択したを識別する必要があります *$installDir\msado15.dll*ここで、 *$installDir*先のディレクトリのパスを表す、ADO ライブラリインストールされています。  
   
-4.  ADO MD を使用する場合は、手順 3 を繰り返し選択**Microsoft ActiveX Data Objects (多次元) *n.n*ライブラリ**します。 **場所**フィールドとしてこの選択肢を識別する必要があります *$installDir\msadomd.dll*します。  
+4.  ADO MD を使用する場合は、手順 3 を繰り返し選択 **Microsoft ActiveX Data Objects (多次元) *n.n* ライブラリ** します。 **場所**フィールドとしてこの選択肢を識別する必要があります *$installDir\msadomd.dll*します。  
   
-5.  ADOX を使用する場合は、手順 3 を繰り返し選択**Microsoft ADO 内線*n.n* DDL とセキュリティの**します。 **場所**フィールドとしてこの選択肢を識別する必要があります *$installDir\msadox.dll*します。  
+5.  ADOX を使用する場合は、手順 3 を繰り返し選択 **Microsoft ADO 内線 *n.n* DDL とセキュリティの** します。 **場所**フィールドとしてこの選択肢を識別する必要があります *$installDir\msadox.dll*します。  
   
 6.  クリックして**OK**参照の設定を完了します。  
   

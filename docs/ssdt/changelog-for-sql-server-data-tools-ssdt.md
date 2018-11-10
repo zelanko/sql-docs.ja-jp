@@ -12,18 +12,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991305"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216810"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+
+## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT for Visual Studio 2017 (15.8.2)
+ビルド番号: 14.0.16182.0  
+リリース日: 2018 年 11 月 5 日  
+
+### <a name="whats-new"></a>新機能
+**SSIS:**
+
+スクリプト タスク/Azure-SSIS へのフラット ファイル変換先が含まれるパッケージを含む SSIS プロジェクトを展開すると、パッケージで Azure-SSIS の実行が失敗する問題を修正しました。 
+
+### <a name="known-issues"></a>既知の問題:
+
+- ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+- SSDT for Visual Studio 2017 (15.8.2) では、Oracle/Teradata のソース/変換先を含むパッケージを設計することはサポートされていません。 SSDT for Visual Studio 2017 (15.8) を使用します。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT for Visual Studio 2017 (15.8.1)
@@ -40,6 +55,8 @@ ms.locfileid: "49991305"
 ### <a name="known-issues"></a>既知の問題:
 
 - ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+- スクリプト タスク/フラット ファイルの変換先が含まれるパッケージを含む SSIS プロジェクトを Azure-SSIS に展開すると、Azure-SSIS でのパッケージの実行が失敗します。
+- SSDT for Visual Studio 2017 (15.8.1) では、Oracle/Teradata のソース/変換先を含むパッケージを設計することはサポートされていません。 SSDT for Visual Studio 2017 (15.8) を使用します。
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)

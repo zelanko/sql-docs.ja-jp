@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea72540271302223a35538e3c97e9f01c47e8d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838990"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743177"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,18 @@ POWER ( float_expression , y )
  *float_expression* の乗数を指定します。 *y* を除く、真数または概数数値の正確なデータ型に分類される式を指定できます、 **ビット** データ型。  
   
 ## <a name="return-types"></a>戻り値の型  
- 送信するときと同じ型を返します *float_expression*です。 たとえば場合、 **10 進**(2, 0) として送信された *float_expression*, は、結果が返されます **10 進数**(2, 0) です。  
+ 戻り値の型は、*float_expression* の入力型によって異なります。
+ 
+|入力型|の戻り値の型 : |  
+|----------|-----------|  
+|**float**、**real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**、**smallint**、**tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**、 **smallmoney**|**money**|
+|**bit**、**char**、**nchar**、**varchar**、**nvarchar**|**float**|
+ 
+結果が戻り値の型に一致しない合、算術オーバーフロー エラーが発生します。
   
 ## <a name="examples"></a>使用例  
   

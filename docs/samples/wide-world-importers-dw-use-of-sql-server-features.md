@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e6155be9338f7d7c04c7ecfd5312d38d909065e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57936009880849b3ca1e566110e688b699f6835b
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628150"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269735"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server の機能と機能の WideWorldImportersDW の使用
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ PolyBase を使用して、売上のさらに拡張するための役立つこ�
 
 PolyBase を使用してをサンプル データベースを有効にするがインストールされているかどうかを確認し、データベースで次のストアド プロシージャを実行します。
 
-    EXEC [Application].[Configuration_ApplyPolybase]
+    EXEC [Application].[Configuration_ApplyPolyBase]
 
 これは外部テーブルを作成`dbo.CityPopulationStatistics`Azure blob ストレージでホストされている米国の都市の人口データを含むパブリック データ セットを参照します。 構成プロセスを理解するストアド プロシージャでコードを確認することが推奨されます。 Azure blob storage にデータをホストし、汎用パブリック アクセスから保護する場合は、追加の構成手順を実行する必要があります。 次のクエリでは、その外部データ セットからデータを返します。
 

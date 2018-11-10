@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 2632b10aaf69701f93e51c1c945523300307789a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b37e3c27448f187b3c1717414599f2de120790d9
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656690"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269725"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート: SQL Server をインストールし、Ubuntu 上でデータベースを作成します。
 
@@ -24,13 +24,13 @@ ms.locfileid: "47656690"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-このクイック スタートでは、Ubuntu 16.04 に SQL Server 2017 または SQL Server 2019 CTP 2.0 をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+このクイック スタートでは、Ubuntu 16.04 に SQL Server 2017 または SQL Server 2019 preview をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-このクイック スタートでは、Ubuntu 16.04 に SQL Server 2019 CTP 2.0 をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+このクイック スタートでは、Ubuntu 16.04 で SQL Server 2019 preview をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 
@@ -147,7 +147,7 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
 
 6. リモートで接続する場合はファイアウォールで SQL Server の TCP ポート (既定は 1433) を開く必要もあります。
 
-この時点では、SQL Server 2019 CTP 2.0 では、Ubuntu コンピューター上で実行しを使用する準備ができました!
+この時点では、SQL Server 2019 プレビューでは、Ubuntu コンピューターで実行しているし、使用する準備ができました!
 
 ::: moniker-end
 

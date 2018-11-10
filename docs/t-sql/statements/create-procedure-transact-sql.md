@@ -47,17 +47,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8bddec40694be543a425a58c28a5a8d8f1bb65d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72a1972d6824b30ac97fedc2652fe89620a96ff3
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780810"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970693"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、および Parallel Data Warehouse で、[!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のストアド プロシージャを作成します。 ストアド プロシージャは、次のことを実行できる点で、他のプログラミング言語のプロシージャに似ています。  
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、および Parallel Data Warehouse で、[!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のストアド プロシージャを作成します。 ストアド プロシージャは、次のことを実行できる点で、他のプログラミング言語のプロシージャに似ています。  
   
 -   入力パラメーターを受け取り、呼び出し元のプロシージャまたはバッチに出力パラメーターの形式で複数の値を返す。  
   

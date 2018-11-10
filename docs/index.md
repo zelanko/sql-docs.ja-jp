@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 5ed3d7edbe277d8a39bbf9003810632a2c34a2c7
+ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336271"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51272580"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -255,7 +255,7 @@ ms.locfileid: "49336271"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>データベースの設計</h3>
-                                                          <p><b>Filestream、Filetable、空間データ、ビュー、トリガー、グラフ、シーケンス番号、ストアド プロシージャ、変更の追跡 </b> </p>
+                                                          <p><b>Filestream、Filetable、グラフ、シーケンス番号、空間データ、ストアド プロシージャ、トリガー、変更の追跡、ビュー </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -274,7 +274,7 @@ ms.locfileid: "49336271"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>クエリ データ</h3>
-                                                          <p><b>カーソル、シノニム、スクリプト、結合、ユーザー定義関数、フルテキスト検索 </b></p>
+                                                          <p><b>フルテキスト検索、結合、スクリプト、シノニム、ユーザー定義関数</b></p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -391,7 +391,7 @@ ms.locfileid: "49336271"
                                                         <h3>データ分析</h3>
                                                         <ul class="noBullet">
                                                         <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">Polybase</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>
                                                             <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
                                                             <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
                                                        </ul>
@@ -407,8 +407,8 @@ ms.locfileid: "49336271"
                                                   <div class="cardText">
                                                         <h3>AI および Machine Learning</h3>
                                                         <ul class="noBullet">
-                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Machine Learning Services</a></li>
-                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Server Machine Learning Services (R および Python)</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/r/sql-server-r-services">SQL Server R サービス</a></li>
                                                             <li><a class="barLink" href="/azure/machine-learning/">Azure Machine Learning</a></li>
                                                        </ul>
                                                     </div>

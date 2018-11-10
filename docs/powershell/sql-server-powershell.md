@@ -10,12 +10,12 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cd28b110116921bf6bf90bcd7ffdbb51e613419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c5354f0a94dc8ec3cccc66f751124554554357
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764250"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411732"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,11 @@ SQL PowerShell の更新プログラムを出荷するため、SQL PowerShell �
 
 **SQLPS モジュールをインポートする場合は PowerShell スクリプトを更新します。**
 
-`Import-Module -Name SQLPS` を実行する PowerShell スクリプトがあり、新しいプロバイダーの機能と新しいコマンドレットを活用したい場合は、これらを `Import-Module -Name SqlServer` に変更する必要があります。 新しいモジュールは `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` フォルダーにインストールされます。 したがって、$env:PSModulePath 変数を更新する必要はありません。 **SqlServer** という名前の、サード パーティ製またはコミュニティ バージョンのモジュールを使用するスクリプトがある場合は、名前の競合を避けるため Prefix パラメーターを使用してください。 SQL Server エージェントで使用されるモジュールの変更はありません。 
+`Import-Module -Name SQLPS` を実行する PowerShell スクリプトがあり、新しいプロバイダーの機能と新しいコマンドレットを活用したい場合は、これらを `Import-Module -Name SqlServer` に変更する必要があります。 新しいモジュールは `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` フォルダーにインストールされます。 したがって、$env:PSModulePath 変数を更新する必要はありません。 **SqlServer** という名前の、サード パーティ製またはコミュニティ バージョンのモジュールを使用するスクリプトがある場合は、名前の競合を避けるため Prefix パラメーターを使用してください。
 
-  
+SQL Server エージェントで使用されるモジュールの変更はありません。 そのため、型が PowerShell のジョブ ステップでは、SQLPS モジュールが使用されます。 詳細については、[SQL Server エージェントで PowerShell を実行する方法](run-windows-powershell-steps-in-sql-server-agent.md)に関する記事を参照してください。
+
+
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell のコンポーネント  
 **SqlServer** モジュールは、次の 2 つの Windows PowerShell スナップインを読み込みます。  
   

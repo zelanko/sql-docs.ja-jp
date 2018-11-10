@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 66622346bdc180dbbe4de9e734699dd1e522e95c
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 87e4d1ed1bdb1ce78e2f45fcb49019175fcdfefd
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753539"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269695"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上の SQL Server の設定を環境変数で構成する
 
@@ -30,7 +30,7 @@ Linux 上の SQL Server 2017 を構成するのには、いくつかの別の環
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Linux 上の SQL Server 2019 CTP 2.0 を構成するのには、いくつかの別の環境変数を使用できます。 これらの変数は、2 つのシナリオで使用されます。
+Linux 上の SQL Server 2019 プレビューを構成するのには、いくつかの別の環境変数を使用できます。 これらの変数は、2 つのシナリオで使用されます。
 
 ::: moniker-end
 

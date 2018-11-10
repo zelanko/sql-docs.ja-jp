@@ -23,7 +23,7 @@ ms.locfileid: "47704300"
 # <a name="scalar-function-calls"></a>スカラー関数の呼び出し
 スカラー関数は、各行の値を返します。 たとえば、絶対値のスカラー関数は数値の列を引数として受け取りと、列の各値の絶対値を返します。 スカラー関数を呼び出すためのエスケープ シーケンスは、します。  
   
- **{fn***スカラー関数* **}**   
+ **{fn** *スカラー関数* **}**  
   
  場所*スカラー関数*に示す関数の 1 つ[付録 e: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)します。 スカラー関数のエスケープ シーケンスの詳細については、次を参照してください。[スカラー関数エスケープ シーケンス](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)付録 c: SQL の文法でします。  
   

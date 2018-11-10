@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9ff06a230ea00af78b98e561f3fe4ae69886b5ff
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119209"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029860"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
   このトピックでは、DQS データベースのバックアップと復元を行う方法について説明します。  
@@ -25,7 +24,7 @@ ms.locfileid: "49119209"
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   知るか、DQS サーバーのインストール中に指定したデータベース マスター_キーのパスワードを保存する必要があります。  
+-   DQS サーバーのインストール中に入力したデータベース マスター キーのパスワードを知っている必要があります。  
   
 -   DQS で実行中のアクティビティまたはプロセスがないことを確認します。 これは **[アクティビティ監視]** 画面を使用して確認できます。 この画面の操作の詳細については、「 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)」を参照してください。  
   

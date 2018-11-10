@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e04e10b21e0210329a3ce6c09bc10bad53245f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068812"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032709"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   データ クレンジングは、データ ソース内のデータの品質を分析し、システムによる推奨事項を手動で承認または拒否し、それによってデータを変更するプロセスです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのデータ クレンジングには、ナレッジ ベースのナレッジにデータがどの程度準拠しているのかを分析するコンピューター支援型のプロセスと、データ スチュワードがコンピューター支援型プロセスの結果を検討および変更してデータ クレンジングが意図したとおりに行われるようにするための対話型プロセスが含まれます。  
@@ -99,7 +98,7 @@ ms.locfileid: "48068812"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|クレンジング アクティビティのしきい値を構成する方法について説明します。|[クレンジングと照合のしきい値の構成](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|クレンジング アクティビティのしきい値を構成する方法について説明します。|[Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |DQS に組み込まれたナレッジを使用してデータをクレンジングする方法について説明します。|[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |参照データ サービスのナレッジを使用してデータをクレンジングする方法について説明します。|[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |複合ドメインをクレンジングする方法について説明します。|[複合ドメインでデータをクレンジングする](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  

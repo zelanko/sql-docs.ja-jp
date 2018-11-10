@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 961f5793732dcfabd19b07f0a22b467591a980c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8cd37ca4058fb79eddfa296896c3da230b98789
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203242"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018798"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell のインストール
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 選択したことを検出した場合、セットアップは停止[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しますが、Windows PowerShell 2.0 の PowerShell コンポーネントが含まれている機能がインストールされていません。 Windows 管理フレームワークを使用して PowerShell をインストールしてから、セットアップを再実行する必要があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、Windows PowerShell 2.0 をインストールしていないのに、PowerShell コンポーネントを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を選択したことが検出された場合に停止します。 Windows 管理フレームワークを使用して PowerShell をインストールしてから、セットアップを再実行する必要があります。  
   
 ## <a name="installing-includessnoversionincludesssnoversion-mdmd-powershell-support"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell サポートのインストール  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、Windows PowerShell に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポートを提供するソフトウェアをインストールします。 いずれかを選択すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell が必要な機能のサポートは、セットアップは、Windows PowerShell 2.0 がインストールされていることを確認します。 PowerShell 2.0 が存在する場合は、セットアップし、次がインストールされます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell コンポーネント。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、Windows PowerShell に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポートを提供するソフトウェアをインストールします。 PowerShell サポートを必要とする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を選択すると、Windows PowerShell 2.0 がインストールされているかどうかが確認されます。 PowerShell 2.0 が存在する場合は、セットアップにより次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell コンポーネントがインストールされます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップイン。スナップインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用の以下の 2 種類の Windows PowerShell サポートを実装する dll ファイルです。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48203242"
   
  インストールされていない、またはがアンインストールされている場合は、Windows PowerShell 2.0 次の手順でインストールする必要があります、 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214)ページ。  
   
- セットアップの完了後に Windows PowerShell がアンインストールされる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能の Windows PowerShell は機能しません。 Windows PowerShell をアンインストールできるのは Windows ユーザーです。また、Windows PowerShell のアンインストールは、Windows オペレーティング システムのアップグレードで必要になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 機能を使用するには、Windows Management Framework を使用して PowerShell 2.0 を再インストールする必要があります。  
+ セットアップの終了後に Windows PowerShell がアンインストールされると、Windows PowerShell 用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能は機能しなくなります。 Windows PowerShell をアンインストールできるのは Windows ユーザーです。また、Windows PowerShell のアンインストールは、Windows オペレーティング システムのアップグレードで必要になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 機能を使用するには、Windows Management Framework を使用して PowerShell 2.0 を再インストールする必要があります。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  

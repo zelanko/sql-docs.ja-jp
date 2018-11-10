@@ -11,18 +11,20 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0ffdc0f6940caaffe8b50db57b5a694f38211aa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d9389f515c6e6558a5df2a39a778e24b9179567
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713920"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970783"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
   
-  SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md.md)] のアップグレードを計画している場合、ダウンタイムとリスクを最小限に抑えるために、考慮すべきいくつかのアプローチがあります。 インプレース アップグレードの実行、新規インストールへの移行、またはローリング アップグレードの実行が可能です。 次の図は、これらのアプローチから選択する場合に役立ちます。 図の各アプローチについては、下でも説明しています。 図の意思決定ポイントに役立てるため、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」も参照してください。  
+SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md.md)] のアップグレードを計画している場合、ダウンタイムとリスクを最小限に抑えるために、考慮すべきいくつかのアプローチがあります。 インプレース アップグレードの実行、新規インストールへの移行、またはローリング アップグレードの実行が可能です。 次の図は、これらのアプローチから選択する場合に役立ちます。 図の各アプローチについては、下でも説明しています。 図の意思決定ポイントに役立てるため、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」も参照してください。  
   
  ![データベース エンジンのアップグレード方法のデシジョン ツリー](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "データベース エンジンのアップグレード方法のデシジョン ツリー")  
   
