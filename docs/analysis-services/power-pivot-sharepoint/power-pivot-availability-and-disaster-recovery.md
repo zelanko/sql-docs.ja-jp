@@ -82,8 +82,7 @@ ms.locfileid: "38979584"
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の同期ミラーリングを同じファーム内で行うことによる可用性の確保|サポートはされますが、推奨はされません。 同期コミット モードの AlwaysOn を推奨します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 同期コミット モードの|サポートされ、なおかつ推奨されます。|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同期ミラーリングまたはログ配布を別のファームとの間で行うことによるディザスター リカバリー|サポートされています。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー|Supported|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー|Supported|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
