@@ -19,7 +19,7 @@ ms.locfileid: "38034980"
 # <a name="analysis-services-tutorials"></a>Analysis Services チュートリアル
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-[テーブル モデリング (1400 互換性レベル)](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
+[表形式のモデリング (1400 互換性レベル)](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
 Azure Analysis Services と SQL Server 2017 Analysis Services に適用される以降。 このチュートリアルでは、SQL Server Data Tools (SSDT) を使用して、Adventure Works という架空の会社の基本的な Analysis Services 表形式モデルを作成する方法のレッスンを提供します。 
 
 [表形式のモデリング (1200 互換性レベル)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
