@@ -19,7 +19,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e5c207a6928c82adeb8d45e22ea342bc40f0322
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47798830"
@@ -54,7 +54,7 @@ ms.locfileid: "47798830"
 > [!NOTE]
 >  複数の結果を照会する場合、最初のみ[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)が返されます。 複数の結果セットが必要な場合のそれぞれを独自に割り当てる**DataControl**します。 複数の結果に対するクエリの例は、次になります。 `"Select * from Authors, Select * from Topics"`  
   
- 追加する"DFMode = 20 です"を接続文字列を使用する場合、 **rds。DataControl**データを更新するときに、オブジェクトが、サーバーのパフォーマンスを向上させることができます。 この設定で、 **RDSServer.DataFactory**サーバー上のオブジェクトが少ないリソースを消費するモードを使用します。 ただし、次の機能では、この構成では使用できません。  
+ 追加する"DFMode = 20 です"を接続文字列を使用する場合、 **rds.DataControl**データを更新するときに、オブジェクトが、サーバーのパフォーマンスを向上させることができます。 この設定で、 **RDSServer.DataFactory**サーバー上のオブジェクトが少ないリソースを消費するモードを使用します。 ただし、次の機能では、この構成では使用できません。  
   
 -   パラメーター化クエリを使用します。  
   
