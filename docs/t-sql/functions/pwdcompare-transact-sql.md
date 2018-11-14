@@ -48,7 +48,7 @@ PWDCOMPARE ( 'clear_text_password'
  暗号化されていないパスワードです。 *clear_text_password* is **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- パスワードの暗号化ハッシュです。 ** password_hash ** が **varbinary (128)** です。  
+ パスワードの暗号化ハッシュです。 *password_hash* が **varbinary (128)** です。  
   
  *version*  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降に移行されたが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] システムには変換されていない [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 以前のログインからの値を *password_hash* が表している場合に、1 に設定される可能性がある、古いパラメーターです。 *バージョン* は **int**です。  
