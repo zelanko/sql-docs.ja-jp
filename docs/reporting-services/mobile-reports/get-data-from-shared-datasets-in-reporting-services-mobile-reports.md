@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec30904cc7c434d5450de025feb0cb7698a2e128
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836960"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813935"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートの共有データセットからデータを取得する
 SQL Server Mobile Report Publisher では、[Excel ファイルからのデータの読み込み](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)以外にも、ほぼすべてのソースからのデータにアクセスできます。 データへのアクセスには、Reporting Services Web ポータルで構成された共有データ ソースが必要です。 詳細については、 [共有データ ソースの作成](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) についてのページと、 [共有データセットの作成](../../reporting-services/report-data/manage-shared-datasets.md)についてのページを参照してください。  
@@ -41,7 +41,7 @@ SQL Server Mobile Report Publisher では、[Excel ファイルからのデー�
   
 データセットのインポートが完了したら、シミュレートされたデータや Excel ファイルからのローカル データの場合と同様に、モバイル レポートをデザインできます。  
   
-既定では共有データセットは常に最新の状態であり、最新のデータが含まれています。これは、だれかがそのデータセットに基づいたモバイル レポートを表示するたびに、SQL Server が基になるクエリを実行して最新のデータを返すためです。 多くの人がモバイル レポートを表示する場合、これが望ましくない場合があることは明らかです。そのため、キャッシュを設定して、クエリを定期的に実行し、返されるデータセットをキャッシュできます。 このブログ投稿では、 [Web ポータルでのキャッシュとデータ更新のしくみ](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)について説明されています。  
+既定では共有データセットは常に最新の状態であり、最新のデータが含まれています。これは、だれかがそのデータセットに基づいたモバイル レポートを表示するたびに、SQL Server が基になるクエリを実行して最新のデータを返すためです。 多くの人がモバイル レポートを表示する場合、これが望ましくない場合があることは明らかです。そのため、キャッシュを設定して、クエリを定期的に実行し、返されるデータセットをキャッシュできます。 このブログ投稿では、 [Web ポータルでのキャッシュとデータ更新のしくみ](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)について説明されています。  
   
 ## <a name="add-edit-or-remove-a-report-server"></a>レポート サーバーの追加、編集、削除  
   
@@ -60,8 +60,8 @@ SQL Server Mobile Report Publisher では、[Excel ファイルからのデー�
 ### <a name="see-also"></a>参照  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md)  
--  [iPad アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  
--  [iPhone アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
+-  [iPad アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  
+-  [iPhone アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
   
   
   

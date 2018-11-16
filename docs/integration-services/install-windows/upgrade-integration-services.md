@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 7bd66f0839d520cf9708f001756de2d031d6df0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753800"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642359"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 以降がコンピューターに現在インストールされている場合は、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]にアップグレードできます。  
@@ -46,7 +46,7 @@ ms.locfileid: "47753800"
 > -   DTS 2000 パッケージ実行タスク  
 > -   アップグレード アドバイザーによる DTS パッケージのスキャン  
 >   
->  廃止されたその他の機能については、「 [SQL Server 2016 で提供が中止された Integration Services の機能](http://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)」をご覧ください。  
+>  廃止されたその他の機能については、「 [SQL Server 2016 で提供が中止された Integration Services の機能](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)」をご覧ください。  
   
 ## <a name="upgrading-integration-services"></a>Integration Services のアップグレード  
  次の方法のいずれかを使用してアップグレードできます。  
@@ -145,6 +145,6 @@ ms.locfileid: "47753800"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のアップグレード済みのインスタンスに格納されている [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージを実行する [!INCLUDE[ssDE](../../includes/ssde-md.md)]コンピューターでは使用できません。  
   
 ## <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ記事「 [既存のカスタムSSIS拡張機能とアプリケーションをデナリで動作させる](http://go.microsoft.com/fwlink/?LinkId=238157)」  
+ blogs.msdn.com のブログ記事「 [既存のカスタムSSIS拡張機能とアプリケーションをデナリで動作させる](https://go.microsoft.com/fwlink/?LinkId=238157)」  
   
   

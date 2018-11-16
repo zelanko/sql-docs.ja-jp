@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 21745dae4137bd96fff43b48bf794cf1b67519e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a72cb156eca1c69785e16e6875a517b2d99922d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803310"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603252"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep を使用した SQL Server のインストールに関する注意点
 
@@ -43,7 +43,7 @@ SysPrep を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 - Windows System Preparation ツール ("Windows SysPrep" ともいいます) と組み合わせると、ソース コンピューター上で未構成の準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを格納したオペレーティング システムのイメージを作成できます。 これにより、オペレーティング システム イメージを複数のコンピューター上に配置できます。 オペレーティング システムの構成が完了したら、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのイメージの完了手順を使用して、準備済みインスタンスを構成できます。  
   
-    Windows オペレーティング システムのイメージを準備するには、Windows SysPrep ツールを使用します。 このツールは、組織全体に配置するためにオペレーティング システムのカスタマイズされたイメージをキャプチャする場合に使用されます。 SysPrep とその使用方法の詳細については、[Sysprep](http://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview) に関するページを参照してください。  
+    Windows オペレーティング システムのイメージを準備するには、Windows SysPrep ツールを使用します。 このツールは、組織全体に配置するためにオペレーティング システムのカスタマイズされたイメージをキャプチャする場合に使用されます。 SysPrep とその使用方法の詳細については、[Sysprep](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview) に関するページを参照してください。  
   
 ## <a name="installation-media-considerations"></a>インストール メディアに関する注意点  
  完全バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用している場合は、次のことを考慮してください。  

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cf6458cdb92f11871b27ae007d4207f3628c46b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500281b84c84e84507660e3961b3d512b939e582
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597653"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668602"
 ---
 # <a name="database-engine-developer-documentation"></a>データベース エンジンの開発者向けのドキュメント
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "47597653"
  [データベース エンジン拡張ストアド プロシージャ プログラミング](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  拡張ストアド プロシージャを使用して、C などのプログラミング言語でユーザー独自の外部ルーチンを作成する方法について説明します。  
   
- [データ コレクターのプログラミング](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
+ [データ コレクターのプログラミング](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
  Data Collector オブジェクト モデルについて説明します。  
   
- [例外メッセージ ボックスのプログラミング](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
+ [例外メッセージ ボックスのプログラミング](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  アプリケーションに例外メッセージ ボックス プログラム インターフェイスを使用して、メッセージ エクスペリエンスを高い柔軟性で制御し、ユーザーが後で参照できるようにエラー メッセージを保存したり、メッセージのヘルプを表示したりできるようにする方法を説明します。  
   
 ## <a name="see-also"></a>参照  

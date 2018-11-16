@@ -5,8 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -15,26 +14,26 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703660"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604342"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]リリースで導入された機能強化の概要を示します。  新機能と機能拡張により、データ ストレージ システムを設計、開発、および管理する設計者、開発者、および管理者の能力や生産性が向上します。
 
-他の SQL Server コンポーネントの新機能を確認する場合は、「[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)」を参照してください。
+他の SQL Server コンポーネントの新機能を確認する場合は、「 [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)」を参照してください。
 
 > [!NOTE]
 >  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] は 64 ビット アプリケーションです。 32 ビット版のインストールは廃止されましたが、いくつかの要素が 32 ビット コンポーネントとして実行されます。
 
 #### <a name="try-it-out"></a>お試しください
 
-- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] をダウンロードするには、**[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** ![ダウンロード](../analysis-services/media/download.png "ダウンロード")に移動してください。
+- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] をダウンロードするには、**[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![ダウンロード](../analysis-services/media/download.png "ダウンロード")に移動してください。
 
 - Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。
 
@@ -43,14 +42,14 @@ ms.locfileid: "47703660"
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  `CREATE OR ALTER <object>` 構文を[プロシージャ](../t-sql/statements/create-procedure-transact-sql.md)、[ビュー](../t-sql/statements/create-view-transact-sql.md)、[関数](../t-sql/statements/create-function-transact-sql.md)、[トリガー](../t-sql/statements/create-trigger-transact-sql.md)に使用できるようになりました。
--   より汎用的なクエリ ヒント モデルのサポートが追加されました ( `OPTION (USE HINT('<hint1>', '<hint2>'))`)。 詳細については、「[クエリ ヒント (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
+-   より汎用的なクエリ ヒント モデルのサポートが追加されました ( `OPTION (USE HINT('<hint1>', '<hint2>'))`)。 詳細については、「 [クエリ ヒント (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
 - ヒントを列挙する [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) DMV が追加されました。  
 - showplan XML の一時的な統計情報を返す [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) が追加されました。  
 - 指定されたテーブルの増分統計情報に [sys.dm_db_incremental_stats_properties](../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) DMV が追加されました。  
 - `instant_file_initialization_enabled` 列が [sys.dm_server_services](../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) に追加されました。  
 - `estimated_read_row_count` 列が [sys.dm_exec_query_profiles](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) に追加されました。  
 -  メモリ ページのロック モデルに関する情報を提供する `sql_memory_model` 列と `sql_memory_model_desc` 列が [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) に追加されました。
--  多数の機能をサポートするエディションが拡張されました。 これには、すべてのエディションへの行レベルのセキュリティ、Always Encrypted、動的なデータ マスキング、データベースの監査、インメモリ OLTP および他のいくつかの機能の追加が含まれます。 詳細については、「[SQL Server 2016 の各エディションでサポートされる機能](../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。   
+-  多数の機能をサポートするエディションが拡張されました。 これには、すべてのエディションへの行レベルのセキュリティ、Always Encrypted、動的なデータ マスキング、データベースの監査、インメモリ OLTP および他のいくつかの機能の追加が含まれます。 詳細については、「 [SQL Server 2016 の各エディションでサポートされる機能](../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。   
 -  [sp_refresh_parameter_encryption](../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) によって、Always On を使用して暗号化されたオブジェクトが再定義されたときに、Always On 暗号化でメタデータを更新できます。  
 
 
@@ -203,7 +202,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
 
 - インメモリ OLTP で一時的なシステム バージョン管理を使用できるようになりました。 詳細については、「[メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)」を参照してください。
 
-- インメモリ OLTP ワークロードからのネイティブ コンパイル コードでクエリ ストアがサポートされるようになりました。 詳細については、「[インメモリ OLTP でのクエリ ストアの使用](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)」を参照してください。
+- インメモリ OLTP ワークロードからのネイティブ コンパイル コードでクエリ ストアがサポートされるようになりました。 詳細については、「 [インメモリ OLTP でのクエリ ストアの使用](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)」を参照してください。
 
 - [メモリ最適化テーブルの行レベルのセキュリティ](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
 
@@ -244,7 +243,7 @@ Insert select ステートメントで挿入では、マルチ スレッドは�
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、Microsoft Azure Blob ストレージ サービスを使用した SQL Server Backup to URL がブロック BLOB によるストライプ バックアップ セットをサポートするようになり、最大バックアップ サイズ 12.8 TB をサポートするようになりました。 例については、「 [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples)」を参照してください。
 
 ### <a name="file-snapshot-backups-to-microsoft-azure-blob-storage"></a>Microsoft Azure BLOB Storage へのファイル スナップショット バックアップ
- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、SQL Server Backup to URL で、Microsoft Azure BLOB ストレージ サービスによりすべてのデータベース ファイルが格納されたデータベースをバックアップする際に Azure スナップショットを使用できるようになりました。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]では、SQL Server Backup to URL で、Microsoft Azure BLOB ストレージ サービスによりすべてのデータベース ファイルが格納されたデータベースをバックアップする際に Azure スナップショットを使用できるようになりました。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。
 
 ### <a name="managed-backup"></a>管理対象のバックアップ
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、SQL Server Managed Backup to Microsoft Azure でバックアップ ファイルに新しいブロック BLOB ストレージが使用されます。 また、管理対象のバックアップはいくつかの点が変更され、機能が強化されています。
@@ -373,7 +372,7 @@ model データベースの新しい値および新しいデータベースの�
 - [sys.dm_exec_function_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) では、スカラー値関数に関する実行統計情報が提供されます。
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降、[sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) のエントリは [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] より前の場合と同様に保持されます。
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに送信されたステートメントに関する情報は、新しい動的管理関数の [sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) で返すことができます。
-- 2 つの新しいビューが [SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services.md) をサポートします ([sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) および [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md))。 
+- 2 つの新しいビューが [SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services.md)をサポートします ( [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) および [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md))。 
 
 
 ## <a name="security-enhancements"></a>セキュリティの強化
@@ -441,17 +440,17 @@ Always On で、暗号化されたデータベースがサポートされるよ�
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] では、Microsoft Azure への接続用に開発中の Active Directory 認証ライブラリ (ADAL) がサポートされます。 これは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] で使用される証明書ベース認証に代わるものです。
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストールでは、前提条件として .NET 4.6 をインストールする必要があります。 .NET 4.6 は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストール時のセットアップに応じて自動的にインストールされます。
 - 新しいクエリ結果グリッド オプションでは、結果グリッドからのテキストのコピーまたは保存時に復帰/改行 (改行文字) を維持することができます。 [ツール] メニューの [オプション] からこのように設定します。
-- SQL Server 管理ツールがメイン機能ツリーからインストールされなくなりました。詳細については、「 [SSMS を使用した SQL Server 管理ツールのインストール](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)」を参照してください。
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストールでは、前提条件として .NET 4.6.1 をインストールする必要があります。 .NET 4.6.1 は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストール時のセットアップに応じて自動的にインストールされます。
+- SQL Server 管理ツールがメイン機能ツリーからインストールされなくなりました。詳細については、「 [SSMS を使用した SQL Server 管理ツールのインストール](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)」を参照してください。
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストールでは、前提条件として .NET 4.6.1 をインストールする必要があります。 .NET 4.6.1 は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストール時のセットアップに応じて自動的にインストールされます。
 
 ### <a name="upgrade-advisor"></a>アップグレード アドバイザー
 SQL Server 2016 Upgrade Advisor プレビューはスタンドアロン ツールです。これにより、以前のバージョンのユーザーは、SQL Server データベースに対して一連のアップグレード ルールを実行し、重大な動作変更や非推奨の機能を検出でき、Stretch Database などの新機能の採用に役立ちます。
 
- Upgrade Advisor プレビューは [ここ](https://www.microsoft.com/en-us/download/details.aspx?id=48119) からダウンロードできます。また、Web Platform Installer を使用してインストールすることもできます。
+ Upgrade Advisor プレビューは [ここ](https://www.microsoft.com/download/details.aspx?id=48119) からダウンロードできます。また、Web Platform Installer を使用してインストールすることもできます。
 
 ## <a name="see-also"></a>参照
 [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md) 
  
-[SSMS を使用した SQL Server 管理ツールのインストール](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[SSMS を使用した SQL Server 管理ツールのインストール](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

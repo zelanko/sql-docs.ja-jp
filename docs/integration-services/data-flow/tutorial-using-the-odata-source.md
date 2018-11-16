@@ -11,15 +11,15 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1f668fd09c2eb5bfc796f1fcd74d5f4d8e569ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716350"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637759"
 ---
 # <a name="tutorial-using-the-odata-source"></a>チュートリアル: OData ソースの使用
-  このチュートリアルでは、サンプルの **Northwind** OData サービス (http://services.odata.org/V3/Northwind/Northwind.svc/)) から **Employees** (従業員) コレクションを抽出し、フラット ファイルに読み込むプロセスについて説明します。  
+  このチュートリアルでは、サンプルの **Northwind** OData サービス (https://services.odata.org/V3/Northwind/Northwind.svc/)) から **Employees** (従業員) コレクションを抽出し、フラット ファイルに読み込むプロセスについて説明します。  
   
 ## <a name="1-create-an-integration-services-project"></a>1.Integration Services プロジェクトの作成  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47716350"
   
 5.  接続に対応する **[新規]** をクリックし、新しい OData 接続マネージャーを追加します。  
   
-6.  **[サービス ドキュメントの場所]** に対応する OData サービスの URL を入力します。 この URL には、サービス ドキュメントに対応する URL、または特定のフィードかエンティティに対応する URL を指定できます。 このチュートリアルでは、サービス ドキュメントへの URL ([http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)) を入力します。  
+6.  **[サービス ドキュメントの場所]** に対応する OData サービスの URL を入力します。 この URL には、サービス ドキュメントに対応する URL、または特定のフィードかエンティティに対応する URL を指定できます。 このチュートリアルでは、サービス ドキュメントへの URL ([https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/)) を入力します。  
   
 7.  OData サービスにアクセスするために、 **[認証]** で **[Windows 認証]** が選択されていることを確認します。 既定では、**[Windows 認証]** が選択されています。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47716350"
   
 10. **[コレクション]** ドロップダウン リストで、**[Employees]** を選択します。  
   
-11. **[クエリ オプション]** で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、 `$orderby=CompanyName&$top=100`のようにします。 このチュートリアルでは、「`$top=5`」と入力します。  
+11. **[クエリ オプション]** で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、`$orderby=CompanyName&$top=100` のようにします。 このチュートリアルでは、「`$top=5`」と入力します。  
   
 12. **[プレビュー]** をクリックして、データをプレビューします。  
   

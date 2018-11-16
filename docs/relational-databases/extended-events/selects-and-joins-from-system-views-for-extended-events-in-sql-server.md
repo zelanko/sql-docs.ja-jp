@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9a99cfe0941bd96ed8d523ed85587f64c482791
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3c4ed3aff940dd68614fd5534302fdfb65d3c59b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906152"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666831"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "48906152"
 
 このセクションでは、同じ定義済みイベント セッションを 3 つの異なる技術で示して関連付けます。 セッションは定義されていて SQL Server Management Studio (SSMS.exe) の **オブジェクト エクスプローラー** に表示されますが、現在は実行していません。
 
-予期しない障害を防ぐため、 [SSMS の最新の更新プログラムを毎月インストール](http://msdn.microsoft.com/library/mt238290.aspx)してください。
+予期しない障害を防ぐため、 [SSMS の最新の更新プログラムを毎月インストール](https://msdn.microsoft.com/library/mt238290.aspx)してください。
 
 
 拡張イベントのカタログ ビューに関するリファレンス ドキュメントについては、「 [拡張イベント カタログ ビュー (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)」をご覧ください。

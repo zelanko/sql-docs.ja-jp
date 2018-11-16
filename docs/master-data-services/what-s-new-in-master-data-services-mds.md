@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 962df1579b7d18bcaaf420a3bf79cfbd29940daa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855230"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696841"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
@@ -33,7 +33,7 @@ ms.locfileid: "47855230"
   
  **ダウンロード**  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** にアクセスしてください。  
+-   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** に移動してください。  
   
 -   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47855230"
   
     ```  
   
-     詳細については、「 [URL Compression (URL 圧縮)](http://www.iis.net/configreference/system.webserver/urlcompression)」を参照してください。  
+     詳細については、「 [URL Compression (URL 圧縮)](https://www.iis.net/configreference/system.webserver/urlcompression)」を参照してください。  
   
 -   次の新しい SQL Server エージェント ジョブはインデックスとログを管理します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47855230"
   
  インデックスは断片化が 30% を超えると、オンラインで再作成されます。 再作成中は、同じテーブルでの CRUD 操作のパフォーマンスが影響を受けます。 パフォーマンスの低下が心配な場合は、営業時間外にストアド プロシージャを実行することをお勧めします。 インデックスの断片化の詳細については、「 [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
- 詳細については、マスター データ サービスのブログ投稿「 [Performance and Scale Improvement in SQL Server 2016 (SQL Server 2016 のパフォーマンスとスケーラビリティの向上)](http://go.microsoft.com/fwlink/p/?LinkId=615375)」を参照してください。  
+ 詳細については、マスター データ サービスのブログ投稿「 [Performance and Scale Improvement in SQL Server 2016 (SQL Server 2016 のパフォーマンスとスケーラビリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615375)」を参照してください。  
   
 ##  <a name="improved-security"></a>セキュリティの強化  
   

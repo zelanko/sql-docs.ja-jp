@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c363e167a1005981850b93fd12a836d579896b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cf09d6a2e6c4b1699c6c3e6d213bea0d617f2a3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616420"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681310"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>オブジェクト エクスプローラーでのイベント セッションの管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47616420"
 -   拡張イベント セッションの削除  
   
 ## <a name="create-an-extended-events-session"></a>拡張イベント セッションの作成  
- 拡張イベント セッションの作成の詳細については、「 [拡張イベント セッションの作成](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)」を参照してください。  
+ 拡張イベント セッションの作成の詳細については、「 [拡張イベント セッションの作成](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)」を参照してください。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>拡張イベント セッションの開始または停止  
  拡張イベント セッションは、 **クエリ エディター** 、 **ALTER EVENT SESSION** ステートメント、または **オブジェクト エクスプローラー** の **[拡張イベント]** ノードを使用して開始または停止できます。  

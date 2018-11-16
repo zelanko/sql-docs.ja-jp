@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717890"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641569"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
   このチュートリアルでは、SSIS パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに SQL ビューとして公開する詳細な手順について説明します。  
@@ -252,7 +252,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Timeout は、SSIS パッケージから新しいデータが到着するまで OLE DB provider for SSIS が待機できる秒数を示します。 既定のタイムアウトは 60 秒です。 Timeout には 20 ～ 32000 の範囲の整数値を指定できます。  
   
- Parameters には、パッケージ パラメーターとプロジェクト パラメーターの両方の値が含まれます。 パラメーターのルールは、 [DTExec](http://msdn.microsoft.com/library/hh231187.aspx)のパラメーターと同じです。  
+ Parameters には、パッケージ パラメーターとプロジェクト パラメーターの両方の値が含まれます。 パラメーターのルールは、 [DTExec](https://msdn.microsoft.com/library/hh231187.aspx)のパラメーターと同じです。  
   
  クエリ句で使用できる特殊文字を次に示します。  
   

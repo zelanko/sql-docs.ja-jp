@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030421"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813025"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する
 
@@ -46,7 +46,7 @@ ms.locfileid: "50030421"
 
     ![レポート ビューアー Web パーツを追加します。](media/sharepoint-report-viewer-web-part.png)
 
-    最初はエラーが表示されることがあります。 このエラーは、既定のレポート サーバー URL が *http://localhost* に設定されているが、その場所で利用できない可能性があることによります。
+    最初はエラーが表示されることがあります。 このエラーは、既定のレポート サーバー URL が *https://localhost* に設定されているが、その場所で利用できない可能性があることによります。
 
 ## <a name="configure-the-report-viewer-web-part"></a>レポート ビューアー Web パーツを構成する
 
@@ -56,7 +56,7 @@ ms.locfileid: "50030421"
 
     ![Web パーツ ドロップダウンから Web ページを編集します。](media/sharepoint-edit-web-part.png)
 
-2. レポートをホストするレポート サーバーの **[レポート サーバー URL]** を入力します。 これは *http://myrsserver/reportserver* のようになります。
+2. レポートをホストするレポート サーバーの **[レポート サーバー URL]** を入力します。 これは *https://myrsserver/reportserver* のようになります。
 
 3. Web パーツ内に表示するレポートのパスと名前を入力します。 これは */AdventureWorks Sample Reports/Company Sales* のようになります。 このレイでは、「*AdventureWorks Sample Reports*」という名前のフォルダーに「*Company Sales*」というレポートが入っています。
 

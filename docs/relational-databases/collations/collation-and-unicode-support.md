@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636481"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661721"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "49636481"
     
 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの結果は、それぞれ異なる照合順序が設定されている複数のデータベースのコンテキストでステートメントが実行される場合には、データベースごとに異なります。 可能であれば、組織全体で同じ照合順序を使用してください。 これにより、それぞれの文字または Unicode 表現について、照合順序を明示的に指定する必要がなくなります。 異なる照合順序とコード ページが設定されたオブジェクトを操作する場合は、照合の優先順位の規則を考慮してクエリを作成します。 詳細については、「 [照合順序の優先順位 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)」を参照してください。    
     
-照合順序に関連するオプションは、大文字と小文字の区別、アクセントの区別、かなの区別、および文字幅の区別、バリエーションの選択の区別です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[UTF-8](http://www.wikipedia.org/wiki/UTF-8) エンコードのための追加のオプションが導入されています。 これらのオプションは、照合順序の名前に付加することによって指定されます。 たとえば、 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` という照合順序では、大文字と小文字、アクセント、かな、文字幅、および UTF-8 エンコードが区別されます。 また、 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` という照合順序では、大文字小文字とアクセントが区別されず、かな、文字幅、異体字セレクターが区別され、非 Unicode エンコードが使用されます。 次の表は、これらの各オプションに関連付けられている動作を示しています。    
+照合順序に関連するオプションは、大文字と小文字の区別、アクセントの区別、かなの区別、および文字幅の区別、バリエーションの選択の区別です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[UTF-8](https://www.wikipedia.org/wiki/UTF-8) エンコードのための追加のオプションが導入されています。 これらのオプションは、照合順序の名前に付加することによって指定されます。 たとえば、 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` という照合順序では、大文字と小文字、アクセント、かな、文字幅、および UTF-8 エンコードが区別されます。 また、 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` という照合順序では、大文字小文字とアクセントが区別されず、かな、文字幅、異体字セレクターが区別され、非 Unicode エンコードが使用されます。 次の表は、これらの各オプションに関連付けられている動作を示しています。    
     
 |オプション|[説明]|    
 |------------|-----------------|    
@@ -66,7 +66,7 @@ ms.locfileid: "49636481"
 |アクセントを区別する (_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、"a" と "&#xE1;" は等しくありません。 このオプションを選択しないと、照合順序でアクセントが区別されません。 つまり、アクセントのある文字とアクセントのない文字は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 アクセントを区別しないことを明示的に選択するには、_AI と指定します。|    
 |かなを区別する (_KS)|ひらがなとカタカナという日本語の 2 種類のかな文字を区別します。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|    
 |文字幅を区別する (_WS)|全角文字と半角文字を区別します。 このオプションを選択しないと、同じ文字の全角表現と半角表現は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 文字幅を区別しないように指定する唯一の方法は、このオプションを省略することです。|    
-|バリエーションの選択を区別する (_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]から導入された日本語の照合順序 Japanese_Bushu_Kakusu_140 と Japanese_XJIS_140 で多様な表意文字のバリエーションの選択を区別します。 バリエーションのシーケンスは、基本文字と追加のバリエーションの選択で構成されます。 この _VSS オプションが選択されていない場合、照合順序はバリエーションの選択が区別されず、バリエーションの選択は比較で考慮されません。 つまり、SQL Server では、並べ替えが同じになるように、バリエーションの選択が異なる同じ基本文字に基づいて構築された文字を考慮しています。 [「Unicode Ideographic Variation Database」](http://www.unicode.org/reports/tr37/)(Unicode 表意文字のバリエーション データベース) も参照してください。 <br/><br/> 異体字セレクターを区別する (_VSS) 照合順序は、全文検索インデックスではサポートされていません。 全文検索インデックスでは、アクセントを区別する (_AS)、かなを区別する (_KS)、文字幅を区別する (_WS) オプションのみがサポートされます。 SQL Server XML と CLR のエンジンでは、(_VSS) 異体字セレクターはサポートされていません。
+|バリエーションの選択を区別する (_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]から導入された日本語の照合順序 Japanese_Bushu_Kakusu_140 と Japanese_XJIS_140 で多様な表意文字のバリエーションの選択を区別します。 バリエーションのシーケンスは、基本文字と追加のバリエーションの選択で構成されます。 この _VSS オプションが選択されていない場合、照合順序はバリエーションの選択が区別されず、バリエーションの選択は比較で考慮されません。 つまり、SQL Server では、並べ替えが同じになるように、バリエーションの選択が異なる同じ基本文字に基づいて構築された文字を考慮しています。 [「Unicode Ideographic Variation Database」](https://www.unicode.org/reports/tr37/)(Unicode 表意文字のバリエーション データベース) も参照してください。 <br/><br/> 異体字セレクターを区別する (_VSS) 照合順序は、全文検索インデックスではサポートされていません。 全文検索インデックスでは、アクセントを区別する (_AS)、かなを区別する (_KS)、文字幅を区別する (_WS) オプションのみがサポートされます。 SQL Server XML と CLR のエンジンでは、(_VSS) 異体字セレクターはサポートされていません。
 |UTF-8 (_UTF8)|UTF-8 でエンコードされたデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納できるようにします。 このオプションを選択しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、適用可能なデータ型に対して既定の非 Unicode エンコード形式が使用されます。| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の照合順序のセットをサポートしています。    
@@ -113,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> ロケール    
-ロケールは、場所またはカルチャに関連付けられる一連の情報です。 これには、言語の名前や ID、言語の記述に使用される文字表記、文化的慣習などがあります。 照合順序は、1 つ以上のロケールに関連付けることができます。 詳細については、「 [Microsoft によって割り当てられているロケール ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)」を参照してください。    
+ロケールは、場所またはカルチャに関連付けられる一連の情報です。 これには、言語の名前や ID、言語の記述に使用される文字表記、文化的慣習などがあります。 照合順序は、1 つ以上のロケールに関連付けることができます。 詳細については、「 [Microsoft によって割り当てられているロケール ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)」を参照してください。    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  コード ページは、特定の文字表記の順序付けられた文字のセットです。コード ページでは、数値インデックス (コード ポイント値) が各文字に関連付けられます。 Windows コード ページは、通常は *文字セット* または *charset*と呼ばれています。 コード ページは、各種の Windows システム ロケールで使用される文字セットおよびキーボード レイアウトをサポートするために使用されます。     
@@ -258,10 +258,10 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 |エラー メッセージの言語と、日付、時刻、通貨データを使用および表示する際の設定を変更する方法について説明します。|[セッション言語の設定](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> 関連コンテンツ    
-[SQL Server ベスト プラクティス照合順序の変更](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[SQL Server ベスト プラクティス照合順序の変更](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
-[SQL Server ベスト プラクティス Unicode への移行](http://go.microsoft.com/fwlink/?LinkId=113890) - 今後は維持されません   
-[Unicode コンソーシアムの Web サイト](http://go.microsoft.com/fwlink/?LinkId=48619)    
+[SQL Server ベスト プラクティス Unicode への移行](https://go.microsoft.com/fwlink/?LinkId=113890) - 今後は維持されません   
+[Unicode コンソーシアムの Web サイト](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## <a name="see-also"></a>参照    
 [包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md)     

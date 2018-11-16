@@ -11,21 +11,21 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797360"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669861"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Team Foundation ビルドから SQL Server の単体テストを実行する方法
 Team Foundation ビルドを使用すると、SQL Server の単体テストをビルド確認テスト (BVT) の一環として実行できます。 データベースを配置し、テスト データを生成して、選択したテストを実行するように単体テストを構成できます。 Team Foundation ビルドを使い慣れていない場合は、このトピックの手順を実行する前に、次の情報を確認してください。  
   
 -   [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する](http://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
--   [基本的なビルド定義の作成](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [基本的なビルド定義の作成](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
 これらの手順を使用する前に、まず、次のタスクを実行することによって作業環境を構成する必要があります。  
   
@@ -215,22 +215,22 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 1.  Team Foundation Server を実行しているコンピューターに接続します。  
   
-    詳しくは、「[ソース管理エクスプローラーの使用](http://msdn.microsoft.com/library/ms181370(VS.100).aspx)」をご覧ください。  
+    詳しくは、「[ソース管理エクスプローラーの使用](https://msdn.microsoft.com/library/ms181370(VS.100).aspx)」をご覧ください。  
   
 2.  ソリューションがソース管理にまだ含まれていない場合は、ソース管理に追加します。  
   
-    詳しくは、[バージョン管理へのプロジェクトまたはソリューションの追加に関するページ](http://msdn.microsoft.com/library/ms181374(VS.100).aspx)をご覧ください。  
+    詳しくは、[バージョン管理へのプロジェクトまたはソリューションの追加に関するページ](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)をご覧ください。  
   
 3.  **[表示]** をクリックし、**[保留中のチェックイン]** をクリックします。  
   
 4.  ソリューションのすべてのファイルをチェックインします。  
   
-    詳しくは、「[保留中の変更のチェックイン](http://msdn.microsoft.com/library/ms181411(VS.100).aspx)」をご覧ください。  
+    詳しくは、「[保留中の変更のチェックイン](https://msdn.microsoft.com/library/ms181411(VS.100).aspx)」をご覧ください。  
   
     > [!NOTE]  
     > 自動テストの作成方法および管理方法を制御する特定のチーム プロセスを用意することができます。 たとえば、ビルドをローカルで検証した後に、ビルドで実行されるテストと共にそのコードをチェックインすることを要求するプロセスもあります。  
   
-    **ソリューション エクスプローラー**で、チェックインされている各ファイルの横には南京錠が表示されます。 詳しくは、「[バージョン管理ファイルとフォルダーのプロパティの表示](http://msdn.microsoft.com/library/ms245468(VS.100).aspx)」をご覧ください。  
+    **ソリューション エクスプローラー**で、チェックインされている各ファイルの横には南京錠が表示されます。 詳しくは、「[バージョン管理ファイルとフォルダーのプロパティの表示](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)」をご覧ください。  
   
     テストは、Team Foundation ビルドで使用できるようになります。 これで、実行するテストを含むビルド定義を作成できます。  
   
@@ -280,11 +280,11 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 3.  **[ビルド定義]**、**[ビルド エージェント]**、**[このビルドの格納フォルダー]** の各フィールドの値がすべて適切であることを確認し、**[キューに登録]** をクリックします。  
   
-    **ビルド エクスプローラー**の **[キューに挿入済み]** タブが表示されます。 詳しくは、「[完了したビルドの管理と表示 (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx)」または「[ビルド エクスプローラーでのビルドの管理 (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx)」をご覧ください。  
+    **ビルド エクスプローラー**の **[キューに挿入済み]** タブが表示されます。 詳しくは、「[完了したビルドの管理と表示 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx)」または「[ビルド エクスプローラーでのビルドの管理 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)  
-[基本的なビルド定義の作成](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[ビルドをキューに配置する](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[実行中のビルドの進行状況の監視](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
+[基本的なビルド定義の作成](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+[ビルドをキューに配置する](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
+[実行中のビルドの進行状況の監視](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
   

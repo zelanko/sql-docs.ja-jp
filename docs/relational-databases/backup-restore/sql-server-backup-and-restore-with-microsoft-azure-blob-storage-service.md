@@ -11,26 +11,26 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaee46bd8a7b84d72fda23d3bf7e5ffcb99050d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805460"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660123"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Azure BLOB へのバックアップのグラフィック](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azure BLOB へのバックアップのグラフィック")  
   
- このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft Azure Blob ストレージ サービス [への](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)のバックアップと Microsoft Azure Blob ストレージ サービスからの復元について説明します。 また、Microsoft Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
+ このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft Azure Blob ストレージ サービス [への](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)のバックアップと Microsoft Azure Blob ストレージ サービスからの復元について説明します。 また、Microsoft Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
   
  SQL Server では、次の方法で Microsoft Azure Blob ストレージ サービスにバックアップを格納できます。  
   
 -   **Microsoft Azure へのバックアップを管理する方法:** ディスクまたはテープにバックアップする場合と同じ方法を使用して、バックアップ先として URL を指定することにより、Microsoft Azure ストレージにバックアップできます。 この機能を使用すると、手動でバックアップすることも、ローカル ストレージまたはその他のオフサイト オプションの場合と同じように独自のバックアップ方法を構成することもできます。 この機能は、 **SQL Server Backup to URL**とも呼ばれます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。 この機能は、SQL Server 2012 SP1 CU2 以降で使用できます。 この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で強化され、ブロック BLOB、Shared Access Signature、ストライピングを使用してパフォーマンスと機能が向上しました。  
   
     > [!NOTE]  
-    >  SQL Server 2012 SP1 CU2 より前の SQL Server バージョンでは、Microsoft Azure への SQL Server バックアップ ツール アドインを使用して、Microsoft Azure Storage へのバックアップをすばやく簡単に作成できます。 詳細については、 [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=324399)を参照してください。  
+    >  SQL Server 2012 SP1 CU2 より前の SQL Server バージョンでは、Microsoft Azure への SQL Server バックアップ ツール アドインを使用して、Microsoft Azure Storage へのバックアップをすばやく簡単に作成できます。 詳細については、 [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=324399)を参照してください。  
   
 -   **Azure BLOB Storage 内のデータベース ファイルのファイル スナップショット バックアップ** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップでは、Azure のスナップショットを利用することで、Azure BLOB Storage サービスで格納されているデータベース ファイルのバックアップと復元をほぼ即時に実行できます。 この機能を利用すると、バックアップと復元のポリシーを簡素化し、ポイントインタイム リストアをサポートできます。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。 この機能は、SQL Server 2016 以降で使用できます。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47805460"
 ##  <a name="Billing"></a> Microsoft Azure の課金に関する注意点:  
  Microsoft Azure ストレージのコストを把握しておくと、Microsoft Azure でバックアップを作成および格納するコストを予測できます。  
   
- [Microsoft Azure 料金計算ツール](http://go.microsoft.com/fwlink/?LinkId=277060) を使用すると、コストを見積もることができます。  
+ [Microsoft Azure 料金計算ツール](https://go.microsoft.com/fwlink/?LinkId=277060) を使用すると、コストを見積もることができます。  
   
- **ストレージ:** 料金は使用領域に基づいており、段階的に、また、冗長性のレベルに応じて計算されます。 詳細と最新情報については、「 **料金の詳細** 」の「 [データ管理](http://go.microsoft.com/fwlink/?LinkId=277059) 」を参照してください。  
+ **ストレージ:** 料金は使用領域に基づいており、段階的に、また、冗長性のレベルに応じて計算されます。 詳細と最新情報については、「 **料金の詳細** 」の「 [データ管理](https://go.microsoft.com/fwlink/?LinkId=277059) 」を参照してください。  
   
- **データ転送:** Microsoft Azure への受信データ転送は無料です。 送信転送は、帯域幅の使用量に対して課金され、段階的な地域固有の区分に基づいて計算されます。 詳細については、「 [料金の詳細](http://go.microsoft.com/fwlink/?LinkId=277061) 」の「データ転送」を参照してください。  
+ **データ転送:** Microsoft Azure への受信データ転送は無料です。 送信転送は、帯域幅の使用量に対して課金され、段階的な地域固有の区分に基づいて計算されます。 詳細については、「 [料金の詳細](https://go.microsoft.com/fwlink/?LinkId=277061) 」の「データ転送」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 

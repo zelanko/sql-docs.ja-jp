@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1e3aa4a72623e986a4e5a6494829f7e7a53d9cb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 312fff4f7221c7ff7f644933494c71afd76b1136
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668640"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640449"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>SQL Server フェールオーバー クラスター インスタンスを介した高可用性の Scale Out のサポート
 
 SQL Server フェールオーバー クラスター インスタンスを使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 
 ## <a name="1-prerequisites"></a>1.Prerequisites
-Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 (Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール) を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
+Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2.SQL Server フェールオーバー クラスターをインストールする
 SQL Server フェールオーバー クラスターをインストールします。 手順については、「[SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)」を参照してください。 インストール時に、[機能の選択] ページで [データベース エンジン サービス] を選択します。 今後の構成のために SQL Server ネットワーク名を記録します。

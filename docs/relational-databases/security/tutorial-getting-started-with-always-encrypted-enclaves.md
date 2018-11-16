@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75263ad68af90f0dfd8035cc943a194c344f90fa
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: c8c9e653781b821d3fcc2e7c2e5dd218b329e22c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461036"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675361"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル: SSMS を使用したセキュア エンクレーブを使用する Always Encrypted の概要
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "49461036"
 7. SQL Server コンピューター上で、管理者特権の Windows PowerShell コンソール内で次のコマンドを実行して、SQL Server コンピューターに証明する場所を指示します。 HGS コンピューターの IP アドレスまたは DNS 名を必ず指定します。 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
+   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
    ```
 
 上記のコマンドの結果として、AttestationStatus = Passed と表示されます。
@@ -232,8 +232,8 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     2. 列マスター キー名: CMK1 を選択します。
     3. **[Windows 証明書ストア -現在のユーザー] または [Windows 証明書ストア - ローカル コンピューター]** か、**[Azure Key Vault]** を選択します。
     4. **[エンクレーブ計算を許可する]** を選択します。
-    5. [Azure Key Vault] を選択した場合は、Azure にサインインし、キー コンテナーを選択します。 Always Encrypted のキー コンテナーを作成する方法について詳しくは、「[Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)」(Azure portal からキー コンテナーを管理する) をご覧ください。
-    6. 既に存在するキーを選択するか、フォーム上の指示に従って新しいキーを作成します。
+    5. [Azure Key Vault] を選択した場合は、Azure にサインインし、キー コンテナーを選択します。 Always Encrypted のキー コンテナーを作成する方法について詳しくは、「[Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)」(Azure portal からキー コンテナーを管理する) を参照してください。
+    6. 既にキーが存在する場合はそれを選択します。または、フォームの指示に従って新しいキーを作成します。
     7. **[OK]** を選択します。
 
         ![エンクレーブ計算を許可する](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -297,7 +297,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     1. SSMS のメイン メニューから **[クエリ]** を選択します。
     2. **[クエリ オプション...]** を選択します。
     3. **[実行]** > **[詳細]** の順に移動します。
-    4. [Always Encrypted のパラメーター化を有効にする] を選択または選択解除します。
+    4. [Always Encrypted のパラメーター化を有効にする]をオンまたはオフにします。
     5. [OK] を選択します。
 2. Always Encrypted を有効にしたクエリ ウィンドウで、次のクエリを貼り付けて実行します。 クエリでは、指定した検索条件を満たすプレーンテキスト値と行が返されます。
 

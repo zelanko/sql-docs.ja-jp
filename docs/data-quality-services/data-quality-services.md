@@ -12,12 +12,12 @@ ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb9a34227743550726e93cbd6085088c08cb22d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bcfba99d057c616f279423721cce50bad26638ad
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787478"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695550"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -51,7 +51,7 @@ ms.locfileid: "47787478"
 ## <a name="see-also"></a>参照  
  [Data Quality Services の概要](../data-quality-services/introduction-to-data-quality-services.md)   
  [Data Quality Services の概念](../data-quality-services/data-quality-services-concepts.md)   
- [DQS リソース](http://technet.microsoft.com/sqlserver/hh780961)   
- [SQL Server リソース センター](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [DQS リソース](https://technet.microsoft.com/sqlserver/hh780961)   
+ [SQL Server リソース センター](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

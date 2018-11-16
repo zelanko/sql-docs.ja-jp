@@ -13,15 +13,15 @@ ms.assetid: 6f8616cb-9119-42c3-a9b1-936e088763e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a847748b0f0025402da1feb794f5c441ea2a3f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe3172d876c7a74a0ad54f25b58e949646c0f74
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773570"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661761"
 ---
 # <a name="install-sql-server-data-tools"></a>SQL Server Data Tools のインストール
-このトピックでは、 SQL Server Data Tools のインストール方法について説明します。 SQL Server Data Tools の更新は、SQL Server Data Tools ダウンロード ページ ([最新の SQL Server Data Tools をインストール](http://go.microsoft.com/fwlink/?LinkID=616714)) で入手できます。  
+このトピックでは、 SQL Server Data Tools のインストール方法について説明します。 SQL Server Data Tools の更新は、SQL Server Data Tools ダウンロード ページ ([最新の SQL Server Data Tools をインストール](https://go.microsoft.com/fwlink/?LinkID=616714)) で入手できます。  
   
 Visual Studio 2012 と Visual Studio 2013 のどちらを使用しているかに関係なく、SQL Server Data Tools の最新の更新プログラムをインストールして最新機能を入手してください。  
   
@@ -38,5 +38,5 @@ Visual Studio 2012 がインストールされていない場合、SQL Server Da
   
 インストール レイアウトを作成するには、SSDTSetup.EXE をダウンロードして、 `/layout`*location* オプションを使用して実行し、 *location*にレイアウトを作成します。 その後で、ユーザーは *location*から SSDTSetup.Exe を実行できます。  
   
-SSDTSetup.exe をダウンロードするには、 [[最新の SQL Server Data Tools をインストール]](http://go.microsoft.com/fwlink/?LinkID=616714)にアクセスし、ご利用のバージョンの Visual Studio に対応したリンクをクリックして、使用している言語に応じた SSDTSetup.exe をダウンロードします。  
+SSDTSetup.exe をダウンロードするには、 [[最新の SQL Server Data Tools をインストール]](https://go.microsoft.com/fwlink/?LinkID=616714)にアクセスし、ご利用のバージョンの Visual Studio に対応したリンクをクリックして、使用している言語に応じた SSDTSetup.exe をダウンロードします。  
   

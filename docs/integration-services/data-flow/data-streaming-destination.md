@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771580"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638609"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
   **Data Streaming Destination** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Destination コンポーネントであり、 **OLE DB Provider for SSIS** で SSIS パッケージの出力を表形式の結果セットとして利用することを可能にします。 OLE DB Provider for SSIS を利用するリンク サーバーを作成し、そのリンク サーバーで SQL クエリを実行し、SSIS パッケージが返したデータを表示できます。  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  Admin Center では、SQL Server データベースでビューを公開できます。 結果として、SSIS Package Publish ウイザード を利用し、SSIS パッケージを SQL ビューとして公開できます。 その後、Power BI Admin Center で OData フィードに含めるビューを選択できます。 データ スチュワードは、Excel 用の Power Query アドインを利用し、SSIS パッケージからのフィードを利用できます。  
   
- 詳しいチュートリアルが必要な場合、「 [Publish SSIS Packages as OData Feed Sources (OData フィード ソースとして SSIS パッケージを公開する)](http://go.microsoft.com/fwlink/?LinkID=317367)」を参照してください。  
+ 詳しいチュートリアルが必要な場合、「 [Publish SSIS Packages as OData Feed Sources (OData フィード ソースとして SSIS パッケージを公開する)](https://go.microsoft.com/fwlink/?LinkID=317367)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  [入力列] タブと同様に、このタブの出力列の名前は変更できます。左側のツリー ビューで、 **[Data Streaming Destination の入力]** 、 **[入力列]** の順に展開します。 入力列の名前をクリックし、右ペインで出力列の名前を変更します。  
   
 ## <a name="see-also"></a>参照  
- [Publish SSIS Packages as OData Feed Sources (OData フィード ソースとして SSIS パッケージを公開する)](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [Publish SSIS Packages as OData Feed Sources (OData フィード ソースとして SSIS パッケージを公開する)](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

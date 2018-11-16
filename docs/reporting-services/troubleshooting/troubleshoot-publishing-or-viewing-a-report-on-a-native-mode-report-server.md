@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89b4156225de984854076f8218c29f033e4a0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653040"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811775"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでのレポートのパブリッシュまたは表示のトラブルシューティング
   
@@ -29,7 +29,7 @@ ms.locfileid: "47653040"
   
 ネイティブ モードのレポート サーバーにレポートを配置する場合の一般的なエラーは、レポート サーバーの名前ではなくレポート フォルダーの名前を指定してしまうことです。   
   
-レポート サーバーの URL が、レポート マネージャー仮想ディレクトリのアドレス (たとえば `http://localhost/reportserver`) ではなく、レポート サーバーのアドレス (たとえば `http://localhost/reports`) になっていることを確認してください。 既定のポート番号 80 とは異なるポート番号をレポート サーバーに指定した場合は、レポート サーバーのアドレス形式でポート番号 (たとえば `http://localhost:81/reportserver`) を指定する必要があります。   
+レポート サーバーの URL が、レポート マネージャー仮想ディレクトリのアドレス (たとえば `https://localhost/reportserver`) ではなく、レポート サーバーのアドレス (たとえば `https://localhost/reports`) になっていることを確認してください。 既定のポート番号 80 とは異なるポート番号をレポート サーバーに指定した場合は、レポート サーバーのアドレス形式でポート番号 (たとえば `https://localhost:81/reportserver`) を指定する必要があります。   
   
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>パブリッシュしたレポートでアイテムを切り替えても何も起こらない  
   ローカル プレビューでレポートを表示する場合は、レポートでアイテムを切り替えて、アイテムを表示または非表示にすることができます。 同じレポートをレポート サーバーにパブリッシュした後で表示すると、切り替えアイテムが機能しなくなります。   

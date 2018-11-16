@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fceef986a2d0cd3bf6d127cf449d99185ebca7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716750"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671248"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server の単体テストでの Transact-SQL アサーションの使用
 SQL Server の単体テストでは、Transact\-SQL テスト スクリプトが実行され、結果が返されます。 結果が結果セットとして返される場合もあります。 テスト条件を使用して結果を検証できます。 たとえば、テスト条件を使用すると、特定の結果セットで返された行数を確認したり、特定のテストの実行にかかった時間を調べたりできます。 テスト条件について詳しくは、「[SQL Server の単体テストでのテスト条件の使用](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)」をご覧ください。  
@@ -79,7 +79,7 @@ Transact\-SQL スクリプトで RAISERROR ステートメントを使用する�
   
 @ErrorState は、1 から 127 の任意の整数です。 この整数を使用すると、コード内の別の場所で発生した 1 つのエラーの複数の出現を区別できます。  
   
-詳しくは、「[RAISERROR (Transact-SQL)](http://msdn.microsoft.com/library/ms178592.aspx)」をご覧ください。 SQL Server の単体テストでの RAISERROR の使用例については、「[単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)」をご覧ください。  
+詳しくは、「[RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)」をご覧ください。 SQL Server の単体テストでの RAISERROR の使用例については、「[単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

@@ -14,12 +14,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d39af6af5eb04c9e8e8c340a71f0e8b1cb179fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffd79ef6abe6bd0e143d2ec84d72ebcc7476f3df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790995"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675881"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ GO
   
         1.  **のインストール メディアで** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の Windows インストーラー パッケージを見つけます。  
   
-        2.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「[Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/en-us/download/details.aspx?id=52681)」ページからインストーラー パッケージをダウンロードします。  
+        2.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「[Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/download/details.aspx?id=52681)」ページからインストーラー パッケージをダウンロードします。  
   
 2.  **SemanticLanguageDatabase.msi** Windows インストーラー パッケージを実行して、データベースおよびログ ファイルを抽出します。  
   
@@ -146,6 +146,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>新しいドキュメントの種類のオプション サポートをインストールする  
   
 ###  <a name="office"></a> Microsoft Office およびその他の Microsoft ドキュメントの種類の最新のフィルターをインストールする  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の最新のワード ブレーカーとステマーがインストールされますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office ドキュメントおよびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ドキュメントの種類の最新のフィルターはインストールされません。 これらのフィルターは、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office およびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アプリケーションで作成されたドキュメントのインデックスを作成するために必要です。 最新のフィルターをダウンロードするには、「 [Microsoft Office 2010 フィルター パック](http://go.microsoft.com/fwlink/?LinkId=218293)」を参照してください。 (Office 2013 または Office 2016 用のフィルター パック リリースはありません)。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の最新のワード ブレーカーとステマーがインストールされますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office ドキュメントおよびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ドキュメントの種類の最新のフィルターはインストールされません。 これらのフィルターは、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office およびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アプリケーションで作成されたドキュメントのインデックスを作成するために必要です。 最新のフィルターをダウンロードするには、「 [Microsoft Office 2010 フィルター パック](https://go.microsoft.com/fwlink/?LinkId=218293)」を参照してください。 (Office 2013 または Office 2016 用のフィルター パック リリースはありません)。
   
   

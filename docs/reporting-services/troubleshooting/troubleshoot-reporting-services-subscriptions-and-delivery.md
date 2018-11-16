@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a8384ad803f70b6ec4bcca2bca49390f969a661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b6a2665e963f552a7d5cb726b5d7904f7a13415
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604310"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812726"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services のサブスクリプションと配信に関するトラブルシューティング
   
@@ -67,7 +67,7 @@ Post Office Protocol version 3 (POP3) を使用する電子メール アプリ�
 * 資格情報の設定が、保存されている値から統合された値またはユーザーが入力した値に変更された場合。  
 * レポート定義のパラメーター名またはデータ型が変更されてから、レポートが再度パブリッシュされた場合。 サブスクリプションに無効になったパラメーターが含まれている場合、サブスクリプションは非アクティブになります。  
   
-詳細については、TechNet Wiki の [Reporting Services での問題とエラーのトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)に関するページを参照してください。  
+詳細については、TechNet Wiki の [Reporting Services での問題とエラーのトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)に関するページを参照してください。  
   
   
     

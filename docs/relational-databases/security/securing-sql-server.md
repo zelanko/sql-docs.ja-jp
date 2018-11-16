@@ -19,18 +19,18 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c526b7c991f3df5eb33042e2d25f7152ae80887a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 367cc129fdb0f4786c37af5f1cf1fa4bb112fa90
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760800"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663301"
 ---
 # <a name="securing-sql-server"></a>SQL Server の保護
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の保護は、プラットフォーム、認証、オブジェクト (データを含む)、およびシステムにアクセスするアプリケーションの 4 つの領域が関係する一連の手順としてとらえることができます。 以下の各トピックでは、効果的なセキュリティ計画を作成および実装する方法について、順を追って説明します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティの詳細については、 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) Web サイトを参照してください。 このサイトには、推奨事項やセキュリティ チェックリストが掲載されています。 このサイトには、最新のサービス パックの情報およびダウンロードも含まれています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティの詳細については、 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) Web サイトを参照してください。 このサイトには、推奨事項やセキュリティ チェックリストが掲載されています。 このサイトには、最新のサービス パックの情報およびダウンロードも含まれています。  
   
 ## <a name="platform-and-network-security"></a>プラットフォームとネットワーク セキュリティ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプラットフォームは、クライアントをデータベース サーバーに接続する物理的なハードウェアおよびネットワーク システムと、データベース要求の処理に使用するバイナリ ファイルで構成されます。  
@@ -78,7 +78,7 @@ ms.locfileid: "47760800"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プログラム ファイル|[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス パックおよびアップグレードは、強化されたセキュリティを提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用の利用可能な最新サービス パックを確認するには、 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) Web サイトを参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス パックおよびアップグレードは、強化されたセキュリティを提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用の利用可能な最新サービス パックを確認するには、 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) Web サイトを参照してください。  
   
  次のスクリプトを使用すると、システムにインストールされているサービス パックを確認できます。  
   
@@ -125,7 +125,7 @@ GO
   
 |詳細|参照先|  
 |---------------------------|---------|  
-|接続、構成、制御: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Management Studio の使用 [SQL Server]](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|接続、構成、制御: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Management Studio の使用 [SQL Server]](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
 |コマンド プロンプトでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続とクエリの実行|[sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)|  
 |ネットワーク構成および制御: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)|  
 |ポリシー ベースの管理を使用した機能の有効化と無効化|[ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -143,7 +143,7 @@ GO
 ## <a name="related-content"></a>関連コンテンツ  
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[SQL Server 2012 のセキュリティに関するベスト プラクティス - 運用作業と管理作業](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
+[SQL Server 2012 のセキュリティに関するベスト プラクティス - 運用作業と管理作業](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [SQL Server セキュリティ ブログ](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [セキュリティのベスト プラクティスと Label Security のホワイト ペーパー](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
 [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)   

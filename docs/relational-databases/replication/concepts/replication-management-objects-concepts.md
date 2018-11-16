@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749670"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672631"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47749670"
   
  以下のセクションのトピックでは、レプリケーション タスクをプログラムから制御する場合の RMO の使用方法について説明します。  
   
- [ディストリビューションの構成](../../../relational-databases/replication/configure-distribution.md)  
+ [[ディストリビューションの構成]](../../../relational-databases/replication/configure-distribution.md)  
  このセクションのトピックでは、RMO を使用してパブリッシングおよびディストリビューションを構成する方法について説明します。  
   
  [パブリケーションとアーティクルの作成、変更、および削除 &#40;レプリケーション&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
@@ -184,7 +184,7 @@ ms.locfileid: "47749670"
 >  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスでは、プロパティを設定するときに明示的なトランザクションの宣言がサポートされますが、そのようなトランザクションでは内部的なレプリケーション トランザクションに干渉する場合があるため、予期しない結果が生じる可能性があります。RMO では使用しないでください。  
 
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>RMO コンポーネントの TLS 1.2 サポートの有効化 
- Windows 2012 以下の場合、RMO コンポーネントの TLS1.2 サポートは、更新プログラム [KB 3140245](http://support.microsoft.com/help/3140245) をインストールし、記事の説明に従ってレジストリ キーを作成することで有効にすることができます。 Windows 2012 R2 以降のバージョンの場合は、上記の記事に示されているレジストリ キーのみを作成する必要があります。
+ Windows 2012 以下の場合、RMO コンポーネントの TLS1.2 サポートは、更新プログラム [KB 3140245](https://support.microsoft.com/help/3140245) をインストールし、記事の説明に従ってレジストリ キーを作成することで有効にすることができます。 Windows 2012 R2 以降のバージョンの場合は、上記の記事に示されているレジストリ キーのみを作成する必要があります。
  
 ## <a name="example"></a>例  
  この例では、プロパティ変更のキャッシュを示します。 トランザクション パブリケーションの属性に加えられた変更は、明示的にサーバーに送られるまでキャッシュされます。  

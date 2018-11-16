@@ -17,12 +17,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: bfba6fe9611a6f24e0f84b523424c3d49bdf170d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250b61577f651ddadd7529b172f5bed04d26f896
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621800"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656157"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47621800"
    
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と Azure Key Vault の橋渡し的役割を担うことで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Azure Key Vault サービスのスケーラビリティ、高パフォーマンス、高可用性を活かすことができます。 以下の図は、EKM プロバイダー アーキテクチャにおけるキーの階層が、Azure Key Vault および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタと連動するようすを表しています。  
   
-  Azure Key Vault は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Virtual Machines 上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インストール環境で使用したり、オンプレミス サーバー用に使用したりすることが可能です。 また、資格情報コンテナー サービスでは、厳密な管理および監視下にあるハードウェア セキュリティ モジュール (HSM) を使用し、非対称暗号化キーをより高いレベルで保護するオプションも提供します。 資格情報コンテナーの詳細については、「 [Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521401)」を参照してください。  
+  Azure Key Vault は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Virtual Machines 上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インストール環境で使用したり、オンプレミス サーバー用に使用したりすることが可能です。 また、資格情報コンテナー サービスでは、厳密な管理および監視下にあるハードウェア セキュリティ モジュール (HSM) を使用し、非対称暗号化キーをより高いレベルで保護するオプションも提供します。 資格情報コンテナーの詳細については、「 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)」を参照してください。  
   
  次の図は、Key Vault を使用した EKM のプロセス フローについてまとためものです。 (図の中にプロセス手順番号が示されていますが、図の後に示す設定手順の番号と対応しているわけではありません。)  
   

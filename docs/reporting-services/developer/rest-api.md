@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028243"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812746"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services の REST API による開発
 
@@ -46,7 +46,7 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 * HTTP **応答メッセージ ヘッダー**のフィールド:
 
-    * [HTTP 状態コード](http://www.w3.org/Protocols/HTTP/HTRESP.html)。成功コードの 2xx から、エラー コードの 4xx または 5xx までの範囲です。 または、API のドキュメントに記載されているように、サービスで定義された状態コードが返されることもあります。
+    * [HTTP 状態コード](https://www.w3.org/Protocols/HTTP/HTRESP.html)。成功コードの 2xx から、エラー コードの 4xx または 5xx までの範囲です。 または、API のドキュメントに記載されているように、サービスで定義された状態コードが返されることもあります。
     * 省略可能な追加ヘッダー フィールド。要求の応答をサポートするために必要です (`Content-type` 応答ヘッダーなど)。
 
 * 省略可能な HTTP **応答メッセージ本文**のフィールド:
@@ -59,7 +59,7 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 ## <a name="testing-api-calls"></a>API 呼び出しのテスト
 
-HTTP 要求/応答メッセージをテストするためのツールは [Fiddler](http://www.telerik.com/fiddler) です。 Fiddler は、REST 要求をインターセプトできる無料の Web デバッグ プロキシであり、HTTP 要求/応答メッセージの診断が容易になります。
+HTTP 要求/応答メッセージをテストするためのツールは [Fiddler](https://www.telerik.com/fiddler) です。 Fiddler は、REST 要求をインターセプトできる無料の Web デバッグ プロキシであり、HTTP 要求/応答メッセージの診断が容易になります。
 
 ## <a name="next-steps"></a>次の手順
 

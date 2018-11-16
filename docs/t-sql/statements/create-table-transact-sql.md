@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f53679294052b114ab2247ee47916aac6ff5fd3f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970843"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697826"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1058,7 +1058,7 @@ GO
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Azure SQL Database のグローバル一時テーブルのトラブルシューティング 
 
-tempdb のトラブルシューティングについては、「[tempdb のディスク領域の不足に関するトラブルシューティング](http://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105))」をご覧ください。 
+tempdb のトラブルシューティングについては、「[tempdb のディスク領域の不足に関するトラブルシューティング](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105))」をご覧ください。 
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の DMV のトラブルシューティングにアクセスできるのは、サーバー管理者のみです。

@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146057"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697690"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
 
@@ -33,7 +33,7 @@ ms.locfileid: "50146057"
 
 お使いのブラウザーで SQL Server のコンテンツに簡単な編集を加え、Microsoft に送信することができます。 完全なプロセスは、[Microsoft Docs 共同作成者ガイド概要](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)の記事に記載されています。 次のビデオは、お使いのブラウザーで変更を送信するためのエンド ツー エンド プロセスを示しています。
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
 
 > [!TIP]
 > **[編集]** ボタンの場所はビデオで示す内容と若干異なりますが、プロセスは同じです。

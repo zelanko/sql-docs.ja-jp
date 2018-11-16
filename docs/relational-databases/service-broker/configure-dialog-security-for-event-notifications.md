@@ -5,21 +5,20 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 894ba222854e21a5d02811ca457ffa47184c4431
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2bbf04ef2132f0bf1250cd6bd5c097a5a7760b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702580"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669371"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>イベント通知のダイアログ セキュリティの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "47702580"
 |[転送元サーバー]|送信先サーバー|  
 |-------------------|-------------------|  
 |送信先データベースのユーザーを所有者に指定して、送信先の証明書のバックアップ ファイルから[証明書を作成](../../t-sql/statements/create-certificate-transact-sql.md) します。|送信元データベースのユーザーを所有者に指定して、送信元の証明書のバックアップ ファイルから証明書を作成します。|  
-|送信元データベースのユーザーに、イベント通知を作成する[権限を許可](../../t-sql/statements/grant-transact-sql.md) します。 この権限の詳細については、「 [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)します。|送信先データベースのユーザーに既存のイベント通知の [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクト : `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`に対する REFERENCES 権限を許可します。|  
+|送信元データベースのユーザーに、イベント通知を作成する[権限を許可](../../t-sql/statements/grant-transact-sql.md) します。 この権限の詳細については、「 [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)します。|送信先データベースのユーザーに既存のイベント通知の [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクト : `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`に対する REFERENCES 権限を許可します。|  
 |送信先サービスへの[リモート サービス バインドを作成](../../t-sql/statements/create-remote-service-binding-transact-sql.md) し、送信先データベースのユーザーの資格情報を指定します。 リモート サービス バインドは、送信先サーバーに送信されるメッセージが、送信元データベースのユーザーが所有する証明書の公開キーによって認証されることを保証します。|送信先データベースのユーザーに CREATE QUEUE 権限、CREATE SERVICE 権限、および CREATE SCHEMA 権限を[許可](../../t-sql/statements/grant-transact-sql.md) します。|  
 ||まだデータベースに送信先データベース ユーザーとして接続していない場合は、直ちに接続してください。|  
 ||イベント通知メッセージを受信する[キューを作成](../../t-sql/statements/create-queue-transact-sql.md) し、メッセージを配信する [サービスを作成](../../t-sql/statements/create-service-transact-sql.md) します。|  
@@ -68,7 +67,7 @@ ms.locfileid: "47702580"
   
 |[転送元サーバー]|送信先サーバー|  
 |-------------------|-------------------|  
-|送信先サービスへの[ルートを作成](../../t-sql/statements/create-route-transact-sql.md) し、送信先データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。|送信元サービスへのルートを作成し、送信元データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。 送信元サービスを指定するには、 `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`で提供されるサービスを使用します。|  
+|送信先サービスへの[ルートを作成](../../t-sql/statements/create-route-transact-sql.md) し、送信先データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。|送信元サービスへのルートを作成し、送信元データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。 送信元サービスを指定するには、 `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`で提供されるサービスを使用します。|  
 |**master** データベースに切り替えて、サーバー レベルの認証を構成します。|**master** データベースに切り替えて、サーバー レベルの認証を構成します。|  
 |**master** データベースにマスター キーが存在しない場合は、 [マスター キーを作成](../../t-sql/statements/create-master-key-transact-sql.md)します。|**master** データベースにマスター キーが存在しない場合は、マスター キーを作成します。|  
 |データベースを認証する[証明書を作成](../../t-sql/statements/create-certificate-transact-sql.md) します。|データベースを認証する証明書を作成します。|  

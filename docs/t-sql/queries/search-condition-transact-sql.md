@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d57063ee518574adbb5faf2070ef2cfd203885b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745330"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699800"
 ---
 # <a name="search-condition-transact-sql"></a>検索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47745330"
  SELECT ステートメント、クエリ式、またはサブクエリの場合、結果セットに返す行の条件を指定します。 UPDATE ステートメントの場合、更新する行を指定します。 DELETE ステートメントの場合、削除する行を指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの検索条件に含まれる述語の数に制限はありません。  
   
  \<graph_search_pattern>  
- グラフの一致パターンを指定します。 この句の引数の詳細については、「[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)」を参照してください。
+ グラフの一致パターンを指定します。 この句の引数の詳細については、「[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)」を参照してください
  
  [NOT]  
  述語によって指定されたブール式を否定します。 詳細については、「[NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)」を参照してください。  
@@ -134,7 +134,7 @@ ms.locfileid: "47745330"
  列名、定数、関数、変数、スカラー サブクエリ、または 1 つ以上の演算子やサブクエリで接続された列名、定数、および関数の組み合わせです。 expression には CASE 式が含まれる場合もあります。  
   
 > [!NOTE]  
->  Unicode ではない文字列定数と変数は、データベースの既定の照合順序に対応するコード ページを使用します。 コード ページの変換は、Unicode 以外の文字データのみで作業し、Unicode ではない文字データ型 **char**、**varchar**、および **text** を参照する場合に発生する可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、コード ページがデータベースの既定照合順序に対応するコード ページと異なる場合に、Unicode 以外の文字列定数および変数を、参照される列または COLLATE を使用して指定された列の照合順序に対応するコード ページに変換します。 [最適なマッピング](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)が見つかった場合、新しいコード ページで見つからない文字はすべて類似した文字に変換されます。それ以外の場合は、既定の置換文字 "?" に変換されます。  
+>  Unicode ではない文字列定数と変数は、データベースの既定の照合順序に対応するコード ページを使用します。 コード ページの変換は、Unicode 以外の文字データのみで作業し、Unicode ではない文字データ型 **char**、**varchar**、および **text** を参照する場合に発生する可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、コード ページがデータベースの既定照合順序に対応するコード ページと異なる場合に、Unicode 以外の文字列定数および変数を、参照される列または COLLATE を使用して指定された列の照合順序に対応するコード ページに変換します。 [最適なマッピング](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)が見つかった場合、新しいコード ページで見つからない文字はすべて類似した文字に変換されます。それ以外の場合は、既定の置換文字 "?" に変換されます。  
 >  
 > 複数のコード ページを処理する場合、コード ページの変換を避けるために、文字定数の先頭に大文字の 'N' を付け、Unicode 変数を使用することができます。  
   

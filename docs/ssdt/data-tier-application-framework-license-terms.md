@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 307471c65910c702a7777796e153a599a6a4e59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13c4320a3e571c6680800fac18f9be75674f61ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825920"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664991"
 ---
 # <a name="data-tier-application-framework---license-terms"></a>データ層アプリケーション フレームワーク - ライセンス条項
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47825920"
     -   本ソフトウェアまたは本ライセンス条項を第三者に譲渡すること  
     -   本ソフトウェアを商用ホスティング サービスで使用すること  
       
-4.  **第三者の通知。** 本ソフトウェアには、第三者ではなく、本ライセンス条項に記載されている条件の下において、マイクロソフトにより使用を許諾された第三者のコードが含まれています。 任意の第三者のコードの注意事項がある場合は、お客様への参考情報としてのみ含まれます。 また、このソフトウェアに対してリンク、呼び出しまたは参照を行う第三者のスクリプトは、マイクロソフトによってではなく、それらのコードを所有する第三者によってお客様への使用が許諾されます。詳細については、ASP.NET Ajax CDN の使用条件をご覧ください: http://www.asp.net/ajaxlibrary/CDN.ashx。  
+4.  **第三者の通知。** 本ソフトウェアには、第三者ではなく、本ライセンス条項に記載されている条件の下において、マイクロソフトにより使用を許諾された第三者のコードが含まれています。 任意の第三者のコードの注意事項がある場合は、お客様への参考情報としてのみ含まれます。 また、このソフトウェアに対してリンク、呼び出しまたは参照を行う第三者のスクリプトは、マイクロソフトによってではなく、それらのコードを所有する第三者によってお客様への使用が許諾されます。詳細については、ASP.NET Ajax CDN の使用条件をご覧ください: https://www.asp.net/ajaxlibrary/CDN.ashx。  
   
 5.  **バックアップ用の複製。** お客様は、本ソフトウェアのバックアップ用の複製を 1 部作成することができます。 バックアップ用の複製は、お客様が本ソフトウェアを再インストールする場合に限り使用することができます。  
   

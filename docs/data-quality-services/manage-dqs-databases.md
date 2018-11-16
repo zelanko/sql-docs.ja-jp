@@ -12,12 +12,12 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a236afb02ee2cac24dee6fa4735a90bb28c3bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc31a6b98c12b948dd353ca7f7839f5a1fb0dc04
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631000"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696741"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -44,7 +44,7 @@ ms.locfileid: "47631000"
 -   DQS データベースの既定の復旧モデルを、 **[単純]** に設定します。 単純復旧モデルでは、トランザクションのログへの記録は最小限になり、トランザクションの完了後にログが自動的に切り捨てられて、トランザクション ログ (.ldf ファイル) の領域が解放されます。 単純復旧モデルについて詳しくは、「[データベースの完全バックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)」をご覧ください。  
   
 > [!IMPORTANT]  
->  -   単純復旧モデルでは、ログ レコードが長い間アクティブなままになると (長く、時間のかかるトランザクションの場合など)、ログの切り捨てが遅れて、トランザクション ログがいっぱいになる可能性があります。 また、ログの切り捨てを行っても、物理ログ ファイル (.ldf ファイル) のサイズは縮小されません。 物理ログ ファイルのサイズを削減するには、ログ ファイルを圧縮する必要があります。 トランザクション ログに関する問題のトラブルシューティングについては、「[トランザクション ログ &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)」または Microsoft サポート技術情報 ([http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446)) をご覧ください。  
+>  -   単純復旧モデルでは、ログ レコードが長い間アクティブなままになると (長く、時間のかかるトランザクションの場合など)、ログの切り捨てが遅れて、トランザクション ログがいっぱいになる可能性があります。 また、ログの切り捨てを行っても、物理ログ ファイル (.ldf ファイル) のサイズは縮小されません。 物理ログ ファイルのサイズを削減するには、ログ ファイルを圧縮する必要があります。 トランザクション ログに関する問題のトラブルシューティングについては、「[トランザクション ログ &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)」または Microsoft サポート技術情報 ([https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446)) をご覧ください。  
 > -   DQS データベースの全体のバックアップまたは差分バックアップ、およびトランザクション ログのバックアップを定期的に実行して、データを特定の時点に復旧する必要があります。 詳しくは、「[データベースの完全バックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)」および「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」をご覧ください。  
   
 ##  <a name="DetachAttach"></a> DQS データベースのデタッチ/アタッチ  

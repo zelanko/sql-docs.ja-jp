@@ -9,12 +9,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 1ac9c72ecee9beee66ea190b3acf233a0e4bc753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618410"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668551"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV を使用してビューの使用統計とパフォーマンスを確認する
 
@@ -201,8 +201,8 @@ GO
 ## <a name="related-external-resources"></a>関連する外部リソース
 
 - [パフォーマンス チューニングのための DMV (動画 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [パフォーマンス チューニングのための DMV (スライドとデモ - SQL Saturday Pordenone)](http://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
+- [パフォーマンス チューニングのための DMV (スライドとデモ - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
 - [カプセル形式での SQL Server チューニング (動画 - SQL Saturday Parma)](https://vimeo.com/200980883)
-- [SQL Server のチューニングの概要 (スライドとデモ - SQL Saturday Parma)](http://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
+- [SQL Server のチューニングの概要 (スライドとデモ - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
 - [SQL Server 動的管理ビューでのパフォーマンス チューニング](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
 - [SQL Server 2016 の最も顕著な待機の種類](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)

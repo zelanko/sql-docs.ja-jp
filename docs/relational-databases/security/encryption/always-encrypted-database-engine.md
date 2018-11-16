@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827353"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675131"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,10 +104,10 @@ Always Encrypted による暗号化アルゴリズムの詳細については、
 
 |タスク|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|[ユーザー アカウント制御]|はい|いいえ|
-|データベース内にキー メタデータを作成する。|[ユーザー アカウント制御]|はい|[ユーザー アカウント制御]|
-|暗号化された列がある新しいテーブルを作成する|[ユーザー アカウント制御]|はい|[ユーザー アカウント制御]|
-|選択されたデータベース列内にあるデータを暗号化する|[ユーザー アカウント制御]|はい|いいえ|
+|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|[ユーザー アカウント制御]|[はい]|いいえ|
+|データベース内にキー メタデータを作成する。|[ユーザー アカウント制御]|[はい]|[ユーザー アカウント制御]|
+|暗号化された列がある新しいテーブルを作成する|[ユーザー アカウント制御]|[はい]|[ユーザー アカウント制御]|
+|選択されたデータベース列内にあるデータを暗号化する|[ユーザー アカウント制御]|[はい]|いいえ|
 
 > [!NOTE]
 > 必ず、データベースをホストするコンピューターと異なるコンピューターで、キー プロビジョニングまたはデータ暗号化ツールを実行してください。 そうしないと、機密データやキーがサーバー環境に漏れ、Always Encrypted を使用する利点が少なくなる可能性があります。  
@@ -187,7 +187,7 @@ Always Encrypted は、以下の特性を持つ列に対してはサポートさ
 
 - SQL Server Management Studio は、 *[サーバーへの接続]* ダイアログの **[追加のプロパティ]** タブで **column encryption setting=enabled** に接続している場合、暗号化された列から取得した結果を復号化できます。 暗号化された列の挿入、更新、フィルター処理には、SQL Server Management Studio バージョン 17 以降が必要です。
 
-- `sqlcmd` からの暗号化された接続には、バージョン 13.1 以上が必要です。これは [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=825643)から入手できます。
+- `sqlcmd` からの暗号化された接続には、バージョン 13.1 以上が必要です。これは [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=825643)から入手できます。
 
   
 ## <a name="database-permissions"></a>データベース権限  

@@ -11,12 +11,12 @@ ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40151df5effd43cd48f005a0ddfd2e5faa673b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668900"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666761"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>SQL Server の単体テストの実行を構成する方法
 テスト プロジェクトを構成することによって、SQL Server 単体テストの実行方法を制御するいくつかの設定を指定できます。 これらの構成設定は、テスト プロジェクトの app.config ファイルに格納されます。 このファイルを直接編集する場合は、新しい値が [テストの構成] ダイアログ ボックスに表示されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "47668900"
 -   **スキーマ配置**。 データベース プロジェクトは、データベースのオフライン表現です。 データベース プロジェクトはデータベース オブジェクトの構造を表しますが、データは含まれません。 データベース プロジェクトでスキーマを変更した後、実際のデータベースでテストできます。 スキーマ配置の手順では、テストするデータベース オブジェクトがデータベース プロジェクトからテストを実行するデータベースにコピーされます。 スキーマの配置について詳しくは、「[データベース スキーマの配置](#DeployingDBSchema)」をご覧ください。  
   
     > [!NOTE]  
-    > テストは、ソリューション フォルダーではなく、ローカル ハード ディスク上の別のフォルダーで実行されます。 テスト配置の特性を構成できますが、通常、単体テスト用に構成する必要はありません。 テスト配置について詳しくは、「[テストの実行](http://msdn.microsoft.com/library/dd286680(VS.100).aspx)」をご覧ください。  
+    > テストは、ソリューション フォルダーではなく、ローカル ハード ディスク上の別のフォルダーで実行されます。 テスト配置の特性を構成できますが、通常、単体テスト用に構成する必要はありません。 テスト配置について詳しくは、「[テストの実行](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)」をご覧ください。  
   
 ## <a name="SpecifyConnectionStrings"></a>接続文字列の指定  
   

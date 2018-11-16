@@ -15,12 +15,12 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e2eb2f1b799773eb0a6a334828573a89b25a08c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664750"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674851"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47664750"
 ログ ファイルの現在のサイズ、最大サイズ、およびファイルの自動拡張オプションについては、[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) にある、そのログ ファイルに関する **size**、**max_size**、**growth** の各列も使用できます。  
   
 > [!IMPORTANT]
-> ログ ディスクの過負荷を避けてください。 ログ ストレージがトランザクション負荷の [IOPS](http://wikipedia.org/wiki/IOPS) 要件と短い待ち時間要件に対応できることを確認してください。 
+> ログ ディスクの過負荷を避けてください。 ログ ストレージがトランザクション負荷の [IOPS](https://wikipedia.org/wiki/IOPS) 要件と短い待ち時間要件に対応できることを確認してください。 
   
 ##  <a name="ShrinkSize"></a> ログ ファイルのサイズを圧縮する  
  物理ログ ファイルの物理サイズを削減するには、ログ ファイルを圧縮する必要があります。 トランザクション ログ ファイルに未使用領域が含まれていることがわかっている場合にはこの方法が有効です。 ログ ファイルの圧縮を実行できるのは、データベースがオンラインで、1 つ以上の[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が解放されている間だけです。 場合によっては、次のログの切り捨てまでログを圧縮できないことがあります。  
@@ -101,9 +101,9 @@ ms.locfileid: "47664750"
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|  
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の前|データ 10%。 ログ ファイル 10%。|  
 
--   増分が少ないと小さな [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が過度に生成され、パフォーマンスが低下します。 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
+-   増分が少ないと小さな [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が過度に生成され、パフォーマンスが低下します。 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
 
--   増分が大きいと大きな [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が生成される回数が極めて少なく、やはりパフォーマンスに影響が出ます。 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。 
+-   増分が大きいと大きな [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が生成される回数が極めて少なく、やはりパフォーマンスに影響が出ます。 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。 
 
 -   自動拡張を有効にしても、増加が遅く、クエリのニーズを満たせなければ、トランザクション ログがいっぱいになったというメッセージが表示されます。 増分変更の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 

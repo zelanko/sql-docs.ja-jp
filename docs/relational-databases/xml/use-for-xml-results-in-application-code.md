@@ -19,12 +19,12 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb5b9d6bba887aa270444fe1ef644e9b55bfc69d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9252d2161fcca10b3ccd686d7f33de525cfe239
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756610"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670467"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "47756610"
 3.  次の URL を使用して、ブラウザー ウィンドウで ASP ページを開きます。 まず、"MyServer" を "localhost" または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と IIS がインストールされている実際のサーバー名に置き換えます。  
   
     ```  
-    http://MyServer/RetrieveResults.asp  
+    https://MyServer/RetrieveResults.asp  
     ```  
   
  表示される生成後の HTML ページの結果は、次のサンプル出力のようになります。  
@@ -181,7 +181,7 @@ ms.locfileid: "47756610"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -274,7 +274,7 @@ ms.locfileid: "47756610"
 3.  次の URL を使用して、ブラウザー ウィンドウで ASP.NET ページを開きます。 まず、"MyServer" を "localhost" または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と IIS がインストールされている実際のサーバー名に置き換えます。  
   
     ```  
-    http://MyServer/RetrieveResults.aspx  
+    https://MyServer/RetrieveResults.aspx  
     ```  
   
  表示される生成後の HTML ページの結果は、次のサンプル出力のようになります。  
@@ -286,7 +286,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

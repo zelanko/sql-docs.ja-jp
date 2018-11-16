@@ -15,12 +15,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b23ab90b6c9e0a8b4296b95da6ff91ba962936d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78688e6aa3053ef46f0cd46ca82a06aabe672a77
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631393"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702480"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限 (マスター データ サービス)
 
@@ -65,7 +65,7 @@ ms.locfileid: "47631393"
 -   ある階層ノードに **作成**/**読み取り**/**更新**/**削除** の各権限の組み合わせが割り当てられ、別のノードに **拒否** 権限が割り当てられている場合、ノード内のメンバーへのアクセスが拒否されます。  
   
 ## <a name="external-resources"></a>外部リソース  
- msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](http://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
+ msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [階層メンバーの権限を割り当てる (マスター データ サービス)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

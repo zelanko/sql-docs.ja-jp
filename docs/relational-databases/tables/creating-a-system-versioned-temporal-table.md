@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639420"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665521"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH
   
 -   指定したスキーマが存在しない場合、 **CREATE TABLE** ステートメントは失敗します。  
   
--   **HISTORY_TABLE** パラメーターによって指定されているテーブルが既に存在する場合、新しく作成されるテンポラル テーブルに対して、 [スキーマの整合性およびテンポラル データの整合性](http://msdn.microsoft.com/library/dn935015.aspx)が検証されます。 無効な履歴テーブルが指定された場合、 **CREATE TABLE** ステートメントは失敗します。  
+-   **HISTORY_TABLE** パラメーターによって指定されているテーブルが既に存在する場合、新しく作成されるテンポラル テーブルに対して、 [スキーマの整合性およびテンポラル データの整合性](https://msdn.microsoft.com/library/dn935015.aspx)が検証されます。 無効な履歴テーブルが指定された場合、 **CREATE TABLE** ステートメントは失敗します。  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>ユーザー定義の履歴テーブルによるテンポラル テーブルの作成  
  ユーザー定義の履歴テーブルによるテンポラル テーブルの作成は、ユーザーが特定のストレージ オプションと追加インデックスで履歴テーブルを指定したい場合に便利なオプションです。 次の例では、作成されるテンポラル テーブルと整合するスキーマで、ユーザー定義の履歴テーブルを作成します。 このユーザー定義の履歴テーブルに対して、クラスター化列ストア インデックスおよびその他の非クラスター化行ストア (B ツリー) インデックスが、ポイント参照用に作成されます。 このユーザー定義の履歴テーブルを作成した後、ユーザー定義の履歴テーブルを既定の履歴テーブルとして指定して、システム バージョン管理されたテンポラル テーブルを作成します。  

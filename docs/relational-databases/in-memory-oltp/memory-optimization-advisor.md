@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3202bef4631477b1dcb25bda412773830f7f0ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724890"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671410"
 ---
 # <a name="memory-optimization-advisor"></a>メモリ最適化アドバイザー
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724890"
   
 -   テーブルとデータをメモリ最適化 (サポートされていない機能がない場合) に移行する。  
     
- 移行方法については、「 [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](http://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
+ 移行方法については、「 [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>メモリ最適化アドバイザーの使用に関するチュートリアル  
  **オブジェクト エクスプローラー**で、変換するテーブルを右クリックし、 **[メモリ最適化アドバイザー]** を選択します。 これにより、 **テーブルのメモリ最適化アドバイザー**のようこそページが表示されます。  
@@ -99,7 +99,7 @@ ms.locfileid: "47724890"
   
  主キーが存在せず、テーブルを持続性のないテーブルに移行している場合、この画面は表示されません。  
   
- テキスト列 ( **char**、 **nchar**、 **varchar**、および **nvarchar**型の列) の場合は、適切な照合順序を選択する必要があります。 インメモリ OLTP でサポートされているのは、メモリ最適化テーブルの列の BIN2 照合順序のみで、補助文字を使用した照合順序はサポートされていません。 サポートされている照合順序と、照合順序を変更した場合に考えられる影響については、「 [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) 」を参照してください。  
+ テキスト列 ( **char**、 **nchar**、 **varchar**、および **nvarchar**型の列) の場合は、適切な照合順序を選択する必要があります。 インメモリ OLTP でサポートされているのは、メモリ最適化テーブルの列の BIN2 照合順序のみで、補助文字を使用した照合順序はサポートされていません。 サポートされている照合順序と、照合順序を変更した場合に考えられる影響については、「 [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) 」を参照してください。  
   
  主キーの構成可能なパラメーターは次のとおりです。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "47724890"
   
 -   NONCLUSTERED インデックス。 この種類のインデックスは、多数の範囲クエリを含むインデックスに最適です。 **[並べ替え列と並べ替え順序]** の一覧で、各列の並べ替え順序を構成できます。  
   
- 主キーに最適なインデックスの種類を理解するには、「 [ハッシュ インデックス](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)」を参照してください。  
+ 主キーに最適なインデックスの種類を理解するには、「 [ハッシュ インデックス](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)」を参照してください。  
   
  主キーを選択したら、 **[次へ]** をクリックします。  
   

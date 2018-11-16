@@ -11,12 +11,12 @@ ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfb63472c5132ad37abbe8832929e10f694f84f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55f67c71bfa1247d9b8df411889091527c95de48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689410"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703890"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>マスター データ サービスのインストール作業
 
@@ -52,12 +52,12 @@ ms.locfileid: "47689410"
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成する|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を使用して、マスター データの [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成します。|[マスター データ サービス データベースの作成](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを作成する|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を使用して、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]をホストする Web アプリケーションを作成して構成します。|[マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを Web アプリケーションに関連付ける|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を使用して、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付けます。|[Master Data Services データベースと Web アプリケーションの関連付け](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
-|Internet Explorer セキュリティ強化を構成する|Windows Server 2012 コンピューターに [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] をインストールするときに、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] アプリケーション サイトでスクリプトを許可するように Internet Explorer セキュリティ強化を構成しなければならない場合があります。 そうしないと、サーバー コンピューター上の [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] アプリケーション サイトの参照が失敗します。|[Internet Explorer: セキュリティ強化の構成](http://go.microsoft.com/fwlink/p/?LinkId=223869)|  
-|をインストールする [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]は、マスター データを操作するユーザーがインストールできます。|[http://go.microsoft.com/fwlink/?LinkID=398159](http://go.microsoft.com/fwlink/?LinkID=398159)|  
+|Internet Explorer セキュリティ強化を構成する|Windows Server 2012 コンピューターに [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] をインストールするときに、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] アプリケーション サイトでスクリプトを許可するように Internet Explorer セキュリティ強化を構成しなければならない場合があります。 そうしないと、サーバー コンピューター上の [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] アプリケーション サイトの参照が失敗します。|[Internet Explorer: セキュリティ強化の構成](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|をインストールする [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]は、マスター データを操作するユーザーがインストールできます。|[https://go.microsoft.com/fwlink/?LinkID=398159](https://go.microsoft.com/fwlink/?LinkID=398159)|  
 |Data Quality Services (DQS) の統合の有効化|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]のユーザーは、DQS 機能との統合を有効にして、類似データの照合に使用できます。|[マスター データ サービスを使用した Data Quality Services 統合の有効化](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |サンプル モデルを配置します。|サンプル モデル パッケージはマスター データ サービスと共にインストールされており、MDSModelDeploy.exe を使用して配置できます。|[SQL Server 2012 の MDS サンプルの配置](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
   
- インストール プロセスまたは初期構成時に問題が発生した場合は、TechNet Wiki の「 [インストールおよび構成の問題のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) 」を参照してください。  
+ インストール プロセスまたは初期構成時に問題が発生した場合は、TechNet Wiki の「 [インストールおよび構成の問題のトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) 」を参照してください。  
   
  コンピューター上の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] が不要になった場合は、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] をアンインストールしたうえで、アンインストール プロセスの影響を受けない項目を削除するかどうかを判断できます。 詳細については、「 [マスター データ サービスのアンインストールと削除](../../sql-server/install/uninstall-and-remove-master-data-services.md)」を参照してください。  
   

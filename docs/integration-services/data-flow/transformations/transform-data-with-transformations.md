@@ -15,12 +15,12 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6573534c2117192efcb3a40c848e72e0a39d0426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ddbce6d12a8a3697b473eccaf9d8cd89dccd1a1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610769"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640259"
 ---
 # <a name="transform-data-with-transformations"></a>変換を使用してデータを変換する
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが含まれています。  
@@ -45,7 +45,7 @@ ms.locfileid: "47610769"
   
  カスタムの変換を記述することもできます。 詳しくは、「 [カスタム データ フロー コンポーネントの開発](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 」と「 [特定の種類のデータ フロー コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)」をご覧ください。  
   
- 変換をデータ フロー デザイナーに追加した後で、変換を構成する前に、データ フロー内の別の変換または変換元の出力をこの変換の入力に連結することにより、変換をデータ フローに連結します。 2 つのデータ フロー コンポーネント間のコネクタは、パスと呼ばれます。 コンポーネントの連結とパスを使用した作業の詳細については、「 [パスを使用してコンポーネントを連結する](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)」をご覧ください。  
+ 変換をデータ フロー デザイナーに追加した後で、変換を構成する前に、データ フロー内の別の変換または変換元の出力をこの変換の入力に連結することにより、変換をデータ フローに連結します。 2 つのデータ フロー コンポーネント間のコネクタは、パスと呼ばれます。 コンポーネントの連結とパスを使用した作業の詳細については、「 [パスを使用してコンポーネントを連結する](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)」をご覧ください。  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>変換をデータ フローに追加するには  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47610769"
 ## <a name="see-also"></a>参照  
  [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
- [パスを使用してコンポーネントを連結する](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [パスを使用してコンポーネントを連結する](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [データのエラー処理](../../../integration-services/data-flow/error-handling-in-data.md)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)  
   

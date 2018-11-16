@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db06e014e735e9174cde6364f30ee3870977941d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742090"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696797"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ON SERVER
 |DROP EVENT \<event_specifier>|*\<event_specifier>* で識別されるイベントを削除します。 \<event_specifier> は、イベント セッションで有効である必要があります。|  
 |ADD TARGET \<event_target_specifier>|\<event_target_specifier> で識別されるターゲットをイベント セッションに関連付けます。|
 |[*event_module_guid*].*event_package_name*.*target_name*|イベント セッションのターゲットの名前を指定します。ただし、<br /><br /> -   *event_module_guid* は、イベントを含むモジュールの GUID です。<br />-   *event_package_name* は、アクション オブジェクトを含むパッケージです。<br />-   *target_name* はアクションです。 アクションは、object_type 'target' として sys.dm_xe_objects ビューに表示されます。|  
-|SET { *target_parameter_name*= \<value> [, ...*n*] }|ターゲット パラメーターを設定します。 ターゲット パラメーターは、column_type 'customizable' および object_name = *target_name* として sys.dm_xe_object_columns ビューに表示されます。<br /><br /> **注:** リング バッファー ターゲットを使用している場合、max_memory ターゲット パラメーターを 2048 KB に設定し、XML 出力のデータの切り捨てを回避することをお勧めします。 さまざまなターゲットの種類の使用について詳しくは、「[SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」をご覧ください。|  
+|SET { *target_parameter_name*= \<value> [, ...*n*] }|ターゲット パラメーターを設定します。 ターゲット パラメーターは、column_type 'customizable' および object_name = *target_name* として sys.dm_xe_object_columns ビューに表示されます。<br /><br /> **注:** リング バッファー ターゲットを使用している場合、max_memory ターゲット パラメーターを 2048 KB に設定し、XML 出力のデータの切り捨てを回避することをお勧めします。 さまざまなターゲットの種類の使用について詳しくは、「[SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」をご覧ください。|  
 |DROP TARGET \<event_target_specifier>|\<event_target_specifier> で識別されるターゲットを削除します。 \<event_target_specifier> は、イベント セッションで有効である必要があります。|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|イベントの削除を処理するために使用するイベント保有モードを指定します。<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> セッションから単独のイベントを削除できます。 単独のイベントは、すべてのイベント バッファーがいっぱいになったときだけ削除されます。 イベント バッファーがいっぱいのときに単独のイベントを削除することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス特性が許容可能な状態になり、処理後のイベント ストリームのデータ損失を最小限に抑えることができます。<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> 複数のイベントでいっぱいのイベント バッファーをセッションから削除できます。 削除されるイベントの数は、セッションに割り当てられているメモリ サイズ、メモリのパーティション分割、およびバッファー内のイベントのサイズによって異なります。 このオプションを使用すると、イベント バッファーがすぐにいっぱいになるときにサーバーのパフォーマンスに与える影響を最小限に抑えることができますが、多数のイベントがセッションから削除される可能性があります。<br /><br /> NO_EVENT_LOSS<br /> イベントの削除は許可されません。 このオプションを指定した場合、発生したすべてのイベントが保持されます。 このオプションを使用した場合、イベントを開始するすべてのタスクは、イベント バッファーに空きができるまで待機します。 その結果、イベント セッションがアクティブになっている間、検知できる程度のパフォーマンスの問題が発生することがあります。 バッファーからイベントがフラッシュされるのを待機する間、ユーザーの接続に遅延が生じる可能性があります。|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|イベントをイベント セッション ターゲットにディスパッチする前にメモリにバッファリングする時間を指定します。 最小待機値は 1 秒です。 ただし、0 を使用すると、INFINITE 待機を指定できます。 既定では、この値は 30 秒に設定されます。<br /><br /> *seconds* SECONDS<br /> ターゲットへのバッファーのフラッシュを開始する前に待つ秒数を指定します。 *seconds* は整数です。<br /><br /> **INFINITE**<br /> バッファーがいっぱいのとき、またはイベント セッションが閉じるときだけ、バッファーをターゲットにフラッシュします。<br /><br /> **注:** MAX_DISPATCH_LATENCY = 0 SECONDS と MAX_DISPATCH_LATENCY = INFINITE は同じです。|  
@@ -173,7 +173,7 @@ GO
 ## <a name="see-also"></a>参照  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  

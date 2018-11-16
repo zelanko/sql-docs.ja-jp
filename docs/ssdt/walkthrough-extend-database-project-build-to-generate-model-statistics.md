@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e3501dc7245d583c0fa30e6c50aabcdd9e2e5e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669880"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659141"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
 ビルド コントリビューターを作成して、データベース プロジェクトのビルド時にカスタム アクションを実行できます。 このチュートリアルでは、データベース プロジェクトのビルド時に SQL データベース モデルから統計を出力する ModelStatistics という名前のビルド コントリビューターを作成します。 このビルド コントリビューターはビルド時にパラメーターを受け取るため、追加のステップが必要となります。  
@@ -56,12 +56,12 @@ ms.locfileid: "47669880"
   
 |**クラス**|**メソッド/プロパティ**|**[説明]**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|モデルに対してクエリを実行してオブジェクトを取得します。これは、モデル API に対するメイン エントリ ポイントです。 Table や View などの最上位レベルの型のみに対してクエリを実行できます。Columns などの型は、モデルの走査によってのみ検出できます。 ModelTypeClass フィルターが指定されていない場合は、最上位レベルのすべての型が返されます。|  
-|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|現在の TSqlObject によって参照される要素に対するリレーションシップを検出します。 たとえば、テーブルの場合、テーブルの列などのオブジェクトが返されます。 この場合、ModelRelationshipClass フィルターを使用すると、クエリの実行対象となる正確なリレーションシップを指定できます (たとえば、"Table.Columns" フィルターを使用した場合は列のみが返されます)。<br /><br />GetReferencingRelationshipInstances、GetChildren、GetParent など、類似するメソッドが多数あります。 詳細については、API のドキュメントを参照してください。|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|モデルに対してクエリを実行してオブジェクトを取得します。これは、モデル API に対するメイン エントリ ポイントです。 Table や View などの最上位レベルの型のみに対してクエリを実行できます。Columns などの型は、モデルの走査によってのみ検出できます。 ModelTypeClass フィルターが指定されていない場合は、最上位レベルのすべての型が返されます。|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|現在の TSqlObject によって参照される要素に対するリレーションシップを検出します。 たとえば、テーブルの場合、テーブルの列などのオブジェクトが返されます。 この場合、ModelRelationshipClass フィルターを使用すると、クエリの実行対象となる正確なリレーションシップを指定できます (たとえば、"Table.Columns" フィルターを使用した場合は列のみが返されます)。<br /><br />GetReferencingRelationshipInstances、GetChildren、GetParent など、類似するメソッドが多数あります。 詳細については、API のドキュメントを参照してください。|  
   
 **コントリビューターを一意に識別する**  
   
-ビルド プロセス中に、カスタム コントリビューターは標準の拡張機能ディレクトリから読み込まれます。 ビルド コントリビューターは、 [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 属性によって識別されます。 コントリビューターを検出できるようにするためにこの属性は必須です。 この属性は次のようになります。  
+ビルド プロセス中に、カスタム コントリビューターは標準の拡張機能ディレクトリから読み込まれます。 ビルド コントリビューターは、 [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 属性によって識別されます。 コントリビューターを検出できるようにするためにこの属性は必須です。 この属性は次のようになります。  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -75,7 +75,7 @@ ms.locfileid: "47669880"
   
 -   クラス ライブラリ プロジェクトを作成し、必要な参照を追加する。  
   
--   [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) から継承する ModelStatistics という名前のクラスを定義する。  
+-   [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)から継承する ModelStatistics という名前のクラスを定義する。  
   
 -   OnExecute メソッドをオーバーライドする。  
   
@@ -500,7 +500,7 @@ ms.locfileid: "47669880"
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
   
-        <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+        <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
           <PropertyGroup>  
             <BuildContributors>$(BuildContributors);ExampleContributors.ModelStatistics</BuildContributors>  
             <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy=name;</ContributorArguments>  

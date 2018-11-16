@@ -18,12 +18,12 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736890"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638969"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>プロパティ式における列挙定数
   プロパティ式に列挙子メンバー リストの値が含まれている場合、この式ではメンバーの表示名ではなく、列挙子メンバーの数値を使用する必要があります。 たとえば、式で **LoggingMode** プロパティを設定する場合、表示名 Disabled ではなく、数値 2 を使用する必要があります。  
@@ -581,7 +581,7 @@ ms.locfileid: "47736890"
 |失敗|1|  
 |Completion|2|  
   
- **IsolationLevel** プロパティ—.NET Framework **IsolationLevel** 列挙子の値を使用して設定されます。 詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink?LinkId=17313)の .NET Framework クラス ライブラリを参照してください。  
+ **IsolationLevel** プロパティ—.NET Framework **IsolationLevel** 列挙子の値を使用して設定されます。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink?LinkId=17313)の .NET Framework クラス ライブラリを参照してください。  
   
  **LoggingMode** プロパティ— **DTSLoggingMode** 列挙子の値を使用して設定されます。  
   

@@ -15,12 +15,12 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 09b7d5894f46bca7b493601d9a7df40ed4c0935a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d71093c81f002611c857bf16c2f4cd1a6ca83d2
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668080"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697701"
 ---
 # <a name="transactions-master-data-services"></a>トランザクション (マスター データ サービス)
 
@@ -95,7 +95,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 |トランザクションを破棄してアクションを元に戻す (管理者のみ)。|[トランザクションを破棄する (マスター データ サービス)](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>外部リソース  
- msdn.com のブログ投稿「 [Transactions, Validation Issue and Staging table cleanup](http://go.microsoft.com/fwlink/p/?LinkId=615374)」 (トランザクション、検証の問題、およびステージング テーブルのクリーンアップ)  
+ msdn.com のブログ投稿「 [Transactions, Validation Issue and Staging table cleanup](https://go.microsoft.com/fwlink/p/?LinkId=615374)」 (トランザクション、検証の問題、およびステージング テーブルのクリーンアップ)  
   
 ## <a name="related-content"></a>関連コンテンツ  
   

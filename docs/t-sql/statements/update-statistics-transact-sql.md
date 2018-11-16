@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2461cbf6c5ee2622112f7841eb44059dd83661a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674750"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701757"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,7 +112,7 @@ UPDATE STATISTICS schema_name . ] table_name
   
  ほとんどのワークロードでは、フル スキャンは必要なく、既定のサンプリングで十分です。  
 ただし、変化するデータ分布の影響を受ける特定のワークロードではサンプル サイズの増加が必要な場合があり、フル スキャンが必要な場合もあります。  
-詳しくは、[CSS SQL Escalation Services に関するブログ](http://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx)をご覧ください。  
+詳しくは、[CSS SQL Escalation Services に関するブログ](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx)をご覧ください。  
   
  RESAMPLE  
  最新のサンプル レートを使用して各統計を更新します。  
@@ -240,7 +240,7 @@ GO
 ```  
   
 ### <a name="b-update-the-statistics-for-an-index"></a>B. 1 つのインデックスの統計を更新する  
- 次の例では、`SalesOrderDetail` テーブルの `AK_SalesOrderDetail_rowguid` インデックスの統計を更新します。  
+ 次の例では、`AK_SalesOrderDetail_rowguid` テーブルの `SalesOrderDetail` インデックスの統計を更新します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -250,7 +250,7 @@ GO
 ```  
   
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. 50% サンプリングで統計を更新する  
- 次の例では、`Product` テーブルの `Name` および `ProductNumber` 列に統計を作成し、更新します。  
+ 次の例では、`Name` テーブルの `ProductNumber` および `Product` 列に統計を作成し、更新します。  
   
 ```sql  
 USE AdventureWorks2012;  

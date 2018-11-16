@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8e50674429bb332e750222c3b458b53cd339437
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d46e82343f0f145536c38cf7ac457ad39b813d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719560"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672081"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +30,11 @@ ms.locfileid: "47719560"
 |ポリシー名|ベスト プラクティス ルール|  
 |-----------------|------------------------|  
 |非対称キーの暗号化アルゴリズム|[非対称キー暗号化の強度](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|バックアップ ファイルとデータ ファイルの場所|[バックアップ ファイルはデータベース ファイルとは別のデバイスに配置する](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|バックアップ ファイルとデータ ファイルの場所|[バックアップ ファイルはデータベース ファイルとは別のデバイスに配置する](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |データ ファイルとログ ファイルの場所|[別々のドライブへのデータ ファイルとログ ファイルの配置](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |データベースの自動終了|[AUTO_CLOSE データベース オプションを OFF に設定](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |データベースの自動圧縮|[AUTO_SHRINK データベース オプションを OFF に設定](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|データベースの照合順序|[ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|データベースの照合順序|[ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |データベースのページ検証|[PAGE_VERIFY データベース オプションを CHECKSUM に設定](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |データベースのページの状態|[問題のあるページを含むデータベースの整合性のチェック](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |guest の権限|[ユーザー データベースに対する guest の権限](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  

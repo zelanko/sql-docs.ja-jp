@@ -16,12 +16,12 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5e52daf3d17fce8a91cb42ceb32914093c8d93f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c44abf761d2576dd0e73c7c88fb9e52a823d25eb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837610"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697910"
 ---
 # <a name="value-method-xml-data-type"></a>value() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SELECT @ProdID
   
 ```  
 SELECT CatalogDescription.value('             
-    declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
+    declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
        (/PD:ProductDescription/@ProductModelID)[1]', 'int') AS Result             
 FROM Production.ProductModel             
 WHERE CatalogDescription IS NOT NULL             
@@ -102,18 +102,18 @@ ORDER BY Result desc
 ```  
   
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. value() メソッドと exist() メソッドを使用した xml 型列の値の取得  
- 次の例では、**xml** データ型の `value()` メソッドと [exist() メソッド](../../t-sql/xml/exist-method-xml-data-type.md)の使い方を示しています。 `value()` メソッドは、XML から `ProductModelID` 属性値を取得するために使用されます。 `WHERE` 句の `exist()` メソッドは、テーブルの行をフィルターで選択するために使用されています。  
+ 次の例では、**xml** データ型の `value()` メソッドと [exist() メソッド](../../t-sql/xml/exist-method-xml-data-type.md)の使い方を示しています。 `value()` メソッドは、XML から `ProductModelID` 属性値を取得するために使用されます。 `exist()` 句の `WHERE` メソッドは、テーブルの行をフィルターで選択するために使用されています。  
   
  このクエリは、要素の 1 つとして保証内容 (<`Warranty`> 要素) を含む XML インスタンスから製品モデル ID を取得します。 `WHERE` 句の条件では、`exist()` メソッドを使用して、この条件を満たす行のみを取得しています。  
   
 ```  
 SELECT CatalogDescription.value('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            (/PD:ProductDescription/@ProductModelID)[1] ', 'int') as Result  
 FROM  Production.ProductModel  
 WHERE CatalogDescription.exist('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-     declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
   
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  

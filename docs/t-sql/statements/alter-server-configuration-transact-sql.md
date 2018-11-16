@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d93d1ea55e06e1ee6b1a36bc9f2e3a341db58cfe
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e219907601a7c517c7fb7f53bb301bee14b06e6b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169053"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703650"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -168,13 +168,13 @@ SET <optionspec>
 -   2: エラーおよび警告。  
   
 SQLDUMPEREDUMPFLAGS  
- SQL Server の SQLDumper ユーティリティによって生成されるダンプ ファイルの種類を決定します。 既定の設定は 0 です。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](http://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
+ SQL Server の SQLDumper ユーティリティによって生成されるダンプ ファイルの種類を決定します。 既定の設定は 0 です。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](https://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
   
  SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
- SQLDumper ユーティリティがダンプ ファイルを保存する場所。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](http://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
+ SQLDumper ユーティリティがダンプ ファイルを保存する場所。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](https://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
   
  SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
- SQL Server でエラーが発生した場合の、SQLDumper ユーティリティによるダンプの生成のタイムアウト値 (ミリ秒単位)。 既定値は 0 で、ダンプの完了に時間制限がないことを示します。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](http://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
+ SQL Server でエラーが発生した場合の、SQLDumper ユーティリティによるダンプの生成のタイムアウト値 (ミリ秒単位)。 既定値は 0 で、ダンプの完了に時間制限がないことを示します。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](https://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  SQL Server フェールオーバー クラスター インスタンスがフェイルオーバーまたは再起動する必要がある状態。 既定値は 3 で、重大なサーバー エラーの発生時に SQL Server リソースがフェールオーバーまたは再起動することを示します。 このエラー状態レベルおよび他のエラー状態レベルについて詳しくは、「[FailureConditionLevel プロパティ設定の構成](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)」をご覧ください。  

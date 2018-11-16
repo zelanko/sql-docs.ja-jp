@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf12709e232d4b9d84f311784f78d469b7f00e7b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: fd029f997770dd78269f58bed5daddc60699fb8a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021316"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813405"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services の移行 (SharePoint モード)
 
@@ -48,9 +48,9 @@ ms.locfileid: "50021316"
 ###  <a name="bkmk_content_only_migration"></a> コンテンツのみの移行  
  **Reporting Services コンテンツのみの移行:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンテンツを新しいファームにコピーする場合は、 **rs.exe** などのツールを使用して、コンテンツを新しい SharePoint にコピーする必要があります。 コンテンツのみの移行の詳細については、以下を参照してください。  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS スクリプト:** これらのスクリプトを使用して、ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーの間で、コンテンツとリソースを移行することができます。 詳細については、 「 [レポート サーバー間でコンテンツを移行するサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 」、および [レポート サーバー間でコンテンツを移行する Reporting Services の RS.exe スクリプト](http://azuresql.codeplex.com/releases/view/115207)に関するページを参照してください。  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS スクリプト:** これらのスクリプトを使用して、ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーの間で、コンテンツとリソースを移行することができます。 詳細については、 「 [レポート サーバー間でコンテンツを移行するサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 」、および [レポート サーバー間でコンテンツを移行する Reporting Services の RS.exe スクリプト](https://azuresql.codeplex.com/releases/view/115207)に関するページを参照してください。  
   
--   **Reporting Services 移行ツール:** このツールを使用すると、ネイティブ モードのサーバーにあるレポート アイテムを SharePoint モードのサーバーにコピーできます。 詳細については、「[Reporting Services 移行ツール](http://www.microsoft.com/download/details.aspx?id=29560)」(http://www.microsoft.com/download/details.aspx?id=29560) を参照してください。  
+-   **Reporting Services 移行ツール:** このツールを使用すると、ネイティブ モードのサーバーにあるレポート アイテムを SharePoint モードのサーバーにコピーできます。 詳細については、「[Reporting Services 移行ツール](https://www.microsoft.com/download/details.aspx?id=29560)」(https://www.microsoft.com/download/details.aspx?id=29560) を参照してください。  
   
 ###  <a name="bkmk_full_migration"></a> すべてのコンテンツの移行  
  **すべてのコンテンツの移行:** SharePoint コンテンツ データベースを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] カタログ データベースと共に新しいファームに移行する場合は、このトピックで説明しているバックアップと復元の一連のオプションを実行します。 場合によっては、バックアップ時に使用したツールとは異なるツールを復元時に使用する必要があります。 たとえば、前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の暗号化キーをバックアップする場合には [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用できますが、SQL Server 2016 Reporting Services SharePoint モードに暗号化キーを復元する場合には SharePoint サーバーの全体管理または PowerShell を使用する必要があります。  

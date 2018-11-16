@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713180"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701920"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47713180"
   
  どのインストール方法を使用するかにかかわらず、個人として、または組織を代表して、ソフトウェア ライセンス条項に同意するかどうかを確認する必要があります。ただし、ソフトウェアの使用に別の契約 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ボリューム ライセンス契約、ISV や OEM とのサード パーティ契約など) が適用される場合を除きます。  
   
- ライセンス条項は、セットアップのユーザー インターフェイスで確認し、同意することができます。 無人インストール (`/Q` または `/QS` パラメーターを使用) には、`/IAcceptSQLServerLicenseTerms` パラメーターを含める必要があります。 「[Microsoft SQL Server ライセンス条項および情報](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)」で、ライセンス条項を個別にダウンロードして確認することができます。 ボリューム ライセンス条項については、「[Licensing Terms and Documentation](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)」 (ライセンス条項とドキュメント) を参照してください。 SQL Server の以前のバージョンについては、「[マイクロソフト ソフトウェア ライセンス条項](http://go.microsoft.com/fwlink/?LinkID=148209)」を参照してください。  
+ ライセンス条項は、セットアップのユーザー インターフェイスで確認し、同意することができます。 無人インストール (`/Q` または `/QS` パラメーターを使用) には、`/IAcceptSQLServerLicenseTerms` パラメーターを含める必要があります。 「[Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)」で、ライセンス条項を個別にダウンロードして確認することができます。 ボリューム ライセンス条項については、「[Licensing Terms and Documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)」 (ライセンス条項とドキュメント) を参照してください。 SQL Server の以前のバージョンについては、「[マイクロソフト ソフトウェア ライセンス条項](https://go.microsoft.com/fwlink/?LinkID=148209)」を参照してください。  
   
 > [!NOTE]  
 >  ソフトウェアの入手方法 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] のボリューム ライセンスを通じて入手した場合など) によっては、ソフトウェアの使用に追加の条件が課されることがあります。  

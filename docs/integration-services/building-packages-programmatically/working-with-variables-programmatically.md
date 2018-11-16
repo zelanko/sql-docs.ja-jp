@@ -23,12 +23,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd8ea5f24876e26b19b803d188489b425e434495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73eed98ef8b7d6c8f842431d5ebc5f1ea846e8c0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698756"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642209"
 ---
 # <a name="working-with-variables-programmatically"></a>プログラムでの変数の使用
   変数を使用すると、値を動的に設定し、パッケージ、コンテナー、タスク、およびイベント ハンドラーの処理を制御できます。 また、優先順位制約で変数を使用して、別のタスクへのデータ フローの方向を制御することもできます。 変数には、以下のようにさまざまな使用方法があります。  
@@ -37,15 +37,15 @@ ms.locfileid: "47698756"
   
 -   実行時に Transact-SQL ステートメントのパラメーター値を設定する。  
   
--   Foreach ループのフローを制御する。 詳細については、「[制御フローに列挙を追加する](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a)」を参照してください。  
+-   Foreach ループのフローを制御する。 詳細については、「[制御フローに列挙を追加する](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a)」を参照してください。  
   
--   式で使用することにより、優先順位制約を制御する。 優先順位制約では、制約定義に変数を含めることができます。 詳細については、「 [優先順位制約に式を追加する](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)」を参照してください。  
+-   式で使用することにより、優先順位制約を制御する。 優先順位制約では、制約定義に変数を含めることができます。 詳細については、「 [優先順位制約に式を追加する](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)」を参照してください。  
   
--   For ループ コンテナーの条件付きの繰り返しを制御する。 詳細については、「[制御フローに繰り返しを追加する](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a)」を参照してください。  
+-   For ループ コンテナーの条件付きの繰り返しを制御する。 詳細については、「[制御フローに繰り返しを追加する](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a)」を参照してください。  
   
 -   変数値が含まれる式を構築する。  
   
--   パッケージ、**Foreach ループ** コンテナー、**For ループ** コンテナー、**シーケンス** コンテナー、タスク ホスト、およびイベント ハンドラーなど、すべての種類のコンテナー用にカスタム変数を作成できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+-   パッケージ、**Foreach ループ** コンテナー、**For ループ** コンテナー、**シーケンス** コンテナー、タスク ホスト、およびイベント ハンドラーなど、すべての種類のコンテナー用にカスタム変数を作成できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
   
 ## <a name="scope"></a>スコープ  
  各コンテナーには、独自の <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションが含まれています。 新しい変数が作成されると、その親コンテナーのスコープ内に格納されます。 パッケージ コンテナーは、コンテナー階層の最上層にあるため、パッケージ スコープを持つ変数はグローバル変数と同じように機能し、パッケージ内のすべてのコンテナーで使用できます。 また、子コンテナーは、<xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションを介して、親コンテナーの変数コレクションにアクセスできます。アクセスするには、コレクション内の変数名または変数のインデックスのどちらかを使用します。  
@@ -231,6 +231,6 @@ End Module
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)   
- [パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

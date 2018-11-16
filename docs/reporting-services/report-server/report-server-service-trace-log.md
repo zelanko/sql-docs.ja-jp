@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031071"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813795"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのトレース ログは、レポート サーバー サービスの操作に関する詳細な情報が記録されている ASCII テキスト ファイルです。  このファイル内の情報には、レポート サーバー Web サービス、Web ポータル、およびバックグラウンド処理によって実行された操作が含まれます。 トレース ログ ファイルには、他のログ ファイルに記録されている冗長な情報、およびトレース ログ以外からは入手できない追加情報が含まれています。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。 たとえば、サブスクリプションに関する問題をトラブル シューティングしている場合です。  
@@ -80,7 +80,7 @@ ms.locfileid: "50031071"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- 詳細については、 [Web サイトの](http://support.microsoft.com/?kbid=913046) サポート技術情報の記事 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] を参照してください。  
+ 詳細については、 [Web サイトの](https://support.microsoft.com/?kbid=913046) サポート技術情報の記事 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] を参照してください。  
   
 ##  <a name="bkmk_log_file_fields"></a> ログ ファイル フィールド  
  トレース ログでは、次のフィールドを確認できます。  

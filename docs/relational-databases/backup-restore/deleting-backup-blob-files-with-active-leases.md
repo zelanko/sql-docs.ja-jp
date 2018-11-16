@@ -11,18 +11,18 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e8b061b3e8c694e9c16c31462149819b8be632d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752100"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663461"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルを削除する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Microsoft Azure Storage へのバックアップまたは Microsoft Azure Storage からの復元を実行するときに、SQL Server は BLOB への排他アクセスをロックするために無限リースを取得します。 バックアップまたは復元プロセスが正常に完了すると、リースは解放されます。 バックアップまたは復元に失敗すると、バックアップ プロセスは無効な BLOB のクリーンアップを試みます。 ただし、バックアップの失敗の原因が長期的または持続的なネットワーク接続エラーの場合は、バックアップ プロセスは BLOB にアクセスできず、BLOB は孤立したままになる可能性があります。 つまり、リースが解放されるまで、BLOB を書き込むことも削除することもできません。 このトピックでは、リースを解放 (終了) する方法と BLOB の削除について説明します。 
   
- リースの種類について詳しくは、[こちらの記事](http://go.microsoft.com/fwlink/?LinkId=275664)をご覧ください。  
+ リースの種類について詳しくは、[こちらの記事](https://go.microsoft.com/fwlink/?LinkId=275664)をご覧ください。  
   
  バックアップ操作が失敗すると、無効なバックアップ ファイルが生成されます。 また、バックアップ BLOB ファイルでは、削除や上書きを防ぐためにアクティブなリースを保持する場合もあります。 そのような BLOB を削除または上書きするには、先にリースを解放 (終了) する必要があります。 バックアップに問題がある場合は、リースをクリーンアップして BLOB を削除することをお勧めします。 記憶域管理タスクの一環として、リースのクリーンアップと BLOB の削除を定期的に行うこともできます。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47752100"
   
 1.  **リースを保持している BLOB を識別する:** バックアップ プロセスを実行するスクリプトまたはプロセスがあると、スクリプトまたはプロセス内のエラーをキャプチャし、それを使って BLOB をクリーンアップできる場合があります。  また、LeaseStats プロパティと LeastState プロパティを使って、それらのプロパティに対してリースを保持している BLOB を識別することもできます。 BLOB を識別したら、一覧を確認し、BLOB を削除する前にバックアップ ファイルが有効かどうかを確認します。  
   
-2.  **リースを終了する:** 承認された要求では、リース ID を指定せずにリースを終了できます。 詳細については、 [こちら](http://go.microsoft.com/fwlink/?LinkID=275664) をご覧ください。  
+2.  **リースを終了する:** 承認された要求では、リース ID を指定せずにリースを終了できます。 詳細については、 [こちら](https://go.microsoft.com/fwlink/?LinkID=275664) をご覧ください。  
   
     > [!TIP]  
     >  SQL Server は、復元操作中にリース ID を発行して排他アクセスを確立します。 復元のリース ID は BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2 です。  

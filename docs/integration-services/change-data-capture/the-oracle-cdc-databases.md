@@ -11,12 +11,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28b06c57666f07430a87d8577b7534cf47cf35de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 040fea749664fb63fa2911a2d4fcaab5185af912
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630350"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638906"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -31,7 +31,7 @@ ms.locfileid: "47630350"
   
 -   SQL Server CDC メカニズムによって生成される一連の変更テーブルと変更アクセス関数。これらは、通常の (Oracle 用ではない) SQL Server CDC で使用されるものと同じです。  
   
- 初期状態で `cdc` スキーマにアクセスできるのは、 **dbowner** 固定データベース ロールのメンバーだけです。 変更テーブルと変更関数へのアクセスは、SQL Server CDC と同じセキュリティ モデルによって決まります。 このセキュリティ モデルの詳細については、「 [セキュリティ モデル](http://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
+ 初期状態で `cdc` スキーマにアクセスできるのは、 **dbowner** 固定データベース ロールのメンバーだけです。 変更テーブルと変更関数へのアクセスは、SQL Server CDC と同じセキュリティ モデルによって決まります。 このセキュリティ モデルの詳細については、「 [セキュリティ モデル](https://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
   
 ## <a name="creating-the-cdc-database"></a>CDC データベースの作成  
  CDC データベースは、CDC デザイナー コンソールを使用して作成されるのが一般的ですが、CDC デザイナー コンソールを使用して生成される CDC 配置スクリプトを使用して作成することもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム管理者は、このデータベースの設定を必要に応じて変更できます (ストレージ、セキュリティ、可用性のための項目の設定など)。  
@@ -51,11 +51,11 @@ ms.locfileid: "47630350"
  ミラー テーブルは空です。データは格納されていません。 ミラー テーブルは、Oracle CDC インスタンスによって使用される標準の SQL Server CDC インフラストラクチャを有効にするために使用されます。 ミラー テーブルに対してデータの挿入や更新が行われないようにするために、UPDATE、DELETE、および INSERT のすべての操作が PUBLIC に対して拒否されます。 これにより、ミラー テーブルを変更できないことが保証されます。  
   
 ## <a name="access-to-change-data"></a>変更データへのアクセス  
- キャプチャ インスタンスに関連付けられている変更データへのアクセスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルによって制御されます。このセキュリティ モデルでは、ユーザーが変更データにアクセスするには、関連付けられているミラー テーブルのすべてのキャプチャ対象列に対する `select` アクセスが許可されている必要があります (元の Oracle テーブルへのアクセスが許可されていても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の変更テーブルにはアクセスできません)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルについては、「 [セキュリティ モデル](http://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
+ キャプチャ インスタンスに関連付けられている変更データへのアクセスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルによって制御されます。このセキュリティ モデルでは、ユーザーが変更データにアクセスするには、関連付けられているミラー テーブルのすべてのキャプチャ対象列に対する `select` アクセスが許可されている必要があります (元の Oracle テーブルへのアクセスが許可されていても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の変更テーブルにはアクセスできません)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルについては、「 [セキュリティ モデル](https://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
   
  また、キャプチャ インスタンスの作成時にゲーティング ロールが指定されている場合、呼び出し元は、指定されたゲーティング ロールのメンバーである必要もあります。 メタデータにアクセスするためのその他の一般的な変更データ キャプチャ関数には、PUBLIC ロールですべてのデータベース ユーザーがアクセスできます。ただし、通常、返されるメタデータへのアクセスは、基になるソース テーブルに対する select アクセス、および定義されたすべてのゲーティング ロールのメンバーシップに基づいて制限されます。  
   
- 変更データを読み取るには、キャプチャ インスタンスの作成時に SQL Server の CDC コンポーネントによって生成される特殊なテーブル ベース関数を呼び出します。 この関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
+ 変更データを読み取るには、キャプチャ インスタンスの作成時に SQL Server の CDC コンポーネントによって生成される特殊なテーブル ベース関数を呼び出します。 この関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
   
  これらの規則は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の CDC ソース コンポーネントから CDC データにアクセスする場合にも適用されます。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47630350"
   
  テーブル `<schema-name>.<table-name>`に対して最初にキャプチャを有効にしたときの既定のキャプチャ インスタンス名は、 `<schema-name>_<table-name>`です。 たとえば、Oracle HR.EMPLOYEES テーブルの既定のキャプチャ インスタンス名は HR_EMPLOYEES で、関連付けられる変更テーブルは [cdc]. [HR_EMPLOYEES_CT] です。  
   
- キャプチャ テーブルは、Oracle CDC インスタンスによって書き込まれ、 キャプチャ インスタンスの作成時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される特殊なテーブル値関数を使用して読み取られます たとえば、 `fn_cdc_get_all_changes_HR_EMPLOYEES`のようにします。 これらの CDC 関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
+ キャプチャ テーブルは、Oracle CDC インスタンスによって書き込まれ、 キャプチャ インスタンスの作成時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される特殊なテーブル値関数を使用して読み取られます たとえば、 `fn_cdc_get_all_changes_HR_EMPLOYEES`のようにします。 これらの CDC 関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
   
 ###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** テーブルは、SQL Server の CDC コンポーネントによって生成されます。 Oracle CDC の場合、このテーブルの使用方法が通常とは異なります。  
@@ -98,7 +98,7 @@ ms.locfileid: "47630350"
 |アイテム|[説明]|  
 |----------|-----------------|  
 |version|CDC インスタンスの構成のバージョンを追跡します。 このテーブルが更新されたり、キャプチャ インスタンスが追加または削除されたりするたびに更新されます。|  
-|connect_string|Oracle の接続文字列です。 基本的な例を以下に示します。<br /><br /> `<server>:<port>/<instance>` (例: `erp.contoso.com:1521/orcl`)<br /><br /> 接続文字列で Oracle Net 接続記述子を指定することもできます (例: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)。<br /><br /> ディレクトリ サーバーまたは tnsnames を使用している場合は、接続文字列を接続の名前にすることができます。<br /><br /> Oracle の接続文字列の詳細については、[http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) を参照してください。Oracle CDC Service によって使用される Oracle Instant Client の Oracle データベース接続文字列について詳しく説明されています。|  
+|connect_string|Oracle の接続文字列です。 基本的な例を以下に示します。<br /><br /> `<server>:<port>/<instance>` (例: `erp.contoso.com:1521/orcl`)<br /><br /> 接続文字列で Oracle Net 接続記述子を指定することもできます (例: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)。<br /><br /> ディレクトリ サーバーまたは tnsnames を使用している場合は、接続文字列を接続の名前にすることができます。<br /><br /> Oracle の接続文字列の詳細については、[https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) を参照してください。Oracle CDC Service によって使用される Oracle Instant Client の Oracle データベース接続文字列について詳しく説明されています。|  
 |use_windows_authentication|次のいずれかのブール値です。<br /><br /> **0**: 認証のために Oracle のユーザー名とパスワードを指定します (既定値)。<br /><br /> **1**: Windows 認証を使用して Oracle データベースに接続します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。|  
 |username|ログ マイニング Oracle データベース ユーザーの名前です。 **use_windows_authentication = 0**の場合のみ必須です。|  
 |パスワード|ログ マイニング Oracle データベース ユーザーのパスワードです。 **use_windows_authentication = 0**の場合のみ必須です。|  

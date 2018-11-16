@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 738de181911733a5edd7f973a5c43e2503f63a2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631870"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658074"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ ms.locfileid: "47631870"
 `ALTER DATABASE` の `FILEGROWTH` 引数と `SIZE` 引数の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 
 > [!TIP]
-> 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
+> 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
   
  トランザクション ログは、循環して使用されるファイルです。 たとえば、4 つの VLF に分割された 1 つの物理ログ ファイルが格納されたデータベースがあるとします。 このデータベースの作成時、論理ログ ファイルは物理ログ ファイルの先頭から始まります。 新しいログ レコードは論理ログの末尾に追加され、物理ログの末尾に向かって拡張されます。 ログの切り捨てにより、最小復旧ログ シーケンス番号 (MinLSN) より前にあるすべての仮想ログ レコードが解放されます。 *MinLSN* は、データベース全体を正常にロールバックするために必要な最も古いログ レコードのログ シーケンス番号です。 例として挙げたデータベースのトランザクション ログは、次の図のようになります。  
   
@@ -143,12 +142,12 @@ ms.locfileid: "47631870"
  最初のログ バックアップを作成する前に、データベース バックアップや一連のファイル バックアップの最初のバックアップを行って、完全バックアップを作成する必要があります。 ファイル バックアップだけを使ったデータベースの復元は複雑になる可能性があります。 したがって、可能な時点でデータベースの完全バックアップを行うことから始めることをお勧めします。 その後、トランザクション ログを定期的にバックアップする必要があります。 その結果、作業損失の可能性が最小限に抑えられるだけでなく、トランザクション ログの切り捨ても可能になります。 一般に、トランザクション ログは、通常のログ バックアップ後に毎回切り捨てられます。  
   
 > [!IMPORTANT]
-> ログ バックアップは、ビジネス要件に対応するために十分な頻度で作成することをお勧めします。特に、ログ ストレージに障害が起こった場合に生じる作業損失に対する許容範囲を考慮してください。 ログ バックアップを行う適切な頻度は、作業損失に対する許容範囲と、ログ バックアップを保存、管理、復元できる量とのバランスによります。 復旧計画を導入するときは必要な [RTO](http://wikipedia.org/wiki/Recovery_time_objective) と [RPO](http://wikipedia.org/wiki/Recovery_point_objective) について、特にログ バックアップの頻度について検討してください。
+> ログ バックアップは、ビジネス要件に対応するために十分な頻度で作成することをお勧めします。特に、ログ ストレージに障害が起こった場合に生じる作業損失に対する許容範囲を考慮してください。 ログ バックアップを行う適切な頻度は、作業損失に対する許容範囲と、ログ バックアップを保存、管理、復元できる量とのバランスによります。 復旧計画を導入するときは必要な [RTO](https://wikipedia.org/wiki/Recovery_time_objective) と [RPO](https://wikipedia.org/wiki/Recovery_point_objective) について、特にログ バックアップの頻度について検討してください。
 > 15 分から 30 分間隔でログ バックアップを行えば十分でしょう。 業務上、作業損失の可能性を最小限に抑えることが求められる場合は、ログ バックアップの頻度を増やすことを検討します。 ログ バックアップの頻度を増やせば、ログ切り捨ての頻度も高くなり、ログ ファイルが小さくなる利点もあります。  
   
 > [!IMPORTANT]
 > 復元する必要があるログ バックアップの数を制限するには、定期的なデータのバックアップが不可欠です。 たとえば、データベースの完全バックアップを毎週実行し、差分バックアップを毎日実行するようにスケジュールできます。  
-> 繰り返しになりますが、復旧計画を導入するときは必要な [RTO](http://wikipedia.org/wiki/Recovery_time_objective) と [RPO](http://wikipedia.org/wiki/Recovery_point_objective) について、特に、データベースの完全バックアップと差分バックアップの頻度について検討してください。
+> 繰り返しになりますが、復旧計画を導入するときは必要な [RTO](https://wikipedia.org/wiki/Recovery_time_objective) と [RPO](https://wikipedia.org/wiki/Recovery_point_objective) について、特に、データベースの完全バックアップと差分バックアップの頻度について検討してください。
 
 トランザクション ログのバックアップの詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)」を参照してください。
   
@@ -253,7 +252,7 @@ LSN 148 はトランザクション ログの最後のレコードです。 LSN 
 [recovery interval サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[SQL Server のログ記録と復旧について (著者: Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[SQL Server Transaction Log Management (SQL Server のトランザクション ログ管理) (著者: Tony Davis、Gail Shaw)](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[SQL Server のログ記録と復旧について (著者: Paul Randal)](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[SQL Server Transaction Log Management (SQL Server のトランザクション ログ管理) (著者: Tony Davis、Gail Shaw)](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

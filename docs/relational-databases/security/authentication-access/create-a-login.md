@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630360"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675421"
 ---
 # <a name="create-a-login"></a>ログインの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "47630360"
   
     2.  **[場所を指定してください]** で、 **[場所...]** をクリックします。 をクリックして **[場所]** ダイアログ ボックスを開き、使用可能なサーバー場所の 1 つを選択します。 完了したら、 **[OK]** をクリックします。  
   
-    3.  **[選択するオブジェクト名を入力してください (例)]** で、検索するユーザー名またはグループ名を入力します。 詳細については、「 [[ユーザー、コンピューターまたはグループの選択] ダイアログ ボックス](http://technet.microsoft.com/library/cc771712.aspx)」を参照してください。  
+    3.  **[選択するオブジェクト名を入力してください (例)]** で、検索するユーザー名またはグループ名を入力します。 詳細については、「 [[ユーザー、コンピューターまたはグループの選択] ダイアログ ボックス](https://technet.microsoft.com/library/cc771712.aspx)」を参照してください。  
   
-    4.  詳細検索オプションを表示するには **[詳細]** をクリックします。 詳細については、「 [[ユーザー、コンピューターまたはグループの選択] ダイアログ ボックス - [詳細設定] ページ](http://technet.microsoft.com/library/cc733110.aspx)」を参照してください。  
+    4.  詳細検索オプションを表示するには **[詳細]** をクリックします。 詳細については、「 [[ユーザー、コンピューターまたはグループの選択] ダイアログ ボックス - [詳細設定] ページ](https://technet.microsoft.com/library/cc733110.aspx)」を参照してください。  
   
     5.  **[OK]** をクリックします。  
   

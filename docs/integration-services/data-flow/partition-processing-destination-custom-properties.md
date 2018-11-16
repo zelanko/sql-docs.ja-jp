@@ -11,12 +11,12 @@ ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f2fc4b5407d1a538696de30f62cef2c779bfa86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95fc60d5771d298f118eb97c4ef4083278706ce9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823360"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639419"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>パーティション処理変換先のカスタム プロパティ
   パーティション処理変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -42,6 +42,6 @@ ms.locfileid: "47823360"
  詳細については、「 [パーティション処理変換先](../../integration-services/data-flow/partition-processing-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

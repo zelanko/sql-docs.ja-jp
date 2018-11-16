@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8b8c0544ace2f02fbd202cbdf673b8c6b34f1cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 030bcb218a5865973ffaee0b02c0aa2f69282be7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820130"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698950"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  ビューに保存されるイベントの数。 たとえば、100 を指定すると場合、は、フィルター条件に一致する最新の 100 のイベントを診断セッションを永続化は。 イベントの照合の 100 よりも少ないが見つかると、診断のセッションが 100 未満のイベントが含まれます。 *max_item_count_num* は 100 以上 100,000 以下である必要があります。  
   
  *event_name*  
- 診断セッションで収集する実際のイベントを定義します。  *event_name* は、`sys.pdw_diag_events.is_enabled='True'` の場合に [sys.pdw_diag_events](http://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587) に列挙されるイベントの 1 つです。  
+ 診断セッションで収集する実際のイベントを定義します。  *event_name* は、`sys.pdw_diag_events.is_enabled='True'` の場合に [sys.pdw_diag_events](https://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587) に列挙されるイベントの 1 つです。  
   
  *filter_property_name*  
  結果を制限するプロパティの名前です。 たとえば、セッション ID に基づいて制限する場合は、*filter_property_name* を *SessionId* にする必要があります。 *filter_property_name* に使用できる値の一覧については、以下の *property_name* を参照してください。  
@@ -90,7 +90,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|サービスの プロセス id です。|  
   
 ## <a name="remarks"></a>Remarks  
- 各ユーザーには、最大 10 個の同時実行の診断セッションに許可します。 現在のセッションの一覧については、[sys.pdw_diag_sessions](http://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9) を参照してください。不要なセッションがある場合は、`DROP DIAGNOSTICS SESSION` を使用して削除します。  
+ 各ユーザーには、最大 10 個の同時実行の診断セッションに許可します。 現在のセッションの一覧については、[sys.pdw_diag_sessions](https://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9) を参照してください。不要なセッションがある場合は、`DROP DIAGNOSTICS SESSION` を使用して削除します。  
   
  診断セッションでは、収集のメタデータが削除されるまで続行されます。  
   

@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb63eb4a44b3035010336a8143b8bb34e0da8fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703730"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601382"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>SQL Server 2016 可用性グループの DTC をクラスター化する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用に Microsoft 分散トランザクション コーディネーター (DTC) サービスをクラスター化するための要件と手順について説明します。 分散トランザクションと [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」をご覧ください。
+このトピックでは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用に Microsoft 分散トランザクション コーディネーター (DTC) サービスをクラスター化するための要件と手順について説明します。 分散トランザクションと [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の詳細については、「 [Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」をご覧ください。
 
  ## <a name="checklist-preliminary-requirements"></a>チェックリスト: 準備要件
 ||タスク|リファレンス|  
@@ -48,7 +48,7 @@ ms.locfileid: "47703730"
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|ローカル DTC サービスを停止して無効にします。|[サービスの開始方法を構成する](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループの各インスタンスの SQL Server サービスを停止して再開します。  必要に応じて可用性グループをフェールオーバーします。|[可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
-- サーバーが Windows Server 2012 R2 の場合、オペレーティング システムに [KB 3030373](http://support.microsoft.com/kb/3090973) が適用されている必要があります。
+- サーバーが Windows Server 2012 R2 の場合、オペレーティング システムに [KB 3030373](https://support.microsoft.com/kb/3090973) が適用されている必要があります。
 
 - [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)のチェックリストに従って、可用性グループ用にサーバーを準備します。
 
@@ -64,6 +64,6 @@ ms.locfileid: "47703730"
 [可用性グループの作成の手順](create-an-availability-group-transact-sql.md)
 
 
-[可用性グループでの SQL Server 2016 DTC のサポート](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
+[可用性グループでの SQL Server 2016 DTC のサポート](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[外部リンク: Windows Server 2008 R2 で SQL Server のクラスター化されたインスタンスの DTC を構成する](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[外部リンク: Windows Server 2008 R2 で SQL Server のクラスター化されたインスタンスの DTC を構成する](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

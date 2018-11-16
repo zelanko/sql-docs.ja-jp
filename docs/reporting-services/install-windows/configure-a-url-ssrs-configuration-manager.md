@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645150"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813355"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] やレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。  
@@ -78,7 +78,7 @@ ms.locfileid: "47645150"
   
          `netstat –anp tcp`  
   
-    -   Microsoft サポート技術情報の「 [TCP/IP ポートの割り当てについて](http://support.microsoft.com/kb/174904)」を読んで、TCP ポートの割り当てと、Well Known ポート (0 ～ 1023)、予約済みポート (1024 ～ 49151)、および動的/プライベート ポート (49152 ～ 65535) の違いについて確認します。  
+    -   Microsoft サポート技術情報の「 [TCP/IP ポートの割り当てについて](https://support.microsoft.com/kb/174904)」を読んで、TCP ポートの割り当てと、Well Known ポート (0 ～ 1023)、予約済みポート (1024 ～ 49151)、および動的/プライベート ポート (49152 ～ 65535) の違いについて確認します。  
   
     -   Windows ファイアウォールを使用している場合はポートを開く必要があります。 手順については、「 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "47645150"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>追加の URL を指定するための詳細プロパティの設定  
  別のポートやホスト名 (IP アドレスか、コンピューターに割り当てられている IP アドレスに対してドメイン ネーム サーバーによって解決されるホスト ヘッダー名) を指定して、レポート サーバー Web サービスや [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に対して複数の URL を予約することができます。 複数の URL を作成すると、同じレポート サーバー インスタンスへの異なるアクセス パスを設定できます。 たとえば、レポート サーバーへのイントラネット アクセスとエクストラネット アクセスを有効にする場合は、既定の URL をイントラネット アクセス用に使用して、追加の完全修飾ホスト名をエクストラネット アクセス用に使用することができます。  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  同じアプリケーション インスタンスに対して複数の仮想ディレクトリ名を設定することはできません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションの各インスタンスはそれぞれ 1 つの仮想ディレクトリ名にマップされます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の複数のインスタンスが同じコンピューター上にある場合は、アプリケーションの仮想ディレクトリ名にインスタンス名を含めて、各要求が確実に目的の宛先に届くようにする必要があります。  
  
@@ -151,7 +151,7 @@ ms.locfileid: "47645150"
   
 2.  **[追加]** をクリックします。  
   
-3.  [IP アドレス] または [ホスト ヘッダー名] をクリックします。 ホスト ヘッダーを指定する場合は、DNS サービスで解決できる名前を指定してください。 公のドメイン名を指定する場合は、`http://www` を含む URL 全体を指定します。  
+3.  [IP アドレス] または [ホスト ヘッダー名] をクリックします。 ホスト ヘッダーを指定する場合は、DNS サービスで解決できる名前を指定してください。 公のドメイン名を指定する場合は、`https://www` を含む URL 全体を指定します。  
   
 4.  ポートを指定します。 カスタム ポートを指定する場合は、アプリケーションの URL に常にポート番号を含める必要があります。  
   
@@ -165,13 +165,13 @@ ms.locfileid: "47645150"
 ##  <a name="URLExamples"></a> URL の構成の例  
  レポート サーバーの URL の具体例を次に示します。  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -179,13 +179,13 @@ ms.locfileid: "47645150"
   
  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] へアクセスするための URL では、上記と類似した形式が使用されます。通常この URL は、レポート サーバーをホストする Web サイトで作成されます。 レポート サーバーの URL と異なる点は仮想ディレクトリ名です。この例では **reports** が使用されますが、別の名前を使用することもできます。  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

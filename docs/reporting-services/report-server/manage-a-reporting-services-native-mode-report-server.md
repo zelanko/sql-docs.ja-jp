@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3b8b5baec563f2c5c99a08a730204581b6abdc7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f8f0b048d540647c41deff629dec5495c91d7e76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021596"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812705"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーの管理
   ここでは、Reporting Services 構成マネージャーを使用してネイティブ モードのレポート サーバー インスタンスを構成する手順について説明します。  
@@ -52,7 +52,7 @@ ms.locfileid: "50021596"
  レポート サーバーの要求の受信と応答の送信に使用されるポートを開く方法について説明します。  
   
  [ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- `http://localhost` を使用してレポート マネージャーまたはレポート サーバーに接続するために必要な追加手順について説明します。  
+ `https://localhost` を使用してレポート マネージャーまたはレポート サーバーに接続するために必要な追加手順について説明します。  
   
  [リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  リモートのレポート サーバー インスタンスに接続したり別のコンピューターから構成したりすることができるようにインスタンスを構成する方法について説明します。  

@@ -22,12 +22,12 @@ ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e59bea343c8dab06510c2cd2247f49aa171bba73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 311212016f42367f90095bf12858210a580b4798
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712502"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698980"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ SET STATISTICS XML { ON | OFF }
   
  \Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- プラン表示スキーマは、[こちらの Web サイト](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)にもあります。  
+ プラン表示スキーマは、[こちらの Web サイト](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)にもあります。  
   
  SET STATISTICS PROFILE と SET STATISTICS XML は、同時に使用できません。 SET STATISTICS PROFILE ではテキスト形式の出力が生成され、SET STATISTICS XML では XML 形式の出力が生成されます。 将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいクエリ実行プランの情報は STATISTICS XML ステートメントでのみ表示され、SET STATISTICS PROFILE ステートメントでは表示されなくなります。  
   

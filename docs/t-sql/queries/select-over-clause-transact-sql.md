@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c284261a0e78fd45ba5215103a27443faa430b43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48f4de868657978e62285907d4f513b313f484b5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753881"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699830"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -287,7 +287,7 @@ WHERE SalesOrderID IN(43659,43664);
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 集計は `SalesOrderID` ごとに計算され、`Percent by ProductID` は各 `SalesOrderID` の各行に対して計算されることに注意してください。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]集計は `SalesOrderID` ごとに計算され、`Percent by ProductID` は各 `SalesOrderID` の各行に対して計算されることに注意してください。  
   
 ```  
 SalesOrderID ProductID   OrderQty Total       Percent by ProductID  
@@ -547,6 +547,6 @@ ORDER BY SalesOrderNumber,ProductKey;
 ## <a name="see-also"></a>参照  
  [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [分析関数 &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [sqlmag.com に Itzik Ben-Gan が投稿した、ウィンドウ関数と OVER に関する優れたブログ記事](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+ [sqlmag.com に Itzik Ben-Gan が投稿した、ウィンドウ関数と OVER に関する優れたブログ記事](https://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   

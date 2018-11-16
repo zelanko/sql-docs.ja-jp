@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 438356f08fee5bc9ac20c4a5b2038e54e7a6ffa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815970"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698780"
 ---
 # <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47815970"
 展開すると、その他のプロパティが表示されます。  
   
 **[データ型]**  
-選択した列のデータ型が表示されます。 詳細については、「 [データ型 (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)」を参照してください。  
+選択した列のデータ型が表示されます。 詳細については、「 [データ型 (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)」を参照してください。  
   
 **[IDENTITY インクリメント]**  
 ID 列の以降の各行で **[IDENTITY シード]** に追加される増分値が表示されます ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にのみ適用されます)。  
@@ -95,7 +95,7 @@ ID 列の以降の各行で **[IDENTITY シード]** に追加される増分値
 列のデータ型で NULL が許容されるかどうかが表示されます。  
   
 **[データ型]**  
-選択した列のデータ型が表示されます。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。 詳細については、「 [データ型 (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)」を参照してください。  
+選択した列のデータ型が表示されます。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。 詳細については、「 [データ型 (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)」を参照してください。  
   
 **[既定値またはバインド]**  
 列に値が指定されていない場合の、列の既定値が表示されます。 このドロップダウン リストに、データ ソースで定義されているグローバル既定値がすべて表示されます。 列にグローバル既定値をバインドする場合は、ドロップダウン リストから選択します。 列に既定の制約を作成する場合は、既定値をテキストとして直接入力します。  
@@ -143,7 +143,7 @@ image 型の列のドキュメントの種類を定義するために使用さ�
 列のインデックス作成に使用される言語を指定します  
   
 **[統計的セマンティクス]**  
-選択されている列に対する統計的セマンティック インデックスを有効にするかどうかを選択します。 詳細については、 [セマンティック検索のプレースホルダー](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)に関する記述を参照してください。  
+選択されている列に対する統計的セマンティック インデックスを有効にするかどうかを選択します。 詳細については、 [セマンティック検索のプレースホルダー](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)に関する記述を参照してください。  
   
 **[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、 **[統計的セマンティクス]** オプションは **[いいえ]** に設定され、変更できません。 **[言語]** を選択する前に **[統計的セマンティクス]** オプションで **[はい]** を選択した場合、 **[言語]** 列で使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
   

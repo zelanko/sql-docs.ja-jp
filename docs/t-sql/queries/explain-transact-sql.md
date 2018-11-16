@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ff1df22bd00680aeb0574624a3a7b55a688b3a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cef2b01c9b9d5147583cc4419fd105bd3e91503f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632660"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701420"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ EXPLAIN SQL_statement
 |\<sql>|*SQL_statement* をエコーします。|  
 |\<params>|このタグは、この時点では使用されません。|  
 |\<dsql_operations>|クエリの手順がまとめられて含まれ、クエリのコスト情報が含まれます。 すべての `<dsql_operation>` ブロックも含まれます。 このタグには、全体のクエリのカウント情報が含まれています。<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* は、クエリの実行にかかる推定合計時間 (ミリ秒) です。<br /><br /> *total_number_operations* は、クエリの操作の総数です。 並列化され複数のノードで実行される操作は、1 つの操作としてカウントされます。|  
-|\<dsql_operation>|クエリ プラン内の 1 つの操作について説明します。 \<dsql_operation> タグには、属性として操作の種類が含まれます。<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* は、[データのクエリ (SQL Server PDW)](http://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) で見つかった値の 1 つです。<br /><br /> `\<dsql_operation>` ブロック内のコンテンツは、操作の種類によって異なります。<br /><br /> 次の表を参照してください。|  
+|\<dsql_operation>|クエリ プラン内の 1 つの操作について説明します。 \<dsql_operation> タグには、属性として操作の種類が含まれます。<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* は、[データのクエリ (SQL Server PDW)](https://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) で見つかった値の 1 つです。<br /><br /> `\<dsql_operation>` ブロック内のコンテンツは、操作の種類によって異なります。<br /><br /> 次の表を参照してください。|  
   
 |操作の種類|コンテンツ|例|  
 |--------------------|-------------|-------------|  

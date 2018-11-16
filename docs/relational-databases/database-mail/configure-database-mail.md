@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -41,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da0246a1a953dcfa4d3af6af6d1bb28116c9005e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625780"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678021"
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47625780"
   
 -   **データベース メールの構成:**  [データベース メール構成ウィザードの使用](#DBWizard)、 [テンプレートの使用](#Template)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  **Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 詳細については、「 [Database Mail XPs サーバー構成オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 」を参照してください。  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
@@ -441,7 +440,7 @@ ms.locfileid: "47625780"
  テスト電子メール メッセージの **mailitem_id** 。  
   
  **[トラブルシューティング]**  
- クリックすると、オンライン ブックのトピック「 [データベース メールのトラブルシューティング](http://msdn.microsoft.com/library/ms188663.aspx)」が開きます。  
+ クリックすると、オンライン ブックのトピック「 [データベース メールのトラブルシューティング](https://msdn.microsoft.com/library/ms188663.aspx)」が開きます。  
   
  [データベース メール構成ウィザードの使用](#DBWizard)  
   

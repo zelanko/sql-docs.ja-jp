@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
@@ -33,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1427cea1e6a920b0c3705a5a305e165b4ccb99be
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6771cb18d227c4e81290129ed5611da584988e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991096"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665018"
 ---
 # <a name="database-lifecycle-management"></a>データベースのライフサイクル管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ ms.locfileid: "49991096"
   
  DLM では、まずプロジェクトのデザインと目的を考察することから始めます。次に、データベースの開発、テスト、構築、配置、管理、監視、およびバックアップの各操作を行ってから、最後にデータをアーカイブします。 このトピックでは、データベースの開発から始まり、構築、配置、監視の各操作を進める、DLM の段階の概要を示します。 また、データ管理作業や、インポートとエクスポート、バックアップ、移行、同期などのデータ移行操作も示します。  
   
- トピック全体を確認するには、「 [データベース ライフ サイクル管理 (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949)」を参照してください。  
+ トピック全体を確認するには、「 [データベース ライフ サイクル管理 (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Azure ホーム ページ](http://www.windowsazure.com/)   
- [Microsoft Azure デベロッパー センター](http://www.windowsazure.com/develop/overview/)   
- [Microsoft Azure の管理のセンター](http://www.windowsazure.com/manage/overview/)   
- [Windows Azure チーム ブログ](http://www.windowsazure.com/community/blog/)   
- [Microsoft Azure のサポート オプション](http://www.windowsazure.com/support/contact/)  
+ [Microsoft Azure ホーム ページ](https://www.windowsazure.com/)   
+ [Microsoft Azure デベロッパー センター](https://www.windowsazure.com/develop/overview/)   
+ [Microsoft Azure の管理のセンター](https://www.windowsazure.com/manage/overview/)   
+ [Windows Azure チーム ブログ](https://www.windowsazure.com/community/blog/)   
+ [Microsoft Azure のサポート オプション](https://www.windowsazure.com/support/contact/)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6f57d1cc99a2966ea220774366cca8aa6e2f8049
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847e0dd3546062f00a1feb939ec4fa469f693c06
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834966"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702710"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 設定リファレンス (Master Data Services)
 
@@ -33,16 +33,16 @@ ms.locfileid: "47834966"
 |Configuration 要素|[説明]|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Custom 要素。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに接続します。|  
-|**connectionStrings**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [connectionStrings 要素 (ASP.NET 設定スキーマ)](http://go.microsoft.com/fwlink/?LinkId=178347) 」を参照してください。|  
-|**system.web**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [system.web 要素 (ASP.NET 設定スキーマ)](http://go.microsoft.com/fwlink/?LinkId=178348) 」を参照してください。|  
-|**startup**|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<startup> 要素](http://go.microsoft.com/fwlink/?LinkId=178349)」を参照してください。|  
-|**runtime**|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<runtime> 要素](http://go.microsoft.com/fwlink/?LinkId=178350)」を参照してください。|  
-|**system.codedom**|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<system.codedom> 要素](http://go.microsoft.com/fwlink/?LinkId=178351)」を参照してください。|  
-|**system.web.extensions**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [system.web.extensions 要素 (ASP.NET 設定スキーマ)](http://go.microsoft.com/fwlink/?LinkId=178352) 」を参照してください。|  
-|**system.webServer**|IIS 要素を含んだセクション グループ。 詳細については、MSDN ライブラリの「[system.webServer セクション グループ \[IIS 7 設定スキーマ\]](http://go.microsoft.com/fwlink/?LinkId=178353)」を参照してください。|  
-|**system.serviceModel**|WCF 要素。 詳細については、MSDN ライブラリの「[\<system.serviceModel>](http://go.microsoft.com/fwlink/?LinkId=178354)」を参照してください。|  
-|**system.diagnostics**|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<system.diagnostics> 要素](http://go.microsoft.com/fwlink/?LinkId=178355)」を参照してください。|  
-|**appSettings**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [appSettings 要素 (全般設定スキーマ)](http://go.microsoft.com/fwlink/?LinkId=178356) 」を参照してください。|  
+|**connectionStrings**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [connectionStrings 要素 (ASP.NET 設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178347) 」を参照してください。|  
+|**system.web**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [system.web 要素 (ASP.NET 設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178348) 」を参照してください。|  
+|**startup**|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<startup> 要素](https://go.microsoft.com/fwlink/?LinkId=178349)」を参照してください。|  
+|**runtime**|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<runtime> 要素](https://go.microsoft.com/fwlink/?LinkId=178350)」を参照してください。|  
+|**system.codedom**|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<system.codedom> 要素](https://go.microsoft.com/fwlink/?LinkId=178351)」を参照してください。|  
+|**system.web.extensions**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [system.web.extensions 要素 (ASP.NET 設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178352) 」を参照してください。|  
+|**system.webServer**|IIS 要素を含んだセクション グループ。 詳細については、MSDN ライブラリの「[system.webServer セクション グループ \[IIS 7 設定スキーマ\]](https://go.microsoft.com/fwlink/?LinkId=178353)」を参照してください。|  
+|**system.serviceModel**|WCF 要素。 詳細については、MSDN ライブラリの「[\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354)」を参照してください。|  
+|**system.diagnostics**|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<system.diagnostics> 要素](https://go.microsoft.com/fwlink/?LinkId=178355)」を参照してください。|  
+|**appSettings**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [appSettings 要素 (全般設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178356) 」を参照してください。|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices 要素  
  **\<masterDataServices>** 要素は、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに接続するのに使用するカスタム要素です。  

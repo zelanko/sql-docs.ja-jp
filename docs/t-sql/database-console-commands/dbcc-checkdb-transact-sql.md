@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 78cf2eae42192abf6b926b753595ed26cf4190bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00c334d707886efdcfa00860def58f0c662a7cb6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705450"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704120"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  報告されたすべてのエラーの修復を試みます。 修復を実行すると、データが失われることがあります。  
-    
+    
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS オプションは、サポートされている機能ですが、データベースを物理的に一貫性のある状態にするためには、必ずしも最適なオプションではない場合があります。 成功した場合、REPAIR_ALLOW_DATA_LOSS オプションによりいくつかデータが失われることがあります。 実際には、ユーザーが最後の既知の良好なバックアップからデータベースを復元する場合よりも、失われるデータが多い場合があります。 
 >
@@ -117,12 +117,12 @@ REPAIR_REBUILD
  この引数では、FILESTREAM データに関係するエラーは修復されません。  
     
 > [!IMPORTANT] 
-> 任意の REPAIR オプションが指定された DBCC CHECKDB は、完全にログに記録されて回復可能なため、[!INCLUDE[msCoName](../../includes/msconame-md.md)] は常にユーザーがトランザクション内で REPAIR オプションを使用して CHECKDB を使用することをお勧めします (コマンドを実行する前に、BEGIN TRANSACTION を実行します)。これにより、ユーザーが操作の結果を受け入れるか確認することができます。 ユーザーは、COMMIT TRANSACTION を実行して、修復操作によってなされたすべての作業をコミットできます。 ユーザーが操作の結果を受け入れない場合は、ROLLBACK TRANSACTION を実行して、修復操作の結果を元に戻すことができます。    
+> 任意の REPAIR オプションが指定された DBCC CHECKDB は、完全にログに記録されて回復可能なため、[!INCLUDE[msCoName](../../includes/msconame-md.md)] は常にユーザーがトランザクション内で REPAIR オプションを使用して CHECKDB を使用することをお勧めします (コマンドを実行する前に、BEGIN TRANSACTION を実行します)。これにより、ユーザーが操作の結果を受け入れるか確認することができます。 ユーザーは、COMMIT TRANSACTION を実行して、修復操作によってなされたすべての作業をコミットできます。 ユーザーが操作の結果を受け入れない場合は、ROLLBACK TRANSACTION を実行して、修復操作の結果を元に戻すことができます。    
 >     
 > エラーの修復では、バックアップから復元することをお勧めします。 修復操作では、テーブルまたはテーブル間に制約があっても考慮されません。 指定したテーブルに 1 つでも関連する制約がある場合は、修復操作の後に DBCC CHECKCONSTRAINTS を実行することをお勧めします。 REPAIR を使用する必要がある場合は、修復オプションを指定せずに DBCC CHECKDB を実行して、使用する修復レベルを確認してください。 REPAIR_ALLOW_DATA_LOSS レベルを使用する場合は、このオプションを指定して DBCC CHECKDB を実行する前に、データベースをバックアップすることをお勧めします。    
     
 ALL_ERRORMSGS  
- オブジェクトごとに、報告されているすべてのエラーを表示します。 既定では、すべてのエラー メッセージが表示されます。 そのため、このオプションを指定しても省略しても影響はありません。 [tempdb データベース](../../relational-databases/databases/tempdb-database.md)から生成されるメッセージを除き、エラー メッセージは、オブジェクト ID を基準として並べ替えられます。     
+ オブジェクトごとに、報告されているすべてのエラーを表示します。 既定では、すべてのエラー メッセージが表示されます。 そのため、このオプションを指定しても省略しても影響はありません。 [tempdb データベース](../../relational-databases/databases/tempdb-database.md)から生成されるメッセージを除き、エラー メッセージは、オブジェクト ID を基準として並べ替えられます。     
 
 EXTENDED_LOGICAL_CHECKS  
  互換性レベルが 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 以上の場合、インデックス付きビュー、XML インデックス、および空間インデックス (存在する場合) について、論理的な一貫性をチェックします。  
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 TABLOCK の作用によって負荷の高いデータベースでも DBCC CHECKDB の実行速度が速くなりますが、DBCC CHECKDB の実行中はデータベースでのコンカレンシーが低下します。  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK では実行されるチェックが制限されます。DBCC CHECKCATALOG はデータベースに対して実行されず、[!INCLUDE[ssSB](../../includes/sssb-md.md)] データは検証されません。
     
@@ -155,11 +155,11 @@ PHYSICAL_ONLY
 DATA_PURITY  
  DBCC CHECKDB が、データベース内の、値が無効または範囲外の列をチェックします。 たとえば、DBCC CHECKDB は、**datetime** 型の許容範囲外となる日時の値を含む列や、小数点以下桁数または有効桁数の値が有効ではない **decimal** 型や概数型の列を検出します。  
  列の値の整合性チェックは既定で有効になっているため、DATA_PURITY オプションを指定する必要はありません。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたデータベースの場合は、列の値のチェックは既定では有効になっていないため、データベースで DBCC CHECKDB WITH DATA_PURITY を実行します。 エラーなく実行されると、その後、DBCC CHECKDB は既定で列の値の整合性をチェックします。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からのデータベースのアップグレードによる CHECKDB への影響の詳細については、後の「解説」を参照してください。  
-    
+    
 > [!WARNING]
 > PHYSICAL_ONLY を指定した場合は、列の整合性チェックは行われません。
     
- DBCC 修復オプションを使用して、このオプションによって報告された検証エラーを修正することはできません。 これらのエラーを手動で修正する方法の詳細については、サポート技術情報の資料 923247「[SQL Server 2005 以降のバージョンでの DBCC エラー 2570 のトラブルシューティング](http://support.microsoft.com/kb/923247)」を参照してください。  
+ DBCC 修復オプションを使用して、このオプションによって報告された検証エラーを修正することはできません。 これらのエラーを手動で修正する方法の詳細については、サポート技術情報の資料 923247「[SQL Server 2005 以降のバージョンでの DBCC エラー 2570 のトラブルシューティング](https://support.microsoft.com/kb/923247)」を参照してください。  
     
  MAXDOP  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
@@ -167,7 +167,7 @@ DATA_PURITY
  ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP の値がリソース ガバナーで構成されている値を超える場合は、「[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)」で説明されているように、[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]でリソース ガバナーの MAXDOP 値が使用されます。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
  
 > [!WARNING] 
-> MAXDOP が 0 に設定されている場合、SQL Server では使用する最大限の並列処理が選択されます。    
+> MAXDOP が 0 に設定されている場合、SQL Server では使用する最大限の並列処理が選択されます。    
 
 ## <a name="remarks"></a>Remarks    
 DBCC CHECKDB は、無効なインデックスについては検査しません。 無効なインデックスの詳細については、「[インデックスと制約の無効化](../../relational-databases/indexes/disable-indexes-and-constraints.md)」を参照してください。    

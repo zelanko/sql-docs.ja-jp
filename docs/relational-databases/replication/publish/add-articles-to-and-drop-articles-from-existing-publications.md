@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88a79851dbb95a42ca35be1fb9e82db362564dc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82b71c24dc5aed407a50cfd4758ac13357eb29c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617711"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673291"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>既存のパブリケーションでのアーティクルの追加および削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47617711"
  前述のように、場合によっては、アーティクルを削除するために、サブスクリプションの削除、再作成、および同期が必要になる場合があります。 詳細については、「[パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)」と「[データの同期](../../../relational-databases/replication/synchronize-data.md)」を参照してください。  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 以降、および **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 以降では、トランザクション レプリケーションに参加しているアーティクルに **DROP TABLE** DLL コマンドを使用する、テーブルの削除をサポートします。 DROP TABLE DDL がパブリケーションでサポートされる場合、DROP TABLE 操作ではパブリケーションとデータベースからテーブルが削除されます。 ログ リーダー エージェントでは、削除されたテーブルのディストリビューション データベースのクリーンアップ コマンドをポストし、パブリッシャーのメタデータのクリーンアップを実行します。 ログ リーダーで削除されたテーブルを参照しているすべてのログ レコードを処理していない場合、削除されたテーブルに関連付けられている新しいコマンドは無視されます。 既に処理されているレコードは、ディストリビューション データベースに配信されます。 ログ リーダーが廃止 (削除) されたアーティクルをクリーンアップする前に、ディストリビューション エージェントがレコードを処理する場合、これらのレコードはサブスクライバー データベースに適用される可能性があります。 すべてのトランザクション レプリケーション パブリケーションに対する**既定**の設定では、DROP TABLE DLL をサポートしません。 [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) には、この改善機能に関する詳細が含まれます。
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 以降、および **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 以降では、トランザクション レプリケーションに参加しているアーティクルに **DROP TABLE** DLL コマンドを使用する、テーブルの削除をサポートします。 DROP TABLE DDL がパブリケーションでサポートされる場合、DROP TABLE 操作ではパブリケーションとデータベースからテーブルが削除されます。 ログ リーダー エージェントでは、削除されたテーブルのディストリビューション データベースのクリーンアップ コマンドをポストし、パブリッシャーのメタデータのクリーンアップを実行します。 ログ リーダーで削除されたテーブルを参照しているすべてのログ レコードを処理していない場合、削除されたテーブルに関連付けられている新しいコマンドは無視されます。 既に処理されているレコードは、ディストリビューション データベースに配信されます。 ログ リーダーが廃止 (削除) されたアーティクルをクリーンアップする前に、ディストリビューション エージェントがレコードを処理する場合、これらのレコードはサブスクライバー データベースに適用される可能性があります。 すべてのトランザクション レプリケーション パブリケーションに対する**既定**の設定では、DROP TABLE DLL をサポートしません。 [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) には、この改善機能に関する詳細が含まれます。
 
   
 ## <a name="see-also"></a>参照  

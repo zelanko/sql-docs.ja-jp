@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee3a8e9576b38ee49dc5b562384d51c45f58c3fd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 64339c62cfe6d37e1117febd797ae43d6d43bdc2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020256"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813300"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>SQL Server Reporting Services と SharePoint グループのアクセス許可
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのロール ベースおよびタスク ベースの承認機能を、SharePoint 製品のセキュリティ機能と比較します。 このトピックでは、ロール、タスク、SharePoint グループ、権限レベル、および権限の用語と特徴を比較します。  
@@ -51,7 +51,7 @@ ms.locfileid: "50020256"
 |---|**権限レベルのグループ:** たとえば、"閲覧者" グループに対応する "表示のみ"。|  
 |**タスク:** たとえば、"レポートの管理"。|**権限:** たとえば、"表示のみ" グループ内には、アイテムの表示、バージョンの表示、アプリケーション ページの表示を行うための権限に関連する一覧があります。|  
   
- SharePoint の権限の詳細については、「 [アクセス許可レベルと権限](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) 」、および「 [アクセス許可レベルおよびグループを決定する (SharePoint 2013)](https://technet.microsoft.com/library/cc262690.aspx)」を参照してください。  
+ SharePoint の権限の詳細については、「 [アクセス許可レベルと権限](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) 」、および「 [アクセス許可レベルおよびグループを決定する (SharePoint 2013)](https://technet.microsoft.com/library/cc262690.aspx)」を参照してください。  
   
 ##  <a name="bkmk_compare_roles_groups"></a> ネイティブ モードと SharePoint グループの比較  
  次の表では、ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で事前定義されているロールの定義と、標準の SharePoint グループとを比較しています。 SharePoint のグループが目的のロールと一致しない場合は、SharePoint でカスタム グループを作成し、権限レベルを割り当てることができます。  

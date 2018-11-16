@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846600"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661131"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ ms.locfileid: "47846600"
 >  データベース エンジン チューニング アドバイザーの一時停止はサポートされていません。 ツールバーの **[分析の停止]** または **[分析の停止 (推奨設定を使用)]** のいずれかをクリックしてからツールバーの **[分析の開始]** をクリックすると、データベース エンジン チューニング アドバイザーは新しいチューニング セッションを開始します。  
   
 ###  <a name="dta"></a> dta ユーティリティを使用する  
- [dta ユーティリティ](../../tools/dta/dta-utility.md) には、データベースのチューニングに使用できるコマンド プロンプト実行可能ファイルが用意されています。 このファイルにより、バッチ ファイルやスクリプトでデータベース エンジン チューニング アドバイザー機能を使用できるようになります。 **dta** ユーティリティでは、ワークロードとして、プラン キャッシュ エントリ、トレース ファイル、トレース テーブル、および [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトが使用されます。 また、データベース エンジン チューニング アドバイザー XML スキーマに準拠する XML 入力も使用されます。このスキーマは、この [Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=43100)から入手できます。  
+ [dta ユーティリティ](../../tools/dta/dta-utility.md) には、データベースのチューニングに使用できるコマンド プロンプト実行可能ファイルが用意されています。 このファイルにより、バッチ ファイルやスクリプトでデータベース エンジン チューニング アドバイザー機能を使用できるようになります。 **dta** ユーティリティでは、ワークロードとして、プラン キャッシュ エントリ、トレース ファイル、トレース テーブル、および [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトが使用されます。 また、データベース エンジン チューニング アドバイザー XML スキーマに準拠する XML 入力も使用されます。このスキーマは、この [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100)から入手できます。  
   
  **dta** ユーティリティを使用してワークロードのチューニングを開始する前に、次のことを考慮してください。  
   
@@ -313,7 +313,7 @@ ms.locfileid: "47846600"
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、この [Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)からもオンラインで入手できます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、この [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)からもオンラインで入手できます。  
   
  この URL から、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML スキーマを入手できるページに移動できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの行までページを下にスクロールします。  
   

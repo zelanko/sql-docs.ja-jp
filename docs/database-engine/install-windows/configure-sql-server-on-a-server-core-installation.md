@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 38fefb6c403008e32d9783ac8a1b2a956a340055
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddee0e6eb08f95b1552ae76291afa22e0d3e171b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691579"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602022"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
 
@@ -34,15 +34,15 @@ ms.locfileid: "47691579"
   
 Server Core インストールをリモートで構成および管理する方法について詳しくは、以下の記事をご覧ください。  
   
-- [Server Core のインストール](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [Server Core のインストール](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
-- [Sconfig.cmd を使用して Windows Server 2016 の Server Core インストールを構成する](http://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [Sconfig.cmd を使用して Windows Server 2016 の Server Core インストールを構成する](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
   
-- [Server Core サーバーへのサーバーの役割と機能のインストール](http://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [Server Core サーバーへのサーバーの役割と機能のインストール](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Server Core インストールの管理: 概要](http://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Server Core インストールの管理: 概要](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
-- [Server Core インストールの管理](http://go.microsoft.com/fwlink/?LinkId=245963)
+- [Server Core インストールの管理](https://go.microsoft.com/fwlink/?LinkId=245963)
   
 ##  <a name="BKMK_InstallSQLUpdates"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール  
 ここでは、Windows Server Core コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 Windows Server Core コンピューターへの [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] のインストールの詳細については、「[Server Core への SQL Server のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
@@ -230,6 +230,6 @@ $Tcp
   
 ## <a name="see-also"></a>参照  
  [Server Core への SQL Server のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [インストール方法に関する記事](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [インストール方法に関する記事](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   
