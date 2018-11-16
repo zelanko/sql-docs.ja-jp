@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4868aa775ac2958cc0e034196a0e911b58e78a34
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0b79db4806f22c7d25af4f292fedddb46b40d1e7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018527"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696941"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System での Windows Server Update Services (WSUS) の構成します。
 これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System のように WSUS を構成するための手順を説明します。 アプライアンスにソフトウェア更新プログラムを適用する前に、WSUS を構成する必要があります。 WSUS は、アプライアンスの VMM 仮想マシンに既にインストールされています。  
   
-WSUS を構成する方法の詳細については、次を参照してください。、 [WSUS ステップ バイ ステップ インストール ガイド](http://go.microsoft.com/fwlink/?LinkId=202417)、WSUS web サイト。 WSUS を構成した後、次を参照してください。[ダウンロードと Microsoft 更新プログラムの適用&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)更新を開始します。  
+WSUS を構成する方法の詳細については、次を参照してください。、 [WSUS ステップ バイ ステップ インストール ガイド](https://go.microsoft.com/fwlink/?LinkId=202417)、WSUS web サイト。 WSUS を構成した後、次を参照してください。[ダウンロードと Microsoft 更新プログラムの適用&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)更新を開始します。  
   
 > [!WARNING]  
 > この構成プロセス中にエラーが発生した場合は、停止し、サポートにお問い合わせします。 エラーを無視したり、エラーが発生した後、プロセスの続行しないでください。  
@@ -79,7 +79,7 @@ WSUS を構成するには、する必要があります。
   
 4.  アップ ストリーム サーバーを選択します。  
   
-    **アップ ストリーム サーバーの選択**ページの WSUS 構成ウィザードで、仮想マシンの管理 ノードで WSUS がソフトウェア更新プログラムを取得するアップ ストリーム サーバーに接続する方法を選択します。 アップ ストリーム サーバーを同期する、2 つの選択肢は[Microsoft Update](http://go.microsoft.com/fwlink/?LinkId=133349)または別の Windows Server Update Services サーバーで更新を同期します。  
+    **アップ ストリーム サーバーの選択**ページの WSUS 構成ウィザードで、仮想マシンの管理 ノードで WSUS がソフトウェア更新プログラムを取得するアップ ストリーム サーバーに接続する方法を選択します。 アップ ストリーム サーバーを同期する、2 つの選択肢は[Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=133349)または別の Windows Server Update Services サーバーで更新を同期します。  
   
     #### <a name="to-update-by-using-microsoft-update"></a>Microsoft Update を使用して更新するには  
   

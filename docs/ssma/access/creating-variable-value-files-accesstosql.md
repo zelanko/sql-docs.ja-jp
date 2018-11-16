@@ -10,12 +10,12 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 005be9b3009ba8812219a6974fa13465bf786747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1a2840fbdf8fbafae3b4a8e17c200c32d4da65f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680950"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669781"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>変数値ファイル (AccessToSQL) の作成
 変数値ファイルは、サーバーの移行の間で頻繁に変更される (送信元または送信先のサーバー名) などのコマンドのパラメーター値を構成する XML ファイルです。 各ソース サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている多数のデータベースの移行が発生すると、 **– v**コマンド ライン スイッチします。 この動作は、変数の複数のファイルで変数の値を持ついくつかのスクリプト ファイルの静的な値を維持するために役立ちます。  
@@ -95,5 +95,5 @@ ms.locfileid: "47680950"
 コンソールの運用には、次の手順は[サーバー接続ファイルを作成する&#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>関連項目  
-[サーバー接続ファイル (アクセス) を作成します。](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[サーバー接続ファイル (アクセス) を作成します。](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

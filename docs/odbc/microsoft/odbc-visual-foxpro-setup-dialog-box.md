@@ -15,17 +15,17 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37ec2a9f033c124ab70db996f11179797877c09b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686440"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674418"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro セットアップ ダイアログ ボックス
 **ODBC Visual FoxPro セットアップ**ダイアログ ボックスでは、Visual FoxPro データ ソースの変更を追加することができます。  
   
- ドライバーをダウンロードするには、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](http://go.microsoft.com/fwlink/?LinkId=121318)します。  
+ ドライバーをダウンロードするには、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)します。  
   
 ## <a name="dialog-box-options"></a>ダイアログ ボックスのオプション  
  **データ ソース名**  

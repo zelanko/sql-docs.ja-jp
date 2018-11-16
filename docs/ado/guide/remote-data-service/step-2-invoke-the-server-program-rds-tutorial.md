@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +13,18 @@ ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a2e7b62276234dcf11067395ff2512a8e93af96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a64e45f68003948f0d0f45d3932c1edf9b94972a
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800510"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559949"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>手順 2: サーバー プログラムを呼び出す (RDS チュートリアル)
 クライアント上のメソッドを呼び出すと*プロキシ*サーバー上の実際のプログラムは、メソッドを実行します。 この手順では、サーバーでクエリを実行します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  **パート A**を使用していない場合[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)でこのチュートリアルでは、この手順を実行する最も簡単な方法は使用すること、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。 **Rds.DataControl**プロキシを作成するこの手順でクエリを発行の前の手順を結合します。  
   
@@ -32,10 +32,10 @@ ms.locfileid: "47800510"
   
  このチュートリアルでは使用しません、 **rds.DataControl**がどのようにした場合の外観は。  
   
-```  
+```vb
 Sub RDSTutorial2A()  
    Dim DC as New RDS.DataControl  
-   DC.Server = "http://yourServer"  
+   DC.Server = "https://yourServer"  
    DC.Connect = "DSN=Pubs"  
    DC.SQL = "SELECT * FROM Authors"  
    DC.Refresh  
@@ -44,22 +44,22 @@ Sub RDSTutorial2A()
   
  チュートリアルを呼び出す RDS、ADO オブジェクトとがどのようにした場合の外観になります。  
   
-```  
+```vb
 Dim rs as New ADODB.Recordset  
 rs.Open "SELECT * FROM Authors","Provider=MS Remote;Data Source=Pubs;" & _  
-        "Remote Server=http://yourServer;Remote Provider=SQLOLEDB;"  
+        "Remote Server=https://yourServer;Remote Provider=SQLOLEDB;"  
 ```  
   
  **パート B**のこの手順を実行する一般的な方法を呼び出す、 **RDSServer.DataFactory**オブジェクト[クエリ](../../../ado/reference/rds-api/query-method-rds.md)メソッド。 このメソッドにはデータ ソースへの接続に使用される、接続文字列であり、コマンド テキスト、データ ソースから返される行を指定するために使用します。  
   
  このチュートリアルでは、 **DataFactory**オブジェクト**クエリ**メソッド。  
   
-```  
+```vb
 Sub RDSTutorial2B()  
    Dim DS as New RDS.DataSpace  
    Dim DF  
    Dim RS as ADODB.Recordset  
-   Set DF = DS.CreateObject("RDSServer.DataFactory", "http://yourServer")  
+   Set DF = DS.CreateObject("RDSServer.DataFactory", "https://yourServer")  
    Set RS = DF.Query ("DSN=Pubs", "SELECT * FROM Authors")  
 ...  
 ```  

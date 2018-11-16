@@ -19,12 +19,12 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c430e43fbb8f48968e96a027becf1abccf63e2f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830070"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658481"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
  このコレクター型の XML スキーマを指定します。 *parameter_schema*は**xml**し、特定のコレクター型で必要になります。 必要でない場合は、この引数を NULL にできます。  
   
  [ **@collection_package_id =** ] *collection_package_id*  
- ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション パッケージのコレクション セットによって使用されます。 *collection_package_id*は**uniqueidentifer**必要があります。 値を取得する*collection_package_id*、msdb データベースの dbo.syscollector_collector_types システム ビューに対してクエリします。  
+ コレクション セットで使用される [!INCLUDE[ssIS](../../includes/ssis-md.md)] コレクション パッケージを参照する一意なローカル識別子を指定します。 *collection_package_id*は**uniqueidentifer**必要があります。 値を取得する*collection_package_id*、msdb データベースの dbo.syscollector_collector_types システム ビューに対してクエリします。  
   
  [ **@upload_package_id =** ] *upload_package_id*  
- ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション セットによって使用されるパッケージをアップロードします。 *upload_package_id*は**uniqueidentifier**必要があります。 値を取得する*upload_package_id*、msdb データベースの dbo.syscollector_collector_types システム ビューに対してクエリします。  
+ コレクション セットで使用される [!INCLUDE[ssIS](../../includes/ssis-md.md)] アップロード パッケージを参照する一意なローカル識別子を指定します。 *upload_package_id*は**uniqueidentifier**必要があります。 値を取得する*upload_package_id*、msdb データベースの dbo.syscollector_collector_types システム ビューに対してクエリします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -76,7 +76,7 @@ EXEC sp_syscollector_update_collector_type
 @collector_type_uid = '302E93D1-3424-4BE7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
   <xs:element name="TSQLQueryCollector">  
 <xs:complexType>  
   <xs:sequence>  

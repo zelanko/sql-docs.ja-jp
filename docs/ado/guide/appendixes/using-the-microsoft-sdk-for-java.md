@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edab19ee8b3ae4eee186835d25220ee638c41149
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab4aaed1cfd661d38476c81f8bdc3dcab3aa0f88
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786920"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350496"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Microsoft SDK for Java を使用する
 
@@ -38,13 +38,13 @@ Microsoft SDK for Java は、Microsoft Internet Explorer の環境の開発キ�
   
 1.  コマンド プロンプトで、次を実行します。 Microsoft SDK for Java の Bin ディレクトリを格納するパスを設定または、その場所からのコマンドを実行する必要があります。 通常、Microsoft SDK for Java は、Visual Studio と同じ場所にインストールされます。 これは、1 つのコマンド ステートメントです。  
   
-    ```  
+    ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
 2.  生成されたクラスをコンパイルするには、次のコマンドを実行します。 トレースできるように、デバッグ シンボルの生成を/g:t スイッチがオンにします。Java の記号。 リリース ビルドの場合は、それを削除します。  
   
-    ```  
+    ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   

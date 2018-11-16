@@ -17,12 +17,12 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f70970ec872d3c921fa10e3eacb1c54d7c4de2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632210"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600022"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet Publishing
 ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトで使える Microsoft OLE DB Provider for Internet Publishing (インターネット発行プロバイダー) にアクセスして、リソースを操作する Web フォルダーやファイルなどMicrosoft FrontPage によって処理されます。 ADO では、ソースを指定することができます、**レコード**、 **Stream**、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) url。 ことができますし、アップロード、ダウンロード、移動、コピー、およびリソースを削除またはリソース プロパティを直接操作します。  
@@ -36,20 +36,20 @@ ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[Stream
 -   指定"URL ="接続文字列にします。 以下に例を示します。  
   
     ```  
-    objConn.Open "URL=http://servername"  
+    objConn.Open "URL=https://servername"  
     ```  
   
 -   指定の Msdaipp.dso、*プロバイダー*接続文字列のキーワード。 以下に例を示します。  
   
     ```  
-    objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
+    objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
 -   指定の Msdaipp.dso、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)のプロパティ、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 以下に例を示します。  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
-    objConn.Open "http://servername"  
+    objConn.Open "https://servername"  
     ```  
   
 > [!NOTE]

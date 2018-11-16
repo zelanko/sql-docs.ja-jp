@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9871fb0f7f11a83506631ecb27d756bfaf8d036e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8193643e59c89d1bdc2877e72105f83a1fd6df3f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796270"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670211"
 ---
 # <a name="functions-on-string-values---string-length"></a>文字列値に使用する関数 - string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  次のクエリでは、概要説明が 50 文字を超える製品の製品 ID、概要説明の長さ、概要自体 (<`Summary`> 要素) を取得します。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
 SELECT CatalogDescription.query('  
       <Prod ProductID= "{ /pd:ProductDescription[1]/@ProductModelID }" >  
        <LongSummary SummaryLength =   
@@ -101,14 +100,14 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. XQuery の string-length() 関数を使用して、保証内容が短い製品を取得する  
- 次のクエリは 20 文字より長いが、製品の製品 ID、長さ、保証の説明を含む XML を取得し、<`Warranty`> 要素自体です。  
+ 次のクエリは、保証内容の記述が 20 文字に満たない製品の製品 ID、長さ、保証内容の記述、および <`Warranty`> 要素自体を含む XML を取得します。  
   
- 保証は製品の特徴の 1 つです。 省略可能な <`Warranty`> 子要素の後、<`Features`> 要素。  
+ 保証は製品の特徴の 1 つです。 <`Features`> 要素の後に、省略可能な <`Warranty`> 子要素が続きます。  
   
 ```  
 WITH XMLNAMESPACES (  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
   
 SELECT CatalogDescription.query('  
       for   $ProdDesc in /pd:ProductDescription,  
@@ -141,7 +140,7 @@ Result
 <Prod ProductModelID="19">  
   <ShortFeature FeatureDescLength="15">  
     <wm:Warranty   
-       xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+       xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
       <wm:WarrantyPeriod>3 years</wm:WarrantyPeriod>  
       <wm:Description>parts and labor</wm:Description>  
     </wm:Warranty>  

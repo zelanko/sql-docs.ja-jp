@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985264"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600062"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;構造&gt;します。場合
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  したがって、機密データまたは個人情報保護のため、する必要がありますを構築、個人情報をマスクし、付与、するデータ ソース ビュー **AllowDrillthrough**マイニング構造またはマイニング モデルに対する権限場合にのみいる。  
   
 ## <a name="examples"></a>使用例  
- 次の例に基づく Targeted Mailing マイニング構造に基づいています、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データベース、および関連するマイニング モデルです。 詳細については、次を参照してください。 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
+ 次の例に基づく Targeted Mailing マイニング構造に基づいています、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データベース、および関連するマイニング モデルです。 詳細については、次を参照してください。 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>例 1 : 構造ケースにドリルスルーする  
  次の例では、マイニング構造 Targeted Mailing で最も古い 500 人の顧客のリストが返されます。 このクエリではマイニング モデル内のすべての列が返されますが、行は自転車を購入した顧客に制限され、年齢順に並べ替えられます。 必要な列のみを返すように式のリストを編集することもできます。  
@@ -87,7 +87,7 @@ FROM [Targeted Mailing].Cases
 WHERE IsTestCase();  
 ```  
   
- トレーニング ケースを返す関数に置き換えます`IsTrainingCase()`します。  
+ トレーニング ケースを返すには、関数を `IsTrainingCase()` に置き換えます。  
   
 ## <a name="see-also"></a>参照  
  [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c95e557e3eec8ff979eaa32891ad9d279c681659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64c856158de8120c1c15889020c639b91d8891a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804710"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672031"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47804710"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのインターフェイスが 3 つの定義済みの対応レベル for ODBC (ISO、Open Group、および ODBC level 2) に準拠します。 **SQLGetFunctions**すべての ODBC 関数がサポートされているレポート、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー。  
   
 ## <a name="see-also"></a>参照  
- [SQLGetFunctions 関数](http://go.microsoft.com/fwlink/?LinkId=59353)   
+ [SQLGetFunctions 関数](https://go.microsoft.com/fwlink/?LinkId=59353)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

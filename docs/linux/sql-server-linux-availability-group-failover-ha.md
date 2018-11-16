@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 1fe1a785314b30e0f6027c845da5ac2b34692966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 891f86328042091bb1e7a67f725f13ee160dccf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796720"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665831"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上の always On 可用性グループのフェールオーバー
 
@@ -104,8 +104,8 @@ ms.locfileid: "47796720"
 >自動フェールオーバーでは場所の制約が追加されないため、削除は不要です。 
 
 詳細:
-- [Red Hat - クラスター リソースの管理](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
-- [Pacemaker - 手動でのリソースの移動](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
+- [Red Hat - クラスター リソースの管理](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
+- [Pacemaker - 手動でのリソースの移動](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES 管理ガイド - リソース](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 ## <a name="forceFailover"></a> 強制フェールオーバー 

@@ -14,32 +14,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a33a837c6c1b7ebc3ff8ce65786938fba92fbe2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5911783558ff259eef7488df082560cfe56a4dfb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654850"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665921"
 ---
 # <a name="process-odbc-errors-odbc"></a>ODBC エラーの処理 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  2 つの ODBC 関数呼び出し [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) および [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を使用すると、ODBC メッセージを取得できます。 **SQLState**、**pfNative**、および **ErrorMessage** の各診断フィールドの主要な ODBC 関連情報を取得するには、SQL_NO_DATA が返されるまで [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) を呼び出します。 診断レコードごとに、[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出して個々のフィールドを取得できます。 ドライバー固有のフィールドはすべて、**SQLGetDiagField** を使用して取得する必要があります。  
+  2 つの ODBC 関数呼び出し [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) および [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を使用すると、ODBC メッセージを取得できます。 **SQLState**、**pfNative**、および **ErrorMessage** の各診断フィールドの主要な ODBC 関連情報を取得するには、SQL_NO_DATA が返されるまで [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) を呼び出します。 診断レコードごとに、[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出して個々のフィールドを取得できます。 ドライバー固有のフィールドはすべて、**SQLGetDiagField** を使用して取得する必要があります。  
   
- [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) および [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) は、個々のドライバーではなく、ODBC ドライバー マネージャーによって処理されます。 ODBC ドライバー マネージャーは、接続が正しく確立されるまでドライバー固有の診断フィールドをキャッシュしません。 接続が正しく確立される前に、ドライバー固有の診断フィールドに対して [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出すことはできません。 これには、SQL_SUCCESS_WITH_INFO が返される場合の ODBC 接続コマンドも含まれます。 ドライバー固有の診断フィールドは、次の ODBC 関数呼び出しまで使用できません。  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) および [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) は、個々のドライバーではなく、ODBC ドライバー マネージャーによって処理されます。 ODBC ドライバー マネージャーは、接続が正しく確立されるまでドライバー固有の診断フィールドをキャッシュしません。 接続が正しく確立される前に、ドライバー固有の診断フィールドに対して [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出すことはできません。 これには、SQL_SUCCESS_WITH_INFO が返される場合の ODBC 接続コマンドも含まれます。 ドライバー固有の診断フィールドは、次の ODBC 関数呼び出しまで使用できません。  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- このサンプルでは、[SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) を呼び出して標準的な ODBC 情報を取得する簡単なエラー ハンドラーを示します。 このサンプルでは有効な接続を調べ、存在する場合は、**SQLGetDiagField** を呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有の診断フィールドを取得します。 このサンプルは IA64 ではサポートされていません。  
+ このサンプルでは、[SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) を呼び出して標準的な ODBC 情報を取得する簡単なエラー ハンドラーを示します。 このサンプルでは有効な接続を調べ、存在する場合は、**SQLGetDiagField** を呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有の診断フィールドを取得します。 このサンプルは IA64 ではサポートされていません。  
   
  このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   

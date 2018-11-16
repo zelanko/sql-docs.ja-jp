@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5110c06913325421aeeaa2d31295d7e2bc6bf59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645600"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291528"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>付録 a: データとサービス プロバイダー
 このセクションでは、次の 3 つの種類のプロバイダーを取り上げます。 データ プロバイダー、サービス プロバイダー、およびサービスのコンポーネント。 プロバイダーは、2 つのカテゴリに分類されます。 データとサービスを提供するものを提供するものです。 A*データ プロバイダー*が独自のデータを所有し、アプリケーションに表形式で公開します。 A*サービス プロバイダー*作成や、ADO アプリケーションの機能を強化して、データの利用によって、サービスをカプセル化します。 サービス プロバイダーがさらとして定義しても、*サービス コンポーネント*、他のサービス プロバイダーまたはコンポーネントと連携する必要があります。
@@ -54,7 +54,7 @@ ms.locfileid: "47645600"
 ## <a name="provider-specific-dynamic-properties"></a>プロバイダー固有の動的プロパティ
  [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、および[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトに固有の動的なプロパティが含まれます、。プロバイダー。 これらのプロパティは、ADO をサポートする組み込みのプロパティ以外のプロバイダーに固有の機能に関する情報を提供します。
 
- 接続を確立すると、これらのオブジェクトを作成、使用、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを**プロパティ**プロバイダー固有のプロパティを取得するオブジェクトのコレクション。 プロバイダーのマニュアルを参照してください、 [OLE DB プログラマ ガイド](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)のこれらの動的プロパティに関する詳細情報。
+ 接続を確立すると、これらのオブジェクトを作成、使用、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを**プロパティ**プロバイダー固有のプロパティを取得するオブジェクトのコレクション。 プロバイダーのマニュアルを参照してください、 [OLE DB プログラマ ガイド](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)のこれらの動的プロパティに関する詳細情報。
 
 ## <a name="service-providers"></a>サービス プロバイダー
  サービス プロバイダーを使用するには、キーワードを指定する必要があります。 各サービス プロバイダーに関連付けられているプロバイダーに固有の動的プロパティの注意する必要があります。 プロバイダー固有の詳細については、現在、Microsoft から提供されている各サービス プロバイダーのとおりです。

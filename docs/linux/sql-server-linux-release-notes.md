@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: d1163c58933ab4d2b6d7faa8b643a3401d87d530
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 4760c70f71b798fb31d96c6b36fb91afe6de9667
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270135"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666021"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -78,7 +78,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU12"></a> CU12 (Oct 2018)
 
-これは、SQL Server 2017 の累積的な更新プログラムの 12 (CU12) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3045.24 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4464082](https://support.microsoft.com/en-us/help/4464082)します。
+これは、SQL Server 2017 の累積的な更新プログラムの 12 (CU12) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3045.24 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -92,7 +92,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU11"></a> CU11 (2018年 9 月)
 
-これは、SQL Server 2017 の累積的な更新プログラム 11 (CU11) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3038.14 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4462262](https://support.microsoft.com/en-us/help/4462262)します。
+これは、SQL Server 2017 の累積的な更新プログラム 11 (CU11) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3038.14 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -106,7 +106,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU10"></a> CU10 (Aug 2018)
 
-これは、SQL Server 2017 の累積的な更新プログラム 10 (CU10) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3037.1 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4342123](https://support.microsoft.com/en-us/help/4342123)します。
+これは、SQL Server 2017 の累積的な更新プログラム 10 (CU10) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3037.1 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -120,7 +120,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU9-GDR2"></a> CU9 GDR2 (Aug 2018)
 
-これは、SQL Server 2017 のも、以前にリリースされた CU (CU9) 含まれており、セキュリティ更新プログラムです。 このリリースの SQL Server エンジンのバージョンは、14.0.3035.2 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4293805](https://support.microsoft.com/en-us/help/4293805)します。
+これは、SQL Server 2017 のも、以前にリリースされた CU (CU9) 含まれており、セキュリティ更新プログラムです。 このリリースの SQL Server エンジンのバージョンは、14.0.3035.2 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -134,7 +134,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="GDR2"></a> GDR2 (Aug 2018)
 
-これは、SQL Server 2017 の GDR2 (および GDR1) のセキュリティ修正プログラムのみが含まれるセキュリティ更新プログラムです。  このリリースの SQL Server エンジンのバージョンは、14.0.2002.14 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4293803](https://support.microsoft.com/en-us/help/4293803)します。
+これは、SQL Server 2017 の GDR2 (および GDR1) のセキュリティ修正プログラムのみが含まれるセキュリティ更新プログラムです。  このリリースの SQL Server エンジンのバージョンは、14.0.2002.14 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -148,7 +148,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU9"></a> CU9 (2018 年 7 月)
 
-これは、SQL Server 2017 の累積的な更新プログラム 9 (CU9) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3030.27 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4341265](https://support.microsoft.com/en-us/help/4341265)します。
+これは、SQL Server 2017 の累積的な更新プログラム 9 (CU9) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3030.27 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -162,7 +162,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU8"></a> CU8 (Jun 2018)
 
-これは、SQL Server 2017 の累積的な更新プログラム 8 (CU8) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3029.16 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4338363](https://support.microsoft.com/en-us/help/4338363)します。
+これは、SQL Server 2017 の累積的な更新プログラム 8 (CU8) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3029.16 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -176,7 +176,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU7"></a> CU7 (2018 年 5 月)
 
-これは、SQL Server 2017 の累積的な更新プログラム 7 (CU7) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3026.27 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4229789](https://support.microsoft.com/en-us/help/4229789)します。
+これは、SQL Server 2017 の累積的な更新プログラム 7 (CU7) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3026.27 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -236,7 +236,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU4"></a> CU4 (Feb 2018)
 
-これは、SQL Server 2017 の累積的な更新プログラム 4 (CU4) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3022.28 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498)します。
+これは、SQL Server 2017 の累積的な更新プログラム 4 (CU4) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3022.28 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -253,7 +253,7 @@ sudo systemctl start mssql-server
 
 ## <a id="GDR1"></a> GDR1 (Jan 2018)
 
-これは、セキュリティ上の SQL Server 2017 の修正 GDR1 のみを含む、セキュリティ更新プログラムです。 このリリースの SQL Server エンジンのバージョンは、14.0.2000.63 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4057122](https://support.microsoft.com/en-us/help/4057122)します。
+これは、セキュリティ上の SQL Server 2017 の修正 GDR1 のみを含む、セキュリティ更新プログラムです。 このリリースの SQL Server エンジンのバージョンは、14.0.2000.63 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -267,7 +267,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU3"></a> CU3 (Jan 2018)
 
-これは、SQL Server 2017 の累積更新プログラム 3 (CU3) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3015.40 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987)します。
+これは、SQL Server 2017 の累積更新プログラム 3 (CU3) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3015.40 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 

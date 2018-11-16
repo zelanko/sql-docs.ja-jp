@@ -19,18 +19,18 @@ ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ab3ce18b1b79951c76b34be3f90b2d8782ba64e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d15d7608879d9116832e083654cc07717c72e23e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773827"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666471"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>SQL Server - Azure SQL DB (AccessToSQL) に移行するデータにアクセス
 データベース オブジェクトを正常に作成した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアクセスからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
-データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスでは、移行のバッチ サイズ、テーブルのロック、制約チェック、挿入トリガーを起動、id および処理するには、null 値と日付のうちを処理する方法を設定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範囲。 詳細については、次を参照してください。[プロジェクトの設定 (移行)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)します。  
+データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスでは、移行のバッチ サイズ、テーブルのロック、制約チェック、挿入トリガーを起動、id および処理するには、null 値と日付のうちを処理する方法を設定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範囲。 詳細については、次を参照してください。[プロジェクトの設定 (移行)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)します。  
   
 ## <a name="migrating-data"></a>データの移行  
 移行データは、一括読み込み操作へのデータの行を移動する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure でのトランザクション。 読み込まれる行の数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の各トランザクションではプロジェクトの設定で構成されます。  

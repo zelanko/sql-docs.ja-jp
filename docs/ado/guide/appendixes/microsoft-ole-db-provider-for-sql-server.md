@@ -15,12 +15,12 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98de1a3a2e03a576b84543bf3578d87e7ad6c655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657977"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350476"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server の概要
 Microsoft OLE DB Provider for SQL Server、SQLOLEDB には、Microsoft SQL Server にアクセスする ADO ができます。
@@ -30,7 +30,7 @@ Microsoft OLE DB Provider for SQL Server、SQLOLEDB には、Microsoft SQL Serve
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
  このプロバイダーに接続するには、設定、*プロバイダー*への引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
 
-```
+```vb
 SQLOLEDB
 ```
 
@@ -39,7 +39,7 @@ SQLOLEDB
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
 
-```
+```vb
 "Provider=SQLOLEDB;Data Source=serverName;"
 Initial Catalog=databaseName;
 User ID=MyUserID;Password=MyPassword;"
@@ -76,14 +76,14 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="command-object-usage"></a>コマンド オブジェクトの使用方法
  SQLOLEDB では、有効な構文として、ODBC、ANSI、および SQL Server に固有の TRANSACT-SQL の融合を受け取ります。 たとえば、次の SQL ステートメントでは、ODBC SQL のエスケープ シーケンスを使用して、LCASE 文字列関数を指定しています。
 
-```
+```sql
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 
 ```
 
  LCASE 関数は、大文字をすべて小文字に変換した文字列を返します。 ANSI SQL の文字列関数下は、次の SQL ステートメントは、ANSI の前に示した ODBC ステートメントと等価ですに同じ操作を実行します。
 
-```
+```sql
 SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ```
@@ -95,14 +95,14 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ## <a name="odbc-sql"></a>ODBC SQL
 
-```
+```vb
 {call SalesByCategory('Produce', '1995')}
 
 ```
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-```
+```sql
 EXECUTE SalesByCategory 'Produce', '1995'
 
 ```
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>動的プロパティ
  Microsoft OLE DB Provider for SQL Server にいくつかの動的プロパティの挿入、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、および[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。
 
- 次の表は、ADO および OLE DB 名の各動的プロパティの相互です。 「説明です」という用語 ADO プロパティ名を参照して OLE DB プログラマーズ リファレンス これらのプロパティの詳細については、OLE DB プログラマーズ リファレンスに見つかります。 インデックスの OLE DB プロパティの名前を検索または参照してください[付録 c: OLE DB プロパティ](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)します。
+ 次の表は、ADO および OLE DB 名の各動的プロパティの相互です。 「説明です」という用語 ADO プロパティ名を参照して OLE DB プログラマーズ リファレンス これらのプロパティの詳細については、OLE DB プログラマーズ リファレンスに見つかります。 インデックスの OLE DB プロパティの名前を検索または参照してください[付録 c: OLE DB プロパティ](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)します。
 
 ## <a name="connection-dynamic-properties"></a>接続の動的プロパティ
  次のプロパティに追加されます、**プロパティ**のコレクション、**接続**オブジェクト。
@@ -355,7 +355,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |XML のルート|SSPROP_STREAM_XMLROOT|
 |XSL (XSL)|SSPROP_STREAM_XSL|
 
- 特定の実装の詳細と、Microsoft SQL Server OLE DB プロバイダーの機能については、次を参照してください。、 [SQL Server プロバイダー](http://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)します。
+ 特定の実装の詳細と、Microsoft SQL Server OLE DB プロバイダーの機能については、次を参照してください。、 [SQL Server プロバイダー](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)します。
 
 ## <a name="see-also"></a>参照
  [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [プロバイダー プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

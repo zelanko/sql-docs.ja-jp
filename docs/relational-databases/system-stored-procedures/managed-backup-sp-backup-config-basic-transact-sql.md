@@ -21,17 +21,17 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93e6bcfc4ec686f61672fa382d545db5a7000f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838800"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662851"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  構成、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]特定のデータベースまたはインスタンスの基本設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  構成、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] またはのインスタンスの特定のデータベースの基本設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
 > [!NOTE]  
 >  この手順呼び出せるで基本的なマネージド バックアップの構成を作成するための独自です。 ただし、高度な機能またはカスタム スケジュールを追加する場合は、まずこれらの設定を使用して[managed_backup.sp_backup_config_advanced &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)と[managed_backup.sp_backup_config_schedule &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)からこの手順でマネージ バックアップを有効にします。  
@@ -48,19 +48,19 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="Arguments"></a> 引数  
  @enable_backup  
- 指定したデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効または無効にします。 @enable_backupは**ビット**します。 パラメーターを構成するときに必要な[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の最初のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 変更する場合は、既存[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成では、このパラメーターは省略可能です。 その場合は、指定されていないすべての構成値は、既存の値を保持します。  
+ 指定したデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効または無効にします。 @enable_backupは**ビット**します。 パラメーターを構成するときに必要な[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の最初のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 変更する場合は、既存 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 構成では、このパラメーターは省略可能です。 その場合は、指定されていないすべての構成値は、既存の値を保持します。  
   
  @database_name  
  有効にするためのデータベース名は、特定のデータベースでのバックアップを管理します。  
   
  @container_url  
- バックアップの場所を示す URL です。 ときに@credential_nameが null の場合、この URL は、Azure Storage に blob コンテナーに shared access signature (SAS) URL と、バックアップは、ブロック blob の機能に新しいバックアップを使用します。 詳細についてを参照してください[について SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)します。 ときに@credential_nameこれは、ストレージ アカウントの URL と、バックアップ ページ blob の機能を非推奨のバックアップを使用して、指定します。  
+ バックアップの場所を示す URL です。 ときに@credential_nameが null の場合、この URL は、Azure Storage に blob コンテナーに shared access signature (SAS) URL と、バックアップは、ブロック blob の機能に新しいバックアップを使用します。 詳細についてを参照してください[について SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)します。 ときに@credential_nameこれは、ストレージ アカウントの URL と、バックアップ ページ blob の機能を非推奨のバックアップを使用して、指定します。  
   
 > [!NOTE]  
 >  SAS URL のみがこの時点でこのパラメーターのサポートします。  
   
  @retention_days  
- バックアップ ファイルの保有期間 (日数)。 @storage_urlは INT です。 構成するときにこのパラメーターが必要なパラメーター[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]のインスタンスで初めて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 変更中に、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成では、このパラメーターは省略可能です。 指定しない場合は、既存の構成値が保持されます。  
+ バックアップ ファイルの保有期間 (日数)。 @storage_urlは INT です。 構成するときにこのパラメーターが必要なパラメーター[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]のインスタンスで初めて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 変更中に、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 構成では、このパラメーターは省略可能です。 指定しない場合は、既存の構成値が保持されます。  
   
  @credential_name  
  Windows Azure ストレージ アカウントへの認証に使用する SQL 資格情報の名前。 @credentail_name **SYSNAME**します。 指定した場合、バックアップは、ページ blob に格納されます。 このパラメーターが NULL の場合、バックアップは、ブロック blob として格納されます。 ページ blob へのバックアップには非推奨とされているので、新しいブロック blob のバックアップ機能を使用することをお勧めします。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成を変更するために使用する場合、このパラメーターは省略可能です。 指定しない場合、既存の構成値は保持されます。  
@@ -85,7 +85,7 @@ New-AzureStorageContainer -Name mycontainer -Context $context
 New-AzureStorageContainerSASToken -Name mycontainer -Permission rwdl -FullUri -Context $context  
 ```  
   
- 次の例で[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]実行されている、SQL Server のインスタンスでは、30 日間に、保有ポリシーを設定、送信先を 'mycontainer' でストレージ アカウント"mystorageaccount"をという名前をという名前のコンテナーに設定します。  
+ 次の例では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ～ 30 日で、実行された SQL Server のインスタンスが、保有ポリシーを設定するの送信先を 'mycontainer' でストレージ アカウント"mystorageaccount"をという名前をという名前のコンテナーに設定します。  
   
 ```Transact-SQL 
 Use msdb;  

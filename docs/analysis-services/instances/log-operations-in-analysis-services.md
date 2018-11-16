@@ -1,5 +1,5 @@
 ---
-title: Analysis Services での操作をログ |Microsoft ドキュメント
+title: Analysis Services での操作を記録 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba0be2d0a46790f1a330a75c25461983e0b7488a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018609"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701640"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services でのログ操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "34018609"
   
 -   [ヒントとベスト プラクティス](#bkmk_tips)  
   
-> [!NOTE]  
->  ログ記録の情報をお探しの場合、処理およびクエリの実行パスを示す操作のトレースに関心を持たれるかもしれません。 アドホックかつ持続的なトレース(キューブ アクセスの監査など) のためのトレース オブジェクト、および Flight Recorder、SQL Server Profiler、および xEvents を最適に使用する方法に関する推奨事項は、このページ (「 [Analysis Services インスタンスの監視](../../analysis-services/instances/monitor-an-analysis-services-instance.md)」) のリンクから確認できます。  
   
 ##  <a name="bkmk_location"></a> ログの場所と種類  
  Analysis Services では、次に示すログが提供されています。  
@@ -55,7 +53,7 @@ ms.locfileid: "34018609"
   
  可能であれば、Management Studio の [サーバーのプロパティ] ページにあるログ記録のプロパティを設定することをお勧めします。 ただし、場合によっては、管理ツールに表示されていない設定を構成するため、msmdsrv.ini ファイルを直接編集する必要があります。  
   
- ![ログ設定が表示された構成ファイルのセクション](../../analysis-services/instances/media/ssas-logfilesettings.png "ログ設定が表示された構成ファイルのセクション")  
+ ![ログ設定を示した構成ファイルのセクション](../../analysis-services/instances/media/ssas-logfilesettings.png "ログ設定を示した構成ファイルのセクション")  
   
 ##  <a name="bkmk_msmdsrv"></a> MSMDSRV サービス ログ ファイル  
  Analysis Services は、サーバーの操作のログを msmdsrv.log ファイルにインスタンスごとに記録します。このログ ファイルの場所は \program files\Microsoft SQL Server\\<instance\>\Olap\Log です。  
@@ -99,7 +97,7 @@ ms.locfileid: "34018609"
 ##  <a name="bkmk_querylog"></a> クエリ ログ  
  クエリ ログの名称には若干誤りがあります。というのは、クエリ ログではユーザーの MDX クエリや DAX クエリの操作をログに記録しないためです。 代わりに、クエリ ログでは、Analysis Services によって生成されるクエリに関するデータを収集します。その後、このデータが [使用法に基づく最適化] ウィザードのデータ入力として使用されます。 クエリ ログに収集されたデータは直接分析するためのものではありません。 具体的には、データセットは、データセットのパスがクエリに含まれることを示す 0 または 1 のビット配列で記述されます。 ここでも、このデータはウィザード向けのものです。  
   
- クエリの監視とトラブルシューティングのため、多くの開発者および管理者は、クエリを監視するためにコミュニティ ツール **ASTrace**を使用します。 また、SQL Server Profiler、xEvents、または Analysis Services トレースも使用できます。 トレース関連のリンクについては、「 [Analysis Services インスタンスの監視](../../analysis-services/instances/monitor-an-analysis-services-instance.md) 」を参照してください。  
+ クエリの監視とトラブルシューティングのため、多くの開発者および管理者は、クエリを監視するためにコミュニティ ツール **ASTrace**を使用します。 また、SQL Server Profiler、xEvents、または Analysis Services トレースも使用できます。
   
  クエリ ログを使用する場合 [使用法に基づく最適化] ウィザードを含むクエリ パフォーマンス チューニングの練習の一部として、クエリ ログを有効にすることをお勧めします。 機能を有効にして、機能をサポートするデータ構造を作成し、Analysis Services がログの検索と作成に使用するプロパティを設定するまでは、クエリ ログは存在しません。  
   
@@ -117,7 +115,7 @@ ms.locfileid: "34018609"
   
  クエリ ログの設定は、サーバー全体に適用します。 指定した設定は、このサーバーで実行されているすべてのデータベースで使用されます。  
   
- ![Management Studio でのログ設定を照会](../../analysis-services/instances/media/ssas-querylogsettings.png "Management Studio でのクエリ ログの設定")  
+ ![Management Studio でのログ設定の照会](../../analysis-services/instances/media/ssas-querylogsettings.png "Management Studio でのクエリ ログの設定")  
   
  構成設定を指定したら、MDX クエリを複数回実行します。 サンプリングを 10 に設定している場合は、クエリを 11 回実行します。テーブルが作成されていることを確認します。 Management Studio で、リレーショナル データベース エンジンに接続し、データベース フォルダーを開きます。 **Tables** フォルダーを開き、 **OlapQueryLog** が存在していることを確認します。 テーブルがすぐに表示されない場合は、フォルダーの情報を更新して内容への変更を取得します。  
   
@@ -152,7 +150,7 @@ ms.locfileid: "34018609"
   
  最も変更される可能性が高い構成設定は、メモリ ダンプ ファイルを生成するかどうかの指定に使用する **CreateAndSendCrashReports** の設定です。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |0|メモリ ダンプ ファイルをオフにします。 「Exception (例外)」セクションの他のすべての設定は無視されます。|  
 |1|(既定) メモリ ダンプ ファイルを有効にしますが送信しません。|  

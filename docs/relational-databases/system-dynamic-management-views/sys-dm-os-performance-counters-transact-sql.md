@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c693cf60054e03120b44ae30f631e407da8809b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 002003864c61dae1b55f7fdfab10ff18ec97f68f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659926"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669681"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47659926"
 |**counter_name**|**nchar(128)**|カウンターの名前。 これでカウンターの一覧から選択するトピックの名前は、カウンターの詳細を取得する[SQL Server オブジェクトを使用して](../../relational-databases/performance-monitor/use-sql-server-objects.md)します。 |  
 |**instance_name**|**nchar(128)**|カウンターの特定インスタンスの名前。 多くの場合、データベース名が格納されます。|  
 |**cntr_value**|**bigint**|カウンターの現在の値。<br /><br /> **注:** 1 秒あたりのカウンターでは、この値は累積されます。 レート値は、連続しない間隔で値をサンプリングして算出する必要があります。 2 つの連続するサンプル値の間隔は、使用される間隔のレートと同じです。|  
-|**cntr_type**|**int**|Windows パフォーマンス アーキテクチャによって定義されるカウンターの種類。 参照してください[WMI パフォーマンス カウンターの種類](http://msdn2.microsoft.com/library/aa394569.aspx)MSDN またはパフォーマンス カウンターの種類の詳細については、Windows Server のドキュメント。|  
+|**cntr_type**|**int**|Windows パフォーマンス アーキテクチャによって定義されるカウンターの種類。 参照してください[WMI パフォーマンス カウンターの種類](https://msdn2.microsoft.com/library/aa394569.aspx)MSDN またはパフォーマンス カウンターの種類の詳細については、Windows Server のドキュメント。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="remarks"></a>コメント  

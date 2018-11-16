@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a8d89adf13e2e377122321fd8e385b96888e699e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5413d6900b133cb7a5baf1e80fe4fa5be09b285
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817480"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665891"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47817480"
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|\<列を継承 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects](http://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f)します。||  
+|\<列を継承 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects](https://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f)します。||  
 |lob_data_space_id|**int**||常に 0 です。|  
 |filestream_data_space_id|**int**|データ領域の FILESTREAM ファイル グループの ID または [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|このテーブルで使用される列の最大の ID です。||  
@@ -43,7 +43,7 @@ ms.locfileid: "47817480"
 |is_tracked_by_cdc|**bit**|1 = テーブルは、変更データ キャプチャを有効には|常に 0 です。CDC はサポートされません。|  
 |lock_escalation|**tinyint**|テーブルの LOCK_ESCALATION オプションの値 2 = 自動。|常に 2 になります。|  
 |lock_escalation_desc|**nvarchar(60)**|Lock_escalation オプションの説明テキストです。|常に ꞌAUTOꞌ です。|  
-|pdw_node_id|**int**|一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|NOT NULL|  
+|pdw_node_id|**int**|一意の識別子、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ノードです。|NOT NULL|  
   
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

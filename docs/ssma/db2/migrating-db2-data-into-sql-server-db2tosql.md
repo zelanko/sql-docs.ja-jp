@@ -10,23 +10,23 @@ ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f0ca7415952a9af6d3de84e66a41403070122888
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9dbaf1a3cc15373097a1aea996c36f895d45172
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756190"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670391"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) への DB2 データの移行
 変換されたオブジェクトが正常に同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、DB2 からデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!IMPORTANT]  
-> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、次に、データを移行する前にする必要がありますインストールする SSMA DB2 拡張機能パックおよび SSMA を実行しているコンピューター上の DB2 プロバイダー。 SQL Server エージェント サービスも実行している必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server での SSMA コンポーネントのインストール。](http://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、次に、データを移行する前にする必要がありますインストールする SSMA DB2 拡張機能パックおよび SSMA を実行しているコンピューター上の DB2 プロバイダー。 SQL Server エージェント サービスも実行している必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server での SSMA コンポーネントのインストール。](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
 移行する前にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。  
   
--   このダイアログ ボックスを使用して、移行のバッチ サイズ、テーブルのロック、制約チェック、null 値の処理、および id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae)します。  
+-   このダイアログ ボックスを使用して、移行のバッチ サイズ、テーブルのロック、制約チェック、null 値の処理、および id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae)します。  
   
 -   **移行エンジン**で、**プロジェクト設定**ダイアログ ボックスで、2 つの種類のデータ移行のエンジンを使用して、移行プロセスを実行できます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47756190"
   
 **サーバー側のデータの移行:**  
   
--   サーバー側のデータ移行中には、エンジンは、ターゲット データベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server での SSMA コンポーネントのインストール。](http://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+-   サーバー側のデータ移行中には、エンジンは、ターゲット データベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server での SSMA コンポーネントのインストール。](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 -   サーバー側での移行を開始するには、選択、**サーバー側のデータ移行のエンジン**オプション、**プロジェクト設定** ダイアログ ボックス。  
   
@@ -91,9 +91,9 @@ ms.locfileid: "47756190"
   
 5.  **DB2 への接続**ダイアログ ボックスが接続の資格情報を入力し、クリックして**Connect**します。 DB2 に接続する方法の詳細については、次を参照してください[DB2 データベースに接続する&#40;DB2ToSQL。&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    ターゲット データベースに接続するため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で接続の資格情報を入力、 **SQL サーバーへの接続** ダイアログ ボックスをクリックします**Connect**します。 接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server に接続します。](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
+    ターゲット データベースに接続するため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で接続の資格情報を入力、 **SQL サーバーへの接続** ダイアログ ボックスをクリックします**Connect**します。 接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server に接続します。](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
-    メッセージが表示されます、**出力**ウィンドウ。 移行の完了時に、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、順にクリックします**詳細**します。 レポートが完了したら、クリックして**閉じる**します。 データ移行レポートの詳細については、次を参照してください[データ移行レポート (SSMA 一般的)。](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    メッセージが表示されます、**出力**ウィンドウ。 移行の完了時に、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、順にクリックします**詳細**します。 レポートが完了したら、クリックして**閉じる**します。 データ移行レポートの詳細については、次を参照してください[データ移行レポート (SSMA 一般的)。](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > SQL Express エディションは、対象データベースとして使用される、クライアント側のデータの移行のみが許可されているし、サーバー側のデータ移行はサポートされていません。  

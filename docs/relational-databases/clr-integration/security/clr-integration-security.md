@@ -15,12 +15,12 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4da058b6c4a36640ceb5273c18df5bf10feb602a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48f9935f26ac4ae17b15f4008dcdb0d8a0e69e5c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607210"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677721"
 ---
 # <a name="clr-integration-security"></a>CLR 統合のセキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ ms.locfileid: "47607210"
  [ホスト保護属性と CLR 統合プログラミング](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  SAFE アセンブリと EXTERNAL_ACCESS アセンブリで許可されていないホスト保護属性 (HPA) の値に関する情報を提供します。  
   
- [CLR 統合のセキュリティのリンク](http://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [CLR 統合のセキュリティのリンク](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。  
   
- [権限借用と CLR 統合のセキュリティ](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [権限借用と CLR 統合のセキュリティ](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  権限借用を使用してマネージド コードが外部リソースにアクセスするしくみを説明します。  
   
- [部分的に信頼される呼び出し元の許容](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [部分的に信頼される呼び出し元の許容](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  マネージド メソッドが別のアセンブリに含まれるクラスのメソッドを起動する際に生じる問題について説明します。  
   
- [アプリケーション ドメインと CLR 統合のセキュリティ](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [アプリケーション ドメインと CLR 統合のセキュリティ](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  アセンブリがアプリケーション ドメインに読み込まれるしくみを説明します。  
   
 ## <a name="see-also"></a>参照  

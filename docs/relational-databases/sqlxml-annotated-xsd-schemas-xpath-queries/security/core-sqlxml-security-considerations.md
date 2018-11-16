@@ -14,18 +14,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757401b45cb66267d80091783d1ec900346722f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7d18848c7cb1baa328210884fb4460628a12d9e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784670"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669041"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML のセキュリティに関する主な注意点
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   次に、データ アクセスに SQLXML を使用するときのセキュリティ ガイドラインを示します。  
   
--   SQLXMLOLEDB プロバイダーが公開、 **StreamFlags** SQLXML 機能を有効になっているまたは特定のインスタンスごとの無効にする必要がありますを示すフラグのプロパティを設定することができます。 このプロパティを使用して、必要なコンポーネントだけが有効になるよう、SQLXML の使用をカスタマイズすることをお勧めします。 詳細については、次を参照してください。 [SQLXMLOLEDB プロバイダー &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)します。  
+-   SQLXMLOLEDB プロバイダーが公開、 **StreamFlags** SQLXML 機能を有効になっているまたは特定のインスタンスごとの無効にする必要がありますを示すフラグのプロパティを設定することができます。 このプロパティを使用して、必要なコンポーネントだけが有効になるよう、SQLXML の使用をカスタマイズすることをお勧めします。 詳細については、次を参照してください。 [SQLXMLOLEDB プロバイダー &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)します。  
   
 -   SQLXML エラーが発生した場合、返されるメッセージには、テーブル名、列名、種類の情報など、データベース スキーマに関する情報を含めることができます。 これらのエラーを扱うときには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールに関する情報が関係のないユーザーに伝わらないよう注意する必要があります。  
   

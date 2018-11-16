@@ -20,12 +20,12 @@ ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eec4b7ac5c0bb6137c6fa16a357145568e557d67
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: f67666069df1a1465c12d64cd8074fa537fb87f3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215467"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674371"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>WMI Provider for Configuration Management の操作
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51215467"
 ## <a name="binding"></a>Binding  
  WMI Provider for Configuration Management は、COM オブジェクト モデルであり、事前バインドも遅延バインドもサポートしています。 遅延バインドを行う場合、VBScript などのスクリプト言語を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、ネットワーク設定、別名をプログラムで操作することができます。  
   
- スクリプト言語を使用して WMI プロバイダーの実装のプログラミングの詳細については、次を参照してください。、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web サイト](http://go.microsoft.com/fwlink/?linkid=15426)します。  
+ スクリプト言語を使用して WMI プロバイダーの実装のプログラミングの詳細については、次を参照してください。、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)します。  
   
 ## <a name="specifying-a-connection-string"></a>接続文字列を指定します。  
  アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することで、WMI Provider for Configuration Management を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL にマップし、これをメモリに読み込みます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはすべて、1 つの WMI 名前空間で表されます。 名前空間の既定値は次のとおりです。  
@@ -45,7 +45,7 @@ ms.locfileid: "51215467"
   
  `instance_name` の既定値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインストール内の `MSSQLSERVER` になります。  
   
- **注:** コンピューターが適切に構成されているかどうかを確認する必要がありますが、Windows ファイアウォール経由で接続する場合。 Windows Management Instrumentation のドキュメントの「Windows ファイアウォール経由の接続」記事を参照してください[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN [Web サイト](http://go.microsoft.com/fwlink/?linkid=15426)します。  
+ **注:** コンピューターが適切に構成されているかどうかを確認する必要がありますが、Windows ファイアウォール経由で接続する場合。 Windows Management Instrumentation のドキュメントの「Windows ファイアウォール経由の接続」記事を参照してください[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)します。  
   
 ## <a name="permissions-and-server-authentication"></a>権限とサーバー認証  
  WMI Provider for Configuration Management にアクセスするには、クライアント WMI 管理スクリプトが、対象となるコンピューター上の管理者のコンテキストで実行されている必要があります。 アクセスするユーザーは、管理するコンピューターのローカル Windows 管理者グループのメンバーである必要があります。  

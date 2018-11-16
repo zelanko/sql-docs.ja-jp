@@ -13,12 +13,12 @@ ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252df4b5133861b6ff9892600bfe1c53206fefec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789220"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600242"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML レコードセットの保持シナリオ
 このシナリオでは、ASP の応答オブジェクトに直接レコード セット オブジェクトの内容を保存する Active Server Pages (ASP) アプリケーションを作成します。  
@@ -111,7 +111,7 @@ ms.locfileid: "47789220"
 </HTML>  
 ```  
   
- Default.htm ファイルを閉じて XMLResponse.asp が保存されている同じフォルダーに保存します。 Internet Explorer 4.0 を使用して、または後で、URL http:// を開いて*sqlserver*/XMLPersist/default.htm し、結果を確認します。 データは、バインドされた DHTML テーブルに表示されます。 開く URL http:// *sqlserver* /XMLPersist/XMLResponse.asp し、結果を確認します。 XML が表示されます。  
+ Default.htm ファイルを閉じて XMLResponse.asp が保存されている同じフォルダーに保存します。 Internet Explorer 4.0 を使用して、または後で、URL https:// を開いて*sqlserver*/XMLPersist/default.htm し、結果を確認します。 データは、バインドされた DHTML テーブルに表示されます。 開く URL https:// *sqlserver* /XMLPersist/XMLResponse.asp し、結果を確認します。 XML が表示されます。  
   
 ## <a name="see-also"></a>参照  
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)   

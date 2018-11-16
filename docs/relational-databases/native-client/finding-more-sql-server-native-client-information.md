@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cb9b740867fd4a43a1182f380b3098688a6b518
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60fa7513c999c1f93d7066de14997902b3cd251e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830920"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665001"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client に関する詳細情報
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "47830920"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client とその他のデータ アクセス プログラミングの詳細については、次のオンライン リソースを参照してください。  
   
- [データ アクセスおよびストレージ デベロッパー センター](http://go.microsoft.com/fwlink?linkid=4173)  
+ [データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink?linkid=4173)  
  このサイトには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client とその他のデータ アクセス テクノロジに関する技術資料、サンプル コード、およびその他のリソースが用意されています。  
   
- [Data Access Blog](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Data Access Blog](https://go.microsoft.com/fwlink/?LinkId=48617)  
  このブログ サイトでは、データ アクセス テクノロジについて説明されており、製品チームのメンバーと直接対話する機会が提供されます。  
   
- [Windows Data Access Components](http://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
  このサイトには、最新の Windows Data Access Components (Windows DAC) SDK ドキュメントが用意されています。 Windows DAC は、Windows Vista and Windows Server 2008 に付属するバージョンのデータ アクセス コンポーネントで、以前のバージョンでは MDAC と呼ばれていました。  
   
  Window DAC SDK には、ADO (ActiveX Data Objects)、OLE DB、および ODBC (Open Database Connectivity) のドキュメントが含まれています。  

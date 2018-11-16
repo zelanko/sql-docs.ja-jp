@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d28cfe9cf43db155ea97dc276d98ccde3e37bb50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9390b198ddcb9a54691a7f33b8f52d520356d8
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815650"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292429"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery と静的な型指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "47815650"
   
 -   スーパータイプまたは型の共用体など、汎化された型が推定される。 アトミック型の場合は、キャスト式またはコンストラクター関数を使用して実際の静的な型を指定してください。 たとえば、式 E1 の推論された型の間での選択肢は、 **xs:string**または**xs:integer**を追加する必要があります**xs:integer**を記述する必要があります`xs:integer(E1) + E2`の代わりに`E1+E2`します。 文字列値が検出された場合、実行時にこの式が失敗するキャストできません**xs:integer**します。 ただし、この式は静的な型チェックには合格します。 この式は空のシーケンスにマップされます。  
   
--   データの実際の内容を上回るカーディナリティが推定される。 これは、多くの場合、 **xml**データ型は、1 つ以上の最上位要素を含めることができ、XML スキーマ コレクションで制約することはできません。 静的な型を限定し、渡される値の数を 1 以下にするためには、位置関係の述語 `[1]` を使用してください。 たとえば、属性の値に 1 を加算する`c`要素の`b`、最上位要素 a、する必要があります`write (/a/b/@c)[1]+1`します。 また、XML スキーマ コレクションと共に DOCUMENT キーワードを使用できます。  
+-   データの実際の内容を上回るカーディナリティが推定される。 これは、多くの場合、 **xml**データ型は、1 つ以上の最上位要素を含めることができ、XML スキーマ コレクションで制約することはできません。 静的な型を限定し、渡される値の数を 1 以下にするためには、位置関係の述語 `[1]` を使用してください。 たとえば、最上位要素 a の下にある要素 `c` の属性 `b` の値に 1 を加算するには、「`write (/a/b/@c)[1]+1`」と記述する必要があります。 また、XML スキーマ コレクションと共に DOCUMENT キーワードを使用できます。  
   
 -   一部の演算が推定時に型の情報を失う。 たとえば、ノードの種類を決定できない場合になった**anyType**します。 この型は他の型に暗黙的にキャストされることはありません。 これらの変換は、parent 軸を使用したナビゲーションで特に発生します。 式で静的な型のエラーが発生する場合、そのような演算の使用は避け、クエリを書き換えてください。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "47815650"
  "Average"、関数、XQuery のコンテキスト内で`fn:avg (//r)`XQuery コンパイラは、さまざまな種類の値を追加できないため、静的なエラーを返します (**xs:int 型**、 **xs:float**または**xs:二重**) の <`r`> 要素の引数で**fn:avg()** します。 これを解決するには、関数の呼び出し部分を「`fn:avg(for $r in //r return $r cast as xs:double ?)`」と書き換えます。  
   
 ### <a name="example-operator-over-union-type"></a>例 : union 型に使用する演算子  
- 加算演算子 ('+') を使用するにはオペランドの正確な型が必要です。 したがって、式として`(//r)[1] + 1`を要素の前に説明した種類の定義を持つ静的なエラーを返します <`r`>。 解決策の 1 つは、「`(//r)[1] cast as xs:int? +1`」("?" は 0 回または 1 回の出現を示す) に書き換える方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、すべてのキャストは実行時エラーの結果として空のシーケンスになる可能性があるので、"cast as" に "?" を付ける必要があります。  
+ 加算演算子 ('+') を使用するにはオペランドの正確な型が必要です。 したがって、式 `(//r)[1] + 1` は既に説明した要素 <`r`> の型定義に関する静的なエラーを返します。 解決策の 1 つは、「`(//r)[1] cast as xs:int? +1`」("?" は 0 回または 1 回の出現を示す) に書き換える方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、すべてのキャストは実行時エラーの結果として空のシーケンスになる可能性があるので、"cast as" に "?" を付ける必要があります。  
   
 ## <a name="see-also"></a>参照  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

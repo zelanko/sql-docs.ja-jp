@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,14 +16,14 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca21e976783a10a738488762e382982e4fd8fd8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747680"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350187"
 ---
-# <a name="visual-c-extensions"></a>Visual C の拡張機能
+# <a name="visual-c-extensions-for-ado"></a>ADO 用の Visual C++ Extensions
 Visual C で ADO のプログラミングの推奨される方法を使用して、 **#import**ディレクティブで説明したよう[Microsoft Visual C++ での ADO プログラミング](../../../ado/guide/appendixes/visual-c-ado-programming.md)します。 ただし、ADO の以前のバージョンに付属 Visual C を使用したプログラミングの代替方法: Visual C 拡張します。 このセクションでは、この機能をドキュメントにとって Visual C の拡張機能のコードを維持する必要がありますが、# を使用して新しい ADO コードを記述する必要があります**インポート**します。
 
  最も面倒なジョブ Visual C プログラマ顔 ADO を使用したデータを取得すると、データを C++ のデータ型の VARIANT データ型として返され、変換後のデータを格納するクラスまたは構造体が変換されるときの 1 つ。 面倒なだけ VARIANT データ型を C++ のデータを取得すると、パフォーマンスが低くなります。

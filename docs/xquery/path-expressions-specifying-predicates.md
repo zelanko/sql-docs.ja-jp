@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4b5840671eca5ee26a7c8ab32bc6788e465cc5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7502cef1a02ff580b16b8df0d6f1c2c6c54fb8ef
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715920"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661881"
 ---
 # <a name="path-expressions---specifying-predicates"></a>パス式 - 述語の指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- どの式でも、述語は適用対象のパス式のノードにバインドされていることに注意してください。 たとえば、最初のパス式が 1 つ目を選択 <`Name`> 各//people/person ノード内と、指定された XML インスタンス要素は、次を返します。  
+ どの式でも、述語は適用対象のパス式のノードにバインドされていることに注意してください。 たとえば、最初のパス式は、各 /People/Person ノード内の 1 つ目の <`Name`> 要素と、指定された XML インスタンスを選択し、次の結果を返します。  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
@@ -90,7 +89,7 @@ select @x.query('/People[1]/Person/Name')
 select @x.query('(/People/Person/Name)[1]')  
 ```  
   
- この例では、述語が適用される順序が変わります。 これで、かっこで囲まれたパス (/People/Person/Name) が最初に評価された後に、このパスに一致するすべてのノードを含むセットに述語操作 [1] が適用されます。 かっこのない操作の順序が異なる場合として [1] が適用されることで、`child::Name`ノード テストの最初のパス式の例に似ています。  
+ この例では、述語が適用される順序が変わります。 これで、かっこで囲まれたパス (/People/Person/Name) が最初に評価された後に、このパスに一致するすべてのノードを含むセットに述語操作 [1] が適用されます。 かっこがない場合、操作の順序は、最初のパス式の例と同様に [1] が `child::Name` ノード テストとして適用されるという点で異なります。  
   
 ### <a name="quantifiers-and-predicates"></a>量化子と述語  
  量化子は、述語自体の角かっこ内で、複数回使用および追加できます。 たとえば、前の例を使用すると、次の式は複雑な述語のサブ式内で複数の量化子を使用する有効な式です。  
@@ -113,7 +112,7 @@ select @x.query('/People/Person[contains(Name[1], "J") and xs:integer(Age[1]) < 
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
  /child::AWMI:root/child::AWMI:Location[attribute::LocationID=10]  
 ')  
 FROM Production.ProductModel  
@@ -129,23 +128,23 @@ WHERE ProductModelID=7
   
     ```  
     SELECT Instructions.query('  
-    declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
      /child::AWMI:root/child::AWMI:Location[attribute::LotSize]  
     ')  
     FROM Production.ProductModel  
     WHERE ProductModelID=7  
     ```  
   
-     この式のパス式は、LotSize 属性が指定されている <`Location`> 要素ノードのみを返します。 述語が、特定の空のシーケンスを返すかどうかは <`Location`>、ワーク センターの場所が、結果で返されないこと。  
+     この式のパス式は、LotSize 属性が指定されている <`Location`> 要素ノードのみを返します。 述語が、ある特定の <`Location`> に空のシーケンスを返した場合、結果にはこのワーク センターの場所は返されません。  
   
 2.  述語の値では、なります xs:integer、xs:Boolean、またはノード\*します。 ノードの\*、任意のノードがある場合は True と False 空のシーケンスに、述語が評価されます。 double 型や float 型など、他の数値型では、静的な型指定エラーが生成されます。 式の述語の真偽値は、結果の整数がコンテキストの位置の値と同じ場合にのみ、True になります。 唯一の整数リテラル値も、および**last()** 関数が 1 のフィルター処理されたステップ式のカーディナリティを削減します。  
   
-     たとえば、次のクエリがの 3 番目の子要素ノードを取得します <`Features`> 要素。  
+     たとえば、次のクエリは、<`Features`> 要素の 3 番目の子要素ノードを取得します。  
   
     ```  
     SELECT CatalogDescription.query('  
-    declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-    declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+    declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
      /child::PD:ProductDescription/child::PD:Features/child::*[3]  
     ')  
     FROM Production.ProductModel  
@@ -209,8 +208,8 @@ WHERE ProductModelID=7
 SELECT ProductModelID  
 FROM   Production.ProductModel  
 WHERE CatalogDescription.exist('  
-             declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-             declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+             declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+             declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
              /child::PD:ProductDescription/child::PD:Features[wm:*]  
              ') = 1  
 ```  

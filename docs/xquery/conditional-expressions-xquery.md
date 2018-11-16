@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -21,12 +20,12 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 00ea3657da6f40c0a21b08d8c33338eaaba5142f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3164d17169e0a90416c8131825c3d61b1ff5fe16
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616520"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677591"
 ---
 # <a name="conditional-expressions-xquery"></a>条件式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ else
   <expression3>  
 ```  
   
- 有効なブール値に応じて`expression1`, か、`expression2`または`expression3`が評価されます。 以下に例を示します。  
+ `expression1` の実効ブール値に応じて、`expression2` または `expression3` が評価されます。 以下に例を示します。  
   
 -   テスト式 `expression1` の結果が空のシーケンスになった場合、結果は False になります。  
   
--   場合テスト式`expression1`、単純なブール値、この値に結果が式の結果。  
+-   テスト式 `expression1` の結果が単純なブール値になった場合、この値は式の結果になります。  
   
 -   テスト式 `expression1` の結果が複数ノードのシーケンスになった場合、式の結果は True になります。  
   
@@ -86,7 +85,7 @@ if ( sql:variable("@v")="FirstName" ) then
   
 ```  
 SELECT CatalogDescription.query('  
-     declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <Product>   
           { /p1:ProductDescription/@ProductModelID }  
           { /p1:ProductDescription/@ProductModelName }   
@@ -112,11 +111,11 @@ WHERE ProductModelID = 19
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
-  \<p1:Warranty xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+  \<p1:Warranty xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     \<p1:WarrantyPeriod>3 years\</p1:WarrantyPeriod>  
     \<p1:Description>parts and labor\</p1:Description>  
   \</p1:Warranty>  
-  \<p2:Maintenance xmlns:p2="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+  \<p2:Maintenance xmlns:p2="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     \<p2:NoOfYears>10 years\</p2:NoOfYears>  
     \<p2:Description>maintenance contract available through your dealer or any AdventureWorks retail store.\</p2:Description>  
   \</p2:Maintenance>  
@@ -124,11 +123,11 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 次のクエリで、<`Location`>、ワーク センター拠点でセットアップ時間が指定されていない場合、LocationID 属性を持つ要素が返されます。  
+ 次のクエリでは、ワーク センターでセットアップ時間が指定されていない場合に、<`Location`> に LocationID 属性が設定されて、返されます。  
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in //AWMI:root/AWMI:Location  
         return  
         if ( $WC[not(@SetupHours)] )  
@@ -155,7 +154,7 @@ where ProductModelID=7
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in //AWMI:root/AWMI:Location[not(@SetupHours)]   
         return  
           <Location>  

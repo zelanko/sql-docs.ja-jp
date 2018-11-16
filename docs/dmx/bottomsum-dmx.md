@@ -1,5 +1,5 @@
 ---
-title: BottomSum (DMX) |Microsoft ドキュメント
+title: BottomSum (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6a6356e70aa6694e04a9112e44a22825f0dc7a52
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 5c4a4cfd4919218233d1c8ce2f41f4569c7f7302
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842785"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602792"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,12 +35,12 @@ BottomSum(<table expression>, <rank expression>, <sum>)
  \<テーブル式 >  
   
 ## <a name="remarks"></a>コメント  
- **BottomSum**関数は、ランクの増加順に最下位行を返します。 ランクがの結果値に基づいて、\<式をランク付け > 行ごとに、引数になるようの合計、\<順位付け式 > の値は、合計で指定されている、少なくとも、 \<sum > 引数。 **BottomSum**中に指定された合計値可能な最も小さい要素数を返します。  
+ **BottomSum**関数は、ランクの増加順に最下位行を返します。 ランクがの評価値に基づいて、\<式をランク付け > 行ごとに、引数ようにの合計、\<式をランク付け > の値がで指定された合計では、少なくとも、 \<sum > 引数。 **BottomSum**中に指定された合計値可能性のある最も小さい要素数を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用して作成した Association モデルに対する予測クエリの作成、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)です。  
+ 次の例を使用して作成した Association モデルに対する予測クエリの作成、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
   
- BottomSum のしくみを理解するのには、最初に、入れ子になったテーブルのみを返す予測クエリを実行すると役立つ場合があります。  
+ BottomSum のしくみを理解するのには、最初に、入れ子になったテーブルのみを返す予測クエリを実行に役立つ場合があります。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、次を参照してください。[データ マイニング デザイナーで単一クエリを作成する](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)です。  
+>  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、次を参照してください。[データ マイニング デザイナーで単一クエリの作成](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)です。  
   
  例の結果を次に示します。  
   
@@ -68,7 +68,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- BottomSum 関数はこのクエリの結果を受け取りし、その合計の最小値を持つ行を指定した数を返します。  
+ BottomSum 関数は、このクエリの結果を受け取り、その合計の最小値を持つ行を指定した数を返します。  
   
 ```  
 SELECT   
@@ -83,11 +83,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- BottomSum 関数は、1 番目の引数は、テーブルの列の名前です。 この例では、INCLUDE_STATISTICS 引数を使用して、Predict 関数を呼び出すことによって、入れ子になったテーブルが返されます。  
+ BottomSum 関数の最初の引数は、テーブルの列の名前です。 この例では、Predict 関数を呼び出すと、INCLUDE_STATISTICS 引数を使用して入れ子になったテーブルが返されます。  
   
- BottomSum 関数は、2 番目の引数は、結果の並べ替えに使用する入れ子になったテーブル内の列です。 この例では、INCLUDE_STATISTICS オプションによって $SUPPORT 列、$PROBABILTY 列、および $ADJUSTED PROBABILITY 列が返されます。 この例では $PROBABILITY を使用して、合計して 50% 以上の確率になる行を返します。  
+ BottomSum 関数は、2 番目の引数は、結果の順序を使用する入れ子になったテーブル列です。 この例では、INCLUDE_STATISTICS オプションによって $SUPPORT 列、$PROBABILTY 列、および $ADJUSTED PROBABILITY 列が返されます。 この例では $PROBABILITY を使用して、合計して 50% 以上の確率になる行を返します。  
   
- BottomSum 関数は、3 番目の引数は、double 型として、対象の合計を指定します。 合計が 10% の確率となる、カウントが最小の製品の行を取得するには「1」と入力します。  
+ BottomSum 関数の 3 番目の引数は、double 型の値として、対象の合計を指定します。 合計が 10% の確率となる、カウントが最小の製品の行を取得するには「1」と入力します。  
   
  例の結果を次に示します。  
   
@@ -96,7 +96,7 @@ NATURAL PREDICTION JOIN
 |Road Bottle Cage|1195|0.08…|0.07…|  
 |Mountain Bottle Cage|1367|0.09…|0.08…|  
   
- **注**BottomSum の使用法を示すことだけを次の例を提供します。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
+ **注**BottomSum の使用状況を示すためにのみこの例が提供されます。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
   
 ## <a name="see-also"></a>参照  
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   

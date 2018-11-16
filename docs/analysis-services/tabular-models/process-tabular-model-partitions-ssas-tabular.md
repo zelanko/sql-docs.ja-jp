@@ -1,5 +1,5 @@
 ---
-title: テーブル モデル パーティションの処理 |Microsoft ドキュメント
+title: テーブル モデル パーティションの処理 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ceaf64d4d1ef04f410be306c622ca78b3671d526
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: dea6ad8d7ef5d183990734042177f8053bb5969b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039664"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640929"
 ---
 # <a name="process-tabular-model-partitions"></a>テーブル モデル パーティションの処理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "34039664"
   
 2.  **[パーティション]** ダイアログ ボックスの **[パーティション]** で、[処理] ボタンをクリックします。  
   
-3.  **[パーティションの処理]** ダイアログ ボックスの **[モード]** ボックスの一覧で、次のプロセス モードのいずれかを選択します。  
+3.  **パーティションの処理**  ダイアログ ボックスで、**モード**ボックスの一覧で、次のプロセス モードのいずれかを選択します。  
   
-    |[モード]|Description|  
+    |モード|説明|  
     |----------|-----------------|  
     |**既定の処理**|パーティション オブジェクトの処理状態を検出して、未処理または部分的に処理されたパーティション オブジェクトを完全に処理された状態にするために必要な処理を実行します。 空のテーブルとパーティションのデータが読み込まれ、階層、計算列、およびリレーションシップが構築または再構築されます。|  
     |**完全処理**|パーティション オブジェクトとそこに含まれているすべてのオブジェクトを処理します。 既に処理されたオブジェクトに対して完全処理を実行すると、そのオブジェクト内のすべてのデータが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって削除されてから、オブジェクトが処理されます。 この種の処理は、構造上の変更をオブジェクトに加えた場合に必要となります。|  

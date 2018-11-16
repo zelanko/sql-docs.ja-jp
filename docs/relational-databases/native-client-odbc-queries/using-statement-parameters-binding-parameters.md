@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3927708ae0e9fe00043bc0cb51926d836dd912f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a81f7808275dfee216d6d884db45e267e06271c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748700"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662491"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>ステートメント パラメーターの使用 - パラメーターのバインド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47748700"
   
  使用する場合にのみ名前付きパラメーターがサポートされている、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE**ステートメントまたはストアド プロシージャを実行する ODBC CALL エスケープ シーケンスです。  
   
- 場合**SQL_DESC_NAME**設定されているストアド プロシージャのパラメーターでは、クエリのすべてのストアド プロシージャ パラメーターを設定する必要がありますも**SQL_DESC_NAME**します。  かどうかリテラルが呼び出しに使用するストアド プロシージャのパラメーターがある**SQL_DESC_NAME**設定すると、リテラルは形式を使用する必要があります *' 名*=*値*'、場所*名前*ストアド プロシージャのパラメーター名は、(たとえば、 @p1)。 詳細については、次を参照してください。 [(名前付きパラメーター) の名前によるパラメーターのバインド](http://go.microsoft.com/fwlink/?LinkId=167215)します。  
+ 場合**SQL_DESC_NAME**設定されているストアド プロシージャのパラメーターでは、クエリのすべてのストアド プロシージャ パラメーターを設定する必要がありますも**SQL_DESC_NAME**します。  かどうかリテラルが呼び出しに使用するストアド プロシージャのパラメーターがある**SQL_DESC_NAME**設定すると、リテラルは形式を使用する必要があります *' 名*=*値*'、場所*名前*ストアド プロシージャのパラメーター名は、(たとえば、 @p1)。 詳細については、次を参照してください。 [(名前付きパラメーター) の名前によるパラメーターのバインド](https://go.microsoft.com/fwlink/?LinkId=167215)します。  
   
 ## <a name="see-also"></a>参照  
  [ステートメント パラメーターの使用](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

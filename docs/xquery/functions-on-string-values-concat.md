@@ -5,8 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: da1d900d1218fa6da185fc7fda10aecf8c0ad324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a2dd68c36887c373c7102b150ffc1032750eb52
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788040"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667071"
 ---
 # <a name="functions-on-string-values---concat"></a>文字列値に使用する関数 - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +51,12 @@ fn:concat ($string as xs:string?
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列に、AdventureWorks サンプル データベース。  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. concat() XQuery 関数を使用した文字列の連結  
- 特定の製品モデルについて、保証期間と保証内容を連結した文字列を返します。 カタログの説明ドキュメントで、<`Warranty`> の要素から成る <`WarrantyPeriod`> と <`Description`> 子要素。  
+ 特定の製品モデルについて、保証期間と保証内容を連結した文字列を返します。 カタログの説明ドキュメントでは、<`Warranty`> 要素が <`WarrantyPeriod`> 子要素と <`Description`> 子要素から構成されています。  
   
 ```  
 WITH XMLNAMESPACES (  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
 SELECT CatalogDescription.query('  
     <Product   
         ProductModelID= "{ (/pd:ProductDescription/@ProductModelID)[1] }"  
@@ -89,8 +88,8 @@ WHERE  PD.ProductModelID=28
   
 ```  
 WITH XMLNAMESPACES (  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
   
 SELECT CatalogDescription.query('  
     <Product   

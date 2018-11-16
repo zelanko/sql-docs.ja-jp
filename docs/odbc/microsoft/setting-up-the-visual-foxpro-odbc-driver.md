@@ -15,15 +15,15 @@ ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f358d1944de362dc65aba8c470bbb7911ce2103
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 089af95e914c844c6fc6220146ab4a635db2b4ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818390"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663341"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバーの設定
-ダウンロードして Visual FoxPro ODBC ドライバーをインストールする方法については、次を参照してください。 [Visual FoxPro ODBC ドライバー](http://go.microsoft.com/fwlink/?LinkId=121318) MSDN ダウンロードします。  
+ダウンロードして Visual FoxPro ODBC ドライバーをインストールする方法については、次を参照してください。 [Visual FoxPro ODBC ドライバー](https://go.microsoft.com/fwlink/?LinkId=121318) MSDN ダウンロードします。  
   
  Microsoft Visual FoxPro ODBC ドライバー セットアップ プログラムを使用するには、以下を行います。  
   

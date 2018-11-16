@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 36c2ce9cd3faabee34f4c68285ec94b8d8ad11ab
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419077"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659215"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Linux 上の SQL Server の新機能については
 
@@ -26,7 +26,7 @@ ms.locfileid: "49419077"
 SQL Server 2019 プレビューがリリースされました。 この記事では、SQL Server 2019 プレビュー リリースは含まれません。 SQL Server 2019 プレビューについては、次を参照してください。[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)します。
 
 > [!NOTE]
-> この記事ではこれらの機能だけでなく累積的更新プログラムは、GA リリース後一定の間隔でリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、次を参照してください。 [ http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)します。 パッケージのダウンロードと既知の問題は、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)します。
+> この記事ではこれらの機能だけでなく累積的更新プログラムは、GA リリース後一定の間隔でリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、次を参照してください。 [ https://aka.ms/sql2017cu](https://aka.ms/sql2017cu)します。 パッケージのダウンロードと既知の問題は、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)します。
 
 ## <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
 

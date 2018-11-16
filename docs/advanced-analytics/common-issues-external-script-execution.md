@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b480c400ae2068bb6701192e77d97672ddeb024e
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254448"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701450"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>スタート パッド サービスと SQL Server の外部スクリプトの実行に関する一般的な問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
  SQL Server Trusted Launchpad サービスは、R と Python の外部スクリプトの実行をサポートします。 SQL Server 2016 R Services では、SP1 は、サービスを提供します。 SQL Server 2017 には、初期インストールの一部としてスタート パッドの表記が含まれています。
 
-複数の問題は、開始、構成の問題など、変更、またはネットワーク プロトコルがありませんからスタート パッドを防ぐことができます。 この記事では、多くの問題のトラブルシューティングの指針を提供します。 イテレーションのいずれに質問を投稿できます、 [Machine Learning Server フォーラム](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)します。
+複数の問題は、開始、構成の問題など、変更、またはネットワーク プロトコルがありませんからスタート パッドを防ぐことができます。 この記事では、多くの問題のトラブルシューティングの指針を提供します。 イテレーションのいずれに質問を投稿できます、 [Machine Learning Server フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)します。
 
 **適用対象:** SQL Server 2016 R Services、SQL Server 2017 の Machine Learning サービス
 

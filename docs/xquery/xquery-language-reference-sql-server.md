@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 helpviewer_keywords:
 - XQuery
@@ -18,19 +17,19 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 3e1f2196b8ba58af2f13dd1b022d62655f2b0aab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119530"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672261"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 言語リファレンス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] クエリに使用される XQuery 言語のサブセットをサポート、 **xml**データ型。 この実装は、2004 年 7 月に公開された XQuery のワーキング ドラフトに従っています。 この言語は W3C (World Wide Web Consortium) によって開発が進められており、マイクロソフトをはじめとする主要なすべてのデータベース ベンダーが参加しています。 W3C 仕様は W3C 勧告になる前に改訂されることがあるので、この実装は最終的な勧告とは異なる可能性があります。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery サブセットのセマンティクスと構文について概説します。  
   
- 詳細については、次を参照してください。、 [W3C XQuery 1.0 Language Specification](http://go.microsoft.com/fwlink/?LinkId=48846)します。  
+ 詳細については、次を参照してください。、 [W3C XQuery 1.0 Language Specification](https://go.microsoft.com/fwlink/?LinkId=48846)します。  
   
  XQuery は構造化または半構造化された XML データに対するクエリ実行できる言語です。 **Xml**データ型のサポートされている、[!INCLUDE[ssDE](../includes/ssde-md.md)]ドキュメントをデータベースに格納されているし、XQuery を使用してクエリを実行します。  
   
@@ -47,7 +46,7 @@ SELECT @x.query('/ROOT/a')
  次の例では、クエリがの Instructions 列に対して指定された**xml** AdventureWorks データベースの ProductModel テーブルの型。  
   
 ```sql
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   
 FROM  Production.ProductModel  
@@ -67,7 +66,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  このセクションの構成は、W3C (World Wide Web Consortium) XQuery ワーキング ドラフト仕様に基づいています。 このセクションで提供する図の一部は、その仕様から引用したものです。 ここでは、Microsoft XQuery の実装と W3C 仕様を比較し、Microsoft XQuery と W3C がどのように異なるかを説明し、サポートしていない W3C 機能を示します。 W3C の仕様は[ http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)します。  
+>  このセクションの構成は、W3C (World Wide Web Consortium) XQuery ワーキング ドラフト仕様に基づいています。 このセクションで提供する図の一部は、その仕様から引用したものです。 ここでは、Microsoft XQuery の実装と W3C 仕様を比較し、Microsoft XQuery と W3C がどのように異なるかを説明し、サポートしていない W3C 機能を示します。 W3C の仕様は[ https://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

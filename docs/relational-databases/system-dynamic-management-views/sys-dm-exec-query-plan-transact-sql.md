@@ -19,19 +19,19 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b76d583cf73b035024e57ba1cb66e63c76d1ad23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1167762e9d623aa3de04db38f67ee02f3551763d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797190"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671198"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   プラン ハンドルで指定されたバッチのプラン表示を XML 形式で返します。 プラン ハンドルで指定するプランは、キャッシュ内のもの、または現在実行中のものを指定できます。  
   
- プラン表示の XML スキーマは公開されてで使用可能な[この Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているディレクトリからも入手できます。  
+ プラン表示の XML スキーマは公開されてで使用可能な[この Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているディレクトリからも入手できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,14 +62,14 @@ sys.dm_exec_query_plan ( plan_handle )
 |**objectid**|**int**|ストアド プロシージャやユーザー定義関数など、クエリ プランのオブジェクトの ID。 アドホックおよび準備されたバッチでは、この列は**null**します。<br /><br /> 列が null 値を許容します。|  
 |**number**|**smallint**|ストアド プロシージャに付けられた番号 (整数)。 ための手順のグループなど、**注文**アプリケーションが付けられて**orderproc; 1**、 **orderproc; 2**など。 アドホックおよび準備されたバッチでは、この列は**null**します。<br /><br /> 列が null 値を許容します。|  
 |**encrypted**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていません。<br /><br /> 1 = 暗号化<br /><br /> 列値が許容されません。|  
-|**query_plan**|**xml**|指定されているクエリの実行プランのコンパイル時のプラン表示形式を格納して*plan_handle*します。 プラン表示は XML 形式です。 含まれているなどのアドホック バッチごとに 1 つのプランが生成された[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、ストアド プロシージャの呼び出し、およびユーザー定義関数の呼び出し。<br /><br /> 列が null 値を許容します。|  
+|**query_plan**|**xml**|指定されているクエリの実行プランのコンパイル時のプラン表示形式を格納して*plan_handle*します。 プラン表示は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。<br /><br /> 列が null 値を許容します。|  
   
 ## <a name="remarks"></a>コメント  
  次の条件では、プラン表示出力が返されない、 **query_plan**の返されたテーブルの列**sys.dm_exec_query_plan**:  
   
 -   場合は、クエリ プランを使用して指定*plan_handle*がプラン キャッシュから削除された、 **query_plan**返されるテーブルの列が null です。 プラン ハンドルがキャプチャされた、と共に使用された場合との間の遅延時間がある場合にこの状態が発生するなど、 **sys.dm_exec_query_plan**します。  
   
--   いくつか[!INCLUDE[tsql](../../includes/tsql-md.md)]一括操作ステートメントや 8 KB のサイズより大きい文字列リテラルを含むステートメントなど、ステートメントはキャッシュされません。 使用してこのようなステートメントの XML プラン表示を取得することはできません**sys.dm_exec_query_plan**バッチは、キャッシュが存在しないために現在実行している場合を除き、します。  
+-   一括操作ステートメントや、8 KB よりも大きなサイズの文字列リテラルを含むステートメントなど、キャッシュされない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがいくつかあります。 使用してこのようなステートメントの XML プラン表示を取得することはできません**sys.dm_exec_query_plan**バッチは、キャッシュが存在しないために現在実行している場合を除き、します。  
   
 -   場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチまたはストアド プロシージャは、ユーザー定義関数への呼び出しやたとえば EXEC を使用して、動的 SQL への呼び出しが含まれます (*文字列*)、XML プラン表示の表に、ユーザー定義関数が含まれていないコンパイルによって返される**sys.dm_exec_query_plan**バッチやストアド プロシージャ。 代わりに、別の呼び出しを行う必要があります**sys.dm_exec_query_plan**ユーザー定義関数に対応するプラン ハンドル。  
   
@@ -83,10 +83,10 @@ sys.dm_exec_query_plan ( plan_handle )
 ## <a name="examples"></a>使用例  
  次の例を使用する方法を示して、 **sys.dm_exec_query_plan**動的管理ビュー。  
   
- XML プラン表示を表示するクエリを実行、次のクエリ エディターで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 をクリックし、 **ShowPlanXML**で、 **query_plan**によって返されるテーブルの列**sys.dm_exec_query_plan**します。 XML プラン表示が表示されます、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]概要ペイン。 XML プラン表示をファイルに保存するを右クリックして**ShowPlanXML**で、 **query_plan**列で、をクリックして**結果に名前を付けて**の形式でファイルの名前\< *file_name*> .sqlplan。 たとえば、MyXMLShowplan.sqlplan します。  
+ XML プラン表示を表示するクエリを実行、次のクエリ エディターで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 をクリックし、 **ShowPlanXML**で、 **query_plan**によって返されるテーブルの列**sys.dm_exec_query_plan**します。 XML プラン表示は、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の概要ペインに表示されます。 XML プラン表示をファイルに保存するを右クリックして**ShowPlanXML**で、 **query_plan**列で、をクリックして**結果に名前を付けて**の形式でファイルの名前\< *file_name*> .sqlplan。 たとえば、MyXMLShowplan.sqlplan します。  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. 実行速度の遅い Transact-SQL クエリまたは Transact-SQL バッチに対して、キャッシュされたクエリ プランを取得する  
- クエリのさまざまな種類のプラン[!INCLUDE[tsql](../../includes/tsql-md.md)]アドホック バッチ、ストアド プロシージャ、およびユーザー定義関数などのバッチがプラン キャッシュと呼ばれるメモリ領域にキャッシュされます。 キャッシュされたそれぞれのクエリ プランは、プラン ハンドルと呼ばれる一意識別子で識別されます。 このプラン ハンドルを指定することができます、 **sys.dm_exec_query_plan**特定の実行プランを取得する動的管理ビュー[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリまたはバッチです。  
+ アドホック バッチ、ストアド プロシージャ、ユーザー定義関数などの各種 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチのクエリ プランは、プラン キャッシュと呼ばれるメモリ領域にキャッシュされます。 キャッシュされたそれぞれのクエリ プランは、プラン ハンドルと呼ばれる一意識別子で識別されます。 このプラン ハンドルを指定することができます、 **sys.dm_exec_query_plan**特定の実行プランを取得する動的管理ビュー[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリまたはバッチです。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バッチが、特定の  との接続において長時間実行されている場合は、このクエリやバッチの実行プランを取得して、遅延の原因を調べることができます。 次の例では、実行速度の遅いクエリまたはバッチに対して XML プラン表示を取得する方法を示します。  
   
@@ -102,7 +102,7 @@ exec sp_who;
 GO  
 ```  
   
- によって返される結果セット`sp_who`、spid の値があることを示します`54`します。 `sys.dm_exec_requests` 動的管理ビューで、この SPID を使用して次のクエリを実行すると、プラン ハンドルを取得できます。  
+ `sp_who` によって返される結果セットでは、SPID の値が `54` であることが示されます。 `sys.dm_exec_requests` 動的管理ビューで、この SPID を使用して次のクエリを実行すると、プラン ハンドルを取得できます。  
   
 ```  
 USE master;  
@@ -122,7 +122,7 @@ GO
 ```  
   
 ### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>B. すべてのクエリ プランをプラン キャッシュから取得します。  
- プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_cached_plans` 列に格納されます。 CROSS APPLY 演算子を使用し、プラン ハンドルを渡す`sys.dm_exec_query_plan`次のようにします。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
+ プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_cached_plans` 列に格納されます。 その後、次のように CROSS APPLY 演算子を使用して、プラン ハンドルを `sys.dm_exec_query_plan` に渡します。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
 ```  
 USE master;  
@@ -132,7 +132,7 @@ GO
 ```  
   
 ### <a name="c-retrieve-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. 対象のサーバーは、プラン キャッシュからクエリの統計情報を収集がすべてのクエリ プランを取得します。  
- 現在プラン キャッシュにあるクエリ プランのうち、サーバーで統計情報が収集されたすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_query_stats` 動的管理ビューに対してクエリを実行し、キャッシュにあるこれらのプランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_query_stats` 列に格納されます。 CROSS APPLY 演算子を使用し、プラン ハンドルを渡す`sys.dm_exec_query_plan`次のようにします。 XML プラン表示の出力をサーバーが、現在プラン キャッシュ内の統計情報を収集する各プランは、`query_plan`返されるテーブルの列。  
+ 現在プラン キャッシュにあるクエリ プランのうち、サーバーで統計情報が収集されたすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_query_stats` 動的管理ビューに対してクエリを実行し、キャッシュにあるこれらのプランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_query_stats` 列に格納されます。 その後、次のように CROSS APPLY 演算子を使用して、プラン ハンドルを `sys.dm_exec_query_plan` に渡します。 現在プラン キャッシュにある、収集された統計情報に関連する各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
 ```  
 USE master;  

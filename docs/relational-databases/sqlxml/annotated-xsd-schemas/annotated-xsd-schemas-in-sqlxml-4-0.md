@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24c1012c3eb2bef913667052b00ff44fff95fade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73695ebfc9d2322d57fc3b03a6fe576f90e54554
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821530"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662311"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 における注釈付き XSD スキーマ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "47821530"
 ## <a name="other-resources"></a>その他のリソース  
  XML スキーマ定義言語 (XSD)、XML パス言語 (XPath)、Extensible Stylesheet Language Transformations (XSLT) の詳細については、次の Web サイトを参照してください。  
   
--   XML Schema Part 0: Primer, W3C 推奨事項 (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C 推奨事項 (https://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Structures」W3C 推奨事項 (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Structures」W3C 推奨事項 (https://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: datatypes,、W3C 勧告 (http://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: datatypes,、W3C 勧告 (https://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (https://www.w3.org/TR/xpath)  
   
--   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
+-   XSL Transformations (XSLT) (https://www.w3.org/TR/xslt)  
   
   

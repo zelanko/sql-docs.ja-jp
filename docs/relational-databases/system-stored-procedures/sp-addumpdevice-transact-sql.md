@@ -19,17 +19,17 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f5d8fe09af9133bd0a4f4a2c6a11824f16963698
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a97dc3f074a1302f852f710f05eb51e1ba1350c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649860"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681230"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
 
 バックアップ デバイスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに追加します。  
   
@@ -62,7 +62,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  [ **@physicalname =** ] **'***physical_name***'**  
  バックアップ デバイスの物理名を指定します。 物理名にはオペレーティング システムのファイル名の規則またはネットワーク デバイスの UNC (汎用名前付け規則) が適用されます。物理名には完全パスを指定する必要があります。 *physical_name*は**nvarchar (260)**、既定値はありません値に設定して、NULL にすることはできません。  
   
- リモート ネットワークの場所にバックアップ デバイスを作成するときにあることを確認する名前、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が開始されたリモート コンピューター上の適切な書き込み機能を備えています。  
+ リモート ネットワーク上にバックアップ デバイスを作成する場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を起動した名前でそのリモート コンピューター上に書き込むことができるか確認してください。  
   
  テープ デバイスを追加する場合は、このパラメーターが Windows; でローカル テープ デバイスに割り当てられている物理名を指定する必要があります。たとえば、  **\\ \\. \TAPE0**のコンピューター上の最初のテープ デバイス。 テープ デバイスは、必ずサーバー コンピューターに接続してください。リモートからは使用できません。 英数字以外の文字を含む名前は、引用符で囲みます。  
   
@@ -102,7 +102,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-adding-a-disk-dump-device"></a>A. ディスク ダンプ デバイスを追加する  
- 次の例では、というディスク バックアップ デバイス`mydiskdump`、物理名で`c:\dump\dump1.bak`します。  
+ 次の例では、`mydiskdump` というディスク バックアップ デバイスを物理名 `c:\dump\dump1.bak` で追加します。  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ EXEC sp_addumpdevice 'disk', 'networkdevice',
 ```  
   
 ### <a name="c-adding-a-tape-backup-device"></a>C. テープ バックアップ デバイスを追加する  
- 次の例では、追加、`tapedump1`デバイスを物理名`\\.\tape0`します。  
+ 次の例では、`tapedump1` デバイスを物理名 `\\.\tape0` で追加します。  
   
 ```  
 USE master;  
@@ -130,7 +130,7 @@ EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0';
 ```  
   
 ### <a name="d-backing-up-to-a-logical-backup-device"></a>D. 論理バックアップ デバイスにバックアップする  
- 次の例では、論理バックアップ デバイス、 `AdvWorksData`、バックアップ ディスク ファイル。 作成した論理バックアップ デバイスに [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースをバックアップします。  
+ 次の例では、バックアップ ディスク ファイル用の論理バックアップ デバイス `AdvWorksData` を作成した後、 作成した論理バックアップ デバイスに [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースをバックアップします。  
   
 ```  
 USE master;  

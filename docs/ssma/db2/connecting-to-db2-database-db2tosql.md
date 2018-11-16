@@ -10,12 +10,12 @@ ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c280b28082a1f85074b129d7a659333d7323d879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735550"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668371"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 データベース (DB2ToSQL) に接続します。
 DB2 のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行する DB2 データベースに接続する必要があります。 接続すると、SSMA は、すべての DB2 スキーマに関するメタデータを取得し、DB2 メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -107,7 +107,7 @@ DB2 データベースについてのメタデータは、自動的に更新さ�
   
 ## <a name="next-step"></a>次の手順  
   
--   移行プロセスの次の手順が、 [SQL Server に接続する](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)します。  
+-   移行プロセスの次の手順が、 [SQL Server に接続する](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server にデータベースを移行する DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

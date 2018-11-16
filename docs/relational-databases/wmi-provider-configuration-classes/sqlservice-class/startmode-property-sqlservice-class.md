@@ -18,12 +18,12 @@ ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 79b79347b03eda5540e59b00dd23c26c7c19bd1d
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 7b45ee731e10474f1ac062fe7a25ab69f5d168ad
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215000"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667672"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,6 +63,6 @@ object.StartMode [= value]
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

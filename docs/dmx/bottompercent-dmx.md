@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bfc4f178752d77fe8eb6807c91ebdc4bd3bb890
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4b678aafac0c189983f69cc6db75bcaa48bd9ccf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002114"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602932"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  **BottomPercent**関数は、ランクの増加順に最下位行を返します。 ランクがの評価値に基づいて、\<式をランク付け > 行ごとに、引数ようにの合計、\<式をランク付け > で指定された割合を要求している値は、少なくとも、 \<% >引数。 **BottomPercent**指定した割合の値を満たしながら、可能な最も小さい要素数を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で作成した Association モデルに対する予測クエリの作成、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
+ 次の例で作成した Association モデルに対する予測クエリの作成、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
   
  BottomPercent のしくみを理解するのには、まず、入れ子になったテーブルのみを返す予測クエリを実行すると役立つ場合があります。  
   

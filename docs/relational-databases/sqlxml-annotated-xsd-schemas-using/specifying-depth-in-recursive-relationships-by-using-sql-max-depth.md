@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acac24b36f5eefcc1490e016d43c4ef014fb813d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55b81e7fff73442660ae98f4d6e6fcbfca0906df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843750"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675142"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth を使用した、再帰リレーションシップの深さの指定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  この結果を生成するには、次の XSD スキーマを使用して、これに対する XPath クエリを指定できます。 スキーマについて説明します、  **\<Emp >** から成る EmployeeType 型の要素、  **\<Emp >** 同じ EmployeeType 型の子要素。 これは、要素とその先祖が同じ型の再帰リレーションシップです。 さらに、スキーマを使用して、  **\<sql:relationship >** 監督者と被監督者間の親子リレーションシップを記述します。 これで **\<sql:relationship >** Emp は親と子テーブルの両方。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -191,7 +191,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  変更後のスキーマは次のようになります。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -249,7 +249,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-b"></a>例 B  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -291,7 +291,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-c"></a>例 C  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -339,7 +339,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 #### <a name="example-d"></a>例 D  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:complexType name="CustomerBaseType">   

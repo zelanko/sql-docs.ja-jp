@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bb960fc84dd1558589918096daedf4d36d18ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632170"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604882"
 ---
 # <a name="absolute-and-relative-urls"></a>絶対 URL と相対 URL
 URL には、ローカルまたはネットワーク コンピューターに格納されているターゲットの場所を指定します。 ファイル、ディレクトリ、HTML ページ、画像、プログラム、およびにターゲットを指定できます*します。*  
@@ -68,7 +68,7 @@ URL には、ローカルまたはネットワーク コンピューターに格
  たとえば、次のコード サンプルを開く方法を示しています。、 **Recordset**  /Winnt system32 ディレクトリの Readme25.txt ファイル。  
   
 ```  
-recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
  接続文字列で絶対 URL は、サーバーを指定します (`YourServer`) と、パス (`Winnt`)。 この URL には、コンテキストも定義します。  
@@ -80,7 +80,7 @@ recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdTa
  次のコードを開く別の例として、 **Recordset**の内容に、`Winnt`ディレクトリ。  
   
 ```  
-recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB プロバイダーが指定した URL スキーム  

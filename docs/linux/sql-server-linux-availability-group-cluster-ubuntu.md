@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 45ac371576eff08576354aed04e3d54ac0dc7696
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740338"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658382"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu のクラスターと可用性グループ リソースを構成します。
 
@@ -134,7 +134,7 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>フェンス (STONITH) を構成します。
 
-Pacemaker クラスターのベンダーは、STONITH を有効にして、サポートされているクラスターのセットアップ用に構成されたフェンス操作デバイスを必要としています。 ノードまたはノード上のリソースの状態を判断できないのは、クラスター リソース マネージャー、既知の状態、クラスターを再度表示するフェンス操作が使用されます。 リソース レベルのフェンス操作はにより主に、リソースを構成することによって、障害発生時のデータの破損がないこと。 リソース レベルのフェンスを使用することができます、ように期限切れの場合、ノード上のディスクをマークする DRBD (レプリケートされたブロック デバイスの分散) との通信リンクがダウンしました。 ノード レベルのフェンス操作により、ノードがどのリソースも実行しないことが保証されます。 ノードをリセットすることでこれし、その Pacemaker 実装には、STONITH (これは「その他のノードを先頭に撮影」略) が呼び出されます。 例:、無停電電源装置または管理インターフェイスのサーバーのカード、pacemaker がさまざまな優れたフェンス デバイスをサポートします。 詳細については、次を参照してください[Pacemaker クラスターを最初から](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)と[フェンスと Stonith。](http://clusterlabs.org/doc/crm_fencing.html) 
+Pacemaker クラスターのベンダーは、STONITH を有効にして、サポートされているクラスターのセットアップ用に構成されたフェンス操作デバイスを必要としています。 ノードまたはノード上のリソースの状態を判断できないのは、クラスター リソース マネージャー、既知の状態、クラスターを再度表示するフェンス操作が使用されます。 リソース レベルのフェンス操作はにより主に、リソースを構成することによって、障害発生時のデータの破損がないこと。 リソース レベルのフェンスを使用することができます、ように期限切れの場合、ノード上のディスクをマークする DRBD (レプリケートされたブロック デバイスの分散) との通信リンクがダウンしました。 ノード レベルのフェンス操作により、ノードがどのリソースも実行しないことが保証されます。 ノードをリセットすることでこれし、その Pacemaker 実装には、STONITH (これは「その他のノードを先頭に撮影」略) が呼び出されます。 例:、無停電電源装置または管理インターフェイスのサーバーのカード、pacemaker がさまざまな優れたフェンス デバイスをサポートします。 詳細については、次を参照してください[Pacemaker クラスターを最初から](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)と[フェンスと Stonith。](https://clusterlabs.org/doc/crm_fencing.html) 
 
 フェンス構成ノードのレベルが、環境と大きく依存しているため無効に (後で、構成可能) このチュートリアルでは。 プライマリ ノードで、次のスクリプトを実行します。 
 

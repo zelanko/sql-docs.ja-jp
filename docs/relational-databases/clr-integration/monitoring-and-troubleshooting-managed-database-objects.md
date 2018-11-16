@@ -14,12 +14,12 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a335ef626d161782c7cfef96bb40be9cf591871
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f355e7fcb46c12e34b23d332cf10da536697ac3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609650"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663782"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>マネージド データベース オブジェクトの監視とトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47609650"
   
 |イベント|説明|  
 |-----------|-----------------|  
-|[Assembly Load イベント クラス](http://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|アセンブリの読み込み要求 (成功と失敗) の監視に使用されます。|  
+|[Assembly Load イベント クラス](https://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|アセンブリの読み込み要求 (成功と失敗) の監視に使用されます。|  
 |[SQL:BatchStarting イベント クラスは](../../relational-databases/event-classes/sql-batchstarting-event-class.md)、 [SQL:BatchCompleted イベント クラス](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|開始または完了した [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチに関する情報を提供します。|  
 |[SP: Starting イベント クラス](../../relational-databases/event-classes/sp-starting-event-class.md)、 [SP: Completed イベント クラス](../../relational-databases/event-classes/sp-completed-event-class.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの実行の監視に使用されます。|  
 |[SQL:StmtStarting イベント クラス](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)、 [SQL:StmtCompleted イベント クラス](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|CLR および [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンの実行の監視に使用されます。|  

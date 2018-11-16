@@ -22,17 +22,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1925249781d938ad95bd4c27e60f797f8ad7b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5869fe4903ea60a42e8710b0acc969e8a8bc6202
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717580"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673991"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  データと、指定したテーブルまたはビューのインデックスのサイズおよび断片化情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 インデックスの場合、各パーティションの B ツリーのレベルごとに 1 行のデータが返されます。 ヒープの場合、各パーティションの IN_ROW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 ラージ オブジェクト (LOB) データの場合、各パーティションの LOB_DATA アロケーション ユニットごとに 1 行のデータが返されます。 テーブルに行オーバーフロー データが存在する場合、各パーティションの ROW_OVERFLOW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 xVelocity メモリー最適化列ストア インデックスに関する情報は返されません。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したテーブルまたはビューのデータとインデックスに関する、サイズおよび断片化情報を返します。 インデックスの場合、各パーティションの B ツリーのレベルごとに 1 行のデータが返されます。 ヒープの場合、各パーティションの IN_ROW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 ラージ オブジェクト (LOB) データの場合、各パーティションの LOB_DATA アロケーション ユニットごとに 1 行のデータが返されます。 テーブルに行オーバーフロー データが存在する場合、各パーティションの ROW_OVERFLOW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 xVelocity メモリー最適化列ストア インデックスに関する情報は返されません。  
   
 > [!IMPORTANT]
 > 照会する場合は**sys.dm_db_index_physical_stats** Always On をホストするサーバー インスタンスで[読み取り可能セカンダリ レプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)、再実行のブロック問題が発生する可能性があります。 これは、この動的管理ビューが、指定したユーザー テーブルまたはビューで IS ロックを獲得することが原因です。IS ロックは、そのユーザー テーブルまたはビューの X ロックに関して REDO スレッドの要求をブロックする可能性があります。  
@@ -111,11 +111,11 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|平均レコード サイズ (バイト単位)。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの平均レコード サイズになります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれる平均レコード サイズになります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体での平均レコード サイズになります。<br /><br /> ときに、NULL*モード*LIMITED を = です。|  
 |forwarded_record_count|**bigint**|別のデータの場所への転送ポインターを持つ、ヒープ内の転送されたレコード数 (この状態は、更新中に、新しい行を格納できる十分なスペースが元の場所にない場合に発生します)。<br /><br /> ヒープの IN_ROW_DATA アロケーション ユニット以外のアロケーション ユニットでは NULL になります。<br /><br /> NULL の場合にヒープ*モード*= LIMITED。|  
 |compressed_page_count|**bigint**|圧縮されたページ数。<br /><br /> ヒープの場合、新しく割り当てられたページはページ圧縮されません。 ヒープは、2 つの特殊な条件、つまりデータを一括インポートする場合、またはヒープを再構築する場合に、ページ圧縮されます。 ページ割り当ての原因となる通常の DML 操作ではページ圧縮されません。 compressed_page_count の値が目標のしきい値を超えた場合は、ヒープを再構築してください。<br /><br /> クラスター化インデックスを含むテーブルの場合、compressed_page_count の値はページ圧縮の効果を示します。|  
-|hobt_id|BIGINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 列ストア インデックスの場合のみ、これには、パーティションの内部列ストアのデータを追跡する行セットの ID です。 行セットには、データがヒープとしてストアドまたはバイナリ ツリー。 親の列ストア インデックスと同じインデックス ID があります。 詳細については、次を参照してください。 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)します。<br /><br /> NULL の場合|  
-|column_store_delete_buffer_state|TINYINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = のドレイン<br /><br /> 3 = フラッシュ<br /><br /> 4 = のインベントリから削除<br /><br /> 5 = 準備完了|  
-|column_store_delete_buff_state_desc||**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 無効 – 親インデックスは列ストア インデックスはありません。<br /><br /> OPEN-deleters し、スキャナーでは、これを使用します。<br /><br /> ドレイン中 – deleters ドレインが、スキャナーが引き続き使用します。<br /><br /> フラッシュ – は、バッファーが閉じられ、バッファー内の行は、削除のビットマップに書き込まれています。<br /><br /> 削除のビットマップに書き込まれた RETIRING – 閉じた削除バッファーの行が、バッファーが切り捨てられていないスキャナーによってまだ使用されています。 新しいスキャナーは、開いているバッファーが十分であるために、中止のバッファーを使用する必要はありません。<br /><br /> 準備ができました – この削除バッファーが使用できる状態。|  
+|hobt_id|BIGINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 列ストア インデックスの場合のみ、これには、パーティションの内部列ストアのデータを追跡する行セットの ID です。 行セットには、データがヒープとしてストアドまたはバイナリ ツリー。 親の列ストア インデックスと同じインデックス ID があります。 詳細については、次を参照してください。 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)します。<br /><br /> NULL の場合|  
+|column_store_delete_buffer_state|TINYINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = のドレイン<br /><br /> 3 = フラッシュ<br /><br /> 4 = のインベントリから削除<br /><br /> 5 = 準備完了|  
+|column_store_delete_buff_state_desc||**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 無効 – 親インデックスは列ストア インデックスはありません。<br /><br /> OPEN-deleters し、スキャナーでは、これを使用します。<br /><br /> ドレイン中 – deleters ドレインが、スキャナーが引き続き使用します。<br /><br /> フラッシュ – は、バッファーが閉じられ、バッファー内の行は、削除のビットマップに書き込まれています。<br /><br /> 削除のビットマップに書き込まれた RETIRING – 閉じた削除バッファーの行が、バッファーが切り捨てられていないスキャナーによってまだ使用されています。 新しいスキャナーは、開いているバッファーが十分であるために、中止のバッファーを使用する必要はありません。<br /><br /> 準備ができました – この削除バッファーが使用できる状態。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  sys.dm_db_index_physical_stats 動的管理関数は、DBCC SHOWCONTIG ステートメントの代わりに使用できます。  
   
 ## <a name="scanning-modes"></a>スキャン モード  
@@ -197,7 +197,7 @@ GO
   
 -   DBCC DBREINDEX の代わりの ALTER INDEX REBUILD を使用して、オンラインまたはオフラインでインデックスを再構築する。 詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
- 断片化だけでは、インデックスを再構成または再構築する十分な理由にはなりません。 断片化の影響は主に、インデックスのスキャン中にページの先行読み取りのスループットが減速することです。 これは、応答時間の遅れの原因となります。 断片化したテーブルまたはインデックスでのクエリのワークロードにスキャンが関係していない場合、ワークロードは主に単一参照のため、断片化を解消しても効果はありません。 詳細については、この参照してください。 [Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=31012)します。  
+ 断片化だけでは、インデックスを再構成または再構築する十分な理由にはなりません。 断片化の影響は主に、インデックスのスキャン中にページの先行読み取りのスループットが減速することです。 これは、応答時間の遅れの原因となります。 断片化したテーブルまたはインデックスでのクエリのワークロードにスキャンが関係していない場合、ワークロードは主に単一参照のため、断片化を解消しても効果はありません。 詳細については、この参照してください。 [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=31012)します。  
   
 > [!NOTE]  
 >  DBCC SHRINKFILE または DBCC SHRINKDATABASE を実行している場合は、インデックスが部分的または完全に移動された場合、圧縮操作中に断片化が生じる可能性があります。 そのため場合、圧縮操作を実行する必要があります、行う必要があります、断片化が削除される前にします。  
@@ -240,7 +240,7 @@ GO
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-information-about-a-specified-table"></a>A. 指定したテーブルの情報を返す  
- 次の例では、`Person.Address` テーブルのすべてのインデックスとパーティションについて、サイズと断片化の統計を返します。 スキャン モードに設定されて`'LIMITED'`最適なパフォーマンスと返される統計を制限します。 このクエリを実行するには、少なくとも `Person.Address` テーブルに対する CONTROL 権限が必要です。  
+ 次の例では、`Person.Address` テーブルのすべてのインデックスとパーティションについて、サイズと断片化の統計を返します。 パフォーマンスを向上させ、返される統計を制限するために、スキャン モードは `'LIMITED'` に設定されています。 このクエリを実行するには、少なくとも `Person.Address` テーブルに対する CONTROL 権限が必要です。  
   
 ```  
 DECLARE @db_id SMALLINT;  
@@ -266,7 +266,7 @@ GO
 ```  
   
 ### <a name="b-returning-information-about-a-heap"></a>B. ヒープに関する情報を返す  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのヒープ `dbo.DatabaseLog` に関するすべての統計を返します。 行が返されるテーブルに LOB データが含まれているため、`LOB_DATA`アロケーション ユニットに返される行に加えて、`IN_ROW_ALLOCATION_UNIT`ヒープのデータ ページを格納しています。 このクエリを実行するには、少なくとも `dbo.DatabaseLog` テーブルに対する CONTROL 権限が必要です。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのヒープ `dbo.DatabaseLog` に関するすべての統計を返します。 テーブルには LOB データが含まれているため、ヒープのデータ ページを格納している `LOB_DATA` アロケーション ユニットの行だけではなく、`IN_ROW_ALLOCATION_UNIT` アロケーション ユニットの行も返されます。 このクエリを実行するには、少なくとも `dbo.DatabaseLog` テーブルに対する CONTROL 権限が必要です。  
   
 ```  
 DECLARE @db_id SMALLINT;  
@@ -286,7 +286,7 @@ GO
 ```  
   
 ### <a name="c-returning-information-for-all-databases"></a>C. すべてのデータベースの情報を返す  
- 次の例のインスタンス内のすべてのテーブルとインデックスのすべての統計情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ワイルドカードを指定することによって`NULL`すべてのパラメーター。 このクエリを実行するには、VIEW SERVER STATE 権限が必要です。  
+ 次の例では、すべてのパラメーターにワイルドカード `NULL` を指定して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのテーブルとインデックスに関する統計を返します。 このクエリを実行するには、VIEW SERVER STATE 権限が必要です。  
   
 ```  
 SELECT * FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL);  
@@ -424,14 +424,14 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

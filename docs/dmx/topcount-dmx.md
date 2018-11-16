@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989855"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601742"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  ただし、する必要がある可能性も TopCount を使用する場合があります。 たとえば、DMX はサポートしない、**上部**下位選択ステートメントの修飾子です。 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)関数はまたの追加をサポートしません**上部**します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用して作成した Association モデルに対する予測クエリ、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 クエリは、同様の結果を返すが最初の例では、TopCount と 2 番目の例は、Predict 関数を使用します。  
+ 次の例を使用して作成した Association モデルに対する予測クエリ、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 クエリは、同様の結果を返すが最初の例では、TopCount と 2 番目の例は、Predict 関数を使用します。  
   
  TopCount のしくみを理解するのには、まず、入れ子になったテーブルのみを返す予測クエリを実行すると役立つ場合があります。  
   

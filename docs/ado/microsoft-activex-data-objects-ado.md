@@ -1,7 +1,7 @@
 ---
 title: Microsoft ActiveX Data Objects (ADO) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +13,12 @@ ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dad025d911adf2795a90125e20d57270f489efa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0994c4ee4c96e5ed9c373ec4bdc94b02ccddff7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602310"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605172"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -42,7 +42,7 @@ ADO は、C++ プログラムで SQL Server への接続に使用されます。
  リモート データ サービス (RDS) は、ADO がクライアント アプリケーションまたは Web ページをサーバーからデータを移動、クライアントでは、データを操作して更新プログラムを 1 回のラウンド トリップでサーバーに返すの機能です。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="adox"></a>ADOX  
  Microsoft ActiveX データ オブジェクトの拡張機能をデータ定義言語 (ADOX) セキュリティでは、ADO オブジェクトとプログラミング モデルの拡張機能です。 ADOX には、スキーマの作成と変更、セキュリティのオブジェクトが含まれます。 操作のスキーマにオブジェクト ベースのアプローチであるために、さまざまなデータ ソースのネイティブの構文を使って違いに関係なく動作するコードを記述できます。  

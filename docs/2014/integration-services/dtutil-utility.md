@@ -26,15 +26,15 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d21a944b037affb71700bf49cf665331acb60e1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a359d584125a2b332e178d03d03cc75f4f4ad1f1
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149172"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559476"
 ---
 # <a name="dtutil-utility"></a>Encrypt
-  **Dtutil**コマンド p1ompt ユーティリティを使用して管理する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージ。 このユーティリティを使用して、パッケージのコピー、移動、削除を行ったり、パッケージの存在を確認することができます。 これらの操作は [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ上で実行できます。このパッケージは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のいずれかに格納されます。 このユーティリティが **msdb**に格納されているパッケージにアクセスする場合、コマンド プロンプトでユーザー名とパスワードが必要となる場合があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、コマンド プロンプトではユーザー名とパスワードの両方が必要です。 ユーザー名を入力しない場合、 **dtutil** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にログオンしようとします。 パッケージのストレージ型は `/SQL`、`/FILE`、および `/DTS` オプションで指定します。  
+  **dtutil** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの管理に使用します。 このユーティリティを使用して、パッケージのコピー、移動、削除を行ったり、パッケージの存在を確認することができます。 これらの操作は [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ上で実行できます。このパッケージは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のいずれかに格納されます。 このユーティリティが **msdb**に格納されているパッケージにアクセスする場合、コマンド プロンプトでユーザー名とパスワードが必要となる場合があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、コマンド プロンプトではユーザー名とパスワードの両方が必要です。 ユーザー名を入力しない場合、 **dtutil** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にログオンしようとします。 パッケージのストレージ型は `/SQL`、`/FILE`、および `/DTS` オプションで指定します。  
   
  **dtutil** コマンド プロンプト ユーティリティでは、コマンド ファイルの使用およびリダイレクションはサポートされていません。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48149172"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインスタンスに接続している場合、dtutil によって実行される操作の多くは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で確認しながら実行することもできます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](service/package-management-ssis-service.md)」を参照してください。  
   
- オプションを入力する順序は任意です。 パイプ (|) 文字は `OR` 演算子を表し、利用可能な値を示すために使用されます。 区切られたオプションのいずれかを使用する必要があります、`OR`パイプします。  
+ オプションを入力する順序は任意です。 パイプ (|) 文字は `OR` 演算子を表し、利用可能な値を示すために使用されます。 `OR` パイプで区切られたオプションのうちの 1 つを使用する必要があります。  
   
  すべてのオプションは、スラッシュ (/) またはマイナス記号 (-) で始まる必要があります。 ただし、オプションのテキストとスラッシュ (/) またはマイナス記号 (-) の間に空白を入れないでください。空白を入れると、コマンドの実行が失敗します。  
   
@@ -88,7 +88,7 @@ dtutil /option [value] [/option [value]]...
 |オプション|説明|  
 |------------|-----------------|  
 |/?|コマンド プロンプト オプションを表示します。|  
-|/C[opy] *location;destinationPathandPackageName*|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージに対するコピー操作を指定します。 このパラメーターを使用するには、先に **/FI**、 **SQ**、または **/DT** オプションを使用してパッケージの場所を指定する必要があります。 次に、コピー先の場所とコピー先のパッケージ名を指定します。 *destinationPathandPackageName* 引数には、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージのコピー先を指定します。 場合、変換先*場所*は`SQL`、 *DestUser*、 *DestPassword*と*DestServer*引数があります。コマンドで指定します。<br /><br /> ときに、`Copy`アクションが、転送先に既存のパッケージを検出した**dtutil**ユーザーがパッケージの削除を確認するメッセージが表示されます。 `Y`パッケージを上書きし、`N`応答が、プログラムが終了します。 コマンドに *Quiet* 引数が含まれている場合は、プロンプトは表示されず、既存のパッケージはすべて上書きされます。|  
+|/C[opy] *location;destinationPathandPackageName*|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージに対するコピー操作を指定します。 このパラメーターを使用するには、先に **/FI**、 **SQ**、または **/DT** オプションを使用してパッケージの場所を指定する必要があります。 次に、コピー先の場所とコピー先のパッケージ名を指定します。 *destinationPathandPackageName* 引数には、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージのコピー先を指定します。 場合、変換先*場所*は`SQL`、 *DestUser*、 *DestPassword*と*DestServer*引数があります。コマンドで指定します。<br /><br /> ときに、`Copy`アクションが、転送先に既存のパッケージを検出した**dtutil**ユーザーがパッケージの削除を確認するメッセージが表示されます。 パッケージを上書きする場合は `Y`、プログラムを終了する場合は `N` と応答します。 コマンドに *Quiet* 引数が含まれている場合は、プロンプトは表示されず、既存のパッケージはすべて上書きされます。|  
 |/Dec[rypt] *password*|(省略可)。 パスワードが暗号化されているパッケージを読み込むときに使用する暗号化解除用パスワードを設定します。|  
 |/Del[ete]|*SQL*、 *DTS* 、または *FILE* オプションによって指定されたパッケージを削除します。 **dtutil** がパッケージを削除できない場合、プログラムは終了します。|  
 |/DestP[assword] *password*|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用している [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続するために SQL オプションで使用されるパスワードを指定します。 コマンド ラインで *DESTPASSWORD* オプションを指定せずに *DTSUSER* を指定すると、エラーが生成されます。<br /><br /> 注: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。|  
@@ -106,7 +106,7 @@ dtutil /option [value] [/option [value]]...
 |/FR[ename] {*SQL* &#124; *DTS*} [;*ParentFolderPath; OldFolderName;NewFolderName]*|(省略可)。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 上または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上にあるフォルダーの名前を変更します。 *ParentFolderPath* は、名前を変更するフォルダーの場所です。 *OldFolderName* はフォルダーの現在の名前で、 *NewFolderName* はそのフォルダーに付ける新しい名前です。|  
 |/H[elp] *option*|**dtutil** の各オプションとその使用方法を詳細に説明するヘルプ テキストを表示します。 このオプションの引数は省略可能です。 引数が含まれている場合、ヘルプ テキストには、指定されたオプションに関する詳細情報が表示されます。 次の例では、すべてのオプションに関するヘルプが表示されます。<br /><br /> `dtutil /H`<br /><br /> 次の 2 つの例では、 */H* オプションを使用して、特定のオプション (この例では */Q [uiet]* オプション) に関する詳細なヘルプが表示されます。<br /><br /> `dtutil /Help Quiet`<br /><br /> `dtutil /H Q`|  
 |/I[DRegenerate]|パッケージの新しい GUID を作成し、パッケージの ID プロパティを更新します。 パッケージをコピーするときに、パッケージ ID が同じままだと、両方のパッケージが同じ GUID でログ ファイルに表示されることになります。 この操作では、新しくコピーされたパッケージ用に新しい GUID が作成され、元のパッケージと区別されます。|  
-|/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージに対する移動操作を指定します。 このパラメーターを使用するには、先に **/FI**、 **/SQ**、または **/DT** オプションを使用してパッケージの場所を指定し、 次に **Move** 操作を指定します。 この操作には、2 つの引数をセミコロンで区切って指定する必要があります。<br /><br /> 移動先の引数には、 *SQL*、 *FILE*、または *DTS*を指定できます。 *SQL* の移動先には、 *DESTUSER*オプション、 *DESTPASSWORD*オプション、および *DESTSERVER* オプションを含めることができます。<br /><br /> *pathandname* 引数には、パッケージの場所を指定します。 *SQL* ではパッケージのパスおよびパッケージ名、 *FILE* では UNC またはローカル パス、 *DTS* では [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアのルートを基準とした相対的な場所をそれぞれ使用します。 移動先が *FILE* または *DTS*の場合、パスの引数にはファイル名を含めません。 代わりに、指定された場所にあるパッケージ名をファイル名として使用します。<br /><br /> <br /><br /> ときに、`MOVE`アクションが、転送先に既存のパッケージを検出した**dtutil**パッケージを上書きすることを確認するように求められます。 `Y`パッケージを上書きし、`N`応答が、プログラムが終了します。 コマンドに *QUIET* オプションが含まれている場合は、プロンプトは表示されず、既存のパッケージはすべて上書きされます。|  
+|/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージに対する移動操作を指定します。 このパラメーターを使用するには、先に **/FI**、 **/SQ**、または **/DT** オプションを使用してパッケージの場所を指定し、 次に **Move** 操作を指定します。 この操作には、2 つの引数をセミコロンで区切って指定する必要があります。<br /><br /> 移動先の引数には、 *SQL*、 *FILE*、または *DTS*を指定できます。 *SQL* の移動先には、 *DESTUSER*オプション、 *DESTPASSWORD*オプション、および *DESTSERVER* オプションを含めることができます。<br /><br /> *pathandname* 引数には、パッケージの場所を指定します。 *SQL* ではパッケージのパスおよびパッケージ名、 *FILE* では UNC またはローカル パス、 *DTS* では [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアのルートを基準とした相対的な場所をそれぞれ使用します。 移動先が *FILE* または *DTS*の場合、パスの引数にはファイル名を含めません。 代わりに、指定された場所にあるパッケージ名をファイル名として使用します。<br /><br /> <br /><br /> ときに、`MOVE`アクションが、転送先に既存のパッケージを検出した**dtutil**パッケージを上書きすることを確認するように求められます。 パッケージを上書きする場合は `Y`、プログラムを終了する場合は `N` と応答します。 コマンドに *QUIET* オプションが含まれている場合は、プロンプトは表示されず、既存のパッケージはすべて上書きされます。|  
 |/Q[uiet]|`COPY` オプション、`MOVE` オプション、または `SIGN` オプションを含むコマンドの実行時に示される確認プロンプトが表示されないようにします。 この確認プロンプトは、指定されたパッケージと同じ名前のパッケージが対象となるコンピューターに既に存在する場合や、指定されたパッケージが既に署名されている場合に表示されます。|  
 |/R[emark] *text*|コメントをコマンド ラインに追加します。 コメントの引数は省略可能です。 コメント テキストが空白を含む場合、テキストを引用符で囲む必要があります。 1 行のコマンド ラインに複数の REM オプションを含めることができます。|  
 |/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージに署名します。 この操作には、3 つの引数をセミコロンで区切って指定する必要があります。<br /><br /> 移動先の引数には、 *SQL*、 *FILE*、または *DTS*を指定できます。 SQL の移動先には、 *DESTUSER*オプション、 *DESTPASSWORD* オプション、および *DESTSERVER* オプションを含めることができます。<br /><br /> path 引数には、操作の対象となるパッケージの場所を指定します。<br /><br /> hash 引数には、さまざまな長さの 16 進数文字列で表される認証識別子を指定します。<br /><br /> <br /><br /> **\*\* 重要 \*\*** パッケージの署名を確認するように構成した場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって確認されるのは、デジタル署名が存在するかどうか、有効かどうか、および信頼関係のある発行元の署名であるかどうかのみです。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、パッケージが変更されたかどうかは確認されません。<br /><br /> 詳細については、「 [デジタル署名を使用してパッケージのソースを特定する](security/identify-the-source-of-packages-with-digital-signatures.md)」を参照してください。|  
@@ -183,7 +183,7 @@ dtutil /SQL delPackage /SOURCEUSER srcUserName /SOURCEPASSWORD #8nGs*w7F /DELETE
 ```  
   
 > [!NOTE]  
->  名前付きサーバーからパッケージを削除するには含める、`SOURCESERVER`オプションおよびその引数。 *SQL* を使用する場合にのみサーバーを指定できます。  
+>  パッケージを名前付きサーバーから削除するには、`SOURCESERVER` オプションおよびそのオプションの引数を含めます。 *SQL* を使用する場合にのみサーバーを指定できます。  
   
  SSIS パッケージ ストアに格納されているパッケージを削除するには、次の構文を使用します。  
   
@@ -260,7 +260,7 @@ dtutil /FILE c:\srcPackage.dtsx /MOVE FILE;c:\destPackage.dtsx
 dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819873a91f919  
 ```  
   
- 証明書に関する情報を確認するには、 **CertMgr**を使用します。 ハッシュ コードを確認するには、 **CertMgr** ユーティリティで証明書を選択し、 **[表示]** をクリックしてプロパティを表示します。 **[詳細]** タブで、証明書に関する詳細な情報を確認できます。 `Thumbprint`プロパティはスペースを削除、ハッシュ値として使用されます。  
+ 証明書に関する情報を確認するには、 **CertMgr**を使用します。 ハッシュ コードを確認するには、 **CertMgr** ユーティリティで証明書を選択し、 **[表示]** をクリックしてプロパティを表示します。 **[詳細]** タブで、証明書に関する詳細な情報を確認できます。 `Thumbprint` プロパティはハッシュ値として使用されます。このとき、スペースは削除されます。  
   
 > [!NOTE]  
 >  上の例で使用しているハッシュは実際のハッシュではありません。  

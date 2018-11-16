@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 39b389221613e6bc3d789f47cb9b972d96a53377
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a2c5164c884f2611267e22d62bc2d83bc8cfac0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703840"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659701"
 ---
 # <a name="functions-on-sequences---id"></a>シーケンスの関数 - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ fn:id($arg as xs:IDREF*) as element()*
 -- go  
   
 create xml schema collection SC as  
-'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
+'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
             <element name="employees" type="e:EmployeesType"/>  
             <complexType name="EmployeesType">  
                  <sequence>  
@@ -100,7 +99,7 @@ Go
  クエリは値として "Dave" を返します。 これは、Dave が Joe のマネージャーであることを示します。  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. OrderList IDREFS 属性値に基づいて要素を取得する  
- 次の例では、OrderList 属性で、<`Customer`> 要素は IDREFS 型の属性。 この例では特定の顧客に対応する注文 ID がリストされます。 各注文 id は、<`Order`> 下の子要素、<`Customer`> 順序の値を指定します。  
+ 次の例では、<`Customer`> 要素の OrderList 属性は IDREFS 型の属性です。 この例では特定の顧客に対応する注文 ID がリストされます。 注文 ID ごとに、<`Customer`> の下に注文の値を提供する <`Order`> 子要素が存在します。  
   
  クエリ式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` では、最初の顧客の最初の値が IDRES 一覧から取得されます。 この値に渡されます、 **id()** 関数。 関数で検索し、<`Order`> 要素の OrderID 属性値への入力に一致、 **id()** 関数。  
   
@@ -108,7 +107,7 @@ Go
 drop xml schema collection SC  
 go  
 create xml schema collection SC as  
-'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  
@@ -183,6 +182,6 @@ select @x.query('declare namespace CustOrders="Customers";
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 引数の型を必要と**id()** xs:idref のサブタイプにします。  
   
 ## <a name="see-also"></a>参照  
- [シーケンスの関数](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
+ [シーケンスの関数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

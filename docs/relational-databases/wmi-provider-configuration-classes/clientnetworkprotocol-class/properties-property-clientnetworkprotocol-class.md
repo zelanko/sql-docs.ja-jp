@@ -18,16 +18,16 @@ ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6497305d0a0d9a303df0f46e74914b3467243cdf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: bdf4da36e3329ed5da4a820494ef16e999eed3d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217690"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672491"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties プロパティ (ClientNetworkProtocol クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Configure Client Protocols (クライアント プロトコルの構成)](http://technet.microsoft.com/library/ms181035.aspx)によって指定された現在のクライアント ネットワーク プロトコルに関連付けられたプロパティを取得します。  
+  [Configure Client Protocols (クライアント プロトコルの構成)](https://technet.microsoft.com/library/ms181035.aspx)によって指定された現在のクライアント ネットワーク プロトコルに関連付けられたプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,6 +46,6 @@ object.Properties [= value]
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+ [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -13,23 +13,23 @@ ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e9751dcfe8ee708731dbad54860a978f0e498df7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faecf1d3a7ab820ef01a25ea67b2313ab03e056a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604770"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657402"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>移行の Sybase ASE データの SQL Server - Azure SQL DB (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) のデータベース オブジェクトを正常に読み込んだ後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB では、データを移行する ASE から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。  
   
 > [!IMPORTANT]  
-> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、データを移行する前にする必要がありますインストールする、SSMA for Sybase ASE 拡張パックおよび SSMA を実行しているコンピューター上の Sybase ASE プロバイダー。 SQL Server エージェント サービスも実行している必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL サーバー (SybaseToSQL) での SSMA コンポーネントのインストール。](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
+> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、データを移行する前にする必要がありますインストールする、SSMA for Sybase ASE 拡張パックおよび SSMA を実行しているコンピューター上の Sybase ASE プロバイダー。 SQL Server エージェント サービスも実行している必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL サーバー (SybaseToSQL) での SSMA コンポーネントのインストール。](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
 移行する前にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。  
   
--   このダイアログ ボックスを使用して、移行のバッチ サイズ、テーブルのロック、制約チェック、null 値の処理、および id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行) (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)します。  
+-   このダイアログ ボックスを使用して、移行のバッチ サイズ、テーブルのロック、制約チェック、null 値の処理、および id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行) (Sybase)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)します。  
   
     詳細については**データ移行の設定の拡張**を参照してください[データ移行の設定](data-migration-settings-sybasetosql.md)  
   
@@ -50,7 +50,7 @@ Sybase Adaptive Server Enterprise (ASE) のデータベース オブジェクト
   
 **サーバー側のデータの移行:**  
   
--   サーバー側のデータ移行中には、エンジンは、ターゲット データベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL サーバー (SybaseToSQL) での SSMA コンポーネントのインストール。](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
+-   サーバー側のデータ移行中には、エンジンは、ターゲット データベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL サーバー (SybaseToSQL) での SSMA コンポーネントのインストール。](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 -   サーバー側での移行を開始するには、選択、**サーバー側のデータ移行のエンジン**オプション、**プロジェクト設定**ダイアログ。  
   
@@ -99,11 +99,11 @@ Sybase Adaptive Server Enterprise (ASE) のデータベース オブジェクト
   
 5.  **Sybase ASE への接続**ダイアログ ボックスが接続の資格情報を入力し、クリックして**Connect**します。 Sybase ASE への接続に関する詳細については、次を参照してください[Sybase への接続&#40;SybaseToSQL。&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
-    ターゲット データベースが SQL Server の場合で接続の資格情報を入力し、 **SQL サーバーへの接続** ダイアログ ボックスをクリックします**Connect**します。 SQL Server に接続する方法の詳細については、次を参照してください[SQL Server(SybaseToSQL) への接続。](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
+    ターゲット データベースが SQL Server の場合で接続の資格情報を入力し、 **SQL サーバーへの接続** ダイアログ ボックスをクリックします**Connect**します。 SQL Server に接続する方法の詳細については、次を参照してください[SQL Server(SybaseToSQL) への接続。](https://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
   
     ターゲット データベースが Azure SQL DB の場合は、[接続の資格情報を入力してください。、 **Azure SQL DB への接続**] ダイアログ ボックスをクリックします**Connect**します。 Azure SQL DB に接続する方法の詳細については、次を参照してください[Azure SQL DB に接続する&#40;SybaseToSQL。&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
-    メッセージが表示されます、**出力**ウィンドウ。 移行の完了時に、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、順にクリックします**詳細**します。 レポートが完了したら、クリックして**閉じる**します。 データ移行レポートの詳細については、次を参照してください[データ移行レポート (SSMA 一般的)。](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    メッセージが表示されます、**出力**ウィンドウ。 移行の完了時に、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、順にクリックします**詳細**します。 レポートが完了したら、クリックして**閉じる**します。 データ移行レポートの詳細については、次を参照してください[データ移行レポート (SSMA 一般的)。](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > SQL Express エディションは、対象データベースとして使用される、クライアント側のデータの移行のみが許可されているし、サーバー側のデータ移行はサポートされていません。  

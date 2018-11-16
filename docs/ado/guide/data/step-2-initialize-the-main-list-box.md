@@ -11,12 +11,12 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 629ba98b4b30f5000cac7366f5b558e925cf20cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735524"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600012"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>手順 2: Main リスト ボックスを初期化する
 グローバルのレコードとレコード セット オブジェクトを宣言するには、([全般]) (宣言) Form1 に、次のコードを挿入します。  
@@ -34,19 +34,19 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=http://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- このコードは、グローバルのレコードとレコード セット オブジェクトをインスタンス化します。 Record オブジェクトでは、 `grec`、ActiveConnection として指定された URL を開くとします。 URL が存在する場合が開きます。ファイルは既に存在しない場合は作成されます。 置き換える必要がありますに注意してください"http://servername/foldername/"環境からの有効な URL を使用します。  
+ このコードは、グローバルのレコードとレコード セット オブジェクトをインスタンス化します。 Record オブジェクトでは、 `grec`、ActiveConnection として指定された URL を開くとします。 URL が存在する場合が開きます。ファイルは既に存在しない場合は作成されます。 置き換える必要がありますに注意してください"https://servername/foldername/"環境からの有効な URL を使用します。  
   
  Recordset オブジェクトを`grs`、レコードの子で開かれた`grec`します。 `lstMain`は URL に公開されているリソースのファイル名が格納されます。  
   

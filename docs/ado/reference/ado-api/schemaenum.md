@@ -16,24 +16,24 @@ ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dd7edb2f5969f7ec8ded931c5e562c0c1992768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749230"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603665"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 スキーマの種類を指定します**Recordset**を[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを取得します。  
   
 ## <a name="remarks"></a>コメント  
- 各トピックで見つかる各 ADO 定数の関数と列に関する追加情報が返される[付録 B スキーマ行セット](http://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)の OLE DB プログラマーズ リファレンス。 次の表の説明 セクションにかっこで囲まれた各トピックの名前が表示されます。  
+ 各トピックで見つかる各 ADO 定数の関数と列に関する追加情報が返される[付録 B スキーマ行セット](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)の OLE DB プログラマーズ リファレンス。 次の表の説明 セクションにかっこで囲まれた各トピックの名前が表示されます。  
   
- 各トピックで見つかる各 ADO MD 定数の関数と列に関する追加情報が返される[OLE DB for OLAP オブジェクトおよびスキーマ行セット](http://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)オンライン分析処理 (OLAP) のドキュメントの OLE DB でします。 次の表の説明 列にかっこで囲まれた各トピックの名前が表示されます。  
+ 各トピックで見つかる各 ADO MD 定数の関数と列に関する追加情報が返される[OLE DB for OLAP オブジェクトおよびスキーマ行セット](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)オンライン分析処理 (OLAP) のドキュメントの OLE DB でします。 次の表の説明 列にかっこで囲まれた各トピックの名前が表示されます。  
   
  ADO データ型を OLE DB のドキュメント内の列のデータ型を変換するには、ADO の説明の列を参照して[格納](../../../ado/reference/ado-api/datatypeenum.md)トピック。 など、OLE DB データ型の**DBTYPE_WSTR**の ADO データ型と等価**adWChar**します。  
   
- ADO には、定数、値のスキーマのような結果が生成されます。 **adSchemaDBInfoKeywords**と**adSchemaDBInfoLiterals**します。 ADO の作成、**レコード セット**、によってそれぞれ返される値を使用して各行を入力し、 **IDBInfo::GetKeywords**と**IDBInfo::GetLiteralInfo**メソッド。 これらのメソッドに関する追加情報が見つかりません、 [IDBInfo](http://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB プログラマーズ リファレンスのセクション。  
+ ADO には、定数、値のスキーマのような結果が生成されます。 **adSchemaDBInfoKeywords**と**adSchemaDBInfoLiterals**します。 ADO の作成、**レコード セット**、によってそれぞれ返される値を使用して各行を入力し、 **IDBInfo::GetKeywords**と**IDBInfo::GetLiteralInfo**メソッド。 これらのメソッドに関する追加情報が見つかりません、 [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB プログラマーズ リファレンスのセクション。  
   
 |定数|値|説明|制約列|  
 |--------------|-----------|-----------------|------------------------|  

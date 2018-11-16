@@ -14,12 +14,12 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d35f549581e9ac0a12c37cef90f66969aff1659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633436"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601352"
 ---
 # <a name="shape-commands-in-general"></a>一般的な Shape コマンド
 形状の列を定義するデータの整形**レコード セット**、列、および方法で表されるエンティティ間のリレーションシップ、**レコード セット**にデータを設定します。  
@@ -46,7 +46,7 @@ ms.locfileid: "47633436"
   
  アクセスすることができます、 **Recordset**形状のコンポーネント**レコード セット**プログラムまたは適切なビジュアル コントロールを使用します。  
   
- マイクロソフトは、図形のコマンドを生成するためのビジュアル ツールを提供しています (を参照してください、[データ環境デザイナー](http://go.microsoft.com/fwlink/?LinkId=5689) Visual Basic 6 のドキュメントで) と、(「"を使用して、Microsoft 階層的な階層カーソルを表示します。フレキシブル グリッド コントロール"Visual Basic 6 ドキュメント)。  
+ マイクロソフトは、図形のコマンドを生成するためのビジュアル ツールを提供しています (を参照してください、[データ環境デザイナー](https://go.microsoft.com/fwlink/?LinkId=5689) Visual Basic 6 のドキュメントで) と、(「"を使用して、Microsoft 階層的な階層カーソルを表示します。フレキシブル グリッド コントロール"Visual Basic 6 ドキュメント)。  
   
  階層構造を移動する方法については**Recordset**を参照してください[階層レコード セットの行にアクセスする](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)します。  
   

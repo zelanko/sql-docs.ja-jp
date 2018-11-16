@@ -12,12 +12,12 @@ ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 72df6a9da82e421dfb921501c110d363aa54a8f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781562"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666821"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>SSMA for Oracle クライアントのインストール (OracleToSQL)
 SSMA クライアントは、次のタスクを実行するプログラム ファイルで構成されます。  
@@ -43,7 +43,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー 3.1 またはそれ以降のバージョン。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 またはそれ以降のバージョン。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品メディア。 取得することも、 [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882)します。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 またはそれ以降のバージョン。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品メディア。 取得することも、 [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882)します。  
   
 -   Oracle クライアント 9.0 または以降のバージョンと移行する Oracle データベースへの接続。 Oracle クライアントのバージョンと、同じバージョンまたは Oracle データベースのバージョンより新しいバージョンである必要があります。  
   
@@ -54,7 +54,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
 -   4 GB の RAM を推奨します。  
   
 ## <a name="installing-the-ssma-for-oracle-client"></a>Oracle クライアント用の SSMA のインストール  
-SSMA は、Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](http://aka.ms/ssmafororacle)します。  
+SSMA は、Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](https://aka.ms/ssmafororacle)します。  
   
 最新バージョンをダウンロードした後は、SSMA をインストールする前からインストール ファイルを抽出する必要があります。  
   

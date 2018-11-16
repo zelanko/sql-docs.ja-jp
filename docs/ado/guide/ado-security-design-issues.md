@@ -1,7 +1,7 @@
 ---
 title: ADO セキュリティ デザインの問題 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +13,12 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c961c24f0ffcbb3f0cbafabce2988edb6c8d607
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64f4a22d849572d6e32006dbe997dd134e5c2e0d
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716370"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293128"
 ---
 # <a name="ado-security-design-features"></a>ADO セキュリティ デザイン機能
 次のセクションでは、セキュリティ デザイン機能で ActiveX データ オブジェクト (ADO) 2.8 以降について説明します。 セキュリティを強化する ADO 2.8 行ったこれらの変更。 Windows Vista での Windows DAC 6.0 に含まれている、ADO 6.0 では、します機能的には、Windows XP および Windows Server 2003 で MDAC 2.8 に含まれていた ADO 2.8。 このトピックでは、ADO 2.8 以降ではアプリケーションの最適なセキュリティ保護する方法についての情報を提供します。
@@ -32,7 +32,7 @@ ms.locfileid: "47716370"
 ### <a name="revised-and-improved-security-warning-message-box-now-used-to-alert-users"></a>改訂および強化されたセキュリティの警告メッセージ ボックスがユーザーに警告を使用するようになりました
  ADO 2.7 以降では、次の警告メッセージには、信頼されていないプロバイダーから ADO コードを実行する際にスクリプト化された Web ページが表示されます。
 
-```
+```console
 This page accesses data on another domain. Do you want to allow this? To
 avoid this message in Internet Explorer, you can add a secure Web site to
 your Trusted Sites zone on the Security tab of the Internet Options dialog
@@ -41,7 +41,7 @@ box.
 
  ADO 2.8 以降の上記のメッセージに表示されなくなります。 代わりに、このコンテキストで、次のメッセージが表示されます。
 
-```
+```console
 This Website uses a data provider that may be unsafe. If you trust the
 Website, click OK, otherwise click Cancel.
 ```
@@ -87,7 +87,7 @@ Website, click OK, otherwise click Cancel.
 
  セキュリティの警告を今すぐが表示される場合は、メッセージ ボックスには、ユーザーが通知されます。
 
-```
+```console
 This Website is using your identity to access a data source. If you trust this Website, click OK, otherwise click Cancel.
 ```
 

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613150"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560299"
 ---
 # <a name="address-book-command-buttons"></a>アドレス帳のコマンド ボタン
 アドレス帳アプリケーションには、次のコマンド ボタンが含まれます。  
@@ -33,7 +33,7 @@ ms.locfileid: "47613150"
 -   A**キャンセル変更**ボタンの変更を破棄します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="find-button"></a>検索ボタン  
  クリックすると、**検索** ボタンを構築および SQL クエリを送信する VBScript Find_OnClick Sub プロシージャをアクティブにします。 このボタンをクリックすると、データ グリッドが表示されます。  
@@ -45,7 +45,7 @@ ms.locfileid: "47613150"
   
  たとえば場合、 **Last Name**ボックスには、"Berge"エントリが含まれている、**タイトル**ボックスには、エントリ「プログラム マネージャー、」SQL ステートメントが含まれている (の値`myQuery`) のようになります。  
   
-```  
+```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
@@ -54,7 +54,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
 ## <a name="preparing-and-sending-the-query"></a>準備と、クエリの送信  
  Find_OnClick Sub プロシージャの最後の部分は、2 つのステートメントで構成されます。 最初のステートメントは、代入、 [SQL](../../../ado/reference/rds-api/sql-property.md)のプロパティ、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)動的に作成した SQL クエリに等しいオブジェクト。 2 番目のステートメントにより、 **rds.DataControl**オブジェクト (`DC1`) をデータベースを照会し、グリッドに新しいクエリの結果を表示します。  
   
-```  
+```vb
 Sub Find_OnClick  
    '...  
    DC1.SQL = myQuery  
@@ -65,7 +65,7 @@ End Sub
 ## <a name="update-profile-button"></a>プロファイルの更新ボタン  
  クリックすると、**プロファイルの更新**ボタンを実行する VBScript Update_OnClick Sub プロシージャをアクティブ化、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)と[更新](../../../ado/reference/rds-api/refresh-method-rds.md)メソッド。  
   
-```  
+```vb
 Sub Update_OnClick  
    DC1.SubmitChanges  
    DC1.Refresh  
@@ -77,7 +77,7 @@ End Sub
 ## <a name="cancel-changes-button"></a>[キャンセル] ボタンの変更  
  クリックすると**キャンセル変更**を実行する VBScript Cancel_OnClick Sub プロシージャをアクティブ化、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)メソッド。  
   
-```  
+```vb
 Sub Cancel_OnClick  
    DC1.CancelUpdate  
 End Sub  

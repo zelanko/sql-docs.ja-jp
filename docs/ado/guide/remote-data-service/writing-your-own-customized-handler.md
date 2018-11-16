@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ced8796278ffab61b5f4e45b687e8059bb34255f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ec8095de6019316f60b8330d34c42559daf4863
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680200"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558579"
 ---
 # <a name="writing-your-own-customized-handler"></a>独自のカスタム ハンドラーの記述
 RDS のサポート、既定値を希望する IIS サーバー管理者がいるかどうか、独自のハンドラーを記述したい場合がありますが、ユーザーの要求より詳細に制御し、アクセス権。  
@@ -27,7 +27,7 @@ RDS のサポート、既定値を希望する IIS サーバー管理者がい�
  MSDFMAP します。ハンドラーの実装、 **IDataFactoryHandler**インターフェイス。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler インターフェイス  
  このインターフェイスは、2 つのメソッドを持って**GetRecordset**と**再接続**します。 どちらの方法では、する必要があります、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティに設定する**adUseClient**します。  
@@ -59,31 +59,31 @@ RDS のサポート、既定値を希望する IIS サーバー管理者がい�
 ## <a name="msdfhdlidl"></a>msdfhdl.idl  
  これは、インターフェイス定義**IDataFactoryHandler**に表示される、 **msdfhdl.idl**ファイル。  
   
-```  
+```cpp
 [  
-  uuid(D80DE8B3-0001-11d1-91E6-00C04FBBBFB3),  
-  version(1.0)  
+  uuid(D80DE8B3-0001-11d1-91E6-00C04FBBBFB3),  
+  version(1.0)  
 ]  
 library MSDFHDL  
 {  
-    importlib("stdole32.tlb");  
-    importlib("stdole2.tlb");  
+    importlib("stdole32.tlb");  
+    importlib("stdole2.tlb");  
   
-    // TLib : Microsoft ActiveX Data Objects 2.0 Library  
-    // {00000200-0000-0010-8000-00AA006D2EA4}  
-    #ifdef IMPLIB  
-    importlib("implib\\x86\\release\\ado\\msado15.dll");  
-    #else  
-    importlib("msado20.dll");  
-    #endif  
+    // TLib : Microsoft ActiveX Data Objects 2.0 Library  
+    // {00000200-0000-0010-8000-00AA006D2EA4}  
+    #ifdef IMPLIB  
+    importlib("implib\\x86\\release\\ado\\msado15.dll");  
+    #else  
+    importlib("msado20.dll");  
+    #endif  
   
-    [  
-      odl,  
-      uuid(D80DE8B5-0001-11d1-91E6-00C04FBBBFB3),  
-      version(1.0)  
-    ]  
-    interface IDataFactoryHandler : IUnknown  
-    {  
+    [  
+      odl,  
+      uuid(D80DE8B5-0001-11d1-91E6-00C04FBBBFB3),  
+      version(1.0)  
+    ]  
+    interface IDataFactoryHandler : IUnknown  
+    {  
 HRESULT _stdcall GetRecordset(  
       [in] BSTR conn,  
       [in] BSTR args,  
@@ -96,11 +96,11 @@ HRESULT _stdcall GetRecordset(
       [in] BSTR conn,  
       [in] BSTR args,  
       [in] _Recordset *pRS);  
-    };  
+    };  
 };  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [カスタマイズ ファイル Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

@@ -1,5 +1,5 @@
 ---
-title: グループの属性メンバー (分離) |Microsoft ドキュメント
+title: グループの属性メンバー (分離) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: edf1f554a4e7829883263198b132f479b0001d5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021759"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813715"
 ---
-# <a name="attribute-properties---group-attribute-members"></a>属性のプロパティ]-[グループ メンバーの属性
+# <a name="attribute-properties---group-attribute-members"></a>属性のプロパティ - 属性メンバーをグループ化する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   メンバー グループは、連続したディメンション メンバーが含まれている、システムによって生成されたコレクションです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、分離と呼ばれるプロセスにより、1 つの属性のメンバーを複数のメンバー グループに分割できます。 階層内のレベルには、メンバー グループまたはメンバーのどちらかが含まれています。 メンバー グループが属するレベルをビジネス ユーザーが参照すると、メンバー グループの名前とセル値が表示されます。 メンバー グループをサポートするために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって生成されたメンバーはグループ化メンバーと呼ばれ、通常のメンバーと同じように表示されます。  
   
  属性の **DiscretizationMethod** プロパティは、メンバーがどのようにグループ化されるかを定義します。  
   
-|**DiscretizationMethod** 設定|Description|  
+|**DiscretizationMethod** 設定|説明|  
 |--------------------------------------|-----------------|  
 |**なし**|メンバーを表示します。|  
 |**自動**|データを最も適切に表現するメソッドとして、 **EqualAreas** メソッドまたは **Clusters** メソッドのいずれかを選択します。|  
@@ -46,7 +46,7 @@ ms.locfileid: "34021759"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34021759"
   
  `<Bucket name>` パラメーターは、一連の変数を組み込むことのできる文字列式であり、メンバー グループの名前の一部としてメンバーまたはメンバー グループの情報を表します。  
   
-|変数|Description|  
+|変数|説明|  
 |--------------|-----------------|  
 |%{First bucket member}|現在のメンバー グループに含まれる最初のメンバーの名前です。|  
 |%{Last bucket member}|現在のメンバー グループに含まれる最後のメンバーの名前です。|  

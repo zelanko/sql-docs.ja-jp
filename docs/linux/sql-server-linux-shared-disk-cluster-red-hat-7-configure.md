@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085488"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677681"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux の共有ディスク クラスターを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このガイドでは、Red Hat Enterprise Linux 上の SQL Server の 2 つのノードの共有ディスク クラスターを作成する手順を紹介します。 クラスタ リングの層は [Pacemaker](http://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
+このガイドでは、Red Hat Enterprise Linux 上の SQL Server の 2 つのノードの共有ディスク クラスターを作成する手順を紹介します。 クラスタ リングの層は [Pacemaker](https://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
 
 > [!NOTE] 
 > Red Hat HA アドオンとドキュメントへのアクセスには、サブスクリプションが必要です。 
@@ -30,7 +30,7 @@ ms.locfileid: "49085488"
 
 ![Red Hat Enterprise Linux 7 ディスク SQL クラスターの共有](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-クラスターの構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) を参照してください。
+クラスターの構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) を参照してください。
 
 
 > [!NOTE] 
@@ -201,8 +201,8 @@ NFS サーバー上で、次の操作を行います。
 
 NFS の使用に関する詳細については、次のリソースを参照してください。
 
-* [NFS サーバーと firewalld |Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [NFS ボリュームをマウント |Linux のネットワーク管理者ガイド](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS サーバーと firewalld |Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [NFS ボリュームをマウント |Linux のネットワーク管理者ガイド](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [NFS サーバーの構成](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>共有記憶域を指すデータベース ファイル ディレクトリをマウントします。
@@ -389,7 +389,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-* Pacemaker の [クラスター入門](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
+* Pacemaker の [クラスター入門](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 
 ## <a name="next-steps"></a>次の手順
 

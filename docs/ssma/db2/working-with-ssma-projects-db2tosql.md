@@ -10,12 +10,12 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bb43fabb2592b6d82d3fb6d14f516bfdd0029bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775107"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671381"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA プロジェクト (DB2ToSQL) での作業
 DB2 のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA プロジェクトを作成します。 プロジェクトは、次の情報を含むファイルです。  
@@ -116,7 +116,7 @@ DB2 およびからは切断されて、プロジェクトを開いたときに[
 3.  再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**ファイル** メニューのをクリックして**SQL Server に再接続**します。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [DB2 データベースに接続する](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)します。  
+移行プロセスの次の手順が、 [DB2 データベースに接続する](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server にデータベースを移行する DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

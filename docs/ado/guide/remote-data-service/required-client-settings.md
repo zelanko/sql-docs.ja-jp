@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c7e8b5d0583c2f0938c792d4e7fb9980e663a9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cec3e79e3d37f064cb742588519a374737e01319
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667240"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558219"
 ---
 # <a name="required-client-settings"></a>必要なクライアントの設定
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  カスタムを使用する次の設定を指定**DataFactory**ハンドラー。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47667240"
   
  以下のセクションを前提としています。 **MSDFMAP します。INI** AdvWorks、データ ソース名は既に定義されているとします。  
   
-```  
+```console
 [connect CustomerDataBase]  
 Access=ReadWrite  
 Connect="DSN=AdvWorks"  
@@ -51,10 +51,10 @@ SQL="SELECT * FROM Customers WHERE CustomerID = ?"
   
 ## <a name="rdsdatacontrol-version"></a>RDS.DataControl バージョン  
   
-```  
+```vb
 Dim dc as New RDS.DataControl  
 Set dc.Handler = "MSDFMAP.Handler"  
-Set dc.Server = "http://yourServer"  
+Set dc.Server = "https://yourServer"  
 Set dc.Connect = "Data Source=CustomerDatabase"  
 Set dc.SQL = "CustomerById(4)"  
 dc.Refresh  
@@ -62,7 +62,7 @@ dc.Refresh
   
 ## <a name="recordset-version"></a>レコード セットのバージョン  
   
-```  
+```vb
 Dim rs as New ADODB.Recordset  
 rs.CursorLocation = adUseClient  
 ```  
@@ -71,9 +71,9 @@ rs.CursorLocation = adUseClient
   
  rs。"CustomerById(4)"開く"ハンドラー MSDFMAP を = です。_ (&)、ハンドラーです。"  
   
-```  
+```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  
-"Remote Server=http://yourServer"  
+"Remote Server=https://yourServer"  
 ```  
   
 ## <a name="see-also"></a>参照  
@@ -84,25 +84,4 @@ rs.CursorLocation = adUseClient
  [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [カスタマイズ ファイルの概要](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

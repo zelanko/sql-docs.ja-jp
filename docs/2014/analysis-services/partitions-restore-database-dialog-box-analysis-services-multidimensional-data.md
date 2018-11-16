@@ -13,12 +13,12 @@ ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb51c9ec57e20ecd641a06964624987e636a6c40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164392"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639869"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>[パーティション] ([データベースの復元] ダイアログ ボックス) (Analysis Services - 多次元データ)
   **の** [データベースの復元] **ダイアログ ボックスの** [パーティション] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ページを使用すると、ローカル パーティションを復元する場所の指定、リモート パーティションを復元するかどうかの指定、リモート パーティションを復元する際に使用するリモート バックアップ ファイルの指定ができます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48164392"
 > [!NOTE]  
 >  既存のデータベースを復元すると、データベースを復元したユーザーは、復元されたデータベースにアクセスできなくなる可能性があります。 バックアップの実行時に、ユーザーがサーバー ロールのメンバー、またはフル コントロール (管理者) 権限を持つデータベース ロールのメンバーではなかった場合、このようにアクセスできなくなることがあります。  
   
- **データベースの復元 ダイアログ ボックスで パーティション ページを表示するには**  
+ **データベースの復元 ダイアログ ボックスで、パーティション ページを表示するには**  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の **オブジェクト エクスプローラー** で、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの **[データベース]** フォルダー、またはデータベースを右クリックし、 **[データベースの復元]** をクリックします。次に、 **[ページの選択]** で **[パーティション]** をクリックします。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164392"
 |**[...]**|クリックすると、**[リモート パーティション - 詳細設定]** ダイアログ ボックスが表示され、リモート パーティションの復元に使用するデータ ソースの接続文字列などの詳細なオプションを変更できます。 **[リモート パーティション - 詳細設定]** ダイアログ ボックスの詳細については、「[[リモート パーティション - 詳細設定] ダイアログ ボックス (Analysis Services - 多次元データ)](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [データベースの復元 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [[データベースの復元] ダイアログ ボックス (Analysis Services - 多次元データ)](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [一般的な&#40;データベースの復元 ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services データベースのバックアップと復元](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

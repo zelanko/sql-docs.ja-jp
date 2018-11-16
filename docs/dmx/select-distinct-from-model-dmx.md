@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985327"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601460"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;モデル&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|列内の値の中間点です。|  
   
 ## <a name="discrete-column-example"></a>不連続列の例  
- 次のコード サンプルがに基づいて、`[TM Decision Tree]`で作成したモデル、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 クエリが不連続の列に存在する一意の値を返します`Gender`します。  
+ 次のコード サンプルがに基づいて、`[TM Decision Tree]`で作成したモデル、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 クエリは、不連続列 `Gender` 内に存在する一意の値を返します。  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -100,10 +100,10 @@ FROM [TM Decision Tree]
  クエリは、不足値を表すために、NULL 値の 1 行を返します。  
   
 ## <a name="discretized-column-example"></a>離散化列の例  
- 次のコード サンプルは、列 `Yearly Income]` のアルゴリズムで作成された各バケットの中間点、最大値、および最小値を返します。 この例の結果を再現すると同じである新しいマイニング構造を作成する必要があります`[Targeted Mailing]`します。 ウィザードで、コンテンツの種類を変更する、`Yearly Income`から列**Continuous**に**Discretized**します。  
+ 次のコード サンプルは、列 `Yearly Income]` のアルゴリズムで作成された各バケットの中間点、最大値、および最小値を返します。 この例の結果を再現するには、`[Targeted Mailing]` と同じマイニング構造を新しく作成する必要があります。 ウィザードで、コンテンツの種類を変更する、`Yearly Income`から列**Continuous**に**Discretized**します。  
   
 > [!NOTE]  
->  マイニング構造列を分離する基本的なマイニング チュートリアル」で作成したマイニング モデルを変更することもできます。 [`Yearly Income]`します。 これを行う方法については、次を参照してください。[マイニング モデル内の列の分離を変更](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)します。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
+>  また、「基本的なデータ マイニング チュートリアル」で作成したマイニング モデルを変更して、マイニング構造列 `Yearly Income]` を分離できます。 これを行う方法については、次を参照してください。[マイニング モデル内の列の分離を変更](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)します。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -125,7 +125,7 @@ FROM [TM Decision Tree]
   
  [Yearly Income] 列の値が 5 つのバケットに分離されていることに加え、不足値を表すために NULL 値の行が追加されていることがわかります。  
   
- 結果の小数点以下表示桁数は、クエリに使用するクライアントによって異なります。 ここで、わかりやすくするために表示される値を反映するように、両方の 2 つの小数点以下桁数に丸められています[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。  
+ 結果の小数点以下表示桁数は、クエリに使用するクライアントによって異なります。 ここでは、説明を簡単にするためおよび [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で表示される値を反映するために、小数点以下 2 桁に丸められています。  
   
  たとえば、デシジョン ツリー ビューアーを使用してモデルを参照し、収入ごとにグループ化された顧客を含むノードをクリックすると、次のノードのプロパティがツールヒントに表示されます。  
   

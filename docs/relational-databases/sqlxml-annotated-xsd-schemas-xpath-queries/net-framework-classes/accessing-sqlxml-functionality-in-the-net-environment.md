@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c13c4b05a0443db4df711f8522e8ad57e1433c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bb03beed6356f7ffc0f52651ba7013697abff62
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823521"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662321"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 環境での SQLXML 機能へのアクセス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ class Test
 1.  この XSD スキーマ (MySchema.xml) をフォルダーに保存します。  
   
     ```  
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="Con" sql:relation="Person.Contact" >  
        <xsd:complexType>  

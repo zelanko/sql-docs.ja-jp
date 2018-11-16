@@ -12,12 +12,12 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f196050cfb3f32ba85f82dcdb6496483be8ff099
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d994b13d063c3a72e6273b95d47e320285cd2d16
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750490"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667021"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) のデータベース オブジェクトを変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure には、結果のデータベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベース。  
@@ -108,7 +108,7 @@ SSMA を使用して作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversio
 変換されたデータベース オブジェクトを読み込んだ後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を付与し、それらのオブジェクトに対する権限の拒否できます。 移行する前にそうことをお勧めするデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 オブジェクトをセキュリティで保護する方法については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、「セキュリティの考慮事項のデータベースとデータベース アプリケーション」を参照してください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [Sybase ASE データの移行 SQL Server の/SQL Azure(SybaseToSQL)](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)します。  
+移行プロセスの次の手順が、 [Sybase ASE データの移行 SQL Server の/SQL Azure(SybaseToSQL)](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

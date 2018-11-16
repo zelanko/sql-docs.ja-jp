@@ -15,12 +15,12 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3673ee3d837179984c4221e1aa2509f67643dfb4
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: cfa410f43d22541eee3749e523e98b8b8c45ceac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217100"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669951"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>WMI Provider for Server Events のクラスとプロパティ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51217100"
   
  イベントまたはイベント グループから照会できるプロパティについては、イベント スキーマを参照してください。 既定では、イベント スキーマは、[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd ディレクトリにインストールされます。  
   
- 発行されたイベント スキーマを参照する代わりに、 [ http://schemas.microsoft.com/sqlserver](http://go.microsoft.com/fwlink/?linkid=43100)します。  
+ 発行されたイベント スキーマを参照する代わりに、 [ https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)します。  
   
  たとえば、ALTER_DATABASE イベントを示しながら、学習をその親イベントが DDL_SERVER_LEVEL_EVENTS、そのプロパティが**TSQLCommand**と**DatabaseName**します。 イベントは、プロパティも継承**SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**、および**LoginName**. イベントには、子イベントはありません。  
   

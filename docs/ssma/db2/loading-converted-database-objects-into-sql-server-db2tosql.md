@@ -10,12 +10,12 @@ ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 20e52c835d54ec1cac31e1821bfe49876683e324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3df0803e7c4d86126077b716a2a66ebab3379b9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631270"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657292"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) へのデータベース オブジェクトの変換後の読み込み
 DB2 スキーマに変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、結果のデータベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
@@ -104,7 +104,7 @@ SSMA を使用して作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversio
 変換されたデータベース オブジェクトを読み込んだ後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を付与し、それらのオブジェクトに対する権限の拒否できます。 移行する前にそうことをお勧めするデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 オブジェクトをセキュリティで保護する方法については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、「セキュリティの考慮事項のデータベースとデータベース アプリケーション」を参照してください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [SQL Server への DB2 データの移行](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)します。  
+移行プロセスの次の手順が、 [SQL Server への DB2 データの移行](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)します。  
   
 ## <a name="see-also"></a>参照  
 [DB2 のデータを SQL Server に移行する&#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

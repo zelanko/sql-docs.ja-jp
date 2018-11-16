@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,22 +14,22 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aaeedb6dffb992ac940eebd450c63d33badb299d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845280"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559439"
 ---
 # <a name="rds-scenario"></a>RDS のシナリオ
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  アドレス帳アプリケーションがリモート データ サービス (RDS) を使用して、簡単なデータ対応の Web アプリケーションを構築する方法を示すシナリオ-オンラインのコーポレート アドレス帳。 このシナリオは Microsoft Visual Basic Scripting Edition (VBScript) に役立ちますを希望する COM プログラマが RDS を使用してデータ対応の ActiveX コントロールを使用する方法について説明し開発者向けのデータ中心の Web アプリケーションのビルド経験豊富なソフトウェア。  
   
  このシナリオでは、ActiveX コントロールで基本的な HTML タグのレイアウト、DHTML データ バインディングの使用方法、およびプログラムを使用する方法がわかっている前提としています。  
   
- SDK をインストールする場合、samples\dataaccess\rds\AddressBook\AddressBook.asp、SDK のディレクトリにアドレス帳のサンプル アプリケーションの完全なソース コードを検出できます。 アドレス帳のシナリオを表示する Internet Explorer 4.0 以降が入力**http://*web サーバー*/RDS/AddressBook/AddressBook.asp**場所*web サーバー*指定された名前を指定しますWindows NT 4.0 または Windows 2000 Web サーバー コンピューターには、インターネット インフォメーション サービス (IIS) と ASP を実行されています。  
+ SDK をインストールする場合、samples\dataaccess\rds\AddressBook\AddressBook.asp、SDK のディレクトリにアドレス帳のサンプル アプリケーションの完全なソース コードを検出できます。 アドレス帳のシナリオを表示する Internet Explorer 4.0 以降が入力**https://*web サーバー*/RDS/AddressBook/AddressBook.asp**場所*webserver*名前を指定しますインターネット インフォメーション サービス (IIS) と ASP を実行している Windows NT 4.0 または Windows 2000 Web サーバー コンピューターに与えられます。  
   
 ## <a name="introduction-to-address-book"></a>アドレス帳の概要  
  アドレス帳のサンプル アプリケーションでは、検索可能なディレクトリをイントラネット経由で発行するために使用できる単純なオンラインのアドレス帳を提供します。 アドレス帳では、ユーザーが従業員に関する情報を要求する 1 つまたは複数のフィールドで検索文字列を入力できるように設計されています。 リモート データ サービスの基本機能を説明する、サンプル アプリケーションが、オブジェクトと検索のフィールドの最小数を使用して小規模な意図的には、保持します。  

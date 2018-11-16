@@ -11,12 +11,12 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 326d0872d554e4074b004f59c4a1d5b700dc4531
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5d3fcc03b588cd5d014a23a291e04ff9c32f205
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616191"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662978"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Microsoft Open Database Connectivity (ODBC) インターフェイスには、アプリケーションのさまざまなデータベース管理システム (Dbms) からデータにアクセスできるようにする C プログラミング言語インターフェイスです。 ODBC は、リレーショナル データ ストア向けに設計されている、高パフォーマンスの低レベル インターフェイスです。  
@@ -49,4 +49,4 @@ Microsoft Open Database Connectivity (ODBC) インターフェイスには、ア
  ドライバーおよびデータ ソース名を構成するためのコマンド ライン ユーティリティについて説明します。  
   
 ## <a name="support"></a>サポート  
- サポート オプションに関する情報が見つかりません、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink?linkid=5521)Web サイト。
+ サポート オプションに関する情報が見つかりません、 [Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink?linkid=5521)Web サイト。

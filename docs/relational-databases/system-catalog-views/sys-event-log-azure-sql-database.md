@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 29ef6eaf427a0ab8ee2a3b040f2a4255079eecdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826350"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673531"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47826350"
 > [!CAUTION]  
 >  大量のデータベースまたはログインの大きい数値を持つインストールの場合、sys.event_log 内のアクティビティと制限事項、パフォーマンス、CPU 使用率が高くと可能性があるログイン エラーが発生します。 Sys.event_log のクエリは、問題に投稿できます。 マイクロソフトは、この問題を解決するのには中です。 それまでは、この問題の影響を小さくには、sys.event_log のクエリを制限します。 NewRelic SQL Server プラグインのユーザーがアクセスする必要があります[Microsoft Azure SQL Database プラグインのチューニングとパフォーマンスの調整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729)の追加の構成情報。  
   
- `sys.event_log`ビューには、次の列が含まれています。  
+ `sys.event_log` ビューには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -75,12 +75,12 @@ ms.locfileid: "47826350"
 |**接続**|**connection_failed**|9|**再構成**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベースが再構成中であったため接続に失敗しました。|  
 |**接続**|**connection_terminated**|0|**idle_connection_timeout**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> 接続がシステム定義のしきい値よりも長い時間にわたってアイドル状態でした。|  
 |**接続**|**connection_terminated**|1|**再構成**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベース再構成が原因で、セッションが終了しました。|  
-|**接続**|**調整**|*\<理由コード >*|**reason_code**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> 要求が調整されています。  調整理由コード: *\<理由コード >* します。 詳細については、次を参照してください。[エンジン調整](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)します。|  
-|**接続**|**throttling_long_transaction**|40549|**long_transaction**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクションが長時間実行されているため、セッションを終了しました。 トランザクションを短くしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
-|**接続**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> 取得したロックの数が多すぎるため、セッションを終了しました。 1 つのトランザクションで読み取る行または変更する行の数を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
-|**接続**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> TEMPDB の使用領域が多すぎるため、セッションを終了しました。 クエリを変更して一時テーブルの使用領域を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
-|**接続**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクション ログの使用領域が多すぎるため、セッションを終了しました。 1 回のトランザクションで変更する行を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
-|**接続**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> メモリの使用量が多すぎるため、セッションを終了しました。 クエリを変更して、処理する行を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
+|**接続**|**調整**|*\<理由コード >*|**reason_code**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> 要求が調整されています。  調整理由コード: *\<理由コード >* します。 詳細については、次を参照してください。[エンジン調整](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40549|**long_transaction**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクションが長時間実行されているため、セッションを終了しました。 トランザクションを短くしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> 取得したロックの数が多すぎるため、セッションを終了しました。 1 つのトランザクションで読み取る行または変更する行の数を減らしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> TEMPDB の使用領域が多すぎるため、セッションを終了しました。 クエリを変更して一時テーブルの使用領域を減らしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクション ログの使用領域が多すぎるため、セッションを終了しました。 1 回のトランザクションで変更する行を減らしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
+|**接続**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注: は、Azure SQL Database V11 にのみ適用されます。*<br /><br /> メモリの使用量が多すぎるため、セッションを終了しました。 クエリを変更して、処理する行を減らしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
 |**エンジン**|**デッドロック**|0|**デッドロック**|2|デッドロックが発生しました。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -224,6 +224,6 @@ SELECT * FROM CTE2;
 ```  
   
 ## <a name="see-also"></a>参照  
- [Azure SQL Database の拡張イベント](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL Database の拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
   
   

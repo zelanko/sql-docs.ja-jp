@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b498377a32b33211f8f46a154137f483b98cb56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773410"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560459"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS のプログラミング モデルの詳細
 以下は、RDS のプログラミング モデルの主な要素です。  
@@ -32,7 +32,7 @@ ms.locfileid: "47773410"
 -   イベント  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="rdsdataspace"></a>RDS.DataSpace  
  クライアント アプリケーションには、サーバーおよび起動するサーバーのプログラムを指定する必要があります。 代わりに、アプリケーションでは、サーバー プログラムへの参照を受信し、サーバー プログラム自体の場合と同様に、参照を扱うことができます。  

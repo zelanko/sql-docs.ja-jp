@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 572920ccf63f35c74e39cd02a4b32c4fd85b0550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fce44a6059b82a5d5a6edeac30d4411afcbd96ce
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698580"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350236"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle の概要
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "47698580"
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
  このプロバイダーに接続するには、設定、*プロバイダー*の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
 
-```
+```vb
 MSDAORA
 ```
 
@@ -42,7 +42,7 @@ MSDAORA
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
 
-```
+```vb
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
 ```
 
@@ -61,7 +61,7 @@ MSDAORA
 ## <a name="provider-specific-connection-parameters"></a>プロバイダー固有の接続パラメーター
  プロバイダーは、ADO で定義されているだけでなく、いくつかのプロバイダーに固有の接続パラメーターをサポートします。 ADO 接続のプロパティでこれらのプロバイダーに固有のプロパティを使用して設定できるよう、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクションを[接続](../../../ado/reference/ado-api/connection-object-ado.md)またはの一部として、 **ConnectionString**.
 
- これらのパラメーターに詳しく記載、 [OLE DB プログラマーズ リファレンス](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)します。 [ADO Dynamic プロパティ インデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)これらのパラメーター名と対応する OLE DB プロパティの間の相互参照を提供します。
+ これらのパラメーターに詳しく記載、 [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)します。 [ADO Dynamic プロパティ インデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)これらのパラメーター名と対応する OLE DB プロパティの間の相互参照を提供します。
 
 |パラメーター|説明|
 |---------------|-----------------|

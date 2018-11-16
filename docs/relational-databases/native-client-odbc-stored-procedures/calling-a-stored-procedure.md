@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a6502fa85e7a04aeb94007fa82f1f31d8562e2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d93734ea9ef55361eb065f1f200757632dca1fd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724560"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662401"
 ---
 # <a name="calling-a-stored-procedure"></a>ストアド プロシージャの呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47724560"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、両方、ODBC CALL エスケープ シーケンスをサポートしていると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)ストアド プロシージャを実行するためのステートメントは、ODBC CALL エスケープ シーケンスは、推奨される方法です。 ODBC 構文を使用すると、アプリケーションでストアド プロシージャのリターン コードを取得できます。また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するコンピューター間のリモート プロシージャ コール (RPC) の送信向けに開発されているプロトコルを使用するように最適化されます。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  
   
 > [!NOTE]  
->  呼び出すときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC で名前付きパラメーターを使用したストアド プロシージャ (詳細については、次を参照してください。 [(名前付きパラメーター) の名前によるパラメーターのバインド](http://go.microsoft.com/fwlink/?LinkID=209721))、パラメーター名の先頭の '\@' 文字。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の制限です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、Microsoft Data Access Components (MDAC) の場合よりも厳密にこの制限が適用されます。  
+>  呼び出すときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC で名前付きパラメーターを使用したストアド プロシージャ (詳細については、次を参照してください。 [(名前付きパラメーター) の名前によるパラメーターのバインド](https://go.microsoft.com/fwlink/?LinkID=209721))、パラメーター名の先頭の '\@' 文字。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の制限です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、Microsoft Data Access Components (MDAC) の場合よりも厳密にこの制限が適用されます。  
   
  プロシージャを呼び出す ODBC CALL エスケープ シーケンスは、次の構文を使用します。  
   

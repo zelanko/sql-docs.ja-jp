@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00344eeb38f3aae5cae7ac25c1b65b403cc85cb9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6c42ecb976884573e313c06adc4241e202e123df
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994474"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599933"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTrainingCase()
  テスト データ セットの一部であるケースを返す関数を使用して[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)します。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、クラスタ リングのデータ マイニング モデルで対象の絞り込みメール配信シナリオから、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 クエリでは、マイニング モデルのトレーニングで使用されたケースのみが返されます。 さらに、トレーニング ケースは 40 歳未満の顧客だけに制限されます。  
+ 次の例は、クラスタ リングのデータ マイニング モデルで対象の絞り込みメール配信シナリオから、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 クエリでは、マイニング モデルのトレーニングで使用されたケースのみが返されます。 さらに、トレーニング ケースは 40 歳未満の顧客だけに制限されます。  
   
 ```  
 SELECT *  

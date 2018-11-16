@@ -21,12 +21,12 @@ ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6cb75ec737a8342f284179b37bbcd09d1eec335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 049f3d0201957cfee5d7bc88301c6af97c0b6dcb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654154"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660682"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>データ層アプリケーション ビュー - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "47654154"
 |database_name|**sysname**|DAC インスタンスのために作成したデータベースの名前。|  
   
 ## <a name="remarks"></a>コメント  
- DAC には、アプリケーションが使用する論理データ層オブジェクト (テーブルやビューなど) の定義である DAC 型が含まれます。 DAC パッケージは、DAC の配置に使用されるファイルです。 DAC パッケージは、DAC 型に含まれるすべての論理オブジェクトの表現を含んでいます。 DAC パッケージは、1 つ以上のコピー、またはのインスタンスに dac のインスタンスをデプロイするために使用できます、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 同じ DAC パッケージから配置された各 DAC インスタンスは、同じ型を共有しますが、一意のインスタンス名とインスタンス識別子を割り当てられます。  
+ DAC には、アプリケーションが使用する論理データ層オブジェクト (テーブルやビューなど) の定義である DAC 型が含まれます。 DAC パッケージは、DAC の配置に使用されるファイルです。 DAC パッケージは、DAC 型に含まれるすべての論理オブジェクトの表現を含んでいます。 DAC パッケージを使用して、DAC の 1 つ以上のコピー (インスタンス) を[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに配置できます。 同じ DAC パッケージから配置された各 DAC インスタンスは、同じ型を共有しますが、一意のインスタンス名とインスタンス識別子を割り当てられます。  
   
 ## <a name="permissions"></a>アクセス許可  
  すべての列を表示するには、sysadmin 固定サーバー ロールのメンバーシップが必要です。 パブリック ロールのメンバーは、instance_name、description、および type_version の各列を表示できます。  
   
 ## <a name="see-also"></a>参照  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [データ層アプリケーション ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [データ層アプリケーション ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d72e2c9f79e2029e26275be46e200d476dbf621a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704550"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657134"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,10 +53,10 @@ sp_statistics [ @table_name = ] 'table_name'
  [  **@table_owner=** ] **'***所有者***'**  
  カタログ情報を返すために使用するテーブルのテーブル所有者の名前です。 *table_owner*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*所有者*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーが指定した名前のテーブルを所有している場合、そのテーブルのインデックスが返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*名前*、この手順は、指定したテーブルを探します*名前*によって所有されている、データベース所有者です。 テーブルが存在する場合は、そのテーブルのインデックスが返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定された名前のテーブルを現在のユーザーが所有している場合、そのテーブルのインデックスが返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*名前*、この手順は、指定したテーブルを探します*名前*によって所有されている、データベース所有者です。 テーブルが存在する場合は、そのテーブルのインデックスが返されます。  
   
  [  **@table_qualifier=** ] **'***修飾子***'**  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このパラメーターは、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
+ テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このパラメーターはデータベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
  [  **@index_name=** ] **'***index_name***'**  
  インデックス名を指定します。 *index_name*は**sysname**、既定値は % です。 ワイルドカードによるパターン照合がサポートされています。  
@@ -99,7 +99,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  ハッシュ化インデックス型は、完全一致検索または範囲検索を受け付けますが、パターン照合検索ではインデックスは使用されません。  
   
- **sp_statistics**と等価**SQLStatistics** ODBC にします。 返される結果は並べ**NON_UNIQUE**、**型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および**SEQ_IN_インデックス**します。 詳細については、次を参照してください。、 [ODBC API リファレンス](http://go.microsoft.com/fwlink/?LinkId=68323)します。  
+ **sp_statistics**と等価**SQLStatistics** ODBC にします。 返される結果は並べ**NON_UNIQUE**、**型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および**SEQ_IN_インデックス**します。 詳細については、次を参照してください。、 [ODBC API リファレンス](https://go.microsoft.com/fwlink/?LinkId=68323)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  

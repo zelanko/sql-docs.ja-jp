@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0921b3c42518a5b0dfe318b0fec7666a9d2074ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 766425f6b0ac75699115146f5e471299bf0a8d41
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760372"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664051"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>SQLXML のサンプル実行のための必要条件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47760372"
   
  SQLXML 4.0 の例を使用して実際のサンプルを作成するには、次がインストールされている必要があります。  
   
--   AdventureWorks サンプル データベース。 詳細については、次を参照してください。 [AdventureWorks サンプル データベース](http://msftdbprodsamples.codeplex.com/)します。  
+-   AdventureWorks サンプル データベース。 詳細については、次を参照してください。 [AdventureWorks サンプル データベース](https://msftdbprodsamples.codeplex.com/)します。  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 詳細については、「 [SQL Server Native Client のインストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   

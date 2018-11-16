@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9101b79f393d8afd5bd98586cfc18ad5d366545
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 319980e5ce6b2bb1671c57c9619b635fbf130bf8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832160"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671161"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "47832160"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名は、Northwind データベースの Order Details テーブルのようにスペースを含めて指定できます。 ただし、これは有効な XML 文字では有効ではありません[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用して、識別子には有効でない XML 識別子をエンコードできます '__xHHHH\_\_' HHHH は 4 桁の 16 進数 ucs-2 コードのエンコードの値として最上位ビット順の文字。  
   
 > [!NOTE]  
->  この例では Northwind データベースを使用します。 これからダウンロードして使用可能な SQL スクリプトを使用して、Northwind データベースをインストールする[Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=30196)します。  
+>  この例では Northwind データベースを使用します。 これからダウンロードして使用可能な SQL スクリプトを使用して、Northwind データベースをインストールする[Microsoft Web サイト](https://go.microsoft.com/fwlink/?LinkId=30196)します。  
   
  また、要素名を角かっこ () 内で囲む必要があります。 _X005B としてエンコードする必要がありますの文字 [と] は XML で有効ではありません、ため\_と _x005D\_、それぞれします。 マッピング スキーマを使用して、空白文字など有効でない文字を含まない要素名を指定することもできます。 この場合、マッピング スキーマで必要なマッピングが行われるので、これらの文字をエンコードする必要はありません。  
   
@@ -388,7 +388,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  次のスキーマ (CustOrderSchema.xml) について説明します、  **\<CustOrder >** 要素で構成される、 **OrderID**と**EmployeeID**属性。 スキーマをさらに興味深いにするために、既定値が割り当てられている、 **EmployeeID**属性。 アップデートグラムでは、属性の既定値は、アップデートグラムでその属性が指定されていない挿入操作のみに使用されます。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="CustOrder" >  
    <xsd:complexType>  
@@ -458,7 +458,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="Student" sql:relation="Students">  
   <xsd:complexType>  
@@ -489,7 +489,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
       xmlns:updg="urn:schemas-microsoft-com:xml-updategram"  
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   
 <updg:sync mapping-schema='StudentSchema.xml'>  
   <updg:before/>  
@@ -538,7 +538,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
   <updg:sync mapping-schema='XSD-ElementHavingNameSpace.xml'>  
     <updg:after>  
-       <x:Order  xmlns:x="http://server/xyz/schemas/"  
+       <x:Order  xmlns:x="https://server/xyz/schemas/"  
              updg:at-identity="SalesOrderID"   
              RevisionNumber="1"  
              OrderDate="2001-07-01 00:00:00.000"  
@@ -564,11 +564,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
  次のスキーマ (XSD-ElementHavingNamespace.xml) では、対応する要素と属性の宣言方法を示しています。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
      xmlns:dt="urn:schemas-microsoft-com:datatypes"   
      xmlns:sql="urn:schemas-microsoft-com:mapping-schema"    
-     xmlns:x="http://server/xyz/schemas/"   
-     targetNamespace="http://server/xyz/schemas/" >  
+     xmlns:x="https://server/xyz/schemas/"   
+     targetNamespace="https://server/xyz/schemas/" >  
   <xsd:element name="Order" sql:relation="Sales.SalesOrderHeader" type="x:Order_type"/>  
   <xsd:complexType name="Order_type">  
     <xsd:attribute name="SalesOrderID"  type="xsd:ID"/>  
@@ -633,10 +633,10 @@ CustOrder(OrderID, EmployeeID, OrderType)
  <ProductModel>  
     <Name>Mountain-100</Name>  
     <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-        <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-              xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
-              xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
-              xmlns:html="http://www.w3.org/1999/xhtml"   
+        <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+              xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+              xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
+              xmlns:html="https://www.w3.org/1999/xhtml"   
               xmlns="">  
   <p1:Summary>  
      <html:p>Insert Example</html:p>  
@@ -687,9 +687,9 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

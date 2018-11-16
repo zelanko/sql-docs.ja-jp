@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1d4d8bbb47c34fce61bdb95a3184a1d2b10f4d1
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 8b2e217f599112019e96f3e20b727456b9da607f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889478"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697570"
 ---
 # <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>SQL Server Machine Learning で revoscalepy の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ SQL Server での Python コードを実行する必要がありますがイン�
 
 モジュールをインポートし、呼び出すことによって、任意の Python 関数に関するヘルプを表示できます`help()`します。 たとえば、実行している`help(revoscalepy)`Python IDE からそのシグネチャを持つ、revoscalepy モジュール内のすべての関数の一覧を返します。
 
-Python Tools for Visual Studio を使用する場合は、構文と引数のヘルプを表示する IntelliSense を使用できます。 詳細については、次を参照してください。 [Visual Studio での Python サポート](http://docs.microsoft.com/visualstudio/python/installation)、および Visual Studio のバージョンに一致する拡張機能をダウンロードします。 Python と Visual Studio 2015 および 2017、または以前のバージョンを使用することができます。
+Python Tools for Visual Studio を使用する場合は、構文と引数のヘルプを表示する IntelliSense を使用できます。 詳細については、次を参照してください。 [Visual Studio での Python サポート](https://docs.microsoft.com/visualstudio/python/installation)、および Visual Studio のバージョンに一致する拡張機能をダウンロードします。 Python と Visual Studio 2015 および 2017、または以前のバージョンを使用することができます。
 
 ## <a name="see-also"></a>参照
 

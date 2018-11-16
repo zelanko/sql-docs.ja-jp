@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 117faab160c512f4732b0709b0b2e1024a196893
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: ee92cd702b716ea79f05adaf35f775927710411f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991185"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672451"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Kubernetes クラスター上の SQL Server Always On 可用性グループをデプロイします。
 
@@ -32,11 +32,11 @@ Kubernetes で、展開には、SQL Server の演算子では、SQL Server の�
 - Kubernetes クラスター
 - Kubernetes バージョン 1.11.0 以降
 - 少なくとも 3 つのノード
-- [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - アクセス、 [sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)GitHub リポジトリ
 
 >[!NOTE]
->Kubernetes クラスターの任意の型を使用することができます。 Azure Kubernetes Service (AKS) での Kubernetes クラスターを作成するを参照してください。 [AKS クラスターの作成](http://docs.microsoft.com/azure/aks/create-cluster)です。
+>Kubernetes クラスターの任意の型を使用することができます。 Azure Kubernetes Service (AKS) での Kubernetes クラスターを作成するを参照してください。 [AKS クラスターの作成](https://docs.microsoft.com/azure/aks/create-cluster)です。
 > 次のスクリプトでは、Azure で 4 つのノードの Kubernetes クラスターを作成します。
 >```azure-cli
 az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys

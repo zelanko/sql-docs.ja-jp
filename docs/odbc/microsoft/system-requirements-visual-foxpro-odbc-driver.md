@@ -19,18 +19,18 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb94ee7b87f7e2e68f949f8a97b672182157c3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693390"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664098"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>システム要件 (Visual FoxPro ODBC ドライバー)
 インストールのシステム要件は、最低限のオペレーティング システムとドライバーを正常にインストールするために必要なディスク領域を提供します。 ドライバーをインストールした後は、Visual FoxPro データへのアクセスに使用する特定のアプリケーション ソフトウェアを選択できます。  
   
 ## <a name="installation-requirements"></a>インストール要件  
- インストール要件とその他の情報は、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](http://go.microsoft.com/fwlink/?LinkId=121318)します。  
+ インストール要件とその他の情報は、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)します。  
   
 ## <a name="accessing-visual-foxpro-data"></a>Visual FoxPro データへのアクセス  
  Microsoft Visual FoxPro または FoxPro 2 にアクセスします。*x*データを次があります。  

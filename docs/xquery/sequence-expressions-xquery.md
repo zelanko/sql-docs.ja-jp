@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,12 +17,12 @@ ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d0ffa48cd8e3658cade73d715245c01cb30f659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c73d2be8550bd6ce3dad9e6c9e07e2403785f7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774100"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661828"
 ---
 # <a name="sequence-expressions-xquery"></a>シーケンス式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,11 +100,11 @@ go
 ```  
   
 ### <a name="example-c"></a>例 C  
- AdditionalContactInfo 列に対して次のクエリを指定、 **xml** Contact テーブル内の型。 この列には、1 つ以上の追加の電話番号、ポケットベル番号、住所などの追加の連絡先情報が格納されます。 \<TelephoneNumber >、\<ポケットベル >、他のノードは、ドキュメントの任意の場所に記述できます。 クエリは、すべてを含むシーケンスを構築、 \<telephoneNumber > 続けて、コンテキスト ノードの子、\<ポケットベル > の子。 戻り値の式のコンマ シーケンス演算子の使用に注意してください`($a//act:telephoneNumber, $a//act:pager)`します。  
+ AdditionalContactInfo 列に対して次のクエリを指定、 **xml** Contact テーブル内の型。 この列には、1 つ以上の追加の電話番号、ポケットベル番号、住所などの追加の連絡先情報が格納されます。 \<TelephoneNumber >、\<ポケットベル >、他のノードは、ドキュメントの任意の場所に記述できます。 クエリは、すべてを含むシーケンスを構築、 \<telephoneNumber > 続けて、コンテキスト ノードの子、\<ポケットベル > の子。 返される式 `($a//act:telephoneNumber, $a//act:pager)` のコンマ シーケンス演算子の使用方法に注意してください。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
- 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+ 'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.query('  
    for $a in /aci:AdditionalContactInfo   
@@ -118,13 +117,13 @@ WHERE ContactID=3
  結果を次に示します。  
   
 ```  
-<act:telephoneNumber xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3333</act:number>  
 </act:telephoneNumber>  
-<act:telephoneNumber xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
-<act:pager xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:pager xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>999-555-1244</act:number>  
   <act:SpecialInstructions>  
 Page only in case of emergencies.  
@@ -153,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- のみを取得する <`a`> 要素を属性 attrA を持つ、述語でフィルターを指定することができます。 結果のシーケンスには、<`a`> 要素が 1 つだけ含まれます。  
+ 属性 attrA を持つ <`a`> 要素のみを取得するために、述語でフィルターを指定できます。 結果のシーケンスには、<`a`> 要素が 1 つだけ含まれます。  
   
 ```  
 declare @x xml  
@@ -189,7 +188,7 @@ set @x = '
 '  
 ```  
   
- 内の式`(/a, /b)`サブツリーを持つシーケンスが構築`/a`と`/b`式を結果として得られるシーケンスから要素をフィルター処理と`<c>`します。  
+ `(/a, /b)` の式では、サブツリー `/a` と `/b` を持つシーケンスが構築されます。また、その式では結果のシーケンスから、要素 `<c>` がフィルター選択されます。  
   
 ```  
 SELECT @x.query('  
@@ -204,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- 次の例では、述語フィルターが適用されます。 式は、要素を検索します。 <`a`> と <`b`> 要素が含まれている <`c`>。  
+ 次の例では、述語フィルターが適用されます。 要素 <`c`> が含まれている、要素 <`a`> と <`b`> が式によって検索されます。  
   
 ```  
 declare @x xml  

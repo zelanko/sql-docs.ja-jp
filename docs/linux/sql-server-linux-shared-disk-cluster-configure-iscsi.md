@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 3c40ef7b0115dea0c0167729676e2203f62d2ea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633910"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676341"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの iSCSI - SQL Server on Linux を構成します。
 
@@ -38,8 +38,8 @@ Linux ベースの iSCSI ターゲットを使用する場合、FCI ノードの
 このセクションでは、FCI のノードとして機能するサーバーで iSCSI イニシエーターを構成する方法について説明します。 手順は、RHEL および Ubuntu 上に、機能する必要があります。
 
 サポートされているディストリビューションの iSCSI イニシエーターの詳細については、次のリンクを参照してください。
-- [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
-- [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
+- [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
+- [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
 1.  FCI の構成では、参加するサーバーのいずれかを選択します。 どれもかまいません。 iSCSI にする必要があります、専用のネットワークを認識し、そのネットワークを使用して、iSCSI を構成するようにします。 実行`sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new`場所`<iSCSIIfaceName>`のネットワークまたは一意のわかりやすい名前を指定します。 `iSCSINIC` の使用例を次に示します。
