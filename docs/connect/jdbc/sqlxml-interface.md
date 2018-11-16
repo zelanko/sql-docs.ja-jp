@@ -11,12 +11,12 @@ ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6257f3575412bc35b00722a0b5da6b8c5ca74f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1c7a244cdf644bef537f59ce705d14a750700f1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816000"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604842"
 ---
 # <a name="sqlxml-interface"></a>SQLXML インターフェイス
 
@@ -32,15 +32,15 @@ SQLXML インターフェイスとして XML 値にアクセスするための�
   
 |メソッドの構文|メソッドの説明|  
 |-------------------|------------------------|  
-|[void free()](http://go.microsoft.com/fwlink/?LinkId=131685)|このメソッドは、SQLXML オブジェクトと、それが占有していたリソースを解放します。|  
-|[InputStream getBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131754)|SQLXML からデータを読み取る入力ストリームを返します。|  
-|[Reader getCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131755)|**XML** データを、java.io.Reader オブジェクトまたは文字のストリームとして返します。|  
-|[T extends Source T getSource(Class\<T> sourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|返します、**ソース**読み取り用、 **XML**これによって指定された値**SQLXML**オブジェクト。<br /><br /> **注:** getSource メソッドは、javax.xml.transform.dom.DOMSource、javax.xml.transform.sax.SAXSource、javax.xml.transform.stax.StAXSource、java.io.InputStream の各ソースをサポートします。|  
-|[String getString()](http://go.microsoft.com/fwlink/?LinkId=131757)|この SQLXML オブジェクトによって指定された **XML** 値の文字列表現を返します。|  
-|[OutputStream setBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131758)|この SQLXML オブジェクトが表す **XML** 値の書き込みに使用できるストリームを取得します。|  
-|[Writer setCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131759)|この SQLXML オブジェクトが表す **XML** 値の書き込みに使用されるストリームを返します。|  
-|[T extends Result T setResult(Class\<T> resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|返します、**結果**設定、 **XML**これによって指定された値**SQLXML**オブジェクト。<br /><br /> **注:** setResult メソッドは、javax.xml.transform.dom.DOMResult、javax.xml.transform.sax.SAXResult、javax.xml.transform.stax.StaxResult、java.io.OutputStream の各ソースをサポートします。|  
-|[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|この SQLXML オブジェクトによって指定された XML 値を、指定された **String** 表現に設定します。|  
+|[void free()](https://go.microsoft.com/fwlink/?LinkId=131685)|このメソッドは、SQLXML オブジェクトと、それが占有していたリソースを解放します。|  
+|[InputStream getBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131754)|SQLXML からデータを読み取る入力ストリームを返します。|  
+|[Reader getCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131755)|**XML** データを、java.io.Reader オブジェクトまたは文字のストリームとして返します。|  
+|[T extends Source T getSource(Class\<T> sourceClass)](https://go.microsoft.com/fwlink/?LinkId=131756)|返します、**ソース**読み取り用、 **XML**これによって指定された値**SQLXML**オブジェクト。<br /><br /> **注:** getSource メソッドは、javax.xml.transform.dom.DOMSource、javax.xml.transform.sax.SAXSource、javax.xml.transform.stax.StAXSource、java.io.InputStream の各ソースをサポートします。|  
+|[String getString()](https://go.microsoft.com/fwlink/?LinkId=131757)|この SQLXML オブジェクトによって指定された **XML** 値の文字列表現を返します。|  
+|[OutputStream setBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131758)|この SQLXML オブジェクトが表す **XML** 値の書き込みに使用できるストリームを取得します。|  
+|[Writer setCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131759)|この SQLXML オブジェクトが表す **XML** 値の書き込みに使用されるストリームを返します。|  
+|[T extends Result T setResult(Class\<T> resultClass)](https://go.microsoft.com/fwlink/?LinkId=131760)|返します、**結果**設定、 **XML**これによって指定された値**SQLXML**オブジェクト。<br /><br /> **注:** setResult メソッドは、javax.xml.transform.dom.DOMResult、javax.xml.transform.sax.SAXResult、javax.xml.transform.stax.StaxResult、java.io.OutputStream の各ソースをサポートします。|  
+|[void setString(String value)](https://go.microsoft.com/fwlink/?LinkId=131762)|この SQLXML オブジェクトによって指定された XML 値を、指定された **String** 表現に設定します。|  
   
 アプリケーションから SQLXML オブジェクトを介して XML 値の読み取りと書き込みを行うことができるのは 1 回だけです。  
   

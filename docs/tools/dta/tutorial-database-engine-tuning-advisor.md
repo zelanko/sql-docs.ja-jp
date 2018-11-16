@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
@@ -15,12 +14,12 @@ ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 571b2a78414b6435a48d24cbc4abb83d0f8d2d8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a70ee2ad71f6b51f8bb28dc0361e65c6cebc18a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750500"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657531"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>チュートリアル:データベース エンジン チューニング アドバイザー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47750500"
 ## <a name="requirements"></a>必要条件  
 このチュートリアルは、データベース管理の経験はあるが、データベース エンジン チューニング アドバイザーの GUI または **dta** コマンド プロンプト ユーティリティに不慣れなデータベース管理者を対象としています。インデックスやインデックス付きビューなどデータベースの概念や構造は理解している必要があります。  
   
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (または以降のバージョン) および [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースをインストールする必要があります。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 サンプル データベースをインストールするには、「 [SQL Server のサンプルとサンプル データベースのインストール](http://sqlserversamples.codeplex.com)」を参照してください。  
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (または以降のバージョン) および [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースをインストールする必要があります。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 サンプル データベースをインストールするには、「 [SQL Server のサンプルとサンプル データベースのインストール](https://sqlserversamples.codeplex.com)」を参照してください。  
   
 ## <a name="after-you-finish-this-tutorial"></a>このチュートリアルが終了したら  
 このチュートリアルのレッスンが終了したら、次のトピックを参照し、データベース エンジン チューニング アドバイザーの詳細を学習してください。  

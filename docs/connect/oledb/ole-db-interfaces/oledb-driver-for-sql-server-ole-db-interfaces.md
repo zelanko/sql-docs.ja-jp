@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e3fc010dfa8dfd24c216fc5074efd0dca2ad85d3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: d0086ada5f1399de191670dc415fca2e1ca00bce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032304"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606942"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB Driver for SQL Server (OLE DB) のインターフェイス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51032304"
   
  この OLE DB Driver for SQL Server のプログラミング リファレンスには、すべての OLE DB インターフェイスとメソッドのドキュメントが含まれているわけではありません。OLE DB Driver for SQL Server を使用する際に、プロバイダー固有の動作を行うインターフェイスやメソッドのみを取り上げています。  
   
- OLE DB の中核となるインターフェイスやメソッドの完全な説明については、[OLE DB のプログラマー リファレンス](http://go.microsoft.com/fwlink/?LinkId=45232)に関するページをご覧ください。  
+ OLE DB の中核となるインターフェイスやメソッドの完全な説明については、[OLE DB のプログラマー リファレンス](https://go.microsoft.com/fwlink/?LinkId=45232)に関するページをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

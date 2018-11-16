@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc05d9c20affd1d995312c261b68dac178f8ddb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8f645884e28d93bf25032aa6cf89ae3d5dd6774
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754580"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671213"
 ---
 # <a name="create-element-dta"></a>Create 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ ms.locfileid: "47754580"
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[Recommendation 要素 &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
-|**子要素**|[Index 要素 &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** 要素 (詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](http://schemas.microsoft.com/sqlserver/) を参照してください)<br /><br /> **Heap** 要素 (詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](http://schemas.microsoft.com/sqlserver/) を参照してください)|  
+|**子要素**|[Index 要素 &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** 要素 (詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://schemas.microsoft.com/sqlserver/) を参照してください)<br /><br /> **Heap** 要素 (詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://schemas.microsoft.com/sqlserver/) を参照してください)|  
   
 ## <a name="remarks"></a>Remarks  
- この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **CreateTypecomplexType** の名前です。 ユーザー指定の構成でインデックス、統計、ヒープ構造を作成するために使用します。 この **Create** 要素を、ビューを作成するための**CreateViewType**やパーティション分割を作成するための**CreatePType**という他の種類の要素と混同しないでください。 これら他の種類の [Create](http://schemas.microsoft.com/sqlserver/) 要素の詳細については、 **データベース エンジン チューニング アドバイザーの XML スキーマ** を参照してください。  
+ この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **CreateTypecomplexType** の名前です。 ユーザー指定の構成でインデックス、統計、ヒープ構造を作成するために使用します。 この **Create** 要素を、ビューを作成するための**CreateViewType**やパーティション分割を作成するための**CreatePType**という他の種類の要素と混同しないでください。 これら他の種類の [Create](https://schemas.microsoft.com/sqlserver/) 要素の詳細については、 **データベース エンジン チューニング アドバイザーの XML スキーマ** を参照してください。  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)」を参照してください。  

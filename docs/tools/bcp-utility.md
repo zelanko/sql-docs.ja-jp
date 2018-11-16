@@ -5,8 +5,7 @@ ms.date: 02/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -30,17 +29,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383847"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675381"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > 最新バージョンの bcp ユーティリティでは、次を参照してください[for SQL Server のマイクロソフト コマンド ライン ユーティリティ 14.0。 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > 最新バージョンの bcp ユーティリティでは、次を参照してください[for SQL Server のマイクロソフト コマンド ライン ユーティリティ 14.0。 ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > Linux では、bcp を使用して、参照してください[sqlcmd および bcp を Linux にインストール](../linux/sql-server-linux-setup-tools.md)します。
 
@@ -184,7 +183,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* には、2^63-1 以下の正の整数を指定できます。 **-F** *first_row* is 1-based.  
 
 **-G**<a name="G"></a>  
- このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチが必要です[14.0.3008.27 バージョンまたはそれ以降](http://go.microsoft.com/fwlink/?LinkID=825643)します。 バージョンを判断するには、bcp -v を実行します。 詳細については、次を参照してください。[使用して Azure Active Directory 認証では、SQL Database または SQL Data Warehouse の認証に](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)します。 
+ このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチが必要です[14.0.3008.27 バージョンまたはそれ以降](https://go.microsoft.com/fwlink/?LinkID=825643)します。 バージョンを判断するには、bcp -v を実行します。 詳細については、次を参照してください。[使用して Azure Active Directory 認証では、SQL Database または SQL Data Warehouse の認証に](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)します。 
 
 > [!TIP]
 >  Bcp のバージョンが Azure Active Directory 認証 (AAD) の型のサポートが含まれますかどうかをチェックする**bcp--** (bcp\<領域 >\<dash >\<dash >)-g の一覧に表示されることを確認使用可能な引数。
@@ -384,7 +383,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 ## 解説<a name="remarks"></a>
  **bcp** 13.0 クライアントは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のツールをインストールしたときにインストールされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] と以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の両方のツールがインストールされている場合、PATH 環境変数の値の順番によっては、 **bcp** 13.0 クライアントではなく、以前の **bcp** クライアントを使用している可能性があります。 この環境変数によって Windows で実行可能ファイルを探すときに使用されるディレクトリのセットが定義されます。 使用しているバージョンを確認するには、Windows のコマンド プロンプトで **bcp /v** コマンドを実行します。 コマンド パスを PATH 環境変数で設定する方法の詳細については、Windows のヘルプを参照してください。  
  
-bcp ユーティリティは、 [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=52676)とは別にダウンロードすることもできます。  `ENU\x64\MsSqlCmdLnUtils.msi` または `ENU\x86\MsSqlCmdLnUtils.msi`を選択してください。
+bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676) とは別にダウンロードすることもできます。  `ENU\x64\MsSqlCmdLnUtils.msi` または `ENU\x86\MsSqlCmdLnUtils.msi`を選択してください。
 
   
  XML フォーマット ファイルは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ツールが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client と共にインストールされている場合のみサポートされます。  

@@ -11,12 +11,12 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca5e1a4d0dd3f76b3fabefa6549eb644a894845a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 583ed80add549b5d90cff2aba24e25fb6e2050f9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745140"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606402"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ $*statement*: SQL ステートメントを含む文字列。
   
 |Key|[説明]|  
 |-------|---------------|  
-|PDO::ATTR_CURSOR|カーソル動作を定義します。 既定値は、PDO::CURSOR_FWDONLY です。 PDO::CURSOR_SCROLL は、静的カーソルです。<br /><br />たとえば、 `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`のようにします。<br /><br />PDO::CURSOR_SCROLL を使用する場合は、以下で説明するように、PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE を使用できます。<br /><br />PDO_SQLSRV ドライバーの結果セットとカーソルに関する詳細については、「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。|  
+|PDO::ATTR_CURSOR|カーソル動作を定義します。 既定値は、PDO::CURSOR_FWDONLY です。 PDO::CURSOR_SCROLL は、静的カーソルです。<br /><br />たとえば、`array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )` のようにします。<br /><br />PDO::CURSOR_SCROLL を使用する場合は、以下で説明するように、PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE を使用できます。<br /><br />PDO_SQLSRV ドライバーの結果セットとカーソルに関する詳細については、「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。|  
 |PDO::ATTR_EMULATE_PREPARES|既定では、この属性が false の場合、これによって変更できます`PDO::ATTR_EMULATE_PREPARES => true`します。 参照してください[準備エミュレート](#emulate-prepare)詳細と例。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (既定値)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|True の場合、直接クエリの実行を指定します。 False は、準備されたステートメントの実行です。 PDO::SQLSRV_ATTR_DIRECT_QUERY の詳細については、「[PDO_SQLSRV ドライバーでの直接ステートメントの実行と準備されたステートメントの実行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)」を参照してください。|  
@@ -227,5 +227,5 @@ PDO_SQLSRV ドライバーを最初に指定されたエンコーディング �
 ## <a name="see-also"></a>参照  
 [PDO クラス](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

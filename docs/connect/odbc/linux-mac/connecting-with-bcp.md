@@ -13,17 +13,17 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff5cd89f349b3835eaace4d75c3a3a13655b4b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682640"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600162"
 ---
 # <a name="connecting-with-bcp"></a>bcp による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](http://go.microsoft.com/fwlink/?LinkID=190626) ユーティリティは、Linux および macOS では [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にあります。 このページの Windows バージョンとの相違点について説明`bcp`します。
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ユーティリティは、Linux および macOS では [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にあります。 このページの Windows バージョンとの相違点について説明`bcp`します。
   
 - フィールド ターミネータはタブ ("\t") です。  
   
@@ -112,7 +112,7 @@ ID 列に、インポートされたデータ ファイルの ID 値を使用し
 `bcp` ユーティリティが信頼関係接続 (統合セキュリティ) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続することを指定します。  
   
 - -U *login_id*  
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続に使用されるログイン ID を指定します。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]への接続に使用されるログイン ID を指定します。  
   
 - -V  
 `bcp` ユーティリティ バージョン番号と著作権に関する情報を報告します。  
@@ -141,7 +141,7 @@ Unicode 文字を使用して一括コピー操作を実行します。
 コマンド プロンプトからリダイレクトされた出力を受け取るファイル名を指定します。  
   
 - -V (80 | 90 | 100)  
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の以前のバージョンのデータ型を使用します。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の以前のバージョンのデータ型を使用します。  
   
 - -X  
 フォーマットおよび -f format_file オプションと共に使用し、既定の XML ではないフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。  

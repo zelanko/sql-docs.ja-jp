@@ -11,18 +11,18 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e4f058b1ae9f35df86b1e326c520bd4ebb588c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd82f894db2afc469c40c883deab2071b0e89f98
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798900"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600452"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 統合認証による SQL Server への接続」を参照してください。
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降、アプリケーションは、**authenticationScheme** 接続プロパティを使用して、タイプ 4 の Kerberos 統合認証を使用してデータベースに接続することを示すことができます。 参照してください[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)接続のプロパティの詳細についてはします。 Kerberos の詳細については、次を参照してください。 [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)します。
+[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降、アプリケーションは、**authenticationScheme** 接続プロパティを使用して、タイプ 4 の Kerberos 統合認証を使用してデータベースに接続することを示すことができます。 参照してください[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)接続のプロパティの詳細についてはします。 Kerberos の詳細については、次を参照してください。 [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)します。
 
 Java **Krb5LoginModule** で統合認証を使用する場合、[Krb5LoginModule クラス](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html)を使用してモジュールを構成できます。
 
@@ -54,7 +54,7 @@ Kerberos 認証をサポートするために、新しいロガー com.microsoft
 
 Kerberos を構成する場合は、次のガイドラインに従ってください。
 
-1. 設定**AllowTgtSessionKey** Windows 用のレジストリ内の 1 にします。 詳しくは、「[Kerberos protocol registry entries and KDC configuration keys in Windows Server 2003](http://support.microsoft.com/kb/837361)」(Windows Server 2003 における Kerberos プロトコルのレジストリ エントリおよび KDC 構成キー) をご覧ください。
+1. 設定**AllowTgtSessionKey** Windows 用のレジストリ内の 1 にします。 詳しくは、「[Kerberos protocol registry entries and KDC configuration keys in Windows Server 2003](https://support.microsoft.com/kb/837361)」(Windows Server 2003 における Kerberos プロトコルのレジストリ エントリおよび KDC 構成キー) をご覧ください。
 2. Kerberos 構成 (UNIX 環境の krb5.conf) で環境の適切な領域および KDC が指定されていることを確認します。
 3. kinit を使用するかまたはドメインにログインして、TGT キャッシュを初期化します。
 4. **authenticationScheme=JavaKerberos** を使用するアプリケーションを Windows Vista または Windows 7 オペレーティング システムで実行する場合は、標準ユーザー アカウントを使用する必要があります。 ただし、管理者のアカウントでアプリケーションを実行する場合は、アプリケーションを管理者権限で実行する必要があります。
@@ -72,9 +72,9 @@ Kerberos を構成する場合は、次のガイドラインに従ってくだ�
 
 サービス プリンシパル名 (SPN) の詳細については、以下を参照してください。
 
-- [SQL Server で Kerberos 認証を使用する方法](http://support.microsoft.com/kb/319723)
+- [SQL Server で Kerberos 認証を使用する方法](https://support.microsoft.com/kb/319723)
 
-- [SQL Server での Kerberos の使用](http://go.microsoft.com/fwlink/?LinkId=207814)
+- [SQL Server での Kerberos の使用](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
 > 明示的に設定する必要の交差領域 Kerberos、適切な使用を JDBC ドライバーの 6.2 のリリースの前に、 **serverSpn**します。

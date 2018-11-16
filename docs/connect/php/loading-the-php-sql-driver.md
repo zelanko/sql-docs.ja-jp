@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eec1a271e10e85c9a22bfa45c75c8ac5efbbf7d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785621"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606202"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 用 Microsoft Drivers for PHP を読み込む
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,9 +77,9 @@ PHP の起動時に SQLSRV ドライバーを読み込むには、まずドラ�
 3.  Web サーバーを再起動します。  
   
 > [!NOTE]  
-> ドライバーが正常に読み込まれたかどうかを判断するために、[phpinfo()](http://php.net/manual/en/function.phpinfo.php) を呼び出すスクリプトを実行します。  
+> ドライバーが正常に読み込まれたかどうかを判断するために、[phpinfo()](https://php.net/manual/en/function.phpinfo.php) を呼び出すスクリプトを実行します。  
   
-**php.ini** ディレクティブの詳細については、[コア php.ini ディレクティブ](http://php.net/manual/en/ini.core.php)に関するページを参照してください。  
+**php.ini** ディレクティブの詳細については、[コア php.ini ディレクティブ](https://php.net/manual/en/ini.core.php)に関するページを参照してください。  
   
 ## <a name="see-also"></a>参照  
 [概要 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

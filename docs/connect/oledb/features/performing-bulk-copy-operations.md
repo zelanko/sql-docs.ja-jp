@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9d8d32213afb7ad070d3a59897c8b0d5db853860
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b83702dafcd2085acc49f679f844ed1cd9d4416
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804680"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601012"
 ---
 # <a name="performing-bulk-copy-operations"></a>一括コピー操作の実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,5 +118,5 @@ ms.locfileid: "47804680"
  [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
- [一括インポートのパフォーマンスの最適化](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
+ [一括インポートのパフォーマンスの最適化](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
 

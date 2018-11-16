@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f68761672232d2fed88ec3b56d5349d4f925fd43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cde5de04f06c7954ad9eb5ae721ae1c4ba04e4ce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718310"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606262"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のスパース列のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47718310"
   
  OLE DB driver for SQL Server のスパース列のサポートの詳細については[スパース列をサポート&#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)します。  
   
- この機能を説明するサンプル アプリケーションについては、「[SQL Server データ プログラミング サンプル](http://msftdpprodsamples.codeplex.com/)」を参照してください。  
+ この機能を説明するサンプル アプリケーションについては、「[SQL Server データ プログラミング サンプル](https://msftdpprodsamples.codeplex.com/)」を参照してください。  
   
 ## <a name="user-scenarios-for-sparse-columns-and-ole-db-driver-for-sql-server"></a>スパース列と OLE DB Driver for SQL Server ユーザー シナリオ  
  次の表は、OLE DB driver のスパース列を含む SQL Server ユーザー、一般的なユーザー シナリオを示します。  

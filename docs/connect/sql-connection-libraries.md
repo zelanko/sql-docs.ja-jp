@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: fa070ecfed9d962dc2716e5b72eaf690eff0fe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806093"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600372"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL データベースの接続モジュール
 
-この記事では接続モジュールのダウンロード リンクまたは*ドライバー*と対話するために、クライアント プログラムが使用できる[Microsoft SQL Server](../relational-databases/database-features.md)、クラウド内のツインを使用して[AzureSQL Database](http://docs.microsoft.com/azure/sql-database/)します。 ドライバーは、次のオペレーティング システムで実行されているプログラミング言語のさまざまな利用できます。
+この記事では接続モジュールのダウンロード リンクまたは*ドライバー*と対話するために、クライアント プログラムが使用できる[Microsoft SQL Server](../relational-databases/database-features.md)、クラウド内のツインを使用して[AzureSQL Database](https://docs.microsoft.com/azure/sql-database/)します。 ドライバーは、次のオペレーティング システムで実行されているプログラミング言語のさまざまな利用できます。
 
 - Linux (Ubuntu)
 - MacOS
@@ -43,13 +43,13 @@ original page is no longer the latest because the newer page is being added.
 But this policy is not agreed on or observed,
 putting the links in the following table at risk for being outdated.
 
-PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
+PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
+although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
 | [言語] | SQL driver をダウンロードします。 |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Linux Ubuntu 用の .NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[MacOS 用の .NET core](https://www.microsoft.com/net/core#macos)<br />[Windows 用の .NET core](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[Linux Ubuntu 用の .NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[MacOS 用の .NET core](https://www.microsoft.com/net/core#macos)<br />[Windows 用の .NET core](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js ドライバー、インストール手順](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
@@ -68,18 +68,18 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | [言語] | ORM ドライバーのダウンロード |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x 以降)](http://docs.microsoft.com/ef/) |
-| Java | [ORM を休止状態します。](http://hibernate.org/orm)|
-| PHP (PHP) | [連ねました ORM、Laravel のインストールに含まれる](http://laravel.com/docs/) |
-| Node.js | [ORM を sequelize します。](http://docs.sequelizejs.com) |
-| Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
+| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x 以降)](https://docs.microsoft.com/ef/) |
+| Java | [ORM を休止状態します。](https://hibernate.org/orm)|
+| PHP (PHP) | [連ねました ORM、Laravel のインストールに含まれる](https://laravel.com/docs/) |
+| Node.js | [ORM を sequelize します。](https://docs.sequelizejs.com) |
+| Python | [Django](https://www.djangoproject.com/) |
+| Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>ビルドのアプリ、web ページ
-[http://aka.ms/sqldev](http://aka.ms/sqldev) セットに移動 *- アプリをビルド*web ページ。 Web ページは、プログラミング言語、オペレーティング システム、および SQL の接続用ドライバーのさまざまな組み合わせに関する情報を提供します。 などのビルドのアプリ、web ページによって提供される情報には、次の項目を示します。
+[https://aka.ms/sqldev](https://aka.ms/sqldev) セットに移動 *- アプリをビルド*web ページ。 Web ページは、プログラミング言語、オペレーティング システム、および SQL の接続用ドライバーのさまざまな組み合わせに関する情報を提供します。 などのビルドのアプリ、web ページによって提供される情報には、次の項目を示します。
 
 - 言語 + オペレーティング システム、ドライバーの組み合わせごとに、最初から開始する方法の詳細。
     - SQL 接続の最新のドライバーをインストールするための手順です。
@@ -97,7 +97,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 &nbsp;
 
 ## <a name="related-links"></a>関連リンク
-- [コード例では、Java とその他の言語では、クラウドでの Azure SQL Database に接続するため](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)します。
+- [コード例では、Java とその他の言語では、クラウドでの Azure SQL Database に接続するため](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)します。
 
 <!-- Image references -->
 

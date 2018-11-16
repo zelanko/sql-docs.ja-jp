@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25ebc4837eb37604a45e98112fa5fc24bdb3e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c0402f83dec65b6476d481b77553a037d4fa47
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743000"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602032"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>このバージョンのドライバーの既知の問題
 
@@ -25,7 +25,7 @@ ms.locfileid: "47743000"
 
 この記事には、Linux と macOS で Microsoft の ODBC Driver 13、13.1、および 17 for SQL Server に関する既知の問題の一覧が含まれています。
 
-その他の問題は、 [Microsoft ODBC ドライバー チームのブログ](http://blogs.msdn.com/b/sqlnativeclient/)に投稿されます。  
+その他の問題は、 [Microsoft ODBC ドライバー チームのブログ](https://blogs.msdn.com/b/sqlnativeclient/)に投稿されます。  
 
 - Windows、Linux、および macOS では、私用領域 (PUA) またはエンド ユーザー定義文字 (EUDC) の文字を異なる方法で変換します。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 内のサーバーで実行される変換では、Windows 変換ライブラリを使用します。 ドライバーの変換では、Windows、Linux、または macOS の変換ライブラリを使用します。 各ライブラリは、これらの変換を実行するときに異なる結果を生成する可能性があります。 詳細については、「[エンド ユーザーによって定義されており、秘密の使用領域文字](/windows/desktop/Intl/end-user-defined-characters)」を参照してください。
 

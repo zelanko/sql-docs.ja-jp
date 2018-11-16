@@ -14,12 +14,12 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691820"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602172"
 ---
 # <a name="how-to-specify-php-data-types"></a>方法: PHP データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ PDO_SQLSRV ドライバーを使用する場合、PDOStatement::bindColumn と P
     PHP データ型の指定に使用される定数については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」の PHPTYPE のセクションを参照してください。  
   
 ## <a name="example"></a>例  
-次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルから行を取得します。 返される各行で、 *ReviewDate* フィールドは文字列として取得され、 *Comments* フィールドはストリームとして取得されます。 ストリーム データを表示するには、PHP の [fpassthru](http://php.net/manual/en/function.fpassthru.php) 関数を使用します。  
+次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルから行を取得します。 返される各行で、 *ReviewDate* フィールドは文字列として取得され、 *Comments* フィールドはストリームとして取得されます。 ストリーム データを表示するには、PHP の [fpassthru](https://php.net/manual/en/function.fpassthru.php) 関数を使用します。  
   
 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   

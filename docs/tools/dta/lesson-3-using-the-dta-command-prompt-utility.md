@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4580df95cb5450836bcb2cc171c491724cf71c38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67b9d537a3c274e156bf8b4c6450a622b6ef6593
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642411"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657671"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>レッスン 3 : dta コマンド プロンプト ユーティリティの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47642411"
   
 データベース エンジン チューニング アドバイザーの XML スキーマを使用すれば、使い慣れた XML ツールで、このユーティリティへの入力ファイルを作成できます。 このスキーマは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時にインストールされ、C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd に格納されます。  
   
-データベース エンジン チューニング アドバイザーの XML スキーマは、 [Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)から入手することもできます。  
+データベース エンジン チューニング アドバイザーの XML スキーマは、 [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)から入手することもできます。  
   
 この XML スキーマにより、チューニング オプションをより柔軟に設定することができます。 たとえば、"what-if" 分析を実行できます。 "what-if" 分析とは、チューニングするデータベースに対して実在の物理設計構造と仮想の物理設計構造のセットを指定し、それをデータベース エンジン チューニング アドバイザーで分析する手法です。これにより、仮想的な物理設計がクエリ処理のパフォーマンスを向上させるかどうかを判断できます。 このタイプの分析には、実際に実装しなくても新しい構成を評価できるという利点があります。 仮想的な物理構造により十分にパフォーマンスが向上しなくとも、十分な結果が得られる構成になるまで再び構造を変えて分析するのは容易です。  
   

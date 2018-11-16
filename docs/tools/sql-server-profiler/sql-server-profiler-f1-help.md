@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767160"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667441"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、�
 |---|---
 |**[イベント]** 列|イベント列のチェック ボックスをオンまたはオフにして、トレースするイベントを指定します。 **[イベント]** 列は、イベント カテゴリ別に分類されています。 テンプレートで指定されているイベント クラスが自動的に選択されます。 詳しくは、「 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)」をご覧ください。  
 |データ列|必要なイベント列とデータ列に対応するチェック ボックスをオンにして、トレースするデータ列を指定します。 トレースの対象になる各イベントに対応するイベント列は、既定ですべてオンになっています。  
-|フィルター|フィルターを指定するには、データ列のヘッダーをクリックし、フィルター基準を入力します。 フィルター選択されるデータ列については、 **[フィルターの編集]** ダイアログ ボックスの列ラベルの左側にフィルターのアイコンが表示されます。 詳細については、「 [SQL Server Profiler - [フィルターの編集]](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)」を参照してください。  
+|フィルター|フィルターを指定するには、データ列のヘッダーをクリックし、フィルター基準を入力します。 フィルター選択されるデータ列については、 **[フィルターの編集]** ダイアログ ボックスの列ラベルの左側にフィルターのアイコンが表示されます。 詳細については、「 [SQL Server Profiler - [フィルターの編集]](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)」を参照してください。  
 |**[すべてのイベントを表示する]**|表示できるイベントをすべて表示します。 既定では、 **[イベントの選択]** グリッドで選択されている行だけが表示されます。 このチェック ボックスをオフにすると、 **[イベントの選択]** グリッドで選択されていないイベントがすべて非表示になります。  
 |**[すべての列を表示]**|表示できるデータ列をすべて表示します。 既定では、選択されているデータ列だけが表示されます。 このチェック ボックスをオフにすると、 **[イベントの選択]** グリッドで選択されていないデータ列がすべて非表示になります。  
 |**列フィルター**|**[フィルターの編集]** ダイアログ ボックスを起動します。 このダイアログ ボックスを使用して、データ列のフィルターを編集できます。  
@@ -179,7 +179,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、�
 |---|---
 |**[確認せずにすべてのロールオーバー ファイルを順に読み込む]**|トレース ファイルが開かれるとロールオーバー ファイルを自動的に読み込みます。 トレースの実行中に複数のファイルが作成されたときに、このオプションがオンになっている場合、すべてのロールオーバー ファイルが自動的に読み込まれます。  
 |**[ロールオーバー ファイルを読み込む前に確認する]**|トレース ファイルを開いたときに、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] はロールオーバー ファイルを追加するかどうかをユーザーに確認してから追加します。  
-|**[後続のロールオーバー ファイルを読み込まない]**|トレース ファイルを開いたときに、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は後続のロールオーバー ファイルを読み込みません。  
+|**[後続のロールオーバー ファイルを読み込まない]**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレース ファイルを開いたときに、後続のロールオーバー ファイルを読み込みません。  
 ### <a name="replay-options"></a>再生オプション  
 |アイテム|[説明]
 |---|---

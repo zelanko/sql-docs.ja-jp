@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386618d9dc6dd0d1fe23fe0480105c3e8f01c914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726385"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600862"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC ドライバーの接続レジリエンシー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47726385"
 > [!IMPORTANT]  
 >  接続の復元機能は Microsoft Azure SQL データベースと SQL Server 2014 (以降) サーバー バージョンでご利用いただけます。  
   
- アイドル接続の回復性に関する詳細については、「[Technical Article – Idle Connection Resiliency](http://go.microsoft.com/fwlink/?LinkId=393996)」 (技術記事 - アイドル接続の回復性) を参照してください。  
+ アイドル接続の回復性に関する詳細については、「[Technical Article – Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996)」 (技術記事 - アイドル接続の回復性) を参照してください。  
   
  Windows の場合、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には再接続動作を変更する方法が 2 つあります。  
   

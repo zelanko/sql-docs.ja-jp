@@ -14,12 +14,12 @@ ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af84ebccf47802e157f75ac591f7cd96c5e822be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06bb27e8faf8269090bc5920889d1b70f85dc71e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754668"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600382"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用したストリームとしての文字データの取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47754668"
 SQLSRV ドライバーは、サーバーから大量のデータの取得に PHP ストリームを利用します。 このトピックの例では、ストリームとして文字データを取得する方法を示します。  
   
 ## <a name="example"></a>例  
-次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルから行を取得します。 返された行の *Comments* フィールドはストリームとして取得され、PHP [fpassthru](http://php.net/manual/function.fpassthru.php) 関数を使用して表示されます。  
+次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルから行を取得します。 返された行の *Comments* フィールドはストリームとして取得され、PHP [fpassthru](https://php.net/manual/function.fpassthru.php) 関数を使用して表示されます。  
   
 ストリームとしてのデータの取得は、戻り値の型を文字ストリームとして指定した [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) および [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して行われます。 戻り値の型は、定数 **SQLSRV_PHPTYPE_STREAM** を使用して指定します。 **sqlsrv** 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。  
   

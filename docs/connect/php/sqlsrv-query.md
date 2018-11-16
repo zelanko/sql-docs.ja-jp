@@ -18,12 +18,12 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1703c1ef98751be8696e7fa44db8cb58e3f202f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19d7f4d6562f64061f01bf0ff7a73fcd03a4f63c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768250"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606252"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -163,7 +163,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](http://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
+> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](https://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
 
 ## <a name="example"></a>例  
 このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  

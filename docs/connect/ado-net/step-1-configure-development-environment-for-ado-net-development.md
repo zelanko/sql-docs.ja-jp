@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4c78d9001a802b60963f9c02ad03b84b431a025
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75d2e123831a3a5d0db3e780634c6d9c7d996844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617000"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606492"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>ステップ 1: ADO.NET 開発用に開発環境を構成する
 
@@ -31,8 +31,8 @@ ms.locfileid: "47617000"
 1. ![ダウンロード下方向丸](../../ssdt/media/download.png)[をダウンロードして ADO.NET を含む、.NET Framework のインストール](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 2. Visual Studio Community のインストール、または類似の書き込みおよび c# ソース コードをコンパイルするための開発環境 (IDE) に統合されています。 Microsoft は、Visual Studio Community for*無料*します。  
-    - [Visual Studio Community をダウンロードする](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [多くの方法で無料の Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [Visual Studio Community をダウンロードする](https://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [多くの方法で無料の Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
 ### <a name="net-core-for-linux-ubuntu-and-macos"></a>-Ubuntu Linux、MacOS 用の .NET core

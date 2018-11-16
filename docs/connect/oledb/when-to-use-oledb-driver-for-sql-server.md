@@ -15,19 +15,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 39ad82d9a97781eb63b5de15e20494a0438855b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b2f7bf5a09294803ab620b22a75910c5f5e3e34
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798201"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602812"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server をいつ使用するか
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server がデータにアクセスするのに使用できる 1 つのテクノロジを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  各種データ アクセス テクノロジの詳細については、「[データ アクセス テクノロジのロードマップ](http://go.microsoft.com/fwlink/?LinkID=179186)」を参照してください。  
+  OLE DB Driver for SQL Server がデータにアクセスするのに使用できる 1 つのテクノロジを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  各種データ アクセス テクノロジの詳細については、「[データ アクセス テクノロジのロードマップ](https://go.microsoft.com/fwlink/?LinkID=179186)」を参照してください。  
   
  アプリケーションのデータ アクセス テクノロジとして OLE DB Driver for SQL Server を使用するかどうかを決める場合は、いくつかの要素を検討する必要があります。  
   

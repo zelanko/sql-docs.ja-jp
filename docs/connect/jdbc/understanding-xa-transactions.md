@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851977"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605652"
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて」を参照してください。
 
@@ -45,7 +45,7 @@ ms.locfileid: "48851977"
 
 - XA トランザクションを Microsoft 分散トランザクション コーディネーター (MS DTC) と組み合わせて使用すると、現在のバージョンの MS DTC では、密に結合された XA ブランチ動作がサポートされない場合があります。 たとえば、MS DTC では、XA ブランチ トランザクション ID (XID) と MS DTC トランザクション ID とが一対一でマップされ、疎結合の XA ブランチによって実行される作業どうしが分離されます。  
   
-     「[MSDTC と密に結合されたトランザクション](http://support.microsoft.com/kb/938653) (英語ページの可能性があります)」の修正プログラムを適用すると、密に結合された XA ブランチのサポートが有効化され、同じグローバル トランザクション ID (GTRID) を持つ複数の XA ブランチが 1 つの MS DTC トランザクション ID にマップされるようになります。 このサポートにより、密に結合された複数の XA ブランチどうしが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのリソース マネージャーで相互の変更を認識できるようになります。  
+     「[MSDTC と密に結合されたトランザクション](https://support.microsoft.com/kb/938653) (英語ページの可能性があります)」の修正プログラムを適用すると、密に結合された XA ブランチのサポートが有効化され、同じグローバル トランザクション ID (GTRID) を持つ複数の XA ブランチが 1 つの MS DTC トランザクション ID にマップされるようになります。 このサポートにより、密に結合された複数の XA ブランチどうしが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのリソース マネージャーで相互の変更を認識できるようになります。  
   
 - アプリケーションは、[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) フラグによって、XA ブランチ トランザクション ID (BQUAL) が異なりグローバル トランザクション ID (GTRID) および形式 ID (FormatID) が同じである、密に結合された XA トランザクションを使用できるようになります。 その機能を使用するために設定する必要があります、 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start メソッドのフラグ パラメーター。  
   
@@ -117,7 +117,7 @@ Windows Vista 以降の場合:
 ### <a name="BKMK_ServerSide"></a> 準備されていないトランザクションを自動ロールバックするためのサーバー側のタイムアウト設定を構成します。  
 
 > [!WARNING]  
-> このサーバー側のオプションは、Microsoft JDBC Driver 4.2 (以降) for SQL Server の新機能です。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることをご確認ください。 クライアント側のタイムアウトの設定について詳しくは、「[XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)」をご覧ください。  
+> このサーバー側のオプションは、Microsoft JDBC Driver 4.2 (以降) for SQL Server の新機能です。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることをご確認ください。 クライアント側のタイムアウトの設定について詳しくは、「[XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)」をご覧ください。  
 
 分散トランザクションのタイムアウトの動作を制御する 2 つのレジストリ設定 (DWORD 値) があります。  
   

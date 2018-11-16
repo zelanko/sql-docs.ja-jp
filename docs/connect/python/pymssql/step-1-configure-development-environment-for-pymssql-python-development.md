@@ -11,12 +11,12 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d883a74e8e783ed289917b9970cc1c5956f4b0be
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 623b4bf9a88031cf891e88f75c30b06716bb27ff
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905805"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605022"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>ステップ 1: pymssql Python 開発用に開発環境を構成する
 SQL Server 用 Python ドライバーを使用してアプリケーションを開発するために、前提条件、開発環境を構成する必要があります。    
@@ -30,7 +30,7 @@ A. 移動して[python.org](https://www.python.org/downloads/)
 B. 適切な Windows インストーラーの msi リンクをクリックします。   
 c. 1 回ダウンロードした Python ランタイムをインストールする msi を実行  
   
-2. **Pymssql モジュールをダウンロード**から[ここ](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
+2. **Pymssql モジュールをダウンロード**から[ここ](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
     正しい whl ファイルを選択することを確認します。  例: 64 ビット コンピューター上の Python 2.7 を使用している場合は選択: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl します。 ダウンロードすると、c:/python27 フォルダーに配置 .whl ファイル。  
       

@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31faa17eda4fbff14d65a18ddc234c5124f72011
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 955fc16232857d9c9f04b56d62985116ac3e6338
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851550"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605802"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft SQL Server 用 JDBC Driver のサポート表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47851550"
   
  <sup>2</sup>3.0 のドライバーには、修正プログラムとして Azure SQL Database のサポートが導入されています。 Azure SQL Database のお客様は、最新バージョンのドライバーを使用することをおすすめします。  
   
- <sup>3</sup>Microsoft SQL Server JDBC Driver バージョン 2.0 と Microsoft SQL Server 2005 JDBC Driver バージョン 1.2 では、下位クライアントの SQL Server 2008 に接続できます。 下位変換が許可されている場合、アプリケーションはクエリを実行し、新しい SQL Server 2008 データ型 (time、date、datetime2、datetimeoffset、FILESTREAM など) の更新を実行できます。 これらの新しいデータ型を JDBC ドライバーで使用する方法の詳細については、「  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver (JDBC ドライバーを使用して SQL Server 2008 の日付/時刻データ型を操作する)](http://go.microsoft.com/fwlink/?LinkId=145198) 」および「  [Working with SQL Server 2008 FileStream using JDBC Driver (JDBC ドライバーを使用して SQL Server 2008 の FileStream を操作する](http://go.microsoft.com/fwlink/?LinkId=145199)」をご覧ください。 これらの新しいデータ型の下位互換性の詳細については、SQL Server オンライン ブックの「  [日時データの使用](http://go.microsoft.com/fwlink/?LinkId=145211)」および「  [FILESTREAM のサポート](http://go.microsoft.com/fwlink/?LinkId=145212) 」トピックをご覧ください。  
+ <sup>3</sup>Microsoft SQL Server JDBC Driver バージョン 2.0 と Microsoft SQL Server 2005 JDBC Driver バージョン 1.2 では、下位クライアントの SQL Server 2008 に接続できます。 下位変換が許可されている場合、アプリケーションはクエリを実行し、新しい SQL Server 2008 データ型 (time、date、datetime2、datetimeoffset、FILESTREAM など) の更新を実行できます。 これらの新しいデータ型を JDBC ドライバーで使用する方法の詳細については、「  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver (JDBC ドライバーを使用して SQL Server 2008 の日付/時刻データ型を操作する)](https://go.microsoft.com/fwlink/?LinkId=145198) 」および「  [Working with SQL Server 2008 FileStream using JDBC Driver (JDBC ドライバーを使用して SQL Server 2008 の FileStream を操作する](https://go.microsoft.com/fwlink/?LinkId=145199)」をご覧ください。 これらの新しいデータ型の下位互換性の詳細については、SQL Server オンライン ブックの「  [日時データの使用](https://go.microsoft.com/fwlink/?LinkId=145211)」および「  [FILESTREAM のサポート](https://go.microsoft.com/fwlink/?LinkId=145212) 」トピックをご覧ください。  
   
  <sup>4</sup>Microsoft JDBC Driver と並列データ ウェアハウス間の接続のサポートが、Microsoft JDBC Driver 4.0 for SQL Server と Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3 で初めて導入されました。  
   

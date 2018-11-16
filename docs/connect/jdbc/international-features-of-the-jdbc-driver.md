@@ -11,12 +11,12 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b56b2b415479ed6a290fe87f52befb5a5331521
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 321176cae5783968826f3094f63a5c6e30a1d3e9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682570"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601972"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC ドライバーの国際対応機能」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47682570"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同じ言語により完全にローカライズされたサービスをサポートします。  
   
--   ロケールに依存する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データに対する Java 言語変換をサポートします。  
+-   ロケール依存型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データの Java 言語変換に対応  
   
 -   オペレーティング システムに関係なく、世界中の言語に対応  
   
@@ -55,10 +55,10 @@ ms.locfileid: "47682570"
 ## <a name="collation-support"></a>照合順序のサポート  
  JDBC Driver 3.0 では、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] と [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でサポートされるすべての照合順序に加え、新しい照合順序 ([!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] で導入された新バージョンの Windows 照合順序名) がサポートされます。  
   
- 照合順序の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックで「[照合順序と Unicode のサポート](http://go.microsoft.com/fwlink/?LinkId=131366)」と「[WWindows 照合順序名 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367)」を参照してください。  
+ 照合順序の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックで「[照合順序と Unicode のサポート](https://go.microsoft.com/fwlink/?LinkId=131366)」と「[WWindows 照合順序名 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)」を参照してください。  
   
 ## <a name="using-international-domain-names-idn"></a>国際ドメイン名 (IDN) の使用  
- SQL Server 用 JDBC Driver 6.0 は国際ドメイン名 (IDN) の使用に対応しており、接続で要求されるとき、Unicode serverName を ASCII 互換エンコーディング (Punycode) に変換できます。  IDN がドメイン名システム (DNS) に Punycode 形式 (仕様は RFC 3490 で既定) で ASCII 文字列として保存されている場合、serverNameAsACE プロパティを「true」に設定することで Unicode サーバー名を変換できます。  そのように保存されていなければ、DNS サービスが Unicode 文字を使用できるように構成されている場合、serverNameAsACE プロパティを既定の「false」に設定します。  以前のバージョンの JDBC ドライバーの場合、[Java の IDN.toASCII](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) メソッドを利用し、serverName を Punycode に変換してからそのプロパティを接続のために設定することもできます。  
+ SQL Server 用 JDBC Driver 6.0 は国際ドメイン名 (IDN) の使用に対応しており、接続で要求されるとき、Unicode serverName を ASCII 互換エンコーディング (Punycode) に変換できます。  IDN がドメイン名システム (DNS) に Punycode 形式 (仕様は RFC 3490 で既定) で ASCII 文字列として保存されている場合、serverNameAsACE プロパティを「true」に設定することで Unicode サーバー名を変換できます。  そのように保存されていなければ、DNS サービスが Unicode 文字を使用できるように構成されている場合、serverNameAsACE プロパティを既定の「false」に設定します。  以前のバージョンの JDBC ドライバーの場合、[Java の IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) メソッドを利用し、serverName を Punycode に変換してからそのプロパティを接続のために設定することもできます。  
   
 > [!NOTE]  
 >  Windows プラットフォーム以外のために記述されたリゾルバー ソフトウェアの大半はインターネット DSN 標準に基づき、多くの場合、IDN に Punycode 形式を使用します。一方で、プライベート ネットワークの Windows ベースのDNS サーバーはサーバーごとに UTF-8 文字を使用できるように構成できます。  詳細については、「[Unicode 文字サポート](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)」を参照してください。  

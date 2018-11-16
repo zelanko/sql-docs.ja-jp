@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ad5d49841db9abdd0b512c1d36454eccc5ff73a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cd3795f57f544d5f7003f7aab60be2a08a64229
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782880"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607192"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Linux と macOS での ODBC ドライバーによるデータ アクセスのトレース
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-[UnixODBC のドキュメント](http://www.unixodbc.org/doc/UserManual/)ユーザーおよびシステム Dsn の違いについて説明します。 概要。  
+[UnixODBC のドキュメント](https://www.unixodbc.org/doc/UserManual/)ユーザーおよびシステム Dsn の違いについて説明します。 概要。  
 
 - ユーザー Dsn---これらは、Dsn、特定のユーザーに提供するだけです。 ユーザーが接続を使用して、追加変更、および、独自のユーザー Dsn を削除します。 ユーザー Dsn は、ユーザーのホーム ディレクトリ、またはそのサブディレクトリ内のファイルに格納されます。
   

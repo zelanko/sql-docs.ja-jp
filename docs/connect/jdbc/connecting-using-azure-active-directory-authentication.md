@@ -11,12 +11,12 @@ ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c87e7b85282c7ca237689296e08d2b7645240ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0134b1f5f20c02a853ef31024191ed69e9129908
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767140"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602652"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を利用した接続
 
@@ -221,7 +221,7 @@ You have successfully logged on as: <your user name>
     3. [アプリの登録] タブをクリックします。
     4. ドロワーでは、"新しいアプリケーションの登録 をクリックします。
     5. [Web アプリ/API] を選択して、アプリケーションのフレンドリ名として mytokentest を入力します。
-    6. サインオン URL は不要です。 何も指定します。 "http://mytokentest" 。
+    6. サインオン URL は不要です。 何も指定します。 "https://mytokentest" 。
     7. 下部にある [作成] をクリックします。
     9. Azure portal で、アプリケーションの [設定] タブをクリックし、[プロパティ] タブを開きます。
     10. "アプリケーション ID"(クライアント ID とも呼ばれます) の値を見つけてコピーして、この後で必要 (たとえば、1846943b-ad04-4808-aa13-4702d908b5c1) アプリケーションを構成するときにします。 次のスナップショットを参照してください。

@@ -11,12 +11,12 @@ ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff8b884253f43c0b1092eb5ad7244eca7f3e3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1520106fa39e850bf09d78a5eeee955fba1260fb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605820"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606742"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>ドキュメントのコード例について
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "47605820"
   
 -   ほぼすべての例では、SQL Server 2008 またはそれ以降、および AdventureWorks データベースがローカル コンピューターにインストールされていることを前提としています。  
   
-    SQL Server の無償のエディションと評価版をダウンロードする方法については、「 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193)」を参照してください。  
+    SQL Server の無償のエディションと評価版をダウンロードする方法については、「 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193)」を参照してください。  
   
     ダウンロードして、AdventureWorks データベースをインストールする方法については、次を参照してください。、 [AdventureWorks SQL Server のサンプル Github リポジトリ ページ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)します。
   
--   このドキュメントのほぼすべてのコード例では、コマンド ラインから実行することを前提にしています。これにより、すべてのコード例は自動的にテストされます。 PHP をコマンドラインから実行する方法については、「 [コマンドラインからの PHP の使用](http://php.net/manual/en/features.commandline.php)」を参照してください。  
+-   このドキュメントのほぼすべてのコード例では、コマンド ラインから実行することを前提にしています。これにより、すべてのコード例は自動的にテストされます。 PHP をコマンドラインから実行する方法については、「 [コマンドラインからの PHP の使用](https://php.net/manual/en/features.commandline.php)」を参照してください。  
   
 -   例はコマンド ラインから実行するようになっていますが、各例はスクリプトに変更を加えずに、ブラウザーから呼び出し実行することもできます。 出力を適切に書式設定で各"\n"を置き換えます。"\<\/br >"ブラウザーから呼び出す前に、それぞれの例です。  
   

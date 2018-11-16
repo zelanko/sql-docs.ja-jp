@@ -11,12 +11,12 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa6954248b747cfd08789fa6f2e73ebc1e4befba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 823411df1521292914f7b8decf0636d1e6a330e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730020"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600732"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +59,7 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  **getClientConnectionID** は、接続先のサーバーのバージョンに関係なく使用できますが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 以前のサーバーの場合は、拡張イベント ログと、接続リング バッファー エラーに関するエントリが提供されません。  
   
- 接続 ID のログ記録に関する拡張イベントが有効になっている場合は、拡張イベント ログ内で接続 ID を探し、エラーがサーバー上のものであるかどうかを確認できます。 また、一部の接続エラーについては、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=207752)) 内で接続 ID を検索することもできます。 接続 ID が接続リング バッファー内にない場合は、ネットワーク エラーであると考えることができます。  
+ 接続 ID のログ記録に関する拡張イベントが有効になっている場合は、拡張イベント ログ内で接続 ID を探し、エラーがサーバー上のものであるかどうかを確認できます。 また、一部の接続エラーについては、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=207752)) 内で接続 ID を検索することもできます。 接続 ID が接続リング バッファー内にない場合は、ネットワーク エラーであると考えることができます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

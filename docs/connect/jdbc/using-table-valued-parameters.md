@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 134b5eef527b375e9107149ead9d55ab08933363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598390"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603532"
 ---
 # <a name="using-table-valued-parameters"></a>テーブル値パラメーターの使用
 
@@ -35,9 +35,9 @@ ms.locfileid: "47598390"
   
 | リソース                                                                                                             | [説明]                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [テーブル値パラメーター (データベース エンジン)](http://go.microsoft.com/fwlink/?LinkId=98363)で SQL Server オンライン ブック | 作成してテーブル値パラメーターを使用する方法について説明します                             |
-| [ユーザー定義テーブル型](http://go.microsoft.com/fwlink/?LinkId=98364)で SQL Server オンライン ブック                  | テーブル値パラメーターの宣言に使用されるユーザー定義テーブル型について説明します |
-| [Microsoft SQL Server データベース エンジン](http://go.microsoft.com/fwlink/?LinkId=120507)CodePlex の「        | SQL Server の機能を使用する方法を示すサンプルが含まれます  |
+| [テーブル値パラメーター (データベース エンジン)](https://go.microsoft.com/fwlink/?LinkId=98363)で SQL Server オンライン ブック | 作成してテーブル値パラメーターを使用する方法について説明します                             |
+| [ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkId=98364)で SQL Server オンライン ブック                  | テーブル値パラメーターの宣言に使用されるユーザー定義テーブル型について説明します |
+| [Microsoft SQL Server データベース エンジン](https://go.microsoft.com/fwlink/?LinkId=120507)CodePlex の「        | SQL Server の機能を使用する方法を示すサンプルが含まれます  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>SQL Server の以前のバージョンで複数の行を渡す  
 
@@ -53,7 +53,7 @@ ms.locfileid: "47598390"
   
 ## <a name="creating-table-valued-parameter-types"></a>テーブル値パラメーターの型を作成します。  
 
-テーブル値パラメーターは TRANSACT-SQL を使用して定義されている厳密に型指定されたテーブルの構造に基づいて`CREATE TYPE`ステートメント。 テーブル型を作成し、クライアント アプリケーションでテーブル値パラメーターを使用する前に、SQL Server で、構造を定義する必要があります。 テーブル型の作成の詳細については、次を参照してください。[ユーザー定義テーブル型](http://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「します。  
+テーブル値パラメーターは TRANSACT-SQL を使用して定義されている厳密に型指定されたテーブルの構造に基づいて`CREATE TYPE`ステートメント。 テーブル型を作成し、クライアント アプリケーションでテーブル値パラメーターを使用する前に、SQL Server で、構造を定義する必要があります。 テーブル型の作成の詳細については、次を参照してください。[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「します。  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -298,7 +298,7 @@ pStmt.execute();
 
 | [オブジェクト名]                                                                                                    | [説明]                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| パブリックの最終的な void setStructured (int parameterIndex, 文字列 tvpName, SQLServerDataTable tvpDataTbale)    | データ テーブルとテーブル値パラメーターを設定します。 parameterIndex はパラメーターのインデックス、tvpName は、テーブル値パラメーターの名前、tvpDataTable はソース データ テーブル オブジェクトです。                                                                                                          |
+| パブリックの最終的な void setStructured (int parameterIndex, 文字列 tvpName, SQLServerDataTable tvpDataTable)    | データ テーブルとテーブル値パラメーターを設定します。 parameterIndex はパラメーターのインデックス、tvpName は、テーブル値パラメーターの名前、tvpDataTable はソース データ テーブル オブジェクトです。                                                                                                          |
 | パブリックの最終的な void setStructured (int parameterIndex、文字列 tvpName、ResultSet tvpResultSet)             | 別のテーブルから取得された結果セットには、テーブル値パラメーターを設定します。 parameterIndex はパラメーターのインデックス、tvpName は、テーブル値パラメーターの名前、tvpResultSet はソースの結果セット オブジェクトです。                                                                               |
 | パブリックの最終的な void setStructured (int parameterIndex、文字列 tvpName、ISQLServerDataRecord tvpDataRecord) | ISQLServerDataRecord オブジェクトを使用して、テーブル値パラメーターを設定します。 ISQLServerDataRecord データをストリーミングを使用し、ユーザーがその使用方法を決定します。 parameterIndex はパラメーターのインデックス、tvpName は、テーブル値パラメーターの名前、tvpDataRecord は ISQLServerDataRecord オブジェクトです。 |
   

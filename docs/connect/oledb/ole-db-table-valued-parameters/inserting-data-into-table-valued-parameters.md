@@ -13,19 +13,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9054dde2ce697cf954ad36474220a38c3d1210d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656380"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604592"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>テーブル値パラメーターへのデータの挿入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server では、コンシューマーがテーブル値パラメーターの行にデータを指定するときのモデルとして、プッシュ モデルとプル モデルという 2 つのモデルがサポートされます。 プル モデルの使用方法を示すサンプルを利用できます。「[SQL Server データ プログラミング サンプル](http://msftdpprodsamples.codeplex.com/)」を参照してください。  
+  OLE DB Driver for SQL Server では、コンシューマーがテーブル値パラメーターの行にデータを指定するときのモデルとして、プッシュ モデルとプル モデルという 2 つのモデルがサポートされます。 プル モデルの使用方法を示すサンプルを利用できます。「[SQL Server データ プログラミング サンプル](https://msftdpprodsamples.codeplex.com/)」を参照してください。  
   
 > [!NOTE]  
 >  テーブル値パラメーターの列では、すべての行に既定値以外の値が格納されているか、すべての行に既定値が格納されているかのどちらかでなければなりません。 一部の行にだけ既定値を格納することはできません。 したがって、テーブル値パラメーターのバインドでは、テーブル値パラメーターの行セット列データに許容される状態値は DBSTATUS_S_ISNULL と DBSTATUS_S_OK だけです。 DBSTATUS_S_DEFAULT ではエラーが発生し、バインド状態値が DBSTATUS_E_BADSTATUS に設定されます。  

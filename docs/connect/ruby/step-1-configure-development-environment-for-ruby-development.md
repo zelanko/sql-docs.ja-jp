@@ -11,12 +11,12 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1de9ce8b14dd164ac24ac1bb7098494dbc134bfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778260"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604702"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>ステップ 1: Ruby 開発用に開発環境を構成する
 SQL Server 用 Ruby ドライバーを使用してアプリケーションを開発するために、前提条件、開発環境を構成する必要があります。    
@@ -27,7 +27,7 @@ Ruby Driver が SQL Server と Azure SQL Database での既定で有効になっ
 ## <a name="windows"></a>Windows  
   
 1.  **Ruby のインストーラーをダウンロードします。**  
-場合は、コンピューターには、Ruby をインストールしてくださいはありません。 新しい ruby ユーザーは、Ruby 2.2.X インストーラーの使用をお勧めします。 これらは、安定した言語とは互換性があり、更新されたパッケージ (gem) の広範な一覧を提供します。 移動、 [Ruby のダウンロード ページ](http://rubyinstaller.org/downloads/)し、適切な 2.1.x がインストールされたインストーラーをダウンロードします。 例に、64 ビット コンピューター上にいる場合は、Ruby 2.1.6 (x 64) インストーラーをダウンロードします。   
+場合は、コンピューターには、Ruby をインストールしてくださいはありません。 新しい ruby ユーザーは、Ruby 2.2.X インストーラーの使用をお勧めします。 これらは、安定した言語とは互換性があり、更新されたパッケージ (gem) の広範な一覧を提供します。 移動、 [Ruby のダウンロード ページ](https://rubyinstaller.org/downloads/)し、適切な 2.1.x がインストールされたインストーラーをダウンロードします。 例に、64 ビット コンピューター上にいる場合は、Ruby 2.1.6 (x 64) インストーラーをダウンロードします。   
   
 2.  **Ruby をインストールします。**  
 インストーラーがダウンロードされると、次の操作を行います。  

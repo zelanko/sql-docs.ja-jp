@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a293ff4bd2eae7f1e54914c805e4e180ce17fb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc82d2860bf5e927556103a6c508b1cd662e4b42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669520"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602922"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 **sqlsrv_prepare** と **sqlsrv_execute** の組み合わせは、ステートメントの準備とステートメントの実行を 2 つの関数呼び出しに分割し、パラメーター化されたクエリを実行するために使用できます。 この関数は、実行ごとに異なるパラメーター値を使用してステートメントを複数回実行する場合に適しています。  
   
-大量の情報の書き込みと読み取りを行う別の手法については、「[SQL ステートメントのバッチ](../../odbc/reference/develop-app/batches-of-sql-statements.md)」および「[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」をご覧ください。  
+大量の情報の書き込みと読み取りを行う別の手法については、「 [Batches of SQL Statements (SQL ステートメントのバッチ)](../../odbc/reference/develop-app/batches-of-sql-statements.md) 」と「 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
 詳細については、「 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
@@ -219,7 +219,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](http://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
+> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](https://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
 
 ## <a name="example"></a>例  
 このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  

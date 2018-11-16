@@ -11,25 +11,25 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687041"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600102"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux と macOS の ODBC ドライバーでの高可用性とディザスター リカバリーのサポート
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Linux と macOS のサポート用の ODBC ドライバー[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]します。 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]の詳細については、以下を参照してください。  
   
--   [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [可用性グループの作成と構成 (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [可用性グループの作成と構成 (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 接続文字列で、特定の可用性グループの可用性グループ リスナーを指定できます。 Linux または macOS 上の ODBC アプリケーションが、フェールオーバーする可用性グループ内のデータベースに接続されている場合、元の接続が切断されるため、フェールオーバー後にアプリケーションが動作を継続するには新しい接続を開く必要があります。
 

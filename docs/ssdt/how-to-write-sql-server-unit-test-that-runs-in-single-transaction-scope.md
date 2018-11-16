@@ -11,12 +11,12 @@ ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 789322fa4274c6819fe1f71ac7ae06056fce5a5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785460"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681290"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法
 単体テストは、単一のトランザクションのスコープ内で実行されるように変更できます。 この方法を使用すると、テストの終了後、テストによって行われた変更をロールバックできます。 次の手順では、以下の操作方法について説明します。  
@@ -54,7 +54,7 @@ ms.locfileid: "47785460"
     > [!NOTE]  
     > COMMIT TRANSACTION ステートメントの実行後にトランザクションをロールバックすることはできません。  
   
-    ROLLBACK TRANSACTION がストアド プロシージャおよびトリガーとどのように連携するかについて詳しくは、Microsoft Web サイトの「[ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927)」をご覧ください。  
+    ROLLBACK TRANSACTION がストアド プロシージャおよびトリガーとどのように連携するかについて詳しくは、Microsoft Web サイトの「[ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927)」をご覧ください。  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>単一のテスト メソッドのトランザクションを作成するには  
 この例では、[System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 型を使用するときにアンビエント トランザクションを使用します。 既定では、実行接続および特権接続ではアンビエント トランザクションが使用されません。これらの接続は、メソッドが実行される前に作成されるためです。 SqlConnection には、トランザクションにアクティブな接続を関連付ける [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) メソッドがあります。 アンビエント トランザクションを作成すると、そのトランザクション自体が現在のトランザクションとして登録されるため、[System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) プロパティを介してそのトランザクションにアクセスできます。 この例では、アンビエント トランザクションが破棄されると、トランザクションはロールバックされます。 単体テストの実行時に行われたすべての変更をコミットする場合は、[System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) メソッドを呼び出す必要があります。  
@@ -171,7 +171,7 @@ ms.locfileid: "47785460"
     サービスの状態が **[開始]** に更新されます。 これで、System.Transactions を使用する単体テストを実行できるようになります。  
   
 > [!IMPORTANT]  
-> 分散トランザクション コントローラー サービスを開始した場合でも、"`System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`" というエラーが表示されることがあります。 このエラーが表示される場合は、ネットワーク アクセス用に分散トランザクション コントローラーを構成する必要があります。 詳しくは、「[ネットワーク DTC アクセスを有効にする](http://go.microsoft.com/fwlink/?LinkId=193916)」をご覧ください。  
+> 分散トランザクション コントローラー サービスを開始した場合でも、"`System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`" というエラーが表示されることがあります。 このエラーが表示される場合は、ネットワーク アクセス用に分散トランザクション コントローラーを構成する必要があります。 詳しくは、「[ネットワーク DTC アクセスを有効にする](https://go.microsoft.com/fwlink/?LinkId=193916)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

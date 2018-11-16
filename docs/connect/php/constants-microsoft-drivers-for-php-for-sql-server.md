@@ -13,20 +13,20 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605510"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603752"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>定数 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-このトピックでは、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]で定義される定数について説明します。  
+このトピックでは、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] で定義される定数について説明します。  
   
 ## <a name="pdosqlsrv-driver-constants"></a>PDO_SQLSRV ドライバー定数  
-[PDO Web サイト](http://php.net/manual/book.pdo.php)に記載されている定数は、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] で有効です。  
+[PDO Web サイト](https://php.net/manual/book.pdo.php)に記載されている定数は、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] で有効です。  
   
 次に、PDO_SQLSRV ドライバーの Microsoft 固有の定数について説明します。  
   
@@ -132,7 +132,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、(ビット、整数、smallint
 |SQLSRV_PARAM_OUT|出力パラメーターを示します。|  
   
 ### <a name="phptype-constants"></a>PHPTYPE 定数  
-次の表に、PHP データ型の記述に使用される定数を示します。 PHP データ型の詳細については、[PHP の型](http://php.net/manual/en/language.types.php)に関するページを参照してください。  
+次の表に、PHP データ型の記述に使用される定数を示します。 PHP データ型の詳細については、 [PHP 型](https://php.net/manual/en/language.types.php)を参照してください。  
   
 |SQLSRV 定数|PHP データ型|  
 |-------------------|-----------------|  
