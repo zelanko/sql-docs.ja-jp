@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e25793ba20a442b92feef901684290892604a245
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609273"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601002"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>ミラーリング パフォーマンス基準の警告しきい値および警告の使用 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "47609273"
   
  データベース ミラーリング イベントで警告を定義する場合は、両方のパートナー サーバー インスタンスで警告しきい値と警告を定義することをお勧めします。 個々のイベントはプリンシパル サーバーまたはミラー サーバーのいずれかで生成されますが、各パートナーは常にどちらの役割も実行できます。 フェールオーバー後に警告が動作を続行するには、両方のパートナーで警告を定義する必要があります。  
   
- 詳細については、 [SQL Server Web サイト](http://go.microsoft.com/fwlink/?linkid=62373)にあるデータベース ミラーリング イベントの警告に関するホワイト ペーパーを参照してください。 このホワイト ペーパーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用した警告の構成方法、データベース ミラーリングの WMI イベント、およびサンプル スクリプトに関する情報が記載されています。  
+ 詳細については、 [SQL Server Web サイト](https://go.microsoft.com/fwlink/?linkid=62373)にあるデータベース ミラーリング イベントの警告に関するホワイト ペーパーを参照してください。 このホワイト ペーパーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用した警告の構成方法、データベース ミラーリングの WMI イベント、およびサンプル スクリプトに関する情報が記載されています。  
   
 > [!IMPORTANT]  
 >  すべてのミラーリング セッションでは、状態変更イベントに対する警告を送信するようにデータベースを構成することを強くお勧めします。 状態変更は手動による構成の変更結果として予測される場合を除いて、データを損傷する可能性があります。 データを保護するには、予測されていない状態変更の原因を特定して解決します。  
