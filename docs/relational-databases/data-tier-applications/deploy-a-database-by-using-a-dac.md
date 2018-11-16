@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce77499661b7b12c5acb010d9a639c2517bef94d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697086"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673351"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47697086"
   
     -   [[進行状況]](#Progress)  
     
-    -   [[結果]](#Results)  
+    -   [結果](#Results)  
   
 ##  <a name="Introduction"></a> [説明] ページ  
  このページには、 **データベース配置** ウィザードの手順が示されています。  
@@ -127,7 +127,7 @@ ms.locfileid: "47697086"
 ## <a name="using-a-net-framework-application"></a>.Net Framework アプリケーションの使用  
  **.Net Framework アプリケーションで DacStoreExport() メソッドおよび Import() メソッドを使用してデータベースを配置するには**  
   
- コード例を参照するには、 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)上の DAC サンプル アプリケーションをダウンロードしてください。  
+ コード例を参照するには、 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)上の DAC サンプル アプリケーションをダウンロードしてください。  
   
 1.  SMO サーバー オブジェクトを作成し、配置するデータベースがあるインスタンスまたはサーバーに設定します。  
   

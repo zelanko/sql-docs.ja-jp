@@ -5,8 +5,7 @@ ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0d19ad0bba4792ab4fc088957570e532fec0c61e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f984cd0e2c01e9a4913387b8266ddc40202e0b13
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601887"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671091"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したサーバーの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47601887"
   
  ポリシーに違反する場合は、オブジェクト エクスプローラーで、対象およびオブジェクト エクスプローラー ツリーの上位にあるノードの横に、重大な状態の警告が赤いアイコンとして示されます。  
   
-> **注:** ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx) を参照してください。  
+> **注:** ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx) を参照してください。  
   
 ## <a name="three-policy-based-management-components"></a>ポリシー ベースの管理は 3 つの要素で構成されます。  
  ポリシー ベースの管理は 3 つの要素で構成されます。  

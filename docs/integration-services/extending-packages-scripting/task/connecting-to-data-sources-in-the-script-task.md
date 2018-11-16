@@ -24,12 +24,12 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 675c84567ab32d9b074df518ca80afa1ed1dd743
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f042d3039902a9e061feabf9567a5fbad250562
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654867"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641899"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>スクリプト タスクでのデータ ソースへの接続
   接続マネージャーは、パッケージ内に構成されたデータ ソースへのアクセスを提供します。 詳細については、「[Integration Services (SSIS) の接続](../../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -89,6 +89,6 @@ ms.locfileid: "47654867"
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の接続](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [接続マネージャーを作成する](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

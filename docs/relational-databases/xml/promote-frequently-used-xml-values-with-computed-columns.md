@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 680232b1a65bf811c5281da715e4fb93fd2f416f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735690"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665571"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  まず、ストリーミング CLR 関数を作成します。 **xml** データ型は ADO.NET のマネージド クラス SqlXml として公開します。このデータ型は XmlReader を返す **CreateReader()** メソッドをサポートします。  
   
 > [!NOTE]  
->  このセクションの例のコードでは、XPathDocument および XPathNavigator を使用しています。 この 2 つはすべての XML ドキュメントをメモリに読み込みます。 大きな XML ドキュメントを処理するためにこのサンプルと同様のコードを使用する場合、このコードにはスケーラビリティはありません。 代わりに、メモリの割り当てを少なく抑え、可能な限りストリーミング インターフェイスを使用してください。 パフォーマンスの詳細については、「 [CLR 統合のアーキテクチャ](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)」を参照してください。  
+>  このセクションの例のコードでは、XPathDocument および XPathNavigator を使用しています。 この 2 つはすべての XML ドキュメントをメモリに読み込みます。 大きな XML ドキュメントを処理するためにこのサンプルと同様のコードを使用する場合、このコードにはスケーラビリティはありません。 代わりに、メモリの割り当てを少なく抑え、可能な限りストリーミング インターフェイスを使用してください。 パフォーマンスの詳細については、「 [CLR 統合のアーキテクチャ](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)」を参照してください。  
   
 ```  
 public class c_streaming_xml_tvf {  

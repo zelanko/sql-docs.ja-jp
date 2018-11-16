@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 321ae7aea8a8d3742f641e57d5a8c4276938a555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65466a1750ecc340ed10ae961fa1a46d05a22192
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665256"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606812"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "47665256"
 
 ### <a name="not-included"></a>対象外の情報
 
-* このトピックには、SSPI エラーに関する情報が含まれていません。 SSPI エラーについては、「 ["SSPI コンテキストを生成できません" エラー メッセージのトラブルシューティング方法](http://support.microsoft.com/kb/811889)」を参照してください。  
-* このトピックには、Kerberos エラーに関する情報が含まれていません。 ヘルプが必要な場合、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](http://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。
+* このトピックには、SSPI エラーに関する情報が含まれていません。 SSPI エラーについては、「 ["SSPI コンテキストを生成できません" エラー メッセージのトラブルシューティング方法](https://support.microsoft.com/kb/811889)」を参照してください。  
+* このトピックには、Kerberos エラーに関する情報が含まれていません。 ヘルプが必要な場合、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。
 * このトピックには、SQL Azure 接続に関する情報が含まれていません。 ヘルプについては、「[Troubleshooting connectivity issues with Microsoft Azure SQL Database](https://support.microsoft.com/help/10085/troubleshooting-connectivity-issues-with-microsoft-azure-sql-database)」 (Microsoft Azure SQL Database の接続に関する問題のトラブルシューティング) を参照してください。 
 
 ## <a name="gathering-information-about-the-instance-of-sql-server"></a>SQL Server のインスタンスに関する情報を集める
@@ -80,10 +80,10 @@ SQL Server の一部のインストールでは、管理者が構成マネージ
 TCP/IP を使用して SQL Server に接続するには、Windows が接続を確立できることが必須となります。 `ping` ツールを使用し、TCP をテストします。
 1.  [スタート] メニューの **[ファイル名を指定して実行]** をクリックします。 **[ファイル名を指定して実行]** ウィンドウで、「 **cmd**」と入力し、 **[OK]** をクリックします。 
 2.  コマンド プロンプト ウィンドウで、「 `ping` 」と入力し、SQL Server を実行しているコンピューターの IP アドレスを入力します。 たとえば、IPv4 アドレスの場合、「 `ping 192.168.1.101` 」と、IPv6 アドレスの場合、「 `ping fe80::d51d:5ab5:6f09:8f48%11` 」と入力します。 (ping の後の数値は、先に集めたコンピューターの IP アドレスに変えます。) 
-3.  ネットワークが適切に構成されていれば、**Reply from \<IP アドレス>** (この後にいくつかの情報が続きます) のような応答を受け取ります。 **宛先ホストに到達できません。** または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、TCP/IP が正しく構成されていません。 (IP アドレスが正しく、タイプミスもないことを確認してください。)この段階でのエラーは、クライアント コンピューター、サーバー コンピューター、ネットワーク (ルーターなど) に関する問題を示唆します。 インターネットには、TCP/IP のトラブルシューティングに関するさまざまなリソースがあります。 2006 年に公開された記事、「 [How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790)」 (基本的 TCP/IP 問題のトラブルシューティング方法) から始めると効率的です。
+3.  ネットワークが適切に構成されていれば、**Reply from \<IP アドレス>** (この後にいくつかの情報が続きます) のような応答を受け取ります。 **宛先ホストに到達できません。** または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、TCP/IP が正しく構成されていません。 (IP アドレスが正しく、タイプミスもないことを確認してください。)この段階でのエラーは、クライアント コンピューター、サーバー コンピューター、ネットワーク (ルーターなど) に関する問題を示唆します。 インターネットには、TCP/IP のトラブルシューティングに関するさまざまなリソースがあります。 2006 年に公開された記事、「 [How to Troubleshoot Basic TCP/IP Problems](https://support.microsoft.com/kb/169790)」 (基本的 TCP/IP 問題のトラブルシューティング方法) から始めると効率的です。
 4.  次に、IP アドレスによる ping テストに成功した場合、コンピューター名を TCP/IP アドレスに解決できることをテストします。 クライアント コンピューターのコマンド プロンプト ウィンドウで、「 `ping` 」と入力し、SQL Server を実行しているコンピューターのコンピューター名を入力します。 たとえば、IPv4 アドレスの場合、「 `ping newofficepc` 
 5.  たとえば、IP ドレスに ping できても、" **宛先ホストに到達できません**" または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、古い名前解決情報がクライアント コンピューターにキャッシュされている可能性があります。 「 `ipconfig /flushdns` 」と入力し、DNS (動的な名前解決) キャッシュを消去します。 次に、もう一度、名前でコンピューターに ping を実行します。 DNS キャッシュが空の場合、クライアント コンピューターはサーバー コンピューターの IP アドレスに関する最新情報がないか確認します。 
-6.  ネットワークが適切に構成されていれば、**Reply from \<IP アドレス>** (この後にいくつかの情報が続きます) のような応答を受け取ります。 IP アドレスでサーバー コンピューターに ping を成功させることができるが、コンピューター名で ping を実行すると、 **宛先ホストに到達できません。** または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、名前解決が正しく構成されていません。 (詳細については、前述の 2006 年の記事、「[How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790)」 (基本的 TCP/IP 問題のトラブルシューティング方法) を参照してください。)名前解決が成功しなくても、SQL Server に接続できますが、コンピューター名を IP アドレスに解決できない場合、IP アドレスを指定して接続を行う必要があります。 そのような状態は理想的ではありません。名前解決は後で修正できます。
+6.  ネットワークが適切に構成されていれば、**Reply from \<IP アドレス>** (この後にいくつかの情報が続きます) のような応答を受け取ります。 IP アドレスでサーバー コンピューターに ping を成功させることができるが、コンピューター名で ping を実行すると、 **宛先ホストに到達できません。** または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、名前解決が正しく構成されていません。 (詳細については、前述の 2006 年の記事、「[How to Troubleshoot Basic TCP/IP Problems](https://support.microsoft.com/kb/169790)」 (基本的 TCP/IP 問題のトラブルシューティング方法) を参照してください。)名前解決が成功しなくても、SQL Server に接続できますが、コンピューター名を IP アドレスに解決できない場合、IP アドレスを指定して接続を行う必要があります。 そのような状態は理想的ではありません。名前解決は後で修正できます。
   
   
 ## <a name="testing-a-local-connection"></a>ローカル接続をテストする
@@ -104,7 +104,7 @@ TCP/IP を使用して SQL Server に接続するには、Windows が接続を�
 この時点でエラーが発生する場合、続行する前に解決する必要があります。 問題にはさまざまな要因が考えられます。 ログインの接続が認証されないことがあります。 既定のデータベースがないことがあります。
 
 >    [!NOTE] 
->    クライアントに渡されるエラー メッセージの一部は、問題を解決するために十分な情報を意図的に与えません。 これはセキュリティ機能であり、SQL Server に関する情報を攻撃者に与えることを回避します。 エラーに関する完全な情報は、SQL Server エラー ログを調べてください。 そこに詳細があります。 エラー **18456 ユーザーはログインできませんでした**を受け取った場合、オンライン ブックのトピック、 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) にエラー コードに関する追加情報があります。 また、Aaron Bertrand のブログで、非常に広範囲なエラー コード リストが紹介されています ( [エラー 18456 のトラブルシューティング](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx))。 オブジェクト エクスプローラーの管理セクションで、SSMS (接続できる場合) のエラー ログを見ることができます。 接続できない場合、Windows のメモ帳プログラムでエラー ログを表示できます。 既定の場所はバージョンによって異なり、セットアップ中に変更できます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] の既定の場所は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`です。  
+>    クライアントに渡されるエラー メッセージの一部は、問題を解決するために十分な情報を意図的に与えません。 これはセキュリティ機能であり、SQL Server に関する情報を攻撃者に与えることを回避します。 エラーに関する完全な情報は、SQL Server エラー ログを調べてください。 そこに詳細があります。 エラー **18456 ユーザーはログインできませんでした**を受け取った場合、オンライン ブックのトピック、 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) にエラー コードに関する追加情報があります。 また、Aaron Bertrand のブログで、非常に広範囲なエラー コード リストが紹介されています ( [エラー 18456 のトラブルシューティング](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx))。 オブジェクト エクスプローラーの管理セクションで、SSMS (接続できる場合) のエラー ログを見ることができます。 接続できない場合、Windows のメモ帳プログラムでエラー ログを表示できます。 既定の場所はバージョンによって異なり、セットアップ中に変更できます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] の既定の場所は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`です。  
 
 4.   共有メモリで接続できない場合、TCP による接続をテストしてください。 名前の前に **tcp:** を指定すると、TCP 接続を強制できます。 例 :
 
@@ -144,7 +144,7 @@ TCP/IP を使用して SQL Server に接続するには、Windows が接続を�
   * SQL Server Browser サービスを開始します。 「 **SQL Server のインスタンスに関する情報を集める**」セクションの 1.d に戻ってください。
   * SQL Server Browser サービスがファイアウォールによりブロックされています。 ファイアウォールで UDP ポート 1434 を開きます。 「 **ファイアウォールでポートを開く**」セクションを参照してください。 (TCP ポートではなく UDP ポートを開いていることを確認します。 これらは異なるものです。)
   * UDP ポート 1434 情報がルーターによりブロックされています。 UDP (ユーザー データグラム プロトコル) 通信は、ルーターを通過するように設計されていません。 それにより、ネットワークが優先度の低いトラフィックでいっぱいになることがありません。 UDP トラフィックを転送するようにルーターを構成できることがあります。あるいは、接続するとき、常にポート番号を指定するように設定できます。
-  * クライアント コンピューターで Windows 7 または Windows Server 2008 (あるいは、もっと最近のオペレーティング システム) が使用されている場合、クライアントのオペレーティング システムが UDP トラフィックを破棄することがあります。サーバーからの応答が、クエリされたアドレスとは異なる IP アドレスから返されるためです。 これは "厳密でないソース マッピング" をブロックするセキュリティ機能です。 詳細については、ブックス オンライン トピック「 **タイムアウト発生時のトラブルシューティング** 」の「 [複数のサーバー IP アドレス](http://msdn.microsoft.com/library/ms190181.aspx)」セクションを参照してください。 これは SQL Server 2008 R2 の記事ですが、原則は同じです。 正しい IP アドレスを使用するようにクライアントを構成できることがあります。あるいは、接続するとき、常にポート番号を指定するように設定できます。
+  * クライアント コンピューターで Windows 7 または Windows Server 2008 (あるいは、もっと最近のオペレーティング システム) が使用されている場合、クライアントのオペレーティング システムが UDP トラフィックを破棄することがあります。サーバーからの応答が、クエリされたアドレスとは異なる IP アドレスから返されるためです。 これは "厳密でないソース マッピング" をブロックするセキュリティ機能です。 詳細については、ブックス オンライン トピック「 **タイムアウト発生時のトラブルシューティング** 」の「 [複数のサーバー IP アドレス](https://msdn.microsoft.com/library/ms190181.aspx)」セクションを参照してください。 これは SQL Server 2008 R2 の記事ですが、原則は同じです。 正しい IP アドレスを使用するようにクライアントを構成できることがあります。あるいは、接続するとき、常にポート番号を指定するように設定できます。
      
 3. IP アドレス (あるいは、名前付きインスタンスの IP アドレスとインスタンス名) で接続できたら、コンピューター名 (あるいは、名前付きインスタンスのコンピューター名とインスタンス名) による接続を試してください。 TCP/IP 接続を強制するには、コンピューター名の前に `tcp:` を指定します。 たとえば、 `ACCNT27`という名前のコンピューターで既定のインスタンスを使用する場合、 `tcp:ACCNT27` を使用します。そのコンピューターで `PAYROLL`という名前のインスタンスを使用する場合、 `tcp:ACCNT27\PAYROLL` を使用します。IP アドレスで接続できてもコンピューター名で接続できない場合、名前解決の問題があります。 「 **TCP/IP 接続をテストする**」セクションの 4 に戻ってください。
 

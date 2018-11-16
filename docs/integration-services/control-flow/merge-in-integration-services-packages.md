@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856110"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638009"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、SQL 実行タスクの SQL ステートメントに MERGE ステートメントを含めることができます。 この MERGE ステートメントを使用すると、1 つのステートメントで複数の INSERT、UPDATE、および DELETE 操作を実行できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "47856110"
     > [!NOTE]  
     >  このシナリオでは、一般に、MERGE ステートメントにステージング テーブルが必要ですが、MERGE ステートメントのパフォーマンスは、通常、参照変換で実行される 1 行ずつの参照のパフォーマンスを上回ります。 また、MERGE は、大きなサイズの参照テーブルが参照変換でその参照テーブルをキャッシュするために使用できるメモリをテストする場合にも役立ちます。  
   
- MERGE ステートメントの使用をサポートする変換先コンポーネントのサンプルについては、CodePlex コミュニティのサンプル ( [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215)) を参照してください。  
+ MERGE ステートメントの使用をサポートする変換先コンポーネントのサンプルについては、CodePlex コミュニティのサンプル ( [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215)) を参照してください。  
   
 ## <a name="using-merge"></a>MERGE を使用する  
  通常、MERGE ステートメントは、挿入、更新、および削除を含む変更をあるテーブルから別のテーブルに適用する場合に使用します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]より前のバージョンでこの処理を行うには、参照変換と複数の OLE DB コマンド変換の両方が必要でした。 参照変換で、1 行ずつ参照を実行して各行が新しいか変更されたかを判断し、 次に、OLE DB コマンド変換で、必要な INSERT、UPDATE および DELETE の操作を実行しました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降、1 つの MERGE ステートメントを、参照変換と対応する OLE DB コマンド変換に代わって使用できます。  

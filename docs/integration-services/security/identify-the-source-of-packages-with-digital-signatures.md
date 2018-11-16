@@ -19,12 +19,12 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee92e9c8873a65dd6f35da970e2bb2223a4649e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0139abead73541a39f9207e94ae7d0a4d1a8f2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798034"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639496"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、そのソースを識別するために、デジタル証明書を使用して署名できます。 パッケージがデジタル証明書を使用して署名されたら、パッケージを読み込む前に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] でデジタル署名を確認できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で署名を確認するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** ユーティリティ (dtexec.exe) でオプションを設定するか、オプションのレジストリ値を設定します。  
@@ -67,7 +67,7 @@ ms.locfileid: "47798034"
 |3|署名が無効であるか署名が信頼できないパッケージ、および署名がないパッケージをブロックします。<br /><br /> この設定では、自己生成された署名もブロックします。|  
   
 > [!NOTE]  
->  **BlockedSignatureStates** の推奨設定は 3 です。 この設定では、署名されていないパッケージまたは無効な署名や信頼できない署名に対する最大の保護が提供されます。 ただし、推奨される設定がすべての状況に適しているとは限りません。 デジタル アセットの署名の詳細については、MSDN ライブラリの「[コード署名の概要](http://go.microsoft.com/fwlink/?LinkId=51414)」を参照してください。  
+>  **BlockedSignatureStates** の推奨設定は 3 です。 この設定では、署名されていないパッケージまたは無効な署名や信頼できない署名に対する最大の保護が提供されます。 ただし、推奨される設定がすべての状況に適しているとは限りません。 デジタル アセットの署名の詳細については、MSDN ライブラリの「[コード署名の概要](https://go.microsoft.com/fwlink/?LinkId=51414)」を参照してください。  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>パッケージに対する署名ポリシーを実装するには  
   
@@ -100,11 +100,11 @@ ms.locfileid: "47798034"
   
     -   証明書を発行する公的な商用証明機関から証明書を入手します。  
   
-    -   組織が証明書を内部的に発行できるようにする証明書サーバーから証明書を入手します。 証明書の署名に使用されるルート証明書を、 **[信頼されたルート証明機関]** ストアに追加する必要があります。 ルート証明書を追加するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) の証明書スナップインを使用します。 詳細については、MSDN ライブラリの「[証明書サービス](http://go.microsoft.com/fwlink/?LinkId=100755)」を参照してください。  
+    -   組織が証明書を内部的に発行できるようにする証明書サーバーから証明書を入手します。 証明書の署名に使用されるルート証明書を、 **[信頼されたルート証明機関]** ストアに追加する必要があります。 ルート証明書を追加するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) の証明書スナップインを使用します。 詳細については、MSDN ライブラリの「[証明書サービス](https://go.microsoft.com/fwlink/?LinkId=100755)」を参照してください。  
   
-    -   テスト目的でのみ独自の証明書を作成します。 証明書作成ツール (Makecert.exe) は、テスト目的で X.509 証明書を生成します。 詳細については、MSDN ライブラリの「[証明書作成ツール (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)」を参照してください。  
+    -   テスト目的でのみ独自の証明書を作成します。 証明書作成ツール (Makecert.exe) は、テスト目的で X.509 証明書を生成します。 詳細については、MSDN ライブラリの「[証明書作成ツール (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)」を参照してください。  
   
-     証明書の詳細については、証明書スナップインのオンライン ヘルプを参照してください。 デジタル アセットの署名方法の詳細については、MSDN ライブラリの「[Authenticode を使用したコードの署名と検証](http://go.microsoft.com/fwlink/?LinkId=78100)」を参照してください。  
+     証明書の詳細については、証明書スナップインのオンライン ヘルプを参照してください。 デジタル アセットの署名方法の詳細については、MSDN ライブラリの「[Authenticode を使用したコードの署名と検証](https://go.microsoft.com/fwlink/?LinkId=78100)」を参照してください。  
   
 -   証明書がコードの署名用に有効になっていることを確認します。 証明書がコードの署名用に有効になっているかどうかを判断するには、証明書スナップインで証明書のプロパティを確認します。  
   

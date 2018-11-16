@@ -13,12 +13,12 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 603564e6b742d9c5d23278c047365e4d0106d3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f66b2e167979e2395832c3a73dfb450efa0211e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705200"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701870"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>[フルテキスト インデックスの列] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47705200"
 使用できる言語を一覧表示します。 列データに適した言語をドロップダウン リストから選択してください。 たとえば、英語のオペレーティング システムを使用している場合に、ドイツ語のテキストを含む列にインデックスを設定するときは、ドロップダウン リストからドイツ語を選択することによりインデックスのパフォーマンスが向上します。  
   
 **[統計的セマンティクス]**  
-選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、 [セマンティック検索のプレースホルダー](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)に関する記述を参照してください。  
+選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、 [セマンティック検索のプレースホルダー](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)に関する記述を参照してください。  
   
 **[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、 **[統計的セマンティクス]** チェック ボックスは無効になります。 **[言語]** を選択する前に **[統計的セマンティクス]** を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
   

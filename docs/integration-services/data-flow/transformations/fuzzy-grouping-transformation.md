@@ -29,18 +29,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f112101ff9325f6f1551ab9f889251916d42e1ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822220"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638905"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
   
 > [!NOTE]  
->  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
+>  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
   
  あいまいグループ化変換では、変換アルゴリズムの処理に必要な一時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルを作成するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続が必要になります。 接続時には、データベース内にテーブルを作成する権限を持つユーザーの解決が必要です。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "47822220"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

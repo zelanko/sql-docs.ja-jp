@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2aab2b6a4c19ed5cb8d3e1d5ea73af57cb6e506e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831660"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641379"
 ---
 # <a name="data-profiling-task-and-viewer"></a>データ プロファイル タスクとビューアー
   データ プロファイル タスクを使用すると、データの抽出、変換、および読み込みを行うプロセス内でデータのプロファイルを実行できます。 データ プロファイル タスクを使用することによって、次のような利点があります。  
@@ -70,6 +70,6 @@ ms.locfileid: "47831660"
  データ プロファイル タスクには、プロファイルの出力に基づいてこのタスクを下流のタスクに接続するための条件ロジックを使用できるようにする機能が組み込まれていません。 ただし、スクリプト タスクで少量のプログラミングを行って、このロジックを簡単に追加することができます。 たとえば、スクリプト タスクでは、データ プロファイル タスクの出力ファイルに対して XPath クエリを実行できます。 このクエリによって、特定の列の NULL 値の比率が特定のしきい値を超えていないかどうかを判断できます。 比率がしきい値を超えている場合は、パッケージを中断し、ソース データの問題を解決してから続行することができます。 詳細については、「 [パッケージ ワークフローでデータ プロファイル タスクを使用する](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [Data Profiler スキーマ](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Data Profiler スキーマ](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

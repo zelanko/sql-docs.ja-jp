@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c1a4fc481f6a7285ded045b1a648ee6e700b5f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c246912b7e12690427bc296d3db277481eddc42f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776620"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606922"
 ---
 # <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>Always On 可用性グループにログ配布を移行する前提条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,15 +101,15 @@ ms.locfileid: "47776620"
   
      [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ホワイト ペーパー:**  
   
-     [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から AlwaysOn 可用性グループに移行する](http://msdn.microsoft.com/library/jj635217)  
+     [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から AlwaysOn 可用性グループに移行する](https://msdn.microsoft.com/library/jj635217)  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
+     [SQL Server ユーザー諮問チームのホワイト ペーパー](https://sqlcat.com/)  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

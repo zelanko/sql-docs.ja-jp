@@ -5,8 +5,7 @@ ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
@@ -14,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706560"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659371"
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,10 +95,10 @@ ms.locfileid: "47706560"
  SQL Server 2016 と Azure SQL Database には、スコープをデータベース レベルに設定できるさまざまな構成プロパティがあります。 これらのすべての設定について詳しくは、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」をご覧ください。  
   
  **レガシカーディナリティ推定**  
- データベースの互換性レベルに依存しない、プライマリのクエリ オプティマイザーのカーディナリティ推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)を指定した場合と同じです。  
+ データベースの互換性レベルに依存しない、プライマリのクエリ オプティマイザーのカーディナリティ推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/kb/2801413)を指定した場合と同じです。  
   
  **セカンダリのレガシカーディナリティ推定**  
- データベースの互換性レベルに依存しない、セカンダリ (存在する場合) のクエリ オプティマイザーのカーディナリティ推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)を指定した場合と同じです。  
+ データベースの互換性レベルに依存しない、セカンダリ (存在する場合) のクエリ オプティマイザーのカーディナリティ推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/kb/2801413)を指定した場合と同じです。  
   
  **最大 DOP**  
  ステートメントで使用される、プライマリの [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 設定の既定値を指定します。  
@@ -108,16 +107,16 @@ ms.locfileid: "47706560"
  ステートメントで使用される、セカンダリ (存在する場合) の [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 設定の既定値を指定します。  
   
  **パラメーター スニッフィング**  
- プライマリのパラメーター スニッフィングを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4136](https://support.microsoft.com/en-us/kb/980653)を指定した場合と同じです。  
+ プライマリのパラメーター スニッフィングを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4136](https://support.microsoft.com/kb/980653)を指定した場合と同じです。  
   
  **セカンダリのパラメーター スニッフィング**  
- セカンダリ (存在する場合) のパラメーター スニッフィングを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4136](https://support.microsoft.com/en-us/kb/980653)を指定した場合と同じです。  
+ セカンダリ (存在する場合) のパラメーター スニッフィングを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4136](https://support.microsoft.com/kb/980653)を指定した場合と同じです。  
   
  **クエリ オプティマイザーの修正プログラム**  
- データベースの互換性レベルに関係なく、プライマリ上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](https://support.microsoft.com/en-us/kb/974006)を指定した場合と同じです。  
+ データベースの互換性レベルに関係なく、プライマリ上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](https://support.microsoft.com/kb/974006)を指定した場合と同じです。  
   
  **セカンダリのクエリ オプティマイザーの修正プログラム**  
- データベースの互換性レベルに関係なく、セカンダリ (存在する場合) 上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](https://support.microsoft.com/en-us/kb/974006)を指定した場合と同じです。  
+ データベースの互換性レベルに関係なく、セカンダリ (存在する場合) 上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](https://support.microsoft.com/kb/974006)を指定した場合と同じです。  
   
 ## <a name="filestream"></a>FILESTREAM  
  **[FILESTREAM ディレクトリ名]**  

@@ -19,12 +19,12 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b09b200cfead07be03449d6f62c70ee3fc180d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4782edbfb3b353dbd07313e0568847d5c696ad8
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704340"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637729"
 ---
 # <a name="creating-a-package-programmatically"></a>プログラムを使用したパッケージ作成
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> オブジェクトは、[!INCLUDE[ssIS](../../includes/ssis-md.md)] プロジェクトによるソリューションで、他のすべてのオブジェクトの上位に位置するコンテナーです。 パッケージは、トップレベルのコンテナーとして、最初に作成されるオブジェクトです。それ以降のオブジェクトはパッケージに追加され、パッケージのコンテキスト内で実行されます。 パッケージ自体は、データの移動または変換を行いません。 パッケージは、格納しているタスクに依存して作業を実行します。 タスクは、パッケージが実行する作業のほとんどを実行し、パッケージの機能を定義します。 パッケージを作成して実行するには、わずか 3 行のコードを必要とするだけですが、さまざまなタスクおよび <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトをパッケージに追加して、機能を追加できます。 このセクションでは、プログラムによってパッケージを作成する方法について説明します。 タスクまたは <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> の作成方法についての説明は行いません。 これらについては、後のセクションで説明します。  
@@ -151,9 +151,9 @@ End Module
   
 ## <a name="external-resources"></a>外部リソース  
   
--   blogs.msdn.com のブログ「[API Sample - OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824)」(API サンプル – OleDB ソースと OleDB 変換先)  
+-   blogs.msdn.com のブログ「[API Sample - OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824)」(API サンプル – OleDB ソースと OleDB 変換先)  
   
--   blogs.msdn.com のブログ「[EzAPI – SQL Server 2012 用の更新](http://go.microsoft.com/fwlink/?LinkId=243223)」  
+-   blogs.msdn.com のブログ「[EzAPI – SQL Server 2012 用の更新](https://go.microsoft.com/fwlink/?LinkId=243223)」  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるタスクの追加](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

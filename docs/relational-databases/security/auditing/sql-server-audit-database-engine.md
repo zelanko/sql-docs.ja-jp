@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fce1dd4e7f8773d4fb7e80619d9511cc9680c244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796910"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670563"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47796910"
 > [!IMPORTANT]  
 >  Windows アプリケーション イベント ログの読み取りおよび書き込みは、認証されているユーザーならば、だれでも行うことができます。 アプリケーション イベント ログでは、Windows セキュリティ イベント ログほど高いアクセス許可は要求されません。したがって、Windows セキュリティ イベント ログに比べてセキュリティが低くなります。  
   
- Windows セキュリティ ログへの書き込みを行うには、"セキュリティ監査の生成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**" ポリシーに** サービス アカウントを追加する必要があります。 既定では、ローカル システム、ローカル サービス、およびネットワーク サービスがこのポリシーに追加されています。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 さらに、 **オブジェクト アクセスの監査** セキュリティ ポリシーを、 **成功** と **失敗**の両方について有効にする必要があります。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] または Windows Server 2008 では、コマンド ラインから監査ポリシー プログラム ( **AuditPol.exe** ) を使用して、より細かい**application generated**ポリシーを設定できます。 Windows セキュリティ ログへの書き込みを有効にする手順の詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)」を参照してください。 Auditpol.exe プログラムの詳細については、 [グループ ポリシーを使用して詳細なセキュリティの監査を構成する方法](http://support.microsoft.com/kb/921469/)に関するサポート技術情報の記事 921469 を参照してください。 Windows イベント ログは、すべての Windows オペレーティング システムで使用できます。 Windows イベント ログの詳細については、「 [イベント ビューアーの概要](http://go.microsoft.com/fwlink/?LinkId=101455)」を参照してください。 監査でより厳密なアクセス許可が必要な場合は、バイナリ ファイル ターゲットを使用します。  
+ Windows セキュリティ ログへの書き込みを行うには、"セキュリティ監査の生成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**" ポリシーに** サービス アカウントを追加する必要があります。 既定では、ローカル システム、ローカル サービス、およびネットワーク サービスがこのポリシーに追加されています。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 さらに、 **オブジェクト アクセスの監査** セキュリティ ポリシーを、 **成功** と **失敗**の両方について有効にする必要があります。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] または Windows Server 2008 では、コマンド ラインから監査ポリシー プログラム ( **AuditPol.exe** ) を使用して、より細かい**application generated**ポリシーを設定できます。 Windows セキュリティ ログへの書き込みを有効にする手順の詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)」を参照してください。 Auditpol.exe プログラムの詳細については、 [グループ ポリシーを使用して詳細なセキュリティの監査を構成する方法](https://support.microsoft.com/kb/921469/)に関するサポート技術情報の記事 921469 を参照してください。 Windows イベント ログは、すべての Windows オペレーティング システムで使用できます。 Windows イベント ログの詳細については、「 [イベント ビューアーの概要](https://go.microsoft.com/fwlink/?LinkId=101455)」を参照してください。 監査でより厳密なアクセス許可が必要な場合は、バイナリ ファイル ターゲットを使用します。  
   
  改ざんを防止するために監査情報をファイルに保存している場合、次の方法でそのファイルの場所へのアクセスを制限できます。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "47796910"
  [DDL トリガー](../../../relational-databases/triggers/ddl-triggers.md)  
  データ定義言語 (DDL) トリガーを使用してデータベースの変更を追跡する方法について説明します。  
   
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 - セキュリティと保護](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 - セキュリティと保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティに関する最新の情報を提供します。  
   
 ## <a name="see-also"></a>参照  

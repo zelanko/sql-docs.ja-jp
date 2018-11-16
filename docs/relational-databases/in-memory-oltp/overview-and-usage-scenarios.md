@@ -5,20 +5,19 @@ ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150193"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660371"
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "50150193"
 
 ## <a name="in-memory-oltp-overview"></a>インメモリ OLTP の概要
 
-インメモリ OLTP は、適切なワークロードの場合にパフォーマンスが大きく向上します。 お客様の bwin は、インメモリ OLTP を利用して、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を実行する 1 台のコンピューターで[毎秒 120 万要求を達成](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)しました。 また、Quorum は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でインメモリ OLTP を利用して、[リソース使用率を 70% 下げ](https://customers.microsoft.com/en-US/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)、ワークロードを 2 倍にしました。 一部の事例では、最大 30 倍のパフォーマンス向上が見られていますが、向上率はワークロードによって変わります。
+インメモリ OLTP は、適切なワークロードの場合にパフォーマンスが大きく向上します。 お客様の bwin は、インメモリ OLTP を利用して、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を実行する 1 台のコンピューターで[毎秒 120 万要求を達成](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)しました。 また、Quorum は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でインメモリ OLTP を利用して、[リソース使用率を 70% 下げ](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)、ワークロードを 2 倍にしました。 一部の事例では、最大 30 倍のパフォーマンス向上が見られていますが、向上率はワークロードによって変わります。
 
 それでは、このパフォーマンス向上は何に由来するのでしょうか。 基本的に、インメモリ OLTP は、データ アクセスとトランザクションの実行を効率化し、同時に実行されるトランザクション間のロックとラッチの競合を取り除くことで、トランザクション プロセスのパフォーマンスを改善します。高速化の理由はデータがメモリ内にあるからではなく、メモリ内のデータを中心にして最適化しているためです。 メモリ内のコンカレンシー処理が多い計算に関する最新の機能強化を利用するように、データ ストレージ、アクセス、処理アルゴリズムはゼロから再設計されました。
 
@@ -67,8 +66,8 @@ ms.locfileid: "50150193"
 
 #### <a name="customer-case-studies"></a>お客様の導入事例
 
-- CMC Markets は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] でインメモリ OLTP を利用し、継続的な低遅延を達成しました (「[Because a second is too long to wait, this financial services firm is updating its trading software now](https://customers.microsoft.com/en-us/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)」 (1 秒の待機時間は長すぎるので、今、この金融サービス企業は取引ソフトウェアを更新しています))。
-- Derivco は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] でインメモリ OLTP を利用して、増加したスループットに対応し、ワークロードの急増を処理しています (「[When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/en-us/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)」 (オンライン ゲーム会社は将来を危険にさらしたくない場合、SQL Server 2016 に賭けます))。
+- CMC Markets は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] でインメモリ OLTP を利用し、継続的な低遅延を達成しました (「[Because a second is too long to wait, this financial services firm is updating its trading software now](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)」 (1 秒の待機時間は長すぎるので、今、この金融サービス企業は取引ソフトウェアを更新しています))。
+- Derivco は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] でインメモリ OLTP を利用して、増加したスループットに対応し、ワークロードの急増を処理しています (「[When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)」 (オンライン ゲーム会社は将来を危険にさらしたくない場合、SQL Server 2016 に賭けます))。
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>IoT (モノのインターネット) などのデータ統合
@@ -93,9 +92,9 @@ ms.locfileid: "50150193"
  
 #### <a name="customer-case-studies"></a>お客様の導入事例
 
-- [Quorum は、Azure SQL Database でインメモリ OLTP を利用することで、主要なデータベースのワークロードを 2 倍にしながら、使用率を 70% 削減しました](http://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- EdgeNet は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP で一括データ読み込みのパフォーマンスを改善し、中間層キャッシュを維持する必要がなくなりました (「[Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/en-us/story/data-services-firm-gains-real-time-access-to-product-d)」 (データ サービス会社がインメモリ テクノロジで運用データにリアルタイムにアクセス))。
-- Beth Israel Deaconess Medical Center は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP でデータ取り込み率を大幅に改善し、ワークロードの急増を処理できました ([https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for])。
+- [Quorum は、Azure SQL Database でインメモリ OLTP を利用することで、主要なデータベースのワークロードを 2 倍にしながら、使用率を 70% 削減しました](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- EdgeNet は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP で一括データ読み込みのパフォーマンスを改善し、中間層キャッシュを維持する必要がなくなりました (「[Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)」 (データ サービス会社がインメモリ テクノロジで運用データにリアルタイムにアクセス))。
+- Beth Israel Deaconess Medical Center は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP でデータ取り込み率を大幅に改善し、ワークロードの急増を処理できました ([https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for])。
 
 ### <a name="caching-and-session-state"></a>キャッシュとセッションの状態
 
@@ -113,7 +112,7 @@ ASP.NET セッションの状態のメモリ最適化を始めるには、GitHub
 
 #### <a name="customer-case-studies"></a>お客様の導入事例
 
-- bwin は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP で、ループットを大幅に増やし、ASP.NET セッションの状態のハードウェアの占有領域を減らすことができました (「[Gaming Site Can Scale to 250,000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/en-us/story/gaming-site-can-scale-to-250000-requests-per-second-an)」 (ゲーム サイトを毎秒 250,000 要求に拡張し、プレーヤーのエクスペリエンスを改善することができました))。
+- bwin は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP で、ループットを大幅に増やし、ASP.NET セッションの状態のハードウェアの占有領域を減らすことができました (「[Gaming Site Can Scale to 250,000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)」 (ゲーム サイトを毎秒 250,000 要求に拡張し、プレーヤーのエクスペリエンスを改善することができました))。
 - bwin は、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] でインメモリ OLTP を使用して、ASP.NET セッションの状態を使用してスループットをさらに増加し、会社全体の中間層キャッシュ システムを実装しました (「[How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)」 (bwin が SQL Server 2016 のインメモリ OLTP を使用して前例のないパフォーマンスとスケールを達成している方法))。
 
 ### <a name="tempdb-object-replacement"></a>tempdb オブジェクトの置き換え
@@ -224,7 +223,7 @@ GO
 
 ## <a name="resources-to-learn-more"></a>詳細情報:
 
-[Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](http://msdn.microsoft.com/library/mt694156.aspx)   
+[Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](https://msdn.microsoft.com/library/mt694156.aspx)   
 インメモリ OLTP を使用したパフォーマンス デモ: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [インメモリ OLTP の説明とデモを紹介する 17 分のビデオ](https://www.youtube.com/watch?v=l5l5eophmK4) (デモは 8:25 から)   
 [インメモリ OLTP を有効にして推奨されるオプションを設定するスクリプト](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
@@ -233,4 +232,4 @@ GO
 [メモリ最適化を使用した一時テーブルとテーブル変数のパフォーマンスの向上](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [SQL データベースでのインメモリ テクノロジを使用したパフォーマンスの最適化](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](http://msdn.microsoft.com/library/dn673538.aspx) 
+[インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx) 

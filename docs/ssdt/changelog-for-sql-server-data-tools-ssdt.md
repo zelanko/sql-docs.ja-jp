@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216810"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677901"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -534,11 +534,11 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 - 表形式: DAX の解析と数式バーについて、さまざまな機能強化とパフォーマンスの修正が行われました。
 - 表形式: SSAS 表形式プロジェクトが開いていない場合は、表形式モデル エクスプローラーが表示されなくなりました。
 - 多次元: 高 DPI コンピューターで処理中のダイアログが使用できないという問題が修正されました。
-- 表形式: SSMS が既に開いている場合に BI プロジェクトを開くと SSDT で障害が発生するという問題が修正されました。 [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)を参照)。
-- 表形式: 1103 モデルの bim ファイルに階層が正しく保存されないという問題が修正されました ([Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)を参照)。
+- 表形式: SSMS が既に開いている場合に BI プロジェクトを開くと SSDT で障害が発生するという問題が修正されました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)を参照)。
+- 表形式: 1103 モデルの bim ファイルに階層が正しく保存されないという問題が修正されました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)を参照)。
 - 表形式: サポートされていない場合でも、統合ワークスペース モードが 32 ビット コンピューターで使用できるという問題が修正されました。
 - 表形式: 半選択モード (DAX 式は入力したが、メジャーをクリックしている場合など) の状態で何かをクリックするとクラッシュする可能性があるという問題が修正されました。
-- 表形式: 展開ウィザードでモデルの .Name プロパティが "Model" にリセットされるという問題が修正されました ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)を参照)。
+- 表形式: 展開ウィザードでモデルの .Name プロパティが "Model" にリセットされるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)を参照)。
 - 表形式: ダイアログ ビューが選択されていない場合でも、TME で階層を選択するとプロパティが表示されるという問題が修正されました。
 - 表形式: 特定のアプリケーションから貼り付ける場合、DAX 数式バーに、テキストではなく、イメージまたは他のコンテンツが貼り付けられるという問題が修正されました。
 - 表形式: 特定の定義のメジャーが存在するため、1103 の一部の古いモデルが開けないという問題が修正されました。
@@ -569,8 +569,8 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 - SSDT でレポートをデザインしているときに、大半を変更すると、パラメーターのツリー ビュー、データ ソース、およびデータセットが折りたたまれる問題を修正しました。 
 - 保存の操作で、最新バージョンではなく、RDL のバージョンが保存されるという問題が修正されました。
 - バックアップが無効になっているときに SSDT RS がファイルをバックアップするという問題と他のいくつかの問題が修正されました。
-- レポート ビルダーで [セルの分割] をクリックするとエラーが表示されるという問題が修正されました ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)を参照)。
-- キャッシュが原因でレポートに誤ったデータが表示される場合があるという問題が修正されました ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)を参照)。
+- レポート ビルダーで [セルの分割] をクリックするとエラーが表示されるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)を参照)。
+- キャッシュが原因でレポートに誤ったデータが表示される場合があるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)を参照)。
 
 **IS プロジェクト:**
 - run64bitruntime 設定が固定されないという問題が修正されました。
@@ -582,7 +582,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 
 **データベース プロジェクト:**
 - SSDT DACPAC のデプロイで、IgnoreColumnOrder の追加設定が復活しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)を参照)。
-- STRING_SPLIT を使用した場合、SSDT でのコンパイルは失敗します ([Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)を参照)。
+- STRING_SPLIT を使用した場合、SSDT でのコンパイルは失敗します ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)を参照)。
 - DeploymentContributors でパブリック モデルにアクセスできるが、バッキング スキーマが初期化されていない問題を修正しました ([Github の問題](https://github.com/Microsoft/DACExtensions/issues/8)を参照)。
 - ファイル グループの配置に対する DacFx を一時的に修正しました。
 - 外部シノニムに対する「未解決の参照」エラーを修正しました。 
@@ -743,7 +743,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
     - **SSDT:**
         - 接続のバグ 1898001 [列の説明の 128 文字制限に関する問題を修正しました](https://connect.microsoft.com/SQLServer/feedback/details/1898001/column-description-limited-to-128-characters)。
         - VS からのデータベースの発行で発行プロファイル xml の DatabaseServiceObjective プロパティが適用されない問題を修正しました。
-        - 接続のバグ 2900167 [単体テストの際に一時ファイルが正しく残らない問題を修正しました](http://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind)。
+        - 接続のバグ 2900167 [単体テストの際に一時ファイルが正しく残らない問題を修正しました](https://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind)。
         - [データベースの設定] の [保有期間] コンボ ボックスが切り捨てられる問題を修正しました。
         - パスワードの変更時に、SQL CLR プロジェクトのプロパティで空の古いパスワードの検証が行われない問題を修正しました。
     - **DACFx:**

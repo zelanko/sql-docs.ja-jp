@@ -18,12 +18,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9d532ff5cf5da8719156a358ecc44abe3591afc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614259"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605392"
 ---
 # <a name="soft-numa-sql-server"></a>ソフト NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47614259"
   
  多くの I/O が発生するインスタンス A には、現在、2 つの I/O スレッドと 1 つのレイジー ライター スレッドがあります。 プロセッサに負荷が集中する操作を実行するインスタンス B には、1 つの I/O スレッドと 1 つのレイジー ライター スレッドしかありません。 異なる量のメモリをこれらのインスタンスに割り当てることができますが、ハードウェア NUMA とは異なり、どちらもオペレーティング システムの同じメモリ ブロックからメモリを受け取るのでメモリおよびプロセッサ間の関係はありません。  
   
- レイジー ライター スレッドは、物理 NUMA メモリ ノードの SQLOS ビューに関連付けられています。 したがって、ハードウェアが物理 NUMA ノード数として表すものは、作成されるレイジー ライター スレッドの数になります。 詳細については、「 [動作方法: ソフト NUMA、I/O 完了スレッド、レイジー ライター ワーカー、およびメモリ ノード](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)」を参照してください。  
+ レイジー ライター スレッドは、物理 NUMA メモリ ノードの SQLOS ビューに関連付けられています。 したがって、ハードウェアが物理 NUMA ノード数として表すものは、作成されるレイジー ライター スレッドの数になります。 詳細については、「 [動作方法: ソフト NUMA、I/O 完了スレッド、レイジー ライター ワーカー、およびメモリ ノード](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)」を参照してください。  
   
 > [!NOTE]
 > **のインスタンスをアップグレードするときに** ソフト NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レジストリ キーはコピーされません。  

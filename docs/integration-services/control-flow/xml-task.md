@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 235572bf33c100ecb55fb7ce821f7028b1124595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb9fcf4c03fdf2fb17d69d2d0f0b624d111f7e3f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822420"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639679"
 ---
 # <a name="xml-task"></a>XML タスク
   XML タスクは、XML データの処理に使用します。 このタスクを使用すると、パッケージは、XML ドキュメントの取得、Extensible Stylesheet Language Transformations (XSLT) スタイル シートや XPath 式の使用によるドキュメントへの操作の適用、複数ドキュメントのマージ、または更新したドキュメントの検証、比較、およびファイルや変数への保存を行うことができます。  
@@ -127,7 +127,7 @@ ms.locfileid: "47822420"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-xml-task"></a>プログラムによる XML タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -135,12 +135,12 @@ ms.locfileid: "47822420"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   **[XML タスク エディター]** ダイアログ ボックスの **[全般]** ノードを使用すると、操作の種類を指定したり構成したりできます。  
   
- このタスクの詳細については、「[XML タスクを使った XML の検証](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)」をご覧ください。 XML ドキュメントとデータの操作の詳細については、MSDN ライブラリの「[.NET Framework における XML の使用](http://go.microsoft.com/fwlink/?LinkId=56214)」を参照してください。  
+ このタスクの詳細については、「[XML タスクを使った XML の検証](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)」をご覧ください。 XML ドキュメントとデータの操作の詳細については、MSDN ライブラリの「[.NET Framework における XML の使用](https://go.microsoft.com/fwlink/?LinkId=56214)」を参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
  **[OperationType]**  
@@ -173,7 +173,7 @@ ms.locfileid: "47822420"
   
  **[ソース]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[**\<新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ### <a name="operationtype-dynamic-options"></a>[OperationType] の動的オプション  
   
@@ -234,7 +234,7 @@ ms.locfileid: "47822420"
   
  **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="operationtype--xslt"></a>[OperationType] = [XSLT]  
  XSLT 操作用のオプションを指定します。  
@@ -252,7 +252,7 @@ ms.locfileid: "47822420"
   
  **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -280,7 +280,7 @@ ms.locfileid: "47822420"
   
  **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="operationtype--xpath"></a>[OperationType] = [XPath]  
  XPath 操作用のオプションを指定します。  
@@ -298,7 +298,7 @@ ms.locfileid: "47822420"
   
  **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -326,7 +326,7 @@ ms.locfileid: "47822420"
   
  **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[PutResultInOneNode]**  
  結果を 1 つのノードに記述するかどうかを指定します。  
@@ -361,7 +361,7 @@ ms.locfileid: "47822420"
   
  **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  XPath ステートメントを使用してソース ドキュメント内でのマージ場所を特定すると、このステートメントによって 1 つのノードが返されます。 ステートメントによって複数のノードが返された場合は、最初のノードだけが使用されます。 2 番目のドキュメントの内容は、XPath クエリによって返される最初のノードでマージされます。  
   
@@ -378,7 +378,7 @@ ms.locfileid: "47822420"
   
  **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -406,7 +406,7 @@ ms.locfileid: "47822420"
   
  **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="operationtype--diff"></a>[OperationType] = [Diff]  
  Diff 操作用のオプションを指定します。  
@@ -453,7 +453,7 @@ ms.locfileid: "47822420"
   
  **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -481,7 +481,7 @@ ms.locfileid: "47822420"
   
  **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="operationtype--patch"></a>[OperationType] = [Patch]  
  Patch 操作用のオプションを指定します。  
@@ -499,7 +499,7 @@ ms.locfileid: "47822420"
   
  **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -527,12 +527,12 @@ ms.locfileid: "47822420"
   
  **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   agilebi.com のブログ「 [XML 変換先スクリプト コンポーネント](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)」  
+-   agilebi.com のブログ「 [XML 変換先スクリプト コンポーネント](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)」  
   
--   www.codeplex.com に掲載されている CodePlex サンプル「 [Process XML Data パッケージ サンプル](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)」  
+-   www.codeplex.com に掲載されている CodePlex サンプル「 [Process XML Data パッケージ サンプル](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)」  
   
   

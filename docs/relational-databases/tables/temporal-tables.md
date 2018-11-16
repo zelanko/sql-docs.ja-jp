@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 600a120969bc9bd9821738809f8dde1eb6554053
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856720"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665132"
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47856720"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **ビデオ:** 「 [SQL Server 2016 でのテンポラル](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)」でテンポラルに関する 20 分間の説明を参照してください。  
+-   **ビデオ:** 「 [SQL Server 2016 でのテンポラル](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)」でテンポラルに関する 20 分間の説明を参照してください。  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルとは  
  システム バージョン管理されたテンポラル テーブルは、データ変更の履歴を完全に保持し、特定の時点の分析を簡単に実行できるよう設計されたユーザー テーブルの一種です。 各行の有効期間はシステム (つまりデータベース エンジン) によって管理されているため、この種類のテンポラル テーブルは、システム バージョン管理されたテンポラル テーブルと呼ばれています。  

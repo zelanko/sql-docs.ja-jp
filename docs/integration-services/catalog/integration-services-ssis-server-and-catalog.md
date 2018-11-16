@@ -14,17 +14,17 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0433940c558dc6cac8aeb7310bb6b038e911b971
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1dab0e7496a41d897b927c4a53d6cc75ca8bdc4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827190"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640770"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) サーバーとカタログ
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置できます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーは、**SSISDB** データベースをホストする [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスです。 データベースには、パッケージ、プロジェクト、パラメーター、権限、サーバーのプロパティ、および運用履歴というオブジェクトが格納されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベースをホストする **ssDEnoversion** のインスタンスです。 データベースには、パッケージ、プロジェクト、パラメーター、権限、サーバーのプロパティ、および運用履歴というオブジェクトが格納されます。  
   
  **SSISDB** データベース内のオブジェクト情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、データベースには、オブジェクトを管理するために呼び出すことができるストアド プロシージャも用意されています。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47827190"
 ## <a name="high-availability"></a>高可用性  
  他のユーザー データベースと同様に、**SSISDB** データベースはデータベース ミラーリングとレプリケーションをサポートします。 ミラーリングとレプリケーションの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
- SSIS と Always On 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳しくは、「[Always On for SSIS Catalog (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)」をご覧ください。 また、Matt Masson による blogs.msdn.com のブログ記事「[SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873)」(SSIS と Always On) もご覧ください。  
+ SSIS と Always On 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳しくは、「[Always On for SSIS Catalog (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)」をご覧ください。 また、Matt Masson による blogs.msdn.com のブログ記事「[SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873)」(SSIS と Always On) もご覧ください。  
   
 ##  <a name="ssms"></a> SQL Server Management Studio の Integration Services サーバー  
  **SSISDB** データベースをホストする [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続している場合、オブジェクト エクスプローラーに、次のオブジェクトが表示されます。  
@@ -57,6 +57,6 @@ ms.locfileid: "47827190"
 -   [Integration Services (SSIS) パッケージの実行](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- blogs.msdn.com のブログ エントリ「[SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873)」 (SSIS と Always On)。  
+ blogs.msdn.com のブログ エントリ「[SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873)」 (SSIS と Always On)。  
   
   

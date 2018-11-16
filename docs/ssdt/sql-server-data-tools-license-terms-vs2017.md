@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: facb62a69380df53d0f8b76db49086412e37ef31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07e75b6fa3391bfb82752ffbff81e513f2a9259f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682193"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659712"
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools - ライセンス条項
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47682193"
 &nbsp;&nbsp;**a.  SQL Server Reporting Services のマップ レポート アイテム。** 本ソフトウェアには、地図、画像、その他のデータなどのコンテンツを Bing Maps (またはその後継となるブランド) のアプリケーション プログラミング インターフェイス (以下「Bing Maps API」といいます) を介して取得する機能が含まれていることがあります。 これらの機能の目的は、地図、航空写真、およびハイブリッド画像の上にデータを表示するレポートを作成することです。 これらの機能が含まれている場合、それを使用して動的ドキュメントまたは静的ドキュメントを作成および表示することができます。 これは、本ソフトウェアに統合されているアクセス方法および手段またはその方法および手段との連携を通じてのみ行うことができます。 これ以外の場合、Bing Maps API を介して利用可能なコンテンツのデータベースを複製、格納、アーカイブ、または作成することはできません。 Bing Maps API を介して利用可能であっても、どのような目的でも以下のものを使用することはできません。  
 * センサー ベースの道案内または経路探索機能を提供する Bing Maps API  
 * 道路交通データまたは鳥瞰画像 (または関連するメタデータ)。  
-お客様による Bing Maps の使用には、「Bing Maps エンド ユーザー使用条件」(http://go.microsoft.com/?linkid=9710837) および「Bing Maps のプライバシーに関する声明」(http://go.microsoft.com/fwlink/?LinkID=248686) が適用されます。  
+お客様による Bing Maps の使用には、「Bing Maps エンド ユーザー使用条件」(https://go.microsoft.com/?linkid=9710837) および「Bing Maps のプライバシーに関する声明」(https://go.microsoft.com/fwlink/?LinkID=248686) が適用されます。  
   
 &nbsp;&nbsp;**b.**  本ソフトウェアは、SQL Server Integration Services (SSIS) のユーザーが (a) オンプレミスのデータ ストアと Microsoft Online Services 間でデータを移動し、(b) Microsoft Online Services の特定のアクションをトリガーできるように設計されています。 このため、本ソフトウェアはインターネット プロトコルを使用して、(i) お客様が指定した独自のデータと本ソフトウェアの構成に関するデータを含むデータをこれらのサービスに送信し、(ii) お客様が指定した独自のデータとお客様の使用する Microsoft Online Services の性質および構成に関するデータを含むデータをこれらのサービスから要求します。 これらのサービスと通信するように本ソフトウェアを構成した場合は、本ソフトウェアがこれらのサービスに接続したときに別途通知が送信されることはありません。  
   

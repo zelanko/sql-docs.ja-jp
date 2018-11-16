@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55f98003cc391c3b5cf770646ccc2db783a99495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a02e688f6488fecdaeea6c668bc49d64a5698915
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599470"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641799"
 ---
 # <a name="ftp-task"></a>FTP タスク
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
@@ -73,7 +73,7 @@ ms.locfileid: "47599470"
 ## <a name="related-tasks"></a>Related Tasks  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
   
  プログラムによってこれらのプロパティを設定する方法の詳細については、「 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>」を参照してください。  
   

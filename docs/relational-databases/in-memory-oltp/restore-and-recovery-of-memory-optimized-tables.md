@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3509c90a4fb5e72eab74742afae302bcbfaeaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821340"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671321"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>メモリ最適化テーブルの復元と復旧
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,6 +68,6 @@ ms.locfileid: "47821340"
 -   1 つまたは複数の非クラスター化インデックスを含む大きなメモリ最適化テーブルは、高い CPU 利用率の原因となる場合があります。 作成時にバケット数が測定されるハッシュ インデックスとは異なり、非クラスター化インデックスは動的に拡張します。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルのバックアップ、復元、復旧](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [メモリ最適化テーブルのバックアップ、復元、復旧](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

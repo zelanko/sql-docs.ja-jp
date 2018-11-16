@@ -10,12 +10,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a29d3176e364eca785727f49d6be9522147ef36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70ce34097cc2057344864b1db4ed7ce17a01311
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722510"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602867"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>トラブルシューティング: 可用性グループ接続の超過 RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47722510"
   
  また、2 つのパフォーマンス オブジェクト `SQL Server:Availability Replica > Flow Control Time (ms/sec)` と `SQL Server:Availability Replica > Flow Control/sec` を確認することも役に立ちます。 これら 2 つの値を乗算すると、最後の秒で、フロー制御がクリアされるのを待っていた時間が示されます。 長いフロー制御待機時間、小さい送信レート。  
   
- 以下のメトリックは、ネットワーク遅延とスループットの診断に役立ちます。 **ping.exe** や[ネットワーク モニター](http://www.microsoft.com/download/details.aspx?id=4865)などの他の Windows ツールを使用して、待機時間とネットワーク使用率を評価できます。  
+ 以下のメトリックは、ネットワーク遅延とスループットの診断に役立ちます。 **ping.exe** や[ネットワーク モニター](https://www.microsoft.com/download/details.aspx?id=4865)などの他の Windows ツールを使用して、待機時間とネットワーク使用率を評価できます。  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47722510"
  ログ ブロックがログ ファイルに書き込まれるとすぐに、データの損失が回避されます。 そのため、ログ フィルとデータ ファイルを分離することが重要です。 ログ ファイルとデータ ファイルの両方が同じハード ディスクにマッピングされている場合、データ ファイルの読み取りを頻繁に行うレポート ワークロードが、ログ書き込み操作に必要な量と同じ I/O リソースを消費します。 低速の書き込みのためにプライマリ レプリカへの確認が遅くなり、そのためにフロー制御の過度のアクティブ化が発生し、フロー制御の待機時間が長くなる可能性があります。  
   
 ### <a name="diagnosis-and-resolution"></a>診断と解決  
- ネットワークが高待機時間または低スループットの影響を受けていないことを確認した場合、I/O の競合についてセカンダリ レプリカを調査する必要があります。 「[SQL Server: ディスク I/O を最小限に抑える](http://technet.microsoft.com/magazine/jj643251.aspx)」のクエリは、競合を特定する場合に便利です。 便宜上、その記事の例を下に示します。  
+ ネットワークが高待機時間または低スループットの影響を受けていないことを確認した場合、I/O の競合についてセカンダリ レプリカを調査する必要があります。 「[SQL Server: ディスク I/O を最小限に抑える](https://technet.microsoft.com/magazine/jj643251.aspx)」のクエリは、競合を特定する場合に便利です。 便宜上、その記事の例を下に示します。  
   
  次のスクリプトは、SQL Server インスタンス上で実行されているすべての可用性データベースに関して、各データ ファイルとログ ファイルの読み取りと書き込みの回数を表示することができます。 これは平均 I/O 停止時間 (ミリ秒) で並べ替えられます。 数字は、前回のサーバー インスタンスの開始時刻からの累積であることに注意してください。 そのため、しばらく時間が経過した後に 2 つの測定値の差を取得する必要があります。  
   
@@ -127,6 +127,6 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  I/O のボトルネックを特定し、ログ ファイルとデータ ファイルが同じハード ディスク上に置かれている場合、最初の手順として、データ ファイルとログ ファイルを別々のディスクに置く必要があります。 このベスト プラクティスにより、レポート ワークロードが、プライマリ レプリカからログ バッファーへのログ転送パスに干渉することがなくなり、セカンダリ ディスク上でトランザクションを書き込む機能に影響しなくなります。  
   
 ## <a name="next-steps"></a>次の手順  
- [SQL Server (SQL Server 2012 に適用されます) のパフォーマンスに関する問題のトラブルシューティング](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [SQL Server (SQL Server 2012 に適用されます) のパフォーマンスに関する問題のトラブルシューティング](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

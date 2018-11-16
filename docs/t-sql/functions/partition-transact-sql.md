@@ -19,12 +19,12 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74287e364736b4a1d09711b20817a9a0b0c694c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd1197eff97d7e195e66841021c915aafb820342
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839540"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698520"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ GO
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>B. パーティション テーブルまたはパーティション インデックスについて、空でない各パーティション内の行数を取得する  
  次の例では、データを含むテーブル `TransactionHistory` の各パーティション内の行数を返します。 `TransactionHistory` テーブルではパーティション関数 `TransactionRangePF1` が使用され、`TransactionDate` 列でパーティション分割されます。  
   
- この例を実行するには、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースに対して最初に PartitionAW.sql スクリプトを実行する必要があります。 詳細については、「[PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)」を参照してください。  
+ この例を実行するには、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースに対して最初に PartitionAW.sql スクリプトを実行する必要があります。 詳細については、「[PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -92,7 +92,7 @@ GO
  次の例では、テーブル `5` のパーティション `TransactionHistory` 内にあるすべての行を返します。  
   
 > [!NOTE]  
->  この例を実行するには、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースに対して最初に PartitionAW.sql スクリプトを実行する必要があります。 詳細については、「[PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)」を参照してください。  
+>  この例を実行するには、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースに対して最初に PartitionAW.sql スクリプトを実行する必要があります。 詳細については、「[PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)」を参照してください。  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

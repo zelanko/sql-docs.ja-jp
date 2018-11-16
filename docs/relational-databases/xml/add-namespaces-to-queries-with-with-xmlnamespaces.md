@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c732b19c371a48e2bf165a3fe7d326fe8476e045
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639340"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677891"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES を使用したクエリへの名前空間の追加
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     ```  
     CREATE TABLE T (x xml)  
     go  
-    WITH XMLNAMESPACES ('http://abc' as myNS )  
+    WITH XMLNAMESPACES ('https://abc' as myNS )  
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  結果を次に示します。  
   
 ```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- 次の PATH モード クエリで示すように、WITH XMLNAMESPACES を使用して明示的に定義せずに使用できる名前空間プレフィックスは xml のみです。 また、プレフィックスが宣言されている場合は、 http://www.w3.org/XML/1998/namespace 名前空間にバインドする必要があります。 SELECT 句に指定されている名前は、WITH XMLNAMESPACES を使用して明示的に定義されていない xml 名前空間を参照します。  
+ 次の PATH モード クエリで示すように、WITH XMLNAMESPACES を使用して明示的に定義せずに使用できる名前空間プレフィックスは xml のみです。 また、プレフィックスが宣言されている場合は、 https://www.w3.org/XML/1998/namespace 名前空間にバインドする必要があります。 SELECT 句に指定されている名前は、WITH XMLNAMESPACES を使用して明示的に定義されていない xml 名前空間を参照します。  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -208,14 +208,14 @@ go
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   
         />  
 ') AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('  
-    declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /pd:ProductDescription[(pd:Specifications)]'  
     ) = 1  
 ```  
@@ -223,13 +223,13 @@ WHERE CatalogDescription.exist('
  上記のクエリでは、**query()** メソッドと **exist()** メソッドのいずれのプロローグでも、同じ名前空間が宣言されています。 例 :  
   
 ```  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
  代わりに、WITH XMLNAMESPACES を最初に宣言して、名前空間プレフィックスをクエリで使用することもできます。 この場合は、 **query()** メソッドと **exist()** メソッドでは、それぞれのプロローグに名前空間の宣言を含める必要はありません。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   

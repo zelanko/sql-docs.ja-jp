@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7d27a007f72a0e56909e535139f96f4aa1e34ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a394ad6eccf86b3c6aff6168f09fd990651288f7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600750"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812785"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>表示拡張機能にデバイス情報設定を渡す
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]では、デバイス情報設定を使用して、表示パラメーターを表示拡張機能に渡します。 レポート サーバー Web サービスの設定は **DeviceInfo** XML 要素として渡し、レポート サーバーで処理されます。 デバイス情報設定には既定値があるため、表示プロセスでは省略可能な引数と見なされます。 しかし、デバイス情報設定を使用して、表示をカスタマイズし、サーバーで提供される既定値をオーバーライドできます。  
   
- デバイス情報設定はさまざまな方法で指定できます。 プログラムでは Render メソッドを使用できます。 URL によりレポートにアクセスする場合、URL パラメーターとしてデバイス情報を指定できます。 また、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルのデバイス情報設定を編集し、表示パラメーターをグローバルに指定することもできます。 表示パラメーターをグローバルで指定する方法については、「[RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)」を参照してください。  
+ デバイス情報設定はさまざまな方法で指定できます。 プログラムでは Render メソッドを使用できます。 URL によりレポートにアクセスする場合、URL パラメーターとしてデバイス情報を指定できます。 また、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルのデバイス情報設定を編集し、表示パラメーターをグローバルに指定することもできます。 表示パラメーターをグローバルで指定する方法については、「[RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)」を参照してください。  
   
 ## <a name="passing-device-information-using-the-render-method"></a>Render メソッドを使用してデバイス情報を渡す  
  表示拡張機能にデバイス情報設定を渡すには、**M:Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@,Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.Warning[]@,System.String[]@)** メソッドを使用します。 たとえば、HTML に表示するときに HTML 断片を作成するには、次の XML 文字列を <xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドに渡すことができます。  
@@ -40,13 +40,13 @@ ms.locfileid: "47600750"
 </DeviceInfo>  
 ```  
   
- レポートが HTML 断片として表示される場合、レポートの内容は TABLE 要素内に含まれ、HTML または BODY 要素は使用されません。 HTML 断片を使用して、既存の HTML ドキュメントにレポートを組み込むことができます。 HTML 出力のデバイス情報設定の詳細については、「[HTML デバイス情報設定](../../../reporting-services/html-device-information-settings.md)」を参照してください。  
+ レポートが HTML 断片として表示される場合、レポートの内容は TABLE 要素内に含まれ、HTML または BODY 要素は使用されません。 HTML 断片を使用して、既存の HTML ドキュメントにレポートを組み込むことができます。 HTML 出力のデバイス情報設定の詳細については、「 [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md)」をご覧ください。  
   
 ## <a name="passing-device-information-using-url-access"></a>URL アクセスを使用してデバイス情報を渡す  
  URL アクセスを使用してデバイス情報設定を渡すこともできます。 デバイス情報設定は URL パラメーターとして渡されます。 次の URL アクセス文字列をレポート サーバーに渡すと、HTML ビューアー ツール バーなしで表示するレポートを生成できます。  
   
 ```  
-http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
+https://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
 ```  
   
  詳細については、「[URL でデバイス情報設定を指定する](../../../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  

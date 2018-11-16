@@ -13,12 +13,12 @@ ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e58ab2c2b59e1440eaf1d38ba16e7a7293a38d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc9c1ba540e17baddcd1437a9b46d278aecddacf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698960"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640550"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Balanced Data Distributor (BDD) 変換
   Balanced Data Distributor (BDD) 変換では最新 CPU の同時処理機能を利用します。 この手法では、複数の着信バッファーを、個別のスレッド上に存在する出力に対して一様に分配します。 BDD コンポーネントは各出力パスに対応する個別のスレッドを使用することで、マルチコアまたはマルチプロセッサのコンピューターで SSIS パッケージのパフォーマンスを向上させます。  
@@ -38,6 +38,6 @@ ms.locfileid: "47698960"
  変換元からデータを読み取るレートが原因で、ボトルネックが SSIS パッケージ内に存在する場合は、BDD コンポーネントはパフォーマンス向上に役立たないことに注意してください。 変換先が並列処理をサポートしていないことが原因でボトルネックが SSIS パッケージ内に存在する場合も、BDD は役に立ちません。ただし、すべての変換を並列実行し、データを変換先に送信する前に、全体結合という変換を使用して、BDD 変換の複数の出力パスから到着した出力データを組み合わせることができます。  
   
 > [!IMPORTANT]  
->  変換の使用方法を示すプレゼンテーションとして、TechNet ライブラリの [Balanced Data Distributor ビデオに関するページ](http://go.microsoft.com/fwlink/?LinkID=226278) を参照してください。  
+>  変換の使用方法を示すプレゼンテーションとして、TechNet ライブラリの [Balanced Data Distributor ビデオに関するページ](https://go.microsoft.com/fwlink/?LinkID=226278) を参照してください。  
   
   

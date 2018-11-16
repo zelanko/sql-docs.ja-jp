@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb30ef71e0467d6f35fdd21cc8a1b1c42eed76fa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: de8212e368af4af5eea3f0dba358b93d211af539
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031361"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812685"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>ブラウザーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
   Web ブラウザーが対応していれば、レポート サーバーに直接接続してレポートを表示できます。 レポートにはそれぞれ、レポート サーバー上の URL アドレスが割り当てられています。 レポートの Web アドレスを入力すると、レポートを Web アプリケーションとは無関係にブラウザー ウィンドウで開くことができます。 レポートは HTML 形式で表示され、レポート内でページ間の移動やデータ値の検索を行うことができるようにレポート ツール バーが含まれています。 URL でパラメーターを設定すると、ツール バーを非表示にしたりレポートの出力形式を選択したりできます。  
@@ -49,9 +49,9 @@ ms.locfileid: "50031361"
 ## <a name="typing-the-url-address-of-a-report"></a>レポートの URL アドレスの入力  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバー上の特定のアイテムへの URL アクセスをサポートしています。 URL には、レポートの絶対パスと、レポートを表示するためのコマンドを含める必要があります。 レポートにパラメーターが含まれている場合は、レポートを開くのに必要なすべての値も指定する必要があります。 パスに含まれるスペース、パラメーター値、または表示拡張機能が含まれているレポートの URL を入力する場合、予想どおりの結果を得るには、URL エンコードされた文字を URL に組み込む必要があります。 パス名に含まれるスペース、パラメーター、および表示拡張機能のエンコードを含むレポートの URL の例を次に示します。  
   
- `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
+ `https://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- Internet Explorer での URL の最大文字数は 2,083 文字です。 詳細については、「 [[IE] URL に使用可能な文字数は最大 2,083 文字](http://support.microsoft.com/kb/208427)」を参照してください。  
+ Internet Explorer での URL の最大文字数は 2,083 文字です。 詳細については、「 [[IE] URL に使用可能な文字数は最大 2,083 文字](https://support.microsoft.com/kb/208427)」を参照してください。  
   
  URL の構築方法など、URL を介してレポートにアクセスする方法の詳細については、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「URL アクセス」を参照してください。  
   

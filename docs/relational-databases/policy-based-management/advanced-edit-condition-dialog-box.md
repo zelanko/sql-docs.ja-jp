@@ -5,21 +5,20 @@ ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5985712af5eb0f4cb45446e5072229023456cea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 677f361bacec8b5298f777069ed387e3d2cc418c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598890"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661791"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>[高度な編集] \(条件) ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "47598890"
 |**Divide()**|Numeric Divide (Numeric *expression_dividend*, Numeric *expression_divisor*)|ある数値を別の数値で除算します。|*expression_dividend* - 除算される数値式です。 被除数には、数値型に分類されるデータ型を持つ有効な式を指定できます。ただし、 **datetime** データ型は除きます。<br /><br /> *expression_divisor* - 被除数を除算する数値式です。 除数には、数値型に分類されるデータ型を持つ有効な式を指定できます。ただし、 **datetime** データ型は除きます。|最も優先順位の高い引数のデータ型を返します。|**例:** `Divide(Property1, 2)`<br /><br /> 注: これは double 型の演算になります。 整数との比較を行う場合は、 `Round()`で結果を結合する必要があります。 例: `Round(Divide(10, 3), 0) = 3`」を参照してください。|  
 |**Enum()**|Numeric Enum (String *enumTypeName*, String *enumValueName*)|文字列から列挙値を作成します。|*enumTypeName* - 列挙型の名前です。<br /><br /> *enumValueName* - 列挙の値です。|列挙値を数値として返します。|`Enum('CompatibilityLevel','Version100')`|  
 |**Escape()**|String Escape (String *replaceString*, String *stringToEscape*, String *escapeString*)|指定したエスケープ文字列で入力文字列のサブストリングをエスケープします。|*replaceString* – 入力文字列です。<br /><br /> *stringToEscape* – *replaceString*のサブストリングです。 この文字列の前にエスケープ文字列が追加されます。<br /><br /> *escapeString* – *stringToEscape*の各インスタンスの前に追加するエスケープ文字列です。|*stringToEscape* の各インスタンスの前に *escapeString* が付いた変更後の *replaceString*を返します。|`Escape("Hello", "l", "[")` は、"`He[l[lo`" を返します。|  
-|**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|対象サーバーに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行します。<br /><br /> ExecuteSql() の詳細については、「 [ExecuteSql()](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx)」を参照してください。|*returnType* - [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって返されるデータの型を指定します。 *returnType* の有効なリテラルは、 **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**、および **Guid**です。<br /><br /> *sqlQuery* - 実行するクエリを格納する文字列です。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> SQL Server のターゲット インスタンスに対して、スカラー値 Transact-SQL クエリを実行します。 `SELECT` ステートメントでは 1 列のみ指定できます。その列より後の列は無視されます。 実行されるクエリでは 1 行のみ返されることが必要です。その行より後の行は無視されます。 クエリから空のセットが返される場合、 `ExecuteSQL` に基づいて作成される条件式は false と評価されます。 `ExecuteSql` では、 **[要求時]** および **[スケジュールで実行]** 評価モードがサポートされます。<br /><br /> -`@@ObjectName`[ ] :<br />                      [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)の名前フィールドに対応します。 変数は、現在のオブジェクトの名前に置き換えられます。<br /><br /> -`@@SchemaName`: [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)の名前フィールドに対応します。 変数は、現在のオブジェクトのスキーマ名に置き換えられます (該当する場合)。<br /><br /> 注: ExecuteSQL ステートメントに単一引用符を含めるには、もう 1 つ単一引用符を使用して元の単一引用符をエスケープします。 たとえば、O'Brian というユーザー名への参照を含める場合は、「O''Brian」と入力します。|  
+|**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|対象サーバーに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行します。<br /><br /> ExecuteSql() の詳細については、「 [ExecuteSql()](https://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx)」を参照してください。|*returnType* - [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって返されるデータの型を指定します。 *returnType* の有効なリテラルは、 **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**、および **Guid**です。<br /><br /> *sqlQuery* - 実行するクエリを格納する文字列です。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> SQL Server のターゲット インスタンスに対して、スカラー値 Transact-SQL クエリを実行します。 `SELECT` ステートメントでは 1 列のみ指定できます。その列より後の列は無視されます。 実行されるクエリでは 1 行のみ返されることが必要です。その行より後の行は無視されます。 クエリから空のセットが返される場合、 `ExecuteSQL` に基づいて作成される条件式は false と評価されます。 `ExecuteSql` では、 **[要求時]** および **[スケジュールで実行]** 評価モードがサポートされます。<br /><br /> -`@@ObjectName`[ ] :<br />                      [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)の名前フィールドに対応します。 変数は、現在のオブジェクトの名前に置き換えられます。<br /><br /> -`@@SchemaName`: [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)の名前フィールドに対応します。 変数は、現在のオブジェクトのスキーマ名に置き換えられます (該当する場合)。<br /><br /> 注: ExecuteSQL ステートメントに単一引用符を含めるには、もう 1 つ単一引用符を使用して元の単一引用符をエスケープします。 たとえば、O'Brian というユーザー名への参照を含める場合は、「O''Brian」と入力します。|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string *returnType* , string *namespace*, string *wql*)|指定された名前空間に対して WQL スクリプトを実行します。 SELECT ステートメントには、戻り値の列を 1 つだけ含めることができます。 複数の列を指定すると、エラーがスローされます。|*returnType* - WQL によって返されるデータの型を指定します。 有効なリテラルは、 **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**、および **Guid**です。<br /><br /> *namespace* - 実行対象の WMI 名前空間です。<br /><br /> *wql* - 実行する WQL を格納する文字列です。||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|ブール値 FALSE を返します。|なし|ブール値 FALSE を返します。|`IsDatabaseMailEnabled = False()`|  
 |**GetDate()**|DateTime GetDate()|システム日付を返します。|なし|システム日付を DateTime として返します。|`@DateLastModified = GetDate()`|  

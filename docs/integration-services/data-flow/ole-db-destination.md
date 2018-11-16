@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52db780f2e19862110b274b97c2ce616b1503301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636881"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640136"
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
   OLE DB 変換先は、データベースのテーブルやビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込みます。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースのテーブルにデータを読み込むことができます。  
@@ -60,7 +60,7 @@ ms.locfileid: "47636881"
 > [!NOTE]  
 >  変換先の種類に応じて、 **[OLE DB 変換先エディター]** ダイアログ ボックスによって生成される CREATE TABLE ステートメントの変更が必要になる場合があります。 たとえば、変換先によっては CREATE TABLE ステートメントで使用されるデータ型をサポートしない場合もあります。  
   
- OLE DB 変換先は、OLE DB 接続マネージャーを使用してデータ ソースに接続します。OLE DB 接続マネージャーでは、使用する OLE DB プロバイダーを指定します。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+ OLE DB 変換先は、OLE DB 接続マネージャーを使用してデータ ソースに接続します。OLE DB 接続マネージャーでは、使用する OLE DB プロバイダーを指定します。 詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトでは、OLE DB 接続マネージャーを作成できるデータ ソース オブジェクトも用意されています。このオブジェクトは、データ ソースとデータ ソース ビューを OLE DB 変換先で使用できるようにします。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "47636881"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB カスタム プロパティ](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "47636881"
 |------------|-----------------|  
 |[テーブルまたはビュー]|データを OLE DB 変換先のテーブルまたはビューに読み込みます。|  
 |[テーブルまたはビュー - 高速読み込み]|高速読み込みオプションを使用し、データを OLE DB 変換先のテーブルまたはビューに読み込みます。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。|  
-|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |[テーブル名またはビュー名の変数 - 高速読み込み]|高速読み込みオプションを使用し、テーブル名またはビュー名を変数で指定します。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。|  
 |[SQL コマンド]|SQL クエリを使用し、データを OLE DB 変換先に読み込みます。|  
   

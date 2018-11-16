@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120289"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604952"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services と Always On 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "49120289"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] データ ソースで [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用する大きな利点は、プライマリ データベースのフェールオーバー機能としての読み取り可能なセカンダリ レプリカをレポート データ ソースとしても利用できることです。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関する一般的な情報については、[SQL Server 2012 の Always On に関する FAQ (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768) を参照してください。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関する一般的な情報については、[SQL Server 2012 の Always On に関する FAQ (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768) を参照してください。  
   
  **このトピックの内容**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "49120289"
   
  このメッセージは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続文字列に [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のプロパティが含まれているとき、そのプロパティをサーバー側が認識できなかった場合に生成されます。 レポート サーバー側でリモート エラーが有効にされている場合、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のユーザー インターフェイスで [接続テスト] ボタンをクリックしたときや、レポートをプレビューしたときにこのエラー メッセージが表示されます。  
   
- 必要な修正プログラムの詳細については、「[KB 2654347 - .NET Framework 3.5 SP1 に SQL Server 2012 の Always On 機能のサポートを導入する修正プログラム](http://go.microsoft.com/fwlink/?LinkId=242896)」を参照してください。  
+ 必要な修正プログラムの詳細については、「[KB 2654347 - .NET Framework 3.5 SP1 に SQL Server 2012 の Always On 機能のサポートを導入する修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)」を参照してください。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のその他の要件については、「[Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "49120289"
   
 -   ReportServerTempDB  
   
- Alerting データベースとそれに関連する機能は、ネイティブ モードではサポートされず、使用されません。 ネイティブ モードのレポート サーバーの構成は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーで行います。 SharePoint モードの場合、サービス アプリケーション データベースには、SharePoint 構成の過程で作成した "クライアント アクセス ポイント" の名前を使用します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を使用して SharePoint を構成する方法については、[「Configure and manage SQL Server availability groups for SharePoint Server」(SharePoint Server の SQL Server 可用性グループの構成と管理) (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165) を参照してください。  
+ Alerting データベースとそれに関連する機能は、ネイティブ モードではサポートされず、使用されません。 ネイティブ モードのレポート サーバーの構成は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーで行います。 SharePoint モードの場合、サービス アプリケーション データベースには、SharePoint 構成の過程で作成した "クライアント アクセス ポイント" の名前を使用します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を使用して SharePoint を構成する方法については、[「Configure and manage SQL Server availability groups for SharePoint Server」(SharePoint Server の SQL Server 可用性グループの構成と管理) (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165) を参照してください。  
   
 > [!NOTE]  
 >  SharePoint モードのレポート サーバーでは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アプリケーション データベースと SharePoint コンテンツ データベースの同期処理が行われます。 レポート サーバー データベースとコンテンツ データベースは一体で管理することが大切です。 1 つのまとまりとしてフェールオーバーと復元を行うことができるよう、同じ可用性グループで構成することを検討してください。 以下のシナリオについて考えてみます。  

@@ -21,12 +21,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75f4110c964dc22f1340d0f5ed742673874033b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d9632936ad839e0dbc1d425f0d554847f657dfd
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723230"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639792"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
   RAW ファイル変換先は、生データをファイルに書き込みます。 データは変換先に固有の形式であるため、データは変換の必要がなく、解析もほとんど必要ありません。 したがって、RAW ファイル変換先は、フラット ファイルや OLE DB 変換先などの他の変換先よりも、高速にデータを書き込むことができます。  
@@ -125,7 +125,7 @@ ms.locfileid: "47723230"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [RAW ファイルのカスタム プロパティ](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "47723230"
  コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- sqlservercentral.com のブログ「 [RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
+ sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
   
 ## <a name="raw-file-destination-editor-connection-manager-page"></a>[RAW ファイル変換先エディター] ([接続マネージャー] ページ)
   ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  

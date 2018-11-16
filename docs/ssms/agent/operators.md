@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aac718a98445e91eabb776c00bfb0217ad332119
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e89c598b31da3bd8aef755dec49a18bb820afd5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654210"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698828"
 ---
 # <a name="operators"></a>演算子
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "47654210"
 |-|-|  
 |**タスク**|**トピック**|  
 |オペレーターの作成に関連するタスク|[オペレーターの作成](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|警告の割り当てに関連するタスク|[オペレーターへの警告の割り当て](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[警告への応答の定義 (SQL Server Management Studio)](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[オペレーターへの警告の割り当て](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|警告の割り当てに関連するタスク|[オペレーターへの警告の割り当て](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[警告への応答の定義 (SQL Server Management Studio)](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[オペレーターへの警告の割り当て](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>参照  
 [データベース メール](../../relational-databases/database-mail/database-mail.md)  

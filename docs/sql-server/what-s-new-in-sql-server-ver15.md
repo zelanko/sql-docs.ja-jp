@@ -1,22 +1,20 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272620"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703910"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 の新機能
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272620"
 以前のリリースを基にして構築された [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]では、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。 この記事では、SQL Server 2019 の新機能をまとめます。 詳細および既知の問題については、「[SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md)」(SQL Server 2019 リリース ノート) をご覧ください。
 
 **SQL Server 2019 をお試しください。**
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [SQL Server 2019 をダウンロードして Windows にインストールする](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [SQL Server 2019 をダウンロードして Windows にインストールする](https://go.microsoft.com/fwlink/?LinkID=862101)
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)、および [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) の Linux にインストールする。
 - [Docker で SQL Server 2019 を実行する](../linux/quickstart-install-connect-docker.md)。
 
@@ -178,7 +176,7 @@ SQL Server 2019 プレビューでは、静的データ マスクが導入され
 
   この機能がないと、インデックス作成が失敗した場合、オンライン インデックス作成操作を最初からもう一度実行する必要があります。
 
-このリリースでは、この機能を追加する再開可能機能を[再開可能なオンライン インデックス再構築](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)に拡張します。
+このリリースでは、この機能を追加する再開可能機能を[再開可能なオンライン インデックス再構築](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)に拡張します。
 
 さらに、[オンラインおよび再開可能な DDL 操作に対するデータベース スコープの既定の設定](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を使用して、特定のデータベースに対する既定値としてこの機能を設定できます。
 
@@ -264,7 +262,7 @@ SQL Server 2019 プレビューでは、静的データ マスクが導入され
 
 この機能がないと、インデックスの作成や再構築などのインデックス DDL ステートメントで、オンラインおよび再開可能のオプションを直接指定する必要があります。
 
-詳細情報: インデックスの再開可能な操作について詳しくは、「[再開可能なインデックス操作](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)」をご覧ください。
+詳細情報: インデックスの再開可能な操作について詳しくは、「[再開可能なインデックス操作](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)」をご覧ください。
 
 ### <a id="ha"></a>Always On 可用性グループ - 同期レプリカの増加 (CTP 2.0)
 
@@ -331,7 +329,7 @@ SQL Server 2019 プレビューでは、静的データ マスクが導入され
 
 軽量クエリ プロファイリング インフラストラクチャ (LWP) では、標準プロファイリング テクノロジより効率的にクエリのパフォーマンス データが提供されます。 軽量プロファイリングが既定で有効になるようになりました。 この機能は、[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 で導入されました。 軽量プロファイリングでは推定 2% の CPU オーバーヘッドでクエリ実行統計コレクション メカニズムが提供されるのに対し、標準クエリ プロファイリング メカニズムでは最大 75% の CPU オーバーヘッドが発生します。 以前のバージョンでは、既定ではオフでした。 データベース管理者は、[トレース フラグ 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) でこの機能を有効にできます。 
 
-軽量プロファイリングについて詳しくは、「[Developers Choice: Query progress - anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」(開発者の選択: クエリの進行状況 - いつでも、どこでも) をご覧ください。
+軽量プロファイリングについて詳しくは、「[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」(開発者の選択: クエリの進行状況 - いつでも、どこでも) をご覧ください。
 
 ### <a id="polybase"></a>新しい PolyBase コネクタ
 

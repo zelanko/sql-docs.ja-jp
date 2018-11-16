@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4511437b4d4c18fa7834cf7e61af4eda6a74d46a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971083"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703100"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ FORMAT ( value, format [, culture ] )
  *format*  
  **nvarchar** 書式パターン。  
   
- *format* 引数には、有効な .NET Framework 形式文字列を、標準形式文字列 ("C" や "D" など) として、または日付と数値に対するカスタム文字のパターン ("MMMM DD, yyyy (dddd)" など) として含める必要があります。 複合書式設定はサポートされていません。 これらの書式設定パターンの詳細については、一般的な文字列の書式設定、カスタム日付/時刻書式、およびカスタム数値書式に関する .NET Framework ドキュメントを参照してください。 最初にトピック「[型の書式設定](http://go.microsoft.com/fwlink/?LinkId=211776)」を参照することをお勧めします。  
+ *format* 引数には、有効な .NET Framework 形式文字列を、標準形式文字列 ("C" や "D" など) として、または日付と数値に対するカスタム文字のパターン ("MMMM DD, yyyy (dddd)" など) として含める必要があります。 複合書式設定はサポートされていません。 これらの書式設定パターンの詳細については、一般的な文字列の書式設定、カスタム日付/時刻書式、およびカスタム数値書式に関する .NET Framework ドキュメントを参照してください。 最初にトピック「[型の書式設定](https://go.microsoft.com/fwlink/?LinkId=211776)」を参照することをお勧めします。  
   
  *culture*  
  カルチャを指定する省略可能な **nvarchar** 引数です。  
@@ -128,7 +128,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 ```  
   
 ### <a name="b-format-with-custom-formatting-strings"></a>B. カスタムの書式指定文字列を使用する FORMAT  
- 次の例では、カスタム書式を指定して数値を書式設定する方法を示します。 この例では、現在の日付が 2012 年 9 月 27 日であることを前提としています。 これらのカスタム書式およびその他のカスタム書式の詳細については、「[カスタム数値書式設定文字列](http://msdn.microsoft.com/library/0c899ak8.aspx)」を参照してください。  
+ 次の例では、カスタム書式を指定して数値を書式設定する方法を示します。 この例では、現在の日付が 2012 年 9 月 27 日であることを前提としています。 これらのカスタム書式およびその他のカスタム書式の詳細については、「[カスタム数値書式設定文字列](https://msdn.microsoft.com/library/0c899ak8.aspx)」を参照してください。  
   
 ```sql  
 DECLARE @d DATETIME = GETDATE();  
@@ -147,7 +147,7 @@ DateTime Result  Custom Number Result
 ```  
   
 ### <a name="c-format-with-numeric-types"></a>C. 数値型を使用する FORMAT  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの **Sales.CurrencyRate** テーブルから 5 行を返します。 列 **EndOfDateRate** は、**money** 型としてテーブルに格納されます。 この例では、書式設定されずに返された列を、.NET の数値書式、一般書式、および通貨の書式の種類を指定して書式設定します。 これらの数値書式およびその他の数値書式の詳細については、「[標準数値書式設定文字列](http://msdn.microsoft.com/library/dwhawy9k.aspx)」を参照してください。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの **Sales.CurrencyRate** テーブルから 5 行を返します。 列 **EndOfDateRate** は、**money** 型としてテーブルに格納されます。 この例では、書式設定されずに返された列を、.NET の数値書式、一般書式、および通貨の書式の種類を指定して書式設定します。 これらの数値書式およびその他の数値書式の詳細については、「[標準数値書式設定文字列](https://msdn.microsoft.com/library/dwhawy9k.aspx)」を参照してください。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

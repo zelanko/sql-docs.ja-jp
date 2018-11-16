@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 298377810a6d0f42b952c94ff6835be506d6559e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611760"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697621"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>[制約のチェック] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47611760"
 展開して **[式]** のプロパティ フィールドを表示します。  
   
 **[式]**  
-選択した CHECK 制約の式を表示します。 新しい制約の場合は、このボックスを終了する前に式を入力する必要があります。 既存の CHECK 制約を編集することもできます。 詳細については、「 [制約の使用 (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)」を参照してください。  
+選択した CHECK 制約の式を表示します。 新しい制約の場合は、このボックスを終了する前に式を入力する必要があります。 既存の CHECK 制約を編集することもできます。 詳細については、「 [制約の使用 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)」を参照してください。  
   
 **[IDENTITY] カテゴリ**  
 展開して **[名前]** と **[説明]** のプロパティを表示します。  
@@ -65,6 +65,6 @@ ms.locfileid: "47611760"
 レプリケーション エージェントがこのテーブルに対して挿入または更新を行うときに制約を適用するかどうかを示します。  
   
 ## <a name="see-also"></a>参照  
-[制約の使用 (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[制約の使用 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [[インデックス/キー] ダイアログ ボックス (Visual Database Tools)](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

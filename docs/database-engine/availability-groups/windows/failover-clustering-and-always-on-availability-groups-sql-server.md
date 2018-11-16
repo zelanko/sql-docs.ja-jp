@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 6e123661aa5b446c433b5e8813c58696bd5a7921
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864310"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605452"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)
 
@@ -74,7 +74,7 @@ ms.locfileid: "47864310"
  **可用性グループのフェールオーバー ポリシー設定は、スタンドアロン インスタンスと FCI インスタンスのどちらでホストされているかに関係なく、すべてのレプリカに適用されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各エディションにおけるフェールオーバー クラスタリング内の**ノード数**および **Always On 可用性グループ**の詳細については、「[SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473)」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各エディションにおけるフェールオーバー クラスタリング内の**ノード数**および **Always On 可用性グループ**の詳細については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI で可用性レプリカをホストする場合の考慮事項  
   
@@ -117,17 +117,17 @@ ms.locfileid: "47864310"
   
      [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ホワイトペーパー:**  
   
-     [Always On アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性および障害復旧ソリューションの構築](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性および障害復旧ソリューションの構築](https://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [高可用性と障害復旧のための Microsoft SQL Server Always On ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と障害復旧のための Microsoft SQL Server Always On ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
+     [SQL Server ユーザー諮問チームのホワイト ペーパー](https://sqlcat.com/)  
   
 ## <a name="see-also"></a>参照  
  [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

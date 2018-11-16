@@ -15,12 +15,12 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c1280a60cf7c53454ab77da6fed58fd09902748
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 38addbd487a0d3e5f348d59028c85e16bca1dd5c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411762"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639169"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 接続マネージャー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用すると、パッケージは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを実行するサーバー、またはキューブとディメンション データへのアクセスを提供する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに接続できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でのパッケージ開発中に接続できるのは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]プロジェクトのみです。 実行時には、パッケージは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを配置したサーバーおよびデータベースに接続します。  
@@ -41,7 +41,7 @@ ms.locfileid: "50411762"
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続する場合、認証モードを指定します。  
 
 > [!NOTE]    
->  Azure Data Factory (ADF) で SSIS を使用していて、Azure Analysis Services (AAS) インスタンスに接続する場合は、Multi-Factor Authentication (MFA) が有効になっているアカウントを使用することはできませんが、代わりにサービス プリンシパルを使用する必要があります。 作成手順は[こちら](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-service-principal)をご覧ください。**[特定のユーザー名とパスワードを使用する]** を選択して、接続マネージャーでサーバーにログオンし、アプリケーション ID/ユーザー名としてのキー/パスワードを入力します。 最後に、カスタム セットアップを通じて Azure-SSIS Integration Runtime (IR) に必要なクライアント ライブラリをインストールする必要もあります。詳細は、[SSIS IR のカスタマイズ](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)の **AAS** の例を参照してください。
+>  Azure Data Factory (ADF) で SSIS を使用していて、Azure Analysis Services (AAS) インスタンスに接続する場合は、Multi-Factor Authentication (MFA) が有効になっているアカウントを使用することはできませんが、代わりにサービス プリンシパルを使用する必要があります。 作成手順は[こちら](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)をご覧ください。**[特定のユーザー名とパスワードを使用する]** を選択して、接続マネージャーでサーバーにログオンし、アプリケーション ID/ユーザー名としてのキー/パスワードを入力します。 最後に、カスタム セットアップを通じて Azure-SSIS Integration Runtime (IR) に必要なクライアント ライブラリをインストールする必要もあります。詳細は、[SSIS IR のカスタマイズ](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)の **AAS** の例を参照してください。
   
 -   接続マネージャーから作成される接続を、実行時に保持するかどうかを指定します。  
   

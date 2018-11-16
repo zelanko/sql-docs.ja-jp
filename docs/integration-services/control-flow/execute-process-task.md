@@ -17,12 +17,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa43a9bac948f5d03d21689b4272f2c93317792b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0451f0bdb394d66fa8477c43aee801bd25ead1db
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654880"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638759"
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
   プロセス実行タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部として、アプリケーションまたはバッチ ファイルを実行します。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] や [!INCLUDE[ofprword](../../includes/ofprword-md.md)]などの標準的なアプリケーションを開くためにプロセス実行タスクを使用することもできますが、一般に、このタスクはデータ ソースを処理対象とするビジネス アプリケーションやバッチ ファイルを実行する場合に使用します。 たとえば、プロセス実行タスクを使用して、圧縮されたテキスト ファイルを展開できます。 さらに、そのテキスト ファイルをパッケージ内のデータ フローのデータ ソースとして使用できます。 その他の例として、プロセス実行タスクを使用し、毎日の売り上げレポートを生成するカスタムの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを実行することもできます。 その後、このレポートをメール送信タスクに添付し、配信リストに転送できます。  
@@ -42,12 +42,12 @@ ms.locfileid: "47654880"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="property-settings"></a>プロパティの設定  
  プロセス実行タスクがカスタム アプリケーションを実行するとき、アプリケーションには、次のいずれかまたは両方の方法で入力が提供されます。  
   
--   **StandardInputVariable** プロパティの設定で指定された変数。 変数の詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
+-   **StandardInputVariable** プロパティの設定で指定された変数。 変数の詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
   
 -   **Arguments** プロパティの設定で指定された引数。 たとえば文書を Word で開く場合、引数で .doc ファイルの名前を指定できます。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47654880"
   
  プロセス実行タスクの各種プロパティを設定する際にも、式を使用できます。  
   
- **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリで、[Console.ReadLine メソッド](http://go.microsoft.com/fwlink/?LinkId=129201)のトピックを参照してください。  
+ **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリで、[Console.ReadLine メソッド](https://go.microsoft.com/fwlink/?LinkId=129201)のトピックを参照してください。  
   
  **Arguments** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、次のいずれかの手順を実行して、引数を取得します。  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47654880"
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     詳細については、 [のリファレンスで、](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs プロパティ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のトピックを参照してください。  
+     詳細については、 [のリファレンスで、](https://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs プロパティ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のトピックを参照してください。  
   
 -   Microsoft Visual C# を使用してアプリケーションを作成する場合は、**Main** メソッドを使用します。  
   
-     詳細については、『C# プログラミング ガイド』の「 [コマンド ライン引数 (C# プログラミング ガイド)](http://go.microsoft.com/fwlink/?LinkId=129406)」を参照してください。  
+     詳細については、『C# プログラミング ガイド』の「 [コマンド ライン引数 (C# プログラミング ガイド)](https://go.microsoft.com/fwlink/?LinkId=129406)」を参照してください。  
   
  プロセス実行タスクには、 **StandardOutputVariable** プロパティおよび **StandardErrorVariable** プロパティがあります。それぞれ、アプリケーションの標準出力とエラー出力を取り込むための変数を指定できます。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47654880"
  **[StandardInputVariable]**  
  プロセスへの入力を指定する変数を選択するか、\<[**新しい変数>]** をクリックして新しい変数を作成します。  
   
- **関連項目:** [変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連項目:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[StandardOutputVariable]**  
  プロセスの出力をキャプチャする変数を選択するか、\<[**新しい変数]** をクリックして新しい変数を作成します。  

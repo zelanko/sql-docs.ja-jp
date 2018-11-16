@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: de74b5a6df92e0440bcb9d0514fcf67cdf9aef46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d81475de98512e01be65b4c8c23c40809eec73fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790830"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603632"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB ファイル共有ストレージを使用して SQL Server をインストールする
 
@@ -36,7 +36,7 @@ ms.locfileid: "47790830"
   
 -   \\\ServerName\ShareName  
   
- 汎用名前付け規則の詳細については、「[UNC](http://msdn.microsoft.com/library/gg465305.aspx)」を参照してください。  
+ 汎用名前付け規則の詳細については、「[UNC](https://msdn.microsoft.com/library/gg465305.aspx)」を参照してください。  
   
  ループバック UNC パス (サーバー名が localhost、127.0.0.1、またはローカル コンピューター名である UNC パス) はサポートされません。 特別なケースとして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同じノードでホストされたファイル サーバー クラスターを使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートされません。 この状況を避けるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とファイル サーバー クラスターは、別個の Windows クラスターに作成することをお勧めします。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "47790830"
 |オペレーティング システム|SMB2 プロトコルのバージョン|に対するメリット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|従来のバージョンの SMB よりもパフォーマンスに優れています。<br /><br /> 持続性が高いため、一時的なネットワーク障害もスムーズに復旧できます。|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1 (Server Core を含む)|2.1|大きい MTU をサポートするため、SQL のバックアップや復元など、大規模なデータ転送が高速化されます。 この機能を使用するには、ユーザーが機能を有効にする必要があります。 この機能の詳細については、「[What’s New in SMB](http://go.microsoft.com/fwlink/?LinkID=237319)」(SMB の新機能) (http://go.microsoft.com/fwlink/?LinkID=237319) を参照してください。<br /><br /> 大幅なパフォーマンス向上。特に、SQL OLTP スタイルのワークロードに対して効果的です。 パフォーマンスを向上するには、修正プログラムを適用する必要があります。 この修正プログラムの詳細については、[こちら](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320) を参照してください。|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)](Server Core を含む)|3.0|ファイル サーバー クラスター構成の SQL DBA またはファイル サーバー管理者に必要な、ファイル共有の透過的フェールオーバー (管理者の操作が不要でダウンタイムが発生しないフェールオーバー) をサポートします。<br /><br /> 複数のネットワーク インターフェイスを同時使用する IO をサポートします。また、ネットワーク インターフェイスの障害に対する耐性も優れています。<br /><br /> RDMA 機能を備えたネットワーク インターフェイスをサポートします。<br /><br /> これらの機能およびサーバー メッセージ ブロックの詳細については、「[Server Message Block overview](http://go.microsoft.com/fwlink/?LinkId=253174)」(サーバー メッセージ ブロックの概要) (http://go.microsoft.com/fwlink/?LinkId=253174) を参照してください。<br /><br /> 継続的可用性機能を備えたスケールアウト ファイル サーバー (SoFS) をサポートします。|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 (Server Core を含む)|3.2|ファイル サーバー クラスター構成の SQL DBA またはファイル サーバー管理者に必要な、ファイル共有の透過的フェールオーバー (管理者の操作が不要でダウンタイムが発生しないフェールオーバー) をサポートします。<br /><br /> 複数のネットワーク インターフェイスを同時使用する IO をサポートします。また、ネットワーク インターフェイスの障害に対する耐性も優れています (SMB マルチチャネルを使用した場合)。<br /><br /> RDMA 機能を備えたネットワーク インターフェイスをサポートします (SMB ダイレクトを使用した場合)。<br /><br /> これらの機能およびサーバー メッセージ ブロックの詳細については、「[Server Message Block overview](http://go.microsoft.com/fwlink/?LinkId=253174)」(サーバー メッセージ ブロックの概要) (http://go.microsoft.com/fwlink/?LinkId=253174) を参照してください。<br /><br /> 継続的可用性機能を備えたスケールアウト ファイル サーバー (SoFS) をサポートします。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP に共通する小規模なランダム読み取り/書き込み I/O 向けに最適化されます。<br /><br /> 最大転送単位 (MTU) が既定で有効になっています。これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ウェアハウス、データベースのバックアップと復元など、大規模なシーケンシャル転送のパフォーマンスが大幅に向上します。|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1 (Server Core を含む)|2.1|大きい MTU をサポートするため、SQL のバックアップや復元など、大規模なデータ転送が高速化されます。 この機能を使用するには、ユーザーが機能を有効にする必要があります。 この機能の詳細については、「[What’s New in SMB](https://go.microsoft.com/fwlink/?LinkID=237319)」(SMB の新機能) (https://go.microsoft.com/fwlink/?LinkID=237319) を参照してください。<br /><br /> 大幅なパフォーマンス向上。特に、SQL OLTP スタイルのワークロードに対して効果的です。 パフォーマンスを向上するには、修正プログラムを適用する必要があります。 この修正プログラムの詳細については、[こちら](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320) を参照してください。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)](Server Core を含む)|3.0|ファイル サーバー クラスター構成の SQL DBA またはファイル サーバー管理者に必要な、ファイル共有の透過的フェールオーバー (管理者の操作が不要でダウンタイムが発生しないフェールオーバー) をサポートします。<br /><br /> 複数のネットワーク インターフェイスを同時使用する IO をサポートします。また、ネットワーク インターフェイスの障害に対する耐性も優れています。<br /><br /> RDMA 機能を備えたネットワーク インターフェイスをサポートします。<br /><br /> これらの機能およびサーバー メッセージ ブロックの詳細については、「[Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174)」(サーバー メッセージ ブロックの概要) (https://go.microsoft.com/fwlink/?LinkId=253174) を参照してください。<br /><br /> 継続的可用性機能を備えたスケールアウト ファイル サーバー (SoFS) をサポートします。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 (Server Core を含む)|3.2|ファイル サーバー クラスター構成の SQL DBA またはファイル サーバー管理者に必要な、ファイル共有の透過的フェールオーバー (管理者の操作が不要でダウンタイムが発生しないフェールオーバー) をサポートします。<br /><br /> 複数のネットワーク インターフェイスを同時使用する IO をサポートします。また、ネットワーク インターフェイスの障害に対する耐性も優れています (SMB マルチチャネルを使用した場合)。<br /><br /> RDMA 機能を備えたネットワーク インターフェイスをサポートします (SMB ダイレクトを使用した場合)。<br /><br /> これらの機能およびサーバー メッセージ ブロックの詳細については、「[Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174)」(サーバー メッセージ ブロックの概要) (https://go.microsoft.com/fwlink/?LinkId=253174) を参照してください。<br /><br /> 継続的可用性機能を備えたスケールアウト ファイル サーバー (SoFS) をサポートします。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP に共通する小規模なランダム読み取り/書き込み I/O 向けに最適化されます。<br /><br /> 最大転送単位 (MTU) が既定で有効になっています。これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ウェアハウス、データベースのバックアップと復元など、大規模なシーケンシャル転送のパフォーマンスが大幅に向上します。|  
   
 ## <a name="security-considerations"></a>セキュリティに関する考慮事項  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントには、SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限が必要です。 SMB ファイル サーバーを使用する場合、ドメイン アカウントまたはシステム アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントにすることができます。 共有および NTFS アクセス許可の詳細については、「[Share and NTFS Permissions on a File Server](http://go.microsoft.com/fwlink/?LinkId=245535)」(ファイル サーバーの共有アクセス許可と NTFS アクセス許可) (http://go.microsoft.com/fwlink/?LinkId=245535) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントには、SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限が必要です。 SMB ファイル サーバーを使用する場合、ドメイン アカウントまたはシステム アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントにすることができます。 共有および NTFS アクセス許可の詳細については、「[Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkId=245535)」(ファイル サーバーの共有アクセス許可と NTFS アクセス許可) (https://go.microsoft.com/fwlink/?LinkId=245535) を参照してください。  
   
     > [!NOTE]  
     >  SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウント、および管理サーバー ロールを持つ Windows ユーザーに制限する必要があります。  
@@ -111,7 +111,7 @@ ms.locfileid: "47790830"
   
 ## <a name="known-issues"></a>既知の問題  
   
--   ネットワークにアタッチされたストレージ上に存在する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースをデタッチした後で、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを再アタッチしようとすると、データベース権限の問題が発生する場合があります。 この問題は、[こちらのサポート技術情報の記事](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321) で定義されています。 この問題を回避するには、このサポート技術情報の「 **詳細** 」を参照してください。  
+-   ネットワークにアタッチされたストレージ上に存在する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースをデタッチした後で、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを再アタッチしようとすると、データベース権限の問題が発生する場合があります。 この問題は、[こちらのサポート技術情報の記事](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321) で定義されています。 この問題を回避するには、このサポート技術情報の「 **詳細** 」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のクラスター化されたインスタンスのストレージ オプションとして SMB ファイル共有が使用されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource DLL にはこのファイル共有に対する読み取り/書き込み権限がないため、既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター診断ログをファイル共有に書き込むことができません。 この問題を解決するには、次のいずれかの方法を試してください。  
   

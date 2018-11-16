@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77d9f024255b93df493e87adeabfcf13311a326b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6810231163d1674893e55624f333cd023bd95c47
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777720"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666191"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47777720"
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
             xmlns="uri:Cust_Orders2" >  
   <xsd:attribute name="SomeAttribute" type="xsd:int" />  
@@ -193,11 +193,11 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  **XML_SCHEMA_NAMESPACE()** の 3 番目の引数として対象になる名前空間を指定することで、コレクション内の個別の XML スキーマを **xml**データ型のインスタンスとして取得できます。 次の例を参照してください。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例 : XML スキーマ コレクションからの指定したスキーマの出力  
- 次のステートメントを実行すると、リレーショナル スキーマ dbo の XML スキーマ コレクション "myCollection" から、対象になる名前空間が "http://www.microsoft.com/books" である XML スキーマが出力されます。  
+ 次のステートメントを実行すると、リレーショナル スキーマ dbo の XML スキーマ コレクション "myCollection" から、対象になる名前空間が "https://www.microsoft.com/books" である XML スキーマが出力されます。  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>XML スキーマへのクエリ  

@@ -14,12 +14,12 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14abdd44fca86401238db0216febb5a6a002ffa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091c4034071394d03c1548290c5d6eea08d50b8e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596790"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662341"
 ---
 # <a name="data-collection"></a>データ コレクション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47596790"
   
  データ コレクターでは、テスト環境や実稼働環境に合わせてデータ収集の範囲を調整できます。 また、データ コレクターはデータ ウェアハウスも使用します。データ ウェアハウスは、データにさまざまな保有期間を設定して収集したデータを管理できるようにするリレーショナル データベースです。  
   
- データ コレクターは、データ収集の動的なチューニングをサポートし、その API を通じて拡張できます。 詳細については、「 [データ コレクターのプログラミング](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)」を参照してください。  
+ データ コレクターは、データ収集の動的なチューニングをサポートし、その API を通じて拡張できます。 詳細については、「 [データ コレクターのプログラミング](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)」を参照してください。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ収集およびデータ管理の全体的な戦略にデータ コレクターがどのように組み込まれているかを次の図に示します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47596790"
   
 -   プロキシ アカウント  
   
- 詳細については、「[管理タスクの自動化 &#40;SQL Server エージェント&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)」を参照してください。  
+ 詳細については、「[管理タスクの自動化 &#40;SQL Server エージェント&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) は、個々のデータ プロバイダーからデータを収集するパッケージを実行するために使用されます。 以下の [!INCLUDE[ssIS](../../includes/ssis-md.md)] ツールと概念を理解しておく必要があります。  
   

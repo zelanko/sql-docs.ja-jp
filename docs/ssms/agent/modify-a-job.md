@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0460b819b4104731421a0ad34e63f28d7a0699e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 231a823dec8d3ad06d7cf858c926cef227d860bd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649930"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703110"
 ---
 # <a name="modify-a-job"></a>Modify a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,24 +75,24 @@ ms.locfileid: "47649930"
   
 3.  クエリ ウィンドウで、次のシステム ストアド プロシージャを使用してジョブを変更します。  
   
-    -   ジョブの属性を変更するには、 [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) を実行します。  
+    -   ジョブの属性を変更するには、 [sp_update_job (Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) を実行します。  
   
-    -   ジョブ定義のスケジューリングの詳細を変更するには、 [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) を実行します。  
+    -   ジョブ定義のスケジューリングの詳細を変更するには、 [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) を実行します。  
   
-    -   [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) を実行して、新しいジョブ ステップを追加します。  
+    -   [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) を実行して、新しいジョブ ステップを追加します。  
   
-    -   [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) を実行して、既存のジョブ ステップを変更します。  
+    -   [sp_update_jobstep (Transact-SQL)](https://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) を実行して、既存のジョブ ステップを変更します。  
   
-    -   ジョブからジョブ ステップを削除するには、 [sp_delete_jobstep (Transact-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) を実行します。  
+    -   ジョブからジョブ ステップを削除するには、 [sp_delete_jobstep (Transact-SQL)](https://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) を実行します。  
   
     -   任意の SQL Server エージェント マスター ジョブを変更するための追加のストアド プロシージャ:  
   
-        -   [sp_delete_jobserver (Transact-SQL)](http://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) を実行して、ジョブに現在関連付けられているサーバーを削除します。  
+        -   [sp_delete_jobserver (Transact-SQL)](https://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) を実行して、ジョブに現在関連付けられているサーバーを削除します。  
   
-        -   [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) を実行して、サーバーを現在のジョブに関連付けます。  
+        -   [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) を実行して、サーバーを現在のジョブに関連付けます。  
   
 ## <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
 **ジョブを変更するには**  
   
-Visual Basic、Visual C#、PowerShell などの選択したプログラミング言語で **Job** クラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](http://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
+Visual Basic、Visual C#、PowerShell などの選択したプログラミング言語で **Job** クラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
   

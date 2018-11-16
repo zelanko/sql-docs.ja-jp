@@ -15,12 +15,12 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d8fdee121bbeea704d53068b6829548ffe7b07b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95d209a033f30c13ea1bd21d99e845733fa9857
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800740"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642409"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
   次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスのフィールドとして定義されています。  
@@ -230,8 +230,8 @@ ms.locfileid: "47800740"
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|書き込み用にファイル "%1" を開けませんでした。 ファイルが読み取り専用であるか、適切な権限がありません。|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|結果行セットがこのクエリの実行に関連付けられていません。 結果が正しく指定されていません。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|デバッグ ダンプ ファイルを正しく生成できませんでした。 hresult は 0x%1!8.8X! です。|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定された URL が無効です。 このエラーは、サーバーまたはプロキシの URL に NULL が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定された URL が無効です。 このエラーは、サーバーまたはプロキシの URL に NULL が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 https://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 https://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|サーバー %1 への接続を確立できません。 このエラーは、サーバーが存在しない場合、またはプロキシの設定が正しくない場合に発生する可能性があります。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|サーバーとの接続がリセットされたか、終了しました。 後で再試行してください。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|%1 のログインに失敗しました。 このエラーは、指定されたログイン資格情報が正しくない場合に発生します。 ログイン資格情報を確認してください。|  
@@ -2013,7 +2013,7 @@ ms.locfileid: "47800740"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|要素 "%2" で、"%1" の XML スキーマ データ型情報が変更されています。  このコンポーネントのメタデータを再度初期化して、列マッピングを確認してください。|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 は、結合またはコピーで使用されていません。 入力列の一覧から未使用の列を削除してください。|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|入力バッファーの並べ替え中に、スタック オーバーフローによって並べ替えが失敗しました。  データ フロー タスクの DefaultBufferMaxRows プロパティを小さくしてください。|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|接続文字列の PROVIDER を %1 に変更することを検討するか、 http://www.microsoft.com/downloads にアクセスして %2 のサポートを探しインストールしてください。|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|接続文字列の PROVIDER を %1 に変更することを検討するか、 https://www.microsoft.com/downloads にアクセスして %2 のサポートを探しインストールしてください。|  
 |||DTS_E_INITTASKOBJECTFAILED|タスク オブジェクトを初期化できませんでした。タスク "%1!s!"、型 "%2!s!"。 エラー: 0x%3!8.8X! "  %4!s!"。|  
 |||DTS_E_GETRTINTERFACEFAILED|COM コンポーネント カテゴリ マネージャーを作成できませんでした。エラー: 0x%1!8.8X! "%2!s!"。|  
 |||DTS_E_COMPONENTINITFAILED|エラー 0x%2!8.8X! " %3!s!" によって コンポーネント %1!s! の初期化に失敗しました 。|  

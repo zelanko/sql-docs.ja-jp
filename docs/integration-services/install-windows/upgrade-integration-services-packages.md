@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: ea235b42cb215a52c523832d4c1b4daffa975971
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f88d384d602e5cca6872fe6e606694e227a7e29
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771630"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637959"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services パッケージのアップグレード
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の現在のリリースにアップグレードするとき、既存の [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージは、現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用されるパッケージ形式に自動的にアップグレードされません。 アップグレード方法を選択して、パッケージを手動でアップグレードする必要があります。  
@@ -57,7 +57,7 @@ ms.locfileid: "47771630"
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使って、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] カスタム コンポーネントを含むパッケージを設計するには、\<*ドライブ*>:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE にある devenv.exe.config ファイルを変更する必要があります。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトについて詳しくは、「[\<runtime> の \<assemblyBinding> 要素](http://msdn.microsoft.com/library/twy1dw1e.aspx)」をご覧ください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトについて詳しくは、「[\<runtime> の \<assemblyBinding> 要素](https://msdn.microsoft.com/library/twy1dw1e.aspx)」をご覧ください。  
   
 ### <a name="locating-the-assemblies"></a>アセンブリの場所  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 \<*ドライブ*>:\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  

@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a04cd6d732622e91d5080ed77a2eba4d62d71a12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630190"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696640"
 ---
 # <a name="network-protocols-and-network-libraries"></a>ネットワーク プロトコルとネットワーク ライブラリ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47630190"
 ## <a name="default-sql-server-network-configuration"></a>SQL Server の既定のネットワーク構成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスは、TCP/IP ポート 1433 と名前付きパイプ \\\\.\pipe\sql\query です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスは TCP 動的ポートに構成され、ポート番号がオペレーティング システムによって割り当てられます。  
   
- 動的ポート アドレスを使用できない場合 (たとえば、特定のポート アドレスを通過するように構成されたファイアウォール サーバーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続が通過する必要がある場合) は、 未割り当てのポート番号を選択してください。 ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、[http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844) に一覧が掲載されています。  
+ 動的ポート アドレスを使用できない場合 (たとえば、特定のポート アドレスを通過するように構成されたファイアウォール サーバーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続が通過する必要がある場合) は、 未割り当てのポート番号を選択してください。 ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、[https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) に一覧が掲載されています。  
   
  セキュリティを強化するため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時にネットワーク接続は完全には有効になっていません。 セットアップの完了後にネットワーク プロトコルを有効化、無効化、または構成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワークの構成領域を使用します。  
   

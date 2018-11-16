@@ -16,12 +16,12 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c781794fb548baa688596e613270c641eff9d481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37711d75b48118bd180307795d9fbaa3dfc4bf74
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765540"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638019"
 ---
 # <a name="group-or-ungroup-components"></a>コンポーネントのグループ化とグループの解除
   **デザイナーの**[制御フロー] **、**[データ フロー] **、および** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブでは、折りたたみ可能なグループ化がサポートされています。 パッケージに多数のコンポーネントがある場合、タブは過密状態になることがあります。このような状態になると、すべてのコンポーネントを一度に表示するのが難しくなり、操作する項目を探すのも困難になります。 折りたたみ可能なグループ化機能を使用すると、作業画面上の領域を節約でき、大きなパッケージの処理が容易になります。  
@@ -62,6 +62,6 @@ ms.locfileid: "47765540"
   
 ## <a name="see-also"></a>参照  
  [制御フローのタスクまたはコンテナーを追加または削除する](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [既定の優先順位制約を使用してタスクとコンテナーを連結する](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [既定の優先順位制約を使用してタスクとコンテナーを連結する](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

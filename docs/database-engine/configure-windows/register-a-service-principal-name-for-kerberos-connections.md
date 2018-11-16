@@ -17,12 +17,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49c30d7f0d241d61855e50c53a897281b23ff22e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e865ccf2810b9dc701bfe942245d59bcb1ecf9d4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709390"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605492"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 接続用のサービス プリンシパル名の登録
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Kerberos に関する接続性の問題のトラブルシューティングに役立つ診断ツールです。 Kerberos 認証の詳細については、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](http://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Kerberos に関する接続性の問題のトラブルシューティングに役立つ診断ツールです。 Kerberos 認証の詳細については、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。  
   
 ##  <a name="Role"></a> 認証での SPN の役割  
  アプリケーションが接続されて Windows 認証を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューター名、インスタンス名、およびオプションで SPN を渡します。 接続の際に SPN が渡される場合、変更せずに使用されます。  
@@ -64,9 +64,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 >  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 機能レベルよりも低い機能レベルで Windows ドメインが実行されるように構成される場合は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの SPN を登録するために必要な権限が、管理されたサービス アカウントに与えられません。 Kerberos 認証が必要な場合は、ドメイン管理者が、管理されたサービス アカウントに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SPN を手動で登録する必要があります。  
   
- ドメイン管理者ではないアカウントに SPN に対する読み取り権限または書き込み権限を許可する方法については、サポート技術情報の資料「 [SQL Server で Kerberos 認証を使用する方法](http://support.microsoft.com/kb/319723)」を参照してください。  
+ ドメイン管理者ではないアカウントに SPN に対する読み取り権限または書き込み権限を許可する方法については、サポート技術情報の資料「 [SQL Server で Kerberos 認証を使用する方法](https://support.microsoft.com/kb/319723)」を参照してください。  
   
- その他の情報については、「 [SQL Server 2008 で Kerberos の制約付き委任を実装する方法](http://technet.microsoft.com/library/ee191523.aspx)」を参照してください。  
+ その他の情報については、「 [SQL Server 2008 で Kerberos の制約付き委任を実装する方法](https://technet.microsoft.com/library/ee191523.aspx)」を参照してください。  
   
 ##  <a name="Formats"></a> SPN の形式  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では、TCP/IP、名前付きパイプ、および共有メモリで Kerberos 認証をサポートするために、SPN の形式が変更されています。 名前付きインスタンスおよび既定のインスタンスでサポートされている SPN の形式は次のとおりです。  
@@ -113,7 +113,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  SPN の登録または登録解除に必要な権限がサービス アカウントにない場合は、これらのアクションを手動で実行することが必要になる場合があります。  
   
 ##  <a name="Manual"></a> SPN の手動登録  
-SPN を手動で登録するには、管理者は Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] サポート ツールに付属する Setspn.exe ツールを使用する必要があります。 詳細については、サポート技術情報の資料「 [Windows Server 2003 Service Pack 1 のサポート ツール](http://support.microsoft.com/kb/892777) 」を参照してください。  
+SPN を手動で登録するには、管理者は Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] サポート ツールに付属する Setspn.exe ツールを使用する必要があります。 詳細については、サポート技術情報の資料「 [Windows Server 2003 Service Pack 1 のサポート ツール](https://support.microsoft.com/kb/892777) 」を参照してください。  
   
 Setspn.exe は、サービス プリンシパル名 (SPN) ディレクトリ プロパティの読み取り、変更、および削除を実行できるようにするコマンド ライン ツールです。 このツールを使用すると、現在の SPN の表示、アカウントの既定の SPN の再設定、および補足 SPN の追加または削除も実行できます。  
   
@@ -182,6 +182,6 @@ WHERE session_id = @@SPID;
  [クライアント接続 &#40;OLE DB&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [クライアント接続 &#40;ODBC&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
  [SQL Server Native Client の機能](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Reporting Services 環境における Kerberos 認証の問題の管理](http://technet.microsoft.com/library/ff679930.aspx)  
+ [Reporting Services 環境における Kerberos 認証の問題の管理](https://technet.microsoft.com/library/ff679930.aspx)  
   
   

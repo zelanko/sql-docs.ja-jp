@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383327"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600892"
 ---
 # <a name="install-sql-server"></a>SQL Server をインストールする
 
@@ -38,7 +38,7 @@ ms.locfileid: "49383327"
 
 * **サンプル データベースとサンプル コード**: 
     * これらは、既定では SQL Server セットアップの一環としてインストールされません。 
-    * SQL Server の Express 以外のエディションをインストールするには、[GitHub](http://github.com/Microsoft/sql-server-samples) を参照してください。
+    * SQL Server の Express 以外のエディションをインストールするには、[GitHub](https://github.com/Microsoft/sql-server-samples) を参照してください。
     
 
 ## <a name="get-the-installation-media"></a>インストール メディアを入手する
@@ -70,7 +70,7 @@ ms.locfileid: "49383327"
 |[SQL Server データベース エンジンのインストール](../../database-engine/install-windows/install-sql-server-database-engine.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]をインストールして構成する方法について説明します。|  
 |[SQL Server レプリケーションのインストール](../../database-engine/install-windows/install-sql-server-replication.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションをインストールして構成する方法について説明します。|  
 |[分散再生のインストール - 概要](../../tools/distributed-replay/install-distributed-replay-overview.md)|分散再生の機能のインストールに関する記事の一覧を示します。|  
-|[SSMS を使用した SQL Server 管理ツールのインストール](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールをインストールして構成する方法について説明します。|  
+|[SSMS を使用した SQL Server 管理ツールのインストール](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールをインストールして構成する方法について説明します。|  
 |[SQL Server PowerShell のインストール](../../database-engine/install-windows/install-sql-server-powershell.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell コンポーネントのインストールに関する考慮事項について説明します。|  
   
 

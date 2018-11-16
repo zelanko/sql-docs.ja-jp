@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e51a9c2ca8dbebe5f807b7e286eaa61242b04332
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617650"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657811"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47617650"
 |型|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|正規の種類に基づいて認識されるファイルの種類。|  
 |[タイトル]|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|アイテムのタイトル。 たとえば、ドキュメントのタイトル、メッセージの件名、写真のキャプション、または音楽トラックの名前。|  
   
- ファイル形式間で一貫性を保持するため、マイクロソフトでは、頻繁に使用される、優先度の高いドキュメントのプロパティのサブセットを、いくつかのドキュメントのカテゴリとして特定しています。 これらには、通信、連絡先、ドキュメント、音楽ファイル、画像、およびビデオがあります。 各カテゴリの上位のプロパティの詳細については、Windows サーチに関するドキュメントの「 [カスタム ファイル形式のシステム定義プロパティ](http://go.microsoft.com/fwlink/?LinkId=144336) 」を参照してください。  
+ ファイル形式間で一貫性を保持するため、マイクロソフトでは、頻繁に使用される、優先度の高いドキュメントのプロパティのサブセットを、いくつかのドキュメントのカテゴリとして特定しています。 これらには、通信、連絡先、ドキュメント、音楽ファイル、画像、およびビデオがあります。 各カテゴリの上位のプロパティの詳細については、Windows サーチに関するドキュメントの「 [カスタム ファイル形式のシステム定義プロパティ](https://go.microsoft.com/fwlink/?LinkId=144336) 」を参照してください。  
   
  特定のファイル形式では、以下の 3 種類のプロパティが実装される場合があります。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47617650"
   
  **filtdump.exe** はコマンド プロンプトから実行し、1 つの引数を指定します。 この引数は、インストールした IFilter が対象とする種類のファイルの個別の名前です。 このユーティリティは、IFilter で検出された、ドキュメント内のすべてのプロパティと、そのプロパティ セット GUID、整数 ID、および追加情報の一覧を表示します。  
   
- このソフトウェアをインストールする方法の詳細については、「 [Windows 7 および .NET Framework 4 用 Microsoft Windows SDK](http://go.microsoft.com/fwlink/?LinkId=212980)」を参照してください。 SDK をダウンロードしてインストールした後、以下のフォルダーで filtdump.exe ユーティリティを見つけてください。  
+ このソフトウェアをインストールする方法の詳細については、「 [Windows 7 および .NET Framework 4 用 Microsoft Windows SDK](https://go.microsoft.com/fwlink/?LinkId=212980)」を参照してください。 SDK をダウンロードしてインストールした後、以下のフォルダーで filtdump.exe ユーティリティを見つけてください。  
   
 -   64 ビット バージョンの場合は、 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`にあります。  
   
@@ -84,9 +84,9 @@ propID = 4
 …  
 ```  
   
- このプロパティの完全な説明については、Windows サーチに関するドキュメントの「 [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) 」を参照してください。  
+ このプロパティの完全な説明については、Windows サーチに関するドキュメントの「 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 」を参照してください。  
   
- Windows プロパティの完全な一覧については、Windows サーチに関するドキュメントの「 [Windows プロパティ](http://go.microsoft.com/fwlink/?LinkId=215013)」を参照してください。  
+ Windows プロパティの完全な一覧については、Windows サーチに関するドキュメントの「 [Windows プロパティ](https://go.microsoft.com/fwlink/?LinkId=215013)」を参照してください。  
   
 ##  <a name="examples"></a> 検索プロパティ リストへのプロパティの追加  
  次の例では、プロパティを検索プロパティ リストに追加する方法を示します。 この例では、 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) ステートメントを使用して、 `System.Author` プロパティを `PropertyList1`という名前の検索プロパティ リストに追加し、 `Author`という表示名を指定します。  

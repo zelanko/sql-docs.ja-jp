@@ -15,12 +15,12 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47b3ca2abf53fe93a24eb23650c1b741a2445988
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684397"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640023"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>プログラムによるリモート パッケージの読み込みと実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされていないローカル コンピューターからリモート パッケージを実行するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされているリモート コンピューター上でパッケージが実行されるように、パッケージを起動します。 この操作を行うには、ローカル コンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、Web サービス、またはリモート コンポーネントを使用して、リモート コンピューターでパッケージを起動します。 ローカル コンピューターから直接リモート パッケージを起動しようとすると、パッケージがローカル コンピューターに読み込まれ、ローカル コンピューターから実行されます。 ローカル コンピューターに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされていない場合、パッケージは実行されません。  
@@ -45,7 +45,7 @@ ms.locfileid: "47684397"
 > [!NOTE]  
 >  **sp_start_job** ストアド プロシージャの戻り値は、ストアド プロシージャが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブを正常に開始できたかどうかを示します。 この戻り値は、パッケージが成功したか失敗したかを示しません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブから実行するパッケージのトラブルシューティングについては、Microsoft の記事「[SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されない](http://support.microsoft.com/kb/918760)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブから実行するパッケージのトラブルシューティングについては、Microsoft の記事「[SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されない](https://support.microsoft.com/kb/918760)」を参照してください。  
   
 ### <a name="sample-code"></a>サンプル コード  
   
@@ -176,7 +176,7 @@ Imports System.Web.Services.Protocols
 Imports Microsoft.SqlServer.Dts.Runtime  
 Imports System.IO  
   
-<WebService(Namespace:="http://dtsue/")> _  
+<WebService(Namespace:="https://dtsue/")> _  
 <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _  
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _  
 Public Class LaunchSSISPackageService  
@@ -252,7 +252,7 @@ using System.Web.Services.Protocols;
 using Microsoft.SqlServer.Dts.Runtime;  
 using System.IO;  
   
-[WebService(Namespace = "http://dtsue/")]  
+[WebService(Namespace = "https://dtsue/")]  
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]  
 public class LaunchSSISPackageServiceCS : System.Web.Services.WebService  
 {  
@@ -417,7 +417,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部リソース  
   
--   technet.microsoft.com のビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](http://technet.microsoft.com/sqlserver/ff686764.aspx)」  
+-   technet.microsoft.com のビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/ff686764.aspx)」  
   
 ## <a name="see-also"></a>参照  
  [ローカル実行とリモート実行の相違点について](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

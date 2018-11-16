@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718270"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639069"
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡素化するツールとウィザードが含まれています。  
@@ -102,7 +102,7 @@ ms.locfileid: "47718270"
   
 -   **/ConfigFile** オプションを使用して、デザイン時に指定した構成を置き換える構成を読み込むことはできません。  
   
- これらのオプションの詳細と、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] と以前のバージョン間におけるこれらのオプションの動作の違いについては、「 [SQL Server 2016 における Integration Services 機能の動作の変更](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)」を参照してください。  
+ これらのオプションの詳細と、[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] と以前のバージョン間におけるこれらのオプションの動作の違いについては、「[SQL Server 2016 における Integration Services 機能の動作の変更](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)」を参照してください。  
   
 ### <a name="package-configuration-types"></a>パッケージの構成の種類  
  パッケージの構成の種類を次の表に示します。  
@@ -430,7 +430,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 > [!NOTE]  
 >  親パッケージの変数またはパラメーター、またはプロジェクトのパラメーターを子パッケージのパラメーターにマップするようにパッケージ実行タスクを構成することで、値を子パッケージに渡すこともできます。 詳細については、「 [パッケージ実行タスク](../../integration-services/control-flow/execute-package-task.md)」を参照してください。  
   
- 親パッケージ内のこの変数は、子パッケージのパッケージ構成を作成する前に作成する必要はありません。 変数はいつでも親パッケージに追加できますが、パッケージ構成では親変数の正確な名前を使用する必要があります。 ただし、親変数パッケージ構成を作成するには、子パッケージ内に、この構成で更新できる変数が既に存在している必要があります。 変数の追加と構成の詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
+ 親パッケージ内のこの変数は、子パッケージのパッケージ構成を作成する前に作成する必要はありません。 変数はいつでも親パッケージに追加できますが、パッケージ構成では親変数の正確な名前を使用する必要があります。 ただし、親変数パッケージ構成を作成するには、子パッケージ内に、この構成で更新できる変数が既に存在している必要があります。 変数の追加と構成の詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
   
  親変数パッケージ構成で使用される親パッケージ内の変数のスコープは、パッケージ実行タスク、タスクを含むコンテナー、またはパッケージに設定できます。 パッケージ内で同じ名前の複数の変数が定義されている場合、パッケージ実行タスクのスコープ内で最も近い変数が使用されます。 パッケージ実行タスクに最も近いスコープは、タスク自体です。  
   

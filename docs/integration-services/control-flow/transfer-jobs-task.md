@@ -17,12 +17,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed0d9624c4a2ffb0393d01a196624a56771811e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73236a13046257caabc572de24957524d1cb41ea
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780620"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639019"
 ---
 # <a name="transfer-jobs-task"></a>ジョブ転送タスク
   ジョブ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブを転送します。  
@@ -37,7 +37,7 @@ ms.locfileid: "47780620"
   
 -   重複するジョブをスキップします。  
   
- 実行時に、ジョブ転送タスクは 1 つまたは 2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーはジョブ転送タスクとは別に構成され、ジョブ転送タスクで参照されます。 SMO 接続マネージャーは、サーバーと、このサーバーにアクセスするときに使用する認証モードを指定します。 詳細については、「 [SMO 接続マネージャー](../../integration-services/connection-manager/smo-connection-manager.md)」をご覧ください。  
+ 実行時に、ジョブ転送タスクは 1 つまたは 2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーはジョブ転送タスクとは別に構成され、ジョブ転送タスクで参照されます。 SMO 接続マネージャーは、サーバーと、このサーバーにアクセスするときに使用する認証モードを指定します。 詳細については、「 [SMO 接続マネージャー](../../integration-services/connection-manager/smo-connection-manager.md)」を参照してください。  
   
 ## <a name="transferring-jobs-between-instances-of-sql-server"></a>SQL Server のインスタンス間でのジョブの転送  
  ジョブ転送タスクは、転送元または転送先として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートします。 転送元または転送先として使用するバージョンに関する制限はありません。  
@@ -46,7 +46,7 @@ ms.locfileid: "47780620"
  ジョブ転送タスクでは、転送されたジョブの数を報告する情報イベントと、ジョブが上書きされた場合の警告イベントが発生します。 ジョブの転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- タスクの **ExecutionValue** プロパティで定義される実行値は、転送されたジョブの数を返します。 ジョブ転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、パッケージの他のオブジェクトからジョブの転送に関する情報を使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ タスクの **ExecutionValue** プロパティで定義される実行値は、転送されたジョブの数を返します。 ジョブ転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、パッケージの他のオブジェクトからジョブの転送に関する情報を使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  ジョブ転送タスクには、次のようなカスタム ログ エントリがあります。  
@@ -74,7 +74,7 @@ ms.locfileid: "47780620"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-jobs-task-editor-general-page"></a>[ジョブ転送タスク エディター] ([全般] ページ)
   **[ジョブ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ジョブ転送タスクの名前と説明を入力できます。  

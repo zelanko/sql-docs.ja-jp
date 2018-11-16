@@ -15,12 +15,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03f8fe59c2c78c1687d36ab31df6321bda9a6ba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b79ca6af9b0ccea0dfb1fe66b73f33cc8b9cd062
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728680"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639249"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する
   このトピックの手順では、Foreach ループ コンテナーと適切な列挙子を使用して、フォルダー内の Excel ブックまたは Excel ブック内のテーブルをループ処理する方法について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "47728680"
   
      Extended Properties 引数の値を格納している変数を使用しない場合は、接続文字列を含む式に引数の値を手動で追加する必要があります。  
   
-3.  Foreach ループ コンテナーを **[制御フロー]** タブに追加します。Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
+3.  Foreach ループ コンテナーを **[制御フロー]** タブに追加します。Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
 4.  **[Foreach ループ エディター]** の **[コレクション]** ページで [Foreach File 列挙子] を選択し、Excel ブックが存在するフォルダーを指定して、ファイル フィルター (通常は *.xlsx) を指定します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47728680"
   
 6.  **[Foreach ループ エディター]** を閉じます。  
   
-7.  「 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) の説明に従って、Excel 接続マネージャーをパッケージに追加します。 接続時に検証エラーが発生しないように、既存の Excel ブック ファイルを選択してください。  
+7.  「 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) の説明に従って、Excel 接続マネージャーをパッケージに追加します。 接続時に検証エラーが発生しないように、既存の Excel ブック ファイルを選択してください。  
   
     > [!IMPORTANT]  
     >  この Excel 接続マネージャーを使用するデータ フロー コンポーネントとタスクを構成する際、検証エラーが発生しないようにするには、 **[Excel 接続マネージャー]** で既存の Excel ブックを選択します。 以下の手順に従って **ConnectionString** プロパティ用の式を構成した後は、接続マネージャーは実行時にこのブックを使用しなくなります。 パッケージを作成して構成したら、[プロパティ] ウィンドウで **ConnectionString** プロパティの値を削除することができます。 ただし、この値を削除すると、Excel 接続マネージャーの接続文字列プロパティは Foreach ループが実行されるまで無効になります。 したがって、接続マネージャーを使用するタスクまたはパッケージでは、検証エラーが発生しないように、 **DelayValidation** プロパティを **True** に設定してください。  
@@ -73,11 +73,11 @@ ms.locfileid: "47728680"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET Schema Rowset 列挙子を使用して Excel テーブルをループ処理するには  
   
-1.  Microsoft ACE OLE DB Provider を使用して Excel ブックに接続する ADO.NET 接続マネージャーを作成します。 **[接続マネージャー]** ダイアログ ボックスの [すべて] ページで、Extended Properties プロパティの値として Excel のバージョン (ここでは、Excel 12.0) を入力します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
+1.  Microsoft ACE OLE DB Provider を使用して Excel ブックに接続する ADO.NET 接続マネージャーを作成します。 **[接続マネージャー]** ダイアログ ボックスの [すべて] ページで、Extended Properties プロパティの値として Excel のバージョン (ここでは、Excel 12.0) を入力します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
   
 2.  ループの反復ごとに現在のテーブルの名前を受け取る文字列変数を作成します。  
   
-3.  Foreach ループ コンテナーを **[制御フロー]** タブに追加します。Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
+3.  Foreach ループ コンテナーを **[制御フロー]** タブに追加します。Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
 4.  **[Foreach ループ エディター]** の **[コレクション]** ページで、Foreach ADO.NET Schema Rowset 列挙子を選択します。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47728680"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../load-data-to-from-excel-with-ssis.md)  
- [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [プロパティ式を追加または変更する](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel 接続マネージャー](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel ソース](../../integration-services/data-flow/excel-source.md)   

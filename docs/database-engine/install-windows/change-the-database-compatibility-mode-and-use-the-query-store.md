@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2c5aa5be950aa9596af1523a53665514a8b7f6c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754920"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606772"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>データベース互換性レベルの変更とクエリ ストアの使用
 
@@ -39,7 +39,7 @@ ms.locfileid: "47754920"
 > - tempdb、model、msdb、および Resource データベースの互換性レベルは、アップグレード後に現在の互換性レベルに設定されます。   
 > - master システム データベースは、アップグレード前の互換性レベルを保持します。    
   
-新しいクエリ プロセッサの機能を有効にするためのアップグレード プロセスは、製品のリリース後のサービス モデルに関連付けられます。  それらの修正プログラムの一部は、[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) でリリースされます。  修正プログラムを必要とするユーザーは、他のユーザーにとって予期しない回帰を引き起こすことなくそれらの修正プログラムを適用できます。 クエリ プロセッサの修正プログラムのリリース後のサービス モデルは、 [ここ](http://support.microsoft.com/kb/974006)に記載されています。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、新しい互換性レベルに移行した場合、トレース フラグ 4199 は不要になります。これは、それらの修正プログラムは最新の互換レベルで既定で有効になっているためです。 そのため、アップグレード プロセスの一環として、アップグレード プロセスが完了したら、4199 が無効になっていることを検証することが重要です。  
+新しいクエリ プロセッサの機能を有効にするためのアップグレード プロセスは、製品のリリース後のサービス モデルに関連付けられます。  それらの修正プログラムの一部は、[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) でリリースされます。  修正プログラムを必要とするユーザーは、他のユーザーにとって予期しない回帰を引き起こすことなくそれらの修正プログラムを適用できます。 クエリ プロセッサの修正プログラムのリリース後のサービス モデルは、 [ここ](https://support.microsoft.com/kb/974006)に記載されています。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、新しい互換性レベルに移行した場合、トレース フラグ 4199 は不要になります。これは、それらの修正プログラムは最新の互換レベルで既定で有効になっているためです。 そのため、アップグレード プロセスの一環として、アップグレード プロセスが完了したら、4199 が無効になっていることを検証することが重要です。  
 
 > [!NOTE]
 > ただし、RTM の後にリリースされた新しいクエリ プロセッサの修正プログラムを有効にするためには (該当する場合)、トレース フラグ 4199 が必要です。

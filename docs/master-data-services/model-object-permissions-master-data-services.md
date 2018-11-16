@@ -15,12 +15,12 @@ ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9d2289a199ec54eacb42a5fce175f91872ab8133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ed9891af2905f8f45716c64b5f3ed9ac241905
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848870"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700407"
 ---
 # <a name="model-object-permissions-master-data-services"></a>モデル オブジェクト権限 (Master Data Services)
 
@@ -42,11 +42,11 @@ ms.locfileid: "47848870"
  一般に、 **すべての** 権限をモデル オブジェクトに割り当てた後、その下にあるオブジェクトに権限を明示的に割り当てる必要があります。  
   
 ## <a name="external-resources"></a>外部リソース  
- msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](http://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
+ msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [モデル アクセス許可 (マスター データ サービス)](../master-data-services/model-permissions-master-data-services.md)   
+ [モデル権限 (マスター データ サービス)](../master-data-services/model-permissions-master-data-services.md)   
  [機能領域アクセス許可 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)   
  [階層メンバーの権限 (マスター データ サービス)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)  

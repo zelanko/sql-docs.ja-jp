@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c319172feafb550ff79f8af1361c0b82f45bcff8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 058272ca68136c3a1f00a20ef3036c5c9704c659
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633080"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602542"
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep を使用して SQL Server をインストールする
 
@@ -36,7 +36,7 @@ ms.locfileid: "47633080"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションおよびハードウェアとソフトウェアの要件について詳しくは、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」をご覧ください。 
     
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep クラスター サポート  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降、SysPrep は、コマンド ラインからのインストールでクラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをサポートしています。 詳細については、「 [Sysprep とは](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)」を参照してください。 
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降、SysPrep は、コマンド ラインからのインストールでクラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをサポートしています。 詳細については、「 [Sysprep とは](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)」を参照してください。 
   
 ### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターを準備するには (自動実行)  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47633080"
   
 11. **[サーバーの構成 - サービス アカウント]** ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 
   
-     すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 サービスを自動的に開始するか、手動で開始するか、または無効にするかを指定することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、各サービスに最小の権限を与えるためにはサービス アカウントを個別に構成することをお勧めします。サービス アカウントを個別に構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスには、サービスでのタスクの実行に必要な最小権限が付与されます。 詳細については、「 [サーバー構成 - サービス アカウント](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 」および「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 
+     すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 サービスを自動的に開始するか、手動で開始するか、または無効にするかを指定することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、各サービスに最小の権限を与えるためにはサービス アカウントを個別に構成することをお勧めします。サービス アカウントを個別に構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスには、サービスでのタスクの実行に必要な最小権限が付与されます。 詳細については、「 [サーバー構成 - サービス アカウント](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 」および「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのインスタンスに含まれるすべてのサービス アカウントに同じログオン アカウントを指定する場合は、ページの下部にあるフィールドに資格情報を指定します。 
   
@@ -183,15 +183,15 @@ ms.locfileid: "47633080"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]** をクリックします。 
   
-12. **[サーバーの構成 - 照合順序]** タブを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に既定以外の照合順序を指定します。 詳細については、「 [サーバー構成 - 照会順序](http://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)」を参照してください。 
+12. **[サーバーの構成 - 照合順序]** タブを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に既定以外の照合順序を指定します。 詳細については、「 [サーバー構成 - 照会順序](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)」を参照してください。 
   
 13. [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - アカウントの準備] ページを使用して、次の項目を指定します。  
   
     - セキュリティ モード: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。 
   
-         デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、「 [データベース エンジンの構成 - サーバー構成](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)」を参照してください。 
+         デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、「 [データベース エンジンの構成 - サーバー構成](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)」を参照してください。 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、「 [データベース エンジンの構成 - サーバー構成](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)」を参照してください。 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、「 [データベース エンジンの構成 - サーバー構成](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)」を参照してください。 
   
      一覧の編集が完了したら、 **[OK]** をクリックします。 構成ダイアログ ボックスの管理者の一覧を確認します。 一覧が完成したら、 **[次へ]** をクリックします。 
   
@@ -200,11 +200,11 @@ ms.locfileid: "47633080"
     > [!IMPORTANT]  
     >  既定以外のインストール ディレクトリを指定する場合は、インストール フォルダーがこの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 
   
-     詳細については、「 [データベース エンジンの構成 - データ ディレクトリ](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)」を参照してください。 
+     詳細については、「 [データベース エンジンの構成 - データ ディレクトリ](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)」を参照してください。 
   
-15. [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - FILESTREAM] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対する FILESTREAM を有効にします。 詳細については、「 [データベース エンジンの構成 - Filestream](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)」を参照してください。 
+15. [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - FILESTREAM] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対する FILESTREAM を有効にします。 詳細については、「 [データベース エンジンの構成 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)」を参照してください。 
   
-16. 作成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールの種類を指定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [の構成] ページを使用します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成モードの詳細については、「[Reporting Services 構成オプション &#40;SSRS&#41;](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391)」を参照してください。 
+16. 作成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールの種類を指定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [の構成] ページを使用します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成モードの詳細については、「[Reporting Services 構成オプション &#40;SSRS&#41;](https://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391)」を参照してください。 
   
 17. **[エラー レポート]** ページで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] に送信する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の機能向上に役立つ情報を指定します。 既定では、エラー レポートのオプションは有効になっています。 
   
@@ -306,7 +306,7 @@ ms.locfileid: "47633080"
 - [SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>参照  
- [Sysprep とは](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Sysprep のしくみ](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [Sysprep とは](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Sysprep のしくみ](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

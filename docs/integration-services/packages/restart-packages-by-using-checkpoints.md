@@ -15,12 +15,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1f3cf329f879398344ec67090c31ff1d07a1a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efe373af865e815a71bb9377e2e7f35527f208b4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703200"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637739"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、失敗したパッケージ全体を再実行する代わりに、失敗した時点から再開することができます。 パッケージがチェックポイントを使用するように設定されている場合、パッケージの実行に関する情報がチェックポイント ファイルに書き込まれます。 失敗したパッケージを再実行する場合、チェックポイント ファイルを使用して、失敗した時点からパッケージを再開します。 パッケージの実行が成功するとチェックポイント ファイルは削除され、次にパッケージが実行されるときに再度作成されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "47703200"
 > [!NOTE]  
 >  同じパッケージでチェックポイントとトランザクションを使用すると、予期しない結果が生じる可能性があります。 たとえば、パッケージが失敗してチェックポイントから再開した場合、既に正常にコミットされているトランザクションがパッケージで繰り返し実行される可能性があります。  
   
- チェックポイント データは、For ループ コンテナーおよび Foreach ループ コンテナーには保存されません。 パッケージが再開されると、For ループ コンテナーおよび Foreach ループ コンテナーと、子コンテナーが再実行されます。 ループ内の子コンテナーの実行が成功してもチェックポイント ファイルには記録されないため、子コンテナーは再実行されます。 詳細情報および回避策については、「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](http://go.microsoft.com/fwlink/?LinkId=241633)」を参照してください。  
+ チェックポイント データは、For ループ コンテナーおよび Foreach ループ コンテナーには保存されません。 パッケージが再開されると、For ループ コンテナーおよび Foreach ループ コンテナーと、子コンテナーが再実行されます。 ループ内の子コンテナーの実行が成功してもチェックポイント ファイルには記録されないため、子コンテナーは再実行されます。 詳細情報および回避策については、「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](https://go.microsoft.com/fwlink/?LinkId=241633)」を参照してください。  
   
  パッケージの再開時にはパッケージの構成が再読み込みされず、チェックポイント ファイルに書き込まれた構成情報が代わりに使用されます。 これによって、確実に、パッケージが失敗した時点と同じ構成を使用してパッケージが再実行されます。  
   
@@ -113,6 +113,6 @@ ms.locfileid: "47703200"
     
 ## <a name="external-resources"></a>外部リソース  
   
--   social.technet.microsoft.com の技術資料「 [フェールオーバーまたはエラー後の SSIS パッケージの自動再起動](http://go.microsoft.com/fwlink/?LinkId=200407)」  
+-   social.technet.microsoft.com の技術資料「 [フェールオーバーまたはエラー後の SSIS パッケージの自動再起動](https://go.microsoft.com/fwlink/?LinkId=200407)」  
   
--   support.microsoft.com のサポート技術情報の記事「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](http://go.microsoft.com/fwlink/?LinkId=241633)」  
+-   support.microsoft.com のサポート技術情報の記事「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](https://go.microsoft.com/fwlink/?LinkId=241633)」  

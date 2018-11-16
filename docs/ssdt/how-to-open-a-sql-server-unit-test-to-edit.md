@@ -11,17 +11,17 @@ ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 480f5c487c5fb8f9db9f1db61dd7b4126b6c8bb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c1f46ea807e7f51c92df16f7dfc21cfe49ad6bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787430"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659066"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>SQL Server の単体テストを開いて編集する方法
 SQL Server の単体テストを作成したら、**SQL Server 単体テスト デザイナー**を使用して Transact\-SQL ステートメントおよびテスト条件を追加します。 このデザイナーを使用して作成されたテストでは、Visual C# コードまたは Visual Basic コードが生成されます。 このコードが、テストの実行時に実行されます。  
   
-作成されたテストで問題ない場合は、テストをそのまま実行できます。 この単体テストにさらに機能を追加する場合は、テストのコードを編集できます。 このコードは、テスト プロジェクト内の .cs ファイルまたは .vb ファイルにあります。 詳しくは、「[SQL Server の単体テストのファイル](../ssdt/sql-server-unit-test-files.md)」をご覧ください。 また、新しいテスト条件を作成して、テストをカスタマイズすることもできます。 詳しくは、「[方法: データベース単体テスト デザイナーのテスト条件を作成する (Visual Studio 2010)](http://msdn.microsoft.com/library/aa833409(VS.100).aspx)」をご覧ください。  
+作成されたテストで問題ない場合は、テストをそのまま実行できます。 この単体テストにさらに機能を追加する場合は、テストのコードを編集できます。 このコードは、テスト プロジェクト内の .cs ファイルまたは .vb ファイルにあります。 詳しくは、「[SQL Server の単体テストのファイル](../ssdt/sql-server-unit-test-files.md)」をご覧ください。 また、新しいテスト条件を作成して、テストをカスタマイズすることもできます。 詳しくは、「[方法: データベース単体テスト デザイナーのテスト条件を作成する (Visual Studio 2010)](https://msdn.microsoft.com/library/aa833409(VS.100).aspx)」をご覧ください。  
   
 > [!NOTE]  
 > .cs ファイルまたは .vb ファイルを編集してテスト メソッドを削除しても、そのテスト メソッドは **SQL Server 単体テスト デザイナー**に表示されたままです。 これは、テスト クラスの InitializeComponent メソッドにそのテストのメンバー変数が残っていることが原因です。 テストは、デザイナーには表示されますが、そのコードは既に存在しないため、実行することはできません。 このテストのテスト メソッドを再生成するには、エディターで Transact\-SQL を編集した後、.cs テスト ファイルまたは .vb テスト ファイルを保存するか、テスト プロジェクトをビルドし直してください。  

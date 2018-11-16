@@ -15,22 +15,22 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 707ab28617129f16bd3e3bbf142349dcba6ff49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684880"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665741"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   ここでは、マージ レプリケーション用に Web 同期を構成する 2 番目の手順を説明します。 この手順は、Web 同期用にパブリケーションを有効にした後に実行します。 構成プロセスの概要については、「 [[Web 同期の構成]](../../relational-databases/replication/configure-web-synchronization.md)」を参照してください。 ここでの手順を完了したら、続いて、Web 同期が使用されるようにサブスクリプションを構成する 3 番目の手順を実行してください。 3 番目の手順については、次のトピックで説明します。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期が使用されるようにサブスクリプションを構成する方法 \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期が使用されるようにサブスクリプションを構成する方法 \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   レプリケーション [!INCLUDE[tsql](../../includes/tsql-md.md)] プログラミング: [Web 同期を使用するようにサブスクリプションを構成する方法 (レプリケーション Transact-SQL プログラミング)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   レプリケーション [!INCLUDE[tsql](../../includes/tsql-md.md)] プログラミング: [Web 同期を使用するようにサブスクリプションを構成する方法 (レプリケーション Transact-SQL プログラミング)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Web 同期を使用するようにサブスクリプションを構成する方法 (RMO プログラミング)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Web 同期を使用するようにサブスクリプションを構成する方法 (RMO プログラミング)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Web 同期では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行するコンピューターを使用して、プル サブスクリプションをマージ パブリケーションに同期します。 IIS バージョン 5.0、IIS バージョン 6.0、および IIS バージョン 7.0 がサポートされます。 IIS 7.0 では、Web 同期の構成ウィザードはサポートされていません。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47684880"
   
 4.  **[OK]** をクリックします。  
   
- CA からサーバー証明書を取得できない場合は、テスト用に証明書を指定できます。 テスト用に IIS 6.0 を構成するには、SelfSSL ユーティリティを使用して証明書をインストールします。 このユーティリティは、IIS 6.0 リソース キットで使用できます。 ツールは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=30958)からダウンロードできます。 IIS 5.0 の場合は、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkId=46229)を参照してください。  
+ CA からサーバー証明書を取得できない場合は、テスト用に証明書を指定できます。 テスト用に IIS 6.0 を構成するには、SelfSSL ユーティリティを使用して証明書をインストールします。 このユーティリティは、IIS 6.0 リソース キットで使用できます。 ツールは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=30958)からダウンロードできます。 IIS 5.0 の場合は、 [Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink/?LinkId=46229)を参照してください。  
   
 > [!NOTE]  
 >  Web サイトで SSL を使用できるようにするには、事前に証明書を Web サイトに関連付ける必要があります。 SelfSSL を使用すると、証明書が既定の Web サイトに自動的に関連付けられます。 既に証明書を保有しているか、または後で CA から証明書をインストールする場合は、証明書を Web 同期で使用する Web サイトと明示的に関連付ける必要があります。 サブスクリプションの同期に使用する Web サイトに関連付けられた証明書が 1 つしか存在しないことを確認します。 複数の証明書が存在する場合、サブスクライバーは使用可能な最初の Web サイトを使用します。  

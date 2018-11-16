@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9939a049b8157b1a9d1aa127cbab18629bc0af03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616301"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696810"
 ---
 # <a name="transactions-sql-data-warehouse"></a>トランザクション (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  各ステートメントが、独自のトランザクションで実行して、COMMIT または ROLLBACK の明示的なステートメントは必要ありません。 明示的なトランザクションは、自動コミットが ON の場合は許可します。  
   
  OFF  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、トランザクションがまだ開始されていない場合、自動的にトランザクションを開始します。 すべての後続のステートメントは、トランザクションの一部として実行して、コミットまたはロールバックには、トランザクションの結果を特定する必要があります。 この操作モードでトランザクションがコミットまたはロールバックするとすぐに、モードは OFF のまま、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] によって新しいトランザクションを開始されます。 明示的なトランザクションでは、自動コミットが OFF の場合は使用できません。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 自動的にトランザクションが既に進行中にない場合は、トランザクションを開始します。 すべての後続のステートメントは、トランザクションの一部として実行して、コミットまたはロールバックには、トランザクションの結果を特定する必要があります。 モードは、OFF のままトランザクションがコミットまたはロールバックの操作には、このモードでは、すぐと [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 新しいトランザクションを開始します。 明示的なトランザクションでは、自動コミットが OFF の場合は使用できません。  
   
  アクティブなトランザクション内での自動コミット設定を変更する場合、設定は、現在のトランザクションには影響しに影響を受け取らない場合、トランザクションが完了するまでします。  
   
@@ -77,14 +77,14 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  トランザクションの中に進行状況は、BEGIN TRANSACTION が実行される場合は、エラーが発生します。 これは、ような状況は、成功の BEGIN TRANSACTION ステートメントの後、またはセッションが自動コミット オフの設定の下にある場合、BEGIN TRANSACTION が発生した場合に発生します。  
   
- ステートメントの実行時エラー以外のエラーによりトランザクションを正常に完了できない場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] によってトランザクションが自動的にロールバックされ、そのトランザクションで保持されていたすべてのリソースが解放されます。 たとえば、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のインスタンスへのクライアントのネットワーク接続が切断された場合、またはクライアントがアプリケーションからログオフした場合、ネットワークからインスタンスにこの切断が通知されると、その接続に対する未処理のトランザクションがすべてロールバックされます。  
+ ステートメントの実行時エラー以外のエラーが原因で、明示的なトランザクションが正常に完了場合 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 自動的にトランザクションをロールバックし、トランザクションで保持されているすべてのリソースを解放します。 たとえば、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のインスタンスへのクライアントのネットワーク接続が切断された場合、またはクライアントがアプリケーションからログオフした場合、ネットワークからインスタンスにこの切断が通知されると、その接続に対する未処理のトランザクションがすべてロールバックされます。  
   
- バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は **ON** に設定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx)」を参照してください。  
+ バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は **ON** に設定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)」を参照してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  セッションでは 1 つのトランザクションを特定の時点でのみ実行できます。保存のポイントと入れ子になったトランザクションはサポートされていません。  
   
- [!INCLUDE[DWsql](../../includes/dwsql-md.md)] のプログラマは、トランザクションで参照されるすべてのデータが論理的に正しいことを確認したうえで COMMIT を実行する必要があります。  
+ 役割です、 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 、トランザクションですべてのデータが参照されている場合、ポイントでのみ COMMIT を発行するのプログラマが論理的に正しい。  
   
  セッションが終了すると、トランザクションが完了する前に、トランザクションがロールバックされます。  
   
@@ -98,7 +98,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] にはトランザクションの共有メカニズムはありません。 これは、ことで、特定の時点におけるセッションの 1 つだけことができますに行う任意のトランザクションに対する作業システムのことを意味します。  
   
 ## <a name="locking-behavior"></a>ロック動作  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、複数のユーザーが同時にアクセスしたときにトランザクションの整合性を保証し、データベースの一貫性を保つため、ロックを使用します。 ロックは、暗黙的および明示的なトランザクションで使用されます。 各トランザクションでは、テーブルや、トランザクションが依存しているデータベースなどのリソース上で異なる種類のロックを要求します。 すべての [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ロックはテーブル レベル以上です。 ロックをかけると、ロックを要求したトランザクションにとって問題になるようなリソースの変更が行われないように、他のトランザクションがブロックされます。 各トランザクションは、ロックされたリソースの依存関係が不要になったがあるロックを解放します。明示的なトランザクションは、それがコミットまたはロールバック時に、トランザクションが完了するまで、ロックを保持します。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 使用がロックをトランザクションの整合性を確保し、複数のユーザーが同時にデータをアクセスする場合は、データベースの整合性を維持します。 ロックは、暗黙的および明示的なトランザクションで使用されます。 各トランザクションでは、テーブルや、トランザクションが依存しているデータベースなどのリソース上で異なる種類のロックを要求します。 すべて [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ロックにはレベル以上のテーブルです。 ロックをかけると、ロックを要求したトランザクションにとって問題になるようなリソースの変更が行われないように、他のトランザクションがブロックされます。 各トランザクションは、ロックされたリソースの依存関係が不要になったがあるロックを解放します。明示的なトランザクションは、それがコミットまたはロールバック時に、トランザクションが完了するまで、ロックを保持します。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -129,7 +129,7 @@ ROLLBACK;
 SET AUTOCOMMIT ON;  
 ```  
   
- 次の例では、自動コミット設定を `OFF` に設定します。  
+ 次の例では、自動コミット設定を設定 `OFF`です。  
   
 ```  
 SET AUTOCOMMIT OFF;  

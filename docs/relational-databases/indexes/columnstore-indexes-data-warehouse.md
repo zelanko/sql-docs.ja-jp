@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce0d82f3c1808f96ce07c949f05cbadaed1cf248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659137"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672621"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列ストア インデックス - データ ウェアハウス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>スナップショット分離と Read Committed スナップショット分離  
- 列ストア インデックスのクエリに対し、トランザクションの一貫性を保証するにはスナップショット分離 (SI) を使用し、ステートメント レベルの一貫性を保証するには Read Committed スナップショット分離 (RCSI) を使用します。 これにより、データ ライターをブロックすることなくクエリを実行できるようになります。 この非ブロッキング動作によって、複雑なトランザクションがデッドロックする可能性も大幅に減少します。 詳細については、MSDN の「 [SQL Server でのスナップショット分離](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 」を参照してください。  
+ 列ストア インデックスのクエリに対し、トランザクションの一貫性を保証するにはスナップショット分離 (SI) を使用し、ステートメント レベルの一貫性を保証するには Read Committed スナップショット分離 (RCSI) を使用します。 これにより、データ ライターをブロックすることなくクエリを実行できるようになります。 この非ブロッキング動作によって、複雑なトランザクションがデッドロックする可能性も大幅に減少します。 詳細については、MSDN の「 [SQL Server でのスナップショット分離](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [列ストア インデックスの設計ガイダンス](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

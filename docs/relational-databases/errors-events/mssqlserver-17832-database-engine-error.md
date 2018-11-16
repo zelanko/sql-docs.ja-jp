@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6431ccfaff9cf9b78a257db3908edc7134904a51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bf4143ad0d446e526a72ad32b45d4397933827c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664260"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657212"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Kerberos 環境で Windows 認証を使用する場合、クライアントは�
   
 トークンが正しく作成されなかったか、転送中に破損した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は問題に関する追加情報を提供できません。  
   
-ユーザーが多数のグループのメンバーであるか、多数のポリシーを持つ場合、それらすべてを一覧表示するトークンは通常よりも大きくなる可能性があります。 トークンがサーバー コンピューターの **MaxTokenSize** 値よりも大きくなると、クライアントは一般的なネットワーク エラー (GNE) によって接続に失敗し、エラー 17832 が発生することがあります。 この問題は、多数のグループに属しているか、多数のポリシーを持つ一部のユーザーのみに影響します。 問題の原因がサーバー コンピューターの **MaxTokenSize** 値である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログのエラー 17832 は、状態 9 のエラーを伴います。 Kerberos および **MaxTokenSize** の詳細については、[KB327825](http://support.microsoft.com/kb/327825) を参照してください。  
+ユーザーが多数のグループのメンバーであるか、多数のポリシーを持つ場合、それらすべてを一覧表示するトークンは通常よりも大きくなる可能性があります。 トークンがサーバー コンピューターの **MaxTokenSize** 値よりも大きくなると、クライアントは一般的なネットワーク エラー (GNE) によって接続に失敗し、エラー 17832 が発生することがあります。 この問題は、多数のグループに属しているか、多数のポリシーを持つ一部のユーザーのみに影響します。 問題の原因がサーバー コンピューターの **MaxTokenSize** 値である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログのエラー 17832 は、状態 9 のエラーを伴います。 Kerberos および **MaxTokenSize** の詳細については、[KB327825](https://support.microsoft.com/kb/327825) を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 この問題を解決するには、サーバー コンピューターの **MaxTokenSize** 値を、組織内のユーザーの最も大きなトークンを格納できるサイズに増やします。 組織に適したトークン サイズを調べるには、**Tokensz** アプリケーションの使用を検討してください。  

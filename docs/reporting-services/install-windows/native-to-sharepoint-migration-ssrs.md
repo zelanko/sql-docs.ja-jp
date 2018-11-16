@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d413485fc85b0599921524e339a900a5067f496c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 620b936f976bca27ba1bb0c95e8b882d589e77d7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029251"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814035"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50029251"
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 移行ツール  
  このツールでは、ネイティブ モードの配置から SharePoint モードの配置へのコンテンツの移行がサポートされます。 SharePoint モードから SharePoint モードまたは SharePoint モードからネイティブ モードへの移行はサポートされません。  
   
- 詳細については、「[Reporting Services 移行ツール](http://www.microsoft.com/download/details.aspx?id=29560)」(http://www.microsoft.com/download/details.aspx?id=29560) を参照してください。  
+ 詳細については、「[Reporting Services 移行ツール](https://www.microsoft.com/download/details.aspx?id=29560)」(https://www.microsoft.com/download/details.aspx?id=29560) を参照してください。  
   
 ## <a name="use-script-to-migrate-content"></a>スクリプトを使用したコンテンツの移行  
  移行ツールが目的に合わない場合は、レポート サーバー データを手動で移行できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 間でのレポート アイテムの移行を完了するための手順の概要を次に示します。 この方法では、移行元サーバーまたは移行先サーバーとしてネイティブ モードまたは SharePoint モードをサポートしています。  
@@ -34,7 +34,7 @@ ms.locfileid: "50029251"
   
     -   [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 このトピックでは、CodePlex からダウンロードできるサンプル スクリプトの使用方法について説明します。  
   
-    -   CodePlex にあるサンプル RSS スクリプト ( [レポート サーバー間でコンテンツを移行する Reporting Services RS.exe スクリプト](http://azuresql.codeplex.com/releases/view/115207))。  
+    -   CodePlex にあるサンプル RSS スクリプト ( [レポート サーバー間でコンテンツを移行する Reporting Services RS.exe スクリプト](https://azuresql.codeplex.com/releases/view/115207))。  
   
     -   [Reporting Services を使ったスクリプトの作成と PowerShell](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26de643bf01e9ebffca01ff5b1f8aeecc38b7c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741260"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814065"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>レポート サーバーの複数インスタンス配置における URL 予約
   同じコンピューターに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の複数のインスタンスをインストールする場合は、インスタンスごとに URL 予約を定義する方法を検討する必要があります。 各インスタンス内のレポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] には、それぞれ 1 つ以上の URL 予約が必要です。 予約はすべて、HTTP.SYS 内で一意にする必要があります。  
@@ -26,8 +26,8 @@ ms.locfileid: "47741260"
   
 |SQL Server インスタンス|既定の URL 予約|  
 |-------------------------|-----------------------------|  
-|既定 (MSSQLServer)|`http://+:80/reportserver`|  
-|名前付き (MynamedInstance)|`http://+:80/reportserver_MyNamedInstance`|  
+|既定 (MSSQLServer)|`https://+:80/reportserver`|  
+|名前付き (MynamedInstance)|`https://+:80/reportserver_MyNamedInstance`|  
   
  名前付きインスタンスの場合は、仮想ディレクトリにインスタンス名が含まれます。 既定のインスタンスと名前付きインスタンスは同じポートでリッスンしますが、一意の仮想ディレクトリ名によって、どちらのレポート サーバーが要求を受け取るかが決定されます。  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47741260"
   
 |既定のレポート サーバー インスタンス (MSSQLSERVER)|ReportServer_MyNamedInstance|一意性|  
 |----------------------------------------------------|-----------------------------------|----------------|  
-|`http://+:80/reportserver`|`http://+:8888/reportserver`|各インスタンスが、別々のポートでリッスンします。|  
-|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|各インスタンスが、別々のサーバー名 (完全修飾ドメイン名およびコンピューター名) に応答します。|  
+|`https://+:80/reportserver`|`https://+:8888/reportserver`|各インスタンスが、別々のポートでリッスンします。|  
+|`https://www.contoso.com/reportserver`|`https://SRVR-46/reportserver`|各インスタンスが、別々のサーバー名 (完全修飾ドメイン名およびコンピューター名) に応答します。|  
   
 ## <a name="uniqueness-requirements"></a>一意性の要件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の基になるテクノロジには、一意の名前に関する要件があります。 HTTP.SYS のリポジトリ内の URL はすべて一意にする必要があります。 URL は、ポート、ホスト名、または仮想ディレクトリ名を変えることで一意にできます。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、同一プロセス内の各アプリケーション ID が一意である必要があります。 この要件は、仮想ディレクトリ名に影響します。 この要件では、同一レポート サーバー インスタンス内では重複する仮想ディレクトリ名を使用できないことが規定されています。  

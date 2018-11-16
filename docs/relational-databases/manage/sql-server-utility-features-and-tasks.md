@@ -18,12 +18,12 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47a917fc622bd8be46dd798b9adc787ad6a51e34
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 60099ea8f029f8e1b6687a1d69e12cb76f520c61
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030970"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656562"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server ユーティリティの機能とタスク
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51030970"
 |SQL Server のマネージド インスタンスでユーティリティ コレクション セットのプロキシ アカウントを変更する方法について説明します。|[SQL Server のマネージド インスタンスにおけるユーティリティ コレクション セットのプロキシ アカウントの変更 &amp;amp;#40;SQL Server ユーティリティ&amp;amp;#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |SQL Server のインスタンス間で UCP を移動する方法について説明します。|[SQL Server のインスタンス間での UCP の移動 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |UCP を削除する方法について説明します。|[ユーティリティ コントロール ポイントの削除 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|SQL Server ユーティリティのトラブルシューティングの方法について説明します。|[SQL Server ユーティリティのトラブルシューティング](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|SQL Server ユーティリティのトラブルシューティングの方法について説明します。|[SQL Server ユーティリティのトラブルシューティング](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
 |SQL Server リソース正常性をトラブルシューティングする方法について説明します。|[SQL Server のリソース正常性のトラブルシューティング &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |ユーティリティ エクスプローラーの F1 ヘルプ トピックを紹介します。|[ユーティリティ エクスプローラーの F1 ヘルプ](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   

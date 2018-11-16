@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c63400444157afbd481221797934259569dad976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0042c2f040304de461f50d1a2297e023e527f410
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766760"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698140"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>マスター サーバーへの対象サーバーの参加
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47766760"
   
 #### <a name="to-enlist-a-target-server"></a>対象サーバーを参加させるには  
   
-1.  **sp_msx_enlist** ストアド プロシージャを使用します。  詳細については、「 [sp_msx_enlist (Transact-SQL)](http://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)」を参照してください。  
+1.  **sp_msx_enlist** ストアド プロシージャを使用します。  詳細については、「 [sp_msx_enlist (Transact-SQL)](https://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)  

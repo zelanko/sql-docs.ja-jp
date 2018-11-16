@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1fc511cdfd383979ba3bcecd782ed4b481d6260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83ec1aecfa57651ce206881fb66f3cae6a226603
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817410"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813815"
 ---
 # <a name="url-access-ssrs"></a>URL アクセス (SSRS)
   SQL Server Reporting Services (SSRS) のレポート サーバーの URL アクセスにより、URL 要求を使用してレポート サーバーにコマンドを送信できます。 たとえば、ネイティブ モードのレポート サーバーや SharePoint ライブラリのレポートの表示をカスタマイズすることができます。 特定のレポート パラメーター値のセットを使用してレポートを表示したり、レポートの関心のある特定ページを表示することがあります。 この情報を、事前に定義された URL アクセス パラメーターを使用して URL にカプセル化することができます。 表示形式またはレポート ビューアーのルック アンド フィールのパラメーターを埋め込むことで、レポート サーバーによるレポートの処理方法をさらにカスタマイズできます。 その後、この URL を電子メールまたは Web ページに直接貼り付けて、他のユーザーがブラウザーから同じ方法でレポートにアクセスできるようにすることができます。  
@@ -59,14 +59,14 @@ reportpath
  レポート サーバーの Web サービスの URL。 ネイティブ モードでは、Reporting Services Configuration Manager に構成されているレポート サーバー インスタンスの Web サービスの URL です (「[レポート サーバー URL の構成 (SSRS 構成マネージャー)](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください)。 例 :  
   
 ```  
-http://myrshost/reportserver  
+https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
  SharePoint 統合モードでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に統合された SharePoint サイトの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]プロキシの URL です。 例 :  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver  
+https://myspsite/subsite/_vti_bin/reportserver  
 ```  
   
 > [!TIP]  
@@ -84,7 +84,7 @@ http://myspsite/subsite/_vti_bin/reportserver
  SharePoint 統合モードでは、アイテムの拡張子を含む、SharePoint ライブラリ内のアイテムの完全修飾 URL です。 例 :  
   
 ```  
-http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
+https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
 ```  
   
  **&**  
@@ -118,7 +118,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 ## <a name="see-also"></a>参照  
  [URL 内でレポート パラメーターを渡す](../reporting-services/pass-a-report-parameter-within-a-url.md)   
- [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)   
+ [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)   
  [URL アクセスを使用した Reporting Services の統合](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

@@ -19,12 +19,12 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 795eacbaacc5fca1cc3d51908a365986019543c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab41c2219ecc43988af30ad071dbea17a5c4f63e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664970"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638140"
 ---
 # <a name="multicast-transformation"></a>マルチキャスト変換
   マルチキャスト変換は、入力を 1 つ以上の出力に配信します。 この変換は条件分割変換と似ています。 いずれの変換も、1 つの入力を複数の出力に送信します。 この 2 つの変換の違いは、マルチキャスト変換は各行を各出力に送信するのに対し、条件分割変換は 1 行を単一の出力に送信する点です。 詳細については、「 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)」を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "47664970"
 ## <a name="configuration-of-the-multicast-transformation"></a>マルチキャスト変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
+ プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  

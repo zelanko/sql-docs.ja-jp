@@ -11,12 +11,12 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 901361948eec7ae24e580f3873a10064f7b9873d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82ac3a5bb3a18c83246a55c9fa6e2154de58dc6f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600470"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642039"
 ---
 # <a name="lesson-6-1---copying-the-lesson-5-package"></a>レッスン 6-1 - レッスン 5 のパッケージのコピー
 ここでは、レッスン 5 で作成した Lesson 5.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 5 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 6 の実習では、このパッケージの新しいコピーを使用します。  
@@ -53,7 +53,7 @@ ms.locfileid: "47600470"
   
     このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   
-    1.  「[Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   

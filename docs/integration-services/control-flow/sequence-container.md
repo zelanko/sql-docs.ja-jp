@@ -18,12 +18,12 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05b2b181a1495a36135fae1019bd464b5bb8a701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1d53e37f49341e022cc6c0b3e795b3f57c7108c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737710"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637939"
 ---
 # <a name="sequence-container"></a>シーケンス コンテナー
   シーケンス コンテナーは、パッケージ制御フローのサブセットである制御フローを定義します。 シーケンス コンテナーは、パッケージを複数の個別の制御フローにグループ化します。各制御フローには、パッケージ制御フロー全体の中で実行される、1 つ以上のタスクおよびコンテナーが含まれます。  
@@ -54,11 +54,11 @@ ms.locfileid: "47737710"
  プログラムによってこれらのプロパティを設定する方法の詳細については、開発者ガイドの **T:Microsoft.SqlServer.Dts.Runtime.Sequence** クラスのドキュメントを参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でコンポーネントのプロパティを設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でコンポーネントのプロパティを設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [既定の優先順位制約を使用してタスクとコンテナーを連結する](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
+ [既定の優先順位制約を使用してタスクとコンテナーを連結する](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
  [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)  
   
   

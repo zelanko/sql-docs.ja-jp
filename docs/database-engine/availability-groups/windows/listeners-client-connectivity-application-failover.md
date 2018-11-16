@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662190"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603572"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>リスナー、クライアント接続、アプリケーションのフェールオーバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662190"
  可用性グループ リスナーは、以下のものによって定義されます。  
   
  一意の DNS 名  
- これは仮想ネットワーク名 (VNN) とも呼ばれています。 DNS ホスト名に対する Active Directory の名前付け規則が適用されます。 詳細については、サポート技術情報の「 [Active Directory でのコンピューター、ドメイン、サイト、および OU の名前付け規則](http://support.microsoft.com/kb/909264) 」を参照してください。  
+ これは仮想ネットワーク名 (VNN) とも呼ばれています。 DNS ホスト名に対する Active Directory の名前付け規則が適用されます。 詳細については、サポート技術情報の「 [Active Directory でのコンピューター、ドメイン、サイト、および OU の名前付け規則](https://support.microsoft.com/kb/909264) 」を参照してください。  
   
  1 つ以上の仮想 IP アドレス (VIP)  
  VIP は、可用性グループがフェールオーバーする 1 つ以上のサブネットに対して構成されます。  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧のための Microsoft SQL Server Always On ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性と災害復旧のための Microsoft SQL Server Always On ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduction to the Availability Group Listener (可用性グループ リスナーの概要)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (SQL Server Always On チームのブログ)  
   
@@ -247,7 +247,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn クライアントの接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

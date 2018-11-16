@@ -14,12 +14,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cf94164dc30817d5454feb8e710bdc614a65a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48ea2d242c8ff1197c137b6f6e2cb2be745e0863
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673611"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659223"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>定義済みのレプリケーションの警告の構成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47673611"
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[警告]** フォルダーまたはレプリケーション モニターの **[警告]** タブからこれらの警告を構成できます。 このタブにアクセスする方法の詳細については、「[サブスクリプションの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)」をご覧ください。  
   
- これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、「[ユーザー定義イベントの作成](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)」をご覧ください。  
+ これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、「[ユーザー定義イベントの作成](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)」をご覧ください。  
   
 ### <a name="to-configure-a-predefined-replication-alert-in-management-studio"></a>Management Studio で定義済みのレプリケーションの警告を構成するには  
   

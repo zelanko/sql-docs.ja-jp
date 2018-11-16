@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 60db1fe9f00084ce95d94af131e72a14f1e3988e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: be1056992fea4b9b1ee7bcd0857ca566d67cab40
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021166"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813855"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)
 
@@ -79,7 +79,7 @@ ms.locfileid: "50021166"
   
 1.  ブラウザーを開きます。 サポートされているブラウザーやバージョンの詳細については、「 [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」(Reporting Services と Power View のブラウザー サポート) を参照してください。  
   
-2.  Web ブラウザーのアドレス バーに、Web ポータルの URL を入力します。 既定の URL は `http://<serverName>/reports`を使用するスキルを学ぶことができるその他のチュートリアルへお進みください。 Reporting Services 構成ツールを使用して、サーバー名と URL を確認できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用される URL の詳細については、「[レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください。  
+2.  Web ブラウザーのアドレス バーに、Web ポータルの URL を入力します。 既定の URL は `https://<serverName>/reports`を使用するスキルを学ぶことができるその他のチュートリアルへお進みください。 Reporting Services 構成ツールを使用して、サーバー名と URL を確認できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用される URL の詳細については、「[レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください。  
   
 3.  Web ポータルがブラウザー ウィンドウ内に表示されます。 最初のページは [ホーム] フォルダーです。 アクセス許可に応じて、最初のページにその他のフォルダー、レポートへのハイパーリンク、リソース ファイルなどが表示される場合もあります。 ツール バーに追加のボタンやコマンドが表示される場合もあります。  
   

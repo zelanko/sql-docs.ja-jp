@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6bba11fe5be282ad804fc6dee03229312ec1d37
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: e3eae62b963843c369731ca0abd800c9552c37d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970914"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698824"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char および varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50970914"
 > [!div class="nextstepaction"]
 > [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-固定長 (**char**)、または可変長 (**varchar**) の文字データ型です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、UTF-8 が有効になっている照合順序を使用する場合、これらのデータ型には [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 文字データの全範囲が格納され、[UTF-8](http://www.wikipedia.org/wiki/UTF-8) 文字エンコードが使用されます。 UTF-8 が無効の照合順序を指定する場合、これらのデータ型には、対応するその照合順序のコード ページでサポートされている文字のサブセットのみが格納されます。
+固定長 (**char**)、または可変長 (**varchar**) の文字データ型です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、UTF-8 が有効になっている照合順序を使用する場合、これらのデータ型には [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 文字データの全範囲が格納され、[UTF-8](https://www.wikipedia.org/wiki/UTF-8) 文字エンコードが使用されます。 UTF-8 が無効の照合順序を指定する場合、これらのデータ型には、対応するその照合順序のコード ページでサポートされている文字のサブセットのみが格納されます。
   
 ## <a name="arguments"></a>引数  
 **char** [ ( *n* ) ] 固定長の文字列データです。 *n* によってバイト単位での文字列の長さが定義されます。1 から 8,000 までの値にする必要があります。 *Latin* などの 1 バイト エンコード文字セットの場合、ストレージのサイズは *n* バイトとなり、格納できる文字数もまた *n* となります。 マルチバイト エンコード文字セットの場合、ストレージのサイズは引き続き *n* バイトですが、格納できる文字数が *n* よりも少なくなる場合があります。 **char** の ISO シノニムは、**character** です。 文字セットについて詳しくは、「[1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)」をご覧ください。

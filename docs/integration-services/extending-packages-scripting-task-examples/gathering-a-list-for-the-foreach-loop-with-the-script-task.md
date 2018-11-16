@@ -16,12 +16,12 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c5f5e0b602ae51654159c60513c1bfdab98f2dc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818175"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640049"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>スクリプト タスクによる ForEach ループの一覧の収集
   Foreach from Variable 列挙子は、変数で渡された一覧の項目を列挙し、各項目に対して同じタスクを実行します。 スクリプト タスクでカスタム コードを使用して、このための一覧を設定することができます。 この列挙子の詳細については、「[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)」を参照してください。  
@@ -248,6 +248,6 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## <a name="see-also"></a>参照  
  [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)   
- [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+ [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   

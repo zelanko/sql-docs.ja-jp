@@ -19,12 +19,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0818056ed0d8390021189d59fda95a3b7daf27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 319f9b06605ab95dca6885fc08bbab6b7d5bf9c9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852530"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638459"
 ---
 # <a name="excel-destination"></a>Excel 変換先
   Excel 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブックのワークシートまたは範囲にデータを読み込みます。  
@@ -50,7 +50,7 @@ ms.locfileid: "47852530"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるすべてのプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel のカスタム プロパティ](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47852530"
 |オプション|[説明]|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|Excel データ ソースのワークシートまたは名前付き範囲にデータを読み込みます。|  
-|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |[SQL コマンド]|SQL クエリを使用して、Excel 変換先にデータを読み込みます。|  
   
  **[Excel シートの名前]**  

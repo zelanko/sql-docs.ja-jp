@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804660"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641149"
 ---
 # <a name="change-data-capture-ssis"></a>変更データ キャプチャ (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、変更データ キャプチャによって、ソース テーブルからデータ マートおよびデータ ウェアハウスへの増分読み込みを効率的に実行するための効果的なソリューションが実現します。  
@@ -96,9 +96,9 @@ ms.locfileid: "47804660"
 ## <a name="samples-of-change-data-capture-packages"></a>変更データ キャプチャ パッケージのサンプル  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージで変更データ キャプチャを使用する方法を紹介したサンプルが 2 つ用意されています。 詳細については、次の各トピックを参照してください。  
   
--   [Change Data Capture for Specified Interval パッケージ サンプルの Readme](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Change Data Capture for Specified Interval パッケージ サンプルの Readme](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Change Data Capture since Last Request パッケージ サンプルの Readme](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Change Data Capture since Last Request パッケージ サンプルの Readme](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -119,6 +119,6 @@ ms.locfileid: "47804660"
 -   [複数のテーブルの増分読み込みを実行する](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- sqlblog.com のブログ「 [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679)」 (SSIS のデザイン パターン – 増分読み込み)  
+ sqlblog.com のブログ「 [SSIS Design Pattern – Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679)」 (SSIS のデザイン パターン – 増分読み込み)  
   
   

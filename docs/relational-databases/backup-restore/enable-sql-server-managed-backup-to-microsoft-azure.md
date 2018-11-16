@@ -11,18 +11,18 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 753c323030f5d854bba3e0cd7bd985f8fdc90d24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649700"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672801"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップを有効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、データベース レベルとインスタンス レベルの両方で、既定の設定を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする方法について説明します。 また、電子メール通知を有効にする方法と、バックアップ処理を監視する方法についても説明します。  
   
- このチュートリアルでは、Azure PowerShell を使用します。 チュートリアルを開始する前に、 [Azure PowerShell をダウンロードしてインストールします](http://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+ このチュートリアルでは、Azure PowerShell を使用します。 チュートリアルを開始する前に、 [Azure PowerShell をダウンロードしてインストールします](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
   
 > [!IMPORTANT]  
 >  また、高度なオプションを有効にする場合やカスタムのスケジュールを使用する場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にする前にまずその設定を構成します。 詳細については、「[Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
@@ -31,7 +31,7 @@ ms.locfileid: "47649700"
   
 #### <a name="create-the-azure-blob-container"></a>Azure Blob コンテナーを作成する  
   
-1.  **Azure にサインアップする:** 既に Azure サブスクリプションがある場合は、次の手順に進みます。 ない場合は、 [無料評価版](http://azure.microsoft.com/pricing/free-trial/) から始めるか、 [購入オプション](http://azure.microsoft.com/pricing/purchase-options/)を調べることができます。  
+1.  **Azure にサインアップする:** 既に Azure サブスクリプションがある場合は、次の手順に進みます。 ない場合は、 [無料評価版](https://azure.microsoft.com/pricing/free-trial/) から始めるか、 [購入オプション](https://azure.microsoft.com/pricing/purchase-options/)を調べることができます。  
   
 2.  **Azure ストレージ アカウントを作成する:** 既にストレージ アカウントがある場合は、次の手順に進みます。 ない場合は、 [Azure 管理ポータル](https://manage.windowsazure.com/) または Azure PowerShell を使用してストレージ アカウントを作成できます。 次の `New-AzureStorageAccount` コマンドを実行すると、米国東部地域に `managedbackupstorage` というストレージ アカウントが作成されます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47649700"
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     ストレージ アカウントの詳細については、「 [Azure ストレージ アカウントについて](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。  
+     ストレージ アカウントの詳細については、「 [Azure ストレージ アカウントについて](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。  
   
 3.  **バックアップ ファイル用の BLOB コンテナーを作成する:** Azure 管理ポータルまたは Azure PowerShell で BLOB コンテナーを作成できます。 次の `New-AzureStorageContainer` コマンドを実行すると、 `backupcontainer` ストレージ アカウントに `managedbackupstorage` という BLOB コンテナーが作成されます。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47649700"
     |**コンテナーの URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**SAS トークン:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。  
+     SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「 [Shared Access Signature、第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>[有効化] [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   

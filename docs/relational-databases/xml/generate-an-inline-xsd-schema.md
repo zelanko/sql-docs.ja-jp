@@ -19,12 +19,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97b83987abdcc4896ddec0a117b04f629fa8d024
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aae24935aea1c7ca452f199340cd1dca7299a4f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603023"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675351"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "47603023"
  例 :  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  
@@ -118,9 +118,9 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
  このクエリには ELEMENTS ディレクティブが指定されているので、返される XML は要素中心になります。 また、このクエリには XMLSCHEMA ディレクティブも指定されています。 したがって、インライン XSD スキーマが返されます。 結果を次に示します。  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
  `<xsd:element name="Sales.SalesOrderHeader">`  
   
@@ -196,9 +196,9 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  結果は次のとおりです。 インライン XSD スキーマで OrderID 要素が 2 回定義されていることに注意してください。 一方の宣言では、CustOrderDetail テーブルの OrderID に合わせて、minOccurs が 0 に設定されます。もう一方の宣言は、minOccurs が既定で 1 に設定される `CustOrder` テーブルの OrderID 主キー列にマップされます。  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
  `<xsd:element name="row">`  
   
@@ -243,9 +243,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `…`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -281,9 +281,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `…`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -305,7 +305,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</xsd:schema>`  
   
- `<row xmlns="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">`  
+ `<row xmlns="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">`  
   
  `<ProductID>1</ProductID>`  
   
@@ -337,9 +337,9 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `…`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -406,9 +406,9 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `…`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:simpleType name="Col1">`  
   
@@ -452,11 +452,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `<Col1>1</Col1>`  
   
- `<Col xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
+ `<Col xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
   
  `xsi:type="Col1">1</Col>`  
   
- `<Col xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
+ `<Col xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
   
  `xsi:type="Col2">test</Col>`  
   

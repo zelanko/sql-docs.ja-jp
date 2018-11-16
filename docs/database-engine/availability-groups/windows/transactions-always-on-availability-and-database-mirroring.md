@@ -16,12 +16,12 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93088a7d39261f014a742b93f7d9e89ea55b52a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad9700e9b1c86b454191e51c6a7e4ee52c393c6b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611031"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606842"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ SQL Server 2017 では、可用性グループのデータベースに対して�
 
 詳細については、次を参照してください。
 
-- [DTC 管理ガイド](http://msdn.microsoft.com/library/ms681291.aspx)
-- [DTC 開発者ガイド](http://msdn.microsoft.com/library/ms679938.aspx)
-- [DTC プログラマ リファレンス](http://msdn.microsoft.com/library/ms686108.aspx)
+- [DTC 管理ガイド](https://msdn.microsoft.com/library/ms681291.aspx)
+- [DTC 開発者ガイド](https://msdn.microsoft.com/library/ms679938.aspx)
+- [DTC プログラマ リファレンス](https://msdn.microsoft.com/library/ms686108.aspx)
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 以前: 同じ SQL Server インスタンス内での複数データベースにまたがるトランザクションのサポート  
 
@@ -60,7 +60,7 @@ SQL Server 2016 では、トランザクションの 1 つ以上のデータベ�
   
  次の要件が満たされる必要があります。  
   
--   可用性グループは、Windows Server 2012 R2 以降で実行されている必要があります。 Windows Server 2012 R2 の場合は、[https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
+-   可用性グループは、Windows Server 2012 R2 以降で実行されている必要があります。 Windows Server 2012 R2 の場合は、[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
   
 -   可用性グループは、**CREATE AVAILABILITY GROUP** コマンドと **WITH DTC\_SUPPORT = PER_DB** 句を使って作成する必要があります。 現在、既存の可用性グループを変更することはできません。  
 

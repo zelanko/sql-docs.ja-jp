@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030fc4262f41112eeca34c590eac00701e8ee876
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 325a2bad11c168e1b14031b8f16ac71e9dbb7eb3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781230"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661871"
 ---
 # <a name="dynamic-data-masking"></a>動的なデータ マスキング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47781230"
 
 動的データ マスクの目的は、アクセスすべきではないユーザーがデータを閲覧することを防ぎ、デリケートなデータの公開を制限することにあります。 動的データ マスクは、ユーザーが直接データベースに接続し、徹底的なクエリを実行して、デリケートなデータの漏えいを防ぐことを目的としてはいません。 動的データ マスクは、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ機能 (監査、暗号化、行レベルのセキュリティなど) を補完します。 データベース内のデリケートなデータの保護をより強化するために、セキュリティ機能と連携して動的データ マスクを使用することをお勧めします。  
   
-動的データ マスクは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で使用できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] をコマンドを使用して構成します。 Azure ポータルで動的データ マスクを構成する方法の詳細については、「 [SQL Database 動的データ マスクの使用 (Azure ポータル)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)」を参照してください。  
+動的データ マスクは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で使用できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] をコマンドを使用して構成します。 Azure ポータルで動的データ マスクを構成する方法の詳細については、「 [SQL Database 動的データ マスクの使用 (Azure ポータル)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)」を参照してください。  
   
 ## <a name="defining-a-dynamic-data-mask"></a>動的データ マスクを定義する  
  マスク ルールは、列のデータを難読化するために、テーブル内の列で定義することがあります。 4 種類のマスクを利用できます。  
@@ -197,4 +197,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [SQL Database 動的データ マスクの使用 (Azure ポータル)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [SQL Database 動的データ マスクの使用 (Azure ポータル)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

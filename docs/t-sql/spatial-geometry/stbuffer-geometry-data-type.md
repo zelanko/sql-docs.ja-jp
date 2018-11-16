@@ -18,12 +18,12 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdcda8e3cdd3101d5825ba24ed13d703be535f9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d18d64f08eacc5b2784c9101d77e90f4c5d33a6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672340"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702800"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47672340"
   
  バッファーに負の値を指定すると、geometry インスタンスの境界から、指定された距離の範囲内にある地点がすべて削除されます。  
   
- 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents * 1.E-7) です。tolerance は distance \* .001 になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)」を参照してください。  
+ 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents * 1.E-7) です。tolerance は distance \* .001 になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47672340"
  ```  
   
 ### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. CurvePolygon インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
- 次の例では、`CurvePolygon` インスタンスからバッファーが負の値の `Polygon` インスタンスが返されます。  
+ 次の例では、`Polygon` インスタンスからバッファーが負の値の `CurvePolygon` インスタンスが返されます。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -134,7 +134,7 @@ ms.locfileid: "47672340"
  ```  
   
 ### <a name="h-calling-stbuffer-with-a-string-parameter-value"></a>H. 文字列のパラメーター値を指定して STBuffer() を呼び出す  
- 次の例では、前と同じように `Polygon` インスタンスが返されますが、文字列パラメーターをメソッドに渡します。  
+ 次の例では、文字列パラメーターをメソッドに渡しますが、前と同じように `Polygon` インスタンスが返されます。  
   
 ```
  DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 

@@ -19,12 +19,12 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 441e329ce93ea0aa30a8a3ad0f2cbf587d7d196e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed07e09663aa19ead617ce1c6ae63762fff0d67b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736636"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600282"
 ---
 # <a name="server-network-configuration"></a>サーバー ネットワークの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47736636"
  チャネル バインドとサービス バインドを使用した認証の拡張保護のサポートは、拡張保護をサポートしているオペレーティング システムで使用できます。 詳細については、「 [拡張保護を使用したデータベース エンジンへの接続](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)」を参照してください。  
   
 ## <a name="authenticating-by-using-kerberos"></a>Kerberos を使用した認証  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Kerberos 認証をサポートしています。 Kerberos 認証の詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) 」および「 [Microsoft® Kerberos Configuration Manager for SQL Server®](http://www.microsoft.com/download/details.aspx?id=39046)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Kerberos 認証をサポートしています。 Kerberos 認証の詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) 」および「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」を参照してください。  
   
 ### <a name="registering-a-server-principal-name-spn"></a>サービス プリンシパル名 (SPN) の登録  
  Kerberos 認証サービスでは、SPN を使用してサービスが認証されます。 詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。  

@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe36e8787e37bc82336322e67cb59b804d021baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2589c948149b92541910b68e7da3c6cca414d2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768900"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667182"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted による暗号化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47768900"
 ## <a name="data-encryption-algorithm"></a>データ暗号化のアルゴリズム  
  Always Encrypted では **AEAD_AES_256_CBC_HMAC_SHA_256** アルゴリズムを使用して、データベース内のデータを暗号化します。  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** は、[http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) の仕様ドラフトから派生しました。 このアルゴリズムでは、Encrypt-then-MAC 手法に従って、関連データで認証済み暗号化スキームを使用します。 つまり、プレーンテキストが最初に暗号化され、その結果として生成される暗号化テキストに基づいて MAC が生成されます。  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** は、[https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) の仕様ドラフトから派生しました。 このアルゴリズムでは、Encrypt-then-MAC 手法に従って、関連データで認証済み暗号化スキームを使用します。 つまり、プレーンテキストが最初に暗号化され、その結果として生成される暗号化テキストに基づいて MAC が生成されます。  
   
- パターンを非表示にするために、 **AEAD_AES_256_CBC_HMAC_SHA_256** では暗号化ブロック チェーン (CBC) という操作モードを使用します。この場合、初期値は初期化ベクター (IV) という名前のシステムに渡されます。 CBC モードの詳細な説明は、[http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf) にあります。  
+ パターンを非表示にするために、 **AEAD_AES_256_CBC_HMAC_SHA_256** では暗号化ブロック チェーン (CBC) という操作モードを使用します。この場合、初期値は初期化ベクター (IV) という名前のシステムに渡されます。 CBC モードの詳細な説明は、[https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf) にあります。  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** は、以下の手順を使用して指定されたプレーンテキストの暗号化テキストの値を計算します。  
   
@@ -176,7 +176,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|該当なし (サポートされていません)|  
   
 ## <a name="net-reference"></a>.NET リファレンス  
- このドキュメントに記載されているアルゴリズムの詳細については、 **.NET リファレンス** の **SqlAeadAes256CbcHmac256Algorithm.cs** ファイルと [SqlColumnEncryptionCertificateStoreProvider.cs](http://referencesource.microsoft.com/)ファイルを参照してください。  
+ このドキュメントに記載されているアルゴリズムの詳細については、 **.NET リファレンス** の **SqlAeadAes256CbcHmac256Algorithm.cs** ファイルと [SqlColumnEncryptionCertificateStoreProvider.cs](https://referencesource.microsoft.com/)ファイルを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Always Encrypted &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

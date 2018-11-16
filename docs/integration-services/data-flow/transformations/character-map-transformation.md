@@ -19,12 +19,12 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6bbf9e0fa3d3c2a8cc900e0bd48163dc11eba3ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28b21fbe189151578b073a51050b3b7aeb95b79b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619380"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640439"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
   文字マップ変換は、小文字から大文字への変換関数などの文字列関数を、文字データに適用します。 この変換は、文字列データ型の列データにのみ実行されます。  
@@ -74,7 +74,7 @@ ms.locfileid: "47619380"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47619380"
  各出力列の別名を入力します。 既定では、入力列の名前の後に " **のコピー** " が追加された別名になりますが、固有のわかりやすい名前を選択することもできます。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、この変換のエラー処理オプションを指定します。  
+ [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、この変換のエラー処理オプションを指定します。  
   
   

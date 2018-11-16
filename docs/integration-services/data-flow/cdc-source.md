@@ -16,12 +16,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b6d0f537db9195ff0afb9994f48ca14411dcf30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599300"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642241"
 ---
 # <a name="cdc-source"></a>CDC ソース
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
@@ -105,7 +105,7 @@ use <cdc-enabled-database-name>
   
 -   [[CDC ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
   
@@ -246,6 +246,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   mattmasson.com のブログ「 [CDC ソースの処理モード](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
+-   mattmasson.com のブログ「[CDC ソースの処理モード](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
   
   

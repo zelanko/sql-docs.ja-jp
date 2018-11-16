@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d47a73c378ee8bbdae38631031714c98d2bdc730
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100193"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696780"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>アクセス許可: GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  暗黙のアクセス許可は、包含または親のアクセス許可からも継承できます。 たとえば、テーブルの **UPDATE** アクセス許可は、テーブルが含まれるスキーマに対する **UPDATE** アクセス許可、またはテーブルの **CONTROL** アクセス許可を持つことによって継承できます。  
   
 ### <a name="ownership-chaining"></a>組み合わせ所有権  
- 複数のデータベース オブジェクトが連続して互いにアクセスしている場合、このシーケンスは*チェーン*と呼ばれます。 このようなチェーンは単独では存在しませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がチェーン内のリンクを移動する際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、構成要素であるオブジェクトに対する権限が、オブジェクトに個別にアクセスした場合とは異なる方法で評価されます。 所有権の継承は、セキュリティを管理するための重要な影響を与えます。 所有権の継承の詳細については、次を参照してください「[所有権の継承](http://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)」および「[チュートリアル: 所有権の継承とコンテキストの切り替え](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)」です。  
+ 複数のデータベース オブジェクトが連続して互いにアクセスしている場合、このシーケンスは*チェーン*と呼ばれます。 このようなチェーンは単独では存在しませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がチェーン内のリンクを移動する際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、構成要素であるオブジェクトに対する権限が、オブジェクトに個別にアクセスした場合とは異なる方法で評価されます。 所有権の継承は、セキュリティを管理するための重要な影響を与えます。 所有権の継承の詳細については、次を参照してください「[所有権の継承](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)」および「[チュートリアル: 所有権の継承とコンテキストの切り替え](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)」です。  
   
 ## <a name="permission-list"></a>アクセス許可の一覧  
   
@@ -237,14 +237,14 @@ REVOKE
   
 -   REFRENCES  
   
- 各権限の種類の定義については、「[権限 (データベース エンジン)](http://msdn.microsoft.com/library/ms191291.aspx)」を参照してください。  
+ 各権限の種類の定義については、「[権限 (データベース エンジン)](https://msdn.microsoft.com/library/ms191291.aspx)」を参照してください。  
   
 ### <a name="chart-of-permissions"></a>アクセス許可のグラフ  
  すべてのアクセス許可は、このポスターでグラフィカルに表されます。 これは、権限の階層構造を入れ子になったを確認する最も簡単な方法です。 たとえば、**ALTER ON LOGIN** 自体でアクセス許可を与えることができますが、ログインがそのログインに対する **CONTROL** アクセス許可を与えられている場合、またはログインが **ALTER ANY LOGIN** アクセス許可を与えられている場合にも含まれます。  
   
  ![APS セキュリティの権限ポスター](../../t-sql/statements/media/aps-security-perms-poster.png "APS セキュリティの権限ポスター")  
   
- このポスターのフル サイズ バージョンをダウンロードするには、APS Yammer サイトのファイルのセクションの「[SQL Server PDW のアクセス許可](http://go.microsoft.com/fwlink/?LinkId=244249)」を参照してください (または **apsdoc@microsoft.com** に電子メールで要求してください)。  
+ このポスターのフル サイズ バージョンをダウンロードするには、APS Yammer サイトのファイルのセクションの「[SQL Server PDW のアクセス許可](https://go.microsoft.com/fwlink/?LinkId=244249)」を参照してください (または **apsdoc@microsoft.com** に電子メールで要求してください)。  
   
 ## <a name="default-permissions"></a>既定の権限  
  次の一覧には、既定のアクセス許可について説明します。  

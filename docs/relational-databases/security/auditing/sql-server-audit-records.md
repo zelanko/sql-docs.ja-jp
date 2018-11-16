@@ -13,12 +13,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b6142d54c4df2a2ba51c9a65e3ae2bd14670bb77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c657e42e1e754ca843a40967221512f55c9c9c9f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714310"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675341"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server 監査レコード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47714310"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|監査可能なアクションが発生した日付/時刻。|**datetime2**|[ユーザー アカウント制御]|  
 |**sequence_no**|大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。|**int**|[ユーザー アカウント制御]|  
-|**action_id**|アクションの ID。<br /><br /> ヒント: **action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)」を参照してください。|**varchar (4)**|[ユーザー アカウント制御]|  
+|**action_id**|アクションの ID。<br /><br /> ヒント: **action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)」を参照してください。|**varchar (4)**|[ユーザー アカウント制御]|  
 |**succeeded**|監査イベントをトリガーするアクションのアクセス許可のチェックが成功または失敗したかどうかを示します。 |**bit**<br /> – 1 = 成功、 <br />0 = 失敗|[ユーザー アカウント制御]|  
 |**permission_bitmask**|権限の許可、拒否、または取り消しを示します (該当する場合)。|**bigint**|いいえ|  
 |**is_column_permission**|列レベル権限を示すフラグ。|**bit** <br />– 1 = True、 <br />0 = False|いいえ|  

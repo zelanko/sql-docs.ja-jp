@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e4dd7fd0e9c7f68da18a82e0c1d625962992d05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a22e03d88df83a7a967dc87246a6a6fe2cee1f64
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674900"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703511"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47674900"
   
 3.  **[プロキシ]** を右クリックして **[新しいプロキシ]** をクリックします。  
   
-4.  **[新しいプロキシ アカウント]** ダイアログの **[全般]** ページで、新しいプロキシのプロキシ名、資格情報名、および説明を指定します。 SQL Server エージェントのプロキシを作成する前に、まず資格情報を作成する必要があることに注意してください。 資格情報の作成方法については、「 [資格情報を作成する方法 (SQL Server Management Studio)](http://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) 」と「 [CREATE CREDENTIAL (Transact-SQL)](http://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)」を参照してください。  
+4.  **[新しいプロキシ アカウント]** ダイアログの **[全般]** ページで、新しいプロキシのプロキシ名、資格情報名、および説明を指定します。 SQL Server エージェントのプロキシを作成する前に、まず資格情報を作成する必要があることに注意してください。 資格情報の作成方法については、「 [資格情報を作成する方法 (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) 」と「 [CREATE CREDENTIAL (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)」を参照してください。  
   
 5.  このプロキシに適したサブシステムを確認します。  
   

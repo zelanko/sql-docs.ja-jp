@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031871"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814325"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -475,7 +475,7 @@ ms.locfileid: "50031871"
 -   次の式をテキスト ボックスに対するアクションとして使用すると、URL パラメーターとしてデータセット フィールド `EmployeeID` を指定する、カスタマイズされた URL が生成されます。  
   
     ```  
-    ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
+    ="https://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
      詳細については、「[URL へのハイパーリンクの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)」を参照してください。  
@@ -483,7 +483,7 @@ ms.locfileid: "50031871"
 -   次の式では、テキスト ボックス内に URL を追加するかどうかを、条件付きで制御します。 この式では、アクティブ URL をレポートに含めるかどうかをユーザーが決定できるように、 `IncludeURLs` という名前のパラメーターを使用しています。 この式は、テキスト ボックスに対するアクションとして設定されます。 パラメーターを False に設定してからレポートを表示すると、ハイパーリンクなしでレポートを Microsoft Excel にエクスポートできます。  
   
     ```  
-    =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
+    =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
 ##  <a name="ReportData"></a> レポート データ  

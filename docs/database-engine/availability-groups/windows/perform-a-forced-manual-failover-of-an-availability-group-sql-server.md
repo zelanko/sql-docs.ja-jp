@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b391f73ab498c2ad87406b5f3dd8fa3268a75774
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 750d2ff9bae2caca15af2535b220b22781b65d4b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120399"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604562"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>可用性グループの強制手動フェールオーバーの実行 (SQLServer)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,15 +350,15 @@ ms.locfileid: "49120399"
   
      [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
+     [SQL Server ユーザー諮問チームのホワイト ペーパー](https://sqlcat.com/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

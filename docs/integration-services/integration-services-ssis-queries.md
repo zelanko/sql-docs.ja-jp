@@ -18,12 +18,12 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d275ad5ef272dc3bf6db8c5ce0079bcb1a8fea9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e17af8134194e00fada93fd07904d95f478435
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689520"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638739"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
   SQL 実行タスク、OLE DB ソース、OLE DB 変換先、および参照変換では、SQL クエリを使用できます。 SQL 実行タスクでは、SQL ステートメントによってデータベース オブジェクトとデータを作成、更新、および削除したり、ストアド プロシージャを実行したり、SELECT ステートメントを実行したりすることができます。 OLE DB ソースと参照変換の場合、通常 SQL ステートメントは SELECT ステートメントまたは EXEC ステートメントです。 EXEC ステートメントで最もよく実行するのは、結果セットを返すストアド プロシージャです。  
@@ -58,13 +58,13 @@ SQL ステートメントは次の方法で提供できます。
   
  また、直接入力は、タスクやデータ フロー コンポーネントのダイアログ ボックス、またはプロパティ ウィンドウにクエリを入力しても行えます。  
   
- 詳細については、「 [クエリ ビルダー](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)」を参照してください。  
+ 詳細については、「 [クエリ ビルダー](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)」を参照してください。  
   
 ## <a name="sql-in-files"></a>ファイルの SQL  
  SQL 実行タスクの SQL ステートメントを、別のファイルに格納しておくことも可能です。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のクエリ エディターのようなツールを使用してクエリを記述し、ファイルに保存して、パッケージを実行するときにファイルからクエリを読み込むことができます。 ファイルには、実行する SQL ステートメントとコメントのみを含めることができます。 ファイルに格納された SQL ステートメントを使用するには、ファイル名とファイルの場所を指定するファイル接続を用意する必要があります。 詳しくは「 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)」をご覧ください。  
   
 ## <a name="sql-in-variables"></a>変数の SQL  
- SQL 実行タスクの SQL ステートメントのソースが変数の場合、クエリが格納されている変数の名前を指定します。 変数の Value プロパティにクエリのテキストを格納します。 変数の ValueType プロパティを文字列データ型に設定し、Value プロパティに SQL ステートメントを入力またはコピーします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ SQL 実行タスクの SQL ステートメントのソースが変数の場合、クエリが格納されている変数の名前を指定します。 変数の Value プロパティにクエリのテキストを格納します。 変数の ValueType プロパティを文字列データ型に設定し、Value プロパティに SQL ステートメントを入力またはコピーします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
 
 ## <a name="query-builder-dialog-box"></a>[クエリ ビルダー] ダイアログ ボックス
 **[クエリ ビルダー]** ダイアログ ボックスを使用すると、SQL 実行タスク、OLE DB 変換元と OLE DB 変換先、および参照変換で使用するクエリを作成できます。  
@@ -83,7 +83,7 @@ SQL ステートメントは次の方法で提供できます。
   
  Transact-SQL 言語およびその構文の詳細については、「[Transact-SQL リファレンス (データベース エンジン)](../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
   
- クエリで変数を使用して、入力パラメーターへの値の指定、出力パラメーターの値の取得、およびリターン コードの格納を行うこともできます。 パッケージで使用するクエリでの変数の使用の詳細については、「[SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)」、「[OLE DB ソース](../integration-services/data-flow/ole-db-source.md)」、および「[Integration Services (SSIS) のクエリ](../integration-services/integration-services-ssis-queries.md)」を参照してください。 SQL 実行タスクでの変数の使用の詳細については、「 [SQL 実行タスクのパラメーターとリターン コード](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 」および「 [SQL 実行タスクにおける結果セット](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)」を参照してください。  
+ クエリで変数を使用して、入力パラメーターへの値の指定、出力パラメーターの値の取得、およびリターン コードの格納を行うこともできます。 パッケージで使用するクエリでの変数の使用の詳細については、「[SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)」、「[OLE DB ソース](../integration-services/data-flow/ole-db-source.md)」、および「[Integration Services (SSIS) のクエリ](../integration-services/integration-services-ssis-queries.md)」を参照してください。 SQL 実行タスクでの変数の使用の詳細については、「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 」および「 [SQL 実行タスクにおける結果セット](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)」を参照してください。  
   
  参照変換およびあいまい参照変換でも、パラメーターとリターン コードに変数を使用できます。 OLE DB ソースに関する情報は、これら 2 つの変換にも適用されます。  
   

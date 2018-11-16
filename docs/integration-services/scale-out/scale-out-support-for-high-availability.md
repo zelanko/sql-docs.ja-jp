@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53fc11dc3735f1a27401164044c452a038c9c0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594771"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638149"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -29,7 +29,7 @@ Scale Out Master 側の高可用性は、[Always On for SSIS Catalog](../catalog
 SSIS カタログに Always On を使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 
 ## <a name="1-prerequisites"></a>1.Prerequisites
-Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
+Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2.プライマリ ノードに Scale Out Master をインストールする
 Scale Out Master のプライマリ ノードに SQL Server データベース エンジン サービス、Integration Services、Scale Out Master をインストールします。 

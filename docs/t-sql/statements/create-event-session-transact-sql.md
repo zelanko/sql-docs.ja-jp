@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c143f1abe85594cc399f19ed9d845c6c01573396
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769020"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696680"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ ON SERVER
  ターゲット パラメーターを設定します。 ターゲット パラメーターは、column_type 'customizable' および object_name = *target_name* として sys.dm_xe_object_columns ビューに表示されます。  
   
 > [!IMPORTANT]  
->  リング バッファー ターゲットを使用している場合、max_memory ターゲット パラメーターを 2048 KB に設定し、XML 出力のデータの切り捨てを回避することをお勧めします。 さまざまなターゲットの種類の使用について詳しくは、「[SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」をご覧ください。  
+>  リング バッファー ターゲットを使用している場合、max_memory ターゲット パラメーターを 2048 KB に設定し、XML 出力のデータの切り捨てを回避することをお勧めします。 さまざまなターゲットの種類の使用について詳しくは、「[SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」をご覧ください。  
   
  WITH ( \<event_session_options> [ ,...*n*] ) イベント セッションで使用するオプションを指定します。  
   

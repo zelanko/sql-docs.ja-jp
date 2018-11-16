@@ -11,12 +11,12 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12229b018a6b7b2e7908d7d77091ce5caef5fb5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6abb029f20becaac0e3c874202e1788e7bfb3722
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800810"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642089"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 転送先
   SAP BW 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換先コンポーネントです。 SAP BW 変換先は、SAP Netweaver BW Version 7 システムに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのデータを読み込みます。  
@@ -84,7 +84,7 @@ ms.locfileid: "47800810"
   
  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
- SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](http://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
+ SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>SSIS デザイナーを使用して変換先を構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる SAP BW 変換先のプロパティの詳細については、次のトピックのいずれかを参照してください。  

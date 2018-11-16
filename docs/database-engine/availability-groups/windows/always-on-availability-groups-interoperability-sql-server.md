@@ -13,12 +13,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50c7d1dac76e3344c64d6a0da05813f5f469a230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 412f793754099b0228a3bfb865ccefc18969a0eb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765040"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603522"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性グループの相互運用性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,20 +63,20 @@ ms.locfileid: "47765040"
   
      [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ホワイト ペーパー:**  
   
-     [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から Always On 可用性グループに移行する](http://msdn.microsoft.com/library/jj635217)  
+     [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から Always On 可用性グループに移行する](https://msdn.microsoft.com/library/jj635217)  
   
-     [高可用性と災害復旧のための Microsoft SQL Server Always On ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server Always On ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
+     [SQL Server ユーザー諮問チームのホワイト ペーパー](https://sqlcat.com/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

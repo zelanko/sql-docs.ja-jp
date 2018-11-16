@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ec74bab3523b4e77c1b1c0c9355353c48490140
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817556"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813725"
 ---
 # <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
   次のパラメーターを URL の一部として使用すると、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  
@@ -48,13 +48,13 @@ ms.locfileid: "47817556"
      **Native** モードの例:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
+    https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
     ```  
   
      **SharePoint** モードの例:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
 -   *Zoom* : レポート ズーム値を整数のパーセンテージまたは文字列定数として設定します。 標準的な文字列値には **Page Width** と **Whole Page**などがあります。 Internet Explorer 5.0 よりも前のバージョンの Internet Explorer および[!INCLUDE[msCoName](../includes/msconame-md.md)] 以外のすべてのブラウザーでは、このパラメーターが無視されます。 このパラメーターの既定値は **100**です。  
@@ -62,13 +62,13 @@ ms.locfileid: "47817556"
      **Native** モードの例。  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
+    https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
     ```  
   
      **SharePoint** モードの例。  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
 -   *Section* : 表示するレポートのページを設定します。 レポートのページ数よりも大きい値を設定すると、最後のページが表示されます。 **0** よりも小さい値を設定すると、レポートの 1 ページが表示されます。 このパラメーターの既定値は **1**です。  
@@ -76,13 +76,13 @@ ms.locfileid: "47817556"
      **Native** モードで、レポートの 2 ページ目を表示する例:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Section=2  
+    https://myrshost/reportserver?/Sales&rc:Section=2  
     ```  
   
      **SharePoint** モードで、レポートの 2 ページ目を表示する例:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Section=2  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
 -   *FindString*: レポート内で特定のテキスト セットを検索します。  
@@ -90,13 +90,13 @@ ms.locfileid: "47817556"
      **Native** モードの例。  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
     ```  
   
      **SharePoint** モードの例。  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
 -   *StartFind* : 検索する最後のセクションを指定します。 このパラメーターの既定値は、レポートの最終ページです。  
@@ -104,7 +104,7 @@ ms.locfileid: "47817556"
      Product Catalog サンプル レポートの 1 ～ 5 ページを検索し、最初に出現する "Mountain-400" という文字列を探す、 **ネイティブ** モードの例。  
   
     ```  
-    http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
+    https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
 -   *EndFind* : 検索に使用する最終ページの番号を設定します。 たとえば、 **5** の値は、検索する最後のページがレポートの 5 ページであることを示します。 既定値は現在のページ番号です。 このパラメーターは、 *StartFind* パラメーターと一緒に使用します。 上の例を参照してください。  
@@ -130,19 +130,19 @@ ms.locfileid: "47817556"
          **Native** モードの例。  
   
         ```  
-        http://myrshost/reportserver?/Sales&rs:Command=GetChildren  
+        https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
         ```  
   
          たとえば、 **Native** モードの名前付きインスタンスです。  
   
         ```  
-        http://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
+        https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
         ```  
   
          **SharePoint** モードの例。  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren  
         ```  
   
     -   **Render** レポートはブラウザーでレンダリングされ、ユーザーに表示されます。  
@@ -150,13 +150,13 @@ ms.locfileid: "47817556"
          **Native** モードの例。  
   
         ```  
-        http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
          **SharePoint** モードの例。  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
     -   **GetSharedDatasetDefinition** : 共有データセットに関連付けられた XML 定義を表示します。 クエリ、データセット パラメーター、既定値、データセット フィルター、照合順序や大文字と小文字の区別などのデータ オプションを含む共有データセット プロパティは、定義内に保存されます。 この値を使用するには、共有データセットに対する **Read Report Definition** 権限が必要です。  
@@ -164,7 +164,7 @@ ms.locfileid: "47817556"
          **Native** モードの例。  
   
         ```  
-        http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+        https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
         ```  
   
     -   **GetDataSourceContents** : 指定した共有データ ソースのプロパティを XML 形式で表示します。 ブラウザーで XML がサポートされていて、目的のデータ ソースに対して **Read Contents** 権限が与えられている認証ユーザーである場合は、そのデータ ソース定義が表示されます。  
@@ -172,13 +172,13 @@ ms.locfileid: "47817556"
          **Native** モードの例。  
   
         ```  
-        http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
          **SharePoint** モードの例。  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
     -   **GetResourceContents** : リソースを表示し、リソースとブラウザーの互換性がある場合は、そのリソースを HTML ページ内に表示します。 それ以外の場合は、ファイルまたはリソースを開くか、ディスクに保存するように要求されます。  
@@ -186,13 +186,13 @@ ms.locfileid: "47817556"
          **Native** モードの例。  
   
         ```  
-        http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
+        https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
         ```  
   
          **SharePoint** モードの例。  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
         ```  
   
     -   **GetComponentDefinition** : パブリッシュ済みレポート アイテムに関連付けられた XML 定義を表示します。 この値を使用するには、パブリッシュ済みレポート アイテムに対する **Read Contents** 権限が必要です。  
@@ -229,13 +229,13 @@ ms.locfileid: "47817556"
      **Native** モード レポート サーバーからレポートの PDF コピーを直接取得する例:  
   
     ```  
-    http://myrshost/ReportServer?/myreport&rs:Format=PDF  
+    https://myrshost/ReportServer?/myreport&rs:Format=PDF  
     ```  
   
      **SharePoint** モード レポート サーバーからレポートの PDF コピーを直接取得する例:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
 -   *ParameterLanguage*:  
@@ -244,7 +244,7 @@ ms.locfileid: "47817556"
      **ネイティブ** モードで、ブラウザーの言語をオーバーライドし、de-DE というカルチャ値を指定する例:  
   
     ```  
-    http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
+    https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
 -   *Snapshot* : レポート履歴スナップショットに基づいたレポートを表示します。 詳細については、「 [URL アクセスを使用してレポート履歴スナップショットを表示する](../reporting-services/render-a-report-history-snapshot-using-url-access.md)」を参照してください。  
@@ -252,7 +252,7 @@ ms.locfileid: "47817556"
      **ネイティブ** モードで、日付が 2003-04-07 でタイムスタンプが 13:40:02 のレポート履歴スナップショットを取得する例:  
   
     ```  
-    http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+    https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
 -   *PersistStreams*:  
@@ -289,7 +289,7 @@ ms.locfileid: "47817556"
      **SharePoint** モードで、ツール バーに改ページのみを表示する例。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
 -   *HeaderArea*: レポート ビューアー Web パーツのヘッダーの表示を制御します。 既定値は **Full**です。 値は次のとおりです。  
@@ -303,7 +303,7 @@ ms.locfileid: "47817556"
      **SharePoint** モードで、ヘッダーに階層リンクのナビゲーションのみを表示する例。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
     ```  
   
 -   *DocMapAreaWidth*: レポート ビューアー Web パーツのパラメーター領域の表示幅をピクセル単位で制御します。 既定値は、レポート ビューアー Web パーツの既定値と同じです。 値には、負以外の整数値を指定する必要があります。  
@@ -321,7 +321,7 @@ ms.locfileid: "47817556"
      **SharePoint** モードで、パラメーター プロンプト領域を折りたたむ例。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
 -   *DocMapMode*: レポート ビューアー Web パーツのドキュメント マップ領域を全体表示で表示する方法を制御します。 既定値は **Full**です。 有効な値は、  
@@ -337,7 +337,7 @@ ms.locfileid: "47817556"
      **SharePoint** モードで、下部にツール バーをドッキングする例。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
 -   *ToolBarItemsDisplayMode*: 表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。 既定値は **-1**です。すべてのツール バー項目を表示します。 有効な値は、  
@@ -367,7 +367,7 @@ ms.locfileid: "47817556"
      **SharePoint** モードで、 **[戻る]** ボタン、テキスト検索コントロール、ページ ナビゲーション コントロール、 **[更新]** ボタンのみを表示する例。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
 ## <a name="see-also"></a>参照  

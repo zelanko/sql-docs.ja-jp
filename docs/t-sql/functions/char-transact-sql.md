@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643780"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701940"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHAR ( integer_expression )
 0 ～ 255 の整数です。 整数式がこの範囲から外れている場合、または整数が 2 バイト文字の最初のバイトのみを表している場合は、`CHAR` では `NULL` 値が返されます。
 
 > [!NOTE]
-> ただし、[Shift_JIS](http://www.wikipedia.org/wiki/Shift_JIS) など、一部のヨーロッパ以外の文字セットには 1 バイトのコード体系では表現しきれない文字が含まれ、マルチバイトのエンコードが必要になります。 文字セットについて詳しくは、「[1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)」をご覧ください。 
+> ただし、[Shift_JIS](https://www.wikipedia.org/wiki/Shift_JIS) など、一部のヨーロッパ以外の文字セットには 1 バイトのコード体系では表現しきれない文字が含まれ、マルチバイトのエンコードが必要になります。 文字セットについて詳しくは、「[1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)」をご覧ください。 
   
 ## <a name="return-types"></a>戻り値の型
 **char(1)**

@@ -26,12 +26,12 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee1e6771bc2d4a10ff7c43bfc1d13bec7855529c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbcf4fb0fb88ef90b234938252fa7cb48391d861
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681900"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642219"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの管理に使用します。 このユーティリティを使用して、パッケージのコピー、移動、削除を行ったり、パッケージの存在を確認することができます。 これらの操作は [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ上で実行できます。このパッケージは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のいずれかに格納されます。 このユーティリティが **msdb**に格納されているパッケージにアクセスする場合、コマンド プロンプトでユーザー名とパスワードが必要となる場合があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、コマンド プロンプトではユーザー名とパスワードの両方が必要です。 ユーザー名を入力しない場合、 **dtutil** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にログオンしようとします。 パッケージのストレージ型は **SQL**、 **FILE**、および **DTS** オプションで指定します。  
@@ -264,7 +264,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  上の例で使用しているハッシュは実際のハッシュではありません。  
   
- 詳細については、「 [Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)」(Authenticode を使用したコードの署名と検証) の「CertMgr」を参照してください。  
+ 詳細については、「 [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)」(Authenticode を使用したコードの署名と検証) の「CertMgr」を参照してください。  
   
 ### <a name="encrypt-examples"></a>暗号化の例  
  次の例では、完全パッケージ暗号化とパスワードを使用してファイルベースの PackageToEncrypt.dtsx を暗号化し、ファイルベースの EncryptedPackage.dts として保存します。 暗号化に使用されるパスワードは、 *EncPswd*です。  

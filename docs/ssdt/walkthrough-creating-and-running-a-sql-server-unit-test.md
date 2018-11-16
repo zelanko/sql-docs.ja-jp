@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855288"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666521"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>チュートリアル :SQL Server の単体テストの作成と実行
 このチュートリアルでは、複数のストアド プロシージャの動作を検証する SQL Server の単体テストを作成します。 SQL Server の単体テストを作成すると、アプリケーションの不適切な動作の原因となる可能性があるコードの欠陥を特定するのに役立ちます。 SQL Server の単体テストとアプリケーション テストは、自動テスト スイートの一部として実行できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "47855288"
 単体テストのいずれかによってストアド プロシージャ内のエラーが検出されたら、そのエラーを修正してテストを再実行します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
-このチュートリアルを完了するには、データベースを作成および配置するための権限があるデータベース サーバー (LocalDB データベース) に接続できる必要があります。 詳しくは、「[Visual Studio のデータベース機能に必要なアクセス許可](http://msdn.microsoft.com/library/aa833413(VS.100).aspx)」をご覧ください。  
+このチュートリアルを完了するには、データベースを作成および配置するための権限があるデータベース サーバー (LocalDB データベース) に接続できる必要があります。 詳しくは、「[Visual Studio のデータベース機能に必要なアクセス許可](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)」をご覧ください。  
   
 ## <a name="CreateScript"></a>データベース スキーマを含むスクリプトを作成する  
   
@@ -968,7 +968,7 @@ ms.locfileid: "47855288"
     特定の例外が表示されることを予期するよう指定します。 必要に応じて、特定のエラー番号を指定することもできます。 この属性を追加しないと、単体テストは失敗し、メッセージが [テスト結果] ウィンドウに表示されます。  
   
     > [!IMPORTANT]  
-    > 現在、Visual Studio 2012 では ExpectedSqlException 属性がサポートされていません。 これに対処する方法については、「 ["予期されるエラー" データベース単体テストを実行できない](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)」を参照してください。  
+    > 現在、Visual Studio 2012 では ExpectedSqlException 属性がサポートされていません。 これに対処する方法については、「 ["予期されるエラー" データベース単体テストを実行できない](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)」を参照してください。  
   
 3.  [ファイル] メニューの [SqlServerUnitTests1.cs の保存] をクリックします。  
   

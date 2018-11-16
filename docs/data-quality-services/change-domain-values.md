@@ -14,12 +14,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ce3745881465c7f71eed0986e3de669b7488a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830850"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699925"
 ---
 # <a name="change-domain-values"></a>ドメイン値の変更
 
@@ -37,7 +37,7 @@ ms.locfileid: "47830850"
   
 -   Excel ファイルからドメイン値をインポートします。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ドメイン値を変更するには、ドメイン管理アクティビティでナレッジ ベースとドメインを開いておく必要があります。  
@@ -90,7 +90,7 @@ ms.locfileid: "47830850"
   
     -   **[選択したドメイン値をグループの先頭の値として設定]**: グループの先頭の値を変更するには、先頭の値として指定されていないグループ内の値を選択し、 **[選択したドメイン値をグループの先頭の値として設定]** をクリックします。 先頭の値が他の値の置換値として設定されます。 この操作は、2 つ以上の値がグループ化されていて、DQS によって指定された値から先頭の値を変更する場合にのみ実行できます。 先頭の値は青色の行で太字で示されます。  
   
-7.  **スペル チェック**: 値に赤い波線の下線が付いている場合は、スペル チェックで値の修正が提案されています。 その値を右クリックし、必要に応じて修正を選択します。 修正を選択すると、値の種類が "エラー" になり (最初から "エラー" の場合はそのまま)、その修正が **[次に修正]** 列に追加されます。 下矢印をクリックすると、その他の修正案が表示されます。 手動で修正を入力してスペル チェックの辞書に追加すると、修正として選択できるようになります。 詳細については、「 [DQS のスペル チェックの使用](../data-quality-services/use-the-dqs-speller.md) 」および「 [ドメインのプロパティを設定する](../data-quality-services/set-domain-properties.md)」を参照してください。  
+7.  **スペル チェック**: 値に赤い波線の下線が付いている場合は、スペル チェックで値の修正が提案されています。 その値を右クリックし、必要に応じて修正を選択します。 修正を選択すると、値の種類が "エラー" になり (最初から "エラー" の場合はそのまま)、その修正が **[次に修正]** 列に追加されます。 下矢印をクリックすると、その他の修正案が表示されます。 手動で修正を入力してスペル チェックの辞書に追加すると、修正として選択できるようになります。 詳細については、「 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 」および「 [Set Domain Properties](../data-quality-services/set-domain-properties.md)」を参照してください。  
   
     > [!NOTE]  
     >  スペル チェックを使用するには、 **[ドメインのプロパティ]** ページで有効にする必要があります。 **[ドメインのプロパティ]** ページで無効になっている場合は、 **[ドメイン値]** ページで **[スペル チェックを有効/無効にします]** アイコンをクリックして有効にすることもできます。  
@@ -103,7 +103,7 @@ ms.locfileid: "47830850"
   
 11. **[選択したドメインの値を削除します]**: ドメインの既存の値を削除するには、削除する値を "値" テーブルで選択し、 **[選択したドメインの値を削除します]** をクリックします。 DQS_NULL というエントリは削除できません。したがって、削除する値を複数選択した場合に、選択した値の中に DQS_NULL が含まれていると、操作が失敗します。  
   
-12. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+12. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="FollowUp"></a> 補足情報: ドメイン ルールの変更後  
  ドメイン値を変更した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  

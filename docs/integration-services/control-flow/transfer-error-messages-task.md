@@ -17,12 +17,12 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2a1c3f5b010d0d1fbe0e1aae8ed19e1436ee05f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d377673177bd5aa2a5ac77b48e93153bdf420f41
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722740"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640859"
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
   エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。 ユーザー定義メッセージとは、ID の値が 50000 以上のメッセージのことです。 ID の値が 50000 未満のメッセージはシステム エラー メッセージなので、エラー メッセージ転送タスクを使用して転送することはできません。  
@@ -49,7 +49,7 @@ ms.locfileid: "47722740"
  エラー メッセージ転送タスクでは、エラー メッセージ転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- このタスクの **ExecutionValue** プロパティに定義される実行値は、転送されたエラー メッセージの数を返します。 エラー メッセージ転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、エラー メッセージ転送に関する情報をパッケージ内の他のオブジェクトで利用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ このタスクの **ExecutionValue** プロパティに定義される実行値は、転送されたエラー メッセージの数を返します。 エラー メッセージ転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、エラー メッセージ転送に関する情報をパッケージ内の他のオブジェクトで利用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  エラー メッセージ転送タスクには、次のようなカスタム ログ エントリがあります。  
@@ -77,7 +77,7 @@ ms.locfileid: "47722740"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-error-messages-task-editor-general-page"></a>[エラー メッセージ転送タスク エディター] ([全般] ページ)
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、エラー メッセージ転送タスクに名前を付けて説明を記述することができます。 エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。   

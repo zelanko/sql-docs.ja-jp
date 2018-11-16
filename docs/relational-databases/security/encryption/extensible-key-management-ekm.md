@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92e732924f3e5c6d4604ea194330605b2ec86d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531a20353b294d24bee8318da863eec6d05522d9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814050"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675291"
 ---
 # <a name="extensible-key-management-ekm"></a>拡張キー管理 (EKM)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47814050"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の拡張キー管理では、サードパーティの EKM/HSM ベンダーがそれぞれのモジュールを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に登録できます。 登録すると、その EKM モジュールに格納されている暗号化キーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ユーザーが使用できるようになります。 これにより、それらのモジュールでサポートされている一括暗号化/暗号化解除などの高度な暗号化機能や、キー エージングやキー ローテーションなどのキー管理機能を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から利用できます。  
   
- Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521401)に格納されたキーを使用できます。 詳細については、「 [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)で処理できるようになります。  
+ Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)に格納されたキーを使用できます。 詳細については、「 [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)で処理できるようになります。  
   
 ## <a name="ekm-configuration"></a>EKM の構成  
  拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  

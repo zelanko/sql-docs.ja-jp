@@ -16,12 +16,12 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2fcf0678fdfb78a5866a06306d3dc057fc6622a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c7a5538b4856fc64eb42acc0496690fc7733d8b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670770"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639521"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Integration Services 式の詳細の例
   このセクションでは、複数の演算子と関数を組み合わせた詳細な式の例について説明します。 式が優先順位制約または条件分割変換で使用される場合、式はブール型に評価される必要があります。 ただしこの制限は、プロパティ式、変数、派生列変換、または For ループ コンテナーで使用される式には適用されません。  
@@ -101,9 +101,9 @@ ms.locfileid: "47670770"
     ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [データ フロー コンポーネントで式を使用する](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [データ フロー コンポーネントで式を使用する](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://go.microsoft.com/fwlink/?LinkId=746575)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=746575)」  
   
   

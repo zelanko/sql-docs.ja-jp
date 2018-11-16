@@ -15,12 +15,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: a43a9d8d3b5ecf3f9d28f46db0b354891b40b183
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906082"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641749"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics タスク
 
@@ -58,7 +58,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 |-----------|-----------------|  
 |**SourceType = DirectInput**|送信する U-SQL クエリを、オプション ボックスに直接入力します。または、参照ボタン [...] をクリックし、**[Enter U-SQL Query]\(U-SQL クエリの入力\)** ダイアログ ボックスで U-SQL クエリを入力します。|  
 |**SourceType = FileConnection**|既存のファイル接続マネージャーを選択するか、<**新しい接続…**> を選択して新しいファイル接続を作成します。 関連情報については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」と「[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)」をご覧ください。|  
-|**SourceType = Variable**|既存の変数を選択するか、\<**新しい変数...**> を選択して新しい変数を作成します。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)」をご覧ください。|
+|**SourceType = Variable**|既存の変数を選択するか、\<**新しい変数...**> を選択して新しい変数を作成します。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)」をご覧ください。|
 
 
 ### <a name="job-configuration"></a>ジョブの構成
