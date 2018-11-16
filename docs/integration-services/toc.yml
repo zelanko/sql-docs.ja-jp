@@ -145,7 +145,7 @@ items:
   href: ../integration-services/service/integration-services-service-ssis-service.md
 - name: Security
   href: ../integration-services/security/security-overview-integration-services.md
-- name: '[パフォーマンス]'
+- name: パフォーマンス
   href: ../integration-services/performance/monitor-running-packages-and-other-operations.md
 - name: トラブルシューティング
   href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
@@ -322,18 +322,18 @@ items:
 - name: リソース
   items:
   - name: SSIS フォーラムのヘルプの表示
-    href: https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices
+    href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices
   - name: Stack Overflow のヘルプの表示
-    href: http://stackoverflow.com/questions/tagged/ssis
+    href: https://stackoverflow.com/questions/tagged/ssis
   - name: SSIS チーム ブログのフォロー
     href: https://blogs.msdn.microsoft.com/ssis/
   - name: 問題と要求の報告機能
     href: https://feedback.azure.com/forums/908035-sql-server
   - name: PC のドキュメントを入手
     href: ../sql-server/sql-server-help-installation.md
-ms.openlocfilehash: 78a0869048a24a747ae30a079db736d4c9cf5ea4
-ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+ms.openlocfilehash: c9546c0b08704f060169987bafc864dca922e011
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45533984"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696720"

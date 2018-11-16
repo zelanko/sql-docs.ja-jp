@@ -5,29 +5,28 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aacf37fc9d3cb7fd4b69b51e3adf115cf53bd6a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779750"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571451"
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SQL トレースでは、トレース定義に一覧表示されているイベント クラスのインスタンスであるイベントが収集されます。 このようなイベントは、フィルターによってトレースから除外したり、対象のキューに登録したりすることができます。 イベントの対象には、ファイルまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を指定できます。SMO では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を管理するアプリケーションでトレース情報を使用できます。  
+  SQL トレースでは、トレース定義に一覧表示されているイベント クラスのインスタンスであるイベントが収集されます。 このようなイベントは、フィルターによってトレースから除外したり、対象のキューに登録したりすることができます。 イベントの対象には、ファイルまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を指定できます。SMO では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理するアプリケーションでトレース情報を使用できます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
   
 ## <a name="benefits-of-sql-trace"></a>SQL トレースの利点  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のインスタンスでトレースを作成するための [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]システム ストアド プロシージャが用意されています。 これらのシステム ストアド プロシージャを使用して、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]からではなく、ユーザー独自のアプリケーションからトレースを手動で作成することもできます。 これにより、企業のニーズに合わせたカスタム アプリケーションを作成できます。  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[tsql](../../includes/tsql-md.md)]のインスタンスでトレースを作成するための [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] システム ストアド プロシージャが用意されています。 これらのシステム ストアド プロシージャを使用して、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]からではなく、ユーザー独自のアプリケーションからトレースを手動で作成することもできます。 これにより、企業のニーズに合わせたカスタム アプリケーションを作成できます。  
   
 ## <a name="sql-trace-architecture"></a>SQL トレース アーキテクチャ  
  イベント ソースには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチなどのトレース イベントやデッドロックなどの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントを生成する任意のソースを指定できます。 イベントの詳細については、「 [SQL Server イベント クラスの参照](../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。 イベントの発生後、イベント クラスがトレース定義に含まれている場合は、トレースによってイベント情報が収集されます。 トレース定義に含まれているイベント クラスに対してフィルターが定義されている場合は、フィルターが適用され、トレース イベント情報がキューに渡されます。 キューに登録されたトレース情報は、ファイルに書き込まれるか、または [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]などのアプリケーションで SMO によって使用されます。 次の図は、トレース中に SQL トレースによってどのようにイベントが収集されるかを示しています。  

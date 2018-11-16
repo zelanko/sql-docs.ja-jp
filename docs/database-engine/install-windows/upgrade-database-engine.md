@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613431"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600932"
 ---
 # <a name="upgrade-database-engine"></a>データベース エンジンのアップグレード
 
@@ -36,6 +36,6 @@ ms.locfileid: "47613431"
   
 4.  [データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした後に実行する手順の 1 つとして、データベース互換性モードを変更して新しい機能を有効にした後、クエリ ストアを使用してパフォーマンスを監視します。 この記事では、このプロセスについて説明し、推奨されるワークフローを示します。  
   
-5.  [SQL Server の新機能を利用する](http://www.microsoft.com/sql-server/sql-server-2017) 最後に、前の手順を完了した時点で、新しいデータベース エンジンの特定の拡張機能を利用できる状態になっています。 この記事では、これらの拡張機能のいくつかを提案し、詳細情報へのリンクを示します。  
+5.  [SQL Server の新機能を利用する](https://www.microsoft.com/sql-server/sql-server-2017) 最後に、前の手順を完了した時点で、新しいデータベース エンジンの特定の拡張機能を利用できる状態になっています。 この記事では、これらの拡張機能のいくつかを提案し、詳細情報へのリンクを示します。  
   
   
