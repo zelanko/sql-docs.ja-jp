@@ -10,12 +10,12 @@ ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 091482cbfc42dabead28ceade0c7840860ae3cc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776613"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671722"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>SSMA for Sybase クライアントのインストール (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) のデータベース サーバーとのインスタンスへの接続に使用されるプログラム ファイルから成る SSMA クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB、ASE データベース オブジェクトを変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB の構文、読み込み、オブジェクトに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB へのデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQLDB します。  
@@ -31,7 +31,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー 3.1 またはそれ以降のバージョン。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework バージョン 4.0 またはそれ以降のバージョン。 .NET Framework バージョン 4.0 で使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品メディア。 取得することも、 [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882)します。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework バージョン 4.0 またはそれ以降のバージョン。 .NET Framework バージョン 4.0 で使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品メディア。 取得することも、 [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882)します。  
   
 -   Sybase OLEDB/ADO.Net/ODBC プロバイダーと、データベースが含まれている Sybase ASE データベース サーバーへの接続を移行します。 プロバイダーは、Sybase ASE の製品メディアからインストールできます。 接続の詳細については、次を参照してください。 [Sybase ASE への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)します。  
   
@@ -40,7 +40,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
 -   4 GB の RAM を推奨します。  
   
 ## <a name="installing-the-ssma-for-sybase-client"></a>Sybase クライアント用の SSMA のインストール  
-SSMA は、Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](http://aka.ms/ssmaforsybase)します。  
+SSMA は、Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](https://aka.ms/ssmaforsybase)します。  
   
 最新バージョンをダウンロードした後は、SSMA をインストールする前からインストール ファイルを抽出する必要があります。  
   

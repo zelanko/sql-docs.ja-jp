@@ -10,12 +10,12 @@ ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: aa858ed572260ffa89baa5dabf735e838cf1b083
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 283fc57046e2c6e6acbdbe0504d44c6692afdc5e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099234"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672581"
 ---
 # <a name="appendix---1-mysqltosql"></a>付録 - 1 (MySQLToSQL)
 SSMA コンソールのコマンド ライン オプションを簡単に確認します。  
@@ -32,5 +32,5 @@ SSMA コンソールのコマンド ライン オプションを簡単に確認�
 |8|-?|いいえ|該当なし|該当なし|  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソール (MySQL) の実行](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[SSMA コンソール (MySQL) の実行](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

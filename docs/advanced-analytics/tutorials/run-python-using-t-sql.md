@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 59897cbe6abc13b9842dc148ef8c2de4413926d0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050899"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702957"
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL を使用した Python の実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ SQL Server での Python コードを実行する 2 つの方法はあります�
 
 他の種類の入力は、SQL 変数として渡すことができますたとえば、渡すことができます、トレーニング済みモデル変数としてシリアル化の関数を使用して[pickle](https://docs.python.org/3.0/library/pickle.html)または[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)でモデルを記述する、。バイナリ形式です。
 
-ストアド プロシージャが返す 1 つの Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html)データ フレームの出力として、スカラー、および変数としてモデルを出力することもできます。 たとえば、二項変数としてトレーニング済みモデルを出力し、そのモデルをテーブルに書き込む、T-SQL INSERT ステートメントに渡すできます。 (バイナリ形式) でのプロットまたはスカラーを生成することもできます (日付と時刻をなど、個々 の値、経過時間、モデルのトレーニングなど)。
+ストアド プロシージャが返す 1 つの Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)データ フレームの出力として、スカラー、および変数としてモデルを出力することもできます。 たとえば、二項変数としてトレーニング済みモデルを出力し、そのモデルをテーブルに書き込む、T-SQL INSERT ステートメントに渡すできます。 (バイナリ形式) でのプロットまたはスカラーを生成することもできます (日付と時刻をなど、個々 の値、経過時間、モデルのトレーニングなど)。
 
 ここでは、既定値だけを見てみましょう sp_execute_external_script の入力と出力の変数:`InputDataSet`と`OutputDataSet`します。 
 
@@ -313,7 +313,7 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
 
 表形式の構造体に、数学のスカラー結果を変換すること、SQL Server が処理できる形式に変換する必要います。 
 
-1. 一連を data.frame に変換する、pandas を呼び出す[データ フレーム](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)メソッド。
+1. 一連を data.frame に変換する、pandas を呼び出す[データ フレーム](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)メソッド。
 
     ```sql
     execute sp_execute_external_script 

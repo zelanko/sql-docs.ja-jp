@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ef2abe539c47e3a66092d12628ee6850e7a58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852869"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667783"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47852869"
   
 |*ValuePtr*値|説明|  
 |----------------------|-----------------|  
-|SQL_DP_ON|既定値です。 呼び出した後[SQLPrepare 関数](http://go.microsoft.com/fwlink/?LinkId=59360)、されるまで、ステートメントの準備が遅延**SQLExecute**と呼びますか、メタプロパティ操作 (**SQLDescribeCol**または**SQLDescribeParam**) を実行します。|  
+|SQL_DP_ON|既定値です。 呼び出した後[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)、されるまで、ステートメントの準備が遅延**SQLExecute**と呼びますか、メタプロパティ操作 (**SQLDescribeCol**または**SQLDescribeParam**) を実行します。|  
 |SQL_DP_OFF|ステートメントの準備とすぐに**SQLPrepare**を実行します。|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -150,7 +150,7 @@ ms.locfileid: "47852869"
  SQLTables、SQLColumns、または SQLPrimaryKeys は、SQL_SOPT_SS_NAME_SCOPE が以外の値を持つときに呼び出される、カタログ関数 SQL_SS_NAME_SCOPE_TABLE、SQL_ERROR が返されます。 "関数のシーケンス エラーです (SQL_SOPT_SS_NAME_SCOPE が SQL_SS_NAME_SCOPE_TABLE に設定されていません)" というメッセージを含む SQLSTATE HY010 の診断レコードが生成されます。  
   
 ## <a name="see-also"></a>参照  
- [SQLGetStmtAttr 関数](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

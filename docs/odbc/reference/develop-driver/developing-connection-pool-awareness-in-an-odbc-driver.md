@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820190"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661751"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC ドライバー対応接続プールの開発
 このトピックでは、ドライバーが接続プールのサービスを提供する方法に関する情報を含む ODBC ドライバーの開発の詳細について説明します。  
@@ -68,7 +68,7 @@ ms.locfileid: "47820190"
 ## <a name="the-connection-rating"></a>接続の評価  
  比較して新しい接続を確立、プールされた接続の一部の接続情報 (データベースなど) をリセットすることでパフォーマンスの向上を取得できます。 そのため、データベース名を一連のキー属性に存在しない可能性があります。 それ以外の場合、お客様がさまざまな異なる接続文字列を使用して各データベースでは、中間層アプリケーションで優れたできない可能性があります、独立したプールすることができます。  
   
- いくつかの属性の不一致を含む接続を再利用するたびに、新しいアプリケーションの要求に基づいてが一致しない属性をリセットする必要がありますように返される接続は、アプリケーションの要求と同じです (SQL_ATTR 属性の説明を参照してください。_DBC_INFO_TOKEN [SQLSetConnectAttr 関数](http://go.microsoft.com/fwlink/?LinkId=59368))。 ただし、これらの属性をリセットするとパフォーマンスが低下する可能性があります。 たとえば、データベースをリセットするには、サーバーへのネットワーク呼び出しが必要です。 そのためがある場合は、完全に一致する接続を再利用します。  
+ いくつかの属性の不一致を含む接続を再利用するたびに、新しいアプリケーションの要求に基づいてが一致しない属性をリセットする必要がありますように返される接続は、アプリケーションの要求と同じです (SQL_ATTR 属性の説明を参照してください。_DBC_INFO_TOKEN [SQLSetConnectAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59368))。 ただし、これらの属性をリセットするとパフォーマンスが低下する可能性があります。 たとえば、データベースをリセットするには、サーバーへのネットワーク呼び出しが必要です。 そのためがある場合は、完全に一致する接続を再利用します。  
   
  ドライバーで評価関数は、新しい接続要求を既存の接続を評価できます。 たとえば、ドライバーの評価の関数を特定できます。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47820190"
   
  ドライバー マネージャーの**SQLAllocHandle**と**SQLFreeHandle**この新しい種類のハンドルを受け入れません。  
   
- SQL_HANDLE_DBC_INFO_TOKEN には、資格情報などの機密情報を含めることができます。 そのため、ドライバーではメモリ バッファーをクリアに安全に (を使用して[SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) では、このハンドルを解放する前に機密性の高い情報を含む**SQLFreeHandle**します。 アプリケーションの環境ハンドルが閉じられたときにすべての関連付けられている接続プールは閉じられます。  
+ SQL_HANDLE_DBC_INFO_TOKEN には、資格情報などの機密情報を含めることができます。 そのため、ドライバーではメモリ バッファーをクリアに安全に (を使用して[SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) では、このハンドルを解放する前に機密性の高い情報を含む**SQLFreeHandle**します。 アプリケーションの環境ハンドルが閉じられたときにすべての関連付けられている接続プールは閉じられます。  
   
 ## <a name="driver-manager-connection-pool-rating-algorithm"></a>ドライバー マネージャーの接続プールのアルゴリズムの評価  
  このセクションでは、ドライバー マネージャーの接続プールの評価のアルゴリズムについて説明します。 ドライバー開発者は、旧バージョンとの互換性のため、同じアルゴリズムを実装できます。 このアルゴリズムは、最適なものをできない可能性があります。 これを調整する必要があります、実装に基づくアルゴリズム (それ以外の場合はこの機能を実装する理由)。  

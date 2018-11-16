@@ -18,12 +18,12 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85f3bc694fa1636316eb19de49ad5ad9defa5eaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b72ce858925c0df0c4faba7f90b0dcc606d52ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718380"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665033"
 ---
 # <a name="common-language-runtime-integration-overview"></a>共通言語ランタイム統合の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,14 @@ ms.locfileid: "47718380"
  [CLR 統合における新機能](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  このリリースの新機能について説明します。  
   
- [CLR 統合のアーキテクチャ](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
+ [CLR 統合のアーキテクチャ](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  CLR 統合の設計目標について説明します。  
   
  [CLR 統合の有効化](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  CLR 統合を有効にする方法を説明します。  
   
 ## <a name="see-also"></a>参照  
- [.NET Framework のインストール](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d61e3ab4bd3fb7afda858dd7e2b14fd2bddbd599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752390"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600922"
 ---
 # <a name="ado-errors"></a>ADO エラー
 **ErrorValueEnum**定数は、ADO エラー値を示します。 値を含む、これらの列挙定数の完全な一覧を参照してください。[付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)します。 このセクションは、さらに興味深いエラーのいくつかを確認し、または問題を解決するソリューションを発生させることが特定の状況について説明します。 両方の**ErrorValueEnum**定数と短いの正の 10 進数の一覧が表示されます。
@@ -64,7 +64,7 @@ ms.locfileid: "47752390"
 |**3724**|**adErrCantConvertvalue**|符号の不一致またはデータのオーバーフロー以外の理由は、データ値を変換できません。 たとえば、変換はデータを省略しています。|
 |**3725**|**adErrCantCreate**|データ値を設定またはフィールドのデータ型が、不明か、プロバイダーが操作を実行するリソースが不足しているために取得できません。|
 |**3726**|**adErrColumnNotOnThisRow**|レコードでは、このフィールドは含まれません。 不適切なフィールド名が指定またはフィールドではなく、**フィールド**参照が現在のレコードのコレクション。|
-|**3727**|**adErrURLDoesNotExist**|ソース URL またはリンク先の URL の親のいずれかが存在しません。 ソースまたは宛先の URL で入力ミスがあります。 必要があります`http://mysite/photo/myphoto.jpg`実際が必要とする`http://mysite/photos/myphoto.jpg`代わりにします。 親 URL の入力ミス エラー (ここでは、*フォト*の代わりに*写真*)、エラーが原因です。|
+|**3727**|**adErrURLDoesNotExist**|ソース URL またはリンク先の URL の親のいずれかが存在しません。 ソースまたは宛先の URL で入力ミスがあります。 必要があります`https://mysite/photo/myphoto.jpg`実際が必要とする`https://mysite/photos/myphoto.jpg`代わりにします。 親 URL の入力ミス エラー (ここでは、*フォト*の代わりに*写真*)、エラーが原因です。|
 |**3728**|**adErrTreePermissionDenied**|権限はツリーまたはサブツリーにアクセスするだけで十分ではありません。 接続文字列で指定されたユーザーには、適切なアクセス許可がありません。|
 |**3729**|**adErrInvalidURL**|URL には、無効な文字が含まれています。 URL が正しいことを確認します。 URL が現在のプロバイダーに登録されているスキームに従います (たとえば、インターネット発行プロバイダーが登録されて http の場合)。|
 |**3730**|**adErrResourceLocked**|指定した URL によって表されるオブジェクトは、他の 1 つまたは複数のプロセスによってロックされています。 プロセスが終了するまで待機し、操作をやり直してください。 アクセスしようとしているオブジェクトは、別のユーザーまたはアプリケーションで別のプロセスによってロックされました。 これは、マルチ ユーザー環境で発生する可能性が高い。|

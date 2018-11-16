@@ -13,23 +13,23 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 32b017e53d36560b5330a25f7167f865bea6ea88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a366f9ff19099ba640a02aecfe00a944e0fa6299
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745460"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681270"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>MySQL のデータの移行には、SQL Server - Azure SQL DB (MySQLToSQL)
 変換後のオブジェクトが正常に同期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のデータを移行する MySQL から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
   
 > [!IMPORTANT]  
-> 場合、エンジンが使用されているサーバー側のデータの移行のエンジン、その後、移行する前に、データの MySQL の拡張機能パックおよび SSMA を実行しているコンピューターに MySQL プロバイダー、SSMA をインストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスが実行されてもする必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server (MySQL to SQL) での SSMA コンポーネントのインストール。](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> 場合、エンジンが使用されているサーバー側のデータの移行のエンジン、その後、移行する前に、データの MySQL の拡張機能パックおよび SSMA を実行しているコンピューターに MySQL プロバイダー、SSMA をインストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスが実行されてもする必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server (MySQL to SQL) での SSMA コンポーネントのインストール。](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
 移行する前にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。  
   
--   このダイアログ ボックスを使用して、移行のバッチ サイズ、テーブルのロック、制約チェック、null 値の処理、および id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行)](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)します。  
+-   このダイアログ ボックスを使用して、移行のバッチ サイズ、テーブルのロック、制約チェック、null 値の処理、および id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)します。  
   
     詳細については**データ移行の設定の拡張**を参照してください[データ移行の設定](data-migration-settings-mysqltosql.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47745460"
   
 **サーバー側のデータの移行:**  
   
--   サーバー側のデータ移行中には、エンジンは、ターゲット データベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server (MySQL to SQL) での SSMA コンポーネントのインストール。](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+-   サーバー側のデータ移行中には、エンジンは、ターゲット データベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SQL Server (MySQL to SQL) での SSMA コンポーネントのインストール。](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 -   サーバー側での移行を開始するには、選択、**サーバー側のデータ移行のエンジン**オプション、**プロジェクト設定** ダイアログ ボックス。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "47745460"
   
 5.  **MySQL への接続**ダイアログ ボックスが接続の資格情報を入力し、クリックして**Connect**します。 MySQL に接続する方法の詳細については、次を参照してください[MySQL への接続&#40;MySQLToSQL。&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
-    ターゲット データベースが SQL Server の場合で接続の資格情報を入力し、 **SQL サーバーへの接続** ダイアログ ボックスをクリックします**Connect**します。 SQL Server に接続する方法の詳細については、次を参照してください[SQL サーバーへの接続。](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    ターゲット データベースが SQL Server の場合で接続の資格情報を入力し、 **SQL サーバーへの接続** ダイアログ ボックスをクリックします**Connect**します。 SQL Server に接続する方法の詳細については、次を参照してください[SQL サーバーへの接続。](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
     ターゲット データベースが SQL Azure の場合は、[接続の資格情報を入力してください。、 **SQL Azure への接続**] ダイアログ ボックスをクリックします**Connect**します。 SQL Azure に接続する方法の詳細については、次を参照してください[Azure SQL DB への接続&#40;MySQLToSQL。&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
   
-    メッセージが表示されます、**出力**ウィンドウ。 移行の完了時に、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、順にクリックします**詳細**します。 レポートが完了したら、クリックして**閉じる**します。 データ移行レポートの詳細については、次を参照してください[データ移行レポート (SSMA 一般的)。](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    メッセージが表示されます、**出力**ウィンドウ。 移行の完了時に、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、順にクリックします**詳細**します。 レポートが完了したら、クリックして**閉じる**します。 データ移行レポートの詳細については、次を参照してください[データ移行レポート (SSMA 一般的)。](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > SQL Express エディションは、対象データベースとして使用される、クライアント側のデータの移行のみが許可されているし、サーバー側のデータ移行はサポートされていません。  

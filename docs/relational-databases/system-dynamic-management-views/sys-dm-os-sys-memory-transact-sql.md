@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d20221d1f551b17483d977b98226066950ce8ce2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cea000b63948207626298c1f0c977ba22ec3865
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709620"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677311"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "47709620"
 |**system_cache_kb**|**bigint**|システム キャッシュ メモリの合計サイズ (KB 単位)。|  
 |**kernel_paged_pool_kb**|**bigint**|ページ カーネル プールの合計サイズ (KB 単位)。|  
 |**kernel_nonpaged_pool_kb**|**bigint**|非ページ カーネル プールの合計サイズ (KB 単位)。|  
-|**system_high_memory_signal_state**|**bit**|システムの高メモリ リソース通知の状態。 この値が 1 の場合、Windows によって高メモリ シグナルが設定されていることを意味します。 詳細については、次を参照してください。 [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) 、MSDN ライブラリ。|  
-|**system_low_memory_signal_state**|**bit**|システムの低メモリ リソース通知の状態。 この値が 1 の場合、Windows によって低メモリ シグナルが設定されていることを意味します。 詳細については、次を参照してください。 [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) 、MSDN ライブラリ。|  
+|**system_high_memory_signal_state**|**bit**|システムの高メモリ リソース通知の状態。 この値が 1 の場合、Windows によって高メモリ シグナルが設定されていることを意味します。 詳細については、次を参照してください。 [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 、MSDN ライブラリ。|  
+|**system_low_memory_signal_state**|**bit**|システムの低メモリ リソース通知の状態。 この値が 1 の場合、Windows によって低メモリ シグナルが設定されていることを意味します。 詳細については、次を参照してください。 [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 、MSDN ライブラリ。|  
 |**system_memory_state_desc**|**nvarchar (256)**|メモリの状態の説明。 次の表を参照してください。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   

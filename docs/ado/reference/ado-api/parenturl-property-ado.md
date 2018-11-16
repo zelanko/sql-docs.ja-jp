@@ -16,12 +16,12 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbff500a90ab4456b3e9ef252be4407c636cdec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822110"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603022"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL プロパティ (ADO)
 親を指す絶対 URL 文字列を示す[レコード](../../../ado/reference/ado-api/record-object-ado.md)、現在の**レコード**オブジェクト。  
@@ -35,13 +35,13 @@ ms.locfileid: "47822110"
  たとえば、"first"の下のフォルダーが含まれるは「次」。 開く、**レコード**次の構文を使用してオブジェクト。  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- 値、 `the` **ParentURL**プロパティは`"http://first"`と同じ**ActiveConnection**します。  
+ 値、 `the` **ParentURL**プロパティは`"https://first"`と同じ**ActiveConnection**します。  
   
- ソースが次のように、絶対 URL を指定もできます`"http://first/second"`します。 **ParentURL**プロパティは、 `"http://first"`、その上のレベル`"second"`します。  
+ ソースが次のように、絶対 URL を指定もできます`"https://first/second"`します。 **ParentURL**プロパティは、 `"https://first"`、その上のレベル`"second"`します。  
   
  このプロパティは、場合、null 値にすることがあります。  
   

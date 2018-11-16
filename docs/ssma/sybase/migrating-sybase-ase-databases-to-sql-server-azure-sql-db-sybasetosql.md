@@ -10,12 +10,12 @@ ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 551808268b4f6eb8a0d5c16c14bcb16ba977ce61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96ade7125c0d03963e8e012ed72bdb8fdef492cf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738180"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662351"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>SQL Server - Azure SQL Database (SybaseToSQL) に SAP ASE データベースを移行します。
 SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (ASE) は、すぐに SAP ASE データベースを移行するのに役立つ包括的な環境[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。 SAP ASE の SSMA を使用してデータベース オブジェクトとデータを確認して、移行対象のデータベースを評価をするデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]や Azure SQL Database へのデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。  
@@ -31,17 +31,17 @@ SAP ASE データベースからオブジェクトとデータを正常に移行
   
 3.  [SQL Server インスタンスへの接続](connecting-to-sql-server-sybasetosql.md)または[Azure SQL Database のインスタンスへの接続](connecting-to-azure-sql-db-sybasetosql.md)します。  
   
-4.  [SQL Server に SAP ASE データベース スキーマを割り当てる Azure SQL Database のデータベース スキーマ/](http://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268)します。  
+4.  [SQL Server に SAP ASE データベース スキーマを割り当てる Azure SQL Database のデータベース スキーマ/](https://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268)します。  
   
 5.  必要に応じて、[評価レポートを作成する](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md)変換のためのデータベース オブジェクトを評価し、変換にかかる時間を推定します。  
   
-6.  [SQL Server に SAP ASE データベース スキーマを変換/Azure SQL Database スキーマ](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3)します。  
+6.  [SQL Server に SAP ASE データベース スキーマを変換/Azure SQL Database スキーマ](https://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3)します。  
   
-7.  [SQL Server に変換されたデータベース オブジェクトを読み込むと Azure SQL Database](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)します。  
+7.  [SQL Server に変換されたデータベース オブジェクトを読み込むと Azure SQL Database](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)します。  
   
     スクリプトを保存するかで実行して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database、またはデータベース オブジェクトを同期します。  
   
-8.  [SQL Server にデータを移行または Azure SQL Database](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)します。  
+8.  [SQL Server にデータを移行または Azure SQL Database](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)します。  
   
 9. 必要に応じて、データベース アプリケーションを更新します。  
   

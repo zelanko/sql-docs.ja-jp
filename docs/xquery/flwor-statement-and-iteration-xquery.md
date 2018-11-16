@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -25,12 +24,12 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fe062b9d42dcedfc9c357f5af10ae19c2298acdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ac773ea8c68be65a0b60aaff3d542df0b6dc6e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656320"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662882"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR ステートメントと繰り返し (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +40,17 @@ ms.locfileid: "47656320"
   
 -   1 つ以上の反復子変数を入力シーケンスにバインドする 1 つ以上の FOR 句。  
   
-     入力シーケンスは、XPath 式などの他の XQuery 式でもかまいません。 その場合、ノードのシーケンス、またはアトミック値のシーケンスのいずれかを指定します。 アトミック値のシーケンスは、リテラルまたはコンス トラクター関数を使用して構築できます。 構築された XML ノードは入力シーケンスとして許可されていません[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
+     入力シーケンスは、XPath 式などの他の XQuery 式でもかまいません。 その場合、ノードのシーケンス、またはアトミック値のシーケンスのいずれかを指定します。 アトミック値のシーケンスは、リテラルまたはコンス トラクター関数を使用して構築できます。 構成された XML ノードは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の入力シーケンスとしては使用できません。  
   
--   省略可能な `let` 句。 この句は、特定の繰り返し処理の変数に値を割り当てます。 割り当てる式として XPath 式などの XQuery 式を指定でき、ノードのシーケンスまたはアトミック値のシーケンスを返すことができます。 アトミック値のシーケンスを構成するには、リテラルまたはコンストラクター関数を使用できます。 構築された XML ノードは入力シーケンスとして許可されていません[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
+-   省略可能な `let` 句。 この句は、特定の繰り返し処理の変数に値を割り当てます。 割り当てる式として XPath 式などの XQuery 式を指定でき、ノードのシーケンスまたはアトミック値のシーケンスを返すことができます。 アトミック値のシーケンスを構成するには、リテラルまたはコンストラクター関数を使用できます。 構成された XML ノードは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の入力シーケンスとしては使用できません。  
   
--   反復子変数。 この変数を使用して型アサーションをオプションを持つことができます、`as`キーワード。  
+-   反復子変数。 反復子変数には `as` キーワードを使用して、型アサーションをオプションで指定できます。  
   
 -   省略可能な `where` 句。 繰り返しにフィルター述語を適用します。  
   
 -   省略可能な `order by` 句。  
   
--   `return` 式。 内の式、`return`句は、FLWOR ステートメントの結果を構築します。  
+-   `return` 式。 `return` 句の式で FLWOR ステートメントの結果を構成します。  
   
  たとえば、次のクエリは最初の製造拠点で <`Step`> 要素を繰り返し、<`Step`> ノードの文字列値を返します。  
   
@@ -81,11 +80,11 @@ SELECT @x.query('
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- 次のクエリは上記のクエリと似ていますが、ProductModel テーブルの型指定された xml 列である Instructions 列に対して指定されている点が異なります。 クエリを反復処理、製造手順では、<`step`> 特定の製品の最初のワーク センター拠点の要素。  
+ 次のクエリは上記のクエリと似ていますが、ProductModel テーブルの型指定された xml 列である Instructions 列に対して指定されている点が異なります。 特定の製品に対し、最初のワーク センター拠点で行われるすべての製造手順 (<`step`> 要素) を繰り返します。  
   
 ```  
 SELECT Instructions.query('  
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
       return  
            string($Step)   
@@ -173,7 +172,7 @@ SELECT @x.query('
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
         return  
           <Location>  
@@ -189,7 +188,7 @@ where ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   FLWOR ステートメントのシーケンスを取得します <`Location`> 特定の製品の要素。  
+-   FLWOR ステートメントで、特定の製品の <`Location`> 要素のシーケンスを取得します。  
   
 -   [Data 関数 (XQuery)](../xquery/data-accessor-functions-data-xquery.md)属性としての代わりにテキスト ノードとして結果の XML に追加されますので、各属性の値を抽出するために使用します。  
   
@@ -211,13 +210,13 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-let-clause"></a>let 句の使用  
- 使用することができます、`let`句に変数を参照してを参照できる繰り返し式の名前。 `let` 変数に割り当てられた式は、変数がクエリ内で参照されるたびにクエリに挿入されます。 つまり、ステートメントは、式が参照される回数だけ実行されます。  
+ `let` 句を使用すると、繰り返し出現する式に名前を付けて変数とすることで、式を参照できます。 `let` 変数に割り当てられた式は、変数がクエリ内で参照されるたびにクエリに挿入されます。 つまり、ステートメントは、式が参照される回数だけ実行されます。  
   
- [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース、ツールを使用していた場所と必要なツールについて、製造手順が含まれています。 次のクエリは、`let` 句を使用して、製品モデルの作成に必要なツールと、それぞれのツールが必要となる場所を一覧表示します。  
+ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース内の製造手順には、必要なツールとツールを使用する場所の情報が保存されています。 次のクエリは、`let` 句を使用して、製品モデルの作成に必要なツールと、それぞれのツールが必要となる場所を一覧表示します。  
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
             let $L := //AWMI:Location[.//AWMI:tool[.=data($T)]]  
         return  
@@ -234,7 +233,7 @@ where ProductModelID=7
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
       where count($WC/AWMI:step) < 3  
       return  
@@ -250,7 +249,7 @@ where ProductModelID=7
   
 -   `where`キーワードを使用して、 **count()** 関数の数をカウント <`step`> 子要素で、各ワーク センターの場所。  
   
--   `return`式は、繰り返しの結果から使用する XML を構築します。  
+-   `return` 式で、繰り返しの結果から必要な XML を生成します。  
   
  結果を次に示します。  
   
@@ -260,11 +259,11 @@ where ProductModelID=7
   
  `where` 句内の式の結果は、次の規則を順に適用してブール値に変換されます。 この規則は整数を使用できない点を除き、パス式の述語を評価するときの規則と同じです。  
   
-1.  場合、`where`式が空のシーケンスを返します、その有効なブール値は False です。  
+1.  `where` 式が空のシーケンスを返す場合、有効なブール値は False です。  
   
 2.  `where` 式が単純な Boolean 型の値を 1 つ返す場合、その値が有効なブール値になります。  
   
-3.  場合、`where`式には少なくとも 1 つのノードを含むシーケンスを返す、有効なブール値は True になります。  
+3.  `where` 式が 1 つ以上のノードを含んだシーケンスを返す場合、有効なブール値は True です。  
   
 4.  上記以外の場合、静的エラーが発生します。  
   
@@ -297,11 +296,11 @@ SELECT @x.query('
   
 -   `for`式を定義`$Loc`と $`FirstStep`変数。  
   
--   `two`式、`/ManuInstructions/Location`と`$FirstStep in $Loc/Step[1]`はの値をその相関`$FirstStep`の値に依存`$Loc`します。  
+-   `two` の値が `/ManuInstructions/Location` の値に依存しているので、2 つの式 `$FirstStep in $Loc/Step[1]` と `$FirstStep` には相関関係があります。`$Loc`  
   
--   `$Loc` に関連付けられた式により、<`Location`> 要素のシーケンスが生成されます。 各 <`Location`> 要素、 `$FirstStep` 1 つのシーケンスを生成 <`Step`> 要素では、シングルトン。  
+-   `$Loc` に関連付けられた式により、<`Location`> 要素のシーケンスが生成されます。 各 <`Location`> 要素について、`$FirstStep` により 1 つの <`Step`> 要素から成るシーケンス (シングルトン) が生成されます。  
   
--   `$Loc` 関連付けられている式で指定されて、`$FirstStep`変数。  
+-   `$Loc` は、`$FirstStep` 変数に関連付けられた式で指定しています。  
   
  結果を次に示します。  
   
@@ -314,7 +313,7 @@ Manu step 1 at Loc 2
   
 ```  
 SELECT Instructions.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
             $S  in $WC/step  
       return  
@@ -338,14 +337,14 @@ WHERE ProductModelID=7
   
 ```  
 <Step xmlns=  
-    "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
+    "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
      Insert <material>aluminum sheet MS-2341</material> into the <tool>T-   
      85A framing tool</tool>.   
 </Step>  
 ...  
 <Step xmlns=  
-      "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
+      "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
     LocationID="20">  
         Assemble all frame components following blueprint   
         <blueprint>1299</blueprint>.  
@@ -354,7 +353,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>order by 句の使用  
- XQuery での並べ替えの実行を使用して、 `order by` FLWOR 式の句。 渡した並べ替え式、`order by`句型を持つのに対して有効な値を返す必要があります、 **gt**演算子。 それぞれの並べ替え式は、シングルトン (項目が 1 つのシーケンス) になる必要があります。 既定の並べ替えは昇順です。 並べ替え式ごとに昇順か降順かをオプションとして選択できます。  
+ XQuery の並べ替えを行うには、FLWOR 式で `order by` 句を使用します。 渡した並べ替え式、`order by`句型を持つのに対して有効な値を返す必要があります、 **gt**演算子。 それぞれの並べ替え式は、シングルトン (項目が 1 つのシーケンス) になる必要があります。 既定の並べ替えは昇順です。 並べ替え式ごとに昇順か降順かをオプションとして選択できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に実装された XQuery で行う、文字列値を並べ替えるための比較には、常にバイナリの Unicode コード ポイントの照合順序が使用されます。  
@@ -365,8 +364,8 @@ WHERE ProductModelID=7
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
-   declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
-   declare namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+   declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+   declare namespace aci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
    for $a in /aci:AdditionalContactInfo//act:telephoneNumber   
    order by $a/act:number[1] descending  
    return $a  
@@ -384,10 +383,10 @@ order by data($a/act:number[1]) descending
  結果を次に示します。  
   
 ```  
-<act:telephoneNumber xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
-<act:telephoneNumber xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3333</act:number>  
 </act:telephoneNumber>  
 ```  
@@ -396,8 +395,8 @@ order by data($a/act:number[1]) descending
   
 ```  
 WITH XMLNAMESPACES (  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
   
 SELECT AdditionalContactInfo.query('  
    for $a in /aci:AdditionalContactInfo//act:telephoneNumber   
@@ -408,11 +407,11 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- 属性値による並べ替えも行えます。 たとえば、次のクエリは、新しく作成された取得 <`Location`> 要素を持つ、LocationID 属性および LaborHours 属性 LaborHours 属性の降順で並べ替えられます。 結果として、労働時間が最も長いワーク センター拠点が最初に返されます。  
+ 属性値による並べ替えも行えます。 たとえば、次のクエリでは、新しく作成した、LocationID 属性および LaborHours 属性を含む <`Location`> 要素を LaborHours 属性の降順で並べ替えて取得します。 結果として、労働時間が最も長いワーク センター拠点が最初に返されます。  
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
 order by $WC/@LaborHours descending  
         return  
@@ -436,12 +435,12 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- 次のクエリは、結果を要素名順に並べ替えます。 製品カタログから特定の製品の仕様を取得します。 仕様の子である、<`Specifications`> 要素。  
+ 次のクエリは、結果を要素名順に並べ替えます。 製品カタログから特定の製品の仕様を取得します。 製品仕様は <`Specifications`> 要素の子です。  
   
 ```  
 SELECT CatalogDescription.query('  
      declare namespace  
- pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+ pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
       for $a in /pd:ProductDescription/pd:Specifications/*   
      order by local-name($a)  
       return $a  
@@ -452,9 +451,9 @@ where ProductModelID=19;
   
  上のクエリに関して、次の点に注意してください。  
   
--   `/p1:ProductDescription/p1:Specifications/*`式の子要素を返します <`Specifications`>。  
+-   `/p1:ProductDescription/p1:Specifications/*` 式が <`Specifications`> の子要素を返します。  
   
--   `order by (local-name($a))`式では、要素名のローカル部分で、シーケンスを並べ替えます。  
+-   `order by (local-name($a))` 式でシーケンスを要素名のローカル部分の順に並べ替えます。  
   
  結果を次に示します。  
   
@@ -491,7 +490,7 @@ select @x.query('
 <Person Name="B" />  
 ```  
   
- 次の例のように、並べ替え条件は複数指定できます。 この例ではクエリで並べ替える <`Employee`> 要素をまず Title、管理者によってし属性の値。  
+ 次の例のように、並べ替え条件は複数指定できます。 この例のクエリは、<`Employee`> 要素をまず Title 属性の値で並べ替え、次に Administrator 属性の値で並べ替えます。  
   
 ```  
 declare @x xml  

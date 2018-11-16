@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 74a6b4780aab192e09b24f385ac5357c2515a5fc
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419267"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677918"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
@@ -118,9 +118,9 @@ Linux でのログ ディレクトリにダンプを探します。 Linux のコ
 コア ダンプの 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-SQL ダンプの 
+For SQL dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -207,7 +207,7 @@ SQLCMD を使用したシングル ユーザー モードで SQL Server を起�
 
 2. エラー: ホスト名は 15 文字である必要がありますまたはそれ以下。
 
-   これは、SQL Server の Debian パッケージをインストールしようとするマシンの名前が 15 文字より長いときに発生する既知の問題です。 現在、マシンの名前を変更する以外の回避策はありません。 これを実現する方法の 1 つは、ホスト名のファイルを編集し、マシンを再起動することです。 次[web サイトのガイド](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)これを詳しく説明します。
+   これは、SQL Server の Debian パッケージをインストールしようとするマシンの名前が 15 文字より長いときに発生する既知の問題です。 現在、マシンの名前を変更する以外の回避策はありません。 これを実現する方法の 1 つは、ホスト名のファイルを編集し、マシンを再起動することです。 次[web サイトのガイド](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)これを詳しく説明します。
 
 3. システム管理者 (SA) パスワードをリセットしています。
 
@@ -239,7 +239,7 @@ SQLCMD を使用したシングル ユーザー モードで SQL Server を起�
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   リソース:[特殊文字](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   リソース:[特殊文字](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

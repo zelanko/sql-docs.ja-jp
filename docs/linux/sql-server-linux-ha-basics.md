@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b33acbcf74857cd6a2def74f3596e3dda2a034a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720870"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665677"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイの SQL Server 可用性の基礎
 
@@ -77,7 +77,7 @@ MyAGCert.cer ファイルを他のサーバーで指定されたフォルダー�
 
 SMB 共有の Windows に基づくこともできます。SMB 共有を Linux サーバーのホストで Samba のクライアント部分が正しく構成されていれば、Linux ベースにする必要はありません[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]しが適切なアクセスを共有します。 既存のインフラストラクチャを活用する方法の 1 つなりますにとって混在環境では、Linux ベース[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]展開します。
 
-重要なことの 1 つは、Samba のデプロイのバージョンに準拠している SMB 3.0 があることです。 SMB のサポートを追加したときに[!INCLUDE[sssql11-md](../includes/sssql11-md.md)]、SMB 3.0 をサポートするすべての共有が必要です。 Samba を使用して、共有と Windows サーバーではなく場合、Samba ベース共有は SMB 3.1.1 をサポートする Samba 4.0 またはそれ以降と理想的には 4.3 以降、使用する必要があります。 SMB および Linux 上の情報の適切なソースが[Samba で SMB3](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)します。
+重要なことの 1 つは、Samba のデプロイのバージョンに準拠している SMB 3.0 があることです。 SMB のサポートを追加したときに[!INCLUDE[sssql11-md](../includes/sssql11-md.md)]、SMB 3.0 をサポートするすべての共有が必要です。 Samba を使用して、共有と Windows サーバーではなく場合、Samba ベース共有は SMB 3.1.1 をサポートする Samba 4.0 またはそれ以降と理想的には 4.3 以降、使用する必要があります。 SMB および Linux 上の情報の適切なソースが[Samba で SMB3](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)します。
 
 最後に、ネットワーク ファイル システム (NFS) 共有を使用して、オプションです。 Windows ベースの展開のオプションでない NFS を使用して[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、Linux ベースのデプロイのみ使用できます。
 
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **ファイアウォールのドキュメント:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>インストール[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]可用性のためのパッケージ
@@ -156,7 +156,7 @@ Pacemaker の完全なドキュメントについては、すべてが完全な�
 
 Ubuntu の可用性のためのガイドではありません。
 
-スタック全体の詳細についても参照してください、公式[Pacemaker ドキュメント ページ](http://clusterlabs.org/doc/)Clusterlabs サイト。
+スタック全体の詳細についても参照してください、公式[Pacemaker ドキュメント ページ](https://clusterlabs.org/doc/)Clusterlabs サイト。
 
 ### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker の概念と用語
 このセクションでは、一般的な概念と Pacemaker の実装を使用する用語を説明します。
@@ -208,13 +208,13 @@ Pacemaker クラスターのログの場所は、ディストリビューショ�
 このセクションでは、Pacemaker クラスターの場合は、重要な計画点について説明します。
 
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Linux ベースの仮想化の Pacemaker クラスターします。 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Linux ベースのデプロイに仮想マシンを使用して[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Ag および Fci の展開は、Windows ベースの対応と同じ規則でカバーされます。 サポート性の規則の基本セットがある仮想化された[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]で Microsoft によって提供される展開[Microsoft サポート KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)します。 マイクロソフトの Hyper-v ホストと VMware の ESXi などの異なるハイパーバイザーでは、プラットフォーム自体の違いにより、別の差異をそこに、があります。
+Linux ベースのデプロイに仮想マシンを使用して[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Ag および Fci の展開は、Windows ベースの対応と同じ規則でカバーされます。 サポート性の規則の基本セットがある仮想化された[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]で Microsoft によって提供される展開[Microsoft サポート KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)します。 マイクロソフトの Hyper-v ホストと VMware の ESXi などの異なるハイパーバイザーでは、プラットフォーム自体の違いにより、別の差異をそこに、があります。
 
 Ag を Fci での仮想化に関しては、アンチ アフィニティが、特定の Pacemaker クラスターのノードに対して設定されていることを確認します。 ホストする Vm を高可用性の AG または FCI の構成では、構成されている場合[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]同じハイパーバイザー ホスト上で実行されることはありません。 たとえば、2 つのノードの FCI が展開されている場合は必要があります*少なくとも*など Live の 3 つのハイパーバイザー ホストになるようにホストの障害が発生した場合に、ノードをホストする Vm のいずれかの機能を使用する場合に特に移行や vmotion を使用します。
 
 詳細についてを参照してください。
 -   Hyper V のドキュメント-[ゲスト クラスタ リングの高可用性を使用します。](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   ホワイト ペーパーで記述された Windows ベースの展開がまだ概念のほとんどを適用) –[計画高可用性、ミッション クリティカルな SQL Server の展開では、VMware vSphere](http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   ホワイト ペーパーで記述された Windows ベースの展開がまだ概念のほとんどを適用) –[計画高可用性、ミッション クリティカルな SQL Server の展開では、VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >STONITH を使用した Pacemaker クラスターと RHEL が HYPER-V でまだサポートされていません。 詳細と、更新、サポートされてまでを参照してください[RHEL 高可用性クラスターのサポート ポリシー](https://access.redhat.com/articles/29440#3physical_host_mixing)します。

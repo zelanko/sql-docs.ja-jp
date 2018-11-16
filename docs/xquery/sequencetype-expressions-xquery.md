@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2248d0f0d342b39a5d8ec816b4faf9ab097bf30d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661851"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ Expression instance of SequenceType[Occurrence indicator]
  次の例では、使用、**のインスタンス**XQuery 演算子。  
   
 ### <a name="example-a"></a>例 A  
- 次の例では、作成、 **xml**変数を入力し、それに対してクエリを指定します。 クエリ式を指定します、`instance of`番目のオペランドで返される値の動的な型が 2 番目のオペランドで指定された型と一致するかどうかを指定する演算子。  
+ 次の例では、作成、 **xml**変数を入力し、それに対してクエリを指定します。 このクエリ式では、`instance of` 演算子を指定して、最初のオペランドから返される値の動的な型と 2 つ目のオペランドに指定した型が一致するかどうかを判断します。  
   
  125 という値が指定した型のインスタンスであるために、次のクエリは、True を返します**xs:integer**:  
   
@@ -79,7 +78,7 @@ select @x.query('/a[1]/@attr1 instance of attribute()')
 go  
 ```  
   
- 次の例では、式では、 `data(/a[1]`xdt:untypedAtomic に型指定されたアトミック値を返します。 そのため、 `instance of` True を返します。  
+ 次の例では、式 `data(/a[1]` から xdt:untypedAtomic に型指定されたアトミック値が返されます。 そのため、 `instance of` True を返します。  
   
 ```  
 declare @x xml  
@@ -88,7 +87,7 @@ select @x.query('data(/a[1]) instance of xdt:untypedAtomic')
 go  
 ```  
   
- 次のクエリでは、式では、 `data(/a[1]/@attrA`、型指定されていないアトミック値を返します。 そのため、 `instance of` True を返します。  
+ 次のクエリでは、式 `data(/a[1]/@attrA` から型指定されていないアトミック値が返されます。 そのため、 `instance of` True を返します。  
   
 ```  
 declare @x xml  
@@ -104,7 +103,7 @@ go
   
 ```  
 SELECT CatalogDescription.query('  
-   declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+   declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
    data(/PD:ProductDescription[1]/@ProductModelID) instance of xs:string  
 ') as Result  
 FROM Production.ProductModel  
@@ -117,7 +116,7 @@ WHERE ProductModelID = 19
   
 ```  
 SELECT Instructions.query('  
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    /AWMI:root[1]/AWMI:Location[1]/@LocationID instance of attribute(LocationID,xs:integer)  
 ') as Result  
 FROM Production.ProductModel  
@@ -126,11 +125,11 @@ WHERE ProductModelID=7
   
  次のクエリは、CatalogDescription 型が指定された XML 列に対して指定されています。 この列に関連付けられた XML スキーマ コレクションにより、型指定情報が提供されます。  
   
- クエリを使用して、`element(ElementName, ElementType?)`でテスト、`instance of`ことを確認する式、`/PD:ProductDescription[1]`特定の名前と型の要素ノードを返します。  
+ このクエリでは、`element(ElementName, ElementType?)` 式で `instance of` テストを使用して、特定の名前と型の要素ノードが `/PD:ProductDescription[1]` から返されることを確認します。  
   
 ```  
 SELECT CatalogDescription.query('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /PD:ProductDescription[1] instance of element(PD:ProductDescription, PD:ProductDescription?)  
     ') as Result  
 FROM  Production.ProductModel  
@@ -156,7 +155,7 @@ where ProductModelID=19
   
 ```  
 CREATE XML SCHEMA COLLECTION MyTestSchema AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns">  
 <simpleType name="MyUnionType">  
 <union memberTypes="integer string"/>  
 </simpleType>  
@@ -171,9 +170,9 @@ Go
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
   
-SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
+SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
   
-SELECT @var.query('declare namespace ns="http://ns"   
+SELECT @var.query('declare namespace ns="https://ns"   
    data(/ns:TestElement[1]) instance of xs:integer')  
 go  
 ```  
@@ -183,8 +182,8 @@ go
 ```  
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
-SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
-SELECT @var.query('declare namespace ns="http://ns"     
+SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
+SELECT @var.query('declare namespace ns="https://ns"     
    data(/ns:TestElement[1]) instance of xs:decimal')  
 go  
 ```  
@@ -192,15 +191,15 @@ go
 ### <a name="example-d"></a>例 D  
  この例で最初に XML スキーマ コレクションを作成して使用して入力、 **xml**変数。 型指定された**xml**変数が説明するためにクエリを実行し、`instance of`機能します。  
   
- 次の XML スキーマ コレクションは、単純型 myType と、要素を定義します。 <`root`>、myType 型の。  
+ 次の XML スキーマ コレクションでは、単純型 myType と myType 型の要素 <`root`> を定義しています。  
   
 ```  
 drop xml schema collection SC  
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
-xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-      <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
+xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+      <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
            <restriction base="s:varchar">  
                   <maxLength value="20"/>  
@@ -216,18 +215,18 @@ Go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
    data(/ns:root[1]) instance of ns:myType')  
 go  
 ```  
   
- MyType 型は、sqltypes スキーマで定義されている varchar 型からの制限による派生するので`instance of`True が返されます。  
+ myType 型は制限により、sqltypes スキーマで定義されている varchar 型から派生しているので、`instance of` から True が返されます。  
   
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
 data(/ns:root[1]) instance of sqltypes:varchar?')  
 go  
@@ -240,11 +239,11 @@ go
   
 -   型指定された作成**xml**変数とサンプル XML インスタンスを割り当てます。  
   
--   変数に対してクエリを指定します。 このクエリ式により、最初の <`Customer`> の OrderList IDRERS 型属性から最初の注文 ID 値が取得されます。 取得される値は IDREF 型です。 そのため、 `instance of` True を返します。  
+-   変数に対してクエリを指定します。 このクエリ式により、最初の <`Customer`> の OrderList IDRERS 型属性から最初の注文 ID 値が取得されます。 取得される値は IDREF 型です。 したがって、`instance of` から True が返されます。  
   
 ```  
 create xml schema collection SC as  
-'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  
@@ -312,7 +311,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   **Schema-element()** と**schema-attribute()** の比較にシーケンス型はサポートされていません、`instance of`演算子。  
   
--   たとえば、完全なシーケンスでは、`(1,2) instance of xs:integer*`はサポートされていません。  
+-   `(1,2) instance of xs:integer*` などの完全なシーケンスはサポートされません。  
   
 -   形式を使用しているときに、 **element()** などの型名を指定する型をシーケンス`element(ElementName, TypeName)`疑問符 (?) で型を修飾する必要があります。 たとえば、`element(Title, xs:string?)` は要素が NULL であることを示します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 実行時に検出をサポートしていません、 **xsi:nil**プロパティを使用して`instance of`します。  
   
@@ -322,7 +321,7 @@ select @x.query(' declare namespace CustOrders="Customers";
     data(<e1>123</e1>) instance of xs:integer  
     ```  
   
-     ただし、`data(<e1>123</e1>) instance of xs:decimal`は True を返します。  
+     ただし、`data(<e1>123</e1>) instance of xs:decimal` の場合は True が返されます。  
   
 -   **Processing-instruction()** と**document-node()** sequence 型、引数を指定しない形式のみが許可されています。 たとえば、`processing-instruction()` は使用できますが、`processing-instruction('abc')` は使用できません。  
   
@@ -334,7 +333,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 Expression cast as  AtomicType?  
 ```  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、疑問符 (?) が後に必要な`AtomicType`します。 たとえば、次のクエリに示すとして`"2" cast as xs:integer?`文字列値を整数に変換します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、`AtomicType` の後に疑問符 (?) が必要です。 たとえば、次のクエリに示すとして`"2" cast as xs:integer?`文字列値を整数に変換します。  
   
 ```  
 declare @x xml  
@@ -345,7 +344,7 @@ select @x.query('"2" cast as xs:integer?')
  次のクエリで**data()** 文字列型である ProductModelID 属性の型指定された値を返します。 `cast as`演算子、値を xs:integer に変換します。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
 SELECT CatalogDescription.query('  
    data(/PD:ProductDescription[1]/@ProductModelID) cast as xs:integer?  
 ') as Result  
@@ -353,7 +352,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 明示的な使用**data()** このクエリでは必要ありません。 `cast as`式は、入力式で暗黙のアトミック化を実行します。  
+ 明示的な使用**data()** このクエリでは必要ありません。 `cast as` 式により、入力式で暗黙のアトミック化が実行されます。  
   
 ### <a name="constructor-functions"></a>コンストラクター関数  
  アトミック型のコンストラクター関数を使用できます。 使用する代わりに、たとえば、`cast as`演算子、 `"2" cast as xs:integer?`、使用することができます、 **xs:integer()** コンス トラクター関数を次の例。  

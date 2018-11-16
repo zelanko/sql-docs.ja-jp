@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -20,12 +19,12 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31b5cbd8d446cbda034ee0e13e7e991607973ec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755920"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673521"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>式コンテキストとクエリの評価 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ ms.locfileid: "47755920"
   
     -   WITH XMLNAMESPACES を使用して定義されたすべての名前空間。 詳細については、次を参照してください。 [with XMLNAMESPACES を使用したクエリへの名前空間の追加](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md))。  
   
-    -   クエリのプロローグで定義されたすべての名前空間。 プロローグ内の名前空間宣言は、WITH XMLNAMESPACES の名前空間宣言よりもオーバーライドされます。 たとえば、次のクエリでは、WITH XMLNAMESPACES 宣言、名前空間にバインドされるプレフィックス (pd) (`http://someURI`)。 ただし、WHERE 句では、バインドよりもクエリのプロローグがオーバーライドされます。  
+    -   クエリのプロローグで定義されたすべての名前空間。 プロローグ内の名前空間宣言は、WITH XMLNAMESPACES の名前空間宣言よりもオーバーライドされます。 たとえば、次のクエリでは、WITH XMLNAMESPACES 宣言、名前空間にバインドされるプレフィックス (pd) (`https://someURI`)。 ただし、WHERE 句では、バインドよりもクエリのプロローグがオーバーライドされます。  
   
         ```  
-        WITH XMLNAMESPACES ('http://someURI' AS pd)  
+        WITH XMLNAMESPACES ('https://someURI' AS pd)  
         SELECT ProductModelID, CatalogDescription.query('  
             <Product   
                 ProductModelID= "{ sql:column("ProductModelID") }"   
@@ -72,7 +71,7 @@ ms.locfileid: "47755920"
         ') AS Result  
         FROM Production.ProductModel  
         WHERE CatalogDescription.exist('  
-            declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
              /pd:ProductDescription[(pd:Specifications)]'  
             ) = 1  
         ```  
@@ -81,15 +80,15 @@ ms.locfileid: "47755920"
   
 -   型指定されたクエリを実行する場合**xml**列または変数、列または変数に関連付けられた XML スキーマ コレクションのコンポーネントは静的コンテキストにインポートされます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
--   インポートされたスキーマ内のすべてのアトミック型では、静的コンテキストでキャスト関数も使用できます。 この例を次に示します。 この例でクエリを指定する、型指定されたに対して**xml**変数。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 キャスト関数の場合、この型に対応する**myType()** は、静的分析中に使用できます。 クエリ式 (`ns:myType(0)`) myType の値を返します。  
+-   インポートされたスキーマ内のすべてのアトミック型では、静的コンテキストでキャスト関数も使用できます。 この例を次に示します。 この例でクエリを指定する、型指定されたに対して**xml**変数。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 キャスト関数の場合、この型に対応する**myType()** は、静的分析中に使用できます。 クエリ式 (`ns:myType(0)`) は、myType の値を返します。  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <simpleType name="myType">  
                 <restriction base="int">  
                  <enumeration value="0" />  
@@ -134,10 +133,10 @@ ms.locfileid: "47755920"
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <element name="Elem" type="string"/>  
     </schema>'  
     go  

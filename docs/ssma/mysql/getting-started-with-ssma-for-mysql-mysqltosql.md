@@ -14,12 +14,12 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679670"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677251"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 入門 (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL では、迅速に MySQL データベースのスキーマを SQL Server または Azure SQL DB のスキーマに変換、SQL Server または Azure SQL DB に結果のスキーマをアップロードおよび MySQL から SQL Server または Azure SQL DB にデータを移行することができます。  
@@ -73,7 +73,7 @@ SQL Server または Azure SQL DB メタデータ エクスプ ローラーに�
   
 このメタデータ エクスプ ローラーを使用して、変換後の MySQL データベースのオブジェクトを選択し、SQL Server または Azure SQL DB のインスタンスでこれらのオブジェクトを同期できます。  
   
-詳細については、次を参照してください[同期 (SQL Server への MySQL または Azure SQL DB)。](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+詳細については、次を参照してください[同期 (SQL Server への MySQL または Azure SQL DB)。](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>メタデータ  
 各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、MySQL メタデータ エクスプ ローラーでテーブルを選択する場合は、9 つのタブが表示されます:**テーブル**、 **SQL**、**型マッピングの**、**データ**、 **設定**、 **Charset マッピング**、 **SQL モード**、**プロパティ**、および**レポート**します。 **レポート** タブには、選択したオブジェクトを格納しているレポートを作成した後にのみ情報が含まれます。 SQL Server メタデータ エクスプ ローラーでテーブルを選択する場合、3 つのタブが表示されます:**テーブル**、 **SQL**と**データ**します。  

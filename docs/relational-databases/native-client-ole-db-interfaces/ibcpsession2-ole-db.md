@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64ccd5c31d362e0c819e553a862bb17b1be0552b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a10c0d5112927403a7af30a700e4d9d037fedae2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636147"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674523"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,6 @@ ms.locfileid: "47636147"
   IBCPSession2 インターフェイスでは、代わりに、各列に対して ibcpsession::bcpcolfmt を呼び出すことであるメンバー関数は、IBCPSession の拡張機能です。  IBCPSession2 IBCPSession から継承し、1 つの新しいメソッドを追加します: [ibcpsession 2::bcpsetbulkmode](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md)します。  
   
 ## <a name="see-also"></a>参照  
- [インターフェイス&#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
+ [インターフェイス&#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
   

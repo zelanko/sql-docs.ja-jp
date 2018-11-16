@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383737"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670621"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループの SLES クラスターを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このガイドでは、SQL Server SUSE Linux Enterprise Server (SLES) 12 SP2 での 3 ノード クラスターを作成する手順を提供します。 可用性を高めるためにはLinux 上の可用性グループでは 3 つのノードが必要です - [可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)を参照してください。 クラスタ リングの階層は SUSE に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)上に構築された[Pacemaker](http://clusterlabs.org/)します。 
+このガイドでは、SQL Server SUSE Linux Enterprise Server (SLES) 12 SP2 での 3 ノード クラスターを作成する手順を提供します。 可用性を高めるためにはLinux 上の可用性グループでは 3 つのノードが必要です - [可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)を参照してください。 クラスタ リングの階層は SUSE に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)上に構築された[Pacemaker](https://clusterlabs.org/)します。 
 
 クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、次を参照してください。 [SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)します。
 
@@ -79,7 +79,7 @@ ms.locfileid: "49383737"
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   詳細については、次を参照してください。、 [SLES 管理ガイド - その他のセクション](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)します。
+   詳細については、次を参照してください。、 [SLES 管理ガイド - その他のセクション](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)します。
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Pacemaker 用 SQL Server ログインを作成します。
@@ -104,7 +104,7 @@ Linux サーバーで、可用性グループを構成し、クラスター リ�
 
 ## <a name="set-up-the-first-node"></a>最初のノードを設定します。
 
-   参照してください[SLES インストール手順](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   参照してください[SLES インストール手順](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. としてログイン`root`に物理マシンまたは仮想マシンのクラスター ノードとして使用します。
 2. ブートス トラップ スクリプトを実行することによって開始します。
@@ -220,7 +220,7 @@ Pacemaker クラスターのベンダーは、STONITH を有効にして、サ�
 
 ノード レベルのフェンス操作により、ノードがどのリソースも実行しないことが保証されます。 ノードをリセットすることでこれし、その Pacemaker 実装には、STONITH (これは「その他のノードを先頭に撮影」略) が呼び出されます。 Pacemaker は、さまざまな、無停電電源装置または管理インターフェイス カードのサーバーなどのデバイスをフェンスをサポートします。
 
-詳細については、次を参照してください。 [Pacemaker クラスターを最初から](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)、[フェンスと Stonith](http://clusterlabs.org/doc/crm_fencing.html)と[SUSE HA のドキュメント: フェンスと STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)します。
+詳細については、次を参照してください。 [Pacemaker クラスターを最初から](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)、[フェンスと Stonith](https://clusterlabs.org/doc/crm_fencing.html)と[SUSE HA のドキュメント: フェンスと STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)します。
 
 クラスターの初期化時に構成が検出されない場合は、STONITH が無効です。 次のコマンドを実行中で後で有効にできます。
 
