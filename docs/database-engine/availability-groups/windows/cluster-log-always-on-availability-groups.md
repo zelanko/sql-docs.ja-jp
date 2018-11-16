@@ -10,12 +10,12 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b81e501c153bb0789a1cf1cefd0c148dc9d96f9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa46327ef5037c70c25c156b9d224ea66218020f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731560"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601330"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (Always On 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "47731560"
 ## <a name="generate-cluster-log"></a>クラスター ログを生成する  
  クラスター ログを生成するには、次の 2 つの方法があります。  
   
-1.  コマンド プロンプトで `cluster /log /g` コマンドを使用します。 このコマンドを実行すると、各 WSFC ノード上の \windows\cluster\reports ディレクトリに出力するクラスター ログが生成されます。 この方法の利点は、`/level` オプションを使用して、生成されるログの詳細レベルを指定できることです。 欠点は、生成されるクラスター ログの出力先ディレクトリを指定できないという点です。 詳細については、「[How to create the cluster.log in Windows Server 2008 Failover Clustering](http://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx)」 (Windows Server 2008 フェールオーバー クラスタリングで cluster.log を作成する方法) を参照してください。  
+1.  コマンド プロンプトで `cluster /log /g` コマンドを使用します。 このコマンドを実行すると、各 WSFC ノード上の \windows\cluster\reports ディレクトリに出力するクラスター ログが生成されます。 この方法の利点は、`/level` オプションを使用して、生成されるログの詳細レベルを指定できることです。 欠点は、生成されるクラスター ログの出力先ディレクトリを指定できないという点です。 詳細については、「[How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx)」 (Windows Server 2008 フェールオーバー クラスタリングで cluster.log を作成する方法) を参照してください。  
   
-2.  [Get-clusterlog](http://technet.microsoft.com/library/ee461045.aspx) PowerShell コマンドレットを使用します。 この方法の利点は、すべてのノードからクラスター ログを生成して、コマンドレットを実行するノード上の 1 つの対象ディレクトリに出力できるということです。 欠点は生成されるログの詳細レベルを指定できないことです。  
+2.  [Get-clusterlog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell コマンドレットを使用します。 この方法の利点は、すべてのノードからクラスター ログを生成して、コマンドレットを実行するノード上の 1 つの対象ディレクトリに出力できるということです。 欠点は生成されるログの詳細レベルを指定できないことです。  
   
  次の PowerShell コマンドを実行すると、すべてのクラスター ノードから 15 分前からのクラスター ログが生成され、現在のディレクトリに配置されます。 コマンドは、PowerShell ウィンドウで管理者特権を使用して実行します。  
   
@@ -57,7 +57,7 @@ Get-ClusterLog –TimeSpan 15 –Destination .
 8.  可用性グループのリソースをもう一度右クリックし、**[このリソースをオンラインにする]** をクリックします。  
   
 ## <a name="availability-group-resource-events"></a>可用性グループのリソース イベント  
- 次の表に、可用性グループのリソースに関連するイベントのうち、CLUSTER.LOG 内で確認できる各種イベントを示します。 WSFC のリソース ホスティング サブシステム (RHS) およびリソース コントロール モニター (RCM) の詳細については、「[Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](http://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)」 (Windows Server 2008 フェールオーバー クラスターのリソース ホスティング サブシステム (RHS)) を参照してください。  
+ 次の表に、可用性グループのリソースに関連するイベントのうち、CLUSTER.LOG 内で確認できる各種イベントを示します。 WSFC のリソース ホスティング サブシステム (RHS) およびリソース コントロール モニター (RCM) の詳細については、「[Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)」 (Windows Server 2008 フェールオーバー クラスターのリソース ホスティング サブシステム (RHS)) を参照してください。  
   
 |[Identifier]|Source|CLUSTER.LOG の例|  
 |----------------|------------|------------------------------|  

@@ -6,12 +6,12 @@ description: Microsoft Azure クラウド サービスを使用して強力な�
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: c0e888c799ce57814cbe0a66e7242258f9fe5ed9
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 36bd708bfe57e775c479ee474f9f2e5028c00655
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970821"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697950"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -659,10 +659,10 @@ ms.locfileid: "50970821"
         <h2>情報を共有しましょう</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> SQL ドキュメントへの投稿 </a>
+                <a href="https://aka.ms/editsqldocs" data-linktype="external"> SQL ドキュメントへの投稿 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> SQL ドキュメントのフィードバック </a>
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external"> SQL ドキュメントのフィードバック </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> ブログ </a>

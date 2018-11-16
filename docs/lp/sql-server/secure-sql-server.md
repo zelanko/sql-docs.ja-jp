@@ -6,12 +6,12 @@ description: ご利用の SQL Server をセキュリティで保護する機能�
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4853dbec0799a808e8165601cd868ec07e71c216
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: a127925183744c7e64e443d1127517c5fe41da23
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336151"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698130"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -225,16 +225,16 @@ ms.locfileid: "49336151"
         <h2>情報を共有しましょう</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 投稿 </a>
+                <a href="https://aka.ms/editsqldocs" data-linktype="external"> 投稿 </a>
             </li>
            <li>
                 <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> ヘルプ </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> フィードバック </a>
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external"> フィードバック </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> アンケート </a>
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external"> アンケート </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> ブログ </a>

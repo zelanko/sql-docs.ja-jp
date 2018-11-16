@@ -434,7 +434,7 @@ items:
         - name: パッケージ
           href: /sql/integration-services/packages/
           homepage: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-        - name: '[パフォーマンス]'
+        - name: パフォーマンス
           href: /sql/integration-services/performance/
           homepage: /sql/integration-services/performance/monitor-running-packages-and-other-operations
         - name: スケール アウト
@@ -684,7 +684,7 @@ items:
       - name: '[メジャー グループ]'
         href: /sql/relational-databases/partitions/
         homepage: /sql/relational-databases/partitions/partitioned-tables-and-indexes
-      - name: '[パフォーマンス]'
+      - name: パフォーマンス
         href: /sql/relational-databases/performance/
         homepage: /sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database
         items:
@@ -734,9 +734,6 @@ items:
       - name: '[リソース ガバナー]'
         href: /sql/relational-databases/resource-governor/
         homepage: /sql/relational-databases/resource-governor/resource-governor
-      - name: スクリプトの作成
-        href: /sql/relational-databases/scripting/
-        homepage: /sql/relational-databases/scripting/database-engine-scripting
       - name: 検索
         href: /sql/relational-databases/search/
         homepage: /sql/relational-databases/search/full-text-search
@@ -1165,6 +1162,9 @@ items:
         - name: チュートリアル
           href: /sql/ssms/tutorials/
           homepage: /sql/ssms/tutorials/tutorial-sql-server-management-studio
+        - name: スクリプトの作成
+          href: /sql/ssms/scripting/
+          homepage: /sql/ssms/scripting/database-engine-scripting
         - name: Visual DB ツール
           href: /sql/ssms/visual-db-tools/
           homepage: /sql/ssms/visual-db-tools/visual-database-tools
@@ -1228,9 +1228,9 @@ items:
       - name: SSMA Sybase
         href: /sql/ssma/sybase/
         homepage: /sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql
-ms.openlocfilehash: 56b705384a519f652cba1d22a77f9f4135a134ba
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 92e80f150594f0b9190f1e9570e4e10b6fbefdd4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713625"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639109"

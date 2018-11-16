@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: ad05cbe7415aed8c821664082fcd557d48f3582f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120239"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600903"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの作成または構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,14 +103,14 @@ ms.locfileid: "49120239"
  意味のある文字列を指定することをお勧めします。 たとえば、可用性グループの名前が `AG1`の場合は、 `ag1-listener`のような意味のある DNS ホスト名にします。  
   
 > [!IMPORTANT]  
->  NetBIOS では、dns_name の最初の 15 文字のみが認識されます。 同じ Active Directory で制御されている 2 つの WSFC クラスターがあり、両方のクラスターで可用性グループ リスナーを作成しようとする場合、15 文字より長い名前を使用して、15 文字のプレフィックスが同一であると、仮想ネットワーク名リソースをオンラインにできなかったことを示すエラーが表示されます。 DNS 名のプレフィックスに対する名前付け規則の詳細については、「 [ドメイン名を割り当てる](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)」を参照してください。  
+>  NetBIOS では、dns_name の最初の 15 文字のみが認識されます。 同じ Active Directory で制御されている 2 つの WSFC クラスターがあり、両方のクラスターで可用性グループ リスナーを作成しようとする場合、15 文字より長い名前を使用して、15 文字のプレフィックスが同一であると、仮想ネットワーク名リソースをオンラインにできなかったことを示すエラーが表示されます。 DNS 名のプレフィックスに対する名前付け規則の詳細については、「 [ドメイン名を割り当てる](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx)」を参照してください。  
   
 ###  <a name="WinPermissions"></a> Windows 権限  
   
 |アクセス許可|リンク|  
 |-----------------|----------|  
-|可用性グループをホストしている WSFC クラスターのクラスター オブジェクト名 (CNO) には、 **Create Computer objects** アクセス許可が必要です。<br /><br /> Active Directory では、CNO は既定で **Create Computer objects** アクセス許可を明示的に持たず、仮想コンピューター オブジェクト (VCO) を最大で 10 個作成できます。 VCO を 10 個作成した後、追加で VCO を作成しようとしても失敗します。 この問題は、WSFC クラスターの CNO に権限を明示的に与えることで回避できます。 削除した可用性グループの VCO は Active Directory 内で自動的に削除されず、手動で削除しない限り、VCO の 10 個の既定の制限の対象としてカウントされます。<br /><br /> 注: 組織によっては、 **Create Computer objects** 権限を個別のユーザー アカウントに付与することがセキュリティ ポリシーで禁止されている場合があります。|*クラスターをインストールするユーザーのアカウントを構成する手順:* 「 [フェールオーバー クラスター ステップ バイ ステップ ガイド: Active Directory のアカウントの構成](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *クラスター名アカウントを事前設定する手順:* 「 [フェールオーバー クラスター ステップ バイ ステップ ガイド: Active Directory のアカウントの構成](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|リスナーの仮想ネットワーク名にコンピューター アカウントを事前設定する必要がある場合は、 **Account Operator** グループのメンバーシップが必要です。または、ドメイン管理者に依頼する必要があります。|*クラスター化されたサービスまたはアプリケーションのアカウントを事前設定する手順:* 「 [フェールオーバー クラスター ステップ バイ ステップ ガイド: Active Directory のアカウントの構成](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)」|  
+|可用性グループをホストしている WSFC クラスターのクラスター オブジェクト名 (CNO) には、 **Create Computer objects** アクセス許可が必要です。<br /><br /> Active Directory では、CNO は既定で **Create Computer objects** アクセス許可を明示的に持たず、仮想コンピューター オブジェクト (VCO) を最大で 10 個作成できます。 VCO を 10 個作成した後、追加で VCO を作成しようとしても失敗します。 この問題は、WSFC クラスターの CNO に権限を明示的に与えることで回避できます。 削除した可用性グループの VCO は Active Directory 内で自動的に削除されず、手動で削除しない限り、VCO の 10 個の既定の制限の対象としてカウントされます。<br /><br /> 注: 組織によっては、 **Create Computer objects** 権限を個別のユーザー アカウントに付与することがセキュリティ ポリシーで禁止されている場合があります。|*クラスターをインストールするユーザーのアカウントを構成する手順:* 「 [フェールオーバー クラスター ステップ バイ ステップ ガイド: Active Directory のアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *クラスター名アカウントを事前設定する手順:* 「 [フェールオーバー クラスター ステップ バイ ステップ ガイド: Active Directory のアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|リスナーの仮想ネットワーク名にコンピューター アカウントを事前設定する必要がある場合は、 **Account Operator** グループのメンバーシップが必要です。または、ドメイン管理者に依頼する必要があります。|*クラスター化されたサービスまたはアプリケーションのアカウントを事前設定する手順:* 「 [フェールオーバー クラスター ステップ バイ ステップ ガイド: Active Directory のアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)」|  
   
 > [!TIP]  
 >  一般的には、リスナーの仮想ネットワーク名にコンピューター アカウントを事前設定しないことが最も簡単です。 可能な場合は、WSFC の高可用性ウィザードを実行する際にアカウントが自動的に作成および構成されるように構成します。  
@@ -248,9 +248,9 @@ ms.locfileid: "49120239"
 ###  <a name="ADQuotas"></a> Active Directory クォータが原因で可用性グループ リスナーの作成が失敗する問題  
  新しい可用性グループ リスナーの作成は、参加しているクラスター ノード マシン アカウントの Active Directory クォータに達したため、失敗する場合があります。  詳細については、次の各資料を参照してください。  
   
--   [コンピューター オブジェクト変更時のクラスター サービス アカウントのトラブルシューティング方法](http://support.microsoft.com/kb/307532)  
+-   [コンピューター オブジェクト変更時のクラスター サービス アカウントのトラブルシューティング方法](https://support.microsoft.com/kb/307532)  
   
--   [Active Directory クォータ](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [Active Directory クォータ](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> 補足情報: 可用性グループ リスナーの作成後  
   
@@ -346,17 +346,17 @@ Start-ClusterResource yourListenerName
   
         3.  WSFC 可用性グループに対する依存関係を追加します。  
   
-         フェールオーバー クラスター マネージャーのダイアログ ボックスおよびタブの詳細については、「 [ユーザー インターフェイス: フェールオーバー クラスター マネージャー スナップイン](http://technet.microsoft.com/library/cc772502.aspx)」を参照してください。  
+         フェールオーバー クラスター マネージャーのダイアログ ボックスおよびタブの詳細については、「 [ユーザー インターフェイス: フェールオーバー クラスター マネージャー スナップイン](https://technet.microsoft.com/library/cc772502.aspx)」を参照してください。  
   
     -   **フェールオーバー クラスターの Windows PowerShell の使用:**  
   
-        1.  [Add-ClusterResource](http://technet.microsoft.com/library/ee460983.aspx) を使用して、ネットワーク名と IP アドレス リソースを作成します。  
+        1.  [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) を使用して、ネットワーク名と IP アドレス リソースを作成します。  
   
-        2.  [Start-ClusterResource](http://technet.microsoft.com/library/ee461056.aspx) を使用して、ネットワーク名リソースを開始します。  
+        2.  [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) を使用して、ネットワーク名リソースを開始します。  
   
-        3.  [Add-ClusterResourceDependency](http://technet.microsoft.com/library/ee461014.aspx) を使用して、ネットワーク名と、既存の SQL Server 可用性グループ リソース間の依存関係を設定します。  
+        3.  [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) を使用して、ネットワーク名と、既存の SQL Server 可用性グループ リソース間の依存関係を設定します。  
   
-         フェールオーバー クラスターの Windows PowerShell の詳細については、「 [サーバー マネージャーのコマンドの概要](http://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)」を参照してください。  
+         フェールオーバー クラスターの Windows PowerShell の詳細については、「 [サーバー マネージャーのコマンドの概要](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)」を参照してください。  
   
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で新しいリスナーのリッスンを開始します。 追加リスナーを作成した後、プライマリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続し、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用してリスナー ポートを変更します。  
   
