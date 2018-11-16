@@ -11,17 +11,17 @@ ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0095293db694c746dac1749b35d9de29c5fbd592
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35c1d728bd1e1fc5547c84c9e11d83044862a5f0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809840"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599463"
 ---
 # <a name="handling-errors-and-warnings"></a>エラーおよび警告の処理
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO_SQLSRV ドライバーを使用している場合、エラーとエラー処理の詳細については、[PDO](http://php.net/manual/book.pdo.php) の Web サイトを参照してください。  
+PDO_SQLSRV ドライバーを使用している場合、エラーとエラー処理の詳細については、[PDO](https://php.net/manual/book.pdo.php) の Web サイトを参照してください。  
   
 このセクションのトピックでは、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーのエラーと警告の処理について説明します。  
   

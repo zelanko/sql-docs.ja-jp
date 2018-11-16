@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 484d8912c205f55dcebfacee01ec0c017b58117c
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: d500dc56ff128029ebba1576a84919f9694d8903
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085199"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602232"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49085199"
 
   **SSVARIANT** msoledbsql.h で定義されている構造体が SQL Server 用の OLE DB driver DBTYPE_SQLVARIANT 値に対応します。  
   
- **SSVARIANT**識別共用体です。 vt メンバーの値に応じて、コンシューマーは読み取るメンバーを決めることができます。 vt 値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に対応します。 したがって、**SSVARIANT** 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造の詳細については、次を参照してください。[型インジケーター](http://go.microsoft.com/fwlink/?LinkId=122171)します。  
+ **SSVARIANT**識別共用体です。 vt メンバーの値に応じて、コンシューマーは読み取るメンバーを決めることができます。 vt 値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に対応します。 したがって、**SSVARIANT** 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造の詳細については、次を参照してください。[型インジケーター](https://go.microsoft.com/fwlink/?LinkId=122171)します。  
   
 ## <a name="remarks"></a>Remarks  
  DataTypeCompat==80 の場合、いくつかの **SSVARIANT** サブタイプが文字列になります。 たとえば、次の vt 値は **SSVARIANT** では VT_SS_WVARSTRING として表されます。  

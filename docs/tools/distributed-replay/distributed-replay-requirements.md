@@ -10,12 +10,12 @@ ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7be4e5fa8ea0298fa096c0c65a91b7683c66b8e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec8999398feb77b44386111daae449b560bcf1da
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598750"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666281"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47598750"
 ### <a name="input-trace-versions"></a>入力トレースのバージョン  
  分散再生は、次のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で収集される入力トレース データをサポートします。  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  累積更新プログラム 1 以降。 参照してください - [SQL Server 2017 の累積的な更新](http://aka.ms/sql2017cu)します。
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  累積更新プログラム 1 以降。 参照してください - [SQL Server 2017 の累積的な更新](https://aka.ms/sql2017cu)します。
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -122,7 +122,7 @@ ms.locfileid: "47598750"
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>必要なオペレーティング システム  
@@ -160,7 +160,7 @@ ms.locfileid: "47598750"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [分散再生のセキュリティ](../../tools/distributed-replay/distributed-replay-security.md)   
+ [Distributed Replay のセキュリティ](../../tools/distributed-replay/distributed-replay-security.md)   
  [分散再生のインストール - 概要](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

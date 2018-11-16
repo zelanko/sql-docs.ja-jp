@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f5bcf3ed174c5d25d817738195670ea573c64909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93aa83acd2bc73c8d67cdadddf1b7d1956dc4f7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759765"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657475"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([ログオン] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47759765"
  一時停止したサービスを再開します。  
   
 > [!IMPORTANT]  
->  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](http://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
+>  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](https://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の起動時に、"実装されていません (not implemented) [0x80004001]" という語句を含む WMI エラーが発生する場合は、対象のコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされていない可能性があります。  

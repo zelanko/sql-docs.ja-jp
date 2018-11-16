@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 91013d6cdb846823819635f0f7f29e097e91c388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bdbeb3d7d344c437c0e33af497c5b97d237b306
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605500"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600072"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 認証のユーザー パスワードの変更 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47605500"
   このサンプルでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証のユーザー アカウントのパスワードを OLE DB を使用して変更する方法を紹介しています。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
  ビルド前に、.C++ コードを修正し、実際のユーザー ID、古いパスワード、および新しいパスワードを指定してください。  

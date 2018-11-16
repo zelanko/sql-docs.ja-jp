@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e85883fa9b772d132cc5f6aaa75f7d46539244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717030"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677751"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay のセキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,9 +80,9 @@ ms.locfileid: "47717030"
   
     3.  Enter キーを押します。  
   
-2.  **コンピューター全体の DCOM 権限を構成する**: 次の表に示す各アカウントに対し、対応するコンピューター全体の DCOM 権限を付与します。 コンピューター全体の権限を設定する方法の詳細については、「 [チェック リスト: DCOM アプリケーションを管理する](http://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
+2.  **コンピューター全体の DCOM 権限を構成する**: 次の表に示す各アカウントに対し、対応するコンピューター全体の DCOM 権限を付与します。 コンピューター全体の権限を設定する方法の詳細については、「 [チェック リスト: DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
   
-3.  **アプリケーション固有の DCOM 権限を構成する**: 次の表に示す各アカウントに対し、対応するアプリケーション固有の DCOM 権限を付与します。 コントローラー サービスの DCOM アプリケーション名は **DReplayController**です。 アプリケーション固有の権限を設定する方法の詳細については、「 [チェック リスト: DCOM アプリケーションを管理する](http://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
+3.  **アプリケーション固有の DCOM 権限を構成する**: 次の表に示す各アカウントに対し、対応するアプリケーション固有の DCOM 権限を付与します。 コントローラー サービスの DCOM アプリケーション名は **DReplayController**です。 アプリケーション固有の権限を設定する方法の詳細については、「 [チェック リスト: DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
   
  次の表に、管理ツールの対話ユーザー アカウントとクライアント サービス アカウントに必要な DCOM 権限を示します。  
   

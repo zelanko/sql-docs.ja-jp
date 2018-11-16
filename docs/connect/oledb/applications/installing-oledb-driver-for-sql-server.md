@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: aaace65e30e145e701d05039e4bd11bdb337c392
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071668"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602222"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のインストール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ OLE DB Driver for SQL Server ファイル (msoledbsql.dll、msoledbsqlr.rll) が
 
 OLE DB Driver for SQL Server ヘッダーとライブラリ ファイル (msoledbsql.h と msoledbsql.lib) がインストールされている`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`します。 さらに、msoledbsql.msi 内の同じファイルのインストール、x64`%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`します。  
 
-Msoledbsql.msi を介して SQL Server 用の OLE DB ドライバーを配布できます。 アプリケーションを展開するときに、SQL Server の OLE DB ドライバーをインストールする必要があります。 チェイナーとブートストラップのテクノロジを使用すると、ユーザーが 1 回のインストール手順に従うだけで複数のパッケージをまとめてインストールできるようになります。 詳細については、「[Visual Studio 2005 用のカスタム ブートストラップ パッケージの作成](http://go.microsoft.com/fwlink/?LinkId=115667)」および「[カスタムの必須コンポーネントの追加](http://go.microsoft.com/fwlink/?LinkId=115668)」をご覧ください。  
+Msoledbsql.msi を介して SQL Server 用の OLE DB ドライバーを配布できます。 アプリケーションを展開するときに、SQL Server の OLE DB ドライバーをインストールする必要があります。 チェイナーとブートストラップのテクノロジを使用すると、ユーザーが 1 回のインストール手順に従うだけで複数のパッケージをまとめてインストールできるようになります。 詳細については、「[Visual Studio 2005 用のカスタム ブートストラップ パッケージの作成](https://go.microsoft.com/fwlink/?LinkId=115667)」および「[カスタムの必須コンポーネントの追加](https://go.microsoft.com/fwlink/?LinkId=115668)」をご覧ください。  
   
 X64 msoledbsql.msi for SQL Server OLE DB ドライバーの 32 ビット版もインストールされます。 アプリケーションが開発されたアプリケーションの 1 つ以外のプラットフォームを対象とする場合は、msoledbsql.msi x64 および x86 版をダウンロードできます。
 

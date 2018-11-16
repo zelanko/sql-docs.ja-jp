@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: 9dcce05957fb00cc966a9667e59b6b510396362a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d040c333aec94cc1de41df03906470356a530faa
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691290"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605632"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server のドライバーの履歴
 
@@ -96,7 +96,7 @@ MDAC または WDAC には、これらのコンポーネントが含まれてい
 * **SQLODBC:** Microsoft SQL Server ODBC ドライバー (SQLODBC)、Microsoft SQL Server へのアクセスをサポートするには、これは非推奨とされました。 SQL Server の将来のバージョンへの接続性は、サポートされていません。 SQL Server 7 より前のバージョンに接続する機能は、Windows 7 の後に、オペレーティング システムから削除される予定です。 新しいアプリケーションでは、新しい SQL Server の機能をサポートする、Windows 上の SQL Server の Microsoft ODBC Driver を使用する必要があります。 既存のアプリケーション移行に Microsoft ODBC Driver for SQL Server も優れたパフォーマンス、信頼性、およびサポート性のください。 関連する情報は、次を参照してください。 [MDAC から SQL Server Native Client へアプリケーションの更新](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)します。
 * **Microsoft Jet データベース エンジン 4.0:** バージョン 2.6 以降、MDAC が Jet コンポーネント。 つまり、MDAC 2.6 や 2.7、2.8 は、Microsoft Jet、Microsoft Jet OLE DB プロバイダー、ODBC デスクトップ データベース ドライバー、または Jet データ アクセス オブジェクト (DAO) には含まれません。 Microsoft Jet データベース エンジンの 4.0 コンポーネントは非推奨の機能の状態になったエンジニア リング、継続的なし、以降、Windows 2000 で Microsoft Windows の一部としてレベルの機能強化が届かない。
 
-  Jet データベース エンジン、Jet OLEDB ドライバー、Jet ODBC ドライバー、または Jet DAO の 64 ビット バージョンはありません。 詳細については、[サポート技術情報の記事 957570](http://support.microsoft.com/kb/957570) を参照してください。 Windows の 64 ビット バージョンでは、32 ビットの Jet は、Windows の WOW64 サブシステムで実行されます。 WOW64 の詳細については、次を参照してください。、 [MSDN WOW64 ドキュメント](/windows/desktop/WinProg64/wow64-implementation-details)します。 ネイティブの 64 ビット アプリケーションは WOW64 で実行されている 32 ビットの Jet ドライバーと通信できません。
+  Jet データベース エンジン、Jet OLEDB ドライバー、Jet ODBC ドライバー、または Jet DAO の 64 ビット バージョンはありません。 詳細については、[サポート技術情報の記事 957570](https://support.microsoft.com/kb/957570) を参照してください。 Windows の 64 ビット バージョンでは、32 ビットの Jet は、Windows の WOW64 サブシステムで実行されます。 WOW64 の詳細については、次を参照してください。、 [MSDN WOW64 ドキュメント](/windows/desktop/WinProg64/wow64-implementation-details)します。 ネイティブの 64 ビット アプリケーションは WOW64 で実行されている 32 ビットの Jet ドライバーと通信できません。
 
   Microsoft Jet では、代わりに使用をお勧めします。 [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)新規、リレーショナル データ ストアを必要とする Microsoft Access 以外のアプリケーションを開発するときにします。 非プライマリ データ ストレージ用の Microsoft Office 2003 およびそれ以前のファイル (.mdb ファイルと .xls) を使用して Jet を使用するこれら新しいと、変換後の Jet アプリケーションを続行できます。 ただし、これらのアプリケーションでは、Jet から 2007 Office System ドライバーへの移行を計画する必要があります。 できます[、2007 Office System ドライバーをダウンロード](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891)からの読み取りを Office 2003 (.mdb ファイルと .xls) または Office 2007 (*.accdb、*.xlsm、*.xlsx および *.xlsb) のファイル形式のいずれかで既存のファイルに書き込むことのできます。
 
@@ -110,7 +110,7 @@ MDAC または WDAC には、これらのコンポーネントが含まれてい
 * **Oracle ODBC および Oracle OLE DB:** The Microsoft Oracle ODBC ドライバー (Oracle ODBC) と Microsoft OLE DB Provider for Oracle (Oracle OLE DB) は、Oracle データベース サーバーへのアクセスを提供します。 Oracle Call Interface (OCI) バージョン 7 を使用して作成された、Oracle 7 の完全なサポートを提供します。 また、Oracle 7 エミュレーションを使用して Oracle 8 データベースの制限付きサポートを提供します。 Oracle は、OCI バージョン 7 の呼び出しを使用するアプリケーションをサポートしていません。 これらのテクノロジが非推奨とされます。 Oracle データ ソースを使用している場合は、Oracle によって提供されるドライバーおよびプロバイダーに移行する必要があります。
 * **RDS:** リモート データ サービス (RDS) は、インターネットまたはイントラネットの間でリモートの ADO レコード セット オブジェクトにアクセスするための独自の Microsoft メカニズム。 RDS で非推奨とされます。主要な機能が強化されてありません RDS MDAC 2.1 以降。 マイクロソフトは、.NET Framework は、SOAP の幅広い機能を備え、RDS のコンポーネントを置き換えるをリリースしました。 すべての RDS サーバー コンポーネントは、Windows 7 の後に、オペレーティング システムから削除されます。
 * **JRO:** Jet JRO) が非推奨とされます。 JRO は Jet で ADO で使用されます (*.mdb) データベースを作成し、Jet データベース (.mdb) を圧縮して Jet レプリケーション管理を実行します。MDAC 2.7 は、最終リリースになります。JRO は 64 ビットの Windows オペレーティング システムで使用できません。JRO は、Microsoft Access 2007 ファイル形式でサポートされていません (*.accdb)。
-* **16 ビット ODBC サポート:** 16 ビット アプリケーションを使用している場合は、32 ビット アプリケーションに移行する必要があります。 16 ビットの機能は非推奨し、64 ビット オペレーティング システムから削除しています。 詳細については、[サポート技術情報の記事 896458](http://support.microsoft.com/kb/896458) を参照してください。
+* **16 ビット ODBC サポート:** 16 ビット アプリケーションを使用している場合は、32 ビット アプリケーションに移行する必要があります。 16 ビットの機能は非推奨し、64 ビット オペレーティング システムから削除しています。 詳細については、[サポート技術情報の記事 896458](https://support.microsoft.com/kb/896458) を参照してください。
 * **単純な ole DB プロバイダー (MSDAOSP):** OLEDB の単純なプロバイダーは、単純なデータを OLE DB プロバイダーをすばやく構築するためのフレームワークを提供しています。 MSDAOSP が非推奨とされます。
 * **ODBC カーソル ライブラリ:** ODBC カーソル ライブラリ (ODBCCR32.dll) が制限されたクライアント側データ カーソルを提供します。 ODBC カーソル ライブラリは非推奨とされました。アプリケーションは、代わりに、サーバー側カーソルの実装を使用できます。
 * **プロセス外のインターフェイスのリモート処理を OLE DB:** OLEDB インターフェイスのリモート処理 (msdaps.dll) OLE DB プロバイダーがプロセス外で実行できるようにしようとしました。 OLEDB プロセス外のインターフェイスのリモート処理で非推奨とされます。

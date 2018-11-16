@@ -11,17 +11,17 @@ ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 652e6ad7792917c198bc521a484275a005cd1ea0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25b3fd8ae5c4f63c69200eaec8a736d8c44931f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639180"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603589"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>非同期実行 (通知方法) の例
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  このトピックのコード サンプルは、[非同期実行 (通知方法)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx) の使用方法を示しています。  
+  このトピックのコード サンプルは、[非同期実行 (通知方法)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx) の使用方法を示しています。  
   
  この関数は非同期通知を利用し、5 つの接続を開き、各接続のステートメントで 1 つのクエリを実行します。  
   

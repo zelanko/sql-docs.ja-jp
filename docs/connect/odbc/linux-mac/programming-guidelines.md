@@ -10,39 +10,39 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5030124775a8016fe5ddb716524276365aa47be7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2edaeee9d073cb0c12a509bd23e3db9edf4b3894
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613087"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602187"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-macOS と Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のプログラミング機能は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) の ODBC に基づいています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、Windows Data Access Components の ODBC に基づいています ([ODBC プログラマー リファレンス](http://go.microsoft.com/fwlink/?LinkID=45250))。  
+macOS と Linux での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のプログラミング機能は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) の ODBC に基づいています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、Windows Data Access Components の ODBC に基づいています ([ODBC プログラマー リファレンス](https://go.microsoft.com/fwlink/?LinkID=45250))。  
 
 複数のアクティブな結果セット (MARS) およびその他の ODBC アプリケーションで使用できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定の機能を含めることによって`/usr/local/include/msodbcsql.h`unixODBC ヘッダーを含めた後 (`sql.h`、 `sqlext.h`、 `sqltypes.h`、および`sqlucode.h`)。 次に、Windows ODBC アプリケーションで使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の項目に、同じシンボル名を使用します。
 
 ## <a name="available-features"></a>利用可能な機能  
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 用 Native Client のドキュメント ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) の次のセクションは、macOS と Linux で ODBC ドライバーを使用する場合に有効です。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 用 Native Client のドキュメント ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) の次のセクションは、macOS と Linux で ODBC ドライバーを使用する場合に有効です。  
 
--   [SQL Server との通信 (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [SQL Server との通信 (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
 -   [接続とクエリのタイムアウトのサポート](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [カーソル](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [日付/時刻の強化 (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
--   [クエリの実行 (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
+-   [日付/時刻の強化 (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
+-   [クエリの実行 (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
 -   [エラーとメッセージの処理](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Kerberos 認証](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
--   [大きな CLR ユーザー定義型 (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
--   [トランザクションの実行 (ODBC) (分散トランザクションを除く)](http://msdn.microsoft.com/library/ms131706.aspx)  
--   [結果の処理 (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
+-   [大きな CLR ユーザー定義型 (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
+-   [トランザクションの実行 (ODBC) (分散トランザクションを除く)](https://msdn.microsoft.com/library/ms131706.aspx)  
+-   [結果の処理 (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [ストアド プロシージャの実行](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
--   [スパース列のサポート (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
+-   [スパース列のサポート (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL 暗号化](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [テーブル値パラメーター](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [コマンドおよびデータ API の UTF-8 および UTF-16](http://msdn.microsoft.com/library/ff878241.aspx)
+-   [コマンドおよびデータ API の UTF-8 および UTF-16](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [カタログ関数の使用](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>サポートされていない機能
@@ -58,7 +58,7 @@ macOS と Linux でのこのリリースの ODBC ドライバーでは、次の�
 -   分散トランザクション (SQL_ATTR_ENLIST_IN_DTC 属性はサポートされていません)  
 -   データベース ミラーリング  
 -   FILESTREAM  
--   [SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=234099) で説明されている ODBC ドライバー パフォーマンスのプロファイリング、および次のパフォーマンス関連接続属性:  
+-   [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099) で説明されている ODBC ドライバー パフォーマンスのプロファイリング、および次のパフォーマンス関連接続属性:  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
@@ -66,7 +66,7 @@ macOS と Linux でのこのリリースの ODBC ドライバーでは、次の�
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
 -   SQLBrowseConnect  
--   SQL_C_INTERVAL_YEAR_TO_MONTH などの C 時間隔型 (「[Data Type Identifiers and Descriptors](http://msdn.microsoft.com/library/ms716351(VS.85).aspx)」(データ型識別子と記述子) を参照)
+-   SQL_C_INTERVAL_YEAR_TO_MONTH などの C 時間隔型 (「[Data Type Identifiers and Descriptors](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)」(データ型識別子と記述子) を参照)
 -   SQLSetConnectAttr 関数の SQL_ATTR_ODBC_CURSORS 属性の SQL_CUR_USE_ODBC 値。
 
 ## <a name="character-set-support"></a>文字セットのサポート

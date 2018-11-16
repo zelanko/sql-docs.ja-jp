@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: 1708bf5d1fbd47f7fb2dcefbbb5150d4b5646343
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: b99aa6be170402b0e8f18dddd578c1fb6c615dd6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324572"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601872"
 ---
 # <a name="fips-mode"></a>FIPS モード
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ Microsoft JDBC Driver for SQL Server サポート*FIPS 140 準拠モード*し�
 
 ## <a name="fips-configured-jvm"></a>FIPS JVM を構成します。
 
-FIPS 構成には、承認済みのモジュールを参照してくださいを参照してください、[検証 FIPS 140-1 と FIPS 140-2 暗号化モジュール](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)します。 
+FIPS 構成には、承認済みのモジュールを参照してくださいを参照してください、[検証 FIPS 140-1 と FIPS 140-2 暗号化モジュール](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)します。 
 
 ベンダーは、FIPS JVM を構成する追加の手順があります。
 
@@ -87,7 +87,7 @@ private Certificate getCertificate(String pathName)
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
 ## <a name="appropriate-policy-files"></a>適切なポリシー ファイル
-FIPS プロバイダーによっては、無制限のポリシーの jar が必要です。 このような場合は、sun、/、Oracle Java Cryptography Extension (JCE) 無制限強度管轄ポリシーのファイルをダウンロード[JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)または[JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)します。 
+FIPS プロバイダーによっては、無制限のポリシーの jar が必要です。 このような場合は、sun、/、Oracle Java Cryptography Extension (JCE) 無制限強度管轄ポリシーのファイルをダウンロード[JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)または[JRE 7](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)します。 
 
 ## <a name="appropriate-configuration-parameters"></a>適切な構成パラメーター
 FIPS 準拠モードでは、JDBC ドライバーを実行するには、次の表に示すように、接続のプロパティを構成します。 

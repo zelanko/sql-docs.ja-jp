@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 7cbc1a78a2cce71494da04ffeb19649b22b2585e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736480"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600802"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -369,12 +369,12 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-これらの各パッケージがあります、独自の依存関係、可能性のあるシステム上に存在することができない可能性。 この問題の一般的なソリューションでは、ディストリビューションのパッケージ マネージャーのドキュメントを参照してください: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、 [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および[SUSE](https://en.opensuse.org/Portal:Zypper)
+これらの各パッケージがあります、独自の依存関係、可能性のあるシステム上に存在することができない可能性。 この問題の一般的なソリューションでは、ディストリビューションのパッケージ マネージャーのドキュメントを参照してください: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、 [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および[SUSE](https://en.opensuse.org/Portal:Zypper)
 
 終了したすべての従属パッケージを手動でダウンロード、インストール コンピューターでは、一緒に配置し、さらに、各パッケージを手動でインストールする一般的なではまた、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 パッケージ。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - 最新バージョンをダウンロード`msodbcsql``.rpm`ここから。 http://packages.microsoft.com/rhel/7/prod/
+  - 最新バージョンをダウンロード`msodbcsql``.rpm`ここから。 https://packages.microsoft.com/rhel/7/prod/
   - 依存関係と、ドライバーをインストールします。
   
 ```
@@ -383,7 +383,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- 最新バージョンをダウンロード`msodbcsql``.deb`ここから。 http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- 最新バージョンをダウンロード`msodbcsql``.deb`ここから。 https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - 依存関係と、ドライバーをインストールします。 
 
 ```
@@ -392,7 +392,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- 最新バージョンをダウンロード`msodbcsql``.rpm`ここから。 http://packages.microsoft.com/sles/12/prod/
+- 最新バージョンをダウンロード`msodbcsql``.rpm`ここから。 https://packages.microsoft.com/sles/12/prod/
 - 依存関係と、ドライバーをインストールします。
 
 ```
@@ -436,7 +436,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 Linux の Microsoft ODBC ドライバーが正常に登録されたことを確認するには、コマンド ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"``` を実行します。  
   
-「[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux (Linux の ODBC ドライバーに既存の MSDN C++ ODBC サンプルを使用する)](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 」には、Linux の ODBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するコード サンプルが紹介されています。  
+「[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux (Linux の ODBC ドライバーに既存の MSDN C++ ODBC サンプルを使用する)](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 」には、Linux の ODBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するコード サンプルが紹介されています。  
   
 **アンインストール**  
   
@@ -488,15 +488,15 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 接続エラーの解決の詳細については、以下を参照してください。  
   
--   [SQL の接続問題のトラブルシューティングの手順](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [SQL の接続問題のトラブルシューティングの手順](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
--   [SQL Server 2005 Connectivity Issue Troubleshoot - Part I (SQL Server 2005 の接続に関する問題のトラブルシューティング - パート 1)](http://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
+-   [SQL Server 2005 Connectivity Issue Troubleshoot - Part I (SQL Server 2005 の接続に関する問題のトラブルシューティング - パート 1)](https://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
   
--   [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer (接続リング バッファーを使用している SQL Server 2008 の接続のトラブルシューティング)](http://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
+-   [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer (接続リング バッファーを使用している SQL Server 2008 の接続のトラブルシューティング)](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
   
--   [SQL Server Authentication Troubleshooter (SQL Server 認証のトラブルシューティング)](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
+-   [SQL Server Authentication Troubleshooter (SQL Server 認証のトラブルシューティング)](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [エラーの詳細 (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [エラーの詳細 (https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     URL (11001) に指定するエラー番号は、表示されたエラーに合わせて変更する必要があります。  
   

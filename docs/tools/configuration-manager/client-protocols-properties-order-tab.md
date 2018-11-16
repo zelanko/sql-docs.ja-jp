@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 5fe1fb2d234b3cc4b785185f1fbd64605002cc1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dea72a4c8e8ab93c661bd4a13b347680f998f7a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840650"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657124"
 ---
 # <a name="client-protocols-properties-order-tab"></a>[クライアント プロトコルのプロパティ] ダイアログ ボックス ([順序] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,6 +58,6 @@ ms.locfileid: "47840650"
 >  プロトコルをプレフィックスによって指定した場合や、接続文字列の一部として指定した場合は、その指定したプロトコルだけが試行されます。  
   
 ## <a name="see-also"></a>参照  
- [ネットワーク プロトコルの選択](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [ネットワーク プロトコルの選択](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65963e0e41bc4bb85ac3c734efc30835f371191e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613420"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603092"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver のよくあるご質問 (FAQ)
 
@@ -105,25 +105,25 @@ JDBC ドライバー 4.1、4.2、6.0、6.2、6.4、および 7.0 では、再配
 可能。 ドライバーでは、IPv6 アドレスの使用をサポートします。 接続プロパティのコレクションと serverName 接続文字列のプロパティを使用します。 詳細については、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」をご覧ください。
 
 **アダプティブ バッファリングとは何ですか。**  
-アダプティブ バッファリングと、Microsoft SQL Server 2005 JDBC Driver version 1.2 以降が導入されました。 これは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 Microsoft SQL Server JDBC Driver のアダプティブ バッファリング機能には接続文字列プロパティ responseBuffering があり、これを "adaptive" または "full" に設定できます。 バージョン 1.2 リリースでは、"full" が既定のバッファリング モードであるため、アプリケーションから明示的にアダプティブ バッファリング モードを設定する必要があります。 JDBC Driver 2.0 以降では、ドライバーの既定の動作は "adaptive" です。 したがって、アプリケーションから明示的に要求しなくても、アダプティブ バッファリングの動作が適用されます。 詳細については、「[アダプティブ バッファリングの使用](../../connect/jdbc/using-adaptive-buffering.md)」とブログ「[What is adaptiveresponse buffering and why should I use it?](http://go.microsoft.com/fwlink/?LinkId=111575)」(アダプティブ レスポンス バッファリングの概要とこれを使用する理由) をご覧ください。
+アダプティブ バッファリングと、Microsoft SQL Server 2005 JDBC Driver version 1.2 以降が導入されました。 これは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 Microsoft SQL Server JDBC Driver のアダプティブ バッファリング機能には接続文字列プロパティ responseBuffering があり、これを "adaptive" または "full" に設定できます。 バージョン 1.2 リリースでは、"full" が既定のバッファリング モードであるため、アプリケーションから明示的にアダプティブ バッファリング モードを設定する必要があります。 JDBC Driver 2.0 以降では、ドライバーの既定の動作は "adaptive" です。 したがって、アプリケーションから明示的に要求しなくても、アダプティブ バッファリングの動作が適用されます。 詳細については、「[アダプティブ バッファリングの使用](../../connect/jdbc/using-adaptive-buffering.md)」とブログ「[What is adaptiveresponse buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575)」(アダプティブ レスポンス バッファリングの概要とこれを使用する理由) をご覧ください。
 
 **ドライバーで接続プールがサポートされますか。**  
-ドライバーは、Java Platform, Enterprise Edition 5 (Java EE 5) の接続プールをサポートしています。 ドライバーは、ミドルウェア アプリケーション サーバー ベンダーが提供するあらゆる接続プールの実装に参加できるように、JDBC 3.0 に必要なインターフェイスを実装しています。 このドライバーは、これらの環境でプールされた接続に参加します。 詳細については、「[接続プールの使用](../../connect/jdbc/using-connection-pooling.md)」をご覧ください。 ドライバーは独自のプール実装を提供せず、むしろサードパーティの Java アプリケーション サーバーに依存しています。
+ドライバーは、Java Platform, Enterprise Edition 5 (Java EE 5) の接続プールをサポートしています。 ドライバーは、ミドルウェア アプリケーション サーバー ベンダーが提供するあらゆる接続プールの実装に参加できるように、JDBC 3.0 に必要なインターフェイスを実装しています。 このドライバーは、これらの環境でプールされた接続に参加します。 詳細については、「 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)」をご覧ください。 ドライバーは独自のプール実装を提供せず、むしろサードパーティの Java アプリケーション サーバーに依存しています。
 
 **ドライバーのサポートを利用できますか。**  
-さまざまなサポート オプションをご利用いただけます。 質問を投稿するまたはに発行することがあります、 [GitHub リポジトリ](https://github.com/microsoft/mssql-jdbc)Microsoft によって監視されています。 [フォーラム](http://go.microsoft.com/fwlink/?LinkID=246673)Microsoft、Mvp、およびコミュニティによって監視されます。 マイクロソフト カスタマー サポートにお問い合わせいただくこともできます。 開発チームは、サードパーティのアプリケーション サーバーの外部で問題の再現をお客様にお願いする場合があります。 ホストしている Java コンテナー環境の外部で問題を再現できない場合は、チームが引き続きお客様を支援できるよう、関連するサードパーティを介入させる必要があります。 チームは問題を最適にサポートできるように、Windows などのオペレーティング システムの問題を再現することも要求可能性があります。
+さまざまなサポート オプションをご利用いただけます。 質問を投稿するまたはに発行することがあります、 [GitHub リポジトリ](https://github.com/microsoft/mssql-jdbc)Microsoft によって監視されています。 [フォーラム](https://go.microsoft.com/fwlink/?LinkID=246673)Microsoft、Mvp、およびコミュニティによって監視されます。 マイクロソフト カスタマー サポートにお問い合わせいただくこともできます。 開発チームは、サードパーティのアプリケーション サーバーの外部で問題の再現をお客様にお願いする場合があります。 ホストしている Java コンテナー環境の外部で問題を再現できない場合は、チームが引き続きお客様を支援できるよう、関連するサードパーティを介入させる必要があります。 チームは問題を最適にサポートできるように、Windows などのオペレーティング システムの問題を再現することも要求可能性があります。
 
 **ドライバーは、サードパーティのアプリケーション サーバーでの使用が認定されていますか。**
 ドライバーは、IBM WebSphere、SAP NetWeaver などのさまざまなアプリケーション サーバーに対してテスト済みです。
 
 **どのようにしてトレースを有効にできますか。**  
-ドライバーはトレース (またはログ記録) の使用をサポートしているため、アプリケーションで使用するときに JDBC Driver で発生した問題の解決に役立てることができます。 クライアント側の JAR のトレースの使用を有効にするため、JDBC Driver は java.util.logging でログ記録 API を使用しています。 詳細については、「[ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)」を参照してください。 サーバー側の XA のトレースについては、「 [Data Access Tracing in SQL Server (SQL Server でのデータ アクセスのトレース)](http://go.microsoft.com/fwlink/?LinkId=248705)」をご覧ください。
+ドライバーはトレース (またはログ記録) の使用をサポートしているため、アプリケーションで使用するときに JDBC Driver で発生した問題の解決に役立てることができます。 クライアント側の JAR のトレースの使用を有効にするため、JDBC Driver は java.util.logging でログ記録 API を使用しています。 詳細については、「[ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)」を参照してください。 サーバー側の XA のトレースについては、「 [Data Access Tracing in SQL Server (SQL Server でのデータ アクセスのトレース)](https://go.microsoft.com/fwlink/?LinkId=248705)」をご覧ください。
 
 **古いバージョンのドライバー (SQL Server 2000 JDBC ドライバー、2005 ドライバー、1.0、1.1、1.2 ドライバーなど) はどこでダウンロードできますか。**  
 これらのバージョンのドライバーはサポートされていないため、ダウンロードできません。 Microsoft は Java 接続のサポートの向上を継続的に進めています。 そのため、最新バージョンの Microsoft JDBC ドライバーを使用することを強くおすすめします。
 
 **JRE 1.4 を使用しています。JRE 1.4 と互換性があるのはどのドライバーですか。**  
-SAP 製品を使用していて JRE 1.4 のサポートが必要なお客様は、 [SAPService Marketplace](http://service.sap.com/) にお問い合わせの上、1.2 Microsoft JDBC ドライバーを入手してください。
+SAP 製品を使用していて JRE 1.4 のサポートが必要なお客様は、 [SAPService Marketplace](https://service.sap.com/) にお問い合わせの上、1.2 Microsoft JDBC ドライバーを入手してください。
 
 **ドライバーは FIPS 検証済みのアルゴリズムを使用して通信できますか。**  
 Microsoft JDBC Driver には暗号化アルゴリズムが含まれていません。 お客様が、Federal Information Processing Standards (FIPS) に準拠していると見なされるオペレーティング システム、アプリケーション、JVM アルゴリズムを活用して、これらのアルゴリズムを使用するドライバーを構成する場合、ドライバーは指定されたアルゴリズムのみを通信に使用します。
