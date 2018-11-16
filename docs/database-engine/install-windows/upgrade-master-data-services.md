@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f9d3d446e629fd4898db71b0001f2b9f487f44c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4128ed5937688ebd681c0fd99f7d346d66b0f263
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666040"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600742"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
 
@@ -43,7 +43,7 @@ ms.locfileid: "47666040"
   
 -   [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]では、既定で、ファイルが *drive*:\Program Files\Microsoft SQL Server\140\Master Data Services にインストールされます。  
 
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、既定で、ファイルが *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services にインストールされます。  
+-   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]では、既定で、ファイルが *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services にインストールされます。  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]では、既定で、ファイルが *drive*:\Program Files\Microsoft SQL Server\120\Master Data Services にインストールされます。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47666040"
         > [!IMPORTANT]  
         >  以前のバージョンの SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) から取得した既存の MDS Web アプリケーションを、マスター データ サービス構成マネージャーの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンで選択できます。 既存の Web アプリケーションを選択することはできません。代わりに MDS に対応する [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web アプリケーションを作成する必要があります。 それ以外の場合は、アップグレード後の MDS データベースに Web アプリケーションを関連付けようとすると、ページに関連付けられた構成データが無効であるため、要求したページにアクセスできないことを示すエラーが返されます。  
         >   
-        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) Web アプリケーションと同じ名前 (別名) を、MDS Web アプリケーションに使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次にマスター データ サービス構成マネージャーの [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
+        >  既存の ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) Web アプリケーションと同じ名前 (別名) を、MDS Web アプリケーションに使用する場合は、まず Web アプリケーションおよびそれに関連付けられているアプリケーション プールを IIS から削除し、次にマスター データ サービス構成マネージャーの [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] バージョンを使用して同じ名前の Web アプリケーションを作成します。 Web アプリケーションとアプリケーション プールを IIS から削除する方法については、「 [Remove an Application (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323537) 」 (アプリケーションを削除する (IIS 7))、および「 [Remove an Application Pool (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=323538)」(アプリケーション プールを削除する (IIS 7)) を参照してください。  
   
 4.  新しい Web アプリケーションをアップグレード後の MDS データベースに関連付けます。  
   

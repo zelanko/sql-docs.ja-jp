@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0e86bec4983dd1f15f4c91fe4ee7a851f8264556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bce46bab220ddda57d18cea6588c35475becd372
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665475"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601892"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
 
@@ -24,7 +24,7 @@ ms.locfileid: "47665475"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Server Core インストールにインストールできます。   
   
-Server Core インストール オプションでは、特定のサーバー ロールを実行するための最低限の環境が提供されます。 これにより、必要な保守と管理が減り、これらのサーバー ロールに対する攻撃の危険性が軽減されます。 Server Core の詳細については、「[Server Core のインストール](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)」を参照してください。 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] に実装された Server Core の詳細については、[Windows Server 2012 の Server Core](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) に関するページ (http://msdn.microsoft.com/library/hh846323(VS.85).aspx) を参照してください。  
+Server Core インストール オプションでは、特定のサーバー ロールを実行するための最低限の環境が提供されます。 これにより、必要な保守と管理が減り、これらのサーバー ロールに対する攻撃の危険性が軽減されます。 Server Core の詳細については、「[Server Core のインストール](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)」を参照してください。 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] に実装された Server Core の詳細については、[Windows Server 2012 の Server Core](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) に関するページ (https://msdn.microsoft.com/library/hh846323(VS.85).aspx) を参照してください。  
   
  現在サポートされているオペレーティング システムの一覧については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。
 
@@ -45,8 +45,8 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|[ユーザー アカウント制御]||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|[ユーザー アカウント制御]||  
 |フルテキスト検索|[ユーザー アカウント制御]||  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|はい||  
-|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|はい||  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[はい]||  
+|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|[はい]||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|いいえ||  
 |クライアント ツール接続|[ユーザー アカウント制御]||  
@@ -59,7 +59,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |分散再生コントローラー|いいえ||  
 |分散再生クライアント|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
 |SQL クライアント接続 SDK|[ユーザー アカウント制御]||  
-|Microsoft Sync Framework|[ユーザー アカウント制御]|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
+|Microsoft Sync Framework|[ユーザー アカウント制御]|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|いいえ||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|いいえ||  
   
@@ -81,7 +81,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
  どのインストール方法を使用するかにかかわらず、個人として、または組織を代表して、ソフトウェア ライセンス条項に同意するかどうかを確認する必要があります。ただし、ソフトウェアの使用に別の契約 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ボリューム ライセンス契約、ISV や OEM とのサード パーティ契約など) が適用される場合を除きます。  
   
- ライセンス条項は、セットアップのユーザー インターフェイスで確認し、同意することができます。 /Q または /QS パラメーターを使用した自動インストールでは、/IACCEPTSQLSERVERLICENSETERMS パラメーターを指定する必要があります。 ライセンス条項は、「 [マイクロソフト ソフトウェア ライセンス条項](http://go.microsoft.com/fwlink/?LinkId=148209)」で別途確認できます。  
+ ライセンス条項は、セットアップのユーザー インターフェイスで確認し、同意することができます。 /Q または /QS パラメーターを使用した自動インストールでは、/IACCEPTSQLSERVERLICENSETERMS パラメーターを指定する必要があります。 ライセンス条項は、「 [マイクロソフト ソフトウェア ライセンス条項](https://go.microsoft.com/fwlink/?LinkId=148209)」で別途確認できます。  
   
 > [!NOTE]  
 >  ソフトウェアの入手方法 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] のボリューム ライセンスを通じて入手した場合など) によっては、ソフトウェアの使用に追加の条件が課されることがあります。  
@@ -331,9 +331,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [構成ファイルを使用した SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [エディションと SQL Server 2017 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [Server Core のインストール](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
- [Sconfig.cmd を使用して Windows Server 2016 の Server Core インストールを構成する](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Windows PowerShell でのフェールオーバー クラスター コマンドレット](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Server Core のインストール](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
+ [Sconfig.cmd を使用して Windows Server 2016 の Server Core インストールを構成する](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
+ [Windows PowerShell でのフェールオーバー クラスター コマンドレット](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
 
   
   

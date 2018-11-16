@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852027"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600952"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>前提条件、制限事項、推奨事項 - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48852027"
   
 ||依存機能|修正プログラム|リンク|  
 |------|-----------------------|------------|----------|  
-|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 の修正プログラムは、SQL クライアントに読み取り目的、読み取り専用、multisubnetfailover の Always On 機能のサポートを追加します。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347: [Always On 機能のサポートを追加する .Net 3.5 SP1 の修正プログラム](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 の修正プログラムは、SQL クライアントに読み取り目的、読み取り専用、multisubnetfailover の Always On 機能のサポートを追加します。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347: [Always On 機能のサポートを追加する .Net 3.5 SP1 の修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> チェック リスト: 要件 (Windows システム)  
@@ -67,7 +67,7 @@ ms.locfileid: "48852027"
 ###  <a name="PermissionsWindows"></a> 権限 (Windows システム)  
  WSFC を管理するユーザーは、すべてのクラスター ノードのシステム管理者であることが必要です。  
   
- クラスターを管理するためのアカウントの詳細については、「 [付録 A: フェールオーバー クラスターの要件](http://technet.microsoft.com/library/dd197454.aspx)」を参照してください。  
+ クラスターを管理するためのアカウントの詳細については、「 [付録 A: フェールオーバー クラスターの要件](https://technet.microsoft.com/library/dd197454.aspx)」を参照してください。  
   
 ###  <a name="RelatedTasksWindows"></a> 関連タスク (Windows システム)  
   
@@ -99,17 +99,17 @@ ms.locfileid: "48852027"
   
 ##### <a name="related-content-powershell"></a>関連コンテンツ (PowerShell)  
   
--   [クラスターと高可用性](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (フェールオーバー クラスタリングとネットワーク負荷分散のチームのブログ)  
+-   [クラスターと高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (フェールオーバー クラスタリングとネットワーク負荷分散のチームのブログ)  
   
--   [フェールオーバー クラスターの Windows PowerShell の概要](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [フェールオーバー クラスターの Windows PowerShell の概要](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [クラスター リソースのコマンドと同等の Windows PowerShell コマンドレット](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [クラスター リソースのコマンドと同等の Windows PowerShell コマンドレット](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> 関連コンテンツ (Windows システム)  
   
--   [マルチサイト フェールオーバー クラスターの DNS 設定を構成する](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [マルチサイト フェールオーバー クラスターの DNS 設定を構成する](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [ネットワーク名リソースを使用した DNS 登録](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [ネットワーク名リソースを使用した DNS 登録](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
 ##  <a name="ServerInstance"></a> SQL Server インスタンスの前提条件と制限  
@@ -167,7 +167,7 @@ ms.locfileid: "48852027"
   
     -   セカンダリ レプリカでのバックアップでは、バックアップ操作の間、プライマリ レプリカにスレッドが保持されます。  
   
- 詳細については、「 [Always On - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) 」(CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジニアのブログ) をご覧ください。  
+ 詳細については、「 [Always On - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) 」(CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジニアのブログ) をご覧ください。  
   
 ###  <a name="PermissionsSI"></a> 権限 (サーバー インスタンス)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "48852027"
   
 ###  <a name="RelatedContentSI"></a> 関連コンテンツ (サーバー インスタンス)  
   
--   [Always On - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> ネットワーク接続の推奨事項  
  WSFC ノード間の通信と、可用性レプリカ間の通信には、同じネットワーク リンクを使用することを強くお勧めします。  別々のネットワーク リンクを使用すると、一部のリンクにエラーが発生した場合に (断続的なエラーであっても)、予期しない動作が発生する可能性があります。  
@@ -210,7 +210,7 @@ ms.locfileid: "48852027"
 ###  <a name="RestrictionsFCI"></a> 制限 (FCI)  
   
 > [!NOTE]  
-> フェールオーバー クラスター インスタンスは、クラスター化共有ボリューム (CSV) をサポートしています。 CSV の詳細については、「 [フェールオーバー クラスターのクラスターの共有ボリュームについて](http://technet.microsoft.com/library/dd759255.aspx)」を参照してください。  
+> フェールオーバー クラスター インスタンスは、クラスター化共有ボリューム (CSV) をサポートしています。 CSV の詳細については、「 [フェールオーバー クラスターのクラスターの共有ボリュームについて](https://technet.microsoft.com/library/dd759255.aspx)」を参照してください。  
   
 -   **FCI のクラスター ノードでホストできるレプリカは、特定の可用性グループに対して 1 つだけである:** FCI に可用性レプリカを追加する場合、FCI の有効な所有者である WSFC ノードで、同じ可用性グループに対して別のレプリカをホストすることはできません。  競合を避けるために、フェールオーバー クラスター インスタンスの所有者を構成することをお勧めします。 これにより、1 つの WSFC によって同じ可用性グループの 2 つの可用性レプリカがホストされる可能性がなくなります。
   
@@ -242,7 +242,7 @@ ms.locfileid: "48852027"
   
 -   [フェールオーバー クラスタリングと可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Always On アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性および障害復旧ソリューションの構築](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性および障害復旧ソリューションの構築](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> 可用性グループの前提条件と制限  
  **このセクションの内容**  
@@ -382,11 +382,11 @@ ms.locfileid: "48852027"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
