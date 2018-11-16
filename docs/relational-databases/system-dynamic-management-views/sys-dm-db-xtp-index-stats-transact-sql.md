@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 809ef57500a849b041692d50f7e1d8844dcacf2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ba01b73dff6810ee9fcfdc08a904ff6ad4697
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646420"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674271"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   前回データベースが再起動されてから収集された統計が含まれます。  
   
- 詳細については、次を参照してください。 [、インメモリ OLTP&#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)と[Guidelines for Using Indexes on Memory-Optimized Tables](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)します。  
+ 詳細については、次を参照してください。 [、インメモリ OLTP&#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)と[Guidelines for Using Indexes on Memory-Optimized Tables](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)します。  
 
   
 |列名|データ型|説明|  
@@ -43,8 +43,8 @@ ms.locfileid: "47646420"
 |index_id|**bigint**|インデックスの ID。 index_id は、オブジェクト内でのみ一意です。|  
 |scans_started|**bigint**|実行されたインメモリ OLTP のインデックス スキャンの回数。 選択、挿入、更新、または削除を実行するたびに、インデックス スキャンが必要になります。|  
 |scans_retries|**bigint**|再試行する必要のあるインデックス スキャンの回数。|  
-|rows_returned|**bigint**|テーブルが作成された後に返される行の先頭の数の累計[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|rows_touched|**bigint**|テーブルが作成された後にアクセスする行の累積数またはの開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
+|rows_returned|**bigint**|テーブルの作成後または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動後に返された行の累積数。|  
+|rows_touched|**bigint**|テーブルの作成後または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動後にアクセスされた行の累積数。|  
 |rows_expiring|**bigint**|内部使用のみです。|  
 |rows_expired|**bigint**|内部使用のみです。|  
 |rows_expired_removed|**bigint**|内部使用のみです。|  

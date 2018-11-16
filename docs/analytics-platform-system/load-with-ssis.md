@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20220208aed16d745dbab5aecce64e6653ef350
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395008"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700917"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Parallel Data Warehouse に Integration Services を使用してデータを読み込む
 SQL Server Integration Services (SSIS) パッケージを使用して SQL Server Parallel Data Warehouse にデータを読み込むための参照と展開の情報を提供します。  
@@ -29,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -56,7 +56,7 @@ SQL Server Data Tools 内からパッケージを実行するパッケージを�
 ### <a name="run-from-powershell"></a>PowerShell から実行します。  
 Windows PowerShell からパッケージを実行するを使用して、 **dtexec**ユーティリティ。 `dtexec /FILE <packagePath>`  
   
-たとえば、IPv4 アドレスの場合、「 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例を次に示します。 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Windows から実行するコマンド プロンプト 
 Windows コマンド プロンプトでパッケージを実行するを使用して、 **dtexec**ユーティリティ。 `dtexec /FILE <packagePath>`  
@@ -249,12 +249,12 @@ id,city,lastUpdateDate,orderDate
 ## <a name="see-also"></a>参照  
 [SSIS PDW 変換先アダプターを使用するスクリプト タスクを作成します。](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-[設計と実装のパッケージ (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[チュートリアル: ウィザードを使用して基本パッケージの作成](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[はじめに (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[動的パッケージ サンプルの生成](http://go.microsoft.com/fwlink/?LinkId=202413)  
-[SSIS パッケージのデザインの並列処理 (SQL Server ビデオ)](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server コミュニティの例: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
+[設計と実装のパッケージ (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[チュートリアル: ウィザードを使用して基本パッケージの作成](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[はじめに (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[動的パッケージ サンプルの生成](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[SSIS パッケージのデザインの並列処理 (SQL Server ビデオ)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Microsoft SQL Server コミュニティの例: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [変更データ キャプチャと読み込みの向上、増分](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [緩やかに変化するディメンション変換](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [一括挿入タスク](../integration-services/control-flow/bulk-insert-task.md)  

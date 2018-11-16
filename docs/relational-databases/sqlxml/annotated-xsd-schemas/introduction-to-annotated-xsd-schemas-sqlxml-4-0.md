@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 979e1f5a470a25bad870e63937c11aba67b8df5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e97004dd3b8d28da571f66ba91782f408ee18ede
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688950"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674281"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>注釈付き XSD スキーマの概要 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "47688950"
  有効な XSD スキーマを含める必要があります、  **\<xsd:schema >** 次のように定義されている要素。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <!-- additional schema definitions here -->  
 </xsd:schema>  
 ```  
   
- **\<Xsd:schema >** 要素は XML スキーマ名前空間の仕様にから派 生 http://www.w3.org/2001/XMLSchema します。  
+ **\<Xsd:schema >** 要素は XML スキーマ名前空間の仕様にから派 生 https://www.w3.org/2001/XMLSchema します。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD スキーマへの注釈  
  データベースへのマッピングを記述する注釈付きの XSD スキーマを使用して、データベースにクエリを実行し、結果を XML ドキュメントの形式で返すことができます。 注釈は、データベースのテーブルと列に XSD スキーマをマップするために指定します。 XSD スキーマで作成した XML ビューに対して XPath クエリを指定すると、データベースにクエリが実行され、結果を XML として取得できます。  
@@ -61,7 +61,7 @@ ms.locfileid: "47688950"
  名前空間を使用して、XSD スキーマで注釈が指定されて**urn: スキーマ-microsoft-{urn:schemas-microsoft-com:mapping-schema}-スキーマ**します。 指定する名前空間を指定する最も簡単な方法は、次の例に示すように、  **\<xsd:schema >** タグ。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 ...  
 </xsd:schema>  
@@ -73,7 +73,7 @@ ms.locfileid: "47688950"
  XSD スキーマを構成する次の例では、  **\<Person.Contact >** 要素。 **\<従業員 >** 要素には、 **ContactID**属性と **\<FirstName >** と **\<LastName >** 子要素。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
   <xsd:element name="Contact" >  
    <xsd:complexType>  
      <xsd:sequence>  
@@ -91,7 +91,7 @@ ms.locfileid: "47688950"
  この XSD スキーマに、要素と属性をデータベースのテーブルと列にマップするため、注釈を追加します。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Contact" sql:relation="Person.Contact" >  
    <xsd:complexType>  
@@ -121,15 +121,15 @@ ms.locfileid: "47688950"
 ## <a name="other-resources"></a>その他のリソース  
  XML スキーマ定義言語 (XSD)、XML パス言語 (XPath)、Extensible Stylesheet Language Transformations (XSLT) の詳細については、次の Web サイトを参照してください。  
   
--   XML Schema Part 0: Primer, W3C 推奨事項 (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C 推奨事項 (https://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Structures」W3C 推奨事項 (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Structures」W3C 推奨事項 (https://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: datatypes,、W3C 勧告 (http://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: datatypes,、W3C 勧告 (https://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (https://www.w3.org/TR/xpath)  
   
--   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
+-   XSL Transformations (XSLT) (https://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>参照  
  [スキーマのセキュリティに関する考慮事項を注釈が付けられた&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   

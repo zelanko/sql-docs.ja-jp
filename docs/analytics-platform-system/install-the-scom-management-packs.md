@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8a870ed2fb711599556178132e133039098f3051
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909822"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696431"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Analytics Platform System の SQL Server Operations Manager (SCOM) 管理パックをインストールします。
 以下の手順をダウンロードして SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをインストールします。 管理パックが SCOM から SQL Server PDW の監視に必要です。  
@@ -25,13 +25,13 @@ ms.locfileid: "37909822"
 System Center Operations Manager は、インストールして実行する必要があります。 SQL Server PDW 2012 では、System Center Operations Manager 2007 R2、System Center Operations Manager 2012、または System Center Operations Manager 2012 service pack 1 が必要です。  
   
 ## <a name="Step1"></a>手順 1: 管理パックをダウンロードします。  
-APS PDW ワークロードでは、ダウンロード、 [Microsoft Analytics Platform System 用の System Center 管理パック](http://go.microsoft.com/fwlink/?LinkId=396857)します。  
+APS PDW ワークロードでは、ダウンロード、 [Microsoft Analytics Platform System 用の System Center 管理パック](https://go.microsoft.com/fwlink/?LinkId=396857)します。  
   
-アプライアンスの管理、ダウンロード、 [SQL Server アプライアンス ベースの管理パック](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436)します。  
+アプライアンスの管理、ダウンロード、 [SQL Server アプライアンス ベースの管理パック](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436)します。  
   
-古いバージョンの PDW AP せず、ダウンロード、[System Center Monitoring Pack for Microsoft SQL Server 2012 並列データ ウェアハウス アプライアンス](http://go.microsoft.com/fwlink/p/?LinkId=282661)します。  
+古いバージョンの PDW AP せず、ダウンロード、[System Center Monitoring Pack for Microsoft SQL Server 2012 並列データ ウェアハウス アプライアンス](https://go.microsoft.com/fwlink/p/?LinkId=282661)します。  
   
-<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  -->
+<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
 ## <a name="Step2"></a>手順 2: 管理パックをインストールします。  
   

@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 82349ca6935f685c441dfa15fede994d19173fb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4222e8a63a29fe8c41d0e1715d2569bc9863068c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685939"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661265"
 ---
 # <a name="creating-user-defined-types"></a>ユーザー定義型の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Reconfigure
 ## <a name="example"></a>例  
  次のコード リストはで詳しく説明されている Point UDT の定義[Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)します。  
   
- このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)します。  
+ このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server データベース エンジン サンプル](https://msftengprodsamples.codeplex.com/)します。  
   
  C#  
   
@@ -331,7 +331,7 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

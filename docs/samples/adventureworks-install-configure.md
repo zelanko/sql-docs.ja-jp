@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c39ecc5693297070d47afc9b989de795eb9af2c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7881400c3e4696426b1999229e917630cf905d0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676550"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657512"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks のインストールと構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ AdventureWorks のダウンロード リンクとインストール手順につ�
 
 ## <a name="prerequisites"></a>前提条件
 
-- [SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)します。 完全なバージョンのサンプルでは、SQL Server の評価、Developer、または Enterprise Edition を使用します。
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)します。 完全なバージョンのサンプルでは、SQL Server の評価、Developer、または Enterprise Edition を使用します。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最善の結果を得るには、2016 年 6 月リリース以降を使用してください。
  
 ## <a name="github-links"></a>Github のリンク

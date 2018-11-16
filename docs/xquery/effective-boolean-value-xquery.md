@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27c4c66d2216d582137b12e7c595dd1dc75fe166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffcd1f8663a8ddc302a0ce74c3bdede817baa832
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719380"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670291"
 ---
 # <a name="effective-boolean-value-xquery"></a>有効なブール値 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47719380"
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 次に、有効なブール値の例を示します。 ときに、**場合**式が処理される場合、条件の有効なブール値が決定されます。 `/a[1]`が空のシーケンスを返す有効なブール値は false。 1 つのテキスト ノード (false) を含む XML として結果が返されます。  
+ 次に、有効なブール値の例を示します。 ときに、**場合**式が処理される場合、条件の有効なブール値が決定されます。 `/a[1]` は空のシーケンスを返すので、有効なブール値は false になります。 1 つのテキスト ノード (false) を含む XML として結果が返されます。  
   
 ```  
 value is false  
@@ -72,13 +71,13 @@ go
   
 -   型指定された**xml**変数が作成され、クエリを実行します。  
   
--   式`data(/b[1])`ブール値 true を返します。 したがって、この場合の有効なブール値は true になります。  
+-   式 `data(/b[1])` は、ブール型値 true を返します。 したがって、この場合の有効なブール値は true になります。  
   
 -   式`data(/b[2])`ブール値 false を返します。 したがって、この場合の有効なブール値は false になります。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="s" type="string"/>  
       <element name="b" type="boolean"/>  
 </schema>'  

@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229972"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641539"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   `sqlcmd`ユーティリティを使用する入力[!INCLUDE[tsql](../includes/tsql-md.md)]でコマンド プロンプトでは、ステートメント、システム プロシージャ、およびスクリプト ファイル**クエリ エディター** SQLCMD モードで、Windows スクリプト ファイル、またはオペレーティング システム (Cmd.exe) ジョブ ステップの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]エージェント ジョブ。 このユーティリティでは、ODBC を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] バッチを実行します。  
@@ -99,7 +99,7 @@ ms.locfileid: "48229972"
  アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、**ReadOnly** だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、次を参照してください。[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
   
  `-M` *multisubnet_failover*  
- 常に指定`-M`の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用性グループまたは[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 `-M` を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 `–M` が指定されていない場合、`-M` は無効になります。 詳細については[!INCLUDE[ssHADR](../includes/sshadr-md.md)]を参照してください[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)、[作成し、可用性グループの構成&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)、および[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用性グループまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず `-M` を指定してください。 `-M` を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 `–M` が指定されていない場合、`-M` は無効になります。 詳細については[!INCLUDE[ssHADR](../includes/sshadr-md.md)]を参照してください[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)、[作成し、可用性グループの構成&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)、および[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
@@ -182,7 +182,7 @@ ms.locfileid: "48229972"
   
 -   複数の入力ファイルの場合、同じコード ページが指定されているものと見なされます。 Unicode 入力ファイルと Unicode 以外の入力ファイルを混在させることができます。  
   
- 入力`chcp`Cmd.exe のコード ページを確認するコマンド プロンプトでします。  
+ Cmd.exe のコード ページを確認するには、コマンド プロンプトに「`chcp`」と入力します。  
   
  **-i** *input_file*[**,***input_file2*...]  
  SQL ステートメントまたはストアド プロシージャのバッチを含むファイルを指定します。 複数のファイルを指定すると、それらのファイルは順番に読み取られて処理されます。 ファイル名とファイル名の間には空白を使用しないでください。 `sqlcmd` により、最初に、指定したすべてのファイルが存在しているかどうかがチェックされます。 1 つ以上のファイルが存在していない場合は、`sqlcmd` は終了します。 -i と -Q/-q オプションは同時に使用できません。  
@@ -404,7 +404,7 @@ ms.locfileid: "48229972"
   
  複数の結果が返される場合は、`sqlcmd` は同じバッチの各結果セットの間に空白行を 1 行ずつ出力します。 さらに、"\<x > 件処理されました"とき実行されるステートメントには適用されませんが、メッセージは表示されません。  
   
- 使用する`sqlcmd`対話形式で入力`sqlcmd`コマンド プロンプトでのこのトピックで前述したオプションのいずれか 1 つ以上使用します。 詳細については、「[sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
+ 使用する`sqlcmd`対話形式で入力`sqlcmd`コマンド プロンプトでのこのトピックで前述したオプションのいずれか 1 つ以上使用します。 詳細については、「 [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
   
 > [!NOTE]  
 >  オプション **-l**、 **-q**、 **-z**または **-i**原因`sqlcmd`実行後に終了します。  
@@ -707,7 +707,7 @@ ms.locfileid: "48229972"
   
  `GO`  
   
- Enter キーを押すと、次の結果セットが返されます。  
+ ENTER キーを押すと、次の結果セットが返されます。  
   
  `BusinessEntityID FirstName    LastName`  
   

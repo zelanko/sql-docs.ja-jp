@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60af695b92b23db33b009c446431a1b8f325d68f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040400"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600392"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
  **TopPercent**関数の評価値に基づいてランクの減少順に最上位の行を返します、\<式をランク付け > 行ごとに、引数ようにの合計、\<式をランク付け >指定された割合を要求している値は、少なくとも、 \<percent > 引数。 **TopPercent**指定した割合の値を満たしながら、可能な最も小さい要素数を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用して作成した Association モデルに対する予測クエリの作成、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
+ 次の例を使用して作成した Association モデルに対する予測クエリの作成、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
   
  TopPercent のしくみを理解するのには、最初に、入れ子になったテーブルのみを返す予測クエリを実行に役立つ場合があります。  
   

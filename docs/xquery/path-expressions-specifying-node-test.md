@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c017eb7dfbf21c2793474ae12deb4936212e085f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d216db1a0d8d83279babb2e772413dfb94889c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749657"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657967"
 ---
 # <a name="path-expressions---specifying-node-test"></a>パス式 - ノード テストの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ child::ProductDescription
   
  この 1 ステップの式では、`child` 軸とそのノード名 `ProductDescription` をノード テストとして指定しています。 式は、child 軸の主ノード種別 (つまり要素ノード) に属する、ProductDescription という名前のノードのみを返します。  
   
- パス式`/child::PD:ProductDescription/child::PD:Features/descendant::*,`は 3 つのステップがあります。 これらのステップでは、child 軸と descendant 軸を指定しています。 各ステップでは、ノード名がノード テストとして指定されています。 ワイルドカード文字 (`*`)、3 つ目では、手順は、descendant 軸の主ノード種別のすべてのノードをことを示します。 軸の主ノード種別により、選択されるノードの型が決まります。また、ノード名により、選択されるノードがフィルター選択されます。  
+ パス式 `/child::PD:ProductDescription/child::PD:Features/descendant::*,` には 3 つのステップがあります。 これらのステップでは、child 軸と descendant 軸を指定しています。 各ステップでは、ノード名がノード テストとして指定されています。 3 番目のステップのワイルドカード文字 (`*`) は、descendant 軸の主ノード種別に属するすべてのノードを示しています。 軸の主ノード種別により、選択されるノードの型が決まります。また、ノード名により、選択されるノードがフィルター選択されます。  
   
  その結果、この式が実行されると製品カタログ XML ドキュメントに対して、 **ProductModel**テーブルのすべての要素ノードの子を取得、\<機能 > 子要素ノードの\<ProductDescription > 要素。  
   
@@ -96,10 +95,10 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
   
 |ノード型|戻り値|例|  
 |---------------|-------------|-------------|  
-|`comment()`|コメント ノードの場合に True を返します。|`following::comment()` コンテキスト ノードの後に表示されるすべてのコメント ノードを選択します。|  
-|`node()`|ノードの種類に関係なく True を返します。|`preceding::node()` コンテキスト ノードの前に表示されるすべてのノードを選択します。|  
-|`processing-instruction()`|処理命令ノードの場合は True を返します。|`self::processing instruction()` コンテキスト ノード内のすべての処理命令ノードを選択します。|  
-|`text()`|テキスト ノードの場合は True を返します。|`child::text()` コンテキスト ノードの子テキスト ノードを選択します。|  
+|`comment()`|コメント ノードの場合に True を返します。|`following::comment()` では、コンテキスト ノードの後にあるすべてのコメント ノードが選択されます。|  
+|`node()`|ノードの種類に関係なく True を返します。|`preceding::node()` では、コンテキスト ノードの前にあるすべてのノードが選択されます。|  
+|`processing-instruction()`|処理命令ノードの場合は True を返します。|`self::processing instruction()` では、コンテキスト ノード内のすべての処理命令ノードが選択されます。|  
+|`text()`|テキスト ノードの場合は True を返します。|`child::text()` では、コンテキスト ノードの子にあたるテキスト ノードが選択されます。|  
   
  text() や comment() などのノード型がノード テストに指定された場合は、軸の主ノード種別にかかわらず、ステップでは指定された種類のノードが返されます。 たとえば、次のパス式は、コンテキスト ノードの子にあたるコメント ノードのみを返します。  
   
@@ -132,7 +131,7 @@ select @x.query('
   
  この式では、`<b>` 要素ノードの子孫にあたる要素ノードが要求されます。  
   
- ノード テストのアスタリスク (`*`) は、ノード名のワイルドカード文字を示しています。 descendant 軸の主ノード種別は要素ノードです。 したがって、式には要素ノードのすべての子孫にあたる要素ノードが返されます`<b>`します。 つまり、次の結果に示すように、要素ノード `<c>` と `<d>` が返されます。  
+ ノード テストのアスタリスク (`*`) は、ノード名のワイルドカード文字を示しています。 descendant 軸の主ノード種別は要素ノードです。 したがって、この式は、要素ノード `<b>` の子孫にあたるすべての要素ノードを返します。 つまり、次の結果に示すように、要素ノード `<c>` と `<d>` が返されます。  
   
 ```  
 <c>text2  
@@ -203,12 +202,12 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. ノード テストでのノード名の指定  
  次の例では、すべてのパス式でノード名をノード テストとして指定します。 結果として、すべての式により、ノード テストに指定したノード名を持つ、軸の主ノード種別に属するノードが返されます。  
   
- 次のクエリ式を返します、<`Warranty`> に、製品カタログ XML ドキュメントから要素が格納されている、`Production.ProductModel`テーブル。  
+ 次のクエリ式を実行すると、`Production.ProductModel` テーブルに格納されている製品カタログ XML ドキュメントから <`Warranty`> 要素が返されます。  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::wm:Warranty  
 ')  
 FROM Production.ProductModel  
@@ -223,37 +222,37 @@ WHERE ProductModelID=19
   
 -   軸ステップの省略可能なステップ修飾子の部分は、式のどのステップにも指定されていません。  
   
- クエリが返す、<`Warranty`> の子要素、<`Features`> の子要素、<`ProductDescription`> 要素。  
+ このクエリは、<`ProductDescription`> 要素の <`Features`> 子要素の <`Warranty`> 子要素を返します。  
   
  結果を次に示します。  
   
 ```  
-<wm:Warranty xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+<wm:Warranty xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
   <wm:WarrantyPeriod>3 years</wm:WarrantyPeriod>  
   <wm:Description>parts and labor</wm:Description>  
 </wm:Warranty>     
 ```  
   
- パス式を次のクエリには、ワイルドカード文字を指定します (`*`) ノード テストです。  
+ 次のクエリでは、パス式でノード テストにワイルドカード文字 (`*`) を指定しています。  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::*  
 ')  
 FROM Production.ProductModel  
 WHERE ProductModelID=19  
 ```  
   
- ワイルドカード文字は、ノード名に対して指定されています。 したがって、クエリ、すべての要素ノードの子を返します、<`Features`> 子要素ノードの <`ProductDescription`> 要素ノード。  
+ ワイルドカード文字は、ノード名に対して指定されています。 したがって、このクエリを実行すると、<`ProductDescription`> 要素ノードの <`Features`> 子要素ノードの子にあたる要素ノードがすべて返されます。  
   
- 次のクエリは、ワイルドカード文字と共に名前空間が指定されている点を除けば、前のクエリと同じです。 結果として、その名前空間に含まれるすべての子要素ノードが返されます。 なお、<`Features`> 要素は、異なる名前空間からの要素を含めることができます。  
+ 次のクエリは、ワイルドカード文字と共に名前空間が指定されている点を除けば、前のクエリと同じです。 結果として、その名前空間に含まれるすべての子要素ノードが返されます。 <`Features`> 要素には複数の名前空間の要素を含めることができることに注意してください。  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::wm:*  
 ')  
 FROM Production.ProductModel  
@@ -264,15 +263,15 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::*:Maintenance  
 ')  
 FROM Production.ProductModel  
 WHERE ProductModelID=19  
 ```  
   
- このクエリを返します、<`Maintenance`>、製品カタログ XML ドキュメントからすべての名前空間の子要素ノード。  
+ このクエリでは、製品カタログ XML ドキュメントからすべての名前空間の <`Maintenance`> 子要素ノードが返されます。  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. ノード テストでのノードの種類の指定  
  次の例では、すべてのパス式でノードの種類をノード テストとして指定します。 結果として、すべての式がノード テストに指定した種類のノードを返します。  
@@ -281,8 +280,8 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::text()  
 ')  
 FROM Production.ProductModel  
@@ -297,7 +296,7 @@ WHERE ProductModelID=19
   
 -   最初の 2 つのステップではノード名をノード テストに指定し、3 番目のステップではノードの種類をノード テストに指定しています。  
   
--   式は、テキスト ノードの子を返します、<`Features`> の子要素、<`ProductDescription`> 要素ノード。  
+-   この式は、<`ProductDescription`> 要素ノードの <`Features`> 子要素の子にあたるテキスト ノードを返します。  
   
  返されるテキスト ノードは 1 つだけです。 結果を次に示します。  
   
@@ -305,12 +304,12 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- 次のクエリは、コメントの子ノードを返します、<`ProductDescription`> 要素。  
+ 次のクエリを実行すると、<`ProductDescription`> 要素の子にあたるコメント ノードが返されます。  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::comment()  
 ')  
 FROM Production.ProductModel  
@@ -334,8 +333,8 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::processing-instruction()  
 ')  
 FROM Production.ProductModel  
@@ -348,12 +347,12 @@ WHERE ProductModelID=19
 <?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>   
 ```  
   
- 文字列リテラル パラメーターを渡すことができます、`processing-instruction()`ノード テストです。 この場合、クエリは、名前属性の値が引数に指定された文字列リテラルと一致する処理命令を返します。  
+ `processing-instruction()` ノード テストには、文字列リテラル パラメーターを渡すことができます。 この場合、クエリは、名前属性の値が引数に指定された文字列リテラルと一致する処理命令を返します。  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::processing-instruction("xml-stylesheet")  
 ')  
 FROM Production.ProductModel  

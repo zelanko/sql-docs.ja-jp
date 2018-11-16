@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53db46db783bd55799c251d38d86d4479e7ee0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c968499ab546d4e2aeb168cb6a039618eb3d5bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844410"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671451"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45250)ODBC ドライバーを解釈する方法を定義、 **SQLSetEnvAttr**属性の ODBC 2 に書かれたアプリケーションからの仕様 *。x*または ODBC 3 *。x* API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、これらの規則に準拠します。  
+  [ODBC プログラマ リファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)ODBC ドライバーを解釈する方法を定義、 **SQLSetEnvAttr**属性の ODBC 2 に書かれたアプリケーションからの仕様 *。x*または ODBC 3 *。x* API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、これらの規則に準拠します。  
   
  によって制御される属性の 1 つ**SQLSetEnvAttr**は使用するかどうかが接続プールします。 接続プールを使用した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー、 *DriverCompletion*いずれかで接続するときに、パラメーターを SQL_DRIVER_NOPROMPT に設定する必要があります[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)または**SQLConnect**します。  
   
 ## <a name="see-also"></a>参照  
- [SQLSetEnvAttr 関数](http://go.microsoft.com/fwlink/?LinkId=59369)   
+ [SQLSetEnvAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59369)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

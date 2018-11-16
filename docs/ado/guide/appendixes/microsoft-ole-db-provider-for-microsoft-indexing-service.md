@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55b13d7349d58db37dc8f8ec649fec3a06cffcec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613280"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350356"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft サービスの概要をインデックス作成
 Microsoft OLE DB Provider for Microsoft インデックス サービスは、ファイル システムと Microsoft Indexing Service でインデックス付けされた Web データにプログラムでの読み取り専用アクセスを提供します。 ADO アプリケーションでは、コンテンツとファイルのプロパティ情報を取得する SQL クエリを発行できます。
@@ -30,7 +30,7 @@ Microsoft OLE DB Provider for Microsoft インデックス サービスは、フ
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
  このプロバイダーに接続するには、設定、**Provider =** への引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
 
-```
+```vb
 MSIDXS
 ```
 
@@ -39,7 +39,7 @@ MSIDXS
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
 
-```
+```vb
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 

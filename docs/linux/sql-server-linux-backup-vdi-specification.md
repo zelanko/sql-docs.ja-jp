@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: f29a133ce422b5e6fd04bcd6a78bd036e1f447ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f417002cc3a778b0406cc56e763b8d7b4931b0c6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806180"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660142"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server Linux VDI クライアント SDK の仕様
 
@@ -30,9 +30,9 @@ ms.locfileid: "47806180"
 - Linux 上の SQL Server が名前付きインスタンスをサポートしていないインスタンス名への参照が削除されたためです。 
 - 共有ライブラリは/opt/mssql/lib/libsqlvdi.so にインストールされている libsqlvdi.so で実装します。
 
-このドキュメントは、補遺**vbackup.chm** Windows VDI の仕様の詳細を含むです。 ダウンロード、 [Windows VDI 仕様](http://www.microsoft.com/download/details.aspx?id=17282)します。
+このドキュメントは、補遺**vbackup.chm** Windows VDI の仕様の詳細を含むです。 ダウンロード、 [Windows VDI 仕様](https://www.microsoft.com/download/details.aspx?id=17282)します。
 
-サンプルの VDI バックアップ ソリューションを確認することも、 [SQL Server のサンプル GitHub リポジトリ](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)します。
+サンプルの VDI バックアップ ソリューションを確認することも、 [SQL Server のサンプル GitHub リポジトリ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)します。
 
 ## <a name="user-permissions-setup"></a>ユーザーのアクセス許可の設定
 
@@ -195,7 +195,7 @@ Linux では、POSIX プリミティブは、それらとその既定のグル�
 | |**pCmd** |これは以前 ClientVirtualDevice::GetCommand から返されたコマンドのアドレスです。
 | |**completionCode** |これは、完了ステータスを示すステータス コードです。 すべてのコマンドは、このパラメーターを返す必要があります。 返されたコードを実行中のコマンドを適切なことがあります。 ERROR_SUCCESS は、すべてのケースでを正常に実行されたコマンドを示すために使用されます。 可能なコードの完全な一覧で、ファイルを参照してください。 vdierror.h します。 このドキュメントの後半で、「コマンド」の各コマンドの一般的なステータス コード一覧が表示されます。
 | |**bytesTransferred** |これは、正常に転送されたバイト数です。 これは、データ転送のコマンドは、読み取りし、書き込みに対してのみ返されます。
-| |**位置** |これは、応答の GetPosition コマンドのみを示します。
+| |**position** |これは、応答の GetPosition コマンドのみを示します。
         
 | 戻り値 | 引数 | 説明
 | ----- | ----- | ------ |

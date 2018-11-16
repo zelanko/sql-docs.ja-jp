@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c859de289a9f93a23702c63bd50269bb0881b34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714990"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350506"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB の概要の Microsoft カーソル サービス
 OLE DB 用の Microsoft カーソル サービスは、データ プロバイダーのカーソル サポート機能を補完します。 その結果、ユーザーは、すべてのデータ プロバイダーから比較的均一な機能を認識します。
@@ -31,7 +31,7 @@ OLE DB 用の Microsoft カーソル サービスは、データ プロバイダ
 ## <a name="keyword"></a>Keyword
  このサービスのコンポーネントを呼び出す、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)または[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**します。
 
-```
+```vb
 connection.CursorLocation=adUseClient
 recordset.CursorLocation=adUseClient
 ```
@@ -41,7 +41,7 @@ recordset.CursorLocation=adUseClient
 
  カーソル サービスが呼び出された後は、いくつかの動的プロパティへの変更を基になるデータ ソースに表示されません。 たとえば、設定、*コマンド タイムアウト*プロパティを**レコード セット**は基になるデータ プロバイダーには表示されません。
 
-```
+```vb
 
 Recordset1.CursorLocation = adUseClient     'invokes cursor service
 Recordset1.Open "authors", _
@@ -75,7 +75,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 
  設定またはのインデックスとしてその名前を指定することで動的プロパティを取得することも、**プロパティ**コレクション。 たとえば、取得しての現在の値を出力、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)動的プロパティは、新しい値を次のように設定し。
 
-```
+```vb
 Debug.Print rs.Properties("Optimize")
 rs.Properties("Optimize") = True
 ```

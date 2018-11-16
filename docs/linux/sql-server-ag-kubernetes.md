@@ -10,35 +10,35 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: c74b39f4b7816221e2258bde2b1fef2b9e74d9d3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356453"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658578"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>SQL Server のコンテナーの always On 可用性グループ
 
-SQL Server 2019 では、Kubernetes でコンテナーの可用性グループをサポートしています。 可用性グループには、SQL Server を展開[Kubernetes 演算子](http://coreos.com/blog/introducing-operators.html)Kubernetes クラスターにします。 演算子では、パッケージ、展開、およびクラスター内の可用性グループを管理することができます。
+SQL Server 2019 では、Kubernetes でコンテナーの可用性グループをサポートしています。 可用性グループには、SQL Server を展開[Kubernetes 演算子](https://coreos.com/blog/introducing-operators.html)Kubernetes クラスターにします。 演算子では、パッケージ、展開、およびクラスター内の可用性グループを管理することができます。
 
 ![Kubernetes コンテナーでの AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 上記の図では、4 つのノードの kubernetes クラスターは、3 つのレプリカを可用性グループをホストします。 ソリューションには、次のコンポーネントが含まれています。
 
-* Kubernetes [*展開*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/)します。 展開には、演算子と構成のマップが含まれています。 これらは、コンテナー イメージ、ソフトウェア、および可用性グループの SQL Server インスタンスをデプロイするために必要な手順を提供します。
+* Kubernetes [*展開*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)します。 展開には、演算子と構成のマップが含まれています。 これらは、コンテナー イメージ、ソフトウェア、および可用性グループの SQL Server インスタンスをデプロイするために必要な手順を提供します。
 
-* 各ホストの 3 つのノード、 [ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)します。 含まれています、StatefulSet、 [*ポッド*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)します。 それぞれのポッドが含まれます。
+* 各ホストの 3 つのノード、 [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)します。 含まれています、StatefulSet、 [*ポッド*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)します。 それぞれのポッドが含まれます。
   * SQL Server の 1 つのインスタンスを実行している SQL Server のコンテナー。
   * 可用性グループのエージェント。 
 
-* 2 つ[ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)可用性グループに関連します。 ConfigMaps に関する情報を提供します。
+* 2 つ[ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)可用性グループに関連します。 ConfigMaps に関する情報を提供します。
   * 演算子の配置。
   * 可用性グループです。
 
- * [*永続ボリューム*](http://kubernetes.io/docs/concepts/storage/persistent-volumes/)記憶域の断片です。 A*永続ボリューム要求*(PVC) は、ユーザーがストレージ要求です。 各コンテナーには、データおよびログ ストレージの PVC 関係します。 Azure Kubernetes Service (AKS) でする[永続ボリューム要求を作成](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)にストレージ クラスに基づく記憶域に自動的にします。
+ * [*永続ボリューム*](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)記憶域の断片です。 A*永続ボリューム要求*(PVC) は、ユーザーがストレージ要求です。 各コンテナーには、データおよびログ ストレージの PVC 関係します。 Azure Kubernetes Service (AKS) でする[永続ボリューム要求を作成](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)にストレージ クラスに基づく記憶域に自動的にします。
 
 
-また、クラスターを格納[*シークレット*](http://kubernetes.io/docs/concepts/configuration/secret/)パスワード、証明書、キー、および他の機密情報。
+また、クラスターを格納[*シークレット*](https://kubernetes.io/docs/concepts/configuration/secret/)パスワード、証明書、キー、および他の機密情報。
 
 ## <a name="deploy-the-availability-group-in-kubernetes"></a>Kubernetes で可用性グループを展開します。
 
@@ -74,11 +74,11 @@ StatfulSet が含まれます。
 
 * `mssql-operator`
 
-    このプロセスは、個別の Kubernetes デプロイとしてデプロイされます。 登録、 [Kubernetes カスタム リソース](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)と呼ばれる`SqlServer`(sqlservers.mssql.microsoft.com)。 このようなリソースの作成中または Kubernetes クラスターで更新をリッスンします。 このようなすべてのイベントの作成または更新プログラムの対応するインスタンスの Kubernetes リソース (たとえば、StatefulSet、または`mssql-server-k8s-init-sql`ジョブ)。
+    このプロセスは、個別の Kubernetes デプロイとしてデプロイされます。 登録、 [Kubernetes カスタム リソース](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)と呼ばれる`SqlServer`(sqlservers.mssql.microsoft.com)。 このようなリソースの作成中または Kubernetes クラスターで更新をリッスンします。 このようなすべてのイベントの作成または更新プログラムの対応するインスタンスの Kubernetes リソース (たとえば、StatefulSet、または`mssql-server-k8s-init-sql`ジョブ)。
 
 * `mssql-server-k8s-health-agent`
 
-    この web サーバー機能の Kubernetes[存続性のプローブ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)SQL Server インスタンスの正常性を判断します。 呼び出すことによって、ローカルの SQL Server インスタンスの正常性の監視`sp_server_diagnostics`監視ポリシーの結果を比較するとします。
+    この web サーバー機能の Kubernetes[存続性のプローブ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)SQL Server インスタンスの正常性を判断します。 呼び出すことによって、ローカルの SQL Server インスタンスの正常性の監視`sp_server_diagnostics`監視ポリシーの結果を比較するとします。
 
 * `mssql-ha-supervisor`
 
@@ -92,7 +92,7 @@ StatfulSet が含まれます。
 
 * `mssql-server-k8s-init-sql`
   
-    この Kubernetes[ジョブ](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)の desired state configuration を SQL Server インスタンスに適用されます。 Sql Server リソースの作成または更新するたびに、演算子によって、ジョブが作成されます。 カスタムのリソースに対応するターゲットの SQL Server インスタンスが、リソースで説明されている必要な構成を持つようになります。
+    この Kubernetes[ジョブ](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)の desired state configuration を SQL Server インスタンスに適用されます。 Sql Server リソースの作成または更新するたびに、演算子によって、ジョブが作成されます。 カスタムのリソースに対応するターゲットの SQL Server インスタンスが、リソースで説明されている必要な構成を持つようになります。
 
     たとえば、次の設定のいずれかが必要な場合、それを完了しました。
   * SA パスワードを更新します。

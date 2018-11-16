@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 019d3d1491425854b681a5c1e8dd08e5228af2ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 003fc3496a68f0437dc2c7d313179da1f37a9c7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623722"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669061"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>SQL Server on Linux のお客様からのフィードバック
 
@@ -22,7 +22,7 @@ ms.locfileid: "47623722"
 
 Microsoft SQL Server は既定で、お客様のアプリケーションの使用状態に関する情報を収集します。 具体的には、SQL Server はインストール エクスペリエンス、利用状況、およびパフォーマンスに関する情報を収集します。 この情報は、Microsoft が製品の向上を図り、お客様のニーズをさらに満たすのに役立ちます。 たとえば Microsoft では、お客様が受け取るエラー コードの種類に関する情報を収集して、関連するバグの修正、SQL Server の使用方法に関するドキュメントの改善、より良いサービスのために製品に機能を追加すべきかどうかの判断を行います。
 
-このドキュメントではどのような種類の情報を収集および送信を収集する Linux 上の Microsoft SQL Server を構成する方法についての詳細情報を Microsoft にします。 SQL Server 2017 には、ユーザーから収集することはできませんし、どのような情報を説明するプライバシーに関する声明が含まれています。 詳細については、次を参照してください。、[プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)します。
+このドキュメントではどのような種類の情報を収集および送信を収集する Linux 上の Microsoft SQL Server を構成する方法についての詳細情報を Microsoft にします。 SQL Server 2017 には、ユーザーから収集することはできませんし、どのような情報を説明するプライバシーに関する声明が含まれています。 詳細については、次を参照してください。、[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)します。
 
 具体的には、Microsoft はこのメカニズムでは次の種類の情報は送信しません。
 

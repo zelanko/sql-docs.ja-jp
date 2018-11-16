@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830650"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512807"
 ---
 # <a name="sql-graph-architecture"></a>SQL グラフ アーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 ユーザーは、データベースごとに 1 つのグラフを作成できます。 グラフは、ノードとエッジ テーブルのコレクションです。 データベース内の任意のスキーマでノードまたはエッジ テーブルを作成できますが、すべて 1 つの論理グラフに属する。 ノード テーブルには、ノードの類似する型のコレクションです。 たとえば、Person ノード テーブルは、グラフに属しているすべての人のノードを保持します。 同様に、エッジ テーブルは、エッジの類似する型のコレクションです。 たとえば、Friend エッジ テーブルは、別のユーザーにユーザーを接続するすべての端を保持します。 テーブルには、ノードとエッジが格納されているために、通常のテーブルでサポートされる操作のほとんどは、ノードまたはエッジ テーブルでサポートされます。 
  
  
-![sql のアーキテクチャ グラフ](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql グラフ データベース アーキテクチャ")   
+![sql のアーキテクチャ グラフ](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql グラフ データベース アーキテクチャ")   
 
 図 1: SQL グラフ データベース アーキテクチャ
  
@@ -57,7 +56,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 図 2 では、データベース内のノードとエッジ テーブルを格納する方法を示します。 
 
-![テーブル-人の友人](../../relational-databases/graphs/media/person-friends-tables.png "/people/person ノードや友人のエッジ テーブル")   
+![テーブル-人の友人](../../relational-databases/graphs/media/person-friends-tables.png "/people/person ノードや友人のエッジ テーブル")   
 
 図 2: ノードとエッジ テーブルの表現
 
@@ -130,7 +129,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 
 
-## <a name="transact-sql-reference"></a>TRANSACT-SQL リファレンス 
+## <a name="transact-sql-reference"></a>Transact-SQL リファレンス 
 学習、 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] SQL Server と Azure SQL Database で導入された拡張機能を有効にするグラフ オブジェクトに対するクエリの作成とします。 クエリ言語の拡張機能では、クエリのヘルプし、ASCII アート構文を使用してグラフを走査します。
  
 ### <a name="data-definition-language-ddl-statements"></a>データ定義言語 (DDL) ステートメント
@@ -140,7 +139,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|ノードとエッジ テーブルには、リレーショナル テーブルを使用して、同じ方法を変更できる、`ALTER TABLE`します。 ユーザーでは、追加したり、ユーザー定義の列、インデックスまたは制約を変更することができます。 ただし、内部グラフ列を変更するには、ような`$node_id`または`$edge_id`エラーになります。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |ユーザーは、擬似列およびノードとエッジ テーブル内のユーザー定義の列にインデックスを作成できます。 非クラスター化列ストア インデックスを含むすべてのインデックスの種類がサポートされます。  |
 |エッジの制約を作成します。    |[エッジ制約&#40;TRANSACT-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |ユーザーが特定のセマンティクスを適用するエッジ テーブルでのエッジの制約を作成およびもデータの整合性を維持  |
-|DROP TABLE |[DROP TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |同様のリレーショナル テーブルを使用して、ノードとエッジ テーブルを削除することができます、`DROP TABLE`します。 ただし、このリリースではありません制約を十分に削除されたノードにエッジがポイントありませんし、ノードまたはノード テーブルの削除時に、エッジの連鎖削除がサポートされていません。 ノード テーブルが削除された場合は、ユーザー、グラフの整合性を維持するために手動でそのノード テーブル内のノードに接続されている、エッジと削除することをお勧めします。  |
+|DROP TABLE |[DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)  |同様のリレーショナル テーブルを使用して、ノードとエッジ テーブルを削除することができます、`DROP TABLE`します。 ただし、このリリースではありません制約を十分に削除されたノードにエッジがポイントありませんし、ノードまたはノード テーブルの削除時に、エッジの連鎖削除がサポートされていません。 ノード テーブルが削除された場合は、ユーザー、グラフの整合性を維持するために手動でそのノード テーブル内のノードに接続されている、エッジと削除することをお勧めします。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>データ操作言語 (DML) ステートメント

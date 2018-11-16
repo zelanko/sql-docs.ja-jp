@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ba9694808be6922762f023af496bc64ff2403b8
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: d0a0f167f14910f657f6c65b9778b0aadde65b10
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099853"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664211"
 ---
 # <a name="managing-passwords-accesstosql"></a>パスワードの管理 (AccessToSQL)
 このセクションでは、データベースのパスワードとサーバー間でのエクスポートをインポートまたはプロシージャのセキュリティ保護の詳細については。  
@@ -122,5 +122,5 @@ SSMA コンソール アプリケーションをセキュリティで保護さ�
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソール (アクセス) の実行](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[SSMA コンソール (アクセス) の実行](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

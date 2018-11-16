@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d71b277f3717a0406f2f91fbce596ea90389b8da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067064"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814075"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
   いずれかを使用して、**登録データ層アプリケーションのウィザード**または既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成するスクリプトを作成し、にDAC定義が登録は、WindowsPowerShell`msdb`システム データベース (**マスター**で[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
@@ -76,7 +76,7 @@ ms.locfileid: "48067064"
 ##  <a name="Set_properties"></a> [プロパティの設定] ページ  
  このページでは、アプリケーション名やバージョンなど DAC レベルのプロパティを指定します。  
   
- **[アプリケーション名]** : DAC 定義を識別するための名前。このフィールドには、選択したデータベースの名前が自動的に入力されます。  
+ **[アプリケーション名]** -DAC 定義にフィールドを識別するために使用される名前を指定する文字列は、データベース名に設定されています。  
   
  **[バージョン]** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 バージョンが格納されている DAC をデプロイするとき、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   

@@ -10,12 +10,12 @@ ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3e2e84fd2117afe15075084741e65989a30960cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674180"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681110"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle への接続 (OracleToSQL)
 使用して、 **Connect to Oracle**を移行する Oracle データベースに接続するためのダイアログ ボックス。  
@@ -70,7 +70,7 @@ SSMA が Oracle データベースへの接続に使用するユーザー名を�
   
 接続文字列は、パラメーターの名前と値のペアで構成されます。  
   
--   OLE DB 接続文字列については、次を参照してください。 [Microsoft OLE DB Provider for Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) 、MSDN ライブラリの記事。  
+-   OLE DB 接続文字列については、次を参照してください。 [Microsoft OLE DB Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) 、MSDN ライブラリの記事。  
   
 SSMA 接続文字列の場合に、プロバイダーのパラメーターを常に含めます。 また、Oracle に接続するときに、ポート パラメーターを含めることを確認します。  
   

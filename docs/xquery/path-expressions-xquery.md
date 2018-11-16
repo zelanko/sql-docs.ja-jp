@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,12 +17,12 @@ ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c7e9d37b43130ed8ca7d70b0352647486ae6892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdc9279d821402e0011b10ef4c1843a721178a9f
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717450"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291428"
 ---
 # <a name="path-expressions-xquery"></a>パス式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47717450"
   
  パス式には、相対パスまたは絶対パスのいずれを使用することもできます。 ここでは、その両方について説明します。  
   
--   相対パス式は、1 つまたは 2 つのスラッシュ記号 (/ または //) で区切られた 1 つ以上のステップで構成されます。 たとえば、`child::Features`は相対パス式では、場所`Child`コンテキスト ノードの子ノードのみを参照します。 コンテキスト ノードとは、現在処理中のノードです。 式を取得、\<機能 > コンテキスト ノードの子要素ノード。  
+-   相対パス式は、1 つまたは 2 つのスラッシュ記号 (/ または //) で区切られた 1 つ以上のステップで構成されます。 たとえば、`child::Features` は、コンテキスト ノードの子ノードのみを `Child` で参照している相対パス式です。 コンテキスト ノードとは、現在処理中のノードです。 式を取得、\<機能 > コンテキスト ノードの子要素ノード。  
   
 -   絶対パス式では、1 つまたは 2 つのスラッシュ記号 (/ または //) が先頭にあり、その後に必要に応じて相対パスが続きます。 たとえば、式 `/child::ProductDescription` の先頭のスラッシュ記号は、この式が絶対パス式であることを示しています。 式の先頭のスラッシュ記号は、コンテキスト ノードのドキュメントのルート ノードを返すため、すべてを返します、式、 \<ProductDescription > ドキュメントのルートの子要素ノード。  
   
@@ -63,11 +62,11 @@ ms.locfileid: "47717450"
   
  次の例を使用して、 **axisstep**パス式で。  
   
--   絶対パス式`/child::ProductDescription`、1 つのステップが含まれています。 これは、軸 (`child`) とノード テスト (`ProductDescription`) を指定しています。  
+-   絶対パス式 `/child::ProductDescription` には、ステップが 1 つしかありません。 これは、軸 (`child`) とノード テスト (`ProductDescription`) を指定しています。  
   
 -   相対パス式 `child::ProductDescription/child::Features` には、1 つのスラッシュ記号で区切られた 2 つのステップがあります。 どちらのステップも、child を軸に指定しています。 ProductDescription と Features はノード テストです。  
   
--   相対パス式では、 `child::root/child::Location[attribute::LocationID=10]`、スラッシュ記号で区切られた 2 つの手順が含まれています。 最初の手順を軸を指定します (`child`) とノード テスト (`root`)。 2 番目のステップは、軸ステップの 3 種類のコンポーネントをすべて指定しています。つまり、軸 (child)、ノード テスト (`Location`)、および述語 (`[attribute::LocationID=10]`) です。  
+-   相対パス式では、 `child::root/child::Location[attribute::LocationID=10]`、スラッシュ記号で区切られた 2 つの手順が含まれています。 最初のステップは、軸 (`child`) とノード テスト (`root`) を指定しています。 2 番目のステップは、軸ステップの 3 種類のコンポーネントをすべて指定しています。つまり、軸 (child)、ノード テスト (`Location`)、および述語 (`[attribute::LocationID=10]`) です。  
   
  軸ステップの詳細については、コンポーネントは、次を参照してください[パス式のステップで軸を指定する](../xquery/path-expressions-specifying-axis.md)、[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)、および[で述語の指定、。パス式のステップ](../xquery/path-expressions-specifying-predicates.md)します。  
   

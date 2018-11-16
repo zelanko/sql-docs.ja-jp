@@ -10,12 +10,12 @@ ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8169375ac349f887d861245911b02a65f965044c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 99eaef8a8612669f8a155672cccf0cb0c74e7f39
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099633"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656348"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>SSMA for Oracle コンソール (DB2ToSQL) の操作
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] For DB2 migration Assistant (SSMA) のリリースは、コマンドラインでコンソール アプリケーションからアクセスできるようになりました。 スクリプト ファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 コンソール アプリケーションとしては、SSMA はにより、スクリプト レベルのインターフェイス、移行サイクルが削減され、移行作業を拡大または縮小します。  
@@ -39,5 +39,5 @@ ms.locfileid: "50099633"
 |[トラブルシューティング&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|移行に関する問題の解決方法に関する簡単な情報を提供します。|  
   
 ## <a name="see-also"></a>参照  
-[Ssma for DB2 コンソール作業の開始](http://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
+[Ssma for DB2 コンソール作業の開始](https://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
   

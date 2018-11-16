@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -21,12 +20,12 @@ ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a127966d3a72a11d0d969ddc6d2fda013a7a0d2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d85f49dcb9ab5bb0e6d5dde114d5c807a5780f5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800324"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670281"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery での型キャストの規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ go
   
 ```  
 create xml schema collection myCollection as N'  
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
       <xs:element name="root">  
             <xs:complexType>  
                   <xs:sequence>  
@@ -107,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- シングルトンを指定して <`root`> 式内の要素をクエリは成功します。 このクエリは、単純型の値のシーケンスを xs:string にキャストして返します。  
+ 式で <`root`> 要素が 1 つになるように指定すると、クエリは成功します。 このクエリは、単純型の値のシーケンスを xs:string にキャストして返します。  
   
 ```  
 declare @x xml(myCollection)  
@@ -173,7 +172,7 @@ min(xs:integer("1"), xs:double("1.1"))
   
  xs:float 型、xs:double 型、またはこれらのサブタイプの値を string 型または untypedAtomic 型にキャストする場合、値は科学的表記法で表現されます。 これは、値の絶対値が 1.0E-6 未満であるか、1.0E6 以上である場合にのみ行われます。 つまり、0 は科学的表記法で 0.0E0 にシリアル化されます。  
   
- たとえば、`xs:string(1.11e1)`は文字列値を返します`"11.1"`、中に`xs:string(-0.00000000002e0)`文字列値を返す`"-2.0E-11"`。  
+ たとえば、`xs:string(1.11e1)` は `"11.1"` という文字列値を返しますが、`xs:string(-0.00000000002e0)` は `"-2.0E-11"` という文字列値を返します。  
   
  xs:base64Binary や xs:hexBinary などバイナリ型から string 型または untypedAtomic 型にキャストする場合、バイナリ値はそれぞれ base64 または hex エンコード形式で表現されます。  
   

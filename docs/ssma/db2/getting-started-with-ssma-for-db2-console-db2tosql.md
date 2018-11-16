@@ -10,12 +10,12 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 472f830f41c5cc9d250a26b8e2612b7c0a6b68b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728778"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668301"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Ssma for DB2 コンソール (DB2ToSQL) 作業の開始
 このセクションを起動し、DB2 のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  
@@ -42,9 +42,9 @@ SSMA コンソール アプリケーションを起動するのにには、次�
   
 追加機能:  
   
-1.  [パスワードの管理](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)とエクスポート]、[ウィンドウの他のマシンにインポート  
+1.  [パスワードの管理](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)とエクスポート]、[ウィンドウの他のマシンにインポート  
   
-2.  [レポートを生成する](http://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883)詳細な xml を表示するには、評価/conversion とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成こともできます。  
+2.  [レポートを生成する](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883)詳細な xml を表示するには、評価/conversion とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成こともできます。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力の規則  
 SSMA スクリプト コマンドとオプションを実行すると、コンソール プログラムは、コンソールのユーザーに、結果とメッセージ (情報、エラーなど) を表示します。 または、必要な場合は、xml 出力ファイルにリダイレクトします。 一意の色では、各種のメッセージが出力に表されます。 たとえば、白のカラーにテキスト メッセージがスクリプト ファイルのコマンドを表します緑のカラーで 1 つとユーザーの入力を求めるプロンプトを表します。  
@@ -63,5 +63,5 @@ SSMA スクリプト コマンドとオプションを実行すると、コン�
 |シアン|開始、終了日と操作の結果|  
   
 ## <a name="see-also"></a>参照  
-[SSMA for DB2 のインストール](http://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
+[SSMA for DB2 のインストール](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

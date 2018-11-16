@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c14175fd58e11fd372c0ab523ccbd48e1f856f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627410"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677801"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,13 +45,13 @@ SQL Server 用 ODBC ドライバーの詳細については、次を参照して
 
 ODBC を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、Windows 7 SDK の標準の ODBC に追加された 3 つの機能をサポートしています。  
 
--   接続関連の操作での非同期実行。 詳細については、次を参照してください。[非同期実行](http://go.microsoft.com/fwlink/?LinkID=191493)します。  
+-   接続関連の操作での非同期実行。 詳細については、次を参照してください。[非同期実行](https://go.microsoft.com/fwlink/?LinkID=191493)します。  
 
--   C データ型の機能拡張。 詳細については、次を参照してください。 [ODBC における C データ型](http://go.microsoft.com/fwlink/?LinkID=191495)します。  
+-   C データ型の機能拡張。 詳細については、次を参照してください。 [ODBC における C データ型](https://go.microsoft.com/fwlink/?LinkID=191495)します。  
 
      この機能をサポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、SQLGetDescField を返せる**SQL_C_SS_TIME2** (の**時間**型) または**SQL_C_SS_TIMESTAMPOFFSET** (**datetimeoffset**) の代わりに**SQL_C_BINARY**場合、アプリケーションで ODBC 3.8 が使用されます。 詳細については、次を参照してください。 [ODBC の日付と時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)します。  
 
--   呼び出す**SQLGetData**小さなバッファーを複数回に大きなパラメーター値を取得します。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](http://go.microsoft.com/fwlink/?LinkID=191494)します。  
+-   呼び出す**SQLGetData**小さなバッファーを複数回に大きなパラメーター値を取得します。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](https://go.microsoft.com/fwlink/?LinkID=191494)します。  
 
  次のトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client の動作の変更点について説明します。  
 

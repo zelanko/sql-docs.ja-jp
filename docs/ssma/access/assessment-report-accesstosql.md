@@ -13,17 +13,17 @@ ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d6a73f88a0c1bc0ab2235241f7801c8fbc0f8328
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1278552f1bfe1ccfb7ab250f843e86c62e63440b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660340"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659841"
 ---
 # <a name="assessment-report-accesstosql"></a>評価レポート (AccessToSQL)
 評価レポート ウィンドウには、データベース オブジェクトの変換の結果が表示されます。[!INCLUDE[tsql](../../includes/tsql-md.md)]構文、およびヘルプの複雑さと、移行プロジェクトのコストを見積もることができます。  
   
-ソースのメタデータ エクスプ ローラーで変換するオブジェクトの選択、評価レポートを作成するを右クリックして**データベース**、し、**レポートの作成**です。 スキーマに変換した後このレポートを自動的に表示することもできます。 ただし、レポート名は、変換レポートになります。 詳細については、次を参照してください。[プロジェクトの設定 (GUI) (SSMA 一般的)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)します。  
+ソースのメタデータ エクスプ ローラーで変換するオブジェクトの選択、評価レポートを作成するを右クリックして**データベース**、し、**レポートの作成**です。 スキーマに変換した後このレポートを自動的に表示することもできます。 ただし、レポート名は、変換レポートになります。 詳細については、次を参照してください。[プロジェクトの設定 (GUI) (SSMA 一般的)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)します。  
   
 ## <a name="options"></a>および  
 **エクスプ ローラー ペイン**  
@@ -38,5 +38,5 @@ ms.locfileid: "47660340"
 メッセージの詳細を表示するには、いずれかをクリックして**エラー**、**警告**、または**メッセージ**、し、メッセージを展開します。 SSMA は、このエラーのあるオブジェクトの一覧に表示されます。 オブジェクトのすべての変換の詳細を表示するオブジェクトをクリックします。  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイスの Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ユーザー インターフェイスの Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

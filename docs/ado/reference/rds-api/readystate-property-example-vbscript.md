@@ -15,16 +15,16 @@ ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 47e545cf1b1f99859330f0f0ffbbc72aa3f9393c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb3da04956a0306453bbbeab057a381fc5d136ea
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826900"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607082"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  次の例は、読み取る方法を示します、 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)のプロパティ、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) VBScript コードで実行時にオブジェクト。 **ReadyState**は読み取り専用プロパティです。  
   
@@ -75,7 +75,7 @@ body {
 <!-- RDS.DataControl with parameters set at design time -->  
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID=RDS>  
    <PARAM NAME="SQL" VALUE="Select * from Orders">  
-   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="SERVER" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
    <PARAM NAME="CONNECT" VALUE="Provider=SQLOLEDB;Integrated Security=SSPI;Initial Catalog=Northwind">  
    <PARAM NAME="ExecuteOptions" VALUE="2">   
    <PARAM NAME="FetchOptions" VALUE="3">  

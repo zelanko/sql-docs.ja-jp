@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fe2eb1d6d5c83a85fed628b02869cbf7b29eee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 385826be9e980c2e6a46c880dd6248fd355dade1
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680000"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350273"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript での ADO プログラミング
 ## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  
@@ -35,14 +35,14 @@ ms.locfileid: "47680000"
   
  コピーし、ASP ページにこれらのファイルからの定数の定義を貼り付けるか、Adovbs.inc ファイル、Web サイト上のフォルダーをコピーし、次のように、ASP ページから参照する、サーバー側のスクリプトを実行している場合。  
   
-```  
+```vb
 <!--#include File="adovbs.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-vbscript"></a>VBScript で ADO オブジェクトの作成  
  使用することはできません、 **Dim** VBScript で特定の型にオブジェクトを代入するステートメント。 また、VBScript はサポートしません、**新規**で使用される構文、 **Dim**アプリケーション用の Visual Basic でのステートメント。 代わりに使用する必要があります、 **CreateObject**関数呼び出し。  
   
-```  
+```vb
 Dim Rs1  
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 ```  
@@ -50,14 +50,14 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ## <a name="vbscript-examples"></a>VBScript の例  
  次のコードでは、Active Server Page (ASP) ファイルで VBScript サーバー側プログラミングの汎用例を示します。  
   
-```  
-<%  @LANGUAGE="VBSCRIPT" %>  
-<%  Option Explicit %>  
+```vb
+<%  @LANGUAGE="VBSCRIPT" %>  
+<%  Option Explicit %>  
 <!--#include File="adovbs.inc"-->  
 <HTML>  
-    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
+    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
   
-    <!-- Your ASP Code goes here -->  
+    <!-- Your ASP Code goes here -->  
 <%  
 Dim Source  
 Dim Connect  
@@ -65,13 +65,13 @@ Dim Rs1
   
 Source = "SELECT * FROM Authors"  
 Connect = "Provider=sqloledb;Data Source=srv;" & _  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
   
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 Rs1.Open Source, Connect, adOpenForwardOnly  
 Response.Write("Success!")  
 %>  
-    </BODY>  
+    </BODY>  
 </HTML>  
 ```  
   

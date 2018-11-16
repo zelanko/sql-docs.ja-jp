@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 549e392cca7887230a8fb8e22296b8b3e1bb9833
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667900"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670882"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 向けのアプリケーションの開発を開始する方法
 
@@ -32,7 +32,7 @@ ms.locfileid: "47667900"
 
 開始して、SQL Server でアプリケーションを構築する最善の方法では、自分でやってみてください。
 
-- 参照する[入門チュートリアル](http://aka.ms/sqldev)します。
+- 参照する[入門チュートリアル](https://aka.ms/sqldev)します。
 - 言語および開発プラットフォームを選択します。
 - コード サンプルを実行してください。
 

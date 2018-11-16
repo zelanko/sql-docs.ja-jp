@@ -15,16 +15,16 @@ ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37f4f2ee7f0e33504a1133a5927ca8232d952bef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f9d9e3d21d309d237bdcf376270e285da319919
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748900"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604162"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  次の例は、読み取る方法を示します、[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)メソッド実行時にします。 切り取りとメモ帳または別のテキスト エディターに次のコードを貼り付けるし、CancelVBS.asp として保存します。 結果は、任意のクライアント ブラウザーで表示できます。  
   
@@ -49,7 +49,7 @@ End Sub
 .  
    <PARAM NAME="SQL" VALUE="Select FirstName, LastName from Employees">  
    <PARAM NAME="CONNECT" VALUE="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'">  
-   <PARAM NAME="Server" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="Server" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
 .  
 </OBJECT>  
   

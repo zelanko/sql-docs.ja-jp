@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16e7bbd20113c253cbd7a3da183750c8ff566da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758590"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350446"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory サービス
 Active Directory サービス インターフェイス (ADSI) プロバイダーが ADSI による異種ディレクトリ サービスに接続するための ADO を許可します。 これにより、ADO アプリケーションは Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory services のすべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなくに読み取り専用アクセスできるようにします。 ADO アプリケーションがシームレスにアクセスできる、新しいプロバイダー アクセス権を付与する別のディレクトリがある場合、ADSI はプロバイダー モデルに基づきます。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  
@@ -29,7 +29,7 @@ Active Directory サービス インターフェイス (ADSI) プロバイダー
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター  
  このプロバイダーに接続するには、設定、**Provider**の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)には、次のプロパティ。   
   
-```  
+```vb
 ADSDSOObject  
 ```  
   
@@ -38,7 +38,7 @@ ADSDSOObject
 ## <a name="typical-connection-string"></a>一般的な接続文字列  
  このプロバイダーの一般的な接続文字列は次のとおりです。  
   
-```  
+```vb
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
 ```  
   
@@ -56,7 +56,7 @@ ADSDSOObject
 ## <a name="command-text"></a>コマンド テキスト  
  4 部構成のコマンド テキストの文字列は、次の構文で、プロバイダーによって認識されます。  
   
-```  
+```vb
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
@@ -69,13 +69,13 @@ ADSDSOObject
   
  以下に例を示します。  
   
-```  
+```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
  プロバイダーもサポートしています SQL SELECT コマンドのテキスト。 以下に例を示します。  
   
-```  
+```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  

@@ -30,12 +30,12 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8137ed37cdbe3bec62e8f7e5a900ade9513894fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735190"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666201"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access データベース オブジェクト (AccessToSQL) に変換します。
 Access データベースを追加してに接続した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、SSMA は、アクセスのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースのオブジェクト。 これで Access データベースのオブジェクトを選択してへのスキーマを変換し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のスキーマ。  
@@ -49,7 +49,7 @@ Access データベースを追加してに接続した後[!INCLUDE[ssNoVersion]
 変換中は、SSMA は状態を出力ウィンドウ、およびエラー、警告、およびエラー一覧ペインに情報メッセージを出力します。 この情報を使用して、Access データベースまたは必要な変換の結果を得るため、変換プロセスを変更する必要があるかどうか判断します。 内の情報を使用することもできます、 [Access データベースを移行の準備](preparing-access-databases-for-migration-accesstosql.md)トピックを確認し、変換されません。  
   
 ## <a name="setting-conversion-options"></a>変換オプションの設定  
-オブジェクトを変換する前に、プロジェクトの変換オプションを確認して、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA がインデックス付きのメモ列、主キー、外部キー制約、タイムスタンプ、およびインデックスなしテーブルに変換する方法を設定できます。 詳細については、次を参照してください[プロジェクトの設定 (変換)。](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+オブジェクトを変換する前に、プロジェクトの変換オプションを確認して、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA がインデックス付きのメモ列、主キー、外部キー制約、タイムスタンプ、およびインデックスなしテーブルに変換する方法を設定できます。 詳細については、次を参照してください[プロジェクトの設定 (変換)。](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>変換結果  
 次の表は、変換されますが、オブジェクトのアクセスと、その結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure オブジェクト。  

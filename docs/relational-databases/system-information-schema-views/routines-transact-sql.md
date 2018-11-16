@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8022ec474810362b7a0742e014a1db620c28172e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b1e6f0f767f202ab21048f70915b56d51eb14a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857096"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673561"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47857096"
 |SCOPE_NAME|**nvarchar(** 128 **)**|NULL。 将来使用するために予約されています。|  
 |MAXIMUM_CARDINALITY|**bigint**|NULL。 将来使用するために予約されています。|  
 |DTD_IDENTIFIER|**nvarchar(** 128 **)**|NULL。 将来使用するために予約されています。|  
-|ROUTINE_BODY|**nvarchar (** 30 **)**|場合は sql、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数および関数では外部で作成された外部です。<br /><br /> 関数は常に SQL です。|  
+|ROUTINE_BODY|**nvarchar (** 30 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の場合は SQL、外部で作成された関数の場合は EXTERNAL。<br /><br /> 関数は常に SQL です。|  
 |ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|関数またはストアド プロシージャが暗号化されていない場合、関数またはストアド プロシージャの定義テキストの最初の 4,000 文字を返します。 それ以外の場合は NULL を返します。<br /><br /> 完全な定義を取得するためには、クエリ、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)関数または内の definition 列、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューです。|  
 |EXTERNAL_NAME|**nvarchar(** 128 **)**|NULL。 将来使用するために予約されています。|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL。 将来使用するために予約されています。|  
@@ -92,7 +92,7 @@ ms.locfileid: "47857096"
 |LAST_ALTERED|**datetime**|関数が最後に変更された時刻。|  
   
 ## <a name="see-also"></a>参照  
- [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [情報スキーマ ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

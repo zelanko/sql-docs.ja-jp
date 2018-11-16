@@ -13,12 +13,12 @@ ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 729d6d0713e70e2d628a08c2ce5008772d6a005d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710152"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606172"
 ---
 # <a name="using-a-connection-object"></a>接続オブジェクトを使用する
 開始する前に、**接続**オブジェクト、データ ソースと接続の種類に関する特定の情報を定義する必要があります。 この情報の大部分が保持している、 *ConnectionString*のパラメーター、 [Open メソッド](../../../ado/reference/ado-api/open-method-ado-connection.md)上、**接続**オブジェクト、または、 [ConnectionStringプロパティ](../../../ado/reference/ado-api/connectionstring-property-ado.md)上、**接続**オブジェクト。 接続文字列は、単一引用符で囲まれた値を使用して、セミコロンで区切られた引数と値のペアの一覧で構成されます。 以下に例を示します。  
@@ -30,7 +30,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  接続文字列で、ODBC データ ソース名 (DSN) またはデータ リンク (UDL) ファイルを指定することもできます。 Dsn の詳細については、次を参照してください。[データ ソースを管理する](../../../odbc/admin/managing-data-sources.md)ODBC プログラマ リファレンス。 Udl の詳細については、次を参照してください。 [Data Link API の概要](http://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc)OLE DB プログラマーズ リファレンス。  
+>  接続文字列で、ODBC データ ソース名 (DSN) またはデータ リンク (UDL) ファイルを指定することもできます。 Dsn の詳細については、次を参照してください。[データ ソースを管理する](../../../odbc/admin/managing-data-sources.md)ODBC プログラマ リファレンス。 Udl の詳細については、次を参照してください。 [Data Link API の概要](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc)OLE DB プログラマーズ リファレンス。  
   
  通常、呼び出して接続を確立する、 **Connection.Open** 、適切なメソッドを*接続文字列*パラメーターとして。 例は、次の Visual Basic コード スニペットに示されます。  
   

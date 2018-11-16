@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 84c242d3c7c8e38642f1ee76f109f90a1ea9520e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635820"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667991"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server の SLES 共有ディスク クラスターを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このガイドでは、SQL Server SUSE Linux Enterprise Server (SLES) 上の 2 ノードの共有ディスク クラスターを作成する手順を提供します。 クラスタ リングの階層は SUSE に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)上に構築された[Pacemaker](http://clusterlabs.org/)します。 
+このガイドでは、SQL Server SUSE Linux Enterprise Server (SLES) 上の 2 ノードの共有ディスク クラスターを作成する手順を提供します。 クラスタ リングの階層は SUSE に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)上に構築された[Pacemaker](https://clusterlabs.org/)します。 
 
 クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、次を参照してください。 [SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)します。
 

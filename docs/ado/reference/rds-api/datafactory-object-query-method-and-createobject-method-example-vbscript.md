@@ -17,16 +17,16 @@ ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878ffce8b18205dfcd99ec7e374a9eb4609d6f38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d9a3984e956cd9e742bcc8a29accb7fe012b9e8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735940"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606342"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory オブジェクト、Query メソッド、および CreateObject メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  この例で作成、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを使用して、 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)のメソッド、 [rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 この例をテストする切り取りし、の間には、このコードを貼り付け、\<本文 > と\</Body > の通常の HTML タグを文書化し、名前を**DataFactoryVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
   
@@ -112,7 +112,7 @@ to bring back a Recordset. </H4>
     Dim strCnxn  
     Dim strSQL  
   
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     strCnxn = "Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';"  
     strSQL = "Select FirstName, LastName from Employees"  
   

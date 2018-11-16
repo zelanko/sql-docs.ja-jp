@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960786"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601822"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -31,7 +31,7 @@ ms.locfileid: "49960786"
 - DMA の開始元となるネットワーク上のツールのコンピューターを指定します。 このコンピューターに、SQL Server のターゲットへの接続があることを確認します。
 - ダウンロードしてインストールします。
     - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 以降。
-    - [PowerShell](http://aka.ms/wmf5download) v5.0 以降。
+    - [PowerShell](https://aka.ms/wmf5download) v5.0 以降。
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 以上。
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 以降。
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)します。
@@ -100,7 +100,7 @@ DmaDataCollector 関数に関連付けられているパラメーターは、次
 |---------|---------|
 |**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。<br/>詳細については、次を参照してください。 [SQL サーバーのインベントリ作成](#create-inventory)です。 |
 |**serverName** | SQL Server のインスタンス名を使用する場合は、在庫の**SqlServer**で、 **getServerListFrom**パラメーター。 |
-|**DatabaseName** | インベントリ テーブルをホストするデータベース。 |
+|**databaseName** | インベントリ テーブルをホストするデータベース。 |
 |**%Assessmentname** | DMA 評価の名前。 |
 |**TargetPlatform** | 実行する評価対象の型。  指定できる値は**AzureSQLDatabase**、 **SQLServer2012**、 **SQLServer2014**、 **SQLServer2016**、 **SQLServerLinux2017**、および**SQLServerWindows2017**します。 |
 |**AuthenticationMethod** | 評価する SQL Server のターゲットに接続するための認証方法。 指定できる値は**SQLAuth**と**WindowsAuth**します。 |
@@ -124,7 +124,7 @@ DmaProcessor 関数に関連付けられているパラメーターは、次の�
 |**serverName** | SQL Server インスタンスは、データを処理します。  指定した場合**AzureSQLDatabase**の**プロセス**パラメーターでは、SQL Server の名前のみを含める (は含まれていません。 database.windows.net)。 求められます 2 つのログインの Azure SQL データベースを対象とする場合最初の 2 つ目は、Azure の SQL Server の管理者ログイン中に、Azure テナントの資格情報です。 |
 |**CreateDMAReporting** | JSON ファイルを処理するために作成するステージング データベースです。  既に指定したデータベースが存在する、いずれかにこのパラメーターを設定すると、オブジェクトを作成取得はありません。  このパラメーターは、削除された 1 つのオブジェクトを再作成するために便利です。 |
 |**CreateDataWarehouse** | Power BI レポートで使用されるデータ ウェアハウスを作成します。 |
-|**DatabaseName** | DMAReporting データベースの名前。 |
+|**databaseName** | DMAReporting データベースの名前。 |
 |**warehouseName** | データ ウェアハウス データベースの名前。 |
 |**jsonDirectory** | 評価の JSON ファイルを含むディレクトリ。  ディレクトリに複数の JSON ファイルがあるかどうかは、それらを処理している 1 つずつです。 |
 

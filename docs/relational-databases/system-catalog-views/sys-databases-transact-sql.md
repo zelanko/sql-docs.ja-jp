@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb00dc8525e4543df862bbe2bcd3eddfc1a04087
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2c1eb2b3e714d8b70b8d65a5f96a7dcee379e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733720"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673731"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "47733720"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|インスタンス内で一意のデータベースの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内、または、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]サーバー。|  
+|**name**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内、または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] サーバー内で一意な、データベースの名前。|  
 |**database_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内、または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] サーバー内で一意な、データベースの識別子。|  
 |**source_database_id**|**int**|NULL 以外 = このデータベース スナップショットのソース データベースの ID です。<br /> NULL = データベース スナップショットではありません。|  
 |**owner_sid**|**varbinary(85)**|サーバーに登録したデータベースの外部所有者の SID (セキュリティ識別子) です。 データベースを所有する方法の詳細については、次を参照してください。、**データベースに対する ALTER AUTHORIZATION**の[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)します。|  
 |**create_date**|**datetime**|データベースの作成または名前の変更を行った日付です。 **Tempdb**、この値が、サーバーを再起動するたびに変更します。|  
-|**compatibility_level**|**tinyint**|バージョンに対応する整数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のどちらの動作が互換性のあります。<br /> **値**:**に適用されます**<br /> 70:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
+|**compatibility_level**|**tinyint**|動作に互換性のある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに対応する整数です。<br /> **値**:**に適用されます**<br /> 70:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
 |**collation_name**|**sysname**|データベースの照合順序です。 データベースの既定の照合順序として機能します。<br /> NULL = データベースがオンラインではありません。または、AUTO_CLOSE が ON に設定されていて、データベースが閉じられています。|  
 |**user_access**|**tinyint**|ユーザー アクセス設定です。<br /> 0 = MULTI_USER が指定されています。<br /> 1 = SINGLE_USER が指定されています。<br /> 2 = RESTRICTED_USER が指定されています。|  
 |**user_access_desc**|**nvarchar(60)**|ユーザー アクセス設定の説明です。|  
@@ -83,7 +83,7 @@ ms.locfileid: "47733720"
 |**is_db_chaining_on**|**bit**|1 = 複数データベースにまたがる組み合わせ所有権は ON です。<br /> 0 = 複数データベースの組み合わせ所有権は OFF です。|  
 |**is_parameterization_forced**|**bit**|1 = パラメーター化は FORCED です。<br /> 0 = パラメーター化は SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = データベースは暗号化されたマスター キーを保有しています。<br /> 0 = データベースは暗号化されたマスター キーを保有していません。|  
-|**is_query_store_on**|**bit**|1 = クエリ ストアは、このデータベースを有効にします。 確認[sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)クエリ ストアの状態を表示します。<br /> 0 = クエリ ストアが有効になっていません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
+|**is_query_store_on**|**bit**|1 = クエリ ストアは、このデータベースを有効にします。 確認[sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)クエリ ストアの状態を表示します。<br /> 0 = クエリ ストアが有効になっていません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
 |**is_published**|**bit**|1 = データベースは、トランザクション レプリケーション トポロジまたはスナップショット レプリケーション トポロジにおけるパブリケーション データベースです。<br /> 0 = パブリケーション データベースではありません|  
 |**is_subscribed**|**bit**|この列は使用されません。 データベースのサブスクライバーの状態に関係なく、常に 0 を返します。|  
 |**is_merge_published**|**bit**|1 = データベースは、マージ レプリケーション トポロジにおけるパブリケーション データベースです。<br /> 0 = マージ レプリケーション トポロジにおけるパブリケーション データベースではありません。|  

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d715fd65da1b89efd02368564d2f82cac278d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5d789812cb8dc3b6c880c4e2234aedbba3cc25bb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168492"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558509"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>ロールの作成および管理 (SSAS テーブル)
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 モデル プロジェクトのロールは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義します。 モデルが配置されると、データベース管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してロールを管理することができます。  
@@ -65,9 +65,9 @@ ms.locfileid: "48168492"
 9. **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ロール&#40;SSAS 表形式&#41;](roles-ssas-tabular.md)   
- [パースペクティブ&#40;SSAS 表形式&#41;](perspectives-ssas-tabular.md)   
- [Excel で分析&#40;SSAS 表形式&#41;](analyze-in-excel-ssas-tabular.md)   
+ [ロール &#40;SSAS テーブル&#41;](roles-ssas-tabular.md)   
+ [パースペクティブ (SSAS テーブル)](perspectives-ssas-tabular.md)   
+ [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [CUSTOMDATA 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   

@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 350c007c8a0153f2dfd0f84d596110b3dea29500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733420"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669091"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_filestream_force_garbage_collection
 |*file_name*|FILESTREAM コンテナー名を示します。|  
 |*num_collected_items*|このコンテナー内の、ガベージ コレクションが実行 (削除) された FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。|  
 |*num_marked_for_collection_items*|このコンテナー内の、ガベージ コレクションの対象としてマークされた FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 これらの項目は、まだ削除されていないが、削除、ガベージ コレクション フェーズを次の対象となる場合があります。|  
-|*num_unprocessed_items*|この FILESTREAM コンテナー内の、ガベージ コレクションで処理されなかった対象となる FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 アイテムは次のようなさまざまな理由で処理されないことがあります。<br /><br /> ログ バックアップまたはチェックポイントが作成されていないため、ファイルにピンを設定する必要がある。<br /><br /> ファイルが完全復旧モデルまたは一括ログ復旧モデルに含まれている。<br /><br /> 実行時間の長いアクティブなトランザクションが存在している。<br /><br /> レプリケーション ログ リーダー ジョブが実行されません。 ホワイト ペーパーを参照してください。 [SQL Server 2008 の FILESTREAM ストレージ](http://go.microsoft.com/fwlink/?LinkId=209156)詳細についてはします。|  
+|*num_unprocessed_items*|この FILESTREAM コンテナー内の、ガベージ コレクションで処理されなかった対象となる FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 アイテムは次のようなさまざまな理由で処理されないことがあります。<br /><br /> ログ バックアップまたはチェックポイントが作成されていないため、ファイルにピンを設定する必要がある。<br /><br /> ファイルが完全復旧モデルまたは一括ログ復旧モデルに含まれている。<br /><br /> 実行時間の長いアクティブなトランザクションが存在している。<br /><br /> レプリケーション ログ リーダー ジョブが実行されません。 ホワイト ペーパーを参照してください。 [SQL Server 2008 の FILESTREAM ストレージ](https://go.microsoft.com/fwlink/?LinkId=209156)詳細についてはします。|  
 |*last_collected_xact_seqno*|指定した FILESTREAM コンテナー内の、ガベージ コレクションが実行されたファイルに対応する最後のログ シーケンス番号 (LSN) を返します。|  
   
 ## <a name="remarks"></a>コメント  
@@ -87,7 +87,7 @@ sp_filestream_force_garbage_collection
  db_owner データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例で FILESTREAM コンテナーに対してガベージ コレクターの実行、`FSDB`データベース。  
+ 次の例では、`FSDB` データベースで FILESTREAM コンテナーに対してガベージ コレクターを実行します。  
   
 ### <a name="a-specifying-no-container"></a>A. コンテナーを指定しない  
   

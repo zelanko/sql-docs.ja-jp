@@ -5,8 +5,7 @@ ms.date: 08/10/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 646bcb8058a0a4455c71aecd6a4f907c7dd5f332
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26aa64c3ea1e4371c32c80b8cb06f73b5a0100bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740376"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667091"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>ブール値コンストラクター関数 - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- 次の例では、クエリを指定する型指定されたに対して**xml**列。 `if`式の型指定されたブール値をチェックする、<`ROOT`> 要素を適宜構築済みの XML を返します。 この例では、次の操作が実行されます。  
+ 次の例では、クエリを指定する型指定されたに対して**xml**列。 `if` 式では、<`ROOT`> 要素の型指定されたブール値が確認され、その結果に応じて、構築された XML が返されます。 この例では、次の操作が実行されます。  
   
--   定義する XML スキーマ コレクションを作成し、<`ROOT`> xs:boolean 型の要素。  
+-   xs:boolean 型の <`ROOT`> 要素を定義する、XML スキーマ コレクションを作成します。  
   
 -   型指定されたテーブルを作成します。 **xml** XML スキーマ コレクションを使用して列。  
   
@@ -64,7 +63,7 @@ go
 DROP XML SCHEMA COLLECTION SC  
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
 targetNamespace="QNameXSD" >  
       <element name="ROOT" type="boolean" nillable="true"/>  
 </schema>'  
@@ -91,6 +90,6 @@ go
 ```  
   
 ## <a name="see-also"></a>参照  
- [ブール値コンス トラクター関数&#40;XQuery&#41;](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+ [ブール値コンス トラクター関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

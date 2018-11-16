@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3dac6aefb8db2dbd1c651f0a2cf27b0f29559c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735014"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350066"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft のデータ シェイプの Service for OLE DB の概要
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "47735014"
 ## <a name="provider-keyword"></a>プロバイダーのキーワード
  OLE db Data Shaping Service を呼び出すには、接続文字列で、次のキーワードと値を指定します。
 
-```
+```vb
 "Provider=MSDataShape"
 ```
 
@@ -44,14 +44,14 @@ ms.locfileid: "47735014"
 
  接続文字列のキーワードとしてその名前を指定することで、書き込み可能な動的プロパティを設定することもできます。 たとえば、Microsoft Visual Basic では、設定、**データ プロバイダー** "MSDASQL"を指定することでの動的なプロパティ。
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
  設定またはのインデックスとしてその名前を指定することで動的プロパティを取得することも、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)プロパティ。 たとえば、次のコード例は取得しの現在の値を出力、**データ プロバイダー**動的プロパティは新しい値を場合に設定し、cn。DataProvider は、"MSDataShape"に設定されています (直接または間接的に接続文字列を使用)、接続が開かれていないと。
 
-```
+```vb
 Debug.Print cn.Properties("Data Provider")
 cn.Properties("Data Provider") = "MSDASQL"
 ```

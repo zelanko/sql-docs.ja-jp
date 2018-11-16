@@ -10,12 +10,12 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53992485c98e5f4978ca0d6bcdba2747301702f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678960"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659151"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA コンソール (DB2ToSQL) コマンド ライン オプション
 Microsoft を実行し、SSMA アクティビティを制御する信頼性の高い一連のコマンド ライン オプションを提供します。 次のセクションでは、同じについて説明します。  
@@ -120,7 +120,7 @@ Microsoft を実行し、SSMA アクティビティを制御する信頼性の�
 ### <a name="secure-password-option-psecurepassword"></a>セキュリティで保護されたパスワード オプション:-p/securepassword  
 このオプションでは、サーバー接続の暗号化パスワードを指定します。 その他のすべてのオプションとは異なる: オプションで任意のスクリプトの実行も移行に関連するアクティビティが、移行プロジェクトで使用するサーバー接続のパスワードの暗号化の管理を支援します。  
   
-コマンド ライン パラメーターとして他のオプションまたはパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細についてを参照してください、[管理パスワード](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)セクション。  
+コマンド ライン パラメーターとして他のオプションまたはパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細についてを参照してください、[管理パスワード](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)セクション。  
   
 次のサブ オプションはサポートされて`–p/securepassword`:  
   

@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695902"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512707"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47695902"
 
 
 ## <a name="what-is-a-graph-database"></a>グラフ データベースとは何ですか。  
-グラフ データベースはノード (または頂点) のコレクションと端 (または関係)。 (たとえば、個人または組織) エンティティを表すノードとエッジ (いいねや友人など) に接続されている 2 つのノード間のリレーションシップを表します。 ノードとエッジの両方には、それらに関連付けられたプロパティがある場合があります。 グラフ データベースを一意にいくつかの機能を次に示します。  
+グラフ データベースは、ノード (または頂点) とエッジ (またはリレーションシップ) のコレクションです。 ノードはエンティティ (たとえば人や組織) を表し、エッジはそれが接続する 2 つのノードのリレーションシップ (たとえば好感や友人) を表します。 ノードとエッジの両方には、それらに関連付けられたプロパティがある場合があります。 グラフ データベースを一意にいくつかの機能を次に示します。  
 -   エッジまたはリレーションシップは、グラフ データベースでのファースト クラスのエンティティでありできます属性またはプロパティに関連付けられています。 
 -   1 つのエッジは、グラフ データベース内の複数のノードを柔軟に接続できます。
 -   パターン マッチングとマルチホップ ナビゲーション クエリを簡単に表現できます。
@@ -76,7 +75,7 @@ AND Person1.Name = 'John';
 
 既存のツールとエコシステムを利用している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を提供します。 バックアップと復元などのツールのインポートし、エクスポート、すぐ BCP だけ作業します。 その他のツールまたは SSIS、SSRS、Power BI などのサービスは、グラフ テーブルでは、リレーショナル テーブルで動作する方法です。
 
-## <a name="edge-constraints"></a>エッジの制約
+## <a name="edge-constraints"></a>エッジ制約
 エッジの制約はグラフのエッジ テーブルで定義されて、特定の境界の種類が接続可能なノード テーブルのペアです。 これにより、ユーザーはグラフ スキーマを制御を強化します。 エッジの制約のヘルプのユーザーは特定のエッジは接続を許可するノードの種類を制限できます。 
 
 作成して、エッジの制約を使用する方法の詳細を参照して[のエッジの制約](../../relational-databases/tables/graph-edge-constraints.md)

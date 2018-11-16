@@ -13,23 +13,23 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: aacffa7cd65716969eae08488314eed08d4691e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b69ae2b59b3f82025404dd575f0602ea8c02a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821210"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668221"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>SQL Server (OracleToSQL) に Oracle のデータの移行
 変換されたオブジェクトが正常に同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle からデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!IMPORTANT]  
-> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、次に、データを移行する前にする必要がありますインストールする、SSMA Oracle 拡張パックし、SSMA を実行しているコンピューター上の Oracle プロバイダーの。 SQL Server エージェント サービスも実行している必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[サーバー コンポーネントのインストール (OracleToSQL)。](http://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
+> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、次に、データを移行する前にする必要がありますインストールする、SSMA Oracle 拡張パックし、SSMA を実行しているコンピューター上の Oracle プロバイダーの。 SQL Server エージェント サービスも実行している必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[サーバー コンポーネントのインストール (OracleToSQL)。](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
 移行する前にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。  
   
--   このダイアログ ボックスを使用して、移行のバッチ サイズ、テーブルのロック、制約チェック、null 値の処理、および id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行) (OracleToSQL)](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)します。  
+-   このダイアログ ボックスを使用して、移行のバッチ サイズ、テーブルのロック、制約チェック、null 値の処理、および id 値の処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行) (OracleToSQL)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)します。  
   
 -   **移行エンジン**で、**プロジェクト設定**ダイアログ ボックスで、2 つの種類のデータ移行のエンジンを使用して、移行プロセスを実行できます。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "47821210"
   
 5.  **Oracle への接続**ダイアログ ボックスが接続の資格情報を入力し、クリックして**Connect**します。 Oracle に接続する方法の詳細については、次を参照してください[Oracle に接続する&#40;OracleToSQL。&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
-    ターゲット データベースに接続するため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で接続の資格情報を入力、 **SQL サーバーへの接続** ダイアログ ボックスをクリックします**Connect**します。 接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL サーバーへの接続](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    ターゲット データベースに接続するため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で接続の資格情報を入力、 **SQL サーバーへの接続** ダイアログ ボックスをクリックします**Connect**します。 接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL サーバーへの接続](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
-    メッセージが表示されます、**出力**ウィンドウ。 移行の完了時に、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、順にクリックします**詳細**します。 レポートが完了したら、クリックして**閉じる**します。 データ移行レポートの詳細については、次を参照してください[データ移行レポート (SSMA 一般的)。](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    メッセージが表示されます、**出力**ウィンドウ。 移行の完了時に、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、順にクリックします**詳細**します。 レポートが完了したら、クリックして**閉じる**します。 データ移行レポートの詳細については、次を参照してください[データ移行レポート (SSMA 一般的)。](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > SQL Express エディションは、対象データベースとして使用される、クライアント側のデータの移行のみが許可されているし、サーバー側のデータ移行はサポートされていません。  

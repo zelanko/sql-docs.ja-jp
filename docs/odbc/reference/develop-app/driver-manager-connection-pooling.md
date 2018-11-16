@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e03932fe9d6cc98648c2e0da2e2cdd963a8d67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826140"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677581"
 ---
 # <a name="driver-manager-connection-pooling"></a>ドライバー マネージャーの接続プール
 接続プールが使用するたびに再確立されている必要がない接続プールからの接続を使用するアプリケーションを有効にします。 接続が作成され、プール内に配置されている、アプリケーションは、完全な接続プロセスを実行せず、その接続を再利用できます。  
@@ -59,11 +59,11 @@ ms.locfileid: "47826140"
     > [!NOTE]  
     >  要求された接続が照合されているプールされた接続する方法については、SQL_ATTR_CP_MATCH 環境属性によって決まります。 詳細については、次を参照してください。 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)します。  
   
-     接続プールを使用する ODBC アプリケーションで呼び出す必要があります[CoInitializeEx](http://go.microsoft.com/fwlink/?LinkID=116307)アプリケーションの初期化中に、 [CoUninitialize](http://go.microsoft.com/fwlink/?LinkId=116310)アプリケーションの終了します。  
+     接続プールを使用する ODBC アプリケーションで呼び出す必要があります[CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307)アプリケーションの初期化中に、 [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310)アプリケーションの終了します。  
   
 5.  呼び出し**SQLDisconnect**接続を完了します。 接続では、接続プールに返され、再利用できるようになります。  
   
- 詳細については、次を参照してください。 [、Microsoft Data Access Components のプーリング](http://go.microsoft.com/fwlink/?LinkId=120776)します。  
+ 詳細については、次を参照してください。 [、Microsoft Data Access Components のプーリング](https://go.microsoft.com/fwlink/?LinkId=120776)します。  
   
 ## <a name="connection-pooling-considerations"></a>接続プールの考慮事項  
  SQL コマンドを使用して、次の操作 (ではなくの ODBC API を使用) のいずれかを実行の接続の状態に影響を与えるし、接続プールがアクティブなときに予期しない問題が発生することができます。  
@@ -85,4 +85,4 @@ ms.locfileid: "47826140"
 ## <a name="see-also"></a>参照  
  [データ ソースまたはドライバー](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Microsoft データ アクセス コンポーネントでのプール](http://go.microsoft.com/fwlink/?LinkId=120776)
+ [Microsoft データ アクセス コンポーネントでのプール](https://go.microsoft.com/fwlink/?LinkId=120776)

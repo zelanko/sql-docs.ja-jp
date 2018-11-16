@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56e780efde72007d9ed4f1b701cde220a0f9be4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 939cc21d8f89d93dca9249efcad82a85874a00c4
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688120"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350029"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet パブリッシングの概要
 Microsoft OLE DB Provider for Internet Publishing は、ADO を Microsoft または Microsoft インターネット インフォメーション サーバーによって提供されるリソースにアクセスできます。 リソースには、HTML ファイル、または Windows 2000 web フォルダーなどの web ソース ファイルが含まれます。
@@ -28,7 +28,7 @@ Microsoft OLE DB Provider for Internet Publishing は、ADO を Microsoft また
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
  このプロバイダーに接続するには、設定、*プロバイダー*の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
 
-```
+```vb
 MSDAIPP.DSO
 ```
 
@@ -37,13 +37,13 @@ MSDAIPP.DSO
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
 
-```
+```vb
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
  - または -
 
-```
+```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 

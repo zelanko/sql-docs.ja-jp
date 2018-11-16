@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: c25474a30ace6ed6e1ab0560f1b3746a071690ef
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269557"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697040"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: Azure Kubernetes Service (AKS) での SQL Server のビッグ データ クラスターをデプロイします。
 
@@ -56,7 +56,7 @@ pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1
 
 続行する前に、次の重要なガイドラインに注意してください。
 
-- [コマンド ウィンドウ](http://docs.microsoft.com/visualstudio/ide/reference/command-window)、環境変数に引用符が含まれます。 パスワードをラップする引用符を使用する場合は、パスワードに、引用符が含まれます。
+- [コマンド ウィンドウ](https://docs.microsoft.com/visualstudio/ide/reference/command-window)、環境変数に引用符が含まれます。 パスワードをラップする引用符を使用する場合は、パスワードに、引用符が含まれます。
 - Bash では、引用符は、変数に含まれていません。 この例は、二重引用符を使用`"`します。
 - 任意に、パスワード、環境変数を設定できますが必ず、十分に複雑な使用しないでください、 `!`、 `&`、または`'`文字。
 - CTP 2.1 のリリースでは、既定のポートを変更できません。

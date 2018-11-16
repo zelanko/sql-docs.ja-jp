@@ -12,12 +12,12 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a5b55065790b63c2fb63803f70bf00d56e704cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763980"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656592"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>SSMA for MySQL クライアントのインストール (MySQLToSQL)
 SSMA for MySQL クライアントは、次のタスクを実行するプログラム ファイルで構成されます。  
@@ -43,7 +43,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー 3.1 またはそれ以降のバージョン。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 またはそれ以降のバージョン。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 は、SQL Server の製品メディアに収録されています。 取得することも、 [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882)します。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 またはそれ以降のバージョン。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 は、SQL Server の製品メディアに収録されています。 取得することも、 [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882)します。  
   
 -   MySQL ODBC ドライバーの 5.1 および移行する MySQL データベースへの接続。 MySQL の Web サイトから、MySQL をインストールすることができます。 接続の詳細については、次を参照してください[MySQL に接続する&#40;MySQLToSQL。&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
@@ -54,7 +54,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
 -   4 GB の RAM を推奨します。  
   
 ## <a name="installing-ssma-for-mysql-client"></a>SSMA for MySQL クライアントのインストール  
-SSMA は、Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](http://aka.ms/ssmaformysql)します。  
+SSMA は、Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](https://aka.ms/ssmaformysql)します。  
   
 最新バージョンをダウンロードした後は、SSMA をインストールする前に、インストール ファイルを抽出する必要があります。  
   

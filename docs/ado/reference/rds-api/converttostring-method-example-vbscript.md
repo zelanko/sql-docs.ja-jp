@@ -15,16 +15,16 @@ ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7f1a765d67307eb116c567c9cd5998d27b1ff53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7263e9b320eb84d0f8ae9aaba6005a454a4b5838
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770120"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606832"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  次の例は、変換する方法を示します、 **Recordset**を使用して、MIME でエンコードされた文字列に、 **RDSServer.DataFactory ConvertToString**メソッド。 文字列に変換する方法を表示、 **Recordset**します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**ConvertToString.htm**します。  
   
@@ -41,7 +41,7 @@ Sub ConvertToStringX()
     Const adcFetchUpFront = 1  
   
     ' Replace value below with your server name to use without ASP.  
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>">  
   
     Set objDF = RDS1.CreateObject("RDSServer.DataFactory", strServer)  
     Set objRs = objDF.Query(txtConnect.Value,txtQueryRecordset.Value)  

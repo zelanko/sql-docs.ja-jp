@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cbf18272b3cb8cfebd24f09c8ae33f50a18da4e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 898d2f0982ce5538f853335ea652891e7c390547
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739840"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670051"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames に関係する関数 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   場合、 *$paramLocal* xs:NCName 型の正しい形式で指定された値がない、空のシーケンスが返され、動的エラーを表します。  
   
--   Xs:QName 型から他の任意の型への変換でサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 このため、 **expanded-QName()** 関数は、XML の構築では使用できません。 たとえば、`<e> expanded-QName(…) </e>` など、ノードを構築する場合、型指定なしの値を使用する必要があります。 これは、`expanded-QName()` で返される xs:QName の値を xdt:untypedAtomic に変換する必要性を意味します。 ところが、これはサポートされていません。 この件に関する解決策については、このトピック後半の例を参照してください。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、xs:QName 型から別の型への変換はサポートされません。 このため、 **expanded-QName()** 関数は、XML の構築では使用できません。 たとえば、`<e> expanded-QName(…) </e>` など、ノードを構築する場合、型指定なしの値を使用する必要があります。 これは、`expanded-QName()` で返される xs:QName の値を xdt:untypedAtomic に変換する必要性を意味します。 ところが、これはサポートされていません。 この件に関する解決策については、このトピック後半の例を参照してください。  
   
--   既存の QName 型の値を変更または比較できます。 たとえば、 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 、要素の値と比較します <`e`>、によって返される qname、 **expanded-QName()** 関数。  
+-   既存の QName 型の値を変更または比較できます。 たとえば、 `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` 、要素の値と比較します <`e`>、によって返される qname、 **expanded-QName()** 関数。  
   
 ## <a name="examples"></a>使用例  
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
@@ -71,8 +70,8 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -- go  
 -- Create XML schema collection  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+    xmlns:xs="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="QNameXSD"   
       xmlns:xqo="QNameXSD" elementFormDefault="qualified">  
       <element name="Root" type="xqo:rootType" />  
@@ -87,7 +86,7 @@ go
 CREATE TABLE T( XmlCol xml(SC) )  
 -- Insert sample XML instnace  
 INSERT INTO T VALUES ('  
-<Root xmlns="QNameXSD" xmlns:ns="http://myURI">  
+<Root xmlns="QNameXSD" xmlns:ns="https://myURI">  
       <ElemQN>ns:someName</ElemQN>  
 </Root>')  
 go  
@@ -95,7 +94,7 @@ go
 SELECT * from T  
 go  
 -- Result  
-<Root xmlns="QNameXSD" xmlns:ns="http://myURI">  
+<Root xmlns="QNameXSD" xmlns:ns="https://myURI">  
   <ElemQN>ns:someName</ElemQN>  
 </Root>   
 ```  
@@ -108,18 +107,18 @@ UPDATE T
 SET XmlCol.modify('  
   declare default element namespace "QNameXSD";   
   replace value of /Root[1]/ElemQN   
-  with expanded-QName("http://myURI", "myLocalName") ')  
+  with expanded-QName("https://myURI", "myLocalName") ')  
 go  
 -- Verify the result  
 SELECT * from T  
 go  
 ```  
   
- 結果は次のとおりです。 なお、要素 <`ElemQN`> QName の型が新しい値。  
+ 結果は次のとおりです。 QName 型の要素 <`ElemQN`> には新しい値が保持されていることに注意してください。  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
-  <ElemQN xmlns:p1="http://myURI">p1:myLocalName</ElemQN>  
+  <ElemQN xmlns:p1="https://myURI">p1:myLocalName</ElemQN>  
 </Root>  
 ```  
   
@@ -144,7 +143,7 @@ go
 -- DROP XML SCHEMA COLLECTION SC  
 -- go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" type="QName" nillable="true"/>  
 </schema>'  
 go  
@@ -152,22 +151,22 @@ go
 CREATE TABLE T (xmlCol XML(SC))  
 go  
 -- Insert an XML instance.  
-insert into T values ('<root xmlns:a="http://someURI">a:b</root>')  
+insert into T values ('<root xmlns:a="https://someURI">a:b</root>')  
  go  
 -- Verify  
 SELECT *   
 FROM T  
 ```  
   
- 次の試行追加 <`root`> 要素があるため、失敗、expanded-QName() 関数は、XML の構築ではサポートされていません。  
+ 次の例は、<`root`> 要素を追加するステートメントですが、expanded-QName() 関数は XML 構築ではサポートされていないので失敗します。  
   
 ```  
 update T SET xmlCol.modify('  
-insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into / ')  
+insert <root>{expanded-QName("https://ns","someLocalName")}</root> as last into / ')  
 go  
 ```  
   
- この解決方法は、まず <`root`> 要素に追加する値を保持するインスタンスを挿入し、その後これを変更します。 Nil 初期値を使用するこの例では、ときに、<`root`> 要素が挿入されます。 この例では、XML スキーマ コレクションの nil 値を許可して、<`root`> 要素。  
+ この解決方法は、まず <`root`> 要素に追加する値を保持するインスタンスを挿入し、その後これを変更します。 この例では、<`root`> 要素の挿入時に nil 初期値を使用しています。 この例の XML スキーマ コレクションは、<`root`> 要素の値として nil 値を許容します。  
   
 ```  
 update T SET xmlCol.modify('  
@@ -175,7 +174,7 @@ insert <root xsi:nil="true"/> as last into / ')
 go  
 -- now replace the nil value with another QName.  
 update T SET xmlCol.modify('  
-replace value of /root[last()] with expanded-QName("http://ns","someLocalName") ')  
+replace value of /root[last()] with expanded-QName("https://ns","someLocalName") ')  
 go  
  -- verify   
 SELECT * FROM T  
@@ -184,9 +183,9 @@ go
 <root>b</root>  
 ```  
   
- `<root xmlns:a="http://someURI">a:b</root>`  
+ `<root xmlns:a="https://someURI">a:b</root>`  
   
- `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
+ `<root xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:p1="https://ns">p1:someLocalName</root>`  
   
  次のクエリで示すように、QName 値は比較できます。 だけを返すクエリ、<`root`> 要素の値が QName に一致がによって返される値を入力、 **expanded-QName()** 関数。  
   
@@ -194,7 +193,7 @@ go
 SELECT xmlCol.query('  
     for $i in /root  
     return  
-       if ($i eq expanded-QName("http://ns","someLocalName") ) then  
+       if ($i eq expanded-QName("https://ns","someLocalName") ) then  
           $i  
        else  
           ()')  
@@ -205,6 +204,6 @@ FROM T
  1 つの制限がある: **expanded-QName()** 関数が 2 番目の引数として空のシーケンスに受け取り、2 番目の引数が正しくない場合は、実行時エラーを発生させる代わりに空に戻ります。  
   
 ## <a name="see-also"></a>参照  
- [QNames に関係する関数&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [QNames に関係する関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

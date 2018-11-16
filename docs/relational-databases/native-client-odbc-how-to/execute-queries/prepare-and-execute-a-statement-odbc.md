@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df6353935efe167023b39d51d53e061b5a6b5deb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e67a239248271720e943ec80eeef6a2cb6f875e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673561"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677231"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>ステートメントの準備と実行 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47673561"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>ステートメントを 1 回だけ準備して複数回実行するには  
   
-1.  呼び出す[SQLPrepare 関数](http://go.microsoft.com/fwlink/?LinkId=59360)ステートメントを準備します。  
+1.  呼び出す[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)ステートメントを準備します。  
   
-2.  必要に応じて、呼び出す[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)準備されたステートメントのパラメーターの数を決定します。  
+2.  必要に応じて、呼び出す[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)準備されたステートメントのパラメーターの数を決定します。  
   
 3.  必要に応じて、準備されたステートメント内の各パラメーターに対して次の操作を行います。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "47673561"
   
     -   ステートメントにパラメーター マーカーがある場合は、バインドされたパラメーター バッファーにデータ値を格納します。  
   
-    -   呼び出す[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)準備されたステートメントを実行します。  
+    -   呼び出す[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)準備されたステートメントを実行します。  
   
-    -   実行時データ入力パラメーターを使用している場合[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) SQL_NEED_DATA を返します。 使用して、データをチャンク単位で送信[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)と[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)します。  
+    -   実行時データ入力パラメーターを使用している場合[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) SQL_NEED_DATA を返します。 使用して、データをチャンク単位で送信[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)と[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)します。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>列方向のパラメーターのバインドを使用してステートメントを準備するには  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47673561"
   
 2.  SQLPrepare ステートメントの準備を呼び出します。  
   
-3.  必要に応じて、呼び出す[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)準備されたステートメントのパラメーターの数を決定します。  
+3.  必要に応じて、呼び出す[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)準備されたステートメントのパラメーターの数を決定します。  
   
 4.  必要に応じて、準備されたステートメント内の各パラメーターのパラメーター情報を取得する SQLDescribeParam を呼び出します。  
   

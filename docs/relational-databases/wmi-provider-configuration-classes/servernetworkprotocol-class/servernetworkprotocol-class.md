@@ -18,12 +18,12 @@ ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c8fa000cade153b2bd44048f0387ee1f2561e1d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6f97b800e8ca5aecab932179faae73e89c60790
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774730"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674291"
 ---
 # <a name="servernetworkprotocol-class"></a>ServerNetworkProtocol クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47774730"
   
 -   サーバー ネットワーク プロトコルの有効化および無効化。  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f0390360aef76b15c9743780eff787dd0a2d275d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676500"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666171"
 ---
 # <a name="using-test-repositories-oracletosql"></a>テスト リポジトリの使用 (OracleToSQL)
 SSMA テスト リポジトリ ストア SSMA テスター テスト_ケースとテストの結果を後で使用します。 リポジトリのデータは、SQL Server テーブルに保存されます**TestCaseRepository**と**RunTestCaseResultRepository**スキーマ**ssma_oracle_utilities** の**ssmatesterdb**データベース。  
@@ -50,7 +50,7 @@ SSMA テスト リポジトリ ストア SSMA テスター テスト_ケース�
   
 -   をクリックして、**編集**テスト_ケース ウィザードを実行し、選択したテストを変更するボタンをクリックします。  
   
--   をクリックして、**実行**ボタンをクリックする、[を実行しているテスト_ケースは (OracleToSQL)](http://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02)ダイアログし、選択したテストを実行します。  
+-   をクリックして、**実行**ボタンをクリックする、[を実行しているテスト_ケースは (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02)ダイアログし、選択したテストを実行します。  
   
 ## <a name="test-results-repository"></a>テストの結果リポジトリ  
 テストの結果リポジトリを表示することができます、**テスト結果**のページ、**テスト_ケース リポジトリ**ウィンドウ。 クリックして開きます**テスト結果.** **テスター**メニュー。  

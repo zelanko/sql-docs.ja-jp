@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: c7e554e0fb010e51af7e0ece757094800078c0d0
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085108"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661268"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server、Red Hat Enterprise Linux の共有ディスク クラスターで運用します。
 
@@ -31,20 +31,20 @@ ms.locfileid: "49085108"
 
 ## <a name="architecture-description"></a>アーキテクチャの説明
 
-クラスタ リングの層は [Pacemaker](http://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています Corosync と Pacemaker クラスター通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
+クラスタ リングの層は [Pacemaker](https://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています Corosync と Pacemaker クラスター通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
 
 次の図は、SQL Server での Linux クラスターのコンポーネントを示しています。 
 
 ![Red Hat Enterprise Linux 7 ディスク SQL クラスターの共有](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-クラスターの構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) を参照してください。
+クラスターの構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) を参照してください。
 
 ## <a name = "failManual"></a>フェールオーバー クラスターを手動で
 
-`resource move`コマンドは、ターゲット ノードで起動するリソースの強制的な制約を作成します。  実行した後、`move`リソースを実行するコマンド`clear`できるようになりますが、リソースをもう一度移動またはリソースを自動的にフェールオーバーすることに制約を削除します。 
+`resource move`コマンドは、ターゲット ノードで起動するリソースの強制的な制約を作成します。  実行した後、`move`リソースを実行するコマンド`clear`できるようになりますが、リソースをもう一度移動またはリソースを自動的にフェールオーバーすることに制約を削除します。 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 現在のクラスターの状態を表示するには。
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 クラスターとリソースの現在の状態の表示:
@@ -183,7 +183,7 @@ sudo crm_mon
     次の例では、**vm3**という名前のノードをクラスターに追加します。
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ sudo crm_mon
 次のコマンドを実行し、クラスターからノードを削除します。
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>sqlservr リソース監視の間隔の頻度を変更する
@@ -226,7 +226,7 @@ Pacemaker の正常なクォーラムの出力の例は次のようになりま�
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 
@@ -271,7 +271,7 @@ pacemaker: active/enabled
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-* Pacemaker の [クラスター入門](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
+* Pacemaker の [クラスター入門](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 
 ## <a name="next-steps"></a>次の手順
 

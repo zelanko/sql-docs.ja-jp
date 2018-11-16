@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eefb9269a3eb0dc7a6b95e84accb4c68c6737a13
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b7e80f8a9dfb82f13350b94b310690a081fae1de
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063952"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606642"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTestCase()
  トレーニング データ セットの一部であるケースを返す関数を使用して[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`Targeted Mailing`で作成されるマイニング構造、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 このクエリでは、テストに使用される構造内のすべてのケースが返されます。  
+ 次の例では、`Targeted Mailing`で作成されるマイニング構造、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 このクエリでは、テストに使用される構造内のすべてのケースが返されます。  
   
 ```  
 SELECT *  

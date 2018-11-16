@@ -18,12 +18,12 @@ ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 10100e5c7aeb99b2b276007fd6726746ce9a3fd7
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: c2bd62a0a286a2c6690445484a6dc7eb02c3ce3c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217540"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675657"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName プロパティ (ServerSettingsGeneralFlag クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.FlagName [= value]
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -10,19 +10,19 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: df7e09828a172a27c7819565954be2040e1ce909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824170"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656139"
 ---
 # <a name="data-migration-settings-oracletosql"></a>データ移行の設定 (OracleToSQL)
   
 ## <a name="data-migration-settings"></a>データの移行設定  
 **データ移行の設定**データ移行のためのカスタム クエリを記述できます。  
   
--   このタブは、使用可能な場合に**データ移行のオプションの拡張**に設定されている**表示**と非表示設定した場合に**を非表示に**プロジェクト設定。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行)](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)します。  
+-   このタブは、使用可能な場合に**データ移行のオプションの拡張**に設定されている**表示**と非表示設定した場合に**を非表示に**プロジェクト設定。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)します。  
   
 -   実装するカスタム SQL ステートメントの解析**データ移行の設定**テーブル ノードのタブ。  
   

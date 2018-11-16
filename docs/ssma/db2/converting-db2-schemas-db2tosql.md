@@ -10,12 +10,12 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dddc4c6234f97d5491b70fa6adf55fc1159f3535
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff31e00ecb56138239a1d6d87de276754e84a5e6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670856"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657864"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマ (DB2ToSQL) の変換
 DB2 に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、プロジェクトの設定とデータ マッピング オプションでは、DB2 データベース オブジェクトを変換できますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース オブジェクト。  
@@ -147,7 +147,7 @@ DB2 データベース オブジェクトを変換する、変換するオブジ
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーと DB2 メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と DB2 からデータを移行します。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [SQL Server に変換されたオブジェクトを読み込む](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)します。  
+移行プロセスの次の手順が、 [SQL Server に変換されたオブジェクトを読み込む](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)します。  
   
 ## <a name="see-also"></a>参照  
 [DB2 のデータを SQL Server に移行する&#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

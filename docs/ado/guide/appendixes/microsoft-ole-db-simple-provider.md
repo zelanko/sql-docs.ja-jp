@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,20 +15,20 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd22d13a0fe656a7d176d6fb9fd2a97e3ce8d3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673553"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604642"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB プロバイダーの簡単な概要
-Microsoft OLE DB 単純なプロバイダー (OSP) により、対象のプロバイダーが書き込まれたを使用して任意のデータにアクセスする ADO、 [OLE DB 単純なプロバイダー (OSP) Toolkit](http://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)します。 単純なプロバイダーはインメモリ配列、または XML ドキュメントなどの OLE DB の基本的なサポートを必要とするデータ ソースにアクセスするためのものです。
+Microsoft OLE DB 単純なプロバイダー (OSP) により、対象のプロバイダーが書き込まれたを使用して任意のデータにアクセスする ADO、 [OLE DB 単純なプロバイダー (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)します。 単純なプロバイダーはインメモリ配列、または XML ドキュメントなどの OLE DB の基本的なサポートを必要とするデータ ソースにアクセスするためのものです。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
  OLE DB 単純なプロバイダーの DLL に接続するには、設定、*プロバイダー*への引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
 
-```
+```vb
 MSDAOSP
 ```
 
@@ -39,7 +39,7 @@ MSDAOSP
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
 
-```
+```vb
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
@@ -55,26 +55,26 @@ MSDAOSP
 
  **Portfolio.xml**次の例で使用されるファイルには、次のようなツリーが含まれています。
 
-```
+```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  XML の DSO が組み込みのヒューリスティックを使用して XML ツリー内のノードを階層構造の各章に変換する**Recordset**します。
 
  これらの組み込みのヒューリスティックを使用して、XML ツリーが 2 つのレベル階層に変換されます**Recordset**次の形式。
 
-```
+```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  ポートフォリオおよび情報のタグは、階層で表されないことに注意してください。 **Recordset**します。 XML の DSO に階層を XML ツリーを変換する方法の詳細については**レコード セット**、次の規則を参照してください。 $Text 列は、次のセクションについて説明します。
@@ -100,7 +100,7 @@ Shares, Symbol, Price, $Text
 
  構築するために必要なコードを**レコード セット**のとおりです。
 
-```
+```vb
 Dim adoConn as ADODB.Connection
 Dim adoRS as ADODB.Recordset
 
@@ -108,15 +108,15 @@ Set adoRS = New ADODB.Connection
 Set adoRS = New ADODB.Recordset
 
 adoConn.Open "Provider=MSDAOSP; Data Source=MSXML2.DSOControl.2.6;"
-adoRS.Open "http://WebServer/VRoot/portfolio.xml, adoConn
+adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
 >  4 つの異なる名前付け規則を使用して、データ ファイルのパスを指定できます。
 
-```
+```vb
 'HTTP://
-adoRS.Open "http://WebServer/VRoot/portfolio.xml", adoConn
+adoRS.Open "https://WebServer/VRoot/portfolio.xml", adoConn
 'FILE://
 adoRS.Open "file:/// C:\\Directory\\portfolio.xml", adoConn
 'UNC Path
@@ -137,14 +137,14 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO を各 $Text のデータの追加の列を追加します**Recordset**階層にします。
 
- OLE DB 単純なプロバイダーの詳細については、次を参照してください。[単純なプロバイダーを構築](http://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)します。
+ OLE DB 単純なプロバイダーの詳細については、次を参照してください。[単純なプロバイダーを構築](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)します。
 
 ## <a name="code-example"></a>コード例
  Visual Basic コードを次に示します、階層を構築する任意の XML ファイルを開く**レコード セット**、およびそれぞれの各レコードの書き込みを再帰的に**レコード セット**デバッグ ウィンドウにします。
 
  株価情報を含む単純な XML ファイルを次に示します。 次のコードはこのファイルを使用して 2 つのレベル階層を構築する**Recordset**します。
 
-```
+```xml
 <portfolio>
    <stock>
       <shares>100</shares>
@@ -152,7 +152,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$70.00</price>
       <info>
          <companyname>Microsoft Corporation</companyname>
-         <website>http://www.microsoft.com</website>
+         <website>https://www.microsoft.com</website>
       </info>
    </stock>
    <stock>
@@ -161,7 +161,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$107.00</price>
       <info>
          <companyname>Apple Computer, Inc.</companyname>
-         <website>http://www.apple.com</website>
+         <website>https://www.apple.com</website>
       </info>
    </stock>
    <stock>
@@ -170,7 +170,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$50.00</price>
       <info>
          <companyname>Dell Corporation</companyname>
-         <website>http://www.dell.com</website>
+         <website>https://www.dell.com</website>
       </info>
     </stock>
     <stock>
@@ -179,7 +179,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
        <price>$115.00</price>
        <info>
           <companyname>Intel Corporation</companyname>
-          <website>http://www.intel.com</website>
+          <website>https://www.intel.com</website>
        </info>
    </stock>
 </portfolio>
@@ -187,7 +187,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
  Visual Basic の 2 つのサブ プロシージャを次に示します。 最初の作成、 **Recordset**に渡されます、 *WalkHier* sub プロシージャ、再帰的には、それぞれの書き込み、階層の下位でについて説明します**フィールド**で各レコードごとに**Recordset**デバッグ ウィンドウにします。
 
-```
+```vb
 Private Sub BrowseHierRecordset()
 ' Add ADO 2.7 or later to Project/References
 ' No need to add MSXML2, ADO just passes the ProgID through to the OSP.
@@ -201,7 +201,7 @@ Private Sub BrowseHierRecordset()
     Set adoChildRS = ADODB.Recordset
 
     adoConn.Open "Provider=MSDAOSP; Data Source=MSXML2.DSOControl.2.6;"
-    adoRS.Open "http://bwillett3/Kowalski/portfolio.xml", adoConn
+    adoRS.Open "https://bwillett3/Kowalski/portfolio.xml", adoConn
 
     Dim iLevel As Integer
     iLevel = 0

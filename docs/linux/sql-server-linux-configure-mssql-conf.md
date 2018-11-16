@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 21034e0e7ae4e84d245d12b631c96c41760c46c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753589"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658814"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Linux 上の SQL Server を mssql-conf ツールを構成します。
 
@@ -148,7 +148,7 @@ ms.locfileid: "50753589"
    sudo systemctl restart mssql-server
    ```
 
-詳細については、次を参照してください。 [Linux 上の SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)と[SQL Server のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)します。
+詳細については、次を参照してください。 [Linux 上の SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)と[SQL Server のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)します。
 
 ## <a id="datadir"></a> 既定のデータまたはログのディレクトリの場所を変更します。
 
@@ -506,7 +506,7 @@ sudo systemctl restart mssql-server
 
 これらの値を設定するだけでなくもルーティングを構成して、ポート 135 に関するファイアウォールを更新する必要があります。 これを行う方法の詳細については、次を参照してください。 [Linux で MSDTC を構成する方法](sql-server-linux-configure-msdtc.md)します。
 
-Mssql conf を監視し、MSDTC をトラブルシューティングする際の他のいくつかの設定があります。 次の表は、これらの設定を簡単に説明します。 使用の詳細については、Windows のサポートの記事で詳細をご覧ください。 [MS DTC の診断トレースを有効にする方法](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)します。
+Mssql conf を監視し、MSDTC をトラブルシューティングする際の他のいくつかの設定があります。 次の表は、これらの設定を簡単に説明します。 使用の詳細については、Windows のサポートの記事で詳細をご覧ください。 [MS DTC の診断トレースを有効にする方法](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)します。
 
 | mssql conf 設定 | 説明 |
 |---|---|

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0b720659980a072db9a22b4a3dfcaa2524f1676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59eb895b735771a94fa04745b492fc68eb2ea74
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665375"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674553"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47665375"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *FKCatalogName*と*PKCatalogName*パラメーター: *Linked_Server_Name.Catalog_Name*します。  
   
 ## <a name="see-also"></a>参照  
- [SQLForeignKeys 関数](http://go.microsoft.com/fwlink/?LinkId=59344)   
+ [SQLForeignKeys 関数](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

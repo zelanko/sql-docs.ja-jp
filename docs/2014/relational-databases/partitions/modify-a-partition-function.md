@@ -10,12 +10,12 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9371a82366f31c2d8221834a1bd29f9cfd9cc0d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cc06db0cf02a5d2e85b4e49a778f5484446b9be
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049042"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640759"
 ---
 # <a name="modify-a-partition-function"></a>パーティション関数の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用してパーティション テーブルまたはパーティション インデックスのパーティション関数で、指定するパーティションの数を 1 つずつ増減させることにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でのテーブルまたはインデックスのパーティション分割方法を変更できます。 パーティションを追加するには、既存のパーティションを 2 つのパーティションに分割し、新しいパーティションの境界を再定義します。 パーティションを削除するには、2 つのパーティションの境界を 1 つのパーティションにマージします。 この最後の操作により、1 つのパーティションが再作成され、もう 1 つのパーティションは未割り当てのままになります。  
@@ -37,7 +37,7 @@ ms.locfileid: "48049042"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48049042"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パーティション関数の変更に関するレプリケーションはサポートされていません。 パブリケーション データベースのパーティション関数に変更を加える場合は、サブスクリプション データベースでこの操作を手動で実行する必要があります。  
   
--   ALTER PARITITION FUNCTION の影響を受けるすべてのファイル グループは、オンラインである必要があります。  
+-   ALTER PARTITION FUNCTION の影響を受けるすべてのファイル グループをオンラインにする必要があります。  
   
 ###  <a name="Security"></a> セキュリティ  
   

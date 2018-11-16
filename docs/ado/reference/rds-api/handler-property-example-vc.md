@@ -15,16 +15,16 @@ ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9c944535ead264b8ab65b59aa969d0fddf29f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61403b9a720a456c08b121be4f36cef0d59ced17
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696531"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606982"
 ---
 # <a name="handler-property-example-vc"></a>Handler プロパティの例 (VC++)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  この例では、 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト[ハンドラー](../../../ado/reference/rds-api/handler-property-rds.md)プロパティ。 (を参照してください[DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)の詳細)。  
   
@@ -78,7 +78,7 @@ void HandlerX() {
       dc->Handler = "MSDFMAP.Handler";  
       dc->ExecuteOptions = 1;  
       dc->FetchOptions = 1;  
-      dc->Server = "http://MyServer";  
+      dc->Server = "https://MyServer";  
       dc->Connect = "Data Source=AuthorDatabase";  
       dc->SQL = "AuthorById('267-41-2394')";  
   

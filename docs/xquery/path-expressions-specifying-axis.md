@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -23,12 +22,12 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a868f83740be2d1cd175bd68464e70f389b1e606
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827790"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670330"
 ---
 # <a name="path-expressions---specifying-axis"></a>パス式 - 軸の指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47827790"
   
  すべての軸を除く、**親**軸は順方向軸です。 **親**軸は、ドキュメントの階層で後方に検索するので、逆方向軸です。 たとえば、相対パス式 `child::ProductDescription/child::Summary` には 2 つのステップがあり、各ステップが `child` 軸を指定します。 最初の手順の取得、 \<ProductDescription > コンテキスト ノードの子要素。 各\<ProductDescription > 要素ノード、2 番目の手順の取得、\<概要 > 子要素ノード。  
   
- 相対パス式では、`child::root/child::Location/attribute::LocationID`は次の 3 つのステップがあります。 最初の 2 つの手順をそれぞれ指定、`child`軸、および 3 番目の手順を指定します、`attribute`軸。 内の XML ドキュメントの製造手順に対して実行されたときに、 **Production.ProductModel**テーブル、式を返します、`LocationID`の属性、\<場所 > 子要素ノード、の\<ルート > 要素。  
+ 相対パス式 `child::root/child::Location/attribute::LocationID` には 3 つのステップがあります。 最初の 2 つのステップは、それぞれ `child` 軸を指定します。3 番目のステップは `attribute` 軸を指定します。 内の XML ドキュメントの製造手順に対して実行されたときに、 **Production.ProductModel**テーブル、式を返します、`LocationID`の属性、\<場所 > 子要素ノード、の\<ルート > 要素。  
   
 ## <a name="examples"></a>使用例  
  このトピックのクエリ例は、に対して指定されています**xml**内の列を入力、 **AdventureWorks**データベース。  
@@ -66,7 +65,7 @@ ms.locfileid: "47827790"
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   /child::PD:ProductDescription/child::PD:Features')  
 FROM Production.ProductModel  
 WHERE ProductModelID=19  
@@ -110,7 +109,7 @@ select @y
   
  この式で、  
   
- `/child::a/child::b/descendant::*`、のすべての子孫を要求している、<`b`> 要素ノード。  
+ パス式 `/child::a/child::b/descendant::*` に descendants 軸を指定すると、これは <`b`> 要素ノードのすべての子孫を要求することになります。  
   
  ノード テストのアスタリスク (*) によって、ノード名がノードテストとして表されます。 そのため、descendant 軸の主ノード型 (要素ノード) によって、返されるノードの型が決まります。 つまり、式はすべて要素ノードを返します。 テキスト ノードは返されません。 プライマリ ノード タイプとノード テストの関係の詳細については、次を参照してください。[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)トピック。  
   
@@ -123,7 +122,7 @@ select @y
 <d>text3</d>  
 ```  
   
- Descendant 軸ではなく子孫または self 軸を指定する場合`/child::a/child::b/descendant-or-self::*`のコンテキスト ノードを返します要素 <`b`> とその子孫です。  
+ descendant 軸の代わりに descendant-or-self 軸を指定すると、`/child::a/child::b/descendant-or-self::*` ではコンテキスト ノード (要素 <`b`>) とその子孫が返されます。  
   
  結果を次に示します。  
   
@@ -145,7 +144,7 @@ select @y
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   /child::PD:ProductDescription/child::PD:Features/descendant::*  
 ')  
 FROM  Production.ProductModel  
@@ -159,7 +158,7 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   
 /child::PD:ProductDescription/child::PD:Features/parent::PD:ProductDescription/child::PD:Summary  
 ')  
@@ -188,19 +187,19 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- クエリは、反復子変数を設定`$f`の要素の子を返します FLWOR ステートメントで、`<Features>`要素。 詳細については、次を参照してください。 [FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)します。 機能ごとに、`return`句は、次の形式で XML を構築します。  
+ クエリでは、FLWOR ステートメントで反復子変数 `$f` を設定し、`<Features>` 要素の子要素を返します。 詳細については、次を参照してください。 [FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)します。 製品特徴ごとに、`return` 句によって次の形式で XML が構築されます。  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- 追加する、`ProductModelID`各`<Feature`> 要素、`parent`軸を指定します。  
+ 各 `ProductModelID`> 要素に `<Feature` を追加するには、`parent` 軸を指定します。  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
   for $f in /child::PD:ProductDescription/child::PD:Features/child::*  
   return  
    <Feature  
@@ -217,14 +216,14 @@ WHERE ProductModelID=19
 ```  
 <Feature ProductModelID="19">  
   <wm:Warranty   
-   xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+   xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <wm:WarrantyPeriod>3 years</wm:WarrantyPeriod>  
     <wm:Description>parts and labor</wm:Description>  
   </wm:Warranty>  
 </Feature>  
 <Feature ProductModelID="19">  
   <wm:Maintenance   
-   xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+   xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <wm:NoOfYears>10 years</wm:NoOfYears>  
     <wm:Description>maintenance contract available through your dealer   
                   or any AdventureWorks retail store.</wm:Description>  
@@ -232,12 +231,12 @@ WHERE ProductModelID=19
 </Feature>  
 <Feature ProductModelID="19">  
   <p1:wheel   
-   xmlns:p1="http://www.adventure-works.com/schemas/OtherFeatures">  
+   xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">  
       High performance wheels.  
   </p1:wheel>  
 </Feature>  
 ```  
   
- なお、述語`[1]`シングルトン値が返されるように、パスで式を追加します。  
+ 必ずシングルトン値を返せるように、パス式に述語 `[1]` が追加されていることに注意してください。  
   
   

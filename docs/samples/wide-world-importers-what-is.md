@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cffb25700ccd160f62cc7ad54164bf5fe168225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 017f301d9888ddd4f90d70e7d993faf840640a66
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832010"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670691"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL の wide World Importers のサンプル データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,4 +65,4 @@ SQL Server Analysis Services を使用して、次元のデータ モデル内�
 
 ここで、サンプル データベースとサンプル コードのライセンスは説明: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-サンプル データベースには、data.gov と自然 EarthData から読み込まれているパブリック データが含まれています。 使用条件は、ここでは。 [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+サンプル データベースには、data.gov と自然 EarthData から読み込まれているパブリック データが含まれています。 使用条件は、ここでは。 [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

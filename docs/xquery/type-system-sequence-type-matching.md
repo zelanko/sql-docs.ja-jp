@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e1a8db0077b5ec164fe5939b126cfab98e218bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778390"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668651"
 ---
 # <a name="type-system---sequence-type-matching"></a>型システム - シーケンス型の照合
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47778390"
   
 -   式から特定の名前や型の XML 要素または属性ノードが返されるかどうかを確認できます。  
   
- 使用することができます、`instance of`シーケンス型の照合のブール演算子。 詳細については、`instance of`式を参照してください[SequenceType 式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)します。  
+ シーケンス型の照合では、`instance of` ブール演算子を使用できます。 詳細については、`instance of`式を参照してください[SequenceType 式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)します。  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>式から返されるアトミック値の型の比較  
  式からアトミック値のシーケンスが返される場合、シーケンス内の値の型を確認することが必要な場合があります。 次の例は、シーケンス型の構文を使用して式から返されるアトミック値の型を評価する方法を示しています。  
@@ -47,7 +46,7 @@ ms.locfileid: "47778390"
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" nillable="true" type="byte"/>  
 </schema>'  
 GO  
@@ -63,24 +62,24 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- 場合、<`root`> 要素は、インスタンスで nilled は、その値は空のシーケンスと`instance of empty()`True を返します。  
+ インスタンスの <`root`> 要素を NULL にすると、要素の値は空のシーケンスになり、`instance of empty()` から True が返されます。  
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" />'  
 SELECT @var.query('data(/root[1]) instance of  empty() ')  
 GO  
 ```  
   
 ### <a name="example-determining-the-type-of-an-attribute-value"></a>例 : 属性値の型の判断  
- 場合によっては、式から返されるシーケンス型を処理前に評価することが必要なことがあります。 たとえば、ノードが union 型として定義されている XML スキーマを使用している場合です。 次の例では、コレクション内の XML スキーマ定義属性`a`10 進数または文字列の値を持つができる union 型として型。  
+ 場合によっては、式から返されるシーケンス型を処理前に評価することが必要なことがあります。 たとえば、ノードが union 型として定義されている XML スキーマを使用している場合です。 次の例では、コレクションの XML スキーマで、値を小数型または文字列型にすることができる union 型として属性 `a` を定義しています。  
   
 ```  
 -- Drop schema collection if it exists.  
 -- DROP XML SCHEMA COLLECTION SC.  
 -- GO  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
   <element name="root">  
     <complexType>  
        <sequence/>  
@@ -95,7 +94,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 型指定された XML インスタンスを処理する前に、属性 `a` の値の型を確認できます。 次の例では、属性 `a` の値は小数型です。 そのため`, instance of xs:decimal`True を返します。  
+ 型指定された XML インスタンスを処理する前に、属性 `a` の値の型を確認できます。 次の例では、属性 `a` の値は小数型です。 そのため、`, instance of xs:decimal` から True が返されます。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -104,7 +103,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:decimal')
 GO  
 ```  
   
- ここで、属性 `a` の値を文字列型に変更します。 `instance of xs:string`は True を返します。  
+ ここで、属性 `a` の値を文字列型に変更します。 この場合でも、`instance of xs:string` から True が返されます。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -114,11 +113,11 @@ GO
 ```  
   
 ### <a name="example-cardinality-in-sequence-expressions"></a>例 : シーケンス式のカーディナリティ  
- この例は、シーケンス式のカーディナリティの効果を示しています。 次の XML スキーマ定義を <`root`> 内のバイト型、nillable 要素。  
+ この例は、シーケンス式のカーディナリティの効果を示しています。 次の XML スキーマでは、バイト型で NULL にできる <`root`> 要素を定義しています。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" nillable="true" type="byte"/>  
 </schema>'  
 GO  
@@ -133,11 +132,11 @@ SELECT @var.query('data(/root[1]) instance of  xs:byte ')
 GO  
 ```  
   
- 行った場合、<`root`> 要素 nil、値は空のシーケンス。 つまり、式 `/root[1]` から空のシーケンスが返されます。 そのため、 `instance of xs:byte` False を返します。 この場合の既定のカーディナリティは 1 であることに注意してください。  
+ <`root`> 要素を NULL にすると、その要素の値は空のシーケンスになります。 つまり、式 `/root[1]` から空のシーケンスが返されます。 したがって、`instance of xs:byte` では False が返されます。 この場合の既定のカーディナリティは 1 であることに注意してください。  
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></root>'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"></root>'  
 SELECT @var.query('data(/root[1]) instance of  xs:byte ')   
 GO  
 -- result = false  
@@ -147,7 +146,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></root>'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"></root>'  
 SELECT @var.query('data(/root[1]) instance of  xs:byte? ')   
 GO  
 -- result = true  
@@ -166,7 +165,7 @@ GO
   
 ```  
 SELECT Instructions.query('   
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 data(/AWMI:root[1]/AWMI:Location[1]/@LocationID) instance of xs:integer?') as Result   
 FROM Production.ProductModel   
 WHERE ProductModelID = 7  
@@ -207,7 +206,7 @@ SELECT @var.query('data(/root[1]/a[1]) instance of item()')
 SELECT @var.query('/root[1]/a[1] instance of item()')  
 ```  
   
- 次の 3 つのクエリのすべての XQuery 式が要素ノードの子を返す、<`root`> 要素。 そのため、シーケンス型の式 `instance of node()` から True が返され、他の 2 つの式 `instance of text()` と `instance of document-node()` からは False が返されます。  
+ 次の 3 つのクエリのすべての XQuery 式では、<`root`> 要素の要素ノードの子が返されます。 そのため、シーケンス型の式 `instance of node()` から True が返され、他の 2 つの式 `instance of text()` と `instance of document-node()` からは False が返されます。  
   
 ```  
 SELECT @var.query('(/root/*)[1] instance of node()')  
@@ -261,7 +260,7 @@ element(*, ElementType?)
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
 targetNamespace="myNS" xmlns:ns="myNS">  
   <complexType name="CustomerType">  
      <sequence>  
@@ -293,14 +292,14 @@ GO
   
  また、次の構文も使用できます。  
   
--   `element(ElementName, ElementType?)`に次のクエリで示すように、型の構文をシーケンス処理します。 この構文では、名前が `firstName` で型が `xs:string` の NULL 要素ノードまたは NULL 以外の要素ノードが照合されます。  
+-   次のクエリで示すような `element(ElementName, ElementType?)` シーケンス型の構文。 この構文では、名前が `firstName` で型が `xs:string` の NULL 要素ノードまたは NULL 以外の要素ノードが照合されます。  
   
     ```  
     SELECT @var.query('declare namespace x="myNS";   
     (/x:customer/*)[1] instance of element (firstName, xs:string?)')  
     ```  
   
--   `element(*, type?)`に次のクエリで示すように、型の構文をシーケンス処理します。 型がある場合、要素ノードに一致する`xs:string`の名前に関係なく、します。  
+-   次のクエリで示すような `element(*, type?)` シーケンス型の構文。 この構文では、名前に関係なく、要素ノードの型が `xs:string` の場合にその要素ノードが照合されます。  
   
     ```  
     SELECT @var.query('declare namespace x="myNS"; (/x:customer/*)[1] instance of element (*, xs:string?)')  
@@ -314,7 +313,7 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
           targetNamespace="myNS"  xmlns:ns="myNS">  
   <complexType name="CustomerType">  
     <sequence>  
@@ -337,7 +336,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- この XML スキーマ コレクションの作成に使用する型指定された**xml**変数。 この変数に割り当てられている XML インスタンスでは、2 つがあります <`customer`> の 2 つの異なる型の要素。 最初の要素は `CustomerType` 型で、2 つ目の要素は `SpecialCustomerType` 型です。  
+ この XML スキーマ コレクションの作成に使用する型指定された**xml**変数。 この変数に割り当てられた XML インスタンスには、型が異なる 2 つの <`customer`> 要素があります。 最初の要素は `CustomerType` 型で、2 つ目の要素は `SpecialCustomerType` 型です。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -346,7 +345,7 @@ SET @var = '
    <firstName>FirstName1</firstName>  
    <lastName>LastName1</lastName>  
 </x:customer>  
-<x:customer xsi:type="x:SpecialCustomerType" xmlns:x="myNS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<x:customer xsi:type="x:SpecialCustomerType" xmlns:x="myNS" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
    <firstName> FirstName2</firstName>  
    <lastName> LastName2</lastName>  
    <Age>21</Age>  
@@ -367,7 +366,7 @@ SELECT @var.query('declare namespace x="myNS";
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
        targetNamespace="myNS" xmlns:ns="myNS">  
 <complexType name="CustomerType">  
   <sequence>  
@@ -405,7 +404,7 @@ GO
   
  省略可能な `Age` 属性をインスタンスから削除すると、上記のクエリにより False が返されます。  
   
- 属性名と型を指定することができます (`attribute(name,type)`) 属性のテスト。  
+ 属性のテストで、属性の名前と型 (`attribute(name,type)`) を指定できます。  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   

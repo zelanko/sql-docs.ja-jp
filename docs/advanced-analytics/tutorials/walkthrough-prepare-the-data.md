@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5206213c06b283e8736dea8079f6909149e670e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142092"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703680"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell (チュートリアル) を使用してデータを準備します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +100,7 @@ SQL Server にパッケージをインストールできるように、多くの
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - この例では、R grep 関数を使用して、使用可能なパスのベクトルを検索し、"Program Files"を含むパスを見つけます。 詳細については、次を参照してください。 [ http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)します。
+    - この例では、R grep 関数を使用して、使用可能なパスのベクトルを検索し、"Program Files"を含むパスを見つけます。 詳細については、次を参照してください。 [ https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)します。
 
     - パッケージが既にインストールされている場合を実行してインストールされているパッケージの一覧を確認してください。`installed.packages()`します。
 
@@ -173,7 +173,7 @@ PowerShell スクリプトで問題があれば、行うことができます、
 
 手動でデータをダウンロードするには、次のリンクを右クリックし、 **[対象をファイルに保存]** を選択します。
 
-[http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
+[https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
 データを保存した場所のダウンロードしたデータ ファイルのパスとファイル名をメモします。 完全なパスを使用してテーブルにデータを読み込む必要がある**bcp**します。
 
@@ -265,7 +265,7 @@ GitHub リポジトリからファイルをダウンロードするときは、�
 
 このデータは、ニューヨーク市タクシー データ セットの代表的なサンプル データです。各乗車で支払われた乗車料金やチップなど、2013 年の 1 億 7,300 万件の乗車記録が含まれています。 データを使用しやすくするために、Microsoft データ サイエンス チームはダウンサンプリングを実行し、わずか 1% のデータを取得しました。  このデータは、Azure のパブリック BLOB ストレージ コンテナーに .CSV 形式で共有されています。 ソース データは、非圧縮ファイル、350 MB 未満です。
 
-+ パブリック データセット: [NYC タクシーのデータセットとリムジン委員会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ パブリック データセット: [NYC タクシーのデータセットとリムジン委員会](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [NYC タクシー データセットで Azure ML モデルを構築](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/)します。
 

@@ -1,32 +1,23 @@
 ---
 title: Reporting Services のインストールの移行 (ネイティブ モード) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
-ms.topic: conceptual
-helpviewer_keywords:
-- manual Reporting Services migrations
-- Report Server Windows service
-- custom Reporting Services installations
-- automatic Reporting Services migrations
-- Reporting Services, upgrades
-- upgrading Reporting Services
-- migrating Reporting Services
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.custom: ''
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology: database-engine
+ms.topic: conceptual
+ms.date: 08/10/2017
+ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082892"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604062"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
+
   ここでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のネイティブ モード配置でサポートされている次のいずれかのバージョンを新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに移行する手順について説明します。  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -77,7 +68,7 @@ ms.locfileid: "48082892"
   
  レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションによっては制限があります。 以前のインストールで作成したレポート サーバー データベースを再利用する場合は、次のトピックを確認してください。  
   
--   [レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> 固定されたデータベース名  
  レポート サーバー データベースの名前は変更できません。 データベースの ID は、データベース作成時にレポート サーバーのストアド プロシージャで記録されます。 レポート サーバーのプライマリ データベースまたは一時データベースの名前を変更すると、プロシージャ実行時にエラーが発生し、レポート サーバー インストールが無効になります。  
@@ -95,13 +86,13 @@ ms.locfileid: "48082892"
   
  また、インストールの移行に影響する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] での以下の重要な変更点に注意してください。  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降、IIS は必須ではなくなりました。 インストールされているレポート サーバーを新しいコンピューターに移行する場合、Web サーバーの役割を追加する必要はありません。 また、URL および認証を構成する手順が以前のリリースとは異なり、問題の診断およびトラブルシューティングの手法やツールも変更になっています。  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、IIS は必須ではなくなりました。 インストールされているレポート サーバーを新しいコンピューターに移行する場合、Web サーバーの役割を追加する必要はありません。 また、URL および認証を構成する手順が以前のリリースとは異なり、問題の診断およびトラブルシューティングの手法やツールも変更になっています。  
   
 -   レポート サーバー Web サービス、レポート マネージャー、およびレポート サーバー Windows サービスが、単一のレポート サーバー サービスに統合されています。 3 つのアプリケーションはすべて同じアカウントで実行されます。 3 つのアプリケーションはいずれも RSReportServer.config ファイルから構成設定を読み取り、RSWebApplication.config は使用されなくなりました。  
   
 -   レポート マネージャーおよび SQL Server Management Studio の設計が変更され、重複する機能が削除されました。 各ツールで一連の個別のタスクがサポートされるようになり、他のツールで代用することはできなくなりました。  
   
--   ISAPI フィルターは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 ISAPI フィルターを使用する場合、移行を実行する前にレポート ソリューションを設計し直す必要があります。  
+-   ISAPI フィルターは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 ISAPI フィルターを使用する場合、移行を実行する前にレポート ソリューションを設計し直す必要があります。  
   
 -   IP アドレス制限は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 IP アドレス制限を使用する場合、移行を実行する前にレポート ソリューションを設計し直すか、ファイアウォール、ルーター、ネットワーク アドレス変換 (NAT) などのテクノロジを使用して、レポート サーバーへのアクセスが制限されるアドレスを構成する必要があります。  
   
@@ -228,7 +219,7 @@ ms.locfileid: "48082892"
   
 5.  レポート サーバーを新しいコンピューターにインストールし、Windows ファイアウォールを使用している場合は、レポート サーバーがリッスンする TCP ポートが開いていることを確認します。 既定のポート番号は 80 です。 詳細については、「[レポート サーバー アクセスに対するファイアウォールの構成](../report-server/configure-a-firewall-for-report-server-access.md)」をご覧ください。  
   
-6.  ネイティブ モードのレポート サーバーをローカルで管理する場合は、レポート マネージャーによるローカル管理を許可するようにオペレーティング システムを構成する必要があります。 詳細については、「[ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」をご覧ください。  
+6.  ネイティブ モードのレポート サーバーをローカルで管理する場合は、レポート マネージャーによるローカル管理を許可するようにオペレーティング システムを構成する必要があります。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
   
 ##  <a name="bkmk_copy_custom_config"></a> RSReportServer.config ファイルへのカスタム構成設定のコピー  
  以前のインストールで RSReportServer.config ファイルまたは RSWebApplication.config ファイルを変更していた場合、新しい RSReportServer.config ファイルで同じ変更を行います。 以前の構成ファイルで変更された可能性があるいくつかの項目と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で同じ設定を構成するための方法に関する追加情報へのリンクを次に示します。  
@@ -244,9 +235,9 @@ ms.locfileid: "48082892"
   
 ##  <a name="bkmk_verify"></a> 配置の確認  
   
-1.  ブラウザーを開き、URL アドレスを入力して、レポート サーバーおよびレポート マネージャーの仮想ディレクトリをテストします。 詳細については、「 [Reporting Services のインストール状態の検証](verify-a-reporting-services-installation.md)」をご覧ください。  
+1.  ブラウザーを開き、URL アドレスを入力して、レポート サーバーおよびレポート マネージャーの仮想ディレクトリをテストします。 詳細については、「[Reporting Services のインストール状態の検証](verify-a-reporting-services-installation.md)」をご覧ください。  
   
-2.  レポートをテストし、レポートに意図したデータが含まれることを確認します。 データ ソース情報で、データ ソース接続情報が指定されたままになっているかどうかを確認します。 レポート サーバーでは、レポートを処理および表示する際に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート オブジェクト モデルが使用されますが、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の構造は新しいレポート定義言語要素には置き換えられません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバーで既存のレポートが実行される方法の詳細については、「[レポートのアップグレード](upgrade-reports.md)」をご覧ください。  
+2.  レポートをテストし、レポートに意図したデータが含まれることを確認します。 データ ソース情報で、データ ソース接続情報が指定されたままになっているかどうかを確認します。 レポート サーバーでは、レポートを処理および表示する際に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート オブジェクト モデルが使用されますが、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の構造は新しいレポート定義言語要素には置き換えられません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバーで既存のレポートが実行される方法の詳細については、「 [レポートのアップグレード](upgrade-reports.md)」をご覧ください。  
   
 ##  <a name="bkmk_remove_unused"></a> 使用しないプログラムおよびファイルの削除  
  レポート サーバーを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに正常に移行したら、次の手順に従って、不要になったプログラムとファイルを削除できます。  
@@ -268,8 +259,8 @@ ms.locfileid: "48082892"
 2.  このコンピューター上で IIS が不要になった場合は削除します。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services のインストールを移行&#40;SharePoint モード&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [レポート サーバー データベース&#40;SSRS ネイティブ モード&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Reporting Services のインストールの移行 &#40;SharePoint モード&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
+ [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services のアップグレードと移行](upgrade-and-migrate-reporting-services.md)   
  [Reporting Services の旧バージョンとの互換性](../reporting-services-backward-compatibility.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

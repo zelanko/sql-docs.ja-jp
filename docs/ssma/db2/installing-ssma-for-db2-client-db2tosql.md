@@ -10,12 +10,12 @@ ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4e77b08484a08871d2b9dcd70de0ddf339bb8f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d479c8f7de1c9d7463e57f37f9e8588c9bc68b6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805970"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666501"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>SSMA for DB2 クライアント (DB2ToSQL) のインストール
 SSMA クライアントは、次のタスクを実行するプログラム ファイルで構成されます。  
@@ -41,7 +41,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー 3.1 またはそれ以降のバージョン。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 またはそれ以降のバージョン。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品メディア。 取得することも、 [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882)します。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 またはそれ以降のバージョン。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン 4.0 は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品メディア。 取得することも、 [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882)します。  
   
 -   DB2 バージョン 5 または以降のバージョンと移行する DB2 データベースへの接続用の Microsoft OLEDB プロバイダー。  
   
@@ -50,9 +50,9 @@ SSMA をインストールする前に、コンピューターが、次の要件
 -   4 GB の RAM を推奨します。  
   
 ## <a name="microsoft-oledb-provider-for-db2"></a>Microsoft ole DB Provider for DB2  
-OLEDB provider for DB2 バージョン 5.0 をダウンロードする」に進んでください[Microsoft® SQL Server® 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295)します。  
+OLEDB provider for DB2 バージョン 5.0 をダウンロードする」に進んでください[Microsoft® SQL Server® 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=42295)します。  
   
-SSMA は、Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](http://aka.ms/ssmafordb2)します。  
+SSMA は、Web からダウンロードします。 最新バージョンをダウンロードするを参照してください。、 [SQL Server Migration Assistant のダウンロード ページ](https://aka.ms/ssmafordb2)します。  
   
 最新バージョンをダウンロードした後は、SSMA をインストールする前からインストール ファイルを抽出する必要があります。  
   

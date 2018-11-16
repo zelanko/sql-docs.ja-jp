@@ -15,16 +15,16 @@ ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcb4ccd685a5f28377972db03d32496017bda8cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaa379431395f3f5fbb01d777042118553bd7e18
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731222"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599632"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  次の例は、の必要なパラメーターを設定する方法を示します[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)実行時にします。 方法、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を使用して取得されて、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドは、の設定によって決まりますが、 [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)と[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)プロパティ。 この例をテストする切り取りと標準の ASP 文書に次のコードを貼り付けるし、名前を付けます**RefreshVBS.asp**します。 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 ASP スクリプトは、サーバーで識別されます。  
   
@@ -86,7 +86,7 @@ body {
    ID=RDC HEIGHT=1 WIDTH=1>  
 </OBJECT>  
 <HR>  
-Server: <Input Size=70 Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+Server: <Input Size=70 Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 Connect: <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'"><BR>  
 SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">  
 <HR>  
@@ -104,7 +104,7 @@ SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">
    <TD>Asynchronously: <BR>  
       <Input Type="Radio" Name="optExecuteOptions"  OnClick="SetExO('adcExecAsync')">  
    </TD>  
-   <TD> </TD>  
+   <TD> </TD>  
 </TR>  
 <TR>  
    <TD COLSPAN=3 BGCOLOR=silver>  

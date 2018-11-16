@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148047"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607142"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -127,7 +127,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ## <a name="remarks"></a>コメント  
  組み込みのテスト データセットを持つモデルを作成する場合は、CREATE MINING STRUCTURE ステートメントの後に ALTER MINING STRUCTURE ステートメントを使用します。 ただし、すべての種類のモデルで予約データセットがサポートされるわけではありません。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
   
- CREATEMODEL ステートメントを使用してマイニング モデルを作成する方法のチュートリアルは、次を参照してください。[時系列予測の DMX チュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)します。  
+ CREATEMODEL ステートメントを使用してマイニング モデルを作成する方法のチュートリアルは、次を参照してください。[時系列予測の DMX チュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)します。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes の例  
  次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して、新しいマイニング モデルを作成しています。 Bike Buyer の列は、予測可能属性として定義されています。  

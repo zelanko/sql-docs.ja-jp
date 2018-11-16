@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04850440b9dd1a5da9270b7782c07dca93bbab54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb493378240f8c536b0af1c1b0ff5cf3bc93c042
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757800"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558539"
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルの Connect セクション
 ハンドラーの既定の動作では、すべての接続を拒否します。 **接続**セクションでは、その動作の例外を指定します。 たとえば、すべての場合、**接続**セクションが存在しない場合、または空の場合、既定で接続を確立できませんでした。  
@@ -31,12 +31,12 @@ ms.locfileid: "47757800"
 -   クライアントの接続文字列を置換する新しい接続文字列。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="syntax"></a>構文  
  形式は、既定のアクセス エントリです。  
   
-```  
+```console
   
 Access=  
 accessRight  
@@ -45,7 +45,7 @@ accessRight
   
  形式は、接続文字列の置換エントリです。  
   
-```  
+```console
   
 Connect=  
 connectionString  

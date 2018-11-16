@@ -1,5 +1,5 @@
 ---
-title: IIf (MDX) |Microsoft ドキュメント
+title: IIf (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ff85ddef47099462a8c38031141120d02bfd1019
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740681"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700780"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -29,19 +29,19 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>引数  
- IIf 関数は、次の 3 つの引数を受け取る: iif (\<条件 >、 \<then 分岐 >、 \<else 分岐 >)。  
+ IIf 関数は、3 つの引数を受け取る: iif (\<条件 >、 \<then 分岐 >、 \<else 分岐 >)。  
   
  *Logical_Expression*  
- 評価される条件**true** (1) または**false** (0) です。 有効な多次元式 (MDX) の論理式を指定する必要があります。  
+ 評価される条件**true** (1) または**false** (0)。 有効な多次元式 (MDX) の論理式を指定する必要があります。  
   
- *Expression1 ヒント [Eager |厳密な |レイジー]*  
- 論理式に評価するときに使用**true**です。 Expression1 には、有効な多次元式 (MDX) を指定する必要があります。  
+ *Expression1 ヒント [Eager |厳密な |遅延]*  
+ 論理式を評価するときに使用**true**します。 Expression1 には、有効な多次元式 (MDX) を指定する必要があります。  
   
- *Expression2 ヒント [Eager |厳密な |レイジー]*  
- 論理式に評価するときに使用**false**です。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
+ *Expression2 ヒント [Eager |厳密な |遅延]*  
+ 論理式を評価するときに使用**false**します。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
   
 ## <a name="remarks"></a>コメント  
- 論理式で指定された条件の評価が**false**この式の値が 0 の場合。 その他の値を評価する**true**です。  
+ 論理式で指定された条件の評価が**false**ときに、この式の値は 0 です。 その他の値を評価する**true**します。  
   
  条件の場合は**true**、 **IIf**関数は、最初の式を返します。 それ以外の場合は、2 番目の式を返します。  
   
@@ -64,10 +64,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  ヒントで EAGER と STRICT を同時に使用することはできません。同じ IIF(,,) の別の式で使用することはできます。  
   
- 詳細については、次を参照してください。 [IIF 関数のクエリ ヒントでは、SQL Server Analysis Services 2008](http://go.microsoft.com/fwlink/?LinkId=269540)と[実行プランおよび MDX の IIF 関数と CASE ステートメントのプラン ヒント](http://go.microsoft.com/fwlink/?LinkId=269565)です。  
+ 詳細については、次を参照してください。 [IIF 関数のクエリ ヒントでは、SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540)と[実行プランおよび MDX の IIF 関数と CASE ステートメントのプラン ヒント](https://go.microsoft.com/fwlink/?LinkId=269565)します。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリは、の簡単な使用を示しています。 **IIF** Internet Sales Amount メジャーが大きい場合に 2 つの異なる文字列値または $10000 未満のいずれかを返す計算されるメジャー内。  
+ 次のクエリの簡単な使用を示しています。 **IIF** Internet Sales Amount メジャーが大きい場合は、2 つの異なる文字列値または $10000 未満のいずれかを返す計算されるメジャー内で。  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   
@@ -178,6 +178,6 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

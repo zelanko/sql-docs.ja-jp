@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f8d910bc9b6d85475a937940787aec7a312ef3bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dade699d433ce2b7ab95d3f09f370adedc8bcf2e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781170"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664061"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47781170"
 |is_transactional|**bit**|セッションが現在のトランザクション内でかしないかどうかをキャプチャします。|自動コミットの場合は 0、1 をトランザクションです。|  
 |client_id|**nvarchar (255)**|セッションのクライアント情報をキャプチャします。|任意の有効な文字列。|  
 |app_name|**nvarchar (255)**|必要に応じて、接続処理の一部として設定するアプリケーション名の情報をキャプチャします。|任意の有効な文字列。|  
-|sql_spid|**int**|SPID の id 番号。 使用して、`session_id`このセッションです。 使用して、`sql_spid`に結合する列**sys.dm_pdw_nodes_exec_sessions**します。<br /><br /> **\*\* 警告\* \*** この列には、閉じている Spid が含まれています。||  
+|sql_spid|**int**|SPID の id 番号。 使用して、 `session_id` このセッションです。 使用して、`sql_spid`に結合する列**sys.dm_pdw_nodes_exec_sessions**します。<br /><br /> **\*\* 警告\* \*** この列には、閉じている Spid が含まれています。||  
   
- このビューで保持される最大行数は、詳細については、システム ビューの最大値」セクションを参照してください、[最小値と最大値 (SQL Server PDW)](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)トピック。  
+ このビューで保持される最大行数は、詳細については、システム ビューの最大値」セクションを参照してください、[最小値と最大値 (SQL Server PDW)](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)トピック。  
   
 ## <a name="permissions"></a>アクセス許可  
  `VIEW SERVER STATE` アクセス許可が必要です。  

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7721018d887fdb4c24293c4076f384167f38a55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695080"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350274"
 ---
 # <a name="working-with-multidimensional-data"></a>多次元データの操作
 A*セルセット*多次元データに対するクエリの結果です。 軸、以下の 4 つの軸は、通常、通常 2 つまたは 3 つのコレクションで構成されます。 *軸*を探すか、キューブ内の特定の値をフィルター処理に使用される 1 つまたは複数のディメンションのメンバーのコレクションです。  
@@ -64,7 +64,7 @@ A*セルセット*多次元データに対するクエリの結果です。 軸�
   
  各座標が 2 つのメンバーの位置として表されます: Geography ディメンションから別の販売員のディメンションと 1 つ。  
   
-```  
+```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
 (Valentine, Japan), (Nash, Seattle), (Nash, Boston), (Nash, USA_North),  
 (Nash, Japan)  
@@ -72,13 +72,13 @@ A*セルセット*多次元データに対するクエリの結果です。 軸�
   
  Y 軸には、次の 8 つの位置を含む 1 つだけのディメンションがあります。  
   
-```  
+```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
  セル セット、セル、軸、および位置はすべてで表される ADO MD で対応するオブジェクト:[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)、および[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

@@ -11,12 +11,12 @@ ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e113f931e318c501f69540ec19e97e3ae72b553f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04f2f2c71c3560fe892d63dd5263b8b6f846a241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130542"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638619"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>テーブル モデル パーティションの処理 (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 このトピックのタスクでは、 **で** [パーティションの処理] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、モデル データベースでパーティションを処理する方法について説明します。  
@@ -27,7 +27,7 @@ ms.locfileid: "48130542"
   
 2.  **[パーティション]** ダイアログ ボックスの **[パーティション]** で、[処理] ボタンをクリックします。  
   
-3.  **[パーティションの処理]** ダイアログ ボックスの **[モード]** ボックスの一覧で、次のプロセス モードのいずれかを選択します。  
+3.  **パーティションの処理**  ダイアログ ボックスで、**モード**ボックスの一覧で、次のプロセス モードのいずれかを選択します。  
   
     |モード|説明|  
     |----------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "48130542"
 4.  **[処理]** チェックボックス列で、選択したモードで処理するパーティションを選択し、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [テーブル モデル パーティション&#40;SSAS 表形式&#41;](partitions-ssas-tabular.md)   
- [テーブル モデル パーティション作成し、管理&#40;SSAS 表形式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [テーブル モデル パーティション (SSAS テーブル)](partitions-ssas-tabular.md)   
+ [テーブル モデル パーティションの作成および管理 (SSAS テーブル)](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

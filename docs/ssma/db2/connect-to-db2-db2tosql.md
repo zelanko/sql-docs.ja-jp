@@ -10,12 +10,12 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 74ece76fcb02fe77825d0f08e76b262df195d7b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768912"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670521"
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2 への接続 (DB2ToSQL)
 使用して、 **DB2 への接続**を移行する DB2 データベースに接続するためのダイアログ ボックス。  
@@ -70,7 +70,7 @@ SSMA は、DB2 データベースへの接続に使用するユーザー名を�
   
 接続文字列は、パラメーターの名前と値のペアで構成されます。  
   
--   OLE DB 接続文字列については、次を参照してください。 [Microsoft OLE DB Provider for DB2](http://go.microsoft.com/fwlink/?LinkId=85640) 、MSDN ライブラリの記事。  
+-   OLE DB 接続文字列については、次を参照してください。 [Microsoft OLE DB Provider for DB2](https://go.microsoft.com/fwlink/?LinkId=85640) 、MSDN ライブラリの記事。  
   
 SSMA 接続文字列の場合に、プロバイダーのパラメーターを常に含めます。 また、DB2 に接続するときに、ポート パラメーターを含めることを確認します。  
   

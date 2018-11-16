@@ -16,16 +16,16 @@ ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 325b6f9a6adb53752b8f0229a0333934f179042a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f57dba47697120e2632afebbd24ea6b16270d195
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737290"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599870"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset と SourceRecordset プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  次の例のために必要なパラメーターを設定する方法を示しています、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)実行時に既定のビジネス オブジェクト。  
   
@@ -92,7 +92,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
    </TR>  
 </TABLE>  
 <HR>  
-<Input Size=70 Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+<Input Size=70 Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'"><BR>  
 <Input Size=70 Name="txtSQL" Value="SELECT FirstName, LastName FROM Employees">  
 <HR>  
@@ -103,7 +103,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
   
    Dim rdsDF  
    Dim strServer  
-   strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+   strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
   
    Sub Run_OnClick()  
   

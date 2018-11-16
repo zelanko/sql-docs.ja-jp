@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74f537c6017a2d8d247200ceccbd0faacb125cac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9203b6b0708b564645ab5da8cf6788452bc195f5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595930"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672321"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47595930"
   手動コミット モードで呼び出して**SQLFreeHandle**ステートメントでは、開いているトランザクションがあるハンドルによりの保留中のデータベースに変更のロールバックされます。 呼び出す**SQLFreeHandle**ステートメントでハンドル常に開いているカーソルを閉じて破棄保留中の結果、ステートメント ハンドルに関連付けられたすべてのリソースを解放します。  
   
 ## <a name="see-also"></a>参照  
- [SQLFreeHandle 関数](http://go.microsoft.com/fwlink/?LinkId=59345)   
+ [SQLFreeHandle 関数](https://go.microsoft.com/fwlink/?LinkId=59345)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

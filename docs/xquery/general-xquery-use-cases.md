@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 49bf0afdc009b314f2ea43c6d0b9db72390f4d35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdfb1bf06bd7b1157525ffd2beed10c4c3daf2be
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661990"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659381"
 ---
 # <a name="general-xquery-use-cases"></a>XQuery の一般的な使用例
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47661990"
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   <Product  ProductModelID="{ (/p1:ProductDescription/@ProductModelID)[1] }">  
      {   
        /p1:ProductDescription/p1:Specifications/Weight   
@@ -73,10 +72,10 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 次のクエリは、同じ情報を取得、カタログの説明が、製品モデルに対してのみには、重みが含まれていますが、<`Weight`>、仕様内の要素、<`Specifications`> 要素。 この例では、WITH XMLNAMESPACES を使用して pd プレフィックスとこれにバインドされる名前空間を定義しています。 これにより、バインディングに記述されていない両方、 **query()** メソッドと、 **exist()** メソッド。  
+ 次のクエリは前と同じ情報を取得しますが、カタログの説明で、仕様部分 (<`Specifications`> 要素) に重量 (<`Weight`> 要素) が含まれる製品モデルのみを取得します。 この例では、WITH XMLNAMESPACES を使用して pd プレフィックスとこれにバインドされる名前空間を定義しています。 これにより、バインディングに記述されていない両方、 **query()** メソッドと、 **exist()** メソッド。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT CatalogDescription.query('  
           <Product  ProductModelID="{ (/pd:ProductDescription/@ProductModelID)[1] }">  
                  {   
@@ -91,7 +90,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
  前のクエリで、 **exist()** のメソッド、 **xml** WHERE 句があるかどうかをチェックのデータ型の <`Weight`> 内の要素、<`Specifications`> 要素。  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. カタログの説明に正面からの小さな製品写真が含まれる製品モデルの製品モデル ID の検索  
- XML 製品カタログの説明には、製品の写真が含まれています、<`Picture`> 要素。 各写真には、いくつかのプロパティがあります。 以下の画像の角度を <`Angle`> 要素、および、サイズ、<`Size`> 要素。  
+ XML 製品カタログの説明には製品の写真 (<`Picture`> 要素) が含まれています。 各写真には、いくつかのプロパティがあります。 プロパティには、写真の撮影方向 (<`Angle`> 要素) と写真のサイズ (<`Size`> 要素) などがあります。  
   
  カタログの説明に正面からの小さな写真が含まれる製品モデルを取得するために、クエリは次の形式の XML を構築します。  
   
@@ -102,7 +101,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
     <Size>small</Size>  
   </Picture>  
 </Product>  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT CatalogDescription.query('  
    <pd:Product  ProductModelID="{ (/pd:ProductDescription/@ProductModelID)[1] }">  
       <Picture>  
@@ -127,7 +126,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
 ```  
 <p1:Product   
-  xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+  xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
   ProductModelID="19">  
   <Picture>  
     <p1:Angle>front</p1:Angle>  
@@ -138,11 +137,11 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ```  
   
 ### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 製品のフラットなリストにで囲まれた各ペアのモデルの名前と機能のペアを作成、\<機能 > 要素  
- 製品モデル カタログの説明の XML には、いくつか製品の特徴が含まれています。 含まれるこれらの機能はすべて、<`Features`> 要素。 クエリを使用して[XML の構築 (XQuery)](../xquery/xml-construction-xquery.md)必要な XML を構築します。 中かっこに囲まれた式が、結果に置き換えられます。  
+ 製品モデル カタログの説明の XML には、いくつか製品の特徴が含まれています。 これらの特徴のデータは、<`Features`> 要素に含まれています。 クエリを使用して[XML の構築 (XQuery)](../xquery/xml-construction-xquery.md)必要な XML を構築します。 中かっこに囲まれた式が、結果に置き換えられます。  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   for $pd in /p1:ProductDescription,  
    $f in $pd/p1:Features/*  
   return  
@@ -170,7 +169,7 @@ WHERE ProductModelID=19
  <ProductModelName>Mountain 100</ProductModelName>  
  <ProductModelID>19</ProductModelID>  
  <p1:Warranty   
-   xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+   xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <p1:WarrantyPeriod>3 year</p1:WarrantyPeriod>  
     <p1:Description>parts and labor</p1:Description>  
  </p1:Warranty>  
@@ -178,7 +177,7 @@ WHERE ProductModelID=19
 <Feature>  
  <ProductModelName>Mountain 100</ProductModelName>  
  <ProductModelID>19</ProductModelID>  
- <p2:Maintenance xmlns:p2="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+ <p2:Maintenance xmlns:p2="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <p2:NoOfYears>10</p2:NoOfYears>  
     <p2:Description>maintenance contact available through your dealer   
            or any AdventureWorks retail store.</p2:Description>  
@@ -193,7 +192,7 @@ WHERE ProductModelID=19
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-     declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <Product>  
          <ProductModelName>   
            { data(/pd:ProductDescription/@ProductModelName) }   
@@ -216,11 +215,11 @@ WHERE ProductModelID=19
   <ProductModelID>19</ProductModelID>  
   <p1:Warranty>... </p1:Warranty>  
   <p2:Maintenance>...  </p2:Maintenance>  
-  <p3:wheel xmlns:p3="http://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p3:wheel>  
-  <p4:saddle xmlns:p4="http://www.adventure-works.com/schemas/OtherFeatures">  
-    <p5:i xmlns:p5="http://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
-  <p6:pedal xmlns:p6="http://www.adventure-works.com/schemas/OtherFeatures">  
-    <p7:b xmlns:p7="http://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
+  <p3:wheel xmlns:p3="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p3:wheel>  
+  <p4:saddle xmlns:p4="https://www.adventure-works.com/schemas/OtherFeatures">  
+    <p5:i xmlns:p5="https://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
+  <p6:pedal xmlns:p6="https://www.adventure-works.com/schemas/OtherFeatures">  
+    <p7:b xmlns:p7="https://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
    ...  
 ```  
   
@@ -229,7 +228,7 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <Product>   
           { /pd:ProductDescription/@ProductModelID }  
           { /pd:ProductDescription/@ProductModelName }   
@@ -254,11 +253,11 @@ WHERE CatalogDescription is not NULL
 -   FOR ... RETURN ループ部分により、最初の 2 つの製品の特徴情報が取得されます。 **Position()** 関数を使用して、シーケンス内の要素の位置を確認します。  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. 製品カタログの説明からの "ons" で終わる要素名の検索  
- 次のクエリは、カタログの説明を検索し、内のすべての要素を返します、<`ProductDescription`>"ons"で終わる名前を持つ要素。  
+ 次のクエリでは、カタログの説明内を検索し、<`ProductDescription`> 要素から名前が "ons" で終わる要素をすべて返します。  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-     declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
       for $pd in /p1:ProductDescription/*[substring(local-name(.),string-length(local-name(.))-2,3)="ons"]  
       return   
           <Root>  
@@ -275,7 +274,7 @@ WHERE CatalogDescription is not NULL
 ProductModelID   Result  
 -----------------------------------------  
          19        <Root>         
-                     <p1:Specifications xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">          
+                     <p1:Specifications xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">          
                           ...         
                      </p1:Specifications>         
                    </Root>          
@@ -285,7 +284,7 @@ ProductModelID   Result
  次のクエリでは、カタログの説明の概要説明に "Aerodynamic" という語を含む製品モデルを取得します。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
           <Prod >  
              { /pd:ProductDescription/@ProductModelID }  
@@ -313,8 +312,8 @@ WHERE CatalogDescription.value('
 ProductModelID Result        
 -------------- ------------------------------------------  
 28     <Prod ProductModelID="28">  
-        <pd:Summary xmlns:pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-       <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
+        <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+       <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
          A TRUE multi-sport bike that offers streamlined riding and a  
          revolutionary design. Aerodynamic design lets you ride with the   
          pros, and the gearing will conquer hilly roads.</p1:p>  
@@ -323,13 +322,13 @@ ProductModelID Result
 ```  
   
 ### <a name="h-find-product-models-whose-catalog-descriptions-do-not-include-product-model-pictures"></a>H. カタログの説明に製品モデルの写真が含まれない製品モデルの検索  
- 次のクエリを含めるれない製品モデル カタログの説明が操作を実行しているの Productmodelid を取得する <`Picture`> 要素。  
+ 次のクエリは、カタログの説明に <`Picture`> 要素が含まれない製品モデルの ProductModelID を取得します。  
   
 ```  
 SELECT  ProductModelID  
 FROM    Production.ProductModel  
 WHERE   CatalogDescription is not NULL  
-AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /p1:ProductDescription/p1:Picture  
 ') = 0  
 ```  
@@ -338,7 +337,7 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
   
 -   場合、 **exist()** WHERE 句が False (0) を返すメソッド、製品モデル ID が返されます。 それ以外の場合は、製品モデル ID が返されます。  
   
--   すべての製品の説明が含まれるため、<`Picture`> 要素を結果セットは空ここでします。  
+-   この例では、<`Picture`> 要素はすべての製品の説明に含まれているので、結果セットは空になります。  
   
 ## <a name="see-also"></a>参照  
  [階層に関連する XQueries](../xquery/xqueries-involving-hierarchy.md)   

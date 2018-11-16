@@ -1,5 +1,5 @@
 ---
-title: 単純なシミュレーション (SQL と R deep dive) を作成 |Microsoft ドキュメント
+title: (SQL と R の詳細情報) の簡単なシミュレーションの作成 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,27 +7,27 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7c93d91324233b05541c09e037f5043f2d9e376f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b0db5fdfd177f1303432659f7a96b0fbf111c000
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202884"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698240"
 ---
-# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>単純なシミュレーション (SQL と R deep dive) の作成します。
+# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>(SQL と R の詳細情報) の簡単なシミュレーションを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事は、最後の手順を使用する方法について、データ サイエンス Deep Dive のチュートリアルで[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
+この記事では、最後の手順をチュートリアルでは、データ サイエンスの詳細情報、使用する方法の[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
 
-これまで使用したように設計された R 関数の間でデータを移動するには、具体的には[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]およびローカル コンピューティング コンテキスト。 しかしながら、独自のカスタム R 関数を記述し、それをサーバーで実行するにはどうすればよいでしょうか。
+これまで使用したように設計された R 関数の間でデータを移動するには、具体的には[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とローカル コンピューティング コンテキスト。 しかしながら、独自のカスタム R 関数を記述し、それをサーバーで実行するにはどうすればよいでしょうか。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rxExec [関数を使用して、](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) コンピューターで任意の関数を呼び出すことができます。 使用することも**rxExec**明示的に作業を 1 つのサーバーのコアに分散させる。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rxExec [関数を使用して、](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) コンピューターで任意の関数を呼び出すことができます。 使用することも**rxExec**を明示的に作業を 1 つのサーバー コアに分散します。
 
-このレッスンでは、リモート サーバーを使用する単純なシミュレーションを作成します。 このシミュレーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データは必要ありません。この例では、カスタム関数を設計し、 **rxExec** を使用してそれを呼び出す方法のみを示します。
+このレッスンでは、リモート サーバーを使用する簡単なシミュレーションを作成します。 このシミュレーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データは必要ありません。この例では、カスタム関数を設計し、 **rxExec** を使用してそれを呼び出す方法のみを示します。
 
-使用するより複雑な例については**rxExec**、この記事を参照してください: [foreach と rxExec 粒度が粗い並列処理](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+使用するより複雑な例については**rxExec**、この記事を参照してください: [foreach と rxExec 粒度が粗い並列処理](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
-## <a name="create-the-custom-function"></a>ユーザー定義関数を作成します。
+## <a name="create-the-custom-function"></a>カスタム関数を作成します。
 
 一般的なカジノ ゲームでは、一組のサイコロを次のルールで転がします。
 
@@ -65,7 +65,7 @@ ms.locfileid: "31202884"
     }
     ```
   
-2.  さいころの 1 つのゲームをシミュレートするには、関数を実行します。
+2.  1 つのサイコロ ゲームをシミュレートするには、関数を実行します。
   
     ```R
     rollDice()
@@ -73,13 +73,13 @@ ms.locfileid: "31202884"
   
     あなたの勝ちでしたか。それとも負けでしたか。
   
-今すぐを使用する方法を見て**rxExec**関数を複数回実行する、成功の確率を特定するのに役立つシミュレーションを作成します。
+今すぐ使用する方法を見てみましょう**rxExec**関数を複数回実行する、成功の確率を特定するのに役立つシミュレーションを作成します。
 
 ## <a name="create-the-simulation"></a>シミュレーションを作成します。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターで任意の関数を実行するには、 **rxExec** 関数を呼び出します。 **RxExec**も並列でノード間での関数の実行の分散をサポートしているまたはコアのコンテキストでは、サーバー、ここで、SQL Server コンピューターで、カスタム関数を実行します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターで任意の関数を実行するには、 **rxExec** 関数を呼び出します。 **RxExec**も並列ノード間で、関数の実行の分散をサポートしているか、コア サーバーのコンテキストは、ここで、SQL Server コンピューターで、カスタム関数を実行します。
 
-1. カスタム関数に渡す引数として呼び出す**rxExec**シミュレーションを変更するその他のパラメーターと連携して、します。
+1. 引数としてカスタム関数を呼び出す**rxExec**をシミュレーションを変更するその他のパラメーターを使用します。
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -102,7 +102,7 @@ ms.locfileid: "31202884"
   
     結果は次のようになります。
   
-     *損失 Win* *12 8*
+     *負け勝ち* *12 8*
 
 ## <a name="conclusions"></a>結論
 
@@ -115,9 +115,9 @@ ms.locfileid: "31202884"
 -   ワークステーションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーの間でモデル、データ、プロットを渡す
   
 
-1,000万観測の大規模なデータセットを使用してこれらの手法をテストする場合は、データ ファイルは、Revolution analytics の web サイトから:[データセットのインデックス](http://packages.revolutionanalytics.com/datasets)
+Revolution analytics web サイトからデータ ファイルは 1,000万の所見の大規模なデータセットを使用してこれらの手法を実験したい場合:[データセットのインデックス](https://packages.revolutionanalytics.com/datasets)
 
-大きなデータ ファイルのこのチュートリアルを再利用するには、データをダウンロードして各データ ソースの次のように変更します。
+大きなデータ ファイルでこのチュートリアルを再利用するには、データをダウンロードし、各データ ソースの次のように変更します。
 
 1. 変数の変更`ccFraudCsv`と`ccScoreCsv`新しいデータ ファイルを指定するには
 2. 参照されるテーブルの名前を変更*sqlFraudTable*に `ccFraud10`
@@ -125,9 +125,9 @@ ms.locfileid: "31202884"
 
 ## <a name="additional-samples"></a>その他のサンプル
 
-計算コンテキストと RevoScaler 関数に渡すし、データ変換の使用を習得すれば、これでは、このチュートリアルを確認します。
+コンピューティング コンテキストを渡すし、データ変換の RevoScaler 関数の使用を習得したので、これでは、これらのチュートリアルをご覧ください。
 
-[Machine Learning のサービスの R のチュートリアル](machine-learning-services-tutorials.md)
+[Machine Learning Services の R のチュートリアル](machine-learning-services-tutorials.md)
 ## <a name="previous-step"></a>前の手順
 
 [SQL Server と XDF ファイル間のデータの移動](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

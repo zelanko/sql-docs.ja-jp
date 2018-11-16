@@ -14,18 +14,18 @@ ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 73fa3e4631dac4e8f376a9832e1a1dbc0b753a52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa590c0286f437efb80ad92503e5bfefb62692ce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601970"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606712"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn プロパティ (RDS)
 フィルター条件の評価対象となる列を示します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ DataControl.FilterColumn = String
  *DataControl*  
  オブジェクト変数を表す、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
- *文字列*  
+ *String*  
  A**文字列**フィルター条件の評価対象となる列を指定する値。 フィルター条件がで指定された、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)プロパティ。  
   
 ## <a name="remarks"></a>コメント  

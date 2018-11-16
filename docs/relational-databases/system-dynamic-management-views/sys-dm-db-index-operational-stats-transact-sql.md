@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8ddd123c60806826918f8b42412048aaa408776
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8103e48da5c0059cfc977f862ebd8fc0839fb9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716500"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661061"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|データベース ID。|    
 |**object_id**|**int**|テーブルまたはビューの ID。|    
 |**index_id**|**int**|インデックスまたはヒープの ID。<br /><br /> 0 = ヒープ|    
-|**hobt_id**|**bigint**|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> データ ヒープまたは列ストア インデックスの内部データを追跡する B ツリーの行セットの ID。<br /><br /> NULL: これは、内部の列ストア行セットではありません。<br /><br /> 詳細については、次を参照してください[sys.internal_partitions &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> データ ヒープまたは列ストア インデックスの内部データを追跡する B ツリーの行セットの ID。<br /><br /> NULL: これは、内部の列ストア行セットではありません。<br /><br /> 詳細については、次を参照してください[sys.internal_partitions &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|インデックスまたはヒープ内の、1 から始まるパーティション番号。|    
 |**leaf_insert_count**|**bigint**|リーフレベルの挿入の累積数。|    
 |**leaf_delete_count**|**bigint**|リーフレベルの削除の累積数。 leaf_delete_count はまずゴーストとしてマークされない削除されたレコードだけ増加します。 最初に、非実体化が削除されたレコードの**leaf_ghost_count**は代わりにインクリメントされます。|    
@@ -112,14 +112,14 @@ sys.dm_db_index_operational_stats (
 |**column_value_pull_in_row_count**|**bigint**|行内に取り込まれた LOB データおよび行オーバーフロー データに対する列値の累積数。 これは、更新操作によりレコード内の領域が解放され、LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットから IN_ROW_DATA アロケーション ユニットに 1 つ以上の行外値を取り込めるようになったときに発生します。|    
 |**row_lock_count**|**bigint**|要求された行ロックの累積数。|    
 |**row_lock_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]が行ロックで待機した累積回数。|    
-|**row_lock_wait_in_ms**|**bigint**|ミリ秒単位の合計数、[!INCLUDE[ssDE](../../includes/ssde-md.md)]行ロックで待機します。|    
+|**row_lock_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]が行ロックで待機した合計ミリ秒数。|    
 |**page_lock_count**|**bigint**|要求されたページ ロックの累積数。|    
-|**page_lock_wait_count**|**bigint**|時間の累積数、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ページ ロックで待機します。|    
+|**page_lock_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]がページ ロックで待機した累積回数。|    
 |**page_lock_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]がページ ロックで待機した合計ミリ秒数。|    
 |**index_lock_promotion_attempt_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]がロックのエスカレートを試行した累積回数。|    
-|**index_lock_promotion_count**|**bigint**|時間の累積数、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ロックがエスカレートされます。|    
-|**page_latch_wait_count**|**bigint**|時間の累積数、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ラッチの競合のため待機します。|    
-|**page_latch_wait_in_ms**|**bigint**|累積ミリ秒数、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ラッチの競合のため待機します。|    
+|**index_lock_promotion_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]がロックをエスカレートした累積回数。|    
+|**page_latch_wait_count**|**bigint**|ラッチ競合のために、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が待機した累積回数。|    
+|**page_latch_wait_in_ms**|**bigint**|ラッチ競合のために、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が待機した累積ミリ秒数。|    
 |**page_io_latch_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]がページ I/O ラッチで待機した累積回数。|    
 |**page_io_latch_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]がページ I/O ラッチで待機した累積ミリ秒数。|    
 |**tree_page_latch_wait_count**|**bigint**|サブセット**page_latch_wait_count**を上位レベルの B ツリー ページのみが含まれています。 ヒープまたは列ストア インデックスでは、常に 0 です。|    
@@ -178,7 +178,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>メタデータ キャッシュ内のカウンターのリセット方法    
  によって返されるデータ**sys.dm_db_index_operational_stats**ヒープまたはインデックスを表すメタデータ キャッシュ オブジェクトが使用可能な限りのみ存在します。 このデータは持続性はなく、トランザクション上の一貫性もありません。 つまり、これらのカウンターを使って、インデックスが使用されているかどうかや、インデックスが最後に使用されたのはいつであるかを判断することはできません。 これについては、次を参照してください。 [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)します。    
     
- ヒープまたはインデックスに対するメタデータがメタデータ キャッシュに組み込まれるたび、各列の値はゼロに設定されます。統計値は、キャッシュ オブジェクトがメタデータ キャッシュから削除されるまで累積されます。 そのため、アクティブなヒープまたはインデックスを常がない、メタデータ、キャッシュ内と累積数は以降のインスタンスのアクティビティを反映する場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が最後に起動します。 アクティブになる頻度が低いヒープやインデックスのメタデータは、使用状況に応じてキャッシュ内外に移動されます。 その結果、使用できる値が存在する場合と、存在しない場合が発生します。 インデックスを削除すると、対応する統計はメモリから削除され、この関数ではレポートされなくなります。 インデックスに対するその他の DDL 操作によって、統計の値がゼロにリセットされる場合もあります。    
+ ヒープまたはインデックスに対するメタデータがメタデータ キャッシュに組み込まれるたび、各列の値はゼロに設定されます。統計値は、キャッシュ オブジェクトがメタデータ キャッシュから削除されるまで累積されます。 したがって、キャッシュにはアクティブなヒープまたはインデックスのメタデータが常に存在し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが最後に開始してからの動作が累積数として反映されます。 アクティブになる頻度が低いヒープやインデックスのメタデータは、使用状況に応じてキャッシュ内外に移動されます。 その結果、使用できる値が存在する場合と、存在しない場合が発生します。 インデックスを削除すると、対応する統計はメモリから削除され、この関数ではレポートされなくなります。 インデックスに対するその他の DDL 操作によって、統計の値がゼロにリセットされる場合もあります。    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>システム関数によるパラメーター値の指定    
  使用することができます、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)と[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)の値を指定する、 *database_id*と*object_id*パラメーター。 ただし、これらの関数に無効な値を渡すと、意図しない結果が生じる可能性があります。 DB_ID または OBJECT_ID を使用する場合は、必ず有効な ID が返されるようにしてください。 詳細については、「解説」セクションを参照してください。 [sys.dm_db_index_physical_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)します。    
@@ -228,7 +228,7 @@ GO
 ```    
     
 ### <a name="b-returning-information-for-all-tables-and-indexes"></a>B. すべてのテーブルとインデックスの情報を返す    
- 次の例のインスタンス内のすべてのテーブルとインデックスの情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 このクエリを実行するには、VIEW SERVER STATE 権限が必要です。    
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのテーブルとインデックスについて情報を返します。 このクエリを実行するには、VIEW SERVER STATE 権限が必要です。    
     
 ```    
 SELECT * FROM sys.dm_db_index_operational_stats( NULL, NULL, NULL, NULL);    
@@ -244,7 +244,7 @@ GO
  [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

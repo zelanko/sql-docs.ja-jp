@@ -15,17 +15,17 @@ ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2db4e4b4d3d7d137f4f033e35dd643cb0a2d11bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3382e222a03f7538d3c666c3b85527b487d499f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666630"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599787"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>階層レコードセットの保持
 階層構造を保存する**レコード セット**を呼び出すことによって、adtg 形式または XML 形式でファイルに、[保存](../../../ado/reference/ado-api/save-method.md)メソッド。 階層を保存するときに、2 つの制限を適用するただし、**レコード セット**XML 形式で s: 場合は、XML で保存することはできません、階層**レコード セット**保留中の更新プログラムが含まれていて、パラメーター化されたを保存することはできません階層**Recordset**します。  
   
- データ シェイプ プロバイダーの詳細については、次を参照してください。 [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) と[for OLE DB Data Shaping Service の概要](http://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)します。  
+ データ シェイプ プロバイダーの詳細については、次を参照してください。 [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) と[for OLE DB Data Shaping Service の概要](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)します。  
   
 ## <a name="see-also"></a>参照  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   

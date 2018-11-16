@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 956ddabb6101f524de052afb107e5434d6d87892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1231fc3c3f18711357ccf84daf06fb4821fa27a2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850982"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664932"
 ---
 # <a name="clr-integration---overview"></a>CLR 統合 - 概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ ms.locfileid: "47850982"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでは実行不可能な機能を実行するために、拡張ストアド プロシージャを構築できます。 ただし、拡張ストアド プロシージャでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性を侵害する可能性があります。一方、マネージド コードは、タイプ セーフなので、SQL Server プロセスの整合性を侵害することはありません。 さらに、CLR のマネージド コードと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間では、メモリ管理、スレッドやファイバーのスケジュール設定、同期サービスが、より密接に統合されます。 CLR 統合を使用すると、拡張ストアド プロシージャを使用するよりも安全に、[!INCLUDE[tsql](../../includes/tsql-md.md)] では記述できないタスクを実行するのに必要なストアド プロシージャを記述することができます。 CLR 統合と拡張ストアド プロシージャの詳細については、次を参照してください。 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)します。  
   
 ## <a name="see-also"></a>参照  
- [.NET Framework のインストール](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [CLR 統合のアーキテクチャ](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [CLR 統合のアーキテクチャ](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [CLR データベース オブジェクトからのデータ アクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CLR 統合の概要](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

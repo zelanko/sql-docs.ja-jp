@@ -12,12 +12,12 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9298a094187b38cf005928dfc4832fc529222b1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 068ae849454fefbc6a4bd08d19a530a59d2788e8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601790"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666571"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE データベース オブジェクト (SybaseToSQL) の変換
 SAP Adaptive Server Enterprise (ASE) に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SAP Adaptive Server Enterprise (ASE) のデータベース オブジェクトを変換できる Azure SQL とプロジェクトの設定とデータ マッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL データベースオブジェクト。  
@@ -124,7 +124,7 @@ SQL Server、オンプレミスへの変換中に SAP ASE の次の T-SQL キー
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL のメタデータ エクスプ ローラーと Sybase メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL と SAP ASE からデータを移行します。  
   
 ## <a name="next-steps"></a>次の手順  
-移行プロセスでは、次の手順は[を SQL Server に変換されたデータベース オブジェクトの読み込み/SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)します。  
+移行プロセスでは、次の手順は[を SQL Server に変換されたデータベース オブジェクトの読み込み/SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)します。  
   
 ## <a name="see-also"></a>関連項目  
 [SQL Server - Azure SQL Database への SAP ASE データベースの移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

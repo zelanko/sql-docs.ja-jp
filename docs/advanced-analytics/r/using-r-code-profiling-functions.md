@@ -1,5 +1,5 @@
 ---
-title: R コードのプロファイリング関数 (SQL Server の Machine Learning) を使用して |Microsoft ドキュメント
+title: R コード プロファイル関数 (SQL Server Machine Learning) を使用して |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,17 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 05689ae356d415f9655b8709c619e40e6d8fa817
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64f065df5f5769e37bb1d5a8dbc2fba2d5f936ee
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202174"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703970"
 ---
-# <a name="using-r-code-profiling-functions"></a>関数のプロファイルの R コードを使用します。
+# <a name="using-r-code-profiling-functions"></a>R コード プロファイル関数の使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server のリソースとツールを使用して R スクリプトの実行を監視できるほか、他の R パッケージが提供するパフォーマンス ツールを使用して、内部関数の呼び出しに関する情報を取得できます。 このトピックでは、始めるための基本的なリソースの一覧を提供します。 専門的なガイダンスについては、Hadley Wickham 著 "Advanced R" の、[Performance](http://adv-r.had.co.nz/Performance.html) の章をお勧めします。
+SQL Server のリソースとツールを使用して R スクリプトの実行を監視できるほか、他の R パッケージが提供するパフォーマンス ツールを使用して、内部関数の呼び出しに関する情報を取得できます。 このトピックでは、始めるための基本的なリソースの一覧を提供します。 専門家のガイダンスについては、お勧めします」の章で[パフォーマンス](https://adv-r.had.co.nz/Performance.html)"Advanced R"、Hadley Wickham による著書 『 します。
 
 ## <a name="using-rprof"></a>rprof の使用
 
@@ -66,7 +66,7 @@ help("Sys.time")
 
 既定でインストールされる Microsoft R Open のドキュメントには R 言語の拡張機能の開発に関するマニュアルが含まれており、プロファイルとデバッグの詳細について説明しています。
 
-チャプターはオンラインでも利用できます。 [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
+章は、オンラインでも使用できます。 [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
 
 ### <a name="location-of-r-help-files"></a>R のヘルプ ファイルの場所
 

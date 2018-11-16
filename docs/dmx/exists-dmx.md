@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 99f6db275fcddaff3e739311ed588fb0ec776aaf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998584"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602832"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,14 +36,14 @@ EXISTS(<subquery>)
  返します**true** 、サブクエリによって返される結果セットには少なくとも 1 つの行が含まれている場合を返しますそれ以外の場合、 **false**します。  
   
 ## <a name="remarks"></a>コメント  
- EXISTS の前にキーワード NOT を使用することができます。 たとえば、`WHERE NOT EXISTS (<subquery>)`します。  
+ EXISTS の前にキーワード NOT を使用できます。たとえば、`WHERE NOT EXISTS (<subquery>)` のようにします。  
   
  EXISTS のサブクエリの引数に追加する列の一覧は関係ありません。関数は条件に一致する行が存在するかどうかのみをチェックします。  
   
 ## <a name="examples"></a>使用例  
  入れ子になったテーブル内の条件のチェックに EXISTS および NOT EXISTS を使用できます。 これは、データ マイニング モデルのトレーニングやテストに使用するデータを制御するフィルターを作成する場合に役立ちます。 詳細については、「[マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)」を参照してください。  
   
- 次の例がに基づいて、`[Association]`マイニング構造とマイニング モデルで作成した、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 このクエリでは、顧客が Patch Kit を少なくとも 1 つ購入したケースのみを返します。  
+ 次の例がに基づいて、`[Association]`マイニング構造とマイニング モデルで作成した、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 このクエリでは、顧客が Patch Kit を少なくとも 1 つ購入したケースのみを返します。  
   
 ```  
 SELECT * FROM [Association].CASES  

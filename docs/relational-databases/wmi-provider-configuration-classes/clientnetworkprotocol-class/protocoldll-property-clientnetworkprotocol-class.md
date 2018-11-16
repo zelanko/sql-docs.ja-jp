@@ -18,16 +18,16 @@ ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9e5de2fac6c8a8d78c02d474c7c68aef6587c90b
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 946b5493c9781664c9eb770e24282d5867226f0e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216010"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665931"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL プロパティ (ClientNetworkProtocol クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  によって指定されたネットワーク プロトコルに必要な .dll ファイルの名前を取得、 [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)します。  
+  によって指定されたネットワーク プロトコルに必要な .dll ファイルの名前を取得、 [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,6 +46,6 @@ object.ProtocolDLL [= value]
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](http://technet.microsoft.com/library/ms181035.aspx)  
+ [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

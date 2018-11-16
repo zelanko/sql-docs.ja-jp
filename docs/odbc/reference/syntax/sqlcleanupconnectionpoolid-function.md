@@ -13,19 +13,19 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666170"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673551"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 関数
 **準拠**  
  バージョンで導入されました ODBC 3.81 標準準拠: ODBC。  
   
  **概要**  
- **SQLCleanupConnectionPoolID**プール ID がタイムアウトになったドライバーに通知します。そのプール ID に関連付けられたプール内のすべての接続されたときに ID がタイムアウトには、プールがタイムアウトしました。参照してください[、Microsoft Data Access Components のプーリング](http://msdn.microsoft.com/library/ms810829.aspx)接続タイムアウトの詳細についてはします。  
+ **SQLCleanupConnectionPoolID**プール ID がタイムアウトになったドライバーに通知します。そのプール ID に関連付けられたプール内のすべての接続されたときに ID がタイムアウトには、プールがタイムアウトしました。参照してください[、Microsoft Data Access Components のプーリング](https://msdn.microsoft.com/library/ms810829.aspx)接続タイムアウトの詳細についてはします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +50,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  アプリケーションでは、ドライバーによって返されるエラー メッセージを受信できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **SQLCleanupConnectionPoolID** 、いつでも呼び出すことができますが、ドライバー マネージャーを他のスレッドが同時を呼び出していないことを保証**SQLGetPoolID**およびその他のスレッドが同時に呼び出しありません**SQLRateConnection**と**SQLPoolConnect**そのプール ID に割り当てられている接続情報トークンを使用して そのため、ドライバーはこの関数はスレッド セーフであることを確認してください。  
   
  ドライバーはプール ID に関連付けられたリソースをクリーンアップできます。  
@@ -59,7 +59,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  ODBC ドライバーの開発の sqlspi.h が含まれます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC ドライバー対応接続プールの開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

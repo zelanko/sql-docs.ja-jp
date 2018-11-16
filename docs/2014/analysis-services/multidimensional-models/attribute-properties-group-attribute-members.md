@@ -23,12 +23,12 @@ ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 366c93b8110f8e9f0a9ef5bb418638c841585d5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164662"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814045"
 ---
 # <a name="group-attribute-members-discretization"></a>属性メンバーのグループ化 (分離)
   メンバー グループは、連続したディメンション メンバーが含まれている、システムによって生成されたコレクションです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、分離と呼ばれるプロセスにより、1 つの属性のメンバーを複数のメンバー グループに分割できます。 階層内のレベルには、メンバー グループまたはメンバーのどちらかが含まれています。 メンバー グループが属するレベルをビジネス ユーザーが参照すると、メンバー グループの名前とセル値が表示されます。 メンバー グループをサポートするために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって生成されたメンバーはグループ化メンバーと呼ばれ、通常のメンバーと同じように表示されます。  
@@ -38,15 +38,15 @@ ms.locfileid: "48164662"
 |`DiscretizationMethod` 設定|説明|  
 |--------------------------------------|-----------------|  
 |`None`|メンバーを表示します。|  
-|`Automatic`|データを最もよく表す方法を選択します。 いずれか、`EqualAreas`メソッドまたは`Clusters`メソッド。|  
+|`Automatic`|データを最も適切に表現するメソッドとして、`EqualAreas` メソッドまたは `Clusters` メソッドのいずれかを選択します。|  
 |`EqualAreas`|属性のメンバーを、等しい数のメンバーを含んでいるグループに分割します。|  
 |`Clusters`|トレーニング データをサンプリングし、多数のランダム ポイントに初期化し、Expectation-Maximization (EM) クラスター化アルゴリズムを何度か繰り返し実行して、属性のメンバーをグループに分割します。<br /><br /> このメソッドには、どのような分布曲線に対しても使用できるという利点がありますが、処理時間は長くなります。|  
   
  属性の `DiscretizationNumber` プロパティは、表示するグループの数を指定します。 このプロパティが既定値の 0 に設定されている場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、`DiscretizationMethod` プロパティの設定に応じてデータのサンプリングまたは読み取りを行って、グループの数を判断します。  
   
- 使用して、メンバー グループのメンバーの並べ替え順序を制御、`OrderBy`属性のプロパティ。 この並べ替え順に基づいて、メンバー グループ内のメンバーが順番に並べ替えられます。  
+ メンバー グループ内のメンバーの並べ替え順は、属性の `OrderBy` プロパティを使用して制御します。 この並べ替え順に基づいて、メンバー グループ内のメンバーが順番に並べ替えられます。  
   
- メンバー グループの一般的な用途は、少数のメンバーを含んでいるレベルから多数のメンバーを含んでいるレベルにドリル ダウンすることです。 ユーザーがレベル間でドリル ダウンできるようにするには、多数のメンバーを含んでいるレベルの属性の `DiscretizationMethod` プロパティを、`None` から、前の表で説明したいずれかの分離メソッドに変更します。 たとえば、Client ディメンションには、500,000 のメンバーを持つ Client Name 属性階層が含まれています。 この属性のクライアント グループの名前を変更でき、設定、`DiscretizationMethod`プロパティを`Automatic`メンバー グループ、属性階層メンバーのレベルを表示します。  
+ メンバー グループの一般的な用途は、少数のメンバーを含んでいるレベルから多数のメンバーを含んでいるレベルにドリル ダウンすることです。 ユーザーがレベル間でドリル ダウンできるようにするには、多数のメンバーを含んでいるレベルの属性の `DiscretizationMethod` プロパティを、`None` から、前の表で説明したいずれかの分離メソッドに変更します。 たとえば、Client ディメンションには、500,000 のメンバーを持つ Client Name 属性階層が含まれています。 この属性名を Client Groups に変更し、`DiscretizationMethod` プロパティを `Automatic` に設定すると、属性階層メンバー レベルのメンバー グループを表示できるようになります。  
   
  各グループの個別のクライアントにドリル ダウンするには、別の Client Name 属性階層を作成し、それを同じテーブル列にバインドします。 次に、2 つの属性に基づく新しいユーザー階層を作成します。 上位レベルは Client Groups 属性に基づき、下位レベルは Client Name 属性に基づきます。 `IsAggregatable` プロパティは、両方の属性で `True` になります。 このため、ユーザーは階層の (All) レベルを展開してグループ メンバーを表示し、グループ メンバーを展開して階層のリーフ メンバーを表示できます。 グループ レベルまたはクライアント レベルを非表示にするには、対応する属性の `AttributeHierarchyVisible` プロパティを `False` に設定します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48164662"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   

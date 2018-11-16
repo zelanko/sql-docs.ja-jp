@@ -21,18 +21,18 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e78d5226a4ab726718eb7725640de22dd811a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764411"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677671"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>移行 (AccessToSQL) を Access データベースを準備します。
 Access データベースを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行し、これらのデータベースが移行の準備ができていることを確認するデータベースを決定する必要があります。  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>SQL Server に移行する場合を判断します。  
-アクセスするため、データベース エンジンとして使用される、Jet データベース エンジンとは、データ管理のための柔軟で使いやすいソリューションです。 ただし、データベースのサイズが大きくなる複数のミッション クリティカルとして多くのユーザーを検索パフォーマンスの向上、セキュリティ、または可用性が必要です。 堅牢なデータ プラットフォームを必要とするアプリケーションでは、それらのアプリケーションの基になるデータベースの移動を検討してください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 移行するタイミングを決定する方法の詳細については、次を参照してください。、[移行情報ページ](http://go.microsoft.com/fwlink/?LinkId=68571)上、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web サイト。  
+アクセスするため、データベース エンジンとして使用される、Jet データベース エンジンとは、データ管理のための柔軟で使いやすいソリューションです。 ただし、データベースのサイズが大きくなる複数のミッション クリティカルとして多くのユーザーを検索パフォーマンスの向上、セキュリティ、または可用性が必要です。 堅牢なデータ プラットフォームを必要とするアプリケーションでは、それらのアプリケーションの基になるデータベースの移動を検討してください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 移行するタイミングを決定する方法の詳細については、次を参照してください。、[移行情報ページ](https://go.microsoft.com/fwlink/?LinkId=68571)上、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web サイト。  
   
 データベースを移行した後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンク テーブルを使用して、アクセスを使用を継続できますしたりするようにアプリケーションを手動で移行することができます[!INCLUDE[msCoName](../../includes/msconame_md.md)]と直接やり取りするコードを .NET Framework に基づく[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   

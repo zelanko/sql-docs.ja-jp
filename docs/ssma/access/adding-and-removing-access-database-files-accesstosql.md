@@ -29,12 +29,12 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2ec65ffa5ee5df74d48de5280fedb825da8607aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598164"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655641"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>追加および Access データベース ファイル (AccessToSQL) を削除します。
 アクセス データを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、SSMA プロジェクトに 1 つ以上の Access データベースを追加する必要があります。 これらのデータベースは、Access 97 または以降のバージョンである必要があります。 アクセスの以前のバージョンからのデータベースがある場合より新しいバージョンにデータベースを変換する必要があります。 これには開くして SSMA に追加する前に、Access 97 以降のバージョンでデータベースを保存します。  
@@ -129,7 +129,7 @@ Access データベースは、次の手順に従って、プロジェクトか�
 2.  データベースを右クリックし、**データベースの削除**します。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [SQL Server に接続](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)します。  
+移行プロセスの次の手順が、 [SQL Server に接続](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

@@ -44,8 +44,8 @@
    次の例は、**node1** の `/etc/hosts` を示しています。**node1**、**node2**、**node3** に対して追加があります。 このドキュメントで**node1**はプライマリ レプリカをホストするサーバーを表します。 **Node2**と**node3**セカンダリ レプリカをホストするサーバーを参照してください。
 
     ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1       localhost localhost6 localhost6.localdomain6
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
     10.128.18.12 node1
     10.128.16.77 node2
     10.128.15.33 node3
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-この XE セッションの詳細については、次を参照してください。 [AlwaysOn の拡張イベント](http://msdn.microsoft.com/library/dn135324.aspx)します。
+この XE セッションの詳細については、次を参照してください。 [AlwaysOn の拡張イベント](https://msdn.microsoft.com/library/dn135324.aspx)します。
 
 ## <a name="create-a-certificate"></a>証明書を作成する
 
@@ -166,6 +166,6 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 >[!IMPORTANT]
 >データベース ミラーリング エンドポイントのサポートされている唯一の認証方法は、SQL Server 2017 リリースでは、`CERTIFICATE`します。 `WINDOWS`オプションは、将来のリリースで有効になります。
 
-詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)」を参照してください。
+詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx)」を参照してください。
 
 

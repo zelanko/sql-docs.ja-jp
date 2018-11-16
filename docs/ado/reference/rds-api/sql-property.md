@@ -14,12 +14,12 @@ ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4d665e2b2f9ac4d61951da3cccbd16db76127a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b3222c39515bad505d24b10e31b36a9c1c61965
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727020"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604472"
 ---
 # <a name="sql-property"></a>SQL プロパティ
 取得するために使用するクエリ文字列を示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -27,7 +27,7 @@ ms.locfileid: "47727020"
  設定することができます、 **SQL**でデザイン時にプロパティ、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのオブジェクトのタグ、または実行時にスクリプト コードです。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
 ## <a name="syntax"></a>構文  
   

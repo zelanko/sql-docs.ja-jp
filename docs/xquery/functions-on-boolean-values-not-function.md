@@ -5,8 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7961b6daed4db42095e6d8a0856b3e99c6ca6041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849810"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673491"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>ブール値に対する関数 - 機能しない 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ fn:not($arg as item()*) as xs:boolean
  次のクエリを使用して、カタログの説明に <`Specifications`> 要素が含まれていない製品モデルの製品モデル ID を含む XML を作成します。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
        <Product   
            ProductModelID="{ sql:column("ProductModelID") }"  
@@ -78,7 +77,7 @@ WHERE CatalogDescription.exist('
   
 ```  
 SELECT ProductModelID, Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      for $i in /AWMI:root/AWMI:Location[not(@MachineHours)]  
      return  
        <Location LocationID="{ $i/@LocationID }"   

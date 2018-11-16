@@ -22,19 +22,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b5735a0829579a612999381e3108717ac1f7430c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822065"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656741"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   **注意: Azure SQL Database V11 にのみ適用します。**  
   
- 上の数、種類、およびデータベースの期間を一覧表示、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー。  
+ 上の数、型、およびデータベースの期間を一覧表示、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーです。  
   
  **Sys.database_usage**ビューには、次の列が含まれています。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47822065"
  **Sys.database_usage**ビューは、サブスクリプションの各日の 1 つの行を返します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Database の料金詳細](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [アカウントと Windows Azure SQL Database での課金](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [SQL Database の料金詳細](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [アカウントと Windows Azure SQL Database での課金](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

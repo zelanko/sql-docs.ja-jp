@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147867"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697012"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 用 database Consistency Checker (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "50147867"
  データベースが SQL Server 2016 インスタンス上で実行されている限り、Analysis Services 用 DBCC はあらゆる互換性レベルのあらゆる Analysis Services データベースで実行されます。 各データベースの種類に合わせた適切なコマンド構文を使用する点にのみ気を付けてください。  
   
 > [!NOTE]  
->  [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md) を使い慣れている場合、Analysis Services の DBCC のスコープがかなり狭いことに気づくでしょう。 Analysis Services の DBCC は、データベース全体、または個々のオブジェクトでデータの破損が発生した場合にのみ、レポートする単一のコマンドです。 情報収集など、他のタスクも考慮している場合は、AMO PowerShell または XMLA スクリプトを代わりに使用してください。 詳細情報のリンクについては、「 [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md) 」を参照してください。  
+>  [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md) を使い慣れている場合、Analysis Services の DBCC のスコープがかなり狭いことに気づくでしょう。 Analysis Services の DBCC は、データベース全体、または個々のオブジェクトでデータの破損が発生した場合にのみ、レポートする単一のコマンドです。 情報収集など、他のタスクも考慮している場合は、AMO PowerShell または XMLA スクリプトを代わりに使用してください。
   
 ## <a name="permission-requirements"></a>権限の要件  
  コマンドを実行するには、Analysis Services データベース管理者またはサーバー管理者 (サーバー ロールのメンバー) の権限が必要です。 手順については、「[Grant database permissions (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)」(データベース アクセス許可を付与する (Analysis Services)) または「[Grant server admin rights to an  Analysis Services instance](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)」(Analysis Services インスタンスにサーバー管理者権限を付与する) を参照してください。  
@@ -299,7 +299,6 @@ Execution complete
 ## <a name="see-also"></a>参照  
  [データベース、テーブル、またはパーティションの処理 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

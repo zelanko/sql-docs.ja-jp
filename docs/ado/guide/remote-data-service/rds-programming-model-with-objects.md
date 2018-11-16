@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +14,18 @@ ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e499503541449d35cf17ded36c8a7e358518680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737232"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557850"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS のプログラミング モデルとオブジェクト
 RDS の目標にアクセスし、IIS などの中間層を介して、データ ソースを更新することです。 プログラミング モデルでは、この目標を達成するために必要なアクティビティのシーケンスを指定します。 オブジェクト モデルでは、メソッドとプロパティが、プログラミング モデルに影響するオブジェクトを指定します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  RDS は、次の一連のアクションを実行する手段を提供します。  
   

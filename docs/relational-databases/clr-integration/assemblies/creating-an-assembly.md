@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7d1c6c05e196e1a845c073545c3f79f0f83a19b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622280"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656761"
 ---
 # <a name="creating-an-assembly"></a>アセンブリの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   呼び出し先または参照先のアセンブリが同じデータベースに作成されている。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>アセンブリ作成時のセキュリティの指定  
- アセンブリを作成するときに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、データベースを指定できます、コードが実行できるセキュリティの 3 つの異なるレベルのいずれか:**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**. ときに、 **CREATE ASSEMBLY**ステートメントを実行すると、サーバーの登録に失敗するアセンブリを引き起こす可能性のあるコード アセンブリで特定のチェックを実行します。 詳細については、の Impersonation サンプルを参照してください。 [CodePlex](http://msftengprodsamples.codeplex.com/)します。  
+ アセンブリを作成するときに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、データベースを指定できます、コードが実行できるセキュリティの 3 つの異なるレベルのいずれか:**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**. ときに、 **CREATE ASSEMBLY**ステートメントを実行すると、サーバーの登録に失敗するアセンブリを引き起こす可能性のあるコード アセンブリで特定のチェックを実行します。 詳細については、の Impersonation サンプルを参照してください。 [CodePlex](https://msftengprodsamples.codeplex.com/)します。  
   
  **安全な**は、既定の権限セットと、ほとんどのシナリオで機能します。 特定のセキュリティ レベルを指定するには、CREATE ASSEMBLY ステートメントの構文を次のように変更します。  
   
@@ -136,6 +136,6 @@ WITH PERMISSION_SET = UNSAFE;
  [アセンブリの削除](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md)   
- [部分的に信頼される呼び出し元の許容](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [部分的に信頼される呼び出し元の許容](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

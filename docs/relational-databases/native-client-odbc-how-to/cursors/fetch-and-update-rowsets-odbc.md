@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0669adbf316b27dcec6c57d33aff4fa25168459
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2789762eca102fd684e74704a57315a6a39b3821
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625402"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677931"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>行セットのフェッチおよび更新 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47625402"
   
 1.  必要に応じて、呼び出す[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) sql_row_array_size (R)、行セット内の行の数の変更を使用して使用します。  
   
-2.  呼び出す[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)または[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)行セットを取得します。  
+2.  呼び出す[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)行セットを取得します。  
   
 3.  バインドされた列が使用されている場合は、行セットのバインドされた列のバッファーでデータ値とデータの長さが使用できるようになります。  
   
-     行の呼び出しごとに、バインドされていない列が使用かどうか[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) SQL_POSITION、カーソルの位置を設定するとして、その各非バインド列。  
+     行の呼び出しごとに、バインドされていない列が使用かどうか[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) SQL_POSITION、カーソルの位置を設定するとして、その各非バインド列。  
   
     -   呼び出す[SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)データを取得する 1 つまたは複数回は、最後の行セットの列バインドされた列をバインド解除されました。 呼び出す[SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)の列番号の昇順にする必要があります。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47625402"
   
 4.  実行時データ text または image 列をセットアップします。  
   
-5.  呼び出す[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407)または[SQLBulkOperations](http://go.microsoft.com/fwlink/?LinkId=58398)カーソルの位置を設定するには、更新、更新、削除、または行セット内の行を追加します。  
+5.  呼び出す[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)または[SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398)カーソルの位置を設定するには、更新、更新、削除、または行セット内の行を追加します。  
   
      実行時データ text または image 列が更新または追加操作に使用されている場合は、それらの列を処理します。  
   

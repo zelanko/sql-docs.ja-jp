@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5c3cc4756c305ba82af4c110488722ec24a9af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251989"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657011"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server のコンテナーの高可用性
 
@@ -31,13 +31,13 @@ SQL Server 2019 (プレビュー) では、Kubernetes StatefulSet のより堅�
 
 ## <a name="container-with-sql-server-instance-on-kubernetes"></a>Kubernetes 上の SQL Server インスタンスのコンテナー
 
-Kubernetes バージョン 1.6 およびそれ以降はサポートしています[*ストレージ クラス*](http://kubernetes.io/docs/concepts/storage/storage-classes/)、 [*永続ボリューム要求*](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)、および[ *Azure のディスク ボリュームの種類*](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)します。 
+Kubernetes バージョン 1.6 およびそれ以降はサポートしています[*ストレージ クラス*](https://kubernetes.io/docs/concepts/storage/storage-classes/)、 [*永続ボリューム要求*](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)、および[ *Azure のディスク ボリュームの種類*](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)します。 
 
 この構成では、Kubernetes は、コンテナー オーケストレーターの役割を果たします。 
 
 ![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-前の図では、`mssql-server`には SQL Server インスタンス (コンテナー)、 [*ポッド*](http://kubernetes.io/docs/concepts/workloads/pods/pod/)します。 A[レプリカ セット](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)ポッドがノード障害の後に自動的に復旧ことにより、します。 アプリケーションは、サービスに接続します。 この場合、サービスが障害の後に同じままの IP アドレスをホストするロード バランサーを表します、`mssql-server`します。
+前の図では、`mssql-server`には SQL Server インスタンス (コンテナー)、 [*ポッド*](https://kubernetes.io/docs/concepts/workloads/pods/pod/)します。 A[レプリカ セット](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)ポッドがノード障害の後に自動的に復旧ことにより、します。 アプリケーションは、サービスに接続します。 この場合、サービスが障害の後に同じままの IP アドレスをホストするロード バランサーを表します、`mssql-server`します。
 
 Kubernetes では、クラスター内のリソースを調整します。 SQL Server インスタンスのコンテナーをホストしているノードが失敗した場合、SQL Server インスタンスに新しいコンテナーをブートス トラップし、同じ永続的な記憶域にアタッチします。
 
@@ -47,25 +47,25 @@ Kubernetes でコンテナーを作成するを参照してください[Kubernet
 
 ## <a name="a-sql-server-always-on-availability-group-on-sql-server-containers-in-kubernetes"></a>Kubernetes での SQL Server コンテナー上の SQL Server Always On 可用性グループ
 
-SQL Server 2019 では、Kubernetes でコンテナーの可用性グループをサポートしています。 可用性グループには、SQL Server を展開[Kubernetes 演算子](http://coreos.com/blog/introducing-operators.html)Kubernetes クラスターにします。 演算子では、パッケージ、展開、および SQL Server インスタンスとクラスター内の可用性グループを管理することができます。
+SQL Server 2019 では、Kubernetes でコンテナーの可用性グループをサポートしています。 可用性グループには、SQL Server を展開[Kubernetes 演算子](https://coreos.com/blog/introducing-operators.html)Kubernetes クラスターにします。 演算子では、パッケージ、展開、および SQL Server インスタンスとクラスター内の可用性グループを管理することができます。
 
 ![Kubernetes コンテナーでの AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 上記の図では、4 つのノードの kubernetes クラスターは、3 つのレプリカを可用性グループをホストします。 ソリューションには、次のコンポーネントが含まれています。
 
-* Kubernetes [*展開*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/)します。 展開には、演算子と構成のマップが含まれています。 展開では、コンテナー イメージ、ソフトウェア、および可用性グループの SQL Server インスタンスをデプロイするために必要な手順について説明します。
+* Kubernetes [*展開*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)します。 展開には、演算子と構成のマップが含まれています。 展開では、コンテナー イメージ、ソフトウェア、および可用性グループの SQL Server インスタンスをデプロイするために必要な手順について説明します。
 
-* 各ホストの 3 つのノード、 [ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)します。 StatefulSet には、ポッドが含まれています。 それぞれのポッドが含まれます。
+* 各ホストの 3 つのノード、 [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)します。 StatefulSet には、ポッドが含まれています。 それぞれのポッドが含まれます。
   * SQL Server の 1 つのインスタンスを実行している SQL Server のコンテナー。
   * スーパーバイザー`mcr.microsoft.com/mssql/ha`可用性グループを管理します。
 
-* 2 つ[ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)可用性グループに関連します。 ConfigMaps に関する情報を提供します。
+* 2 つ[ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)可用性グループに関連します。 ConfigMaps に関する情報を提供します。
   * 演算子の配置。
   * 可用性グループです。
 
  * SQL Server の各インスタンスの永続ボリュームは、データとログ ファイルの記憶域を提供します。
 
-また、クラスターを格納[*シークレット*](http://kubernetes.io/docs/concepts/configuration/secret/)パスワード、証明書、キー、および他の機密情報。
+また、クラスターを格納[*シークレット*](https://kubernetes.io/docs/concepts/configuration/secret/)パスワード、証明書、キー、および他の機密情報。
 
 ## <a name="compare-sql-server-high-availability-on-containers-with-and-without-the-availability-group"></a>SQL Server の高可用性と可用性グループなしのコンテナーの比較します。
 

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e79708ffe1ca40a38d93378b93481d6fdd91ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766570"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673111"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC テーブル値パラメーターの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47766570"
 ## <a name="table-valued-parameter-with-fully-bound-multirow-buffers-send-data-as-a-tvp-with-all-values-in-memory"></a>複数行のバッファーに完全にバインドされるテーブル値パラメーター (すべての値をメモリ内に保持した TVP としてデータを送信する)  
  複数行のバッファーに完全にバインドされる形式で使用する場合、すべてのパラメーター値はメモリ内から使用できます。 このような形式は OLTP トランザクションなどでは一般的に行われ、テーブル値パラメーターを 1 つのストアド プロシージャにパッケージ化できます。 テーブル値パラメーターを使用しないと、複雑な複数のステートメントで構成されるバッチを動的に生成し、サーバーを複数回呼び出すことになります。  
   
- 使用して、テーブル値パラメーター自体がバインドされている[SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328)と共に、他のパラメーター。 すべてのパラメーターをバインドすると後、アプリケーションは各テーブル値パラメーターのパラメーターのフォーカスの属性 SQL_SOPT_SS_PARAM_FOCUS を設定し、テーブル値パラメーターの列に対して SQLBindParameter を呼び出します。  
+ 使用して、テーブル値パラメーター自体がバインドされている[SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)と共に、他のパラメーター。 すべてのパラメーターをバインドすると後、アプリケーションは各テーブル値パラメーターのパラメーターのフォーカスの属性 SQL_SOPT_SS_PARAM_FOCUS を設定し、テーブル値パラメーターの列に対して SQLBindParameter を呼び出します。  
   
  テーブル値パラメーターのサーバー型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の新しい型 SQL_SS_TABLE です。 SQL_SS_TABLE の C データ型へのバインドは、常に SQL_C_DEFAULT にする必要があります。 テーブル値パラメーターにバインドされたパラメーターについては、データが転送されません。このパラメーターは、テーブルのメタデータを渡し、テーブル値パラメーターを構成する列にデータを渡す方法を制御するために使用されます。  
   

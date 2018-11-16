@@ -10,12 +10,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 1b66f63b66066831d7e0276049d774136c1b5138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bdbe8616f5f2c3252f813e6e2636966ff16ec16
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743820"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662281"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>テスト ケースの準備の終了 (OracleToSQL)
 ウィザードの最後のページには、テスト_ケースの説明と、テストに含まれるオブジェクトに関する情報が表示されます。 さらに、このページで設定できますテストの実行オプション。  
@@ -54,7 +54,7 @@ ms.locfileid: "47743820"
   
 -   選択した場合**テーブルの比較が失敗した場合にユーザーを依頼**エラーが発生した場合、ユーザーが必要な操作を選択できます。  
   
-をクリックして、**完了**に準備されたテスト_ケースを保存するボタン[を使用してテスト リポジトリ (OracleToSQL)](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)します。  
+をクリックして、**完了**に準備されたテスト_ケースを保存するボタン[を使用してテスト リポジトリ (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)します。  
   
 ## <a name="see-also"></a>参照  
 [テスト リポジトリの使用&#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  

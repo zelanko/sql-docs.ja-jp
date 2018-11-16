@@ -10,12 +10,12 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 481429d65f587cdbeb7ed977cafd4553f697c59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771447"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671675"
 ---
 # <a name="user-interface-reference-db2tosql"></a>ユーザー インターフェイス リファレンス (DB2ToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 です。  
@@ -31,7 +31,7 @@ SSMA のダイアログ ボックスを次の表に示します。
 |[DB2 データベースに接続する&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用して、 **DB2 への接続**を移行する DB2 データベースに接続するためのダイアログ ボックス。|  
 |[SQL Server に接続&#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|使用して、 **SQL サーバーへの接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行します。|  
 |[データ移行レポート&#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|結果を表示する DB2 からデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|[データの移行設定](http://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
+|[データの移行設定](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
 |[型のマッピングの編集&#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|使用して、**新しい型のマッピング**または**型マッピングの編集**ダイアログ ボックスを作成したり、ソースとターゲット データベースおよびデータベース オブジェクト間のデータ型のマッピングを変更します。|  
 |[グローバル設定&#40;エディター&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|エディター ページを使用して、**グローバル設定**ダイアログ ボックスをコード エディターのオプションを構成します。|  
 |[グローバル設定&#40;ダイアログ&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|ダイアログ ボックスのページを使用して、**グローバル設定**ダイアログ ボックスを既定値 ダイアログ ボックスと警告の設定を構成します。|  

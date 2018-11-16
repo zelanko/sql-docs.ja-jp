@@ -16,18 +16,18 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075cb0870d7fa3f4cbddaef60c2de4d1aa0683c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668713"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668261"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>ソースとターゲットのデータ型 (AccessToSQL) のマッピング
 Access データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの型。 Access データベースのオブジェクトに変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトへのアクセスからのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次の手順で示すようにします。  
   
 ## <a name="default-mappings"></a>既定のマッピング  
-SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクトの設定 (型のマッピング)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)します。  
+SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクトの設定 (型のマッピング)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)します。  
   
 ## <a name="customizing-data-type-mappings"></a>データ型マッピングのカスタマイズ  
 使用して、**プロジェクト設定**ダイアログ ボックスで、すべてのデータベースと、プロジェクト内のデータベース オブジェクトの型をマップする方法をカスタマイズすることができます。 プロジェクトの種類のマッピングは、すべてのデータベースとのカスタム型マッピングがないデータベース オブジェクトに適用されます。  

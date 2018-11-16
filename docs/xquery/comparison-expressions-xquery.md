@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -21,12 +20,12 @@ ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e2cc3870ca0b302175c6fdd546b730e73956485f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824793"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661841"
 ---
 # <a name="comparison-expressions-xquery"></a>比較式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,10 +80,10 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- 次のクエリは、AdventureWorks サンプル データベースで提供されている製品カタログから製品モデルの小さいサイズの写真を返します。 クエリによって返されるアトミック値のシーケンスを比較する`PD:ProductDescription/PD:Picture/PD:Size`単一のシーケンス"small"とします。 比較が True のかどうか、それを返します、< 画像\>要素。  
+ 次のクエリは、AdventureWorks サンプル データベースで提供されている製品カタログから製品モデルの小さいサイズの写真を返します。 クエリでは、`PD:ProductDescription/PD:Picture/PD:Size` によって返されるアトミック値のシーケンスと、単一のシーケンス "small" が比較されます。 比較が True のかどうか、それを返します、< 画像\>要素。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
 SELECT CatalogDescription.query('         
     for $P in /PD:ProductDescription/PD:Picture[PD:Size = "small"]         
     return $P') as Result         
@@ -96,8 +95,8 @@ WHERE  ProductModelID=19
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.value('         
    /aci:AdditionalContactInfo//act:telephoneNumber/act:number = "112-111-1111"', 'nvarchar(10)') as Result         
@@ -109,8 +108,8 @@ WHERE ContactID=1
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.query('         
   if (/aci:AdditionalContactInfo//act:telephoneNumber/act:number = ("222-222-2222","112-111-1111"))         
@@ -127,11 +126,11 @@ WHERE ContactID=1
   
 ```  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
     111-111-1111  
 \</act:number>  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
     112-111-1111  
 \</act:number>   
 ```  
@@ -158,7 +157,7 @@ WHERE ContactID=1
   
 ```  
 SELECT CatalogDescription.query('         
-              declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";         
+              declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";         
               for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]         
               return         
                     $P         
@@ -169,7 +168,7 @@ WHERE ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   `declare namespace` クエリで、後で使用される名前空間プレフィックスを定義します。  
+-   `declare namespace` では、その後クエリで使用される名前空間プレフィックスが定義されます。  
   
 -   \<サイズ > 要素の値が、指定したアトミック値"small"と比較されます。  
   
@@ -179,14 +178,14 @@ WHERE ProductModelID=19
   
 ```  
 \<PD:Picture   
-  xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
   \<PD:Angle>front\</PD:Angle>  
   \<PD:Size>small\</PD:Size>  
   \<PD:ProductPhotoID>31\</PD:ProductPhotoID>  
 \</PD:Picture>  
 ```  
   
- 値の比較でのデータ型の上位変換の規則は、一般的な比較でのデータ型の上位変換の規則と同じです。 また、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]一般的な比較の際に使用は、値の比較中に型指定されていない値に対して同じキャストの規則を使用します。 それに対して、XQuery 仕様の規則では、値の比較時に型指定されていない値は xs:string に常にキャストされます。  
+ 値の比較でのデータ型の上位変換の規則は、一般的な比較でのデータ型の上位変換の規則と同じです。 また、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、値の比較の際に、型指定されていない値に対しても、一般的な比較の際に使用するのと同じキャストの規則が使用されます。 それに対して、XQuery 仕様の規則では、値の比較時に型指定されていない値は xs:string に常にキャストされます。  
   
 ## <a name="node-comparison-operator"></a>ノードの比較演算子  
  ノードの比較演算子、**は**ノードの種類にのみ適用されます。 返される結果は、基になるドキュメント内の同じノードを表すオペランドとして、2 つのノードが渡されたかどうかを示します。 2 つのオペランドが同じノードの場合、この演算子は True を返します。 それ以外の場合、False を返します。  
@@ -194,7 +193,7 @@ WHERE ProductModelID=19
  次のクエリでは、特定の製品モデルの製造プロセス内で、ワーク センター拠点 10 がプロセスの最初にあるかどうかがチェックされます。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS AWMI)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS AWMI)  
   
 SELECT ProductModelID, Instructions.query('         
     if (  (//AWMI:root/AWMI:Location[@LocationID=10])[1]         
@@ -230,8 +229,8 @@ ProductModelID       Result
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM)  
   
 SELECT CatalogDescription.value('  
      (/PD:ProductDescription/PD:Features/WM:Warranty)[1] <<   

@@ -18,12 +18,12 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d016498e0b46ce17cfd705264c6996c56302be32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641570"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663381"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>作成して、プロジェクト (AccessToSQL) の管理
 Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、SSMA プロジェクトを最初に作成する必要があります。 プロジェクトに移行する Access データベースに関するメタデータを含むファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure でのターゲット インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure 移行済みのオブジェクトとデータを受信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続情報、およびプロジェクトの設定。  
@@ -39,19 +39,19 @@ SSMA には、データを変換するために、いくつかのオプション
   
 3.  左側のウィンドウで次のようにクリックします。**変換**します。  
   
-4.  右側のウィンドウで、オプションを確認します。 これらのオプションの詳細については、次を参照してください。[プロジェクトの設定 (変換)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)します。  
+4.  右側のウィンドウで、オプションを確認します。 これらのオプションの詳細については、次を参照してください。[プロジェクトの設定 (変換)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)します。  
   
 5.  必要に応じてオプションを変更します。  
   
 6.  前の手順を繰り返して、**移行**、 **GUI**、および**型マッピングの**ページ。  
   
-    -   移行オプションについては、次を参照してください。[プロジェクトの設定 (移行)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)します。  
+    -   移行オプションについては、次を参照してください。[プロジェクトの設定 (移行)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)します。  
   
-    -   ユーザー インターフェイス オプションについては、次を参照してください。[プロジェクトの設定 (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)します。  
+    -   ユーザー インターフェイス オプションについては、次を参照してください。[プロジェクトの設定 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)します。  
   
-    -   データ型マッピングの設定の詳細については、次を参照してください。[プロジェクトの設定 (型のマッピング)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)します。  
+    -   データ型マッピングの設定の詳細については、次を参照してください。[プロジェクトの設定 (型のマッピング)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)します。  
   
-    -   SQL Azure の設定については、次を参照してください。[プロジェクトの設定 (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)します。  
+    -   SQL Azure の設定については、次を参照してください。[プロジェクトの設定 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)します。  
   
 **注**プロジェクトを作成するときに SQL Azure への移行を選択する場合にのみに、SQL Azure の設定が使用できます。  
   

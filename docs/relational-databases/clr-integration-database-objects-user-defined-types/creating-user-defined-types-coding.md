@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0647d1e0f7dd082b3ce3aab668d8af8d5673efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795770"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661562"
 ---
 # <a name="creating-user-defined-types---coding"></a>ユーザー定義型の作成 - コーディング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -621,7 +621,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  NULL 文字を埋め込む目的は、カルチャと通貨値を完全に分離することです。これにより、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードで UDT が比較されるとき、カルチャ バイトどうし、通貨バイト値どうしが比較されるようになります。  
   
- 完全なコードのリスト、**通貨**UDT サンプルの CLR をインストールするための手順に従います[SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)します。  
+ 完全なコードのリスト、**通貨**UDT サンプルの CLR をインストールするための手順に従います[SQL Server データベース エンジン サンプル](https://msftengprodsamples.codeplex.com/)します。  
   
 ### <a name="currency-attributes"></a>Currency の属性  
  **通貨**UDT は、次の属性で定義されます。  
@@ -745,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- 完全なコードのリスト、**通貨**UDT を参照してください[SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)します。  
+ 完全なコードのリスト、**通貨**UDT を参照してください[SQL Server データベース エンジン サンプル](https://msftengprodsamples.codeplex.com/)します。  
   
 ## <a name="see-also"></a>参照  
  [ユーザー定義型を作成する](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

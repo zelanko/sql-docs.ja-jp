@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: afcacd5a19920a396141284103db93e60a4f0646
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ee6581bca5dac6331571d1b1b71957cc3df7eac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661311"
 ---
 # <a name="use-a-statement-odbc"></a>ステートメントの使用 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,21 +28,21 @@ ms.locfileid: "47829566"
     
 ### <a name="to-use-a-statement"></a>ステートメントを使用するには  
   
-1.  *HandleType* を SQL_HANDLE_STMT として [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) を呼び出し、ステートメント ハンドルを割り当てます。  
+1.  *HandleType* を SQL_HANDLE_STMT として [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) を呼び出し、ステートメント ハンドルを割り当てます。  
   
 2.  また、[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出してステートメント オプションを設定するか、[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) を呼び出してステートメント属性を取得することもできます。  
   
      サーバー カーソルを使用するには、カーソルの属性を既定値以外の値に設定する必要があります。  
   
-3.  また、ステートメントを複数回実行する場合は、[SQLPrepare 関数](http://go.microsoft.com/fwlink/?LinkId=59360)を使用して実行するステートメントを準備します。  
+3.  また、ステートメントを複数回実行する場合は、[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)を使用して実行するステートメントを準備します。  
   
-4.  ステートメントにバインドされたパラメーター マーカーが含まれている場合は、必要に応じて、[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) を使用してパラメーター マーカーをプログラム変数にバインドします。 ステートメントが準備されている場合は、[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) および [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) を呼び出して、パラメーターの数と特性を検索できます。  
+4.  ステートメントにバインドされたパラメーター マーカーが含まれている場合は、必要に応じて、[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) を使用してパラメーター マーカーをプログラム変数にバインドします。 ステートメントが準備されている場合は、[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) および [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) を呼び出して、パラメーターの数と特性を検索できます。  
   
 5.  SQLExecDirect を使用してステートメントを直接実行します。  
   
      \- または -  
   
-     ステートメントが準備されている場合は、[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
+     ステートメントが準備されている場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
   
      \- または -  
   

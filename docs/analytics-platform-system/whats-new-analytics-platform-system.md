@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269755"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700360"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウトの MPP データ ウェアハウスの新機能新機能
 新機能については最新のアプライアンスの更新プログラム Microsoft® Analytics Platform System (APS) を参照してください。 アクセス ポイントは、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスです。 
@@ -70,7 +70,7 @@ from cte;
 読み取り、インポート、現在、PolyBase を使用して日付データ型をエクスポート、ORC、Parquet ファイルの種類の日付 2038-01-20 の前後に 1970-01-01 をサポートしています。
 
 ### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>ターゲットとして SQL Server 2017 の SSIS 変換先アダプター
-配置ターゲットをからダウンロードできるように SQL Server 2017 をサポートする新しい AP SSIS 変換先アダプター[ダウンロード サイト](https://www.microsoft.com/en-us/download/details.aspx?id=57472)します。
+配置ターゲットをからダウンロードできるように SQL Server 2017 をサポートする新しい AP SSIS 変換先アダプター[ダウンロード サイト](https://www.microsoft.com/download/details.aspx?id=57472)します。
 
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
@@ -111,7 +111,7 @@ APS AU7 で機能スイッチが導入されています[Configuration Manager](
 ### <a name="known-issues"></a>既知の問題
 として記載されている問題を修正する Intel BIOS の更新プログラムを提供、AP AU7 ソフトウェアと*予測実行のサイド チャネル攻撃*します。 攻撃と呼ばれるものを悪用することを目指します*Spectre や Meltdown の脆弱性*します。 BIOS の更新プログラムが手動でインストールが、AP と共にパッケージ化、および APS AU7 ソフトウェアのインストールの一部ではなく。
 
-Microsoft では、BIOS の更新をインストールするすべての顧客が表示されます。 Microsoft には、さまざまな環境でさまざまな SQL ワークロードに対するカーネル仮想アドレス シャドウ (KVAS)、カーネル ページ テーブルの間接参照 (KPTI) および間接のブランチ予測の軽減策 (IBP) の効果が測定されます。 測定値には、一部のワークロードで大幅に低下が検出されました。 推奨事項の結果に基づいての運用環境で展開する前に、BIOS の更新プログラムを有効にすると、パフォーマンスに与える影響をテストすることは。 SQL Server のガイダンスを参照してください。[ここ](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)します。
+Microsoft では、BIOS の更新をインストールするすべての顧客が表示されます。 Microsoft には、さまざまな環境でさまざまな SQL ワークロードに対するカーネル仮想アドレス シャドウ (KVAS)、カーネル ページ テーブルの間接参照 (KPTI) および間接のブランチ予測の軽減策 (IBP) の効果が測定されます。 測定値には、一部のワークロードで大幅に低下が検出されました。 推奨事項の結果に基づいての運用環境で展開する前に、BIOS の更新プログラムを有効にすると、パフォーマンスに与える影響をテストすることは。 SQL Server のガイダンスを参照してください。[ここ](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)します。
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"

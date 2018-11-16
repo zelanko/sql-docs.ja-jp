@@ -15,16 +15,16 @@ ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b76b4bfc372c688101882a7250c54a4d4c0c536c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcfc53b0882702e5efbb53b8f88bdfb184f86df6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673550"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601642"
 ---
 # <a name="sql-property-example-vbscript"></a>SQL プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
  次のコードを設定する方法を示しています、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)デザイン時およびバインドと呼ばれるデータベースを使用してコントロールをデータに対応する SQL パラメーター *Pubs*、Microsoft SQL Server が付属しています。 という名前の例では、テスト、標準の ASP 文書に次のコードをコピーする**SQLDesignVBS.asp** Web サーバーにします。  
   
@@ -71,7 +71,7 @@ body {
 <!-- RDS.DataControl -->  
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID=RDC HEIGHT=1 WIDTH=1>  
    <PARAM NAME="SQL" VALUE="Select FirstName, LastName from Employees">  
-   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="SERVER" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
    <PARAM NAME="CONNECT" VALUE="Provider='sqloledb';Initial Catalog='Northwind';Integrated Security='SSPI';">  
 </OBJECT>  
   
@@ -150,7 +150,7 @@ body {
 </TABLE>  
   
 <HR>  
-<Input Size=70 Name="txtServer" Value= "http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+<Input Size=70 Name="txtServer" Value= "https://<%=Request.ServerVariables("SERVER_NAME")%>">  
 <BR>  
 <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';">  
 <BR>  

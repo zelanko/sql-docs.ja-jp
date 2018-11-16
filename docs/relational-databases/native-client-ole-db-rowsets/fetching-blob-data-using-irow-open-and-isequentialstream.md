@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9462f144cf578aad6e8e704bf5ebf5cd46a66f77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1deb50644c6a23e08dd566f0781902c0d5bdb88d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598610"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658496"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open と ISequentialStream を使用した BLOB データのフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,6 +84,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  大きなデータは、**ISequentialStream** インターフェイスを使用してバインドまたは取得できます。 バインドされた列の場合、DBSTATUS_S_TRUNCATED を設定してデータが切り捨てられるかどうかが状態フラグで示されます。  
   
 ## <a name="see-also"></a>参照  
- [IRow を使用した BLOB データのフェッチ](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [IRow を使用した BLOB データのフェッチ](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

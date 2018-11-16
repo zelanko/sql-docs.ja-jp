@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701460"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673481"
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -23,14 +23,14 @@ Wide World Importers OLTP データベースのインストールと構成の手
 
 ## <a name="prerequisites"></a>前提条件
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)します。 完全なバージョンのサンプルでは、SQL Server の評価、Developer、または Enterprise Edition を使用します。
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)します。 完全なバージョンのサンプルでは、SQL Server の評価、Developer、または Enterprise Edition を使用します。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最善の結果を得るには、2016 年 6 月リリース以降を使用してください。
 
 ## <a name="download"></a>ダウンロード
 
 サンプルの最新リリース:
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Bacpac をダウンロード サンプル WideWorldImporters データベースのバックアップ/対応する SQL Server または Azure SQL Database のエディション。
 
@@ -90,5 +90,5 @@ Azure SQL Database で監査が構成されている、 [Azure portal](https://p
 
 行レベル セキュリティは、WideWorldImporters の bacpac のダウンロードで既定では無効です。 をデータベースに行レベル セキュリティを有効にするには、次のストアド プロシージャを実行します。
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

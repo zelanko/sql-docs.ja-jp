@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 444fa51144535475f67cc0d073b63cb1b8354531
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78a89ddcb27111396ec279af0b418e8490780e6a
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687290"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291338"
 ---
 # <a name="error-handling-xquery"></a>エラー処理 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47687290"
  実行時のキャスト エラーは空のシーケンスに変換されますが、明示的に正しい型にキャストすることで静的なエラーを回避できます。  
   
 ## <a name="static-errors"></a>静的なエラー  
- 使用して静的エラーが返されます、[!INCLUDE[tsql](../includes/tsql-md.md)]エラー メカニズムです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]XQuery の型エラーが静的に返されます。 詳細については、次を参照してください。 [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)します。  
+ 静的エラーは [!INCLUDE[tsql](../includes/tsql-md.md)] エラー メカニズムを使用して返されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XQuery の型エラーが静的に返されます。 詳細については、次を参照してください。 [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)します。  
   
 ## <a name="dynamic-errors"></a>動的エラー  
  XQuery では、ほとんどの動的エラーが空のシーケンス ("()") にマップされます。 ただし、XQuery 集計関数でオーバーフローが発生する場合および XML-DML 検証エラーは例外です。 ほとんどの動的エラーは空のシーケンスにマップされることに注意してください。 動的エラーが空のシーケンスにマップされない場合、XML インデックスを利用するクエリの実行で予期しないエラーが発生する可能性があります。 そのため、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、予期しないエラーを発生させることなくクエリを効率的に実行するため、動的エラーが () にマップされます。  

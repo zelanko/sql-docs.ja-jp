@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0eda19b4a241a066771afff1cfb682fa7234f81e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221658"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700393"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>SQL Server 2019 (プレビュー) の展開用 Azure Kubernetes サービスを構成します。
 
@@ -27,11 +27,13 @@ AKS によって、作成、構成、およびコンテナー化されたアプ�
 
 ## <a name="prerequisites"></a>前提条件
 
-- 検証の基本的なシナリオの中に最適なエクスペリエンスのため、AKS の環境で少なくとも 4 つの Vcpu と 32 GB のメモリが各 (マスター) だけでなく、少なくとも 3 つのエージェントの Vm はお勧めします。 Azure インフラストラクチャ Vm のサイズの複数のオプションを参照してください[ここ](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)の展開を計画しているリージョンの選択項目。
+- 検証の基本的なシナリオの中に最適なエクスペリエンスのため、AKS の環境で少なくとも 4 つの Vcpu と 32 GB のメモリが各 (マスター) だけでなく、少なくとも 3 つのエージェントの Vm はお勧めします。 Azure インフラストラクチャ Vm のサイズの複数のオプションを参照してください[ここ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)の展開を計画しているリージョンの選択項目。
   
 - このセクションでは、ことが必要です実行、Azure CLI バージョン 2.0.4 以降。 インストールまたはアップグレードを表示する必要がある場合[Azure CLI 2.0 のインストール](https://docs.microsoft.com/cli/azure/install-azure-cli)します。 実行`az --version`必要な場合は、バージョンを確認します。
 
-- インストール[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) 1.10 サーバーおよびクライアントの両方のバージョンの最小値にします。 Kubectl クライアントを特定のバージョンをインストールする場合は、「 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)します。 For AKS を使用する必要があります。 `--kubernetes-version` 、既定値以外のバージョンを指定するパラメーター。
+- インストール[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) 1.10 のバージョンの最小値にします。 Kubectl クライアントを特定のバージョンをインストールする場合は、「 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)します。 
+
+- 同じ 1.10 の最小バージョンは、Kubernetes のサーバーに適用されます。 For AKS を使用する必要があります。 `--kubernetes-version` 、既定値以外のバージョンを指定するパラメーター。
 
 > [!NOTE]
 クライアント/サーバーのバージョンのスキューされていることは、1 のマイナー バージョンの +/-サポートされています。 Kubernetes のドキュメントの状態を"が、クライアント、マスターから複数の傾斜のマイナー バージョンにする必要がありますに 1 つのマイナー バージョンによって、マスターがあります。 たとえば、v1.3 マスター v1.1、バージョン 1.2、および v1.3 のノードを使用する必要があり、v1.2、v1.3、v1.4 クライアントを操作する必要があります。" 詳細については、次を参照してください。 [Kubernetes がサポートされるのは、リリースと傾斜コンポーネント](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)します。
@@ -82,7 +84,7 @@ Azure リソース グループは、azure リソースのデプロイし、管�
     --kubernetes-version 1.10.8
     ```
 
-    増やすことも変更することで、既定のエージェント数を減らす、`--node-count <n>`場所`<n>`たいエージェント ノードの数です。
+    大きくしたり、変更することで Kubernetes エージェント ノードの数を減らす、`--node-count <n>`場所`<n>`番号にする、エージェント ノードのどの it には含まれませんマスターの Kubernetes ノード。 上記の例であるため**4**サイズの Vm **Standard_E4s_v3** 、AKS クラスターの使用: **1** master と**3**用、エージェント ノード。
 
     数分後、コマンドが完了し、クラスターに関する情報を JSON 形式を返します。
 

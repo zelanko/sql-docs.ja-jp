@@ -28,12 +28,12 @@ ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eb36afbcfe8d406708719fb7062510fd9f828a5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29b5225f95c6b2cb04f42c0e67c504ac2cb20e53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608360"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661661"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>互換性のない Access の機能 (AccessToSQL)
 アクセスするすべてのデータベース機能と互換性のある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセスは、予約済みキーワードの別のセットを持っているとします。 これらへの移行を成功を防ぐことができますなどの問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 次の表を使用して、考えられる移行の問題とそれらについて何ができるについて説明します。  
@@ -42,10 +42,10 @@ ms.locfileid: "47608360"
   
 |データベースの設定や機能へをアクセスします。|移行の問題|  
 |--------------------------------------|-------------------|  
-|テーブルにアクセスするには、一意のインデックスはありません。|一意のインデックスがないテーブルに移行されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行後に、テーブルを変更することはできません。 これは、アプリケーション互換性の問題につながります。<br /><br />Access データベース オブジェクトを変換するときに、出力ウィンドウには一意のインデックスがない Access のテーブルが表示されます。<br /><br />プライマリ キーを追加するアクセスを構成することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換中にテーブルです。 詳細については、次を参照してください。[プロジェクトの設定 (変換)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)します。|  
+|テーブルにアクセスするには、一意のインデックスはありません。|一意のインデックスがないテーブルに移行されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行後に、テーブルを変更することはできません。 これは、アプリケーション互換性の問題につながります。<br /><br />Access データベース オブジェクトを変換するときに、出力ウィンドウには一意のインデックスがない Access のテーブルが表示されます。<br /><br />プライマリ キーを追加するアクセスを構成することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換中にテーブルです。 詳細については、次を参照してください。[プロジェクトの設定 (変換)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)します。|  
 |テーブルにアクセスするには、レプリケーションの列があります。|レプリケーション システム列を含む Access テーブルに移行されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Jet のレプリケーション機能は移行後に中断されます。<br /><br />移行後に、使用を検討して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリケーション、データベースの同期コピーを維持するためにします。|  
 |一意インデックスがテーブルにアクセスでは、複数の null 値が含まれます。|複数の null 値を含む一意のインデックスがテーブルにアクセスを転送できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ためで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、一意のインデックスは、複数の null 値を許可しないようにします。 これらのテーブルの移行は失敗します。<br /><br />SSMA は評価レポートには、この問題にフラグを設定します。 評価レポートを作成するを参照してください。[変換のための Access データベース オブジェクトの評価](assessing-access-database-objects-for-conversion-accesstosql.md)します。<br /><br />この問題が存在する場合は、主キーに重複する null 値がないことを確認する必要があります。 または、プライマリ キーまたは複数の null 値を含む一意のインデックスを削除する必要があります。|  
-|テーブルにアクセスするの日付の値が含まれて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範囲。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Datetime**型が 1 年 1753年 1 月年 12 月の 31 の範囲内の日付を受け入れる 9999 のみです。 アクセスが 31 の 10 進数に 1 年 100年 1 月の範囲の日付を受け入れる 9999 です。<br /><br />SSMA は評価レポートには、この問題にフラグを設定します。 評価レポートを作成するを参照してください。[変換のための Access データベース オブジェクトの評価](assessing-access-database-objects-for-conversion-accesstosql.md)します。<br /><br />SSMA で日付がどのように解決する方法を構成するは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範囲。 詳細については、次を参照してください。[プロジェクトの設定 (移行)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)します。|  
+|テーブルにアクセスするの日付の値が含まれて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範囲。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Datetime**型が 1 年 1753年 1 月年 12 月の 31 の範囲内の日付を受け入れる 9999 のみです。 アクセスが 31 の 10 進数に 1 年 100年 1 月の範囲の日付を受け入れる 9999 です。<br /><br />SSMA は評価レポートには、この問題にフラグを設定します。 評価レポートを作成するを参照してください。[変換のための Access データベース オブジェクトの評価](assessing-access-database-objects-for-conversion-accesstosql.md)します。<br /><br />SSMA で日付がどのように解決する方法を構成するは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範囲。 詳細については、次を参照してください。[プロジェクトの設定 (移行)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)します。|  
 |Access でのインデックスの長さは、900 バイトを超えます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インデックスでは、インデックス キー列の合計サイズ 900 バイト制限があります。 テーブルにアクセスするより大きなインデックスを使用して、SSMA で警告が表示されます。<br /><br />データ移行を続行した場合、移行が失敗します。|  
 |オブジェクト名のアクセスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キーワード、または特殊文字を含めます。|アクセスと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]予約済みキーワードと特殊文字のセットは異なります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用してという名前のオブジェクトが受け入れる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キーワードまたは"select"などの角かっこや引用符で囲まれた識別子を使用するか、または [select] .p 場合特殊文字を含めます。 詳細については、「区切り記号 Identifiers (データベース エンジン)」を参照してください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。<br /><br />**注:** 識別子を区切る引用符を使用する、SET QUOTED_IDENTIFIER が ON をする必要があります。<br /><br />たとえば、`CREATE TABLE [schema](c1 [FOR])`されていなくても、有効なステートメントを**スキーマ**と**の**は予約済みキーワード。 また、`CREATE TABLE [xxx*yyy](c1 x&y)`有効なステートメントは、テーブルと列名に特殊文字が含まれているにもかかわらず、  **\&#42;** と **&amp;** します。<br /><br />これらのオブジェクトを参照するすべてのクエリでは、角かっこまたは引用符、名前を使用する必要があります。 たとえば、クエリ`SELECT * FROM schema`は失敗します。 適切なクエリ:`SELECT * FROM [schema]`します。<br /><br />Access データベース オブジェクトを変換するときに、出力ウィンドウはキーワードまたは特殊文字を使用するアクセス テーブルを一覧表示します。 Access では、テーブルの変更し削除し、もう一度データベースを追加または、クエリの識別子を区切るために角かっこまたは引用符を使用できるように、これらのオブジェクトを参照するクエリを変更することができます。 場合は、クエリを変更しないでください、アプリケーションにアクセス可能性がありますエラーが返されるまたはその他の問題が発生します。|  
 |フィールド サイズは、主キー/外部キーのリレーションシップによって異なります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異なるデータ型または外部キー制約を使用してサイズを持つ列のリンクの Jet 機能をサポートしません。<br /><br />出力ウィンドウで、主キー/外部キー制約に変換を一覧表示 Access データベース オブジェクトを変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 一致すると、削除および Access データベースを再度追加できるように、データ型とアクセスの列のサイズを変更できます。 または、データを移行するでこれらの制約は作成されませんが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  

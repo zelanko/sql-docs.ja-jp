@@ -13,12 +13,12 @@ ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 128148d4e1aeabcf0ea57ce7fac35702637afab6
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 43dc992457245de08785afb16e6c8cf71572716e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099953"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659171"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>変数値ファイルの作成 (MySQLToSQL)
 変数値ファイルは、別に 1 つのサーバーの移行から頻繁に変更されるように、送信元または送信先のサーバー名のコマンドのパラメーターの値を構成する XML ファイルです。 各ソース サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている多数のデータベースの移行が発生すると、 **– v**コマンド ライン スイッチします。 これにより、複数の変数ファイルの変数の値をいくつかのスクリプト ファイルの静的な値を維持するためにします。  
@@ -94,5 +94,5 @@ ms.locfileid: "50099953"
 コンソールの運用には、次の手順は[サーバー接続ファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[サーバー接続ファイル (MySQL) を作成します。](http://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
+[サーバー接続ファイル (MySQL) を作成します。](https://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
   

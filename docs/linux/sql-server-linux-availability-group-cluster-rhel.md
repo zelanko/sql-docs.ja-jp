@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c828c2345bf87461ba924cbdd23eb262336d1dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715460"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670821"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループの RHEL のクラスターを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このドキュメントでは、Red Hat Enterprise Linux 上の SQL Server の 3 つのノードの可用性グループのクラスターを作成する方法について説明します。 可用性を高めるためにはLinux 上の可用性グループでは 3 つのノードが必要です - [可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)を参照してください。 クラスタ リングの層は、[Pacemaker](http://clusterlabs.org/)の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。  
+このドキュメントでは、Red Hat Enterprise Linux 上の SQL Server の 3 つのノードの可用性グループのクラスターを作成する方法について説明します。 可用性を高めるためにはLinux 上の可用性グループでは 3 つのノードが必要です - [可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)を参照してください。 クラスタ リングの層は、[Pacemaker](https://clusterlabs.org/)の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。  
 
 > [!NOTE] 
 > Red Hat の完全なドキュメントにアクセスするには、有効なサブスクリプションが必要です。 
 
-クラスターの構成、リソース エージェント オプション、および管理の詳細については、  [RHEL リファレンス ドキュメント](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)を参照してください。
+クラスターの構成、リソース エージェント オプション、および管理の詳細については、  [RHEL リファレンス ドキュメント](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)を参照してください。
 
 > [!NOTE] 
 > SQL Server は Linux 上では Pacemaker と、Windows Server フェールオーバー クラスタ リングほどには緊密には統合されていません。 SQL Server インスタンスは、クラスターを認識していません。 Pacemaker は、クラスター リソースのオーケストレーションを提供します。 また、 Windows Server フェールオーバー クラスタ リングに固有の仮想ネットワーク名に該当するものはPacemakerにはありません。 クラスター情報を照会する可用性グループ動的管理ビュー (DMV) は、Pacemaker クラスターでは空の行を返します。 フェールオーバー後に透過的に再接続するためのリスナーを作成するには、 DNS で仮想 IP リソースを作成するために使用する ip アドレスを使い、リスナー名を手動で登録します。  
@@ -58,7 +58,7 @@ RHEL の高可用性を構成するには、高可用性のサブスクリプシ
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>RHEL の高可用性のサブスクリプションを有効にします。
 
-クラスター内の各ノードは、RHEL と High Availability Add on の適切なサブスクリプションが必要です。 [Red Hat Enterprise Linux での高可用性クラスター パッケージをインストールする方法](http://access.redhat.com/solutions/45930)の要件を確認してください。  サブスクリプションとリポジトリを構成する手順に従います。
+クラスター内の各ノードは、RHEL と High Availability Add on の適切なサブスクリプションが必要です。 [Red Hat Enterprise Linux での高可用性クラスター パッケージをインストールする方法](https://access.redhat.com/solutions/45930)の要件を確認してください。  サブスクリプションとリポジトリを構成する手順に従います。
 
 1. システムを登録します。
 
@@ -88,7 +88,7 @@ RHEL の高可用性を構成するには、高可用性のサブスクリプシ
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-詳細については、[Pacemaker – オープン ソースな高可用性クラスター](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)を参照してください。  
+詳細については、[Pacemaker – オープン ソースな高可用性クラスター](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)を参照してください。  
 
 サブスクリプションを構成した後は、 Pacemaker を構成するため次の手順を実行します。
 
@@ -110,9 +110,9 @@ Pacemaker クラスターのベンダーは、STONITH を有効にして、サ�
 
 STONITH、およびフェンス操作については、次の記事を参照してください。
 
-* [Pacemaker クラスターを最初から作成](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [フェンスと STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Pacemaker を使用した Red Hat High Availability Add-On の設定: フェンス機能](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Pacemaker クラスターを最初から作成](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [フェンスと STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Pacemaker を使用した Red Hat High Availability Add-On の設定: フェンス機能](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 ノード レベル でのフェンス操作は環境に大きく依存するため、このチュートリアルでは無効にします (後で構成することができます)。 次のスクリプトで、ノード レベルのフェンス操作を無効にします。
 
@@ -149,7 +149,7 @@ pcs resource update ag1 meta failure-timeout=60s
 ```
 
 
-Pacemaker クラスターのプロパティについては、次を参照してください。 [Pacemaker クラスター プロパティ](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)します。
+Pacemaker クラスターのプロパティについては、次を参照してください。 [Pacemaker クラスター プロパティ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)します。
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Pacemaker 用 SQL Server ログインを作成します。
 

@@ -14,12 +14,12 @@ ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 652eaeb01289bac4af6af81de6278270d6596c91
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 35e2af3f371d66ce38df5cb376516d40d01006bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216960"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659848"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ Next
   
      **\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL13** **.\<InstanceName > \MSSQL\Log**  
   
- ファイアウォール経由で接続する場合は、接続先のリモート コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、次を参照してください。 [WMI は、Windows Vista でリモート起動に接続する](http://go.microsoft.com/fwlink/?LinkId=178848)します。  
+ ファイアウォール経由で接続する場合は、接続先のリモート コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、次を参照してください。 [WMI は、Windows Vista でリモート起動に接続する](https://go.microsoft.com/fwlink/?LinkId=178848)します。  
   
 ## <a name="see-also"></a>参照  
  [SqlErrorLogFile クラス](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   

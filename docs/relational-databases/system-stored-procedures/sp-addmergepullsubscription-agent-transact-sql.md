@@ -17,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749746"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681370"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -294,13 +294,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーになっていない場合、 **sysadmin**するを指定する必要があります固定サーバー ロール、 *job_login*と*job_password*を指定すると*job_name*.  
   
  [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- フィルター選択されたデータのスナップショットを使用する場合に、読み込むスナップショット ファイルが格納されているフォルダーのパスを指定します。 *dynamic_snapshot_location*は**nvarchar (260)**、既定値は NULL です。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ フィルター選択されたデータのスナップショットを使用する場合に、読み込むスナップショット ファイルが格納されているフォルダーのパスを指定します。 *dynamic_snapshot_location*は**nvarchar (260)**、既定値は NULL です。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
  [  **@use_web_sync =** ] *@use_web_sync*  
  Web 同期が有効であることを示します。 *@use_web_sync*は**ビット**、既定値は 0。 **1** HTTP を使用してインターネット経由でプル サブスクリプションを同期できることを指定します。  
   
  [  **@internet_url =** ] **'***internet_url***'**  
- Web 同期用のレプリケーション リスナー (REPLISAPI.DLL) の場所を指定します。 *internet_url*は**nvarchar (260)**、既定値は NULL です。 *internet_url*形式での完全修飾 URL は、`http://server.domain.com/directory/replisapi.dll`します。 サーバーの構成で、リッスンするポートがポート 80 以外の場合は、`http://server.domain.com:portnumber/directory/replisapi.dll` の形式のポート番号も指定する必要があります。ここで `portnumber` はポートを表します。  
+ Web 同期用のレプリケーション リスナー (REPLISAPI.DLL) の場所を指定します。 *internet_url*は**nvarchar (260)**、既定値は NULL です。 *internet_url*形式での完全修飾 URL は、`https://server.domain.com/directory/replisapi.dll`します。 サーバーの構成で、リッスンするポートがポート 80 以外の場合は、`https://server.domain.com:portnumber/directory/replisapi.dll` の形式のポート番号も指定する必要があります。ここで `portnumber` はポートを表します。  
   
  [  **@internet_login =** ] **'***internet_login***'**  
  HTTP 基本認証を使って Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントが使用するログインを指定します。 *internet_login*は**sysname**、既定値は NULL です。  

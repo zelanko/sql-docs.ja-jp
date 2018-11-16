@@ -18,17 +18,17 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00efe39e8ab60df83ddd267269461f6a6ff61ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a670dcf5d011bf30f7196d04b3338d05d6095ee5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594631"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661101"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  含まれるパラメーターに関する情報を含む行セットを返す、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 **sp_batch_params**のみに指定されたバッチを解析し、埋め込みパラメーター値に関する情報を返します。 バッチの実行や、実行環境の変更は行いません。  
+  含まれているパラメーターに関する情報を含む行セットを返す、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチです。 **sp_batch_params**のみに指定されたバッチを解析し、埋め込みパラメーター値に関する情報を返します。 バッチの実行や、実行環境の変更は行いません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
   
 ## <a name="arguments"></a>引数  
  [  **@tsqlbatch =**] **'***tsqlbatch***'**  
- 含む Unicode 文字列には、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチにパラメーター情報がします。 *tsqlbatch*は**nvarchar (max)** に暗黙的に変換または**nvarchar (max)** します。  
+ 含む Unicode 文字列には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはバッチのパラメーターの情報は、します。 *tsqlbatch*は**nvarchar (max)** に暗黙的に変換または**nvarchar (max)** します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -50,7 +50,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**PARAMETER_NAME**|**sysname**|パラメーターの名前を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッチに記載します。|  
+|**PARAMETER_NAME**|**sysname**|バッチ内で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が検出したパラメーターの名前です。|  
 |**COLUMN_TYPE**|**smallint**|このフィールドは、次のいずれかの値を返します。<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> この列は常に 0 です。|  
 |**DATA_TYPE**|**smallint**|パラメーターのデータ型 (ODBC データ型の整数コード) です。 このデータ型が ISO 型にマップできない場合、値は NULL になります。 ネイティブ データ型の名前が返されます、 **TYPE_NAME**列。 この値は常に NULL です。|  
 |**TYPE_NAME**|**sysname**|基になる DBMS によって表された、データ型を表す文字列です。 この値は NULL です。|  
@@ -59,7 +59,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**スケール**|**smallint**|小数点より右側の桁数です。 この値は NULL です。|  
 |**RADIX**|**smallint**|数値型の基数です。 この値は NULL です。|  
 |**NULLABLE**|**smallint**|NULL 値を許容するかどうかを指定します。<br /><br /> 1 = NULL 値を許容するパラメーターのデータ型が作成されます。<br /><br /> 0 = null 値は許可されません。<br /><br /> この値は NULL です。|  
-|**SQL_DATA_TYPE**|**smallint**|値、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データ型、記述子の TYPE フィールドに表示されます。 この列は、**datetime** データ型と ISO **interval** データ型以外は、**DATA_TYPE** 列と同じです。 この列は常に値が返されます。 この値は NULL です。|  
+|**SQL_DATA_TYPE**|**smallint**|記述子の TYPE フィールドでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型の値です。 この列は、**datetime** データ型と ISO **interval** データ型以外は、**DATA_TYPE** 列と同じです。 この列は常に値が返されます。 この値は NULL です。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**または ISO**間隔**サブコードの場合、値の**SQL_DATA_TYPE**が SQL_DATETIME または SQL_INTERVAL します。 **datetime** および **ISO interval** 以外のデータ型の場合、この列は NULL です。 この値は NULL です。|  
 |**CHAR_OCTET_LENGTH**|**int**|最大長のバイト単位、**文字**または**バイナリ**データ型のパラメーター。 他のすべてのデータ型の場合、この列は NULL を返します。 この値は常に NULL です。|  
 |**ORDINAL_POSITION**|**int**|バッチ内でのパラメーターの序数です。 パラメーター名が複数回繰り返される場合は、この列には最初のオカレンスの序数が入ります。 最初のパラメーターには序数 1 が設定されます。 この列は常に値が返されます。|  
@@ -81,7 +81,7 @@ EXECUTE sp_batch_params @SQLString;
   
 ## <a name="see-also"></a>参照  
  [ストアド プロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [ストアド プロシージャの操作方法に関するトピックを実行している&#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [ストアド プロシージャの操作方法に関するトピックを実行している&#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [ストアド プロシージャの実行 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
   

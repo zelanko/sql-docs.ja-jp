@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252010"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674199"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes サービス (AKS) での Kubernetes での SQL Server のコンテナーをデプロイします。
 
@@ -33,11 +33,11 @@ Azure Kubernetes Service (AKS) では、Kubernetes で高可用性 (HA) の永�
 
 ## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Azure Kubernetes サービスで実行されている Kubernetes 上の HA ソリューション
 
-Kubernetes バージョン 1.6 およびそれ以降はサポートしています[ストレージ クラス](http://kubernetes.io/docs/concepts/storage/storage-classes/)、[永続ボリューム要求](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)、および[Azure ディスク ボリュームの種類](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)します。 作成して Kubernetes でネイティブに、SQL Server インスタンスを管理します。 この記事の例では、作成する方法を示します、[展開](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)共有ディスク フェールオーバー クラスター インスタンスと同様の高可用性構成を実現するためにします。 この構成では、Kubernetes は、クラスター オーケストレーターの役割を果たします。 コンテナー内の SQL Server インスタンスが失敗したときに、orchestrator を別のインスタンスが同じ永続的な記憶域に接続しているコンテナーのブートス トラップします。
+Kubernetes バージョン 1.6 およびそれ以降はサポートしています[ストレージ クラス](https://kubernetes.io/docs/concepts/storage/storage-classes/)、[永続ボリューム要求](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)、および[Azure ディスク ボリュームの種類](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)します。 作成して Kubernetes でネイティブに、SQL Server インスタンスを管理します。 この記事の例では、作成する方法を示します、[展開](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)共有ディスク フェールオーバー クラスター インスタンスと同様の高可用性構成を実現するためにします。 この構成では、Kubernetes は、クラスター オーケストレーターの役割を果たします。 コンテナー内の SQL Server インスタンスが失敗したときに、orchestrator を別のインスタンスが同じ永続的な記憶域に接続しているコンテナーのブートス トラップします。
 
 ![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-前の図では、`mssql-server`内のコンテナーを[ポッド](http://kubernetes.io/docs/concepts/workloads/pods/pod/)します。 Kubernetes では、クラスター内のリソースを調整します。 A[レプリカ セット](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)ポッドがノード障害の後に自動的に復旧ことにより、します。 アプリケーションは、サービスに接続します。 この場合、サービスが障害の後に同じままの IP アドレスをホストするロード バランサーを表します、`mssql-server`します。
+前の図では、`mssql-server`内のコンテナーを[ポッド](https://kubernetes.io/docs/concepts/workloads/pods/pod/)します。 Kubernetes では、クラスター内のリソースを調整します。 A[レプリカ セット](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)ポッドがノード障害の後に自動的に復旧ことにより、します。 アプリケーションは、サービスに接続します。 この場合、サービスが障害の後に同じままの IP アドレスをホストするロード バランサーを表します、`mssql-server`します。
 
 次の図に、`mssql-server`コンテナーが失敗しました。 レプリカの正常なインスタンスの正しい数設定、および構成に従って、新しいコンテナーを開始、オーケストレーターとして Kubernetes が保証されます。 オーケストレーターは、同じノードで、新しいポッドを開始し、`mssql-server`が同じ永続的な記憶域に再接続します。 サービスに再作成された接続`mssql-server`します。
 
@@ -52,7 +52,7 @@ Kubernetes バージョン 1.6 およびそれ以降はサポートしていま�
 * **Kubernetes クラスター**
    - このチュートリアルでは、Kubernetes クラスターが必要です。 手順を使用して、 [kubectl](https://kubernetes.io/docs/user-guide/kubectl/)クラスターを管理します。 
 
-   - 参照してください[Azure Container Service (AKS) クラスターのデプロイ](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)作成を使用して AKS での単一ノードの Kubernetes クラスターに接続`kubectl`します。 
+   - 参照してください[Azure Container Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)作成を使用して AKS での単一ノードの Kubernetes クラスターに接続`kubectl`します。 
 
    >[!NOTE]
    >ノードの障害を防ぐには、Kubernetes クラスターには、1 つ以上のノードが必要です。
@@ -62,7 +62,7 @@ Kubernetes バージョン 1.6 およびそれ以降はサポートしていま�
 
 ## <a name="create-an-sa-password"></a>SA パスワードを作成します。
 
-Kubernetes クラスターでは、SA のパスワードを作成します。 Kubernetes は、パスワードなどの機密性の高い構成情報を管理できます[シークレット](http://kubernetes.io/docs/concepts/configuration/secret/)します。
+Kubernetes クラスターでは、SA のパスワードを作成します。 Kubernetes は、パスワードなどの機密性の高い構成情報を管理できます[シークレット](https://kubernetes.io/docs/concepts/configuration/secret/)します。
 
 次のコマンドでは、SA アカウントのパスワードを作成します。
 
@@ -77,9 +77,9 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
 
 ## <a name="create-storage"></a>ストレージを作成します。
 
-構成、[永続ボリューム](http://kubernetes.io/docs/concepts/storage/persistent-volumes/)と[永続ボリューム要求](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection)Kubernetes クラスターでします。 次の手順を完了するには。 
+構成、[永続ボリューム](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)と[永続ボリューム要求](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection)Kubernetes クラスターでします。 次の手順を完了するには。 
 
-1. ストレージ クラスと永続的なボリュームを定義するマニフェストを作成する要求。  マニフェストはストレージ プロビジョナー、パラメーターを指定し、[回収ポリシー](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)します。 Kubernetes クラスターでは、このマニフェストを使用して、永続的なストレージを作成します。 
+1. ストレージ クラスと永続的なボリュームを定義するマニフェストを作成する要求。  マニフェストはストレージ プロビジョナー、パラメーターを指定し、[回収ポリシー](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)します。 Kubernetes クラスターでは、このマニフェストを使用して、永続的なストレージを作成します。 
 
    次の yaml の例では、ストレージ クラスと永続ボリューム要求を定義します。 ストレージ クラスのプロビジョナーは`azure-disk`この Kubernetes クラスターが Azure ではであるためです。 ストレージ アカウントの種類は`Standard_LRS`します。 永続ボリューム要求の名前は`mssql-data`します。 永続ボリューム要求メタデータには、記憶域クラスへ、再度接続する注釈が含まれています。 
 
@@ -155,7 +155,7 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
 
 この例では、SQL Server インスタンスをホストするコンテナーは Kubernetes デプロイ オブジェクトとしてについて説明します。 展開は、レプリカ セットを作成します。 レプリカ セットでは、ポッドを作成します。 
 
-この手順で SQL Server ベースのコンテナーを記述するマニフェストを作成[mssql server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker イメージです。 マニフェストの参照、`mssql-server`永続ボリューム要求、および`mssql`Kubernetes クラスターに既に適用したシークレットです。 マニフェストについても説明します、[サービス](http://kubernetes.io/docs/concepts/services-networking/service/)します。 このサービスは、ロード バランサーです。 ロード バランサーは、SQL Server インスタンスが回復後に、IP アドレスが解決しないことを保証します。 
+この手順で SQL Server ベースのコンテナーを記述するマニフェストを作成[mssql server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker イメージです。 マニフェストの参照、`mssql-server`永続ボリューム要求、および`mssql`Kubernetes クラスターに既に適用したシークレットです。 マニフェストについても説明します、[サービス](https://kubernetes.io/docs/concepts/services-networking/service/)します。 このサービスは、ロード バランサーです。 ロード バランサーは、SQL Server インスタンスが回復後に、IP アドレスが解決しないことを保証します。 
 
 1. 展開を記述するマニフェスト (YAML ファイル) を作成します。 次の例では、SQL Server のコンテナー イメージに基づくコンテナーなど、配置について説明します。
 
@@ -212,7 +212,7 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
    * `value: "Developer"`: SQL Server Developer エディションを実行するコンテナーを設定します。 Developer edition では、実稼働データのライセンスがありません。 展開が実稼働環境用の場合は、適切なエディションを設定します。 (`Enterprise`、 `Standard`、または`Express`)。 
 
       >[!NOTE]
-      >詳細については、次を参照してください。 [SQL Server のライセンス方法](http://www.microsoft.com/sql-server/sql-server-2017-pricing)します。
+      >詳細については、次を参照してください。 [SQL Server のライセンス方法](https://www.microsoft.com/sql-server/sql-server-2017-pricing)します。
 
    * `persistentVolumeClaim`: この値には、のエントリが必要です。`claimName:`永続ボリューム要求に使用される名前にマップされます。 このチュートリアルでは`mssql-data`します。 
 
@@ -275,9 +275,9 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
 
 次のアプリケーションを使用すると、SQL Server インスタンスに接続します。 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
-* [SSDT](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
    
@@ -327,6 +327,6 @@ Kubernetes に自動的に再作成ポッドを SQL Server インスタンスを
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
->[Kubernetes の概要](http://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Kubernetes の概要](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 

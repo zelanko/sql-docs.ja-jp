@@ -10,12 +10,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307f26be96477fa6c11f813ecfd7659df4f30d72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ba3c6bfb78656226745dc8267077749ca46ff3a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847040"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661691"
 ---
 # <a name="date-and-time-improvements"></a>日付と時刻の強化機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47847040"
   
  日付/時刻の強化の詳細については、次を参照してください。[日付と時刻の強化&#40;OLE DB&#41; ](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)と[日付と時刻の強化&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
- この機能を説明するサンプル アプリケーションについては、「[SQL Server データ プログラミング サンプル](http://msftdpprodsamples.codeplex.com/)」を参照してください。  
+ この機能を説明するサンプル アプリケーションについては、「[SQL Server データ プログラミング サンプル](https://msftdpprodsamples.codeplex.com/)」を参照してください。  
   
 ## <a name="usage"></a>使用方法  
  ここでは、新しい日付型と時刻型のさまざまな使用方法について説明します。  

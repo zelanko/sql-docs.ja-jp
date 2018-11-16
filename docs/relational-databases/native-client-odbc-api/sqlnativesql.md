@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b51d7390915b0e1ba78848fd26010b9322ee0033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1044126cb932b77b43dfc2fc93851443b923d70f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815836"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665301"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47815836"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、サーバーにアクセスせずに **SQLNativeSql** 要求に応じます。 この関数を使用すると、SQL ステートメントの構文を効率的にテストできます。 構文チェックでは、識別子または SQL ステートメント内の式の結果が有効かどうかは判断されないので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLNativeSql **によって返された** ネイティブ SQL を実行すると失敗することがあります。  
   
 ## <a name="see-also"></a>参照  
- [SQLNativeSql 関数](http://go.microsoft.com/fwlink/?LinkID=59358)   
+ [SQLNativeSql 関数](https://go.microsoft.com/fwlink/?LinkID=59358)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   
