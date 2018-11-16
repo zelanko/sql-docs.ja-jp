@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5cd953a67893c2f9c457389a74c309fa207b2aad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020276"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813605"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの SSL 接続の構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを使用している場合、詳細については、SharePoint のマニュアルを参照してください。 たとえば、「[How to enable SSL on a SharePoint 2010 web application」(SQL Server 2010 Web アプリケーションで SSL を有効にする方法) (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx) を参照してください。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを使用している場合、詳細については、SharePoint のマニュアルを参照してください。 たとえば、「[How to enable SSL on a SharePoint 2010 web application」(SQL Server 2010 Web アプリケーションで SSL を有効にする方法) (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx) を参照してください。  
   
  インターネット インフォメーション サービス (IIS) でも HTTP SSL が使用されるため、IIS と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じコンピューター上で実行する場合は、相互運用性に関する重要な問題について考慮する必要があります。 これらの問題の対処方法については、「IIS との相互運用性の問題」を確認してください。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "50020276"
   
  SSL バインドは Microsoft Windows の共有リソースです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーや、IIS マネージャーなどのその他のツールを使用して行われた変更は、同じコンピューター上の他のアプリケーションに影響を与えます。 バインドを編集するには、バインドを作成するときに使用したものと同じツールを使用することをお勧めします。  たとえば、構成マネージャーを使用して SSL バインドを作成した場合は、構成マネージャーを使用してバインドのライフ サイクルを管理することをお勧めします。 また、IIS マネージャーを使用してバインドを作成した場合は、IIS マネージャーを使用してバインドのライフ サイクルを管理することをお勧めします。 コンピューターに IIS をインストールしてから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールする場合は、IIS で SSL 構成を確認してから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を構成してください。  
   
- Reporting Services 構成マネージャーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SSL バインドを削除すると、インターネット インフォメーション サービス (IIS) を実行しているサーバーまたは別の HTTP.SYS サーバー上の Web サイトに対して SSL が機能しなくなる場合があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーによって、次のレジストリ キーが削除されます。 このレジストリ キーが削除されると、IIS の SSL バインドも削除されます。 このバインドがない場合、HTTPS プロトコルに SSL が提供されません。 この問題を診断するには、IIS マネージャーまたは HTTPCFG.exe コマンド ライン ユーティリティを使用します。この問題を解決するには、IIS マネージャーを使用して、Web サイトに対する SSL バインドを復元します。今後この問題が発生しないようにするには、IIS マネージャーを使用して SSL バインドを削除した後、IIS マネージャーを使用して目的の Web サイトのバインドを復元します。 詳細については、サポート技術情報の記事の [SSL バインドを削除すると SSL が機能しなくなる問題に関するページ (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n) を参照してください。  
+ Reporting Services 構成マネージャーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SSL バインドを削除すると、インターネット インフォメーション サービス (IIS) を実行しているサーバーまたは別の HTTP.SYS サーバー上の Web サイトに対して SSL が機能しなくなる場合があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーによって、次のレジストリ キーが削除されます。 このレジストリ キーが削除されると、IIS の SSL バインドも削除されます。 このバインドがない場合、HTTPS プロトコルに SSL が提供されません。 この問題を診断するには、IIS マネージャーまたは HTTPCFG.exe コマンド ライン ユーティリティを使用します。この問題を解決するには、IIS マネージャーを使用して、Web サイトに対する SSL バインドを復元します。今後この問題が発生しないようにするには、IIS マネージャーを使用して SSL バインドを削除した後、IIS マネージャーを使用して目的の Web サイトのバインドを復元します。 詳細については、サポート技術情報の記事の [SSL バインドを削除すると SSL が機能しなくなる問題に関するページ (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   

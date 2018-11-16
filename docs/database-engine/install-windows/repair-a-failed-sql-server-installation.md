@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: db65d03e5a831e4438b407997a2ac42599e3df4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41103374bdef2d292bfd5c3e22e3fab093309f42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611160"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606782"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>失敗した SQL Server のインストールの修復
 
@@ -81,6 +81,6 @@ ms.locfileid: "47611160"
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [インストール方法に関する記事](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [インストール方法に関する記事](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

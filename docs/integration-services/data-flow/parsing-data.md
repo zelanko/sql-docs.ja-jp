@@ -14,12 +14,12 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b98b9cd1b4c99ba6fec20d8fe4912013aba1ea6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2ec789b32bb23fbdc2ac48278b16a02588d2580
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664294"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638585"
 ---
 # <a name="parsing-data"></a>データの解析
   パッケージ内のデータ フローは、異種データ ストア間でデータの抽出や読み込みを行います。データ ストアでは、標準およびカスタムのさまざまなデータ型を使用します。 データ フローでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の変換元は、データの抽出、文字列データの解析、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型へのデータ変換を行います。 次に続く変換で、データを解析して別のデータ型に変換したり、列のコピーを別のデータ型で作成することもあります。 コンポーネントで使用する式で、引数やオペランドを別のデータ型にキャストする場合もあります。 さらに、データがデータ ストアに読み込まれるとき、変換先でデータを解析して、変換先が使用するデータ型に変換する場合もあります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
@@ -201,5 +201,5 @@ ms.locfileid: "47664294"
 ## <a name="standard-parse"></a>標準解析
 標準解析は、ロケール依存型の解析ルーチンのセットであり、Oleaut32.dll と Ole2dsip.dll で使用できるオートメーション データ型変換の API が提供する、すべてのデータ型変換がサポートされています。 標準解析は、OLE DB 解析 API に相当します。  
   
- 標準解析は、各言語のデータのデータ型変換をサポートしており、データ形式が高速解析でサポートされていない場合に使用する必要があります。 オートメーション データ型変換 API の詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkId=79427)にある「データ型変換 API」を参照してください。 
+ 標準解析は、各言語のデータのデータ型変換をサポートしており、データ形式が高速解析でサポートされていない場合に使用する必要があります。 オートメーション データ型変換 API の詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkId=79427)にある「データ型変換 API」を参照してください。 
  

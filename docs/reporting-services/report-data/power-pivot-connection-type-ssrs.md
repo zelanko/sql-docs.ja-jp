@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c6dcae60590d6bcdeaaf06d41326a8fc0cb64f64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030851"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812665"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot の接続の種類 (SSRS)
   SQL Server Analysis Services データ処理拡張機能を使用すると、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからデータを取得することができます。  
@@ -29,7 +29,7 @@ ms.locfileid: "50030851"
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
   
 ## <a name="connection-string"></a>[接続文字列]  
- 接続文字列は、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーまたはその他のライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの URL です (例: `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`)。  
+ 接続文字列は、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーまたはその他のライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの URL です (例: `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`)。  
   
 ## <a name="credentials"></a>[資格情報]  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳しくは、「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  

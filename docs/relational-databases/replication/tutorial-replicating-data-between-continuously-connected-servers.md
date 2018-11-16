@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9bfb827e37c32eb68fbd28174a8b1a393bd33a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814530"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671561"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>チュートリアル: 2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47814530"
 - サブスクライバー サーバー (レプリケーション先) に、[!INCLUDE[ssEW](../../includes/ssew-md.md)] を除く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のエディションをインストールします。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] は、トランザクション レプリケーションのサブスクライバーとして使用できません。  
   
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) をインストールします。
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
 - [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードします。 SSMS でデータベースを復元する方法の詳細については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
  
 >[!NOTE]

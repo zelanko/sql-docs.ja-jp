@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e1e6089719af71269af23de782a2154468b68e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18579eba7d7a66b9efd1a10de4a0815d2503744e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606090"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672531"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ Full-Text Engine では、フルテキスト インデックスを作成する�
   
  セキュリティ上の理由から、フィルターはフィルター デーモン ホスト プロセスによって読み込まれます。 サーバー インスタンスでは、マルチスレッド フィルターに対してはすべてマルチスレッド処理が使用され、シングル スレッド フィルターに対してはすべてシングル スレッド処理が使用されます。 マルチスレッド フィルターを使用するドキュメントにシングル スレッド フィルターを使用するドキュメントが埋め込まれていると、Full-Text Engine では埋め込まれたドキュメントに対してシングル スレッド処理を開始します。 たとえば、PDF ドキュメントが埋め込まれた Word 文書の場合、Full-Text Engine は、Word コンテンツに対してはマルチスレッド プロセスを使用し、PDF の内容に対してはシングル スレッド プロセスを開始します。 ただし、このような環境では、シングル スレッド フィルターが適切に機能しない場合があり、フィルター処理が不安定になることがあります。 このような埋め込みが通例であるような特定の状況では、不安定になった結果、プロセスがクラッシュすることもあります。 クラッシュが発生すると、エラーが発生したドキュメント (たとえば、PDF の内容が埋め込まれた Word 文書) がシングル スレッド フィルター処理に再ルーティングされます。 再ルーティングが頻繁に起こると、フルテキスト インデックス作成処理のパフォーマンスが低下します。  
   
-この問題を回避するには、コンテナー ドキュメント (この例では Word 文書) に対するフィルターとして、シングル スレッド フィルターを設定します。 シングル スレッド フィルターとして設定するには、フィルターの **ThreadingModel** レジストリ値を **Apartment Threaded** に設定します。 シングル スレッド アパートメントの詳細については、ホワイト ペーパー「 [COM スレッド モデルの概要と使用方法](http://go.microsoft.com/fwlink/?LinkId=209159)」を参照してください。  
+この問題を回避するには、コンテナー ドキュメント (この例では Word 文書) に対するフィルターとして、シングル スレッド フィルターを設定します。 シングル スレッド フィルターとして設定するには、フィルターの **ThreadingModel** レジストリ値を **Apartment Threaded** に設定します。 シングル スレッド アパートメントの詳細については、ホワイト ペーパー「 [COM スレッド モデルの概要と使用方法](https://go.microsoft.com/fwlink/?LinkId=209159)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   

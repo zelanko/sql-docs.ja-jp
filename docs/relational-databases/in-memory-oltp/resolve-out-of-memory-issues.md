@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c8e06e7070491eb608dc315acae235465a802bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656480"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671691"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ GO
 > 詳細については、「[VM 環境でのインメモリ OLTP の使用のベスト プラクティス](#bkmk_VMs) 」をご覧ください。  
   
 ##  <a name="bkmk_PageAllocFailure"></a> 十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する  
- エラー メッセージ `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.` がエラー ログに記録される場合は、原因として、リソース ガバナーが無効になっている可能性があります。 リソース ガバナーが無効になっていると、MEMORYBROKER_FOR_RESERVE によって擬似的なメモリ不足が引き起こされます。  
+ エラー メッセージ `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` がエラー ログに記録される場合は、原因として、リソース ガバナーが無効になっている可能性があります。 リソース ガバナーが無効になっていると、MEMORYBROKER_FOR_RESERVE によって擬似的なメモリ不足が引き起こされます。  
   
  これを解決するには、リソース ガバナーを有効にする必要があります。  
   
@@ -159,9 +159,9 @@ GO
 この問題を軽減するためには、必要に応じて追加のメモリを提供する動的メモリ機能に依存して最小限のメモリを割り当てる代わりに、データベースを復旧または再起動するために十分なメモリをデータベースに事前に割り当ててください。
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP のメモリ管理](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [インメモリ OLTP のメモリ管理](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [メモリ使用量の監視とトラブルシューティング](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
- [メモリ最適化テーブルを持つデータベースのリソース プールへのバインド](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [データベースを作成してリソース プールにバインドする方法については、「](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md)  
  [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
   

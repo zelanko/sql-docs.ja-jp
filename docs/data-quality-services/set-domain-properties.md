@@ -14,12 +14,12 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 910b511796411207151b40933cf82c8ea06b9dab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c7c01d2ac09ebb1e521dfbf7c762077a3f68379
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821350"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696710"
 ---
 # <a name="set-domain-properties"></a>ドメインのプロパティの設定
 
@@ -27,7 +27,7 @@ ms.locfileid: "47821350"
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインのプロパティを設定する方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ドメインのプロパティを設定するには、ナレッジ ベースとドメインを作成しておく必要があります。  
@@ -43,7 +43,7 @@ ms.locfileid: "47821350"
   
 2.  「 [Create a Domain](../data-quality-services/create-a-domain.md)」の説明に従って新しいドメインを作成した後に、そのドメインにプロパティを設定します。  
   
-3.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+3.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="FollowUp"></a> 補足情報: ドメインのプロパティを設定した後  
  ドメインのプロパティを設定した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  

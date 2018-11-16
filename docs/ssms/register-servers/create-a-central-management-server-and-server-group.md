@@ -13,12 +13,12 @@ ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b41df0872ca52a73a21db5f151bbaa1a03cf5bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f4755e76755a455ff5a4fca7a77a7c9188fd76f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845900"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696141"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>中央管理サーバーおよびサーバー グループの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47845900"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47845900"
   
 4.  **[登録済みサーバー]** で、サーバー名と説明 (省略可) を入力します。  
   
-5.  **[接続プロパティ]** タブで、ネットワークと接続のプロパティを確認または変更します。 詳細については、「[[サーバーへの接続] &#40;[接続プロパティ] ページ&#41; データベース エンジン](http://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)」を参照してください。  
+5.  **[接続プロパティ]** タブで、ネットワークと接続のプロパティを確認または変更します。 詳細については、「[[サーバーへの接続] &#40;[接続プロパティ] ページ&#41; データベース エンジン](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)」を参照してください。  
   
 6.  **[テスト]** をクリックして接続をテストします。  
   

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1de98e2d7009bb787b5904c33560655cabcc314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dfb694a6e9bd6bbdd3525251747a42b35271ab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809712"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674121"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>インメモリ OLTP (インメモリ最適化)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ ms.locfileid: "47809712"
 |[メモリ最適化テーブルを使用するための要件](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|メモリ最適化テーブルを使用するためのハードウェア要件、ソフトウェア要件、およびガイドラインについて説明します。|  
 |[インメモリ OLTP のコード サンプル](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|メモリ最適化テーブルを作成して使用する方法を示すコード例が記載されています。|  
 |[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|メモリ最適化テーブルの概要を示します。|  
-|[メモリ最適化テーブル変数](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|tempdb の使用を減らすために、従来のテーブル変数の代わりにメモリ最適化テーブル変数を使用する方法を示すコード例です。|  
-|[メモリ最適化テーブルのインデックス](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|メモリ最適化インデックスを示します。|  
+|[メモリ最適化テーブル変数](https://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|tempdb の使用を減らすために、従来のテーブル変数の代わりにメモリ最適化テーブル変数を使用する方法を示すコード例です。|  
+|[メモリ最適化テーブルのインデックス](https://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|メモリ最適化インデックスを示します。|  
 |[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|ネイティブ コンパイル ストアド プロシージャについて説明します。|  
-|[インメモリ OLTP のメモリ管理](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|システムのメモリ使用量について説明し、メモリ使用量を管理する方法を示します。|  
+|[インメモリ OLTP のメモリ管理](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|システムのメモリ使用量について説明し、メモリ使用量を管理する方法を示します。|  
 |[メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|メモリ最適化テーブルでのトランザクションに関する情報を格納するデータ ファイルとデルタ ファイルについて説明します。|  
-|[メモリ最適化テーブルのバックアップ、復元、復旧](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|メモリ最適化テーブルのバックアップ、復元、および復旧について説明します。|  
+|[メモリ最適化テーブルのバックアップ、復元、復旧](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|メモリ最適化テーブルのバックアップ、復元、および復旧について説明します。|  
 |[Transact-SQL によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] による [!INCLUDE[hek_2](../../includes/hek-2-md.md)]のサポートについて説明します。|  
 |[インメモリ OLTP データベースにおける高可用性のサポート](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|[!INCLUDE[hek_2](../../includes/hek-2-md.md)]での可用性グループおよびフェールオーバー クラスタリングについて説明します。|  
 |[SQL Server によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|新しい構文および機能、更新された構文および機能のうち、メモリ最適化テーブルをサポートするものを一覧にして紹介します。|  
@@ -79,13 +79,13 @@ ms.locfileid: "47809712"
 
 -   [SQL Server インメモリ OLTP 内部技術ホワイト ペーパー](https://msdn.microsoft.com/library/mt764316.aspx)  
 
--   [SQL Server のインメモリ OLTP と列ストア機能の比較](http://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
+-   [SQL Server のインメモリ OLTP と列ストア機能の比較](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
 -   SQL Server 2016 のインメモリ OLTP の新機能の [第 1 部](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) と [第 2 部](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
--   [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [インメモリ OLTP ブログ](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [インメモリ OLTP ブログ](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 ## <a name="see-also"></a>参照  
  [データベース機能](../../relational-databases/database-features.md)  

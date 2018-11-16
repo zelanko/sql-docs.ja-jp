@@ -12,12 +12,12 @@ ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2db5804b0ac8af0648a38e862bb81adedd9ef016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c32d42292c9d16984fe37b72741da7941852ff8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669670"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699682"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
 
@@ -27,7 +27,7 @@ ms.locfileid: "47669670"
   
 |DQS コンポーネント|[説明]|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] は、[!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] データベース エンジンの上にインストールされ、DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA の 3 つのデータベースを含んでいます。 DQS_MAIN には、DQS ストアド プロシージャ、DQS エンジン、パブリッシュ済みナレッジ ベースが含まれています。 DQS_PROJECTS には、データ品質プロジェクトの情報が含まれています。 DQS_STAGING_DATA は、ソース データをコピーし、DQS 操作を実行して処理後のデータをエクスポートするためのステージング領域です。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] は、 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] データベース エンジンの上にインストールされ、DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA の 3 つのデータベースを含んでいます。 DQS_MAIN には、DQS ストアド プロシージャ、DQS エンジン、パブリッシュ済みナレッジ ベースが含まれています。 DQS_PROJECTS には、データ品質プロジェクトの情報が含まれています。 DQS_STAGING_DATA は、ソース データをコピーし、DQS 操作を実行して処理後のデータをエクスポートするためのステージング領域です。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] は、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]に接続するスタンドアロン アプリケーションであり、高度に直感的なグラフィカル ユーザー インターフェイスを使用して、データ品質に関する操作、および DQS に関連するその他の管理タスクを実行できます。|  
   
 > [!IMPORTANT]  
@@ -117,7 +117,7 @@ ms.locfileid: "47669670"
                     「[DQS 操作のためのデータへのアクセス](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ビデオ: DQS をインストールして構成する](http://go.microsoft.com/fwlink/?LinkId=238241)   
+ [ビデオ: DQS をインストールして構成する](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Data Quality Services のアップグレード](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -125,6 +125,6 @@ ms.locfileid: "47669670"
  [SQL Server のビジネス インテリジェンス機能のインストール](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [SQL Server のアンインストール](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [DQS のインストールおよび構成に関する問題のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [DQS のインストールおよび構成に関する問題のトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

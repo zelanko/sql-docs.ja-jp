@@ -19,12 +19,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc0c1658ce051aa3e0fa494ef5c1b40d2db8881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76559f2d4a8c96a64792e4ecf095094c3cb1229e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832526"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641759"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  
@@ -254,7 +254,7 @@ ms.locfileid: "47832526"
  データ フローでのデータのマッピングついては、「 [データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](http://go.microsoft.com/fwlink/?LinkId=220823)」  
+ blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](https://go.microsoft.com/fwlink/?LinkId=220823)」  
   
 ## <a name="see-also"></a>参照  
  [データ フロー内のデータ](../../integration-services/data-flow/data-in-data-flows.md)  

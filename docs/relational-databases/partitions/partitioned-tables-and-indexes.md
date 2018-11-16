@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af39fd0a7a05bd66565ac94f112c63ac1158df86
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 11f2ad440e817c62a8efa67ba421351b9db93ff9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264892"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662428"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,11 +128,11 @@ ms.locfileid: "48264892"
   
 ## <a name="related-content"></a>関連コンテンツ  
  次のホワイトペーパーには、パーティション テーブルおよびパーティション インデックスの戦略と有用な実装について記述されています。  
--   [SQL Server 2008 を使用したパーティション テーブルとパーティション インデックス](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
--   [自動スライディング ウィンドウを実装する方法](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [パーティション テーブルの一括読み込み](http://msdn.microsoft.com/library/cc966380.aspx)    
+-   [SQL Server 2008 を使用したパーティション テーブルとパーティション インデックス](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
+-   [自動スライディング ウィンドウを実装する方法](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
+-   [パーティション テーブルの一括読み込み](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [プロジェクト REAL: データ ライフ サイクル - パーティション分割](https://technet.microsoft.com/library/cc966424.aspx)    
--   [パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化](http://msdn.microsoft.com/library/ms345599.aspx)    
--   [大規模なリレーショナル データ ウェアハウスを構築するためのトップ 10 のベスト プラクティス](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [大規模なリレーショナル データ ウェアハウスを構築するためのトップ 10 のベスト プラクティス](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   
   

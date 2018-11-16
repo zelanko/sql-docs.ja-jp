@@ -11,12 +11,12 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 826e7ca671272f859cd0d5da7059b34cf4cfedba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee64f342f8ef865d8b264f37c332098b0c2d62cf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847270"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637626"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードのデータ型マッピング
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでは、列の名前、データ型、およびデータ型プロパティを新しい変換先テーブルとファイルに設定できますが、列の値についてカスタム変換を指定することはできません。 このため、変換元から変換先へのデータ型の組み込みマッピングが重要になります。  
@@ -32,7 +32,7 @@ ms.locfileid: "47847270"
 既定と異なるデータ型のマッピングが必要な場合は、マッピング ファイルを更新して、ウィザードによって使用されるマッピングを変更できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** **データ型を DB2** データ型ではなく DB2 **VARデータ型を DB2** GRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にマップするには、 **SqlClientToIBMDB2.xml** マッピング ファイルで **nchar** マッピングを変更して、 **データ型を DB2** ではなく **VARデータ型を DB2**から DB2 にデータを転送するときに、  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>新しいマッピング ファイルを追加できる
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、一般的な変換元と変換先の組み合わせのマッピングをインストールします。 他の変換元と変換先の組み合わせをサポートする新しいマッピング ファイルを **MappingFiles** ディレクトリに追加することもできます。 新しいマッピング ファイルは、公開されている XSD スキーマおよび変換元と変換先の一意の組み合わせ間でのマッピングに準拠する必要があります。 マッピング ファイルのスキーマである **DataTypeMapping.xsd**は、 [こちら](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)に公開されています。
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、一般的な変換元と変換先の組み合わせのマッピングをインストールします。 他の変換元と変換先の組み合わせをサポートする新しいマッピング ファイルを **MappingFiles** ディレクトリに追加することもできます。 新しいマッピング ファイルは、公開されている XSD スキーマおよび変換元と変換先の一意の組み合わせ間でのマッピングに準拠する必要があります。 マッピング ファイルのスキーマである **DataTypeMapping.xsd**は、 [こちら](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)に公開されています。
  
 ## <a name="sample-mapping-file"></a>サンプル マッピング ファイル
 次に示すのは、SQL Server データ型 (具体的には .Net Framework Data Provider for SQL Server で使用されるデータ型) から Oracle データ型にマップする XML マッピングファイルの一部です。 一例として、SQL Server の **int** データ型が Oracle の **INTEGER** データ型にマップされることを確認できます。
@@ -40,8 +40,8 @@ ms.locfileid: "47847270"
 ```xml  
   
 <dtm:DataTypeMappings  
-    xmlns:dtm="http://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   
     MaxSourceVersion="*"   

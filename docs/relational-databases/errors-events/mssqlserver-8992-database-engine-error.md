@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e242cbd5658b743ac813f4c0f03f1bfc74ad62ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812842"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674011"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,5 +76,5 @@ DBCC CHECKCATALOG または DBCC CHECKDB により、指定されたオブジェ
 システム テーブルは手動で更新しないでください。 SQL Server では、システム テーブルを手動で変更することはサポートされていません。 SQL Server データベース内のシステム テーブルを更新すると、2 つのイベント (イベント ID 17659 とイベント ID 3859) がログに記録されます。 詳細については、サポート技術情報の資料 2688307「SQL Server データベース内のシステム テーブルを更新するとイベント ID 17659 とイベント ID 3859 がログに記録される」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server データベース内のシステム テーブルを更新するとイベント ID 17659 とイベント ID 3859 がログに記録される](http://support.microsoft.com/kb/2688307/EN-US)  
+[SQL Server データベース内のシステム テーブルを更新するとイベント ID 17659 とイベント ID 3859 がログに記録される](https://support.microsoft.com/kb/2688307/EN-US)  
   

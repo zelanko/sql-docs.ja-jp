@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee065317d06fbf19ce03c6a9be3b67ff03a0edd5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 04591d5c1d44f0655d0f8dac0743a0e3d0cf6c55
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030591"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814215"
 ---
 # <a name="manage-shared-datasets"></a>共有データセットを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、共有データセットによって、外部データ ソースに接続された共有データ ソースからデータを取得します。 共有データセットを使用するとクエリを共有できるので、複数のレポートに同じデータ セットを取り込むことができます。 データセット クエリにはデータセット パラメーターが含まれる場合があります。 初回使用時または指定したスケジュールに従い、特定のパラメーターの組み合わせによるクエリ結果をキャッシュするよう共有データセットを構成できます。 レポート キャッシュおよびレポート データ フィードと共に共有データセットのキャッシュを使用すると、データ ソースへのアクセスの管理に役立ちます。  
@@ -63,7 +63,7 @@ ms.locfileid: "50030591"
  レポート マネージャーで URL アクセスの構文を使用して、共有データセット定義を XML で表示することもできます。 たとえば、各データセット パラメーターの既定値を表示する場合は、次の URL アクセス コマンドを使用して、レポート サーバーにある DataSet1 という名前の共有データセット定義を表示できます。  
   
 ```  
-http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
 ```  
   
 ## <a name="controlling-access-to-the-shared-dataset-definition"></a>共有データセット定義へのアクセスの制御  
@@ -90,10 +90,10 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |共有データセット アイテムのプロパティの変更|レポート マネージャー|[[全般] プロパティ ページ、共有データセット (レポート マネージャー)](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |レポート内の共有データセット インスタンスに対する、追加の共有データセット プロパティの指定|レポート ビルダー、レポート デザイナー|[[クエリ] ([データセットのプロパティ] ダイアログ ボックス)](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |共有データセットでの、異なる共有データ ソースへのバインド|レポート マネージャー|[[データ ソースの選択] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|データセット パラメーターの既定値の検証|レポート ビルダーでのオープン、または URL アクセスの構文の使用|例 :<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|データセット パラメーターの既定値の検証|レポート ビルダーでのオープン、または URL アクセスの構文の使用|例 :<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |キャッシュの有効化|レポート マネージャー|[共有データセットのキャッシュ (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [共有データセットの [キャッシュ] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |キャッシュ更新計画の作成または編集|レポート マネージャー|[キャッシュ更新オプション (レポート マネージャー)](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
-|共有データセット定義スキーマの表示|レポート マネージャー|`http://<reportserver>/shareddatasetdefinition.xsd`|  
+|共有データセット定義スキーマの表示|レポート マネージャー|`https://<reportserver>/shareddatasetdefinition.xsd`|  
 |SharePoint 統合モードでの、レポート サーバーと SharePoint サイト間における共有データセット定義の同期|SharePoint アプリケーション ページ|共有データセット アイテムのプロパティの変更<br /><br /> キャッシュ オプションの変更<br /><br /> 共有データ ソースの変更|  
   
 ## <a name="comparing-shared-datasets-with-other-report-server-items"></a>共有データセットと他のレポート サーバー アイテムの比較  

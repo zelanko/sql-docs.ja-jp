@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37135e6bc1c30ea79e9ecda5ee53e90ea85c5f67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761956"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662506"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML データ型と列 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47761956"
   
 -   **xml** データ型としてのネイティブ ストレージ  
   
-     データの XML コンテンツを保持できる内部表現を使用してデータが保存されます。 内部表現には、包含階層、表示順、要素や属性の値に関する情報などがあります。 具体的には、XML データの InfoSet コンテンツが保持されます。 InfoSet の詳細については、「[http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)」を参照してください。 InfoSet コンテンツでは、重要でない空白文字、属性の順序、名前空間プレフィックス、および XML 宣言が保持されないので、テキスト形式の XML のまったく同一のコピーにはならない場合があります。  
+     データの XML コンテンツを保持できる内部表現を使用してデータが保存されます。 内部表現には、包含階層、表示順、要素や属性の値に関する情報などがあります。 具体的には、XML データの InfoSet コンテンツが保持されます。 InfoSet の詳細については、「[https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)」を参照してください。 InfoSet コンテンツでは、重要でない空白文字、属性の順序、名前空間プレフィックス、および XML 宣言が保持されないので、テキスト形式の XML のまったく同一のコピーにはならない場合があります。  
   
-     型指定された **xml** データ型、つまり XML スキーマにバインドされた **xml** データ型の場合、PSVI (スキーマ検証後の InfoSet) によって型情報が InfoSet に追加され、内部表現にエンコードされます。 その結果、解析速度が大幅に向上します。 詳細については、[http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) と [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871) で W3C の XML スキーマの仕様を参照してください。  
+     型指定された **xml** データ型、つまり XML スキーマにバインドされた **xml** データ型の場合、PSVI (スキーマ検証後の InfoSet) によって型情報が InfoSet に追加され、内部表現にエンコードされます。 その結果、解析速度が大幅に向上します。 詳細については、[https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) と [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) で W3C の XML スキーマの仕様を参照してください。  
   
 -   XML ストレージとリレーショナル ストレージのマッピング  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47761956"
   
 -   XML ビューを使用し、XML データの一括読み込みを行ってそれを基になるテーブルに分解する場合。  
   
- 例としては、データ交換や Web サービス向けに XML として公開されたリレーショナル データ、固定スキーマにバインドされた XML データなどがあります。 詳細については、 [MSDN オンライン ライブラリ](http://go.microsoft.com/fwlink/?linkid=31174)を参照してください。  
+ 例としては、データ交換や Web サービス向けに XML として公開されたリレーショナル データ、固定スキーマにバインドされた XML データなどがあります。 詳細については、 [MSDN オンライン ライブラリ](https://go.microsoft.com/fwlink/?linkid=31174)を参照してください。  
   
 #### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>例 : AXSD (注釈付き XML スキーマ) を使用したデータ モデリング  
  たとえば、顧客、注文、品目などの既存のリレーショナル データを XML として処理するとします。 リレーショナル データに AXSD を使用して、XML ビューを定義します。 XML ビューを使用すると、テーブルに XML データを一括で読み込み、XML ビューでリレーショナル データに対するクエリや更新を行うことができます。 SQL アプリケーションの実行を中断することなく、XML でマークアップされたデータを他のアプリケーションと交換する必要がある場合に、このモデルが役立ちます。  

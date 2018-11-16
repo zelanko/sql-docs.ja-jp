@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f568fbcd05e8b735bdf723f2e826d764b445d03c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f7b2bcac47cc24f5de6f58d712708082eb17010
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709750"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676328"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON パス式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
     -   キー名。 たとえば、 `$.name` や `$."first name"`。 キー名がドル記号で始まるか、キー名にスペースなどの特殊文字が含まれている場合は、引用符で囲みます。   
   
-    -   配列の要素。 たとえば、 `$.product[3]`のようにします。 配列は 0 から始まります。  
+    -   配列の要素。 たとえば、`$.product[3]` のようにします。 配列は 0 から始まります。  
   
     -   ドット演算子 (`.`) は、オブジェクトのメンバーを示します。 たとえば、`$.people[1].surname` では、`surname` は `people` の子です。
   
@@ -112,7 +112,7 @@ FROM OPENJSON(@json,'$.person.info')
   
 ### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
   
-具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
+具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
 
 ### <a name="microsoft-videos"></a>Microsoft ビデオ
 

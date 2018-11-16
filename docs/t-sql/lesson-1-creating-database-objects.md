@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c87cdbe7f96b3775a4ecfc475436e2996c212e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630120"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696820"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>レッスン 1: データベース オブジェクトの作成とクエリ
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47630120"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは次の方法で作成して [!INCLUDE[ssDE](../includes/ssde-md.md)] に送信できます。  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?linkid=67359)から無料でダウンロードできます。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=67359)から無料でダウンロードできます。  
   
 -   [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)を使用する。  
   
@@ -213,7 +213,7 @@ SELECT ステートメント内のデータの操作に使用できる関数の�
 |||  
 |-|-|  
 |[文字列関数 (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md)|[日付と時刻のデータ型および関数 (Transact-SQL)](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[数学関数 (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)|[テキスト関数とイメージ関数 (Transact-SQL)](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+|[数学関数 (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)|[テキスト関数とイメージ関数 (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>ビューとストアド プロシージャの作成
 ビューは、格納された SELECT ステートメントで、ストアド プロシージャは、バッチとして実行される 1 つ以上の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントです。  

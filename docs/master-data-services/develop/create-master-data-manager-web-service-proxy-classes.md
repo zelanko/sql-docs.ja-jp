@@ -11,12 +11,12 @@ ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfc778865740b7ecb525e530ad94b27c2d2cf767
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebf916f83a801005d16c860a9dc84205b1fd43d1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809890"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703130"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>マスター データ マネージャー Web サービス プロキシ クラスの作成
 
@@ -36,19 +36,19 @@ ms.locfileid: "47809890"
   
 3.  変更をファイルに保存します。  
   
-4.  サービス URL (たとえば、`http://yourserver/MDS/service/service.svc`) を参照して、メタデータのパブリッシュをテストします。 メタデータ パブリッシュが有効化されると、   
+4.  サービス URL (たとえば、`https://yourserver/MDS/service/service.svc`) を参照して、メタデータのパブリッシュをテストします。 メタデータ パブリッシュが有効化されると、   
     "サービスを作成しました。" で始まるページが表示されます。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Visual Studio を使用してプロキシ クラスを作成する  
- Visual Studio 2010 がインストールされている場合、プロキシ クラスを生成する最もシンプルな方法は、プロジェクトに**サービス参照**を追加することです。 サービス参照のアドレスは、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションの URL に、/service/service.svc を付加したものです。 例: `http://yourserver/MDS/service/service.svc`」を参照してください。 詳細については、「[方法: サービス参照を追加、更新、または削除する](http://go.microsoft.com/fwlink/?LinkId=221167)」を参照してください。  
+ Visual Studio 2010 がインストールされている場合、プロキシ クラスを生成する最もシンプルな方法は、プロジェクトに**サービス参照**を追加することです。 サービス参照のアドレスは、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションの URL に、/service/service.svc を付加したものです。 例: `https://yourserver/MDS/service/service.svc`」を参照してください。 詳細については、「[方法: サービス参照を追加、更新、または削除する](https://go.microsoft.com/fwlink/?LinkId=221167)」を参照してください。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Svcutil.exe を使用してプロキシ クラスを作成する  
- Svcutil.exe を使用するには、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK がインストールされている必要があります。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コマンド プロンプトでコマンドを実行する必要があります。 詳細については、「[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](http://go.microsoft.com/fwlink/?LinkId=165027)」および「[サービス メタデータからの WCF クライアントの生成](http://go.microsoft.com/fwlink/?LinkId=164821)」を参照してください。  
+ Svcutil.exe を使用するには、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK がインストールされている必要があります。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コマンド プロンプトでコマンドを実行する必要があります。 詳細については、「[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027)」および「[サービス メタデータからの WCF クライアントの生成](https://go.microsoft.com/fwlink/?LinkId=164821)」を参照してください。  
   
  Svcutil.exe を使用して一連の C# プロキシ クラスを作成するには、次のようなコマンドを使用します。  
   
 ```  
-svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc   
+svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc   
 /out:<proxy_name>.cs /messageContract /tcv:Version35   
 /noconfig /ct:System.Collections.ObjectModel.Collection`1   
 /namespace:*,Microsoft.MasterDataServices  

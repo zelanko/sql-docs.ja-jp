@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666600"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699670"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > お使いのデータベース全体でデータベース互換性レベル 140 を活用するとき、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の**カーディナリティ推定**モデル、データベース互換性レベル 110 へのマッピングを選択するのであれば、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。特にそのキーワード `LEGACY_CARDINALITY_ESTIMATION = ON` をご覧ください。
 >  
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における 2 つの互換性レベル間での、最も重要なクエリのパフォーマンスの違いを評価する方法の詳細については、「[Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」 (Azure SQL Database での互換性レベル 130 によるクエリ パフォーマンスの改善) を参照してください。 この記事では互換性レベル 130 と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取り上げていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で 140 に移行する場合も同じ手法が適用されます。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における 2 つの互換性レベル間での、最も重要なクエリのパフォーマンスの違いを評価する方法の詳細については、「[Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」 (Azure SQL Database での互換性レベル 130 によるクエリ パフォーマンスの改善) を参照してください。 この記事では互換性レベル 130 と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取り上げていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で 140 に移行する場合も同じ手法が適用されます。
 
 次のクエリを実行して、接続先である [!INCLUDE[ssDE](../../includes/ssde-md.md)] のバージョンを特定します。  
   
@@ -116,7 +116,7 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > 互換性レベルの違いについては、この記事の後半に出てくるセクションを参照してください。 
 
-アップグレード前に存在したデータベース互換性レベルとそのサポート可能なステータスを維持しながら、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を最新バージョンにアップグレードするには、[Microsoft Data Migration Assistant](http://www.microsoft.com/download/details.aspx?id=53595) ツール (DMA) を使用し、データベースのアプリケーション コードの攻撃可能な領域に静的な機能検証を実行することをお勧めします。 DMA ツールの出力でエラーが見つからなければ、あるいは機能性に不足や非互換性がなければ、新しいターゲット バージョンでアプリケーションの機能が退化することはありません。 DMA ツールの詳細については、[こちら](http://blogs.msdn.microsoft.com/datamigration/dma)を参照してください。
+アップグレード前に存在したデータベース互換性レベルとそのサポート可能なステータスを維持しながら、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を最新バージョンにアップグレードするには、[Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) ツール (DMA) を使用し、データベースのアプリケーション コードの攻撃可能な領域に静的な機能検証を実行することをお勧めします。 DMA ツールの出力でエラーが見つからなければ、あるいは機能性に不足や非互換性がなければ、新しいターゲット バージョンでアプリケーションの機能が退化することはありません。 DMA ツールの詳細については、[こちら](https://blogs.msdn.microsoft.com/datamigration/dma)を参照してください。
 
 > [!NOTE] 
 > DMA は、レベル 100 以降のデータベース互換性レベルに対応しています。 ソース バージョンとしての [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] は除外されます。 
@@ -356,7 +356,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ```  
   
 ### <a name="e"></a>E.  
- 変数代入は、最上位レベルの UNION 演算子を含むステートメントで許可されていますが、予期しない結果が返されます。 たとえば、次のステートメントでは、2 つのテーブルの和集合からの列 `BusinessEntityID` の値がローカル変数 `@v` に割り当てられます。 定義上、SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。 この場合は、最後の値が変数に正しく割り当てられますが、SELECT UNION ステートメントの結果セットも返されます。  
+ 変数代入は、最上位レベルの UNION 演算子を含むステートメントで許可されていますが、予期しない結果が返されます。 たとえば、次のステートメントでは、2 つのテーブルの和集合からの列 `@v` の値がローカル変数 `BusinessEntityID` に割り当てられます。 定義上、SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。 この場合は、最後の値が変数に正しく割り当てられますが、SELECT UNION ステートメントの結果セットも返されます。  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

@@ -17,12 +17,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2fbcef1433f75be10cd9b0e916d1a49fd545208
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091bc3b0ab56006e12064f6b873d419b4e0c5a7d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731870"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672381"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47731870"
   
 1.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 の最新バージョンをディストリビューターにインストールします。  
   
-    -   [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition を使用している場合は、[SQL Server ダウンロード](http://go.microsoft.com/fwlink/?LinkId=149256) Web ページの「**関連ダウンロード**」セクションで、Microsoft SQL Server Feature Pack の最新バージョンのリンクをクリックします。 **Microsoft SQL Server 用 Feature Pack** の Web ページで、**Microsoft OLE DB Provider for DB2** を検索します。  
+    -   [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition を使用している場合は、[SQL Server ダウンロード](https://go.microsoft.com/fwlink/?LinkId=149256) Web ページの「**関連ダウンロード**」セクションで、Microsoft SQL Server Feature Pack の最新バージョンのリンクをクリックします。 **Microsoft SQL Server 用 Feature Pack** の Web ページで、**Microsoft OLE DB Provider for DB2** を検索します。  
   
     -   [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition を使用している場合は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) サーバーの最新バージョンをインストールしてください。この製品にプロバイダーが含まれています。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e13765e67b1e14cd676d371fdeb0a3f8e6a896fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 054f885cc970060b042532ea91ff561853000d1b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795191"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812855"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>URL アクセスを使用してレポート履歴スナップショットを表示する
   *rs:Snapshot* パラメーターを指定し、その値を有効なスナップショット ID に設定することによって、レポート履歴スナップショットに基づくレポートを表示できます。 パラメーターの値は、国際標準化機構 (ISO) 8601 の標準に基づく、YYYY-MM-DDTHH:MM:SS の形式です。  
@@ -30,7 +30,7 @@ ms.locfileid: "47795191"
  次の例は、レポート履歴スナップショットを取得する URL を示します。  
   
 ```  
-http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
 ```  
   
 ## <a name="see-also"></a>参照  

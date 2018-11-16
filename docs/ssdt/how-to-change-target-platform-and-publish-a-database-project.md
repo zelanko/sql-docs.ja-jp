@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9aea64fa39d5089da9e4a97eaffb86ae2a81fa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668540"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668890"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法
 SQL Server Data Tools (SSDT) データベース プロジェクトのターゲット SQL Server のバージョンは、サポートされている任意の SQL Server インスタンス (SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012、または SQL Azure) に変更することができます。 そうすることによって、データベース開発を 1 つのプロジェクトで行い、必要に応じて複数のバージョンの SQL Server インスタンスに発行することができます。  
@@ -43,7 +43,7 @@ SSDT では、ターゲット プラットフォームを認識し、コード�
   
 3.  **エラー一覧**ペインに、"SQL70015: 'ファイル グループ参照とパーティション構成' は SQL Azure ではサポートされていません。" というエラーが表示されます。  
   
-    ターゲット プラットフォームに基づいて、スクリプトが自動的に検証されます。 ここでは、ファイル グループが SQL Azure でサポートされていないため、SSDT からエラーが返されます。 SQL Azure でサポートされていない Transact\-SQL ステートメントの一覧については、「[部分的にサポートされる Transact-SQL ステートメント (Microsoft Azure SQL Database)](http://msdn.microsoft.com/library/ee336267.aspx)」をご覧ください。  
+    ターゲット プラットフォームに基づいて、スクリプトが自動的に検証されます。 ここでは、ファイル グループが SQL Azure でサポートされていないため、SSDT からエラーが返されます。 SQL Azure でサポートされていない Transact\-SQL ステートメントの一覧については、「[部分的にサポートされる Transact-SQL ステートメント (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx)」をご覧ください。  
   
 4.  `ON` 句を削除します。 エラーが直ちに **[エラー一覧]** から消えます。  
   

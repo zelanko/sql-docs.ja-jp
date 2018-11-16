@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633480"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663272"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -37,17 +37,17 @@ ms.locfileid: "47633480"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|操作の ID。 NULL 以外です。|  
-|resource_type|**int**|操作が実行される対象のリソースの種類を示します。 NULL 以外です。 このビューを現在のリリースで実行された操作を追跡します[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみ、対応する整数値は 0。|  
-|resource_type_desc|**nvarchar(2048)**|操作が実行される対象のリソースの種類の説明。 このビューを現在のリリースで実行された操作を追跡します[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみです。|  
+|resource_type|**int**|操作が実行される対象のリソースの種類を示します。 NULL 以外です。 現在のリリースでは、このビューが追跡するのは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に対して実行される操作のみであり、これに対応する整数値は 0 です。|  
+|resource_type_desc|**nvarchar(2048)**|操作が実行される対象のリソースの種類の説明。 現在のリリースでは、このビューが追跡するのは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に対して実行される操作のみです。|  
 |major_resource_id|**sql_variant**|操作が実行される対象の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の名前。 Null 以外です。|  
 |minor_resource_id|**sql_variant**|内部使用のみです。 NULL 以外です。|  
-|operation|**nvarchar(60)**|に対して実行された操作、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、CREATE または ALTER などです。|  
+|operation|**nvarchar(60)**|[!INCLUDE[ssSDS](../../includes/sssds-md.md)] に対して実行される操作。たとえば、CREATE や ALTER などです。|  
 |state|**tinyint**|操作の状態。<br /><br /> 0 = 保留<br />1 = 実行中<br />2 = 完了<br />3 = 失敗<br />4 = 取り消し|  
 |state_desc|**nvarchar(120)**|PENDING = 操作はリソースまたはクォータが利用可能になるのを待機しています。<br /><br /> IN_PROGRESS = 操作は開始され、実行中です。<br /><br /> COMPLETED = 操作が正常に完了しました。<br /><br /> FAILED = 操作が失敗しました。 参照してください、 **error_desc**詳細列。<br /><br /> CANCELLED = ユーザーの要求によって操作が停止しました。|  
 |percent_complete|**int**|操作が完了した割合 (%)。 値は連続していないと、有効な値を以下に示します。 NULL 以外です。<br/><br/>0 = 操作が開始されていません<br/>50 = 実行中の操作<br/>100 = 操作が完了しました|  
 |error_code|**int**|失敗した操作中に発生したエラーを示すコード。 値が 0 の場合は、操作が正常に完了したことを示します。|  
 |error_desc|**nvarchar(2048)**|失敗した操作中に発生したエラーの説明。|  
-|error_severity|**int**|失敗した操作中に発生したエラーの重大度レベル。 エラーの重大度に関する詳細については、次を参照してください。[データベース エンジン エラーの重大度](http://go.microsoft.com/fwlink/?LinkId=251052)します。|  
+|error_severity|**int**|失敗した操作中に発生したエラーの重大度レベル。 エラーの重大度に関する詳細については、次を参照してください。[データベース エンジン エラーの重大度](https://go.microsoft.com/fwlink/?LinkId=251052)します。|  
 |error_state|**int**|将来使用するために予約されています。 将来の互換性は保証されません。|  
 |start_time|**datetime**|操作が開始した時点のタイムスタンプ。|  
 |last_modify_time|**datetime**|実行時間の長い操作のレコードが最後に変更された時点のタイムスタンプ。 操作が正常に完了した場合、このフィールドには操作が完了した時点のタイムスタンプが表示されます。|  

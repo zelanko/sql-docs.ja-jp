@@ -34,12 +34,12 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfa0e49e09c0cde8283015215aab25ce13a0c50f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dac012727df032d45674add5016782de3ca6ad6a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718590"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669911"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47718590"
  XML インスタンスは、BLOB (バイナリ ラージ オブジェクト) として **xml** 型の列に格納されます。 これらの XML インスタンスは大きくなる可能性がありますが、 **xml** データ型インスタンスをバイナリ表記したものを最大 2 GB まで格納できます。 インデックスを設定しない場合、クエリを評価するためにこのようなバイナリ ラージ オブジェクトが実行時に細分化されます。 この細分化には時間がかかる場合があります。 たとえば、次のクエリについて考えてみます。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -108,7 +108,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  たとえば、次のクエリからは `ProductModel` テーブルの `CatalogDescription`**xml** 型の列に格納された集計情報が返されます。 このクエリでは、カタログの説明に <`Features`> の説明も含まれている製品モデルに限り <`Summary`> 情報が返されます。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  プライマリ XML インデックスでは、ベース テーブルの各 XML バイナリ ラージ オブジェクト インスタンスを細分化するのではなく、各 XML バイナリ ラージ オブジェクトに対応するインデックスの行が `exist()` メソッドで指定された式に対して順番に検索されます。 インデックスのパス列にそのパスが見つかると、プライマリ XML インデックスから <`Summary`> 要素とそのサブツリーが共に取得され、`query()` メソッドの結果として XML バイナリ ラージ オブジェクトに変換されます。  
@@ -150,7 +150,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  次のクエリでは、PATH インデックスが役立つケースを示します。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -174,8 +174,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -192,7 +192,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  たとえば、次のクエリでは、製品モデル `19`の `ProductModelID` 属性と `ProductModelName` 属性の値を `value()` メソッドを使用して取得しています。 プライマリ XML インデックスや他のセカンダリ XML インデックスではなく PROPERTY インデックスを使用すると、クエリをより迅速に実行できる場合があります。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          
@@ -217,6 +217,6 @@ WHERE ProductModelID = 19
   
 ## <a name="see-also"></a>参照  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

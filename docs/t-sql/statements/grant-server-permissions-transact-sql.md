@@ -18,12 +18,12 @@ ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b6a581ebabd708cb191a936b78f9fdf1c205cce0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3262749d33b2fa5c371e7c950aeffeb42087b8f6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767320"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700981"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT (サーバーの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ GRANT permission [ ,...n ]
 |サーバー権限|権限が含まれるサーバー権限|  
 |-----------------------|----------------------------------|  
 |ADMINISTER BULK OPERATIONS|CONTROL SERVER|  
-|ALTER ANY AVAILABILITY GROUP<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|ALTER ANY AVAILABILITY GROUP<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
 |ALTER ANY CONNECTION|CONTROL SERVER|  
 |ALTER ANY CREDENTIAL|CONTROL SERVER|  
 |ALTER ANY DATABASE|CONTROL SERVER|  
@@ -104,24 +104,24 @@ GRANT permission [ ,...n ]
 |ALTER ANY LINKED SERVER|CONTROL SERVER|  
 |ALTER ANY LOGIN|CONTROL SERVER|  
 |ALTER ANY SERVER AUDIT|CONTROL SERVER|  
-|ALTER ANY SERVER ROLE<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|ALTER ANY SERVER ROLE<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
 |ALTER RESOURCES|CONTROL SERVER|  
 |ALTER SERVER STATE|CONTROL SERVER|  
 |ALTER SETTINGS|CONTROL SERVER|  
 |ALTER TRACE|CONTROL SERVER|  
 |AUTHENTICATE SERVER|CONTROL SERVER|  
-|CONNECT ANY DATABASE<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|CONNECT ANY DATABASE<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
 |CONNECT SQL|CONTROL SERVER|  
 |CONTROL SERVER|CONTROL SERVER|  
 |CREATE ANY DATABASE|ALTER ANY DATABASE|  
-|CREATE AVAILABILITY GROUP<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|ALTER ANY AVAILABILITY GROUP|  
+|CREATE AVAILABILITY GROUP<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|ALTER ANY AVAILABILITY GROUP|  
 |CREATE DDL EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |CREATE ENDPOINT|ALTER ANY ENDPOINT|  
-|CREATE SERVER ROLE<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|ALTER ANY SERVER ROLE|  
+|CREATE SERVER ROLE<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|ALTER ANY SERVER ROLE|  
 |CREATE TRACE EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |EXTERNAL ACCESS ASSEMBLY|CONTROL SERVER|  
-|IMPERSONATE ANY LOGIN<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
-|SELECT ALL USER SECURABLES<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|IMPERSONATE ANY LOGIN<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|SELECT ALL USER SECURABLES<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
 |SHUTDOWN|CONTROL SERVER|  
 |UNSAFE ASSEMBLY|CONTROL SERVER|  
 |VIEW ANY DATABASE|VIEW ANY DEFINITION|  
@@ -146,7 +146,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-granting-a-permission-to-a-login"></a>A. ログインに権限を許可する  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `TerryEminhizer` に `CONTROL SERVER` 権限を許可します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `CONTROL SERVER` に `TerryEminhizer` 権限を許可します。  
   
 ```  
 USE master;  
@@ -164,7 +164,7 @@ GO
 ```  
   
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. サーバー ロールに権限を許可する  
- 次の例では、`ITDevAdmin` および `ITDevelopers` という名前の 2 つのサーバー ロールを作成します。 ここでは、`WITH GRANT` オプションを含めて、`ALTER ANY DATABASE` 権限を `ITDevAdmin` ユーザー定義サーバー ロールに許可します。これにより、`ITDevAdmin` サーバー ロールは、`ALTER ANY DATABASE` 権限を再割り当てすることができます。 次に、`ITDevelopers` サーバー ロールの `ALTER ANY DATABASE` 権限を使用する権限を `ITDevAdmin` に許可します。  
+ 次の例では、`ITDevAdmin` および `ITDevelopers` という名前の 2 つのサーバー ロールを作成します。 ここでは、`ALTER ANY DATABASE` オプションを含めて、`ITDevAdmin` 権限を `WITH GRANT` ユーザー定義サーバー ロールに許可します。これにより、`ITDevAdmin` サーバー ロールは、`ALTER ANY DATABASE` 権限を再割り当てすることができます。 次に、`ITDevelopers` サーバー ロールの `ALTER ANY DATABASE` 権限を使用する権限を `ITDevAdmin` に許可します。  
   
 ```  
 USE master;  

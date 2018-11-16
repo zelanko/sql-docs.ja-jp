@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 11a12193f0e5628d04cd79037bee7ad770e7ef81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 264de74dbc3ee09cd333ceb4815c77890938894b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689360"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697870"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "47689360"
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>制限事項 1 : マルチサーバー管理での非管理者アカウントの使用  
 対象サーバーをマスター サーバーに参加させると、"参加操作に失敗しました" というエラー メッセージが表示されることがあります。  
   
-このエラーを解決するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの両方を再起動します。 詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](http://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6) 」を参照してください。  
+このエラーを解決するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの両方を再起動します。 詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6) 」を参照してください。  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>制限事項 2 : マルチサーバー管理でのローカル システム アカウントの使用  
 マルチサーバー管理は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスがローカル システム アカウントで実行されるとき、同じコンピューターにマスター サーバーと対象サーバーの両方が存在する場合にのみサポートされます。 この構成を使用している場合に、対象サーバーをマスター サーバーに参加させると、次のメッセージが返されます。  
@@ -119,13 +119,13 @@ ms.locfileid: "47689360"
   
 **SQL Server エージェントのメール プロファイルを指定するには**  
   
--   [データベース メールを使用するように SQL Server エージェント メールを構成する方法 (SQL Server Management Studio)](http://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [データベース メールを使用するように SQL Server エージェント メールを構成する方法 (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、オペレーティング システムを起動するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを開始する必要があることを指定します。  
   
 ## <a name="see-also"></a>参照  
 [Windows サービス アカウントの設定](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
-[サービスの管理方法に関するトピック (SQL Server 構成マネージャー)](http://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+[サービスの管理方法に関するトピック (SQL Server 構成マネージャー)](https://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  
   

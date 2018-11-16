@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1588f2f60da6355b1218757710c52e7671293d9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c76b1c2d598c8b136c0a3f890ea0ed4db6be0e20
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664390"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677711"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>テーブル値パラメーターの使用 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47664390"
 
   このサンプルでは、テーブル値パラメーターを使用して、サーバーへの 1 度の呼び出しで複数の行を複数の列と共に挿入する方法を示します。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。 テーブル値パラメーターを使用して他のサンプルでは、次を参照してください。 [ODBC Table-Valued パラメーターのプログラミング例](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)します。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。 テーブル値パラメーターを使用して他のサンプルでは、次を参照してください。 [ODBC Table-Valued パラメーターのプログラミング例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)します。  
   
 ## <a name="example"></a>例  
  TVPDemo という名前の ODBC データ ソースが必要です。 TVPDemo 用の既定のデータベースには、コンピューター上にある任意のテスト データベースを使用できます。 このデータ ソースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 用の ODBC ドライバーが使用されている必要があります。  

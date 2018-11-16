@@ -12,12 +12,12 @@ ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b53c7c52c63fa12b5398b8b09ffeec50262ad9a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6aca1a7488b6767e0259647a320c238ec753836
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730260"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665311"
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47730260"
 -   同じサーバーで行ったバックアップからシステム データベースを復元しようとしており、 バックアップ時にサーバーでは別のビルドを実行していた  (つまり、バックアップ後にサーバーがアップグレードされた)。  
   
 ## <a name="user-action"></a>ユーザーの操作  
-この状況での復元プロセスはかなり複雑になるため、最後の手段としてのみ使用します。 詳細については、「[SQL Server の別のビルドにデータベースのシステム バックアップを復元することができません。](http://support.microsoft.com/kb/264474)」を参照してください。  
+この状況での復元プロセスはかなり複雑になるため、最後の手段としてのみ使用します。 詳細については、「[SQL Server の別のビルドにデータベースのシステム バックアップを復元することができません。](https://support.microsoft.com/kb/264474)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [システム データベースのバックアップと復元 &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7bd94456b3e26aa8f8cae5728a3a9af3c3324254
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: eeb22433523d9fef88ab5a32f429ce94aca5cbd0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028651"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813755"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
 
@@ -67,7 +67,7 @@ ms.locfileid: "50028651"
 ### <a name="header-section"></a>ヘッダー セクション  
  次の XML コードは、データ フィードのヘッダー セクションを示しています。  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="https://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50028651"
   
  一般に、入れ子になったデータ領域のデータ行は幅が広くなります。入れ子になったテーブルおよびマトリックスにグループや合計が含まれる場合は特にそうです。 期待どおりのデータが生成されるかどうかを確認するには、レポートをデータ フィードにエクスポートした後でデータ フィードを表示すると便利です。  
   
- Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示すサンプルの Atom サービス ドキュメントには、URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1` が含まれています。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
+ Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示すサンプルの Atom サービス ドキュメントには、URL `https://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1` が含まれています。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
   
  レポート アイテムの名前には、直感的でなく覚えにくい、レポート アイテムのレポート定義言語 (RDL) 要素の名前が既定で使用されます。 たとえば、レポートに配置された最初のマトリックスの既定の名前は Tablix 1 となります。 データ フィードでは、これらの名前が使用されます。  
   

@@ -12,12 +12,12 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f42cd91466db5c3f1f5295447a506ab06db6de32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 627af74608a462cd336c6bb3775511bd5920eb11
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633980"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673591"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,5 +115,5 @@ Windows 認証を使用して接続しようとしている場合は、正しい
   
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]で包含データベースがサポートされる場合、包含データベース ユーザーへの移行後にそのログインが削除されていないことを確認してください。  
   
-ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、「[How To: ASP.NET で Network Service アカウントを使用してリソースにアクセスする方法](http://msdn.microsoft.com/library/ff647402.aspx)」を参照してください。  
+ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、「[How To: ASP.NET で Network Service アカウントを使用してリソースにアクセスする方法](https://msdn.microsoft.com/library/ff647402.aspx)」を参照してください。  
   

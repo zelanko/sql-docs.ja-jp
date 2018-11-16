@@ -13,12 +13,12 @@ ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e67b9f7bc040265d770c8eef026cecc49c2c52fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c02298de6521aa2bf5380216862fb30094803115
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765833"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677871"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>資格情報の作成- Azure ストレージに対する認証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47765833"
   
 ## <a name="windows-azure-credentials"></a>Windows Azure 資格情報  
  **[管理証明書]**  
- このオプションを使用して、Windows Azure からの管理証明書に一致するローカル証明書ストアの証明書を指定します。 Windows Azure 管理証明書の詳細については、「 [Windows Azure の管理証明書の作成とアップロード](http://go.microsoft.com/fwlink/?LinkId=320781)」を参照してください。  
+ このオプションを使用して、Windows Azure からの管理証明書に一致するローカル証明書ストアの証明書を指定します。 Windows Azure 管理証明書の詳細については、「 [Windows Azure の管理証明書の作成とアップロード](https://go.microsoft.com/fwlink/?LinkId=320781)」を参照してください。  
   
  **サブスクリプション**  
  ローカル証明書ストアの管理証明書と一致する Windows Azure サブスクリプション ID を選択、入力、または貼り付けます。  
@@ -40,7 +40,7 @@ ms.locfileid: "47765833"
  コンピューターにダウンロードした公開プロファイルがある場合は、このオプションを使用します。 このオプションを使用すると、サブスクリプション ID と証明書が自動的に入力されます。  
   
 > [!CAUTION]  
->  SQL Server では現在、公開プロファイルのバージョン 2.0 がサポートされています。 公開プロファイルのサポート対象バージョンをダウンロードするには、「 [公開プロファイルのバージョン 2.0 のダウンロード](http://go.microsoft.com/fwlink/?LinkId=396421)」をご覧ください。  
+>  SQL Server では現在、公開プロファイルのバージョン 2.0 がサポートされています。 公開プロファイルのサポート対象バージョンをダウンロードするには、「 [公開プロファイルのバージョン 2.0 のダウンロード](https://go.microsoft.com/fwlink/?LinkId=396421)」をご覧ください。  
   
 ## <a name="storage-account"></a>ストレージ アカウント  
  バックアップ ファイルを格納するために使用するストレージ アカウントを選択します。  

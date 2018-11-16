@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55588ba56d92ce282ff3dd4b0661248e0449beca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e397d797568d14cd184d8246425db13d9fb2a0b6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746030"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697680"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -237,9 +237,9 @@ MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_fil
   
  RESTORE ステートメントを使用して、データベースを同じサーバーに再配置したり、別のサーバーにコピーするとき、データベース ファイルの再配置によって既存ファイルとの衝突が発生するのを防ぐために、MOVE オプションが必要になる場合があります。  
   
- RESTORE LOG で MOVE オプションを使用する場合は、復元するログの対象期間中に追加されたファイルを再配置するためにのみ使用してください。 たとえば、ログ バックアップにファイル `file23` のファイル追加操作が含まれる場合、このファイルは RESTORE LOG で MOVE オプションを使用して再配置することがあります。  
+ RESTORE LOG で MOVE オプションを使用する場合は、復元するログの対象期間中に追加されたファイルを再配置するためにのみ使用してください。 たとえば、ログ バックアップにファイル `file23` のファイル追加操作が含まれる場合、このファイルは RESTORE LOG で MOVE オプションを使って再配置します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップで使用する際は、MOVE オプションは、元の BLOB と同じストレージ アカウント内の Azure BLOB にファイルを再配置する場合にのみ使用できます。 ローカル ファイルまたは別のストレージ アカウントには、スナップショット バックアップを復元するのには、MOVE オプションを使用できません。  
+ 使用すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップの場合は、ファイルを Azure に配置する場合にのみ、MOVE オプションを使用できます、元の blob と同じストレージ アカウント内の blob です。 ローカル ファイルまたは別のストレージ アカウントには、スナップショット バックアップを復元するのには、MOVE オプションを使用できません。  
   
  RESTORE VERIFYONLY ステートメントを使用して、データベースを同じサーバーに再配置するか別のサーバーにコピーする場合は、対象となるサーバーに利用可能な容量が十分あるかどうか、および既存のファイルと衝突する可能性がないかどうかを確認するために、MOVE オプションが必要になる場合があります。  
   
@@ -253,7 +253,7 @@ CREDENTIAL
  Microsoft Azure Blob ストレージ サービスからバックアップを復元する場合にのみ使用されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合、URL からの復元時にのみ、1 つのデバイスから復元できます。 URL からの復元時に複数のデバイスから復元するには、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合、URL からの復元時にのみ、1 つのデバイスから復元できます。 URL からの復元時に複数のデバイスから復元するには、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
   
  [REPLACE]  
  **サポートしているステートメント:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -397,7 +397,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Windows と互換性のあるディレクトリ名です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベース レベルの FILESTREAM ディレクトリ名の間で一意である必要があります。 一意性の比較では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序の設定とは関係なく、大文字と小文字は区別されません。  
+ Windows と互換性のあるディレクトリ名です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベース レベルの FILESTREAM ディレクトリ名の中で一意である必要があります。 一意性の比較では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序の設定とは関係なく、大文字と小文字は区別されません。  
   
 ##### <a name="monitoring-options"></a>監視オプション  
  このオプションでは、バックアップ デバイスからのデータ転送を監視できます。  

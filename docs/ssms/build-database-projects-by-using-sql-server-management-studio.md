@@ -16,12 +16,12 @@ ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99773e3327831cdb622382483bc9c128b9ffef82
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: f1243a0979148b8c5a4a0f98b28cc7e1c7ad677f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100133"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700376"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio によるデータベース プロジェクトのビルド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.locfileid: "50100133"
   
 ## <a name="see-also"></a>参照  
 [SQL Server Management Studio の使用 [SQL Server]](../ssms/use-sql-server-management-studio.md)  
-[SQL Server Management Studio によるクエリの作成、分析、編集](http://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
+[SQL Server Management Studio によるクエリの作成、分析、編集](https://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [ソリューション (SQL Server Management Studio)](../ssms/solution/solutions-sql-server-management-studio.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d1c3b689a42b2c7a0a41fd4df71a6d78dc2a122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5da3ebf716c227e2724d7ca2676405aa34b7241
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710690"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663291"
 ---
 # <a name="create-clr-functions"></a>CLR 関数の作成
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47710690"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>ネイティブ コードへのアクセス  
- CLR 関数では、マネージド コードから PInvoke を使用することにより、C や C++ で記述されたコードなどのネイティブ (アンマネージド) コードにアクセスできます (詳細については、「[マネージド コードからのネイティブ関数の呼び出し](http://go.microsoft.com/fwlink/?LinkID=181929)」を参照してください)。 これにより、レガシ コードを CLR UDF として再利用したり、パフォーマンスが重要な UDF をネイティブ コードで記述したりできます。 そのためには、UNSAFE アセンブリを使用する必要があります。 UNSAFE アセンブリの使用に関する注意事項は、「 [CLR 統合のコード アクセス セキュリティ](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 」を参照してください。  
+ CLR 関数では、マネージド コードから PInvoke を使用することにより、C や C++ で記述されたコードなどのネイティブ (アンマネージド) コードにアクセスできます (詳細については、「[マネージド コードからのネイティブ関数の呼び出し](https://go.microsoft.com/fwlink/?LinkID=181929)」を参照してください)。 これにより、レガシ コードを CLR UDF として再利用したり、パフォーマンスが重要な UDF をネイティブ コードで記述したりできます。 そのためには、UNSAFE アセンブリを使用する必要があります。 UNSAFE アセンブリの使用に関する注意事項は、「 [CLR 統合のコード アクセス セキュリティ](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ユーザー定義関数の作成 &#40;データベース エンジン&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

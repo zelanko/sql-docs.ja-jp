@@ -12,12 +12,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bd21f8be841437b15f780001221da72d9f665aa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: df33f55ce855f45f271235ac5b6ff2a8f305e8d8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030681"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813625"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint ユーザー用のデータ警告マネージャー
 
@@ -36,7 +36,7 @@ SharePoint サイトのデータ警告機能を有効にすると、MyDataAlerts
 
  URL を使用して直接データ警告マネージャーを開くこともできます。 URL の構文を次に示します。  
   
- `http://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
+ `https://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の警告機能を使用するには、管理者から権限を割り当ててもらう必要があります。 必要な権限の詳細については、「 [Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)」を参照してください。  

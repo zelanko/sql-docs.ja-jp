@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 43f4a29f67c474ff30a7da0512d89b106769e90c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018137"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600531"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -154,7 +154,7 @@ GO
 
 ## <a name="sql-server-instance-offline"></a>SQL Server インスタンスのオフライン状態
 
-接続文字列に指定された SQL Server インスタンスを利用できない場合 (インスタンスが停止している) 場合、ターゲット サーバー上のレプリカに割り当てられているロールに関係なく、接続は失敗します。 長時間にわたるアプリケーションのダウンタイムを避けるには、接続文字列内に代替の `FailoverPartner` を構成します。 アプリケーションでは、フェールオーバーの実行中はオフライン状態になるプライマリ レプリカとセカンダリ レプリカに対応するための再試行ロジックを実装する必要があります。 接続文字列については、「[SqlConnection.ConnectionString プロパティ](http://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)」を参照してください。
+接続文字列に指定された SQL Server インスタンスを利用できない場合 (インスタンスが停止している) 場合、ターゲット サーバー上のレプリカに割り当てられているロールに関係なく、接続は失敗します。 長時間にわたるアプリケーションのダウンタイムを避けるには、接続文字列内に代替の `FailoverPartner` を構成します。 アプリケーションでは、フェールオーバーの実行中はオフライン状態になるプライマリ レプリカとセカンダリ レプリカに対応するための再試行ロジックを実装する必要があります。 接続文字列については、「[SqlConnection.ConnectionString プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)」を参照してください。
 
 ## <a name="see-also"></a>参照  
 [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

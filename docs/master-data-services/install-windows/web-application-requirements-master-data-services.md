@@ -14,12 +14,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd8e352d5400c012fe8dcfe7e6c4c7f6e4ef9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851075"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696113"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47851075"
 -   [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
- [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションで作業するには、Silverlight 5 をクライアント コンピューターにインストールする必要があります。 Silverlight の必要なバージョンがない場合、Web アプリケーションで Silverlight を使用する部分に移動したときに、Silverlight をインストールするよう要求されます。 Silverlight 5 は [ここ](http://go.microsoft.com/fwlink/?LinkId=243096)からインストールできます。  
+ [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションで作業するには、Silverlight 5 をクライアント コンピューターにインストールする必要があります。 Silverlight の必要なバージョンがない場合、Web アプリケーションで Silverlight を使用する部分に移動したときに、Silverlight をインストールするよう要求されます。 Silverlight 5 は [ここ](https://go.microsoft.com/fwlink/?LinkId=243096)からインストールできます。  
   
 ### <a name="role-and-role-services"></a>ロールとロール サービス  
  Windows Server 2012 または Windows Server 2012 R2 では、Microsoft 管理コンソール (MMC) にある **サーバー マネージャー**を使用して、 **Web サーバー (IIS)** ロールと必要なロール サービスをインストールできます。  
@@ -53,7 +53,7 @@ ms.locfileid: "47851075"
   
 ||  
 |-|  
-|[インターネット インフォメーション サービス]<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注: WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> [パフォーマンス]<br /><br /> 静的なコンテンツの圧縮<br /><br /> Security<br /><br /> 要求フィルター<br /><br /> [Windows 認証]|  
+|[インターネット インフォメーション サービス]<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注: WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> Security<br /><br /> 要求フィルター<br /><br /> [Windows 認証]|  
   
 ### <a name="features"></a>[機能] 
  Windows Server 2012 および Windows Server 2012 R2 では、 **サーバー マネージャー** を使用して、次に示す必要な機能をインストールできます。  

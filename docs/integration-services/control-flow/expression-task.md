@@ -13,12 +13,12 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f2bfc7d8e3f5782851178667305966cc243d8c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f026b827c510713ac45d11fbfad552b39171163d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602645"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640279"
 ---
 # <a name="expression-task"></a>式タスク
   式タスクでは、式ビルダーを使用して、実行時に変数値を設定する式を作成して評価します。 タスクを編集するときは、 [Expression Builder](../../integration-services/expressions/expression-builder.md) が起動します。  
@@ -31,9 +31,9 @@ ms.locfileid: "47602645"
  式を使用してプロパティを設定する方法の例については、「 **Use Property Expressions in Packages** 」の「 [サンプルのプロパティ式](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [データ フロー コンポーネントで式を使用する](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [データ フロー コンポーネントで式を使用する](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://go.microsoft.com/fwlink/?LinkId=746575)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=746575)」  
   
   

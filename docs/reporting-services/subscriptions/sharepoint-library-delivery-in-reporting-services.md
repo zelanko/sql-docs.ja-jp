@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674333"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813245"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
   SharePoint 統合用に構成されているレポート サーバーでは、レポートを SharePoint ライブラリに送信する配信拡張機能を使用できます。  
@@ -72,7 +72,7 @@ ms.locfileid: "47674333"
  対象ライブラリ内のレポートの **Title** プロパティ (オプション) を指定します。 これは、ライブラリに格納されているすべてのアイテムに対する標準プロパティです。 ユーザーは、SharePoint サイトでライブラリ コンテンツを表示するときに、このプロパティを表示するか非表示にするかを指定できます。  
   
  [パス]  
- SharePoint ライブラリへの完全修飾 URL (SharePoint Web アプリケーションおよびサイトを含む) を指定します。 たとえば、`http://mySharePointWeb/MySite/MyDocLib` の場合、`http://mySharePointWeb` は Web アプリケーションを表し、"MySite" は SharePoint サイト、"MyDocLib" はレポートが配信される SharePoint ライブラリです。  
+ SharePoint ライブラリへの完全修飾 URL (SharePoint Web アプリケーションおよびサイトを含む) を指定します。 たとえば、`https://mySharePointWeb/MySite/MyDocLib` の場合、`https://mySharePointWeb` は Web アプリケーションを表し、"MySite" は SharePoint サイト、"MyDocLib" はレポートが配信される SharePoint ライブラリです。  
   
  ページ、サイト、またはリストを指定することはできません。 対象コンテナーは、同じサイトまたはファームにあるライブラリであることが必要です。  
   

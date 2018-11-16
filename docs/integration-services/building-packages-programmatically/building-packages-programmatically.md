@@ -11,12 +11,12 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af4c525e2ce481b8053804d49f194449ed6cf58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95c26215be0cb55c916d7162896ec7651132f13f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728260"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640969"
 ---
 # <a name="building-packages-programmatically"></a>プログラムによるパッケージの作成
   パッケージを動的に作成する必要がある場合、または開発環境以外で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理および実行する必要がある場合は、プログラムでパッケージを操作できます。 この場合、次に示すような一連の方法があります。  
@@ -92,9 +92,9 @@ ms.locfileid: "47728260"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   www.codeplex.com/MSFTISProdSamples の CodePlex サンプル「[Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkID=131204)」  
+-   www.codeplex.com/MSFTISProdSamples の CodePlex サンプル「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=131204)」  
   
--   blogs.msdn.com のブログ「[カスタム拡張機能のパフォーマンスのプロファイル](http://go.microsoft.com/fwlink/?LinkId=238831)」  
+-   blogs.msdn.com のブログ「[カスタム拡張機能のパフォーマンスのプロファイル](https://go.microsoft.com/fwlink/?LinkId=238831)」  
 
 ## <a name="see-also"></a>参照  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

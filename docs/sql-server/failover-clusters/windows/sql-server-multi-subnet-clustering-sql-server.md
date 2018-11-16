@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bde47d4db0a86d84715a0265042e57e2202f497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6580a1df3ed83d0eec4d6dada7ed2954f44b8989
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704220"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700802"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server マルチサブネット クラスタリング (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,8 @@ ms.locfileid: "47704220"
 |SQL Server フェールオーバー クラスターのインストール|[新しい SQL Server フェールオーバー クラスターの作成 (セットアップ)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |既存の SQL Server フェールオーバー クラスターのインプレース アップグレード|[SQL Server フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |既存の SQL Server フェールオーバー クラスターのメンテナンス|[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|フェールオーバー クラスターの管理スナップインを使用した WSFC のイベントおよびログの表示|[フェールオーバー クラスターのイベントおよびログを表示する](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|Windows PowerShell を使用した WSFC フェールオーバー クラスターのすべてのノード (または特定のノード) のログ ファイルの作成|[Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)|  
+|フェールオーバー クラスターの管理スナップインを使用した WSFC のイベントおよびログの表示|[フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|Windows PowerShell を使用した WSFC フェールオーバー クラスターのすべてのノード (または特定のノード) のログ ファイルの作成|[Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)|  
   
 
   

@@ -11,12 +11,12 @@ ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbaaa9635a39ab4a0b8f8fcd1a0a4dc8048d6c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b5d26b38b4fef4f108a67194e4af775154d32a9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645140"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677881"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>SQL Server 単体テストを実行する方法
 SQL Server の単体テストは、さまざまなウィンドウやコマンド プロンプト ウィンドウを使用するなど、複数の方法で実行できます。  
@@ -58,7 +58,7 @@ SQL Server の単体テストは、さまざまなウィンドウやコマンド
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)  
-[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
-[コマンド ラインからの自動テストの実行 (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
-[アプリケーションのテスト (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182409.aspx)  
+[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[コマンド ラインからの自動テストの実行 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
+[アプリケーションのテスト (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

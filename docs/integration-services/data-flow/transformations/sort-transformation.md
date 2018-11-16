@@ -21,12 +21,12 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfcf99a28a847097d943495c205d7d894bb388ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af752a0d7435e64ce7f8e7f985817ad4bca25167
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658470"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638650"
 ---
 # <a name="sort-transformation"></a>並べ替え変換
   並べ替え変換は、入力データを昇順または降順で並べ替え、並べ替えたデータを変換出力にコピーします。 入力には複数の並べ替えを適用できます。各並べ替えは、並べ替えの順序を決定する数値によって識別されます。 順序の数値が最も小さい列が最初に並べ替えられ、順序の数値の大きさの順に列が並べ替えられます。 たとえば、 **CountryRegion** という名前の列の並べ替え順序が 1 で、 **City** という名前の列の並べ替え順序が 2 の場合、出力は、国または地域、次に都市の順に並べ替えられます。 正の値は昇順の並べ替えを表し、負の値は降順の並べ替えを表します。 並べ替えを行わない列の並べ替え順序は 0 です。 並べ替えを選択されていない列は、並べ替えられた列と共に、自動的に変換出力にコピーされます。  
@@ -47,7 +47,7 @@ ms.locfileid: "47658470"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47658470"
  コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- codeplex.com のサンプル「 [SortDeDuplicateDelimitedString カスタム SSIS コンポーネント](http://go.microsoft.com/fwlink/?LinkId=220821)」  
+ codeplex.com のサンプル「 [SortDeDuplicateDelimitedString カスタム SSIS コンポーネント](https://go.microsoft.com/fwlink/?LinkId=220821)」  
   
 ## <a name="sort-transformation-editor"></a>並べ替え変換エディター
   **[並べ替え変換エディター]** ダイアログ ボックスを使用すると、並べ替える列を選択し、並べ替え順を設定して、重複する部分を削除するかどうかを指定できます。  

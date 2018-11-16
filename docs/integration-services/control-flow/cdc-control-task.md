@@ -14,12 +14,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74609a50ad4d2f29bbbd7d25cc4cd1a242e64ff4
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071756"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640699"
 ---
 # <a name="cdc-control-task"></a>CDC 制御タスク
   CDC 制御タスクは、変更データ キャプチャ (CDC) パッケージのライフ サイクルの制御に使用します。 CDC 制御タスクは、初期読み込みパッケージと CDC パッケージとの同期処理を行い、CDC パッケージの実行で処理されるログ シーケンス番号 (LSN) 範囲を管理します。 また、エラー シナリオおよび復旧の処理も行います。  
@@ -78,11 +78,11 @@ ms.locfileid: "49071756"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   social.technet.microsoft.com の技術記事「 [Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity のインストール](http://go.microsoft.com/fwlink/?LinkId=252958)」  
+-   social.technet.microsoft.com の技術記事「 [Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity のインストール](https://go.microsoft.com/fwlink/?LinkId=252958)」  
   
--   social.technet.microsoft.com の技術記事「 [Microsoft Change Data Capture for Oracle by Attunity の構成の問題のトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=252960)」  
+-   social.technet.microsoft.com の技術記事「 [Microsoft Change Data Capture for Oracle by Attunity の構成の問題のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=252960)」  
   
--   social.technet.microsoft.com の技術記事「 [Microsoft Change Data Capture for Oracle by Attunity の CDC インスタンス エラーのトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=252961)」  
+-   social.technet.microsoft.com の技術記事「 [Microsoft Change Data Capture for Oracle by Attunity の CDC インスタンス エラーのトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=252961)」  
   
 ## <a name="cdc-control-task-editor"></a>CDC 制御タスク エディター
   **[CDC 制御タスク エディター]** ダイアログ ボックスを使用すると、CDC 制御タスクを構成できます。 CDC 制御タスクの構成では、CDC データベースへの接続、CDC タスクの操作、状態管理情報の定義などを行います。  

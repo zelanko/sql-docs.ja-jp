@@ -22,12 +22,12 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b45839b56c650252cc01871dd764e56bd579a41f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb86e0b92b34878573b44a6323094e536ff3dc40
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682440"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637636"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>スクリプト コンポーネントのコーディングおよびデバッグ
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 **[スクリプト変換エディター]** を開くと、スクリプト コンポーネントはメタデータ デザイン モードになります。このモードでは、メタデータを構成し、コンポーネントのプロパティを設定します。 メタデータ デザイン モードで、スクリプト コンポーネントのプロパティを設定して、入力と出力を構成したら、コード デザイン モードに切り替えてカスタム スクリプトを記述できます。 メタデータ デザイン モードとコード デザイン モードについて詳しくは、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」をご覧ください。  
@@ -207,7 +207,7 @@ public class ScriptMain : UserComponent
   
 ## <a name="external-resources"></a>外部リソース  
   
--   blogs.msdn.com のブログ「[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661)」(SSIS 2008 インストールおよび R2 インストールでの VSTA のセットアップと構成に関する問題)。  
+-   blogs.msdn.com のブログ「[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661)」(SSIS 2008 インストールおよび R2 インストールでの VSTA のセットアップと構成に関する問題)。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  

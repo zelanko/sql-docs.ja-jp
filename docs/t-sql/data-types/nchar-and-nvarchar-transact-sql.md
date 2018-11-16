@@ -17,24 +17,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856f26ac921a1bbe4f467cd11b785ee3868eeac2
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643890"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696731"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar および nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-固定長 (**nchar**)、または可変長 (**nvarchar**) の文字データ型です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序を使用する場合、これらのデータ型には [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 文字データの全範囲が格納され、[UTF-16](http://www.wikipedia.org/wiki/UTF-16) 文字エンコードが使用されます。 SC が無効の照合順序を指定する場合、これらのデータ型には [UCS-2](http://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 文字エンコードでサポートされている文字データのサブセットのみが格納されます。
+固定長 (**nchar**)、または可変長 (**nvarchar**) の文字データ型です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序を使用する場合、これらのデータ型には [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 文字データの全範囲が格納され、[UTF-16](https://www.wikipedia.org/wiki/UTF-16) 文字エンコードが使用されます。 SC が無効の照合順序を指定する場合、これらのデータ型には [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 文字エンコードでサポートされている文字データのサブセットのみが格納されます。
   
 ## <a name="arguments"></a>引数  
 **nchar** [ ( n ) ]  
-固定長の文字列データです。 *n* によってバイト ペアでの文字列の長さが定義されます。1 から 4,000 までの値にする必要があります。 ストレージのサイズは、*n* の 2 倍のバイト数です。 [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) エンコードの場合、ストレージのサイズは *n* の 2 倍のバイト数となり、格納できる文字数もまた *n* となります。 UTF-16 エンコードの場合、ストレージのサイズは引き続き *n* の 2 倍のバイト数ですが、補助文字によって 2 つのバイト ペア (または[サロゲート ペア](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)) が使用されるため、格納できる文字数は *n* よりも少なくなる場合があります。 **nchar** の ISO シノニムは、**national char** および **national character** です。
+固定長の文字列データです。 *n* によってバイト ペアでの文字列の長さが定義されます。1 から 4,000 までの値にする必要があります。 ストレージのサイズは、*n* の 2 倍のバイト数です。 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) エンコードの場合、ストレージのサイズは *n* の 2 倍のバイト数となり、格納できる文字数もまた *n* となります。 UTF-16 エンコードの場合、ストレージのサイズは引き続き *n* の 2 倍のバイト数ですが、補助文字によって 2 つのバイト ペア (または[サロゲート ペア](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)) が使用されるため、格納できる文字数は *n* よりも少なくなる場合があります。 **nchar** の ISO シノニムは、**national char** および **national character** です。
   
 **nvarchar** [ ( n | **max** ) ]  
-可変長の文字列データです。 *n* によってバイト ペアでの文字列の長さが定義されます。1 から 4,000 までの値を指定できます。 **max** は、ストレージの最大サイズが 2^30-1 文字 (2 GB) であることを示します。 ストレージのサイズは、*n* の 2 倍のバイト数 + 2 バイトです。 [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) エンコードの場合、ストレージのサイズは *n* の 2 倍のバイト数 + 2 バイトとなり、格納できる文字数もまた *n* となります。 UTF-16 エンコードの場合、ストレージのサイズは引き続き *n* の 2 倍のバイト数 + 2 バイトですが、補助文字によって 2 つのバイト ペア (または[サロゲート ペア](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)) が使用されるため、格納できる文字数は *n* よりも少なくなる場合があります。 ISO シノニム **nvarchar** は national char のさまざまな **と** 各国語文字がさまざまな**です**。
+可変長の文字列データです。 *n* によってバイト ペアでの文字列の長さが定義されます。1 から 4,000 までの値を指定できます。 **max** は、ストレージの最大サイズが 2^30-1 文字 (2 GB) であることを示します。 ストレージのサイズは、*n* の 2 倍のバイト数 + 2 バイトです。 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) エンコードの場合、ストレージのサイズは *n* の 2 倍のバイト数 + 2 バイトとなり、格納できる文字数もまた *n* となります。 UTF-16 エンコードの場合、ストレージのサイズは引き続き *n* の 2 倍のバイト数 + 2 バイトですが、補助文字によって 2 つのバイト ペア (または[サロゲート ペア](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)) が使用されるため、格納できる文字数は *n* よりも少なくなる場合があります。 ISO シノニム **nvarchar** は national char のさまざまな **と** 各国語文字がさまざまな**です**。
   
 ## <a name="remarks"></a>Remarks  
 データ定義または変数宣言ステートメントで *n* を指定しないと、既定の長さは 1 になります。 CAST 関数で *n* を指定しないと、既定の長さは 30 になります。
@@ -64,7 +64,7 @@ Unicode 文字の文字列定数には、プレフィックスとして文字 N 
 ## <a name="see-also"></a>参照
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  

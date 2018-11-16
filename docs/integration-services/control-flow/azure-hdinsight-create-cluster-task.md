@@ -14,12 +14,12 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1635771d132d12ac078975f506cd51ac7076093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4687c4508bea34e9435bbfe6d33ad47b1c6a9a45
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787841"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638099"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight Create Cluster Task
 **Azure HDInsight Create Cluster Task** を使用すると、指定された Azure サブスクリプションとリソース グループの Azure HDInsight クラスターを SSIS パッケージで作成できます。
@@ -28,7 +28,7 @@ ms.locfileid: "47787841"
   
 > [!NOTE]  
 > - 新しい HDInsight クラスターの作成には 10 分から 20 分かかる場合があります。  
-> - Azure HDInsight クラスターの作成と実行には、料金がかかります。 詳細については、「[HDInsight の価格](http://azure.microsoft.com/pricing/details/hdinsight/)」を参照してください。  
+> - Azure HDInsight クラスターの作成と実行には、料金がかかります。 詳細については、「[HDInsight の価格](https://azure.microsoft.com/pricing/details/hdinsight/)」を参照してください。  
   
 **Azure HDInsight Create Cluster Task**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。すると、次の **[Azure HDInsight Create Cluster Task エディター]** ダイアログ ボックスが表示されます。  
   

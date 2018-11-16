@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2556b7c0e6c7bbbc4d25821a54a627263b3a3d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb50e72c96f69b58dcae48a30cd4b29994ba9e44
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819490"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697760"
 ---
 # <a name="data-type-conversion-database-engine"></a>データ型の変換 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47819490"
 CAST ( $157.27 AS VARCHAR(10) )  
 ```  
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラム コードを ISO に準拠させる場合は、CONVERT ではなく CAST を使います。 CONVERT のスタイル機能を利用する場合は、CAST ではなく CONVERT を使用します。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] プログラム コードを ISO に準拠させる場合は、CONVERT ではなく CAST を使用します。 CONVERT のスタイル機能を利用する場合は、CAST ではなく CONVERT を使用します。
   
 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムで提供されるデータ型に許可されている、すべての明示的および暗黙的なデータ型変換です。 **xml**、**bigint**、**sql_variant** が含まれます。 代入時に **sql_variant** データ型からの暗黙的な変換は行われませんが、**sql_variant** への暗黙的な変換は行われます。
   
@@ -97,7 +97,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**float**|**Double**|  
 |**real**|**単一**|  
 |**money**、 **smallmoney**|**Currency**|  
-|**datetime**、**smalldatetime**|**日付**|  
+|**datetime**、**smalldatetime**|**Date**|  
 |上記以外は NULL に設定|null 値に設定された **Variant**|  
   
 **binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(** 0 ～ *length*1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
@@ -109,7 +109,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**Long**、**Integer**、**Byte**、**Boolean**、**Object**|**int**|  
 |**Double**、**Single**|**float**|  
 |**Currency**|**money**|  
-|**日付**|**datetime**|  
+|**Date**|**datetime**|  
 |4,000 文字以下の **String**|**varchar**/**nvarchar**|  
 |4,000 文字を超える **String**|**text**/**ntext**|  
 |8,000 バイト以下の 1 次元 **Byte()** 配列|**varbinary**|  
@@ -119,6 +119,6 @@ CAST ( $157.27 AS VARCHAR(10) )
 [OLE オートメーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
   
   

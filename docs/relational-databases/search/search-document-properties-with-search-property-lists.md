@@ -20,12 +20,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c42ab027a6f8611139d3656e4df58dad745f5abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bce4439473aa19790435fc89dff3e4107311bb7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724548"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661084"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "47724548"
   
     -   **[既存の検索プロパティ リストから作成する]**  
   
-     詳細については、「 [New Search Property List](http://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a)」を参照してください。  
+     詳細については、「 [New Search Property List](https://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a)」を参照してください。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -202,7 +202,7 @@ GO
   
     2.  ドキュメント プロパティを追加するには、リストの末尾で **\*** の右側の空白行をクリックして、新しいプロパティの値を入力します。  
   
-         これらの値の詳細については、「 [検索プロパティ リスト エディター](http://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
+         これらの値の詳細については、「 [検索プロパティ リスト エディター](https://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

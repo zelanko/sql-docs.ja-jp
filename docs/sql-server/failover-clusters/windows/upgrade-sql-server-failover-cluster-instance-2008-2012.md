@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d32ba5273572c8f67729025e63580fa3355ec958
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4d12f59b94771a73f6f3b5db5290747940c768d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636490"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700940"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード
 
@@ -319,7 +319,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 ## <a name="next-steps"></a>次の手順
 - [データベース エンジンのアップグレードの完了](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [データベース互換性モードの変更とクエリ ストアの使用](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [SQL Server 2016 の新機能を利用する](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [SQL Server 2016 の新機能を利用する](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
 - [SQL Server フェールオーバー クラスター インスタンスのアップグレード](upgrade-a-sql-server-failover-cluster-instance.md)
 - [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [SQL Server 2016 のインスタンスへの機能の追加 (セットアップ)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

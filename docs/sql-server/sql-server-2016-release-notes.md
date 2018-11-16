@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4615707f7d3df5da90f8eea999ba290ae2ee0366
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: fc441d3247d5320e0a9913c0df48cc2573f22858
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269996"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700474"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51269996"
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 には、2016 SP1 より後にリリースされた、CU8 まで (CU8 を含む) の累積的な更新プログラムがすべて含まれています。 
 
 - [![Microsoft ダウンロード センター](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [SQL Server 2016 Service Pack 2 (SP2) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=869608)
-- 更新プログラムの完全な一覧については、「[SQL Server 2016 Service Pack 2 リリース情報 ](https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information)」を参照してください。
+- 更新プログラムの完全な一覧については、「[SQL Server 2016 Service Pack 2 リリース情報 ](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)」を参照してください。
 
 SQL Server 2016 SP2 のインストールでは、インストール後に再起動が必要な場合があります。 ベスト プラクティスとして、SQL Server 2016 SP2 インストール後の再起動を計画して実行することをお勧めします。
 
@@ -45,11 +45,11 @@ SQL Server 2016 SP2 にはパフォーマンスとスケールに関連する改
 |変更の追跡のクリーンアップ    |   変更の追跡のクリーンアップ パフォーマンスと、変更の追跡のサイド テーブルの効率性が向上しました。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |CPU のタイムアウトを使用したリソース ガバナーの要求の取り消し   |   要求の CPU しきい値に達した場合に実際に要求を取り消すことで、クエリ要求の処理が改善されます。 この動作は、トレース フラグ 2422 で有効です。 |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |SELECT INTO によるファイル グループへのターゲット テーブルの作成    |   SQL Server 2016 SP2 以降では、SELECT INTO の T-SQL 構文で ON <Filegroup name> キーワードを使用して、ユーザーの既定のファイル グループ以外のファイル グループにテーブルを読み込むことができるようになりました。 |       |
-|TempDB の間接チェックポイントの改善    |   DPLists のスピンロックの競合を最小限に抑えるため、TempDB の間接チェックポイント処理が改善しました。 この機能強化により、TempDB の間接チェックポイント処理が ON になっている場合に、SQL Server 2016 の TempDB ワークロードが自由にスケールアウトできるようになります。    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276)   |
+|TempDB の間接チェックポイントの改善    |   DPLists のスピンロックの競合を最小限に抑えるため、TempDB の間接チェックポイント処理が改善しました。 この機能強化により、TempDB の間接チェックポイント処理が ON になっている場合に、SQL Server 2016 の TempDB ワークロードが自由にスケールアウトできるようになります。    |   [KB4040276](https://support.microsoft.com/help/4040276) |
 |大容量メモリのコンピューターでのデータベース バックアップ パフォーマンスの改善  |   SQL Server 2016 SP2 ではバックアップ中に進行している I/O のドレイン方法が最適化されるため、中小規模のデータベースのバックアップ パフォーマンスが大幅に改善されています。 2TB のコンピューターでシステム データベースのバックアップを実行した場合の改善度は、以前の 100 倍という結果が出ています。 バックアップするページが増加してデータベースのサイズが大きくなり、バッファー プールを繰り返す場合と比べ、バックアップ IO の時間が長くなると、バッファー プールのパフォーマンスの向上の幅が小さくなります。 この変更により、大容量メモリ搭載の大規模なハイ エンドサーバーで複数の小規模データベースをホストしている顧客のバックアップ パフォーマンスが改善します。    |       |
 |TDE が有効なデータベースでの VDI バックアップの圧縮のサポート   |   SQL Server 2016 SP2 では、VDI バックアップ ソリューションが TDE が有効なデータベースで圧縮を利用できるようにする、VDI サポートが追加されています。 この改善により、TDE が有効なデータベースでバックアップの圧縮をサポートするための新しいバックアップ形式が導入されました。 SQL Server エンジンは、バックアップを復元するための新旧のバックアップ形式を透過的に処理します。   |       |
 |レプリケーション エージェント プロファイルのパラメーターの動的な読み込み    |   この新しい機能強化により、エージェントを再起動しなくてもレプリケーション エージェントのパラメーターが動的に読み込まれるようになります。 この変更は、特に一般的に使用されるエージェント プロファイルのパラメーターにのみ適用されます。 |       |
-|統計の作成/更新のための MAXDOP オプションのサポート |    この機能強化により、CREATE/UPDATE の STATISTICS ステートメントに MAXDOP オプションを指定できるだけでなく、作成または再構築の一環として統計が更新される場合にすべての型のインデックスで正しい MAXDOP 設定が使用されるようになります (MAXDOP オプションが存在する場合)   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809)   |
+|統計の作成/更新のための MAXDOP オプションのサポート |    この機能強化により、CREATE/UPDATE の STATISTICS ステートメントに MAXDOP オプションを指定できるだけでなく、作成または再構築の一環として統計が更新される場合にすべての型のインデックスで正しい MAXDOP 設定が使用されるようになります (MAXDOP オプションが存在する場合)   |   [KB4041809](https://support.microsoft.com/help/4041809) |
 |増分統計の自動更新の改善 |    特定のシナリオでは、増分統計の合計変更数が自動更新のしきい値を超え、それでいて個々のパーティションのいずれもが自動更新のしきい値を超えないようにテーブルの複数のパーティションで多数のデータ変更が行われた場合、統計更新はテーブルでより多くの変更が行われるまで遅延する場合があります。 この動作は、トレース フラグ 11024 で修正されました。   |       |
 
 SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれています。
@@ -58,7 +58,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 |可用性グループ内のデータベースでの完全な DTC サポート    |   可用性グループの一部であるデータベースでの複数データベース間トランザクションは現在 SQL Server 2016 でサポートされていません。 SQL Server 2016 SP2 では、可用性グループ データベースでの分散トランザクションの完全なサポートを導入しています。   |       |
 |TempDB の暗号化の状態を正確に反映するための sys.database の is_encrypted 列の更新 |   すべてのユーザー データベースの暗号化をオフにし、SQL Server を再起動した後でも、TempDB の sys.databases の is_encrypted 列の値は 1 です。 この状況では TempDB が暗号化されないため、この値が 0 になることが予想されます。 SQL Server 2016 SP2 以降では、sys.databases.is_encrypted で TempDB の暗号化の状態が正確に反映されます。  |       |
 |検証済みのクローンとバックアップを生成するための新しい DBCC CLONEDATABASE オプション   |   SQL Server 2016 SP2 では、DBCC CLONEDATABASE によって、検証済みのクローンの作成、またはバックアップ クローンの作成という 2 つのオプションを使用できるようになります。 WITH VERIFY_CLONEDB オプションによってクローン データベースが作成されると、実稼働環境で Microsoft によってサポートされる一貫性のあるデータベース クローンが作成され、検証されます。 クローンが検証されるかどうかを検証する新しいプロパティ SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’) が導入されています。 クローンが BACKUP_CLONEDB オプションで作成されると、顧客が簡単にクローンを別のサーバーに移動したり、トラブルシューティングのために Microsoft カスタマー サポート (CSS) に送信したりできるように、データ ファイルと同じフォルダーにバックアップが生成されます。  |       |
-|DBCC CLONEDATABASE の Service Broker (SSB) のサポート    |   SSB オブジェクトのスクリプト作成を許可するように、DBCC CLONEDATABASE コマンドが拡張されました。  |   [KB4092075](https://support.microsoft.com/en-us/help/4092075)   |
+|DBCC CLONEDATABASE の Service Broker (SSB) のサポート    |   SSB オブジェクトのスクリプト作成を許可するように、DBCC CLONEDATABASE コマンドが拡張されました。  |   [KB4092075](https://support.microsoft.com/help/4092075) |
 |TempDB のバージョン ストア領域の使用量を監視する新しい DMV    |   TempDB のバージョン ストア使用量の監視が可能になるように、SQL Server 2016 SP2 に新しい sys.dm_tran_version_store_space_usage の DMV が導入されました。 運用サーバーでの実行時にパフォーマンスのオーバーヘッドを発生させることなく、データベースごとのバージョン ストア使用量の要件に基づいて DBA で TempDB のサイズを事前に計画できるようになりました。 |       |
 |レプリケーション エージェントの完全なダンプのサポート | 現在は、レプリケーション エージェントがハンドルされない例外に遭遇すると、既定により例外の現象のミニ ダンプが作成されます。 これにより、未処理の例外の問題のトラブルシューティングが非常に難しくなっています。 今回の変更では新しいレジストリ キーが導入され、レプリケーション エージェントの完全なダンプが作成できるようになっています。  |       |
 |可用性グループのルーティング読み取りエラーの拡張イベントの機能強化 |   以前は、ルーティング リストが存在する場合、read_only_rout_fail の xEvent が起動していましたが、ルーティング リストのどのサーバーも、接続に使用できませんでした。 SQL Server 2016 SP2 には、トラブルシューティングに役立つ追加情報と、xEvent が起動するコード ポイントの拡張も含まれます。  |       |
@@ -66,7 +66,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 |VLF 情報を監視するための新しい DMV |   顧客が遭遇する可能性のある T-Log の問題を監視し、警告し、回避するための、DBCC LOGINFO に似た VLF 情報を公開する新しい DMV、sys.dm_db_log_info が SQL Server 2016 SP2 に導入されました。    |       |
 |sys.dm_os_sys_info のプロセッサ情報|   socket_count や cores_per_numa などのプロセッサ関連情報を公開する新しい列が sys.dm_os_sys_info の DMV に追加されています。  |       |
 |sys.dm_db_file_space_usage のエクステントの変更情報| 前回の完全バックアップから変更されたエクステントの数を追跡する新しい列が sys.dm_db_file_space_usage に追加されました。  |       |
-|sys.dm_exec_query_stats のセグメント情報 |   total_columnstore_segment_reads、total_columnstore_segment_skips などの、スキップされた列ストア セグメントや読み取られた列ストア セグメントの数を追跡する新しい列が sys.dm_exec_query_stats に追加されました。   |   [KB4051358](https://support.microsoft.com/en-us/help/4051358)   |
+|sys.dm_exec_query_stats のセグメント情報 |   total_columnstore_segment_reads、total_columnstore_segment_skips などの、スキップされた列ストア セグメントや読み取られた列ストア セグメントの数を追跡する新しい列が sys.dm_exec_query_stats に追加されました。   |   [KB4051358](https://support.microsoft.com/help/4051358) |
 |ディストリビューション データベースの正しい互換性レベルの設定  |   Service Pack をインストールすると、ディストリビューション データベースの互換性レベルが 90 に変更されます。 これは、sp_vupgrade_replication ストアド プロシージャのコード パスが原因でした。 SP はディストリビューション データベースに正しい互換性レベルが設定されるように変更されています。   |       |
 |最後に確認された適切な DBCC CHECKDB 情報の公開    |   最後に成功した DBCC CHECKDB 実行の日付がプログラムで自動的に返されるように、新しいデータベースのオプションが追加されました。 ユーザーはクエリ DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’) を実行することで、指定したデータベースで最後に成功した DBCC CHECKDB 実行の日時を表す単一の値を取得することができます。  |       |
 |Showplan XML の機能強化| 統計名、変更数、サンプリングの割合、統計の最終更新日時を含む、[クエリ プランのコンパイルに使用された統計に関する情報](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/)。 これは CE モデル 120 以降でのみ追加されます。 たとえば、CE 70 ではサポートされません。| |
@@ -141,11 +141,11 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
 -   [製品ドキュメント (GA)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-**問題およびユーザーへの影響:** SQL Server 2016 の前提条件としてインストールされる Microsoft VC++ 2013 ランタイム バイナリに影響を与える問題が見つかりました。 更新プログラムを利用してこの問題を修正できます。 VC ランタイム バイナリに対するこの更新プログラムをインストールしないと、特定のシナリオにおいて、SQL Server 2016 で安定性の問題が発生する可能性があります。 SQL Server 2016 をインストールする前に、 [KB 3164398](http://support.microsoft.com/kb/3164398)で説明されている修正プログラムがコンピューターに必要かどうかを確認してください。 修正プログラムは、[SQL Server 2016 RTM の累積的な更新プログラム パッケージ 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) にも含まれています。 
+**問題およびユーザーへの影響:** SQL Server 2016 の前提条件としてインストールされる Microsoft VC++ 2013 ランタイム バイナリに影響を与える問題が見つかりました。 更新プログラムを利用してこの問題を修正できます。 VC ランタイム バイナリに対するこの更新プログラムをインストールしないと、特定のシナリオにおいて、SQL Server 2016 で安定性の問題が発生する可能性があります。 SQL Server 2016 をインストールする前に、 [KB 3164398](https://support.microsoft.com/kb/3164398)で説明されている修正プログラムがコンピューターに必要かどうかを確認してください。 修正プログラムは、[SQL Server 2016 RTM の累積的な更新プログラム パッケージ 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) にも含まれています。 
 
 **解決方法:** 次の解決策のいずれかを使用します。
 
-- [KB 3138367 - 2013 の Visual C++ および Visual C++ の再頒布可能パッケージ用の更新プログラム](http://support.microsoft.com/kb/3138367)をインストールします。 KB は推奨される解決方法です。 このインストールは、SQL Server 2016 のインストールの前でも後でも実行できます。 
+- [KB 3138367 - 2013 の Visual C++ および Visual C++ の再頒布可能パッケージ用の更新プログラム](https://support.microsoft.com/kb/3138367)をインストールします。 KB は推奨される解決方法です。 このインストールは、SQL Server 2016 のインストールの前でも後でも実行できます。 
 
     SQL Server 2016 が既にインストール済みの場合は、次の順序で手順を実行します。
 
@@ -155,7 +155,7 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
     1.  コンピューターを再起動します。
  
 
- - [KB 3164398 - SQL Server 2016 MSVCRT の必須コンポーネントの重要な更新プログラム](http://support.microsoft.com/kb/3164398)をインストールします。  
+ - [KB 3164398 - SQL Server 2016 MSVCRT の必須コンポーネントの重要な更新プログラム](https://support.microsoft.com/kb/3164398)をインストールします。  
  
     **KB 3164398**を使用する場合、SQL Server のインストール中、Microsoft Update の実行時、または Microsoft ダウンロード センターからインストールできます。 
 

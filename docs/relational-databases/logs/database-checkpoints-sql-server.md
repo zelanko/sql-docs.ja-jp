@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd42cf79d99566f6d3d356d8b96bdb5415dc258c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34aeae9faee8d0818f5a8db3c499850e0e969835
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673385"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676652"
 ---
 # <a name="database-checkpoints-sql-server"></a>データベース チェックポイント (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -142,6 +142,6 @@ ms.locfileid: "47673385"
   
 ## <a name="see-also"></a>参照  
 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[トランザクション ログの物理アーキテクチャ](http://technet.microsoft.com/library/ms179355.aspx) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブックからですが、適用可能です)       
+[トランザクション ログの物理アーキテクチャ](https://technet.microsoft.com/library/ms179355.aspx) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブックからですが、適用可能です)       
   
   

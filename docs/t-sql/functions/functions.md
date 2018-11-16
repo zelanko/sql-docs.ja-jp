@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307db631ea3d4b803402f11070c5770afe452b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772569"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701320"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Microsoft SQL データベース関数とは
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ SQL データベースで使うことができる組み込み関数のカテゴ�
 |[カーソル関数](cursor-functions-transact-sql.md)|カーソルについての情報を返します。|  
 |[日付と時刻のデータ型および関数](date-and-time-data-types-and-functions-transact-sql.md)|日付時刻型の入力値に対して操作を実行し、文字列値、数値、または日付時刻値を返します。|  
 |[JSON 関数](json-functions-transact-sql.md)|クエリを検証します。 または、JSON データを変更します。|  
-|[論理関数](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|論理演算を実行します。|  
+|[論理関数](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|論理演算を実行します。|  
 |[数学関数](mathematical-functions-transact-sql.md)|パラメーターとして渡された入力値に基づいて計算を実行し、数値を返します。|  
 |[メタデータ関数](metadata-functions-transact-sql.md)|データベースおよびデータベース オブジェクトについての情報を返します。|  
 |[セキュリティ関数](security-functions-transact-sql.md)|ユーザーとロールについての情報を返します。|  
 |[文字列関数](string-functions-transact-sql.md)|文字列型 (**char** または **varchar**) の入力値に対して操作を実行し、文字列値または数値を返します。|  
 |[システム関数](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|値、オブジェクト、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内の設定値に対して操作を実行し、それについての情報を返します。|  
 |[システム統計関数](system-statistical-functions-transact-sql.md)|システムについての統計情報を返します。|  
-|[テキストとイメージ関数](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|テキスト入力値、イメージ入力値、または列に対して操作を実行し、値についての情報を返します。|  
+|[テキストとイメージ関数](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|テキスト入力値、イメージ入力値、または列に対して操作を実行し、値についての情報を返します。|  
   
 ## <a name="function-determinism"></a>関数の決定性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の組み込み関数は、決定的または非決定的のいずれかです。 特定の一連の入力値を使用して呼び出されたときに必ず同じ結果を返す場合、その関数は決定的です。 同じ特定の一連の入力値を使用しても呼び出すたびに異なる結果を返す場合、その関数は非決定的です。 詳しくは、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」をご覧ください。  

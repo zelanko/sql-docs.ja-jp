@@ -24,12 +24,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730930"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639659"
 ---
 # <a name="lookup-transformation"></a>参照変換
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
@@ -131,15 +131,15 @@ ms.locfileid: "47730930"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   msdn.microsoft.com のビデオ「 [フル キャッシュ モードで参照変換を実装する方法](http://go.microsoft.com/fwlink/?LinkId=131031)」  
+-   msdn.microsoft.com のビデオ「 [フル キャッシュ モードで参照変換を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131031)」  
   
--   blogs.msdn.com のブログ「 [参照変換のキャッシュ モードを使用する際の推奨事項](http://go.microsoft.com/fwlink/?LinkId=146623)」  
+-   blogs.msdn.com のブログ「 [参照変換のキャッシュ モードを使用する際の推奨事項](https://go.microsoft.com/fwlink/?LinkId=146623)」  
   
--   blogs.msdn.com のブログ「 [参照パターン : 大文字と小文字を区別しない](http://go.microsoft.com/fwlink/?LinkId=157782)」  
+-   blogs.msdn.com のブログ「 [参照パターン : 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
   
--   msftisprodsamples.codeplex.com のサンプル「 [参照変換](http://go.microsoft.com/fwlink/?LinkId=267528)」  
+-   msftisprodsamples.codeplex.com のサンプル「 [参照変換](https://go.microsoft.com/fwlink/?LinkId=267528)」  
   
-     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 製品サンプルとサンプル データベースのインストールの詳細については、「 [SQL Server Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=267527)」をご覧ください。  
+     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 製品サンプルとサンプル データベースのインストールの詳細については、「 [SQL Server Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=267527)」をご覧ください。  
   
 ## <a name="lookup-transformation-editor-general-page"></a>[参照変換エディター] ([全般] ページ)
   [参照変換エディター] ダイアログ ボックスの **[全般]** ページを使用して、キャッシュ モードや接続の種類を選択し、一致するエントリがない行の処理方法を指定します。  
@@ -168,7 +168,7 @@ ms.locfileid: "47730930"
  **[エントリが一致しない行の処理方法を指定する]** ボックスの一覧で他のオプションを選択した場合は、行がエラーとして処理されます。 **[エラー出力]** ページの **[エラー]** オプションを使用できます。  
   
 ### <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ「 [キャッシュ モードの参照](http://go.microsoft.com/fwlink/?LinkId=219518) 」  
+ blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>[参照変換エディター] ([接続] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[接続]** ページを使用して、接続マネージャーを選択します。 OLE DB 接続マネージャーを選択する場合は、参照データセットを生成するためのクエリ、テーブル、またはビューも選択します。  
@@ -215,7 +215,7 @@ ms.locfileid: "47730930"
  **[クエリ結果のプレビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 結果は 200 行まで表示されます。  
   
 ### <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ「 [キャッシュ モードの参照](http://go.microsoft.com/fwlink/?LinkId=219518) 」  
+ blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、元のテーブルと参照テーブルの間に結合を指定したり、参照テーブルから参照列を選択したりできます。  
@@ -272,7 +272,7 @@ ms.locfileid: "47730930"
  **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、入力列をパラメーターにマップします。  
   
 ### <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ「 [キャッシュ モードの参照](http://go.microsoft.com/fwlink/?LinkId=219518) 」  
+ blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
   
 ## <a name="see-also"></a>参照  
  [あいまい参照変換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

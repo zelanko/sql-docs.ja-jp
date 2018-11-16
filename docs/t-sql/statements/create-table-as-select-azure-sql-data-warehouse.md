@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3e3e25cc061ab7b557047c962dc30f023769a9f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c35eed3e73a80a2fcaf060e094c31938d0692414
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814670"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697230"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>テーブルとして選択 (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -141,7 +141,7 @@ CTAS では [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-row
  
 <a name="performance-bk"></a>
  
- ## <a name="performance"></a>[パフォーマンス] 
+ ## <a name="performance"></a>パフォーマンス 
 
 ハッシュ分散テーブルの場合、CTAS を使用して、結合と集計のパフォーマンスを高めるために異なる分散列を選択できます。 異なる分散列を選択することが目的ではない場合、同じ分散列を指定すると、行の再分散が避けられるため、CTAS の最高のパフォーマンスが得られます。 
 
@@ -448,7 +448,7 @@ AS SELECT * FROM ClickStreamExt
 ### <a name="h-use-ctas-to-import-hadoop-data-from-an-external-table"></a>H. CTAS を使用して外部テーブルから Hadoop データをインポートする  
 適用対象: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-外部テーブルからデータをインポートするには、だけで作成表を使用する AS 外部テーブルからを選択します。 外部テーブルからデータを選択して [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
+外部テーブルからデータをインポートするには、だけで作成表を使用する AS 外部テーブルからを選択します。 外部テーブルからデータを選択するための構文 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は通常のテーブルからデータを選択するための構文と同じです。  
   
  次の例では、Hadoop クラスター上、外部テーブルを定義します。 使用して、テーブルとして選択の作成、外部テーブルからを選択します。 これで、Hadoop のテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] テーブルにデータが格納されます。  
   
@@ -831,7 +831,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
  [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
   
   
 

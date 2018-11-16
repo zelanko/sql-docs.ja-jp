@@ -16,12 +16,12 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 226602debe898225405fb636eecec47c76cfedc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bf516256277abc02a8499f06707a518f2aadf75
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686000"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664942"
 ---
 # <a name="transaction-log-backups-sql-server"></a>トランザクション ログのバックアップ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ ms.locfileid: "47686000"
 -   既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
 
 -   ログ バックアップは、ビジネス要件に対応するために十分な頻度で作成してください。特に、ログ ストレージに障害が起こった場合に生じる作業損失に対する許容範囲を考慮してください。 
-   -   ログ バックアップを行う適切な頻度は、作業損失に対する許容範囲と、ログ バックアップを保存、管理、復元できる量とのバランスによります。 復旧計画を導入するときは必要な [RTO](http://wikipedia.org/wiki/Recovery_time_objective) と [RPO](http://wikipedia.org/wiki/Recovery_point_objective) について、特にログ バックアップの頻度について検討してください。
+   -   ログ バックアップを行う適切な頻度は、作業損失に対する許容範囲と、ログ バックアップを保存、管理、復元できる量とのバランスによります。 復旧計画を導入するときは必要な [RTO](https://wikipedia.org/wiki/Recovery_time_objective) と [RPO](https://wikipedia.org/wiki/Recovery_point_objective) について、特にログ バックアップの頻度について検討してください。
    -   15 分から 30 分間隔でログ バックアップを行えば十分でしょう。 業務上、作業損失の可能性を最小限に抑えることが求められる場合は、ログ バックアップの頻度を増やすことを検討します。 ログ バックアップの頻度を増やせば、ログ切り捨ての頻度も高くなり、ログ ファイルが小さくなる利点もあります。  
   
 > [!IMPORTANT]
 > 復元する必要があるログ バックアップの数を制限するには、定期的なデータのバックアップが不可欠です。 たとえば、データベースの完全バックアップを毎週実行し、差分バックアップを毎日実行するようにスケジュールできます。  
-> 繰り返しになりますが、復旧計画を導入するときは必要な [RTO](http://wikipedia.org/wiki/Recovery_time_objective) と [RPO](http://wikipedia.org/wiki/Recovery_point_objective) について、特に、データベースの完全バックアップと差分バックアップの頻度について検討してください。
+> 繰り返しになりますが、復旧計画を導入するときは必要な [RTO](https://wikipedia.org/wiki/Recovery_time_objective) と [RPO](https://wikipedia.org/wiki/Recovery_point_objective) について、特に、データベースの完全バックアップと差分バックアップの頻度について検討してください。
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログのバックアップを作成するには**  

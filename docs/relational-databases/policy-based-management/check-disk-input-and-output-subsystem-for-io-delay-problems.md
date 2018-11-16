@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dfc3bf452f6aa7693c14e84a6d85baad683d10b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f02049b36b030e6b2852ef2f5cac4f1eea737c9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609900"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668972"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>ディスク I/O サブシステムの I/O 遅延問題の確認
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +40,8 @@ ms.locfileid: "47609900"
 ## <a name="for-more-information"></a>詳細情報  
    
   
- [サポート技術情報の資料 897284](http://go.microsoft.com/fwlink/?linkid=117743)  
+ [サポート技術情報の資料 897284](https://go.microsoft.com/fwlink/?linkid=117743)  
   
- [SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)  
   
   

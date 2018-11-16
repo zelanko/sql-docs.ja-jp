@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021326"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813185"
 ---
 # <a name="install-report-builder"></a>レポート ビルダーをインストール
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] はスタンドアロン アプリです。ユーザーまたは管理者によってコンピューターにインストールされます。 Microsoft ダウンロード センター、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバー、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトからインストールできます。  
@@ -29,7 +29,7 @@ ms.locfileid: "50021326"
  
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用する [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のインストール 
   
- 管理者は System Center Configuration Manager などのソフトウェアを使用して、ユーザーのコンピューターにプログラムをプッシュすることもできます。 特定のソフトウェアを使用して [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]をインストールする方法については、そのソフトウェアのマニュアルを参照してください。 詳細については、 [System Center Configuration Manager のサイト](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager)を参照してください。  
+ 管理者は System Center Configuration Manager などのソフトウェアを使用して、ユーザーのコンピューターにプログラムをプッシュすることもできます。 特定のソフトウェアを使用して [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]をインストールする方法については、そのソフトウェアのマニュアルを参照してください。 詳細については、 [System Center Configuration Manager のサイト](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)を参照してください。  
   
 > [!IMPORTANT]  
 >  Windows Vista および Windows 7 でコマンド ライン操作を実行するには、セキュリティ機能に基づいて高度な権限が必要となり、コマンド ラインの実行権限が要求されます。 インストールはサイレント モードになりません。 インストールをサイレント モードにするには、管理者としてコマンド ラインを実行する必要があります。  

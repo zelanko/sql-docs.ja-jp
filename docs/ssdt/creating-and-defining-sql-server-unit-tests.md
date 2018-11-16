@@ -14,12 +14,12 @@ ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed68e2510169ee0c56a3dfbf2e95c2cb164412b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d242dbf69e223b5e56b575f09e55e1f3ba6964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688590"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681280"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>SQL Server の単体テストの作成と定義
 SQL Server の単体テストを実行すると、スキーマ内の 1 つ以上のデータベース オブジェクトに対する変更によって、データベース アプリケーションの既存の機能が使用できなくなっていないかどうかを検証できます。 これらのテストは、ソフトウェア開発者が作成する単体テストを補完するものです。 両方の種類のテストを実行して、アプリケーションの動作を検証する必要があります。  
@@ -46,7 +46,7 @@ SQL Server の単体テストおよび Transact\-SQL スクリプトを任意の
 [SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)  
 作成した SQL Server の単体テストは、[テスト ビュー] ウィンドウまたは SQL Server 単体テスト デザイナーから実行したり、Team Foundation ビルドを使用して実行したりできます。  
   
-[シナリオ: データベース単体テストのカスタム条件の定義](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[シナリオ: データベース単体テストのカスタム条件の定義](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 カスタムのテスト条件を作成すると、既定のテスト条件で検証できない動作をテストできます。  
   
 ## <a name="see-also"></a>参照  

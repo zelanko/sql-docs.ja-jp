@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5de46e377b750c26b9a048d63ffec7ae83c6f11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648791"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642169"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>レッスン 2-2 - Foreach ループ コンテナーの追加と構成
 この実習では、フラット ファイルのフォルダー全体にループ機能を付加し、レッスン 1 で使用したデータ フロー変換と同じ変換を各フラット ファイルに適用します。 そのためには、Foreach ループ コンテナーを制御フローに追加して、構成します。  
@@ -62,11 +62,11 @@ Foreach ループ コンテナーを追加したら、フォルダー内の各�
   
     このサンプル データは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] のレッスン パッケージに含まれています。 サンプル データとレッスン パッケージをダウンロードするには、次の手順を実行します。  
   
-    1.  「 [Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)をクリックします。 
+    1.  「 [Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。 
   
     2.  **[ダウンロード]** タブをクリックします。  
   
-    3.  [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) ファイルのリンクをクリックします。  
+    3.  [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](https://msftisprodsamples.codeplex.com/downloads/get/596031) ファイルのリンクをクリックします。  
   
 6.  **[ファイル]** ボックスに「**Currency_\*.txt**」と入力します。  
   
@@ -93,8 +93,8 @@ Foreach ループ コンテナーを追加したら、フォルダー内の各�
 [手順 3: フラット ファイル接続マネージャーの変更](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>参照  
-[Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+[Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 394330d19904e61eb4a339468cd882f09240ff65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748930"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673021"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ WHERE col1 = 'dn';
   
 | 演算 | メモリ最適化、 <br/> ハッシュ | メモリ最適化、 <br/> 非クラスター化 | ディスク ベース、 <br/> (非) クラスター化 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| インデックス スキャン、すべてのテーブルの行を取得する。 | [ユーザー アカウント制御] | はい | [ユーザー アカウント制御] |  
+| インデックス スキャン、すべてのテーブルの行を取得する。 | [ユーザー アカウント制御] | [はい] | [ユーザー アカウント制御] |  
 | 等値述語 (=) でのインデックス シーク。 | [ユーザー アカウント制御] <br/> (フル キーが必要です。) | [ユーザー アカウント制御]  | [ユーザー アカウント制御] |  
 | 非等値述語と範囲述語でのインデックス シーク  <br/> (>, <, <=, >=, `BETWEEN`) | いいえ <br/> (インデックス スキャンが実行される) | はい <sup>1</sup> | [ユーザー アカウント制御] |  
 | インデックス定義と一致する行を並べ替え順序で取得する。 | いいえ | はい | [ユーザー アカウント制御] |  
@@ -211,10 +211,10 @@ WHERE col1 = 'dn';
 
 ## <a name="automatic-index-and-statistics-management"></a>インデックスと統計の自動管理
 
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) のようなソリューションを活用し、1 つまたは複数のデータベースに対するインデックスの最適化と統計更新を自動管理します。 このプロシージャでは、断片化レベルやその他のパラメーターに基づいてインデックスを再構築または再構成するか、線形しきい値で統計を更新するかが自動的に選択されます。
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) のようなソリューションを活用し、1 つまたは複数のデータベースに対するインデックスの最適化と統計更新を自動管理します。 このプロシージャでは、断片化レベルやその他のパラメーターに基づいてインデックスを再構築または再構成するか、線形しきい値で統計を更新するかが自動的に選択されます。
 
 ## <a name="Additional_Reading"></a> 参照   
  [SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)   
  [メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [メモリ最適化テーブルの非クラスター化インデックス](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  

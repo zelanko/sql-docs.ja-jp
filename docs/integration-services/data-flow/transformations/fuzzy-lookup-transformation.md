@@ -34,18 +34,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782230"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638819"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
   
 > [!NOTE]  
->  パフォーマンスやメモリの制限など、あいまい参照変換に関する詳細については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](http://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
+>  パフォーマンスやメモリの制限など、あいまい参照変換に関する詳細については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](https://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
   
  あいまい参照変換は、あいまい一致を使用するという点が参照変換とは異なります。 参照変換では、等結合を使用して、参照テーブル内の一致レコードを検索します。 返されるのは、一致レコードを少なくとも 1 つ含むレコードと、一致レコードがないレコードです。 これに対して、あいまい参照変換では、あいまい一致を使用して、参照テーブル内の 1 つ以上の類似一致を返します。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47782230"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -216,7 +216,7 @@ ms.locfileid: "47782230"
   
 ## <a name="see-also"></a>参照  
  [参照変換](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [あいまいグループ化変換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

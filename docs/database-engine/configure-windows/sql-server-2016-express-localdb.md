@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: adc3db5b6930cbbc9e3af95aaa2a1245bb40c25a
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a4d7fa27844de363c2a703a95e20df11277309fa
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383937"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606912"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Microsoft SQL Server 2016 Express **LocalDB** は、開発者を対象とした 
  
  ## <a name="try-it-out"></a>お試しください 
   
--   SQL Server 2016 Express は、「**[SQL Server ダウンロード](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**」からダウンロードしてインストールできます。 LocalDB は、インストール中に選択する機能で、メディアをダウンロードするときに使用できます。 メディアをダウンロードする場合は、**Visual Studio インストーラー** で **[Express Advanced]** または **[LocalDB]** パッケージを選択します。 **Visual Studio インストーラー**で、**.NET デスクトップ開発** ワークロードの一部として、または個別のコンポーネントとして、SQL Server Express LocalDB をインストールできます。
+-   SQL Server 2016 Express は、「**[SQL Server ダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)**」からダウンロードしてインストールできます。 LocalDB は、インストール中に選択する機能で、メディアをダウンロードするときに使用できます。 メディアをダウンロードする場合は、**Visual Studio インストーラー** で **[Express Advanced]** または **[LocalDB]** パッケージを選択します。 **Visual Studio インストーラー**で、**.NET デスクトップ開発** ワークロードの一部として、または個別のコンポーネントとして、SQL Server Express LocalDB をインストールできます。
 
    > [!TIP]
    > LocalDB は、Visual Studio 2017 の一部としてインストールすることもできます。 Visual Studio のインストール中に、SQL Server Express LocalDB が含まれている **[.NET デスクトップ開発]** ワークロードを選択します。
@@ -51,9 +51,9 @@ Microsoft SQL Server 2016 Express **LocalDB** は、開発者を対象とした 
 ## <a name="description"></a>[説明]  
  **LocalDB** セットアップ プログラムは、SqlLocalDB.msi プログラムを使用してコンピューターに必要なファイルをインストールします。 **LocalDB** はインストールされると [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスとなり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを作成して開くことができます。 データベースのシステム データベース ファイルは、通常は非表示になっているユーザーのローカル AppData パスに格納されます。 たとえば、**C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** などです。 ユーザー データベース ファイルは、ユーザーが指定する場所、通常は **C:\Users\\<user\>\Documents\\** フォルダーに格納されます。  
   
- **LocalDB** をアプリケーションに含める方法については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のマニュアル「[ローカル データの概要](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)」、「[チュートリアル: SQL Server LocalDB データベースの作成](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)」、「[チュートリアル: SQL Server LocalDB データベースのデータへの接続 (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)」を参照してください。  
+ **LocalDB** をアプリケーションに含める方法については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のマニュアル「[ローカル データの概要](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)」、「[チュートリアル: SQL Server LocalDB データベースの作成](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)」、「[チュートリアル: SQL Server LocalDB データベースのデータへの接続 (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)」を参照してください。  
   
- **LocalDB** API の詳細については、「 [SQL Server Express LocalDB のインスタンス API リファレンス](http://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) 」および「 [LocalDBStartInstance 関数](http://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx)」を参照してください。  
+ **LocalDB** API の詳細については、「 [SQL Server Express LocalDB のインスタンス API リファレンス](https://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) 」および「 [LocalDBStartInstance 関数](https://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx)」を参照してください。  
   
  SqlLocalDb ユーティリティは、 **LocalDB**の新しいインスタンス作成、 **LocalDB**インスタンスの起動と終了を行うことができ、 **LocalDB**の管理に役立つオプションが含まれます。  SqlLocalDb ユーティリティの詳細については、「 [SqlLocalDB ユーティリティ](../../tools/sqllocaldb-utility.md)」を参照してください。  
   
@@ -122,7 +122,7 @@ REM Gather information about the instance of LocalDB
  **LocalDB** の共有インスタンスに接続するには、**.\\** (ドット + 円記号) を接続文字列に追加して、共有インスタンス用に予約されている名前空間を参照します。 たとえば、 **という名前の** LocalDB `AppData` の共有インスタンスに接続するには、接続文字列の一部として `(localdb)\.\AppData` などの接続文字列を使用します。 自身のものではない **LocalDB** の共有インスタンスに接続するユーザーには、Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインが必要です。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
- **LocalDB**のトラブルシューティングについては、「 [SQL Server 2012 Express LocalDB のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx)」を参照してください。  
+ **LocalDB**のトラブルシューティングについては、「 [SQL Server 2012 Express LocalDB のトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  NT AUTHORITY\SYSTEM などの組み込みのアカウントが所有する [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** のインスタンスは、ユーザーによって作成される、ユーザー専用のインスタンスです。 コンピューター上のユーザーであれば、データベースを作成できます。データベースを作成するには、 **LocalDB**のインスタンスを使用して、ファイルをそのユーザー プロファイルに格納し、自分の資格情報を使用して処理を実行します。 既定では、 **LocalDB** のインスタンスにアクセスできるのは、その所有者に制限されます。 **LocalDB** に含まれるデータは、データベース ファイルにアクセスするファイル システムによって保護されます。 ユーザー データベース ファイルが共有の場所に格納されている場合は、ファイル システムでその場所にアクセスできるユーザーであればだれでも、所有する **LocalDB** のインスタンスを使用してデータベースを開くことができます。 データベース ファイルがユーザー データ フォルダーなどの保護された場所に格納されている場合は、そのユーザーおよびそのフォルダーにアクセスできる管理者だけがデータベースを開くことができます。 **LocalDB** ファイルを開く際には、 **LocalDB** のインスタンスを一度に 1 つしか使用できません。  

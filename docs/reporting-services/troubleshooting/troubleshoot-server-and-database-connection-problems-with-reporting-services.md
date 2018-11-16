@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e44af551221792f288cb23ef616f68b0c7965d6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028841"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814315"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング
 このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」と「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
@@ -34,7 +34,7 @@ SQL Server に接続している場合、既定の設定では SQL Server によ
 * レポート サーバーの URL およびレポート サーバー データベースの接続文字列が正しいことを確認します。 Reporting Services またはデータベース エンジンが名前付きインスタンスとしてインストールされている場合、セットアップ中に作成された既定の接続文字列にインスタンス名が含まれています。 たとえば、DEVSRV01 というサーバー上に SQL Server Express with Advanced Services の既定のインスタンスをインストールした場合、レポート マネージャーの URL は DEVSRV01\Reports$SQLEXPRESS になります。 さらに、接続文字列内のデータベース サーバー名は、DEVSRV01\SQLEXPRESS のようになります。 SQL Server Express の URL とデータ ソース接続文字列については、「 [SQL Server Express with Advanced Services の Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)」を参照してください。 レポート サーバー データベースの接続文字列を確認するには、Reporting Services 構成ツールを起動し、[データベースのセットアップ] ページを確認します。  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>接続できません。 サーバーが実行中であることを確認してください。  
-このエラーは ADOMD.NET プロバイダーから返されます。 このエラーの発生原因はいくつかあります。 サーバーを "localhost" と指定した場合は、代わりにサーバー名を指定してください。 新しい接続にメモリを割り当てることができない場合にも、このエラーが発生します。 詳細については、サポート技術情報の記事 912017「 [Error message when you connect to an instance of SQL Server 2005 Analysis Services (SQL Server 2005 Analysis Services のインスタンスに接続するときのエラー メッセージ)](http://support.microsoft.com/kb/912017)」を参照してください。  
+このエラーは ADOMD.NET プロバイダーから返されます。 このエラーの発生原因はいくつかあります。 サーバーを "localhost" と指定した場合は、代わりにサーバー名を指定してください。 新しい接続にメモリを割り当てることができない場合にも、このエラーが発生します。 詳細については、サポート技術情報の記事 912017「 [Error message when you connect to an instance of SQL Server 2005 Analysis Services (SQL Server 2005 Analysis Services のインスタンスに接続するときのエラー メッセージ)](https://support.microsoft.com/kb/912017)」を参照してください。  
   
 エラーに "そのようなホストは不明です" が含まれている場合は、Analysis Services サーバーが使用できないか接続が拒否されています。 Analysis Services サーバーが名前付きインスタンスとしてリモート コンピューター上にインストールされている場合は、このインスタンスが使用するポート番号を取得するために、SQL Server Browser サービスを実行する必要が生じることがあります。  
   
@@ -59,7 +59,7 @@ Management Studio がレポート サーバーとの接続を確立する際、�
   
 このエラーを解決するにはソフトウェアを再インストールする必要があります。 それ以外の場合、一時的な回避策として、レポート サーバーに SOAP エンドポイント経由で接続する方法があります。  
   
-* Management Studio の **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** にレポート サーバーの URL を入力します。 既定では `http://<your server name>/reportserver`です。 または、SQL Server 2008 Express with Advanced Services を使用している場合は、 `http://<your server name>/reportserver$sqlexpress`です。  
+* Management Studio の **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** にレポート サーバーの URL を入力します。 既定では `https://<your server name>/reportserver`です。 または、SQL Server 2008 Express with Advanced Services を使用している場合は、 `https://<your server name>/reportserver$sqlexpress`です。  
   
 エラーを解決して、WMI プロバイダーを使って接続できるようにするには、セットアップを実行して Reporting Services を修復するか、Reporting Services を再インストールする必要があります。  
   

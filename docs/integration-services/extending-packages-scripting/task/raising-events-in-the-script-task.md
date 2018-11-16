@@ -21,12 +21,12 @@ ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62f0b9b5fa11f93265d52e07c6a058ff5e98d576
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c5c5590bb6bdeb9539fb42e4c17b8ea38c5c85f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850857"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641739"
 ---
 # <a name="raising-events-in-the-script-task"></a>スクリプト タスクでのイベントの発生
   イベントは、エラーや警告、タスクの進行状況や状態などのその他の情報を、親パッケージにレポートする方法を提供するものです。 パッケージには、イベントの通知機能を管理するためのイベント ハンドラーがあります。 スクリプト タスクは、**Dts** オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> プロパティに対してメソッドを呼び出して、イベントを発生させることができます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのイベントの処理の詳細については、「[Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../../integration-services/integration-services-ssis-event-handlers.md)」を参照してください。  
@@ -145,6 +145,6 @@ public class ScriptMain
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [パッケージにイベント ハンドラーを追加する](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [パッケージにイベント ハンドラーを追加する](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

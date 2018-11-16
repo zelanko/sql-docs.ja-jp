@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4572d5c325dbfb36a17ce2c987140ab56b6626e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a9aaa281d1d91c8031182133976f1395417c4502
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031631"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812595"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する
 多様なデータ視覚エフェクトが含まれる [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートについて学びます。これらのレポートはモバイル デバイス用に最適化されており、オンプレミス データに接続します。 
 
 >[!NOTE]
->  Datazen Server のコンテンツ (ダッシュボードや KPI など) を SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] サーバーに移行する必要がありますか。 [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)を使ってみてください。 
+>  Datazen Server のコンテンツ (ダッシュボードや KPI など) を SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] サーバーに移行する必要がありますか。 [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128)を使ってみてください。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -35,10 +35,10 @@ ms.locfileid: "50031631"
 操作を開始するために次の記事が役立ちます。
 -  [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)のダウンロード  
 -  [Reporting Services モバイル レポートの作成](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [詳細なチュートリアル: SQL Server 2016 Reporting Services でのモバイル レポートと KPI の作成](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan のブログ)  
+-  [詳細なチュートリアル: SQL Server 2016 Reporting Services でのモバイル レポートと KPI の作成](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan のブログ)  
 - [デザイン優先、またはデータ優先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): シミュレートされたデータで最初にレポートをデザインするか、独自のデータで開始するかどうかを決定します。  
 - [Reporting Services モバイル レポートのデータ](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): 共有データセットからデータを使用するか、モバイル レポートで使用する Excel ブックからデータを準備します。
-- [Reporting Services のモバイル レポートと KPI におけるデータ更新のしくみ](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Christopher Finlan のブログ): 共有データセットのキャッシュの設定について確認し、データが更新される頻度を制御し、レポートのパフォーマンスを高速化します。
+- [Reporting Services のモバイル レポートと KPI におけるデータ更新のしくみ](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Christopher Finlan のブログ): 共有データセットのキャッシュの設定について確認し、データが更新される頻度を制御し、レポートのパフォーマンスを高速化します。
 - [モバイル レポートでの視覚化](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [モバイル レポートでのゲージ](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [モバイル レポートでのマップ](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)

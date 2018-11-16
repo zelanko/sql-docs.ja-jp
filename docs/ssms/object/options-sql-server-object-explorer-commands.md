@@ -13,12 +13,12 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c7df43a5a6a0f00ec1f2bce13cf79f424265abf
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7281b6862d1785fc1b2b93a543c10738a454adaa
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098894"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700197"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>[オプション] \([SQL Server オブジェクト エクスプローラー]/[コマンド])
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,5 +45,5 @@ ms.locfileid: "50098894"
 作成するクエリ エディター スクリプトで指定する、返す行数を指定します。 既定値は 1000 行です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server Audit (データベース エンジン)](http://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[SQL Server Audit (データベース エンジン)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

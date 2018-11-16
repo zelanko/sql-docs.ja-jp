@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb3f0a99cea35b02b7aa6dce724c279ff729474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759700"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697331"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  複合代入演算子は、変数や、UPDATE、SELECT、および RECEIVE ステートメントの SET など、演算子の右側にある式で代入を行う任意の場所で使用できます。  
   
- SELECT ステートメントで、値を連結する目的で (つまり、集計値を計算する目的で) 変数を使用しないでください。 予期しないクエリ結果が生じる可能性があります。 (代入を含め) SELECT リスト内のすべての式は、出力行ごとに 1 回のみ実行されると保証されていないことが原因です。 詳細については、[サポート技術情報の資料](http://support.microsoft.com/kb/287515)を参照してください。  
+ SELECT ステートメントで、値を連結する目的で (つまり、集計値を計算する目的で) 変数を使用しないでください。 予期しないクエリ結果が生じる可能性があります。 (代入を含め) SELECT リスト内のすべての式は、出力行ごとに 1 回のみ実行されると保証されていないことが原因です。 詳細については、[サポート技術情報の資料](https://support.microsoft.com/kb/287515)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。 すべてのユーザーは、SET **@***local_variable* を使用できます。  

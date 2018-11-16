@@ -21,12 +21,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b05729795395111a1ab887c9da992f1c460536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651580"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638789"
 ---
 # <a name="identifiers-ssis"></a>識別子 (SSIS)
   識別子とは、式の内部で演算に使用できる列および変数のことです。 式では、標準識別子と修飾された識別子を使用できます。  
@@ -102,7 +102,7 @@ ms.locfileid: "47651580"
 ## <a name="unique-variable-names"></a>一意の変数名  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではカスタム変数がサポートされ、さらにシステム変数のセットが用意されています。 既定では、カスタム変数は **User** 名前空間に属し、システム変数は **System** 名前空間に属します。 カスタム変数用に別の名前空間を作成し、名前空間の名前をアプリケーションのニーズに合わせて更新できます。 式ビルダーでは、すべての名前空間にあるスコープ内の変数が一覧表示されます。  
   
- すべての変数はスコープを持ち、名前空間に属します。 変数は、パッケージ スコープまたは、パッケージ内のコンテナーあるいはタスクのスコープを持ちます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの式ビルダーでは、スコープ内の変数のみが一覧表示されます。 詳細については、「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」および「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
+ すべての変数はスコープを持ち、名前空間に属します。 変数は、パッケージ スコープまたは、パッケージ内のコンテナーあるいはタスクのスコープを持ちます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの式ビルダーでは、スコープ内の変数のみが一覧表示されます。 詳細については、「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」および「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
   
  式で使用される変数名は、式エバリュエーターが式を正しく評価できるよう、一意である必要があります。 パッケージで複数の変数を同じ名前で使用する場合、その変数は、それぞれ別の名前空間に属する必要があります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、2 つのコロン (::) から成る、名前空間を解決する演算子が用意され、変数は名前空間で修飾されます。 たとえば、次の式では、 **Count**という名前の 2 つの変数が使用されています。変数の 1 つは **User** 名前空間、もう 1 つの変数は **MyNamespace** 名前空間に属します。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47651580"
 ```  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://go.microsoft.com/fwlink/?LinkId=746575)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=746575)」  
   
   

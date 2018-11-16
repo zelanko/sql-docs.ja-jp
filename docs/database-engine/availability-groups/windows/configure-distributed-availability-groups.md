@@ -10,12 +10,12 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcb60c8c249f0b1f1a789b25134bfbcc2419210a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694501"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603998"
 ---
 # <a name="configure-distributed-availability-group"></a>分散型可用性グループを構成する  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** で、各可用性グループのリスナーと、可用性グループのデータベース ミラーリング エンドポイントを指定します。 この例では、ポート `5022` です (リスナーの作成に使用したポート `60173` ではありません)。 Azure でインスタンスにロード バランサーを使用している場合、[分散型可用性グループのポートの負荷分散の規則を追加します](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 SQL Server インスタンスのポートだけでなく、リスナー ポートの規則を追加します。 
+>  **LISTENER_URL** で、各可用性グループのリスナーと、可用性グループのデータベース ミラーリング エンドポイントを指定します。 この例では、ポート `5022` です (リスナーの作成に使用したポート `60173` ではありません)。 Azure でインスタンスにロード バランサーを使用している場合、[分散型可用性グループのポートの負荷分散の規則を追加します](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 SQL Server インスタンスのポートだけでなく、リスナー ポートの規則を追加します。 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>2 つ目のクラスターの分散型可用性グループに参加する  
  次に、2 つ目の WSFC の分散型可用性グループに参加します。  

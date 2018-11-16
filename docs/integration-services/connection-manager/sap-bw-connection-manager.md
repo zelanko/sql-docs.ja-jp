@@ -13,12 +13,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e3a1130deb49ef1caf0edfb04b92cfeed93146d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d891d0e4168274d796ca96227802a76c50bf0942
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675910"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641989"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 接続マネージャー
   SAP BW 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の接続マネージャー コンポーネントです。 したがって、SAP BW 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元と変換先コンポーネントが必要とする SAP Netweaver BW version 7 システムへの接続を提供します ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW パッケージの一部の SAP BW 変換元と変換先は、SAP BW 接続マネージャーを使用する唯一の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントです)。  
@@ -46,7 +46,7 @@ ms.locfileid: "47675910"
   
  接続マネージャーを構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
- SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](http://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
+ SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>SSIS デザイナーを使用してソースを構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる、SAP BW マネージャーのプロパティの詳細については、次のトピックを参照してください。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb46770565c85b148028084026bb9d2f26a91afc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: da90014c17b0540a8bee4e691835361068227565
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030293"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814155"
 ---
 # <a name="run-a-reporting-services-script-file"></a>Reporting Services スクリプト ファイルを実行する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スクリプト ファイルは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スクリプト環境 (RS.exe) を使用してコマンド プロンプトから実行します。 RS.exe には、ユーザーが使用できるコマンド プロンプト引数が多数用意されています。 コマンド プロンプト オプションの詳細については、「[RS.exe ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)」を参照してください。 他のスクリプトのサンプルについては、「 [SQL Server Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=177889)」を参照してください。  
@@ -25,31 +25,31 @@ ms.locfileid: "50030293"
 -   スクリプト環境で Script.rss を次のように実行すると、ターゲット レポート サーバーが指定されます。 既定では、Windows 認証が適用されます。  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver  
+    rs –i Script.rss -s https://servername/reportserver  
     ```  
   
 -   スクリプト環境で Script.rss を次のように実行すると、Web サービスの呼び出しを認証するためのユーザー名とパスワードが指定されます。  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -u myusername -p mypassword  
+    rs –i Script.rss -s https://servername/reportserver -u myusername -p mypassword  
     ```  
   
 -   スクリプト環境で Script.rss を次のように実行すると、30 秒のサーバー タイムアウトが指定されます。  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -l 30  
+    rs –i Script.rss -s https://servername/reportserver -l 30  
     ```  
   
 -   スクリプト環境で Script.rss を次のように実行すると、 *report*と呼ばれるグローバル スクリプト変数が指定されます。  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -v report="Company Sales"  
+    rs –i Script.rss -s https://servername/reportserver -v report="Company Sales"  
     ```  
   
 -   スクリプト環境で Script.rss を次のように実行すると、スクリプト ファイルの Web サービス操作がバッチとして実行するように指定されます。  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -b  
+    rs –i Script.rss -s https://servername/reportserver -b  
     ```  
   
 ## <a name="see-also"></a>参照  

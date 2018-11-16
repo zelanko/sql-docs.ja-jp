@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f809f65be52e77e84e1391df0151cc183013624
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d6fa7cf4e323004789dabb098df400f1ae6dce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656510"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663802"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "47656510"
 状況によっては、単にプロセスを終了する必要があります。このような場合、 [KILL](../../t-sql/language-elements/kill-transact-sql.md) ステートメントを使用することがあります。 ただし、強制終了したくない重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、「 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)」を参照してください。
 
 ## <a name="see-also"></a>参照  
-[サポート技術情報の記事 - SQL Server を実行しているコンピューターでトランザクション ログのサイズが予期せず増大する、または、ログがいっぱいになる](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[サポート技術情報の記事 - SQL Server を実行しているコンピューターでトランザクション ログのサイズが予期せず増大する、または、ログがいっぱいになる](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

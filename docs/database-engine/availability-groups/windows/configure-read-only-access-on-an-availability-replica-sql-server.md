@@ -16,12 +16,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbd356ed065de775c6dfb9c156c7ffce748c43b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0225c5cf3e2b8109ac9d85e00133e9a1b8b79367
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794220"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602572"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>可用性レプリカでの読み取り専用アクセスの構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47794220"
   
 -   [関連コンテンツ](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件と制限  
   
@@ -227,25 +227,25 @@ DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [AlwaysOn: 読み取り可能なセカンダリの価格提案](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn: 読み取り可能なセカンダリの価格提案](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-value-proposition-of-readable-secondary.aspx)  
   
--   [AlwaysOn: 読み取りワークロードのセカンダリ レプリカを有効にするオプションが 2 つ存在する理由](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn: 読み取りワークロードのセカンダリ レプリカを有効にするオプションが 2 つ存在する理由](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリ レプリカのセットアップ](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn: 読み取り可能なセカンダリ レプリカのセットアップ](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリを有効にしたばかりだが、クエリがブロックされる](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn: 読み取り可能なセカンダリを有効にしたばかりだが、クエリがブロックされる](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリ、読み取り専用のデータベース、データベースのスナップショットで最新の統計情報を取得できるようにする](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn: 読み取り可能なセカンダリ、読み取り専用のデータベース、データベースのスナップショットで最新の統計情報を取得できるようにする](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [AlwaysOn: 読み取り専用のデータベース、データベースのスナップショット、セカンダリ レプリカでの統計に関する課題](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn: 読み取り専用のデータベース、データベースのスナップショット、セカンダリ レプリカでの統計に関する課題](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn: セカンダリ レプリカでレポート ワークロードを実行した場合にプライマリ ワークロードに及ぼす影響](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn: セカンダリ レプリカでレポート ワークロードを実行した場合にプライマリ ワークロードに及ぼす影響](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリのレポート ワークロードをスナップショット分離にマップした場合の影響](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn: 読み取り可能なセカンダリのレポート ワークロードをスナップショット分離にマップした場合の影響](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
--   [AlwaysOn: セカンダリ レプリカでレポート ワークロードを実行する場合に再実行スレッドのブロッキングを最小限に抑える](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn: セカンダリ レプリカでレポート ワークロードを実行する場合に再実行スレッドのブロッキングを最小限に抑える](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリとデータ待機時間](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx)  
+-   [AlwaysOn: 読み取り可能なセカンダリとデータ待機時間](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

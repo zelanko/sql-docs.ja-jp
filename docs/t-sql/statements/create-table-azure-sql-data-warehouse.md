@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120429"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703820"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="DataTypes"></a> データ型
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、最も一般的に使用されるデータ型をサポートしています。 以下に、サポートされるデータ型を一覧し、その詳細説明および格納バイトを示します。 データ型とその使用方法をよく理解するには、「[SQL Data Warehouse でのテーブルのデータ型の定義に関するガイダンス](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)」を参照してください。
 
-データ型変換のテーブルについては、「[CAST および CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/)」の「暗黙的な変換」セクションを参照してください。
+データ型変換のテーブルについては、「[CAST および CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/)」の「暗黙的な変換」セクションを参照してください。
 
 `datetimeoffset` [ ( *n* ) ]  
  *n* の既定値は 7 です。  
@@ -291,7 +291,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  
 各ディストリビューションには、すべてのテーブル パーティションが含まれます。 たとえば、60 のディストリビューションと 4 つのテーブル パーティションがある場合は、320 のパーティションが存在することになります。 テーブルがクラスター化列ストア インデックスである場合、パーティションごとに列ストア インデックスが 1 つ存在することになります。つまり、列ストア インデックスの数は 320 になります。
 
-列ストア インデックスの利点を活用する上で十分な行が各列ストア インデックスに含まれるようにするために、使用するテーブル パーティションの数を少なくすることをお勧めします。 詳細については、「[SQL Data Warehouse でのテーブルのパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)」および [SQL Data Warehouse でのテーブルのインデックス作成](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)に関するページを参照してください。  
+列ストア インデックスの利点を活用する上で十分な行が各列ストア インデックスに含まれるようにするために、使用するテーブル パーティションの数を少なくすることをお勧めします。 詳細については、「[SQL Data Warehouse でのテーブルのパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)」および [SQL Data Warehouse でのテーブルのインデックス作成](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)に関するページを参照してください。  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>行ストア テーブル (ヒープまたはクラスター化インデックス)  
@@ -304,7 +304,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 詳細については、次の記事を参照してください。
 - [列ストア インデックスのバージョン管理機能の概要](https://msdn.microsoft.com/library/dn934994/)
-- [SQL Data Warehouse でのテーブルのインデックス作成](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
+- [SQL Data Warehouse でのテーブルのインデックス作成](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  

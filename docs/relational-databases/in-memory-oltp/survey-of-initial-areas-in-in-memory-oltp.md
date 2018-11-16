@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596130"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657611"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>インメモリ OLTP での初期領域の調査
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
   
   
 > [!NOTE]
-> 「 [Azure SQL Database - In-Memory Technologies](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)」 (Azure SQL Database - インメモリ テクノロジ) では、インメモリ機能に関する 2 分間のビデオをご覧いただけます。 ビデオの制作日は 2015 年 12 月です。  
+> 「 [Azure SQL Database - In-Memory Technologies](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)」 (Azure SQL Database - インメモリ テクノロジ) では、インメモリ機能に関する 2 分間のビデオをご覧いただけます。 ビデオの制作日は 2015 年 12 月です。  
 
 
 ### <a name="columnstore"></a>列ストア
@@ -463,7 +463,7 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
 ネイティブ UDF のパフォーマンスに関するテスト データと説明については、以下を参照してください。  
   
   - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - 2016 年 1 月、Gail Shaw 氏によるブログ投稿「[Natively Compiled User Defined Functions](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)」 (ネイティブ コンパイル ユーザー定義関数)。  
+  - 2016 年 1 月、Gail Shaw 氏によるブログ投稿「[Natively Compiled User Defined Functions](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)」 (ネイティブ コンパイル ユーザー定義関数)。  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
@@ -475,7 +475,7 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
   - [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - SQL Server Management Studio のトランザクション パフォーマンス分析レポートは、インメモリ OLTP によってデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。  
   - [メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) を使用すると、ディスク ベース データベース テーブルをインメモリ OLTP に簡単に移行できます。   
-- [メモリ最適化テーブルのバックアップ、復元、復旧](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [メモリ最適化テーブルのバックアップ、復元、復旧](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - メモリ最適化テーブルで使用されるストレージはメモリ内にあるときのサイズを大きく上回ることがあり、データベースのバックアップのサイズに影響します。  
 - [メモリ最適化テーブルでのトランザクション](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - メモリ最適化テーブルでのトランザクションに関する、T-SQL の再試行ロジックの情報が含まれます。  

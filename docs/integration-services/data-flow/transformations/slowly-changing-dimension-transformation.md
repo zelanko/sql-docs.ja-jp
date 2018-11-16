@@ -18,12 +18,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcf04dc0eb2209afcd9dfc180d59e6452e5b52d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d334d7aac70cdbadef5bdeede6d9f3a53c74caa7
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820070"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638329"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
   緩やかに変化するディメンション変換は、データ ウェアハウスのディメンション テーブル内にある、レコードの更新および挿入を調整します。 たとえば、この変換を使用すると、AdventureWorks OLTP データベースの Production.Products テーブルにあるデータを使って [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] データベースの DimProduct テーブルに挿入や更新を行う変換出力を構成できます。  
@@ -90,7 +90,7 @@ ms.locfileid: "47820070"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -108,6 +108,6 @@ ms.locfileid: "47820070"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   blogs.msdn.com のブログ「 [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481)(緩やかに変化するディメンション ウィザードの最適化)」  
+-   blogs.msdn.com のブログ「 [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481)(緩やかに変化するディメンション ウィザードの最適化)」  
   
   

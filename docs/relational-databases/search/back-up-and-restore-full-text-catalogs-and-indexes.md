@@ -18,12 +18,12 @@ ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4184e0fb090aba2758f3b0e0e19fcc9b3b94e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cafc3297727c53ba6134f74f0cb5291b4e14baea
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701290"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675551"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47701290"
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で作成されたフルテキスト インデックスのバックアップと復元を行う方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、フルテキスト カタログは論理的概念であり、ファイル グループ内には存在しません。 そのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でフルテキスト カタログをバックアップするには、カタログに属しているフルテキスト インデックスが含まれるファイル グループをすべて特定する必要があります。 そのうえで、これらのファイルのグループを 1 つずつバックアップする必要があります。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースをアップグレードする場合は、フルテキスト カタログをインポートすることができます。 インポートした各フルテキスト カタログは、自身のファイル グループのデータベース ファイルです。 インポートされたカタログをバックアップするには、単にそのファイル グループをバックアップします。 詳細については、 [オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkID=121052)フルテキスト カタログのバックアップと復元 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 」を参照してください。  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースをアップグレードする場合は、フルテキスト カタログをインポートすることができます。 インポートした各フルテキスト カタログは、自身のファイル グループのデータベース ファイルです。 インポートされたカタログをバックアップするには、単にそのファイル グループをバックアップします。 詳細については、 [オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkID=121052)フルテキスト カタログのバックアップと復元 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 」を参照してください。  
   
 ##  <a name="backingup"></a> フルテキスト カタログのフルテキスト インデックスのバックアップ  
   

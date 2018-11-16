@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6adbbc3107b21c6bb86d12d249c5fa1f5b01272f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e679b6c4a7b61e136ba1dcb864ab5bb6a05beb0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028491"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813635"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase の接続の種類 (SSRS)
   [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースのデータをレポートに含めるには、種類が [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]のデータ拡張機能に基づいています。この拡張機能を使用すると、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースから多次元データを取得できます。  
@@ -24,7 +24,7 @@ ms.locfileid: "50028491"
  次の接続文字列例では、13080 番ポートを使用してサーバー上の [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ ソースを指定し、SOAP を使用してインターネット経由の XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) を指定して、Sample カタログに接続しています。  
   
 ```  
-Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
+Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
  接続文字列の例の詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  

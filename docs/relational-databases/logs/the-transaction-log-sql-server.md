@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664691"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677301"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47664691"
 各ログ バックアップを復元するときに、ログに記録されている変更がデータベース エンジンにより再適用されて、すべてのトランザクションがロールフォワードされます。 最後のログ バックアップまで復元されると、データベース エンジンはログ情報を使用して、障害の時点では完了していなかったすべてのトランザクションをロールバックします。 
 
 ### <a name="supporting-transactional-replication"></a>トランザクション レプリケーションのサポート
-ログ リーダー エージェントは、トランザクション レプリケーション用に構成された各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 詳しくは、「 [トランザクション レプリケーションの動作方法](http://msdn.microsoft.com/library/ms151706.aspx)」をご覧ください。
+ログ リーダー エージェントは、トランザクション レプリケーション用に構成された各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 詳しくは、「 [トランザクション レプリケーションの動作方法](https://msdn.microsoft.com/library/ms151706.aspx)」をご覧ください。
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>高可用性とディザスター リカバリー ソリューションのサポート
 スタンバイ サーバー ソリューション、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、データベース ミラーリング、およびログ配布は、トランザクション ログに大きく依存しています。 

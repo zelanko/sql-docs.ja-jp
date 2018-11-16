@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a004b0d12d6a34b613c710f2018b9151b38f5d84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612861"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814105"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -177,7 +177,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
 * [共有データセット デザイン ビュー &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [系列へのツールヒントの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [チュートリアル: Power BI でのツリー マップ](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [ツリー マップ: Microsoft Research Data Visualization Apps for Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+* [ツリー マップ: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

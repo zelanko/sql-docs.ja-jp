@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0e6be5445533c6d86f5ae7b000bc1b9e7226abc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764840"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701064"
 ---
 # <a name="installation-wizard-help"></a>インストール ウィザードのヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47764840"
 -   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] をインストールするアプリケーションでは、名前付きインスタンスとしてインストールする必要があります。 これにより、複数のアプリケーションが同じコンピューターにインストールされた場合に競合が発生する可能性が軽減されます。  
   
  **[既定のインスタンス]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールするには、このオプションを選択します。 1 台のコンピューターでホストできる既定のインスタンスは 1 つだけです。その他すべては名前付きインスタンスにする必要があります。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールしている場合は、その同じコンピューターに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスを追加できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールするには、このオプションを選択します。 1 台のコンピューターでホストできる既定のインスタンスは 1 つだけです。その他すべては名前付きインスタンスにする必要があります。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールしている場合は、その同じコンピューターに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスを追加できます。  
   
  **[名前付きインスタンス]**  
  新しい名前付きインスタンスを作成するには、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに名前を付ける際は、次の点に注意してください。  
@@ -121,7 +121,7 @@ ms.locfileid: "47764840"
  **[管理者の指定]** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバー管理者を少なくとも 1 人指定する必要があります。 指定したユーザーまたはグループは、インストールする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー管理者ロールのメンバーになります。 これらは、ソフトウェアをインストールするコンピューターと同じドメインの Windows ドメイン ユーザー アカウントである必要があります。  
   
 > [!NOTE]  
->  ユーザー アカウント制御 (UAC) は Windows セキュリティ機能であり、管理操作または管理アプリケーションの承認を管理者が実行前に明示的に行う必要があります。 UAC は既定でオンになっているため、高度な特権を必要とする特定の操作について許可するよう求めるメッセージが表示されます。 UAC を構成して既定の動作を変更することも、特定のプログラム用に UAC をカスタマイズすることもできます。 UAC および UAC 構成の詳細については、「[User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350)」(Windows ユーザー アカウント制御手順ガイド) と「[User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351)」(ユーザー アクセス制御) を参照してください。  
+>  ユーザー アカウント制御 (UAC) は Windows セキュリティ機能であり、管理操作または管理アプリケーションの承認を管理者が実行前に明示的に行う必要があります。 UAC は既定でオンになっているため、高度な特権を必要とする特定の操作について許可するよう求めるメッセージが表示されます。 UAC を構成して既定の動作を変更することも、特定のプログラム用に UAC をカスタマイズすることもできます。 UAC および UAC 構成の詳細については、「[User Account Control Step by Step Guide](https://go.microsoft.com/fwlink/?linkid=196350)」(Windows ユーザー アカウント制御手順ガイド) と「[User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351)」(ユーザー アクセス制御) を参照してください。  
   
 ### <a name="see-also"></a>参照  
  [サービス アカウントの構成 &#40;Analysis Services#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Windows サービス アカウントと権限の構成 ](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -250,7 +250,7 @@ ms.locfileid: "47764840"
  ディレクトリ、ファイルの場所、およびインスタンス ID の名前付けの詳細については、「[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。  
   
     
- [ファイル サーバーの共有アクセス許可と NTFS アクセス許可](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [ファイル サーバーの共有アクセス許可と NTFS アクセス許可](https://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>データベース エンジンの構成 - Filestream
   このページを使用すると、このインストールの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に対して FILESTREAM を有効にすることができます。 FILESTREAM は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **BLOB (バイナリ ラージ オブジェクト) データをファイル システム上のファイルとして格納することにより、** と NTFS ファイル システムを統合します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、FILESTREAM データの挿入、更新、クエリ、検索、およびバックアップを行うことができます。 Win32 ファイル システム インターフェイスによるデータへのストリーミング アクセスが可能になります。  
@@ -385,7 +385,7 @@ ms.locfileid: "47764840"
   
 -   **ファイル数** は **tempdb**のデータ ファイルの合計数です。 既定値は 8 とセットアップ時に検出された論理コア数の小さいほうになります。 一般的なルールとして、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用し、競合が続く場合、競合が許容できるレベルに減少するまでデータ ファイルの数を 4 の倍数 (最大で論理プロセッサの数) 分増やすか、ワークロード/コードを変更します。 
   
--   **初回サイズ (MB)** は各 **tempdb** データ ファイルの初回サイズです (MB 単位)。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] の最大初期ファイル サイズは 1024 MB でした。 すべての **tempdb** データ ファイルの初回サイズは同じです。 **tempdb** は SQL Server が起動するか、フェーズするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定する必要があります。 起動時にさらに効率的に **tempdb** を作成するには、[[データベースのファイルの瞬時初期化]](../../relational-databases/databases/database-instant-file-initialization.md) を有効にします。  
+-   **初回サイズ (MB)** は各 **tempdb** データ ファイルの初回サイズです (MB 単位)。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] の最大初期ファイル サイズは 1024 MB でした。 すべての **tempdb** データ ファイルの初回サイズは同じです。 **tempdb** は SQL Server が起動するか、フェーズするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定する必要があります。 起動時にさらに効率的に **tempdb** を作成するには、 [[データベースのファイルの瞬時初期化]](../../relational-databases/databases/database-instant-file-initialization.md)を有効にします。  
   
 -   **合計初回サイズ (MB)** はすべての **tempdb** データ ファイルを合計したものです。  
   
@@ -428,7 +428,7 @@ ms.locfileid: "47764840"
   
 ### <a name="see-also"></a>参照  
  [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [ファイル サーバーの共有アクセス許可と NTFS アクセス許可](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [ファイル サーバーの共有アクセス許可と NTFS アクセス許可](https://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>データベース エンジンの構成 - ユーザー インスタンス
 **[ユーザー インスタンス]** ページを使用して、管理者権限のないユーザー用に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の個別インスタンスを作成し、それらのユーザーを管理者ロールに追加します。  
@@ -445,7 +445,7 @@ ms.locfileid: "47764840"
  [ユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者ロールに追加する]  
  既定値はオフです。 現在のセットアップ ユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者ロールに追加するには、このチェック ボックスをオンにします。  
   
- [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] ユーザーのうち、BUILTIN\Administrators のメンバーは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] への接続時に sysadmin 固定サーバー ロールに自動的に追加されません。 サーバーレベルの管理者ロールに明示的に追加されている [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] ユーザーのみが、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を管理できます。 Built-In\Users グループのすべてのメンバーが [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] インスタンスに接続できますが、データベース タスクの実行権限は制限されます。 このため、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 特権を以前のリリースの Windows の BUILTIN\Administrators および Built-In\Users から継承しているユーザーには、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] で実行している [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]のインスタンスにおいて、管理特権を明示的に付与する必要があります。  
+ BUILTIN\Administrators のメンバーである [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] ユーザーは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] への接続時に sysadmin 固定サーバー ロールに自動的に追加されません。 サーバーレベルの管理者ロールに明示的に追加されている [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] ユーザーのみが、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を管理できます。 Built-In\Users グループのすべてのメンバーが [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] インスタンスに接続できますが、データベース タスクの実行権限は制限されます。 このため、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 特権を以前のリリースの Windows の BUILTIN\Administrators および Built-In\Users から継承しているユーザーには、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] で実行している [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]のインスタンスにおいて、管理特権を明示的に付与する必要があります。  
   
  このインストール プログラムの完了後にユーザー ロールに変更を加えるには、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] セキュリティ構成ツール (SQLSAC.exe) を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者ロールのユーザー一覧を更新するには、 **[新しい管理者の追加]** リンクをクリックします。  
   

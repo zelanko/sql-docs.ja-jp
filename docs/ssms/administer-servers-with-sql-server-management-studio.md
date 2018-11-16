@@ -14,12 +14,12 @@ ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b06376518361b0ab33d227e11a06654bfc3618f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d70f630f5dca16e1140ebe5846d49b14a9a626
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699540"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>SQL Server Management Studio によるサーバー管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47657405"
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のツール コンポーネントとしては、登録済みサーバー、オブジェクト エクスプローラー、ソリューション エクスプローラー、テンプレート エクスプローラー、[オブジェクト エクスプローラーの詳細] ページ、ドキュメント ウィンドウがあります。 ツールを表示するには、 **[表示]** メニューでツール名をクリックします。 クエリ エディター ツールを表示するには、ツール バーの **[新しいクエリ]** ボタンをクリックします。  
   
 > [!IMPORTANT]  
-> 既定では、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] と [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の間のネットワーク通信は暗号化されません。 暗号化接続を確立しない限り、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ではパスワードなどの機密データを処理しないでください。 詳細については、「 [データベース エンジンへの暗号化接続の有効化方法 (SQL Server Configuration Manager)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)」を参照してください。  
+> 既定では、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] と [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の間のネットワーク通信は暗号化されません。 暗号化接続を確立しない限り、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ではパスワードなどの機密データを処理しないでください。 詳細については、「 [データベース エンジンへの暗号化接続の有効化方法 (SQL Server Configuration Manager)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)」を参照してください。  
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] を使用して以下の操作を実行できます。  
   
@@ -62,5 +62,5 @@ ms.locfileid: "47657405"
   
 ## <a name="see-also"></a>参照  
 [SQL Server Management Studio の使用 [SQL Server]](../ssms/use-sql-server-management-studio.md)  
-[サーバーのプロパティを表示する方法 (SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[サーバーのプロパティを表示する方法 (SQL Server Management Studio)](https://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

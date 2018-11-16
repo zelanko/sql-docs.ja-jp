@@ -14,12 +14,12 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8ca7eec16e5f1da380dfd870c7a29295f20716d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c853b9c0896a20ac1f17015cedb2351493319e5b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788270"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696550"
 ---
 # <a name="create-a-domain"></a>ドメインの作成
 
@@ -29,7 +29,7 @@ ms.locfileid: "47788270"
   
  新しいドメインを作成するには、次の 2 つの方法があります。 1 つ目は、ナレッジ検出アクティビティのマップ手順中に、データ サンプルを分析する過程でナレッジを新しいまたは既存のナレッジ ベースに追加するときに行います。 2 つ目は、ドメイン管理アクティビティの実行中に、既存のドメインを変更するのではなく、新しいドメインを作成するときに行います。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ドメインを作成するには、ナレッジ ベースを作成して開いておく必要があります。  
@@ -92,7 +92,7 @@ ms.locfileid: "47788270"
   
 9. **[OK]** をクリックします。  
   
-10. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+10. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="FollowUp"></a> 補足情報: ドメインを作成した後  
  ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  

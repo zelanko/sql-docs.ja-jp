@@ -10,12 +10,12 @@ ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d25f54c29937ba4289308e07bb2013a4c671dbbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e199f1f548ae8a978cd13ad3ba99db8c1182c96
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767890"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606952"
 ---
 # <a name="always-on-availability-groups-policies"></a>Always On 可用性グループのポリシー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,6 +33,6 @@ ms.locfileid: "47767890"
 3.  すべての可用性グループのシステム ポリシーを表示するには、**[ページの選択]** ウィンドウで **[ポリシーの選択]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+ [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
   

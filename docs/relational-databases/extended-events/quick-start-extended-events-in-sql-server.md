@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9636e10649dc9a8b297e2397e07fbc4629f2cdf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673730"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658351"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>クイック スタート: SQL Server 拡張イベント
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47673730"
 
 
 > [!NOTE]
-> Microsoft SQL Server と Azure SQL Database の拡張イベントの違いに関する詳細は、「 [SQL データベースの拡張イベント](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)」を参照してください。
+> Microsoft SQL Server と Azure SQL Database の拡張イベントの違いに関する詳細は、「 [SQL データベースの拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)」を参照してください。
 
 
 ## <a name="preparations-before-demo"></a>デモの準備
@@ -56,7 +56,7 @@ ms.locfileid: "47673730"
 
 次のデモを実際に行うには、以下の準備作業が必要になります。
 
-1. [SQL Server Management Studio (SSMS) のダウンロード](http://msdn.microsoft.com/library/mt238290.aspx)
+1. [SQL Server Management Studio (SSMS) のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)
   - 毎月更新される最新の SSMS を毎月インストールする必要があります。
 2. Microsoft SQL Server 2014 以降にログインするか、 `SELECT @@version` が返す値の最初のノードが 12 以上の Azure SQL Database のデータベースにログインします。
 3. 自身のアカウントに [ALTER ANY EVENT SESSION](../../t-sql/statements/grant-server-permissions-transact-sql.md) の **サーバー アクセス許可**があることを確認します。
@@ -191,7 +191,7 @@ GO
 > [!NOTE]
 > Azure SQL Database の場合、上記の CREATE EVENT SESSION ステートメントの ON SERVER 句は ON DATABASE になります。
 > 
-> Microsoft SQL Server と Azure SQL Database の拡張イベントの違いに関する詳細は、「 [SQL データベースの拡張イベント](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)」を参照してください。
+> Microsoft SQL Server と Azure SQL Database の拡張イベントの違いに関する詳細は、「 [SQL データベースの拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)」を参照してください。
 
 
 #### <a name="pre-drop-of-the-event-session"></a>イベント セッションの事前 DROP
@@ -415,7 +415,7 @@ SSMS **オブジェクト エクスプローラー**で、イベント セッシ
 - [ロックの大半を取得しているオブジェクトを見つける](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - このシナリオでは、生のイベント データを表示する前に処理するターゲット package0.histogram を使用します。
 - [ロックを保持しているクエリの特定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - このシナリオは、sqlserver.lock_acquire と lock_release がイベントのペアとなる、 [ターゲット package0.pair_matching](http://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)を使用します。
+  - このシナリオは、sqlserver.lock_acquire と lock_release がイベントのペアとなる、 [ターゲット package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)を使用します。
 
 
 ## <a name="terms-and-concepts-in-extended-events"></a>拡張イベントの用語と概念
@@ -647,9 +647,9 @@ SELECT HAS_PERMS_BY_NAME(
 - 組み込み関数 [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)の詳細
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT (サーバーの権限の許可) (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
-- 特に Azure SQL Database の場合、 [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
-- ブログ: [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)(効果的なデータベース エンジンのアクセス許可)
+- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- 特に Azure SQL Database の場合、 [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)
+- ブログ: [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)(効果的なデータベース エンジンのアクセス許可)
 - すべての SQL Server 権限の階層を表示した、ズーム可能な [ポスター](https://aka.ms/sql-permissions-poster)(PDF)
 
 

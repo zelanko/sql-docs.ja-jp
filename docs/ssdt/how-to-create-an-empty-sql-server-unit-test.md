@@ -13,12 +13,12 @@ ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfb567a0e970cdc6f2a1e4b56fd39d39405a84c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627592"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681240"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>空の SQL Server の単体テストを作成する方法
 データベース オブジェクトに単体テストを含めることで、データベース オブジェクトに加えた変更によって既存の機能が使用できなくなっていないかどうかを検証できます。 次に、任意のデータベース オブジェクト用に SQL Server 単体テストを作成する手順について説明します。 SQL Server Data Tools には、データベース関数、トリガー、およびストアド プロシージャの追加のサポートも含まれています。 詳しくは、「[関数、トリガー、およびストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)」をご覧ください。  
@@ -96,10 +96,10 @@ SQL Server の単体テストを作成するには、次の 2 つの方法があ
 -   スクリプトの結果を確認するためのテスト条件またはその他のアサート ステートメントを追加します。  
   
 > [!NOTE]  
-> 結果不確定のテスト条件は、すべてのテストに追加される既定の条件です。 このテスト条件は、テストの検証が実装されていないことを示すために含まれています。 このテスト条件は、他のテスト条件を追加した後に、テストから削除します。 詳しくは、「[方法: データベース単体テストにテスト条件を追加する](http://msdn.microsoft.com/library/aa833242(VS.100).aspx)」をご覧ください。  
+> 結果不確定のテスト条件は、すべてのテストに追加される既定の条件です。 このテスト条件は、テストの検証が実装されていないことを示すために含まれています。 このテスト条件は、他のテスト条件を追加した後に、テストから削除します。 詳しくは、「[方法: データベース単体テストにテスト条件を追加する](https://msdn.microsoft.com/library/aa833242(VS.100).aspx)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server 単体テストを実行する方法](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[単体テストの作成](http://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
+[単体テストの作成](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

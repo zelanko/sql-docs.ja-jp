@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737740"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814145"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  のページ分割されたレポートでテキスト ボックス、画像、グラフ、ゲージにハイパーリンク アクションを追加する方法について説明します。 リンクで他のレポート、レポート内のブックマーク、静的または動的な URL に移動できます。 
@@ -73,9 +73,9 @@ ms.locfileid: "47737740"
   
 4.  **[Select URL]** ボックスで、URL または URL に評価される式を入力または選択するか、下矢印をクリックして URL が格納されているフィールドの名前をクリックします。 
 
-    ネイティブ モード用に構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、 `http://<servername>/images/image1.jpg`のようにします。 
+    ネイティブ モード用に構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、 `https://<servername>/images/image1.jpg`のようにします。 
     
-    SharePoint 統合モードで構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全修飾 URL を指定します。 たとえば、 `http://<SharePointservername>/<site>/Documents/images/image1.jpg`のようにします。
+    SharePoint 統合モードで構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全修飾 URL を指定します。 たとえば、 `https://<SharePointservername>/<site>/Documents/images/image1.jpg`のようにします。
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

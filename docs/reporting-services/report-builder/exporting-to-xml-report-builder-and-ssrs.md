@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c57b9ae4cdf3a8cd34e6fc256f36619ccbb3d2c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3cf0f16e4f1a5e831442bf143cd11b45ab2d319f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761460"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813475"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、改ページ調整されたレポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  
@@ -76,7 +76,7 @@ ms.locfileid: "47761460"
   
  レポート要素には、XML 名前空間の定義とスキーマ参照属性も含まれます。 以下の例では、変数が太字で示されています。  
   
- <**Report** xmlns="**SchemaName**" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  それぞれの変数の値は次のとおりです。  
   

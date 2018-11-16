@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 23938f5885fd207aed8143686f7b762d81fc8130
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020346"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813895"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -429,7 +429,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
             <VirtualDirectory>ReportServer</VirtualDirectory>
             <URLs>
                 <URL>
-                    <UrlString>http://+:80</UrlString>
+                    <UrlString>https://+:80</UrlString>
                     <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
                     <AccountName>NT SERVICE\ReportServer</AccountName>
                 </URL>
@@ -440,7 +440,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
             <VirtualDirectory>Reports</VirtualDirectory>
             <URLs>
                 <URL>
-                    <UrlString>http://+:80</UrlString>
+                    <UrlString>https://+:80</UrlString>
                     <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
                     <AccountName>NT SERVICE\ReportServer</AccountName>
                 </URL>
@@ -770,7 +770,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>ReportServer</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  
@@ -783,7 +783,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>Reports</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  

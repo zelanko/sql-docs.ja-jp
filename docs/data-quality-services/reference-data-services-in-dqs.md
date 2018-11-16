@@ -12,12 +12,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22d878ef603b384ff03ece82350ce3b9bea12117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75492ffdd6246050c086deea74975921a19156b4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730296"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702220"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS の参照データ サービス
 
@@ -36,11 +36,11 @@ ms.locfileid: "47730296"
 -   Windows Azure Marketplace から、またはサード パーティ参照データ プロバイダーから直接、参照データを使用することができます。  
   
 ##  <a name="Marketplace"></a> Windows Azure Marketplace から参照データを使用する  
- DQS では、Windows Azure Marketplace の参照データを使用して、Marketplace を通じたコンテンツ プロバイダーからの参照データ サービスの提供を有効化することができます。 Marketplace は、高品質データおよびアプリケーションの単一のマーケットプレイスと配信チャネルをクラウド サービスとして提供するマイクロソフトのサービスです。 Marketplace の詳細については、「[Windows Azure Marketplace について](http://go.microsoft.com/fwlink/?LinkId=211291)」(http://go.microsoft.com/fwlink/?LinkId=211291)) を参照してください。  
+ DQS では、Windows Azure Marketplace の参照データを使用して、Marketplace を通じたコンテンツ プロバイダーからの参照データ サービスの提供を有効化することができます。 Marketplace は、高品質データおよびアプリケーションの単一のマーケットプレイスと配信チャネルをクラウド サービスとして提供するマイクロソフトのサービスです。 Marketplace の詳細については、「[Windows Azure Marketplace について](https://go.microsoft.com/fwlink/?LinkId=211291)」(https://go.microsoft.com/fwlink/?LinkId=211291)) を参照してください。  
   
  Marketplace と DQS のシームレスな統合により、DQS 内からのデータ品質プロジェクトに関する情報の検出、検索、および取得に関連付けられている手順が簡素化されます。 このデータは DQS から使用され、DQS ユーザーはこのデータを使用して DQS、Marketplace、および参照データ サービス プロバイダーを革新的な方法で 1 つにまとめて、データの品質を高めることができます。  
   
- DQS でクレンジング アクティビティに Marketplace の参照データを使用するには、Marketplace アカウント キーが必要です。 Marketplace アカウント キーの作成は無料です。有料のデータセットをサブスクライブする場合にのみ料金がかかります。 無料のデータセットのサブスクライブと使用には料金はかかりません。 Marketplace のアカウント キーの作成方法の詳細については、[アカウントの作成](http://go.microsoft.com/fwlink/?LinkId=212936)に関するページ (http://go.microsoft.com/fwlink/?LinkId=212936)) を参照してください。  
+ DQS でクレンジング アクティビティに Marketplace の参照データを使用するには、Marketplace アカウント キーが必要です。 Marketplace アカウント キーの作成は無料です。有料のデータセットをサブスクライブする場合にのみ料金がかかります。 無料のデータセットのサブスクライブと使用には料金はかかりません。 Marketplace のアカウント キーの作成方法の詳細については、[アカウントの作成](https://go.microsoft.com/fwlink/?LinkId=212936)に関するページ (https://go.microsoft.com/fwlink/?LinkId=212936)) を参照してください。  
   
  また、DQS 内から次の Marketplace アクティビティを実行できます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47730296"
   
 1.  **DQS で参照データ プロバイダーの詳細を構成する**: DQS で参照データを使用する前に、DQS で参照データ サービスの詳細を構成する必要があります。  
   
-    1.  Marketplace を使用している場合は、有効な Marketplace アカウント キーを指定し、Marketplace で [Data Quality Services](http://go.microsoft.com/fwlink/?LinkId=227587) データ カテゴリを参照して、必要なプロバイダーをサブスクライブします。  
+    1.  Marketplace を使用している場合は、有効な Marketplace アカウント キーを指定し、Marketplace で [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) データ カテゴリを参照して、必要なプロバイダーをサブスクライブします。  
   
     2.  ダイレクト オンライン参照データ プロバイダーを使用する場合は、ダイレクト参照データ プロバイダーを DQS に追加してから使用する必要があります。  
   

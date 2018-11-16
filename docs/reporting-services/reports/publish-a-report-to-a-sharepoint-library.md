@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e363e401bfa37afa31216edcb7817021415779e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b482f472d682a8cc1b78e106e1d9d1c289d9fbb4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595545"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814285"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint ライブラリへのレポートのパブリッシュ
   SharePoint 統合用に構成されている SharePoint サイトにレポートをパブリッシュするには、レポート デザイナーでレポート プロジェクトのプロパティを設定する必要があります。 プロジェクトのプロパティでは、サーバー、レポート、および共有データ ソースへの参照はすべて、完全修飾 URL で指定する必要があります。 レポート定義では、サブレポートや詳細レポートへの参照、および Web ベースの画像などのリソースへの参照はすべて完全修飾 URL で指定する必要があります。  
@@ -34,13 +34,13 @@ ms.locfileid: "47595545"
   
 4.  プロジェクトの共有データ ソースをパブリッシュし、以前にパブリッシュされた共有データ ソースを上書きするには、 **[OverwriteDataSources]** を **[True]** に設定します。  
   
-5.  (省略可) **[TargetDataSourceFolder]** には、SharePoint ライブラリまたはライブラリ フォルダーの URL ( `http://TestServer/TestSite/Documents/DataSources`) として表示されます。  
+5.  (省略可) **[TargetDataSourceFolder]** には、SharePoint ライブラリまたはライブラリ フォルダーの URL ( `https://TestServer/TestSite/Documents/DataSources`) として表示されます。  
   
      値を指定しない場合は、 **[TargetReportFolder]** の値が使用されます。  
   
-6.  **[TargetReportFolder]** に、ライブラリまたはライブラリ フォルダーの URL (`http://TestServer/TestSite/Documents/Reports` など) を入力します。  
+6.  **[TargetReportFolder]** に、ライブラリまたはライブラリ フォルダーの URL (`https://TestServer/TestSite/Documents/Reports` など) を入力します。  
   
-7.  **[TargetServerURL]** に、SharePoint トップレベル サイトまたはサブサイトの URL を入力します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます (たとえば、 `http://servername`、 `http://servername/site`、 `http://servername/site/subsite`) として表示されます。  
+7.  **[TargetServerURL]** に、SharePoint トップレベル サイトまたはサブサイトの URL を入力します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます (たとえば、 `https://servername`、 `https://servername/site`、 `https://servername/site/subsite`) として表示されます。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -48,9 +48,9 @@ ms.locfileid: "47595545"
   
 ## <a name="see-also"></a>参照  
  [[プロパティ ページ] ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+ [配置プロパティを設定する &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [レポート サーバーへのレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

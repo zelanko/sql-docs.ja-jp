@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252159"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703670"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 BACKUP コマンドで作成した SQL Database のバックアップを復元します。 
@@ -365,7 +365,7 @@ WITH RESTRICTED_USER オプションを使用すると、ユーザー アクセ�
 RESTORE ステートメントでは、フルテキスト データに対し、代替位置への復元、差分復元、ファイルとファイル グループの復元、ファイルとファイル グループの差分復元を行うこともできます。 また、RESTORE ではデータベース データと同様にフルテキスト ファイルだけを復元することもできます。  
   
 > [!NOTE] 
-> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からインポートされたフルテキスト カタログもデータベース ファイルとして扱われます。 これらの場合は、フルテキスト カタログをバックアップするための [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の手順をそのまま適用できますが、バックアップ操作中の一時停止と再開は必要なくなります。 詳細については、「[フルテキスト カタログのバックアップと復元](http://go.microsoft.com/fwlink/?LinkId=107381)」を参照してください。  
+> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からインポートされたフルテキスト カタログもデータベース ファイルとして扱われます。 これらの場合は、フルテキスト カタログをバックアップするための [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の手順をそのまま適用できますが、バックアップ操作中の一時停止と再開は必要なくなります。 詳細については、「[フルテキスト カタログのバックアップと復元](https://go.microsoft.com/fwlink/?LinkId=107381)」を参照してください。  
   
 ## <a name="metadata"></a>メタデータ  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、各サーバー インスタンスのバックアップおよび復元動作を記録する、バックアップおよび復元用の履歴テーブルが用意されています。 復元を実行すると、バックアップ履歴テーブルも変更されます。 これらのテーブルについては、「[バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)」を参照してください。  
@@ -745,7 +745,7 @@ FROM URL
 復元操作で使用される、URL に配置された 1 つ以上のバックアップ デバイスを指定します。 この URL の形式は、Microsoft Azure Storage サービスからバックアップを復元する場合に使用されます。 
 
 > [!IMPORTANT]  
-> URL からの復元時に複数のデバイスから復元するには、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
+> URL からの復元時に複数のデバイスから復元するには、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
   
 *n*  
 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。  

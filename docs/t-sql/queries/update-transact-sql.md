@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2730d1bfc6418a9cc92dd8bea2e87541c6665e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5118700c017167664b0e33867f43ec6dbd46813d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776970"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704060"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +367,7 @@ GO
     ```  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ミューテーター メソッドを [!INCLUDE[tsql](../../includes/tsql-md.md)] NULL 値で呼び出した場合や、ミューテーター メソッドにより生成された新しい値が NULL である場合、エラーが返されます。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ミューテーター メソッドが呼び出された場合は、エラーを返す、 [!INCLUDE[tsql](../../includes/tsql-md.md)] null 値またはによって生成された新しい値の場合はミューテーター メソッドは null です。  
   
 -   ユーザー定義型の登録済みプロパティまたはパブリック データ メンバーの値を変更します。 値を指定する式は、プロパティの型に暗黙的に変換できる必要があります。 次の例では、ユーザー定義型 `X` のプロパティ `Point` の値を変更します。  
   
@@ -574,7 +574,7 @@ WHERE d.ComponentLevel = 0;
 ```  
   
 #### <a name="f-using-the-where-current-of-clause"></a>F. WHERE CURRENT OF 句を使用する  
- 次の例では、WHERE CURRENT OF 句を使用して、カーソルが置かれている行だけを更新します。 カーソルが結合に基づくとき、UPDATE ステートメントで指定した `table_name` のみが変更されます。 この場合、カーソルに関連する他のテーブルには影響ありません。  
+ 次の例では、WHERE CURRENT OF 句を使用して、カーソルが置かれている行だけを更新します。 テーブルを結合して作成されたカーソルの場合は、UPDATE ステートメントで指定した `table_name` のみが変更されます。 この場合、カーソルに関連する他のテーブルには影響ありません。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -723,7 +723,7 @@ GO
  このセクションの例では、テーブルの行を別のテーブルの情報に基づいて更新する方法を示します。  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>N. 別のテーブルの情報を使用して UPDATE ステートメントを実行する  
- 次の例では、`SalesOrderHeader` テーブルの最新の売上高を反映するように `SalesPerson` テーブルの `SalesYTD` 列を変更します。  
+ 次の例では、`SalesYTD` テーブルの最新の売上高を反映するように `SalesPerson` テーブルの `SalesOrderHeader` 列を変更します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1219,7 +1219,7 @@ DROP TABLE CTAS_acs
  [カーソル &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   

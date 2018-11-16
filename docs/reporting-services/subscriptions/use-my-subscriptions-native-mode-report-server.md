@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 221908a0d6dd92c589c8121d763981c36a5ea1fe
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: af27d39daf56d1964d897c556118634ae7f0411a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099973"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813055"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>個人用サブスクリプションを使用する (ネイティブ モードのレポート サーバー)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルには、すべてのサブスクリプションを 1 か所で構成する **[個人用サブスクリプション]** ページが含まれています。 *[個人用サブスクリプション]* を使用して、既存のサブスクリプションを表示、変更、有効化、無効化、および削除できます。 ただし、このページは、サブスクリプションの作成には使用できません。  [個人用サブスクリプション] では、自分で作成したサブスクリプションだけが表示されます。 他のユーザーが所有しているサブスクリプションにサブスクライバーとして自分が追加されていても、そのサブスクリプションは一覧表示されません。データ ドリブン サブスクリプションも表示されません。
@@ -42,7 +42,7 @@ ms.locfileid: "50099973"
 ```  
 #server -  all subscriptions of the current user at the given server or site  
 $server="[server name]/reportserver"  
-$rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
   
 $subscriptions=ListMySubscriptions(ItemPathOrSiteURL)  
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status  

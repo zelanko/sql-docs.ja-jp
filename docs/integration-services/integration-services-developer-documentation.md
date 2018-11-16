@@ -19,12 +19,12 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6412da2497f7201016ddfbb4b81397d769de5032
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99eb1ed68d2af04dce3106b2642fcdb068a55ef5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698840"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641595"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services の開発者向けのドキュメント
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  
@@ -83,7 +83,7 @@ ms.locfileid: "47698840"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   www.codeplex.com/MSFTISProdSamples の CodePlex サンプル「[Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkID=131204)」  
+-   www.codeplex.com/MSFTISProdSamples の CodePlex サンプル「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=131204)」  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  

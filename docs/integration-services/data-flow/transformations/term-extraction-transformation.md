@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd42fe5402c9da251464cfedf670478c4b0d6358
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730250"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638949"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  
@@ -177,7 +177,7 @@ ms.locfileid: "47730250"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -197,7 +197,7 @@ ms.locfileid: "47730250"
  抽出されたそれぞれの用語のスコアを格納する出力列の名前を指定します。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+ [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>[用語抽出変換エディター] ([除外] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[除外]** タブを使用すると、除外テーブルへの接続を設定し、除外用語が含まれている列を指定できます。  
@@ -219,7 +219,7 @@ ms.locfileid: "47730250"
  除外用語が含まれているテーブルまたはビューの列を選択します。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+ [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>[用語抽出変換エディター] ([詳細設定] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、頻度、長さ、語または句の抽出の有無など、抽出に関するプロパティを指定できます。  
@@ -250,7 +250,7 @@ ms.locfileid: "47730250"
  抽出で大文字と小文字を区別するかどうかを指定します。 既定値は **False**です。  
   
  **[エラー出力の構成]**  
- [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+ [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)   

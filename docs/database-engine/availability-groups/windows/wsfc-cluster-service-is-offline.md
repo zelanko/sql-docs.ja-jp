@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0785cd58ffed215f9cebf29a62e40c70cc96c720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 594dce3e2a973179d3c056fe6c6ff447bd59c844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850570"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603772"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC クラスター サービスはオフライン
 
@@ -41,7 +41,7 @@ ms.locfileid: "47850570"
  クラスターの状態が標準のクォーラムである場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [WSFC クラスター サービスがオフライン](http://go.microsoft.com/fwlink/p/?LinkId=220849) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
+>  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [WSFC クラスター サービスがオフライン](https://go.microsoft.com/fwlink/p/?LinkId=220849) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
   
 ## <a name="possible-causes"></a>考えられる原因  
  この問題は、クラスター サービスの問題や、クラスターのクォーラムの損失によって発生する場合があります。  

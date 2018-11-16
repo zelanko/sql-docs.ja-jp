@@ -12,12 +12,12 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eda7f99f93bf7837ec253c52588707d86bd0785c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753755"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696409"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47753755"
   
 -   [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)を確認します。  
   
--   Stretch Database はデータを Azure に移行します。 そのため、Azure アカウントとサブスクリプションを請求のために用意する必要があります。 Azure アカウントを取得するには、 [こちらをクリック](http://azure.microsoft.com/en-us/pricing/free-trial/)してください。  
+-   Stretch Database はデータを Azure に移行します。 そのため、Azure アカウントとサブスクリプションを請求のために用意する必要があります。 Azure アカウントを取得するには、 [こちらをクリック](https://azure.microsoft.com/pricing/free-trial/)してください。  
   
 -   新しい Azure サーバーを作成する、または既存の Azure サーバーを選択するために必要な接続およびログイン情報を入手します。  
   
@@ -147,6 +147,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 142822158f03c76c1c36f40fa937438c989ec3ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71d7e79a0e941b5f080b033469700e19eaa3241e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811800"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666097"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -275,7 +275,7 @@ PAUSE
 >  アーティクルをフィルター選択して、サブスクリプションごとに一意の重複しないパーティションを取得する場合 (マージ アーティクルの作成時、 F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription の値に P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption を指定した場合)、マージ エージェントの実行時に常にメタデータがクリーンアップされます。 これは、パーティション スナップショットの有効期間が短時間で切れてしまうことを意味します。 このオプションを使用する場合は、サブスクライバーからスナップショットの生成を要求できるようにする必要があります。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「適切なフィルター選択オプションの使用」を参照してください。  
   
 > [!IMPORTANT]  
->  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+>  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>サブスクライバーでスナップショットの生成と配信を開始するためのパブリケーションを作成するには  
   

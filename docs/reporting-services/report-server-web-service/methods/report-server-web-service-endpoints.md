@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82df0d5ba110bd7e7f26699ad9b34f3ac50cfacb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: b4adc5d154dedbdf120e035d0cab90bd89e4d07f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119910"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814195"
 ---
 # <a name="report-server-web-service-endpoints"></a>レポート サーバー Web サービスのエンドポイント
   レポート サーバー Web サービスでは、レポートの実行およびナビゲーションに加えて、レポート サーバーの管理に利用できる複数のエンドポイントが提供されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "49119910"
  レポート サーバーがネイティブ モード用または SharePoint 統合モード用に構成されている場合、管理エンドポイントの WSDL には次の URL を使用してアクセスできます。  
   
 ```  
-http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
 ```  
   
  詳細については、「[SOAP API へのアクセス](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)」を参照してください。  
@@ -47,13 +47,13 @@ http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl
  管理エンドポイントの WSDL には、次の URL を使用してアクセスできます。  
   
 ```  
-http://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  レポート サーバーが SharePoint 統合モード用に構成されている場合、WSDL には次の URL を使用してアクセスできます。  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  詳細については、「[SOAP API へのアクセス](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)」を参照してください。  
@@ -71,15 +71,15 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
  次の URL の例は、SharePoint サイトのプロキシ エンドポイントを参照しています。  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
 ```  
   
 ## <a name="see-also"></a>参照  

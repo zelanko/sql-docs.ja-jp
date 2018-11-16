@@ -18,18 +18,18 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe7228a4566f86467be3eb7b3f6ecd72d6ac6b9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ac4984fca803cbcf5d18fa4b34fdd8629dfe8c9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849160"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640024"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 接続マネージャー
   OLE DB 接続マネージャーを使用すると、パッケージは OLE DB プロバイダーを使用してデータ ソースに接続できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する OLE DB 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。    
     
 > [!NOTE]    
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB プロバイダーでは、マルチサブネット フェールオーバー クラスタリングの新しい接続文字列キーワード (MultiSubnetFailover=True) はサポートされません。 詳細については、 [SQL Server リリース ノート](http://go.microsoft.com/fwlink/?LinkId=247824) および www.mattmasson.com のブログ記事「 [AlwaysOn マルチサブネット フェールオーバーと SSIS](http://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)」を参照してください。    
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB プロバイダーでは、マルチサブネット フェールオーバー クラスタリングの新しい接続文字列キーワード (MultiSubnetFailover=True) はサポートされません。 詳細については、 [SQL Server リリース ノート](https://go.microsoft.com/fwlink/?LinkId=247824) および www.mattmasson.com のブログ記事「 [AlwaysOn マルチサブネット フェールオーバーと SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)」を参照してください。    
     
 > [!NOTE]    
 >  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007 である場合、Excel または Access の以前のバージョンとは異なるデータ プロバイダーが必要になります。 詳細については、「 [Excel ブックに接続する](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) 」および「 [Access データベースに接続する](../../integration-services/connection-manager/connect-to-an-access-database.md)」を参照してください。    
@@ -60,9 +60,9 @@ ms.locfileid: "47849160"
     
 ## <a name="related-content"></a>関連コンテンツ    
     
--   social.technet.microsoft.com の Wiki の記事「 [SSIS から Oracle への接続](http://go.microsoft.com/fwlink/?LinkId=220670) 」    
+-   social.technet.microsoft.com の Wiki の記事「 [SSIS から Oracle への接続](https://go.microsoft.com/fwlink/?LinkId=220670) 」    
     
--   carlprothman.net の [OLE DB プロバイダー用接続文字列](http://go.microsoft.com/fwlink/?LinkId=220744)に関する技術記事    
+-   carlprothman.net の [OLE DB プロバイダー用接続文字列](https://go.microsoft.com/fwlink/?LinkId=220744)に関する技術記事    
     
 ## <a name="configure-ole-db-connection-manager"></a>[OLE DB 接続マネージャーの構成]
   **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用すると、データ ソースへの接続を追加できます。新しい接続を設定するか、既存の接続のコピーを使用できます。  

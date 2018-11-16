@@ -22,12 +22,12 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7bf348d969f3e8ced5b08ae58323e3e698981274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 110c9dea73d84417d54dc99ea946998aea85cfef
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833020"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640229"
 ---
 # <a name="sql-server-destination"></a>SQL Server 変換先
   SQL Server 変換先はローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続し、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたはビューに一括で読み込みます。 SQL Server 変換先は、リモート サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアクセスするパッケージでは使用できません。 代わりに、このパッケージでは OLE DB 変換先を使用する必要があります。 詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。  
@@ -85,7 +85,7 @@ ms.locfileid: "47833020"
   
 -   一括読み込み操作のタイムアウトを指定します。  
   
- この変換先は、OLE DB 接続マネージャーを使用してデータ ソースに接続します。OLE DB 接続マネージャーでは、使用する OLE DB プロバイダーを指定します。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+ この変換先は、OLE DB 接続マネージャーを使用してデータ ソースに接続します。OLE DB 接続マネージャーでは、使用する OLE DB プロバイダーを指定します。 詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトでは、OLE DB 接続マネージャーを作成できるデータ ソース オブジェクトも用意されます。 これにより、SQL Server 変換先でデータ ソースとデータ ソース ビューが使用できるようになります。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47833020"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [SQL Server 変換先のカスタム プロパティ](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -113,11 +113,11 @@ ms.locfileid: "47833020"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   support.microsoft.com の技術記事「 [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](http://go.microsoft.com/fwlink/?LinkId=199482)」  
+-   support.microsoft.com の技術記事「 [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](https://go.microsoft.com/fwlink/?LinkId=199482)」  
   
--   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](http://go.microsoft.com/fwlink/?LinkId=233700)  
+-   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=233700)  
   
--   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](http://go.microsoft.com/fwlink/?LinkId=233701)  
+-   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](https://go.microsoft.com/fwlink/?LinkId=233701)  
   
 ## <a name="sql-destination-editor-connection-manager-page"></a>[SQL 変換先エディター] ([接続マネージャー] ページ)
   **[SQL 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、データ ソース情報を指定したり、結果をプレビューしたりできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先エディターは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルまたはビューにデータを読み込みます。  

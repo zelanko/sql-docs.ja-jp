@@ -17,12 +17,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7175ed9eed05295ec193dcc5f1cbaef287d27f77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7e699eb44ac381fa6cfe5c7dbca857010806753
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826650"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640789"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server オブジェクトの転送タスク
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内の 1 つ以上の種類のオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で転送します。 たとえば、このタスクを使用して、テーブルやストアド プロシージャをコピーできます。 転送元として使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに応じて、コピーできるオブジェクトの種類が異なります。 たとえば、スキーマとユーザー定義集計は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースだけに含まれます。  
@@ -82,7 +82,7 @@ ms.locfileid: "47826650"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクでは、オブジェクト転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- このタスクの **ExecutionValue** プロパティに格納される実行値は、転送されたオブジェクトの数を返します。 SQL Server オブジェクトの転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、オブジェクト転送に関する情報をパッケージの他のオブジェクトで使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ このタスクの **ExecutionValue** プロパティに格納される実行値は、転送されたオブジェクトの数を返します。 SQL Server オブジェクトの転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、オブジェクト転送に関する情報をパッケージの他のオブジェクトで使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  SQL Server オブジェクトの転送タスクには、次のようなカスタム ログ エントリがあります。  
@@ -113,7 +113,7 @@ ms.locfileid: "47826650"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>プログラムによる SQL Server オブジェクトの転送タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  

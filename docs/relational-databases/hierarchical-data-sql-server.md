@@ -5,8 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -20,12 +19,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91c2bd0e6e2793c1690adf6bcc9be1c8542eabba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf997219044de427ed968ca39928e1449f73e60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790050"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659482"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47790050"
   
 -   Web ページ間のリンクのグラフ  
   
- 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) を使用します。 階層データのクエリや管理を実行するには、 [の](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 関数 [!INCLUDE[tsql](../includes/tsql-md.md)] を使用します。  
+ 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) を使用します。 階層データのクエリや管理を実行するには、 [の](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 関数 [!INCLUDE[tsql](../includes/tsql-md.md)] を使用します。  
   
 ##  <a name="keyprops"></a> hierarchyid の主要な特性  
  値、 **hierarchyid** データ型は、ツリー階層内の位置を表します。 値を **hierarchyid** 、次のプロパティがあります。  
@@ -528,7 +527,7 @@ GO
   
   
 ## <a name="see-also"></a>参照  
- [hierarchyid データ型メソッド リファレンス](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
  [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   

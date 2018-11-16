@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5b3fa0a640791f25da1fc16162f097a39502d86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765750"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640065"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>制御フローのタスクまたはコンテナーを追加または削除する
   制御フロー デザイナーでの作業中、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーのツールボックスには、パッケージの制御フローの作成用に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されているタスクが一覧表示されます。 ツールボックスの詳細については、「 [SSIS ツールボックス](../../integration-services/ssis-toolbox.md)」を参照してください。  
@@ -96,9 +96,9 @@ ms.locfileid: "47765750"
   
 4.  **[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、ショートカット メニューの **[編集]** をクリックして、対応するタスク エディターまたはコンテナー エディターを開きます。  
   
-     For ループ コンテナーの構成方法については、「 [Configure a For Loop Container](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)」(For ループ コンテナーを構成する) を参照してください。  
+     For ループ コンテナーの構成方法については、「 [Configure a For Loop Container](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)」(For ループ コンテナーを構成する) を参照してください。  
   
-     Foreach ループ コンテナーの構成方法については、「 [Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」(Foreach ループ コンテナーを構成する) を参照してください。  
+     Foreach ループ コンテナーの構成方法については、「 [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」(Foreach ループ コンテナーを構成する) を参照してください。  
   
     > [!NOTE]  
     >  シーケンス コンテナーには、カスタム エディターはありません。  
@@ -114,6 +114,6 @@ ms.locfileid: "47765750"
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)   
- [制御フロー](../../integration-services/control-flow/control-flow.md)  
+ [[制御フロー]](../../integration-services/control-flow/control-flow.md)  
   
   

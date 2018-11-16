@@ -24,12 +24,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5221b1474d6880cd7fdac56f5ae13a5f50514c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b3f90acc0f7fefea0ffd142c4b0acd6a8e59549
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827171"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640159"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
   用語参照変換は、変換入力列内のテキストから抽出された用語を、参照テーブルの用語と照合します。 次に、入力データセットで参照テーブル内の用語が検出された回数をカウントし、その数を参照テーブルの用語と共に変換出力の列に書き込みます。 この変換は、単語の使用頻度を示す統計付きのユーザー定義の単語一覧を、入力テキストから作成する場合に便利です。  
@@ -98,7 +98,7 @@ ms.locfileid: "47827171"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "47827171"
  各出力列の別名を入力します。 既定では列の名前が使用されますが、一意なわかりやすい名前を自由に付けることができます。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
+ [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>[用語参照変換エディター] ([参照テーブル] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照テーブルへの接続を指定できます。  
@@ -137,7 +137,7 @@ ms.locfileid: "47827171"
  一覧から項目を選択することにより、データベースからの参照テーブルまたはビューを選択します。 テーブルまたはビューは、変換元の列のテキストとの比較に使用できる、既存の一覧が含まれた列を含んでいる必要があります。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
+ [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>[用語参照変換エディター] ([詳細設定] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、参照で大文字と小文字を区別するかどうかを指定できます。  
@@ -147,7 +147,7 @@ ms.locfileid: "47827171"
  参照で大文字と小文字が区別されるかどうかを示します。 既定値は **False**です。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
+ [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0c2b65f24b76f875b8fa11896cc70f62bb0902b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60488eef28194d8ffdd88dd37897011a9e6422b4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668760"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812675"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML レポート データの XML クエリ構文 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML **Query** または要素パスを指定する必要があります。 XML **クエリ** は、**\<Query>** タグ内に、名前空間と XML 要素を指定したものです。指定する名前空間と XML 要素は、データ ソースによって異なります。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
@@ -54,23 +54,23 @@ ms.locfileid: "47668760"
   
 |XML データ ソース|クエリの例|  
 |---------------------|-------------------|  
-|Web サービスの XML データ ( <xref:ReportService2010.ReportingService2010.ListChildren%2A> メソッドから)|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
-|Web サービスの XML データ (SoapAction から)|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
-|XML ドキュメントまたは埋め込み XML データ (名前空間を使用)<br /><br /> Query 要素 (要素パスに名前空間を指定)|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
+|Web サービスの XML データ ( <xref:ReportService2010.ReportingService2010.ListChildren%2A> メソッドから)|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|Web サービスの XML データ (SoapAction から)|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>https://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
+|XML ドキュメントまたは埋め込み XML データ (名前空間を使用)<br /><br /> Query 要素 (要素パスに名前空間を指定)|`<Query xmlns:es="https://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |埋め込み XML ドキュメント|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |XML ドキュメント (既定)|*クエリなし*。<br /><br /> 要素パスは XML ドキュメントそのものから取得され、名前空間には依存しません。|  
   
 > [!NOTE]  
->  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには、新しいデータ ソースを作成し、接続文字列を `http://localhost/reportserver/reportservice2006.asmx` に設定する必要があります。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドは、**Item** と **Recursive** の 2 つのパラメーターを受け取ります。 **Item** の既定値は **/** に、 **Recursive** の既定値は **1**に設定されます。  
+>  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには、新しいデータ ソースを作成し、接続文字列を `https://localhost/reportserver/reportservice2006.asmx` に設定する必要があります。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドは、**Item** と **Recursive** の 2 つのパラメーターを受け取ります。 **Item** の既定値は **/** に、 **Recursive** の既定値は **1**に設定されます。  
   
 ## <a name="specifying-namespaces"></a>名前空間の指定  
  データ ソースから取得された XML データに使用する名前空間を指定するには、XML **Query** 要素を使用します。 次の XML クエリには、名前空間 **sales**が使用されています。 **および** の XML `sales:LineItems` ElementPath `sales:LineItem` ノードには、名前空間 **sales**が使用されています。  
   
 ```  
 <Query xmlns:sales=  
-"http://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
+"https://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
    <SoapAction>  
-      http://schemas.microsoft.com/SalesWebService/ListOrders   
+      https://schemas.microsoft.com/SalesWebService/ListOrders   
    </SoapAction>  
    <ElementPath>  
       Customers/Customer/Orders/Order/sales:LineItems/sales:LineItem  
@@ -85,14 +85,14 @@ ms.locfileid: "47668760"
   
 |XML Query 要素|データセットとして取得されるフィールド|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Value A: `http://schemas.microsoft.com/...`<br /><br /> Value B: `http://schemas.microsoft.com/...`<br /><br /> Value C: `http://schemas.microsoft.com/...`|  
-|`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<Query/>|Value A: `https://schemas.microsoft.com/...`<br /><br /> Value B: `https://schemas.microsoft.com/...`<br /><br /> Value C: `https://schemas.microsoft.com/...`|  
+|`<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML document: DPNamespace.xml  
- この XML をコピーして、レポート デザイナーからアクセスできる URL (http://localhost/DPNamespace.xml など) に保存すると、XML データ ソースとして使用できます。  
+ この XML をコピーして、レポート デザイナーからアクセスできる URL (https://localhost/DPNamespace.xml など) に保存すると、XML データ ソースとして使用できます。  
   
 ```  
-<Root xmlns:ns="http://schemas.microsoft.com/...">  
+<Root xmlns:ns="https://schemas.microsoft.com/...">  
    <ns:Element1>  
       <Node>Value A</Node>  
       <Node>Value B</Node>  

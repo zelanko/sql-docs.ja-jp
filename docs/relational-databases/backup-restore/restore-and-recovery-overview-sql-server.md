@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9fd85e82bc3c1ebec9e8263ac1ed836a668290c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afc9d46066c435bc14f2e14fedb0a285ac3b95e3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667820"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672831"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,9 +152,9 @@ ms.locfileid: "47667820"
   
  データベース復旧アドバイザーの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability の次のブログを参照してください。  
   
--   [Recovery Advisor: An Introduction](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Recovery Advisor: Using SSMS to create/restore split backups](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Recovery Advisor: Using SSMS to create/restore split backups](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
  [なし] :  

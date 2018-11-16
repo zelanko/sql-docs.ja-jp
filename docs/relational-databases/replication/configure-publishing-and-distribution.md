@@ -15,18 +15,18 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5d302195025be0d9ab1e19ac0227e427e7b4bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ed641edd4ff8b979f7e753c9e83b38654082e61
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832090"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660561"
 ---
 # <a name="configure-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの構成
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリッシングとディストリビューションを構成する方法について説明します。
 
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備 
+##  <a name="BeforeYouBegin"></a> はじめに 
 
 ###  <a name="Security"></a> セキュリティ 
 詳細については、「[セキュリティで保護された配置 &#40;レプリケーション&#41;](../../relational-databases/replication/security/secure-deployment-replication.md)」を参照してください。
@@ -110,7 +110,7 @@ ms.locfileid: "47832090"
 
   - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - パブリッシャーの名前。
 
-  - <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
+  - <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。
 
   - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 手順 5. で作成したデータベースの名前。
 
@@ -132,7 +132,7 @@ ms.locfileid: "47832090"
 
 5. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出してディストリビューターをインストールします。 安全なパスワード (パブリッシャーがリモート ディストリビューターへの接続時に使用) および手順 3. の <xref:Microsoft.SqlServer.Replication.DistributionDatabase> オブジェクトを指定します。 詳細については、「[ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)」を参照してください。
 
-   > `IMPORTANT!!` 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。
+   > `IMPORTANT!!` 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。
 
 6. <xref:Microsoft.SqlServer.Replication.DistributionPublisher> クラスのインスタンスを作成します。
 
@@ -157,7 +157,7 @@ ms.locfileid: "47832090"
 11. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出します。 リモート ディストリビューターの名前、および手順 5. で指定したリモート ディストリビューターのパスワードを渡します。
 
 >[!IMPORTANT]
-可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework に用意されている [暗号化サービス](http://go.microsoft.com/fwlink/?LinkId=34733) を使用します。
+可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework に用意されている [暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733) を使用します。
 
 ###  <a name="PShellExample"></a> 例 (RMO) 
 レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってレプリケーション パブリッシングおよびディストリビューションを構成できます。

@@ -20,12 +20,12 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c2a2ec4b26bdc216dc96080171ecd0cff0816e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fda41af4bbf9f6e0b98de5c543af99e732966d53
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821950"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640489"
 ---
 # <a name="data-mining-model-training-destination"></a>データ マイニング モデル トレーニング変換先
   データ マイニング モデル トレーニング変換先は、変換先が受け取るデータをデータ マイニング モデル アルゴリズムに渡すことにより、データ マイニング モデルのトレーニングを行います。 複数のデータ マイニング モデルが同じデータ マイニング構造に基づいて構築されている場合は、1 つの変換先を使用してトレーニングできます。 詳細については、「 [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md) 」と「 [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)」を参照してください。  
@@ -44,7 +44,7 @@ ms.locfileid: "47821950"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [データ マイニング モデル トレーニング変換先のカスタム プロパティ](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   

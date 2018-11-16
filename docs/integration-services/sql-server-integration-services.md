@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b74a33bb9b81c930075b87fa0703014b079909f
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: aec1d61a092926132ae1505ac5bf6ae4bc502560
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383287"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699645"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -43,8 +43,8 @@ ms.locfileid: "49383287"
 SQL Server での SQL Server Integration Services のインストール、および必要な他のダウンロードについては、「[Integration Services のインストール](install-windows/install-integration-services.md)」をご覧ください。
 
 ##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) リソース
--   [SSIS フォーラムのヘルプの表示](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
--   [Stack Overflow のヘルプの表示](http://stackoverflow.com/questions/tagged/ssis)  
+-   [SSIS フォーラムのヘルプの表示](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [Stack Overflow のヘルプの表示](https://stackoverflow.com/questions/tagged/ssis)  
 -   [SSIS チーム ブログのフォロー](https://blogs.msdn.microsoft.com/ssis/)
 -   [問題と要求の報告機能](https://feedback.azure.com/forums/908035-sql-server)
 -   [PC のドキュメントを入手](../sql-server/sql-server-help-installation.md)

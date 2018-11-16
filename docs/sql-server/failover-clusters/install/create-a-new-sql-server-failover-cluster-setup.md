@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2ec8e76d8973216b58dc1472077554e51867e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738010"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697890"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>新しい SQL Server フェールオーバー クラスターの作成 (セットアップ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47738010"
   
  リモート インストールの詳細については、「[サポートされているバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」をご覧ください。  
   
- Windows フェールオーバー クラスターへの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインストールの詳細については、「 [SQL Server Analysis Services をクラスター化する方法](http://go.microsoft.com/fwlink/p/?LinkId=396548)」をご覧ください。  
+ Windows フェールオーバー クラスターへの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインストールの詳細については、「 [SQL Server Analysis Services をクラスター化する方法](https://go.microsoft.com/fwlink/p/?LinkId=396548)」をご覧ください。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  作業を開始する前に、次の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックのトピックを参照してください。  
@@ -169,7 +169,7 @@ ms.locfileid: "47738010"
   
 17. [サーバーの構成 - サービス アカウント] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。  
   
-     すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 スタートアップの種類は、すべてのクラスター対応サービス (フルテキスト検索および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを含む) に対して手動に設定され、インストール時に変更することはできません。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では、各サービスに最小の権限を与えるためにはサービス アカウントを個別に構成することをお勧めします。サービス アカウントを個別に構成すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスには、サービスでのタスクの実行に必要な最小権限が付与されます。 詳細については、「 [サーバー構成 - サービス アカウント](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 」および「 [Windows サービス アカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
+     すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 スタートアップの種類は、すべてのクラスター対応サービス (フルテキスト検索および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを含む) に対して手動に設定され、インストール時に変更することはできません。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では、各サービスに最小の権限を与えるためにはサービス アカウントを個別に構成することをお勧めします。サービス アカウントを個別に構成すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスには、サービスでのタスクの実行に必要な最小権限が付与されます。 詳細については、「 [サーバー構成 - サービス アカウント](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 」および「 [Windows サービス アカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のこのインスタンスに含まれるすべてのサービス アカウントに同じログオン アカウントを指定する場合は、ページの下部にあるフィールドに資格情報を指定します。  
   
@@ -262,7 +262,7 @@ ms.locfileid: "47738010"
      このページの下部にあるフィールドを使用して、共有コンポーネントのカスタム ディレクトリを指定できます。 共有コンポーネントのインストール パスを変更するには、ダイアログ ボックスの下部に示されているフィールドのパスを更新するか、参照ボタンをクリックしてインストール ディレクトリに移動します。 既定のインストール パスは、C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\です。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] サービス機能をオンにすると、レプリケーションとフルテキスト検索の両方が自動的にオンになります。 これらのサブ機能をいずれかをオフにすると、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] サービス機能もオフになります。  
+    >  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] サービス機能をオンにすると、レプリケーションとフルテキスト検索の両方が自動的にオンになります。 これらのサブ機能をいずれかをオフにすると、[!INCLUDE[ssDE](../../../includes/ssde-md.md)] サービス機能もオフになります。  
   
 11. [インスタンスの構成] ページで、既定のインスタンスまたは名前付きインスタンスをインストールするかどうかを指定します。
   

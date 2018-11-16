@@ -17,12 +17,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a84a11092ab1cab6e252d16d010f991d8a865c0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddcdfc32fe38495779f95aae0da20bf314c34c17
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761710"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639649"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク
   Master ストアド プロシージャ転送タスクは、 **のインスタンス上の** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース間で、1 つ以上のユーザー定義ストアド プロシージャを転送します。 **master** データベースからストアド プロシージャを転送するには、プロシージャの所有者が dbo である必要があります。  
@@ -48,7 +48,7 @@ ms.locfileid: "47761710"
  Master ストアド プロシージャ転送タスクでは、増分中のログイン転送タスクの進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- タスクの **ExecutionValue** プロパティで定義する実行値は、転送されたストアド プロシージャの数を返します。 Master ストアド プロシージャ転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、パッケージの他のオブジェクトからストアド プロシージャの転送に関する情報を使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」および「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
+ タスクの **ExecutionValue** プロパティで定義する実行値は、転送されたストアド プロシージャの数を返します。 Master ストアド プロシージャ転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、パッケージの他のオブジェクトからストアド プロシージャの転送に関する情報を使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」および「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  Master ストアド プロシージャ転送タスクには、次のようなカスタム ログ エントリがあります。  
@@ -78,7 +78,7 @@ ms.locfileid: "47761710"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>[Master ストアド プロシージャ転送タスク エディター] ([全般] ページ)
   **[Master ストアド プロシージャ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Master ストアド プロシージャ転送タスクの名前と説明を入力できます。  

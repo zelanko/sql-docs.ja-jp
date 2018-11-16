@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6d3b3253488f09b6a20b1de4745f6c97ed77515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ef264a836b1081bdeba65fc09fce758b0faf897
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806516"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641809"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
   このセクションのトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスについて説明します。 Integration Service パッケージの作成、保存、および実行には、このサービスは不要です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] との互換性を維持するために、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービスをサポートしています。  
@@ -187,7 +187,7 @@ ms.locfileid: "47806516"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -232,7 +232,7 @@ ms.locfileid: "47806516"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -251,7 +251,7 @@ ms.locfileid: "47806516"
  レジストリ キー **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用する構成ファイルの場所と名前を指定します。 レジストリ キーの既定値は、**C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml** です。 レジストリ キーの値を更新すると、構成ファイルに別の名前と場所を使用することができます。 パスのバージョン番号 (SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は 120、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合は 130 など) は、SQL Server のバージョンによって異なるので注意してください。
   
 > [!CAUTION]  
->  レジストリの編集を誤ると、深刻な問題が発生し、オペレーティング システムの再インストールが必要になる場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] レジストリの誤った編集により発生した問題に関しては、一切責任を負わないものとします。 レジストリを編集する前に、重要なデータをすべてバックアップしてください。 レジストリのバックアップ、復元、および編集の方法については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [Microsoft Windows レジストリの説明](http://support.microsoft.com/kb/256986)」を参照してください。  
+>  レジストリの編集を誤ると、深刻な問題が発生し、オペレーティング システムの再インストールが必要になる場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] レジストリの誤った編集により発生した問題に関しては、一切責任を負わないものとします。 レジストリを編集する前に、重要なデータをすべてバックアップしてください。 レジストリのバックアップ、復元、および編集の方法については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [Microsoft Windows レジストリの説明](https://support.microsoft.com/kb/256986)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、サービスの開始時に構成ファイルを読み込みます。 レジストリ エントリを変更した場合、サービスを再起動する必要があります。  
 
@@ -359,7 +359,7 @@ ms.locfileid: "47806516"
 > [!IMPORTANT]  
 >  リモート サーバーに格納されるパッケージを管理するために、そのリモート サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスに接続する必要はありません。 代わりに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルを編集し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でリモート サーバーに格納されているパッケージが表示されるようにします。
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォール経由で DCOM プロトコルがどのように動作するかについては、MSDN ライブラリの「[ファイアウォール経由での分散 COM の使用](http://go.microsoft.com/fwlink/?LinkId=12490)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォール経由で DCOM プロトコルがどのように動作するかについては、MSDN ライブラリの「[ファイアウォール経由での分散 COM の使用](https://go.microsoft.com/fwlink/?LinkId=12490)」を参照してください。  
   
  多くのファイアウォール システムが市販されています。 Windows ファイアウォール以外のファイアウォールを実行している場合、使用しているシステム固有の情報については、そのファイアウォールのマニュアルを参照してください。  
   

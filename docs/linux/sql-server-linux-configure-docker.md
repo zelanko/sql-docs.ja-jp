@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0dbc72cf39e1dee5abad6ceb961f1b437287e5ba
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270025"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657986"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -62,7 +62,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
 
 前のセクションで、クイック スタートでは、Docker Hub から SQL Server の無料の Developer edition を実行します。 ほとんどの情報は、Enterprise、Standard、または Web edition などのコンテナー イメージを運用環境に実行する場合にも適用されます。 ただし、ここに記載されているいくつかの違いがあります。
 
-- のみ、有効なライセンスがある場合、SQL Server を運用環境で使用できます。 無料の SQL Server Express の運用環境ライセンスを取得する[ここ](https://go.microsoft.com/fwlink/?linkid=857693)します。 SQL Server Standard および Enterprise Edition のライセンスを利用[Microsoft ボリューム ライセンス](https://www.microsoft.com/en-us/licensing/default.aspx)します。
+- のみ、有効なライセンスがある場合、SQL Server を運用環境で使用できます。 無料の SQL Server Express の運用環境ライセンスを取得する[ここ](https://go.microsoft.com/fwlink/?linkid=857693)します。 SQL Server Standard および Enterprise Edition のライセンスを利用[Microsoft ボリューム ライセンス](https://www.microsoft.com/licensing/default.aspx)します。
 
 - 実稼働 SQL Server のコンテナー イメージをプルする必要があります[Docker ストア](https://store.docker.com)します。 1 つをいない場合は、Docker のストアのアカウントを作成します。
 

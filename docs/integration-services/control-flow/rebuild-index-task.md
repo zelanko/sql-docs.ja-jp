@@ -17,12 +17,12 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95bc574e5c0485ab785496268ad49d51abe64ed9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29e5210a44842d349ab76081f141d2d3d7152bb4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818365"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637819"
 ---
 # <a name="rebuild-index-task"></a>インデックスの再構築タスク
   インデックスの再構築タスクでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルおよびビュー内のインデックスを再構築します。 インデックスの管理の詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
@@ -61,7 +61,7 @@ ms.locfileid: "47818365"
  [[インデックスの再構築タスク] (メンテナンス プラン)](../../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   

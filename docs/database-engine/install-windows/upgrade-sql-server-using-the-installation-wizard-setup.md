@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e1ef574febdd3c4624138c70d5d5d8acb74c6a3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803718"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607162"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server のアップグレード (セットアップ)
 
@@ -120,7 +120,7 @@ ms.locfileid: "47803718"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]** をクリックします。  
   
-15. [フルテキスト検索アップグレード オプション] ページで、アップグレードするデータベースのアップグレード オプションを指定します。 詳細については、「 [フルテキスト検索アップグレード オプション](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)」。  
+15. [フルテキスト検索アップグレード オプション] ページで、アップグレードするデータベースのアップグレード オプションを指定します。 詳細については、「 [フルテキスト検索アップグレード オプション](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)」。  
   
 16. すべてのルールに合格した場合は、[機能ルール] ウィンドウは自動的に進行します。  
   
@@ -143,6 +143,6 @@ ms.locfileid: "47803718"
   
 ## <a name="see-also"></a>参照  
  [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)   
- [旧バージョンとの互換性_削除](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [旧バージョンとの互換性_削除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

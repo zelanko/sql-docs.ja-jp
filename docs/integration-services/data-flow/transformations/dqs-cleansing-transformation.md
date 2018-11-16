@@ -17,12 +17,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0fa7d262017938578162594257deee2a0e79694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c36cd11c60c3558e6b050de17a517d9feb968d32
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692930"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638630"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS クレンジング変換
   DQS クレンジング変換では、Data Quality Services (DQS) を使用して、接続されたデータ ソースまたは類似のデータ ソース用に作成された承認済みのルールを適用することにより、接続されたデータ ソースのデータを修正します。 データ修正ルールの詳細については、「 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)」を参照してください。 DQS の詳細については、「 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)」を参照してください。  
@@ -54,7 +54,7 @@ ms.locfileid: "47692930"
   
 -   [データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
   
--   social.technet.microsoft.com の記事「 [複合ドメインを使用した複雑なデータのクレンジング](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)」  
+-   social.technet.microsoft.com の記事「 [複合ドメインを使用した複雑なデータのクレンジング](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)」  
   
 ## <a name="dqs-cleansing-transformation-editor-dialog-box"></a>[DQS クレンジング変換エディター] ダイアログ ボックス
   **[DQS クレンジング変換エディター]** ダイアログ ボックスを使用すると、Data Quality Services (DQS) を使用してデータを修正できます。 詳細については、「 [Data Quality Services の概念](../../../data-quality-services/data-quality-services-concepts.md)」を参照してください。  

@@ -11,12 +11,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85df2401dc5827a2e476fa62178586ee834d188d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08d95d5ba1f6a0c1a46218dde190e09af2452eae
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751650"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677861"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "47751650"
   
 |前提条件|[説明]|  
 |------------------|-----------------|  
-|**Microsoft Azure アカウント**|[購入オプション](http://azure.microsoft.com/pricing/free-trial/) を調べる前に、 [無料評価版](http://azure.microsoft.com/pricing/purchase-options/)で Azure を使用することができます。|  
-|**Azure ストレージ アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。|  
-|**BLOB コンテナー**|BLOB はコンテナーで構成されます。 バックアップ ファイルに対してターゲット コンテナーを指定します。 [Azure 管理ポータル](https://manage.windowsazure.com/)でコンテナーを作成することができます。または、 **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/) コマンドを使用します。|  
-|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
+|**Microsoft Azure アカウント**|[購入オプション](https://azure.microsoft.com/pricing/free-trial/) を調べる前に、 [無料評価版](https://azure.microsoft.com/pricing/purchase-options/)で Azure を使用することができます。|  
+|**Azure ストレージ アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。|  
+|**BLOB コンテナー**|BLOB はコンテナーで構成されます。 バックアップ ファイルに対してターゲット コンテナーを指定します。 [Azure 管理ポータル](https://manage.windowsazure.com/)でコンテナーを作成することができます。または、 **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) コマンドを使用します。|  
+|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「 [Shared Access Signature、第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
 |**SQL Server エージェント**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を機能させるには、SQL Server エージェントを実行する必要があります。 スタートアップ オプションを自動に設定することを検討してください。|  
   
 ## <a name="components"></a>Components  

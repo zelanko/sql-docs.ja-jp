@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2a07266abcf2a1ebc10c4a6b37a28ee8179885f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686050"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812825"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
   レポート パラメーターはレポート URL に含めることでレポートに渡すことができます。 このような URL パラメーターにはプレフィックスを付けません。パラメーターはレポート処理エンジンに直接渡されるためです。  
@@ -49,13 +49,13 @@ parameter=value
  たとえば、レポートで定義されている "ReportMonth" と "ReportYear" の 2 つのパラメーターを指定するには、ネイティブ モードのレポート サーバーで次の URL を使用します。  
   
 ```  
-http://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
+https://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
 ```  
   
  たとえば、レポートで定義されている同じ 2 つのパラメーターを指定するには、SharePoint 統合モードのレポート サーバーで次の URL を使用します。 `/_vti_bin`に注意してください。  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl&ReportMonth=3&ReportYear=2008  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl&ReportMonth=3&ReportYear=2008  
 ```  
   
  パラメーターに NULL 値を渡すには、次の構文を使用します。  
@@ -100,7 +100,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
  次の URL の例では、"7/1/2005 " という値を持つ単一のパラメーター *SellStartDate* を、ネイティブ モードのレポート サーバーに渡します。  
   
 ```  
-http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
+https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
 ## <a name="see-also"></a>参照  

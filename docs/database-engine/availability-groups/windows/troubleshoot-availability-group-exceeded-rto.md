@@ -10,18 +10,18 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b3a2b9208900d89a56f3a49b5dd1cf1aa0e04d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724220"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606872"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>トラブルシューティング: 可用性グループ接続の超過 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可用性グループのデータ損失のない自動フェールオーバーまたは計画された手動フェールオーバーの後に、フェールオーバー時間が回復時刻の目標 (RTO) を超えていることに気づく場合があります。 または、「[Always On 可用性グループのパフォーマンスを監視する](monitor-performance-for-always-on-availability-groups.md)」の方法を使用して同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。  
   
- 自動フェールオーバーが完了していない場合、「[Troubleshooting automatic failover problems in SQL Server 2012 Always On environments](http://support.microsoft.com/kb/2833707)」(SQL Server 2012 AlwaysOn の環境での自動フェールオーバーに関する問題のトラブルシューティング) を参照してください。  
+ 自動フェールオーバーが完了していない場合、「[Troubleshooting automatic failover problems in SQL Server 2012 Always On environments](https://support.microsoft.com/kb/2833707)」(SQL Server 2012 AlwaysOn の環境での自動フェールオーバーに関する問題のトラブルシューティング) を参照してください。  
   
  次のセクションでは、フェールオーバー時間が RTO を超える一般的な原因について説明します。  
   
@@ -64,6 +64,6 @@ from sys.dm_hadr_database_replica_states
  再実行スレッドが実際に遅れている場合、セカンダリ レプリカのパフォーマンスの低下の根本原因を調査する必要があります。 レポート ワークロードとの I/O の競合がある場合、[リソース ガバナー](~/relational-databases/resource-governor/resource-governor.md)を使用して、レポート ワークロードによって使用される CPU サイクルを制御し、取得される I/O サイクルを間接的にある程度制御することができます。 たとえば、レポート ワークロードが CPU の 10% を消費していても、ワークロードが I/O バウンドになっている場合は、リソース ガバナーを使用して、CPU リソースの使用率を 5% に制限し、読み取りワークロードを制限して、I/O への影響を最小限に抑えることができます。  
   
 ## <a name="next-steps"></a>次の手順  
- [SQL Server (SQL Server 2012 に適用されます) のパフォーマンスに関する問題のトラブルシューティング](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [SQL Server (SQL Server 2012 に適用されます) のパフォーマンスに関する問題のトラブルシューティング](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

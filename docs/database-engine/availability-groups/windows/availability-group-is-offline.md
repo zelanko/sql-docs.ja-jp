@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14af3a13043a21691e38f5fa8226041fb797f975
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 343ae5ff2b5b65b26569f99ff22d51ed1860e69d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656370"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600172"
 ---
 # <a name="availability-group-is-offline"></a>可用性グループがオフライン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47656370"
  可用性グループのクラスター リソースがオンライン状態で、可用性グループがプライマリ レプリカを持つ場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性グループがオフライン](http://go.microsoft.com/fwlink/p/?LinkId=220850) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
+>  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性グループがオフライン](https://go.microsoft.com/fwlink/p/?LinkId=220850) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
   
 ## <a name="possible-causes"></a>考えられる原因  
  この問題は、プライマリ レプリカをホストするサーバー インスタンスのエラー、またはオフラインになっている Windows Server フェールオーバー クラスター (WSFC) 可用性グループ リソースによって発生する可能性があります。 可用性グループがオフラインになる原因として、次のような状況が考えられます。  

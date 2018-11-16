@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028203"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812975"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services のインストール (2017 以降)
 
@@ -98,15 +98,15 @@ URL 予約は、プレフィックス、ホスト名、ポート、および仮�
 |要素|[説明]|
 |----------|-----------------|
 |Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|
-|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`http://<computername>/reportserver`、`http://localhost/reportserver`、`http://<IPAddress>/reportserver.`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|
+|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`https://<computername>/reportserver`、`https://localhost/reportserver`、`https://<IPAddress>/reportserver.`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|
 |Port|既定のポートは 80 です。 ポート 80 以外のポートを使用する場合は、Web ポータルをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があります。|
 |仮想ディレクトリ|既定では、仮想ディレクトリは、レポート サーバー Web サービスの場合は ReportServer の形式で作成され、Web ポータルの場合は Reports の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 Web ポータルの既定の仮想ディレクトリは、**reports** です。|
 
 完全な URL 文字列の例を次に示します。
 
-- `http://+:80/reportserver` は、レポート サーバーへのアクセスを提供します。
+- `https://+:80/reportserver` は、レポート サーバーへのアクセスを提供します。
 
-- `http://+:80/reports` は、Web ポータルへのアクセスを提供します。
+- `https://+:80/reports` は、Web ポータルへのアクセスを提供します。
 
 ## <a name="firewall"></a>ファイアウォール
 

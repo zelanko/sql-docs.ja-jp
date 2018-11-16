@@ -23,12 +23,12 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 650e41167a5016a4dc5e0defe03b11520d961c96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60c2615cf141f145f2353df5309105b0ed535fc1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737870"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641269"
 ---
 # <a name="row-sampling-transformation"></a>行サンプリング変換
   行サンプリング変換を使用すると、入力データセットからランダムに選択されたサブセットを取得できます。 出力サンプルの正確なサイズを指定したり、乱数ジェネレーターのシード値を指定できます。  
@@ -52,7 +52,7 @@ ms.locfileid: "47737870"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

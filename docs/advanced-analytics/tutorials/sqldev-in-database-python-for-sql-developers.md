@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c992cbda06d158bec0b76d6d46d71157a08cf3e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032989"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560383"
 ---
 # <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>SQL 開発者向けのチュートリアル: In-database Python analytics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Python、または SQL に新しい Python 開発者に新しい SQL プログ�
 
 + [レッスン 1: の探索し、Python を使用してデータを視覚化します。](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [レッスン 2: データを作成する機能をカスタム SQL 関数を使用して](sqldev-py4-create-data-features-using-t-sql.md)
++ [レッスン 2: カスタム SQL 関数を使用してデータ機能を作成します。](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [レッスン 3: トレーニングし、T-SQL を使用して Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

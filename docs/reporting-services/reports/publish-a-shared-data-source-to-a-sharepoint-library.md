@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68c556abb719ba9642e7c1074866235e46c1f1e3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ca366eeee5bbe0e291ccefa140237b9e977a9a90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029121"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812815"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint ライブラリへの共有データ ソースのパブリッシュ
   SharePoint 統合モードで実行されているレポート サーバーに共有データ ソースをパブリッシュするには、レポート デザイナーでレポート プロジェクトのプロパティを設定する必要があります。 プロジェクトのプロパティでは、サーバー、レポート、および共有データ ソースへの参照はすべて、完全修飾 URL で指定する必要があります。  
@@ -34,13 +34,13 @@ ms.locfileid: "50029121"
   
 4.  プロジェクトの共有データ ソースをパブリッシュし、以前にパブリッシュされた共有データ ソースを上書きするには、 **[OverwriteDataSources]** を **[True]** に設定します。  
   
-5.  (省略可) **[TargetDataSourceFolder]** には、SharePoint ライブラリまたはライブラリ フォルダーへの URL を入力します。 たとえば、「 `http://TestServer/TestSite/Documents/DataSources`」を参照してください。  
+5.  (省略可) **[TargetDataSourceFolder]** には、SharePoint ライブラリまたはライブラリ フォルダーへの URL を入力します。 たとえば、「 `https://TestServer/TestSite/Documents/DataSources`」を参照してください。  
   
      値を指定しない場合は、 **[TargetReportFolder]** の値が使用されます。  
   
-6.  **[TargetReportFolder]** に、ライブラリまたはライブラリ フォルダーの URL を入力します。 たとえば、「 `http://TestServer/TestSite/Documents/Reports`」を参照してください。  
+6.  **[TargetReportFolder]** に、ライブラリまたはライブラリ フォルダーの URL を入力します。 たとえば、「 `https://TestServer/TestSite/Documents/Reports`」を参照してください。  
   
-7.  **[TargetServerURL]** に、SharePoint トップレベル サイトまたはサブサイトの URL を入力します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 たとえば、「`http://servername`」、「`http://servername/site`」、「`http://servername/site/subsite`」のように指定します。  
+7.  **[TargetServerURL]** に、SharePoint トップレベル サイトまたはサブサイトの URL を入力します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 たとえば、「`https://servername`」、「`https://servername/site`」、「`https://servername/site/subsite`」のように指定します。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

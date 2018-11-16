@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 4283b58d3bdf3b74f663a2a6632d5aa00fba2381
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100203"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605422"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアップグレード
 
@@ -26,7 +26,7 @@ ms.locfileid: "50100203"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- リリース ノートについては、「 [SQL Server 2016 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=398124)」を参照してください。  
+ リリース ノートについては、「 [SQL Server 2016 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=398124)」を参照してください。  
   
  **この記事の内容:**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "50100203"
   
  **SharePoint 2010:**  
   
--   既存のインストールで SharePoint 2010 が実行されている場合は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 詳細については、「 [Microsoft SharePoint 2010 Service Pack 2](http://www.microsoft.com/download/details.aspx?id=39672)」を参照してください。 バージョンを確認するには、PowerShell コマンド `(Get-SPfarm).BuildVersion.ToString()` を使用します。 リリース日でビルド バージョンを参照するには、「 [SharePoint 2010 のビルド番号](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)」を参照してください。  
+-   既存のインストールで SharePoint 2010 が実行されている場合は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 詳細については、「 [Microsoft SharePoint 2010 Service Pack 2](https://www.microsoft.com/download/details.aspx?id=39672)」を参照してください。 バージョンを確認するには、PowerShell コマンド `(Get-SPfarm).BuildVersion.ToString()` を使用します。 リリース日でビルド バージョンを参照するには、「 [SharePoint 2010 のビルド番号](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)」を参照してください。  
   
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> 既存の SharePoint 2013 ファームのアップグレード  
  SharePoint 2013 に配置された [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をアップグレードするには、次の手順を実行します。  
@@ -92,7 +92,7 @@ ms.locfileid: "50100203"
   
 2.  サーバーを再起動します。  
   
-3.  SharePoint 2013 ファーム内の各サーバーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) を実行し、データ プロバイダーをインストールします。 データ プロバイダーもアップグレードする SQL Server セットアップ ウィザードを実行したサーバーは例外です。 詳細については、[Microsoft SQL Server 2014 PowerPivot for Microsoft SharePoint 2013 のダウンロード ページ](https://www.microsoft.com/en-us/download/details.aspx?id=42300)および「[PowerPivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
+3.  SharePoint 2013 ファーム内の各サーバーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) を実行し、データ プロバイダーをインストールします。 データ プロバイダーもアップグレードする SQL Server セットアップ ウィザードを実行したサーバーは例外です。 詳細については、[Microsoft SQL Server 2014 PowerPivot for Microsoft SharePoint 2013 のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=42300)および「[PowerPivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
   
 4.  **SharePoint 2013 ファーム内の各サーバーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 構成ツールを実行し** 、アドインによってインストールされた更新済みのソリューション ファイルを使用して SharePoint ファームを構成します。 この手順に SharePoint サーバーの全体管理を使用することはできません。 詳細については、以下を参照してください。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "50100203"
   
  ![PowerPivot for SharePoint 2010 アップグレード](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "PowerPivot for SharePoint 2010 アップグレード")  
   
-1.  [Microsoft SharePoint 2010 Service Pack 2](http://www.microsoft.com/download/details.aspx?id=39672) をダウンロードして、ファーム内のすべてのサーバーに適用します。 SharePoint SP2 のインストールが成功したことを確認します。 [サーバーの全体管理] の [アップグレードと移行] ページで、[製品および更新プログラムのインストール状態の確認] ページを開いて SP2 に関連するステータス メッセージを参照します。  
+1.  [Microsoft SharePoint 2010 Service Pack 2](https://www.microsoft.com/download/details.aspx?id=39672) をダウンロードして、ファーム内のすべてのサーバーに適用します。 SharePoint SP2 のインストールが成功したことを確認します。 [サーバーの全体管理] の [アップグレードと移行] ページで、[製品および更新プログラムのインストール状態の確認] ページを開いて SP2 に関連するステータス メッセージを参照します。  
   
 2.  SharePoint 2010 Administration Windows Service が実行されていることを確認します。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "50100203"
   
          ブックを新しいバージョンで上書きする場合は、 **[はい]** をクリックします。 それ以外の場合は、 **[いいえ]** をクリックしてホーム ページに戻ります。 ブックを別の場所に保存してコピーを作成します。続行する準備が整ったら、この手順に戻ります。  
   
-         ダッシュボードで使用するブックをカスタマイズする方法の詳細については、「 [Power Pivot 管理ダッシュボードのカスタマイズ](http://go.microsoft.com/fwlink/?linkID=229639)」を参照してください。  
+         ダッシュボードで使用するブックをカスタマイズする方法の詳細については、「 [Power Pivot 管理ダッシュボードのカスタマイズ](https://go.microsoft.com/fwlink/?linkID=229639)」を参照してください。  
   
     5.  タスク一覧内のアクションを確認し、ツールで実行しないアクションを除外します。 既定ではすべてのアクションが含まれています。 アクションを削除するには、タスク一覧でアクションを選択し、[パラメーター] ページの **[この操作をタスク一覧に含めます]** チェック ボックスをオンにします。  
   
@@ -351,15 +351,15 @@ Get-PowerPivotSystemService
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を実行するすべてのコンピューターでサービスが実行されていることを確認します。|[PowerPivot for SharePoint サーバーの開始または停止](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
 |サイト コレクション レベルでの機能のアクティブ化を確認します。|[サイト コレクションを対象とした Power Pivot 機能の統合をサーバーの全体管理でアクティブ化する方法](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
 |ブックを開き、フィルターおよびスライサーをクリックしてクエリを開始することで、個々の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックが適切に読み込まれることを確認します。|ハード ドライブのキャッシュ ファイルの存在をチェックします。 キャッシュ ファイルが存在する場合は、データ ファイルがその物理サーバーに読み込まれたことを示します。 c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup フォルダー内のキャッシュ ファイルを探します。|  
-|データ更新が構成されているブックを選択して、データ更新をテストします。|データ更新をテストする最も簡単な方法は、データ更新スケジュールを変更することです。具体的には、 **[さらに、できるだけ早く更新を行います]** チェック ボックスをオンにして、データ更新がすぐに実行されるようにします。 この手順によって、データ更新が現在のブックに対して成功するかどうかが判明します。 他のよく使用されるブックにもこの手順を実行して、データ更新が機能することを確認します。 データ更新のスケジュール設定については、「 [データ更新のスケジュール (PowerPivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)」を参照してください。|  
+|データ更新が構成されているブックを選択して、データ更新をテストします。|データ更新をテストする最も簡単な方法は、データ更新スケジュールを変更することです。具体的には、 **[さらに、できるだけ早く更新を行います]** チェック ボックスをオンにして、データ更新がすぐに実行されるようにします。 この手順によって、データ更新が現在のブックに対して成功するかどうかが判明します。 他のよく使用されるブックにもこの手順を実行して、データ更新が機能することを確認します。 データ更新のスケジュール設定については、「 [データ更新のスケジュール (PowerPivot for SharePoint)](https://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)」を参照してください。|  
 |随時、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードのデータ更新レポートを監視して、データ更新エラーがないことを確認します。|[Power Pivot 管理ダッシュボードと使用状況データ](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設定と機能を構成する方法の詳細については、「 [サーバーの全体管理での PowerPivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)」を参照してください。  
   
- インストール後のすべての構成タスクについて手順を追った説明については、「 [初期構成 (PowerPivot for SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)」を参照してください。  
+ インストール後のすべての構成タスクについて手順を追った説明については、「 [初期構成 (PowerPivot for SharePoint)](https://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 のエディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [Power Pivot for SharePoint 2010 のインストール](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [Power Pivot for SharePoint 2010 のインストール](https://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

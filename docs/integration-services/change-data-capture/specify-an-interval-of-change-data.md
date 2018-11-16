@@ -13,12 +13,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a06d6b029a4d64f52d9d939e3935fed32d7b37b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a115010220a9d98cf861b8e603fee69472f1e305
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120329"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640135"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 このエンドポイントは **datetime** 値で、パッケージで後から使用するためにパッケージ変数に格納されます。  
@@ -109,7 +109,7 @@ ms.locfileid: "49120329"
  **次のトピック:** [データの変更の準備ができているかどうかを判断する](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>参照  
- [パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Integration Services (SSIS) 式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md)   
  [スクリプト タスク](../../integration-services/control-flow/script-task.md)  

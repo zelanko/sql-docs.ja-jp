@@ -14,12 +14,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c0d656ffdc18168e12092abfb66b0027fd68632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66422144cac35578bd9d6e77c887ad7e12ed21f9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633140"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673601"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "47633140"
 ## <a name="rbs-requirements"></a>RBS 要件  
  - RBS では、BLOB メタデータが格納されている主なデータベース サーバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise が必要です。  ただし、指定された FILESTREAM プロバイダーを使用する場合は、BLOB 自体を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard に格納できます。 RBS が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するには、 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は ODBC ドライバー バージョン 11 以上、 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]の場合は ODBC ドライバー バージョン 13 以上が必要です。 ドライバーは、「 [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)」(SQL Server 用の ODBC ドライバーをダウンロードする) で入手できます。    
   
- RBS には、RBS を使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで格納できる FILESTREAM プロバイダーが含まれています。 RBS を使用して BLOB を別のストレージ ソリューションに格納する場合は、そのストレージ ソリューション用に開発されたサード パーティの RBS プロバイダーを使用するか、RBS API を使用してカスタム RBS プロバイダーを開発する必要があります。 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)には、NTFS ファイル システムに BLOB を格納するサンプル プロバイダーが学習用リソースとして用意されています。  
+ RBS には、RBS を使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで格納できる FILESTREAM プロバイダーが含まれています。 RBS を使用して BLOB を別のストレージ ソリューションに格納する場合は、そのストレージ ソリューション用に開発されたサード パーティの RBS プロバイダーを使用するか、RBS API を使用してカスタム RBS プロバイダーを開発する必要があります。 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)には、NTFS ファイル システムに BLOB を格納するサンプル プロバイダーが学習用リソースとして用意されています。  
   
 ## <a name="rbs-security"></a>RBS セキュリティ  
- SQL リモート BLOB ストレージ チームのブログはこの機能に関する適切な情報源です。 「 [RBS Security Model (RBS セキュリティ モデル)](http://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)」で、RBS セキュリティ モデルに関する投稿を参照してください。  
+ SQL リモート BLOB ストレージ チームのブログはこの機能に関する適切な情報源です。 「 [RBS Security Model (RBS セキュリティ モデル)](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)」で、RBS セキュリティ モデルに関する投稿を参照してください。  
   
 ### <a name="custom-providers"></a>カスタム プロバイダー  
  カスタム プロバイダーを使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部に格納する場合は、カスタム プロバイダーが使用するストレージ メディアに適した権限と暗号化オプションで格納された BLOB が保護されていることを確認してください。  
@@ -77,10 +77,10 @@ ms.locfileid: "47633140"
 ##  <a name="rbsresources"></a> RBS リソース  
   
  **RBS サンプル**  
- [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) で入手できる RBS サンプルでは、RBS アプリケーションの開発方法とカスタム RBS プロバイダーの開発およびインストール方法を示します。  
+ [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) で入手できる RBS サンプルでは、RBS アプリケーションの開発方法とカスタム RBS プロバイダーの開発およびインストール方法を示します。  
   
  **RBS ブログ**  
- [RBS ブログ](http://go.microsoft.com/fwlink/?LinkId=210315) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
+ [RBS ブログ](https://go.microsoft.com/fwlink/?LinkId=210315) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
   
 ##  <a name="Key_rotation"></a> キー ローテーションのスクリプト  
  この例では、 `sp_rotate_rbs_symmetric_credential_key` というストアド プロシージャを作成し、現在使用している RBS 資格情報ストアの対称キーを、  

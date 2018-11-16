@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7811bc4c7a58f25379e0565090004e92049ce23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bb3879e8f411dc8fa82fe8344df693e8cdaef2a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802400"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672901"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ GO
 |オプション|[説明]|  
 |------------|-----------------|  
 |**SCHEMABINDING**|ネイティブ コンパイル ストアド プロシージャは、参照するオブジェクトのスキーマにバインドされている必要があります。 これは、プロシージャによるテーブル参照が必要であることを意味しています。 プロシージャ内で参照されているテーブルにはスキーマ名が含まれている必要があり、クエリでワイルドカード (\*) は使用できません ( `SELECT * from...`はありません)。 このバージョンの**では、ネイティブ コンパイル ストアド プロシージャに対してのみ** SCHEMABINDING [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がサポートされます。|  
-|**BEGIN ATOMIC**|ネイティブ コンパイル ストアド プロシージャの本体は、厳密に 1 つの ATOMIC ブロックで構成されている必要があります。 ATOMIC ブロックでは、ストアド プロシージャのアトミック実行が保証されます。 プロシージャをアクティブなトランザクションのコンテキストの外部で呼び出した場合、新しいトランザクションが開始され、ATOMIC ブロックの末尾でコミットされます。 ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックには、次の 2 つの必須オプションがあります。<br /><br /> **TRANSACTION ISOLATION LEVEL**。 サポートされる分離レベルについては、「 [メモリ最適化テーブルのトランザクション分離](http://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) 」を参照してください。<br /><br /> **LANGUAGE**。 ストアド プロシージャの言語は、使用可能な言語または言語の別名の 1 つに設定されている必要があります。|  
+|**BEGIN ATOMIC**|ネイティブ コンパイル ストアド プロシージャの本体は、厳密に 1 つの ATOMIC ブロックで構成されている必要があります。 ATOMIC ブロックでは、ストアド プロシージャのアトミック実行が保証されます。 プロシージャをアクティブなトランザクションのコンテキストの外部で呼び出した場合、新しいトランザクションが開始され、ATOMIC ブロックの末尾でコミットされます。 ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックには、次の 2 つの必須オプションがあります。<br /><br /> **TRANSACTION ISOLATION LEVEL**。 サポートされる分離レベルについては、「 [メモリ最適化テーブルのトランザクション分離](https://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) 」を参照してください。<br /><br /> **LANGUAGE**。 ストアド プロシージャの言語は、使用可能な言語または言語の別名の 1 つに設定されている必要があります。|  
   
 ## <a name="see-also"></a>参照  
  [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  

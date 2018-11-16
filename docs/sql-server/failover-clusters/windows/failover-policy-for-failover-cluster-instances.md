@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3448583d07f73c23f19c2eec68eb59b71fd06af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0b06b45e9d3f2cfd06fba04a0d24547ec4689ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709050"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699790"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47709050"
  * 既定値  
   
 ####  <a name="respond"></a> エラーへの対応  
- 1 つまたは複数のエラー条件が検出された後で WSFC サービスがどのようにエラーに対応するかは、WSFC クォーラムの状態と、FCI リソース グループの再起動およびフェールオーバー設定に依存します。 FCI がその WSFC クォーラムを失った場合、FCI 全体がオフラインになり、FCI は高可用性を失います。 FCI が WSFC クォーラムを保持し続けた場合、WSFC サービスは、最初に障害が発生したノードの再起動を試み、再起動の試行が失敗した場合はフェールオーバーを実行することによって対応します。 再起動とフェールオーバーの設定は、フェールオーバー クラスター マネージャー スナップインで構成します。 これらの設定の詳細については、「[\<リソース> プロパティ: [ポリシー] タブ](http://technet.microsoft.com/library/cc725685.aspx)」を参照してください。  
+ 1 つまたは複数のエラー条件が検出された後で WSFC サービスがどのようにエラーに対応するかは、WSFC クォーラムの状態と、FCI リソース グループの再起動およびフェールオーバー設定に依存します。 FCI がその WSFC クォーラムを失った場合、FCI 全体がオフラインになり、FCI は高可用性を失います。 FCI が WSFC クォーラムを保持し続けた場合、WSFC サービスは、最初に障害が発生したノードの再起動を試み、再起動の試行が失敗した場合はフェールオーバーを実行することによって対応します。 再起動とフェールオーバーの設定は、フェールオーバー クラスター マネージャー スナップインで構成します。 これらの設定の詳細については、「[\<リソース> プロパティ: [ポリシー] タブ](https://technet.microsoft.com/library/cc725685.aspx)」を参照してください。  
   
  クォーラムの正常性の維持については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」をご覧ください。  
   

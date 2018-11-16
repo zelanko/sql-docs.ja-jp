@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609700"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813345"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>レポート サーバー URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに URL が使用されます。 どちらのアプリケーションを使用する場合も、事前に Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]それぞれに 1 つ以上の URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、両方のアプリケーションの URL に既定値が用意されています。この既定値は、他の Web サービスや Web アプリケーションとのサイド バイ サイドの配置をはじめとするほとんどの配置シナリオに有効です。  
@@ -38,9 +38,9 @@ ms.locfileid: "47609700"
 ## <a name="default-urls"></a>既定の URL  
  レポート サーバーまたは [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に URL を通じてアクセスする場合は、URL に IP アドレスではなくホスト名を指定します。 TCP/IP ネットワークでは、IP アドレスがホスト名 (またはコンピューターのネットワーク名) に解決されます。 既定値を使用して URL を構成した場合は、コンピューター名または localhost をホスト名として指定する URL を使用して、レポート サーバー Web サービスにアクセスできます。  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  上記の URL の使用を可能にする設定を次の表に示します。 この表の既定値を使用することで、ホスト名を含んだ URL を通じてレポート サーバーに接続できるようになります。  
   

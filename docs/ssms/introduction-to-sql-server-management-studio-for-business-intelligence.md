@@ -15,12 +15,12 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8626960b3b5a16a8edc3aed7956799de24e61c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f3ec990e48b6d9913db9e610fee6bfca6b9190a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608790"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701368"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>ビジネス インテリジェンスに使用される SQL Server Management Studio の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ SQL Server Management Studio では、Reporting Services の機能の有効化�
   
 [共有スケジュール] フォルダーを使用して共有スケジュールを管理し、レポート サーバー データベース (ReportServer、ReportServerTempdb) を管理します。 また、レポート サーバー データベースを新規または別の SQL Server データベース エンジン ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]) に移動する場合は、master システム データベースで RSExecRole を作成します。 これらの作業の詳細については、次のトピックを参照してください。  
   
--   [Management Studio の操作方法に関するトピック](http://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
+-   [Management Studio の操作方法に関するトピック](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   
 -   [レポート サーバー データベースの管理](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)  
   
@@ -52,11 +52,11 @@ SQL Server Management Studio では、Reporting Services の機能の有効化�
   
 また、各種機能の有効化と構成、サーバーの既定値の設定、およびロールとジョブの管理を行うことで、サーバーを管理します。 これらの作業の詳細については、次のトピックを参照してください。  
   
--   [レポート サーバーのプロパティを設定する方法 (Management Studio)](http://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
+-   [レポート サーバーのプロパティを設定する方法 (Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
   
--   [ロールを作成、削除、または変更する方法 (Management Studio)](http://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
+-   [ロールを作成、削除、または変更する方法 (Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
   
--   [Reporting Services のクライアント側印刷機能の有効化と無効化](http://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
+-   [Reporting Services のクライアント側印刷機能の有効化と無効化](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   
 ## <a name="see-also"></a>参照  
 [SQL Server Data Tools を使用した開発と実装](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

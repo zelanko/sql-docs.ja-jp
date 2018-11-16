@@ -11,12 +11,12 @@ ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0fe82226d1c4de82883498ba92893ec98fc7b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfb25121dcc417f2ead0d85bc723bc7b402cebab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681970"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675071"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>SQL Server 単体テスト デザイナーのテスト条件を作成する方法
 新しいテスト条件の作成には、拡張可能な [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) クラスを利用できます。 たとえば、列数や結果セットの値を検証するテスト条件を作成することができます。  
@@ -49,7 +49,7 @@ ms.locfileid: "47681970"
   
 10. [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) クラスから、独自のクラスを派生します。  
   
-11. アセンブリに厳密な名前で署名します。 詳細については、「[方法 : 厳密な名前でアセンブリに署名する](http://msdn.microsoft.com/library/xc31ft41.aspx)」を参照してください。  
+11. アセンブリに厳密な名前で署名します。 詳細については、「[方法 : 厳密な名前でアセンブリに署名する](https://msdn.microsoft.com/library/xc31ft41.aspx)」を参照してください。  
   
 12. クラス ライブラリをビルドします。  
   

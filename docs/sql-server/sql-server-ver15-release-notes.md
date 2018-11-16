@@ -1,23 +1,21 @@
 ---
 title: SQL Server 2019 リリース ノート | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
-ms.prod: sql-server-2018
+ms.prod: sql
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7fba2c4989b6e50fe720a44e127b044dea93876d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 2c21ac917845b8162348b93fec3b868f1f748592
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269805"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703860"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 プレビュー リリース ノート
 
@@ -33,7 +31,7 @@ ms.locfileid: "51269805"
 > - SQL Server の既存のインスタンスを任意のバージョンからアップグレード
 
 **[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] をお試しください**
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] をダウンロードして Windows にインストールする](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] をダウンロードして Windows にインストールする](https://go.microsoft.com/fwlink/?LinkID=862101)
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)、および [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) の Linux にインストールする。
 - [Docker で SQL Server 2019 を実行する](../linux/quickstart-install-connect-docker.md)。
 
@@ -45,12 +43,12 @@ ms.locfileid: "51269805"
 限定的なサポートは、次のいずれかの場所で提供される場合があります。
 
 - フォーラム
-  - [SQL Server フィードバック](http://aka.ms/sqlfeedback)
+  - [SQL Server フィードバック](https://aka.ms/sqlfeedback)
   - [SQL Server の概要](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [SQL Server のドキュメント](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
-- または、[#sqlhelp](https://twitter.com/search?q=%23sqlhelp) を付けて [@SQLServer](http://twitter.com/SQLServer) にツイートしてください
+- または、[#sqlhelp](https://twitter.com/search?q=%23sqlhelp) を付けて [@SQLServer](https://twitter.com/SQLServer) にツイートしてください
 
 ### <a name="documentation-ctp-21"></a>ドキュメント (CTP 2.1)
 
@@ -69,7 +67,7 @@ ms.locfileid: "51269805"
     - [Linux - システム要件](../linux/sql-server-linux-setup.md#system)
   - **ソフトウェア**
     - Windows Server 2016 以降。 その他の要件については、[SQL Server のインストール要件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)に関する記事をご覧ください
-    - Microsoft .NET Framework 4.6.2。 [ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=53344)から入手できます。
+    - Microsoft .NET Framework 4.6.2。 [ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53344)から入手できます。
     - Linux については、[サポートされている Linux プラットフォーム](../linux/sql-server-linux-setup.md#supportedplatforms)に関する記事をご覧ください
 
 ### <a name="floating-point-results"></a>浮動小数点の結果

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021096"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814095"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021096"
   
  以下のトピックでは、Office および Word のオプションについて詳しく説明します。  
   
--   Word の **[Microsoft Office 言語設定]** または **[Word のオプション]** ダイアログ ボックスで編集言語を変更する方法。 詳細については、「 [編集言語、表示言語、またはヘルプ言語を設定する](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)」を参照してください。  
+-   Word の **[Microsoft Office 言語設定]** または **[Word のオプション]** ダイアログ ボックスで編集言語を変更する方法。 詳細については、「 [編集言語、表示言語、またはヘルプ言語を設定する](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)」を参照してください。  
   
--   Office 言語パックを追加して編集言語を変更する方法。 詳細については、「 [編集言語、表示言語、またはヘルプ言語を設定する](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 」および「 [Office の言語オプション](http://office.microsoft.com/language/)」を参照してください。  
+-   Office 言語パックを追加して編集言語を変更する方法。 詳細については、「 [編集言語、表示言語、またはヘルプ言語を設定する](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 」および「 [Office の言語オプション](https://office.microsoft.com/language/)」を参照してください。  
   
 > [!NOTE]  
 >  Word の **[Microsoft Office 言語設定]** または **[Word のオプション]** ダイアログ ボックスで編集言語を変更すると、その変更がすべての Office プログラムに適用されます。  

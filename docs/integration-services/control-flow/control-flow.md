@@ -15,12 +15,12 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 032b2fc6eee634f1b651384a035d381820844200
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8119069b08b2f84bcdf71fa50894eb2e743b88b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673460"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640669"
 ---
 # <a name="control-flow"></a>[制御フロー]
   パッケージは、制御フローと、オプションで含まれる 1 つ以上のデータ フローから構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されている制御フロー要素は、パッケージ内の構造を提供するコンテナー、機能を提供するタスク、および優先順位制約の 3 種類です。優先順位制約は、実行ファイル、コンテナー、タスクを連結して正しく順序付けされた制御フローを作成するために使用されます。  
@@ -54,11 +54,11 @@ ms.locfileid: "47673460"
   
      **[制御フロー]** タブのデザイン画面にタスクまたはコンテナーを追加すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーは、アイテムにコネクタを自動的に追加します。 パッケージに 2 つ以上のアイテム、つまりタスクまたはコンテナーが含まれている場合、コネクタを 1 つのアイテムから別のアイテムにドラッグすると、それらを制御フローに結合できます。  
   
-     2 つのアイテム間のコネクタは、優先順位制約を表します。 優先順位制約では、連結された 2 つのアイテムの関連性を定義します。 ここでは、実行時にタスクとコンテナーが実行される順序、およびタスクとコンテナーが実行される条件を指定します。 たとえば、優先順位制約は、あるタスクが成功した場合にのみ、制御フロー内の次のタスクが実行されるように指定できます。 詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
+     2 つのアイテム間のコネクタは、優先順位制約を表します。 優先順位制約では、連結された 2 つのアイテムの関連性を定義します。 ここでは、実行時にタスクとコンテナーが実行される順序、およびタスクとコンテナーが実行される条件を指定します。 たとえば、優先順位制約は、あるタスクが成功した場合にのみ、制御フロー内の次のタスクが実行されるように指定できます。 優先順位制約の詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
   
 -   接続マネージャーを追加します。  
   
-     多くのタスクではデータ ソースに接続する必要があるため、タスクに必要な接続マネージャーをパッケージに追加する必要があります。 使用する列挙子の型に応じて、Foreach ループ コンテナーにも接続マネージャーが必要となる場合があります。 接続マネージャーは、制御フローをアイテム別に作成するときに追加できます。または、制御フローの作成を開始する前に追加することもできます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
+     多くのタスクではデータ ソースに接続する必要があるため、タスクに必要な接続マネージャーをパッケージに追加する必要があります。 使用する列挙子の型に応じて、Foreach ループ コンテナーにも接続マネージャーが必要となる場合があります。 接続マネージャーは、制御フローをアイテム別に作成するときに追加できます。または、制御フローの作成を開始する前に追加することもできます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
   
  また、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、デザイン画面を管理したり、制御フローを自己文書化するための、多数のデザイン時機能も含まれています。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47673460"
   
 -   [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 -   [コンポーネントのグループ化とグループの解除](../../integration-services/group-or-ungroup-components.md)  
   

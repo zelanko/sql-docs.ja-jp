@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020326"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814025"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストール時の問題解決
 
   セットアップ中にエラーが発生して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールできない場合は、この記事の手順を使用して、インストール エラーの原因として最も可能性が高い状況に対処してください。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に関連するその他のエラーや問題については、[SSRS の問題とエラーのトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)に関するページを参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に関連するその他のエラーや問題については、[SSRS の問題とエラーのトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)に関するページを参照してください。  
   
  発生した問題がリリース ノートに記載されている場合があるので、[オンライン リリース ノート](https://go.microsoft.com/fwlink/?linkid=236893)を参照してください。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "50020326"
   
 -   開発環境に関する SharePoint 記事を確認します。 [SharePoint の全般的な開発環境をセットアップする](https://msdn.microsoft.com/library/ee554869)  
   
--   フォーラムの投稿「 [Windows 7 へのインストール後、[サーバーの全体管理] が空白ページを返す](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)」を参照します。  
+-   フォーラムの投稿「 [Windows 7 へのインストール後、[サーバーの全体管理] が空白ページを返す](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)」を参照します。  
   
 -   SharePoint サービス (SharePoint 2013/2016 サーバーの全体管理サービスなど) に使用しているサービス アカウントに、ローカル オペレーティング システムの管理者特権を付与します。  
   
@@ -267,9 +267,9 @@ ms.locfileid: "50020326"
 ##  <a name="bkmk_additional"></a> その他のリソース  
  以下に示すのは、問題解決時に役立つ可能性のある追加資料です。  
   
--   TechNet Wiki: [SharePoint 2010 統合モードでの SQL Server Reporting Services (SSRS) のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   TechNet Wiki: [SharePoint 2010 統合モードでの SQL Server Reporting Services (SSRS) のトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [フォーラム: SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [フォーラム: SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
 -   フィードバックやその他のご不明な点がございましたら、 [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server) にアクセスしてください。  
   

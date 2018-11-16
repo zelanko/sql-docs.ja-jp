@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: aabe54448e4f91a87531d4e56de4f617a1610d4f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419127"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701989"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server を構成して Microsoft にフィードバックを送信する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Linux 上の SQL Server については、「[Customer Feedback for SQL Server o
 セットアップ後は、SQL Server コンポーネントおよびインスタンスの使用状況データ収集の設定は、エラーと使用状況レポートのアプリケーションで変更できます。 このアプリケーションは、SQL Server のインストールの一部として提供されます。 このツールを使うと、各々の SQL Server インスタンスで、それ自体の使用状況データ設定を構成できます。
 
 > [!NOTE]
-> エラーと使用状況レポートのアプリケーションは、SQL Server の構成ツールに表示されます。 このツールを使用して、SQL Server 2017 と同様の方法で、エラー報告と使用状況に関するフィードバックの収集の設定を管理できます。 エラー報告は、使用状況に関するフィードバックの収集とは異なるため、使用状況に関するフィードバックの収集に関係なくオンまたはオフにすることができます。 エラー報告では、Microsoft に送信するクラッシュ ダンプを収集しますが、それには「[プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)」で説明されているような機密情報が含まれている可能性があります。
+> エラーと使用状況レポートのアプリケーションは、SQL Server の構成ツールに表示されます。 このツールを使用して、SQL Server 2017 と同様の方法で、エラー報告と使用状況に関するフィードバックの収集の設定を管理できます。 エラー報告は、使用状況に関するフィードバックの収集とは異なるため、使用状況に関するフィードバックの収集に関係なくオンまたはオフにすることができます。 エラー報告では、Microsoft に送信するクラッシュ ダンプを収集しますが、それには「[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)」で説明されているような機密情報が含まれている可能性があります。
 
 SQL Server エラーと使用状況レポートを開始するには、**[開始]** をクリックまたはタップし、検索ボックスで「エラー」を検索します。 SQL Server エラーと使用状況レポートの項目が表示されます。 このツールを開始した後は、使用状況に関するフィードバックと、インスタンスとそのコンピューターにインストールされているコンポーネントについて収集された重大なエラーを管理できます。
 
@@ -153,7 +153,7 @@ SSMS では、それ自体のクラッシュ ダンプを収集しません。 S
  
 - Windows Server 2016 および Windows 10
 
-    [組織内の Windows 利用統計情報の構成](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
+    [組織内の Windows 利用統計情報の構成](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 および Windows 7
 
     [WER 設定](/windows/desktop/wer/wer-settings)

@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d87ea7d4e61f2da561728ce66e797b32f2fd17b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785020"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642009"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
   変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "47785020"
 ## <a name="system-and-user-defined-variables"></a>システム変数とユーザー定義変数  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、ユーザー定義変数とシステム変数の、2 種類の変数がサポートされています。 ユーザー定義変数とはパッケージの開発者によって定義された変数で、システム変数とは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]によって定義された変数です。 ユーザー定義変数は、パッケージで必要な数だけ作成できますが、システム変数は追加作成できません。  
   
- 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「[SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)」と「[SQL 実行タスクのパラメーターとリターン コード](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
+ 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「[SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)」と「[SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
   
 > [!NOTE]  
 >  ユーザー定義変数とシステム変数の名前では、大文字と小文字が区別されます。  
@@ -75,7 +75,7 @@ ms.locfileid: "47785020"
   
  コンテナーの種類ごとに、異なるセットのシステム変数を使用できます。 パッケージとパッケージ要素が使用するシステム変数の詳細については、「 [システム変数](../integration-services/system-variables.md)」を参照してください。  
   
- 変数の実際的な使用シナリオの詳細については、「 [パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
+ 変数の実際的な使用シナリオの詳細については、「 [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
   
 ## <a name="properties-of-variables"></a>変数のプロパティ  
  **[変数]** ウィンドウまたは **[プロパティ]** ウィンドウで、次のプロパティを設定してユーザー定義変数を構成できます。 一部のプロパティは [プロパティ] ウィンドウでのみ使用できます。  
@@ -96,7 +96,7 @@ ms.locfileid: "47785020"
  変数名を指定します。  
   
  **名前空間**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、**User** および **System** という 2 つの名前空間が用意されています。 既定では、カスタム変数は **User** 名前空間に属し、システム変数は **System** 名前空間に属します。 ユーザー定義変数用に追加の名前空間を作成し、 **User** 名前空間の名前を変更することはできますが、 **System** 名前空間の名前を変更したり、変数を **System** 名前空間に追加したり、システム変数を別の名前空間に割り当てたりすることはできません。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、 **User** および **System**という 2 つの名前空間が用意されています。 既定では、カスタム変数は **User** 名前空間に属し、システム変数は **System** 名前空間に属します。 ユーザー定義変数用に追加の名前空間を作成し、 **User** 名前空間の名前を変更することはできますが、 **System** 名前空間の名前を変更したり、変数を **System** 名前空間に追加したり、システム変数を別の名前空間に割り当てたりすることはできません。  
   
 **RaiseChangedEvent**  
  このプロパティを **True**に設定すると、変数の値が変更された場合に **OnVariableValueChanged** イベントが発生します。  
@@ -140,7 +140,7 @@ ms.locfileid: "47785020"
 
 変数には、変数値と変数のデータ型を設定するオプションが含まれています。 この 2 つのプロパティには互換性が必要です。たとえば、文字列の値を整数データ型に使用することはできません。  
   
- 変数を式として評価するように構成した場合は、式を指定する必要があります。 式は実行時に評価され、変数は評価結果に設定されます。 たとえば、変数が式 `DATEPART("month", GETDATE())` を使用している場合、変数の値は、現在の日付の月と等しい数値になります。 式は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 式の構文文法を使用する、有効な式である必要があります。 変数に式を使用する場合、リテラルおよび式文法が提供する演算子と関数も使用できますが、パッケージ内のデータ フローの列は参照できません。 式の最大長は 4,000 文字です。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
+ 変数を式として評価するように構成した場合は、式を指定する必要があります。 式は実行時に評価され、変数は評価結果に設定されます。 たとえば、変数が式 `DATEPART("month", GETDATE())` を使用している場合、変数の値は、現在の日付の月と等しい数値になります。 式は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 式の構文文法を使用する、有効な式である必要があります。 変数に式を使用する場合、リテラルおよび式文法が提供する演算子と関数も使用できますが、パッケージ内のデータ フローの列は参照できません。 式の最大長は 4,000 文字です。 詳細については、「 [Integration Services (SSIS) 式](../integration-services/expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
 **ValueType**    
  > [!NOTE]  
@@ -155,9 +155,9 @@ ms.locfileid: "47785020"
   
  **データ フロー式** 変数を使用して、派生列変換と条件分割変換で列に値を設定するための式や、データ行を各種の変換出力に送るための式に値を提供します。 たとえば、式 `@varSalutation + LastName`は、 `VarSalutation` 変数の値と `LastName` 列を連結します。 式 `Income < @HighIncome` は、`Income` 列の値が `HighIncome` 変数の値よりも小さいデータ行を出力に送信します。 詳細については、「[派生列変換](../integration-services/data-flow/transformations/derived-column-transformation.md)」、「[条件分割変換](../integration-services/data-flow/transformations/conditional-split-transformation.md)」、および「[Integration Services (SSIS) の式](../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
- **優先順位制約の式** 優先順位制約で制約付き実行可能ファイルを実行するかどうかを決定するために使用する値を提供します。 これらの式は、実行結果 (成功、失敗、完了) と組み合わせて使用することも、実行結果の代わりに使用することもできます。 たとえば、式 `@varMax > @varMin`が **true**に評価される場合、実行可能ファイルは実行されます。 詳細については、「[優先順位制約に式を追加する](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)」を参照してください。  
+ **優先順位制約の式** 優先順位制約で制約付き実行可能ファイルを実行するかどうかを決定するために使用する値を提供します。 これらの式は、実行結果 (成功、失敗、完了) と組み合わせて使用することも、実行結果の代わりに使用することもできます。 たとえば、式 `@varMax > @varMin`が **true**に評価される場合、実行可能ファイルは実行されます。 詳細については、「[優先順位制約に式を追加する](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)」を参照してください。  
   
- **パラメーターおよびリターン コード** 入力パラメーターに値を提供したり、出力パラメーターおよびリターン コードの値を格納したりします。 そのためには、変数をパラメーターおよび戻り値にマップします。 たとえば、変数 `varProductId` を 23 に設定して SQL ステートメント `SELECT * from Production.Product WHERE ProductID = ?`を実行すると、 `ProductID` が 23 である製品が取得されます。 詳細については、「 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
+ **パラメーターおよびリターン コード** 入力パラメーターに値を提供したり、出力パラメーターおよびリターン コードの値を格納したりします。 そのためには、変数をパラメーターおよび戻り値にマップします。 たとえば、変数 `varProductId` を 23 に設定して SQL ステートメント `SELECT * from Production.Product WHERE ProductID = ?`を実行すると、 `ProductID` が 23 である製品が取得されます。 詳細については、「 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
   
  **For ループ式** For ループの初期化式、評価式、および代入式で使用する値を提供します。 たとえば、変数 `varCount` が 2、変数 `varMaxCount` が 10、初期化式が `@varCount`、評価式が  `@varCount < @varMaxCount`、代入式が `@varCount =@varCount +1`の場合、ループは 8 回繰り返されます。 詳細については、「 [For ループ コンテナー](../integration-services/control-flow/for-loop-container.md)」を参照してください。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "47785020"
   
 6.  必要に応じて、 **[グリッドのオプション]** アイコンをクリックし、 **[可変グリッドのオプション]** ダイアログ ボックスに表示する追加の列を選択して、 **[OK]** をクリックします。  
   
-7.  必要に応じて、変数のプロパティを設定します。 詳細については、「 [ユーザー定義変数のプロパティを設定する](http://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)」を参照してください。  
+7.  必要に応じて、変数のプロパティを設定します。 詳細については、「 [ユーザー定義変数のプロパティを設定する](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)」を参照してください。  
   
 8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 

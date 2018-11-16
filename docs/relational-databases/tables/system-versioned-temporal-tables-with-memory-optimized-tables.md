@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ed8247257e6687c71b9f516d68014a475cbc2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614440"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658078"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) のシステム バージョン管理されたテンポラル テーブルは、インメモリ OLTP ワークロードで収集されたデータに対して [データ監査および特定時点分析](http://msdn.microsoft.com/library/mt631669.aspx) が必要な場合にコスト効果の高いソリューションを提供するように設計されています。 高いトランザクション スループット、ロックを必要としないコンカレンシー、簡単にクエリできる大量の履歴データを格納する機能を提供します。  
+  [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) のシステム バージョン管理されたテンポラル テーブルは、インメモリ OLTP ワークロードで収集されたデータに対して [データ監査および特定時点分析](https://msdn.microsoft.com/library/mt631669.aspx) が必要な場合にコスト効果の高いソリューションを提供するように設計されています。 高いトランザクション スループット、ロックを必要としないコンカレンシー、簡単にクエリできる大量の履歴データを格納する機能を提供します。  
   
 ## <a name="overview"></a>概要  
  システム バージョン管理されたテンポラル テーブルは、完全なデータ変更履歴を自動的に保持し、特定時点分析用に便利な Transact-SQL 拡張機能を公開します。 一般的なシナリオでは、データの履歴は、定期的に照会されなくても、非常に長い期間 (複数月、場合によっては複数年) 保持されます。  

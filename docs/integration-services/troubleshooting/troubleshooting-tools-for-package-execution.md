@@ -17,12 +17,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43b3ec688f23d1ba50392c09b115301cfa2ae127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707899"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639029"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
@@ -68,7 +68,7 @@ ms.locfileid: "47707899"
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>ログ記録を使ったパッケージ実行のトラブルシューティング  
  ログ記録を有効にすることで、実行中のパッケージで発生する多くの現象を追跡できます。 ログ プロバイダーは、後で分析するために特定のイベントに関する情報をキャプチャし、その情報をデータベース テーブル、フラット ファイル、XML ファイルなどのサポートされている出力形式で保存します。  
   
--   **ログ記録を有効にする**。 イベントのみ、およびキャプチャする情報項目のみを選択することによって、ログの出力を微調整できます。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」を参照してください。  
+-   **ログ記録を有効にする**。 イベントのみ、およびキャプチャする情報項目のみを選択することによって、ログの出力を微調整できます。 詳細については、「 [Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」を参照してください。  
   
 -   **パッケージの Diagnostic イベントを選択して、プロバイダーに関する問題のトラブルシューティングを行います。** パッケージと外部データ ソースとのやり取りに関するトラブルシューティングに役立つログ メッセージが用意されています。 詳細については、「[トラブルシューティング ツールのパッケージ接続](troubleshooting-tools-for-package-connectivity.md)」を参照してください。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47707899"
   
     3.  **行数データのキャプチャを検討する**。 行数情報用に別のテーブルを作成することを検討します。このテーブルでは、パッケージ実行の各インスタンスを ExecutionID で識別します。 行数変換を使用して、データ フロー内の重要な時点の行数を一連の変数に保存します。 データ フローの終了後、SQL 実行タスクを使用してこの一連の値をテーブルの行に挿入すると、後の分析やレポートに役立ちます。  
   
-     この方法の詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のホワイト ペーパー「 [プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](http://go.microsoft.com/fwlink/?LinkId=96602)」の「ETL の監査とログ記録」を参照してください。  
+     この方法の詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] のホワイト ペーパー「[プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](https://go.microsoft.com/fwlink/?LinkId=96602)」の「ETL の監査とログ記録」を参照してください。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>デバッグ ダンプ ファイルを使ったパッケージ実行のトラブルシューティング  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、パッケージの実行に関する情報を提供するデバッグ ダンプ ファイルを作成できます。 詳細については、「[パッケージ実行用のダンプ ファイルを生成する](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
@@ -95,7 +95,7 @@ ms.locfileid: "47707899"
      **DelayValidation** プロパティはデータ フロー タスク上で設定できますが、個別のデータ フロー コンポーネントでは設定できません。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを **false**。 ただし、このプロパティの値が **false**の場合、コンポーネントは外部データ ソースのメタデータに変更が加えられても認識しません。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを **true** に設定すると、特にパッケージでトランザクションを使用している場合、データベース内でのロックに起因するブロッキング問題を回避するのに役立ちます。  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>実行時の権限の問題のトラブルシューティング  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して配置済みパッケージの実行を試みたときにエラーが発生した場合は、エージェントが使用しているアカウントに必要な権限がない可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブから実行するパッケージのトラブルシューティング方法については、「 [SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出すとき、SSIS パッケージが実行されません。](http://support.microsoft.com/kb/918760)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブからパッケージを実行する方法の詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して配置済みパッケージの実行を試みたときにエラーが発生した場合は、エージェントが使用しているアカウントに必要な権限がない可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブから実行するパッケージのトラブルシューティング方法については、「[SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出すとき、SSIS パッケージが実行されません。](https://support.microsoft.com/kb/918760)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブからパッケージを実行する方法の詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。  
   
  Excel や Access のデータ ソースに接続するには、TEMP 環境変数および TMP 環境変数で指定されているフォルダー内の一時ファイルの読み取り、書き込み、作成、および削除を行う権限を持ったアカウントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントに必要です。  
   
@@ -110,4 +110,4 @@ ms.locfileid: "47707899"
  [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- dougbert.com のブログ記事「 [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)」(エラー出力にエラー列名を追加する)  
+ dougbert.com のブログ記事「 [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546)」(エラー出力にエラー列名を追加する)  

@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2400595e7e32cf2eb9e4adee010c844145aac959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721770"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641824"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "47721770"
 >  有効な SQL ステートメントが SQL 実行タスクの外部に記述されている場合、SQL 実行タスクは解析に失敗することがあります。  
   
 > [!NOTE]  
->  SQL 実行タスクは **RecognizeAll** ParseMode の列挙値を使用します。 詳細については、「 [ManagedBatchParser 名前空間](http://go.microsoft.com/fwlink/?LinkId=223617)」を参照してください。  
+>  SQL 実行タスクは **RecognizeAll** ParseMode の列挙値を使用します。 詳細については、「 [ManagedBatchParser 名前空間](https://go.microsoft.com/fwlink/?LinkId=223617)」を参照してください。  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>複数のステートメントを一括送信する  
  SQL 実行タスクに複数のステートメントが含まれる場合、それらをグループ化してバッチとして実行できます。 バッチの開始と終了を知らせるには、GO コマンドを使用します。 2 つの GO コマンド間にあるすべての SQL ステートメントは、OLE DB プロバイダーにバッチで送信されて実行されます。 SQL コマンドには、GO コマンドで分割された複数のバッチを含めることができます。  
@@ -183,7 +183,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  **[SQLStatement]**  
  実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、 **[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
   
- **関連項目:** [[クエリ ビルダー]](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **関連項目:** [[クエリ ビルダー]](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>[SQLSourceType] = [ファイル接続]  
  **[FileConnection]**  
@@ -195,7 +195,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  **[SourceVariable]**  
  既存の変数を選択するか、\<**新しい変数...**> をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>[パラメーター マッピング] ページ - [SQL 実行タスク エディター]
 **[SQL 実行タスク エディター]** ダイアログ ボックスの **[パラメーター マッピング]** ページを使用すると、SQL ステートメント内のパラメーターに変数をマップできます。  
@@ -297,7 +297,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
  パラメーターに値を提供するプロセスで、変数がパラメーター名にマップされ、SQL 実行タスクがパラメーター名の序数値を使用して、変数からパラメーターに値を読み込みます。  
   
- 接続マネージャーが使用するプロバイダーによっては、一部の OLE DB データ型がサポートされないことがあります。 たとえば、Excel ドライバーは限定されたデータ型のセットしか認識しません。 Excel ドライバーでの Jet プロバイダーの動作の詳細については、「[Excel ソース](../../integration-services/data-flow/excel-source.md)」を参照してください。  
+ 接続マネージャーが使用するプロバイダーによっては、一部の OLE DB データ型がサポートされないことがあります。 たとえば、Excel ドライバーは限定されたデータ型のセットしか認識しません。 Excel ドライバーでの Jet プロバイダーの動作の詳細については、「 [Excel ソース](../../integration-services/data-flow/excel-source.md)」を参照してください。  
   
 #### <a name="use-parameters-with-ole-db-connection-managers"></a>OLE DB 接続マネージャーでのパラメーターの使用  
  SQL 実行タスクが OLE DB 接続マネージャーを使用する場合は、タスクの BypassPrepare プロパティを使用できます。 SQL 実行タスクが、パラメーターと共に SQL ステートメントを使用する場合は、このプロパティを **true** に設定する必要があります。  
@@ -307,7 +307,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 ###  <a name="Date_and_time_data_types"></a> 日付と時刻のデータ型のパラメーターの使用  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 接続マネージャーおよび ADO 接続マネージャーでの日付と時刻のパラメーターの使用  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型 (**time** および **datetimeoffset**) のデータを読み取る場合、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーまたは ADO 接続マネージャーのいずれかを使用する SQL 実行タスクには、次の追加要件があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型 ( **time** および **datetimeoffset**) のデータを読み取る場合、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーまたは ADO 接続マネージャーのいずれかを使用する SQL 実行タスクには、次の追加要件があります。  
   
 -   **time** 型のデータの場合、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーでは、パラメーターの型が **Input** または **Output** で、データ型が **string** のパラメーターにこのデータを格納する必要があります。  
   
@@ -322,7 +322,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の詳細とそれを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型にマッピングする方法については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」と「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
 #### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>OLE DB 接続マネージャーでの日付と時刻のパラメーターの使用  
- OLE DB 接続マネージャーを使用する場合、SQL 実行タスクには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型 (**date**、**time**、**datetime**、**datetime2**、および **datetimeoffset**) のデータに関して特定のストレージ要件があります。 このデータは、次のいずれかの型のパラメーターに格納する必要があります。  
+ OLE DB 接続マネージャーを使用する場合、SQL 実行タスクには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型 ( **date**、 **time**、 **datetime**、 **datetime2**、および **datetimeoffset**) のデータに関して特定のストレージ要件があります。 このデータは、次のいずれかの型のパラメーターに格納する必要があります。  
   
 -   NVARCHAR データ型の入力パラメーター。  
   
@@ -338,7 +338,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
  データが適切な入力パラメーターまたは出力パラメーターに格納されないと、パッケージは失敗します。  
   
 #### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>ODBC 接続マネージャーでの日付と時刻のパラメーターの使用  
- ODBC 接続マネージャーを使用する場合、SQL 実行タスクには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型 (**date**、**time**、**datetime**、**datetime2**、または **datetimeoffset**) のいずれかのデータに関して特定のストレージ要件があります。 このデータは、次のいずれかの型のパラメーターに格納する必要があります。  
+ ODBC 接続マネージャーを使用する場合、SQL 実行タスクには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型 ( **date**、 **time**、 **datetime**、 **datetime2**、または **datetimeoffset**) のいずれかのデータに関して特定のストレージ要件があります。 このデータは、次のいずれかの型のパラメーターに格納する必要があります。  
   
 -   SQL_WVARCHAR データ型の **入力** パラメーター。  
   
@@ -382,7 +382,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 |接続の種類|EXEC 構文|  
 |---------------------|-----------------|  
 |EXCEL および OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「 [プロシージャのパラメーター](http://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「[プロシージャのパラメーター](https://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
 |ADO (ADO)|IsQueryStoredProcedure が **False** に設定されている場合、`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure が **True** に設定されている場合、`uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|IsQueryStoredProcedure が **False** に設定されている場合、`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure が **True** に設定されている場合、`uspGetBillOfMaterials`|  
   
@@ -445,7 +445,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     |ODBC|1、2、3、…|  
     |EXCEL および OLE DB|0、1、2、3、…|  
   
-10. **[変数名]** 一覧で、変数を選択します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
+10. **[変数名]** 一覧で、変数を選択します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
   
 11. **[方向]** 一覧で、パラメーターが入力、出力、または戻り値のいずれであるかを指定します。  
   
@@ -471,7 +471,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 |接続の種類|EXEC 構文|  
 |---------------------|-----------------|  
 |EXCEL および OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「 [プロシージャのパラメーター](http://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「[プロシージャのパラメーター](https://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
 |ADO (ADO)|IsQueryStoreProcedure が **False**に設定されている場合、`EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure が **True**に設定されている場合、`myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|IsQueryStoreProcedure を **True**に設定します。<br /><br /> `myStoredProcedure`|  
   
@@ -516,7 +516,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
  XML 結果セットをマップできるのは、 **String** または **Object** データ型の変数のみです。 変数が **String** データ型の場合、SQL 実行タスクは文字列を返し、XML ソースは XML データを使用できます。 変数が **Object** データ型の場合、SQL 実行タスクはドキュメント オブジェクト モデル (DOM) オブジェクトを返します。  
   
- **完全な結果セット** は、 **Object** データ型の変数にマップする必要があります。 結果は、行セット オブジェクトとして返されます。 Foreach ループ コンテナーを使用して、Object 変数に格納されたテーブル行の値をパッケージ変数に抽出し、その後、スクリプト タスクを使用して、パッケージ変数に格納されたデータをファイルに書き出すことができます。 Foreach ループ コンテナーとスクリプト タスクを使用したこの処理方法のデモについては、msftisprodsamples.codeplex.com の CodePlex サンプル「 [Execute SQL Parameters and Result Sets (SQL 実行パラメーターと結果セット)](http://go.microsoft.com/fwlink/?LinkId=157863)」を参照してください。  
+ **完全な結果セット** は、 **Object** データ型の変数にマップする必要があります。 結果は、行セット オブジェクトとして返されます。 Foreach ループ コンテナーを使用して、Object 変数に格納されたテーブル行の値をパッケージ変数に抽出し、その後、スクリプト タスクを使用して、パッケージ変数に格納されたデータをファイルに書き出すことができます。 Foreach ループ コンテナーとスクリプト タスクを使用したこの処理方法のデモについては、msftisprodsamples.codeplex.com の CodePlex サンプル「 [Execute SQL Parameters and Result Sets (SQL 実行パラメーターと結果セット)](https://go.microsoft.com/fwlink/?LinkId=157863)」を参照してください。  
   
  次の表は、結果セットにマップできる変数のデータ型をまとめたものです。  
   
@@ -554,7 +554,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 8.  結果セット マッピングを追加するには、 **[追加]** をクリックします。  
   
-9. **[変数名]** の一覧で、変数を選択するか、新しい変数を作成します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
+9. **[変数名]** の一覧で、変数を選択するか、新しい変数を作成します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
   
 10. **[結果名]** の一覧で、必要に応じて結果セットの名前を変更します。  
   

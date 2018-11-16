@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af97fe48532d87f252cb9d86934d536611a33198
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bcb77ea92b255b15698596f73064404581c34b76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021798"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813155"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML の接続の種類 (SSRS)
   XML データ ソースのデータをレポートに含めるには、種類が XML のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、XML データ拡張機能に基づいています。 このデータ ソースの種類を使用して、XML ドキュメント、Web サービス、またはクエリに埋め込まれた XML に接続し、データを取得します。  
@@ -29,8 +29,8 @@ ms.locfileid: "50021798"
   
 |XML ドキュメントの種類|接続文字列の例|  
 |-----------------------|-------------------------------|  
-|Web サービス|`http://adventure-works.com/results.aspx`|  
-|XML ドキュメント|`http://localhost/XML/Customers.xml`|  
+|Web サービス|`https://adventure-works.com/results.aspx`|  
+|XML ドキュメント|`https://localhost/XML/Customers.xml`|  
 |埋め込み XML ドキュメント|*空*|  
   
  接続文字列の例について詳しくは、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」をご覧ください。  

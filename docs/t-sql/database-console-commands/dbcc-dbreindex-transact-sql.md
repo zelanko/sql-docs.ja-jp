@@ -23,12 +23,12 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 769c4d31fc84e1a929f656a31d8e231447381c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0090be5f985354d4cec29add4d008deea6cac068
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798060"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698770"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47798060"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用してください。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -94,7 +94,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>使用例  
 ### <a name="a-rebuilding-an-index"></a>A. インデックスを再構築する  
-次の例では、`AdventureWorks` データベースの `Employee` テーブルで、`Employee_EmployeeID` クラスター化インデックスを FILL FACTOR `80` で再構築します。
+次の例では、`Employee_EmployeeID` データベースの `80` テーブルで、`Employee` クラスター化インデックスを FILL FACTOR `AdventureWorks` で再構築します。
   
 ```sql  
 USE AdventureWorks2012;   

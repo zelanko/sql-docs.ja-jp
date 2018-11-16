@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4be2b5d0c7d1beacd7c13c1fc6cf57e02fc0113
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cf7d56b973c08f88bc785e5d5ef2d45ea0260ac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661520"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658751"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47661520"
   
  Showplan XML Statistics Profile イベント クラスを使用すると、コンパイル時間についてデータが完全に表示されます。そのため、トレースにこのイベント クラスが含まれていると、パフォーマンスのオーバーヘッドが大幅に増える場合があります。 発生するオーバーヘッドを最小限に抑えるには、短期間だけ特定の問題を監視するトレースに限定してこのイベント クラスを使用するようにします。  
   
- Showplan XML ドキュメントには、スキーマが関連付けられています。 このスキーマは、 [Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=41740)で提供されています。また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一部として提供されています。  
+ Showplan XML ドキュメントには、スキーマが関連付けられています。 このスキーマは、 [Microsoft Web サイト](https://go.microsoft.com/fwlink/?LinkId=41740)で提供されています。また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一部として提供されています。  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Showplan XML Statistics Profile イベント クラスのデータ列  
   

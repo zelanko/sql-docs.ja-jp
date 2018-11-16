@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0c343a3a0326fe8da74ed475bc8dbf6b018a27f0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021046"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811805"
 ---
 # <a name="feature-reference-reporting-services"></a>機能リファレンス (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポートを作成、管理、表示できるツールとアプリケーションが数種類用意されています。 ここでは、これらのツールとアプリケーションのダイアログ ボックス、Web ページ、およびウィザードに関する特有のトピックを紹介します。  
@@ -42,7 +42,7 @@ ms.locfileid: "50021046"
  [Reporting Services の概念 (SSRS)](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services レポート (SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [レポート データセット (SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)   
- [レポート ビルダーの概要](http://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [レポート ビルダーの概要](https://www.microsoft.com/download/en/details.aspx?id=29072)   
  [レポート ビルダー 1.0 を使用したレポートのデザインと実装](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

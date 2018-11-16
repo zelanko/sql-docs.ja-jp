@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3cdab7ab26166392724ee278cbaf76afd68b9472
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 17b51d695a923b6db1661e6e15605a1f05d08178
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099873"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293158"
 ---
 # <a name="create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -155,15 +155,18 @@ SQL Server 開発の一般的なパターンでは、個別のストアド プ�
 
 この演習でさまざまなタスクを各ストアド プロシージャが、システム ストアド プロシージャを使用する専用のストアド プロシージャを作成する方法を学習しました[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Python プロセスを開始します。 Python プロセスへの入力は、パラメーターとして sp_execute_external スクリプトに渡されます。 Python スクリプト自体と SQL Server データベースのデータの変数は、入力として渡されます。
 
+一般に、Python コードの光沢のある、またはを行ベースの出力を返す単純な Python コードで SSMS を使用する予定する必要がありますのみ。 ツールでは、SSMS は、T SQL に似たクエリ言語をサポートし、フラットな行セットを返します。 コードでは、ヒストグラム、散布図のようなビジュアルの出力を生成する場合、イメージをレンダリングするツールやエンドユーザー アプリケーション必要があります。
+
 操作の範囲を処理する包括的なスクリプトを記述するために使用するいくつかの Python 開発者向け別々 のプロシージャにタスクを整理することがありますないように思われます。 トレーニングとスコア付けがさまざまなユース ケース。 、分離して、別のスケジュールと操作へのスコープ アクセス許可の各タスクを配置できます。
 
 同様に、リソースや並列処理、リソースの管理などのアルゴリズムを使用するようにスクリプトを記述することで、SQL Server の機能を利用しても[revoscalepy](../python/what-is-revoscalepy.md)または[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)ですストリーミングと並列実行をサポートします。 トレーニングとスコア付け、分離して特定のワークロードの最適化を対象にすることができます。
 
 最終的な利点は、パラメーターを使用してプロセスを変更できることです。 この演習では、(この例では"Naive Bayes"という名前)、モデルを作成した Python コードは、スコア付けプロセスでモデルを呼び出す 2 番目のストアド プロシージャへの入力として渡されました。 この演習は、1 つのモデルのみを使用しますが、方法、モデルのスコア付けのタスクのパラメーター化すればスクリプトをさらに便利な想像してみてください。
 
-
 ## <a name="next-steps"></a>次の手順
 
-前のチュートリアルでは、ローカルでの実行に重点を置いています。 ただし、ことができますもコードを実行する Python クライアント ワークステーションでは、リモート計算コンテキストとして SQL Server を使用します。 SQL Server に接続するクライアント ワークステーションのセットアップに関する詳細については、次を参照してください。 [Python クライアント ツールのセットアップ](../python/setup-python-client-tools-sql.md)します。
+Python を新しい SQL developer の場合は、ローカル セッションからリモートの SQL Server インスタンスの実行をシフトすることができますと Python コードをローカルで使用するためのツールを確認します。
 
-+ [Python クライアントから revoscalepy モデルを作成します。](use-python-revoscalepy-to-create-model.md)
+> [!div class="nextstepaction"]
+> [Python クライアント ワークステーションをセットアップ](../python/setup-python-client-tools-sql.md)します。
+

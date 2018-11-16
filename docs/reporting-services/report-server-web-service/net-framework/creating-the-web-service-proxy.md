@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 766ae518aad577c4f8a700dbbdd433e1794e9c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05901af8c6f11379b186495d1ae744c5f7598d91
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842250"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814275"
 ---
 # <a name="creating-the-web-service-proxy"></a>Web サービス プロキシの作成
   クライアントと Web サービスは、SOAP メッセージを使用して通信できます。SOAP メッセージは、入力パラメーターと出力パラメーターを XML としてカプセル化します。 プロキシ クラスは、パラメーターを XML 要素にマップした後、ネットワークを介して SOAP メッセージを送信します。 この方法では、プロキシ クラスによって、SOAP レベルで Web サービスと通信する必要がなくなり、SOAP および Web サービスのプロキシをサポートするあらゆる開発環境で Web サービスを呼び出すことができます。  
@@ -36,7 +36,7 @@ ms.locfileid: "47842250"
      たとえば、次のコマンド プロンプト ステートメントは、レポート サーバー Web サービスの管理用エンドポイントの URL を指定します。  
   
     ```  
-    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" http://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
+    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" https://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
      WSDL ツールは、プロキシ生成用のコマンド プロンプト引数の数値を受け付けます。 前の例は C# 言語、プロキシに使用する推奨名前空間 (Web サービス エンドポイントを複数使用する場合に名前の衝突を避けるため) を指定し、ReportingService2010.cs という名前の C# ファイルを生成します。 この例で [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] を指定した場合は、ReportingService2010.vb という名前のプロキシ ファイルが生成されます。 このファイルは、コマンド実行元のディレクトリに作成されます。  
@@ -79,7 +79,7 @@ ReportingService2010 service = new ReportingService2010();
      レポート サーバー Web サービスのレポート実行エンドポイントの単純な URL は、次のようになります。  
   
     ```  
-    http://<Server Name>/reportserver/reportexecution2005.asmx  
+    https://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
      URL には、レポート サーバー Web サービスを配置するドメイン、Web サービスを格納するフォルダー名、および Web サービスの検出ファイル名が含まれます。 各種 URL 要素の完全な説明については、「[SOAP API へのアクセス](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)」を参照してください。  
@@ -105,13 +105,13 @@ ReportingService2010 service = new ReportingService2010();
   
 ```vb  
 Dim rs As New myNamespace.myReferenceName.ReportExecutionService()  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
 ```  
   
 ```csharp  
 myNamespace.myReferenceName.ReportExecutionService rs = new myNamespace.myReferenceName.ReportExecutionService();  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
 ```  

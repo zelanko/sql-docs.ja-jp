@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06b05357db2ed700b9492cd003a65374c1ee81c0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 8f6222c5829af5a63e4ab7fd079a405063f08ec5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905312"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661731"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server での JSON に関する一般的な問題を解決する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -142,13 +142,13 @@ WHERE [key] = 'color'
 ### <a name="reference-keys-that-contain-non-alphanumeric-characters-in-json-text"></a>JSON テキストに英数字以外の文字を含む参照キー  
  **質問** JSON テキストのキーに英数字以外の文字があります。 これらのプロパティを参照する方法はありますか。  
   
- **回答** JSON パスでその文字を引用符で囲む必要があります。 たとえば、 `JSON_VALUE(@json, '$."$info"."First Name".value')`のようにします。
+ **回答** JSON パスでその文字を引用符で囲む必要があります。 たとえば、`JSON_VALUE(@json, '$."$info"."First Name".value')` のようにします。
  
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  
   
 ### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
   
-具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
+具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
 
 ### <a name="microsoft-videos"></a>Microsoft ビデオ
 

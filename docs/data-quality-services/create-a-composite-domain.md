@@ -15,12 +15,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4efd1769b95a43b6718eaa635273458bc241f282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 275a22b7fca0634fd3ae955ead6c7cbbcd9acf66
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776612"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701780"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
 
@@ -32,7 +32,7 @@ ms.locfileid: "47776612"
   
  複合ドメインを作成したら、複合ドメインのプロパティの変更、ドメインへの参照データ サービスのアタッチ、ドメイン間のルールの作成、または値のリレーションの作成を行うことができます。 そのためには、 **[ドメイン管理]** ページの **[ドメイン リスト]** で複合ドメインを選択し、適切なタブを選択します。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  複合ドメインを作成するには、ナレッジ ベースを作成して開いておく必要があります。また、複合ドメインに追加する単一ドメインを少なくとも 2 つ作成しておく必要があります。  
@@ -92,7 +92,7 @@ ms.locfileid: "47776612"
   
 5.  解析方法として **[区切り記号]** を選択した場合は、 **[ナレッジ ベース解析を使用します]** を選択することもできます。 詳細については、「 [Knowledge-Based Parsing](#KnowledgeBaseParsing)」をご参照ください。  
   
-6.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+6.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="FollowUp"></a> 補足情報: 複合ドメインの作成後  
  複合ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  

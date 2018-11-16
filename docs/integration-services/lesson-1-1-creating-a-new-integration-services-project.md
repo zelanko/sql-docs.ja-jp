@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d8fff1dbb0d7e44ad814c312be65efccaa731ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3d91b56ea331d443252206f627aa4b0b3b40345
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792479"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639699"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>レッスン 1-1 - 新しい Integration Services プロジェクトの作成
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でパッケージを作成するには、まず [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成する必要があります。 このプロジェクトには、データ変換ソリューションで使用するオブジェクト (データ ソース、データ ソース ビュー、パッケージ) のテンプレートが用意されています。  
@@ -26,7 +26,7 @@ ms.locfileid: "47792479"
 > [!NOTE]  
 > このチュートリアルには、Microsoft SQL Server Data Tools が必要です。  
 >   
-> SQL Server Data Tools のインストールの詳細については、「[SQL Server Data Tools のダウンロード](http://msdn.microsoft.com/data/hh297027)」を参照してください。  
+> SQL Server Data Tools のインストールの詳細については、「[SQL Server Data Tools のダウンロード](https://msdn.microsoft.com/data/hh297027)」を参照してください。  
   
 ### <a name="to-create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成するには  
   

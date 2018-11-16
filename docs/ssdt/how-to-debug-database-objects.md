@@ -11,19 +11,19 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 6df3fa6dc005aab43e86d847ba76ce5e87678459
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071715"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674141"
 ---
 # <a name="how-to-debug-database-objects"></a>データベース オブジェクトをデバッグする方法
 SQL Server 単体テストは次の内容で構成されています。  
   
 -   Visual C\# または Visual Basic で記述された単体テスト コード。 SQL Server 単体テスト デザイナーによって生成されるこのコードは、テストの本文を構成する Transact\-SQL スクリプトを送信します。  
   
--   Visual C\# または Visual Basic で記述された 1 つ以上のテスト条件。 テスト条件をデバッグするには、「[方法: テストの実行中にデバッグする (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182484(VS.100).aspx)」または「[方法: テストの実行中にデバッグする (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182484.aspx)」で説明されている単体テストのデバッグ手順に従ってください。  
+-   Visual C\# または Visual Basic で記述された 1 つ以上のテスト条件。 テスト条件をデバッグするには、「[方法: テストの実行中にデバッグする (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx)」または「[方法: テストの実行中にデバッグする (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx)」で説明されている単体テストのデバッグ手順に従ってください。  
   
 -   テスト対象のデータベースのオブジェクトに対して実行される 1 つ以上の Transact\-SQL スクリプト。 これらの Transact\-SQL スクリプトをデバッグすることはできません。  
   
@@ -98,5 +98,5 @@ SQL Server 単体テストは次の内容で構成されています。
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)  
-[Transact-SQL のデバッグ (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkId=163975)  
+[Transact-SQL のデバッグ (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkId=163975)  
   

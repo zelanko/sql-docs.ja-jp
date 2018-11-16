@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50a5843fb6f96133cbf0af6a8ce8e8a46190eaef
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120449"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665621"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "49120449"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、SQL Server に使用できるメモリが 16 GB 以上必要です。 インメモリ OLTP でのハードウェアに関する一般的なガイドラインは、次のブログの投稿を参照してください。[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、SQL Server に使用できるメモリが 16 GB 以上必要です。 インメモリ OLTP でのハードウェアに関する一般的なガイドラインは、次のブログの投稿を参照してください。[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorksに基づくインメモリOLTPサンプルのインストール  
  サンプルをインストールするには、次の手順を実行します。  
@@ -183,7 +183,7 @@ ms.locfileid: "49120449"
   
  ハッシュ インデックスを使用すると、ワークロードをさらに最適化できます。 これは、特にポイント参照と行挿入に合わせて最適化されています。 ただし、範囲スキャン、並べ替えられたスキャン、または先頭のインデックス キー列での検索がサポートされていないことを考慮する必要があります。 したがって、このインデックスを使用するときは注意が必要です。 また、作成時に bucket_count を指定する必要もあります。 一般的にはインデックス キー値の数の 1 ～ 2 倍に設定しますが、多めに設定しても通常は問題ありません。  
   
- 詳細については、オンライン ブックの [インデックスのガイドライン](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 、および [適切な bucket_count の選択](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)に関するガイドラインをご覧ください。  
+ 詳細については、オンライン ブックの [インデックスのガイドライン](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 、および [適切な bucket_count の選択](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)に関するガイドラインをご覧ください。  
   
  移行したテーブルのインデックスは、販売注文処理のデモ ワークロードに合わせて調整されています。 ワークロードは、Sales.SalesOrderHeader_inmem テーブルおよび Sales.SalesOrderDetail_inmem テーブルの挿入とポイント参照のほか、Production.Product_inmem テーブルおよび Sales.SpecialOffer_inmem テーブルの主キー列のポイント参照にも依存します。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49120449"
   
     -   指定された販売注文の出荷情報を更新します。 これにより、販売注文のすべての品目の出荷情報も更新されます。  
   
-    -   これはネイティブ コンパイル ストアド プロシージャ Sales.usp_UpdateSalesOrderShipInfo_native のラッパー プロシージャで、再試行ロジックを備えており、同じ注文を更新する同時実行トランザクションとの間で発生する可能性のある (予期しない) 競合を処理します。 再試行ロジックの詳細については、オンライン ブックの [こちら](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)のトピックを参照してください。  
+    -   これはネイティブ コンパイル ストアド プロシージャ Sales.usp_UpdateSalesOrderShipInfo_native のラッパー プロシージャで、再試行ロジックを備えており、同じ注文を更新する同時実行トランザクションとの間で発生する可能性のある (予期しない) 競合を処理します。 再試行ロジックの詳細については、オンライン ブックの [こちら](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)のトピックを参照してください。  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -313,7 +313,7 @@ ms.locfileid: "49120449"
   
  インストール手順:  
   
-1.  以下のページから RML ユーティリティの x64 インストール パッケージをダウンロードして実行します。[http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  以下のページから RML ユーティリティの x64 インストール パッケージをダウンロードして実行します。[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  特定のファイルが使用中であることを通知するダイアログ ボックスが表示された場合は、[続行] をクリックします。  
   

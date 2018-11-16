@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 02a1d28025fd88694ea4538dc352bc8b7fea51d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e11b4ef7224a622b22c3d7cc15d97175c73625bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662616"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671332"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47662616"
 ## <a name="permissions"></a>アクセス許可  
  このビューは、仮想に接続するアクセス許可を持つすべてのユーザー ロールに使用可能な**マスター**データベース。  
   
-## <a name="see-also"></a>関連項目  
- [Premium データベースの管理](http://go.microsoft.com/fwlink/?LinkID=311927)  
+## <a name="see-also"></a>参照  
+ [Premium データベースの管理](https://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 703131ee76d1e48a64adc326ce3e34d04802f5cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685480"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699730"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47685480"
 > [!WARNING]  
 >  ユーザーは、Windows Server フェールオーバー クラスタリング、WSFC クォーラム モデル、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、および環境に固有の配置構成の概念および操作に関する十分な知識を持っている必要があります。  
 >   
->  詳細については、「  [Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC クォーラム モードと投票の構成 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)」を参照してください。  
+>  詳細については、「  [Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC クォーラム モードと投票の構成 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
  ユーザーは、WSFC クラスターの各ノードのローカル Administrators グループのメンバーであるドメイン アカウントを使用する必要があります。  
@@ -66,7 +66,7 @@ ms.locfileid: "47685480"
   
      このノードで、強制クォーラムの手順に従って、クラスターを手動で強制的にオンラインにします。  データ損失の可能性を最小限に抑えるには、可用性グループのプライマリ レプリカを最後にホストしていたノードを選択します。  
   
-     詳細については、「  [クォーラムを使用せずに WSFC クラスターを強制的に起動する](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)」を参照してください。  
+     詳細については、「  [クォーラムを使用せずに WSFC クラスターを強制的に起動する](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)」を参照してください。  
   
     > [!NOTE]  
     >  強制クォーラムの設定はクラスター全体に影響します。論理的 WSFC クラスターの投票が過半数に達し、通常のクォーラム モードの動作に自動的に切り替わるまで、クラスター全体のクォーラムのチェックがブロックされます。  
@@ -118,9 +118,9 @@ ms.locfileid: "47685480"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [フェールオーバー クラスターのイベントおよびログを表示する](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>参照  
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

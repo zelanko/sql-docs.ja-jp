@@ -16,21 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ad995a0165c02f9af769071b86cea6699ae35f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450e93877ecabb524e5307a5ec940de32859ead6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659190"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656952"
 ---
 # <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Event Tracing for Windows (ETW) をターゲットとして使用する前に、ETW を活用するための知識を身に付けておくことをお勧めします。 ETW トレースは、拡張イベントと組み合わせて使用されるか、拡張イベントのイベント コンシューマーとして使用されます。 ETW の背景情報については、次の外部リンクを参照してください。  
   
--   [Windows イベント](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows イベント](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [ETW によりデバッグおよびパフォーマンス調整を改善する](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [ETW によりデバッグおよびパフォーマンス調整を改善する](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  ETW ターゲットは、多くのセッションに追加できますが、シングルトン ターゲットです。 多くのセッションでイベントが発生した場合、イベントは、イベントの発生ごとに 1 回、ETW ターゲットのみに反映されます。 拡張イベント エンジンは、プロセスあたり 1 つのインスタンスに制限されます。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47659190"
     > [!IMPORTANT]  
     >  最初のセッションの開始後にファイル パスを変更することはできません。  
   
--   マネージド オブジェクト フォーマット (MOF) ファイルは *\<インストール パス&gt;* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](http://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。  
+-   マネージド オブジェクト フォーマット (MOF) ファイルは *\<インストール パス&gt;* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。  
   
 ## <a name="adding-the-target-to-a-session"></a>セッションへのターゲットの追加  
  ETW ターゲットを拡張イベント セッションに追加するには、イベント セッションの作成時または変更時に次のステートメントを含める必要があります。  
@@ -91,7 +91,7 @@ ADD TARGET package0.etw_classic_sync_target
  データの表示方法を含む、ETW ターゲットの使用法を示す完全な例の詳細については、「 [拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

@@ -11,17 +11,17 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7760f09bd6e48732a411f1b58cbc0c8b310bd0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbb7e2458432bb39ff452b703441fc320d2e645
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767380"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639579"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW は、SAP NetWeaver BW Version 7 システムからデータを抽出し、このシステムにデータを読み込むための 3 つのコンポーネントのセットで構成されます。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 は、SQL Server 2016 の Feature Pack のコンポーネントです。 Connector for SAP BW およびそのドキュメントをインストールするには、 [SQL Server 2016 Feature Pack Web ページ](http://go.microsoft.com/fwlink/?LinkId=746297)からインストーラーをダウンロードして実行します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 は、SQL Server 2016 の Feature Pack のコンポーネントです。 Connector for SAP BW およびそのドキュメントをインストールするには、 [SQL Server 2016 Feature Pack Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)からインストーラーをダウンロードして実行します。  
 
 > [!IMPORTANT]
 > Microsoft では、更新されたバージョンの Connector for SAP BW を提供する予定はありません。 サード パーティによって開発されているため、Microsoft は SAP BW コンポーネントのソース コードを所有していません。そのため、ソース コードの更新はできません。 [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html) などの Microsoft ISV パートナーからの最新の SAP 接続コンポーネントの購入を検討してください。 Microsoft の ISV パートナーは、Azure で SSIS をインストールするために SAP 接続コンポーネントを適応させています。
@@ -41,7 +41,7 @@ ms.locfileid: "47767380"
   
 -   **SAP BW 接続マネージャー**- SAP BW 接続マネージャーは、SAP Netweaver BW Version 7 システムに SAP BW 変換元または SAP BW 変換先を接続します。  
   
- SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=301897)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
+ SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=301897)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
 ## <a name="documentation"></a>ドキュメント  
  この [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW のヘルプ ファイルには、次のトピックとセクションが含まれています。  

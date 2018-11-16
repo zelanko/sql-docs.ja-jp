@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 805036ee530834ea2581613578fa0417087def82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682504"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641289"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
   メール送信タスクは、電子メール メッセージを送信します。 メール送信タスクを使用すると、パッケージ ワークフロー内のタスクが成功または失敗した場合にパッケージからメッセージを送信したり、実行時にパッケージで発生するイベントに応答してメッセージを送信したりできます。 たとえば、データベースのバックアップ タスクが成功または失敗したことを、メール送信タスクからデータベース管理者に通知できます。  
@@ -79,11 +79,11 @@ ms.locfileid: "47682504"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」をご覧ください。  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」をご覧ください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](http://go.microsoft.com/fwlink/?LinkId=237625)」  
+-   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](https://go.microsoft.com/fwlink/?LinkId=237625)」  
   
 ## <a name="send-mail-task-editor-general-page"></a>[メール送信タスク エディター] ([全般] ページ)
   **[メール送信タスク エディター]** の **[全般]** ページを使用すると、メール送信タスクに名前を付けて説明を記述できます。  
@@ -158,7 +158,7 @@ ms.locfileid: "47682504"
  **[MessageSource]**  
  一覧で変数を選択するか、[\<**新しい変数…**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   

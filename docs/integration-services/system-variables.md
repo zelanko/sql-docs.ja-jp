@@ -17,12 +17,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 141fd581fc00e60b241fe9f944fab8405426235d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc1d04899bf2b31c5bf4586afb88ed40d2ff8a0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726271"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641909"
 ---
 # <a name="system-variables"></a>システム変数
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、実行中のパッケージとそのオブジェクトに関する情報を格納する、システム変数のセットが用意されています。 これらの変数は、式およびプロパティ式の内部で使用でき、パッケージ、コンテナー、タスク、およびイベント ハンドラーをカスタマイズできます。  
@@ -105,6 +105,6 @@ ms.locfileid: "47726271"
  この規則は、ユーザー定義変数にも当てはまります。 ただし、システム変数のデータ型は変更できないため、システム変数を使用する場合はそのデータ型に合わせた調整が必要ですが、ユーザー定義変数にはそれに比べると高い柔軟性があります。 パラメーター バインドで使用するユーザー定義変数は、通常、マップ先パラメーターのデータ型と互換性のあるデータ型で定義します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [クエリ パラメーターを SQL 実行タスクの変数にマップする方法](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [クエリ パラメーターを SQL 実行タスクの変数にマップする方法](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

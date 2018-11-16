@@ -20,12 +20,12 @@ ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1ebe02d317656b0603b045f0cd048fe6779e32e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7995aa96d83925659458dfb46d3fffb2a3ccbfb1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771560"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640999"
 ---
 # <a name="check-database-integrity-task"></a>データベースの整合性確認タスク
   データベースの整合性確認タスクは、指定されたデータベース内のすべてのオブジェクトの割り当てと構造上の整合性をチェックします。 このタスクは、単一のデータベースまたは複数のデータベースをチェックできます。また、データベースのインデックスもチェックするかどうかを選択できます。  
@@ -41,6 +41,6 @@ ms.locfileid: "47771560"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2d1c191ae176eb70a79c2546f44c0cef2743433
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 82e9cfe7afa18692376f113d31c07771a36e045d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033669"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674321"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>CPU 使用率のポリシーにおけるノイズの軽減 (SQL Server ユーティリティ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51033669"
   
 -   違反の割合に対する許容範囲を 1% ずつ 30% まで増やします。 1 時間で 1 件の違反は、データ ポイント サンプル 4 個のうちの 1 個です。 この場合、1 時間に 1 違反はポリシーの許容範囲ですが、1 時間の収集期間で 2 回、またはそれ以上の違反で過大使用としてレポートされます (データ ポイントの 30% より大きい)。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスおよびデータ層アプリケーションのプロセッサ使用率のポリシーのしきい値を大きくします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスまたはデータ層アプリケーションのグローバルな CPU 使用率のポリシーを変更する方法については、「[ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)」を参照してください。 個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの CPU 使用率のポリシーを変更する方法については、「[マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)」を参照してください。 個々のデータ層アプリケーションの CPU 使用率のポリシーを変更する方法については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスおよびデータ層アプリケーションのプロセッサ使用率のポリシーのしきい値を大きくします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスまたはデータ層アプリケーションのグローバルな CPU 使用率のポリシーを変更する方法については、「[ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)」を参照してください。 個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの CPU 使用率のポリシーを変更する方法については、「[マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)」を参照してください。 個々のデータ層アプリケーションの CPU 使用率のポリシーを変更する方法については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)」を参照してください。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>プロセッサ使用率にどのくらいの頻度で違反が生じると使用率が低いと報告されるか  
  違反の評価期間と許容範囲はどちらも、ユーティリティ エクスプローラーの **[ユーティリティ管理]** ノードの **[ポリシー]** タブの設定を使用して構成できます。 ポリシーを変更するには、ポリシーの説明の右側にあるスライダー コントロールを使用して、 **[適用]** をクリックします。 また、画面の下部にあるボタンを使用して、既定値を復元したり変更を破棄したりすることもできます。  
@@ -56,10 +56,10 @@ ms.locfileid: "51033669"
   
 -   既定では、CPU の使用率が低いと報告されるのは、違反となるデータ ポイントの割合が 90% になった場合です。 オプションの範囲は 0 ～ 100% です。  
   
- 既定値に基づき、毎週 672 個のデータ ポイントが収集されますが、ポリシーのしきい値は 0% です。 この場合、既定では、このポリシーによって、プロセッサの過小使用による違反が生成されることはありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスまたはデータ層アプリケーションのグローバルな CPU 使用率のポリシーを変更する方法については、「[ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)」を参照してください。 個々の SQL Server インスタンスの CPU 使用率のポリシーを変更する方法については、「[マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)」を参照してください。 個々のデータ層アプリケーションの CPU 使用率のポリシーを変更する方法については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)」を参照してください。  
+ 既定値に基づき、毎週 672 個のデータ ポイントが収集されますが、ポリシーのしきい値は 0% です。 この場合、既定では、このポリシーによって、プロセッサの過小使用による違反が生成されることはありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスまたはデータ層アプリケーションのグローバルな CPU 使用率のポリシーを変更する方法については、「[ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)」を参照してください。 個々の SQL Server インスタンスの CPU 使用率のポリシーを変更する方法については、「[マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)」を参照してください。 個々のデータ層アプリケーションの CPU 使用率のポリシーを変更する方法については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
+ [ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
  [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [リソース正常性ポリシーの定義の変更 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)   
  [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

@@ -5,8 +5,7 @@ ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configure
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server], managing
@@ -23,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bbe790a131fe48a4cdfd506aedcde49308ab67d0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383407"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657033"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 構成マネージャー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,11 +85,11 @@ ms.locfileid: "49383407"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、共有メモリ、TCP/IP、名前付きパイプの各プロトコルをサポートしています。 ネットワーク プロトコルの選択の詳細については、「 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、VIA、Banyan VINES Sequenced Packet Protocol (SPP)、Multiprotocol、AppleTalk、NWLink IPX/SPX の各ネットワーク プロトコルはサポートしていません。 以前にこれらのプロトコルを使用して接続していたクライアントの場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に接続するには別のプロトコルを選択する必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーで WinSock プロキシを設定することはできません。 WinSock プロキシの設定については、ISA Server のドキュメントを参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [サービスの管理方法に関するトピック &#40;SQL Server 構成マネージャー&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+ [サービスの管理方法に関するトピック &#40;SQL Server 構成マネージャー&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
  [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [SQL Server エージェント サービスの開始、停止、または一時停止](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [SQL Server エージェント サービスの開始、停止、または一時停止](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
  [SQL Server のインスタンスが自動的に開始されるようにする設定 &#40;SQL Server 構成マネージャー&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   

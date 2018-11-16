@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ff275d2aad6d9ccf24ed632a8515e7ce8ea3fc2
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 16d8cdfb5400e213b57dd9f81f85df370662355e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254458"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697210"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   外部パーティション移動  
   
- **適用対象:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]外部テーブルを作成するための前提条件として、アプライアンス管理者は Hadoop 接続を構成する必要があります。 詳細については、[ここ](http://www.microsoft.com/download/details.aspx?id=48241)からダウンロードできる、APS ドキュメントの外部データへの接続の構成 (Analytics Platform System) に関する記述を参照してください。  
+ **適用対象:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]外部テーブルを作成するための前提条件として、アプライアンス管理者は Hadoop 接続を構成する必要があります。 詳細については、[ここ](https://www.microsoft.com/download/details.aspx?id=48241)からダウンロードできる、APS ドキュメントの外部データへの接続の構成 (Analytics Platform System) に関する記述を参照してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  外部テーブル データがデータベースの外部にあるため、バックアップおよび復元操作ではデータベースに格納されているデータに対してのみ作用します。 つまり、メタデータのみがバックアップされ、復元されます。  

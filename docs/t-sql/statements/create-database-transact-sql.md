@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100523"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701050"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -194,7 +194,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定の照合順序が割り当てられます。 照合順序名は、データベース スナップショットでは指定できません。  
   
- 照合順序名は、FOR ATTACH 句または FOR ATTACH_REBUILD_LOG 句と共に指定することはできません。 アタッチされたデータベースの照合順序を変更する方法の詳細については、この [Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)を参照してください。  
+ 照合順序名は、FOR ATTACH 句または FOR ATTACH_REBUILD_LOG 句と共に指定することはできません。 アタッチされたデータベースの照合順序を変更する方法の詳細については、この [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)を参照してください。  
   
  Windows と SQL の照合順序名については、「[COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)」を参照してください。  
   
@@ -509,7 +509,7 @@ CREATE DATABASE database_snapshot_name
  FOR ATTACH が指定されていない限り、すべての新しいデータベースは、model データベースからデータベース オプションの設定を継承します。 たとえば、auto shrink データベース オプションは、model データベースにおいても、作成するどの新規データベースにおいても、**true** に設定されます。 model データベースのオプションを変更すると、これらの新しいオプション設定が、作成する新規のデータベースで使用されます。 model データベースの操作の変更は、既存のデータベースには影響を与えません。 CREATE DATABASE ステートメントで FOR ATTACH を指定すると、新しいデータベースは元のデータベースからデータベース オプションの設定を継承します。  
   
 ## <a name="viewing-database-information"></a>データベース情報の表示  
- カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)」を参照してください。  
+ カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  CREATE DATABASE、CREATE ANY DATABASE、または ALTER ANY DATABASE の各権限が必要です。  
@@ -935,13 +935,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-新しいデータベースの名前。 この名前は、SQL Server で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](http://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。  
+新しいデータベースの名前。 この名前は、SQL Server で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。  
   
 *Collation_name*  
 
 データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。  
   
-Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx) に関するページを参照してください。  
+Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx) に関するページを参照してください。  
   
 CATALOG_COLLATION  
 
@@ -1097,7 +1097,7 @@ CATALOG_COLLATION 引数はデータベースの作成中にのみ使用でき�
   
 - コピー先のサーバー名としてコピー元のサーバー名と同じ名前を使用することも別の名前を使用することもできます。 名前が同じである場合、このパラメーターは省略可能であり、現在のセッションのサーバー コンテキストが既定で使用されます。  
   
-- ソース データベースと対象データベースの名前を指定する必要があります。これらの名前は、一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](http://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。  
+- ソース データベースと対象データベースの名前を指定する必要があります。これらの名前は、一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。  
   
 - `CREATE DATABASE` ステートメントは、新しいデータベースが作成される [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーの master データベースのコンテキスト内で実行される必要があります。 
 - コピーの完了後、対象データベースは個別のデータベースとして管理される必要があります。 `ALTER DATABASE` ステートメントと `DROP DATABASE` ステートメントは、ソース データベースに影響を与えることなく、新しいデータベースに対して実行できます。  新しいデータベースを別の新しいデータベースにコピーすることもできます。  
@@ -1225,13 +1225,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-新しいデータベースの名前。 この名前は、SQL Server で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](http://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。  
+新しいデータベースの名前。 この名前は、SQL Server で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。  
   
 *Collation_name*  
 
 データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。  
   
-Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx) に関するページを参照してください。  
+Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx) に関するページを参照してください。  
   
 ## <a name="remarks"></a>Remarks
  
@@ -1307,12 +1307,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>引数  
 *database_name*  
-新しいデータベースの名前。 この名前は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベースと [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの両方をホストでき、ID の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に従う、SQL Server に固有のものである必要があります。 詳細については、「[データベース識別子](http://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。  
+新しいデータベースの名前。 この名前は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベースと [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの両方をホストでき、ID の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に従う、SQL Server に固有のものである必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。  
   
 *collation_name*  
 データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。  
   
-Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx) に関するページを参照してください。  
+Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx) に関するページを参照してください。  
   
 *EDITION*  
 データベースのサービス層を指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、'datawarehouse' を使用します。  

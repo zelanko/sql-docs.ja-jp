@@ -5,8 +5,7 @@ ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
@@ -16,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623830"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669401"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 <sup>6</sup> Lock Pages in Memory (LPIM) 特権が許可されている (AWE サポートの場合は 32 ビット、AWE そのものでは 64 ビットで) 場合は、サーバーの最大メモリも設定することをお勧めします。 LPIM の詳細については、「[サーバー メモリに関するサーバー構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)」を参照してください。
 
 > [!NOTE]
-> 32 ビット オペレーティング システム上では、古いバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行できます。 32 ビットのオペレーティング システム上で 4 ギガバイト (GB) を超えるメモリにアクセスするには、Address Windowing Extensions (AWE) がメモリを管理する必要がありました。 これは、64 ビット オペレーティング システムで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行するときには必要ありません。 AWE の詳細については、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] ドキュメントの「[プロセス アドレス空間](http://msdn.microsoft.com/library/ms189334.aspx)」および「[大規模データベースのメモリ管理](http://msdn.microsoft.com/library/ms191481.aspx)」をご覧ください。   
+> 32 ビット オペレーティング システム上では、古いバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行できます。 32 ビットのオペレーティング システム上で 4 ギガバイト (GB) を超えるメモリにアクセスするには、Address Windowing Extensions (AWE) がメモリを管理する必要がありました。 これは、64 ビット オペレーティング システムで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行するときには必要ありません。 AWE の詳細については、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] ドキュメントの「[プロセス アドレス空間](https://msdn.microsoft.com/library/ms189334.aspx)」および「[大規模データベースのメモリ管理](https://msdn.microsoft.com/library/ms191481.aspx)」をご覧ください。   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のメモリ管理の変更点
 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、次の 5 つの異なるメカニズムを利用してメモリが割り当てられていました。
@@ -188,7 +187,7 @@ min server memory と max server memory の両方に同じ値を指定した場�
 
 **ネットワーク パケット サイズ**は、アプリケーションと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジン間の通信に使用される表形式のデータ スキーム (TDS) パケットのサイズです。 既定のパケット サイズは 4 KB であり、network packet size 構成オプションによって制御されます。
 
-複数のアクティブな結果セット (MARS) が有効になっている場合、ユーザー接続で使用されるメモリは約 (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB です。
+複数のアクティブな結果セット (MARS) が有効になっている場合、ユーザー接続で使用されるメモリは約 (3 + 3 \*num_logical_connections)\* network_packet_size + 94 KB です。
 
 ## <a name="effects-of-min-memory-per-query"></a>min memory per query の効果
 *min memory per query* 構成オプションでは、クエリの実行用に割り当てる最小メモリ容量 (KB 単位) を確定します。 これは、最小メモリ許可とも呼ばれます。 すべてのクエリは、実行を開始するためには、要求された最小メモリをセキュリティで保護できるようになるまで、または query wait サーバー構成オプションで指定された値を超えるまで、待機する必要があります。 このシナリオで累積される待機の種類は、RESOURCE_SEMAPHORE です。

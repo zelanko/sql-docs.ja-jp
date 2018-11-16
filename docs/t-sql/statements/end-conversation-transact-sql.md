@@ -25,12 +25,12 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 02140750f49c326e7d7da84ffa08b798e0462f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799391"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701294"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,9 @@ END CONVERSATION conversation_handle
   
  メッセージ交換の終了ダイアログ メッセージまたはエラー メッセージが [!INCLUDE[ssSB](../../includes/sssb-md.md)] でまだ処理されていない場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] からメッセージ交換のリモート側に、メッセージ交換が終了したことが通知されます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに送信されるメッセージは、指定されるオプションによって異なります。  
   
--   メッセージ交換がエラーなく終了し、リモート サービスへのメッセージ交換がアクティブな状態を継続していると、[!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに、`http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` のようなメッセージが送信されます。 このメッセージは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージ交換の順に転送キューに追加されます。 現在転送キューにあるメッセージ交換のすべてのメッセージは、このメッセージが送信されるよりも前に、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって送信されます。  
+-   メッセージ交換がエラーなく終了し、リモート サービスへのメッセージ交換がアクティブな状態を継続していると、[!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに、`https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` のようなメッセージが送信されます。 このメッセージは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージ交換の順に転送キューに追加されます。 現在転送キューにあるメッセージ交換のすべてのメッセージは、このメッセージが送信されるよりも前に、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって送信されます。  
   
--   メッセージ交換がエラーで終了し、リモート サービスへのメッセージ交換がアクティブな状態を継続していると、[!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに、`http://schemas.microsoft.com/SQL/ServiceBroker/Error` のようなメッセージが送信されます。 現在転送キューに残っているメッセージ交換のメッセージはすべて、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって削除されます。  
+-   メッセージ交換がエラーで終了し、リモート サービスへのメッセージ交換がアクティブな状態を継続していると、[!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに、`https://schemas.microsoft.com/SQL/ServiceBroker/Error` のようなメッセージが送信されます。 現在転送キューに残っているメッセージ交換のメッセージはすべて、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって削除されます。  
   
 -   データベース管理者は WITH CLEANUP 句を使用して、正常に完了しなかったメッセージ交換のメッセージを削除できます。 このオプションでは、メッセージ交換のすべてのメッセージとカタログ ビュー エントリが削除されます。 この場合、メッセージ交換のリモート側にはメッセージ交換が終了したことが通知されません。また、アプリケーションでは送信されたが、ネットワーク経由では転送されていなかったメッセージは受信できないことがあります。 メッセージ交換が正常に完了できない場合にのみ、このオプションを使用してください。  
   

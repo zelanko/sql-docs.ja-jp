@@ -19,12 +19,12 @@ ms.author: mikeray
 manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d899c0626ed1ac49f70ce83b80741e626bd7252b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b648c1ec93ed3a1425b39055438735f70aed6a4a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906052"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668591"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "48906052"
   
  S-Lock または Sch-M ロックはインデックス操作の最後のフェーズで保持されるので、BEGIN TRANSACTION...COMMIT ブロックなど、明示的なユーザー トランザクション内でのオンラインのインデックス操作を実行する場合は十分に注意してください。 この場合、ロックがトランザクションの最後まで保持され、その結果ユーザーのコンカレンシーが損なわれます。  
   
- インデックスをオンラインで再構築すると、 `MAX DOP > 1` オプションと `ALLOW_PAGE_LOCKS = OFF` オプションでの実行が許可されたときに断片化が増加する可能性があります。 詳細については、「 [動作方法: オンラインでのインデックス再構築 - 断片化が増加する可能性](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)」を参照してください。  
+ インデックスをオンラインで再構築すると、 `MAX DOP > 1` オプションと `ALLOW_PAGE_LOCKS = OFF` オプションでの実行が許可されたときに断片化が増加する可能性があります。 詳細については、「 [動作方法: オンラインでのインデックス再構築 - 断片化が増加する可能性](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)」を参照してください。  
   
 ## <a name="transaction-log-considerations"></a>トランザクション ログに関する注意点  
  オフライン、オンラインを問わず、大規模なインデックス操作を行うと、大量のデータ読み込みが発生し、トランザクション ログがすぐにいっぱいになってしまうことがあります。 インデックス操作をロールバックできるようにするため、インデックス操作が完了するまでは、トランザクション ログを切り捨てることはできません。ただし、インデックス操作中にログをバックアップすることはできます。 したがって、トランザクション ログには、インデックス操作中にインデックス操作によるトランザクションと、同時実行ユーザーによるトランザクションの両方を格納できるだけの十分な領域が割り当てられている必要があります。 詳細については、「 [インデックス操作用のトランザクション ログのディスク領域](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)」を参照してください。  

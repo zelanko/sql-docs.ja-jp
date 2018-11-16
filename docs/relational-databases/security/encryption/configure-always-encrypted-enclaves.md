@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307126"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677142"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -70,7 +70,7 @@ Windows ホスト ガーディアン サービス (HGS) は、SQL Server と同�
 1. 管理者として SQL Server コンピューターにログオンします。
 2. PowerShell を管理者として実行します。
 3. [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration) を実行します。
-4. AttestationServerURL プロパティを書き留めて保存します。 これは `http://x.x.x.x/Attestation` のようになります。
+4. AttestationServerURL プロパティを書き留めて保存します。 これは `https://x.x.x.x/Attestation` のようになります。
 
 
 ### <a name="install-tools"></a>ツールをインストールする
@@ -853,7 +853,7 @@ GO;
 
 ### <a name="develop-and-test-your-app"></a>アプリの開発とテスト 
 
-Always Encrypted とエンクレーブ計算を使用するには、アプリケーションで接続文字列に次の 2 つのキーワードを指定してデータベースに接続する必要があります。`Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation` (この xxxx には ip、ドメインなどを指定できます)
+Always Encrypted とエンクレーブ計算を使用するには、アプリケーションで接続文字列に次の 2 つのキーワードを指定してデータベースに接続する必要があります。`Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (この xxxx には ip、ドメインなどを指定できます)
 
 さらに、アプリケーションは、Always Encrypted を使用するアプリケーションに適用される一般的なガイドラインに従う必要があります。たとえば、アプリケーションは、アプリケーション クエリで参照されるデータベース列に関連付けられた列マスター キーにアクセスできる必要があります。
 
@@ -905,7 +905,7 @@ namespace ConsoleApp1
       static void Main(string\[\] args)
    {
 
-   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {

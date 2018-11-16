@@ -13,17 +13,17 @@ ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ac1a6b3363b826bab1530fb162ee6c0cb76c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608097"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670468"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>操作方法:データベースに接続し、既存のオブジェクトを参照する
 データベース管理者と開発者の間で特に共通するタスクとして、ライブ データベースへの接続、データベースのスキーマのデザインまたは参照、データベース オブジェクトの照会などがあります。 Visual Studio の SQL Server オブジェクト エクスプローラーには、専用の **[SQL Server]** ノードが用意されました。このノードの下で、接続されているすべての SQL Server インスタンスとそのデータベースが SSMS のような階層構造でグループ化されます。 接続されている SQL Server インスタンスは、実行中の SQL Server 2008 などのオンプレミス インスタンスであることも、オフプレミスの SQL Azure インスタンスであることも想定されています。  
   
-以下の手順では、サンプル データベース AdventureWorks がインストールされていることを前提としています。 異なった SQL Server バージョンのサンプル データベースを見つけてインストールするには、[CodePlex](http://msftdbprodsamples.codeplex.com/) を使用してください。 必要に応じ、手順に従って、サーバーにある既存のデータベースを指定することもできます。  
+以下の手順では、サンプル データベース AdventureWorks がインストールされていることを前提としています。 異なった SQL Server バージョンのサンプル データベースを見つけてインストールするには、[CodePlex](https://msftdbprodsamples.codeplex.com/) を使用してください。 必要に応じ、手順に従って、サーバーにある既存のデータベースを指定することもできます。  
   
 ### <a name="to-connect-to-a-database-instance"></a>データベース インスタンスに接続するには  
   

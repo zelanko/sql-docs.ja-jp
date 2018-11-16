@@ -10,12 +10,12 @@ ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffd05feffd0a3b92abad1f7a661daeeccddd98ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8db4609eb02cb64c4281190462e74fe24711d02
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609460"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699240"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -143,7 +143,7 @@ ms.locfileid: "47609460"
 >  データ ファイルは、常に、Data という名前の子ディレクトリに格納されているものと見なされます。 たとえば、アップグレード時に、システム データベースのデータ ディレクトリのルート パスとして C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceName>\ を指定すると、データ ファイルは C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceName>\MSSQL\Data に見つかります。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンの構成 - データ ディレクトリ](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
- [Analysis Services の構成 - データ ディレクトリ](http://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
+ [データベース エンジンの構成 - データ ディレクトリ](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
+ [Analysis Services の構成 - データ ディレクトリ](https://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
   
   

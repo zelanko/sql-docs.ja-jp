@@ -15,12 +15,12 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 218b5d1aba71e5905937bd5433f9f1316c473ab8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f41a1601ef6fe416eb1f429343bea32451f7716
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740610"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638380"
 ---
 # <a name="string-padding-ssis"></a>文字列の余白 (SSIS)
   式エバリュエーターは、文字列の先頭および末尾にスペースが含まれているかどうかをチェックしません。また、文字列を比較する前に、比較文字列の長さが同じになるように文字列を埋め込む処理も行いません。 式に文字列の余白が必要な場合、+ 演算子を使用して列の値と空白の文字列を連結できます。 詳細については、「[+ &#40;連結&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/concatenate-ssis-expression.md)」を参照してください。  
@@ -31,6 +31,6 @@ ms.locfileid: "47740610"
 >  LEN 関数は、先頭と末尾の空白を含めてカウントします。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://go.microsoft.com/fwlink/?LinkId=746575)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=746575)」  
   
   

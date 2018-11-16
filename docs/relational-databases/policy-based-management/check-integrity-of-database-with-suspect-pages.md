@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 72f7e1846084a65ac42988f592eef3e7f9e93925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7296a880dcf9ec10a5aa86182a71c3eec879bb54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651394"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677531"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>問題のあるページを含むデータベースの整合性のチェック
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47651394"
   
 -   完全なデータベース整合性確認 ([DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)) を実行します。  
   
--   [MSSQLSERVER_824](http://go.microsoft.com/fwlink/?LinkId=81397)で定義されているユーザー操作を実装します。  
+-   [MSSQLSERVER_824](https://go.microsoft.com/fwlink/?LinkId=81397)で定義されているユーザー操作を実装します。  
   
 ## <a name="for-more-information"></a>詳細情報  
  [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8ff63651f0c23418c5ff5a6a386af4e2674a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19d870d64816dfea011bc0a5c245b5a18a8f5aa3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684970"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675821"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  キーワードを使用すると、現在の SQL トレース イベントのグループを緊密に対応付けることができます。  
   
 ### <a name="targets"></a>対象サーバー  
- ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」を参照してください。  
+ ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」を参照してください。  
   
 ### <a name="actions"></a>アクション  
  アクションは、プログラムがイベントに呼応して実行する特定の (または一連の) 応答です。 アクションはイベントに関連付けられます。各イベントには、それぞれ異なる一連のアクションが関連付けられる場合もあります。  
@@ -220,6 +220,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>参照  
  [SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 拡張イベント エンジン](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

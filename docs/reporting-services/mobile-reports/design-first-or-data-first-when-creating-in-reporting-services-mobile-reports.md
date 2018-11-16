@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a7b355fa-312b-4074-bc9b-776269d4fb51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89100e6f4418bab1aa959c0ec2612a051213b2b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf9afd8c4aa916d87929a8e7d73347cc33456252
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850120"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812736"
 ---
 # <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Reporting Services のモバイル レポートを作成するときにデザインとデータのどちらを優先するか
   
@@ -38,8 +38,8 @@ ms.locfileid: "47850120"
   
 ### <a name="see-also"></a>参照  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [iPad アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  
--  [iPhone アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
+-  [iPad アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  
+-  [iPhone アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
   
   
   

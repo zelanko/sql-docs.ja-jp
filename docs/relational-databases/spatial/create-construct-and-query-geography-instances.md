@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9f1a61507883ed6a583508f89d6d8cf7ba1a0be
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 716aa4485030a907c8e816f0daf3036c979e2ae5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018417"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660732"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography インスタンスの作成、構築、およびクエリ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "51018417"
 ###  <a name="gml"></a> GML Text 入力からの geography インスタンスの構築  
  **geography** データ型には、GML ( **geography** インスタンスの XML 表現) から **geography** インスタンスを生成するメソッドが用意されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、GML のサブセットをサポートします。  
   
- Geography Markup Language の詳細については、OGC の仕様の「 [OGC の仕様、Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)」を参照してください。  
+ Geography Markup Language の詳細については、OGC の仕様の「 [OGC の仕様、Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)」を参照してください。  
   
  **GML 入力から任意の型の geography インスタンスを構築するには**  
  [GeomFromGML &#40;geography データ型&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028541"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813512"
 ---
 # <a name="report-definition-language-ssrs"></a>レポート定義言語 (SSRS)
   レポート定義言語 (RDL) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート定義の XML 表現です。 レポート定義には、レポートのデータ取得とレイアウトの情報が含まれます。 RDL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用に作成された XML 文法に準拠する XML 要素で構成されます。 レポート定義ファイル内のコード アセンブリにアクセスすることによって、レポート アイテムの値、スタイル、および書式設定を制御するために独自のカスタム機能を追加できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "50028541"
   
  たとえば、スキーマには、 **ReportParametersType**複合型の RDL 要素 **ReportParameters**が含まれます。 通常、要素の複合型の名前は、要素名の後に **Type**という単語が続きます。 **ReportParameters** 要素は、 **Report** 要素 (複合型) に含めることができ、 **ReportParameter** 要素を含むことができます。 **ReportParameterType** は単純型で、 **Boolean**、 **DateTime**、 **Integer**、 **Float**、または **String**のいずれかの値のみを指定できます。 XML スキーマ データ型の詳細については、「 [XML スキーマ第 2 部: データ型 (第 2 版)](https://go.microsoft.com/fwlink/?linkid=4871)」を参照してください。  
   
- RDL XSD は、ReportDefinition.xsd ファイルから入手できます。このファイルは製品 CD-ROM の Extras フォルダーにあります。 また、次の URL からレポート サーバーで入手することもできます: `http://servername/reportserver/reportdefinition.xsd`  
+ RDL XSD は、ReportDefinition.xsd ファイルから入手できます。このファイルは製品 CD-ROM の Extras フォルダーにあります。 また、次の URL からレポート サーバーで入手することもできます: `https://servername/reportserver/reportdefinition.xsd`  
   
 ##  <a name="bkmk_Creating_RDL"></a> RDL の作成  
  RDL は開放型で拡張可能な性質を持つため、XML スキーマに基づき RDL を生成するさまざまなツールとアプリケーションを作成できます。  

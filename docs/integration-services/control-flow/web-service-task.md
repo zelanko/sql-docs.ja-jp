@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2d0d31f310ea2a64afe47940ab4d9463fee0a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757550"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642349"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "47757550"
 > [!IMPORTANT]  
 >  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
   
- HTTP 接続マネージャーは、Web サイトまたは Web サービス記述言語 (WSDL) ファイルを参照できます。 WSDL ファイルを参照する HTTP 接続マネージャーの URL には、 `?WSDL` パラメーターが含まれます。たとえば、 `http://MyServer/MyWebService/MyPage.asmx?WSDL`と指定します。  
+ HTTP 接続マネージャーは、Web サイトまたは Web サービス記述言語 (WSDL) ファイルを参照できます。 WSDL ファイルを参照する HTTP 接続マネージャーの URL には、 `?WSDL` パラメーターが含まれます。たとえば、 `https://MyServer/MyWebService/MyPage.asmx?WSDL`と指定します。  
   
  **デザイナーで用意されている** [Web サービス タスク エディター] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ダイアログ ボックスを使用して Web サービス タスクを構成するには、WSDL ファイルがローカルで使用できる必要があります。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47757550"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>プログラムによる Web サービス タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
@@ -178,7 +178,7 @@ ms.locfileid: "47757550"
  **変数**  
  一覧で変数を選択するか、[\<**新しい変数…**>] をクリックして新しい変数を作成します。  
   
- **関連項目:** [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連項目:** [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- technet.microsoft.com のビデオ「 [Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](http://go.microsoft.com/fwlink/?LinkId=259642)」  
+ technet.microsoft.com のビデオ「 [Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=259642)」  

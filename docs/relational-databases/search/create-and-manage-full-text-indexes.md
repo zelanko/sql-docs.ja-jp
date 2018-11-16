@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 512c91ac9e8c089b0154f5b021eaf86d98095599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683900"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669021"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ ms.locfileid: "47683900"
   
     |ページ|[説明]|  
     |----------|-----------------|  
-    |**全般**|フルテキスト インデックスの基本的なプロパティが表示されます。 これには、いくつかの変更可能なプロパティと、データベース名、テーブル名、フルテキスト キー列の名前など多数の変更不可能なプロパティが含まれます。 変更可能なプロパティは次のとおりです。<br /><br /> **フルテキスト インデックス ストップリスト**<br /><br /> **フルテキスト インデックス有効**<br /><br /> **変更の追跡**<br /><br /> **検索プロパティ リスト**<br /><br />詳細については、「[フルテキスト インデックス プロパティ &#40;[全般] ページ&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)」を参照してください。|  
-    |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「[フルテキスト インデックス プロパティ &#40;[列] ページ&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)」を参照してください。|  
+    |**全般**|フルテキスト インデックスの基本的なプロパティが表示されます。 これには、いくつかの変更可能なプロパティと、データベース名、テーブル名、フルテキスト キー列の名前など多数の変更不可能なプロパティが含まれます。 変更可能なプロパティは次のとおりです。<br /><br /> **フルテキスト インデックス ストップリスト**<br /><br /> **フルテキスト インデックス有効**<br /><br /> **変更の追跡**<br /><br /> **検索プロパティ リスト**<br /><br />詳細については、「[フルテキスト インデックス プロパティ &#40;[全般] ページ&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)」を参照してください。|  
+    |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「[フルテキスト インデックス プロパティ &#40;[列] ページ&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)」を参照してください。|  
     |**スケジュール**|このページでは、フルテキスト インデックスを作成するためのテーブルの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。 詳細については、「[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。<br /><br /> 注: **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを閉じると、新規作成したスケジュールが SQL Server エージェント ジョブ ( *database_name*.*table_name*でテーブルの増分作成を開始) に関連付けられます。|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] をクリックして変更を保存し、**[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを終了します。  
@@ -107,7 +107,7 @@ ms.locfileid: "47683900"
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>一意のインデックスがフルテキスト キー列として使用されているかどうかを調査する  
   
-[SELECT](../../t-sql/queries/select-transact-sql.md) ステートメントを使用して、[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) 関数を呼び出します。 この関数呼び出しでは、次のように、OBJECT_ID 関数を使用してテーブル名 (*table_name*) をテーブル ID に変換します。その際、対象テーブルの一意のインデックスの名前と **IsFulltextKey** インデックス プロパティを指定します。  
+[SELECT](../../t-sql/queries/select-transact-sql.md) ステートメントを使用して、 [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) 関数を呼び出します。 この関数呼び出しでは、次のように、OBJECT_ID 関数を使用してテーブル名 (*table_name*) をテーブル ID に変換します。その際、対象テーブルの一意のインデックスの名前と **IsFulltextKey** インデックス プロパティを指定します。  
   
 ```  
 SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
@@ -184,9 +184,9 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  **xml** 列に対するインデックス作成とクエリの実行の詳細については、「[XML 列でのフルテキスト検索の使用](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
   
 ##  <a name="disable"></a>テーブルのフルテキスト インデックスを無効または再度有効にする   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定によりユーザーが作成したすべてのデータベースでフルテキストが有効になります。 さらに、個々のテーブルに対してフルテキスト インデックスを作成し、これに列を追加すると、その時点で、このテーブルでは自動的にフルテキスト インデックスが有効になります。 フルテキスト インデックスから最後の列を削除すると、このテーブルでは自動的にフルテキスト インデックスが無効になります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、既定によりユーザーが作成したすべてのデータベースでフルテキストが有効になります。 さらに、個々のテーブルに対してフルテキスト インデックスを作成し、これに列を追加すると、その時点で、このテーブルでは自動的にフルテキスト インデックスが有効になります。 フルテキスト インデックスから最後の列を削除すると、このテーブルでは自動的にフルテキスト インデックスが無効になります。  
   
- フルテキスト インデックスのあるテーブルでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して手動でフルテキスト インデックスを無効にしたり、再度有効にしたりすることができます。  
+ フルテキスト インデックスのあるテーブルでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して手動でフルテキスト インデックスを無効にしたり、再度有効にしたりすることができます。  
 
 1.  サーバー グループを展開し、 **[データベース]** を展開して、フルテキスト インデックスを有効にするテーブルを含むデータベースを展開します。  
   

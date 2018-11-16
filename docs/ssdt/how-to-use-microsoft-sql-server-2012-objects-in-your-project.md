@@ -11,17 +11,17 @@ ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 616e050d70d2ee67dfc9661781eda77dd78f92e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 539eb7ed053ff4f1d41aaa34360cd71772bbfc9c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720220"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681090"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する方法
 この例では、Microsoft SQL Server 2012 をターゲットとするデータベース プロジェクトに、シーケンス オブジェクトを追加します。  
   
-シーケンスは、Microsoft SQL Server 2012 で導入されたものです。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。  シーケンス オブジェクトについて詳しくは、「[シーケンス番号](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)」をご覧ください。 Microsoft SQL Server 2012 の新機能に関する情報は、「[SQL Server 2012 における新機能」](http://msdn.microsoft.com/library/bb500435(SQL.110).aspx)」をご覧ください。  
+シーケンスは、Microsoft SQL Server 2012 で導入されたものです。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。  シーケンス オブジェクトについて詳しくは、「[シーケンス番号](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)」をご覧ください。 Microsoft SQL Server 2012 の新機能に関する情報は、「[SQL Server 2012 における新機能」](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)」をご覧ください。  
   
 > [!WARNING]  
 > 以下に示す手順では、「[接続されているデータベース開発](../ssdt/connected-database-development.md)」および「[プロジェクト指向のオフライン データベース開発](../ssdt/project-oriented-offline-database-development.md)」に示されているこれまでの手順で作成したエンティティを使用します。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fbada45cdf1112f757113491b16aa92fa4d5f359
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c49eadcdfb290f46bd523605c789f0f298653ca6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808150"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814225"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>レポート サーバー データベースを管理する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の環境では、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースが内部記憶域として使用されます。 既定では、データベース名がそれぞれ ReportServer と ReportServerTempdb になります。 ReportServerTempdb は、レポート サーバーのプライマリ データベースと共に作成され、一時データ、セッション情報、およびキャッシュされたレポートを格納する目的に使用されます。  
@@ -74,7 +74,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>データベースのバージョンについて  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の製品バージョンの情報は、ログ ファイルに現れるファイルのバージョン情報、すべての SOAP 呼び出しのヘッダー、およびレポート サーバーの URL に接続したとき (ブラウザーを開いて `http://localhost/reportserver` を参照したときなど) に示されます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の製品バージョンの情報は、ログ ファイルに現れるファイルのバージョン情報、すべての SOAP 呼び出しのヘッダー、およびレポート サーバーの URL に接続したとき (ブラウザーを開いて `https://localhost/reportserver` を参照したときなど) に示されます。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

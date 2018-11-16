@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
-ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
+ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47441756"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657081"
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ Azure SQL DB で、**データベースごとに**、すべてのテーブルま
 ##  <a name="NetApp"></a> .Net Framework アプリケーションの使用  
  **.Net Framework アプリケーションで Export() メソッドを使用して DAC をエクスポートするには**  
   
- コード例を参照するには、 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)上の DAC サンプル アプリケーションをダウンロードしてください。  
+ コード例を参照するには、 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)上の DAC サンプル アプリケーションをダウンロードしてください。  
   
 1.  SMO サーバー オブジェクトを作成し、エクスポートする DAC が含まれたインスタンスにそれを設定します。  
   

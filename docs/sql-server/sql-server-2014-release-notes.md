@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e7a72900cc62e8a517f437975691b858bb1401a5
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419497"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699690"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ SQL Server 2014 SP1 には、SQL Server 2014 CU 1 から CU 5 までで提供さ
 1.  SQL Server 2014 RTM インスタンスに SQL Server 2014 CTP 2 データベースをアタッチ。    
 2.  SQL Server 2014 CTP 2 で作成したデータベース バックアップを SQL Server 2014 RTM インスタンスに復元。    
 3.  SQL Server 2014 RTM へのインプレース アップグレード。
-4.  SQL Server 2014 RTM へのローリング アップグレード。 ローリング アップグレードを開始する前に、手動フェールオーバー モードに切り替える必要があります。 詳細については、「[ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新](http://msdn.microsoft.com/library/dn178483.aspx)」を参照してください。    
+4.  SQL Server 2014 RTM へのローリング アップグレード。 ローリング アップグレードを開始する前に、手動フェールオーバー モードに切り替える必要があります。 詳細については、「[ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新](https://msdn.microsoft.com/library/dn178483.aspx)」を参照してください。    
 5.  SQL Server 2014 CTP 2 にインストールされたトランザクション パフォーマンス コレクション セットによって収集されたデータを、SQL Server 2014 RTM の SQL Server Management Studio で表示することはできません。その逆も同じです。
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>SQL Server 2014 RTM から SQL Server 2014 CTP 2 へのダウングレード  
@@ -114,7 +114,7 @@ SQL Server 2014 SP1 には、SQL Server 2014 CU 1 から CU 5 までで提供さ
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 メディア/ISO/CAB 上の不正なバージョンの StreamInsight クライアント  
 SQL Server メディア/ISO/CAB 上に間違ったバージョンの StreamInsight.msi および StreamInsightClient.msi があります (パスは StreamInsight\\\<Architecture\>\\\<Language ID\>)。  
   
-**回避策:** [SQL Server 2014 用 Feature Pack のダウンロード ページ](http://go.microsoft.com/fwlink/?LinkID=306709)から正しいバージョンをダウンロードしてインストールしてください。  
+**回避策:** [SQL Server 2014 用 Feature Pack のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=306709)から正しいバージョンをダウンロードしてインストールしてください。  
   
 ### <a name="ProdDoc"></a>製品ドキュメント RTM
   
@@ -158,7 +158,7 @@ SQL Server 2014 Standard では、次の点が変更されています。
 -   最大メモリは 64 GB から 128 GB に拡大されました。  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>メモリ最適化アドバイザーは既定の制約に対して互換性なしのフラグを設定  
-**問題点:** SQL Server Management Studio のメモリ最適化アドバイザーは、すべての既定の制約に対して、互換性なしというフラグを設定します。 既定の制約すべてが、メモリ最適化テーブルでサポートされているわけではありません。アドバイザーは、既定の制約のうち、サポートされている種類とサポートされていない種類を区別しません。 サポートされている既定の制約として、すべての定数や、ネイティブ コンパイル ストアド プロシージャ内でサポートされている式と組み込み関数を挙げることができます。 ネイティブ コンパイル ストアド プロシージャでサポートされる関数の一覧については、「 [ネイティブ コンパイル ストアド プロシージャでサポートされる構造](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)」を参照してください。  
+**問題点:** SQL Server Management Studio のメモリ最適化アドバイザーは、すべての既定の制約に対して、互換性なしというフラグを設定します。 既定の制約すべてが、メモリ最適化テーブルでサポートされているわけではありません。アドバイザーは、既定の制約のうち、サポートされている種類とサポートされていない種類を区別しません。 サポートされている既定の制約として、すべての定数や、ネイティブ コンパイル ストアド プロシージャ内でサポートされている式と組み込み関数を挙げることができます。 ネイティブ コンパイル ストアド プロシージャでサポートされる関数の一覧については、「 [ネイティブ コンパイル ストアド プロシージャでサポートされる構造](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)」を参照してください。  
   
 **回避策:** 障害となる問題を識別する目的でアドバイザーを使用する場合は、互換性のある既定の制約に関する表示を無視してください。 メモリ最適化アドバイザーを使用して、互換性のある既定の制約を含み、障害となる他の問題が存在しないテーブルを移行する場合は、次の手順を実行します:  
   
@@ -323,7 +323,7 @@ Keywords:      Classic
 Description:   Report Server (DENALI) cannot connect to the report server database.  
 ```  
   
-詳細については、「 [SQL Server 2014 Reporting Services の役立つヒントおよびトラブルシューティング](http://go.microsoft.com/fwlink/?LinkID=391254)」を参照してください。  
+詳細については、「 [SQL Server 2014 Reporting Services の役立つヒントおよびトラブルシューティング](https://go.microsoft.com/fwlink/?LinkID=391254)」を参照してください。  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>SQL Server 2014 Reporting Services を使用する複数ノードの SharePoint ファームで必要なアップグレードの順序  
 **問題点:** SharePoint 製品用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインのすべてのインスタンスをアップグレードする前に、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスのインスタンスをアップグレードした場合は、複数ノード ファームでレポートを表示できなくなります。  
@@ -333,7 +333,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 1.  最初に、SharePoint 製品用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインのすべてのインスタンスをアップグレードします。    
 2.  次に、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスのすべてのインスタンスをアップグレードします。  
   
-詳細については、「 [SQL Server 2014 Reporting Services の役立つヒントおよびトラブルシューティング](http://go.microsoft.com/fwlink/?LinkID=391254)」を参照してください。  
+詳細については、「 [SQL Server 2014 Reporting Services の役立つヒントおよびトラブルシューティング](https://go.microsoft.com/fwlink/?LinkID=391254)」を参照してください。  
   
 ### <a name="AzureVM"></a>Microsoft Azure Virtual Machines 上の SQL Server 2014 RTM  
   
@@ -348,7 +348,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
     この回避策により、ウィザードは Windows Azure 内でレプリカの追加を完了することができます。  
   
-2.  ウィザードが完了した後、 [チュートリアル: Windows Azure AlwaysOn 可用性グループのリスナー構成](http://msdn.microsoft.com/library/dn376546.aspx)で説明されているように、Windows Azure 内のリスナー構成を完了する必要があります。  
+2.  ウィザードが完了した後、 [チュートリアル: Windows Azure AlwaysOn 可用性グループのリスナー構成](https://msdn.microsoft.com/library/dn376546.aspx)で説明されているように、Windows Azure 内のリスナー構成を完了する必要があります。  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   
@@ -359,9 +359,9 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 **回避策:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「 [Microsoft SQL Server 2012 SP1 用 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「 [Microsoft SQL Server 2012 SP1 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
   
-2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](http://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
+2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](https://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
   
 **詳細情報:**  
   
@@ -374,9 +374,9 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 **回避策:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「 [Microsoft SQL Server 2012 SP1 用 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「 [Microsoft SQL Server 2012 SP1 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
   
-2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](http://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
+2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](https://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
   
 **詳細情報:**  
   
@@ -389,7 +389,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 **回避策:**  
   
-1.  Microsoft Excel で、カスタムの詳細プロパティをクリアします。 サポート技術情報 [KB 2927748](http://support.microsoft.com/kb/2927748) の「回避策」を参照してください。  
+1.  Microsoft Excel で、カスタムの詳細プロパティをクリアします。 サポート技術情報 [KB 2927748](https://support.microsoft.com/kb/2927748) の「回避策」を参照してください。  
   
 **詳細情報:**  
   
@@ -411,7 +411,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 アップグレード アドバイザーが SQL Server Reporting Services に関係のないアップグレードの問題点を報告する  
 **問題点:** SQL Server 2014 メディアに収録されている SQL Server Upgrade Advisor (SSUA) が SQL Server Reporting Services サーバーを分析するときに、不適切な複数のエラーを報告します。  
   
-**回避策:** [SSUA に対応する SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=306709)の一部として提供される SQL Server アップグレード アドバイザーで、この問題が解決されます。  
+**回避策:** [SSUA に対応する SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709)の一部として提供される SQL Server アップグレード アドバイザーで、この問題が解決されます。  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 アップグレード アドバイザーで SQL Server Integration Services サーバーを分析するときにエラーが報告される  
 **問題点:** SQL Server 2014 メディアに収録されている SQL Server Upgrade Advisor (SSUA) が、SQL Server Integration Services サーバーを分析するときにエラーを報告します。  ユーザーに対して表示されるエラーは、次のようなものです。  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**回避策:** [SSUA に対応する SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=306709)の一部として提供される SQL Server アップグレード アドバイザーで、この問題が解決されます。  
+**回避策:** [SSUA に対応する SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709)の一部として提供される SQL Server アップグレード アドバイザーで、この問題が解決されます。  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

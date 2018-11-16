@@ -19,12 +19,12 @@ ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83ca2d7718af4151b375b0db7f2a0942ced8ac4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2630dcc4e23757dc9dbb22e23885ea5089e1d274
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782140"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670101"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>接続の権限借用と資格情報
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ catch
 > [!NOTE]  
 >  権限借用の動作の変更については、次を参照してください。 [SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ID インスタンスを取得した場合、既定では、そのインスタンスを別のコンピューターに反映できません。既定では、Windows セキュリティ インフラストラクチャによりこの操作が制限されます。 ただし、"委任" というメカニズムを使用すると、信頼関係のある複数のコンピューターに Windows ID を反映できるようになります。 TechNet 記事では、委任の詳細については、"[Kerberos プロトコル遷移および制約付き委任](http://go.microsoft.com/fwlink/?LinkId=50419)"。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ID インスタンスを取得した場合、既定では、そのインスタンスを別のコンピューターに反映できません。既定では、Windows セキュリティ インフラストラクチャによりこの操作が制限されます。 ただし、"委任" というメカニズムを使用すると、信頼関係のある複数のコンピューターに Windows ID を反映できるようになります。 TechNet 記事では、委任の詳細については、"[Kerberos プロトコル遷移および制約付き委任](https://go.microsoft.com/fwlink/?LinkId=50419)"。  
   
 ## <a name="see-also"></a>参照  
  [SqlContext オブジェクト](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

@@ -10,12 +10,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 94c198990d121d6f89ef92ad39fd52ad96188883
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d607a7fa7dd9ce91c5ca97bf144f89e1624ed93
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764440"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670611"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
@@ -30,7 +30,7 @@ SQL Server Data Tools (SSDT) では、[Azure Active Directory (Azure AD)](https:
 この記事では、[Azure クラウド](https://azure.microsoft.com/)の次の *Azure SQL 製品*を対象に Azure AD について説明します。
 
 - Azure SQL データベース
-- Azure SQL データ ウェアハウス
+- Azure SQL Data Warehouse
 
 ## <a name="active-directory-password-authentication"></a>Active Directory パスワード認証
 
@@ -87,6 +87,6 @@ MFA の実施は、Azure AD によって、この追加の MFA ポップアッ�
 [多要素認証](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [SQL Database での Azure Active Directory 認証](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT チーム ブログ](http://blogs.msdn.com/b/ssdt/)  
+[SSDT チーム ブログ](https://blogs.msdn.com/b/ssdt/)  
 [DACFx API リファレンス](https://msdn.microsoft.com/library/dn645454.aspx)  
 [SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)  

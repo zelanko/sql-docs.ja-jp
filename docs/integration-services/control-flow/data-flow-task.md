@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 073b16502e725c36b64427514be04074439070bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633630"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639095"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
   データ フロー タスクは、変換元と変換先との間でデータを移動するデータ フロー エンジンをカプセル化して、データの移動時にユーザーがデータを変換、クリーンアップ、および変更できるようにします。 データ フロー タスクをパッケージの制御フローに追加すると、パッケージでデータの抽出、変換、および読み込みを行うことができます。  
@@ -104,7 +104,7 @@ ms.locfileid: "47633630"
   
  プロパティを **[プロパティ]** ウィンドウで設定する方法の詳細については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>プログラムによるデータ フロー タスクの構成  
  プログラムによってデータ フロー タスクをパッケージに追加して、データ フローのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -112,9 +112,9 @@ ms.locfileid: "47633630"
 -   [プログラムによるデータ フロー タスクの追加](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- technet.microsoft.com のビデオ「 [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
+ technet.microsoft.com のビデオ「 [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
   

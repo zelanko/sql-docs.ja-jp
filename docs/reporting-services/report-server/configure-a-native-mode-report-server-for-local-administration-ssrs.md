@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021906"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812865"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
   レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 レポート サーバーのインストールまたは構成をまだ行っていない場合は、「[インストール ウィザードからの SQL Server 2016 のインストール (セットアップ)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」および「[Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)」を参照してください。  
@@ -87,7 +87,7 @@ ms.locfileid: "50021906"
   
 8.  **[サイト]** をクリックします。  
   
-9. `http://<your-server-name>`を追加します。  
+9. `https://<your-server-name>`を追加します。  
   
 10. 既定のサイトに HTTPS を使用していない場合は、 **[ゾーンのすべてのサイトにサーバー証明書 (https:) を必要とする]** チェック ボックスをオフにします。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50021906"
   
 ###  <a name="bkmk_configure_site_settings"></a> レポート マネージャーのサイトの設定  
   
-1.  管理者特権を使用してブラウザーを開き、レポート マネージャー ( `http://<server name>/reports`) を参照します。  
+1.  管理者特権を使用してブラウザーを開き、レポート マネージャー ( `https://<server name>/reports`) を参照します。  
   
 2.  ホーム ページの上隅にある **[サイトの設定]** をクリックします。  
   

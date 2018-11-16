@@ -14,17 +14,17 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4404b2af9114da376e007bf91533f9e083dbff10
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750360"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639879"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージおよびプロジェクト パラメーター
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[Project.params]** ウィンドウを使用して、プロジェクト パラメーターを作成、変更、または削除します。 **デザイナーの** [パラメーター] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用して、パッケージ パラメーターを作成、変更、および削除します。 **[パラメーター化]** ダイアログ ボックスを使用して、新規または既存のパラメーターをタスクのプロパティと関連付けます。 **[Project.params]** ウィンドウと **[パラメーター]** タブの使用の詳細については「 [Create Parameters](http://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)」を参照してください。 **[パラメーター化]** ダイアログ ボックスの詳細については、「 [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)」を参照してください。  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[Project.params]** ウィンドウを使用して、プロジェクト パラメーターを作成、変更、または削除します。 **デザイナーの** [パラメーター] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用して、パッケージ パラメーターを作成、変更、および削除します。 **[パラメーター化]** ダイアログ ボックスを使用して、新規または既存のパラメーターをタスクのプロパティと関連付けます。 **[Project.params]** ウィンドウと **[パラメーター]** タブの使用の詳細については「 [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)」を参照してください。 **[パラメーター化]** ダイアログ ボックスの詳細については、「 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)」を参照してください。  
   
 ## <a name="parameters-and-package-deployment-model"></a>パラメーターとパッケージ配置モデル  
  通常、パッケージ配置モデルを使用してパッケージを配置する場合、パラメーターではなく構成を使用する必要があります。  
@@ -214,6 +214,6 @@ ms.locfileid: "47750360"
  Transact-SQL を使用してサーバーの既定値を設定するには、[catalog.set_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) ストアド プロシージャを使用します。 現在のサーバーの既定値を表示するには、[catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューをクエリします。 サーバーの既定値をクリアするには、[catalog.clear_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) ストアド プロシージャを使用します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- mattmasson.com のブログ「 [SSIS 簡単なヒント: 必要なパラメーター](http://go.microsoft.com/fwlink/?LinkId=239781)」  
+ mattmasson.com のブログ「 [SSIS 簡単なヒント: 必要なパラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)」  
   
   

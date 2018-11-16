@@ -23,12 +23,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f87b80fb11261ee1d49326dfc29fe89fc2bdc94c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e46ec694b130ca684f5437e04159436a36afd44
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857040"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641179"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
   スクリプト コンポーネントはスクリプトをホストします。これにより、パッケージにカスタム スクリプト コードを含めて実行できます。 スクリプト コンポーネントは、パッケージ内で次の目的に使用できます。  
@@ -101,7 +101,7 @@ ms.locfileid: "47857040"
 ### <a name="configuring-the-script-component-programmatically"></a>プログラムによるスクリプト コンポーネントの構成  
  **[プロパティ]** ウィンドウまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -177,7 +177,7 @@ ms.locfileid: "47857040"
  **Inputs and outputs**  
  左側で入力または出力を選択すると、右側の表にプロパティが表示されます。 編集に使用できるプロパティは、選択内容によって異なります。 表示されるプロパティの多くは読み取り専用です。 各プロパティの詳細については、次のトピックを参照してください。  
   
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

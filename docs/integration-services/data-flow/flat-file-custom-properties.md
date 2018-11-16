@@ -11,12 +11,12 @@ ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef85a7d5620124ce95c3adf2731248603bde3e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d4b26ccd758bbd7d4a5cbe8959e7939848fd493
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675900"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639829"
 ---
 # <a name="flat-file-custom-properties"></a>フラット ファイルのカスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -36,7 +36,7 @@ ms.locfileid: "47675900"
   
 |プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
-|FastParse|ブール値|列の解析に、DTS が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 詳細については、「 [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 このプロパティの既定値は **False**です。<br /><br /> 注: このプロパティは、 **フラット ファイル ソース エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
+|FastParse|ブール値|列の解析に、DTS が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 このプロパティの既定値は **False**です。<br /><br /> 注: このプロパティは、 **フラット ファイル ソース エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
   
  詳細については、「 [フラット ファイル ソース](../../integration-services/data-flow/flat-file-source.md)」を参照してください。  
   
@@ -56,6 +56,6 @@ ms.locfileid: "47675900"
  詳細については、「 [フラット ファイル変換先](../../integration-services/data-flow/flat-file-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

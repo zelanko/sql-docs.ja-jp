@@ -20,12 +20,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e2dcef7a30b531b329c12b8e4e424ba7e0c3c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b68a59129df88c1ea40736ec90a73d0b7e1c5ae
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692220"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673621"
 ---
 # <a name="file-restores-simple-recovery-model"></a>ファイルの復元 (単純復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47692220"
   
      *オンライン ファイル復元*では、復元中にデータベースがオンラインであれば、データベースをオンラインにしたままファイル復元を実行できます。 ただし、復元操作時は、ファイルが復元される各ファイル グループがオフラインになります。 オフライン ファイル グループ内のすべてのファイルが復旧されると、そのファイル グループは自動的にオンラインになります。  
   
-     オンライン ページおよびファイルの復元の詳細については、「[データベース エンジンの機能とタスク](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)」を参照してください。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
+     オンライン ページおよびファイルの復元の詳細については、「[データベース エンジンの機能とタスク](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)」を参照してください。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
   
     > [!TIP]  
     >  ファイル復元のためにデータベースをオフラインにする場合は、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントの ALTER DATABASE *database_name* SET OFFLINE を実行することにより、データベースをオフラインにしてから復元シーケンスを開始します。  
@@ -96,7 +96,7 @@ ms.locfileid: "47692220"
   
 -   [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Restore.SqlRestore メソッド (サーバー) (SMO)](http://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
+-   [Restore.SqlRestore メソッド (サーバー) (SMO)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
   
 ## <a name="see-also"></a>参照  
  [バックアップと復元: 相互運用性と共存 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

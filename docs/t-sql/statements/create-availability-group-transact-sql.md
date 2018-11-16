@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4099355964a7b778073493f943ff9962bc24e149
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b52f9aa0131639bdfe68222bba42eae774d2b18f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662940"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698331"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47662940"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]機能に対して有効である場合、新しい可用性グループを作成します。  
   
 > [!IMPORTANT]  
->  新しい可用性グループの初期プライマリ レプリカとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで CREATE AVAILABILITY GROUP を実行します。 このサーバー インスタンスは、Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。  
+>  新しい可用性グループの初期プライマリ レプリカとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで CREATE AVAILABILITY GROUP を実行します。 このサーバー インスタンスは、Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +84,7 @@ CREATE AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -151,10 +151,10 @@ CREATE AVAILABILITY GROUP group_name
   
 |レベル|エラー状態|  
 |-----------|-----------------------|  
-|1|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> -WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「 [動作方法: SQL Server Always On のリース タイムアウト](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx)」を参照してください。|  
+|1|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> -WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「 [動作方法: SQL Server Always On のリース タイムアウト](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx)」を参照してください。|  
 |2|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがクラスターに接続されておらず、可用性グループのユーザー指定の HEALTH_CHECK_TIMEOUT しきい値を超えている。<br /><br /> -可用性レプリカがエラー状態である。|  
-|3|孤立したスピンロック、重大な書き込みアクセス違反、ダンプが多すぎるなどの重大な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> これは既定の動作です。|  
-|4|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部リソース プールに永続的なメモリ不足の状態があるなど、中程度の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。|  
+|3|孤立したスピンロック、深刻な書き込みアクセス違反、ダンプが多すぎるなどの深刻な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> これは既定の動作です。|  
+|4|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部リソース プールに永続的なメモリ不足の状態があるなど [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。|  
 |5|以下のような任意の修飾エラー状態に対して自動フェールオーバーを開始する必要があることを指定します。<br /><br /> -SQL エンジンのワーカー スレッドが枯渇している。<br /><br /> -解決不可能なデッドロックが検出された。|  
   
 > [!NOTE]  
@@ -176,7 +176,7 @@ CREATE AVAILABILITY GROUP group_name
   この設定の詳細については、「[データベース レベルの正常性検出オプション](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)」を参照してください。 
   
  DTC_SUPPORT  **=** { PER_DB | NONE }  
- データベースにまたがるトランザクションは分散トランザクション コーディネーター (DTC) ではサポートするかどうかを指定します。 データベースにまたがるトランザクションは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降でのみサポートされます。 PER_DB では、これらのトランザクションのサポートを可用性グループを作成します。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
+ データベースにまたがるトランザクションは分散トランザクション コーディネーター (DTC) ではサポートするかどうかを指定します。 データベースにまたがるトランザクションは、以降でのみサポート [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 PER_DB では、これらのトランザクションのサポートを可用性グループを作成します。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
   
  BASIC  
  基本的な可用性グループを作成するために使用します。 基本的な可用性グループは、1 つのデータベースと 2 つのレプリカ (プライマリ レプリカとセカンダリ レプリカ) に制限されます。 このオプションは、SQL Server Standard Edition の非推奨のデータベース ミラーリング機能に代わるものです。 詳細については、「[基本的な可用性グループ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。 基本的な可用性グループは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降でサポートされています。  
@@ -321,7 +321,7 @@ CREATE AVAILABILITY GROUP group_name
   
  名前付きインスタンスの場合は、[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 動的管理ビューの **port** 列と **type_desc** 列をクエリすることで、ポート番号を取得できます。 サーバー インスタンスでは Transact-SQL リスナーを使用します (**type_desc='TSQL'**)。  
   
- レプリカの読み取り専用ルーティング URL の計算の詳細については、「[AlwaysOn の read_only_routing_url の計算](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx)」を参照してください。  
+ レプリカの読み取り専用ルーティング URL の計算の詳細については、「[AlwaysOn の read_only_routing_url の計算](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスの場合は、特定のポートを使用するように Transact-SQL リスナーを構成する必要があります。 詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
@@ -352,7 +352,7 @@ CREATE AVAILABILITY GROUP group_name
   
  読み取り可能なセカンダリ レプリカをホストする可能性があるすべてのサーバー インスタンスを指定するには、コンマ区切りリストを使用します。 読み取り専用のルーティングは、リストで指定されているサーバー インスタンスの順序に従います。 一覧の最後に、このサーバー インスタンスを配置することで、レプリカの読み取り専用ルーティング リスト、レプリカのホスト サーバーのインスタンスを含める場合は通常、お勧め、1 つは、使用可能な場合に、読み取りを目的とした接続がセカンダリ レプリカに移動できるようにします。  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、読み取り可能なセカンダリ レプリカ間で読み取りを目的とした要求の負荷を分散することができます。 これは、読み取り専用ルーティング リスト内のかっこの入れ子になったセットで、レプリカを配置することで指定します。 詳細と例については、「[読み取り専用レプリカ間の負荷分散の構成](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)」を参照してください。  
+ 以降で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 、読み取り可能なセカンダリ レプリカの間で読み取りを目的とした要求の負荷を分散することができます。 これは、読み取り専用ルーティング リスト内のかっこの入れ子になったセットで、レプリカを配置することで指定します。 詳細と例については、「[読み取り専用レプリカ間の負荷分散の構成](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)」を参照してください。  
   
  なし  
  この可用性レプリカがプライマリ レプリカの場合は、読み取り専用のルーティングをサポートしないことを指定します。 これは既定の動作です。  
@@ -432,7 +432,7 @@ CREATE AVAILABILITY GROUP group_name
  意味のある文字列を指定することをお勧めします。 たとえば、可用性グループの名前が `AG1`の場合は、 `ag1-listener`のような意味のある DNS ホスト名にします。  
   
 > [!IMPORTANT]  
->  NetBIOS では、dns_name の最初の 15 文字のみが認識されます。 同じ Active Directory で制御されている 2 つの WSFC クラスターがあり、両方のクラスターで可用性グループ リスナーを作成しようとする場合、15 文字より長い名前を使用して、15 文字のプレフィックスが同一であると、エラーが表示され、仮想ネットワーク名リソースをオンラインにできなかったことがレポートされます。 DNS 名のプレフィックスに対する名前付け規則の詳細については、「 [ドメイン名を割り当てる](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)」を参照してください。  
+>  NetBIOS では、dns_name の最初の 15 文字のみが認識されます。 同じ Active Directory で制御されている 2 つの WSFC クラスターがあり、両方のクラスターで可用性グループ リスナーを作成しようとする場合、15 文字より長い名前を使用して、15 文字のプレフィックスが同一であると、エラーが表示され、仮想ネットワーク名リソースをオンラインにできなかったことがレポートされます。 DNS 名のプレフィックスに対する名前付け規則の詳細については、「 [ドメイン名を割り当てる](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx)」を参照してください。  
   
  \<listener_option> LISTENER は次のいずれかの \<listener_option> オプションを受け取ります。 
   
@@ -454,13 +454,13 @@ CREATE AVAILABILITY GROUP group_name
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *four_part_ipv4_address*  
- 可用性グループ リスナーに対する IPv4 の 4 つの部分から成るアドレスを指定します。 たとえば、 `10.120.19.155`のようにします。  
+ 可用性グループ リスナーに対する IPv4 の 4 つの部分から成るアドレスを指定します。 たとえば、`10.120.19.155` のようにします。  
   
  *four_part_ipv4_mask*  
- 可用性グループ リスナーに対する IPv4 の 4 つの部分から成るマスクを指定します。 たとえば、 `255.255.254.0`のようにします。  
+ 可用性グループ リスナーに対する IPv4 の 4 つの部分から成るマスクを指定します。 たとえば、`255.255.254.0` のようにします。  
   
  *ipv6_address*  
- 可用性グループ リスナーに対する IPv6 アドレスを指定します。 たとえば、 `2001::4898:23:1002:20f:1fff:feff:b3a3`のようにします。  
+ 可用性グループ リスナーに対する IPv6 アドレスを指定します。 たとえば、`2001::4898:23:1002:20f:1fff:feff:b3a3` のようにします。  
   
  PORT **=** *listener_port*  
  WITH IP 句で指定されている可用性グループ リスナーが使用するポート番号 *listener_port* を指定します。 PORT は省略できます。  
@@ -482,7 +482,7 @@ CREATE AVAILABILITY GROUP group_name
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. セカンダリ レプリカ上のバックアップ、柔軟なフェールオーバー ポリシー、および接続アクセスを構成する  
- 次の例では、2 つのユーザー データベース (`ThisDatabase` および `ThatDatabase`) に対して、`MyAg` という名前の可用性グループを作成します。 次の表は、可用性グループ全体を対象に設定されるオプションの指定値をまとめたものです。  
+ 次の例では、2 つのユーザー データベース (`MyAg` および `ThisDatabase`) に対し、`ThatDatabase` という名前の可用性グループを作成します。 次の表は、可用性グループ全体を対象に設定されるオプションの指定値をまとめたものです。  
   
 |グループ オプション|設定|[説明]|  
 |------------------|-------------|-----------------|  

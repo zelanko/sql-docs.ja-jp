@@ -20,12 +20,12 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4864aedf00d616ee35e551035574430c808bd70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5c45761082fc37846cb732c6130718ba23efee0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806030"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639124"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントのデザイン時のメソッド
   実行前のデータ フロー タスクは、増分的に変更が行われるため、デザイン時の状態にあると言えます。 追加される変更には、コンポーネントの追加または削除、コンポーネントを接続するパス オブジェクトの追加または削除、およびコンポーネントのメタデータに対する変更などが含まれます。 メタデータの変更が発生すると、コンポーネントはその変更を監視して対処できます。 たとえば、コンポーネントは特定の変更を禁止したり、ある変更に応じてさらに変更を加えることができます。 デザイン時に、設計者はデザイン時インターフェイス <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> を介して、コンポーネントとやり取りします。  
@@ -101,7 +101,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- 詳細については、[MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkId=7022)の「一般的な型変換」および「型コンバーターの実装」を参照してください。  
+ 詳細については、[MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkId=7022)の「一般的な型変換」および「型コンバーターの実装」を参照してください。  
   
  次の例に示すように、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> プロパティを使用すると、カスタム プロパティの値を設定するカスタム エディター ダイアログ ボックスを指定できます。 ニーズに合った既存の UI 型エディターのクラスが見つからない場合は、最初に **System.Drawing.Design.UITypeEditor** を継承するカスタム型のエディターを作成する必要があります。  
   
@@ -135,7 +135,7 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- 詳細については、[MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkId=7022)の「UI 型エディターの実装」を参照してください。  
+ 詳細については、[MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkId=7022)の「UI 型エディターの実装」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー コンポーネントの実行時のメソッド](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  

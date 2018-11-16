@@ -13,12 +13,12 @@ ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edad80b1e0172073f6be494519d2ae68f3a1dc90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10f5d9c55f25221ae767a960393f7d7d775eff96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855140"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659218"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server の単体テストでのテスト条件の使用
 SQL Server 単体テストでは、1 つ以上の Transact\-SQL テスト スクリプトが実行されます。 結果は Transact\-SQL スクリプト内で評価することができ、エラーを返してテストに失敗するには THROW または RAISERROR が使用されます。また、結果を評価するテスト内でテスト条件を定義することもできます。 テスト結果として、[SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) クラスのインスタンスが返されます。 このクラスのインスタンスには、1 つ以上のデータセット、実行時間、およびスクリプトの影響を受けた行数が含まれます。 この情報すべては、スクリプトの実行中に収集されます。 これらの結果は、テスト条件を使用して評価できます。 SQL Server Data Tools には、定義済みのテスト条件が用意されています。 また、カスタム条件を作成して使用することもできます (「[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)」をご覧ください)。  
@@ -92,7 +92,7 @@ SQL Server 単体テスト デザイナーを表示するには、**ソリュー
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   
-5.  テストするデータベースへの接続を指定します。 詳しくは、「[方法:データベース接続の作成](http://msdn.microsoft.com/library/aa833420(VS.100).aspx)」をご覧ください。  
+5.  テストするデータベースへの接続を指定します。 詳しくは、「[方法:データベース接続の作成](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」をご覧ください。  
   
 6.  既定では、テストの Transact\-SQL 本体が編集ウィンドウに表示されます。 必要に応じて、予期する結果を生成するようにコードを変更できます。 たとえば、テストに事前テストのコードがある場合、そのコードを追加することができます。  
   
@@ -122,7 +122,7 @@ SQL Server 単体テストに予期されるスキーマ テスト条件を追�
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   
-5.  テストするデータベースへの接続を指定します。 詳しくは、「[方法:データベース接続の作成](http://msdn.microsoft.com/library/aa833420(VS.100).aspx)」をご覧ください。  
+5.  テストするデータベースへの接続を指定します。 詳しくは、「[方法:データベース接続の作成](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」をご覧ください。  
   
 6.  既定では、テストの Transact\-SQL 本体が編集ウィンドウに表示されます。 必要に応じて、予期する結果を生成するようにコードを変更できます。 たとえば、テストに事前テストのコードがある場合、そのコードを追加することができます。  
   

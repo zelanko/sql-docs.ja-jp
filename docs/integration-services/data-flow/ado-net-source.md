@@ -22,22 +22,22 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ca0a56e3168e5493104cd54472516800d444078
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 125caa4360df6b789bd9f8f61b12d85552b4983e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665586"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638769"
 ---
 # <a name="ado-net-source"></a>ADO NET ソース
   ADO NET ソースは .NET プロバイダーのデータを呼び出し、そのデータをデータ フローで使用できるようにします。  
   
- ADO NET 変換元を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]に接続できます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の詳細については、「 [Azure SQL Database の一般的な制限事項とガイドライン](http://go.microsoft.com/fwlink/?LinkId=248228)」を参照してください。  
+ ADO NET 変換元を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]に接続できます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の詳細については、「 [Azure SQL Database の一般的な制限事項とガイドライン](https://go.microsoft.com/fwlink/?LinkId=248228)」を参照してください。  
   
 ## <a name="data-type-support"></a>データ型のサポート  
  ソースは、特定の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型にマップされないデータ型を DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型に変換します。 この変換はデータ型が **System.Object**である場合でも行われます。  
   
- DT_NTEXT データ型から DT_WSTR データ型に、または DT_WSTR データ型から DT_NTEXT データ型に変更できます。 データ型を変更するには、ADO NET ソースの **[詳細エディター]** ダイアログ ボックスで **DataType** プロパティを設定します。 詳細については、「 [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」(共通プロパティ) を参照してください。  
+ DT_NTEXT データ型から DT_WSTR データ型に、または DT_WSTR データ型から DT_NTEXT データ型に変更できます。 データ型を変更するには、ADO NET ソースの **[詳細エディター]** ダイアログ ボックスで **DataType** プロパティを設定します。 詳細については、「 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」(共通プロパティ) を参照してください。  
   
  ADO NET ソースの後にデータ変換の変換を使用することによって、DT_NTEXT データ型を DT_BYTES データ型または DT_STR データ型に変換することもできます。 詳細については、「 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)」を参照してください。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47665586"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [ADO NET カスタム プロパティ](../../integration-services/data-flow/ado-net-custom-properties.md)  
   

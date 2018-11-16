@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9550a136d1720c5f7ee6ef9d5bd8eb2e39b5a246
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702620"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813115"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>サブスクリプション設定とファイル共有アカウント (構成マネージャー)
   **構成マネージャーの** [サブスクリプションの設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。 ファイル共有アカウントでは、複数のサブスクリプションで 1 つの資格情報のセットを使用し、ファイル共有にレポートを配信することができます。 資格情報の変更が必要なときは、ファイル共有アカウントの変更を構成します。個々のサブスクリプションは更新しません。  
@@ -73,7 +73,7 @@ filter script:extensionSettingFilter
     }  
 }  
   
-$rs2010 = New-WebServiceProxy -Uri "http:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
   
 Write-Host "----- File share subscriptions using the default file share account ----";  

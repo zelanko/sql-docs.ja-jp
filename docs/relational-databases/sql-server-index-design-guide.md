@@ -5,8 +5,7 @@ ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - index design guide
@@ -24,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6deaaa7ac9774cc775801ae7946675452cc15a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822407"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669601"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -825,7 +824,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>インメモリ非クラスター化インデックスのアーキテクチャ
 
-インメモリ非クラスター化インデックスは、2011 年に Microsoft Research が独自に考案した Bw ツリーというデータ構造を使用して実装されています。 Bw ツリーは、B ツリーのロックおよびラッチフリーのバリエーションです。 詳細については、「[The Bw-Tree: A B-tree for New Hardware Platforms](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)」(Bw ツリー: 新しいハードウェア プラットフォーム向けの B ツリー) を参照してください。 
+インメモリ非クラスター化インデックスは、2011 年に Microsoft Research が独自に考案した Bw ツリーというデータ構造を使用して実装されています。 Bw ツリーは、B ツリーのロックおよびラッチフリーのバリエーションです。 詳細については、「[The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)」(Bw ツリー: 新しいハードウェア プラットフォーム向けの B ツリー) を参照してください。 
 
 大まかに説明すると、Bw ツリーは、ページ ID (PidMap) で整理されたページのマップです。また、ページ ID (PidAlloc) と、ページ マップ内および相互にリンクされているページのセットを割り当て、再利用する機能があります。 これら 3 つの上位レベルのサブコンポーネントが、Bw ツリーの基本的な内部構造を構成します。
 
@@ -892,8 +891,8 @@ Bw ツリーのインデックス ページは、1 行の格納から最大 8 KB
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [インデックスの再構成と再構築](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[SQL Server 2008 のインデックス付きビューによるパフォーマンスの向上](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[SQL Server 2008 のインデックス付きビューによるパフォーマンスの向上](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[パーティション テーブルとパーティション インデックス](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [主キーを作成する](../relational-databases/tables/create-primary-keys.md)    
 [メモリ最適化テーブルのインデックス](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [列ストア インデックス - 概要](../relational-databases/indexes/columnstore-indexes-overview.md)  
@@ -902,4 +901,4 @@ Bw ツリーのインデックス ページは、1 行の格納から最大 8 KB
 [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [計算列のインデックス](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [インデックスと ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

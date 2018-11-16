@@ -11,12 +11,12 @@ ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02f1851a2be9e6cd716c3d9b151378a8d84a2a32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 658826481c77368f4cb8118ae3fe839a06886d03
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615940"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663321"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>コマンド ライン ツールを使用したプロジェクト指向のデータベース開発
 SQL Server Data Tools は、プロジェクト指向の各種データベース開発シナリオを実現に導くコマンド ライン ツールを提供します。  
@@ -26,7 +26,7 @@ SQL Server Data Tools は、プロジェクト指向の各種データベース�
 |||  
 |-|-|  
 |[SqlPackage.exe](../tools/sqlpackage.md)|このトピックでは、次のタスクに使用される SQLPackage.exe ユーティリティについて説明します。<br /><br />-   ライブ SQL Server データベースから .dacpac ファイルを抽出する。<br />-   .dacpac ファイルをライブ SQL Server データベースに公開し、その .dacpac に合わせてライブ データベース スキーマの増分更新を行う。<br />-   .dacpac ファイルをライブ SQL Server データベースと比較し、ライブ データベースを更新することなく、増分アップグレード Transact\-SQL スクリプトを生成する。<br />-   2 つの .dacpac ファイルを比較して、増分アップグレード Transact\-SQL スクリプトを生成する。<br />-   データベースの増分アップグレードが行われた場合に発生する、増分アップグレードによる変更をまとめた XML レポートを生成する。|  
-|[dbSqlPackage プロバイダーでの MSDeploy の使用](../ssdt/using-msdeploy-with-dbsqlpackage-provider.md)|このトピックでは、SSDT に付属する、dbSqlPackage という名前の [Web 配置ツール](http://go.microsoft.com/fwlink/?LinkId=231798) プロバイダーについて説明します。これは、Microsoft インターネット インフォメーション サービス (IIS) の Web 配置ツール (MSDeploy.exe) と共に次のタスクに使用します。<br /><br />-   リモート/ローカルの SQL Server データベースまたは SQL Azure データベースから .dacpac ファイルを抽出する。<br />-   .dacpac をリモート/ローカルの SQL Server データベースまたは SQL Azure データベースに公開し、増分アップグレードを行う。<br />-   ローカル SQL Server データベースからリモート SQL Server データベースまたは SQL Azure データベースに公開し、リモート データベースの増分アップグレードを行う。<br />-   .dacpac をリモート/ローカルの SQL Server データベースまたは SQL Azure データベースと比較し、ライブ データベースを更新することなく、増分アップグレード Transact\-SQL スクリプトを生成する。<br />-   データベースの増分アップグレードが行われた場合に発生する、増分アップグレードによる変更をまとめた XML レポートを生成する。|  
+|[dbSqlPackage プロバイダーでの MSDeploy の使用](../ssdt/using-msdeploy-with-dbsqlpackage-provider.md)|このトピックでは、SSDT に付属する、dbSqlPackage という名前の [Web 配置ツール](https://go.microsoft.com/fwlink/?LinkId=231798) プロバイダーについて説明します。これは、Microsoft インターネット インフォメーション サービス (IIS) の Web 配置ツール (MSDeploy.exe) と共に次のタスクに使用します。<br /><br />-   リモート/ローカルの SQL Server データベースまたは SQL Azure データベースから .dacpac ファイルを抽出する。<br />-   .dacpac をリモート/ローカルの SQL Server データベースまたは SQL Azure データベースに公開し、増分アップグレードを行う。<br />-   ローカル SQL Server データベースからリモート SQL Server データベースまたは SQL Azure データベースに公開し、リモート データベースの増分アップグレードを行う。<br />-   .dacpac をリモート/ローカルの SQL Server データベースまたは SQL Azure データベースと比較し、ライブ データベースを更新することなく、増分アップグレード Transact\-SQL スクリプトを生成する。<br />-   データベースの増分アップグレードが行われた場合に発生する、増分アップグレードによる変更をまとめた XML レポートを生成する。|  
   
 ## <a name="related-sections"></a>関連項目  
 [プロジェクト指向のオフライン データベース開発](../ssdt/project-oriented-offline-database-development.md)  
