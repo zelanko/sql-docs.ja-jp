@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 901f2a276e1b09befa2fc10e01003456e4cfe7e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a7f5c3452d63ad622dfd24d6ec3756ac5a028b2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795460"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812932"
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL アクセスを使用したレポート サーバー アイテムへのアクセス
   このトピックでは、*rs:Command*=*Value* を使用してレポート サーバー データベースまたは SharePoint サイトにある異なる種類のカタログ アイテムにアクセスする方法について説明します。 実際にこのパラメーター文字列を追加する必要はありません。 この文字列を省略した場合、レポート サーバーがアイテムの種類を評価し、適切なパラメーター値を自動的に選択します。 ただし、URL に *rs:Command*=*Value* 文字列を使用することで、レポート サーバーのパフォーマンスを向上できます。  
@@ -26,8 +26,8 @@ ms.locfileid: "47795460"
 ## <a name="access-a-report"></a>レポートへのアクセス  
  ブラウザーでレポートを表示するには、 *rs:Command*=*Render* パラメーターを使用します。 例 :  
   
- - **ネイティブ** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
- - **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **ネイティブ** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  SharePoint および `_vti_bin` HTTP プロキシ経由で要求をルーティングする [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] プロキシ構文を URL に含めることは重要です。 プロキシによって、HTTP 要求にいくつかのコンテキストが追加されます。これは、SharePoint モード レポート サーバーに対してレポートを適切に実行するために必要なコンテキストです。  
@@ -35,16 +35,16 @@ ms.locfileid: "47795460"
 ## <a name="access-a-resource"></a>リソースへのアクセス  
  リソースにアクセスするには、 *rs:Command*=*GetResourceContents* パラメーターを使用します。画像などのリソースがブラウザーと互換性がある場合は、ブラウザーにリソースが表示されます。 それ以外の場合は、ファイルまたはリソースを開くか、ディスクに保存するように要求されます。  
   
- **ネイティブ** `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
+ **ネイティブ** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>データ ソースへのアクセス  
  データ ソースにアクセスするには、 *rs:Command*=*GetDataSourceContents* パラメーターを使用します。 ブラウザーで XML がサポートされている場合、そのデータ ソース定義が表示されます。ただし、目的のデータ ソースに対して **Read Contents** 権限が与えられている認証ユーザーであることが条件となります。 例 :  
   
- **ネイティブ** `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **ネイティブ** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  XML 構造は、次の例のようになります。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "47795460"
 ## <a name="access-the-contents-of-a-folder"></a>フォルダーのコンテンツへのアクセス  
  フォルダーのコンテンツにアクセスするには、 *rs:Command*=*GetChildren* パラメーターを使用します。 要求されたフォルダーのサブフォルダー、レポート、データ ソース、およびリソースへのリンクを含む汎用フォルダー ナビゲーション ページが返されます。 例 :  
   
- **ネイティブ** `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
+ **ネイティブ** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales&rs:Command=GetChildren`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
  表示されるユーザー インターフェイスは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS) で使用されるディレクトリ参照モードと似ています。 ビルド番号を含むレポート サーバーのバージョン番号もフォルダー一覧の下に表示されます。  
   
