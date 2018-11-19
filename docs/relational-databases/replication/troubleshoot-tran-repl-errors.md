@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419457"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675901"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール: SQL Server トランザクション レプリケーションでのエラーを見つける 
 トランザクション レプリケーションがどのように動作するのかを基本的に理解していないと、レプリケーション エラーのトラブルシューティングはフラストレーションを感じることがあります。 パブリケーション作成の最初のステップは、スナップショット エージェントでスナップショットを作成し、スナップショット フォルダーにそれを保存することです。 次に、ディストリビューション エージェントがサブスクライバーにスナップショットを適用します。 
@@ -252,7 +252,7 @@ ms.locfileid: "49419457"
     
 1. 詳細ログを無効にするには、前と同じ手順に従い、前に追加した `-Output` 行全体を削除します。 
 
-詳細については、[レプリケーション エージェントの詳細ログを有効にする方法](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se)に関するページをご覧ください。 
+詳細については、[レプリケーション エージェントの詳細ログを有効にする方法](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se)に関するページをご覧ください。 
 
 
 ## <a name="see-also"></a>参照

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d3cf80df907dfe313d7282d0cf4efe31bd9b7f56
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: d33f7a468dfcff6274c4a48cfd367ea4c64226e1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099643"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696070"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>[プロキシ アカウントのプロパティ] - [新しいプロキシ アカウント]\([全般] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "50099643"
 プロキシの資格情報の名前を入力します。  
   
 > [!NOTE]  
-> 指定する資格情報名は、既存の資格情報の名前である必要があります。 資格情報を作成する方法の詳細については、「 [プロキシを作成する方法 (SQL Server Management Studio)](http://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)」を参照してください。  
+> 指定する資格情報名は、既存の資格情報の名前である必要があります。 資格情報を作成する方法の詳細については、「 [プロキシを作成する方法 (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)」を参照してください。  
   
 **[...]**  
 **[資格情報の選択]** ダイアログを起動します。  

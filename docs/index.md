@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 5ed3d7edbe277d8a39bbf9003810632a2c34a2c7
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 53097763daa17b78639ac93e379a95dfde4920d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272580"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697850"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -391,9 +391,9 @@ ms.locfileid: "51272580"
                                                         <h3>データ分析</h3>
                                                         <ul class="noBullet">
                                                         <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>
                                                             <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
                                                             <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>                                                            <li><a class="barLink" href="/sql/big-data-cluster/big-data-cluster-overview/">SQL Server 2019 のビッグ データ クラスター</a></li>
                                                        </ul>
                                                     </div>
                                                 </div>
@@ -428,16 +428,16 @@ ms.locfileid: "51272580"
         <h2>情報を共有しましょう</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 投稿 </a>
+                <a href="https://aka.ms/editsqldocs" data-linktype="external"> 投稿 </a>
             </li>
            <li>
                 <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> ヘルプ </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> フィードバック </a>
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external"> フィードバック </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> アンケート </a>
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external"> アンケート </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> ブログ </a>

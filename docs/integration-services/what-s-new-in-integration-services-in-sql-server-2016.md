@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5896643e84782c6b0a36fd4ef6da3e487acdab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691784"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640199"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -185,9 +185,9 @@ ms.locfileid: "47691784"
 ####  <a name="encrypted"></a> SSIS カタログでの Always Encrypted のサポート  
  SSIS は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の Always Encrypted 機能を既にサポートしています。 詳細については、次のログの投稿を参照してください。  
   
--   [SSIS with Always Encrypted (SSIS と Always Encrypted)](http://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS with Always Encrypted (SSIS と Always Encrypted)](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
   
--   [Lookup transformation with Always Encrypted (参照変換と Always Encrypted)](http://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Lookup transformation with Always Encrypted (参照変換と Always Encrypted)](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
 
 ### <a name="better-debugging"></a>デバッグの強化
 
@@ -213,7 +213,7 @@ ms.locfileid: "47691784"
   
 -   スクリプト コンポーネントまたはカスタムデータフロー コンポーネントで、IDTSComponentMetadata100 インターフェイスの新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> メソッドを呼び出します。  
   
- この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS データ フローのエラー列の機能強化)。  
+ この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS データ フローのエラー列の機能強化)。  
   
 > [!NOTE]  
 >  (このサポートはその後のリリースで拡張されています。 詳細については、「 [エラー列名の拡張サポート](#getidstring) 」および「 [API の新しい IDTSComponentMetaData130 インターフェイス](#CMD130)」を参照してください。)  
@@ -223,7 +223,7 @@ ms.locfileid: "47691784"
   
  GetIdentificationStringByLineageID メソッドの名前が <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>で追加または更新された機能について説明します。 詳細については、「 [データ フロー内のエラー列の名前](#ErrorColumn)」を参照してください。  
   
- この変更とエラー列の強化の詳細については、次の更新されたブログの投稿を参照してください。 [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) (Error Column Improvements for SSIS データ フローでのエラー列の強化 (CTP3.3 での更新))](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ この変更とエラー列の強化の詳細については、次の更新されたブログの投稿を参照してください。 [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) (Error Column Improvements for SSIS データ フローでのエラー列の強化 (CTP3.3 での更新))](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  (RC0 では、このメソッドは、新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> インターフェイスに移動されています。 詳細については、「 [API の新しい IDTSComponentMetaData130 インターフェイス](#CMD130)」を参照してください。)  
@@ -285,7 +285,7 @@ ms.locfileid: "47691784"
  Excel 接続マネージャー、Excel ソース、および Excel 変換先で、Excel 2016 データ ソースの明示的なサポートが提供されるようになりました。  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 のリリース  
- SQL Server 2016 Feature Pack の一部として、Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016 がリリースされています。 Feature Pack のコンポーネントをダウンロードするには、「 [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。
+ SQL Server 2016 Feature Pack の一部として、Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016 がリリースされています。 Feature Pack のコンポーネントをダウンロードするには、「 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。
  
 #### <a name="oracleteradata"></a> Connector v4.0 for Oracle および Connector v4.0 for Teradata のリリース
 Microsoft Connector v4.0 for Oracle および Microsoft Connector v4.0 Teradata がリリースされています。 これらのコネクタをダウンロードするには、「 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)」を参照してください。
@@ -346,7 +346,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
  SQL Server インポートおよびエクスポート ウィザードで、データの読み込み元と保存先として Azure BLOB Storage を使用できるようになりました。 詳細については、「[[データ ソースの選択] &#40;SQL Server インポートおよびエクスポート ウィザード&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」および「[[変換先の選択] &#40;SQL Server インポートおよびエクスポート ウィザード&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)」を参照してください。 
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer と Service for Oracle for Microsoft SQL Server 2016 のリリース  
- Microsoft® Change Data Capture Designer と Service for Oracle by Attunity for Microsoft SQL Server® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。  これらのコンポーネントで、Oracle 12c のクラシック インストールをサポートできるようになりました (マルチテナント インストールはサポートされません)。Feature Pack のコンポーネントをダウンロードするには、「 [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。  
+ Microsoft® Change Data Capture Designer と Service for Oracle by Attunity for Microsoft SQL Server® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。  これらのコンポーネントで、Oracle 12c のクラシック インストールをサポートできるようになりました (マルチテナント インストールはサポートされません)。Feature Pack のコンポーネントをダウンロードするには、「 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。  
   
 ####  <a name="cdc2016"></a> SQL Server 2016 での CDC コンポーネントの更新  
  CDC (Change Data Capture) Control Task、Source、および Splitter Transformation コンポーネントが、SQL Server 2016 との完全互換性を提供するように更新されています。 新しい機能の追加も動作の変更もありません。  
@@ -360,7 +360,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
  Dimension Processing Destination は、SQL 2016 互換レベルの表形式モデルでは機能しません。  表形式処理で必要なのは、Analysis Services 処理タスクと Partition Processing Destination だけです。 
 
 ####  <a name="builtinR"></a> 組み込み R Services のサポート  
- SSIS は、組み込み R services を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で既にサポートしています。 SSIS を使用して、データの抽出と分析の出力の読み込みだけではなく、R モデルの構築、実行、定期的な保持も実行できます。 詳細については、次のログの投稿を参照してください。 [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](http://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)(SQL Server 2016 SSIS と R Services を使用した機械学習を運用可能にする)。 
+ SSIS は、組み込み R services を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で既にサポートしています。 SSIS を使用して、データの抽出と分析の出力の読み込みだけではなく、R モデルの構築、実行、定期的な保持も実行できます。 詳細については、次のログの投稿を参照してください。 [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)(SQL Server 2016 SSIS と R Services を使用した機械学習を運用可能にする)。 
 
 ####  <a name="ValidateXML"></a> XML タスクでの XML 検証の詳細な出力  
  XML タスクの **ValidationDetails** プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。 **ValidationDetails** プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 現在は、 **ValidationDetails** を true に設定すると、出力ファイルに各エラーの行番号と位置を含む詳しい情報が出力されます。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。 詳細については、「 [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)」を参照してください。  
