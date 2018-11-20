@@ -42,12 +42,12 @@ ms.locfileid: "51814035"
   
 |Object|スクリプト化の可否|コメント|  
 |------------|---------------------|--------------|  
-|[レポート]|[ユーザー アカウント制御]|移行後にデータソースのパスワードを再入力します。|  
-|データソース|[ユーザー アカウント制御]|移行後にレポートとデータソースとの間のリンクを再設定します。|  
-|モデル|[ユーザー アカウント制御]||  
-|[データセット]|[ユーザー アカウント制御]||  
+|[レポート]|はい|移行後にデータソースのパスワードを再入力します。|  
+|データソース|はい|移行後にレポートとデータソースとの間のリンクを再設定します。|  
+|モデル|はい||  
+|[データセット]|はい||  
 |レポート パーツ||移行後にレポート パーツへのパスを確認または更新します。|  
-|スケジュール|[ユーザー アカウント制御]|ListSchedules メソッドに関する説明 (「 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)」) を参照してください。|  
+|スケジュール|はい|ListSchedules メソッドに関する説明 (「 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)」) を参照してください。|  
 |サブスクリプション|はい|ListSubscriptions メソッドに関する説明 (「 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 」) および <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> に関する説明を参照してください。|  
 |スナップショット|||
 
