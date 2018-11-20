@@ -55,9 +55,9 @@ ms.locfileid: "47759800"
   
 |式でサポート|ReportItems の集計|データセットの集計 (スコープがデータセット名であること)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|レポート本文のテキスト ボックス|[ユーザー アカウント制御]|いいえ|  
-|&PageNumber|[ユーザー アカウント制御]|いいえ|  
-|&TotalPages|[ユーザー アカウント制御]|いいえ|  
+|レポート本文のテキスト ボックス|はい|いいえ|  
+|&PageNumber|はい|いいえ|  
+|&TotalPages|はい|いいえ|  
 |集計関数|可能。 例を次に示します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|可能。 例を次に示します。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |ページ上のアイテムのフィールド コレクション|間接的。 例を次に示します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|可能。 例を次に示します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |データバインド画像|間接的。 例を次に示します。 `=ReportItems!TXT_Photo.Value`|可能。 例を次に示します。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
