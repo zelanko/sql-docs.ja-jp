@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   入力行が渡されるたびにそのデータを処理するには、**\<inputbuffer>_ProcessInputRow** をオーバーライドします。  
   
--   入力行をループするときに追加の処理を行う必要がある場合にのみ、**\<inputbuffer>_ProcessInput** をオーバーライドします  (たとえば、すべての行が処理された後に他のアクションを実行するために `EndOfRowset` をテストする必要がある場合)。行の処理を実行するには、\<** inputbuffer>_ProcessInputRow を呼び出します。  
+-   入力行をループするときに追加の処理を行う必要がある場合にのみ、**\<inputbuffer>_ProcessInput** をオーバーライドします  (たとえば、すべての行が処理された後に他のアクションを実行するために `EndOfRowset` をテストする必要がある場合)。行の処理を実行するには、**\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
 -   出力を閉じる前に、出力に対して何らかの処理を行う場合は、`FinishOutputs` をオーバーライドします。  
   
