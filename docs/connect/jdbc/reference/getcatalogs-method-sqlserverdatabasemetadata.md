@@ -16,12 +16,12 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e81c905a483972ab0dfe7b03573bc30bf6d474e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2792bd3a13be5ceb4ee8965065f6c6619f389d22
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727190"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601233"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,10 +42,10 @@ public java.sql.ResultSet getCatalogs()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getCatalogs メソッドは、java.sql.DatabaseMetaData インターフェイスで getCatalogs メソッドによって指定されます。  
+ この getCatalogs メソッドは、java.sql.DatabaseMetaData インターフェイスの getCatalogs メソッドで規定されています。  
   
 > [!NOTE]  
->  SQL Azure でを呼び出す、master データベースに接続する必要があります**SQLServerDatabaseMetaData.getCatalogs**します。 SQL Azure では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData.getCatalogs** sys.databases ビューを使用して、カタログを取得します。 権限に関する情報を参照してください[sys.databases (SQL Azure データベース)](http://go.microsoft.com/fwlink/?LinkId=217396)を理解しておく**SQLServerDatabaseMetaData.getCatalogs** SQL Azure で動作します。  
+>  SQL Azure でを呼び出す、master データベースに接続する必要があります**SQLServerDatabaseMetaData.getCatalogs**します。 SQL Azure では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData.getCatalogs** sys.databases ビューを使用して、カタログを取得します。 権限に関する情報を参照してください[sys.databases (SQL Azure データベース)](https://go.microsoft.com/fwlink/?LinkId=217396)を理解しておく**SQLServerDatabaseMetaData.getCatalogs** SQL Azure で動作します。  
   
  getCatalogs メソッドによって返される結果セットには、次の情報が含まれます。  
   

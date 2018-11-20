@@ -11,21 +11,21 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81042ababad2b8ec7107a4413dfd6e3dcecafb8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef8c981dea064595433568a89088e800d81876e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764060"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606822"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>ステップ 3: pymssql を使用した SQL への接続を概念実証する
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-この例は、のみの概念実証を検討してください。  サンプル コードがわかりやすくするために、簡略化し、Microsoft によって推奨されるベスト プラクティスに表すとは限りません。  
+この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
   
-## <a name="step-1--connect"></a>手順 1: 接続  
+## <a name="step-1--connect"></a>手順 1: 接続する  
   
-[Pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html)関数を使用して、SQL Database に接続します。  
+[Pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html)関数を使用して、SQL Database に接続します。  
   
 ```python
     import pymssql  
@@ -35,7 +35,7 @@ ms.locfileid: "47764060"
   
 ## <a name="step-2--execute-query"></a>手順 2: クエリを実行します。  
   
-[Cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) SQL Database に対するクエリのセットの結果を取得する関数を使用できます。 この関数は、基本的に任意のクエリを受け入れるし、使用して反復処理できる結果セットを返します[cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)します。  
+[Cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) SQL Database に対するクエリのセットの結果を取得する関数を使用できます。 この関数は、基本的に任意のクエリを受け入れるし、使用して反復処理できる結果セットを返します[cursor.fetchone()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)します。  
   
   
 ```python
@@ -49,9 +49,9 @@ ms.locfileid: "47764060"
         row = cursor.fetchone()  
 ```  
   
-## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
+## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入する  
   
-実行する方法がわかります。 この例では、[挿入](../../../t-sql/statements/insert-transact-sql.md)ステートメントが安全に、からアプリケーションを保護するパラメーターを渡す[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
+この例では、[INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)の値からアプリケーションを保護するパラメーターを渡す方法を確認します。    
   
   
 ```python

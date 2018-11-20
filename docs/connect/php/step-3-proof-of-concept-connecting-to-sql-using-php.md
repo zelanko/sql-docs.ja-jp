@@ -11,17 +11,17 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3ecb2395d350c66423fbf9b9da66dd2d30cf2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770950"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605132"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>ステップ 3: PHP を使用した SQL への接続を概念実証する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>手順 1: 接続  
+## <a name="step-1--connect"></a>手順 1: 接続する  
   
   
 これは、 **OpenConnection**ですべての次の関数の先頭付近にある関数が呼び出されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "47770950"
   
 ## <a name="step-2--execute-query"></a>手順 2: クエリを実行します。  
   
-[Sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) SQL Database に対するクエリのセットの結果を取得する関数を使用できます。 この関数は、基本的に任意のクエリを受け取り、接続オブジェクトと、使用して反復処理できる結果セットを返します[sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php)します。  
+[Sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) SQL Database に対するクエリのセットの結果を取得する関数を使用できます。 この関数は、基本的に任意のクエリを受け取り、接続オブジェクトと、使用して反復処理できる結果セットを返します[sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)します。  
   
 ```php  
     function ReadData()  
@@ -78,9 +78,9 @@ ms.locfileid: "47770950"
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
+## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入する  
   
-実行する方法がわかります。 この例では、[挿入](../../t-sql/statements/insert-transact-sql.md)ステートメントが安全に、からアプリケーションを保護するパラメーターを渡す[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
+この例では、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)の値からアプリケーションを保護するパラメーターを渡す方法を確認します。    
   
   
 ```php 

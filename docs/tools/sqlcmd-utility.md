@@ -5,8 +5,7 @@ ms.date: 09/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -29,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1b62fe2d79dfa947cb9c8f0f6ebbd0c484960e26
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9ba83c8913d9e906925986cc07e3a2816c131cc6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461167"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661241"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "49461167"
 ユーティリティでは、ODBC を使用して、TRANSACT-SQL バッチを実行します。 
  
 > [!NOTE]
-> sqlcmd ユーティリティの最近のバージョンは [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=825643)から Web リリースとして利用できます。 Always Encrypted をサポートするためには、13.1 以降のバージョンが必要です (`-g`) と Azure Active Directory 認証 (`-G`)。 (お使いのコンピューターには複数のバージョンの sqlcmd.exe がインストールされている可能性があります。 必ず正しいバージョンを使用してください。 バージョンを判断するには、 `sqlcmd -?`を実行します。)
+> sqlcmd ユーティリティの最近のバージョンは [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=825643)から Web リリースとして利用できます。 Always Encrypted をサポートするためには、13.1 以降のバージョンが必要です (`-g`) と Azure Active Directory 認証 (`-G`)。 (お使いのコンピューターには複数のバージョンの sqlcmd.exe がインストールされている可能性があります。 必ず正しいバージョンを使用してください。 バージョンを判断するには、 `sqlcmd -?`を実行します。)
 
 既定でインストールされる事前に Azure Cloud Shell から sqlcmd ユーティリティを試すことができます: [ ![Cloud Shell の起動](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell の起動")](https://shell.azure.com)
 
@@ -142,10 +141,10 @@ sqlcmd
  **-E** オプションを使用すると、SQLCMDPASSWORD などのユーザー名とパスワード用に使用できる環境変数の設定が無視されます。 **-E** オプションが **-U** オプションまたは **-P** オプションと共に使用されると、エラー メッセージが生成されます。  
 
 **-g**  
-列の暗号化設定を `Enabled`に設定します。 詳細については、「 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。 Windows 証明書ストアに格納されているマスター キーのみがサポートされます。 -g スイッチには、 **sqlcmd** バージョン [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。
+列の暗号化設定を `Enabled`に設定します。 詳細については、「 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。 Windows 証明書ストアに格納されているマスター キーのみがサポートされます。 -g スイッチには、**sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643) 以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。
 
  **-G**  
- このスイッチは、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDUSEAAD = true が設定されます。 -G スイッチには、 **sqlcmd** バージョン [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database または SQL Data Warehouse に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。 -G オプションには、オプションがサポートされていません。
+ このスイッチは、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDUSEAAD = true が設定されます。 -G スイッチには、**sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643) 以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database または SQL Data Warehouse に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。 -G オプションには、オプションがサポートされていません。
 
 > [!IMPORTANT]
 > **-G** オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。

@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051224"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629625"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -102,6 +102,8 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/AzureKeyVaultAuthMethod:**|**/akv**|{対話型&#124;ClientIdSecret}|Azure Key Vault にアクセスするためにどの認証方法を使用するかを指定します |
 |**/ClientId:**|**/cid**|{string}|必要な場合、Azure Key Vault に対する認証に使用されるクライアント ID を指定します |
+|**/DeployScriptPath:**|**/dsp**|{string}|配置スクリプトを出力する省略可能なファイル パスを指定します。 Azure の配置では、master データベースを作成または変更するための TSQL コマンドがある場合、スクリプトは同じパスに書き込まれますが、出力ファイル名として "Filename_Master.sql" が使用されます。 |
+|**/DeployReportPath:**|**/drp**|{string}|展開レポートの xml ファイルを出力する省略可能なファイル パスを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
@@ -476,6 +478,8 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |---|---|---|---|
 |**/Action:**|**/a**|[スクリプト]|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
+|**/DeployScriptPath:**|**/dsp**|{string}|配置スクリプトを出力する省略可能なファイル パスを指定します。 Azure の配置では、master データベースを作成または変更するための TSQL コマンドがある場合、スクリプトは同じパスに書き込まれますが、出力ファイル名として "Filename_Master.sql" が使用されます。 |
+|**/DeployReportPath:**|**/drp**|{string}|展開レポートの xml ファイルを出力する省略可能なファイル パスを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |

@@ -2,20 +2,20 @@
 title: SQL クライアントのプログラミングのホームページ |Microsoft Docs
 description: ダウンロードし、言語および SQL Server または Azure SQL Database に接続するためのオペレーティング システムの組み合わせを多数のドキュメントへの注釈付きのリンクの [ハブ] ページ。
 author: MightyPen
-ms.date: 04/16/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: meetb
+ms.reviewer: v-daveng
 ms.author: genemi
-ms.openlocfilehash: e2c3da2ba71661602f69f85f5eb79ba6d550be9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633800"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289902"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>クライアントの Microsoft SQL server プログラミングのホーム ページ
 
@@ -34,8 +34,8 @@ ms.locfileid: "47633800"
 
 詳細については、Azure SQL Database に接続するための接続文字列を参照してください。
 
-- [.NET Core (c#) を使用して Azure SQL データベースに対してクエリを](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core)します。
-- 他の言語についての内容のテーブルの前の記事の近くにあるその他の Azure SQL Database には。 たとえばを参照してください[PHP Azure SQL データベースに対してクエリを使用した](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)します。
+- [.NET Core (c#) を使用して Azure SQL データベースに対してクエリを](/azure/sql-database/sql-database-connect-query-dotnet-core)します。
+- 他の言語についての内容のテーブルの前の記事の近くにあるその他の Azure SQL Database には。 たとえばを参照してください[PHP Azure SQL データベースに対してクエリを使用した](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)します。
 
 
 #### <a name="build-an-app-webpages"></a>ビルドのアプリ、web ページ
@@ -55,7 +55,7 @@ ms.locfileid: "47633800"
 | :-- | :-- | :-- |
 | &nbsp; [![C# のロゴ][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM の Entity Framework、.NET Framework の][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java のロゴ][image-ref-330-java]](#an-130-jdbc-docu) |
 | &nbsp; [![Node.js のロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp ビッグ プラス][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP のロゴ][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp; [![Python のロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby のロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![Python ロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby のロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -79,8 +79,8 @@ C# および Visual Basic の場合など、.NET マネージ言語とは、ADO.
 | :-- | :-- |
 | [ADO.NET を使用した SQL への接続を概念実証する](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
 | [ADO.NET で SQL に弾性的に接続する](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | 接続の接続が失われるまでに時間が発生することができますので、コード例では、ロジックを再試行してください。<br /><br />再試行ロジックは、Azure SQL Database になどに任意のクラウド データベースのインターネットを介して維持接続にも適用されます。 |
-| [接続し、クエリに Windows/Linux と macOS で .NET Core を使用して c# プログラムを作成する方法のデモを azure SQL Database:](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database の例です。 |
-| [C#、ADO.NET、Windows アプリをビルドします。](http://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | コード例も構成情報。 |
+| [接続し、クエリに Windows/Linux と macOS で .NET Core を使用して c# プログラムを作成する方法のデモを azure SQL Database:](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database の例です。 |
+| [C#、ADO.NET、Windows アプリをビルドします。](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | コード例も構成情報。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>ドキュメント
@@ -88,8 +88,8 @@ C# および Visual Basic の場合など、.NET マネージ言語とは、ADO.
 |||
 | :-- | :-- |
 | [ADO.NET を使用して C#](./ado-net/index.md)| ドキュメントのルートです。 |
-| [Namespace: System.Data](http://docs.microsoft.com/dotnet/api/system.data) | ADO.NET を使用するクラスのセット。 |
-| [名前空間: System.Data.SqlClient](http://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 最も直接的な ADO.NET のセンターではクラスのセット。 |
+| [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | ADO.NET を使用するクラスのセット。 |
+| [名前空間: System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 最も直接的な ADO.NET のセンターではクラスのセット。 |
 | &nbsp; | <br /> |
 
 
@@ -103,14 +103,14 @@ Entity Framework (EF) は、オブジェクト リレーショナル マッピ�
 EF では、次のテクノロジとの直接的または間接的なリレーションシップがあります。
 
 - .NET Framework
-- [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)、または[LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
+- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)、または[LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - 言語の構文の機能強化など、 **=>** (C#) 演算子。
-- SQL データベースのテーブルにマップされるクラスのソース コードを生成する便利なプログラムです。 たとえば、 [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)します。
+- SQL データベースのテーブルにマップされるクラスのソース コードを生成する便利なプログラムです。 たとえば、 [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)します。
 
 
 #### <a name="original-ef-and-new-ef"></a>元の EF と新しい EF
 
-[Entity Framework 用のスタート ページ](http://docs.microsoft.com/ef/)次のような説明と EF が導入されています。
+[Entity Framework 用のスタート ページ](https://docs.microsoft.com/ef/)次のような説明と EF が導入されています。
 
 - Entity Framework は、.NET オブジェクトを使用してデータベースを使用する開発者は .NET オブジェクト リレーショナル マッパー (O/RM)。 ほとんどの開発者は通常、記述する必要があるデータ アクセスのソース コードの必要はありません。
 
@@ -118,8 +118,8 @@ EF では、次のテクノロジとの直接的または間接的なリレー�
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](http://docs.microsoft.com/ef/ef6/) | まず、Microsoft では、EF が 2008 年 8 月にリリースしました。 Microsoft では 2015 年 3 月に発表する EF 6.x は Microsoft が開発、最終バージョンでしたが。 Microsoft では、パブリック ドメインにソース コードをリリースしました。<br /><br />最初に EF には、.NET Framework の一部がでした。 EF 6.x は、.NET Framework から削除されました。<br /><br />[EF 6.x のソース コード リポジトリ、Github の*aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft は、2016 年 6 月で、新しく作成した EF Core をリリースしました。 EF Core は、柔軟性と移植性の向上のために設計されています。 EF Core は、Microsoft Windows だけ以外のオペレーティング システムで実行できます。 EF Core は、Microsoft SQL Server だけを超えるデータベースおよびその他のリレーショナル データベースと対話できます。<br /><br />**C&#x23;のコード例。**<br />[Entity Framework Core の概要](https://docs.microsoft.com/ef/core/get-started/index)<br />[既存のデータベースでの .NET Framework での EF Core の概要](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | まず、Microsoft では、EF が 2008 年 8 月にリリースしました。 Microsoft では 2015 年 3 月に発表する EF 6.x は Microsoft が開発、最終バージョンでしたが。 Microsoft では、パブリック ドメインにソース コードをリリースしました。<br /><br />最初に EF には、.NET Framework の一部がでした。 EF 6.x は、.NET Framework から削除されました。<br /><br />[EF 6.x のソース コード リポジトリ、Github の*aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft は、2016 年 6 月で、新しく作成した EF Core をリリースしました。 EF Core は、柔軟性と移植性の向上のために設計されています。 EF Core は、Microsoft Windows だけ以外のオペレーティング システムで実行できます。 EF Core は、Microsoft SQL Server だけを超えるデータベースおよびその他のリレーショナル データベースと対話できます。<br /><br />**C&#x23;のコード例。**<br />[Entity Framework Core の概要](https://docs.microsoft.com/ef/core/get-started/index)<br />[既存のデータベースでの .NET Framework での EF Core の概要](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF と関連テクノロジは、強力であり、領域全体を習得する開発者の多くは。
@@ -141,8 +141,8 @@ Microsoft では、SQL Server (または Azure SQL database では、コース�
 | [コード例](./jdbc/code-samples/index.md) | データ型、結果セット、および大規模なデータについて学習できるコード例です。 |
 | [接続 URL のサンプル](./jdbc/connection-url-sample.md) | 接続 URL を使用して、SQL Server に接続する方法について説明します。 使用して、データを取得するのに SQL ステートメントを使用します。 |
 | [データ ソースのサンプル](./jdbc/data-source-sample.md) | データ ソースを使用して、SQL Server に接続する方法について説明します。 ストアド プロシージャを使用して、データを取得します。 |
-| [Java を使用して Azure SQL database のクエリ](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database の例です。 |
-| [Ubuntu 上で SQL Server を使用して Java アプリを作成します。](http://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | コード例も構成情報。 |
+| [Java を使用して Azure SQL database のクエリ](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database の例です。 |
+| [Ubuntu 上で SQL Server を使用して Java アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | コード例も構成情報。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>ドキュメント
@@ -164,15 +164,15 @@ JDBC のドキュメントには、次の主要な領域が含まれています
 
 Windows、Linux、またはファルダから Node.js を使用した SQL Server に接続できます。 Node.js ドキュメントのルートは[ここ](./node-js/index.md)します。
 
-SQL Server 用 Node.js 接続ドライバーは、JavaScript に実装されます。 ドライバーは、すべての最新バージョンの SQL Server でサポートされている TDS プロトコルを使用します。 ドライバーはオープン ソース プロジェクト、 [Github で入手できます](http://tediousjs.github.io/tedious/)します。
+SQL Server 用 Node.js 接続ドライバーは、JavaScript に実装されます。 ドライバーは、すべての最新バージョンの SQL Server でサポートされている TDS プロトコルを使用します。 ドライバーはオープン ソース プロジェクト、 [Github で入手できます](https://tediousjs.github.io/tedious/)します。
 
 #### <a name="code-examples"></a>コード例
 
 |||
 | :-- | :-- |
 | [Node.js を使用した SQL への接続を概念実証する](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | ベア ボーンのソース コード、SQL Server への接続およびクエリを実行します。 |
-| [Azure SQL database: Node.js クエリを使用して](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | クラウドでの Azure SQL Database の例です。 |
-| [MacOS での SQL Server を使用する Node.js アプリを作成します。](http://www.microsoft.com/sql-server/developer-get-started/node/mac/) | コード例も構成情報。 |
+| [Azure SQL database: Node.js クエリを使用して](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | クラウドでの Azure SQL Database の例です。 |
+| [MacOS での SQL Server を使用する Node.js アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | コード例も構成情報。 |
 | &nbsp; | <br /> |
 
 
@@ -227,15 +227,15 @@ PHP を使用すると、SQL Server と対話します。 PHP ドキュメント
 | :-- | :-- |
 | [PHP を使用した SQL への接続を概念実証する](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
 | [PHP で SQL に弾性的に接続する](./php/step-4-connect-resiliently-to-sql-with-php.md) | インターネットと、クラウド経由で接続の接続が失われるまでに時間が発生することができますので、コード例では、ロジックを再試行してください。 |
-| [Azure SQL database: PHP クエリを使って](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database の例です。 |
-| [RHEL で SQL Server を使用する PHP アプリを作成します。](http://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | コード例も構成情報。 |
+| [Azure SQL database: PHP クエリを使って](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database の例です。 |
+| [RHEL で SQL Server を使用する PHP アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | コード例も構成情報。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-180-python-docu" />
 
-## <a name="python-logoimage-ref-370-python-python"></a>![Python のロゴ][image-ref-370-python] Python
+## <a name="python-logoimage-ref-370-python-python"></a>![Python ロゴ][image-ref-370-python] Python
 
 
 Python を使用することで、SQL Server にやり取りすることができます。
@@ -245,8 +245,8 @@ Python を使用することで、SQL Server にやり取りすることがで�
 |||
 | :-- | :-- |
 | [Pyodbc を使用して Python を使用した SQL 接続の概念実証](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
-| [Azure SQL database: Python クエリを使用](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database の例です。 |
-| [SLES での SQL Server を使用する PHP アプリを作成します。](http://www.microsoft.com/sql-server/developer-get-started/python/sles/) | コード例も構成情報。 |
+| [Azure SQL database: Python クエリを使用](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database の例です。 |
+| [SLES での SQL Server を使用する PHP アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | コード例も構成情報。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>ドキュメント
@@ -270,15 +270,15 @@ Ruby を使用して、SQL Server にやり取りすることができます。 
 |||
 | :-- | :-- |
 | [Ruby を使用した SQL への接続を概念実証する](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
-| [Azure SQL database: Ruby クエリを使用](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database の例です。 |
-| [MacOS での SQL Server を使用する Ruby アプリを作成します。](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | コード例も構成情報。 |
+| [Azure SQL database: Ruby クエリを使用](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database の例です。 |
+| [MacOS での SQL Server を使用する Ruby アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | コード例も構成情報。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-204-aka-ms-sqldev" />
 
-## <a name="build-an-app-website-for-sql-client-developmenthttpwwwmicrosoftcomsql-serverdeveloper-get-started"></a>[ビルドのアプリを web サイト、SQL クライアント開発](http://www.microsoft.com/sql-server/developer-get-started/)
+## <a name="build-an-app-website-for-sql-client-developmenthttpswwwmicrosoftcomsql-serverdeveloper-get-started"></a>[ビルドのアプリを web サイト、SQL クライアント開発](https://www.microsoft.com/sql-server/developer-get-started/)
 
 
 [ *- アプリをビルド*](https://www.microsoft.com/sql-server/developer-get-started/) web ページのプログラミング言語が SQL Server に接続するための長い一覧から選択できます。 また、クライアント プログラムのさまざまなオペレーティング システムを実行できます。
@@ -346,16 +346,16 @@ Web サイトで提供される詳細情報のおおよそのアウトライン�
 
 #### <a name="developer-hub-for-azure"></a>Azure の開発者のハブ
 
-- [Azure の開発者のハブ](http://docs.microsoft.com/azure/)
-- [Azure for .NET 開発者](http://docs.microsoft.com/dotnet/azure/)
-- [Java 開発者向けの azure](http://docs.microsoft.com/java/azure/)
-- [Node.js 開発者向けの azure](http://docs.microsoft.com/nodejs/azure/)
-- [Python 開発者向けの azure](http://docs.microsoft.com/python/azure/)
-- [Azure での PHP web アプリを作成します。](http://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
+- [Azure の開発者のハブ](https://docs.microsoft.com/azure/)
+- [Azure for .NET 開発者](https://docs.microsoft.com/dotnet/azure/)
+- [Java 開発者向けの azure](https://docs.microsoft.com/java/azure/)
+- [Node.js 開発者向けの azure](https://docs.microsoft.com/nodejs/azure/)
+- [Python 開発者向けの azure](https://docs.microsoft.com/python/azure/)
+- [Azure での PHP web アプリを作成します。](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
 
 #### <a name="other-languages"></a>その他の言語
 
-- [Windows 上の SQL Server を使用して、Go アプリを作成します。](http://www.microsoft.com/sql-server/developer-get-started/go/windows/)
+- [Windows 上の SQL Server を使用して、Go アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/go/windows/)
 
 
 

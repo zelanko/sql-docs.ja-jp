@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842750"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600972"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,9 +29,9 @@ Always Encrypted を使用すると、クライアントは SQL Server または
 - 6.0 (またはそれ以降) ことを確認の Microsoft JDBC Driver for SQL Server が開発用コンピューターにインストールされています。 
 - Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files (JCE 管轄ポリシーファイル (無制限強度)) をダウンロードしてインストールします。  インストール手順、および考えられるエクスポート/インポート問題に関する詳細について、zip ファイルに含まれる Readme を必ず読んでください。  
 
-    - mssql-jdbc-X.X.X.jre7.jar または sqljdbc41.jar を使用している場合は、[Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html) からポリシー ファイルをダウンロードできます。
+    - mssql-jdbc-X.X.X.jre7.jar または sqljdbc41.jar を使用している場合は、[Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html) からポリシー ファイルをダウンロードできます。
 
-    - mssql-jdbc-X.X.X.jre8.jar または sqljdbc42.jar を使用している場合は、[Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) からポリシー ファイルをダウンロードできます。
+    - mssql-jdbc-X.X.X.jre8.jar または sqljdbc42.jar を使用している場合は、[Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) からポリシー ファイルをダウンロードできます。
 
     - 場合は mssql jdbc X.X.X.jre9.jar を使用して、ポリシー ファイル必要はありませんをダウンロードします。 Java 9 で管轄ポリシーでは、無制限強度の暗号化が既定値です。
 
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 > これらの依存関係を Maven プロジェクトに含める方法の例は、次を参照してください[ダウンロード ADAL4J と AKV の依存関係 Apache Maven で。](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
-### <a name="using-windows-certificate-store-provider"></a>Windows 証明書ストアのプロバイダーを使用します。
+### <a name="using-windows-certificate-store-provider"></a>Windows 証明書ストア プロバイダーの使用
 SQLServerColumnEncryptionCertificateStoreProvider は、列マスター キーを Windows 証明書ストアに格納するために使用できます。 列マスター_キーと列の暗号化キーの定義をデータベースに作成するのにには、SQL Server Management Studio (SSMS) が Always Encrypted ウィザードまたはサポートされているその他のツールを使用します。 常に暗号化されたデータの列マスター_キーとして使用できる Windows 証明書ストアに自己署名証明書を生成する、同じウィザードを使用できます。 列マスター_キーと列暗号化キーの T-SQL 構文の詳細については、次を参照してください。 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)と[列暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)それぞれします。
 
 SQLServerColumnEncryptionCertificateStoreProvider の名前は、MSSQL_CERTIFICATE_STORE でプロバイダー オブジェクトの getName() API によってクエリを実行できます。 ドライバーによって自動的に登録し、アプリケーションを変更せずにシームレスに使用されることができます。
@@ -154,7 +154,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 JDBC ドライバーでは、これらの資格情報が接続のプロパティに存在する場合、SQLServerColumnEncryptionJavaKeyStoreProvider が自動的にインスタンス化します。
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Java キー ストアの列マスター _ キーを作成します。
-JKS または PKCS12 キーストアの型を持つ、SQLServerColumnEncryptionJavaKeyStoreProvider を使用できます。 このプロバイダーで使用するキーを作成またはインポートするには、Java を使用して[keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html)ユーティリティ。 キーは、キーストア自体と同じパスワードをいる必要があります。 公開キーと keytool ユーティリティを使用して関連付けられた秘密キーを作成する方法の例を次に示します。
+JKS または PKCS12 キーストアの型を持つ、SQLServerColumnEncryptionJavaKeyStoreProvider を使用できます。 このプロバイダーで使用するキーを作成またはインポートするには、Java を使用して[keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html)ユーティリティ。 キーは、キーストア自体と同じパスワードをいる必要があります。 公開キーと keytool ユーティリティを使用して関連付けられた秘密キーを作成する方法の例を次に示します。
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
@@ -652,4 +652,4 @@ SQLServerBulkCopy を使用して、データの暗号化解除を行うこと�
 
 ## <a name="see-also"></a>参照
 
-[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+[Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

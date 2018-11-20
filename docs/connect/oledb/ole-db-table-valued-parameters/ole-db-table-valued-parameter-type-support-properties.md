@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7e2e9fde43deb3b6efbac62dc39d27897d32c9ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90240caba9bbba0539c2b827d9471b4318592ba6
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783200"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559620"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB テーブル値パラメーターの型のサポート (プロパティ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47783200"
   このトピックでは、テーブル値パラメーターの行セット オブジェクトに関連付けられている OLE DB プロパティおよびプロパティ セットについて説明します。  
   
 ## <a name="properties"></a>[プロパティ]  
- 次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetPropeties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 そのため、いずれかを設定しようと iopenrowset::openrowset または ITableDefinitionWithConstraints::CreateTableWithConstraints プロパティのメソッドが既定以外の値にエラーが発生する、オブジェクトは作成されません。  
+ 次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetProperties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 そのため、いずれかを設定しようと iopenrowset::openrowset または ITableDefinitionWithConstraints::CreateTableWithConstraints プロパティのメソッドが既定以外の値にエラーが発生する、オブジェクトは作成されません。  
   
  テーブル値パラメーターの行セット オブジェクトで実装されていないプロパティは、次の一覧には含まれていません。 すべてのプロパティの一覧は、Windows Data Access Components の OLE DB に関するドキュメントを参照してください。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47783200"
 |SSPROP_COL_COMPUTED|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 型 : VT_BOOL<br /><br /> 説明 : VARIANT_TRUE に設定された場合、その列が計算列であることを示します。 VARIANT_FALSE に設定された場合は、その列が計算列ではないことを示します。|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- これらのプロパティが ISSCommandWithParamters::GetParameterProperties への呼び出しでテーブル値パラメーターの型情報の検出中にコンシューマーによって読み取られ、テーブル値パラメーターに関する特定のプロパティを設定中にコンシューマーによって設定isscommandwithparameters::setparameterproperties 経由。  
+ これらのプロパティが isscommandwithparameters::getparameterproperties への呼び出しでテーブル値パラメーターの型情報の検出中にコンシューマーによって読み取られ、テーブル値パラメーターに関する特定のプロパティを設定中にコンシューマーによって設定isscommandwithparameters::setparameterproperties 経由。  
   
  次の表に、これらのプロパティの詳細を示します。  
   
