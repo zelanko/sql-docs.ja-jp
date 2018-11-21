@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47842630"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5 : レポートの書式設定 (Reporting Services)
 Sales Orders レポートに 1 つのデータ領域といくつかのフィールドを追加した後、日付および通貨のフィールド、および列ヘッダーを書式設定できます。  
   
 ## <a name="bkmk_format_date"></a>日付の書式設定  
@@ -42,7 +42,7 @@ Sales Orders レポートに 1 つのデータ領域といくつかのフィー�
   
 1.  `[LineTotal]` フィールド式が入力されているセルを右クリックし、**[テキスト ボックスのプロパティ]** をクリックします。  
   
-2.  **[数値]** をクリックし、**[Category]** フィールドで **[通貨]** をクリックします。  
+2.  **[数値]** をクリックし、**[カテゴリ]** フィールドで **[通貨]** をクリックします。  
   
 3.  地域設定が英語 (米国) の場合、既定値は次のようになります。  
   
