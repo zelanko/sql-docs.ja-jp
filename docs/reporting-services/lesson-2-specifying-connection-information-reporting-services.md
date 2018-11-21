@@ -22,7 +22,7 @@ ms.locfileid: "47805610"
   
 ### <a name="to-set-up-a-connection"></a>接続を設定するには  
   
-1.  **レポート データ** ペインで、**[新規作成]** をクリックし、**[データ ソース]** をクリックします。  
+1.  **レポート データ** ペインで、**[新規]** をクリックし、**[データ ソース]** をクリックします。  
 **レポート データ** ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]** をクリックします。  
 
     ![ssrs-table-tutorial-2-new-data-source](../reporting-services/media/ssrs-table-tutorial-2-new-data-source.png)
