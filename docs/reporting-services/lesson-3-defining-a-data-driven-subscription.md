@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47703480"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3 : データ ドリブン サブスクリプションの定義
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] チュートリアル レッスンでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web ポータルのデータ ドリブン サブスクリプションを使用し、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、および結果セットとレポート、配信オプションのマッピングを行います。  
   
 > [!NOTE]  
@@ -74,16 +74,16 @@ ms.locfileid: "47703480"
 
 パラメーター  |値のソース  | 値/フィールド  
 ---------|---------|---------
-**[ファイル名]**     |データセットから値を取得 | 書     
+**[ファイル名]**     |データセットから値を取得 | Order     
 **[パス]**     | 値を入力  | [値] に、書き込み権限のあるパブリック ファイル共有の名前を入力します (例: `\\mycomputer\public\myreports`)。 
-**表示形式** | データセットから値を取得 | [形式]
+**レンダリング フォーマット** | データセットから値を取得 | Format
 **[書き込みモード]**| 値を入力| 自動増分    
 **ファイル拡張子** |値を入力 |True
 **[ユーザー名]** | 値を入力 | ドメイン ユーザー アカウントを入力します。 \<ドメイン>\\\<アカウント> の形式で入力します。 ユーザー アカウントには、構成したパスに対する権限が必要です。 
-**Password** | 値を入力 | パスワードを入力
+**パスワード** | 値を入力 | パスワードを入力
 
 ## <a name="report-parameters"></a>レポート パラメーター
- 1. **[OrderNumber]** フィールドには、 **[データセットから値を取得]** を選択します。 [値] で、 **[注文]** をクリックします。 
+ 1. **[OrderNumber]** フィールドには、 **[データセットから値を取得]** を選択します。 [値] で、 **[Order]** をクリックします。 
  2. **[サブスクリプションの作成]** をクリックします。
    
 ## <a name="next-steps"></a>Next Steps  
