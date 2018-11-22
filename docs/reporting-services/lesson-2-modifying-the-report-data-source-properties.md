@@ -60,7 +60,7 @@ ms.locfileid: "51813915"
   
 2.  データセット `AdventureWorksDataset` を右クリックし、 **[データセットのプロパティ]** をクリックします。  
     ![ssrs_tutorial_datadriven_datasetproperties](../reporting-services/media/ssrs-tutorial-datadriven-datasetproperties.png)  
-3.  `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` ステートメントの前に `Group By` ステートメントを追加します。 完全なクエリ構文は次のとおりです。  
+3.  `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` ステートメントを `Group By` ステートメントの前に追加します。 完全なクエリ構文は次のとおりです。  
   
     ```  
     SELECT soh.OrderDate AS Date, soh.SalesOrderNumber AS [Order], pps.Name AS Subcat, pp.Name AS Product, SUM(sd.OrderQty) AS Qty, SUM(sd.LineTotal)  AS LineTotal  
