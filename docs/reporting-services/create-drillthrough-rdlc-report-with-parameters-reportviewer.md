@@ -34,7 +34,7 @@ Visual Studio 2015 と ASP.NET Web アプリケーションを使用して、Rep
 [レッスン 6: アプリケーションに ReportViewer コントロールを追加する](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
 [レッスン 7: 親レポートにドリルスルー アクションを追加する](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
 [レッスン 8: データ フィルターを作成する](../reporting-services/lesson-8-create-a-data-filter.md)  
-[Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
+[レッスン 9: アプリケーションをビルドして実行する](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>参照  
 [Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  

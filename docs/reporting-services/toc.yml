@@ -184,18 +184,18 @@ items:
       href: lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
     - name: 'レッスン 4 : レポートへのテーブルの追加'
       href: lesson-4-adding-a-table-to-the-report-reporting-services.md
-    - name: 'Lesson 5: Formatting a Report'
+    - name: 'レッスン 5: レポートの書式設定'
       href: lesson-5-formatting-a-report-reporting-services.md
-    - name: 'Lesson 6: Adding Grouping and Totals'
+    - name: 'レッスン 6: グループと合計の追加'
       href: lesson-6-adding-grouping-and-totals-reporting-services.md
   - name: データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
     href: create-a-data-driven-subscription-ssrs-tutorial.md
     items:
     - name: 'レッスン 1 : サンプル サブスクライバー データベースの作成'
       href: lesson-1-creating-a-sample-subscriber-database.md
-    - name: 'Lesson 2: Modifying the Report Data Source Properties'
+    - name: 'レッスン 2: レポート データ ソースのプロパティの変更'
       href: lesson-2-modifying-the-report-data-source-properties.md
-    - name: 'Lesson 3: Defining a Data-Driven Subscription'
+    - name: 'レッスン 3: データ ドリブン サブスクリプションの定義'
       href: lesson-3-defining-a-data-driven-subscription.md
   - name: ReportViewer を使用してパラメーターを含む詳細 (RDLC) レポートを作成する (SSRS チュートリアル)
     href: create-drillthrough-rdlc-report-with-parameters-reportviewer.md
@@ -216,7 +216,7 @@ items:
       href: lesson-7-add-drillthrough-action-on-parent-report.md
     - name: 'レッスン 8: データ フィルターを作成する'
       href: lesson-8-create-a-data-filter.md
-    - name: 'Lesson 9: Build and Run the Application'
+    - name: 'レッスン 9: アプリケーションをビルドして実行する'
       href: lesson-9-build-and-run-the-application.md
   - name: レポート ビルダー チュートリアル
     href: report-builder-tutorials.md
