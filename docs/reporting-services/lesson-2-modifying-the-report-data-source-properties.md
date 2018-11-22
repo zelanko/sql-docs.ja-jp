@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51813915"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2: レポート データ ソースのプロパティの変更
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レッスンでは、受信者に配信されるレポートを、Web ポータルを使って選択します。 ここで定義するデータ ドリブン サブスクリプションによって、チュートリアル「 **基本的なテーブル レポートの作成 (SSRS チュートリアル)** 」で作成されたレポート [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)が配信されます。  この後の手順では、レポートがデータの取得に使用するデータ ソースの接続情報を変更します。 データ ドリブン サブスクリプションを介して配信できるのは、 **保存されている資格情報** を使用してレポート データ ソースにアクセスするレポートのみです。 保存されている資格情報は、レポートの自動処理に必要となります。  
   
 また、データセットとレポートを変更し、パラメーターを使用して `[Order]` のレポートをフィルター処理します。これによってサブスクリプションが特定の注文と表示形式で、レポートのさまざまなインスタンスを出力できるようになります。  
@@ -83,7 +83,7 @@ ms.locfileid: "51813915"
  次の手順では、レポートにパラメーターを追加します。  データセット パラメーターは、レポート パラメーターにフィードされます。 
 ## <a name="bkmk_add_reportparameter"></a>レポート パラメーターを追加し、レポートを再パブリッシュするには  
   
-1.  **[レポート データ]** ペインで、[パラメーター] フォルダーを展開し、 **[Ordernumber]** パラメーターをダブルクリックします。  これは、データセットにパラメーターを追加した前の手順で自動的に作成されています。 **[新規]** and then  **[パラメーター]** をクリックします。  
+1.  **[レポート データ]** ペインで、[パラメーター] フォルダーを展開し、 **[Ordernumber]** パラメーターをダブルクリックします。  これは、データセットにパラメーターを追加した前の手順で自動的に作成されています。 **[新規]** そして **[パラメーター]** をクリックします。  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
 2.  **[名前]** が `OrderNumber`であることを確認します。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "51813915"
   
 1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、「[レッスン 6: グループと合計の追加 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」の「レポートをレポート サーバーにパブリッシュするには (オプション)」セクションを参照してください。  
   
-2.  ツール バーの **[ビルド]** をクリックし、 **[チュートリアルの配置]** をクリックします。  
+2.  ツール バーの **[ビルド]** をクリックし、 **[Tutorial の配置]** をクリックします。  
   
 ## <a name="next-steps"></a>Next Steps  
 + 保存されている資格情報を使用してデータを取得するレポートを構成したので、パラメーターを使用してデータをフィルター処理できます。 
