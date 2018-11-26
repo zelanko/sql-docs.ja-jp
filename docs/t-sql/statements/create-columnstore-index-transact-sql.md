@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8780fd5714af5acb0405592f1700ab19004fd0b
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: fadf7f7a73edc0ce50dfe00c95747deeff0395bf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336301"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699410"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -369,12 +369,15 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **非クラスター化列ストア インデックス**
 -   1,024 より多い列を持つことはできません。
 -   制約ベースのインデックスとして作成することはできません。 列ストア インデックスを持つテーブルには、一意の制約、主キー制約、外部キー制約を含めることができます。 制約は常に行ストア インデックスで適用されます。 列ストア (クラスター化または非クラスター化) インデックスで制約を適用することはできません。
--   ビューまたはインデックス付きビュー上では作成できません。  
 -   スパース列を含めることはできません。  
 -   **ALTER INDEX** ステートメントを使用して変更することはできません。 非クラスター化インデックスを変更するには、列ストア インデックスを削除してから再作成する必要があります。 **ALTER INDEX** を使用し、列ストア インデックスを無効にし、再構築できます。  
 -   **INCLUDE** キーワードを使用して作成することはできません。  
 -   インデックスを並べ替えるための **ASC** または **DESC** キーワードを含めることはできません。 列ストア インデックスは、圧縮アルゴリズムに従って順序付けされます。 並べ替えを行うと、パフォーマンス上の利点の多くが無効になります。  
 -   非クラスター化列ストア インデックスに型が nvarchar(max)、varchar(max)、varbinary(max) のラージ オブジェクト (LOB) 列を含めることはできません。 Premium 層、Standard 層 (S3 以上)、およびすべての VCore サービス層で構成されている [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] バージョンと Azure SQL Database 以降で、クラスター化列ストア インデックスのみ LOB 型をサポートしています。 以前のバージョンでは、クラスター化列ストア インデックスと非クラスター化列ストア インデックスで LOB 型をサポートしていません。
+
+
+> [!NOTE]  
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、インデックス付きビューに対して非クラスター化列ストア インデックスを作成できます。  
 
 
  **列ストア インデックスと同時に使用できない機能:**  
@@ -392,6 +395,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   変更データ キャプチャ。 読み取り専用のため、非クラスター化列ストア インデックス (NCCI) に変更データ キャプチャを使用することはできません。 クラスター化列ストア インデックス (CCI) では機能します。  
 -   読み取り可能セカンダリ。 AlwaysOn 可用性グループの読み取り可能セカンダリからクラスター化列ストア インデックス (CCI) にアクセスすることはできません。  読み取り可能セカンダリから非クラスター化列ストア インデックス (NCCI) にアクセスできます。  
 -   複数のアクティブな結果セット (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスを含むテーブルに読み取り専用で接続するために、MARS が使用されます。 ただし、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスを含むテーブルで DML (データ操作言語) を同時操作する場合、MARS を利用できません。 この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は接続を強制終了し、トランザクションを中止します。  
+-  ビューまたはインデックス付きビューに対して非クラスター化列ストア インデックスを作成することはできません。
   
  列ストア インデックスのパフォーマンス上の利点と制限の詳細については、「[列ストア インデックス - 概要](../../relational-databases/indexes/columnstore-indexes-overview.md)」をご覧ください。
   
@@ -443,7 +447,7 @@ GO
   
  非クラスター化インデックスを削除する場合は、列ストア インデックスを作成する前に、DROP INDEX ステートメントを使用します。 DROP EXISTING オプションは、変換されるクラスター化インデックスのみを削除します。 非クラスター化インデックスは削除されません。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] と [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], 、列ストア インデックスに非クラスター化インデックスを作成できませんでした。 この例は、どのようにを列ストア インデックスを作成する前に、非クラスター化インデックスを削除する必要する以前のリリースで表示されます。  
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] と [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], 、列ストア インデックスに非クラスター化インデックスを作成できませんでした。 この例は、どのようにを列ストア インデックスを作成する前に、非クラスター化インデックスを削除する必要する以前のリリースで表示されます。  
   
 ```sql  
 --Create the table for use with this example.  
@@ -731,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. 列ストア テーブルを行ストア ヒープに戻す  
- [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) を使用し、クラスター化列ストア インデックスを削除し、テーブルを行ストア ヒープに変換します。 この例では、cci_xDimProduct テーブルを行ストア ヒープに変換します。 テーブルは引き続き配布されますが、ヒープとして保存されます。  
+ [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) を使用し、クラスター化列ストア インデックスを削除し、テーブルを行ストア ヒープに変換します。 この例では、cci_xDimProduct テーブルを行ストア ヒープに変換します。 テーブルは引き続き配布されますが、ヒープとして保存されます。  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

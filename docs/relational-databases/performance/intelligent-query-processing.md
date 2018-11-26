@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのインテリジェントなクエリ処理 | Microsoft Docs
 description: SQL Server および Azure SQL Database のクエリ パフォーマンスを向上させるためのインテリジェントなクエリ処理の機能です。
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,19 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba7eba4e21e0bb488664149347e8c58fae3e3ad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030939"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660954"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **インテリジェントなクエリ処理**機能ファミリには、実装の労力は最小限で既存のワークロードのパフォーマンスを改善する、広範な影響がある機能が含まれています。
 
-![インテリジェントなクエリ処理の機能](./media/2_IQPFeatureFamily.png)
+![インテリジェントなクエリ処理の機能](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>アダプティブ クエリ処理
 アダプティブ クエリ処理の機能ファミリには、最適化戦略をアプリケーション ワークロードの実行時条件に適用するクエリ処理の改善が含まれます。 含まれる改善は、バッチ モード アダプティブ結合、メモリ許可フィードバック、複数ステートメントのテーブル値関数のインターリーブ実行などです。
@@ -54,6 +54,14 @@ ms.locfileid: "51030939"
 テーブル変数の遅延コンパイルを使用すると、テーブル変数を参照するステートメントのコンパイルは、そのステートメントが最初に実際に実行されるまで遅延されます。 この遅延コンパイルの動作は、一時テーブルの動作と同じです。この変更によって、元の 1 行の推定値ではなく、実際のカーディナリティを使用できるようになります。 Azure SQL Database でテーブル変数の遅延コンパイルのパブリック プレビューを有効にするには、クエリを実行する際に接続されるデータベースのデータベース互換レベル 150 を有効にします。
 
 詳細については、「[テーブル変数の遅延コンパイル](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation )」をご覧ください。
+
+## <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
+> [!NOTE]
+> スカラー UDF のインライン化は、パブリック プレビュー機能です。  
+
+スカラー UDF のインライン化では、スカラー ユーザー定義関数 (UDF) が関係式に変換され、それらが呼び出し元の SQL クエリに埋め込まれます。これにより、スカラー UDF を利用するワークロードのパフォーマンスが向上します。 スカラー UDF のインライン化によって、UDF 内の操作に対するコストに基づく最適化が促進され、その結果として、非効率な、反復的および直列的な実行プランではなく、セット指向で並列的である効率的なプランが提供されます。 この機能は、データベース互換性レベル 150 では既定で有効です。
+
+詳細については、「[スカラー UDF のインライン化](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions)」を参照してください。
 
 ## <a name="approximate-query-processing"></a>概数クエリ処理
 > [!NOTE]

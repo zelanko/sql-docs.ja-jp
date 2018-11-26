@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051015"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813675"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループと合計の追加 (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 このチュートリアルのレッスンでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートにグループ化と合計を追加して、データを整理して要約します。  
   
   
@@ -31,13 +31,13 @@ ms.locfileid: "50051015"
   
     ![日付グループの追加](../reporting-services/media/rs-basictablegroups1design.png "日付グループの追加")  
   
-4.  **レポート データ** ペインから **行グループ** ペインに **[Order]** フィールドをドラッグします。 **(詳細)** の上、Date の下に配置します。
+4.  **レポート データ** ペインから **行グループ** ペインに **[Order]** フィールドをドラッグします。 **詳細**の上、日付の下に配置します。
 
     ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    2 つのグループを示す場合、行ハンドルには 2 個の角かっこ ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png) が表示されることに注意してください。 テーブルにも 2 つの **Order** 列が表示されます。  
+    2 つのグループを示す場合、行ハンドルには 2 個の角かっこ ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png) が表示されることに注意してください。 テーブルにも 2 つの **注文** 列が表示されます。  
   
-5.  二重線の **右側** にある元の **Date** 列と **Order** 列を削除します。 これにより、この個別のレコード値が削除されるので、グループ値のみが表示されます。 2 つの列の列ハンドルを選択し、右クリックして **[列の削除]** をクリックします。  
+5.  二重線の **右側** にある元の **日付** 列と **注文** 列を削除します。 これにより、この個別のレコード値が削除されるので、グループ値のみが表示されます。 2 つの列の列ハンドルを選択し、右クリックして **[列の削除]** をクリックします。  
   
     ![削除する列を選択する](../reporting-services/media/rs-basictablegroupsdeletecols.gif "削除する列を選択する")  
   
@@ -74,7 +74,7 @@ ms.locfileid: "50051015"
   
 ## <a name="bkmk_adddailytotal"></a>レポートに毎日の合計を追加するには  
   
-1.  **Order** セルを右クリックし、 **[合計の追加]** をポイントして、 **[後]** をクリックします。  
+1.  **注文** セルを右クリックし、 **[合計の追加]** をポイントして、 **[指定日付より後]** をクリックします。  
   
     毎日の数量と金額の合計が含まれた新しい行と、"**合計**" ラベルが注文列の一番下に追加されます。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "50051015"
   
 ## <a name="bkmk_addgrandtotal"></a>レポートに総計を追加するには  
   
-1.  Date セルを右クリックし、 **[合計の追加]** をポイントして、 **[後]** をクリックします。  
+1.  日付セルを右クリックし、 **[合計の追加]** をポイントして、 **[指定日付より後]** をクリックします。  
   
-    レポート全体の数量と金額の合計が含まれた新しい行と、 **[合計]** ラベルが **\[Date\]** 列に追加されます。  
+    レポート全体の数量と金額の合計が含まれた新しい行と、 **[合計]** ラベルが **[日付]** 列に追加されます。  
   
 2.  同じセルで **「合計」** の代わりに **「総計」** と入力し、 **[総計]** と表示します。  
   
@@ -110,18 +110,18 @@ ms.locfileid: "50051015"
   
 1.  オプションの手順では、完成したレポートをネイティブ モードのレポート サーバーにパブリッシュして、Web ポータルでレポートを表示できるようにします。  
   
-2.  **[プロジェクト]** メニューの **[Tutorial のプロパティ...]** をクリックします。  
+2.   **[プロジェクト]** メニューの **[チュートリアルのプロパティ]** をクリックします。  
   
 3.  **TargetServerURL** に、レポート サーバーの名前を入力します。たとえば、次のように入力します。   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` は、レポート サーバーでレポートを設計している場合に動作します。  
+    - `https://localhost/reportserver` は、レポート サーバーでレポートを設計している場合に動作します。  
   
   
 4. TargetReportFolder がチュートリアルのプロジェクトの名前であることに注意してください。  これは、次のステップでレポートが配置されるフォルダーの名前です。  
-5. **[OK]** をクリックします。  
+5.  **[OK]** をクリックします。  
   
-6.  **[ビルド]** メニューの **[Tutorial の配置]** をクリックします。  
+6.  **[ビルド]** メニューの **[チュートリアルの配置]** をクリックします。  
   
     出力ウィンドウに次のようなメッセージが表示されていれば、正常に展開されたことを示しています。  
   
@@ -129,13 +129,13 @@ ms.locfileid: "50051015"
     > 'Sales Orders.rdl' をスキップしています。 アイテムは最新の状態です。  
     > ビルドの完了 -- エラー 0 個、警告 0 個  
     > ------ ビルド開始: プロジェクト: tutorial、構成: デバッグ ------  
-    > http://<サーバー名>/reportserver に配置しています  
+    > https://[server name]/reportserver に配置しています  
     > レポート '/tutorial/Sales Orders' を配置しています。  
     > 配置完了 -- エラー 0 個、警告 0 個  
     > ========== ビルド: 正常終了または最新の状態 1、失敗 0、スキップ 0 ==========  
     > ========== 配置: 1 正常終了、0 失敗、0 スキップ ==========  
   
-    次のようなメッセージが表示されている場合は、レポート サーバーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
+    次のようなメッセージが表示されている場合は、レポート さーばーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
   
     > "ユーザー 'XXXXXXXX\\&lt;ユーザー名&gt;' には、この操作を行うのに必要な権限が許可されていません。"  
   
@@ -143,8 +143,8 @@ ms.locfileid: "50051015"
   
     [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルの URL を参照します。   
     **注:** *ポータル* URL は "Reports" です。Report *Server* の URL "Reportserver" ではありません。  例 :   
-    `http://<server name>/reports`」をご覧ください。  
-    `http://localhost/reports` は、レポート サーバーでレポートを設計している場合に動作します。  
+    `https://<server name>/reports`。  
+    `https://localhost/reports` は、レポート サーバーでレポートを設計している場合に動作します。  
   
 8.  レポートが含まれているフォルダーを参照します。 既定の名前の *tutorial*、プロジェクトの名前、またはプロジェクトのプロパティで TargetReportFolder フィールドに入力した名前です。   
 レポートの名前 **Sales Orders** をクリックして、表示レポートをブラウザーで表示します。  

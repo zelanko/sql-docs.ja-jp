@@ -1,7 +1,7 @@
 ---
 title: SSIS カタログ | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 11/12/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864300"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641409"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   **SSISDB** カタログは、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバーに配置した [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) プロジェクトを操作するための中核となります。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -28,7 +28,7 @@ ms.locfileid: "47864300"
 > [!NOTE]
 > この記事では、SSIS カタログ全般とオンプレミスで実行されている SSIS カタログについて説明します。 Azure SQL Database で SSIS カタログを作成し、Azure で SSIS パッケージをデプロイし、実行することもできます。 詳細については、「[Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」 (SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする) を参照してください。
 >
-> Linux で SSIS パッケージを実行することもできますが、SSIS カタログは Linux ではサポートされていません。 詳しくは、「[Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md)」(SSIS で Linux 上のデータの抽出、変換、読み込みを行う) をご覧ください。
+> Linux で SSIS パッケージを実行することもできますが、SSIS カタログは Linux ではサポートされていません。 詳しくは、「[SSIS で Linux 上のデータの抽出、変換、読み込みを行う](../../linux/sql-server-linux-migrate-ssis.md)」 をご覧ください。
  
  **SSISDB** カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、および操作履歴があります。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47864300"
   
  **SSISDB** データベースを保守するには、ユーザー データベースの管理に標準的なエンタープライズ ポリシーを適用することをお勧めします。 メンテナンス プランの作成については、「 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)」をご覧ください。  
   
- **SSISDB** カタログおよび **SSISDB** データベースは、Windows PowerShell をサポートしています。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)」をご覧ください。  
+ **SSISDB** カタログおよび **SSISDB** データベースは、Windows PowerShell をサポートしています。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」をご覧ください。  
   
  操作データの表示に関する詳細については、「 [パッケージとその他の操作を実行するモニター](../../integration-services/performance/monitor-running-packages-and-other-operations.md)」をご覧ください。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47864300"
   
 -   [カタログの構成](../../integration-services/catalog/ssis-catalog.md#Configuration)  
   
--   [権限](../../integration-services/catalog/ssis-catalog.md#Permissions)  
+-   [アクセス許可](../../integration-services/catalog/ssis-catalog.md#Permissions)  
   
 -   [フォルダー](../../integration-services/catalog/ssis-catalog.md#Folders)  
   
@@ -356,12 +356,12 @@ ms.locfileid: "47864300"
   
     ```  
   
-     Windows PowerShell と <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の使用方法を紹介したその他の例については、blogs.msdn.com のブログ エントリ「[SQL Server 2012 での SSIS と PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)」を参照してください。 名前空間とコード例の概要については、blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](http://go.microsoft.com/fwlink/?LinkId=254267)」を参照してください。  
+     Windows PowerShell と <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の使用方法を紹介したその他の例については、blogs.msdn.com のブログ エントリ「[SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」を参照してください。 名前空間とコード例の概要については、blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://go.microsoft.com/fwlink/?LinkId=254267)」を参照してください。  
 
 ## <a name="catalog-properties-dialog-box"></a>[カタログのプロパティ] ダイアログ ボックス
   [カタログのプロパティ] ダイアログ ボックスを使用すると、SSISDB カタログを構成できます。 カタログ プロパティは、機微なデータを暗号化する方法、操作およびプロジェクトのバージョン管理データを保持する方法、および検証操作がタイムアウトするタイミングを定義します。SSISDB カタログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、パラメーター、および環境のための中央のストレージと管理ポイントです。  
   
- また、カタログ プロパティを catalog.catalog_property ビューで表示し、catalog.configure_catalog ストアド プロシージャを使用してこれらのプロパティを設定できます。 詳細については、「[catalog.catalog_properties (SSISDB データベース)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)」および「[catalog.configure_catalog (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)」を参照してください。  
+ また、カタログ プロパティを `catalog.catalog_properties` ビューで表示し、`catalog.configure_catalog` ストアド プロシージャを使用することで、これらのプロパティを設定することもできます。 詳細については、「[catalog.catalog_properties (SSISDB データベース)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)」および「[catalog.configure_catalog (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)」を参照してください。  
   
  **目的に合ったトピックをクリックしてください**  
   
@@ -380,15 +380,14 @@ ms.locfileid: "47864300"
 ###  <a name="options"></a> オプションの構成  
   
 #### <a name="options"></a>[変数]  
- 次の表では、ダイアログ ボックスに示される特定のプロパティと、catalog.catalog_property ビュー内の対応するプロパティについて説明します。  
+ 次の表では、ダイアログ ボックスに示される特定のプロパティと、`catalog.catalog_properties` ビュー内の対応するプロパティについて説明します。  
   
-|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_property ビュー)|[説明]|  
+|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_properties ビュー)|[説明]|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|暗号化アルゴリズムの名前|ENCRYPTION_CLEANUP_ENABLED|カタログ内の機密性の高いパラメーター値を暗号化するために使用される暗号化の種類を指定します。 使用できる値を次に示します。<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (既定値)|  
-|検証のタイムアウト (秒)|VALIDATION_TIMEOUT|プロジェクトの検証またはパッケージの検証を停止するまで実行できる最大秒数を指定します。 既定値は 300 秒です。<br /><br /> 検証の実行は、非同期操作です。 プロジェクトまたはパッケージのサイズが大きくなるほど、検証に要する時間も長くなります。<br /><br /> プロジェクトとパッケージの検証方法の詳細については、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」を参照してください。|  
+|暗号化アルゴリズムの名前|ENCRYPTION_ALGORITHM|カタログ内の機密性の高いパラメーター値を暗号化するために使用される暗号化の種類を指定します。 使用できる値を次に示します。<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (既定値)|  
+|プロジェクトごとのバージョンの最大数|MAX_PROJECT_VERSIONS|カタログに格納されるプロジェクトのバージョンの数を指定します。 最大数を超えるプロジェクトの古いバージョンは、プロジェクト バージョンのクリーンアップ ジョブを実行したときに削除されます。|  
 |ログを定期的に消去する|OPERATION_CLEANUP_ENABLED|操作のクリーンアップ SQL Server エージェント ジョブを実行することを示すには、このプロパティを True に設定します。 それ以外の場合は、このプロパティを False に設定します。|  
 |保有期間 (日)|RETENTION_WINDOW|操作データの最大保有期間を日数で指定します。 指定された日数を経過したデータは、操作のクリーンアップ SQL エージェント ジョブによって削除されます。|  
-|プロジェクトごとのバージョンの最大数|MAX_PROJECT_VERSIONS|カタログに格納されるプロジェクトのバージョンの数を指定します。 最大数を超えるプロジェクトの古いバージョンは、プロジェクト バージョンのクリーンアップ ジョブを実行したときに削除されます。|  
 
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>SSIS カタログのバックアップ、復元、および移動
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -413,7 +412,7 @@ ms.locfileid: "47864300"
   
     ```  
   
-3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、「 [データベースをバックアップする方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)」を参照してください。  
+3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、「 [データベースをバックアップする方法 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)」を参照してください。  
   
 4.  次の手順を実行して、##MS_SSISServerCleanupJobLogin## の CREATE LOGIN スクリプトを生成します。 詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)」を参照してください。  
   
@@ -437,7 +436,7 @@ ms.locfileid: "47864300"
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS データベースを復元するには  
   
-1.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、sp_configure ストアド プロシージャを実行して、共通言語ランタイム (CLR) を有効にします。 詳細については、「[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」と「[clr enabled サーバー構成オプション](http://go.microsoft.com/fwlink/?LinkId=231855)」を参照してください。  
+1.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、sp_configure ストアド プロシージャを実行して、共通言語ランタイム (CLR) を有効にします。 詳細については、「[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」と「[clr enabled サーバー構成オプション](https://go.microsoft.com/fwlink/?LinkId=231855)」を参照してください。  
   
     ```  
     use master   
@@ -580,7 +579,7 @@ ms.locfileid: "47864300"
 ###  <a name="prereq"></a> 前提条件  
 次の前提条件手順を実行してから、SSISDB データベースの Always On サポートを有効にする必要があります。  
   
-1.  Windows フェールオーバー クラスターを設定します。 手順については、「 [Installing the Failover Cluster Feature and Tools for Windows Server 2012 (Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール)](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 」のブログ投稿を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。  
+1.  Windows フェールオーバー クラスターを設定します。 手順については、「 [Installing the Failover Cluster Feature and Tools for Windows Server 2012 (Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール)](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 」のブログ投稿を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。  
   
 2.  クラスターの各ノードに SQL Server 2016 with Integration Services (SSIS) 機能をインストールします。  
   
@@ -662,8 +661,8 @@ SSISDB データベースを Always On 可用性グループに追加する手�
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   blogs.msdn.com のブログ「 [SQL Server 2012 での SSIS と PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)」  
+-   blogs.msdn.com のブログ「 [SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」  
   
--   blogs.msdn.com のブログ エントリ「 [SSIS カタログのアクセス制御のヒント](http://go.microsoft.com/fwlink/?LinkId=246669)」  
+-   blogs.msdn.com のブログ エントリ「 [SSIS カタログのアクセス制御のヒント](https://go.microsoft.com/fwlink/?LinkId=246669)」  
   
--   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](http://go.microsoft.com/fwlink/?LinkId=254267)」  
+-   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://go.microsoft.com/fwlink/?LinkId=254267)」  

@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94c6c8e96685f7b53348589ae4b30445447a2a0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814998"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813995"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

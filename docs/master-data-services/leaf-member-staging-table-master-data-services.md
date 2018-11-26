@@ -15,12 +15,12 @@ ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 46dc98904bc82a167fa1c014b5ace8b8699170a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82ca5e58e5e24c128e37a9335fd87bc3bb2d4e28
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626220"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700260"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>リーフ メンバー ステージング テーブル (マスター データ サービス)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47626220"
 |**コード**<br /><br /> 必須。**ImportType1** や **2** でコードが自動的に生成される場合は除きます。詳しくは、「[コードの自動作成 (マスター データ サービス)](../master-data-services/automatic-code-creation-master-data-services.md)」を参照してください。|メンバーの一意コード。||  
 |**名前**<br /><br /> 省略可|メンバーの名前。||  
 |**NewCode**|メンバー コードを変更する場合にのみ使用します。||  
-|\<属性名>|エンティティ内の属性ごとに列が存在します。 **ImportType** が **0** または **2**の場合に、これを使用します。 自由形式属性の場合、属性の新しいテキストまたは文字列値を指定します。 ドメイン ベース属性の場合は、属性となるメンバーのコードを指定します。 リンク属性の場合、URL は **http://** で始まる必要があります。<br /><br /> 注: ファイル属性をステージングすることはできません。||  
+|\<属性名>|エンティティ内の属性ごとに列が存在します。 **ImportType** が **0** または **2**の場合に、これを使用します。 自由形式属性の場合、属性の新しいテキストまたは文字列値を指定します。 ドメイン ベース属性の場合は、属性となるメンバーのコードを指定します。 リンク属性の場合、URL は **https://** で始まる必要があります。<br /><br /> 注: ファイル属性をステージングすることはできません。||  
   
 ## <a name="see-also"></a>参照  
  [概要: テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

@@ -1,7 +1,7 @@
 ---
 title: 可用性グループの SQL Server ディストリビューション データベースの構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 11/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818000"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602632"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
 
@@ -48,6 +48,7 @@ AG のディストリビューション データベースを下記の手順に�
 - 既存のディストリビューション データベース AG にノードを追加、またはその AG からノードを削除します。
 - ディストリビューターには複数のディストリビューション データベースが存在する場合があります。 各ディストリビューション データベースは独自の AG に属することはできますが、任意の AG に属することはできません。 複数のディストリビューション データベースで AG を共有することができます。
 - パブリッシャーとディストリビューターは別々の SQL Server インスタンス上に置く必要があります。
+- ディストリビューション データベースをホストしている可用性グループのリスナーが、既定以外のポートを使用するように構成されている場合は、リスナーと既定以外のポートに別名を設定する必要があります。
 
 ## <a name="limitations-or-exclusions"></a>制限事項または適用除外事項
 
@@ -63,6 +64,7 @@ AG のディストリビューション データベースを下記の手順に�
 - ディストリビューション データベース AG では、リスナーが構成されている必要があります。
 - ディストリビューション データベース AG 内のセカンダリ レプリカは、同期または非同期のいずれにも指定できます。 同期モードが推奨され、優先されます。
 - 双方向のトランザクション レプリケーションはサポートされていません。
+- ディストリビューション データベースが可用性グループに追加されたときに、SSMS でディストリビューション データベースが同期中/同期済みとして表示されることはありません。
 
 
    >[!NOTE]
@@ -391,9 +393,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>参照  

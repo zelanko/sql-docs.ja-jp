@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031707"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813215"
 ---
 # <a name="configure-the-web-portal"></a>Web ポータルの構成
 
@@ -80,7 +80,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 2. Internet Explorer を開きます。
 
-3. Web ポータルの URLを入力します。 既定では、 http://\<**your-server-name**>/reports ですが、Reporting Services を名前付きインスタンスとしてインストールした場合、既定の URL は http://\<**your-server-name**>/reports\<**_instancename**> になります。
+3. Web ポータルの URLを入力します。 既定では、 https://\<**your-server-name**>/reports ですが、Reporting Services を名前付きインスタンスとしてインストールした場合、既定の URL は https://\<**your-server-name**>/reports\<**_instancename**> になります。
 
 4. **[サイトの設定]** を選択します。
 

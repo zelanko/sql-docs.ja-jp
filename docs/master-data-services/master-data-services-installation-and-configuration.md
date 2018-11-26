@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 968bb1f3a96ab769b8ad7a837edb5876477c1324
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 7016e66ba91972f6f9ef365b7c60fa320b0bdbcf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072256"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697360"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -36,7 +36,7 @@ ms.locfileid: "49072256"
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を学習するためのビデオと他のトレーニング リソースへのリンクについては、「[マスター データ サービスについて学習する](../master-data-services/learn-sql-server-master-data-services.md)」をご覧ください。 
   
 > **ダウンロード**  
->-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)** に移動してください。  
+>-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** に移動してください。  
 >-   Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** にアクセスして、SQL Server がインストール済みの仮想マシンをすぐにご利用いただけます。  
  
 > **MDS Web サイトを作成できませんか?**
@@ -194,7 +194,7 @@ ms.locfileid: "49072256"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **[適用]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、 http://*server name*/*web application*/ です。 
+15. **[適用]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、 https://*server name*/*web application*/ です。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -272,7 +272,7 @@ ms.locfileid: "49072256"
   
     1.  設定する [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サイトに移動します。 「 [データベースと Web サイトを設定する](#SetUpWeb) 」セクションを参照してください。  
   
-         Web サイトのアドレスは、 http://*server name*/*web application*/ です。  
+         Web サイトのアドレスは、 https://*server name*/*web application*/ です。  
   
     2.  **[モデル]** リスト ボックスからモデルを選択して、 **[エクスプローラー]** をクリックします。  
   

@@ -1,12 +1,10 @@
 ---
 title: 移行後の検証および最適化ガイド | Microsoft Docs
-ms.custom: ''
 ms.date: 5/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - post-migration validation and optimization
@@ -14,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: ''
-ms.openlocfilehash: fe6ebb9967a3f1569db605a17b8f48b2a82a0470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662950"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658525"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "47662950"
 
 これは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降、すべてのクエリ オプティマイザーの変更が最新の[データベース互換性レベル](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)と連携しているため、プランの変更は、アップグレードの時点ではなく、ユーザーが `COMPATIBILITY_LEVEL` のデータベース オプションを最新のものに変更した時点で発生するためです。 この機能とクエリ ストアの組み合わせによって、アップグレード プロセス中のクエリのパフォーマンスを高いレベルで制御できます。 
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で導入されたクエリ オプティマイザーの変更の詳細については、「[Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx)」(SQL Server 2014 のカーディナリティ推定を使用したクエリ プランの最適化) を参照してください。
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で導入されたクエリ オプティマイザーの変更の詳細については、「[Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)」(SQL Server 2014 のカーディナリティ推定を使用したクエリ プランの最適化) を参照してください。
 
 ### <a name="steps-to-resolve"></a>解決手順
 
@@ -53,7 +51,7 @@ ms.locfileid: "47662950"
 **適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題が存在していた場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。 
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題がある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  のより新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初のコンパイルで入力パラメーターのスニッフィングを使って、その入力データの分布に最適化された、パラメーター化された再利用可能なプランを生成することで、ストアド プロシージャのクエリ プランをコンパイルします。 ストアド プロシージャではない場合でも、単純なプランを生成するほとんどのステートメントがパラメーター化されます。 プランが最初にキャッシュされた後、それ以降の実行は前にキャッシュされたプランにマップします。
 その最初のコンパイルで通常のワークロードに対する最も一般的なパラメーターのセットが使われないことがある場合、問題が発生する可能性があります。 異なるパラメーターに対して実行プランが同じでは非効率的になります。 このトピックの詳細については、「[パラメーター スニッフィング](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)」を参照してください。
@@ -81,7 +79,7 @@ ms.locfileid: "47662950"
 
 1.  存在しないインデックス参照にはグラフィカル実行プランを利用します。
 2.  [データベース エンジン チューニング アドバイザー](../tools/dta/tutorial-database-engine-tuning-advisor.md)によって生成されたインデックスの提案。
-3.  [不足インデックス DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) または [SQL Server パフォーマンス ダッシュ ボード](https://www.microsoft.com/en-us/download/details.aspx?id=29063)を利用します。
+3.  [不足インデックス DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) または [SQL Server パフォーマンス ダッシュ ボード](https://www.microsoft.com/download/details.aspx?id=29063)を利用します。
 4.  欠落、重複、冗長、低使用頻度、完全不使用のインデックスに関するインサイト、およびインデックス参照がデータベースの既存のプロシージャにヒント/ハードコーディングされているかどうかに関するインサイトを提供する既存の DMV を使用できる既存のスクリプトを活用します。 
 
 > [!TIP] 

@@ -1,12 +1,10 @@
 ---
 title: 変更データ キャプチャの管理と監視 (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -16,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d12ba58b2257425356b01c38c8fddeb41f6336a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780030"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560519"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.locfileid: "47780030"
 ### <a name="structure-of-the-cleanup-job"></a>クリーンアップ ジョブの構造  
  変更データ キャプチャでは、保有期間に基づくクリーンアップ戦略を使用して変更テーブルのサイズを管理します。 クリーンアップ メカニズムは、最初のデータベース テーブルが有効になったときに作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブで構成されます。 単一のクリーンアップ ジョブがすべてのデータベース変更テーブルのクリーンアップを処理し、定義されたすべてのキャプチャ インスタンスに同じ保有期間値を適用します。  
   
- クリーンアップ ジョブは、パラメーターなしのストアド プロシージャ **sp_MScdc_cleanup_job**を実行すれば開始されます。 このストアド プロシージャは、構成された保有期間値およびしきい値をクリーンアップ ジョブのために **msdb.dbo.cdc_jobs**から抽出すると開始されます。 保有期間値は、変更テーブルの新しい低水位マークの計算に使用します。 *cdc.lsn_time_mapping* テーブルの **tran_end_time** の最大値から指定の分数を差し引き、datetime 値として表す新しい低水位マークを取得します。 その後、CDC.lsn_time_mapping テーブルを使用して、対応する **lsn** 値にこの datetime 値を変換します。 テーブル内の複数のエントリが同じコミット時刻を共有する場合は、最小の **lsn** を持つエントリに対応する **lsn** が新しい低水位マークとして選ばれます。 この **lsn** 値は **sp_cdc_cleanup_change_tables** に渡され、データベース変更テーブルから変更テーブル エントリが削除されます。  
+ クリーンアップ ジョブは、パラメーターなしのストアド プロシージャ **sp_MScdc_cleanup_job**を実行すれば開始されます。 このストアド プロシージャは、構成された保有期間値およびしきい値をクリーンアップ ジョブのために **msdb.dbo.cdc_jobs**から抽出すると開始されます。 保有期間値は、変更テーブルの新しい低水位マークの計算に使用します。 **cdc.lsn_time_mapping** テーブルの *tran_end_time* の最大値から指定の分数を差し引き、datetime 値として表す新しい低水位マークを取得します。 その後、CDC.lsn_time_mapping テーブルを使用して、対応する **lsn** 値にこの datetime 値を変換します。 テーブル内の複数のエントリが同じコミット時刻を共有する場合は、最小の **lsn** を持つエントリに対応する **lsn** が新しい低水位マークとして選ばれます。 この **lsn** 値は **sp_cdc_cleanup_change_tables** に渡され、データベース変更テーブルから変更テーブル エントリが削除されます。  
   
 > [!NOTE]  
 >  最新のトランザクションのコミット時刻を、新しい低水位マークの計算のベースとして使用する利点は、変更を特定の時刻の変更テーブルに残せることです。 これは、キャプチャ プロセスが背後で実行されている場合でも同様です。 実際の低水位マークの共有コミット時刻を持つ最小の **lsn** を選ぶと、現在の低水位マークと同じコミット時刻を持つすべてのエントリは、変更テーブル内に引き続き表示されます。  
@@ -86,18 +84,24 @@ ms.locfileid: "47780030"
 ### <a name="identify-sessions-with-empty-result-sets"></a>空の結果セットを含むセッションの特定  
  sys.dm_cdc_log_scan_sessions の各行はログ スキャン セッションを表します (ID が 0 の行を除く)。 ログ スキャン セッションは、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)の 1 回の実行に相当します。 セッション中、スキャンによって変更内容または空の結果のいずれかが返されます。 結果セットが空の場合、sys.dm_cdc_log_scan_sessions の empty_scan_count 列が 1 に設定されます。 空の結果セットが連続する場合 (キャプチャ ジョブを連続的に実行している場合など)、既存の最後の行の empty_scan_count が増分されます。 たとえば、変更内容を返したスキャンについて、sys.dm_cdc_log_scan_sessions に既に 10 行が格納されており、5 つの空の結果が行に含まれている場合、ビューには 11 行が格納され、 最後の行の empty_scan_count 列の値は 5 になります。 空のスキャンを含むセッションを確認するには、次のクエリを実行します。  
   
- `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
+```sql
+SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
+```
   
 ### <a name="determine-latency"></a>待機時間の判断  
  sys.dm_cdc_log_scan_sessions 管理ビューには、各キャプチャ セッションの待機時間を記録する列があります。 待機時間は、トランザクションがソース テーブルにコミットされてから、最後にキャプチャされたトランザクションが変更テーブルにコミットされるまでの経過時間として定義されます。 待機時間列では、アクティブなセッションについてのみ値が設定されます。 empty_scan_count 列の値が 0 より大きいセッションについては、待機時間列は 0 に設定されます。 次のクエリは、最新のセッションの平均待機時間を返します。  
   
- `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
  待機時間データを使用すると、キャプチャ プロセスでのトランザクションの処理時間を確認できます。 このデータが最も役立つのは、キャプチャ プロセスを連続的に実行している場合です。 スケジュールに従ってキャプチャ プロセスを実行している場合、トランザクションがソース テーブルにコミットされてから、スケジュールされた時間にキャプチャ プロセスが実行されるまでの間に遅延が生じるため、待機時間が長くなる可能性があります。  
   
  キャプチャ プロセスに関するもう 1 つの重要な指標はスループットです。 これは、各セッション中に処理された 1 秒あたりの平均コマンド数です。 セッションのスループットを確認するには、command_count 列の値を実行時間列の値で除算します。 次のクエリは、最新のセッションの平均スループットを返します。  
   
- `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
 ### <a name="use-data-collector-to-collect-sampling-data"></a>データ コレクターを使用したサンプル データの収集  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ コレクターを使用すると、任意のテーブルまたは動的管理ビューからデータのスナップショットを収集して、パフォーマンス データ ウェアハウスを構築することができます。 データベースで変更データ キャプチャが有効になっている場合、sys.dm_cdc_log_scan_sessions ビューおよび sys.dm_cdc_errors ビューのスナップショットを一定間隔で取得すると、後の分析に役立ちます。 次の手順では、sys.dm_cdc_log_scan_sessions 管理ビューからサンプル データを収集するデータ コレクターを設定します。  
@@ -130,10 +134,10 @@ ms.locfileid: "47780030"
   
     -- Create a collection item using statistics from   
     -- the change data capture dynamic management view.  
-    DECLARE @paramters xml;  
+    DECLARE @parameters xml;  
     DECLARE @collection_item_id int;  
   
-    SELECT @paramters = CONVERT(xml,   
+    SELECT @parameters = CONVERT(xml,   
         N'<TSQLQueryCollector>  
             <Query>  
               <Value>SELECT * FROM sys.dm_cdc_log_scan_sessions</Value>  
@@ -146,7 +150,7 @@ ms.locfileid: "47780030"
     @collector_type_uid = N'302E93D1-3424-4BE7-AA8E-84813ECF2419',  
     @name = ' CDC Performance Data Collector',  
     @frequency = 5,   
-    @parameters = @paramters,  
+    @parameters = @parameters,  
     @collection_item_id = @collection_item_id output;  
   
     GO  

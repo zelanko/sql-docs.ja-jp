@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c7fe58cb279924ac60c2902c29dcd6bade82dd6f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029501"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813825"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
@@ -29,9 +29,9 @@ Power BI Report Server については、「[Power BI Report Server とは](http
 SQL Server 2017 Reporting Services をダウンロードするには、「**[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)**」に移動します。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-## <a name="sql-server-2019-ctp-20-reporting-services"></a>SQL Server 2019 CTP 2.0 Reporting Services
+## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 プレビュー Reporting Services
 
-SQL Server vNext CTP 2.0 Reporting Services はプレビューで提供されていません。 現在のバージョンである [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md) をインストールしてください。 
+[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services は CTP 2.1 では使用できません。 現在のバージョンである [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md) をインストールしてください。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -76,12 +76,12 @@ SQL Server vNext CTP 2.0 Reporting Services はプレビューで提供されて
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   ブランド化パックを使用して、組織のロゴや色で [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] をカスタマイズできます。  
   
   カスタムブランド化の詳細については、「 [Web ポータルのブランド化](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)」を参照してください。
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 使用しているフォルダーのコンテキストに適合する KPI を [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] で直接作成できます。 KPI を作成するときは、データセットを選択し、それらの値を集約できます。 詳細をドリル スルーするための関連コンテンツを選択することもできます。
   
@@ -95,7 +95,7 @@ SQL Server vNext CTP 2.0 Reporting Services はプレビューで提供されて
 Reporting Services モバイル レポートは、多様なフォーム ファクター用に最適化された専用レポートであり、モバイル デバイスでレポートにアクセスするユーザーに最適なエクスペリエンスを提供します。 モバイル レポートでは、時間グラフ、カテゴリ グラフ、比較グラフ、ツリーマップ、カスタム マップなどの多種多様な視覚エフェクトを使用できます。 モバイル レポートは、オンプレミスの SQL Server Analysis Services 多次元およびテーブル データを含むさまざまなデータ ソースに接続できます。 調整可能なグリッド行とグリッド列と柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応するモバイル レポートをレイアウトできます。 その後、これらのモバイル レポートを Reporting Service サーバーに保存しておき、iPad、iPhone、Android フォン、および Windows 10 デバイスのブラウザーまたはPower BI モバイル アプリで表示と操作を実行できます。
   
 #### <a name="mobile-report-publisher"></a>Mobile Report Publisher  
- [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
+  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -147,7 +147,7 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
  サブスクリプション出力用に PPTX 形式を選択し、レポート サーバー URL アクセスを使用してレポートをレンダリングおよびエクスポートすることもできます。 たとえば、ブラウザーで次の URL コマンドを実行すると、レポート サーバーの名前付きインスタンスからレポートがエクスポートされます。  
   
 ```  
-http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  詳細については、「 [URL アクセスを使用してレポートをエクスポート](../reporting-services/export-a-report-using-url-access.md)」を参照してください。  

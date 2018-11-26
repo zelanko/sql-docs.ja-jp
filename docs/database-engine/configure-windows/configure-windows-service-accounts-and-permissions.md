@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 772596b978cebc8b1581ac1a0e2e39f042afdf09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237118"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605984"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "50237118"
   
  - **SQL Server PolyBase エンジン** - 外部データ ソースに対する分散クエリ機能を提供します。
  
- - **SQL Server Polybase Data Movement Service** - SQL Server と外部データ ソースの間、および PolyBase スケールアウト グループ内の SQL ノードの間で、データを移動できるようにします。
+ - **SQL Server PolyBase Data Movement Service** - SQL Server と外部データ ソースの間、および PolyBase スケールアウト グループ内の SQL ノードの間のデータ移動を有効にします。
   
 ##  <a name="Serv_Prop"></a> サービスのプロパティおよび構成
 
@@ -180,9 +180,9 @@ ms.locfileid: "50237118"
   
      グループ管理サービス アカウントは、複数サーバーのための MSA です。 Windows は、サーバーのグループで実行されているサービスのサービス アカウントを管理します。 Active Directory は、サービスを再起動することなくグループ管理サービス アカウントのパスワードを自動的に更新します。 グループ管理サービス アカウントのプリンシパルを使用するように SQL Server のサービスを構成できます。 SQL Server 2014 より、SQL Server はスタンドアロン インスタンスのグループ管理サービス アカウントを、SQL Server 2016 以降ではフェールオーバー クラスター インスタンスと可用性グループのグループ管理サービス アカウントをサポートします。  
   
-    SQL Server 2014 以降でグループ管理サービス アカウントを使用するには、オペレーティング システムが Windows Server 2012 R2 以降である必要があります。 Windows Server 2012 R2 のサーバーでは、パスワード変更直後に中断することなくサービスがログインできるためには、 [KB 2998082](http://support.microsoft.com/kb/2998082) を適用する必要があります。  
+    SQL Server 2014 以降でグループ管理サービス アカウントを使用するには、オペレーティング システムが Windows Server 2012 R2 以降である必要があります。 Windows Server 2012 R2 のサーバーでは、パスワード変更直後に中断することなくサービスがログインできるためには、 [KB 2998082](https://support.microsoft.com/kb/2998082) を適用する必要があります。  
   
-    詳細については、「[グループの管理されたサービス アカウントの概要](http://technet.microsoft.com/library/hh831782.aspx)」を参照してください。  
+    詳細については、「[グループの管理されたサービス アカウントの概要](https://technet.microsoft.com/library/hh831782.aspx)」を参照してください。  
       
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスにグループ管理サービス アカウントを使用できるためには、その前にドメイン管理者が Active Directory でグループ管理サービス アカウントを作成しておく必要があります。  
@@ -199,11 +199,11 @@ ms.locfileid: "50237118"
     |サービス|仮想アカウント名|  
     |-------------|--------------------------|  
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスの既定のインスタンス|**NT SERVICE\MSSQLSERVER**|  
-    |[!INCLUDE[ssDE](../../includes/ssde-md.md)] という名前の **という名前の**サービスの名前付きインスタンス|**NT SERVICE\MSSQL$PAYROLL**|  
+    | [!INCLUDE[ssDE](../../includes/ssde-md.md)] という名前の **という名前の**サービスの名前付きインスタンス|**NT SERVICE\MSSQL$PAYROLL**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PAYROLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の **という名前の**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- 管理されたサービス アカウントと仮想アカウントの詳細については、「 **Service Accounts Step-by-Step Guide** 」 (サービス アカウントのステップ バイ ステップ ガイド) の「 [Managed service account and virtual account concepts](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 」 (管理されたサービス アカウントと仮想アカウントの概念) および「 [Managed Service Accounts Frequently Asked Questions (FAQ)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx)」 (管理されたサービス アカウントに関してよく寄せられる質問 (FAQ)) をご覧ください。  
+ 管理されたサービス アカウントと仮想アカウントの詳細については、「 **Service Accounts Step-by-Step Guide** 」 (サービス アカウントのステップ バイ ステップ ガイド) の「 [Managed service account and virtual account concepts](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 」 (管理されたサービス アカウントと仮想アカウントの概念) および「 [Managed Service Accounts Frequently Asked Questions (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)」 (管理されたサービス アカウントに関してよく寄せられる質問 (FAQ)) をご覧ください。  
   
  **セキュリティに関する注意:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 可能な場合は、 [MSA](#MSA) のツール ( [virtual account](#VA_Desc) をご使用ください。 MSA または仮想アカウントを使用できない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス用の共有アカウントの代わりに、特権レベルの低い特定のユーザー アカウントまたはドメイン アカウントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスごとに個別のアカウントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントまたはサービス グループに追加の権限を付与しないでください。 権限は、グループのメンバーシップを通じて付与されるか、サービス SID がサポートされている場合にはサービス SID に直接付与されます。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "50237118"
  サービス構成に応じて、インストール時またはアップグレード時にサービスまたはサービス SID のサービス アカウントが、サービス グループのメンバーとして追加されます。
   
 ###  <a name="Windows"></a> Windows の特権および権限  
- サービスを開始するために割り当てられているアカウントには、サービスを**開始、停止、および一時停止するための権限が必要です**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムはこれを自動的に割り当てます。  最初にリモート サーバー管理ツール (RSAT) をインストールします。 「 [Windows 7 用のリモート サーバー管理ツール](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)」を参照してください。
+ サービスを開始するために割り当てられているアカウントには、サービスを**開始、停止、および一時停止するための権限が必要です**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムはこれを自動的に割り当てます。  最初にリモート サーバー管理ツール (RSAT) をインストールします。 「 [Windows 7 用のリモート サーバー管理ツール](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)」を参照してください。
   
  次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが使用するサービスごとの SID またはローカル Windows グループに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが要求する権限を示します。
   

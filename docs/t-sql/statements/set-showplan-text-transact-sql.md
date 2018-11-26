@@ -27,12 +27,12 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fd5f24cf6effcac0682026ae49b933256176afe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b01cdf350983bc24d6dda6efb8d6911027021264
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834790"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558669"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されずに、各ステートメントの実行に関する情報が返されます。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに発行されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントに関する実行プラン情報です。 たとえば、SET SHOWPLAN_TEXT が ON のときに CREATE TABLE ステートメントが実行され、その後この同じテーブルを参照する SELECT ステートメントが発行されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定したテーブルが存在しないというエラー メッセージが返されます。 その後、このテーブルに対して行われる参照は失敗します。 SET SHOWPLAN_TEXT が OFF の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は実行プラン情報に関するレポートを生成しないでステートメントを実行します。  
   
- SET SHOWPLAN_TEXT の目的は、**osql** ユーティリティなどの Microsoft Win32 コマンド プロンプト アプリケーションが読み取れる形式の出力を返すことです。 SET SHOWPLAN_ALL を使用するとさらに詳細な出力が返され、その出力を取り扱うように設計されたプログラムで使用できます。  
+ SET SHOWPLAN_TEXT の目的は、**sqlcmd** ユーティリティなどの Microsoft Win32 コマンド プロンプト アプリケーションが読み取れる形式の出力を返すことです。 SET SHOWPLAN_ALL を使用するとさらに詳細な出力が返され、その出力を取り扱うように設計されたプログラムで使用できます。  
   
  SET SHOWPLAN_TEXT と SET SHOWPLAN_ALL は、ストアド プロシージャ内に指定できません。 またバッチ内で同時に他のステートメントを実行することもできません。  
   

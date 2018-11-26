@@ -11,12 +11,12 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 31c66aaacdcebfeabf43cc6466659e25d47d4d05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35ef666a70cc92f094035bebefda21b42a4f4819
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606940"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269745"
 ---
 # <a name="the-memory-optimized-filegroup"></a>メモリ最適化ファイルグループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47606940"
   
 メモリ最適化ファイル グループには、次の制限が適用されます。  
   
--   メモリ最適化ファイルグループを作成した後、それを削除する唯一の方法はデータベースを削除することです。 運用環境において、メモリ最適化ファイルグループの削除が必要になることはほとんどありません。  
+-   メモリ最適化ファイル グループを使用した後、それを削除する唯一の方法はデータベースを削除することです。 運用環境において、メモリ最適化ファイルグループの削除が必要になることはほとんどありません。  
   
 -   空ではないコンテナーを削除することや、メモリ最適化ファイルグループ内でデータ ファイルとデルタ ファイルのペアを別のコンテナーに移動することはできません。  
   

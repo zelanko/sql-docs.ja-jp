@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030621"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813175"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
@@ -79,7 +79,7 @@ SharePoint Server 2013 または SharePoint Server 2016 環境にレポート �
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
-    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*http://<computer name>*」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
+    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>*」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
 
 3. **[サイト コレクションの管理]** で **[サイト コレクションの機能]** をクリックします。
 
@@ -119,7 +119,7 @@ SharePoint サーバーの全体管理でソリューションの取り消しを
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
-    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*http://<computer name>*」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
+    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>*」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
 
 2. **[Web デザイナー ギャラリー]** の **[Web パーツ]** を選択します。
 

@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411772"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639126"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "50411772"
 分散トランザクションを保証するには、分散トランザクション リソース マネージャーとしてデータベースを登録するように、可用性グループを構成する必要があります。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループのデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループのデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] での構成手順は [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] の場合と同じです。
 
@@ -45,7 +45,7 @@ ms.locfileid: "50411772"
 
 * 分散トランザクションに参加する [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] のすべてのインスタンスが、[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] またはそれ以降である必要があります。
 
-* 可用性グループは、Windows Server 2016 または Windows Server 2012 R2 上で実行されている必要があります。 Windows Server 2012 R2 の場合は、[https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
+* 可用性グループは、Windows Server 2016 または Windows Server 2012 R2 上で実行されている必要があります。 Windows Server 2012 R2 の場合は、[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを作成する
 
@@ -180,16 +180,16 @@ following the guideline for Troubleshooting DTC Transactions.
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-未確定トランザクションの解決について詳しくは、「[トランザクションを手動で解決する](http://technet.microsoft.com/library/cc754134.aspx)」をご覧ください。
+未確定トランザクションの解決について詳しくは、「[トランザクションを手動で解決する](https://technet.microsoft.com/library/cc754134.aspx)」をご覧ください。
 
 ## <a name="next-steps"></a>Next Steps  
 
-[分散トランザクション](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[分散トランザクション](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [トランザクション - Always On 可用性グループとデータベース ミラーリング](transactions-always-on-availability-and-database-mirroring.md)  
 
-[XA トランザクションのサポート](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+[XA トランザクションのサポート](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[動作のしくみ: DTC トランザクションのセッション/SPID (–2)](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[動作のしくみ: DTC トランザクションのセッション/SPID (–2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

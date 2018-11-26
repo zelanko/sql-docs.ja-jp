@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252209"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699340"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -257,7 +257,7 @@ TO \<backup_device> [ **,**...*n* ] 関連する[バックアップ デバイス
 > NUL ディスク デバイスは送信される情報をすべて破棄し、テストでのみ使用する必要があります。 これは運用環境向けではありません。
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、URL にバックアップする場合、単一デバイスにのみバックアップできます。 URL へのバックアップ時に複数のデバイスにバックアップするには、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、URL にバックアップする場合、単一デバイスにのみバックアップできます。 URL へのバックアップ時に複数のデバイスにバックアップするには、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
   
 **URL の適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
@@ -279,7 +279,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 句で指定したバックアッ�
 このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise Edition でのみ使用できます。  
   
 > [!NOTE]  
-> MIRROR TO = DISK の場合、BACKUP によって、ディスク デバイスに応じた適切なブロック サイズが自動的に決まります。 ブロック サイズの詳細については、後の「BLOCKSIZE」の説明を参照してください。  
+> MIRROR TO = DISK の場合、BACKUP では、ディスクのセクター サイズに基づいてデバイス デバイスの適切なブロック サイズが自動的に決まります。 プライマリ バックアップ デバイスとして指定されたディスクとは異なるセクター サイズを使用して MIRROR TO ディスクがフォーマットされた場合、Backup コマンドは失敗します。  セクター サイズが異なるデバイスに対してバックアップをミラー化するには、BLOCKSIZE パラメーターを指定する必要があります。このパラメーターをすべてのターゲット デバイスの中で最も大きなセクター サイズに設定する必要があります。  ブロック サイズの詳細については、このトピックで後述する "BLOCKSIZE" の説明を参照してください。  
   
 \<backup_device> このセクションの前述の "\<backup_device>" を参照してください。
   
@@ -300,7 +300,7 @@ Microsoft Azure BLOB ストレージ サービスにバックアップを作成�
   
 FILE_SNAPSHOT **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
 
-Azure Blob ストレージ サービスを使用してすべての SQL Server データベース ファイルが格納される場合は、データベース ファイルの Azure のスナップショットを作成するために使用します。 詳細については、「[Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップでは、データベース ファイル (データとログ ファイル) の Azure スナップショットを一貫性のある状態で取得します。 Azure のスナップショットの一貫性のあるセットでは、バックアップを構成し、バックアップ ファイルに記録されます。 唯一の違い `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` と `BACKUP LOG TO URL WITH FILE_SNAPSHOT` こと、後者もトランザクション ログを切り捨て、以前のではありませんが。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップに必要な初期の完全バックアップの後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで、1 つのトランザクション ログ バックアップは、トランザクション ログ バックアップの時刻で、ポイントにデータベースを復元するために、バックアップのチェーンを確立するためにします。 さらに、次の 2 つのトランザクション ログ バックアップの期間の間のポイントにデータベースを復元するだけの 2 つのトランザクション ログ バックアップが必要です。  
+Azure Blob ストレージ サービスを使用してすべての SQL Server データベース ファイルが格納される場合は、データベース ファイルの Azure のスナップショットを作成するために使用します。 詳細については、「[Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップでは、データベース ファイル (データとログ ファイル) の Azure スナップショットを一貫性のある状態で取得します。 Azure のスナップショットの一貫性のあるセットでは、バックアップを構成し、バックアップ ファイルに記録されます。 唯一の違い `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` と `BACKUP LOG TO URL WITH FILE_SNAPSHOT` こと、後者もトランザクション ログを切り捨て、以前のではありませんが。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップに必要な初期の完全バックアップの後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで、1 つのトランザクション ログ バックアップは、トランザクション ログ バックアップの時刻で、ポイントにデータベースを復元するために、バックアップのチェーンを確立するためにします。 さらに、次の 2 つのトランザクション ログ バックアップの期間の間のポイントにデータベースを復元するだけの 2 つのトランザクション ログ バックアップが必要です。  
     
 DIFFERENTIAL  
 
@@ -470,7 +470,7 @@ BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 バッファーで使用される領域の合計は、*buffercount/maxtransfersize* で決定されます。  
   
 > [!NOTE]  
-> `BUFFERCOUNT` オプションの使用に関する重要な情報については、ブログ「[Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)」 (不適切な BufferCount データ転送オプションによって OOM の状態になる可能性がある) を参照してください。  
+> `BUFFERCOUNT` オプションの使用に関する重要な情報については、ブログ「[Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)」 (不適切な BufferCount データ転送オプションによって OOM の状態になる可能性がある) を参照してください。  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。  
 
@@ -726,7 +726,7 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
 オペレーティング システムがデータベースの照合順序をサポートしている場合は、プロセッサの種類が違っていても、1 つのプラットフォームから別のプラットフォームにわたるバックアップ操作を実行できます。  
  
 単一のデータ ファイルを含む、[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースでバックアップの圧縮を使用する場合は、**65536 (64 KB) より大きい** `MAXTRANSFERSIZE` 設定を使用することをお勧めします。   
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、これにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、TDE で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE = 65536` (64 KB) を使用する場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、これにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、TDE で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE = 65536` (64 KB) を使用する場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
 
 > [!NOTE]  
 > 次のように、既定の `MAXTRANSFERSIZE` が 64 K より大きくなる場合もあります。
@@ -1003,7 +1003,7 @@ TO URL
 バックアップ操作に使用する URL を指定します。 URL の形式は、Microsoft Azure ストレージ サービスへのバックアップを作成するために使用されます。 
 
 > [!IMPORTANT]  
-> URL へのバックアップ時に複数のデバイスにバックアップするには、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
+> URL へのバックアップ時に複数のデバイスにバックアップするには、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
   
 *n*  
 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。  
@@ -1068,7 +1068,7 @@ BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 バッファーで使用される領域の合計は、*buffercount/maxtransfersize* で決定されます。  
   
 > [!NOTE]  
-> `BUFFERCOUNT` オプションの使用に関する重要な情報については、ブログ「[Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)」 (不適切な BufferCount データ転送オプションによって OOM の状態になる可能性がある) を参照してください。  
+> `BUFFERCOUNT` オプションの使用に関する重要な情報については、ブログ「[Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)」 (不適切な BufferCount データ転送オプションによって OOM の状態になる可能性がある) を参照してください。  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。  
 
@@ -1274,7 +1274,7 @@ master データベースは差分バックアップできません。 master �
 - [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
 - [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
 - [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
-## <a name="performance"></a>[パフォーマンス]  
+## <a name="performance"></a>パフォーマンス  
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、バックアップを実行するために、最初にメタデータをバックアップし、それから計算ノードに保存されているデータベース データの並列バックアップを実行します。 データは各計算ノードから直接、バックアップ ディレクトリにコピーされます。 計算ノードからバックアップ ディレクトリにデータを最も効率的に移動するために、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、同時にデータをコピーする計算ノードの数が制御されます。  
   
 ## <a name="locking"></a>ロック  

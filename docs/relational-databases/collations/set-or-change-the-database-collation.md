@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46b9a1a8be87c54858c760f4b53d30a83799ec84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62ac97c76f3b08a7dc13258fe2d45e88c9f5500a
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767080"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571331"
 ---
 # <a name="set-or-change-the-database-collation"></a>データベースの照合順序の設定または変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベースの照合順序を設定および変更する方法を説明します。 照合順序を指定しない場合、サーバーの照合順序が使用されます。  
  
 > [!NOTE]
-> Azure SQL Database の作成後は照合順序を変更することができません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、照合順序を変更することはできません。
 
  **このトピックの内容**  
   
@@ -44,13 +44,15 @@ ms.locfileid: "47767080"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
 -   Windows Unicode 専用の照合順序は、COLLATE 句で、列レベルと式レベルのデータの **nchar**、 **nvarchar**、 **ntext** の各データ型に対して照合順序を適用する場合にのみ使用できます。 データベースまたはサーバー インスタンスの照合順序を変更するために、COLLATE 句で使用することはできません。  
   
 -   指定した照合順序、または参照先のオブジェクトで使用される照合順序で、Windows でサポートされていないコード ページが使用されていると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] でエラーが表示されます。  
+
+-   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、照合順序を変更することはできません。
   
 ###  <a name="Recommendations"></a> 推奨事項  
   

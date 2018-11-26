@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f23ea32acdc0384bf0395f6cdd54913e33a0e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614780"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813685"
 ---
 # <a name="html-device-information-settings"></a>HTML デバイス情報設定
 次の表は、HTML 形式で表示するデバイス情報設定を示しています。  
@@ -44,7 +44,7 @@ ms.locfileid: "47614780"
 |**ReplacementRoot(\*)**|ReportViewer コントロールの外部に表示する場合、レポートのすべてのドリルスルー、トグル、およびブックマークのリンクの先頭に追加する文字列。 たとえば、ユーザーのクリックをカスタム ページにリダイレクトするために使用されます。|  
 |**ResourceStreamRoot(\*)**|切り替えや並べ替え用の画像など、すべての画像リソースの URL の先頭に追加する文字列。|  
 |**セクション**|表示するレポートのページ番号。 **0** の値は、レポートのすべてのセクションが表示されることを示します。 既定値は **1**です。|  
-|**StreamRoot (\*)**|レポート サーバーが返す HTML レポートで IMG 要素の **src** 属性の値の前に付けるパス。 既定では、レポート サーバーがパスを提供します。 この設定を使用して、レポートの画像のルート パスを指定できます (たとえば、**http://\<サーバー名>/resources/companyimages**)。|  
+|**StreamRoot (\*)**|レポート サーバーが返す HTML レポートで IMG 要素の **src** 属性の値の前に付けるパス。 既定では、レポート サーバーがパスを提供します。 この設定を使用して、レポートの画像のルート パスを指定できます (たとえば、**https://\<サーバー名>/resources/companyimages**)。|  
 |**StyleStream**|スタイルとスクリプトがドキュメント内ではなく、異なるストリームとして作成されるかどうかを示します。 既定値は **false**です。|  
 |**[ツール バー]**|ツール バーを表示するか非表示にするかを示します。 このパラメーターの既定値は **true**です。 このパラメーターの値が **false**である場合は、残りのオプション (ドキュメント マップを除く) すべてが無視されます。 このパラメーターを省略すると、サポートされている表示形式でツール バーが自動的に表示されます。<br /><br /> URL アクセスを使用してレポートを表示すると、レポート ビューアー ツール バーが表示されます。 ツール バーは SOAP API によっては表示されません。 しかし、 **Toolbar** デバイス情報設定は、SOAP の **Render** メソッドを使用したときにレポートの表示に反映されます。 SOAP を使用して HTML を表示するときにこのパラメーターの値が **true** である場合、レポートの最初のセクションのみが表示されます。 値が **false**である場合、HTML レポート全体が単一の HTML ページとして表示されます。|  
 |**UserAgent**|要求元ブラウザーの **user-agent** 文字列。HTTP 要求に含まれています。|  

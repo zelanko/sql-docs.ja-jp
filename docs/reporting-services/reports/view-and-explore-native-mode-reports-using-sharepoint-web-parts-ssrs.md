@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cef5578bc23c7ac49dceedaac6dfb18049600ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032141"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813416"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -140,7 +140,7 @@ ms.locfileid: "50032141"
   
 6.  ページが編集モードのときに、レポート ビューアー Web パーツで **[Web パーツの編集]** をクリックします。  
   
-7.  **[レポート マネージャー URL]** に、アクセス対象のネイティブ モードのレポート サーバーに関連付けられているレポート マネージャー インスタンスの URL を入力します。 レポート マネージャー URL の既定の構文は、**http://\<servername>/reports** です。  
+7.  **[レポート マネージャー URL]** に、アクセス対象のネイティブ モードのレポート サーバーに関連付けられているレポート マネージャー インスタンスの URL を入力します。 レポート マネージャー URL の既定の構文は、**https://\<サーバー名>/reports** です。  
   
 8.  **[レポート パス]** で、スラッシュ、フォルダーのパス、レポート名の順に指定します。 サーバー名やレポート マネージャーの仮想ディレクトリは **含めないでください** 。 たとえば、Adventure Works フォルダーにある Company Sales レポートを開くには、「 **/Adventure Works/Company Sales**」と指定します。 Products レポートがレポート サーバーのルート フォルダーの **/Products**にある別の例を次に示します。  
   

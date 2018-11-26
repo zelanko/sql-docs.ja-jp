@@ -15,21 +15,21 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0eca5b1b66d296ccee49377d436b3be4c66a8cd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f309ad8d7842b678fa47ed5786023b0bb042b63
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719280"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703155"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>リンク属性を作成する (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でユーザーに属性値としてハイパーリンク (http://www.contoso.com など) を入力させる場合、リンク属性を作成します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でユーザーに属性値としてハイパーリンク (https://www.contoso.com など) を入力させる場合、リンク属性を作成します。  
   
 > [!NOTE]  
->  ユーザーがリンク属性の値を入力するとき、文字列は **http://** で始まる必要があり、そうでないとエラーが表示されます。  
+>  ユーザーがリンク属性の値を入力するとき、文字列は **https://** で始まる必要があり、そうでないとエラーが表示されます。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
@@ -100,7 +100,7 @@ ms.locfileid: "47719280"
 ## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
  [属性名とデータ型を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [ファイル属性を作成する (マスター データ サービス)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

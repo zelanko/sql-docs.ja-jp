@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 41d256aa69778804f637b2e380383d29552efc98
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252139"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571471"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -143,6 +143,9 @@ MODIFY NAME **=***new_database_name*
   
 COLLATE *collation_name*  
 データベースの照合順序を指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。  
+
+> [!NOTE]
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、照合順序を変更することはできません。
   
 既定の照合順序以外でデータベースを作成する場合、データベース内のデータは常に、指定された照合順序を優先します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、包含データベースを作成する場合、内部カタログの情報は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の照合順序、**Latin1_General_100_CI_AS_WS_KS_SC** を使用して維持されます。  
   
@@ -766,7 +769,7 @@ ALTER DATABASE WideWorldImporters
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL データ ウェアハウス
+## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
 
 ## <a name="overview"></a>概要
 
@@ -968,7 +971,7 @@ REPLICATED_SIZE、DISTRIBUTED_SIZE、LOG_SIZE は、データベースの現在�
 ## <a name="locking-behavior"></a>ロック動作  
 DATABASE オブジェクトを共有ロックします。 別のユーザーが読み取りまたは書き込みをしているデータベースを変更することはできません。 データベースで [USE](../language-elements/use-transact-sql.md) ステートメントを発行しているセッションもこれに該当します。  
   
-## <a name="performance"></a>[パフォーマンス]  
+## <a name="performance"></a>パフォーマンス  
 データベース内の実際のデータ サイズとディスクの断片化の量によっては、データベースの縮小に多大な時間とシステム リソースが必要となります。 たとえば、データベースの縮小に数時間かかることがあります。  
   
 ## <a name="determining-encryption-progress"></a>暗号化の進捗状況を見る  

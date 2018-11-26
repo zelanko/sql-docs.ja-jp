@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f5145db044f618727144dba0eae86ac4643f0a2d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461087"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704140"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -144,7 +144,7 @@ ASYMMETRIC KEY *asym_key_name*
 >  CHECK_EXPIRATION および CHECK_POLICY は、Windows Server 2003 以降でのみ適用されます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。 
   
 - 証明書または非対称キーから作成されたログインはコード署名用にのみ使用されます。 SQL Server への接続には使用できません。 証明書または非対称キーからログインを作成できるのは、その証明書または非対称キーが master に存在している場合のみです。 
-- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](http://support.microsoft.com/kb/918992)」を参照してください。
+- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](https://support.microsoft.com/kb/918992)」を参照してください。
 - ログインを作成すると、自動的に新しいログインが有効になり、ログインにサーバー レベルの **CONNECT SQL** 権限が与えられます。 
 - アクセスを許可するにはサーバーの[認証モード](../../relational-databases/security/choose-an-authentication-mode.md)がログインの種類に一致する必要があります。
 - 権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。
@@ -294,7 +294,7 @@ SID = *sid*
   
 ## <a name="remarks"></a>Remarks  
 - パスワードでは大文字と小文字が区別されます。
-- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](http://support.microsoft.com/kb/918992)」を参照してください。
+- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](https://support.microsoft.com/kb/918992)」を参照してください。
 - ログインを作成すると、自動的に新しいログインが有効になり、ログインにサーバー レベルの **CONNECT SQL** 権限が与えられます。 
 - アクセスを許可するにはサーバーの[認証モード](../../relational-databases/security/choose-an-authentication-mode.md)がログインの種類に一致する必要があります。
     - 権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。
@@ -412,7 +412,7 @@ SID = *sid*
   
 ## <a name="remarks"></a>Remarks  
 - パスワードでは大文字と小文字が区別されます。
-- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](http://support.microsoft.com/kb/918992)」を参照してください。
+- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](https://support.microsoft.com/kb/918992)」を参照してください。
 - ログインを作成すると、自動的に新しいログインが有効になり、ログインにサーバー レベルの **CONNECT SQL** 権限が与えられます。 
 - アクセスを許可するにはサーバーの[認証モード](../../relational-databases/security/choose-an-authentication-mode.md)がログインの種類に一致する必要があります。
     - 権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。
@@ -530,7 +530,7 @@ PASSWORD **='** password**'*
   
 ## <a name="remarks"></a>Remarks  
 - パスワードでは大文字と小文字が区別されます。
-- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](http://support.microsoft.com/kb/918992)」を参照してください。
+- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](https://support.microsoft.com/kb/918992)」を参照してください。
 - ログインを作成すると、自動的に新しいログインが有効になり、ログインにサーバー レベルの **CONNECT SQL** 権限が与えられます。 
 - アクセスを許可するにはサーバーの[認証モード](../../relational-databases/security/choose-an-authentication-mode.md)がログインの種類に一致する必要があります。
     - 権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。
@@ -667,7 +667,7 @@ WINDOWS
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION および CHECK_POLICY は、Windows Server 2003 以降でのみ適用されます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。 
   
-- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](http://support.microsoft.com/kb/918992)」を参照してください。
+- スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](https://support.microsoft.com/kb/918992)」を参照してください。
 - ログインを作成すると、自動的に新しいログインが有効になり、ログインにサーバー レベルの **CONNECT SQL** 権限が与えられます。 
 - 権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。
 

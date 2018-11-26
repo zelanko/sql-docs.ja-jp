@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d28e2a460340985d771924d1c8c88559dfd08cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88db44f4ee7acd3ae5ca43b73b79ee397514ef52
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759766"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812605"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting メソッド - SetSecureConnectionLevel
   レポート サーバーのセキュリティで保護された接続レベルを設定します。  
@@ -50,7 +50,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="remarks"></a>Remarks  
  このメソッドを呼び出すと、レポート サーバーの SecureConnectionLevel プロパティ値が指定した値に設定されます。 値 0 は、SSL がオフであることを示します。 1 以上の値は、SSL がオンであることを示します。  
   
--   値を設定すると、レポート サーバー構成ファイルの SecureConnectionLevel 要素が変更されます。指定した **Level** が 1 以上の場合は、構成ファイルの *URLRoot* 要素が "https://" を使用するように設定されます。指定した *Level* が 0 の場合は、"http://" を使用するように設定されます。  
+-   値を設定すると、レポート サーバー構成ファイルの SecureConnectionLevel 要素が変更されます。指定した **Level** が 1 以上の場合は、構成ファイルの *URLRoot* 要素が "https://" を使用するように設定されます。指定した *Level* が 0 の場合は、"https://" を使用するように設定されます。  
   
  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で、SecureConnectionLevel がオン/オフのスイッチとして使用されます。既定値は 0 です。 SetSecureConnectionLevel メソッド API に渡された値が 1 以上である場合、SSL はオンであると見なされ、それに従って rsreportserver.config ファイルで構成プロパティ SecureConnectionLevel が設定されます。 値 2 と 3 は、旧バージョンとの互換性のために許可されています。  
   

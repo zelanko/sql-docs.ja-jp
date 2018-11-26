@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29172f4a1abca10e5b2968b77cfdd62ee44810e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827110"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640479"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>レッスン 2-1 - レッスン 1 のパッケージのコピー
 ここでは、レッスン 1 で作成した Lesson 1.dtsx パッケージのコピーを作成します。 レッスン 1 を終了していない場合は、チュートリアルに含まれている、レッスン 1 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 2 の実習では、このパッケージの新しいコピーを使用します。  
@@ -39,7 +39,7 @@ ms.locfileid: "47827110"
   
 7.  [プロパティ] ウィンドウで、 **[Name]** プロパティを「 **Lesson 2**」に変更します。  
   
-8.  **ID** プロパティのボックスをクリックし、ドロップダウン矢印をクリックし、 **<Generate New ID>** をクリックします。  
+8.  **ID** プロパティのボックスをクリックし、ドロップダウン矢印をクリックし、[**\<新しい ID の生成\>**] をクリックします。  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>レッスン 1 を完了した状態のパッケージを追加するには  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47827110"
   
     このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   
-    1.  「[Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   

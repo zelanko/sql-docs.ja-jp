@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021176"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813765"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server モバイル レポート: エンド ツー エンドのチュートリアル
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web ポータル上の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] で任意の画面サイズのモバイル レポートを作成し、Power BI モバイル アプリで表示するチュートリアル。
@@ -23,7 +23,7 @@ ms.locfileid: "50021176"
 この記事では、次について説明します。   
   
 - サンプル データ ソースとして AdventureWorks データベースを使用して、 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータル上で共有データ ソースとデータセットを作成する。  
-- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+-  [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - モバイル レポートを [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルにパブリッシュする。  
 - Power BI モバイル アプリでモバイル レポートを表示する。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "50021176"
 *  または、[Microsoft SQL Server サンプル](../../sample/microsoft-sql-server-samples.md) ページから使用可能な、World Wide Importers サンプル データベース。
 * 結果を表示するには: 
   *   [Power BI サービスにサインアップする](https://go.microsoft.com/fwlink/?LinkID=513879) および
-  *  iOS、Android フォン、Windows 10 デバイスなどのモバイル デバイスに[Power BI モバイル アプリをダウンロードする](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/)   
+  *  iOS、Android フォン、Windows 10 デバイスなどのモバイル デバイスに[Power BI モバイル アプリをダウンロードする](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)   
 
   
 ## <a name="create-a-shared-data-source"></a>共有データ ソースの作成  
@@ -76,7 +76,7 @@ Reporting Services でサポートされるデータ ソースのいずれもか
    
 4. [名前] フィールドに、この形式で、データ ソースを保存したサーバーの名前を入力します。   
    
-   名前: http://*localhost*/ReportServer  
+   名前: https://*localhost*/ReportServer  
    アイテムの種類: データ ソース (*.rsds)  
    
 5. **[開く]** をクリックし、そのサーバー上に作成したデータ ソースに移動します。  
@@ -260,7 +260,7 @@ Reporting Services モバイル レポートを作成するには、 [SQL Server
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポートを表示するには、最初に次の作業が必要になります。
 
 *  アカウントをまだ持っていない場合は、[Power BI サービスにサインアップする](https://go.microsoft.com/fwlink/?LinkID=513879)。
-*  モバイル デバイスに[Power BI モバイル アプリをダウンロードする](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 。  
+*  モバイル デバイスに[Power BI モバイル アプリをダウンロードする](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 。  
 
 ### <a name="view-your-mobile-report"></a>モバイル レポートを表示する
   

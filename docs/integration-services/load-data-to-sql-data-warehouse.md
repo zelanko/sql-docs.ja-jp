@@ -12,12 +12,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 3d3b048b5aa0c2a2cfd0eaf89e03d49f37152497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b229fb722c1a6de85e4c26179c776ba605909441
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610940"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269935"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure SQL Data Warehouse にデータを読み込む
 
@@ -96,7 +96,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 1. Azure Blob Upload Task を使用して、Azure Blob Storage でデータのステージングを行う。 Azure BLOB アップロード タスクを取得するには、[Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] をダウンロードしてください。
 
-2. 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む Polybase スクリプトを起動します。 (SSIS を使用せずに) Azure Blob Storage から SQL Data Warehouse にデータを読み込む例については、「[チュートリアル: Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)」を参照してください。
+2. 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む PolyBase スクリプトを起動します。 (SSIS を使用せずに) Azure Blob Storage から SQL Data Warehouse にデータを読み込む例については、「[チュートリアル: Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)」を参照してください。
 
 ## <a name="option-2---use-a-source-and-destination"></a>オプション 2 - ソースと変換先を使用する
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0303b080271ec85753d0f0f94eee970b3d7308a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 3c3f3bb02022fe4bbb8090c2160fa3cf75cfefa7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027511"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814055"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブまたは SharePoint の 2 つのモードのうちのいずれかのモードでインストールできます。 インストールの確認に必要な手順は、レポート サーバーのモードによって変わります。  
@@ -81,7 +81,7 @@ ms.locfileid: "50027511"
   
 2.  Services コンソール アプリケーションを開き、レポート サーバー サービスが実行されていることを確認します。 レポート サーバー サービスの状態を表示するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をポイントして、 **[管理ツール]** をダブルクリックします。次に、 **[サービス]** をダブルクリックします。 サービスの一覧が表示されたら、 **[Report Server (MSSQLSERVER)]** までスクロールします。 状態が **[開始]** になっていることを確認してください。  
   
-3.  ブラウザーを開き、アドレス バーにレポート サーバーの URL を入力します。 アドレスは、セットアップ時にレポート サーバーに指定したサーバー名と仮想ディレクトリ名で構成されます。 既定では、レポート サーバーの仮想ディレクトリ名は **ReportServer**です。 http://*\<コンピューター名>*/ReportServer*\<_インスタンス名>* という URL を使用して、レポート サーバーのインストール状態を確認できます。 レポート サーバーを名前付きインスタンスとしてインストールした場合、URL は異なります。 URL 形式の詳細については、「[レポート サーバー URL の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください。 Windows Vista または Windows Server 2008 上のローカル管理者である場合は、「[ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
+3.  ブラウザーを開き、アドレス バーにレポート サーバーの URL を入力します。 アドレスは、セットアップ時にレポート サーバーに指定したサーバー名と仮想ディレクトリ名で構成されます。 既定では、レポート サーバーの仮想ディレクトリ名は **ReportServer**です。 https://*\<コンピューター名>*/ReportServer*\<_インスタンス名>* という URL を使用して、レポート サーバーのインストール状態を確認できます。 レポート サーバーを名前付きインスタンスとしてインストールした場合、URL は異なります。 URL 形式の詳細については、「[レポート サーバー URL の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください。 Windows Vista または Windows Server 2008 上のローカル管理者である場合は、「[ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
   
 4.  レポートを実行して、レポート サーバーの動作をテストします。 この手順では、チュートリアルからサンプル レポートを作成できます。 詳細については、「[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "50027511"
   
 1.  ブラウザーを開き、アドレス バーに Web ポータルの URL を入力します。 このアドレスは、セットアップ時または Reporting Services 構成ツールの [Web ポータル URL] ページで [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に対して指定したサーバー名と仮想ディレクトリ名で構成されます。 既定では、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の仮想ディレクトリは **Reports**です。 次の URL を使用して、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] のインストール状態を確認できます。  
   
-     http://*\<コンピューター名>*/Reports*\<_インスタンス名>*  
+     https://*\<コンピューター名>*/Reports*\<_インスタンス名>*。  
   
 2.  レポート サーバー データベースに定義が戻されるかどうかをテストするため、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] を使用して新しいフォルダーを作成するか、ファイルをアップロードします。 操作が成功した場合、接続は正しく機能しています。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69be1793c824014abc7262ebdb7d231ce4bb66af
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 991eefb50ec949098e132f17f2c18691f4822987
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020566"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813511"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール
 
@@ -41,11 +41,11 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
   
 |例|要求|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|`http://123.234.345.456/reports` または (ドメイン名サービスが、IP アドレスを対応するホスト名に解決できる場合) `http://\<computername>/reports` に送信されたすべての要求が受信されます。|  
-|`http://+:80/reports`|URL に "reports" という仮想ディレクトリ名が含まれている限り、任意の IP アドレス (またはそのコンピューターの有効なホスト名) に送信されたすべての要求が受信されます。|  
-|`http://123.234.345.456:80`|`http://123.234.345.456` または (ドメイン名サービスが、IP アドレスを対応するホスト名に解決できる場合) `http://\<computername>` を指定するすべての要求が受信されます。|  
-|`http://+:80`|**[すべて割り当て]** にマップされたすべてのアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
-|`http://*:80`|**[すべて未割り当て]** にマップされたアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
+|`https://123.234.345.456:80/reports`|`https://123.234.345.456/reports` または (ドメイン名サービスが、IP アドレスを対応するホスト名に解決できる場合) `https://\<computername>/reports` に送信されたすべての要求が受信されます。|  
+|`https://+:80/reports`|URL に "reports" という仮想ディレクトリ名が含まれている限り、任意の IP アドレス (またはそのコンピューターの有効なホスト名) に送信されたすべての要求が受信されます。|  
+|`https://123.234.345.456:80`|`https://123.234.345.456` または (ドメイン名サービスが、IP アドレスを対応するホスト名に解決できる場合) `https://\<computername>` を指定するすべての要求が受信されます。|  
+|`https://+:80`|**[すべて割り当て]** にマップされたすべてのアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
+|`https://*:80`|**[すべて未割り当て]** にマップされたアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
   
  ポートが競合している場合は、「System.IO.FileLoadException: ファイルが別のプロセスで使用されているため、プロセスはファイルにアクセスできません (HRESULT からの例外: 0x80070020)」というエラー メッセージが表示されます。  
   
@@ -54,9 +54,9 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
   
 |アプリケーション|URL 予約|[説明]|受信する要求|  
 |-----------------|---------------------|-----------------|---------------------|  
-|レポート サーバー|`http://+:80/ReportServer`|厳密なワイルドカード、ポート 80、レポート サーバーの仮想ディレクトリ|レポート サーバーの仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 http://\<コンピューター名>/reportserver に対するすべての要求が、レポート サーバー Web サービスによって受信されます。|  
-|Web ポータル|`http://+:80/Reports`|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 http://\<コンピューター名>/reports に対するすべての要求が [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。|  
-|IIS|`http://*:80/`|弱いワイルドカード、ポート 80|まだ他のアプリケーションによって受信されていない残りの要求をすべてポート 80 で受信します。|  
+|レポート サーバー|`https://+:80/ReportServer`|厳密なワイルドカード、ポート 80、レポート サーバーの仮想ディレクトリ|レポート サーバーの仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<コンピューター名>/reportserver に対するすべての要求が、レポート サーバー Web サービスによって受信されます。|  
+|Web ポータル|`https://+:80/Reports`|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<コンピューター名>/reports に対するすべての要求が [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。|  
+|IIS|`https://*:80/`|弱いワイルドカード、ポート 80|まだ他のアプリケーションによって受信されていない残りの要求をすべてポート 80 で受信します。|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>IIS 8.0、8.5 での SQL Server Reporting Services のサイド バイ サイド配置
 
@@ -66,7 +66,7 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
   
 -   レポート サーバー インスタンスを既定の構成でインストール。URL 予約でポート 80 を指定し、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] アプリケーションで仮想ディレクトリ名 "Reports" を使用。  
   
- この構成では、 http://\<コンピューター名>:80/reports に送信された要求は、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。 レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
+ この構成では、 https://\<コンピューター名>:80/reports に送信された要求は、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。 レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新旧のバージョンをサイド バイ サイド配置で実行した場合、前述したルーティングの問題が発生する可能性があります。 これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのバージョンでは、レポート サーバーと [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] アプリケーションの仮想ディレクトリ名として "ReportServer" と "Reports" が使用されているため、IIS には "reports" と "reportserver" という仮想ディレクトリが高い確率で存在していると考えられるためです。  
   

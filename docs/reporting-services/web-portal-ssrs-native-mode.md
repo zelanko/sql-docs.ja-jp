@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021896"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814335"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Web ポータル (SSRS ネイティブ モード)
 
@@ -75,9 +75,9 @@ Web ポータルは Web アプリケーションであり、ブラウザー ウ�
 
 2. Web ブラウザーのアドレス バーに、Web ポータルの URL を入力します。
 
-    既定の URL は *http://[ComputerName]/reports*です。
+    既定の URL は *https://[ComputerName]/reports*です。
 
-    レポート サーバーは、特定のポートを使用するように構成できます。 たとえば、 *http://[ComputerName]:80/repまたはts* または *http://[ComputerName]:8080/repまたはts*。
+    レポート サーバーは、特定のポートを使用するように構成できます。 たとえば、*https://[ComputerName]:80/reports* または *https://[ComputerName]:8080/reports*。
 
 ## <a name="grouping-by-categories"></a>カテゴリ別のグループ化
 

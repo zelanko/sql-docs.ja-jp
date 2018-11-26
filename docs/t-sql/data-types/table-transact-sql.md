@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 7e4844a9bf0e265f52db634400383452cc99a5d9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100463"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703840"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "49100463"
 後で処理できるように結果セットを格納するために使用できる特別なデータ型です。 **テーブル** は主に、テーブル値関数の結果セットとして返される行のセットの一時的な保存に使用します。 型には、関数および変数を宣言することができます **テーブル**です。 **テーブル** 変数は、関数、ストアド プロシージャ、およびバッチで使用できます。 **table** 型の変数を宣言するには、[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)を使用します。
   
 
-**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -108,7 +108,7 @@ CHECK 制約、既定値、および計算列、 **テーブル** 型の宣言�
   
 間における代入操作 **テーブル** 変数がサポートされていません。
   
-**テーブル** 、変数がスコープに制限されているし、永続的なデータベースの一部ではない、トランザクションのロールバックは影響ありません。
+ **テーブル** 、変数がスコープに制限されているし、永続的なデータベースの一部ではない、トランザクションのロールバックは影響ありません。
   
 table 変数は、作成後に変更できません。
 
@@ -116,7 +116,7 @@ table 変数は、作成後に変更できません。
 **テーブル変数の遅延コンパイル**を使用すると、テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のプランのコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。 この正確な行数の情報は、ダウンストリーム プラン操作を最適化するために使用されます。
 
 > [!NOTE]
-> テーブル変数の遅延コンパイルは、Azure SQL Database におけるパブリック プレビューの機能です。  
+> テーブル変数の遅延コンパイルは、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] でのパブリック プレビュー機能です。
 
 テーブル変数の遅延コンパイルを使用すると、テーブル変数を参照するステートメントのコンパイルは、そのステートメントが最初に実際に実行されるまで遅延されます。 この遅延コンパイルの動作は、一時テーブルの動作と同じです。この変更によって、元の 1 行の推定値ではなく、実際のカーディナリティを使用できるようになります。 
 
@@ -231,7 +231,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## <a name="see-also"></a>参照
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

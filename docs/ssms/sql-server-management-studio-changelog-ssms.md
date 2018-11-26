@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,19 +11,144 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270275"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703990"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-この記事では、SSMS の現在と以前のバージョンの更新、機能強化、およびバグの修正に関する詳細を提供します。 [SSMS の以前のバージョン](#previous-ssms-releases)は以下でダウンロードできます。
+この記事では、SSMS の現在と以前のバージョンの更新、機能強化、およびバグの修正に関する詳細を提供します。 [SSMS の以前のバージョン](#previous-ssms-releases)をダウンロードします。
+
+## <a name="ssms-180-preview-5download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (プレビュー 5)](download-sql-server-management-studio-ssms.md)
+
+ビルド番号: 15.0.18068.0<br>
+リリース日: 2018 年 11 月 15 日
+
+プレビュー 5 は、SSMS 18.0 の最初のパブリック プレビューです。 最新の一般公開 (GA) バージョンの SSMS については、[SSMS 17.9 をダウンロードしてインストールしてください](#ssms-179-latest-ga-release)。
+
+### <a name="whats-new"></a>新機能
+
+**SSMS 全般**
+
+- [SQL Server エラー ログの構成] の下に "エラー ログ ファイルの最大サイズ" を公開しました。 詳細については、「[Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035/suggestions/33624115)」 (SQL Server エラー ログの最大サイズの設定) を参照してください。  
+
+オブジェクト エクスプローラー:
+
+- データベースの名前を変更するときに、すべてのスキーマ オブジェクトに対して確認を要求するためのロジックが拡張されました (この設定は構成可能で、これは無効になっています)。
+
+オブジェクト スクリプト作成:
+
+- オブジェクト スクリプト作成時に、'CREATE OR ALTER' の新しいメニュー項目が追加されました。
+
+データベース互換性レベルのアップグレード:
+
+-  <Database name> > **[タスク]** > **[データベースのアップグレード]** の下に新しいオプションが追加されました。 このオプションは、ユーザーに次のプロセスをガイドする、新しい*クエリ調整アシスタント (QTA)* を起動します。
+   - データベースの互換性レベルをアップグレードする前にパフォーマンスのベースラインを収集する。  
+   - 目的のデータベース互換性レベルにアップグレードする。
+   - 同じワークロードを介してパフォーマンス データの 2 番目の受け渡しを収集する。
+   - ワークロードの低下を検出し、ワークロードのパフォーマンスを改善するためのテスト済みのレコメンデーションを提供する。
+
+この機能は、「[新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade)」に記載されているデータベースのアップグレード プロセスと同じですが、最後の手順 (レコメンデーションを生成するために QTA が以前の正常起動時の状態に依存しない) が異なります。
+
+クエリ ストア:
+
+- グラフの Y 軸に表示される数字に桁区切り記号を追加することで、一部のレポート (全体的なリソースの消費) の使いやすさを改善しました。
+- 新しいクエリ待機統計レポートが追加されました。
+
+脆弱性評価:
+
+- Azure SQL Data Warehouse で脆弱性評価タスク メニューが有効化されました。
+
+データ マスク:
+
+- 静的データ マスクが追加されました。 静的データ マスクは、ユーザーが自身の SQL データベースをコピーして、コピー上の機密データをマスクできるようにするデータ保護ツールです。 この機能は、開発/テスト チームや分析チームなどの実稼働データベースを使用していないユーザーと実稼働データベースを共有するのに役立ちます。 詳細については、「[Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/)」 (Azure SQL Database および SQL Server 用の静的データ マスク) を参照してください。
+
+SMO:
+
+- 使用中の SQL のバージョンのサービス レベル (CU12、RTM など) にマップする、新しい ProductUpdateLevel プロパティをサーバー オブジェクト上に公開しました。
+- "lastgoodcheckdbtime" データベース プロパティにマップする、新しい LastGoodCheckDbTime プロパティをデータベース オブジェクト上に公開しました。 これらのプロパティが使用できない場合、既定値の 1/1/1900 12:00:00 AM が返されます。
+
+Managed Instance のサポート:
+
+- 論理レプリケーションのサポートが追加されました。
+
+Azure Data Studio との統合:
+
+- オブジェクト エクスプローラーに **[Azure Data Studio の起動]** メニュー項目が追加されました。
+
+SSIS:
+
+- 顧客が Azure Government クラウド内にある Azure-SSIS IR で SSIS パッケージをスケジュールできるようにするためのサポートが追加されました。
+
+### <a name="bug-fixes"></a>バグの修正
+
+クラッシュ / ハング:
+
+- 中央管理サーバーと Azure SQL Database のサーバーを使用しようとしたときの、SSMS のクラッシュを修正しました。 詳細については、[中央管理サーバーを使用するとクラッシュする](https://feedback.azure.com/forums/908035/suggestions/33374884)を参照してください。  
+- IsFullTextEnabled プロパティを取得する方法を最適化することによって、オブジェクト エクスプローラーでのハングを修正しました。
+- データベース プロパティを取得する不要なクエリの作成を回避することで、'データベース コピー ウィザード' でのハングを修正しました。
+
+SSMS のオプション:
+
+- 古いバージョンの SSMS にあった CTRL + D のショートカットを復元しました。 詳細については、[SSMS での ResultsToGrid の CTRL-D ショートカットの復元](https://feedback.azure.com/forums/908035/suggestions/35544754)を参照してください。
+
+オブジェクト エクスプローラー:
+
+- [新しいジョブ スケジュール] ダイアログが高 DPI モニターで正しくレンダリングされない問題を修正しました。
+- オブジェクト エクスプローラーでデータベースのサイズ ("サイズ (MB)") の表示方法を修正/改善しました。 小数点以下を 2 桁のみにし、桁区切り記号を使用して書式設定しました。 詳細については、[サイズ (MB) プロパティの小数点以下の桁数が多すぎる](https://feedback.azure.com/forums/908035/suggestions/34379308)のトピックを参照してください。
+- '空間インデックス' の作成が 'このアクションを完了するには、プロパティ PartitionScheme を設定してください' のようなエラーで失敗する原因となっていた問題を修正しました。
+- オブジェクト エクスプローラーのパフォーマンスを若干改善して、可能な場合には、余分なクエリの発行を回避するようにしました。
+
+Analysis Services (AS):
+
+- DAX の解析でファイルが見つからないことを示す例外がスローされる問題を修正しました。
+- [スタート] メニューに "配置ウィザード" に戻るショートカットを追加しました。
+
+Integration Services (IS):
+
+- SQL Server 2019 と SSMS 18.0 が同じコンピューターにインストールされている場合、SQL Server への接続に配置ウィザードが失敗する、サイド バイ サイドの問題を修正しました。
+- メンテナンス プランの作成時に、メンテナンス プランのタスクを編集できない問題を修正しました。
+- 配置中のプロジェクトの名前が変更されると、配置ウィザードがハングする問題を修正しました。
+- Azure SSIS IR のスケジュール機能での環境設定を有効にしました。
 
 
-## <a name="ssms-180-preview-4download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (プレビュー 4)](download-sql-server-management-studio-ssms.md)
+HADR/可用性グループ:
+
+- 可用性グループのフェールオーバー ウィザードでロールが常に "解決中" と表示される問題を修正しました。
+- "AG ダッシュ ボード" で SSMS が切り捨ての警告を示していた問題を修正しました。
+
+DB のバックアップ/復元/アタッチ/デタッチ:
+
+- "データベースのアタッチ" ウィザードで名前が変更されたセカンダリ ファイルが表示されない問題を修正しました。 現在は、ファイルが表示され、そのファイルについてのコメント ("見つかりません" など) が追加されています。 詳細については、[データベースのアタッチでセカンダリ ファイルが表示されない](https://feedback.azure.com/forums/908035/suggestions/32897434)を参照してください。
+
+
+Managed Instance のサポート:
+
+- (SSMS エクスプローラーでの) AAD ログインのサポートの強化。
+- SMO ファイル グループ オブジェクトのスクリプト作成の改善。
+- 資格情報と監査のための UI の改善。
+
+
+DAC インポート ウィザード:
+
+- AAD を使用して接続すると、DAC インポート ウィザードが動作しない問題を修正しました。
+
+XEvent ビューアー:
+
+- *拡張イベントのツールバー オプション*を使用してイベントをグループ化しようとすると、XEvent Viewer がクラッシュする問題を修正しました。
+
+脆弱性評価:
+
+- スキャン結果が適切に読み込まれない問題を修正しました。
+
+
+
+
+## <a name="ssms-180-preview-4"></a>SSMS 18.0 (プレビュー 4)
 
 ビルド番号: 15.0.18040.0<br>
 リリース日: 2018 年 9 月 24 日
@@ -40,7 +165,7 @@ ms.locfileid: "51270275"
 
 SSMS 18.x は、新しい Visual Studio 2017 Isolated Shell に基づくようになりました。
 
-- つまり最新のシェルです (Visual Studio 2017 15.6.4 を選択しました)。 新しいシェルで、SSMS と Visual Studio の両方に行われたアクセシビリティに関するすべての修正のロックが解除されます。
+- この変更は最新のシェルを意味します (Visual Studio 2017 15.6.4 を選択しました)。 新しいシェルで、SSMS と Visual Studio の両方に行われたアクセシビリティに関するすべての修正のロックが解除されます。
 
 アクセシビリティの機能強化:
 
@@ -63,7 +188,7 @@ SSMS は SQL エンジンとコンポーネントを共有しなくなりまし�
 
 SSMS に NetFx 4.7.2 以降が必要になりました。
 
-- 最小要件を NetFx4.6.1 から NetFx4.7.2 にアップグレードしました。その結果、新しいフレームワークで公開されている新しい機能を利用できるようになりました。
+- 最小要件を NetFx 4.6.1 から NetFx 4.7.2 にアップグレードしました。この変更により、新しいフレームワークで公開されている新しい機能を利用できるようになりました。
 
 SSMS は Windows 8 ではサポートされていません。 Windows 10 / Windows Server 2016 にはバージョン 1607 (10.0.14393) 以降が必要になりました。
   
@@ -75,8 +200,8 @@ SSMS は PATH 環境変数に追加されません。
 
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] のサポート
 
-- これは、[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] を完全に*認識*している最初のリリースの SSMS です (compatLevel 150 など)。
-- [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] では "BATCH_STARTED_GROUP" と "BATCH_COMPLETED_GROUP" を、SSMS では SQL Database Managed Instance をサポートしています。
+- このリリースは、[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] を完全に*認識*している最初のリリースの SSMS です (compatLevel 150 など)。
+- [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] では "BATCH_STARTED_GROUP" と "BATCH_COMPLETED_GROUP" を、SSMS では Managed Instance をサポートしています。
 - GraphDB: Graph TC Sequence の showplan にフラグを追加します。
 - Always Encrypted: [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) のサポートが追加されました。
   - [接続] ダイアログで、ユーザーがエンクレーブのサポートを有効にして構成する [オプション] ボタンをクリックすると、新しい [Always Encrypted] タブが表示されるようになりました。
@@ -115,7 +240,7 @@ SSMS:
 
 SSMS / ShowPlan:
 
-- 使用できる場合、ShowPlan 演算子ノードに実際の経過時間、実際の行と推定の行が追加されました。 これで、実際のプランが、ライブ クエリの統計プランと一貫した外観になります。
+- 使用できる場合、ShowPlan 演算子ノードに実際の経過時間、実際の行と推定の行が追加されました。 この変更により、実際のプランが、ライブ クエリの統計プランと一貫した外観になります。
 - クエリが 4,000 文字を超える場合に、SQL エンジンによって ShowPlan が切り捨てられる可能性があることをユーザーに示すために、ShowPlan の [クエリの編集] ボタンをクリックしたときのツールヒントが変更され、コメントが追加されました。
 - "Materializer Operator (External Select)" を表示するロジックを追加しました。
 - "行ストアに対するバッチモード スキャン" 機能を使用しているクエリを簡単に識別できるように、新しい showplan 属性 BatchModeOnRowStoreUsed を追加しました。 クエリが行ストアでバッチモード スキャンを実行するたびに、新しい属性 (BatchModeOnRowStoreUsed="true") が StmtSimple 要素に追加されます。
@@ -171,7 +296,7 @@ SSMS エディター:
 - "SQL システム テーブル" の問題を修正しました。この問題で、既定の色を復元すると、既定の緑色ではなく、ライム グリーン色に変わり、白い背景 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906) では読みにくくなります。
 - AAD 認証を使用して Azure SQL DW に接続したときに IntelliSense が動作しない問題を修正しました。
 - ユーザーがマスター アクセス権を持たない場合の Azure の IntelliSense が修正されました。
-- ターゲット データベースの照合順序で大文字と小文字が区別されているときに破損した "一時テーブル" が作成されるコード スニペットを修正しました。
+- ターゲット データベースの照合順序で大文字と小文字が区別されているときに破損した "テンポラル テーブル" が作成されるコード スニペットを修正しました。
 
 オブジェクト エクスプローラー:
 
@@ -181,7 +306,7 @@ SSMS エディター:
 - [データ層アプリケーションのインポート] ウィザードが Azure Storage ツリーから起動できない問題を修正しました。
 - SSL チェックボックスの状態が保持されない [データベース メール構成] の問題を修正しました (https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)。
 - SSMS で is_auto_update_stats_async_on を使用してデータベースを復元しようとすると、既存の接続を閉じるオプションが淡色表示される問題を修正しました
-- OE のノードを右クリックしたときの問題を修正しました (例: "Tables"。**[フィルター] > [フィルターの設定]** に移動してテーブルをフィルター処理するなどの操作を実行したい場合、[フィルターの設定] フォームが、SSMS が現在アクティブではない画面に表示される可能性があります) (https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106)。
+- OE でノードを右クリックした場合の問題を修正しました (たとえば、"Tables" を右クリックして、**[フィルター] > [フィルターの設定]** に移動してテーブルをフィルター処理するなどの操作を実行したい場合、[フィルターの設定] フォームが、SSMS が現在アクティブではない画面に表示される可能性があります) (https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106)。
 - オブジェクトの名前を変更しようとすると、オブジェクト エクスプローラーで Del キーが機能しないという、長い間未解決の問題が修正されました (https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510)。
 - 既存のデータベース ファイルのプロパティを表示すると、新しいデータベース (https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024) の作成時に表示される [初期サイズ (MB)] ではなく [サイズ (MB)] 列にサイズが表示されます。
 - 現在のバージョンの SSMS ではこの種類のテーブルをサポートしていないため、[グラフ テーブル] の [デザイン] コンテキスト メニュー項目を無効にしました。
@@ -279,14 +404,14 @@ XEvent プロファイラー:
   - SQL Server Configuration Manager と Reporting Server Configuration Manager のどちらも SSMS セットアップに含まれなくなりました。
 
 - DMF の標準ポリシー
-  - SSMS でポリシーはインストールされなくなりました。 これらは Git に移動されます。 ユーザーは必要に応じて投稿し、ダウンロード/インストールすることができるようになります。
+  - SSMS でポリシーはインストールされなくなりました。 これらは Git に移動されます。 ユーザーは必要に応じてこれらを投稿し、ダウンロード/インストールすることができます。
 
 - SSMS コマンド ライン オプション -P が削除されました
   - セキュリティに関する懸案事項で、コマンド ラインでクリア テキストのパスワードを指定するオプションが削除されました。
 
 - [スクリプトの生成] | [Web サービスにパブリッシュ] が削除されました。 この (非推奨の) 機能は SSMS UI から削除されました。
 
-- オブジェクト エクスプローラーでノード [メンテナンス] | [レガシ] が削除されました。 [スクリプトの生成とパブリッシュ] | [Web サービスに公開] オプションは削除されました。 *本当に古い* "データベース メンテナンス プラン画" と "SQL メール" ノードにはアクセスできなくなりました。 新しい [データベース メール] と [メンテナンス プラン] ノードは、引き続き通常どおり動作します。
+- オブジェクト エクスプローラーでノード [メンテナンス] | [レガシ] が削除されました。 [スクリプトの生成とパブリッシュ] | [Web サービスに公開] オプションは削除されました。 *古い* "データベース メンテナンス プラン" と "SQL メール" ノードにはアクセスできなくなりました。 新しい [データベース メール] と [メンテナンス プラン] ノードは、引き続き通常どおり動作します。
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -313,7 +438,7 @@ SSIS
 リリース日: 2018 年 9 月 4 日
 
 > [!NOTE]
-> SSMS 17.x の英語以外のローカライズされたリリースでは、Windows 8、Windows 7、Windows Server 2012、Windows Server 2008 R2 にインストールする場合、[KB 2862966 セキュリティ更新プログラム パッケージ](https://support.microsoft.com/en-us/kb/2862966)が必要です。
+> SSMS 17.x の英語以外のローカライズされたリリースでは、Windows 8、Windows 7、Windows Server 2012、Windows Server 2008 R2 にインストールする場合、[KB 2862966 セキュリティ更新プログラム パッケージ](https://support.microsoft.com/kb/2862966)が必要です。
 
 [中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
@@ -338,12 +463,12 @@ Azure SQL:
     
 レプリケーション モニター:
 
-- レプリケーション モニター (SqlMonitor.exe) が起動しない原因となっていた問題を修正しました (User Voice の項目: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+- レプリケーション モニター (SqlMonitor.exe) が起動しない原因となっていた問題を修正しました (User Voice の項目: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079)。
 
-フラット ファイルのインポート ウィザード: 
+フラット ファイルのインポート ウィザード:
 
 - "フラット ファイル ウィザード" ダイアログのヘルプ ページへのリンクを修正しました 
-- テーブルが既に存在しているときにウィザードでターゲット テーブルを変更できない問題を修正しました。これによってユーザーは、ウィザードを終了して失敗したテーブルを削除してから改めてウィザードに情報を入力することなく、再試行できるようになりました (User Voice の項目: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)。 
+- テーブルが既に存在しているときにウィザードでターゲット テーブルを変更できない問題を修正しました。これによってユーザーは、ウィザードを終了して失敗したテーブルを削除してから改めてウィザードに情報を入力することなく、再試行できるようになりました (User Voice の項目: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)。
 
 データ層アプリケーションのインポート/エクスポート:
 
@@ -351,17 +476,17 @@ Azure SQL:
 
 IntelliSense:
 
-- MFA で AAD を使用する場合に Intellisense の入力候補が動作しなかった問題を修正しました。 
+- MFA で AAD を使用する場合に Intellisense の入力候補が動作しなかった問題を修正しました。
 
-オブジェクト エクスプローラー: 
+オブジェクト エクスプローラー:
 
 - "フィルター ダイアログ" が、SSMS を稼働しているモニターではなくランダムなモニターに表示された問題を修正しました (マルチ モニター システム)。
 
-Azure SQL: 
+Azure SQL:
 
-- [使用できるデータベース] でデータベースが列挙されるときに、特定のデータベースに接続しているとドロップダウンに "master" が表示されなかった問題を修正しました。 
-- MFA で AAD を使用して SQL Azure DB に接続している場合、スクリプトを生成 ([データ] または [スキーマとデータ]) しようとすると失敗した問題を修正しました。 
-- ビュー デザイナー (ビュー) において、SQL Azure DB に接続していると UI から [テーブルの追加] を選択できなかった問題を修正しました。 
+- [使用できるデータベース] でデータベースが列挙されるときに、特定のデータベースに接続しているとドロップダウンに "master" が表示されなかった問題を修正しました。
+- MFA で AAD を使用して SQL Azure DB に接続している場合、スクリプトを生成 ([データ] または [スキーマとデータ]) しようとすると失敗した問題を修正しました。
+- ビュー デザイナー (ビュー) において、SQL Azure DB に接続していると UI から [テーブルの追加] を選択できなかった問題を修正しました。
 - MFA トークンの更新中に SSMS クエリ エディターによって接続が自動的に終了および再開された問題を修正しました。 これにより、ユーザーが気付かない副作用 (たとえば、トランザクションを終了して再開しない場合) の発生を回避できます。 この変更では、プロパティ ウィンドウにトークンの有効期限が追加されます。 
 - MFA ログインでの AAD で、インポートされた MSA アカウントに対して SSMS でパスワード プロンプトが適用されなかった問題を修正しました。 
 
@@ -550,7 +675,7 @@ SQL Database Managed Instance:
 - [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) のサポートが追加されました。 Azure SQL Database Managed Instance は、SQL Server オンプレミスとのほぼ 100% の互換性、セキュリティに関する一般的な問題に対応するネイティブな[仮想ネットワーク (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) の実装、およびオンプレミスの SQL Server ユーザーに適した[ビジネス モデル](https://azure.microsoft.com/pricing/details/sql-database/)を提供します。
 - 次のような一般的な管理シナリオをサポートします。
    - データベースの作成と変更。
-   - データベースのバックアップと復元。
+   - データベースのバックアップと復元を行う。
    - データ層アプリケーションのインポート、エクスポート、抽出、公開。
    - サーバー プロパティの表示と変更。
    - オブジェクト エクスプローラーの完全なサポート。
@@ -575,7 +700,7 @@ SQL Database Managed Instance:
 
 データ分類:
 
-- 新しく追加した分類が古い "*情報の種類*" と "*秘密ラベル*" で表示される "*データ分類*" の問題を修正しました。
+- 新しく追加した分類が古い*情報の種類*と*秘密ラベル*で表示される *データ分類の問題を修正しました。
 - 大文字と小文字を区別する照合順序に設定されたサーバーを対象とすると "*データ分類*" が動作しなかった問題を修正しました。
         
 Always On:
@@ -584,7 +709,7 @@ Always On:
 - クラスター サービスのシャットダウン時に AG が "*分散*" と誤って報告される SSMS の問題を修正しました。
 - *[可用性グループの作成]* ダイアログを使って AG を作成するときに *ReadOnlyRoutingUrl* が要求される問題を修正しました。
 - プライマリがダウンしたときに手動でセカンダリにフェールオーバーすると NullReferenceException がスローされる問題を修正しました。
-- バックアップ/復元を使って可用性グループを作成してデータベースを初期化すると、セカンダリ レプリカでデータベース ファイルが既定のディレクトリに作成され問題を修正しました。 次の修正が含まれます。
+- バックアップ/復元を使って可用性グループを作成してデータベースを初期化すると、セカンダリ レプリカでデータベース ファイルが既定のディレクトリに作成される問題を修正しました。 次の修正が含まれます。
    - データ/ログ ディレクトリ検証コントロールを追加します。
    - レプリカがプライマリ レプリカと異なる OS 上にある場合にのみファイルの再配置を行います。
 - SSMS ウィザードが *CLUSTER_TYPE* オプションを生成しないためにセカンダリの結合が失敗する問題を修正しました。
@@ -641,7 +766,7 @@ SMO:
 Showplan:
 
 - SQL Data Warehouse の推定プラン ボタンを表示できるようになりました。
-- 新しい Showplan 属性 *EstimateRowsWithoutRowGoal* が追加され、新しい Showplan 属性 (*UdfCpuTime* と *UdfElapsedTime*) が *QueryTimeStats* に追加されました。 詳細については、「[Optimizer row goal information in query execution plan added in SQL Server 2017 CU3](http://support.microsoft.com/help/4051361)」 (SQL Server 2017 CU3 で追加されたクエリ実行プランのオプティマイザー行の目標情報) を参照してください。
+- 新しい Showplan 属性 *EstimateRowsWithoutRowGoal* が追加され、新しい Showplan 属性 (*UdfCpuTime* と *UdfElapsedTime*) が *QueryTimeStats* に追加されました。 詳細については、「[Optimizer row goal information in query execution plan added in SQL Server 2017 CU3](https://support.microsoft.com/help/4051361)」 (SQL Server 2017 CU3 で追加されたクエリ実行プランのオプティマイザー行の目標情報) を参照してください。
 
 
 
@@ -699,7 +824,7 @@ SMO:
 - 評価の結果には、各々の問題を解決する実践的な手順が含まれ、カスタマイズした修復スクリプトが適宜提供されます。 評価レポートは環境ごとにカスタマイズし、特定の要件に合わせて調整することができます。 詳細については、「[SQL 脆弱性評価](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)」を参照してください。
 
 SMO:
-- Azure 上で *HasMemoryOptimizedObjects* が例外をスローするという問題を修正しました。
+- Azure 上で *HasMemoryOptimizedObjects が例外をスローする問題を修正しました。
 - 新しい CATALOG_COLLATION 機能のサポートが追加されました。
 
 Always On ダッシュボード:
@@ -749,11 +874,11 @@ SQL DW に対して SQL データベースをスクリプト化すると、不�
 DB の拡張をスクリプト化したときに *DATA\_COMPRESSION* オプションが正しく送信されないという問題を修正しました。
 - ジョブの利用状況モニター: ユーザーがカテゴリによるフィルター処理を試みているときに "インデックスが範囲を超えています。 負でない値で、コレクションのサイズよりも小さくなければなりません。 
       パラメーター名: インデックス (System.Windows.Forms)" というエラーが発生するという問題を修正しました - [Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691)。
-- 接続ダイアログ: 読み取り/書き込みドメイン コント ローラーへのアクセス権を持たないドメイン ユーザーは SQL 認証を使用して SQL Server にログインできない問題を修正しました ([Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381))。
+- 接続ダイアログ: 読み取り/書き込みドメイン コント ローラーへのアクセス権を持たないドメイン ユーザーは SQL 認証を使用して SQL Server にサインインできない問題を修正しました ([Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381))。
 - レプリケーション: SQL Server でプル サブスクリプションのプロパティを参照するときに、エラー "値 'null' をプロパティ ServerInstance に適用できません" が表示されるという問題を修正しました。
 - SSMS セットアップ: SSMS セットアップが原因で、コンピューター上にインストールされている一部の製品が正しく再構成されないという問題を修正しました。
 - ユーザー設定:
-   - この修正プログラムにより、米国政府機関向けソブリン クラウド ユーザーは、ユニバーサル認証と Azure Active Directory ログインを介して SSMS で Azure SQL Database および Azure Resource Manager リソースへのアクセスを中断なく継続できるようになります。  SSMS の以前のバージョンのユーザーの場合は、[ツール]、[オプション]、[Azure サービス] の順に開き、[リソース管理] で "Active Directory Authority" プロパティの構成を https://login.microsoftonline.us に変更する必要があります。
+   - この修正プログラムにより、米国政府機関向けソブリン クラウド ユーザーは、ユニバーサル認証と Azure Active Directory ログインを介して SSMS で Azure SQL Database および Azure Resource Manager リソースへのアクセスを中断なく継続することができます。  SSMS の以前のバージョンのユーザーの場合は、[ツール]、[オプション]、[Azure サービス] の順に開き、[リソース管理] で "Active Directory Authority" プロパティの構成を https://login.microsoftonline.us に変更する必要があります。
 
 **Analysis Services (AS)**
 
@@ -800,14 +925,14 @@ DB の拡張をスクリプト化したときに *DATA\_COMPRESSION* オプシ�
 - XEvent: 
    - SSMS が .xel ファイル内のイベントの一部だけを開く問題を修正しました。
    - 既定のデータベースが 'マスター' でない場合の "ライブ データの監視" のエクスペリエンスが向上しました。[Connect アイテム 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582)
-- Always On: ログ バックアップの復元がエラー "このバックアップ セットのログは LSN x で終了します。これはデータベースに適用するには古すぎます" で失敗する可能性がある問題を修正しました。
+- Always On: ログ バックアップの復元がエラー "このバックアップ セットへのサインインは LSN x で終了します。これはデータベースに適用するには古すぎます" で失敗する可能性がある問題を修正しました。
 - ジョブの利用状況モニター: 一貫性のないアイコンを修正しました。[Connect アイテム 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100)
 - クエリ ストア: クエリ ストア レポートでユーザーが "カスタム" の日付範囲を選択できない問題を修正しました。 以下の Connect アイテムにリンクされています。
    - [Connect アイテム 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
-   - [Connect アイテム 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
+   - [Connect アイテム 3139399](https://connect.microsoft.com/SQLServer/feedback/details/3139399)
 - 保存されている情報に指定したデータベースがあり、ユーザーが <default> を選択した場合に、接続ダイアログで最近使用したデータベースが "クリア" されない問題を修正しました。
 - オブジェクト スクリプト: ユーザーが DW データベースをサーバー上で一時停止したが、別の非 DW データベースを選択してそれをスクリプト作成しようとした場合に、"データベース スクリプトの生成" が機能せず、エラーがスローされる問題を修正しました。
-スクリプト作成したストアド プロシージャのヘッダーがスクリプトの設定と一致せず、誤解を招くスクリプトになる問題を修正しました ([Connect アイテム 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784))。
+スクリプト作成したストアド プロシージャのヘッダーがスクリプトの設定と一致せず、誤解を招くスクリプトになる問題を修正しました ([Connect アイテム 3139784](https://connect.microsoft.com/SQLServer/feedback/details/3139784))。
 SQL Azure オブジェクトをターゲットにしたときに、"スクリプト ボタン" が再度有効になります。
   Azure SQL データベースに接続しているときに、一部のオブジェクト (UDF、ビュー、SP、トリガー) で "Alter" または "Execute" のスクリプト作成が許可されない SSMS の問題を修正しました ([Connect アイテム 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386))。
 - クエリ エディター:
@@ -949,10 +1074,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 次のようなエラーが表示され、SSMS が時々起動しない問題を修正しました。"1 つ以上のコンポーネントが見つかりません。 アプリケーションを再インストールしてください。"
 - SSMS UI の SPID が古くなって同期されない問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - /passive 引数が /quiet として扱われる SSMS (サイレント) セットアップでの問題を修正しました。
-- SSMS が起動時に時々、"オブジェクト参照がオブジェクト インスタンスに設定されていません" というエラーをスローする問題を修正しました。 http://connect.microsoft.com/SQLServer/feedback/details/3134698
+- SSMS が起動時に時々、"オブジェクト参照がオブジェクト インスタンスに設定されていません" というエラーをスローする問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/3134698
 - グラフ テーブルで [計算] を押すと、SSMS がクラッシュするデータ圧縮ウィザードの問題を修正しました。
 - (低速なインターネット接続を介して) テーブルのインデックスを右クリックしたときのパフォーマンスの問題に対処しました。 https://connect.microsoft.com/SQLServer/feedback/details/3120783
-- 大文字と小文字を区別する照合順序を持つサーバーで、SSMS がバックアップ ファイルを列挙できない問題を修正しました。 http://connect.microsoft.com/SQLServer/feedback/details/3134787 および https://connect.microsoft.com/SQLServer/feedback/details/3137000
+- 大文字と小文字を区別する照合順序を持つサーバーで、SSMS がバックアップ ファイルを列挙できない問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/3134787 および https://connect.microsoft.com/SQLServer/feedback/details/3137000
 - Showplan と showplan 比較のさまざまな修正
 - SSMS を実行しているコンピューターに SQL Server がインストールされていないと、[接続] ダイアログで接続に使用する [ネットワーク プロトコル] をユーザーが指定できない問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/3134997
 - 一部の SSMS ダイアログが "ランダム" な場所に表示されるマルチ モニター構成のサポートを強化しました。 タスク ダイアログやプロパティ シートを閉じたときにその位置を記憶できるように、[SQL Server オブジェクト エクスプローラー | コマンド] ユーザー設定の下に、新しいオプション [タスク ダイアログ] が追加されました。 https://connect.microsoft.com/SQLServer/feedback/details/889169、 https://connect.microsoft.com/SQLServer/feedback/details/1158271、 https://connect.microsoft.com/SQLServer/feedback/details/3135260 
@@ -960,18 +1085,18 @@ The connection is broken and recovery is not possible. The client driver attempt
 - [実行後に結果を破棄する] オプションを強化しました。 https://connect.microsoft.com/SQLServer/feedback/details/1196581
 - ユーザーが自分が管理者ではない Azure サブスクリプションにアクセスできない問題を改善または修正しました。
 - ソース データベースの選択に関係なく、OE で選択したターゲット データベースを維持するようにデータベースの復元ウィザードを改善しました。 https://connect.microsoft.com/SQLServer/feedback/details/3118581
-- オブジェクト エクスプローラーが、新しく追加された "ネイティブ コンパイル ストアド プロシージャ" を正しく並べ替えない問題を修正しました。 http://connect.microsoft.com/SQLServer/feedback/details/3133365
+- オブジェクト エクスプローラーが、新しく追加された "ネイティブ コンパイル ストアド プロシージャ" を正しく並べ替えない問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/3133365
 - "SELECT TOP n ROWS" に "TOP" 句が含まれない問題を修正しました。 Azure SQLDW の場合。 https://connect.microsoft.com/SQLServer/feedback/details/3133551 および https://connect.microsoft.com/SQLServer/feedback/details/3135874
 - QueryStoreUI: すべてのレポートで非カスタム時間間隔が正しく動作しない問題を修正しました。
 - Always Encrypted: 新しい CMK ダイアログの AKV アクセス許可の状態に関するメッセージングを改善しました。名前が長い CEK を区別しやすいように CEK ドロップダウンにツールヒントが追加されました。一部の CNG キー ストア プロバイダーが Always Encrypted の [新しい列マスター キー] ダイアログに表示されない問題が修正されました。
-- SSMS 接続の一貫性のない "Application Name" を修正しました。 http://connect.microsoft.com/SQLServer/feedback/details/3135115
+- SSMS 接続の一貫性のない "Application Name" を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/3135115
 - SSMS が SQL Azure に対して正しいスクリプトを生成しない (DATA_COMPRESSIONS オプションを使用したテーブルとインデックス) 問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/3133148
 - ユーザーが CTRL + Q のショートカット キーを使用してクイック起動できない問題を修正しました (注: クエリ エディターで [IntelliSense が有効] オプションを切り替える新しいキー バインディングは、CTRL + B と CTRL + I になりました)。 https://connect.microsoft.com/SQLServer/feedback/details/3131968
 - カスタム ドメインが定義されたアカウントを持つサブスクリプションからストレージ アカウントを選択しようとすると、SSMS が例外をスローする "データベースの復元" での問題を修正しました。
-- SSMS が "インデックスが配列の境界外です" エラーをスローし、ユーザーが "テーブル ビュー" を標準以外のものに変更できない "データベース ダイアグラム" での問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/3133792 および http://connect.microsoft.com/SQLServer/feedback/details/3135326
+- SSMS が "インデックスが配列の境界外です" エラーをスローし、ユーザーが "テーブル ビュー" を標準以外のものに変更できない "データベース ダイアグラム" での問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/3133792 および https://connect.microsoft.com/SQLServer/feedback/details/3135326
 - SSMS が従来のストレージ アカウントを列挙しない "URL へのバックアップ/復元" での問題を修正しました。
 - データベース ロールにスキーマ バインドのセキュリティ保護可能を追加しようとすると、例外がスローされる問題を修正しました。 https://connect.microsoft.com/SQLServer/feedback/details/3118143
-- テーブル ノードの展開時に、SSMS が断続的に次のエラーを表示する問題を修正しました。"データが NULL です。 このメソッド、またはプロパティは Null 値で呼び出せません。" http://connect.microsoft.com/SQLServer/feedback/details/3136283
+- テーブル ノードの展開時に、SSMS が断続的に次のエラーを表示する問題を修正しました。"データが NULL です。 このメソッド、またはプロパティは Null 値で呼び出せません。" https://connect.microsoft.com/SQLServer/feedback/details/3136283
 - DTA: 特定の境界値を持つパーティション関数を評価するときに、ヒープの破損により DTAEngine.exe が終了する問題を修正しました。
 
 
@@ -1016,7 +1141,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - スクリプト: 削除スクリプトを作成しようとするときに SSMS が誤って Azure データベース オブジェクトを削除しないようにそのオプションを無効にすることで一時的に防止しています。  適切な修正は SSMS の今後のリリースで行われます。
 - オブジェクト エクスプローラー: "AS COPY" を使って作成された Azure データベースに接続したときに "データベース" ノードが展開されなかった問題を修正しました
 
-## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+## <a name="downloadssdtmediadownloadpng-ssms-170httpsgomicrosoftcomfwlinklinkid847722"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.0](https://go.microsoft.com/fwlink/?LinkID=847722)
 一般公開 | ビルド番号: 14.0.17099.0
 
 [中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
@@ -1081,7 +1206,7 @@ RestoreDefaultFonts: 既定の設定に戻ります。
 - RC ビルドで "ヘルプ ビューアー" が開かない問題を修正しました
 - "メンテナンス プラン タスク ツールボックス" アイテムが SSMS にない問題を修正しました。
 - データベースの名前に中かっこが含まれている場合にデータベースを圧縮できない SSMS の問題を修正しました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3122618)を参照)。
-- SSMS が Azure データベースの削除をスクリプト化しようとして実際にはデータベース自体を削除していた問題を修正しました。 [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)を参照)。
+- SSMS が Azure データベースの削除をスクリプト化しようとして実際にはデータベース自体を削除していた問題を修正しました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3131458/)を参照)。
 - ユーザー定義テーブル型で既定値がスクリプト化されない問題を修正しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3119027)を参照)。
 - インデックスのコンテキスト メニューに関するパフォーマンスの改善を再度実行しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3120783)を参照)。
 - 実行プランで欠落インデックスの上にマウスを置いたときに過剰なちらつきを発生させる問題を修正しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3118510)を参照)。
@@ -1115,33 +1240,33 @@ RestoreDefaultFonts: 既定の設定に戻ります。
 - ユーザーにデータベースに対する特定のアクセス許可がある場合に SSMS がクラッシュする原因となる問題が修正されました。 
 - SSMS - ビューの確認時にデザイン画面にテーブルが表示されなくなる ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views)を参照)。 
 - テーブルのスクロール バーでテーブルの内容をスクロールできない。上下の方向キーでのみスクロールできる。 バグがあるスクロール バーを使用してスクロールを試した後でテーブルの内容をスクロールできる場合もある ( [Connect アイテム](
-http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view)を参照)。 
+https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view)を参照)。 
 - ルート ノードを更新した後、登録済みサーバーにアイコンが表示されない。
 - Azure v12 サーバーで [データベースの作成] のスクリプト ボタンを使用してスクリプトを実行すると、"スクリプトを作成するアクションはありません" というメッセージが表示される。
 - SSMS の [サーバーに接続] ダイアログで、新しい接続ごとの [追加のプロパティ] タブがクリアされない。
 - タスクの生成スクリプトで、Azure SQL DB のデータベースの生成スクリプトが生成されない。
 - ビュー デザイナーのスクロール バーが無効になっているように表示される。
 - Always Encrypted AVK キーのパスにバージョン ID が含まれていない。
-- クエリ ウィンドウ内のエンジン エディション クエリの数が削減されました ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3113387)を参照)。
+- クエリ ウィンドウ内のエンジン エディション クエリの数が削減されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3113387)を参照)。
 - 暗号化が正しく処理されていない状態でモジュールを更新すると、Always Encrypted でエラーが発生する。
 - OLTP と OLAP の既定の接続タイムアウト値が 15 秒から 30 秒に変更され、無視された接続エラーのクラスが修正されました。 
-- カスタム レポートの起動時の SSMS のクラッシュが修正されました ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3118856)を参照)。
+- カスタム レポートの起動時の SSMS のクラッシュが修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3118856)を参照)。
 - Azure SQL データベースに対する [スクリプトの生成...] が失敗する問題を修正しました。
-- [スクリプト化] と [スクリプトの生成] ウィザードが修正され、ストアド プロシージャなどのオブジェクトのスクリプト化の際に余分な改行が追加されないようになります ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3115850)を参照)。
-- SQLAS PowerShell プロバイダー: Dimension フォルダーと MeasureGroup フォルダーに LastProcessed プロパティが追加されます ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3111879)を参照)。
-- ライブ クエリ統計: バッチの最初のクエリしか表示されないという問題が修正されました ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3114221)を参照)。  
+- [スクリプト化] と [スクリプトの生成] ウィザードが修正され、ストアド プロシージャなどのオブジェクトのスクリプト化の際に余分な改行が追加されないようになります ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3115850)を参照)。
+- SQLAS PowerShell プロバイダー: Dimension フォルダーと MeasureGroup フォルダーに LastProcessed プロパティが追加されます ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3111879)を参照)。
+- ライブ クエリ統計: バッチの最初のクエリしか表示されないという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3114221)を参照)。  
 - プラン表示: プロパティ ウィンドウにスレッド全体の合計ではなく、最大値が表示される。
 - クエリ ストア: 豊富な実行バリエーションの新しいレポートがクエリに追加される。
-- オブジェクト エクスプローラーのパフォーマンスの問題: [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3114074) テーブルのコンテキスト メニューがすぐにハングする。テーブルのインデックスを右クリックすると SSMS の動作が遅くなる (リモート (インターネット) 接続経由の場合)。 サーバーでのテーブルの並べ替えクエリの発行を避ける。
+- オブジェクト エクスプローラーのパフォーマンスの問題: [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3114074) テーブルのコンテキスト メニューがすぐにハングする。テーブルのインデックスを右クリックすると SSMS の動作が遅くなる (リモート (インターネット) 接続経由の場合)。 サーバーでのテーブルの並べ替えクエリの発行を避ける。
 - SSMS から (Azure VM にデータベースを展開するための) Azure 展開ウィザードが削除されました。
-- SSMS の実行プランに不足しているインデックスが表示されないという問題が修正されました ([Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3114194)を参照)。
+- SSMS の実行プランに不足しているインデックスが表示されないという問題が修正されました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3114194)を参照)。
 - SSMS での一般的なシャットダウン時のクラッシュの問題が修正されました。
-- オブジェクト エクスプローラーで、PolyBase|スケールアウト グループ ノードのコンテキスト メニューを表示したときにエラーが発生する問題が修正されました ([Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3115128)を参照)
+- オブジェクト エクスプローラーで、PolyBase|スケールアウト グループ ノードのコンテキスト メニューを表示したときにエラーが発生する問題が修正されました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3115128)を参照)
 - データベースに対するアクセス許可を表示しようとすると SSMS がクラッシュする場合があるという問題が修正されました。
 - クエリ ストア: クエリ ストア レポートの結果グリッドのコンテキスト メニュー項目が全体的に改善されました。
-- 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3103181)を参照)。
-- 複数のスキーマを持つ既存のデータベースに対して Always Encrypted を構成できない ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3109591)を参照)。
-- データベースにシステム ビューを参照するビューが含まれているため、Always Encrypted の暗号化された列ウィザードでエラーが発生する ( [Connect アイテム](http://connect.microsoft.com/SQLServer/feedback/details/3111925)を参照)。
+- 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3103181)を参照)。
+- 複数のスキーマを持つ既存のデータベースに対して Always Encrypted を構成できない ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3109591)を参照)。
+- データベースにシステム ビューを参照するビューが含まれているため、Always Encrypted の暗号化された列ウィザードでエラーが発生する ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3111925)を参照)。
 - Always Encrypted を使用して暗号化する場合、暗号化が正しく処理されていない状態でモジュールを更新するとエラーが発生する。
 - [新規サーバーの登録] ダイアログで UI が切り捨てられる問題が修正されました。
 - 引用符で囲まれた文字列定数値を含む式が DMF 条件 UI で正しく更新されない問題が修正されます。
@@ -1156,7 +1281,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Ctrl + R キーで SSMS DAX クエリ エディターの結果ウィンドウが切り替わるようになりました
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
+## <a name="downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 一般公開 | ビルド番号: 13.0.16106.4
 
 [中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
@@ -1179,7 +1304,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * テーブルのインデックスを右クリックすると SSMS の動作が遅くなる (リモート (インターネット) 接続経由の場合)。 [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection) を参照)。
  
-* SQL デザイナーのスクロール バーの問題が修正されました ( [Connect ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016) を参照)。
+* SQL デザイナーのスクロール バーの問題が修正されました ( [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016) を参照)。
 
 * テーブルのコンテキスト メニューがすぐにハングする。 
  
@@ -1214,6 +1339,6 @@ SSMS のインストールで問題があり、標準のアンインストール
 
 
 ## <a name="additional-downloads"></a>追加のダウンロード  
-すべての SQL Server Management Studio ダウンロードの一覧については、「[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)」を検索してください。  
+すべての SQL Server Management Studio ダウンロードの一覧については、「[Microsoft ダウンロード センター](https://www.microsoft.com/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)」を検索してください。  
   
 SQL Server Management Studio の最新リリースについては、「[SQL Server Management Studio &#40;SSMS&#41; のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」をご覧ください。  

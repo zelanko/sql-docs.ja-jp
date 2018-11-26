@@ -14,15 +14,18 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a049e4b6d965f5eccc661414214585430a305290
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 166b6517389b9c48b37544df1a0e71e621b617f8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758570"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664621"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 JSON は、最新の Web アプリケーションとモバイル アプリケーションでデータを交換するために使用される、一般的なテキスト形式のデータ形式です。 また、JSON はログ ファイル内の非構造化データや Microsoft Azure Cosmos DB のような NoSQL データベースを格納するためも使用されます。 REST Web サービスの多くは結果を JSON テキスト形式で返し、データを JSON 形式で受け取ります。 たとえば、Azure Search、Azure Storage、Azure Cosmos DB などの Azure のほとんどのサービスには、JSON を返すか使用する REST エンドポイントがあります。 JSON は、AJAX 呼び出しを使用して Web ページおよび Web サーバー間でデータをやり取りするための主な形式でもあります。 
 
@@ -62,9 +65,9 @@ SQL Server がその組み込みの JSON サポートで提供する主な機能
 データベース テーブルに格納されている JSON テキストがある場合は、組み込み関数を使用して JSON テキスト内の値を読み取るか、変更することができます。  
     
 -   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) は、文字列に有効な JSON が含まれているかどうかをテストします。
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) は、JSON 文字列からスカラー値を抽出します。
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) は、JSON 文字列からオブジェクトまたは配列を抽出します。
--   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) は、JSON 文字列の値を変更します。
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) は、JSON 文字列からスカラー値を抽出します。
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) は、JSON 文字列からオブジェクトまたは配列を抽出します。
+-   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) は、JSON 文字列の値を変更します。
 
 
 **例**
@@ -244,7 +247,7 @@ JSON テキストは varchar 列または nvarchar 列に格納されており�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>JSON データの SQL Server への格納とインデックスの追加
 
-JSON はテキスト形式なので、SQL Database の `NVARCHAR` 列に JSON ドキュメントを格納できます。 `NVARCHAR` 型は、すべての SQL Server サブシステムでサポートされているので、**CLUSTERED COLUMNSTORE** インデックスが付いたテーブル、**メモリ最適化**テーブル、または OPENROWSET または Polybase を使用して読み取ることができる外部ファイルに JSON ドキュメントを格納することができます。
+JSON はテキスト形式なので、SQL Database の `NVARCHAR` 列に JSON ドキュメントを格納できます。 `NVARCHAR` 型は、すべての SQL Server サブシステムでサポートされているので、**CLUSTERED COLUMNSTORE** インデックスが付いたテーブル、**メモリ最適化**テーブル、または OPENROWSET または PolyBase を使用して読み取ることができる外部ファイルに JSON ドキュメントを格納することができます。
 
 JSON データの SQL Server への保存、インデックスの追加、最適化のオプションに関する詳細については、次の記事を参照してください。
 -   [SQL Server または SQL Database に JSON ドキュメントを格納する](store-json-documents-in-sql-tables.md)
@@ -255,7 +258,7 @@ JSON データの SQL Server への保存、インデックスの追加、最適
 
 ファイルに格納された情報は、標準の JSON または行区切りの JSON 形式に書式設定できます。 SQL Server は JSON ファイルのコンテンツをインポートし、**OPENJSON** または **JSON_VALUE** 関数を使用してそれを解析してテーブルに読み込むことができます。  
   
--   JSON ドキュメントが SQL Server がアクセスできるローカル ファイル、共有ネットワーク ドライブ、Azure File の場所に格納されている場合は、一括インポートを使用して SQL Server に JSON データを読み込むことができます。 このシナリオの詳細については、「[Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)」(OPENROWSET (BULK) を使用して SQL Server に JSON ファイルをインポートする) を参照してください。  
+-   JSON ドキュメントが SQL Server がアクセスできるローカル ファイル、共有ネットワーク ドライブ、Azure File の場所に格納されている場合は、一括インポートを使用して SQL Server に JSON データを読み込むことができます。 このシナリオの詳細については、「[Importing JSON files into SQL Server using OPENROWSET (BULK)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)」(OPENROWSET (BULK) を使用して SQL Server に JSON ファイルをインポートする) を参照してください。  
   
 -   行区切りの JSON ファイルが Azure Blob Storage または Hadoop ファイル システムに格納されている場合、PolyBase を使用して JSON テキストを読み込み、Transact-SQL コードでそれを解析してテーブルに読み込むことができます。  
 
@@ -335,12 +338,12 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
   
 -   要求: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   応答: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+-   応答: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
 この OData URL は、`id` が 1 の製品の ProductID 列と ProductName 列に対する要求を表します。 **FOR JSON** を使用して、出力を SQL Server で求められている形式に設定できます。  
   
 ```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
 FROM Production.Product  
@@ -377,7 +380,7 @@ SQL Server 2016 のインスタンスにサンプル データベースを復元
   
 ### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
   
-具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
+具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
 
 ### <a name="microsoft-videos"></a>Microsoft ビデオ
 

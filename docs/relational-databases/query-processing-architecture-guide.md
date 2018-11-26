@@ -5,8 +5,7 @@ ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
@@ -17,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226384"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701480"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,9 @@ GO
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、リソース コストが最も低い実行プランに限定して選択するわけではありません。妥当なリソース コストで、最も迅速に結果を返すプランを選択します。 たとえば、クエリを並列に処理すれば、直列に処理するよりもリソースを多く使用します。ただし、クエリの完了時間は短縮されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、サーバー側の負荷に悪影響がない限り、並列実行プランを使用して結果を返します。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、テーブルやインデックスから情報を取り出す複数の方法のリソース コストを算出する場合、分布統計に大きく依存します。 分布統計は、列やインデックスごとに保存されています。 この統計情報は、特定のインデックスや列の値の選択度を表しています。 たとえば、車を表すテーブルの場合、同メーカーの車がいくつもあります。ただし、VIN (車両番号) はそれぞれの車両固有のものです。 VIN のインデックスの方が、メーカーのインデックスよりも選択度が高いと言えます。 インデックス統計が最新でない場合、クエリ オプティマイザーはテーブルの現在の状態に対して最適な選択ができないことがあります。 インデックス統計を最新に維持する方法の詳細については、「[統計](../relational-databases/statistics/statistics.md)」を参照してください。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、テーブルやインデックスから情報を取り出す複数の方法のリソース コストを算出する場合、分布統計に大きく依存します。 列とインデックスに対する分布統計が保持されます。この分布統計では、基になるデータの密度 <sup>1</sup> に関する情報が保持されます。 これは、特定のインデックスまたは列内の値の選択度を表すために使用されます。 たとえば、車を表すテーブルの場合、同メーカーの車がいくつもあります。ただし、VIN (車両番号) はそれぞれの車両固有のものです。 VIN 上のインデックスは、製造元でのインデックスより選択度が高くなります。これは VIN の密度が製造元の場合より低いからです。 インデックス統計が最新でない場合、クエリ オプティマイザーはテーブルの現在の状態に対して最適な選択ができないことがあります。 密度の詳細については、「[統計](../relational-databases/statistics/statistics.md#density)」を参照してください。 
+
+<sup>1</sup>密度では、データ内に存在する一意の値の分布、または特定の列における重複値の平均数が定義されます。 密度が減少するにつれて、値の選択度が高くなります。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーを使用すると、プログラマやデータベース管理者が入力しなくても、データベース内の状態の変化に合わせてデータベース サーバーを動的に調整できるので、クエリ オプティマイザーは不可欠です。 これにより、プログラマはクエリの最終結果の記述だけに重点を置くことができます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、ステートメントを実行するたびに、データベースの状態に合わせて効率的な実行プランを構築します。
 
@@ -138,11 +139,11 @@ GO
 
 `SELECT` ステートメントの処理で説明した基本的な手順は、 `INSERT`、 `UPDATE`、 `DELETE`などの SQL ステートメントにも適用されます。 `UPDATE` ステートメントと `DELETE` ステートメントは、いずれも変更または削除する行セットを対象とする必要があります。 これらの行を特定する処理は、 `SELECT` ステートメントの結果セットを得るために使用された、基になる行を特定する処理と同じです。 `UPDATE` ステートメントと `INSERT` ステートメントのどちらにも、更新または挿入するデータ値を指定する SELECT ステートメントを埋め込むことができます。
 
-`CREATE PROCEDURE` 、 `ALTER TABL`E などの DDL (データ定義言語) ステートメントも、最終的には、システム カタログ テーブル上の一連のリレーショナル操作になります。また、場合によっては `ALTER TABLE ADD COLUMN`など、データ テーブルに対する一連のリレーショナル操作になります。
+`CREATE PROCEDURE` または `ALTER TABLE` などの DDL (データ定義言語) ステートメントも、最終的には、システム カタログ テーブル上の一連のリレーショナル操作になります。また、場合によっては `ALTER TABLE ADD COLUMN` など、データ テーブルに対する一連のリレーショナル操作になります。
 
 ### <a name="worktables"></a>作業テーブル
 
-リレーショナル エンジンは、SQL ステートメントで指定された論理操作を行う際に、作業テーブルの作成を必要とする場合があります。 作業テーブルとは、中間結果を格納するための内部テーブルです。 作業テーブルは、特定の `GROUP BY`クエリ、 `ORDER BY`クエリ、 `UNION` クエリで生成されます。 たとえば、インデックスの対象になっていない列を `ORDER BY` 句が参照している場合、要求された順番に結果セットを並べ替えるための作業テーブルが生成されることがあります。 また、クエリ プランの一部を実行した結果を一時的に格納するためのスプールとして作業テーブルが使用されることもあります。 作業テーブルは `tempdb` に作成され、不要になると自動的に削除されます。
+リレーショナル エンジンは、SQL ステートメントで指定された論理操作を行う際に、作業テーブルの作成を必要とする場合があります。 作業テーブルとは、中間結果を格納するための内部テーブルです。 作業テーブルは、特定の `GROUP BY`クエリ、 `ORDER BY`クエリ、 `UNION` クエリで生成されます。 たとえば、インデックスの対象になっていない列を `ORDER BY` 句が参照している場合、要求された順番に結果セットを並べ替えるための作業テーブルが生成されることがあります。 また、クエリ プランの一部を実行した結果を一時的に格納するためのスプールとして作業テーブルが使用されることもあります。 作業テーブルは tempdb に作成され、不要になると自動的に削除されます。
 
 ### <a name="view-resolution"></a>ビューの解決
 
@@ -698,7 +699,7 @@ WHERE ProductID = 63;
 
 max degree of parallelism オプションを 0 (既定) に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で並列プランの実行で使用するプロセッサの数を最大 64 に制限できます。 MAXDOP オプションを 0 に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では 64 個の論理プロセッサという実行時ターゲットが設定されますが、必要であれば、別の値を手動で設定できます。 クエリおよびインデックスに対して MAXDOP を 0 に設定すると、並列プランの実行で指定されたクエリまたはインデックスに対して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で利用可能なすべてのプロセッサ (最大 64) を使用できます。 MAXDOP はあらゆる並列クエリに強制される値ではなく、並列に望ましいあらゆるクエリにとっての仮のターゲットです。 つまり、実行時に十分なワーカー スレッドが利用できない場合、MAXDOP サーバー構成オプションより低い並列度でクエリが実行されることがあります。
 
-MAXDOP 構成のベスト プラクティスについては、[この Microsoft サポート記事](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)を参照してください。
+MAXDOP 構成のベスト プラクティスについては、[この Microsoft サポート記事](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)を参照してください。
 
 ### <a name="parallel-query-example"></a>並列クエリの例
 
@@ -1019,7 +1020,7 @@ XML プラン表示出力では、 `SeekPredicateNew` 要素がその要素を�
 * 高速なプロセッサおよびできるだけ多くのプロセッサ コアを搭載したサーバーを使用して、並列クエリ処理機能を活用します。
 * サーバーに十分な I/O コントローラーの帯域幅があることを確認します。 
 * すべての大きなパーティション テーブルにクラスター化インデックスを作成して、B ツリーのスキャンの最適化を活用します。
-* パーティション テーブルへのデータの一括読み込みを行う場合は、 [データ読み込みのパフォーマンス ガイド](http://msdn.microsoft.com/library/dd425070.aspx)に関するホワイト ペーパーで説明されている推奨事項に従ってください。
+* パーティション テーブルへのデータの一括読み込みを行う場合は、 [データ読み込みのパフォーマンス ガイド](https://msdn.microsoft.com/library/dd425070.aspx)に関するホワイト ペーパーで説明されている推奨事項に従ってください。
 
 ### <a name="example"></a>例
 

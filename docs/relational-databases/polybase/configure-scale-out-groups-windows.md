@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905136"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672941"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Windows 上で PolyBase スケールアウト グループを改善する
 
@@ -52,7 +52,7 @@ ms.locfileid: "48905136"
   
    - PQTH4A-CMP02  
   
-2. ドメイン アカウント: *PQTH4A\PolybaseUser*  
+2. ドメイン アカウント: *PQTH4A\PolyBaseUser*  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>すべてのマシンに、PolyBase を使用する SQL Server をインストールする
 
@@ -60,7 +60,7 @@ ms.locfileid: "48905136"
   
 2. [機能の選択] ページで、**[外部データ用 PolyBase クエリ サービス]** を選択します。
   
-3. [サーバーの構成] ページで、SQL Server PolyBase エンジンと SQL Server PolyBase Data Movement サービス用に**ドメイン アカウント** PQTH4A\PolybaseUser を使用します。
+3. [サーバーの構成] ページで、SQL Server PolyBase エンジンと SQL Server PolyBase Data Movement サービス用に**ドメイン アカウント** PQTH4A\PolyBaseUser を使用します。
   
 4. [PolyBase の構成] ページで、 **[PolyBase スケール アウト グループの一部として、SQL Server インスタンスを使用します]** オプションを選択します。 これにより、ファイアウォールが開かれて、PolyBase サービスへの着信接続が許可されます。
   
@@ -106,6 +106,6 @@ ms.locfileid: "48905136"
   
 ## <a name="next-steps"></a>次の手順  
 
-トラブルシューティングについては、「 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)」を参照してください。
+トラブルシューティングについては、「 [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)」を参照してください。
   
 PolyBase について詳しくは、[PolyBase の概要](../../relational-databases/polybase/polybase-guide.md)に関する記事をご覧ください。

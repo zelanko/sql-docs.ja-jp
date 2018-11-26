@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 515a98fba15d6531ce106d2c47bb0a62d1a84572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 890fc0156200c135b49f695811c983d94c418766
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847230"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270185"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -38,7 +38,7 @@ Kerberos によるセキュリティで保護された Hadoop クラスターに
 1. セキュリティで保護されたリソース (HDFS、MR2、YARN、ジョブ履歴など)
 1. キー配布センター (Active Directory のドメイン コント ローラーと呼ばれる)
 
-Hadoop によるセキュリティで保護された各リソースは、Hadoop クラスターの Kerberos 対応プロセスの一部として、一意の**サービス プリンシパル名 (SPN)** を使用して**キー配布センター (KDC)** に登録されます。 この登録は、クライアントが KDC から**チケット保証チケット (TGT)** と呼ばれる一時的なユーザー チケットを取得することを目標に行われます。TGT は、クライアントがアクセスする対象の特定の SPN に対して、**サービス チケット (ST)** と呼ばれる別の一時的なチケットを要求するために必要です。  
+Hadoop によるセキュリティで保護された各リソースは、Hadoop クラスターの Kerberos 対応プロセスの一部として、一意の **サービス プリンシパル名 (SPN)**  を使用して **キー配布センター (KDC)**  に登録されます。 この目的は、クライアントが **チケット保証チケット (TGT)** と呼ばれる一時的なユーザー チケットを取得することです。TGT は、クライアントがアクセスする対象の特定の SPN に対して、KDC から **サービス チケット (ST)** と呼ばれる別の一時的なチケットを要求するために必要です。  
 
 PolyBase では、Kerberos によるセキュリティで保護されたリソースに対する認証が要求されたときに、次の 4 ラウンドトリップ ハンドシェイクが行われます。
 
@@ -64,11 +64,11 @@ PolyBase には、Hadoop クラスターのプロパティを含む複数の構�
 
 これらのファイルは、次の場所にあります。
 
-\\[システム ドライブ\\]:{インストール パス}\\{インスタンス}\\{名前}\\MSSQL\\Binn\\Polybase\\Hadoop\\conf
+\\[システム ドライブ\\]:{インストール パス}\\{インスタンス}\\{名前}\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf
 
-たとえば、SQL Server 2016 の既定では、"C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase\\Hadoop\\conf" です。
+たとえば、SQL Server 2016 の既定では、"C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf" です。
 
-次の 3 つのプロパティに環境に応じた値を設定して、PolyBase 構成ファイル **core-site.xml** の 1 つを更新します。
+次の 3 つのプロパティに環境に応じた値を設定して、PolyBase 構成ファイル  **core-site.xml** の 1 つを更新します。
 
 ```xml
 <property>
@@ -90,7 +90,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む複数の構�
 ツールは SQL Server とは独立して実行できます。そのため、XML を更新する場合に実行中である必要はなく、再起動する必要もありません。 ツールを実行するには、SQL Server がインストールされているホストで次のコマンドを実行します。
 
 ```cmd
-> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -102,7 +102,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む複数の構�
 | *名前ノードのポート* | 名前ノードのポートです。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。 通常は 8020 です。 |
 | *サービス プリンシパル* | KDC に対する管理サービス プリンシパルです。 CREATE DATABASE SCOPED CREDENTIAL T-SQL で "IDENTITY" 引数として使用するプリンシパルと一致する必要があります。|
 | *サービスのパスワード* | コンソールにパスワードを入力するのではなく、パスワードをファイルに保存し、そのファイルのパスをここに指定します。 CREATE DATABASE SCOPED CREDENTIAL T-SQL で "SECRET" 引数として使用するプリンシパルと一致する必要があります。 |
-| *リモート HDFS ファイル パス (省略可能) * | アクセスする対象である既存のファイルのパスです。 指定しない場合、ルート "/" が使用されます。 |
+| *リモート HDFS ファイル パス (省略可能) * | アクセスする対象である既存のファイルのパスです。 指定しない場合、ルート "/" が使用されます。 |
 
 ## <a name="example"></a>例
 
@@ -210,12 +210,11 @@ PolyBase は HDFS へのアクセスを試行しますが、必要なサービ�
 
 ## <a name="debugging-tips"></a>デバッグのヒント
 
-### <a name="mit-kdc"></a>MIT KDC  
+### <a name="mit-kdc"></a>MIT KDC  
 
-KDC に登録されたすべての SPN は、管理者を含めて、KDC ホストまたは構成されている任意の KDC クライアントで **kadmin.local** > (管理者ログイン) > **listprincs** を実行して表示できます。 Hadoop クラスターが適切に Kerberos 対応になっている場合、クラスター内で使用可能な多数のサービス (nn、dn、rm、yarn、spnego など) のそれぞれに、1 つの SPN が存在します。それらに対応する keytab ファイル (パスワード代用) は、既定で **/etc/security/keytabs** にあります。 それらのファイルは KDC の秘密キーを使用して暗号化されます。  
+KDC に登録された SPN はすべて、管理者を含め、KDC ホストまたは構成されている任意の KDC クライアントで  **kadmin.local**  > (管理者ログイン) >  **listprincs**  を実行することで表示できます。 Hadoop クラスターが適切に Kerberos 対応になっている場合、クラスター内で使用可能な多数のサービス (nn、dn、rm、yarn、spnego など) のそれぞれに、1 つの SPN が存在します。それらに対応する keytab ファイル (パスワード代用) は、既定で  **/etc/security/keytabs** で確認できます。 それらのファイルは KDC の秘密キーを使用して暗号化されます。  
 
-[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) ツールを使用して、KDC 上でローカルに管理者の資格情報を検証することも検討します。 たとえば、*kinit identity@MYREALM.COM*のように使用します。 パスワードのプロンプトは、ID が存在することを示します。  
-KDC ログは既定で **/var/log/krb5kdc.log** にあり、要求を行ったクライアント IP を含め、チケットに対するすべての要求が記録されています。 ツールが実行された SQL Server コンピューターの IP から 2 つの要求が行われています。1 つ目は認証サーバーに対する TGT の要求 (**AS\_REQ**) であり、その後にチケット保証サーバーに ST を要求する **TGS\_REQ** が続きます。
+ [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)  ツールを使用して、KDC 上でローカルに管理者の資格情報を検証することも検討します。 たとえば、 *kinit identity@MYREALM.COM* のように使用します。 パスワードのプロンプトは、ID が存在することを示します。  KDC ログは既定で  **/var/log/krb5kdc.log** にあり、要求を行ったクライアント IP など、チケットに対するすべての要求が含まれています。 ツールが実行された SQL Server コンピューターの IP から 2 つの要求が行われています。1 つ目は認証サーバーからの TGT に対する要求 ( **AS\_REQ**) であり、その後にチケット保証サーバーから ST に対して要求する  **TGS\_REQ**  が続きます。
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -225,7 +224,7 @@ KDC ログは既定で **/var/log/krb5kdc.log** にあり、要求を行った�
 
 ### <a name="active-directory"></a>Active Directory 
 
-Active Directory では、[コントロール パネル] > [Active Directory ユーザーとコンピューター] > [*MyRealm*] > [*MyOrganizationalUnit*] を参照して SPN を表示できます。 Hadoop クラスターが適切に Kerberos 対応になっている場合、使用可能な多数のサービス (nn、dn、rm、yarn、spnego など) のそれぞれに、1 つの SPN が存在します。
+Active Directory では、[コントロール パネル] > [Active Directory ユーザーとコンピューター] > [ *MyRealm*] >[ *MyOrganizationalUnit*] を参照することで、SPN を表示できます。 Hadoop クラスターが適切に Kerberos 対応になっている場合、使用可能な多数のサービス (nn、dn、rm、yarn、spnego など) のそれぞれに、1 つの SPN が存在します。
 
 ## <a name="see-also"></a>参照
 

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252199"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814355"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL) 
 
@@ -348,7 +348,7 @@ OFF
 ON  
 クエリで使用される統計が古くなっている可能性がある場合にクエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。  
   
-クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
+クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
   
 AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計、クエリ述語内の列に対して 1 列ずつ作成された統計、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。  
   
@@ -668,7 +668,7 @@ Windows と互換性のあるディレクトリ名です。 この名前は、[!
   
 **\<mixed_page_allocation_option> ::=**  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。 
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } は、データベースが、テーブルまたはインデックスの最初の 8 ページに対して混合エクステントを使用して、最初のページを作成できるかどうかを制御します。  
  
@@ -682,7 +682,7 @@ ON
   
 **\<PARAMETERIZATION_option> ::=**  
   
-パラメーター化オプションを制御します。  
+パラメーター化オプションを制御します。 パラメーター化の詳細については、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)」をご覧ください。 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ FORCED
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
   
 ON |オフ |[すべて] をオフに  
-コントロールは、このデータベースにクエリ ストアが有効になっている場合とそのコントロールが、クエリのストアの内容を削除します。  
+コントロールは、このデータベースにクエリ ストアが有効になっている場合とそのコントロールが、クエリのストアの内容を削除します。 詳細については、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)」を参照してください。 
   
 ON  
 クエリのストアを有効にします。  
   
 OFF  
-クエリのストアを無効にします。  これが既定値です。   
+クエリのストアを無効にします。 これが既定値です。   
   
 CLEAR  
 クエリ ストアの内容を削除します。  
@@ -773,10 +773,10 @@ SIMPLE
   
 TORN_PAGE_DETECTION { ON | OFF }  
 ON  
-[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、不完全なページを検出できます。  
+[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって不完全なページを検出できます。  
   
 OFF  
-[!INCLUDE[ssDE](../../includes/ssde-md.md)] は不完全なページを検出できません。  
+[!INCLUDE[ssDE](../../includes/ssde-md.md)]は不完全なページを検出できません。  
   
 > [!IMPORTANT]  
 > 構文構造 TORN_PAGE_DETECTION ON | OFF は、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業ではこの構文構造の使用を避け、現在この構文構造を使用しているアプリケーションは修正するようにしてください。 代わりに、PAGE_VERIFY オプションを使用してください。  
@@ -809,7 +809,7 @@ PAGE_VERIFY オプションを使用する場合は、次に示す重要な点�
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、チェックサム、破損ページ、またはその他の I/O エラーで読み取りに失敗した場合、その読み取りを 4 回再試行します。 いずれかの再試行で読み取りに成功した場合には、エラー ログにメッセージが書き込まれ、その読み取りを起動したコマンドは続行されます。 再試行が失敗した場合には、そのコマンドはエラー メッセージ 824 で失敗します。  
   
-エラー メッセージ 823、824、および 825 について詳しくは、「[SQL Server でのメッセージ 823 エラーのトラブルシューティングの方法](http://support.microsoft.com/help/2015755)」、「[SQL Server でのメッセージ 824 のトラブルシューティングの方法](http://support.microsoft.com/help/2015756)」、および「[How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](http://support.microsoft.com/help/2015757)」(SQL Server でのメッセージ 825 &#40;読み取り再試行&#41; のトラブルシューティングの方法) を参照してください。
+エラー メッセージ 823、824、および 825 について詳しくは、「[SQL Server でのメッセージ 823 エラーのトラブルシューティングの方法](https://support.microsoft.com/help/2015755)」、「[SQL Server でのメッセージ 824 のトラブルシューティングの方法](https://support.microsoft.com/help/2015756)」、および「[How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](https://support.microsoft.com/help/2015757)」(SQL Server でのメッセージ 825 &#40;読み取り再試行&#41; のトラブルシューティングの方法) を参照してください。
   
 このオプションの現在の設定を確認するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの *page_verify_option* 列、または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の *IsTornPageDetectionEnabled* プロパティを調べてください。  
   
@@ -825,7 +825,7 @@ REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scope
 **権限**: データベースまたはテーブル データベースの伸縮を有効にするには、db_owner アクセス許可が必要です。 データベースの伸縮データベースを有効にすると、管理データベースのアクセス許可も必要です。  
   
 SERVER = \<server_name>  
-Azure サーバーのアドレスを指定します。 名前の `.database.windows.net` の部分を含めます。 たとえば、 `MyStretchDatabaseServer.database.windows.net`のようにします。  
+Azure サーバーのアドレスを指定します。 名前の `.database.windows.net` の部分を含めます。 たとえば、`MyStretchDatabaseServer.database.windows.net` のようにします。  
   
 CREDENTIAL = \<db_scoped_credential_name>  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが Azure サーバーに接続するために使用する、データベース スコープ資格情報を指定します。 このコマンドを実行する前に、資格情報が存在することを確認します。 詳しくは、「[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」をご覧ください。  
@@ -866,7 +866,7 @@ NEW_BROKER
 データベースは新しいブローカー識別子を受信するように指定します。 データベースは新しい Service Broker と見なされるため、データベースにおける既存のすべてのメッセージ交換は、終了ダイアログ メッセージを生成せずに、直ちに削除されます。 古い [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別子を参照するルートは、新しい識別子を使用して作成し直す必要があります。  
   
 ERROR_BROKER_CONVERSATIONS  
-[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ配信を有効にします。 これは、データベースの既存の [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別子を保持します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] により、データベース内のメッセージ交換がすべて終了し、エラーが返されます。 これによりアプリケーションは、既存のメッセージ交換に対して、通常のクリーンアップを実行できます。  
+[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ配信を有効にします。 これは、既存の保持されます [!INCLUDE[ssSB](../../includes/sssb-md.md)] 、データベースの識別子を指定します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] により、データベース内のメッセージ交換がすべて終了し、エラーが返されます。 これによりアプリケーションは、既存のメッセージ交換に対して、通常のクリーンアップを実行できます。  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
@@ -1154,7 +1154,7 @@ NO_WAIT
 - データベースのバックアップを復元した。  
 -   データベースをデタッチした。  
   
-プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
+プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -1470,7 +1470,7 @@ OFF
 ON  
 クエリで使用される統計が古くなっている可能性がある場合にクエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。  
   
-クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
+クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
   
 AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計、クエリ述語内の列に対して 1 列ずつ作成された統計、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。  
   
@@ -2241,7 +2241,7 @@ OFF
 ON  
 クエリで使用される統計が古くなっている可能性がある場合にクエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。  
   
-クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
+クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
   
 AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計、クエリ述語内の列に対して 1 列ずつ作成された統計、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。  
   

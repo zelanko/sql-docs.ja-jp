@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b11acfb91190aa4f6d1b49e603954c53bbcd86e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd1990fcb8a8637a120a35e2f8809d7bf48b1ecf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737680"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812765"
 ---
 # <a name="helplink-element"></a>HelpLink 要素
   **Detail** プロパティの **HelpLink** 要素は、レポート サーバーで生成される URL 文字列です。 この URL は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ヘルプとサポートで管理されている Web ページを指し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生する特定のエラーに関するヘルプとサポート技術情報の記事を提供します。 URL の構文は、次のようになっています。  
   
- **http://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v*alue***&EvtID**=* value ***&ProdName**=* value***&ProdVer**=* value*  
+ **https://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v*alue***&EvtID**=* value ***&ProdName**=* value***&ProdVer**=* value*  
   
  次の表は、**HelpLink** URL の引数を示しています。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47737680"
  次の例は、エラー コード **rsReservedItem** に返された **HelpLink** URL を示しています。 このエラーは、ユーザーが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の予約アイテムの変更または削除を試みたときに発生します。  
   
 ```  
-http://www.microsoft.com/products/ee/transform.aspx?  
+https://www.microsoft.com/products/ee/transform.aspx?  
 EvtSrc=Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings  
 &EvtID=rsReservedItem&ProdName=Microsoft%20SQL%20Server%20Reporting%20Services&ProdVer=8.00  
 ```  

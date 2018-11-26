@@ -11,24 +11,24 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a4431e593a74c7f6a656f78cd70abfd19c813bdd
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384077"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642079"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>レッスン 1: SSIS によるプロジェクトと基本パッケージの作成
 
-このレッスンでは、簡単な ETL パッケージを作成します。このパッケージは、1 つのフラット ファイル ソースからデータを抽出し、2 つの参照変換コンポーネントを使用してそのデータを変換します。さらに、変換したデータを、 **AdventureWorksDW2012** の **FactCurrency**ファクト テーブルに書き込みます。 ここでは、新しいパッケージを作成する方法、データの変換元と変換先の接続を追加、構成する方法、新しい制御フロー コンポーネントとデータ フロー コンポーネントを操作する方法を学習します。  
+この実習では、シンプルな ETL パッケージを作成します。このパッケージは、1 つのフラット ファイル ソースからデータを抽出し、2 つの参照変換コンポーネントを使用してそのデータを変換します。さらに、変換したデータを、**AdventureWorksDW2012** の **FactCurrencyRate** ファクト テーブルのコピーに書き込みます。 ここでは、新しいパッケージを作成する方法、データの変換元と変換先の接続を追加、構成する方法、新しい制御フロー コンポーネントとデータ フロー コンポーネントを操作する方法を学習します。  
   
 > [!IMPORTANT]  
-> このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012**をインストールおよび展開する方法の詳細については、「 [Reporting Services Product Samples on CodePlex (CodePlex の Reporting Services 製品サンプル)](http://go.microsoft.com/fwlink/p/?LinkID=526910)」を参照してください。  
+> このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012** をインストールおよび展開する方法の詳細については、「[Reporting Services Product Samples on CodePlex (CodePlex の Reporting Services 製品サンプル)](https://go.microsoft.com/fwlink/p/?LinkID=526910)」を参照してください。  
   
 ## <a name="understanding-the-package-requirements"></a>パッケージ要件について  
 このチュートリアルには、Microsoft SQL Server Data Tools が必要です。  
   
-SQL Server Data Tools のインストールの詳細については、「 [SQL Server Data Tools のダウンロード](http://msdn.microsoft.com/data/hh297027)」を参照してください。  
+SQL Server Data Tools のインストールの詳細については、「 [SQL Server Data Tools のダウンロード](https://msdn.microsoft.com/data/hh297027)」を参照してください。  
   
 パッケージを作成する前に、ソース データの形式と変換先データの形式をよく理解する必要があります。 両方のデータ形式を理解しておけば、ソース データを変換先にマップするための変換を定義できます。  
   
@@ -51,7 +51,7 @@ SQL Server Data Tools のインストールの詳細については、「 [SQL S
 フラット ファイル ソース データを操作する前に、フラット ファイル接続マネージャーがフラット ファイル データをどのように解釈するのかを理解しておく必要があります。 フラット ファイル ソースが Unicode の場合、すべての列が [DT_WSTR] として定義され、既定の列幅 50 が設定されます。 フラット ファイル ソースが ANSI エンコードの場合は、列が [DT_STR] として定義され、列幅が 50 になります。 これらの既定値を、使用中のデータに適した文字列型の列に変更する必要があります。 既定値を変更するには、データの書き込み先 (変換先) のデータ型を確認し、フラット ファイル接続マネージャーで適切なデータ型を指定します。  
   
 ### <a name="looking-at-the-destination"></a>変換先の確認  
-ソース データの最終的な変換先は、 **AdventureWorksDW** の **FactCurrency**ファクト テーブルです。 次の表に示すように、 **FactCurrency** ファクト テーブルには 4 つの列があり、さらに 2 つのディメンション テーブルへのリレーションシップがあります。  
+ソース データの最終的な変換先は、**AdventureWorksDW** の **FactCurrencyRate** ファクト テーブルのコピーです。 次の表に示すように、**FactCurrencyRate** ファクト テーブルには 4 つの列があり、さらに 2 つのディメンション テーブルへのリレーションシップがあります。  
   
 |列名|データ型|参照テーブル|参照列|  
 |---------------|-------------|----------------|-----------------|  
@@ -65,10 +65,10 @@ SQL Server Data Tools のインストールの詳細については、「 [SQL S
   
 |フラット ファイルの列|テーブル名|列名|データ型|  
 |--------------------|--------------|---------------|-------------|  
-|0|AdventureWorksDW2012|AverageRate|FLOAT|  
+|0|FactCurrencyRate|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|日付|  
-|3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  

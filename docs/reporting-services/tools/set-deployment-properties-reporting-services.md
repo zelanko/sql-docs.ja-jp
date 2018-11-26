@@ -13,12 +13,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: markingmyname
 ms.author: maghan
 ms.date: 03/07/2017
-ms.openlocfilehash: 204e8d3e85c76edac6ccc56e8fd3a5b51975bd28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63cee227f67a6e4c07974a296e3c512318d83fe2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681460"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813205"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>配置プロパティを設定する (Reporting Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "47681460"
   
 10. **[TargetServerURL]** ボックスに、対象レポート サーバーの URL を入力します。 レポートをパブリッシュする前に、このプロパティを有効なレポート サーバーの URL に設定する必要があります。 ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、レポート サーバーの仮想ディレクトリの URL を指定します (たとえば、http:*//server/reportserver* 、または https:*//server/reportserver*)。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。  
   
-     SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイト (http://*servername*、 http://*servername*/*site* 、 http://*servername*/*site*/*subsite*など) が使用されます。  
+     SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイト (https://*servername*、 https://*servername*/*site*、 https://*servername*/*site*/*subsite* など) が使用されます。  
   
 ### <a name="to-set-configuration-manager-properties"></a>構成マネージャーのプロパティを設定するには  
   

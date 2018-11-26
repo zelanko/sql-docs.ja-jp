@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0180124c5904c6ea1020ad92337a566d8418651
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96a2e1c791ba80a7aba39cd77e309228404a04a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791480"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697393"
 ---
 # <a name="statistics"></a>統計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47791480"
   
 ##  <a name="DefinitionQOStatistics"></a> コンポーネントおよび概念  
 ### <a name="statistics"></a>統計  
- クエリ最適化に関する統計は、テーブルまたはインデックス付きビューの 1 つまたは複数の列の値の分布に関する統計情報を格納するバイナリ ラージ オブジェクト (BLOB) です。 クエリ オプティマイザーでは、これらの統計を使用してクエリ結果の*カーディナリティ*、つまり行数を推定します。 これらの*カーディナリティの推定*に基づいて、クエリ オプティマイザーでは高品質なクエリ プランを作成できます。 たとえば、クエリ オプティマイザーは述語に応じてカーディナリティの推定を使用し、リソース消費の多い Index Scan 操作ではなく Index Seek 操作を選択することがあります。そうすることで、クエリのパフォーマンスが高まります。  
+ クエリ最適化に関する統計は、テーブルまたはインデックス付きビューの 1 つまたは複数の列の値の分布に関する統計情報を格納するバイナリ ラージ オブジェクト (BLOB) です。 クエリ オプティマイザーでは、これらの統計を使用してクエリ結果の*カーディナリティ*、つまり行数を推定します。 これらの*カーディナリティの推定*に基づいて、クエリ オプティマイザーでは高品質なクエリ プランを作成できます。 たとえば、ご利用の述語によっては、クエリ オプティマイザーがカーディナリティの推定を使用して、リソース消費の多い Index Scan 操作ではなく Index Seek 操作を選択することがあります。そうすることで、クエリのパフォーマンスが高まります。  
   
  統計オブジェクトは 1 つ以上のテーブル列で構成されるリストごとに作成され、それぞれに最初の列の値の分布を示す*ヒストグラム*が含まれます。 複数列の統計オブジェクトには、さらに、列間の値の相関関係に関する統計情報も格納されます。 これらの相関関係の統計情報 ( *密度*) は、個別の列値を持つ行の数から得られます。 
 
@@ -45,7 +45,7 @@ ms.locfileid: "47791480"
 **ヒストグラム**では、データセットの個別の値ごとに出現頻度を測定します。 クエリ オプティマイザーでは、統計オブジェクトの最初のキー列の列値に基づいてヒストグラムを計算し、行を統計的にサンプリングするかテーブルまたはビュー内のすべての行でフル スキャンを実行することによって列値を選択します。 サンプリングされた行のセットからヒストグラムを作成する場合、格納される行の総数および個別の値の数は推定値であり、必ずしも整数にはなりません。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のヒストグラムは、単一の列 (統計オブジェクトのキー列のセットの最初の列) に対してのみ作成されます。
+> <a name="frequency"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のヒストグラムは、単一の列 (統計オブジェクトのキー列のセットの最初の列) に対してのみ作成されます。
   
 ヒストグラムを作成するには、クエリ オプティマイザーで列値を並べ替え、個別の列値ごとに一致する値の数を計算し、列値を最大 200 の連続したヒストグラム区間に集計します。 各ヒストグラム区間には、列値の範囲と上限の列値が順番に含まれます。 この範囲には、境界値の間 (境界値自体は除く) のすべての有効な列値が含まれます。 格納される最小の列値は、最初のヒストグラム区間の上限境界値になります。
 
@@ -70,12 +70,12 @@ ms.locfileid: "47791480"
 -   点線は、範囲内にある個別の値の総数 (*distinct_range_rows*) および範囲内の値の総数 (*range_rows*) を推定するために使用されるサンプリングされた値を表します。 クエリ オプティマイザーでは、*range_rows* および *distinct_range_rows* を使用して *average_range_rows* を計算します。サンプリングされた値は格納されません。   
   
 #### <a name="density"></a>密度ベクトル  
-**密度**とは、特定の列または列の組み合わせにおける重複の数に関する情報であり、1/(個別の値の数) の式で計算されます。 クエリ オプティマイザーでは、同一のテーブルまたはインデックス付きビューから複数の列を返すクエリに対するカーディナリティの推定を向上させるために密度を使用します。 密度ベクトルには、統計オブジェクトの列のプレフィックスごとに 1 つの密度が格納されます。 
+**密度**とは、特定の列または列の組み合わせにおける重複の数に関する情報であり、1/(個別の値の数) の式で計算されます。 クエリ オプティマイザーでは、同一のテーブルまたはインデックス付きビューから複数の列を返すクエリに対するカーディナリティの推定を向上させるために密度を使用します。 密度が減少するにつれて、値の選択度が高くなります。 たとえば、車を表すテーブルの場合、同メーカーの車がいくつもあります。ただし、VIN (車両番号) はそれぞれの車両固有のものです。 VIN 上のインデックスは、製造元でのインデックスより選択度が高くなります。これは VIN の密度が製造元の場合より低いからです。 
 
 > [!NOTE]
 > 頻度とは、統計オブジェクトの最初のキー列における各個別値の発生に関する情報であり、"行数 * 密度" の式で計算されます。 最大頻度 1 は、一意の値を持つ列で確認できます。
 
-たとえば、統計オブジェクトに `CustomerId`、`ItemId`、`Price` というキー列がある場合、以下の列プレフィックスごとに密度が計算されます。
+密度ベクトルには、統計オブジェクトの列のプレフィックスごとに 1 つの密度が格納されます。 たとえば、統計オブジェクトに `CustomerId`、`ItemId`、`Price` というキー列がある場合、以下の列プレフィックスごとに密度が計算されます。
   
 |列プレフィックス|密度の計算対象|  
 |---|---|
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * 統計情報が評価された時点でテーブルのカーディナリティが 500 以下の場合、500 回変更されるたびに更新されます。
     * 統計情報が評価された時点でテーブルのカーディナリティが 500 よりも大きい場合、500 プラス 20% の数の変更があるたびに更新されます。
 
-* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。 これは、1,000 と現在のテーブルのカーディナリティの積の平方根として計算されます。 たとえば、テーブルに 200 万行含まれている場合、計算は sqrt (1000 * 2000000) = 44721.359 となります。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。  
+* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。 これは、1,000 と現在のテーブルのカーディナリティの積の平方根として計算されます。 たとえば、テーブルに 200 万行含まれている場合、計算は sqrt (1000 * 2000000) = 44721.359 となります。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。  
 
 > [!IMPORTANT]
 > [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。
@@ -121,7 +121,7 @@ ORDER BY s.name;
   
 AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。  
  
-AUTO_UPDATE_STATISTICS の制御の詳細については、「[SQL Server 内の Autostat (AUTO_UPDATE_STATISTICS) の動作を制御します。](http://support.microsoft.com/help/2754171)」をご覧ください。
+AUTO_UPDATE_STATISTICS の制御の詳細については、「[SQL Server 内の Autostat (AUTO_UPDATE_STATISTICS) の動作を制御します。](https://support.microsoft.com/help/2754171)」をご覧ください。
   
 #### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  統計の非同期更新オプション [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 既定では、統計の非同期更新オプションはオフであり、クエリ オプティマイザーによる統計の更新は同期更新になります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ステートメントを使用して作成された統計に適用されます。  
@@ -273,7 +273,7 @@ GO
 
 ### <a name="automatic-index-and-statistics-management"></a>インデックスと統計の自動管理
 
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) のようなソリューションを活用し、1 つまたは複数のデータベースに対するインデックスの最適化と統計更新を自動管理します。 このプロシージャでは、断片化レベルやその他のパラメーターに基づいてインデックスを再構築または再構成するか、線形しきい値で統計を更新するかが自動的に選択されます。
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) のようなソリューションを活用し、1 つまたは複数のデータベースに対するインデックスの最適化と統計更新を自動管理します。 このプロシージャでは、断片化レベルやその他のパラメーターに基づいてインデックスを再構築または再構成するか、線形しきい値で統計を更新するかが自動的に選択されます。
   
 ##  <a name="DesignStatistics"></a> 統計を効果的に使用するクエリ  
  クエリ述語にローカル変数や複雑な式が含まれている場合など、特定のクエリ実装では、最適なクエリ プランにならないことがあります。 クエリのデザイン ガイドラインに従って統計を効果的に使用することで、この問題を回避できる場合があります。 クエリ述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」を参照してください。   
@@ -378,15 +378,15 @@ GO
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)   
- [SQL Server で Autostat (AUTO_UPDATE_STATISTICS) 動作を制御する](http://support.microsoft.com/help/2754171)   
+ [SQL Server で Autostat (AUTO_UPDATE_STATISTICS) 動作を制御する](https://support.microsoft.com/help/2754171)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   

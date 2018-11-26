@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e40163fe08b451e59dc28915002079b80e987e6f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021186"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812279"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化
 
@@ -26,7 +26,7 @@ ms.locfileid: "50021186"
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
- SharePoint 製品のインストール後に SharePoint 2010 製品用の Reporting Services アドインをインストールした場合、レポート サーバーの統合機能と Power View の統合機能はルート サイト コレクションでのみアクティブ化されます。 他のサイト コレクションについては、この機能を手動でアクティブ化する必要があります。 たとえば、**http://[my server name]/sites/[site collection name]** というサイト コレクションが存在する場合は、Reporting Services のサイト コレクション機能を手動でアクティブ化する必要があります。  
+ SharePoint 製品のインストール後に SharePoint 2010 製品用の Reporting Services アドインをインストールした場合、レポート サーバーの統合機能と Power View の統合機能はルート サイト コレクションでのみアクティブ化されます。 他のサイト コレクションについては、この機能を手動でアクティブ化する必要があります。 たとえば、**https://[my server name]/sites/[site collection name]** というサイト コレクションが存在する場合は、Reporting Services のサイト コレクション機能を手動でアクティブ化する必要があります。  
   
  ルート サイト コレクションがない場合は、Reporting Services アドインによって、次のようなメッセージがログに記録されます。  
   

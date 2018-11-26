@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f09dd10c77c7e4d87e769748d9053f18fc6d0fe9
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678610"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811995"
 ---
 # <a name="set-default-options-for-report-builder"></a>レポート ビルダーの既定のオプションを設定する
   レポート ビルダーで、レポート作成を簡単かつ迅速にすることができる既定値を設定できます。  たとえば、既定のレポート サーバーを設定または変更すると、特に指定しない限り、同じレポート サーバーに自動的にレポートが保存されます。  
@@ -24,7 +24,7 @@ ms.locfileid: "47678610"
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[既定で使用するレポート サーバーまたは SharePoint サイト]**  
- このオプションは、管理者によって設定されている可能性があります。 値には、 http:// または https:// で始まる整形式の URL を設定できます。 この設定によって、テーブル/マトリックス ウィザードやグラフ ウィザードで既定で表示されるデータ ソース接続が決まります。 また、レポートはこのサーバーで処理され、このサーバーのリソースを参照できます。  
+ このオプションは、管理者によって設定されている可能性があります。 値には、 https:// または https:// で始まる整形式の URL を設定できます。 この設定によって、テーブル/マトリックス ウィザードやグラフ ウィザードで既定で表示されるデータ ソース接続が決まります。 また、レポートはこのサーバーで処理され、このサーバーのリソースを参照できます。  
   
  別のレポート サーバーを選択した場合、変更を有効にするにはレポート ビルダーの再起動が必要になることがあります。  
   

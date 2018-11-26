@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,17 +36,20 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864290"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704070"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でユーザー定義関数を作成します。 ユーザー定義関数は、パラメーターを受け取り、複雑な計算などのアクションを実行し、そのアクションの結果を値として返す [!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のルーチンです。 戻り値は、スカラー (単一) 値またはテーブルにすることができます。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でユーザー定義関数を作成します。 ユーザー定義関数は、パラメーターを受け取り、複雑な計算などのアクションを実行し、そのアクションの結果を値として返す [!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のルーチンです。 戻り値は、スカラー (単一) 値またはテーブルにすることができます。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   
 -   SELECT などの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で使用する  
   
@@ -135,6 +138,7 @@ RETURNS @return_variable TABLE <table_type_definition>
   | [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
   | [ EXECUTE_AS_Clause ]  
+  | [ INLINE = { ON | OFF }]  
 }  
   
 <table_type_definition>:: =   
@@ -345,15 +349,15 @@ RETURNS return_data_type
  アセンブリおよび作成した関数名が参照するメソッドを指定します。  
   
 -   *assembly_name* - 次の `name` 列にある値と一致する必要があります   
-    `SELECT * FROM sys.assemblies;`」をご覧ください。  
+    `SELECT * FROM sys.assemblies;`。  
     これは、`CREATE ASSEMBLY` ステートメントで使用された名前です。  
   
 -   *class_name* - 次の `assembly_name` 列にある値と一致する必要があります  
-    `SELECT * FROM sys.assembly_modules;`」をご覧ください。  
+    `SELECT * FROM sys.assembly_modules;`。  
     多くの場合、値には、埋め込まれたピリオドまたはドット (.) が含まれています。 このような場合は、Transact-SQL 構文で、値を角かっこ ([]) または二重引用符 ("") で囲む必要があります。  
   
 -   *method_name* - 次の `method_name` 列にある値と一致する必要があります   
-    `SELECT * FROM sys.assembly_modules;`」をご覧ください。  
+    `SELECT * FROM sys.assembly_modules;`。  
     メソッドを静的にする必要があります。  
   
  一般的な例として、MyFood.DLL において、すべての型が MyFood 名前空間にあるため、`EXTERNAL NAME` 値は次のようになることがあります。   
@@ -367,7 +371,7 @@ RETURNS return_data_type
   
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のテーブル データ型を定義します。 テーブルの定義には、列の定義、および列またはテーブルの制約が含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
  CLR 関数のテーブル データ型を定義します。 テーブルの定義には、列名およびデータ型のみが含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
   
@@ -418,18 +422,21 @@ RETURNS return_data_type
   
 -   CREATE FUNCTION ステートメントを実行したユーザーが、その関数が参照するデータベース オブジェクトに対する REFERENCES 権限を持っている。  
   
- RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
- スカラー値関数の **OnNULLCall** 属性を指定します。 指定しない場合は、既定で CALLED ON NULL INPUT が暗黙的に使用されます。 つまり、NULL が引数として渡された場合でも、関数本体が実行されます。  
+RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+スカラー値関数の **OnNULLCall** 属性を指定します。 指定しない場合は、既定で CALLED ON NULL INPUT が暗黙的に使用されます。 つまり、NULL が引数として渡された場合でも、関数本体が実行されます。  
   
- CLR 関数で RETURNS NULL ON NULL INPUT が指定されていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、受け取った引数のいずれかが NULL であった場合に関数の本体を呼び出すことなく NULL を返すことができます。 \<method_specifier> に指定された CLR 関数のメソッドに RETURNS NULL ON NULL INPUT を示すカスタム属性が既に設定されている場合に、CREATE FUNCTION ステートメントで CALLED ON NULL INPUT を指定すると、CREATE FUNCTION ステートメントの指定が優先されます。 CLR テーブル値関数には、**OnNULLCall** 属性を指定できません。 
+CLR 関数で RETURNS NULL ON NULL INPUT が指定されていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、受け取った引数のいずれかが NULL であった場合に関数の本体を呼び出すことなく NULL を返すことができます。 \<method_specifier> に指定された CLR 関数のメソッドに RETURNS NULL ON NULL INPUT を示すカスタム属性が既に設定されている場合に、CREATE FUNCTION ステートメントで CALLED ON NULL INPUT を指定すると、CREATE FUNCTION ステートメントの指定が優先されます。 CLR テーブル値関数には、**OnNULLCall** 属性を指定できません。 
   
- EXECUTE AS 句  
- ユーザー定義関数が実行されるセキュリティ コンテキストを指定します。 つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、関数で参照されているデータベース オブジェクトに対する権限を検証する際に使用するユーザー アカウントを制御できます。  
+EXECUTE AS 句  
+ユーザー定義関数が実行されるセキュリティ コンテキストを指定します。 つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、関数で参照されているデータベース オブジェクトに対する権限を検証する際に使用するユーザー アカウントを制御できます。  
   
 > [!NOTE]  
->  インライン ユーザー定義関数には EXECUTE AS を指定できません。  
+>  インライン テーブル値関数には EXECUTE AS を指定できません。
   
  詳細については、「[EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)」を参照してください。  
+
+INLINE = { ON | OFF }  
+このスカラー UDF をインライン化する必要があるかどうかを指定します。 この句は、スカラー ユーザー定義関数にのみ適用されます。 `INLINE` 句は必須ではありません。 `INLINE` 句を指定しないと、UDF をインライン化できるかどうかに基づいて、自動的に ON/OFF が設定されます。 `INLINE=ON` が指定されていても、UDF がインライン化できない場合は、エラーがスローされます。 詳細については、「[スカラー UDF のインライン化](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)」を参照してください。
   
  **\< column_definition >::=** 
   
@@ -580,7 +587,7 @@ RETURNS return_data_type
 |**SystemDataAccess**|関数が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスのシステム データ (システム カタログまたは仮想システム テーブル) にアクセスします。||  
 |**UserDataAccess**|関数が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスのユーザー データにアクセスします。|ユーザー定義テーブルと一時テーブルが含まれますが、テーブル変数は含まれません。|  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の有効桁数のプロパティと決定性のプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に決定されます。 CLR 関数のデータ アクセス プロパティと決定性のプロパティは、ユーザーが指定できます。 詳しくは、「[CLR 統合のカスタム属性の概要](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)」をご覧ください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の有効桁数のプロパティと決定性のプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に決定されます。 CLR 関数のデータ アクセス プロパティと決定性のプロパティは、ユーザーが指定できます。 詳しくは、「[CLR 統合のカスタム属性の概要](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)」をご覧ください。  
   
  これらのプロパティの現在の値を表示するには、[OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md) を使用します。  
   
@@ -665,7 +672,7 @@ RETURNS return_data_type
   
  また、この例では、[EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 句を使用して、ストアド プロシージャを実行できるセキュリティ コンテキストを指定します。 この例のオプション `CALLER` は、プロシージャが呼び出し元ユーザーのコンテキストで実行されることを指定しています。 指定できるその他のオプションは、SELF、OWNER、および *user_name* です。  
   
- 以下に関数呼び出しを示します。 `DATEFIRST` が `1` に設定されていることにご注意ください。  
+ 以下に関数呼び出しを示します。 `DATEFIRST` が `1` に設定されていることに注意してください。  
   
 ```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  

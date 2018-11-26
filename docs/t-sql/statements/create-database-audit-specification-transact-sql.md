@@ -23,12 +23,12 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c7f8c07725d702eb09cf538dc688136f230659c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2612f61d9a64d8b7d7cf156a1bd03d32d29dc1c9
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812720"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289882"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  監査アクションまたは監査アクション グループを適用するデータベース内のテーブル、ビュー、またはその他のセキュリティ保護可能なオブジェクトを指定します。 詳細については、「 [セキュリティ保護可能](../../relational-databases/security/securables.md)」を参照してください。  
   
  *principal*  
- 監査アクションまたは監査アクション グループを適用するデータベース プリンシパルの名前を指定します。 詳しくは、「[プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)」をご覧ください。  
+ 監査アクションまたは監査アクション グループを適用するデータベース プリンシパルの名前を指定します。 データベース プリンシパルをすべて監査するには、データベース プリンシパル `public` を使用します。 詳しくは、「[プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)」をご覧ください。  
   
  WITH ( STATE = { ON | OFF } )  
  監査による、この監査仕様についてのレコードの収集を有効または無効にします。  
@@ -91,8 +91,10 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
  データベース監査仕様の作成後は、`CONTROL SERVER` 権限、`ALTER ANY DATABASE AUDIT` 権限を持つプリンシパル、または `sysadmin` アカウントがその仕様を表示できます。  
   
-## <a name="examples"></a>使用例  
- 次の例では、`Payrole_Security_Audit` というサーバー監査を作成した後、`AdventureWorks2012` データベースの `HumanResources.EmployeePayHistory` テーブルで `dbo` ユーザーによる `SELECT` ステートメントと `INSERT` ステートメントを監査する、`Payrole_Security_Audit` というデータベース監査仕様を作成します。  
+## <a name="examples"></a>使用例
+
+### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. 任意のデータベース プリンシパルについてテーブルで SELECT と INSERT を監査する 
+ 次の例では、`Payrole_Security_Audit` というサーバー監査を作成した後、`AdventureWorks2012` データベースの `HumanResources.EmployeePayHistory` テーブルでユーザー (`public`) による `SELECT` ステートメントと `INSERT` ステートメントを監査する、`Payrole_Security_Audit` というデータベース監査仕様を作成します。  
   
 ```  
 USE master ;  
@@ -116,8 +118,39 @@ ADD (SELECT , INSERT
      ON HumanResources.EmployeePayHistory BY dbo )  
 WITH (STATE = ON) ;  
 GO  
-```  
+``` 
+
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. 特定のデータベース ロールについて _sales_ スキーマの_すべて_のオブジェクトで任意の DML (INSERT、UPDATE、または DELETE) を監査する  
+ 次の例では、`DataModification_Security_Audit` というサーバー監査を作成した後、`AdventureWorks2012` データベースでの `Sales` スキーマのすべてのオブジェクトについて、新しいデータベース ロール `SalesUK` のユーザーによる `INSERT`、`UPDATE` および `DELETE` ステートメントを監査する、`Audit_Data_Modification_On_All_Sales_Tables` というデータベース監査仕様を作成します。  
   
+```  
+USE master ;  
+GO  
+-- Create the server audit.
+-- Change the path to a path that the SQLServer Service has access to. 
+CREATE SERVER AUDIT DataModification_Security_Audit  
+    TO FILE ( FILEPATH = 
+'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA' ) ; 
+GO  
+-- Enable the server audit.  
+ALTER SERVER AUDIT DataModification_Security_Audit   
+WITH (STATE = ON) ;  
+GO  
+-- Move to the target database.  
+USE AdventureWorks2012 ;  
+GO  
+CREATE ROLE SalesUK
+GO
+-- Create the database audit specification.  
+CREATE DATABASE AUDIT SPECIFICATION Audit_Data_Modification_On_All_Sales_Tables  
+FOR SERVER AUDIT DataModification_Security_Audit  
+ADD ( INSERT, UPDATE, DELETE  
+     ON Schema::Sales BY SalesUK )  
+WITH (STATE = ON) ;    
+GO  
+```  
+
+
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

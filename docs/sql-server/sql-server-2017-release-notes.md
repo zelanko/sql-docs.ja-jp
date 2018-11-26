@@ -11,26 +11,26 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ff000457e8328864ac8e77c5d21b0048da3b024
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d414f256e0eb06bfe3925b0e8e1a61b4799c3c7c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419407"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703770"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 ここでは、SQL Server 2017 での制限事項と問題について説明します。 関連情報については、次を参照してください。
 - [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 上の SQL Server のリリース ノート](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
-- [SQL Server 2017 の累積的な更新プログラム](http://aka.ms/sql2017cu): 最新の累積的な更新プログラム (CU) のリリースに関する情報
+- [SQL Server 2017 の累積的な更新プログラム](https://aka.ms/sql2017cu): 最新の累積的な更新プログラム (CU) のリリースに関する情報
 
 **SQL Server をお試しください。**
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 のダウンロード](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 のダウンロード](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Virtual Machine の作成](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017 で Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
-> SQL Server 2019 のプレビューがご利用いただけるようになりました。 詳細については、「[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)」 (SQL Server 2019 の新機能) を参照してください。
+> SQL Server 2019 のプレビューがご利用いただけるようになりました。 詳細については、「[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)」(SQL Server 2019 の新機能) を参照してください。
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 一般提供リリース (2017 年 10 月)
 ### <a name="database-engine"></a>データベース エンジン
@@ -44,12 +44,12 @@ ms.locfileid: "49419407"
     3. もう一度、元の共有名で **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をチェックして、**[適用]** をクリックします。
 
 ### <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
-- **問題およびユーザーへの影響:** [user permissions]\(ユーザーのアクセス許可)\ のページで、エンティティのツリー ビューのルート レベルにアクセス許可を付与すると、次のエラーが表示される: `"The model permission cannot be saved. The object guid is not valid"`
+- **問題およびユーザーへの影響:**  [ユーザーのアクセス許可] ページで、エンティティのツリー ビューのルート レベルにアクセス許可を付与すると、次のエラーが表示される: `"The model permission cannot be saved. The object guid is not valid"`
 
 - **回避策:** 
   - ツリー ビューのルート レベルではなくサブノードにアクセス許可を付与します。
   - 内の複数の
-  - MDS チーム ブログの[エンティティ レベルでのアクセス許可適用時のエラー](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)に関する投稿に記されているスクリプトを実行します
+  - MDS チーム ブログの[エンティティ レベルでのアクセス許可適用時のエラー](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)に関する投稿に記されているスクリプトを実行します
 
 ### <a name="analysis-services"></a>Analysis Services
 - **問題およびユーザーへの影響:** 次のソースのデータ コネクタは、1400 互換性レベルの表形式モデルではまだ使用できません。

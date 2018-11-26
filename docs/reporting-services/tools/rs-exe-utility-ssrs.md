@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30457df56828e9a2c197b44126555c63f17c40f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681940"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813045"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -56,7 +56,7 @@ rs {-?}
  (必須) 実行する .rss ファイルを指定します。 この値は、.rss ファイルへの相対パスまたは完全修飾パスになります。  
   
  **-s** *serverURL*  
- (必須) Web サーバー名とレポート サーバーの仮想ディレクトリ名を指定して、対象ファイルを実行します。 レポート サーバーの URL は、 `http://examplewebserver/reportserver`のように指定します。 サーバー名の先頭のプレフィックス http:// または https:// は省略可能です。 プレフィックスを省略した場合、レポート サーバーのスクリプト ホストは、まず https の使用を試み、https が使用できない場合は、http を使用します。  
+ (必須) Web サーバー名とレポート サーバーの仮想ディレクトリ名を指定して、対象ファイルを実行します。 レポート サーバーの URL は、 `https://examplewebserver/reportserver`のように指定します。 サーバー名の先頭のプレフィックス https:// または https:// は省略可能です。 プレフィックスを省略した場合、レポート サーバーのスクリプト ホストは、まず https の使用を試み、https が使用できない場合は、http を使用します。  
   
  **-u** [*domain*\\]*username*  
  (省略可) レポート サーバーへの接続に使用するユーザー アカウントを指定します。 **-u** および **-p** を省略した場合、現在の Windows ユーザー アカウントが使用されます。  
@@ -88,7 +88,7 @@ rs {-?}
   
  **-v** 引数はコマンド ラインで指定され、ユーザーのスクリプトに定義されているグローバル変数の値を実行時に設定するために使用されます。 たとえば、スクリプトに *parentFolder*という名前の変数が含まれている場合、そのフォルダーの名前をコマンド ラインで指定することができます。  
   
- `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
+ `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
  指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v a=**"**1**" **-v b=**"**2**" は、" **1** " の値を持つ**a**という名前の変数と、" **2** " の値を持つ**b**という変数を表します。  
   
@@ -104,7 +104,7 @@ rs {-?}
  次の例では、実行する [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプト、および Web サービス メソッドを含むスクリプト ファイルの指定方法を示しています。  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  

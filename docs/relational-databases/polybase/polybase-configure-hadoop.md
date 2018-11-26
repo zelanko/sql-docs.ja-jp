@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806722"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606562"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
 
@@ -35,11 +35,9 @@ ms.locfileid: "49806722"
 
 - PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop プロバイダーをサポートしています。 Hadoop では、新規リリースについて "Major.Minor.Version" パターンを採用しており、サポートされているメジャーおよびマイナー リリース内のすべてのバージョンがサポートされています。 次の Hadoop プロバイダーがサポートされています。
 
-  - Linux/Windows Server 上の Hortonworks HDP 1.3  
-  - Linux 上の Hortonworks HDP 2.1 ～ 2.6
-  - Windows Server 上の Hortonworks HDP 2.1 - 2.3  
-  - Linux 上の Cloudera CDH 4.3  
-  - Linux 上の Cloudera CDH 5.1 – 5.5、5.9 - 5.13
+  - Linux 上の Hortonworks HDP 1.3、2.1 - 2.6、3.0
+  - Windows Server 上の Hortonworks HDP 1.3、2.1 - 2.3
+  - Linux 上の Cloudera CDH 4.3、5.1 - 5.5、5.9 - 5.13
 
 > [!NOTE]
 > PolyBase では、SQL Server 2016 SP1 CU7 および SQL Server 2017 CU3 以降の Hadoop 暗号化ゾーンがサポートされています。 [PolyBase スケールアウト グループ](polybase-scale-out-groups.md)を使用する場合は、すべての計算ノードを、Hadoop 暗号化ゾーンがサポートされたビルド上に配置にする必要があります。
@@ -75,7 +73,7 @@ ms.locfileid: "49806722"
 1. SQL Server のインストール パスで **yarn-site.xml** というファイルを検索します。 通常、このパスは次のとおりです。  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
    ```  
 
 1. Hadoop コンピューターで、Hadoop 構成ディレクトリ内の対応するファイルを検索します。 このファイル内の構成キー yarn.application.classpath の値をコピーします。  

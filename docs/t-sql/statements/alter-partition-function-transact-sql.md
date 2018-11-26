@@ -26,12 +26,12 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd91fdb2419be15b08fc42ee4928f8bf52c56a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 577e3013c3538d641da81d416cd016041df80143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709740"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637869"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  新しいパーティションを保持するには、ファイル グループがオンラインに存在し、このパーティション関数を使用するパーティション構成によって NEXT USED とマークされている必要があります。 ファイル グループは、CREATE PARTITION SCHEME ステートメントでパーティションに割り当てられます。 CREATE PARTITION SCHEME ステートメントで必要以上のファイル グループを割り当てた (CREATE PARTITION FUNCTION ステートメントで、パーティションを含めるファイル グループよりも少ないパーティションを作成した) 場合、割り当てられていないファイル グループができ、そのうちの 1 つがパーティション構成によって NEXT USED とマークされます。 このファイル グループに、新しいパーティションが保持されます。 パーティション構成によって NEXT USED とマークされたファイル グループがない場合、新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用して、ファイル グループを追加するか、既存のファイル グループを指定する必要があります。 既にパーティションを保持するファイル グループは、追加のパーティションを保持するように指定できます。 1 つのパーティション関数を複数のパーティション構成に関連付けできるので、パーティションを追加するパーティション関数を使用するには、すべてのパーティション構成に NEXT USED ファイル グループが必要です。 NEXT USED ファイル グループがない場合、パーティション構成に NEXT USED ファイル グループが存在しないというエラーが表示され、ALTER PARTITION FUNCTION が失敗します。  
   
- すべてのパーティションを同じファイル グループ内に作成した場合、最初に、そのグループが自動的に NEXT USED ファイル グループに割り当てられます。 ただし、分割操作が実行されると、指定された NEXT USED ファイル グループがなくなります。 このファイル グループは、ALTER PARITION SCHEME を使用して NEXT USED ファイル グループになるように明示的に割り当てる必要があります。そうしないと、その後の分割操作は失敗します。  
+ すべてのパーティションを同じファイル グループ内に作成した場合、最初に、そのグループが自動的に NEXT USED ファイル グループに割り当てられます。 ただし、分割操作が実行されると、指定された NEXT USED ファイル グループがなくなります。 このファイル グループは、ALTER PARTITION SCHEME を使用して NEXT USED ファイル グループになるように明示的に割り当てる必要があります。そうしないと、その後の分割操作は失敗します。  
   
 > [!NOTE]  
 >  列ストア インデックスに関する制限: テーブルに列ストア インデックスが存在する場合は、空のパーティションのみを分割できます。 この操作を実行する前に、列ストア インデックスを削除するか無効にする必要があります  
@@ -93,7 +93,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 -   一連の ALTER PARTITION FUNCTION ステートメントを実行します。  
   
- ALTER PARITITION FUNCTION の影響を受けるすべてのファイル グループは、オンラインである必要があります。  
+ ALTER PARTITION FUNCTION の影響を受けるすべてのファイル グループは、オンラインである必要があります。  
   
  そのパーティション関数を使用するテーブル上に、無効化されたクラスター化インデックスがあると、ALTER PARTITION FUNCTION は失敗します。  
   

@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8764d1e8b8ae4facebf49fa746740f69fb8148e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a8daefea37ba33264ca6fa4498f89201abeb0d0
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752760"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571391"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  データ ソースにアクセスするときに使用される、OLE DB プロバイダーの PROGID として登録されている名前を指定します。 *provider_name* のデータ型は **char** であり、既定値はありません。  
   
  *init_string*  
- 接続先のプロバイダーの IDataInitialize インターフェイスに渡される接続文字列を指定します。 プロバイダーの文字列には、**'**_keyword1_=_value_**;***keyword2*=* value***'** のように、セミコロンで区切ったキーワードと値の組を指定します。  
+ 接続先のプロバイダーの IDataInitialize インターフェイスに渡される接続文字列を指定します。 プロバイダー文字列の構文は、**'**_keyword1_=_value_ **;** _keyword2_=_value_**'** のように、セミコロンで区切ったキーワードと値のペアに基づいています。  
   
  プロバイダーでサポートされる、特定のキーワードと値の組み合わせについては、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK を参照してください。 このドキュメントには、基本構文が定義されています。 次の表は、*init_string* 引数で最もよく使われるキーワードの一覧です。  
   

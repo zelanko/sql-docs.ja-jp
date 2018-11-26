@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 646d0cd8cb030e2e848ce5bd56b7b3ee228db449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817683"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663358"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47817683"
   
 -   Azure サブスクリプションを所有していること。  
   
--   最新の [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (5.2.0 以降) がインストールされていること。  
+-   最新の [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 以降) がインストールされていること。  
 
 -   Azure Active Directory を作成する。  
 
@@ -239,10 +239,13 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
    
   
 ## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>パート III: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをインストールする  
- [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/p/?LinkId=521700)から SQL Server コネクタをダウンロードします。 (この作業は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行う必要があります。)  
+ [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=521700)から SQL Server コネクタをダウンロードします。 (この作業は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行う必要があります。)  
 
 > [!NOTE]  
->  1.0.0.440 以前のバージョンは置き換えられ、実稼働環境ではサポートされなくなりました。 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=45344)にアクセスし、[[SQL Server コネクタのメンテナンスとトラブルシューティング]](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) ページの「SQL Server コネクタのアップグレード」に示されている手順を使用して、バージョン 1.0.1.0 以降にアップグレードしてください。
+>  1.0.0.440 以前のバージョンは置き換えられ、実稼働環境ではサポートされなくなりました。 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=45344)にアクセスし、[[SQL Server コネクタのメンテナンスとトラブルシューティング]](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) ページの "SQL Server コネクタのアップグレード" に示されている手順を使用して、バージョン 1.0.1.0 以降にアップグレードしてください。
+
+> [!NOTE]  
+> バージョン 1.0.5.0 では、サムプリントのアルゴリズムについて破壊的変更があります。 バージョン 1.0.5.0 にアップグレードした後、データベースの復元でエラーが発生する可能性があります。 サポート技術情報の記事 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0) をご覧ください。
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   

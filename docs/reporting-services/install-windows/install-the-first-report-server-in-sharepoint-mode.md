@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 681f64500bdc7cac83a580dc5a2abef27ff4535d
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: f89e3d512c76557548ef3fc707861e708a28dc64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051194"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814135"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint モードでの最初のレポート サーバーのインストール
 
@@ -270,7 +270,7 @@ ms.locfileid: "50051194"
   
 1.  次の手順は、SharePoint 2013 の場合に、SharePoint サイトが 2013 の **体験版**用に構成されていることを前提としています。  
   
-     ブラウザーで目的の SharePoint サイトを開きます。 たとえば、 http://\<サーバー名>/sites/bi などです。  
+     ブラウザーで目的の SharePoint サイトを開きます。 例: https://\<サーバー名>/sites/bi  
   
 2.  **[設定]** ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") を選びます。  
   
@@ -373,8 +373,8 @@ write-host -foregroundcolor DarkGray $time
 Write-Host -ForegroundColor Green "Enable the PowerView and reportserver site features"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
 #!!!! update "-url"  of the site where you want the features enabled  
-Enable-SPfeature -identity "powerview" -Url http://server/sites/bi  
-Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi  
+Enable-SPfeature -identity "powerview" -Url https://server/sites/bi  
+Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi  
   
 ####To Verify, you can run the following:  
 #Get-SPRSServiceApplication  

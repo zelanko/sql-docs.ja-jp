@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2527a7ed3401ea2da3269efb98a01c4d74651132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32e830639abf73e85051486c8fa542bc0d1842a9
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799130"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560205"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -247,7 +247,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="examples-use-the-adventureworks-database"></a>使用例では、AdventureWorks データベースを使用します。  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. CREATE STATISTICS を SAMPLE number PERCENT と共に使用する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Contact` テーブルにある `BusinessEntityID` 列と `EmailPromotion` 列の 5% のランダムなサンプルを使用して、`ContactMail1` 統計情報を作成します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ContactMail1` テーブルにある `BusinessEntityID` 列と `EmailPromotion` 列の 5% のランダムなサンプルを使用して、`Contact` 統計情報を作成します。  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -278,7 +278,7 @@ GO
 ### <a name="d-create-statistics-on-an-external-table"></a>D. 統計、外部テーブルを作成します。  
  列の一覧を提供するだけでなく、外部テーブルの統計を作成するときにする必要がある唯一の意思決定は、行をサンプリングすることによって、またはすべての行をスキャンして統計を作成するかどうかです。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フル スキャンのオプション、統計を作成するを一時テーブルに外部テーブルからデータをインポートがかなり長くかかります。 大きなテーブルの場合は、既定のサンプリング方法通常で十分です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フル スキャンのオプション、統計を作成するを一時テーブルに外部テーブルからデータをインポートがかなり長くかかります。 大きなテーブルの場合は、既定のサンプリング方法通常で十分です。  
   
 ```sql  
 --Create statistics on an external table and use default sampling.  
@@ -288,19 +288,19 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
- 次の例では、`Contact` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `ContactMail2` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
+### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
+ 次の例では、`Contact` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `ContactMail2` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
+  
+```sql  
+CREATE STATISTICS NamePurchase  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+```  
   
-```sql  
-CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
-```  
+### Examples using AdventureWorksDW database. 
   
-### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW データベースの使用例。 
-  
-### <a name="f-create-statistics-on-two-columns"></a>F. 2 つの列の統計を作成する  
- 次の例では、`DimCustomer` テーブルの `CustomerKey` 列と `EmailAddress` 列に基づいて、`CustomerStats1` 統計を作成します。 統計は、`Customer` テーブルの行の統計的に優位なサンプリングに基づいて作成されます。  
+### F. Create statistics on two columns  
+ The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  

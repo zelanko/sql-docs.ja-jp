@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6096869fb812034dbcd313cfbe0ab95373d27f23
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100293"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703960"
 ---
 # <a name="create-external-table-transact-sql"></a>外部テーブル (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,7 +142,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [schema_name] です。 |schema_name です。 ] *table_name*  
  1 つを 3 つの一部の名前を作成するテーブル。 外部テーブルのテーブルのメタデータのみのファイルまたはフォルダーの Hadoop または Azure blob ストレージ内で参照に関する基本的な統計情報と値は SQL に格納されます。 実際のデータは移動されず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されません。  
   
- \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、1 つまたは複数の列の定義を使用できます。 CREATE EXTERNAL TABLE と CREATE TABLE の両方の列を定義する同じ構文を使用します。 例外が次のようには、外部テーブルで、既定の制約を使用することはできません。 列の定義とそのデータ型の詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」と「[CREATE TABLE (Transact-SQL)](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)」を使用してください。  
+ \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、1 つまたは複数の列の定義を使用できます。 CREATE EXTERNAL TABLE と CREATE TABLE の両方の列を定義する同じ構文を使用します。 例外が次のようには、外部テーブルで、既定の制約を使用することはできません。 列の定義とそのデータ型の詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」と「[CREATE TABLE (Transact-SQL)](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)」を使用してください。  
   
  データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータを照会するときに、ファイルの行が拒否されます。  
   
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  Hadoop または Azure blob ストレージでは、フォルダーまたはファイル パスと、実際のデータのファイル名を指定します。 ルート フォルダーから、場所を開始します。ルート フォルダーは、外部データ ソースで指定されたデータの場所です。  
 
 
-SQL Server では、CREATE EXTERNAL TABLE ステートメントによって、まだ存在しない場合にパスとフォルダーが作成されます。 その後、INSERT INTO を使用して、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートすることができます。 詳細については、「[PolyBase クエリ](/sql/relational-databases/polybase/polybase-queries)」を参照してください。 
+SQL Server では、CREATE EXTERNAL TABLE ステートメントによって、まだ存在しない場合にパスとフォルダーが作成されます。 その後、INSERT INTO を使用して、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートすることができます。 詳細については、[PolyBase クエリ](/sql/relational-databases/polybase/polybase-queries)に関するページを参照してください。 
 
 SQL Data Warehouse と Analytics Platform System では、[CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) ステートメントによって、存在しない場合にパスとフォルダーが作成されます。 これらの 2 つの製品では、CREATE EXTERNAL TABLE によってパスとフォルダーは作成されません。
 
@@ -161,7 +161,7 @@ SQL Data Warehouse と Analytics Platform System では、[CREATE EXTERNAL TABLE
   
  ![外部テーブルの再帰型データ](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部テーブルの再帰型データ")  
   
- 既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性 \<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`のようにします。  
+ 既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性 \<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` のようにします。  
   
  DATA_SOURCE = *external_data_source_name*  
  外部のデータの場所を含む外部データ ソースの名前を指定します。 この場所は、Hadoop または Azure blob ストレージです。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。  
@@ -265,7 +265,7 @@ REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
 ## <a name="general-remarks"></a>全般的な解説  
  つまりから外部テーブルの選択、アドホック クエリのシナリオでは、PolyBase は、一時テーブルに外部データ ソースから取得された行を格納します。 クエリが完了したら、PolyBase は削除し、一時テーブルを削除します。 SQL テーブルには、永続的なデータは格納されません。  
   
- これに対し、シナリオでは、インポート、つまりにから外部テーブルの選択、PolyBase では、SQL テーブル内の永続的なデータとして、外部データ ソースから取得された行に格納します。 Polybase が外部のデータを取得するときに、クエリの実行中に、新しいテーブルが作成されます。  
+ これに対し、シナリオでは、インポート、つまりにから外部テーブルの選択、PolyBase では、SQL テーブル内の永続的なデータとして、外部データ ソースから取得された行に格納します。 PolyBase が外部のデータを取得するときに、クエリの実行中に、新しいテーブルが作成されます。  
   
  PolyBase は、クエリのパフォーマンスを向上させるために Hadoop をクエリの計算の一部をプッシュできます。 これには、述語のプッシュ ダウンは呼び出されます。 これを有効にするには、[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) で、Hadoop のリソース マネージャーの場所のオプションを指定します。  
   
@@ -553,7 +553,7 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a>参照  
- [共通のメタデータのクエリ例 (SQL Server PDW)](http://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
+ [共通のメタデータのクエリ例 (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
