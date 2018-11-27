@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51813675"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループと合計の追加 (Reporting Services)
 このチュートリアルのレッスンでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートにグループ化と合計を追加して、データを整理して要約します。  
   
   
@@ -31,13 +31,13 @@ ms.locfileid: "51813675"
   
     ![日付グループの追加](../reporting-services/media/rs-basictablegroups1design.png "日付グループの追加")  
   
-4.  **レポート データ** ペインから **行グループ** ペインに **[Order]** フィールドをドラッグします。 **詳細**の上、日付の下に配置します。
+4.  **レポート データ** ペインから **行グループ** ペインに **[Order]** フィールドをドラッグします。 **(詳細)** の上、Date の下に配置します。
 
     ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    2 つのグループを示す場合、行ハンドルには 2 個の角かっこ ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png) が表示されることに注意してください。 テーブルにも 2 つの **注文** 列が表示されます。  
+    2 つのグループを示す場合、行ハンドルには 2 個の角かっこ ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png) が表示されることに注意してください。 テーブルにも 2 つの **Order** 列が表示されます。  
   
-5.  二重線の **右側** にある元の **日付** 列と **注文** 列を削除します。 これにより、この個別のレコード値が削除されるので、グループ値のみが表示されます。 2 つの列の列ハンドルを選択し、右クリックして **[列の削除]** をクリックします。  
+5.  二重線の **右側** にある元の **Date** 列と **Order** 列を削除します。 これにより、この個別のレコード値が削除されるので、グループ値のみが表示されます。 2 つの列の列ハンドルを選択し、右クリックして **[列の削除]** をクリックします。  
   
     ![削除する列を選択する](../reporting-services/media/rs-basictablegroupsdeletecols.gif "削除する列を選択する")  
   
@@ -110,7 +110,7 @@ ms.locfileid: "51813675"
   
 1.  オプションの手順では、完成したレポートをネイティブ モードのレポート サーバーにパブリッシュして、Web ポータルでレポートを表示できるようにします。  
   
-2.   **[プロジェクト]** メニューの **[チュートリアルのプロパティ]** をクリックします。  
+2.  **[プロジェクト]** メニューの **[チュートリアルのプロパティ]** をクリックします。  
   
 3.  **TargetServerURL** に、レポート サーバーの名前を入力します。たとえば、次のように入力します。   
     - `http:/<servername>/reportserver`  
@@ -119,7 +119,7 @@ ms.locfileid: "51813675"
   
   
 4. TargetReportFolder がチュートリアルのプロジェクトの名前であることに注意してください。  これは、次のステップでレポートが配置されるフォルダーの名前です。  
-5.  **[OK]** をクリックします。  
+5. **[OK]** をクリックします。  
   
 6.  **[ビルド]** メニューの **[チュートリアルの配置]** をクリックします。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "51813675"
     > ========== ビルド: 正常終了または最新の状態 1、失敗 0、スキップ 0 ==========  
     > ========== 配置: 1 正常終了、0 失敗、0 スキップ ==========  
   
-    次のようなメッセージが表示されている場合は、レポート さーばーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
+    次のようなメッセージが表示されている場合は、レポート サーバーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
   
     > "ユーザー 'XXXXXXXX\\&lt;ユーザー名&gt;' には、この操作を行うのに必要な権限が許可されていません。"  
   
