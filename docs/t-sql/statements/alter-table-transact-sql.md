@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7676df1bf5d5a556b79cdcfe0797884438150190
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701120"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503652"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -593,9 +593,9 @@ WITH ( ONLINE = ON | OFF) (\<列の変更の適用対象として>)
   
 -   `WAIT_AT_LOW_PRIORITY` オプションは、オンラインでの列の変更に使用できません。  
   
--   オンラインでの列の変更では、`ALTER COLUMN … ADD/DROP PERSISTED` はサポートされていません。  
+-   オンラインでの列の変更では、`ALTER COLUMN ... ADD/DROP PERSISTED` はサポートされていません。  
   
--   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` は、オンラインでの列の変更の影響を受けません。  
+-   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` は、オンラインでの列の変更の影響を受けません。  
   
 -   変更履歴が有効になっているか、テーブルがマージ レプリケーションのパブリッシャーである場合、オンラインでの列の変更ではテーブルの変更をサポートしていません。  
   
@@ -627,7 +627,7 @@ WITH CHECK | WITH NOCHECK
 
 ALTER INDEX *index_name* *index_name* のバケット数が変更されることを指定します。
   
-構文 ALTER TABLE … ADD/DROP/ALTER INDEX は、メモリ最適化テーブルでのみサポートされます。    
+構文 ALTER TABLE ...ADD/DROP/ALTER INDEX は、メモリ最適化テーブルでのみサポートされます。    
 
 > [!IMPORTANT]
 > ALTER TABLE ステートメントを使用しない場合、メモリ最適化テーブルのインデックスに対してステートメント [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md)、[PAD_INDEX](alter-table-index-option-transact-sql.md) を使用することはできません。
@@ -660,7 +660,7 @@ XML インデックスがテーブルに存在する場合、PRIMARY KEY 制約�
 INDEX *index_name*    
 *index_name* がテーブルから削除されることを指定します。
   
-構文 ALTER TABLE … ADD/DROP/ALTER INDEX は、メモリ最適化テーブルでのみサポートされます。    
+構文 ALTER TABLE ...ADD/DROP/ALTER INDEX は、メモリ最適化テーブルでのみサポートされます。    
 
 > [!IMPORTANT]
 > ALTER TABLE ステートメントを使用しない場合、メモリ最適化テーブルのインデックスに対してステートメント [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md)、[PAD_INDEX](alter-table-index-option-transact-sql.md) を使用することはできません。
@@ -1008,7 +1008,7 @@ IF EXISTS
  ALTER COLUMN 句で列のデータ型の新しいサイズを指定すると、列の長さ、有効桁数、または小数点以下桁数を変更できます。 列内にデータが存在する場合は、新しいサイズをデータの最大サイズより小さくすることはできません。 また、インデックス内で列を定義することはできません。ただし、その列のデータ型が **varchar**、**nvarchar**、または **varbinary** であり、インデックスが PRIMARY KEY 制約の結果として生じたものでない場合は除きます。 例 P を参照してください。  
   
 ## <a name="locks-and-alter-table"></a>ロックと ALTER TABLE  
- ALTER TABLE で指定した変更は、直ちに実装されます。 変更でテーブル内の行の修正が必要になる場合、ALTER TABLE では行が更新されます。 ALTER TABLE では、変更中にテーブルのメタデータが他の接続で参照されないように、テーブルに対してスキーマ修正 (SCH-M) ロックが取得されます。ただし、オンライン インデックス操作の終了時に、非常に短い時間 SCH-M ロックを必要とする場合は、このロックの取得は行われません。 `ALTER TABLE…SWITCH` 操作では、ロックはソース テーブルと対象テーブルの両方に対して取得されます。 テーブルに加えられた変更はログに記録され、完全に復旧できます。 列の削除や、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における既定値を伴う NOT NULL 列の追加など、きわめて大きなテーブル内のすべての行に影響する変更は、その実行終了までに長い時間がかかり、多くのログ レコードが生成されます。 このような ALTER TABLE ステートメントは、多くの行に影響する INSERT、UPDATE、DELETE の各ステートメントと同じように、十分な注意を払って実行する必要があります。  
+ ALTER TABLE で指定した変更は、直ちに実装されます。 変更でテーブル内の行の修正が必要になる場合、ALTER TABLE では行が更新されます。 ALTER TABLE では、変更中にテーブルのメタデータが他の接続で参照されないように、テーブルに対してスキーマ修正 (SCH-M) ロックが取得されます。ただし、オンライン インデックス操作の終了時に、非常に短い時間 SCH-M ロックを必要とする場合は、このロックの取得は行われません。 `ALTER TABLE...SWITCH` 操作では、ロックはソース テーブルと対象テーブルの両方に対して取得されます。 テーブルに加えられた変更はログに記録され、完全に復旧できます。 列の削除や、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における既定値を伴う NOT NULL 列の追加など、きわめて大きなテーブル内のすべての行に影響する変更は、その実行終了までに長い時間がかかり、多くのログ レコードが生成されます。 このような ALTER TABLE ステートメントは、多くの行に影響する INSERT、UPDATE、DELETE の各ステートメントと同じように、十分な注意を払って実行する必要があります。  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>オンライン操作としての NOT NULL 列の追加  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 以降では、既定値を持つ NOT NULL 列の追加は、既定値が*ランタイム定数*である場合、オンライン操作です。 これは、テーブル内の行数に関係なく、操作がほぼ瞬時に完了することを意味します。 テーブル内の既存の行は、操作中に更新されないためです。その代わりに、既定値はテーブルのメタデータだけに格納され、これらの列にアクセスするクエリで必要になった場合に値が参照されます。 この動作は自動的に行われます。ADD COLUMN 構文以外に、オンライン操作を実装するための追加の構文は必要ありません。 ランタイム定数は、決定性に関係なく、テーブルの各行に対して実行時に同じ値を生成する式です。 たとえば、定数式 "My temporary data" やシステム関数 GETUTCDATETIME() は、ランタイム定数です。 一方、関数の `NEWID()` や `NEWSEQUENTIALID()` は、テーブルの各行で一意の値が生成されるので、ランタイム定数ではありません。 ランタイム定数ではない既定値を持つ NOT NULL 列の追加は、常にオフラインで実行され、操作中は排他 (SCH-M) ロックが取得されます。  
@@ -1822,7 +1822,7 @@ ORDER BY p.partition_number;
 ```  
   
 ### <a name="c-determining-the-partition-column-for-a-partitioned-table"></a>C. パーティション テーブルのパーティション列を調べる  
- 次のクエリでは、テーブルのパーティション分割列の名前を返します。 `FactResellerSales`。  
+ 次のクエリでは、テーブルのパーティション分割列の名前を返します。 `FactResellerSales`  
   
 ```sql  
 SELECT t.object_id AS Object_ID, t.name AS TableName, 

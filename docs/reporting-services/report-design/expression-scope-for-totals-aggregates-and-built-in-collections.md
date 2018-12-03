@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8682e9016830309f7f8a0ce43d8dd72f6192e35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738310"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394015"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>合計、集計、および組み込みコレクションの式のスコープ
   式の作成に関して、 *スコープ* という用語は、さまざまな文脈で用いられています。 スコープは、式を評価するのに使用するデータ、表示されたページのテキスト ボックスのセット、または表示と非表示を切り替えることのできるレポート アイテムのセットを示します。 *スコープ* という用語は、式の評価、集計関数の構文、条件付き表示に関連したトピックと、これらの領域に関連したエラー メッセージで使用されます。 次の説明を参考にして、どの意味で *スコープ* が適用されているかを区別してください。  
@@ -68,7 +68,7 @@ ms.locfileid: "47738310"
      次の式は、SellStartDate と LastReceiptDate の間にある年数を生成します。 これらのフィールドは、DataSet1 と DataSet2 の異なる 2 つのデータセットに含まれます。 集計関数である [First 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) は、DataSet1 にある SellStartDate の最初の値と、DataSet2 にある LastReceiptDate の最初の値を返します。  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **ドメイン スコープ** 同期スコープとも呼ばれます。 入れ子になったデータ領域の式の評価に適用されるデータ スコープの種類。 ドメイン スコープはすべてのグループ インスタンスの集計を示すのに使用されるため、入れ子になったインスタンスを揃えて簡単に比較できます。 たとえば、値を並べるには、テーブルに埋め込まれたスパークラインの範囲と高さを揃えます。  

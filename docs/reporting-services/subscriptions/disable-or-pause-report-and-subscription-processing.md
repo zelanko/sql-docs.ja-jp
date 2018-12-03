@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68cdbca9db8c1495569c8b3688215616fe2ba33f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 740a342a11d7e02a3922fcf846855c4dc4d6e023
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814165"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405899"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を無効化または一時停止する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポートやサブスクリプションの処理を無効化または一時停止するには、複数の方法があります。 このトピックで説明する範囲は、サブスクリプションの無効化から、データ ソース接続の中断までです。 両方の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードですべての方法を使用することはできません。次の表は、方法とサポートされる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードをまとめたものです。  
@@ -64,7 +64,7 @@ ms.locfileid: "51814165"
 ```  
 #disable specific subscription  
 $rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
-$subscriptionID = "subscription guid”;  
+$subscriptionID = "subscription guid";  
 $rs2010.DisableSubscription($subscriptionID);  
   
 ```  

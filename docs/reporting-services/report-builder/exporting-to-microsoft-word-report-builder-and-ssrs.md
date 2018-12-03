@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814095"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393337"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -179,7 +179,7 @@ ms.locfileid: "51814095"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- WORDOPENXML 拡張機能は [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx ファイル用の Word レンダラーを定義します。 WORD 拡張機能は、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 バージョンを定義します。 `Visible = “false”` は、Word 2003 レンダラーが非表示であることを示します。 詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」および「 [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)」を参照してください。  
+ WORDOPENXML 拡張機能は [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx ファイル用の Word レンダラーを定義します。 WORD 拡張機能は、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 バージョンを定義します。 `Visible = "false"` は、Word 2003 レンダラーが非表示であることを示します。 詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」および「 [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)」を参照してください。  
   
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Word レンダラーと Word 2003 レンダラーの違い  
  Word レンダラーまたは Word 2003 レンダラーを使用して表示されたレポートは、見た目では区別できない傾向にあります。 ただし、Word または Word 2003 の 2 つの形式の間で若干の違いが見つかる場合があります。  

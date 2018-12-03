@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695680"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403427"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 次の例では、暗号化された値と SQLSRV と PDO_SQLSRV ドライバーを使用して暗号化された列からプレーン テキスト データの取得に基づくデータのフィルター処理を示します。 次の点に注意してください。
  -   バインド パラメーターを使用して SSN 列に対してフィルター処理するために WHERE 句で使用される値は、サーバーに送信する前にドライバーが透過的に暗号化できるように、パラメーターとして渡す必要があります。
  -   バインドされたパラメーターを持つクエリを実行するときに PHP ドライバーで、ユーザーが明示的に SQLSRV ドライバーを使用する場合に、SQL 型が指定されていない限り、ユーザーの SQL 型が自動的に決定します。
- -   プログラムで印刷されるすべての値は、プレーン テキストでは、ドライバーは、SSN と BirthDate 列から取得されたデータを透過的に暗号化解除するためです。
+ -   ドライバーが SSN 列と BirthDate 列から取得されたデータを透過的に暗号化解除するので、プログラムで出力される値はすべてプレーンテキストになります。
  
 注: クエリは必要暗号化は確定的な場合にのみ暗号化された列に対して等価比較を実行できます。 詳細については、「[明確な暗号化またはランダム化された暗号化の選択](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」を参照してください。
 

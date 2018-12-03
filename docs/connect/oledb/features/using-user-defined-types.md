@@ -22,19 +22,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8a5c362dff5b091461f7c88955dcabe309c3864a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cab9f8d7810216fff9e56fc9bab99cf1b58c92e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839550"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396356"
 ---
 # <a name="using-user-defined-types"></a>ユーザー定義型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、ユーザー定義型 (UDT) が導入されました。 これにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにオブジェクトやカスタム データ構造を格納できるようになり、SQL の型システムが拡張されます。 UDT は複数のデータ型を保持でき、動作を含むことができるので、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム データ型だけで構成される従来の別名データ型とは異なります。 UDT は、検証可能なコードを生成する .NET 共通言語ランタイム (CLR) でサポートされる任意の言語を使用して定義されます。 このような言語には、Microsoft Visual C#<sup>®</sup> や Visual Basic<sup>®</sup> .NET があります。 データは、.NET のクラスまたは構造体のフィールドやプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、ユーザー定義型 (UDT) が導入されました。 これにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにオブジェクトやカスタム データ構造を格納できるようになり、SQL の型システムが拡張されます。 UDT は複数のデータ型を持つことができ、動作を定義できます。この点は、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム データ型から構成される従来の別名データ型と異なります。 UDT は、検証可能なコードを生成する .NET 共通言語ランタイム (CLR) でサポートされる任意の言語を使用して定義されます。 このような言語には、Microsoft Visual C#<sup>®</sup> や Visual Basic<sup>®</sup> .NET があります。 データは、.NET のクラスまたは構造体のフィールドやプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
   
  UDT は、テーブルの列定義、[!INCLUDE[tsql](../../../includes/tsql-md.md)] バッチの変数、または [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数やストアド プロシージャの引数として使用することができます。  
   

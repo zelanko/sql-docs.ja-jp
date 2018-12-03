@@ -11,12 +11,12 @@ ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 295d4b7867c8ed51822080d03489643d69f68f4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9ac737c528701baca47b8ffd592389cef3fad45
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735461"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396336"
 ---
 # <a name="understanding-cursor-types"></a>カーソルの種類について
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47735461"
 -   結果セット内のデータベース データに対して他のユーザーが行った変更をさまざまなレベルで表示できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカーソルの種類について詳しくは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「カーソルの種類 (データベース エンジン)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルの種類の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「カーソルの種類 (データベース エンジン)」を参照してください。  
   
  JDBC の仕様では、他のジョブによって行われた変更を認識する、または認識しない順方向専用およびスクロール可能なカーソルや、読み取り専用または更新可能なカーソルがサポートされています。 この機能は、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] の [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスによって提供されます。  
   

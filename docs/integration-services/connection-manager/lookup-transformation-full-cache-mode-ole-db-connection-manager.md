@@ -13,12 +13,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5bf791d21d9a3997a7284a6fdda7f4e8eab9c66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616042"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506980"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>フル キャッシュ モードの参照変換 - OLE DB 接続マネージャー
   フル キャッシュ モードおよび OLE DB 接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  
@@ -46,17 +46,17 @@ ms.locfileid: "47616042"
   
 7.  **[エントリが一致しない行の処理方法を指定する]** ボックスの一覧で、一致するエントリがない行のエラー処理オプションを選択します。  
   
-8.  [接続] ページで、 **[OLE DB 接続マネージャー]** ボックスの一覧から接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+8.  [接続] ページで、 **[OLE DB 接続マネージャー]** ボックスの一覧から接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 9. 次のいずれかの手順を実行します。  
   
     -   **[テーブルまたはビューを使用する]** をクリックし、テーブルまたはビューを選択するか、 **[新規作成]** をクリックしてテーブルまたはビューを作成します。  
   
-         — または —  
+         - または -  
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成するか、 **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** に用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         — または —  
+         - または -  
   
     -   **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   

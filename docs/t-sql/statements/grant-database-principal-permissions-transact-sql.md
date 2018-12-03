@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac987ef327b021665ae797aa3f14aad6446fcc4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b899bc08ebdff746792cd8070ca966ca6f6edb84
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807720"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947646"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT (データベース プリンシパルの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. ロールに対する VIEW DEFINITION 権限を、GRANT OPTION を指定してユーザーに許可する  
- 次の例では、`AdventureWorks2012` のロール `SammamishParking` に対する `VIEW DEFINITION` 権限を、`GRANT OPTION` を指定して、データベース ユーザー `JinghaoLiu` に許可します。  
+ 次の例では、`VIEW DEFINITION` のロール `AdventureWorks2012` に対する `SammamishParking` 権限を、`GRANT OPTION` を指定して、データベース ユーザー `JinghaoLiu` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   

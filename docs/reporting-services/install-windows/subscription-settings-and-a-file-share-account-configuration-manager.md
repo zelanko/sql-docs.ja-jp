@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813115"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402116"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>サブスクリプション設定とファイル共有アカウント (構成マネージャー)
   **構成マネージャーの** [サブスクリプションの設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。 ファイル共有アカウントでは、複数のサブスクリプションで 1 つの資格情報のセットを使用し、ファイル共有にレポートを配信することができます。 資格情報の変更が必要なときは、ファイル共有アカウントの変更を構成します。個々のサブスクリプションは更新しません。  
@@ -43,7 +43,7 @@ ms.locfileid: "51813115"
 > [!IMPORTANT]
 > [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントはサブスクリプションの配信を制御したり、ファイル共有サブスクリプションに使用するアカウントと通信したりします。 Windows のセキュリティ機能では、1) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントと 2) ファイル共有アカウントに使用されるアカウントの組み合わせを制限します。 たとえば、ビルトイン オペレーティング システム アカウントが、ファイル共有アカウントに使用される場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントは偽装アクセス許可を持つ別のサービス アカウントである必要があります。 ファイル共有アカウントとパスワードが明示的に構成されている場合、ファイル共有アカウントには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスを実行しているコンピューターにログオンする権限が必要です。 ファイル共有アカウントに必要なアクセス許可がない場合、次のようなエラー メッセージでファイル共有アカウントを使用しているサブスクリプションは失敗します。  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>ファイル共有アカウントの使用の監査を実行する PowerShell のサンプル  
  次の Windows PowerShell スクリプトを実行すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル共有アカウント **を使用するよう構成されている**のサブスクリプションがすべて列挙されます。 レポート サーバーに適切した値に、 `SERVERNAME` を更新します。  

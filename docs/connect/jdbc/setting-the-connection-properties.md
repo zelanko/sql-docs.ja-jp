@@ -11,12 +11,12 @@ ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 273a8d6893caf5552dc2945561e51cf4c5170f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e43274ff06c741252f5bd4926a8ff28ef82e1a9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783890"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412199"
 ---
 # <a name="setting-the-connection-properties"></a>接続プロパティの設定
 
@@ -66,7 +66,7 @@ ms.locfileid: "47783890"
 | gsscredential<br/><br/>org.ietf.jgss.GSSCredential<br/><br/>null | Microsoft JDBC Driver 6.2 for SQL Server から、Kerberos 制約付き委任に使用するユーザーの資格情報は、このプロパティで渡されることができます。 <br/><br/>これで使用する必要があります**integratedSecurity**として**true**と**java Kerberos** **authenticationscheme**します。 |
 | hostNameInCertificate<br/><br/>String<br/><br/>null | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SSL 証明書の検証に使用されるホスト名です。<br/><br/> hostNameInCertificate プロパティが指定されていないか null に設定されている場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、接続 URL の **serverName** プロパティ値をホスト名として使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SSL 証明書を検証します。<br/><br/> **注:** と組み合わせてこのプロパティは、使用、**暗号化**/**認証**プロパティおよび**trustServerCertificate**プロパティ。 接続 Secure Sockets Layer (SSL) 暗号化を使用する場合にのみ、このプロパティが証明書の検証に影響し、 **trustServerCertificate**が"false"に設定します。 SSL 接続に成功するためには、**hostNameInCertificate** に渡された値が、サーバー証明書に含まれる Subject Alternate Name (SAN) の Common Name (CN) または DNS 名と厳密に一致している必要があります。 詳細については、「[SSL のサポートについて](../../connect/jdbc/understanding-ssl-support.md)」を参照してください。 |
 | INSTANCENAME<br/><br/>String<br/>[&lt;=128 文字]<br/><br/>null | 接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名です。 指定しない場合は、既定のインスタンスへの接続が確立されます。 instanceName と port の両方を指定する場合については、port の注を参照してください。<br/><br/> **Server** 接続プロパティの仮想ネットワーク名を指定した場合は、**instanceName** 接続プロパティを使用できません。 参照してください[高可用性、ディザスター リカバリーのための JDBC ドライバー サポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)詳細についてはします。 |
-| integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>オプション | Windows 資格情報がによって使用されることを示すには、"true"に設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows オペレーティング システムでします。 "true" の場合、JDBC ドライバーは、コンピューターまたはネットワーク ログオン時に提供された資格情報を見つけるために、ローカル コンピューターの資格情報のキャッシュを検索します。<br/><br/> "True"に設定する (で**authenticationscheme = java Kerberos**) Kerberos 資格情報がによって使用されることを示すために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 Kerberos 認証の詳細については、次を参照してください。[を使用した Kerberos 統合認証を SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)します。 <br/><br/> "false" の場合は、ユーザー名とパスワードを指定する必要があります。 |
+| integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>オプション | Windows 資格情報がによって使用されることを示すには、"true"に設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows オペレーティング システムでします。 "true" の場合、JDBC ドライバーは、コンピューターまたはネットワーク ログオン時に提供された資格情報を見つけるために、ローカル コンピューターの資格情報のキャッシュを検索します。<br/><br/> "True"に設定する (で**authenticationscheme = java Kerberos**) Kerberos 資格情報がによって使用されることを示すために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、「[Kerberos 統合認証による SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」をご覧ください。 <br/><br/> "false" の場合は、ユーザー名とパスワードを指定する必要があります。 |
 | jaasConfigurationName<br/><br/>String<br/><br/>SQLJDBCDriver | Microsoft JDBC Driver 6.2 for SQL Server から、SQL Server に接続するたびでは Kerberos の接続を確立するために、独自の JAAS ログイン構成ファイルがあることができます。 ログイン構成ファイルの名前は、このプロパティを介して渡されることができます。 <br/> 既定では、ドライバーはプロパティを設定`useDefaultCcache = true`IBM の Jvm のおよび`useTicketCache = true`他の Jvm の。 |
 | KeyStoreAuthentication<br/><br/>String<br/><br/>null | Microsoft JDBC Driver 6.0 for SQL Server から、このプロパティは Always Encrypted で接続をシームレスに設定するキー ストアの場所を識別し、キー ストアへの認証に使用される認証メカニズムを決定します。 Microsoft JDBC Driver 6.0 for SQL Server の設定をサポートする Java キー ストアのこのプロパティを設定する必要がありますを使用してシームレスに"**keyStoreAuthentication = JavaKeyStorePassword**"。 このプロパティを使用することも必要を設定する、 **keyStoreLocation**と**keyStoreSecret** Java キー ストアのプロパティ。 <br/><br/>詳細については、「[JDBC ドライバーでの Always Encrypted の使用](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)」を参照してください。 |
 | keyStoreLocation<br/><br/>String<br/><br/>null | ときに**keyStoreAuthentication = JavaKeyStorePassword**、 **keyStoreLocation**プロパティは、Always Encrypted で使用する列のマスター _ キーを格納する Java キーストア ファイルへのパスを識別します。データ。 パスがキーストア ファイル名を含める必要がありますに注意してください。<br/><br/>詳細については、「[JDBC ドライバーでの Always Encrypted の使用](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)」を参照してください。 |
