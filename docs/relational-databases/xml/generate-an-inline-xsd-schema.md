@@ -19,12 +19,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6aae24935aea1c7ca452f199340cd1dca7299a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b45bd2df29628717d8cb1b2d1ba66a858a03f7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521490"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -241,7 +241,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  このクエリを実行すると、次のような XML が生成されます。 インライン XSD の一部のみを示します。  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -279,7 +279,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   テーブルの `DealerPrice` の値が NULL なので、クエリ結果には、`ListPrice` のみが <`Price`> 要素として返されます。 `XSINIL` パラメーターを ELEMENTS ディレクティブに追加すると、返される両方の要素で、DealerPrice に対応する <`Price`> 要素の `xsi:nil` の値が TRUE に設定されます。 また、インライン XSD スキーマの <`row`> の複合型の定義として 2 つの <`Price`> 子要素が返されます。どちらの要素でも `nillable` 属性が TRUE に設定されます。 結果の一部を次に示します。  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -335,7 +335,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  結果は次のとおりです。 インライン XSD スキーマの一部のみを示します。  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -404,7 +404,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  次のクエリでは、Col2 と Col3 に同じ別名を指定します。 このクエリを実行すると、同じ名前の 2 つの兄弟要素がクエリ結果として生成され、両方とも <`raw`> 要素の子要素になります。 これらの列の型はそれぞれ異なり、どちらも NULL 値が許容されます。 結果は次のとおりです。 インライン XSD スキーマの一部のみを示します。  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   

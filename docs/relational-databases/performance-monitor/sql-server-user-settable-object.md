@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
@@ -14,12 +14,12 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40be191181d093b7e32f5f3f7ac0c8ac0c868b23
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: cb3c412361acf4e3c059f902c2fc0ae498601d36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033479"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522991"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server: User Settable オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51033479"
 |**ユーザー カウンター 1**|**sp_user_counter1**を使用して定義します。|  
 |**ユーザー カウンター 2**|**sp_user_counter2**を使用して定義します。|  
 |**ユーザー カウンター 3**|**sp_user_counter3**を使用して定義します。|  
-|…||  
+|[...]||  
 |**ユーザー カウンター 10**|**sp_user_counter10**を使用して定義します。|  
   
  ユーザー カウンターのストアド プロシージャを使用するには、カウンターの新しい値を示す 1 つの整数パラメーターを指定して、独自のアプリケーションからそのストアド プロシージャを実行します。 たとえば、 **ユーザー カウンター 1** の値を 10 に設定するには、次の Transact-SQL ステートメントを実行します。  
