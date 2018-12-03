@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: dae35a8d8ef11619bd6a6ce43f9dc4ba7cfb73f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610190"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524485"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>MDAC から OLE DB Driver for SQL Server へのアプリケーションの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47610190"
 
 -   OLE DB Driver for SQL Server が前へのアクセスをサポートしている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。  
 
--   OLE DB Driver for SQL Server では、XML との統合は含まれません。 OLE DB Driver for SQL Server では、選択をサポートしています. XML のクエリが、他の XML 機能をサポートしていません。 ただしは、OLE DB Driver for SQL Server のサポート、 **xml**データ型がで導入された[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]します。  
+-   OLE DB Driver for SQL Server では、XML との統合は含まれません。 OLE DB Driver for SQL Server では、選択をサポートしています.XML のクエリが、他の XML 機能をサポートしていません。 ただしは、OLE DB Driver for SQL Server のサポート、 **xml**データ型がで導入された[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]します。  
 
 -   OLE DB Driver for SQL Server では、接続文字列の属性のみを使用する、クライアント側のネットワーク ライブラリの構成がサポートされます。 ネットワーク ライブラリをさらに詳細に構成する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用する必要があります。  
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: d040c333aec94cc1de41df03906470356a530faa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 98f49213afaaac17ea41a366bf4888043cc61045
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605632"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529441"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server のドライバーの履歴
 
@@ -139,7 +139,7 @@ MDAC または WDAC には、これらのコンポーネントが含まれてい
 
 次のコンポーネントは古い形式と見なされます。
 
-* **DB ライブラリ:** DB ライブラリは C Api を含む SQL Server 固有のプログラミング モデル。 ない、Db-library の機能強化 SQL Server 6.5 以降。 SQL Server 2000 では、最終リリースの 64 ビット Windows オペレーティング システムに移植しません。
-* **埋め込み SQL (SQL E):** E SQL では、SQL Server 固有のプログラミング モデルにより、Visual C のコードに埋め込まれる TRANSACT-SQL ステートメントをします。 機能が強化されてありません E SQL SQL Server 6.5 以降。 SQL Server 2000 では、最終リリースの 64 ビット Windows オペレーティング システムに移植しません。
+* **DB ライブラリ:** DB ライブラリは C Api を含む SQL Server に固有のプログラミング モデル。 ない、Db-library の機能強化 SQL Server 6.5 以降。 SQL Server 2000 では、最終リリースの 64 ビット Windows オペレーティング システムに移植しません。
+* **埋め込み SQL (SQL E):** E SQL では、SQL Server に固有のプログラミング モデルにより、Visual C のコードに埋め込まれる TRANSACT-SQL ステートメントをします。 機能が強化されてありません E SQL SQL Server 6.5 以降。 SQL Server 2000 では、最終リリースの 64 ビット Windows オペレーティング システムに移植しません。
 * **データ アクセス オブジェクト (DAO):** DAO JET (アクセス) データベースへのアクセスを提供します。 この API は、Microsoft Visual Basic、Microsoft Visual C、およびスクリプト言語から使用できます。 Microsoft Office 2000 および Office XP には含まれています。 DAO 3.6 は、このテクノロジの最終バージョンです。 これは、64 ビット Windows オペレーティング システムで使用できるされません。
 * **リモート データ オブジェクト (RDO):** RDO が具体的には、リモート ODBC リレーショナル データ ソースにアクセスするように設計および ODBC を使用して、複雑なアプリケーションのコードを使用せずに容易になりました。 Microsoft Visual Basic バージョン 4、5、および 6 には含まれています。 RDO バージョン 2.0 は、このテクノロジの最終バージョンでした。

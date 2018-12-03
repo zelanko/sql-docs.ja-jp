@@ -1,7 +1,7 @@
 ---
 title: SQL Server、Azure SQL Database、および Azure SQL Data Warehouse の SQL ツールとユーティリティ |Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292978"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190992"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL Server、Azure SQL Database、および Azure SQL Data Warehouse の SQL ツールとユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51292978"
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage**はいくつかのデータベース開発タスクを自動化するコマンド ライン ユーティリティです。 macOS および Linux のバージョンの sqlpackage は現在プレビュー段階です。 | Windows、macOS、および Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** SQL を使用するためのコマンドレットを提供します。| Windows、macOS、および Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd**ユーティリティを使用して、TRANSACT-SQL ステートメント、システム プロシージャ、およびコマンド プロンプトのスクリプト ファイルを入力できます。 | Windows、macOS、および Linux|
-|[**bcp**](../2014/tools/bcp-utility.md)|**b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) では、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。|Windows、macOS、および Linux|
+|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|**b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) では、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。|Windows、macOS、および Linux|
 |[**mssql scripter (プレビュー)**](https://github.com/Microsoft/mssql-scripter)|**mssql scripter**は SQL Server データベースのスクリプトを実行して、マルチプラット フォーム コマンドライン エクスペリエンス|Windows、macOS、および Linux|
 |[**mssql conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf** Linux で実行されている SQL Server を構成します。|Linux|
 

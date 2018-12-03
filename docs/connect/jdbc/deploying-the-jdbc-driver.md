@@ -11,12 +11,12 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 543651938433e2ac6824ea771edc1eba11540558
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c677cd46b4d3366b997e4d1effe5c056ec62a158
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603042"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529604"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC Driver の展開
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51603042"
   
  tar ファイルをアンパックするには、ドライバーをインストールするディレクトリに tar ファイルを移動し、次のコマンドを入力します。  
   
- `tar –xf sqljdbc_<version>_<language>.tar`  
+ `tar -xf sqljdbc_<version>_<language>.tar`  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

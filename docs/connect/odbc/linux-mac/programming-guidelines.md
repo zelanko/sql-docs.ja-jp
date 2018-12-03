@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2edaeee9d073cb0c12a509bd23e3db9edf4b3894
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9a8fa77ed1819d22eb90ea4fb0a7308122f708e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522953"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
@@ -123,7 +123,7 @@ ODBC Driver 13 および 13.1 では、UTF-8 マルチバイト文字または U
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証と **host,port** を使用して、専用管理者接続 (DAC) を作成できます。 Sysadmin ロールのメンバーはまず、DAC ポートを検出する必要があります。 参照してください[データベース管理者用の診断接続](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)を検出する方法。 たとえば、DAC ポートが 33000 である場合、次のように `sqlcmd` でそれに接続することができます。  
 
     ```
-    sqlcmd –U <user> -P <pwd> -S <host>,33000
+    sqlcmd -U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  

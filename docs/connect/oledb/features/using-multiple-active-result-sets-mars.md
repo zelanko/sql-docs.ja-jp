@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f0c8c9d13eca087db3d7202d57c058527e2c073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610320"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545475"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>複数のアクティブな結果セット (MARS) の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  ステートメントとはインターリーブされます。 atomic ブロックによって行われた変更は、互いから分離されます。 たとえば、1 つのステートメントまたは atomic ブロックは、いくつかの変更を行い、別のステートメントの実行が生成される場合、新しいステートメントは最初のステートメントによって行われた変更は表示されません。 さらに、最初のステートメントが実行を再開時に他のステートメントによって加えられた変更しない表示されます。 ステートメントは、終了され、ステートメントが開始する前にコミットされる変更にのみ表示されます。  
   
- 新しいユーザー トランザクションは、BEGIN TRANSACTION ステートメントを使用して現在のユーザー トランザクション内で開始できます – これは、相互運用モードでのみサポートされているため、BEGIN TRANSACTION は、T-SQL ステートメントからのみ呼び出すことされからネイティブ コンパイルで保存されません。プロシージャです。 保存を作成する保存トランザクションまたはトランザクションへの API 呼び出しを使用してトランザクションにポイントします。セーブポイントにロールバックする Save(save_point_name) します。 この機能は、T-SQL ステートメントからのみ有効になりますからではなく内でネイティブ コンパイル ストアド プロシージャ。  
+ 新しいユーザー トランザクションは、BEGIN TRANSACTION ステートメントを使用して現在のユーザー トランザクション内で開始できます - これは相互運用モードでのみサポートされているため、BEGIN TRANSACTION は、T-SQL ステートメントからのみ呼び出すことがありからではなく、ネイティブ コンパイルで保存プロシージャです。 保存を作成する保存トランザクションまたはトランザクションへの API 呼び出しを使用してトランザクションにポイントします。セーブポイントにロールバックする Save(save_point_name) します。 この機能は、T-SQL ステートメントからのみ有効になりますからではなく内でネイティブ コンパイル ストアド プロシージャ。  
   
  **MARS と列ストア インデックス**  
   
