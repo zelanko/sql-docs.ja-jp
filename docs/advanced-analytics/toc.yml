@@ -71,7 +71,7 @@ items:
 - name: チュートリアル
   href: tutorials/machine-learning-services-tutorials.md
   items:
-  - name: data
+  - name: サンプル データ
     items:
     - name: 航空会社のデータ セット
       href: tutorials/demo-data-airlinedemo-in-sql.md
@@ -84,64 +84,60 @@ items:
     items:
     - name: 最初のモデルのトレーニングと使用
       href: tutorials/train-score-using-python-in-tsql.md
+    - name: revoscalepy を使用した Python モデルの作成
+      href: tutorials/use-python-revoscalepy-to-create-model.md
     - name: データベース内分析について
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: 1 - データの視覚化
+      - name: 1 - データの探索
         href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 - データの機能の作成
+      - name: 2 - 機能エンジニアリング
         href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 - トレーニングと SQL への保存
+      - name: 3 - トレーニングおよびデプロイ
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 - 結果の予測
+      - name: 4 - 予測
         href: tutorials/sqldev-py6-operationalize-the-model.md
-    - name: revoscalepy を使用したモデルの作成
-      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
     - name: パーティション ベースのモデルの作成
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: データベース内分析について
+    - name: SQL 開発者向けのデータベース内分析
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - データの視覚化
+      - name: 1 - データの探索
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 2 - データの機能の作成
+      - name: 2 - 機能エンジニアリング
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 3 - トレーニングと SQL への保存
+      - name: 3 - トレーニングおよびデプロイ
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 4 - 結果の予測
+      - name: 4 - 予測
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: データ サイエンスのエンドツーエンドチュートリアル
+    - name: データ サイエンティスト向けのデータベース内分析
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
-      - name: データの準備
-        href: tutorials/walkthrough-prepare-the-data.md
-      - name: SQL を使用したデータの探索
-        href: tutorials/walkthrough-view-and-explore-the-data.md
-      - name: R を使用したデータの要約
+      - name: 1 - データの探索
         href: tutorials/walkthrough-view-and-summarize-data-using-r.md
-      - name: グラフとプロットの作成
+      - name: 2 - グラフとプロット
         href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
-      - name: データの機能の作成
+      - name: 3 - 機能エンジニアリング
         href: tutorials/walkthrough-create-data-features.md
-      - name: モデルの構築と保存
+      - name: 4 - モデルの構築と保存
         href: tutorials/walkthrough-build-and-save-the-model.md
-      - name: モデルの配置と使用
+      - name: 5 - モデルの配置と使用
         href: tutorials/walkthrough-deploy-and-use-the-model.md
     - name: RevoScaleR の詳細情報
       href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
       items:
       - name: データベースとアクセス許可の作成
         href: tutorials/deepdive-work-with-sql-server-data-using-r.md
-      - name: RxSqlServerData を使用したデータ オブジェクトの作成
+      - name: RxSqlServerData オブジェクトの作成
         href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
       - name: クエリおよびデータの変更
         href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
       - name: コンピューティング コンテキストの定義
         href: tutorials/deepdive-define-and-use-compute-contexts.md
-      - name: R スクリプトの作成と実行
+      - name: 概要統計情報の計算
         href: tutorials/deepdive-create-and-run-r-scripts.md
       - name: データの視覚化
         href: tutorials/deepdive-visualize-sql-server-data-using-r.md
@@ -151,18 +147,16 @@ items:
         href: tutorials/deepdive-score-new-data.md
       - name: データの変換
         href: tutorials/deepdive-transform-data-using-r.md
-      - name: rxImport を使用してメモリにデータを読み込む
+      - name: rxImport を使用したデータの読み込み
         href: tutorials/deepdive-load-data-into-memory-using-rximport.md
       - name: rxDataStep を使用したテーブルの作成
         href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-      - name: rxDataStep を使用したチャンク分析の実行
+      - name: チャンク分析の実行
         href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-      - name: ローカル計算コンテキストでデータを分析する
-        href: tutorials/deepdive-analyze-data-in-local-compute-context.md
       - name: SQL Server と XDF ファイル間のデータの移動
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-      - name: 簡単なシミュレーションを作成する
-        href: tutorials/deepdive-create-a-simple-simulation.md
+      - name: rxExec を使用したカスタム R の送信
+        href: tutorials/r-tutorial-custom-r-functions.md
 - name: サンプル
   href: https://github.com/Microsoft/sql-server-samples
 - name: ソリューション
@@ -296,13 +290,13 @@ items:
       href: python/what-is-revoscalepy.md
 - name: リソース
   items:
-  - name: 既知の問題
-    href: known-issues-for-sql-server-machine-learning-services.md
   - name: リリース ノート
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
   - name: トラブルシューティング
     href: machine-learning-troubleshooting-faq.md
     items:
+    - name: 既知の問題
+      href: known-issues-for-sql-server-machine-learning-services.md
     - name: データ コレクション
       href: data-collection-ml-troubleshooting-process.md
     - name: インストールとアップグレードのエラー
@@ -325,9 +319,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: d2cf2947c60d3ac3550dfeeba3acbf46bd0e48bd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e400aa9026b3a2684ffc5f436e4fe43cba3c52d4
+ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697900"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52717195"

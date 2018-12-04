@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ed7ba4a6b5b2f69c51f06a4dbf2947d97981c38f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702450"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419103"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 データ ウェアハウジングとビッグ データの分析用に設計されたデータ プラットフォームである Microsoft Analytics Platform System (APS) では、データの密な統合、クエリの高速処理、非常に拡張性の高い記憶域が提供され、エンド ツー エンドのビジネス インテリジェンス ソリューションを簡単にメンテナンスできます。  
