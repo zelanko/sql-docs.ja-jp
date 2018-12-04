@@ -18,12 +18,12 @@ ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a23829250c59cf720c5c8b0c639702a5fc501364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21eb0fdce01f4c48f11f084ff3bf1ba8a1354b1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627700"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545465"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY (証明書の権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ DENY permission  [ ,...n ]
  *permission*  
  証明書に対して拒否できる権限を指定します。 下の表をご覧ください。  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  権限を拒否する証明書を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

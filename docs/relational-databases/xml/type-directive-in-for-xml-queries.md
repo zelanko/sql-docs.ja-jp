@@ -14,12 +14,12 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5b77195b24c4b60b2ad11fc19e8557aec220d1e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 466786158509916d8f71f00eb9809d4753ee3dd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543837"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- 内側の `SELECT … FOR XML` クエリにより **xml** 型の結果が返され、外側の `SELECT` によりその **xml** 型の結果に `query()` メソッドが適用されます。 `TYPE` ディレクティブが指定されていることに注意してください。  
+ 内側の `SELECT ... FOR XML` クエリにより **xml** 型の結果が返され、外側の `SELECT` によりその **xml** 型の結果に `query()` メソッドが適用されます。 `TYPE` ディレクティブが指定されていることに注意してください。  
   
  結果を次に示します。  
   
@@ -105,7 +105,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 次のクエリでは、**xml** データ型の `value()` メソッドを使用して、`SELECT…FOR XML` クエリにより返された XML 結果から値を取得します。 詳細については、「[value&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/value-method-xml-data-type.md)」を参照してください。  
+ 次のクエリでは、**xml** データ型の `value()` メソッドを使用して、`SELECT...FOR XML` クエリにより返された XML 結果から値を取得します。 詳細については、「[value&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/value-method-xml-data-type.md)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  

@@ -13,12 +13,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d891d0e4168274d796ca96227802a76c50bf0942
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38482743b988419f2aa16d874bed5fdc7a60286d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641989"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528428"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 接続マネージャー
   SAP BW 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の接続マネージャー コンポーネントです。 したがって、SAP BW 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元と変換先コンポーネントが必要とする SAP Netweaver BW version 7 システムへの接続を提供します ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW パッケージの一部の SAP BW 変換元と変換先は、SAP BW 接続マネージャーを使用する唯一の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントです)。  
@@ -69,7 +69,7 @@ ms.locfileid: "51641989"
   
     -   [SAP BW 接続マネージャー] をダブルクリックします。  
   
-         — または —  
+         - または -  
   
     -   [SAP BW 接続マネージャー] を右クリックし、 **[編集]** を選択します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "51641989"
  **User name**  
  システムへの接続に使用するユーザー名を指定します。  
   
- **Password**  
+ **パスワード**  
  そのユーザー名のパスワードを指定します。  
   
  **単一のアプリケーション サーバーを使用する**  

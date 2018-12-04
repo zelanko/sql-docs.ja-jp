@@ -24,12 +24,12 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8135737f7abe250bfcd29b080b6875efad6286db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676756"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534117"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ WITH
   
  ![3 つのメディア セット テープにまたがる 2 番目のバックアップ セット](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "3 つのメディア セット テープにまたがる 2 番目のバックアップ セット")  
   
- バックアップを復元するとき、使用するバックアップを FILE オプションで指定できます。 次の例は、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの完全バックアップを復元した後、同じメディア セットで差分バックアップを行う場合の FILE **=***backup_set_file_number* 句の使用法を示しています。 メディア セットでは 3 つのバックアップ テープが使用されます。テープが装着されているテープ ドライブは `\\.\tape0`、 `tape1`、および `tape2`です。  
+ バックアップを復元するとき、使用するバックアップを FILE オプションで指定できます。 次の例は、 **=**_データベースの完全バックアップを復元した後、同じメディア セットで差分バックアップを行う場合の FILE_ backup_set_file_number [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 句の使用法を示しています。 メディア セットでは 3 つのバックアップ テープが使用されます。テープが装着されているテープ ドライブは `\\.\tape0`、 `tape1`、および `tape2`です。  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

@@ -12,12 +12,12 @@ ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7d0b18dc29b96eb434247cd277fbadb0eca9bd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da39f2d5f92de546e976eadf8ab3ec9dc21c30d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626690"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403517"
 ---
 # <a name="mssqlserver17084"></a>MSSQLSERVER_17084
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ BEGIN ATOMIC ステートメントの WITH 句で、オプションの値が指�
 **ATOMIC** ブロックには、**WITH** オプション **TRANSACTION ISOLATION LEVEL** と **LANGUAGE** の値が必要です。 例:  
   
 ```  
-BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N’us_english’)  
+BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  
 ```  
   
 詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  

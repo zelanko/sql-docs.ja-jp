@@ -22,12 +22,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05631087cc98f2b148072f954f3400bbcbaba41a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600539"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617672"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server へのログイン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51600539"
 |IP アドレスと使用されている TCP ポート (ここでは 2828) の指定による、名前付きインスタンスへの接続。|192.168.17.28\SQLEXPRESS,2828|  
 |TCP 接続を適用する、名前による既定のインスタンスへの接続。|tcp:APPHOST|  
 |TCP 接続を適用する、名前による名前付きインスタンスへの接続。|tcp:APPHOST\SQLEXPRESS|  
-|名前付きパイプ名の指定による、既定のインスタンスへの接続。|\\\APPHOST\pipe\unit\app|  
+|名前付きパイプ名の指定による、既定のインスタンスへの接続。|\\\APPHOST\pipe\SQL\query|  
 |名前付きパイプ名の指定による、名前付きインスタンスへの接続。|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |名前付きパイプ接続を適用する、名前による既定のインスタンスへの接続。|np:APPHOST|  
 |名前付きパイプ接続を適用する、名前による名前付きインスタンスへの接続。|np:APPHOST\SQLEXPRESS|  

@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d762aba3ebb5e0f31dbeccb452b92c8eadb44c64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c316614bff8740e3ae45908776b671f1d7a5ea9f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598220"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523562"
 ---
 # <a name="delete-an-index"></a>インデックスの削除
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47598220"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  PRIMARY KEY 制約または UNIQUE 制約の結果として作成されたインデックスは、この方法を使用して削除することはできません。 このような場合には、制約を削除する必要があります。 制約および対応するインデックスを削除するには、 [から、](../../t-sql/statements/alter-table-transact-sql.md) ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]を DROP CONSTRAINT 句と共に使用します。 詳細については、「 [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md)」を参照してください。  
@@ -86,7 +86,7 @@ ms.locfileid: "47598220"
   
 7.  **[閉じる]** をクリックします。  
   
-8.  **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
+8.  **[ファイル]** メニューの [ **table_name**_を保存_] を選びます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

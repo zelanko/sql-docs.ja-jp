@@ -14,12 +14,12 @@ ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12ad145e68eb3766bc58f7df7e0d0908b8af0622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52e2475748a96d8be757890552225061a241d32a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539096"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML クエリと入れ子になった FOR XML クエリの比較
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -195,9 +195,9 @@ FOR XML AUTO, TYPE
                 ProductName="Mountain-100 Silver, 42" Color="Silver" />  
       <Production.Product ProductID="773"   
                 ProductName="Mountain-100 Silver, 44" Color="Silver" />  
-        …  
+        ...  
     </ProductModel>  
-     …  
+     ...  
 ```  
   
  製品サブカテゴリを生成している入れ子構造の `ELEMENTS` クエリから `FOR XML` ディレクティブを削除すると、結果全体が属性中心になります。 このクエリは入れ子にしないでも記述できます。 `ELEMENTS` を追加することで、結果として一部が属性中心で、一部が要素中心の XML が得られます。 この結果は単一レベルの FOR XML クエリでは生成できません。  

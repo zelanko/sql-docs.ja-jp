@@ -18,12 +18,12 @@ ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d390015877bc930ec70b2b858e077baa5ce920fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b88fa209dba54482de1e113b7b7ee81528b43ab8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650720"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519789"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY (型の権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  型で拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  権限を拒否する型を指定します。 スコープ修飾子 (**::**) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (**.**) が必要です。  
   
  TO \<database_principal>  

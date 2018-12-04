@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509524"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] やレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。  
@@ -76,7 +76,7 @@ ms.locfileid: "51813355"
   
     -   コマンド プロンプトで次のコマンドを入力し、使用されている TCP ポートの一覧を取得します。  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
     -   Microsoft サポート技術情報の「 [TCP/IP ポートの割り当てについて](https://support.microsoft.com/kb/174904)」を読んで、TCP ポートの割り当てと、Well Known ポート (0 ～ 1023)、予約済みポート (1024 ～ 49151)、および動的/プライベート ポート (49152 ～ 65535) の違いについて確認します。  
   

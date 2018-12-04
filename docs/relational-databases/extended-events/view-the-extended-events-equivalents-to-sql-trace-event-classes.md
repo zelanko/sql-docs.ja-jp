@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3b05fb49206be29106bb84b2e4291f337aa261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537601"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL トレースのイベント クラスと等価な拡張イベントを確認する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47635440"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターから、次のクエリを実行します。  
   
-    ```  
+    ```sql  
     USE MASTER;  
     GO  
     SELECT DISTINCT  
@@ -62,7 +62,7 @@ ms.locfileid: "47635440"
     -   SQL トレース列は、拡張イベントのイベントに関連付けられているいずれかのデータ フィールドに対応する。  
   
         > [!NOTE]  
-        >  拡張イベントの各イベントは、結果セットに自動的に追加される既定のデータ フィールドのセットを持っています。  
+        > 拡張イベントの各イベントは、結果セットに自動的に追加される既定のデータ フィールドのセットを持っています。  
   
     -   アクション列には、意味のある等価な拡張イベントが存在しない。 たとえば、SQL トレースの EventClass 列がこれに該当します。 同じ目的はイベント名によって満たされるため、拡張イベントにこの列は必要ありません。  
   

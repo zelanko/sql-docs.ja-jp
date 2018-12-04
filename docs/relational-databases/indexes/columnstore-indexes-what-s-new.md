@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb8822d29e2dd3270d5947e62bab6fe498f86c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629510"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514547"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47629510"
   
 -   列ストア インデックスでは、Read Committed スナップショット分離レベル (RCSI) とスナップショット分離 (SI) をサポートします。 これにより、ロックなしのトランザクション一貫性分析クエリが有効になります。  
   
--   列ストアでは、削除された行を取り除くことでインデックス最適化をサポートしており、明示的にインデックスを再構築する必要はありません。 `ALTER INDEX … REORGANIZE` ステートメントは、オンライン操作として、内部的に定義されたポリシーに基づいて、削除された行を列ストアから削除します。  
+-   列ストアでは、削除された行を取り除くことでインデックス最適化をサポートしており、明示的にインデックスを再構築する必要はありません。 `ALTER INDEX ... REORGANIZE` ステートメントは、オンライン操作として、内部的に定義されたポリシーに基づいて、削除された行を列ストアから削除します。  
   
 -   列ストア インデックスには、AlwaysOn の読み取り可能なセカンダリ レプリカでアクセスできます。 AlwaysOn セカンダリ レプリカに分析クエリをオフロードすることで、運用分析のパフォーマンスを向上させることができます。  
   

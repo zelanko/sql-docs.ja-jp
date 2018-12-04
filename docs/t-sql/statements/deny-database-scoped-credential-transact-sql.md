@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bea99935468b3da3e2ca101a328df85c70a857a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4074d587bd170351c00a71bca81f6169b1cc021f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656050"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506098"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY (データベース スコープの資格情報の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY permission  [ ,...n ]
  *permission*  
  データベース スコープの資格情報で拒否できる権限を指定します。 下の表をご覧ください。  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
  権限を拒否するデータベース スコープの資格情報を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

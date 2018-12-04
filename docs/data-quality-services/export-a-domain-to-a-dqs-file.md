@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d69789fffac05796b241d741d818ecda40bbe2ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ead5310adef140651057ab02089a9fe6f71fbde
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803560"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617012"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>.dqs ファイルへのドメインのエクスポート
 
@@ -31,7 +30,7 @@ ms.locfileid: "47803560"
   
  エクスポート処理で作成された .dqs データ ファイルは暗号化されるため、内容を表示することはできません。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ドメインを .dqs データ ファイルにエクスポートするには、1 つの単一ドメインまたは 1 つの複合ドメイン (複数の単一ドメインで構成されるドメイン) を作成および選択しておく必要があります。 エクスポート先の .dqs ファイルを用意する必要はありません。1 .dqs ファイルは作成されます。  

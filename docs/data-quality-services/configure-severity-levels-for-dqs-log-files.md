@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.admin.config.log.f1
@@ -20,12 +19,12 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 231d7867e5c5ce2b42a2d22d10a69e3ab351aa94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 542312d01ded8542c03a18e8f95ead0de6f07f39
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599240"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617162"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS ログ ファイルの重大度レベルの構成
 
@@ -45,7 +44,7 @@ ms.locfileid: "47599240"
   
  DQS の各種のアクティビティやモジュールの重大度レベルを構成することで、DQS の対応するアクティビティやモジュールについて、DQS ログ ファイルに書き込む情報をフィルター処理できます。 たとえば、DQS のアクティビティの重大度レベルを **Warn**に設定すると、DQS のアクティビティに関連するメッセージのうち、警告メッセージとそれよりも重大度が高いメッセージ (Error と Fatal) だけがログに記録されます。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   

@@ -22,12 +22,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 479aabd0ca4edfc7529d0a9a1d47b075a7e1cab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694780"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540303"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>ログ シーケンス番号への復旧 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "47694780"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN に復元するための Transact-SQL 構文  
  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを使用して、次のように LSN または LSN の直前まで復元できます。  
   
--   WITH STOPATMARK **='** lsn:*<lsn_number>***'** 句を使用します。ここで、lsn:*\<lsnNumber>* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
+-   WITH STOPATMARK **= '** lsn:_<lsn_number>_**'** 句を使用します。ここで、lsn:*<lsn_number\<* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
   
      STOPATMARK によって LSN までロールフォワードされ、そのログ レコードがロールフォワードに含められます。  
   
--   WITH STOPBEFOREMARK **='** lsn:*<lsn_number>***'** 句を使用します。ここで、lsn:*\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが、復旧ポイントであることを指定する文字列です。  
+-   WITH STOPBEFOREMARK **= '** lsn:_<lsn_number>_**'** 句を使用します。ここで、lsn:*\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが、復旧ポイントであることを指定する文字列です。  
   
      STOPBEFOREMARK では、LSN までロールフォワードされますが、指定されたログ レコードはロールフォワードから除外されます。  
   

@@ -21,12 +21,12 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: afac7a2ed586f53994bc60ea89e323389c979714
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635780"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514723"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  構成の変更を有効にするには、ALTER RESOURCE GOVERNOR RECONFIGURE を実行する必要があります。  
   
- CLASSIFIER_FUNCTION = { *schema_name ***.*** function_name* | NULL }  
+ CLASSIFIER_FUNCTION = { _schema_name_**.**_function_name_ | NULL }  
  *schema_name.function_name* で指定された分類関数を登録します。 この関数によってすべての新しいセッションが分類され、セッションの要求とクエリがワークロード グループに割り当てられます。 NULL を使用すると、新しいセッションは既定のワークロード グループに自動的に割り当てられます。  
   
  RESET STATISTICS  
@@ -128,7 +128,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ```  
   
 ### <a name="c-creating-and-registering-a-classifier-function"></a>C. 分類関数を作成して登録する  
- 次の例では、`dbo.rgclassifier_v1` という名前の分類子関数を作成します。 この関数によって、ユーザー名またはアプリケーション名に基づいてすべての新しいセッションが分類され、セッションの要求とクエリが、指定されたワークロード グループに割り当てられます。 指定されたユーザー名またはアプリケーション名にマップされていないセッションは、既定のワークロード グループに割り当てられます。 次に分類関数が登録され、構成の変更が適用されます。  
+ 次の例では、`dbo.rgclassifier_v1` という名前の分類関数を作成します。 この関数によって、ユーザー名またはアプリケーション名に基づいてすべての新しいセッションが分類され、セッションの要求とクエリが、指定されたワークロード グループに割り当てられます。 指定されたユーザー名またはアプリケーション名にマップされていないセッションは、既定のワークロード グループに割り当てられます。 次に分類関数が登録され、構成の変更が適用されます。  
   
 ```  
 -- Store the classifier function in the master database.  
@@ -197,7 +197,7 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   

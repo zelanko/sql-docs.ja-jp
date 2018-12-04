@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c1600d29743d9a1c477d2d7b707eafc6839a5fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 967f4188168d1f322ba64c5ef9dfca5c958f3b45
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733590"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525357"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
   **rsconfig.exe** ユーティリティは、接続値とアカウント値を RSReportServer.config ファイルへ暗号化して格納します。 暗号化される値は、自動レポート処理に使用される、レポート サーバー データベースの接続情報とアカウント値です。  
@@ -29,13 +29,13 @@ ms.locfileid: "47733590"
 ```  
   
 rsconfig {-?}  
-{–cconnection}  
-{–eunattendedaccount}  
-{–mcomputername}  
-{–iinstancename}  
-{–sservername}  
-{–ddatabasename}  
-{–aauthmethod}  
+{-cconnection}  
+{-eunattendedaccount}  
+{-mcomputername}  
+{-iinstancename}  
+{-sservername}  
+{-ddatabasename}  
+{-aauthmethod}  
 {-uusername}  
 {-ppassword}  
 {-ttrace}  
@@ -121,7 +121,7 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [自動実行アカウントの構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   

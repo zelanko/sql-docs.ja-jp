@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f72bda649e317b5c08638f959e6b7600aac72a88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530522"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
  現在の要求にアクティブなユーザー トランザクションがあるかどうかを検出するには、XACT_STATE 関数と @@TRANCOUNT 関数の両方を使用できます。 ただし、@@TRANCOUNT では、検出されたトランザクションがコミット不可能なトランザクションとして分類されているかどうかは判断できません。 また、XACT_STATE では、入れ子になったトランザクションが存在するかどうかは判断できません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`XACT_STATE` 構造の `CATCH` ブロックで `TRY…CATCH` を使用し、トランザクションをコミットまたはロールバックするかどうかを確認します。 ここでは `SET XACT_ABORT` が `ON` に設定されているため、制約違反エラーによってトランザクションはコミットできない状態になります。  
+ 次の例では、`XACT_STATE` 構造の `CATCH` ブロックで `TRY...CATCH` を使用し、トランザクションをコミットまたはロールバックするかどうかを確認します。 ここでは `SET XACT_ABORT` が `ON` に設定されているため、制約違反エラーによってトランザクションはコミットできない状態になります。  
   
 ```  
 USE AdventureWorks2012;  

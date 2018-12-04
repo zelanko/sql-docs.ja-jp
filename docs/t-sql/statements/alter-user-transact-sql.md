@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 583f00394043b93eb81d9717d771ea087ce2f21c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cd03ba4b9b0363ef1d8ebe9c3ff0721fc08e3f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714002"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542275"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ ALTER USER userName
   
 -- SQL Database syntax when connected to a federation member  
 ALTER USER userName  
-     WITH <set_item> [ ,… n ]   
+     WITH <set_item> [ ,... n ]   
 [;]  
   
 <set_item> ::=   
@@ -109,12 +109,12 @@ ALTER USER userName
  *userName*  
  データベース内でユーザーを識別する名前を指定します。  
   
- LOGIN **=***loginName*  
+ LOGIN **=**_loginName_  
  ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マップします。  
   
  ALTER USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Windows Azure SQL データベースでは WITH LOGIN 句がサポートされます。 ALTER USER ステートメントが SQL のバッチ内の唯一のステートメントではない場合、または動的 SQL で実行されていない場合、WITH LOGIN 句はサポートされません。  
   
- NAME **=***newUserName*  
+ NAME **=**_newUserName_  
  このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -128,7 +128,7 @@ ALTER USER userName
 > [!NOTE]  
 >  このオプションは、包含ユーザーに対してのみ使用できます。 詳しくは、「[包含データベース](../../relational-databases/databases/contained-databases.md)および「[sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)」をご覧ください。  
   
- OLD_PASSWORD **=***'oldpassword'*  
+ OLD_PASSWORD **=**_'oldpassword'_  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  '*password*' で置き換える現在のユーザー パスワードです。 パスワードでは大文字と小文字が区別されます。 **ALTER ANY USER** 権限がない場合、パスワードを変更するには、*OLD_PASSWORD* が必要です。 *OLD_PASSWORD* を必須にすることで、**IMPERSONATION** 権限を持つユーザーによるパスワードの変更を防止できます。  
@@ -136,7 +136,7 @@ ALTER USER userName
 > [!NOTE]  
 >  このオプションは、包含ユーザーに対してのみ使用できます。  
   
- DEFAULT_LANGUAGE **=***{ NONE | \<lcid> | \<language name> | \<language alias> }*  
+ DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  ユーザーに割り当てる既定の言語を指定します。 このオプションを NONE に設定した場合、既定の言語はデータベースの現在の既定の言語に設定されます。 データベースの既定の言語が将来変更されても、ユーザーの既定の言語は変更されません。 *DEFAULT_LANGUAGE* には、ローカル ID (LCID)、言語の名前、または言語の別名を指定できます。  
@@ -228,7 +228,7 @@ GO
 ALTER USER Philip   
 WITH  NAME = Philipe   
     , DEFAULT_SCHEMA = Development   
-    , PASSWORD = 'W1r77TT98%ab@#’ OLD_PASSWORD = 'New Devel0per'   
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'   
     , DEFAULT_LANGUAGE  = French ;  
 GO  
 ```  

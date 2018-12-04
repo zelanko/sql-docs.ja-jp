@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029571"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711473"
 ---
 # <a name="schedules"></a>Schedules
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する **共有スケジュール** と **レポート固有スケジュール** が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。
@@ -54,7 +54,7 @@ ms.locfileid: "50029571"
  スケジュールを作成および管理する方法の詳細については、「 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)」を参照してください。  
   
 > [!NOTE]  
->  スケジュール操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)」を参照してください。  
+>  スケジュール操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   
 ##  <a name="bkmk_compare"></a> 共有スケジュールとレポート固有スケジュールの比較  
  どちらの種類のスケジュールも同じ出力を返します。  

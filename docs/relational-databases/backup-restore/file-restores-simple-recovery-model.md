@@ -20,12 +20,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7b68a59129df88c1ea40736ec90a73d0b7e1c5ae
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5a3b7faea7ae15a1927309bcb0463a10efe74bd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534633"
 ---
 # <a name="file-restores-simple-recovery-model"></a>ファイルの復元 (単純復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "51673621"
   
  復元シーケンスには、2 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントだけが含まれています。 1 つ目のステートメントは `A`というセカンダリ ファイルを復元します。このファイルは、WITH NORECOVERY を指定して復元されます。 2 つ目の操作では、 `B` と `C` という他の 2 つのファイルを復元します。これらのファイルは、WITH RECOVERY を使用して異なるバックアップ デバイスから復元します。  
   
-1.  RESTORE DATABASE *database* FILE **=***name_of_file_A*  
+1.  RESTORE DATABASE *database* FILE **=**_name_of_file_A_  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=***name_of_file_B***,***name_of_file_C*  
+2.  RESTORE DATABASE *database* FILE **=**_name_of_file_B_**,**_name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   

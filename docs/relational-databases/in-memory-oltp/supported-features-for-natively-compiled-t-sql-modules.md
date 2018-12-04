@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7509dbd825679377b9284928efd8720a9579793c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88a7eb6303509766cbd7ae703135d6a33a4e54fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518239"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ HAVING 句:
 
 ```sql
 DECLARE @v INT = 9000;
-SELECT TOP (@v) … FROM … ORDER BY …
+SELECT TOP (@v) ... FROM ... ORDER BY ...
 ```
 
 ただし、変数を使用する場合に比べて、 **TOP** 句内で定数を使用する方がパフォーマンスが向上する結果になります。  

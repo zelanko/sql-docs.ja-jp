@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838500"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509960"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
 >    メッセージ 491、レベル 16、状態 1、行 20    
 >    FROM 句の一括行セットには相関名を指定してください。    
   
--   `SELECT...FROM OPENROWSET(BULK...)` ステートメントは、データをテーブルにインポートせずに、ファイル内のデータに対してクエリを直接実行します。 また、`SELECT…FROM OPENROWSET(BULK...)` ステートメントでフォーマット ファイルを使用して列名やデータ型を指定すると、一括列の別名を列挙することもできます。  
+-   `SELECT...FROM OPENROWSET(BULK...)` ステートメントは、データをテーブルにインポートせずに、ファイル内のデータに対してクエリを直接実行します。 また、`SELECT...FROM OPENROWSET(BULK...)` ステートメントでフォーマット ファイルを使用して列名やデータ型を指定すると、一括列の別名を列挙することもできます。  
   
 -   `INSERT` ステートメントまたは `MERGE` ステートメント内でソース テーブルとして `OPENROWSET(BULK...)` を使用すると、データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータが一括インポートされます。 詳しくは、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。  
   

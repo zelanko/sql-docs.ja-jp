@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d5b34fc92c70e01941bbdea6ef110a8af4a11e26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eeaf835671b624b61f7c542760a00b0acb45ff0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620030"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507585"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ CREATE SPATIAL INDEX index_name
     [ USING GEOMETRY_AUTO_GRID ]  
           WITH  (  
         <bounding_box>  
-            [ [,] <tessellation_cells_per_object> [ ,…n] ]  
-            [ [,] <spatial_index_option> [ ,…n] ]  
+            [ [,] <tessellation_cells_per_object> [ ,...n] ]  
+            [ [,] <spatial_index_option> [ ,...n] ]  
                  )  
 }  
   
@@ -74,9 +74,9 @@ CREATE SPATIAL INDEX index_name
        [ USING GEOMETRY_GRID ]  
          WITH (  
                     <bounding_box>  
-                        [ [,]<tessellation_grid> [ ,…n] ]  
-                        [ [,]<tessellation_cells_per_object> [ ,…n] ]  
-                        [ [,]<spatial_index_option> [ ,…n] ]  
+                        [ [,]<tessellation_grid> [ ,...n] ]  
+                        [ [,]<tessellation_cells_per_object> [ ,...n] ]  
+                        [ [,]<spatial_index_option> [ ,...n] ]  
    )  
 }   
   
@@ -89,7 +89,7 @@ CREATE SPATIAL INDEX index_name
 {  
     [ USING GEOGRAPHY_AUTO_GRID ]  
     [ WITH (  
-        [ [,] <tessellation_cells_per_object> [ ,…n] ]  
+        [ [,] <tessellation_cells_per_object> [ ,...n] ]  
         [ [,] <spatial_index_option> ]  
      ) ]  
 }  
@@ -98,9 +98,9 @@ CREATE SPATIAL INDEX index_name
 {  
     [ USING GEOGRAPHY_GRID ]  
     [ WITH (  
-                [ <tessellation_grid> [ ,…n] ]  
-                [ [,] <tessellation_cells_per_object> [ ,…n] ]  
-                [ [,] <spatial_index_option> [ ,…n] ]  
+                [ <tessellation_grid> [ ,...n] ]  
+                [ [,] <tessellation_cells_per_object> [ ,...n] ]  
+                [ [,] <spatial_index_option> [ ,...n] ]  
                 ) ]  
 }  
   
@@ -566,7 +566,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ```  
   
 ### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. 空間インデックスを geometry 列に作成する  
- 次の例では、`SpatialTable` テーブルの `geometry_col` に 2 番目の空間インデックス `SIndx_SpatialTable_geometry_col2` を作成します。 この例では、テセレーション スキームとして `GEOMETRY_GRID` を指定します。 境界ボックス、グリッド レベルごとに異なる密度、オブジェクトごとのセル数に 64 をそれぞれ指定します。 また、インデックスの埋め込みを `ON` に設定します。  
+ 次の例では、`SIndx_SpatialTable_geometry_col2` テーブルの `geometry_col` に 2 番目の空間インデックス `SpatialTable` を作成します。 この例では、テセレーション スキームとして `GEOMETRY_GRID` を指定します。 境界ボックス、グリッド レベルごとに異なる密度、オブジェクトごとのセル数に 64 をそれぞれ指定します。 また、インデックスの埋め込みを `ON` に設定します。  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  

@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a18484c470c3485fca750e1f6986702a9c37ff7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612461"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537922"
 ---
 # <a name="remote-servers"></a>リモート サーバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47612461"
 >  可能な場合は、Windows 認証を使用します。  
   
 ### <a name="remote-server-security-example"></a>リモート サーバーのセキュリティの例  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverSend **と** serverReceive **という**インストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **の**Alice **という**認証のログインにマップするように構成されています。 **serverSend** から **Joe** という別のログインを受信すると、それは **serverReceive**** の **Joe** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインにマップされます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverSend **と** serverReceive **という**インストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **の**Alice **という**認証のログインにマップするように構成されています。 **serverSend**からの **Joe**という別の受信ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **、**_の_ Joe **という**認証のログインにマップされます。  
   
  次の Transact-SQL コードの例では、 `serverSend` に対して RPC を実行するように `serverReceive`を構成しています。  
   

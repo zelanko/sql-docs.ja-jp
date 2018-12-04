@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0f3b600c6598ed7400249376fe0a44670ea20339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4db2249838a1032ce44e13870463fac43012dfa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627820"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512618"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,8 +82,8 @@ ms.locfileid: "47627820"
   
  以前のコンテキストに戻す方法について詳しくは、「[REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)」をご覧ください。  
   
- COOKIE INTO **@***varbinary_variable*  
- REVERT WITH COOKIE ステートメントの呼び出し時に適切な **@***varbinary_variable* 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻せることを示します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、Cookie を **@***varbinary_variable* に渡します。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
+ COOKIE INTO **@**_varbinary_variable_  
+ REVERT WITH COOKIE ステートメントの呼び出し時に適切な **@**_varbinary_variable_ 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻せることを示します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、Cookie を **@**_varbinary_variable_ に渡します。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
   
  **@** *varbinary_variable* は **varbinary(8000)** です。  
   

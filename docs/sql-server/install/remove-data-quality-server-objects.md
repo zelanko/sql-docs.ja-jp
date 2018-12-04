@@ -10,12 +10,12 @@ ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae11b65eab37e07286b5d06a7c09305ba5020095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16a9770c05ecbc81b0fc5696f83285127ca7d8a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819410"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528381"
 ---
 # <a name="remove-data-quality-server-objects"></a>Data Quality Server オブジェクトの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47819410"
  SQL Server Management Studio でこれらのオブジェクトを削除するには、オブジェクトを右クリックして、ショートカット メニューの **[削除]** をクリックします。  
   
 > [!IMPORTANT]  
->  コマンド プロンプトで [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コマンド ライン パラメーターを使用して SQL サーバー インスタンスから `–uninstall` をアンインストールするだけで、アンインストール プロセスの一部としてすべての DQS オブジェクトが削除されます。 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]のアンインストール後に手動でそれらを削除する必要はありません。 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] をコマンド プロンプトからアンインストールするには、コマンド プロンプトで次のコマンドを入力し、Enter キーを押します。   
+>  コマンド プロンプトで [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コマンド ライン パラメーターを使用して SQL サーバー インスタンスから `-uninstall` をアンインストールするだけで、アンインストール プロセスの一部としてすべての DQS オブジェクトが削除されます。 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]のアンインストール後に手動でそれらを削除する必要はありません。 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] をコマンド プロンプトからアンインストールするには、コマンド プロンプトで次のコマンドを入力し、Enter キーを押します。   
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Data Quality Server を含む SQL Server インスタンスのアンインストール  

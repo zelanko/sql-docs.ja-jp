@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a36049bcbd2d5c043320f3e10d06005bf2f70b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671220"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504054"
 ---
 # <a name="secure-the-subscriber"></a>サブスクライバーのセキュリティ保護
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47671220"
  詳細については、「[トランザクション パブリケーションの更新可能なサブスクリプションの作成](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md)」および「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_***\<HexadecimalNumber>* の形式で名前が指定されたパブリケーション データベース内のビューに対するアクセス許可を与えます。  
+>  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_**_\<HexadecimalNumber>_ の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
   
 ## <a name="queued-updating-subscriptions"></a>キュー更新サブスクリプション  
  キュー更新サブスクリプションを構成する際には、セキュリティに関して、以下の 2 点に注意してください。  

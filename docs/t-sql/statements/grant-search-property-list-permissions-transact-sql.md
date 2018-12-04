@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ddb0f0da5f44f765733ea01dceac2d13e647221d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06e42c1acf4493019dc626f30d032b70519c346f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748760"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540830"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>許可の検索プロパティ リスト権限 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,7 +48,7 @@ GRANT permission [ ,...n ] ON
  *permission*  
  権限の名前を指定します。 権限とセキュリティ保護可能なリソースの有効な組み合わせについては、後の「解説」を参照してください。  
   
- ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
  権限を許可する検索プロパティ リストを指定します。 スコープ修飾子 **::** が必要です。  
   
  **既存の検索プロパティ リストを表示するには**  

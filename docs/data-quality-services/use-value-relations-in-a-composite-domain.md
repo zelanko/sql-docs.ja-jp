@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.cdvaluerelations.f1
@@ -14,12 +13,12 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a60784e5ccbb4bc5c94396a46d2bd2754923eaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 320f57a1e80a39ae3048c8a08fd991cb643e2dcf
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655690"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617902"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>複合ドメインでの値のリレーションの使用
 
@@ -27,7 +26,7 @@ ms.locfileid: "47655690"
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ナレッジ検出の実行中に複合ドメインで検出された値の組み合わせを表示する方法について説明します。 このページには、値の組み合わせの発生回数が示されます。 値の管理は複合ドメインでサポートされないため、これらの値に対して操作を実行することはできません。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  値のリレーションを表示するには、複合ドメインを作成して開いておく必要があります。  

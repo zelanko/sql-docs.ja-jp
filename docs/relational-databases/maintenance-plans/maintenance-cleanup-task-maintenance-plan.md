@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11602dcd1274690e7b77ca285c50269e83b6ca23
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215800"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532115"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] \(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "51215800"
  **[サーバー名の選択または入力]**  
  このタスクを実行するときに接続するサーバーを選択します。  
   
- **…**  
+ **[...]**  
  利用可能なサーバーを一覧表示します。  
   
  **[サーバーにログオンするための情報の入力]**  
@@ -94,7 +94,7 @@ ms.locfileid: "51215800"
  **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
- **Password**  
+ **パスワード**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
 ## <a name="see-also"></a>参照  

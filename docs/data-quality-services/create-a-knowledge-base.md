@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.selectkb.f1
@@ -15,12 +14,12 @@ ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4dcb1c4783b29560a9f5ba83435797fe5f494de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c4acd731faa13c10a0c32e8e99d2c557748b3d6
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690710"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616342"
 ---
 # <a name="create-a-knowledge-base"></a>ナレッジ ベースの作成
 
@@ -28,7 +27,7 @@ ms.locfileid: "47690710"
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースを作成し、ドメイン管理、ナレッジ検出、または照合ポリシーの追加の準備を行う方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ナレッジ ベースを作成するには、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] と [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]をインストールしている必要があります。  

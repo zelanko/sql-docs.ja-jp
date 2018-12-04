@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d94dfc03c090a871742999a821d1bfa0951add7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8d6d83624fc47a12387e2edf02381faa3cfaedcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030931"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545372"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt ユーティリティ (SSRS)
   重要なレポート サーバー データを不正アクセスから保護するための対称キーを、抽出、復元、作成、および削除します。 また、このユーティリティは、レポート サーバー インスタンスをスケール アウト配置に追加する場合にも使用されます。 *レポート サーバーのスケール アウト配置* とは、複数のレポート サーバー インスタンスが 1 つのレポート サーバー データベースを共有する状態を表しています。  
@@ -34,11 +34,11 @@ ms.locfileid: "50030931"
 ```  
   
 rskeymgmt {-?}  
-{–eextract}  
-{–aapply}  
+{-eextract}  
+{-aapply}  
 {-ddeleteall}  
-{–srecreatekey}  
-{–rremoveinstancekey}  
+{-srecreatekey}  
+{-rremoveinstancekey}  
 {-jjoinfarm}  
 {-iinstance}  
 {-ffile}  

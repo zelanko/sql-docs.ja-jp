@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c56435e2b0b576ae33ddb00f631fde8dee608ff7
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 0e487b66d13b4dcaba83219cc1fa6edf8eadc37d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970456"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530019"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 型と numeric 型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "50970456"
 固定長の有効桁数と小数点以下桁数を持つ数値データ型です。 decimal と numeric は同義であり、どちらを使ってもかまいません。
   
 ## <a name="arguments"></a>引数  
-**decimal**[ **(***p*[ **,***s*] **)**] および **numeric**[ **(***p*[ **,***s*] **)**]  
-固定長の有効桁数と小数点以下桁数を持つ数値です。 最大有効桁数を使用した場合、有効値は - 10^38 +1 ～ 10^38 - 1 です。 **decimal** の ISO のシノニムは、**dec** および **dec(***p*, *s***)** です。 **numeric** は機能的には **decimal** と同じです。
+**decimal**[ **(**_p_[ **,**_s_] **)**] and **numeric**[ **(**_p_[ **,**_s_] **)**]  
+固定長の有効桁数と小数点以下桁数を持つ数値です。 最大有効桁数を使用した場合、有効値は - 10^38 +1 ～ 10^38 - 1 です。 **decimal** の ISO のシノニムは、**dec** および **dec(**_p_, _s_**)** です。 **numeric** は機能的には **decimal** と同じです。
   
 p (precision)  
 小数点の右側および左側にある保存される最大文字 (数字) 数の合計です。 有効桁数の値は、1 ～ 38 (最大有効桁数) にする必要があります。 既定の有効桁数は 18 です。

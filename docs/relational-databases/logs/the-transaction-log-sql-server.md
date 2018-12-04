@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677301"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711593"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,9 +114,9 @@ ms.locfileid: "51677301"
 |7|DATABASE_SNAPSHOT_CREATION|データベース スナップショットが作成されている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
 |8|LOG_SCAN|ログ スキャンが行われている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
 |9|AVAILABILITY_REPLICA|可用性グループのセカンダリ レプリカが、このデータベースのトランザクション ログ レコードを対応するセカンダリ データベースに適用中である  (完全復旧モデル)。<br /><br /> 詳細については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。|  
-|10|—|内部使用のみ|  
-|11|—|内部使用のみ|  
-|12|—|内部使用のみ|  
+|10|-|内部使用のみ|  
+|11|-|内部使用のみ|  
+|12|-|内部使用のみ|  
 |13|OLDEST_PAGE|データベースが間接的なチェックポイントを使用するように構成されている場合、データベース上の最も古いページはチェックポイントの[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) よりも古くなることがある。 この場合、最も古いページのログの切り捨てが遅れる可能性があります (すべての復旧モデル)。<br /><br /> 間接的なチェックポイントの詳細については、「 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。|  
 |14|OTHER_TRANSIENT|この値は現在使用されていません。|  
   
@@ -158,17 +158,17 @@ ms.locfileid: "51677301"
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) による新しいヒープの再構築 (適用可能な場合)。 `DROP INDEX` 操作中のインデックス ページの割り当て解除は、**常に**完全にログ記録されます。
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
- **トランザクション ログの管理**  
+**トランザクション ログの管理**  
   
 -   [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **トランザクション ログのバックアップ (完全復旧モデル)**  
+**トランザクション ログのバックアップ (完全復旧モデル)**  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **トランザクション ログの復元 (完全復旧モデル)**  
+**トランザクション ログの復元 (完全復旧モデル)**  
   
 -   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

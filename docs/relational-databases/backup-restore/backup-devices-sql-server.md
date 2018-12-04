@@ -26,12 +26,12 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dee6642a83eb56445d9c951e695d960e0358e9df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e70357c54b30d657eb773913abf19d7fbe78385
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777410"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533033"
 ---
 # <a name="backup-devices-sql-server"></a>バックアップ デバイス (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47777410"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  例 :  
   
@@ -81,7 +81,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  例を次に示します。  
   
@@ -98,7 +98,7 @@ RESTORE DATABASE AdventureWorks2012
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
-   TO DISK = ’AdventureWorks2012.bak’;  
+   TO DISK = 'AdventureWorks2012.bak';  
 GO  
 ```  
   
@@ -117,7 +117,7 @@ GO
     > **重要:** ネットワーク経由でデータをバックアップすると、ネットワーク エラーの影響を受ける場合があります。そのため、リモート ディスクを使用する際はバックアップ操作を終了後に検証することをお勧めします。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)」をご覧ください。  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>UNC (汎用名前付け規則) 名を指定する  
- バックアップ コマンドや復元コマンドでネットワーク共有を指定するには、ファイルの完全修飾 UNC (汎用名前付け規則) 名をバックアップ デバイスに使用します。 UNC 名の形式は、**\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName* です。  
+ バックアップ コマンドや復元コマンドでネットワーク共有を指定するには、ファイルの完全修飾 UNC (汎用名前付け規則) 名をバックアップ デバイスに使用します。 UNC 名の形式は、 **\\\\**_Systemname_**\\**_ShareName_**\\**_Path_**\\**_FileName_です。  
   
  例 :  
   
@@ -147,7 +147,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  例 :  
   
@@ -161,7 +161,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> テープ固有の BACKUP 操作と RESTORE 操作 (Transact-SQL)  
  テープ管理を容易にするには、BACKUP ステートメントで次のテープ固有のオプションを指定します。  
@@ -179,7 +179,7 @@ GO
 ###  <a name="OpenTapes"></a> 開いているテープの管理  
  開いているテープ デバイスの一覧と、マウント要求の状態を確認するには、 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 動的管理ビューに対してクエリを実行します。 このビューでは、開いているすべてのテープが表示されます。 これには、次の BACKUP 操作または RESTORE 操作を待機して一時的にアイドル状態になっている使用中のテープも含まれます。  
   
- テープが誤って開いたままになっている場合、最も迅速にテープを解放するには、RESTORE REWINDONLY FROM TAPE **=***backup_device_name* コマンドを使用します。 詳細については、「[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)」を参照してください。  
+ テープが誤って開いたままになっている場合、最も迅速にテープを解放するには、RESTORE REWINDONLY FROM TAPE **=**_backup_device_name_ コマンドを使用します。 詳細については、「[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)」を参照してください。  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage サービスの使用  

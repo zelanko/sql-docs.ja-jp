@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d71d22599d95cb55f1d7ca6f916987c6a462cda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5826cdd783e7dd50a80d3e3a495dfffd16144f53
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641640"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503242"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]のマージ変換およびマージ結合変換では、入力データが並べ替えられている必要があります。 入力データは物理的に並べ替える必要があります。さらに、変換元の出力および出力列、または上流の変換の出力および出力列に対して、並べ替えオプションを設定する必要があります。 並べ替えオプションでデータの並べ替えを設定していても、実際にデータの並べ替えが行われない場合、マージ操作やマージ結合操作で予測できない結果が発生します。  
@@ -39,7 +39,7 @@ ms.locfileid: "47641640"
   
      並べ替え変換では Windows 照合順序を使用して文字列値を並べ替えます。  
   
-     — または —  
+     - または -  
   
 -   Transact-SQL の CAST 演算子を使用して最初に **varchar** 値を **nvarchar** 値にキャストし、次に Transact-SQL ORDER BY 句を使用してデータを並べ替えます。  
   
@@ -112,6 +112,6 @@ ms.locfileid: "47641640"
  [マージ結合変換](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
- [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
   
   
