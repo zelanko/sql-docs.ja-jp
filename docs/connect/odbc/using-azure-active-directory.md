@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536649"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC ドライバーでの Azure Active Directory の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -88,13 +88,13 @@ SQL Azure への Azure Active Directory 統合認証の場合: `Authentication=A
 これらのオプションは、UI 上の DSN セットアップで使用できる、同じ 5 つに対応します。
 
 ### <a name="example-connection-strings"></a>接続文字列の例
-1. SQL Server 認証: レガシ構文。 サーバー証明書が検証されていないと、サーバーがそれを適用している場合のみ暗号化を使用します。 ユーザー名/パスワードは、接続文字列で渡されます。
+1. SQL Server 認証のレガシ構文。 サーバー証明書が検証されていないと、サーバーがそれを適用している場合のみ暗号化を使用します。 ユーザー名/パスワードは、接続文字列で渡されます。
 `server=Server;database=Database;UID=UserName;PWD=Password;`
-2. SQL 認証: 新しい構文。 クライアントが暗号化を要求 (既定値の`Encrypt`は`true`) し検証済みの暗号化の設定に関係なく、サーバー証明書を取得します (しない限り、`TrustServerCertificate`に設定されている`true`)。 ユーザー名/パスワードは、接続文字列で渡されます。
+2. SQL 認証の新しい構文です。 クライアントが暗号化を要求 (既定値の`Encrypt`は`true`) し検証済みの暗号化の設定に関係なく、サーバー証明書を取得します (しない限り、`TrustServerCertificate`に設定されている`true`)。 ユーザー名/パスワードは、接続文字列で渡されます。
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
-3. 統合 Windows 認証 (Kerberos では、Linux および macOS) (SQL Server または SQL IaaS) – する SSPI を現在の構文を使用します。 暗号化を使用しない場合、サーバー証明書は検証されません。 
+3. 統合 Windows 認証 (Kerberos では、Linux および macOS) (SQL Server または SQL IaaS) のための SSPI を現在の構文を使用します。 暗号化を使用しない場合、サーバー証明書は検証されません。 
 `server=Server;database=Database;Trusted_Connection=yes;`
-4. (_Windows ドライバーのみ_)。統合 Windows 認証 (ターゲット データベースが SQL Server または SQL IaaS) の場合は、SSPI – を新しい構文を使用します。 クライアントが暗号化を要求 (既定値の`Encrypt`は`true`) し検証済みの暗号化の設定に関係なく、サーバー証明書を取得します (しない限り、`TrustServerCertificate`に設定されている`true`)。 
+4. (_Windows ドライバーのみ_)。統合 Windows 認証 (ターゲット データベースが SQL Server または SQL IaaS) の場合は、SSPI - 新しい構文を使用します。 クライアントが暗号化を要求 (既定値の`Encrypt`は`true`) し検証済みの暗号化の設定に関係なく、サーバー証明書を取得します (しない限り、`TrustServerCertificate`に設定されている`true`)。 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 5. AAD のユーザー名/パスワード認証 (ターゲット データベースが Azure SQL DB の場合)。 暗号化設定に関係なく、サーバー証明書が検証を取得します (しない限り、`TrustServerCertificate`に設定されている`true`)。 ユーザー名/パスワードは、接続文字列で渡されます。 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
