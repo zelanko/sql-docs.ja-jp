@@ -133,7 +133,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 |アプリケーション ロール|ロールに対する ALTER 権限、**db_securityadmin** 固定データベース ロールのメンバーシップ、**db_owner** 固定データベース ロールのメンバーシップ、または **sysadmin** 固定サーバー ロールのメンバーシップ。|  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ユーザー `VIEW DEFINITION` に対し、ユーザー定義型 `GRANT OPTION` の `PhoneNumber` 権限を、`KhalidR` を指定して許可します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
+ 次の例では、ユーザー `KhalidR` に対し、ユーザー定義型 `PhoneNumber` の `VIEW DEFINITION` 権限を、`GRANT OPTION` を指定して許可します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
   
 ```  
 GRANT VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
