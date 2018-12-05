@@ -174,7 +174,7 @@ GO
 ```  
   
 ### <a name="c-granting-references-permission-on-a-view-with-grant-option"></a>C. GRANT OPTION を指定してビューの REFERENCES 権限を許可する  
- 次の例では、`REFERENCES` を指定して、ビュー `BusinessEntityID` にある列 `HumanResources.vEmployee` での `Wanida` 権限を、ユーザー `GRANT OPTION` に対して許可します。  
+ 次の例では、`GRANT OPTION` を指定して、ビュー `HumanResources.vEmployee` にある列 `BusinessEntityID` での `REFERENCES` 権限を、ユーザー `Wanida` に対して許可します。  
   
 ```  
 GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
