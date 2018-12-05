@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050854"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413750"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage のリリース ノート
 
@@ -76,20 +76,22 @@ ms.locfileid: "50050854"
 - 診断情報を保存するファイル パスを指定するコマンド ライン パラメーターを/DiagnosticsFile:"C:\Temp\sqlpackage.log を追加するには"。
 - 診断情報をコンソールにログインする/Diagnostics コマンド ライン パラメーターに追加します。
 
-## <a name="sqlpackage-on-macos-and-linux-001-preview"></a>macOS および Linux 0.0.1 (プレビュー) で sqlpackage
+## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>macOS および Linux の .NET Core (プレビュー) で sqlpackage
 
-リリース日: 2018 年 5 月 9 日  
-ビルド: 15.0.4057.1
+リリース日: 2018 年 11 月 15 日  
+ビルド: 15.0.4240.1
 
-このリリースでは、.NET Core 2.0 では、対象 sqlpackage のクロス プラットフォームのプレビュー ビルドを含むし、macOS、Linux で実行できます。 
+このリリースでは、.NET Core 2.1 では、対象とする sqlpackage のクロス プラットフォームのプレビュー ビルドを含むし、macOS、Linux で実行できます。 
+
+このリリースでは、次の問題点を修正しました。
+
+- .NET Core 2.1 に移動 
+- SQL CLR UDT 型を含め、CLR UDT 型のサポート: SqlGeography、SqlGeometry、& SqlHierarchyId します。
 
 このリリースでは、次の既知の問題の早期プレビュー版を示します。
 
 - /P:CommandTimeout パラメーターは、120 に直接書き込まれます。
 - ビルドと配置の共同作成者はサポートされていません。
-  - System.ComponentModel.Composition.dll がサポートされている .NET Core 2.1 に移行した後で修正される予定です。
-  - 大文字のパスを処理する必要があります。
-- SQL Server の CLR UDT 型を含む、SQL CLR UDT 型はサポートされません。 SqlGeography、SqlGeometry、& SqlHierarchyId します。
 - Json データのシリアル化を使用する古い .dacpac および .bacpac ファイルはサポートされていません。
 - 参照先 .dacpacs (たとえば master.dacpac) 大文字小文字を区別するファイル システムに関する問題のため解決できません。
   - (たとえばマスター参照ファイルの名前を大文字に変換を回避するには。BACPAC)。

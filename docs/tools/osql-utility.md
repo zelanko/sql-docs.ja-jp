@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b824df9549ac9fcb65ff4c5bb3ca54f03967e86e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 31e71f63e1cb06fdc38af291668f32552e5659b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291918"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538912"
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ osql
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -112,7 +112,7 @@ C:\>osql
  コマンドの実行待ち時間を秒単位で指定します。*time_out* 値を指定しないと、コマンドはタイムアウトしません。  
   
  **-h** *headers*  
- 列ヘッダーの間に出力する行数を指定します。 既定では、各クエリの結果に対して、ヘッダーは 1 つだけ表示されます。 ヘッダーを出力しない場合は、-1 を指定します。 -1 を使用する場合、パラメーターと設定値の間には空白を入れないでください (**-h -1**ではなく、 **-h-1**を使用)。  
+ 列ヘッダーの間に出力する行数を指定します。 既定では、各クエリの結果に対して、ヘッダーは 1 つだけ表示されます。 ヘッダーを出力しない場合は、-1 を指定します。 -1 を使用する場合、パラメーターと設定値の間には空白を入れないでください (**-h -1** ではなく **-h-1**)。  
   
  **-s** *col_separator*  
  列の区切り文字を指定します。既定値は空白文字です。 オペレーティング システムで特別な意味を持つ文字 (| ; & < > など) を使用するには、その文字を二重引用符 (") で囲みます。  

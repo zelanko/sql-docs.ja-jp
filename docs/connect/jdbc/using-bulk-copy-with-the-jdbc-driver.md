@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8a936373f299530f4bd98f2873d10727c980cce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741760"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534690"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC ドライバーでの一括コピーの使用
 
@@ -46,7 +46,7 @@ BulkCopyDemoMatchingColumns テーブルと BulkCopyDemoDifferentColumns テー�
 1 つの SQLServerBulkCopy クラスを使用して複数のテーブルに書き込む方法を示すコード サンプルもあります。 これらのサンプルでは、BulkCopyDemoOrderHeader テーブルと BulkCopyDemoOrderDetail テーブルはコピー先のテーブルとして使用されます。 これらのテーブルは、AdventureWorks の Sales.SalesOrderHeader テーブルと Sales.SalesOrderDetail テーブルに基づいたテーブルです。  
   
 > [!NOTE]  
-> SQLServerBulkCopy コード サンプルでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server インスタンス内に存在する場合、Transact-SQL INSERT … SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
+> SQLServerBulkCopy コード サンプルでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
 
 ### <a name="table-setup"></a>テーブルのセットアップ  
 
@@ -144,7 +144,7 @@ SQL Server の一括コピー操作を実行する最も簡単な方法は、デ
 次のアプリケーションでは、SQLServerBulkCopy クラスを使用してデータを読み込む方法を示します。 この例では、ResultSet を使用し、SQL Server の AdventureWorks データベースに格納された Production.Product テーブルのデータを、同じデータベース内の同等のテーブルにコピーします。  
   
 > [!IMPORTANT]  
-> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server インスタンス内に存在する場合、Transact-SQL INSERT … SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
+> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
 
 ```java
 import java.sql.Connection;
@@ -238,7 +238,7 @@ SQLServerBulkCopy クラスの単一のインスタンスを使用して、一�
 同じ SQLServerBulkCopy オブジェクトを使用して一括コピー操作を複数回実行する場合、コピー元またはコピー先の情報が各操作ごとに一致しているか異なっているかに関する制限はありません。 ただし、サーバーに書き込み処理を行うときは、列の関連付け情報を毎回正しく設定する必要があります。  
   
 > [!IMPORTANT]  
-> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server インスタンス内に存在する場合、Transact-SQL INSERT … SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
+> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
 
 ```java
 import java.sql.Connection;
@@ -367,7 +367,7 @@ public class BulkCopyMultiple {
 この一括コピー操作は、**BatchSize** プロパティを 10 に設定して実行されます。 操作中に無効な行が検出されると、例外がスローされます。 次に示す最初の例の一括コピー操作はトランザクション処理ではありません。 エラー発生ポイントまでにコピーされたバッチはすべてコミットされ、重複キーが含まれるバッチはロールバックされます。また、一括コピー操作は、他のバッチを処理する前に中止されます。  
   
 > [!NOTE]  
-> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server インスタンス内に存在する場合、Transact-SQL INSERT … SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
+> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
 
 ```java
 import java.sql.Connection;
@@ -476,7 +476,7 @@ copyOptions.setUseInternalTransaction(true);
 次のアプリケーションは、**BulkCopyNonTransacted** と似ていますが、一括コピー操作がより大きな外部トランザクションに含まれている点が異なります。 主キー違反エラーが発生した場合、トランザクション全体がロールバックされ、コピー先のテーブルに行は追加されません。
 
 > [!NOTE]  
-> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server インスタンス内に存在する場合、Transact-SQL INSERT … SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
+> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
 
 ```java
 import java.sql.Connection;
@@ -583,7 +583,7 @@ public class BulkCopyExistingTransactions {
   
 5. **[転送するデータを指定するためのクエリを記述する]** をオンにして、**[次へ]** をクリックします。  **SQL ステートメント**の SELECT ProductID、Name、ProductNumber FROM Production.Product を入力し、**[次へ]** をクリックします。  
   
-6. 構成の確認: 行区切り記号を {CR}{LF}、列区切り記号をコンマ {,} にしておくことができます。  **[マッピングの編集]** を選択し、 各列のデータの **[型]** が適切かどうか (ProductID には整数、他は Unicode 文字列など) を確認します。  
+6. 構成の確認: 行区切り記号を {CR}{LF}、列区切り記号をコンマ {,} にしておくことができます。  **[マッピングの編集]** を選択し ... 各列のデータの **[型]** が適切かどうか (ProductID には整数、他は Unicode 文字列など) を確認します。  
   
 7. **[完了]** に進んで、エクスポートを実行します。  
 
@@ -776,7 +776,7 @@ SQLServerBulkCopy クラスは、SQL Server テーブルのみにデータを書
   
 3. CSV ファイル用に指定した区切り記号はデータ内に全く出現しないようにし、それが Java の正規表現で制限のある文字の場合には、正しくエスケープする必要があります。  
   
-4. CSV ファイルの実装では、二重引用符はデータの一部として扱われます。 たとえば、区切り記号にコンマを選択した場合「hello,”world”,”hello,world”」という行は、それぞれ「hello」、「“world”」、「“hello」、および「world”」という値を持つ 4 列として処理されます。  
+4. CSV ファイルの実装では、二重引用符はデータの一部として扱われます。 たとえば、区切り記号がコンマである場合、「hello,"world","hello,world"」という行は、それぞれ「hello」、「"world"」、「"hello」、および「world"」という値を持つ 4 列として処理されます。  
   
 5. 改行文字は行ターミネータとして使用され、データ内には使用できません。  
   

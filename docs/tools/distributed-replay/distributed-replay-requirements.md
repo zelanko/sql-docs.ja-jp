@@ -10,12 +10,12 @@ ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec8999398feb77b44386111daae449b560bcf1da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 73aca1900afc191dd3df795b1716b624d5c36201
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666281"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527648"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51666281"
   
 -   `.trc` 拡張子を持つ 1 つのトレース ファイル。  
   
--   ファイル ロールオーバー名前付け規則に準拠したロールオーバー トレース ファイルのセット。例: `<TraceFile>.trc`、 `<TraceFile>_1.trc`、 `<TraceFile>_2.trc`、 `<TraceFile>_3.trc`、... `<TraceFile>_n.trc`」を参照してください。  
+-   ファイル ロールオーバー名前付け規則に準拠したロールオーバー トレース ファイルのセット。例: `<TraceFile>.trc`、`<TraceFile>_1.trc`、`<TraceFile>_2.trc`、`<TraceFile>_3.trc`、... `<TraceFile>_n.trc`。  
   
 ### <a name="input-trace-events-and-columns"></a>入力トレースのイベントと列  
  入力トレース データには、分散再生で再生される特定のイベントと列を含める必要があります。 **内の** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] テンプレートには、すべての必要なイベントおよび列と、追加情報が含まれています。 このテンプレートの詳細については、「 [再生を実行するための必要条件](../../tools/sql-server-profiler/replay-requirements.md)」を参照してください。  

@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e28be468ff1c8e4f7248f0a6296ca9ca2476a63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81a0a2e9d5201943cc6b04ac4b931d1e8a9a561e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602890"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540671"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47602890"
   
 -   先頭および末尾のスペースは、すべての起動時のパラメーターから削除します。  
   
--   すべての起動時のパラメーターの先頭文字は - (ダッシュ) で、2 番目の値は英字です。  
+-   すべての起動時のパラメーターの先頭文字は - (ダッシュ) で、2 番目の値は文字です。  
   
 ## <a name="required-parameters"></a>必要なパラメーター  
  以下のパラメーターが必要です。 これらは変更できますが、削除できません。  

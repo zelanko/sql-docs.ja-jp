@@ -13,12 +13,12 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600162"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527535"
 ---
 # <a name="connecting-with-bcp"></a>bcp による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -79,7 +79,7 @@ ID 列に、インポートされたデータ ファイルの ID 値を使用し
 一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。  
   
 - -l  
-ログインのタイムアウトを指定します。 - l オプションでは、サーバーへの接続の試行時、ログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に対してタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。
+ログインのタイムアウトを指定します。 - l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのログインがタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。
   
 - -L *last_row*  
 テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。  

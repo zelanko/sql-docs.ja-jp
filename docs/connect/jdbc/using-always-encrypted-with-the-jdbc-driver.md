@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600972"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510719"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -57,7 +57,7 @@ Microsoft JDBC Driver for SQL Server、次の組み込み列マスター キー 
 すべてのこれらのキーストア プロバイダーは、次のセクションで詳しく説明します。 Always Encrypted を使用する 1 つのキーストア プロバイダーを実装する必要があるだけです。
 
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
-Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Microsoft JDBC Driver for SQL Server には、組み込みのプロバイダー、SQLServerColumnEncryptionAzureKeyVaultProvider、Azure Key Vault に格納されているキーを持つアプリケーションにはが含まれています。 このプロバイダーの名前は、AZURE_KEY_VAULT です。 Azure Key Vault ストア プロバイダーを使用するには、アプリケーション開発者は Azure Key Vault に資格情報コンテナーとキーを作成し、Azure Active Directory でアプリの登録を作成する必要があります。 登録済みのアプリケーションでは、付与、復号化、暗号化、キーのラップ解除、Wrap Key、および検証アクセス許可を取得で Always Encrypted で使用するために作成された、key vault に対して定義されているアクセス ポリシーをする必要があります。 Key vault を設定して、列マスター _ キーを作成する方法の詳細については、次を参照してください。 [Azure Key Vault-ステップ バイ ステップ](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)と[Azure Key Vault で列マスター_キーの作成](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)です。
+Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Microsoft JDBC Driver for SQL Server には、組み込みのプロバイダー、SQLServerColumnEncryptionAzureKeyVaultProvider、Azure Key Vault に格納されているキーを持つアプリケーションにはが含まれています。 このプロバイダーの名前は、AZURE_KEY_VAULT です。 Azure Key Vault ストア プロバイダーを使用するには、アプリケーション開発者は Azure Key Vault に資格情報コンテナーとキーを作成し、Azure Active Directory でアプリの登録を作成する必要があります。 登録済みのアプリケーションでは、付与、復号化、暗号化、キーのラップ解除、Wrap Key、および検証アクセス許可を取得で Always Encrypted で使用するために作成された、key vault に対して定義されているアクセス ポリシーをする必要があります。 Key vault を設定して、列マスター _ キーを作成する方法の詳細については、次を参照してください。 [Azure Key Vault - ステップ バイ ステップ](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)と[Azure Key Vault で列マスター_キーの作成](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)です。
 
 それらを再作成する T-SQL スクリプトを独自の特定の例のようになります、Azure Key Vault を作成した場合、このページの例は、ベースの列マスター_キーと SQL Server Management Studio を使用して列暗号化キー、 **KEY_パス**と**ENCRYPTED_VALUE**:
 
@@ -106,7 +106,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > これらの依存関係を Maven プロジェクトに含める方法の例は、次を参照してください[ダウンロード ADAL4J と AKV の依存関係 Apache Maven で。](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Windows 証明書ストア プロバイダーの使用
-SQLServerColumnEncryptionCertificateStoreProvider は、列マスター キーを Windows 証明書ストアに格納するために使用できます。 列マスター_キーと列の暗号化キーの定義をデータベースに作成するのにには、SQL Server Management Studio (SSMS) が Always Encrypted ウィザードまたはサポートされているその他のツールを使用します。 常に暗号化されたデータの列マスター_キーとして使用できる Windows 証明書ストアに自己署名証明書を生成する、同じウィザードを使用できます。 列マスター_キーと列暗号化キーの T-SQL 構文の詳細については、次を参照してください。 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)と[列暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)それぞれします。
+SQLServerColumnEncryptionCertificateStoreProvider は、列マスター キーを Windows 証明書ストアに格納するために使用できます。 列マスター_キーと列の暗号化キーの定義をデータベースに作成するのにには、SQL Server Management Studio (SSMS) が Always Encrypted ウィザードまたはサポートされているその他のツールを使用します。 常に暗号化されたデータの列マスター_キーとして使用できる Windows 証明書ストアに自己署名証明書を生成する、同じウィザードを使用できます。 列マスター_キーと列暗号化キーの T-SQL 構文の詳細については、次を参照してください。 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)と[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)それぞれします。
 
 SQLServerColumnEncryptionCertificateStoreProvider の名前は、MSSQL_CERTIFICATE_STORE でプロバイダー オブジェクトの getName() API によってクエリを実行できます。 ドライバーによって自動的に登録し、アプリケーションを変更せずにシームレスに使用されることができます。
 
@@ -130,7 +130,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 他のキーストア プロバイダーは、この記事では、ドライバーでサポートされるすべてのプラットフォームで利用可能な JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は Windows オペレーティング システムでのみ使用できます。 ドライバー パッケージで使用できる sqljdbc_auth.dll の依存関係があります。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに sqljdbc_auth.dll ファイルをコピーします。 または、java.libary.path システム プロパティを設定して sqljdbc_auth.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用していて、JDBC ドライバーが既定のディレクトリにインストールされている場合、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用することで、DLL の場所を指定できます。`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 他のキーストア プロバイダーは、この記事では、ドライバーでサポートされるすべてのプラットフォームで利用可能な JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は Windows オペレーティング システムでのみ使用できます。 ドライバー パッケージで使用できる sqljdbc_auth.dll の依存関係があります。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに sqljdbc_auth.dll ファイルをコピーします。 または、java.library.path システム プロパティを設定して sqljdbc_auth.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用していて、JDBC ドライバーが既定のディレクトリにインストールされている場合、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用することで、DLL の場所を指定できます。`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Java キー ストア プロバイダーを使用します。
 JDBC ドライバーには、Java キー ストアの組み込みキー ストア プロバイダー実装が含まれています。 場合、 **keyStoreAuthentication**接続文字列プロパティは、接続文字列に存在する、"JavaKeyStorePassword"に設定されていると、ドライバーは自動的にインスタンス化し、Java キー ストア プロバイダーを登録します。 Java キー ストア プロバイダーの名前は、MSSQL_JAVA_KEYSTORE です。 この名前は、SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API を使用して照会することもできます。 
@@ -260,7 +260,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
  */
 public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
-    private static String keyAlias = "<proide key alias>";
+    private static String keyAlias = "<provide key alias>";
 
     // Name by which the column master key will be known in the database.
     private static String columnMasterKeyName = "MyCMK";

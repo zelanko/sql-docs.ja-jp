@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600862"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545286"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC ドライバーの接続レジリエンシー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51600862"
 > [!IMPORTANT]  
 >  接続の復元機能は Microsoft Azure SQL データベースと SQL Server 2014 (以降) サーバー バージョンでご利用いただけます。  
   
- アイドル接続の回復性に関する詳細については、「[Technical Article – Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996)」 (技術記事 - アイドル接続の回復性) を参照してください。  
+ アイドル接続の回復性について詳しくは、「[Technical Article - Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996)」 (技術記事 - アイドル接続の回復性) をご覧ください。  
   
  Windows の場合、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には再接続動作を変更する方法が 2 つあります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51600862"
   
 -   接続の再試行間隔。  
   
-     接続の再試行間隔では、接続再試行間の秒数が指定されます。 有効な値は 1 ～ 60 です。 再接続の合計時間は接続タイムアウトを超過できません (SQLSetStmtAttr の SQL_ATTR_QUERY_TIMEOUT)。 既定値は 10 秒です。  
+     接続の再試行間隔では、接続再試行間の秒数が指定されます。 有効な値は 1 から 60 までです。 再接続の合計時間は接続タイムアウトを超過できません (SQLSetStmtAttr の SQL_ATTR_QUERY_TIMEOUT)。 既定値は 10 秒です。  
   
      次の場合に接続再試行間隔を変更できます。  
   

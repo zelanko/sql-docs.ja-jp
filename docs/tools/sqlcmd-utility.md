@@ -1,7 +1,7 @@
 ---
 title: sqlcmd ユーティリティ | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9ba83c8913d9e906925986cc07e3a2816c131cc6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fbda7d318e797bb5336534cf380089d3bc5b7d38
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661241"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712723"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,10 +50,32 @@ ms.locfileid: "51661241"
 - Windows スクリプト ファイル。
 - SQL Server エージェント ジョブのオペレーティング システム (Cmd.exe) ジョブ ステップ。
 
-ユーティリティでは、ODBC を使用して、TRANSACT-SQL バッチを実行します。 
+ユーティリティでは、ODBC を使用して、TRANSACT-SQL バッチを実行します。
+
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Sqlcmd ユーティリティの最新バージョンをダウンロードします。
+
+**[![ダウンロード](../ssdt/media/download.png)ダウンロード Microsoft Command Line Utilities 15.0.x for SQL Server (x64) (2.4 MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![ダウンロード](../ssdt/media/download.png)ダウンロード Microsoft Command Line Utilities 15.0.x for SQL Server (x86) (2.2 MB)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+コマンド ライン ツールは一般公開 (GA) のインストーラー パッケージでリリースされる[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]します。
+
+**バージョン情報**
+
+リリース番号: 15.0 <br>
+ビルド番号: 15.0.1000.34<br>
+リリース日: 2018 年 10 月 18 日
+
+SQLCMD の新しいバージョンでは、SQL Database、SQL Data Warehouse、および Always Encrypted 機能の多要素認証 (MFA) のサポートを含む、Azure AD の認証をサポートします。
+新しい BCP では、SQL Database と SQL Data Warehouse 用の Multi-factor Authentication (MFA) のサポートなど、Azure AD の認証をサポートします。
+
+**システム要件**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントには、 [Windows インストーラー4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[SQL Server 用 Microsoft ODBC Driver 17.2](https://www.microsoft.com/download/details.aspx?id=56567)します。
  
+SQLCMD のバージョンの実行を確認する`sqlcmd -?`コマンドし、その 15.0.1000.34 のことを確認します。 バージョン以降使用ができます。
+
+
+
 > [!NOTE]
-> sqlcmd ユーティリティの最近のバージョンは [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=825643)から Web リリースとして利用できます。 Always Encrypted をサポートするためには、13.1 以降のバージョンが必要です (`-g`) と Azure Active Directory 認証 (`-G`)。 (お使いのコンピューターには複数のバージョンの sqlcmd.exe がインストールされている可能性があります。 必ず正しいバージョンを使用してください。 バージョンを判断するには、 `sqlcmd -?`を実行します。)
+> Always Encrypted をサポートするためには、13.1 以降のバージョンが必要です (`-g`) と Azure Active Directory 認証 (`-G`)。 (お使いのコンピューターには複数のバージョンの sqlcmd.exe がインストールされている可能性があります。 必ず正しいバージョンを使用してください。 バージョンを判断するには、 `sqlcmd -?`を実行します。)
 
 既定でインストールされる事前に Azure Cloud Shell から sqlcmd ユーティリティを試すことができます: [ ![Cloud Shell の起動](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell の起動")](https://shell.azure.com)
 
@@ -124,7 +146,7 @@ sqlcmd
 ## <a name="command-line-options"></a>コマンド ライン オプション  
  **ログイン関連のオプション**  
   **-A**  
- 専用管理者接続 (DAC) を使用して SQL Server にサインインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 この接続は、DAC をサポートしているサーバー コンピューターでのみ動作します。 DAC を使用できない場合は、**sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「 [データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -G オプションには、オプションがサポートされていません。 を使用して SQL Database に接続するときに、SQL server 管理者があります。 DAC は、Azure Active Directory 管理者をご利用いただけません。
+ 専用管理者接続 (DAC) を使用して SQL Server にサインインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 この接続は、DAC をサポートしているサーバー コンピューターでのみ動作します。 DAC を使用できない場合は、**sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「 [データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -G オプションには、オプションはサポートされていません。 を使用して SQL Database に接続するときに、SQL server 管理者があります。 DAC は、Azure Active Directory 管理者は、使用できません。
   
  **-C**  
  クライアントでこのスイッチを使用して、サーバーの証明書を検証せずに暗黙的に信頼するようにクライアントを構成できます。 このオプションは、ADO.NET オプションの `TRUSTSERVERCERTIFICATE = true`と同等です。  
@@ -147,8 +169,8 @@ sqlcmd
  このスイッチは、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDUSEAAD = true が設定されます。 -G スイッチには、**sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643) 以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database または SQL Data Warehouse に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。 -G オプションには、オプションがサポートされていません。
 
 > [!IMPORTANT]
-> **-G** オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
-> AAD 統合認証が Linux または macOS 上で現在サポートされていません。 
+> `-G` オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
+> AAD 統合と対話型認証は現在サポートされていません Linux または macOS でします。
 
 - **Azure Active Directory のユーザー名とパスワード:** 
 
@@ -169,7 +191,7 @@ sqlcmd
    *AAD 統合認証は現在 Linux または macOS でサポートされていません*します。
 
     ```
-    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G
+    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
     ```  
 
     これにより、バックエンドで次の接続文字列が生成されます。 
@@ -179,7 +201,41 @@ sqlcmd
     ``` 
 
     > [!NOTE] 
-    > -E オプション (Trusted_Connection) と -G オプションを一緒に使用することはできません。
+    > `-E` オプション (Trusted_Connection) と `-G` オプションを共に使用することはできません。
+
+
+- **Azure Active Directory 対話型**  
+ 
+   Azure SQL Database と SQL Data Warehouse、Azure AD の対話型認証を使用すると、多要素認証をサポートする対話型のメソッドを使用できます。 詳細については、次を参照してください。 [Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)します。 
+
+   Azure AD の対話が必要です**sqlcmd** [バージョン 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility)以降だけでなく[ODBC バージョン 17.2 以降](https://www.microsoft.com/download/details.aspx?id=56567)します。  
+
+   対話型認証を有効にするユーザー名と-g オプションを提供します (-U) のみ、パスワードなし。
+
+   次の例では、ユーザーが AAD アカウントを表すユーザー名を示す、Azure AD の対話型モードを使用してデータをエクスポートします。 これは、前のセクションで使用される同じ例: *Azure Active Directory ユーザー名とパスワード*します。  
+
+   対話モードを手動で入力されたパスワードが必要または有効にすると、multi-factor authentication でアカウントが、構成された MFA 認証メソッドを完了します。
+
+   ``` 
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
+   ```
+
+   前のコマンドでは、バックエンドで次の接続文字列が生成されます。  
+
+   ```
+   SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
+   ```
+
+   コマンドラインで必要なユーザー名には、Azure AD ユーザーをドメインのフェデレーション ユーザーが Windows アカウントを使用すると、ドメイン アカウントが含まれています (たとえば、joe@contoso.com以下を参照)。
+
+   ```
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
+   ```
+ 
+   ゲスト ユーザーが特定の Azure AD に存在、sqlcmd コマンドを実行するデータベース権限を持つ SQL DB に存在するグループの一部である場合は、ゲスト ユーザーのエイリアスが使用されます (たとえば、 *keith0@adventureworks.com*)。
+
+  >[!IMPORTANT]
+  >使用する場合は、既知の問題、`-G`と`-U`オプション、SQLCMD を使用した配置する場所、`-U`オプションの前に、`-G`オプション認証に失敗が発生する可能性があります。 必ず最初に、`-G`オプションの後に、`-U`オプション。
 
     
  **-H** *workstation_name*  
@@ -191,8 +247,8 @@ sqlcmd
  **-K** *application_intent*  
  アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
- **-M** *multisubnet_failover*  
- SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については [!含める[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[の作成と構成の可用性グループ&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)、および[アクティブなセカンダリ: 読み取り可能なのセカンダリ レプリカ (Always On 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)します。  
+**-M** *multisubnet_failover*  
+ SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、**-M** は無効になります。 詳細については、「[リスナー、クライアント接続、アプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)」、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)」をご覧ください。 
   
  **-N**  
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
@@ -204,7 +260,7 @@ sqlcmd
 
 強力なパスワードを使用することをお勧めします。
  
-#### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**強力なパスワードを使用してください。**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
+#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**強力なパスワードを使用してください。**](../relational-databases/security/strong-passwords.md)
   
   
  パスワード プロンプトは、次のようにパスワード プロンプトをコンソールに出力することによって表示されます。 `Password:`  
@@ -711,7 +767,7 @@ sqlcmd
  ファイルは、バッチ ターミネータが検出された後に読み取られ、実行されます。 **:r** コマンドは複数発行できます。 ファイルには、どのような **sqlcmd** コマンドでも含めることができます。 これには、バッチ ターミネータの **GO**も含まれます。  
   
 > [!NOTE]  
->  対話モードで表示される行数は、 **:r** コマンドが検出されるたびに、1 行ずつ増えます。 **:r** コマンドは、リスト コマンドの出力に表示されます。  
+>  対話モードで表示される行数は、`:r` コマンドが検出されるたびに、1 行ずつ増えます。 `:r` コマンドは、リスト コマンドの出力に表示されます。  
   
  **:Serverlist**  
  ローカルに構成されたサーバーと、ネットワーク上でブロードキャストしているサーバー名の一覧を表示します。  
@@ -763,7 +819,7 @@ sqlcmd
   
 -   ローカル コンピューターの **sqlcmd** からリモート サーバー上の入力ファイルが呼び出され、ファイルに :Out c:\OutputFile.txt のようにドライブ パスが含まれていると、 出力ファイルはリモート サーバーではなく、ローカル コンピューター上に作成されます。  
   
--   有効なファイル パスには、 `C:\<filename>`、 `\\<Server>\<Share$>\<filename>` 、 `"C:\Some Folder\<file name>"`があります。 パスに空白が含まれる場合は、引用符を使用します。  
+-   有効なファイル パスは、`C:\<filename>`、`\\<Server>\<Share$>\<filename>`、`"C:\Some Folder\<file name>"` などです。 パスに空白が含まれる場合は、引用符を使用します。  
   
 -   各新規 **sqlcmd** セッションにより、同じ名前の既存のファイルが上書きされます。  
   
@@ -827,7 +883,7 @@ Enter キーを押すと、"データベース コンテキストが 'AdventureW
  XML (ストリーム入力) データと行セットのデータを混在させることはできません。 XML ストリームを出力する Transact-SQL ステートメントの実行前に、XML ON コマンドが実行されていない場合は、正しく出力されません。 XML ON コマンドが実行されている場合、通常の行セットを出力する Transact-SQL ステートメントは実行できません。  
   
 > [!NOTE]  
->  **:XML** コマンドは SET STATISTICS XML ステートメントをサポートしません。  
+>  `:XML` コマンドは SET STATISTICS XML ステートメントをサポートしません。  
   
 ###  <a name="OutputJSON"></a> JSON 出力形式  
  JSON 出力を行うには、 `:XML ON`コマンドを使用します。 これを使用しないと、出力には、列名と JSON テキストの両方が含まれます。 この出力は、有効な JSON ではありません。  
@@ -840,7 +896,7 @@ Enter キーを押すと、"データベース コンテキストが 'AdventureW
 Azure Active Directory 認証の利用例
 ```
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
-sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyAADPassword -G -l 30
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAADPassword -l 30
 ```
   
 ## <a name="sqlcmd-best-practices"></a>sqlcmd のベスト プラクティス  
@@ -866,13 +922,10 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
  [ジョブ ステップの管理](~/ssms/agent/manage-job-steps.md)   
  [CmdExec ジョブ ステップの作成](~/ssms/agent/create-a-cmdexec-job-step.md)  
   
-  
 
+## <a name="feedback"></a>フィードバック
 
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL クライアント ツール フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
-
-
-
-
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

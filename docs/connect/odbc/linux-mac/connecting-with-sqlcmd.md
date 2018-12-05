@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039b47f1a2affd12f53a8c45c931348eb4a2077e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604762"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512537"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "51604762"
 次のコマンドは、Windows 認証 (Kerberos) を使用する方法を示してと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]認証では、それぞれします。
   
 ```  
-sqlcmd –E –Sxxx.xxx.xxx.xxx  
-sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx  
+sqlcmd -E -Sxxx.xxx.xxx.xxx  
+sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
   
 ## <a name="available-options"></a>利用可能なオプション
@@ -58,7 +58,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -H ワークステーション名を指定します。  
   
-- -i *input_file*[,*input_file*[,…]] SQL ステートメントまたはストアド プロシージャのバッチを含むファイルを指定します。  
+- -i *input_file*[,*input_file*[,...]] SQL ステートメントまたはストアド プロシージャのバッチを含むファイルを指定します。  
   
 - -I セット、`SET QUOTED_IDENTIFIER`接続オプションをオンにします。  
   
@@ -75,7 +75,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 - -m *error_level* stdout に送信されるエラー メッセージを制御します。  
   
 - **-M**_マルチ\_フェールオーバー_  
-[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、フェールオーバーを迅速に検出して、(現在) アクティブなサーバーに接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]を参照してください[ODBC Driver on Linux と macOS の高可用性とディザスター リカバリー](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)します。  
+[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、フェールオーバーを迅速に検出して、(現在) アクティブなサーバーに接続できます。 **-M** を指定しない場合、**-M** は無効になります。 詳細については[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]を参照してください[ODBC Driver on Linux と macOS の高可用性とディザスター リカバリー](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)します。  
   
 > [!NOTE]  
 > **-M** は、CTP for SUSE Linux ではサポートされていません。 ただし、`sqlcmd` に渡される DSN ファイルで **MultiSubnetFailover=Yes** キーワードを指定できます。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
@@ -184,7 +184,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 実行`sqlcmd`して`c.sql`入力ファイルとして。  
   
-    slqcmd -S<…> -P<..> –U<..> -I c.sql  
+    slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
 - ~ z*パスワード*パスワードを変更します。  
   
@@ -222,9 +222,9 @@ Linux または macOS 上の DSN では、次のエントリがサポートさ�
   
 DSN では DRIVER エントリのみが必要ですが、サーバーに接続するには、`sqlcmd` または `bcp` が SERVER エントリ内の値を必要とします。  
 
-DSN と `sqlcmd` または `bcp` コマンド ラインの両方で同じオプションが指定されている場合は、コマンドライン オプションが、DSN で使用される値をオーバーライドします。 たとえば、DSN に DATABASE エントリがあり、`sqlcmd` コマンドラインに **-d** が含まれる場合、**-d** に渡される値が使用されます。 DSN で **Trusted_Connection=yes** が指定されている場合は、Kerberos 認証が使用され、ユーザー名 (**–U**) とパスワード (**–P**) は無視されます (指定されている場合)。
+DSN と `sqlcmd` または `bcp` コマンド ラインの両方で同じオプションが指定されている場合は、コマンドライン オプションが、DSN で使用される値をオーバーライドします。 たとえば、DSN に DATABASE エントリがあり、`sqlcmd` コマンドラインに **-d** が含まれる場合、**-d** に渡される値が使用されます。 DSN で **Trusted_Connection=yes** が指定されている場合は、Kerberos 認証が使用され、ユーザー名 (**-U**) とパスワード (**-P**) は無視されます (指定されている場合)。
 
-エイリアス `alias isql="sqlcmd –D"` を定義して、`isql` を呼び出す既存のスクリプトを、`sqlcmd` を使用するように変更できます。  
+エイリアス `alias isql="sqlcmd -D"` を定義して、`isql` を呼び出す既存のスクリプトを、`sqlcmd` を使用するように変更できます。  
 
 ## <a name="see-also"></a>参照  
 [**bcp** による接続](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  

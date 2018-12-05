@@ -15,12 +15,12 @@ ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d845b000daa4610fc19e573342faaef361c0de01
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 19902c030538d0384c89dd632aaf1d6f8c728048
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292088"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538774"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>引数  
  [ **create** | **c** ] *\<instance-name>* *\<instance-version>* **[-s]**  
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** の新しいインスタンスを作成します。 **SqlLocalDB** では、*\<instance-version>* 引数で指定された [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] バイナリのバージョンを使用します。 バージョン番号は、1 桁以上の 10 進数の数値書式で指定します。 マイナー バージョン番号 (サービス パック) は省略可能です。 たとえば、11.0 と 11.0.1186 という 2 つのバージョン番号のどちらも使用できます。 指定したバージョンがコンピューターにインストールされている必要があります。 指定しなかった場合、バージョン番号は既定で **SqlLocalDB** ユーティリティのバージョンに設定されます。 **–s** を追加した場合、 **LocalDB**の新しいインスタンスが起動します。  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** の新しいインスタンスを作成します。 **SqlLocalDB** では、*\<instance-version>* 引数で指定された [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] バイナリのバージョンを使用します。 バージョン番号は、1 桁以上の 10 進数の数値書式で指定します。 マイナー バージョン番号 (サービス パック) は省略可能です。 たとえば、11.0 と 11.0.1186 という 2 つのバージョン番号のどちらも使用できます。 指定したバージョンがコンピューターにインストールされている必要があります。 指定しなかった場合、バージョン番号は既定で **SqlLocalDB** ユーティリティのバージョンに設定されます。 **-s** を追加した場合、**LocalDB** の新しいインスタンスが起動します。  
   
  [ **share** | **h** ]  
  指定された共有名を使用して、 **LocalDB** の指定されたプライベート インスタンスを共有します。 ユーザー SID またはアカウント名を省略した場合、既定で現在のユーザーになります。  
@@ -61,7 +61,7 @@ SqlLocalDB.exe
  指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを起動します。 成功した場合、ステートメントから **LocalDB**の名前付きパイプ アドレスが返されます。  
   
  [ **stop** | **p** ] *\<instance-name>* **[-i]** **[-k]**  
- 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを停止します。 **–i** を追加した場合は、 **NOWAIT** オプション付きでインスタンスのシャットダウンを要求します。 **–k** を追加した場合は、インスタンス プロセスに通知することなく、そのプロセスを停止します。  
+ 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを停止します。 **-i** を追加した場合、**NOWAIT** オプション付きでインスタンスのシャットダウンを要求します。 **-k** を追加した場合は、インスタンス プロセスに通知することなく、そのプロセスを停止します。  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  
  現在のユーザーが所有する [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のすべてのインスタンスを一覧表示します。  
@@ -99,7 +99,7 @@ SqlLocalDB.exe share "DeptLocalDB" "DeptSharedLocalDB"
 SqlLocalDB.exe start "DeptLocalDB"  
 SqlLocalDB.exe info "DeptLocalDB"  
 REM The previous statement outputs the Instance pipe name for the next step  
-sqlcmd –S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
+sqlcmd -S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
 CREATE LOGIN NewLogin WITH PASSWORD = 'Passw0rd!!@52';   
 GO  
 CREATE USER NewLogin;  
@@ -110,7 +110,7 @@ EXIT
  次のコードを実行して、 **ログインを使用して、** LocalDB `NewLogin` の共有インスタンスに接続します。  
   
 ```  
-sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
+sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
 ## <a name="see-also"></a>参照  

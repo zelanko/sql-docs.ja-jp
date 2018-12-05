@@ -13,12 +13,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4b12736ccbf670b12312b372410879c8a08a9e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f56669ce6fdb9bdc71017afa351e0f2b31f0b9d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508051"
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51291858"
   
 ```  
   
-sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ –verboselevel level ] [ –logintimeout timeout_value ] [ -querytimeout timeout_value ]  
+sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ -verboselevel level ] [ -logintimeout timeout_value ] [ -querytimeout timeout_value ]  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -52,7 +52,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  復元先ディレクトリにある、最新の復元ポイント以降に作成されたバックアップ ファイルは、セカンダリ データベースに復元されます。 その後、ファイル保有期間に基づき、 **sqllogship** アプリケーションによって古いバックアップ ファイルが削除されます。 次に、セカンダリ サーバーと監視サーバーに復元操作の履歴ログが記録されます。 最後に、保有期間に基づき古い履歴情報を削除するため、 **sp_cleanup_log_shipping_history**が実行されます。  
   
- **–verboselevel** *level*  
+ **-verboselevel** *level*  
  ログ配布の履歴に追加するメッセージのレベルを指定します。 *level* は、次のいずれかの整数です。  
   
 |level|[説明]|  
@@ -63,7 +63,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|情報メッセージ、警告、およびエラー処理メッセージを出力します。 これが既定値です。|  
 |4|すべてのデバッグおよびトレースのメッセージを出力します。|  
   
- **–logintimeout** *timeout_value*  
+ **-logintimeout** *timeout_value*  
  サーバー インスタンスへのログインを試みてからタイムアウトするまでの時間を指定します。既定値は 15 秒です。 *timeout_value* のデータ型は **int**_です。_  
   
  **-querytimeout** *timeout_value*  

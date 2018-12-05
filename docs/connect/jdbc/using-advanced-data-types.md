@@ -11,12 +11,12 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebdaa05923df2437c0d8d5bafc2bfa86b0a76de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510502"
 ---
 # <a name="using-advanced-data-types"></a>高度なデータ型の使用
 
@@ -55,7 +55,7 @@ JDBC ドライバーは、java.sql.Blob、java.sql.Clob、および java.sql.NCl
 
 ### <a name="retrieving-large-value-types-from-a-database"></a>データベースからの大きな値の型の取得
 
-**varchar(max)** データ型などのバイナリ以外の大きな値のデータ型をデータベースから取得する場合は、データを文字ストリームとして読み取ることができます。 以下の例では、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを使用してデータベースからデータを取得し、これを結果セットとして返します。 次に、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) メソッドを使用し、大きな値のデータを結果セットから読み取ります。  
+**varchar(max)** データ型など、バイナリ以外の大きな値のデータ型をデータベースから取得する場合、方法の 1 つはデータを文字ストリームとして読み取ることです。 以下の例では、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを使用してデータベースからデータを取得し、これを結果セットとして返します。 次に、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) メソッドを使用し、大きな値のデータを結果セットから読み取ります。  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -66,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > これと同じアプローチがのこともでき、**テキスト**、 **ntext**、および**nvarchar (max)** データ型。  
 
-**varbinary(max)** データ型などのバイナリの大きな値のデータ型をデータベースから取得する場合は、いくつかの方法があります。 最も効率的に行うには、次のようにバイナリ ストリームとしてデータを読み取ります。  
+**varbinary(max)** データ型など、バイナリの大きな値のデータ型をデータベースから取得する場合は、いくつかの方法があります。 最も効率的に行うには、次のようにバイナリ ストリームとしてデータを読み取ります。  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -162,7 +162,7 @@ JDBC ドライバーにおける **xml** データ型の実装では、以下の
   
 ## <a name="user-defined-data-type"></a>ユーザー定義データ型  
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] にユーザー定義型 (UDT) が導入されたことにより、オブジェクトやカスタム データ構造を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納できるため、SQL 型システムを拡張することができます。 UDT は複数のデータ型を保持でき、動作を含むことができるので、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型だけで構成される従来の別名データ型とは異なります。 UDT は、検証可能なコードを生成する、Microsoft .NET 共通言語ランタイム (CLR) によってサポートされている任意の言語を使用して定義されます。 その言語には、Microsoft Visual C# および Visual Basic .NET が含まれます。 データは .NET Framework ベースのクラスまたは構造体のフィールドとプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] にユーザー定義型 (UDT) が導入されたことにより、オブジェクトやカスタム データ構造を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納できるため、SQL 型システムを拡張することができます。 UDT は複数のデータ型を持つことができ、動作を定義できます。この点は、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型から構成される従来の別名データ型と異なります。 UDT は、検証可能なコードを生成する、Microsoft .NET 共通言語ランタイム (CLR) によってサポートされている任意の言語を使用して定義されます。 その言語には、Microsoft Visual C# および Visual Basic .NET が含まれます。 データは .NET Framework ベースのクラスまたは構造体のフィールドとプロパティとして公開され、動作はクラスまたは構造体のメソッドによって定義されます。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、UDT をテーブルの列定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチの変数、または [!INCLUDE[tsql](../../includes/tsql-md.md)] の関数やストアド プロシージャの引数として使用できます。  
   
