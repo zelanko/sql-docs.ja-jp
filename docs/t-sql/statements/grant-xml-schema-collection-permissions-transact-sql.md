@@ -123,7 +123,7 @@ GRANT permission  [ ,...n ] ON
 |アプリケーション ロール|ロールに対する ALTER 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
   
 ## <a name="examples"></a>使用例  
- 次の例では、XML スキーマ コレクション `EXECUTE` の `Invoices4` 権限をユーザー `Wanida` に許可します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
+ 次の例では、XML スキーマ コレクション `Invoices4` の `EXECUTE` 権限をユーザー `Wanida` に許可します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
   
  ```
  USE AdventureWorks2012;  
