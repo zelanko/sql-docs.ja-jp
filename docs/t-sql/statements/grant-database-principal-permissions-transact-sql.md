@@ -169,7 +169,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. ユーザーに対する CONTROL 権限を別のユーザーに許可する  
- 次の例では、`CONTROL` のユーザー `AdventureWorks2012` に対する `Wanida` 権限を、ユーザー `RolandX` に許可します。  
+ 次の例では、`AdventureWorks2012` のユーザー `Wanida` に対する `CONTROL` 権限を、ユーザー `RolandX` に許可します。  
   
 ```  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
@@ -177,7 +177,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. ロールに対する VIEW DEFINITION 権限を、GRANT OPTION を指定してユーザーに許可する  
- 次の例では、`VIEW DEFINITION` のロール `AdventureWorks2012` に対する `SammamishParking` 権限を、`GRANT OPTION` を指定して、データベース ユーザー `JinghaoLiu` に許可します。  
+ 次の例では、`AdventureWorks2012` のロール `SammamishParking` に対する `VIEW DEFINITION` 権限を、`GRANT OPTION` を指定して、データベース ユーザー `JinghaoLiu` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
