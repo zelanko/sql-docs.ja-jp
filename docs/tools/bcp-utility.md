@@ -1,7 +1,7 @@
 ---
 title: bcp ユーティリティ | Microsoft Docs
 ms.custom: ''
-ms.date: 02/12/2018
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,17 +29,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 777fb26703b4582662748a15d4ac6ed6e0fdfae0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675381"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712503"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > 最新バージョンの bcp ユーティリティでは、次を参照してください[for SQL Server のマイクロソフト コマンド ライン ユーティリティ 14.0。 ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > Linux では、bcp を使用して、参照してください[sqlcmd および bcp を Linux にインストール](../linux/sql-server-linux-setup-tools.md)します。
 
@@ -50,10 +48,31 @@ ms.locfileid: "51675381"
  ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") **bcp** 構文で使用される構文表記規則については、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。  
   
 > [!NOTE]
-> **bcp** を使ってデータをバックアップする場合、フォーマット ファイルを作成してデータ形式を記録します。 **bcp** データ ファイルには、スキーマ情報やフォーマット情報が **含まれない** ので、テーブルまたはビューが削除され、フォーマット ファイルがない場合は、データをインポートできないことがあります。  
-  
+> **bcp** を使ってデータをバックアップする場合、フォーマット ファイルを作成してデータ形式を記録します。 **bcp** データ ファイルには、スキーマ情報やフォーマット情報が **含まれない** ので、テーブルまたはビューが削除され、フォーマット ファイルがない場合は、データをインポートできないことがあります。
+
+## <a name="download-the-latest-version-of-bcp-utility"></a>最新バージョンの bcp ユーティリティをダウンロードします。
+
+**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x64) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x86) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+コマンド ライン ツールは一般公開 (GA) のインストーラー パッケージでリリースされる[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]します。
+
+**バージョン情報**
+
+リリース番号: 15.0 <br>
+ビルド番号: 15.0.1000.34<br>
+リリース日: 2018 年 10 月 18 日
+
+SQLCMD の新しいバージョンでは、SQL Database、SQL Data Warehouse、および Always Encrypted 機能の多要素認証 (MFA) のサポートを含む、Azure AD の認証をサポートします。
+新しい BCP では、SQL Database と SQL Data Warehouse 用の Multi-factor Authentication (MFA) のサポートなど、Azure AD の認証をサポートします。
+
+**システム要件**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントには、 [Windows インストーラー4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[SQL Server 用 Microsoft ODBC Driver 17.2](https://www.microsoft.com/download/details.aspx?id=56567)します。
+ 
+BCP のバージョンの実行をチェックする`bcp /v`コマンドしその 15.0.1000.34 を確認または以降が使用されます。
+
+
 <table><th>構文</th><tr><td><pre>
-bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>
+bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
     {<a href="#in">in</a> <a href="#data_file">data_file</a> | <a href="#out">out</a> <a href="#data_file">data_file</a> | <a href="#qry_out">queryout</a> <a href="#data_file">data_file</a> | <a href="#format">format</a> <a href="#format">nul</a>}
 <a>                                                                                                         </a>
     [<a href="#a">-a packet_size</a>]
@@ -151,7 +170,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> バージョン 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) より前のバージョンでは、コード ページ 65001 (UTF-8 エンコード) はサポートされません。 バージョン 13 以降では、UTF-8 エンコードを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の前のバージョンにインポートできます。|  
   
  **-d** _**database\_name**_<a name="d"></a>   
- 接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 **-d** *database_name* と、3 つの部分で構成される名前 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice. *database_name* がハイフン (-)、またはスラッシュ (/) から始まる場合は、 **-d** とデータベース名の間に空白を入れないでください。  
+ 接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。  **-d** *database_name* と、3 つの部分で構成される名前 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice. *database_name* がハイフン (-)、またはスラッシュ (/) から始まる場合は、 **-d** とデータベース名の間に空白を入れないでください。  
   
  **-e**  _**err\_ファイル**_<a name="e"></a>  
  **bcp** ユーティリティがファイルからデータベースに転送できなかったすべての行を格納するエラー ファイルの完全パスを指定します。 **bcp** コマンドからのエラー メッセージは、ユーザーのワークステーションに送られます。 このオプションを指定しないと、エラー ファイルは作成されません。  
@@ -184,6 +203,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 **-G**<a name="G"></a>  
  このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチが必要です[14.0.3008.27 バージョンまたはそれ以降](https://go.microsoft.com/fwlink/?LinkID=825643)します。 バージョンを判断するには、bcp -v を実行します。 詳細については、次を参照してください。[使用して Azure Active Directory 認証では、SQL Database または SQL Data Warehouse の認証に](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)します。 
+
+> [!IMPORTANT]
+> **-G** オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
+> AAD 統合と対話型認証は現在サポートされていません Linux または macOS でします。
 
 > [!TIP]
 >  Bcp のバージョンが Azure Active Directory 認証 (AAD) の型のサポートが含まれますかどうかをチェックする**bcp--** (bcp\<領域 >\<dash >\<dash >)-g の一覧に表示されることを確認使用可能な引数。
@@ -220,6 +243,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
+- **Azure Active Directory 対話型**  
+
+   Azure SQL Database と SQL Data Warehouse、Azure AD の対話型認証を使用すると、多要素認証をサポートする対話型のメソッドを使用できます。 詳細については、次を参照してください。 [Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)します。 
+
+   Azure AD の対話が必要です**bcp** [バージョン 15.0.1000.34](#download-the-latest-version-of-bcp-utility)以降だけでなく[ODBC バージョン 17.2 以降](https://www.microsoft.com/download/details.aspx?id=56567)します。  
+
+   対話型認証を有効にするユーザー名と-g オプションを提供します (-U) のみ、パスワードなし。   
+
+   次の例では、ユーザーが AAD アカウントを表すユーザー名を示す、Azure AD の対話型モードを使用してデータをエクスポートします。 これは、前のセクションで使用される同じ例: *Azure Active Directory ユーザー名とパスワード*します。  
+
+   対話モードを手動で入力されたパスワードが必要または有効にすると、multi-factor authentication でアカウントが、構成された MFA 認証メソッドを完了します。 
+
+   ``` 
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
+   ``` 
+
+   ドメイン フェデレーションいずれかの場合は、Azure AD ユーザーが Windows アカウントを使用して、コマンドラインで必要なユーザー名には、ドメイン アカウントが含まれます (たとえば、joe@contoso.com以下を参照)。   
+
+   ```
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
+   ```
+
+   ゲスト ユーザーのエイリアスが使用される場合、ゲスト ユーザーは、特定の Azure AD に存在し、bcp コマンドを実行するデータベース権限を持つ SQL DB 内に存在するグループの一部である、(たとえば、 *keith0@adventureworks.com*)。
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a> データをテーブルまたはビューに一括インポートするときに使用するヒントを指定します。  
   
@@ -257,21 +303,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 * **FIRE_TRIGGERS**  
 **in** 引数と共に指定されている場合、一括コピーの操作時に、コピー先のテーブル上で定義されている挿入トリガーを実行します。 FIRE_TRIGGERS が指定されていない場合は、挿入トリガーは実行されません。 FIRE_TRIGGERS は、 **out**引数、 **queryout**引数、および **format** 引数では無視されます。  
   
- **-i** _**input\_file**_<a name="i"></a>  
- 応答ファイルの名前を指定します。応答ファイルには、対話モード (**-n**、 **-c**、 **-w**、または **-N** が指定されていないモード) で一括コピーを実行する場合の、各データ フィールドに関するコマンド プロンプトの質問への応答が含まれます。  
+**-i** _**input\_file**_<a name="i"></a>  
+応答ファイルの名前を指定します。応答ファイルには、対話モード (**-n**、 **-c**、 **-w**、または **-N** が指定されていないモード) で一括コピーを実行する場合の、各データ フィールドに関するコマンド プロンプトの質問への応答が含まれます。  
   
- *input_file* がハイフン (-) またはスラッシュ (/) で始まる場合は、 **-i** と *input_file* 値の間に空白を入れないでください。  
+*input_file* がハイフン (-) またはスラッシュ (/) で始まる場合は、 **-i** と *input_file* 値の間に空白を入れないでください。  
   
- **-k**<a name="k"></a>  
- 一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
+**-k**<a name="k"></a>  
+一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
   
- **-K** _**application\_intent**_<a name="K"></a>   
- アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は、 **ReadOnly**だけです。 **-K** を指定しない場合、bcp ユーティリティでは Always On 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+**-K** _**application\_intent**_<a name="K"></a>   
+アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は、 **ReadOnly**だけです。 **-K** を指定しない場合、bcp ユーティリティでは Always On 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
- **-L** _**last\_row**_<a name="L"></a>  
- テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。 このパラメーターには、0 より大きく (> 0)、最後の行の番号以下 (< または =) となる値が必要です。 このパラメーターがない場合、既定ではファイルの最後の行となります。  
+**-L** _**last\_row**_<a name="L"></a>  
+テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。 このパラメーターには、0 より大きく (> 0)、最後の行の番号以下 (< または =) となる値が必要です。 このパラメーターがない場合、既定ではファイルの最後の行となります。  
   
- *last_row* には、2^63-1 以下の正の整数を指定できます。  
+*last_row* には、2^63-1 以下の正の整数を指定できます。  
   
 **-m** _**max\_errors**_<a name="m"></a>  
 **bcp** 操作が取り消される前に発生可能な構文エラーの最大数を指定します。 構文エラーは、対象となるデータ型へのデータの変換エラーを意味しています。 *max_errors* の合計では、制約違反など、サーバーでのみ検出できるエラーはすべて対象外となります。  
@@ -313,7 +359,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-q**<a name="q"></a>  
  **bcp** ユーティリティと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンス間の接続で、SET QUOTED_IDENTIFIERS ON ステートメントを実行します。 名前に空白や単一引用符が含まれるデータベース、所有者、テーブル、またはビューを指定する場合に、このオプションを使用します。 3 つの要素から成るテーブル名またはビュー名全体を、二重引用符 (" ") で囲みます。  
   
- 空白や単一引用符を含むデータベース名を指定するには、 **-q** オプションを使用する必要があります。  
+ 空白や単一引用符を含むデータベース名を指定するには、**-q** オプションを使用する必要があります。  
   
  **-q** は、 **-d**に渡される値には適用されません。  
   
@@ -378,7 +424,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  詳細については、「 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。  
   
  **-x**<a name="x"></a>  
- **format** および **-f** *format_file* オプションと共に使用し、既定の XML ではないフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。 **-x** はデータのインポート時とエクスポート時には機能しません。 **format** および **-f** *format_file*の両方を指定せずに使用すると、エラーが生成されます。  
+  **format** および **-f** *format_file* オプションと共に使用し、既定の XML ではないフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。 **-x** はデータのインポート時とエクスポート時には機能しません。  **format** および **-f** *format_file*の両方を指定せずに使用すると、エラーが生成されます。  
   
 ## 解説<a name="remarks"></a>
  **bcp** 13.0 クライアントは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のツールをインストールしたときにインストールされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] と以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の両方のツールがインストールされている場合、PATH 環境変数の値の順番によっては、 **bcp** 13.0 クライアントではなく、以前の **bcp** クライアントを使用している可能性があります。 この環境変数によって Windows で実行可能ファイルを探すときに使用されるディレクトリのセットが定義されます。 使用しているバージョンを確認するには、Windows のコマンド プロンプトで **bcp /v** コマンドを実行します。 コマンド パスを PATH 環境変数で設定する方法の詳細については、Windows のヘルプを参照してください。  
@@ -661,3 +707,8 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
+## <a name="feedback"></a>フィードバック
+
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL クライアント ツール フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

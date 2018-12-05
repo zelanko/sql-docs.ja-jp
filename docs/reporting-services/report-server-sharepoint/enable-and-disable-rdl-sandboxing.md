@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1cf64bf1e07a83defbc3553535251f51fa96f839
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 183d7272049c7981a8a3f53a811087866c05c666
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032121"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412749"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 統合モードで Reporting Services の RDL サンドボックスの有効化と無効化
 
@@ -51,8 +51,8 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
@@ -104,7 +104,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
   
 -   型の静的メンバー  
   
--   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** メソッド  
+-    [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** メソッド  
   
 -   レポート定義の **\<Classes>** 要素。  
   

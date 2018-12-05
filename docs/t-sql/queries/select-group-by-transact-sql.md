@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906022"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509052"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ GROUP BY 句では、SQL-2006 標準規格に含まれているすべての GROU
   
 -   GROUP BY 句では、明示的な GROUPING SETS リストに含まれていないグループ化セットは使用できません。 たとえば、`GROUP BY Column1, (Column2, ...ColumnN`) は標準規格で使用できますが、Transact-SQL では使用できません。  Transact SQL は、同じ意味の `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` と `GROUP BY Column1, Column2, ... ColumnN` をサポートしています。 これらは、前に示した `GROUP BY` の例と意味的に同じです。 これには、`GROUP BY Column1, (Column2, ...ColumnN`) が意味的に異なる `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` と誤って解釈される可能性を回避する目的があります。  
   
--   グループ化セット内でグループ化セットを使用することはできません。 たとえば、`GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` は SQL-2006 標準規格で使用できますが、Transact-SQL では使用できません。 Transact-SQL では、最初の GROUP BY の例と意味的に同じで、構文がより明確な `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` または `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )` を使用できます。  
+-   グループ化セット内でグループ化セットを使用することはできません。 たとえば、`GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))` は SQL-2006 標準規格で使用できますが、Transact-SQL では使用できません。 Transact-SQL では、最初の GROUP BY の例と意味的に同じで、構文がより明確な `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` または `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )` を使用できます。  
   
 -   GROUP BY [ALL/DISTINCT] は、列の式を含む単純な GROUP BY 句でのみ使用できます。 GROUPING SETS、ROLLUP、CUBE、WITH CUBE または WITH ROLLUP のコンストラクトでは使用できません。 ALL は既定値であり暗黙的です。 また、下位互換性のある構文でのみ使用できます。
   

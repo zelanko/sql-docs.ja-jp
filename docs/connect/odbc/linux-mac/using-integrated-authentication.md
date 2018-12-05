@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604362"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419073"
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -126,7 +126,7 @@ Linux または macOS コンピューターの時刻と時刻の Kerberos キー
 
 Kerberos 認証が失敗すると、Linux または macOS 上の ODBC ドライバーで NTLM 認証が使用されません。  
 
-Linux または macOS のコンピューターと Active Directory の認証の詳細については、次を参照してください[Active Directory と Linux クライアントを認証](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)と[OS X と Active Directoryに統合するためのベストプラクティス](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf)。 Kerberos を構成する方法の詳細については、次を参照してください。、 [MIT Kerberos ドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)します。
+Linux または macOS のコンピューターと Active Directory の認証の詳細については、次を参照してください[Active Directory と Linux クライアントを認証](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)と[OS X と Active Directoryに統合するためのベストプラクティス。](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Kerberos を構成する方法の詳細については、次を参照してください。、 [MIT Kerberos ドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)します。
 
 ## <a name="see-also"></a>参照  
 [プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)

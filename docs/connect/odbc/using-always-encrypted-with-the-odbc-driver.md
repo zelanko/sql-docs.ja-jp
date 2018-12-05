@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604719"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506826"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -365,9 +365,9 @@ Azure Key Vault は、特にアプリケーションが Azure でホストされ
 
 ドライバーでは、次の資格情報の種類を使用して Azure Key Vault への認証がサポートされています。
 
-- ユーザー名/パスワード – この方法で、資格情報には、Azure Active Directory ユーザーとパスワードの名前が。
+- ユーザー名/パスワード - この方法で、資格情報には、Azure Active Directory ユーザーとパスワードの名前が。
 
-- この方法でクライアント ID/シークレット: 資格情報は、アプリケーション クライアント ID とアプリケーション シークレットが。
+- この方法でクライアント ID/シークレットの資格情報は、アプリケーション クライアント ID とアプリケーション シークレットが。
 
 列の暗号化の AKV に格納されている Cmk を使用するドライバーを許可するのには、次の接続文字列専用のキーワードを使用します。
 
@@ -457,7 +457,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`Attribute`|[入力]取得する属性:`SQL_COPT_SS_CEKEYSTOREPROVIDER`定数。|
 |`ValuePtr`|[出力]次のプロバイダー名を返すメモリへのポインター。|
 |`BufferLength`|[入力]ValuePtr バッファーの長さ。|
-|`StringLengthPtr`|[出力]\(Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\*ValuePtr します。 ValuePtr が null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数が null 終了の長さマイナス BufferLength より大きい場合、文字でデータ\*ValuePtr がの長さマイナス BufferLength に切り捨てられます、null 終端文字は、ドライバーが null で終わるとします。|
+|`StringLengthPtr`|[出力](Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\*ValuePtr します。 ValuePtr が null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数が null 終了の長さマイナス BufferLength より大きい場合、文字でデータ\*ValuePtr がの長さマイナス BufferLength に切り捨てられます、null 終端文字は、ドライバーが null で終わるとします。|
 
 全体の一覧の取得を許可するのには、すべての Get 操作は、現在のプロバイダー名を返し、次の内部のカウンターをインクリメントします。 このカウンターが空の文字列、リストの末尾に達すると ("") が返されると、カウンターがリセットされます。一連の Get 操作は、リストの先頭からもう一度に進みます。
 
