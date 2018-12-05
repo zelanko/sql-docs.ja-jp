@@ -87,7 +87,7 @@ GO
 ```  
   
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. 拡張ストアド プロシージャに対する EXECUTE 権限を許可する  
- 次の例では、`EXECUTE` に対し、`xp_readmail` の `Sylvester1` 権限を許可します。  
+ 次の例では、`Sylvester1` に対し、`xp_readmail` の `EXECUTE` 権限を許可します。  
   
 ```  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  
