@@ -97,7 +97,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. エンドポイントの VIEW DEFINITION 権限を許可する  
- 次の例では、エンドポイント `VIEW DEFINITION` での `Mirror7` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に許可します。  
+ 次の例では、エンドポイント `Mirror7` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に許可します。  
   
 ```  
 USE master;  
