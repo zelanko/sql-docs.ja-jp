@@ -164,7 +164,7 @@ GO
 ```  
   
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. サーバー ロールに権限を許可する  
- 次の例では、`ITDevAdmin` および `ITDevelopers` という名前の 2 つのサーバー ロールを作成します。 ここでは、`WITH GRANT` オプションを含めて、`ALTER ANY DATABASE` 権限を `ITDevAdmin` ユーザー定義サーバー ロールに許可します。これにより、`ITDevAdmin` サーバー ロールは、`ALTER ANY DATABASE` 権限を再割り当てすることができます。 次に、`ITDevelopers` サーバー ロールの `ALTER ANY DATABASE` 権限を使用する権限を `ITDevAdmin` に許可します。  
+ 次の例では、`ITDevAdmin` および `ITDevelopers` という名前の 2 つのサーバー ロールを作成します。 ここでは、`ALTER ANY DATABASE` オプションを含めて、`ITDevAdmin` 権限を `WITH GRANT` ユーザー定義サーバー ロールに許可します。これにより、`ITDevAdmin` サーバー ロールは、`ALTER ANY DATABASE` 権限を再割り当てすることができます。 次に、`ITDevelopers` サーバー ロールの `ALTER ANY DATABASE` 権限を使用する権限を `ITDevAdmin` に許可します。  
   
 ```  
 USE master;  
