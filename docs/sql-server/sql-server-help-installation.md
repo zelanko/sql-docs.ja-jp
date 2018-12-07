@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700530"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514533"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server のオフライン ヘルプとヘルプ ビューアー
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server Management Studio (SSMS) または Visual Studio (VS) のヘルプ ビューアーを使用すると、オンライン ソースまたはディスクから、SQL Server ヘルプ パッケージをダウンロードしてインストールし、それをオフラインで表示することができます。 この記事では、ヘルプ ビューアーをインストールするためのツールの説明に加えて、オフライン ヘルプ コンテンツをインストールする方法および [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016、SQL Server 2017 のヘルプを表示する方法について説明します。
+
+インターネットにアクセスできるシステム上でコンテンツがダウンロードされたら、そのコンテンツを、インターネットに接続されていないシステムに移行することができます。 
 
 > [!NOTE]
 > SQL Server 2016 と SQL Server 2017 では共通のヘルプが提供されます。ただし、一部のトピックは、一方のバージョンにのみ適用され、その旨の説明があります。 ほとんどのトピックは、両方のバージョンに適用されます。
@@ -125,7 +127,8 @@ Visual Studio で、インストールされたヘルプを表示するには:
    ![ヘルプの表示](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    左側にヘルプの目次が表示され、右側に選択したヘルプ トピックが表示されます。 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>ヘルプ ビューアー v1.x を使用する
 
 SSMS と VS の以前のバージョンではヘルプ ビューアー 1.x が使用されます。ヘルプ ビューアー 1.x は、SQL Server 2014 のヘルプをサポートしています。 
@@ -165,13 +168,15 @@ SSMS と VS の以前のバージョンではヘルプ ビューアー 1.x が�
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>オンライン ヘルプを表示する
 
 オンライン ヘルプは常に最新のコンテンツを表示します。 
 
 **SSMS 17.x で SQL Server オンライン ヘルプを表示するには**
 
-- **[ヘルプ]** メニューの **[ヘルプの表示]** をクリックします。 [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) の最新の SQL Server 2016/2017 ドキュメントがブラウザーに表示されます。 
+- **[ヘルプ]** メニューの **[ヘルプの表示]** をクリックします。 [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) の最新の SQL Server 2016/2017 ドキュメントがブラウザーに表示されます。 
 
    ![ヘルプの表示](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -204,6 +209,22 @@ F1 を押すか、SSMS または VS のダイアログ ボックスで **[ヘル
 
 >  [!NOTE]
 >  F1 ヘルプは、オンラインのときにのみ機能します。 F1 ヘルプのオフライン ソースはありません。 
+
+## <a name="systems-without-internet-access"></a>インターネットに接続されていないシステム
+[前述の手順](#use-help-viewer-v2x)に従って、インターネットにアクセスできるシステム上で SQL Server のヘルプ ビューアーを使用してオフライン コンテンツをダウンロードしたら、そのコンテンツを、インターネットに接続されていないシステムに移行することができます。 次の手順で行うことができます。 
+
+  >[!NOTE]
+  >SQL Server Management Studio などのヘルプ ビューアーをサポートするソフトウェアを、オフライン システム上にインストールする必要があります。 
+
+1. ヘルプ ビューアーを開きます (Ctrl + Alt + F1)。
+1. 関心があるドキュメントを選択します。 たとえば、SQL でフィルター処理し、SQL Server 技術ドキュメントを選択します。 
+1. ディスク上のファイルの物理パスを特定します。それは、**[ローカル ストア パス]** で見つけることができます。
+1. ご利用のファイル システム エクスプ ローラーを使用して、この場所に移動します。 
+    1.  既定の場所は次のとおりです。 `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. **ContentStore**、**Incoming**、**IndexStore** という 3 つのフォルダーを選択し、ご利用のオフライン システム上の同じ場所にコピーします。 USB や CD などの中間メディア デバイスを使用することが必要になる場合があります。 
+1. これらのファイルが移動されたら、オフライン システム上でヘルプ ビューアーを起動することで、SQL Server 技術ドキュメントを利用できるようになります。
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>次の手順

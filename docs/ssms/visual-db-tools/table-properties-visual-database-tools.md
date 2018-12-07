@@ -1,5 +1,5 @@
 ---
-title: '[テーブルのプロパティ] - (Visual Database Tools) | Microsoft Docs'
+title: '[テーブルのプロパティ] (Visual Database Tools) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d650e4af3018cf1bf5967943a080d3001479777b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ff3399745161d0ddb95d77f0f2f03a4c10da8b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665010"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508864"
 ---
-# <a name="table-properties-visual-database-tools"></a>[テーブルのプロパティ] - (Visual Database Tools)
+# <a name="table-properties-visual-database-tools"></a>[テーブルのプロパティ] \(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 以下のプロパティは、テーブル デザイナーで右クリックして [プロパティ] をクリックすると開く [プロパティ] ウィンドウに表示されます。 特に断りのない限り、テーブルが選択されているときにこれらのプロパティを [プロパティ] ウィンドウで編集できます。  
   
