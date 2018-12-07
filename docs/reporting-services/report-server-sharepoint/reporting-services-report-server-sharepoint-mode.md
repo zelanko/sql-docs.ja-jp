@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029801"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529741"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services レポート サーバー (SharePoint モード)
 
@@ -84,7 +84,7 @@ ms.locfileid: "50029801"
   
     -   "レポートに関連付けられているデータ ソースが無効になっています。"  
   
-     ドキュメント ライブラリのバージョン履歴は、"ライブラリ設定" の "バージョン設定" ページで構成されます。  
+     ドキュメント ライブラリのバージョン履歴は、[ライブラリ設定] の [バージョン設定] ページで構成されます。  
   
 ## <a name="supported-combinations-of-the-sharepoint-add-in-and-report-server"></a>SharePoint アドインとレポート サーバーのサポートされる組み合わせ
 

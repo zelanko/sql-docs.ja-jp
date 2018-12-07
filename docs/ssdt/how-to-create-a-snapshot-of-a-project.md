@@ -14,12 +14,12 @@ ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7215ed9f2374a46ffd5034ce8a85ab0f40419ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840230"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530788"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>プロジェクトのスナップショットを作成する方法
 **データ層アプリケーション** ファイルは、データベース スキーマの作成時の読み取り専用表現です。 本質的にはデータベース スキーマとして扱われ、そのスキーマ オブジェクトを元のプロジェクトにインポートすることもできます。 データベースまたはプロジェクトのスキーマと比較することも、スナップショットで定義されているスキーマを反映してデータベースまたはプロジェクトを更新することもできます。  
@@ -31,7 +31,7 @@ ms.locfileid: "47840230"
   
 ### <a name="to-create-a-snapshot"></a>スナップショットを作成するには  
   
-1.  **ソリューション エクスプローラー**で **TradeDev** プロジェクトを右クリックし、**[データ層アプリケーション (\*.dacpac)]** をクリックします。  
+1.  **ソリューション エクスプローラー**で **TradeDev** プロジェクトを右クリックし、**[データ層アプリケーション (\*.dacpac)...]** をクリックします。  
   
 2.  SSDT では、まずプロジェクトのビルドが試行されます。 ビルド エラーがなければ、**ソリューション エクスプローラー**に **[スナップショット]** フォルダーが作成されます。 フォルダー内には、"<Project Name>_YYYYMMDD_HH-MM-SS.dacpac" という形式の名前で .dacpac ファイルが作成されます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47840230"
   
 ### <a name="to-import-a-snapshot"></a>スナップショットをインポートするには  
   
-1.  **ソリューション エクスプローラー**で **TradeDev** プロジェクトを右クリックし、コンテキスト メニューの **[インポート]** を選択して、**[データ層アプリケーション (\*.dacpac)]** を選択します 。  
+1.  **ソリューション エクスプローラー**で **TradeDev** プロジェクトを右クリックし、コンテキスト メニューの **[インポート]** をクリックして、**[データ層アプリケーション (\*.dacpac)...]** をクリックします。  
   
 2.  **[データ層アプリケーションのインポート]** ダイアログ ボックスで、**[参照]** をクリックし、インポートのソースとして使用する **TradeDev1.dacpac** をクリックします。  
   

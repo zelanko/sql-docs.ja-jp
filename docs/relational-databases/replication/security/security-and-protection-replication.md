@@ -18,16 +18,16 @@ ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd926d424d02f5fb4e078688b62511e13340b206
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1abb3fe0d6a6ce1459ad3d29de0d9a5e6cf4d49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844590"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517359"
 ---
 # <a name="security-and-protection-replication"></a>セキュリティと保護 (レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に配置するレプリケーション シナリオを悪意のある攻撃から保護し、データのセキュリティを強化することができます。  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に配置するレプリケーション シナリオを悪意のある攻撃から保護し、データのセキュリティを強化することができます。  
   
  ![小さいファイル フォルダー アイコン](../../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **セキュリティの概要**  
  [脅威と脆弱性の対策 &#40;レプリケーション&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "47844590"
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
   
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [レプリケーション セキュリティの推奨事項](../../../relational-databases/replication/security/replication-security-best-practices.md)  
   
  [詳細情報](../../../relational-databases/replication/security/secure-development-replication.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47844590"
   
  [スナップショット フォルダーのセキュリティ保護](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [インターネット経由のレプリケーションのセキュリティ](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
   
  [詳細情報](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   

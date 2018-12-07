@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2115aa8933396d14f6f6f32e0c02f85f75321700
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029191"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537353"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>ページ分割されたレポートの使用 (Web ポータル)
 
@@ -124,7 +124,7 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>依存アイテム  
-[依存アイテム] ページを使用すると、このレポートを参照しているアイテムの一覧を表示できます。 各アイテムの種類のアイコンは、その内容を表しています。 各アイテムの **省略記号 (…)** を選択すると、それらのアイテムの詳細を管理できます。  
+[依存アイテム] ページを使用すると、このレポートを参照しているアイテムの一覧を表示できます。 各アイテムの種類のアイコンは、その内容を表しています。 各アイテムの**省略記号 [...]** を選択すると、それらのアイテムの詳細を管理できます。  
   
 ## <a name="caching"></a>キャッシュ  
 ページ分割されたレポートのデータをキャッシュするにはいくつかのオプションがあります。 簡単な選択で始めことができます。  

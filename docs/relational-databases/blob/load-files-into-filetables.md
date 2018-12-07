@@ -15,12 +15,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 894570fc0f262c499bcadffc5c8d6d4bf6549b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674960"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526710"
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ UPDATE PhotoMetadata
   
     -   CHECK_CONSTRAINTS 句を含む BULK INSERT  
   
-    -   INSERT INTO … IGNORE_CONSTRAINTS 句を含まない SELECT * FROM OPENROWSET(BULK …)。  
+    -   INSERT INTO ... IGNORE_CONSTRAINTS 句を含まない SELECT * FROM OPENROWSET(BULK ...)。  
   
 -   FileTable のシステム定義の制約が無効化されない限り、制約が適用されない一括読み込み操作は失敗します。 このカテゴリには以下の操作が含まれます。  
   
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   CHECK_CONSTRAINTS 句を含まない BULK INSERT  
   
-    -   INSERT INTO … IGNORE_CONSTRAINTS 句を含む INSERT INTO … SELECT * FROM OPENROWSET(BULK …)。  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) (IGNORE_CONSTRAINTS 句を含む)。  
   
 ###  <a name="HowToBulkLoad"></a> 方法: FileTable へのファイルの一括読み込みを行う  
  ファイルを FileTable に一括読み込みするには、次の方法を使用できます。  
@@ -114,7 +114,7 @@ UPDATE PhotoMetadata
   
     -   FileTable 名前空間を無効にし、 **CHECK_CONSTRAINTS** 句を指定せずに呼び出します。 次に、FileTable 名前空間を再有効化します。  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ...SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   **IGNORE_CONSTRAINTS** 句を指定して呼び出します。  
   

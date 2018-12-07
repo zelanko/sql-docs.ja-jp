@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719260"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517709"
 ---
 # <a name="create-external-file-format-transact-sql"></a>外部のファイルの形式 (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ WITH (
    -   DELIMITEDTEXT: フィールド ターミネータとも呼ばれる、列の区切り記号付きのテキスト形式を指定します。
   
  FIELD_TERMINATOR = *field_terminator*  
-区切られたテキスト ファイルにのみ適用されます。 フィールド ターミネータは、テキスト区切りファイルでの各フィールド (列) の終了を示す 1 つ以上の文字を指定します。 既定では、パイプ文字 | です。 サポートが保証されるよう、1 つまたは複数の Ascii 文字を使うことをお勧めします。
+区切られたテキスト ファイルにのみ適用されます。 フィールド ターミネータは、テキスト区切りファイルでの各フィールド (列) の終了を示す 1 つ以上の文字を指定します。 既定では、パイプ文字 ꞌ|ꞌ です。 サポートが保証されるよう、1 つまたは複数の Ascii 文字を使うことをお勧めします。
   
   
  例 :  
@@ -131,7 +131,7 @@ WITH (
   
 -   FIELD_TERMINATOR = ' '  
   
--   FIELD_TERMINATOR \t を =  
+-   FIELD_TERMINATOR ꞌ\tꞌ を =  
   
 -   FIELD_TERMINATOR = ' ~ | ~'  
   
@@ -147,7 +147,7 @@ WITH (
   
 -   STRING_DELIMITER = ' *'  
   
--   STRING_DELIMITER 、 を =  
+-   STRING_DELIMITER Ꞌ、Ꞌ を =  
   
 -   STRING_DELIMITER = '0x7E0x7E' -- 2 個のチルダ (~~)
  
@@ -190,8 +190,8 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
 |SmallDateTime|DATE_FORMAT = ' - yyyy-mm-dd HH:mm'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分が含まれます。|  
 |SmallDateTime|DATE_FORMAT = 'yyyy-mm-dd hh:mmtt'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、AM/am/PM/pm が含まれ、秒は含まれません。|  
 |date|DATE_FORMAT = ' yyyy MM dd'|年、月、および日です。 Time 要素が含まれていない場合です。|  
-|date|DATE_FORMAT = ' yyyy-MMM-dd'|年、月、および日です。 月を指定するには 3 つの M のいずれか、または年 1 月、年 2 月、年 3 月、年 4 月、月、6 月 6 日、年 7 月、年 8 月、年 9 月、年 10 月、年 11 月、または年 12 月の文字列は入力の値です。|  
-|DateTime2|DATE_FORMAT = 'yyyy-mm-dd HH:mm:ss.fffffff'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒が含まれます。|  
+|date|DATE_FORMAT = ' yyyy-MMM-dd'|年、月、および日です。 3 つの M を使用して月を指定する場合、入力値は 1 つです。つまり、1 月、2 月、3 月、4 月、6 月、7 月、8 月、9 月、10 月、11 月、または 12 月という文字列です。|  
+|datetime2|DATE_FORMAT = 'yyyy-mm-dd HH:mm:ss.fffffff'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒が含まれます。|  
 |datetime2|DATE_FORMAT = 'yyyy-mm-dd hh:mm:ss.ffffffftt'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および AM/am/PM/pm が含まれます。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-mm-dd HH:mm:ss.fffffff zzz'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および `{+&#124;-}HH:ss` として入力ファイルに格納するタイムゾーンのオフセットが含まれます。 たとえば、Los Angeles 後 (夏時間) なしの節約は、UTC、-08 の値の背後にある、8 時間: 00 入力ファイルでは、ロサンゼルスのタイム ゾーンを指定します。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-mm-dd hh:mm:ss.ffffffftt zzz'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、AM/am/PM/pm、およびタイムゾーンのオフセットが含まれます。 前の行の説明を参照してください。|  
@@ -216,7 +216,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
   
  詳細:  
   
--   月、日、年の値を区切るには、"–"、"/"、"." を使うことができます。 わかりやすくするために、テーブルは、'-' の区切りを使用します。
+-   月、日、年の値を区切るには、"-"、"/"、"." を使うことができます。 わかりやすくするために、この表では、'-' の区切りのみを使用しています。
   
 -   月をテキストとして指定するには、3 つ以上の文字を使います。 1 つまたは 2 つの文字で表された月は、数値として解釈されます。
   
@@ -297,7 +297,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
 ## <a name="locking"></a>ロック  
  外部のファイル形式のオブジェクトには、共有ロックを取得します。
   
-## <a name="performance"></a>[パフォーマンス]
+## <a name="performance"></a>パフォーマンス
  常に圧縮されたファイルを使用してには、バランスを取るようにして、データの圧縮 CPU 使用率の向上と、外部データ ソースと SQL Server の間でのデータを転送する間あります。
   
  Gzip で圧縮されたテキスト ファイルは分割可能ではありません。 Gzip で圧縮されたテキスト ファイルのパフォーマンスを向上させるには、複数のファイルを生成し、そのすべてを外部データ ソースの同じディレクトリに格納することをお勧めします。 このようなファイル構造にすると、PolyBase は、複数のリーダー プロセスと圧縮解除プロセスを使って、より速くデータを圧縮解除できます。 圧縮されたファイルの理想的な数は、計算ノードあたりのデータ リーダー プロセスの最大数です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、データ リーダー プロセスの最大数はノードあたり 8 個です。ただし、Azure SQL Data Warehouse Gen2 のリーダー数はノードあたり 20 個です。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、ノードごとのデータ リーダー プロセスの最大数は SLO によって変化します。 詳しくは、「[Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)」(Azure SQL Data Warehouse の読み込みパターンと戦略) をご覧ください。  

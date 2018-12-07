@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670141"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520949"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage プロバイダーでの MSDeploy の使用
 **DbSqlPackage** は SQL Server/SQL Azure データベースとのやり取りを可能にする **MSDeploy** プロバイダーです。 **DbSqlPackage** は次の操作をサポートしています。  
@@ -39,16 +39,16 @@ DACFx について詳しくは、[https://msdn.microsoft.com/library/microsoft.s
   
 ```  
   
-MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] –dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
+MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] -dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
 ```  
   
 ## <a name="ms-deploy-verbs"></a>MS-Deploy 動詞  
-MS-Deploy 動詞は、MS-Deploy コマンド ラインに **–verb** スイッチを使用して指定します。 **dbSqlPackage** プロバイダーでは、次の **MSDeploy** 動詞がサポートされています。  
+MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチを使用して指定します。 **dbSqlPackage** プロバイダーでは、次の **MSDeploy** 動詞がサポートされています。  
   
 |動詞|[説明]|  
 |--------|---------------|  
-|ダンプ (dump)|.dacpac ファイルに含まれるソース データベースに関する名前、バージョン番号、説明などの情報を提供します。 ソース データベースは、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy –verb:dump –source:dbSqlPackage=”***.dacpac-file-path***”**|  
-|sync|dbSqlPackage 操作は、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**=”input” *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**=”input” *[,DbSqlPackage-destination-parameters]*<br /><br />sync 動詞の有効なソースおよびターゲットのパラメーターの詳細については、以下のセクションを参照してください。|  
+|ダンプ (dump)|.dacpac ファイルに含まれるソース データベースに関する名前、バージョン番号、説明などの情報を提供します。 ソース データベースは、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
+|sync|dbSqlPackage 操作は、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />sync 動詞の有効なソースおよびターゲットのパラメーターの詳細については、以下のセクションを参照してください。|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage ソース  
 **dbSqlPackage** は、有効な SQL Server または SQL Azure 接続文字列か、ディスク上にある .dacpac ファイルのパスのどちらかを入力として取得します。  プロバイダーの入力ソースを指定する構文は次のとおりです。  
@@ -134,7 +134,7 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **–verb** スイッ�
 |**IgnoreLockHintsOnIndexes= {True &#124; False}**|**False**|データベースへの公開時に、インデックスのロック ヒントの相違を無視するか更新するかを指定します。|  
 |**IgnoreLoginSids= {True &#124; False}**|**True**|データベースへの公開時に、セキュリティ識別子 (SID) の相違を無視するか更新するかを指定します。|  
 |**IgnoreNotForReplication= {True &#124; False}**|**False**|データベースへの公開時に、Not For Replication 設定の相違を無視するか更新するかを指定します。|  
-|**IgnoreObjectPlacementOnPartitionScheme= {True &#124; False}**|**True**|データベースへの公開時に、パーティション構成のオブジェクト配置の相違を無視するか更新するかを指定します。|  
+|**IgnoreObjectPlacementOnPartitionScheme= {True &#124; False}**|**True**|データベースへの公開時に、パーティション構成のオブジェクト配置の相違を無視するのか更新するのかを指定します。|  
 |**IgnorePartitionSchemes= {True &#124; False}**|**False**|データベースへの公開時に、パーティション構成およびパーティション関数の相違を無視するか更新するかを指定します。|  
 |**IgnorePermissions= {True &#124; False}**|**False**|データベースへの公開時に、アクセス許可の相違を無視するか更新するかを指定します。|  
 |**IgnoreQuotedIdentifiers= {True &#124; False}**|**False**|データベースへの公開時に、Quoted Identifier 設定の相違を無視するか更新するかを指定します。|  
@@ -183,24 +183,24 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **–verb** スイッ�
 次は、**dbSqlPackage** を使用する **Extract** 操作の構文の例です。  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source connection string>”,<source parameter> –dest:dbSqlPackage="<target dacpac file path>”  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source connection string>",<source parameter> -dest:dbSqlPackage="<target dacpac file path>"  
 ```  
   
 次は、**dbSqlPackage** を使用する **Publish** 操作の構文の例です。  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
 ```  
   
 次は、**dbSqlPackage** を使用する **DeployReport** 操作の構文の例です。  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
 ```  
   
 次は、**dbSqlPackage** を使用する **Script** 操作の構文の例です。  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
   

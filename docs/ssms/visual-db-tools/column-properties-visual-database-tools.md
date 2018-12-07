@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6914306472ae5eb438c8d7384f2a5e0d9128c17
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698780"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527082"
 ---
 # <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ ID 列の以降の各行で **[IDENTITY シード]** に追加される増分値
 展開すると、その他のプロパティが表示されます。  
   
 **[照合順序]**  
-選択した列における照合順序の設定が表示されます。 この設定を変更するには、 **[照合順序]** をクリックした後、値の右側にある **[...]** をクリックします  
+選択した列における照合順序の設定が表示されます。 この設定を変更するには、**[照合順序]** をクリックした後、値の右側にある **[...]** をクリックします  
   
 **[計算列の指定] カテゴリ**  
 展開すると、 **[式]** と **[永続化されている]** のプロパティが表示されます。 列が計算列である場合、式も表示されます。 式を編集するには、このカテゴリを展開して、 **[式]** プロパティで式を編集します。  

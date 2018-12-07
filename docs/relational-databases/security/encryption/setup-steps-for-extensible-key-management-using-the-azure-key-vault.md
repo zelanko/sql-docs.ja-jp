@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663358"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522918"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -191,15 +191,15 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
         > [!IMPORTANT]  
         >  SQL Server コネクタを使用する場合、キー名に使用できる文字は、"a ～ z"、"A ～ Z"、"0 ～ 9"、"-" に限られます。また、26 文字が長さの上限となります。   
-        > Azure Key Vault に格納されている同じ名前でバージョンが異なるキーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタでは使用できません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって使用されている Azure Key Vault キーをローテーションするには、[ SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)に関するページの「キーのロールオーバー」の手順を参照してください。  
+        > Azure Key Vault に格納されている同じ名前でバージョンが異なるキーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタでは使用できません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって使用されている Azure Key Vault キーをローテーションするには、[ SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)に関するページの「キーのロールオーバー」の手順を参照してください。  
 
     ### <a name="import-an-existing-key"></a>既存のキーをインポートする   
   
     ソフトウェアによって保護された 2048 ビットの RSA キーが既にある場合は、そのキーを Azure Key Vault にアップロードしてもかまいません。 たとえば .PFX ファイルが `C:\\` ドライブに `softkey.pfx` という名前で保存されており、これを Azure Key Vault にアップロードする場合は、次のように入力して、変数 `securepfxpwd` に .PFX ファイルのパスワード `12987553` を設定します。  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     次に、.PFX ファイルからキーをインポートするために、次のように入力できます。このファイルは、Key Vault サービスでハードウェア (推奨) によってキーを保護するファイルです。  
@@ -215,7 +215,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
 
     ### <a name="create-a-new-key"></a>新しいキーを作成する
     #### <a name="example"></a>例:  
-    または、新しい暗号化キーを Azure Key Vault に直接作成し、ソフトウェアまたは HSM で保護することもできます。  この例では、ソフトウェアによって保護されるキーを `Add-AzureKeyVaultKey cmdlet`で作成します。  
+    または、新しい暗号化キーを Azure Key Vault に直接作成し、ソフトウェアまたは HSM で保護することもできます。  この例では、ソフトウェアによって保護されるキーを `Add-AzureKeyVaultKey cmdlet` で作成します。  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -345,7 +345,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
      パート II で、非対称キーをインポートした場合は、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトで目的のキー名を指定してキーを開きます。  
   
-    -   `CONTOSO_KEY` の部分は、実際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でキーに割り当てる名前に置き換えます。  
+    -   `CONTOSO_KEY` の部分は、実際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でキーに割り当てる名前に置き換えます。  
   
     -   `ContosoRSAKey0` の部分は、Azure Key Vault 内の実際のキーの名前に置き換えます。  
   

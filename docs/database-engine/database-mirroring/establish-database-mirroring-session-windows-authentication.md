@@ -13,12 +13,12 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3a8430437bd4a4dae43e9a9b99f98c004a1b3c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33e5f09ee0bda2bb1967b90902e47663f1846be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838940"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522321"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>データベース ミラーリング セッションの確立 - Windows 認証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47838940"
   
  データベース ミラーリング セッションを確立したり、特定のデータベースについてデータベース ミラーリングのプロパティを変更するには、 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページを使用します。 **[ミラーリング]** ページを使用してデータベース ミラーリングを構成する前に、次の要件を満たしていることをご確認ください。  
   
--   プリンシパル サーバー インスタンスおよびミラー サーバー インスタンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同じエディション (Standard または Enterprise) を実行している必要があります。 また、ワークロードの処理能力が同程度のシステム上で運用することを強くお勧めします。  
+-   プリンシパル サーバー インスタンスおよびミラー サーバー インスタンスでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同じエディション (Standard または Enterprise) を実行している必要があります。 また、ワークロードの処理能力が同程度のシステム上で運用することを強くお勧めします。  
   
     > [!NOTE]  
     >  ミラーリング監視サーバー インスタンスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  

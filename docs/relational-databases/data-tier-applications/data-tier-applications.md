@@ -15,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98dd4481e6f7afdc1c0f140073e26650392ee746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680310"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525722"
 ---
 # <a name="data-tier-applications"></a>の
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,15 +86,15 @@ ms.locfileid: "47680310"
 ## <a name="dac-operations"></a>DAC 操作  
  DAC では、以下のオブジェクトがサポートされています。  
   
--   **EXTRACT** : ユーザーはデータベースを DACPAC に抽出できます。  
+-   **EXTRACT**: ユーザーはデータベースを DACPAC に抽出できます。  
   
--   **DEPLOY** : ユーザーは DACPAC をホスト サーバーに配置できます。 配置が SQL Server Management Studio や Management Portal for SQL Azure などの管理ツールから行われる場合、ホスト サーバーに生成されるデータベースがデータ層アプリケーションとして暗黙的に登録されます。  
+-   **DEPLOY**: ユーザーは DACPAC をホスト サーバーに配置できます。 配置が SQL Server Management Studio や Management Portal for SQL Azure などの管理ツールから行われる場合、ホスト サーバーに生成されるデータベースがデータ層アプリケーションとして暗黙的に登録されます。  
   
 -   **REGISTER**: ユーザーはデータベースをデータ層アプリケーションとして登録できます。  
   
--   **UNREGISTER** : DAC として既に登録されているデータベースを登録解除できます。  
+-   **UNREGISTER**: DAC として既に登録されているデータベースを登録解除できます。  
   
--   **UPGRADE** : DACPAC を使用してデータベースをアップグレードできます。 アップグレードは、データ層アプリケーションとして登録されていないデータベースでもサポートされますが、アップグレードの結果として、データベースが暗黙的に登録されます。  
+-   **UPGRADE**: DACPAC を使用してデータベースをアップグレードできます。 アップグレードは、データ層アプリケーションとして登録されていないデータベースでもサポートされますが、アップグレードの結果として、データベースが暗黙的に登録されます。  
   
 ## <a name="bacpac"></a>BACPAC  
  BACPAC は .bacpac 拡張子を持つ Windows ファイルで、データベースのスキーマとデータをカプセル化します。 BACPAC の基本的なユース ケースは、あるサーバーから別のサーバーにデータベースを移動、または[ローカル サーバーからクラウドにデータベースを移行](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)し、既存のデータベースをオープン フォーマットでアーカイブすることです。  
@@ -107,7 +107,7 @@ ms.locfileid: "47680310"
   
 -   **EXPORT**: ユーザーは、BACPAC にスキーマとデータベースのデータをエクスポートできます。  
   
--   **IMPORT** : ユーザーは、スキーマおよびデータをホスト サーバーの新しいデータベースにインポートできます。  
+-   **IMPORT**: ユーザーは、スキーマおよびデータをホスト サーバーの新しいデータベースにインポートできます。  
   
  この両方の機能が、データベース管理ツール (SQL Server Management Studio、Azure ポータル、DACFx API) でサポートされます。  
   

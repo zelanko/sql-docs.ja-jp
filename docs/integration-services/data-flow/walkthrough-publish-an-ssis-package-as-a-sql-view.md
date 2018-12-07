@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641569"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521228"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
   このチュートリアルでは、SSIS パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに SQL ビューとして公開する詳細な手順について説明します。  
@@ -243,7 +243,7 @@ GO
  OPENQUERY 関数の構文は次のとおりです。  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  Folder、Project、Package パラメーターは必須です。 Use32BitRuntime、Timeout、Parameters は省略可能です。  
@@ -256,15 +256,15 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  クエリ句で使用できる特殊文字を次に示します。  
   
--   単一引用符 (') – これは標準的な OPENQUERY によってサポートされています。 クエリ句で単一引用符を使用する場合は、2 つの単一引用符 (") を使用します。  
+-   単一引用符 (') - これは標準的な OPENQUERY によってサポートされています。 クエリ句で単一引用符を使用する場合は、2 つの単一引用符 (") を使用します。  
   
--   二重引用符 (") – クエリのパラメーター部分は二重引用符で囲みます。 パラメーターの値そのものに二重引用符が含まれる場合は、エスケープ文字を使用します。 例: \"。  
+-   二重引用符 (") - クエリのパラメーター部分は二重引用符で囲みます。 パラメーターの値そのものに二重引用符が含まれる場合は、エスケープ文字を使用します。 例: \"」を参照してください。  
   
--   左右の角かっこ ([ と ]) – これらの文字は、前後のスペースを示すために使用されます。 たとえば、"[ some spaces ]" は、前に 1 つ、後ろに 1 つのスペースがある文字列 " some spaces " を示します。 これらの文字そのものをクエリ句で使用する場合は、エスケープする必要があります。 たとえば、 \\[ や \\] のように指定します。  
+-   左右の角かっこ ([ と ]) - これらの文字は、前後のスペースを示すために使用されます。 たとえば、"[ some spaces ]" は、前に 1 つ、後ろに 1 つのスペースがある文字列 " some spaces " を示します。 これらの文字そのものをクエリ句で使用する場合は、エスケープする必要があります。 たとえば、 \\[ や \\] のように指定します。  
   
--   スラッシュ (\\) – クエリで使用するすべての \ では、エスケープ文字を使用する必要があります。 たとえば、クエリ句の \\\ は \ として評価されます。  
+-   スラッシュ (\\) - クエリで使用するすべての \ では、エスケープ文字を使用する必要があります。 たとえば、クエリ句の \\\ は \ として評価されます。  
   
- スラッシュ (\\) – クエリで使用するすべての \ では、エスケープ文字を使用する必要があります。 たとえば、クエリ句の \\\ は \ として評価されます。  
+ スラッシュ (\\) - クエリで使用するすべての \ では、エスケープ文字を使用する必要があります。 たとえば、クエリ句の \\\ は \ として評価されます。  
   
 ## <a name="see-also"></a>参照  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   

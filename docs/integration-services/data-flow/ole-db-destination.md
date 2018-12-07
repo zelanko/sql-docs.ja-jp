@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640136"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525324"
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
   OLE DB 変換先は、データベースのテーブルやビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込みます。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースのテーブルにデータを読み込むことができます。  
@@ -161,7 +161,7 @@ ms.locfileid: "51640136"
 > [!NOTE]  
 >  **[新規作成]** をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>[データ アクセス モード] = [テーブルまたはビュー - 高速読み込み]  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>[データ アクセス モード] = [テーブルまたはビュー - 高速読み込み]  
  **[テーブル名またはビュー名]**  
  この一覧を使用してデータベースからテーブルまたはビューを選択するか、 **[新規作成]** をクリックして新しいテーブルを作成します。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "51640136"
  データの読み込み中に変換先で制約をチェックするかどうかを指定します。 このプロパティの既定値は **true**です。  
   
  **[バッチごとの行数]**  
- バッチ内の行数を指定します。 このプロパティの既定値は、 **–1**です。これは、割り当てられた値がないことを示します。  
+ バッチ内の行数を指定します。 このプロパティの既定値は、 **-1**です。これは、割り当てられた値がないことを示します。  
   
 > [!NOTE]  
 >  このプロパティにカスタム値を割り当てない場合、 **[OLE DB 変換先エディター]** のテキスト ボックスをクリアします。  
@@ -204,7 +204,7 @@ ms.locfileid: "51640136"
  **[変数名]**  
  テーブル名またはビュー名を含む変数を選択します。  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>[データ アクセス モード] = [テーブル名またはビュー名の変数 - 高速読み込み]  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>[データ アクセス モード] = [テーブル名またはビュー名の変数 - 高速読み込み]  
  **[変数名]**  
  テーブル名またはビュー名を含む変数を選択します。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "51640136"
  タスクで制約をチェックするかどうかを指定します。 このプロパティの既定値は **false**です。  
   
  **[バッチごとの行数]**  
- バッチ内の行数を指定します。 このプロパティの既定値は、 **–1**です。これは、割り当てられた値がないことを示します。  
+ バッチ内の行数を指定します。 このプロパティの既定値は、 **-1**です。これは、割り当てられた値がないことを示します。  
   
 > [!NOTE]  
 >  このプロパティにカスタム値を割り当てない場合、 **[OLE DB 変換先エディター]** のテキスト ボックスをクリアします。  

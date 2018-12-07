@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543961"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -84,7 +84,7 @@ rs {-?}
  (省略可) スクリプト ファイル内のコマンドをバッチで実行します。 いずれかのコマンドが失敗すると、バッチはロールバックされます。 バッチで実行できないコマンドがありますが、それらのコマンドは通常どおり実行されます。 スクリプト内でスローされるが処理されない例外だけが、ロールバックされます。 スクリプトによって例外が処理され、 **Main**から正常に値が返された場合、バッチはコミットされます。 このパラメーターを省略した場合、バッチを作成せずにコマンドが実行されます。 詳細については、「 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)」をご参照ください。  
   
  **-v** *globalvar*  
- (省略可) スクリプト内で使用するグローバル変数を指定します。 スクリプトでグローバル変数を使用する場合は、この引数を指定する必要があります。 .rss ファイルで定義したグローバル変数に対して有効な値を指定する必要があります。 **–v** 引数ごとに 1 つのグローバル変数を指定できます。  
+ (省略可) スクリプト内で使用するグローバル変数を指定します。 スクリプトでグローバル変数を使用する場合は、この引数を指定する必要があります。 .rss ファイルで定義したグローバル変数に対して有効な値を指定する必要があります。 **-v** 引数ごとに 1 つのグローバル変数を指定できます。  
   
  **-v** 引数はコマンド ラインで指定され、ユーザーのスクリプトに定義されているグローバル変数の値を実行時に設定するために使用されます。 たとえば、スクリプトに *parentFolder*という名前の変数が含まれている場合、そのフォルダーの名前をコマンド ラインで指定することができます。  
   
@@ -104,7 +104,7 @@ rs {-?}
  次の例では、実行する [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプト、および Web サービス メソッドを含むスクリプト ファイルの指定方法を示しています。  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  

@@ -14,12 +14,12 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a1f1dd3e474845716b6fe9e116dea41b0ce7465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b17dbcb21362a60ed9076134256ec99f3c264a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791230"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517988"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 式)
   整数の 16 進値を表す文字列を返します。  
@@ -45,7 +45,7 @@ HEX(integer_expression)
   
  返される結果には、0x プレフィックスなどの修飾子は含まれません。 プレフィックスを含めるには、+ (連結) 演算子を使用します。 詳細については、「[+ &#40;連結&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/concatenate-ssis-expression.md)」を参照してください。  
   
- HEX 表記法で使用される A ～ F の文字は、大文字で表示されます。  
+ HEX 表記法で使用される A から F の文字は、大文字で表示されます。  
   
  整数データ型の結果の文字列の長さは、次のようになります。  
   

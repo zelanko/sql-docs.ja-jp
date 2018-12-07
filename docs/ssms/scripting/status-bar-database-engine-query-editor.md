@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2d9dcbb729c09ef327861430a36f4565c2645d3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d9d870762becec1ff0717c4e9d7aef5eda7be94c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643060"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541899"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>ステータス バー (データベース エンジン クエリ エディター)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "51643060"
 ##  <a name="SetOEServerColor"></a> オブジェクト エクスプローラーでのサーバー状態の色の設定  
  **オブジェクト エクスプローラーでサーバー状態の色を設定するには**  
   
-1.  **[オブジェクト エクスプローラー]** で、 **[接続]** ボタンをクリックし、次に **[データベース エンジン]** をクリックします。  
+1.  **[オブジェクト エクスプローラー]** で、**[接続]** をクリックし、次に **[データベース エンジン...]** をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログで、**[オプション >>]** を選択します。  
   
 3.  **[作成した色を使用する]** チェック ボックスをオンにします。  
   
-4.  色を選択するには、 **[選択]** ボタンをクリックします。  
+4.  色を選択するには、**[選択...]** をクリックします。  
   
 5.  基本の色または作成した色を選択して、[OK] をクリックします。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "51643060"
 ##  <a name="SetRegServerColor"></a> 登録済みサーバーの状態の色の設定  
  **登録済みサーバーの状態の色を設定するには**  
   
-1.  **[登録済みサーバー]** で、サーバー ノードを右クリックして、 **[プロパティ]** をクリックします。  
+1.  **[登録済みサーバー]** で、サーバー ノードを右クリックして、**[プロパティ...]** をクリックします。  
   
 2.  **[サーバー登録プロパティの編集]** ダイアログ ボックスで、 **[接続プロパティ]** タブをクリックします。  
   
 3.  **[作成した色を使用する]** チェック ボックスをオンにします。  
   
-4.  色を選択するには、 **[選択]** ボタンをクリックします。  
+4.  色を選択するには、**[選択...]** をクリックします。  
   
 5.  基本の色または作成した色を選択して、[OK] をクリックします。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "51643060"
   
 -   **[作成した色を使用する]** チェック ボックスをオンにします。  
   
--   色を選択するには、 **[選択]** ボタンをクリックします。  
+-   色を選択するには、**[選択...]** をクリックします。  
   
 -   基本の色または作成した色を選択して、[OK] をクリックします。  
   

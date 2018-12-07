@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.opendqproject.f1
@@ -19,12 +18,12 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc3dd7357788f1a4aa305161f5c4d837e5f9a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773199"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617822"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する
 
@@ -32,7 +31,7 @@ ms.locfileid: "47773199"
 
   このトピックでは、データ品質プロジェクトを開く、ロック解除、名前の変更、削除などの、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用したデータ品質プロジェクトの管理方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
   
@@ -64,9 +63,9 @@ ms.locfileid: "47773199"
   
 4.  最後に閉じられたときと同じアクティビティの状態でデータ品質プロジェクトが開きます。 データ品質プロジェクトには次の状態があります。  
   
-    -   **クレンジング** アクティビティでは、データ品質プロジェクトは **クレンジング - マップ**、 **クレンジング - 最適化**、 **クレンジング - 結果の管理と表示**、および **クレンジング - エクスポート**の状態を取ります。  
+    -   **クレンジング** アクティビティでは、データ品質プロジェクトは**クレンジング - マップ**、**クレンジング - 最適化**、**クレンジング - 結果の管理と表示**、および**クレンジング - エクスポート**の状態を取ります。  
   
-    -   **照合** アクティビティでは、データ品質プロジェクトは **照合 - マップ**、 **照合 - 照合**、 **照合 - サバイバーシップ**、および **照合 - エクスポート**の状態を取ります。  
+    -   **照合**アクティビティでは、データ品質プロジェクトは**照合 - マップ**、**照合 - 照合**、**照合 - サバイバーシップ**、および**照合 - エクスポート**の状態を取ります。  
   
 ##  <a name="Unlock"></a> データ品質プロジェクトのロック解除  
  データ品質プロジェクトを作成すると、プロジェクトは他のユーザーによる使用や変更を防ぐためにロック状態になります。 他のユーザーがデータ品質プロジェクトを操作できるようにするには、作業を完了した後にデータ品質プロジェクトのロックを解除する必要があります。 ロックされているプロジェクトには、ロック アイコンが表示されます。  

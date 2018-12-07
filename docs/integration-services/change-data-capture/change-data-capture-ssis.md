@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374b59460313afaaeb670c8926f215580f7d11de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641149"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534382"
 ---
 # <a name="change-data-capture-ssis"></a>変更データ キャプチャ (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、変更データ キャプチャによって、ソース テーブルからデータ マートおよびデータ ウェアハウスへの増分読み込みを効率的に実行するための効果的なソリューションが実現します。  
@@ -119,6 +119,6 @@ ms.locfileid: "51641149"
 -   [複数のテーブルの増分読み込みを実行する](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- sqlblog.com のブログ「 [SSIS Design Pattern – Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679)」 (SSIS のデザイン パターン – 増分読み込み)  
+ sqlblog.com のブログ投稿「[SSIS Design Pattern - Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679)」(SSIS のデザイン パターン - 増分読み込み)  
   
   

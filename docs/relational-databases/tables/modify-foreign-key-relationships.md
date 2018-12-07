@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db55a3bdbe795b027d7f46a6eff541d0a49060c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812080"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517078"
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47812080"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  新しい外部キー列は、関連付けられる主キー列のデータ型およびサイズと一致する必要があります。ただし、次の例外があります。  
@@ -86,7 +86,7 @@ ms.locfileid: "47812080"
      制約を作成した時点、または制約を再度有効にした時点よりも前からテーブルに存在しているすべてのデータについて、その制約に対して検証します。  
   
      **[テーブルと列の指定] カテゴリ**  
-     展開すると、リレーションシップの外部キーおよび主キー (一意キー) として、どのテーブルのどの列が機能しているかわかります。 これらの値を編集または定義するには、プロパティ フィールドの右にある省略記号ボタン (**[...]**) をクリックします。  
+     展開すると、リレーションシップの外部キーおよび主キー (一意キー) として、どのテーブルのどの列が機能しているかわかります。 これらの値を編集または定義するには、プロパティ フィールドの右にある省略記号ボタン ( **[...]** ) をクリックします。  
   
      **[外部キーの基本テーブル]**  
      選択したリレーションシップで、どのテーブルが外部キーとして機能する列を含んでいるかを示します。  

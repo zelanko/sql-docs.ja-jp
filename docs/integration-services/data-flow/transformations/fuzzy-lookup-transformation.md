@@ -34,12 +34,12 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540895"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
@@ -123,7 +123,7 @@ ms.locfileid: "51638819"
 ## <a name="temporary-tables-and-indexes"></a>一時テーブルおよびインデックス  
  あいまい参照変換の実行時には、変換の接続先の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内に、テーブルやインデックスなどの一時オブジェクトが作成されます。 これらの一時テーブルとインデックスのサイズは、参照テーブルの行数とトークン数や、あいまい参照変換が作成するトークン数に比例します。したがって、膨大なディスク容量を消費する可能性もあります。 また、変換はこれらの一時テーブルに対してクエリを実行します。 このため、特に稼働サーバーのディスク容量が少ない場合は、あいまい参照変換を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースの非稼働インスタンスに接続することを検討してください。  
   
- この変換で使用するテーブルおよびインデックスがローカル コンピューター上にあると、変換のパフォーマンスが向上する可能性があります。 あいまい参照変換が使用する参照テーブルが稼働サーバー上にある場合は、テーブルを非稼働サーバーにコピーして、あいまい参照変換がこのコピーにアクセスするように設定することを検討してください。 こうすることで、参照クエリによって稼働サーバーのリソースが消費されるのを回避できます。 また、MatchIndexOptionsis が **GenerateAndMaintainNewIndex**に設定されていて、あいまい参照変換で一致インデックスが維持されている場合は、データ クリーン操作中に参照テーブルがロックされ、他のユーザーやアプリケーションはテーブルにアクセスできません。  
+ この変換で使用するテーブルおよびインデックスがローカル コンピューター上にあると、変換のパフォーマンスが向上する可能性があります。 あいまい参照変換が使用する参照テーブルが稼働サーバー上にある場合は、テーブルを非稼働サーバーにコピーして、あいまい参照変換がこのコピーにアクセスするように設定することを検討してください。 こうすることで、参照クエリによって稼働サーバーのリソースが消費されるのを回避できます。 また、MatchIndexOptionsis が **GenerateAndMaintainNewIndex** に設定されていて、あいまい参照変換で一致インデックスが維持されている場合は、データ クリーン操作中に参照テーブルがロックされ、他のユーザーやアプリケーションはテーブルにアクセスできません。  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>あいまい参照変換の設定  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  

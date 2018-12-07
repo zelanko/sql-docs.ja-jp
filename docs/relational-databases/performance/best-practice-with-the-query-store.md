@@ -1,7 +1,7 @@
 ---
 title: クエリ ストアを使用するときの推奨事項 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/24/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657841"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712120"
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   この記事では、ワークロードでクエリ ストアを使用するためのベスト プラクティスについて説明します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "51657841"
   
 ##  <a name="Insight"></a> UseAzure SQL Database で Query Performance Insight を使用する  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でクエリ ストアを実行する場合、 **Query Performance Insight** を使用して、時間の経過に応じた DTU 消費量を分析できます。  
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してすべてのクエリの詳細なリソースの消費量を取得することもできますが (CPU、メモリ、IO など)、Query Performance Insight を使用すると、迅速かつ効率的な方法で、データベースの全体的な DTU 消費量に与える影響を判断できます。  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してすべてのクエリの詳細なリソースの消費量を取得することもできますが (CPU、メモリ、I/O など)、Query Performance Insight を使用すると、迅速かつ効率的な方法で、データベースの全体的な DTU 消費量に与える影響を判断できます。  
 詳細については、「 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)」を参照してください。    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>エラスティック プール データベースでクエリ ストアを使用する
@@ -48,11 +48,11 @@ ms.locfileid: "51657841"
   
  次に、パラメーター値を設定する際のガイドラインを示します。  
   
- **最大サイズ (MB):** クエリ ストアが使用するデータベース内のデータ領域の制限を指定します。  これは、クエリ ストアの操作モードに直接影響する最も重要な設定です。  
+ **最大サイズ (MB):** クエリ ストアが使用するデータベース内のデータ領域の制限を指定します。 これは、クエリ ストアの操作モードに直接影響する最も重要な設定です。  
   
  クエリ ストアがクエリや実行プラン、統計情報を収集する間、データベース内でクエリ ストアのサイズが増え続けます。 サイズが制限に達すると、クエリ ストアの操作モードが自動的に読み取り専用に切り替わり、新しいデータの収集が停止します。以降、パフォーマンス分析は正確ではなくなります。  
   
- 既定値は 100 MB ですが、ワークロードが多数のクエリとプランを生成する場合や、クエリ履歴を長期間保持する必要がある場合は、より大きなサイズが必要になる可能性があります。 クエリ ストアが読み取り専用モードに移行しないよう、現在の使用量を追跡して最大サイズ (MB) を増やしてください。  クエリ ストアのサイズに関する最新の情報を取得するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用するか、次のスクリプトを実行します。  
+ 既定値は 100 MB ですが、ワークロードが多数のクエリとプランを生成する場合や、クエリ履歴を長期間保持する必要がある場合は、より大きなサイズが必要になる可能性があります。 クエリ ストアが読み取り専用モードに移行しないよう、現在の使用量を追跡して最大サイズ (MB) を増やしてください。 クエリ ストアのサイズに関する最新の情報を取得するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用するか、次のスクリプトを実行します。  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -69,11 +69,24 @@ FROM sys.database_query_store_options;
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
-  
- **統計情報の収集間隔:** 実行時統計情報を収集する間隔を定義します (既定値は 1 時間)。 この間隔を短くして、問題を検出して軽減するまでの時間を短縮したい場合は、値を小さくすることを検討してください。ただし、クエリ ストアのデータのサイズに直接影響があるので注意が必要です。 統計情報の収集間隔に別の値を設定するには、SSMS または TRANSACT-SQL を使用します。  
+
+ **データ フラッシュ間隔:** 収集されたランタイム統計をディスクに保存する間隔 (秒単位) を定義します (既定値は 900 秒 (15 分))。 ワークロードで生成される異なるクエリとプランの数が多くない場合、またはデータベースをシャットダウンする前にデータを長時間保持できる場合は、大きい値を使用することを検討します。 
+ 
+> [!NOTE]
+> トレース フラグ 7745 を使用すると、フェールオーバーまたはシャットダウン コマンドが発生したとき、クエリ ストアのデータはディスクに書き込まれません。 詳しくは、「[ ミッション クリティカルなサーバーにトレース フラグを使用して、障害からの回復を向上させる](#Recovery)」セクションをご覧ください。
+
+データ フラッシュ間隔に異なる値を設定するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
   
 ```sql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
+```  
+
+ **統計情報の収集間隔:** 実行時統計情報を収集する間隔を定義します (既定値は 60 分)。 この間隔を短くして、問題を検出して軽減するまでの時間を短縮したい場合は、値を小さくすることを検討してください。ただし、クエリ ストアのデータのサイズに直接影響があるので注意が必要です。 統計情報の収集間隔に別の値を設定するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
+  
+```sql  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **古いクエリのしきい値 (日):** 保存する実行時統計と非アクティブ クエリの保有期間を制御する、時間ベースのクリーンアップ ポリシーです。  
@@ -97,11 +110,11 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **クエリ ストアのキャプチャ モード:** クエリ ストアのクエリ キャプチャ ポリシーを指定します。  
   
--   **All** – すべてのクエリをキャプチャします。 既定のオプションです。  
+-   **All** - すべてのクエリをキャプチャします。 既定のオプションです。  
   
--   **Auto** – 頻度の低いクエリと、コンパイルと実行時間の短いクエリは無視されます。 実行回数、コンパイル、実行時間のしきい値は内部的に決定されます。  
+-   **Auto** - 頻度の低いクエリと、コンパイルと実行時間の短いクエリは無視されます。 実行回数、コンパイル、実行時間のしきい値は内部的に決定されます。  
   
--   **None** – クエリ ストアが新しいクエリのキャプチャを停止します。  
+-   **None** - クエリ ストアが新しいクエリのキャプチャを停止します。  
   
  次のスクリプトは、クエリ キャプチャ モードを Auto に設定します。  
   
@@ -132,7 +145,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  次の図は、クエリ ストアのビューの場所を示しています。  
   
- ![クエリ ストア ビュー](../../relational-databases/performance/media/query-store-views.png "query-store-views")  
+ ![クエリ ストア ビュー](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "クエリ ストア ビュー")  
   
  次の表では、各クエリ ストア ビューの用途を説明します。  
   
@@ -143,10 +156,11 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |最もリソースを消費するクエリ|対象となる実行メトリックを選択し、対象期間内で最も極端な値を持つクエリを特定します。 <br />このビューを使用して、データベースのリソース消費量に最も大きな影響を与えているクエリに焦点を絞ります。|  
 |強制適用されたプランのあるクエリ|クエリ ストアを使って以前に強制適用されたプランを一覧表示します。 <br />このビューを使って、現在強制適用されているすべてのプランに簡単にアクセスします。|  
 |高バリエーションのクエリ|目的の期間内の継続時間、CPU 時間、IO、メモリ使用率など、使用可能なディメンションのいずれかに関連して実行バリエーションが高いクエリを分析します。<br />このビューを使用して、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼす可能性のある、パフォーマンスの差異が大きいクエリを特定します。|  
+|クエリ待機統計|データベースで最もアクティブな待機カテゴリ、および選択した待機カテゴリに対して最も影響を与えているクエリを分析します。<br />このビューを使用して待機統計を分析し、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼしている可能性のあるクエリを特定します。<br /><br />**適用対象:** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 以降および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |追跡対象のクエリ|最も重要なクエリの実行をリアルタイムで追跡します。 このビューは通常、強制適用されたプランを持つクエリがあり、クエリのパフォーマンスを安定させる必要がある場合に使用します。|
   
 > [!TIP]  
->  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して最もリソースを消費するクエリを特定し、プラン変更により機能低下したクエリを修正する方法の詳細については、[クエリ ストアに関する @Azure ブログの記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して最もリソースを消費するクエリを特定し、プラン変更により機能低下したクエリを修正する方法の詳細については、[クエリ ストアに関する @Azure ブログの記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。  
   
  パフォーマンスが低下したクエリを特定する際に必要なアクションは、問題の性質によって異なります。  
   

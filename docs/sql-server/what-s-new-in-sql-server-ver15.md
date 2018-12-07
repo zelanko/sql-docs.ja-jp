@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703910"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711833"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 の新機能
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-以前のリリースを基にして構築された [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]では、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。 この記事では、SQL Server 2019 の新機能をまとめます。 詳細および既知の問題については、「[SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md)」(SQL Server 2019 リリース ノート) をご覧ください。
+以前のリリースを基にして構築された [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。 この記事では、SQL Server 2019 の新機能をまとめます。 詳細および既知の問題については、「[SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md)」(SQL Server 2019 リリース ノート) をご覧ください。
 
 **SQL Server 2019 をお試しください。**
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [SQL Server 2019 をダウンロードして Windows にインストールする](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -29,7 +29,7 @@ ms.locfileid: "51703910"
 
 ## <a name="ctp-21"></a>CTP 2.1
 
-Community Technology Preview (CTP) 2.1 は、[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]の最新のパブリック リリースです。 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1 に関しては、以下の機能が追加または強化されています。
+Community Technology Preview (CTP) 2.1 は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 に関しては、以下の機能が追加または強化されています。
 
 - [ビッグ データ クラスター](#bigdatacluster)
   - Python アプリおよび R アプリを配置する
@@ -46,7 +46,7 @@ Community Technology Preview (CTP) 2.1 は、[!INCLUDE[sql-server-2019](..\inclu
 
 ## <a name="ctp-20"></a>CTP 2.0 
 
-Community Technology Preview (CTP) 2.0 は、[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]の最初のパブリック リリースです。 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0 に関しては、以下の機能が追加または強化されています。
+Community Technology Preview (CTP) 2.0 は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の最初のパブリック リリースです。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 に関しては、以下の機能が追加または強化されています。
 
 - [ビッグ データ クラスター](#bigdatacluster)
   - SQL および Spark Linux コンテナーを使用するビッグ データ クラスターを Kubernetes にデプロイする
@@ -159,11 +159,11 @@ SQL Server 2019 プレビューでは、静的データ マスクが導入され
 
 ### <a name="utf-8-support-ctp-20"></a>UTF-8 のサポート (CTP 2.0)
 
-インポートまたはエクスポートのエンコードとして、あるいはテキスト データのデータベース レベルまたは列レベルの照合順序としての、広く使用されている UTF-8 文字エンコードの完全なサポート。 UTF-8 は、`CHAR` および `VARCHAR` データ型で許可されており、`UTF8` サフィックスを持つオブジェクトの照合順序を作成したり、照合順序をそれに変更したりすると有効になります。 
+インポートまたはエクスポートのエンコードとして、あるいはテキスト データのデータベース レベルまたは列レベルの照合順序としての、広く使用されている UTF-8 文字エンコードの完全なサポート。 UTF-8 は、`CHAR` および `VARCHAR` データ型で許可されており、`UTF8` サフィックスを持つようにオブジェクトの照合順序を作成するか変更すると有効になります。 
 
 たとえば、`LATIN1_GENERAL_100_CI_AS_SC` を `LATIN1_GENERAL_100_CI_AS_SC_UTF8` に変更するような場合です。 UTF-8 は、SQL Server 2012 で導入された補助文字をサポートする Windows 照合順序にのみ使用できます。 `NCHAR` および `NVARCHAR` では UTF-16 エンコードのみが許可され、変更されていません。
 
-使用されている文字セットによっては、この機能によりストレージを大幅に節約できます。 たとえば、ラテン文字列の既存の列データ型を、UTF-8 対応の照合順序を使用して `NCHAR(10)` から `CHAR(10)` に変更すると、必要なストレージが約 50% 削減されます。 このように減るのは、`NCHAR(10)` を保存するには 22 バイト必要であるのに対し、`CHAR(10)` では同じ Unicode 文字列に 12 バイトしか必要ないためです。
+使用されている文字セットによっては、この機能によりストレージを大幅に節約できます。 たとえば、ラテン文字列の既存の列データ型を、UTF-8 対応の照合順序を使用して `NCHAR(10)` から `CHAR(10)` に変更すると、必要なストレージが 50% 削減されます。 このように減るのは、`NCHAR(10)` を保存するには 20 バイト必要であるのに対し、`CHAR(10)` では同じ Unicode 文字列に 10 バイトしか必要ないためです。
 
 ### <a name="resumable-online-index-create-ctp-20"></a>再開可能なオンライン インデックスの作成 (CTP 2.0)
 

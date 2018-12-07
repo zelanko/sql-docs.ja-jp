@@ -11,12 +11,12 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7aaea76c93cdce4864c4a1e2491d542acee30b08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 456ab997ac599f4525f62a5eb6267600b0767c24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519636"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47829447"
   
 |プロパティ名|[説明]|  
 |-------------------|-----------------|  
-|**DEFAULT_EXECUTION_MODE**|パッケージのサーバー全体の既定の実行モード – `Server` (0) または `Scale Out` (1)。 |
+|**DEFAULT_EXECUTION_MODE**|パッケージのサーバー全体の既定の実行モード - `Server` (0) または `Scale Out` (1)。 |
 |**ENCRYPTION_ALGORITHM**|機密データの暗号化に使用される暗号化アルゴリズムの種類。 サポートされている値は、`DES`、`TRIPLE_DES`、`TRIPLE_DES_3KEY`、`DESX`、`AES_128`、`AES_192`、および `AES_256` です。 注: プロパティを変更するには、カタログ データベースがシングル ユーザー モードである必要があります。|
 |**IS_SCALEOUT_ENABLED**|値が `True` の場合、SSIS Scale Out 機能が有効になります。 Scale Out を有効にしていない場合、このプロパティがビューに表示されない可能性があります。|
 |**MAX_PROJECT_VERSIONS**|1 つのプロジェクトで保持される新しいプロジェクト バージョンの数。 バージョンのクリーンアップを有効にすると、この数を超える以前のバージョンは削除されます。|  

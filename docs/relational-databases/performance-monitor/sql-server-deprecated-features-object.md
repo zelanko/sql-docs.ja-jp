@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523343"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,9 +134,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |PERMISSIONS|PERMISSIONS 組み込み関数への参照が見つかりました。 代わりに sys.fn_my_permissions をクエリしてください。 クエリごとに 1 回発生します。|  
 |ProcNums|非推奨の ProcNums 構文が見つかりました。 参照を削除してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |READTEXT|READTEXT 構文が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
-|RESTORE DATABASE または LOG WITH DBO_ONLY|RESTORE … WITH DBO_ONLY 構文が見つかりました。 代わりに RESTORE … RESTRICTED_USER を使用してください。|  
-|RESTORE DATABASE または LOG WITH MEDIAPASSWORD|RESTORE … WITH MEDIAPASSWORD 構文が見つかりました。 WITH MEDIAPASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
-|RESTORE DATABASE または LOG WITH PASSWORD|RESTORE … WITH PASSWORD 構文が見つかりました。 WITH PASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
+|RESTORE DATABASE または LOG WITH DBO_ONLY|RESTORE ...WITH DBO_ONLY 構文が見つかりました。 代わりに RESTORE ...RESTRICTED_USER を使用してください。|  
+|RESTORE DATABASE または LOG WITH MEDIAPASSWORD|RESTORE ...WITH MEDIAPASSWORD 構文が見つかりました。 WITH MEDIAPASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
+|RESTORE DATABASE または LOG WITH PASSWORD|RESTORE ...WITH PASSWORD 構文が見つかりました。 WITH PASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
 |トリガーから結果を返す|このイベントは、トリガーを呼び出すごとに 1 回発生します。 結果セットを返さないようにトリガーを書き直してください。|  
 |ROWGUIDCOL|ROWGUIDCOL 構文が見つかりました。 $rowguid 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |SET ANSI_NULLS OFF|SET ANSI_NULLS OFF 構文が見つかりました。 この非推奨の構文を削除してください。 コンパイルごとに 1 回発生します。|  
@@ -173,13 +173,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_configure 'ft notify bandwidth (min)'|sp_configure の ft notify bandwidth (min) オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_configure 'locks'|sp_configure の locks オプションが見つかりました。 ロックは構成できなくなりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_configure 'open objects'|sp_configure の open objects オプションが見つかりました。 開いているオブジェクトの数は構成できなくなりました。 使用しないでください。 クエリごとに 1 回発生します。|  
-|sp_configure 'priority boost'|sp_configure の priority boost オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。 Windows start /high … program.exe オプションを代わりに使用してください。|  
+|sp_configure 'priority boost'|sp_configure の priority boost オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。 代わりに、Windows start /high ... program.exe オプションを使用してください。|  
 |sp_configure 'remote proc trans'|sp_configure の remote proc trans オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_configure 'set working set size'|sp_configure の set working set size オプションが見つかりました。 ワーキング セットのサイズは構成できなくなりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password ストアド プロシージャでは、マスター キーがあるかどうかは確認されません。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は非推奨とされます。 今後のリリースでは、マスター キーは存在する必要があり、ストアド プロシージャ sp_control_dbmasterkey_password で使用されるパスワードはデータベース マスター キーを暗号化するために使用されるパスワードの 1 つと同じである必要があります。|  
 |sp_create_removable|sp_create_removable プロシージャが見つかりました。 代わりに CREATE DATABASE を使用してください。 クエリごとに 1 回発生します。|  
 |sp_db_vardecimal_storage_format|**vardecimal** ストレージ形式の使用が見つかりました。 代わりにデータ圧縮を使用してください。|  
-|sp_dbcmptlevel|sp_dbcmptlevel プロシージャが見つかりました。 代わりに ALTER DATABASE ... SET COMPATIBILITY_LEVEL を使用してください。 クエリごとに 1 回発生します。|  
+|sp_dbcmptlevel|sp_dbcmptlevel プロシージャが見つかりました。 ALTER DATABASE ...SET COMPATIBILITY_LEVEL を使用してください。 クエリごとに 1 回発生します。|  
 |sp_dbfixedrolepermission|sp_dbfixedrolepermission プロシージャが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_dboption|sp_dboption プロシージャが見つかりました。 代わりに、ALTER DATABASE および DATABASEPROPERTYEX を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_dbremove|sp_dbremove プロシージャが見つかりました。 代わりに DROP DATABASE を使用してください。 クエリごとに 1 回発生します。|  

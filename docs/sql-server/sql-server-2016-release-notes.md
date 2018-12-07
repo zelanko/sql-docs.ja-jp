@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fc441d3247d5320e0a9913c0df48cc2573f22858
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524320"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 |   --- |   --- |   --- |
 |可用性グループ内のデータベースでの完全な DTC サポート    |   可用性グループの一部であるデータベースでの複数データベース間トランザクションは現在 SQL Server 2016 でサポートされていません。 SQL Server 2016 SP2 では、可用性グループ データベースでの分散トランザクションの完全なサポートを導入しています。   |       |
 |TempDB の暗号化の状態を正確に反映するための sys.database の is_encrypted 列の更新 |   すべてのユーザー データベースの暗号化をオフにし、SQL Server を再起動した後でも、TempDB の sys.databases の is_encrypted 列の値は 1 です。 この状況では TempDB が暗号化されないため、この値が 0 になることが予想されます。 SQL Server 2016 SP2 以降では、sys.databases.is_encrypted で TempDB の暗号化の状態が正確に反映されます。  |       |
-|検証済みのクローンとバックアップを生成するための新しい DBCC CLONEDATABASE オプション   |   SQL Server 2016 SP2 では、DBCC CLONEDATABASE によって、検証済みのクローンの作成、またはバックアップ クローンの作成という 2 つのオプションを使用できるようになります。 WITH VERIFY_CLONEDB オプションによってクローン データベースが作成されると、実稼働環境で Microsoft によってサポートされる一貫性のあるデータベース クローンが作成され、検証されます。 クローンが検証されるかどうかを検証する新しいプロパティ SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’) が導入されています。 クローンが BACKUP_CLONEDB オプションで作成されると、顧客が簡単にクローンを別のサーバーに移動したり、トラブルシューティングのために Microsoft カスタマー サポート (CSS) に送信したりできるように、データ ファイルと同じフォルダーにバックアップが生成されます。  |       |
+|検証済みのクローンとバックアップを生成するための新しい DBCC CLONEDATABASE オプション   |   SQL Server 2016 SP2 では、DBCC CLONEDATABASE によって、検証済みのクローンの作成、またはバックアップ クローンの作成という 2 つのオプションを使用できるようになります。 WITH VERIFY_CLONEDB オプションによってクローン データベースが作成されると、実稼働環境で Microsoft によってサポートされる一貫性のあるデータベース クローンが作成され、検証されます。 クローンが検証されるかどうかを検証する新しいプロパティ SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone') が導入されています。 クローンが BACKUP_CLONEDB オプションで作成されると、顧客が簡単にクローンを別のサーバーに移動したり、トラブルシューティングのために Microsoft カスタマー サポート (CSS) に送信したりできるように、データ ファイルと同じフォルダーにバックアップが生成されます。  |       |
 |DBCC CLONEDATABASE の Service Broker (SSB) のサポート    |   SSB オブジェクトのスクリプト作成を許可するように、DBCC CLONEDATABASE コマンドが拡張されました。  |   [KB4092075](https://support.microsoft.com/help/4092075) |
 |TempDB のバージョン ストア領域の使用量を監視する新しい DMV    |   TempDB のバージョン ストア使用量の監視が可能になるように、SQL Server 2016 SP2 に新しい sys.dm_tran_version_store_space_usage の DMV が導入されました。 運用サーバーでの実行時にパフォーマンスのオーバーヘッドを発生させることなく、データベースごとのバージョン ストア使用量の要件に基づいて DBA で TempDB のサイズを事前に計画できるようになりました。 |       |
 |レプリケーション エージェントの完全なダンプのサポート | 現在は、レプリケーション エージェントがハンドルされない例外に遭遇すると、既定により例外の現象のミニ ダンプが作成されます。 これにより、未処理の例外の問題のトラブルシューティングが非常に難しくなっています。 今回の変更では新しいレジストリ キーが導入され、レプリケーション エージェントの完全なダンプが作成できるようになっています。  |       |
@@ -68,9 +68,9 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 |sys.dm_db_file_space_usage のエクステントの変更情報| 前回の完全バックアップから変更されたエクステントの数を追跡する新しい列が sys.dm_db_file_space_usage に追加されました。  |       |
 |sys.dm_exec_query_stats のセグメント情報 |   total_columnstore_segment_reads、total_columnstore_segment_skips などの、スキップされた列ストア セグメントや読み取られた列ストア セグメントの数を追跡する新しい列が sys.dm_exec_query_stats に追加されました。   |   [KB4051358](https://support.microsoft.com/help/4051358) |
 |ディストリビューション データベースの正しい互換性レベルの設定  |   Service Pack をインストールすると、ディストリビューション データベースの互換性レベルが 90 に変更されます。 これは、sp_vupgrade_replication ストアド プロシージャのコード パスが原因でした。 SP はディストリビューション データベースに正しい互換性レベルが設定されるように変更されています。   |       |
-|最後に確認された適切な DBCC CHECKDB 情報の公開    |   最後に成功した DBCC CHECKDB 実行の日付がプログラムで自動的に返されるように、新しいデータベースのオプションが追加されました。 ユーザーはクエリ DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’) を実行することで、指定したデータベースで最後に成功した DBCC CHECKDB 実行の日時を表す単一の値を取得することができます。  |       |
+|最後に確認された適切な DBCC CHECKDB 情報の公開    |   最後に成功した DBCC CHECKDB 実行の日付がプログラムで自動的に返されるように、新しいデータベースのオプションが追加されました。 ユーザーはクエリ DATABASEPROPERTYEX([database], 'lastgoodcheckdbtime') を実行することで、指定したデータベースで最後に成功した DBCC CHECKDB 実行の日時を表す単一の値を取得することができます。  |       |
 |Showplan XML の機能強化| 統計名、変更数、サンプリングの割合、統計の最終更新日時を含む、[クエリ プランのコンパイルに使用された統計に関する情報](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/)。 これは CE モデル 120 以降でのみ追加されます。 たとえば、CE 70 ではサポートされません。| |
-| |クエリ オプティマイザーが “row goal” のロジックを使用する場合、新しい属性 [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/) が Showplan XML に追加されます。| |
+| |クエリ オプティマイザーが "row goal" のロジックを使用する場合、新しい属性 [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/) が Showplan XML に追加されます。| |
 | |実際の Showplan XML には、スカラー ユーザー定義関数 (UDF) に費やされた時間を追跡する新しいランタイム属性 [UdfCpuTime と UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/) が追加されています。| |
 | |実際の Showplan XML には待機の種類 CXPACKET が[考えられる上位 10 の待機リスト](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/)に追加されています。クエリの並列実行には頻繁に CXPACKET の待機が含まれますが、この種類の待機は実際の Showplan XML では報告されませんでした。 |       |
 | |並列処理の演算子の書き込み中に TempDB に書き込まれたページ数を報告するためのランタイム書き込み警告が拡張されました。| |
@@ -212,7 +212,7 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
     
 -   **[オンラインまたはローカル ヘルプの選択]** オプションを使用し、[オンライン ヘルプを使用する] にヘルプを構成します。    
     
--   **[オンラインからコンテンツをインストール]** オプションを使用し、SQL Server 2014 のコンテンツをダウンロードします。    
+-    **[オンラインからコンテンツをインストール]** オプションを使用し、SQL Server 2014 のコンテンツをダウンロードします。    
 
  **F1 ヘルプ:** 仕様上、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で F1 キーを押すと、ブラウザーでオンライン バージョンの F1 ヘルプ記事が表示されます。 この問題は、ブラウザー ベースのヘルプで、ローカル ヘルプのインストールを構成した場合でも発生します。 
 

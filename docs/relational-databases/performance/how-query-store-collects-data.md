@@ -1,7 +1,7 @@
 ---
 title: クエリ ストアがデータを収集するしくみ | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775060"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711074"
 ---
 # <a name="how-query-store-collects-data"></a>クエリ ストアがデータを収集するしくみ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   クエリ ストアは継続的に **フライト データ レコーダー** の役割を果たし、クエリおよびプランに関連するコンパイルおよびランタイムの情報を収集します。 クエリ関連のデータは内部テーブルに保存され、一連のビューでユーザーに表示されます。  
   
@@ -30,8 +30,7 @@ ms.locfileid: "47775060"
  次の図は、クエリ ストアのビューとその論理関係を示しています。コンパイル時間の情報は青のエンティティで表しています。  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **ビューの説明**  
+**ビューの説明**  
   
 |表示|[説明]|  
 |----------|-----------------|  
@@ -42,7 +41,7 @@ ms.locfileid: "47775060"
 |**sys.query_store_runtime_stats_interval**|クエリ ストアは、自動的に生成される時間枠 (間隔) ごとに時間を分割し、すべての実行済みプランにその間隔で集計された統計を格納します。 間隔のサイズは、([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の) 構成オプションの統計収集間隔、または [ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) を使用する `INTERVAL_LENGTH_MINUTES` によって制御されます。|  
 |**sys.query_store_runtime_stats**|実行済みプランで集計されたランタイム統計です。 キャプチャされたすべてのメトリックが平均、最小、最大、標準偏差の 4 つの統計関数の形式で表されます。|  
   
- クエリ ストアのビューの詳細は、「 **クエリのストアを使用した、パフォーマンスの監視** 」の「 [関連するビュー、関数、プロシージャ](monitoring-performance-by-using-the-query-store.md)」のセクションを参照してください。  
+ クエリ ストアのビューについて詳しくは、「[クエリのストアを使用した、パフォーマンスの監視](monitoring-performance-by-using-the-query-store.md)」の「**関連するビュー、関数、プロシージャ**」のセクションを参照してください。  
   
 ## <a name="query-processing"></a>クエリ処理  
  クエリ ストアは次の重要な点についてクエリ処理のパイプラインと対話します。  
@@ -63,10 +62,10 @@ ms.locfileid: "47775060"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- システムのクラッシュが発生した場合、クエリ ストアでは `DATA_FLUSH_INTERVAL_SECONDS`で定義した時間までのランタイム データが失われる場合があります。 クエリのキャプチャ パフォーマンスとデータの可用性のバランスのためには、既定の 900 秒 (15 分) が最も適しています。  
-メモリ不足が発生した場合、 `DATA_FLUSH_INTERVAL_SECONDS`で定義した時間より前に、ランタイム統計をディスクにフラッシュすることができます。  
+ システムのクラッシュが発生した場合、クエリ ストアでは `DATA_FLUSH_INTERVAL_SECONDS` で定義されている時間までのランタイム データが失われる場合があります。 クエリのキャプチャ パフォーマンスとデータの可用性のバランスのためには、既定の 900 秒 (15 分) が最も適しています。  
+メモリ不足が発生した場合、`DATA_FLUSH_INTERVAL_SECONDS` で定義されている時間より前に、ランタイム統計がディスクにフラッシュされる可能性があります。  
 クエリ ストアのデータ読み取り中は、メモリ内のデータとディスク上のデータが透過的に統合されます。
-セッションの終了時またはクライアント アプリケーションの再起動/クラッシュ時、クエリ統計は記録されません。  
+セッションが終了された場合、またはクライアント アプリケーションが再起動またはクラッシュした場合、クエリ統計は記録されません。  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 166b6517389b9c48b37544df1a0e71e621b617f8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b772ebe8af00bee81c6034745b2e21311d09f23a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537400"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ FOR JSON PATH
 
 ## <a name="use-cases-for-json-data-in-sql-server"></a>SQL Server での JSON データのユース ケース
 
-SQL Server と Azure SQL Database での JSON のサポートにより、リレーショナルと NoSQL の概念が統合されます。 リレーショナルから半構造化データへの変換、およびその逆が簡単にできます。 しかし、JSON は既存のリレーショナル モデルに置き換わるものではありません。 ここでは、SQL Server と SQL Database での JSON サポートによる利点が得られるユース ケースをいくつか紹介します。 詳細については、「[JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)」(SQL Server の JSON - ユース ケース) を参照してください。
+SQL Server と Azure SQL Database での JSON のサポートにより、リレーショナルと NoSQL の概念が統合されます。 リレーショナルから半構造化データへの変換、およびその逆が簡単にできます。 しかし、JSON は既存のリレーショナル モデルに置き換わるものではありません。 ここでは、SQL Server と SQL Database での JSON サポートによる利点が得られるユース ケースをいくつか紹介します。 詳細については、「[JSON in SQL Server - Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)」(SQL Server の JSON - ユース ケース) を参照してください。
 
 ### <a name="simplify-complex-data-models"></a>複雑なデータ モデルを簡略化する
 
@@ -226,7 +226,7 @@ SQL Server と Azure SQL Database での JSON のサポートにより、リレ�
 
 ### <a name="process-log-and-telemetry-data"></a>ログとテレメトリ データの処理
 
-Transact-SQL 言語を活用して JSON ファイルとして格納されたログ データの読み込み、クエリ、分析を行います。 詳細については、「[JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)」(SQL Server の JSON - ユース ケース) の「*Log and telemetry data analysis*」(ログおよびテレメトリ データ分析) のセクションを参照してください。
+Transact-SQL 言語を活用して JSON ファイルとして格納されたログ データの読み込み、クエリ、分析を行います。 詳細については、「[JSON in SQL Server - Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)」(SQL Server の JSON - ユース ケース) の「*Log and telemetry data analysis*」(ログおよびテレメトリ データ分析) のセクションを参照してください。
 
 ### <a name="store-semi-structured-iot-data"></a>半構造化された IoT データを格納する
 

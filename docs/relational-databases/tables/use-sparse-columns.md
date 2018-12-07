@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79b653f3e93e896c3a7f72f4d3473fac2f34988b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520966"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "47648100"
 |**uniqueidentifier**|16|20|43%|  
 |**date**|3|7|69%|  
   
- **長さが有効桁数に依存するデータ型**  
+ **Precision-Dependent-Length データ型**  
   
 |データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
@@ -103,7 +103,7 @@ ms.locfileid: "47648100"
 |**decimal/numeric(38,s)**|17|21|42%|  
 |**vardecimal(p,s)**|控えめな推定値として **decimal** 型を使用してください。|||  
   
- **長さがデータに依存するデータ型**  
+ **Data-Dependent-Length データ型**  
   
 |データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  

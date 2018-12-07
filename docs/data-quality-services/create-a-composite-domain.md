@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
@@ -15,12 +14,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 275a22b7fca0634fd3ae955ead6c7cbbcd9acf66
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701780"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616862"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
 
@@ -98,7 +97,7 @@ ms.locfileid: "51701780"
  複合ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services では、区切り記号または順序だけでなく、ナレッジに基づいてデータを解析することができます。 ナレッジ ベースの解析は、参照データ サービスを使用せずに複合ソース データを複合ドメインにマップする場合に使用します。 ナレッジ ベースの解析を使用すると、データ ソースのデータを関連する単一ドメインに解析できます。 ナレッジ ベースの解析では、まず、ナレッジを使用して複合データを単一ドメインに解析する処理が試行されます。 可能な場合は、文字列の一部が 1 つ以上のドメインに属すると見なされ、文字列がそのさまざまなドメインに解析されます。 たとえば、氏名複合ドメインによって表される氏名フィールドに複合値 “John B. Doe” があるとします。 “John” が “名” ドメインに、“Doe” が “姓” ドメインに属すると見なされた場合、“B.” はドメイン ナレッジに基づいて “ミドル ネーム” ドメインに追加されます。  
+ Data Quality Services では、区切り記号または順序だけでなく、ナレッジに基づいてデータを解析することができます。 ナレッジ ベースの解析は、参照データ サービスを使用せずに複合ソース データを複合ドメインにマップする場合に使用します。 ナレッジ ベースの解析を使用すると、データ ソースのデータを関連する単一ドメインに解析できます。 ナレッジ ベースの解析では、まず、ナレッジを使用して複合データを単一ドメインに解析する処理が試行されます。 可能な場合は、文字列の一部が 1 つ以上のドメインに属すると見なされ、文字列がそのさまざまなドメインに解析されます。 たとえば、氏名複合ドメインによって表される氏名フィールドに複合値 "John B. Doe" があるとします。 "John" が "名" ドメインに、"Doe" が "姓" ドメインに属すると見なされた場合、"B." はドメイン ナレッジに基づいて “ミドル ネーム” ドメインに追加されます。  
   
  ナレッジ ベースの解析は、区切り記号ベースの解析も選択している場合にのみ使用できます。 ナレッジ ベースの解析は区切り記号の解析に代わるものではなく、その解析を強化するものです。 解析を行うためのナレッジが存在しない場合にのみ、区切り記号を使用して解析が行われます。 場合によっては、ナレッジ ベースの解析によって一部の解析が決定されてから、区切り記号ベースの解析によってその他の解析が決定されます。  
   

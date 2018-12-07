@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 048503cecc50b684aea1d684cdef4a849ee0378f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b7df0f9ab315adddb3714846601210e54aa987e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030193"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529510"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>パフォーマンス カウンター MSRS 2011 SharePoint モード パフォーマンス オブジェクト
   このトピックでは、 **SharePoint モード配置の一部である** MSRS 2011 Web Service SharePoint Mode **と** MSRS 2011 Windows Service SharePoint Mode [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
@@ -80,12 +80,12 @@ ms.locfileid: "50030193"
 |**Active sessions**|レポート サーバー データベースに格納されるアクティブ セッションの数です。 このカウンターは、レポート サブスクリプションから生成される使用可能なすべてのブラウザー セッションの累積数と、セッションがまだアクティブかどうかを示します。|  
 |**Alerting: event queue length**||  
 |**Alerting: events processed - CreateSchedule**||  
-|**Alerting: events processed – Delete schedule**||  
-|**Alerting: events processed – DeliverAlert**||  
-|**Alerting: events processed – FireAlert**||  
-|**Alerting: events processed – FireSchedule**||  
-|**Alerting: events processed – GenerateAlert**||  
-|**Alerting: events processed – UpdateSchedule**||  
+|**Alerting: events processed - Delete schedule**||  
+|**Alerting: events processed - DeliverAlert**||  
+|**Alerting: events processed - FireAlert**||  
+|**Alerting: events processed - FireSchedule**||  
+|**Alerting: events processed - GenerateAlert**||  
+|**Alerting: events processed - UpdateSchedule**||  
 |**Cache Flushes/Sec**|1 秒あたりのキャッシュ フラッシュ回数。|  
 |**Cache Hits/Sec**|キャッシュされたレポートに対する 1 秒あたりの要求数。 これはレポートの再表示の要求であり、キャッシュから直接処理されるレポートの要求ではありません (このトピックで後述する「 **Total Cache Hits** 」を参照してください)。|  
 |**Cache Hits/Sec (Semantic Models)**|キャッシュされたモデルに対する 1 秒あたりの要求数。|  

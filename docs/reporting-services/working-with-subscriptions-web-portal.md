@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0c94ab62231ba2167e52c9999f18cf4bd1e9ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028131"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542008"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>サブスクリプションの操作 (Web ポータル)
 
@@ -28,7 +28,7 @@ ms.locfileid: "50028131"
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-レポートの **[省略記号 (...)]**、**[管理]**、**[サブスクリプション]** の順に選択して、[サブスクリプション] ページにアクセスすることができます。  
+レポートの**省略記号 [...]**、**[管理]**、**[サブスクリプション]** の順に選択して、[サブスクリプション] ページにアクセスすることができます。  
   
 [サブスクリプション] ページで、 **[+ 新しいサブスクリプション]** を選択すると、新しいサブスクリプションを作成できます。 既存のサブスクリプションを編集したり、選択したサブスクリプションを削除したりすることもできます。  
   

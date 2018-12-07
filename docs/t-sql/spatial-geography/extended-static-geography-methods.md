@@ -15,12 +15,12 @@ ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 343b9f96becd09784a2c575ddf7dffc84f446b2a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6298f24beabe0316c3fb4b242abefc5f07725fb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540422"
 ---
 # <a name="extended-static-geography-methods"></a>拡張された静的な地理メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51703360"
   
  [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [OGC の仕様、簡易機能アクセス Part 2 – SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93628)  
+ [OGC の仕様、簡易機能アクセス Part 2 - SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
  [OGC の仕様、Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)  
   

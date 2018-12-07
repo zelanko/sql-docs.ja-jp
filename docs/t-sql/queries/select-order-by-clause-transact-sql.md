@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530235"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,7 +136,7 @@ ORDER BY order_by_expression
  SELECT TOP (*N*) ステートメントでは必ず ORDER BY 句を使用してください。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、「[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)」を参照してください。  
   
 ## <a name="interoperability"></a>相互運用性  
- 別のソースから行を挿入するときに、ORDER BY 句を SELECT…INTO ステートメントと共に使用する場合、行が指定した順序で挿入されるかどうかは保証されません。  
+ 別のソースから行を挿入するときに、ORDER BY 句を SELECT...INTO ステートメントと共に使用する場合、行が指定した順序で挿入されるかどうかは保証されません。  
   
  ビューで OFFSET および FETCH を使用しても、ビューの updateability プロパティは変更されません。  
   

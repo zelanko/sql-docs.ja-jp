@@ -13,12 +13,12 @@ ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10f5d9c55f25221ae767a960393f7d7d775eff96
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 852651601ba7264c079a42c82a4bbb626d902328
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659218"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529878"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server の単体テストでのテスト条件の使用
 SQL Server 単体テストでは、1 つ以上の Transact\-SQL テスト スクリプトが実行されます。 結果は Transact\-SQL スクリプト内で評価することができ、エラーを返してテストに失敗するには THROW または RAISERROR が使用されます。また、結果を評価するテスト内でテスト条件を定義することもできます。 テスト結果として、[SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) クラスのインスタンスが返されます。 このクラスのインスタンスには、1 つ以上のデータセット、実行時間、およびスクリプトの影響を受けた行数が含まれます。 この情報すべては、スクリプトの実行中に収集されます。 これらの結果は、テスト条件を使用して評価できます。 SQL Server Data Tools には、定義済みのテスト条件が用意されています。 また、カスタム条件を作成して使用することもできます (「[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)」をご覧ください)。  
@@ -88,7 +88,7 @@ SQL Server 単体テスト デザイナーを表示するには、**ソリュー
   
 3.  (省略可能) テスト条件の **"(名前)"** プロパティを、わかりやすい名前に変更することもできます。  
   
-4.  **"構成"** プロパティで、参照ボタン (**[...]**) をクリックします。  
+4.  **[構成]** プロパティで、参照ボタン (**[...]**) をクリックします。  
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   
@@ -118,7 +118,7 @@ SQL Server 単体テストに予期されるスキーマ テスト条件を追�
   
 3.  (省略可能) テスト条件の **"(名前)"** プロパティを、わかりやすい名前に変更することもできます。  
   
-4.  **"構成"** プロパティで、参照ボタン (**[...]**) をクリックします。  
+4.  **[構成]** プロパティで、参照ボタン (**[...]**) をクリックします。  
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   

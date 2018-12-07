@@ -11,12 +11,12 @@ ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c51fde6d4fa7587b4fd305d1744934d42e76bad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732830"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526061"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>スニペットをアウトライン表示し、Transact-SQL スクリプトに追加する方法
 SQL Server Data Tools には、コード スニペットから成るコード ライブラリが含まれており、作成するアプリケーションに挿入できるようになっています。 各スニペットは、関数、テーブル、トリガー、インデックス、ビュー、ユーザー定義データ型などを作成する完全なスクリプト タスクを実行します。スニペットは、数回のマウス クリックでソース コードに挿入できます。 スニペットを使用すると、入力の時間を短縮できるため、生産性が向上します。  
@@ -42,7 +42,7 @@ SQL Server Data Tools には、コード スニペットから成るコード �
   
 ### <a name="to-outline-code"></a>コードをアウトライン表示するには  
   
-1.  CREATE TABLE ステートメントの横に、**–** 記号があります。 スクリプト内のセクションの横にある **-** 記号をクリックしてそのセクションを非表示にします。  
+1.  CREATE TABLE ステートメントの横に、**-** 記号があります。 スクリプト内のセクションの横にある **-** 記号をクリックしてそのセクションを非表示にします。  
   
 2.  Transact\-SQL エディターを右クリックし、**[アウトライン]** をポイントして、**[アウトラインの中止]** をクリックします。エディター内の基になるコードに影響を与えることなくアウトライン情報が削除されます。  
   

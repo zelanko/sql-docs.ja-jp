@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 80ddd9fb25dcd9246da0b9cb9ac86e8872888e7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79c6f65a6ceba8eef0a61f27512fa09b6fb3f474
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785878"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531802"
 ---
 # <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>レッスン 2-3 - フラット ファイル接続マネージャーの変更
 この実習では、レッスン 1 で作成、構成したフラット ファイル接続マネージャーを変更します。 フラット ファイル接続マネージャーを作成した当初は、1 つのファイルを静的に読み込むように構成しました。 フラット ファイル接続マネージャーで繰り返しファイルを読み込むには、接続マネージャーの ConnectionString プロパティを修正し、ユーザー定義変数 `User:varFileName`を使用できるようにする必要があります。この変数に、実行時に読み込むファイルのパスを定義します。  
@@ -27,11 +27,11 @@ ms.locfileid: "47785878"
   
 1.  **接続マネージャー** ペインで、 **[Sample Flat File Source Data]** を右クリックして **[プロパティ]** をクリックします。  
   
-2.  [プロパティ] ウィンドウの **[Expressions]** で、空のセルをクリックし、参照ボタン ( **[...]**) をクリックします。  
+2.  [プロパティ] ウィンドウの **[式]** で、空のセルをクリックし、参照ボタン **[...]** をクリックします。  
   
 3.  **[プロパティ式エディター]** ダイアログ ボックスの **[プロパティ]** 列で「 **ConnectionString**」と入力するか、ConnectionString プロパティを選択します。  
   
-4.  **[式]** 列の参照ボタン ( **[...]** ) をクリックし、 **[式ビルダー]** ダイアログ ボックスを開きます。  
+4.  **[式]** 列の参照ボタン **[...]** をクリックし、**[式ビルダー]** ダイアログ ボックスを開きます。  
   
 5.  **[式ビルダー]** ダイアログ ボックスで **[変数]** ノードを展開します。  
   

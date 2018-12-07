@@ -12,12 +12,12 @@ ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4f691fa89bf3d6db014542088fdd127e344a8346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfadca5d9bbdeecf582c5cff67b499dc1172297
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690700"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545360"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>DTA 推奨を利用したパフォーマンスの強化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47690700"
 
 <a name="see-also"></a>参照
 ---
-[データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)
+[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)
 
 [データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 

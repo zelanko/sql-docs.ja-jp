@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d080ae2ac8d10469afb35efbd64122daf89d312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebe4438e48f14c1adba3b56d30cc772549f9ee7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526443"
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "47744430"
 |演算|現行テーブル|履歴テーブル|  
 |---------------|-------------------|-------------------|  
 |**DROP TABLE**|禁止|禁止|  
-|**ALTER TABLE…SWITCH PARTITION**|SWITCH IN のみ (「 [テンポラル テーブルでのパーティション分割](../../relational-databases/tables/partitioning-with-temporal-tables.md)」参照)|SWITCH OUT のみ (「 [テンポラル テーブルでのパーティション分割](../../relational-databases/tables/partitioning-with-temporal-tables.md)」参照)|  
-|**ALTER TABLE…DROP PERIOD**|禁止|-|  
-|**ALTER TABLE…ADD PERIOD**|-|禁止|  
+|**ALTER TABLE...SWITCH PARTITION**|SWITCH IN のみ (「 [テンポラル テーブルでのパーティション分割](../../relational-databases/tables/partitioning-with-temporal-tables.md)」参照)|SWITCH OUT のみ (「 [テンポラル テーブルでのパーティション分割](../../relational-databases/tables/partitioning-with-temporal-tables.md)」参照)|  
+|**ALTER TABLE...DROP PERIOD**|禁止|-|  
+|**ALTER TABLE...ADD PERIOD**|-|禁止|  
   
 ## <a name="allowed-alter-table-operations"></a>許可される ALTER TABLE 操作  
   
 |演算|現在|履歴|  
 |---------------|-------------|-------------|  
-|**ALTER TABLE…REBUILD**|許可 (非依存)|許可 (非依存)|  
+|**ALTER TABLE...REBUILD**|許可 (非依存)|許可 (非依存)|  
 |**CREATE INDEX**|許可 (非依存)|許可 (非依存)|  
 |**CREATE STATISTICS**|許可 (非依存)|許可 (非依存)|  
   

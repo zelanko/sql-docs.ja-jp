@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029167"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526182"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
 このチュートリアルでは、詳細レポートとメイン レポートという、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の 2 種類のページ分割されたレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 
@@ -101,7 +101,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  **[クエリのデザイン]** ページのメタデータ ペインで、 **[(…)]** ボタンをクリックします。  
+1.  **[クエリのデザイン]** ページのメタデータ ペインで、**[ (...) ]** ボタンをクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
@@ -392,7 +392,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  **[クエリのデザイン]** ページのメタデータ ペインで、キューブ セクションの参照ボタン ( **[(...)]**) をクリックします。  
+1.  **[クエリのデザイン]** ページのメタデータ ペインで、キューブ セクションの参照ボタン ( **[...]** ) をクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
@@ -541,7 +541,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  **[アクション]** タブをクリックします。  
   
-4.  **[レポートに移動する]** を選択します。  
+4.   **[レポートに移動する]** を選択します。  
   
 5.  **[レポートの指定]** で、 **[参照]** をクリックして、ResellerVSOnlineDrillthrough という名前の詳細レポートを指定します。  
   

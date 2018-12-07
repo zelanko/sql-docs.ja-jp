@@ -1,7 +1,7 @@
 ---
 title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: daad1b738030efa48d5a85f91b70ebf747d4702c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812527"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586255"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,15 @@ ms.locfileid: "51812527"
 > [!div class="nextstepaction"]
 > [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-指定した区切り記号を使用して文字式を分割します。  
-  
-> [!NOTE]  
-> **STRING_SPLIT** 関数は、互換性レベル 130 以上でのみ使用できます。 データベースの互換性レベルが 130 よりも低い場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **STRING_SPLIT** 関数を見つけて実行することができません。 データベースの互換性レベルを変更するには、「[データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)」を参照してください。
-> 新しい [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] であっても、互換性レベル 120 が既定値の場合があります。  
-  
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+指定した区切り文字に基づいて、文字列を部分文字列の行に分割するテーブル値関数です。
+
+#### <a name="compatibility-level-130"></a>互換性レベル 130
+
+STRING_SPLIT は、互換性レベル 130 以上にする必要があります。 レベルが 130 未満の場合、SQL Server から STRING_SPLIT 関数を検出できません。
+
+データベースの互換性レベルを変更するには、「[データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)」を参照してください。
+
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,26 +52,37 @@ STRING_SPLIT ( string , separator )
  任意の文字型 (**nvarchar**、**varchar**、**nchar**、**char** など) の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  *separator*  
- 任意の文字型の 1 文字の[式](../../t-sql/language-elements/expressions-transact-sql.md)です (**nvarchar(1)**、**varchar(1)**、**nchar(1)**、**char(1)** など)。連結する文字列の区切り文字として使用されます。  
+ 任意の文字型の 1 文字の[式](../../t-sql/language-elements/expressions-transact-sql.md)です (**nvarchar(1)**、**varchar(1)**、**nchar(1)**、**char(1)** など)。連結する部分文字列の区切り文字として使用されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- フラグメントを含む単一列のテーブルを返します。 列の名前は **value** です。 入力引数のいずれかが **nvarchar** または **nchar** の場合は、**nvarchar** を返します。 それ以外の場合は **varchar** を返します。 戻り値の型の長さは、文字列引数の長さと同じです。  
+
+行が部分文字列の、単一列のテーブルを返します。 列の名前は **value** です。 入力引数のいずれかが **nvarchar** または **nchar** の場合は、**nvarchar** を返します。 それ以外の場合は **varchar** を返します。 戻り値の型の長さは、文字列引数の長さと同じです。  
   
 ## <a name="remarks"></a>Remarks  
-**STRING_SPLIT** は、分割される文字列と、文字列の分割に使用される区切り記号を受け取ります。 サブ文字列を含む単一列のテーブルを返します。 たとえば、区切り記号としてスペース文字を使用する次のステートメントの `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` は、次の結果のテーブルを返します。  
+
+**STRING_SPLIT** には、部分文字列を区切った文字列と、区切り記号や区切りとして使用される 1 文字を入力します。 STRING_SPLIT では、行に部分文字列が含まれる、単一列テーブルが出力されます。 出力列の名前は **value** です。
+
+出力行には任意の順序を指定できます。 この順序が入力文字列の部分文字列の順序と一致するかどうかは保証_されません_。 SELECT ステートメントで ORDER BY 句 (`ORDER BY value`) を使用して、最終的な並べ替え順序をオーバーライドできます。
+
+入力文字列に区切り文字が 2 つ以上連続して含まれている場合、長さ 0 の空の部分文字列が存在します。 空の部分文字列は、プレーンな部分文字列と同じように扱われます。 WHERE 句 (`WHERE value <> ''`) を使用して、空の部分文字列が含まれているすべての行をフィルター処理できます。 入力文字列が NULL の場合、STRING_SPLIT テーブル値関数は空のテーブルを返します。  
+
+たとえば、次の SELECT ステートメントでは、空白文字が区切り記号として使用されます。
+
+```sql
+SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
+```
+
+実際に実行すると、前の SELECT からは、次の結果テーブルが返されます。  
   
 |value|  
-|-----------|  
+| :-- |  
 |Lorem|  
 |ipsum|  
 |dolor|  
 |sit|  
 |amet.|  
-  
-入力文字列が **NULL** の場合、**STRING_SPLIT** テーブル値関数は空のテーブルを返します。  
-  
-**STRING_SPLIT** を使用するには、130 以上の互換モードが必要です。  
-  
+| &nbsp; |
+
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-split-comma-separated-value-string"></a>A. コンマ区切り値文字列を分割する  
@@ -157,9 +170,9 @@ FROM Product
 JOIN STRING_SPLIT('1,2,3',',')   
     ON value = ProductId;  
 ```  
-  
-これは、アプリケーション レイヤーまたは [!INCLUDE[tsql](../../includes/tsql-md.md)] で動的な SQL 文字列を作成するか、LIKE 演算子を使用するなど、一般的なアンチパターンの置き換えです。  
-  
+
+前の STRING_SPLIT の使用方法は、一般的なアンチ パターンの置き換えです。 このようなアンチ パターンには、アプリケーション レイヤーまたは Transact-SQL での動的 SQL 文字列の作成が含まれる場合があります。 または、アンチ パターンは、LIKE 演算子を使用して実現できます。 次の例の SELECT ステートメントを参照してください。
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  

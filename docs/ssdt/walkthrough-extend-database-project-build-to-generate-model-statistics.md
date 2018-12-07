@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659141"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523421"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
 ビルド コントリビューターを作成して、データベース プロジェクトのビルド時にカスタム アクションを実行できます。 このチュートリアルでは、データベース プロジェクトのビルド時に SQL データベース モデルから統計を出力する ModelStatistics という名前のビルド コントリビューターを作成します。 このビルド コントリビューターはビルド時にパラメーターを受け取るため、追加のステップが必要となります。  
@@ -46,7 +46,7 @@ ms.locfileid: "51659141"
   
 -   モデルの統計を生成してユーザーに報告する。 これは、次に例を示します。  
   
-ビルド コントリビューターのメイン エントリ ポイントは OnExecute メソッドです。 BuildContributor から継承するすべてのクラスには、このメソッドを実装する必要があります。 このメソッドには BuildContributorContext オブジェクトが渡されます。これには、データベースのモデル、ビルド プロパティ、ビルド コントリビューターで使用される引数やファイルなど、ビルドに関連するすべてのデータが含まれます。  
+ビルド コントリビューターのメイン エントリ ポイントは OnExecute メソッドです。 BuildContributor から継承するすべてのクラスには、このメソッドを実装する必要があります。 このメソッドには BuildContributorContext オブジェクトが渡されます。このオブジェクトには、データベースのモデル、ビルド プロパティ、ビルド コントリビューターで使用される引数やファイルなど、ビルドに関連するすべてのデータが含まれます。  
   
 **TSqlModel とデータベース モデル API**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51659141"
   
 ```  
   
-この場合、属性の最初のパラメーターは一意の識別子である必要があります。これは、プロジェクト ファイル内でコントリビューターを識別するために使用されます。 ライブラリの名前空間 (このチュートリアルでは "ExampleContributors") とクラス名 (このチュートリアルでは "ModelStatistics") を組み合わせて識別子を生成することをお勧めします。 このチュートリアルの後半では、この名前空間を使用してコントリビューターの実行を指定する方法について説明します。  
+この場合、属性の最初のパラメーターは一意の識別子である必要があります。この識別子は、プロジェクト ファイル内でコントリビューターを識別するために使用されます。 ライブラリの名前空間 (このチュートリアルでは "ExampleContributors") とクラス名 (このチュートリアルでは "ModelStatistics") を組み合わせて識別子を生成することをお勧めします。 このチュートリアルの後半では、この名前空間を使用してコントリビューターの実行を指定する方法について説明します。  
   
 ## <a name="CreateBuildContributor"></a>ビルド コントリビューターを作成する  
 ビルド コントリビューターを作成するには、次のタスクを実行する必要があります。  
@@ -480,7 +480,7 @@ ms.locfileid: "51659141"
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -517,7 +517,7 @@ ms.locfileid: "51659141"
 上記の方法のいずれかを実行すると、MSBuild を使用して、コマンド ライン ビルドのパラメーターを渡すことができます。  
   
 > [!NOTE]  
-> コントリビューター ID を指定するには、必ず "BuildContributors" プロパティを更新する必要があります。 これは、コントリビューター ソース ファイル内の "ExportBuildContributor" 属性で使用されているのと同じ ID です。 これを指定しないと、プロジェクトのビルド時にコントリビューターが実行されません。 "ContributorArguments" プロパティは、コントリビューターの実行に必要な引数がある場合のみに更新する必要があります。  
+> コントリビューター ID を指定するには、必ず "BuildContributors" プロパティを更新する必要があります。 この ID は、コントリビューター ソース ファイル内の "ExportBuildContributor" 属性で使用されているのと同じ ID です。 これを指定しないと、プロジェクトのビルド時にコントリビューターが実行されません。 "ContributorArguments" プロパティは、コントリビューターの実行に必要な引数がある場合のみに更新する必要があります。  
   
 ### <a name="build-the-sql-project"></a>SQL プロジェクトのビルド  
   

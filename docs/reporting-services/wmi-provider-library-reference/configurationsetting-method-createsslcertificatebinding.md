@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceaaa60f305bceb51e6c0cfec45da926b1084a37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88dfd8e699fd71bbf2fdce8057fda78992dd498d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824600"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543460"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting メソッド - CreateSSLCertificateBinding
   SSL 証明書のバインドを作成します。  

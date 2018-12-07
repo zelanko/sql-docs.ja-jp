@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703940"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540564"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 リリース ノートします。
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ SQL Server 2012 の開始方法およびインストール方法の詳細につ�
 **回避策:** システム構成チェック レポートを参照することで、このセットアップ ルールの詳細を調べることができます。 システム構成チェッカーは、実行された各ルールの簡単な記述と、実行ステータスを含むレポートを生成します。 システム構成チェッカーのレポートは %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ に配置されます。  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 分散再生コントローラー サービスのローカル ユーザー アカウントを追加すると、セットアップが予期せず終了する  
-**問題点** : SQL Server セットアップの **[分散再生コントローラー]** ページで、分散再生コントローラー サービスのローカル ユーザー アカウントを追加しようとすると、"SQL Server のセットアップに失敗しました" エラー メッセージが表示され、セットアップが予期せず終了します。  
+**問題点:** SQL Server セットアップの **[分散再生コントローラー]** ページで、分散再生コントローラー サービスのローカル ユーザー アカウントを追加しようとすると、"SQL Server のセットアップに失敗しました" エラー メッセージが表示され、セットアップが予期せず終了します。  
   
-**回避策:** SQL セットアップ中、[現在のユーザーの追加] または [追加] を使用して、ローカル ユーザー アカウントを追加しないでください。 セットアップ後、以下の手順に従って、手作業でローカル ユーザー アカウントを追加してください。  
+**回避策:** SQL セットアップ中、[現在のユーザーの追加] または [追加...] を使用して、ローカル ユーザー アカウントを追加しないでください。 セットアップ後、以下の手順に従って、手作業でローカル ユーザー アカウントを追加してください。  
   
 1.  SQL Server 分散再生コントローラー サービスを停止します。  
   
@@ -188,9 +188,9 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 -   Windows PowerShell 2.0 は SQL Server 2012 のデータベース エンジン コンポーネントおよび SQL Server Management Studio のインストール前提条件ですが、Windows PowerShell は SQL Server セットアップでインストールされなくなりました。 PowerShell 2.0 がコンピューターで表示されない場合は、「 [Windows 管理フレームワーク](https://support.microsoft.com/kb/968929) 」の手順に従って有効にすることができます。 Windows PowerShell 2.0 をインストールする方法は、使用するオペレーティング システムによって異なります。  
   
-    -   Windows Server 2008 – Windows PowerShell 1.0 は機能のため、追加することができます。 Windows PowerShell 2.0 はダウンロードしてインストールすることができます (実際には OS 修正プログラムとして適用されます)。  
+    -   Windows Server 2008 - Windows PowerShell 1.0 は機能のため、追加することができます。 Windows PowerShell 2.0 はダウンロードしてインストールすることができます (実際には OS 修正プログラムとして適用されます)。  
   
-    -   Windows 7/Windows Server 2008 R2 – Windows PowerShell 2.0 が既定でインストールされています。  
+    -   Windows 7/Windows Server 2008 R2 - Windows PowerShell 2.0 が既定でインストールされています。  
   
 -   SQL Server 2012 の機能を SharePoint 環境で使用する場合は、SharePoint Server 2010 Service Pack 1 (SP1) と SharePoint の累積的な更新プログラム (2011 年 8 月) が必要です。 SQL Server 2012 の機能をファームに追加する前に、SP1 と SharePoint の [累積的な更新プログラム (2011 年 8 月)](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)をインストールし、サーバー ファームに修正プログラムを完全に適用しておく必要があります。 SQL Server 2012 の機能を使用して、データベース エンジンのインスタンスをファームのデータベース サーバーとして使用する場合、PowerPivot for SharePoint を構成する場合、または Reporting Services を SharePoint モードで配置する場合に、この要件が該当します。  
   
@@ -341,7 +341,7 @@ Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポ�
 **回避策:** これを回避するには、ナレッジ ベースに保存しておく必要のある作業は、新しいアクティビティを開始する前にパブリッシュしてください。  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 大きなフォント サイズで、コントロールのサイズが正しく調整されない  
-**問題点:** (Windows Server 2008 または Windows 7 で) テキストのサイズを [大 - 150%] に変更した場合または (Windows 7 で) [カスタム DPI] の設定を 200% に変更した場合は、 **[新しいナレッジ ベース]** ページの **[キャンセル]** ボタンおよび **[作成]** ボタンにアクセスできません。  
+**問題点:** (Windows Server 2008 または Windows 7 で) テキストのサイズを [大 - 150%] に変更した場合または (Windows 7 で) [カスタム DPI] の設定を 200% に変更した場合は、**[新しいナレッジ ベース]** ページの **[キャンセル]** ボタンおよび **[作成]** ボタンにアクセスできません。  
   
 **回避策:** この問題を解決するには、フォントを小さいサイズに設定します。  
   

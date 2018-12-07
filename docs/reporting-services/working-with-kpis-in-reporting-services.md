@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021586"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712493"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services で KPI を使用する
 
@@ -21,7 +21,7 @@ ms.locfileid: "50021586"
 
 主要業績評価指標 (KPI) は、目標に対する達成度の伝達を視覚化したものです。  主要業績評価指標は、チーム、マネージャー、およびビジネスにとって、測定可能な目標に対する進捗度をすばやく評価するうえで重要です。   
   
-SQL Server 2016 Reporting Services で KPI を使用することで、以下の質問に対する回答を簡単に視覚化できます。  
+SQL Server Reporting Services で KPI を使用することで、以下の質問に対する回答を簡単に視覚化できます。  
   
 -   どの目標を達成していて、どの目標を達成していないか。  
   
@@ -68,7 +68,7 @@ KPI の場所を決定したら、そのフォルダーに移動して、トッ�
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  データ ボックスで **[省略記号 (…)]** を選択します。 これにより、**[データセットの選択]** 画面が表示されます。  
+2.  データ ボックスで**省略記号 [...]** を選択します。 これにより、**[データセットの選択]** 画面が表示されます。  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -90,7 +90,7 @@ KPI の場所を決定したら、そのフォルダーに移動して、トッ�
   
 KPI を削除するには、次の操作を実行します。  
   
-1.  削除する KPI の **[省略記号 (...)]** を選択します。 **[管理]** を選択します。  
+1.  削除する KPI の**省略記号 [...]** を選択します。 **[管理]** を選択します。  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   

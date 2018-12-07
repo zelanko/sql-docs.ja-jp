@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532745"
 ---
 # <a name="temporal-table-usage-scenarios"></a>テンポラル テーブルの使用シナリオ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ FROM Employee
   
 > [!TIP]  
 >  FOR SYSTEM_TIME のテンポラル句で指定されたフィルタリング条件は SARG-able です (つまり、 SQL Server は基礎となっているクラスター化インデックスを使用して、スキャン操作ではなくシークを実行します)。   
-> 履歴テーブルを直接クエリする場合、フィルター条件も、\<期間列>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’ の書式を使用して同様に SARGable にする必要があります。  
+> 履歴テーブルを直接クエリする場合、フィルター条件も、\<期間列>  {< | > | =, ...} date_condition AT TIME ZONE 'UTC' の書式を使用して同様に SARGable にする必要があります。  
 > AT TIME ZONE を期間列に適用すると、SQL Server は非常に負荷のかかるテーブルおよびインデックス スキャンを実行します。 また、  
-> \<期間列>  AT TIME ZONE ‘\<タイム ゾーン>’  >  {< | > | =, …} date_condition のような条件は、クエリでは避けてください。  
+> \<期間列>  AT TIME ZONE '\<タイム ゾーン>'  >  {< | > | =, ...} date_condition のような条件は、クエリでは避けてください。  
   
  関連項目: 「 [システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)」  
   
@@ -147,7 +147,7 @@ FROM Employee
   
 -   重要な指標の過去および現在のデータでの傾向  
   
--   (昨日や 1 か月前など) 過去の任意の “時点” のデータ全体の正確なスナップショット  
+-   (昨日や 1 か月前など) 過去の任意の "時点" のデータ全体の正確なスナップショット  
   
 -   (1 か月前対 3 か月前など) 関心のある 2 つの時点の違い  
   
@@ -368,7 +368,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
 システム バージョン管理されたテンポラル テーブルを使用すると、一時的なクエリを使用して、特定のパターンをすばやく検索できるので、定期的にまたは不規則に発生する異常を検出できます。  
 何が異常であるかは、収集するデータの種類およびビジネス ロジックによって異なります。  
   
- 次の例は、販売数の “急増” を検出する単純化されたロジックです。 購入品の履歴を収集するテンポラル テーブルで作業しているとします。  
+ 次の例は、販売数の "急増" を検出する単純化されたロジックです。 購入品の履歴を収集するテンポラル テーブルで作業しているとします。  
   
 ```  
 CREATE TABLE [dbo].[Product]  
@@ -446,7 +446,7 @@ FROM CTE
  次の図に処理を示します。ここで、DimLocation ディメンション テーブルには ETL 処理によって入力される null 値を許可しない datetime2 の列として ValidFrom および ValidTo を既に持っていることを前提にしています。  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

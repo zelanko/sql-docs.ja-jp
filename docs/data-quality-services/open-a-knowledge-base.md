@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
@@ -14,12 +13,12 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b96887fc805833fd8339798bbecdf22f6ce3159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e724810a6626a15b9a2a81cfce9354c126680366
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667570"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617792"
 ---
 # <a name="open-a-knowledge-base"></a>ナレッジ ベースを開く
 
@@ -27,7 +26,7 @@ ms.locfileid: "47667570"
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で既存のナレッジ ベースを開き、ドメイン管理、ナレッジ検出、または照合ポリシーの追加の準備を行う方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ナレッジ ベースを開くには、ナレッジ ベースが既に作成されていて、発行済みであるか (他のユーザーが作成した場合) または閉じられている (自分で作成した場合) 必要があります。  
@@ -84,7 +83,7 @@ ms.locfileid: "47667570"
   
 -   **\<空白>**: ナレッジ ベースが発行済みの場合にはナレッジ ベースの [状態] フィールドは空白になります (ドメイン管理アクティビティの **[発行]** をクリックした後、**[はい - ナレッジ ベースを発行して終了]** をクリック)。  
   
--   **[作業中]**: ナレッジ ベースに対する作業内容が保存されています (ドメイン管理アクティビティの **[発行]** をクリックした後、 **[いいえ - 作業内容をナレッジ ベースに保存して終了]** をクリック)。  
+-   **[作業中]**: ナレッジ ベースに対する作業内容が保存されています (ドメイン管理アクティビティの **[発行]** をクリックした後、**[いいえ - 作業内容をナレッジ ベースに保存して終了]** をクリック)。  
   
 -   **[ドメイン管理]**: ナレッジ ベースのドメインに対してデータが入力されましたが、ナレッジ ベースはまだ発行されていないため、作業内容はドメイン管理アクティビティに含まれたままです。 ナレッジ検出アクティビティは使用できません。 **[ドメイン管理]** 画面で **[閉じる]** をクリックした場合にこの状態になります。  
   

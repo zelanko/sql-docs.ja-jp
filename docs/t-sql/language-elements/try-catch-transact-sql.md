@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b782d10d323ea7e548a149a873812359552345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674930"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545749"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) は、エラー メッセージのテキストの全文を返します。 このテキストには、長さ、オブジェクト名、回数など、置き換え可能なパラメーターに提供される値が含まれます。  
   
- CATCH ブロックのスコープの外側から呼び出されると、これらの関数は NULL を返します。 エラー情報は、CATCH ブロックのスコープ内のどこからでも、これらの関数を使用して取得できます。 たとえば、次のスクリプトでは、エラー処理関数を含んでいるストアド プロシージャを示しています。 `CATCH` 構造の `TRY…CATCH` ブロックでは、このストアド プロシージャを呼び出して、エラーに関する情報を返しています。  
+ CATCH ブロックのスコープの外側から呼び出されると、これらの関数は NULL を返します。 エラー情報は、CATCH ブロックのスコープ内のどこからでも、これらの関数を使用して取得できます。 たとえば、次のスクリプトでは、エラー処理関数を含んでいるストアド プロシージャを示しています。 `CATCH` 構造の `TRY...CATCH` ブロックでは、このストアド プロシージャを呼び出して、エラーに関する情報を返しています。  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -156,7 +156,7 @@ END CATCH;
   
  TRY ブロック内の下位の実行レベル (たとえば、sp_executesql またはユーザー定義のストアド プロシージャを実行しているとき) でのコンパイル中またはステートメントレベルの再コンパイル中にエラーが発生した場合、そのエラーは TRY...CATCH 構造よりも下位のレベルで発生し、関連する CATCH ブロックによって処理されます。  
   
- 次の例は、`SELECT` ステートメントによって生成されたオブジェクト名解決エラーが `TRY…CATCH` 構造でキャッチされず、同じ `SELECT` ステートメントをストアド プロシージャ内で実行した場合には `CATCH` ブロックでキャッチされることを示しています。  
+ 次の例は、`SELECT` ステートメントによって生成されたオブジェクト名解決エラーが `TRY...CATCH` 構造でキャッチされず、同じ `SELECT` ステートメントをストアド プロシージャ内で実行した場合には `CATCH` ブロックでキャッチされることを示しています。  
   
 ```sql  
 BEGIN TRY  
@@ -171,9 +171,9 @@ BEGIN CATCH
 END CATCH  
 ```  
   
- このエラーはキャッチされず、制御は `TRY…CATCH` 構造から出て、1 つ上位のレベルに渡されます。  
+ このエラーはキャッチされず、制御は `TRY...CATCH` 構造から出て、1 つ上位のレベルに渡されます。  
   
- この `SELECT` ステートメントをストアド プロシージャ内で実行すると、エラーは `TRY` ブロックよりも下位のレベルで発生します。 このエラーは `TRY…CATCH` 構造によって処理されます。  
+ この `SELECT` ステートメントをストアド プロシージャ内で実行すると、エラーは `TRY` ブロックよりも下位のレベルで発生します。 このエラーは `TRY...CATCH` 構造によって処理されます。  
   
 ```sql  
 -- Verify that the stored procedure does not exist.  
@@ -226,7 +226,7 @@ GO
 ```  
   
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. トランザクション内で TRY...CATCH を使用する  
- 次の例では、トランザクション内での `TRY…CATCH` ブロックの動作を示しています。 `TRY` ブロック内のステートメントにより、制約違反エラーが生成されます。  
+ 次の例では、トランザクション内での `TRY...CATCH` ブロックの動作を示しています。 `TRY` ブロック内のステートメントにより、制約違反エラーが生成されます。  
   
 ```sql  
 BEGIN TRANSACTION;  
@@ -255,7 +255,7 @@ GO
 ```  
   
 ### <a name="c-using-trycatch-with-xactstate"></a>C. TRY...CATCH と XACT_STATE を使用する  
- 次の例では、`TRY…CATCH` 構造を使用して、トランザクション内で発生するエラーを処理する方法を示しています。 `XACT_STATE` 関数により、トランザクションをコミットすべきか、またはロールバックすべきかが決定されます。 この例では `SET XACT_ABORT` は `ON` です。 これにより、制約違反エラーが発生したときに、トランザクションはコミット不可能になります。  
+ 次の例では、`TRY...CATCH` 構造を使用して、トランザクション内で発生するエラーを処理する方法を示しています。 `XACT_STATE` 関数により、トランザクションをコミットすべきか、またはロールバックすべきかが決定されます。 この例では `SET XACT_ABORT` は `ON` です。 これにより、制約違反エラーが発生したときに、トランザクションはコミット不可能になります。  
   
 ```sql  
 -- Check to see whether this stored procedure exists.  

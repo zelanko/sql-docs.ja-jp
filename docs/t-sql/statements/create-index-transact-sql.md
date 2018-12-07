@@ -55,18 +55,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518330"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
 > [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 テーブルまたはビューにリレーショナル インデックスを作成します。 クラスター化または非クラスター化 B ツリー インデックスであるため、行ストア インデックスとも呼ばれます。 行ストア インデックスは、テーブルにデータが設定される前に作成することができます。 クエリが特定の列から選択するか、特定の順序での値の並べ替えを要求する場合は特に、クエリのパフォーマンスを向上させるために行ストア インデックスを使用します。  
@@ -731,7 +730,7 @@ INSERT INTO t1 VALUES (1, 0);
 - インデックス操作を直ちに一時停止するには、進行中のコマンドを停止するか (Ctrl + C キー)、[ALTER INDEX](alter-index-transact-sql.md) PAUSE コマンドを実行するか、または KILL `<session_id>` コマンドを実行します。 コマンドが一時停止されたら、[ALTER INDEX](alter-index-transact-sql.md) コマンドを使って再開することができます。 
 - 再開可能なインデックスに対する元の CREATE INDEX ステートメントを再実行すると、一時停止されていたインデックス作成操作が自動的に再開されます。
 - SORT_IN_TEMPDB=ON オプションは、再開可能なインデックスに対してはサポートされていません。 
-- RESUMABLE=ON を指定した DDL コマンドを、示的なトランザクション内で実行することはできません (BEGIN TRAN ... COMMIT ブロックの一部にすることはできません)。
+- RESUMABLE=ON を指定した DDL コマンドを、明示的なトランザクション内で実行することはできません (BEGIN TRAN ...COMMIT ブロックの一部にすることはできません)。
 - インデックスの作成/再構築を再開/中止するには、[ALTER INDEX](alter-index-transact-sql.md) T-SQL 構文を使用します
 
 > [!NOTE]

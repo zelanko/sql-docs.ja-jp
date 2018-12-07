@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f89e3d512c76557548ef3fc707861e708a28dc64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8e65d1f965b45d808ba68a9cdffc87fad6f08814
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814135"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712313"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint モードでの最初のレポート サーバーのインストール
 
@@ -122,7 +122,7 @@ ms.locfileid: "51814135"
   
 6.  **[セットアップ ファイルのインストール]** ページでは、コンピューターに既にインストールされている内容によっては、次のメッセージが表示される場合があります。  
   
-    -   「影響を受けた 1 つ以上のファイルで操作が保留されています。 セットアップ プロセスが完了した後で、コンピューターを再起動する必要があります。」  
+    -   "影響を受けた 1 つ以上のファイルで操作が保留されています。 セットアップ プロセスが完了した後で、コンピューターを再起動する必要があります。"  
   
     -   **[次へ]** を選択します。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "51814135"
  
 8. **[機能の選択]** ページで、次のオプションを選択します。  
   
-    -   **Reporting Services – SharePoint**  
+    -   **Reporting Services - SharePoint**  
   
     -   **SharePoint 製品用 Reporting Services アドイン**。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "51814135"
 3.  Reporting Services サービスのステータスが **[停止]** から **[開始]** に変わります。 Reporting Services サービスが一覧にない場合は、PowerShell を使用してサービスをインストールします。  
   
     > [!NOTE]  
-    >  Reporting Services サービスが **[開始中]** ステータスのままで、 **[開始]** に変わらない場合は、Windows サーバー マネージャーで "SharePoint 2013 Administration" サービスが開始されていることを確認します。  
+    >  Reporting Services サービスが **[開始中]** ステータスのままで、**[開始]** に変わらない場合は、Windows サーバー マネージャーで "SharePoint 2013 Administration" サービスが開始されていることを確認します。  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> 手順 3: Reporting Services サービス アプリケーションの作成  
  ここでは、既存のサービス アプリケーションを確認している場合に、サービス アプリケーションおよびプロパティの説明を作成する手順について説明します。  
@@ -256,7 +256,7 @@ ms.locfileid: "51814135"
   
  ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") PowerShell を使って Reporting Services サービス アプリケーションを作成する方法については、以下を参照してください。  
   
--   「 [手順 1 ～ 4 に対応する Windows PowerShell スクリプト](#bkmk_full_script)」を参照してください。  
+-   後の「[手順 1 ～ 4 に対応する Windows PowerShell スクリプト](#bkmk_full_script)」セクションをご覧ください。  
   
 -   トピック「 [PowerShell を使用して Reporting Services サービス アプリケーションを作成するには](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)」。  
 
@@ -284,7 +284,7 @@ ms.locfileid: "51814135"
   
  この手順は、サイト コレクションごとに実行します。 詳しくは、「 [SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)」をご覧ください。  
   
-##  <a name="bkmk_full_script"></a> 手順 1 から 4 に対応する Windows PowerShell スクリプト  
+##  <a name="bkmk_full_script"></a> 手順 1 ～ 4 に対応する Windows PowerShell スクリプト  
  このセクション内の PowerShells スクリプトは、前のセクションで手順 1 ～ 4 を実行するときに使用したものと同じです。 このスクリプトは、次の作業を実行します。  
   
 -   Reporting Services サービスおよびサービス プロキシをインストールし、そのサービスを開始します。  
@@ -299,9 +299,9 @@ ms.locfileid: "51814135"
   
 -   サービス プロキシに合わせて **-Account** を更新します。 このアカウントは、SharePoint ファーム内で管理されるサービス アカウントであることが必要です。 詳細については、SharePoint のトピック「 [SharePoint 2013 の管理アカウントとサービス アカウントを計画する](https://technet.microsoft.com/library/cc263445.aspx)」を参照してください。  
   
--   サービス アプリケーションに合わせて **–DatabaseServer** パラメーターを更新します。 このパラメーターは、データベース エンジンのインスタンスを意味します  
+-   サービス アプリケーションに合わせて **-DatabaseServer** パラメーターを更新します。 このパラメーターは、データベース エンジンのインスタンスを意味します  
   
--   **機能を有効にするサイトの** –url [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] パラメーターを更新します。  
+-   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] の機能を有効にするサイトの **-url** パラメーターを更新します。  
   
  **スクリプトを使用するには**  
   
@@ -318,7 +318,7 @@ $starttime=Get-Date
 write-host -foregroundcolor DarkGray StartTime>> $starttime   
   
 Write-Host -ForegroundColor Green "Import the SharePoint PowerShell snappin"  
-Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0  
+Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
   
 Write-Host -ForegroundColor Green "Install SSRS Service and Service Proxy, and start the service"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
@@ -397,7 +397,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  SharePoint 2016 の場合は、Excel Services アプリケーションを作成して構成する必要があります。 詳細については、以下を参照してください。  
   
--   「 [Power Pivot モードでの Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」の「Analysis Services 統合のための Excel Services の構成」セクション。  
+-   「[Power Pivot モードでの Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」の「Analysis Services 統合のための Excel Services の構成」セクション。  
   
 -   [Excel Services のデータ モデルの設定を管理する (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx)。  
 
@@ -428,7 +428,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 
 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016 のエディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+[SQL Server 2016 のエディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

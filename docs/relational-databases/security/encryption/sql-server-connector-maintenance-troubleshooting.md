@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1acf0e20eb84502fdba5915dfafbf5d4873130c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649510"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520691"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "47649510"
 ### <a name="key-rollover"></a>キーのロールオーバー  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタを使用する場合、キー名に使用できる文字は、"a ～ z"、"A ～ Z"、"0 ～9 "、"-" に限られます。また、26 文字が長さの上限となります。   
-> Azure Key Vault に格納されている同じ名前でバージョンが異なるキーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタでは使用できません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で使用されている Azure Key Vault のキーをローテーションするには、別の名前の新しいキーを作成する必要があります。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタを使用する場合、キー名に使用できる文字は、"a ～ z"、"A ～ Z"、"0 ～9"、"-" に限られます。また、26 文字が長さの上限となります。   
+> Azure Key Vault に格納されている同じ名前でバージョンが異なるキーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタでは使用できません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用されている Azure Key Vault のキーをローテーションするには、別の名前の新しいキーを作成する必要があります。  
   
  通常、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化のサーバー非対称キーは 1 ～ 2 年おきにバージョン管理する必要があります。 重要なのは、Key Vault ではキーをバージョン管理できますが、顧客がこの機能を使用してバージョン管理を実装してはならない点です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタは、Key Vault でのキーのバージョンの変更に対応できません。 顧客がキーのバージョン管理を実装する場合は、Key Vault に新しいキーを作成し、 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でデータ暗号化キーを再暗号化する必要があります。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47649510"
     ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
+       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='   
     FOR CRYPTOGRAPHIC PROVIDER EKM;  
   
     ALTER LOGIN TDE_Login2  
@@ -119,7 +119,7 @@ ms.locfileid: "47649510"
   
 3.  Windows の [プログラムと機能] を使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをアンインストールします。  
   
-     または、DLL ファイルが格納されているフォルダーの名前を変更してもかまいません。 フォルダーの既定の名前は  "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for Microsoft Azure Key Vault" です。  
+     または、DLL ファイルが格納されているフォルダーの名前を変更してもかまいません。 フォルダーの既定の名前は "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for Microsoft Azure Key Vault" です。  
   
 4.  Microsoft ダウンロード センターから最新バージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをインストールします。  
   

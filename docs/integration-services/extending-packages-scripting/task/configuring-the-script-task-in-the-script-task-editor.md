@@ -17,12 +17,12 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87c6ae53c34ab0c960efc1a5347c6ff01c74f0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ecf4ed7f81f4d490f9f5c966627377f93acaeb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542048"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>スクリプト タスク エディターでのスクリプト タスクの構成
   スクリプト タスクにカスタム コードを記述する前に、**[スクリプト タスク エディター]** の 3 つのページで、主要なプロパティを設定します。 スクリプト タスクに対して一意でない追加のタスク プロパティは、[プロパティ] ウィンドウを使用して設定できます。  
@@ -52,13 +52,13 @@ ms.locfileid: "47805520"
 > [!NOTE]  
 >  変数名の大文字と小文字は区別されます。  
   
- 変数を選択するには、プロパティ フィールドの横にある参照ボタン (**[...]**) をクリックします。 詳細については、「[[変数の選択] ページ](../../../integration-services/control-flow/select-variables-page.md)」を参照してください。  
+ 変数を選択するには、プロパティ フィールドの横にある参照ボタン **[...]** をクリックします。 詳細については、「[[変数の選択] ページ](../../../integration-services/control-flow/select-variables-page.md)」を参照してください。  
   
 ### <a name="edit-script-button"></a>[スクリプトの編集] ボタン  
  **[スクリプトの編集]** ボタンをクリックすると VSTA 開発環境が起動し、カスタム スクリプトを記述できるようになります。 詳細については、「[スクリプト タスクのコーディングおよびデバッグ](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)」を参照してください。  
   
 ## <a name="expressions-page-of-the-script-task-editor"></a>[スクリプト タスク エディター] の [式] ページ  
- **[スクリプト タスク エディター]** の **[式]** ページでは、式を使用して、上に挙げたスクリプト タスクのプロパティ、およびそれ以外の多くのプロパティに値を指定できます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
+ **[スクリプト タスク エディター]** の **[式]** ページでは、式を使用して、上に挙げたスクリプト タスクのプロパティ、およびそれ以外の多くのプロパティに値を指定できます。 詳細については、「 [Integration Services (SSIS) 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト タスクのコーディングおよびデバッグ](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  

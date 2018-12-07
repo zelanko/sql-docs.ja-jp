@@ -18,12 +18,12 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94a05685d8bb2e71630f06f155b30e0bbaec7b44
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 4538f270007508cea6b90a34388968ed886b4d36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906012"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526139"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>論理関数 - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
   
  入力されたインデックス値が **int** 以外の数値データ型である場合、暗黙的に値が整数に変換されます。 インデックス値が値の配列の境界を超えると、CHOOSE は NULL を返します。  
   
- *val_1 … val_n*  
+ *val_1 ... val_n*  
  任意のデータ型のコンマ区切り値のリスト。  
   
 ## <a name="return-types"></a>戻り値の型  

@@ -11,12 +11,12 @@ author: egranet
 ms.author: esgranet
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b39571179528f96f19370c4935b87e457b214f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662998"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539112"
 ---
 # <a name="static-data-masking"></a>静的データ マスク
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ NULL 値での置換を実行するマスク機能では、マスク前データ
 
 静的データ マスクを実行する詳細な手順を次に示します。 
  
-1. SQL Server Management Studio を起動します。 データベースに接続します。 左側の **[オブジェクト エクスプローラー]** ウィンドウで、[データベース] フォルダーを展開します。 マスクを行うデータベースを右クリックします。 **[タスク]** をクリックします。 **[データベースをマスク... (プレビュー)]** をクリックします。
+1. SQL Server Management Studio を起動します。 データベースに接続します。 左側の **[オブジェクト エクスプローラー]** ウィンドウで、[データベース] フォルダーを展開します。 マスクを行うデータベースを右クリックします。 **[タスク]** をクリックします。 **[データベースをマスク...(プレビュー)]** をクリックします。
  
  ![[タスク] メニュー](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -104,7 +104,7 @@ NULL 値での置換を実行するマスク機能では、マスク前データ
  
  ![マスク機能ドロップダウン](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- 注: これらのマスク機能のほとんどには、追加の構成パラメーターがあります。 シャッフル マスクについては、既定のパラメーターが提供されています。 グループ シャッフル マスク、単一値マスク、文字列合成マスクについては、ユーザーが構成パラメーターを指定する必要があります。 構成パラメーターを変更または指定するには、**[構成]** オプションをクリックして、 ポップアップ表示されるダイアログ ボックスでパラメーターの (代替) 値を指定します。 各マスク機能について詳しくは、「[マスク機能](#masking-functions)」をご覧ください。
+ 注: これらのマスク機能のほとんどには、追加の構成パラメーターがあります。 シャッフル マスクについては、既定のパラメーターが提供されています。 グループ シャッフル マスク、単一値マスク、文字列合成マスクについては、ユーザーが構成パラメーターを指定する必要があります。 構成パラメーターを変更または指定するには、**[構成...]** オプションをクリックし、ポップアップ表示されるダイアログ ボックスでパラメーターの (代替) 値を指定します。 各マスク機能について詳しくは、「[マスク機能](#masking-functions)」をご覧ください。
  
  ![マスク機能の構成ボタン](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -122,7 +122,7 @@ NULL 値での置換を実行するマスク機能では、マスク前データ
  
  ![[構成ファイル]](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
  
-6. 静的データ マスクでは、ユーザーの **[ドキュメント]** フォルダーに [Static Data Masking] という名前のフォルダーが作成されて、ログ ファイルが格納されます。 ログ ファイルは、デバッグの目的に役立ちます。 ログ ファイルの名前は、構成ウィンドウの下部で示されます。 
+6. 静的データ マスクでは、ユーザーの **[Documents]** フォルダーに [Static Data Masking] という名前のフォルダーが作成されて、ログ ファイルが格納されます。 ログ ファイルは、デバッグの目的に役立ちます。 ログ ファイルの名前は、構成ウィンドウの下部で示されます。 
   
  
 7. (SQL Server のみ) オンプレミスのデータベースで静的データ マスクを使用すると、バックアップ/復元操作が実行されます。 **ステップ 2: .BAK ファイルの場所の複製**では、バックアップ ファイルを格納するサーバー上の場所を指定します。 
@@ -135,7 +135,7 @@ NULL マスクでは、列のすべての値が NULL に置き換えられます
 
 ### <a name="single-value-masking"></a>単一値マスク
 
-単一値マスクでは、列のすべての値が 1 つの固定値に置き換えられます。この値はユーザーが指定します。 入力の形式は、選択した列の型が何であっても変換できるものでなければなりません。 値を指定するには、**[構成]** をクリックして、値を指定し、**[OK]** をクリックします。 
+単一値マスクでは、列のすべての値が 1 つの固定値に置き換えられます。この値はユーザーが指定します。 入力の形式は、選択した列の型が何であっても変換できるものでなければなりません。 値を指定するには、**[構成...]** をクリックして、値を指定し、**[OK]** をクリックします。 
 
 ![単一値マスクのパラメーター](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 

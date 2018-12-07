@@ -23,12 +23,12 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04664f3e8553ba1c9a29f6036532d2b8bc8fe3dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f49a603d7b5307c2ddac938b32361e67716f705f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742790"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534371"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>複数フラット ファイル接続マネージャー
   複数フラット ファイル接続マネージャーを使用すると、パッケージで複数のフラット ファイルのデータにアクセスできます。 たとえば、データ フロー タスクが For ループ コンテナーなどのループ コンテナーの内部にある場合は、フラット ファイル ソースで複数フラット ファイル接続マネージャーを使用できます。 コンテナーの各ループで、フラット ファイル ソースは、複数フラット ファイル接続マネージャーが提供する次のファイル名からデータを読み込みます。  
@@ -239,7 +239,7 @@ ms.locfileid: "47742790"
 |**[テキスト修飾子]**|テキスト データがテキスト修飾子文字を使用して修飾されるかどうかを示します。<br /><br /> **True**: フラット ファイルのテキスト データは修飾されます。<br /><br /> **False**: フラット ファイルのテキスト データは修飾されません。|  
 |**名前**|列名を指定します。 既定では列の番号になりますが、わかりやすい一意な名前を選択することもできます。|  
 |**[データ スケール]**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
-|**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}** – 列は、復帰と改行の組み合わせで区切られます<br /><br /> **{CR}** – 列は、復帰で区切られます<br /><br /> **{LF}** – 列は、改行で区切られます<br /><br /> **Semicolon {;}** – 列は、セミコロンで区切られます<br /><br /> **Colon {:}** – 列は、コロンで区切られます<br /><br /> **Comma {,}** – 列は、コンマで区切られます<br /><br /> **Tab {t}** – 列は、タブで区切られます<br /><br /> **Vertical bar {&#124;}** – 列は、縦棒で区切られます|  
+|**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}** - 列は、復帰と改行の組み合わせで区切られます<br /><br /> **{CR}** - 列は、復帰で区切られます<br /><br /> **{LF}** - 列は、改行で区切られます<br /><br /> **Semicolon {;}** - 列は、セミコロンで区切られます<br /><br /> **Colon {:}** - 列は、コロンで区切られます<br /><br /> **Comma {,}** - 列は、コンマで区切られます<br /><br /> **Tab {t}** - 列は、タブで区切られます<br /><br /> **Vertical bar {&#124;}** - 列は、縦棒で区切られます|  
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[入力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|  
   
@@ -279,6 +279,6 @@ ms.locfileid: "47742790"
 ## <a name="see-also"></a>参照  
  [[フラット ファイル ソース]](../../integration-services/data-flow/flat-file-source.md)   
  [フラット ファイル変換先](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

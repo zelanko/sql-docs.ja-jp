@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527132"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>レッスン 2-2 - Foreach ループ コンテナーの追加と構成
 この実習では、フラット ファイルのフォルダー全体にループ機能を付加し、レッスン 1 で使用したデータ フロー変換と同じ変換を各フラット ファイルに適用します。 そのためには、Foreach ループ コンテナーを制御フローに追加して、構成します。  
@@ -74,7 +74,7 @@ Foreach ループ コンテナーを追加したら、フォルダー内の各�
   
 1.  **[変数のマッピング]** をクリックします。  
   
-2.  **[変数のマッピング]** ページで、**[変数]** 列の空いているセルをクリックし、**\<新しい変数…>** をクリックします。  
+2.  **[変数のマッピング]** ページで、**[変数]** 列の空いているセルをクリックし、**\<新しい変数...>** をクリックします。  
   
 3.  **[変数の追加]** ダイアログ ボックスで、 **[名前]** ボックスに「 **varFileName**」と入力します。  
   

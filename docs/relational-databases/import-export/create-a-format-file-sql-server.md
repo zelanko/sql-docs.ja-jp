@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf0e6510d566fbf2ad31ebf9996ca27ad444eda
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677131"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538086"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
   
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に ” `bcp in –c –C65001 –f format_file` ..." または “`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` …” を使用してデータをインポートすると、65001 を超える照合順序またはコード ページ情報のオプションが存在するようになります。  
+ "`bcp in -c -C65001 -f format_file` ..." または "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ..." を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータをインポートすると、65001 を超える照合順序またはコード ページ情報のオプションが存在するようになります。  
 そのため、フォーマット ファイルを生成する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータをインポートし直す前に、生成されたフォーマット ファイルから照合順序の情報を削除する必要があります。  
 次に照合順序情報を含まないフォーマット ファイルの例を示します。  
   
@@ -203,7 +203,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  生成されるフォーマット ファイル `Department-c.xml`には、次の XML 要素が含まれます。  

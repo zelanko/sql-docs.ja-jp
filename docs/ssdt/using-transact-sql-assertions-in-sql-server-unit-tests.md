@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671248"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543901"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server の単体テストでの Transact-SQL アサーションの使用
 SQL Server の単体テストでは、Transact\-SQL テスト スクリプトが実行され、結果が返されます。 結果が結果セットとして返される場合もあります。 テスト条件を使用して結果を検証できます。 たとえば、テスト条件を使用すると、特定の結果セットで返された行数を確認したり、特定のテストの実行にかかった時間を調べたりできます。 テスト条件について詳しくは、「[SQL Server の単体テストでのテスト条件の使用](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)」をご覧ください。  

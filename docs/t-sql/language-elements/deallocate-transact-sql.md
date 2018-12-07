@@ -22,12 +22,12 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 715803e27516df04c0fb1267ceabc8a162d5da4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b189c99b2a225161eaa675e749464245cd830538
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747830"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586205"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,49 +39,48 @@ ms.locfileid: "47747830"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
 ## <a name="arguments"></a>引数  
  *cursor_name*  
- 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、GLOBAL を指定すると *cursor_name* ではグローバル カーソルが参照され、GLOBAL を指定しないとローカル カーソルが参照されます。  
+ 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、`GLOBAL` を指定すると *cursor_name* ではグローバル カーソルが参照され、`GLOBAL` を指定しないとローカル カーソルが参照されます。  
   
  @*cursor_variable_name*  
  **cursor** 変数の名前を指定します。 @*cursor_variable_name* は **cursor** 型である必要があります。  
   
 ## <a name="remarks"></a>Remarks  
- カーソルを操作するステートメントでは、カーソル名またはカーソル変数を使用してカーソルを参照します。 DEALLOCATE を実行すると、カーソルと、カーソル名またはカーソル変数との間の関係が削除されます。 名前または変数がカーソルを参照する最後のものである場合は、カーソルの割り当てが解除され、カーソルが使用しているリソースが解放されます。 フェッチの孤立を防ぐために使用するスクロール ロックは、DEALLOCATE で解放されます。 カーソルを介して行われる位置指定更新を含め、更新を保護するために使用するトランザクション ロックは、トランザクションの終了時まで保持されます。  
+カーソルを操作するステートメントでは、カーソル名またはカーソル変数を使用してカーソルを参照します。 `DEALLOCATE` を実行すると、カーソルと、カーソル名またはカーソル変数との間の関係が削除されます。 名前または変数がカーソルを参照する最後のものである場合は、カーソルの割り当てが解除され、カーソルが使用しているリソースが解放されます。 フェッチの孤立を防ぐために使用するスクロール ロックは、`DEALLOCATE` で解放されます。 カーソルを介して行われる位置指定更新を含め、更新を保護するために使用するトランザクション ロックは、トランザクションの終了時まで保持されます。  
   
- DECLARE CURSOR ステートメントでは、カーソルを割り当て、カーソル名と関連付けます。  
+`DECLARE CURSOR` ステートメントでは、カーソルを割り当て、カーソル名と関連付けます。  
   
-```  
+```sql  
 DECLARE abc SCROLL CURSOR FOR  
 SELECT * FROM Person.Person;  
 ```  
   
- カーソルにカーソル名が割り当てられると、このカーソルの割り当てが解除されるまで、その名前を同じ範囲 (GLOBAL または LOCAL) の別のカーソルに対して使用することはできません。  
+カーソルにカーソル名が割り当てられると、このカーソルの割り当てが解除されるまで、その名前を同じ範囲 (グローバルまたはローカル) の別のカーソルに対して使用することはできません。  
   
  カーソル変数は、次のいずれかの方法でカーソルに関連付けられます。  
   
--   カーソルをカーソル変数に設定する SET ステートメントを使用して、名前を指定する。  
+-   カーソルをカーソル変数に設定する `SET` ステートメントを使用して、名前を指定する。  
   
-    ```  
+    ```sql  
     DECLARE @MyCrsrRef CURSOR;  
     SET @MyCrsrRef = abc;  
     ```  
   
 -   カーソル名を定義せずにカーソルを作成し、変数に関連付ける。  
   
-    ```  
+    ```sql  
     DECLARE @MyCursor CURSOR;  
     SET @MyCursor = CURSOR LOCAL SCROLL FOR  
     SELECT * FROM Person.Person;  
     ```  
   
- DEALLOCATE @*cursor_variable_name* ステートメントでは、カーソルに対し、指定した変数の参照だけを削除します。 変数の割り当ては、バッチ、ストアド プロシージャ、またはトリガーの終了時にその有効範囲が失われるまで、解除されることはありません。 DEALLOCATE *@cursor_variable_name* ステートメントの後で SET ステートメントを使用して、変数を別のカーソルに関連付けることもできます。  
+ `DEALLOCATE <@cursor_variable_name>` ステートメントでは、カーソルに対し、指定した変数の参照だけを削除します。 変数の割り当ては、バッチ、ストアド プロシージャ、またはトリガーの終了時にその有効範囲が失われるまで、解除されることはありません。 `DEALLOCATE <@cursor_variable_name>` ステートメントの後で SET ステートメントを使用して、変数を別のカーソルに関連付けることもできます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -96,15 +95,15 @@ SET @MyCursor = CURSOR LOCAL SCROLL FOR
 GO  
 ```  
   
- カーソル変数は、明示的に割り当てを解除する必要はありません。 変数は、有効範囲を失うと暗黙的に割り当てが解除されます。  
+カーソル変数は、明示的に割り当てを解除する必要はありません。 変数は、有効範囲を失うと暗黙的に割り当てが解除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- DEALLOCATE 権限は、既定では、有効なユーザーであればどのユーザーにも与えられます。  
+ `DEALLOCATE` のアクセス許可は、既定ですべての有効なユーザーに与えられます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、最後の名前まで、またはカーソルを参照している変数の割り当てが解除されるまで、カーソルが保持されます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create and open a global named cursor that  

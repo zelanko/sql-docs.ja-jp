@@ -19,12 +19,12 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b48a90afb091382446900cd1875533f8976810f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e9a2cbb66b7b77a9cb87b779baf76f63f627bd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693400"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542026"
 ---
 # <a name="save-packages"></a>パッケージを保存する
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してパッケージを構築し、XML ファイル (.dtsx ファイル) としてファイル システムに保存します。 パッケージ XML ファイルのコピーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の msdb データベースまたはパッケージ ストアに保存することもできます。 パッケージ ストアとは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するファイル システムの場所にあるフォルダーのことです。  
@@ -68,7 +68,7 @@ ms.locfileid: "47693400"
   
 5.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に保存する場合は、認証の種類を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、ユーザー名とパスワードを指定します。  
   
-6.  パッケージのパスを指定するには、パスを入力するか、参照ボタン ( **[...]** ) をクリックしてパッケージの場所を指定します。 パッケージの既定の名前は Package です。 必要に応じて、パッケージの名前をニーズに合う名前に更新します。  
+6.  パッケージのパスを指定するには、パスを入力するか、参照ボタン **[...]** をクリックしてパッケージの場所を指定します。 パッケージの既定の名前は Package です。 必要に応じて、パッケージの名前をニーズに合う名前に更新します。  
   
      **[パッケージのパス]** オプションとして **[SQL Server]** を選択した場合、パッケージのパスは、 **msdb** 内の論理フォルダーとパッケージ名で構成されます。 たとえば、パッケージ DownloadMonthlyData が [MSDB] フォルダー ( **msdb**内のルート論理フォルダーの既定の名前) 内の [Finance] フォルダーと関連付けられている場合、DownloadMonthlyData という名前のパッケージのパッケージ パスは MSDB/Finance/DownloadMonthlyData になります。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47693400"
   
 7.  パッケージの保護レベルを確認します。  
   
-8.  必要に応じて、 **[保護レベル]** ボックスの近くの参照ボタン ( **[...]** ) をクリックし、保護レベルを変更します。  
+8.  必要に応じて、**[保護レベル]** ボックスの近くの参照ボタン **[...]** をクリックし、保護レベルを変更します。  
   
     -   **[パッケージの保護レベル]** ダイアログ ボックスで、別の保護レベルを選択します。  
   

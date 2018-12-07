@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
@@ -16,12 +15,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9d855f0f1a43c3c5d885941b6a924835732161d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702930"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617952"
 ---
 # <a name="run-a-matching-project"></a>照合プロジェクトの実行
 
@@ -33,7 +32,7 @@ ms.locfileid: "47702930"
   
  照合を実行する準備として、1 つ以上の照合ルールを含む照合ポリシーを作成し、そのポリシーをサンプル データに対して実行する必要があります。 照合プロジェクトは照合ポリシー プロセスとは別のプロセスであり、照合プロジェクトから得られた照合のナレッジはナレッジ ベースに取り込まれません。 照合ポリシーの作成の詳細については、「 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -67,7 +66,7 @@ ms.locfileid: "47702930"
     > [!NOTE]  
     >  ソース データを DQS ドメインにマッピングできるのは、ソースのデータ型が DQS でサポートされていて、なおかつ DQS ドメインのデータ型と一致する場合だけです。 DQS でサポートされるデータ型の詳細については、「 [DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」を参照してください。  
   
-4.  "マッピング" テーブルに行を追加するには、 **プラス記号 (+)** コントロールをクリックします。行を削除するには、 **マイナス記号 (–)** コントロールをクリックします。  
+4.  マッピング テーブルに行を追加するには、**プラス記号 (+)** コントロールをクリックします。行を削除するには、**マイナス記号 (-)** コントロールをクリックします。  
   
 5.  選択した SQL Server のテーブルやビューのデータ、または選択した Excel ワークシートのデータを表示するには、 **[データ ソースのプレビュー]** をクリックします。  
   

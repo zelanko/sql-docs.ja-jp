@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4399368e139d9ba6875e7b724c2c401bab8b7615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790232"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535388"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted のキー管理の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Always Encrypted キーとキーの管理について説明するときは、実
 Always Encrypted キーを管理するユーザーには、セキュリティ管理者とデータベース管理者 (DBA) の 2 つの異なる役割があります。
 
 - **セキュリティ管理者** – 列暗号化キーと列マスター キーを生成し、列マスター キーを含むキー ストアを管理します。 これらのタスクを実行するには、セキュリティ管理者がキーとキー ストアにアクセスできる必要がありますが、データベースへのアクセスは必要ありません。
-- **DBA** – データベース内のキーに関するメタデータを管理します。 キー管理タスクを実行するには、DBA がデータベース内のキー メタデータを管理できる必要がありますが、キーまたは列マスター キーを保持しているキー ストアにアクセスする必要はありません。
+- **DBA** - データベース内のキーに関するメタデータを管理します。 キー管理タスクを実行するには、DBA がデータベース内のキー メタデータを管理できる必要がありますが、キーまたは列マスター キーを保持しているキー ストアにアクセスする必要はありません。
 
 上記の役割を考慮すると、Always Encrypted のキー管理タスクを実行するには、 *役割の分離を使用する*場合と *役割の分離を使用しない*場合の 2 つの異なる方法があります。 組織のニーズに応じて、要件に最適なキー管理プロセスを選択できます。
 
@@ -77,7 +77,7 @@ Always Encrypted キーは、 [SQL Server Management Studio (SSMS)](https://msdn
     - [列暗号化キーの回転](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
 
 
-- **SQL Server PowerShell** – 役割の分離を使用または使用せずに Always Encrypted キーを管理するためのコマンドレットが含まれます。 詳細については、以下をご覧ください。
+- **SQL Server PowerShell** - 役割の分離を使用または使用せずに Always Encrypted キーを管理するためのコマンドレットが含まれます。 詳細については、以下をご覧ください。
     - [PowerShell を使用して Always Encrypted キーの構成](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [PowerShell を使用した Always Encrypted キーの交換](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -93,7 +93,7 @@ Always Encrypted の主な目的は、データベース システムまたは�
 
 この種の攻撃を防ぐうえで Always Encrypted を効果的にするには、キー管理プロセスで、列マスター キーと列暗号化キー、および列マスター キーを含むキー ストアの資格情報が、潜在的な攻撃者に漏れることがないようにしなければなりません。 従うべきいくつかのガイドラインを以下に示します。
 
-- 列マスター キーまたは暗号化キーをデータベースをホストするコンピューター上で生成しないでください。 代わりに、別のコンピューター (キー管理専用またはキーへのアクセスを必要とするアプリケーションをホストしているコンピューターのいずれか) でキーを生成します。 つまり、攻撃者がプロビジョニングや Always Encrypted キーの維持に使用しているコンピューターにアクセスすると、ツールのメモリにキーが短時間表示されるだけでも、攻撃者がキーを取得できる可能性があるため、 **キーを生成するために使用したツールをデータベースをホストしているコンピューター上で決して実行しないでください** 。
+- 列マスター キーまたは暗号化キーをデータベースをホストするコンピューター上で生成しないでください。 代わりに、別のコンピューター (キー管理専用またはキーへのアクセスを必要とするアプリケーションをホストしているコンピューターのいずれか) でキーを生成します。 つまり、攻撃者がプロビジョニングや Always Encrypted キーの維持に使用しているコンピューターにアクセスすると、ツールのメモリにキーが短時間表示されるだけでも、攻撃者がキーを取得できる可能性があるため、**キーを生成するために使用したツールをデータベースをホストしているコンピューター上で決して実行しないでください**。
 - キー管理プロセスで誤って列マスター キーや列暗号化キーを公開しないようにするには、キー管理プロセスを定義して実装する前に、潜在的な敵対者およびセキュリティの脅威を識別することが重要です。 たとえば、DBA が機密データにアクセスできないようにすることが目的の場合は、DBA がキーの生成を担当することはできません。 ただし、メタデータにはプレーンテキストのキーは含まれていないため、DBA はデータベース内のキーのメタデータを管理することは *できます* 。
 
 ## <a name="next-steps"></a>Next Steps

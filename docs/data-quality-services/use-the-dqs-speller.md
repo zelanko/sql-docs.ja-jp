@@ -5,19 +5,18 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 704af229a0d61238ebd4bae9c306fec17c35816a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20764d8e2d377ae22f72cb4212d24d76ab92b993
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655370"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616693"
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
 
@@ -33,7 +32,7 @@ ms.locfileid: "47655370"
   
  スペル チェックは、string データ型の単一ドメインでのみ機能します。 単一ドメイン内の string データ型のすべての値がスペル チェックに送られて検証されます。 スペル チェックは複合ドメインに対しては機能しません。また、string 型以外のドメイン、複合値 (文字と数字がスペースなしで連結された値など)、ローマ数字、単一の文字、および大文字のみの値も検証されません。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  スペル チェックを実行するには、ナレッジ検出アクティビティまたはドメイン管理アクティビティでナレッジ ベースとドメインを開いておく必要があります。また、スペル チェックを実行するドメインおよびページでスペル チェックを有効にし、ドメインの言語プロパティを指定する必要があります。  

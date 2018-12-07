@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.interactivecleansing.f1
@@ -17,12 +16,12 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94800c20ae6b5ad5dfc45f9a17779242cd430286
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822040"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617652"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS (内部) ナレッジを使用したデータのクレンジング
 
@@ -172,7 +171,7 @@ ms.locfileid: "47822040"
   
         -   **\<Domain>_Status**: データ クレンジングした後のドメイン値の状態。 (例: " **提案**"、" **新規**"、" **無効**"、" **修正済み**"、" **適切**")。  
   
-        -   **[レコードの状態]**: マップされたドメインごとの状態フィールド **(\<DomainName>_Status**) とは別に、**[レコードの状態]** フィールドにはレコードの状態が表示されます。 レコード内のいずれかのドメインの状態が " *新規* " または " *適切*" の場合、 **[レコードの状態]** は " *適切*" に設定されます。 レコード内のいずれかのドメインの状態が " *提案*"、" *無効*"、または " *修正済み*" の場合、 **[レコードの状態]** はそれぞれの値に設定されます。 たとえば、レコード内のいずれかのドメインの状態が " *提案*" の場合、 **[レコードの状態]** は " *提案*" に設定されます。  
+        -   **[レコードの状態]**: マップされたドメインごとの状態フィールド **(\<DomainName>_Status**) とは別に、**[レコードの状態]** フィールドにはレコードの状態が表示されます。 レコード内のいずれかのドメインの状態が "*新規*" または "*適切*" の場合、**[レコードの状態]** は "*適切*" に設定されます。 レコード内のいずれかのドメインの状態が "*提案*"、"*無効*"、または "*修正済み*" の場合、**[レコードの状態]** はそれぞれの値に設定されます。 たとえば、レコード内のいずれかのドメインの状態が "*提案*" の場合、**[レコードの状態]** は "*提案*" に設定されます。  
   
             > [!NOTE]  
             >  クレンジング操作に参照データ サービスを使用する場合は、ドメイン値についてエクスポートできるデータがほかにもあります。 詳しくは、「[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)」をご覧ください。  

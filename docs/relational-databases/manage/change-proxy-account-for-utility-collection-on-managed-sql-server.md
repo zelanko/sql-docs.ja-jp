@@ -11,12 +11,12 @@ ms.assetid: ff37ba8b-a08c-4109-b6e2-5748c995a52c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f850c8037ccc7d2f9b83ab776a38e17ec5c599ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c6b81f1a518886884397121d4e65fb258dbb39a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681050"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519241"
 ---
 # <a name="change-proxy-account-for-utility-collection-on--managed-sql-server"></a>マネージド SQL Server でユーティリティ コレクションのプロキシ アカウントを変更する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "51681050"
   
     -   SSMS の **ユーティリティ エクスプローラー** で **[マネージド インスタンス]** ノードをクリックします。  
   
-    -   **ユーティリティ エクスプローラー** のリスト ビューで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を右クリックし、 **[マネージド インスタンスの削除]** をクリックします。 詳細については、「 [SQL Server ユーティリティからの SQL Server のインスタンスの削除](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)」を参照してください。  
+    -   **ユーティリティ エクスプローラー** のリスト ビューで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を右クリックし、**[マネージド インスタンスの削除]** をクリックします。詳細については、「 [SQL Server ユーティリティからの SQL Server のインスタンスの削除](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)」を参照してください。  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに再度登録します。  
   
-    -   SSMS の **ユーティリティ エクスプローラー** で、 **[マネージド インスタンス]** ノードを右クリックし、 **[マネージド インスタンスの追加]** をクリックします。  
+    -   SSMS の**ユーティリティ エクスプローラー**で、**[マネージド インスタンス]** ノードを右クリックし、**[マネージド インスタンスの追加]** をクリックします。  
   
     -   新しいプロキシ アカウントを指定して、画面の指示に従ってウィザードを完了します。  
   

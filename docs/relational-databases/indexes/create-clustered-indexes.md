@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703210"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539019"
 ---
 # <a name="create-clustered-indexes"></a>クラスター化インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47703210"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Implementations"></a> 一般的な実装  
  クラスター化インデックスは、次のように実装されます。  
@@ -84,11 +84,11 @@ ms.locfileid: "47703210"
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを作成するテーブルを展開します。  
   
-2.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントし、 **[クラスター化インデックス]** を選択します。  
+2.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントして、**[クラスター化インデックス...]** を選択します。  
   
 3.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-4.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
+4.  **[インデックス キー列]** で、**[追加...]** をクリックします。  
   
 5.  _[table\_name_ **から列を選択]** ダイアログ ボックスで、クラスター化インデックスに追加するテーブル列のチェック ボックスをオンにします。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47703210"
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを含むテーブルを作成するデータベースを展開します。  
   
-2.  **[テーブル]** フォルダーを右クリックし、 **[新しいテーブル]** をクリックします。  
+2.  **[テーブル]** フォルダーを右クリックし、**[新しいテーブル...]** をクリックします。  
   
 3.  通常どおりに新しいテーブルを作成します。 詳しくは、「[テーブルの作成 &#40;データベース エンジン&#41;](../../relational-databases/tables/create-tables-database-engine.md)」を参照してください。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47703210"
   
 9. **[閉じる]** をクリックします。  
   
-10. **[ファイル]** メニューの [_table\_name_ **の保存**] をクリックします。  
+10. **[ファイル]** メニューの **[_table\_name_ の保存]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

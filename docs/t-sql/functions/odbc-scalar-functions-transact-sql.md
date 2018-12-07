@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e0989f8f24e3764c63ca30b7ed980c9a4852165
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535588"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,15 +93,15 @@ ms.locfileid: "51702680"
 |CURDATE( ) (ODBC 3.0)|現在の日付を返します。|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|現在のローカル時間を返します。 time-precision 引数には、取得する値の秒の有効桁数を指定します。|  
 |CURTIME() (ODBC 3.0)|現在のローカル時間を返します。|  
-|DAYNAME( date_exp ) (ODBC 2.0)|date_exp の日の部分について、データ ソース固有の曜日名を表す文字列を返します (例 : 英語を使ったデータ ソースの場合は Sunday ～ Saturday または Sun. ～ Sat.、 ドイツ語を使ったデータ ソースの場合は Sonntag ～ Samstag など)。|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|date_exp の月部分に基づき、月初から数えた日を 1 ～ 31 の整数値として返します。|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|date_exp の週部分に基づき、週の初めから数えた曜日を 1 ～ 7 の整数値として返します。1 は日曜日を表します。|  
-|HOUR( time_exp ) (ODBC 1.0)|time_exp の時部分に基づき、対応する時刻を 0 ～ 23 の整数値として返します。|  
-|MINUTE( time_exp ) (ODBC 1.0)|time_exp の分部分に基づき、対応する分を 0 ～ 59 の整数値として返します。|  
-|SECOND( time_exp ) (ODBC 1.0)|time_exp の秒部分に基づき、対応する秒を 0 ～ 59 の整数値として返します。|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|date_exp の月の部分について、データ ソース固有の月名を表す文字列を返します (例 : 英語を使ったデータ ソースの場合は January ～ December または Jan. ～ Dec.、ドイツ語を使ったデータ ソースの場合は Januar ～ Dezember など)。|  
-|QUARTER( date_exp ) (ODBC 1.0)|date_exp の四半期を 1 ～ 4 の整数値として返します。1 は、1 月 1 日～3 月 31 日を表します。|  
-|WEEK( date_exp ) (ODBC 1.0)|date_exp の週部分に基づき、年頭から数えた週を 1 ～ 53 の整数値として返します。|  
+|DAYNAME( date_exp ) (ODBC 2.0)|date_exp の日の部分について、データ ソース固有の曜日名を表す文字列を返します (例: 英語を使ったデータ ソースの場合は Sunday から Saturday または Sun. ～ Sat.、 ドイツ語を使ったデータ ソースの場合は Sonntag ～ Samstag など)。|  
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|date_exp の月部分に基づき、月初から数えた日を 1 から 31 の整数値として返します。|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|date_exp の週部分に基づき、週の初めから数えた曜日を 1 から 7 の整数値として返します。1 は日曜日を表します。|  
+|HOUR( time_exp ) (ODBC 1.0)|time_exp の時部分に基づき、対応する時刻を 0 から 23 の整数値として返します。|  
+|MINUTE( time_exp ) (ODBC 1.0)|time_exp の分部分に基づき、対応する分を 0 から 59 の整数値として返します。|  
+|SECOND( time_exp ) (ODBC 1.0)|time_exp の秒部分に基づき、対応する秒を 0 から 59 の整数値として返します。|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|date_exp の月の部分について、データ ソース固有の月名を表す文字列を返します (例: 英語を使ったデータ ソースの場合は January から December または Jan. から Dec.、ドイツ語を使ったデータ ソースの場合は Januar から Dezember など)。|  
+|QUARTER( date_exp ) (ODBC 1.0)|date_exp の四半期を 1 から 4 の整数値として返します。1 は、1 月 1 日から 3 月 31 日を表します。|  
+|WEEK( date_exp ) (ODBC 1.0)|date_exp の週部分に基づき、年頭から数えた週を 1 から 53 の整数値として返します。|  
   
 ## <a name="examples"></a>使用例  
   

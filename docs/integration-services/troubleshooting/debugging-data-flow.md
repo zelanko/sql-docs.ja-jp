@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638749"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521545"
 ---
 # <a name="debugging-data-flow"></a>データ フローのデバッグ
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのトラブルシューティングを行うために使用できる機能とツールが含まれています。  
@@ -70,7 +70,7 @@ ms.locfileid: "51638749"
 |赤|実行されましたがエラーが発生しました。|  
 
 ## <a name="analysis-of-data-flow"></a>データ フローの分析
-  [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** データベース ビューを使用して、パッケージのデータ フローを分析できます。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
+   [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** データベース ビューを使用して、パッケージのデータ フローを分析できます。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
   
 > [!NOTE]  
 >  catalog.execution_data_statistics ビューに関する情報を取得するために、ログ レベルは **詳細** に設定する必要があります。  
@@ -89,9 +89,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - コンポーネントによって送信されたすべての行の合計数  
   
--   **wall_clock_time_ms** – コンポーネントごとの実行の合計経過時間 (ミリ秒単位)  
+-   **wall_clock_time_ms** - コンポーネントごとの実行の合計経過時間 (ミリ秒単位)  
   
--   **num_rows_per_millisecond** – 各コンポーネントによって送信された 1 ミリ秒あたりの行数  
+-   **num_rows_per_millisecond** - 各コンポーネントによって送信された 1 ミリ秒あたりの行数  
   
  計算時の 0 除算エラーを防止するために **HAVING** 句が使用されています。  
   

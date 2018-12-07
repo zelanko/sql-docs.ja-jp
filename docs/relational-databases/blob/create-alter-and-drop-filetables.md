@@ -15,12 +15,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22a148595e8aac059193a21a1b5d4688f5d6f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686560"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542373"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ GO
   
 -   FileTable には、FILESTREAM 列が含まれているため、有効な FILESTREAM ファイル グループが必要です。 必要に応じて、FileTable を作成する **CREATE TABLE** コマンドの一部として、FILESTREAM ファイル グループを指定することもできます。 ファイル グループが指定されていない場合、FileTable はデータベースの既定の FILESTREAM ファイル グループを使用します。 データベースに FILESTREAM ファイル グループがない場合は、エラーが発生します。  
   
--   **CREATE TABLE... AS FILETABLE** ステートメントの一部としてテーブルの制約を作成することはできません。 ただし、制約を追加するには、後で **ALTER TABLE** ステートメントを使用します。  
+-   **CREATE TABLE...AS FILETABLE** ステートメントの一部としてテーブルの制約を作成することはできません。 ただし、制約を追加するには、後で **ALTER TABLE** ステートメントを使用します。  
   
 -   **tempdb** データベースまたはその他のシステム データベースに FileTable を作成することはできません。  
   

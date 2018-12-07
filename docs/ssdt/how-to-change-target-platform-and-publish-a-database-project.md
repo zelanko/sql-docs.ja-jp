@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668890"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516704"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法
 SQL Server Data Tools (SSDT) データベース プロジェクトのターゲット SQL Server のバージョンは、サポートされている任意の SQL Server インスタンス (SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012、または SQL Azure) に変更することができます。 そうすることによって、データベース開発を 1 つのプロジェクトで行い、必要に応じて複数のバージョンの SQL Server インスタンスに発行することができます。  
@@ -63,7 +63,7 @@ SSDT では、ターゲット プラットフォームを認識し、コード�
   
 6.  同じ設定を今後の公開操作に再利用できるように、公開設定をプロファイルに保存することもできます。 これには、 **[データベースの公開]** ダイアログ ボックスの **[プロファイルに名前を付けて保存]** をクリックします。 今後は、 **[プロファイルの読み込み]** をクリックすると既存の設定を再読み込みできます。  
   
-7.  **[データ ツール操作]** ウィンドウのメッセージに注意してください。 **[公開プレビューを作成しています...]** の右にある [プレビューの表示] リンクをクリックします。 の右にある [プレビューの表示] のリンクをクリックします。これにより、配置プレビュー レポートが表示されます。 プロジェクトの公開先のデータベース サーバーとプロジェクトのターゲット プラットフォームが一致しない場合は、SSDT による警告がこのレポートで発行されます。  たとえば、プロジェクトのターゲット プラットフォームが Microsoft SQL Server 2012 である場合に、プロジェクトを SQL Server 2008 R2 サーバー インスタンスに公開しようとすると、以下の警告が **[出力]** ウィンドウに表示されます。  
+7.  **[データ ツール操作]** ウィンドウのメッセージに注意してください。 **[公開プレビューを作成しています...]** の右にある [プレビューの表示] リンクをクリックします。の右にある [プレビューの表示] のリンクをクリックします。これにより、配置プレビュー レポートが表示されます。 プロジェクトの公開先のデータベース サーバーとプロジェクトのターゲット プラットフォームが一致しない場合は、SSDT による警告がこのレポートで発行されます。  たとえば、プロジェクトのターゲット プラットフォームが Microsoft SQL Server 2012 である場合に、プロジェクトを SQL Server 2008 R2 サーバー インスタンスに公開しようとすると、以下の警告が **[出力]** ウィンドウに表示されます。  
   
 **A project which specifies Microsoft SQL Server 2012 as the target platform may experience compatibility issues with SQL Server 2008**    このようなプロジェクトに Microsoft SQL Server 2012 で導入されたエンティティ (たとえば、シーケンス オブジェクト) が含まれている場合、発行操作は失敗します。  
   

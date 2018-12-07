@@ -15,12 +15,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e73ba6315113f1bd73e309816a2ec5f3184c369
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e6ffeeeb6c6c39b161c6957677f65843959b13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540218"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "47808440"
   
     -   IBM DB2 の場合、データベースは DB2 接続文字列の **Initial Catalog** プロパティで指定されます。DB2 接続文字列は、後述する **[追加の接続オプション]** フィールドに入力できます。  
   
-8.  **[ディストリビューション エージェント セキュリティ]** ページで、サブスクライバーの横のプロパティ ボタン (**[...]**) をクリックし、 **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスにアクセスします。  
+8.  **[ディストリビューション エージェント セキュリティ]** ページで、サブスクライバーの横のプロパティ ボタン **[...]** をクリックし、**[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスにアクセスします。  
   
 9. **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスで、以下の操作を行います。  
   

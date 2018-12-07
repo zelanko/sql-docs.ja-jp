@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dd2bd8733c3de4a7ca14000fb56f11e9a63780
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643122"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617878"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - ユーティリティの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -505,21 +505,21 @@ ms.locfileid: "51643122"
  Windows 資格情報を使用して接続し、通信を暗号化する:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Windows 資格情報を使用して接続し、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -528,28 +528,28 @@ SQLCMD –E –N –C
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -C  
   
 ```  
   
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

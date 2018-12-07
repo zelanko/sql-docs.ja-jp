@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio (SSMS) のダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d36dd71c7b67b079f2a87ca2875412a38f14aa93
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: efc8c7ec6408e2f6c5fe7fb2262d581e82c4b1b9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699438"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712083"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,20 +43,29 @@ SQL Server Management Studio (SSMS) を使用すると、データベースと�
 
 **SSMS は無料です。**
 
-**[SSMS 18.0 パブリック プレビュー 5 をご利用いただけるようになりました](#ssms-180-preview-5)。これは *SQL Server Management Studio* の最新世代であり、[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] をサポートしています。**
+**[SSMS 18.0 パブリック プレビュー 5 をご利用いただけるようになりました](#ssms-180-preview-5)。これは *SQL Server Management Studio* の最新世代であり、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] をサポートしています。**
 
-## <a name="ssms-179-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9 は現在 SSMS の一般公開 (GA) バージョンである
+## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 は現在 SSMS の一般公開 (GA) バージョンである
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2014306)**
-<br>**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9 アップグレード パッケージのダウンロード (17.x から 17.9 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=2014215)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2043154)**
+<br>**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 アップグレード パッケージのダウンロード (17.x から 17.9.1 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=2043430)**
 
-### <a name="available-languages-ssms-179"></a>使用できる言語 (SSMS 17.9)
+**バージョン情報**
 
-[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+- リリース番号: 17.9.1<br>
+- ビルド番号: 14.0.17289.0<br>
+- リリース日: 2018 年 11 月 21 日
 
-SSMS 17.9 について詳しくは、[SSMS 17.9 の変更ログ](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release)に関するページをご覧ください。
+### <a name="available-languages-ssms-1791"></a>使用できる言語 (SSMS 17.9.1)
 
-## <a name="ssms-installation-tips-and-issues-ssms-179"></a>SSMS のインストールに関するヒントと問題 (SSMS 17.9)
+> [!NOTE]
+> SSMS 17.x の英語以外のローカライズされたリリースでは、Windows 8、Windows 7、Windows Server 2012、Windows Server 2008 R2 にインストールする場合、[KB 2862966 セキュリティ更新プログラム パッケージ](https://support.microsoft.com/kb/2862966)が必要です。
+
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+SSMS 17.9.1 について詳しくは、[SSMS 17.9.1 の変更ログ](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release)に関するページをご覧ください。
+
+## <a name="ssms-installation-tips-and-issues-ssms-1791"></a>SSMS のインストールに関するヒントと問題 (SSMS 17.9.1)
 
 ### <a name="minimize-installation-reboots"></a>インストール時の再起動を最小限に抑える
 
@@ -69,7 +78,7 @@ SSMS 17.9 について詳しくは、[SSMS 17.9 の変更ログ](sql-server-mana
 
 ## <a name="ssms-180-preview-5"></a>SSMS 18.0 (プレビュー 5)
 
-**SSMS 18.0 パブリック プレビュー 5 をご利用いただけるようになりました。これは *SQL Server Management Studio* の最新世代であり、[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] をサポートしています。**
+**SSMS 18.0 パブリック プレビュー 5 をご利用いただけるようになりました。これは *SQL Server Management Studio* の最新世代であり、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] をサポートしています。**
 
 **[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 18.0 (プレビュー 5) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2041155)**
 
@@ -111,7 +120,7 @@ SSMS 18.0 (プレビュー 5) は SQL Server Management Studio の最新バー�
 
 ## <a name="supported-sql-offerings-ssms-180-preview-5"></a>サポートされる SQL 製品 (SSMS 18.0 プレビュー 5)
 
-* このバージョンの SSMS は、すべての[サポート対象バージョンである SQL Server 2008 から [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) で動作し、Azure SQL Database および Azure SQL Data Warehouse で最新のクラウド機能と連携するための最大レベルのサポートを提供します。
+* このバージョンの SSMS は、すべての[サポート対象バージョンである SQL Server 2008 から [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) で動作し、Azure SQL Database および Azure SQL Data Warehouse で最新のクラウド機能と連携するための最大レベルのサポートを提供します。
 * また、SSMS 18.x は、SSMS 17.x、SSMS 16.x または SQL Server 2014 SSMS 以前とサイドバイサイドでインストールできます。
 * SQL Server Integration Services (SSIS) - SSMS バージョン 17.x 以降では、レガシ SQL Server Integration Services サービスへの接続はサポートされません。 以前のバージョンのレガシ Integration Services に接続するには、SQL Server のバージョンに対応する SSMS のバージョンを使用します。 たとえば、レガシ SQL Server 2016 Integration Services サービスに接続する場合は、SSMS 16.x を使用します。 SSMS 17.x および SSMS 16.x は同じコンピューターにサイド バイ サイドでインストールすることができます。 SQL Server 2012 のリリース以降では、SSIS カタログ データベースである SSISDB を使用して、Integration Services パッケージの格納、管理、実行、監視を行うことをお勧めします。 詳細については、「[SSIS カタログ](../integration-services/catalog/ssis-catalog.md)」をご覧ください。
 

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9ce14b9cbc983987072eb9433a20823c8721e3db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607162"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533969"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server のアップグレード (セットアップ)
 
@@ -106,11 +106,11 @@ ms.locfileid: "51607162"
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
-     **[インストール済みのインスタンス]**  : セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]の名前付きインスタンスをインストールする必要があります。  
+     **[インストール済みのインスタンス]**: セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]の名前付きインスタンスをインストールする必要があります。  
   
 13. この記事の残りの部分のワーク フローは、インストールするように指定した機能に応じて異なります。 選択した機能によっては、表示されないページもあります。  
   
-14. [サーバーの構成 - サービス アカウント] ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの既定のサービス アカウントが表示されます。 このページで実際に構成するサービスは、アップグレードする機能によって異なります。  
+14. [サーバーの構成 - サービス アカウント] ページには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの既定のサービス アカウントが表示されます。 このページで実際に構成するサービスは、アップグレードする機能によって異なります。  
   
      認証情報とログイン情報は、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスからそのまま移行されます。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 サービスを自動的に開始するか、手動で開始するか、または無効にするかを指定することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、サービス アカウントを個別に構成して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに、サービスでのタスクの実行に必要な最小権限が付与されるようにすることをお勧めします。 詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
@@ -135,9 +135,9 @@ ms.locfileid: "51607162"
 ## <a name="next-steps"></a>Next Steps  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレード後は、次の作業を実行します。  
   
--   **サーバーの登録** : アップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのレジストリ設定が削除されます。 アップグレード後、サーバーを再登録する必要があります。  
+-   **サーバーの登録**: アップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのレジストリ設定が削除されます。 アップグレード後、サーバーを再登録する必要があります。  
   
--   **統計の更新** : クエリ パフォーマンスを最適化するため、アップグレードに続いてすべてのデータベース上で統計を更新することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー定義テーブル内の統計を更新するには、**sp_updatestats** ストアド プロシージャを使用します。  
+-   **統計の更新**: クエリ パフォーマンスを最適化するため、アップグレードに続いてすべてのデータベース上で統計を更新することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー定義テーブル内の統計を更新するには、**sp_updatestats** ストアド プロシージャを使用します。  
   
 -   **新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール内容の構成**: システムのセキュリティを向上させるため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、主要なサービスと機能を個別にインストールし、有効化できるようになっています。 外部からのアクセスの設定の詳細については、このリリースの Readme ファイルを参照してください。  
   

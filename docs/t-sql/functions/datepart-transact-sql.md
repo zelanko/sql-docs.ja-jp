@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c8a1a6571f72237b19c05dbf15d9ff70f9f7f3
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ebc5c6b688bf7871ff3e75ab30fbb7dadb31f315
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970533"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521223"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,12 +162,12 @@ ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されていま
   
 |週の最初の曜日|年の最初の週の構成|2 回割り当てられる週の有無|利用されている地域|  
 |---|---|---|---|
-|日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 ～ 7 日|[ユーザー アカウント制御]|United States|  
-|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 ～ 7 日|[ユーザー アカウント制御]|欧州およびイギリス|  
-|月曜日|4 月は 1 月<br /><br /> 最初の木曜日<br /><br /> 年の 4 ～ 7 日間|いいえ|ISO 8601、ノルウェー、およびスウェーデン|  
+|日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 から 7 日間|[ユーザー アカウント制御]|United States|  
+|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 から 7 日間|[ユーザー アカウント制御]|欧州およびイギリス|  
+|月曜日|4 月は 1 月<br /><br /> 最初の木曜日<br /><br /> 年の 4 から 7 日間|いいえ|ISO 8601、ノルウェー、およびスウェーデン|  
 |月曜日|7 月は 1 月<br /><br /> 最初の月曜日<br /><br /> 年の 7 日間|いいえ||  
-|水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 ～ 7 日|[ユーザー アカウント制御]||  
-|土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 ～ 7 日|[ユーザー アカウント制御]||  
+|水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 から 7 日間|[ユーザー アカウント制御]||  
+|土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 から 7 日間|[ユーザー アカウント制御]||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` は、符号付きの分数として **TZoffset** (**tz**) 値を返します。 次のステートメントは、310 分のタイム ゾーン オフセットを返します。

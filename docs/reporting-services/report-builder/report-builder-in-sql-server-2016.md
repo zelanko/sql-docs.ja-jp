@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2016 のレポート ビルダー | Microsoft Docs
-ms.date: 03/30/2017
+title: SQL Server のレポート ビルダー | Microsoft Docs
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15762e449c61642989dd507897682d30b4c1421d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690962"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711420"
 ---
-# <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 のレポート ビルダー
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、Visual Studio のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、ページ分割されたレポートを作成するためのツールです。  改ページ調整されたレポートをデザインすることは、データの取得場所、取得するデータ、およびデータの表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] でレポートをプレビューすることも、ネイティブ モードまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにレポートをパブリッシュして、他のユーザーがそこからレポートを実行できるようにすることもできます。  
+# <a name="report-builder-in-sql-server"></a>SQL Server のレポート ビルダー
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、Visual Studio のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、ページ分割されたレポートを作成するためのツールです。  改ページ調整されたレポートをデザインすることは、データの取得場所、取得するデータ、およびデータの表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートをプレビューできます。 その後、ネイティブ モードまたは SharePoint 統合モード (2016 以前) でレポートを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにパブリッシュします。 ページ分割されたレポートを Power BI サービスにパブリッシュすることもできます。 詳しくは、[Power BI Premium のページ分割されたレポート](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (プレビュー) に関するページをご覧ください。
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47690962"
   
   [レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md)
 
-  [SQL Server 2016 の Reporting Services とレポート ビルダーの新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  [SQL Server Reporting Services とレポート ビルダーの新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   このバージョンの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]の新機能について説明します。   
   [チュートリアル: オフラインでのクイック グラフ レポートの作成](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] とレポートの作成に使用できるウィザードを紹介します。 このチュートリアルには、作業用の一連のデータが用意されているため、データ ソースに接続せずに実習を開始できます。  
@@ -80,7 +80,7 @@ ms.locfileid: "47690962"
  レポートを作成する前の考慮事項について説明します。  
   
  [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]のドキュメント全体で使用する主要な概念について説明します。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のドキュメント全体で使用する主要な概念について説明します。  
   
  [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  レポート デザイン ビューの各ペインと領域について説明します。  

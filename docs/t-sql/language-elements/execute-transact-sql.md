@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8a2a8539b63df48520777276dac4e66867e8634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799710"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641023"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -235,6 +235,8 @@ Execute a character string
   
  パラメーターの値がオブジェクト名や文字列であったり、データベース名やスキーマ名によって修飾されている場合は、その名前全体を単一引用符で囲む必要があります。 パラメーターの値がキーワードの場合は、そのキーワードを二重引用符で囲む必要があります。  
   
+`@` で始まらない単語を引用符で囲まずに渡すと (パラメーター名に `@` を忘れた場合など)、この単語は、引用符が不足しているにもかかわらず、nvarchar 文字列として扱われます。
+
  既定値がモジュール内で定義されている場合、ユーザーはパラメーターを指定せずにモジュールを実行できます。  
   
  既定値を NULL にすることもできます。 パラメーター値が NULL の場合の操作は、通常、モジュールの定義で指定します。  
@@ -287,7 +289,7 @@ Execute a character string
  リンク サーバーにパススルーされるコマンドを含む定数文字列を指定します。 N が含まれる場合、文字列は **nvarchar** データ型として解釈されます。  
   
  [?]  
- パススルー コマンドの \<arg-list> で値が提供されるパラメーターを表します。このパススルー コマンドは、EXEC('…', \<arg-list>) AT \<linkedsrv> ステートメントで使用されるものです。  
+ パススルー コマンドの \<arg-list> で値が提供されるパラメーターを表します。このパススルー コマンドは、EXEC('...', \<arg-list>) AT \<linkedsrv> ステートメントで使用されるものです。  
   
  AT *linked_server_name*  
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -295,7 +297,7 @@ Execute a character string
  *command_string* を *linked_server_name* に対して実行し、結果が返された場合はそれをクライアントに返します。 *linked_server_name* は、ローカル サーバー内の既存のリンク サーバー定義を参照している必要があります。 リンク サーバーは、[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使って定義されます。  
   
  WITH \<execute_option>  
- 実行オプションは次のとおりです。 RESULT SETS オプションは INSERT…EXEC ステートメントで指定できません。  
+ 実行オプションは次のとおりです。 RESULT SETS オプションは INSERT...EXEC ステートメントで指定できません。  
   
 |項目|定義|  
 |----------|----------------|  
@@ -315,7 +317,7 @@ Execute a character string
 |schema_name|テーブル、ビュー、またはテーブル値関数を所有するスキーマの名前です。|  
 |table_name &#124; view_name &#124; table_valued_function_name|名前付きのテーブル、ビュー、またはテーブル値関数で指定された列を返すように指定します。 テーブル変数、一時テーブル、およびシノニムは、AS オブジェクト構文ではサポートされていません。|  
 |AS TYPE [schema_name.]table_type_name|テーブル型で指定された列を返すように指定します。|  
-|AS FOR XML|これらは、SELECT によって生成されたものとしてにステートメントまたは EXECUTE ステートメントで呼び出されるストアド プロシージャから結果の XML 形式に変換することを指定しています. XML をしています. ステートメントの使用などがあります。 元のステートメントの TYPE ディレクティブからのすべての書式設定が削除され、TYPE ディレクティブが指定されなかったものとして、結果が返されます。 AS FOR XML では、実行されたステートメントまたはストアド プロシージャからの XML 以外の表形式の結果は XML に変換されません。|  
+|AS FOR XML|EXECUTE ステートメントで呼び出されたステートメントまたはストアド プロシージャからの XML の結果を、SELECT ... FOR XML ... ステートメントで生成された場合と同様の形式に変換するように指定します。 元のステートメントの TYPE ディレクティブからのすべての書式設定が削除され、TYPE ディレクティブが指定されなかったものとして、結果が返されます。 AS FOR XML では、実行されたステートメントまたはストアド プロシージャからの XML 以外の表形式の結果は XML に変換されません。|  
   
 |項目|定義|  
 |----------|----------------|  

@@ -13,12 +13,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 39044dfd57f4ae6a05a85e7cf21d4e7def5fb1c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 635fe088e51c17e1367eaaeab7e528e2f12e5dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529680"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>データベース ミラーリング モニター ([警告] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47659520"
  詳細については、後の「解説」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- サーバー インスタンスの情報が現在表示できない場合、対応している **['<server_instance>' でのしきい値]** 列のセルには、背景が灰色のウォーターマーク テキストが表示されます。 モニターがサーバー インスタンスに接続されていない場合、グリッドの各セルには、既定のインスタンスか名前付きインスタンスかに応じて、**[***<システム名> に接続していません]* または **[***<システム名>***\\***<インスタンス名> に接続されていません]* と表示されます。 モニターがクエリの応答を待機している場合、グリッドの各セルに "**データを待機しています...**" と 表示されます。  
+ サーバー インスタンスの情報が現在表示できない場合、対応している **['<server_instance>' でのしきい値]** 列のセルには、背景が灰色のウォーターマーク テキストが表示されます。 モニターがサーバー インスタンスに接続されていない場合、グリッドの各セルには、既定のインスタンスか名前付きインスタンスかに応じて、**[***<システム名> に接続していません]* または **[***<システム名>***\\***<インスタンス名> に接続されていません]* と表示されます。 モニターがクエリの応答を待機している場合、グリッドの各セルに **"データを待機しています..."** と表示されます。  
   
  情報を表示できる場合、各警告のセルには、指定されたしきい値が表示されるか、または " **有効になっていません**" と表示されます。  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f793de9e36968021155387ce0f926899f81f753d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bf1a42cb16c499490bd7ea1ff5657e8dff58bcde
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524416"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Reporting Services WMI プロバイダーへのアクセス
   Reporting Services WMI プロバイダーは、ネイティブ モードのレポート サーバー インスタンスの管理に使用できる 2 つの WMI クラスを、スクリプトを通じて公開します。  
@@ -41,25 +41,25 @@ ms.locfileid: "50027781"
  使用しているレポート サーバー インスタンスについて、WMI 名前空間パス内でのエンコード後のインスタンス名の一覧を表示するには、次の PowerShell コマンドを使用します。  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace root\Microsoft\SqlServer\ReportServer  –class __Namespace –ComputerName hostname | select Name  
+PS C:\windows\system32> Get-WmiObject -namespace root\Microsoft\SqlServer\ReportServer  -class __Namespace -ComputerName hostname | select Name  
 ```  
   
 ## <a name="access-the-wmi-classes-using-powershell"></a>PowerShell を使用した WMI クラスへのアクセス  
  WMI クラスにアクセスするには、次のコマンドを実行します。  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace <namespacename> –class <classname> –ComputerName <hostname>  
+PS C:\windows\system32> Get-WmiObject -namespace <namespacename> -class <classname> -ComputerName <hostname>  
 ```  
   
  たとえば、ホスト myrshost の既定のレポート サーバー インスタンス上で MSReportServer_ConfigurationSetting クラスにアクセスするには、次のコマンドを実行します。 このコマンドを正常に実行するには、既定のレポート サーバー インスタンスが myrshost 上にインストールされている必要があります。  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
+PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
 ```  
   
  このコマンド構文は、すべてのクラス プロパティ名と値を出力します。 既定のレポート サーバー インスタンス (RS_MSSQLSERVER) の名前空間内のクラスにアクセスしている場合でも、MSReportServer_ConfigurationSetting クラスのすべてのインスタンスが返されます。 たとえば、myrshost が、既定のレポート サーバー インスタンスと、SHAREPOINT という名前付きレポート サーバー インスタンスを使用してインストールされている場合、このコマンドは、それら両方のレポート サーバー インスタンスのプロパティ名と値を出力します。  
   
- 複数のインスタンスが返される場合、特定のクラス インスタンスが返されるようにするには、–Filter パラメーターを使用して、固有の値 (InstanceName など) を持つプロパティで結果をフィルター処理します。 たとえば、既定のレポート サーバー インスタンスの WMI オブジェクトのみを返すには、次のコマンドを使用します。  
+ 複数のインスタンスが返される場合、特定のクラス インスタンスが返されるようにするには、-Filter パラメーターを使用して、固有の値 (InstanceName など) を持つプロパティで結果をフィルター処理します。 たとえば、既定のレポート サーバー インスタンスの WMI オブジェクトのみを返すには、次のコマンドを使用します。  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='MSSQLSERVER'"  

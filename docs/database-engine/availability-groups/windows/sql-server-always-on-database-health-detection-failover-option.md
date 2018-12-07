@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 649ebf4f39013ccc44b26c74acd311fe4f712f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730876"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525110"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性グループのデータベース レベルの正常性検出フェールオーバー オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 |database_name  |エラーをレポートしているデータベースの名前。
 |database_replica_id    |可用性レプリカ データベースの ID。
 |failover_ready_replicas    |同期されている自動フェールオーバー セカンダリ レプリカの数。
-|fault_type     | レポートされたエラー ID。 有効値は次のとおりです。  <br/> 0 - NONE <br/>1 - Unknown<br/>2 – Shutdown
+|fault_type     | レポートされたエラー ID。 有効値は次のとおりです。  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown
 |is_critical    | SQL Server 2016 の XEvent では、この値は常に true を返します。
 
 

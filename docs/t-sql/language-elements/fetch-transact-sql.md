@@ -24,12 +24,12 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f284273004cd01c927473b9114ed06742f3fe794
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68d27a88ec604de05f8165f6c251982e53914794
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804620"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586215"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "47804620"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   
@@ -55,10 +54,10 @@ FETCH
   
 ## <a name="arguments"></a>引数  
  NEXT  
- 現在の行の直後にある行を結果行として返し、この返した行に現在の行を加えます。 カーソルに対する最初のフェッチが FETCH NEXT の場合、結果セットの中の先頭の行が返ります。 NEXT は、カーソル フェッチの既定のオプションです。  
+ 現在の行の直後にある行を結果行として返し、この返した行に現在の行を加えます。 カーソルに対する最初のフェッチが `FETCH NEXT` の場合、結果セットの先頭の行が返ります。 `NEXT` は、カーソル フェッチの既定のオプションです。  
   
  PRIOR  
- 現在の行の直前にある行を結果行として返し、現在の行を減らして、この返した行にします。 カーソルに対する最初のフェッチが FETCH PRIOR の場合、行は返されません。カーソルは先頭行の前に位置したままです。  
+ 現在の行の直前にある行を結果行として返し、現在の行を減らして、この返した行にします。 カーソルに対する最初のフェッチが `FETCH PRIOR` の場合、行は返されません。カーソルは先頭行の前に位置したままです。  
   
  FIRST  
  カーソル内の先頭行を返し、これを現在の行にします。  
@@ -70,7 +69,7 @@ FETCH
  *n* または @*nvar* が正の値の場合は、カーソルの先頭から *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、カーソルの終端から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、行を返しません。 *n* は整数の定数である必要があります。また、@*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
   
  RELATIVE { *n*| @*nvar*}  
- *n* または @*nvar* が正の値の場合は、現在の行を先頭に *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、現在の行から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、現在の行を返します。 カーソルに対して実行する最初のフェッチで、*n* または @*nvar* を負の値または 0 に設定して FETCH RELATIVE を指定した場合は、行を返しません。 *n* は整数の定数である必要があります。また、@*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
+ *n* または @*nvar* が正の値の場合は、現在の行を先頭に *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、現在の行から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、現在の行を返します。 カーソルに対して実行する最初のフェッチで、*n* または @*nvar* を負の値または 0 に設定して `FETCH RELATIVE` を指定した場合は、行を返しません。 *n* は整数の定数である必要があります。また、@*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
   
  GLOBAL  
  *cursor_name* でグローバル カーソルを参照することを指定します。  
@@ -85,27 +84,27 @@ FETCH
  フェッチの列で得られたデータを、ローカル変数に設定します。 リスト内の各変数は、左から右に向かって、カーソル結果セット内の対応する列に関連付けられます。 各変数のデータ型は、対応する結果セット列のデータ型に一致するか、または暗黙的な型変換がサポートされていなければなりません。 変数の個数は、カーソル選択リスト内の列の個数と一致している必要があります。  
   
 ## <a name="remarks"></a>Remarks  
- ISO 形式の DECLARE CURSOR ステートメントに SCROLL オプションが指定されていない場合、サポートされる FETCH オプションは NEXT だけです。 ISO 形式の DECLARE CURSOR ステートメントに SCROLL が指定されている場合は、すべての FETCH オプションがサポートされます。  
+ `SCROLL` オプションが ISO 形式の`DECLARE CURSOR` ステートメントで指定されていない場合、サポートされる `FETCH` オプションは `NEXT` のみです。 ISO 形式の `DECLARE CURSOR` で `SCROLL` が指定されている場合、すべての `FETCH` オプションがサポートされます。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE カーソル拡張が使用されると、次のルールが適用されます。  
   
--   FORWARD_ONLY と FAST_FORWARD のいずれかが指定されている場合、サポートされる FETCH オプションは NEXT だけです。  
+-   `FORWARD_ONLY` または `FAST_FORWARD` のいずれかが指定されている場合、サポートされる `FETCH` オプションは `NEXT` のみです。  
   
--   DYNAMIC、FORWARD_ONLY、FAST_FORWARD のいずれも指定されておらず、かつ KEYSET、STATIC、SCROLL のいずれか 1 つが指定されている場合は、すべての FETCH オプションがサポートされます。  
+-   `DYNAMIC`、`FORWARD_ONLY`、または `FAST_FORWARD` が指定されていない場合、`KEYSET`、`STATIC`、または `SCROLL` を指定すると、すべての `FETCH` オプションがサポートされます。  
   
--   DYNAMIC SCROLL カーソルは、ABSOLUTE 以外のすべての FETCH オプションをサポートします。  
+-   `DYNAMIC SCROLL` カーソルは、`ABSOLUTE` を除くすべての `FETCH` オプションをサポートします。  
   
- @@FETCH_STATUS 関数は、最後に実行された FETCH ステートメントのステータスを返します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 FETCH ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、「[@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)」を参照してください。  
+ `@@FETCH_STATUS` 関数は、最後に実行された `FETCH` ステートメントのステータスを返します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 `FETCH` ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、「[@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- FETCH 権限は、特に指定のない限り有効なすべてのユーザーに与えられます。  
+ `FETCH` 権限は、特に指定のない限りすべての有効なユーザーに与えられます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-fetch-in-a-simple-cursor"></a>A. 単純カーソル内での FETCH を使用する  
  この例では、`Person.Person` テーブル内の姓が `B` で始まる行に対して単純カーソルを宣言し、`FETCH NEXT` を使用して行を順番に移動します。 `FETCH` ステートメントは、`DECLARE CURSOR` の中で指定された列の値を、単一行の結果セットとして返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE contact_cursor CURSOR FOR  
@@ -133,7 +132,7 @@ GO
 ### <a name="b-using-fetch-to-store-values-in-variables"></a>B. FETCH を使用して変数に値を格納する  
  次の例は例 A に似ていますが、`FETCH` ステートメントの出力をクライアントに直接返すのではなく、ローカル変数に格納します。 `PRINT` ステートメントは変数を 1 つの文字列に結合し、これをクライアントに返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Declare the variables to store the values returned by FETCH.  
@@ -173,7 +172,7 @@ GO
 ### <a name="c-declaring-a-scroll-cursor-and-using-the-other-fetch-options"></a>C. SCROLL カーソルを宣言し、他の FETCH オプションを使用する  
  次の例では、`SCROLL` カーソルを作成し、`LAST`、`PRIOR`、`RELATIVE`、および `ABSOLUTE` オプションを介してすべてのスクロール機能を使用します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Execute the SELECT statement alone to show the   

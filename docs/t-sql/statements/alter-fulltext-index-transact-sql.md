@@ -22,12 +22,12 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f824f7fec40cf99b55ff97382269413ae82b5c83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526197"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  変更の追跡と WITH NO POPULATION の相関関係については、後の「解説」を参照してください。  
   
  MANUAL  
- ALTER FULLTEXT INDEX を呼び出すことによって、追跡された変更を手動で伝達されることを指定しています. START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの呼び出しによって手動で行うこと ("*手動作成*") を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定期的に呼び出すことができます。  
+ 追跡された変更の反映を ALTER FULLTEXT INDEX ...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの呼び出しによって手動で行うこと ("*手動作成*") を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定期的に呼び出すことができます。  
   
  AUTO  
  ベース テーブルでデータが変更されたときに、追跡された変更を自動的に反映すること ("*自動作成*") を指定します。 この場合、フルテキスト インデックスに対して変更は自動的に反映されますが、反映までに少し時間がかかることがあります。 AUTO は既定値です。  
@@ -128,13 +128,13 @@ ALTER FULLTEXT INDEX ON table_name
   
  キー フレーズを追加で作成し、統計的セマンティック インデックス作成の一部である類似性のインデックスを記録します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
- [ **,***...n*]  
+ [ **,**_...n_]  
  複数の列を ADD、ALTER、または DROP 句に指定できることを表します。 複数の列を指定する場合は、これらの列をコンマで区切ります。  
   
  WITH NO POPULATION  
  ADD または DROP 列操作、あるいは SET STOPLIST 操作後に、フルテキスト インデックスを作成しないことを指定します。 ユーザーが START...POPULATION コマンドを実行する場合のみ、フルテキスト インデックスが作成されます。  
   
- NO POPULATION を指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインデックスに対して値は設定されません。 インデックスに対して値が設定されるのは、ユーザーが ALTER FULLTEXT INDEX...START POPULATION コマンドを指定した場合のみです。 NO POPULATION を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインデックスへの値が設定されます。  
+ NO POPULATION を指定した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインデックスに対して値は設定されません。 インデックスに対して値が設定されるのは、ユーザーが ALTER FULLTEXT INDEX...START POPULATION コマンドを指定した場合のみです。 NO POPULATION を指定しない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインデックスへの値が設定されます。  
   
  CHANGE_TRACKING が有効で、WITH NO POPULATION が指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はエラーを返します。 CHANGE_TRACKING が有効で、WITH NO POPULATION が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインデックスで完全作成が実行されます。  
   
@@ -185,7 +185,7 @@ ALTER FULLTEXT INDEX ON table_name
  インデックスが存在する場合、そのインデックスに関連付けられている検索プロパティ リストを変更します。  
   
  OFF  
- フルテキスト インデックスにプロパティ リストを関連付けないことを指定します。 フル テキスト インデックス (ALTER FULLTEXT INDEX... の検索プロパティ リストを無効にする場合 セット検索プロパティ リスト OFF)、ベース テーブルでプロパティの検索が可能ではなくなりました。  
+ フルテキスト インデックスにプロパティ リストを関連付けないことを指定します。 フルテキスト インデックスの検索プロパティ リストを無効にする場合 (ALTER FULLTEXT INDEX ...セット検索プロパティ リスト OFF)、ベース テーブルでプロパティの検索が可能ではなくなりました。  
   
  既定では、既存の検索プロパティ リストを無効にすると、フルテキスト インデックスが自動的に再作成されます。 検索プロパティ リストを無効にするときに WITH NO POPULATION を指定した場合、自動再作成は行われません。 ただし、都合のよいときにこのフルテキスト インデックスの完全作成を実行することをお勧めします。 フルテキスト インデックスを再作成すると、削除された各検索プロパティのプロパティ固有メタデータが削除されます。その結果、フルテキスト インデックスのサイズが小さくなり効率化します。  
   
@@ -234,7 +234,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 ### <a name="scenario-a-switching-directly-to-a-different-search-property-list"></a>シナリオ A: 別の検索プロパティ リストに直接切り替える場合  
   
-1.  検索プロパティ リスト `spl_1` を使って `table_1` にフルテキスト インデックスを作成します。  
+1.  検索プロパティ リスト `table_1` を持つ `spl_1` にフルテキスト インデックスが作成されます。  
   
     ```  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
@@ -258,7 +258,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 ### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>シナリオ B: 検索プロパティ リストを無効にし、インデックスを任意の検索プロパティ リストに関連付ける場合  
   
-1.  検索プロパティ リスト `spl_1` を持つ `table_1` にフルテキスト インデックスが作成され、完全作成が自動的に実行されます (既定の動作)。  
+1.  検索プロパティ リスト `table_1` を持つ `spl_1` にフルテキスト インデックスが作成され、完全作成が自動的に実行されます (既定の動作)。  
   
     ```  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   

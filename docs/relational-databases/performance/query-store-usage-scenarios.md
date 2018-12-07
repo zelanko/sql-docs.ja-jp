@@ -1,7 +1,7 @@
 ---
 title: クエリ ストアの使用シナリオ | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,36 +14,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673831"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711203"
 ---
 # <a name="query-store-usage-scenarios"></a>クエリ ストアの使用シナリオ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   クエリ ストアは、予測可能なワークロードのパフォーマンスの追跡と確保が重要である幅広いシナリオで使用できます。 考慮できるいくつかの例を次に示します。  
   
 -   プランの選択による後退が発生しているクエリを特定して修正する  
-  
 -   リソースを大量に消費しているクエリを識別して調整する  
-  
 -   A/B テストを実行する  
-  
 -   新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードするときにパフォーマンスの安定性を維持する  
-  
 -   アドホック ワークロードを識別して改善する  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>プランの選択による後退が発生しているクエリを特定して修正する  
- 通常のクエリの実行中に、重要な入力が変わったためにクエリ オプティマイザーが別のプランを採用することを決定する場合があります (データ カーディナリティの変化やインデックスの作成、変更、破棄、統計の更新など)。選択される新しいプランの大部分は、前に使用されていたプランよりも優れているか、同程度のパフォーマンスを提供します。 ただし、新しいプランでパフォーマンスが大幅に低下することがあります。この状況をプランの選択変更による後退と呼びます。 クエリ ストアが導入される前は、これは、識別して修正することが非常に難しい問題でした。その理由は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、使用されていた実行プランをユーザーが調べるための組み込みのデータ ストアが提供されていなかったためです。  
+ 通常のクエリの実行中に、重要な入力が変わったためにクエリ オプティマイザーが別のプランを採用することを決定する場合があります (データ カーディナリティの変化やインデックスの作成、変更、破棄、統計の更新など)。選択される新しいプランの大部分は、前に使用されていたプランよりも優れているか、同程度のパフォーマンスを提供します。 ただし、新しいプランでパフォーマンスが大幅に低下することがあります。この状況をプランの選択変更による後退と呼びます。 クエリ ストアが導入される前は、これは、識別して修正することが難しい問題でした。その理由は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、使用されていた実行プランをユーザーが調べるための組み込みのデータ ストアが提供されていなかったためです。  
   
  クエリ ストアを使って、次に示す操作を短時間で実行できます。  
   
 -   特定の期間 (最後の 1 時間、1 日、1 週間など) にわたって実行メトリックが低下しているすべてのクエリを識別します。 分析をスピードアップさせるために、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、**[後退したクエリ]** を使用します。  
   
--   後退したクエリの中から、複数のプランがあり、プランの選択が不適切だったためにパフォーマンスが低下しているクエリを非常に簡単に見つけ出します。 **[Regressed Queries]** (後退したクエリ) の **[プランの概要]** ウィンドウを使用して、後退したクエリのすべてのプランと一定期間のクエリのパフォーマンスを視覚化します。  
+-   後退したクエリの中から、複数のプランがあり、プランの選択が不適切だったためにパフォーマンスが低下しているクエリを簡単に見つけ出します。 **[Regressed Queries]** (後退したクエリ) の **[プランの概要]** ウィンドウを使用して、後退したクエリのすべてのプランと一定期間のクエリのパフォーマンスを視覚化します。  
   
 -   前のプランのほうがパフォーマンスが高いことが証明された場合は、そのプランを履歴から強制的に実行します。 **[低下したクエリ]** の **[プランの強制]** ボタンを使って、選んだプランをクエリで強制的に実行します。  
   
@@ -60,7 +56,7 @@ ms.locfileid: "51673831"
   
  右側のプランの概要を見て実行履歴を分析し、別のプランとそれらのランタイム統計を確認します。 下部ウィンドウで、別のプランを調べるか、別のプランを並べて ([比較] ボタンを使用します) それらを視覚的に比較します。  
   
-最適と思われるパフォーマンスのクエリを識別した後の操作は、問題の性質によって異なります。  
+パフォーマンスが低下したクエリを特定する際に必要なアクションは、問題の性質によって異なります。  
   
 1.  複数のプランを使用して実行されたクエリで、最後のプランのパフォーマンスが前のプランに比べて大幅に悪化している場合は、プラン強制実行メカニズムを使用して、今後の実行で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最適のプランを使用することを保証できます。  
   
@@ -148,7 +144,7 @@ ms.locfileid: "51673831"
 別の方法として、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを実行して、システム内のクエリ テキスト、クエリ、およびプランの合計数を取得し、query_hash と plan_hash を比較することで、それらの違いを判別できます。  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
 個別のクエリ テンプレートを使用するアプローチでは、プラン ガイドを作成する必要があります。  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -191,7 +187,7 @@ EXEC sp_create_plan_guide
 すべてのクエリ (または多くのクエリ) が自動パラメーター化の候補である場合は、データベース全体の `FORCED PARAMETERIZATION` を変更するほうが適切な方法である可能性があります。  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814335"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711223"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Web ポータル (SSRS ネイティブ モード)
 
@@ -54,7 +54,7 @@ Web ポータルでは、レポート サーバー フォルダーを参照し�
 
 Web ポータルは、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 SharePoint 統合モード用に構成されたレポート サーバーでは使用できません。
 
-一部の Web ポータル機能は、特定のエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] だけで利用できます。 詳細については、「[SQL Server 2016 の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
+一部の Web ポータル機能は、特定のエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] だけで利用できます。 詳しくは、「[SQL Server の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
 
 新しくインストールした場合、コンテンツおよび設定を操作するのに十分な権限を持っているのはローカル管理者のみです。 他のユーザーに権限を与えるには、ローカル管理者がレポート サーバーへのアクセスを許可するロールの割り当てを作成する必要があります。 ロールの割り当てが作成された後、ユーザーがアクセスできるようになるアプリケーション ページとタスクは、そのユーザーに対するロールの割り当てによって異なります。 詳細については、「[レポート サーバーへのユーザー アクセスを許可する](security/grant-user-access-to-a-report-server-report-manager.md)」をご覧ください。
 
@@ -126,6 +126,6 @@ Power BI Desktop レポートと Excel ブックのアクセス許可をアッ�
 [URL の構成 (SSRS 構成マネージャー)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)  
 [Reporting Services のブラウザー サポートの計画](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[SQL Server 2016 の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[SQL Server の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
 その他の質問 [Reporting Services のフォーラムにアクセスします](https://go.microsoft.com/fwlink/?LinkId=620231)

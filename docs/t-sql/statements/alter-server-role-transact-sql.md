@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0280b76490e82aa8bbad2d2dd3bf8cb451d81c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1b80f0d2ee798eea6aafb92d10aae50c14ceee2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541253"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +65,7 @@ ADD MEMBER *server_principal*
 DROP MEMBER *server_principal*  
 指定されたサーバー プリンシパルをサーバー ロールから削除します。 *server_principal* には、ログインまたはユーザー定義サーバー ロールを指定できます。 *server_principal* に、固定サーバー ロール、データベース ロール、または sa を指定することはできません。  
   
-WITH NAME **=***new_server_role_name*  
+WITH NAME **=**_new_server_role_name_  
 ユーザー定義サーバー ロールの新しい名前を指定します。 サーバー内に存在しない名前を指定してください。  
   
 ## <a name="remarks"></a>Remarks  
@@ -121,7 +121,7 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. サーバー ロールからドメイン アカウントを削除する  
-次の例では、`Production` という名前のユーザー定義サーバー ロールから `adventure-works\roberto0` という名前のドメイン アカウントを削除します。  
+次の例では、`adventure-works\roberto0` という名前のユーザー定義サーバー ロールから `Production` という名前のドメイン アカウントを削除します。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  

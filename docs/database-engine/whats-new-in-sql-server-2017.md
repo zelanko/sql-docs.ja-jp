@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a0c98bc640a28642277ad16ca3ec209ddaaf0c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541409"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>データベース エンジンの新機能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47838680"
 - メモリ最適化テーブルでの非クラスター化インデックス ビルドのパフォーマンス向上。 データベース復旧中の MEMORY_OPTIMIZED テーブルにおける bwtree (非クラスター化) インデックス リビルドのパフォーマンスが大幅に最適化されました。 この機能強化により、非クラスター化インデックス使用時のデータベースの復旧時間が大幅に短縮されます。  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) には、socket_count、cores_per_socket、numa_node_count の 3 つの新しい列があります。 過度の NUMA はホストの過剰な介入につながり、最終的にパフォーマンスの問題に変わる可能性があるため、これは VM でサーバーを実行する場合に便利です。
 - 新しい列 modified_extent_page_count\, は、データベースの各データベース ファイルの差分変更を追跡するために [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) に導入されました。 新しい列 modified_extent_page_count を使用すると、スマート バックアップ ソリューションをビルドできます。このソリューションは、データベース内の変更されたページの割合がしきい値 (たとえば、70 ～ 80%) を下回る場合は差分バックアップを実行し、それ以外の場合はデータベースの完全バックアップを実行します。
-- SELECT INTO … ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) で、SELECT INTO TSQL 構文に追加された **ON** キーワードのサポートにより、ユーザーの既定のファイル グループ以外のファイル グループにテーブルを読み込むことができるようになりました。
+- SELECT INTO ...ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) で、SELECT INTO TSQL 構文に追加された **ON** キーワードのサポートにより、ユーザーの既定のファイル グループ以外のファイル グループにテーブルを読み込むことができるようになりました。
 - Tempdb セットアップの機能強化 - セットアップ時に、ファイルあたり **256 GB** (262,144 MB) までの初期 tempdb ファイル サイズを指定できるようになりました。ファイル サイズが 1 GB より大きい値に設定されている場合、IFI が有効になっていないと、警告が顧客に表示されます。 指定されたtempdb データ ファイルの初期サイズによっては、セットアップ時間が指数関数的に長くなる可能性がある状況で、ファイルの瞬時初期化 (IFI) を有効にしない場合の影響を理解しておくことが重要です。 IFI はトランザクション ログ サイズには適用されないため、トランザクション ログに大きな値を指定すると、SQL Server サービス アカウントの IFI 設定に関係なく、セットアップ時に tempdb を起動中、セットアップ時間が必ず長くなります。
 - データベースごとのバージョン ストアの使用状況を追跡するために、dmv [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) が新たに導入されました。 この新しい dmv は、tempdb でバージョン ストアの使用状況を監視するときに便利で、tempdb サイズ変更を、運用サーバーでのパフォーマンスの低下やオーバーヘッドなしで、各データベースのバージョン ストア使用要件に基づいて事前に計画できます。
 - DBCC LOGINFO と似た VLF 情報を公開し、VLF の数やサイズが原因で発生する可能性があるトランザクション ログの問題や、顧客の shrinkfile に関する問題を監視、警告、および回避するために、DMF [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) が新しく導入されました。
@@ -56,14 +56,14 @@ ms.locfileid: "47838680"
 - SQL Server Management Studio バージョン 16.4 とともにリリースされた データベース チューニング アドバイザー (DTA) には、SQL Server 2016 以降を分析する際の追加のオプションがあります。    
    - 向上したパフォーマンス。 詳細については、「[Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations (データベース エンジン チューニング アドバイザー (DTA) の推奨事項を使用したパフォーマンスの強化)](../relational-databases/performance/performance-improvements-using-dta-recommendations.md)」を参照してください。
    - 列ストア インデックスの推奨事項を許可する `-fc` オプション。 詳細については、「[dta ユーティリティ](../tools/dta/dta-utility.md)」、および「[Columnstore index recommendations in Database Engine Tuning Advisor (DTA) (データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックス推奨事項)](../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)」を参照してください。  
-   - DTA を許可してクエリ ストアのワークロードをレビューする `-iq` オプション。 詳細については、「[Tuning Database Using Workload from Query Store (クエリ ストアのワークロードを使用してデータベースをチューニングする)](../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。  
+   - DTA を許可してクエリ ストアのワークロードをレビューする `-iq` オプション。 詳細については、「 [Tuning Database Using Workload from Query Store (クエリ ストアのワークロードを使用してデータベースをチューニングする)](../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。  
 - インメモリ機能については、メモリ最適化テーブルおよびネイティブにコンパイルされた関数の追加の強化機能を利用できます。 こうした強化機能を示すコード サンプルについては、「[インメモリ OLTP を使用した JSON の処理の最適化](../relational-databases/json/optimize-json-processing-with-in-memory-oltp.md)」を参照してください。
     - 計算列のインデックスなど、メモリ最適化テーブルの計算列のサポート。
     - ネイティブ コンパイル モジュールと CHECK 制約の JSON 関数の完全サポート。  
     - ネイティブ コンパイル モジュールの`CROSS APPLY` 演算子。   
 - 新しい文字列関数 [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md)、[TRANSLATE](../t-sql/functions/translate-transact-sql.md)、および[TRIM](../t-sql/functions/trim-transact-sql.md) が追加されました。   
 - [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) 関数で `WITHIN GROUP` 句がサポートされました。
-- 2 つの新しい日本語の照合順序ファミリ (Japanese_Bushu_Kakusu_140 and Japanese_XJIS_140) が追加され、これらの新しい日本語の照合順序用に、照合順序オプション Variation-selector-sensitive (_VSS) が追加されました。 また、すべての新しい照合順序では、_SC オプションを指定する必要がなく、自動的に補助文字をサポートします。 詳細については、「[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。   
+- 2 つの新しい日本語の照合順序ファミリ (Japanese_Bushu_Kakusu_140 and Japanese_XJIS_140) が追加され、これらの新しい日本語の照合順序用に、照合順序オプション Variation-selector-sensitive (_VSS) が追加されました。 また、すべての新しい照合順序では、_SC オプションを指定する必要がなく、自動的に補助文字をサポートします。 詳細については、「 [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。   
 - 新しい一括アクセス オプション ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) と [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) を使用すると、[EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) の新しい `BLOB_STORAGE` オプションで、CSV 形式で指定したファイルまたは Azure BLOB 記憶域に格納されているファイルから直接データにアクセスできます。
 - データベース **COMPATIBILITY_LEVEL** 140 が追加されました。   このレベルで実行しているお客様には、最新の言語機能とクエリ オプティマイザー動作が与えられます。 これには、Microsoft 製品の各リリース前バージョンの変更が含まれています。
 - 増分統計更新の方法が改善され、しきい値が計算されます (140 互換モード必須)。

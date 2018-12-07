@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 125ce02e483cc927cf5b6a1d37f4209dcc3dcb22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eadf8d4512e3dd5e119dd92e9e2039e0af9dc0ce
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836660"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617440"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-2 番目の引数で指定された一部の文字が対象の文字セットに変換された後に、最初の引数として指定された文字列を返します。
+2 番目の引数で指定された一部の文字が 3 番目の引数で指定された対象の文字セットに変換された後に、最初の引数として指定された文字列を返します。
 
 ## <a name="syntax"></a>構文   
 ```
@@ -36,23 +36,23 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>引数   
 
-inputString   
-任意の文字型 (つまり nvarchar、varchar、nchar、または char) の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
+ *inputString*   
+ 検索する文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *inputString* には、任意の文字データ型 (nvarchar、varchar、nchar、char) を指定できます。
 
-characters   
-置換対象の文字を含む任意の文字型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
+ *characters*   
+ 置換対象の文字を含む[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *characters* には、任意の文字データ型を指定できます。
 
-翻訳   
-型と長さが 2 番目の引数と一致する文字[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
+*translations*   
+ 置換文字を含む文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *translations* には、*characters* と同じデータ型および長さを指定する必要があります。
 
 ## <a name="return-types"></a>戻り値の型   
-2 番目の引数の文字が 3 番目の引数の一致する文字に置き換えられる、`inputString` と同じ型の文字式を返します。
+2 番目の引数の文字が 3 番目の引数の一致する文字に置き換えられる、`inputString` と同じデータ型の文字式を返します。
 
 ## <a name="remarks"></a>Remarks   
 
-文字と翻訳の長さが異なる場合、`TRANSLATE` 関数はエラーを返します。 文字または置換の引数として null 値が指定された場合、`TRANSLATE` 関数は変更されていない入力を返します。 `TRANSLATE` 関数の動作は、[REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数と同じと考えられます。   
+*characters* 式と *translations* 式の長さが異なる場合、`TRANSLATE` はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
 
-`TRANSLATE` 関数の動作は、複数の `REPLACE` 関数を使用した場合と同じです。
+`TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と同じです。
 
 `TRANSLATE` は常に SC 照合順序を認識しています。
 
@@ -68,9 +68,34 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 2*(3+4)/(7-2)
 ```
 
->  [!NOTE]
->  この例の `TRANSLATE` 関数は、`REPLACE` を使用する次のステートメントと同等ですが、はるかに簡単です。`SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+#### <a name="equivalent-calls-to-replace"></a>REPLACE と同等の呼び出し
 
+次の SELECT ステートメントには、REPLACE 関数の入れ子になった 4 回の呼び出しがグループになっています。 このグループは、1 つ前の SELECT での TRANSLATE 関数に対する 1 回の呼び出しと同等です。
+
+```sql
+SELECT
+REPLACE
+(
+      REPLACE
+      (
+            REPLACE
+            (
+                  REPLACE
+                  (
+                        '2*[3+4]/{7-2}',
+                        '[',
+                        '('
+                  ),
+                  ']',
+                  ')'
+            ),
+            '{',
+            '('
+      ),
+      '}',
+      ')'
+);
+```
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>B. GeoJSON ポイントを WKT に変換する    
 GeoJSON は、さまざまな地理的データ構造をエンコードするための形式です。 `TRANSLATE` 関数を使用すると、開発者は GeoJSON ポイントから WKT 形式への変換とその逆の変換に簡単に実行できます。 次のクエリは、入力の角かっこと中かっこを通常のかっこで置き換えます。   

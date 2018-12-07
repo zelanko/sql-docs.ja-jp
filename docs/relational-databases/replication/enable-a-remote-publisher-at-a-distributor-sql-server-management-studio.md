@@ -14,12 +14,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63b21aec220de42f9bf9fb8cd5fae1f109e501fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05bbc6f6eaad17fc49f210d20ab78126a68eeb60
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541983"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>ディストリビューターでのリモート パブリッシャーの有効化 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47710100"
   
 4.  **[ディストリビューター パスワード]** ページの **[パスワード]** テキスト ボックスおよび **[パスワードの確認入力]** テキスト ボックスで、 **distributor_admin** アカウントの複雑なパスワードを指定します。レプリケーションでは、このアカウントを使用してパブリッシャーからディストリビューターに接続し、管理タスクを実行します。  
   
-5.  パブリッシャーの設定を表示および変更するには、プロパティ ボタン (**[...]**) をクリックします。  
+5.  パブリッシャーの設定を表示および変更するには、プロパティ ボタン **[...]** をクリックします。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47710100"
   
 4.  **[パブリッシャー]** ページの **[パスワード]** テキスト ボックスおよび **[パスワードの確認入力]** テキスト ボックスで、 **distributor_admin** アカウントの複雑なパスワードを指定します。レプリケーションでは、このアカウントを使用してパブリッシャーからディストリビューターに接続し、管理タスクを実行します。  
   
-5.  パブリッシャーの設定を表示および変更するには、プロパティ ボタン (**[...]**) をクリックします。  
+5.  パブリッシャーの設定を表示および変更するには、プロパティ ボタン **[...]** をクリックします。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

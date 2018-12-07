@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c24413499991277e93c882c581cc57a7c07478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704050"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522913"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -226,7 +226,7 @@ OUTPUT 句
  *execute_statement*  
  SELECT ステートメントまたは READTEXT ステートメントでデータを返す有効な EXECUTE ステートメントです。 詳細については、「 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」を参照してください。  
   
- INSERT…EXEC ステートメントでは、EXECUTE ステートメントの RESULT SETS オプションを指定することができません。  
+ INSERT...EXEC ステートメントでは、EXECUTE ステートメントの RESULT SETS オプションを指定することができません。  
   
  *execute_statement* を INSERT で使用する場合、各結果セットに、テーブルの列または *column_list* の列との互換性が必要です。  
   
@@ -380,7 +380,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
     ```  
   
 ## <a name="error-handling"></a>エラー処理  
- TRY…CATCH 構造でステートメントを指定することで、INSERT ステートメントのエラー処理を実装できます。  
+ TRY...CATCH 構造でステートメントを指定することで、INSERT ステートメントのエラー処理を実装できます。  
   
  INSERT ステートメントが制約やルールに違反していたり、その値が列のデータ型と互換性を持たない場合は、ステートメントが失敗し、エラー メッセージが返されます。  
   
@@ -406,7 +406,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 ## <a name="security"></a>Security  
  リンク サーバーに接続する場合、送信側サーバーは受信側サーバーに接続するためにログイン名とパスワードをリンク サーバーに代わって提供します。 この接続を機能させるには、[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) を使用して、リンク サーバー間でログイン マッピングを作成する必要があります。  
   
- OPENROWSET(BULK…) を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 詳しくは、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」の「セキュリティに関する考慮事項」をご覧ください。  
+ OPENROWSET(BULK...) を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 詳しくは、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」の「セキュリティに関する考慮事項」をご覧ください。  
   
 ### <a name="permissions"></a>アクセス許可  
  対象のテーブルに対する INSERT 権限が必要です。  
@@ -424,7 +424,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 |[他のテーブルのデータを挿入する](#OtherTables)|INSERT...SELECT • INSERT...EXECUTE • WITH 共通テーブル式 • TOP • OFFSET FETCH|  
 |[標準的なテーブル以外の対象オブジェクトを指定する](#TargetObjects)|ビュー • テーブル変数|  
 |[リモート テーブルに行を挿入する](#RemoteTables)|リンク サーバー、OPENQUERY 行セット関数、OPENDATASOURCE 行セット関数|  
-|[テーブルまたはデータ ファイルのデータを一括読み込みする](#BulkLoad)|INSERT…SELECT • OPENROWSET 関数|  
+|[テーブルまたはデータ ファイルのデータを一括読み込みする](#BulkLoad)|INSERT...SELECT • OPENROWSET 関数|  
 |[ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする](#TableHints)|テーブル ヒント|  
 |[INSERT ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
   
@@ -537,7 +537,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
  このセクションの例では、あるテーブルの行を別のテーブルに挿入する方法を示します。  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. SELECT および EXECUTE オプションを使用して他のテーブルのデータを挿入する  
- 次の例では、INSERT…SELECT または INSERT…EXECUTE を使用して、あるテーブルのデータを別のテーブルに挿入する方法を示します。 各方法は、列リストに式とリテラル値を含む複数のテーブルを参照する SELECT ステートメントに基づきます。  
+ 次の例では、INSERT...SELECT または INSERT...EXECUTE を使用して、あるテーブルのデータを別のテーブルに挿入する方法を示します。 各方法は、列リストに式とリテラル値を含む複数のテーブルを参照する SELECT ステートメントに基づきます。  
   
  1 番目の INSERT ステートメントでは、SELECT ステートメントを使用して [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのソース テーブル (`Employee`、`SalesPerson`、および `Person`) からデータを取得し、その結果セットを `EmployeeSales` テーブルに格納します。 2 番目の INSERT ステートメントは、EXECUTE 句を使用して SELECT ステートメントを含むストアド プロシージャを呼び出します。3 番目の INSERT ステートメントは、EXECUTE 句を使用して SELECT ステートメントをリテラル文字列として参照します。  
   

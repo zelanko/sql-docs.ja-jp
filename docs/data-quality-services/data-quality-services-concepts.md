@@ -5,19 +5,18 @@ ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ac951cc6dd7ffc9225e1c97f0f698a0cecd5478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738460"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617118"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services の概念
 
@@ -61,7 +60,7 @@ ms.locfileid: "47738460"
   
  **データ照合**  
   
- データ スチュワードは、照合プロセスを使用して、わずかに異なる類似データを重複除去プロセスで調整できるようにデータを比較することができます。 DQS により、ナレッジ ベースに格納された照合ルールに基づいて重複除去が実行されます。照合プロセスのパラメーターは、データ スチュワードがデータ品質プロジェクトから指定します。 詳細については、「 [データ照合](../data-quality-services/data-matching.md)」をご覧ください。  
+ データ スチュワードは、照合プロセスを使用して、わずかに異なる類似データを重複除去プロセスで調整できるようにデータを比較することができます。 DQS により、ナレッジ ベースに格納された照合ルールに基づいて重複除去が実行されます。照合プロセスのパラメーターは、データ スチュワードがデータ品質プロジェクトから指定します。 詳しくは、「 [Data Matching](../data-quality-services/data-matching.md)」をご覧ください。  
   
  **プロファイルと通知**  
   

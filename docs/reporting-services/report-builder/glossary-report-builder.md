@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e96093d286fa9ca7d5d76fd30206043ef8396b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857160"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541806"
 ---
 # <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
@@ -186,7 +186,7 @@ ms.locfileid: "47857160"
 |KPI (KPI)|「主要業績評価指標 (key performance indicator)」を参照。|  
 |ラベル フィールド (label field)|対応するキー フィールドのラベルを識別するレポート データセット フィールド。 パラメーターとデータ領域には、値の代わりにキー フィールドのラベルを表示できます。|  
 |待機時間 (latency)|あるサーバーでデータ変更が完了して、その変更が他のサーバーに反映されるまでの経過時間。|  
-|緯度 (latitude)|世界測地システム (WGS 84) データで、度分の間に小数点を入れた度分秒単位で表した緯度座標。 有効な範囲は –90.0 ～ +90.0 です。|  
+|緯度 (latitude)|世界測地システム (WGS 84) データで、度分の間に小数点を入れた度分秒単位で表した緯度座標。 有効な範囲は -90.0 ～ +90.0 です。|  
 |レイヤー (layer)|マップ レポート アイテムで、レイヤーは 1 種類の空間データの型と表示を指定します。 マップ レポート アイテムは複数のレイヤーのコンテナーです。|  
 |LCID (LCID)|Windows ベースのロケールを識別する番号。|  
 |凡例 (legend)|レポート グラフ、マップ、またはゲージ データ領域で、データと基になるデータ値の表示と表現を示す要素。|  
@@ -199,7 +199,7 @@ ms.locfileid: "47857160"
 |ログ ファイル (log file)|データベースで行われた変更が記録されているファイルまたはファイルのセット。|  
 |論理名 (logical name)|ファイルを識別するために SQL Server が使用する名前。|  
 |論理演算子 (logical operators)|演算子 AND、OR、および NOT。 WHERE 句の検索条件を連結するために使用します。|  
-|経度 (longitude)|世界測地システム (WGS 84) データで、度分の間に小数点を入れた度分秒単位で表した座標。 有効な範囲は –180.0 ～ +180.0 です。|  
+|経度 (longitude)|世界測地システム (WGS 84) データで、度分の間に小数点を入れた度分秒単位で表した座標。 有効な範囲は -180.0 ～ +180.0 です。|  
 |多対多のリレーションシップ (many-to-many relationship)|各テーブルの行が、関連付けられたテーブルの複数の行と一致するような、2 つのテーブル間のリレーションシップ。 たとえば、各販売請求書には複数の製品を記載できますが、各製品は複数の販売請求書に記載できます。|  
 |多対一のリレーションシップ (many-to-one relationship)|あるテーブルの 1 つの行が別のテーブルの複数の行に関連付けられるような、2 つのテーブル間のリレーションシップ。|  
 |マップ (map)|タイトル、さまざまな種類の凡例、マップ レイヤーのコンテナーであるレポート アイテム。|  

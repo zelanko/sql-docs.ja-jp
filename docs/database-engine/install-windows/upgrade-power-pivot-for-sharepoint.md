@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605422"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518303"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアップグレード
 
@@ -84,7 +84,7 @@ ms.locfileid: "51605422"
   
     1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ウィザードで、 **[インストール]** をクリックします。  
   
-    2.  **[SQL Server 2005、SQL Server 2008、または SQL Server 2008 R2 からのアップグレード]** をクリックします。  
+    2.  **[SQL Server ... からのアップグレード]** をクリックします。  
   
     3.  **[インスタンスの選択]** ページで、 **POWERPIVOT** インスタンス名を選択し、 **[次へ]** をクリックします。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "51605422"
   
          ![2 つの PowerPivot 構成ツール](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "2 つの PowerPivot 構成ツール")  
   
-         スイッチまたは  
+         または  
   
          **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントして、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For SharePoint 2013 構成**の順にクリックします。 このツールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合にのみ表示されることに注意してください。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51605422"
         > [!IMPORTANT]  
         >  最初のアクションである **[ファーム ソリューションのアップグレード]** は、常に最初に処理する必要があります。 このアクションを実行すると、サーバーの構成に使用する PowerShell コマンドレットを登録できます。 このアクションを実行したときにエラーが発生する場合は、続行しないでください。 タスク一覧の残りのアクションを処理する前に、エラーとして返された情報に基づいて問題を診断し、解決してください。  
   
-    7.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 **[実行]** をクリックすると、アクションがバッチ モードで処理されることを示す次の警告が表示されます: "**ツールで有効としてフラグが立てられている構成設定はすべて SharePoint ファームに適用されます。続行しますか?**”。  
+    7.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 **[実行]** をクリックすると、アクションがバッチ モードで処理されることを示す次の警告が表示されます: "**ツールで有効としてフラグが立てられている構成設定はすべて SharePoint ファームに適用されます。続行しますか?**"  
   
     8.  **[はい]** をクリックして続行します。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "51605422"
   
     3.  **[機能、サービス、アプリケーション、およびソリューションのアップグレード]** をクリックし、 **[OK]** をクリックして続行します。  
   
-    4.  次の警告が表示されます: " [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードのブックを最新のバージョンにアップグレードしようとしています。 既存のブックに加えたカスタマイズは失われます。 続行しますか?"  
+    4.  次の警告が表示されます: "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードのブックを最新のバージョンにアップグレードしようとしています。 既存のブックに加えたカスタマイズは失われます。 続行しますか?"  
   
          これは、データ更新操作を報告する [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードのブックに関する警告です。 これらのブックをカスタマイズしている場合、これらのブックに加えた変更は、既存のファイルを新しいバージョンで置き換えるときに失われます。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "51605422"
   
     9. **[はい]** をクリックして続行します。  
   
-    10. ファーム内のソリューションおよび機能のアップグレードが完了するまで、数分かかります。 この間、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する接続要求は、"データを更新できません" または "要求されたアクションを実行しようとしたときにエラーが発生しました。 再試行してください" のようなエラーが表示されます。 アップグレードが完了すると、サーバーは使用可能になり、これらのエラーは発生しなくなります。  
+    10. ファーム内のソリューションおよび機能のアップグレードが完了するまで、数分かかります。 この間、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する接続要求は、"データを更新できません" または "要求されたアクションを実行しようとしたときにエラーが発生しました。 再試行してください" のようなエラーが表示されます。 アップグレードが完了すると、サーバーは使用可能になり、これらのエラーは発生しなくなります。  
   
 8.  ファーム内の各 SQL Server Analysis Services (**) サービスに対して、1) SQL Server セットアップを実行する、2)** 構成ツールを実行するという[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]処理を繰り返します [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 。  
   
@@ -216,15 +216,15 @@ ms.locfileid: "51605422"
     1.  SharePoint 2010 管理シェルを管理者として起動し、次のコマンドを実行してキュー内のジョブを表示します。  
   
         ```  
-        Stsadm –o enumdeployments  
+        Stsadm -o enumdeployments  
         ```  
   
     2.  既存の配置について、 **[種類]** が "取り消し" または "展開" であり、 **[ファイル]** が powerpivotwebapp.wsp または powerpivotfarm.wsp であることを確認します。  
   
-    3.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションに関連するデプロイまたは取り消しの場合、 **[JobId]** の GUID 値をコピーし、次のコマンドに貼り付けます (シェルの [編集] メニューの [マーク]、[コピー]、および [貼り付け] を使用して GUID をコピーします)。  
+    3.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションに関連するデプロイまたは取り消しの場合、**[JobId]** の GUID 値をコピーし、次のコマンドに貼り付けます (シェルの [編集] メニューの [マーク]、[コピー]、および [貼り付け] を使用して GUID をコピーします)。  
   
         ```  
-        Stsadm –o canceldeployment –id “<GUID>”  
+        Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  構成ツールで **[検証]** に続けて **[実行]** をクリックして、タスクを再試行します。  

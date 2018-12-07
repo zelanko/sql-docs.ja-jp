@@ -12,12 +12,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660371"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533408"
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "51660371"
 #### <a name="customer-case-studies"></a>お客様の導入事例
 
 - CMC Markets は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] でインメモリ OLTP を利用し、継続的な低遅延を達成しました (「[Because a second is too long to wait, this financial services firm is updating its trading software now](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)」 (1 秒の待機時間は長すぎるので、今、この金融サービス企業は取引ソフトウェアを更新しています))。
-- Derivco は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] でインメモリ OLTP を利用して、増加したスループットに対応し、ワークロードの急増を処理しています (「[When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)」 (オンライン ゲーム会社は将来を危険にさらしたくない場合、SQL Server 2016 に賭けます))。
+- Derivco は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] でインメモリ OLTP を利用して、増加したスループットに対応し、ワークロードの急増を処理しています (「[When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)」(オンライン ゲーム会社は将来を危険にさらしたくない場合、SQL Server 2016 に賭けます))。
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>IoT (モノのインターネット) などのデータ統合
@@ -83,7 +83,7 @@ ms.locfileid: "51660371"
 データの取り込みにメモリ最適化テーブルを使用します。 取り込みの大部分が (更新ではなく) 挿入で構成され、データのインメモリ OLTP ストレージの占有領域が重要な場合、次のいずれかを行います。
 
 - [を実行するジョブを使用して、](../indexes/columnstore-indexes-overview.md)クラスター化列ストア インデックス `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`が指定されたディスクベースのテーブルに定期的にデータを一括オフロードします。または、
-- [一時メモリ最適化テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) を使用して、履歴データを管理します。このモードでは、履歴データはディスクに保存され、データの移動はシステムによって管理されます。
+- [一時メモリ最適化テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)を使用して、履歴データを管理します。このモードでは、履歴データはディスクに保存され、データの移動はシステムによって管理されます。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サンプル リポジトリに一時メモリ最適化テーブル、メモリ最適化テーブル型、およびネイティブ コンパイル ストアド プロシージャを使用するスマート グリッド アプリケーション含めることでデータの取り込みを高速化し、センサー データのインメモリ OLTP ストレージの占有領域を管理しています。 
 
@@ -232,4 +232,4 @@ GO
 [メモリ最適化を使用した一時テーブルとテーブル変数のパフォーマンスの向上](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [SQL データベースでのインメモリ テクノロジを使用したパフォーマンスの最適化](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx) 
+[インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)。 

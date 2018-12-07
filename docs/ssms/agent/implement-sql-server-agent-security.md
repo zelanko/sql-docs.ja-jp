@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71e15d2c5bec349b20a87023912a80864563e8ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 61b886408c25f2200140609879421623f25cb81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696171"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521669"
 ---
 # <a name="implement-sql-server-agent-security"></a>SQL Server エージェントのセキュリティの実装
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ ms.locfileid: "51696171"
   
 -   ACE は、SSDP によって所有される次の構成 DLL に依存します。理由は、これらの DLL の API は ACE によって呼び出されるためです。  
   
-    -   **SCO** : Microsoft.SqlServer.Configuration.Sco.dll。仮想アカウント用の新しい SCO 検証が含まれます。  
+    -   **SCO**: Microsoft.SqlServer.Configuration.Sco.dll。仮想アカウント用の新しい SCO 検証が含まれます。  
   
-    -   **Cluster** : Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster**: Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** : Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC**: Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Extension** : Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Extension**: Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>参照  
 [定義済みロールの使用](../../reporting-services/security/role-definitions-predefined-roles.md)  

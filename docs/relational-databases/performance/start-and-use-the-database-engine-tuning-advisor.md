@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661131"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517671"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51661131"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>SQL Server Management Studio からデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **の** メニューの **[データベース エンジン チューニング アドバイザー]** でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。  
+1.   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **の** メニューの **[データベース エンジン チューニング アドバイザー]** でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio のクエリ エディターからデータベース エンジン チューニング アドバイザーを起動するには  
   
@@ -245,16 +245,16 @@ ms.locfileid: "51661131"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  分析に使用するイベントの数を変更するには、 **–n** オプションを指定します。 次の例では、キャッシュ エントリの数を 2,000 に増やします。  
+2.  分析に使用するイベントの数を変更するには、**-n** オプションを指定します。 次の例では、キャッシュ エントリの数を 2,000 に増やします。  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  インスタンスのすべてのデータベースのイベントを分析するには、 **-ipf** オプションを指定します。  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>ワークロードと dta ユーティリティの既定の設定を使用してデータベースをチューニングするには  
@@ -309,7 +309,7 @@ ms.locfileid: "51661131"
 ##  <a name="XMLInput"></a> XML 入力ファイルを作成する  
  経験豊かな XML 開発者の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用できる XML 形式のファイルを作成して、ワークロードをチューニングできます。 このような XML ファイルを作成するには、使い慣れた XML ツールを使用してサンプル ファイルを編集するか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマからインスタンスを生成します。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールの次の場所から入手できます。  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールの次の場所から入手できます。  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   

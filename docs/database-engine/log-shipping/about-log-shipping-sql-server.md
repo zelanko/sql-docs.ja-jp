@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 92b4b124f2cf76d0fedd2f22e32f10204ed06ad6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50c62db9ef3d635f8486285aef75f6e3d9bfc06c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534837"
 ---
 # <a name="about-log-shipping-sql-server"></a>ログ配布について (SQL Server)
 
@@ -119,7 +119,7 @@ ms.locfileid: "47733816"
 ### <a name="a-typical-log-shipping-configuration"></a>通常のログ配布構成  
  次の図に、プライマリ サーバー インスタンス、3 台のセカンダリ サーバー インスタンス、および監視サーバー インスタンスを使用するログ配布構成を示します。 この図に示されているバックアップ ジョブ、コピー ジョブ、および復元ジョブの実行手順は、次のようになります。  
   
-1.  プライマリ サーバー インスタンスがバックアップ ジョブを実行し、プライマリ データベースのトランザクション ログをバックアップします。 このサーバー インスタンスは、次にログ バックアップをプライマリ ログ バックアップ ファイルに配置し、バックアップ フォルダーに送信します。  この図では、バックアップ フォルダーは共有ディレクトリ ( *バックアップ共有*) にあります。  
+1.  プライマリ サーバー インスタンスがバックアップ ジョブを実行し、プライマリ データベースのトランザクション ログをバックアップします。 このサーバー インスタンスは、次にログ バックアップをプライマリ ログ バックアップ ファイルに配置し、バックアップ フォルダーに送信します。  この図では、バックアップ フォルダーは共有ディレクトリ ("*バックアップ共有*") にあります。  
   
 2.  3 台のセカンダリ サーバー インスタンスは、それぞれのコピー ジョブを実行し、プライマリ ログ バックアップ ファイルをローカルのコピー先フォルダーにコピーします。  
   

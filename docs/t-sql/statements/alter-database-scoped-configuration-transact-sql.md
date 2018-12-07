@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7fa7bf2f5d315bda158ed45f3965fbc2a952fb00
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700300"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641503"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -111,7 +111,7 @@ PRIMARY
 
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
-[パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)を有効にするか無効にします。 既定値は ON です。 PARAMETER_SNIFFING を ON に設定することは、[トレース フラグ 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にすることと同じです。
+[パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)を有効にするか無効にします。 既定値は ON です。 PARAMETER_SNIFFING を OFF に設定することは、[トレース フラグ 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にすることと同じです。
 
 > [!TIP]
 > クエリ レベルでこれを行う方法については、「**OPTIMIZE FOR UNKNOWN** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。
@@ -121,7 +121,7 @@ PRIMARY
 
 データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリでこの設定の値がプライマリに設定されている値になることを示します。 [パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)の使用に関するプライマリの構成が変更されると、セカンダリの値も適宜変更されます。セカンダリの値を明示的に設定する必要はありません。 PRIMARY はセカンダリの既定の設定です。
 
-QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
+<a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 データベースの互換性レベルに関係なく、クエリ最適化修正プログラムを有効または無効にします。 既定値は **OFF** です。特定のバージョンで利用できる最高の互換性レベルが導入された後に公開されたクエリ最適化修正プログラムが無効になります (RTM 後)。 これを **ON** に設定することは、[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にすることと同じです。
 

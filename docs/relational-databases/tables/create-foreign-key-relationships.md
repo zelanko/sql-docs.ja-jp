@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 978997ac3048bffb2e8f475d2c728a38b7a27283
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 544dbc5722f1af81b3d4b858a8b6b5e4b2b7165f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383587"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517764"
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "49383587"
     
 4.  **[選択されたリレーションシップ]** ボックスの一覧で、リレーションシップをクリックします。    
     
-5.  右側のグリッドの **[テーブルと列の指定]** をクリックし、その右側にある省略記号 (**[...]**) をクリックします。    
+5.  右側のグリッドの **[テーブルと列の指定]** をクリックし、その右側にある省略記号 ( **[...]** ) をクリックします。    
     
 6.  **[テーブルと列]** ダイアログ ボックスの **[主キー]** ボックスの一覧で、リレーションシップの主キー側となるテーブルをクリックします。    
     

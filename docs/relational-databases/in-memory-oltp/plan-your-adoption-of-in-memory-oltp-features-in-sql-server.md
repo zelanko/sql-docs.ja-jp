@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e8ebbbd4b9b507e8f41af26be70c676afe61c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803490"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519564"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server でのインメモリ OLTP 機能の採用計画
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -194,7 +194,7 @@ IDENTITY 列を再シードするために[DBCC CHECKIDENT](../../t-sql/database
 
 
 
-## <a name="d-performance"></a>D. [パフォーマンス]
+## <a name="d-performance"></a>D. パフォーマンス
 
 このセクションでは、メモリ最適化テーブルの優れたパフォーマンスが最大限に生かされないままになる可能性のある状況について説明します。
 
@@ -297,7 +297,7 @@ SQL Server 2016 の場合
 スクリプトに *再試行ロジック* を追加することで、Transact-SQL スクリプトを考えられるトランザクション エラーに対してより堅牢にすることができます。 再試行ロジックは、UPDATE や DELETE 呼び出しが頻繁に行われる場合や、メモリ最適化テーブルが別のテーブルの外部キーによって参照される場合に特に役立つことがあります。 詳細については、次の情報を参照してください。
 
 - [メモリ最適化テーブルでのトランザクション](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [メモリ最適化テーブルでのトランザクション依存の制限 – エラー 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [メモリ最適化テーブルでのトランザクション依存の制限 - エラー 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
 
 
 

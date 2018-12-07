@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ea8e6931ef27faf80d1bd5f2aa23c9e5499266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed90c887a9aeaeca9939511e215464b0b51ba226
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699750"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711673"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>レポート ビルダーの作成環境 (SSRS)
   レポート ビルダー [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、Visual Studio 以外で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページネーションのあるレポートを作成するためのスタンドアロンの作成環境です。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
@@ -41,11 +41,11 @@ ms.locfileid: "47699750"
   
 -   レポートおよび関連アイテムを SharePoint ライブラリ、レポート サーバー、またはローカル コンピューターに保存します。  
   
- レポート ビルダーとレポート デザイナーは、多くの機能を共有します。 SQL Server 2016 のレポート ビルダーの詳細は [ここ](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)にあります。  
+ レポート ビルダーとレポート デザイナーは、多くの機能を共有します。 SQL Server のレポート ビルダーの詳細は[ここ](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)にあります。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーをインストール](../../reporting-services/install-windows/install-report-builder.md)   
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
- [レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+ [レポート デザイナーを使用してレポートをデザインする (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

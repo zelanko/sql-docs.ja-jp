@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d17a0c27fa6ae4ed3c8cb609a41c44ad0342adae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2505215ccc58c9f85d256a5aa4a9de1d292cb5e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653270"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617612"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -33,7 +32,7 @@ ms.locfileid: "47653270"
   
 -   *コンピューター支援型* と *対話型*の 2 手順のプロセスでデータをクレンジングします。 コンピューター支援型プロセスでは、DQS ナレッジ ベースのナレッジを使用して、データを自動的に処理し、置換/修正を提案します。 次の対話型手順では、データ スチュワードはコンピューター支援型クレンジングの間に DQS によって提案された変更を承認、拒否、または修正できます。  
   
--   ドメイン値、ドメイン ルール、および参照データを使用して、顧客データを標準化および拡充します。 たとえば、"St." を “Street” に変更することで用語の使用を標準化し、 "1 Microsoft way Redmond 98006" を "1 Microsoft Way, Redmond, WA 98006" に変更して足りない要素を補充することによりデータを拡充します。  
+-   ドメイン値、ドメイン ルール、および参照データを使用して、顧客データを標準化および拡充します。 たとえば、"St." を "Street" に変更することで用語の使用を標準化し、 "1 Microsoft way Redmond 98006" を "1 Microsoft Way, Redmond, WA 98006" に変更して足りない要素を補充することによりデータを拡充します。  
   
 -   単一の直感的な一貫性のあるウィザードに似たインターフェイスを提供し、ユーザーがデータ内を移動して、非常に大きいデータ セットのエラーを検査できるようにします。  
   

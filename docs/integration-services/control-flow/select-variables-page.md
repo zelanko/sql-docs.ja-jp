@@ -16,17 +16,17 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6083c77a8bb3474507b8a555dbeaf6e627cf3cb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528213"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
   **[変数の選択]** ダイアログ ボックスを使用すると、スクリプト タスクまたはスクリプト コンポーネントを構成するときに、 **ReadOnlyVariables** プロパティおよび **ReadWriteVariables** プロパティで 1 つ以上の変数を選択できます。  
   
- **[変数の選択]** ダイアログ ボックスを開くには、 **[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** ページで、 **[カスタム プロパティ]** の下にある **ReadOnlyVariables** プロパティまたは **ReadWriteVariables** プロパティのいずれかを探して、そのプロパティに関連付けられている参照ボタン ([...]) をクリックします。  
+ **[変数の選択]** ダイアログ ボックスを開くには、**[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** ページで、 **[カスタム プロパティ]** の下にある **ReadOnlyVariables** プロパティまたは **ReadWriteVariables** プロパティのいずれかを探して、そのプロパティに関連付けられている参照ボタン ( [...] ) をクリックします。  
   
 ## <a name="options"></a>[変数]  
  選択ボックス  

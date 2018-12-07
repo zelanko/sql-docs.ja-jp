@@ -15,12 +15,12 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 052c7f8374fbdc047af6452dc117d1651bc35edc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e55e29f428185f195b65ae046df3aa63b8c35c3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782010"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539661"
 ---
 # <a name="create-a-credential"></a>資格情報の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47782010"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -63,13 +63,13 @@ ms.locfileid: "47782010"
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[資格情報]** フォルダーを右クリックし、 **[新しい資格情報]** をクリックします。  
+2.  **[資格情報]** フォルダーを右クリックし、**[新しい資格情報...]** をクリックします。  
   
 3.  **[新しい資格情報]** ダイアログ ボックスで、 **[資格情報名]** ボックスに資格情報の名前を入力します。  
   
 4.  **[ID]** ボックスに、送信用の接続に使用するアカウントの名前を入力します ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のコンテキストが適用されない場合)。 通常、これは Windows ユーザー アカウントですが、ID を別の種類のアカウントにすることができます。  
   
-     または、省略記号 **[…]** をクリックして **[ユーザーまたはグループの選択]** ダイアログ ボックスを開きます。  
+     または、省略記号 **[...]** をクリックして **[ユーザーまたはグループの選択]** ダイアログ ボックスを開きます。  
   
 5.  **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスに、 **[ID]** ボックスに指定したアカウントのパスワードを入力します。 **[ID]** ボックスの値が Windows ユーザー アカウントである場合は、Windows パスワードを入力します。 パスワードが不要である場合は、 **[パスワード]** ボックスを空にできます。  
   

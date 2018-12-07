@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641409"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535541"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   **SSISDB** カタログは、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバーに配置した [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) プロジェクトを操作するための中核となります。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -394,7 +394,7 @@ ms.locfileid: "51641409"
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] には SSISDB データベースが用意されています。 **SSISDB** カタログに格納されているオブジェクト、設定、および業務データを検査するには、SSISDB データベースのビューに対してクエリを実行します。 このトピックでは、データベースのバックアップと復元の手順について説明します。  
   
- **SSISDB** カタログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したパッケージを格納します。 カタログの詳細については、「 [SSIS カタログ](../../integration-services/catalog/ssis-catalog.md)」を参照してください。  
+ **SSISDB** カタログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したパッケージを格納します。 カタログの詳細については、「 [SSIS カタログ](../../integration-services/catalog/ssis-catalog.md)」を参照してください。  
   
 ###  <a name="backup"></a> SSIS データベースをバックアップするには  
   
@@ -627,7 +627,7 @@ SSISDB データベースを Always On 可用性グループに追加する手�
 > [!WARNING]  
 >  SSISDB データベースの自動フェールオーバーをサポートするには、Always On のSSIS のサポートを有効にする必要があります。  
   
- Always On 可用性グループから新しく追加したセカンダリ レプリカが一覧に表示されます。 SSIS サーバー インスタンスを再起動するたびに **[接続]** ボタンをクリックして、認証資格情報を入力してレプリカに接続します。 Always On の SSIS サポートを有効にするには、ユーザー アカウントは、各レプリカの sysadmin グループのメンバーである必要があります。 各レプリカに正常に接続できたら、 **[OK]** をクリックして、Always On の SSIS のサポートを有効にします。  
+ Always On 可用性グループから新しく追加したセカンダリ レプリカが一覧に表示されます。 一覧の各レプリカの **[接続]** をクリックし、認証資格情報を入力してレプリカに接続します。 Always On の SSIS サポートを有効にするには、ユーザー アカウントは、各レプリカの sysadmin グループのメンバーである必要があります。 各レプリカに正常に接続できたら、 **[OK]** をクリックして、Always On の SSIS のサポートを有効にします。  
  
 他の前提条件を満足した後で、コンテキスト メニューの **[Enable Always On support]** \(Always On サポートの有効化\) が無効にオプションとして表示される場合は、次の操作を試してみてください。
 1.  **[更新]** オプションをクリックして、コンテキスト メニューを更新します。
@@ -635,13 +635,13 @@ SSISDB データベースを Always On 可用性グループに追加する手�
 3.  SQL Server のバージョンが 13.0 以上であることを確認します。 SSIS は、SQL Server 2016 以降のバージョンでのみ Always On をサポートします。
 
 ###  <a name="Upgrade"></a> 可用性グループの SSISDB をアップグレードする  
- 以前のバージョンから SQL Server をアップグレードし、SSISDB が Always On 可用性グループに含まれる場合、"Always On 可用性グループの SSISDB チェック" 規則でアップグレードがブロックされることがあります。 このブロックが発生するのは、可用性データベースがマルチユーザー データベースである必要があるにもかかわらず、アップグレードがシングル ユーザー モードで実行されたためです。 そのため、アップグレードまたは修正プログラムの適用中には、SSISDB を含むすべての可用性データベースがオフラインになり、アップグレードまたは修正プログラムの適用が行われません。 アップグレードを続行するには、まず可用性グループから SSISDB を削除し、次に各ノードのアップグレードまたは修正プログラムの適用を行い、さらに SSISDB を可用性グループに追加します。  
+ 以前のバージョンから SQL Server をアップグレードするとき、SSISDB が Always On 可用性グループに含まれる場合、"Always On 可用性グループの SSISDB の確認" ルールでアップグレードがブロックされることがあります。 このブロックが発生するのは、可用性データベースがマルチユーザー データベースである必要があるにもかかわらず、アップグレードがシングル ユーザー モードで実行されたためです。 そのため、アップグレードまたは修正プログラムの適用中には、SSISDB を含むすべての可用性データベースがオフラインになり、アップグレードまたは修正プログラムの適用が行われません。 アップグレードを続行するには、まず可用性グループから SSISDB を削除し、次に各ノードのアップグレードまたは修正プログラムの適用を行い、さらに SSISDB を可用性グループに追加します。  
   
- "Always On 可用性グループ内の SSISDB の確認" の規則でブロックされる場合、次の手順に従って SQL Server をアップグレードします。  
+ "Always On 可用性グループ内の SSISDB の確認" ルールでブロックされる場合、次の手順に従って SQL Server をアップグレードします。  
   
 1.  可用性グループから SSISDB を削除します。 詳細については、「[可用性グループからのセカンダリ データベースの削除 (SQL Server)](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)」および「[可用性グループからのプライマリ データベースの削除 (SQL Server)](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)」を参照してください。  
   
-2.  アップグレード ウィザードで **[再実行]** をクリックします。 "Always On 可用性グループ内の SSISDB の確認" 規則に合格します。  
+2.  アップグレード ウィザードで **[再実行]** をクリックします。 "Always On 可用性グループ内の SSISDB の確認" ルールに合格します。  
   
 3.  **[次へ]** をクリックしてアップグレードを続行します。  
   

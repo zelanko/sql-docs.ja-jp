@@ -18,12 +18,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 405c8ed92f76c2b08baf8c4fd7b7e29a366344f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720630"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534077"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>役割の交代中に発生するサービスの中断時間の算出 (データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47720630"
  データベースのフェールオーバー時間は、再実行キュー内のログがミラー サーバーからロールフォワードされる速度によって決まります。つまり、主にシステムのハードウェアと現在のワークロードによって決まります。 場合によっては、プリンシパル データベースがビジーになり、ミラー サーバーからログがロールフォワードされる速度よりも、プリンシパル サーバーからミラー サーバーにログが送信される速度の方が大幅に速くなることがあります。 この状況では、ミラー サーバーが再実行キューのログをロールフォワードする間、フェールオーバーに相当な時間がかかる場合があります。 再実行キューの現在のサイズを調べるには、データベース ミラーリング パフォーマンス オブジェクトの **Redo Queue** カウンターを使用します。 詳しくは、「 [SQL Server:Database Mirroring オブジェクト](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)」を参照してください。  
   
 ### <a name="estimating-the-failover-redo-rate"></a>フェールオーバーの再実行速度の測定  
- 実稼働データベースのテスト コピーを使用して、ログ レコードのロールフォワードに必要な時間 ( *再実行速度*) を測定できます。  
+ 実稼働データベースのテスト コピーを使用して、ログ レコードのロールフォワードに必要な時間 ("*再実行速度*") を測定できます。  
   
  フェールオーバー時のロールフォワード時間を測定する方法は、再実行フェーズ中にミラー サーバーによって使用されるスレッドの数によって異なります。 スレッドの数は以下の条件によって異なります。  
   

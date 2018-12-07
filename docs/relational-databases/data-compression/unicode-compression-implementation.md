@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2637e6c503a5272ff7f4e1f6bc224ecb4449bbd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d3a4ec486e08827d6a56564950106e766dabcc8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633070"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525550"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 圧縮の実装
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47633070"
 >  行内に格納される場合であっても、 **nvarchar(max)** データでは Unicode 圧縮がサポートされません。 ただし、このデータ型ではページ圧縮の利点を得ることができます。  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>以前のバージョンの SQL Server からのアップグレード  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした場合、圧縮されているか圧縮されていないかにかかわらず、データベース オブジェクトに対して Unicode 圧縮に関連する変更は加えられません。 データベースのアップグレード後、オブジェクトには次のような影響があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした場合、圧縮されているか圧縮されていないかにかかわらず、データベース オブジェクトに対して Unicode 圧縮に関連する変更は加えられません。 データベースのアップグレード後、オブジェクトには次のような影響があります。  
   
 -   オブジェクトが圧縮されていない場合、何も変更は加えられず、オブジェクトは以前と同様に機能します。  
   

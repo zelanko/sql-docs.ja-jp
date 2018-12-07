@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88bb5e660d992139ed9bf748544a52ed9839b0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637490"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534443"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47637490"
   
     -   **@working_directory** パラメーターの値にプリンシパルで使用するスナップショット フォルダーを設定します。  
   
-4.  **–PublisherFailoverPartner** エージェント パラメーターの値にミラー名を指定します。 フェールオーバーの後、以下のエージェントでミラーを特定する場合にこのエージェント パラメーターが必要になります。  
+4.  **-PublisherFailoverPartner** エージェント パラメーターの値にミラー名を指定します。 フェールオーバーの後、以下のエージェントでミラーを特定する場合にこのエージェント パラメーターが必要になります。  
   
     -   スナップショット エージェント (すべてのパブリケーション用)  
   
@@ -97,9 +97,9 @@ ms.locfileid: "47637490"
   
     -   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [レプリケーション エージェント実行可能ファイルの概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     **–PublisherFailoverPartner** をエージェント プロファイルに追加して、プロファイルにミラー名を指定することをお勧めします。 たとえば、ストアド プロシージャを使用してレプリケーションを構成する場合、以下のように指定します。  
+     **-PublisherFailoverPartner** をエージェント プロファイルに追加して、プロファイルにミラー名を指定することをお勧めします。 たとえば、ストアド プロシージャを使用してレプリケーションを構成する場合、以下のように指定します。  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

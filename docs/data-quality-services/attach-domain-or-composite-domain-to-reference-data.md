@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
@@ -15,12 +14,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a317f61002d185b73c146a8fd1392252211928c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730820"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617084"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>参照データへのドメインまたは複合ドメインのアタッチ
 
@@ -34,9 +33,9 @@ ms.locfileid: "47730820"
 > [!WARNING]  
 >  参照データ サービスにアタッチされた複合ドメインは、ドメインを参照データ サービス スキーマの列にマップするときに、ドメインのドロップダウン リストで使用できます。 複合ドメインを参照データ サービス スキーマの列にマップしないでください。複合ドメイン内の個々のドメインのみを参照データ サービス スキーマの適切な列にマップする必要があります。 それ以外の場合、エラーが発生します。  
   
- 参照データ サービス スキーマには、参照データ サービスを使用する場合に適切なドメインにマップする必要がある必須列が含まれている場合があります。 参照データ スキーマの必須列には列名に "(M)" と表示されます。 たとえば、 **AddressLine** は **Melissa Data – Address Data** の必須スキーマ列で、 **CompanyName** は **Digital Trowel Inc. – Us companies and professional data for SQL users**の必須スキーマ列です。  
+ 参照データ サービス スキーマには、参照データ サービスを使用する場合に適切なドメインにマップする必要がある必須列が含まれている場合があります。 参照データ スキーマの必須列には列名に "(M)" と表示されます。 たとえば、**AddressLine** は **Melissa Data - Address Data** の必須スキーマ列で、**CompanyName** は **Digital Trowel Inc. - Us companies and professional data for SQL users** の必須スキーマ列です。  
   
- このトピックでは、複合ドメイン **Address Verification**に 4 つのドメイン ( **Address Line**、 **City**、 **State**、および **Zip**) を作成し、複合ドメインを **Melissa Data – Address Check** 参照データ サービスにアタッチした後、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップします。  
+ このトピックでは、複合ドメイン **Address Verification** に 4 つのドメイン (**Address Line**、**City**、**State**、および **Zip**) を作成し、複合ドメインを **Melissa Data - Address Check** 参照データ サービスにアタッチした後、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップします。  
   
 ## <a name="before-you-begin"></a>はじめに  
   
@@ -66,9 +65,9 @@ ms.locfileid: "47730820"
   
 8.  **[オンライン参照データ プロバイダーのカタログ]** ダイアログ ボックスで以下を行います。  
   
-    1.  **[DataMarket Data Quality Services]** で **[メリッサ データ – アドレスをチェック]** ボックスを選択します。  
+    1.  **[DataMarket Data Quality Services]** で **[メリッサ データ - アドレスをチェック]** ボックスをオンにします。  
   
-    2.  Melissa Data – Address Check 参照データ サービスの列を適切なドメイン (Address Line、City、State、および Zip) にマップします。 列をマップするには、 **[RDS スキーマ]** 列で参照データ サービス列を選択し、 **[ドメイン]** 列で適切なドメインを選択します。 テーブルに行を追加するには、 **[スキーマ エントリの追加]** アイコンをクリックします。  
+    2.  Melissa Data - Address Check 参照データ サービスの列を適切なドメイン (Address Line、City、State、および Zip) にマップします。 列をマップするには、 **[RDS スキーマ]** 列で参照データ サービス列を選択し、 **[ドメイン]** 列で適切なドメインを選択します。 テーブルに行を追加するには、 **[スキーマ エントリの追加]** アイコンをクリックします。  
   
     3.  **[OK]** をクリックして変更を保存し、 **[オンライン参照データ プロバイダーのカタログ]** ダイアログ ボックスを閉じます。  
   

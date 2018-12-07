@@ -44,12 +44,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409da0193276741d11a09d14018d016afbe449a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700270"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530569"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -149,7 +149,7 @@ ms.locfileid: "51700270"
   
  **[オプション]** : 詳細オプションを指定するには、各オプションの右にある使用可能な設定の一覧から値を選択します。  
   
- **[全般]** : 次のオプションは、スクリプト全体に適用されます。  
+ **[全般]**: 次のオプションは、スクリプト全体に適用されます。  
   
 -   **[ANSI Padding]** : **ANSI PADDING ON** をスクリプトに含めます。 既定値は **True**です。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "51700270"
   
 -   **[変更の追跡のスクリプトを作成]** : 変更の追跡が元のデータベースまたは元のデータベースのテーブルで有効になっている場合に、変更の追跡のスクリプトを作成します。 既定値は **False**です。 詳細については、「[変更の追跡について &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)」を参照してください。  
   
--   **[CHECK 制約のスクリプトを作成]** : **CHECK** 制約をスクリプトに追加します。 既定値は **True**です。 **CHECK** 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳しくは、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」をご覧ください。  
+-   **[CHECK 制約のスクリプトを作成]**: **CHECK** 制約をスクリプトに追加します。 既定値は **True**です。 **CHECK** 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳しくは、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」をご覧ください。  
   
 -   **[データ圧縮オプションのスクリプトを作成]** : データ圧縮オプションが元のデータベースまたは元のデータベースのテーブルで構成されている場合に、データ圧縮オプションのスクリプトを作成します。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 既定値は **False**です。  
   
@@ -239,7 +239,7 @@ ms.locfileid: "51700270"
   
  **[オプション]** : 詳細オプションを指定するには、各オプションの右にある使用可能な設定の一覧から値を選択します。  
   
- **[全般]** : 次のオプションは、パブリケーション全体に適用されます。  
+ **[全般]**: 次のオプションは、パブリケーション全体に適用されます。  
   
 1.  **[UDDT を基本型に変換]** : **True**の場合、ユーザー定義データ型 (UDDT) を、その UDDT の作成に使用された基本データ型に変換します。 スクリプトを実行するデータベースに UDDT が存在しない場合は、 **True** を使用します。 **False**の場合は、UDDT が使用されます。 既定値は **False**です。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "51700270"
   
 12. **[パブリッシュするデータの型]** - スクリプトを作成する対象を **[データのみ]**、**[スキーマのみ]**、またはその両方から選択します。 既定値は **[スキーマとデータ]** です。  
   
- **[パブリッシング オプション]** : Web ホスト プロバイダーをパブリッシュする際にトランザクションを使用するかどうかを指定します。  
+ **[パブリッシング オプション]**: Web ホスト プロバイダーをパブリッシュするときにトランザクションを使用するかどうかを指定します。  
   
 1.  **[トランザクションを使用してパブリッシュ]** - 選択したオブジェクトをリモートの Web ホスティング プロバイダーにパブリッシュします。 対象データベースでパブリッシュが完了できない場合、トランザクションはロールバックされます。 既定値は **True**です。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "51700270"
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Azure SQL Data Warehouse のスクリプトの生成  
 
-“Script As…” を使用して生成された構文が [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] のような構文になっていないときや、エラー メッセージが表示されたときは、SQL Server Management Studio でスクリプト作成オプションを [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]に設定しなければならない場合があります。  
+"Script As..." を使用して生成された構文が [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] のような構文になっていないときや、エラー メッセージが表示されたときは、SQL Server Management Studio でスクリプト作成オプションを [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] に設定することが必要な場合があります。  
 
 ### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>既定のスクリプト作成オプションを SQL Data Warehouse に設定する方法  
 

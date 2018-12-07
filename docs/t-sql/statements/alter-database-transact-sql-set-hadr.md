@@ -24,12 +24,12 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4563eec091c31f879df497c4803f56ff8e3b61f4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696210"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533352"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER DATABASE database_name
  SET HADR  
  指定したデータベース上で指定した [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] コマンドを実行します。  
   
- { AVAILABILITY GROUP **=***group_name* | OFF }  
+ { AVAILABILITY GROUP **=**_group_name_ | OFF }  
  次のように、指定した可用性グループから可用性データベースを削除するか、指定した可用性グループに参加させます。  
   
  *group_name*  
@@ -82,7 +82,7 @@ ALTER DATABASE database_name
  OFF  
  指定したセカンダリ データベースを可用性グループから削除します。  
   
- セカンダリ データベースがプライマリ データベースから大幅に遅れており、セカンダリ データベースが遅れを取り戻すまで待てない場合は、セカンダリ データベースを削除することをお勧めします。 セカンダリ データベースを削除した後には、更新する一連のバックアップの (復元を使用しています...、最近使用したログ バックアップを復元することで WITH NORECOVERY)。  
+ セカンダリ データベースがプライマリ データベースから大幅に遅れており、セカンダリ データベースが遅れを取り戻すまで待てない場合は、セカンダリ データベースを削除することをお勧めします。 セカンダリ データベースを削除した後、最新のログ バックアップで終わる一連のバックアップを復元することで、セカンダリ データベースを更新できます (次の構文を使用: RESTORE ...WITH NORECOVERY)。  
   
 > [!IMPORTANT]  
 >  可用性グループから可用性データベースを完全に削除するには、プライマリ可用性レプリカをホストするサーバー インスタンスに接続し、[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name* ステートメントを使用します。 詳細については、「[可用性グループからのプライマリ データベースの削除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)」をご覧ください。  

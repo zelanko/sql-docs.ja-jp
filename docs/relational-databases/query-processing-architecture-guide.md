@@ -1,7 +1,7 @@
 ---
 title: クエリ処理アーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701480"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542521"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,16 +350,19 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で任意の SQL ステートメントを実行すると、まずリレーショナル エンジンにより、プラン キャッシュが調査され、同じ SQL ステートメントの既存の実行プランが存在するかどうかが確認されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は既存のプランが見つかった場合には再利用して、SQL ステートメントを再びコンパイルするオーバーヘッドを削減します。 既存の実行プランが存在しない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってクエリの新しい実行プランが生成されます。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で任意の SQL ステートメントを実行すると、まずリレーショナル エンジンにより、プラン キャッシュが調査され、同じ SQL ステートメントの既存の実行プランが存在するかどうかが確認されます。 SQL ステートメントは、キャッシュされたプランで前に実行された SQL ステートメントと文字単位で一致する場合、既存と見なされます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は既存のプランが見つかった場合には再利用して、SQL ステートメントを再びコンパイルするオーバーヘッドを削減します。 既存の実行プランが存在しない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってクエリの新しい実行プランが生成されます。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、特定の SQL ステートメントの既存の実行プランを検索する効率的なアルゴリズムが用意されています。 ほとんどのシステムでは、このスキャンで使用される最低限のリソースの量が、すべての SQL ステートメントをコンパイルせずに既存の実行プランを再利用することで節約できるリソースの量を超えることはありません。
 
-新しい SQL ステートメントをキャッシュ内の使用されていない既存の実行プランと照合するアルゴリズムでは、すべてのオブジェクト参照が完全に修飾されている必要があります。 たとえば、次の `SELECT` ステートメントのうち 2 番目のステートメントは既存の実行プランと一致しますが、最初のステートメントは一致しません。
+新しい SQL ステートメントをキャッシュ内の使用されていない既存の実行プランと照合するアルゴリズムでは、すべてのオブジェクト参照が完全に修飾されている必要があります。 たとえば、`Person` は下の `SELECT` ステートメント実行するユーザーに対する既定のスキーマであるものとします。 この例では、実行するために `Person` テーブルが完全修飾されている必要はありませんが、これは、2 番目のステートメントは既存のプランと一致しないのに対し、3 番目は一致することを意味します。
 
 ```sql
 SELECT * FROM Person;
-
+GO
 SELECT * FROM Person.Person;
+GO
+SELECT * FROM Person.Person;
+GO
 ```
 
 ### <a name="removing-execution-plans-from-the-plan-cache"></a>プラン キャッシュからの実行プランの削除
@@ -637,7 +640,6 @@ WHERE ProductID = 63;
 * 実行プランの作成および再利用のタイミングをアプリケーションで制御できます。
 * 準備/実行のモデルは、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] など、他のデータベースに移植できます。
 
- 
 ### <a name="ParamSniffing"></a> パラメーター スニッフィング
 "パラメーター スニッフィング" とは、コンパイルまたは再コンパイルの間に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が現在のパラメーター値を "スニッフィング (傍受)" し、クエリ オプティマイザーに渡すプロセスです。渡されたパラメーター値は、より効率的なクエリ実行プランを生成するために利用できます。
 
@@ -655,6 +657,24 @@ WHERE ProductID = 63;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、複数の CPU (マイクロプロセッサ) を搭載したコンピューターのクエリ実行およびインデックス操作を最適化するための並列クエリを使用できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はオペレーティング システムのワーカー スレッドを複数使用してクエリやインデックス操作を並列的に実行できるため、操作を短時間で効率的に完了できます。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、クエリを最適化する過程で、並列実行による効果が期待できるクエリやインデックス操作を検索します。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、そのようなクエリの実行プランに交換操作を挿入して並列実行用クエリを作成します。 交換操作とは、プロセス管理、データの再配布、およびフロー制御を行うクエリ実行プラン内の操作です。 交換操作は `Distribute Streams`論理操作、 `Repartition Streams`論理操作、および `Gather Streams` 論理操作から構成されており、これらは並列クエリのプラン表示出力に含まれる可能性があります。 
+
+> [!IMPORTANT]
+> 一部の構造は、実行プランの全体または一部分で、並列処理を利用する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の機能を妨げます。
+
+並列処理を妨げる構造は次のとおりです。
+>
+> - **スカラー UDF**    
+>   スカラー ユーザー定義関数について詳しくは、「[ユーザー定義関数の作成](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)」をご覧ください。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]には、これらの関数をインライン化する機能があり、クエリ処理中の並列処理の使用をロック解除します。 スカラー UDF のインライン化について詳しくは、「[SQL データベースでのインテリジェントなクエリ処理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)」をご覧ください。
+> - **リモート クエリ**    
+>   リモート クエリについて詳しくは、「[プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)」をご覧ください。
+> - **動的カーソル**    
+>   カーソルについて詳しくは、「[DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
+> - **再帰クエリ**    
+>   再帰について詳しくは、「[再帰共通テーブル式の定義および使用に関するガイドライン](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)」および「[Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)」(T-SQL での再帰) をご覧ください。
+> - **テーブル値関数 (TVF)**    
+>   TVF について詳しくは、「[ユーザー定義関数の作成 (データベース エンジン)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」をご覧ください。
+> - **TOP キーワード**    
+>   詳しくは、「[TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)」をご覧ください。
 
 交換操作を挿入すると、並列クエリの実行プランになります。 並列クエリの実行プランでは複数のワーカー スレッドを使用できます。 並列でないクエリで使用する直列の実行プランの場合、実行時に使用するワーカー スレッドは 1 つのみです。 並列クエリで実際に使用するワーカー スレッドの数は、クエリ プランを実行するための初期化の時点で、プランの複雑さと並列処理の次数に応じて決まります。 並列処理の次数は、使用している CPU の最大数によって決まります (これは使用しているワーカー スレッドの数という意味ではありません)。 並列処理の次数はサーバー レベルで設定され、sp_configure システム ストアド プロシージャで変更できます。 クエリ ステートメントで `MAXDOP` クエリ ヒントを、またはインデックス ステートメントで `MAXDOP` インデックス オプションを指定することにより、この値をオーバーライドできます。 
 
@@ -1098,4 +1118,6 @@ GO
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [カーディナリティ推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [アダプティブ クエリ処理](../relational-databases/performance/adaptive-query-processing.md)   
- [演算子の優先順位](../t-sql/language-elements/operator-precedence-transact-sql.md)
+ [演算子の優先順位](../t-sql/language-elements/operator-precedence-transact-sql.md)    
+ [実行プラン](../relational-databases/performance/execution-plans.md)    
+ [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

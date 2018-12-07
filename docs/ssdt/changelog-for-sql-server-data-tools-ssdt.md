@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677901"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712608"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51677901"
 
 **SSIS:**
 
-1. [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] のサポートが追加されます。
+1. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] のサポートが追加されます。
 2. SQL Server 2012 のサポートが削除されます。
 
 ### <a name="known-issues"></a>既知の問題:
@@ -151,7 +151,7 @@ ms.locfileid: "51677901"
 
 **インストーラー:**
 
-- プライバシーに関する免責事項に “SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム“ のリンクを追加します。
+- プライバシーに関する免責事項に "SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム" のリンクを追加します。
 - [Install new SQL Server Data Tools for Visual Studio 2017 instance]\(Visual Studio 2017 インスタンス用の新しい SQL Server Data Tools のインストール\) を選択すると VS インストーラー ウィンドウが開く問題を修正しました
 
 ### <a name="known-issues"></a>既知の問題:
@@ -207,7 +207,7 @@ SSDT for Visual Studio 2017 (15.5.0) がプレビューから一般公開 (GA) �
 1. アイコンが品質の良いものに変わりました。
 
 **Integration Services (IS)**
-1. ADF で Azure SSIS IR にデプロイするときのデプロイ ウィザードにパッケージ検証手順が追加されました。Azure SSIS IR で実行する SSIS パッケージの互換性問題を検出します。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](..\integration-services\lift-shift\ssis-azure-validate-packages.md)」を参照してください。
+1. ADF で Azure SSIS IR にデプロイするときのデプロイ ウィザードにパッケージ検証手順が追加されました。Azure SSIS IR で実行する SSIS パッケージの互換性問題を検出します。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](../integration-services/lift-shift/ssis-azure-validate-packages.md)」を参照してください。
 1. SSIS 拡張機能がローカライズされました。
 
 ### <a name="bug-fixes"></a>バグの修正
@@ -234,7 +234,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
   - バックグラウンド分析の実行 - 有効にすると、最新のデータ ソースのクエリ エディターは、クエリの出力スキーマを分析する目的で、クエリが読み込まれるとデータ ソースに対してクエリを実行します。
 
 **Integration Services (IS)**
-- ADF で Azure SSIS IR にデプロイするときのデプロイ ウィザードにパッケージ検証手順が追加されました。Azure SSIS IR で実行する SSIS パッケージの互換性問題を検出します。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](..\integration-services\lift-shift\ssis-azure-validate-packages.md)」を参照してください。
+- ADF で Azure SSIS IR にデプロイするときのデプロイ ウィザードにパッケージ検証手順が追加されました。Azure SSIS IR で実行する SSIS パッケージの互換性問題を検出します。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](../integration-services/lift-shift/ssis-azure-validate-packages.md)」を参照してください。
 
 
 ### <a name="bug-fixes"></a>バグの修正
@@ -529,7 +529,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 
 ### <a name="bug-fixes"></a>バグの修正
 **AS プロジェクト:**
-- BI プロジェクトのテンプレートの優先順位を修正して、VS の [新しいプロジェクト] カテゴリで先頭に表示されることがないようにしました。
+- BI プロジェクトのテンプレートの優先順位を修正して、VS の [新しいプロジェクト] カテゴリで先頭に表示されることがないようにしました
 - SSIS、SSAS、または SSRS ソリューションが開いているとき、めったにない状況で発生する可能性がある VS のクラッシュを修正しました。
 - 表形式: DAX の解析と数式バーについて、さまざまな機能強化とパフォーマンスの修正が行われました。
 - 表形式: SSAS 表形式プロジェクトが開いていない場合は、表形式モデル エクスプローラーが表示されなくなりました。
@@ -543,15 +543,15 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 - 表形式: 特定のアプリケーションから貼り付ける場合、DAX 数式バーに、テキストではなく、イメージまたは他のコンテンツが貼り付けられるという問題が修正されました。
 - 表形式: 特定の定義のメジャーが存在するため、1103 の一部の古いモデルが開けないという問題が修正されました。
 - 表形式: XEvent セッションを削除できないという問題が修正されました。
-- devenv.com で AS "smproj" ファイルのビルドを試行すると失敗する問題を修正しました。
+- devenv.com で AS "smproj" ファイルのビルドを試行すると失敗する問題を修正しました
 - 韓国 IME での表形式モデルのシート タブのタイトル テキストが何度も変更されるという問題を修正して、テキストを確定しました。
 - DAX Related() 関数の Intellisense が正常に機能せず、他のテーブルの列が表示されない問題を修正しました。
 - データベースからの AS テーブル プロジェクトのインポートを、AS データベースの一覧を並べ替えることで改善しました。
-- AS 表形式モデルで計算テーブルを作成するときに、候補オブジェクトとしてテーブルが式に表示されない問題を修正しました。
+- AS 表形式モデルで計算テーブルを作成するときに、候補オブジェクトとしてテーブルが式に表示されない問題を修正しました
 - コードの表示後に統合ワークスペースを使用して プレビュー 1400 AS モデルを開こうとしたときに発生する問題を修正しました。
 - 特定の状況で (初期カタログではサポートされていない) 一部のデータ ソースの正常な動作を妨げていた問題を修正しました。 
 - デプロイ ウィザードは、パーティションを保持するオプションが有効な場合でも、計算テーブルのパーティションに変更を適用する必要があります。
-- 既存の AS Connection に対する [詳細プロパティ] ダイアログで、選択し直すまでリスト全体が表示されない問題を修正しました。
+- 既存の AS Connection に対する [詳細プロパティ] ダイアログで、選択し直すまでリスト全体が表示されない問題を修正しました
 - 一部のローカライズされたビルドで表示されたクリッピングされた UI 文字列の問題を修正しました
 - 1400 互換性レベル AS 表形式モデルの PowerQuery 統合でのいくつかの問題を修正しました
 - レポート ウィザード スタイル テンプレートが正しく表示されない問題を修正しました
@@ -608,7 +608,7 @@ SqlPackage.exe と DacFx API を使用すると、配置レポートと配置ス
 
 SqlPackage の発行アクションとスクリプト アクションには、2 つの新しい引数が追加されました。
 
-* DeployScriptPath (省略名: dsp):  これは、配置スクリプトの書き込み先のパスです (省略可能)。 Azure の配置では、DB を作成または変更するための TSQL コマンドがある場合に、マスター スクリプトが同じパスに書き込まれますが、出力ファイル名として “Filename_Master.sql” が使用されます。
+* DeployScriptPath (省略名: dsp):  これは、配置スクリプトの書き込み先のパスです (省略可能)。 Azure の配置では、DB を作成または変更するための TSQL コマンドがある場合に、マスター スクリプトが同じパスに書き込まれますが、出力ファイル名として "Filename_Master.sql" が使用されます。
 * DeployReportPath (省略名: drp):  これは、配置レポートの書き込み先のパスです (省略可能)。
 
 スクリプト アクションの場合は、既存の出力パス引数または新しいスクリプト/レポート固有の引数を使用する必要があります。ただし、両方を使用することはできません。
@@ -617,11 +617,11 @@ SqlPackage の発行アクションとスクリプト アクションには、2 
 
 **発行アクション**
 
-```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 **スクリプト アクション**
 
-```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 DacFx では、2 つの新しい API (DacServices.Publish() および DacServices.Script()) が追加されました。 これらは、発行 + スクリプト + レポートの各アクションを 1 回の操作で実行できるようサポートします。 使用例:
 
@@ -658,20 +658,20 @@ SSAS 表形式デザイナーの DAX パーサーにおいて、大きな DAX �
 
 **データベース ツール**
 
-* [接続のバグ 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) – 明示的なスキーマを使用する CROSS APPLY OPENJSON から列を選択できません。
-* 修正 – 自動生成された履歴テーブルのインデックスに関する問題。再配置の際に DacFx がインデックスを削除します。
-* 修正 – DacFx のバッチ パーサーがエスケープした角かっこ (]) を解析しない問題。これにより、発行が失敗していました。
-* 強化 – SqlPackage のヘルプ出力に各アクションの説明が含まれるようになりました。
-* 修正 – [詳細設定] オプションの編集時、および発行、スキーマ比較、その他のファイルに保存された接続文字列の編集時に、接続ダイアログの [パスワードを記憶する] オプションが保持されていませんでした。
-* 修正 – [履歴] タブに表示される接続で IntegratedAuthentication=true の場合、接続プロパティの [認証] フィールドが空白のままになっていました。 現在は、想定どおり、[Windows 認証] と表示されます。
-* 修正 – [ツール] -> [オプション] -> [テキスト エディター] で、SQL Server Tools の Intellisense の設定に対する変更が保持されていませんでした。
-* 強化 – [履歴] タブの接続ダイアログにある [ピン留め]/[ピン留めを外す] ボタンがコンパクトになり、スクロール バーが表示される可能性が少なくなりました。
-* 修正 – 接続ダイアログのアクセシビリティに関するいくつかの問題が修正されました。
+* [接続のバグ 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) - 明示的なスキーマを使用する CROSS APPLY OPENJSON から列を選択できません
+* 修正 - 自動生成された履歴テーブルのインデックスに関する問題。再配置の際に DacFx がインデックスを削除します
+* 修正 - DacFx のバッチ パーサーがエスケープした角かっこ "]" を解析しない問題。これにより、発行が失敗していました
+* 強化 - SqlPackage のヘルプ出力に各アクションの説明が含まれるようになりました
+* 修正 - [詳細設定] オプションの編集時、および発行、スキーマ比較、その他のファイルに保存された接続文字列の編集時に、接続ダイアログの [パスワードを記憶する] オプションが保持されていませんでした
+* 修正 - [履歴] タブに表示される接続で IntegratedAuthentication=true の場合、接続プロパティの [認証] フィールドが空白のままになっていました。 現在は、想定どおり、[Windows 認証] と表示されます
+* 修正 - [ツール] -> [オプション] -> [テキスト エディター] で、SQL Server Tools の Intellisense の設定に対する変更が保持されていませんでした
+* 強化 - [履歴] タブの接続ダイアログにある [ピン留め]/[ピン留めを外す] ボタンがコンパクトになり、スクロール バーが表示される可能性が少なくなりました
+* 修正 - 接続ダイアログのアクセシビリティに関するいくつかの問題が修正されました。
 
 **Analysis Services と Reporting Services**
 
 * SSDT AS のテーブル デザイナーにおいて、特定の状況でデータ グリッドのスクロール バーのつまみをクリックするとクラッシュしていた問題を修正しました。
-* SSDT AS のテーブルで接続を現在のユーザーとして偽装するオプションを使用できない問題を修正しました。
+* SSDT AS のテーブルで接続を現在のユーザーとして偽装するオプションを使用できない問題を修正しました
 * SSDT AS のテーブル デザイナーにおいて、数式バーを大きく展開しすぎると、プロジェクトを再度開けなくなる問題を修正しました。
 * SSDT AS のテーブル デザイナーにおいて、テーブル タブが選択された場合にキーを押すとクラッシュが発生する問題を修正しました。
 * SSDT AS のプロジェクトにおいて、[Excel で分析] から下位の AS サーバー バージョンに接続できない問題を修正しました。
@@ -693,7 +693,7 @@ SSAS 表形式デザイナーの DAX パーサーにおいて、大きな DAX �
 
 SqlPackage.exe および Data-Tier Application Framework (DacFx) API でスキーマ比較がサポートされるようになりました。 詳しくは、「 [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)」(SqlPackage および Data-Tier Application Framework におけるスキーマ比較) をご覧ください。
 
-**Analysis Services – SSDT テーブル (SSAS) 統合のワークスペース モード**
+**Analysis Services - SSDT テーブル (SSAS) 統合のワークスペース モード**
 
 SSDT テーブルに内部 SSAS インスタンスが含まれるようになりました。これにより、統合ワークスペース モードが有効な場合は、SSDT テーブルがバックグラウンドで自動的に起動するため、テーブル、列、データをモデル デザイナーで追加および表示できます。外部のワークスペース サーバー インスタンスを指定する必要はありません。 統合ワークスペース モードを使用しても、SSDT テーブルがワークスペース サーバーおよびデータベースと連動するしくみは変わりません。 変わるのは、SSDT テーブルがワークスペース データベースをホストする場所です。 統合ワークスペース モードを有効にするには、新しい表形式プロジェクトの作成時に表示される [テーブル モデル デザイナー] ダイアログ ボックスの [統合ワークスペース] オプションを選択します。 明示的なワークスペース サーバーを現在使用している既存の表形式プロジェクトの場合は、[プロパティ] ウィンドウで [統合ワークスペース モード] パラメーターを True に設定して統合ワークスペース モードに切り替えることができます。このパラメーターは、ソリューション エクスプローラーで Model.bim ファイルを選択すると表示されます。 詳しくは、[Analysis Services に関するブログ記事](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)をご覧ください。
 
@@ -704,7 +704,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 - [接続の問題 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648): SSDT 比較では IsPersistedNullable が異なるものとして表示されます。
 - [接続の問題 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735): BACPAC のインポート時に ID がリセットされます。
 - [接続の問題 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167): SSDT 単体テストを実行すると一時ファイルが残ります。
-- [接続の問題 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712): 下位互換性が確保されません – AppLocal と NuGet 化
+- [接続の問題 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712): 下位互換性が確保されません - AppLocal と NuGet 化
 
 **Analysis Services と Reporting Services**
 
@@ -732,8 +732,8 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 **新機能**
 
 - **リリース バージョン管理と番号付け:** 月別ではなく数値でリリースがタグ付けされるようになりました。 これは新しい SSMS ポリシーに準拠したもので、リリースや修正プログラムが 1 か月に複数ある場合の処理が簡略化されます。 このリリースは 16.3 であり、RTM リリース後の 3 回目の更新であることを意味します。 修正プログラムは 16.3.1 のように表記され、次回の更新 (来月を予定) は 16.4 になります。
-- **Analysis Services – 表形式モデル エクスプローラー:** 表形式モデル エクスプローラーを使用すると、モデル内のさまざまなメタデータ オブジェクト (データ ソース、テーブル、メジャー、リレーションシップなど) 間を移動できます。 このエクスプローラーは個別のツール ウィンドウとして実装されます。Visual Studio の [表示] メニューを開いて [その他のウィンドウ] をポイントし、[表形式モデル エクスプローラー] をクリックすると表示できます。 既定では、表形式モデル エクスプローラーは個別のタブのソリューション エクスプローラー領域に表示されます。表形式モデル エクスプローラーでは、メタデータ オブジェクトが、表形式モデル 1200 のスキーマによく似たツリー構造で表示されます。また、多数の新機能も追加されています。
-- **データベース ツール – Always Encrypted**:  このリリースには、新しい [Always Encrypted キー管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
+- **Analysis Services - 表形式モデル エクスプローラー:** 表形式モデル エクスプローラーを使用すると、モデル内のさまざまなメタデータ オブジェクト (データ ソース、テーブル、メジャー、リレーションシップなど) 間を移動できます。 このエクスプローラーは個別のツール ウィンドウとして実装されます。Visual Studio の [表示] メニューを開いて [その他のウィンドウ] をポイントし、[表形式モデル エクスプローラー] をクリックすると表示できます。 既定では、表形式モデル エクスプローラーは個別のタブのソリューション エクスプローラー領域に表示されます。表形式モデル エクスプローラーでは、メタデータ オブジェクトが、表形式モデル 1200 のスキーマによく似たツリー構造で表示されます。また、多数の新機能も追加されています。
+- **データベース ツール - Always Encrypted**: このリリースには、新しい [Always Encrypted キー管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
     - 列マスター キーまたは列暗号化キーを作成する際、[データベースの更新] のクリック直後に SQL Server オブジェクト エクスプローラーに変更が反映されない可能性があります。 この問題を回避するには、SQL Server オブジェクト エクスプローラーでデータベース ノードを更新します。
     - SQL Server オブジェクト エクスプローラーからデータを含むテーブル内の列を暗号化しようとすると、エラーが発生する可能性があります。 現在、この機能は SSDT データベース プロジェクトと SSMS でのみサポートされています。 SQL Server オブジェクト エクスプローラーのサポートは今後のリリースで有効になる予定です。
 

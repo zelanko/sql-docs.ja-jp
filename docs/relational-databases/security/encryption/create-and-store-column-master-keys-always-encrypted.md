@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fca24650ef1d7b26dc9fac93c0ab5d714bf7d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841930"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534761"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>列マスター キーを作成して保存する (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
 $azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
@@ -139,7 +139,7 @@ SSMS を使用し、Azure Key Vault に Always Encrypted キーを格納する�
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Azure Key Vault のキーをアプリケーションとユーザーが使用できるようにする
 
-Azure Key Vault のキーを列のマスター キーとして使用する場合、アプリケーションが Azure を認証し、アプリケーションの ID が Key Vault に対する次の権限を持っている必要があります: *get*、 *unwrapKey*、 *verify*。 
+Azure Key Vault のキーを列のマスター キーとして使用する場合、アプリケーションが Azure を認証し、アプリケーションの ID がキー コンテナーに対する次の権限を持っている必要があります: *get*、*unwrapKey*、*verify*。 
 
 Azure Key Vault に格納されている列マスター キーで保護されている列暗号化キーをプロビジョニングするには、 *get*、 *unwrapKey*、 *wrapKey*、 *sign*、および *verify* の権限が必要です。 さらに、Azure Key Vault に新しいキーを作成するには *create* の権限、Key Vault の内容を一覧するには *list* の権限が必要です。
 

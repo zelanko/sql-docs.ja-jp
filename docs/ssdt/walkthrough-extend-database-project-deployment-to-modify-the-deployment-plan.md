@@ -11,12 +11,12 @@ ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ced46d8239c18a91963f4834f49dd4f36cc032c8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531563"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>チュートリアル: 配置計画を変更するためのデータベース プロジェクトの配置の拡張
 配置コントリビューターを作成して、SQL プロジェクトの配置時にカスタム アクションを実行できます。 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) または [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) を作成できます。 計画の実行前に計画を変更する場合は [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) を使用し、計画の実行中に操作を実行する場合は [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) を使用します。 このチュートリアルでは、SqlRestartableScriptContributor という名前の [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) を作成して、配置スクリプトのバッチに IF ステートメントを追加し、実行中にエラーが発生した場合は完了するまでスクリプトを再実行できるようにします。  
@@ -191,7 +191,7 @@ ms.locfileid: "51681350"
     // user's project does not have a pre/post deployment script  
     if (currentStep is BeginPreDeploymentScriptStep)  
     {  
-        // This step marks the begining of the predeployment script.  
+        // This step marks the beginning of the predeployment script.  
         // Save the step and move on.  
         beforePreDeploy = (BeginPreDeploymentScriptStep)currentStep;  
         continue;  
@@ -697,17 +697,17 @@ ms.locfileid: "51681350"
 上記の方法のいずれかを実行すると、MSBuild を使用して、コマンド ライン ビルドのパラメーターを渡すことができます。  
   
 > [!NOTE]  
-> コントリビューター ID を指定するには、必ず "DeploymentContributors" プロパティを更新する必要があります。 これは、コントリビューター ソース ファイル内の "ExportDeploymentPlanModifier" 属性で使用されているのと同じ ID です。 これを指定しないと、プロジェクトのビルド時にコントリビューターが実行されません。 "ContributorArguments" プロパティは、コントリビューターの実行に必要な引数がある場合のみに更新する必要があります。  
+> コントリビューター ID を指定するには、必ず "DeploymentContributors" プロパティを更新する必要があります。 この ID は、コントリビューター ソース ファイル内の "ExportDeploymentPlanModifier" 属性で使用されているのと同じ ID です。 これを指定しないと、プロジェクトのビルド時にコントリビューターが実行されません。 "ContributorArguments" プロパティは、コントリビューターの実行に必要な引数がある場合にのみ更新する必要があります。  
   
 ## <a name="deploy-the-database-project"></a>データベース プロジェクトの配置  
   
 #### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>SQL プロジェクトを配置して配置レポートを生成するには  
   
--   プロジェクトは、通常どおり Visual Studio 内で発行または配置できます。 SQL プロジェクトを含むソリューションを開き、プロジェクトの右クリック コンテキスト メニューから [パブリッシュ] オプションを選択します。 LocalDB に対してデバッグ配置するには、F5 キーを押します。 この例では、[パブリッシュ] ダイアログを使用して 配置スクリプトを生成します。  
+-   プロジェクトは、通常どおり Visual Studio 内で発行または配置できます。 SQL プロジェクトが含まれているソリューションを開き、プロジェクトの右クリックのショートカット メニューで [発行...] をクリックするか、LocalDB へのデバッグ配置を行うために F5 キーを使用するだけです。 この例では、[発行...] ダイアログを使用して配置スクリプトを生成します。  
   
     1.  Visual Studio を起動し、SQL プロジェクトが含まれているソリューションを開きます。  
   
-    2.  ソリューション エクスプローラーでプロジェクトを右クリックし、**[発行]** オプションを選択します。  
+    2.  ソリューション エクスプローラーでプロジェクトを右クリックし、**[発行...]** をクリックします。  
   
     3.  発行先のサーバー名とデータベース名を設定します。  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c4618fc4c6b352e119fb4c4686820ee8077dfab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545723"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
@@ -172,17 +172,17 @@ SSIS で、**Excel ソース エディター**または **Excel 変換先エデ�
 
 Excel ドライバーでは、データ型の限定されたセットのみを認識します。 たとえば、すべての数値列は倍精度浮動小数点型 (DT_R8) として解釈され、すべての文字列の列 (メモ列以外) は 255 文字の Unicode 文字列 (DT_WSTR) として解釈されます。 SSIS では、Excel データ型を次のようにマップします。
 
--   Numeric – 倍精度浮動小数 (DT_R8)
+-   Numeric - 倍精度浮動小数点数 (DT_R8)
 
--   Currency – 通貨 (DT_CY)
+-   Currency - 通貨 (DT_CY)
 
--   Boolean – ブール (DT_BOOL)
+-   Boolean - ブール (DT_BOOL)
 
--   Date/time – 日時 (DT_DATE)
+-   Date/time - 日時 (DT_DATE)
 
--   String – Unicode 文字列、長さ 255 (DT_WSTR)
+-   String - Unicode 文字列、長さ 255 (DT_WSTR)
 
--   Memo – Unicode テキスト ストリーム (DT_NTEXT)
+-   Memo - Unicode テキスト ストリーム (DT_NTEXT)
 
 ### <a name="data-type-and-length-conversions"></a>データ型と長さの変換
 

@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307116"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711183"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -53,9 +53,9 @@ SQL Server Engine は、アプリケーションのクエリを解析すると�
 - **高度な計算 (プレビュー)**: パターン マッチング (LIKE 述語) と範囲比較など、暗号化された列に対する操作は、セキュリティで保護されたエンクレーブ内でサポートされます。そのため、データベース システム内でこのような計算を実行する必要がある幅広いアプリケーションやシナリオに Always Encrypted を使用できます。
 
 > [!IMPORTANT]
-> [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] では、高度な計算は、いくつかのパフォーマンスの最適化について保留中であり、機能が制限 (インデックス作成がないなど) されていて、現在は既定で無効になっています。 [高度な計算を有効にする](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)方法に関するページを参照してください。
+> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では、高度な計算は、いくつかのパフォーマンスの最適化について保留中であり、機能が制限 (インデックス作成がないなど) されていて、現在は既定で無効になっています。 [高度な計算を有効にする](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)方法に関するページを参照してください。
 
-[!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] のセキュリティで保護されたエンクレーブが設定された Always Encrypted は、Windows で[仮想化ベースのセキュリティ (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) のセキュリティで保護されたメモリ エンクレーブ (仮想保護モード (VSM) エンクレーブとも呼ばれます) を使用します。
+[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] のセキュリティで保護されたエンクレーブが設定された Always Encrypted は、Windows で[仮想化ベースのセキュリティ (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) のセキュリティで保護されたメモリ エンクレーブ (仮想保護モード (VSM) エンクレーブとも呼ばれます) を使用します。
 
 ## <a name="secure-enclave-attestation"></a>セキュリティで保護されたエンクレーブの構成証明
 
@@ -63,11 +63,11 @@ SQL Server エンジン内のセキュリティで保護されたエンクレー
 
 エンクレーブを検証するプロセスは、**エンクレーブの構成証明**と呼ばれ、通常、外部の構成証明サービスに接続するアプリケーション (ときには SQL Server も) 内のクライアント ドライバーも含まれます。 構成証明プロセスの詳細は、エンクレーブ テクノロジと構成証明サービスによって変わります。
 
-[!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 内の VBS セキュリティで保護されたエンクレーブに対して SQL Server がサポートする構成証明プロセスは、ホスト ガーディアン サービス (HGS) を構成証明サービスとして使用する Windows Defender System Guard ランタイム構成証明です。 お使いの環境で HGS を構成し、SQL Server インスタンスをホストしているマシンを HGS に登録する必要があります。 また、HGS 構成証明を使用してクライアント アプリケーションまたはツール (たとえば、SQL Server Management Studio) も構成する必要があります。
+[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 内の VBS セキュリティで保護されたエンクレーブに対して SQL Server がサポートする構成証明プロセスは、ホスト ガーディアン サービス (HGS) を構成証明サービスとして使用する Windows Defender System Guard ランタイム構成証明です。 お使いの環境で HGS を構成し、SQL Server インスタンスをホストしているマシンを HGS に登録する必要があります。 また、HGS 構成証明を使用してクライアント アプリケーションまたはツール (たとえば、SQL Server Management Studio) も構成する必要があります。
 
 ## <a name="secure-enclave-providers"></a>セキュリティで保護されたエンクレーブ プロバイダー
 
-セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するには、アプリケーションでこの機能をサポートするクライアント ドライバーを使用する必要があります。 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] では、アプリケーションで .NET Framework 4.7.2 と .NET Framework Data Provider for SQL Server を使用する必要があります。 さらに、.NET アプリケーションは、使用しているエンクレーブの種類 (VBS など) や構成証明サービス (HGS など) に固有の**セキュリティで保護されたエンクレーブ プロバイダー**で構成する必要があります。 サポートされているエンクレーブ プロバイダーは、アプリケーションとの統合が必要な NuGet パッケージで個別にリリースされます。 エンクレーブ プロバイダーは、構成証明プロトコルと、特定の種類のセキュリティで保護されたエンクレーブとのセキュリティで保護されたチャネルを確立するためのクライアント側ロジックを実装します。
+セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するには、アプリケーションでこの機能をサポートするクライアント ドライバーを使用する必要があります。 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では、アプリケーションで .NET Framework 4.7.2 と .NET Framework Data Provider for SQL Server を使用する必要があります。 さらに、.NET アプリケーションは、使用しているエンクレーブの種類 (VBS など) や構成証明サービス (HGS など) に固有の**セキュリティで保護されたエンクレーブ プロバイダー**で構成する必要があります。 サポートされているエンクレーブ プロバイダーは、アプリケーションとの統合が必要な NuGet パッケージで個別にリリースされます。 エンクレーブ プロバイダーは、構成証明プロトコルと、特定の種類のセキュリティで保護されたエンクレーブとのセキュリティで保護されたチャネルを確立するためのクライアント側ロジックを実装します。
 
 ## <a name="enclave-enabled-keys"></a>エンクレーブ対応キー
 
@@ -143,4 +143,4 @@ SQL Server エンジンは、クエリで指定された操作をセキュリテ
 
 ## <a name="next-steps"></a>Next Steps
 
-- テスト環境を設定し、SSMS でセキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を試すには、「[Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)」(チュートリアル: SSMS を使用するセキュリティで保護されたエンクレーブが設定された Always Encrypted の概要) を参照してください。
+- テスト環境を設定し、SSMS で、セキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を試すには、「[Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)」(チュートリアル: SSMS を使用するセキュリティで保護されたエンクレーブが設定された Always Encrypted の概要) を参照してください。

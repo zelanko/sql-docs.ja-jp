@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 39694d0bbcf365712c34811bbedab76ad3cff950
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 46e55bfb8e233be504018207886f60cd4fb448f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702330"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532192"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -279,7 +279,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |高度な R 統合|はい|いいえ|いいえ|いいえ|いいえ| 
 |R Server (スタンドアロン)|はい|いいえ|いいえ|いいえ|いいえ|   
 |PolyBase コンピューティング ノード|[ユーザー アカウント制御]|可 <sup>1</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>| 
-|PolyBase ヘッド ノード|[ユーザー アカウント制御]|いいえ|いいえ|いいえ|いいえ| 
+|PolyBase ヘッド ノード|はい|いいえ|いいえ|いいえ|いいえ| 
 |JSON|はい|[はい]|[はい]|[はい]|はい|   
 |クエリ ストア|はい|[はい]|[はい]|[はい]|はい|   
 |テンポラル|はい|[はい]|[はい]|[はい]|はい|   

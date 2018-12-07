@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04193939b04167f3103d72b162f41044c89b435c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05fd04b48f878fc157e8f4c7bb8237e4f3c3f515
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736520"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617192"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>参照データ (外部) のナレッジを使用したデータのクレンジング
 
@@ -72,7 +71,7 @@ ms.locfileid: "47736520"
     > [!NOTE]  
     >  **[最適化]** ページには、参照データ サービスにアタッチされているドメインに関する情報が次の 2 とおりの方法で表示されます。  
     >   
-    >  -   **[開始]** ボタンの下に、“ドメイン \<Domain1>、\<Domain2>、...  \<DomainN> を、参照データ サービス プロバイダーを使用してクレンジングします” というメッセージが表示されます。 この例の場合、“ドメイン Address Verification を、参照データ サービス プロバイダーを使用してクレンジングします” というメッセージが表示されます。  
+    >  -   **[開始]** ボタンの下に、"ドメイン \<Domain1>、\<Domain2>、...\<DomainN> を、参照データ サービス プロバイダーを使用してクレンジングします" というメッセージが表示されます。 この例の場合、"ドメイン Address Verification を、参照データ サービス プロバイダーを使用してクレンジングします" というメッセージが表示されます。  
     > -   参照データ サービス プロバイダーにアタッチされているドメインに対して、**[プロファイラー]** 領域にアイコン ![RDS にドメインがアタッチされている](../data-quality-services/media/dqs-rdsindicator.JPG "RDS にドメインがアタッチされている") が表示されます。 この例の場合、 **Address Verification** 複合ドメインに対してこのアイコンが表示されます。  
   
 4.  **[結果の管理と表示]** ページで、ドメイン値を確認します。 参照データ サービスでは、値に対する提案が複数ある場合、参照データ サービスにドメインをマップするときに **[提案された候補]** ボックスで指定した提案の最大数に応じて表示できます。 たとえば、次の米国の住所に対しては 2 つの提案が表示されます。  

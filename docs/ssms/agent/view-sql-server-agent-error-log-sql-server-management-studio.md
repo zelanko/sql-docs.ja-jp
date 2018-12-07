@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2339f855afa7bfa8fb7a3ed0538aeb40b6c1600
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: becdad9b10bb5632ecefe96bcef2fa9e7ebaf29e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673090"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530400"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47673090"
   
 4.  表示するエラー ログを右クリックし、 **[エージェント ログの表示]** を選択します。  
   
-    *[ログ ファイルの表示 - <サーバー名>]* ダイアログ ボックスでは、次のオプションを使用できます。  
+    **[ログ ファイルの表示 - <サーバー名>]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
     **[ログの読み込み]**  
     読み込むログ ファイルを指定できるダイアログ ボックスが開きます。  
@@ -106,7 +106,7 @@ ms.locfileid: "47673090"
     **インスタンス**  
     イベントが発生したインスタンスの名前です。 これは、 *computer name*\\*instance name*と表示されます。  
   
-    **日付**  
+    **Date**  
     イベントの日付が表示されます。  
   
     **ソース**  

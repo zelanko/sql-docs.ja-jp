@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
@@ -14,20 +13,20 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1d46bc9edd1c907c1d8b13fb5677f1bec5f7c2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700870"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617272"
 ---
 # <a name="create-term-based-relations"></a>用語ベースのリレーションの作成
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインの用語ベースのリレーションを作成する方法について説明します。 用語ベースのリレーション (TBR) を使用して、ドメインの値の一部になっている用語を修正できます。 用語ベースのリレーションでは、共通する部分のスペルを除いても同一である複数の値は同一のシノニムと見なすことができます。 たとえば、"Inc." という用語を "Incorporated" に変更する用語ベースのリレーションを設定できます。 という用語を “Incorporated” に変更する用語ベースのリレーションを設定できます。 "Inc." という用語は、ドメインで発生するたびに変更されます。 "Contoso, Inc." のインスタンスは "Contoso, Incorporated" に変更され、2 つの値はまったく同じシノニムと見なされます。  
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインの用語ベースのリレーションを作成する方法について説明します。 用語ベースのリレーション (TBR) を使用して、ドメインの値の一部になっている用語を修正できます。 用語ベースのリレーションでは、共通する部分のスペルを除いても同一である複数の値は同一のシノニムと見なすことができます。 たとえば、"Inc." という用語を “Incorporated” に変更する用語ベースのリレーションを設定できます。 "Inc." という用語は、ドメインで発生するたびに変更されます。 "Contoso, Inc." のインスタンスは "Contoso, Incorporated" に変更され、2 つの値はまったく同じシノニムと見なされます。  
   
- 用語ベースのリレーションを使用するには、"Inc." と "Incorporated" や "Senior" と "Sr." など、[値] と [次に修正] のペアのリストを作成します。 “Inc.” と “Incorporated” または “Senior” と “Sr.” など、[値] と [次に修正] のペアのリストを作成します。 用語ベースのリレーションを使用すると、個々のドメイン値をシノニムとして手動で設定しなくても、ドメイン全体で用語を変更できます。 以前にナレッジ検出で値が検出されていない場合でも値を修正することを指定できます。 用語ベースのリレーション変換により 2 つの値が同じになる場合、DQS ではそれらの用語間のシノニム リレーションシップ (ナレッジ検索)、それらの用語間の修正リレーションシップ (データ修正)、または完全一致 (照合) が作成されます。  
+ 用語ベースのリレーションを使用するには、"Inc." と "Incorporated" や "Senior" と "Sr." など、[値] と [次に修正] のペアのリストを作成します。 用語ベースのリレーションを使用すると、個々のドメイン値をシノニムとして手動で設定しなくても、ドメイン全体で用語を変更できます。 以前にナレッジ検出で値が検出されていない場合でも値を修正することを指定できます。 用語ベースのリレーション変換により 2 つの値が同じになる場合、DQS ではそれらの用語間のシノニム リレーションシップ (ナレッジ検索)、それらの用語間の修正リレーションシップ (データ修正)、または完全一致 (照合) が作成されます。  
   
  用語ベースのリレーション変換と記号変換 (特殊文字をスペースまたは null で置き換える) はどちらも分析前の事前処理段階で実行されます。 複合ドメインの解析が要求された場合は、区切り記号の解析に記号が必要なため、2 つの変換の前にその解析が実行されます。 ドメイン ルールやドメイン値の変更などの他の操作は変換後に実行されます。 照合の場合、用語ベースのリレーションはクレンジングを実行するかどうかに関係なく照合アクティビティの前にソース データに適用されます。  
   

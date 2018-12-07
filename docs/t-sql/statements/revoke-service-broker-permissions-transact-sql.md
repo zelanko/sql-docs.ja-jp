@@ -22,12 +22,12 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f1d166d403edc7d63ae3434cb4c98d1b40e4133b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e740cee45eb791f16548f6d98d714a943b9178a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693000"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538835"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (Service Broker の権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +63,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のセキュリティ保護可能なリソースに対して取り消せる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  権限を取り消すコントラクトを指定します。 スコープ修飾子 **::** が必要です。  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  権限を取り消すメッセージ型を指定します。 スコープ修飾子 **::** が必要です。  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  権限を取り消すリモート サービス バインドを指定します。 スコープ修飾子 **::** が必要です。  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  権限を取り消すルートを指定します。 スコープ修飾子 **::** が必要です。  
   
- SERVICE **::***message_type_name*  
+ SERVICE **::**_message_type_name_  
  権限を取り消すサービスを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  

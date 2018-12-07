@@ -30,12 +30,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbfac38c561a8943a6e15753f3ba20f9ca534311
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbfda8b5768242980d61cce90f1ca16f5de6aa9f
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667770"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586265"
 ---
 # <a name="monitor-and-tune-for-performance"></a>パフォーマンスの監視とチューニング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47667770"
 -   問題のトラブルシューティングや、ストアド プロシージャなどのアプリケーション コンポーネントのデバッグ。  
   
 ## <a name="monitoring-in-a-dynamic-environment"></a>動的な環境での監視  
-条件を変更すると、パフォーマンスが変化します。 評価では、ユーザー数の増加によるパフォーマンスの変化、ユーザーのアクセス方法と接続方法の変化、データベース コンテンツの増加、クライアント アプリケーションの変化、アプリケーション内のデータの変化、クエリの複雑化、およびネットワーク トラフィックの増加を確認できます。 ツールを使用してパフォーマンスを監視することにより、パフォーマンスの変化を、変化する条件と複雑なクエリに関連付けることができます。 **例:**:  
+条件を変更すると、パフォーマンスが変化します。 評価では、ユーザー数の増加によるパフォーマンスの変化、ユーザーのアクセス方法と接続方法の変化、データベース コンテンツの増加、クライアント アプリケーションの変化、アプリケーション内のデータの変化、クエリの複雑化、およびネットワーク トラフィックの増加を確認できます。 ツールを使用してパフォーマンスを監視することにより、パフォーマンスの変化を、変化する条件と複雑なクエリに関連付けることができます。 **使用例:**  
   
 -   頻繁に使用されるクエリの応答時間を監視することによって、クエリを実行するテーブルに対するクエリまたはインデックスの変更が必要かどうかを判断できます。  
   
@@ -61,30 +61,29 @@ ms.locfileid: "47667770"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続しようとするユーザーを監視することによって、セキュリティが適切に設定されているかどうかを判断でき、アプリケーションまたは開発システムをテストできます。  
   
- 応答時間は、クエリが処理されていることを視覚的に確認できる形式で、結果セットの先頭行をユーザーに返すのに必要な時間の長さです。 スループットは、指定した時間内にサーバーで処理されたクエリの合計数です。  
+応答時間は、クエリが処理されていることを視覚的に確認できる形式で、結果セットの先頭行をユーザーに返すのに必要な時間の長さです。 スループットは、指定した時間内にサーバーで処理されたクエリの合計数です。  
   
- ユーザーの数が増えるにつれて、サーバーのリソースの競合も増えます。その結果、応答時間が長くなり、全般的なスループットが減少します。  
+ユーザーの数が増えるにつれて、サーバーのリソースの競合も増えます。その結果、応答時間が長くなり、全般的なスループットが減少します。  
   
 ## <a name="monitoring-and-performance-tuning-tasks"></a>監視とパフォーマンス チューニングのタスク  
   
 |トピック| タスク|  
 |-----------|----------------------|  
-|[SQL Server コンポーネントの監視](../../relational-databases/performance/monitor-sql-server-components.md)|SQL Server コンポーネントの監視に必要な手順。|  
-|[パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|SQL Server で利用可能な監視およびチューニング ツールの一覧を表示します。|  
+|[SQL Server コンポーネントの監視](../../relational-databases/performance/monitor-sql-server-components.md)|利用状況モニター、拡張イベント、および動的管理ビューと関数など、SQL Server コンポーネントを監視するために必要な手順です。|  
+|[パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|ライブ クエリ統計、データベース エンジン チューニング アドバイザーなど、SQL Server で使用可能な監視およびチューニング ツールの一覧を示します。|  
+|[クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|新しいデータベース互換性レベルにアップグレードする間に、ワークロードのパフォーマンスの安定を維持します。|  
+|[クエリ ストアを使用したパフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|クエリ ストアを使用して、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。|  
 |[パフォーマンスのベースラインの設定](../../relational-databases/performance/establish-a-performance-baseline.md)|パフォーマンスのベースラインの設定方法。|  
 |[パフォーマンスの問題の特定](../../relational-databases/performance/isolate-performance-problems.md)|データベースのパフォーマンスの問題を特定します。|  
 |[ボトルネックの特定](../../relational-databases/performance/identify-bottlenecks.md)|ボトルネックを特定するために、サーバーのパフォーマンスを監視および追跡します。|  
+|[DMV を使用してビューの使用統計とパフォーマンスを確認する](../../relational-databases/performance/use-dmvs-determine-usage-performance-views.md)|クエリのパフォーマンスに関する情報を取得するために使用する方法とスクリプトについて説明します。|  
 |[サーバーのパフォーマンスと利用状況の監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、Windows のパフォーマンスと利用状況の監視ツールを使用します。|  
-|[実行プランの表示と保存](../../relational-databases/performance/display-and-save-execution-plans.md)|実行プランを表示し、XML 形式でファイルに保存します。|  
-|[ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)|クエリ実行ステップに関するリアルタイムの統計情報を表示します。|  
-|[クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|クエリ ストアを使用して、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。|  
-|[インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|メモリ最適化テーブルに関する考慮事項。|  
-|[クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)|クエリ ストアの使用に関してアドバイスします。|  
+|[リソースの使用状況の監視](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|システム モニター (perfmon とも呼ばれます) を使用して、パフォーマンス カウンターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスを測定します。|  
+
   
 ## <a name="see-also"></a>参照  
- [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)   
- [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)   
- [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)    
+ [実行プランの比較と分析](../../relational-databases/performance/compare-and-analyze-execution-plans.md)    
+ [実行プランの表示と保存](../../relational-databases/performance/display-and-save-execution-plans.md)    
   
   

@@ -9,25 +9,22 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668551"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586315"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV を使用してビューの使用統計とパフォーマンスを確認する
+この記事では、**ビューを使用するクエリのパフォーマンス**に関する情報を取得するために使用する方法とスクリプトについて説明します。 これらのスクリプトの目的は、データベース内のさまざまなビューの使用とパフォーマンスのインジケーターを提供することです。 
 
-この記事では、データベース オブジェクトで**ビューを使用するクエリのパフォーマンス**に関する情報を取得するために使用する方法とスクリプトについて説明します。 これらのスクリプトの目的は、データベース内のさまざまなビューの使用とパフォーマンスのインジケーターを提供することです。 
-
-## <a name="sysdmexecqueryoptimizerinfo"></a>Sys.dm_exec_query_optimizer_info
-
-DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) では、SQL Server クエリ オプティマイザーによって行われた最適化に関する統計情報が公開されます。 これらの値は累積的であり、SQL Server の起動時に記録を開始します。  
+## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーによって行われた最適化に関する統計情報が公開されます。 これらの値は累積的であり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に記録を開始します。 クエリ オプティマイザーの詳細については、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)」を参照してください。   
 
 次の common_table_expression (CTE) では、この DMV を使用して、ビューを参照するクエリの割合など、ワークロードに関する情報を提供します。 このクエリによって返される結果では、パフォーマンスの問題自体は示されませんが、クエリのパフォーマンスが悪いというユーザーの不満と組み合わせることで、基になる問題が明らかになります。 
 
-
-```SQL
+```sql
 WITH CTE_QO AS
 (
   SELECT
@@ -104,17 +101,17 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
-このクエリの結果と、システム ビュー [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql) の結果を組み合わせて、クエリ統計、クエリ テキスト、およびキャッシュされた実行プランを識別します。 
 
-## <a name="sysviews"></a>Sys.views
+このクエリの結果と、システム ビュー [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md) の結果を組み合わせて、クエリ統計、クエリ テキスト、およびキャッシュされた実行プランを識別します。 
 
+## <a name="sysviews"></a>sys.views
 次の CTE では、実行の数、合計実行時間、メモリから読み取られたページ数に関する情報が提供されます。 結果を使用して、最適化の候補となる可能性のあるクエリを識別できます。 
   
-  >[!NOTE]
-  > このクエリの結果は、SQL Server のバージョンによって異なることがあります。  
+> [!NOTE]
+> このクエリの結果は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なることがあります。  
 
 
-```SQL
+```sql
 WITH CTE_VW_STATS AS
 (
   SELECT
@@ -168,12 +165,10 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>Sys.dmv_exec_cached_plans
+## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+最後のクエリでは、DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) を使用して、未使用のビューに関する情報が提供されます。 ただし、実行プランのキャッシュは動的であり、結果は異なることがあります。 そのため、ある程度の期間についてこのクエリを使用し、ビューが実際に使用されているかどうかを判断します。 
 
-最後のクエリでは、DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql) を使用して、未使用のビューに関する情報が提供されます。 ただし、実行プランのキャッシュは動的であり、結果は異なることがあります。 そのため、ある程度の期間についてこのクエリを使用し、ビューが実際に使用されているかどうかを判断します。 
-
-
-```SQL
+```sql
 SELECT
   SCHEMA_NAME(vw.schema_id) AS schemaname
   ,vw.name AS name
@@ -198,11 +193,11 @@ WHERE
 GO
 ```
 
-## <a name="related-external-resources"></a>関連する外部リソース
-
-- [パフォーマンス チューニングのための DMV (動画 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [パフォーマンス チューニングのための DMV (スライドとデモ - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
-- [カプセル形式での SQL Server チューニング (動画 - SQL Saturday Parma)](https://vimeo.com/200980883)
-- [SQL Server のチューニングの概要 (スライドとデモ - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
-- [SQL Server 動的管理ビューでのパフォーマンス チューニング](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
-- [SQL Server 2016 の最も顕著な待機の種類](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)
+## <a name="see-also"></a>参照
+[動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[パフォーマンス チューニングのための DMV (動画 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
+[パフォーマンス チューニングのための DMV (スライドとデモ - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
+[カプセル形式での SQL Server チューニング (動画 - SQL Saturday Parma)](https://vimeo.com/200980883)    
+[SQL Server のチューニングの概要 (スライドとデモ - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
+[SQL Server 動的管理ビューでのパフォーマンス チューニング](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
+[SQL Server 2016 の最も顕著な待機の種類](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   

@@ -16,15 +16,15 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5951daccc88e8593c27365254d208c4b2ee84118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11b6d7d881a034fa79315c37345d7845d868fc2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753790"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542640"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する
-  よく使用される制御フロー タスクまたはコンテナーをスタンドアロン パーツ ファイル (".dtsxp"ファイル) に保存し、それを、制御フロー パッケージ パーツを使用して 1 つまたは複数のパッケージで複数回、再利用します。 この再利用性により SSIS パッケージの設計および管理が容易になります。  
+  よく使用される制御フロー タスクまたはコンテナーをスタンドアロン パーツ ファイル (".dtsxp"ファイル) に保存し、それを、制御フロー パッケージ パーツを使用して 1 つまたは複数のパッケージで複数回、再利用します。 この再利用可能性によって、SSIS パッケージの設計と管理を容易に実行できます。  
   
 ## <a name="create-a-new-control-flow-package-part"></a>新しい制御フロー パッケージ パーツを作成する  
  新しい制御フロー パッケージ パーツを作成するには、ソリューション エクスプ ローラーで **[パッケージ パーツ]** フォルダーを展開します。 **[制御フロー]** を右クリックし、 **[新しい制御フロー パッケージ パーツ]** を選択します。  
@@ -80,7 +80,7 @@ ms.locfileid: "47753790"
  **[オプション]**  
   
  **パッケージ パーツのパス**  
- パーツ ファイルのパスを入力するか、参照ボタン (…) をクリックして、コピーまたは参照するパーツ ファイル指定します。  
+ パーツ ファイルのパスを入力するか、参照ボタン [...] をクリックして、コピーまたは参照するパーツ ファイル指定します。  
   
  **参照として追加**  
  -   オンにすると、パーツが Integration Services プロジェクトに参照として追加されます。 このオプションは、複数の Integration Services プロジェクトでパーツ ファイルの単一のコピーを参照する場合に選択します。  

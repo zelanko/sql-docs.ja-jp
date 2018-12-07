@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030201"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710703"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services モバイル レポートの作成
-SQL Server Mobile Report Publisher を使用すると、調整可能なグリッド行とグリッド列、および柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応する SQL Server 2016 Reporting Services モバイル レポートをすばやく作成できます。  
+SQL Server Mobile Report Publisher を使用すると、調整可能なグリッド行とグリッド列、および柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応する SQL Server Reporting Services モバイル レポートをすばやく作成できます。  
   
 初めてモバイル レポートを作成するときは、Reporting Services Web ポータルから SQL Server Mobile Report Publisher をローカル コンピューターにインストールできます。 または、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=733527)からインストールすることもできます。 2 回目以降は、Web ポータルまたはローカルのいずれかから開始できます。   
     
@@ -62,7 +62,7 @@ SQL Server Mobile Report Publisher を使用すると、調整可能なグリッ
   
 11. 次にレポートを保存します。 左上隅の [保存] アイコンを選択して、 **[ローカルに保存]** または **[サーバーに保存]** を選択します。  
   
-   サーバーに保存するには、SQL Server 2016 Reporting Services レポート サーバーにアクセスできる必要があります。  
+   サーバーに保存するには、SQL Server Reporting Services レポート サーバーにアクセスできる必要があります。  
      
    ### <a name="see-also"></a>参照  
      

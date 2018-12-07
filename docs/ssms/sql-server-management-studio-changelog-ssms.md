@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db6f79e16f65494bdb45b297324541668d69d567
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703990"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712733"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
@@ -198,10 +198,10 @@ SSMS は PATH 環境変数に追加されません。
 
 - SSMS.EXE (および一般的なツール) のパスは、パスに追加されなくなりました。 ユーザーは手動で追加するか、最新の Windows の場合は [スタート] メニューを使用することができます。
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] のサポート
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] のサポート
 
-- このリリースは、[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] を完全に*認識*している最初のリリースの SSMS です (compatLevel 150 など)。
-- [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] では "BATCH_STARTED_GROUP" と "BATCH_COMPLETED_GROUP" を、SSMS では Managed Instance をサポートしています。
+- このリリースは、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (compatLevel 150 など) を完全に "*認識*" する SSMS の最初のリリースです。
+- [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の "BATCH_STARTED_GROUP" と "BATCH_COMPLETED_GROUP" および SSMS の Managed Instance がサポートされています。
 - GraphDB: Graph TC Sequence の showplan にフラグを追加します。
 - Always Encrypted: [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) のサポートが追加されました。
   - [接続] ダイアログで、ユーザーがエンクレーブのサポートを有効にして構成する [オプション] ボタンをクリックすると、新しい [Always Encrypted] タブが表示されるようになりました。
@@ -302,7 +302,7 @@ SSMS エディター:
 
 - OE (誤って構成された DataCollector) の [管理] ノードを展開しようとすると、SSMS から "オブジェクトを DBNull から他のタイプにキャストすることはできません" のような例外がスローされる問題を修正しました。
 - ノード (https://feedback.azure.com/forums/908035/suggestions/32910247 と他の重複) の名前を変更するときに、Del キーが機能しない問題を修正しました。
-- [上位 N の編集] を呼び出す前に OE で引用符がエスケープ処理されず、混乱を引き起こしている問題を修正しました
+- [上位 N の編集...] を呼び出す前に OE で引用符がエスケープ処理されず、混乱を引き起こしている問題を修正しました
 - [データ層アプリケーションのインポート] ウィザードが Azure Storage ツリーから起動できない問題を修正しました。
 - SSL チェックボックスの状態が保持されない [データベース メール構成] の問題を修正しました (https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)。
 - SSMS で is_auto_update_stats_async_on を使用してデータベースを復元しようとすると、既存の接続を閉じるオプションが淡色表示される問題を修正しました
@@ -430,7 +430,36 @@ SSIS
 - パッケージが旧バージョンの SQL Server をターゲットとし、同時にスクリプト タスク/スクリプト コンポーネントを含んでいる場合、そのパッケージを正常にデプロイまたは実行できません。
 - SSMS はリモートの Integration Services に接続できません。
 
-## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9 (最新の GA リリース)
+
+## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (最新の GA リリース)
+
+[SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) ![のダウンロード](../ssdt/media/download.png)
+
+- リリース番号: 17.9.1<br>
+- ビルド番号: 14.0.17289.0<br>
+- リリース日: 2018 年 11 月 21 日
+
+17.9.1 は 17.9 に対する小規模な更新であり、次のバグが修正されています。
+
+- "Active Directory - Universal with MFA のサポート" 認証を SQL クエリ エディターと共に使用すると、クエリを呼び出すたびに接続が終了し、再び開かれることがある、という問題を修正しました。 接続が終了する副作用として、グローバル一時テーブルが予期せず削除されること、また場合によって接続に新しい SPID が付与されることがあります。
+- 復元プランが復元プランを発見できない、または特定の条件下で非効率的な復元プランが生成されるという、長いあいだ未解決であった問題を修正しました。
+- Azure SQL データベースへの接続時にエラーが発生する原因であった "データ層アプリケーションのインポート" ウィザードでの問題を修正しました。
+
+
+
+> [!NOTE]
+> SSMS 17.x の英語以外のローカライズされたリリースでは、Windows 8、Windows 7、Windows Server 2012、Windows Server 2008 R2 にインストールする場合、[KB 2862966 セキュリティ更新プログラム パッケージ](https://support.microsoft.com/kb/2862966)が必要です。
+
+[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## <a name="ssms-179"></a>SSMS 17.9
 
 [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) ![のダウンロード](../ssdt/media/download.png)
 
@@ -924,7 +953,7 @@ DB の拡張をスクリプト化したときに *DATA\_COMPRESSION* オプシ�
 
 - XEvent: 
    - SSMS が .xel ファイル内のイベントの一部だけを開く問題を修正しました。
-   - 既定のデータベースが 'マスター' でない場合の "ライブ データの監視" のエクスペリエンスが向上しました。[Connect アイテム 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582)
+   - 既定のデータベースが "master" でない場合の "ライブ データの監視" のエクスペリエンスが向上しました ([Connect 項目 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582))。
 - Always On: ログ バックアップの復元がエラー "このバックアップ セットへのサインインは LSN x で終了します。これはデータベースに適用するには古すぎます" で失敗する可能性がある問題を修正しました。
 - ジョブの利用状況モニター: 一貫性のないアイコンを修正しました。[Connect アイテム 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100)
 - クエリ ストア: クエリ ストア レポートでユーザーが "カスタム" の日付範囲を選択できない問題を修正しました。 以下の Connect アイテムにリンクされています。
@@ -978,7 +1007,7 @@ SQL Azure オブジェクトをターゲットにしたときに、"スクリプ
 **SSMS 全般**
 
 - MFA を使用した UA を使用する Azure AD 認証では、次の SSMS 機能はサポートされていません。
-   - データベース エンジン チューニング アドバイザーは Azure AD の認証ではサポートされていません。ユーザーに表示されるエラー メッセージが少しあいまいだという既知の問題があります。"Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした…) が、正常なメッセージである "Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient) (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
+   - データベース エンジン チューニング アドバイザーは Azure AD の認証ではサポートされていません。ユーザーに表示されるエラー メッセージが少しあいまいだという既知の問題があります。"Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,..." (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした...) が、正常なメッセージである "Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient) (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
 - DTA でクエリを分析しようとすると、次のエラーが発生します。"Object must implement IConvertible. (mscorlib)" (オブジェクトで IConvertible を実装する必要があります (mscorlib))。
 - *[低下したクエリ]* がオブジェクト エクスプローラーのレポートのクエリ ストアのリストにありません。
    - 回避策: **[クエリ ストア]** ノードを右クリックし、**[View Regressed Queries]\(低下したクエリを表示します\)** を選択します。
@@ -1061,7 +1090,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - **新しいテーブル/ビュー** デザイナーが古いスタイルのログイン プロンプトを表示して、Azure AD の認証で機能しません。
   - **[上位 200 行を編集]** 機能は、Azure AD 認証をサポートしません。
   - **登録済みサーバー** コンポーネントは、Azure AD 認証をサポートしません。
-  - **データベース エンジン チューニング アドバイザー**は、Azure AD 認証でサポートされていません。 ユーザーに表示されるエラー メッセージが有益ではないという既知の問題があります。*Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした…) が、正常なメッセージである *Database Engine Tuning Advisor does not support Microsoft Azure SQL Database.(DTAClient)* (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
+  - **データベース エンジン チューニング アドバイザー**は、Azure AD 認証でサポートされていません。 ユーザーに表示されるエラー メッセージがあまり役に立たないという既知の問題があります。"*Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,...*" (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした...) が、正常なメッセージである "*Database Engine Tuning Advisor does not support Microsoft Azure SQL Database.(DTAClient)* (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
 
 **Analysis Services (AS)**
 
@@ -1224,7 +1253,7 @@ RestoreDefaultFonts: 既定の設定に戻ります。
 - リレーショナル サーバー以外の種類のサーバー (AS\RS\IS) で [SQL Server ログの表示] コンテキスト メニュー項目が間違って表示される問題を修正しました。 
 - SQL 認証を使用する Analysis Services のパーティション クエリの構文チェックで、ログイン失敗メッセージが表示される問題を修正しました。
 - SSMS で、プレビュー 1400 コンパクト レベルの AS 表形式モデルの名前を変更するとエラーが発生する問題を修正しました。
-- まれな状況で、AS サーバー上で無効な操作を試行した後で発生する可能性がある "モデルの操作に失敗する" 問題を修正しました。モデルの保存に失敗した後、ローカルの変更は元に戻ります。
+- まれな状況で、AS サーバー上で無効な操作を試行した後で発生する可能性がある "モデルの操作に失敗する" 問題を修正しました。モデルの保存に失敗した後、ローカルの変更は元に戻ります
 - Analysis Services 同期データベースのポップアップ ダイアログの文字の間違いを修正しました。
 - コンテナーのバックアップ/復元ダイアログが、複数のモニター セットアップで画面の表示領域を超えて表示される。 
 - 対象オブジェクトの名前に "]" が含まれている場合、SecurityPolicy を作成できない。
@@ -1271,7 +1300,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - [新規サーバーの登録] ダイアログで UI が切り捨てられる問題が修正されました。
 - 引用符で囲まれた文字列定数値を含む式が DMF 条件 UI で正しく更新されない問題が修正されます。
 - カスタム レポートの実行時に SSMS がクラッシュする原因と思われる問題が修正されました。
-- [Scale Out で実行] メニュー項目が フォルダー ノードに追加されます。
+- [Execution in Scale Out...]\(スケールアウトで実行...\) メニュー項目がフォルダー ノードに追加されます
 - Azure SQL DB ファイアウォール ホワイト リスト IP アドレス機能の問題を修正しました
 - AS 多次元パーティションのソースの編集時にオブジェクト参照が例外を設定しない原因であった SSMS の問題を修正しました
 - 多次元 AS サーバーから顧客アセンブリを削除するときにオブジェクト参照が例外を設定しない原因であった SSMS の問題を修正しました

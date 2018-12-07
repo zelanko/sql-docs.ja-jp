@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698230"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531491"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server のヘルプとフィードバック
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,12 @@ SQL Server エンジニアリング チームは、SQL Server の [User Voice](h
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>SQL Server Management Studio について提案する
 また、SQL Server Management Studio (SSMS) チームも SQL Server の [User Voice](https://feedback.azure.com/forums/908035-sql-server) を監視しているので、報告する問題や提案がある場合には User Voice が最適です。 
+
+## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>SQL Server 技術ドキュメントにオフラインでアクセスする
+SQL Server のドキュメントをオフライン システムで表示するには、2 つのオプションがあります。 SQL Server 技術ドキュメントを使用中にいつでも PDF を作成できます。または、[SQL Server のオフラインのヘルプ ビューアー](sql-server-help-installation.md)を使用してオフラインのコンテンツをダウンロードできます。 
+
+PDF を作成する場合は、すべての目次の下部にある **[Download PDF]\(PDF をダウンロード\)** リンクをクリックします。
+![[Download PDF]\(PDF をダウンロード\)](media/sql-server-get-help/download-pdf.png)
 
 ## <a name="i-want-to-contact-microsoft-support"></a>Microsoft サポートに問い合わせる
 法人のお客様の場合は、[サポート オプション](https://support.microsoft.com/gp/support-options-for-business?forceorigin=esmc)をご確認ください。
@@ -77,12 +83,14 @@ SQL チームにもアクセスできるソーシャル メディア アウト�
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## <a name="i-want-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する
+
+###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![コンテンツの編集](../includes/media/edit-topic-pencil.png) コンテンツの編集
+ドキュメントに誤りを見つけた場合、 またはドキュメントを改善できる投稿をお持ちの場合、 docs.microsoft.com で対象のコンテンツを自分で編集できます。 そうすることで、ドキュメントが改善されるだけでなく、ページの共同作成者としてもクレジットされます。 詳細については、[https://aka.ms/editsqldocs](https://aka.ms/editsqldocs)を参照してください。 
+
+公開されるすべての投稿は、SQL コンテンツ チームによって技術的正確さと一貫性が確認されます。 
+
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>SQL ドキュメント コンテンツのフィードバックを送る
-
-### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![コンテンツの編集](../includes/media/edit-topic-pencil.png) コンテンツの編集
-ドキュメントに誤りを見つけた場合、 コンテンツを自分で編集できることはご存じですか。 そうすることで、ドキュメントが改善されるだけでなく、ページの共同作成者としてもクレジットされます。 詳細については、[https://aka.ms/editsqldocs](https://aka.ms/editsqldocs)を参照してください。 
-
-### <a name="surveys"></a>アンケート
 お時間があり、SQL ドキュメントのエクスペリエンスについてご意見をお寄せいただける場合はアンケートにご協力ください。 [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) にアクセスしてください。所要時間は 10 分から 15 分です。 
 
 アイデア、提案、フィードバックなど、どのようなことでも SQL コンテンツ チームにお伝えください。 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback) にアクセスしてください。 

@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 28f94e65e373d3128c8a8813207852cd0d98fe66
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1a45ddf4920f693db928dddd30256c20f36ebe4a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699550"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524338"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ SQL Server 2008 R2 のインストール方法の一般的な情報について�
 |SQL Server 2008 R2 または SQL Server 2008 R2 SP1 のクライアントと管理ツールのみの 32 ビット バージョン (SQL Server 2008 R2 Management Studio を含む)|SQL Server 2008 R2 SP2 の 32 ビット バージョンへクライアントと管理ツールをアップグレード|SQLServer2008R2SP2-KB2630458-x86-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=251790)から)|  
 |SQL Server 2008 R2 Management Studio Express または SQL Server 2008 R2 SP1 Management Studio Express の 32 ビット バージョン|SQL Server 2008 R2 SP2 Management Studio Express の 32 ビット バージョンへアップグレード|SQLManagementStudio_x86_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=251791)から)|  
 |SQL Server 2008 R2 または SQL Server 2008 R2 SP1 のいずれかのエディションの 32 ビット バージョン **および** クライアントと管理ツールの 32 ビット バージョン (SQL Server 2008 R2 RTM Management Studio 含む)|SQL Server 2008 R2 SP2 の 32 ビット バージョンへすべての製品をアップグレード|SQLServer2008R2SP2-KB2630458-x86-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=251790)から)|  
-|[Microsoft SQL Server 2008 R2 用 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=16978)の 1 つ以上のツールの 32 ビット バージョン|Microsoft SQL Server 2008 R2 SP2 用 Feature Pack の 32 ビット バージョンへツールをアップグレード|[Microsoft SQL Server 2008 R2 SP2 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=251792)の 1 つ以上のファイル|  
-|SQL Server 2008 R2 の 32 ビット インストールなし|Server 2008 R2 のインストール (SP2 含む)|[SQL Server 2008 R2 SP2 – Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) に移動して、指示に従ってください。|  
+| [Microsoft SQL Server 2008 R2 用 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=16978)の 1 つ以上のツールの 32 ビット バージョン|Microsoft SQL Server 2008 R2 SP2 用 Feature Pack の 32 ビット バージョンへツールをアップグレード| [Microsoft SQL Server 2008 R2 SP2 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=251792)の 1 つ以上のファイル|  
+|SQL Server 2008 R2 の 32 ビット インストールなし|Server 2008 R2 のインストール (SP2 含む)|[SQL Server 2008 R2 SP2 - Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) に移動して、指示に従ってください。|  
 |SQL Server 2008 R2 Management Studio の 32 ビット インストールなし|SQL Server 2008 R2 Management Studio のインストール (SP2 含む)|SQLManagementStudio_x86_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=251791) から) を使用して無料の SQL Server 2008 R2 SP2 Management Studio Express Edition をインストールしてください。|  
 |SQL Server 2008 R2 または SQL Server 2008 R2 SP1 のいずれかのエディションの 64 ビット バージョン|SQL Server 2008 R2 SP2 の 64 ビット バージョンへアップグレード|SQLServer2008R2SP2-KB2630458-x64-ENU または SQLServer2008R2SP2-KB2630455-IA64-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=251790)から)|  
 |SQL Server 2008 R2 RTM Express または SQL Server 2008 R2 SP1 Express の 64 ビット バージョン|SQL Server 2008 R2 SP2 の 64 ビット バージョンへアップグレード|SQLServer2008R2SP2-KB2630458-x64-ENU.exe または SQLServer2008R2SP2-KB2630455-IA64-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=251790)から)|  
 |SQL Server 2008 R2 または SQL Server 2008 R2 SP1 のクライアントと管理ツールのみの 64 ビット バージョン (SQL Server 2008 R2 Management Studio 含む)|SQL Server 2008 R2 SP2 の 64 ビット バージョンへクライアントと管理ツールをアップグレード|SQLServer2008R2SP2-KB2630458-x64-ENU.exe または SQLServer2008R2SP2-KB2630455-IA64-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=251790)から)|  
 |SQL Server 2008 R2 Management Studio Express または SQL Server 2008 R2 SP1 Management Studio Express の 64 ビット バージョン|SQL Server 2008 R2 SP2 Management Studio Express の 64 ビット バージョンへアップグレード|SQLManagementStudio_x64_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=251791)から)|  
 |SQL Server 2008 R2 または SQL Server 2008 R2 SP1 のいずれかのエディションの 64 ビット バージョン **および** クライアントと管理ツールの 64 ビット バージョン (SQL Server 2008 R2 RTM Management Studio 含む)|SQL Server 2008 R2 SP2 の 64 ビット バージョンへすべての製品をアップグレード|SQLServer2008R2SP2-KB2630458-x64-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=251790)から)|  
-|[Microsoft SQL Server 2008 R2 用 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=16978)の 1 つ以上のツールの 64 ビット バージョン|Microsoft SQL Server 2008 R2 SP2 用 Feature Pack の 64 ビット バージョンへツールをアップグレード|[Microsoft SQL Server 2008 R2 SP2 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=251792)の 1 つ以上のファイル|  
-|SQL Server 2008 R2 の 64 ビット インストールなし|Server 2008 R2 のインストール (SP2 含む)|[SQL Server 2008 R2 SP2 – Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) に移動して、指示に従ってください。|  
+| [Microsoft SQL Server 2008 R2 用 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=16978)の 1 つ以上のツールの 64 ビット バージョン|Microsoft SQL Server 2008 R2 SP2 用 Feature Pack の 64 ビット バージョンへツールをアップグレード| [Microsoft SQL Server 2008 R2 SP2 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=251792)の 1 つ以上のファイル|  
+|SQL Server 2008 R2 の 64 ビット インストールなし|Server 2008 R2 のインストール (SP2 含む)|[SQL Server 2008 R2 SP2 - Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) に移動して、指示に従ってください。|  
 |SQL Server 2008 R2 Management Studio の 64 ビット インストールなし|SQL Server 2008 R2 Management Studio のインストール (SP2 含む)|SQLManagementStudio_x64_ENU.exe ( [ここから](https://go.microsoft.com/fwlink/p/?LinkId=251791) ) を使用して無料の SQL Server 2008 R2 SP2 Management Studio Express Edition をインストールしてください。|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 別のプロセスによって SQAGTRES.dll がロックされている場合のセットアップ失敗  

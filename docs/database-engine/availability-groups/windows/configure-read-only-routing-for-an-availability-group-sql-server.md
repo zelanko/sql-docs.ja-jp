@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50819e03af647245949d3c60638767ce3ab859d7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d984799a7ac2ac3c6dd6241e98c3a5af175759b0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605812"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527157"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>可用性グループの読み取り専用ルーティングの構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "51605812"
   
     -   プライマリ ロールの読み取り専用ルーティングを構成するには、ADD REPLICA 句または MODIFY REPLICA WITH 句で、PRIMARY_ROLE オプションを次のように指定します。  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘***server***’** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('***server***'** [ **,**...*n* ] **))**  
   
          *server* は、可用性グループの読み取り専用セカンダリ レプリカをホストするサーバー インスタンスを識別します。  
   
@@ -145,7 +145,7 @@ READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5
  サポートされる入れ子になったかっこのレベルは、1 レベルのみです。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
- 次の例では、既存の可用性グループ `AG1` の 2 つの可用性レプリカを、これらのレプリカのいずれかが現在プライマリ ロールを所有している場合に読み取り専用ルーティングをサポートするように変更します。 可用性レプリカをホストするサーバー インスタンスを識別するために、この例ではインスタンス名`COMPUTER01` および `COMPUTER02`を指定します。  
+ 次の例では、既存の可用性グループ `AG1` の 2 つの可用性レプリカを、これらのレプリカのいずれかが現在プライマリ ロールを所有している場合に読み取り専用ルーティングをサポートするように変更します。 可用性レプリカをホストするサーバー インスタンスを識別するために、この例ではインスタンス名 `COMPUTER01` および `COMPUTER02` を指定します。  
   
 ```  
 ALTER AVAILABILITY GROUP [AG1]  

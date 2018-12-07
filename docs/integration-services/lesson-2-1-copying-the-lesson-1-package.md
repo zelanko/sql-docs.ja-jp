@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba8f4ef0845ebad226eb8a57edb15347eacf5814
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640479"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541962"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>レッスン 2-1 - レッスン 1 のパッケージのコピー
 ここでは、レッスン 1 で作成した Lesson 1.dtsx パッケージのコピーを作成します。 レッスン 1 を終了していない場合は、チュートリアルに含まれている、レッスン 1 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 2 の実習では、このパッケージの新しいコピーを使用します。  
@@ -49,7 +49,7 @@ ms.locfileid: "51640479"
   
 3.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]** で、 **[ファイル システム]** をクリックします。  
   
-4.  参照ボタン ( **[...]** ) をクリックし、コンピューター上の **Lesson 1.dtsx** に移動して、 **[開く]** をクリックします。  
+4.  参照ボタン **[...]** をクリックし、コンピューター上の **Lesson 1.dtsx** に移動して、**[開く]** をクリックします。  
   
     このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   

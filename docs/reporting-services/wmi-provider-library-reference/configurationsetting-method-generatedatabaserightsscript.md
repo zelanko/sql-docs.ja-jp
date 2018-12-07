@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abaa798e164df9fb552360357dbfc7a4943c9124
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08234fcf8e50851d40a86859244e6bc2840fd1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857092"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526406"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting メソッド - GenerateDatabaseRightsScript
   レポート サーバー データベースおよびレポート サーバーの実行に必要なその他のデータベースに対してユーザー権限を付与する際に使用できる、SQL スクリプトを生成します。 呼び出し元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サーバーに接続して、スクリプトを実行する必要があります。  
@@ -80,8 +80,8 @@ out Int32 HRESULT);
 |LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
 |NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-19)|Local Service|エラー (下記参照)|  
-|NT AUTHORITY\LocalService|Local Service|エラー (下記参照)|  
+|(S-1-5-19)|Local Service|エラー - 下記参照。|  
+|NT AUTHORITY\LocalService|Local Service|エラー - 下記参照。|  
   
  [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]では、組み込みアカウントを使用し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
   
@@ -91,7 +91,7 @@ out Int32 HRESULT);
   
 |DatabaseServerName の値|例|  
 |---------------------------------|-------------|  
-|“.”||  
+|"."||  
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  

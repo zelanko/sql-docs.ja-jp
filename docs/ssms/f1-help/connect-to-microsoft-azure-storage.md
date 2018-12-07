@@ -14,12 +14,12 @@ ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff61f3f69b5ce5c73a96d6f9c06141e5bd17f75a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd9af00c06b2e999ec38d201e11fe305f7bb4e71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839388"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523571"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage への接続
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ Microsoft Azure のアカウントに関する次の情報を指定し、 **[次
 
 2.  **[アカウント キー]** : 指定したストレージ アカウントのアカウント キーを指定します。  
   
-3.  **[セキュリティ保護されたエンドポイントを使用する (HTTPS)]** : 暗号化された通信とネットワーク Web サーバーのセキュア ID を利用します。  
+3.  **[セキュリティ保護されたエンドポイントを使用する (HTTPS)]**: 暗号化された通信とネットワーク Web サーバーのセキュア ID を利用します。  
   
 4.  **[アカウント キーを保存する]** : 暗号化されたファイルにパスワードが保存されます。  
   

@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6492f067d05a3606c5304e473162c8eabdcee5f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845710"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537782"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -224,7 +224,7 @@ ALTER INDEX { index_name | ALL }
   
 1.  並べ替え順序を使用しません。  
   
-2.  再構築が行われている間、テーブルまたはパーティションを排他的にロックします。  データは、NOLOCK、RCSI または SI を使用する場合でも、「オフライン」であり、再構築中に使用できません。  
+2.  再構築が行われている間、テーブルまたはパーティションを排他的にロックします。  データは、NOLOCK、RCSI、または SI を使用する場合でも、"オフライン" であり、再構築中に使用できません。  
   
 3.  すべてのデータを列ストアに再圧縮します。 再構築が行われている間、列ストア インデックスのコピーが 2 つ存在します。 再構築が完了したら、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、元の列ストア インデックスが削除されます。  
   
@@ -459,7 +459,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
   
  ON  
- インデックスにアクセスするとき、ページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。  
+ インデックスにアクセスするとき、ページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。  
   
  OFF  
  ページ ロックは使用されません。  
@@ -720,7 +720,7 @@ ALLOW_ROW_LOCKS = OFF かつ ALLOW_PAGE_LOCK = OFF の場合は、インデッ�
  
 -  元の ALTER INDEX REBUILD ステートメントを同じパラメーターで再実行すると、一時停止中のインデックス再構築操作が再開されます。 ALTER INDEX RESUME ステートメントを実行して、一時停止中のインデックス再構築操作を再開することもできます。
 -  SORT_IN_TEMPDB=ON オプションは、再開可能なインデックスに対してサポートされていません。 
--  RESUMABLE=ON を指定した DDL コマンドを明示的なトランザクション内で実行することはできません (BEGIN TRAN コミット ブロックの一部にすることはできません) 。
+-  RESUMABLE=ON を指定した DDL コマンドを明示的なトランザクション内で実行することはできません (begin tran ... commit ... ブロックの一部にすることはできません)。
 -  一時停止されているインデックス操作のみが再開可能です。
 -  一時停止されているインデックス操作を再開するときには、MAXDOP 値を新しい値に変更することができます。  一時停止されたインデックス操作を再開するときに MAXDOP を指定しない場合は、前回の MAXDOP 値が使用されます。 インデックス再構築操作に対して MAXDOP オプションをまったく指定していない場合は、既定値が使用されます。
 - インデックス操作を直ちに一時停止するには、進行中のコマンドを停止するか (CTRL + C キー)、または ALTER INDEX PAUSE コマンドもしくは KILL *session_id* コマンドを実行します。 コマンドが一時停止されたら、RESUME オプションを使用して再開することができます。
@@ -733,7 +733,7 @@ ALLOW_ROW_LOCKS = OFF かつ ALLOW_PAGE_LOCK = OFF の場合は、インデッ�
    -    RESUMABLE=ON では、無効になっているインデックスの再構築はサポートされていません。
    -    ALTER INDEX REBUILD ALL コマンド
    -    インデックス再構築を使用する ALTER TABLE  
-   -    "RESUMABLE=ON" を指定した DDL コマンドを明示的なトランザクション内で実行することはできません (BEGIN TRAN コミット ブロックの一部にすることはできません )
+   -    "RESUMABLE = ON" を指定した DDL コマンドを明示的なトランザクション内で実行することはできません (begin tran ... commit ... ブロックの一部にすることはできません)
    -    キー列として計算列または TIMESTAMP 列を含むインデックスを再構築します。
 -   ベース テーブルに 1 つまたは複数の LOB 列が含まれている場合、再開可能なクラスター化インデックスの再構築では、この操作の開始時に Sch-M ロックが必要です。
    -    SORT_IN_TEMPDB=ON オプションは、再開可能なインデックスに対してサポートされていません。 
@@ -768,7 +768,7 @@ ALLOW_ROW_LOCKS = OFF かつ ALLOW_PAGE_LOCK = OFF の場合は、インデッ�
 -   ALTER INDEX \<index> ...REBUILD WITH ... 構文は、そのインデックスのすべてのパーティションを再構築します。  
   
 ## <a name="statistics"></a>統計  
- テーブルで **ALTER INDEX ALL …** を実行すると、 インデックスに関連付けられた統計のみが更新されます。 (インデックスではなく) テーブルで作成されている自動または手動の統計は更新されません。  
+ テーブルで **ALTER INDEX ALL ...** を実行すると、インデックスに関連付けられた統計のみが更新されます。 (インデックスではなく) テーブルで作成されている自動または手動の統計は更新されません。  
   
 ## <a name="permissions"></a>アクセス許可  
  ALTER INDEX を実行するには、少なくとも、テーブルまたはビューの ALTER 権限が必要です。  

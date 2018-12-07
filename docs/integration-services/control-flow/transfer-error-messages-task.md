@@ -17,19 +17,19 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d377673177bd5aa2a5ac77b48e93153bdf420f41
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c189be4aa134ee15314571008ed29a3f53c467d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518784"
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
   エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。 ユーザー定義メッセージとは、ID の値が 50000 以上のメッセージのことです。 ID の値が 50000 未満のメッセージはシステム エラー メッセージなので、エラー メッセージ転送タスクを使用して転送することはできません。  
   
  エラー メッセージ転送タスクは、すべてのエラー メッセージを転送するか、指定したエラー メッセージだけを転送できるように、構成することができます。 ユーザー定義エラー メッセージはさまざまな言語で利用できます。このタスクでは、選択した言語のメッセージだけを転送するように構成できます。 他言語バージョンのメッセージを転送先サーバーに転送するには、コード ページ 1033 を使用した us_english バージョンのメッセージが転送先サーバーにあらかじめ存在している必要があります。  
   
- master データベースの sysmessages テーブルには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるすべてのシステム エラー メッセージおよびユーザー定義エラー メッセージが格納されます。  
+ master データベースの sysmessages テーブルには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるすべてのシステム エラー メッセージおよびユーザー定義エラー メッセージが格納されます。  
   
  転送対象のユーザー定義メッセージは、転送先に既に存在している可能性があります。 エラー メッセージは、その識別子と言語が同じ場合は、重複エラー メッセージとして定義されます。 エラー メッセージ転送タスクでは、既存のエラー メッセージの処理方法を次のように構成できます。  
   

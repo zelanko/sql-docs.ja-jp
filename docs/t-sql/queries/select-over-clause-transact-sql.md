@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f4de868657978e62285907d4f513b313f484b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699830"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526402"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +132,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  パーティション内の開始点と終了点を指定することで、パーティション内の行をさらに制限します。 これは、論理アソシエーションまたは物理アソシエーションによって現在の行を基準に行の範囲を指定することで行います。 物理アソシエーションは ROWS 句を使用することで実現されます。  
   
- ROWS 句は、現在行の前または後にある固定数の行を指定することにより、パーティション内の行を限定します。 または、RANGE 句は、現在行の値を基準とする値の範囲を指定することにより、パーティション内の行を論理的に限定します。 前後の行は、ORDER BY 句での順序に基づいて定義されます。 ウィンドウ フレーム"RANGE... CURRENT ROW..." 現在の行として、ORDER BY 式に同じの値を持つすべての行が含まれています。 たとえば、ROWS BETWEEN 2 PRECEDING AND CURRENT ROW は、関数の操作対象である行のウィンドウが、現在行の 2 行前の行から現在行までの 3 行 (現在行を含みます) であることを意味します。  
+ ROWS 句は、現在行の前または後にある固定数の行を指定することにより、パーティション内の行を限定します。 または、RANGE 句は、現在行の値を基準とする値の範囲を指定することにより、パーティション内の行を論理的に限定します。 前後の行は、ORDER BY 句での順序に基づいて定義されます。 ウィンドウ フレーム "RANGE ...CURRENT ROW ..." には、ORDER BY 式に現在行と同じ値を持つすべての行が含まれます。 たとえば、ROWS BETWEEN 2 PRECEDING AND CURRENT ROW は、関数の操作対象である行のウィンドウが、現在行の 2 行前の行から現在行までの 3 行 (現在行を含みます) であることを意味します。  
   
 > [!NOTE]  
 >  ROWS または RANGE を使用する場合は、ORDER BY 句を指定する必要があります。 ORDER BY に複数の順序式が含まれる場合、ROW FOR RANGE では、現在行を決定するときに ORDER BY リスト内のすべての列が考慮されます。  

@@ -22,21 +22,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701757"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586295"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  テーブルまたはインデックス付きビューで、クエリ最適化に関する統計を更新します。 統計は既定で、クエリ プランを改善するためにクエリ オプティマイザーによって必要に応じて更新されますが、UPDATE STATISTICS またはストアド プロシージャ [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) を使用して既定の更新より頻繁に統計を更新することでクエリのパフォーマンスを向上させることができる場合もあります。  
+テーブルまたはインデックス付きビューで、クエリ最適化に関する統計を更新します。 統計は既定で、クエリ プランを改善するためにクエリ オプティマイザーによって必要に応じて更新されますが、`UPDATE STATISTICS` またはストアド プロシージャ [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) を使用して既定の更新より頻繁に統計を更新することでクエリのパフォーマンスを向上できる場合もあります。  
   
- 統計を更新すると、クエリが最新の統計を使用してコンパイルされるようになります。 ただし、統計の更新によりクエリが再コンパイルされます。 パフォーマンスの向上を目的とする場合、クエリ プランの改善とクエリの再コンパイルに要する時間の間にはトレードオフの関係があるため、あまり頻繁に統計を更新しないようにすることをお勧めします。 実際のトレードオフはアプリケーションによって異なります。 統計の更新では、tempdb を使用して、統計を作成するための行のサンプルを並べ替えます。  
+統計を更新すると、クエリが最新の統計を使用してコンパイルされるようになります。 ただし、統計の更新によりクエリが再コンパイルされます。 パフォーマンスの向上を目的とする場合、クエリ プランの改善とクエリの再コンパイルに要する時間の間にはトレードオフの関係があるため、あまり頻繁に統計を更新しないようにすることをお勧めします。 実際のトレードオフはアプリケーションによって異なります。 `UPDATE STATISTICS` では、tempdb を使用して、統計を作成するための行のサンプルを並べ替えます。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,7 +57,7 @@ UPDATE STATISTICS table_or_indexed_view_name
             | SAMPLE number { PERCENT | ROWS }   
               [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
-              [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
+              [ ON PARTITIONS ( { <partition_number> | <range> } [, ...n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
@@ -131,7 +131,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] ON PARTITIONS 句で指定したパーティションを対象としたリーフ レベルの統計を強制的に再計算してから、それらをマージして全体統計を構築します。 異なるサンプル レートで構築されたパーティションの統計はマージできないため、WITH RESAMPLE が必要になります。  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] ON PARTITIONS 句で指定したパーティションを対象としたリーフ レベルの統計を強制的に再計算してから、それらをマージして全体統計を構築します。 異なるサンプル レートで構築されたパーティションの統計はマージできないため、WITH RESAMPLE が必要になります。  
   
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -183,25 +183,28 @@ MAXDOP = *max_degree_of_parallelism*
 
 ## <a name="remarks"></a>Remarks  
   
-## <a name="when-to-use-update-statistics"></a>UPDATE STATISTICS を使用する場合  
- UPDATE STATISTICS を使用する場合について詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。  
+### <a name="when-to-use-update-statistics"></a>UPDATE STATISTICS を使用する場合  
+ `UPDATE STATISTICS` を使用する場合の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
 
-## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
+### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
 * テーブルの外部では、統計を更新することはできません。 外部テーブルの統計を更新するには、削除し、統計を再作成します。  
-* MAXDOP オプションは、STATS_STREAM、ROWCOUNT、PAGECOUNT オプションと互換性がありません。
-* MAXDOP オプションは、Resource Governor ワークロード グループの MAX_DOP の設定によって制限されます (使用されている場合)。
+* `MAXDOP` オプションは、`STATS_STREAM`、`ROWCOUNT`、および `PAGECOUNT` の各オプションと互換性がありません。
+* `MAXDOP` オプションは、Resource Governor ワークロード グループの `MAX_DOP` の設定によって制限されます (使用されている場合)。
 
-## <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats によるすべての統計の更新  
- データベース内のすべてのユーザー定義および内部テーブルの統計を更新する方法については、ストアド プロシージャ [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) の説明を参照してください。 たとえば次のコマンドは、sp_updatestats を呼び出してデータベースのすべての統計を更新します。  
+### <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats によるすべての統計の更新  
+データベース内のすべてのユーザー定義および内部テーブルの統計を更新する方法については、ストアド プロシージャ [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) の説明を参照してください。 たとえば次のコマンドは、sp_updatestats を呼び出してデータベースのすべての統計を更新します。  
   
 ```sql  
 EXEC sp_updatestats;  
 ```  
+
+### <a name="automatic-index-and-statistics-management"></a>インデックスと統計の自動管理
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) のようなソリューションを活用し、1 つまたは複数のデータベースに対するインデックスの最適化と統計更新を自動管理します。 このプロシージャでは、断片化レベルやその他のパラメーターに基づいてインデックスを再構築または再構成するか、線形しきい値で統計を更新するかが自動的に選択されます。
   
-## <a name="determining-the-last-statistics-update"></a>統計の最終更新日の特定  
+### <a name="determining-the-last-statistics-update"></a>統計の最終更新日の特定  
  統計の最終更新日を調べるには、 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 関数を使用します。  
   
-## <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
+### <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
  次の構文は、PDW / SQL Data Warehouse ではサポートされていません  
   
 ```sql  
@@ -225,7 +228,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
- テーブルまたはビューに対する ALTER 権限が必要です。  
+ テーブルまたはビューに対する `ALTER` 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -306,8 +309,5 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
-  
-
-
-
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

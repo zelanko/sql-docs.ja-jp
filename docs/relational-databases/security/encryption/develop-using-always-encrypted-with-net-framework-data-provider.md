@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6ad65d148f35255a93563cbdcb247efe8a61da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526522"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Always Encrypted と .NET Framework Data Provider を使用して開発する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -255,7 +255,7 @@ cmd.ExecuteNonQuery();
 
 パラメーター値を暗号化するか、クエリ結果内のデータを暗号化解除するために、.NET Framework Data Provider for SQL Server は、ターゲット列に対して構成された列暗号化キーを取得する必要があります。 列暗号化キーは、データベースのメタデータに暗号化された形式で格納されています。 各列暗号化キーには、列暗号化キーの暗号化に使用された対応する列マスター キーが含まれます。 データベースのメタデータには、列マスター キーは格納されず、特定の列マスター キーとキー ストア内のキーの場所を含むキー ストアに関する情報のみが含まれます。
 
-列暗号化キーのプレーンテキスト値を取得するために、.NET Framework Data Provider for SQL Server は、まず列暗号化キーとその対応する列マスター キーの両方に関するメタデータを取得してから、メタデータ内の情報を使用して、列マスター キーを含むキー ストアと交信するとともに、暗号化された列暗号化キーを暗号化解除します。 .NET Framework Data Provider for SQL Server は、 [SqlColumnEncryptionKeyStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)から派生したクラスのインスタンスである列マスター キー ストア プロバイダーを使用して、キー ストアと交信します。
+列暗号化キーのプレーンテキスト値を取得するために、.NET Framework Data Provider for SQL Server は、まず列暗号化キーとその対応する列マスター キーの両方に関するメタデータを取得してから、メタデータ内の情報を使用して、列マスター キーを含むキー ストアと交信するとともに、暗号化された列暗号化キーを暗号化解除します。 .NET Framework Data Provider for SQL Server は、[SqlColumnEncryptionKeyStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)から派生したクラスのインスタンスである列マスター キー ストア プロバイダーを使用して、キー ストアと交信します。
 
 
 列暗号化キーを取得するプロセスは次のとおりです。
