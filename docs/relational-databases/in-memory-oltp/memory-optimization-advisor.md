@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff483bc665f974c9cea0379291a4feb9a3fe55d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671410"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507931"
 ---
 # <a name="memory-optimization-advisor"></a>メモリ最適化アドバイザー
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51671410"
   
 -   テーブルとデータをメモリ最適化 (サポートされていない機能がない場合) に移行する。  
     
- 移行方法については、「 [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
+ 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>メモリ最適化アドバイザーの使用に関するチュートリアル  
  **オブジェクト エクスプローラー**で、変換するテーブルを右クリックし、 **[メモリ最適化アドバイザー]** を選択します。 これにより、 **テーブルのメモリ最適化アドバイザー**のようこそページが表示されます。  

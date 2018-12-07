@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 058272ca68136c3a1f00a20ef3036c5c9704c659
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602542"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513772"
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep を使用して SQL Server をインストールする
 
@@ -114,13 +114,13 @@ ms.locfileid: "51602542"
   
 11. [インスタンスの構成] ページで、インスタンスのインスタンス ID を指定します。 **[次へ]** をクリックして次に進みます。 
   
-     **[インスタンス ID]** : インスタンス ID は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は指定したものと変わりません。 
+     **[インスタンス ID]** - インスタンス ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は指定したものと変わりません。 
   
-     **[インスタンス ルート ディレクトリ]** : 既定では、インスタンス ルート ディレクトリは [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]になります。 既定以外のルート ディレクトリを指定するには、表示されたフィールドを使用するか、 **[参照]** をクリックしてインストール フォルダーを検索します。 準備手順で指定したディレクトリは、完了手順の構成時に使用されます。 
+     **[インスタンス ルート ディレクトリ]** - 既定では、インスタンス ルート ディレクトリは [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] になります。 既定以外のルート ディレクトリを指定するには、表示されたフィールドを使用するか、 **[参照]** をクリックしてインストール フォルダーを検索します。 準備手順で指定したディレクトリは、完了手順の構成時に使用されます。 
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。 
   
-     **[インストール済みのインスタンス]** : セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 
+     **[インストール済みのインスタンス]** - セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 
   
 12. **[必要なディスク領域]** ページでは、指定した機能に必要なディスク領域が計算されます。 その後、必要なディスク領域が使用可能なディスク領域と比較されます。 
   
@@ -163,9 +163,9 @@ ms.locfileid: "51602542"
   
 9. [インスタンスの構成] ページで、準備済みインスタンスのインスタンス名を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の構成が完了すると、これがインスタンスの名前になります。 **[次へ]** をクリックして次に進みます。 
   
-     **[インスタンス ID]** : インスタンス ID は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は準備手順で指定したものと変わりません。 
+     **[インスタンス ID]** - インスタンス ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は準備手順で指定したものと変わりません。 
   
-     **[インスタンス ルート ディレクトリ]** : 準備手順で指定したディレクトリが使用されます。この手順ではディレクトリを変更できません。 
+     **[インスタンス ルート ディレクトリ]** - 準備手順で指定したディレクトリが使用されます。この手順ではディレクトリを変更できません。 
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。 
   
@@ -173,7 +173,7 @@ ms.locfileid: "51602542"
   
 10. この記事の残りの部分のワーク フローは、準備手順で選択した機能によって異なります。 選択した機能によっては、表示されないページもあります。 
   
-11. **[サーバーの構成 - サービス アカウント]** ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 
+11. **[サーバーの構成 - サービス アカウント]** ページで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 サービスを自動的に開始するか、手動で開始するか、または無効にするかを指定することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、各サービスに最小の権限を与えるためにはサービス アカウントを個別に構成することをお勧めします。サービス アカウントを個別に構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスには、サービスでのタスクの実行に必要な最小権限が付与されます。 詳細については、「 [サーバー構成 - サービス アカウント](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 」および「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 
   
@@ -187,7 +187,7 @@ ms.locfileid: "51602542"
   
 13. [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - アカウントの準備] ページを使用して、次の項目を指定します。  
   
-    - セキュリティ モード: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。 
+    - [セキュリティ モード] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。 
   
          デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、「 [データベース エンジンの構成 - サーバー構成](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)」を参照してください。 
   

@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678021"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505143"
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ ms.locfileid: "51678021"
  **ユーザー名**  
  データベース メールで SMTP サーバーへのログインに使用されるユーザー名を入力します。 SMTP サーバーで基本認証が求められる場合、ユーザー名が必要になります。  
   
- **Password**  
+ **パスワード**  
  データベース メールで SMTP サーバーへのログインに使用されるパスワードを入力します。 SMTP サーバーで基本認証が求められる場合、パスワードが必要になります。  
   
  **[パスワードの確認入力]**  
@@ -222,7 +222,7 @@ ms.locfileid: "51678021"
  **User name**  
  データベース メールで SMTP サーバーへのログインに使用されるユーザー名を表示または更新します。 SMTP サーバーで基本認証が求められる場合、ユーザー名が必要になります。  
   
- **Password**  
+ **パスワード**  
  データベース メールで SMTP サーバーへのログインに使用されるパスワードを変更します。 SMTP サーバーで基本認証が求められる場合、パスワードが必要になります。  
   
  **[パスワードの確認入力]**  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: d4872ffea819c23ca27ec0d01e4709a231f95cf5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812746"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514403"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services の REST API による開発
 
@@ -55,7 +55,7 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 ## <a name="api-documentation"></a>API のドキュメント
 
-最新の REST API には最新の API ドキュメントが必要です。 REST API は OpenAPI 仕様 ( Swagger 仕様ともいう) に基づいてビルドされており、ドキュメントは [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) で入手できます。 SwaggerHub は、API の文書化だけでなく、任意の言語 (JavaScript、TypeScript、C#、Java、Python、Ruby など) でのクライアント ライブラリの生成にも役立ちます。
+最新の REST API には最新の API ドキュメントが必要です。 REST API は OpenAPI 仕様 ( Swagger 仕様ともいう) に基づいてビルドされており、ドキュメントは [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) で入手できます。 SwaggerHub は、API の文書化だけでなく、任意の言語 (JavaScript、TypeScript、C#、Java、Python、Ruby など) でのクライアント ライブラリの作成にも役立ちます。
 
 ## <a name="testing-api-calls"></a>API 呼び出しのテスト
 

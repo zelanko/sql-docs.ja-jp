@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 966b2acdeff68d445935b55ea1bf8ab24f2ad74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ab6c88467b20299574003c17fd96ac563dbc25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684700"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502578"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47684700"
 タイム ゾーン オフセットは、**time** または **datetime** 値の UTC を基準とした相対値を指定します。 タイム ゾーン オフセットは、[+|-] hh:mm として表すことができます。
 -   hh は、タイム ゾーン オフセットの時間数を表す 00 ～ 14 の 2 桁の数字です。  
 -   mm は、タイム ゾーン オフセットの付加的な分数を表す 00 ～ 59 の 2 桁の数字です。  
--   タイム ゾーン オフセットでは、\+ (正負号) または – (負符号) を必ず指定します。 ローカル時刻を取得する際、UTC 時刻を基準としてタイム ゾーン オフセットを加算するか、減算するかを示します。 タイム ゾーン オフセットの有効範囲は -14:00 ～ +14:00 までです。  
+-   タイム ゾーン オフセットでは、\+ (正負号) または - (負符号) を必ず指定します。 ローカル時刻を取得する際、UTC 時刻を基準としてタイム ゾーン オフセットを加算するか、減算するかを示します。 タイム ゾーン オフセットの有効範囲は -14:00 ～ +14:00 までです。  
   
 タイム ゾーン オフセットの範囲は、XSD スキーマ定義の W3C XML 標準に準拠しており、SQL 2003 標準の定義 (12:59 ～ +14:00) とは若干異なります。
   
@@ -236,7 +236,7 @@ SELECT
 |データ型|[出力]|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
-|**日付**|2007-05-08|  
+|**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**DateTime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  

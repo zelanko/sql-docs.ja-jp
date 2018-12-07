@@ -18,12 +18,12 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee94fa73cbc7c148574c15ae136e9efaeea1e740
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa96f8071ba6331dbfab8b708cd023f40f8a52cb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639526"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506180"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの追加
   データ フローを作成するには、最初にコンポーネントを追加します。 次に、追加したコンポーネントを構成して相互に接続し、実行時のデータ フローを確立します。 このセクションでは、データ フロー タスクへのコンポーネントの追加、コンポーネントのデザイン時インスタンスの作成、およびコンポーネントの構成について説明します。 コンポーネントの接続方法については、「[プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)」を参照してください。  
@@ -281,7 +281,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ「[EzAPI – SQL Server 2012 用の更新](https://go.microsoft.com/fwlink/?LinkId=243223)」  
+ blogs.msdn.com のブログ「[EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)」(EzAPI - SQL Server 2012 用の更新)  
 
 ## <a name="see-also"></a>参照  
  [プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559455"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512119"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -231,7 +231,7 @@ ENCRYPTION
 EXECUTE AS *clause*  
  プロシージャを実行するセキュリティ コンテキストを指定します。  
   
- ネイティブ コンパイル ストアド プロシージャの場合、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、EXECUTE AS 句に対して制限はありません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、SELF、OWNER、および *‘user_name’* 句は、ネイティブ コンパイル ストアド プロシージャでサポートされます。  
+ ネイティブ コンパイル ストアド プロシージャの場合、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、EXECUTE AS 句に対して制限はありません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、SELF、OWNER、および *'user_name'* 句は、ネイティブ コンパイル ストアド プロシージャでサポートされます。  
   
  詳細については、「[EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)」を参照してください。  
   
@@ -374,7 +374,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
   
 -   BEGIN/COMMIT TRANSACTION による明示的なトランザクションを使用し、トランザクションをできるだけ短くする。 トランザクションが長いほど、レコードのロックが長くなり、デッドロックが発生する可能性が高くなります。  
   
--   プロシージャ内のエラー処理に [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY...CATCH 機能を使用する。 TRY...CATCH は [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのブロック全体をカプセル化できます。 これにより、パフォーマンスのオーバーヘッドが低減されるだけでなく、記述するプログラムの数が大幅に削減され、エラー レポートの精度も向上します。  
+-   プロシージャ内のエラー処理に [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY...CATCH 機能を使用する。 TRY...CATCH を使用すると、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのブロック全体をカプセル化できます。 これにより、パフォーマンスのオーバーヘッドが低減されるだけでなく、記述するプログラムの数が大幅に削減され、エラー レポートの精度も向上します。  
   
 -   プロシージャの本体の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント CREATE TABLE または ALTER TABLE によって参照されているすべてのテーブル列で DEFAULT キーワードを使用する。 これにより、NULL 値を許可しない列に NULL が渡されるのを防ぐことができます。  
   
@@ -498,7 +498,7 @@ GO
 |[基本構文](#BasicSyntax)|CREATE PROCEDURE|  
 |[パラメーターの引き渡し](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • テーブル値パラメーター型 <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[ストアド プロシージャを使用したデータの変更](#Modify)|UPDATE|  
-|[エラー処理](#Error)|TRY…CATCH|  
+|[エラー処理](#Error)|TRY...CATCH|  
 |[プロシージャの定義の難読化](#Encrypt)|WITH ENCRYPTION|  
 |[プロシージャの強制再コンパイル](#Recompile)|WITH RECOMPILE|  
 |[セキュリティ コンテキストの設定](#Security)|EXECUTE AS|  
@@ -798,7 +798,7 @@ EXEC HumanResources.Update_VacationHours 40;
  このセクションの例では、ストアド プロシージャの実行時に発生する可能性のあるエラーの処理方法を示します。  
   
 #### <a name="j-using-trycatch"></a>J. TRY...CATCH の使用  
- この例では、TRY...CATCH 構造を使用して、ストアド プロシージャの実行中にキャッチしたエラーの情報を返します。  
+ この例では、TRY...CATCH コンストラクトを使用して、ストアド プロシージャの実行中にキャッチしたエラーの情報を返します。  
   
 ```sql  
 CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )  

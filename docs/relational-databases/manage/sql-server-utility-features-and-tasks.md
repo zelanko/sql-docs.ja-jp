@@ -18,19 +18,19 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 60099ea8f029f8e1b6687a1d69e12cb76f520c61
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cf446db934f1088882bd19e2095aa99b1a5a025a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656562"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409429"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server ユーティリティの機能とタスク
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境全体をまとめて管理する必要があります。このリリースでは、この管理作業に対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのアプリケーションとマルチサーバーの管理という発想で対応しています。  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server ユーティリティの利点  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、組織の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]関連のエンティティを統合ビューでモデル化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSMS) のユーティリティ エクスプローラーと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ユーティリティのビューポイントを使用すると、管理者は、ユーティリティ コントロール ポイント (UCP) として機能する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースの正常性を総合的に確認することができます。 過小使用ポリシーと過大使用ポリシーの両方、およびさまざまな主要パラメーターについて、概要データと詳細データを組み合わせて UCP に表示すると、リソースの統合の可能性とリソースの過大使用を簡単に特定することができます。 正常性ポリシーは、構成可能なため、リソース使用率のしきい値の上限または下限を変更して調整できます。 グローバルな監視ポリシーを変更したり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで管理されているエンティティごとに個別の監視ポリシーを構成したりできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、組織の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関連のエンティティを統合ビューでモデル化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSMS) のユーティリティ エクスプローラーと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ユーティリティのビューポイントを使用すると、管理者は、ユーティリティ コントロール ポイント (UCP) として機能する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースの正常性を総合的に確認することができます。 過小使用ポリシーと過大使用ポリシーの両方、およびさまざまな主要パラメーターについて、概要データと詳細データを組み合わせて UCP に表示すると、リソースの統合の可能性とリソースの過大使用を簡単に特定することができます。 正常性ポリシーは、構成可能なため、リソース使用率のしきい値の上限または下限を変更して調整できます。 グローバルな監視ポリシーを変更したり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで管理されているエンティティごとに個別の監視ポリシーを構成したりできます。  
   
 ##  <a name="typical_scenarios"></a> SQL Server ユーティリティの概要  
  一般的なユーザー シナリオでは、まず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの中心的な裏付けとなるポイントを確立する、ユーティリティ コントロール ポイント (UCP) を作成します。 UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから収集されたリソースの正常性を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでまとめて表示します。 UCP の作成後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録して UCP で管理できるようにします。  

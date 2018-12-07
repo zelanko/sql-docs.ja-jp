@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: af6208fa360a646e68a814a6e0509f1130055424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148ae7bcbb2484f6a89b0ca787f8c6d8962a80dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716950"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413789"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -108,7 +108,7 @@ FROM <backup_device>
 |**FirstLSN**|**numeric(25,0)**|バックアップ セット内にある先頭のログ レコードのログ シーケンス番号。|  
 |**LastLSN**|**numeric(25,0)**|バックアップ セットの次のログ レコードのログ シーケンス番号。|  
 |**CheckpointLSN**|**numeric(25,0)**|バックアップが作成された時点における最新チェックポイントのログ シーケンス番号。|  
-|**DatabaseBackupLSN**|**numeric(25,0)**|データベース全体の最新バックアップのログ シーケンス番号。<br /><br /> **DatabaseBackupLSN** は、バックアップの開始時に発生した "チェックポイントの先頭" です。 データベースがアイドル状態で、レプリケーションが構成されていないときにバックアップが実行された場合、この LSN は **FirstLSN** と同じになります。|  
+|**DatabaseBackupLSN**|**numeric(25,0)**|データベース全体の最新バックアップのログ シーケンス番号。<br /><br /> **DatabaseBackupLSN** は、バックアップの開始時にトリガーされる "チェックポイントの先頭" です。 データベースがアイドル状態で、レプリケーションが構成されていないときにバックアップが実行された場合、この LSN は **FirstLSN** と同じになります。|  
 |**BackupStartDate**|**datetime**|バックアップ操作が開始した日時。|  
 |**BackupFinishDate**|**datetime**|バックアップ操作が終了した日時。|  
 |**SortOrder**|**smallint**|サーバーの並べ替え順。 この列はデータベース バックアップのみで有効です。 これは旧バージョンとの互換性のために用意されています。|  
@@ -159,7 +159,7 @@ FROM <backup_device>
  バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードを設定しておくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、メディアの上書きを防ぐことはできません。  
   
 > [!IMPORTANT]  
->  パスワードによる保護は強力なものではありません。 権限の有無にかかわらず、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不適切な復元を行わないようにすることを目的としています。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップ保護に最適な方法は、バックアップ テープを安全な場所に保管するか、バックアップしたディスク ファイルを適切なアクセス制御リスト (ACL) で保護することです。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。  
+>  パスワードによる保護は強力なものではありません。 パスワードによる保護は、権限の有無にかかわらず、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不適切な復元を行わないようにすることを目的としています。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップ保護に最適な方法は、バックアップ テープを安全な場所に保管するか、バックアップしたディスク ファイルを適切なアクセス制御リスト (ACL) で保護することです。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。  
   
 ### <a name="permissions"></a>アクセス許可  
  バックアップ セットやバックアップ デバイスに関する情報の取得には CREATE DATABASE 権限が必要になります。 詳細については、「[GRANT (データベースの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  

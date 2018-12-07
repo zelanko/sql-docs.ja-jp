@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0996aa061c8c662c0ff14700961559bdbf22102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596660"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509009"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  テーブル変数やテーブル値パラメーターを新しいテーブルとして指定することはできません。  
   
- ソース テーブルがパーティション分割されている場合でも、`SELECT…INTO` を使用してパーティション テーブルを作成することはできません。 `SELECT...INTO` では、ソース テーブルのパーティション構成が使用されず、新しいテーブルが既定のファイル グループに作成されます。 パーティション テーブルに行を挿入するには、まずパーティション テーブルを作成してから `INSERT INTO...SELECT...FROM` ステートメントを使用する必要があります。  
+ ソース テーブルがパーティション分割されている場合でも、`SELECT...INTO` を使用してパーティション テーブルを作成することはできません。 `SELECT...INTO` では、ソース テーブルのパーティション構成が使用されず、新しいテーブルが既定のファイル グループに作成されます。 パーティション テーブルに行を挿入するには、まずパーティション テーブルを作成してから `INSERT INTO...SELECT...FROM` ステートメントを使用する必要があります。  
   
  ソース テーブルに定義されているインデックス、制約、およびトリガーは、新しいテーブルに転送されません。`SELECT...INTO` ステートメントで指定することもできません。 これらのオブジェクトが必要な場合は、`SELECT...INTO` ステートメントの実行後に作成できます。  
   
@@ -210,7 +210,7 @@ GO
 ```  
   
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. PolyBase で作成された外部テーブルをインポートする  
- Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 `SELECT INTO` を使用して、SQL Server の永続記憶装置に、外部テーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
+ Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 使用して `SELECT INTO` を SQL Server で永続的なストレージの外部のテーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
   
  **適用対象:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]」を参照してください。  
   
@@ -232,7 +232,7 @@ ORDER BY YearlyIncome;
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
 ```sql
-ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
 (
@@ -241,7 +241,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>参照  

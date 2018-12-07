@@ -17,12 +17,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9395b0437c61bc0d680a701aae72e4df53c19cb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae91aeb2cf31e7855f4f6caa7c1b916c3ef1a968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781180"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503502"
 ---
 # <a name="create-a-pull-subscription"></a>プル サブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "47781180"
   
     -   **@subscriber_type** クライアント サブスクリプションには **local** を指定し、サーバー サブスクリプションには **global** を指定します。  
   
-    -   **@subscription_priority** &#x2013; サブスクリプションの優先度 (**0.00** ～ **99.99**) を指定します。 これは、サーバー サブスクリプションにのみ必要です。  
+    -   **@subscription_priority** - サブスクリプションの優先度 (**0.00** - **99.99**) を指定します。 これは、サーバー サブスクリプションにのみ必要です。  
   
          詳細については、「 [マージ レプリケーションの競合検出および解決の詳細](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   

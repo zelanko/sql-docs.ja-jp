@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d48f9fd87ff375a518b038d9ed4ef4a8d42675cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660954"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403927"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,15 @@ ms.locfileid: "51660954"
 ![インテリジェントなクエリ処理の機能](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>アダプティブ クエリ処理
-アダプティブ クエリ処理の機能ファミリには、最適化戦略をアプリケーション ワークロードの実行時条件に適用するクエリ処理の改善が含まれます。 含まれる改善は、バッチ モード アダプティブ結合、メモリ許可フィードバック、複数ステートメントのテーブル値関数のインターリーブ実行などです。
+アダプティブ クエリ処理の機能ファミリには、最適化戦略をアプリケーション ワークロードの実行時条件に適用するクエリ処理の改善が含まれます。 これらの改善には、以下が含まれます。 
+-  バッチ モード アダプティブ結合
+-  メモリ許可フィードバック
+-  複数ステートメントのテーブル値関数 (MSTVF) のインターリーブ実行
 
 ### <a name="batch-mode-adaptive-joins"></a>バッチ モード アダプティブ結合
 この機能により、キャッシュされている単独プランの実行中に、プランをより優れた結合戦略に動的に切り替えることができます。
+
+バッチ モード アダプティブ結合の詳細については、「[Microsoft SQL データベースでのアダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)」をご覧ください。
 
 ### <a name="row-and-batch-mode-memory-grant-feedback"></a>行モードとバッチ モードのメモリ許可フィードバック
 > [!NOTE]
@@ -40,10 +45,12 @@ ms.locfileid: "51660954"
 
 この機能はクエリに必要な実際のメモリを再計算して、キャッシュされているプランで許可されている値を更新するため、コンカレンシーに影響する過大なメモリ許可が少なくなり、過剰なディスク書き込みの原因となる過小評価されたメモリ許可が修正されます。
 
-### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>複数ステートメントのテーブル値関数 (MSTVF) のインターリーブ実行
-インターリーブ実行では、関数に基づく実際の行数を使用して、より正確なダウンストリーム クエリ プランを決定します。 
+メモリ許可フィードバックの詳細については、「[Microsoft SQL データベースでのアダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)」をご覧ください。
 
-詳細については、「[Microsoft SQL データベースでのアダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)」をご覧ください。
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>複数ステートメントのテーブル値関数 (MSTVF) のインターリーブ実行
+インターリーブ実行では、関数に基づく実際の行数を使用して、より正確なダウンストリーム クエリ プランを決定します。 複数ステートメントのテーブル値関数 (MSTVF) の詳細については、「[テーブル値関数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」を参照してください。
+
+インターリーブ実行の詳細については、「[Microsoft SQL データベースでのアダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)」をご覧ください。
 
 ## <a name="table-variable-deferred-compilation"></a>テーブル変数の遅延コンパイル
 > [!NOTE]
@@ -59,7 +66,7 @@ ms.locfileid: "51660954"
 > [!NOTE]
 > スカラー UDF のインライン化は、パブリック プレビュー機能です。  
 
-スカラー UDF のインライン化では、スカラー ユーザー定義関数 (UDF) が関係式に変換され、それらが呼び出し元の SQL クエリに埋め込まれます。これにより、スカラー UDF を利用するワークロードのパフォーマンスが向上します。 スカラー UDF のインライン化によって、UDF 内の操作に対するコストに基づく最適化が促進され、その結果として、非効率な、反復的および直列的な実行プランではなく、セット指向で並列的である効率的なプランが提供されます。 この機能は、データベース互換性レベル 150 では既定で有効です。
+スカラー UDF のインライン化では、[スカラー ユーザー定義関数 (UDF)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) が関係式に変換され、それらが呼び出し元の SQL クエリに埋め込まれます。これにより、スカラー UDF を利用するワークロードのパフォーマンスが向上します。 スカラー UDF のインライン化によって、UDF 内の操作に対するコストに基づく最適化が促進され、その結果として、非効率な、反復的および直列的な実行プランではなく、セット指向で並列的である効率的なプランが提供されます。 この機能は、データベース互換性レベル 150 では既定で有効です。
 
 詳細については、「[スカラー UDF のインライン化](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions)」を参照してください。
 
@@ -76,9 +83,9 @@ ms.locfileid: "51660954"
 > 行ストアでのバッチ モードは、パブリック プレビュー機能です。  
 
 ### <a name="background"></a>背景情報
-SQL Server 2012 では、分析ワークロードを促進する新機能である列ストア インデックスが導入されました。 後続の各リリースでユース ケースを拡張し、列ストア インデックスのパフォーマンスを向上させました。 これまでは、これらすべての機能を 1 つの機能として浮上させ、文書化しました。テーブルに対して列ストア インデックスを作成すると、分析ワークロードが "高速化" します。 ただし実際には、関連しているが異なる 2 つのテクノロジ セットがあります。
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、分析ワークロードを促進する新機能である列ストア インデックスが導入されました。 後続の各リリースでユース ケースを拡張し、列ストア インデックスのパフォーマンスを向上させました。 これまでは、これらすべての機能を 1 つの機能として浮上させ、文書化しました。テーブルに対して列ストア インデックスを作成すると、分析ワークロードが "高速化" します。 ただし実際には、関連しているが異なる 2 つのテクノロジ セットがあります。
 - **列ストア** インデックスでは、分析クエリは必要な列のデータにのみアクセスできます。 列ストア形式では、従来の "行ストア" インデックスのページ圧縮よりもはるかに効果的な圧縮も可能です。 
-- **バッチ モード**処理では、一度に 1 行ではなく行のバッチを処理することで、クエリ演算子によるデータ処理が効率的になります。 他のいくつかのスケーラビリティの向上がバッチ モード処理に関連付けられています。
+- **バッチ モード**処理では、一度に 1 行ではなく行のバッチを処理することで、クエリ演算子によるデータ処理が効率的になります。 他のいくつかのスケーラビリティの向上がバッチ モード処理に関連付けられています。 バッチ モードの詳細については、「[実行モード](../../relational-databases/query-processing-architecture-guide.md#execution-modes)」を参照してください。
 
 2 セットの機能が連携して、I/O と CPU の使用率を向上させます。
 - 列ストア インデックスを使用すると、より多くのデータがメモリに収まるので、I/O の必要性が低減されます。
@@ -117,6 +124,7 @@ SQL Server 2012 では、分析ワークロードを促進する新機能であ�
 
 ### <a name="configuring-batch-mode-on-rowstore"></a>行ストアでのバッチ モードの構成
 BATCH_MODE_ON_ROWSTORE データベース スコープ構成は、既定でオンになり、データベース互換性レベルを変更する必要なく、行ストアでのバッチ モードを無効にするために使用できます。
+
 ```sql
 -- Disabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
@@ -124,7 +132,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 -- Enabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
+
 データベース スコープ構成を使用して行ストアでのバッチ モードを無効にできますが、その場合も ALLOW_BATCH_MODE クエリ ヒントを使用してクエリ レベルで設定をオーバーライドできます。 次の例では、データベース スコープ構成を使用して無効になっている行ストアでのバッチ モードを有効にします。
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended
@@ -133,7 +143,9 @@ GROUP BY [Tax Rate], [Lineage Key], [Salesperson Key]
 ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
+
 DISALLOW_BATCH_MODE のクエリ ヒントを使用して、特定のクエリに対して行ストアでのバッチ モードを無効にすることもできます。 例 :
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended

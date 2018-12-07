@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502614"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
@@ -84,7 +84,7 @@ ms.locfileid: "51642349"
   
 ### <a name="options"></a>[変数]  
  **[HTTPConnection]**  
- 接続マネージャーを一覧から選択するか、[\<**新しい接続…**>] をクリックして新しい接続マネージャーを作成します。  
+ 接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
@@ -170,13 +170,13 @@ ms.locfileid: "51642349"
   
 #### <a name="outputtype--file-connection"></a>[OutputType] = [ファイル接続]  
  **[最近使ったファイル]**  
- ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続…**>] をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>[OutputType] = [変数]  
  **変数**  
- 一覧で変数を選択するか、[\<**新しい変数…**>] をクリックして新しい変数を作成します。  
+ 一覧で変数を選択するか、\<[**新しい変数...>]** をクリックして新しい変数を作成します。  
   
  **関連項目:** [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

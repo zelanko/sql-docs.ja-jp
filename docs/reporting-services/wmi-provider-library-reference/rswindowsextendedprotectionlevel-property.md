@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3fb05b9ed2ee446343227b584ae271954a01e78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91f3e68d165ab288fd3329b2335797b6323e0e46
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699160"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407459"
 ---
 # <a name="rswindowsextendedprotectionlevel-property"></a>RSWindowsExtendedProtectionLevel プロパティ
   レポート サーバーがサポートするように構成されている保護のレベルを示す文字列値を返します。 このプロパティは読み取り専用です。  
@@ -31,7 +31,7 @@ public string RSWindowsExtendedProtectionLevel;
 ## <a name="remarks"></a>Remarks  
  レポート サーバーがサポートするように構成されている保護のレベルを示す文字列値を返します。 WMI プロバイダーの接続先のレポート サーバーが拡張保護をサポートしていない場合は、"" (空の文字列) が返されます。 有効な値を次に示します。  
   
- `“Off” | “Allow” | “Require”`  
+ `"Off" | "Allow" | "Require"`  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

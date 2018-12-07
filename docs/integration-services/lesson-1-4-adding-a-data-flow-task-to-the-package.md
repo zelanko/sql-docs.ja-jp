@@ -11,12 +11,12 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f42cdf02129bcd10b373f28e8a35544d3b9906a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5e73f8578c9ee9be1b30bd95722d9acd0a0e4ca
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855830"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410559"
 ---
 # <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>レッスン 1-4 - パッケージへのデータ フロー タスクの追加
 前の実習では、データ ソースおよび変換先データに接続するための接続マネージャーを作成しました。次の実習では、パッケージにデータ フロー タスクを追加します。 データ フロー タスクには、変換元と変換先の間でデータを移動させるデータ フロー エンジンがカプセル化されており、データを移動する際に、変換、クリーン、修正を行うことができます。 抽出、変換、読み込み (ETL) プロセスのほとんどが、このデータ フロー タスクで実行されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "47855830"
 2.  **[SSIS ツールボックス]** で **[お気に入り]** を展開し、 **[データ フロー タスク]** を **[制御フロー]** タブのデザイン画面上にドラッグします。  
   
     > [!NOTE]  
-    > [SSIS ツールボックス] が表示されていない場合は、メイン メニューの [SSIS]、[SSIS ツールボックス] を選択し、SSIS ツールボックスを表示します。  
+    > SSIS ツールボックスが表示されていない場合は、メイン メニューの [SSIS]、[SSIS ツールボックス] の順に選択し、SSIS ツールボックスを表示します。  
   
 3.  **[制御フロー]** デザイン画面で、新しく追加した **[データ フロー タスク]** を右クリックし、 **[名前の変更]** をクリックします。新しい名前として「 **Extract Sample Currency Data**」と入力します。  
   

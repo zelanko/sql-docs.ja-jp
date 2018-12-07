@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639889"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503993"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
@@ -272,7 +272,7 @@ ms.locfileid: "51639889"
  **[Compare]** オプションが **[なし]** に設定されていない場合、メッセージと比較する文字列を入力します。  
   
  **変数**  
- 受信したメッセージを格納する変数の名前を入力するか、[\<**新しい変数...**>] をクリックして新しい変数を設定します。  
+ 受信したメッセージを格納する変数の名前を入力するか、\<[**新しい変数...>]** をクリックして新しい変数を設定します。  
   
  **関連項目:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

@@ -20,17 +20,17 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96a9ca973b09dbadc4ab59219d8d916953ef318c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 034a46affb198c89baab3c4741ae84569c96951b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703830"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509924"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On フェールオーバー クラスター インスタンス (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 製品の一部として、Always On フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベル ( *フェールオーバー クラスター インスタンス* (FCI)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 製品の一部として、Always On フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベル (*フェールオーバー クラスター インスタンス* (FCI)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
   
  FCI は、[可用性グループ](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[Failover Clustering and Always On Availability Groups (SQL Server) (フェールオーバー クラスタリングと可用性グループ &#40;SQL Server&#41;)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」をご覧ください。  
  

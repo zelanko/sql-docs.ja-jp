@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030381"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403007"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
@@ -237,7 +237,7 @@ ms.locfileid: "50030381"
   
 
 ##  <a name="bkmk_SourceControl"></a> ソース管理  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> カスタム レポート テンプレート  
  新しいレポートのテンプレートとしてカスタム レポートを使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がインストールされているコンピューターの ReportProject フォルダーにそれらのレポートをコピーするだけです。 既定では、このフォルダーは次の場所にあります: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 レポート プロジェクトに新しいアイテムを追加すると、カスタム レポートが [テンプレート] ペインに表示されます。  

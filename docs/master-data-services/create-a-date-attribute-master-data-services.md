@@ -15,12 +15,12 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfe30a7f6aa477c123d8b9efa9d17e69bd2bfc51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa31a8e2601eba31d1f7579b5f110945a47f4d79
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728302"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395295"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>日付属性を作成する (マスター データ サービス)
 
@@ -87,14 +87,14 @@ ms.locfileid: "47728302"
 |可視|1|  
 |Group_ID|3|  
   
- 上記の値を mdm.tblList テーブルの行に入力すると、[定型入力] リスト ボックスで “dd/MM/yyyy hh:mm:ss tt” マスクを選べるようになります。 これで、エンティティの datetime 属性列に日付と時刻を表示するためのマスクを MDS エクスプローラーで選択できます。  
+ 上記の値を mdm.tblList テーブルの行に入力すると、[定型入力] リスト ボックスで "dd/MM/yyyy hh:mm:ss tt" マスクを選べるようになります。 これで、エンティティの datetime 属性列に日付と時刻を表示するためのマスクを MDS エクスプローラーで選択できます。  
   
  [定型入力] は、カスタムの .NET DateTime 書式設定文字列です。 詳しくは、「 [カスタム日時書式指定文字列](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
  [属性名とデータ型を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [ファイル属性を作成する (マスター データ サービス)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

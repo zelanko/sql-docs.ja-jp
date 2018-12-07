@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1e0f1af0b3dff47607960d8c2d37af84f4b00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663120"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400026"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートが [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 形式 (.xlsx) で表示されます。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
@@ -161,7 +161,7 @@ ms.locfileid: "47663120"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 拡張機能は現在の (.xlsx) Excel ファイル用の Excel レンダラーを定義します。 EXCEL 拡張機能は、Excel 2003 バージョンを定義します。 `Visible = “false”` は、Excel 2003 レンダラーが非表示であることを示します。 詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」および「 [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)」を参照してください。  
+ EXCELOPENXML 拡張機能は現在の (.xlsx) Excel ファイル用の Excel レンダラーを定義します。 EXCEL 拡張機能は、Excel 2003 バージョンを定義します。 `Visible = "false"` は、Excel 2003 レンダラーが非表示であることを示します。 詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」および「 [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)」を参照してください。  
   
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>現在の (.xlsx) Excel レンダラーと Excel 2003 レンダラーの違い  
  現在の (.xlsx) Excel レンダラーまたは Excel 2003 レンダラーを使用して表示されるレポートは通常は同じですが、まれに 2 つの形式が異なる場合があります。 Excel レンダラーと Excel 2003 レンダラーの比較を次の表に示します。  

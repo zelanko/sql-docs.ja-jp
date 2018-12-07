@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641824"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504072"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -181,7 +181,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
 #### <a name="sqlsourcetype--direct-input"></a>[SQLSourceType] = [直接入力]  
  **[SQLStatement]**  
- 実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、 **[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
+ 実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、**[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
   
  **関連項目:** [[クエリ ビルダー]](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
@@ -280,8 +280,8 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO (ADO)|?|Param1、Param2、...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<パラメーター名>|\@\<パラメーター名>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL および OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1、2、3、...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL および OLE DB|?|0、1、2、3、…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 接続マネージャーおよび ADO 接続マネージャーでのパラメーターの使用  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] および ADO 接続マネージャーでは、パラメーターを使用する SQL コマンドに関する特定の要件があります。  
@@ -442,7 +442,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     |---------------------|--------------------|  
     |ADO (ADO)|Param1、Param2、...|  
     |ADO.NET および SQLMOBILE|\@\<パラメーター名>|  
-    |ODBC|1、2、3、…|  
+    |ODBC|1、2、3、...|  
     |EXCEL および OLE DB|0、1、2、3、…|  
   
 10. **[変数名]** 一覧で、変数を選択します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
@@ -464,7 +464,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 ##  <a name="Return_codes"></a> リターン コードの値の取得  
  ストアド プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 SQL 実行タスクにリターン コードを実装するには、 **ReturnValue** 型のパラメーターを使用します。  
   
- 次の表に、リターン コードを実装する EXEC コマンドの一部の例を接続の種類別に示します。 すべての例で、 **入力** パラメーターを使用します。 パラメーター マーカーとパラメーター名の使用方法に関する規則は、すべてのパラメーター型 (**Input**、 **Output**、および **ReturnValue**) に適用される規則と同じです。  
+ 次の表に、リターン コードを実装する EXEC コマンドの一部の例を接続の種類別に示します。 すべての例で、 **入力** パラメーターを使用します。 パラメーター マーカーとパラメーター名の使用方法に関する規則は、すべてのパラメーター型 (**Input**、**Output**、および **ReturnValue**) に適用される規則と同じです。  
   
  一部の構文では、パラメーターのリテラルがサポートされません。 その場合は、変数を使用してパラメーター値を指定する必要があります。  
   

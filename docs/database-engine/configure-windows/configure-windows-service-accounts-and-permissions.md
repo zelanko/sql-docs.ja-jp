@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c35e10e3ac81468a6add4bc1674fc6e56e126d42
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605984"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617732"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "51605984"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始して実行するために使用する開始アカウントは、 [ドメイン ユーザー アカウント](#Domain_User)、 [ローカル ユーザー アカウント](#Local_User)、 [マネージド サービス アカウント](#MSA)、 [仮想アカウント](#VA_Desc)、または [ビルトイン システム アカウント](#Local_Service)のいずれでも可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各サービスを開始して実行するには、インストール時に構成された開始アカウントが必要です。
   
- ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始するために構成できるアカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで使用される既定値、サービスごとの SID の概念、スタートアップ オプション、およびファイアウォールの構成について説明します。  
+ ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始するために構成できるアカウント、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで使用される既定値、サービスごとの SID の概念、スタートアップ オプション、およびファイアウォールの構成について説明します。  
   
 -   [既定のサービス アカウント](#Default_Accts)  
   
@@ -247,7 +247,7 @@ ms.locfileid: "51605984"
   
 ##  <a name="Serv_Perm"></a> サービスの権限
 
-このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのサービスごとの SID のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで構成される権限について説明します。  
+このセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのサービスごとの SID のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで構成される権限について説明します。  
   
 -   [サービスの構成とアクセス制御](#Serv_SID)  
   
@@ -291,7 +291,7 @@ ms.locfileid: "51605984"
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT SERVICE\MSSQLSERVER**。 名前付きインスタンス: **NT SERVICE\MSSQL$** InstanceName)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> **プロセス レベル トークンを置き換える** (SeAssignPrimaryTokenPrivilege)<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)<br /><br /> SQL ライターを起動する権限<br /><br /> イベント ログ サービスを読み取る権限<br /><br /> リモート プロシージャ コール サービスを読み取る権限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント:** \*<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT Service\SQLSERVERAGENT**。 名前付きインスタンス: **NT Service\SQLAGENT$**_InstanceName_。)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> **プロセス レベル トークンを置き換える** (SeAssignPrimaryTokenPrivilege)<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (すべての権限が、ローカル Windows グループに付与されます。 既定のインスタンス: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**。 名前付きインスタンス: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インスタンス: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_。)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> テーブルのみ:<br /><br /> **[プロセス ワーキング セットの増加]** (SeIncreaseWorkingSetPrivilege)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)<br /><br /> **メモリ内のページをロックする** (SeLockMemoryPrivilege) – ページングが完全に無効になっている場合にのみ必要です。<br /><br /> フェールオーバー クラスター インストールのみ:<br /><br /> **スケジューリングでの優先度を上げる** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (すべての権限が、ローカル Windows グループに付与されます。 既定のインスタンス: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**。 名前付きインスタンス: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インスタンス: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_。)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> テーブルのみ:<br /><br /> **[プロセス ワーキング セットの増加]** (SeIncreaseWorkingSetPrivilege)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)<br /><br /> **メモリ内のページをロックする** (SeLockMemoryPrivilege) - ページングが完全に無効になっている場合にのみ必要です。<br /><br /> フェールオーバー クラスター インストールのみ:<br /><br /> **スケジューリングでの優先度を上げる** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT SERVICE\ReportServer**。 名前付きインスタンス: **NT SERVICE\\ReportServer$**_InstanceName_)|**サービスとしてログオン** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンスと名前付きインスタンス: **NT SERVICE\MsDtsServer130**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には名前付きインスタンスに対する個別のプロセスはありません)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> アプリケーション イベント ログに書き込む権限<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br /> **認証後にクライアントを借用する** (SeImpersonatePrivilege)|  
 |**フルテキスト検索:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT Service\MSSQLFDLauncher**。 名前付きインスタンス: **NT Service\ MSSQLFDLauncher$**_InstanceName_。)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)|  
@@ -562,13 +562,13 @@ Windows Management Instrumentation (WMI) は、 [!INCLUDE[ssDE](../../includes/s
   
     -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] のサービスごとの SID は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] sysadmin **固定サーバー ロールのメンバーとして** で準備されます。  
   
-    -   サービスごとの SID は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がフェールオーバー クラスター インスタンスでない場合、ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows グループに追加されます。  
+    -   サービスごとの SID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がフェールオーバー クラスター インスタンスでない場合、ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows グループに追加されます。  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースは、ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows グループに準備されたままになります。  
   
     -   サービスのローカル Windows グループの名前が **SQLServer2005MSSQLUser$**_<computer_name>_**$**_<instance_name>_ から **SQLServerMSSQLUser$**_<computer_name>_**$**_<instance_name>_ に変更されます。 移行されたデータベースのファイルの場所には、ローカル Windows グループにアクセス制御エントリ (ACE) が設定されます。 新しいデータベースのファイルの場所には、サービスごとの SID に ACE が設定されます。  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]からのアップグレード中、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のサービスごとの SID の ACE を保持します。  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] からのアップグレード中、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のサービスごとの SID の ACE が保持されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでは、サービスに構成されたドメイン アカウントの ACE が保持されます。  
   
@@ -647,7 +647,7 @@ Windows Management Instrumentation (WMI) は、 [!INCLUDE[ssDE](../../includes/s
 |フランス語|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators (BUILTIN\Administrators)|  
 |イタリア語|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators (BUILTIN\Administrators)|  
 |スペイン語|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
-|ロシア語|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Администраторы|  
+|ロシア語|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\СИСТЕМА|BUILTIN\Администраторы|  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

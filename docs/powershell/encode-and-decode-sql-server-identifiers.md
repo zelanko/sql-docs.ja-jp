@@ -10,12 +10,12 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13c981282065d8d18e1eb8be19157e0f9d691ba0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2acb1b560e6a1399751e263f1437f5da1c85aeb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711312"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415886"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 識別子のエンコードとデコード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ Set-Location (Encode-SqlName "Table:Test")
  16 進数エンコードを、そのエンコードが表す文字に置換するには、 **Decode-Sqlname** コマンドレットを使用します。  
   
 ### <a name="examples-decoding"></a>例 (デコード)  
- 次の例は、"Table:Test" を返します。  
+ 次の例では、"Table:Test" を返します。  
   
 ```  
 Decode-SqlName "Table%3ATest"  
@@ -76,7 +76,7 @@ Decode-SqlName "Table%3ATest"
   
 ## <a name="see-also"></a>参照  
  [PowerShell での SQL Server 識別子](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

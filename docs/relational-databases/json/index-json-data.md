@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a4c0341041bcd2cbf6845e7fd261e16b6028260
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 25abbb1cc11706b58c93d0884e024ad54fd280e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668701"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395899"
 ---
 # <a name="index-json-data"></a>JSON データへのインデックスの追加
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ CREATE INDEX idx_name
 ON JsonCollection(vName)
 ```  
   
-上記のコマンドは、JSON の `$.name` プロパティから値を表す、計算列 `vName` に標準的なインデックスを作成します。 セルビア語 (キリル) のコードページでは、文字の順序は、'А'、'Б'、'В'、'Г'、'Д'、'Ђ'、'Е' などです。`JSON_VALUE` 関数の結果は、ソース列からの照合順序を継承するため、インデックスの項目の順序はセルビア語 (キリル) の規則に準拠しています。 次の例では、このコレクションにクエリを実行し、結果を名前で並べ替えます。  
+上記のコマンドは計算列 `vName` に標準的なインデックスを作成します。これはJSON の `$.name` プロパティからの値を表します。 セルビア語 (キリル) のコードページでは、文字の順序は、'А'、'Б'、'В'、'Г'、'Д'、'Ђ'、'Е' などです。`JSON_VALUE` 関数の結果は、ソース列からの照合順序を継承するため、インデックスの項目の順序はセルビア語 (キリル) の規則に準拠しています。 次の例では、このコレクションにクエリを実行し、結果を名前で並べ替えます。  
   
 ```sql  
 SELECT JSON_VALUE(json,'$.name'),*

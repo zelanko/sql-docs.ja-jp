@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3cd37fbe598fe93f5c5af5a63789511d667162ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e034767e419cd5f3b41b07364c6a11d908244
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543919"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications"></a>マージ パブリケーションのデータ競合の表示と解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47701240"
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>マージ パブリケーションで競合を表示および解決するには  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のパブリッシャー (または必要に応じてサブスクライバー) に接続して、サーバー ノードを展開します。  
+1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のパブリッシャー (または必要に応じてサブスクライバー) に接続して、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47701240"
   
     -   上のグリッドで 1 つ以上の行を選択し、 **[削除]** をクリックする。これは、データに変更を加えずに **[優先されたデータの送信]** をクリックするのと同じです。  
   
-    -   プロパティ ボタン (**[...]**) をクリックし、競合に関係のある列の詳細情報を表示する。  
+    -   プロパティ ボタン **[...]** をクリックし、競合に関係のある列の詳細情報を表示する。  
   
     -   データを送信する前に、 **[競合で優先されたデータ]** 列または **[競合で優先されなかったデータ]** 列でデータを編集する (列が灰色の場合、データは読み取り専用です)。  
   

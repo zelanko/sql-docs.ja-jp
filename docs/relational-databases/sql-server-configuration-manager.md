@@ -22,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ee3a0ed473c40f21781eeb061d2d10436ebd47bd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510583"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 構成マネージャー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,11 +73,11 @@ ms.locfileid: "51657033"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーでは、別名の作成と削除や、プロトコルの優先順位の変更を行えます。また、サーバーの別名のプロパティとして、以下のようなプロパティを表示できます。  
   
--   [別名] - クライアントの接続先のコンピューターに使用するサーバーの別名  
+-   [別名] - クライアントの接続先のコンピューターに使用するサーバーの別名です。  
   
--   [プロトコル] - 構成エントリに使用するネットワーク プロトコル  
+-   [プロトコル] - 構成エントリに使用するネットワーク プロトコルです。  
   
--   [接続パラメーター] - ネットワーク プロトコル構成の接続アドレスに関連したパラメーター  
+-   [接続パラメーター] - ネットワーク プロトコル構成の接続アドレスに関連したパラメーターです。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーでは、フェールオーバー クラスター インスタンスの情報も表示できます。ただし、一部の操作 (サービスの開始と停止など) については Cluster Administrator を使用する必要があります。  
   

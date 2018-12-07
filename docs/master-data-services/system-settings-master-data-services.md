@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b67636c618343b4f5beb5ec000f8d94236fb64a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696980"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507285"
 ---
 # <a name="system-settings-master-data-services"></a>システム設定 (マスター データ サービス)
 
@@ -84,7 +84,7 @@ ms.locfileid: "51696980"
   
 |構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
-|**[既定で階層内のメンバーの数]**|**HierarchyChildNodeLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[エクスプローラー]** 機能領域で、 **[詳細]** が表示されるまでに、各階層ノードに表示されるメンバーの最大数を示します。 **[詳細]** をクリックすると、次のメンバーのグループを表示できます。 既定値は **50**です。|  
+|**[既定で階層内のメンバーの数]**|**HierarchyChildNodeLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] の **[エクスプローラー]** 機能領域で、**[詳細]** が表示されるまでに、各階層ノードに表示されるメンバーの最大数を示します。 **[詳細]** をクリックすると、次のメンバーのグループを表示できます。 既定値は **50**です。|  
 |**[既定で階層内の名前を表示する]**|**ShowNamesInHierarchy**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[エクスプローラー]** 機能領域で、階層を表示する場合に選択する既定の設定を示します。<br /><br /> 既定値は **[はい]** または **1**で、各メンバーの名前とコードが表示されることを示します。 値を **[いいえ]** または **2** に変更すると、コードのみが表示されます。|  
 |**[一覧内のドメインベースの属性数]**|**DBAListRowLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[エクスプローラー]** 機能領域で、グリッド内のドメインベースの属性値をダブルクリックするときに一覧に表示される属性の数を示します。 既定値は **50**です。 メンバー数が 50 を超える場合は、検索可能なダイアログが代わりに表示されます。|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[エクスプローラー]** 機能領域で、 **[次と一致する]** フィルター条件を使用している場合に使用される類似性のレベルを示します。 既定値は、 **0.3**です。 **1** に近い値を設定すると、検索条件に近い一致が返されます。 完全一致を検索するには **1** に設定します。|  

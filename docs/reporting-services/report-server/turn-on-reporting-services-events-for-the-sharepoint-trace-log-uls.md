@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814175"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409539"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -87,7 +87,7 @@ Get-SPDiagnosticConfig
   
 2.  **カテゴリ:** サーバーに関連するイベントには、名前の先頭に "Report Server" という文字が付けられます。 例: "Report Server Alerting Runtime"。これらのイベントは、レポート サーバーのログ ファイルにも記録されます。  
   
-3.  **カテゴリ:** Web フロントエンド コンポーネントに関連するイベントや、Web フロントエンド コンポーネントから伝えられたイベントには、"Report Server" は付けられません。 例: "Service Application Proxy" Report Server Alerting Runtime"。 WFE エントリには CorrelationID が含まれますが、サーバー エントリには含まれません。  
+3.  **カテゴリ:** Web フロントエンド コンポーネントに関連するイベントや、Web フロントエンド コンポーネントから伝えられたイベントには、"Report Server" は付けられません。 例: "Service Application Proxy" "Report Server Alerting Runtime"。 WFE エントリには CorrelationID が含まれますが、サーバー エントリには含まれません。  
   
 ##  <a name="bkmk_list"></a> SQL Server Reporting Services イベントの一覧  
  次の表に示すのは、SQL Server Reporting Services カテゴリに含まれるイベントの一覧です。  
@@ -138,10 +138,10 @@ Get-SPDiagnosticConfig
 |共有サービス|サンプルのエントリ:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> コンテンツ データベースへの MediumGranting アクセス。<br /><br /> ReportingWebServiceApplication の MediumProvisioning インスタンス<br /><br /> ReportingWebServiceApplication の MediumProcessing サービス アカウントの変更<br /><br /> MediumSetting データベース権限。|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell でのログ ファイルの表示  
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用して、ULS ログ ファイルから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連イベントの一覧を返すことができます。 SharePoint 2010 管理シェルから次のコマンドを入力すると、ULS ログ ファイル UESQL11SPOINT-20110606-1530.log から、"**sql server reporting services**" を含む行のリストが返されます。  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用して、ULS ログ ファイルから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連イベントの一覧を返すことができます。 SharePoint 2010 管理シェルから次のコマンドを入力すると、ULS ログ ファイル UESQL11SPOINT-20110606-1530.log から、"**sql server reporting services**" を含む行のフィルターされたリストが返されます。  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  ULS ログの読み取りに使用できるツールは他にも提供されており、ダウンロードして使用できます。 たとえば、[SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer) は、GitHub で入手できます。 

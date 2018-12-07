@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 719fc39579f76b8f028de27cf8d22623968231c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602632"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405969"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
 
@@ -48,7 +48,7 @@ AG のディストリビューション データベースを下記の手順に�
 - 既存のディストリビューション データベース AG にノードを追加、またはその AG からノードを削除します。
 - ディストリビューターには複数のディストリビューション データベースが存在する場合があります。 各ディストリビューション データベースは独自の AG に属することはできますが、任意の AG に属することはできません。 複数のディストリビューション データベースで AG を共有することができます。
 - パブリッシャーとディストリビューターは別々の SQL Server インスタンス上に置く必要があります。
-- ディストリビューション データベースをホストしている可用性グループのリスナーが、既定以外のポートを使用するように構成されている場合は、リスナーと既定以外のポートに別名を設定する必要があります。
+- ディストリビューション データベースをホストしている可用性グループのリスナーが、既定以外のポートを使用するように構成されている場合は、リスナーと既定以外のポートに別名を設定する必要があります。 この別名は、すべてのパブリッシャー、ディストリビューター、およびサブスクライバーのレプリカ (プル モードで実行されているサブスクライバーの場合) で作成される必要があります。 
 
 ## <a name="limitations-or-exclusions"></a>制限事項または適用除外事項
 

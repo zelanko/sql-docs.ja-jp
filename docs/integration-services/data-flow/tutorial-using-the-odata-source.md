@@ -11,12 +11,12 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637759"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513005"
 ---
 # <a name="tutorial-using-the-odata-source"></a>チュートリアル: OData ソースの使用
   このチュートリアルでは、サンプルの **Northwind** OData サービス (https://services.odata.org/V3/Northwind/Northwind.svc/)) から **Employees** (従業員) コレクションを抽出し、フラット ファイルに読み込むプロセスについて説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "51637759"
   
 4.  **OData ソース** コンポーネントをダブルクリックして、**[OData ソース エディター]** ダイアログ ボックスを起動します。  
   
-5.  接続に対応する **[新規]** をクリックし、新しい OData 接続マネージャーを追加します。  
+5.  **[新規]** をクリックし、新しい OData 接続マネージャーを追加します。  
   
 6.  **[サービス ドキュメントの場所]** に対応する OData サービスの URL を入力します。 この URL には、サービス ドキュメントに対応する URL、または特定のフィードかエンティティに対応する URL を指定できます。 このチュートリアルでは、サービス ドキュメントへの URL ([https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/)) を入力します。  
   

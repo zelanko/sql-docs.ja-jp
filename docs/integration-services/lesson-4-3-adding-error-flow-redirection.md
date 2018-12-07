@@ -11,12 +11,12 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03e6618461a81fa086e66db65d72de4e49fea634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaaa071f447b77242196da7a83a7b71f6f2ca395
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710290"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302885"
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>レッスン 4-3 - エラー フロー リダイレクションの追加
 前の実習で学んだように、Lookup Currency Key 変換で壊れているサンプル フラット ファイルを処理しようとするとエラーが発生し、変換を行うことができません。 この変換ではエラー出力に既定の設定を使用するため、エラーが発生すると変換は失敗します。 変換が失敗すると、それ以降のパッケージも失敗します。  
@@ -51,7 +51,7 @@ ms.locfileid: "47710290"
   
 9. **Name** プロパティで「 **ErrorDescription** 」と入力し、 **DataType** プロパティを **[Unicode 文字列 [DT_WSTR]]** に設定します。  
   
-10. **[スクリプト]** ページで、 **LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
+10. **[スクリプト]** ページで、**LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
   
 11. **[スクリプトの編集]** をクリックして、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 **Input0_ProcessInputRow** メソッドに、次のコードを入力するか貼り付けます。  
   

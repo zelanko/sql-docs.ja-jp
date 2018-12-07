@@ -23,17 +23,17 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe54b0a56e90dd7c4645fd0e78db7e97f6c838f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c847b6b04aa4ec1a67b89bf3fa6473b91e13bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770980"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515870"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-この関数は、TRY...CATCH 構文の CATCH ブロックが実行される原因となったエラーが発生した行番号を返します。  
+この関数では、TRY...CATCH 構文の CATCH ブロックが実行される原因となったエラーが発生した行番号が返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ CATCH ブロック内で呼び出されると、`ERROR_LINE` は次の値を返�
   
 `ERROR_LINE` はエラーが発生した行番号を返します。 これは、CATCH ブロックのスコープ内で `ERROR_LINE` が呼び出された位置に関係なく、また `ERROR_LINE` の呼び出し回数に関係なく発生します。 これは @@ERROR などの関数とは対照的です。 @@ERROR は、エラーが発生したステートメントの直後のステートメントまたは CATCH ブロックの最初のステートメントでエラー番号を返します。  
   
-入れ子になった CATCH ブロックでは、`ERROR_LINE` は、参照されている CATCH ブロックのスコープに固有のエラー行番号を返します。 たとえば、TRY...CATCH 構造の CATCH ブロックに、入れ子になった TRY...CATCH 構造が含まれる場合があります。 入れ子になった CATCH ブロック内では、`ERROR_LINE` は、入れ子になった CATCH ブロックを呼び出したエラーの行番号を返します。 `ERROR_LINE` が外部の CATCH ブロックで実行されると、その特定の CATCH ブロックを呼び出したエラーの行番号が返されます。  
+入れ子になった CATCH ブロックでは、`ERROR_LINE` は、参照されている CATCH ブロックのスコープに固有のエラー行番号を返します。 たとえば、TRY...CATCH コンストラクトの CATCH ブロックに、入れ子になった TRY...CATCH コンストラクトが含まれる場合があります。 入れ子になった CATCH ブロック内では、`ERROR_LINE` は、入れ子になった CATCH ブロックを呼び出したエラーの行番号を返します。 `ERROR_LINE` が外部の CATCH ブロックで実行されると、その特定の CATCH ブロックを呼び出したエラーの行番号が返されます。  
   
 ## <a name="examples"></a>使用例  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813725"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515121"
 ---
 # <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
   次のパラメーターを URL の一部として使用すると、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  
@@ -117,7 +117,7 @@ ms.locfileid: "51813725"
   
 -   *Stylesheet*: HTML ビューアーに適用するスタイル シートを指定します。  
   
--   デバイス情報設定: `rc:tag=value`の形式でデバイス情報設定を指定します。 *tag* は、現在使用されている表示拡張機能に固有のデバイス情報設定の名前です ( *Format* パラメーターの説明を参照してください)。 たとえば、IMAGE 表示拡張機能の *OutputFormat* デバイス情報設定を使用すると、URL アクセス文字列に `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`パラメーターを指定することで、レポートを JPEG 画像で表示できます。 拡張機能に固有のすべてのデバイス情報設定の詳細については、「[表示拡張機能のデバイス情報設定 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。  
+-   デバイス情報設定: `rc:tag=value`の形式でデバイス情報設定を指定します。 *tag* は、現在使用されている表示拡張機能に固有のデバイス情報設定の名前です ( *Format* パラメーターの説明を参照してください)。 たとえば、IMAGE 表示拡張機能の *OutputFormat* デバイス情報設定を使用すると、URL アクセス文字列に `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`パラメーターを指定することで、レポートを JPEG 画像で表示できます。 拡張機能に固有のすべてのデバイス情報設定の詳細については、「[表示拡張機能のデバイス情報設定 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_reportserver"></a> レポート サーバー コマンド (rs:)  
  レポート サーバー コマンドには接頭辞として *rs:* が付き、レポート サーバーを対象として使用されます。  

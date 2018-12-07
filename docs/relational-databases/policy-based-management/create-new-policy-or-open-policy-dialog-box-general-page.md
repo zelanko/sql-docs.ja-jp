@@ -15,12 +15,12 @@ ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 76a3fe793e43af89dbbf29c934604d1e3102076a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: beda08746db1d0632c237afe1312f84d934b8924
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661121"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502675"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51661121"
  **[要求時]** 評価モードを使用して実行されるポリシーでは、このチェック ボックスは使用されません。  
   
  **[条件の確認]**  
- このポリシーが使用する、ポリシー ベースの管理条件を選択します。 サーバー上にある、関連するポリシー ベースの管理ファセットのすべての条件が一覧表示されます。 新しい条件を作成するには、 **[新しい条件]** をクリックします。 条件を変更するには、参照ボタン (**[…]**) をクリックします。  
+ このポリシーが使用する、ポリシー ベースの管理条件を選択します。 サーバー上にある、関連するポリシー ベースの管理ファセットのすべての条件が一覧表示されます。 新しい条件を作成するには、 **[新しい条件]** をクリックします。 条件を変更するには、参照ボタン ( **[…]** ) をクリックします。  
   
  **[対象]**  
  フィルター式を完成するために、このファセットで使用できる対象の種類を選択します。  

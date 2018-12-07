@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808760"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414100"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>レポート サーバー ExecutionLog と ExecutionLog3 ビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
@@ -26,7 +26,7 @@ ms.locfileid: "47808760"
 ##  <a name="bkmk_top"></a> ログ情報の表示  
  レポート サーバーは、レポート実行に関するデータのログを内部データベース テーブルに記録します。 このテーブルの情報は SQL Server ビューで参照できます。  
   
- レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer**です。 実行ログの情報は、SQL ビューに表示されます。 新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog**3**を使用することをお勧めします。  
+ レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer**です。 実行ログの情報は、SQL ビューに表示されます。 より新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog**3**を使用することをお勧めします。  
   
  このトピックの内容  
   
@@ -113,7 +113,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |UserName|ユーザー識別子。|  
 |[ExecutionID]|要求に関連付けられた内部識別子。 同じユーザー セッションの要求は、同じ実行 ID を共有します。|  
 |RequestType|有効値は次のとおりです。<br /><br /> Interactive<br /><br /> サブスクリプション<br /><br /> <br /><br /> RequestType=Subscription でフィルター処理したログ データを TimeStart で並べ替えて分析すると、サブスクリプションが集中している時間が見つかることがあります。この情報を基に、レポートのサブスクリプションの一部を別の時間に変更することができます。|  
-|[形式]|表示形式。|  
+|Format|表示形式。|  
 |Parameters|レポート実行に使用するパラメーター値。|  
 |ItemAction|有効値は次のとおりです。<br /><br /> Render<br /><br /> 並べ替え<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
@@ -359,7 +359,7 @@ select * from ExecutionLog order by TimeStart DESC
 |ReportID|レポート識別子。|  
 |UserName|ユーザー識別子。|  
 |RequestType|有効値は次のとおりです。<br /><br /> True = サブスクリプション要求<br /><br /> False = 対話型の要求|  
-|[形式]|表示形式。|  
+|Format|表示形式。|  
 |Parameters|レポート実行に使用するパラメーター値。|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  

@@ -11,12 +11,12 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808670"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405650"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |-----------|-----------------|  
 |0|なし<br /><br /> ログ記録をオフにします。 パッケージの実行状態のみがログに記録されます。|  
 |1|Basic<br /><br /> カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これが既定値です。|  
-|2|[パフォーマンス]<br /><br /> パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。|  
+|2|パフォーマンス<br /><br /> パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。|  
 |3|"詳細"<br /><br /> カスタム イベントと診断イベントを含む、すべてのイベントをログに記録されます。 <br />カスタム イベントには、Integration Services タスクによってログに記録されるイベントを含みます。 詳細については、「[ログ記録用のカスタム メッセージ](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)」を参照してください。|  
 |4|ランタイムの系列<br /><br /> データ フロー内の系列を追跡するために必要なデータを収集します。|  
 |100|カスタムのログ記録レベル<br /><br /> CUSTOMIZED_LOGGING_LEVEL パラメーターの設定を指定します。 指定できる値の詳細については、「[catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md)」を参照してください。<br /><br /> カスタマイズされたログ記録レベルの詳細については、「[SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。|  
@@ -89,7 +89,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_ERROR|  
+|*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
  パッケージの実行中にイベントが発生した場合に、Integration Services サーバーによりダンプ ファイルを生成されるように指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。  
@@ -98,7 +98,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_EVENT|  
+|*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
  パッケージの実行中に、Integration Services サーバーによるダンプ ファイルの生成が行われる原因となるイベントを指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。 複数のイベント コードは、セミコロンで区切ります。  

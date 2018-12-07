@@ -14,12 +14,12 @@ ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 64a3c2b613dfb13c10103f1663c55c58d653c306
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf87200aff98c95d96dab65d8af8a7fab20bcce4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673551"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419143"
 ---
 # <a name="edit-model-master-data-services"></a>モデルを編集する (マスター データ サービス)
 
@@ -52,7 +52,7 @@ ms.locfileid: "47673551"
   
 7.  **[Log Retention Days]** (ログの保持日数) フィールドで、ログ データを保持するためのオプションのいずれかを選択します。 既定値は **[システム設定]** です。これは、値が [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]のシステム設定から継承されることを示します。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
-     システム設定をオーバーライドし、トランザクション ログ データを削除しない場合は、**[いいえ]** を選択します。 前の日のログをすべて切り捨てて、今日のログ データのみを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに 0 を設定します。 指定した日数のログ データを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに目的の日数を設定します。  
+     システム設定をオーバーライドし、トランザクション ログ データを削除しない場合は、**[いいえ]** を選択します。 前の日のログをすべて切り捨てて、今日のログ データのみを保持するには、**[はい]** を選択し、**[日間]** フィールドに 0 を設定します。 指定した日数のログ データを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに目的の日数を設定します。  
   
 8.  **[モデルの保存]** をクリックします。  
   

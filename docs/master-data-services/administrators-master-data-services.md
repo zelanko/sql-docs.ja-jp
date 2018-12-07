@@ -16,12 +16,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 69a2c06ca2a365814dd87b72d0641d91516def95
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ca34e83b313a267f607ee9e45f8bf68fd1b0b357
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703600"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418773"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "51703600"
   この記事では、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の管理者の種類 (モデル管理者、エンティティ管理者、およびスーパー ユーザー) について説明します。  
   
 ## <a name="model-administrators"></a>モデル管理者  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル管理者は、 **[モデル オブジェクト]** タブの最上位のモデル オブジェクトに割り当てられた **管理者** 権限を持っているユーザーです。ユーザーが特定のモデルに対する管理者権限を持っている場合、モデルの子オブジェクトに対する他のすべての権限 (モデル オブジェクトとメンバーの両方の権限) よりもモデル **管理者** 権限が優先され、前者は実質的に無視されます。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル管理者は、 **[モデル オブジェクト]** タブの最上位のモデル オブジェクトに割り当てられた **管理者** 権限を持っているユーザーです。ユーザーが特定のモデルに対する管理者権限を持っている場合、モデルの子オブジェクトに対する他のすべての権限 (モデル オブジェクトとメンバーの両方の権限) よりもモデルの**管理者**権限が優先され、前者は実質的に無視されます。  
   
 -   ユーザーに **[エクスプローラー]** 機能領域へのアクセス権がある場合、ユーザーはこのデータ領域のすべてのマスター データを追加、削除、および更新できます。  
   

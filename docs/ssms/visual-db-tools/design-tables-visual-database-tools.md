@@ -18,12 +18,12 @@ ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff738c43095548ea6667deadf0eb80c4c6818ec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4dcdc69317db78546a5dcc2550ebfc58b02ab36
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805485"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267857"
 ---
 # <a name="create-and-update-database-tables"></a>データベース テーブルの作成と更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,3 +64,4 @@ ms.locfileid: "47805485"
 [[インデックス]](../../relational-databases/indexes/indexes.md)  
 [データ型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md)  
+[Visual Studio でデータベースを作成し、テーブルを追加する](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

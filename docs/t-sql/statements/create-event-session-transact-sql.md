@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696680"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401327"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "51696680"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -230,7 +229,7 @@ ON SERVER
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時にこのイベント セッションを自動的に開始するかどうかを指定します。  
   
 > [!NOTE]  
->  STARTUP_STATE = ON の場合、イベント セッションは SQL Server が停止後に再起動されたときにだけ開始されます。  
+> `STARTUP_STATE = ON` の場合、イベント セッションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が停止後に再起動されたときにだけ開始されます。  
   
  ON  
  起動時にイベント セッションが開始されます。  
@@ -239,15 +238,15 @@ ON SERVER
  イベント セッションは起動時に開始されません。  
   
 ## <a name="remarks"></a>Remarks  
- 論理演算子の優先順位は、高い方から NOT、AND、OR です。  
+論理演算子の優先順位は、高い方から `NOT`、`AND`、`OR` です。  
   
 ## <a name="permissions"></a>アクセス許可  
- ALTER ANY EVENT SESSION 権限が必要です。  
+`ALTER ANY EVENT SESSION` アクセス許可が必要です。  
   
 ## <a name="examples"></a>使用例  
  `test_session` という名前のイベント セッションを作成する方法を次の例に示します。 この例では、2 つのイベントを追加し、Event Tracing for Windows ターゲットを使用しています。  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

@@ -12,12 +12,12 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d20108ae2fd1c8060627ae09b150e2b1bab9b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656770"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398206"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy を使用したモデルの配置パッケージの配置
 
@@ -43,7 +43,7 @@ ms.locfileid: "47656770"
   
 -   モデルを配置する環境の管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
--   モデルのデータを更新する場合、配置するバージョンは**ロック解除**することも、**コミット**することもできません。  
+-   モデルのデータを更新する場合、配置するバージョンは **ロック解除** することも、**コミット**することもできません。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>モデルの配置パッケージを配置するには  
   
@@ -94,7 +94,7 @@ ms.locfileid: "47656770"
   
      *PackageName* はパッケージ (.pkg) ファイルの名前、 *ModelName* は新しいモデルの名前、 *VersionName* はバージョンの名前、 *ServiceName* は前の手順で返されたサービスの名前です。 モデル名とバージョン名は大文字と小文字の違いも含めて正確に指定してください。  
   
-6.  パッケージが正常に配置されると、「MDSModelDeploy 操作は正常に完了しました」というメッセージが表示されます。  
+6.  パッケージが正常に配置されると、"MDSModelDeploy 操作は正常に完了しました" というメッセージが表示されます。  
   
  **注**  
   

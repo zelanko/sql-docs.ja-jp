@@ -1,7 +1,7 @@
 ---
 title: インデックス付きビューの作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650970"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191052"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   このトピックでは、ビューにインデックスを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  次の手順は、インデックス付きビューの作成に必要な手順であり、インデックス付きビューの正常な実装に不可欠です。  
   
 1.  SET オプションが、ビューで参照されるすべての既存のテーブルに対して正しいことを確認します。    
@@ -66,7 +66,8 @@ ms.locfileid: "47650970"
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> `ANSI_WARNINGS` を ON に設定すると、暗黙的に `ARITHABORT` が ON に設定されます。  
   
@@ -107,6 +108,7 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
     |PRECISE = TRUE|.NET Framework メソッドの属性として、明示的に宣言する必要があります。|  
     |DATA ACCESS = NO SQL|DataAccess 属性を DataAccessKind.None に、SystemDataAccess 属性を SystemDataAccessKind.None に設定することで決定されます。|  
     |EXTERNAL ACCESS = NO|CLR ルーチンの場合は、このプロパティの既定値は NO です。|  
+    |&nbsp;|&nbsp;|
   
 -   ビューは、`WITH SCHEMABINDING` オプションを使用して作成する必要があります。  
   
@@ -126,6 +128,7 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
     |テーブル変数|`OUTER APPLY` または `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
     |スパース列セット|インライン (TVF) または複数ステートメントのテーブル値関数 (MSTVF)|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup> インデックス付きビューには **float** 列を含めることができますが、このような列はクラスター化インデックス キーには含めることができません。  
   
@@ -152,8 +155,9 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
   
  テーブルとビューのインデックスは無効にされる可能性があります。 テーブルのクラスター化インデックスが無効になると、そのテーブルに関連するビューのインデックスも無効になります。  
  
-<a name="nondeterministic"></a> **datetime** 型または **smalldatetime** 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 これは、サーバー セッションの LANGUAGE および DATEFORMAT の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`listopad`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では DATEFORMAT の設定に基づいて、文字列 `'2000-12-01'` が解釈されます。 照合順序間で行われる Unicode 以外の文字データの暗黙的な変換も非決定的であると見なされます。  
-  
+<a name="nondeterministic"></a> **datetime** 型または **smalldatetime** 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 詳細については、「[リテラル日付文字列を DATE 値に非決定論的に変換する](../../t-sql/data-types/nondeterministic-convert-date-literals.md)」を参照してください。
+
+
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  

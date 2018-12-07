@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29acfcbe2ff3b94abdd0edf52adf0f594fe768e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d13ce445269ceb4d6de0663a5e8789598b71c58
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620821"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409596"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services エラー
     
@@ -109,7 +109,7 @@ ms.locfileid: "47620821"
   
  特定のスコープの名前を集計関数に渡すこともできます。 スコープでは、データセットの名前、データ領域、またはデータ階層のより上位のスコープの名前を参照できます。 これは、次のメッセージに当てはまります。  
   
--   *\<report item type>* '*\<report item name>*' のスコープ “*\<scope name>*” が無効です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
+-   *\<report item type>* '*\<report item name>*' のスコープ "*\<scope name>*" が無効です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
   
 -   *\<report item type>* '*\<report item name>*' の *\<property name>* 式に集計関数では使用できないスコープ パラメーターがあります。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
   
@@ -127,8 +127,8 @@ ms.locfileid: "47620821"
  [集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [一般的に使用されるフィルター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [一般的に使用されるフィルター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   

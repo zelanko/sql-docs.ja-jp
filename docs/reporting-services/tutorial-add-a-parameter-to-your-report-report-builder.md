@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9a62e1258bb5c7babda59f9c3b64b9afd16afe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833290"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712363"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにパラメーターを追加し、レポート閲覧者が 1 つまたは複数の値でレポート データをフィルター処理できるようにします。 
@@ -171,7 +171,7 @@ ms.locfileid: "47833290"
   
 1.  レポート データ ペインの **[パラメーター]** ノードで、 *@StoreID*を右クリックし、 **[パラメーターのプロパティ]**」) を参照してください。  
   
-2.  **[プロンプト]** に「 **Store identifier?**」と入力します。 レポートを実行すると、レポート ビューアーのツール バーにこのテキストが表示されます。  
+2.   **[プロンプト]** に「 **Store identifier?**」と入力します。 レポートを実行すると、レポート ビューアーのツール バーにこのテキストが表示されます。  
   
 3.  **[データ型]** のドロップダウン リストから **[整数]** を選択します。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "47833290"
   
 6.  **[全般]** をクリックします。  
   
-7.  **[プロンプト]** で、 **Sをre Identifer?** を **Sをre name?** に変更します。  
+7.   **[プロンプト]** で、 **Sをre Identifer?** を **Sをre name?** に変更します。  
   
     これで、レポート閲覧者は、店舗 ID ではなく、店舗名の一覧から選択できるようになりました。 ただし、パラメーターは店舗名ではなく店舗 ID に基づいているので、パラメーターのデータ型は **[整数]** のままです。  
   
@@ -501,5 +501,5 @@ For *@StoreID*の値として表示されます。この値が、店舗 ID **200
   
 ## <a name="see-also"></a>参照  
 * [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)
-* [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [SQL Server のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup 関数](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

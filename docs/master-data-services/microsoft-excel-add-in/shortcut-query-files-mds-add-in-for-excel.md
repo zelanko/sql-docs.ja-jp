@@ -11,12 +11,12 @@ ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85c8a747e4b1ce6ad5221a1ae219e9032822b88b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15796a0783bd181e95df725de39f10802c5ed089
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801272"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411399"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>ショートカット クエリ ファイル (Excel 用 MDS アドイン)
 

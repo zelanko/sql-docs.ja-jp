@@ -11,12 +11,12 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c893a38541d6e79380b25f0e8e5414a6ee0d2b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffb879aa1b3fdbb5c89690de5cb4c61c5e9eab2d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853370"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393716"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **フラット ファイル (テキスト ファイル)** データ ソースに接続する方法を説明します。 フラット ファイルの場合、ウィザードのこの 2 つのページでは、それぞれ異なるオプション セットが提供されています。そのため、このトピックでは、フラット ファイル ソースとフラット ファイル変換先を別々に説明します。

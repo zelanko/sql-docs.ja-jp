@@ -137,12 +137,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a965fd156f659a473f79522f1fafe7e9d0a81de
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 19747e91c0c7c3934fb3180acf44367b0e5fb5d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672441"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420413"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -250,7 +250,7 @@ ms.locfileid: "51672441"
 |![Nonclustered Index Spool 操作アイコン](../relational-databases/media/index-spool-32x.gif "Nonclustered Index Spool 操作アイコン")|**Index Spool**|**Index Spool** 物理操作の **Argument** 列には、SEEK:() 述語が含まれています。 **Index Spool** 操作では入力行をスキャンし、隠しスプール ファイル ( **tempdb** データベースに格納され、クエリの有効期間内のみ存在します) に各行のコピーを格納して、行に非クラスター化インデックスを作成します。 さらに、インデックスのシーク機能を使用して、SEEK:() 述語に適合する行だけを出力します。 この操作が再度使用され ( **Nested Loops** 操作で使用される場合など)、再バインドが不要な場合は、入力を再スキャンする代わりにスプールされたデータが使用されます。|  
 |![Nonclustered Index Update 操作アイコン](../relational-databases/media/nonclust-index-update-32x.gif "Nonclustered Index Update 操作アイコン")|**Nonclustered Index Update**|**Nonclustered Index Update** 物理操作は、 **Argument** 列 (引数) に指定された非クラスター化インデックスの入力に基づいて行を更新します。 SET:() 述語がある場合、更新される各列がこの値に設定されます。 **Nonclustered Index Update** は物理操作です。|  
 |![Online Index Insert 操作アイコン](../relational-databases/media/online-index-32x.gif "Online Index Insert 操作アイコン")|**Online Index Insert**|**Online Index Insert** 物理操作は、インデックスの作成操作、変更操作、または削除操作がオンラインで実行されることを示します。 つまり、インデックス操作の実行中に、基になるテーブル データをユーザーが利用することができます。|  
-|なし|**Parallelism**|<a name="exchange"></a> **Parallelism** 操作 (または交換反復子) は、Distribute Streams、Gather Streams、Repartition Streams の各論理操作を実行します。 **Argument** 列には、パーティション分割される列のコンマ区切りのリストを指定した PARTITION COLUMNS:() 述語を含めることができます。 **Argument** 列には、パーティション分割中に並べ替え順序を保持する列のリストを指定した ORDER BY:() 述語も含めることができます。 **Parallelism** は物理操作です。 Parallelism 操作の詳細については、[Craig Freedman のブログ シリーズ](https://blogs.msdn.microsoft.com/craigfr/tag/parallelism/)をご覧ください。<br /><br />**注:** クエリが並列クエリとしてコンパイルされても、実行時に直列クエリとして実行されると、SET STATISTICS XML によって生成された、または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[実際の実行プランを含める]** オプションを使用して生成されたプラン表示出力に **Parallelism** 操作の **RunTimeInformation** 要素は含まれません。 SET STATISTICS PROFILE の出力では、 **Parallelism** 操作に対する実際の行数および実際の実行回数としてゼロが表示されます。 いずれの状況が発生した場合も、 **Parallelism** 操作が実行時のクエリ プランではなく、クエリのコンパイル中にのみ使用されたことを示します。 サーバー上での同時実行の負荷が高い場合は、並列クエリ プランが直列に実行されることがあります。|  
+|なし|**Parallelism**|<a name="exchange"></a> **Parallelism** 操作 (または交換反復子) は、Distribute Streams、Gather Streams、Repartition Streams の各論理操作を実行します。 **Argument** 列には、パーティション分割される列のコンマ区切りのリストを指定した PARTITION COLUMNS:() 述語を含めることができます。 **Argument** 列には、パーティション分割中に並べ替え順序を保持する列のリストを指定した ORDER BY:() 述語も含めることができます。 **Parallelism** は物理操作です。 Parallelism 操作の詳細については、「[Craig Freedman's blog series](https://blogs.msdn.microsoft.com/craigfr/tag/parallelism/)」 (Craig Freedman のブログ シリーズ) を参照してください。<br /><br />**注:** クエリが並列クエリとしてコンパイルされても、実行時に直列クエリとして実行されると、SET STATISTICS XML によって生成された、または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[実際の実行プランを含める]** オプションを使用して生成されたプラン表示出力に **Parallelism** 操作の **RunTimeInformation** 要素は含まれません。 SET STATISTICS PROFILE の出力では、 **Parallelism** 操作に対する実際の行数および実際の実行回数としてゼロが表示されます。 いずれの状況が発生した場合も、 **Parallelism** 操作が実行時のクエリ プランではなく、クエリのコンパイル中にのみ使用されたことを示します。 サーバー上での同時実行の負荷が高い場合は、並列クエリ プランが直列に実行されることがあります。|  
 |![Parameter Table Scan 操作アイコン](../relational-databases/media/parameter-table-scan-32x.gif "Parameter Table Scan 操作アイコン")|**Parameter Table Scan**|**Parameter Table Scan** 操作により、現在のクエリのパラメーターとして機能しているテーブルをスキャンします。 通常、この操作は、ストアド プロシージャ内の INSERT クエリに対して使用されます。 **Parameter Table Scan** は論理操作でもあり、物理操作でもあります。|  
 |なし|**Partial Aggregate**|**Partial Aggregate** は、並列プランで使用されます。 ディスクへの書き込み ("スピル" と呼ばれます) が必要にならないように、できるだけ多くの入力行に集計関数が適用されます。 **Hash Match** は、パーティション集計を実装する唯一の物理操作 (反復子) です。 **Partial Aggregate** は論理操作です。|  
 |![Population Query カーソル操作アイコン](../relational-databases/media/poulation-query-32x.gif "Population Query カーソル操作アイコン")|**Population Query**|**Population Query** 操作によって、カーソルが開かれたときにカーソルの作業テーブルを作成します。|  

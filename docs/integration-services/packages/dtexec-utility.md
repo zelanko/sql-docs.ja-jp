@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bcbef7c771d402d1532ecaece4426666920f785b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639180"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513392"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
   **dtexec** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの構成と実行に使用します。 **dtexec** ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 また **dtexec** ユーティリティでは、さまざまな変換元 ( [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー、.ispac プロジェクト ファイル、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システム) からパッケージを読み込むことができます。  
@@ -168,7 +168,7 @@ dtexec /option [value] [/option [value]]...
   
      **/ConfigFile** オプションを使用すると、デザイン時に指定しなかった追加の構成を実行時に読み込むことができますが、 **/ConfigFile** オプションを使用しても、デザイン時に指定した構成値を置き換えることはできません。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](../../integration-services/packages/package-configurations.md)」を参照してください。  
   
--   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]…]*: (省略可能)。 指定した名前または GUID の接続マネージャーがパッケージ内にあり、接続文字列が指定されていることを示します。  
+-   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]...]*: (省略可能)。 指定した名前または GUID の接続マネージャーがパッケージ内にあり、接続文字列が指定されていることを示します。  
   
      このオプションでは、接続マネージャーの名前または GUID を指定する *id_or_name* 引数と、有効な接続文字列を指定する *connection_string* 引数の両方のパラメーターが必須です。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
@@ -222,7 +222,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/De[crypt]**  *password*: (省略可能)。 パスワードが暗号化されているパッケージを読み込むときに使用する暗号化解除用パスワードを設定します。  
   
--   (省略可)。パッケージの実行中に指定のイベントが 1 つ以上発生した場合に、デバッグ ダンプ ファイル (.mdmp および .tmp) を作成します。 *error code* 引数では、システムによるデバッグ ダンプ ファイル作成のトリガーとなるイベント コードの種類 (エラー、警告、または情報) を指定します。 イベント コードを複数指定するには、各 *error code* 引数をセミコロン (;) で区切ります。 *error code* 引数に引用符を含めないでください。  
+-   (省略可)。パッケージの実行中に指定のイベントが 1 つ以上発生した場合に、デバッグ ダンプ ファイル (.mdmp および .tmp) を作成します。 *error code* 引数では、システムによるデバッグ ダンプ ファイル作成のトリガーとなるイベント コードの種類 (エラー、警告、または情報) が指定されます。 イベント コードを複数指定するには、各 *error code* 引数をセミコロン (;) で区切ります。 *error code* 引数に引用符を含めないでください。  
   
      次の例では、DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER のエラーが発生したときにデバッグ ダンプ ファイルが生成されます。  
   
@@ -333,7 +333,7 @@ dtexec /option [value] [/option [value]]...
   
      パッケージを実行して、プロジェクト パラメーター (myparam) に myvalue を指定し、パッケージ パラメーター (anotherparam) に整数値 12 を指定する例を次に示します。  
   
-     `Dtexec /isserver “SSISDB\MyFolder\MyProject\MyPackage.dtsx” /server “.” /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
+     `Dtexec /isserver "SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "." /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
   
      パラメーターを使用して、接続マネージャーのプロパティを設定することもできます。 接続マネージャーのパラメーターであることを示すには、CM プレフィックスを使用します。  
   
@@ -625,7 +625,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  次の例は、 **/ISServer** オプションを使用してプロジェクトと接続マネージャーのパラメーターを設定する方法を示しています。  
   
 ```  
-/Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
+/Server localhost /ISServer "\SSISDB\MyFolder\Integration Services Project1\Package.dtsx" /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
   

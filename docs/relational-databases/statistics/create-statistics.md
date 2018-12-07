@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 494272f6609af4d8cf8747aff8d3dd5eda85483f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510176"
 ---
 # <a name="create-statistics"></a>統計の作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47672100"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47672100"
   
 3.  プラス記号をクリックして、新しい統計を作成するテーブルを展開します。  
   
-4.  **[統計]** フォルダーを右クリックし、 **[新しい統計]** をクリックします。  
+4.  **[統計]** フォルダーを右クリックし、**[新しい統計]** を選択します。  
   
      **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページに、以下のプロパティが表示されます。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47672100"
      **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[フィルター]** ページに、以下のプロパティが表示されます。  
   
      **[フィルター式]**  
-     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 たとえば、IPv4 アドレスの場合、「 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 例を次に示します。 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページで、**[追加]** をクリックします。  
   

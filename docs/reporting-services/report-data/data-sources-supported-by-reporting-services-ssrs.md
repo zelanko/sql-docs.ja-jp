@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813865"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712573"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -68,7 +68,7 @@ ms.locfileid: "51813865"
  カスタムのデータ処理拡張機能の詳細については、「 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)」を参照してください。 標準 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーの詳細については、 <xref:System.Data> 名前空間のセクションを参照してください。   
   
 ## <a name="platform-support-for-report-data-sources"></a>レポート データ ソースに対するプラットフォームのサポート  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置で使用できるデータ ソースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のバージョン、およびプラットフォームによって異なります。 機能については、「[SQL Server 2016 の各エディションがサポートする Reporting Services の機能](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」を参照してください。 このトピックでは、サポートされるデータ ソースに関する情報をバージョンおよびプラットフォームごとに表に示します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置で使用できるデータ ソースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のバージョン、およびプラットフォームによって異なります。 機能について詳しくは、「[SQL Server の各エディションがサポートする Reporting Services の機能](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。 このトピックでは、サポートされるデータ ソースに関する情報をバージョンおよびプラットフォームごとに表に示します。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースに関するプラットフォームの考慮事項は、レポート作成クライアントの場合とレポート サーバーの場合で異なります。  
   
@@ -168,9 +168,9 @@ ms.locfileid: "51813865"
   
  このデータ プロバイダーは、ADOMD.NET オブジェクト モデルを使用して、XML for Analysis (XMLA) Version 1.1 を使用したクエリを作成します。 結果はフラット化された行セットとして返されます。 詳細については、「[MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)」、「[DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)」、「[Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)」、および「[Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)」を参照してください。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続する場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、複数値パラメーターがサポートされ、セルおよびメンバーのプロパティが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]でサポートされる拡張プロパティにマップされます。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続する場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、複数値パラメーターがサポートされ、セルおよびメンバーのプロパティが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]でサポートされる拡張プロパティにマップされます。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースからモデルを作成することもできます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースからモデルを作成することもできます。  
   
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  OLE DB データ処理拡張機能では、レポートで使用するデータ ソースのバージョンに基づいて、追加のデータ プロバイダー レイヤーを選択する必要があります。 特定のデータ プロバイダーを選択しなかった場合は、既定値が使用されます。 [データ ソース] または [共有データ ソース] ダイアログ ボックスで **[編集]** ボタンをクリックして **[接続プロパティ]** ダイアログ ボックスにアクセスし、特定のデータ プロバイダーを選びます。  

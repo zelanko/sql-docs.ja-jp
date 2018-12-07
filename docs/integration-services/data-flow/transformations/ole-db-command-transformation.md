@@ -16,12 +16,12 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4710cf3a1c89a87d5dbe12b5579ca7aaa3489f0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799880"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506557"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB コマンド変換
   OLE DB コマンド変換は、データ フローの各行に対して SQL ステートメントを実行します。 たとえば、データベース テーブル内に行を挿入したり、行を更新または削除する SQL ステートメントを実行できます。  
@@ -67,7 +67,7 @@ ms.locfileid: "47799880"
   
 6.  **[接続マネージャー]** タブで、 **[接続マネージャー]** 一覧から OLE DB 接続マネージャーを選択します。 詳細については、「 [OLE DB 接続マネージャー](../../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
-7.  **[コンポーネントのプロパティ]** タブをクリックし、 **[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
+7.  **[コンポーネントのプロパティ]** タブをクリックし、**[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
   
 8.  **[文字列値エディター]** で、各パラメーターのパラメーター マーカーとして疑問符 (?) を使用して、パラメーター化 SQL ステートメントを入力します。  
   

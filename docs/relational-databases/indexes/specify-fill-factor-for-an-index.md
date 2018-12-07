@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2ff2cff49acefb568a0d052b00e4ec8d7e838f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630411"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401627"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>インデックスの FILL FACTOR の指定
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47630411"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Performance"></a> パフォーマンスに関する考慮事項  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47630411"
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、 **[デザイン]** を選択します。  
+3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、**[デザイン]** を選択します。  
   
 4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   

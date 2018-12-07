@@ -12,19 +12,19 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 9d9dbe423415e1014a31621ba15f44fb0758e1a5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5dc3ba843314297131de569bafa5412577a24adf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699121"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510425"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server の高可用性とディザスター リカバリーのパートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 SQL Server サービスの高可用性とディザスター リカバリーを提供するためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server をサポートする高可用性とディザスター リカバリーのソリューションを提供する Microsoft パートナー会社を示します。
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>高可用性とディザスター リカバリーのパートナー
-<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 | Partner | [説明] | リンク | 
@@ -36,7 +36,7 @@ SQL Server サービスの高可用性とディザスター リカバリーを�
 |![NEC][7]|**NEC**<br>ExpressCluster は、総合的で完全に自動化された高可用なディザスター リカバリー ソリューションです。オンプレミスまたはクラウド環境の物理マシンや仮想マシン上で実行される SQL Server と関連アプリケーションのハードウェア、ソフトウェア、ネットワーク、サイトの障害など、あらゆる主な障害に対応します。<br><br>Microsoft SQL Server: 2005 以降 (すべてのエディション) |[Web サイト][necec_website]<br>[データシート][necec_datasheet]<br>[ビデオ][necec_youtube]<br>[ダウンロード][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx は、実稼働環境で実行されているステートフル コンテナーのソリューションです。 Portworx では、ユーザーは、Kubernetes、Mesosphere DC/OS、Docker Swarm を含む任意のコンテナー スケジューラーを使用して、すべてのインフラストラクチャのすべてのデータベースまたはステートフル サービスを管理できます。 Portworx は DevOps チームが実稼働環境のコンテナー化されたデータベースまたはその他のステートフル サービスを実行する際に遭遇する、特に一般的な 5 つの問題 (永続化、高可用性、データの自動化、複数のデータ ストアとインフラストラクチャのサポート、セキュリティ) を解決します。<br><br>Docker 上の SQL Server 2017 |[Web サイト][portworx_website]<br>[ドキュメント][portworx_docs]<br>[ビデオ][portworx_youtube]|
 |![SIOS][8] |**SIOS**<br>SIOS Technology は、Windows または Linux 上の SQL Server のための、コスト効率に優れた高可用性とディザスター リカバリー ソリューションを提供します。 SIOS SANless クラスタリングでは、共有ストレージ SAN を必要とせずに、1 つの環境およびマルチサイト環境での物理的、仮想的、クラウド、ハイブリッド クラウドの構成を、高い柔軟性で保護できます。<br><br>Windows Server フェールオーバー クラスタリング環境に SIOS DataKeeper を追加すれば、従来の共有ストレージに代わる SANless のボリューム リソースを作成し、Azure で簡単に WSFC を実行できます。<br><br>SIOS Protection Suite は、SQL Server、SAP、HANA、Oracle を始めとする重要な Linux アプリケーションを保護する、高い柔軟性を備えたクラスタリング ソリューションです。|[Web サイト][sios_website]<br>[データシート][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[ビデオ][sios_youtube]|
-|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication は強力で使いやすく、手頃な価格のバックアップと可用性のソリューションです。 仮想化されたアプリケーションとデータの高速で柔軟な、信頼性の高い回復を提供し、単一のソフトウェア ソリューションで VM (仮想マシン) のバックアップとレプリケーションをまとめて行います。 Veeam Backup & Replication は、VMware vSphere および Microsoft Hyper-V の仮想環境に受賞歴のあるサポートを提供します。<br><br>SQL Server 2005 SP4 – Windows 上の SQL Server 2016 |[Web サイト][veeam_website]<br>[データシート][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[ビデオ][veeam_youtube]|
+|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication は強力で使いやすく、手頃な価格のバックアップと可用性のソリューションです。 仮想化されたアプリケーションとデータの高速で柔軟な、信頼性の高い回復を提供し、単一のソフトウェア ソリューションで VM (仮想マシン) のバックアップとレプリケーションをまとめて行います。 Veeam Backup & Replication は、VMware vSphere および Microsoft Hyper-V の仮想環境に受賞歴のあるサポートを提供します。<br><br>SQL Server 2005 SP4 - Windows 上の SQL Server 2016 |[Web サイト][veeam_website]<br>[データシート][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[ビデオ][veeam_youtube]|
 
 ## <a name="next-steps"></a>次の手順
 その他のパートナーについて詳しくは、[監視][mon_partners]、[管理パートナー][management_partners]、[開発パートナー][dev_partners]に関するページをご覧ください。

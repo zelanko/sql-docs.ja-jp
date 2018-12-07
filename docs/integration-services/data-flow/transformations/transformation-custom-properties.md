@@ -42,12 +42,12 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640739"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507708"
 ---
 # <a name="transformation-custom-properties"></a>変換のカスタム プロパティ
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、ほとんどのデータ フロー オブジェクトには共通するプロパティがありますが、それ以外にも、多くのデータ フロー オブジェクトにはオブジェクト固有のカスタム プロパティがあります。 カスタム プロパティにアクセスできるのは実行時のみで、このプロパティに関する説明は、『[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] マネージド プログラミング リファレンス マニュアル』には記載されていません。  
@@ -184,7 +184,7 @@ ms.locfileid: "51640739"
   
 |プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
-|FastParse|ブール値|列の解析に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 このプロパティの既定値は **False**です。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。<br /><br /> 注: このプロパティは、 **データ変換変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
+|FastParse|ブール値|列の解析に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 このプロパティの既定値は **False**です。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 .<br /><br /> 注: このプロパティは、 **データ変換変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |SourceInputColumnLineageId|Integer|出力列のソースである入力列の **LineageID** 。|  
   
  データ変換の変換の入力、入力列、および出力には、カスタム プロパティがありません。  

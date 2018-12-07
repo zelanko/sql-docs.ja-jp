@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83e3d6d960e4fce7e96d9b8195e2a0f06e8f4dd4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0a72bb8d81564afbe632a68908baf4bad4dead82
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507460"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>レポートを共有データ ソースにバインドする (SSRS)
   レポートをテスト サーバーから実稼働サーバーに移動するときなど、ファイルをローカル コンピューターに保存した後で別のレポート サーバーにアップロードする操作が必要になる場合があります。 レポートを新しいサーバーにアップロードしたときは、新しいレポート サーバー上に格納されている共有データ ソースにレポートを再バインドする必要があります。 レポートの再バインドを行わないと、レポートが新しいレポート サーバーからアクセスされたときに正常に動作しません。  
@@ -50,7 +50,7 @@ ms.locfileid: "50031341"
   
 5.  **[接続の種類]** 領域で、 **[共有データ ソース]** が選択されていることを確認します。  
   
-6.  **[データ ソース リンク]** 領域で、省略記号ボタン ([...]) をクリックします。  
+6.  **[データ ソース リンク]** 領域で、省略記号ボタン ( [...] ) をクリックします。  
   
 7.  使用するデータ ソースを探します。  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6c7dd24c716849d6d36ca28908d57c0e715f17c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81bfdfb8d622096b30ea76a7632c5fd61ac833e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514992"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS の暗号化キー - 暗号化キーのバックアップと復元
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47645100"
  **SharePoint モード:** SharePoint サーバーの全体管理ページまたは PowerShell。  
   
 ##  <a name="bkmk_backup_sharepoint"></a> SharePoint モードのレポート サーバーのバックアップ  
- SharePoint モードのレポート サーバーの場合は、PowerShell コマンドを使用するか、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを使用します。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」のセクションを参照してください。  
+ SharePoint モードのレポート サーバーの場合は、PowerShell コマンドを使用するか、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを使用します。 詳細については、「[Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」のセクションを参照してください。  
   
 ##  <a name="bkmk_backup_configuration_manager"></a> 暗号化キーのバックアップ - Reporting Services 構成マネージャー (ネイティブ モード)  
   

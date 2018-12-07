@@ -1,7 +1,7 @@
 ---
 title: SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター | Microsoft Docs
 ms.custom: ''
-ms.date: 04/08/2016
+ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,15 +20,15 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd4ba3f1606c1d62a0cd85760213552770f6e94e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6211647a58035ef4ef9ca38ed6ca5c51ce5d419c
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665591"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302859"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   このページでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]でのパフォーマンスに関して必要になる情報の検索に役立つリンクを示します。  
   
  **凡例**  
@@ -47,7 +47,12 @@ ms.locfileid: "51665591"
 |**データベース構成最適化オプション**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [データの圧縮](../../relational-databases/data-compression/data-compression.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |**テーブル構成最適化**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)|  
 |**Azure Virtual Machine でのデータベース エンジンのパフォーマンス**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [簡易チェック一覧](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [仮想マシンのサイズとストレージ アカウントに関する考慮事項](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [ディスクとパフォーマンスに関する考慮事項](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [I/O パフォーマンスに関する考慮事項](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [機能固有のパフォーマンスに関する考慮事項](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)|  
-  
+
+> [!IMPORTANT]
+> 追加の考慮事項は次の場所にあります。    
+> -  [SQL Server 2012 と SQL Server 2014 でパフォーマンス ワークロードの高いときに推奨される更新プログラムと構成オプション](https://support.microsoft.com/help/2964518)
+> -  [SQL Server 2017 と 2016 でパフォーマンス ワークロードの高いときに推奨される更新プログラムと構成オプション](https://support.microsoft.com/help/4465518)
+
 ## <a name="query-performance-options"></a>クエリ パフォーマンス オプション  
   
 |||  
@@ -57,11 +62,12 @@ ms.locfileid: "51665591"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[結合](../../relational-databases/performance/joins.md)**|[結合の基礎](../../relational-databases/performance/joins.md#fundamentals)<br />[ネステッド ループ結合](../../relational-databases/performance/joins.md#nested_loops)<br />[マージ結合](../../relational-databases/performance/joins.md#merge)<br />[ハッシュ結合](../../relational-databases/performance/joins.md#hash)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[サブクエリ](../../relational-databases/performance/subqueries.md)**|[サブクエリの基礎](../../relational-databases/performance/subqueries.md#fundamentals)<br />[相関サブクエリ](../../relational-databases/performance/subqueries.md#correlated)<br />[サブクエリの種類](../../relational-databases/performance/subqueries.md#types)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[ストアド プロシージャ](../stored-procedures/stored-procedures-database-engine.md)**|[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md#best-practices)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[ユーザー定義関数](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md#best-practices)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[ユーザー定義関数](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md#best-practices)<br />[ユーザー定義関数の作成 &#40;データベース エンジン&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **並列処理の最適化**|[max worker threads サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **クエリ オプティマイザーの最適化**|[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **クエリ オプティマイザーの最適化**|[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[統計](../../relational-databases/statistics/statistics.md)**|[統計を更新する場合](../statistics/statistics.md)<br />[統計の更新](../../relational-databases/statistics/update-statistics.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセス](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[メモリ最適化されたハッシュ インデックスのパフォーマンスに関する一般的な問題のトラブルシューティング](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[実証: インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセス](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[メモリ最適化されたハッシュ インデックスのパフォーマンスに関する一般的な問題のトラブルシューティング](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[実証: インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[インテリジェントなクエリ処理](../../relational-databases\performance\intelligent-query-processing.md)**|[アダプティブ クエリ処理](../../relational-databases/performance/adaptive-query-processing.md)|
   
 ## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

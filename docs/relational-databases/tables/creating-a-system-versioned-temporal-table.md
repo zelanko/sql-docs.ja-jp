@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665521"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409619"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51665521"
 -   あらかじめ作成してあるユーザー定義履歴テーブルでのテンポラル テーブル: ニーズに最適な履歴テーブルをユーザーが作成し、テンポラル テーブルの作成時にそのテーブルを参照します。  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>匿名履歴テーブルによるテンポラル テーブルの作成  
- "匿名" 履歴テーブルを使用したテンポラル テーブルの作成は、すばやくオブジェクトを作成するための便利なオプションであり、プロトタイプおよびテスト環境で特に有効です。 また、 **SYSTEM_VERSIONING** 句でパラメーターを指定する必要がないため、テンポラル テーブルを作成する最も簡単な方法でもあります。 次の例では、システム バージョン管理が有効な新しいテーブルを、履歴テーブルの名前を定義することなく作成しています。  
+ "匿名" 履歴テーブルを使用したテンポラル テーブルの作成は、すばやくオブジェクトを作成するための便利なオプションであり、プロトタイプおよびテスト環境で特に有効です。 また、**SYSTEM_VERSIONING** 句でパラメーターを指定する必要がないため、テンポラル テーブルを作成する最も簡単な方法でもあります。 次の例では、システム バージョン管理が有効な新しいテーブルを、履歴テーブルの名前を定義することなく作成しています。  
   
 ```  
 CREATE TABLE Department   

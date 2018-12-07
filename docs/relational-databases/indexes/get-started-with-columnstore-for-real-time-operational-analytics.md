@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49e547f591debaf4bfd3497a2a4c2d1d5580bca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739740"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531543"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>列ストアを使用したリアルタイム運用分析の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "47739740"
 >  フィルター処理された非クラスター化列ストア インデックスは、ディスク ベースのテーブルに対してのみサポートされます。 メモリ最適化テーブルではサポートされていません。  
   
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>例 A: BTree インデックスからホット データ、列ストア インデックスからウォーム データにアクセスする  
- この例では、フィルター処理条件 (accountkey > 0) を使用して、列ストア インデックスに含まれる行を確立します。 目標は、フィルター処理条件と後続のクエリを設計し、頻繁に変化する BTree インデックスからの「ホット」データにアクセスする、およびより安定した列ストア インデックスからの「ウォーム」データにアクセスすることです。  
+ この例では、フィルター処理条件 (accountkey > 0) を使用して、列ストア インデックスに含まれる行を確立します。 目標は、フィルター処理条件と後続のクエリを設計し、頻繁に変化する BTree インデックスからの "ホット" データにアクセスする、およびより安定した列ストア インデックスからの "ウォーム" データにアクセスすることです。  
   
  ![ウォーム データとホット データの結合インデックス](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "ウォーム データとホット データの結合インデックス")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47739740"
   
 ```  
 --Use a filtered condition to separate hot data in a rowstore table  
--- from “warm” data in a columnstore index.  
+-- from "warm" data in a columnstore index.  
   
 -- create the table  
 CREATE TABLE  orders (  
@@ -168,7 +168,7 @@ Group By customername
   
  ![クエリ プラン](../../relational-databases/indexes/media/query-plan-columnstore.png "クエリ プラン")  
   
- [フィルター処理された非クラスター化列ストア インデックス](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
+  [フィルター処理された非クラスター化列ストア インデックス](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
   
 ## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>パフォーマンス ヒント 2: AlwaysOn 読み取り可能セカンダリに対する分析の負荷を軽減する  
  列ストア インデックスのメンテナンスはフィルター処理された列ストア インデックスを使用して最小限に抑えることはできますが、それでも分析クエリには多大なコンピューティング リソース (CPU、IO、メモリ) が必要であり、運用ワークロードのパフォーマンスに影響します。 ほとんどのミッション クリティカルなワークロードについては、AlwaysOn 構成を使用することをお勧めします。 この構成では、負荷を読み取り可能セカンダリにオフロードすることで、実行中の分析の影響を除去できます。  
@@ -196,14 +196,14 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
- [圧縮遅延](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
+  [圧縮遅延](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
   
  推奨されているベスト プラクティスを次に示します。  
   
 -   **挿入/クエリ ワークロード:** ワークロードで主にデータを挿入してクエリを実行する場合、COMPRESSION_DELAY オプションは既定の 0 のままにすることをお勧めします。 単一の DELTA 行グループに 100 万行が挿入されると、新しく挿入された行が圧縮されます。  
     このようなワークロードの例としては、(a) 従来の DW ワークロード (b) クリック ストリーム分析 (Web アプリケーションのクリック パターンの分析) が挙げられます。  
   
--   **OLTP ワークロード:** ワークロードに大量の DML (更新、削除、挿入が混在) がある場合、DMV の sys. dm_db_column_store_row_group_physical_stats を分析することで列ストア インデックスの断片化が見られることがあります。 10% を上回る行が最近圧縮された行グループで削除済みとマークされている場合、行を圧縮できるタイミングで COMPRESSION_DELAY オプションを使用して時間遅延を追加できます。 たとえば、ワークロードで新しく挿入された行が 60 分間「ホット」な状態にある (複数回更新される) 場合は、COMPRESSION_DELAY を 60 にすることをお勧めします。  
+-   **OLTP ワークロード:** ワークロードに大量の DML (更新、削除、挿入が混在) がある場合、DMV の sys. dm_db_column_store_row_group_physical_stats を分析することで列ストア インデックスの断片化が見られることがあります。 10% を上回る行が最近圧縮された行グループで削除済みとマークされている場合、行を圧縮できるタイミングで COMPRESSION_DELAY オプションを使用して時間遅延を追加できます。 たとえば、ワークロードで新しく挿入された行が 60 分間 "ホット" な状態にある (複数回更新される) 場合は、COMPRESSION_DELAY を 60 にすることをお勧めします。  
   
  ほとんどのお客様は何もする必要がないことを想定しています。 COMPRESSION_DELAY オプションの既定値で問題なく動作するはずです。  
 上級ユーザーの場合は、以下のクエリを実行して過去 7 日間で削除された行の割合を収集することをお勧めします。  
@@ -218,7 +218,7 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- 圧縮された行グループで削除された行の数が 20% を超える場合、それより前の行グループを 5% 以下のバリエーション (コールド グループと呼ばれます) で平坦化することで、COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time) に設定します。 このアプローチは、安定性が高く比較的同種のワークロードに最適です。  
+ 圧縮された行グループで削除された行の数が 20% を超える場合、それより前の行グループを 5% 以下のバリエーション (コールド グループと呼ばれます) で平坦化することで、COMPRESSION_DELAY = (youngest_rowgroup_created_time -  current_time) に設定します。 このアプローチは、安定性が高く比較的同種のワークロードに最適です。  
   
 ## <a name="see-also"></a>参照  
  [列ストア インデックス ガイド](../../relational-databases/indexes/columnstore-indexes-overview.md)   

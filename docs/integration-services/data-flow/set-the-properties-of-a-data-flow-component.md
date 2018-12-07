@@ -13,12 +13,12 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 988675dd00135599fa053acb5cb96d58e81d9e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddbb902789cfc4cbef5135d024ba8f6e2e1c7e98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530273"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
   変換元、変換先、変換などを含むデータ フロー コンポーネントのプロパティを設定するには、次の機能のいずれかを使用します。  
@@ -27,7 +27,7 @@ ms.locfileid: "47628580"
   
 -   **[プロパティ]** ウィンドウでは、各要素のコンポーネントレベルのカスタム プロパティ、およびすべてのデータ フロー要素との共通プロパティの一覧が表示されます。  
   
--   **[詳細エディター]** ダイアログ ボックスでは、各コンポーネントのカスタム プロパティにアクセスできます。 また、 **[詳細エディター]** ダイアログ ボックスを使用すると、すべてのデータ フロー コンポーネントの共通プロパティである、入力、出力、エラー出力、列、および外部列のプロパティにもアクセスできます。  
+-   **[詳細エディター]** ダイアログ ボックスでは、各コンポーネントのカスタム プロパティにアクセスできます。 また、**[詳細エディター]** ダイアログ ボックスを使用すると、すべてのデータ フロー コンポーネントの共通プロパティである、入力、出力、エラー出力、列、および外部列のプロパティにもアクセスできます。  
   
 ## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>コンポーネント エディターを使用してデータ フロー コンポーネントのプロパティを設定する  
   
@@ -104,11 +104,11 @@ ms.locfileid: "47628580"
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
 ## <a name="common-properties-of-data-flow-components"></a>データ フロー コンポーネントの共通プロパティ
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
  ここでは、データ フロー オブジェクトの共通プロパティを一覧で示し、それぞれについて説明します。  
   
--   [Components](#components)  
+-   [コンポーネント](#components)  
   
 -   [入力](#inputs)  
   

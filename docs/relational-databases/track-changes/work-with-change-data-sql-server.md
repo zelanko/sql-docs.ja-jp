@@ -15,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33490ce81c66d12d0309b56112b0a843d99fc969
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 62c705432367b8d2ad7b5de7de30c840be368aac
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560258"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405237"
 ---
 # <a name="work-with-change-data-sql-server"></a>変更データの処理 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "51560258"
  以降のセクションでは、クエリ関数の cdc.fn_cdc_get_all_changes_<capture_instance> および cdc.fn_cdc_get_net_changes_<capture_instance> を使用して変更データ キャプチャ データのクエリを実行するための一般的なシナリオについて説明します。  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>キャプチャ インスタンスの有効期間内のすべての変更のクエリ  
- 変更データのクエリで最も単純なのは、キャプチャ インスタンスの有効期間内の現在の変更データをすべて返すクエリです。 このクエリを実行するには、まず、有効期間の LSN の下限と上限を求めます。 次に、それらの値を使用して、クエリ関数 cdc.fn_cdc_get_all_changes_<capture_instance> または cdc.fn_cdc_get_net_changes_<capture_instance> に渡すパラメーター @from_lsn および @to_lsn を特定します。 下限を取得するには [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 関数を使用し、上限を取得するには [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 関数を使用します。 クエリ関数 cdc.fn_cdc_get_all_changes_<capture_instance> を使用して現在のすべての有効な変更のクエリを実行するためのサンプル コードについては、"有効な範囲のすべての変更の列挙" テンプレートを参照してください。 cdc.fn_cdc_get_net_changes_<capture_instance> 関数を使用した類似の例については、"有効な範囲の差分変更の列挙" テンプレートを参照してください。  
+ 変更データに対する最も単純な要求は、キャプチャ インスタンスの有効期間内の現在の変更データをすべて返す要求です。 このクエリを実行するには、まず、有効期間の LSN の下限と上限を求めます。 次に、それらの値を使用して、クエリ関数 cdc.fn_cdc_get_all_changes_<capture_instance> または cdc.fn_cdc_get_net_changes_<capture_instance> に渡すパラメーター @from_lsn および @to_lsn を特定します。 下限を取得するには [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 関数を使用し、上限を取得するには [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 関数を使用します。 クエリ関数 cdc.fn_cdc_get_all_changes_<capture_instance> を使用して現在のすべての有効な変更のクエリを実行するためのサンプル コードについては、"有効な範囲のすべての変更の列挙" テンプレートを参照してください。 cdc.fn_cdc_get_net_changes_<capture_instance> 関数を使用した類似の例については、"有効な範囲の差分変更の列挙" テンプレートを参照してください。  
   
 ### <a name="querying-for-all-new-changes-since-the-last-set-of-changes"></a>前回の変更セット以降に発生したすべての新しい変更のクエリ  
  一般的なアプリケーションの場合、変更データのクエリは継続的なプロセスであり、前回の要求以降に発生したすべての変更の要求が定期的に行われます。 そのようなクエリでは、 [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) 関数を使用して、前回のクエリの上限から現在のクエリの下限を求めることができます。 この方法では、クエリ範囲が常に両端の値を含む閉区間として扱われるため、行の重複が起こらないことが保証されます。 次に、 [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 関数を使用して、新しい要求期間の上限を取得します。 クエリ期間を体系的に移動させて前回の要求以降に発生したすべての変更を取得するためのサンプル コードについては、"前回の要求以降に発生したすべての変更の列挙" テンプレートを参照してください。  

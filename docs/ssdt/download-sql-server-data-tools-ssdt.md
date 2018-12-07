@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 397bc5c7597aedc91c3f6382c505eca9d1cd887b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3067b05783d7a83118e87dc8db4cdc6a83d40a1c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659251"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516004"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,8 +114,8 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 |プロジェクト テンプレート|サポートされている SQL プラットフォーム|  
 |-------------------|--------------------|  
 リレーショナル データベース|  SQL Server 2005* - SQL Server 2017<br> (SSDT 17.x または SSDT for Visual Studio 2017 を使って、[SQL Server on Linux](../linux/sql-server-linux-overview.md) に接続します)<br /><br />Azure SQL データベース<br /><br />Azure SQL Data Warehouse (クエリのみサポートします。データベース プロジェクトはまだサポートされていません)<br /><br />  * SQL Server 2005 のサポートは非推奨とされます。<br /><br /> 正式にサポートされている SQL バージョンに移行してください。|
-  |Analysis Services モデル<br /><br />Reporting Services レポート | SQL Server 2008 – SQL Server 2017|
-  |Integration Services パッケージ| SQL Server 2012 – SQL Server 2017    |
+  |Analysis Services モデル<br /><br />Reporting Services レポート | SQL Server 2008 - SQL Server 2017|
+  |Integration Services パッケージ| SQL Server 2012 - SQL Server 2017    |
   
 ## <a name="dacfx"></a>DacFx
 SSDT for Visual Studio 2015 と SSDT for Visual Studio 2017 は両方とも DacFx 17.4.1 を使用: [Data-Tier Application Framework (DacFx) 17.4.1 をダウンロードする](https://www.microsoft.com/download/details.aspx?id=56508)。

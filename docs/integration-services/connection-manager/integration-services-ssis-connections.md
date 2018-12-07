@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639139"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514123"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
@@ -159,7 +159,7 @@ ms.locfileid: "51639139"
   
     -   パッケージに追加する接続マネージャーの種類をクリックします。  
   
-         — または —  
+         - または -  
   
     -   追加する種類が一覧にない場合は、 **[新しい接続]** をクリックして **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開き、接続マネージャーの種類を選択してから **[OK]** をクリックします。  
   

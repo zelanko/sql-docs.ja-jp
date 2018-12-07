@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 61d4d29b0dfc7fe67097c6cb61547c1c65dd79f1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119979"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411879"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Azure の SSIS パッケージから Windows 認証を使用してデータ ソースとファイル共有に接続する
 Windows 認証を使用して、オンプレミスと Azure の仮想マシンの両方、さらに Azure Files で Azure SSIS 統合ランタイム (IR) と同じ仮想ネットワーク内のデータ ソースとファイル共有に接続できます。 Azure SSIS IR で実行されている SSIS パッケージから Windows 認証を使用してデータ ソースとファイル共有に接続する方法は次の 3 とおりです。
@@ -24,7 +24,7 @@ Windows 認証を使用して、オンプレミスと Azure の仮想マシン�
 | 接続方法 | 有効な範囲 | セットアップ手順 | パッケージにおけるアクセス方法 | 資格情報のセットと接続されるリソースの数 | 接続されるリソースの種類 | 
 |---|---|---|---|---|---|
 | `cmdkey` コマンドを使用して資格情報を保持する | Azure SSIS IR 単位 | Azure SSIS IR のプロビジョニングまたは再構成の際にカスタム セットアップ スクリプト (`main.cmd`) の `cmdkey` コマンドを実行します。たとえば、次のように指定します。`cmdkey /add:fileshareserver /user:xxx /pass:yyy`<br/><br/> 詳細については、「[Azure-SSIS 統合ランタイムの設定のカスタマイズ](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)」を参照してください。 | UNC パスを使用して、パッケージ内のリソースに直接アクセスします。たとえば、次のように指定します。`\\fileshareserver\folder` | 接続されるリソースごとに複数の資格情報のセットをサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) <br/><br/> - Windows 認証を使用する SQL Server<br/><br/> - Windows 認証を使用するその他のリソース |
-| カタログ レベルの実行コンテキストを設定する | Azure SSIS IR 単位 | SSISDB `catalog.set_execution_credential` ストアド プロシージャを実行し、"～として実行" コンテキストを設定します。<br/><br/> 詳細については、この記事の以降の内容を参照してください。 | パッケージ内のリソースに直接アクセスします。 | 接続されるすべてのリソースに対して資格情報のセットを 1 つだけサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) <br/><br/> - Windows 認証を使用する SQL Server<br/><br/> - Windows 認証を使用するその他のリソース | 
+| カタログ レベルの実行コンテキストを設定する | Azure SSIS IR 単位 | SSISDB `catalog.set_execution_credential` ストアド プロシージャを実行し、"として実行" コンテキストを設定します。<br/><br/> 詳細については、この記事の以降の内容を参照してください。 | パッケージ内のリソースに直接アクセスします。 | 接続されるすべてのリソースに対して資格情報のセットを 1 つだけサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) <br/><br/> - Windows 認証を使用する SQL Server<br/><br/> - Windows 認証を使用するその他のリソース | 
 | パッケージの実行時にドライブをマウントする (非永続化) | パッケージ単位 | プロセス実行タスクの `net use` コマンドを実行します。このコマンドは、パッケージ内の制御フローの先頭に追加されます。たとえば、次のように指定します。`net use D: \\fileshareserver\sharename` | マップ済みドライブを使用してファイル共有にアクセスします。 | ファイル共有ごとに複数のドライブをサポート | - オンプレミスまたは Azure VM 上のファイル共有<br/><br/> - Azure Files ([Azure ファイル共有の使用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)に関する記事を参照) |
 |||||||
 

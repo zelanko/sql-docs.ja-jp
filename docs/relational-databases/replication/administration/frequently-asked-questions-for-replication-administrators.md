@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 309f11629199f08080d83931dffcd3ab2f3ab7a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04e138f38923745d0095344959bc5876fc213b00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507445"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -186,7 +186,7 @@ ms.locfileid: "47822406"
  まず [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスのいずれかを使用してパブリケーションからアーティクルを削除し、次に `DROP <Object>` を使用してデータベースからアーティクルを削除します。 サブスクリプションを追加した後で、スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除することはできません。まずサブスクリプションを削除する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>パブリッシュされたテーブル上の列を追加または削除するにはどうすればよいですか。  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、列の追加や削除などの、パブリッシュされたオブジェクトに対するスキーマのさまざまな変更がサポートされています。 たとえば、ALTER TABLE … DROP COLUMN をパブリッシャーで実行すると、ステートメントがサブスクライバーにレプリケートされて実行され、列が削除されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] が実行されているサブスクライバーでは、ストアド プロシージャ [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) および [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)で列の追加と削除がサポートされています。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、列の追加や削除などの、パブリッシュされたオブジェクトに対するスキーマのさまざまな変更がサポートされています。 たとえば、ALTER TABLE …DROP COLUMN をパブリッシャーで実行すると、ステートメントがサブスクライバーにレプリケートされて実行され、列が削除されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] が実行されているサブスクライバーでは、ストアド プロシージャ [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) および [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)で列の追加と削除がサポートされています。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
 ## <a name="replication-maintenance"></a>レプリケーションのメンテナンス  
   

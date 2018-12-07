@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169112"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506238"
 ---
 # <a name="execute-package-utility-dtexecui"></a>パッケージ実行ユーティリティ (dtexecui)
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、** から開くか、またはコマンド プロンプトで「 **dtexecui** 」と入力して表示します。  
@@ -207,7 +207,7 @@ ms.locfileid: "49169112"
  パッケージのチェックポイントが有効な場合、使用されるパッケージのチェックポイント ファイルを一覧表示します。  
   
  **[参照]**  
- パッケージのチェックポイントが有効な場合、参照ボタン ( **[...]** ) をクリックし、 **[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
+ パッケージのチェックポイントが有効な場合、参照ボタン ( **[...]** ) をクリックし、**[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
   
  **[再開オプションをオーバーライドする]**  
  パッケージのチェックポイントが有効な場合、再開オプションをオーバーライドするかどうかを示します。  

@@ -11,12 +11,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67d2b66ac05562741958b6fb7e439b0685f80458
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f043a9df2b561fb9fbd7a56c993838137b0601d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855657"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512895"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Azure BLOB ストレージへの複数のデータベースのバックアップ - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47855657"
   
 1.  **SQL Server PowerShell パスの移動:** Windows PowerShell では、コマンドレットを実装して、PowerShell プロバイダーによりサポートされるオブジェクトの階層を表すパス構造を移動できます。 そのパス内のノードへ移動したときに、他のコマンドレットを使用して、現在のオブジェクトの基本的な操作を実行することができます。  
   
-2.  **Get-ChildItem** コマンドレット: **Get-ChildItem** から返される情報は、SQL Server PowerShell パス内の場所によって異なります。 たとえば、場所がコンピューター レベルである場合、このコマンドレットはコンピューターにインストールされているすべての SQL Server データベース エンジン インスタンスを返します。 もう 1 つの例として、場所がデータベースなどのオブジェクト レベルである場合、このコマンドレットはデータベース オブジェクトのリストを返します。  既定では、 **Get-ChildItem** コマンドレットはシステム オブジェクトを返しません。  –Force パラメーターを使用すると、システム オブジェクトを表示できます。  
+2.  **Get-ChildItem** コマンドレット: **Get-ChildItem** から返される情報は、SQL Server PowerShell パス内の場所によって異なります。 たとえば、場所がコンピューター レベルである場合、このコマンドレットはコンピューターにインストールされているすべての SQL Server データベース エンジン インスタンスを返します。 もう 1 つの例として、場所がデータベースなどのオブジェクト レベルである場合、このコマンドレットはデータベース オブジェクトのリストを返します。  既定では、 **Get-ChildItem** コマンドレットはシステム オブジェクトを返しません。  -Force パラメーターを使用すると、システム オブジェクトを表示できます。  
   
      詳細については、「 [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)」をご参照ください。  
   

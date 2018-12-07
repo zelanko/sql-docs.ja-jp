@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a209033dc614ad2cccd6c1138d89c462f5152a7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698600"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417943"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47698600"
 
 -   [保持ポリシー](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
 
- いずれの手法でも、履歴データを移行またはクリーンアップするためのロジックは、現在のテーブルの期間終了に相当する列に基づきます。 各行の期間終了値により、そのバージョンの行が “閉じられる”、つまり、履歴テーブルに入るタイミングが決定されます。 たとえば、条件 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` では、1 か月以上経過した履歴データは履歴テーブルから削除されます。  
+ いずれの手法でも、履歴データを移行またはクリーンアップするためのロジックは、現在のテーブルの期間終了に相当する列に基づきます。 各行の期間終了値により、そのバージョンの行が "閉じられる"、つまり、履歴テーブルに入るタイミングが決定されます。 たとえば、条件 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` では、1 か月以上経過した履歴データは履歴テーブルから削除されます。  
   
 > **注:**  このトピックの例では、この [テンポラル テーブル例](creating-a-system-versioned-temporal-table.md)を使用しています。  
   
@@ -184,7 +184,7 @@ COMMIT ;
   
 > **注:** パーティション分割を構成する際に RANGE LEFT を使用する場合と RANGE RIGHT を使用する場合のパフォーマンス上の違いについては、下の「テーブル パーティション分割におけるパフォーマンス上の考慮事項」を参照してください。  
   
- 最初と最後のパーティションがそれぞれ、下と上の境界で “オープン” になっており、パーティション分割列の値に関係なく、すべての新しい行に対象パーティションが与えられます。   
+ 最初と最後のパーティションがそれぞれ、下と上の境界で "オープン" になっており、パーティション分割列の値に関係なく、すべての新しい行に対象パーティションがあることに注意してください。   
 時間の経過と共に、履歴テーブルの新しい行が上位のパーティションに入ります。 6 番目のパーティションがいっぱいになると、目標とした保有期間に到達したことになります。 その瞬間、定期 (繰り返し) パーティション保守管理タスクが初めて始まります (定期的に実行するようにスケジュールする必要があり、この例では月 1 回になっています)。  
   
  次の図は、定期パーティション保守管理タスクの例です (下に詳しい手順があります)。  

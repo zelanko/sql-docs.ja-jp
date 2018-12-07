@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bed1d8109d49b7c6f2ba57734f2daa1a5eb056d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800576"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410709"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 強力かつ柔軟性のあるページネーション付きのレポートを作成するために、式と共に一般的な関数や演算子を使用します。 
@@ -422,7 +422,7 @@ ms.locfileid: "47800576"
 ## <a name="Indicator"></a>7.インジケーターを使用して売上比較を示す  
 このセクションでは、新しい列を追加し、インジケーターを使用して、個人の年度累計 (YTD) 購入額が平均 YTD 購入額を上回るか下回るかを示します。 **Round** 関数では、値から小数が除去されます。  
   
-インジケーターとその状態を構成するには、多くの手順を踏む必要があります。 必要であれば、「インジケーターを構成するには」で手順をとばして先に進み、このチュートリアルから完成した式をコピーして、 **[式]** ダイアログ ボックスに貼り付けることができます。  
+インジケーターとその状態を構成するには、多くの手順を踏む必要があります。 必要であれば、「インジケーターを構成するには」の手順をスキップして先に進み、このチュートリアルから完成した式をコピーして、**[式]** ダイアログ ボックスに貼り付けることができます。  
   
 ### <a name="to-add-the--or---avg-sales-column"></a>+ or - AVG Sales 列を追加するには  
   
@@ -587,9 +587,9 @@ ms.locfileid: "47800576"
   
 8. **[パラメーター]** をクリックし、 **[値]** ボックスの一覧の **[RowColor]** をダブルクリックします。  
   
-22. `Parameters!RowColor.Value`のすぐ後に「 **, “White”)**」を入力します。  
+22. `Parameters!RowColor.Value` のすぐ後に「**, "White")**」を入力します。  
   
-    完成した式は `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`です。  
+    完成した式は `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`です。  
     
     ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ca94f7ef5ed0c6f070424c47aee10c7848a061d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822450"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503624"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47822450"
 |機能|フィルター選択されたインデックス|フィルター選択されたインデックスは、メモリ最適化テーブルでサポートされていません。 インデックスの指定から **WHERE** 句を削除します。|  
 |機能|[付加列]|付加列の指定は、メモリ最適化テーブルにとって必須ではありません。 メモリ最適化テーブルのすべての列は、各メモリ最適化インデックスに暗黙的に含まれています。|  
 |演算|DROP INDEX|メモリ最適化テーブルのインデックスの削除はサポートされていません。 インデックスを削除するには、ALTER TABLE を使用します。<br /><br /> 詳細については、「 [メモリ最適化テーブルの変更](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)」を参照してください。|  
-|インデックス オプション|*インデックス オプション*|1 つのインデックス オプション – HASH インデックスの BUCKET_COUNT のみがサポートされています。|  
+|インデックス オプション|*インデックス オプション*|1 つのインデックス オプション - HASH インデックスの BUCKET_COUNT のみがサポートされています。|  
   
 ## <a name="nonclustered-hash-indexes"></a>非クラスター化ハッシュ インデックス  
  次の表に、非クラスター化ハッシュ インデックスに関連したエラー メッセージのテキストに表示される可能性がある [!INCLUDE[tsql](../../includes/tsql-md.md)] の機能およびキーワードと、エラーを解決するための修正措置を示します。  
@@ -105,7 +105,7 @@ ms.locfileid: "47822450"
 |機能|定数以外のパラメーターの既定値|ネイティブ コンパイル ストアド プロシージャのパラメーターで既定値を使用する場合、値は定数にする必要があります。 パラメーター宣言からワイルドカードを削除します。|  
 |機能|EXTERNAL|CLR ストアド プロシージャをネイティブでコンパイルすることはできません。 CREATE PROCEDURE ステートメントから AS EXTERNAL 句または NATIVE_COMPILATION オプションを削除します。|  
 |機能|番号付きストアド プロシージャ|ネイティブ コンパイル ストアド プロシージャには番号を付けられません。 **CREATE PROCEDURE** ステートメントから **;***number* を削除してください。|  
-|機能|複数行の INSERT... VALUES ステートメント|ネイティブ コンパイル ストアド プロシージャでは、同じ **INSERT** ステートメントを使用して複数行を挿入できません。 各行に対して **INSERT** ステートメントを作成します。|  
+|機能|複数行の INSERT...VALUES ステートメント|ネイティブ コンパイル ストアド プロシージャでは、同じ **INSERT** ステートメントを使用して複数行を挿入できません。 各行に対して **INSERT** ステートメントを作成します。|  
 |機能|共通テーブル式 (CTE)|共通テーブル式 (CTE) は、ネイティブ コンパイル ストアド プロシージャでサポートされません。 クエリを書き直します。|  
 |機能|COMPUTE|**COMPUTE** 句はサポートされていません。 クエリから削除します。|  
 |機能|SELECT INTO|**INTO** 句は **SELECT** ステートメントではサポートされていません。 クエリを **INSERT INTO** *Table* **SELECT** として再作成します。|  

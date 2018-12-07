@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cc0d7ba8aa5261e93f7b291f3e948e0f773c45e5
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1083c87475c27e33dccd069149e240098d187473
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812933"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418803"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>レポート ビューアーでのローカル モードと接続モードのレポート
 
@@ -79,7 +79,7 @@ ms.locfileid: "51812933"
   
 ## <a name="connected-mode"></a>または
 
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接続モードでの ADS 拡張機能の使用に関する最新情報については、「 [SharePoint サイトの Access Services レポートで示されるデータ拡張機能「ADS」のエラー](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接続モードでの ADS 拡張機能の使用に関する最新情報については、「[Access Services Report in SharePoint Site shows error in data extension 'ADS'](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)」 (SharePoint サイトの Access Services レポートでデータ拡張機能 'ADS' のエラーが表示される) を参照してください。  
   
 ## <a name="see-also"></a>参照
 

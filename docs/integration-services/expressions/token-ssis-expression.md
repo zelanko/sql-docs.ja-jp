@@ -11,12 +11,12 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 447e132edc25da64984ec6fb165ab0d032cdb1ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19e2499bddf07720bdeba3ba49dd4a07258dd31b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747940"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396958"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 式)
   文字列内のトークンを区切る指定された区切り記号、および返されるトークンを表すトークン数に基づいて、文字列からトークン (サブストリング) を返します。  
@@ -32,7 +32,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  区切り記号で区切られたトークンを含む文字列です。  
   
  *delimiter_string*  
- 区切り記号を含む文字列です。 たとえば、「; ,」には 3 つの区切り記号 (セミコロン、空白、コンマ) が含まれています。  
+ 区切り記号を含む文字列です。 たとえば、"; ," には 3 つの区切り記号 (セミコロン、空白、コンマ) が含まれています。  
   
  *occurrence*  
  返されるトークンを指定する符号付きまたは符号なし整数。 たとえば、このパラメーターの値として 3 を指定すると、文字列内の 3 番目のトークンが返されます。  
@@ -94,7 +94,7 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- 次の例では、TOKEN 関数は指定されたパスからファイル名を返します。 たとえば、User::Path の値が "c:\program files files\data\myfile.txt" の場合、TOKEN 関数 は "myfile.txt" を返します。 TOKENCOUNT 関数 は 4 を返し、TOKEN 関数 は 4 番目のトークン "myfile.txt" を返します。  
+ 次の例では、TOKEN 関数は指定されたパスからファイル名を返します。 たとえば、User::Path の値が "c:\program files files\data\myfile.txt" の場合、TOKEN 関数は "myfile.txt" を返します。 TOKENCOUNT 関数は 4 を返し、TOKEN 関数は 4 番目のトークン "myfile.txt" を返します。  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  

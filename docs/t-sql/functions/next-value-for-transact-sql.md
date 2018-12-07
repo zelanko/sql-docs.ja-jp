@@ -23,12 +23,12 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2ad33a42cc05644fa2ce56836361fe8fee56324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525732"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -68,18 +68,18 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
  ときに、 **NEXT VALUE FOR** 関数を使用するクエリや既定の制約で同じシーケンス オブジェクトが 2 回以上使用するかどうか、同じシーケンス オブジェクトは、または両方で使用される、値を提供するステートメントでと、結果セット内の行で同じシーケンスを参照するすべての列に対して実行されている既定の制約で同じ値が返されます。  
   
- **NEXT VALUE FOR** 関数は、非決定的であり、生成されるシーケンス値の数が定義されているコンテキストでのみ使用します。 特定のステートメントにおいて、参照されている各シーケンス オブジェクトに使用される値の数の定義を以下に示します。  
+  **NEXT VALUE FOR** 関数は、非決定的であり、生成されるシーケンス値の数が定義されているコンテキストでのみ使用します。 特定のステートメントにおいて、参照されている各シーケンス オブジェクトに使用される値の数の定義を以下に示します。  
   
 -   **SELECT** -参照されているシーケンス オブジェクトごとに、新しい値が 1 回生成、ステートメントの結果内の行ごとです。  
   
--   **INSERT** … **VALUES** -参照されているシーケンス オブジェクトごとに、新しい値が 1 回生成、ステートメントで挿入された行はごとです。  
+-   **INSERT** ...**VALUES** -参照されているシーケンス オブジェクトごとに、新しい値が 1 回生成、ステートメントで挿入された行はごとです。  
   
 -   **UPDATE** -各参照されているシーケンス オブジェクトに対して、ステートメントによって更新された各行の新しい値が生成されます。  
   
 -   手続き型ステートメント (**DECLARE**、**SET** など) - 参照されている各シーケンス オブジェクトに対して、ステートメントごとに新しい値が生成されます。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- **NEXT VALUE FOR** 関数は、次のような状況では使用できません。  
+  **NEXT VALUE FOR** 関数は、次のような状況では使用できません。  
   
 -   データベースが読み取り専用モードの場合。  
   
@@ -93,13 +93,13 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   ステートメントを使用して、**DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** or **INTERSECT** 演算子。  
   
--   ステートメントを使用して、**ORDER BY** clause unless **NEXT VALUE FOR** しています. **OVER** (**ORDER BY** …) が使用されます。  
+-   **ORDER BY** 句を使用するステートメン内で使用する場合。ただし、**NEXT VALUE FOR** ...**OVER** (**ORDER BY** ...) が使用されている場合を除く。  
   
 -   次の句で: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY**, or **FOR XML**です。  
   
 -   使用して条件付きの式で **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL**, or **NULLIF**です。  
   
--   **VALUES** 句がない場合の一部では、 **INSERT** ステートメントです。  
+-    **VALUES** 句がない場合の一部では、 **INSERT** ステートメントです。  
   
 -   CHECK 制約の定義で使用する場合。  
   
@@ -109,9 +109,9 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   ステートメントを使用して、 **TOP**, 、**OFFSET**, 、または、 **ROWCOUNT** オプションを設定します。  
   
--   **WHERE** 、ステートメントの句。  
+-    **WHERE** 、ステートメントの句。  
   
--   **MERGE** ステートメントです。 (する場合を除く、 **NEXT VALUE FOR** 関数は、対象のテーブルの既定の制約で使用してで既定値が使用される、 **作成** のステートメント、 **マージ** ステートメントです)。  
+-    **MERGE** ステートメントです。 (する場合を除く、 **NEXT VALUE FOR** 関数は、対象のテーブルの既定の制約で使用してで既定値が使用される、 **作成** のステートメント、 **マージ** ステートメントです)。  
   
 ## <a name="using-a-sequence-object-in-a-default-constraint"></a>既定の制約でのシーケンス オブジェクトの使用  
  使用する場合、 **NEXT VALUE FOR** 関数既定の制約では、次の規則が適用されます。  
@@ -130,20 +130,20 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   既定の制約で参照されているシーケンス オブジェクトは変更できます。  
   
--   `INSERT … SELECT` ステートメントまたは `INSERT … EXEC` ステートメントで、挿入されるデータを **ORDER BY** 句を使用してクエリから取得する場合、**NEXT VALUE FOR** 関数によって返される値は、**ORDER BY** 句で指定された順序で生成されます。  
+-   `INSERT ... SELECT` ステートメントまたは `INSERT ... EXEC` ステートメントで、挿入されるデータを **ORDER BY** 句を使用してクエリから取得する場合、**NEXT VALUE FOR** 関数によって返される値は、**ORDER BY** 句で指定された順序で生成されます。  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>OVER ORDER BY 句でのシーケンス オブジェクトの使用  
- **NEXT VALUE FOR** 関数は、適用することで並べ替えられたシーケンス値の生成をサポートしています、 **経由** 句を **NEXT VALUE FOR** 呼び出します。 使用して、**OVER** 句では、ユーザーはことが保証の順序で返される値が生成されること、 **OVER** 句の **順序 B**Y のサブ句。 次の追加のルールの適用を使用する場合、 **NEXT VALUE FOR** で動作、 **経由**で 句。  
+  **NEXT VALUE FOR** 関数は、適用することで並べ替えられたシーケンス値の生成をサポートしています、 **経由** 句を **NEXT VALUE FOR** 呼び出します。 使用して、**OVER** 句では、ユーザーはことが保証の順序で返される値が生成されること、 **OVER** 句の **順序 B**Y のサブ句。 次の追加のルールの適用を使用する場合、 **NEXT VALUE FOR** で動作、 **経由**で 句。  
   
 -   複数回呼び出す、 **NEXT VALUE FOR** 関数の 1 つのステートメントで同じシーケンス ジェネレーター必要がありますすべてを使用してください、同じ **経由** 句の定義。  
   
 -   複数回呼び出す、 **NEXT VALUE FOR** 関数の 1 つのステートメントで異なるシーケンス ジェネレーターの参照を別に持つことができる **経由** 句の定義。  
   
--   **経由** 句に適用される、 **NEXT VALUE FOR** 関数がサポートされていません、 **PARTITION BY** サブ句。  
+-    **経由** 句に適用される、 **NEXT VALUE FOR** 関数がサポートされていません、 **PARTITION BY** サブ句。  
   
 -   呼び出しはすべての場合、 **NEXT VALUE FOR** で機能、 を**選択** ステートメントを指定、 **経由**で 句、 **ORDER BY** 句で使用できる、 を**選択** ステートメントです。  
   
--   **SELECT** ステートメントまたは `INSERT … SELECT …` ステートメントでは、**NEXT VALUE FOR** 関数と共に **OVER** 句を使用できます。 **UPDATE** ステートメントまたは **MERGE** ステートメントでは、**NEXT VALUE FOR** 関数で **OVER** 句は使用できません。  
+-   **SELECT** ステートメントまたは `INSERT ... SELECT ...` ステートメントでは、**NEXT VALUE FOR** 関数と共に **OVER** 句を使用できます。 **UPDATE** ステートメントまたは **MERGE** ステートメントでは、**NEXT VALUE FOR** 関数で **OVER** 句は使用できません。  
   
 -   別のプロセスが同時にシーケンス オブジェクトにアクセスしている場合は、非連続的な番号が返される可能性があります。  
   
@@ -278,8 +278,8 @@ GO
   
 ```  
   
-### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. NEXT VALUE FOR 関数を使用して、SELECT としています. INTO  
- 次の例では、`SELECT … INTO` ステートメントを使用して `Production.NewLocation` という名前のテーブルを作成し、`NEXT VALUE FOR` 関数を使用して各行に番号を付けます。  
+### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. SELECT ... INTO と共に NEXT VALUE FOR 関数を使用するINTO  
+ 次の例では、`SELECT ... INTO` ステートメントを使用して `Production.NewLocation` という名前のテーブルを作成し、`NEXT VALUE FOR` 関数を使用して各行に番号を付けます。  
   
 ```  
 USE AdventureWorks2012 ;   

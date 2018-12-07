@@ -21,12 +21,12 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 739a89b579e1bc0ebe3c83972a2781e94744768b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0b4735350d6b3d27d4fb0d17ddfcb169b704a67a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540318"
 ---
 # <a name="dimension-processing-destination"></a>ディメンション処理変換先
   ディメンション処理変換先は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションを読み込んで処理します。 ディメンションの詳細については、「[ディメンション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "51640169"
  データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>[ディメンション処理変換先エディター] ([接続マネージャー] ページ)
-  **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスへの接続を指定できます。  
+   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスへの接続を指定できます。  
   
 ### <a name="options"></a>[変数]  
  **Connection manager**  
@@ -161,7 +161,7 @@ ms.locfileid: "51640169"
 |**ReportAndStop**|エラーを報告して処理を停止します。|  
   
  **[エラー ログのパス]**  
- エラー ログのパスを入力するか、 **[…]** をクリックしてログの保存先を選択します。  
+ エラー ログのパスを入力するか、**[...]** ボタンをクリックしてログの保存先を選択します。  
   
  **[...]**  
  エラー ログのパスを選択します。  

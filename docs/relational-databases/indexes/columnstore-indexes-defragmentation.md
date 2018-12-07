@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67fe252e91145a427e7bd42064733ae78835d8cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667591"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511542"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>列ストア インデックス - 最適化
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -182,12 +182,12 @@ ms.locfileid: "51667591"
 ## <a name="rebuild"></a> ALTER INDEX REBUILD を使用して、列ストア インデックスをオフラインで最適化する  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、通常、列ストア インデックスの再構築は必要ありません。これは、`REORGANIZE` がオンサイン操作としてバック グラウンドで再構築の基本事項を実行するためです。  
   
- 列ストア インデックスを再構築すると、断片化が解消され、すべての行が列ストアに移動されます。 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) または [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) を使用して、既存のクラスター化列ストア インデックスの完全な再構築を行います。 また、ALTER INDEX …  REBUILD を使用して特定のパーティションを再構築できます。  
+ 列ストア インデックスを再構築すると、断片化が解消され、すべての行が列ストアに移動されます。 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) または [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) を使用して、既存のクラスター化列ストア インデックスの完全な再構築を行います。 また、ALTER INDEX … REBUILD を使用して特定のパーティションを再構築できます。  
   
 ### <a name="rebuild-process"></a>再構築プロセス  
  列ストア インデックスを再構築する際、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は以下のように動作します。  
   
-1.  再構築が行われている間、テーブルまたはパーティションを排他的にロックします。 データは、`NOLOCK`、RCSI または SI を使用する場合でも、「オフライン」であり、再構築中に使用できません。  
+1.  再構築が行われている間、テーブルまたはパーティションを排他的にロックします。 データは、`NOLOCK`、RCSI、または SI を使用する場合でも、"オフライン" であり、再構築中に使用できません。  
   
 2.  すべてのデータを列ストアに再圧縮します。 再構築が行われている間、列ストア インデックスのコピーが 2 つ存在します。 再構築が完了したら、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、元の列ストア インデックスが削除されます。  
   

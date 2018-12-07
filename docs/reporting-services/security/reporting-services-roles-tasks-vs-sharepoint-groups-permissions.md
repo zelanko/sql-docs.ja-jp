@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 64339c62cfe6d37e1117febd797ae43d6d43bdc2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b099941ce9b51583647cd29d0114cd795bf051ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813300"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397196"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>SQL Server Reporting Services と SharePoint グループのアクセス許可
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのロール ベースおよびタスク ベースの承認機能を、SharePoint 製品のセキュリティ機能と比較します。 このトピックでは、ロール、タスク、SharePoint グループ、権限レベル、および権限の用語と特徴を比較します。  

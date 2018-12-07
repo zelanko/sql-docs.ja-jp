@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f057c890f5779bfb40591235fd8a870396ffeb90
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512927"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391246"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "51512927"
   
 3.  **[サーバーの種類]** 領域で **[SQL Server]** をクリックし、リンク サーバーが別の **SQL Server** インスタンスであることを指定します。  
   
-4.  **[セキュリティ]** ページで、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリンク サーバーに接続するときに使用するセキュリティ コンテキストを指定します。 ユーザーがドメイン ログインを使用して接続するドメイン環境では、 **[ログインの現在のセキュリティ コンテキストを使用する]** を選択することが最適な場合が多くあります。 ユーザーが **SQL Server** ログインを使用して元の **SQL Server** に接続する場合は、 **[このセキュリティ コンテキストを使用する]** をクリックして、リンク サーバーでの認証に必要な資格情報を指定することが最適です。  
+4.  **[セキュリティ]** ページで、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリンク サーバーに接続するときに使用するセキュリティ コンテキストを指定します。 ユーザーがドメイン ログインを使用して接続するドメイン環境では、**[ログインの現在のセキュリティ コンテキストを使用する]** を選択することが最適な場合が多くあります。 ユーザーが **SQL Server** ログインを使用して元の **SQL Server** に接続する場合は、 **[このセキュリティ コンテキストを使用する]** をクリックして、リンク サーバーでの認証に必要な資格情報を指定することが最適です。  
   
      **[ローカル ログイン]**  
      リンク サーバーに接続できるローカル ログインを指定します。 ローカル ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインまたは Windows 認証ログインのいずれかを使用するログインにすることができます。 この一覧を使用して、特定のログインへの接続を制限することも、一部のログインが別のログインとして接続できるように設定することもできます。  

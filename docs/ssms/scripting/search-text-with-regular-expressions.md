@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa7424ec1883ec7f9dcc488ec231bcfcd7f6d601
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538787"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の** [検索と置換] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
+  正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。  **の** [検索と置換] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
   
 #### <a name="to-find-using-regular-expressions"></a>正規表現を使用して検索を行うには  
   
@@ -53,7 +53,7 @@ ms.locfileid: "51643901"
 |改行|\n|プラットフォームに依存しない改行を検索します。 置換の正規表現の場合は、改行を挿入します。|  
 |セット内の任意の 1 文字|[]|[] 内の任意の 1 文字を検索します。 文字の範囲を指定するには、開始文字と終了文字をダッシュ (-) で区切り、たとえば [a-z] のように指定します。|  
 |セット外の任意の 1 文字|[^...]|^ の後の文字セット内に存在しない任意の 1 文字を検索します。|  
-|スイッチまたは|&#124;|OR 記号 (&#124;) の前の表現と後の表現を検索します。 基本的にグループ内で使用します。 たとえば、「(sponge&#124;mud) bath」の一致項目は、「sponge bath」と「mud bath」です。|  
+|または|&#124;|OR 記号 (&#124;) の前の表現と後の表現を検索します。 基本的にグループ内で使用します。 たとえば、「(sponge&#124;mud) bath」の一致項目は、「sponge bath」と「mud bath」です。|  
 |エスケープ|\|バックスラッシュ (\\) の後の文字をリテラルと見なして一致項目を検索します。 これにより、正規表現の中で使用する文字 (「{」、「^」など) を検索できます。 たとえば、「 \\^」と指定すると、「^」文字を検索できます。|  
 |タグ付き正規表現|{}|かっこで囲んだ正規表現をタグとして追加したテキストが一致項目になります。|  
 |C/C++ 識別子|:i|正規表現 ([a-zA-Z_$][a-zA-Z0-9_$]*) を検索します。|  
@@ -65,8 +65,8 @@ ms.locfileid: "51643901"
   
 |式|構文|[説明]|  
 |----------------|------------|-----------------|  
-|最短 &#x2014; ゼロ個以上|@|直前の正規表現のゼロ個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
-|最短 &#x2014; 1 個以上|#|直前の正規表現の 1 個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
+|最短 - ゼロ個以上|@|直前の正規表現のゼロ個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
+|最短 - 1 個以上|#|直前の正規表現の 1 個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
 |n 回の繰り返し|^n|直前の正規表現の n 回の繰り返しを検索します。 たとえば、「[0-9]^4」は、任意の 4 桁の数字と一致します。|  
 |グループ化|()|サブ式をグループ化します。|  
 |n 番目のタグ付きテキスト|\n|**[検索または置換]** の正規表現では、n 番目のタグ付き正規表現と一致するテキストを示します。n は 1 ～ 9 の数字です。<br /><br /> **[置換]** の正規表現の場合、「\0」を指定すると、一致したテキスト全体が挿入されます。|  

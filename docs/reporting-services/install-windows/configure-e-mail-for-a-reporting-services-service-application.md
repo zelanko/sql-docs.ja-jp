@@ -8,12 +8,12 @@ ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29b5ba7b28781351232ba1a51ad20b6b84fbfce7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 26c28f65737fe989b416078e609f7742cfcf07b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050864"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410369"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Reporting Services サービス アプリケーションの電子メールの構成
 
@@ -58,10 +58,10 @@ ms.locfileid: "50050864"
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
     $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
     $emailXml = [xml]$emailCfg   
-    $emailXml.SelectSingleNode("//SMTPServer").InnerText = “your email server name"  
+    $emailXml.SelectSingleNode("//SMTPServer").InnerText = "your email server name"  
     $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
     $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
-    $emailXml.SelectSingleNode("//From").InnerText = “your FROM email address”  
+    $emailXml.SelectSingleNode("//From").InnerText = "your FROM email address"  
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   

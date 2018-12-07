@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813185"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396835"
 ---
 # <a name="install-report-builder"></a>レポート ビルダーをインストール
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] はスタンドアロン アプリです。ユーザーまたは管理者によってコンピューターにインストールされます。 Microsoft ダウンロード センター、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバー、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトからインストールできます。  
@@ -99,7 +99,7 @@ ms.locfileid: "51813185"
   
 -   **[レポート ビルダー]** をクリックします。  
   
-     既存のサーバーのリスト中にレポート サーバーが表示されない場合、 **[レポートを開く]** ダイアログ ボックスを閉じ、 **の下部の** [接続] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をクリックしてサーバーに接続します。  
+     既存のサーバーのリストにレポート サーバーが表示されない場合は、**[レポートを開く]** ダイアログ ボックスを閉じ、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の下部の **[接続]** をクリックしてサーバーに接続します。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)   

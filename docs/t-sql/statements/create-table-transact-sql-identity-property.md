@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94b77d9ce0e036e0b3c5727d3731d0effc074f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782450"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507389"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (プロパティ)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -68,7 +68,7 @@ IDENTITY [ (seed , increment) ]
   
 -   **トランザクション内の連続する値**: 複数行を挿入するトランザクションは、テーブルで同時に他の挿入が実行される可能性があるため、その複数行の連続する値を取得するとは限りません。 連続した値にする必要がある場合、トランザクションはテーブル上で排他ロックを使用するか、**SERIALIZABLE** 分離レベルを使用する必要があります。  
   
--   **サーバーの再起動または他のエラーが発生した後の連続した値**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パフォーマンス上の理由から ID 値をキャッシュすることがあります。割り当てられた値の一部は、データベースの障害やサーバーの再起動が発生したときに失われることがあります。 その結果、挿入時に非連続的な ID 値が生成される場合があります。 非連続的な値が許可されない場合、アプリケーションは独自のメカニズムを使用してキー値を生成する必要があります。 シーケンス ジェネレーターを **NOCACHE** オプションを指定して使用すると、非連続的な値を絶対にコミットされないトランザクションに制限することができます。  
+-   **サーバーの再起動または他のエラーが発生した後の連続した値** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パフォーマンス上の理由から ID 値をキャッシュすることがあります。割り当てられた値の一部は、データベースの障害やサーバーの再起動が発生したときに失われることがあります。 その結果、挿入時に非連続的な ID 値が生成される場合があります。 非連続的な値が許可されない場合、アプリケーションは独自のメカニズムを使用してキー値を生成する必要があります。 シーケンス ジェネレーターを **NOCACHE** オプションを指定して使用すると、非連続的な値を絶対にコミットされないトランザクションに制限することができます。  
   
 -   **値の再利用**: 特定のシードと増分値が指定された特定の ID プロパティでは、ID 値がエンジンによって再利用されることはありません。 特定の挿入ステートメントが失敗した場合または挿入ステートメントがロールバックされた場合、使用した ID 値は失われ、再度生成されることはありません。 その結果、それ以降の ID 値が生成されると、連続しない場合があります。  
   

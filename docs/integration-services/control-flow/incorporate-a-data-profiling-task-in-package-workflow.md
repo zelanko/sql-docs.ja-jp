@@ -13,15 +13,15 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0304d7e1a27d9ff31be603ee4d3248f9b4c472eb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 621d19785793115c924243fd750b2d78c503c1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638800"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545795"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>パッケージ ワークフローでデータ プロファイル タスクを使用する
-  データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ プロファイル タスクを出力する場合、通常、視覚的な分析とユーザーの判断によって、報告された違反が意味のあるものか過剰であるかを判断する必要があります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
+  データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ プロファイル タスクを出力する場合、通常、視覚的な分析とユーザーの判断によって、報告された違反が意味のあるものか過剰であるかを判断する必要があります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
   
  ただし、データ品質の基準が確立された後に、データ ソースの定期的な分析とクリーンアップを自動化することが必要になる場合があります。 次のシナリオを考えてみます。  
   
@@ -264,7 +264,7 @@ ms.locfileid: "51638800"
   
 8.  スクリプト開発環境を閉じてから、スクリプト タスク エディターを閉じます。  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>変数からプロファイル出力を読み込むコード  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>変数からプロファイル出力を読み込むコード  
  上記の手順は、データ プロファイル タスクの出力をファイルから読み込む方法を示していますが、 この出力をパッケージ変数から読み込む方法もあります。 出力を変数から読み込むには、サンプル コードを次のように変更する必要があります。  
   
 -   **LoadXml** メソッドではなく、 **XmlDocument** クラスの **Load** メソッドを呼び出します。  

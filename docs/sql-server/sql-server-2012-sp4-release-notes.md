@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503271"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack のリリース ノート
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Service Pack は、インストール メディアではなくオンラインで
 - **メモリ許可/使用状況の診断の向上**: 新しい query_memory_grant_usage XEvent (サーバー 2016 SP1 から移植)。
 - **SSL ネゴシエーション手順へのプロトコル トレースの追加**: ネゴシエーションの成功/失敗のビット トレース情報 (プロトコルなど) を追加します。たとえば TLS 1.2 の展開時に接続性のシナリオをトラブルシューティングするときに役に立ちます。
 - **ディストリビューション データベースの正しい互換性レベルの設定**: サービス パックをインストールすると、ディストリビューション データベースの互換性レベルが 90 に変わります。 レベルが変更されたのは、sp_vupgrade_replication ストアド プロシージャの問題によるものです。 SP はディストリビューション データベースに正しい互換性レベルが設定されるように変更されています。 
-- **データベースの複製を作成する新しい DBCC コマンド**: 複製データベースは、CSS などのパワー ユーザーがスキーマとメタデータをデータなしで複製することによって、既存の運用データベースをトラブルシューティングできるように追加された、新しい DBCC コマンドです。 呼び出しは、DBCC clonedatabase (‘source_database_name’, ‘clone_database_name’) で実行されます。 複製されたデータベースは、実稼働環境では使用できません。 データベースが複製データベースの呼び出しから生成されているかどうかを確認するには、次のコマンドを使用して、DATABASEPROPERTYEX('clonedb', 'isClone') を選択します。戻り値 1 が true、0 が false です。 
+- **データベースの複製を作成する新しい DBCC コマンド**: 複製データベースは、CSS などのパワー ユーザーがスキーマとメタデータをデータなしで複製することによって、既存の運用データベースをトラブルシューティングできるように追加された、新しい DBCC コマンドです。 呼び出しは、DBCC clonedatabase ('source_database_name', 'clone_database_name') で実行されます。 複製されたデータベースは、実稼働環境では使用できません。 データベースが複製データベースの呼び出しから生成されているかどうかを確認するには、次のコマンドを使用して、DATABASEPROPERTYEX('clonedb', 'isClone') を選択します。戻り値 1 が true、0 が false です。 
 - **SQL エラー ログの TempDB ファイルとファイル サイズの情報**: スタートアップ時に、TempDB データ ファイルのサイズと自動拡張が異なる場合、ファイルの数を出力し、警告をトリガーします。
 - **SQL Server エラー ログの IFI サポート メッセージ**: エラー ログにデータベース ファイルの瞬時初期化の有効/無効を示します。
 - **DBCC INPUTBUFFER に置き換わる新しい DMF**: DBCC INPUTBUFFER を置き換えるため、session_id をパラメーターとして受け取る新しい動的管理関数 sys.dm_input_buffer が導入されました。

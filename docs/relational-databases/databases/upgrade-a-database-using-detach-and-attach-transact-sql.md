@@ -1,7 +1,7 @@
 ---
 title: デタッチとアタッチを使用したデータベースのアップグレード (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/26/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,16 +18,16 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea74651b778570910e020f55a28226a1ec2e8055
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0b6b540227212058518a62debc6b113f31beab37
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558909"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394079"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用したデータベースのアップグレード (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、デタッチ操作とアタッチ操作を使用し、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータベースをアップグレードする方法について説明します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアタッチした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。  
+このトピックでは、デタッチ操作とアタッチ操作を使用し、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータベースをアップグレードする方法について説明します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアタッチした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。 これにより、データベースが古いバージョンの [!INCLUDE[ssde_md](../../includes/ssde_md.md)] で使用されるのを防ぎます。 ただし、メタデータのアップグレードは、データベースの[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)の設定には影響しません。 詳細については、このトピックで後述する「[アップグレード後のデータベース互換性レベル](#dbcompat)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -41,7 +41,9 @@ ms.locfileid: "51558909"
   
      [デタッチ操作とアタッチ操作の使用](#SSMSProcedure)  
   
--   **補足情報:**  [SQL Server データベースのアップグレード後](#FollowUp)  
+-   **補足情報:**    
+
+     [SQL Server データベースのアップグレード後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -58,7 +60,7 @@ ms.locfileid: "51558909"
     -   バージョンに関係なく別のサーバー インスタンスにデータベースをアタッチする場合は、アタッチ操作が完了した後、**sp_removedbreplication** を実行してレプリケーションを削除する必要があります。 詳細については、「[sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)」を参照してください。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
- 不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
+不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
 ##  <a name="SSMSProcedure"></a> デタッチとアタッチを使用してデータベースをアップグレードするには  
   
@@ -78,7 +80,7 @@ ms.locfileid: "51558909"
   
 1.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行してデータベースをデタッチします。  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     EXEC sp_detach_db @dbname = N'MyDatabase';  
@@ -88,13 +90,13 @@ ms.locfileid: "51558909"
 2.  任意の方法で、データ ファイルとログ ファイルを新しい場所にコピーします。  
   
     > [!IMPORTANT]  
-    >  実稼動データベースの場合は、データベースとトランザクション ログを別のディスクに配置します。  
+    > 実稼動データベースの場合は、データベースとトランザクション ログを別のディスクに配置することをお勧めします。 これらのドライブは I/O とファイルの増加要件が異なるため、別々の場所に保持するのがベスト プラクティスと見なされます。  
   
-     ファイルをネットワーク経由でリモート コンピューターのディスクにコピーするには、そのリモート コンピューターの UNC (Universal Naming Convention) 名を使用します。 UNC 名の形式は、**\\\\***Servername***\\***Sharename***\\***Path***\\***Filename* です。 ローカル ハード ディスクにファイルを書き込む場合と同様、リモート ディスクでのファイルの読み取りや書き込みに必要な適切な権限が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用するユーザー アカウントに許可されている必要があります。  
+    ファイルをネットワーク経由でリモート コンピューターのディスクにコピーするには、そのリモート コンピューターの UNC (Universal Naming Convention) 名を使用します。 UNC 名の形式は、`\\Servername\Sharename\Path\Filename` です。 ローカル ハード ディスクにファイルを書き込む場合と同様、リモート ディスクでのファイルの読み取りや書き込みに必要な適切な権限が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用するユーザー アカウントに許可されている必要があります。  
   
 3.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、移動したデータベースとログをアタッチします (ログのアタッチは省略できます)。  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     CREATE DATABASE MyDatabase   
@@ -104,18 +106,18 @@ ms.locfileid: "51558909"
     GO  
     ```  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、新しくアタッチされたデータベースはオブジェクト エクスプローラーにすぐに表示されません。 このデータベースを表示するには、オブジェクト エクスプローラーで、 **[表示]** をクリックし、 **[最新の情報に更新]** をクリックします。 オブジェクト エクスプローラーの **[データベース]** ノードを展開すると、データベースの一覧に新しくアタッチされたデータベースが表示されるようになります。  
+    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、新しくアタッチされたデータベースはオブジェクト エクスプローラーにすぐに表示されません。 このデータベースを表示するには、オブジェクト エクスプローラーで、 **[表示]** をクリックし、 **[最新の情報に更新]** をクリックします。 オブジェクト エクスプローラーの **[データベース]** ノードを展開すると、データベースの一覧に新しくアタッチされたデータベースが表示されるようになります。  
   
 ##  <a name="FollowUp"></a> 補足情報: SQL Server データベースのアップグレード後  
- データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **upgrade_option** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションがインポート (**upgrade_option** = 2) または再構築 (**upgrade_option** = 0) に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 また、アップグレード オプションがインポートに設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **upgrade_option** サーバー プロパティの設定を変更するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)を使用します。  
+データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **upgrade_option** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションがインポート (**upgrade_option** = 2) または再構築 (**upgrade_option** = 0) に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 また、アップグレード オプションがインポートに設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **upgrade_option** サーバー プロパティの設定を変更するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)を使用します。  
   
-### <a name="database-compatibility-level-after-upgrade"></a>アップグレード後のデータベース互換性レベル  
- アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレードされたデータベースの互換性レベルが 90 の場合、互換性レベルは 100 に設定されます。これは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされている下限の互換性レベルです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
+### <a name="dbcompat"></a> アップグレード後のデータベース互換性レベル  
+アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレードされたデータベースの互換性レベルが 90 の場合、互換性レベルは 100 に設定されます。これは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされている下限の互換性レベルです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ### <a name="managing-metadata-on-the-upgraded-server-instance"></a>アップグレードされたサーバー インスタンスでのメタデータの管理  
- データベースを別のサーバー インスタンスにアタッチするときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、アタッチ先のサーバー インスタンスで、ログイン、ジョブ、権限などのデータベースのメタデータの一部またはすべてを作成し直す必要が生じる場合があります。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
+データベースを別のサーバー インスタンスにアタッチするときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、アタッチ先のサーバー インスタンスで、ログイン、ジョブ、権限などのデータベースのメタデータの一部またはすべてを作成し直す必要が生じる場合があります。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
 ### <a name="service-master-key-and-database-master-key-encryption-changes-from-3des-to-aes"></a>3DES から AES へのサービス マスター キーとデータベース マスター キーの暗号化の変更  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンは、AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンは、AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 使用する必要があります、 `OPEN MASTER KEY` ステートメントをデータベース マスター_キー (DMK) の暗号化を解除します。 DMK の暗号化が解除されると、`ALTER MASTER KEY REGENERATE` ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。  
   
   

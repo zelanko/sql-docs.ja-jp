@@ -18,12 +18,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2945ebadf1a9637018a2e6cbbda7379efa6ef58
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: dbe9e655bff91e514c8157a1afb74504b9dc6717
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638202"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502724"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
   WMI データ リーダー タスクは、WQL (Windows Management Instrumentation Query Language) を使用してクエリを実行し、コンピューター システムに関する WMI から情報を返します。 WMI データ リーダー タスクは、次の目的で使用できます。  
@@ -120,7 +120,7 @@ Select * FROM Win32_QuickFixEngineering
   
 ### <a name="static-options"></a>静的オプション  
  **[WMIConnectionName]**  
- WMI 接続マネージャーを一覧から選択するか、[\<**新しい WMI 接続…**>] をクリックして新しい接続マネージャーを作成します。  
+ WMI 接続マネージャーを一覧から選択するか、\<[**新しい WMI 接続…>]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、 [WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -151,7 +151,7 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="wqlquerysourcetype--direct-input"></a>[WQLQuerySourceType] = [直接入力]  
  **[WQLQuerySource]**  
- クエリを指定します。または、参照 ([...]) をクリックし、 **[WQL クエリ]** ダイアログ ボックスを使用してクエリを入力します。  
+ クエリを指定します。または、参照 ( [...] ) をクリックし、**[WQL クエリ]** ダイアログ ボックスを使用してクエリを入力します。  
   
 #### <a name="wqlquerysourcetype--file-connection"></a>[WQLQuerySourceType] = [ファイル接続]  
  **[WQLQuerySource]**  

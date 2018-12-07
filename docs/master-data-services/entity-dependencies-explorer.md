@@ -14,12 +14,12 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 49528d0fda3bbbe9798a4a7bdce2cbdd5b7369f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87d9d0ea6ea2310f305eb6cb58ec8e39ecab8649
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820017"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416673"
 ---
 # <a name="entity-dependencies-explorer"></a>エンティティの依存関係エクスプローラー
 
@@ -28,7 +28,7 @@ ms.locfileid: "47820017"
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 では、[エンティティの依存性] という新しいエクスプローラー ページが追加されました。ここでは、最初に派生階層を定義することなく、ドメイン ベースの属性 (DBA) 値で指定したとおりに、モデル内のエンティティ メンバー間のリレーションシップを視覚化する別の方法を提供します。   
   
-これは、“自分のエンティティを誰が、どのように使用しているか” という質問に回答するために役立ちます。 このビューは、[派生階層] エクスプローラー ページと同様ですが、さらに包括的です。 ここでは、特定の階層の一部として定義された内容だけでなく、すべての DBA リレーションシップが表示されます。 表示されている階層構造は既存の DBS から単純に推定されるため、階層の定義は必要ありません。  
+これは、"自分のエンティティを誰が、どのように使用しているか" という質問に回答するために役立ちます。 このビューは、[派生階層] エクスプローラー ページと同様ですが、さらに包括的です。 ここでは、特定の階層の一部として定義された内容だけでなく、すべての DBA リレーションシップが表示されます。 表示されている階層構造は既存の DBS から単純に推定されるため、階層の定義は必要ありません。  
   
 [エクスプローラー] ページで、[エンティティの依存関係] メニュー項目には、少なくとも 1 つのエンティティが依存する (つまり、少なくとも 1 つのエンティティに一覧されたエンティティを参照する DBA がある) モデルにあるすべてのエンティティが一覧表示されます。 依存関係 (直接と間接の両方) の数は、エンティティ名の横に表示されます。リストはこの数値によって並べ替えられ、最も頻繁に参照されるエンティティが上部に表示されます。 [サンプル データ](https://msdn.microsoft.com/library/master-data-services-sample.aspx)のカスタマー モデルから取得された次のスクリーンショットでは、7 つのエンティティによって (直接または間接的に) 参照される BigArea エンティティを示します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47820017"
   
 ![MDS_EntityDependencies_Entity_Node.jpg](../master-data-services/media/mds-entitydependencies-entity-node-jpg.jpg)  
   
-これらのコンテナー ツリー ノードには、エンティティ名の左側にグリッドのようなアイコンがあり、テキストは階層レベルの深さによって色分けされます。 上述の例では、SubRegion “CDSR {Canada}” には Region “CDR {Canada}” への DBA 参照があり、この Region は Area “CDA {Canada}” を参照し、この Area は BigArea “NAm {N. America}” を参照することを示します。  
+これらのコンテナー ツリー ノードには、エンティティ名の左側にグリッドのようなアイコンがあり、テキストは階層レベルの深さによって色分けされます。 上述の例では、SubRegion "CDSR {Canada}" には Region "CDR {Canada}" への DBA 参照があり、この Region は Area "CDA {Canada}" を参照し、この Area は BigArea "NAm {N. America}" を参照することを示します。  
   
 このビューは、[階層] エクスプローラー ページのように、自由に編集することができます。 親子のリレーションシップは、子のメンバーを 1 つの親から別の親に切り取り/貼り付けたり、ドラッグ アンド ドロップしたりして、ツリーを変更することができます。 その他のメンバーの属性値は、ツリーの右側にある [詳細] パネルで変更できます。   
   

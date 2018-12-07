@@ -13,12 +13,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e46ce182bbd81ce28939ac9250306fe7ff7cb57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 834e84ea62e9cfa7b6398d67e2b59ba011d21979
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512332"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>可用性グループへのセカンダリ レプリカの追加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47615340"
   
 1.  プライマリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
-2.  ALTER AVAILABILITY GROUP ステートメントの ADD REPLICA ON 句を使用して、可用性グループに新しいセカンダリ レプリカを追加します。 ADD REPLICA ON 句には、ENDPOINT_URL、AVAILABILITY_MODE、および FAILOVER_MODE オプションが必要です。 他のレプリカ オプション (BACKUP_PRIORITY、SECONDARY_ROLE、PRIMARY_ROLE、および SESSION_TIMEOUT) は省略可能です。 詳細については、「 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
+2.  ALTER AVAILABILITY GROUP ステートメントの ADD REPLICA ON 句を使用して、可用性グループに新しいセカンダリ レプリカを追加します。 ADD REPLICA ON 句には、ENDPOINT_URL、AVAILABILITY_MODE、および FAILOVER_MODE オプションが必要です。 他のレプリカ オプション (BACKUP_PRIORITY、SECONDARY_ROLE、PRIMARY_ROLE、SESSION_TIMEOUT) は省略可能です。 詳細については、「 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
   
      たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、 `MyAG` によってホストされるデフォルト サーバー インスタンス (エンドポイント URL が `COMPUTER04`) の `TCP://COMPUTER04.Adventure-Works.com:5022'`という名前の可用性グループに新しいレプリカを作成します。 このレプリカは、手動フェールオーバーと非同期コミット可用性モードをサポートします。  
   

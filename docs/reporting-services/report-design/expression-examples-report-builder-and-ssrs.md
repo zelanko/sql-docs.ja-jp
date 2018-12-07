@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814325"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393224"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -165,7 +165,7 @@ ms.locfileid: "51814325"
 -   次の式は、SellStartDate と LastReceiptDate の間にある年数を生成します。 これらのフィールドは、DataSet1 と DataSet2 の異なる 2 つのデータセットに含まれます。 集計関数である [First 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) は、DataSet1 にある SellStartDate の最初の値と、DataSet2 にある LastReceiptDate の最初の値を返します。  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **DatePart** 関数は、特定の日付値の指定されたコンポーネントを含む整数値を返します。次の式は、DataSet1 にある SellStartDate の最初の値の年を返します。 レポートに複数のデータセットがあるため、データセット スコープが指定されます。  
@@ -229,7 +229,7 @@ ms.locfileid: "51814325"
      次の例では、前の例と同じ処理を行うだけでなく、選択した値のリストの前にテキスト文字列を表示します。  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -244,7 +244,7 @@ ms.locfileid: "51814325"
   
 ### <a name="lookup"></a>Lookup  
   
--   キー フィールドを指定することで、 **Lookup** 関数を使用し、1 対 1 のリレーションシップ (キーと値のペアなど) の値をデータセットから取得することができます。 次の式では、入力された製品識別子に一致する製品名をデータセット (“Product”) から取得し、表示します。  
+-   キー フィールドを指定することで、 **Lookup** 関数を使用し、1 対 1 のリレーションシップ (キーと値のペアなど) の値をデータセットから取得することができます。 次の式では、入力された製品識別子に一致する製品名をデータセット ("Product") から取得し、表示します。  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  

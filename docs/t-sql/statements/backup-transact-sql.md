@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ecd7626e28faae1626809e6f45141c93dd4021e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699340"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404517"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -300,7 +300,7 @@ Microsoft Azure BLOB ストレージ サービスにバックアップを作成�
   
 FILE_SNAPSHOT **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
 
-Azure Blob ストレージ サービスを使用してすべての SQL Server データベース ファイルが格納される場合は、データベース ファイルの Azure のスナップショットを作成するために使用します。 詳細については、「[Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップでは、データベース ファイル (データとログ ファイル) の Azure スナップショットを一貫性のある状態で取得します。 Azure のスナップショットの一貫性のあるセットでは、バックアップを構成し、バックアップ ファイルに記録されます。 唯一の違い `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` と `BACKUP LOG TO URL WITH FILE_SNAPSHOT` こと、後者もトランザクション ログを切り捨て、以前のではありませんが。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップに必要な初期の完全バックアップの後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで、1 つのトランザクション ログ バックアップは、トランザクション ログ バックアップの時刻で、ポイントにデータベースを復元するために、バックアップのチェーンを確立するためにします。 さらに、次の 2 つのトランザクション ログ バックアップの期間の間のポイントにデータベースを復元するだけの 2 つのトランザクション ログ バックアップが必要です。  
+Azure Blob ストレージ サービスを使用してすべての SQL Server データベース ファイルが格納される場合は、データベース ファイルの Azure のスナップショットを作成するために使用します。 詳細については、「[Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップでは、データベース ファイル (データとログ ファイル) の Azure スナップショットを一貫性のある状態で取得します。 Azure のスナップショットの一貫性のあるセットでは、バックアップを構成し、バックアップ ファイルに記録されます。 唯一の違い `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` と `BACKUP LOG TO URL WITH FILE_SNAPSHOT` こと、後者もトランザクション ログを切り捨て、以前のではありませんが。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップに必要な初期の完全バックアップの後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで、1 つのトランザクション ログ バックアップは、トランザクション ログ バックアップの時刻で、ポイントにデータベースを復元するために、バックアップのチェーンを確立するためにします。 さらに、次の 2 つのトランザクション ログ バックアップの期間の間のポイントにデータベースを復元するだけの 2 つのトランザクション ログ バックアップが必要です。  
     
 DIFFERENTIAL  
 

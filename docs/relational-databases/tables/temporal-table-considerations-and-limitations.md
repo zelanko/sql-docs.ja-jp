@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a238d92b6fbb9e025f304f0c5e957ff2d15a6975
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770460"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410089"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>テンポラル テーブルの考慮事項と制約
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47770460"
   
     -   **変更データ キャプチャと変更データ追跡:** 現在のテーブルでのみサポートされます。  
   
-    -   **スナップショットおよびトランザクション レプリケーション**: 1 つのパブリッシャー (テンポラルが有効化されない)、および 1 つのサブスクライバー (テンポラルが有効化される) でのみサポートされます。 この場合、パブリッシャーは OLTP ワークロードに使用され、サブスクライバーはオフロード レポート ("AS OF" クエリを含む) に使用されます。    
+    -   **スナップショットおよびトランザクション レプリケーション**: 1 つのパブリッシャー (テンポラルが有効化されない)、および 1 つのサブスクライバー (テンポラルが有効化される) でのみサポートされます。 この場合、パブリッシャーは OLTP ワークロードに使用され、サブスクライバーはオフロード レポート ('AS OF' クエリを含む) に使用されます。    
         複数のサブスクライバーの使用はサポートされません。このシナリオでは、各サブスクライバーがローカル システム クロックに依存するので、テンポラル データが一貫性のないものになる可能性があるためです。  
   
     -   **マージ レプリケーション:** テンポラル テーブルではサポートされません。  

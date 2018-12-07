@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 403f29c972b8137a7f2181962ce48a796ac4c753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817598"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513750"
 ---
 # <a name="control-transaction-durability"></a>トランザクションの持続性の制御
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,19 +95,19 @@ ms.locfileid: "47817598"
  DBA は次のステートメントを使用して、トランザクションの遅延持続性をデータベースに対してユーザーが使用できるかどうかを制御できます。 遅延持続性の設定は ALTER DATABASE で設定する必要があります。    
     
 ```sql    
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
  **DISABLED**    
  [既定値] この設定では、コミット レベルの設定 (DELAYED_DURABILITY=[ON | OFF]) に関係なく、データベースに対してコミットされたトランザクションにはすべて完全持続性が適用されます。 ストアド プロシージャの変更および再コンパイルの必要はありません。 この設定により、遅延持続性によるリスクを負うことなく、すべてのデータを持続可能にできます。    
     
  **ALLOWED**    
- この設定では、各トランザクションの持続性がトランザクション レベル (DELAYED_DURABILITY = { *OFF* | ON }) で決定されます。 詳細については、「 [ATOMIC ブロック レベルの制御 – ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) 」と「 [COMMIT レベルの制御 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) 」を参照してください。    
+ この設定では、各トランザクションの持続性がトランザクション レベル (DELAYED_DURABILITY = { *OFF* | ON }) で決定されます。 詳細については、「[ATOMIC ブロック レベルの制御 - ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl)」と「[COMMIT レベルの制御 - Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl)」を参照してください。    
     
  **FORCED**    
  この設定では、データベースにコミットされるすべてのトランザクションに遅延持続性が適用されます。 トランザクションで完全持続性 (DELAYED_DURABILITY = OFF) が指定された場合も、指定がまったく行われていない場合も、遅延持続性トランザクションになります。 データベースに対してトランザクションの遅延持続性が役立ち、アプリケーション コードの変更を行わない場合に、この設定を使用できます。    
     
-###  <a name="CompiledProcControl"></a> ATOMIC ブロック レベルの制御 – ネイティブ コンパイル ストアド プロシージャ    
+###  <a name="CompiledProcControl"></a> ATOMIC ブロック レベルの制御 - ネイティブ コンパイル ストアド プロシージャ    
  次のコードは、ATOMIC ブロック内で使用します。    
     
 ```sql    
@@ -123,14 +123,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **コード例:**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> …    
+CREATE PROCEDURE <procedureName> ...    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    …    
+    ...    
 )    
 END    
 ```    
@@ -142,7 +142,7 @@ END
 |**DELAYED_DURABILITY = OFF**|ATOMIC ブロックで、新しい完全持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|    
 |**DELAYED_DURABILITY = ON**|ATOMIC ブロックで、新しい遅延持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT レベルの制御 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> COMMIT レベルの制御 - [!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 構文は、トランザクションの遅延持続性を適用できるように拡張されています。 DELAYED_DURABILITY がデータベース レベルで DISABLED または FORCED に設定されている場合 (上記を参照)、この COMMIT オプションは無視されます。    
     
 ```sql    

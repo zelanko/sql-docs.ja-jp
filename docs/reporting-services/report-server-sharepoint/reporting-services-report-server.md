@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe29406395b782b2bf25367e22f6f23f9bff0505
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021626"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400586"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services レポート サーバー
 
@@ -49,21 +49,21 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
 |機能またはコンポーネント|ネイティブ モード|SharePoint モード|  
 |--------------------------|-----------------|---------------------|  
-|**URL アドレス指定**|はい|SharePoint 統合モードでは URL アドレスの利用が異なります。 レポート、レポート モデル、共有データ ソース、およびリソースの参照には SharePoint URL が使用されます。 レポート サーバーのフォルダー階層は使用されません。 ネイティブ モードのレポート サーバー上でサポートされる URL アクセスに依存するカスタム アプリケーションでは、レポート サーバーが SharePoint 統合用に構成されると、この機能が動作しなくなります。<br /><br /> URL アクセスの詳細については、「 [URL アクセス パラメーター リファレンス](../../reporting-services/url-access-parameter-reference.md)」を参照してください。|  
-|**カスタム セキュリティ拡張機能**|はい|Reporting Services のカスタム セキュリティ拡張機能は、レポート サーバーに配置したり使用することはできません。 レポート サーバーには特別な用途のセキュリティ拡張機能が用意されており、SharePoint 統合モードで動作するようにレポート サーバーを構成するときは常に使用されます。 このセキュリティ拡張機能は内部コンポーネントで、統合操作に必要です。|  
-|**構成マネージャー**|はい|**\*\* 重要 \*\*** 構成マネージャーは、SharePoint モードのレポート サーバーの管理には使用できません。 代わりに、SharePoint サーバーの全体管理を使用してください。|  
-|**レポート マネージャー**|はい|レポート マネージャーは、SharePoint モードの管理には使用できません。 SharePoint アプリケーション ページを使用してください。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。|  
-|**リンク レポート**|はい|不可。|  
-|**個人用レポート**|はい|いいえ|  
-|**個人用サブスクリプション** とバッチ処理方式|はい|いいえ|  
-|**データ警告**|いいえ|はい|  
-|**Power View**|いいえ|はい<br /><br /> クライアント ブラウザーに Silverlight が必要です。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|  
-|**.RDL レポート**|はい|はい<br /><br /> .RDL レポートは、ネイティブ モードまたは SharePoint モードの Reporting Services レポート サーバーで実行できます。|  
-|**.RDLX レポート**|いいえ|はい<br /><br /> Power View .RDLX レポートは、SharePoint モードの Reporting Services レポート サーバーでのみ実行できます。|  
-|**SharePoint リストの拡張機能用の SharePoint ユーザー トークン資格情報**|いいえ|はい|  
-|**インターネットに直接つながっている配置の AAM 領域**|いいえ|はい|  
-|**SharePoint のバックアップと回復**|いいえ|はい|  
-|**ULS ログのサポート**|いいえ|はい|  
+|**URL アドレス指定**|[ユーザー アカウント制御]|SharePoint 統合モードでは URL アドレスの利用が異なります。 レポート、レポート モデル、共有データ ソース、およびリソースの参照には SharePoint URL が使用されます。 レポート サーバーのフォルダー階層は使用されません。 ネイティブ モードのレポート サーバー上でサポートされる URL アクセスに依存するカスタム アプリケーションでは、レポート サーバーが SharePoint 統合用に構成されると、この機能が動作しなくなります。<br /><br /> URL アクセスの詳細については、「 [URL アクセス パラメーター リファレンス](../../reporting-services/url-access-parameter-reference.md)」を参照してください。|  
+|**カスタム セキュリティ拡張機能**|[ユーザー アカウント制御]|Reporting Services のカスタム セキュリティ拡張機能は、レポート サーバーに配置したり使用することはできません。 レポート サーバーには特別な用途のセキュリティ拡張機能が用意されており、SharePoint 統合モードで動作するようにレポート サーバーを構成するときは常に使用されます。 このセキュリティ拡張機能は内部コンポーネントで、統合操作に必要です。|  
+|**構成マネージャー**|[ユーザー アカウント制御]|**\*\* 重要 \*\*** 構成マネージャーは、SharePoint モードのレポート サーバーの管理には使用できません。 代わりに、SharePoint サーバーの全体管理を使用してください。|  
+|**レポート マネージャー**|[ユーザー アカウント制御]|レポート マネージャーは、SharePoint モードの管理には使用できません。 SharePoint アプリケーション ページを使用してください。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。|  
+|**リンク レポート**|[ユーザー アカウント制御]|不可。|  
+|**個人用レポート**|[ユーザー アカウント制御]|いいえ|  
+|**個人用サブスクリプション** とバッチ処理方式|[ユーザー アカウント制御]|いいえ|  
+|**データ警告**|いいえ|[ユーザー アカウント制御]|  
+|**Power View**|いいえ|[ユーザー アカウント制御]<br /><br /> クライアント ブラウザーに Silverlight が必要です。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|  
+|**.RDL レポート**|[ユーザー アカウント制御]|[ユーザー アカウント制御]<br /><br /> .RDL レポートは、ネイティブ モードまたは SharePoint モードの Reporting Services レポート サーバーで実行できます。|  
+|**.RDLX レポート**|いいえ|[ユーザー アカウント制御]<br /><br /> Power View .RDLX レポートは、SharePoint モードの Reporting Services レポート サーバーでのみ実行できます。|  
+|**SharePoint リストの拡張機能用の SharePoint ユーザー トークン資格情報**|いいえ|[ユーザー アカウント制御]|  
+|**インターネットに直接つながっている配置の AAM 領域**|いいえ|[ユーザー アカウント制御]|  
+|**SharePoint のバックアップと回復**|いいえ|[ユーザー アカウント制御]|  
+|**ULS ログのサポート**|いいえ|[ユーザー アカウント制御]|  
   
 ## <a name="native-mode"></a>ネイティブ モード
 

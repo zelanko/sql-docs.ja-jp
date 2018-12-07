@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18579eba7d7a66b9efd1a10de4a0815d2503744e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672531"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532550"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -132,13 +132,13 @@ ms.locfileid: "51672531"
   
 次の式の基本情報については、表の後の注意事項を参照してください。  
   
-|プラットフォーム|fdhost.exe のメモリ要件の推定 (MB 単位)—*F*^1|max server memory の計算式—*M*^2|  
+|プラットフォーム|fdhost.exe のメモリ要件の推定 (MB 単位) - *F*^1|max server memory の計算式 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *クロール範囲の数* * 50|*M* =minimum(*T*, 2000) – F – 500|  
-|x64|*F* = *クロール範囲の数* * 10 * 8|*M* = *T* – *F* – 500|  
+|x86|*F* = *クロール範囲の数* * 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *クロール範囲の数* * 10 * 8|*M* = *T* - *F* - 500|  
 
 **式に関する注意事項**
-1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、 *M* を *T***–** sigma **(***F*i**)** で計算します。  
+1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、*M* as _T_**-** sigma **(**_F_i **)** で計算します。  
 2.  500 MB は、システムの他のプロセスに必要なメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
 3.  」を参照してください。*ism_size* は 8 MB と見なされます (x64 プラットフォームの場合)。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "51672531"
   
  `F = 8*10*8=640`  
   
- 次の計算では、最適な **max server memory**値 (*M*) を算出します。 このシステムで使用可能な合計物理メモリ (MB 単位) (*T*) は `8192` です。  
+ 次の計算では、最適な **max server memory** 値 (*M*) を算出します。 このシステムで使用可能な合計物理メモリ (MB 単位) (*T*) は `8192` です。  
   
  `M = 8192-640-500=7052`  
   

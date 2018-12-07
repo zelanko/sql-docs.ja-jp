@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81a690c550a3010a69d6356a0525eecdfc6410c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751060"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392886"
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47751060"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47751060"
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスのプロパティを変更するテーブルを右クリックし、 **[デザイン]** を選択します。  
+3.  インデックスのプロパティを変更するテーブルを右クリックし、**[デザイン]** を選択します。  
   
 4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   

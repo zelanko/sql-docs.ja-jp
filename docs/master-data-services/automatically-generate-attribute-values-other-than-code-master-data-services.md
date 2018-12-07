@@ -12,18 +12,18 @@ ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 279198ba384acf33656d7567ed417a633eae7266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e607136bf7e13994e931166831b68d531d229dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826410"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404527"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Code 以外の属性の値の自動生成 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールが適用されるたびにエンティティの属性値に整数を自動的に割り当てる場合は、属性の値を自動的に生成します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、ビジネス ルールが適用されるたびにエンティティの属性値に整数を自動的に割り当てる場合は、属性の値を自動的に生成します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
@@ -54,11 +54,11 @@ ms.locfileid: "47826410"
   
 9. **[コンポーネント]** ペインで **[アクション]** ノードを展開します。  
   
-10. 既定値ノードで、 **[の既定値が生成値である]** をクリックし、 **[THEN]** ペインの **[アクション]** ラベルにドラッグします。  
+10. 既定値ノードで、**[の既定値が生成値である]** をクリックし、**[THEN]** ペインの **[アクション]** ラベルにドラッグします。  
   
 11. **[属性]** ペインで値を生成する属性をクリックして、 **[アクションの編集]** ペインの **[属性の選択]** ラベルにドラッグします。  
   
-12. **[開始]** および **[増分]** ボックスに値を入力します。 メンバーが既に存在する場合、値は既存の最も大きい値に基づいて設定されます。 たとえば、既存の最も大きい値が 299 で、 **[増分]** を **1**に設定してある場合、次のメンバーの値は 300 に設定されます。  
+12. **[開始]** および **[増分]** ボックスに値を入力します。 メンバーが既に存在する場合、値は既存の最も大きい値に基づいて設定されます。 たとえば、既存の最も大きい値が 299 で、**[増分]** を **1**に設定してある場合、次のメンバーの値は 300 に設定されます。  
   
 13. **[アクションの編集]** ペインの **[アイテムの保存]** をクリックします。  
   

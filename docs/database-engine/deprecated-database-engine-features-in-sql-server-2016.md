@@ -15,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7192dc954337d5c6a1f58b7b444219d022c43f95
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ec49399b46b39217a41ee1c18f0475bf2f64ffd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602642"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537741"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨の機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|互換性レベル|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL です。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|sp_dbcmptlevel|80|  
+|互換性レベル|sp_dbcmptlevel|ALTER DATABASE ...SET COMPATIBILITY_LEVEL です。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|sp_dbcmptlevel|80|  
 |互換性レベル|データベース互換性レベル 110 および 120。|今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。 しかしながら、Microsoft は、アップグレードを簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|データベース互換性レベル 110<br /><br /> データベース互換性レベル 120||  
 |XML|インライン XDR スキーマの生成|FOR XML オプションに対する XMLDATA ディレクティブは非推奨とされます。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。|XMLDATA|181|  
 |バックアップと復元|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE または LOG TO TAPE|235|  
@@ -131,7 +131,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |サーバー構成オプション|c2 audit オプション<br /><br /> default trace enabled オプション|[common criteria compliance enabled サーバー構成オプション](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [拡張イベント](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO クラス|**Microsoft.SQLServer.Management.Smo.Information** クラス<br /><br /> **Microsoft.SQLServer.Management.Smo.Settings** クラス<br /><br /> **Microsoft.SQLServer.Management.Smo.DatabaseOptions** クラス<br /><br /> **Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication** プロパティ|**Microsoft.SqlServer.Management.Smo.Server** クラス<br /><br /> **Microsoft.SqlServer.Management.Smo.Server** クラス<br /><br /> **Microsoft.SqlServer.Management.Smo.Database** クラス<br /><br /> なし|なし|なし|  
 |SQL Server エージェント|**net send** による通知<br /><br /> ポケットベルによる通知|電子メールによる通知<br /><br /> 電子メールによる通知 |なし|なし|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||なし|なし|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]| [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||なし|なし|  
 |システム ストアド プロシージャ|sp_db_increased_partitions|[なし] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、増加したパーティションのサポートを既定で使用できます。|sp_db_increased_partitions|253|  
 |システム テーブル|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|互換性ビュー。 詳細については、「[互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)」を参照してください。<br /><br /> **重要:** 互換性ビューには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] で導入された機能のメタデータが表示されません。 カタログ ビューを使用するようにアプリケーションをアップグレードすることをお勧めします。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> なし<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |システム テーブル|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|なし|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  

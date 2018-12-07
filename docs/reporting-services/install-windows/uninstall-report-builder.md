@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 581ffe4fc93116892085cbe6b7701e7a3349cd00
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f99654ed02b96ed2f1b0d26f7e5b4f64851d815b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028081"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710933"
 ---
 # <a name="uninstall-report-builder"></a>レポート ビルダーをアンインストールする
 
@@ -28,7 +28,7 @@ ms.locfileid: "50028081"
   
 2.  コントロール パネルで、 **[プログラムと機能]** をクリックします。  
   
-3.  **[名前]** の一覧で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 レポート ビルダーを見つけてクリックします。  
+3.  **[名前]** の一覧で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server レポート ビルダーを見つけてクリックします。  
   
 4.  **[アンインストール]** をクリックします。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "50028081"
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  **[名前]** ボックスに「 **cmd**」と入力します。  
+2.   **[名前]** ボックスに「 **cmd**」と入力します。  
   
 3.  コマンド プロンプト ウィンドウで、ReportBuilder3_x86.msi が格納されているフォルダーに移動します。  
   

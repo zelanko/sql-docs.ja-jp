@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e4f359f5ba8a1a55452985375e3c6f0754e5f6b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 95806dd597798b5a8a629d8b49d8502fff4de9ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031661"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399175"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>分析用とレポート用の Microsoft Business Intelligence (BI) ツールの選択
 適切なビジネス インテリジェンス ツールを選択することは困難な場合があります。 さまざまな Microsoft 製品を確認し、ニーズに最も合う製品を見つけてください。
 
 次の表は、データ分析とレポートに対応するワークロードを、これらのワークロードに最も適した Microsoft BI ツールに関連付けます。 製品に関する詳細については、表内の製品リンクをクリックしてください。  
   
- ツールの概要を確認し、どのツールが適しているかを判断するには、「 [Microsoft Business Intelligence (BI) ツールの概要](https://msdn.microsoft.com/library/dn655131.aspx)」を参照してください。  
+ ツールの概要を確認し、どのツールが適しているかを判断するには、「[Microsoft Business Intelligence (BI) ツールの概要](https://msdn.microsoft.com/library/dn655131.aspx)」を参照してください。  
   
 |ワークロード|ユーザー|||BI ツール|||  
 |---------------|----------|-|-|--------------|-|-|  

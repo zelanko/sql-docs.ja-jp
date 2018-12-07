@@ -15,12 +15,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b05de4a591964336b9d54ff3319086f818d6231f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c94df2f2857f0657e315d3944eeaf783eef3a20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508289"
 ---
 # <a name="view-a-sql-server-audit-log"></a>SQL Server 監査ログの表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47650240"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47650240"
   
 2.  **[監査]** フォルダーを展開します。  
   
-3.  表示する監査ログを右クリックし、 **[監査ログの表示]** をクリックします。 **[ログ ファイルの表示 –_server\_name_]** ダイアログ ボックスが開きます。 詳細については、「 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)」を参照してください。  
+3.  表示する監査ログを右クリックし、 **[監査ログの表示]** をクリックします。 **[ログ ファイルの表示 -**_サーバー名\__] ダイアログ ボックスが開きます。 詳細については、「 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)」を参照してください。  
   
 4.  完了したら、 **[閉じる]** をクリックします。  
   

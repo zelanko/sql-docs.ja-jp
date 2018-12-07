@@ -11,12 +11,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634770"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505759"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>レッスン 5-2 - パッケージ構成の有効化と構成
 ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの **Directory** プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
@@ -40,11 +40,11 @@ ms.locfileid: "47634770"
   
 7.  **[制御フロー]** タブに戻り、 **[Foreach File in Folder]** コンテナーをダブルクリックします。  
   
-8.  **[Foreach ループ エディター]** の **[コレクション]** ページで、 **[Expressions]** をクリックし、参照ボタン ( **[...]**) をクリックします。  
+8.  **[Foreach ループ エディター]** の **[コレクション]** ページで、**[Expressions]** をクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
 9. **[プロパティ式エディター]** で、 **[プロパティ]** ボックスの一覧内をクリックして **[Directory]** をクリックします。  
   
-10. **[式]** ボックスで、参照ボタン (**[...]**) をクリックします。  
+10. **[式]** ボックスで、参照ボタン ( **[...]** ) をクリックします。  
   
 11. **[式ビルダー]** で [変数] フォルダーを展開し、 **User::varFolderName** 変数を **[式]** ボックスへドラッグします。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47634770"
   
 16. **[閉じる]** をクリックします。  
   
-17. SSISTutorial.dtsConfig という名前の構成ファイルが作成されます。この構成ファイルには、変数の**value** に対応する構成設定が含まれています。また、この変数値により、列挙子の **Directory** プロパティが設定されます。  
+17. SSISTutorial.dtsConfig という名前の構成ファイルが作成されます。この構成ファイルには、変数の **Value** に対応する構成設定が含まれています。また、この変数値により、列挙子の **Directory** プロパティが設定されます。  
   
     > [!NOTE]  
     > 通常、構成ファイルにはパッケージのプロパティに関する複雑な情報が含まれていますが、このチュートリアルでは、次の構成情報のみを使用します:  

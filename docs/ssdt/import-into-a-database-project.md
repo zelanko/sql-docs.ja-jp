@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667101"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400395"
 ---
 # <a name="import-into-a-database-project"></a>データベース プロジェクトへのインポート
 [インポート] を使用すると、ライブ データベースや .dacpac から新しいオブジェクトをプロジェクトに取り込んだり、スクリプトの新しい定義でプロジェクト内の既存のオブジェクトを更新したりできます。 次の 3 つの方法の動作には、注意が必要な相違点がいくつかあります。これらの方法について以下で説明します。  

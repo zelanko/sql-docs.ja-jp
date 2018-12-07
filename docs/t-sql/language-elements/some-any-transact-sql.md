@@ -22,12 +22,12 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ea622a882d0c9ff45680c0ee5b975a08c780ce9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70907736aab1cdcf628f763209b39e88f1a2bf6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597940"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511620"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **ブール値**  
   
 ## <a name="result-value"></a>結果の値  
- SOME または ANY は、指定された比較が (*scalar_expression ***,*** x*) の任意の組で TRUE の場合、**TRUE** を返します。ここで、*x* は単一列セットの中の値です。それ以外の場合は、**FALSE** を返します。  
+ 指定された比較が (_scalar_expression_**,**_x_) の任意の組で **TRUE** の場合、SOME または ANY から TRUE が返されます。ここで、*x* は単一列セットの中の値です。それ以外の場合は、**FALSE** が返されます。  
   
 ## <a name="remarks"></a>Remarks  
  SOME の場合、*scalar_expression* ではサブクエリによって返される 1 つ以上の値に対し肯定的な比較を行う必要があります。 サブクエリによって返されるすべての値に対し肯定的な比較を行うために *scalar_expression* を必要とするステートメントについては、「[ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).」を参照してください。 たとえば、*scalar_express* を 2 とすると、サブクエリによって値 2 と 3 が返される場合、*scalar_expression* = SOME (subquery) は TRUE と評価されます。 サブクエリが 2 および 3 の値を返す場合、*scalar_expression* = ALL (subquery) は FALSE と評価されます。これは、サブクエリのいくつかの値 (値 3) が式の条件を満たさないためです。  
@@ -81,7 +81,7 @@ INSERT T1 VALUES (3) ;
 INSERT T1 VALUES (4) ;  
 ```  
   
- テーブルには`3` より大きい値があるため、次のクエリは `TRUE` を返します。  
+ テーブルには `TRUE` より大きい値があるため、次のクエリは `3` を返します。  
   
 ```  
 IF 3 < SOME (SELECT ID FROM T1)  

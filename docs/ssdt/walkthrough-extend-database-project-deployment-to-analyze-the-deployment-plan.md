@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664631"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512608"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張
 配置コントリビューターを作成して、SQL プロジェクトの配置時にカスタム アクションを実行できます。 DeploymentPlanModifier または DeploymentPlanExecutor を作成できます。 計画の実行前に計画を変更する場合は DeploymentPlanModifier を使用し、計画の実行中に操作を実行する場合は DeploymentPlanExecutor を使用します。 このチュートリアルでは、データベース プロジェクトの配置時に実行されるアクションに関するレポートを作成する、DeploymentUpdateReportContributor という名前の DeploymentPlanExecutor を作成します。 このビルド コントリビューターはレポートを生成するかどうかを制御するパラメーターを受け取るため、追加のステップを実行する必要があります。  
@@ -92,7 +92,7 @@ ms.locfileid: "51664631"
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -114,7 +114,7 @@ ms.locfileid: "51664631"
   
     ```  
   
-    この場合、属性の最初のパラメーターは一意の識別子である必要があります。これは、プロジェクト ファイル内でコントリビューターを識別するために使用されます。 ベスト プラクティスとして、ライブラリの名前空間 (このチュートリアルでは MyDeploymentContributor) とクラス名 (このチュートリアルでは DeploymentUpdateReportContributor) を組み合わせて識別子を生成することをお勧めします。  
+    この場合、属性の最初のパラメーターは一意の識別子である必要があります。これは、プロジェクト ファイル内でコントリビューターを識別するために使用されます。 ベスト プラクティスとして、ご利用のライブラリの名前空間 (このチュートリアルでは MyDeploymentContributor) とクラス名 (このチュートリアルでは DeploymentUpdateReportContributor) を組み合わせて識別子を作成することをお勧めします。  
   
 3.  次に、このプロバイダーでコマンド ライン パラメーターを受け取ることができるように次のメンバーを追加します。  
   
@@ -526,7 +526,7 @@ ms.locfileid: "51664631"
     |-----------------|--------------------|  
     |クラス メンバー|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |WriteReport メソッド|XmlWriter と XmlWriterSettings|  
-    |ReportPlanOperations メソッド|主な型: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)、[SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx)、[SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx)、[SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、[DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。<br /><br />他にも多くのステップがあります。ステップの一覧については、API のドキュメントを参照してください。|  
+    |ReportPlanOperations メソッド|主な型: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)、[SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx)、[SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx)、[SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、[DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。<br /><br />他にも多くのステップがあります。ステップの完全な一覧については、API のドキュメントを参照してください。|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -571,7 +571,7 @@ ms.locfileid: "51664631"
 -   MSBuild を使用し、適切なパラメーターを指定して、プロジェクトを配置する。  
   
 ### <a name="add-properties-to-the-sql-project-sqlproj-file"></a>SQL プロジェクト (.sqlproj) ファイルにプロパティを追加するには  
-実行するコントリビューターの ID を指定するには、必ず SQL プロジェクト ファイルを更新する必要があります。 また、このコントリビューターには "GenerateUpdateReport" 引数が必要なため、これはコントリビューター引数として指定する必要があります。  
+実行するコントリビューターの ID を指定するには、必ず SQL プロジェクト ファイルを更新する必要があります。 また、このコントリビューターには "GenerateUpdateReport" 引数が必要なため、これをコントリビューター引数として指定する必要があります。  
   
 2 つの方法のいずれかでこれを行うことができます。 .sqlproj ファイルを手動で変更して、必要な引数を追加できます。 この方法を選択できるのは、コントリビューターで構成に必要なコントリビューター引数がない場合、または多数のプロジェクト間でコントリビューターを再利用しない場合です。 このオプションを選択した場合は、.sqlproj ファイル内の最初の Import ノードの後に次のステートメントを追加します。  
   
@@ -586,7 +586,7 @@ ms.locfileid: "51664631"
   
 1.  %Program Files%\MSBuild に移動します。  
   
-2.  ターゲット ファイルの保存先となる新しいフォルダー "MyContributors" を作成します。  
+2.  ご利用のターゲット ファイルの保存先となる新しいフォルダー "MyContributors" を作成します。  
   
 3.  このディレクトリ内に新しいファイル "MyContributors.targets" を作成し、次のテキストを追加して、ファイルを保存します。  
   
@@ -613,13 +613,13 @@ ms.locfileid: "51664631"
 > コントリビューター ID を指定するには、必ず "DeploymentContributors" プロパティを更新する必要があります。 これは、コントリビューター ソース ファイル内の "ExportDeploymentPlanExecutor" 属性で使用されているのと同じ ID です。 これを指定しないと、プロジェクトのビルド時にコントリビューターが実行されません。 "ContributorArguments" プロパティは、コントリビューターの実行に必要な引数がある場合のみに更新する必要があります。  
   
 ### <a name="deploy-the-database-project"></a>データベース プロジェクトの配置  
-プロジェクトは、通常どおり Visual Studio 内で発行または配置できます。 SQL プロジェクトを含むソリューションを開き、プロジェクトの右クリック コンテキスト メニューから [パブリッシュ] オプションを選択します。 LocalDB に対してデバッグ配置するには、F5 キーを押します。 この例では、[パブリッシュ] ダイアログを使用して 配置スクリプトを生成します。  
+プロジェクトは、通常どおり Visual Studio 内で発行または配置できます。 ご利用の SQL プロジェクトが含まれているソリューションを開き、プロジェクトの右クリックのショートカット メニューで [発行] をクリックするか、LocalDB へのデバッグ配置を行うために F5 キーを使用するだけです。 この例では、[発行] ダイアログを使用して配置スクリプトを作成します。  
   
 ##### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>SQL プロジェクトを配置して配置レポートを生成するには  
   
 1.  Visual Studio を起動し、SQL プロジェクトが含まれているソリューションを開きます。  
   
-2.  プロジェクトを選択し、F5 キーを押してデバッグ配置を実行します。 注: ContributorArguments 要素は、構成が "デバッグ" の場合のみに含まれるよう設定されているため、この時点では、デバッグ配置の配置レポートのみが生成されます。 これを変更するには、ContributorArguments の定義から Condition="'$(Configuration)' == 'Debug'" ステートメントを削除します。  
+2.  ご利用のプロジェクトを選択し、F5 キーを押してデバッグ配置を実行します。 注: ContributorArguments 要素は、構成が "デバッグ" の場合のみに含まれるよう設定されているため、この時点では、デバッグ配置の配置レポートのみが作成されます。 これを変更するには、ContributorArguments の定義から Condition="'$(Configuration)' == 'Debug'" ステートメントを削除します。  
   
 3.  出力ウィンドウには、次のような出力が表示されます。  
   

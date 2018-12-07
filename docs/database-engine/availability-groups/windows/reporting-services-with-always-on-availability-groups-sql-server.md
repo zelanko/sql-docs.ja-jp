@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604952"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418676"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services と Always On 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "51604952"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 で  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用するためには、.Net 3.5 SP1 の修正プログラムをダウンロードしてインストールする必要があります。 この修正プログラムを適用すると、AG 機能を使う SQL クライアントが新たにサポートされ、さらに、接続文字列プロパティとして **ApplicationIntent** および **MultiSubnetFailover**がサポートされます。 レポート サーバーをホストする各コンピューターにこの修正プログラムがインストールされていない場合、ユーザーがレポートをプレビューしようとすると、以下のようなエラー メッセージが表示され、レポート サーバーのトレース ログに記録されます。  
   
-> **エラー メッセージ:** "キーワードはサポートされていません:'applicationintent'"  
+> **エラー メッセージ:** "キーワードはサポートされていません: 'applicationintent'"  
   
- このメッセージは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続文字列に [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のプロパティが含まれているとき、そのプロパティをサーバー側が認識できなかった場合に生成されます。 レポート サーバー側でリモート エラーが有効にされている場合、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のユーザー インターフェイスで [接続テスト] ボタンをクリックしたときや、レポートをプレビューしたときにこのエラー メッセージが表示されます。  
+ このメッセージは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続文字列に [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のプロパティが含まれているとき、そのプロパティをサーバー側が認識できなかった場合に生成されます。 レポート サーバー側でリモート エラーが有効にされている場合、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のユーザー インターフェイスで [接続テスト] ボタンをクリックしたときや、レポートをプレビューしたときにこのエラー メッセージが表示されます。  
   
  必要な修正プログラムの詳細については、「[KB 2654347 - .NET Framework 3.5 SP1 に SQL Server 2012 の Always On 機能のサポートを導入する修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)」を参照してください。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "51604952"
   
 -   **SharePoint モード:** 既に SharePoint サーバーにパブリッシュされたレポートには、ドキュメント ライブラリ内の SharePoint 構成ページを使用します。  
   
--   **レポート デザイン:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] または [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new repまたはts. 詳細については、このトピックの「レポートのデザイン」のセクションをご覧ください。  
+-   **レポート デザイン:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] または [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new repまたはts. 詳細については、このトピックのレポート デザインに関するセクションを参照してください。  
   
  **その他のリソース:**  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51604952"
   
 -   プライマリ レプリカとセカンダリ レプリカの地理的な位置と両者の距離。 たとえば、セカンダリ レプリカとプライマリ レプリカが同じ建物内に存在した場合と比べ、異なるデータ センターに存在している方が通常は時間差が大きくなります。  
   
--   各レプリカの可用性モードの構成。 プライマリ レプリカは、セカンダリ レプリカがディスクにトランザクションを書き込むまで、データベースに対するトランザクションをコミットせずに待機する場合があります。待機するかどうかを決めるのが可用性モードです。 詳細については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」の「可用性モード」を参照してください。  
+-   各レプリカの可用性モードの構成。 プライマリ レプリカは、セカンダリ レプリカがディスクにトランザクションを書き込むまで、データベースに対するトランザクションをコミットせずに待機する場合があります。待機するかどうかを決めるのが可用性モードです。 詳細については、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」の「可用性モード」を参照してください。  
   
  読み取り専用のセカンダリ レプリカを [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ ソースとして使用する場合は、データ更新の時間差が、レポート ユーザーの想定を越えることのないように注意してください。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51604952"
   
 -   **リモートまたはサーバー モード プレビュー:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]でレポートをプレビューするか、レポート サーバーに対してレポートをパブリッシュした後、次のようなエラーが表示された場合、プレビュー対象となるレポートのレポート サーバーに .Net Framework 3.5 SP1 Hotfix for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] がインストールされていません。  
   
-> **エラー メッセージ:** "キーワードはサポートされていません:'applicationintent'"  
+> **エラー メッセージ:** "キーワードはサポートされていません: 'applicationintent'"  
   
 ##  <a name="bkmk_reportserverdatabases"></a> レポート サーバー データベースと可用性グループ  
  Reporting Services と Power BI Report Server は、レポート サーバー データベースへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の使用をサポートしていますが、これには制限があります。 レポート サーバー データベースをレプリカの一部として AG 内に構成することはできますが、フェールオーバーが発生しても、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、レポート サーバー データベースに対して別のレプリカを自動的には使用しません。 MultiSubnetFailover とレポート サーバー データベースの使用はサポートされていません。  
@@ -142,7 +142,7 @@ ms.locfileid: "51604952"
   
 -   ReportServerTempDB  
   
- Alerting データベースとそれに関連する機能は、ネイティブ モードではサポートされず、使用されません。 ネイティブ モードのレポート サーバーの構成は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーで行います。 SharePoint モードの場合、サービス アプリケーション データベースには、SharePoint 構成の過程で作成した "クライアント アクセス ポイント" の名前を使用します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を使用して SharePoint を構成する方法については、[「Configure and manage SQL Server availability groups for SharePoint Server」(SharePoint Server の SQL Server 可用性グループの構成と管理) (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165) を参照してください。  
+ Alerting データベースとそれに関連する機能は、ネイティブ モードではサポートされず、使用されません。 ネイティブ モードのレポート サーバーの構成は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーで行います。 SharePoint モードの場合、サービス アプリケーション データベースが、SharePoint 構成の過程で作成した "クライアント アクセス ポイント" の名前になるように構成します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を使用して SharePoint を構成する方法については、[「Configure and manage SQL Server availability groups for SharePoint Server」(SharePoint Server の SQL Server 可用性グループの構成と管理) (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165) を参照してください。  
   
 > [!NOTE]  
 >  SharePoint モードのレポート サーバーでは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アプリケーション データベースと SharePoint コンテンツ データベースの同期処理が行われます。 レポート サーバー データベースとコンテンツ データベースは一体で管理することが大切です。 1 つのまとまりとしてフェールオーバーと復元を行うことができるよう、同じ可用性グループで構成することを検討してください。 以下のシナリオについて考えてみます。  
@@ -158,7 +158,7 @@ ms.locfileid: "51604952"
   
 -   **プライマリ レプリカ:** レポート サーバー データベースを 1 つの可用性グループにまとめ、そのすべてのレポート サーバー データベースを含んだプライマリ レプリカを作成します。  
   
--   **セカンダリ レプリカ:** 1 つまたは複数のセカンダリ レプリカを作成します。 プライマリ レプリカからセカンダリ レプリカへとデータベースをコピーする際は、'RESTORE WITH NORECOVERY' を使って、個々のセカンダリ レプリカに対してデータベースを復元するのが一般的です。 セカンダリ レプリカの作成およびデータの同期動作の検証の詳細については、「[Always On セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
+-   **セカンダリ レプリカ:** 1 つまたは複数のセカンダリ レプリカを作成します。 プライマリ レプリカからセカンダリ レプリカへとデータベースをコピーする際は、'RESTORE WITH NORECOVERY' を使って、セカンダリ レプリカごとにデータベースを復元するのが一般的です。 セカンダリ レプリカの作成およびデータの同期動作の検証の詳細については、「[Always On セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
 -   **レポート サーバーの資格情報:** プライマリ レプリカに対して作成したレポート サーバーの適切な資格情報をセカンダリ レプリカに対して作成する必要があります。 実際の手順は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境で使用する認証の種類 (Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アカウント、Windows ユーザー アカウント、SQL Server 認証) によって異なります。 詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   

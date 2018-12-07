@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680490"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515084"
 ---
 # <a name="create-unique-indexes"></a>一意のインデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47680490"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Benefits"></a> 一意インデックスの利点  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47680490"
   
 7.  メイン グリッドの **[(全般)]** で、 **[種類]** を選択し、一覧から **[インデックス]** を選択します。  
   
-8.  **[列]** を選択し、省略記号ボタン ( **[...]**) をクリックします。  
+8.  **[列]** を選択し、省略記号ボタン (**[...]**) をクリックします。  
   
 9. **[インデックスの列]** ダイアログ ボックスの **[列名]** で、インデックスを作成する列を選択します。 16 列まで選択できます。 ただし、最適なパフォーマンスを得るには、1 つのインデックスにつき 1 列または 2 列に抑えます。 選択した各列の値の並べ方を昇順または降順のどちらかに指定できます。  
   
@@ -138,13 +138,13 @@ ms.locfileid: "47680490"
   
 3.  一意のインデックスを作成するテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントし、 **[非クラスター化インデックス...]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントし、**[非クラスター化インデックス...]** を選択します。  
   
 5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
 6.  **[一意]** チェック ボックスをオンにします。  
   
-7.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
+7.  **[インデックス キー列]** で、**[追加]** をクリックします。  
   
 8.  **[_table\_name_ から列を選択]** ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   

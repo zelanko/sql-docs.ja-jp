@@ -1,7 +1,7 @@
 ---
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac8e31a6f918b79dbc43294e3f617630fa79ba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755360"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191021"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,11 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  *partition_function_name* を使用するパーティション テーブルまたはインデックスの各パーティションの境界値を指定します。 *boundary_value* が空の場合、このパーティション関数では *partition_function_name* を使用するテーブルまたはインデックス全体が 1 つのパーティションにマップされます。 CREATE TABLE ステートメントまたは CREATE INDEX ステートメントで指定された 1 つのパーティション分割列のみが使用できます。  
   
  *boundary_value* は、変数を参照できる定数式です。 これには、ユーザー定義型の変数、または関数およびユーザー定義関数が含まれます。 この定数式で [!INCLUDE[tsql](../../includes/tsql-md.md)] 式を参照することはできません。 *boundary_value* は、*input_parameter_type* に指定された対応するデータ型と同じであるか、そのデータ型に暗黙的に変換できる必要があります。また、暗黙的に変換している間は、対応する *input_parameter_type* と値のサイズおよび小数点以下桁数が異なる方法で切り捨てることはできません。  
-  
+
 > [!NOTE]  
->  *boundary_value* に、**datetime** または **smalldatetime** 型のリテラルが含まれる場合、それらのリテラルは、セッション言語が us_english であることを前提に評価されます。 ただし、この動作は非推奨とされます。 すべてのセッション言語でパーティション関数の定義が正しく認識されるようにするには、yyyymmdd 形式のようにすべての言語設定で同様に解釈される定数を使用するか、リテラルを特定の型に明示的に変換することをお勧めします。 サーバーのセッション言語を確認するには、`SELECT @@LANGUAGE` を実行してください。  
+>  *boundary_value* に、**datetime** または **smalldatetime** 型のリテラルが含まれる場合、それらのリテラルは、セッション言語が us_english であることを前提に評価されます。 ただし、この動作は非推奨とされます。 すべてのセッション言語でパーティション関数の定義が正しく認識されるようにするには、yyyymmdd 形式のようにすべての言語設定で同様に解釈される定数を使用するか、リテラルを特定の型に明示的に変換することをお勧めします。 サーバーのセッション言語を確認するには、`SELECT @@LANGUAGE` を実行してください。
+>
+> 詳細については、「[リテラル日付文字列を DATE 値に非決定論的に変換する](../data-types/nondeterministic-convert-date-literals.md)」を参照してください。
   
  *...n*  
  *boundary_value* で与えられる値の数を指定します。14,999 以下の数を指定する必要があります。 作成されるパーティションの数は *n* + 1 になります。 値を順序どおり指定する必要はありません。 値が順不同の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は値を並び替えて、関数を作成し、値が順に並んでいないという警告を返します。 *n* に重複値が含まれている場合、データベース エンジンはエラーを返します。  

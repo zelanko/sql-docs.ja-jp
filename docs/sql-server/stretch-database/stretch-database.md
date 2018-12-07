@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4386963a4ca821b86e03129a958d38373aa3ecbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503791"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51701994"
  ウォーム トランザクション データとコールド トランザクション データを、SQL Server Stretch Database を使用して、SQL Server から Microsoft Azure に動的にストレッチします。 一般的なコールド データ ストレージとは異なり、データは常にオンラインで、クエリで使用することができます。 また、顧客注文履歴など、大規模テーブルのコストを抑えながら、データ保有期間のタイムラインを長くできます。 高価なオンプレミス ストレージを拡張するのではなく、低コストの Azure をご利用ください。 Azure ポータルでは価格レベルを選択し、設定を構成することで価格とコストを制御し、 必要に応じてスケールアップまたはスケールダウンできます。 詳細については、「 [SQL Server Stretch Database の価格](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) 」を参照してください。  
   
  **クエリまたはアプリケーションへの変更が不要**  
- オンプレミスでも、クラウドに拡張されていても、SQL Server データにはシームレスにアクセスできます。  データの格納場所を決定するポリシーはユーザーが設定し、データ移動は SQL Server によってバックグラウンドで処理されます。 テーブル全体が常にオンラインなので、いつでもクエリを実行できるほか、 Stretch Database では既存のクエリまたはアプリケーションへの変更が不要です。データの場所は、アプリケーションに対して透過的になっています。  
+ オンプレミスでも、クラウドに拡張されていても、SQL Server データにはシームレスにアクセスできます。  データの格納場所を決定するポリシーはユーザーが設定し、データ移動は SQL Server によってバックグラウンドで処理されます。 テーブル全体が常にオンラインなので、いつでもクエリを実行できるほか、 Stretch Database では既存のクエリまたはアプリケーションに変更を加える必要がありません。データの場所は、アプリケーションに対して完全に透過的になっています。  
   
  **オンプレミスのデータ メンテナンスを効率化**  
  オンプレミスのデータ メンテナンスとストレージの作業が軽減されます。 オンプレミス データのバックアップはさらに迅速になり、メンテナンス期間内に完了します。 データのクラウド部分のバックアップは自動的に行われ、 オンプレミス ストレージのニーズは大幅に減少し、 Azure ストレージのコストは、オンプレミスの SSD を追加した場合のコストよりも 80% 少なくなっています。  

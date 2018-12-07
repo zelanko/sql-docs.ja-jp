@@ -14,12 +14,12 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82431376b5c7fbb052d5f36e158d269587dd7300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36ded1687894433f5539e2b28f174729112407ec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506680"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure サブスクリプション接続マネージャー
   **Azure サブスクリプション接続マネージャー** を使用すると、Azure サブスクリプション ID と管理証明書のプロパティに指定した値を使用して、SSIS パッケージを Azure サブスクリプションに接続できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "47671420"
   
 3.  ドロップダウン リストから **[Management certificate store location (管理証明書ストアの場所)]** と **[Management certificate store name (管理証明書ストアの名前)]** を選択します。  
   
-4.  **[Management certificate thumbprint (管理証明書のサムプリント)]** を入力するか、または **[参照…]** をクリックして、選択したストアから証明書を選択します。 証明書は、サブスクリプションの管理証明書としてアップロードする必要があります。 これを行うには、Azure ポータルの次のページで **[アップロード]** をクリックします (詳細については、こちらの [MSDN の投稿](https://msdn.microsoft.com/library/azure/gg551722.aspx) を参照)。  
+4.  **管理証明書の拇印**を入力するか、**[参照]** をクリックして、選択したストアから証明書を選択します。 証明書は、サブスクリプションの管理証明書としてアップロードする必要があります。 これを行うには、Azure ポータルの次のページで **[アップロード]** をクリックします (詳細については、こちらの [MSDN の投稿](https://msdn.microsoft.com/library/azure/gg551722.aspx) を参照)。  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   

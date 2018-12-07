@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 092b497ba4c42d563abce997a50b965b727bd72c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0d40fe3cece9f2f8ae290e09e4b722fdfc3873a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020686"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412089"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>処理オプションの設定 (Reporting Services の SharePoint 統合モード)
 
@@ -88,7 +88,7 @@ ms.locfileid: "50020686"
   
 ## <a name="set-database-timeout"></a>データベースのタイムアウトを設定する
   
-*  Windows PowerShell を使用すると、SharePoint レポート サーバーのデータベースのタイムアウト値を設定できます。 詳細については、 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)の「レポートするサービス アプリケーション データベースのプロパティの取得と設定」セクションを参照してください。  
+*  Windows PowerShell を使用すると、SharePoint レポート サーバーのデータベースのタイムアウト値を設定できます。 詳細については、「[Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」の「Reporting Service アプリケーション データベースのプロパティの取得と設定」セクションを参照してください。  
   
 ## <a name="next-steps"></a>次の手順
 

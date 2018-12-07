@@ -15,12 +15,12 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1089176ed6b47ab7001f0a505b7d475bf1241c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 179c3418f6d8c13c4974d6b5b023e1905140c6a3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662390"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410209"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
   パッケージとプロジェクトのパラメーター、接続マネージャー、および環境への参照を構成するには、 **[構成]** ダイアログ ボックスを使用します。  
@@ -80,7 +80,7 @@ ms.locfileid: "47662390"
 ##  <a name="references"></a> [参照] ページのオプションの設定  
  環境への参照を追加および削除したり、環境プロパティにアクセスするには、 **[参照]** ページを使用します。  
   
- 環境は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージのランタイム値を示します。  
+ 環境は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージのランタイム値を示します。  
   
  **環境**  
  環境を一覧表示します。  

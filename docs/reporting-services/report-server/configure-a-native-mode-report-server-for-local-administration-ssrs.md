@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e997b12f84189ac738c5a93b513d19696beb6c10
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812865"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710793"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
-  レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 レポート サーバーのインストールまたは構成をまだ行っていない場合は、「[インストール ウィザードからの SQL Server 2016 のインストール (セットアップ)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」および「[Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)」を参照してください。  
+  レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 レポート サーバーのインストールまたは構成をまだ行っていない場合は、「[SQL Server をインストール ウィザードからインストールする &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」および「[Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)」を参照してください。  
   
 ||  
 |-|  
@@ -135,7 +135,7 @@ ms.locfileid: "51812865"
 ##  <a name="bkmk_configure_ssms"></a> ローカル レポート サーバー管理を行う目的で SQL Server Management Studio (SSMS) を構成するには  
  既定では、管理者権限を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開始した場合以外は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で使用できるレポート サーバー プロパティのいずれにもアクセスできません。  
   
- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** ロール プロパティとロールの割り当てを構成して、高度な権限で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動する必要をなくすには、以下の手順を実行します。  
+  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** ロール プロパティとロールの割り当てを構成して、高度な権限で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動する必要をなくすには、以下の手順を実行します。  
   
 -   **[スタート]** メニューの **[すべてのプログラム]** をクリックし、 **[SQL Server 2014]** をクリックし、 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** を右クリックして **[管理者として実行]** をクリックします。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "51812865"
   
  **SSDT を開くときに高度な権限を毎回使用するには:**  
   
-1.  スタート画面から「 **sql server** 」と入力し、 **[SQL Server Data Tools]** を右クリックします。 **[管理者として実行]** をクリックします  
+1.  スタート画面から「 **sql server** 」と入力し、 **[SQL Server Data Tools]** を右クリックします。  **[管理者として実行]** をクリックします  
   
 2.  **[続行]** をクリックします。  
   

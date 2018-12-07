@@ -12,12 +12,12 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2f2de4e141a43631968124684c9c31ecc3f235f6
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 1aca33e3978b89ccf5f4423e76f0e2ba7888e6a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050964"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406519"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>SharePoint モードで Reporting Services 2016 をインストールする
 
@@ -25,7 +25,7 @@ ms.locfileid: "50050964"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SharePoint の SQL Server Reporting Services では、レポートの作成とドキュメント ライブラリでの表示、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの電子メールを使用したレポートの配信、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、データ アラート、レポート管理機能をすべて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint ベースの配置で使用できます。 SharePoint モードの機能の詳細については、「[Reporting Services レポート サーバー](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)」の「サーバー モードごとの機能サポートと動作の違い」を参照してください。
+SharePoint の SQL Server Reporting Services では、レポートの作成とドキュメント ライブラリでの表示、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの電子メールを使用したレポートの配信、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、データ アラート、レポート管理機能をすべて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint ベースの配置で使用できます。 SharePoint モードの機能の詳細については、「[Reporting Services レポート サーバー](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)」のサーバー モードごとの機能サポートと動作の違いに関するセクションを参照してください。
 
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。

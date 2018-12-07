@@ -1,22 +1,22 @@
 ---
 title: SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する | Microsoft Docs
-ms.date: 09/26/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 39379fa6d6471f9d0d624dbbd2b05331c7e7a36a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813025"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398352"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 レポート ビューアー Web パーツを SharePoint ページに追加する方法で、SQL Server Reporting Services または Power BI Report Server からレポートを表示します。
 
@@ -46,17 +46,17 @@ ms.locfileid: "51813025"
 
     ![レポート ビューアー Web パーツを追加します。](media/sharepoint-report-viewer-web-part.png)
 
-    最初はエラーが表示されることがあります。 このエラーは、既定のレポート サーバー URL が *https://localhost* に設定されているが、その場所で利用できない可能性があることによります。
+    最初にエラーが表示される場合があります。 このエラーは、既定のレポート サーバー URL が *https://localhost* に設定されているが、その場所で利用できない可能性があることによります。
 
 ## <a name="configure-the-report-viewer-web-part"></a>レポート ビューアー Web パーツを構成する
 
-特定のレポートを指すように Web パーツを構成するには、次のように操作します。
+特定のレポートを指すように Web パーツを構成するには、次の手順を実行します。
 
 1. SharePoint ページを編集するとき、Web パーツの右上にある下方向矢印を選び、**[Web パーツの編集]** を選びます。
 
     ![Web パーツ ドロップダウンから Web ページを編集します。](media/sharepoint-edit-web-part.png)
 
-2. レポートをホストするレポート サーバーの **[レポート サーバー URL]** を入力します。 これは *https://myrsserver/reportserver* のようになります。
+2. レポートをホストするレポート サーバーの **[レポート サーバー URL]** を入力します。 この URL は *https://myrsserver/reportserver* のようになります。
 
 3. Web パーツ内に表示するレポートのパスと名前を入力します。 これは */AdventureWorks Sample Reports/Company Sales* のようになります。 このレイでは、「*AdventureWorks Sample Reports*」という名前のフォルダーに「*Company Sales*」というレポートが入っています。
 

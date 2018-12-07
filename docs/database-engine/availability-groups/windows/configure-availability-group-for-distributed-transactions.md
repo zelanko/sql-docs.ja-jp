@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639126"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513681"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51639126"
 分散トランザクションを保証するには、分散トランザクション リソース マネージャーとしてデータベースを登録するように、可用性グループを構成する必要があります。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループのデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループ内のデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] での構成手順は [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] の場合と同じです。
 
@@ -192,4 +192,4 @@ following the guideline for Troubleshooting DTC Transactions.
 
 [XA トランザクションのサポート](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[動作のしくみ: DTC トランザクションのセッション/SPID (–2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[動作のしくみ: DTC トランザクションのセッション/SPID (-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

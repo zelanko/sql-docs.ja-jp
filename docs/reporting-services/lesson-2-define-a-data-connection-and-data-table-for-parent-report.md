@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 43cd64469ef5a1cf08b1c99e42ee5f6dd20ab85b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021776"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391725"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する
 Visual C# 用の ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成した後は、親レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2014 データベースを使用します。  
@@ -30,7 +30,7 @@ Visual C# 用の ASP.NET Web サイト テンプレートを使用して新し�
   
 4.  **[データ接続の選択]** ページで、 **[新しい接続]** をクリックします。  
   
-5.  Visual Studio で初めてデータ ソースを作成する場合は、 **[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
+5.  Visual Studio で初めてデータ ソースを作成する場合は、**[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
   
 6.  **[接続の追加]** ダイアログ ボックスで、次の手順を実行します。  
   

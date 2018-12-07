@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73e625f6447d5afd1e60acf8ec0e9159dcdb04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849590"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410859"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `PERMISSION` は許可または禁止されるアクションを確立します。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] では、230 の権限を指定できます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] の権限の数が少なくなっています。 権限は、「[アクセス許可 &#40;データベース エンジン&#41;](../../../relational-databases/security/permissions-database-engine.md)」のトピックと以下のチャートで確認できます。  
   
--   `ON SECURABLE::NAME` は、セキュリティ保護可能な型 (サーバー、サーバー オブジェクト、データベース、データベース オブジェクト) とその名前です。 一部の権限は、不明瞭でありコンテキストで不適切であるため、 `ON SECURABLE::NAME` を必要としません。 たとえば、 `CREATE TABLE` の権限は `ON SECURABLE::NAME` 句を必要としません。 (たとえば `GRANT CREATE TABLE TO Mary;` は Mary にテーブルの作成を許可します)。  
+-   `ON SECURABLE::NAME` は、セキュリティ保護可能な型 (サーバー、サーバー オブジェクト、データベース、データベース オブジェクト) とその名前です。 一部の権限は、不明瞭でありコンテキストで不適切であるため、 `ON SECURABLE::NAME` を必要としません。 たとえば、`CREATE TABLE` の権限は `ON SECURABLE::NAME` 句を必要としません。 (たとえば `GRANT CREATE TABLE TO Mary;` は Mary にテーブルの作成を許可します)。  
   
 -   `PRINCIPAL` は権限を受け取るまたは失うセキュリティ プリンシパル (ログイン、ユーザー、ロール) です。 ロールに権限を付与できるタイミングで付与します。  
   
@@ -175,7 +175,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 -   データベース上のユーザーとユーザー定義ロールは、 `sys.database_principals` ビューを使用して調べることができます。  
   
--   ログインやユーザー定義固定サーバー ロールに付与された権限は、 `sys.server_permissions` ビューを使用して調べることができます。 このビューは、 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]では使用できません。  
+-   ログインやユーザー定義固定サーバー ロールに付与された権限は、 `sys.server_permissions` ビューを使用して調べることができます。 このビューは、[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] では使用できません。  
   
 -   ユーザーやユーザー定義固定データベース ロールに付与された権限は、 `sys.database_permissions` ビューを使用して調べることができます。  
   

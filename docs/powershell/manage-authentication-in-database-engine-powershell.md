@@ -10,17 +10,17 @@ ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0848c39935553b2171a5d3ca4b7ceb4b24e8f4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a589502fd502b49e82d6458f163bccac45345b64
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502467"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>データベース エンジン PowerShell での認証の管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスへの接続に Windows 認証を使用します。 SQL Server 認証を使用するには、PowerShell 仮想ドライブを定義するか、 **Invoke-Sqlcmd** の **–Username** および **–Password**パラメーターを指定します。  
+既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスへの接続に Windows 認証を使用します。 SQL Server 認証を使用するには、PowerShell 仮想ドライブを定義するか、**Invoke-Sqlcmd** の **-Username** および **-Password** パラメーターを指定します。  
   
 > [!NOTE]
 > SQL Server PowerShell モジュールには **SqlServer** と **SQLPS** の 2 つがあります。 **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。 **SqlServer** モジュールには **SQLPS** のコマンドレットの更新バージョンだけでなく、最新の SQL 機能をサポートする新しいコマンドレットも含まれています。  
@@ -74,7 +74,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> Invoke-Sqlcmd を使用する SQL Server 認証  
  **SQL Server 認証で Invoke-Sqlcmd を使用するには**  
   
-1.  **–Username** パラメーターでログイン ID を指定し、 **–Password** パラメーターで関連付けられているパスワードを指定します。  
+1.  **-Username** パラメーターでログイン ID を指定し、**-Password** パラメーターで関連付けられているパスワードを指定します。  
   
 ### <a name="example-invoke-sqlcmd"></a>例 (Invoke-Sqlcmd)  
  この例では、read-host コマンドレットを使用してユーザーにパスワードの入力を求め、SQL Server 認証を使用して接続します。  
@@ -83,12 +83,12 @@ cd SQLAuth
 ## Prompt the user for their password.  
 $pwd = read-host -AsSecureString -Prompt "Password"  
   
-Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
+Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell](sql-server-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [Invoke-Sqlcmd コマンドレット](invoke-sqlcmd-cmdlet.md)  
   
   

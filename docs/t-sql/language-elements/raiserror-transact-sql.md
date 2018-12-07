@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 787a402f51fd9caf9f02c319dae0ed87455bb56d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625890"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502864"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -215,7 +215,7 @@ GO
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-error-information-from-a-catch-block"></a>A. CATCH ブロックからエラー情報を返す  
- 次のコード例では、`TRY` ブロック内で `RAISERROR` を使用して、関連付けられている `CATCH` ブロックに実行を移動させる方法を示します。 また、`RAISERROR` を使用して、`CATCH` ブロックを呼び出したエラーについての情報を返す方法も示しています。  
+ 次のコード例では、`RAISERROR` ブロック内で `TRY` を使用して、関連付けられている `CATCH` ブロックに実行を移動させる方法を示します。 また、`RAISERROR` を使用して、`CATCH` ブロックを呼び出したエラーについての情報を返す方法も示しています。  
   
 > [!NOTE]  
 >  RAISERROR では、1 から 127 までの状態番号のエラーだけが生成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では状態番号 0 のエラーが発生する場合があるため、ERROR_STATE によって返されるエラーの状態番号は、RAISERROR の state パラメーターの値として渡す前に確認することをお勧めします。  

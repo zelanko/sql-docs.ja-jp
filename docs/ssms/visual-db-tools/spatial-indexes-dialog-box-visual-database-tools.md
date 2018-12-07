@@ -13,12 +13,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30d728c87ec3f83f20491933c0cda1af845ea6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651417"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509360"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "47651417"
 空間インデックスの名前を表示します。 新しいインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
 **[説明]**  
-インデックスの説明です。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン (**[...]**) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
+インデックスの説明です。 より詳細な説明を記述する場合は、**[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン (**[...]**) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
 **[テーブル デザイナー] カテゴリ**  
 展開してこの空間インデックスのプロパティに関する情報を表示します。  

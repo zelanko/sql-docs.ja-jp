@@ -17,12 +17,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73236a13046257caabc572de24957524d1cb41ea
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d247df4047b95456fb5ccdf1fe8bc1940909388e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639019"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502739"
 ---
 # <a name="transfer-jobs-task"></a>ジョブ転送タスク
   ジョブ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブを転送します。  

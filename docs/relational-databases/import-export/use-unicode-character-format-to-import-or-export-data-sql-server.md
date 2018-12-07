@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809640"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413309"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 * データ ファイルの最初のフィールドが文字以外である
 
 *特定の* 状況に次の回避策のいずれかを使用できるかどうかご検討ください。
-* フォーマット ファイルを使用しないようにします。  この回避策の例については、以下の「 [フォーマット ファイルなしで bcp と Unicode文字形式を使用してデータをインポートする方法](#bcp_widechar_import)」をご覧ください。
+* フォーマット ファイルを使用しないでください。  この回避策の例については、以下の「 [フォーマット ファイルなしで bcp と Unicode文字形式を使用してデータをインポートする方法](#bcp_widechar_import)」をご覧ください。
 
 * **-w** スイッチの代わりに **-c**スイッチを使用します。
 
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **XML 形式以外のフォーマット ファイルで bcp と Unicode文字形式を使用してデータをインポートする方法**<a name="bcp_widechar_import_fmt"></a>
-**-w** および **-f** スイッチと **IN** コマンドです。  この例は bcp、フォーマット ファイル、Unicode 文字を使用し、かつデータ ファイル内の最初のデータ フィールドが文字でないため、回避策を実行する必要があります。  上記の「 [Unicode 文字形式、bcp、フォーマット ファイルの使用に関する特別な注意点](#special_considerations)」をご覧ください。  データ ファイル `myWidechar.bcp` は、「ダミー」のレコードとして追加のレコードを追加して変更されます。このレコードはその後、 `-F 2` スイッチでスキップされます。
+**-w** および **-f** スイッチと **IN** コマンドです。  この例は bcp、フォーマット ファイル、Unicode 文字を使用し、かつデータ ファイル内の最初のデータ フィールドが文字でないため、回避策を実行する必要があります。  上記の「 [Unicode 文字形式、bcp、フォーマット ファイルの使用に関する特別な注意点](#special_considerations)」をご覧ください。  データ ファイル `myWidechar.bcp` は、"ダミー" のレコードとして追加のレコードを追加して変更されます。このレコードはその後、`-F 2` スイッチでスキップされます。
 
 コマンド プロンプトで次のコマンドを入力し、変更手順を実行します。
 ```

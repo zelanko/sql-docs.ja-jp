@@ -3,7 +3,7 @@ title: セカンダリ レプリカの自動シード処理 (SQL Server) | Micro
 description: 自動シード処理を使用して、セカンダリ レプリカを初期化します。
 services: data-lake-analytics
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603622"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506688"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>セカンダリ レプリカの自動シード処理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,16 +117,14 @@ WITH (
 
 セカンダリ レプリカになるインスタンスの場合、インスタンスが結合されると、SQL Server ログに次のようなメッセージが追加されます。
 
->可用性グループ 'AGName' のローカル可用性レプリカには、データベースの作成アクセス許可は与えられていませんが、`SEEDING_MODE` が `AUTOMATIC` になっています。 `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` コマンドを使用して、プライマリ可用性レプリカによってシード処理されるデータベースを作成できるようにします。
+>可用性グループ 'AGName' のローカル可用性レプリカには、データベースの作成アクセス許可は与えられていませんが、`SEEDING_MODE` が `AUTOMATIC` になっています。 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` コマンドを使用して、プライマリ可用性レプリカによってシード処理されるデータベースを作成できるようにします。
 
 ### <a name = "grantCreate"></a> セカンダリ レプリカの CREATE DATABASE アクセス許可を可用性グループに付与する
 
 参加後に、SQL Server のセカンダリ レプリカ インスタンスでデータベースを作成するアクセス許可を可用性グループに付与します。 自動シード処理が動作するには、データベースを作成するアクセス許可が可用性グループに必要です。 
 
 >[!TIP]
->可用性グループがセカンダリ レプリカにデータベースを作成すると、`ALTER AVAILABILITY GROUP` ステートメントを実行したアカウントとしてデータベース所有者が設定され、任意のデータベースを作成するアクセス許可が付与されます。 ほとんどのアプリケーションでは、セカンダリ レプリカのデータベース所有者をプライマリ レプリカと同じにする必要があります。
->
->プライマリ レプリカと同じデータベース所有者がすべてのデータベースを作成するようにするには、プライマリ レプリカのデータベース所有者であるログインのセキュリティ コンテキストで、以下のコマンド例を実行します。 このログインには、`ALTER AVAILABILITY GROUP` アクセス許可が必要です。 
+>可用性グループがセカンダリ レプリカにデータベースを作成すると、データベース所有者の所有者として "sa" (さらに具体的には sid が 0x01 のアカウント) が設定されます。 
 >
 >セカンダリ レプリカにデータベースが自動的に作成された後にデータベース所有者を変更するには、`ALTER AUTHORIZATION` を使用します。 「[ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md)」を参照してください。
  
@@ -221,7 +219,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

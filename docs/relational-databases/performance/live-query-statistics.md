@@ -1,7 +1,7 @@
 ---
 title: '[ライブ クエリ統計] | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 11/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -11,29 +11,37 @@ helpviewer_keywords:
 - live query statistics
 - debugging [SQL Server], live query stats
 - statistics [SQL Server], live query statistics
+- query profiling
+- lightweight query profiling
+- lightweight profiling
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecfcf242fc0c56bd7e232b5ac22823526193ad9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42c1612916ec1de69e02ce50febd6a2820cd9684
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648530"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412609"
 ---
 # <a name="live-query-statistics"></a>[ライブ クエリ統計]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、アクティブ クエリのライブ実行プランを表示できます。 このライブ クエリ プランでは、[クエリ プラン演算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)間の制御フローとして、クエリ実行プロセスをリアルタイムで洞察できます。 ライブ クエリ プランには、全体的なクエリ進捗状況と演算子レベルのランタイム実行統計が表示されます。生成された行の数、経過時間、演算子の進捗状況などです。このデータはクエリの完了を待つことなくリアルタイムで利用できるため、これらの実行統計はクエリ パフォーマンス問題のデバッグで非常に役立ちます この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から利用できますが、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]でも動作します。  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、アクティブ クエリのライブ実行プランを表示できます。 このライブ クエリ プランでは、[クエリ プラン演算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)間の制御フローとして、クエリ実行プロセスをリアルタイムで洞察できます。 ライブ クエリ プランには、全体的なクエリ進捗状況と演算子レベルのランタイム実行統計が表示されます。生成された行の数、経過時間、演算子の進捗状況などです。このデータはクエリの完了を待つことなくリアルタイムで利用できるため、これらの実行統計はクエリ パフォーマンス問題のデバッグで非常に役立ちます この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から利用できますが、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]でも動作します。  
+
+> [!NOTE]
+> 内部的には、ライブ クエリ統計では、[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV を利用します。
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
   
 > [!WARNING]  
-> この機能は、主にトラブルシューティングの目的で使用されます。 この機能を利用すると、全体的なクエリ パフォーマンスがやや遅くなることがあります。 この機能は [Transact-SQL デバッガー](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)と共に利用できます。  
+> この機能は、主にトラブルシューティングの目的で使用されます。 この機能を利用すると、特に [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で、全体的なクエリ パフォーマンスがやや遅くなることがあります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。  
+> この機能は [Transact-SQL デバッガー](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)と共に利用できます。  
   
-#### <a name="to-view-live-query-statistics"></a>ライブ クエリ統計を表示するには  
+## <a name="to-view-live-query-statistics-for-one-query"></a>1 つのクエリのライブ クエリ統計を表示するには 
   
-1.  ライブ クエリ実行プランを表示するには、ツール メニューで、 **[ライブ クエリ統計]** アイコンをクリックします。  
+1.  ライブ クエリ実行プランを表示するには、ツール メニューで、**[ライブ クエリ統計を含む]** アイコンをクリックします。  
   
      ![ツールバーの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatstoolbar.png "ツールバーの [ライブ クエリ統計] ボタン")  
   
@@ -45,34 +53,17 @@ ms.locfileid: "47648530"
   
      ![表示プランの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatsplan.png "表示プランの [ライブ クエリ統計] ボタン")  
   
- ライブ実行プランは **利用状況モニター** からもアクセスできます。 **[Active Expensive Queries]** テーブルのクエリを右クリックします。  
+## <a name="to-view-live-query-statistics-for-any-query"></a>任意のクエリのライブ クエリ統計を表示するには 
+
+ライブ実行プランは、**[プロセス]** または **[アクティブなコストの高いクエリ]** テーブルの任意のクエリを右クリックすることで、**[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)** からもアクセスできます。  
   
  ![利用状況モニターの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatsactmon.png "利用状況モニターの [ライブ クエリ統計] ボタン")  
   
 ## <a name="remarks"></a>Remarks  
- ライブ クエリ統計でクエリの進捗状況に関する情報を記録するには、この統計プロファイル インフラストラクチャを有効にする必要があります。 **で** [ライブ クエリ統計を含める] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を指定すると、現在のクエリ セッションの統計インフラストラクチャが有効になります。 
- 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] までは、他のセッションから (たとえば、利用状況モニターから) ライブ クエリ統計を表示するために使用できる、統計インフラストラクチャを有効にする方法が他に 2 つあります。  
-  
--   ターゲット セッションで `SET STATISTICS XML ON;` または `SET STATISTICS PROFILE ON;` を実行します。  
-  
- 内の複数の  
-  
--   **query_post_execution_showplan** 拡張イベントを有効にします。 これはサーバー全体の設定であり、すべてのセッションでライブ クエリ統計が有効になります。 拡張イベントを有効にする方法については、「 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。  
-
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 より、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、軽量版の統計プロファイル インフラストラクチャが含まれます。 他のセッションから (たとえば、利用状況モニターから) ライブ クエリ統計を表示するために使用できる、軽量版統計インフラストラクチャを有効にする方法が 2 つあります。
-
--   グローバル トレース フラグ 7412 を使用する。  
-  
- 内の複数の  
-  
--   **query_thread_profile** 拡張イベントを有効にする。 これはサーバー全体の設定であり、すべてのセッションでライブ クエリ統計が有効になります。 拡張イベントを有効にする方法については、「 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。
-  
- > [!NOTE]
- > ネイティブ コンパイル ストアド プロシージャはサポートされていません。  
+ ライブ クエリ統計でクエリの進捗状況に関する情報を記録するには、この統計プロファイル インフラストラクチャを有効にする必要があります。 バージョンによっては、オーバーヘッドが大きくなる可能性があります。 このオーバーヘッドの詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。
   
 ## <a name="permissions"></a>アクセス許可  
- **ライブ クエリ統計** の結果ページに入力するにはデータベース レベルの **SHOWPLAN** アクセス許可が、ライブ統計を表示するにはサーバー レベルの **VIEW SERVER STATE** アクセス許可が、クエリを実行するには必要なあらゆるアクセス許可が必要になります。  
+ **ライブ クエリ統計**の結果ページに入力するにはデータベース レベルの `SHOWPLAN` アクセス許可が、ライブ統計を表示するにはサーバー レベルの `VIEW SERVER STATE` アクセス許可が、クエリを実行するには必要な任意のアクセス許可が必要になります。  
   
 ## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -83,4 +74,5 @@ ms.locfileid: "47648530"
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
- [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
+ [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
+ [クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)   

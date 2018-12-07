@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 16688920d157a9f0fcbd68a12b3112418a81237e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031171"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511663"
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
 
@@ -153,13 +153,13 @@ ms.locfileid: "50031171"
 ### <a name="schedule-settings"></a>スケジュール設定  
  データ警告のために定義するスケジュールでは、データ警告メッセージの送信の定期的なパターンや、警告メッセージの送信の開始および停止のタイミングが定義されます。 パターンは、1 回のみ、分単位、日単位、または週単位です。 警告ごとにスケジュールは 1 つだけですが、これらの間隔を使用することにより、ほとんどのビジネス ニーズを満たす複雑な定期的なパターンを作成できます。 スケジュールで使用する定期的なパターンの一般的な例を次に示します。  
   
--   **日単位で 10 日ごと** : 10 日ごとに 1 日 1 回、警告を送信します。  
+-   **日単位で 10 日ごと**: 10 日ごとに 1 日 1 回、警告を送信します。  
   
--   **週単位で 2 週ごとの月曜日** : 2 週ごとの月曜日のみ警告を送信します。  
+-   **週単位で 2 週ごとの月曜日**: 2 週ごとの月曜日のみ警告を送信します。  
   
--   **時間単位で 12 時間ごと** : 12 時間ごとに警告を送信します。  
+-   **時間単位で 12 時間ごと**: 12 時間ごとに警告を送信します。  
   
--   **分単位で 30 分ごと** : 30 分ごとに警告を送信します。  
+-   **分単位で 30 分ごと**: 30 分ごとに警告を送信します。  
   
  定期的なパターンは、警告をいつ送信するかを指定します。 パターンで指定された期間内にルールが満たされると、警告はその期間の終わりに送信されます。  
   

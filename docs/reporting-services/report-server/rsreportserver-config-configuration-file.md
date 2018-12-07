@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23938f5885fd207aed8143686f7b762d81fc8130
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 92655853880919ba29b4736404fe1637471e8f15
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813895"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712633"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -29,20 +29,22 @@ RSReportServer.config は、レポート サーバーのモードに応じて、
 
 
   
-### <a name="native-mode-report-server"></a>ネイティブ モードのレポート サーバー  
+### <a name="native-mode-report-server"></a>ネイティブ モードのレポート サーバー 
 
  
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server Reporting Services での Power BI レポートの技術プレビュー (2017 年 1 月)
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
   
-### <a name="sharepoint-mode-report-server"></a>SharePoint モードのレポート サーバー
+### <a name="sharepoint-mode-report-server"></a>SharePoint モードのレポート サーバー 
 
 > [!NOTE]
 > SharePoint 統合モードは、SQL Server Reporting Services の Power BI レポートの 2017 年 1 月 Technical Preview バージョンでは使用できません。
@@ -176,7 +178,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |設定|[説明]|モード|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Web ポータルの接続先となるレポート サーバーの URL を指定します。 この値は、Web ポータルを他のインスタンス上またはリモート コンピューター上のレポート サーバーに接続する場合にのみ変更します。|N、S|  
-|**ReportBuilderTrustLevel**|この値は変更しないでください。この値を構成することはできません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンでは、レポート ビルダーは **FullTrust**でのみ実行されます。 部分信頼モードの廃止の詳細については、「 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)」を参照してください。|N、S|  
+|**ReportBuilderTrustLevel**|この値は変更しないでください。この値を構成することはできません。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンでは、レポート ビルダーは **FullTrust**でのみ実行されます。 部分信頼モードの廃止の詳細については、「 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)」を参照してください。|N、S|  
 |**PageCountMode**|Web ポータルでのみ使用されます。この設定は、レポート サーバーでページ数の値をレポートの表示前に計算するか、表示中に計算するかを指定します。 有効な値は **Estimate** (既定値) および **Actual**です。 ユーザーがレポートを閲覧している間にページ数情報を計算する場合は、 **Estimate** を使用します。 ページ数の初期値は 2 (現在のページの他にもう 1 ページ) で、ユーザーがレポートを読み進める間にページ数が調整されます。 レポートが表示される前にページ数を計算する場合は、 **Actual** を使用します。 **Actual** は旧バージョンとの互換性を維持するために用意されています。 **PageCountMode** を **Actual**に設定した場合、有効なページ数を取得する関係上、レポート全体を処理する必要があるため、レポートが表示されるまでの待ち時間が長くなる点に注意してください。|N、S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (RSReportServer.config ファイル) (ネイティブ モード)  

@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638949"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507470"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  
@@ -150,7 +150,7 @@ ms.locfileid: "51638949"
   
 -   数字、句読点、および英文字の組み合わせ。 たとえば、 *A23B#99* は、用語 *A23B*を返します。  
   
--   %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ 文字。  
+-   %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' 文字。  
   
     > [!NOTE]  
     >  1 つ以上のピリオド (.) が含まれる頭字語は、複数の文に分割されません。  

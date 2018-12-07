@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661112"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511770"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>トランザクションのロックおよび行のバージョン管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "51661112"
   
  バッチでランタイム ステートメント エラー (制約違反など) が発生した場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定の動作として、エラーの原因となったステートメントだけがロールバックされます。 この動作を変更するには、`SET XACT_ABORT` ステートメントを使用します。 `SET XACT_ABORT` ON の実行後、任意のランタイム ステートメント エラーにより、現在のトランザクションが自動的にロールバックされます。 構文エラーなどのコンパイル エラーは、`SET XACT_ABORT` の設定の影響を受けません。 詳しくは、「[SET XACT_ABORT &#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md)」をご覧ください。  
   
- エラーが発生した場合は、修正措置 (`COMMIT` または `ROLLBACK`) をアプリケーション コードに含める必要があります。 トランザクションで発生するエラーなど、エラーを処理するための効果的なツールには [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY…CATCH` 構造があります。 トランザクションを含む例について詳しくは、「[TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md)」をご覧ください。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、`THROW` ステートメントを使用して例外を発生させ、`TRY…CATCH` 構造の `CATCH` ブロックに実行を渡すことができます。 詳しくは、「[THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md)」をご覧ください。  
+ エラーが発生した場合は、修正措置 (`COMMIT` または `ROLLBACK`) をアプリケーション コードに含める必要があります。 トランザクションで発生するエラーなど、エラーを処理するための効果的なツールには [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY...CATCH` 構造があります。 トランザクションを含む例について詳しくは、「[TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md)」をご覧ください。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、`THROW` ステートメントを使用して例外を発生させ、`TRY...CATCH` 構造の `CATCH` ブロックに実行を渡すことができます。 詳しくは、「[THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md)」をご覧ください。  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>自動コミット モードでのコンパイル エラーと実行時エラー  
  自動コミット モードの場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインスタンスが 1 つの SQL ステートメントだけでなく、バッチ全体をロールバックしたように見える場合があります。 これは、検出されたエラーが実行時エラーではなくコンパイル エラーの場合に発生します。 コンパイル エラーが起きると、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の実行プランが構築できず、バッチ内のどの処理も実行されません。 エラーを生成したステートメントよりも前にあるすべてのステートメントがロールバックされたように見えますが、エラーによりバッチ内のどのステートメントも実行されませんでした。 次の例では、3 番目のバッチ内のどの `INSERT` ステートメントも、コンパイル エラーにより実行されません。 最初の 2 つの `INSERT` ステートメントが実行されないので、ロールバックされたように見えます。  
@@ -1839,7 +1839,7 @@ GO
   
  トランザクションの実行時間が長くなると、次のように、データベースへの深刻な問題が発生する可能性があります。  
   
--   アクティブなトランザクションにより多くの変更が加えられ、これをコミットせずにサーバー インスタンスをシャットダウンした場合、次にシステムを再起動したときの復旧フェーズは **recovery interval** サーバー構成オプションまたは `ALTER DATABASE … SET TARGET_RECOVERY_TIME` オプションで指定した時間よりもかなり長くかかることがあります。 これらのオプションではそれぞれ、アクティブなチェックポイントと間接的なチェックポイントの生成頻度を制御します。 チェックポイントの種類について詳しくは、「[データベース チェックポイント &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)」をご覧ください。  
+-   アクティブなトランザクションにより多くの変更が加えられ、これをコミットせずにサーバー インスタンスをシャットダウンした場合、次にシステムを再起動したときの復旧フェーズは **recovery interval** サーバー構成オプションまたは `ALTER DATABASE ... SET TARGET_RECOVERY_TIME` オプションで指定した時間よりもかなり長くかかることがあります。 これらのオプションではそれぞれ、アクティブなチェックポイントと間接的なチェックポイントの生成頻度を制御します。 チェックポイントの種類について詳しくは、「[データベース チェックポイント &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)」をご覧ください。  
   
 -   さらに重要な注意事項として、待機状態のトランザクション自体によって生成される可能性のあるログ量はわずかですが、ログの切り捨てが無期限に停止されるため、トランザクション ログが大きくなり、満杯になる可能性があります。 トランザクション ログが満杯になると、データベースでは以降の更新を実行できなくなります。 詳しくは、「[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)」、「[満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」、および「[トランザクション ログ &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)」をご覧ください。  
   

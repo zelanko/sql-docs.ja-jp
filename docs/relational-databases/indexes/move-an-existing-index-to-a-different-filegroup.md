@@ -17,12 +17,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6919f19a3feec0122ac76d2b4cb4f0bdbbc68466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3da52bc9b6014f5a2a553fc24e844299dd4ab4e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691549"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515782"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスの別のファイル グループへの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47691549"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47691549"
   
 8.  **[閉じる]** をクリックします。  
   
-9. **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
+9. **ファイル** メニューの **table_name**_を保存_を選びます。  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>オブジェクト エクスプローラーで既存のインデックスを別のファイル グループに移動するには  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47691549"
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用するマルチプロセッサ コンピューターでは、並列処理の最大許容値を設定することで、インデックス ステートメントの実行に使用するプロセッサの数を構成できます。 並列インデックス操作機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「SQL Server 2016 の各エディションとサポートされる機能」を参照してください。 並列インデックス操作の詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
-8.  クリックして **OK**です。  
+8.  **[OK]** をクリックします。  
   
  **[インデックスのプロパティ – *index_name*]** ダイアログ ボックスの **[ストレージ]** ページでは、次の情報が利用できます。  
   

@@ -14,12 +14,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db2423abafdc0ae9e3949e1cac55d0b963a4fc3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c2f0a9a77b3cbcd4dd1ecc652b78f2bd2909bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505981"
 ---
 # <a name="add-or-change-a-property-expression"></a>プロパティ式を追加または変更する
   パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、シーケンス コンテナー、イベント ハンドラー、パッケージおよびプロジェクト レベルの接続マネージャー、およびログ プロバイダーに対してプロパティ式を作成できます。  
@@ -44,9 +44,9 @@ ms.locfileid: "47754360"
   
     -   **[式]** 列で直接プロパティ式を入力するか変更し、 **[OK]** をクリックします。  
   
-         — または —  
+         - または -  
   
-    -   プロパティの式の行の省略記号 [...] をクリックし、 **[式ビルダー]** ダイアログ ボックスを開きます。  
+    -   プロパティの式の行の省略記号 [...] をクリックし、**[式ビルダー]** ダイアログ ボックスを開きます。  
   
 5.  (省略可能) **[式ビルダー]** での次のタスクのいずれかを実行します。  
   

@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da96a86f4e25f6397af5cbba3423bc31514f7ca7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 42bc4465080cacee930c0815ae587f4cafd2722a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702893"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512281"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "51702893"
   
 4.  スケジュールを編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ - <_ジョブ名_>]** ダイアログ ボックスで、**[ページの選択]** の **[スケジュール]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([スケジュール] ページ)](../../ssms/agent/job-properties-new-job-schedules-page.md)」をご覧ください。  
+5.  [**ジョブのプロパティ** - _job\_name_] ダイアログ ボックスで、**[ページの選択]** の **[スケジュール]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([スケジュール] ページ)](../../ssms/agent/job-properties-new-job-schedules-page.md)」をご覧ください。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

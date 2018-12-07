@@ -21,12 +21,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d9632936ad839e0dbc1d425f0d554847f657dfd
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 15fbcd91b9b2604b0ce7faef4d129101c0fb6f40
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639792"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393615"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
   RAW ファイル変換先は、生データをファイルに書き込みます。 データは変換先に固有の形式であるため、データは変換の必要がなく、解析もほとんど必要ありません。 したがって、RAW ファイル変換先は、フラット ファイルや OLE DB 変換先などの他の変換先よりも、高速にデータを書き込むことができます。  

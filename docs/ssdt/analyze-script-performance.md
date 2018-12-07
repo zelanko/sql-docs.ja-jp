@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed6f127b8f1a692f1cd71839570cd38d21213482
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675053"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396921"
 ---
 # <a name="analyze-script-performance"></a>スクリプトのパフォーマンス分析
 SQL Server Data Tools で提供されているツールを使用すると、クエリ、ストアド プロシージャ、またはスクリプトのパフォーマンスを向上できるかどうかを判定できます。 たとえば、頻繁に使用するクエリの応答時間など、クライアント統計を監視することで、テーブルに対するクエリまたはインデックスの変更が必要かどうかを判断できます。 統計には、クライアントの実行時間、クエリ プロファイル、および送信/受信したパケット数/バイト数があります。  

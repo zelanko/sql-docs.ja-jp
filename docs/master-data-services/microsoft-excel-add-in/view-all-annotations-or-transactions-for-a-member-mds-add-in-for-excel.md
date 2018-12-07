@@ -11,12 +11,12 @@ ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ef6c960ecb96da5416419e812b70352c9e1d30a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eef632f4c38961176986d500b8f2ce134731f65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765582"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403867"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>メンバーのすべての注釈またはトランザクションの表示 (Excel 用 MDS アドイン)
 
@@ -35,7 +35,7 @@ ms.locfileid: "47765582"
   
 1.  表示するトランザクションを含む行のセルをクリックします。  
   
-2.  右クリックして表示されるメニューで、 **[トランザクションの表示]** または **[履歴の表示]** をクリックします。  
+2.  右クリックして表示されるメニューで、**[トランザクションの表示]** または **[履歴の表示]** をクリックします。  
   
 3.  **[トランザクションの表示]** ダイアログ ボックスにトランザクションの一覧が表示されます。 トランザクションに関連付けられたすべての注釈を表示するには、グリッド内の行をクリックします。  
   

@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509790"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,12 +89,12 @@ ms.locfileid: "51681340"
 -   [SQL Server インスタンスの登録](#Enrolling)  
   
 ##  <a name="Welcome"></a> インスタンスの登録ウィザードの概要  
- このウィザードを起動するには、ユーティリティ エクスプローラーのツリーでユーティリティ コントロール ポイントを展開し、 **[マネージド インスタンス]** ノードを右クリックして、 **[マネージド インスタンスの追加]** をクリックします。  
+ このウィザードを起動するには、ユーティリティ エクスプローラーのツリーでユーティリティ コントロール ポイントを展開し、**[マネージド インスタンス]** ノードを右クリックして、**[マネージド インスタンスの追加]** をクリックします。  
   
  続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="Instance_name"></a> SQL Server インスタンスの指定  
- 接続ダイアログ ボックスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、 **[接続]** をクリックします。 ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
+ 接続ダイアログ ボックスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、**[接続]** をクリックします。ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
   
  続行するには、 **[次へ]** をクリックします。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51681340"
 > [!NOTE]  
 >  接続が暗号化されている場合、暗号化された接続が使用されます。 接続が暗号化されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティは暗号化された接続を使用して再接続します。  
   
- 続行するには、 **[接続]** をクリックします。  
+ 続行するには、**[接続]** をクリックします。  
   
 ##  <a name="Proxy_configuration"></a> ユーティリティ コレクション セットのアカウント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットを実行する Windows ドメイン アカウントを指定します。 このアカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントとして使用されます。 また、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントを使用することもできます。 検証の要件を満たすには、次のガイドラインに従ってアカウントを指定します。  
@@ -176,7 +176,7 @@ ms.locfileid: "51681340"
 >  このエラーのトラブルシューティングの詳細については、「 [SQL Server ユーティリティのトラブルシューティング](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)」を参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンス上の "ユーティリティ情報" コレクション セットのプロパティは一切変更しないでください。また、データ コレクションはユーティリティ エージェント ジョブによって制御されるため、データ コレクションのオン/オフを手動で切り替えることも避けてください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンス上の "ユーティリティ情報" コレクション セットのプロパティは一切変更しないでください。また、データ コレクションはユーティリティ エージェント ジョブによって制御されるため、データ コレクションのオン/オフを手動で切り替えることも避けてください。  
   
  インスタンスの登録ウィザードが完了したら、SSMS の **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで、 **[マネージド インスタンス]** ノードをクリックします。 登録済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、 **ユーティリティ エクスプローラー** のコンテンツ ウィンドウのリスト ビューに表示されます。  
   

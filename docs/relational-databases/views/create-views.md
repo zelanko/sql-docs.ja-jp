@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28e84b82a069515330e58ea5a15fd321ce77a11b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1d4d718b38780b7dd77f356269a431daf0f91b03
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660251"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514640"
 ---
 # <a name="create-views"></a>ビューの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "51660251"
   
 1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[ビュー]** を右クリックし、 **[新しいビュー]** をクリックします。  
+2.  **[ビュー]** フォルダーを右クリックし、**[新しいビュー]** をクリックします。  
   
 3.  **[テーブルの追加]** ダイアログ ボックスで、新しいビューに含める 1 つまたは複数の要素を、[テーブル]、[ビュー]、[関数]、および [シノニム] のいずれかのタブから選択します。  
   

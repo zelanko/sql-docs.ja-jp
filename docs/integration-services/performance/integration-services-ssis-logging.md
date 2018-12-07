@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641259"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542913"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
@@ -253,7 +253,7 @@ ms.locfileid: "51641259"
     > [!NOTE]  
     >  既定では、すべての情報がログに記録されます。  
   
-9. **[詳細]** タブで、 **[保存]** をクリックします。 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ログ構成を保存するフォルダーに移動し、新しいログ構成のファイル名を入力し、 **[保存]** をクリックします。  
+9.  **[詳細]** タブで、 **[保存]** をクリックします。 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ログ構成を保存するフォルダーに移動し、新しいログ構成のファイル名を入力し、 **[保存]** をクリックします。  
   
 10. **[OK]** をクリックします。  
   

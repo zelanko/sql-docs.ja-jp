@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7afbcb496179a583d40a4f194d55c872f43cb293
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100183"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535608"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services のサブスクリプションを監視する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの監視は、ユーザー インターフェイス、Windows PowerShell、またはログ ファイルから行うことができます。 監視のために使用できるオプションは、実行しているレポート サーバーのモードによって異なります。  
@@ -85,11 +85,11 @@ ms.locfileid: "50100183"
   
 1.  レポートがあるドキュメント ライブラリを参照します。  
   
-2.  レポートのコンテキスト メニューを開きます (**…**)。  
+2.  レポートのコンテキスト メニューを開きます (**[...]**)。  
   
-3.  展開されたメニュー オプションを選択します (**…**)。  
+3.  展開されたメニュー オプションを選択します (**[...]**)。  
   
-4.  **[サブスクリプションの管理]** を選択します。  
+4.   **[サブスクリプションの管理]** を選択します。  
   
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS ログ ファイル  
  サブスクリプション関連の情報は、SharePoint ULS ログに書き込まれます。 ULS ログの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] イベント構成の詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションに関連した ULS ログのエントリの例を次に示します。  

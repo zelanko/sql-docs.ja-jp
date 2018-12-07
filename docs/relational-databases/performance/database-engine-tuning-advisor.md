@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085258"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302695"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49085258"
 -   ストレージ領域を管理する。  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>データベース エンジン チューニング アドバイザーの利点  
- データベースの構造とデータベースに対して実行するクエリについて十分に理解していなければ、クエリのパフォーマンスを最適化することは困難です。 この作業を簡単に行うことができるように、データベース エンジン チューニング アドバイザーは現在のクエリ プラン キャッシュを分析したり、作成された [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのワークロードを分析して適切な物理的設計を提案します。 さらに上級のデータベース管理者のために、DTA には、物理設計に対するさまざまな選択肢の what-if 分析を実行して調査するための強力なメカニズムが用意されています。 DTA からは次のような情報を得ることができます。  
+ データベースの構造とデータベースに対して実行するクエリについて十分に理解していなければ、クエリのパフォーマンスを最適化することは困難です。 この作業を簡単に行うことができるように、**データベース エンジン チューニング アドバイザー (DTA)** は現在のクエリ プラン キャッシュを分析したり、作成された [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのワークロードを分析して適切な物理的設計を提案します。 さらに上級のデータベース管理者のために、DTA には、物理設計に対するさまざまな選択肢の what-if 分析を実行して調査するための強力なメカニズムが用意されています。 DTA からは次のような情報を得ることができます。  
   
 -   クエリ オプティマイザーを使用してワークロード内のクエリを分析し、データベースに最適な行ストアと[列ストア](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)インデックスの組み合わせをお勧めします。  
   
@@ -50,10 +50,10 @@ ms.locfileid: "49085258"
 
 -   行う可能性がある設計の変更を仮想の構成という形で指定して、データベース エンジン チューニング アドバイザーで評価し、代替案を考慮できます。
 
--  SQL Server クエリ ストア、プラン キャッシュ、SQL Server Profiler トレース ファイルやテーブル、または .SQL ファイルなどのさまざまなソースのワークロードをチューニングします。
+-   SQL Server クエリ ストア、プラン キャッシュ、SQL Server Profiler トレース ファイルやテーブル、または .SQL ファイルなどのさまざまなソースのワークロードをチューニングします。
 
   
- データベース エンジン チューニング アドバイザーは、次の種類のクエリ ワークロードを処理します。  
+データベース エンジン チューニング アドバイザーは、次の種類のクエリ ワークロードを処理します。  
   
 -   オンライン トランザクション処理 (OLTP) クエリのみ  
   
@@ -66,22 +66,22 @@ ms.locfileid: "49085258"
 -   更新が集中的に行われるワークロード (クエリ数よりもデータ変更数が多い)  
   
 ## <a name="dta-components-and-concepts"></a>DTA のコンポーネントと概念  
- データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス  
+ **データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス**  
  ワークロードを指定したり各種チューニング オプションを選択したりできる使いやすいインターフェイス。  
   
  **dta** ユーティリティ  
  データベース エンジン チューニング アドバイザーのコマンド プロンプト版。 **dta** ユーティリティは、データベース エンジン チューニング アドバイザーの機能をアプリケーションとスクリプトで使用するために作成されました。  
   
- ワークロード (workload)  
+ **ワークロード**  
  チューニングするデータベースの代表的なワークロードが含まれた Transact-SQL スクリプト ファイル、トレース ファイル、またはトレース テーブル。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、プラン キャッシュをワークロードとして指定することができます。  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、[クエリ ストアをワークロードとして指定する](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)ことができます。 
   
- XML 入力ファイル (XML input file)  
+ **XML 入力ファイル**  
  データベース エンジン チューニング アドバイザーがワークロードのチューニングに使用できる XML 形式のファイル。 XML 入力ファイルは、GUI でも **dta** ユーティリティでも利用できない高度なチューニング オプションをサポートします。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  データベース エンジン チューニング アドバイザーには、次の制限事項と制約事項があります。  
   
--   一意インデックスか、あるいは PRIMARY KEY 制約または UNIQUE 制約を適用するインデックスの追加または削除はできません。  
+-   一意インデックスか、あるいは `PRIMARY KEY` 制約または `UNIQUE` 制約を適用するインデックスの追加または削除はできません。  
   
 -   シングル ユーザー モードに設定されているデータベースは分析できません。  
   

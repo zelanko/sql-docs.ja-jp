@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b52f9aa0131639bdfe68222bba42eae774d2b18f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f3b97043a2f9c348da76b8d0c15a448bf8106011
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698331"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510792"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ CREATE AVAILABILITY GROUP group_name
    FOR [ DATABASE database_name [ ,...n ] ]  
    REPLICA ON <add_replica_spec> [ ,...n ]  
    AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+   [ LISTENER 'dns_name' ( <listener_option> ) ]  
 [ ; ]  
   
 <with_option_spec>::=   
@@ -83,8 +83,8 @@ CREATE AVAILABILITY GROUP group_name
      } )  
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -104,12 +104,12 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+     'four_part_ipv4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
+        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+      | 'ipv6_address'  
      }  
   
 ```  
@@ -147,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
  この可用性グループの自動フェールオーバーをトリガーするエラー状態を指定します。 FAILURE_CONDITION_LEVEL はグループ レベルで設定されますが、同期コミット可用性モードに構成されている (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT) 可用性レプリカにのみ適用されます。 さらに、エラー状態が自動フェールオーバーをトリガーできるのは、プライマリとセカンダリの両方のレプリカが自動フェールオーバー モードに構成されていて (FAILOVER_MODE **=** AUTOMATIC)、セカンダリ レプリカが現在プライマリ レプリカと同期されている場合だけです。  
   
- エラー状態レベルの範囲は 1 ～ 5 で、レベル 1 が最も制限が緩く、レベル 5 が最も制限の厳しい指定です。 任意の状態レベルは、それより制限が緩いすべてのレベルを含みます。 したがって、最も厳しい状態レベル 5 にはそれより制限が緩い状態レベル (1 ～ 4) が含まれ、レベル 4 にはレベル 1 ～ 3 が含まれます。以下同様です。 次の表では、各レベルに対応するエラー状態について説明します。  
+ エラー状態レベルの範囲は 1 から 5 で、レベル 1 が最も制限が緩く、レベル 5 が最も制限の厳しい指定です。 任意の状態レベルは、それより制限が緩いすべてのレベルを含みます。 したがって、最も厳しい状態レベル 5 にはそれより制限が緩い状態レベル (1 ～ 4) が含まれ、レベル 4 にはレベル 1 ～ 3 が含まれます。以下同様です。 次の表では、各レベルに対応するエラー状態について説明します。  
   
 |レベル|エラー状態|  
 |-----------|-----------------------|  
@@ -201,7 +201,7 @@ CREATE AVAILABILITY GROUP group_name
 >  後で、現在のプライマリ レプリカをホストするサーバー インスタンス上の適格なデータベースを可用性グループに追加できます。 また、データベースを可用性グループから削除することもできます。 詳細については、「 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
   
  REPLICA ON  
- 新しい可用性グループの可用性レプリカをホストする 1 ～ 5 個の SQL Server インスタンスを指定します。  各レプリカを指定する際には、サーバー インスタンスのアドレスに続けて WITH (...) 句を入力します。 少なくとも、初期プライマリ レプリカとなる、ローカル サーバー インスタンスを指定する必要があります。 必要に応じて、セカンダリ レプリカを 4 つまで指定することもできます。  
+ 新しい可用性グループの可用性レプリカをホストする 1 ～ 5 個の SQL Server インスタンスを指定します。  各レプリカを指定する際には、そのサーバー インスタンス アドレスに続けて WITH (...) 句を入力します。 少なくとも、初期プライマリ レプリカとなる、ローカル サーバー インスタンスを指定する必要があります。 必要に応じて、セカンダリ レプリカを 4 つまで指定することもできます。  
   
  すべてのセカンダリ レプリカを可用性グループに参加させる必要があります。 詳細については、「 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
   
@@ -297,7 +297,7 @@ CREATE AVAILABILITY GROUP group_name
   
  詳細については、「 [アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
- SECONDARY_ROLE **(** … **)**  
+ SECONDARY_ROLE **(** ... **)**  
  この可用性レプリカが現在セカンダリ ロールを所有している場合に (つまり、セカンダリ レプリカである場合は常に) 有効であるロール固有の設定を指定します。 かっこの中では、いずれか一方または両方のセカンダリ ロール オプションを指定します。 両方を指定する場合は、コンマ区切りのリストを使用します。  
   
  セカンダリ ロール オプションは次のとおりです。  
@@ -326,7 +326,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスの場合は、特定のポートを使用するように Transact-SQL リスナーを構成する必要があります。 詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
   
- PRIMARY_ROLE **(** … **)**  
+ PRIMARY_ROLE **(** ... **)**  
  この可用性レプリカが現在プライマリ ロールを所有している場合に (つまり、プライマリ レプリカである場合は常に) 有効であるロール固有の設定を指定します。 かっこの中では、いずれか一方または両方のプライマリ ロール オプションを指定します。 両方を指定する場合は、コンマ区切りのリストを使用します。  
   
  プライマリ ロール オプションは次のとおりです。  
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これは既定の動作です。  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } セカンダリ ロールで実行されている場合は、次の要件を満たしている、この可用性グループの可用性レプリカをホストするサーバー インスタンスのコンマ区切りリストを指定します。  
+ READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE } セカンダリ ロールで実行されている場合は、次の要件を満たしている、この可用性グループの可用性レプリカをホストするサーバー インスタンスのコンマ区切りリストを指定します。  
   
 -   すべての接続または読み取り専用の接続を許可するように構成されていること (前に示した SECONDARY_ROLE オプションの ALLOW_CONNECTIONS 引数を参照)。  
   
@@ -414,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  手動シード処理を指定します (既定)。 この方法では、プライマリ レプリカでデータベースのバックアップを作成し、セカンダリ可用性グループのレプリカでそのバックアップを手動で復元する必要があります。  
   
- LISTENER **‘**_dns\_name_**’(** \<listener_option\> **)** この可用性グループの新しい可用性グループ リスナーを定義します。 LISTENER は省略可能な引数です。  
+ LISTENER **'**_dns\_name_**'(** \<listener_option\> **)** この可用性グループの新しい可用性グループ リスナーを定義します。 LISTENER は省略可能な引数です。  
   
 > [!IMPORTANT]  
 >  最初のリスナーを作成する前に、「[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」をお読みになることを強くお勧めします。  
@@ -436,7 +436,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER は次のいずれかの \<listener_option> オプションを受け取ります。 
   
- WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  可用性グループ リスナーが動的ホスト構成プロトコル (DHCP) を使用することを指定します。  必要に応じて、ON 句を使用して、このリスナーが作成されるネットワークを識別します。 DHCP は、可用性グループのレプリカをホストする各サーバー インスタンスに使用される単一のサブネットに限定されます。  
   
 > [!IMPORTANT]  
@@ -446,7 +446,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
  可用性グループ リスナーが、DHCP を使用する代わりに、1 つ以上の静的 IP アドレスを使用することを指定します。 複数のサブネットにわたる可用性グループを作成するには、各サブネットのリスナー構成に静的 IP アドレスが 1 つ必要です。 サブネットの静的 IP アドレスには、IPv4 アドレスまたは IPv6 アドレスを使用できます。 ネットワーク管理者に連絡し、新しい可用性グループのレプリカをホストする各サブネットの静的 IP アドレスを入手してください。  
   
  例 :  
@@ -555,7 +555,7 @@ CREATE AVAILABILITY GROUP MyAg
          );
 GO  
 ALTER AVAILABILITY GROUP [MyAg]
-  ADD LISTENER ‘MyAgListenerIvP6’ ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
+  ADD LISTENER 'MyAgListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
 GO  
 ```  
   

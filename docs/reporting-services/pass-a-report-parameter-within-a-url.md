@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812825"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390485"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
   レポート パラメーターはレポート URL に含めることでレポートに渡すことができます。 このような URL パラメーターにはプレフィックスを付けません。パラメーターはレポート処理エンジンに直接渡されるためです。  
@@ -97,7 +97,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 次の URL の例では、"7/1/2005 " という値を持つ単一のパラメーター *SellStartDate* を、ネイティブ モードのレポート サーバーに渡します。  
+ 次の URL の例では、"7/1/2005" という値を持つ単一のパラメーター *SellStartDate* を、ネイティブ モードのレポート サーバーに渡します。  
   
 ```  
 https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  

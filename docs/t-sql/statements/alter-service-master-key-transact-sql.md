@@ -25,12 +25,12 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e93a5f78129b0d3ca9d687600a99b35dbf2be203
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4580926a6aff40e5c2d4b7da588cf394b6bdfcda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651780"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516176"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ALTER SERVICE MASTER KEY
 ## <a name="remarks"></a>Remarks  
  サービス マスター キーは、リンク サーバーのパスワード、資格情報、またはデータベースのマスター キーの暗号化が最初に必要になったときに、自動的に生成されます。 サービス マスター キーは、ローカル コンピューターのキーまたは Windows Data Protection API を使用して暗号化されます。 この API では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントの Windows 資格情報から派生するキーが使用されます。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
   
 ##  <a name="_changing"></a> SQL Server サービス アカウントの変更  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを変更するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サービス アカウントの変更を管理するために、サービス マスター キーの冗長なコピーが保存されます。このコピーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス グループに与えられる必要な権限を持つコンピューター アカウントによって保護されます。 コンピューターを再構築した場合、以前にサービス アカウントによって使用されていたのと同じドメイン ユーザーがサービス マスター キーを復元できますが、 ローカル アカウントや、Local System、Local Service、Network Service の各アカウントでは復元できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を別のコンピューターに移動する場合は、バックアップと復元を使用してサービス マスター キーを移行してください。  

@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641829"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511264"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
  OData 接続マネージャーを使用して、OData データ ソースに接続します。 OData ソース コンポーネントは OData 接続マネージャーを使用して OData データ ソースに接続し、サービスから取得したデータを使用します。 詳細については、「 [OData Source](../../integration-services/data-flow/odata-source.md)」を参照してください。  
@@ -27,7 +27,7 @@ ms.locfileid: "51641829"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>SSIS パッケージへの OData 接続マネージャーの追加  
  次の 3 とおりの方法で、SSIS パッケージに新しい OData 接続マネージャーを追加できます。  
   
--   **[OData ソース エディター]** の **[新規]**  
+-   **[OData ソース エディター]** の **[新規]** ボタンをクリックします。  
   
 -   **ソリューション エクスプローラー** で **[接続マネージャー]** を右クリックし、 **[新しい接続マネージャー]** をクリックします。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   

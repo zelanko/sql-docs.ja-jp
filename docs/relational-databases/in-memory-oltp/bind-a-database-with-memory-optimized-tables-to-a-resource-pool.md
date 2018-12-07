@@ -11,12 +11,12 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9ea3f4ea5649f6c23d5874c38f151839cbdc4b4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e176906e41e815733ac50f2e1b9e0db90a8d3a5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672791"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513152"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>メモリ最適化テーブルを持つデータベースのリソース プールへのバインド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ GO
 ##  <a name="bkmk_PercentAvailable"></a> メモリ最適化テーブルおよびインデックスで使用可能なメモリの割合  
  メモリ最適化テーブルを持つデータベースと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ワークロードを同じリソース プールにマップした場合は、プールのユーザー間でプール使用に関する競合が生じないように、リソース ガバナーによって [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 用の内部しきい値が設定されます。 一般に、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 用のしきい値はプールの約 80% です。 さまざまなメモリ サイズに対する実際のしきい値を次の表に示します。  
   
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースの専用リソース プールを作成するときは、行のバージョンとデータの増加を確認した後で、インメモリ テーブルに必要な物理メモリ量を推定する必要があります。 必要なメモリ量を推定したら、DMV の `sys.dm_os_sys_info` の列 "committed_target_kb" を反映する SQL インスタンスのコミット ターゲット メモリの割合でリソース プールを作成します ( [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)参照)。 たとえば、インスタンスで使用できる合計メモリ量の 40% を含むリソース プール P1 を作成できます。 この 40% から、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンは [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データを格納するためにこれより少ない割合のメモリを取得します。  この処理は、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] がこのプールのすべてのメモリを消費しないようにするために行います。  この少ない割合の値は、ターゲットのコミット済みメモリによって異なります。 次の表に、OOM のエラーが発生する前にリソース プール (既定または名前付き) の [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースに使用可能なメモリを示します。  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースの専用リソース プールを作成するときは、行のバージョンとデータの増加を確認した後で、インメモリ テーブルに必要な物理メモリ量を推定する必要があります。 必要なメモリ量を推定したら、DMV の `sys.dm_os_sys_info` の列 "committed_target_kb" を反映する SQL インスタンスのコミット ターゲット メモリの割合でリソース プールを作成します ([sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) を参照)。 たとえば、インスタンスで使用できる合計メモリ量の 40% を含むリソース プール P1 を作成できます。 この 40% から、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンは [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データを格納するためにこれより少ない割合のメモリを取得します。  この処理は、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] がこのプールのすべてのメモリを消費しないようにするために行います。  この少ない割合の値は、ターゲットのコミット済みメモリによって異なります。 次の表に、OOM のエラーが発生する前にリソース プール (既定または名前付き) の [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースに使用可能なメモリを示します。  
   
 |ターゲットのコミット済みメモリ|インメモリ テーブルで使用可能な割合|  
 |-----------------------------|---------------------------------------------|  
@@ -176,7 +176,7 @@ GO
 |\<= 96 GB|85%|  
 |>96 GB|90%|  
   
- たとえば、"ターゲットのコミット済みメモリ" が 100 GB で、メモリ最適化テーブルおよびインデックスに 60 GB のメモリが必要であると推定した場合は、MAX_MEMORY_PERCENT = 67 (必要な 60 GB / 0.90 = 66.667 GB – 67 GB に切り上げ、67 GB / インストール済みの 100 GB = 67%) でリソース プールを作成して、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] オブジェクトで必要な 60 GB を使用できるようにします。  
+ たとえば、"ターゲットのコミット済みメモリ" が 100 GB で、メモリ最適化テーブルおよびインデックスに 60 GB のメモリが必要であると推定した場合は、MAX_MEMORY_PERCENT = 67 (必要な 60 GB/0.90 = 66.667 GB – 67 GB に切り上げ、67 GB/インストール済みの 100 GB = 67%) でリソース プールを作成して、[!INCLUDE[hek_2](../../includes/hek-2-md.md)] オブジェクトで必要な 60 GB を確実に使用できるようにします。  
   
  データベースが名前付きリソース プールにバインドされている場合は、次のクエリを使用して異なるリソース プールにわたるメモリ割り当てを確認します。  
   
@@ -206,7 +206,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  詳細については、「 [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」を参照してください。  
   
- データベースを名前付きリソース プールにバインドしない場合、データベースは "既定の" プールにバインドされます。 既定のリソース プールは他のほとんどの割り当ての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるため、正確に対象のデータベースに対して DMV sys.dm_resource_governor_resource_pools を使用して、メモリ最適化テーブルで消費されたメモリを監視することはできません。  
+ ご利用のデータベースを名前付きリソース プールにバインドしない場合、そのデータベースは "既定の" プールにバインドされます。 既定のリソース プールは他のほとんどの割り当ての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるため、正確に対象のデータベースに対して DMV sys.dm_resource_governor_resource_pools を使用して、メモリ最適化テーブルで消費されたメモリを監視することはできません。  
   
 ## <a name="see-also"></a>参照  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   

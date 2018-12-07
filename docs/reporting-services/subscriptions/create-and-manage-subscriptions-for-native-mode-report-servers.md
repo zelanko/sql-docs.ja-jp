@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc5d22756ce35acb3469dbf385a5a21e3c969ef0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021686"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400905"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>ネイティブ モード レポート サーバーのサブスクリプションの作成と管理
   標準のサブスクリプションは、電子メールまたは共有フォルダーを使用してレポートを配信する個々のユーザーによって作成されるサブスクリプションです。 このトピックでは、個別のユーザーが作成および管理する標準のサブスクリプションに関する情報を記載しています。 データ ドリブン サブスクリプションについては、必要条件および手順が異なるため、別のトピックで説明します。 詳細については、「 [データ ドリブン サブスクリプションを作成、変更、および削除する](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)」を参照してください。  

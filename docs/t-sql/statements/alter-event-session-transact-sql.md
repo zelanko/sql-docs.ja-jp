@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6f55b028c8fa1506bd6076bf5bdad2f90e074727
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696797"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392855"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "51696797"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 ALTER EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -144,20 +143,20 @@ ON SERVER
 |STARTUP_STATE = { ON &#124; **OFF** }|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時にこのイベント セッションを自動的に開始するかどうかを指定します。<br /><br /> STARTUP_STATE=ON の場合、イベント セッションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が停止後に再起動されたときにだけ開始されます。<br /><br /> ON = 起動時にイベント セッションが開始されます。<br /><br /> **OFF** = イベント セッションは起動時に開始されません。|  
   
 ## <a name="remarks"></a>Remarks  
- ADD 引数と DROP 引数は同じステートメントで一緒に使用できません。  
+ `ADD` 引数と `DROP` 引数は同じステートメントで一緒に使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- ALTER ANY EVENT SESSION 権限が必要です。  
+ `ALTER ANY EVENT SESSION` アクセス許可が必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、イベント セッションを開始し、いくつかのライブ セッション統計を取得します。次に、既存のセッションに 2 つのイベントを追加します。  
   
-```  
+```sql  
 -- Start the event session  
-ALTER EVENT SESSION test_session  
-ON SERVER  
+ALTER EVENT SESSION test_session ON SERVER  
 STATE = start;  
 GO  
+
 -- Obtain live session statistics   
 SELECT * FROM sys.dm_xe_sessions;  
 SELECT * FROM sys.dm_xe_session_events;  

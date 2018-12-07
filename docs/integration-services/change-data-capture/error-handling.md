@@ -11,12 +11,12 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e445b2b09fb91ab820ee1ddcf2b5c9bb7076aa03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5880f74a5cb7296197e1d5ced383fa2c48aaf84a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637970"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400645"
 ---
 # <a name="error-handling"></a>エラー処理
   Oracle CDC インスタンスでは、単一の Oracle ソース データベース (Oracle RAC クラスターは単一のデータベースと見なされます) から変更を検出し、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる CDC データベースの変更テーブルにコミット済みの変更を書き込みます。  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eaa61ab4f13bb96b2ee9d00bae31f76056929622
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: aa2b5df78043d202d87cc01849aa9a9d10911b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031241"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397135"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの配置およびバージョン サポート (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、次のシナリオがサポートされます。  

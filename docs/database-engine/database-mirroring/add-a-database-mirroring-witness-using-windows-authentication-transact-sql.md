@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 4cf7b351726ab07313dff9272bd4411957f05cb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507103"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "49168901"
   
      \<*system-address*> は目的のコンピューター システムを明確に指定する文字列です。また、\<*port>* はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   
-     たとえば、プリンシパル サーバー インスタンスでは、次の ALTER DATABASE ステートメントでミラーリング監視を設定します。 データベース名は **AdventureWorks**、システム アドレスは DBSERVER3 (ミラーリング監視システムの名前)、ミラーリング監視のデータベース ミラーリング エンドポイントが使用するポートは `7022`です。  
+     たとえば、プリンシパル サーバー インスタンスでは、次の ALTER DATABASE ステートメントでミラーリング監視を設定します。 データベース名は **AdventureWorks**、システム アドレスは DBSERVER3 (ミラーリング監視システムの名前)、ミラーリング監視のデータベース ミラーリング エンドポイントが使用するポートは `7022` です。  
   
     ```  
     ALTER DATABASE AdventureWorks   

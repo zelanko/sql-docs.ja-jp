@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606012"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395355"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51606012"
 >  既定では、Windows の **拡張保護** は有効になっていません。 Windows で **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](https://support.microsoft.com/kb/968389)」を参照してください。  
   
 ## <a name="description-of-extended-protection"></a>拡張保護の説明  
- **拡張保護** では、認証リレー攻撃を防止するために、サービス バインドとチャネル バインドが使用されます。 認証リレー攻撃では、NTLM 認証を実行できるクライアント (Windows エクスプローラー、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient アプリケーションなど) が攻撃者のサーバー (悪意のある CIFS ファイル サーバーなど) に接続します。 攻撃者は、そのクライアントの資格情報を使用してクライアントになりすまし、サービス ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのインスタンスなど) への認証を行います。  
+ **拡張保護** では、認証リレー攻撃を防止するために、サービス バインドとチャネル バインドが使用されます。 認証リレー攻撃では、NTLM 認証を実行できるクライアント (Windows エクスプローラー、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient アプリケーションなど) が攻撃者のサーバー (悪意のある CIFS ファイル サーバーなど) に接続します。 攻撃者は、そのクライアントの資格情報を使用してクライアントになりすまし、サービス ([!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのインスタンスなど) への認証を行います。  
   
  この攻撃には次の 2 つのバリエーションがあります。  
   

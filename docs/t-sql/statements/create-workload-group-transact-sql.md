@@ -20,12 +20,12 @@ ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f2e423b4b6ed686f00c566a1462435f501f094bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51073cc28977e0b30ec53a9d7b1165ea09920008
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779430"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398385"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ CREATE WORKLOAD GROUP group_name
 > [!NOTE]  
 >  定義済みのワークロード グループおよびリソース プールではすべて、"default" などの小文字の名前が使用されています。 大文字と小文字を区別する照合順序を使用するサーバーでは、これを考慮する必要があります。 SQL_Latin1_General_CP1_CI_AS など、大文字と小文字を区別しない照合順序を使用するサーバーでは、"default" と "Default" が同じものと見なされます。  
   
- EXTERNAL external_pool_name | “default“  
+ EXTERNAL external_pool_name | "default"  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
   
  ワークロード グループには、外部リソース プールを指定できます。 ワークロード グループを定義し、2 つのプールに関連付けることができます。  

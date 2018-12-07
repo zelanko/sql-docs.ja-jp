@@ -16,12 +16,12 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80ccfc7b9fbebb107b040be95825e28901086a2d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d3b39f333b4e280b9b01bb8dc9fa5fcfe98f7324
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558479"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502772"
 ---
 # <a name="detach-a-database"></a>データベースのデタッチ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "51558479"
   
     -   データベースがレプリケーションに含まれている場合、 **[状態]** は **[準備ができていません]** になり、 **[メッセージ]** 列に **[データベースがレプリケートされました]** と表示されます。  
   
-    -   データベースにアクティブな接続が 1 つ以上ある場合、**[状態]** は **[準備ができていません]** になり、**[メッセージ]** 列に [*<number_of_active_connections>*** のアクティブな接続]** (例: **[1 のアクティブな接続]**) と表示されます。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
+    -   データベースにアクティブな接続が 1 つ以上ある場合、**[状態]** は **[準備ができていません]** になり、**[メッセージ]** 列に _[<アクティブな接続数>_ **のアクティブな接続]** (例: **[1 のアクティブな接続]**) と表示されます。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
   
      メッセージについてより詳しい情報を得るには、ハイパーリンクのテキストをクリックして利用状況モニターを開きます。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0398062e9b57d536a0cc1a2c71c25e6983bea5c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df1121e89f1ec62148852e7b8a7aefaedd436fc9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678940"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399285"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理とはレポート サーバー アイテムの管理を指します。 すべてのアイテムは、プロパティおよびセキュリティの設定を通して、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 以降では、  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルを使用できます。 この記事では、レポート マネージャーと新しい Web ポータルのエクスペリエンスを取り上げます。  

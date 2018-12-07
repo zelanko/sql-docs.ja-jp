@@ -10,24 +10,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
+- UDF
+- TVF
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 064399d1193a0421286e9d39c1449b9c829a4a25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56e4f6239ce68c5bd93791849082f9f56c3a80f2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836220"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858647"
 ---
 # <a name="user-defined-functions"></a>ユーザー定義関数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   プログラミング言語の関数と同様、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザー定義関数は、パラメーターを受け取り複雑な計算などの処理を実行してその結果を値として返すルーチンです。 戻り値は、単一のスカラー値または結果セットになります。  
    
 ##  <a name="Benefits"></a> ユーザー定義関数  
-使用する理由 
+ユーザー定義関数 (UDF) を使用する理由とは? 
   
 -   モジュール プログラミングが可能になります。  
   
@@ -43,16 +45,16 @@ ms.locfileid: "47836220"
   
      1 つのスカラー式で表現できない複雑な制約に基づいてデータをフィルター選択する操作を、1 つの関数として表現できます。 このような関数を WHERE 句で使用すれば、クライアントに送信される数や行を削減できます。  
   
-> [!NOTE]
-> クエリの [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数は、1 つのスレッドでのみ実行できます (直列実行プラン)。  
+> [!IMPORTANT]
+> クエリの [!INCLUDE[tsql](../../includes/tsql-md.md)] UDF は、1 つのスレッドでのみ実行できます (直列実行プラン)。 そのため、UDF を使用すると、並列クエリ処理が禁止されます。 並列クエリ処理の詳細については、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)」をご覧ください。
   
 ##  <a name="FunctionTypes"></a> 関数の種類  
 **スカラー関数**  
  ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、スカラー値は単一ステートメントの結果であり、関数の本体がありません。 複数ステートメントを持つスカラー関数の場合、BEGIN...END ブロックで定義された関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれています。 戻り値の型は、 **text**、 **ntext**、 **image**、 **cursor**、 **timestamp**を除く各種のデータ型になります。 
- **[使用例。](https://msdn.microsoft.com/library/bb386973(v=vs.110).aspx)**
+ **[使用例。](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **テーブル値関数**  
- ユーザー定義テーブル値関数は、**table** データ型を返します。 インライン テーブル値関数の場合、テーブルは単一の SELECT ステートメントの結果セットであり、関数の本体がありません。 **[使用例。](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
+ ユーザー定義テーブル値関数は、**table** データ型を返します。 インライン テーブル値関数の場合、テーブルは単一の SELECT ステートメントの結果セットであり、関数の本体がありません。 **[使用例。](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)**
   
 **システム関数**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、さまざまな操作を実行するために使用できる多数のシステム関数が用意されています。 システム関数は変更できません。 詳細については、「[組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)」、「[システム ストアド関数 &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)」、および「[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
@@ -60,29 +62,32 @@ ms.locfileid: "47836220"
 ##  <a name="Guidelines"></a> ガイドライン  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが取り消されて、モジュール (トリガーやストアド プロシージャ) 内の次のステートメントが続行されるようなエラーについては、関数内では扱いが異なります。 関数内では、このようなエラーによって関数自体の実行が停止されます。 そのため、次に関数を呼び出したステートメントも取り消されることになります。  
   
- BEGIN...END ブロック内のステートメントは、副作用を伴いません。 関数の副作用とは、データベース テーブルの変更など、その関数の有効範囲外のリソースの状態を永続的に変更してしまうことです。 関数内のステートメントが変更できる内容は、ローカル カーソルまたはローカル変数など、その関数に対してローカルなオブジェクトの変更のみです。 データベース テーブルの変更、関数に対してローカルではないカーソルの操作、電子メールの送信、カタログ変更、ユーザーへ返す結果セットの生成などの操作は、関数では実行できません。  
+ `BEGIN...END` ブロック内のステートメントは、副作用を伴いません。 関数の副作用とは、データベース テーブルの変更など、その関数の有効範囲外のリソースの状態を永続的に変更してしまうことです。 関数内のステートメントが変更できる内容は、ローカル カーソルまたはローカル変数など、その関数に対してローカルなオブジェクトの変更のみです。 データベース テーブルの変更、関数に対してローカルではないカーソルの操作、電子メールの送信、カタログ変更、ユーザーへ返す結果セットの生成などの操作は、関数では実行できません。  
   
 > [!NOTE]
-> CREATE FUNCTION ステートメントの実行時に、存在しないリソースに対する副作用がもたらされる場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってステートメントが実行されます。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では関数は呼び出されても実行されません。  
+> `CREATE FUNCTION` ステートメントの実行時に、存在しないリソースに対する副作用が `CREATE FUNCTION` ステートメントによってもたらされる場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってステートメントが実行されます。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では関数は呼び出されても実行されません。  
   
- クエリで指定した関数が実際に実行される回数は、オプティマイザーで作成された実行プランによって異なります。 WHERE 句のサブクエリによって起動された関数がその一例です。 サブクエリとその関数が実行された回数は、オプティマイザーが選択したアクセス パスの違いによって変わります。  
+ クエリで指定した関数が実際に実行される回数は、オプティマイザーで作成された実行プランによって異なります。 `WHERE` 句のサブクエリによって起動された関数がその一例です。 サブクエリとその関数が実行された回数は、オプティマイザーが選択したアクセス パスの違いによって変わります。  
+ 
+> [!IMPORTANT]   
+> ユーザー定義関数のその他の情報とパフォーマンスに関する考慮事項については、「[ユーザー定義関数の作成 (データベース エンジン)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)」を参照してください。 
   
 ##  <a name="ValidStatements"></a> 関数で有効なステートメント  
 関数では、次の種類のステートメントが有効です。  
   
--   関数に対してローカルなデータ変数やカーソルを定義するために使用できる DECLARE ステートメント。  
+-   関数に対してローカルなデータ変数やカーソルを定義するために使用できる `DECLARE` ステートメント。  
   
--   関数に対してローカルなオブジェクトへの値の代入。たとえば、SET を使用してスカラー変数やテーブルのローカル変数に値を代入します。  
+-   関数に対してローカルなオブジェクトへの値の代入。たとえば、`SET` を使用してスカラー変数やテーブルのローカル変数に値を代入します。  
   
--   ローカル カーソルを参照するカーソル操作。ローカル カーソルとは、関数内で宣言され、開かれ、閉じられ、割り当てが解除されるカーソルです。 クライアントにデータを返す FETCH ステートメントは使用できません。 INTO 句を使用してローカル変数に値を代入する FETCH ステートメントのみを使用できます。  
+-   ローカル カーソルを参照するカーソル操作。ローカル カーソルとは、関数内で宣言され、開かれ、閉じられ、割り当てが解除されるカーソルです。 クライアントにデータを返す `FETCH` ステートメントは使用できません。 `INTO` 句を使用してローカル変数に値を代入する FETCH ステートメントのみを使用できます。  
   
--   TRY...CATCH ステートメントを除く、フロー制御ステートメント。  
+-   `TRY...CATCH` ステートメントを除く、フロー制御ステートメント。  
   
--   選択リストに、関数に対してローカルな変数に値を代入する式が含まれる、SELECT ステートメント。  
+-   選択リストに、関数に対してローカルな変数に値を代入する式が含まれる、`SELECT` ステートメント。  
   
--   関数に対してローカルなテーブル変数を変更する INSERT、UPDATE、および DELETE の各ステートメント。  
+-   関数に対してローカルなテーブル変数を変更する `UPDATE`、`INSERT`、`DELETE` の各ステートメント。  
   
--   拡張ストアド プロシージャを呼び出す EXECUTE ステートメント。  
+-   拡張ストアド プロシージャを呼び出す `EXECUTE` ステートメント。  
   
 ### <a name="built-in-system-functions"></a>組み込みシステム関数  
  Transact-SQL ユーザー定義関数では、次の非決定的な組み込み関数を使用できます。  
@@ -99,7 +104,7 @@ ms.locfileid: "47836220"
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- Transact-SQL ユーザー定義関数では、次の非決定的な組み込み関数を使用**できません**。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数では、次の非決定論的な組み込み関数を使用**できません**。  
   
 |||  
 |-|-|  
@@ -109,17 +114,17 @@ ms.locfileid: "47836220"
  決定的および非決定的な組み込みシステム関数の一覧については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
 ##  <a name="SchemaBound"></a> スキーマ バインド関数  
- CREATE FUNCTION は、SCHEMABINDING 句をサポートしています。この句は、テーブル、ビュー、およびその他のユーザー定義関数など、参照対象オブジェクトのスキーマにその関数をバインドします。 スキーマ バインド関数によって参照されるオブジェクトを変更または削除しようとすると、失敗します。  
+ `CREATE FUNCTION` は、`SCHEMABINDING` 句をサポートしています。この句は、テーブル、ビュー、およびその他のユーザー定義関数など、参照対象オブジェクトのスキーマにその関数をバインドします。 スキーマ バインド関数によって参照されるオブジェクトを変更または削除しようとすると、失敗します。  
   
- [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) に SCHEMABINDING を指定するには、次の条件を満たしている必要があります。  
+ [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) に `SCHEMABINDING` を指定するには、次の条件を満たしている必要があります。  
   
 -   CREATE 関数が参照するすべてのビューとユーザー定義関数が、スキーマにバインドされている必要があります。  
   
 -   この関数が参照するすべてのオブジェクトが、その関数と同じデータベースに含まれている必要があります。 対象となるオブジェクトは、1 つまたは 2 つの要素で構成される名前を使用して参照する必要があります。  
   
--   関数内のすべての参照対象オブジェクト (テーブル、ビュー、およびユーザー定義関数) に REFERENCES 権限を所持している必要があります。  
+-   関数内のすべての参照対象オブジェクト (テーブル、ビュー、ユーザー定義関数) に `REFERENCES` 権限を所持している必要があります。  
   
- ALTER FUNCTION を使用して、スキーマ バインドを削除できます。 関数を再定義するには、ALTER FUNCTION ステートメントを使用します。WITH SCHEMABINDING は指定しないでください。  
+ `ALTER FUNCTION` を使用してスキーマ バインドを削除できます。 関数を再定義するには、`ALTER FUNCTION` ステートメントを使用します。`WITH SCHEMABINDING` は指定しないでください。  
   
 ##  <a name="Parameters"></a> パラメーターの指定  
  ユーザー定義関数は、0 個またはそれ以上の入力パラメーターを受け取り、スカラー値またはテーブルのいずれかを返します。 1 つの関数では、最大で 1,024 個の入力パラメーターを受け取ることができます。 関数のパラメーターが既定値を持つ場合は、既定値を得るために、関数を呼び出すときに DEFAULT キーワードを指定する必要があります。 この動作はユーザー定義ストアド プロシージャ内の既定値を持つパラメーターとは異なります。ユーザー定義ストアド プロシージャの場合は、パラメーターを省略すると既定値が暗黙的に使用されます。 ユーザー定義関数では、出力パラメーターがサポートされません。  

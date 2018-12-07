@@ -13,12 +13,12 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a2912f9023db4e31bcb35f742d8d7cc1c8ce208
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39ddb99758833a5f942822e2639768480bf1bc99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530141"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>役割の交代後のログインとジョブの管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51701227"
  元のプライマリ/プリンシパル サーバー インスタンスが使用できる場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のそのインスタンスで元のジョブを削除する必要があります。 現在のミラー データベースのジョブは RESTORING 状態であるため失敗し、使用できなくなります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを、別のドライブ文字などを使用して別に構成できます。 パートナーごとのジョブは、このような違いを考慮する必要があります。  
+>   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを、別のドライブ文字などを使用して別に構成できます。 パートナーごとのジョブは、このような違いを考慮する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   

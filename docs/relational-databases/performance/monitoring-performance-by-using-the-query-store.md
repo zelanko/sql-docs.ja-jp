@@ -1,7 +1,7 @@
 ---
 title: クエリのストアを使用した、パフォーマンスの監視 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673331"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711503"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリのストア機能により、クエリ プランの選択やパフォーマンスを把握できます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 クエリのストアは、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) オプションを使用してクエリ ストアを構成できます。 
   
@@ -101,18 +101,30 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> 機能低下したクエリ機能を使用する  
- クエリのストアを有効にしてから、[オブジェクト エクスプローラー] ペインのデータベースの部分を更新して、 **[クエリ ストア]** セクションを追加します。  
+クエリのストアを有効にしてから、[オブジェクト エクスプローラー] ペインのデータベースの部分を更新して、 **[クエリ ストア]** セクションを追加します。  
   
- ![オブジェクト エクスプローラーのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore.PNG "オブジェクト エクスプローラーのクエリ ストア ツリー")  
+![SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー")   ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー") 
   
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で **[機能低下したクエリ]** を選択し、  **[機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部にあるドロップダウン ボックスを使用して、さまざまな条件に合わせてクエリを選択します。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[機能低下したクエリ]** を選択し、  **[機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部のドロップダウン ボックスを使用し、さまざまな条件に基づいてクエリをフィルター処理します (**実行時間 (ミリ秒)** (既定)、CPU 時間 (ミリ秒)、論理読み取り (KB)、論理書き込み (KB)、物理読み取り (KB)、CLR 時間 (ミリ秒)、DOP、メモリ消費量 (KB)、行数、使用済みログ メモリ (KB)、使用済み一時 DB メモリ (KB)、待機時間 (ミリ秒))。  
+プランを選択して、グラフィカルなクエリ プランを表示します。 ボタンを使用して、ソース クエリの表示、クエリ プランの強制と強制解除、グリッド形式とグラフ形式の切り替え、選択したプランの比較 (複数選択時)、表示の更新を行うことができます。  
   
- ![オブジェクト エクスプローラーの機能低下したクエリ](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "オブジェクト エクスプローラーの機能低下したクエリ")  
+![SQL Server 2016 の SSMS オブジェクト エクスプローラーでの低下したクエリ](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでの低下したクエリ")  
   
- プランを強制的に適用するには、クエリとプランを選択してから、 **[プランの強制]** をクリックします。 強制できるプランは、クエリ プランの機能によって保存され、クエリ プランのキャッシュに保持されているプランのみです。  
+プランを強制的に適用するには、クエリとプランを選択してから、 **[プランの強制]** をクリックします。 強制できるプランは、クエリ プランの機能によって保存され、クエリ プランのキャッシュに保持されているプランのみです。
+
 ##  <a name="Waiting"></a>待機クエリの検索
 
-[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以降では、クエリごとの時系列の待機統計情報をクエリ ストアで使用できます。 クエリ ストアでは、待機の種類が**待機カテゴリ**に組み合わされます。 待機カテゴリから待機の種類へのマッピングは、[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) で使用できます。
+[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 以降では、クエリごとの時系列の待機統計情報をクエリ ストアで使用できます。 クエリ ストアでは、待機の種類が**待機カテゴリ**に組み合わされます。 待機カテゴリから待機の種類へのマッピングは、[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) で使用できます。
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、**[クエリ待機統計]** を選択して **[クエリ待機統計]** ペインを開きます。 [クエリ待機統計] ペインには、クエリ ストアで上位の待機カテゴリを含む棒グラフが表示されます。 上部のドロップダウンを使用して、待機時間の集計条件を選択します (平均、最大、最小、標準偏差、**合計** (既定値))。
+
+ ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計")
+
+棒をクリックして待機カテゴリを選択すると、選択した待機カテゴリの詳細ビューが表示されます。 この新しい棒グラフには、その待機カテゴリの原因になっているクエリが含まれます。 
+  
+ ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計の詳細ビュー](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計の詳細ビュー")
+
+上部のドロップダウン ボックスを使用して、選択した待機カテゴリのさまざまな待機時間条件に基づいてクエリをフィルター処理します (平均、最大、最小、標準偏差、**合計**(既定値))。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。  
 
 **待機カテゴリ**では、異なる待機種類が性質の類似性によってバケットに組み合わされます。 問題の解決に必要なフォローアップ分析は待機カテゴリによって異なりますが、同じカテゴリの待機種類からは非常によく似たトラブルシューティング エクスペリエンスが得られ、待機の先頭に影響受けたクエリを提供することは、このような調査の大部分を正常に完了するために不足している部分です。
 
@@ -127,7 +139,6 @@ INNER JOIN sys.query_store_query_text AS Txt
 |データベースごとの高い SOS_SCHEDULER_YIELD 待機|特定のクエリに対するクエリ ストアでの高い CPU 待機|クエリ ストアで CPU 消費量の多いクエリを探します。 それらの中で、高い CPU 傾向が影響を受けるクエリの高い CPU 待機と関連性のあるクエリを特定します。 それらのクエリの最適化に注目します。プラン回帰または欠落インデックスが存在する可能性があります。|
 
 ##  <a name="Options"></a> 構成オプション 
-
 次のオプションは、クエリ ストア パラメーターの構成に使用できます。
 
 *OPERATION_MODE*  
@@ -555,19 +566,23 @@ OPTION (MERGE JOIN);
 ```  
  
 ###  <a name="Stability"></a> クエリ パフォーマンスの安定性を維持する  
- 複数回実行されるクエリでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が異なるプランを使用した結果、リソースの使用の仕方や期間が異なっていることに気付く場合があります。 クエリのストアを使用すると、クエリ パフォーマンスが低下している時点を検出し、対象期間の最適なプランを特定できます。 こうすることで、将来のクエリの実行で最適なプランを強制的に適用できます。  
+複数回実行されるクエリでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が異なるプランを使用した結果、リソースの使用の仕方や期間が異なっていることに気付く場合があります。 クエリのストアを使用すると、クエリ パフォーマンスが低下している時点を検出し、対象期間の最適なプランを特定できます。 こうすることで、将来のクエリの実行で最適なプランを強制的に適用できます。  
   
- パラメーターを持つクエリ (自動的にパラメーター化されたもの、または手動でパラメーター化されたもののいずれか) に関して、クエリ パフォーマンスが一定ではないものを特定することもできます。 さまざまなプランの中で、ほとんどすべてのパラメーター値に対して高速で最適なプランを特定し、そのプランを強制的に適用できます。これにより、より一層多様なユーザー シナリオに対して、予測可能なパフォーマンスを維持できます。  
+パラメーターを持つクエリ (自動的にパラメーター化されたもの、または手動でパラメーター化されたもののいずれか) に関して、クエリ パフォーマンスが一定ではないものを特定することもできます。 さまざまなプランの中で、ほとんどすべてのパラメーター値に対して高速で最適なプランを特定し、そのプランを強制的に適用できます。これにより、より一層多様なユーザー シナリオに対して、予測可能なパフォーマンスを維持できます。  
   
- **クエリに対してプランを強制する (強制ポリシーの適用)。** 特定のクエリに対して つのプランを強制すると、クエリが実行されるたびに、強制されているプランが使われて実行されます。  
-  
+ ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>クエリに対してプランを強制する (強制ポリシーの適用)
+
+特定のクエリに対してプランを強制すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のオプティマイザーでプランの強制が試みられます。 プランの適用に失敗した場合、XEvent が発生し、オプティマイザーは通常の方法で最適化するように指示します。
+
 ```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- **sp_query_store_force_plan** を使用する場合は、クエリ ストアによってそのクエリのプランとして記録されたプランのみを強制できます。 つまり、クエリで使用できるプランは、クエリのストアがアクティブであったときにそのクエリを実行するために既に使用されているプランのみです。  
+**sp_query_store_force_plan** を使用する場合は、クエリ ストアによってそのクエリのプランとして記録されたプランのみを強制できます。 つまり、クエリで使用できるプランは、クエリのストアがアクティブであったときにそのクエリを実行するために既に使用されているプランのみです。  
   
- **クエリに対するプランの強制を削除する。** もう一度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーを利用して最適なクエリ プランを計算するには、クエリに対して選択されていたプランの強制を **sp_query_store_unforce_plan** を使用して解除します。  
+### <a name="remove-plan-forcing-for-a-query"></a>クエリに対するプランの強制を解除する
+
+もう一度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーを利用して最適なクエリ プランを計算するには、クエリに対して選択されていたプランの強制を **sp_query_store_unforce_plan** を使用して解除します。  
   
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

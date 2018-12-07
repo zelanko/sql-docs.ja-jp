@@ -11,12 +11,12 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ef51be2a03ae262006f9782bc3314329333a682
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2e2d5798ca55bbc216192c89803db8f9b205db65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662831"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502093"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL、関数、ストアド プロシージャ、およびビュー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "51662831"
   
 -   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
   
-##  <a name="cat"></a> システム ビュー: カタログ ビュー  
+##  <a name="cat"></a> システム ビュー - カタログ ビュー  
   
 -   [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)  
   
-##  <a name="dmv"></a> システム ビュー: 動的管理ビュー  
+##  <a name="dmv"></a> システム ビュー - 動的管理ビュー  
   
 -   [sys.dm_filestream_file_io_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql.md)  
   

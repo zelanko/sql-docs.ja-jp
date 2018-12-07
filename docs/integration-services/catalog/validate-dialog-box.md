@@ -14,12 +14,12 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a3f16853d36c7c451d4389c44ec62eaf18c18f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cb781222e14e8baf67a52af62096a8ee8c55ba7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833620"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419233"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
   **のプロジェクトまたはパッケージの一般的な問題を確認するには、** [検証] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。  

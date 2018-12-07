@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600952"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516460"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>前提条件、制限事項、推奨事項 - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "51600952"
   
 3.  **Get-ClusterResource** コマンドレットを使用してネットワーク名リソースを検索し、次に **Set-ClusterParameter** コマンドレットを使用して **HostRecordTTL** 値を設定します。次に例を示します。  
   
-     Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      次に示す PowerShell の例では、`SQL Network Name (SQL35)` というネットワーク名リソースの HostRecordTTL を 300 秒に設定します。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "51600952"
   
      スレッドは、次のように要求に基づいて共有されます。  
   
-    -   通常は 3 ～ 10 個の共有スレッドがありますが、プライマリ レプリカのワークロードに応じてこの数が増える場合があります。  
+    -   通常は 3 個から 10 個の共有スレッドがありますが、プライマリ レプリカのワークロードに応じてこの数が増える場合があります。  
   
     -   特定のスレッドが一定期間アイドル状態になると、そのスレッドは解放され、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の汎用スレッド プールに戻されます。 通常、非アクティブ スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。 ただし、最後の利用状況によっては、アイドル状態のスレッドが保持される時間が延長される場合があります。  
 

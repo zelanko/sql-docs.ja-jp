@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9cfffb3e3df68d28fc7798461f1f45133f47148e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785651"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712443"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)
-このチュートリアルでは、ウィザードを使用して、[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
+このチュートリアルでは、ウィザードを使用して、 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
 
 横棒グラフでは、カテゴリ データが水平方向に表示されます。 これは、次のようなことに役立ちます。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "47785651"
   
 8.  **[演算子]** で、ドロップダウン リストから **[上位 N]** を選択します。  
   
-9. **[値]** に式「 **=5**」を入力します。  
+9.  **[値]** に式「 **=5**」を入力します。  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -298,6 +298,6 @@ ms.locfileid: "47785651"
   
 ## <a name="see-also"></a>参照  
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)  
-[SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[SQL Server のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

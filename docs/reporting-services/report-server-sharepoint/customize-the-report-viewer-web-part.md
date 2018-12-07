@@ -1,26 +1,26 @@
 ---
 title: レポート ビューアー Web パーツのカスタマイズ | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6676e1ae64161d042fa32976bedc5c32288477ca
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021526"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411639"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-レポート ビューアー Web パーツを使用することで、SharePoint 統合用に構成されているレポート サーバーで実行されるレポートを表示できます。 表示できるレポートは、レポート定義 (.rdl) ファイルやレポート ビルダーのレポートなどです。 レポートは自動的に新しいページのレポート ビューアー Web パーツに表示されますが、既存の Web ページや Web サイトにレポート ビューアー Web パーツを追加することで、そのページで特定のレポートが常に表示されるようにすることもできます。
+レポート ビューアー Web パーツを使用することで、SharePoint 統合用に構成されているレポート サーバーで実行されるレポートを表示できます。 表示できるレポートは、レポート定義 (.rdl) ファイルやレポート ビルダーのレポートなどです。 レポートは、新しいページのレポート ビューアー Web パーツに自動的に表示されます。 また、既存の Web ページまたはサイトに常に特定のレポートを表示する必要がある場合は、レポート ビューアー Web パーツをそのページに追加することもできます。
 
 > [!NOTE]
 > [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインによってインストールされるレポート ビューアー Web パーツと、RSWebParts.cab ファイルに含まれているレポート ビューアー Web パーツは、名前は同じでも異なるものです。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインを使用してインストールされるレポート ビューアー Web パーツを利用するための手順について説明します。
@@ -41,7 +41,7 @@ ms.locfileid: "50021526"
   
 ### <a name="change-default-properties"></a>既定のプロパティの変更
 
- レポート ビューアー Web パーツには、ライブラリまたはフォルダーからの要求に応じてレポートを開く場合に適している既定のプロパティがあります。 既定では、使用可能なすべてのコントロールがツール バーに表示され、使用可能なすべての領域が Web ページ上に表示されるように高さと幅が設定されます。 既定のプロパティを変更する場合は、 **[サイトの設定]** で Web パーツをカスタマイズできます。  
+ レポート ビューアー Web パーツには、ライブラリまたはフォルダーからの要求に応じてレポートを開く場合に適している既定のプロパティがあります。 既定では、利用可能なコントロールがすべてツール バーに表示されます。 高さと幅は、Web ページの使用可能な領域をすべて使用するように設定されます。 既定のプロパティを変更する場合は、 **[サイトの設定]** で Web パーツをカスタマイズできます。  
   
 1.  **[サイトの操作]** メニューの **[サイトの設定]** をクリックします。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "50021526"
   
 ### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>Web ページ上の埋め込みレポート ビューアーのカスタマイズ
 
- プロパティを設定することで、Web ページ内のレポート ビューアーを調整することができます。 レポート ビューアーが含まれているページと同じスタイルと色をレポート ビューアーにも使用できます。 ツール バー、ドキュメント マップ、およびパラメーター領域の一部または全体を非表示にすることで、割り当てられた領域内でレポートの表示領域を最大限に広げることができます。 レポートでは、作成時に定義したスタイルが常に使用されます。SharePoint ライブラリにパブリッシュした後でレポートの外観をカスタマイズすることはできません。  
+ プロパティを設定することで、Web ページ内のレポート ビューアーを調整することができます。 レポート ビューアーが含まれているページと同じスタイルと色をレポート ビューアーにも使用できます。 ツール バー、ドキュメント マップ、およびパラメーター領域の一部または全体を非表示にすることで、割り当てられた領域内でレポートの表示領域を最大限に広げることができます。 常にレポートでは、作成時に定義したスタイルを使用します。 SharePoint ライブラリにパブリッシュした後に、レポートの外観をカスタマイズすることはできません。  
   
  Web ページにレポート ビューアー Web パーツを埋め込む場合は、**[レポート URL]** プロパティに特定のレポートを設定する必要があります。 この操作を行わないと、レポートへのリンクを求めるメッセージがレポート ビューアーに表示されます。 このメッセージのカスタマイズや削除はできません。  
   

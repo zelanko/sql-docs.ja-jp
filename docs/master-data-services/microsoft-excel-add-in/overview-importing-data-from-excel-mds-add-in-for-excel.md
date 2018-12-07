@@ -11,12 +11,12 @@ ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2211d4d23367e08d8a30ec4b7e71f7ad477a6030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685970"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502937"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概要: Excel からのデータのインポート(Excel 用 MDS アドイン)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47685970"
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、他のユーザーとデータを共有するには、データを MDS リポジトリにパブリッシュします。 パブリッシュされたデータはすぐに、他のアドイン ユーザーがダウンロードできるようになります。  
   
- データをパブリッシュすると、追加または更新したすべてのデータが MDS リポジトリにパブリッシュされます。 削除したデータはパブリッシュされません。データの削除は個別に行う必要があります。 詳細については、「 [行の削除 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)」を参照してください。  
+ データを発行すると、追加または更新したすべてのデータが MDS リポジトリに発行されます。 削除したデータは発行されません。データの削除は個別に行う必要があります。 詳細については、「 [行の削除 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)」を参照してください。  
   
 > [!NOTE]  
 >  パブリッシュは、新しいエンティティの作成には使用できません。 エンティティの作成の詳細については、「[エンティティを作成する (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)」を参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "47685970"
 >  500 文字を超える注釈を入力すると、その注釈は自動的に切り捨てられます。  
   
 ## <a name="business-rule-and-other-validation"></a>ビジネス ルールとその他の検証  
- データをパブリッシュすると、MDS リポジトリへの追加前に、データが正確であることを確認する検証が実行されます。 データが指定した条件を満たしていない場合は、リポジトリにパブリッシュされません。 詳細については、「[データの検証 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)」を参照してください。  
+ データを発行すると、MDS リポジトリへの追加前に、データが正確であることを確保する検証が実行されます。 データが指定した条件を満たしていない場合は、リポジトリにパブリッシュされません。 詳細については、「[データの検証 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

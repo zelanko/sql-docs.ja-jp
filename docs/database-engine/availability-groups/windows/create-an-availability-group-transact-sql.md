@@ -12,12 +12,12 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7bfbcea3785b15396e4ee02615cb860d250d45c0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0460c654e9403b2d607197580462186e1ae1b805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601092"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512504"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>可用性グループの作成 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51601092"
   
 |タスク|Transact-SQL ステートメント|作業の実行場所**\***|  
 |----------|----------------------------------|---------------------------------|  
-|データベース ミラーリング エンドポイントを作成する ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに 1 回)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|データベース ミラーリング エンドポイントが欠落している各サーバー インスタンスで実行します。|  
+|データベース ミラーリング エンドポイントを作成する ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに 1 回)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ...FOR DATABASE_MIRRORING|データベース ミラーリング エンドポイントが欠落している各サーバー インスタンスで実行します。|  
 |可用性グループを作成する|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|初期プライマリ レプリカをホストするサーバー インスタンスで実行します。|  
 |セカンダリ レプリカを可用性グループに参加させる|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|セカンダリ レプリカをホストする各サーバー インスタンスで実行します。|  
 |セカンダリ データベースを準備する|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) および [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md)|プライマリ レプリカをホストするサーバー インスタンスでバックアップを作成します。<br /><br /> セカンダリ レプリカをホストする各サーバー インスタンス上で、RESTORE WITH NORECOVERY を使用してバックアップを復元します。|  

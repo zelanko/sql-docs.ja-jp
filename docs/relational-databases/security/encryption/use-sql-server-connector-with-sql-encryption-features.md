@@ -14,12 +14,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8c62e501e13ce0145524c140a1c24deb2bcc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653800"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401085"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 暗号化機能への SQL Server コネクタの使用
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]

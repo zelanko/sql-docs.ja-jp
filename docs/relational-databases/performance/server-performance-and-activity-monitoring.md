@@ -1,7 +1,7 @@
 ---
 title: サーバーのパフォーマンスと利用状況の監視 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,12 +20,12 @@ ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 579601ec5a7a3a9890c38d8f4883779d07e2a135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e36e25728079412e483a96702db3fed3d60c16b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747260"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513667"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>サーバーのパフォーマンスと利用状況の監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,30 +33,50 @@ ms.locfileid: "47747260"
   
  次のセクションには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows のパフォーマンスと利用状況の監視ツールの使用方法を説明するトピックが含まれています。 ここで説明する内容は次のとおりです。  
   
-## <a name="in-this-section"></a>このセクションの内容  
- **Windows ツールで監視タスクを実行するには**  
+## <a name="to-perform-monitoring-tasks-with-windows-tools"></a>Windows ツールで監視タスクを実行するには 
   
 -   [システム モニターの起動 &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
 -   [Windows アプリケーション ログの表示 &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
- **Windows ツールで SQL Server データベースの警告を作成するには**  
+## <a name="to-create-sql-server-database-alerts-with-windows-tools"></a>Windows ツールで SQL Server データベースの警告を作成するには  
   
 -   [SQL Server データベースの警告のセットアップ &#40;Windows&#41;](../../relational-databases/performance/set-up-a-sql-server-database-alert-windows.md)  
 
- **拡張イベントで監視タスクを実行するには**  
+## <a name="to-perform-monitoring-tasks-with-extended-events"></a>拡張イベントで監視タスクを実行するには  
  
  -   [拡張イベント](../../relational-databases/extended-events/extended-events.md)
  
-  -   [クイック スタート: SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [クイック スタート: SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ 
+ -   [オブジェクト エクスプローラーでのイベント セッションの管理](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
+ 
+ -   [拡張イベント セッションの変更](../../relational-databases/extended-events/alter-an-extended-events-session.md)
+ 
+ -   [既存の SQL トレース スクリプトから拡張イベント セッションへの変換](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)
+ 
+ -   [SQL トレースのイベント クラスと等価な拡張イベントを確認する](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
    
- **SQL Server Management Studio で監視タスクを実行するには**  
+## <a name="to-perform-monitoring-tasks-with-sql-server-management-studio"></a>SQL Server Management Studio で監視タスクを実行するには  
   
 -   [SQL Server エラー ログの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
   
 -   [利用状況モニターを開く方法 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
-  
- **Transact-SQL ストアド プロシージャを使用して SQL トレースで監視タスクを実行するには**  
+
+-   [クエリ ストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+
+## <a name="to-perform-monitoring-tasks-with-sql-trace-and-sql-server-profiler"></a>SQL Trace および SQL Server Profiler を使用して監視タスクを実行するには
+
+> [!IMPORTANT]
+> 次のセクションでは、SQL トレースと [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用する方法について説明します。  
+> SQL トレースと [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、非推奨です。 Microsoft SQL Server の Trace オブジェクトや Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も非推奨とされます。   
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> 代わりに拡張イベントを使用します。 [拡張イベント](../../relational-databases/extended-events/extended-events.md)の詳細については、「[クイック スタート: SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」および [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) に関するページを参照してください。
+
+> [!NOTE] 
+> Analysis Services のワークロード用の [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は非推奨とされず、引き続きサポートされます。
+
+### <a name="to-perform-monitoring-tasks-with-sql-trace-by-using-transact-sql-stored-procedures"></a>Transact-SQL ストアド プロシージャを使用して SQL トレースで監視タスクを実行するには  
   
 -   [トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)  
   
@@ -70,7 +90,7 @@ ms.locfileid: "47747260"
   
 -   [トレースの削除 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)  
   
- **SQL Server Profiler を使用してトレースを作成および変更するには**  
+### <a name="to-create-and-modify-traces-by-using-sql-server-profiler"></a>SQL Server Profiler を使用してトレースを作成および変更するには  
   
 -   [トレースの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -102,7 +122,7 @@ ms.locfileid: "47747260"
   
 -   [トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
- **SQL Server Profiler を使用してトレースを開始、一時停止、および停止するには**  
+### <a name="to-start-pause-and-stop-traces-by-using-sql-server-profiler"></a>SQL Server Profiler を使用してトレースを開始、一時停止、および停止するには  
   
 -   [サーバーへの接続後の自動的なトレースの開始 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)  
   
@@ -112,7 +132,7 @@ ms.locfileid: "47747260"
   
 -   [一時停止または停止したトレースの再開 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
- **SQL Server Profiler を使用してトレースを開き、トレースの表示方法を構成するには**  
+### <a name="to-open-traces-and-configure-how-traces-are-displayed-by-using-sql-server-profiler"></a>SQL Server Profiler を使用してトレースを開き、トレースの表示方法を構成するには  
   
 -   [トレース ファイルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
@@ -126,7 +146,7 @@ ms.locfileid: "47747260"
   
 -   [トレース表示の既定値の設定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
- **SQL Server Profiler を使用してトレースを再生するには**  
+### <a name="to-replay-traces-by-using-sql-server-profiler"></a>SQL Server Profiler を使用してトレースを再生するには  
   
 -   [トレース ファイルを再生する &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
@@ -140,7 +160,7 @@ ms.locfileid: "47747260"
   
 -   [Transact-SQL スクリプトの再生 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
- **SQL Server Profiler を使用してトレース テンプレートを作成、変更、および使用するには**  
+### <a name="to-create-modify-and-use-trace-templates-by-using-sql-server-profiler"></a>SQL Server Profiler を使用してトレース テンプレートを作成、変更、および使用するには  
   
 -   [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
   
@@ -154,7 +174,7 @@ ms.locfileid: "47747260"
   
 -   [トレース テンプレートのインポート &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
- **SQL Server Profiler トレースを使用してサーバーのパフォーマンスを収集および監視するには**  
+### <a name="to-use-sql-server-profiler-traces-to-collect-and-monitor-server-performance"></a>SQL Server Profiler トレースを使用してサーバーのパフォーマンスを収集および監視するには  
   
 -   [トレース中の値列またはデータ列の検索 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   

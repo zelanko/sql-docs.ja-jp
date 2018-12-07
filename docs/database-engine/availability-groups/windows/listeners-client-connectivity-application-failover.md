@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603572"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408889"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>リスナー、クライアント接続、アプリケーションのフェールオーバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,9 +139,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 -   [可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ###  <a name="ReadOnlyAppIntent"></a> 読み取り専用アプリケーションの目的および読み取り専用ルーティング  
- "アプリケーションの目的" 接続文字列プロパティは、読み取り/書き込み用または読み取り専用のどちらかの可用性グループ データベースにダイレクトされる、クライアント アプリケーションの要求を表します。 読み取り専用ルーティングを使用するには、可用性グループ リスナーに接続するときに、クライアントが接続文字列内で読み取り専用のアプリケーションの目的を使用する必要があります。 読み取り専用のアプリケーションの目的がないと、可用性グループ リスナーへの接続は、プライマリ レプリカ上のデータベースに送られます。  
+ アプリケーションの目的の接続文字列プロパティは、読み取り/書き込み用または読み取り専用のどちらかの可用性グループ データベースにダイレクトされる、クライアント アプリケーションの要求を表します。 読み取り専用ルーティングを使用するには、可用性グループ リスナーに接続するときに、クライアントが接続文字列内で読み取り専用のアプリケーションの目的を使用する必要があります。 読み取り専用のアプリケーションの目的がないと、可用性グループ リスナーへの接続は、プライマリ レプリカ上のデータベースに送られます。  
   
- "アプリケーションの目的" 属性は、ログイン中にクライアントのセッションに格納されます。その後、SQL Server のインスタンスがこの "目的" を処理し、可用性グループの構成およびセカンダリ レプリカ内のターゲット データベースの現在の読み取り/書き込み状態に基づいて、実行する操作を決定します。  
+ アプリケーションの目的の属性は、ログイン中にクライアントのセッションに格納されます。その後、SQL Server のインスタンスがこの目的を処理し、可用性グループの構成およびセカンダリ レプリカ内のターゲット データベースの現在の読み取り/書き込み状態に基づいて、実行する操作を決定します。  
   
  読み取り専用のアプリケーションの目的を指定する ADO.NET プロバイダー (System.Data.SqlClient) の接続文字列の例を次に示します。  
   
@@ -183,7 +183,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  クライアント アプリケーションの接続の試行中、接続のタイムアウト期間が経過する前に可用性グループがオンラインに戻ると、クライアント ドライバーによる内部での再試行のいずれかが正常に接続できる場合があります。このとき、アプリケーションでエラーは発生しません。  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> 可用性グループ マルチサブネット フェールオーバーのサポート  
- 接続文字列で MultiSubnetFailover 接続オプションをサポートするクライアント ライブラリを使用している場合、MultiSubnetFailover を "True" または "Yes" に設定して別のサブネットへの可用性グループのフェールオーバーを最適化できます ("True" と "Yes" のどちらに設定するかは、使用しているプロバイダーの構文によって異なります)。  
+ 接続文字列で MultiSubnetFailover 接続オプションをサポートするクライアント ライブラリを使用している場合、MultiSubnetFailover を "True" または "Yes" に設定して (使用しているプロバイダーの構文によって異なります)、別のサブネットへの可用性グループのフェールオーバーを最適化できます。  
   
 > [!NOTE]  
 >  可用性グループ リスナーおよび SQL Server フェールオーバー クラスター インスタンス名への単一サブネット接続およびマルチサブネット接続の両方に対して、この設定を推奨します。  このオプションを有効にすると、単一サブネットのシナリオでも、さらに最適化されます。  

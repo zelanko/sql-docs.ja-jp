@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de4452bcf7d1600f49ecc28f0a66ae15ef0a602d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c81da7beaedbb7374154db2c35985b8c9955a376
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813385"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396855"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>サブスクリプション所有者の管理とサブスクリプションの実行 - PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -243,7 +243,7 @@ ForEach ($item in $items)
 ```  
   
 ##  <a name="bkmk_list_for_1_report"></a> スクリプト: 特定のレポートに関連付けられたすべてのサブスクリプションの一覧表示  
- このスクリプトは特定のレポートに関連付けられたすべてのサブスクリプションを一覧表示します。 レポート パス構文は、完全な URL を必要とする、異なる SharePoint モードです。 構文例で使用されているレポート名「title only」には空白が含まれているため、レポート名を単一引用符で囲む必要があります。  
+ このスクリプトは特定のレポートに関連付けられたすべてのサブスクリプションを一覧表示します。 レポート パス構文は、完全な URL を必要とする、異なる SharePoint モードです。 構文例で使用されているレポート名 "title only" には空白が含まれているため、レポート名を単一引用符で囲む必要があります。  
   
  **ネイティブ モードの構文:**  
   
@@ -337,7 +337,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  構成ファイルの詳細については、「 [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
   
- スクリプトには遅延ロジック`Start-Sleep -s 6`が含まれているので、イベントの起動後に時間があり、更新されたステータスが ListSubscription メソッドによって使用可能になります。  
+ スクリプトには遅延ロジック `Start-Sleep -s 6` が含まれているので、イベントの起動後に時間があり、更新されたステータスが ListSubscription メソッドによって使用可能になります。  
   
  **ネイティブ モードの構文:**  
   

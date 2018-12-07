@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39889d49702394f0aec8f79c328e28ba318c9864
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806742"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947587"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB 上の外部データにアクセスするための PolyBase の構成
 
@@ -152,7 +152,7 @@ JSON の入れ子になったデータ型/繰り返しデータ型は次のよ�
 
 ## <a name="cosmos-db-connection"></a>Cosmos DB 接続
 
-Cosmos DB の Mongo API および Mongo DB PolyBase コネクタを使用すると、**Cosmos DB インスタンス**の外部テーブルを作成することができます。 これは、上記と同じ手順に従って行います。 データベースのスコープ資格情報、サーバーのアドレス、ポート、および場所の文字列が Cosmos DB サーバーのものを反映していることを確認してください。 
+Cosmos DB の Mongo API および Mongo DB PolyBase コネクタを使用すると、**Cosmos DB インスタンス**の外部テーブルを作成することができます。 これは、上記と同じ手順に従って行います。 データベースのスコープ資格情報、サーバーのアドレス、ポート、場所の文字列が Cosmos DB サーバーのものを反映していることを確認してください。 
 
 ## <a name="next-steps"></a>次の手順
 

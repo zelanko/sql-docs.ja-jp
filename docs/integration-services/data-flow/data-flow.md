@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cea3308f6d070a0cd1b7b902f1b76306ae1930a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641679"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503574"
 ---
 # <a name="data-flow"></a>データ フロー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
@@ -190,7 +190,7 @@ ms.locfileid: "51641679"
  詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   
 ### <a name="columns"></a>[列]  
- 入力、出力、およびエラー出力は、列の集合です。 各列は構成可能であり、入力、出力、または外部といった列の種類に応じて、列のさまざまなプロパティが[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されています。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、列のプロパティの設定方法として、プログラムによって設定する方法、コンポーネント固有のダイアログ ボックスを使用する方法、および **[詳細エディター]** ダイアログ ボックスを使用する方法の 3 種類が用意されています。  
+ 入力、出力、およびエラー出力は、列の集合です。 各列は構成可能であり、入力、出力、または外部といった列の種類に応じて、列のさまざまなプロパティが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されています。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、列のプロパティの設定方法として、プログラムによって設定する方法、コンポーネント固有のダイアログ ボックスを使用する方法、および **[詳細エディター]** ダイアログ ボックスを使用する方法の 3 種類が用意されています。  
   
 ## <a name="paths"></a>パス  
  パスは、データ フロー コンポーネントを連結します。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、パスのプロパティの表示と変更、パスの開始点についての出力メタデータの表示、およびデータ ビューアーのパスへのアタッチを行うことができます。  

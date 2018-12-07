@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ba1339184654094e1cd5d8ad249d43dcd645ca1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a67d5c746a3fcce92709bf0457d52e4248a84b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699720"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394005"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
   SharePoint 統合モードで動作しているレポート サーバーの場合、レポート、レポート モデル、および共有データ ソースの表示と管理の方法は、SharePoint サイトで定義されたセキュリティ設定で決定されます。 既定の SharePoint グループ、権限レベル、および権限の割り当てを使用している場合は、現在のセキュリティ設定を使用して、レポートやその他のドキュメントを操作できます。  
@@ -49,7 +49,7 @@ ms.locfileid: "47699720"
   
  あらかじめ定義された権限レベルを使用する場合、フル コントロール、デザイン、投稿、読み取り、および制限付きアクセスには既に上記の権限が含まれているので、必要な操作はありません。 ただし、カスタム権限レベルを使用したり、特定のユーザーまたはグループに割り当てた権限を編集したりする場合は、権限を手動で追加する必要があります。  
   
- "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 "参照操作におけるエラー : "レポート サーバーに SharePoint エラーが発生しました。 ---> System.UnauthorizedAccessException: アクセスは拒否されました” パブリッシュ操作におけるエラー: "ユーザー ‘\<domain>\\<user\>' には、この操作を行うのに必要なアクセス許可が与えられていません。"  
+ "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 参照操作におけるエラー: "レポート サーバーに SharePoint エラーが発生しました。 ---> System.UnauthorizedAccessException: アクセスは拒否されました。" パブリッシュ操作におけるエラー: "ユーザー '\<domain>\\<user\>' には、この操作を行うのに必要なアクセス許可が与えられていません。"  
   
 ##  <a name="permissionReports"></a> レポートの表示と管理の権限  
  レポート定義の権限は、レポートが含まれているライブラリのリスト権限によって定義されますが、個々のレポートに対して権限を設定してアクセスを制限することもできます。 次の表に、作業の一覧と、それぞれの作業をサポートする権限を示します。  

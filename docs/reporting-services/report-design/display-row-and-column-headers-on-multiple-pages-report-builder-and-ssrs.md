@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a35f7ea2e08caf851a24b8ab52b79f39a760024
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24b47c23fa34fe1a575268cf63ea8e50dd18139c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906162"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395935"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)
   Tablix データ領域 (テーブル、マトリックス、リスト) が複数のページにわたる場合、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートの各ページで行ヘッダーおよび列ヘッダーを繰り返すかどうかを制御できます。
@@ -50,7 +50,7 @@ ms.locfileid: "48906162"
   
 3.  スクロール中も表示したままにする静的メンバー (行または列) に対応する静的メンバーをクリックします。 プロパティ ペインに **[Tablix メンバー]** プロパティが表示されます。  
   
-     プロパティ ペインが表示されない場合は、レポート ビルダー ウィンドウの上部にある **[表示]** タブをクリックし、 **[プロパティ]** をクリックします。  
+     プロパティ ペインが表示されない場合は、レポート ビルダー ウィンドウの上部にある **[表示]** タブをクリックし、**[プロパティ]** をクリックします。  
   
 4.  プロパティ ペインで、 **RepeatOnNewPage** を True に設定します。  
   

@@ -7,12 +7,12 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 67866bf7c201d9a00eb56195d3db10cdf272ef2b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602942"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712423"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
 
@@ -147,9 +147,9 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新しいインスタンスのインストール手順については、次のいずれかのリンクをクリックして参照してください。  
   
-* [インストール ウィザードからの SQL Server 2016 のインストール &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [SQL Server をインストール ウィザードからインストールする &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
-* [コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+* [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
 ## <a name="bkmk_move_database"></a> レポート サーバー データベースの移動
 

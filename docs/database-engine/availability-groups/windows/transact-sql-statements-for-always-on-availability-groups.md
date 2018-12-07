@@ -13,12 +13,12 @@ ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9711abe965e293824da78bf0d956311679fc7c9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 730ce9da4a2e44dec103b6c0620acae176f969d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506555"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性グループの Transact-SQL ステートメント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47771425"
 -   [AVAILABILITY GROUP Transact-SQL ステートメントの制限事項](#Restrictions)  
   
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- [CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) は、サーバー インスタンス上にデータベース ミラーリング エンドポイントが存在しない場合に、データベース ミラーリング エンドポイントを作成します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングの配置を検討しているすべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。  
+ [CREATE ENDPOINT ...FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) は、サーバー インスタンス上にデータベース ミラーリング エンドポイントが存在しない場合に、データベース ミラーリング エンドポイントを作成します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングの配置を検討しているすべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。  
   
  このステートメントは、エンドポイントの作成先となるサーバー インスタンス上で実行します。 特定のサーバー インスタンスに対して作成できるデータベース ミラーリング エンドポイントは 1 つだけです。 詳細については、「 [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47771425"
   
  現在のプライマリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスで ALTER AVAILABILITY GROUP を実行します。  
   
-##  <a name="AlterDb"></a> ALTER DATABASE … SET HADR …  
+##  <a name="AlterDb"></a> ALTER DATABASE ...SET HADR ...  
  ALTER DATABASE ステートメントの [SET HADR](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 句のオプションを使用すると、セカンダリ データベースを対応するプライマリ データベースの可用性グループに参加させたり、参加データベースを削除したりできます。さらに、参加データベースでのデータ同期化の削除やデータ同期化の再開も行うことができます。  
   
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  

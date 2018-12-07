@@ -17,12 +17,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c53eba08ad0e2ce91fe873c1072e262076a0cde4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5c07a9689453e11058dedcdcd0d014f01b6e480
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655990"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502418"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性ソリューション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47655990"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サーバーやデータベースの高可用性を実現するために複数の方法が用意されています。 高可用性を実現するには以下の方法があります。    
     
 *  AlwaysOn フェールオーバー クラスター インスタンス    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 製品の一部として、Always On フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベル ( *フェールオーバー クラスター インスタンス* (FCI)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 製品の一部として、Always On フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベル (*フェールオーバー クラスター インスタンス* (FCI)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。    
     
  詳細については、「 [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)のインスタンスをホストするフェールオーバー クラスター インスタンスとして構成されます。    
     

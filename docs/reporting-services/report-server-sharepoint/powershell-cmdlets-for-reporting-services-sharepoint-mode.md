@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9682be8f89a78a959cba3e4991c3405b0326f125
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813785"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504299"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード用の PowerShell コマンドレット
 
@@ -117,7 +117,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
  名前に 'SPRS' を含んでいるコマンドレットの一覧を返します。 これは Reporting Services コマンドレットの完全な一覧になります。  
   
 ```  
-Get-command –noun *SPRS*  
+Get-command -noun *SPRS*  
 ```  
   
  または、より詳細な情報を使用して、commandlist.txt という名前のテキスト ファイルにパイプします。  
@@ -150,7 +150,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 ## <a name="detailed-samples"></a>詳細なサンプル
 
- 次のサンプルに加えて、「 [手順 1 ～ 4 に対応する Windows PowerShell スクリプト](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script)」の「Windows PowerShell スクリプト」を参照してください。  
+ 次のサンプルに加えて、「[手順 1 - 4 に対応する Windows PowerShell スクリプト](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script)」の「Windows PowerShell スクリプト」を参照してください。  
   
 ### <a name="create-a-reporting-services-service-application-and-proxy"></a>Reporting Services サービス アプリケーションとプロキシの作成
 
@@ -164,15 +164,15 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 ```  
 # Create service application and service application proxy  
-$appPool = Get-SPServiceApplicationPool “My App Pool”  
-$serviceApp = New-SPRSServiceApplication “My RS Service App” –ApplicationPool $appPool  
-$serviceAppProxy = New-SPRSServiceApplicationProxy –Name “My RS Service App Proxy” –ServiceApplication $serviceApp  
+$appPool = Get-SPServiceApplicationPool "My App Pool"  
+$serviceApp = New-SPRSServiceApplication "My RS Service App" -ApplicationPool $appPool  
+$serviceAppProxy = New-SPRSServiceApplicationProxy -Name "My RS Service App Proxy" -ServiceApplication $serviceApp  
   
 # Add service application proxy to default proxy group.  Any web application that uses the default proxy group will now be able to use this service application.  
-Get-SPServiceApplicationProxyGroup –default | Add-SPServiceApplicationProxyGroupMember –Member $serviceAppProxy  
+Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroupMember -Member $serviceAppProxy  
   
-# Grant application pool account access to the port 80 web application’s content database.  
-$webApp = Get-SPWebApplication “https://sitename”  
+# Grant application pool account access to the port 80 web application's content database.  
+$webApp = Get-SPWebApplication "https://sitename"  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
 $webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
   
@@ -186,14 +186,14 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 $app=get-sprsserviceapplication -Name "My RS Service App"  
 $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
 $emailXml = [xml]$emailCfg   
-$emailXml.SelectSingleNode("//SMTPServer").InnerText = “<email server name>”  
+$emailXml.SelectSingleNode("//SMTPServer").InnerText = "<email server name>"  
 $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
 $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
 $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'  
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- 上の例で、サービス アプリケーションの正確な名前がわからない場合は、最初のステートメントを書き換えて、サービス アプリケーションを部分名検索に基づいて取得することもできます。 例:  
+ 上の例で、サービス アプリケーションの正確な名前がわからない場合は、最初のステートメントを書き換えて、サービス アプリケーションを部分名検索に基づいて取得することもできます。 例 :  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
@@ -204,14 +204,14 @@ $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}
  2 番目のステートメントは、変数 $app 内のサービス アプリケーション オブジェクト用の "レポート サーバー電子メール" 配信拡張機能を取得し、configurationXML を選択します。  
   
 ```  
-$app=get-sprsserviceapplication –Name "Reporting Services Application"  
+$app=get-sprsserviceapplication -Name "Reporting Services Application"  
 Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
  上の 2 つのステートメントを次のように書き直して 1 つのステートメントにすることもできます。  
   
 ```  
-get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+get-sprsserviceapplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
 ### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>Reporting Service アプリケーション データベースのプロパティの取得と設定
@@ -237,13 +237,13 @@ get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, Se
      `ServiceInstance   : SPDatabaseServiceInstance`  
   
 ```  
-Set-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
+Set-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
 ```  
   
  値が設定されていることを確認するには、もう一度 GET コマンドレットを実行します。  
   
 ```  
-Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
+Get-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
 ### <a name="list-reporting-services-data-extensions"></a>Reporting Services データ拡張機能の一覧表示
@@ -255,7 +255,7 @@ $apps = Get-SPRSServiceApplication
 foreach ($app in $apps)   
 {  
 Write-host -ForegroundColor "yellow" Service App Name $app.Name  
-Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensiontype | Format-Table -AutoSize  
+Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensiontype | Format-Table -AutoSize  
 }  
 ```  
   

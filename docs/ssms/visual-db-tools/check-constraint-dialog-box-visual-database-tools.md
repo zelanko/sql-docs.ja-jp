@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 45c47dcde8bfa7546c62741e1130b33b6883b316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504010"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>[制約のチェック] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51697621"
 選択した CHECK 制約の名前を表示します。 この制約の名前を変更するには、プロパティ フィールドに直接テキストを入力します。  
   
 **[説明]**  
-この CHECK 制約の説明を記述します。 プロパティ フィールドに入力することで説明を編集できます。またプロパティ フィールドの右側に表示されている省略記号ボタン (**[...]**) をクリックすると、 **[説明のプロパティ]** ダイアログ ボックスで説明を編集できます。  
+この CHECK 制約の説明を記述します。 プロパティ フィールドに入力することで説明を編集できます。またプロパティ フィールドの右側に表示されている省略記号ボタン ( **[...]** ) をクリックすると、**[説明のプロパティ]** ダイアログ ボックスで説明を編集できます。  
   
 **[テーブル デザイナー] カテゴリ**  
 展開して **[作成時または再度有効化するときに既存データを確認]**、 **[INSERTs および UPDATEs に適用]**、および **[レプリケーションに対して適用]** の各プロパティを表示します。  

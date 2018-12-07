@@ -14,12 +14,12 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5336a318a5384402d10e44b905446e29b0b71aec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9d6d01272a88f4a529e55959e12d87dd33c01cd5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606532"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406189"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server データベース エンジンのインスタンスの非表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51606532"
   詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
   
 ### <a name="clustering"></a>クラスター  
- クラスター化された名前付きインスタンスを非表示にすると、クラスター サービスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できないことがあります。 これにより、クラスター インスタンスの **IsAlive** のチェックが失敗し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がオフラインになります。 インスタンス用に構成した静的ポートを反映するように、クラスター化されたインスタンスのすべてのノードで別名を作成することをお勧めします。  
+ クラスター化された名前付きインスタンスを非表示にすると、クラスター サービスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できないことがあります。 これにより、クラスター インスタンスの **IsAlive** のチェックが失敗し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がオフラインになります。 インスタンス用に構成した静的ポートを反映するように、クラスター化されたインスタンスのすべてのノードで別名を作成することをお勧めします。  
  詳細については、「[クライアントが使用するサーバーの別名の作成または削除 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)」を参照してください。  
   
  クラスター化された名前付きインスタンスを非表示にすると、**LastConnect** レジストリ キー (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) のポートが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリッスンしているポートと異なる場合、クラスター サービスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続できなくなる可能性があります。 クラスター サービスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できない場合、次のようなエラーが表示されることがあります:  

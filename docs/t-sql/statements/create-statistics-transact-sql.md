@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32e830639abf73e85051486c8fa542bc0d1842a9
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560205"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523294"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -110,7 +110,7 @@ CREATE STATISTICS statistics_name
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -126,7 +126,7 @@ CREATE STATISTICS statistics_name
  *table_or_indexed_view_name*  
  テーブル、インデックス付きビュー、または外部テーブルには、統計を作成するための名前です。 を別のデータベースで統計を作成するには、修飾テーブル名を指定します。  
   
- *column [ ,…n]*  
+ *column [ ,...n]*  
  統計情報に含まれる 1 つまたは複数の列。 列は、左から右への優先順位にする必要があります。 ヒストグラムを作成する最初の列のみが使用されます。 すべての列では、密度と呼ばれる列間の相関関係の統計が使用されます。  
   
  インデックス キー列として指定できる任意の列を指定できますが、次の例外があります。  

@@ -22,12 +22,12 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b46ed84db9ad5339639119a8d5f29644c7be8fc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3f4bc730a7823dc40387520068688d3e7145023
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757340"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395903"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージの実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行するには、それらのパッケージの格納場所に応じていくつかのツールのうちの 1 つを使用できます。 次の表にツールを示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "47757340"
 > [!NOTE]
 > この記事では、SSIS パッケージを実行する方法 (全般) と、オンプレミスでパッケージを実行する方法について説明します。 次のプラットフォームで SSIS パッケージを実行することもできます。
 > - **Microsoft Azure クラウド**。 詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」と [Azure で SSIS パッケージを実行する](../lift-shift/ssis-azure-run-packages.md)方法に関するページを参照してください。
-> - **Linux**。 詳しくは、「[Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md)」(SSIS で Linux 上のデータの抽出、変換、読み込みを行う) をご覧ください。
+> - **Linux**。 詳しくは、「[SSIS で Linux 上のデータの抽出、変換、読み込みを行う](../../linux/sql-server-linux-migrate-ssis.md)」 をご覧ください。
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにパッケージを格納するには、プロジェクト配置モデルを使用してプロジェクトをサーバーに配置します。 詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "47757340"
 |**SQL Server Management Studio (Integration Services サーバーをホストするデータベース エンジンのインスタンスに接続している場合)**<br /><br /> 詳細については、「 [[パッケージの実行] ダイアログ ボックス](#execute_package_dialog)」を参照してください。|[ユーザー アカウント制御]|いいえ<br /><br /> ただし、これらの場所からサーバーにパッケージをインポートできます。|いいえ<br /><br /> ただし、ファイル システムからサーバーにパッケージをインポートできます。|
 |**SQL Server Management Studio (Scale Out Master として有効になっている Integration Services サーバーをホストするデータベース エンジンのインスタンスに接続している場合)**<br /><br /> 詳しくは、「[Integration Services (SSIS) Scale Out でパッケージを実行する](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)」をご覧ください。|[ユーザー アカウント制御]|いいえ|いいえ|
 |**SQL Server Management Studio (SSIS パッケージ ストアを管理する Integration Services サービスに接続している場合)**|いいえ|はい|いいえ<br /><br /> ただし、ファイル システムから [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアにパッケージをインポートできます。|  
-|**dtexec**<br /><br /> 詳しくは、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」をご覧ください。|[ユーザー アカウント制御]|はい|[ユーザー アカウント制御]|  
+|**dtexec**<br /><br /> 詳しくは、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」をご覧ください。|[ユーザー アカウント制御]|[はい]|[ユーザー アカウント制御]|  
 |**dtexecui**<br /><br /> 詳細については、「[パッケージ実行ユーティリティ &#40;DtExecUI&#41; の UI リファレンス](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)」を参照してください。|いいえ|はい|[ユーザー アカウント制御]|  
-|**SQL Server エージェント**<br /><br /> パッケージのスケジュールを設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用します。<br /><br /> 詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。|[ユーザー アカウント制御]|はい|[ユーザー アカウント制御]|  
+|**SQL Server エージェント**<br /><br /> パッケージのスケジュールを設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用します。<br /><br /> 詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。|[ユーザー アカウント制御]|[はい]|[ユーザー アカウント制御]|  
 |**組み込みのストアド プロシージャ**<br /><br /> 詳細については、「[catalog.start_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)」を参照してください。|[ユーザー アカウント制御]|いいえ|いいえ|  
 |**API (**<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の型およびメンバーを使用)|[ユーザー アカウント制御]|いいえ|いいえ|  
 |**API (**<xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の型およびメンバーを使用)|現時点ではいいえ|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
@@ -62,7 +62,7 @@ ms.locfileid: "47757340"
 ## <a name="run-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools でのパッケージの実行
   一般に、パッケージの開発、デバッグ、およびテストの段階では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でパッケージを実行します。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーからパッケージを実行すると、パッケージは常に即座に実行されます。  
   
- パッケージの実行中は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブにパッケージの実行の進行状況が表示されます。パッケージおよびそのタスクおよびコンテナーの開始時間と終了時間に加え、パッケージ内で失敗したタスクまたはコンテナーに関する情報が表示されます。 パッケージの実行が完了した後は、 **[実行結果]** タブで実行時情報を確認できます。詳細については、[「制御フローのデバッグ」](../../integration-services/troubleshooting/debugging-control-flow.md) の「進行状況レポート」を参照してください。  
+ パッケージの実行中は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブにパッケージの実行の進行状況が表示されます。パッケージおよびそのタスクおよびコンテナーの開始時間と終了時間に加え、パッケージ内で失敗したタスクまたはコンテナーに関する情報が表示されます。 パッケージの実行が完了した後は、 **[実行結果]** タブで実行時情報を確認できます。詳細については、 [「制御フローのデバッグ」](../../integration-services/troubleshooting/debugging-control-flow.md)の「進行状況レポート」を参照してください。  
   
  **デザイン時配置**。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でパッケージを実行すると、そのパッケージが構築されフォルダーに配置されます。 パッケージを実行する前に、パッケージを配置するフォルダーを指定できます。 フォルダーを指定しない場合、既定で **bin** フォルダーが使用されます。 こうした配置方法は、デザイン時配置と呼ばれます。  
   

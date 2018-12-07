@@ -15,12 +15,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 290008818b5cd486535e9b14f437729e4cab07e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3fc363a3ea7922c6c486f250222b5ce62da8e6e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731400"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514272"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47731400"
 2.  この手順がグローバル類義語辞典に対して繰り返されます。 ただし、言語固有の類義語辞典ファイルで既に一致するものが見つかった用語は、グローバル類義語辞典では照合されません。  
 
 ##  <a name="structure"></a> 類義語辞典ファイルの構造  
- 各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus`の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--` … `-->`が定義されます。 類義語辞典は `<thesaurus>` 要素で定義されます。この要素には、分音記号の設定、拡張セット、置換セットを定義する子要素のサンプルが含まれます。
+ 各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus` の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--`...`-->` が定義されます。 類義語辞典は `<thesaurus>` 要素で定義されます。この要素には、分音記号の設定、拡張セット、置換セットを定義する子要素のサンプルが含まれます。
 
 一般的な空の類義語辞典ファイルには、次の XML テキストが含まれています。  
   

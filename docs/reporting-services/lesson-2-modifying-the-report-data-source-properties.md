@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6a493772e014445a25b21078ce37ada5585e3226
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 7da1fa318ac1bab2310cb8708215db3456d84d66
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813915"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399915"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2: レポート データ ソースのプロパティの変更
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レッスンでは、受信者に配信されるレポートを、Web ポータルを使って選択します。 ここで定義するデータ ドリブン サブスクリプションによって、チュートリアル「 **基本的なテーブル レポートの作成 (SSRS チュートリアル)** 」で作成されたレポート [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)が配信されます。  この後の手順では、レポートがデータの取得に使用するデータ ソースの接続情報を変更します。 データ ドリブン サブスクリプションを介して配信できるのは、 **保存されている資格情報** を使用してレポート データ ソースにアクセスするレポートのみです。 保存されている資格情報は、レポートの自動処理に必要となります。  
@@ -52,7 +52,7 @@ ms.locfileid: "51813915"
 10. **[保存]** をクリックします。
 11. **[キャンセル]** をクリックします。  
   
-11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 .  
   
 ## <a name="bkmk_modify_dataset"></a>AdventureWorksDataset を変更するには  
  次の手順では、パラメーターを使用して注文番号でデータ セットをフィルター処理できるよう、データセットを変更します。

@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657081"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513818"
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51657081"
 ## <a name="before-you-begin"></a>はじめに  
  エクスポート プロセスでは、2 つの段階を経て DAC エクスポート ファイルが構築されます。  
   
-1.  エクスポート ファイル (BACPAC ファイル) に DAC 定義が構築されます。DAC の抽出時には DAC パッケージ ファイルに DAC 定義が構築されますが、これと同様の処理が行われます。 エクスポートされた DAC 定義には、現在のデータベース内のすべてのオブジェクトが含まれます。 もともと DAC から配置され、その後直接変更が加えられたデータベースに対してエクスポート プロセスが実行された場合、エクスポートされる定義は、データベース内のオブジェクト セットと一致し、元の DAC に定義されている内容とは一致しません。  
+1.  エクスポートではエクスポート ファイル (BACPAC ファイル) に DAC 定義が構築されます。DAC の抽出時には DAC パッケージ ファイルに DAC 定義が構築されますが、これと同様の処理が行われます。 エクスポートされた DAC 定義には、現在のデータベース内のすべてのオブジェクトが含まれます。 もともと DAC から配置され、その後直接変更が加えられたデータベースに対してエクスポート プロセスが実行された場合、エクスポートされる定義は、データベース内のオブジェクト セットと一致し、元の DAC に定義されている内容とは一致しません。  
   
 2.  データベース内のすべてのテーブルからデータが一括コピーされて、エクスポート ファイルに組み込まれます。  
   
@@ -65,7 +65,7 @@ Azure SQL DB で、**データベースごとに**、すべてのテーブルま
   
 3.  データベース名を右クリックします。  
   
-4.  **[タスク]** をクリックし、 **[データ層アプリケーションのエクスポート]** を選択します。  
+4.  **[タスク]** をクリックし、**[データ層アプリケーションのエクスポート]** を選択します。  
   
 5.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -90,7 +90,7 @@ Azure SQL DB で、**データベースごとに**、すべてのテーブルま
   
  **[次へ]** : **[DAC パッケージの選択]** ページに進みます。  
   
- **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
+ **[キャンセル]** - 操作を取り消し、ウィザードを閉じます。  
   
 ##  <a name="Export_settings"></a> [エクスポートの設定] ページ  
  このページを使用して、BACPAC ファイルを作成する場所を指定します。  

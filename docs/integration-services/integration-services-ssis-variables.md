@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642009"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512900"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
   変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "51642009"
 ## <a name="system-and-user-defined-variables"></a>システム変数とユーザー定義変数  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、ユーザー定義変数とシステム変数の、2 種類の変数がサポートされています。 ユーザー定義変数とはパッケージの開発者によって定義された変数で、システム変数とは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]によって定義された変数です。 ユーザー定義変数は、パッケージで必要な数だけ作成できますが、システム変数は追加作成できません。  
   
- 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「[SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)」と「[SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
+ 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
   
 > [!NOTE]  
 >  ユーザー定義変数とシステム変数の名前では、大文字と小文字が区別されます。  
@@ -221,7 +221,7 @@ ms.locfileid: "51642009"
   
 4.  削除する変数を選択し、 **[変数の削除]** をクリックします。  
   
-     [変数] ウィンドウに変数が表示されない場合は、 **[グリッドのオプション]** をクリックし、 **[すべてのスコープの変数を表示する]** を選択します。  
+     [変数] ウィンドウに変数が表示されない場合は、**[グリッドのオプション]** をクリックし、**[すべてのスコープの変数を表示する]** を選択します。  
   
 5.  **[変数の削除の確認]** ダイアログ ボックスが開いた場合は、 **[はい]** をクリックして確定します。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "51642009"
   
 4.  変数を選択して、 **[変数の移動]** をクリックします。  
   
-     [変数] ウィンドウに変数が表示されない場合は、 **[グリッドのオプション]** をクリックし、 **[すべてのスコープの変数を表示する]** を選択します。  
+     [変数] ウィンドウに変数が表示されない場合は、**[グリッドのオプション]** をクリックし、**[すべてのスコープの変数を表示する]** を選択します。  
   
 5.  **[新しいスコープの選択]** ダイアログ ボックスで、パッケージまたはパッケージ内のコンテナー、タスク、またはイベント ハンドラーを選択して、変数のスコープを変更します。  
   

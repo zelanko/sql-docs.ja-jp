@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c57fd45ac2633e8027e916055b2850033bf69e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539194"
 ---
 # <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47665040"
   
 ## <a name="server-and-network"></a>サーバーおよびネットワーク  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
   
      既定では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更します。 レプリケーション作業中に使用できるメモリ容量が少なくなるのを防ぐには、 **min server memory** オプションを使用して最小メモリ容量を設定します。 オペレーティング システムによるディスクへのメモリ書き出しを防ぐために、 **max server memory** オプションを使用して最大メモリ容量を設定することもできます。 詳細については、「[サーバー メモリに関するサーバー構成オプション](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47665040"
   
      変更をパーティション分割するには、各サブスクライバーにデータのサブセットをパブリッシュするか、またはアプリケーションを使用して、指定した行の変更を所定のノードに転送します。  
   
-    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
     -   トランザクション レプリケーションは、複数のパブリケーションで、静的フィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「[パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
   
@@ -154,11 +154,11 @@ ms.locfileid: "47665040"
   
 -   初期テスト、監視、またはデバッグの間を除いて、レプリケーション エージェントの冗長レベルを低く設定する。  
   
-     ディストリビューション エージェントまたはマージ エージェントの **–HistoryVerboseLevel** パラメーターおよび **–OutputVerboseLevel** パラメーターを低く設定します。 これにより、エージェントの履歴および出力を追跡するために挿入される新しい行の数を減らすことができます。 代わりに、同じ状態の既存の履歴メッセージが、新しい履歴情報に更新されます。 テスト、監視、およびデバッグを行うときには、冗長レベルを高く設定して、エージェントの動作に関する情報をできるだけ多く得られるようにしてください。  
+     ディストリビューション エージェントまたはマージ エージェントの **-HistoryVerboseLevel** パラメーターおよび **-OutputVerboseLevel** パラメーターを低く設定します。 これにより、エージェントの履歴および出力を追跡するために挿入される新しい行の数を減らすことができます。 代わりに、同じ状態の既存の履歴メッセージが、新しい履歴情報に更新されます。 テスト、監視、およびデバッグを行うときには、冗長レベルを高く設定して、エージェントの動作に関する情報をできるだけ多く得られるようにしてください。  
   
--   スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの **–MaxBCPThreads** パラメーターを使用します (コンピューターのプロセッサ数を超えるスレッド数は指定できません)。 このパラメーターには、スナップショットの作成および適用時に並列実行できる一括コピーの操作数を指定します。  
+-   スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの **-MaxBCPThreads** パラメーターを使用します (コンピューターのプロセッサ数を超えるスレッド数は指定できません)。 このパラメーターには、スナップショットの作成および適用時に並列実行できる一括コピーの操作数を指定します。  
   
--   ディストリビューション エージェントおよびマージ エージェントの **–UseInprocLoader** パラメーターを使用します (パブリッシュされたテーブルに XML 列が含まれる場合、このパラメーターは使用できません)。 このパラメーターを指定すると、スナップショットの適用時にエージェントが BULK INSERT コマンドを実行します。  
+-   ディストリビューション エージェントおよびマージ エージェントの **-UseInprocLoader** パラメーターを使用します (パブリッシュされたテーブルに XML 列が含まれる場合、このパラメーターは使用できません)。 このパラメーターを指定すると、スナップショットの適用時にエージェントが BULK INSERT コマンドを実行します。  
   
  エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
   

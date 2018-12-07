@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604342"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504511"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "51604342"
 
 詳細については、オンライン ブックの「[列ストア インデックスの説明](../relational-databases/indexes/columnstore-indexes-overview.md)」セクションにある次のトピックを参照してください。
 
-- [列ストア インデックスのバージョン管理機能の概要](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – 新機能が含まれています。
+- [列ストア インデックスのバージョン管理機能の概要](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) - 新機能が含まれています。
 
 - [列ストア インデックス データの読み込み](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
@@ -225,7 +225,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
 ### <a name="sublinear-threshold-for-update-of-statistics"></a>統計の更新の下位線形しきい値
 大きなテーブルで統計を自動更新する際のパフォーマンスが上がりました (互換性レベル 130)。 SQL Server 2016 から、統計の自動更新をトリガーするしきい値は 20% となります。大きなテーブルの場合、テーブルの行の数が増えるため、このしきい値は下がります (パーセンテージ)。 しきい値を下げるためにトレース フラグ 2371 を設定する必要はなくなりました。 
 ### <a name="other-enhancements"></a>その他の機能強化
-Insert select ステートメントで挿入では、マルチ スレッドは、または並列プランを持つことができます (互換性レベル 130)。 並列プランを取得するには、INSERT … SELECT ステートメントで TABLOCK ヒントを使用する必要があります。 詳細については、「 [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)」 (並列 Insert Select) を参照してください。
+Insert select ステートメントで挿入では、マルチ スレッドは、または並列プランを持つことができます (互換性レベル 130)。 並列プランを取得するには、INSERT …SELECT ステートメントで TABLOCK ヒントを使用する必要があります。 詳細については、「 [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)」 (並列 Insert Select) を参照してください。
 
 ## <a name="live-query-statistics"></a>ライブ クエリ統計
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、アクティブ クエリのライブ実行プランを表示できます。 このライブ クエリ プランでは、クエリ プラン演算子間の制御フローとして、クエリ実行プロセスをリアルタイムで洞察できます。 詳細については、「 [Live Query Statistics](../relational-databases/performance/live-query-statistics.md)」を参照してください。
@@ -426,7 +426,7 @@ Always On で、暗号化されたデータベースがサポートされるよ�
 
 直接シード処理で、セカンダリ レプリカをネットワーク経由で自動的にシード処理することができます (ターゲット データベースの物理バックアップをセカンダリで復元する必要がある手動によるシード処理ではない)。 直接シード処理は、[CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/create-availability-group-transact-sql.md) ステートメントまたは [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) ステートメントで **SEEDING_MODE=AUTOMATIC** を設定して指定します。 直接シード処理で使用される各セカンダリ レプリカに対し、**GRANT CREATE ANY DATABASE** に [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) を指定する必要もあります。
 
-**パフォーマンスの向上** – 可用性グループの同期スループットが最大 10 倍向上しました。これは、プライマリ レプリカのログ ブロックの並列かつ高速な圧縮、最適化された同期プロトコル、セカンダリ レプリカのログ レコードの並列圧縮解除と再実行によります。 これにより、読み取り可能セカンダリの鮮度が向上し、フェールオーバーの場合のデータベースの復旧時間が短縮されます。 SQL Server 2016 ではメモリ最適化テーブルの再実行をまだ並列処理できないことにご注意ください。
+**パフォーマンスの向上** - 可用性グループの同期スループットが最大 10 倍向上しました。これは、プライマリ レプリカのログ ブロックの並列かつ高速な圧縮、最適化された同期プロトコル、セカンダリ レプリカのログ レコードの並列圧縮解除と再実行によります。 これにより、読み取り可能セカンダリの鮮度が向上し、フェールオーバーの場合のデータベースの復旧時間が短縮されます。 SQL Server 2016 ではメモリ最適化テーブルの再実行をまだ並列処理できないことにご注意ください。
 
 ## <a name="replication-enhancements"></a>レプリケーションの機能強化
 - メモリ最適化テーブルのレプリケーションがサポートされるようになりました。 詳細については、「[メモリ最適化テーブル サブスクライバーへのレプリケーション](../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)」を参照してください。

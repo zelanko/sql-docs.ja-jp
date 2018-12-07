@@ -28,12 +28,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701630"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532084"
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
   パッケージの管理には、パッケージの監視、管理、インポートおよびエクスポートが含まれます。  
@@ -107,7 +107,7 @@ ms.locfileid: "47701630"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、次の場所からインポートしたり、次の場所にエクスポートしたりできます。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
+-    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージを異なるストレージ形式および場所にエクスポートできます。  
   
@@ -139,19 +139,19 @@ ms.locfileid: "47701630"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスからインポートするには、 **[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
   
-         参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[OK]** をクリックします。  
+         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、**[OK]** をクリックします。  
   
     -   ファイル システムからインポートするには、 **[ファイル システム]** をクリックします。  
   
-         参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[開く]** をクリックします。  
+         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、**[開く]** をクリックします。  
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアからインポートするには、 **[SSIS パッケージ ストア]** をクリックし、サーバーを指定します。  
   
-         参照ボタン (**[...]**) をクリックし、インポートするパッケージを選択します。次に、**[OK]** をクリックします。  
+         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、**[OK]** をクリックします。  
   
 7.  必要に応じて、パッケージ名を更新します。  
   
-8.  パッケージの保護レベルを更新するには、参照ボタン ( **[...]** ) をクリックし、 **[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
+8.  パッケージの保護レベルを更新するには、参照ボタン **[...]** をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
   
 9. **[OK]** をクリックすると、インポートが完了します。  
   
@@ -175,17 +175,17 @@ ms.locfileid: "47701630"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにエクスポートするには、 **[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
   
-         参照ボタン ( **[...]**) をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを探します。 必要に応じて、パッケージの既定の名前を更新し、 **[OK]** をクリックします。  
+         参照ボタン **[...]** をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを探します。 必要に応じて、パッケージの既定の名前を更新し、 **[OK]** をクリックします。  
   
     -   ファイル システムにエクスポートするには、 **[ファイル システム]** をクリックします。  
   
-         参照ボタン ( **[...]** ) をクリックし、パッケージのエクスポート先のフォルダーを探します。次に、パッケージ ファイルの名前を入力して **[保存]** をクリックします。  
+         参照ボタン **[...]** をクリックし、パッケージのエクスポート先のフォルダーを探します。次に、パッケージ ファイルの名前を入力して **[保存]** をクリックします。  
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアにエクスポートするには、 **[SSIS パッケージ ストア]** をクリックしてサーバーを指定します。  
   
-         参照ボタン ( **[...]**) をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを選択します。 必要に応じて、パッケージの新しい名前を **[パッケージ名]** テキスト ボックスに入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         参照ボタン **[...]** をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを選択します。 必要に応じて、パッケージの新しい名前を **[パッケージ名]** テキスト ボックスに入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  パッケージの保護レベルを更新するには、参照ボタン (**[...]**) をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
+7.  パッケージの保護レベルを更新するには、参照ボタン **[...]** をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
   
 8.  **[OK]** をクリックすると、エクスポートが完了します。  
 
@@ -217,7 +217,7 @@ ms.locfileid: "47701630"
  **User name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
- **Password**  
+ **パスワード**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **[パッケージのパス]**  
@@ -227,7 +227,7 @@ ms.locfileid: "47701630"
  オプションでパッケージの名前を変更できます。 既定の名前は、インポートするパッケージの名前です。  
   
  **保護レベル**  
- 参照ボタン **[...]** をクリックし、 **[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
+ 参照ボタン **[...]** をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>[パッケージのエクスポート] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのエクスポート] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを別の場所にエクスポートしたり、必要に応じてパッケージの保護レベルを変更したりできます。  
@@ -257,14 +257,14 @@ ms.locfileid: "47701630"
  **User name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
- **Password**  
+ **パスワード**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **[パッケージのパス]**  
- パッケージのパスを入力するか、 **[…]** をクリックしてパッケージを格納するフォルダーを指定します。  
+ パッケージのパスを入力するか、参照ボタン **[...]** をクリックしてパッケージを格納するフォルダーを指定します。  
   
  **保護レベル**  
- **[...]** ボタンを押して、 **[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
+ 参照ボタン **[...]** をクリックして、**[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
 
 ## <a name="back-up-and-restore-packages"></a>パッケージのバックアップと復元
   

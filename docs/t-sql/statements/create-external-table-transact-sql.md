@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703960"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402817"
 ---
 # <a name="create-external-table-transact-sql"></a>外部テーブル (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -172,7 +172,7 @@ SQL Data Warehouse と Analytics Platform System では、[CREATE EXTERNAL TABLE
  オプションを拒否します。  
  PolyBase が外部データ ソースから取得した*ダーティ* レコードを処理する方法を決定する、reject パラメーターを指定できます。 データ レコードは、'ダーティ' 場合と見なされますが実際のデータ型または列の数も、外部テーブルの列の定義が一致しません。  
   
- 指定または拒否する値を変更しない、ときに、PolyBase は、既定値を使用します。 CREATE EXTERNAL TABLE ステートメントを使用して、外部テーブルを作成するときに、拒否するパラメーターについては、この情報は追加のメタデータとして格納されます。   ときに、将来の SELECT ステートメントまたは選択 INTO SELECT ステートメントは、外部テーブルからデータを選択して、PolyBase オプションを使用して、拒否数や、実際のクエリが失敗する前に拒否されることもの行の割合を判断します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 クエリは結果を返します (部分) まで、拒否のしきい値を超過するとします。また、適切なエラー メッセージと、失敗します。  
+ 指定または拒否する値を変更しない、ときに、PolyBase は、既定値を使用します。 CREATE EXTERNAL TABLE ステートメントを使用して、外部テーブルを作成するときに、拒否するパラメーターについては、この情報は追加のメタデータとして格納されます。   ときに、将来の SELECT ステートメントまたは選択 INTO SELECT ステートメントは、外部テーブルからデータを選択して、PolyBase オプションを使用して、拒否数や、実際のクエリが失敗する前に拒否されることもの行の割合を判断します。 . クエリは結果を返します (部分) まで、拒否のしきい値を超過するとします。また、適切なエラー メッセージと、失敗します。  
   
  REJECT_TYPE = **value** | percentage  
  REJECT_VALUE オプションは、リテラル値またはパーセントとして指定されているかどうか明確にします。  
@@ -220,7 +220,7 @@ SQL Data Warehouse と Analytics Platform System では、[CREATE EXTERNAL TABLE
 REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
   
   外部データ ソース内のディレクトリを指定します。拒否された行と該当エラー ファイルをそこに書き込みます。
-指定したパスが存在しない場合、PolyBase では、そのパスが自動的に作成されます。 “_rejectedrows” という名前で子ディレクトリが作成されます。“_” 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 このディレクトリ内には、YearMonthDay -HourMinuteSecond 形式 (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーで、2 種類のファイル、理由ファイルとデータ ファイルが書き込まれます。 
+指定したパスが存在しない場合、PolyBase では、そのパスが自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_" 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 このディレクトリ内には、YearMonthDay -HourMinuteSecond 形式 (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーで、2 種類のファイル、理由ファイルとデータ ファイルが書き込まれます。 
 
 理由ファイルとデータ ファイルのいずれにも、CTAS ステートメントと関連付けられている queryID が含まれます。 データも理由も別個のファイルに含まれるため、該当するファイルにはそれに一致する接尾辞が付きます。 
   

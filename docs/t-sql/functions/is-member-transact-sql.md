@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 654cd8331398746213afa892e8bf0c6acc86c269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b7da52e047b004fe4be394c72a784dfe3ccec21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735510"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391275"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ IS_MEMBER ( { 'group' | 'role' } )
   
  この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、 **db_owner** 固定データベース ロールには、 **CONTROL DATABASE** 権限です。 ユーザーがいる場合、 **CONTROL DATABASE** 権限はない、ロールのメンバーと、この関数は、ユーザーがのメンバーではないことを報告して正しく、 **db_owner** ロールでは、ユーザーは、同じアクセス許可を持っている場合でもです。  
   
- メンバー、 **sysadmin** を入力として、すべてのデータベースの固定サーバー ロール、 **dbo** ユーザーです。 メンバーに対するアクセス許可のチェック、 **sysadmin** 固定サーバー ロールのアクセス許可を確認する **dbo**, 、元のログインではありません。 **Dbo** データベース ロールに追加することはできずに、Windows グループが存在しない **dbo** 常に 0 (または、ロールが存在しない場合は NULL) を返します。  
+ メンバー、 **sysadmin** を入力として、すべてのデータベースの固定サーバー ロール、 **dbo** ユーザーです。 メンバーに対するアクセス許可のチェック、 **sysadmin** 固定サーバー ロールのアクセス許可を確認する **dbo**, 、元のログインではありません。 **dbo** データベース ロールに追加することはできずに、Windows グループが存在しない **dbo** は常に 0 (または、ロールが存在しない場合は NULL) を返します。  
   
 ## <a name="related-functions"></a>関連する関数  
  別のかを判断する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがデータベース ロールのメンバーを [ IS_ROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-rolemember-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを [IS_SRVROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  

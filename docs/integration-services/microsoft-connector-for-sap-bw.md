@@ -11,12 +11,12 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fbb7e2458432bb39ff452b703441fc320d2e645
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a06dcac3487220a84d8a22f6c92e02859e91a6f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510056"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW は、SAP NetWeaver BW Version 7 システムからデータを抽出し、このシステムにデータを読み込むための 3 つのコンポーネントのセットで構成されます。  
@@ -35,11 +35,11 @@ ms.locfileid: "51639579"
 ## <a name="components"></a>Components  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW には次のコンポーネントがあります。  
   
--   **SAP BW 変換元**- SAP BW 変換元は、SAP Netweaver BW Version 7 システムからデータを抽出するためのデータ フローの変換元コンポーネントです。  
+-   **SAP BW 変換元** - SAP BW 変換元は、SAP Netweaver BW Version 7 システムからデータを抽出するためのデータ フローの変換元コンポーネントです。  
   
--   **SAP BW 変換先**- SAP BW 変換先は、SAP Netweaver BW Version 7 システムにデータを読み込むためのデータ フローの変換先コンポーネントです。  
+-   **SAP BW 変換先** - SAP BW 変換先は、SAP Netweaver BW Version 7 システムにデータを読み込むためのデータ フローの変換先コンポーネントです。  
   
--   **SAP BW 接続マネージャー**- SAP BW 接続マネージャーは、SAP Netweaver BW Version 7 システムに SAP BW 変換元または SAP BW 変換先を接続します。  
+-   **SAP BW 接続マネージャー** - SAP BW 接続マネージャーによって、SAP Netweaver BW Version 7 システムに SAP BW 変換元または SAP BW 変換先が接続されます。  
   
  SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=301897)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   

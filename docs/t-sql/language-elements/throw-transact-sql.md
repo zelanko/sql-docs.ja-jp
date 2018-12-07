@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aff73be9d9213cea3c9336a926a0ad0de0a3c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9c57b68a7aabc2d275dd5fa64c7e7cb00c3969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803260"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505911"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -73,7 +73,7 @@ THROW [ { error_number | @local_variable },
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. THROW を使用して例外を発生させる  
- 次の例では、`THROW` ステートメントを使用して例外を発生させる方法を示します。  
+ 次の例は、`THROW` ステートメントを使用して例外を発生させる方法を示します。  
   
 ```sql  
 THROW 51000, 'The record does not exist.', 1;  
@@ -88,7 +88,7 @@ THROW 51000, 'The record does not exist.', 1;
  ```  
   
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. THROW を使用して例外を再度発生させる  
- 次の例では、`THROW` ステートメントを使用して最後にスローされた例外を再度発生させる方法を示します。  
+ 次の例は、`THROW` ステートメントを使用して最後に発生した例外を再度発生させる方法を示します。  
   
 ```sql  
 USE tempdb;  
@@ -119,7 +119,7 @@ END CATCH;
  ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. FORMATMESSAGE を THROW と共に使用する  
- 次の例では、`FORMATMESSAGE` 関数を `THROW` と共に使用して、カスタマイズされたエラー メッセージをスローする方法を示します。 この例では、まず、`sp_addmessage` を使用して、ユーザー定義のエラー メッセージを作成します。 THROW ステートメントでは、RAISERROR のように、*message* パラメーターで書式引数が許可されないため、エラー メッセージ 60000 で想定される 3 つのパラメーター値を渡すために FORMATMESSAGE 関数が使用されます。  
+ 次の例は、`FORMATMESSAGE` 関数を `THROW` と共に使用して、カスタマイズされたエラー メッセージをスローする方法を示します。 この例では、まず、`sp_addmessage` を使用して、ユーザー定義のエラー メッセージを作成します。 THROW ステートメントでは、RAISERROR のように、*message* パラメーターで書式引数が許可されないため、エラー メッセージ 60000 で想定される 3 つのパラメーター値を渡すために FORMATMESSAGE 関数が使用されます。  
   
 ```sql  
 EXEC sys.sp_addmessage  

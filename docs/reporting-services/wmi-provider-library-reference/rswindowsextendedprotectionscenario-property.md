@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 712b7ec6894cf1c974c00865fc6baa40e9b2a5c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78c3a7693ea17899afde6dec1173d79cddec9954
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620470"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407709"
 ---
 # <a name="rswindowsextendedprotectionscenario-property"></a>RSWindowsExtendedProtectionScenario プロパティ
   レポート サーバーが許可するように構成されている拡張保護のシナリオを示す文字列値を返します。  
@@ -33,7 +33,7 @@ public string RSWindowsExtendedProtectionScenario;
   
  有効な値を次に示します。  
   
- `”Any | Proxy | Direct”`  
+ `"Any | Proxy | Direct"`  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

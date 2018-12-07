@@ -12,12 +12,12 @@ ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b341dc48a5f72e3f3a0067c9f4d00267175243be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 728f79c1856cf4447bf12333162fcd209583468e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713230"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395285"
 ---
 # <a name="changesets-master-data-services"></a>変更セット (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "47713230"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、エンティティに対する保留中の変更を変更セットに保存する機能をサポートします。 この機能には、2 つの使用シナリオがあります。  
   
--   **“承認が必要” がエンティティ管理者によって有効にされる場合の変更**  
+-   **"承認が必要" がエンティティ管理者によって有効にされる場合の変更**  
   
      エンティティ管理者が、指定されたエンティティへの変更がコミットされる前に承認が必要と指定した場合、エンティティへの変更は、新しい変更セットまたは既存の変更セットに保存されてからのみ、承認のために送信することができます。  詳細については、「[承認が必要 (マスター データ サービス)](../master-data-services/approval-required-master-data-services.md)」を参照してください。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47713230"
  [変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)   
  [変更セットの適用および更新 &#40;マスター データ サービス&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
- [変更セットの承認または拒否 &#40;マスター データ サービス&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
+ [変更セットの承認または拒否 (マスター データ サービス)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
  [変更セットの管理 &#40;マスター データ サービス&#41;](../master-data-services/manage-changesets-master-data-services.md)  
   
   

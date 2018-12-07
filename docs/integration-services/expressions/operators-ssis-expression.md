@@ -16,12 +16,12 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1998aa0072e001f4c6065341dc788a9b0bb562e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4395090e03c904970b5cefcd71b0570a3e184a1e
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713400"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321728"
 ---
 # <a name="operators-ssis-expression"></a>演算子 (SSIS 式)
   このセクションでは、式の言語が提供する演算子、および式エバリュエーターが使用する演算子の優先順位と結合性について説明します。  
@@ -41,11 +41,11 @@ ms.locfileid: "47713400"
 |[% &#40;剰余&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|最初の数値式を 2 番目の数値式で割った剰余を整数値で返します。|  
 |[&#124;&#124; (論理 OR) (SSIS 式)](../../integration-services/expressions/logical-or-ssis-expression.md)|論理 OR 演算を実行します。|  
 |[&& (論理 AND) (SSIS 式)](../../integration-services/expressions/logical-and-ssis-expression.md)|論理 AND 演算を実行します。|  
-|[\!&#40;論理 Not&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|ブール型のオペランドを否定します。|  
+|[\! &#40;論理 NOT&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|ブール型のオペランドを否定します。|  
 |[&#124; (ビット演算子包括的 OR) (SSIS 式)](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|2 つの整数値の OR 演算をビット単位で実行します。|  
 |[^ (ビット演算子排他的 OR) (SSIS 式)](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|2 つの整数値の排他的 OR 演算をビット単位で実行します。|  
 |[& (ビット演算子 AND) (SSIS 式)](../../integration-services/expressions/bitwise-and-ssis-expression.md)|2 つの整数値の AND 演算をビット単位で実行します。|  
-|[~ (ビット演算子 Not) (SSIS 式)](../../integration-services/expressions/bitwise-not-ssis-expression.md)|整数の否定のビット演算を実行します。|  
+|[~ &#40;ビット演算子 NOT&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|整数の否定のビット演算を実行します。|  
 |[== (等しい) (SSIS 式)](../../integration-services/expressions/equal-ssis-expression.md)|2 つの式が等しいかどうかを判別するための比較を実行します。|  
 |[\!= &#40;等しくない&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|2 つの式が等しくないかどうかを判別するための比較を実行します。|  
 |[> (より大きい) (SSIS 式)](../../integration-services/expressions/greater-than-ssis-expression.md)|最初の式が 2 番目の式より大きいかどうかを判別するための比較を実行します。|  

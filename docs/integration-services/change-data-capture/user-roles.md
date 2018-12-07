@@ -11,12 +11,12 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eadcee634436016626d6096544035e29c0d9c27e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 506987635969a1f9a6b6484e7deeda02712f9eb6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599450"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398005"
 ---
 # <a name="user-roles"></a>ユーザー ロール
   ここでは、Change Data Capture Service for Oracle by Attunity のユーザー ロールについて説明します。 ここで説明するロールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、Windows ロール、または Oracle データベース ロールです。  
@@ -129,7 +129,7 @@ ms.locfileid: "47599450"
   
  Oracle データベース管理者は、実行する必要がある Oracle SQL スクリプトを取得して、その実行前に評価することができます。 また、Oracle SQL スクリプトを Oracle CDC デザイナー コンソールから直接実行することもできます。  
   
- Oracle データベース管理者が Oracle CDC デザイナー コンソールの使用を選択した場合、管理者の資格情報は保持されません。ただし、資格情報が使用されたコンテキスト (ダイアログ) は除きます。  
+ Oracle データベース管理者が Oracle CDC Designer コンソールの使用を選択した場合、管理者の資格情報は保持されません。ただし、資格情報が使用されたコンテキスト (ダイアログ) は除きます。  
   
  Oracle データベース管理者は、Oracle CDC Service の管理者と連携して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle CDC インスタンスを構成します。  
   

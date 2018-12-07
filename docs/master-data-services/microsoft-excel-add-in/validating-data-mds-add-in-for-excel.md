@@ -11,12 +11,12 @@ ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bc9f742eff99fd71efa984c0a0a88c97cceb221e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6690ab92652858d2ab3df7c066c5b4cbf6a65c57
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603206"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418553"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>データの検証 (Excel 用 MDS アドイン)
 
@@ -50,7 +50,7 @@ ms.locfileid: "47603206"
   
 |状態|[説明]|  
 |------------|-----------------|  
-|[エラー]|行内の 1 つ以上の値が、長さやデータ型などのシステム要件を満たしていません。 MDS リポジトリ内の値は更新されません。|  
+|[エラー]|行内の 1 つまたは複数の値が、長さやデータ型などのシステム要件を満たしていません。 MDS リポジトリ内の値は更新されません。|  
 |新しい行|行内の値は、まだ MDS リポジトリにパブリッシュされていません。|  
 |[読み取り専用]|ログインしているユーザーは、行内の 1 つ以上の値に対して読み取り専用の権限を持っていて、値は更新されません。|  
 |変更なし|行の値は、ワークシート内で変更されていません。 これは、リポジトリ内の値が変更されていないという意味ではありません。シート内の最新のデータを取得するには、 **[接続と読み込み]** グループで、 **[読み込みまたは更新]** をクリックします。<br /><br /> これは、各行の既定の設定です。|  

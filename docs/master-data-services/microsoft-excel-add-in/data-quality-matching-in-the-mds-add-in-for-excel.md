@@ -11,12 +11,12 @@ ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76f25db84d074a9aeb544daf2fe33b512836daf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f706344fb2e3f194cb059e5d0d0338aaf7adc06
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713100"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402698"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel 用 MDS アドインでのデータ品質照合
 
@@ -24,7 +24,7 @@ ms.locfileid: "47713100"
 
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、新しいデータと既に MDS で管理されているデータを比較することは、重複するデータや不正確なデータの追加を避けるために役立ちます。  
   
- MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Data Quality Services (DQS) 機能を使用して、類似するデータを照合します。 アドインの照合機能を使用すると、類似するレコードがグループ化され、結果の精度を表すスコアが表示されます。 DQS によって提供される照合機能の詳細については、「 [データ照合](../../data-quality-services/data-matching.md)」を参照してください。  
+ MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Data Quality Services (DQS) 機能を使用して、類似するデータを照合します。 アドインの照合機能を使用すると、類似するレコードがグループ化され、結果の精度を表すスコアが表示されます。 DQS によって提供される照合機能の詳細については、「 [データ照合](../../data-quality-services/data-matching.md)」を参照してください。  
   
 ## <a name="workflow-for-data-quality-matching"></a>データ品質照合のワークフロー  
  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で DQS を使用する場合、次のワークフローを使用します。  

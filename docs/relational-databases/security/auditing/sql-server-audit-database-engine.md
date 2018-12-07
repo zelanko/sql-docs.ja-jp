@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670563"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510703"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,9 +86,9 @@ ms.locfileid: "51670563"
   
  監査管理者が別の場所に監査ファイルをコピーする場合 (アーカイブ用など)、新しい場所に対する ACL は、次の権限に限定する必要があります。  
   
--   監査管理者 – 読み取り/書き込み  
+-   監査管理者 - 読み取り/書き込み  
   
--   監査リーダー – 読み取り  
+-   監査リーダー - 読み取り  
   
  監査管理者または監査リーダーしかアクセスしない、別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス ( [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]のインスタンスなど) から監査レポートを作成することをお勧めします。 レポート作成用に別の [!INCLUDE[ssDE](../../../includes/ssde-md.md)] のインスタンスを使用することで、許可されていないユーザーによる監査レコードへのアクセスを防ぐことができます。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "51670563"
  詳細については、「 [サーバー監査およびサーバー監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 」および「 [サーバー監査およびデータベース監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
   
 ## <a name="considerations"></a>考慮事項  
- 監査の開始時にエラーが発生すると、サーバーが起動しなくなります。 その場合にサーバーを起動するには、コマンド ラインで **–f** オプションを使用します。  
+ 監査の開始時にエラーが発生すると、サーバーが起動しなくなります。 その場合にサーバーを起動するには、コマンド ラインで **-f** オプションを使用します。  
   
- 監査に対して ON_FAILURE=SHUTDOWN が指定されているために監査エラーによってサーバーがシャットダウンしたり起動しなくなったりすると、MSG_AUDIT_FORCED_SHUTDOWN イベントがログに書き込まれます。 シャットダウンはこの設定が初めて検出されたときに生じるため、このイベントが書き込まれるのは 1 回だけです。 このイベントは、シャットダウンを引き起こした監査のエラー メッセージの後に書き込まれます。 監査に伴うシャットダウンを回避するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **フラグを使用して** をシングル ユーザー モードで起動します。 シングル ユーザー モードで起動すると、ON_FAILURE=SHUTDOWN が指定されているすべての監査がダウングレードされて、そのセッションでは ON_FAILURE=CONTINUE として実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **フラグを使用して** を起動すると、エラー ログに MSG_AUDIT_SHUTDOWN_BYPASSED メッセージが書き込まれます。  
+ 監査に対して ON_FAILURE=SHUTDOWN が指定されているために監査エラーによってサーバーがシャットダウンしたり起動しなくなったりすると、MSG_AUDIT_FORCED_SHUTDOWN イベントがログに書き込まれます。 シャットダウンはこの設定が初めて検出されたときに生じるため、このイベントが書き込まれるのは 1 回だけです。 このイベントは、シャットダウンを引き起こした監査のエラー メッセージの後に書き込まれます。 管理者は、**-m** フラグを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動することで、監査に伴うシャットダウンを回避することができます。 シングル ユーザー モードで起動すると、ON_FAILURE=SHUTDOWN が指定されているすべての監査がダウングレードされて、そのセッションでは ON_FAILURE=CONTINUE として実行されます。 **-m** フラグを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を起動すると、エラー ログに MSG_AUDIT_SHUTDOWN_BYPASSED メッセージが書き込まれます。  
   
  スタートアップ オプションの詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
   

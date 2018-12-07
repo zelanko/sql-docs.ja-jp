@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db904742a73ec3837bfffe1eaecffbe37ca5c154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63512de9229f26e6e04ad5f44c5dd1c757cb881
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763250"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391695"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>ConfigurationSetting メソッド - SetWindowsServiceIdentity
   レポート サーバーの Windows サービスを指定された Windows ユーザーとして実行させ、レポート サーバーを運用できるファイル システム権限をこのアカウントに与えます。  
@@ -44,7 +44,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *アカウント*  
  Windows サービスの実行に使用する "DOMAIN\alias" 形式の Windows アカウント。  
   
- *Password*  
+ *パスワード*  
  アカウントのパスワード。  
   
  *HRESULT*  
@@ -56,7 +56,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="remarks"></a>Remarks  
  *UseBuiltInAccount* パラメーターを **true** に設定しており、レポート サーバーが Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] または Windows XP で実行されている場合、 *Name*、 *Domain*、および *Password* の各パラメーターの値は無視され、ローカル システム アカウントが使用されます。  
   
- *UseBuiltInAccount* パラメーターを **true** に設定しており、レポート サーバーが Windows Server 2003 で実行されている場合、 *Domain* および *Password* プロパティは無視され、名前フィールドには "Builtin\NetworkService"、"Builtin\System"、または "Builtin\LocalService" を指定する必要があります。  
+ *UseBuiltInAccount* パラメーターを **true** に設定しており、レポート サーバーが Windows Server 2003 で実行されている場合、*Domain* および *Password* プロパティは無視され、名前フィールドには "Builtin\NetworkService"、"Builtin\System"、または "Builtin\LocalService" を指定する必要があります。  
   
  SetWindowsServiceIdentity メソッドはレポート サーバーのインストール ディレクトリのファイルおよびフォルダーに対するファイル権限を設定します。  
   

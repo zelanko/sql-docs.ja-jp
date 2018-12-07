@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cb85fe53517bcbed16ff86be801578c6d80d21d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4c69b0ebfe9750d904e46ee3e6bdc7665ef5d0b7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643894"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398835"
 ---
 # <a name="specify-a-breakpoint-action"></a>ブレークポイント アクションの指定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51643894"
   
  出力メッセージは、デバッグ対象の **からの情報を格納した式を含むテキスト文字列として、** [メッセージを表示する] [!INCLUDE[tsql](../../includes/tsql-md.md)] オプションで指定します。 式には、次の内容が含まれます。  
   
--   中かっこ ({}) に囲まれた [!INCLUDE[tsql](../../includes/tsql-md.md)] 式。 式には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 変数、パラメーター、および組み込み関数を含めることができます。 例としては、{@MyVariable}、{@NameParameter}、{@@SPID}、{SERVERPROPERTY(‘ProcessID’)} などがあります。  
+-   中かっこ ({}) に囲まれた [!INCLUDE[tsql](../../includes/tsql-md.md)] 式。 式には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 変数、パラメーター、および組み込み関数を含めることができます。 例としては、{@MyVariable}、{@NameParameter}、{@@SPID}、{SERVERPROPERTY('ProcessID')} などがあります。  
   
 -   次のキーワードのいずれかになります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51643894"
   
     4.  $FUNCTION は、ブレークポイントが設定されているストアド プロシージャまたはユーザー定義関数の名前を返します。 ブレークポイントがエディター ウィンドウに設定されている場合、$FUNCTION は編集されているスクリプト ファイルの名前を返します。  
   
-    5.  $PID および $PNAME は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] が実行されているデータベース エンジンのインスタンスを実行しているオペレーティング システム プロセスの ID および名前を返します。 $PID は、SERVERPROPERTY(‘ProcessID’) と同じ ID を返しますが、SERVERPROPERTY(‘ProcessID’) が 10 進値であるのに対して $PID は 16 進数の値である点が異なります。  
+    5.  $PID および $PNAME は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] が実行されているデータベース エンジンのインスタンスを実行しているオペレーティング システム プロセスの ID および名前を返します。 $PID は、SERVERPROPERTY('ProcessID') と同じ ID を返しますが、SERVERPROPERTY('ProcessID') が 10 進値であるのに対して $PID は 16 進数の値である点が異なります。  
   
     6.  $TID および $TNAME は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチを実行しているオペレーティング システム スレッドの ID および名前を返します。 スレッドは、データベース エンジンのインスタンスを実行しているプロセスに関連付けられています。 $TID は SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID と同じ値を返しますが、kpid が 10 進値であるのに対して $TID は 16 進数の値である点が異なります。  
   

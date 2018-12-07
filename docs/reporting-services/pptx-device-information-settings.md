@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16a9ad6bc26b304be0ad3308c2e5afe2084a3a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb658507dd7e28100338e1f300ff24ca0aeadf92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732300"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394855"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX デバイス情報設定
   次の表は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートを PPTX 形式で表示するデバイス情報の設定を示しています。  

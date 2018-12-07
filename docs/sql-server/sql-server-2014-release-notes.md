@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699690"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503492"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -359,7 +359,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 **回避策:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「 [Microsoft SQL Server 2012 SP1 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「[Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
   
 2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](https://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
   
@@ -374,7 +374,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 **回避策:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「 [Microsoft SQL Server 2012 SP1 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「[Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
   
 2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](https://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
   

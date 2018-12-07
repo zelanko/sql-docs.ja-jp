@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2684a24c333014ee351359ee229d32603ee11acd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833400"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515463"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>レプリケーション モニターを使用したパフォーマンスの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47833400"
   
     |[非常に良い]|[良い]|[普通]|悪い|重大|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   マージ レプリケーションの場合、パフォーマンス品質は、しきい値とは関係ありません (行処理しきい値は、 **[パフォーマンス クリティカル]** の値を **[状態]** 列に表示するかどうかを決定します)。 パフォーマンス品質は、個々のサブスクリプション パフォーマンスを、接続の種類 (ダイヤルアップまたは LAN) が同じパブリケーションのサブスクリプションの平均的な過去のパフォーマンスと比較することで決定されます。 レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続により 5 回行われた後で、値が表示されます。 50 以上の変更に伴う同期が 5 回未満の場合、または最も最近の同期での変更が 50 未満の場合、レプリケーション モニターには値は表示されません。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47833400"
   
     |[非常に良い]|[良い]|[普通]|悪い|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
  サブスクリプション情報の表示の詳細については、「[サブスクリプションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)」を参照してください。  
   

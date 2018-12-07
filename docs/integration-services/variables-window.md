@@ -16,17 +16,17 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3417b53ba41027b5d629069676818b8f54f13d0b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: eaa6caf40a44ba8579b5e5cff31f0c4c10f2eb4a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640869"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420513"
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
   **[変数]** ウィンドウを使用すると、ユーザー定義変数を作成、変更し、システム変数を表示できます。  
   
- 既定では、 **[変数]** ウィンドウは **の SSIS デザイナーの** [接続マネージャー] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]領域の下にあります。 **[変数]** ウィンドウが表示されない場合は、 **[SSIS]** メニューの **[変数]** をクリックして、ウィンドウを表示します。  
+ 既定では、 **[変数]** ウィンドウは **の SSIS デザイナーの** [接続マネージャー] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]領域の下にあります。 **[変数]** ウィンドウが表示されない場合は、**[SSIS]** メニューの **[変数]** をクリックして、ウィンドウを表示します。  
   
  必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
   

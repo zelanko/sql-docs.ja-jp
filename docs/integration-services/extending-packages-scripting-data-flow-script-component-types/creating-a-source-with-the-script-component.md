@@ -17,12 +17,12 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73ae0b025ff20bd7b269329b8045816de97d6888
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3ed1838c956a6870b277c9e71a6df17e474229f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504535"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>スクリプト コンポーネントによる変換元の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内で変換元コンポーネントを使用すると、データ ソースからデータを読み込み、下流にある変換や変換先に渡すことができます。 通常、データ ソースへの接続には、既存の接続マネージャーを使用します。  
@@ -72,9 +72,9 @@ ms.locfileid: "47651360"
 ### <a name="adding-variables"></a>変数の追加  
  値をスクリプト内で使用する既存の変数がある場合は、**[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドに追加できます。  
   
- プロパティ フィールドに複数の変数を入力する場合は、変数名をコンマで区切ります。 また、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックして **[変数の選択]** ダイアログ ボックスで変数を選択することで、複数の変数を入力することもできます。  
+ プロパティ フィールドに複数の変数を入力する場合は、変数名をコンマで区切ります。 また、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックして **[変数の選択]** ダイアログ ボックスで変数を選択することで、複数の変数を入力することもできます。  
   
- スクリプト コンポーネントで変数を使用する方法の一般情報については、「[スクリプト コンポーネントでの変数の使用](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
+ スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
  **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
   

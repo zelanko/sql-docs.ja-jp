@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658921"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511844"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -182,8 +182,8 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  この場合の出力結果を次に示します。  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
  Circle Two の境界は約 4∏ で、これは境界の実際の値です。 ただし、Circle One の境界はきわめて不正確です。 Circle One の `CompoundCurve` インスタンスは、1 つの円弧 (ABC) と 2 つの線分 (CD、DA) を格納します。 `CompoundCurve` インスタンスは、円を定義するために 2 つの円弧 (ABC、CDA) を格納する必要があります。 `LineString` インスタンスは、2 番目の点のセット (4 2, 2 4, 0 2) を Circle One の `CompoundCurve` インスタンスに定義します。 ここで、 `CircularString` 内の `CompoundCurve`インスタンスを明示的に宣言する必要があります。  

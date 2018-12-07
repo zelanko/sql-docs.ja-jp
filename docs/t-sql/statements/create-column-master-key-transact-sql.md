@@ -27,12 +27,12 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56af3e381d8466f7afe68a5a1e77584511de5422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81fd7b18058430b3132471f67a8b94e4444873e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609610"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393045"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -156,10 +156,10 @@ CREATE COLUMN MASTER KEY key_name
      Azure Key Vault 内のキーの URL
 
 ENCLAVE_COMPUTATIONS  
-列マスター キーがエンクレーブ対応であることを指定します。これは、この列マスター キーで暗号化されているすべての列暗号化キーは、サーバー側の安全なエンクレーブを使用して共有でき、エンクレーブ内での計算に使用できることを意味します。 詳細については、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」 (セキュリティで保護されたエンクレーブが設定された Always Encrypted) を参照してください。
+列マスター キーがエンクレーブ対応であることを指定します。これは、この列マスター キーで暗号化されているすべての列暗号化キーは、サーバー側の安全なエンクレーブを使用して共有でき、エンクレーブ内での計算に使用できることを意味します。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
 
  *signature*  
-*キー パス*と列マスター キーを含む ENCLAVE_COMPUTATIONS の設定のデジタル署名の結果であるバイナリ リテラルです (この署名には ENCLAVE_COMPUTATIONS が指定されているかどうかが反映されています)。 この署名は、承認されていないユーザーが符号付きの値を変更できないようにします。 Always Encrypted 対応のクライアント ドライバーでは、署名を検証して、署名が無効な場合、アプリケーションにエラーを返すことができます。 署名は、クライアント側のツールを使用して生成されている必要があります。 詳細については、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」 (セキュリティで保護されたエンクレーブが設定された Always Encrypted) を参照してください。
+*キー パス*と列マスター キーを含む ENCLAVE_COMPUTATIONS の設定のデジタル署名の結果であるバイナリ リテラルです (この署名には ENCLAVE_COMPUTATIONS が指定されているかどうかが反映されています)。 この署名は、承認されていないユーザーが符号付きの値を変更できないようにします。 Always Encrypted 対応のクライアント ドライバーでは、署名を検証して、署名が無効な場合、アプリケーションにエラーを返すことができます。 署名は、クライアント側のツールを使用して生成されている必要があります。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
   
   
 ## <a name="remarks"></a>Remarks  

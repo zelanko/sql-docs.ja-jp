@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6222c5829af5a63e4ab7fd079a405063f08ec5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f2efdc555a1fe236d42ea342846674154cbee5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661731"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393075"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server での JSON に関する一般的な問題を解決する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ FOR JSON PATH
 FOR JSON クエリまたは列式の JSON_QUERY 関数のすべての結果は、個別の入れ子になった JSON サブオブジェクトとして書式設定され、メインの結果に含まれます。  
 
 ### <a name="prevent-double-escaped-json-in-for-json-output"></a>FOR JSON 出力内のダブルエスケープが指定された JSON を防ぐ  
- **質問** JSON テキストをテーブルの列に保存しました。 このテキストを FOR JSON の出力に含める必要があります。 ただし、FOR JSON では JSON 内のすべての文字をエスケープするため、次の例で示すように、入れ子になったオブジェクトではなく、JSON 文字列を取得しています。  
+ **質問** JSON テキストをテーブルの列に保存しました。 このテキストを FOR JSON の出力に含める必要があります。 しかしながら、FOR JSON では JSON 内のすべての文字をエスケープするため、次の例で示すように、入れ子になったオブジェクトではなく、JSON 文字列を取得しています。  
   
 ```sql  
 SELECT 'Text' AS myText, '{"day":23}' AS myJson  
@@ -133,7 +133,7 @@ WHERE [key] = 'color'
 ### <a name="openjson-requires-compatibility-level-130"></a>OPENJSON には、互換性レベル 130 が必要です。  
  **質問** SQL Server 2016 で OPENJSON を実行しようとしていて、次のエラーが発生しています。  
   
- `Msg 208, Level 16, State 1 ‘Invalid object name OPENJSON’`  
+ `Msg 208, Level 16, State 1 'Invalid object name OPENJSON'`  
   
  **回答** OPENJSON 関数は、互換性レベル 130 でのみ使用できます。 DB の互換性レベルが 130 より下の場合、OPENJSON は非表示になります。 他の JSON 関数は、すべての互換性レベルで使用できます。  
  

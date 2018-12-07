@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513232"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51813995"
   
 2.  **[データベース]** ノードを展開します。  
   
-3.  登録するデータベースを右クリックし、 **[タスク]** をポイントして **[データ層アプリケーションとして登録]** をクリックします。  
+3.  登録するデータベースを右クリックし、**[タスク]** をポイントして **[データ層アプリケーションとして登録]** をクリックします。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "51813995"
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>オブジェクトの検証  
- ****  *SchemaName* **を実行できません。** *ObjectName* **を実行できません。** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 *SchemaName ***.*** ObjectName* は、現在検証されているオブジェクトを示します。  
+ ****  *SchemaName* **を実行できません。** *ObjectName* **を実行できません。** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 _SchemaName_**.**_ObjectName_ は、現在検証されているオブジェクトを示します。  
   
  **[< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
   

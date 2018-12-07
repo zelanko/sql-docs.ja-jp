@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae9cbb47056a368faeed42fd4e20179e0fb0f61d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7619852bae5989dcf12b571175d21243f6968051
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021826"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516042"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>テキスト ボックス内のテキストの書式設定 (レポート ビルダーおよび SSRS)
   テキスト ボックス内のテキストは、どの部分も個別に書式設定できます。また、1 つのテキスト ボックスに、プレースホルダー テキストと静的テキストを混在させることができます。 複数の書式を混在させ、プレースホルダー テキストを追加できるこの機能により、文書の差し込みを行ったり、レポート内のテキストに使用するテンプレートを作成したりできます。 プレースホルダーを使用することによって、あらゆる式を定義できるほか、それぞれの式に対して、個別に書式を適用することもできます。  
@@ -49,7 +49,7 @@ ms.locfileid: "50021826"
   
 2.  **[挿入]** タブの **[テキスト ボックス]** をクリックします。 一覧内をクリックし、次にマウスをドラッグして、必要なサイズのボックスを作成します。  
   
-3.  テキスト ボックスのラベルを入力します。たとえば、「 **My Field**」と入力します。  
+3.  テキスト ボックスのラベルを入力します。たとえば、「**My Field**」と入力します。  
   
 4.  データセットからテキスト ボックスにフィールドをドラッグします。 フィールドに対してプレースホルダーが作成されます。  
   

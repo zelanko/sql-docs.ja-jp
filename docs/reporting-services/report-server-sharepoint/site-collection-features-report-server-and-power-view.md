@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 18a805e049dfeedc3b8984c1c92da3af40b5bfda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812279"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405717"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化
 
@@ -32,7 +32,7 @@ ms.locfileid: "51812279"
   
  "SharePoint Web アプリケーション 80 にはルート サイト コレクションがありません"  
   
- このメッセージは "RS_SP_#.log" (# は増加する値) という名前のアドイン インストール ログに記録されます。 このログ ファイルは、現在のユーザーの Temp フォルダー (例: C:\Users\\[user name]\AppData\Local\Temp) にあります。アドインのインストール方法の詳細については、「 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。  
+ このメッセージは "RS_SP_#.log" (# は増加する値) という名前のアドイン インストール ログにあります。 このログ ファイルは、現在のユーザーの Temp フォルダー (例: C:\Users\\[user name]\AppData\Local\Temp) にあります。アドインのインストール方法の詳細については、「 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。  
 
 ## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>レポート サーバーと Power View の統合サイト コレクション機能をアクティブ化する
   

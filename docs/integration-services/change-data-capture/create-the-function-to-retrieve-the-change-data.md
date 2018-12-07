@@ -13,12 +13,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fca9cfa8f04e5c3c506e1c4ba6d0226c26db4711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650221"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418033"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローが完了したので、次の作業では、変更データを取得するテーブル値関数を作成します。 この関数は、最初の増分読み込みの前に一度作成するだけで済みます。  

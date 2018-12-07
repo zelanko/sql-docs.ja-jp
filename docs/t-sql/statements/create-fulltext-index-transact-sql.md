@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 33eb48be31cccdc96f8a38d008c7d1ebfa865981
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169292"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516136"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ CREATE FULLTEXT INDEX ON table_name
  *column_name*  
  フルテキスト インデックスに含める列の名前を指定します。 フルテキスト検索用にインデックスを作成できるのは、型が **char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary(max)** の列だけです。 複数の列を指定するには、次のように *column_name* 句を繰り返します。  
   
- CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […], *column_name2* […]) …  
+ CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
  TYPE COLUMN *type_column_name*  
  **varbinary(max)** または **image** ドキュメントのドキュメント型を保持するために使用されているテーブル列 *type_column_name* の名前を指定します。 型列と呼ばれるこの列には、ユーザー指定のファイル拡張子 (.doc、.pdf、.xls など) が格納されます。 型列は、 **char**型、 **nchar**型、 **varchar**型、 **nvarchar**型にする必要があります。  
@@ -121,7 +121,7 @@ CREATE FULLTEXT INDEX ON table_name
  フルテキスト インデックスの対象となるテーブル列の変更 (更新、削除、または挿入) が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってフルテキスト インデックスに反映されるかどうかを指定します。 WRITETEXT および UPDATETEXT によるデータの変更は、フルテキスト インデックスには反映されず、変更の監視でも取得されません。  
   
  MANUAL  
- ALTER FULLTEXT INDEX を呼び出すことによって、追跡された変更を手動で反映する必要がありますを指定しています. START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの呼び出しによって手動で行うこと ("*手動作成*") を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定期的に呼び出すことができます。  
+ ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの呼び出しによって手動で行うこと ("*手動作成*") を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定期的に呼び出すことができます。  
   
  **AUTO**  
  ベース テーブルでデータが変更されたときに、追跡された変更を自動的に反映すること ("*自動作成*") を指定します。 この場合、フルテキスト インデックスに対して変更は自動的に反映されますが、反映までに少し時間がかかることがあります。 AUTO は既定値です。  

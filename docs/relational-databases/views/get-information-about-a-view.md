@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ca5faedafdd1eaedb110eacff43af85af6593fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648090"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505732"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のビューの定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 ビューのデータが元のテーブルからどのように抽出されているのかを理解したり、ビューで定義されているデータを確認するために、ビューの定義を調べたい場合があります。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のビューの定義またはプロパティに関する情報は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して取得できます。 ビューのデータが元のテーブルからどのように抽出されているのかを理解したり、ビューで定義されているデータを確認するために、ビューの定義を調べたい場合があります。  
   
 > [!IMPORTANT]  
 >  ビューから参照しているオブジェクトの名前を変更する場合は、ビューのテキストに新しいオブジェクト名が反映されるようにビューを変更する必要があります。 オブジェクト名を変更する前には、まずオブジェクトの依存関係を表示して、その変更により影響を受けるビューがないかどうかを確認してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "47648090"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   

@@ -11,12 +11,12 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82ac3a5bb3a18c83246a55c9fa6e2154de58dc6f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b7d58507dac1d1071f0b546e0610f39381b648de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501815"
 ---
 # <a name="lesson-6-1---copying-the-lesson-5-package"></a>レッスン 6-1 - レッスン 5 のパッケージのコピー
 ここでは、レッスン 5 で作成した Lesson 5.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 5 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 6 の実習では、このパッケージの新しいコピーを使用します。  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 584f35564e25026553f189e9048137c73ba1b64e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 68297156870ac3eefc5b532b7e15f253064e4608
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021636"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711661"
 ---
 # <a name="tutorial-format-text-report-builder"></a>チュートリアル: テキストの書式設定 (レポート ビルダー)
 
@@ -50,7 +50,7 @@ ms.locfileid: "50021636"
 
     **[レポート データ]** ペインが表示されていない場合は、 **[表示]** タブの **[レポート データ]** をオンにします。
   
-2.  **[名前]** ボックスに「 **TextDataSource**」と入力します。  
+2.   **[名前]** ボックスに「 **TextDataSource**」と入力します。  
   
 3.  **[レポートに埋め込まれた接続を使用する]** をクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "50021636"
   
 2.  データ ソースが **TextDataSource**であることを確認します。  
   
-3.  **[名前]** ボックスに「 **TextDataset**」と入力します。  
+3.   **[名前]** ボックスに「 **TextDataset**」と入力します。  
   
 4.  クエリの種類に **[テキスト]** が選択されていることを確認してから、 **[クエリ デザイナー]** をクリックします。  
   
@@ -359,6 +359,6 @@ ms.locfileid: "50021636"
 
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 [レポート アイテムの書式設定](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
-[SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[SQL Server のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

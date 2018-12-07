@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 901bb417d9af0f34d645ae18fa36a5c05dadb7aa
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411782"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396922"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>AlwaysOn 可用性グループのクラスター化された DTC を作成する
 
@@ -116,7 +116,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.**in-doubt xact resolution** を構成する 
-このスクリプトは、不明なトランザクションに対して “コミットを推測する” ように **in-doubt xact resolution** サーバー構成オプションを構成します。  **SQLCMD モード**で `SQLNODE1` に対して SQL Server Management Studio (SSMS) の次の T-SQL スクリプトを実行します。
+このスクリプトは、不明なトランザクションに対して "コミットを推測する" ように **in-doubt xact resolution** サーバー構成オプションを構成します。  **SQLCMD モード**で `SQLNODE1` に対して SQL Server Management Studio (SSMS) の次の T-SQL スクリプトを実行します。
 
 ```sql  
 /*******************************************************************
@@ -587,4 +587,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> `USE AG1` ステートメントを実行し、データベース コンテキストを `AG1`に設定する必要があります。  設定しないと、“トランザクション コンテキストを他のセッションが使用中です。” というエラー メッセージが表示されます。
+> `USE AG1` ステートメントを実行し、データベース コンテキストを `AG1`に設定する必要があります。  設定しないと、"トランザクション コンテキストを他のセッションが使用中です。" というエラー メッセージが表示されます。

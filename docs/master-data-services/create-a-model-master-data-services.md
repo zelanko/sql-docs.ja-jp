@@ -15,12 +15,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20e04541e352e3df79b8ad03b2fa54940a875987
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800490"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398791"
 ---
 # <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
 
@@ -49,7 +49,7 @@ ms.locfileid: "47800490"
   
 6.  **[Log Retention Days]** (ログの保持日数) フィールドで、ログ データを保持するためのオプションのいずれかを選択します。 既定値は **[システム設定]** です。これは、値が [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]のシステム設定から継承されることを示します。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
-     システム設定をオーバーライドし、トランザクション ログ データを削除しない場合は、**[いいえ]** を選択します。 前の日のログをすべて切り捨てて、今日のログ データのみを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに 0 を設定します。 指定した日数のログ データを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに目的の日数を設定します。  
+     システム設定をオーバーライドし、トランザクション ログ データを削除しない場合は、**[いいえ]** を選択します。 前の日のログをすべて切り捨てて、今日のログ データのみを保持するには、**[はい]** を選択し、**[日間]** フィールドに 0 を設定します。 指定した日数のログ データを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに目的の日数を設定します。  
   
 7.  (オプション) **[モデルと同じ名前のエンティティを作成する]** をクリックして、モデルと同じ名前のエンティティを作成します。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47800490"
  [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)   
  [モデルを削除する (マスター データ サービス)](../master-data-services/delete-a-model-master-data-services.md)   
- [モデルを編集する &#40;マスター データ サービス&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [モデルを編集する (マスター データ サービス)](../master-data-services/edit-model-master-data-services.md)   
  [トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696841"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392342"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
@@ -82,7 +82,7 @@ ms.locfileid: "51696841"
   
  このリリースでは、ユーザーに対して管理権限をモデル レベルで明示的に割り当てることができます。 つまり、エンティティ レベルなどのモデル サブツリーで後からユーザーに権限が割り当てられた場合、ユーザーはこの管理権限を保持し続けます。  
   
- この [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]リリースでは、読み取り、作成、更新、削除の各権限が新しく導入され、権限レベルがさらに多く提供されています。 たとえば、ユーザーに更新権限しかない場合、そのユーザーはマスター データを更新できますが、作成や削除はできません。 作成、更新、または削除権限をユーザーに付与すると、そのユーザーには読み取り権限が自動的に割り当てられます。 読み取り、作成、更新、削除の各権限を組み合わせることもできます。  
+ この [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] リリースでは、読み取り、作成、更新、削除の各権限が新しく導入され、権限レベルがさらに多く提供されています。 たとえば、ユーザーに更新権限しかない場合、そのユーザーはマスター データを更新できますが、作成や削除はできません。 作成、更新、または削除権限をユーザーに付与すると、そのユーザーには読み取り権限が自動的に割り当てられます。 読み取り、作成、更新、削除の各権限を組み合わせることもできます。  
   
  次の表に示すように、 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]にアップグレードすると、以前の権限が新しい権限に変換されます。  
   

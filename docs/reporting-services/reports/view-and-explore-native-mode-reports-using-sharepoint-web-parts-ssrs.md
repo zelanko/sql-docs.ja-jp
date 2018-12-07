@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c78f6e02a2aef893aa3e8702158a5f3c63cea76a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813416"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417283"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -114,7 +114,7 @@ ms.locfileid: "51813416"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  "操作が正常に完了しました。" というメッセージが表示されます。  
+4.  "操作が正常に完了しました" というメッセージが表示されます。  
   
      `-globalinstall` を指定すると、Web パーツがグローバル アセンブリ キャッシュ (GAC) に追加されます。 Web パーツを接続する場合には、この手順を必ず実行してください。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51813416"
   
 7.  **[レポート マネージャー URL]** に、アクセス対象のネイティブ モードのレポート サーバーに関連付けられているレポート マネージャー インスタンスの URL を入力します。 レポート マネージャー URL の既定の構文は、**https://\<サーバー名>/reports** です。  
   
-8.  **[レポート パス]** で、スラッシュ、フォルダーのパス、レポート名の順に指定します。 サーバー名やレポート マネージャーの仮想ディレクトリは **含めないでください** 。 たとえば、Adventure Works フォルダーにある Company Sales レポートを開くには、「 **/Adventure Works/Company Sales**」と指定します。 Products レポートがレポート サーバーのルート フォルダーの **/Products**にある別の例を次に示します。  
+8.  **[レポート パス]** で、スラッシュ、フォルダーのパス、レポート名の順に指定します。 サーバー名やレポート マネージャーの仮想ディレクトリは **含めないでください** 。 たとえば、Adventure Works フォルダーにある 'Company Sales' レポートを開くには、「**/Adventure Works/Company Sales**」と指定します。 'Products' レポートがレポート サーバーのルート フォルダーの **/Products** にある別の例を次に示します。  
   
 9. **[OK]** をクリックします。  
   

@@ -11,12 +11,12 @@ ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 374971541d49ebd55449c500b3d61a6ed1296ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766090"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420663"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>カスタム ワークフローの作成 (Master Data Services)
 
@@ -118,7 +118,7 @@ ms.locfileid: "47766090"
 6.  サービス スナップインを使用して、SQL Server MDS Workflow Integration Service を開始します。 これを行うには、サービス スナップインで SQL Server MDS Workflow Integration Service を見つけて選択し、**[開始]** リンクをクリックします。  
   
 ### <a name="create-a-workflow-business-rule"></a>ワークフロー ビジネス ルールの作成  
- [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] を使用して、適用時にワークフローを開始するビジネス ルールを作成およびパブリッシュします。 ビジネス ルールには、属性値を変更するアクションを必ず含めて、そのルールが一度適用された後、false と評価されるようにしてください。 たとえば、Price 属性値が 500 より大きく、Approved 属性値が空白の場合に、true と評価されるビジネス ルールがあるとします。 その場合、そのルールに次の 2 つのアクションを含めることができます。1 つは、Approved 属性値を Pending に設定するアクション。もう 1 つは、ワークフローを開始するアクションです。 また、"has changed" 条件を使用するルールを作成し、追跡グループを変更するための属性を追加する方法もあります。 ビジネス ルールの詳細については、「[ビジネス ルール &#40;マスター データ サービス&#41;](../../master-data-services/business-rules-master-data-services.md)」を参照してください。  
+ [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] を使用して、適用時にワークフローを開始するビジネス ルールを作成およびパブリッシュします。 ビジネス ルールには、属性値を変更するアクションを必ず含めて、そのルールが一度適用された後、false と評価されるようにしてください。 たとえば、Price 属性値が 500 より大きく、Approved 属性値が空白の場合に、true と評価されるビジネス ルールがあるとします。 その場合、そのルールに次の 2 つのアクションを含めることができます。1 つは、Approved 属性値を Pending に設定するアクション。もう 1 つは、ワークフローを開始するアクションです。 また、"が変更されている" 条件を使用するルールを作成し、追跡グループを変更するための属性を追加する方法もあります。 ビジネス ルールの詳細については、「[ビジネス ルール &#40;マスター データ サービス&#41;](../../master-data-services/business-rules-master-data-services.md)」を参照してください。  
   
  カスタム ワークフローを開始するビジネス ルールを [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で作成するには、次の手順を実行します。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "47766090"
  データにビジネス ルールを適用して、ワークフローを開始します。 これを行うには、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] を使用して、検証するメンバーを含んだエンティティを編集します。 **[ビジネス ルールの適用]** をクリックします。 ビジネス ルールへの応答として、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの Service Broker キューに値を設定します。 SQL Server MDS Workflow Integration Service は、キューをチェックすると、指定されたワークフロー ハンドラー アセンブリにデータを送信し、キューをクリアします。 ワークフロー ハンドラー アセンブリは、コードに記述された任意のアクションを実行します。  
   
 ## <a name="troubleshoot-custom-workflows"></a>カスタム ワークフローのトラブルシューティング  
- ワークフロー ハンドラー アセンブリがデータを受け取らなかった場合は、SQL Server MDS Workflow Integration Service をデバッグするか、または Service Broker キューを参照します。  
+ ワークフロー ハンドラー アセンブリがデータを受け取らなかった場合は、SQL Server MDS Workflow Integration Service をデバッグするか、または Service Broker キューを表示してみることができます。  
   
 ### <a name="debug-sql-server-mds-workflow-integration-service"></a>SQL Server MDS Workflow Integration Service のデバッグ  
  SQL Server Workflow Integration Service をデバッグするには、次の手順に従います。  

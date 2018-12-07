@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5a968cfc8cbe06a492528d60022ba4aef03cd34
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324585"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418813"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのデータのクエリ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  テンポラル テーブルのデータの最新 (実際) の状態を取得するときは、テンポラル以外のテーブルをクエリするときとまったく同じ方法でクエリできます。 PERIOD 列が非表示ではない場合は、それらの値が SELECT \* クエリで表示されます。 **PERIOD** 列が非表示として指定されている場合は、それらの値は SELECT \* クエリでは表示されません。 **PERIOD** 列が非表示の場合は、SELECT 句で **PERIOD** 列を明示的に参照すると、これらの列の値が返されます。  
+  テンポラル テーブルのデータの最新 (実際) の状態を取得するときは、テンポラル以外のテーブルをクエリするときとまったく同じ方法でクエリできます。 PERIOD 列が非表示ではない場合は、それらの値が SELECT \* クエリで表示されます。 **PERIOD** 列を非表示として指定した場合は、それらの値は SELECT \* クエリでは表示されません。 **PERIOD** 列が非表示の場合は、SELECT 句で **PERIOD** 列を明示的に参照すると、これらの列の値が返されます。  
   
  任意の種類の時間ベースの分析を実行するには、新しい **FOR SYSTEM_TIME** 句を使用し、テンポラル固有の 4 つのサブ句を指定して、現在のテーブルと履歴テーブルのデータをクエリします。 これらの句の詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   

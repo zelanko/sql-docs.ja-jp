@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635020"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395455"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services と Always On 可用性グループ
 
@@ -186,7 +186,7 @@ ms.locfileid: "47635020"
   
      次の手順は、セカンダリ レプリカに同期コミット モードが構成されていることを前提としています。  
   
-     同期を検証するには、プライマリ レプリカおよびセカンダリ レプリカをホストする各インスタンスへの接続を開き、データベース] フォルダーを展開し、各レプリカ内でデータベースの名前に **[(同期済み)]** および **[(同期中)]** と追加されていることを確認します。  
+     同期を検証するには、プライマリ レプリカおよびセカンダリ レプリカをホストする各インスタンスへの接続を開き、データベース フォルダーを展開し、各レプリカ内でデータベースの名前に **(同期済み)** および **(同期中)** と追加されていることを確認します。  
   
     > [!NOTE]  
     >  これらの手順は「[可用性グループの計画的な手動フェールオーバーの実行 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)」に記載されており、このタスクを実行するための追加情報と別の手順を示しています。  
@@ -214,7 +214,7 @@ ms.locfileid: "47635020"
 ##  <a name="bkmk_whathappens"></a> フェールオーバー後に何が起きるか  
  フェールオーバー中に、セカンダリ レプリカはプライマリ ロールに移行し、元のプライマリ レプリカはセカンダリ レプリカに移行します。 すべてのクライアント接続が終了して、可用性グループ リスナーの所有権はプライマリ レプリカ ロールと共に新しい SQL Server インスタンスに移動し、リスナー エンドポイントは新しいインスタンスの仮想 IP アドレスと TCP ポートにバインドされます。 詳細については、「[可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)」を参照してください。  
   
- 処理中にフェールオーバーが発生した場合、次のエラーが Analysis Services のログ ファイルまたは表示ウィンドウに発生します。「OLE DB エラー: OLE DB または ODBC エラー: 通信リンクが失敗しました; 08S01; TPC プロバイダー : 既存の接続はリモート ホストに強制的に切断されました。 ; 08S01。」  
+ 処理中にフェールオーバーが発生した場合、次のエラーが Analysis Services のログ ファイルまたは表示ウィンドウに発生します。"OLE DB エラー: OLE DB または ODBC エラー: 通信リンクが失敗しました; 08S01; TPC プロバイダー : 既存の接続はリモート ホストに強制的に切断されました。 ; 08S01。"  
   
  数分待ってから再試行すると、このエラーは解決されます。 可用性グループが読み取り可能なセカンダリ レプリカに対して正しく構成されている場合、処理を再試行すると、新しいセカンダリ レプリカで再開されます。  
   

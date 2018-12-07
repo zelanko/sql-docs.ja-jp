@@ -12,12 +12,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d624d1f12644bc21b62ad328f7f5b8662bdc550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6fadc557aa18d65cec6df7be0773caa40f5f451
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845512"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516389"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "47845512"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
   
-##  <a name="cat"></a> システム ビュー: カタログ ビュー  
+##  <a name="cat"></a> システム ビュー - カタログ ビュー  
   
 -   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "47845512"
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
-##  <a name="dmv"></a> システム ビュー: 動的管理ビュー  
+##  <a name="dmv"></a> システム ビュー - 動的管理ビュー  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
   

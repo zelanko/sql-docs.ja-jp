@@ -11,12 +11,12 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 48cdfcf18aee274d9017e8d25c44536f2ec51c76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84033f550894c29a895ad63e8ee62ce5ce6d461b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712020"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506404"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ JSON_MODIFY ( expression , path , newValue )
  *式 (expression)*  
  式。 通常、変数またはを JSON テキストを含む列の名前。  
   
- **JSON_MODIFY** エラーが返されます *式* 有効な JSON が含まれていません。  
+ *式*に有効な JSON が含まれていない場合、**JSON_MODIFY** エラーが返されます。  
   
  *path*  
  更新するプロパティを指定する JSON path 式。
@@ -78,9 +78,9 @@ JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合は、新し�
 |既存の値|パスが存在します。|厳密でないモード|厳格モード|  
 |--------------------|-----------------|--------------|-----------------|  
 |NULL でないです。|[ユーザー アカウント制御]|既存の値を更新します。|既存の値を更新します。|  
-|NULL でないです。|いいえ|指定したパスに新しいキーと値のペアを作成しようとします。<br /><br /> これは失敗する場合があります。 たとえば、パス `$.user.setting.theme` を指定したときに、`$.user` または `$.user.settings` オブジェクトが存在しないか、設定がアレイまたはスカラー値の場合、JSON_MODIFY はキー `theme` を挿入しません。|Error – INVALID_PROPERTY|  
+|NULL でないです。|いいえ|指定したパスに新しいキーと値のペアを作成しようとします。<br /><br /> これは失敗する場合があります。 たとえば、パス `$.user.setting.theme` を指定したときに、`$.user` または `$.user.settings` オブジェクトが存在しないか、設定がアレイまたはスカラー値の場合、JSON_MODIFY はキー `theme` を挿入しません。|Error - INVALID_PROPERTY|  
 |NULL|[ユーザー アカウント制御]|既存のプロパティを削除します。|既存の値を null に設定します。|  
-|NULL|いいえ|NO ACTION 最初の引数が結果として返されます。|Error – INVALID_PROPERTY|  
+|NULL|いいえ|NO ACTION 最初の引数が結果として返されます。|Error - INVALID_PROPERTY|  
   
  lax モードでは、JSON_MODIFY は、新しいキーと値のペアを作成しようとしますが、その操作は、場合によっては失敗します。  
   

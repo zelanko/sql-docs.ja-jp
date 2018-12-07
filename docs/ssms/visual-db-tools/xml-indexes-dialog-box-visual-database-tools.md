@@ -13,12 +13,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18a953d0bf5619fec9ee443df19130cca0a8314d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93fea5756d35e116ae9d265d2c0c157e538258ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512151"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ XML インデックスを新規作成します。
 XML インデックスの名前を表示します。 新しいキーまたはインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
 **[説明]**  
-インデックスの説明を記述します。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン (**[...]**) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
+インデックスの説明を記述します。 より詳細な説明を記述する場合は、**[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン (**[...]**) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
 **[テーブル デザイナー] カテゴリ**  
 展開してこの XML インデックスのプロパティに関する情報を表示します。  

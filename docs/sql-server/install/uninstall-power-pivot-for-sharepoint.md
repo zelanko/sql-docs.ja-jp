@@ -10,12 +10,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d60a5174b5ca067e9f0e0d9f5db7efd6e71466ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 105401dc20d20b3414624d5dd0a40238a32bd243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535120"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアンインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47840430"
 -   Analysis Services と [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]をアンインストールするには、Analysis Services のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
   
 ##  <a name="bkmk_before"></a> 手順 1. アンインストール前のチェック リスト  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスは、クエリとデータ処理をサポートするソフトウェアがファームから削除されると無効になります。 最初の手順として、機能しなくなるファイルとライブラリを事前に削除する必要があります。 これにより、ソフトウェアのアンインストール前の「欠落データ」に関する問題と懸念に対処できます。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスは、クエリとデータ処理をサポートするソフトウェアがファームから削除されると無効になります。 最初の手順として、機能しなくなるファイルとライブラリを事前に削除する必要があります。 これにより、ソフトウェアのアンインストール前の "欠落データ" に関する問題と懸念に対処できます。  
   
 1.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールに関連付けられているすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック、ドキュメント、およびライブラリを削除します。 ソフトウェアをアンインストールすると、ライブラリとドキュメントはどちらも機能しなくなります。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47840430"
   
 4.  タスク一覧内の各アクションの機能を確認します。  
   
-     **[削除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除]** では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
+      **[削除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除]** では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
   
      データベースを削除するには、 **[削除] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除** を選択し、 **[このサービス アプリケーションに関連付けられているアプリケーション データを削除します]** をアンインストールするには、Analysis Services のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
   
@@ -119,15 +119,15 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  SharePoint 管理シェルを管理者として起動し、次のコマンドを実行してキュー内のジョブを表示します。  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
 3.  既存の配置について、 **[種類]** が "取り消し" または "展開" であり、 **[ファイル]** が powerpivotwebapp.wsp または powerpivotfarm.wsp であることを確認します。  
   
-4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションに関連するデプロイまたは取り消しの場合、 **[JobId]** の GUID 値をコピーし、次のコマンドに貼り付けます (シェルの [編集] メニューの [マーク]、[コピー]、および [貼り付け] を使用して GUID をコピーします)。  
+4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションに関連するデプロイまたは取り消しの場合、**[JobId]** の GUID 値をコピーし、次のコマンドに貼り付けます (シェルの [編集] メニューの [マーク]、[コピー]、および [貼り付け] を使用して GUID をコピーします)。  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  構成ツールで **[検証]** に続けて **[実行]** をクリックして、タスクを再試行します。  

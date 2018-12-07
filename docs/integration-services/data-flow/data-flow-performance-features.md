@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642379"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411989"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -183,7 +183,7 @@ ms.locfileid: "51642379"
   
 -   sqlcat.com の技術記事「 [SQL Server Integration Services のベスト プラクティス ベスト 10](https://go.microsoft.com/fwlink/?LinkId=220818)」  
   
--   sqlcat.com の技術記事とサンプル「 [SSIS の "Balanced Data Distributor"](https://go.microsoft.com/fwlink/?LinkId=220822)」  
+-   sqlcat.com の技術記事とサンプル「[SSIS の "Balanced Data Distributor"](https://go.microsoft.com/fwlink/?LinkId=220822)」  
   
 -   blogs.msdn.com のブログ投稿「 [SSIS パッケージのパフォーマンスに関する問題のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=238156)」  
   
