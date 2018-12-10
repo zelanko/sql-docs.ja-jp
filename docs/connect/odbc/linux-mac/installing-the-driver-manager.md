@@ -52,7 +52,7 @@ ms.locfileid: "51605822"
   
 5.  インストールの準備ができたら、コマンド **./build_dm.sh** を実行します (お使いのコンピューターが FTP 経由で外部のサイトにアクセスできる場合)。
 
-お使いのコンピューターが FTP 経由で外部のサイトにアクセスできない場合は、`unixODBC-2.3.0.tar.gz` を取得します。 取得できる`unixODBC-2.3.0.tar.gz`から[ https://www.unixodbc.org](https://www.unixodbc.org/)します。ページの左側にある [ダウンロード]** リンクをクリックして、ダウンロード ページに移動します。 適切なリンクをクリックして、unixODBC-2.3.0 (unixODBC-2.3.1 ではなく) をダウンロードします。 unixODBC-2.3.1 は、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の今回のリリースではサポートされていません。 UnixODBC ドライバー マネージャーのインストールを開始するには、次のコマンドを実行します。 **./build_dm.sh--ダウンロード url = file://unixODBC-2.3.0.tar.gz**します。  
+お使いのコンピューターが FTP 経由で外部のサイトにアクセスできない場合は、`unixODBC-2.3.0.tar.gz` を取得します。 取得できる`unixODBC-2.3.0.tar.gz`から[ https://www.unixodbc.org](https://www.unixodbc.org/)します。ページの左側にある [ダウンロード]** リンクをクリックして、ダウンロード ページに移動します。 適切なリンクをクリックして、unixODBC-2.3.0 (unixODBC-2.3.1 ではなく) をダウンロードします。 unixODBC-2.3.1 は、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の今回のリリースではサポートされていません。 UnixODBC ドライバー マネージャーのインストールを開始するには、次のコマンドを実行します。 **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**します。  
 
 6.  **YES** を入力してファイルの解凍を続行します。 プロセスのこの部分は完了までに最大 5 分かかります。  
 
@@ -74,9 +74,9 @@ ms.locfileid: "51605822"
   
 5.  コマンド プロンプトでコマンドを実行します: **CPPFLAGS ="-DSIZEOF_LONG_INT = 8"** します。  
   
-6.  コマンド プロンプトでコマンドを実行します:**エクスポート CPPFLAGS**します。  
+6.  コマンド プロンプトでコマンドを実行します:**export CPPFLAGS**します。  
   
-7.  コマンド プロンプトでコマンドを実行します: **"./configure-= usr/--libdir から =/usr/lib64--sysconfdir =/その他 - 有効にする gui をプレフィックス = なし - 有効にするドライバー = なし - 有効にする iconv-と-iconv-char-enc = UTF8 - と-iconv-ucode-enc UTF16LE ="**.  
+7.  コマンド プロンプトでコマンドを実行します: **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"**.  
   
 8.  (root としてログインして) コマンド プロンプトでコマンド **make** を実行します。  
   
