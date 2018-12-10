@@ -97,7 +97,7 @@ SQL Server 用 Microsoft JDBC Driver 6.4 は 4.1 と 4.2 の JDBC 仕様に完�
 
 ### <a name="deprecated-connection-property-fipsprovider"></a>接続プロパティを非推奨とされます: fipsProvider
 
-接続プロパティ`fipsProvider`受け入れられた接続プロパティの一覧から削除されます。 詳細については、「関連[GitHub プル要求](https://github.com/Microsoft/mssql-jdbc/pull/460)します。
+接続プロパティ`fipsProvider`受け入れられた接続プロパティの一覧から削除されます。 詳細については、関連する [GitHub pull request](https://github.com/Microsoft/mssql-jdbc/pull/460) を参照してください。
 
 ### <a name="added-connection-properties-for-specifying-a-custom-trustmanager"></a>カスタムの TrustManager を指定する追加の接続プロパティ
 
