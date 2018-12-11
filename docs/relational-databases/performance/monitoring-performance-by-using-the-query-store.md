@@ -361,7 +361,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **去&1; 時間で平均実行時間が長かったクエリの上位。**  
+ **去 時間で平均実行時間が長かったクエリの上位。**  
   
 ```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
