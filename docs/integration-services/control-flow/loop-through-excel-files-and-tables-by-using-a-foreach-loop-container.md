@@ -73,7 +73,7 @@ ms.locfileid: "51639249"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET Schema Rowset 列挙子を使用して Excel テーブルをループ処理するには  
   
-1.  Microsoft ACE OLE DB Provider を使用して Excel ブックに接続する ADO.NET 接続マネージャーを作成します。 **[接続マネージャー]** ダイアログ ボックスの [すべて] ページで、Extended Properties プロパティの値として Excel のバージョン (ここでは、Excel 12.0) を入力します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
+1.  Microsoft ACE OLE DB Provider を使用して Excel ブックに接続する ADO.NET 接続マネージャーを作成します。 **[接続マネージャー]** ダイアログ ボックスの [すべて] ページで、Extended Properties プロパティの値として Excel のバージョン (ここでは、Excel 12.0) を入力します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」 を参照してください。  
   
 2.  ループの反復ごとに現在のテーブルの名前を受け取る文字列変数を作成します。  
   

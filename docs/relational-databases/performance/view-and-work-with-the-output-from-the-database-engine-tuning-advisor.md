@@ -161,7 +161,7 @@ ms.locfileid: "51662261"
   
 ##### <a name="to-use-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>dta コマンド ライン ユーティリティでユーザー指定の構成機能を使用するには  
   
-1.  チューニング ワークロードを作成します。 この作業の実行の詳細については、「 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  
+1.  チューニング ワークロードを作成します。 この作業の実行の詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  
   
 2.  [ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) をコピーして、XML エディターまたはテキスト エディターに貼り付けます。 このサンプルを使用して、チューニング セッションの XML 入力ファイルを作成します。 このタスクの実行については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」の「XML 入力ファイルの作成」を参照してください。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "51662261"
   
 4.  **.xml** 拡張子を付けて、入力ファイルを保存します。  
   
-5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするときに、次の場所にこのスキーマがインストールされます。  
+5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするときに、次の場所にこのスキーマがインストールされます。  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  

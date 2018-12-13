@@ -84,7 +84,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 大量の情報の書き込みと読み取りを行う別の手法については、「 [Batches of SQL Statements (SQL ステートメントのバッチ)](../../odbc/reference/develop-app/batches-of-sql-statements.md) 」と「 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
-詳細については、「 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
+詳細については、「 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、ステートメントを準備して実行します。 このステートメントを実行すると (「[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)」を参照)、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルのフィールドが更新されます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  

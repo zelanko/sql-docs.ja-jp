@@ -86,5 +86,5 @@ ms.locfileid: "47642370"
 ## <a name="see-also"></a>参照  
 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[方法: SQLSRV ドライバーを使用して入力/出力パラメーターを取得する](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   
