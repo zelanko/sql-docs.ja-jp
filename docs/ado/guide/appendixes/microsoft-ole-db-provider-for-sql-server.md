@@ -50,10 +50,10 @@ User ID=MyUserID;Password=MyPassword;"
 |Keyword|説明|
 |-------------|-----------------|
 |**Provider**|OLE DB Provider for SQL Server を指定します。|
-|**データ ソース**または**サーバー**|サーバーの名前を指定します。|
+|**Data Source**または**Server**|サーバーの名前を指定します。|
 |**Initial Catalog**または**データベース**|サーバー上のデータベースの名前を指定します。|
-|**ユーザー ID**または**uid**|(SQL Server 認証) のユーザー名を指定します。|
-|**パスワード**または**pwd**|(SQL Server 認証) のユーザーのパスワードを指定します。|
+|**User ID**または**uid**|(SQL Server 認証) のユーザー名を指定します。|
+|**Password**または**pwd**|(SQL Server 認証) のユーザーのパスワードを指定します。|
 
 > [!NOTE]
 >  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
