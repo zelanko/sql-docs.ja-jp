@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, operators
@@ -16,12 +15,12 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbceb75a036343b0d116481c5e36e3da3aa63a85
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1cb952d965c2ddb316b0890a03e2d10947c2e61a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51272590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766834"
 ---
 # <a name="operators-ssis-expression"></a>演算子 (SSIS 式)
   このセクションでは、式の言語が提供する演算子、および式エバリュエーターが使用する演算子の優先順位と結合性について説明します。  
@@ -47,7 +46,7 @@ ms.locfileid: "51272590"
 |[& (ビット演算子 AND) (SSIS 式)](bitwise-and-ssis-expression.md)|2 つの整数値の AND 演算をビット単位で実行します。|  
 |[~ (ビット演算子 Not) (SSIS 式)](bitwise-not-ssis-expression.md)|整数の否定のビット演算を実行します。|  
 |[== (等しい) (SSIS 式)](equal-ssis-expression.md)|2 つの式が等しいかどうかを判別するための比較を実行します。|  
-|[!= (等しくない) (SSIS 式)](unequal-ssis-expression.md)|2 つの式が等しくないかどうかを判別するための比較を実行します。|  
+|[\!= &#40;です。等しくない&#41; &#40;です。SSIS 式&#41;](unequal-ssis-expression.md)|2 つの式が等しくないかどうかを判別するための比較を実行します。|  
 |[> (より大きい) (SSIS 式)](greater-than-ssis-expression.md)|最初の式が 2 番目の式より大きいかどうかを判別するための比較を実行します。|  
 |[&#60; (より小さい) (SSIS 式)](less-than-ssis-expression.md)|最初の式が 2 番目の式未満かどうかを判別するための比較を実行します。|  
 |[&#62;= (以上) (SSIS 式)](greater-than-or-equal-to-ssis-expression.md)|最初の式が 2 番目の式以上かどうかを判別するための比較を実行します。|  
