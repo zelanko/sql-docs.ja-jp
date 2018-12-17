@@ -93,7 +93,7 @@ ms.locfileid: "52416513"
   
 ## <a name="security-considerations"></a>セキュリティに関する考慮事項  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントには、SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限が必要です。 SMB ファイル サーバーを使用する場合、ドメイン アカウントまたはシステム アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントにすることができます。 共有および NTFS アクセス許可の詳細については、「[Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkId=245535)」(ファイル サーバーの共有アクセス許可と NTFS アクセス許可) (https://go.microsoft.com/fwlink/?LinkId=245535) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントには、SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限が必要です。 SMB ファイル サーバーを使用する場合、ドメイン アカウントまたはシステム アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントにすることができます。 共有および NTFS アクセス許可の詳細については、「[ファイル サーバーの共有アクセス許可と NTFS アクセス許可](https://go.microsoft.com/fwlink/?LinkId=245535)」 (https://go.microsoft.com/fwlink/?LinkId=245535) を参照してください。  
   
     > [!NOTE]  
     >  SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウント、および管理サーバー ロールを持つ Windows ユーザーに制限する必要があります。  

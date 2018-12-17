@@ -26,7 +26,7 @@ ms.locfileid: "52416383"
   Stretch Database モニターでデータ移行を監視するには、SQL Server Management Studio でデータベースについて **[タスク]、[Stretch]\(ストレッチ)、[Monitor]\(監視)** の順に選択します。  
   
 ## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Stretch Database モニターでのデータ移行の状態の確認  
- SQL Server Management Studio でデータベースについて **[タスク]、[Stretch] (ストレッチ)、[Monitor] (監視)** の順に選択して Stretch Database モニターを開き、データ移行を監視します。  
+ SQL Server Management Studio でデータベースについて **[タスク]、[Stretch] \(ストレッチ)、[Monitor] \(監視)** の順に選択して Stretch Database モニターを開き、データ移行を監視します。  
   
 -   モニターの上部には、Stretch 対応 SQL Server データベースとリモート Azure データベースの両方についての一般情報が表示されます。  
   
