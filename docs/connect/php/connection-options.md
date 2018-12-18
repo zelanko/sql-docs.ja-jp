@@ -30,7 +30,7 @@ ms.locfileid: "47727490"
 |ApplicationIntent|String|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、ReadOnly と ReadWrite です。<br /><br />詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]を参照してください[高可用性、ディザスター リカバリーのためサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)します。|ReadWrite|  
 |AttachDBFileName|String|サーバーがアタッチするデータベース ファイルを指定します。|値は設定されません。|  
 |[認証]|次の文字列のいずれか:<br /><br />'SqlPassword'<br /><br />' ActiveDirectoryPassword'|認証モードを指定します。|未設定。|  
-|CharacterSet<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|String|サーバーにデータを送信するために使用する文字セットを指定します。<br /><br />可能な値は SQLSRV_ENC_CHAR と UTF-8 です。 詳細については、「 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)」を参照してください。|SQLSRV_ENC_CHAR|  
+|CharacterSet<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|String|サーバーにデータを送信するために使用する文字セットを指定します。<br /><br />可能な値は SQLSRV_ENC_CHAR と UTF-8 です。 詳細については、「 [方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)」を参照してください。|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|**[有効]** または **[無効]**|Always Encrypted 機能が有効か無効かどうかを指定します。 |Disabled|  
 |ConnectionPooling|接続プールを有効にするには、1 または **true** 。<br /><br />接続プールを無効にするには、0 または **false** 。|接続を接続プールから割り当てる (1 または **true**) か、割り当てない (0 または **false**) かを指定します。<sup>1</sup>|**true** (1)|  
 |ConnectRetryCount|0 ~ 255 (両端を含む) の整数|を行う前に切断された接続を再確立を試みるの最大数。 既定では、発生した場合に、接続を再確立するため 1 回の試行が行われます。 値の 0 の場合は、再接続は試行されません。|1|  
