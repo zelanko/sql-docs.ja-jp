@@ -49,7 +49,7 @@ ms.locfileid: "52507881"
 ### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Permissions  
-**sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+**sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
