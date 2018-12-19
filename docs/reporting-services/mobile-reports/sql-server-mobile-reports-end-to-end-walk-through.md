@@ -23,14 +23,14 @@ ms.locfileid: "51813765"
 この記事では、次について説明します。   
   
 - サンプル データ ソースとして AdventureWorks データベースを使用して、 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータル上で共有データ ソースとデータセットを作成する。  
--  [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - モバイル レポートを [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルにパブリッシュする。  
 - Power BI モバイル アプリでモバイル レポートを表示する。  
   
 ## <a name="before-we-start"></a>開始前の準備  
 このチュートリアルを実行するには、以下の製品が必要です。  
   
-* データ ソースと KPI を作成し、データセットとモバイル レポートをパブリッシュするには、[!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md) にアクセスする必要があります。  
+* データ ソースと KPI を作成し、データセットとモバイル レポートをパブリッシュするには、 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md) にアクセスする必要があります。  
 * [共有データセットを作成します](../install-windows/install-report-builder.md)。  
 * モバイル レポートを作成するには、 [SQL Server Mobile Report Publisher をインストールします](https://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)。  
