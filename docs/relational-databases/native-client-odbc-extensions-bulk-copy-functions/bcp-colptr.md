@@ -49,7 +49,7 @@ RETCODE bcp_colptr (
  *pData*  
  コピーするデータを指すポインターです。 バインドされたデータ型は、大きな値型 (SQLTEXT や SQLIMAGE) 場合*pData* NULL を指定できます。 NULL *pData*を使用してチャンクで長い形式のデータ値は SQL Server に送信することを示します[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)します。  
   
- 場合*pData* NULL と列に設定されている大きな値の型でない束縛のフィールドに対応する**bcp_colptr**が失敗します。  
+ *pData*がNULLに設定されており、バインドされたフィールドに対応する列が大きな値型ではない場合、**bcp_colptr**は失敗します。
   
  大きな値の型の詳細については、次を参照してください。 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)**します。**  
   
