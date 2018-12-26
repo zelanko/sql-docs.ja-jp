@@ -79,7 +79,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  キャッシュの動作について詳しくは、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  
- シーケンスの作成方法と、シーケンスのキャッシュの管理方法について詳しくは、「[CREATE SEQUENCE &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
+ シーケンスの作成方法と、シーケンスのキャッシュの管理方法について詳しくは、「[CREATE SEQUENCE &#40;Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
   
  昇順のシーケンスの MINVALUE と降順のシーケンスの MAXVALUE は、シーケンスの START WITH 値を許可しない値に変更することはできません。 昇順のシーケンスの MINVALUE を START WITH 値より大きい数に変更する、または降順のシーケンスの MAXVALUE を START WITH 値より小さい数に変更するには、RESTART WITH 引数を含めて、最小値と最大値の範囲内にある目的の位置からシーケンスを再開します。  
   
