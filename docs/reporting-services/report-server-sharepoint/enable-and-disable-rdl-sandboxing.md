@@ -104,7 +104,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
   
 -   型の静的メンバー  
   
--    [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** メソッド  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** メソッド  
   
 -   レポート定義の **\<Classes>** 要素。  
   

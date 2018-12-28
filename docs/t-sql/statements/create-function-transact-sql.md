@@ -337,7 +337,7 @@ RETURNS return_data_type
   
  インライン TVF の TABLE 戻り値は、単一の SELECT ステートメントを使用して定義されます。 インライン関数には、関連付けられている戻り変数はありません。  
   
- <a name="mstvf"></a> MSTVF の @*return_variable* は TABLE 変数で、その関数の値として返される必要がある行の格納および蓄積に使用されます。 @*return_variable* は [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数にのみ指定でき、CLR 関数には指定できません。  
+ <a name="mstvf"></a> MSTVF の @*return_variable* は TABLE 変数で、その関数の値として返される必要がある行の格納および蓄積に使用されます。 @ *return_variable* は [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数にのみ指定でき、CLR 関数には指定できません。  
   
  *select_stmt*  
  インライン テーブル値関数 (TVF) の戻り値を定義する単一の SELECT ステートメントです。  

@@ -380,7 +380,7 @@ AlwaysOn 可用性グループの詳細については、「[AlwaysOn 可用性�
 
     図 22
 
-4.  **データベースの作成****ウィザード**を終了します。 詳細については、「[マスター データ サービスのイントールと構成](https://docs.microsoft.com/sql/master-data-services/master-data-services-installation-and-configuration)」を参照してください。
+4.  **データベースの作成** **ウィザード** を終了します。 詳細については、「[マスター データ サービスのイントールと構成](https://docs.microsoft.com/sql/master-data-services/master-data-services-installation-and-configuration)」を参照してください。
 
 5.  **マスター データ サービス構成マネージャー**で **[Web アプリケーション]** をクリックし、Web アプリケーションを構成し、**[適用]** をクリックして設定を MDS に適用します。 図 23 を参照してください。 詳細については、「[マスター データ サービスのイントールと構成](https://docs.microsoft.com/sql/master-data-services/master-data-services-installation-and-configuration)」を参照してください。
 
