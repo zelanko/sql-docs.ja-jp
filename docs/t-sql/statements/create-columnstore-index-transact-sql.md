@@ -132,7 +132,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 テーブルは、クラスター化列ストア インデックスを既に持っている場合、既存のインデックスと同じ名前を指定できます。 または DROP EXISTING オプションを使用するには新しい名前を指定します。  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
    クラスター化列ストア インデックスとして格納するテーブルの 1 部、2 部、または 3 部構成の名前を指定します。 テーブルがヒープかクラスター化インデックスの場合、テーブルは行ストアから列ストアに変換されます。 テーブルが既に列ストアである場合、このステートメントでクラスター化列ストア インデックスが再構築されます。  
   
 #### <a name="with-options"></a>WITH オプション  
