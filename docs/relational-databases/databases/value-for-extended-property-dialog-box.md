@@ -26,7 +26,7 @@ ms.locfileid: "51559850"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>拡張プロパティの値ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **[*\<property name>* の値]** ダイアログ ボックスで、値を入力または表示します。 これは、複数の場所から開くことができる共通ダイアログ ボックスです。  
+  **[ *\<property name>* の値]** ダイアログ ボックスで、値を入力または表示します。 これは、複数の場所から開くことができる共通ダイアログ ボックスです。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[拡張プロパティ名]**  
