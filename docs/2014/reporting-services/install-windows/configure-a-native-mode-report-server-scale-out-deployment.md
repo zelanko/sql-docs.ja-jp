@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606852"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395235"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)
 
@@ -111,9 +111,9 @@ ms.locfileid: "51606852"
 3.  [スケール アウト配置] ページで、配置に参加し、をクリックを待機しているレポート サーバー インスタンスを選択します。**サーバーの追加**します。  
   
     > [!NOTE]  
-    >  **問題:** Reporting Services レポート サーバー インスタンスをスケールアウト配置に追加しようとすると、アクセス拒否のようなエラー メッセージが表示される場合があります。  
+    >  **問題点:** Reporting Services レポート サーバー インスタンスをスケール アウト配置に参加しようとしたときに"へのアクセスが拒否されました"のようなエラー メッセージが発生する可能性があります。  
     >   
-    >  **回避策:** 最初の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスからの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 暗号化キーをバックアップして、このキーを 2 番目の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに復元します。 その後、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のスケールアウト配置に 2 番目のサーバーの追加を試行します。  
+    >  **回避策:** バックアップ、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]最初から暗号化キー[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インスタンスし、2 番目のキーを復元[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー。 その後、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のスケールアウト配置に 2 番目のサーバーの追加を試行します。  
   
 4.  これで、両方のレポート サーバー インスタンスが動作していることを確認できるようになります。 2 番目のインスタンスを確認するには、Reporting Services 構成ツールを使用してレポート サーバーに接続し、Web サービスまたはレポート マネージャーの URL をクリックします。  
   

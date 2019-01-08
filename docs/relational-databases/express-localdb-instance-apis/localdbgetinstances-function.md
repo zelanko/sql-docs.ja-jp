@@ -16,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a562aa5947444fe149c5e24f3a5a1b9cd74fe4d3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571222"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398175"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>パラメーター  
  *pInstanceNames*  
- [出力] この関数が返す場合、ユーザーのワークステーション上の名前付きおよび既定の LocalDB インスタンスの両方の名前を格納します。  
+ [出力]この関数から制御が戻るときにという名前の両方の名前を格納し、既定のユーザーのワークステーションに LocalDB インスタンス。  
   
  *lpdwNumberOfInstances*  
- [入力/出力]入力時にインスタンス名にスロットの数が含まれています。、 *pInstanceNames*バッファー。 出力側では、ユーザーのワークステーション上で見つかった LocalDB インスタンスの数を格納します。  
+ [入力/出力]入力時にインスタンス名にスロットの数が含まれています。、 *pInstanceNames*バッファー。 出力では、ユーザーのワークステーションで見つかった LocalDB インスタンスの数が含まれています。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  

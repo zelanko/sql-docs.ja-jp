@@ -1,5 +1,5 @@
 ---
-title: または (MDX) |Microsoft ドキュメント
+title: または (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 668e8f1955290c31ee63ca5b81fc5e9c286d54c4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742451"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418401"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 
@@ -36,10 +36,10 @@ Expression1 OR Expression2
  数値を返す有効な MDX 式です。  
   
 ## <a name="return-value"></a>戻り値  
- ブール値を返す**true**いずれかまたは両方の引数に評価される場合**true**、それ以外の**false**です。  
+ ブール値を返す**true**にいずれかまたは両方の引数が評価される場合**true**、それ以外の**false**します。  
   
 ## <a name="remarks"></a>コメント  
- **または**演算子はブール値として両方の引数を処理 (つまり、0 として**false**、それ以外の**true**) 論理和演算を実行します。 次の表に示す方法、**または**演算子が論理和演算を実行します。  
+ **または**演算子はブール値として両方の引数を処理 (つまり、0 として**false**、それ以外の**true**) 論理和演算を実行します。 次の表に示します、**または**演算子が論理和演算を実行します。  
   
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  
@@ -49,7 +49,7 @@ Expression1 OR Expression2
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>例  
- 次のクエリで計算されるメジャーは、Customer ディメンションの Gender 階層にある現在のメンバーが Male の場合、または Customer ディメンションの Marital Status 階層にある現在のメンバーが Married の場合、“MARRIED OR MALE” 文字列を返し、それ以外の場合は、“UNMARRIED OR FEMALE” 文字列を返します。  
+ 次のクエリには、"MARRIED OR MALE"の現在の Customer ディメンションの Gender 階層のメンバーが Male または Customer ディメンションの Marital Status 階層の現在のメンバーである場合は、結婚; 文字列を返す計算されるメジャーが含まれています。それ以外の場合"UNMARRIED または FEMALE"文字列を返します。  
   
 ```  
 WITH  

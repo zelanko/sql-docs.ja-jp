@@ -1,5 +1,5 @@
 ---
-title: StrToTuple (MDX) |Microsoft ドキュメント
+title: StrToTuple (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 35cd9cf849ce35bf82c839f0bbeeb657a75e990c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 054786440afaf2b7ab458b4704bd5f8e2e26c135
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524533"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 
 
-  多次元式 (MDX) 形式の文字列によって指定されている組を返します。  
+  MDX 形式の文字列によって指定された組を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,9 +33,9 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  直接的または間接的に組を指定する有効な文字列式です。  
   
 ## <a name="remarks"></a>コメント  
- **StrToTuple**関数には、指定されたセットが返されます。 **StrToTuple**関数は、通常のユーザー定義関数を使用、組指定を外部関数から MDX ステートメントに返します。  
+ **StrToTuple**関数は、指定されたセットを返します。 **StrToTuple**組指定を外部関数から MDX ステートメントを返す関数は通常使用のユーザー定義関数。  
   
--   CONSTRAINED フラグを使用するときは、組指定に修飾されているメンバー名または修飾されていないメンバー名を含める必要があります。 このフラグは、指定された文字列によるインジェクション攻撃の危険性を軽減するために使用します。 修飾されているメンバー名または修飾されていないメンバー名に直接解決できない文字列を指定すると、"STRTOTUPLE 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラーが表示されます。  
+-   CONSTRAINED フラグを使用するときは、組指定に修飾されているメンバー名または修飾されていないメンバー名を含める必要があります。 このフラグは、指定された文字列によるインジェクション攻撃の危険性を軽減するために使用します。 文字列が指定されている場合は、修飾名または修飾されていないに直接解決できないメンバー名は次のエラーが表示されます。"CONSTRAINED によって設定された制限 STRTOTUPLE 関数でフラグに違反しました"。  
   
 -   CONSTRAINED フラグを使用しない場合、組を返す有効な MDX 式に解決される組を指定できます。  
   
@@ -76,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

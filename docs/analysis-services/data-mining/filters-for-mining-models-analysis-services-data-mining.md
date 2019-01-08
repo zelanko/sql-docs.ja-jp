@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのフィルター選択 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: マイニング モデルのフィルター選択 (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c678773a77b9411eb1a51dbeb85b5eeb5f08b43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016759"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410669"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,14 +54,14 @@ ms.locfileid: "34016759"
 ### <a name="creating-filters-on-nested-tables"></a>入れ子になったテーブルに対するフィルターの作成  
  入れ子になったテーブルがデータ ソース ビューに含まれている場合は、2 番目のフィルター ダイアログ ボックスを使用して、入れ子になったテーブル内の行に対する条件を作成できます。  
   
- たとえば、顧客に関連したケース テーブルがあり、入れ子になったテーブルに顧客が購入した製品が表示されている場合、入れ子になったテーブルのフィルターで `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`という構文を使用すると、特定の品目を購入した顧客を選択するフィルターを作成できます。  
+ たとえば、顧客に関連したケース テーブルがあり、入れ子になったテーブルに顧客が購入した製品が表示されている場合、入れ子になったテーブルのフィルターで `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`という構文を使用すると、特定の品目を購入した顧客を選択するフィルターを作成できます。  
   
- また、 **EXISTS** または **NOT EXISTS** のキーワードとサブクエリを使用すると、入れ子になったテーブルに特定の値があるかどうかに基づいてフィルター処理を行うことができます。 これにより、 `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`のような条件を作成できます。 入れ子になったテーブルに値 `EXISTS SELECT(<subquery>)` を持つ行が 1 つ以上含まれている場合、 **から** true `Water Bottle`が返されます。  
+ また、 **EXISTS** または **NOT EXISTS** のキーワードとサブクエリを使用すると、入れ子になったテーブルに特定の値があるかどうかに基づいてフィルター処理を行うことができます。 これにより、 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`のような条件を作成できます。 入れ子になったテーブルに値 `EXISTS SELECT(<subquery>)` を持つ行が 1 つ以上含まれている場合、 **から** true `Water Bottle`が返されます。  
   
- ケース テーブルに対する条件と入れ子になったテーブルに対する条件は、結合することができます。 たとえば、次の構文には、ケース テーブルに対する条件 (`Age > 30` )、入れ子になったテーブルに対するサブクエリ (`EXISTS (SELECT * FROM Products)`)、および入れ子になったテーブルに対する複数の条件 (`WHERE ProductName=’Milk’  AND Quantity>2`) が含まれています。  
+ ケース テーブルに対する条件と入れ子になったテーブルに対する条件は、結合することができます。 たとえば、次の構文には、ケース テーブルに対する条件 (`Age > 30` )、入れ子になったテーブルに対するサブクエリ (`EXISTS (SELECT * FROM Products)`)、および入れ子になったテーブルに対する複数の条件 (`WHERE ProductName='Milk'  AND Quantity>2`) が含まれています。  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  フィルターの作成が完了したら、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によってフィルター テキストが評価され、DMX 式に変換された後、モデルと共に保存されます。  
@@ -93,7 +93,7 @@ ms.locfileid: "34016759"
 ### <a name="how-can-i-save-a-filter"></a>フィルターを保存する方法は?  
  フィルター式はスクリプトとして保存され、関連付けられたマイニング モデルまたは入れ子になったテーブルと共に格納されます。 フィルター テキストを削除した場合、復元するにはフィルター式を手動で再作成するしかありません。 このため、複雑なフィルター式を作成する場合は、フィルター テキストのバックアップ コピーを作成することをお勧めします。  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>フィルターの効果を確認できないのはなぜですか?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>フィルターの効果を表示できないのはなぜですか。  
  フィルター式の変更や追加を行った場合、フィルターの効果を確認するには、構造およびモデルを再処理する必要があります。  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>フィルター選択された属性が予測クエリの結果に表示されるのはなぜですか?  

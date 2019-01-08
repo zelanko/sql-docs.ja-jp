@@ -1,5 +1,5 @@
 ---
-title: 主要業績評価指標表現 (テーブル) |Microsoft ドキュメント
+title: 主要業績評価指標表現 (表形式) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a536272f6e41e3aaf1abe6404139b67e0e558f0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513979"
 ---
-# <a name="tables---key-performance-indicator-representation"></a>テーブルの主要業績評価指標表現
+# <a name="tables---key-performance-indicator-representation"></a>テーブル - 主要業績評価指標表現
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  KPI は、対象の値に対するベース メジャーによって定義された、値のパフォーマンスを測定に使用されます。  
+  KPI は、対象の値に対するベース メジャーによって定義される値のパフォーマンスを測定に使用されます。  
   
 ## <a name="key-performance-indicator-representation"></a>主要業績評価指標表現  
- テーブル オブジェクト モデルにおける主要業績評価指標 (KPI) とは、クライアント アプリケーションでグラフィカルに表示するための追加情報を含むメジャーです。 通常、KPI には、取得する目標に関する情報、目標と比較するメジャーの状態、クライアント ツールで状態をグラフィカルに表示する方法に関する情報が含まれています。  
+ 表形式オブジェクトで、主要業績評価指標の kpi をモデル化-グラフィカルに表示するクライアント アプリケーションの追加情報を含むメジャーです。 通常、KPI には、取得する目標に関する情報、目標と比較するメジャーの状態、クライアント ツールで状態をグラフィカルに表示する方法に関する情報が含まれています。  
   
 ### <a name="key-performance-indicator-in-amo"></a>AMO における主要業績評価指標  
  AMO を使用してテーブル モデル KPI を管理する場合、AMO 内の KPI に一対一で対応するオブジェクトは存在しません。AMO <xref:Microsoft.AnalysisServices.Kpi> オブジェクトは、この目的には使用されません。AMO では、テーブル モデルに対して、<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> コレクションおよび <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 内の要素の 1 つで作成された一連のオブジェクトによって KPI が表されます。  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular サンプル  
- 表現は、AMO を使用して作成し、主要業績評価指標を操作する方法を理解するには、AMO to Tabular サンプル; のソース コードを参照してください。具体的には次のソース ファイルで確認してください: AddKPIs.cs です。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
+ AMO を使用して作成し、主要業績評価指標を操作する方法を理解しておくには、表現は、AMO to Tabular サンプル; のソース コードを参照してください。具体的には、次のソース ファイルで確認します。AddKPIs.cs します。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 権限借用の設定 (SSAS - 多次元) |Microsoft ドキュメント
+title: 権限借用の設定 (SSAS - 多次元) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c11064ecc87744999c31080e6a4d57a3849f5d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026159"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533812"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>権限借用オプションの設定 (SSAS - 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34026159"
  ダイアログ ボックスのすべてのオプションを使用できますが、すべてのオプションが各シナリオに適しているわけではありません。 以下の情報を参考にして、シナリオに最適なオプションを判断してください。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- このオプションを選択する、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトは、この形式で指定された Windows ユーザー アカウントのセキュリティ資格情報を使用: *\<ドメイン名 >***\\***\<ユーザーアカウント名 >* です。  
+ このオプションを選択、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトは、この形式で指定された Windows ユーザー アカウントのセキュリティ資格情報を使用します。*\<ドメイン名 >***\\***\<ユーザー アカウント名 >* します。  
   
  データ アクセスのために特別に作成した専用の最小特権 Windows ユーザー ID を使用する場合に、このオプションを選択します。 たとえば、レポートで使用されるデータを取得するための汎用アカウントを定期的に作成している場合は、ここでそのアカウントを指定できます。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026159"
  DMX OPENQUERY ステートメント、ローカル キューブ、およびマイニング モデルの場合、サービス アカウント オプションを選択しても、現在のユーザーの資格情報が使用されます。 サービス アカウント オプションは、不一致バインドではサポートされていません。  
   
 > [!NOTE]  
->  サービス アカウントに Analysis Services インスタンスに対する管理者権限がない場合、キューブからデータ マイニング モデルを処理するときにエラーが発生することがあります。 詳細については、「 [マイニング構造: DataSource が OLAP キューブの場合の処理に関する問題](http://go.microsoft.com/fwlink/?LinkId=251610)」を参照してください。  
+>  サービス アカウントに Analysis Services インスタンスに対する管理者権限がない場合、キューブからデータ マイニング モデルを処理するときにエラーが発生することがあります。 詳細については、次を参照してください。[マイニング構造。DataSource が OLAP キューブの場合の処理中に問題](http://go.microsoft.com/fwlink/?LinkId=251610)します。  
   
  **[現在のユーザーの資格情報を使用する]**  
  このオプションを選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトにより、不一致バインド、DMX OPENQUERY、ローカル キューブ、マイニング モデルに現在のユーザーのセキュリティ資格情報が使用されます。  
@@ -76,7 +76,7 @@ ms.locfileid: "34026159"
  **[既定]** または **[継承]**  
  **[既定]** はデータベース レベルで設定されている権限借用オプションで使用され、 **[継承]** はデータ ソース レベルで設定されている権限借用オプションで使用されます。  
   
- **データ ソース – [継承] オプション**  
+ **データ ソースの [継承] オプション**  
   
  データ ソース レベルでは、 **[継承]** によって [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が親オブジェクトの権限借用オプションを使用することが指定されます。 多次元モデルでは、親オブジェクトは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースです。 **[継承]** オプションを選択すると、対象のデータ ソースおよび同じデータベースに含まれる他のデータ ソースの権限借用設定を一元的に管理できます。 このオプションを有効にするには、データベース レベルで特定の Windows ユーザー名とパスワードを選択します。 データベース レベルで Windows ユーザー名とパスワードが指定されていない場合、データ ソースの **[継承]** とデータベースの **[既定]** の組み合わせは、サービス アカウント オプションを使用するのと同じです。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "34026159"
   
  データベース レベルでの既定の設定に関する詳細については、「[多次元データベースのプロパティ設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)」を参照してください。  
   
- **データベース – [既定] オプション**  
+ **データベースの既定のオプション**  
 
  多次元データベースの場合、 **[既定]** はサービス アカウントを使用し、データ マイニング操作に現在のユーザーを使用することを意味します。  
   
 ## <a name="see-also"></a>参照  
  [データ ソースの作成 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [データ ソース プロパティの設定 & #40 です。SSAS 多次元 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

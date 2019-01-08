@@ -20,12 +20,12 @@ ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbcd828ea886bd1c83b327cae9a49bca4668ef15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617900"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518813"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47617900"
 |**column_id**|**int**|1 から始まる列ストア列の ID。 最初の列が ID = 1、2 番目の列が ID = 2 など。|  
 |**dictionary_id**|**int**|グローバルとローカルの列セグメントに関連付けられている辞書の 2 種類があります。 0 の dictionary_id では、すべての列セグメント (行グループごとに 1 つ) その列の間で共有されているグローバル辞書を表します。|  
 |**version**|**int**|ディクショナリの形式のバージョン。|  
-|**type**|**int**|ディクショナリの種類:<br /><br /> 1 – 含むハッシュ ディクショナリ**int**値<br /><br /> 2 – 使用されていません<br /><br /> 3 - 文字列値を含むハッシュ ディクショナリ<br /><br /> 4 – ハッシュ ディクショナリを格納している**float**値<br /><br /> ディクショナリの詳細については、次を参照してください。[列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)します。|  
+|**type**|**int**|ディクショナリの種類:<br /><br /> 1-ハッシュ ディクショナリを格納している**int**値<br /><br /> 2-非使用<br /><br /> 3-ハッシュ ディクショナリの文字列値を含む<br /><br /> 4-ハッシュ ディクショナリを格納している**float**値<br /><br /> ディクショナリの詳細については、次を参照してください。[列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)します。|  
 |**last_id**|**int**|ディクショナリ内の最後のデータ ID。|  
 |**entry_count**|**bigint**|ディクショナリ内のエントリの数。|  
 |**on_disc_size**|**bigint**|ディクショナリのサイズ (バイト単位)。|  

@@ -1,5 +1,5 @@
 ---
-title: 定期データ更新とデータ ソースに Windows 認証は行われません |Microsoft ドキュメント
+title: 定期データ更新とデータ ソースに Windows 認証なし |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4c7a5a66ff831c94129c2833d74d0eeeb65de30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027772"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408561"
 ---
-# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>定期データ更新とデータ ソースに Windows 認証は行われません
+# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>定期データ更新と Windows 認証なしのデータ ソース
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   このトピックでは、Windows 認証をサポートしない [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**データ ソースを使用できる** for SharePoint 定期データ更新のワークフローについて説明します。 たとえば、Oracle データ ソースまたは IDM DB2 データ ソースが該当します。 このトピックにある図と手順では、Oracle データ ソースを参照していますが、他のデータ ソースにも同じワークフローが当てはまります。  
   
@@ -28,11 +28,11 @@ ms.locfileid: "34027772"
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** Windows 認証で設定される Secure Store ターゲット アプリケーション ID。  
+-   **(1) PowerPivotDatarefresh:** Secure Store ターゲット アプリケーション ID と windows 認証に設定されています。  
   
--   **(2) OracleAuthentication:** Oracle 資格情報で設定される Secure Store ターゲット アプリケーション ID。  
+-   **(2) OracleAuthentication:** Secure Store ターゲット アプリケーション ID の Oracle 資格情報で設定されています。  
   
--   **(3)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは、自動データ更新アカウントにターゲット アプリケーション **PowerPivotDataRefresh**を使用するよう構成されます。  
+-   **(3)** 、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーションは、ターゲット アプリケーション"PowerPivotDataRefresh"を使用するよう構成の**自動データ更新アカウント**します。  
   
 -   **(4)** PowerPivot ブックでは Oracle データが使用されます。 ブックの更新設定では、データ ソースへの接続で、資格情報にターゲット アプリケーション **(2)** を使用するよう指定します。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "34027772"
   
     -   **連絡先の電子メール:** ?  
   
-    -   **ターゲット アプリケーションの種類:** グループ  
+    -   **ターゲット アプリケーションの種類:** グループ。  
   
-    -   **ターゲット アプリケーション ページの URL:** なし  
+    -   **ターゲット アプリケーション ページの URL:**[なし] :  
   
 5.  **[次へ]** をクリックします。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "34027772"
   
 9. **[OK]** をクリックします。  
   
-10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")です。  
+10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")します。  
   
 11. Windows ユーザー名と Windows パスワードを入力して、 **[OK]** をクリックします。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "34027772"
   
     -   **連絡先の電子メール:** ?  
   
-    -   **ターゲット アプリケーションの種類:** グループ  
+    -   **ターゲット アプリケーションの種類:** グループ。  
   
-    -   **ターゲット アプリケーション ページの URL:** なし  
+    -   **ターゲット アプリケーション ページの URL:**[なし] :  
   
 5.  **[次へ]** をクリックします。  
   
@@ -110,17 +110,17 @@ ms.locfileid: "34027772"
   
 9. **[OK]** をクリックします。  
   
-10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")です。  
+10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")します。  
   
 11. Oracle ユーザー ID と Oracle パスワードを入力して、 **[OK]** をクリックします。  
   
- 詳細については、SQL Server 認証のターゲット アプリケーションの作成"するには」セクションを参照してください[SQL サーバー認証 (SharePoint Server 2013) でセキュリティで保護されたストアを使用して](http://technet.microsoft.com/library/gg298949.aspx)(http://technet.microsoft.com/library/gg298949.aspx)です。  
+ 詳細については、「SQL Server 認証の対象アプリケーションを作成するには」セクションを参照してください[SQL Server 認証 (SharePoint Server 2013) で Secure Store を使用する](http://technet.microsoft.com/library/gg298949.aspx)(http://technet.microsoft.com/library/gg298949.aspx)します。  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>Power Pivot サービス アプリケーションを構成するには  
   
 1.  SharePoint サーバーの全体管理で [サービス アプリケーションの管理] をクリックします。  
   
-2.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの名前 (たとえば "Default [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application") をクリックします。  
+2.  名前をクリックして、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーションの例では、"既定の[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーション"。  
   
 3.  [アクション] で **[サービス アプリケーションの設定の構成]** をクリックします。  
   
@@ -163,10 +163,10 @@ ms.locfileid: "34027772"
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>新しい認証を使用したデータ更新を確認するには  
  **[OK]** をクリックすると、 **[更新の履歴]** ページが表示されます。 前の手順で **[さらに、できるだけ早く更新を行います]** を選択したため、数分以内に、新しい項目が更新の履歴に表示されます。 タイマー ジョブ " **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ更新タイマー ジョブ** " の既定値は 1 分です。 履歴の更新に新しい項目が表示されない場合は、しばらく待ってから、ブラウザーを更新してください。 それでも新しい項目が表示されない場合は、タイマー ジョブの現在の値を確認してください。  
   
-## <a name="more-information"></a>その他の情報  
+## <a name="more-information"></a>詳細情報  
   
 -   [SharePoint 2013 で Secure Store Service を構成する](http://technet.microsoft.com/library/ee806866.aspx)。  
   
--   [SharePoint 2013 と SQL Server 2012 SP1 (Analysis Services) での Power Pivot データの更新に関する記事](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)の「定期データ更新」セクションをご覧ください。  
+-   「定期データ更新」セクションを参照して[Power Pivot データ更新の SharePoint 2013 と SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)します。  
   
   

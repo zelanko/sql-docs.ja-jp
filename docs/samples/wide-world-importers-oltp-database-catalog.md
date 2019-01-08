@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798046"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617628"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters データベース カタログ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 - 拡張オブジェクトまたは列の目的を識別するために使用できるプロパティの説明には、すべてのスキーマ、テーブル、列、インデックス、および check 制約があります。 メモリ最適化テーブルでは、拡張プロパティを現在サポートしていないために、この例外です。
 - 同じ左側コンポーネント別の非クラスター化インデックスがある場合を除き、すべての外部キーが自動的にインデックスします。
 - テーブルの自動番号付けは、シーケンスに基づいています。 これらのシーケンスは、リンク サーバー、および ID 列よりも同様の環境全体で作業しやすくします。 メモリ最適化テーブルでは、SQL Server 2016 でサポートしていないために、ID 列を使用します。
-- これらのテーブルの 1 つのシーケンス (TransactionID) を使用: CustomerTransactions、SupplierTransactions、および StockItemTransactions します。 これは、一連のテーブルが 1 つのシーケンスを必要する方法について説明します。
+- これらのテーブルに 1 つのシーケンス (TransactionID) が使用されます。CustomerTransactions、SupplierTransactions、および StockItemTransactions です。 これは、一連のテーブルが 1 つのシーケンスを必要する方法について説明します。
 - 一部の列は、適切な既定値を指定します。
 
 ### <a name="security-schemas"></a>セキュリティ スキーマ
@@ -161,7 +161,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 これらは、Web フロント エンドなどのクライアント アプリケーションによって使用されるプロシージャです。
 
-|手順|用途|
+|手順|目的|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|使用すると (から`Application.People`) が、web サイトにアクセスします。|
 |パスワードの変更|(外部の認証メカニズムを使用していないユーザー) 用のユーザーのパスワードを変更します。|
@@ -183,11 +183,11 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 売り上げ高と購入を挿入するワークロードをシミュレートします。 主なストアド プロシージャは`PopulateDataToCurrentDate`を使用して、現在の日付までのサンプル データを挿入します。
 
-|手順|用途|
+|手順|目的|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|プロシージャが再作成されるために必要なデータのロード シミュレーション。 これは、現在の日付データを取り込むことの必要です。|
 |Configuration_RemoveDataLoadSimulationProcedures|データのシミュレーションが完了した後でもう一度、プロシージャを削除これとします。|
-|DeactiveTemporalTablesBeforeDataLoad|すべてのテンポラル テーブルの一時的な性質を削除し、該当する場合、sys テンポラル テーブルよりも前の日付で適用されたされているように変更を実行できるようにトリガーを適用します。|
+|DeactivateTemporalTablesBeforeDataLoad|すべてのテンポラル テーブルの一時的な性質を削除し、該当する場合、sys テンポラル テーブルよりも前の日付で適用されたされているように変更を実行できるようにトリガーを適用します。|
 |PopulateDataToCurrentDate|現在の日付までのデータを取り込むために使用します。 初回のバックアップからデータベースを復元した後はその他の構成オプションの前に実行する必要があります。|
 |ReactivateTemporalTablesAfterDataLoad|データの整合性のチェックを含む、テンポラル テーブルを再確立します。 (関連付けられたトリガーを削除します)。|
 
@@ -196,7 +196,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 これらの手順は、サンプルの構成に使用されます。 これらのオプションを使用して、standard edition のバージョンのサンプルとも監査を追加して、フルテキスト インデックス作成を enterprise edition の機能を適用します。
 
-|手順|用途|
+|手順|目的|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|ロールのメンバーがいない場合は、メンバーをロールに追加します。|
 |Configuration_ApplyAuditing|監査を追加します。 Standard edition のデータベースのサーバー監査が適用されます。その他のデータベースの監査は、enterprise edition 用追加されます。|
@@ -215,7 +215,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 データベースで、シーケンスを構成する手順。
 
-|手順|用途|
+|手順|目的|
 |-----------------------------|---------------------|
 |ReseedAllSequences|すべてのシーケンスの ReseedSequenceBeyondTableValue プロシージャを呼び出します。|
 |ReseedSequenceBeyondTableValue|同じシーケンスを使用する任意のテーブルで、値を上回る次のシーケンス値の位置を変更するために使用します。 (など、DBCC CHECKIDENT のシーケンスが、可能性のある複数のテーブルの identity 列と同じ)。|

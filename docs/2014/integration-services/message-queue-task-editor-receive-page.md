@@ -15,12 +15,12 @@ ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060852"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545631"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>[メッセージ キュー タスク エディター] ([受信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[受信]** ページを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) メッセージを受信するためのメッセージ キュー タスクを構成します。  
@@ -74,7 +74,7 @@ ms.locfileid: "48060852"
  **[Identifier]**  
  フィルターの適用を選択した場合、メッセージの受信元のパッケージを表す固有の識別子を入力するか、省略記号ボタン ( **[...]** ) をクリックしてパッケージを指定します。  
   
- **関連項目:** [パッケージの選択](control-flow/select-a-package.md)  
+ **関連項目:**[パッケージの選択](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>[MessageType] = [変数メッセージ]  
  **Assert**  
@@ -88,7 +88,7 @@ ms.locfileid: "48060852"
  **変数**  
  変数の名前を入力するか、[\<**新しい変数...**>] をクリックして新しい変数を設定します。  
   
- **関連項目:** [変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連項目:**[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>[Filter] の動的オプション  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48060852"
  **[Identifier]**  
  フィルターの適用を選択した場合、メッセージの受信元のパッケージを表す固有の識別子を入力するか、省略記号ボタン ( **[...]** ) をクリックしてパッケージを指定します。  
   
- **関連項目:** [パッケージの選択](control-flow/select-a-package.md)  
+ **関連項目:**[パッケージの選択](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>[MessageType] = [文字列メッセージ]  
  **[Compare]**  
@@ -108,7 +108,7 @@ ms.locfileid: "48060852"
   
 |ReplTest1|説明|  
 |-----------|-----------------|  
-|**なし**|メッセージは比較されません。|  
+|**None**|メッセージは比較されません。|  
 |**完全一致**|メッセージは **[CompareString]** オプションで指定した文字列と完全に一致する必要があります。|  
 |**大文字と小文字を区別しない**|メッセージは **[CompareString]** オプションで指定した文字列と一致する必要がありますが、大文字と小文字は区別されません。|  
 |**[含まれる文字列]**|メッセージに **[CompareString]** オプションで指定した文字列が含まれている必要があります。|  
@@ -122,7 +122,7 @@ ms.locfileid: "48060852"
   
 |ReplTest1|説明|  
 |-----------|-----------------|  
-|**なし**|メッセージは比較されません。|  
+|**None**|メッセージは比較されません。|  
 |**完全一致**|メッセージは **[CompareString]** オプションで指定した文字列と完全に一致する必要があります。|  
 |**大文字と小文字を区別しない**|メッセージは **[CompareString]** オプションで指定した文字列と一致する必要がありますが、大文字と小文字は区別されません。|  
 |**[含まれる文字列]**|メッセージに **[CompareString]** オプションで指定した文字列が含まれている必要があります。|  
@@ -131,15 +131,15 @@ ms.locfileid: "48060852"
  **[Compare]** オプションが **[なし]** に設定されていない場合、メッセージと比較する文字列を入力します。  
   
  **変数**  
- 受信したメッセージを格納する変数の名前を入力するか、[\<**新しい変数...**>] をクリックして新しい変数を設定します。  
+ 受信したメッセージを格納する変数の名前を入力するか、\<[**新しい変数...>]** をクリックして新しい変数を設定します。  
   
- **関連項目:** [変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連項目:**[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [メッセージ キュー タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [メッセージ キュー タスク エディター&#40;の送信 ページ&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [[メッセージ キュー タスク エディター] ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
+ [[メッセージ キュー タスク エディター] ([送信] ページ)](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [[式] ページ](expressions/expressions-page.md)   
- [メッセージ キュー タスク](control-flow/message-queue-task.md)  
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

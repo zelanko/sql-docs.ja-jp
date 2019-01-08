@@ -17,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 91ca323cf22c41b44ae9f1664e1ca5801aad1e37
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20fb2d2ec2094e87b904ffdc616942bfb449840c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528004"
 ---
 # <a name="handling-namespaces-in-xquery"></a>XQuery での名前空間の処理
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ WHERE ProductModelID=7
   
 ```  
 <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
-…  
+...  
 ```  
   
  なお、**名前空間**キーワードを使用して、新しい名前空間プレフィックスの定義を"AWMI:"です。 このクエリでは、該当する名前空間のスコープ内にあるすべての要素に、このプレフィックスを使用する必要があります。  
@@ -68,7 +68,7 @@ where ProductModelID=7
   
 ```  
 <step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
-…  
+...  
 ```  
   
  この例で、定義されている名前空間、`"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"` は、既定または空の名前空間をオーバーライドするように作成されています。 このため、クエリに使用するパス式内では名前空間プレフィックスが指定されていません。 また、結果に表示される要素名にも、名前空間プレフィックスはありません。 既定の名前空間は、すべての要素に適用されますが、属性には適用されません。  
@@ -88,7 +88,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
   
@@ -130,7 +130,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
   

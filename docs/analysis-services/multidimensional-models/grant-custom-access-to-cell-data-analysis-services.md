@@ -1,5 +1,5 @@
 ---
-title: セルのデータ (Analysis Services) へのカスタム アクセス許可 |Microsoft ドキュメント
+title: セル データ (Analysis Services) へのカスタム アクセス権の付与 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,26 +9,26 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e3b354d2bd4f4561962391bf3f0495b63833290
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42348298676334a84d9c4d3664aec2eeda4feed6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539040"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>セル データへのカスタム アクセス権の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   セルのセキュリティは、キューブ内のメジャー データへのアクセスを許可または拒否するために使用します。 次の図は、ロールに特定のメジャーへのアクセスのみが許可されているユーザーとして接続されたときに、ピボットテーブルで許可されるメジャーと拒否されるメジャーの組み合わせを示しています。 この例では、このロールで利用できるメジャーは **Reseller Sales Amount** と **Reseller Total Product Cost** だけです。 他のすべてのメジャーは、暗黙的に拒否されます (この結果を取得するために使用する手順については、次のセクション「特定のメジャーへのアクセスの許可」で説明します)。  
   
- ![ピボット テーブルを表示できるセルと拒否](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "ピボット テーブルの表示が許可され、セルが拒否されました")  
+ ![ピボット テーブルの表示が許可され、セルの拒否](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "ピボット テーブルの表示が許可され、セルが拒否されました")  
   
  セル権限は、セル内のデータに適用され、そのメタデータには適用されません。 セルが引き続きクエリの結果に表示され、実際のセルの値ではなく **#N/A** という値が表示されている状況を確認してください。 **#N/A** の値はクライアント アプリケーションによって値が変換されるか、接続文字列の Secured Cell Value プロパティを設定することで別の値が指定されていない限り、セルに表示されます。  
   
- セル全体を非表示にするには、表示可能なディメンション、ディメンション属性、ディメンション属性メンバーなどのメンバーを制限する必要があります。 詳細については、 [ディメンション データへのカスタム アクセス権の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)を参照してください。  
+ セルを完全に非表示にするには、メンバーのディメンション、ディメンション属性、およびディメンション属性メンバーを制限する必要が、表示します。 詳細については、 [ディメンション データへのカスタム アクセス権の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)を参照してください。  
   
  管理者は、ロール メンバーに、キューブ内のセルに対する権限として Read、Read-Contingent、読み取り/書き込みのいずれを与えるかを指定できます。 セルに権限を設定するのは許可されるセキュリティの最小レベルであるため、このレベルで権限を適用する前に、次の事実を認識する必要があります。  
   
--   セル レベルのセキュリティでは、より上位のレベルで制限されている権限を拡張することはできません。 例: ロールによってディメンション データへのアクセスが拒否される場合、セル レベルのセキュリティでその拒否されたセットを上書きすることはできません。 例: キューブに **[読み取り]** 権限、セルに **[読み取り/書き込み]** 権限がそれぞれ設定されているロールがあるとします。この場合、セル データの権限は **[読み取り/書き込み]** ではなく **[読み取り]** になります。  
+-   セル レベルのセキュリティでは、より上位のレベルで制限されている権限を拡張することはできません。 例: ロールによってディメンション データへのアクセスが拒否される場合、セル レベルのセキュリティでその拒否されたセットをオーバーライドすることはできません。 例: キューブに **[読み取り]** 権限、セルに **[読み取り/書き込み]** 権限がそれぞれ設定されているロールがあるとします。この場合、セル データの権限は **[読み取り/書き込み]** ではなく **[読み取り]** になります。  
   
 -   同じロール内のディメンション メンバーとセルとの間でカスタム権限の調整が必要になる場合がよくあります。 たとえば、再販業者のさまざまな組み合わせを対象とした複数の割引関連メジャーへのアクセスを拒否するとします。 ディメンション データとして **Resellers** があり、メジャーとして **Discount Amount** がある場合、同じロール内で (このトピックの指示を使用して) メジャーに対する権限とディメンション メンバーに対する権限の両方を組み合わせる必要があります。 ディメンション権限を設定する方法の詳細については、 [ディメンション データへのカスタム アクセス権の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) を参照してください。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34025246"
   
  Excel では、セルのセキュリティは次の図のように示されます。  
   
- ![使用不可とセルを表示する列を excel](../../analysis-services/multidimensional-models/media/ssas-permscellshidemeasure.png "Excel の列が使用不可とセルを表示")  
+ ![Excel の列が使用不可としてセルを表示する](../../analysis-services/multidimensional-models/media/ssas-permscellshidemeasure.png "Excel の列が使用不可としてセルを表示します。")  
   
 ## <a name="set-read-permissions-on-calculated-measures"></a>計算メジャーに対する Read 権限の設定  
  計算メジャーに対する権限は、メジャーの構成要素とは関係なく設定できます。 計算メジャーとその従属メジャーとの間で権限を調整する場合は、Read-Contingent に関する次のセクションに進んでください。  
@@ -74,7 +74,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
  Excel で、現在のロールを使用してキューブに接続し、3 つすべてのメジャーを選択してセルのセキュリティの効果を確認します。 拒否されたセットのメジャーは使用できませんが、計算メジャーはユーザーに表示できることに注意してください。  
   
- ![Excel の表を利用し、使用できなくなった cellls](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "Excel の表を利用し、使用できなくなった cellls")  
+ ![Excel の表を利用し、使用できない cellls](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "でき、使用できない cellls を Excel テーブル")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>計算メジャーに対する Read-Contingent 権限の設定  
  セルのセキュリティには、計算に参加する関連セルに権限を設定するための代替手段として Read-Contingent が用意されています。 もう一度 **Reseller Gross Profit** の例を検討します。 前のセクションで示されていたのと同じ MDX 式を入力します。今回は、 **[ロールの作成]** | **[セル データ]** ダイアログ ボックスの 2 つ目のテキスト領域 ( **[セルのセキュリティでセル コンテンツの条件の読み取りを許可する]** の下のテキスト領域) に入力します。結果は Excel で表示したときにわかります。 **Reseller Gross Profit** は **Reseller Sales Amount** および **Reseller Total Product Cost**に基づくため、総利益の構成要素にアクセスできず、そのためこの時点では総利益にアクセスできません。  
@@ -89,10 +89,10 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
 ## <a name="see-also"></a>参照  
  [MDX ビルダー (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [基本的な MDX スクリプト & #40 です。MDX と #41 です。](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [プロセスのアクセス許可を与える&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [ディメンションに対する権限を付与&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [データ & #40; をディメンションにカスタムのアクセスを許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [キューブまたはモデル権限 & #40; を許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [基本的な MDX スクリプト (MDX)](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [処理権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [ディメンションに対する権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [ディメンション データへのカスタム アクセス権の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [キューブ権限またはモデル権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   

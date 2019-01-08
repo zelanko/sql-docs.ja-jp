@@ -18,12 +18,12 @@ ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94fcf41d39e74da3c44c384cc452b7c8ea972c8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 525af6370b7e1af1591162109382005adbbf0bac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711120"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505655"
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,24 +45,24 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@dbName =** ] **'***database***'**  
+ [  **@dbName =** ] **'**_データベース_**'**  
  データベースの名前です。 *データベース*は**sysname**、既定値はありません。  
   
- [ **@name=** ] **'***logical_file_name***'**  
- 使用される名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルを参照するときにします。 サーバー内で一意な名前を指定する必要があります。 *logical_file_name*は**nvarchar (260)**、既定値はありません。  
+ [  **@name=** ] **'**_logical_file_name_**'**  
+ ファイルを参照する場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用される名前を指定します。 サーバー内で一意な名前を指定する必要があります。 *logical_file_name*は**nvarchar (260)**、既定値はありません。  
   
- [ **@filename =** ] **'***os_file_name***'**  
- オペレーティング システムが使用するファイルのパスとファイル名を指定します。 これで、サーバーで、ファイルが存在する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]がインストールされています。 *os_file_name*は**nvarchar (260)**、既定値はありません。  
+ [  **@filename =** ] **'**_os_file_name_**'**  
+ オペレーティング システムが使用するファイルのパスとファイル名を指定します。 このファイルは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]がインストールされているサーバーに存在している必要があります。 *os_file_name*は**nvarchar (260)**、既定値はありません。  
   
- [ **@size=** ] **'***size* **'**  
+ [  **@size=** ] **'**_サイズ_ **'**  
  ファイルの初期サイズです。 *サイズ*は**nvarchar (20)**、既定値は NULL です。 整数を指定します。小数を含めないでください。 サフィックス MB、KB を使用してメガバイト、キロバイトを指定できます。 既定値は MB です。 最小値は 512 KB です。 場合*サイズ*が指定されていない、既定値は 1 MB です。  
   
- [ **@maxsize=** ] **'***max_size* **'**  
+ [  **@maxsize=** ] **'**_max_size_ **'**  
  ファイルを拡張できる最大サイズを指定します。 *max_size*は**nvarchar (20)**、既定値は NULL です。 整数を指定します。小数を含めないでください。 サフィックス MB、KB を使用してメガバイト、キロバイトを指定できます。 既定値は MB です。  
   
  場合*max_size*が指定されていない、ディスクがいっぱいになるまで、ファイルが拡張されます。 ディスク容量の上限まで近づくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログが管理者に対して警告を発します。  
   
- [  **@filegrowth=** ] **' * * * growth_increment* **'**  
+ [  **@filegrowth=** ] **'**_growth_increment_ **'**  
  新しい領域が必要とされるたびにファイルに追加される領域の容量を指定します。 *growth_increment*は**nvarchar (20)**、既定値は NULL です。 値に 0 を指定した場合、ファイルの拡張は行われません。 整数を指定します。小数を含めないでください。 値は MB、KB、またはパーセント (%) の単位で指定できます。 % を指定すると、増加量が、増分値の発生時に、ファイルのサイズの比率を指定します。 サフィックス MB、KB、または % を付けないで数値を指定した場合の既定値は MB です。  
   
  場合*growth_increment* null、既定値は 10%、およびサイズの最小値は 64 KB です。 指定されたサイズは、最も近い 64 KB 単位の値に切り上げられます。  
@@ -77,7 +77,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  実行権限は、既定のメンバーに、 **sysadmin**固定サーバー ロール。 この権限は譲渡できません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、データベースで`db1`が不足しているログ領域 (エラー 9002)、復旧中に問題ありとをマークされました。  
+ 次の例では、ログの空き容量が不足していたため (エラー 9002)、復旧中に `db1` データベースに未復旧のマークが付いています。  
   
 ```  
 USE master;  

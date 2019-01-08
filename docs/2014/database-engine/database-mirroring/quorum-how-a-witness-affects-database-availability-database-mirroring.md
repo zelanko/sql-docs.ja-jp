@@ -1,5 +1,5 @@
 ---
-title: 'クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング) | Microsoft Docs'
+title: クォーラム:ミラーリング監視サーバーがデータベースの可用性 (データベース ミラーリング) に与える影響 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3dd9b33de1ca429afbae8a8fe6ccdc7a41583a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067552"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525031"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>クォーラム:ミラーリング監視サーバーがデータベースの可用性 (データベース ミラーリング) に与える影響
   データベース ミラーリング セッションにミラーリング監視サーバーが設定されている場合は必ず、 *クォーラム* が必要になります。 クォーラムとは、データベース ミラーリング セッションで複数のサーバー インスタンスが相互接続されているときに存在するリレーションシップです。 通常、クォーラムには 3 つの相互接続されたサーバー インスタンスが関係します。 ミラーリング監視サーバーが設定されている場合、データベースを使用可能にするために、クォーラムが必要になります。 クォーラムは、自動フェールオーバーを伴う高い安全性モードのために設計されています。クォーラムを使用することで、データベースを所有するパートナーが一度に 1 つのみになるように制限できます。  
   
  特定のサーバー インスタンスがミラーリング セッションから切断されると、そのインスタンスはクォーラムを失います。 接続されているサーバー インスタンスがない場合、セッションはクォーラムを失い、データベースは使用できなくなります。 次の 3 種類のクォーラムが考えられます。  

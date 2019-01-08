@@ -16,17 +16,17 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28ac9304ac49a210cfeafc564332828da0680dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba210106a7a4045c3dae43db3590e69a7c2c5ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515787"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>パッケージをインポートおよびエクスポートする (SSIS サービス)
     
 > [!IMPORTANT]  
->  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
+>  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
   
  パッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb データベースの sysssispackages テーブルまたはファイル システムに保存できます。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "48178822"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb データベース。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをインポートおよびエクスポートする機能を提供し、これストレージ形式とパッケージの場所を変更します。 インポートおよびエクスポート機能を使用すると、ファイル システム、パッケージ ストア、または msdb データベースにパッケージを追加したり、いずれかの保存形式から別の保存形式にパッケージをコピーしたりできます。 たとえば、msdb に保存されているパッケージをファイル システムにコピーしたり、その逆の操作を行うことができます。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、パッケージをインポートおよびエクスポートできます。これは、パッケージの保存形式と位置が変わることを意味します。 インポートおよびエクスポート機能を使用すると、ファイル システム、パッケージ ストア、または msdb データベースにパッケージを追加したり、いずれかの保存形式から別の保存形式にパッケージをコピーしたりできます。 たとえば、msdb に保存されているパッケージをファイル システムにコピーしたり、その逆の操作を行うことができます。  
   
  **dtutil** コマンド プロンプト ユーティリティ (dtutil.exe) を使用してパッケージを別の形式にコピーすることもできます。 詳細については、「[dtutil ユーティリティ](dtutil-utility.md)」を参照してください。  
   
 ## <a name="to-import-or-export-a-package"></a>パッケージをインポートまたはエクスポートするには  
   
 > [!IMPORTANT]  
->  このトピックでは、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] に含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] との互換性を維持するために、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] サービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] でのパッケージ管理の詳細については、「[Integration Services (SSIS) Server](catalog/integration-services-ssis-server-and-catalog.md)」を参照してください。  
+>  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に含まれている [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] との互換性を維持するために、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]サービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] でのパッケージ管理の詳細については、「[Integration Services (SSIS) Server](catalog/integration-services-ssis-server-and-catalog.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージは、次の場所からインポートしたり、次の場所にエクスポートしたりできます。  
   
@@ -83,19 +83,19 @@ ms.locfileid: "48178822"
   
     -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスからインポートするには、**[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
   
-         参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[OK]** をクリックします。  
+         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、**[OK]** をクリックします。  
   
     -   ファイル システムからインポートするには、 **[ファイル システム]** をクリックします。  
   
-         参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[開く]** をクリックします。  
+         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、**[開く]** をクリックします。  
   
-    -   [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアからインポートするには、**[SSIS パッケージ ストア]** をクリックし、サーバーを指定します。  
+    -   [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアからインポートするには、 **[SSIS パッケージ ストア]** をクリックし、サーバーを指定します。  
   
-         参照ボタン (**[...]**) をクリックし、インポートするパッケージを選択します。次に、**[OK]** をクリックします。  
+         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、**[OK]** をクリックします。  
   
 7.  必要に応じて、パッケージ名を更新します。  
   
-8.  パッケージの保護レベルを更新するには、参照ボタン ( **[...]** ) をクリックし、 **[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
+8.  パッケージの保護レベルを更新するには、参照ボタン **[...]** をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
   
 9. **[OK]** をクリックすると、インポートが完了します。  
   
@@ -119,21 +119,21 @@ ms.locfileid: "48178822"
   
     -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスにエクスポートするには、**[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
   
-         参照ボタン ( **[...]**) をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを探します。 必要に応じて、パッケージの既定の名前を更新し、 **[OK]** をクリックします。  
+         参照ボタン **[...]** をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを探します。 必要に応じて、パッケージの既定の名前を更新し、 **[OK]** をクリックします。  
   
     -   ファイル システムにエクスポートするには、 **[ファイル システム]** をクリックします。  
   
-         参照ボタン ( **[...]** ) をクリックし、パッケージのエクスポート先のフォルダーを探します。次に、パッケージ ファイルの名前を入力して **[保存]** をクリックします。  
+         参照ボタン **[...]** をクリックし、パッケージのエクスポート先のフォルダーを探します。次に、パッケージ ファイルの名前を入力して **[保存]** をクリックします。  
   
-    -   [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアにエクスポートするには、**[SSIS パッケージ ストア]** をクリックしてサーバーを指定します。  
+    -   [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアにエクスポートするには、 **[SSIS パッケージ ストア]** をクリックしてサーバーを指定します。  
   
-         参照ボタン ( **[...]**) をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを選択します。 必要に応じて、パッケージの新しい名前を **[パッケージ名]** テキスト ボックスに入力します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         参照ボタン **[...]** をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを選択します。 必要に応じて、パッケージの新しい名前を **[パッケージ名]** テキスト ボックスに入力します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  パッケージの保護レベルを更新するには、参照ボタン (**[...]**) をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
+7.  パッケージの保護レベルを更新するには、参照ボタン **[...]** をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
   
 8.  **[OK]** をクリックすると、エクスポートが完了します。  
   
 ## <a name="see-also"></a>参照  
- [Package Management &#40;SSIS サービス&#41;](service/package-management-ssis-service.md)  
+ [パッケージの管理 &#40;SSIS サービス&#41;](service/package-management-ssis-service.md)  
   
   

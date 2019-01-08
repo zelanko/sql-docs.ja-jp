@@ -16,15 +16,15 @@ ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c8f5a510ca569f4dd24464abf176b2db772115
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228502"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439394"
 ---
 # <a name="legal-notice-for-documentation"></a>ドキュメントの免責事項
-  このドキュメントは現状有姿で提供され、 このドキュメントに記載されている情報や見解 (URL 等のインターネット Web サイトに関する情報を含む) は、将来予告なしに変更されることがあります。 お客様は、その使用に関するリスクを負うものとします。  
+  このドキュメントは現状有姿で提供されます。 このドキュメントに記載されている情報や見解 (URL 等のインターネット Web サイトに関する情報を含む) は、将来予告なしに変更されることがあります。 お客様は、その使用に関するリスクを負うものとします。  
   
  ここで使用される例は架空のものであり、説明のためだけに使用されます。 実在するものとは一切関係ありません。  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512254"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;モデル&gt;します。コンテンツ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  任意。 スカラー値を返す式。  
   
 ## <a name="remarks"></a>コメント  
- **SELECT FROM** *\<モデル > * * *。コンテンツ** ステートメントは、各アルゴリズムに固有のコンテンツを返します。 たとえば、カスタム アプリケーション内のアソシエーション ルール モデルに関するすべてのルールの記述を使用する場合があります。 使用することができます、 **SELECT FROM\<モデル >。コンテンツ**ステートメントをモデルの NODE_RULE 列の値を返します。  
+ **SELECT FROM** _\<モデル >_**します。コンテンツ**ステートメントは、各アルゴリズムに固有のコンテンツを返します。 たとえば、カスタム アプリケーション内のアソシエーション ルール モデルに関するすべてのルールの記述を使用する場合があります。 使用することができます、 **SELECT FROM\<モデル >。コンテンツ**ステートメントをモデルの NODE_RULE 列の値を返します。  
   
  次の表に、マイニング モデル コンテンツに含まれる列を示します。  
   
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  期待される結果:  
   
- モデルがデシジョン ツリー モデルであるため、モデルの親ノードの子孫には、1 つのマージナル統計ノード、予測可能な属性を表すノード、および入力属性と入力値を含む複数のノードが含まれています。 詳細については、「[デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)」を参照してください。  
+ モデルがデシジョン ツリー モデルであるため、モデルの親ノードの子孫には、1 つのマージナル統計ノード、予測可能な属性を表すノード、および入力属性と入力値を含む複数のノードが含まれています。 詳細については、「 [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="using-the-flattened-keyword"></a>FLATTENED キーワードの使用  
  多くの場合、マイニング モデル コンテンツには、入れ子になったテーブル列のモデルに関する有用な情報が含まれています。 FLATTENED キーワードを使用すると、階層的な行セットをサポートするプロバイダーを使用しなくても、入れ子になったテーブル列からデータを取得することができます。  

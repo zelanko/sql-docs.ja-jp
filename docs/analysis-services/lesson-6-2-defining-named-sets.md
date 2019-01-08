@@ -1,5 +1,5 @@
 ---
-title: 名前付きセットの定義 |Microsoft ドキュメント
+title: 名前付きセットの定義 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018229"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507661"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>レッスン 6-2 - 名前付きセットを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34018229"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-    これで、Exists セット式の最初のセットを定義できました。続いて 2 番目のセット、つまり多数の従業員を含む Reseller ディメンションのメンバーのセットを追加できます。  
+    定義したので、Exists の最初のセット式を設定する、従業員の最大数を含む Reseller ディメンションのメンバーのセットが 2 番目のセットを追加する準備が整いました。  
   
 7.  **[計算ツール]** ペインの **[メタデータ]** タブで、Reseller ディメンションの **[Number of Employees]** を展開して、 **[メンバー]**、 **[All Resellers]** の順に展開します。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34018229"
   
 9. プロパティ ウィンドウで、**DiscretizationMethod** プロパティを **Automatic** に変更して、**DiscretizationBucketCount** プロパティを「**5**」に変更します。 詳細については、[「属性メンバーのグループ化 (分離)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
-10. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、**[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+10. **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 11. 配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[計算]** タブのツール バーで **[再接続]** をクリックします。  
   
@@ -124,16 +124,16 @@ ms.locfileid: "34018229"
   
     キューブで表示されるのは **Category** 属性の **Bike** メンバーと、 **Bike** サブカテゴリのメンバーだけになります。 これは、サブキューブを定義するために **Core Products** 名前付きセットが使用されているためです。 次の図のように、このサブキューブは、サブキューブ内の **Product** ディメンション内の **Category** 属性のメンバーを、 **Core Product** 名前付きセットのメンバーに限定します。  
   
-    ![コア製品のメンバーの名前付きセット](../analysis-services/media/l6-named-set-04.gif "コア製品のメンバーの名前付きセット")  
+    ![名前付きセットのメンバーはコア製品](../analysis-services/media/l6-named-set-04.gif "コア製品のメンバーの名前付きセット")  
   
 7.  **[メタデータ]** ペインで **Reseller**を展開し、フィルター領域に **Large Resellers** を追加します。  
   
     データ ペインの Reseller Sales Amount メジャーには、自転車の大規模な再販業者の売上高だけが表示されるようになります。 また、次の図のように、フィルター ペインには、この特定のサブキューブを定義するために使用される 2 つの名前付きセットが表示されています。  
   
-    ![フィルター ペインの 2 つの名前を含む設定](../analysis-services/media/l6-named-set-05.gif "という 2 つを含むフィルター ウィンドウの設定")  
+    ![フィルター ペインの 2 つの名前を格納している設定](../analysis-services/media/l6-named-set-05.gif "という名前の 2 つを含むフィルター ウィンドウの設定")  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 7: 主要業績評価指標を定義する & #40 です。Kpi"&"#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[レッスン 7:主要業績評価指標を定義する&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>参照  
 [[新しい名前付きセット]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

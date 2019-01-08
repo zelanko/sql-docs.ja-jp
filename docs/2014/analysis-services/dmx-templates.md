@@ -11,12 +11,12 @@ ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048258"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504690"
 ---
 # <a name="dmx-templates"></a>[DMX テンプレート]
   データ マイニング テンプレートは、高度なクエリをすばやく作成するのに役立ちます。 DMX クエリの一般的な構文は詳しく解説されており、テンプレートを使用すると、引数とデータ ソースをクリックおよびポイントする方法でクエリを簡単に作成できます。  
@@ -75,7 +75,7 @@ ms.locfileid: "48048258"
   
  **作成**  
   
- カスタム モデルおよびデータ構造を作成するには、これらのテンプレートを使用します。 ウィザードでサポートされているモデルによる制限を受けるわけではありません。プラグイン アルゴリズムを含め、接続先の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスによってサポートされている任意のデータ マイニング アルゴリズムを使用できます。  
+ カスタム モデルおよびデータ構造を作成するには、これらのテンプレートを使用します。 ウィザードでサポートされているモデルに限定されないのインスタンスでサポートされている任意のデータ マイニング アルゴリズムを使用することができます -[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プラグイン アルゴリズムを含めに接続されています。  
   
 -   マイニング モデル  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48048258"
   
 -   マイニング構造のトレーニング  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  使用するテンプレートによっては、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーにアクセスしてクエリを実行するために管理権限が必要になります。  
   
 ## <a name="see-also"></a>参照  
