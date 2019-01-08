@@ -1,5 +1,5 @@
 ---
-title: 言語および照合順序 (Analysis Services) |Microsoft ドキュメント
+title: 言語および照合順序 (Analysis Services) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a1b066f23c0c5a4e92b6b1f86886cc54c7451f6c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3af3d6ba14e4a9f3e2948c910e4282e33c032d3e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018599"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214312"
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムが提供する言語と照合順序をサポートします。 **Language** プロパティと **Collation** プロパティはインストール中、最初にインスタンス レベルで設定されますが、後でオブジェクト階層のさまざまなレベルで変更できます。  
   
- 多次元モデルの場合 (のみ)、データベースまたはキューブでこれらのプロパティを設定できます。キューブ内のオブジェクト用に作成した翻訳に設定することもできます。 表形式モデルでは、言語および照合順序はホスト オペレーティング システムから継承されます。  
+ 多次元モデルの場合 (のみ)、データベースまたはキューブのこれらのプロパティを設定することができます - キューブ内のオブジェクト用に作成した翻訳に設定することもできます。 表形式モデルでは、言語および照合順序はホスト オペレーティング システムから継承されます。  
   
  多次元モデルで **Language** と **Collation** を設定する場合に、処理中のデータ モデルとクエリの実行によって使用される設定を指定するか、または複数の翻訳が含まれるモデルを提供して、他の言語を話すユーザーが母語でモデルを操作できるようにします。 オブジェクト (データベース、モデル、キューブ) の **Language** プロパティと **Collation** プロパティの明示的な設定は、開発環境と実稼働サーバーが異なるロケールで構成され、想定しているターゲット環境に言語と照合順序を一致させる場合に適しています。  
   
 ##  <a name="bkmk_object"></a> 言語および照合順序のプロパティをサポートするオブジェクト  
- **Language** プロパティと **Collation** プロパティは同時に公開されることが多く、 **Language**を設定できる場合は、 **Collation**も設定できます。  
+ **言語**と**照合順序**プロパティが同時に公開される多くの場合、設定できます**言語**、設定することも**照合順序**します。  
   
  **Language** と **Collation** は次のオブジェクトで設定できます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34018599"
 ###  <a name="bkmk_lcid"></a> 言語プロパティの値はロケール識別子 (LCID)  
  有効な値には、ドロップダウン リストに表示される任意の LCID が含まれます。 Management Studio および SQL Server Data Tools では、LCID は同等の文字列で表されます。 同じ言語は、ツールに関係なく **Language** プロパティが公開される場所に表示されます。 同一の言語のリストを持つことで、モデル全体で翻訳のテストと実装に一貫性を持たせることができます。  
   
- Analysis Services には、言語が名前順に表示されますが、プロパティについて格納されている実際の値は LCID です。 言語プロパティをプログラムにより設定、または msmdsrv.ini ファイルで設定する場合は、 [ロケール識別子 (LCID)](http://en.wikipedia.org/wiki/Locale) を値として使用します。 LCID は、言語 ID、並べ替え ID、および特定の言語を識別する予約されたビットから構成される 32 ビット値です。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は LCID を使用して、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスとオブジェクトの選択言語を特定します。  
+ Analysis Services には、言語が名前順に表示されますが、プロパティについて格納されている実際の値は LCID です。 言語プロパティをプログラムにより設定、または msmdsrv.ini ファイルで設定する場合は、 [ロケール識別子 (LCID)](http://en.wikipedia.org/wiki/Locale) を値として使用します。 LCID は、言語 ID、並べ替え ID、および特定の言語を識別する予約されたビットから構成される 32 ビット値です。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、LCID を使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスおよびオブジェクトに選択された言語を指定します。  
   
  16 進数または 10 進数のいずれかの形式を使用して、LCID を設定することができます。 **言語** プロパティの有効な値の例を、次にいくつか示します。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34018599"
 ##  <a name="bkmk_collations"></a> Analysis Services での照合順序のサポート  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、Windows (バージョン _90 および _100) およびバイナリ照合順序を排他的に使用します。 これには、従来の SQL Server の照合順序は使用されません。 キューブ内では、属性のレベルでの翻訳を除き、単一の照合順序が全体を通じて使用されます。 属性翻訳の定義の詳細については、「 [Analysis Services での翻訳のサポート](../analysis-services/translation-support-in-analysis-services.md)」を参照してください。  
   
- 照合順序は、2 種類の活字のある言語において、オブジェクト識別子を除くすべての文字列の大文字小文字の区別を制御します。 オブジェクト識別子で大文字と小文字を使用する場合は、オブジェクト識別子の大文字小文字の区別は、照合順序ではなく [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]によって決定されることをあらかじめご了承ください。 英語版のスクリプト内で構成されるオブジェクト識別子の場合、照合順序に関係なく、オブジェクト識別子の大文字小文字の区別は常に無視されます。 キリル語など、2 種類の活字を持つ言語は、逆の処理になります (常に大文字小文字を区別)。 詳細については、「 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。  
+ 照合順序は、2 種類の活字のある言語において、オブジェクト識別子を除くすべての文字列の大文字小文字の区別を制御します。 オブジェクト識別子で大文字と小文字を使用する場合は、オブジェクト識別子の大文字小文字の区別は、照合順序ではなく [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]によって決定されることをあらかじめご了承ください。 英語版のスクリプト内で構成されるオブジェクト識別子の場合、照合順序に関係なく、オブジェクト識別子の大文字小文字の区別は常に無視されます。 キリル語など、2 種類の活字を持つ言語は、逆の処理になります (常に大文字小文字を区別)。 詳細については、「 [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。  
   
  Analysis Services での照合順序は、各サービス用に選択した並べ替えオプションでパリティを維持すると仮定した場合、SQL Server リレーショナル データベース エンジンの照合順序と互換性があります。 たとえば、リレーショナル データベースがアクセントを区別する場合、キューブを同じ方法で構成する必要があります。 照合順序の設定が分岐していると、問題が発生する可能性があります。 例と回避策については、「 [Unicode 文字列の空白は照合順序に基づいてさまざまな処理の結果が生成される](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)」を参照してください。 照合順序とデータベース エンジンの詳細については、「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "34018599"
   
  SQL Server Management Studio または AMO PowerShell を使用して、サーバー レベルの既定の言語または照合順序を変更することができます。 または、変更、 **\<言語 >** と **\<CollationName >** 言語の LCID を指定する、msmdsrv.ini ファイルで設定します。  
   
-1.  Management Studio で、サーバー名を右クリックして、**[プロパティ]** | **[言語/照合順序]** と選択します。  
+1.  Management Studio で、サーバー名を右クリックして、 **[プロパティ]** | **[言語/照合順序]** と選択します。  
   
 2.  並べ替えオプションを選択します。 **[バイナリ]** または **[バイナリ 2]** のいずれかを選択するには、まず **[アクセントの区別]** のチェック ボックスをオフにします。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "34018599"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のグローバリゼーションのシナリオ](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [グローバリゼーションのヒントとベスト プラクティス (&) #40 です。Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

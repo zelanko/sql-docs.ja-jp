@@ -13,12 +13,12 @@ ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b58446a00300548b0b61defefb71d3207359787a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d5704a43e1ede850a225c4ec2b4df9a3563606b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770776"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540113"
 ---
 # <a name="what-is-a-cursor"></a>カーソルとは
 リレーショナル データベースで操作を実行する場合、行の完全なセットが操作の対象になります。 SELECT ステートメントでは、WHERE 句で指定した条件を満たすすべての行のセットが返されます。 このステートメントが返す行の完全なセットを結果セットと呼びます。 全体の結果セットを単位としてでは、アプリケーション、特に対話型と、オンラインであるが効率的に作業常にことはできません。 そのため、このようなアプリケーションでは、一度に 1 行または少数の行のブロックを使用するためのメカニズムが必要になります。 カーソルはそのメカニズムを提供する結果セットの拡張機能です。  

@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのコピーを作成 |Microsoft ドキュメント
+title: マイニング モデルのコピーを作成 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23770ec59e31a51b7aca7badf5b827baa6181155
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014589"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502165"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>マイニング モデルのコピーの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34014589"
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     または  
+     - または -  
   
      モデルを選択します。 **[マイニング モデル]** メニューの **[新しいマイニング モデル]** をクリックします。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014589"
   
 1.  マイニング モデルを選択します。  
   
-2.  **[プロパティ]** ウィンドウで **[フィルター]** プロパティのテキスト ボックスをクリックし、作成ボタン ( **[...]** ) をクリックします。  
+2.  **プロパティ**ウィンドウで、テキスト ボックスをクリックして、**フィルター**プロパティ、およびクリック ビルド **(...)** ボタンをクリックします。  
   
 3.  フィルター条件を変更します。  
   
@@ -53,8 +53,8 @@ ms.locfileid: "34014589"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [フィルターをマイニング モデルと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [マイニング モデルのフィルター (Analysis Services - データ マイニング)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [マイニング モデルからフィルターを削除します。](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [マイニング モデルからのフィルターの削除](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

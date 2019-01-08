@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6aabfe5664f5370cc1d5699403cde84c5108886b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098055"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780122"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)
   このダイアログ ボックスを使用すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の起動時のパラメーターを追加または削除できます。 起動時のパラメーターは [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに大きな影響を及ぼします。 起動時のパラメーターを追加または変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」を参照してください。  
@@ -35,7 +34,7 @@ ms.locfileid: "48098055"
   
 -   先頭および末尾のスペースは、すべての起動時のパラメーターから削除します。  
   
--   すべての起動時のパラメーターの先頭文字は - (ダッシュ) で、2 番目の値は英字です。  
+-   すべての起動時のパラメーターの先頭文字は - (ダッシュ) で、2 番目の値は文字です。  
   
 ## <a name="required-parameters"></a>必要なパラメーター  
  以下のパラメーターが必要です。 これらは変更できますが、削除できません。  
@@ -78,6 +77,6 @@ ms.locfileid: "48098055"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって使用されるドメイン アカウント ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] がドメイン アカウントで実行されるように構成されている場合)。  
   
 ## <a name="books-online-references"></a>オンライン ブックの参照  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時のパラメーターの追加情報については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「サーバーのスタートアップ オプションを構成する方法 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー)」を参照してください。  
+ 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]起動時のパラメーターを参照してください"する方法。サーバーのスタートアップ オプションの構成 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
   

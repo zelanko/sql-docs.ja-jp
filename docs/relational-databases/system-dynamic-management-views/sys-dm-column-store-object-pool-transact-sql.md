@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70f0a6f6c4dc8ba4e72b30918c882c103c9410f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d88d2084533904dcbb47aad0d629b1aa8171e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544242"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47669110"
 |`column_id`|`int`|列ストアの列の ID。 これは、DELETE_BITMAP の場合は NULL です。| 
 |`row_group_id`|`int`|行グループの ID。|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|Column_segment – では、列セグメント。 `object_id` セグメント ID です。 セグメントは、1 つの行グループ内の 1 つの列のすべての値を格納します。 たとえば、テーブルに 10 個の列がある場合は、行グループあたり 10 個の列セグメントです。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – テーブルの列セグメントのすべての参照情報を格納しているグローバル ディクショナリ。<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - 1 つの列に関連付けられているローカルのディクショナリ。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – グローバル辞書の別の表現。 これは、dictionary_id に値を逆の外観を提供します。 組ムーバーまたは一括読み込みの一部として圧縮されたセグメントを作成するために使用されます。<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – セグメントを追跡するビットマップを削除します。 パーティションあたり 1 つの削除のビットマップがあります。|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT - 列セグメント。 `object_id` セグメント ID です。 セグメントは、1 つの行グループ内の 1 つの列のすべての値を格納します。 たとえば、テーブルに 10 個の列がある場合は、行グループあたり 10 個の列セグメントです。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY - テーブルの列セグメントのすべての参照情報を格納しているグローバル ディクショナリ。<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - 1 つの列に関連付けられているローカルのディクショナリ。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY - グローバル辞書の別の表現。 これは、dictionary_id に値を逆の外観を提供します。 組ムーバーまたは一括読み込みの一部として圧縮されたセグメントを作成するために使用されます。<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP - セグメントを追跡するビットマップを削除します。 パーティションあたり 1 つの削除のビットマップがあります。|  
 |`access_count`|`int`|読み取りまたは、このオブジェクトへのアクセスの書き込みの数。|  
 |`memory_used_in_bytes`|`bigint`|オブジェクト プール内のこのオブジェクトによって使用されるメモリ。|  
 |`object_load_time`|`datetime`|Object_id が、オブジェクト プールになったは、クロック時間。|  

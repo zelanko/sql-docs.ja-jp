@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e350687f69ea8e6a8ab70f5fa2eb5a1552058525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069922"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780454"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、マージ テーブル アーティクル間に論理レコード リレーションシップを定義する方法について説明します。  
@@ -161,7 +160,7 @@ ms.locfileid: "48069922"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成し、パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定して、手順 1. で作成した接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが `false` を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> プロパティが <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>に設定されている場合、これを <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>に設定します。  
   
@@ -173,7 +172,7 @@ ms.locfileid: "48069922"
   
     -   (省略可) アーティクルが行方向にフィルター選択される場合、 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティに行フィルター句を指定します。 このプロパティを使用して、静的行フィルターまたはパラメーター化された行フィルターを指定します。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
-     詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
+     詳しくは、「 [Define an Article](define-an-article.md)」をご覧ください。  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> メソッドを呼び出します。  
   

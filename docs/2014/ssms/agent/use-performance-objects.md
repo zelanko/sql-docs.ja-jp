@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, monitoring
@@ -20,12 +20,12 @@ ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e934557924dba81604d064d95804b8fd5fb5986d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ccba43aa28cadef1995fab001f66e1f4bebacde
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128462"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787084"
 ---
 # <a name="use-performance-objects"></a>パフォーマンス オブジェクトの使用
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントには、サービスの動作を監視するためのパフォーマンス オブジェクトとパフォーマンス カウンターが含まれています。 パフォーマンス オブジェクトを使用すると、パフォーマンス モニターや Windows ツールを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスのバックグラウンド動作を特定できるようになります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスで現在実行されているアクティブなジョブの数を特定して、ブロックされたジョブを特定できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "48128462"
   
 |インスタンスの種類|オブジェクト名です。|  
 |-------------------|-----------------|  
-|既定|**SQLAgent:** *オブジェクト*:*カウンター*|  
+|既定値|**SQLAgent:** *オブジェクト*:*カウンター*|  
 |名前付き|**SQLAgent$**<br /> ***instance_name* :** *オブジェクト*:*カウンター*|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの次のパフォーマンス オブジェクトが含まれています。  

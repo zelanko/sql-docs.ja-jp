@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergearticle
@@ -17,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98c2d4b7c60ff3229e683d45a6b88ccebaa40c85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700780"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779754"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**sync_object_owner**|**sysname**|パブリッシュされたアーティクルを定義するビューの所有者の名前。|  
 |**sync_object**|**sysname**|パーティションの初期データを設定するときに使用するカスタム オブジェクトの名前。|  
 |**description**|**nvarchar (255)**|アーティクルの説明。|  
-|**status**|**tinyint**|アーティクルの状態。次のいずれかの値になります。<br /><br /> **1** = 非アクティブ<br /><br /> **2** = アクティブ<br /><br /> **5** = 保留中のデータ定義言語 (DDL) 操作<br /><br /> **6**新しく生成されたスナップショットを使った DDL 操作を =<br /><br /> 注: 値はアーティクルが再初期化されるときの**5**と**6**に変更されます**2**します。|  
+|**status**|**tinyint**|アーティクルの状態。次のいずれかの値になります。<br /><br /> **1** = 非アクティブ<br /><br /> **2** = アクティブ<br /><br /> **5** = 保留中のデータ定義言語 (DDL) 操作<br /><br /> **6**新しく生成されたスナップショットを使った DDL 操作を =<br /><br /> 注:アーティクルが再初期化される値の**5**と**6**に変更されます**2**します。|  
 |**creation_script**|**nvarchar (255)**|サブスクリプション データベースにアーティクルを作成する場合に使用される、オプションのアーティクル スキーマ スクリプトのパスと名前です。|  
 |**conflict_table**|**nvarchar(270)**|追加または更新の競合を記録するテーブルの名前です。|  
 |**article_resolver**|**nvarchar (255)**|アーティクルのカスタム競合回避モジュールです。|  

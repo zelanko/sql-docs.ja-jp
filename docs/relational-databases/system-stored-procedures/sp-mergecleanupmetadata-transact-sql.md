@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergecleanupmetadata_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 994f24e0b19dac70e6987a0c23d45d5446548689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670605"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210961"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +49,12 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_mergecleanupmetadata**のバージョンを実行しているサーバーを含むレプリケーション トポロジでのみ使用する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より前のバージョン[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 1。 のみが含まれるトポロジ[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 1 またはそれ以降は、自動保有期間に基づくメタデータのクリーンアップを使用する必要があります。 このストアド プロシージャを実行する場合は、実行するコンピューター上で、きわめて大きいログファイルが必要であり、作成される可能性があることに注意してください。  
+ **sp_mergecleanupmetadata**のバージョンを実行しているサーバーを含むレプリケーション トポロジでのみ使用する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より前のバージョン[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 1。 トポロジ内に [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 以降だけが含まれる場合は、自動保有期間に基づくメタデータのクリーンアップを使用します。 このストアド プロシージャを実行する場合は、実行するコンピューター上で、きわめて大きいログファイルが必要であり、作成される可能性があることに注意してください。  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  後**sp_mergecleanupmetadata**既定に格納されているメタデータが存在するパブリケーションのサブスクライバーのすべてのサブスクリプションで実行される**MSmerge_genhistory**、 **MSmerge_contents**と**MSmerge_tombstone**マークは、再初期化のサブスクライバーの保留中の変更は失われ、現在のスナップショットに不使用とマークされている場合は。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  かどうか、データベースに対する複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーションの保有期間を使用して (**@retention**=**0**)、実行中**sp_mergecleanupmetadata**クリーンアップ、マージ レプリケーション変更の追跡データベースのメタデータがありません。 このため、無期限のパブリケーション保有期間は注意して使用してください。  
   
  これを実行するストアド プロシージャをときに、サブスクライバーを再初期化を設定するかどうかを選択、 **@reinitialize_subscriber**パラメーターを**TRUE** (既定値) または**FALSE**. 場合**sp_mergecleanupmetadata**を実行すると、 **@reinitialize_subscriber**パラメーターに設定**TRUE**サブスクリプションがいた場合でも、サブスクライバーでスナップショットが再適用されます初期スナップショット (たとえば場合、スナップショット データとスキーマが手動で適用またはサブスクライバーに既に存在していた) なしで作成します。 パラメーターを設定する**FALSE**パブリケーションが再初期化されていない場合、パブリッシャーとサブスクライバーでデータが同期されていることを確認する必要がありますので注意が必要ですで使用する必要があります。  
@@ -66,7 +65,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  パブリケーション データベースとサブスクリプション データベースに対するすべての更新を中止することをお勧めしますが必須ではありません。 更新を続行すると、パブリケーションが再初期化される際に、前回のマージ以降にサブスクライバー側で行われたすべての更新が失われますが、データの収束は保持されます。  
   
-2.  マージ エージェントを実行してマージを実行します。 使用することをお勧め、 **– 検証**マージ エージェントを実行すると、各サブスクライバーでエージェントのコマンド ライン オプション。 連続モードのマージを実行している場合は、次を参照してください。*連続モードのマージに関する注意事項*このセクションで後述します。  
+2.  マージ エージェントを実行してマージを実行します。 使用することをお勧め、 **-検証**マージ エージェントを実行すると、各サブスクライバーでエージェントのコマンド ライン オプション。 連続モードのマージを実行している場合は、次を参照してください。*連続モードのマージに関する注意事項*このセクションで後述します。  
   
 3.  すべてのマージが完了すると、実行**sp_mergecleanupmetadata**します。  
   
@@ -82,7 +81,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  停止**すべて**パブリケーションおよびサブスクリプション データベースを更新します。  
   
-2.  マージ エージェントを実行してマージを実行します。 使用することをお勧め、 **– 検証**マージ エージェントを実行すると、各サブスクライバーでエージェントのコマンド ライン オプション。 連続モードのマージを実行している場合は、次を参照してください。*連続モードのマージに関する注意事項*このセクションで後述します。  
+2.  マージ エージェントを実行してマージを実行します。 使用することをお勧め、 **-検証**マージ エージェントを実行すると、各サブスクライバーでエージェントのコマンド ライン オプション。 連続モードのマージを実行している場合は、次を参照してください。*連続モードのマージに関する注意事項*このセクションで後述します。  
   
 3.  すべてのマージが完了すると、実行**sp_mergecleanupmetadata**します。  
   
@@ -106,7 +105,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  完了したときの実行手順 3. **sp_mergecleanupmetadata**、停止した方法に基づいて、連続モードのマージを再開します。 次のいずれかの操作を行います。  
   
--   追加、 **– Continuous**マージ エージェントのパラメーター。  
+-   追加、 **-継続的な**マージ エージェントのパラメーター。  
   
 -   パブリケーションを再アクティブ化**sp_changemergepublication します。**  
   

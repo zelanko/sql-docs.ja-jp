@@ -1,5 +1,5 @@
 ---
-title: 予測関数をモデルに適用する |Microsoft ドキュメント
+title: モデルに予測関数の適用 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014879"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540660"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>モデルへの予測関数の適用
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "34014879"
     > [!WARNING]  
     >  予測クエリ ビルダーでは、 **[結果]** をクリックするまで、DMX は検証されません。 クエリ ビルダーによって生成された式は、有効な DMX でないことがよくあります。 主な原因は、予測可能列に関連付けられていない列の参照や、入れ子になったテーブル内の列の予測 (サブ SELECT ステートメントが必要) です。 この時点で、DMX ビューに切り替えて、ステートメントの編集を続行できます。  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>例: クラスター モデルに対するクエリの作成  
+### <a name="example-create-a-query-on-a-clustering-model"></a>例:クラスター モデルに対するクエリを作成します。  
   
 1.  このサンプル クエリを作成するために使用できるクラスター モデルがない場合は、 [基本的なデータ マイニング チュートリアル](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)を使用して、モデルの [TM_Clustering] を作成してください。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34014879"
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- 他の句 (たとえば WHERE 句) をステートメントのどこかに追加する場合、グリッドを使用して追加することはできません。まず、DMX ビューに切り替える必要があります。  
+ ステートメントの他の場所で他の句を追加するかどうかの例では、WHERE 句を追加する場合-グリッド; を使用して追加することはできませんまず DMX ビューに切り替える必要があります。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  

@@ -20,18 +20,18 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d86f2aa373b120d2ecf1ea47b021b327fc57dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651970"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211712"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLBrowseConnect**反復的なメソッドを検出して、属性とデータ ソースに接続するために必要な属性の値を列挙するをサポートしています。 呼び出しごとに**SQLBrowseConnect**連続するレベルの属性と属性値を返します。 すべてのレベルが列挙された、データ ソースへの接続が完了し完全な接続文字列が返されます**SQLBrowseConnect**します。 SQL_SUCCESS または SQL_SUCCESS_WITH_INFO リターン コードは、すべての接続情報が指定されており、アプリケーションがデータ ソースに接続されているようになりましたことを示します。  
   
 ## <a name="syntax"></a>構文  

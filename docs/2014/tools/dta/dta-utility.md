@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -21,12 +20,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edafb305050b36798990ecea21b08dde42e3f068
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091738"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770714"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
   **dta** ユーティリティは、データベース エンジン チューニング アドバイザーのコマンド プロンプト バージョンです。 **dta** ユーティリティは、データベース エンジン チューニング アドバイザーの機能をアプリケーションとスクリプトで使用するために作成されました。  
@@ -41,7 +40,7 @@ ms.locfileid: "48091738"
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -ddatabase_name ]   
       [ -Tltable_list | -Tf table_list_file ]  
@@ -103,13 +102,13 @@ ms.locfileid: "48091738"
  チューニングする各データベースの名前を指定します。 最初のデータベースは既定のデータベースです。 データベース名をコンマで区切り、複数のデータベースを指定することができます。次に例を示します。  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- または、各データベースに **–D** 引数を使用することで、複数のデータベースを指定することもできます。次に例を示します。  
+ または、各データベース名に対して **-D** 引数を使用することで、複数のデータベースを指定できます。次に例を示します。  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  **-D** 引数は必須です。 **-d** 引数が指定されていない場合、 **dta** は、ワークロードの最初の `USE database_name` 句で指定されるデータベースに最初に接続します。 ワークロードに明示的な `USE database_name` 句がない場合、 **-d** 引数を使用する必要があります。  
@@ -149,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |パラメーター|既定値|  
 |---------------|-------------------|  
-|*database_name*|*–D* オプションで指定された **database_name**|  
+|*database_name*|*-D* オプションで指定された **database_name**|  
 |*owner_name*|**dbo**<br /><br /> 注: *owner_name*あります**dbo**します。 それ以外の値を指定すると、 **dta** の実行は失敗し、エラーが返されます。|  
 |*table_name*|なし|  
   
@@ -203,10 +202,10 @@ dta -d AdventureWorks2012 ...
  チューニング セッションの識別子を数値で指定します。 指定しない場合、 **dta** は ID 番号を生成します。 この識別子を使用して、既存のチューニング セッションの情報を表示することができます。 **-ID**に値を指定しない場合は、セッション名を **-s**で指定する必要があります。  
   
  **-ip**  
- プラン キャッシュをワークロードとして使用することを指定します。 明示的に選択したデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **–n** オプションを使用して変更できます。  
+ プラン キャッシュをワークロードとして使用することを指定します。 明示的に選択したデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **-n** オプションを使用して変更できます。  
   
  **ipf、**  
- プラン キャッシュをワークロードとして使用することを指定します。 すべてのデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **–n** オプションを使用して変更できます。  
+ プラン キャッシュをワークロードとして使用することを指定します。 すべてのデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **-n** オプションを使用して変更できます。  
   
  **-if** *workload_file*  
  チューニングの入力として使用するワークロード ファイルのパスとファイルの名前を指定します。 ファイルは、.trc (SQL Server Profiler トレース ファイル)、.sql (SQL ファイル)、.log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース ファイル) のいずれかの形式になっている必要があります。 ワークロード ファイル、またはワークロード テーブルを 1 つ指定する必要があります。  
@@ -218,7 +217,7 @@ dta -d AdventureWorks2012 ...
   
 |パラメーター|既定値|  
 |---------------|-------------------|  
-|*database_name*|*–D* オプションで指定された **database_name** 。|  
+|*database_name*|*-D* オプションで指定された **database_name**。|  
 |*owner_name*|**dbo**。|  
 |*table_name*|[なし] :|  
   
@@ -344,7 +343,7 @@ dta -n number_of_events -A 0
  次の例では、セキュリティで保護された接続 (`-E`) を使用して MyServer の **tpcd1G** データベースに接続し、ワークロードの分析と推奨設定の作成を行います。 出力結果は script.sql という名前のスクリプト ファイルへ書き込まれます。 script.sql が既に存在する場合は、 **引数が指定されているため、** dta `-F` はファイルを上書きします。 チューニング セッションは、ワークロードの分析を完全に終了するように時間制限なしで実行されます (`-A 0`)。 推奨設定の最小向上率は 5% を指定する必要があります (`-m 5`)。 **dta** では、最終的な推奨設定にインデックスおよびインデックス付きビューが含まれます (`-fa IDX_IV`)。  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B.ディスク使用量を制限する**  
@@ -352,7 +351,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  次の例では、生データと追加のインデックスを含むデータベースの合計サイズを 3 GB までに制限し (`-B 3000`)、出力先には d:\result_dir\script1.sql を指定しています。 実行は、1 時間以内です (`-A 60`)。  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C.チューニングするクエリの数を制限する**  
@@ -360,7 +359,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  次の例では、orders_wkld.sql ファイルから読み取るクエリの数を最大 10 に制限し (`-n 10`)、15 分間実行します (`-A 15`)。どちらを先に指定しても同じです。 10 個のクエリすべてをチューニングするために、`-A 0` を使用してチューニング時間を無制限に指定します。 時間が重要な場合は、この例で示すように `-A` 引数でチューニングできる時間数を指定して、適切な制限時間を指定します。  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D.ファイル内に指定されている特定のテーブルをチューニングする**  
@@ -386,11 +385,11 @@ AdventureWorks2012.Production.Product  2000000
  チューニング時間は 2 時間 (`-A 120`) で、出力は XML ファイルに書き込まれます (`-ox XMLTune.xml`)。  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>参照  
- [コマンド プロンプト ユーティリティ リファレンス&#40;データベース エンジン&#41;](../command-prompt-utility-reference-database-engine.md)   
- [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

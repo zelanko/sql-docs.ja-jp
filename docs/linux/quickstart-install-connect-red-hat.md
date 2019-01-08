@@ -1,5 +1,6 @@
 ---
-title: Red Hat Enterprise Linux 上の SQL Server の概要 |Microsoft Docs
+title: Red Hat Enterprise Linux 上の SQL Server の概要します。
+titleSuffix: SQL Server
 description: このクイック スタートでは、Red Hat Enterprise Linux に SQL Server 2017 または SQL Server 2019 インストール作成し、sqlcmd でデータベースをクエリする方法を示します。
 author: rothja
 ms.author: jroth
@@ -8,16 +9,16 @@ ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 8d5b044adbdc0e5a846013aff1922b3cb1cb5dc8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 794d241773addc5584869eaa2e05cfa316908ce1
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669451"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160480"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート: SQL Server をインストールし、Red Hat でデータベースを作成します。
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート:SQL Server をインストールし、Red Hat でデータベースを作成
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -80,7 +81,7 @@ RHEL で SQL Server を構成するためには、ターミナルで次のコマ
    ```
 
    > [!TIP]
-   > 無料でライセンスは、次の SQL Server 2017 エディション: Evaluation、Developer、および高速です。
+   > 次の SQL Server 2017 エディションのライセンスは自由に。Evaluation、Developer、および高速です。
 
    > [!NOTE]
    > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)。

@@ -20,12 +20,12 @@ ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601370"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543821"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47601370"
 |package_guid|**uniqueidentifier**|このアクションを公開するパッケージの GUID。 sys.dm_xe_packages.package_id との間に多対一のリレーションシップがあります。 NULL 値は許可されません。|  
 |description|**nvarchar (256)**|アクションの説明。 説明については、パッケージの作成者によって設定されます。 NULL 値は許可されません。|  
 |capabilities|**int**|オブジェクトの機能を表すビットマップ。 NULL 値が許可されます。|  
-|capabilities_desc|**nvarchar (256)**|オブジェクトのすべての機能を一覧表示します。 NULL 値が許可されます。<br /><br /> **すべてのオブジェクトの種類に適用する機能**<br /><br /> —<br />                                **プライベート**します。 内部的に使用できる唯一のオブジェクトであり、CREATE/ALTER EVENT SESSION DDL ではアクセスできません。 内部的に使用される少数のオブジェクトに加えて、監査イベントとターゲットがこのカテゴリに含まれます。<br /><br /> ===============<br /><br /> **イベントの機能**<br /><br /> —<br />                                **No_block**します。 イベントは、どのような理由でもブロックできない重要なコード パス内にあります。 この機能を持つイベントは、NO_EVENT_LOSS が指定されているイベント セッションには追加できません。<br /><br /> ===============<br /><br /> **すべてのオブジェクトの種類に適用する機能**<br /><br /> —<br />                                **Process_whole_buffers**します。 ターゲットは、イベントごとではなく、イベントのバッファーをまとめて使用します。<br /><br /> —<br />                        **シングルトン**します。 プロセスにはターゲットのインスタンスが 1 つだけ存在できます。 複数のイベント セッションで同じシングルトン ターゲットを参照できますが、インスタンスは 1 つだけであり、そのインスタンスが一意の各イベントを 1 回だけ認識します。 これは、すべてが同じイベントを収集する複数のセッションにターゲットが追加される場合に重要です。<br /><br /> —<br />                                **Synchronous**。 ターゲットは、イベントを生成しているスレッドで、制御が呼び出し元のコード行に返される前に実行されます。|  
+|capabilities_desc|**nvarchar (256)**|オブジェクトのすべての機能を一覧表示します。 NULL 値が許可されます。<br /><br /> **すべてのオブジェクトの種類に適用する機能**<br /><br /> -<br />                                **プライベート**します。 内部的に使用できる唯一のオブジェクトであり、CREATE/ALTER EVENT SESSION DDL ではアクセスできません。 内部的に使用される少数のオブジェクトに加えて、監査イベントとターゲットがこのカテゴリに含まれます。<br /><br /> ===============<br /><br /> **イベントの機能**<br /><br /> -<br />                                **No_block**します。 イベントは、どのような理由でもブロックできない重要なコード パス内にあります。 この機能を持つイベントは、NO_EVENT_LOSS が指定されているイベント セッションには追加できません。<br /><br /> ===============<br /><br /> **すべてのオブジェクトの種類に適用する機能**<br /><br /> -<br />                                **Process_whole_buffers**します。 ターゲットは、イベントごとではなく、イベントのバッファーをまとめて使用します。<br /><br /> -<br />                        **シングルトン**します。 プロセスにはターゲットのインスタンスが 1 つだけ存在できます。 複数のイベント セッションで同じシングルトン ターゲットを参照できますが、インスタンスは 1 つだけであり、そのインスタンスが一意の各イベントを 1 回だけ認識します。 これは、すべてが同じイベントを収集する複数のセッションにターゲットが追加される場合に重要です。<br /><br /> -<br />                                **Synchronous**。 ターゲットは、イベントを生成しているスレッドで、制御が呼び出し元のコード行に返される前に実行されます。|  
 |type_name|**nvarchar(60)**|pred_source オブジェクトおよび pred_compare オブジェクトの名前。 NULL 値が許可されます。|  
 |type_package_guid|**uniqueidentifier**|このオブジェクトの対象となる型を公開するパッケージの GUID。 NULL 値が許可されます。|  
 |type_size|**int**|データ型のサイズ (バイト単位)。 有効なオブジェクト型に対してのみ使用できます。 NULL 値が許可されます。|  

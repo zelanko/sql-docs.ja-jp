@@ -14,12 +14,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80450865b72360068555cb1a25224a3ea503e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfbf2362b06abc254879d25c4f8e7b8e876a6737
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097582"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215861"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
   レポート パラメーターはレポート URL に含めることでレポートに渡すことができます。 このような URL パラメーターにはプレフィックスを付けません。パラメーターはレポート処理エンジンに直接渡されるためです。  
@@ -31,12 +31,12 @@ ms.locfileid: "48097582"
   
  すべてのクエリ パラメーターには、対応するレポート パラメーターを指定できます。 クエリ パラメーターをレポートに渡すには、対応するレポート パラメーターを渡します。 詳細については、「[リレーショナル クエリ デザイナーでのクエリの作成 &#40;レポート ビルダーおよび SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」を参照してください。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  レポート パラメーターでは大文字と小文字が区別されます。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  レポート パラメーターでは大文字と小文字が区別され、次の特殊文字が使用されます。  
->   
+> 
 >  -   URL 文字列では、URL エンコード規格に基づいてすべての空白文字が文字列 "%20" に置き換えられます。  
 > -   URL のパラメーター部分にある空白文字はプラス記号 (+) に置き換えられます。  
 > -   文字列の任意の部分にあるセミコロンは文字列 "%3A" に置き換えられます。  
@@ -70,7 +70,7 @@ parameter
   
 ```  
   
- 例を次に示します。  
+ 例えば以下のようにします。  
   
 ```  
 SalesOrderNumber:isnull=true  
@@ -100,14 +100,14 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 次の URL の例では、"7/1/2005 " という値を持つ単一のパラメーター *SellStartDate* を、ネイティブ モードのレポート サーバーに渡します。  
+ 次の URL の例では、"7/1/2005" という値を持つ単一のパラメーター *SellStartDate* を、ネイティブ モードのレポート サーバーに渡します。  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
 ## <a name="see-also"></a>参照  
- [URL アクセス&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)  
   
   

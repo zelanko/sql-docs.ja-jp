@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ce5bc22f1cf7dd8794aaa8d65e23d0324a204d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172132"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540008"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema でユーザー定義関数が許可されない
   アップグレード アドバイザーは、文書化されていないユーザーによって所有されているユーザー定義関数を検出しました。 **system_function_schema**します。 このユーザーを指定してユーザー定義のシステム関数を作成することはできません。 **System_function_schema**ユーザー名が存在しないため、この名前に関連付けられているユーザー ID (UID = 4) に予約されている、 **sys**スキーマと、内部使用のみに制限されます。  
@@ -40,7 +40,7 @@ ms.locfileid: "48172132"
   
  これらの変更によって、ユーザー定義のシステム関数には次の影響があります。  
   
--   データ定義言語 (DDL) ステートメントを参照する**system_function_schema**は失敗します。 たとえば、ステートメント`CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` . 成功しません。  
+-   データ定義言語 (DDL) ステートメントを参照する**system_function_schema**は失敗します。 たとえば、ステートメント`CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... は成功しません。  
   
 -   アップグレードした後[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、既存のオブジェクトによって所有されている**system_function_schema**でのみに含まれている、 **sys**のスキーマ、**マスター**データベース。 これらの関数を変更または削除するシステム オブジェクトが変更されることはできません、ためはことはありません、**マスター**データベース。 また、これらの関数は、1 つの要素だけで構成される関数名を指定して他のデータベースから呼び出すこともできません。  
   

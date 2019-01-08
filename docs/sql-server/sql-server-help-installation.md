@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514533"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202451"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server のオフライン ヘルプとヘルプ ビューアー
 
@@ -207,7 +207,7 @@ F1 を押すか、SSMS または VS のダイアログ ボックスで **[ヘル
 1. [ヘルプ] メニューの **[ヘルプ設定の設定]** をポイントし、**[ブラウザーで起動]** または **[ヘルプ ビューアーで起動]** を選択します。 
 2. F1 を押すか、**[ヘルプ]** または **[?]** を、これらが利用できるダイアログ ボックスでクリックすると、 選択した環境で状況依存のオンライン トピックが表示されます。
 
->  [!NOTE]
+> [!NOTE]
 >  F1 ヘルプは、オンラインのときにのみ機能します。 F1 ヘルプのオフライン ソースはありません。 
 
 ## <a name="systems-without-internet-access"></a>インターネットに接続されていないシステム

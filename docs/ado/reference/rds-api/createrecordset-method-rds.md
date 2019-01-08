@@ -20,12 +20,12 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b376924dfb1833165a1f40ecfd1487c49eb2dcb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604622"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516718"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
 空を作成します。 切断[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -62,7 +62,7 @@ object.CreateRecordset(ColumnInfos)
   
  次の表、[格納](../../../ado/reference/ado-api/datatypeenum.md)によってサポートされる値、 **CreateRecordset**メソッド。 の順には、参照番号フィールドを定義するために使用します。  
   
- 各データ型は、固定長または可変長。 サイズは、事前に定義されたサイズの定義がまだ必要なために、サイズが – 1 の固定長の型を定義してください。 可変長データ型は、1 から 32767 までのサイズを許可します。  
+ 各データ型は、固定長または可変長。 サイズは、事前に定義されたサイズの定義がまだ必要なために、サイズが-1 の固定長型を定義する必要があります。 可変長データ型は、1 から 32767 までのサイズを許可します。  
   
  変数のデータ型の一部で、型が強制的に代替列に記載されていることができます。 後までの代替文字列が表示されませんが、 **Recordset**を作成して入力します。 必要に応じて、実際のデータ型の確認できます。  
   

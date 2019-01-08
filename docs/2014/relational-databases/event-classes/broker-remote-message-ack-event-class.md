@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0018af72f8299ab98604fa11f6bd33b42b5fc833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175242"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812264"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **がメッセージの受信確認を送信または受信するときに、** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] イベントが生成されます。  
@@ -38,7 +37,7 @@ ms.locfileid: "48175242"
 |**EventSequence**|**int**|このイベントのシーケンス番号。|51|いいえ|  
 |**EventSubClass**|**nvarchar**|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列は次の値を含むことができます。<br /><br /> **受信確認の送信とメッセージ**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、通常のシーケンス番号付きメッセージの一部として受信確認を送信しました。<br /><br /> **受信確認の送信**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、通常のシーケンス番号付きメッセージとは別に受信確認を送信しました。<br /><br /> **確認を受信したメッセージ**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、通常のシーケンス番号付きメッセージの一部として受信確認を受信しました。<br /><br /> **確認を受信しました。**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、シーケンス番号付きメッセージとは別に受信確認を受信しました。|21|はい|  
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
-|**HonorBrokerPriority**|**Int**|データベースの HONOR_BROKER_PRIORITY オプションの現在の値。0 = オフ、1 = オン。|32|はい|  
+|**HonorBrokerPriority**|**Int**|データベースの HONOR_BROKER_PRIORITY オプションの現在の値:0 = オフ、1 = ON です。|32|はい|  
 |**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**IntegerData**|**int**|受信確認を含むメッセージのフラグメント番号。|25|いいえ|  
 |**IntegerData2**|**int**|受信確認の対象となるメッセージのフラグメント番号。|55|いいえ|  
@@ -51,7 +50,7 @@ ms.locfileid: "48175242"
 |**ServerName**|**nvarchar**|トレースしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|26|いいえ|  
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|**StarvationElevation**|**int**|メッセージ交換に設定された優先度より高い優先度でメッセージが送信されたかどうか。0 = false、1 = true。|33|はい|  
+|**StarvationElevation**|**int**|構成された優先順位よりも優先順位の高いメッセージ交換のメッセージの送信。0 = false、1 = true。|33|はい|  
 |**TransactionID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
   

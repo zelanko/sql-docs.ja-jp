@@ -20,18 +20,18 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bd012fc4f3d1e55c27a585600bff7f85459d469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47069f1003b9b3f9bddb1e8601b3b4284372ae7e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844360"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205191"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 関数
 **準拠**  
- バージョンの導入された: ODBC 1.0: Windows XP Service Pack 2、Windows Server 2003 Service Pack 1 では、以降のオペレーティング システムで非推奨とされます。  
+ バージョンが導入されました。ODBC 1.0:Windows XP Service Pack 2、Windows Server 2003 Service Pack 1 では、以降のオペレーティング システムで非推奨とされます。  
   
- **概要**  
+ **まとめ**  
  **SQLInstallDriverManager** ODBC コア コンポーネントのインストールのターゲット ディレクトリのパスを返します。 呼び出し元のプログラムは、ターゲット ディレクトリにドライバー マネージャーのファイルをコピー実際にする必要があります。  
   
 ## <a name="syntax"></a>構文  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
   
  場合は、アプリケーションのセットアップ プログラムによっては、以前のバージョンのドライバー マネージャーがインストールされていた、コア コンポーネントがアンインストールされ、再インストール、コア コンポーネントの使用率カウントは有効なようにする必要があります。 **SQLRemoveDriverManager**最初のコンポーネントの使用率カウントをデクリメントを呼び出す必要があります。 **SQLInstallDriverManager**し、コンポーネントの使用率カウントをインクリメントする呼び出す必要があります。 アプリケーションのセットアップ プログラムは、古いコア コンポーネント ファイルを新しいファイルに置き換える必要があります。 ファイル使用状況カウントが、同じままになります、および古いバージョンのコア コンポーネント ファイルを使用する他のアプリケーションがより新しいバージョンのファイルを使用するようになりました。  
   
- ODBC コア コンポーネント、ドライバー、および翻訳者の新規インストールで、アプリケーションのセットアップ プログラムは、シーケンスで、次の関数を呼び出す必要があります: **SQLInstallDriverManager**、 **SQLInstallDriverEx**、 **SQLConfigDriver** (で、*起こり*ODBC_INSTALL_DRIVER の)、し**SQLInstallTranslatorEx**します。 コア コンポーネント、ドライバー、および変換プログラムのアンインストール、アプリケーションのセットアップ プログラムは、シーケンスで、次の関数を呼び出す必要があります: **SQLRemoveTranslator**、 **SQLRemoveDriver**、し、**SQLRemoveDriverManager**します。 このシーケンスでは、これらの関数を呼び出す必要があります。 すべてのコンポーネントのアップグレードでは、シーケンスですべての削除関数を呼び出す必要があり、シーケンスで、すべてのインストール関数を呼び出す必要があります。  
+ 新規インストール ODBC コア コンポーネント、ドライバー、および翻訳者は、アプリケーションのセットアップ プログラムは、シーケンスで、次の関数を呼び出す必要があります。**SQLInstallDriverManager**、 **SQLInstallDriverEx**、 **SQLConfigDriver** (で、*起こり*ODBC_INSTALL_DRIVER の)、し**SQLInstallTranslatorEx**します。 コア コンポーネント、ドライバー、および変換プログラムのアンインストール、アプリケーションのセットアップ プログラムは、シーケンスで、次の関数を呼び出す必要があります。**SQLRemoveTranslator**、 **SQLRemoveDriver**、し**SQLRemoveDriverManager**します。 このシーケンスでは、これらの関数を呼び出す必要があります。 すべてのコンポーネントのアップグレードでは、シーケンスですべての削除関数を呼び出す必要があり、シーケンスで、すべてのインストール関数を呼び出す必要があります。  
   
 ## <a name="related-functions"></a>関連する関数  
   

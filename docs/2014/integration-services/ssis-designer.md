@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -18,12 +17,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18f8ee2b794488a098e68ff54803b624c8fa4455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c056a6a1ebf5958b980c21e3d36d6bc1291f8869
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144722"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792861"
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの作成および管理に使用できるグラフィカル ツールです。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの一部として使用できます。  
@@ -44,7 +43,7 @@ ms.locfileid: "48144722"
   
  ![SSIS デザイナーとツールボックスのスクリーンショット](media/denali-designerandtoolbox.gif "SSIS デザイナーとツールボックスのスクリーンショット")  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、さらに、パッケージに機能を追加するダイアログ ボックスとウィンドウが含まれており、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、開発環境を構成しパッケージを使用するためのウィンドウとダイアログ ボックスが用意されています。 詳細については、「[Integration Services のユーザー インターフェイス](integration-services-user-interface.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、さらに、パッケージに機能を追加するダイアログ ボックスとウィンドウが含まれており、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、開発環境を構成しパッケージを使用するためのウィンドウとダイアログ ボックスが用意されています。 詳細については、「 [Integration Services のユーザー インターフェイス](integration-services-user-interface.md)」を参照してください。  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、パッケージを管理および監視する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスに対して依存関係はなく、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを作成または変更するために、このサービスを実行する必要はありません。 ただし、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーが開いている間にサービスを停止すると、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで提供されるダイアログ ボックスを開くことができなくなり、"RPC サーバーを利用できません。" というエラー メッセージが返されます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーをリセットして引き続きパッケージを処理するには、デザイナーを閉じて [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を終了し、次に [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト、およびパッケージを再度開く必要があります。  
   

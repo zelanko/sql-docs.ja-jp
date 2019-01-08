@@ -11,12 +11,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122742"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544329"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>高度な時系列予測 (中級者向けデータ マイニング チュートリアル)
   予測モデルの検証によって、ほとんどの地域の売上が似たパターンに合致するものの、太平洋地域の M200 モデルなど、一部の地域とモデルについては、傾向が大きく異なることがわかりました。 これは驚くことではなく、地域間で違いが生じることは一般的で、その要因は販売促進の有無、レポートの不正確性、地政学的なイベントの有無など多岐にわたります。  
@@ -44,7 +44,7 @@ ms.locfileid: "48122742"
 ##  <a name="bkmk_newExtendData"></a> 新しい拡張売上データを作成します。  
  売上データを更新するには、最新の売上の数値を取得する必要があります。 特に関心があるのは太平洋地域のデータです。この地域では、地域の販売促進を開始して、新しい店への関心を引きつけ、製品の認知度を高めています。  
   
- このシナリオでは、2 つの地域についての 3 か月間の新しいデータを含む Excel ブックからデータをインポートしてあるものとします。 Transact-SQL スクリプトを使用してデータ用のテーブルを作成し、予測に使用するデータ ソース ビューを定義します。  
+ このシナリオでは、新しいデータの 2 つのリージョンの 3 つ月だけを含む Excel ブックからデータがインポートされたことを想定しています。 TRANSACT-SQL スクリプトを使用するデータのテーブルを作成し、予測に使用するデータ ソース ビューを定義します。  
   
 #### <a name="create-the-table-with-new-sales-data"></a>新しい売上データでのテーブルの作成  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48122742"
   
      **データ ソース**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **テーブルとビュー選択**: NewSalesData、作成したテーブルを選択します。  
+     **テーブルとビュー選択**:作成したテーブル NewSalesData を選択します。  
   
 3.  **[完了]** をクリックします。  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48122742"
   
 2.  ウィザードの [ようこそ] ページで、 **[次へ]** をクリックします。  
   
-3.  **データ ソースの選択**] ページで [ [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]、順にクリックします**次**。  
+3.  **[データ ソースの選択]** ページで [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]を選択し、 **[次へ]** をクリックします。  
   
-4.  **[テーブルとビューの選択]** ページでは、テーブルを追加せずに、単に **[次へ]** をクリックします。  
+4.  ページで、 **テーブルおよびビュー**、テーブルだけをクリックして追加しない**次**します。  
   
 5.  ページで、**ウィザードの完了**、名前を入力します`AllRegions`、 をクリックし、**完了**します。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48122742"
   
      **データ ソース**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **[テーブルとビューの選択]**: テーブルを選択しない  
+     **テーブルとビュー選択**:すべてのテーブルを選択しないでください。  
   
      **名前**: `T1000 Pacific Region`  
   

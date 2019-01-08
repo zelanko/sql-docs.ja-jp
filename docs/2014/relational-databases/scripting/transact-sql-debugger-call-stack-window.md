@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.callstack
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2f69398562a11c466d3772389c326b32cb6e6cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb1838890edb044ca3f1bbe5dfd5ebd3dad51c9d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220735"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328692"
 ---
 # <a name="call-stack-window"></a>[呼び出し履歴] ウィンドウ
   **[呼び出し履歴]** ウィンドウには、呼び出し履歴上のモジュール、およびモジュールに渡されるパラメーターのデータ型と値が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュール (ストアド プロシージャ、関数、およびトリガーを含む) 呼び出し履歴を表示するには、デバッグ モードである必要があります。  
@@ -68,9 +66,7 @@ ms.locfileid: "48220735"
  **言語**  
  **を表す** [Transact-SQL] [!INCLUDE[tsql](../../includes/tsql-md.md)]が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-SQL デバッガー](transact-sql-debugger.md)   
  [Transact-SQL デバッガー情報](transact-sql-debugger-information.md)   
  [Transact-SQL コードのステップ実行](step-through-transact-sql-code.md)  
-  
-  

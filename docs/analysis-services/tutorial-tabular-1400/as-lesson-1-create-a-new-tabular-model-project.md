@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 1: 新しい表形式モデル プロジェクトの作成 |Microsoft Docs'
+title: Analysis Services チュートリアル-レッスン 1:新しい表形式モデル プロジェクトの作成 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108671"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417233"
 ---
 # <a name="create-a-tabular-model-project"></a>表形式モデル プロジェクトを作成します。
 
@@ -22,9 +22,9 @@ ms.locfileid: "43108671"
 
 このレッスンでは、1400 互換性レベルで新しいテーブル モデル プロジェクトを作成するのに SQL Server Data Tools (SSDT) または Microsoft Analysis Services プロジェクトの VSIX に Visual Studio 2017 で Visual Studio を使用します。 開始することができます、新しいプロジェクトが作成されると、データを追加して、モデルを作成します。 このレッスンは表形式モデル オーサリング環境で Visual Studio の概要も提供します。  
   
-このレッスンの推定所要時間: **10 分**  
+このレッスンを完了するまでに時間を推定するには。**10 分**  
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この記事では、表形式のモデル作成チュートリアルの最初のレッスンです。 このレッスンを完了するには、必要があります、インプレースいくつかの前提条件があります。 詳細についてを参照してください。 [Analysis Services - Adventure Works チュートリアル](../tutorial-tabular-1400/as-adventure-works-tutorial.md)します。  
   
@@ -80,7 +80,7 @@ SSDT をインストールしたときに、いくつかの新しいメニュー
 
 ## <a name="whats-next"></a>次の操作
 
-[レッスン 2: データの取得](../tutorial-tabular-1400/as-lesson-2-get-data.md)します。
+[レッスン 2:データを取得する](../tutorial-tabular-1400/as-lesson-2-get-data.md)します。
 
   
   

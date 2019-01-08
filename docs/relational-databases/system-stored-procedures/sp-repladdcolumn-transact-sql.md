@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_repladdcolumn_TSQL
@@ -17,20 +16,20 @@ ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d66d4e7f774903e9465f93ed6a75ffd22c017ac7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d50f940b191ee057febb81a59b90d6c842cf821
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674327"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211941"
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   パブリッシュされた既存のテーブル アーティクルに列を追加します。 このテーブルをパブリッシュするすべてのパブリッシャーに新しい列を追加することも、テーブルをパブリッシュする特定のパブリケーションに列を追加することもできます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
-> [!IMPORTANT]  
->  このストアド プロシージャは、旧バージョンとの互換性のためにサポートされており、非推奨とされます。 のみ使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]パブリッシャーと[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]再パブリッシュ サブスクライバー。 導入されたデータ型列に対してこのプロシージャを使用する必要があります[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]またはそれ以降。  
+> [!IMPORTANT]
+>  このストアド プロシージャは、旧バージョンとの互換性のためにサポートされており、非推奨とされます。 のみ使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]パブリッシャーと[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]再パブリッシュ サブスクライバー。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降で導入されたデータ型の列に対してこのプロシージャを使用しないでください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +63,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  ストアド プロシージャがレプリケーション エージェントにより実行されているかどうかを示します。 *from_agent*は**int**、既定値は**0**の値が、 **1**は、レプリケーション エージェントによってこのストアド プロシージャが実行されている場合に使用ごとその他の場合、既定値**0**使用する必要があります。  
   
  [ @schema_change_script =] '*schema_change_script*'  
- パスと名前を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成カスタム ストアド プロシージャを使用して、システムを変更するスクリプト。 *schema_change_script*は**nvarchar (4000)**、既定値は NULL です。 レプリケーションを行うと、トランザクション レプリケーションで使用される 1 つ以上の既定のプロシージャを、ユーザー定義カスタム ストアド プロシージャに置き換えることができます。 *schema_change_script*スキーマ変更がレプリケートされたテーブル アーティクルに sp_repladdcolumn で行われ、次のいずれかの操作に使用できる後に実行されます。  
+ システム生成カスタム ストアド プロシージャを修正するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプトの名前とパスを指定します。 *schema_change_script*は**nvarchar (4000)**、既定値は NULL です。 レプリケーションを行うと、トランザクション レプリケーションで使用される 1 つ以上の既定のプロシージャを、ユーザー定義カスタム ストアド プロシージャに置き換えることができます。 *schema_change_script*スキーマ変更がレプリケートされたテーブル アーティクルに sp_repladdcolumn で行われ、次のいずれかの操作に使用できる後に実行されます。  
   
 -   カスタム ストアド プロシージャが自動的に再生成される場合*schema_change_script*にこれらのカスタム ストアド プロシージャを削除し、ユーザー定義カスタム ストアド プロシージャ、新しいスキーマをサポートするで置き換えることができます。  
   

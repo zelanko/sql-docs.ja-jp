@@ -1,5 +1,5 @@
 ---
-title: データ フィード ライブラリ (Power Pivot for SharePoint) のカスタマイズを作成または |Microsoft ドキュメント
+title: 作成またはカスタマイズ (Power Pivot for SharePoint) データ フィード ライブラリ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71c051d64a40f38a6514301ca3353e7627c67aaf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021255"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519105"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>データ フィード ライブラリの作成またはカスタマイズ (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34021255"
   
 -   集中管理された場所でデータ サービス ドキュメントを共有および管理できます。  
   
--   視覚的に、同じライブラリに格納されているその他のドキュメントからサービス ドキュメントを簡単に区別できるように、アイコンでデータ サービス ドキュメントを識別します![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed。")  
+-   データ サービス ドキュメントがアイコン () で視覚的に示されるため、サービス ドキュメントを同じライブラリに格納されている他のドキュメントと簡単に区別できます。![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  データ フィード ライブラリには、データ フィード自体ではなく、常にデータ サービス ドキュメント (.atomsvc) ファイルが格納されます。 静的な XML データで構成されるデータ フィードとは異なり、データ サービス ドキュメントでは、要求時にフィードを生成するサービスまたはアプリケーションの URL を指定します。そのため、反復可能なインポート操作で接続情報を再利用できます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34021255"
   
 1.  ページの左上にある **[サイトの操作]** をクリックします。  
   
-2.  **[その他のオプション…]** をクリックします。  
+2.  クリックして**より多くのオプション**.  
   
 3.  [ライブラリ] の **[データ フィード ライブラリ]** をクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34021255"
   
  データ フィード登録ドキュメントを作成または編集するライブラリごとに、次の手順を繰り返す必要があります。  
   
-#### <a name="step-1-enable-content-type-management"></a>手順 1: コンテンツ タイプを管理できるようにする  
+#### <a name="step-1-enable-content-type-management"></a>手順 1:コンテンツの種類の管理を有効にします。  
   
 1.  複数のコンテンツ タイプを有効にする対象のドキュメント ライブラリを開きます。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34021255"
   
 7.  **[OK]** をクリックします。  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>手順 2: データ サービス ドキュメント コンテンツ タイプを追加する  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>手順 2:データ サービス ドキュメント コンテンツ タイプを追加します。  
   
 1.  [コンテンツ タイプ] セクションの **[既存のサイト コンテンツ タイプから追加]** をクリックします。 このページが表示されない場合は、サイトに戻って [ライブラリ ツール] の **[ライブラリ]** をクリックし、 **[ライブラリの設定]** をクリックします。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34021255"
   
 5.  **[OK]** をクリックします。  
   
-#### <a name="step-3-verify-data-service-document-configuration"></a>手順 3: データ サービス ドキュメントの構成を確認する  
+#### <a name="step-3-verify-data-service-document-configuration"></a>手順 3:データ サービス ドキュメントの構成を確認します。  
   
 1.  サイトのホーム ページを開きます。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34021255"
   
 ## <a name="see-also"></a>参照  
  [データ フィードの使用 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [Power Pivot データ フィード ライブラリを削除します。](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Power Pivot データ フィード ライブラリの削除](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Power Pivot データ フィード](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

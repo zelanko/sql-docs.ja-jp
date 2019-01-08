@@ -18,12 +18,12 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c32bc8d9b8cca81c560e12b82f58169b257ca1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857000"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535503"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失敗|  
-|1FF6|メタデータを返すことができませんでした。<br /><br /> 注: この理由は、ステートメントが結果セットを生成できません。たとえば、INSERT または DDL ステートメントを勧めします。|  
+|1FF6|メタデータを返すことができませんでした。<br /><br /> 注:これは、ステートメントで結果セットが生成されないためです (INSERT ステートメントや DDL ステートメントなど)。|  
   
 ## <a name="examples"></a>使用例  
  ときに*stmt*がパラメーター化と*scrollopt* PARAMETERIZED_STMT の値が ON に、文字列の形式は次のようには。  

@@ -1,5 +1,5 @@
 ---
-title: Power View の多次元モデルの |Microsoft ドキュメント
+title: Power View for Analysis Services 多次元モデル |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57913e77c38daf0a236dc354aed379ae0aa5625e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 62fc1cc576191e54b6692e803970f78c12daabbc
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025579"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071909"
 ---
 # <a name="power-view-for-multidimensional-models"></a>多次元モデルの Power View
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,8 +24,8 @@ ms.locfileid: "34025579"
   
 -   [多次元モデルの Power View について](../../analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models.md)  
   
--   [レポート データ ソースを作成します。](../../analysis-services/multidimensional-models/create-a-report-data-source.md)  
+-   [レポート データ ソースの作成](../../analysis-services/multidimensional-models/create-a-report-data-source.md)  
   
--   [多次元データ ソースと Power View レポートを作成します。](../../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md)  
+-   [多次元データ ソースを使用した Power View レポートの作成](../../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md)  
   
   

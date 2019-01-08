@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, performance
@@ -17,12 +16,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e87c43039294526a253f514be250bf89a6428d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180682"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813904"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>トランザクション レプリケーションの待機時間の計測および接続の検証
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] でレプリケーション モニター、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用し、トランザクション レプリケーションの待機時間を計測して接続を検証する方法について説明します。 トランザクション レプリケーションには、トレーサー トークン機能が用意されており、これによって簡単にトランザクション レプリケーション トポロジにおける待機時間を計測したり、パブリッシャー、ディストリビューター、およびサブスクライバーの間の接続を検証したりすることができます。 トークン (小さなデータ) は、通常のレプリケートされたトランザクションのようにマークが付けられてパブリケーション データベースのトランザクション ログに書き込まれ、システムを介して送信されることで、次の計算が可能になります。  
@@ -51,7 +50,7 @@ ms.locfileid: "48180682"
   
      [レプリケーション管理オブジェクト (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  トレーサー トークンは、システムを停止する場合にも役立ちます。このとき、すべての処理を停止して、すべてのノードがすべての未処理の変更を受信したかどうかを検証します。 詳細については、「[レプリケーション トポロジの停止 &#40;レプリケーション Transact-SQL プログラミング&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)」を参照してください。  
@@ -89,7 +88,7 @@ ms.locfileid: "48180682"
   
 3.  **[トレーサーの挿入]** をクリックします。  
   
-4.  **[パブリッシャーからディストリビューターまで]** 列、 **[ディストリビューターからサブスクライバーまで]** 列、および **[合計待機時間]** 列で、トレーサー トークンの経過時間を表示します。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
+4.  次の列にトレーサー トークンの経過時間を表示:**パブリッシャー ディストリビューターまでから**、**ディストリビューター サブスクライバーからまで**、**合計待機時間**します。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>以前に挿入したトレーサー トークンの情報を表示するには  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48180682"
   
 3.  **[挿入された時間]** ボックスで時間を選択します。  
   
-4.  **[パブリッシャーからディストリビューターまで]** 列、 **[ディストリビューターからサブスクライバーまで]** 列、および **[合計待機時間]** 列で、トレーサー トークンの経過時間を表示します。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
+4.  次の列にトレーサー トークンの経過時間を表示:**パブリッシャー ディストリビューターまでから**、**ディストリビューター サブスクライバーからまで**、**合計待機時間**します。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
   
     > [!NOTE]  
     >  トレーサー トークン情報は、ディストリビューション データベースの履歴保持期間の制約を受けるその他の履歴データと同じ期間保持されます。 ディストリビューション データベースのプロパティの変更方法の詳細については、「[ディストリビューターとパブリッシャーのプロパティの表示および変更](../view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
@@ -143,7 +142,7 @@ ms.locfileid: "48180682"
   
 3.  パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 3. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが `false` を返す場合、手順 3. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
 5.  <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> メソッドを呼び出します。 このメソッドは、トレーサー トークンをパブリケーションのトランザクション ログに挿入します。  
   

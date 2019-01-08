@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.DA.f1
@@ -15,19 +14,19 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25de27327b79c0bff1a08ba36c93d68f236a868a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a28ee9f405e589e7956be4391f22d9ea2a46388
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089462"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815524"
 ---
 # <a name="distribution-agent-security"></a>[ディストリビューション エージェント セキュリティ]
   **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスを使用すると、ディストリビューション エージェントを実行する Windows アカウントを指定できます。 ディストリビューション エージェントは、プッシュ サブスクリプションのディストリビューターと、プル サブスクリプションのサブスクライバーで動作します。 エージェント プロセスはこのアカウントで実行されるため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントは、 *プロセス アカウント*としても参照されます。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  
   
 -   サブスクリプションの新規作成ウィザードからこのダイアログ ボックスにアクセスする場合、サブスクライバー (プッシュ サブスクリプション) またはディストリビューター (プル サブスクリプション) への接続を作成するディストリビューション エージェントのコンテキストを指定することもできます。 接続は、Windows アカウントの権限を借用するか、指定した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントのコンテキストで作成します。  
   
--   **[サブスクリプションのプロパティ]** ダイアログ ボックスからこのダイアログ ボックスにアクセスする場合、**[サブスクライバー接続]** 行または **[ディストリビューター接続]** 行のプロパティ ボタン ( **[...]** ) をクリックして、ディストリビューション エージェントが接続を作成するコンテキストを指定します。 **[サブスクリプションのプロパティ]** ダイアログ ボックスへのアクセスの詳細については、「[プッシュ サブスクリプションのプロパティの表示または変更](view-and-modify-push-subscription-properties.md)」および「[プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)」を参照してください。  
+-   **[サブスクリプションのプロパティ]** ダイアログ ボックスからこのダイアログ ボックスにアクセスする場合、**[サブスクライバー接続]** 行または **[ディストリビューター接続]** 行のプロパティ ボタン ( **[...]** ) をクリックして、ディストリビューション エージェントが接続を作成するコンテキストを指定します。 アクセスの詳細については、**サブスクリプションのプロパティ**ダイアログ ボックスを参照してください[プッシュ サブスクリプション プロパティの変更を表示および](view-and-modify-push-subscription-properties.md)と方法。[プル サブスクリプションのプロパティの変更を表示および](view-and-modify-pull-subscription-properties.md)します。  
   
  各アカウントに正しいパスワードが指定され、すべてのアカウントが有効である必要があります。 アカウントとパスワードは、エージェントが実行されるまで検証されません。  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 271f2c50c38585e26053f88b2d372dae4b7345c6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 079988eb037ebeffbbbe6cae053e241518e41c81
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980024"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52420791"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ ms.locfileid: "38980024"
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成ツールのインストールについては、「[PowerPivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Power Pivot for SharePoint 2013 の構成の実行  
- **注:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] セットアップ ウィザードでは、 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]の 2 種類の構成ツールがインストールされます。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
+ **注:**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]セットアップ ウィザードの 2 つの異なる構成ツールをインストールする[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]します。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
   
 |名前|説明|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツール|SharePoint 2010 Service Pack 1 (SP1)|  
   
- **注:** 次の手順を実行するには、ファーム管理者である必要があります。 次のようなエラー メッセージが表示される場合があります。  
+ **注:** 次の手順を完了するには、ファーム管理者があります。 次のようなエラー メッセージが表示される場合があります。  
   
--   "ユーザーはファームの管理者ではありません。 検証エラーを修正して、再試行してください。"  
+-   "ユーザーはファーム管理者ではありません。 検証エラーを修正して、再試行してください。"  
   
  SharePoint のインストール時に使用したアカウントでログインするか、SharePoint サーバーの全体管理サイトのプライマリ管理者としてセットアップ アカウントを構成します。  
   
@@ -50,17 +50,17 @@ ms.locfileid: "38980024"
   
 4.  **[パラメーター]** タブで、次の操作を行います。  
   
-    1.  **[既定のアカウント ユーザー名]:** 既定のアカウントのドメイン ユーザー アカウントを入力します。 このアカウントは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション プールなどのサービスを準備する際に使用されます。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
+    1.  **既定のアカウントのユーザー名**:既定のアカウントのドメイン ユーザー アカウントを入力します。 このアカウントは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション プールなどのサービスを準備する際に使用されます。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
   
-    2.  **[データベース サーバー]:** SharePoint ファームでサポートされている SQL Server データベース エンジンを使用できます。  
+    2.  **データベース サーバー**:SharePoint ファームのサポートされている SQL Server データベース エンジンを使用することができます。  
   
-    3.  **[パスフレーズ]:** パスフレーズを入力します。 新しい SharePoint ファームを作成する場合、SharePoint ファームにサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 ファームが既に存在する場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力してください。  
+    3.  **パスフレーズ**:パスフレーズを入力します。 新しい SharePoint ファームを作成する場合、SharePoint ファームにサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 ファームが既に存在する場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力してください。  
   
-    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバー:** SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーの名前を入力します。 シングル サーバー配置では、データベース サーバーと同じサーバーです。 `[ServerName]\powerpivot`  
+    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Excel Services 用サーバー**:名前を入力、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint モードのサーバー。 シングル サーバー配置では、データベース サーバーと同じサーバーです。 `[ServerName]\powerpivot`  
   
-    5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]` になります。 既定値を変更するには、左側のウィンドウの **[既定の Web アプリケーションの作成]** ページおよび **[Web アプリケーション ソリューションの配置]** ページを確認します。  
+    5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]` になります。 変更するには、既定値は、左側のウィンドウで、次のページを確認します。**既定の Web アプリケーションを作成する**と**Web アプリケーション ソリューションの配置**  
   
-5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 各アクションの詳細については、このトピックの「 [Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 」で「サーバーの構成に使用する入力値」セクションを参照してください。  
+5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 それぞれの詳細については、セクションをご覧ください。"サーバーの構成に使用する入力値[構成または修復の Power Pivot for SharePoint 2010 (Power Pivot 構成ツール)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)このトピックの「します。  
   
 6.  必要に応じて、今回は処理しないすべてのアクションを削除します。 たとえば、Secure Store Service を後で構成する場合は、 **[Secure Store Service の構成]** をクリックし、 **[この操作をタスク一覧に含めます]** チェック ボックスをオフにします。  
   

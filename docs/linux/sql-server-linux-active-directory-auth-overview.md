@@ -1,5 +1,6 @@
 ---
-title: Linux 上の SQL Server の active Directory の認証 |Microsoft Docs
+title: Linux 上の SQL Server の active Directory 認証
+titleSuffix: SQL Server
 description: この記事では、Linux 上の SQL Server の Active Directory 認証の概要を示します。
 author: rothja
 ms.date: 02/23/2018
@@ -7,16 +8,16 @@ ms.author: jroth
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 94b3aa8b63b76d03ccd08acf312b3efcf8b45bca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610370"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160401"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上の SQL Server の active Directory 認証
 
@@ -32,14 +33,14 @@ AD 認証は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証に対
 
 - ユーザーは、パスワードを入力することがなくシングル サインオンを使用して認証できます。   
 - AD グループのログインを作成すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD グループのメンバーシップを使用してアクセスおよびアクセス許可を管理することができます。  
-- 各ユーザーが組織全体で単一の ID を持っているので、どの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインがどのユーザーに対応するかを追跡する必要がありません。   
+- 追跡をする必要はありませんので、各ユーザーが組織全体で単一の id が[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログインは、どのユーザーに対応します。   
 - AD では、組織全体で一元的なパスワード ポリシーを適用することができます。   
 
 ## <a name="configuration-steps"></a>構成手順
 
 Active Directory 認証を使用するには、ネットワーク上に AD ドメイン コント ローラー (Windows) が必要です。
 
-AD の認証を構成する方法の詳細については、チュートリアルの中の [チュートリアル: SQL Server on Linux で使用する Active Directory 認証](sql-server-linux-active-directory-authentication.md) で説明されています。 このチュートリアルでの各セクションへのリンクの概要を次に示します。
+AD 認証を構成する方法の詳細については、チュートリアルでは提供されている[チュートリアル。SQL Server on Linux での Active Directory 認証の使用](sql-server-linux-active-directory-authentication.md)します。 このチュートリアルでの各セクションへのリンクの概要を次に示します。
 
 1. [SQL Server ホストを Active Directory ドメインに結合する](sql-server-linux-active-directory-authentication.md#join)
 1. [SQL Server の AD ユーザーを作成し、ServicePrincipalName を設定する](sql-server-linux-active-directory-authentication.md#createuser)
@@ -53,4 +54,4 @@ AD の認証を構成する方法の詳細については、チュートリア�
 
 ## <a name="next-steps"></a>次の手順
 
-Linux に SQL Server の Active Directory 認証を実装する方法の詳細については、[チュートリアル: SQL Server on Linux で使用する Active Directory 認証](sql-server-linux-active-directory-authentication.md) を参照してください。
+Linux 上の SQL Server の Active Directory 認証を実装する方法の詳細については、次を参照してください。[チュートリアル。SQL Server on Linux での Active Directory 認証の使用](sql-server-linux-active-directory-authentication.md)します。

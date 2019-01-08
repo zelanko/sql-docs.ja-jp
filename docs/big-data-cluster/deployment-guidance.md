@@ -1,20 +1,22 @@
 ---
-title: Kubernetes でのクラスターのビッグ データの SQL Server をデプロイする方法 |Microsoft Docs
+title: デプロイする方法
+titleSuffix: SQL Server 2019 big data clusters
 description: Kubernetes での SQL Server 2019 ビッグ データ クラスター (プレビュー) をデプロイする方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.custom: seodec18
+ms.openlocfilehash: 9c1f2fbb750dcdf8e5d78ddcfd5004a32c0cc209
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269865"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246751"
 ---
-# <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>SQL Server のビッグ データは、kubernetes クラスターをデプロイする方法
+# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
 SQL Server のビッグ データ クラスターは、Kubernetes クラスター上の docker コンテナーとしてデプロイできます。 これは、セットアップと構成手順の概要を示します。
 
@@ -26,7 +28,7 @@ SQL Server のビッグ データ クラスターは、Kubernetes クラスタ�
 
 ## <a id="prereqs"></a> Kubernetes クラスターの前提条件
 
-SQL Server のビッグ データのクラスターでは、kubernetes では、サーバーおよびクライアントの両方に v1.10 の最小バージョンが必要です。 Kubectl クライアントでは、特定のバージョンをインストールするを参照してください。 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)します。 Minikube と AKS の最新バージョンとは、少なくとも 1.10 です。 For AKS を使用する必要があります`--kubernetes-version`既定とは異なるバージョンを指定するパラメーター。
+ビッグ データの SQL Server クラスターの最小 Kubernetes バージョンが少なくとも必要 v1.10 サーバーおよびクライアント (kubectl) の両方。
 
 > [!NOTE]
 > クライアントとサーバーの Kubernetes のバージョンで +1 または-1 のマイナー バージョンがあることに注意してください。 詳細については、次を参照してください。 [Kubernetes がサポートされるのは、リリースと傾斜コンポーネント](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)します。
@@ -37,20 +39,22 @@ SQL Server のビッグ データのクラスターでは、kubernetes では、
 
 3 つの方法のいずれかでの Kubernetes にデプロイすることができます。
 
-| Kubernetes をデプロイします。 | 説明 |
-|---|---|
-| **Minikube** | VM で単一ノードの Kubernetes クラスター。 |
-| **Azure Kubernetes サービス (AKS)** | Azure の managed Kubernetes コンテナー サービスです。 |
-| **複数のマシン** | 物理マシンまたはを使用して仮想マシンにデプロイされる Kubernetes クラスター **kubeadm** |
-
-ビッグ データの SQL Server クラスターの Kubernetes クラスター オプションのいずれかを構成する方法の詳細については、次の記事のいずれかを参照してください。
-
-   - [Minikube を構成します。](deploy-on-minikube.md)
-   - [Azure Kubernetes Service で Kubernetes を構成します。](deploy-on-aks.md)
-   - [Kubeadm で複数のコンピューターでの Kubernetes を構成します。](deploy-with-kubeadm.md)
-   
+| Kubernetes をデプロイします。 | 説明 | リンク |
+|---|---|---|
+| **Minikube** | VM で単一ノードの Kubernetes クラスター。 | [手順](deploy-on-minikube.md) |
+| **Azure Kubernetes サービス (AKS)** | Azure の managed Kubernetes コンテナー サービスです。 | [手順](deploy-on-aks.md) |
+| **複数のマシン** | 物理マシンまたはを使用して仮想マシンにデプロイされる Kubernetes クラスター **kubeadm** | [手順](deploy-with-kubeadm.md) |
+  
 > [!TIP]
 > AKS と SQL Server の両方のビッグ データ クラスターをデプロイするサンプル python スクリプトについては、次を参照してください。[ビッグ データ クラスター Azure Kubernetes Service (AKS) で SQL Server 展開](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)します。
+
+## <a name="deploy-sql-server-2019-big-data-tools"></a>SQL Server 2019 ビッグ データ ツールを展開します。
+
+まず、SQL Server 2019 ビッグ データ クラスターをデプロイする前に[ビッグ データ ツールをインストール](deploy-big-data-tools.md):
+- **mssqlctl**
+- **kubectl**
+- **Azure Data Studio**
+- **SQL Server 2019 の拡張機能**
 
 ## <a id="deploy"></a> SQL Server のビッグ データ クラスターをデプロイします。
 
@@ -61,9 +65,9 @@ Kubernetes クラスターを構成した後は、SQL Server のビッグ デー
 
 開発/テスト環境のすべての既定の構成で Azure でビッグ データ クラスターをデプロイするには、この記事の手順に従います。
 
-[クイック スタート: Kubernetes 上の SQL Server のビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
+[クイック スタート:Kubernetes での SQL Server ビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
 
-ワークロードのニーズに従って、ビッグ データ クラスター構成をカスタマイズする場合は、一連の手順に従います。
+場合、ワークロードに合わせて、ビッグ データ クラスターの展開をカスタマイズする必要が、この記事の残りの指示に従います。
 
 ## <a name="verify-kubernetes-configuration"></a>Kubernetes 構成を確認します。
 
@@ -72,52 +76,6 @@ Kubernetes クラスターを構成した後は、SQL Server のビッグ デー
 ```bash
 kubectl config view
 ```
-
-## <a id="mssqlctl"></a> Mssqlctl をインストールします。
-
-**mssqlctl**は Python で記述された、により、クラスター管理者のブートス トラップし、REST Api を使用してビッグ データ クラスターを管理するコマンド ライン ユーティリティです。 必要な最小の Python バージョン v3.5 です。 必要がある`pip`をダウンロードしてインストールに使用される**mssqlctl**ツール。 
-
-> [!IMPORTANT]
-> 以前のリリースをインストールした場合は、クラスターを削除する必要があります*する前に*アップグレード**mssqlctl**と新しいリリースをインストールします。 詳細については、次を参照してください。[新しいリリースにアップグレードする](deployment-guidance.md#upgrade)します。
-
-### <a name="windows-mssqlctl-installation"></a>Windows mssqlctl インストール
-
-1. Windows クライアントでは、上から必要な Python パッケージをダウンロード[ https://www.python.org/downloads/](https://www.python.org/downloads/)します。 Python3.5.3 以降、Python をインストールすると、pip3 もインストールします。 
-
-   > [!TIP] 
-   > Python3 でインストールする場合は、Python のパスを追加選択します。 そうでない場合は、pip3 がある場所を後で検索し、パスに手動で追加できます。
-
-1. 最新であることを確認**要求**パッケージ。
-
-   ```cmd
-   python -m pip install requests
-   python -m pip install requests --upgrade
-   ```
-
-1. インストール**mssqlctl**次のコマンドを使用します。
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
-
-### <a name="linux-mssqlctl-installation"></a>Linux mssqlctl のインストール
-
-Linux では、インストールする必要があります、 **python3**と**python3 pip**パッケージ化し、実行`sudo pip3 install --upgrade pip`します。 3.5 最新の Python と pip がインストールされます。 Ubuntu のこれらのコマンドのしくみは次の例を示しています (別のプラットフォームを使用している場合、コマンドの変更、パッケージ マネージャー)。
-
-1. 必要な Python パッケージをインストールします。
-
-   ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
-   ```
-
-1. インストール**mssqlctl**次のコマンドを使用します。
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
 
 ## <a name="define-environment-variables"></a>環境変数を定義します。
 
@@ -128,7 +86,7 @@ Linux では、インストールする必要があります、 **python3**と**
 | **ACCEPT_EULA** | はい | なし | SQL Server のライセンス契約 (たとえば、"Y") をそのまま使用します。  |
 | **CLUSTER_NAME** | はい | なし | SQLServer にビッグ データのクラスターをデプロイする Kubernetes 名前空間の名前。 |
 | **CLUSTER_PLATFORM** | はい | なし | Kubernetes クラスターが展開されているプラットフォームです。 `aks`、 `minikube`、 `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | いいえ | 1 | 構築するためのコンピューティング プールのレプリカの数。CTP2.0 のみ値が 1 には許可します。 |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | いいえ | 1 | 構築するためのコンピューティング プールのレプリカの数。CTP 2.2 の値のみが許可されている、1 です。 |
 | **CLUSTER_DATA_POOL_REPLICAS** | いいえ | 2 | データの数はプールを構築するためのレプリカです。 |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | いいえ | 2 | 構築するための記憶域プールのレプリカの数。 |
 | **DOCKER_REGISTRY** | はい | TBD | クラスターのデプロイに使用されるイメージが格納されているプライベート レジストリです。 |
@@ -153,7 +111,7 @@ Linux では、インストールする必要があります、 **python3**と**
 > [!IMPORTANT]
 >1. 制限付きのプライベート プレビューの期間中、プライベート Docker レジストリの資格情報はお客様に提供されるトリアージ時に、 [EAP 登録](https://aka.ms/eapsignup)します。
 >1. 構築された、オンプレミスのクラスターの**kubeadm**、環境変数の値は、`CLUSTER_PLATFORM`は`kubernetes`します。 また、 `USE_PERSISTENT_VOLUME=true`、Kubernetes ストレージ クラスに事前に準備しを使用して通過する必要があります、`STORAGE_CLASS_NAME`します。
->1. 特殊文字が含まれている場合、二重引用符で囲まれた、パスワードをラップすることを確認します。 MSSQL_SA_PASSWORD を任意に設定できますが必ず、十分に複雑な使用しないでください、 `!`、`&`または`‘`文字。 コマンドの bash でのみ二重引用符区切り記号の動作に注意してください。
+>1. 特殊文字が含まれている場合、二重引用符で囲まれた、パスワードをラップすることを確認します。 MSSQL_SA_PASSWORD を任意に設定できますが必ず、十分に複雑な使用しないでください、 `!`、`&`または`'`文字。 コマンドの bash でのみ二重引用符区切り記号の動作に注意してください。
 >1. クラスターの名前は小文字英数字文字、空白のみである必要があります。 すべての Kubernetes ・ アーティファクト (コンテナー、ポッド、ステートフルのセット、サービスなど)、クラスターのクラスターと同じ名前を持つ名前空間に作成されます名を指定します。
 >1. **SA**アカウントは、システム管理者は、セットアップ中に作成される SQL Server マスター インスタンス。 実行して探索可能なは、MSSQL_SA_PASSWORD 環境変数を指定した、SQL Server のコンテナーを作成した後は、コンテナー内の $MSSQL_SA_PASSWORD をエコーします。 セキュリティのために、文書化のベスト プラクティスに従って、SA のパスワードを変更する[ここ](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)します。
 
@@ -169,9 +127,9 @@ Linux では、インストールする必要があります、 **python3**と**
 SET ACCEPT_EULA=Y
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
-SET CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
+SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
+SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
+SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
 SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
 SET DOCKER_REGISTRY=private-repo.microsoft.com
@@ -190,9 +148,9 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 export ACCEPT_EULA=Y
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
-export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
+export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
+export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
+export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
 export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
 export DOCKER_REGISTRY="private-repo.microsoft.com"
@@ -230,36 +188,44 @@ Kubernetes ストレージ クラスの事前プロビジョニングし、を�
 Kubernetes 名前空間を初期化して、名前空間にすべてのアプリケーション ポッドをデプロイする作成クラスター API が使用されます。 Kubernetes クラスターで SQL Server のビッグ データ クラスターをデプロイするには、次のコマンドを実行します。
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl create cluster <your-cluster-name>
 ```
 
-クラスターのブートス トラップ中には、クライアントのコマンド ウィンドウが展開ステータスを出力します。 別のコマンド ウィンドウでこれらのコマンドを実行してデプロイの状態をチェックすることもできます。
+クラスターのブートス トラップ中には、クライアントのコマンド ウィンドウが展開ステータスを出力します。 展開プロセス中には、コント ローラーのポッドの待機中は、一連のメッセージ表示されます。
 
-```bash
-kubectl get all -n <name of your cluster>
-kubectl get pods -n <name of your cluster>
-kubectl get svc -n <name of your cluster>
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-実行してより詳細な状態と各ポッドの構成を確認できます。
-```bash
-kubectl describe pod <pod name> -n <name of your cluster>
+10 ~ 20 分後に、コント ローラーのポッドが実行されていることが通知する必要があります。
+
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルの [展開] タブを利用できます。
+> [!IMPORTANT]
+> デプロイ全体のビッグ データ クラスター コンポーネントのコンテナー イメージをダウンロードするために必要な時間のため時間がかかることができます。 ただし、いくつかの時間はなりません。 デプロイに関する問題が発生する場合を参照してください、[トラブルシューティング](#troubleshoot)を監視して、展開を検査する方法については、この記事の「します。
+
+デプロイが完了したら、出力では、成功のにより通知されます。
+
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
+```
 
 ## <a id="masterip"></a> SQL Server マスター インスタンスと SQL Server のビッグ データ クラスター IP アドレスを取得します。
 
-配置スクリプトが正常に完了したら、次の手順を使用して、SQL Server マスター インスタンスの IP アドレスを取得できます。 この IP アドレスとポート番号 31433 master の SQL Server インスタンスへの接続に使用する (例:  **\<ip アドレス\>31433、**)。 同様に、SQL Server のビッグ データ クラスターの IP を実行します。 クラスターの管理ポータルもサービス エンドポイント タブでは、クラスターのすべてのエンドポイントが記載されています。 クラスターの管理ポータルを使用すると、展開を監視します。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
+配置スクリプトが正常に完了したら、次の手順を使用して、SQL Server マスター インスタンスの IP アドレスを取得できます。 この IP アドレスとポート番号 31433 master の SQL Server インスタンスへの接続に使用する (例:  **\<ip アドレス\>31433、**)。 同様に、SQL Server のビッグ データ クラスターの IP を実行します。 クラスターの管理ポータルもサービス エンドポイント タブでは、クラスターのすべてのエンドポイントが記載されています。 クラスターの管理ポータルを使用すると、展開を監視します。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
 
 ### <a name="aks"></a>AKS
 
 AKS を使用している場合、Azure は、Azure ロード バランサーのサービスを提供します。 次のコマンドを実行します。
 
 ```bash
-kubectl get svc service-master-pool-lb -n <name of your cluster>
-kubectl get svc service-security-lb -n <name of your cluster>
-kubectl get svc service-proxy-lb -n <name of your cluster>
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc service-security-lb -n <your-cluster-name>
+kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 探して、 **EXTERNAL-IP**サービスに割り当てられている値。 ポート 31433 で IP アドレスを使用して、SQL Server マスター インスタンスに接続し (例:  **\<ip アドレス\>31433、**) との外部 ip アドレスを使用して SQL Server ビッグ データ クラスター エンドポイントに`service-security-lb`サービス。 
@@ -274,7 +240,7 @@ minikube ip
 
 プラットフォームに関係なく、Kubernetes クラスターを実行するクラスター、次のコマンド用にデプロイされたすべてのサービス エンドポイントを取得する、実行されます。
 ```bash
-kubectl get svc -n <name of your cluster>
+kubectl get svc -n <your-cluster-name>
 ```
 
 ## <a id="upgrade"></a> 新しいリリースにアップグレードします。
@@ -292,7 +258,7 @@ kubectl get svc -n <name of your cluster>
 1. 最新バージョンのインストール**mssqlctl**します。
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
    > [!IMPORTANT]
@@ -300,6 +266,62 @@ kubectl get svc -n <name of your cluster>
 
 1. 」の手順に従って、最新リリースをインストール、[セクションを展開](#deploy)に改訂された記事。 
 
+## <a id="troubleshoot"></a> 監視とトラブルシューティング
+
+デプロイのトラブルシューティングまたは監視を使用**kubectl**クラスターの状態を検査し、潜在的な問題を検出します。 デプロイ中にいつでも次のテストを実行する別のコマンド ウィンドウを開くことができます。
+
+1. クラスターのポッドの状態を検査します。
+
+   ```cmd
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+   ポッド数、展開中に、**状態**の**ContainerCreating**も起動します。 何らかの理由で、展開がハングした場合このことができますが理解できる問題があります。 見ても、**準備**列。 これは、コンテナーの数が、pod で開始します。 展開が、構成とネットワークによって 30 分以上かかることができることに注意してください。 この時間の大半はさまざまなコンポーネントのコンテナー イメージのダウンロードに費やされました。 次の表では、デプロイ中に 2 つのコンテナーの編集の例の出力を示します。
+
+   ```output
+   PS C:\> kubectl get pods -n sbdc8
+   NAME                                     READY   STATUS              RESTARTS   AGE
+   mssql-controller-h79ft                   4/4     Running             0          13m
+   mssql-storage-pool-default-0             0/7     ContainerCreating   0          6m
+   ```
+
+1. 詳細については、個々 のポッドをについて説明します。 次のコマンドを検査、 `mssql-storage-pool-default-0` pod です。
+
+   ```cmd
+   kubectl describe pod mssql-storage-pool-default-0 -n <your-cluster-name>
+   ```
+
+   これにより、最近のイベントを含む、ポッドに関する詳細情報が出力されます。 エラーが発生した場合は、ここでエラーがあることができます。
+
+1. あるポッドで実行されているコンテナーのログを取得します。 次のコマンドは、という名前のポッドで実行されているすべてのコンテナーのログを取得`mssql-storage-pool-default-0`名前のファイルに出力して`pod-logs.txt`:
+
+   ```cmd
+   kubectl logs mssql-storage-pool-default-0 --all-containers=true -n <your-cluster-name> > pod-logs.txt
+   ```
+
+1. 次のコマンドを使用した展開の前後には、クラスター サービスを確認します。
+
+   ```cmd
+   kubectl get svc -n <your-cluster-name>
+   ```
+
+   これらのサービスでは、ビッグ データ クラスターへの内部および外部接続をサポートします。 外部接続は、次のサービスが使用されます。
+
+   | サービス | 説明 |
+   |---|---|
+   | **エンドポイントでマスター-プール** | マスター インスタンスへのアクセスを提供します。<br/>(**EXTERNAL-IP、31433**と**SA**ユーザー) |
+   | **サービス mssql コント ローラー lb**<br/>**サービス mssql コント ローラー nodeport** | ツールと、クラスターを管理するクライアントをサポートしています。 |
+   | **サービス プロキシ-lb**<br/>**サービスのプロキシ-nodeport** | アクセスできるように、[クラスター管理ポータル](cluster-admin-portal.md)します。<br/>(https://**EXTERNAL-IP**: 30777/ポータル)|
+   | **サービス-セキュリティ-lb**<br/>**サービス-セキュリティ-nodeport** | HDFS/Spark ゲートウェイへのアクセスを提供します。<br/>(**EXTERNAL-IP**と**ルート**ユーザー) |
+
+   > [!NOTE]
+   > サービス名は、Kubernetes 環境によって異なります。 Azure Kubernetes Service (AKS) をデプロイするときに、サービス名が終わる**lb**します。サービス名が終わる minikube と kubeadm 展開で **- nodeport**します。
+
+1. 使用して、[クラスター管理ポータル](cluster-admin-portal.md)で展開を監視するため、**展開**タブ。待機しなければ、**サービス プロキシ-lb**展開の開始時に利用できないようにするために、このポータルにアクセスする前に開始するサービス。
+
+> [!TIP]
+> クラスターのトラブルシューティングの詳細については、次を参照してください。[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)します。
+
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスター Kubernetes では、SQL Server を正常に展開した後[ビッグ データ ツールをインストール](deploy-big-data-tools.md)について説明し、新機能の一部を試して[SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
+新しい機能のいくつかごお試しください[SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
@@ -14,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c554ec2d49e9e03c3381a54b8c834514bd16e34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071912"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772564"
 ---
 # <a name="set-or-change-the-database-collation"></a>データベースの照合順序の設定または変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベースの照合順序を設定および変更する方法を説明します。 照合順序を指定しない場合、サーバーの照合順序が使用されます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48071912"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48071912"
   
     -   ストアド プロージャおよびユーザー定義関数で使用されている `char` 型、`varchar` 型、`text` 型、`nchar` 型、`nvarchar` 型、または `ntext` 型の既存のパラメーターおよびスカラー値の戻り値はすべて、新しい照合順序に変更されます。  
   
-    -   `char`、 `varchar`、 `text`、 `nchar`、 `nvarchar`、または`ntext`システム データ型、およびこれらのシステム データ型に基づくすべてのユーザー定義データ型は、新しい既定の照合順序に変更されます。  
+    -   `char` 型、`varchar` 型、`text` 型、`nchar` 型、`nvarchar` 型、または `ntext` 型のシステム データ型およびこれらを基にしたユーザー定義データ型はすべて、新しい既定の照合順序に変更されます。  
   
 -   ユーザー データベースに作成する新しいオブジェクトの照合順序は、 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) ステートメントの COLLATE 句を使用して変更できます。 このステートメントを実行しても、既存のユーザー定義テーブルの列の照合順序は変わりません。 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)の COLLATE 句で変更することができます。  
   

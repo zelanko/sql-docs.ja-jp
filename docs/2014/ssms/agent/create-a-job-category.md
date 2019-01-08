@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a2c9966dfbb270165ea5245fd59e0793d165bdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127462"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762784"
 ---
 # <a name="create-a-job-category"></a>ジョブ カテゴリの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクトを使用して、ジョブ カテゴリを作成する方法について説明します。  
@@ -28,13 +28,13 @@ ms.locfileid: "48127462"
   
  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  マルチサーバー カテゴリは、マスター サーバー上だけに存在します。 マスター サーバー上で使用できるのは、**[未カテゴリ化 (マルチサーバー)]** という既定のジョブ カテゴリだけです。 マルチサーバー ジョブがダウンロードされると、対象サーバー上ではそのカテゴリが **[MSX からのジョブ]** に変更されます。  
   
 ###  <a name="Security"></a> セキュリティ  
- 詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)」をご覧ください。  
+ 詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 
   
@@ -58,7 +58,7 @@ ms.locfileid: "48127462"
   
 8.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスで、**[最新の情報に更新]** をクリックして、新しいジョブ カテゴリをアクティブにします。 すべての設定が適切であることを確認したら、このダイアログ ボックスを閉じます。  
   
- これらのダイアログ ボックスの詳細については、次を参照してください。[ジョブ カテゴリ: ジョブ カテゴリの管理](job-categories-manage-job-categories.md)と[ジョブ カテゴリのプロパティと新しいジョブ カテゴリ](job-categories-properties-new-job-category.md)します。  
+ これらのダイアログ ボックスの詳細については、次を参照してください。[ジョブ カテゴリ。ジョブ カテゴリの管理](job-categories-manage-job-categories.md)と[ジョブ カテゴリのプロパティと新しいジョブ カテゴリ](job-categories-properties-new-job-category.md)します。  
   
  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48127462"
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブ カテゴリを作成するには**  
   
- 呼び出す、 `JobCategory` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](sql-server-agent.md)」を参照してください。  
+ Visual Basic、Visual C#、PowerShell などのプログラミング言語で `JobCategory` クラスを呼び出します。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](sql-server-agent.md)」を参照してください。  
   
  
   

@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 031efcdc80028e8366a2e19827f180b78a21af0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124032"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759424"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理
   ユーティリティ エクスプローラーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のコンポーネントで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ内のすべてのオブジェクトのツリー ビューを表示します。 ユーティリティ エクスプローラーのコンテンツ ウィンドウには、SQL Server のマネージド インスタンスの正常性状態について、いくつかの方法で概要データと詳細データを表示できます。 ユーティリティ エクスプローラーには、ポリシー定義の表示と管理を行うためのユーザー インターフェイスも用意されています。 ユーティリティ エクスプローラーの機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ内のオブジェクトによって多少異なりますが、一般に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティによって管理されるオブジェクト、データ、およびポリシーが含まれます。 詳細については、「 [SQL Server ユーティリティの機能とタスク](sql-server-utility-features-and-tasks.md)」を参照してください。  
@@ -37,7 +37,7 @@ ms.locfileid: "48124032"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server ユーティリティのナビゲーション ウィンドウ  
  ユーティリティ エクスプローラーのナビゲーション ウィンドウでは、ユーティリティ コントロール ポイント (UCP) でグループ化された、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ オブジェクトのツリー ビューが表示されます。 フォルダーを展開するには、プラス記号 (+) をクリックするか、ユーティリティ エクスプローラーのナビゲーション ウィンドウ内の UCP 名をダブルクリックします。 フォルダーまたはオブジェクトを右クリックすると、一般的なタスクを実行するためのメニューが表示されます。 ツリー ビューのノードは次のとおりです。  
   
--   ツリー ビューの最上位ノードは、ユーティリティ コントロール ポイント (UCP) です。 ノード名は、"Utility_Name" (ComputerName\UCP_instance_name) のように作成されます。 UCP がない場合は、作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに接続していない場合は、接続する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](sql-server-utility-features-and-tasks.md)」を参照してください。 ツリー ビューの UCP 名をクリックし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ ウィンドウに、ダッシュボード ビューのデータを読み込みます。 詳細については、「[ユーティリティ ダッシュボード &#40;SQL Server ユーティリティ&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)」を参照してください。  
+-   ツリー ビューの最上位ノードは、ユーティリティ コントロール ポイント (UCP) です。 ノード名は、"Utility_Name"(ComputerName\UCP_instance_name) のように作成されます。 UCP がない場合は、作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに接続していない場合は、接続する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](sql-server-utility-features-and-tasks.md)」を参照してください。 ツリー ビューの UCP 名をクリックし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ ウィンドウに、ダッシュボード ビューのデータを読み込みます。 詳細については、「[ユーティリティ ダッシュボード &#40;SQL Server ユーティリティ&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)」を参照してください。  
   
      UCP ノードを右クリックして、ダッシュボードのデータを更新します。  
   

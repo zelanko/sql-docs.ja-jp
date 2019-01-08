@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.connectionproperties.f1
@@ -12,12 +12,12 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e16253ed789cb0bc362052fbd51b91a42f2d5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0774c99f1610f87abc08b69e6ef5333c97bec95
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059072"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350130"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>[サーバーへの接続] \([接続プロパティ] ページ) (データベース エンジン)
   このタブを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続するとき、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] を **登録済みサーバー**に登録するときのオプションを表示または指定できます。 **のインスタンスに接続するときには、** [接続] **および** [オプション] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。  
@@ -28,7 +28,7 @@ ms.locfileid: "48059072"
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、**[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。**[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
   
- 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master**に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「 [Windows Azure SQL Database Overview](http://go.microsoft.com/fwlink/?LinkId=163948)」(Microsoft Azure SQL Database の概要) をご覧ください。  
+ 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master**に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「 [Windows Azure SQL Database Overview](https://go.microsoft.com/fwlink/?LinkId=163948)」(Microsoft Azure SQL Database の概要) をご覧ください。  
   
  **[ネットワーク プロトコル]**  
  一覧からプロトコルを選択します。 使用できるクライアント プロトコルは、[コンピューターの管理] の [SQL Native Client の構成] を使用して設定されたプロトコルです。  

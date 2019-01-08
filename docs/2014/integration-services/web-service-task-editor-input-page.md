@@ -15,12 +15,12 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eec6368855b52088d5ed5ff253ec6020286aadf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056692"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515152"
 ---
 # <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  
@@ -55,7 +55,7 @@ ms.locfileid: "48056692"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Web サービス タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [Web サービス タスク エディター&#40;ページの出力&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Web サービス タスク エディター &#40;[出力] ページ&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

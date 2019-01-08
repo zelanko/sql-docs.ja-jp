@@ -1,4 +1,5 @@
 ---
+title: Analysis Services のログのプロパティ |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999344"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071929"
 ---
 # <a name="log-properties"></a>ログのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "37999344"
  このプロパティの既定値は空白です。その場合、既定で使用されるファイル名は FlightRecorderTraceDef.xml になります。  
   
 ## <a name="query-log"></a>クエリ ログ  
- **適用対象:** 多次元サーバー モードのみ  
+ **適用対象:** 多次元サーバー モードの場合のみ  
   
  **QueryLog\QueryLogFileName**  
  クエリ ログ ファイルの名前を指定する文字列プロパティです。 このプロパティは、データベース テーブル (既定の動作) ではなく、ディスク ファイルがログ記録に使用される場合にのみ適用されます。  
@@ -156,9 +157,6 @@ ms.locfileid: "37999344"
  クエリ ログ テーブルを作成するかどうかを指定するブール型プロパティです。  
   
  このプロパティの既定値は False であり、サーバーによってログ テーブルが自動的に作成されず、クエリ イベントがログ記録されないことを示します。  
-  
-> [!NOTE]  
->  クエリ ログの構成の詳細については、「 [Analysis Services クエリ ログの構成](http://go.microsoft.com/fwlink/?LinkId=81890)」を参照してください。  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

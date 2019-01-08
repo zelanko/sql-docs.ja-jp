@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table constraints [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6de6aefacdda4dab4c61c695f5a74e8c6c5b8f6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053762"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814414"
 ---
 # <a name="create-check-constraints"></a>CHECK 制約の作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルで CHECK 制約を作成して、1 つ以上の列に入力できるデータ値を指定します。  
@@ -39,7 +38,7 @@ ms.locfileid: "48053762"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48053762"
   
 1.  **オブジェクト エクスプローラー**で、CHECK 制約を追加するテーブルを展開し、 **[制約]** を右クリックして、 **[新しい制約]** をクリックします。  
   
-2.  **[CHECK 制約]** ダイアログ ボックスで、 **[式]** フィールドをクリックして、省略記号 **[...]** をクリックします。  
+2.  **[CHECK 制約]** ダイアログ ボックスで、**[式]** フィールドをクリックして、省略記号 **[...]** をクリックします。  
   
 3.  **[CHECK 制約式]** ダイアログ ボックスで、CHECK 制約の SQL 式を入力します。 たとえば、 `SellEndDate` テーブルの `Product` 列への入力を `SellStartDate` 列の日付と同じか、それよりも後の日付の値または NULL 値に限定するには、次のように入力します。  
   

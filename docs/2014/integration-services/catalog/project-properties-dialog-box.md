@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isprojectprop.general.f1
@@ -14,12 +13,12 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d657e1339f454045a4a1e536610a58cd27e94c8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48e299e72343987d0738c739404284314f23dcf5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054232"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759044"
 ---
 # <a name="project-properties-dialog-box"></a>[プロジェクトのプロパティ] ダイアログ ボックス
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトは、配置の 1 単位です。 各プロジェクトには、パッケージ、パラメーター、および環境の参照を含めることができます。 プロジェクトはセキュリティ保護可能なオブジェクトであり、データベース プリンシパルの権限を定義できます。 プロジェクトを再配置するときに、以前のバージョンのプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログに保存できます。  

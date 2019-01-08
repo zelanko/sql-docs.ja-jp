@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b8214e3da53bf87ea96edcf5fb77d9bc774f65aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fecc2dcd609cb297aba7c2a2aa63fb8fdcf32e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155062"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350590"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>ローカル パッケージの出力の読み込み
   クライアント アプリケーションは、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先に出力が保存された場合、または **System.IO** 名前空間のクラスを使用してフラット ファイル変換先に出力が保存された場合に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの出力を読み取ることができます。 ただし、メモリから直接、パッケージの出力を読み取ることもできます。その際、データを保持するための中間手段を必要としません。 このソリューションにキーが、`Microsoft.SqlServer.Dts.DtsClient`の特殊な実装を含む名前空間、 `IDbConnection`、 `IDbCommand`、および**IDbDataParameter**からインターフェイス、 **System.Data**名前空間。 既定では、アセンブリ Microsoft.SqlServer.Dts.DtsClient.dll は、**%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** にインストールされています。  
@@ -40,7 +38,7 @@ ms.locfileid: "48155062"
   
 2.  開発プロジェクトで参照を設定、`Microsoft.SqlServer.Dts.DtsClient`名前空間、アセンブリを配置することにより**Microsoft.SqlServer.Dts.DtsClient.dll**します。 既定では、このアセンブリは **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** にインストールされます。 C# の `Using` ステートメント、または [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の `Imports` ステートメントを使用し、作成するコードにこの名前空間をインポートします。  
   
-3.  型のオブジェクトを作成、コードに`DtsClient.DtsConnection`に必要なコマンド ライン パラメーターを含む接続文字列で**dtexec.exe**パッケージを実行します。 詳しくは、「 [dtexec Utility](../packages/dtexec-utility.md)」をご覧ください。 次に、この接続文字列を使用して接続を開きます。 **dtexecui** ユーティリティを使用して、必要な接続文字列を視覚的に作成することもできます。  
+3.  型のオブジェクトを作成、コードに`DtsClient.DtsConnection`に必要なコマンド ライン パラメーターを含む接続文字列で**dtexec.exe**パッケージを実行します。 詳細については、「 [dtexec Utility](../packages/dtexec-utility.md)」を参照してください。 次に、この接続文字列を使用して接続を開きます。 **dtexecui** ユーティリティを使用して、必要な接続文字列を視覚的に作成することもできます。  
   
     > [!NOTE]  
     >  このサンプル コードは、`/FILE <path and filename>` 構文を使用してファイル システムからパッケージを読み込む方法を示していますが、 `/SQL <package name>` 構文を使用して MSDB データベースからパッケージを読み込んだり、`/DTS \<folder name>\<package name>` 構文を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ストアからパッケージを読み込むこともできます。  
@@ -295,7 +293,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [ローカル実行とリモート実行の相違点について](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

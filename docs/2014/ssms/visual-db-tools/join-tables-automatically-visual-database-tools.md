@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
@@ -14,12 +14,12 @@ ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87d4ea836aa77899985555f0f103651d74578b03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bab311878966087ef9b6c3f05bb3023d02fdeb20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112930"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780437"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>テーブルの自動結合 (Visual Database Tools)
   クエリに複数のテーブルを追加すると、 [クエリおよびビュー デザイナー](visual-database-tools.md) により、これらのテーブルが相互に関連しているかどうかの確認が行われます。 関連している場合は、テーブルまたはテーブル構造オブジェクトを示す四角形の間に、結合線が自動的に表示されます。  

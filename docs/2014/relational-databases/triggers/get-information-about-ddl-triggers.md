@@ -14,12 +14,12 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 35fdba2dff5f4b68040007c8c5d21c127bd1548c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d5e59264036380f6c8b5c9e73df5a6700c4b1ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113772"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788804"
 ---
 # <a name="get-information-about-ddl-triggers"></a>DDL トリガーに関する情報の取得
   ここに記載されているカタログ ビューを使用すると、DDL トリガーに関する情報を取得できます。  

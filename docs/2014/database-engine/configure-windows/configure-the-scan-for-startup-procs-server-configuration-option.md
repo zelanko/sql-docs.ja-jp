@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - scan for startup procs option
@@ -13,12 +12,12 @@ ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12bd68e17762a041e9d5c106f60d3e60e736750c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccda9c60880bb6864fc411966ab3e410b5008101
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149032"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640844"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>scan for startup procs サーバー構成オプションの構成
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scan for startup procs [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **scan for startup procs** オプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 起動時のストアド プロシージャの自動実行をスキャンする場合に使用します。 このオプションを 1 に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、サーバーで定義されているすべての自動実行ストアド プロシージャがスキャンされ、実行されます。 **scan for startup procs** の既定値は 0 です。この値を設定した場合、スキャンは行われません。  
@@ -37,9 +36,9 @@ ms.locfileid: "48149032"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [[スタートアップ プロシージャのスキャン] オプションを構成した後](#FollowUp)  
+-   **補足情報:**[Scan for startup procs オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -86,7 +85,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 補足情報: scan for startup procs オプションを構成した後  
+##  <a name="FollowUp"></a> フォローしてください：[スタートアップ プロシージャのスキャン] オプションを構成した後  
  設定を有効にするには、サーバーを再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  

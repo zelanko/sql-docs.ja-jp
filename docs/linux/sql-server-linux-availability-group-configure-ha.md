@@ -1,21 +1,22 @@
 ---
-title: 構成する SQL Server Always On 可用性グループの Linux での高可用性 |Microsoft Docs
-description: ''
+title: 構成する SQL Server Always On 可用性グループの Linux での高可用性
+titleSuffix: SQL Server
+description: Linux 上の SQL Server 常にで可用性グループ (AG) の高可用性を作成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621080"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201961"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>構成する SQL Server Always On 可用性グループの Linux での高可用性
 
@@ -177,8 +178,8 @@ Linux 上の高可用性のため、可用性グループを作成します。 �
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -210,11 +211,11 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->可用性グループを作成した後は、Pacemaker などの高可用性のクラスター テクノロジと統合を構成する必要があります。 以降では、Ag を使用して読み取りスケール構成[!INCLUDE[SQL Server version](..\includes\sssqlv14-md.md)]クラスターのセットアップは必要ありません。
+>可用性グループを作成した後は、Pacemaker などの高可用性のクラスター テクノロジと統合を構成する必要があります。 以降では、Ag を使用して読み取りスケール構成[!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)]クラスターのセットアップは必要ありません。
 
 このドキュメントで手順を実行する場合、クラスター化されていない可用性グループがあります。 次の手順では、クラスターを追加します。 この構成が有効の読み取りスケール/負荷分散シナリオでは、高可用性の不完全な。 高可用性のためには、クラスター リソースとして、可用性グループを追加する必要があります。 参照してください[次のステップ](#next-steps)手順についてはします。 
 
-## <a name="notes"></a>注
+## <a name="notes"></a>メモ
 
 >[!IMPORTANT]
 >クラスターを構成するクラスター リソースとして、可用性グループを追加したら、TRANSACT-SQL を使用して AG リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは関連付けられていませんに厳しく、オペレーティング システムは Windows Server フェールオーバー クラスター (WSFC) にします。 SQL Server サービスでは、クラスターの存在を認識しません。 すべてのオーケストレーションは、クラスターの管理ツールを使用して行われます。 RHEL または Ubuntu を使用して`pcs`します。 SLES で使用して`crm`します。 

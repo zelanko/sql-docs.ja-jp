@@ -1,22 +1,23 @@
 ---
-title: Curl を使用して、SQL Server 2019 CTP 2.1 での HDFS にデータを読み込む |Microsoft Docs
+title: Curl を使用して、SQL Server 2019 ビッグ データ クラスターで HDFS にデータを読み込む |Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a5f580ab39ef7338f424975d9667745131ee748f
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 890c323434c17bb66cd9a67aac872a5580cb2ddf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221628"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201621"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-ctp-21"></a>Curl を使用して、SQL Server 2019 CTP 2.1 での HDFS にデータを読み込む
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>Curl を使用して、SQL Server 2019 ビッグ データ クラスターで HDFS にデータを読み込む
 
-この記事は、使用する方法を説明します**curl** SQL Server 2019 CTP 2.1 での HDFS にデータを読み込みます。
+この記事は、使用する方法を説明します**curl** SQL Server 2019 ビッグ データ クラスター (プレビュー) で、HDFS にデータを読み込めません。
 
 ## <a name="obtain-the-service-external-ip"></a>サービスの外部 ip アドレスを取得します。
 

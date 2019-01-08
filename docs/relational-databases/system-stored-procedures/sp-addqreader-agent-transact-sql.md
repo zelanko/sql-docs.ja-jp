@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addqreader_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6700e0d060e426fef09e8db118b373d7919175a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9424228f5f1bd70c17ebb0f4f421f4f0f923930c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830400"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822326"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
   
 ## <a name="arguments"></a>引数  
  [ **@job_login**=] **'***job_login***'**  
- 用のログイン、[!INCLUDE[msCoName](../../includes/msconame-md.md)]エージェントを実行する Windows アカウントします。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。  
+ エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。  
   
  [ **@job_password**=] **'***job_password***'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。  

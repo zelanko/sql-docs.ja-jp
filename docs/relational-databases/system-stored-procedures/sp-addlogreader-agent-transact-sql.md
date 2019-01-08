@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addlogreader_agent
@@ -17,12 +16,12 @@ ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe0495bbe8a6bce3e141a6ff2fe88998e073333b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fdec3ada9bec27f6ecca2ea6a888d01640f6edb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650700"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210841"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,34 +47,34 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_login**=] **'***job_login***'**  
- 用のログイン、[!INCLUDE[msCoName](../../includes/msconame-md.md)]エージェントを実行する Windows アカウントします。 *job_login*は**nvarchar (257)** 既定値は NULL です。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。  
+ [ **@job_login**=] **'**_job_login_**'**  
+ エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)** 既定値は NULL です。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。  
   
-> [!NOTE]  
+> [!NOTE]
 >  非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、こので指定されたのと同じログインをする必要があります[sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)します。  
   
- [ **@job_password**=] **'***job_password***'**  
+ [ **@job_password**=] **'**_job_password_**'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  スクリプト ファイルに認証情報を格納しないでください。 最大限のセキュリティを得るには、ログイン名とパスワードを実行時に指定します。  
   
- [ **@job_name**=] **'***job_name***'**  
+ [ **@job_name**=] **'**_job_name_**'**  
  既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってエージェントを起動するときにだけ指定します。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
  パブリッシャーへの接続時にエージェントが使用するセキュリティ モードを指定します。 *publisher_security_mode*は**smallint**、既定値は**1**します。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証、および**1** Windows 認証を指定します。 値**0**を指定する必要があります以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
- [ **@publisher_login**=] **'***publisher_login***'**  
+ [ **@publisher_login**=] **'**_publisher_login_**'**  
  パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値は NULL です。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login* null と*publisher_security_mode*は**1**で指定した Windows アカウント*job_login*使用されますときに、パブリッシャーに接続します。  
   
- [ **@publisher_password**=] **'***publisher_password***'**  
+ [ **@publisher_password**=] **'**_publisher_password_**'**  
  パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**sysname**、既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  スクリプト ファイルに認証情報を格納しないでください。 最大限のセキュリティを得るには、ログイン名とパスワードを実行時に指定します。  
   
- [ **@publisher**=] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'**_パブリッシャー_**'**  
  以外の名前を指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: 表形式モデル データベース |Microsoft ドキュメント
+title: Analysis Services 表形式モデル データベース |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c6a806dc87afa7e1d26d2bf9070debcdaf53144
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1e53a719c4fef684f4b7ec81f2e5c9266adf942b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045966"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072249"
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>配置済みテーブル モデル データベースを管理します。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,22 +33,20 @@ ms.locfileid: "34045966"
   
 
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル モデル ソリューション](../../analysis-services/tabular-models/tabular-models-ssas.md)  
-  
- [表形式モデルのデータ アクセス](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 
-[Analysis Services データベースを移動します。](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
+[Analysis Services データベースの移動](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
   
- [Analysis Services データベースを同期します。](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
+ [Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
  [Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
- [変更または Analysis Services データベースを削除します。](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
+ [Analysis Services データベースの変更または削除](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   
- [ドキュメントし、Analysis Services データベースをスクリプトの実行](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+ [Analysis Services データベースのドキュメントとスクリプトの作成](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
  [Analysis Services データベースのバックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
- [アタッチし、Analysis Services データベースのデタッチ](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
+ [Analysis Services データベースのインポートとデタッチ](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   

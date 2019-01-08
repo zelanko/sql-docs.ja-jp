@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afb148143e11ca77f87fe071cef165d60f3bdb7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17e9b7508317abc2ceb3b6e273c46fdea5a5abb3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070067"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781255"
 ---
 # <a name="create-new-infoobject"></a>[新しいインフォオブジェクトの作成]
   SAP Netweaver BW システムで新しいインフォオブジェクトを作成するには、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用します。  
@@ -154,9 +153,9 @@ ms.locfileid: "48070067"
  選択したインフォオブジェクトを **[属性]** の一覧から削除します。  
   
 ## <a name="see-also"></a>参照  
- [トランザクション データのインフォ キューブを作成します。](create-infocube-for-transaction-data.md)   
- [インフォ ソースを作成します。](create-infosource.md)   
- [トランザクション データのインフォソースの作成](create-infosource-for-transaction-data.md)   
+ [[トランザクション データのインフォキューブの作成]](create-infocube-for-transaction-data.md)   
+ [[インフォソースの作成]](create-infosource.md)   
+ [[トランザクション データのインフォソースの作成]](create-infosource-for-transaction-data.md)   
  [マスター データのインフォソースの作成](create-infosource-for-master-data.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   

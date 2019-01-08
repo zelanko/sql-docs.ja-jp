@@ -1,5 +1,5 @@
 ---
-title: データ マイニングのプログラミング |Microsoft ドキュメント
+title: Analysis Services データ マイニングのプログラミング |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1be416528bc923e757afb9a8f3e556790941bf11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 27a964581782d5868e4089a1063dbbce0c689525
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019959"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072759"
 ---
 # <a name="data-mining-programming"></a>データ マイニングのプログラミング
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の組み込みのツールやビューアーが要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の機能を拡張できます。 この方法では、次の 2 つのオプションがあります。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の組み込みのツールやビューアーが要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の機能を拡張できます。 この方法では、2 つのオプションがあります。  
   
 -   **XMLA**  
   
@@ -57,14 +57,14 @@ ms.locfileid: "34019959"
  [ADOMD.NET での開発](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  ADOMD.NET クライアントおよびサーバー プログラミング オブジェクトについて説明します。  
   
- [分析管理オブジェクト & #40; を使用した開発AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [分析管理オブジェクト &#40;AMO&#41; による開発](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  AMO プログラミング ライブラリについて説明します。  
   
- [Analysis Services スクリプト言語 & #40; を使用した開発ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Analysis Services スクリプト言語 (ASSL) での開発](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  XML for Analysis (XMLA) とその拡張機能について説明します。  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services Developer Documentation (Analysis Services の開発者向けドキュメント)](../analysis-services/analysis-services-developer-documentation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 809284aa24a1a549c5f3d2c349e5935d8ca5503d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d00385c7346d7602719326dbe700f7cd44c63fd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805120"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411049"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>サンプルのコンソール スクリプト ファイル (MySQLToSQL) の使用
 いくつかのサンプル ファイルは、ユーザーの参照と使用状況の製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -47,7 +47,7 @@ ms.locfileid: "47805120"
   
     変数値ファイルの詳細については、次を参照してください。[変数値ファイルの作成&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)します。  
   
--   **AssessmentReportGenerationSample.xml:** このサンプルで使用できるユーザー分析のために変換し、データの移行を始める前にこの xml 評価レポートを生成するユーザーをできるようにします。  
+-   **AssessmentReportGenerationSample.xml:** このサンプルで使用できるユーザー分析のために変換し、データの移行を始める前にこの xml 評価レポートを生成できます。  
   
     `generate-assessment-report`コマンド、ユーザーが mandatorily 変数の値を変更する必要があります (参照**VariableValueFileSample.xml**) で、`object-name`属性をユーザーによって使用されているデータベース名。 指定すると、オブジェクトの種類に応じて、`object-type`値を変更する必要があります。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47805120"
   
     -   `source-schema:` 変換に必要となる、ソース データベースを指定します。  
   
-    -   `sql-server-schema`: に移行するのには、ターゲット データベースを指定します。  
+    -   `sql-server-schema`:ターゲット データベースへの移行を指定します  
   
     **コマンド名**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47805120"
   
     **属性**  
   
-    `object-name`: 指定した転送元データベース]、[オブジェクト名を変換する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`  
+    `object-name`:ソース データベースを指定/オブジェクト名を変換する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`  
   
     **コマンド名**  
   

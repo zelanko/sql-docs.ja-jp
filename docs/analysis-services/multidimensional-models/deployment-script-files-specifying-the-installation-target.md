@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a9a075c5afdc4132058a0356a172edd6d68a5e5d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0c9b5e72bdf58cf10f3ab30db720a2434ff9e41b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002234"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540208"
 ---
 # <a name="deployment-script-files---specifying-the-installation-target"></a>配置スクリプト ファイル - インストール先の指定
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "38002234"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話形式で実行します。 **[インストールの対象]** ページで、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスとデータベースの新しいインストール先を指定します。  
   
-     — または —  
+     - または -  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 応答ファイル モードの詳細については、「 [Analysis Services 配置ウィザードの実行](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)」を参照してください。  
   
-     — または —  
+     - または -  
   
 -   変更、 \<*プロジェクト名*> 任意のテキスト エディターを使用して、>.deploymenttargets ファイル。  
   
 ## <a name="see-also"></a>参照  
  [パーティションおよびロールの配置オプションの指定](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
- [ソリューションの配置に関する構成設定を指定します。](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)   
+ [ソリューションの配置に関する構成設定の指定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)   
  [処理オプションの指定](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   

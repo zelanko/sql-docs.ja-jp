@@ -1,18 +1,20 @@
 ---
-title: Kubectl を使用してビッグ データの SQL Server クラスターを監視する |Microsoft Docs
+title: Kubectl を使用してモニター/トラブルシューティング
+titleSuffix: SQL Server 2019 big data clusters
 description: この記事では、監視、および SQL Server 2019 ビッグ データ クラスター (プレビュー) のトラブルシューティングに役立ちます kubectl コマンドを提供します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/15/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a47726e86bd1f10cda4db55bec6eac995344da38
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.custom: seodec18
+ms.openlocfilehash: 0d034058f7cc187caa373f3bdae2569d091c3977
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356596"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030566"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド
 
@@ -189,9 +191,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> 次のエラーが発生した場合:*ポート 8001 をリッスンできません: すべてのリスナーは、次のエラーを作成できませんでした: リスナーを作成できません: エラー リッスン tcp4 127.0.0.1:8001: > バインド: 各ソケット アドレス (プロトコル/ネットワークの 1 つのみの使用アドレス/ポート) は通常許可されます。リスナーを作成することができません: エラー リッスン tcp6: アドレス [:: 1]: 8001: でポートがありません > エラーへの対処: の要求されたポートでリッスンできません: [{8001 9090}]*、別のウィンドウから既にダッシュ ボードで開始しなかったことを確認します。
+> : 次のエラーが発生した場合*ポート 8001 でリッスンすることができません。すべてのリスナーは、次のエラーを作成できませんでした。リスナーを作成することができません。エラー リッスン tcp4 127.0.0.1:8001: > バインドします。通常、各ソケット アドレス (ネットワーク プロトコル/アドレス/ポート) の 1 つだけを使用できます。リスナーを作成することができません。エラー リッスン tcp6: アドレス [:: 1]: 8001: でのポートがありません > エラーへの対処します。要求されたポートのいずれかでリッスンできません: [{8001 9090}]*、別のウィンドウから既にダッシュ ボードで開始しなかったことを確認します。
 
-お使いのブラウザーでダッシュ ボードを起動すると、AKS クラスターで既定で有効になる RBAC のためのアクセス許可の警告を取得する可能性があります、ダッシュ ボードで使用されるサービス アカウントにはすべてのリソースにアクセスするための十分なアクセス許可がありません (たとえば、 *ポッドは禁止されています。 ユーザー"システム: serviceaccount:kube-システム: kubernetes-ダッシュ""default"名前空間に含まれるポッドを一覧表示できません*)。 必要なアクセス許可を付与するには、次のコマンドを実行`kubernetes-dashboard`、し、ダッシュ ボードを再起動します。
+お使いのブラウザーでダッシュ ボードを起動すると、AKS クラスターで既定で有効になる RBAC のためのアクセス許可の警告を取得する可能性があります、ダッシュ ボードで使用されるサービス アカウントにはすべてのリソースにアクセスするための十分なアクセス許可がありません (たとえば、 *ポッドは禁止されています。ユーザー"システム: serviceaccount:kube-システム: kubernetes-ダッシュ"、「既定」の名前空間に含まれるポッドを一覧表示できません*)。 必要なアクセス許可を付与するには、次のコマンドを実行`kubernetes-dashboard`、し、ダッシュ ボードを再起動します。
 
 ```
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - database performance [SQL Server], alerts
@@ -20,12 +20,12 @@ ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f58ae046ce906472a8c4b979832e278c4e2b7ad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c95605ed1a0ab42340713c5c5fa635b09d4a8ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114993"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777974"
 ---
 # <a name="create-a-sql-server-database-alert"></a>SQL Server データベース警告の作成
   システム モニターでは、システム モニターのカウンターがしきい値に達したときに発生する警告を作成できます。 警告が発せられると、システム モニターは、その警告状況を処理するために記述されたカスタム アプリケーションなどのアプリケーションを起動します。 たとえば、デッドロックの数が特定の値を超えたときに発生する警告を作成できます。  

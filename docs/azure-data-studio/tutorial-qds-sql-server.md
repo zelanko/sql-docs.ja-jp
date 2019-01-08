@@ -1,7 +1,8 @@
 ---
-title: 'チュートリアル: 5 つを有効にする速度が遅かったクエリ サンプル ウィジェット - Azure Data Studio |Microsoft Docs'
+title: チュートリアル:5 つの最も低速なクエリ サンプルのウィジェットを有効にします。
+titleSuffix: Azure Data Studio
 description: このチュートリアルでは、データベースのダッシュ ボードで最も低速なクエリ サンプルの 5 つウィジェットを有効にする方法について説明します。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356243"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030786"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル: データベース ダッシュ ボードに *5 つの遅いクエリ* のサンプルウィジェットを追加する
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル:追加、 *5 つの最も低速なクエリ*データベース ダッシュ ボードにサンプルのウィジェット
 
 このチュートリアルは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] の組み込みサンプルウィジェットの 1 つを *データベース ダッシュ ボード* に追加して 5 つの低速なクエリを表示する手順を示します。 ここでは、低速なクエリの詳細と [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用したクエリ プランを表示する方法についても学ぶことができます。 このチュートリアルでは、中に確認する方法。
 
@@ -54,7 +55,7 @@ ms.locfileid: "49356243"
 追加する、*速度の遅いクエリ ウィジェット*ダッシュ ボードには、編集、 *dashboard.database.widgets*で設定、*ユーザー設定*ファイル。
 
 1. 開く*ユーザー設定*キーを押して**Ctrl + Shift + P**を開く、*コマンド パレット*します。
-2. 型*設定*検索ボックスを選び**設定: ユーザー設定を開く**します。
+2. 型*設定*検索ボックスを選び**設定。ユーザー設定を開く**します。
 
    ![開いているユーザー設定 コマンド](./media/tutorial-qds-sql-server/open-user-settings.png)
 

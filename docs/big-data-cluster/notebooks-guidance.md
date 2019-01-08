@@ -1,30 +1,34 @@
 ---
-title: SQL Server 2019 プレビューで notebook を使用する方法 |Microsoft Docs
-description: ''
+title: Azure Data Studio でノートブックを実行します。
+titleSuffix: SQL Server 2019 big data clusters
+description: この記事では、SQL Server 2019 のビッグ データ クラスターに Azure Data Studio conneected で Jupyter Notebook を実行する方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221638"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246611"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 プレビューで notebook を使用する方法
 
-この記事では、クラスターで Jupyter Notebook を起動し、独自のノートブックの作成を開始する方法について説明します。 また、クラスターに対してジョブを送信する方法を示します。
+この記事では、ビッグ データ クラスターで Jupyter Notebook を起動する方法と、独自のノートブックの作成を開始する方法について説明します。 また、クラスターに対してジョブを送信する方法を示します。
 
 ## <a name="prerequisites"></a>前提条件
 
 Notebook を使用するには、次の前提条件をインストールする必要があります。
 
 - [SQL Server 2019 のビッグ データ クラスター](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [SQL Server 2019 拡張機能 (プレビュー)](../azure-data-studio/sql-server-2019-extension.md)します。
+- [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 の拡張機能**
+   - **kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -105,15 +109,15 @@ PySpark カーネルを選択し、次のコード セルの種類。
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-– 以下のオプション アイコンをクリックするとに、"セル"オプションを表示することもできます。
+以下のオプション アイコンをクリックするとに、"セル"オプションを表示することもできます。
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-– すべてのセルのオプションを次に示します
+すべてのセルにするためのオプションを次に示します
 
 ![Image14](media/notebooks-guidance/image14.png)-
 
-ここで、– でセルの種類/貼り付けと、カーネル用のドロップダウン リストで、Spark カーネルを選択します。
+セルの種類/貼り付けと、カーネル用のドロップダウン リストで、Spark カーネルを選択します。
 
 ![Image15](media/notebooks-guidance/image15.png)
 

@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5911783558ff259eef7488df082560cfe56a4dfb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 028da8892406be7c29d604cc0357f0006bacc4cb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665921"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215438"
 ---
 # <a name="process-odbc-errors-odbc"></a>ODBC エラーの処理 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  2 つの ODBC 関数呼び出し [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) および [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を使用すると、ODBC メッセージを取得できます。 **SQLState**、**pfNative**、および **ErrorMessage** の各診断フィールドの主要な ODBC 関連情報を取得するには、SQL_NO_DATA が返されるまで [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) を呼び出します。 診断レコードごとに、[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出して個々のフィールドを取得できます。 ドライバー固有のフィールドはすべて、**SQLGetDiagField** を使用して取得する必要があります。  
+  ODBC メッセージを取得する 2 つの ODBC 関数呼び出しを使用できます。[SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)と[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)します。 **SQLState**、**pfNative**、および **ErrorMessage** の各診断フィールドの主要な ODBC 関連情報を取得するには、SQL_NO_DATA が返されるまで [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) を呼び出します。 診断レコードごとに、[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出して個々のフィールドを取得できます。 ドライバー固有のフィールドはすべて、**SQLGetDiagField** を使用して取得する必要があります。  
   
  [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) および [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) は、個々のドライバーではなく、ODBC ドライバー マネージャーによって処理されます。 ODBC ドライバー マネージャーは、接続が正しく確立されるまでドライバー固有の診断フィールドをキャッシュしません。 接続が正しく確立される前に、ドライバー固有の診断フィールドに対して [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) を呼び出すことはできません。 これには、SQL_SUCCESS_WITH_INFO が返される場合の ODBC 接続コマンドも含まれます。 ドライバー固有の診断フィールドは、次の ODBC 関数呼び出しまで使用できません。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "51665921"
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、このサンプルで使用するストアド プロシージャを作成します。  
+ 最初の実行 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストをこのサンプルで使用されるストアド プロシージャを作成します。  
   
  odbc32.lib を使用して 2 つ目の (C++) コード リストをコンパイルします。 次に、プログラムを実行します。  
   
- 3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、このサンプルで使用したストアド プロシージャを削除します。  
+ 3 つ目の実行 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストをこのサンプルで使用されるストアド プロシージャを削除します。  
   
 ### <a name="code"></a>コード  
   

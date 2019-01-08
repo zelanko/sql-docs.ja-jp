@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
@@ -13,12 +13,12 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ffae4f02e598157215e1062863ffce05794983f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135372"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780514"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>対象サーバーの場所を指定する (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でマルチサーバー管理の構成で対象サーバーの場所を指定する方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48135372"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  このアクションを実行すると、レジストリが編集されます。 レジストリは手動で編集しないでください。不適切または不正確な変更を加えると、システム構成に重大な問題が生じる場合があります。 熟練したユーザーのみがレジストリ エディターを使用してレジストリを編集することをお勧めします。 詳細については、Microsoft Windows のドキュメントを参照してください。  

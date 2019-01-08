@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_partition_groups_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6b0b9f18377de89f6cf607f9aaab6c294f4a716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb8c77ba54e25c574d5f751febe8bdac3ba1dfbf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846570"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775344"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47846570"
 |**publication_number**|**smallint**|格納されているパブリケーションの番号**sysmergepublications**します。|  
 |**maxgen_whenadded**|**bigint**|このテーブルに行が挿入される時点で、パブリッシャーで把握している最も古い generation 値です。|  
 |**using_partition_groups**|**bit**|事前計算済みパーティションを使用するパブリケーションにパーティションが属するかどうかを示します。次の値のいずれかになります。<br /><br /> **0** = パブリケーションは事前計算済みパーティションを使用しません。<br /><br /> **1**パブリケーションは事前計算済みパーティションを =<br /><br /> 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。|  
-|**HOST_NAME**|**nvarchar(128)**|パラメーター化された行フィルターを使用してパーティションを生成するときに提供される値です。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。|  
+|**HOST_NAME**|**nvarchar(128)**|パラメーター化された行フィルターを使用してパーティションを生成するときに提供される値です。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

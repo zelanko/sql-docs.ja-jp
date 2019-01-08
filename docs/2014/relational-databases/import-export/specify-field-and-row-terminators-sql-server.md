@@ -16,12 +16,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 606b5273619e0f88503abeadaf6d463f6f16d3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188402"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539750"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
   文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ* を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
@@ -40,7 +40,7 @@ ms.locfileid: "48188402"
 |円記号<sup>1</sup>|\\\|  
 |Null ターミネータ (表示されないターミネータ)<sup>2</sup>|\0|  
 |任意の印刷可能な文字 (NULL、タブ、改行、およびキャリッジ リターンを除き、制御文字は印刷可能ではありません)|(*、A、t、l など)|  
-|上に列挙したターミネータ文字の一部または全部を含む 10 文字までの印刷可能な文字列|(\*\*\t\*\*、end、!!!!!!!!!!、\t?\n など)|  
+|上に列挙したターミネータ文字の一部または全部を含む 10 文字までの印刷可能な文字列|(**\t\*\*、end、!!!!!!!!!!、\t-\n など)|  
   
  <sup>1</sup>のみ t、n、r、0 および '\0' 文字が制御文字をエスケープ文字を使用します。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "48188402"
   
          `Enter field terminator [none]:`  
   
-         通常は、既定値を選択することをお勧めします。 ただし、`char`または`nchar`データ フィールドは、次のサブセクションでは、「ターミネータ使用のガイドラインです。」を参照してください。 コンテキスト内でこのプロンプトが表示される例については、「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
+         通常は、既定値を選択することをお勧めします。 ただし、`char` データ フィールドまたは `nchar` データ フィールドについては、次の「ターミネータ使用のガイドライン」を参照してください。 コンテキスト内でこのプロンプトが表示される例については、「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
   
         > [!NOTE]  
         >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  
   
 ### <a name="guidelines-for-using-terminators"></a>ターミネータ使用のガイドライン  
- 状況によっては、ターミネータは適して、`char`または`nchar`データ フィールド。 以下に例を示します。  
+ 状況によっては、`char` データ フィールドまたは `nchar` データ フィールドには、ターミネータが役に立つ場合があります。 以下に例を示します。  
   
 -   プレフィックス長がわからないプログラムにインポートされるデータ ファイル内で NULL 値が含まれるデータ列。  
   
@@ -136,7 +136,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      OPENROWSET 一括行セット プロバイダーでは、ターミネータを指定できるのはフォーマット ファイルのみです (Large Object データ型を除き、これは必須です)。 文字データ ファイルで既定以外のターミネータが使用されている場合、フォーマット ファイルで定義する必要があります。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md) および [データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
   
-     OPENROWSET BULK 句の詳細については、「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
+     OPENROWSET BULK 句の詳細については、「 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)を使用) を示すことができます。  
   
 ### <a name="examples"></a>使用例  
  この例では、前述の例で作成された `Department-c-t.txt` データ ファイルから、 `myDepartment` サンプル データベースの [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] テーブルに、文字データを一括インポートします。 このテーブルを作成しないと、例を実行できません。 **dbo** スキーマでこのテーブルを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  

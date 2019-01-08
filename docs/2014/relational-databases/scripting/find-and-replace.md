@@ -7,22 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.quickfind
-- vs.find
-- vs.findreplace.quickreplace
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a21201ee3a3e12e4f091b545b8bd812a20a0505
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6c2e057c542e6b3c0d9ff475b697efb7bea51b6
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152522"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328822"
 ---
 # <a name="find-and-replace"></a>[検索と置換]
   **[検索と置換]** ダイアログ ボックスを使用すると、ファイル内のテキストを検索し、必要に応じて置換できます。 **[検索と置換]** ダイアログ ボックスを開く方法に応じて、表示されるオプションが多少異なることがあります。 **[編集]** メニューで **[検索と置換]** をポイントし、 **[クイック検索]** をクリックすると、検索オプションがあって置換オプションがないダイアログ ボックスが開きます。 **[編集]** メニューで **[検索と置換]** をポイントし、 **[クイック置換]** をクリックすると、検索オプションと置換オプションの両方が表示されるダイアログ ボックスが開きます。  
@@ -127,5 +123,3 @@ ms.locfileid: "48152522"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

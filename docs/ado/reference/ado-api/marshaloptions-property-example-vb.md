@@ -15,15 +15,15 @@ ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aced271d33f28a565f3ebf9976a325d215e23acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aad4088e8a102ea3afbf2cd8e75e3fe605c268cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801210"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535159"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions プロパティの例 (VB)
-この例では、 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がサーバーに送信されますを指定する: すべての行または行の変更のみです。  
+この例では、 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がすべての行または変更された行のみのサーバーに送信されます。  
   
 ```  
 'BeginMarshalOptionsVB  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.runnow.f1
@@ -12,12 +12,12 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3c45cc239c1c8fa3539b168ab3f322cd757e25f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151582"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780954"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>[ポリシーの評価] ダイアログ ボックスの [ポリシーの選択] ページ
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを評価できます。 **[評価の結果]** ページを選択すると、ポリシーに準拠していない対象セット内の項目にポリシーを適用できます。  
@@ -32,13 +32,13 @@ ms.locfileid: "48151582"
  **[サーバー]**  
  必要なポリシーを含む [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続する場合に選択します。  
   
- **[ポリシー: ポリシー]**  
+ **ポリシー:ポリシー**  
  クリックすると、指定したポリシーの [ポリシー] ダイアログ ボックスが開きます。  
   
- **[ポリシー: カテゴリ]**  
+ **ポリシー:カテゴリ**  
  ポリシーのカテゴリ。 このボックスは読み取り専用です。  
   
- **[ポリシー: ファセット]**  
+ **ポリシー:ファセット**  
  ポリシーによって実装されるファセット。 このボックスは読み取り専用です。  
   
  **[評価]**  

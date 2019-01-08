@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
@@ -14,12 +13,12 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5e33eca3c4be7d766d85862ccb66a4ab76a9d17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58f946f89691a6e26ba4402166b8ad725e7a977c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066332"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761784"
 ---
 # <a name="deploying-models-master-data-services"></a>モデルの配置 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]におけるパッケージは、配置可能なモデル構造と (必要に応じて) モデル データを含んだ XML ファイルです。 モデル パッケージを使用して、モデルのコピーを MDS 環境間で移動したり、既存の MDS 環境に新しいモデルを作成したりすることができます。  
@@ -30,11 +29,11 @@ ms.locfileid: "48066332"
 ## <a name="tools-for-deploying-models"></a>モデルを展開するためのツール  
  モデル パッケージを使用するには、3 つのツールをニーズに応じて使い分けることができます。  
   
--   **MDSModelDeploy ツール**: モデル オブジェクトとデータを作成して配置するには、MDSModelDeploy.exe ツールを使用します。 MDS をインストールするときに、既定のパスを選択した場合は、このツールはあります*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration にあります。  
+-   **MDSModelDeploy ツール**:を作成してモデル オブジェクトとデータを配置するには、MDSModelDeploy.exe ツールを使用します。 MDS をインストールするときに、既定のパスを選択した場合は、このツールはあります*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration にあります。  
   
--   **モデル配置ウィザード**: モデルの構造のみのパッケージを作成して配置するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションのウィザードを使用します。 このウィザードを使用して、データを配置することはできません。  
+-   **モデル配置ウィザード**:を作成して、モデル構造のみのパッケージを配置するには、ウィザードを使用、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web アプリケーション。 このウィザードを使用して、データを配置することはできません。  
   
--   **モデル パッケージ エディター**: モデル パッケージを編集するには、ModelPackageEditor.exe を使用してモデル パッケージ エディター ウィザードを起動します。 このウィザードを使用して、MDSModelDeploy ツールまたはモデル配置ウィザードによって作成されたパッケージを編集します。 MDS をインストールするときに、既定のパスを選択した場合は、このツールはあります*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration にあります。  
+-   **モデル パッケージ エディター**:モデル パッケージを編集するには、モデル パッケージ エディター ウィザードを起動する ModelPackageEditor.exe を使用してください。 このウィザードを使用して、MDSModelDeploy ツールまたはモデル配置ウィザードによって作成されたパッケージを編集します。 MDS をインストールするときに、既定のパスを選択した場合は、このツールはあります*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration にあります。  
   
 > [!IMPORTANT]  
 >  MDSDeployModel を使用すると、新しいモデルの作成、モデルの複製の作成、または既存のモデルとそのデータの更新を実行できます。 MDSModelDeploy ツールを使用して既存のモデルとそのデータを更新するときに、配置先モデルに存在するエンティティ、属性、またはメンバーがパッケージに含まれていない場合は、MDSModelDeploy によって、そのエンティティ、属性、またはメンバーがモデルから削除されることはありません。  
@@ -77,6 +76,6 @@ ms.locfileid: "48066332"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [モデル配置オプション&#40;マスター データ サービス&#41;](model-deployment-options-master-data-services.md)  
+-   [モデル配置オプション (マスター データ サービス)](model-deployment-options-master-data-services.md)  
   
   

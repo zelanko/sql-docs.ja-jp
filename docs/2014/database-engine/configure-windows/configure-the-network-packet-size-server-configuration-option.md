@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - default packet size
@@ -16,12 +15,12 @@ ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4bf4c593b8d13f2f4f88cd066cd183d92d2f6ae1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22f78cc38a71f518d5223e9f310588c4d55bdf88
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116432"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640023"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
   このトピックでは、構成する方法を説明します、`network packet size`サーバー構成オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 `network packet size`オプションは、ネットワーク全体で使用されるパケット サイズ (単位: バイト) を設定します。 パケットとは、固定サイズのデータのチャンクで、クライアントとサーバー間で要求および結果を転送します。 既定のパケット サイズは 4,096 バイトです。  
@@ -45,9 +44,9 @@ ms.locfileid: "48116432"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [network packet size オプションを構成した後](#FollowUp)  
+-   **補足情報:**[ネットワーク パケット サイズのオプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -104,9 +103,9 @@ GO
   
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: network packet size オプションを構成した後  
+##  <a name="FollowUp"></a> フォローしてください：ネットワーク パケット サイズのオプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

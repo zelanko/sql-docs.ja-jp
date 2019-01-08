@@ -1,7 +1,8 @@
 ---
-title: Insights および Azure Data Studio での一般的なタスクにすばやくアクセス |Microsoft Docs
-description: Azure Data Studio で洞察に富むウィジェットを表示する方法について説明します。
-ms.custom: tools|sos
+title: Insights および一般的なタスクを簡単にアクセスします。
+titleSuffix: Azure Data Studio
+description: Azure Data Studio でデータベースのダッシュ ボード ウィジェットを表示する方法について説明します。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: b163d110353d07811f0feb991772c90053651659
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356195"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030486"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>ダッシュ ボード [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -42,7 +43,7 @@ ms.locfileid: "49356195"
 インサイトの詳細のポップアップは、関連する洞察のウィジェットのより詳細な情報を提供します。 
 - 洞察のウィジェットでは、カウント、行、グラフなどの概要概要ビューを表示します。 
 - インサイトの詳細のフライアウトは、高レベルの洞察のウィジェットに表示された各項目のより深いデータ洞察を一覧表示する、「ドリル」の詳細を説明します。 
-  - 詳細のポップアップの内容は、メインのウィジェットのクエリを別の SQL クエリで定義されます。 
+  - 詳細のポップアップの内容は、メインのウィジェットのクエリを別の SQL クエリで定義されます。
 
 インサイトの詳細クエリでは、セットの要件はありませんが、レイアウトは標準。
 - ビューの上半分は、常に、2 列の"summary"ビューです。 JSON 構成のプロパティ"label"と"value"プロパティで使用する列が定義されています。
@@ -85,14 +86,14 @@ ms.locfileid: "49356195"
 ```
 |property|型|value|既定値|description|comment|
 |:---|:---|:---|:---|:---|:---|
-|詳細情報|json オブジェクト|||insight 詳細定義をその構造内で定義する必須のプロパティ||
+|詳細情報|json オブジェクト|||その構造内で洞察の詳細の定義を定義する必須のプロパティ||
 |queryFile|string|||insight 詳細 sql クエリ ファイルのパスとファイル名 package.json の位置を基準||
 |ラベル●らべる○|json オブジェクト|||概要のリスト ビューでの各品目を定義する必須のプロパティ|将来的に 'summaryList' のように変更するには、このプロパティの名前|
-|アイコン●あいこん○|string|||各概要リスト ビュー項目のリーダーにアイコンの名前を指定します。|サポートされているアイコンの (tbd) の一覧が文書化します。|
+|アイコン●あいこん○|string|||各概要リスト ビュー項目に表示されるアイコンの名前を指定します。|サポートされているアイコンの (tbd) の一覧が文書化します。|
 |column|string|||クエリの結果セットから概要リスト ビューで最初の列の名前を示す|後で、このプロパティの名前はより直感的な名前に変更されます。|
-|value|string|||クエリの結果セットから概要リスト ビューで 2 番目の列の名前を指定します。 この列の値の使用条件を確認し、各集計のリスト ビュー項目の色のドットの色を設定するには|後でこのプロパティの名前より直感的なものに変わります。|
+|value|string|||クエリの結果セットから概要リスト ビューで 2 番目の列の名前を指定します。 この列の値の使用条件を確認し、各概要リスト ビュー項目の色のドットの色を設定するには|後でこのプロパティの名前より直感的なものに変わります。|
 |condition|json オブジェクト|||列の値の条件のチェックを定義し、各集計のリスト ビュー項目の色を決定します。||
-|if|string|常に、equals、notEquals、greaterThan、lessThan、greaterThanOrEqauls lessThanOrEquals||条件のチェック演算子|後で、プロパティ名が、演算子に変わります。|
+|if|string|常に、equals、notEquals、greaterThan、lessThan、greaterThanOrEquals lessThanOrEquals||条件のチェック演算子|後で、プロパティ名が、演算子に変わります。|
 |equals|string|||条件チェックの値|後でこのプロパティ名が、'value' に変わります。|
 
 ## <a name="insight-actions"></a>Insight アクション
@@ -104,7 +105,7 @@ ms.locfileid: "49356195"
 
 ## <a name="sample-insight-action-definition"></a>サンプル Insight アクションの定義
 
-```"actions"{}``` insight アクションを定義します。 アクションをなど、特定のスコープを定義できます```"server"```、```"database"```などと[!INCLUDE[name-sos](../includes/name-sos-short.md)]アクションに現在の接続コンテキスト情報を渡します。 
+```"actions"{}``` insight アクションを定義します。 アクションをなど、特定のスコープを定義できます```"server"```、```"database"```などと[!INCLUDE[name-sos](../includes/name-sos-short.md)]アクションに現在の接続コンテキスト情報を渡します。
 
 WideWorldImporters データベースの復元アクションが起動されたときに、```"database": "${Database}"```を渡すことを示します定義```Database```復元操作にクエリの結果の列の値。 データベースの復元操作を開始します。 ```"types"``` json 配列であり、配列に複数のアクションを表示できます。 コンテキスト メニューが基本的にそのユーザーをクリックして、操作を実行する分析情報の詳細 ダイアログでします。 
 

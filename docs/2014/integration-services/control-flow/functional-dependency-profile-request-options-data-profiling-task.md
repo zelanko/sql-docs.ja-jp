@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b86f926c4f62d934515f58bd61608016edb6880a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 426f5044087fdf39732626ee8461b0d8c47f3a39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085522"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791004"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>[機能依存プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[機能依存プロファイル要求]** のオプションを設定できます。 機能依存プロファイルは、ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 このプロファイルでは、郵便番号によって州が一意に決定されますが、依存関係の違反を検出できます。  
@@ -26,7 +25,7 @@ ms.locfileid: "48085522"
 > [!NOTE]  
 >  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer (Data Profile Viewer)](data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
 ## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>決定列と依存列の選択について  
  **機能依存プロファイル要求** は、決定側の列または列のセット ( **DeterminantColumns** プロパティで指定) により、依存側の列 ( **DependentColumn** プロパティで指定) の値がどの程度決定されるかを計算します。 たとえば、米国の州の列は米国郵便番号の列に機能的に依存します。 つまり、郵便番号 (決定列) が "98052" である場合、州 (依存列) は必ず "Washington" になります。  
@@ -121,7 +120,7 @@ ms.locfileid: "48085522"
  出力で報告する機能依存違反の最大数を指定します。 このプロパティの既定値は 100 です。 **[ThresholdSetting]** で **[Exact]** が選択されている場合、このオプションは無効です。  
   
 ## <a name="see-also"></a>参照  
- [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+ [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
+ [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
   
   

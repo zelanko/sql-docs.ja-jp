@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - syspublications
@@ -19,12 +18,12 @@ ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2369b472fc4e7e7506aab72d46c3ecfe7cead8c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed5e46a5bfb9b4c4081eb2df7d4f93b7dd12b29f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822936"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,8 +65,8 @@ ms.locfileid: "47754840"
 |**centralized_conflicts**|**bit**|競合レコードがパブリッシャーに格納されるかどうかを示します。<br /><br /> **0** = 競合レコードはパブリッシャー側の両方と、競合の原因となったサブスクライバーで格納されます。<br /><br /> **1** = 競合レコードはパブリッシャーに格納されます。|  
 |**conflict_retention**|**int**|競合の保有期間の日数を指定します。|  
 |**conflict_policy**|**int**|キュー更新サブスクライバー オプションを使用するときの競合の解決方法。 これらの値のいずれかを指定できます。<br /><br /> **1** = パブリッシャー優先します。<br /><br /> **2** = サブスクライバー優先します。<br /><br /> **3** = サブスクリプションを再初期化します。|  
-|**queue_type**|**int**|使用されるキューの種類。 これらの値のいずれかを指定できます。<br /><br /> **1** 、msmq を =[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューがトランザクションを格納します。<br /><br /> **2** = を使用して、sql[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納します。<br /><br /> 注: を使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューは非推奨し、は現在利用できません。|  
-|**ad_guidname**|**sysname**|パブリケーションがパブリッシュされるかどうかを指定します、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory。 有効なグローバル一意識別子 (GUID) は、Active Directory でパブリケーションがパブリッシュされることと、GUID は、対応する Active Directory パブリケーション オブジェクトを指定します。 **objectGUID**します。 NULL の場合、パブリケーションは Active Directory にパブリッシュされません。|  
+|**queue_type**|**int**|使用されるキューの種類。 これらの値のいずれかを指定できます。<br /><br /> **1** 、msmq を =[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューがトランザクションを格納します。<br /><br /> **2** = を使用して、sql[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納します。<br /><br /> 注:[!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージ キューイングは非推奨とされており、現在は利用できません。|  
+|**ad_guidname**|**sysname**|パブリケーションが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory にパブリッシュされるかどうかを示します。 有効なグローバル一意識別子 (GUID) は、Active Directory でパブリケーションがパブリッシュされることと、GUID は、対応する Active Directory パブリケーション オブジェクトを指定します。 **objectGUID**します。 NULL の場合、パブリケーションは Active Directory にパブリッシュされません。|  
 |**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> **110** = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].<br /><br /> **120** = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|サブスクライバーが初期スナップショットではなくバックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 **1** 、バックアップからサブスクリプションを初期化できることを意味し、 **0**できないことを意味します。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。|  
 |**min_autonosync_lsn**|**[バイナリ]**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

@@ -15,12 +15,12 @@ ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 866e84844c563f1289a23a598cbd980d9b3bc432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169594"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531593"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 **bcp** を使用すると、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からネイティブ形式データおよび文字形式データを **-V** スイッチを指定してインポートすることができます。 **-V** スイッチを使用すると、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は指定された以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータ型を使用し、データ ファイル形式はその以前のバージョンのものと同じになります。  
@@ -51,8 +51,8 @@ ms.locfileid: "48169594"
   
  <sup>1</sup> UDT ユーザー定義型を示します。  
   
-## <a name="exporting-using-v-80"></a>–V 80 を使用したエクスポート  
- 使用してエクスポート データを一括するときに、 **– V80**切り替えるには、 `nvarchar(max)`、 `varchar(max)`、 `varbinary(max)`、XML、およびネイティブ モードの UDT データは、同様の 4 バイトのプレフィックスを使用して格納されます`text`、 `image`、および`ntext`、データの既定値は 8 バイトのプレフィックスではなく[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョン。  
+## <a name="exporting-using--v-80"></a>-V 80 を使用したエクスポート  
+ 使用してエクスポート データを一括するときに、 **-V80**切り替えるには、 `nvarchar(max)`、 `varchar(max)`、 `varbinary(max)`、XML、およびネイティブ モードの UDT データは、同様の 4 バイトのプレフィックスを使用して格納されます`text`、 `image`、および`ntext`、データの既定値は 8 バイトのプレフィックスではなく[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョン。  
   
 ## <a name="copying-date-values"></a>日付値のコピー  
  **bcp** は ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[*.f...*]) を使用します。  
@@ -60,7 +60,7 @@ ms.locfileid: "48169594"
  **Bcp**コマンドでは、ODBC の既定形式を使用して、文字形式データ ファイルをエクスポートします。`datetime`と`smalldatetime`値。 たとえば、日付 `12 Aug 1998` が含まれた `datetime` 型の列は、文字列 `1998-08-12 00:00:00.000` としてデータ ファイルに一括コピーされます。  
   
 > [!IMPORTANT]  
->  データをインポートするときに、`smalldatetime`フィールドを使用して**bcp**秒の値が 00.000 になって。 それ以外の場合、操作が失敗してください。 `smalldatetime`データ型に最も近い分単位の値のみ保持されます。 この場合、BULK INSERT および INSERT ... SELECT * FROM OPENROWSET(BULK...) は失敗しませんが、秒の値は切り捨てられます。  
+>  データをインポートするときに、`smalldatetime`フィールドを使用して**bcp**秒の値が 00.000 になって。 それ以外の場合、操作が失敗してください。 `smalldatetime` データ型には、最も近い "分" までの値のみが保持されます。 この場合、BULK INSERT および INSERT ... SELECT * FROM OPENROWSET(BULK...) は失敗しませんが、秒の値は切り捨てられます。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **一括インポートまたは一括エクスポートのデータ形式を使用するには**  
@@ -75,7 +75,7 @@ ms.locfileid: "48169594"
   
  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   

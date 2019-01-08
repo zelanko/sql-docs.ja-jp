@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116402"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204751"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、レポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  
@@ -62,9 +62,9 @@ ms.locfileid: "48116402"
 |テキスト ボックスの値|割り当てられるデータ型|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (または`Decimal`と任意の整数かバイト データ型)|**xsd:decimal**|  
-|`Float` (または`Decimal`と任意の整数かバイト データ型)|**xsd:float**|  
-|`Double` (または`Decimal`と任意の整数かバイト データ型)|**xsd:double**|  
+|`Decimal` (または `Decimal` と任意の整数かバイト データ型)|**xsd:decimal**|  
+|`Float` (または `Decimal` と任意の整数かバイト データ型)|**xsd:float**|  
+|`Double` (または `Decimal` と任意の整数かバイト データ型)|**xsd:double**|  
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
@@ -81,7 +81,7 @@ ms.locfileid: "48116402"
   
  レポート要素には、XML 名前空間の定義とスキーマ参照属性も含まれます。 以下の例では、変数が太字で示されています。  
   
- \<**レポート**xmlns ="**SchemaName**"xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc %3aschema =true"名前 ="ReportName">  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  それぞれの変数の値は次のとおりです。  
   

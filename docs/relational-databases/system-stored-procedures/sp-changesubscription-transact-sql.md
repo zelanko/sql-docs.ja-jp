@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - changesubscription
@@ -19,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c3b60aedb42c6d249920cb42da021c474faf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640710"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209841"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +49,22 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication**=] **'***パブリケーション***'**  
+ [ **@publication**=] **'**_パブリケーション_**'**  
  変更するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません  
   
- [ **@article** =] **'***記事***'**  
+ [ **@article** =] **'**_記事_**'**  
  変更するアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
   
- [ **@subscriber** =] **'***サブスクライバー***'**  
+ [ **@subscriber** =] **'**_サブスクライバー_**'**  
  サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
   
- [ **@destination_db** =] **'***destination_db***'**  
+ [ **@destination_db** =] **'**_destination_db_**'**  
  サブスクリプション データベースの名前です。 *destination_db*は**sysname**、既定値はありません。  
   
- [  **@property=**] **'***プロパティ***'**  
+ [  **@property=**] **'**_プロパティ_**'**  
  指定したサブスクリプションの変更対象となるプロパティを指定します。 *プロパティ*は**nvarchar (30)** テーブル内の値のいずれかを指定できます。  
   
- [  **@value=**] **'***値***'**  
+ [  **@value=**] **'**_値_**'**  
  指定した新しい値は、*プロパティ*します。 *値*は**nvarchar (4000)** テーブル内の値のいずれかを指定できます。  
   
 |プロパティ|値|説明|  
@@ -78,15 +77,15 @@ sp_changesubscription [ @publication = ] 'publication'
 |**subscriber_login**||サブスクライバーでのログイン名。|  
 |**@subscriber_password**||指定したログインに対する複雑なパスワード。|  
 |**subscriber_security_mode**|**1**|サブスクライバーに接続するときに Windows 認証を使用。|  
-||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに接続するときに認証します。|  
-|**subscriber_provider**||一意なプログラム識別子 (PROGID) を OLE DB provider for 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソースを登録します。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
+||**0**|サブスクライバーに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用。|  
+|**subscriber_provider**||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータ ソース用の OLE DB プロバイダーを登録するときに使用される、一意なプログラム識別子 (PROGID)。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
 |**subscriber_providerstring**||データ ソースを識別する、OLE DB プロバイダー固有の接続文字列。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
 |**subscriptionstreams**||変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数。 値の範囲**1**に**64**はサポートされて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 このプロパティである必要があります**0**の非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー、Oracle パブリッシャー、またはピア ツー ピア サブスクリプションです。|  
 |**subscriber_type**|**1**|ODBC データ ソース サーバー|  
 ||**3**|OLE DB プロバイダー|  
 |**メモリ最適化**|**bit**|サブスクリプションがメモリ最適化テーブルをサポートしていることを示します。 *memory_optimized*は**ビット**、場所 1 が true (サブスクリプションでは、メモリ最適化テーブルをサポートします)。|  
   
- [  **@publisher =** ] **'***パブリッシャー***'**  
+ [  **@publisher =** ] **'**_パブリッシャー_**'**  
  以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  

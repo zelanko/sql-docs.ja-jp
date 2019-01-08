@@ -1,5 +1,5 @@
 ---
-title: テーブル モデリング (1200 互換性レベル) |Microsoft Docs
+title: Analysis Services テーブル モデリング (1200 互換性レベル) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 43ef5c290e1234af4482f09f2ec7f01e2edbca99
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054689"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072179"
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>テーブル モデリング (1200 互換性レベル)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -75,19 +75,19 @@ SQL Server 2017 または Azure Analysis Services を使用しているし、140
   
 |レッスン|推定所要時間|  
 |----------|------------------------------|  
-|[レッスン 1: 新しいテーブル モデル プロジェクトの作成](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 分|  
-|[レッスン 2: データの追加](../analysis-services/lesson-2-add-data.md)|20 分|  
-|[レッスン 3: 日付テーブルとしてマーク](../analysis-services/lesson-3-mark-as-date-table.md)|3 分|  
-|[レッスン 4: リレーションシップを作成します。](../analysis-services/lesson-4-create-relationships.md)|10 分|  
-|[レッスン 5: 計算列を作成します。](../analysis-services/lesson-5-create-calculated-columns.md)|15 分|
-|[レッスン 6: メジャーを作成します。](../analysis-services/lesson-6-create-measures.md)|30 分|  
-|[レッスン 7: 主要業績評価指標の作成](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 分|  
-|[レッスン 8: パースペクティブを作成します。](../analysis-services/lesson-8-create-perspectives.md)|5 分|  
-|[レッスン 9: 階層を作成します。](../analysis-services/lesson-9-create-hierarchies.md)|20 分|  
-|[レッスン 10: パーティションを作成します。](../analysis-services/lesson-10-create-partitions.md)|15 分|  
-|[レッスン 11: ロールを作成します。](../analysis-services/lesson-11-create-roles.md)|15 分|  
-|[レッスン 12: Excel での分析](../analysis-services/lesson-12-analyze-in-excel.md)|20 分| 
-|[レッスン 13: 配置](../analysis-services/lesson-13-deploy.md)|5 分|  
+|[レッスン 1:新しい表形式モデル プロジェクトを作成します。](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 分|  
+|[レッスン 2:データを追加します。](../analysis-services/lesson-2-add-data.md)|20 分|  
+|[レッスン 3:日付テーブルとしてマークします。](../analysis-services/lesson-3-mark-as-date-table.md)|3 分|  
+|[レッスン 4:リレーションシップを作成します。](../analysis-services/lesson-4-create-relationships.md)|10 分|  
+|[レッスン 5:計算列を作成します。](../analysis-services/lesson-5-create-calculated-columns.md)|15 分|
+|[レッスン 6:メジャーを作成します。](../analysis-services/lesson-6-create-measures.md)|30 分|  
+|[レッスン 7:主要業績評価指標を作成します。](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 分|  
+|[レッスン 8:パースペクティブを作成します。](../analysis-services/lesson-8-create-perspectives.md)|5 分|  
+|[レッスン 9:階層を作成します。](../analysis-services/lesson-9-create-hierarchies.md)|20 分|  
+|[レッスン 10:パーティションを作成します。](../analysis-services/lesson-10-create-partitions.md)|15 分|  
+|[レッスン 11:ロールを作成します。](../analysis-services/lesson-11-create-roles.md)|15 分|  
+|[レッスン 12:Excel で分析します。](../analysis-services/lesson-12-analyze-in-excel.md)|20 分| 
+|[レッスン 13:展開](../analysis-services/lesson-13-deploy.md)|5 分|  
   
 ## <a name="supplemental-lessons"></a>補足のレッスン  
 このチュートリアルには、 [補足レッスン](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e)も含まれています。 このセクションのトピックはチュートリアルを完了するのに必須ではありませんが、高度なテーブル モデル作成機能をより深く理解するために役立ちます。  
@@ -98,7 +98,7 @@ SQL Server 2017 または Azure Analysis Services を使用しているし、140
 
   
 ## <a name="next-step"></a>次の手順  
-チュートリアルを開始するには、 [「レッスン 1: 新しいテーブル モデル プロジェクトの作成」](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)に進みます。  
+チュートリアルを開始するには、最初のレッスンに進んでください。[レッスン 1:新しいテーブル モデル プロジェクト作成](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)です。  
   
   
   

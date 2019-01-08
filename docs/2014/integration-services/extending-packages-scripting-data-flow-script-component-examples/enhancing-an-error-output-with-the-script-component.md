@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - transformations [Integration Services], components
@@ -17,12 +15,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afbe12653e00f7d95a04051ee47fcf07f908a85e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 303018cfd45e4a1c14404be7ada6f2bc28a4677e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129692"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350914"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>スクリプト コンポーネントによるエラー出力の強化
   既定では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエラー出力の 2 つの追加列 (ErrorCode と ErrorColumn) には、エラー番号を表す数値コードと、エラーが発生した列の ID しか含まれていません。 これらの数値は、対応するエラー説明がないとあまり役に立ちません。  
@@ -87,7 +85,7 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [データのエラー処理](../data-flow/error-handling-in-data.md)   

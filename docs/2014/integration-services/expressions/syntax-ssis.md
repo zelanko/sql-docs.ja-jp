@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
@@ -14,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 809ce46e388dcc96a407e70cf5eb33c4e5afa44f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189302"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351002"
 ---
 # <a name="syntax-ssis"></a>構文 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文は、C 言語および C# 言語が使用する構文と同様です。 式には、識別子 (列および変数)、リテラル、演算子、関数などの要素が含まれます。 このトピックでは、式エバリュエーターの構文がさまざまな式要素を適用する際の、一意の必要条件の概要について説明します。  
@@ -27,9 +26,9 @@ ms.locfileid: "48189302"
 > [!NOTE]  
 >  前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、式の評価結果の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型が DT_WSTR または DT_STR であるとき、結果の文字数が 4,000 文字に制限されていました。 この制限はなくなっています。  
   
- 特定の演算子と関数を使用するサンプル式については、「[演算子 (SSIS 式)](operators-ssis-expression.md)」および「[関数 (SSIS 式)](functions-ssis-expression.md)」の各演算子と関数のトピックを参照してください。  
+ 特定の演算子と関数を使用するサンプル式では、各演算子と関数のトピックに関するトピックを参照してください。[演算子&#40;Ssis&#41; ](operators-ssis-expression.md)と[関数&#40;SSIS 式&#41;](functions-ssis-expression.md)します。  
   
- 複数の演算子と関数、および識別子とリテラルを使用するサンプル式については、「[Integration Services 式の詳細の例](examples-of-advanced-integration-services-expressions.md)」を参照してください。  
+ 複数の演算子と関数、および識別子とリテラルを使用するサンプル式については、「 [Integration Services 式の詳細の例](examples-of-advanced-integration-services-expressions.md)」を参照してください。  
   
  プロパティの式で使用するサンプル式については、「 [パッケージでプロパティ式を使用する](use-property-expressions-in-packages.md)」を参照してください。  
   
@@ -81,8 +80,8 @@ ms.locfileid: "48189302"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://go.microsoft.com/fwlink/?LinkId=217683)」  
+-   pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=217683)」  
   
--   social.technet.microsoft.com の技術記事「 [SSIS 式の例](http://go.microsoft.com/fwlink/?LinkId=220761)」  
+-   social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
   

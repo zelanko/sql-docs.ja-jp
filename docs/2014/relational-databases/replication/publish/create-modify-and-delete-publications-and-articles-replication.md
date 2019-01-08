@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
@@ -14,12 +13,12 @@ ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df06bcf5a5f1d43dff50009166279e6b2658790e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3849273ee37db2780e53d28933ad7f1ffd89f056
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145432"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794434"
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>パブリケーションとアーティクルの作成、変更、および削除 (レプリケーション)
   ここでは、パブリケーションの作成とアーティクルの定義に関連する作業の手順について説明します。  
@@ -28,7 +27,7 @@ ms.locfileid: "48145432"
   
 -   [パブリケーションの作成](create-a-publication.md)  
   
--   [Define an Article](define-an-article.md)  
+-   [アーティクルの定義](define-an-article.md)  
   
 -   [パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48145432"
   
 -   [静的行フィルターの定義および変更](define-and-modify-a-static-row-filter.md)  
   
--   [マージ アーティクルのパラメーター化された行フィルターの定義および変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
+-   [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
 -   [パラメーター化された行フィルターの最適化](../merge/parameterized-filters-parameterized-row-filters.md)  
   

@@ -1,30 +1,31 @@
 ---
-title: クラウドでの SQL Server の概要 |Microsoft Docs
+title: (Linux) で、クラウドでの SQL Server の概要します。
+titleSuffix: SQL Server
 description: このクイック スタートでは、任意のクラウドでの Linux 上の SQL Server を実行する方法を示します。
-author: annashres
-ms.author: annashres
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 8c7131f8b4fb9f9b326e2596d53332b9e6bf9248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682980"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160540"
 ---
-# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>クイック スタート: クラウドで SQL Server を実行します。
+# <a name="quickstart-run-sql-server-in-the-cloud"></a>クイック スタート:クラウドでの SQL Server を実行します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このクイック スタートで SQL Server を Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または任意のクラウドでの Ubuntu にインストールされます。 Azure で Linux の SQL Server を実行する場合は、「[Azure Portal での Linux SQL Server 仮想マシンのプロビジョニング](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)」に移動してください。
 
-    > [!NOTE]
-    > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
+> [!NOTE]
+> 有料エディションの SQL Server を実行する場合は、ライセンス持ち込み (BYOL) する必要があります。
 
 ## <a name="amazon-web-services"></a>アマゾン ウェブ サービス
 1.  マーケットプレースから Linux AMI を、少なくとも 2 gb のメモリで作成します。 
@@ -64,4 +65,4 @@ ms.locfileid: "47682980"
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  リモート接続を構成します。 
     * [ファイアウォール規則](https://console.cloud.google.com/networking/firewalls) に移動します。
-    * SQL Server がリッスンするポートでトラフィックを許可する受信規則の追加 (既定の tcp: 1433)
+    * SQL Server がリッスンするポートでトラフィックを許可する受信規則の追加 (既定の tcp:1433)

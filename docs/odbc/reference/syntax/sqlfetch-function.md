@@ -20,18 +20,18 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1e4c4462aa10a2d99e50e71d7b2e86fa4d8555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825940"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213091"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLFetch**結果セットからデータの次の行セットをフェッチし、すべてのバインドされた列のデータを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,7 +39,7 @@ ms.locfileid: "47825940"
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -65,7 +65,7 @@ SQLRETURN SQLFetch(
 |08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
 |22001|文字列データで、右側が切り捨てられました|列に対して返される可変長のブックマークが切り捨てられました。|  
 |22002|インジケーター変数が必要ですが、指定されていません|NULL データのフェッチの列にある*StrLen_or_IndPtr*によって設定**SQLBindCol** (またはによって設定 SQL_DESC_INDICATOR_PTR **SQLSetDescField**または**SQLSetDescRec**) が null ポインター。|  
-|22003|数値が範囲外|数値として数値の値またはバインドされた列の 1 つまたは複数の文字列を取得する原因となる (ではなく小数部) 整数部分が切り捨てられる数値。<br /><br /> 詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d: データ型。|  
+|22003|数値が範囲外|数値として数値の値またはバインドされた列の 1 つまたは複数の文字列を取得する原因となる (ではなく小数部) 整数部分が切り捨てられる数値。<br /><br /> 詳細については、次を参照してください[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d:。データ型。|  
 |22007|無効な datetime 形式|結果セット内の文字の列は、日付、時刻、またはタイムスタンプ C 構造体にバインドされましたし、列の値が、それぞれ、無効な日付、時刻、またはタイムスタンプ。|  
 |22012|0 による除算|算術式の値がによって返される、その結果、除算 0。|  
 |22015|Interval フィールド オーバーフロー|真数型または interval SQL 型から C の間隔の種類への割り当てと、先頭のフィールドに有効桁数の損失が発生します。<br /><br /> C の間隔の種類にデータをフェッチするときに C の間隔の種類の SQL 型の値の表現はありませんでした。|  
@@ -93,12 +93,12 @@ SQLRETURN SQLFetch(
   
  場合、ODBC 3 *.x*アプリケーションが動作する ODBC 2 *.x*ドライバー、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLExtendedFetch**のODBC 2 *.x*をサポートするドライバー **SQLExtendedFetch**します。 場合、ODBC 2 *.x*ドライバーがサポートしていない**SQLExtendedFetch**、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLFetch** ODBC 2 *.x*ドライバーで、1 つの行のみをフェッチすることができます。  
   
- 詳細については、次を参照してください。[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
+ 詳細については、次を参照してください[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)で付録 g:。旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
 ## <a name="positioning-the-cursor"></a>カーソルを配置します。  
  結果セットが作成されると、カーソルは結果セットの開始前にします。 **SQLFetch**次の行セットをフェッチします。 呼び出すことと同じである**SQLFetchScroll**で*FetchOrientation* SQL_FETCH_NEXT に設定します。 カーソルの詳細については、次を参照してください。[カーソル](../../../odbc/reference/develop-app/cursors.md)と[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)します。  
   
- SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性は、行セット内の行の数を指定します。 によって、行セットをフェッチされている場合、 **SQLFetch** 、結果セットの末尾と重なる**SQLFetch**部分的な行セットを返します。 つまり、秒 + R – 1 L より大きい、S は、開始行フェッチされる行セット、R の行セットのサイズは、および L は、最後は、行の結果セットし最初 L – のみ場合 S + 1 行の行セットは有効です。 残りの行は空であり、sql_row_norow であっての状態を持っています。  
+ SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性は、行セット内の行の数を指定します。 によって、行セットをフェッチされている場合、 **SQLFetch** 、結果セットの末尾と重なる**SQLFetch**部分的な行セットを返します。 つまり、S + R - L より大きい、S は、開始行フェッチされる行セット、R の行セットのサイズは、あり L は、最後の 1 行の結果セットし、最初の左辺にのみ場合 S + 1 行の行セットは有効です。 残りの行は空であり、sql_row_norow であっての状態を持っています。  
   
  後**SQLFetch** 、現在の行が行セットの最初の行を返します。  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
 |開始する前に|1|  
-|*CurrRowsetStart* \< =  *LastResultRow – 複合カーソル*[1]|*CurrRowsetStart* + *複合カーソル*[2]|  
-|*CurrRowsetStart* > *LastResultRow – 複合カーソル*[1]|終了後|  
+|*CurrRowsetStart* \< =  *LastResultRow - 複合カーソル*[1]|*CurrRowsetStart* + *複合カーソル*[2]|  
+|*CurrRowsetStart* > *LastResultRow - 複合カーソル*[1]|終了後|  
 |終了後|終了後|  
   
  [1] のフェッチ、行セットのサイズが変更された場合、前回フェッチで使用されていた行セットのサイズになります。  

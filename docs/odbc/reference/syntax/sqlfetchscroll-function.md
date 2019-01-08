@@ -20,18 +20,18 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 146967ebc31d5e7d8176d37ee5b8b0b97b6c0674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769494"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540815"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLFetchScroll**結果セットからデータの指定した行セットをフェッチし、すべてのバインドされた列のデータを返します。 絶対または相対位置にまたはブックマークによる行セットを指定できます。  
   
  ドライバー マネージャーがマップには、この関数で odbc 2.x を使用する場合**SQLExtendedFetch**します。 詳細については、次を参照してください。[アプリケーションの旧バージョンと互換性のマッピング置換関数](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)します。  
@@ -96,7 +96,7 @@ SQLRETURN SQLFetchScroll(
 |08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
 |22001|文字列データで、右側が切り捨てられました|列に対して返される可変長のブックマークが切り捨てられました。|  
 |22002|インジケーター変数が必要ですが、指定されていません|NULL データのフェッチの列にある*StrLen_or_IndPtr*によって設定**SQLBindCol** (またはによって設定 SQL_DESC_INDICATOR_PTR **SQLSetDescField**または**SQLSetDescRec**) が null ポインター。|  
-|22003|数値が範囲外|(数値または文字列) として 1 つまたは複数のバインドされた列の数値の値を取得する原因となる (ではなく小数部) 整数部分が切り捨てられる数値。<br /><br /> 詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)で[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。|  
+|22003|数値が範囲外|(数値または文字列) として 1 つまたは複数のバインドされた列の数値の値を取得する原因となる (ではなく小数部) 整数部分が切り捨てられる数値。<br /><br /> 詳細については、次を参照してください[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)で[付録 d:。データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。|  
 |22007|無効な datetime 形式|結果セット内の文字の列は、日付、時刻、またはタイムスタンプ C 構造体にバインドされましたし、列の値が、それぞれ、無効な日付、時刻、またはタイムスタンプ。|  
 |22012|0 による除算|算術式の値がによって返される、その結果、除算 0。|  
 |22015|Interval フィールド オーバーフロー|真数型または interval SQL 型から C の間隔の種類への割り当てと、先頭のフィールドに有効桁数の損失が発生します。<br /><br /> C の間隔の種類にデータをフェッチするときに C の間隔の種類の SQL 型の値の表現はありませんでした。|  
@@ -122,7 +122,7 @@ SQLRETURN SQLFetchScroll(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **SQLFetchScroll**結果セットから指定した行セットを返します。 絶対または相対位置またはブックマークによる行セットを指定できます。 **SQLFetchScroll**結果セットが存在する間だけ呼び出すことができます: つまり、呼び出しの後に結果セットを作成して、結果セット全体が閉じているカーソルの前にします。 すべての列がバインドされている場合は、これらの列にデータを返します。 アプリケーションには、行の状態配列をフェッチされた行の数を返すバッファーへのポインターが指定した場合**SQLFetchScroll**もこの情報を返します。 呼び出す**SQLFetchScroll**への呼び出しに組み込むことができます**SQLFetch**への呼び出しを混在させることはできませんが、 **SQLExtendedFetch**します。  
+ **SQLFetchScroll**結果セットから指定した行セットを返します。 絶対または相対位置またはブックマークによる行セットを指定できます。 **SQLFetchScroll**呼び出すだけで結果セットが存在します - 中には、結果セットを作成する呼び出しの後に、カーソルの前に結果セット全体が閉じられることができます。 すべての列がバインドされている場合は、これらの列にデータを返します。 アプリケーションには、行の状態配列をフェッチされた行の数を返すバッファーへのポインターが指定した場合**SQLFetchScroll**もこの情報を返します。 呼び出す**SQLFetchScroll**への呼び出しに組み込むことができます**SQLFetch**への呼び出しを混在させることはできませんが、 **SQLExtendedFetch**します。  
   
  詳細については、次を参照してください。[ブロック カーソルを使用して](../../../odbc/reference/develop-app/using-block-cursors.md)と[スクロール可能なカーソルを使用して](../../../odbc/reference/develop-app/using-scrollable-cursors.md)します。  
   
@@ -141,7 +141,7 @@ SQLRETURN SQLFetchScroll(
   
  ドライバーは、フェッチの方向すべて; をサポートする必要はありません。アプリケーションを呼び出す**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または (カーソルの種類) に応じて SQL_STATIC_CURSOR_ATTRIBUTES1 の情報の種類でどのフェッチを判断するには向きは、ドライバーでサポートされます。 アプリケーションは、これらの情報の種類で SQL_CA1_NEXT、SQL_CA1_RELATIVE、SQL_CA1_ABSOLUTE、および WQL_CA1_BOOKMARK ビットマスクを見てください。 さらに、カーソルは順方向専用と FetchOrientation SQL_FETCH_NEXT でない場合は、 **SQLFetchScroll** SQLSTATE HY106 を返します (フェッチの範囲外の型)。  
   
- SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性は、行セット内の行の数を指定します。 によって、行セットをフェッチされている場合、 **SQLFetchScroll** 、結果セットの末尾と重なる**SQLFetchScroll**部分的な行セットを返します。 つまり、秒 + R – 1 L より大きい、S は、開始行フェッチされる行セット、R の行セットのサイズは、および L は、最後は、行の結果セットし最初 L – のみ場合 S + 1 行の行セットは有効です。 残りの行は空であり、sql_row_norow であっての状態を持っています。  
+ SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性は、行セット内の行の数を指定します。 によって、行セットをフェッチされている場合、 **SQLFetchScroll** 、結果セットの末尾と重なる**SQLFetchScroll**部分的な行セットを返します。 つまり、S + R - L より大きい、S は、開始行フェッチされる行セット、R の行セットのサイズは、あり L は、最後の 1 行の結果セットし、最初の左辺にのみ場合 S + 1 行の行セットは有効です。 残りの行は空であり、sql_row_norow であっての状態を持っています。  
   
  後**SQLFetchScroll** 、現在の行が行セットの最初の行を返します。  
   
@@ -178,9 +178,9 @@ SQLRETURN SQLFetchScroll(
 |*開始する前に*|*開始する前に*|  
 |*CurrRowsetStart = 1*|*開始する前に*|  
 |*1 < CurrRowsetStart < = 複合カーソル* <sup>[2]。</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > 複合カーソル* <sup>[2]</sup>|*CurrRowsetStart – 複合カーソル* <sup>[2]</sup>|  
+|*CurrRowsetStart > 複合カーソル* <sup>[2]</sup>|*CurrRowsetStart - 複合カーソル* <sup>[2]</sup>|  
 |*終了と LastResultRow 後 < 複合カーソル* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*終了と LastResultRow 後 > = 複合カーソル* <sup>[2]</sup>|*複合カーソルは + 1 – LastResultRow* <sup>[2]。</sup>|  
+|*終了と LastResultRow 後 > = 複合カーソル* <sup>[2]</sup>|*複合カーソルは + 1 - LastResultRow* <sup>[2]。</sup>|  
   
  [1] **SQLFetchScroll** SQLSTATE 01S06 を返します (結果セットには、最初の行セットが返される前に、フェッチしようとしています) と、SQL_SUCCESS_WITH_INFO。  
   
@@ -236,7 +236,7 @@ SQLRETURN SQLFetchScroll(
   
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
-|*複合カーソル* <sup>[1]</sup> < LastResultRow を =|*複合カーソルは + 1 – LastResultRow* <sup>[1]</sup>|  
+|*複合カーソル* <sup>[1]</sup> < LastResultRow を =|*複合カーソルは + 1 - LastResultRow* <sup>[1]</sup>|  
 |*複合カーソル* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] 行をフェッチする前に呼び出した後、行セット サイズが変わっている場合は、新しい行セット サイズになります。  
@@ -271,7 +271,7 @@ SQLSetPos(hstmt, 3, SQL_REFRESH, SQL_LOCK_NO_CHANGE);
 SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);  
 ```  
   
- ときに**SQLFetchScroll**を現在の行セットに対する相対位置を持つ新しい行セットを返します-SQL_FETCH_NEXT、SQL_FETCH_PRIOR、または SQL_FETCH_RELATIVE FetchOrientation は、これは、現在の行セットへの変更は含まれませんときに、新しい行セットの開始位置を計算します。 ただし、検出することは場合は、現在の行セットの外部で変更を含めることは。 さらに、 **SQLFetchScroll**を現在の行セットに依存しない位置を持つ新しい行セットを返します: SQL_FETCH_FIRST、SQL_FETCH_LAST、SQL_FETCH_ABSOLUTE、または SQL_FETCH_BOOKMARK FetchOrientation は、つまり、:、現在の行セット内にある場合でも検出では、すべての変更が含まれています。  
+ ときに**SQLFetchScroll**を現在の行セットの相対位置を持つ新しい行セットを返す、FetchOrientation は SQL_FETCH_NEXT、SQL_FETCH_PRIOR、または SQL_FETCH_RELATIVE - 現在の行セットへの変更は含まれませんときに、新しい行セットの開始位置を計算します。 ただし、検出することは場合は、現在の行セットの外部で変更を含めることは。 さらに、 **SQLFetchScroll** - 現在の行セットの独立した位置が新しい行セットを返します SQL_FETCH_FIRST、SQL_FETCH_LAST、SQL_FETCH_ABSOLUTE、または SQL_FETCH_BOOKMARK - これは FetchOrientation があること現在の行セット内にある場合でも検出では、すべての変更が含まれています。  
   
  部分的な行セットは、最後の有効な行で終了すると見なされますを新しく追加された行が現在の行セットの内外でかどうかを判断するとき行の状態は sql_row_norow であって、最終行。 たとえば、カーソルが新しく追加された行を検出できる、現在の行セットは、部分的な行セット、アプリケーションは、新しい行を追加およびカーソルが結果セットの末尾にこれらの行を追加します。 アプリケーションを呼び出す場合**SQLFetchScroll** FetchOrientation SQL_FETCH_NEXT に設定と**SQLFetchScroll**新しく追加された最初の行で始まる行セットを返します。  
   
@@ -327,7 +327,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  各グループの状態レコードの個別の行に適用される、SQLExtendedFetch によって返される最初の状態レコードは SQLSTATE 01S01 を含める必要があります (行のエラー)。**SQLFetchScroll**この SQLSTATE は返されません。 SQLExtendedFetch を返す追加 SQLSTATEs できない場合は、この SQLSTATE も返す必要があります。  
   
 ## <a name="sqlfetchscroll-and-optimistic-concurrency"></a>SQLFetchScroll とオプティミスティック同時実行制御  
- カーソルはオプティミスティック同時実行制御を使用している場合、つまり SQL_CONCUR_ROWVER、SQL_CONCUR_VALUES、またはの値には、ステートメント属性 SQL_ATTR_CONCURRENCY- **SQLFetchScroll**データによって使用されているオプティミスティック同時実行制御値を更新行が変更されたかどうかを検出するソース。 これは、ようなときに**SQLFetchScroll**など、現在の行セットは変わりませんが、新しい行セットをフェッチします。 (を使用して呼び出した FetchOrientation SQL_FETCH_RELATIVE FetchOffset を 0 に設定を設定します。)  
+ つまり、また、ステートメント属性 SQL_ATTR_CONCURRENCY に SQL_CONCUR_ROWVER、SQL_CONCUR_VALUES の値が、カーソルはオプティミスティック同時実行制御を使用して場合**SQLFetchScroll**データによって使用されているオプティミスティック同時実行制御値を更新行が変更されたかどうかを検出するソース。 これは、ようなときに**SQLFetchScroll**など、現在の行セットは変わりませんが、新しい行セットをフェッチします。 (を使用して呼び出した FetchOrientation SQL_FETCH_RELATIVE FetchOffset を 0 に設定を設定します。)  
   
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll および ODBC 2.x のドライバー  
  アプリケーションを呼び出すと**SQLFetchScroll** ODBC 2.x ドライバー、ドライバー マネージャーは、マップには、この呼び出し**SQLExtendedFetch**します。 次の引数の値を渡す**SQLExtendedFetch**します。  
@@ -340,7 +340,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |RowCountPtr|SQL_ATTR_ROWS_FETCHED_PTR ステートメントの属性で指定されたアドレス。|  
 |RowStatusArray|SQL_ATTR_ROW_STATUS_PTR ステートメントの属性で指定されたアドレス。|  
   
- 詳細については、次を参照してください。[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
+ 詳細については、次を参照してください[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)で付録 g:。旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
 ## <a name="descriptors-and-sqlfetchscroll"></a>記述子および SQLFetchScroll  
  **SQLFetchScroll**記述子のと同じ方法で対話**SQLFetch**します。 詳細については、"記述子と SQLFetchScroll"セクションを参照してください。 [SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)します。  

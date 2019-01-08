@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da828154eff0b5cfc8a5cfc8ef5deba02e24579a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224662"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816894"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>マージ アーティクルのビジネス ロジック ハンドラーの実装
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でレプリケーション プログラミングまたはレプリケーション管理オブジェクト (RMO) を使用して、マージ アーティクルにビジネス ロジック ハンドラーを実装する方法について説明します。  
@@ -183,7 +182,7 @@ ms.locfileid: "48224662"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - ビジネス ロジック ハンドラーへのアクセス時に使用する表示名です。  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> -の値`true`します。  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - `true` を指定します。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>ビジネス ロジック ハンドラーを配置するには  
   
@@ -215,7 +214,7 @@ ms.locfileid: "48224662"
   
 4.  手順 1. で作成した接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに設定します。  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 3. でアーティクルのプロパティが正しく定義されていないか、アーティクルが存在しません。 詳しくは、「 [View and Modify Article Properties](publish/view-and-modify-article-properties.md)」をご覧ください。  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから `false` が返された場合、手順 3. で指定したアーティクルのプロパティが正しく定義されていないか、アーティクルが存在していません。 詳しくは、「 [View and Modify Article Properties](publish/view-and-modify-article-properties.md)」をご覧ください。  
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>にビジネス ロジック ハンドラーの表示名を設定します。 これは、ビジネス ロジック ハンドラーの登録時に指定した <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> プロパティの値になります。  
   

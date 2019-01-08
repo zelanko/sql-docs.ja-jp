@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba121e26858aaff8a34e07ecad4aa5a465116cd4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 72b416a0ad6b28813825c1af220c5a7bf1bd5a7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662862"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503910"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) インターフェイス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを実行している 1 つまたは複数のコンピューター上のデータにアクセスする必要があるコンシューマー インターフェイスを公開する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、OLE DB バージョン 2.0 準拠のプロバイダーです。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを実行している 1 つまたは複数のコンピューター上のデータにアクセスする必要があるコンシューマー インターフェイスを公開する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、OLE DB バージョン 2.0 準拠のプロバイダー。  
   
  これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのプログラミング リファレンスは文書化されてすべての OLE DB インターフェイスと、メソッドを使用する場合は、プロバイダー固有の動作を発生を行うインターフェイスやメソッドのみ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DBプロバイダー。  
   

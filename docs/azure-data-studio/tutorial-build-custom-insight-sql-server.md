@@ -1,7 +1,8 @@
 ---
-title: 'チュートリアル: Azure Data Studio でのカスタム インサイト ウィジェットを作成する |Microsoft Docs'
+title: チュートリアル:カスタム インサイト ウィジェットをビルドします。
+titleSuffix: Azure Data Studio
 description: このチュートリアルでは、カスタムの洞察のウィジェットをビルドして Azure Data Studio でのデータベースとサーバーのダッシュ ボードに追加する方法について説明します。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356343"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030036"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>チュートリアル: カスタム インサイト ウィジェットを作成します。
+# <a name="tutorial-build-a-custom-insight-widget"></a>チュートリアル:カスタム インサイト ウィジェットをビルドします。
 
 このチュートリアルでは、独自の分析クエリを使用して、カスタムの洞察のウィジェットを構築する方法を示します。
 

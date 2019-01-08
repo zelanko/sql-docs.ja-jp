@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], command prompt parameters
@@ -13,12 +12,12 @@ ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efac904be2e062cc2c3ebdbbd32a09d57294de4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155072"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758344"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する (SQL Server Management Studio)
   レプリケーション エージェントは、コマンド ライン パラメーターを使用できる実行可能ファイルです。 既定では、エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブ ステップで実行されるため、これらのパラメーターは **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスを使用して表示および変更できます。 このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニター内の **[エージェント]** タブからアクセスできます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor (レプリケーション モニターの開始)](../monitor/start-the-replication-monitor.md)」を参照してください。  
@@ -26,7 +25,7 @@ ms.locfileid: "48155072"
 > [!NOTE]  
 >  エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。  
   
- パラメーターは直接変更することもできますが、エージェント プロファイルを使用して変更する方が一般的です。 詳しくは、「 [レプリケーション エージェント プロファイル](replication-agent-profiles.md)」をご覧ください。  
+ パラメーターは直接変更することもできますが、エージェント プロファイルを使用して変更する方が一般的です。 詳細については、「 [Replication Agent Profiles](replication-agent-profiles.md)」を参照してください。  
   
  **[ジョブ]** フォルダーからエージェント ジョブにアクセスする場合は、次の表を使用して、各エージェントで使用できるエージェント ジョブ名とパラメーターを決定してください。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "48155072"
   
 6.  両方のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](replication-agent-administration.md)   
  [レプリケーション エージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](replication-agents-overview.md)  

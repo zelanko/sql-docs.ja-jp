@@ -16,12 +16,12 @@ ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10e0b4a5206116d90340633b8904e78352f77882
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350336"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214560"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 拡張機能の例
 このプログラムは、値のフィールドから取得および C と C++ の変数に変換する方法を示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "51350336"
 IADORecordBinding   *picRs = NULL;  
 ...  
 TESTHR(pRs->QueryInterface(  
-          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
+          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
 ...  
 if (picRs) picRs->Release();  
 ```  

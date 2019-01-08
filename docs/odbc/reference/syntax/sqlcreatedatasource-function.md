@@ -20,18 +20,18 @@ ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e06c511debbcac9741e178ebfb5c1a8eae0a330
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba02c28f3243b623695e3e087490ef3f73c60385
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620410"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204341"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource 関数
 **準拠**  
- バージョンが導入されています。 ODBC 2.0  
+ バージョンが導入されました。ODBC 2.0  
   
- **概要**  
+ **まとめ**  
  **SQLCreateDataSource**ユーザーがデータ ソースを追加する ダイアログ ボックスが表示されます。  
   
 ## <a name="syntax"></a>構文  

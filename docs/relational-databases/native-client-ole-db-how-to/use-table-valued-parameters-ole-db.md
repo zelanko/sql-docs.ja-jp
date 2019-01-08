@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25650af3e66e568815a466c1e0bf9b98fe6b5d39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d17f7b1f4d2f0d7674e59eb53948475ccde31ab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702240"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204861"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>テーブル値パラメーターの使用 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47702240"
  テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)します。  
   
 ## <a name="example"></a>例  
- 最初の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するデータベースを作成します。  
+ 最初の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用されるデータベースを作成します。  
   
  2 つ目のコード リストを stdafx.h という名前のファイルに含めます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47702240"
   
  ole32.lib と oleaut32.lib を使用して 4 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
- 5 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用したデータベースを削除します。  
+ 5 番目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用されるデータベースを作成します。  
   
 ```  
 create database testdb  

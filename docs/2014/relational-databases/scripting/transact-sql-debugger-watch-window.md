@@ -7,23 +7,21 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.watch
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba5a2b12d4f80f497491fef208d5eb0f29f1104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01caaf26257c06aae8cb7668693fd3ff6b8b5135
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213492"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328752"
 ---
 # <a name="watch-window"></a>[ウォッチ] ウィンドウ
-  **[ウォッチ]** ウィンドウには、選択した式に関する情報が表示されます。 最大で 4 つの [ウォッチ] ウィンドウ ( **[ウォッチ 1]**、 **[ウォッチ 2]、[ウォッチ 3]**、および **[ウォッチ 4]**) を表示できます。 式は、 **[呼び出し履歴]** ウィンドウで選択された現在の呼び出し履歴フレームのスコープ内で評価されます。 変数と式を確認するには、デバッグ モードである必要があります。  
+  **[ウォッチ]** ウィンドウには、選択した式に関する情報が表示されます。 ウォッチ ウィンドウを最大 4 つがあります。**ウォッチ 1**、**ウォッチ 2、3 を見る**、および**4 を見る**します。 式は、 **[呼び出し履歴]** ウィンドウで選択された現在の呼び出し履歴フレームのスコープ内で評価されます。 変数と式を確認するには、デバッグ モードである必要があります。  
   
 ## <a name="task-list"></a>タスク一覧  
  **[ウォッチ] ウィンドウにアクセスするには**  
@@ -46,7 +44,7 @@ ms.locfileid: "48213492"
   
 -   1 つまたは複数の変数、パラメーター、またはシステム関数に演算子を適用して作成された式 (@IntegerCounter + 1、FirstName + LastName など)。  
   
--   単一の値を返す Transact-SQL ステートメント (SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1 など)。  
+-   など、単一の値を返す TRANSACT-SQL ステートメント:SELECT CharacterCol FROM MyTable 場所 PrimaryKey = 1。  
   
  **[値]**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] [名前] **で指定した式が**デバッガーによって評価された後に返される値が表示されます。  
@@ -65,5 +63,3 @@ ms.locfileid: "48213492"
  [[呼び出し履歴] ウィンドウ](transact-sql-debugger-call-stack-window.md)   
  [[クイック ウォッチ] ダイアログ ボックス](transact-sql-debugger-quickwatch-dialog-box.md)   
  [式 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

@@ -1,7 +1,8 @@
 ---
-title: 'チュートリアル: Azure Data Studio TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成する |Microsoft Docs'
-description: このチュートリアルでは、Azure Data Studio で T-SQL を使用して簡略化する主な機能について説明します。
-ms.custom: tools|sos
+title: チュートリアル:TRANSACT-SQL エディターを使用して、データベース オブジェクトを作成するには
+titleSuffix: Azure Data Studio
+description: このチュートリアルでは、T-SQL での作業を簡略化する Azure Data Studio の主な機能について説明します。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2a517b1efb6a86d70bd05f9a1418792c0b61098
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355933"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030456"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル: TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成するには - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル:TRANSACT-SQL エディターを使用して、データベースのオブジェクトを作成するには [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 クエリやストアドプロシージャ、スクリプトなどを作成し、実行することは、データベース担当者の中核となるタスクです。 このチュートリアルでは、T-SQL エディターの主要な機能を使用してデータベースオブジェクトを作成する方法を説明します。
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
@@ -15,12 +14,12 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46eb3d71eb1c8ec7793cc2be798ef4e774dd9595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194742"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786654"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle パブリッシャーのデータ型マッピング
   Oracle のデータ型と [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型は、正確に一致するとは限りません。 Oracle のテーブルをパブリッシュするときは、可能な限り、一致するデータ型が自動的に選択されます。 単一のデータ型マッピングが明らかでない場合は、代替のデータ型マッピングが提供されます。 代替マッピングの選択方法の詳細については、以下の「代替データ型マッピングの指定」を参照してください。  
@@ -50,7 +49,7 @@ ms.locfileid: "48194742"
 |RAW([1-2000])|VARBINARY([1-2000])|いいえ|  
 |real|[FLOAT]|いいえ|  
 |ROWID|CHAR(18)|いいえ|  
-|TIMESTAMP|DATETIME|はい|  
+|timestamp|DATETIME|はい|  
 |TIMESTAMP(0-7)|DATETIME|はい|  
 |TIMESTAMP(8-9)|DATETIME|はい|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|はい|  
@@ -82,7 +81,7 @@ ms.locfileid: "48194742"
 ### <a name="float-and-number-types"></a>FLOAT 型と NUMBER 型  
  FLOAT データ型と NUMBER データ型のマッピング時に指定される小数点以下桁数および有効桁数は、列に対して Oracle データベースのデータ型を使って指定された小数点以下桁数および有効桁数で決まります。 precision は、数値全体の桁数です。 scale は、数値の中で小数点より右側の桁数です。 たとえば、123.45 という値の場合、有効桁数は 5 で、小数点以下桁数は 2 になります。  
   
- Oracle では、NUMBER(4,5) のように、有効桁数よりも大きな小数点以下桁数の数値を定義できます。しかし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、有効桁数を小数点以下桁数と同じか、それ以上にする必要があります。 データの切り捨てが発生しないようにするため、Oracle パブリッシャーで小数点以下桁数が有効桁数よりも大きい場合は、データ型をマップするときに、有効桁数が小数点以下桁数と同じ値に設定されます。つまり、NUMBER(4,5) は NUMERIC(5,5) としてマップされます。  
+ Oracle では、NUMBER(4,5) のように、有効桁数よりも大きな小数点以下桁数の数値を定義できます。しかし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、有効桁数を小数点以下桁数と同じか、それ以上にする必要があります。 小数点以下桁数がを Oracle パブリッシャーの有効桁数より大きい場合、データの切り捨てがないようには、データ型がマップされている場合に有効桁数が小数点以下桁数と等しくは設定します。NUMBER(4,5) は、NUMERIC(5,5) としてマップされます。  
   
 > [!NOTE]  
 >  NUMBER の小数点以下桁数および有効桁数を指定しない場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値には、最大の小数点以下桁数 (8) および有効桁数 (38) が使用されます。 データをレプリケートするときは、使用領域とパフォーマンスを向上させるために、Oracle で特定の小数点以下桁数と有効桁数を設定することをお勧めします。  

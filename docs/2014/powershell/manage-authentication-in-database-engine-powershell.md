@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61dbea86eabc0395b2f314f170aa97c5067880fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0992e3a956a2b498d92186fa91c0ed4fbddf6102
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163564"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778524"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>データベース エンジン PowerShell での認証の管理
-  既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスへの接続に Windows 認証を使用します。 SQL Server 認証を使用するには、PowerShell 仮想ドライブを定義するか、または指定することによって、`–Username`と`–Password`パラメーターを`Invoke-Sqlcmd`します。  
+  既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスへの接続に Windows 認証を使用します。 SQL Server 認証を使用するには、PowerShell 仮想ドライブを定義するか、`-Username` の `-Password` および `Invoke-Sqlcmd` パラメーターを指定します。  
   
-1.  **作業を開始する準備:**  [アクセス許可](#Permissions)  
+1.  **作業を開始する準備:**[アクセス許可](#Permissions)  
   
-2.  **認証を設定する方法:**  [仮想ドライブ](#SQLAuthVirtDrv)、 [–Password](#SQLAuthInvSqlCmd)  
+2.  **認証を設定するを使用します。**[仮想ドライブ](#SQLAuthVirtDrv)、 [Invoke-sqlcmd](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスで実行できるすべての操作は、そのインスタンスへの接続に使用された認証資格情報に付与されている権限によって制御されます。 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーとコマンドレットは、それが実行されている Windows アカウントを使用して、 [!INCLUDE[ssDE](../includes/ssde-md.md)]への Windows 認証接続を行います。  
@@ -41,7 +40,7 @@ ms.locfileid: "48163564"
   
     3.  `new-object` を使用して、資格情報オブジェクトを作成する。  
   
-    4.  使用して`new-psdrive`に指定された資格情報で仮想ドライブを作成します。  
+    4.  `new-psdrive` を使用して、指定された資格情報で仮想ドライブを作成する。  
   
 2.  関数を呼び出して、指定された資格情報で仮想ドライブを作成します。  
   
@@ -71,7 +70,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> Invoke-Sqlcmd を使用する SQL Server 認証  
  **SQL Server 認証で Invoke-Sqlcmd を使用するには**  
   
-1.  使用して、`–Username`ログイン ID を指定するパラメーター、および`–Password`関連付けられているパスワードを指定するパラメーター。  
+1.  `-Username` パラメーターでログイン ID を指定し、`-Password` パラメーターで関連付けられているパスワードを指定します。  
   
 ### <a name="example-invoke-sqlcmd"></a>例 (Invoke-Sqlcmd)  
  この例では、read-host コマンドレットを使用してユーザーにパスワードの入力を求め、SQL Server 認証を使用して接続します。  
@@ -80,12 +79,12 @@ cd SQLAuth
 ## Prompt the user for their password.  
 $pwd = read-host -AsSecureString -Prompt "Password"  
   
-Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
+Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell](sql-server-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [Invoke-Sqlcmd コマンドレット](../database-engine/invoke-sqlcmd-cmdlet.md)  
   
   

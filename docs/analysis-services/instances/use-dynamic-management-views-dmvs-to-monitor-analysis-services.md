@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906402"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984103"
 ---
 # <a name="dynamic-management-views-dmvs"></a>動的管理ビュー (DMV) 
 
@@ -93,15 +93,15 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-DMV が指定された行セットは利用できない場合、サーバーがエラーを返します:`The <schemarowset> request type was not recognized by the server.`他のすべてのエラーは、構文を使用して問題を示します。  
+DMV が指定された行セットは利用できない場合、サーバーには、エラーが返されます。`The <schemarowset> request type was not recognized by the server.` その他のすべてのエラーは、構文を使用して問題を示します。  
 
 2 つの SQL Server Analysis Services プロトコルでは、スキーマ行セットがについて説明します。   
 
-[[MS SSAS T]: SQL Server Analysis Services 表形式のプロトコル](https://msdn.microsoft.com/library/mt719260)-1200 以降の互換性レベル表形式モデルのスキーマ行セットについて説明します。
+[[MS-SSAS-T]:SQL Server Analysis Services 表形式のプロトコル](https://msdn.microsoft.com/library/mt719260)-1200 以降の互換性レベル表形式モデルのスキーマ行セットについて説明します。
 
-[ミリ秒で SSAS: SQL Server Analysis Services プロトコル](https://msdn.microsoft.com/library/ee320606)-多次元モデルと、互換性レベル 1100 と 1103 の表形式モデルのスキーマ行セットについて説明します。
+[MS-SSAS:SQL Server Analysis Services プロトコル](https://msdn.microsoft.com/library/ee320606)-多次元モデルと、互換性レベル 1100 と 1103 の表形式モデルのスキーマ行セットについて説明します。
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>行セットで、[MS SSAS--t] 説明: SQL Server Analysis Services 表形式のプロトコル
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>[MS SSAS--t] で説明されている行セット。SQL Server Analysis Services 表形式のプロトコル
 
 |[行セット]  |説明  |
 |---------|---------|
@@ -134,7 +134,7 @@ DMV が指定された行セットは利用できない場合、サーバーが�
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   モデル内のテーブル オブジェクトについてを説明します。      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|各列内のバリエーション オブジェクトに関する情報を提供します。|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>[MS SSAS] で説明されている行セット: SQL Server Analysis Services のプロトコル
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>[MS SSAS] で説明されている行セット。SQL Server Analysis Services のプロトコル
 
 |[行セット]|説明|  
 |------------|-----------------|  
@@ -172,7 +172,7 @@ DMV が指定された行セットは利用できない場合、サーバーが�
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|インメモリ テーブルでのデータを格納するために使用される列セグメントに関する情報を返します。|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|メモリ内のテーブルの列を表すために使用する列についての情報が含まれています。|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|サーバーに使用可能なメモリ内テーブルに関する統計情報を返します。|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|DISCOVER_TRACE_COLUMNS スキーマ行セットが含まれています。|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|DISCOVER_TRACE_EVENT_CATEGORIES スキーマ行セットが含まれています。|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|DISCOVER_TRACES スキーマ行セットが含まれています。|  

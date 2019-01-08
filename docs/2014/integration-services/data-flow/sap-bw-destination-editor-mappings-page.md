@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b0bb058db269dd052410b9326eeec10de5aa7d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b1175d43e0c4afcfb1b8d166f6ab7854d8c7c10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052398"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773102"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>[SAP BW 変換先エディター] ([マッピング] ページ)
   **[SAP BW 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -78,7 +77,7 @@ ms.locfileid: "48052398"
  マップされているかどうかにかかわらず、使用できる変換先列を表示します。  
   
 ## <a name="see-also"></a>参照  
- [SAP BW 変換先エディター&#40;接続マネージャー ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW 変換先エディター &#40;[エラー出力] ページ&#41;](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  

@@ -12,12 +12,12 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1c638a220aa423f9e30c1ef0fb746dd56a77d2a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798130"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411079"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>サンプルのコンソール スクリプト ファイルの操作 (SybaseToSQL)
 いくつかのサンプル ファイルは、ユーザーの参照と使用状況の製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -84,7 +84,7 @@ ms.locfileid: "47798130"
   
     -   `source-schema:` 変換に必要となる、ソース データベースを指定します。  
   
-    -   `sql-server-schema`: に移行するのには、ターゲット データベースを指定します。  
+    -   `sql-server-schema`:ターゲット データベースへの移行を指定します  
   
     **コマンド名**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47798130"
   
     **属性**  
   
-    `object-name`: 指定した転送元データベース]、[オブジェクト名を変換する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`  
+    `object-name`:ソース データベースを指定/オブジェクト名を変換する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`  
   
     **コマンド名**  
   

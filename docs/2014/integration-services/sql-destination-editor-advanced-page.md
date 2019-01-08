@@ -15,12 +15,12 @@ ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a251b8599ba194a151790c2a781e49c643b00048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a70bcc9e853908022147ef02e9d2019179c90875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089032"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545488"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>[SQL 変換先エディター] ([詳細設定] ページ)
   **[SQL 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、詳細な一括挿入オプションを指定できます。  
@@ -29,19 +29,19 @@ ms.locfileid: "48089032"
   
 ## <a name="options"></a>および  
  **[ID を保持する]**  
- タスクが値を ID 列に挿入するかどうかを指定します。 このプロパティの既定値は`False`します。  
+ タスクが値を ID 列に挿入するかどうかを指定します。 このプロパティの既定値は `False` です。  
   
  **[NULL を保持する]**  
- タスクが NULL 値を保持するかどうかを指定します。 このプロパティの既定値は`False`します。  
+ タスクが NULL 値を保持するかどうかを指定します。 このプロパティの既定値は `False` です。  
   
  **[テーブル ロック]**  
- データが読み込まれるときにテーブルをロックするかどうかを指定します。 このプロパティの既定値は`True`します。  
+ データが読み込まれるときにテーブルをロックするかどうかを指定します。 このプロパティの既定値は `True` です。  
   
  **CHECK 制約**  
- タスクが制約をチェックするかどうかを指定します。 このプロパティの既定値は`True`します。  
+ タスクが制約をチェックするかどうかを指定します。 このプロパティの既定値は `True` です。  
   
  **[トリガーを起動する]**  
- テーブルにおける一括挿入でトリガーを起動するかどうかを指定します。 このプロパティの既定値は`False`します。  
+ テーブルにおける一括挿入でトリガーを起動するかどうかを指定します。 このプロパティの既定値は `False` です。  
   
  **[先頭行]**  
  先頭行が挿入されるように指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
@@ -69,8 +69,8 @@ ms.locfileid: "48089032"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL 変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [SQL 変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [[SQL 変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [[SQL 変換先エディター] &#40;[マッピング] ページ&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [SQL Server 変換先を使用してデータの一括読み込みを行う](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

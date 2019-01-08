@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -19,12 +19,12 @@ ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a2f61a0d71c1fe54c7b66fab375681a97ae7f64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103484"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757844"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>結果ペインのデータの操作 (Visual Database Tools)
   クエリまたはビューを実行すると、その結果が結果ペインに表示されます。 この結果に対して操作を行うことができます。 たとえば、行の追加や削除、データの入力や変更ができるだけでなく、多数の結果セット間を簡単に移動できます。  

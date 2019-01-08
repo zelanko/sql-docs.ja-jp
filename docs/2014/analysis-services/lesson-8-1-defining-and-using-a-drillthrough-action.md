@@ -11,12 +11,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13738a9a4e533ac8a9882724aa1b9c9f12e3048f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 606fe679f4cc58a627b2d2978b52d9865da741c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545312"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>ドリルスルー アクションの定義と使用
   ファクト ディメンションによってファクト データを多次元化する場合、必要なデータのみが返されるようにフィルターを設定しないとクエリのパフォーマンスが低下する可能性があります。 これを回避するために、返される合計行数を制限するドリルスルー アクションを定義できます。 これにより、クエリのパフォーマンスが大幅に向上します。  
@@ -55,7 +55,7 @@ ms.locfileid: "48090682"
   
 8.  **最大行数は**ボックスに「`10`します。  
   
-9. **キャプション**ボックスに「`Drillthrough to Order Details…`します。  
+9. **キャプション**ボックスに「`Drillthrough to Order Details...`します。  
   
      これらの設定は、返される行数を制限し、クライアント アプリケーションのメニューに表示されるキャプションを指定します。 次の図は、 **[追加のプロパティ]** ボックスでの設定を示しています。  
   
@@ -144,12 +144,12 @@ ms.locfileid: "48090682"
      ![注文が Adam Powell に発送](../../2014/tutorials/media/l8-action8.gif "注文が Adam Powell に発送")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 9 : パースペクティブと翻訳の定義](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [レッスン 9:パースペクティブと翻訳の定義](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>参照  
  [アクション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [多次元モデルのアクション](multidimensional-models/actions-in-multidimensional-models.md)   
- [ディメンションのリレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [ファクト リレーションシップの定義](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
  [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

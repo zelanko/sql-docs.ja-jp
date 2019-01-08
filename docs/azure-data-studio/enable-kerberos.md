@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio に接続するときに、Active Directory 認証 (Kerberos) を使用して |Microsoft Docs
+title: Active Directory 認証 (Kerberos) を使用します。
+titleSuffix: Azure Data Studio
 description: Azure Data Studio の Active Directory 認証を使用する Kerberos を有効にする方法について説明します
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: d773810ebaa544e40af99de8b5559ac44c1f5d5f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098918"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030216"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>接続[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows 認証に Kerberos を使用して、SQL server 
 
@@ -42,7 +43,7 @@ Kerberos KDC (キー配布センター) の構成値を求めます。 Active Di
 開始`cmd.exe`実行`nltest`します。
 
 ```
-nltest /dsgetdc:DOMAIN.COMPANY.COM (where “DOMAIN.COMPANY.COM” maps to your domain’s name)
+nltest /dsgetdc:DOMAIN.COMPANY.COM (where "DOMAIN.COMPANY.COM" maps to your domain's name)
 
 Sample Output
 DC: \\dc-33.domain.company.com
@@ -125,7 +126,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### <a name="macos"></a>macOS
 
-- Active Directory ドメイン コント ローラーを macOS を参加させる[以下の手順に従って](https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US)します。
+- 次の手順に従って、macOS を Active Directory ドメイン コント ローラーに参加します。
 
 
 

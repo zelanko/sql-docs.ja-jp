@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 357e3030657933c20715cb334ec66026b3a97adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e3e842eab648e865c7db4e64a522e08d666dccb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154445"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350834"
 ---
 # <a name="validating-a-data-flow-component"></a>データ フロー コンポーネントの検証
   基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> メソッドを使用すると、正しく構成されていないコンポーネントが実行されることを防止できます。 このメソッドを使用すると、コンポーネントが想定どおりの数の入出力オブジェクトを持ち、カスタム プロパティの値が許容範囲内で、接続が必要な場合はそれが指定されていることを検証できます。 また、入出力コレクションの各列のデータ型が正しいこと、各列の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> がコンポーネント用に正しく設定されていることも検証できます。 この基本クラスを実装すると、コンポーネントの入力列コレクションをチェックし、コレクションの各列が上流コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> にある列を参照していることを確認できるため、検証プロセスの作業に役立ちます。  
@@ -191,6 +189,6 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
   

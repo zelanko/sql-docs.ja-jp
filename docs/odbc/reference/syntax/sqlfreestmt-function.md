@@ -20,18 +20,18 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d48d9742f9b3fafe77f441226961218f47c6005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719710"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213441"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLFreeStmt**特定のステートメントに関連付けられている処理を停止する、保留中の結果、破棄、ステートメントに関連付けられた開いているカーソルを閉じるまたは、必要に応じて、ステートメント ハンドルに関連付けられたすべてのリソースを解放します。  
   
 ## <a name="syntax"></a>構文  
@@ -47,16 +47,16 @@ SQLRETURN SQLFreeStmt(
  *StatementHandle*  
  [入力]ステートメント ハンドル  
   
- *オプション*  
+ *Option*  
  [入力]次のオプションのいずれか:  
   
- Sql _ 閉じる: に関連付けられているカーソルを閉じます*StatementHandle* (定義されている) 場合と、保留中のすべての結果を破棄します。 アプリケーションが実行することによってこのカーソルを後で再度ことができます、**選択**同じまたは別のパラメーター値を使用してステートメントです。 カーソルが開いていない場合、このオプションは、アプリケーションに影響を与えません。 **SQLCloseCursor**カーソルを閉じるには呼び出すこともできます。 詳細については、次を参照してください。[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)します。  
+ SQL _ 閉じる:関連付けられているカーソルをクローズ*StatementHandle* (定義されている) 場合と、保留中のすべての結果を破棄します。 アプリケーションが実行することによってこのカーソルを後で再度ことができます、**選択**同じまたは別のパラメーター値を使用してステートメントです。 カーソルが開いていない場合、このオプションは、アプリケーションに影響を与えません。 **SQLCloseCursor**カーソルを閉じるには呼び出すこともできます。 詳細については、次を参照してください。[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)します。  
   
- SQL_DROP: このオプションは非推奨とされます。 呼び出し**SQLFreeStmt**で、*オプション*SQL_DROP のマップをドライバー マネージャーで[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
+ SQL_DROP:このオプションは非推奨とされます。 呼び出し**SQLFreeStmt**で、*オプション*SQL_DROP のマップをドライバー マネージャーで[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
   
- SQL_UNBIND: によってセットのすべての列バッファーを解放する 0 に ARD SQL_DESC_COUNT フィールドのバインド**SQLBindCol**の指定された*StatementHandle*します。 これは、バインドは解除されません。 ブックマーク列そのためには、ブックマーク列 ARD の SQL_DESC_DATA_PTR フィールドが NULL に設定されます。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、操作に影響する記述子を共有するすべてのステートメントのバインドに注目してください。 詳細については、次を参照してください。[の概要を取得する結果の (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)します。  
+ SQL_UNBIND:によってバインドされるすべての列バッファーを解放する 0 に ARD の SQL_DESC_COUNT フィールド セット**SQLBindCol**の指定された*StatementHandle*します。 これは、バインドは解除されません。 ブックマーク列そのためには、ブックマーク列 ARD の SQL_DESC_DATA_PTR フィールドが NULL に設定されます。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、操作に影響する記述子を共有するすべてのステートメントのバインドに注目してください。 詳細については、次を参照してください。[の概要を取得する結果の (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)します。  
   
- SQL_RESET_PARAMS: を 0 に設定すべてのパラメーター バッファーを解放する、APD の SQL_DESC_COUNT フィールドを設定する**SQLBindParameter**の指定された*StatementHandle*します。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、この操作は、記述子を共有するすべてのステートメントのバインディングに反映されます。 詳細については、次を参照してください。[パラメーターのバインド](../../../odbc/reference/develop-app/binding-parameters-odbc.md)します。  
+ SQL_RESET_PARAMS:0 に設定すべてのパラメーター バッファーを解放する、APD の SQL_DESC_COUNT フィールドを設定します**SQLBindParameter**の指定された*StatementHandle*します。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、この操作は、記述子を共有するすべてのステートメントのバインディングに反映されます。 詳細については、次を参照してください。[パラメーターのバインド](../../../odbc/reference/develop-app/binding-parameters-odbc.md)します。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  

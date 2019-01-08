@@ -11,12 +11,12 @@ ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7ddb7f9ffd0aa44db250df00df78b9f20d307e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61965f9d07ebef7d3f30623df318125e67587890
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082288"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349395"
 ---
 # <a name="troubleshoot-report-builder"></a>レポート ビルダーのトラブルシューティング
   レポート ビルダーは、さまざまな種類のデータ ソースからレポートを作成する場合や、レポート サーバーまたは SharePoint サイトにレポートをパブリッシュする場合に使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート作成ツールです。 Web ブラウザー、またはの一部として、レポート ビルダーで作成したレポートを表示できます、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows アプリケーションや SharePoint サイト。  
@@ -26,16 +26,16 @@ ms.locfileid: "48082288"
  次の各トピックは、レポートの作成者とレポート サーバー管理者にそれぞれ役立つ、レポートのトラブルシューティング方法を示しています。  
   
 ## <a name="report-authors"></a>レポートの作成者  
- [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートをトラブルシューティングします。マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [グラフのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [グラフのトラブルシューティング &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>管理者  
  [レポート ビルダーのインストール、アンインストール、およびサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- また、次のトピックを参照してください、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?linkid=121312):  
+ また、次のトピックを参照してください、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [マップ レポートのサポートを計画する](../../2014/reporting-services/plan-for-map-report-support.md)  
   
@@ -46,9 +46,9 @@ ms.locfileid: "48082288"
   
  たとえば、ディスカッション グループに参加すると、Reporting Services Most Valued Professional (MVP) などの経験豊富なレポート ビルダー ユーザーのオンライン グループと対話できます。MVP は、積極的に、質問に回答したり、ソリューション、ヒント、および専門知識を提供したりしています。  
   
- Reporting Services のチーム メンバーの声が提供する情報、 [Reporting Services チームのブログ](http://go.microsoft.com/fwlink/?LinkId=118788)します。
+ Reporting Services のチーム メンバーの声が提供する情報、 [Reporting Services チームのブログ](https://go.microsoft.com/fwlink/?LinkId=118788)します。
   
- それでも、回答が見つからない場合[フィードバックの送信](http://go.microsoft.com/fwlink/?LinkId=118791)します。  
+ それでも、回答が見つからない場合[フィードバックの送信](https://go.microsoft.com/fwlink/?LinkId=118791)します。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーのインストール、アンインストール、およびサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  

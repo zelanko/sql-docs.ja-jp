@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraDb
@@ -13,12 +12,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 565f88565a797c2f902b2df4f42deea631b34bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114222"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202191"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Oracle ソース データベースへの接続
   [Oracle ソース] ページを使用すると、Oracle ソース データベースへの接続に必要な情報を提供できます。 CDC インスタンスによって、接続している Oracle データベースの再実行ログが読み取られます。  
@@ -35,13 +34,13 @@ ms.locfileid: "48114222"
  **[Oracle ログ マイニング認証]**  
  ログ マイニングを承認されている Oracle データベース ユーザーの資格情報を入力するには、次のいずれかを選択します。  
   
--   **[Windows 認証]**: 現在の Windows ドメイン資格情報を使用する場合に選択します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。  
+-   **Windows 認証**:現在の Windows ドメイン資格情報を使用する場合に選択します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。  
   
--   **[Oracle 認証]**: このオプションを選択する場合、接続先の Oracle データベースのユーザーの **[ユーザー名]** と **[パスワード]** を入力する必要があります。  
+-   **Oracle 認証**:このオプションを選択する場合は入力、**ユーザー名**と**パスワード**に接続している Oracle データベースでユーザーにします。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ユーザーがログ マイニング ユーザーになるには、Oracle データベースで次の特権を付与される必要があります。  
->   
+> 
 >  -   \<any-captured-table> に対する SELECT  
 > -   SELECT ANY TRANSACTION  
 > -   DBMS LOGMNR に対する EXECUTE  
@@ -55,7 +54,7 @@ ms.locfileid: "48114222"
 > -   ALL OBJECTS に対する SELECT  
 > -   DBA OBJECTS に対する SELECT  
 > -   ALL TABLES に対する SELECT  
->   
+> 
 >  これらの特権を V$xxx に付与できないときは、V_S$xxx に付与してください。  
   
  **[接続テスト]**  

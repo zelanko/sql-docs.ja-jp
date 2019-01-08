@@ -1,5 +1,5 @@
 ---
-title: ワークスペース データベースでのパーティション作成し、管理 |Microsoft Docs
+title: Analysis Services ワークスペース データベースでのパーティション作成し、管理 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3912002c016508b36f200f2786e2d5f00e05c48b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9ddeefe9fb7b391fc3bc3948f5f5cbdb8296b7de
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045360"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072369"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>ワークスペース データベースでのパーティション作成し、管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "38045360"
   
 2.  **[パーティション]** リストで削除するパーティションを選択し、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
  [ワークスペース データベースでパーティションの処理](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   

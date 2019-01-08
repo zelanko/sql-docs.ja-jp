@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - old diagrams [SQL Server]
@@ -18,15 +18,15 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd94322c3d4314f2fb8705cc2d770a7ad5b4751d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065152"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812914"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>旧エディションのデータベース ダイアグラムのアップグレード (Visual Database Tools)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ダイアグラム化を設定すると、旧エディションの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース上に作成されたデータベース ダイアグラムは自動的にアップグレードされます。 ダイアグラムの表示の設定手順について[データベース ダイアグラム デザイナーの設定&#40;Visual Database Tools&#41;](visual-database-tools.md)します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ダイアグラム化を設定すると、旧エディションの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]データベース上に作成されたデータベース ダイアグラムは自動的にアップグレードされます。 ダイアグラムの表示の設定手順について[データベース ダイアグラム デザイナーの設定&#40;Visual Database Tools&#41;](visual-database-tools.md)します。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>レガシ データベース ダイアグラムをアップグレードするには  
   

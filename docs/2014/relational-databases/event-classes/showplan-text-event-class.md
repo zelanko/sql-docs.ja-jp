@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a37c2c3937634705dd521d5942ca03ae9d85b138
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6108a35d3f1c51f4d3dedbcf673be1d837091b71
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176852"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782814"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text イベント クラス
   Showplan Text イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントを実行したときに発生します。 含まれる情報は、Showplan All、Showplan XML Statistics Profile、または Showplan XML イベント クラスで利用できる情報のサブセットです。  

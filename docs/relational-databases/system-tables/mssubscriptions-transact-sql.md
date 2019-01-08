@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriptions_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22a80f913566a65596d86bd08fce9ff9c7ee1570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b0c5d53519b09c9f30ccdf7e973e25e5a06a6a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728860"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823596"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47728860"
 |**snapshot_seqno_flag**|**bit**|値が、スナップショット トランザクションのシーケンス番号のソースを示す**1**つまり**subscription_seqno**スナップショット シーケンス番号します。|  
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。|  
 |**subscription_time**|**datetime**|内部使用のみです。|  
-|**loopback_detection**|**bit**|双方向トランザクション レプリケーション トポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = は送信しません。<br /><br /> **0** = 戻す。<br /><br /> 注: この列は、双方向レプリケーション機能との下位互換性についてのみサポート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。 以降のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ピア ツー ピア レプリケーションを代わりに使用する必要があります。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
+|**loopback_detection**|**bit**|双方向トランザクション レプリケーション トポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = は送信しません。<br /><br /> **0** = 戻す。<br /><br /> 注:この列は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の双方向レプリケーション機能との互換性のために用意されています。 それ以降のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ピア ツー ピア レプリケーションを代わりに使用してください。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
 |**agent_id**|**int**|エージェントの ID。|  
 |**update_mode**|**tinyint**|更新の種類。|  
 |**publisher_seqno**|**varbinary(16)**|このサブスクリプションに対するパブリッシャー側のトランザクションのシーケンス番号。|  

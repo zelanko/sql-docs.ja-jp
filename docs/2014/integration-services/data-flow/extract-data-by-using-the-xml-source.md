@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - extracting data [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92bc7c34c7581f41a1ad814923aa350df4da4cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1d68856ff161a46d9ee74d0ac7e252c532b136a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222502"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793834"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>XML ソースを使用してデータを抽出する
   XML ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクがあらかじめ含まれている必要があります。  
@@ -66,6 +65,6 @@ ms.locfileid: "48222502"
  [XML ソース](xml-source.md)   
  [Integration Services の変換](transformations/integration-services-transformations.md)   
  [Integration Services のパス](integration-services-paths.md)   
- [データ フロー タスク](../control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../control-flow/data-flow-task.md)  
   
   

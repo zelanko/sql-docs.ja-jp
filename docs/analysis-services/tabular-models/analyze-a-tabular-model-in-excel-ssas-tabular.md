@@ -1,5 +1,5 @@
 ---
-title: Excel でテーブル モデルの分析 |Microsoft ドキュメント
+title: Excel での Analysis Services 表形式モデルの分析 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1db764052a9c3370554a6456dc005612a2e8b95
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a3cd28375a60dc2cbf7447068fde8c5a1c7dba07
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040666"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072229"
 ---
-# <a name="analyze-a-tabular-model-in-excel"></a>Excel でテーブル モデルを分析します。  
+# <a name="analyze-a-tabular-model-in-excel"></a>Excel でのテーブル モデルの分析  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [Excel で分析] 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、ピボットテーブルがワークシートに追加されます。 モデル オブジェクト (テーブル、列、メジャー、階層、および KPI) は、ピボットテーブルのフィールドの一覧にフィールドとして含まれています。  
   
@@ -39,16 +39,16 @@ ms.locfileid: "34040666"
   
     -   セキュリティ ロールを使用するには、 **[ロール]** を選択して、一覧から 1 つ以上のロールを選択します。  
   
-         セキュリティ ロールはロール マネージャーを使用して定義する必要があります。 詳細については、次を参照してください。[作成と管理の役割](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)です。  
+         セキュリティ ロールはロール マネージャーを使用して定義する必要があります。 詳細については、次を参照してください。[管理ロールの作成と](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)します。  
   
-3.  パースペクティブを使用するには、**[パースペクティブ]** ボックスの一覧からパースペクティブを選択します。  
+3.  パースペクティブを使用するには、 **[パースペクティブ]** ボックスの一覧からパースペクティブを選択します。  
   
-     パースペクティブ (既定値以外) は [パースペクティブ] ダイアログ ボックスを使用して定義する必要があります。 詳細については、次を参照してください。[管理パースペクティブの作成および](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)です。  
+     パースペクティブ (既定値以外) は [パースペクティブ] ダイアログ ボックスを使用して定義する必要があります。 詳細については、次を参照してください。[の作成と管理のパースペクティブ](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)します。  
   
 > [!NOTE]  
 >  Excel のピボットテーブルのフィールドの一覧は、モデル デザイナーでモデル プロジェクトに変更を加えても自動的に更新されません。 ピボットテーブルのフィールドの一覧を更新するには、Excel の **[オプション]** リボンで **[更新]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [Excel で分析します。](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+## <a name="see-also"></a>関連項目  
+ [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

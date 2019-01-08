@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio での統合ターミナル |Microsoft Docs
+title: 統合ターミナル
+titleSuffix: Azure Data Studio
 description: Azure Data Studio の統合ターミナルについて説明します。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355983"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030436"
 ---
 # <a name="integrated-terminal"></a>統合ターミナル
 
@@ -89,7 +90,7 @@ Windows で、シェルを正しく構成するには適切な実行可能ファ
 
 ## <a id="key-bindings"></a>ターミナルのキー バインド
 
-**ビュー: トグル統合ターミナル**にコマンドがバインドされている**Ctrl +'** ビューとの間の統合ターミナル パネルをすばやく切り替える。
+**ビュー。統合ターミナルを切り替える**にコマンドがバインドされている**Ctrl +'** ビューとの間の統合ターミナル パネルをすばやく切り替える。
 
 統合ターミナル内のナビゲーションを迅速にキーボード ショートカットを次に示します。
 
@@ -109,16 +110,16 @@ Key|コマンド
 
 これらは次のとおりです。
 
-* `workbench.action.terminal.focus`: 端末の焦点を当てます。 これは、切り替えのようなものですが、表示されている場合、非表示ではなくターミナル重点を置いています。
-* `workbench.action.terminal.focusNext`: 次の端末のインスタンスについて説明します。
-* `workbench.action.terminal.focusPrevious`: 以前のターミナル インスタンスをについて説明します。
-* `workbench.action.terminal.kill`: 現在のターミナルのインスタンスを削除します。
-* `workbench.action.terminal.runSelectedText`: ターミナルのインスタンスで、選択したテキストを実行します。
-* `workbench.action.terminal.runActiveFile`: ターミナルのインスタンスでアクティブなファイルを実行します。
+* `workbench.action.terminal.focus`:端末の焦点を当てます。 これは、切り替えのようなものですが、表示されている場合、非表示ではなくターミナル重点を置いています。
+* `workbench.action.terminal.focusNext`:次の端末のインスタンスに焦点を当てます。
+* `workbench.action.terminal.focusPrevious`:以前のターミナル インスタンスをについて説明します。
+* `workbench.action.terminal.kill`:ターミナルの現在のインスタンスを削除します。
+* `workbench.action.terminal.runSelectedText`:ターミナルのインスタンスでは、選択したテキストを実行します。
+* `workbench.action.terminal.runActiveFile`:ターミナルのインスタンスでは、作業中のファイルを実行します。
 
 ### <a name="run-selected-text"></a>選択したテキストの実行
 
-使用する、`runSelectedText`コマンド、エディターでテキストを選択し、コマンドを実行**ターミナル: アクティブなターミナルで選択したテキストの実行**を使用して、**コマンド パレット**(**Ctrl + Shift + P**). 端末は、選択したテキストを実行しようとします。
+使用する、`runSelectedText`コマンド、エディターでテキストを選択し、コマンドを実行**ターミナル。選択したテキストのアクティブなターミナルで実行**を使用して、**コマンド パレット**(**Ctrl + Shift + P**)。 端末は、選択したテキストを実行しようとします。
 
 ![選択したテキストを実行します。](media/integrated-terminal/terminal_run_selected.png)
 
@@ -128,9 +129,9 @@ Key|コマンド
 
 コピーと貼り付けのキー バインドでは、プラットフォームの標準に従います。
 
-* Linux: **Ctrl + Shift + C**と**Ctrl + Shift + V**
-* Mac の場合: **Cmd キーを押しながら C キー**と**Cmd キーを押しながら V キー**
-* Windows: **Ctrl + C**と**Ctrl + V**
+* Linux の場合:**Ctrl + Shift + C**と**Ctrl + Shift + V**
+* Mac の場合:**Cmd キーを押しながら C キー**と**Cmd キーを押しながら V キー**
+* Windows:**Ctrl + C**と**Ctrl + V**
 
 ### <a name="find"></a>[検索]
 
@@ -145,7 +146,7 @@ Key|コマンド
 
 ### <a name="rename-terminal-sessions"></a>ターミナル セッションの名前を変更します。
 
-使用して統合ターミナル セッションを変更することができますようになりました、**ターミナル: 名前を変更**(`workbench.action.terminal.rename`) コマンド。 新しい名前は、ターミナルの選択ドロップダウンに表示されます。
+使用して統合ターミナル セッションを変更することができますようになりました、**ターミナル。名前を変更**(`workbench.action.terminal.rename`) コマンド。 新しい名前は、ターミナルの選択ドロップダウンに表示されます。
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>ターミナルを通過する強制のキー バインド
 

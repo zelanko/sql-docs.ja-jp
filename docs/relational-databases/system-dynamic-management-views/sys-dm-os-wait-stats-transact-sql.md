@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513b85aafb4cd25d55dfb40e37dabd6fc47b814f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878195"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886887"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -168,8 +168,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |COUNTRECOVERYMGR |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |CREATE_DATINISERVICE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|CXCONSUMER |行を送信するプロデューサー スレッドのコンシューマー スレッドが待機する場合に、並列クエリ プランで発生します。 これは、クエリの並列実行の正常な処理です。 <br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |クエリ プロセッサ交換反復子に、同期を実行して、生成および行を使用する場合に、並列クエリ プランで発生します。 待機時間が長すぎて、クエリのチューニング (インデックスの追加など) を実行しても短くできない場合は、並列処理のコストしきい値を調整したり並列処理の次数を下げたりすることを検討してください。<br /> **注:** 以降[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3、および[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、クエリ プロセッサ交換反復子を同期して、コンシューマー スレッドの行を生成するのみ CXPACKET を参照します。 コンシューマー スレッドは、CXCONSUMER の待機の種類で個別に追跡されます。| 
+|CXCONSUMER |行を送信するプロデューサー スレッドのコンシューマー スレッドが待機する場合に、並列クエリ プランで発生します。 これは、クエリの並列実行の正常な処理です。 <br /> **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |クエリ プロセッサ交換反復子に、同期を実行して、生成および行を使用する場合に、並列クエリ プランで発生します。 待機時間が長すぎて、クエリのチューニング (インデックスの追加など) を実行しても短くできない場合は、並列処理のコストしきい値を調整したり並列処理の次数を下げたりすることを検討してください。<br /> **注:** 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3、および[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、クエリ プロセッサ交換反復子を同期して、コンシューマー スレッドの行を生成するのみ CXPACKET を参照します。 コンシューマー スレッドは、CXCONSUMER の待機の種類で個別に追跡されます。| 
 |CXROWSET_SYNC |範囲の並列スキャン中に発生します。| 
 |DAC_INIT |専用管理者接続の初期化中に発生します。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -331,7 +331,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |バックグラウンド タスクが、Windows Server フェールオーバー クラスタリングの通知を処理するバックグラウンド タスクの起動完了を待機しています。 内部でのみ使用します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |バックグラウンド タスクが、Windows Server フェールオーバー クラスタリングの通知を処理するバックグラウンド タスクの終了を待機しています。 内部でのみ使用します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_PARTNER_SYNC |パートナーの一覧で同時実行制御の待機します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|HADR_READ_ALL_NETWORKS |WSFC ネットワークの一覧に対する読み取りまたは書き込みアクセスの取得を待機しています。 内部使用のみです。 注: エンジン (sys.dm_hadr_cluster_networks) などの動的管理ビューで使用される WSFC ネットワークの一覧を保持するか、WSFC を参照するステートメントを常にで TRANSACT-SQL を検証するには、ネットワークの情報。 WSFC 関連のエンジンの起動時にこの一覧が更新されると、通知、および (たとえば、データが失われると WSFC クォーラムを取り戻します) の内部で常に再起動します。 通常、この一覧の更新中はタスクがブロックされます。 、 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HADR_READ_ALL_NETWORKS |WSFC ネットワークの一覧に対する読み取りまたは書き込みアクセスの取得を待機しています。 内部使用のみです。 注:エンジン (sys.dm_hadr_cluster_networks) などの動的管理ビューで使用される WSFC ネットワークの一覧を保持するか、WSFC を参照するステートメントを常にで TRANSACT-SQL を検証するには、ネットワークの情報。 WSFC 関連のエンジンの起動時にこの一覧が更新されると、通知、および (たとえば、データが失われると WSFC クォーラムを取り戻します) の内部で常に再起動します。 通常、この一覧の更新中はタスクがブロックされます。 、 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |復旧を実行する前に、セカンダリ データベースがプライマリ データベースに接続するのを待機しています。 これは、想定される待機で、プライマリへの接続が確立するために速度が遅い場合に長くなることができます、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |データベース復旧が、セカンダリ データベースが復帰および初期化フェーズを完了し、プライマリ データベースと共通のログ ポイントに戻るのを待機しています。 これは、フェールオーバー後に想定される待機です。元に戻す、Windows システム モニター (perfmon.exe) と動的管理ビューにより、進行状況を追跡できます、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_REPLICAINFO_SYNC |現在のレプリカの状態を更新する同時実行制御を待機しています、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -931,6 +931,7 @@ GO
 |VIA_ACCEPT |起動中に仮想インターフェイス アダプター (VIA) プロバイダー接続が完了すると発生します。| 
 |VIEW_DEFINITION_MUTEX |キャッシュされたビュー定義へのアクセスの同期中に発生します。| 
 |WAIT_FOR_RESULTS |クエリ通知が行われるのを待機しているときに発生します。| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |同期の統計の更新が完了するまでクエリのコンパイルと実行を再開できるを待機しているときに発生します。<br /> **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 

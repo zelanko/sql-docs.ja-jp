@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d57bbdf7219561dfea45f338f463834e578e3138
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9152e7415b81378f595930fab5a5a8335660734
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203882"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781334"
 ---
 # <a name="create-infosource-for-transaction-data"></a>[トランザクション データのインフォソースの作成]
   SAP Netweaver BW システムでトランザクション データ用の新しいインフォソースを作成するには、**[トランザクション データのインフォソースの作成]** ダイアログ ボックスを使用します。  
@@ -93,7 +92,7 @@ ms.locfileid: "48203882"
  InfoObject が使用する単位を指定します。  
   
 ## <a name="see-also"></a>参照  
- [インフォ ソースを作成します。](create-infosource.md)   
+ [[インフォソースの作成]](create-infosource.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   
