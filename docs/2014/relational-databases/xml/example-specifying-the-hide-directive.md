@@ -1,5 +1,5 @@
 ---
-title: '例 : HIDE ディレクティブの指定 | Microsoft Docs'
+title: 例:HIDE ディレクティブの指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c5011cac861d941e46495a2b3d6669c5bf1fdc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c71a7012cb69a50bf7d3d7223b35aedcfcc570
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179642"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357093"
 ---
-# <a name="example-specifying-the-hide-directive"></a>例 : HIDE ディレクティブの指定
+# <a name="example-specifying-the-hide-directive"></a>例:HIDE ディレクティブの指定
   この例では、 **HIDE** ディレクティブの使用方法を示します。 クエリから返されたユニバーサル テーブル内の行を並べ替える目的でクエリから属性を返し、最終的な結果の XML ドキュメントにはその属性を含めない場合に、このディレクティブが役立ちます。  
   
  このクエリでは、次の XML を生成します。  
@@ -55,10 +55,10 @@ SELECT  2 as Tag,
         ProductModelID,  
         Name,  
         CatalogDescription.value('  
-         declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+         declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
        (/PD:ProductDescription/@ProductModelID)[1]', 'int'),  
         CatalogDescription.query('  
-         declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+         declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
          /pd:ProductDescription/pd:Summary')  
 FROM    Production.ProductModel  
 WHERE   CatalogDescription is not null  
@@ -67,13 +67,13 @@ FOR XML EXPLICIT
 go  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  
   <Summary>  
     <SummaryDescription>  
-      <pd:Summary xmlns:pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" xmlns="">  
+      <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" xmlns="">  
         <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain. </p1:p>  
       </pd:Summary>  
     </SummaryDescription>  

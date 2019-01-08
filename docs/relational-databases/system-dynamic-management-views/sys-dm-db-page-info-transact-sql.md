@@ -20,17 +20,17 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150203"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732079"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-データベース内のページに関する情報を返します。  ページで、ヘッダー情報を含む 1 つの行を返しますなど、 `object_id`、 `index_id`、および`partition_id`します。  この関数を使用する必要が置き換えられます`DBCC PAGE`ほとんどの場合。
+データベース内のページに関する情報を返します。  ページで、ヘッダー情報を含む 1 つの行を返しますなど、 `object_id`、 `index_id`、および`partition_id`します。  この関数を使用すると、ほとんどの場合に `DBCC PAGE` を使用する必要がなくなります。
 
 ## <a name="syntax"></a>構文  
   
@@ -118,7 +118,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 `sys.dm_db_page_info` 代わりに使用できる、`DBCC PAGE`ステートメントが、多くの場合にのみページ ヘッダーの情報を返します、ページの本文ではありません。 `DBCC PAGE` ページの内容全体が必要なユース ケースにも必要になります。
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>その他の Dmv と組み合わせて使用します。
-1 つの重要なユース ケースの`sys.dm_db_page_info`にページの情報を公開するその他の Dmv を使用したことを参加させます。  このユース ケースを容易にする新しい列と呼ばれる`page_resource`8 バイトの 16 進形式でページの情報を表示する追加されています。 この列が追加されました`sys.dm_exec_processes`と`sys.sysprocesses`し、必要に応じて、将来の他の Dmv に追加されます。
+1 つの重要なユース ケースの`sys.dm_db_page_info`にページの情報を公開するその他の Dmv を使用したことを参加させます。  このユース ケースを容易にする新しい列と呼ばれる`page_resource`8 バイトの 16 進形式でページの情報を表示する追加されています。 この列が追加されました`sys.dm_exec_requests`と`sys.sysprocesses`し、必要に応じて、将来の他の Dmv に追加されます。
 
 新しい関数の場合、 `sys.fn_PageResCracker`、受け取り、`page_resource`入力し、出力を含む単一行として`database_id`、`file_id`と`page_id`します。  この関数は、間の結合を容易にし、使用できます`sys.dm_exec_requests`または`sys.sysprocesses`と`sys.dm_db_page_info`します。
 

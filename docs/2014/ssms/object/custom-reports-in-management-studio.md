@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a1f66753b1ff002a43f59fb065134967e15254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208898"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354685"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行できるようになりました。  
@@ -71,7 +71,7 @@ ms.locfileid: "48208898"
 >  レポートには任意の有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを埋め込み、レポートから実行することができます。 高い特権を持つユーザー アカウントでレポートを実行すると、このように埋め込まれた命令を容易に実行できるようになります。  
   
 ## <a name="report-samples"></a>サンプル レポート  
- [レポートのサンプル](http://go.microsoft.com/fwlink/?LinkId=81792)、によって作成される、標準的なレポートを含む[!INCLUDE[msCoName](../../includes/msconame-md.md)]をダウンロードできます。 サンプルは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して変更することができます。  
+ [レポートのサンプル](https://go.microsoft.com/fwlink/?LinkId=81792)、によって作成される、標準的なレポートを含む[!INCLUDE[msCoName](../../includes/msconame-md.md)]をダウンロードできます。 サンプルは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して変更することができます。  
   
 ## <a name="see-also"></a>参照  
  [Management Studio へのカスタム レポートを追加します。](add-a-custom-report-to-management-studio.md)   

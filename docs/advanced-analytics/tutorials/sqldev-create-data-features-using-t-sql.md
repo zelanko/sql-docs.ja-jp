@@ -1,5 +1,5 @@
 ---
-title: T-SQL 関数 (SQL Server Machine Learning で R) を使用して作成データ機能の 2 つのレッスン |Microsoft Docs
+title: R と T-SQL 関数 - SQL Server Machine Learning を使用してレッスン 2 を作成するデータの機能
 description: Machine learning の R のモデルで使用するためのストアド プロシージャに計算を追加する方法を示すチュートリアル。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 43086b8d3898e4d9096e82289ce6e6f196542997
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031499"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645401"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>レッスン 2: R と T-SQL を使用してデータ機能を作成します。
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>レッスン 2:R と T-SQL を使用してデータ機能を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
@@ -46,7 +46,7 @@ ms.locfileid: "51031499"
 
 2. _fnCalculateDistance_を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
     -- User-defined function that calculates the direct distance between two geographical coordinates.  
     RETURNS float  
@@ -80,7 +80,7 @@ ms.locfileid: "51031499"
 
 1. カスタム T-SQL 関数、 _fnEngineerFeatures_のコードを再確認します。この関数は、このチュートリアルの一環として自動的に作成されているはずです。
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
     @passenger_count int = 0,  
     @trip_distance float = 0,  
@@ -110,7 +110,7 @@ ms.locfileid: "51031499"
 
 2.  この関数が動作することを確認するために使用するメーター距離が 0 が乗車と降車の場所が異なっていた乗車の地理的距離を計算します。
   
-    ```SQL
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
@@ -123,8 +123,8 @@ ms.locfileid: "51031499"
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[レッスン 3: トレーニングし、T-SQL を使用してモデルを保存](sqldev-train-and-save-a-model-using-t-sql.md)
+[レッスン 3:トレーニングし、T-SQL を使用してモデルを保存](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 1: の探索し、R とストアド プロシージャを使用してデータを視覚化します。](sqldev-explore-and-visualize-the-data.md)
+[レッスン 1:探索し、R とストアド プロシージャを使用してデータを視覚化します。](sqldev-explore-and-visualize-the-data.md)

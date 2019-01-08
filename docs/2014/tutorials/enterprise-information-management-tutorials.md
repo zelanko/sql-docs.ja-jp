@@ -13,12 +13,12 @@ ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbbf4bc264e9dbff37c6dd06ceb1c6f4063e6c2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e40202ef0230fbbdddd1c596e5dc41b4d44a0fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176382"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373994"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Enterprise Information Management のチュートリアル
   このセクションには、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] に付属の Enterprise Information Management (EIM) テクノロジを使用して、企業で情報を管理する方法のチュートリアルが含まれています。 Enterprise Integration Management (EIM) では、組織がデータの信頼性と一貫性を信頼してビジネス上の重要な意思決定を行うことを可能にするソリューションのポートフォリオが用意されています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] には、企業で EIM ソリューションを実装する際に役立つ以下のテクノロジがあります。  
@@ -33,6 +33,6 @@ ms.locfileid: "48176382"
  このチュートリアルでは、SSIS、MDS、および DQS を組み合わせて、Enterprise Information Management (EIM) ソリューションのサンプルを実装する方法について学習します。 まず、DQS を使用して仕入先データ (メタデータ) についてのナレッジを含むナレッジ ベースを作成し、ナレッジ ベースに対して Excel ファイル内のデータをクレンジングして、データ内の重複項目を特定および削除するようにデータを照合します。 次に、Excel 用の MDS アドインを使用して、クレンジングおよび照合済みのデータを MDS にアップロードします。 次に、SSIS ソリューションを使用して全体のプロセスを自動化します。  
   
 ## <a name="see-also"></a>参照  
- [Enterprise Information Management – Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=270871)  
+ [Enterprise Information Management - Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
   
   

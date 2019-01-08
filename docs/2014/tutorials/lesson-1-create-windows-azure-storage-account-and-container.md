@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 1: Windows Azure ストレージ アカウントとコンテナーの作成 |Microsoft Docs'
+title: レッスン 1:Windows Azure ストレージ アカウントとコンテナーの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143649"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367154"
 ---
-# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>レッスン 1: Windows Azure ストレージ アカウントとコンテナーを作成する
+# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>レッスン 1:Windows Azure ストレージ アカウントとコンテナーを作成します。
   Windows Azure ストレージへの SQL Server データ ファイルの格納を開始する前に、最初に Windows Azure ストレージ アカウント、BLOB コンテナー、および共有アクセス署名を作成する必要があります。 レッスン 1 では、Windows Azure 管理ポータルにログインし、ストレージ アカウント、BLOB コンテナー、および Shared Access Signature を作成する手順について説明します。  
   
  既定では、ストレージ アカウントの所有者だけがそのアカウント内の BLOB、テーブル、およびキューにアクセスすることができます。 この新しい SQL Server の機能強化を使用して、ストレージ アカウント アクセス キーを共有しないで、これらのリソースにアクセスするには、次の操作をする必要があります。  
@@ -29,7 +29,7 @@ ms.locfileid: "48143649"
   
 -   保存されたアクセス ポリシーを使用して、コンテナーまたは BLOB の Shared Access Signature を管理します。 保存されたアクセス ポリシーは、Shared Access Signatures をコントロールするもう 1 つの手段となり、それを取り消す直接的な手段にもなります。  
   
- 詳細については、次を参照してください。 [Windows Azure ストレージ リソースへのアクセスの管理](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx)します。  
+ 詳細については、次を参照してください。 [Windows Azure ストレージ リソースへのアクセスの管理](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)します。  
   
 ## <a name="create-storage-account"></a>ストレージ アカウントの作成  
  Windows Azure 管理ポータルにストレージ アカウントを作成するには、次の手順を実行します。  
@@ -58,7 +58,7 @@ ms.locfileid: "48143649"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  コンテナーをプログラムで作成するために、REST API を使用することもできます。 詳細については、次を参照してください。[コンテナーの作成](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx)また[Windows Azure ストレージ サービス REST API リファレンス](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx)します。  
+>  コンテナーをプログラムで作成するために、REST API を使用することもできます。 詳細については、次を参照してください。[コンテナーの作成](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx)また[Windows Azure ストレージ サービス REST API リファレンス](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)します。  
   
  **次のレッスン:**  
   

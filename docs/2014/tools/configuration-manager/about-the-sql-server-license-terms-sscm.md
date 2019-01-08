@@ -11,12 +11,12 @@ ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7b3268898498ff33273eba4aca0c67315001bce6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 339acb09ad439585ebd58f83be3b43e54d2b1cf9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161452"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371734"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server のライセンス条項について (SSCM)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]ソフトウェア ライセンス条項は、ローカル コンピューターにコピー時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルに書き込まれます: %ProgramFiles%\Microsoft SQL server \110\license terms \ または %programfiles (x86) %\Microsoft SQL server \110\license 条項\\します。  
@@ -76,7 +76,7 @@ ms.locfileid: "48161452"
 -   RUS - ロシア語  
   
 ## <a name="sql-server-licensing-options"></a>SQL Server ライセンス オプション  
- 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]価格およびライセンス オプションを参照してください、 [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=190955) Web サイト。  
+ 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]価格およびライセンス オプションを参照してください、 [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) Web サイト。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft SQL Server のプライバシーに関する声明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   

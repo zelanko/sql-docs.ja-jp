@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140642"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361074"
 ---
 # <a name="create-package-configurations"></a>パッケージ構成を作成する
   パッケージの構成は、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスまたはパッケージ構成ウィザードを使用して作成します。 これらのツールにアクセスするには、 **で** [SSIS] **メニューの** [パッケージ構成] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をクリックします。  
@@ -111,14 +111,14 @@ ms.locfileid: "48140642"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   msdn.microsoft.com の技術記事「 [Integration Services パッケージ構成について](http://go.microsoft.com/fwlink/?LinkId=165643)」  
+-   msdn.microsoft.com の技術記事「 [Integration Services パッケージ構成について](https://go.microsoft.com/fwlink/?LinkId=165643)」  
   
--   www.mssqltips.com のブログ「 [コードでのパッケージの作成 – パッケージ構成](http://go.microsoft.com/fwlink/?LinkId=217663)」  
+-   ブログ エントリ「[コード - パッケージ構成でパッケージを作成する](https://go.microsoft.com/fwlink/?LinkId=217663)、www.sqlis.com にします。  
   
--   blogs.msdn.com のブログ「 [API サンプル – プログラムによるパッケージへの構成ファイルの追加](http://go.microsoft.com/fwlink/?LinkId=217664)」  
+-   ブログ エントリ「 [API のサンプル - がプログラムによって構成ファイル パッケージに追加](https://go.microsoft.com/fwlink/?LinkId=217664)、blogs.msdn.com します。  
   
 ## <a name="see-also"></a>参照  
- [パッケージの構成](../../2014/integration-services/package-configurations.md)   
+ [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
  [パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [プログラムによる変数の使用](building-packages-programmatically/working-with-variables-programmatically.md)  
   

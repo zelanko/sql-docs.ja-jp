@@ -22,12 +22,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7f71384b89be479d8388e4af8e897f384f2b141
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a132395bbd95997832e2a1df6948179cb2ffe8aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198702"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353632"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多次元モデルの計算
   キューブ デザイナーの **[計算]** タブを使用して、計算されるメンバー、名前付きセット、およびその他の多次元式 (MDX) 計算を作成します。  
@@ -41,7 +41,7 @@ ms.locfileid: "48198702"
 -   計算式ペインでは、フォーム ビューおよびスクリプト ビューがサポートされています。  
   
 > [!NOTE]  
->  MDX スクリプティングの詳細については、「 [Microsoft SQL Server 2005 の MDX スクリプトの紹介](http://go.microsoft.com/fwlink/?LinkId=81892)」、および Microsoft TechNet Web サイトの「 [SQL Server 2005 - Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) 」ページにある「その他のリソース」セクションを参照してください。 キューブ デザインに関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンス ガイド](http://go.microsoft.com/fwlink/?LinkId=81621)」を参照してください。  
+>  MDX スクリプティングの詳細については、次を参照してください[Microsoft SQL Server 2005 における MDX スクリプトの概要](https://go.microsoft.com/fwlink/?LinkId=81892)、に関するその他のリソース セクションを参照し、 [SQL Server 2005 - Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853)ページで、。Microsoft TechNet Web サイトです。 キューブ デザインに関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンス ガイド](https://go.microsoft.com/fwlink/?LinkId=81621)」を参照してください。  
   
 ## <a name="creating-a-new-calculation"></a>新しい計算の作成  
  新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、 **[新しい計算されるメンバー]**、 **[新しい名前付きセット]**、または **[新しいスクリプト コマンド]** をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、 **[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「 [計算されるメンバーの作成](create-calculated-members.md)」、「 [名前付きセットの作成](create-named-sets.md)」、および「 [割り当てとその他のスクリプト コマンドの定義](define-assignments-and-other-script-commands.md)」を参照してください。  

@@ -13,17 +13,17 @@ ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b13e56895a9880a8bffc319c247769b4f5b2911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191072"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354312"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>[Microsoft SQL Server 並列データ ウェアハウスへの接続] (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、Microsoft SQL Server 並列データ ウェアハウス (PDW) に接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
- SQL Server PDW は、非常にスケーラブルなアプライアンスであり、超並列処理によって低コストで優れたパフォーマンスを提供します。 SQL Server PDW の詳細については、Web サイト「 [SQL Server 2008 R2 並列データ ウェアハウス](http://go.microsoft.com/fwlink/?LinkId=150895)」を参照してください。 データ ウェアハウスには、SQL Server 認証を使用して接続します。 データ ソースに接続するには、適切なプロバイダーがコンピューターにインストールされている必要があります。  
+ SQL Server PDW は、非常にスケーラブルなアプライアンスであり、超並列処理によって低コストで優れたパフォーマンスを提供します。 SQL Server PDW の詳細については、Web サイト「 [SQL Server 2008 R2 並列データ ウェアハウス](https://go.microsoft.com/fwlink/?LinkId=150895)」を参照してください。 データ ウェアハウスには、SQL Server 認証を使用して接続します。 データ ソースに接続するには、適切なプロバイダーがコンピューターにインストールされている必要があります。  
   
 > [!NOTE]  
 >  このページでデータベースを選択する際には、現在のユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したデータベースの読み取り権限がないと、インポートは成功しません。  

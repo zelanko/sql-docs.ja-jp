@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: マトリックス レポートの作成 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:マトリックス レポート (レポート ビルダー) の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159502"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353392"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル: マトリックス レポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル:マトリックス レポート (レポート ビルダー) を作成します。
   このチュートリアルでは、サンプルの売上データに基づいて基本的なマトリックス レポートを作成する方法を説明します。 このマトリックスは、入れ子になった行グループと列グループ、および隣接する列グループで構成されます。 また、列を書式設定し、テキストを回転させる方法についても学習します。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- このチュートリアルで作成するレポートの拡張のバージョンはサンプルとして提供[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]レポート ビルダーのレポート。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=184851)します。  
+ このチュートリアルで作成するレポートの拡張のバージョンはサンプルとして提供[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]レポート ビルダーのレポート。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)します。  
   
 ##  <a name="BackToTop"></a> 学習内容  
  このチュートリアルでは、次の内容を学習します。  
@@ -48,9 +48,9 @@ ms.locfileid: "48159502"
   
 1.  [テキスト ボックスを 270 度回転させる](#RotateTextBox)  
   
- このチュートリアルの推定所要時間 : 20 分  
+ このチュートリアルの推定所要時間:20 分  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
 ##  <a name="CreateMatrix"></a> 1.テーブルまたはマトリックスの新規作成ウィザードを使用してマトリックス レポートとデータセットを作成する  
@@ -74,7 +74,7 @@ ms.locfileid: "48159502"
   
 5.  **[次へ]** をクリックします。  
   
-6.  **データ ソースへの接続の選択**ページで既存のデータ ソースを選択します。 または、レポート サーバーを参照し、データ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースを作成する方法の詳細については、次を参照してください。[チュートリアル: 基本的な表レポートの作成&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
+6.  **データ ソースへの接続の選択**ページで既存のデータ ソースを選択します。 または、レポート サーバーを参照し、データ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースを作成する方法の詳細については、次を参照してください。[チュートリアル。基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48159502"
   
 13. **[完了]** をクリックします。  
   
-     マトリックスがデザイン画面に追加されます。 行グループ ペインには、Territory と SalesDate の 2 つの行グループが表示されます。 列グループ ペインには、Subcategory と Product の 2 つの行グループが表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+     マトリックスがデザイン画面に追加されます。 行グループ ペインには、2 つの行グループが表示されます。Territory と SalesDate します。 列グループ ペインには、2 つの列グループを示しています。Subcategory と Product します。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
   
 14. **[実行]** をクリックして、レポートをプレビューします。  
   

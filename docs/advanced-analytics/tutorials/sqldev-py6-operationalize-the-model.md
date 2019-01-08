@@ -1,5 +1,5 @@
 ---
-title: Python のモデル (SQL Server Machine Learning) を使用して潜在的な結果を予測 |Microsoft Docs
+title: Python モデル - SQL Server Machine Learning を使用して潜在的な結果を予測します。
 description: SQL Server での埋め込みの PYthon スクリプトを運用化する方法を示すチュートリアルには、T-SQL 関数を使用したプロシージャが格納されています。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a75c25528003d0133cfd33c3eaddc20a8241692
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033679"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644771"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>ストアド プロシージャに埋め込まれた Python を使用して予測を実行します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +26,8 @@ ms.locfileid: "51033679"
 
 このレッスンは、Python モデルに基づく予測を作成するための 2 つの方法を示しています。 バッチ スコアリング、とで、1 行のスコア付けします。
 
-- **バッチ スコアリング:** 複数行の入力データを提供する SELECT クエリを引数として、ストアド プロシージャに渡します。 結果は、入力ケースに対応する観察のテーブルです。
-- **個々 のスコア付け:** 一連の個別のパラメーター値を入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
+- **一括スコア付けします。** 複数行の入力データを提供するには、ストアド プロシージャに引数として選択クエリを渡します。 結果は、入力ケースに対応する観察のテーブルです。
+- **個々 のスコア付けします。** 一連の個別のパラメーター値を入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
 
 スコア付けに必要なすべての Python コードは、ストアド プロシージャの一部として提供されます。
 
@@ -48,7 +48,7 @@ ms.locfileid: "51033679"
 
 + 渡される入力を含むデータ フレーム、 `predict_proba` 、ロジスティック回帰モデルの関数`mod`します。 `predict_proba`関数 (`probArray = mod.predict_proba(X)`) を返します、 **float** (金額) のチップが支払われる確率を表します。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -92,7 +92,7 @@ GO
 
 このストアド プロシージャ、同じ入力を使用し、前のストアド プロシージャと同じ型のスコアを作成しますから関数を使用して、 **revoscalepy** SQL Server machine learning で提供されるパッケージ。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -142,7 +142,7 @@ GO
 
 1. 使用する、 **scikit-について**モデルのスコア付けのため、ストアド プロシージャを呼び出す**PredictTipSciKitPy**モデル名を渡すと、クエリ文字列を入力として。
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -157,7 +157,7 @@ GO
 
 2. 使用する、 **revoscalepy**モデルのスコア付けのため、ストアド プロシージャを呼び出す**PredictTipRxPy**モデル名を渡すと、クエリ文字列を入力として。
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -188,7 +188,7 @@ GO
 
 使用してスコア付けを実行するストアド プロシージャのコードのレビューに少し時間がかかる、 **scikit-学習**モデル。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -255,7 +255,7 @@ GO
 
 次のストアド プロシージャの実行を使用してスコア付け、 **revoscalepy**モデル。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -297,7 +297,7 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 probArray = rx_predict(mod, X)
 
 probList = []
-prob_list = prob_array["tipped_Pred"].values
+probList = probArray["tipped_Pred"].values
 
 # Create output data frame
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -335,14 +335,14 @@ GO
 
 1. 使用して予測を生成する、 **revoscalepy**モデルでは、このステートメントを実行します。
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. 使用して、スコアを生成する、 **scikit-について説明します**モデルでは、このステートメントを実行します。
 
-    ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 どちらの手順からの出力は、中、指定されたパラメーターまたは機能をタクシー乗車で支払われたチップの確率です。

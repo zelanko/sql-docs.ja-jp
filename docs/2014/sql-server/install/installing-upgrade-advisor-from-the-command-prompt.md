@@ -16,12 +16,12 @@ ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e834cb85458b7fd0e265e5077500ebc4dec5f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095414"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589866"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>コマンド プロンプトからのアップグレード アドバイザーのインストール
   アップグレード アドバイザーをインストールするには、セットアップ ウィザードを使用する方法と、コマンド プロンプトを使用する方法があります。 コマンド プロンプトを使用すると、自動インストールを実行できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "48095414"
 |引数|説明|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|ユーザー インターフェイス (UI) レベルの設定:<br /><br /> n = UI なし<br /><br /> b = 基本 UI (進行状況のみ、プロンプトなし)<br /><br /> r = 一部 UI (インストール終了時のダイアログ ボックス)<br /><br /> f = 完全 UI|  
-|/L|ログ ファイル オプションを指定します。 すべてのメッセージをログに記録する*log_file_name*を使用して、**-l\*v * * * log_file_name*します。 エラー メッセージのみをログに記録するには使用`-Le` *log_file_name*します。|  
+|/L|ログ ファイル オプションを指定します。 すべてのメッセージをログに記録する*log_file_name*を使用して、 **-l\*v**_log_file_name_します。 エラー メッセージのみをログに記録するには使用`-Le` *log_file_name*します。|  
 |ADDLOCAL = ALL&AMP;#124;削除 = ALL&AMP;#124;REINSTALL = ALL|アップグレード アドバイザーのインストール (ADDLOCAL)、削除 (REMOVE)、または再インストール (REINSTALL) を実行するように指定します。|  
 |UAINSTALLDIR=path|アップグレード アドバイザーをパスで指定した場所にインストールします。|  
   

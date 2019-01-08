@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24c2184d01c52222dae0bad6bb05ddd7979dbac5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209392"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361914"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server オブジェクトとバージョンの DAC サポート
   データ層アプリケーション (DAC) では、よく使用される [!INCLUDE[ssDE](../../includes/ssde-md.md)] オブジェクトがサポートされます。  
@@ -38,20 +38,20 @@ ms.locfileid: "48209392"
   
 |||  
 |-|-|  
-|DATABASE ROLE|FUNCTION: インライン テーブル値|  
-|FUNCTION: 複数ステートメント テーブル値|FUNCTION: スカラー|  
-|INDEX: クラスター化|INDEX: 非クラスター化|  
-|INDEX: 空間|INDEX: 一意|  
-|LOGIN|アクセス許可|  
+|DATABASE ROLE|関数:インライン テーブル値|  
+|関数:複数ステートメント テーブル値|関数:Scalar|  
+|インデックス:クラスター化インデックス|インデックス:非クラスター化|  
+|インデックス:空間|インデックス:[一意]|  
+|Login|アクセス許可|  
 |ロールのメンバーシップ|SCHEMA|  
-|統計|STORED PROCEDURE: Transact-SQL|  
-|シノニム|TABLE: CHECK 制約|  
-|TABLE: 照合順序|TABLE: 列 (計算列も含む)|  
-|TABLE: 制約、DEFAULT|TABLE: 制約、FOREIGN KEY|  
-|TABLE: 制約、INDEX|TABLE: 制約、PRIMARY KEY|  
-|TABLE: 制約、UNIQUE|TRIGGER: DML|  
-|TYPE: HIERARCHYID、GEOMETRY、GEOGRAPHY|TYPE: ユーザー定義データ型|  
-|TYPE: ユーザー定義テーブル型|USER|  
+|統計|ストアド プロシージャ:Transact-SQL|  
+|シノニム|テーブル:CHECK 制約|  
+|テーブル:[照合順序]|テーブル:計算列を含む列|  
+|テーブル:制約、Default|テーブル:制約、Foreign Key|  
+|テーブル:制約、インデックス|テーブル:制約、主キー|  
+|テーブル:制約、Unique|トリガー:DML|  
+|種類 :HIERARCHYID、GEOMETRY、GEOGRAPHY|種類 :ユーザー定義データ型|  
+|種類 :ユーザー定義テーブル型|User|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> SQL Server の各バージョンでのデータ層アプリケーション サポート  
@@ -82,38 +82,38 @@ ms.locfileid: "48209392"
 ##  <a name="DeploymentLimitations"></a> データ配置の制限  
  SQL Server 2012 SP1 の DAC Framework データ配置エンジンには、忠実性に関してここで述べるような制限があることに注意してください。 制限が適用される DAC Framework 操作は、.dacpac ファイルの展開またはパブリッシュ、および .bacpac ファイルのインポートです。  
   
-1.  sql_variant 列内の特定の条件と基本データ型によるメタデータの消失。 影響を受ける場合は、  **"DAC Framework によって配置される場合、sql_variant 列内で使用される特定のデータ型の特定のプロパティは保持されません。"** という警告メッセージが表示されます。  
+1.  sql_variant 列内の特定の条件と基本データ型によるメタデータの消失。 影響を受ける場合に、次のメッセージで警告が表示されます。**DAC Framework によって配置される場合は、sql_variant 列内で使用される特定のデータ型の特定のプロパティは保持されません。**  
   
-    -   MONEY、SMALLMONEY、NUMERIC、DECIMAL の各基本データ型: 有効桁数は保持されません。  
+    -   MONEY、SMALLMONEY、NUMERIC、DECIMAL の基本型。有効桁数は保持されません。  
   
         -   有効桁数 38 桁の DECIMAL/NUMERIC 基本データ型: "TotalBytes" という sql_variant のメタデータは常に 21 に設定されます。  
   
-    -   すべてのテキスト基本データ型: データベースの既定の照合順序がすべてのテキストに適用されます。  
+    -   すべてのテキスト基本データ型:データベースの既定の照合順序は、すべてのテキストに適用されます。  
   
-    -   BINARY 基本データ型: 最大長プロパティは保持されません。  
+    -   BINARY 基本データ型:最大長プロパティは保持されません。  
   
-    -   TIME、DATETIMEOFFSET の各基本データ型: 有効桁数は常に 7 桁に設定されます。  
+    -   時間、DATETIMEOFFSET の基本型。有効桁数は 7 に常に設定されます。  
   
-2.  sql_variant 列内のデータの消失。 影響を受ける場合は、**"3 より大きなスケールを持つ sql_variant DATETIME2 列の値が DAC Framework によって配置されると、データが失われます。配置中、DATETIME2 値は 3 と等しいスケールに制限されます。"** という警告メッセージが表示されます。  
+2.  sql_variant 列内のデータの消失。 影響を受ける場合は、次のメッセージで警告が表示されます。**3 より大きなスケールを持つ sql_variant DATETIME2 列の値が DAC Framework によって配置される場合は、データの損失が割り当てなります。配置中、DATETIME2 値は 3 と等しいスケールに制限されます。"** という警告メッセージが表示されます。  
   
     -   スケールが 3 を超える DATETIME2 基本データ型: スケールが 3 に制限されます。  
   
-3.  sql_variant 列内で以下に述べる条件が成立すると、配置操作が失敗します。 影響を受ける場合は、  **"DAC Framework のデータ制限のため操作に失敗しました。"** というメッセージが表示されます。  
+3.  sql_variant 列内で以下に述べる条件が成立すると、配置操作が失敗します。 影響を受ける場合に、次のメッセージがダイアログ ボックスが表示されます。**DAC Framework のデータ制限のため操作に失敗しました。**  
   
-    -   DATETIME2、SMALLDATETIME、DATE の各基本データ型: 値が DATETIME の範囲外である場合 (年が 1753 未満であるなど)。  
+    -   DATETIME2、SMALLDATETIME、DATE の基本型。DATETIME の範囲外の値は、年は 1753 未満はなどです。  
   
     -   DECIMAL、NUMERIC の各基本データ型: 値の有効桁数が 28 を超える場合。  
   
 ##  <a name="Considerations"></a> 配置操作に関するその他の注意点  
  DAC Framework のデータ配置操作に関して次の点に注意してください。  
   
--   **抽出、エクスポート** - DAC Framework を使用してデータベースからパッケージを作成する操作 (たとえば、.dacpac ファイルの抽出や .bacpac ファイルのエクスポート) では、ここで述べた制限は適用されません。 パッケージのデータは、ソース データベースのデータを完全に忠実に再現しています。 ここで述べた条件のいずれかがパッケージに存在する場合、抽出およびエクスポート ログに、上で述べたメッセージによって問題の概要が記録されます。 これは、作成したパッケージが潜在的なデータ配置の問題を抱えていることをユーザーに警告するためです。 ログには、**"これらの制限は、DAC Framework によって作成された DAC パッケージに格納されたデータ型および値の忠実性には影響しません。DAC パッケージをデータベースに配置した結果のデータ型および値に対してのみ適用されます。" という概要メッセージも記録されます。影響を受けるデータと、この制限を回避する方法の詳細については、次を参照してください。** [このトピックの「](http://go.microsoft.com/fwlink/?LinkId=267086)します。  
+-   **抽出、エクスポート** - DAC Framework を使用してデータベースからパッケージを作成する操作 (たとえば、.dacpac ファイルの抽出や .bacpac ファイルのエクスポート) では、ここで述べた制限は適用されません。 パッケージのデータは、ソース データベースのデータを完全に忠実に再現しています。 ここで述べた条件のいずれかがパッケージに存在する場合、抽出およびエクスポート ログに、上で述べたメッセージによって問題の概要が記録されます。 これは、作成したパッケージが潜在的なデータ配置の問題を抱えていることをユーザーに警告するためです。 ユーザーは、ログに次の概要メッセージも表示されます。**これらの制限、データ型と、DAC Framework によって作成された DAC パッケージに格納されている値の忠実性には影響しませんデータ型とデータベースを DAC パッケージを配置した結果の値にのみ適用されます。影響を受けるデータと、この制限を回避する方法の詳細については、次を参照してください。** [このトピックの「](https://go.microsoft.com/fwlink/?LinkId=267086)します。  
   
 -   **配置、パブリッシュ、インポート** - DAC Framework を使用してパッケージをデータベースに配置する操作 (たとえば、.dacpac ファイルの配置またはパブリッシュ、.bacpac ファイルのインポート) では、ここで述べた制限が適用されます。 対象データベースに作成されるデータが、パッケージのデータを完全に忠実に再現していない可能性があります。 配置およびインポートのログには、問題が発生したすべてのインスタンスに関して、上記のメッセージが記録されます。 操作はエラーによってブロックされます (上記の分類 3 を参照)。しかし、他の警告では続行されます。  
   
-     この場合に影響を受けるデータおよび、配置、パブリッシュ、インポートの各操作時におけるこの制限の対処方法の詳細については、 [こちらのトピック](http://go.microsoft.com/fwlink/?LinkId=267087)を参照してください。  
+     この場合に影響を受けるデータおよび、配置、パブリッシュ、インポートの各操作時におけるこの制限の対処方法の詳細については、 [こちらのトピック](https://go.microsoft.com/fwlink/?LinkId=267087)を参照してください。  
   
--   **回避策** – 抽出およびエクスポート操作では、完全に忠実な BCP データ ファイルが .dacpac ファイルまたは .bacpac ファイルに書き出されます。 制限を回避するには、SQL Server の BCP.exe コマンド ライン ユーティリティを使用して、完全に忠実なデータを DAC パッケージから対象データベースに配置します。  
+-   **回避策** - 抽出およびエクスポート操作では、完全に忠実な BCP データ ファイルが .dacpac ファイルまたは .bacpac ファイルに書き出されます。 制限を回避するには、SQL Server の BCP.exe コマンド ライン ユーティリティを使用して、完全に忠実なデータを DAC パッケージから対象データベースに配置します。  
   
 ## <a name="see-also"></a>参照  
  [データ層アプリケーション](data-tier-applications.md)  

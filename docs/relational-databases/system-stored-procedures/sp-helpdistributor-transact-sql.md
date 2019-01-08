@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistributor_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a73e458f6ecdab249ea0aae1301dd2d5ee0e6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790271"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591396"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,43 +50,43 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@distributor=**] **'***ディストリビューター***'** 出力  
+ [  **@distributor=**] **'**_ディストリビューター_**'** 出力  
  ディストリビューターの名前です。 ディストリビューターは**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@distribdb=**] **'***distribdb***'** 出力  
+ [  **@distribdb=**] **'**_distribdb_**'** 出力  
  ディストリビューション データベースの名前を指定します。 *distribdb*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@directory=**] **'***ディレクトリ***'** 出力  
+ [  **@directory=**] **'**_ディレクトリ_**'** 出力  
  作業ディレクトリです。 *ディレクトリ*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@account=**] **'***アカウント***' 出力**  
+ [  **@account=**] **'**_アカウント_**' 出力**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントです。 *アカウント*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@min_distretention=**] *min_distretention * * * 出力**  
+ [  **@min_distretention=**] _min_distretention_**出力**  
  ディストリビューションの最小保有期間を時間単位で示します。 *min_distretention*は**int**、既定値は **-1**します。  
   
- [  **@max_distretention=**] *max_distretention * * * 出力**  
+ [  **@max_distretention=**] _max_distretention_**出力**  
  ディストリビューションの最大保有期間を時間単位で示します。 *max_distretention*は**int**、既定値は **-1**します。  
   
- [  **@history_retention=**] *history_retention * * * 出力**  
+ [  **@history_retention=**] _history_retention_**出力**  
  履歴の保有期間を時間単位で示します。 *history_retention*は**int**、既定値は **-1**します。  
   
- [  **@history_cleanupagent=**] **'***history_cleanupagent***' 出力**  
+ [  **@history_cleanupagent=**] **'**_history_cleanupagent_**' 出力**  
  履歴クリーンアップ エージェントの名前です。 *history_cleanupagent*は**nvarchar (100)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@distrib_cleanupagent =**] **'***distrib_cleanupagent***' 出力**  
+ [  **@distrib_cleanupagent =**] **'**_distrib_cleanupagent_**' 出力**  
  ディストリビューション クリーンアップ エージェントの名前です。 *distrib_cleanupagent*は**nvarchar (100)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_パブリッシャー_**'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
- [  **@local=**] **'***ローカル***'**  
+ [  **@local=**] **'**_ローカル_**'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカル サーバーの値を取得するかどうかを示します。 *ローカル*は**nvarchar (5)**、既定値は NULL です。  
   
- [  **@rpcsrvname=**] **'***rpcsrvname***' 出力**  
+ [  **@rpcsrvname=**] **'**_rpcsrvname_**' 出力**  
  リモート プロシージャ コールを実行するサーバーの名前です。 *rpcsrvname*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [ **@publisher_type**=] **'***publisher_type***' 出力**  
+ [ **@publisher_type**=] **'**_publisher_type_**' 出力**  
  パブリッシャーの種類です。 *publisher_type*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
 ## <a name="result-sets"></a>結果セット  

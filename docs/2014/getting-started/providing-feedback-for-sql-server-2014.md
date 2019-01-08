@@ -22,12 +22,12 @@ ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109902"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376744"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>SQL Server 2014 に関するフィードバックの送信
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 製品やドキュメントの改善にご協力いただき、ありがとうございます。 製品の機能やユーザー インターフェイスに関するご意見や不具合の報告を送信したり、ドキュメントに関するフィードバックを送信できます。また、エラー レポートや機能の使用状況のデータを分析できるように、[!INCLUDE[msCoName](../includes/msconame-md.md)] に自動的に送信することもできます。 このトピックでは、次の 3 つのフィードバック オプションについて説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48109902"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フィードバック ページにアクセスするには、さまざまな方法があります。  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フィードバックの [Web ページ](http://go.microsoft.com/fwlink/?linkid=34178)にアクセスします。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フィードバックの [Web ページ](https://go.microsoft.com/fwlink/?linkid=34178)にアクセスします。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、[ヘルプ] ツール バーの **[フィードバックの送信]** ボタンをクリックするか、**[コミュニティ]** メニューの [フィードバックの送信] をクリックします。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48109902"
   
 -   ユーティリティからヘルプにアクセスします。  
   
--   **[ツール]** メニューの [ユーザー設定] をクリックし、**[ツール バー]** タブで **[ヘルプ]** チェック ボックスを オンにします。  
+-   選択、**ヘルプ**チェック ボックスをオン、**ツールバー**のタブ、**ツール/カスタマイズしています.** コマンド。  
   
 ## <a name="automatic-error-and-usage-reporting"></a>エラーと使用状況レポートの自動送信  
  エラー報告や [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ソフトウェアと各種サービスの使用データを自動的に送信するための機能を有効にできます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] では、この情報を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の改善に役立てます。 すべての情報を機密情報として扱います。  

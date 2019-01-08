@@ -1,5 +1,5 @@
 ---
-title: SQL Server machine learning でリアルタイム スコアリング |Microsoft Docs
+title: リアルタイムのスコアリング sp_rxPredict ストアド プロシージャの SQL Server Machine Learning Services を使用します。
 description: Sp_rxPredict、SQL Server で R で記述された事前トレーニング済みモデルに対するデータの入力をスコア付けを使用して予測を生成します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713515"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645161"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>リアルタイムのスコアリングでは、SQL Server machine learning で sp_rxPredict
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -177,7 +177,7 @@ Sp を呼び出す\_rxPredict するとしては、他のストアド プロシ�
 
 バイナリ形式は、PREDICT 関数で使用されると同じであるために、前の例のモデルとデータ テーブルを使用できます。
 
-```SQL
+```sql
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], modifying
@@ -14,12 +13,12 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d5308b708e32a1e886aadc2c78d3f504c3a6640
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163572"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591846"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>既存のトレースの変更 (Transact-SQL)
   このトピックでは、ストアド プロシージャを使用して既存のトレースを変更する方法について説明します。  
@@ -47,9 +46,9 @@ ms.locfileid: "48163572"
     |OFF (**0**)|NULL|イベントはオフになります。 すべての列は消去されます。|  
     ||NOT NULL|指定されたイベントに対して列はオフになります。|  
   
-> [!IMPORTANT]  
->  通常のストアド プロシージャとは異なり、すべての [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ストアド プロシージャ (**sp_trace_* xx***) で、パラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートしていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
-  
+> [!IMPORTANT]
+>  通常のストアド プロシージャ、すべてのパラメーターとは異なり[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ストアド プロシージャ (<strong>sp_trace*xx*</strong>) は厳密に型指定されており、自動のデータ型の変換をサポートしていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
+
 ## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   

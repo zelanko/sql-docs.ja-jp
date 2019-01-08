@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 9: Defining Perspectives and Translations |Microsoft Docs'
+title: レッスン 9:Defining Perspectives and Translations |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edc7a43485acd7c0e2d1c4a914867d8de9d1bc19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094062"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362234"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9 : パースペクティブと翻訳の定義
+# <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9:パースペクティブと翻訳の定義
   このレッスンでは、パースペクティブと翻訳を定義する方法について学習します。 パースペクティブを定義すると、キューブの表示上の複雑さを軽減できます。翻訳を定義すると、ユーザーは希望する言語でキューブ メタデータを表示できます。  
   
 > [!NOTE]  
->  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](http://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  
+>  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](https://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  
   
  このレッスンの内容は次のとおりです。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48094062"
  この作業では、特定のメタデータの特定言語への翻訳を定義して表示します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 10: 管理ロールの定義](lesson-10-defining-administrative-roles.md)  
+ [レッスン 10:管理ロールの定義](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)   

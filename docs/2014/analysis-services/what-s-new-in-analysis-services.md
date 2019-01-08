@@ -11,12 +11,12 @@ ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6b59ae2bd1c9d21704d87289b604feefa326f1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33296b1b3d1935f0f716a6e411c23481ee0e2789
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054342"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356524"
 ---
 # <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>どのような&#39;s New in Analysis Services と Business Intelligence
   多次元のモデルに対する Power View レポートをサポートしている機能が追加の例外で[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]以前のリリースから変更されていません。  
@@ -26,18 +26,18 @@ ms.locfileid: "48054342"
 ## <a name="updates-to-design-tool-installation"></a>デザイン ツールのインストールに対する更新  
  以前は Business Intelligence Development Studio (BIDS) と呼ばれていた、ビジネス インテリジェンス用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (SSDT-BI) を使用して、Analysis Services モデル、Reporting Services レポート、および Integration Services パッケージを作成できます。 次の場所から SSDT-BI をダウンロードできます。  
   
--   [Visual Studio 2013 用 SSDT-BI をダウンロードします。](http://go.microsoft.com/fwlink/p/?LinkId=396526)  
+-   [Visual Studio 2013 用 SSDT-BI をダウンロードします。](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
--   [Visual Studio 2012 用 SSDT-BI をダウンロードします。](http://go.microsoft.com/fwlink/p/?LinkID=273673)  
+-   [Visual Studio 2012 用 SSDT-BI をダウンロードします。](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
  SSDT-BI または BIDS の以前のバージョンをコンピューターにインストールしていた場合は、新しいバージョンが以前のバージョンと共にサイド バイ サイドでインストールされます。 サーバーの特定のバージョンに関連付けられているプロジェクトとソリューションを変更できるように、1 台のワークステーションでデザイン ツールの新しいバージョンと以前のバージョンを実行することは一般的です。  
   
 > [!NOTE]  
->  SSDT の Visual Studio 2012 バージョンと Visual Studio 2013 バージョンを入手できるダウンロード サイトは複数存在します。 ほとんどのダウンロードには、BI プロジェクト テンプレートが含まれていません。 上記のリンクを使用すると、適切なバージョンを取得できます。 Business Intelligence のプロジェクト テンプレート フォルダーが表示されている場合は、SSDT-BI の正しいバージョンを使用していることを確認できます。 このフォルダーには、Analysis Services、Reporting Services、および Integration Services 用のプロジェクト テンプレートが格納されています。 SSDT-BI をインストールした方法によっては、SQL Server データベース用の追加のプロジェクト テンプレートも表示されることがあります。  
+>  SSDT の Visual Studio 2012 バージョンと Visual Studio 2013 バージョンを入手できるダウンロード サイトは複数存在します。 ほとんどのダウンロードには、BI プロジェクト テンプレートが含まれていません。 上記のリンクを使用すると、適切なバージョンを取得できます。 Business Intelligence プロジェクト テンプレート フォルダーを表示する場合、SSDT BI の正しいバージョンがあることがわかります。 このフォルダーには、Analysis Services、Reporting Services、および Integration Services 用のプロジェクト テンプレートが格納されています。 SSDT-BI をインストールした方法によっては、SQL Server データベース用の追加のプロジェクト テンプレートも表示されることがあります。  
   
  ![SSDT の新しいプロジェクト テンプレート](media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
   
-## <a name="features-recently-added-power-view-for-multidimensional-models"></a>最近追加された機能: 多次元モデルの Power View  
+## <a name="features-recently-added-power-view-for-multidimensional-models"></a>最近追加された機能:多次元モデルの Power View  
  多次元モデルに対応する Power View レポートを作成する機能は、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 Cumulative Update 4 で最初に導入されました。 多次元モデルの Power View 機能は、現在では製品の一部として [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] に含まれています。  
   
  **多次元モデルの power View レポート**  
@@ -48,6 +48,6 @@ ms.locfileid: "48054342"
   
  多次元モデルの power View での組み込みの Power View レポート機能を必要と[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SharePoint モード) では。 Power View の他のバージョン、特に Excel 2013 の Power View アドインは、多次元モデルをサポートしません。  
   
- 詳細についてを参照してください。[多次元モデルの Power View](http://msdn.microsoft.com/library/dn140246.aspx)します。  
+ 詳細についてを参照してください。[多次元モデルの Power View](https://msdn.microsoft.com/library/dn140246.aspx)します。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: R と Python (SQL Server Machine Learning) の埋め込みの NYC タクシーのデモ データとスクリプトのダウンロード |Microsoft Docs
+title: 埋め込みの R と Python の SQL Server Machine Learning の NYC タクシーのデモ データとスクリプトをダウンロードします。
 description: ニューヨーク市タクシーのサンプル データをダウンロードして、データベースの作成の手順です。 データは、SQL Server のストアド プロシージャおよび T-SQL 関数のスクリプトを埋め込む方法を示す SQL Server の Python および R 言語のチュートリアルで使用されます。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 25ac1b4884b0d12de9de59f44ba02ac9fec7e952
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701347"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645032"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC タクシーのデモ データの SQL Server の Python および R のチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事からパブリック データで構成されるサンプル データベースを設定する方法を説明します、[ニューヨーク市タクシーのデータセットとリムジン委員会](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)します。 このデータは、SQL server データベース内分析のためのいくつかの R と Python のチュートリアルで使用されます。 サンプル コードをすばやく実行するためには、データの代表的な 1% のサンプリングを作成しました。 システム データベースのバックアップ ファイルはわずか 90 MB、170万主データ テーブルの行を提供することです。
+この記事からパブリック データで構成されるサンプル データベースを設定する方法を説明します、[ニューヨーク市タクシーのデータセットとリムジン委員会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)します。 このデータは、SQL server データベース内分析のためのいくつかの R と Python のチュートリアルで使用されます。 サンプル コードをすばやく実行するためには、データの代表的な 1% のサンプリングを作成しました。 システム データベースのバックアップ ファイルはわずか 90 MB、170万主データ テーブルの行を提供することです。
 
 この手順を完了しておく[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)またはデータベースのバックアップ ファイルを復元して T-SQL クエリを実行できる他のツール。
 
@@ -57,7 +57,7 @@ ms.locfileid: "51701347"
 
 |**オブジェクト名です。**|**オブジェクトの種類**|**[説明]**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | [データベース] | データベースと 2 つのテーブルを作成します。<br /><br />dbo.nyctaxi_sample テーブル: メインの NYC タクシー データセットが含まれています。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルは、このテーブルに挿入されます。<br /><br />dbo.nyc_taxi_models テーブル: トレーニング済みの高度な分析モデルを保持するために使用します。|
+|**NYCTaxi_Sample** | [データベース] | データベースと 2 つのテーブルを作成します。<br /><br />dbo.nyctaxi_sample テーブル:メインの NYC タクシー データセットが含まれています。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルは、このテーブルに挿入されます。<br /><br />dbo.nyc_taxi_models テーブル:トレーニング済みの高度な分析モデルを保持するために使用します。|
 |**fnCalculateDistance** |スカラー値関数 (scalar-valued function) | 乗車と降車場所間の直線距離を計算します。 この関数が使用される[データ機能を作成](sqldev-create-data-features-using-t-sql.md)、[トレーニング、モデルを保存および](sqldev-train-and-save-a-model-using-t-sql.md)と[R モデルを運用する](sqldev-operationalize-the-model.md)。|
 |**fnEngineerFeatures** |テーブル値関数 (table-valued function) | モデルのトレーニング用の新しいデータ機能を作成します。 この関数で使用[データ機能を作成](sqldev-create-data-features-using-t-sql.md)と[R モデルを運用する](sqldev-operationalize-the-model.md)します。|
 
@@ -88,7 +88,7 @@ ms.locfileid: "51701347"
 
 3. データベース内では、 **nyctaxi_sample**データ セットを含むテーブル。 テーブルは、追加すると、セットベースの計算に対して最適化されている、[列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-overview.md)します。 テーブルの簡単な概要を生成するには、このステートメントを実行します。
 
-    ```SQL
+    ```sql
     SELECT DISTINCT [passenger_count]
         , ROUND (SUM ([fare_amount]),0) as TotalFares
         , ROUND (AVG ([fare_amount]),0) as AvgFares

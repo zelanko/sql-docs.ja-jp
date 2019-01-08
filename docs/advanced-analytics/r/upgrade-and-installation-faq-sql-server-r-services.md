@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning のアップグレードとインストールに関する FAQ |Microsoft Docs
+title: アップグレードとインストールよく寄せられる質問 (FAQ) - SQL Server Machine Learning サービス
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: dd92ba0e080da0dd8ed387ae0a9f3d431232c896
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712304"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432855"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning の R Server のアップグレードとインストールに関する FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "46712304"
 + いくつかの問題は、プレリリース版からのアップグレードでのみ発生します。 そのため、ことをバージョンとエディションを識別最初にこれらの注意事項を読む前にお勧めします。 バージョン情報を取得するには実行`@@VERSION`SQL Server Management Studio からのクエリでします。
 + 最新のリリースまたは最近のリリースで修正された問題を解決するのには、できるだけ早くサービス リリースにアップグレードします。
 
-**適用対象:** SQL Server 2016 R Services、SQL Server 2017 の Machine Learning Services (In-database)
+**適用対象:** SQL Server 2016 R Services、SQL Server 2017 Machine Learning サービス (データベース)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>要件と SQL Server 2016 の以前のバージョンに関する制限事項 
 

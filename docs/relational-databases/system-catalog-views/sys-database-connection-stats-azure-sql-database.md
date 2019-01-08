@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b395998b8c0408b264ab2ffe7fe7f3390405cf6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 801074dd7e82f5e1564564125486e0845e2303fb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676351"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589486"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "51676351"
 |**success_count**|**int**|成功した接続の数。|  
 |**total_failure_count**|**int**|失敗した接続の合計数。 これは、合計の**connection_failure_count**、 **terminated_connection_count**、および**throttled_connection_count**、デッドロック イベントは含まれません。|  
 |**connection_failure_count**|**int**|失敗したログインの数。|  
-|**terminated_connection_count**|**int**|***のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。***<br /><br /> 終了された接続の数。|  
-|**throttled_connection_count**|**int**|***のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。***<br /><br /> スロットルされた接続の数。|  
+|**terminated_connection_count**|**int**|**_のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。_**<br /><br /> 終了された接続の数。|  
+|**throttled_connection_count**|**int**|**_のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。_**<br /><br /> スロットルされた接続の数。|  
   
 ## <a name="remarks"></a>コメント  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51676351"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>間隔の start_time と end_time  
- イベントの発生時に、集計間隔にイベントが含まれている*で*または*後 * * * start_time** と*する前に * * * end_time** その間隔。 たとえば、`2012-10-30 19:25:00.0000000` に発生したイベントは、下に示す例では 2 つ目の間隔にのみ含まれます。  
+ イベントの発生時に、集計間隔にイベントが含まれている*で*または_後_**start_time**と_する前に_**end_time**その間隔。 たとえば、`2012-10-30 19:25:00.0000000` に発生したイベントは、下に示す例では 2 つ目の間隔にのみ含まれます。  
   
 ```  
   

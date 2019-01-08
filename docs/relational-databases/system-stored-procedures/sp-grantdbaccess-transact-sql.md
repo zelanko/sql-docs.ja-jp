@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be0252386717bb2e9cffcef45918a0dd85d06b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652951"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591556"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,10 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@loginame =** ]  **'* * * ログイン* **'** Windows ログイン、Windows グループの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいデータベースにマップされるログインユーザー。Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ログイン *; たとえば、 **\joeb**します。 既にデータベース内のユーザーにマップされているログインは指定できません。 *ログイン*は、 **sysname**、既定値はありません。  
+ [  **@loginame =** ] **'**_ログイン_ **'**  
+ 新しいデータベース ユーザーにマップされる Windows グループ、Windows ログイン、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。 Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ログイン*。 たとえば、 **\joeb**します。 既にデータベース内のユーザーにマップされているログインは指定できません。 *ログイン*は、 **sysname**、既定値はありません。  
   
- [  **@name_in_db=**] **'***name_in_db***'** **[出力]**  
+ [  **@name_in_db=**] **'**_name_in_db_**'** **[出力]**  
  新しいデータベース ユーザーの名前です。 *name_in_db* OUTPUT 変数のデータ型では、 **sysname**、および既定値は NULL です。 指定しない場合、*ログイン*使用されます。 値は null の場合、出力変数として指定されている場合**@name_in_db**に設定されている*ログイン*します。 *name_in_db*現在のデータベースに既に存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -60,7 +61,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  メンバーシップが必要です、 **db_owner**固定データベース ロール、または**db_accessadmin**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例では`CREATE USER`Windows ログインのデータベース ユーザーを追加する`Edmonds\LolanSo`現在のデータベースにします。 新しいユーザーの名前は `Lolan` です。 データベース ユーザーの作成には、この方法を使用することをお勧めします。  
+ 次の例では、`CREATE USER` を使用して、Windows ログイン `Edmonds\LolanSo` 用のデータベース ユーザーを現在のデータベースに追加します。 新しいユーザーの名前は `Lolan` です。 データベース ユーザーの作成には、この方法を使用することをお勧めします。  
   
 ```  
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  

@@ -1,5 +1,5 @@
 ---
-title: 'タスク 7: DQS クレンジング変換をデータ フローを追加する |Microsoft Docs'
+title: タスク 7:DQS クレンジング変換をデータ フローの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63af147462b9414bd85d0a301e908df4c774c7b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138202"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376874"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>タスク 7: DQS クレンジング変換をデータ フローに追加する
-  ここでは、DQS クレンジング変換をデータ フローに追加して、入力済みの仕入先データを DQS を使用してクレンジングします。 参照してください **[DQS クレンジング変換](http://msdn.microsoft.com/library/ee677619.aspx)** 変換の詳細についてはします。  
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>タスク 7:DQS クレンジング変換をデータ フローに追加する
+  ここでは、DQS クレンジング変換をデータ フローに追加して、入力済みの仕入先データを DQS を使用してクレンジングします。 参照してください **[DQS クレンジング変換](https://msdn.microsoft.com/library/ee677619.aspx)** 変換の詳細についてはします。  
   
 1.  右クリックして**DQS クレンジング**で、**データ フロー**タブをクリックし、をクリックして**の名前を変更**します。 型**Cleanse Supplier Data**、キーを押します**ENTER**します。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48138202"
 12. クリックして**OK**を閉じる、 **DQS クレンジング変換エディター**  ダイアログ ボックス。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 8: 条件分割変換を追加してクレンジング出力を分割する](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [タスク 8:クレンジングの出力を分割する条件分割変換を追加](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

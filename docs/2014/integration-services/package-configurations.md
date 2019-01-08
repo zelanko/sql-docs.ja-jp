@@ -22,15 +22,15 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 832cd038151c3816decbc17542c805ed7e161465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44b923f98a5e54f8907953d38bf42c37ca0968b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200922"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369504"
 ---
 # <a name="package-configurations"></a>[パッケージ構成]
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 実行時にプロパティの値を更新する際にパッケージ構成を提供します。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、プロパティの値を実行時に更新するためのパッケージ構成が用意されています。  
   
 > [!NOTE]  
 >  パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
@@ -45,7 +45,7 @@ ms.locfileid: "48200922"
   
 -   構成を使用すると、パッケージの柔軟性が高まります。 たとえば、構成を使用すると、プロパティ式に使用されている変数の値を更新できます。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 複数のパッケージの構成を XML ファイルなどを格納する方法をサポートしている、テーブル、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベース、および環境とパッケージ変数。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、XML ファイル、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース内のテーブル、および環境変数およびパッケージ変数など、パッケージ構成を格納するための複数の異なる方法がサポートされています。  
   
  それぞれの構成は、プロパティと値のペアで定義されます。 XML 構成ファイルと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成の種類には、複数の構成を含めることができます。  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48200922"
 ```  
   
 ### <a name="registry-entry"></a>レジストリ エントリ  
- レジストリ エントリを使用して構成を格納する場合は、既存のキーを使用するか、HKEY_CURRENT_USER で新しいキーを作成できます。 レジストリ キーを使用するには、という名前の値が必要です。`Value`します。 この値には、DWORD または文字列を指定できます。  
+ レジストリ エントリを使用して構成を格納する場合は、既存のキーを使用するか、HKEY_CURRENT_USER で新しいキーを作成できます。 使用するレジストリ キーには、`Value` という名前の値が必要です。 この値には、DWORD または文字列を指定できます。  
   
- 構成の種類として **[レジストリ エントリ]** を選択した場合は、[レジストリ エントリ] ボックスにレジストリ キーの名前を入力します。 形式は \<registry key> です。 HKEY_CURRENT_USER のルートにないレジストリ キーを使用する場合は、\<Registry key\registry key\\...> の形式を使用してキーを識別します。 たとえば、SSISPackages にある MyPackage キーを使用する次のように入力します。`SSISPackages\MyPackage`します。  
+ 構成の種類として **[レジストリ エントリ]** を選択した場合は、[レジストリ エントリ] ボックスにレジストリ キーの名前を入力します。 形式は \<registry key> です。 HKEY_CURRENT_USER のルートにないレジストリ キーを使用する場合は、\<Registry key\registry key\\...> の形式を使用してキーを識別します。 たとえば、SSISPackages にある MyPackage キーを使用する場合は、「`SSISPackages\MyPackage`」と入力します。  
   
 ### <a name="sql-server"></a>SQL Server  
  構成の種類として **[SQL Server]** を選択した場合は、構成を格納する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースへの接続を指定します。 構成は、既存のテーブルに保存することも、指定したデータベース内に新しいテーブルを作成して保存することもできます。  
@@ -145,7 +145,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  構成に指定される名前は、 **ConfigurationFilter** 列に格納されている値です。  
   
 ## <a name="direct-and-indirect-configurations"></a>直接構成および間接構成  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 直接および間接構成を提供します。 構成を直接指定した場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、構成アイテムとパッケージ オブジェクト プロパティとの間に直接リンクを作成します。 直接構成は、ソースの位置が変化しない場合に適しています。 たとえば、パッケージ内のすべての配置で同じファイル パスが必ず使用される場合は、XML 構成ファイルを指定できます。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、直接構成と間接構成があります。 構成を直接指定した場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、構成アイテムとパッケージ オブジェクト プロパティとの間に直接リンクを作成します。 直接構成は、ソースの位置が変化しない場合に適しています。 たとえば、パッケージ内のすべての配置で同じファイル パスが必ず使用される場合は、XML 構成ファイルを指定できます。  
   
  間接構成では、環境変数が使用されます。 構成設定を直接指定する代わりに、構成値を格納する環境変数が指定されます。 間接構成は、パッケージのそれぞれの配置に対して構成の位置が変更される可能性がある場合に適しています。  
   
@@ -154,10 +154,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   msdn.microsoft.com の技術記事「 [Integration Services パッケージ構成について](http://go.microsoft.com/fwlink/?LinkId=165643)」  
+-   msdn.microsoft.com の技術記事「 [Integration Services パッケージ構成について](https://go.microsoft.com/fwlink/?LinkId=165643)」  
   
--   www.mssqltips.com のブログ「 [コードでのパッケージの作成 – パッケージ構成](http://go.microsoft.com/fwlink/?LinkId=217663)」  
+-   ブログ エントリ「[コード - パッケージ構成でパッケージを作成する](https://go.microsoft.com/fwlink/?LinkId=217663)、www.sqlis.com にします。  
   
--   blogs.msdn.com のブログ「 [API サンプル – プログラムによるパッケージへの構成ファイルの追加](http://go.microsoft.com/fwlink/?LinkId=217664)」  
+-   ブログ エントリ「 [API のサンプル - がプログラムによって構成ファイル パッケージに追加](https://go.microsoft.com/fwlink/?LinkId=217664)、blogs.msdn.com します。  
   
   

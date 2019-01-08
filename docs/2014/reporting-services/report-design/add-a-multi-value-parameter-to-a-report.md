@@ -11,19 +11,19 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b22f958a0b4bb78e297e23665db36b8c16fe74e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074474"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363144"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>複数の値を持つパラメーターのレポートへの追加
   ユーザーがパラメーター値として複数の値を選択できるパラメーターをレポートに追加できます。  
   
- レポート URL に複数のパラメーター値を含めてレポートに渡すことができます。 URL の例では、複数値パラメーターを含むを参照してください。 [、レポート内で URL パラメーターを渡す](../pass-a-report-parameter-within-a-url.md)します。  
+ レポート URL に複数のパラメーター値を含めてレポートに渡すことができます。 複数の値を持つパラメーターを含む URL の例は、「 [URL 内でレポート パラメーターを渡す](../pass-a-report-parameter-within-a-url.md)」を参照してください。  
   
- 複数のパラメーター値をストアド プロシージャに渡す方法については、mssqltips.com の「 [SSRS レポートでの複数選択パラメーターの操作](http://go.microsoft.com/fwlink/?LinkId=321529) 」を参照してください。  
+ 複数のパラメーター値をストアド プロシージャに渡す方法については、mssqltips.com の「 [SSRS レポートでの複数選択パラメーターの操作](https://go.microsoft.com/fwlink/?LinkId=321529) 」を参照してください。  
   
 ### <a name="to-add-a-multi-value-parameter"></a>複数の値を持つパラメーターを追加するには  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48074474"
     ```  
   
     > [!IMPORTANT]  
-    >  上で示したのとは違って変数をかっこで囲まなかった場合、レポートは出力されず、"スカラー変数を宣言してください" という趣旨のエラーが表示されます。  
+    >  上記のように、変数をかっこを含めないでください、レポートを表示するために失敗し、「スカラー変数を宣言する必要があります」というエラーが表示されます。  
   
      埋め込みデータセットまたは共有データセットのデータセット パラメーターは、クエリ変数に対して自動的に作成されます。 レポート パラメーターは、データセット パラメーターに対して自動的に作成されます。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48074474"
     ```  
   
     > [!IMPORTANT]  
-    >  上で示したのとは違って変数をかっこで囲まなかった場合、レポートは出力されず、"スカラー変数を宣言してください" という趣旨のエラーが表示されます。  
+    >  上記のように、変数をかっこを含めないでください、レポートを表示するために失敗し、「スカラー変数を宣言する必要があります」というエラーが表示されます。  
   
      埋め込みデータセットまたは共有データセットのデータセット パラメーターは、クエリ変数に対して自動的に作成されます。 レポート パラメーターは、データセット パラメーターに対して自動的に作成されます。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48074474"
      詳細については、「[レポート パラメーターの値の追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [カスケード型パラメーターをレポートに追加&#40;レポート ビルダーおよび SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [レポート パラメーターを追加、変更、削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

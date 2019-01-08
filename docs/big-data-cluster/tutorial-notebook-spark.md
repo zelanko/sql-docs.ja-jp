@@ -1,20 +1,22 @@
 ---
-title: SQL Server 2019 ビッグ データ クラスター上のサンプルの notebook の実行 |Microsoft Docs
+title: サンプルの notebook の実行 |Microsoft Docs
+titleSuffix: SQL Server 2019 big data clusters
 description: このチュートリアルを読み込む方法、実行、SQL Server 2019 ビッグ データ クラスター (プレビュー) のサンプルの Spark notebook を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 811c94615f0d69886f0f538357529ad3125e2925
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644236"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432555"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>チュートリアル: SQL Server 2019 ビッグ データ クラスター上のサンプルの notebook を実行します。
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>チュートリアル:SQL Server 2019 ビッグ データ クラスター上のサンプルの notebook を実行します。
 
 このチュートリアルでは、読み込みを SQL Server 2019 ビッグ データ クラスター (プレビュー) で Azure Data Studio で、notebook を実行する方法について説明します。 これにより、データ サイエンティストやデータ エンジニアは、Python、R、または Scala コードをクラスターに対して実行できます。
 
@@ -23,11 +25,11 @@ ms.locfileid: "49644236"
 
 ## <a id="prereqs"></a> 前提条件
 
-* [Kubernetes でのビッグ データ クラスター デプロイ](deployment-guidance.md)します。
-* [Azure Data Studio と SQL Server 2019 拡張機能をインストール](deploy-big-data-tools.md)します。
-* [クラスターにサンプル データを読み込む](#sampledata)します。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [ビッグ データ ツール](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 の拡張機能**
+- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>サンプルのノートブック ファイルをダウンロードします。
 
@@ -47,7 +49,7 @@ ms.locfileid: "49644236"
 
 次の手順では、Azure Data Studio で、ノートブック ファイルを開く方法を示しています。
 
-1. Azure Data Studio、ビッグ データ クラスターの HDFS/Spark ゲートウェイに接続します。 詳細については、次を参照してください。 [HDFS/Spark ゲートウェイへの接続](deploy-big-data-tools.md#hdfs)します。
+1. Azure Data Studio、ビッグ データ クラスターの HDFS/Spark ゲートウェイに接続します。 詳細については、次を参照してください。 [HDFS/Spark ゲートウェイへの接続](connect-to-big-data-cluster.md#hdfs)します。
 
 1. HDFS/Spark ゲートウェイ接続をダブルクリックして、**サーバー**ウィンドウ。 選び**Notebook を開いて**します。
 

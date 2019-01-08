@@ -11,12 +11,12 @@ ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f12f91e51383607d9bbcb8dc8ce2807c71ee289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149832"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370164"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>クライアント アプリケーションからの接続 (Analysis Services)
   Analysis Services を初めて使用する場合は、このトピックの情報を参照し、一般的なツールとアプリケーションを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスに接続します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "48149832"
   
 -   [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [オブジェクトと操作へのアクセスの承認&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> SQL Server Management Studio (SSMS) による接続  
  サーバー インスタンスとデータベースを対話操作で管理するには、SSMS で Analysis Services に接続します。 また、XMLA クエリや MDX クエリを実行して、管理タスクの実行またはデータの取得を行うこともできます。 クエリの送信時にのみデータベースを読み込むツールやアプリケーションとは異なり、SSMS では、ユーザーがサーバーに接続すると、すべてのデータベースが読み込まれます (データベースを表示する権限がユーザーにある場合)。 これは、サーバー上に多数のテーブル データベースがある場合、SSMS を使用して接続するとすべてのデータベースがシステム メモリに読み込まれることを表します。  
@@ -50,7 +50,7 @@ ms.locfileid: "48149832"
   
      名前付きインスタンスの場合は、servername\instancename の形式でサーバー名を指定する必要があります。 たとえば、サーバーのネットワーク名が ADV-SRV062 で、Finance という名前付きインスタンスとして Analysis Services がインストールされている場合、「ADV-SRV062\Finance」と入力します。  
   
-     フェールオーバー クラスター内に配置したサーバーの場合は、SSAS クラスターのネットワーク名を使用して接続します。 この名前は、SQL Server のセットアップ時に、 **[SQL Server のネットワーク名]** として指定されます。 Windows Server フェールオーバー クラスター (WSFC) に、名前付きインスタンスとして SSAS をインストールした場合、接続時にインスタンス名を追加することはできません。 これは SSAS 独自の処理です。これとは対照的に、クラスター化されたリレーショナル データベース エンジンの名前付きインスタンスには、インスタンス名が含まれています。 たとえば、SSAS とデータベース エンジンの両方を名前付きインスタンス (Contoso-Accounting) として、SQL-CLU という SQL Server のネットワーク名を使用してインストールした場合、"SQL-CLU" を使って SSAS に接続し、"SQL-CLU\Contoso-Accounting" というデータベース エンジンに接続することになります。 詳細と例については、「 [SQL Server Analysis Services をクラスター化する方法](http://go.microsoft.com/fwlink/p/?LinkId=396548) 」を参照してください。  
+     フェールオーバー クラスター内に配置したサーバーの場合は、SSAS クラスターのネットワーク名を使用して接続します。 この名前は、SQL Server のセットアップ時に、 **[SQL Server のネットワーク名]** として指定されます。 Windows Server フェールオーバー クラスター (WSFC) に、名前付きインスタンスとして SSAS をインストールした場合、接続時にインスタンス名を追加することはできません。 これは SSAS 独自の処理です。これとは対照的に、クラスター化されたリレーショナル データベース エンジンの名前付きインスタンスには、インスタンス名が含まれています。 たとえば、SSAS とデータベース エンジンの両方を名前付きインスタンス (Contoso-Accounting) として、SQL-CLU という SQL Server のネットワーク名を使用してインストールした場合、"SQL-CLU" を使って SSAS に接続し、"SQL-CLU\Contoso-Accounting" というデータベース エンジンに接続することになります。 詳細と例については、「 [SQL Server Analysis Services をクラスター化する方法](https://go.microsoft.com/fwlink/p/?LinkId=396548) 」を参照してください。  
   
      ネットワーク負荷分散クラスター内に配置したサーバーの場合は、NLB の仮想サーバー名を使用して接続します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48149832"
   
      **[なし]** を選択することは避けてください。 Analysis Services では、接続先のサーバーが HTTP アクセス用に構成されていないと、ユーザー名とパスワードを接続文字列に指定できません。 同様に、Analysis Services データベースに対するユーザー アクセス権を持った一連の Windows ユーザーの資格情報に SSS ターゲット アプリケーション ID がマップされていることがわかっている場合を除き、SSS は使用しないでください。 既定のオプションは Windows 認証であり、Excel から Analysis Services に接続するほとんどのシナリオに最適な選択肢です。  
   
- 詳細については、「 [SQL Server Analysis Services のデータに接続する、または SQL Server Analysis Services のデータをインポートする](http://go.microsoft.com/fwlink/?linkID=215150)」を参照してください。  
+ 詳細については、「 [SQL Server Analysis Services のデータに接続する、または SQL Server Analysis Services のデータをインポートする](https://go.microsoft.com/fwlink/?linkID=215150)」を参照してください。  
   
 ##  <a name="bkmk_SSDT"></a> SQL Server Data Tools による接続  
  SQL Server Data Tools は、Analysis Services モデル、Reporting Services レポート、SSIS パッケージを含む BI ソリューションを構築するために使用します。 レポートまたはパッケージを構築する際に、Analysis Services への接続を指定する必要が生じる場合があります。  
@@ -106,7 +106,7 @@ ms.locfileid: "48149832"
   
 1.  Analysis Services インスタンスで **SQL Server Profiler** を開始し、新しいトレースを開始します。  
   
-2.  イベントの選択 であることを確認`Audit Login`と`Audit Logout`Security Audit セクションでチェックされます。  
+2.  [イベントの選択] で、[Security Audit] セクションの [`Audit Login`] および [`Audit Logout`] のチェック ボックスがオンになっていることを確認します。  
   
 3.  リモート クライアント コンピューターから、アプリケーション サービス (SharePoint、Reporting Services など) を介して Analysis Services に接続します。 Audit Login イベントに、Analysis Services に接続しているユーザーの ID が表示されます。  
   
@@ -126,12 +126,12 @@ ms.locfileid: "48149832"
   
  接続エラーの解決に役立つリソースは次のとおりです。  
   
- 「[SQL Server 2005 Analysis Services の接続シナリオにおける一般的な接続の問題の解決](http://technet.microsoft.com/library/cc917670.aspx)」 このドキュメントは数年前のものですが、記載されている情報と手法はそのまま適用されます。  
+ 「[SQL Server 2005 Analysis Services の接続シナリオにおける一般的な接続の問題の解決](https://technet.microsoft.com/library/cc917670.aspx)」 このドキュメントは数年前のものですが、記載されている情報と手法はそのまま適用されます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services への接続します。](connect-to-analysis-services.md)   
+ [Analysis Services への接続](connect-to-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](authentication-methodologies-supported-by-analysis-services.md)   
- [権限借用&#40;SSAS 表形式&#41;](../tabular-models/impersonation-ssas-tabular.md)   
- [データ ソースを作成する&#40;SSAS 多次元&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [権限借用 &#40;SSAS テーブル&#41;](../tabular-models/impersonation-ssas-tabular.md)   
+ [データ ソースの作成 &#40;SSAS 多次元&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

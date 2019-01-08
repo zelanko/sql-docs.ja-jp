@@ -1,5 +1,5 @@
 ---
-title: 'タスク 9: 参照データ サービスの構成 |Microsoft Docs'
+title: タスク 9:参照データ サービスの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23832b226bb9408ab4e5b2fbb50718e1ead710b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f40aebd3d6f1b6b9b6c7580845f6d80da9eedbc6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217292"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373824"
 ---
-# <a name="task-9-configuring-a-reference-data-service"></a>タスク 9: 参照データ サービスを構成する
-  ここでは、Windows Azure Marketplace の参照データ サービスを使用するように DQS を構成します。 次のタスクでは、構成、 **Address Validation**ドメインをこのサービスを使用します。 実行時に、クレンジング アクティビティ中に DQS 渡します内のドメインの値、 **Address Validation**ドメインをクレンジングするためのサービスです。 参照してください[Configure DQS to Use Reference Data](http://msdn.microsoft.com/library/hh213070.aspx)の詳細。  
+# <a name="task-9-configuring-a-reference-data-service"></a>タスク 9:参照データ サービスを構成する
+  ここでは、Windows Azure Marketplace の参照データ サービスを使用するように DQS を構成します。 次のタスクでは、構成、 **Address Validation**ドメインをこのサービスを使用します。 実行時に、クレンジング アクティビティ中に DQS 渡します内のドメインの値、 **Address Validation**ドメインをクレンジングするためのサービスです。 参照してください[Configure DQS to Use Reference Data](https://msdn.microsoft.com/library/hh213070.aspx)の詳細。  
   
 1.  メイン ページで**DQS クライアント**の**管理**ウィンドウで、をクリックして**構成**します。  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48217292"
 7.  クリックして**閉じる**DQS クライアントのメイン ページに移動するページの下部にあります。  
   
 ## <a name="next-task"></a>次の作業  
- [タスク 10: 参照データ サービスを使用して複合ドメインを構成する](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
+ [タスク 10:参照データ サービスを使用する複合ドメインの構成](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
   
   

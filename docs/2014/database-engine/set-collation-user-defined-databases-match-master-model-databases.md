@@ -12,12 +12,12 @@ ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6aea5507c008d608b7fcc9e50c7defcdff90924d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190402"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371084"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定
   このルールでは、ユーザー定義データベースの定義に使用されたデータベース照合順序と master または model の照合順序が一致しているかどうかを確認します。  
@@ -48,9 +48,9 @@ ms.locfileid: "48190402"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [マイクロソフト サポート技術情報の記事 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [マイクロソフト サポート技術情報の記事 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [方法: コマンド プロンプトから SQL Server 2008 のインストール](http://go.microsoft.com/fwlink/?LinkId=81585)  
+ [操作方法：コマンド プロンプトから SQL Server 2008 をインストールします。](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning Services での Python 拡張機能 |Microsoft Docs
-description: Python コードが実行され、SQL Server での組み込みの Python ライブラリについて説明します。
+title: Python プログラミング言語の拡張機能 - SQL Server Machine Learning
+description: Python コードが実行され、SQL Server 2017 Machine Learning Services での組み込みの Python ライブラリについて説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24d34ee2ca9220ca1569ea83bcb092030d1ef692
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 6bbce3d58f016b26618413ef0647995d0914a237
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892882"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432326"
 ---
-# <a name="python-extension-in-sql-server"></a>SQL Server での Python 拡張機能
+# <a name="python-language-extension-in-sql-server"></a>SQL Server での Python 言語の拡張機能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python 拡張機能は、SQL Server Machine Learning サービスにアドオンをリレーショナル データベース エンジンの一部です。 Python 実行環境、python、Python 3.5 ランタイムとインタープリター、標準ライブラリとツール、および Microsoft 製品のライブラリでの Anaconda ディストリビューションを追加します: [revoscalepy](../python/what-is-revoscalepy.md)スケールと分析[microsoftml](../using-the-microsoftml-package.md)マシン学習アルゴリズムです。 
+Python 拡張機能は、SQL Server Machine Learning サービスにアドオンをリレーショナル データベース エンジンの一部です。 Python 実行環境、python、Python 3.5 ランタイムとインタープリター、標準ライブラリとツール、および Microsoft 製品のライブラリでの Anaconda ディストリビューションを追加します: [revoscalepy](../python/ref-py-revoscalepy.md)スケールと分析[microsoftml](../python/ref-py-microsoftml.md)マシン学習アルゴリズムです。 
 
 として Python 統合がインストールされている[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)します。
 
@@ -28,7 +28,7 @@ Python 3.5 ランタイムおよびインタープリターのインストール
 
 SQL Server には、オープン ソースの独自のパッケージが含まれています。 セットアップによってインストールされている Python ランタイムでは、Python 3.5 では、Anaconda 4.2 です。 Python ランタイムでは、SQL ツールとは別にインストールされているし、機能拡張フレームワークのコア エンジン プロセスの外部で実行されます。 Python を使用した Machine Learning サービスのインストールの一環として、GNU Public License の条項に同意する必要があります。 
 
-SQL Server では、Python の実行可能ファイルは変更しませんが、そのバージョンが独自のパッケージをビルドしてテストする 1 つであるために、セットアップによってインストールされている Python のバージョンを使用する必要があります。 Anaconda ディストリビューションでサポートされているパッケージの一覧は、Continuum analytics サイトを参照してください: [Anaconda パッケージ一覧](https://docs.continuum.io/anaconda/pkg-docs)します。
+SQL Server では、Python の実行可能ファイルは変更しませんが、そのバージョンが独自のパッケージをビルドしてテストする 1 つであるために、セットアップによってインストールされている Python のバージョンを使用する必要があります。 Anaconda ディストリビューションでサポートされているパッケージの一覧は、Continuum analytics サイトを参照してください。[パッケージ一覧の anaconda](https://docs.continuum.io/anaconda/packages/pkg-docs)します。
 
 特定のデータベース エンジンのインスタンスに関連付けられた Anaconda ディストリビューションは、インスタンスに関連付けられたフォルダーにあります。 Machine Learning サービスと Python の既定のインスタンスに SQL Server 2017 データベース エンジンをインストールした場合の検索など、`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`します。
 
@@ -36,8 +36,8 @@ SQL Server では、Python の実行可能ファイルは変更しませんが�
 
 | ライブラリ | 説明 |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | データ ソース オブジェクトとデータの探索、操作、変換、および視覚エフェクトをサポートしています。 など、さまざまなスケーラブルな機械学習モデルと同様に、リモート計算コンテキストの作成をサポート**rxLinMod**します。 同じである、 [ **RevoScaleR** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) Microsoft R 向けパッケージ |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 場合の速度と精度、最適化されているだけでなく行のテキストとイメージを操作するための変換を機械学習アルゴリズムが含まれています。 詳細については、次を参照してください。 [MicrosoftML パッケージを使用して、SQL Server で](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)します。 |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | データ ソース オブジェクトとデータの探索、操作、変換、および視覚エフェクトをサポートしています。 など、さまざまなスケーラブルな機械学習モデルと同様に、リモート計算コンテキストの作成をサポート**rxLinMod**します。 詳細については、次を参照してください。 [revoscalepy モジュールは、SQL Server と](../python/ref-py-revoscalepy.md)します。  |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 場合の速度と精度、最適化されているだけでなく行のテキストとイメージを操作するための変換を機械学習アルゴリズムが含まれています。 詳細については、次を参照してください。 [microsoftml モジュールは、SQL Server と](../python/ref-py-microsoftml.md)します。 |
 
 Microsoftml と revoscalepy を密に結合します。microsoftml で使用されるデータ ソースは、revoscalepy オブジェクトとして定義されます。 Microsoftml の revoscalepy 転送コンテキストの制限事項を計算します。 つまり、すべての機能はローカルの操作に使用できるが、RxInSqlServer リモート コンピューティング コンテキストへの切り替えが必要です。
 
@@ -76,7 +76,7 @@ SQL Server の「内部」Python を実行すると、特殊なストアド プ�
 ラップトップなどのリモート コンピューターから Python スクリプトを実行し、これらの条件が満たされる場合がある、SQl Server コンピューターのコンテキストで実行できます。
 
 + スクリプトを適切に設計します。
-+ リモート コンピューターには、Machine Learning サービスで使用される拡張機能ライブラリがインストールされているがします。 [Revoscalepy](../python/what-is-revoscalepy.md)パッケージは、リモート計算コンテキストを使用するために必要です。
++ リモート コンピューターには、Machine Learning サービスで使用される拡張機能ライブラリがインストールされているがします。 [Revoscalepy](../python/ref-py-revoscalepy.md)パッケージは、リモート計算コンテキストを使用するために必要です。
 
 次の図は、スクリプトがリモート コンピューターから送信されたときに、全体的なワークフローをまとめたものです。
 
@@ -94,6 +94,7 @@ SQL Server の「内部」Python を実行すると、特殊なストアド プ�
 
 ## <a name="see-also"></a>関連項目
 
-+ [Revoscalepy とは](../python/what-is-revoscalepy.md) 
++ [SQL Server で revoscalepy モジュール](../python/ref-py-revoscalepy.md)
++ [revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server の機能拡張フレームワーク](extensibility-framework.md)
 + [R と SQL Server の拡張機能の学習](extension-r.md)

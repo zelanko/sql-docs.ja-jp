@@ -1,5 +1,5 @@
 ---
-title: 管理し、SQL server machine learning ワークロードの統合 |Microsoft Docs
+title: 管理し、machine learning ワークロードの SQL Server Machine Learning Services の統合
 description: SQL Server のデータベース管理者として、machine learning のデータベース エンジンのインスタンス上の R と Python のサブシステムの展開の管理タスクを確認します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 63739faaa9cf254e754c9020502ee6b589435c1d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743207"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431829"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理し、SQL server machine learning ワークロードの統合
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

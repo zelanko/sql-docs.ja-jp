@@ -1,24 +1,23 @@
 ---
-title: '手順 1: レッスン 2 のパッケージのコピー | Microsoft Docs'
+title: 手順 1:レッスン 2 のパッケージのコピー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45a536e151432a2f2edbac55362af9ea2f2feb55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bcc6c331908f33df3b324ff7061b38065e36981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205552"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360890"
 ---
-# <a name="step-1-copying-the-lesson-2-package"></a>手順 1: レッスン 2 のパッケージのコピー
+# <a name="step-1-copying-the-lesson-2-package"></a>手順 1:レッスン 2 のパッケージのコピー
   ここでは、レッスン 2 で作成した Lesson 2.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 2 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 3 の実習では、このパッケージの新しいコピーを使用します。  
   
 ### <a name="to-create-the-lesson-3-package"></a>レッスン 3 のパッケージを作成するには  
@@ -49,11 +48,11 @@ ms.locfileid: "48205552"
   
 3.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]** で、 **[ファイル システム]** をクリックします。  
   
-4.  参照ボタン ( **[...]** ) をクリックし、コンピューター上の **Lesson 2.dtsx** に移動して、 **[開く]** をクリックします。  
+4.  参照ボタン **[...]** をクリックし、コンピューター上の **Lesson 2.dtsx** に移動して、**[開く]** をクリックします。  
   
      このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   
-    1.  「[Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48205552"
 5.  前の手順の手順 3 ～ 8 の説明に従って、レッスン 3 のパッケージをコピーして貼り付けます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 2: ログ機能の追加と設定](lesson-3-2-adding-and-configuring-logging.md)  
+ [手順 2:追加してログ記録の構成](lesson-3-2-adding-and-configuring-logging.md)  
   
   

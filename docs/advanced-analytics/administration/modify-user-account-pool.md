@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning Services での外部スクリプトの同時実行のスケーリング |Microsoft Docs
-description: SQL Server Machine Learning サービスをスケールするユーザー アカウント プールを変更する方法。
+title: 外部スクリプト - SQL Server Machine Learning Services のスケールの同時実行
+description: SQL Server Machine Learning サービスをスケールするユーザー アカウント プールや同時実行の並列 R と Python スクリプトの実行を構成します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc51f5034614de950f0c0f51b7a83425f1a30d3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419437"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596813"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での外部スクリプトの同時実行のスケール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,8 +21,6 @@ ms.locfileid: "49419437"
 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスによるタスクの実行をサポートするために、[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] のインストール プロセスの一部として、新しい Windows *"ユーザー アカウント プール"* が作成されました。 これらのワーカー アカウントの目的は、異なる SQL ユーザーによる外部スクリプトの同時実行を分離します。
 
 この記事では、既定の構成と容量をワーカー アカウントと SQL Server Machine Learning Services の外部スクリプトの同時実行の数をスケール調整する既定の構成を変更する方法について説明します。
-
-**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]、 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-account-group"></a>ワーカー アカウント グループ
 
@@ -53,7 +51,7 @@ ms.locfileid: "49419437"
 2. SQL Server スタート パッド サービスをダブルクリックし、サービスが実行されている場合は、サービスを停止します。
 3.  **[サービス]** タブで、[開始モード] が [自動] に設定されていることを確認します。 スタート パッドが実行されていない場合、外部スクリプトを開始できません。
 4.  **[詳細設定]** タブをクリックし、必要であれば、**[外部ユーザーの数]** の値を編集します。 この設定を制御異なる SQL ユーザーの数できます外部スクリプト実行セッションを同時にします。 既定では 20 個のアカウントです。 ユーザーの最大数は、100 です。
-5. パスワードを定期的に変更するポリシーが組織で実施されている場合は、オプションで、**[外部ユーザーのパスワードのリセット]** を _[はい]_ に設定できます。 これを行うと、ユーザー アカウントに対してスタート パッドが保持している暗号化パスワードが再生成されます。 詳しくは、「[パスワード ポリシーの実施](#bkmk_EnforcePolicy)」をご覧ください。
+5. パスワードを定期的に変更するポリシーが組織で実施されている場合は、オプションで、**[外部ユーザーのパスワードのリセット]** を _[はい]_ に設定できます。 これを行うと、ユーザー アカウントに対してスタート パッドが保持している暗号化パスワードが再生成されます。 詳しくは、「[パスワード ポリシーの実施](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy)」をご覧ください。
 6.  スタート パッド サービスを再起動します。
 
 ## <a name="managing-workloads"></a>ワークロードの管理
@@ -64,9 +62,11 @@ ms.locfileid: "49419437"
 
 次のようにサポートできますが、ワーカー アカウントの数と 1 人のユーザーが実行できる同時セッション数は、サーバーのリソースによってのみ制限されます。 通常、R ランタイムの使用時に遭遇する最初のボトルネックは、メモリです。
 
-Python または R スクリプトで使用できるリソースは、SQL Server によって管理されます。 SQL Server の DMV を使用してリソースの使用状況を監視するか、または関連する Windows ジョブ オブジェクトのパフォーマンス カウンターを見て、サーバー メモリの使用量を必要に応じて調整することをお勧めします。 SQL Server Enterprise Edition がある場合は、構成することで、外部スクリプトを実行するために使用されるリソースを割り当てることができます、[外部リソース プール](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)します。
+Python または R スクリプトで使用できるリソースは、SQL Server によって管理されます。 SQL Server の DMV を使用してリソースの使用状況を監視するか、または関連する Windows ジョブ オブジェクトのパフォーマンス カウンターを見て、サーバー メモリの使用量を必要に応じて調整することをお勧めします。 SQL Server Enterprise Edition がある場合は、構成することで、外部スクリプトを実行するために使用されるリソースを割り当てることができます、[外部リソース プール](how-to-create-a-resource-pool.md)します。
 
-マシンの管理の詳細について学習タスクの容量、これらの資料を参照します。
+## <a name="see-also"></a>関連項目
+
+容量を構成する方法の詳細については、次の記事を参照してください。
 
 - [R Services の SQL Server の構成](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 - [R Services のパフォーマンスのケース スタディ](../../advanced-analytics/r/performance-case-study-r-services.md)

@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d71677c8fa1908a4fba50f95769802061a0b0da2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187912"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360434"
 ---
 # <a name="define-attribute-relationships"></a>属性リレーションシップの定義
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、属性はディメンションの基本的な要素です。 ディメンションには、属性リレーションシップに基づいて構成される一連の属性が含まれます。  
@@ -35,12 +35,12 @@ ms.locfileid: "48187912"
 -   ユーザー定義階層がリレーションシップのパスに沿って定義されている場合、集計デザイン アルゴリズムによってより効果的な集計が選択されます。  
   
     > [!NOTE]  
-    >  属性リレーションシップの定義と構成の重要性および影響の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンス ガイド](http://go.microsoft.com/fwlink/?LinkId=81621)」の「クエリ パフォーマンスの向上」を参照してください。  
+    >  重要性および定義と構成の属性リレーションシップの影響の詳細についてを参照してください、セクション、「クエリ パフォーマンスの向上」、 [SQL Server 2005 Analysis Services パフォーマンス ガイド](https://go.microsoft.com/fwlink/?LinkId=81621)します。  
   
 ## <a name="attribute-relationship-considerations"></a>属性リレーションシップに関する注意点  
  基になるデータで属性リレーションシップがサポートされる場合、属性間で一意の属性リレーションシップを定義することも必要です。 一意の属性リレーションシップを定義するには、ディメンション デザイナーの **[属性リレーションシップ]** タブを使用します。  
   
- 基になるリレーションシップがある属性には、その関連属性を基準とした一意なキーが必要です。 つまり、基になる属性のメンバーによって、関連属性のメンバーが 1 つだけ識別される必要があります。 たとえば、市区町村 -> 都道府県のリレーションシップを考えてみます。 このリレーションシップでは、基になる属性が市区町村、関連属性が都道府県です。 多対一のリレーションシップの "多" に当たるのが基になる属性で、"一" に当たるのが関連属性です。 基になる属性のキーは、市区町村 + 都道府県です。 詳細については、「 [属性リレーションシップの作成、変更、または削除](attribute-relationships-create-modify-or-delete-relationship.md)」を参照してください。  
+ 基になるリレーションシップがある属性には、その関連属性を基準とした一意なキーが必要です。 つまり、基になる属性のメンバーによって、関連属性のメンバーが 1 つだけ識別される必要があります。 たとえば、市区町村 -> 都道府県のリレーションシップを考えてみます。 このリレーションシップでは、基になる属性が市区町村、関連属性が都道府県です。 基になる属性は、「多」側と多対一リレーションシップの「一」側が関連します。 基になる属性のキーは、市区町村 + 都道府県です。 詳細については、「 [属性リレーションシップの作成、変更、または削除](attribute-relationships-create-modify-or-delete-relationship.md)」を参照してください。  
   
  属性リレーションシップのプロパティの詳細については、「 [属性リレーションシップのプロパティの構成](attribute-relationships-configure-attribute-properties.md)」を参照してください。  
   
@@ -48,6 +48,6 @@ ms.locfileid: "48187912"
 >  属性リレーションシップを正しく定義しないと、クエリ結果が無効になる場合があります。  
   
 ## <a name="see-also"></a>参照  
- [属性リレーションシップ](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [のディメンション デザイナーの](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

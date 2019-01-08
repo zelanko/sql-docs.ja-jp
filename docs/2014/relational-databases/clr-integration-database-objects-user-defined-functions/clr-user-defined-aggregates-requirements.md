@@ -20,18 +20,18 @@ ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44aee43742fdc451012a9516249c0558b3ce0d35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129182"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376070"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>CLR ユーザー定義集計の要件
   CLR (共通言語ランタイム) アセンブリの型は、必要な集計コントラクトが実装されていれば、ユーザー定義集計関数として登録できます。 このコントラクトは、`SqlUserDefinedAggregate` 属性と集計コントラクトのメソッドで構成されます。 集計コントラクトには、集計の中間状態を保存するためのメカニズムと、`Init`、`Accumulate`、`Merge`、および `Terminate` の 4 つのメソッドで構成される新しい値を積算するメカニズムが含まれます。 これらの要件が満たされると、完全なユーザー定義集計で活用するためにできるは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 このトピックの次のセクションでは、ユーザー定義集計を作成し、そのユーザー定義集計を使用して作業する方法について詳しく説明します。 例については、次を参照してください。 [Invoking CLR User-Defined 集計関数](clr-user-defined-aggregate-invoking-functions.md)します。  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
- 詳細については、次を参照してください。 [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626)します。  
+ 詳細については、次を参照してください。 [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)します。  
   
 ## <a name="aggregation-methods"></a>集計のメソッド  
  ユーザー定義集計として登録するクラスでは、次のインスタンス メソッドをサポートする必要があります。 次に、集計を計算するためにクエリ プロセッサで使用されるメソッドを示します。  
@@ -52,7 +52,7 @@ ms.locfileid: "48129182"
 |---------------------|  
 |`Accumulate` メソッドの説明を更新しました。このメソッドは、現在は複数のパラメーターを受け取ります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR ユーザー定義型](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [CLR ユーザー定義集計関数の呼び出し](clr-user-defined-aggregate-invoking-functions.md)  
   

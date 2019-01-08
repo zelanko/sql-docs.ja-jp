@@ -1,5 +1,5 @@
 ---
-title: SQL Server での machine learning のリソース ガバナンス |Microsoft Docs
+title: R と Python スクリプトの実行 - SQL Server Machine Learning のリソース ガバナンス
 description: SQL Server データベース エンジンのインスタンス上の R と Python のワークロードの RAM メモリ、CPU、および IO を割り当てます。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76b6af9ccf6fc3c5a54f4cb8be3fe7068eb578b5
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 72883c8e5bc42ca7f149d17cff530bcf639bdf25
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100563"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431385"
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server での machine learning のリソース ガバナンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

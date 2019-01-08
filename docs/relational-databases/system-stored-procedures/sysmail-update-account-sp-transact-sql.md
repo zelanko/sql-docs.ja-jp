@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 035e206b68242316ed8a9299842920feb18dacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670470"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589950"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,41 +56,41 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@account_id** =] *account_id*  
  更新するアカウント ID を指定します。 *account_id*は**int**、既定値は NULL です。 少なくとも 1 つの*account_id*または*account_name*指定する必要があります。 両方が指定されると、プロシージャによってアカウントの名前が変更されます。  
   
- [ **@account_name** =] **'***account_name***'**  
+ [ **@account_name** =] **'**_account_name_**'**  
  更新するアカウントの名前を指定します。 *account_name*は**sysname**、既定値は NULL です。 少なくとも 1 つの*account_id*または*account_name*指定する必要があります。 両方が指定されると、プロシージャによってアカウントの名前が変更されます。  
   
- [ **@email_address** =] **'***email_address***'**  
+ [ **@email_address** =] **'**_email_address_**'**  
  メッセージ送信元の新しい電子メール アドレスを指定します。 このアドレスにはインターネット電子メール アドレスを指定する必要があります。 アドレスのサーバー名は、データベース メールがこのアカウントからメールを送信する場合に使用するサーバーです。 *email_address*は**nvarchar (128)**、既定値は NULL です。  
   
- [ **@display_name** =] **'***display_name***'**  
+ [ **@display_name** =] **'**_display_name_**'**  
  このアカウントから送信する電子メール メッセージの新しい表示名を指定します。 *display_name*は**nvarchar (128)**、既定値はありません。  
   
- [ **@replyto_address** =] **'***replyto_address***'**  
+ [ **@replyto_address** =] **'**_replyto_address_**'**  
  このアカウントから送信する電子メール メッセージの [返信先] ヘッダーで使用する新しいアドレスを指定します。 *replyto_address*は**nvarchar (128)**、既定値はありません。  
   
- [ **@description** =] **'***説明***'**  
+ [ **@description** =] **'**_説明_**'**  
  アカウントの新しい説明を指定します。 *説明*は**nvarchar (256)**、既定値は NULL です。  
   
- [ **@mailserver_name** =] **'***server_name***'**  
+ [ **@mailserver_name** =] **'**_server_name_**'**  
  このアカウントに使用する SMTP メール サーバーの新しい名前を指定します。 実行するコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解決できる必要があります、 *server_name* IP アドレス。 *server_name*は**sysname**、既定値はありません。  
   
- [ **@mailserver_type** =] **'***server_type***'**  
+ [ **@mailserver_type** =] **'**_server_type_**'**  
  メール サーバーの新しい種類を指定します。 *server_type*は**sysname**、既定値はありません。 値しか **'SMTP'** はサポートされています。  
   
  [ **@port** =] *port_number*  
  メール サーバーの新しいポート番号を指定します。 *port_number*は**int**、既定値はありません。  
   
- [ **@timeout** =] **'***タイムアウト***'**  
+ [ **@timeout** =] **'**_タイムアウト_**'**  
  単一の電子メール メッセージの SmtpClient.Send のタイムアウト パラメーターを指定します。 *タイムアウト*は**int** (秒) で、既定値はありません。  
   
- [ **@username** =] **'***username***'**  
+ [ **@username** =] **'**_username_**'**  
  メール サーバーへのログオンに使用する新しいユーザー名を指定します。 *ユーザー名*は**sysname**、既定値はありません。  
   
- [ **@password** =] **'***パスワード***'**  
+ [ **@password** =] **'**_パスワード_**'**  
  メール サーバーへのログオンに使用する新しいパスワードを指定します。 *パスワード*は**sysname**、既定値はありません。  
   
  [ **@use_default_credentials** =] use_default_credentials  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの資格情報を使用してメールを SMTP サーバーに送信するかどうかを指定します。 **use_default_credentials**ビットは、既定値はありません。 データベース メールでの資格情報を使用してこのパラメーターが 1 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 データベース メールを使用してこのパラメーターが 0 の場合、 **@username**と**@password** SMTP サーバーでの認証。 場合**@username**と**@password** NULL は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの資格情報を使用してメールを SMTP サーバーに送信するかどうかを指定します。 **use_default_credentials**ビットは、既定値はありません。 このパラメーターが 1 の場合、データベース メールでは[!INCLUDE[ssDE](../../includes/ssde-md.md)]の資格情報が使用されます。 データベース メールを使用してこのパラメーターが 0 の場合、 **@username**と**@password** SMTP サーバーでの認証。 場合**@username**と**@password** NULL は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。  
   
  [ **@enable_ssl** =] enable_ssl  
  データベース メールで SSL (Secure Sockets Layer) を使用して通信を暗号化するかどうかを指定します。 SMTP サーバーで SSL が必要な場合はこのオプションを使用します。 **enable_ssl**ビットは、既定値はありません。  
@@ -129,7 +129,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
 ```  
   
 ### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B. アカウントの名前とアカウントの情報を変更する  
- 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前が`Backup Mail Server`します。  
+ 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前は `Backup Mail Server` です。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

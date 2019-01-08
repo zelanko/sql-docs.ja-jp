@@ -17,12 +17,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209292"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368074"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>アップグレード アドバイザーを使用したアップグレードの準備
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アップグレード アドバイザーは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの準備に役立ちます。 アップグレード アドバイザーでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされたコンポーネントが分析され、アップグレードの前または後に修正する必要がある問題を示すレポートが生成されます。  
@@ -65,9 +65,9 @@ ms.locfileid: "48209292"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1、および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
   
--   Windows インストーラー 4.5 以降のバージョン。 Windows インストーラーをインストールすることができます、 [Windows インストーラー Web サイト](http://go.microsoft.com/fwlink/?LinkId=49112)します。  
+-   Windows インストーラー 4.5 以降のバージョン。 Windows インストーラーをインストールすることができます、 [Windows インストーラー Web サイト](https://go.microsoft.com/fwlink/?LinkId=49112)します。  
   
--   Microsoft .NET Framework 4。 .NET framework 4 がで使用できる、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、製品メディアとの間、 [.NET Framework 4 ダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=209895)します。  
+-   Microsoft .NET Framework 4。 .NET framework 4 がで使用できる、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、製品メディアとの間、 [.NET Framework 4 ダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=209895)します。  
   
     -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 \Redist フォルダーをダブルクリック、DotNetFrameworks フォルダーをダブルクリックし、dotNetFx40_Full_x86_x64.exe (32 ビット オペレーティング システムまたは 64 ビットのオペレーティング システム用) を実行します。  
   

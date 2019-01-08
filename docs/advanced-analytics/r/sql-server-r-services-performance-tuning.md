@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services のパフォーマンス チューニング | Microsoft Docs
+title: SQL Server R Services のパフォーマンス チューニング - SQL Server Machine Learning サービス
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f8f70f4f2436d30ad4a4c5083f7a6ad5a06777af
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 9e43e65fc175844c5b08dbd8c435c0854397ce3e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217557"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432295"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server で R のパフォーマンス チューニング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,11 +83,11 @@ SQL Server 2017 では将来的に実行する追加の言語で同じのアー�
 
 ## <a name="articles-in-this-series"></a>このシリーズの記事
 
-+ [SQL Server のハードウェアでの R のパフォーマンス チューニング](..\r\sql-server-configuration-r-services.md)
++ [SQL Server のハードウェアでの R のパフォーマンス チューニング](../r/sql-server-configuration-r-services.md)
 
-    ハードウェアを構成するためのガイダンスを提供する[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]と外部スクリプトのサポートを強化する SQL Server インスタンスを構成するためがインストールされています。 これは特に役立ちます**データベース管理者**します。
+    ハードウェアを構成するためのガイダンスを提供する[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]と外部スクリプトのサポートを強化する SQL Server インスタンスを構成するためがインストールされています。 これは特に役立ちます**データベース管理者**します。
 
-+ [SQL Server のコードとデータでの R のパフォーマンス チューニングの最適化](..\r\r-and-data-optimization-r-services.md)
++ [SQL Server のコードとデータでの R のパフォーマンス チューニングの最適化](../r/r-and-data-optimization-r-services.md)
 
     既知の問題を回避するために外部のスクリプトを最適化する方法についての特別なヒントを提供します。 これが最も役に立つ**データ サイエンティスト**します。
 
@@ -95,6 +95,6 @@ SQL Server 2017 では将来的に実行する追加の言語で同じのアー�
     > R、一般にはこのセクションの情報の多くは、いくつかの情報は、RevoScaleR 分析関数に固有です。 詳細なパフォーマンスのガイダンスは利用できません**revoscalepy**し、その他の Python ライブラリがサポートされています。
     >
 
-+ [SQL Server - メソッドと結果での R のパフォーマンス チューニング](..\r\performance-case-study-r-services.md)
++ [SQL Server - メソッドと結果での R のパフォーマンス チューニング](../r/performance-case-study-r-services.md)
 
     まとめたものです、2 つのケース スタディ、パフォーマンスのテスト方法と、最適化が結果に影響をどのようなデータが使用されます。

@@ -1,22 +1,22 @@
 ---
-title: SQL から Java を呼び出す方法 |Microsoft Docs
+title: SQL - SQL Server Machine Learning サービスから Java を呼び出す方法
 description: Java のクラスを Java プログラミング言語の拡張機能で SQL Server 2019 を使用して SQL Server のストアド プロシージャから呼び出す方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08af5a18b827c783515ecd3b4ba4a802c3472f93
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715259"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644761"
 ---
-# <a name="how-to-call-java-from-sql-server-2019"></a>SQL Server 2019 から Java を呼び出す方法
+# <a name="how-to-call-java-from-sql-server-2019-preview"></a>SQL Server 2019 プレビューから Java を呼び出す方法
 
 使用する場合、 [Java 言語の拡張機能](extension-java.md)、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)システム ストアド プロシージャは、Java ランタイムを呼び出すために使用するインターフェイス。 Java でコードが実行に、データベースに対するアクセス許可が適用されます。
 
@@ -33,7 +33,7 @@ ms.locfileid: "46715259"
 * Java クラスにパラメーターを渡す"params"が使用されます。 引数を必要とするメソッドを呼び出すことはサポートされていません、パラメーター、メソッドに引数の値を渡す唯一の方法を使用します。 
 
 > [!Note]
-> この注は、CTP 2.0 での Java に固有のサポートされているとサポートされていない操作を言い換えます。
+> この注の CTP では Java に固有の操作をサポートされているとサポートされていないように換言 2.x。
 > * ストアド プロシージャでは、入力パラメーターがサポートされます。 出力パラメーターはありません。
 > * Sp_execute_external_script パラメーターを使用してストリーミング**@r_rowsPerRead**はサポートされていません。
 > * 使用してパーティション分割**@input_data_1_partition_by_columns**はサポートされていません。
@@ -41,7 +41,7 @@ ms.locfileid: "46715259"
 
 ## <a name="call-spexecuteexternalscript"></a>Sp_execute_external_script を呼び出し
 
-[Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)システム ストアド プロシージャは、Java ランタイムを呼び出すために使用するインターフェイス。 次の例では、パス、スクリプト、およびカスタム コードを指定するための Java の拡張機能、およびパラメーターを使用して、sp_execute_external_script を示します。
+Windows と Linux の両方に適用可能な[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)システム ストアド プロシージャは、Java ランタイムを呼び出すために使用するインターフェイス。 次の例では、パス、スクリプト、およびカスタム コードを指定するための Java の拡張機能、およびパラメーターを使用して、sp_execute_external_script を示します。
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -65,14 +65,14 @@ EXEC sp_execute_external_script
 
 Java クラスまたはクラスをコンパイルし、.class ファイルまたは .jar ファイルを Java classpath に配置されますが、SQL Server の Java の機能拡張するためのクラスパスに提供するための 2 つのオプションがあります。
 
-**オプション 1: をパラメーターとして渡す**
+**オプション 1:パラメーターとして渡す**
 
 コンパイル済みコードへのパスを指定する方法の 1 つは、sp_execute_external_script プロシージャへの入力パラメーターとしてクラスパスを設定することです。 [Java サンプル](java-first-sample.md#call-method)この手法を実証します。 場合は、この方法を選択し、パスが複数ある、基になるオペレーティング システムに対して有効なパスの区切り文字を使用することを確認します。
 
 * Linux では、コロン、クラスパス内のパスを区切ります。":"です。
 * Windows、セミコロンでクラスパス内のパスを区切ります";"。
 
-**オプション 2: システム変数を登録します。**
+**オプション 2:システム変数を登録します。**
 
 JDK の実行可能ファイルのシステム変数を作成したのと同様に、コード パスのシステム変数を作成できます。 "CLASSPATH"と呼ばれるシステム環境変数を作成してこれを行う
 
@@ -152,6 +152,8 @@ Null のマップは、null 値を示すために、拡張機能によって使�
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## <a name="next-steps"></a>次の手順
 

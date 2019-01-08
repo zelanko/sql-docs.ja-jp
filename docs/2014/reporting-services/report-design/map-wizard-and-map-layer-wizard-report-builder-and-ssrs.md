@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072326"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362914"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
   マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -30,9 +30,9 @@ ms.locfileid: "49072326"
   
  マップをレポートに追加したりマップ レイヤーをマップに追加したりするには、次の情報を事前に用意しておく必要があります。  
   
--   **空間データ ソース :** 空間データを提供するソースの場所またはソースへの接続です。たとえば、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前と空間データを格納しているデータベース、または Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。  
+-   **空間データ ソース :** 空間データを提供するソースの場所またはソースへの接続です。たとえば、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前と空間データを格納しているデータベース、または Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。  
   
--   **空間データとして提供しているサードパーティのサイト。** 位置を指定する座標セットを格納している空間データ ソースのフィールドです。  
+-   **Spatial data.** 位置を指定する座標セットを格納している空間データ ソースのフィールドです。  
   
 -   **分析データ :** さまざまなマップ表示を行うために使用する分析データ (たとえば、店舗の年間売上) です。  
   
@@ -79,11 +79,11 @@ ms.locfileid: "49072326"
   
     -   [基本マップ、バブル マップ、および分析マップの違い](#MapType)  
   
-    -   **マップの視覚エフェクトの選択: 多角形**  
+    -   **マップの視覚エフェクトを選択します。多角形**  
   
-    -   **マップの視覚エフェクトの選択: 線**  
+    -   **マップの視覚エフェクトを選択します。行**  
   
-    -   **マップの視覚エフェクトの選択: ポイント**  
+    -   **マップの視覚エフェクトを選択します。ポイント**  
   
 4.  **[データ ソースへの接続の選択]**: マップに表示する分析データが含まれている外部データ ソースへのデータ ソース接続を選択するか作成します。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "49072326"
   
  マップまたはマップ レイヤーを追加してレポートをプレビューした後、ウィザードで設定したマップ オプションおよびマップ レイヤー オプションを変更できます。 詳細については、「[マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
- マップに関する詳細については、「 [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)をクリックします。 マップをレポートに追加する手順については、「[チュートリアル: マップ レポート (レポート ビルダー)](../tutorial-map-report-report-builder.md)」を参照してください。  
+ マップに関する詳細については、「 [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)をクリックします。 マップをレポートに追加する手順については、次を参照してください。[チュートリアル。マップ レポート&#40;レポート ビルダー&#41;](../tutorial-map-report-report-builder.md)します。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
@@ -139,7 +139,7 @@ ms.locfileid: "49072326"
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで、.shp ファイルと .dbf ファイルの両方をレポート プロジェクトに追加し、空間データ ソースとして .shp ファイルの名前を指定します。  
   
 ###  <a name="GetShapefiles"></a> ESRI シェープファイルを取得できる場所  
- ESRI シェープファイルは Web 上で入手できます。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](http://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
+ ESRI シェープファイルは Web 上で入手できます。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](https://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
   
 ###  <a name="SqlServerSpatial"></a> SQL Server 空間クエリとは  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 空間クエリは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リレーショナル データベースの SQLGeometry データ型または SQLGeography データ型のデータを指定するデータセット クエリです。  
@@ -149,7 +149,7 @@ ms.locfileid: "49072326"
   
  クエリ デザイナーでクエリを実行すると、空間データをテキストとして含む列が結果セットに表示されます。 たとえば、ある行には、単独のポイントである空間データが含まれ、次の行には、ポイントのセットを定義する空間データが含まれます。 それぞれの行が 1 つのマップ要素となります。 それぞれのマップ要素の表示は、分割不可能な単位として変更することができます。  
   
- 詳細については、 [SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=120955)の「空間データの型」を参照してください。  
+ 詳細については、 [SQL Server オンライン ブック](https://go.microsoft.com/fwlink/?linkid=120955)の「空間データの型」を参照してください。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
@@ -196,9 +196,9 @@ ms.locfileid: "49072326"
   
 -   **[ハイブリッド] :** **[道路]** ビューと **[航空写真]** ビューの組み合わせを表示します。  
   
- タイルの詳細については、「 [Bing Maps のタイル システム](http://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](http://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
+ タイルの詳細については、「 [Bing Maps のタイル システム](https://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
   
- デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、次を参照してください。[レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画で、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックの「します。  
+ デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、次を参照してください。[レポートのトラブルシューティング。マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画で、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックの「します。  
   
  タイル レイヤーをカスタマイズするためのその他の方法については、「[マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -271,8 +271,8 @@ ms.locfileid: "49072326"
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ## <a name="see-also"></a>参照  
- [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [マップ レポートの計画 (レポート ビルダーおよび SSRS)](plan-a-map-report-report-builder-and-ssrs.md)   
+ [レポートをトラブルシューティングします。マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server machine learning でのネイティブ スコアリング |Microsoft Docs
+title: 予測の T-SQL ステートメント - SQL Server Machine Learning Services を使用して、ネイティブのスコアリング
 description: SQL Server で R または Python で記述された事前トレーニング済みモデルに対して dta 入力のスコアリング、T-SQL の予測関数を使用して予測を生成します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713154"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645131"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>T-SQL の予測関数を使用して、ネイティブのスコアリング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ MicrosoftML または microsoftml からモデルを使用する必要がある�
 + PMML モデル
 + その他のオープン ソースまたはサードパーティ製のライブラリを使用して作成されたモデル
 
-## <a name="example-predict-t-sql"></a>例: 予測 (T-SQL)
+## <a name="example-predict-t-sql"></a>例:予測 (T-SQL)
 
 この例では、モデルを作成し、T-SQL からリアルタイムの予測関数を呼び出します。
 
@@ -78,7 +78,7 @@ MicrosoftML または microsoftml からモデルを使用する必要がある�
 
 サンプル データベースと必要なテーブルを作成する次のコードを実行します。
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -95,7 +95,7 @@ GO
 
 テーブルからデータにデータを次のステートメントを使用して、 **iris**データセット。
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -107,7 +107,7 @@ GO
 
 ここで、モデルを格納するためのテーブルを作成します。
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -118,7 +118,7 @@ GO
 
 次のコードに基づくモデルを作成する、 **iris**データセットという名前のテーブルに保存します**モデル**します。
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -138,7 +138,7 @@ EXECUTE sp_execute_external_script
 
 バイナリ形式で格納されたモデルを表示するには、次のようなステートメントを実行できます。
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -147,7 +147,7 @@ FROM ml_models;
 
 次の単純な PREDICT ステートメント、デシジョン ツリー モデルを使用してから、分類を取得します、**ネイティブ スコアリング**関数。 指定した属性、花弁の長さと幅に基づく iris species を予測します。
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
@@ -168,5 +168,5 @@ go
 
 ネイティブ スコアリングを含む完全なソリューションでは、SQL Server 開発チームからこれらのサンプルを参照してください。
 
-+ ML スクリプトのデプロイ: [Python モデルを使用します。](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ ML スクリプトのデプロイ: [R モデルを使用します。](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ ML スクリプトを展開します。[Python のモデルを使用します。](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ ML スクリプトを展開します。[R モデルを使用します。](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

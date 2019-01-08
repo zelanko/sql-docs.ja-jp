@@ -16,12 +16,12 @@ ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4dd5b6f8a241d3173cdca8b03cce4fb9a373b8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34de23fca71f4dc7949a04a36323d19d35826fa9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196042"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359824"
 ---
 # <a name="database-dimension-properties"></a>データベース ディメンション プロパティ
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションの特性は、さまざまなディメンション プロパティの設定と、属性またはディメンションに含まれる階層に基づいて、ディメンションのメタデータによって定義されます。 次の表では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション プロパティについて説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "48196042"
 |`MiningModelID`|データ マイニング ディメンションが関連付けられているマイニング モデルの ID を保持します。 このプロパティは、ディメンションがマイニング モデル ディメンションの場合にのみ適用できます。|  
 |`Name`|ディメンションの名前を指定します。|  
 |`ProactiveCaching`|ディメンションのプロアクティブ キャッシュの設定を定義します。|  
-|`ProcessingGroup`|処理グループを指定します。 有効値は ByAttribute または ByTable です。 既定値は`ByAttribute`します。|  
+|`ProcessingGroup`|処理グループを指定します。 有効値は ByAttribute または ByTable です。 既定値は `ByAttribute` です。|  
 |`ProcessingMode`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によるインデックス化および集計を処理中または処理後のどちらに行うかを示します。|  
 |`ProcessingPriority`|レイジー集計、インデックス作成、クラスター化など、バックグラウンド操作中のディメンション処理の優先度を指定します。|  
 |`Source`|ディメンションのバインド先のデータ ソース ビューを指定します。|  
@@ -51,12 +51,12 @@ ms.locfileid: "48196042"
 |`WriteEnabled`|ディメンションの書き戻しを使用できるかどうかを示します (セキュリティ権限に依存)。|  
   
 > [!NOTE]  
->  Null 値やその他のデータ整合性の問題を使用する場合の ErrorConfiguration および UnknownMember プロパティの値を設定する方法についての詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](http://go.microsoft.com/fwlink/?LinkId=81891)します。  
+>  Null 値やその他のデータ整合性の問題を使用する場合の ErrorConfiguration および UnknownMember プロパティの値を設定する方法についての詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)します。  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](attributes-and-attribute-hierarchies.md)   
  [ユーザー階層](user-hierarchies.md)   
- [ディメンションのリレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [ディメンション&#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [ディメンション &#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

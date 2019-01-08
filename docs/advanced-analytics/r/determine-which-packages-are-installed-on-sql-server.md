@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning で R と Python のパッケージ情報を取得 |Microsoft Docs
+title: SQL Server Machine Learning サービス - R および Python のパッケージ情報を取得します。
 description: R と Python のパッケージ バージョンを確認するのインストールを確認し、SQL Server R Services または Machine Learning サービスでインストールされているパッケージの一覧を取得します。
 ms.custom: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 96cda599e260982b26e6c565bd38c5097fc01763
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291538"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645371"
 ---
 #  <a name="get-r-and-python-package-information"></a>R と Python のパッケージ情報を取得します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,9 +91,9 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 
 ### <a name="r"></a>R
 
-次の例では、R 関数を使用して`installed.packages()`で、 [!INCLUDE [tsql](..\..\includes\tsql-md.md)]ストアド プロシージャを現在のインスタンスの R_SERVICES ライブラリにインストールされているパッケージの行列を取得します。 このスクリプトは、DESCRIPTION ファイル内のパッケージの名前とバージョンのフィールドを返します、名だけが返されます。
+次の例では、R 関数を使用して`installed.packages()`で、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャを現在のインスタンスの R_SERVICES ライブラリにインストールされているパッケージの行列を取得します。 このスクリプトは、DESCRIPTION ファイル内のパッケージの名前とバージョンのフィールドを返します、名だけが返されます。
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
   @script = N'str(OutputDataSet);
@@ -142,7 +142,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ メッセージが返されます、パッケージが見つかった場合:「コマンドの完了しました」。
++ パッケージが見つかった場合は、メッセージが返されます。「コマンドは正常に完了しました。」
 
 + テキストを含むエラーが発生した場合は、パッケージの配置または読み込まれることはできません、:「'MissingPackageName' という名前のパッケージはありません」
 

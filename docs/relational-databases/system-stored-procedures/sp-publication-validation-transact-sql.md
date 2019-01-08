@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608680"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591406"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@publication=**] **' * * * パブリケーション '*  
+ [**@publication=**] **'**_パブリケーション '_  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -51,9 +50,9 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |値|説明|  
 |-----------|-----------------|  
-|**0**|実行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 互換のチェックサム。<br /><br /> 注: アーティクルが水平方向にフィルター選択されたときに、チェックサム操作ではなく rowcount 操作が実行します。|  
+|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 互換のチェックサムを実行します。<br /><br /> 注:アーティクルが行方向にフィルター選択されている場合、チェックサム操作ではなく行数操作が実行されます。|  
 |**1** (既定値)|行数のチェックのみを実行します。|  
-|**2**|行数とバイナリのチェックサムを実行します。<br /><br /> : 注[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン 7.0 サブスクライバーの場合、行数検証のみを実行します。|  
+|**2**|行数とバイナリのチェックサムを実行します。<br /><br /> 注:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン 7.0 サブスクライバーの場合、行数検証のみが実行されます。|  
   
  [**@full_or_fast=**] *full_or_fast*  
  行数の計算で使用する方法を指定します。 *full_or_fast*は**tinyint**値は次のいずれかを指定できます。  
@@ -67,7 +66,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  検証の完了後すぐにディストリビューション エージェントをシャットダウンするかどうかを指定します。 *shutdown_agent*は**ビット**、既定値は**0**します。 場合**0**、レプリケーション エージェントがシャット ダウンされません。 場合**1**、前回の記事の検証後にレプリケーション エージェントがシャット ダウンします。  
   
- [ **@publisher** =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'**_パブリッシャー_**'**  
  以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  

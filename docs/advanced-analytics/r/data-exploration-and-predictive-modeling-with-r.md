@@ -1,5 +1,5 @@
 ---
-title: データ探索と SQL Server Machine Learning で R を使用した予測モデリング |Microsoft Docs
+title: データ探索と R - SQL Server Machine Learning Services を使用した予測モデリング
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984714"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432345"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>データ探索と SQL Server で R を使用した予測モデリング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server との統合により可能なデータ サイエンス プロセスの機能強化について説明します。
 
-適用対象: SQL Server 2016 R Services、SQL Server 2017 Machine 必要ですサービス
+適用対象SQL Server 2016 R Services、SQL Server 2017 Machine 必要ですサービス
 
 ## <a name="the-data-science-process"></a>データ サイエンス プロセス
 
@@ -30,7 +30,7 @@ ms.locfileid: "38984714"
 + データの移動は、低速、非効率的なまたは安全でないです。
 + R 自体がパフォーマンスとスケールに関する制限
 
-これらの欠点は、大量のデータを移動して分析する必要がある場合、またはコンピューターで使用可能なメモリに収まらないデータ セットを使用する場合に、より明白になります。
+これらの欠点は、移動、大量のデータの分析や、コンピューターで使用できるメモリに収まらないデータ セットを使用する必要があるとは明らかになります。
 
 スケーラブルな新しいパッケージと R の関数に含まれている[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]これらの課題の多くを解決するためにします。 
 
@@ -62,15 +62,15 @@ ms.locfileid: "38984714"
   
      これらのパッケージとその使用方法の詳細については、次を参照してください。[は RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction)と[RevoPemaR の概要](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)します。 
 
-+ **MicrosoftML**大幅に最適化された機械学習アルゴリズムと Microsoft データ サイエンス チームからのデータ変換のコレクションが含まれています。 アルゴリズムの多くは Azure Machine Learning でも使用されます。 詳細については、次を参照してください。 [MicrosoftML パッケージを使用して](../../advanced-analytics/using-the-microsoftml-package.md)します。
++ **MicrosoftML**大幅に最適化された機械学習アルゴリズムと Microsoft データ サイエンス チームからのデータ変換のコレクションが含まれています。 アルゴリズムの多くは Azure Machine Learning でも使用されます。 詳細については、次を参照してください。 [SQL Server の MicrosoftML](ref-r-microsoftml.md)します。
 
 ### <a name="r-development-tools"></a>R 開発ツール
 
 R ソリューションを開発する際に Microsoft R Client をダウンロードすることを確認します。 この無料のダウンロードには、リモート計算コンテキストとスケーラブルな alorithms をサポートするために必要なライブラリが含まれています。
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** R ランタイムのディストリビューションと、標準的な R 演算のパフォーマンスを向上させる、Intel Math Kernel Library などの一連のパッケージ。  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** R ランタイムと一連の標準的な R 演算のパフォーマンスを向上させる、Intel math kernel library などのパッケージの配布。  
   
-+ **RevoScaleR:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに計算をプッシュできる R パッケージ。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]に含まれている新しいスケーラブル パッケージと R 関数を使用して克服できます。 パフォーマンスとスケーラビリティを高めるために再設計された一連の共通の R 関数も含まれています。 これらの強化された関数は、 **rx** プレフィックスで識別できます。 さまざまなソースの強化されたデータ プロバイダーも含まれており、これらの関数には **Rx** のプレフィックスが付いています。
++ **RevoScaleR:** インスタンスにできるようにする R パッケージが計算をプッシュ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] 。 パフォーマンスとスケーラビリティを高めるために再設計された一連の共通の R 関数も含まれています。 これらの強化された関数は、 **rx** プレフィックスで識別できます。 さまざまなソースの強化されたデータ プロバイダーも含まれており、これらの関数には **Rx** のプレフィックスが付いています。
 
 など、R をサポートする任意の Windows ベースのコード エディターを使用する[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]または RStudio です。 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] をダウンロードすれば、RGui.exe などの R の一般的なコマンド ライン ツールも取得できます。
 
@@ -103,4 +103,4 @@ RevoScaleR パッケージを使用して接続するときに[!INCLUDE[ssNoVers
 
 [基本 R と ScaleR 関数の比較](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[SQL Server と連動する ScaleR 関数](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[SQL Server で RevoScaleR ライブラリ](ref-r-revoscaler.md)

@@ -11,12 +11,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18860cf43c31096b984d45b18fba7828de6ea90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065662"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367774"
 ---
 # <a name="check-files-in-use"></a>使用中のファイルの確認
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール後に Windows が再起動されないようにするには、[使用中のファイルの確認] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのセットアップ プログラムで必要とされるファイルをロックしているプロセスを特定します。  
@@ -27,7 +27,7 @@ ms.locfileid: "48065662"
   
  インストール後にコンピューターを再起動しなくてもいいように、セットアップ時に、ファイルをロックしているプロセスの一覧が表示されます。 一覧表示されたプロセスおよびアプリケーションを停止または終了します。 次に、 **[確認の更新]** をクリックしてチェックを再実行します。 実行中のチェックを終了するには **[確認の停止]** をクリックします。 ロックされているファイルが見つからなかった場合、表には何も表示されません。 ロックされていたプロセスが終了または停止したら、 **[次へ]** をクリックして続行します。  
   
- セットアップにより、情報がログ ファイルに書き込まれます。 ログ ファイルを表示する方法の詳細については、「[SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」および「[SQL Server のセットアップ ログ ファイルを読み取る方法](http://go.microsoft.com/fwlink/?LinkID=134490)」を参照してください。  
+ セットアップにより、情報がログ ファイルに書き込まれます。 ログ ファイルを表示する方法の詳細については、次を参照してください。[ビューと読み取り SQL Server セットアップ ログ ファイル](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)と[方法。SQL Server のセットアップ ログ ファイルを読み取る](https://go.microsoft.com/fwlink/?LinkID=134490)します。  
   
  次の情報がログ ファイルに含まれます。  
   

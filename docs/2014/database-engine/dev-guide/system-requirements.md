@@ -17,12 +17,12 @@ ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db02b170bd4cccb2842b44d405da332f3df18e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ed548f52fbb81a4a5a7b973af9bd58cb5a3a452
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107582"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374674"
 ---
 # <a name="system-requirements"></a>システム要件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient`オブジェクト用のドライバーに接続しのインスタンスと通信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -32,6 +32,6 @@ ms.locfileid: "48107582"
  SMO を使用してアプリケーションを開発する必要[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 をインストールします。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server のインストールの概要](http://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
+ [SQL Server のインストールの概要](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

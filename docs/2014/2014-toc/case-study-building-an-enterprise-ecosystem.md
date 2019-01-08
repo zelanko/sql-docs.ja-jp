@@ -1,5 +1,5 @@
 ---
-title: 'ケース スタディ: Microsoft Dynamics ERP と SQL Server 2014 レプリケーション スケーラビリティとパフォーマンスをエンタープライズ エコシステムの構築 |Microsoft Docs'
+title: ケース スタディ:Microsoft Dynamics ERP と SQL Server 2014 レプリケーション スケーラビリティとパフォーマンスをエンタープライズ エコシステムの構築 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1de233ed0f659438c46cab69cec79119fc5291c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3b7652cf67fff68b1a9e6d87e02c2776317af19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113634"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365239"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>ケース スタディ: Microsoft Dynamics ERP と SQL Server 2014 レプリケーションを活用した、スケーラビリティとパフォーマンスの向上のためのエンタープライズ エコシステムの構築
-  **概要:** このホワイト ペーパーは、次のシナリオを説明します。  
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>ケース スタディ:Microsoft Dynamics ERP と SQL Server 2014 レプリケーション スケーラビリティとパフォーマンスをエンタープライズ エコシステムの構築
+  **概要:** このホワイト ペーパーでは、次のシナリオについて説明します。  
 SQL Server 2014 でトランザクション レプリケーションを使用して Dynamics AX クライアントからトランザクションを複数のノードに分散する方法。 トランザクション レプリケーションでは、データが複数のノードでリアルタイムに保持されるため、データの冗長性が実現し、データの可用性が向上します。これには、パフォーマンス分析をより効率的に行うために使用できるデータも含まれます。  
 Microsoft Dynamics ERP で拡張性の高いエンタープライズ エコシステムを構築するためにトランザクション レプリケーションを活用する際に関係する詳細事項を理解する方法。 AX の既定の機能をカスタマイズすることなく、高いパフォーマンスとスケーラビリティを提供します。  
   
@@ -34,6 +34,6 @@ Microsoft Dynamics ERP で拡張性の高いエンタープライズ エコシ�
  **適用対象:** SQL Server 2008、SQL Server 2012、SQL Server 2014  
   
  ドキュメントを確認するには、ダウンロードしてください、  
-        [ケース スタディ: スケーラビリティとパフォーマンスのための Microsoft Dynamics ERP と SQL Server 2014 レプリケーション エンタープライズ エコシステムの構築](http://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx)Word 文書です。  
+        [ケース スタディ:スケーラビリティとパフォーマンスのための Microsoft Dynamics ERP と SQL Server 2014 レプリケーション エンタープライズ エコシステムの構築](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx)Word 文書です。  
   
   

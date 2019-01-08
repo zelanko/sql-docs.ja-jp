@@ -11,12 +11,12 @@ ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fae71e74f2c8498b537f1d93d951de76f5625094
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123542"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366294"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel または Reporting Services での BI セマンティック モデル接続の使用
   このトピックでは、他のトピックの手順に従って作成した BI セマンティック モデル接続の使用方法について説明します。 BI セマンティック モデルを作成していない場合は、次を参照してください。 [PowerPivot ブックへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)と[表形式モデル データベースへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)します。  
@@ -46,9 +46,9 @@ ms.locfileid: "48123542"
   
 5.  最後のページで、表示名と説明を入力できます。 **[完了]** をクリックし、[データのインポート] ダイアログ ボックスで **[OK]** をクリックして、データをインポートします。  
   
- 接続を成功させるには、クライアント コンピューターに Excel 2010 および MSOLAP.5.dll をインストールする必要があります。 このリリースの現在の Excel 用 PowerPivot のバージョンをインストールすることで、プロバイダーを取得するかから Analysis Services OLE DB プロバイダーをダウンロードすることができます、 [Feature Pack ダウンロード ページ](http://go.microsoft.com/fwlink/?linkid=214066)します。  
+ 接続を成功させるには、クライアント コンピューターに Excel 2010 および MSOLAP.5.dll をインストールする必要があります。 このリリースの現在の Excel 用 PowerPivot のバージョンをインストールすることで、プロバイダーを取得するかから Analysis Services OLE DB プロバイダーをダウンロードすることができます、 [Feature Pack ダウンロード ページ](https://go.microsoft.com/fwlink/?linkid=214066)します。  
   
- MSOLAP.5.dll が現在のバージョンであることを確認、確認`HKEY_CLASSES_ROOT\MSOLAP`レジストリにします。 `CurVer` MSOLAP.5 に設定する必要があります。  
+ MSOLAP.5.dll が最新のバージョンであることを確認するには、レジストリの `HKEY_CLASSES_ROOT\MSOLAP` をチェックします。 `CurVer` が MSOLAP.5 に設定されている必要があります。  
   
  また、SharePoint の BI セマンティック モデル ファイルに対する読み取り権限も必要です。 読み取り権限には、ダウンロード権限が含まれます。 Excel によって、SharePoint から BI セマンティック モデル接続情報がダウンロードされ、`HTTP Get` を介してデータベースへの直接接続が開かれます。 BI セマンティック モデル接続情報がローカルに保存された後は、接続要求が SharePoint に送信されることはありません。  
   

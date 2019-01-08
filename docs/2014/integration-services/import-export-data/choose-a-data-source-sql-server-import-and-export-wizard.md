@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
@@ -13,19 +12,19 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff54dc41b8a39107c191f8976d22005c80d5f65c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cff58f58543ae5876840bb7640f9cc11abf793d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216342"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370274"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
   使用して、**データ ソースの選択**ページをコピーするデータのソースを指定します。  
   
  このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と、ウィザードを起動するオプションについて説明しますを参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
- 目的、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードは、先のソースからデータをコピーします。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **Data Source**  
@@ -44,10 +43,10 @@ ms.locfileid: "48216342"
  データベースへのログインに、パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用するかどうかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。  
   
  **[SQL Server 認証を使用する]**  
- パッケージを使用するかどうかを指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースへのログインを認証します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
+ データベースへのログインに、パッケージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するかどうかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
   
  **ユーザー名**  
- 使用しているときに、データベース接続のユーザー名を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のユーザー名を指定します。  
   
  **Password**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のパスワードを指定します。  
@@ -68,15 +67,15 @@ ms.locfileid: "48216342"
  ソース データベース名を入力します。  
   
  **統合セキュリティ**  
- 指定`True`お勧めしますが、Windows 統合認証を使用して接続または`False`を使用して接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 `False` を指定した場合は、ユーザー ID とパスワードを入力する必要があります。 既定値は `False` です。  
+ `True` を指定して Windows 統合認証を使用して接続するか (推奨)、`False` を指定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続します。 `False` を指定した場合は、ユーザー ID とパスワードを入力する必要があります。 既定値は `False` です。  
   
  **User ID**  
- 使用しているときに、データベース接続のユーザー名を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のユーザー名を指定します。  
   
  **Password**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のパスワードを指定します。  
   
- このプロバイダーを選択したときに一覧表示される追加オプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース データベースに正しく接続するために必須というわけではありません。 これらの追加オプションについては、ドキュメントを参照してください、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Software Development Kit。  
+ このプロバイダーを選択したときに一覧表示される追加オプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース データベースに正しく接続するために必須というわけではありません。 これらの追加オプションの説明については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ソフトウェア開発キットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Provider for [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のマニュアルを参照してください。  
   
 ### <a name="data-source--microsoft-excel"></a>[データ ソース] = [Microsoft Excel]  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48216342"
  ワークグループの情報ファイルがデータベースに関連付けられている場合は、データベース接続のためにユーザーのパスワードを指定します。 ただし、データベースがすべてのユーザーに対して 1 つのパスワードで保護する場合は、この値を指定する必要があります、**データ リンク プロパティ** ダイアログ ボックスをクリックしてアクセスされる**詳細**します。  
   
  **詳細設定**  
- 使用してデータベースのパスワードや既定以外のワークグループ情報ファイルなどの高度なオプションを指定する、**データ リンク プロパティ** ダイアログ ボックス。 OLE DB プロバイダーのプロパティの詳細については、の [データ アクセス] セクションで検索、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?linkid=62553)します。  
+ 使用してデータベースのパスワードや既定以外のワークグループ情報ファイルなどの高度なオプションを指定する、**データ リンク プロパティ** ダイアログ ボックス。 OLE DB プロバイダーのプロパティの詳細については、の [データ アクセス] セクションで検索、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?linkid=62553)します。  
   
 ### <a name="data-source--flat-file-source"></a>[データ ソース] = [フラット ファイル ソース]  
  フラット ファイル ソースのオプションの詳細については、次のトピックを参照してください。  
@@ -124,6 +123,6 @@ ms.locfileid: "48216342"
   
  [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../flat-file-connection-manager-editor-preview-page.md)  
   
   

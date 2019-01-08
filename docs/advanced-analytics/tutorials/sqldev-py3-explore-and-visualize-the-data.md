@@ -1,5 +1,5 @@
 ---
-title: レッスン 1 の探索と、Python、T-SQL (SQL Server Machine Learning) を使用してデータを視覚化する |Microsoft Docs
+title: レッスン 1 の探索と、Python、T-SQL、SQL Server Machine Learning を使用してデータを視覚化します。
 description: 埋め込む方法を示すチュートリアル SQL Server での Python ストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e92b2e1a5d4d5e1ad6990ffafa1a1cfcfbb9d806
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030982"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645341"
 ---
 # <a name="explore-and-visualize-the-data"></a>探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
     - Python スクリプトは非常に単純: **matplotlib** `figure`オブジェクトを使用して、ヒストグラム、散布図のプロットを作成し、これらのオブジェクトを使用してシリアル化は、`pickle`ライブラリ。
     - シリアル化する Python のグラフィック オブジェクト、 **pandas**出力データ フレーム。
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -135,13 +135,13 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
 
 2. 今すぐ入力クエリとしてハード コードされたデータからプロットを生成する引数なしで、ストアド プロシージャを実行します。
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. 結果は、次のようになります。
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...

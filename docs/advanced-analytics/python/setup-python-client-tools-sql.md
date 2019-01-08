@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning での Python 開発用データ サイエンス クライアントのセットアップ |Microsoft Docs
+title: Python 開発 - SQL Server Machine Learning のデータ サイエンス クライアントのセットアップします。
 description: Python を使用した SQL Server Machine Learning サービスへのリモート接続用の Python のローカル環境 (Jupyter Notebook または PyCharm) を設定します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,25 +8,25 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c3db7d215be8a43370969903adb9cf9518e9183c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 569b3d2fbd11cc978f1a810bab6b30ec1d33d2b5
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704100"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046532"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での Python 開発用のデータ サイエンス クライアントの設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python の統合での Python のオプションを追加するときに、SQL Server 2017 またはそれ以降の開始がある、 [Machine Learning サービス (In-database) インストール](../install/sql-machine-learning-services-windows-install.md)します。 
 
-Microsoft のインストールを作成し、SQL Server での Python のソリューションをデプロイ、 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と、クライアント ワークステーションには、他の Python ライブラリです。 これはリモートの SQL Server インスタンス上でも、revoscalepy ライブラリは、両方のシステム間のコンピューティングの要求を調整します。 
+開発を SQL Server の Python のソリューションの配置は、インストールの Microsoft の[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)およびその他の Python ライブラリ、開発ワークステーション。 これはリモートの SQL Server インスタンス上でも、revoscalepy ライブラリは、両方のシステム間のコンピューティングの要求を調整します。 
 
-この記事では、machine learning と Python の統合を有効になっているリモート SQL Server に接続できるように、Python 開発用ワークステーションを構成する方法について説明します。 この記事の手順を完了すると、SQL Server のものと同じ Python ライブラリがあります。 SQL Server での Python のリモート セッションにローカルの Python セッションからの計算をプッシュする方法もわかります。
+この記事では、machine learning と Python の統合を有効になっているリモート SQL Server で操作できるようにする、Python 開発用ワークステーションを構成する方法について説明します。 この記事の手順を完了すると、SQL Server のものと同じ Python ライブラリがあります。 SQL Server での Python のリモート セッションにローカルの Python セッションからの計算をプッシュする方法もわかります。
 
 ![クライアントとサーバー コンポーネント](media/sqlmls-python-client-revo.png "ローカルとリモートの Python のセッションとライブラリ")
 
-組み込みの Jupyter Notebook を使用するには、この記事で説明されている、または[、ライブラリをリンク](#install-ide)PyCharm に通常使用する別の IDE。
+この記事で説明に従って、インストールを検証するには、組み込みの Jupyter Notebook を使用することができますまたは[、ライブラリをリンク](#install-ide)PyCharm に通常使用する別の IDE です。
 
 > [!Tip]
 > これらの演習ビデオ デモについては、次を参照してください。 [R の実行と Jupyter Notebook から SQL Server にリモートで Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)します。
@@ -40,7 +40,7 @@ To SQL では、新しい Python 開発者や、SQL 開発者を初めて使用�
 
 Python 開発では、Jupyter Notebook は、SQL Server によってインストールされる Anaconda ディストリビューションにバンドルを使用できます。 この記事を実行できるように Python コードのローカルとリモートの SQL Server では、Jupyter Notebook を開始する方法について説明します。
 
-SSMS は、個別のダウンロード、作成して、Python コードを格納しているものも含め、SQL Server のストアド プロシージャを実行している場合に便利です。 ストアド プロシージャで Jupyter Notebook で記述するほぼすべての Python コードを埋め込むことができます。 その他のチュートリアルについては、ステップ[SSMS と埋め込まれた Python](../tutorials/train-score-using-python-in-tsql.md)します。
+SSMS は、個別のダウンロード、作成して、Python コードを格納しているものも含め、SQL Server のストアド プロシージャを実行している場合に便利です。 ストアド プロシージャで Jupyter Notebook で記述するほぼすべての Python コードを埋め込むことができます。 詳細については他のクイック スタート手順を実行できる[SSMS と埋め込まれた Python](../tutorials/quickstart-python-verify.md)します。
 
 ## <a name="1---install-python-packages"></a>1 - Python パッケージをインストールします。
 
@@ -85,7 +85,7 @@ PowerShell でまだ Python.exe、スクリプト、およびその他のパッ�
 > [!Note] 
 > インストール スクリプトでは、新しい python インタープリターとモジュールをインストールしたが自動的にする必要があります、その他のツールを使用可能なしないことを意味する、コンピューターの PATH 環境変数は変更されません。 ツールに Python インタープリターとライブラリをリンクする方法の詳細については、次を参照してください。 [IDE をインストールする](#install-ide)します。
 
-<a name="python-tool"></a>
+<a name="python-tools"></a>
 
 ## <a name="3---open-jupyter-notebooks"></a>3-Jupyter Notebook
 
@@ -111,7 +111,7 @@ Anaconda には、Jupyter Notebook が含まれています。 次の手順と�
 
 4. 複雑な一連のステートメントを入力します。 この例では、概要統計情報を使用して生成されます[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)ローカル データ セットに対して。 その他の関数は、サンプル データの場所を取得し、ローカルの .xdf ファイルのデータ ソース オブジェクトを作成します。
 
-  ```Python
+  ```python
   import os
   from revoscalepy import rx_summary
   from revoscalepy import RxXdfData
@@ -152,7 +152,7 @@ Anaconda には、Jupyter Notebook が含まれています。 次の手順と�
 
 ### <a name="1---create-the-irissql-database-remotely"></a>1 - irissql データベースをリモートで作成します。
 
-```Python
+```python
 import pyodbc
 
 # creating a new db to load Iris sample in
@@ -169,7 +169,7 @@ print("Database created")
 
 ### <a name="2---import-iris-sample-from-sklearn"></a>2 - SkLearn から Iris サンプルをインポートします。
 
-```Python
+```python
 from sklearn import datasets
 import pandas as pd
 
@@ -180,7 +180,7 @@ df = pd.DataFrame(iris.data, columns=iris.feature_names)
 
 ### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-Revoscalepy Api を使用してテーブルを作成およびあやめデータの読み込み
 
-```Python
+```python
 from revoscalepy import RxSqlServerData, rx_data_step
 
 # Example of using RX APIs to load data into SQL table. You can also do this with pyodbc
@@ -253,9 +253,20 @@ display.Image(data=image)
 
 <a name="install-ide"></a>
 
-## <a name="7---link-tools-to-pythonexe"></a>7 - python.exe へリンク ツール
+## <a name="7---start-python-from-tools"></a>7 - ツールから Python を開始します。
 
 開発者が頻繁に複数の Python のバージョンを扱うため、セットアップは、パスに Python を追加できません。 Python 実行可能ファイルとセットアップによってインストールされているライブラリを使用するリンク、IDE を**Python.exe**も提供するパスにある**revoscalepy**と**microsoftml**します。 
+
+### <a name="command-line"></a>[パッケージ実行ユーティリティ]
+
+実行すると**Python.exe** C:\Program Files\Microsoft\PyForMLS から (または、Python クライアント ライブラリのインストールに指定した位置にかかわらず)、完全な Anaconda ディストリビューションと Microsoft Python へのアクセスがあります。モジュール、 **revoscalepy**と**microsoftml**します。
+
+1. C:\Program Files\Microsoft\PyForMLS に移動し、ダブルクリックして**Python.exe**します。
+2. 対話型ヘルプを開きます。 `help()`
+3. ヘルプのプロンプトで、モジュールの名前を入力:`help> revoscalepy`します。 ヘルプは、名前、パッケージのコンテンツ、バージョン、およびファイルの場所を返します。
+4. バージョンとパッケージの情報を返す、**ヘルプ >** プロンプト:`revoscalepy`します。 Enter キーを数回にヘルプを終了します。
+5. モジュールをインポートします。 `import revoscalepy`
+
 
 ### <a name="jupyter-notebooks"></a>Jupyter Notebook
 
@@ -267,7 +278,7 @@ display.Image(data=image)
 
 別の IDE を使用している場合は、ツールに Python の実行可能ファイルと関数のライブラリをリンクする必要があります。 次のセクションでは、一般的に使用されるツールの手順を説明します。
 
-### <a name="visual-studio"></a>Visual Studio
+### <a name="visual-studio"></a>Visual Studio
 
 ある場合[Visual Studio での Python](https://code.visualstudio.com/docs/languages/python)Microsoft の Python パッケージを含む Python 環境を作成する次の構成オプションを使用します。
 
@@ -291,7 +302,7 @@ PyCharm、Machine Learning Server によってインストールされている�
 
 ## <a name="next-steps"></a>次の手順
 
-使用して、スキルを展開ツールと SQL Server への接続を稼働したら、 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)を作成し、埋め込み型 Python コードを含むストアド プロシージャを実行します。
+ツールと SQL Server への接続を稼働したら、Python のクイック スタートを使用してを実行して、スキルを展開[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)します。
 
 > [!div class="nextstepaction"]
-> [作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用](../tutorials//train-score-using-python-in-tsql.md)
+> [クイック スタート:Python は、SQL Server に存在することを確認します。 ](../tutorials/quickstart-python-verify.md)

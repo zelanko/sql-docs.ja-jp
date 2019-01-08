@@ -20,19 +20,19 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204652"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591436"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>[塗りつぶし] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[塗りつぶし]** タブでは、データ領域やテキスト ボックスにある 1 つまたは複数のセルの背景色のオプションを指定できます。  
   
 ## <a name="options"></a>および  
  **塗りつぶしの色**  
- 色のボタンをクリックして、四角形の塗りつぶしの色を選択します。 をクリックして、**Expression***(fx)* RGB 色またはで提供される定義済みの色の名前の 1 つの 16 進数の値を指定できる式を編集するボタン、**式** ダイアログ ボックス。 定義済みの色の一覧を表示するには、 **[アイテム]** ペインの **[Web]** を選択します。 **[タイトル]** ペインに表示されている色の名前は、[式] ペインに入力できます。 色の名前を入力する場合は、等号 (=) または引用符 ("") を使用しないでください。  
+ 色のボタンをクリックして、四角形の塗りつぶしの色を選択します。 式を編集するには、 **[式]**_(fx)_ ボタンをクリックします。この式には、RGB 色を表す 16 進値、または **[式]** ダイアログ ボックスに用意されている定義済みの色の名前を使用できます。 定義済みの色の一覧を表示するには、 **[アイテム]** ペインの **[Web]** を選択します。 **[タイトル]** ペインに表示されている色の名前は、[式] ペインに入力できます。 色の名前を入力する場合は、等号 (=) または引用符 ("") を使用しないでください。  
   
  **画像ソースを選択します。**  
  レポートを表示する際にレポート プロセッサで表示できるように、画像が格納されている場所を指定します。  
@@ -61,7 +61,7 @@ ms.locfileid: "48204652"
   
 ## <a name="see-also"></a>参照  
  [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [テキストとプレース ホルダーの書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [イメージ&#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [画像 (レポート ビルダーおよび SSRS)](report-design/images-report-builder-and-ssrs.md)  
   
   

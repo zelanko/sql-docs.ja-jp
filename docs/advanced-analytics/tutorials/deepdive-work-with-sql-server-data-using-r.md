@@ -1,91 +1,94 @@
 ---
-title: R (SQL と R の詳細情報) を使用した SQL Server のデータを扱う |Microsoft Docs
+title: RevoScaleR のチュートリアル - SQL Server Machine Learning のデータベースとアクセス許可を作成します。
+description: R のチュートリアルについては、SQL Server データベースを作成する方法のチュートリアル.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: 15032b604d7ea28ad03acb837f997dac3afa84b8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375675"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645271"
 ---
-# <a name="lesson-1-create-a-database-and-permissions"></a>レッスン 1: データベースとアクセス許可を作成します。
+# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>データベースとアクセス許可 (SQL Server と RevoScaleR チュートリアルを) 作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事は、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
 
-このレッスンでは、モデルのトレーニングに必要なデータを追加し、データのクイック サマリーを実行する環境を設定します。 プロセスの一環として、これらのタスクを完了する必要があります。
-  
-- 2 つの R モデルのトレーニングとスコアリングに使用するデータを格納するための新しいデータベースを作成します。
-  
-- ワークステーションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターの間の通信に使用するアカウント (Windows ユーザーまたは SQL ログイン) を作成します。
-  
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータとデータベース オブジェクトを操作するためのデータ ソースを R で作成します。
-  
-- R のデータ ソースを使用してデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に読み込みます。
-  
-- R を使用して変数のリストを取得し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルのメタデータを変更します。
-  
-- 計算コンテキストを作成して、R コードのリモート実行を有効にします。
-  
-- (省略可能)リモート計算コンテキストでトレースを有効にします。
-  
-## <a name="create-the-database-and-user"></a>データベースとユーザーを作成します。
+レッスン 1 では、このチュートリアルを完了するために必要な SQL Server データベースとアクセス許可を設定する方法についてはします。 使用[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)または別のクエリ エディターで、次のタスクを完了します。
 
-このチュートリアルでは、新しいデータベースを作成[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、R スクリプトを実行して、データを読み書きする権限を持つ SQL ログインを追加します。
+> [!div class="checklist"]
+> * トレーニングと 2 つの R モデルをスコア付けのデータを格納する新しいデータベースを作成します。
+> * 作成およびデータベース オブジェクトを使用するためのアクセス許可を持つデータベース ユーザー ログインを作成します。
+  
+## <a name="create-the-database"></a>データベースの作成
 
-> [!NOTE]
-> R スクリプトを実行するアカウントに SELECT 権限が必要なデータを読み取るだけの場合 (**db_datareader**ロール)、指定されたデータベースでします。 ただし、このチュートリアルでは、スコア付けの結果を保存するためのテーブルを作成して、データベースを準備する、DDL 管理者特権が必要です。
-> 
-> さらに、データベースの所有者でない場合、権限、EXECUTE ANY EXTERNAL SCRIPT、R スクリプトを実行するために必要があります。
+このチュートリアルでは、データやコードを格納するため、データベースが必要です。 管理者でない場合は、データベースとログインを作成する、データベース管理者に問い合わせてください。 アクセス許可を記述し、データの読み取り、および R スクリプトを実行する必要があります。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を有効にするインスタンスを選択し、 **[データベース]** を右クリックして、 **[新しいデータベース]** を選択します。
+1. SQL Server Management studio では、R が有効なデータベース インスタンスに接続します。
+
+2. 右クリック**データベース**、選び**新しいデータベース**します。
   
-2. 新しいデータベースの名前を入力します。 任意の名前を使用できます。すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトと R スクリプトをそれに合わせて編集してください。
+2. 新しいデータベースの名前を入力します。RevoDeepDive します。
   
-    > [!TIP]
-    > 更新されたデータベース名を表示するには、 **[データベース]** を右クリックして **[更新]** を選択します。
+
+## <a name="create-a-login"></a>ログインを作成します
   
-3. **[新しいクエリ]** をクリックして、データベース コンテキストを master データベースに変更します。
+1. **[新しいクエリ]** をクリックして、データベース コンテキストを master データベースに変更します。
   
-4. 新しい **[クエリ]** ウィンドウで、次のコマンドを実行してユーザー アカウントを作成し、このチュートリアルで使用するデータベースに割り当てます。 必要に応じてデータベースの名前を変更します。
+2. 新しい **[クエリ]** ウィンドウで、次のコマンドを実行してユーザー アカウントを作成し、このチュートリアルで使用するデータベースに割り当てます。 必要に応じてデータベースの名前を変更します。
+
+3. ログインを確認する新しいデータベースを選択、展開**セキュリティ**、展開と**ユーザー**します。
   
 **Windows ユーザー**
   
-```SQL
+```sql
  -- Create server user based on Windows account
 USE master
 GO
-CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[DeepDive]
+CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[RevoDeepDive]
 
  --Add the new user to tutorial database
-USE [DeepDive]
+USE [RevoDeepDive]
 GO
 CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
 **SQL ログイン**
 
-```SQL
+```sql
 -- Create new SQL login
 USE master
 GO
-CREATE LOGIN DDUser01 WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
+CREATE LOGIN [DDUser01] WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
 
 -- Add the new SQL login to tutorial database
-USE [DeepDive]
+USE RevoDeepDive
 GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-5. ユーザーが作成されたことを確認するには、新しいデータベースを選択し、 **[セキュリティ]**、 **[ユーザー]** の順に展開します。
+## <a name="assign-permissions"></a>アクセス許可を割り当てる
 
-## <a name="troubleshooting"></a>トラブルシューティング
+このチュートリアルでは、R スクリプトなどを作成してテーブルおよびストアド プロシージャを削除し、SQL Server の外部プロセスに R スクリプトを実行して DDL 操作を示します。 この手順では、これらのタスクを許可するアクセス許可を割り当てます。
+
+この例では SQL ログイン (DDUser01) が、Windows ログインを作成した場合は、代わりに使用します。
+
+```sql
+USE RevoDeepDive
+GO
+
+EXEC sp_addrolemember 'db_owner', 'DDUser01'
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
+GO
+```
+
+## <a name="troubleshoot-connections"></a>接続をトラブルシューティングします。
 
 このセクションでは、データベースを設定する過程で発生する可能性がある一般的な問題を示します。
 
@@ -95,7 +98,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     新しいデータベース管理ツールをインストールしたくない場合は、コントロール パネルの [ODBC データ ソース アドミニストレーター](https://msdn.microsoft.com/library/ms714024.aspx) を使用して、SQL Server インスタンスへのテスト接続を作成できます。 データベースが正しく構成されていて、正しいユーザー名とパスワードを入力した場合は、先に作成したデータベースを表示し、既定のデータベースとして選択することができます。
   
-    データベースに接続できない場合は、サーバーでリモート接続が有効になっていること、および名前付きパイプ プロトコルが有効になっていることを確認します。 この記事では追加のトラブルシューティングのヒントが提供されます。 [、SQL Server データベース エンジンへの接続のトラブルシューティングを行う](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)します。
+    接続エラーの一般的な理由は、リモート サーバーの接続が有効でないと、名前付きパイプ プロトコルが有効になっていません。 この記事ではその他のトラブルシューティングのヒントをご覧ください。[SQL Server データベース エンジンへの接続のトラブルシューティングを行う](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)します。
   
 - **テーブル名に datareader というプレフィックスが付くのはなぜですか。**
   
@@ -111,17 +114,11 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
 - **DDL 特権を持っていません。それでもチュートリアルを実行できますか。**
   
-    はい。ただし、他のユーザーにデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに事前に読み込んでもらう必要があります。そうすれば、新しいテーブルを作成するセクションを省略できます。 DDL 特権を必要とする関数は、可能であれば、チュートリアルでは呼び出されます。
+    [はい] に、他のユーザーにデータの事前読み込みを要求する必要が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル、および次のレッスンに進んでをスキップします。 DDL 特権を必要とする関数は、可能であれば、チュートリアルでは呼び出されます。
 
     また、EXECUTE ANY EXTERNAL SCRIPT、アクセス許可を付与する管理者を依頼します。 リモートかどうか、またはを使用して R スクリプトの実行に必要な`sp_execute_external_script`します。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-steps"></a>次の手順
 
-[RxSqlServerData を使用して SQL Server のデータ オブジェクトを作成する](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-## <a name="overview"></a>概要
-
-[データ サイエンスの詳細: RevoScaleR パッケージの使用](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-
-
-
+> [!div class="nextstepaction"]
+> [RxSqlServerData を使用して SQL Server のデータ オブジェクトを作成する](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

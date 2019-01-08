@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837760"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591486"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **'**_schedule_name_**'**  
  スケジュールの名前です。 *schedule_name*は**sysname**、既定値はありません。  
   
  [ **@enabled =** ] *enabled*  
@@ -98,7 +98,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|Hours|  
   
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
- 数*freq_subday_type*にジョブの各実行間に発生する期間。 *freq_subday_interval*は**int**、既定値は**0**します。 注: 間隔は 10 秒より長くしてください。 *freq_subday_interval*そのような場合は無視されます、 *freq_subday_type*と等しい**1**します。  
+ 数*freq_subday_type*にジョブの各実行間に発生する期間。 *freq_subday_interval*は**int**、既定値は**0**します。 注:間隔は、10 秒より長くする必要があります。 *freq_subday_interval*そのような場合は無視されます、 *freq_subday_type*と等しい**1**します。  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
  ジョブの発生*freq_interval* 、各月場合*freq_interval* 32 (月単位)。 *freq_relative_interval*は**int**、既定値は**0**、これらの値のいずれかを指定できます。 *freq_relative_interval*そのような場合は無視されます、 *freq_type*が 32 と等しくありません。  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@active_end_time =** ] *active_end_time*  
  間の日で時間*active_start_date*と*active_end_date*ジョブの実行を終了します。 *active_end_time*は**int**、既定値は**235959**、午後 11時 59分: 59 を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**  
  スケジュールを所有するサーバー プリンシパルの名前を指定します。 *owner_login_name*は**sysname**で、既定値は NULL には、スケジュールが作成者によって所有されていることを示します。  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] _schedule_uid_**出力**  
  スケジュールの一意識別子を指定します。 *schedule_uid*型の変数は、 **uniqueidentifier**します。  
   
- [ **@schedule_id**= ] *schedule_id***OUTPUT**  
+ [ **@schedule_id**=] _schedule_id_**出力**  
  スケジュールの識別子を指定します。 *schedule_id*型の変数は、 **int**します。  
   
  [ **@originating_server**= ] *server_name*  
@@ -165,7 +165,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-schedule"></a>A. スケジュールを作成する  
- 次の例は、名前付きのスケジュールを作成`RunOnce`です。 スケジュールは 1 回のみ、スケジュールが作成された日の `23:30` に実行されます。  
+ 次の例では、`RunOnce` というスケジュールを作成します。 スケジュールは 1 回のみ、スケジュールが作成された日の `23:30` に実行されます。  
   
 ```  
 USE msdb ;  
@@ -180,10 +180,10 @@ GO
 ```  
   
 ### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. スケジュールを作成し、複数のジョブに適用する  
- 次の例は、名前付きのスケジュールを作成`NightlyJobs`です。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 例では、ジョブにスケジュールをアタッチする`BackupDatabase`とジョブ`RunReports`します。  
+ 次の例では、`NightlyJobs` というスケジュールを作成します。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ `BackupDatabase` とジョブ `RunReports` にアタッチします。  
   
 > [!NOTE]  
->  この例では、ジョブ`BackupDatabase`とジョブ`RunReports`既に存在します。  
+>  この例では、ジョブ `BackupDatabase` とジョブ `RunReports` が既に存在することを前提としています。  
   
 ```  
 USE msdb ;  

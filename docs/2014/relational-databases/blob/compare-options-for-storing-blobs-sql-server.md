@@ -10,12 +10,12 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059732"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364711"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Blob (SQL Server) を保存するオプションの比較
   ファイルおよびドキュメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納するために使用できるオプションを説明して比較します。  
@@ -56,7 +56,7 @@ ms.locfileid: "48059732"
 |**ファイルの属性へのリレーショナル アクセス**|いいえ|いいえ|**はい**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM とリモート BLOB ストア (RBS) の比較  
- これらの 2 つの機能の比較については、RBS チームのブログ投稿「 [SQL Server リモート BLOB ストアと FILESTREAM 機能の比較](http://go.microsoft.com/fwlink/?LinkId=210317)」を参照してください。  
+ これら 2 つの機能の比較とは、RBS チームのブログ投稿を参照してください。[SQL Server リモート BLOB ストアと FILESTREAM 機能の比較](https://go.microsoft.com/fwlink/?LinkId=210317)します。  
   
 ##  <a name="more"></a> その他の情報  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

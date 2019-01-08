@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: マップ レポート (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:マップ レポート (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098852"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359864"
 ---
-# <a name="tutorial-map-report-report-builder"></a>チュートリアル: マップ レポート (レポート ビルダー)
+# <a name="tutorial-map-report-report-builder"></a>チュートリアル:マップ レポート (レポート ビルダー)
   このチュートリアルでは、地図を背景としてレポート データを表示するときに使用できるマップ機能について学習できます。  
   
  マップは、空間データに基づいています。空間データは通常、ポイント、線、および多角形で構成され (郡の輪郭を表す多角形、道路を表す線、市区町村の場所を表すポイントなど)、 種類ごとに異なるマップ レイヤーにマップ要素のセットとして表示されます。  
@@ -63,11 +63,11 @@ ms.locfileid: "48098852"
 10. [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースの選択、データセットの作成し、ウィザードを実行して、このシリーズの最初のチュートリアルを参照してください。[チュートリアル:基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
   
- このチュートリアルの推定所要時間: 30 分。  
+ このチュートリアルの推定所要時間:30 分。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
   
 ##  <a name="Map"></a> 1.マップ ウィザードを使用して多角形レイヤーを含むマップを作成する  
@@ -194,7 +194,7 @@ ms.locfileid: "48098852"
   
 9. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。  
   
-     結果セットには、7 つの列 (StoreKey、StoreName、SellingArea、City、County、Sales、SpatialLocation) が表示されます。 このデータは、消費者向けの商品を販売している New York 州内の店舗を表しています。 結果セットの各行には、店舗識別子、店舗名、商品の展示に使用できる面積、店舗の所在地の市および郡、売上合計、および所在地の経度と緯度が含まれています。 展示面積の範囲は 455 ～ 1125 平方フィートです。  
+     結果セットには、7 つの列が表示されます。StoreKey、StoreName、SellingArea、City、County、Sales、および SpatialLocation します。 このデータは、消費者向けの商品を販売している New York 州内の店舗を表しています。 結果セットの各行には、店舗識別子、店舗名、商品の展示に使用できる面積、店舗の所在地の市および郡、売上合計、および所在地の経度と緯度が含まれています。 展示面積の範囲は 455 ～ 1125 平方フィートです。  
   
 10. **[次へ]** をクリックします。  
   
@@ -581,7 +581,7 @@ ms.locfileid: "48098852"
 ## <a name="next-steps"></a>次の手順  
  これで、レポートにマップを追加する方法のチュートリアルは終了です。  
   
- 詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)とブログ エントリ[地図的調整の空間データを SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com します。  
+ 詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)とブログ エントリ[地図的調整の空間データを SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com します。  
   
  詳細なチュートリアルについては、次を参照してください。[チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)します。  
   
