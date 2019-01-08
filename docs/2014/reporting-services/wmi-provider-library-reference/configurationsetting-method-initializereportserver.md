@@ -19,12 +19,12 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31276958172d94e72c7b6970728bfac968f678aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97ace7573ff30891e2b54196204cdfdd4b56b3c9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114332"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402137"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer メソッド (WMI MSReportServer_ConfigurationSetting)
   指定されたレポート サービス インスタンスを初期化します。  
@@ -63,7 +63,7 @@ public void InitializeReportServer(string InstallationID,
   
  場合、レポート サーバーの[IsInitialized](configurationsetting-property-isinitialized.md)プロパティに設定されて`true`InitializeReportServer メソッドが呼び出されたときに、メソッドは、暗号化キーの暗号化を試みないで成功を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

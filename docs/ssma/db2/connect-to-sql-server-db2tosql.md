@@ -10,12 +10,12 @@ ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fadb1ba3a38c8379417ad04581adaec956e4ecd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bc3c92067d1fd8240cc17db03de7dac409a0123
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670320"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414409"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) への接続します。
 使用して、 **SQL サーバーへの接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行したいです。 アクセスする、 **SQL サーバーへの接続** ダイアログ ボックスで、**ファイル** メニューのをクリックして**SQL サーバーへの接続**します。  

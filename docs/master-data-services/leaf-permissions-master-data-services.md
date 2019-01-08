@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -18,12 +17,12 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 78c12d0b6595378acf382d53af6dbc807c4c2b84
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416016"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817804"
 ---
 # <a name="leaf-permissions-master-data-services"></a>リーフ権限 (Master Data Services)
 
@@ -58,7 +57,7 @@ ms.locfileid: "52416016"
 |**作成**|ユーザーはメンバーを作成するときに値を割り当てることができます。|  
 |**更新**|ユーザーは属性を更新できます。|  
 |**削除**|影響しません。|  
-|**拒否**|属性が表示されません。<br /><br /> 注: Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
+|**拒否**|属性が表示されません。<br /><br /> 注:Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
   
 ### <a name="example"></a>例  
  Product エンティティの場合、Subcategory 属性に **更新** 権限を割り当てます。 他のすべての属性に対しては権限を拒否します。  

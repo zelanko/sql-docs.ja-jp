@@ -18,12 +18,12 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce9e002b3a01b3cb6e13de5176bd0826870796f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070934"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524988"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>クエリ パラメーターを SQL 実行タスクの変数にマップする方法
   このトピックでは、SQL 実行タスクでパラメーター化された SQL ステートメントを使用して、SQL ステートメント内の変数とパラメーター間のマッピングを作成する方法を説明します。  
@@ -84,7 +84,7 @@ ms.locfileid: "48070934"
     |---------------------|--------------------|  
     |ADO (ADO)|Param1、Param2、...|  
     |ADO.NET および SQLMOBILE|@\<パラメーター名>|  
-    |ODBC|1、2、3、…|  
+    |ODBC|1、2、3、...|  
     |EXCEL および OLE DB|0、1、2、3、…|  
   
 10. **[変数名]** 一覧で、変数を選択します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)」を参照してください。  
@@ -106,6 +106,6 @@ ms.locfileid: "48070934"
 ## <a name="see-also"></a>参照  
  [SQL 実行タスク](control-flow/execute-sql-task.md)   
  [パラメーターとリターン コード、SQL 実行タスク](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
   

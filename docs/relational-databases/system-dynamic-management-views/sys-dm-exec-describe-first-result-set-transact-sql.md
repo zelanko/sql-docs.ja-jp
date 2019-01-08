@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c57e90b9a7fbe4846698f04e3cde808eed64985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624740"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405187"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>引数  
  *\@tsql*  
- 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
+ 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
   
  *\@params*  
  \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** します。  
@@ -67,7 +67,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**system_type_id**|**int**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
 |**system_type_name**|**nvarchar (256)**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。<br /><br /> データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。<br /><br /> データ型が CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
 |**max_length**|**smallint**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**します。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'** します。|  
-|**有効桁数**|**tinyint**|数値ベースの場合は、列の有効桁数です。 それ以外の場合 0 を返します。|  
+|**有効桁数 (precision)**|**tinyint**|数値ベースの場合は、列の有効桁数です。 それ以外の場合 0 を返します。|  
 |**scale**|**tinyint**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合 0 を返します。|  
 |**collation_name**|**sysname**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合、NULL を返します。|  
 |**user_type_id**|**int**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
@@ -116,7 +116,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |5|CLR_PROCEDURE|結果でしたを特定できないため、CLR ストアド プロシージャは、最初の結果を返す可能性がある可能性があります。|  
 |6|CLR_TRIGGER|CLR トリガーが最初の結果を返す可能性があるため、結果を特定できませんでした。|  
 |7|EXTENDED_PROCEDURE|拡張ストアド プロシージャが最初の結果を返す可能性があるため、結果を特定できませんでした。|  
-|8|UNDECLARED_PARAMETER|1 つまたは複数の結果セットの列のデータ型が、宣言されていないパラメーターに依存している可能性があるため、結果を特定できませんでした。|  
+|8|UNDECLARED_PARAMETER|1 つ以上の結果セットの列のデータ型が、宣言されていないパラメーターに依存する可能性があるために、結果を判別できませんでした。|  
 |9|RECURSION|バッチに再帰的なステートメントが含まれているため、結果を特定できませんでした。|  
 |10|TEMPORARY_TABLE|バッチの一時テーブルが含まれていますでサポートされていないために、結果を判別できませんでした**sp_describe_first_result_set**します。|  
 |11|UNSUPPORTED_STATEMENT|サポートされていないステートメントがバッチに含まれているために、結果を判別できませんでした**sp_describe_first_result_set** (FETCH、REVERT など。)。|  

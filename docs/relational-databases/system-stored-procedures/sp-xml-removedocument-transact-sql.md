@@ -18,20 +18,20 @@ ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be63214fb07683f26fc4f03454d350afbbcf8cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5319f3cd1cb7f06677bfe35eb19ba66f2dca4151
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779270"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947606"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   ドキュメント ハンドルで指定された XML ドキュメントの内部表現を削除し、ドキュメント ハンドルを無効にします。  
   
 > [!NOTE]  
->  解析済みドキュメントがの内部キャッシュに格納されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 MSXML パーサー (Msxmlsql.dll) では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられている総メモリの 8 分の 1 が使用されます。 メモリ不足を回避するには、実行**sp_xml_removedocument**メモリを解放します。  
+>  解析済みのドキュメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部キャッシュに格納されます。 MSXML パーサー (Msxmlsql.dll) では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられている総メモリの 8 分の 1 が使用されます。 メモリ不足を回避するには、実行**sp_xml_removedocument**メモリを解放します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

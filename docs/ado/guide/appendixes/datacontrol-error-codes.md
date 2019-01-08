@@ -14,12 +14,12 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa058add661ba5dc4054a431e0324f97e1efb422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514382"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl オブジェクトのエラー コードします。
 次の表、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのエラー コード。 下位 2 バイトの正の 10 進変換、完全なエラー コードと 16 進数の値の負の値の 10 進数の翻訳が表示されます。
@@ -33,7 +33,7 @@ ms.locfileid: "47753103"
 |**IDS_CantFindDataspace**|4102 -2146824186 0x800A1006|データ領域のプロパティが無効です。|
 |**IDS_CantInvokeMethod**|4101 -2146824187 0x800A1005|ビジネス オブジェクトでメソッドを呼び出すことができません。|
 |**IDS_CrossDomainWarning**|4112 -2146824170 0x800A1016|このページでは、別のドメイン上のデータにアクセスします。 これを許可しますか。 Internet Explorer では、このメッセージを回避するために追加できます Web サイトをセキュリティで保護された信頼済みサイト ゾーンに上、**セキュリティ**のタブ、**インターネット オプション** ダイアログ ボックス。|
-|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|RDS クライアントのバージョンが無効です: クライアントは、サーバーよりも新しいです。|
+|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|無効な RDS クライアントのバージョンのクライアントは、サーバーよりも新しいです。|
 |**IDS_INVALIDARG**|5376 -2147019520 0x80071500|1 つ以上の引数が無効です。|
 |**IDS_InvalidBindings**|4097 -2146824191 0x800A1001|プロパティのバインド エラー。|
 |**IDS_InvalidParam**|4110 -2146824172 0x800A1014|1 つ以上の引数が無効です。|

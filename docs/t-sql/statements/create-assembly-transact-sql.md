@@ -24,19 +24,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b81e8cb39a9520697af41624dfda2609bdbbef9f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697151"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207661"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   クラス メタデータとマネージド コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のオブジェクトとして含む、マネージド アプリケーション モジュールを作成します。 データベース内では、このモジュールを参照することにより、共通言語ランタイム (CLR) 関数、ストアド プロシージャ、トリガー、ユーザー定義集計関数、ユーザー定義型を作成できます。  
   
->  [!WARNING]
+> [!WARNING]
 >  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,8 +85,8 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  **varbinary** 型の式です。  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
- >  [!IMPORTANT]  
- >  `PERMISSION_SET` オプションは、開始の警告で説明されるように、`clr strict security` オプションの影響を受けます。 `clr strict security` が有効になっていると、すべてのアセンブリが `UNSAFE` として処理されます。
+> [!IMPORTANT]
+>  `PERMISSION_SET` オプションは、開始の警告で説明されるように、`clr strict security` オプションの影響を受けます。 `clr strict security` が有効になっていると、すべてのアセンブリが `UNSAFE` として処理されます。
  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアセンブリにアクセスするときに、アセンブリに対して許可されるコード アクセス権のセットを指定します。 指定しない場合、既定値として SAFE が適用されます。  
   
@@ -129,7 +129,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 -   アセンブリ バイナリが有効なメタデータとコード セグメントに基づく整形式になっており、コード セグメントに有効な MSIL (Microsoft Intermediate language) 命令が含まれていること。  
   
--   参照先の一連のシステム アセンブリが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているアセンブリ (Microsoft.Visualbasic.dll、Mscorlib.dll、System.Data.dll、System.dll、System.Xml.dll、Microsoft.Visualc.dll、Custommarshallers.dll、System.Security.dll、System.Web.Services.dll、System.Data.SqlXml.dll、System.Core.dll、System.Xml.Linq.dll) のいずれか 1 つであること。 他のシステム アセンブリは参照できますが、データベースに明示的に登録されている必要があります。  
+-   参照先の一連のシステム アセンブリが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている次のいずれかのアセンブリであること。Microsoft.Visualbasic.dll、Mscorlib.dll、System.Data.dll、System.dll、System.Xml.dll、Microsoft.Visualc.dll、Custommarshallers.dll、System.Security.dll、System.Web.Services.dll、System.Data.SqlXml.dll、System.Core.dll、System.Xml.Linq.dll 他のシステム アセンブリは参照できますが、データベースに明示的に登録されている必要があります。  
   
 -   SAFE または EXTERNAL ACCESS 権限セットを使用して作成されるアセンブリの場合は、次の点がチェックされます。  
   
@@ -168,7 +168,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ## <a name="examples"></a>使用例  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>例 a: dll からアセンブリを作成します。  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>例 A:dll からアセンブリを作成する  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -183,7 +183,7 @@ WITH PERMISSION_SET = SAFE;
 > [!IMPORTANT]
 > Azure SQL Database では、ファイルからのアセンブリの作成はサポートされません。
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>例 b: アセンブリ ビットからアセンブリを作成します。  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>例 B:アセンブリのビットからアセンブリを作成する  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
