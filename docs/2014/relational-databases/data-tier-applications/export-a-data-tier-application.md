@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae726d90d71259715f9eb80619e74c7bfbf990dd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 85e3268bcca9f4800bd59fa5be541dc6f9502ef5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810888"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368704"
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
   配置されているデータ層アプリケーション (DAC) またはデータベースをエクスポートすると、エクスポート ファイルが作成されます。このファイルには、データベース内のオブジェクトの定義に加え、テーブルに格納されているすべてのデータが含まれています。 さらに、このエクスポート ファイルを[!INCLUDE[ssDE](../../includes/ssde-md.md)]の別のインスタンスまたは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にインポートすることもできます。 エクスポートとインポートという操作を組み合わせることで、DAC をインスタンス間で移行したり論理バックアップを作成したりすることが可能です。または、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] に配置されているデータベースの社内用コピーを作成することもできます。  
@@ -37,13 +37,13 @@ ms.locfileid: "43810888"
 ## <a name="before-you-begin"></a>はじめに  
  エクスポート プロセスでは、2 つの段階を経て DAC エクスポート ファイルが構築されます。  
   
-1.  エクスポート ファイル (BACPAC ファイル) に DAC 定義が構築されます。DAC の抽出時には DAC パッケージ ファイルに DAC 定義が構築されますが、これと同様の処理が行われます。 エクスポートされた DAC 定義には、現在のデータベース内のすべてのオブジェクトが含まれます。 もともと DAC から配置され、その後直接変更が加えられたデータベースに対してエクスポート プロセスが実行された場合、エクスポートされる定義は、データベース内のオブジェクト セットと一致し、元の DAC に定義されている内容とは一致しません。  
+1.  エクスポートではエクスポート ファイル (BACPAC ファイル) に DAC 定義が構築されます。DAC の抽出時には DAC パッケージ ファイルに DAC 定義が構築されますが、これと同様の処理が行われます。 エクスポートされた DAC 定義には、現在のデータベース内のすべてのオブジェクトが含まれます。 もともと DAC から配置され、その後直接変更が加えられたデータベースに対してエクスポート プロセスが実行された場合、エクスポートされる定義は、データベース内のオブジェクト セットと一致し、元の DAC に定義されている内容とは一致しません。  
   
 2.  データベース内のすべてのテーブルからデータが一括コピーされて、エクスポート ファイルに組み込まれます。  
   
  エクスポート プロセスでは、DAC バージョンが 1.0.0.0 に設定され、エクスポート ファイル内の DAC の説明は空の文字列に設定されます。 データベースが DAC から配置された場合、エクスポート ファイル内の DAC 定義には、元の DAC に割り当てられた名前が格納されます。それ以外の場合、DAC 名はデータベース名に設定されます。  
   
- DAC およびデータベースのエクスポート/インポート テストに使用できるサンプル アプリケーションが [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ラボに用意されています。 このサンプルのダウンロードと使用方法については、「 [Windows Azure SQL データベースのインポートとエクスポート](http://go.microsoft.com/fwlink/?LinkId=219404)」を参照してください。  
+ DAC およびデータベースのエクスポート/インポート テストに使用できるサンプル アプリケーションが [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ラボに用意されています。 このサンプルのダウンロードと使用方法については、「 [Windows Azure SQL データベースのインポートとエクスポート](https://go.microsoft.com/fwlink/?LinkId=219404)」を参照してください。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC またはデータベースをエクスポートできるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降のデータベースに限られます。  
@@ -62,7 +62,7 @@ ms.locfileid: "43810888"
   
 3.  データベース名を右クリックします。  
   
-4.  **[タスク]** をクリックし、 **[データ層アプリケーションのエクスポート]** を選択します。  
+4.  **[タスク]** をクリックし、**[データ層アプリケーションのエクスポート]** を選択します。  
   
 5.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "43810888"
   
  **[次へ]** : **[DAC パッケージの選択]** ページに進みます。  
   
- **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
+ **[キャンセル]**: 操作を取り消し、ウィザードを閉じます。  
   
 ##  <a name="Export_settings"></a> [エクスポートの設定] ページ  
  このページを使用して、BACPAC ファイルを作成する場所を指定します。  
@@ -117,16 +117,16 @@ ms.locfileid: "43810888"
 ##  <a name="NetApp"></a> .Net Framework アプリケーションの使用  
  **.Net Framework アプリケーションで Export() メソッドを使用して DAC をエクスポートするには**  
   
- コード例を参照するには、 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)上の DAC サンプル アプリケーションをダウンロードしてください。  
+ コード例を参照するには、 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)上の DAC サンプル アプリケーションをダウンロードしてください。  
   
 1.  SMO サーバー オブジェクトを作成し、エクスポートする DAC が含まれたインスタンスにそれを設定します。  
   
-2.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
+2.  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
   
 3.  `Export` 型の `Microsoft.SqlServer.Management.Dac.DacStore` メソッドを使用して、DAC をエクスポートします。 エクスポートする DAC の名前と、エクスポート ファイルの出力先となるフォルダーのパスを指定します。  
   
 ## <a name="see-also"></a>参照  
- [データ層アプリケーション](data-tier-applications.md)   
+ [[データ層アプリケーション]](data-tier-applications.md)   
  [データベースからの DAC の抽出](extract-a-dac-from-a-database.md)  
   
   

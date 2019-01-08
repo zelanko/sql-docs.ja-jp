@@ -1,5 +1,5 @@
 ---
-title: In-database Python analytics SQL 開発者向けの |Microsoft Docs
+title: SQL 開発者向けの SQL Server Machine Learning の in-database Python 分析のチュートリアル
 description: SQL Server のストアド プロシージャおよび T-SQL 関数での Python コードを埋め込む方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560383"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596683"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>SQL 開発者向けのチュートリアル: In-database Python analytics
+# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの In-database Python 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 構築して Python に基づく機械学習ソリューションを導入する Python の統合について説明します SQL プログラマ向けのこのチュートリアルでは、 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server データベース。 
@@ -38,13 +38,13 @@ Machine learning ソリューションを構築するプロセスをいくつか
 
 Python、または SQL に新しい Python 開発者に新しい SQL プログラマでは、かどうか、このマルチパート チュートリアルには、Python と SQL Server の in-database 分析を実施するための一般的なワークフローが導入されています。 
 
-+ [レッスン 1: の探索し、Python を使用してデータを視覚化します。](sqldev-py3-explore-and-visualize-the-data.md)
++ [レッスン 1:探索し、Python を使用してデータを視覚化します。](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [レッスン 2: カスタム SQL 関数を使用してデータ機能を作成します。](sqldev-py4-create-data-features-using-t-sql.md)
++ [レッスン 2:カスタム SQL 関数を使用してデータ機能を作成します。](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [レッスン 3: トレーニングし、T-SQL を使用して Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [レッスン 3:トレーニングし、T-SQL を使用して Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [レッスン 4: ストアド プロシージャで Python モデルを使用して潜在的な結果を予測します。](sqldev-py6-operationalize-the-model.md)
++ [レッスン 4:ストアド プロシージャで Python モデルを使用して潜在的な結果を予測します。](sqldev-py6-operationalize-the-model.md)
 
 モデルをデータベースに保存した後から予測モデルを呼び出すことができます[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャを使用します。
 

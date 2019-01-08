@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_help_agent_default
@@ -17,12 +16,12 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f23718246b78a7a199eaed4716da76a92a69761
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ee9596b578396786da8562f2ecf73c3b85f0241
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792062"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588036"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@profile_id=**] *profile_id * * * 出力**  
+ [  **@profile_id=**] _profile_id_**出力**  
  エージェントの種類の既定の構成の ID を指定します。 *profile_id*は**int**、既定値はありません *。profile_id*は出力パラメーターでも、エージェントの種類の既定の構成の ID を返します。  
   
- [  **@agent_type=**] **'***agent_type***'**  
+ [  **@agent_type=**] **'**_agent_type_**'**  
  エージェントの種類を指定します。 *agent_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 |値|説明|  

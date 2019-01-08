@@ -11,12 +11,12 @@ ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d66e01079a0ab86a1456e53dd310614d3c291267
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173418"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356764"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>互換性のないデータベース エンジン サーバーの照合順序 (アップグレード アドバイザー)
   アップグレード アドバイザーが検出された[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンスを使用して、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]互換性のないサーバーの照合順序を使用して構成されています。  
@@ -44,8 +44,8 @@ ms.locfileid: "48173418"
 ## <a name="corrective-action"></a>修正措置  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サーバーの照合順序プロパティは変更できません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のアップグレードを完了できなくなります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールを、互換性のあるサーバー照合順序を使用している新しいサーバーに移行する必要があります。 詳細については、以下を参照してください。  
   
--   [Reporting Services のアップグレードと移行](http://go.microsoft.com/fwlink/?LinkId=233227)  
+-   [Reporting Services のアップグレードと移行](https://go.microsoft.com/fwlink/?LinkId=233227)  
   
--   [SQL Server 照合順序の選択](http://go.microsoft.com/fwlink/?LinkId=233226)  
+-   [SQL Server 照合順序の選択](https://go.microsoft.com/fwlink/?LinkId=233226)  
   
   

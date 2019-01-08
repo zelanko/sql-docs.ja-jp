@@ -1,5 +1,6 @@
 ---
-title: OlapR を使って SQL Server Machine Learning で R でクエリを MDX を作成する方法 |Microsoft Docs
+title: OlapR - SQL Server Machine Learning Services を使って R で MDX クエリを作成する方法
+description: SQL Server では、olapR パッケージ ライブラリを使用して、R スクリプトの言語で MDX クエリを記述します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fe2749e6f70522fbd010d5af78890dfe897426b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 77804e6499519309e7ade41cc7260d2356a56731
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696931"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432385"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR を使って R で MDX クエリを作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,9 +74,9 @@ ms.locfileid: "51696931"
 
 次の例は、そのプロジェクトは広く普及して、複数のバージョンでは、Analysis Services に簡単に復元するバックアップ ファイルを含むために、AdventureWorks データ マートとキューブのプロジェクトに基づいています。 既存のキューブを持っていない場合は、これらのオプションのいずれかのサンプル キューブを取得します。
 
-+ Analysis Services チュートリアル レッスン 4 までに従ってこれらの例で使用されるキューブの作成: [OLAP キューブを作成します。](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ これらの例で使用されるキューブを作成するには、次のレッスン 4 まで Analysis Services チュートリアル。[OLAP キューブを作成します。](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ 既存のキューブをバックアップとしてをダウンロードして、Analysis Services のインスタンスに復元します。 たとえば、このサイトで、zip 形式で完全に処理されたキューブ: [Adventure Works 多次元モデル SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)します。 ファイルを抽出し、SSAS インスタンスに復元します。 詳細については、次を参照してください。[バックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)、または[Restore-asdatabase コマンドレット](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)します。
++ 既存のキューブをバックアップとしてをダウンロードして、Analysis Services のインスタンスに復元します。 たとえば、このサイトには、zip 形式で完全に処理されたキューブが用意されています。[Adventure Works 多次元モデル SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)します。 ファイルを抽出し、SSAS インスタンスに復元します。 詳細については、次を参照してください。[バックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)、または[Restore-asdatabase コマンドレット](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)します。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.スライサーを使う基本的な MDX
 

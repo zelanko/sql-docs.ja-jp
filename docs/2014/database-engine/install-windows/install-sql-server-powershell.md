@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8cd37ca4058fb79eddfa296896c3da230b98789
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018798"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360934"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、Windows PowerShell 2.0 をインストールしていないのに、PowerShell コンポーネントを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を選択したことが検出された場合に停止します。 Windows 管理フレームワークを使用して PowerShell をインストールしてから、セットアップを再実行する必要があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "51018798"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、オブジェクト エクスプローラー ツリーからの Windows PowerShell セッションの起動をサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、Windows PowerShell ジョブ ステップをサポートします。  
   
- インストールされていない、またはがアンインストールされている場合は、Windows PowerShell 2.0 次の手順でインストールする必要があります、 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214)ページ。  
+ インストールされていない、またはがアンインストールされている場合は、Windows PowerShell 2.0 次の手順でインストールする必要があります、 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214)ページ。  
   
  セットアップの終了後に Windows PowerShell がアンインストールされると、Windows PowerShell 用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能は機能しなくなります。 Windows PowerShell をアンインストールできるのは Windows ユーザーです。また、Windows PowerShell のアンインストールは、Windows オペレーティング システムのアップグレードで必要になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 機能を使用するには、Windows Management Framework を使用して PowerShell 2.0 を再インストールする必要があります。  
   

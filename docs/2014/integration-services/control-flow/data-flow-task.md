@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
@@ -19,12 +18,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a40f38706ad9562f5dde3f4ec5472e678250c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069582"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366864"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
   データ フロー タスクは、変換元と変換先との間でデータを移動するデータ フロー エンジンをカプセル化して、データの移動時にユーザーがデータを変換、クリーンアップ、および変更できるようにします。 データ フロー タスクをパッケージの制御フローに追加すると、パッケージでデータの抽出、変換、および読み込みを行うことができます。  
@@ -45,13 +44,13 @@ ms.locfileid: "48069582"
  ![データ フロー](../media/mw-dts-09.gif "データ フロー")  
   
 ## <a name="log-entries"></a>ログ エントリ  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] また、多くのタスクにカスタム ログ エントリを提供します。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、多くのタスクにカスタム ログ エントリも提供しています。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|データ フロー タスクでバッファーのサイズが変更されたことを示します。 このログ エントリはサイズ変更の理由を説明し、一時的な新しいバッファー サイズを表示します。|  
-|`OnPipelinePostEndOfRowset`|最後の呼び出しで設定される行セットの終了シグナルがコンポーネントに指定されていることを示します、`ProcessInput`メソッド。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
-|`OnPipelinePostPrimeOutput`|コンポーネントで、最後の呼び出しが完了したことを示します、`PrimeOutput`メソッド。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、このログ エントリは、コンポーネントが行の処理を完了したことを意味します。|  
+|`OnPipelinePostEndOfRowset`|`ProcessInput` メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
+|`OnPipelinePostPrimeOutput`|コンポーネントが `PrimeOutput` メソッドの最終呼び出しを完了したことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、このログ エントリは、コンポーネントが行の処理を完了したことを意味します。|  
 |`OnPipelinePreEndOfRowset`|コンポーネントがまもなくの最後の呼び出しで設定される行セットの終了シグナルを受信することを示します、`ProcessInput`メソッド。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePrePrimeOutput`|コンポーネントに、`PrimeOutput` メソッドからの呼び出しが通知されたことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。|  
 |`OnPipelineRowsSent`|`ProcessInput` メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
@@ -87,12 +86,12 @@ ms.locfileid: "48069582"
   
  ログ イベントの多くは複数のエントリを書き込み、多数のログ エントリのメッセージに複雑なデータが含まれています。 メッセージ テキストを解析することで、複雑なメッセージの内容をより簡単に理解して伝えられるようになります。 ログの場所によっては、Transact-SQL ステートメントまたはスクリプト コンポーネントを使用して、複雑なテキストを列、またはより有効なその他の形式に分けることができます。  
   
- たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  : 1185 : OLE DB ソースの出力 : 1180 : 並べ替え : 1181 : 並べ替えの入力 : 76" は、列へと解析されています。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに `OnPipelineRowsSent` イベントによって書き込まれました。  
+ たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  :1185:OLE DB ソースの出力:1180:並べ替え:1181:並べ替えの入力:76"は、列に解析します。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに `OnPipelineRowsSent` イベントによって書き込まれました。  
   
 |[列]|説明|値|  
 |------------|-----------------|-----------|  
-|**PathID**|値、 `ID` OLE DB ソースと並べ替え変換の間のパスのプロパティ。|1185|  
-|**PathName**|値、`Name`パスのプロパティ。|OLE DB ソースの出力|  
+|**PathID**|OLE DB ソースと並べ替え変換の間のパスの `ID` プロパティの値です。|1185|  
+|**PathName**|パスの `Name` プロパティの値です。|OLE DB ソースの出力|  
 |**ComponentID**|値、`ID`並べ替え変換のプロパティ。|1180|  
 |**ComponentName**|並べ替え変換の `Name` プロパティの値です。|並べ替え|  
 |**InputID**|並べ替え変換に対する入力の `ID` プロパティの値です。|1181|  
@@ -115,6 +114,6 @@ ms.locfileid: "48069582"
  [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- technet.microsoft.com のビデオ「 [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
+ technet.microsoft.com のビデオ「 [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
   

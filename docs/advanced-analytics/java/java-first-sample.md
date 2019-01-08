@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2019 で Java 言語の拡張機能 |Microsoft Docs
-description: Java 言語の拡張機能を使用して SQL Server 2019 の Java コードを実行します。
+title: Java サンプルとチュートリアルを SQL Server 2019 - SQL Server Machine Learning サービス
+description: SQL Server のデータを Java 言語の拡張機能を使用するための手順については、SQL Server 2019 の Java サンプル コードを実行します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2018
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf6fec32e28342e355b3393bb531ad1833d8af6b
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715319"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069061"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server の Java サンプルのチュートリアル
 
@@ -226,7 +226,7 @@ Classpath の詳細については、次を参照してください。[クラス
    + をクリックして**オブジェクトの種類**を確認して*組み込みのセキュリティ原則*と*グループ*が選択されています。
    + クリックして**場所**一覧の上部にあるローカル コンピューター名を選択します。
 5. 入力**SQLRUserGroup**名前を確認およびグループを追加するには、[ok] をクリックします。
-6. 入力**すべてのアプリケーション パッケージ**名前を確認および追加するには、[ok] をクリックします。 名前が解決しない場合は、ロケーション ステップを見直します。 SID は、マシンに対してローカルです。
+6. 入力**ALL APPLICATION PACKAGES**名前を確認および追加するには、[ok] をクリックします。 名前が解決しない場合は、ロケーション ステップを見直します。 SID は、マシンに対してローカルです。
 
 両方のセキュリティ id は、フォルダーとサブフォルダーの「パッケージ」の '読み取りと実行' の権限を持っていることを確認します。
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
@@ -16,12 +15,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d0262328fd3f5a2ed948fb8f2c62781dc19ae17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a6e6fd3c6639abedc0324d2f8831e782270bc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229783"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363124"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
   WMI データ リーダー タスクは、WQL (Windows Management Instrumentation Query Language) を使用してクエリを実行し、コンピューター システムに関する WMI から情報を返します。 WMI データ リーダー タスクは、次の目的で使用できます。  
@@ -49,7 +48,7 @@ ms.locfileid: "48229783"
  WMI データ リーダー タスクは、WMI 接続マネージャーを使用して、WMI 情報を読み取るサーバーに接続します。 詳細については、「 [WMI 接続マネージャー](../connection-manager/wmi-connection-manager.md)」をご覧ください。  
   
 ## <a name="wql-query"></a>WQL クエリ  
- WQL は SQL 言語仕様の 1 つで、WMI イベント通知やその他 WMI 固有の機能をサポートする拡張機能が付いています。 WQL の詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?linkid=7022)にある Windows Management Instrumentation のマニュアルをご覧ください。  
+ WQL は SQL 言語仕様の 1 つで、WMI イベント通知やその他 WMI 固有の機能をサポートする拡張機能が付いています。 WQL の詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?linkid=7022)にある Windows Management Instrumentation のマニュアルを参照してください。  
   
 > [!NOTE]  
 >  WMI クラスは、Windows のバージョンによって異なります。  
@@ -85,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [WMI データ リーダー タスク エディター &#40;WMI オプション ページ&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [[WMI データ リーダー タスク エディター] &#40;[WMI オプション] ページ&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

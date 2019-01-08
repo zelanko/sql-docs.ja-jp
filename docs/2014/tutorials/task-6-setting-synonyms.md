@@ -1,5 +1,5 @@
 ---
-title: 'タスク 6: シノニムを設定する |Microsoft Docs'
+title: タスク 6:シノニムを設定する |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a028a8cc32003dfb44f6ce449a5f6313492fcfd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00640766d7a19c91f517d8e96e6de9f863d5ed54
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211408"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365704"
 ---
-# <a name="task-6-setting-synonyms"></a>タスク 6: シノニムを設定する
-  このタスクで 2 つのドメイン値を設定する**USA**と**米国**の**国**とのシノニムとして**米国**として、先頭の値。 **先頭の値を使用して**の作成時にオプションが選択された、**国**ドメイン任意**USA**の値を**国**ドメインとして出力する**米国**など、先頭の値を米国には)。 参照してください[Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx)の詳細。  
+# <a name="task-6-setting-synonyms"></a>タスク 6:シノニムを設定する
+  このタスクで 2 つのドメイン値を設定する**USA**と**米国**の**国**とのシノニムとして**米国**として、先頭の値。 **先頭の値を使用して**の作成時にオプションが選択された、**国**ドメイン任意**USA**の値を**国**ドメインとして出力する**米国**など、先頭の値を米国には)。 参照してください[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)の詳細。  
   
 1.  選択**国**ドメインの一覧から。  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48211408"
      ![米国および米国シノニムとして](../../2014/tutorials/media/et-settingsynonyms-02.jpg "United States とシノニムとして (米国)")  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 7: 複合ドメインを作成する](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
+ [タスク 7:複合ドメインを作成します。](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

@@ -15,17 +15,17 @@ ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b284f16b082c174b0e3f335819fd11e6800f24f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 598ce51e4270e419e925d7aa82516e27ed3bf230
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189312"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370734"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>[WMI イベント監視タスク エディター] ([全般] ページ)
   **[WMI イベント監視タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、WMI イベント監視タスクに名前を付けて説明を記述することができます。  
   
- このタスクの詳細については、「 [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md)」を参照してください。 WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](http://go.microsoft.com/fwlink/?LinkId=79045)」を参照してください。  
+ このタスクの詳細については、「 [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md)」を参照してください。 WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](https://go.microsoft.com/fwlink/?LinkId=79045)」を参照してください。  
   
 ## <a name="options"></a>および  
  **名前**  
@@ -39,7 +39,7 @@ ms.locfileid: "48189312"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI イベント監視タスク エディター &#40;WMI オプション ページ&#41;](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
+ [[WMI イベント監視タスク エディター] ([WMI オプション] ページ)](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
  [[式] ページ](expressions/expressions-page.md)   
  [WMI データ リーダー タスク](control-flow/wmi-data-reader-task.md)  
   

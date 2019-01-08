@@ -4,27 +4,27 @@ description: この記事では、リリース ノートが含まれていて、
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/29/2018
+ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 4760c70f71b798fb31d96c6b36fb91afe6de9667
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 49c16a062977e13f8bf30de10811f48f24d380d3
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666021"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069838"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-次のリリース ノートは、Linux で実行されている SQL Server 2017 に適用されます。 この記事では、各リリースについてのセクションに分割されます。 GA リリースがサポートの詳細し、既知の問題が一覧表示します。 各累積更新プログラム (CU) または一般配布リリース (GDR) CU 変更と、Linux のパッケージのダウンロードへのリンクを記述するサポートの記事にリンクがあります。
+次のリリース ノートに適用されます[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]Linux で実行されています。 この記事では、各リリースについてのセクションに分割されます。 GA リリースがサポートの詳細し、既知の問題が一覧表示します。 各累積更新プログラム (CU) または一般配布リリース (GDR) CU 変更と、Linux のパッケージのダウンロードへのリンクを記述するサポートの記事にリンクがあります。
 
 > [!TIP]
-> これらのリリース ノートは SQL Server 2017 のリリースのために特別にします。 新しい SQL Server 2019 プレビュー リリースの詳細については、次を参照してください。 [Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md?view=sql-server-ver15)します。
+> これらのリリース ノートを目的と[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]を解放します。 詳細については、新しい[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]を参照してください[Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md?view=sql-server-ver15)します。
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -36,18 +36,19 @@ ms.locfileid: "51666021"
 | Docker エンジン 1.8 + では、Windows、Mac、または Linux | なし | [インストール ガイド](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> 詳細については、確認、[システム要件](sql-server-linux-setup.md#system)SQL Server on Linux の。 SQL Server 2017 の最新のサポート ポリシーで、次を参照してください。、 [for Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)します。
+> 詳細については、確認、[システム要件](sql-server-linux-setup.md#system)の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 上。 最新のサポート ポリシーの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]を参照してください、 [for Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)します。
 
 ## <a name="tools"></a>ツール
 
-SQL Server を対象とするほとんどの既存クライアント ツールは、Linux で実行されている SQL Server を対象にシームレスにできます。 いくつかのツールは、Linux で機能する特定のバージョン要件があります。 SQL Server ツールの一覧については、次を参照してください。 [SQL Server の SQL ツールとユーティリティ](../tools/overview-sql-tools.md)します。
+既存のほとんどのクライアント ツールの対象とする[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を対象にシームレスに[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux で実行されています。 いくつかのツールは、Linux で機能する特定のバージョン要件があります。 完全な一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ツールを参照してください[SQL Server の SQL ツールとユーティリティ](../tools/overview-sql-tools.md)します。
 
 ## <a name="release-history"></a>リリース履歴
 
-次の表では、SQL Server 2017 のリリース履歴を一覧表示します。
+次の表のリリース履歴[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。
 
 | リリース               | バージョン       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CU13](#CU13)         | 14.0.3048.4   | 2018-12 月 18 日   |
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
@@ -67,18 +68,32 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 ## <a id="cuinstall"></a> 更新プログラムをインストールする方法
 
-CU リポジトリを構成している場合 (**mssql server-2017**)、新規インストールを実行すると、最新の SQL Server の CU パッケージが表示されます。 CU リポジトリでは、SQL Server on Linux のすべてのパッケージのインストールのアーティクルの既定値です。 GDR のリポジトリを構成している場合 (**mssql server 2017 gdr**)、一般以降にリリースされた重要なセキュリティ更新プログラムのみが取得されます Docker コンテナー CU または GDR 更新プログラムが必要な場合の公式イメージを参照してください[Microsoft SQL Server on Linux 上の Docker エンジン](https://hub.docker.com/r/microsoft/mssql-server)します。 リポジトリの構成の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
+CU リポジトリを構成している場合 (**mssql server-2017**) の最新の CU が表示されます[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]新規インストールを実行するときにパッケージ化します。 すべてのパッケージのインストールのアーティクルの既定値です CU リポジトリ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 上。 GDR のリポジトリを構成している場合 (**mssql server 2017 gdr**)、一般以降にリリースされた重要なセキュリティ更新プログラムのみが取得されます Docker コンテナー CU または GDR 更新プログラムが必要な場合の公式イメージを参照してください[Microsoft SQL Server on Linux 上の Docker エンジン](https://hub.docker.com/r/microsoft/mssql-server)します。 リポジトリの構成の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
 
-SQL Server の既存のパッケージを更新する場合は、最新の CU を取得するには、各パッケージの適切な更新プログラムのコマンドを実行します。 各パッケージの特定の更新手順については、次のインストール ガイドを参照してください。
+既存の更新する場合は[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]パッケージが最新の CU を取得するには、各パッケージの適切な更新プログラムのコマンドを実行します。 各パッケージの特定の更新手順については、次のインストール ガイドを参照してください。
 
 - [SQL Server パッケージをインストールします。](sql-server-linux-setup.md#upgrade)
 - [フルテキスト検索のパッケージをインストールします。](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントを有効にします。](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU13"></a> CU13 (12/2018)
+
+これは、累積的な更新プログラム 13 (CU13) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3048.4 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4466404](https://support.microsoft.com/help/4466404)します。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat の RPM パッケージ | 14.0.3048.4-1 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.3048.4-1 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm) | 
+| Debian パッケージを Ubuntu 16.04 | 14.0.3048.4-1 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3048.4-1_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3048.4-1_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3048.4-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU12"></a> CU12 (Oct 2018)
 
-これは、SQL Server 2017 の累積的な更新プログラムの 12 (CU12) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3045.24 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082)します。
+これは、Cumulative Update 12 (CU12) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3045.24 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -92,7 +107,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU11"></a> CU11 (2018年 9 月)
 
-これは、SQL Server 2017 の累積的な更新プログラム 11 (CU11) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3038.14 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262)します。
+これは、累積的な更新プログラム 11 (CU11) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3038.14 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -106,7 +121,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU10"></a> CU10 (Aug 2018)
 
-これは、SQL Server 2017 の累積的な更新プログラム 10 (CU10) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3037.1 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123)します。
+これは、Cumulative Update 10 (CU10) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3037.1 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -120,7 +135,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU9-GDR2"></a> CU9 GDR2 (Aug 2018)
 
-これは、SQL Server 2017 のも、以前にリリースされた CU (CU9) 含まれており、セキュリティ更新プログラムです。 このリリースの SQL Server エンジンのバージョンは、14.0.3035.2 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805)します。
+以前にリリースされた CU (CU9) 含まれており、セキュリティ更新プログラムが、この[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3035.2 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -134,7 +149,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="GDR2"></a> GDR2 (Aug 2018)
 
-これは、SQL Server 2017 の GDR2 (および GDR1) のセキュリティ修正プログラムのみが含まれるセキュリティ更新プログラムです。  このリリースの SQL Server エンジンのバージョンは、14.0.2002.14 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803)します。
+これは、GDR2 (および GDR1) に対するセキュリティ更新プログラムのみを含むセキュリティ更新プログラム[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.2002.14 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -148,7 +163,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU9"></a> CU9 (2018 年 7 月)
 
-これは、SQL Server 2017 の累積的な更新プログラム 9 (CU9) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3030.27 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265)します。
+これは、累積的な更新プログラム 9 (CU9) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3030.27 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -162,7 +177,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU8"></a> CU8 (Jun 2018)
 
-これは、SQL Server 2017 の累積的な更新プログラム 8 (CU8) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3029.16 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363)します。
+これは、累積的な更新プログラム 8 (CU8) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3029.16 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -176,7 +191,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU7"></a> CU7 (2018 年 5 月)
 
-これは、SQL Server 2017 の累積的な更新プログラム 7 (CU7) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3026.27 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789)します。
+これは、累積的な更新プログラム 7 (CU7) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3026.27 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -190,7 +205,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU6"></a> CU6 (Apr 2018)
 
-これは、SQL Server 2017 の累積的な更新プログラム 6 (CU6) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3025.34 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464)します。
+これは、累積的な更新プログラム 6 (CU6) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3025.34 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -204,11 +219,11 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CU5"></a> CU5 (2018 の年 3 月)
 
-これは、SQL Server 2017 の累積的な更新プログラム 5 (CU5) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3023.8 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643)します。
+これは、累積的な更新プログラム 5 (CU5) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3023.8 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643)します。
 
 ### <a name="known-upgrade-issue"></a>アップグレードの既知の問題
 
-CU5 に以前のリリースからアップグレードすると、SQL Server は、次のエラーで起動に失敗可能性があります。
+以前のリリースから CU5 にアップグレードするときに[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が次のエラーで起動に失敗します。
 
 ```
 Error: 4860, Severity: 16, State: 1.
@@ -217,7 +232,7 @@ Error: 912, Severity: 21, State: 2.
 Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 200, state
 ```
 
-このエラーを解決するには、SQL Server エージェントを有効にして、次のコマンドで SQL Server を再起動します。
+このエラーを解決するには、SQL Server エージェントを有効にし、再起動[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]次のコマンドを使用します。
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
@@ -236,7 +251,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU4"></a> CU4 (Feb 2018)
 
-これは、SQL Server 2017 の累積的な更新プログラム 4 (CU4) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3022.28 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498)します。
+これは、Cumulative Update 4 (CU4) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3022.28 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -253,7 +268,7 @@ sudo systemctl start mssql-server
 
 ## <a id="GDR1"></a> GDR1 (Jan 2018)
 
-これは、セキュリティ上の SQL Server 2017 の修正 GDR1 のみを含む、セキュリティ更新プログラムです。 このリリースの SQL Server エンジンのバージョンは、14.0.2000.63 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122)します。
+これは、セキュリティ更新プログラムのセキュリティ修正プログラムを GDR1 のみを含む[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.2000.63 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -267,7 +282,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU3"></a> CU3 (Jan 2018)
 
-これは、SQL Server 2017 の累積更新プログラム 3 (CU3) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3015.40 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987)します。
+これは、累積更新プログラム 3 (CU3) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3015.40 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -281,7 +296,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU2"></a> CU2 (2017 年 11 月)
 
-これは、SQL Server 2017 の累積的な更新プログラム 2 (CU2) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3008.27 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)します。
+これは、Cumulative Update 2 (CU2) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3008.27 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -295,7 +310,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU1"></a> CU1 (Oct 2017)
 
-これは、SQL Server 2017 の累積的な更新プログラム 1 (CU1) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3006.16 です。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)します。
+これは、Cumulative Update 1 (CU1) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3006.16 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -309,7 +324,7 @@ sudo systemctl start mssql-server
 
 ## <a id="GA"></a> GA (Oct 2017)
 
-これは、SQL Server 2017 の一般公開 (GA) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.1000.169 です。
+これは、一般公開 (GA) リリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.1000.169 します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -334,18 +349,19 @@ sudo systemctl start mssql-server
 |-----|-----|
 | **データベース エンジン** | トランザクション レプリケーション |
 | &nbsp; | マージ レプリケーション |
+| &nbsp; | Change Data Capture (SQL Server エージェントを参照してください) |
 | &nbsp; | Stretch DB |
 | &nbsp; | PolyBase |
 | &nbsp; | サード パーティ製接続を使用した分散クエリ |
-| &nbsp; | SQL Server 以外のデータ ソースへのリンク サーバー |
+| &nbsp; | 以外のデータ ソースへのリンク サーバー [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
 | &nbsp; | システム拡張ストアド プロシージャ (XP_CMDSHELL など) |
 | &nbsp; | Filetable は、FILESTREAM |
 | &nbsp; | CLR アセンブリと EXTERNAL_ACCESS または UNSAFE 権限の設定します。 |
 | &nbsp; | バッファー プール拡張 |
-| **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
+| **SQL Server エージェント** |  サブシステム:CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
 | &nbsp; | オブジェクト エクスプローラーには |
 | &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
-| &nbsp; | 変更データ キャプチャ |
+| &nbsp; | 変更データ キャプチャ (CDC) |
 | &nbsp; | 管理対象のバックアップ |
 | **高可用性** | データベース ミラーリング  |
 | **Security** | 拡張キー管理 |
@@ -363,41 +379,41 @@ sudo systemctl start mssql-server
 
 ## <a name="known-issues"></a>既知の問題
 
-次のセクションでは、Linux 上の SQL Server 2017 の一般公開 (GA) リリースの既知の問題を記述します。
+次のセクションでは、一般公開 (GA) リリースの既知の問題を説明する[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]Linux 上。
 
 #### <a name="general"></a>全般
 
-- SQL Server 2017 の一般公開リリースへのアップグレードは、CTP 2.1 からのみ、またはそれ以降でサポートされます。 
+- GA へのアップグレードがリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]CTP 2.1 からのみ、またはそれ以上はサポートされています。 
 
-- SQL Server が 15 文字にする必要があるインストールされている以下のホスト名の長さ。 
+- ホスト名の長さ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が 15 文字にする必要があるインストールされている以下。 
 
-    - **解像度**: もの 15 文字以下に/etc/ホスト名で名前を変更します。
+    - **解像度**:何か 15 文字以下に/etc/hostname 内の名前を変更します。
 
-- システム時刻を時に旧バージョンと手動で設定と、SQL Server を SQL Server 内での内部のシステム時刻の更新を停止します。
+- システム時刻を時に旧バージョンと手動で設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]内での内部のシステム時刻の更新を停止する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。
 
-    - **解像度**: SQL Server を再起動します。
+    - **解像度**:[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を再起動します。
 
 - 1 つのインスタンスのインストールのみがサポートされています。
 
-    - **解像度**: 特定のホストでは、複数のインスタンスがある場合は、Vm の使用を検討または Docker コンテナー。 
+    - **解像度**:特定のホストでは、複数のインスタンスがある場合は、Vm の使用を検討または Docker コンテナー。 
 
-- SQL Server 構成マネージャーは、Linux 上の SQL Server に接続できません。
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager に接続できません[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 上。
 
 - 既定の言語、 **sa**ログインは英語です。
 
-    - **解像度**: の言語を変更、 **sa**でのログイン、 **ALTER LOGIN**ステートメント。
+    - **解像度**:言語を変更、 **sa**でのログイン、 **ALTER LOGIN**ステートメント。
 
 #### <a name="databases"></a>データベース
 
 - Mssql conf ユーティリティでは、master データベースを移動できません。 Mssql 会議で他のシステム データベースを移動できます。
 
-- 使用する必要がありますが、Windows 上の SQL Server のバックアップ データベースを復元するときに、 **WITH MOVE** TRANSACT-SQL ステートメントの句。
+- バックアップされたデータベースを復元するときに[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Windows で使用する必要があります、 **WITH MOVE** TRANSACT-SQL ステートメントの句。
 
-- Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションは、Linux で実行されている SQL Server ではサポートされません。 DTC が含まれる場合を除き、SQL Server のリンクされたサーバーに SQL Server がサポートされます。 詳細については、次を参照してください。 [Linux で実行されている SQL Server では、Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションはサポートされません](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)します。
+- Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションがサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux で実行されています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DTC が含まれる場合を除き、リンク サーバーがサポートされています。 詳細については、次を参照してください。 [Linux で実行されている SQL Server では、Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションはサポートされません](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)します。
 
-- 特定のアルゴリズム (暗号スイート) トランスポート層セキュリティ (TLS) は、SQL Server on Linux では正しく機能しません。 これは、結果、SQL Server に接続するときに問題と同様に高可用性グループ レプリカ間の接続を確立する接続エラーが発生します。
+- 特定のアルゴリズム (暗号スイート) トランスポート層セキュリティ (TLS) が正しく動作しない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 上。 接続するときに、接続エラー結果[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、高可用性グループ レプリカ間の接続の確立に問題とします。
 
-   - **解像度**: 変更、 **mssql.conf**構成スクリプトの SQL Server on Linux は、次の手順を実行して問題のある暗号を無効にします。
+   - **解像度**:変更、 **mssql.conf**用の構成スクリプト[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]on Linux は、次の手順を実行して問題のある暗号を無効にします。
 
       1. 次の/var/opt/mssql/mssql.conf に追加します。
 
@@ -409,13 +425,13 @@ sudo systemctl start mssql-server
          >[!NOTE]
          >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
 
-      1. 次のコマンドでは、SQL Server を再起動します。
+      1. 再起動[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]次のコマンドを使用します。
 
       ```bash
       sudo systemctl restart mssql-server
       ```
 
-- SQL Server 2017 on Linux では、インメモリ OLTP を使用して Windows 上の SQL Server 2014 データベースを復元できません。 インメモリ OLTP を使用する SQL Server 2014 データベースを復元するには、まず、データベースをアップグレード SQL Server 2016 または Windows 上の SQL Server 2017 移動の前に SQL Server を Linux 上のバックアップ/復元またはデタッチ/アタッチを使用して。
+- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] インメモリ OLTP を使用して Windows 上のデータベースを復元できません[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]Linux 上。 復元する、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]では、インメモリ OLTP を使用するデータベースが最初にデータベースをアップグレード[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]または[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]上に移動する前に Windows[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]バックアップ/復元またはデタッチ/アタッチを使用して Linux 上。
 
 - ユーザーのアクセス許可**ADMINISTER BULK OPERATIONS**この時点で、Linux でサポートされていません。
 
@@ -443,7 +459,7 @@ sudo systemctl start mssql-server
 使用する場合**Network File System (NFS)** 、運用環境でのリモート共有には、次のサポート要件に注意してください。
 
 - NFS のバージョンを使用して**4.2 以上**します。 以前のバージョンの NFS は、fallocate スパース ファイルの作成、最新のファイル システムに共通してなどの必要な機能をサポートしません。
-- のみを検索、 **/var/opt/mssql** NFS マウント上のディレクトリ。 SQL Server のシステム バイナリなどの他のファイルがサポートされていません。
+- のみを検索、 **/var/opt/mssql** NFS マウント上のディレクトリ。 などの他のファイル、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]システム バイナリがサポートされていません。
 - NFS クライアントがリモート共有をマウントするときに、'nolock' オプションを使用することを確認します。
 
 #### <a name="localization"></a>ローカリゼーション
@@ -460,7 +476,7 @@ sudo systemctl start mssql-server
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- ときに、mssql conf セットアップの実行および拡張文字が正しくない、SQL Server の英語以外のインストールを実行するは、[SQL Server の構成]、ローカライズされたテキストの後に表示されます。 または、ベースのインストールをラテン語以外の場合、文が見つからないことが完全にします。 不足している文は、次のローカライズされた文字列を表示する必要があります:"ライセンス PID は正常に処理されました。  新しいエディションは [\<名前\>edition]"。 情報用にのみ、この文字列を出力し、次の SQL Server の累積的な更新はすべての言語のこれを解決します。 これは任意の方法で SQL Server のインストールの成功には影響しません。 
+- Mssql conf のセットアップを実行している場合の英語以外のインストールを実行して[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、不適切な拡張文字が「を構成する SQL Server…」ローカライズされたテキストの後に表示されます。 または、ベースのインストールをラテン語以外の場合、文が見つからないことが完全にします。 不足している文では、次のローカライズされた文字列を表示する必要があります。"ライセンス PID は正常に処理されました。 新しいエディションは [\<名前\>edition]"。 この文字列は、情報のみを目的として、次の出力は[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]累積更新プログラムはすべての言語のこれを解決します。 これには影響しませんが、正常にインストール[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]何らかの方法でします。 
 
 #### <a name="full-text-search"></a>フルテキスト検索
 
@@ -470,15 +486,15 @@ sudo systemctl start mssql-server
 
 - **Mssql server は**パッケージは SUSE にこのリリースではサポートされません。 Ubuntu、Red Hat Enterprise Linux (RHEL) でこれ現在サポートされています。
 
-- SSIS で Linux CTP 2.1 の更新以降では、SSIS パッケージは Linux で ODBC 接続を使用できます。 この機能は、SQL Server および MySQL ODBC ドライバーでテストされているが、ODBC 仕様には任意の Unicode ODBC ドライバーを使用することも必要です。 デザイン時に、DSN または接続文字列は、ODBC データに接続するを指定することができます。Windows 認証を使用することもできます。 詳細については、次を参照してください。、[ブログ Linux に ODBC サポートのお知らせを投稿する](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)します。
+- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Linux CTP 2.1 の更新に関する以降[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージは Linux で ODBC 接続を使用することができます。 この機能がテストされている、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]および MySQL ODBC ドライバーが、ODBC 仕様には任意の Unicode ODBC ドライバーを使用することも必要です。 デザイン時に、DSN または接続文字列は、ODBC データに接続するを指定することができます。Windows 認証を使用することもできます。 詳細については、次を参照してください。、[ブログ Linux に ODBC サポートのお知らせを投稿する](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)します。
 
 - Linux で SSIS パッケージを実行すると、このリリースでは、次の機能はサポートされていません。
-  - SSIS カタログ データベース
+  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログ データベース
   - SQL エージェントでスケジュールされたパッケージの実行
   - [Windows 認証]
   - サード パーティのコンポーネント
   - 変更データ キャプチャ (CDC)
-  - SSIS スケール アウト
+  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] スケール アウト
   - Azure Feature Pack for SSIS
   - Hadoop と HDFS のサポート
   - Microsoft Connector for SAP BW
@@ -490,15 +506,15 @@ Linux 上の SSIS の詳細については、次の記事を参照してくだ�
 -   [Linux 上の SQL Server Integration Services (SSIS) のインストールします。](sql-server-linux-setup-ssis.md)
 -   [抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
 
-#### <a name="-a-idssmsa-sql-server-management-studio-ssms"></a><、id ="ssms"></a> SQL Server Management Studio (SSMS)
+#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
-Linux 上の SQL Server に接続されている Windows 上の SSMS には次の制限が適用されます。
+次の制限が適用される[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]に接続されている Windows の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 上。
 
 - メンテナンス プランはサポートされていません。
 
-- 管理データ ウェアハウス (MDW) および SSMS でのデータ コレクターはサポートされていません。 
+- 管理データ ウェアハウス (MDW) およびデータ コレクターで[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]はサポートされていません。 
 
-- Windows 認証または Windows イベント ログのオプションを持つ SSMS UI コンポーネントは、Linux では動作しません。 SQL ログインなどの他のオプションを使用してこれらの機能を引き続き使用できます。 
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Windows 認証または Windows イベント ログのオプションを持つ UI コンポーネントは、Linux では動作しません。 SQL ログインなどの他のオプションを使用してこれらの機能を引き続き使用できます。 
 
 - 保持するログ ファイルの数を変更できません。
 

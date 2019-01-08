@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services の結果とリソースのパフォーマンス |Microsoft Docs
+title: SQL Server R Services - 結果とリソース - SQL Server Machine Learning Services のパフォーマンス
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 81176a5a63b0cd8319d985ef72889a5c972fac63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697500"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645471"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services のパフォーマンス: 結果とリソース
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51697500"
 
 このトピックでは、最初のケース スタディの詳細な結果を使用します。 2 番目のケース スタディの概要には、全体的な結果がについて説明します。 このトピックの最後には、すべてのスクリプトとサンプル データ、および元の作成者によって使用されるリソースへのリンクを示します。
 
-## <a name="performance-case-study-airline-dataset"></a>パフォーマンスのケース スタディ: 航空会社のデータセット
+## <a name="performance-case-study-airline-dataset"></a>パフォーマンスのケース スタディ:航空会社のデータセット
 
 SQL Server R Services 開発チームがこのケース スタディは、さまざまな最適化の効果をテストします。 RxLogit を 1 つのモデルが作成され、スコア付け、航空会社のデータ セットで実行します。 最適化は、トレーニングと個々 の影響を評価するプロセスをスコア付け中に適用されました。
 
@@ -62,7 +62,7 @@ SQL Server R Services 開発チームがこのケース スタディは、さま
 
 **サンプルのタイミング**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds
@@ -90,7 +90,7 @@ metric time pct
 
 最初のテストでは、圧縮および単票形式データのサイズを縮小するテーブルの使用と比較します。
 
-| テーブル名            | [行]     | 予約済み。   | data       | index_size | 未使用  | 節約率 (予約済み) |
+| テーブル名            | [行]     | 予約済み。   | データ       | index_size | 未使用  | 節約率 (予約済み) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -273,7 +273,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 テーブルからトレーニング済みモデルの読み込みは、予測を行うより高速の方法では明確にします。 モデルを作成して、同じスクリプトですべてのスコア付けを実行しないことをお勧めします。
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>ケース スタディ: 再開一致を実行するタスクの最適化
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>ケース スタディ:Resume-一致するタスクの最適化
 
 Microsoft データ サイエンスの専門家 Ke Huang、SQL Server での R コードのパフォーマンスをテストするためのヘルプ データ科学者は、スケーラブルな作成手順を実行して、再開-一致するモデルが開発されたエンタープライズ レベルのソリューションです。
 
@@ -347,11 +347,11 @@ CPU の結合は、R ジョブへの影響を評価するための再開に一�
 
 次に、情報、ツール、およびこれらのテストの開発で使用されるスクリプトへのリンクを示します。
 
-+ パフォーマンス テスト スクリプトとデータへのリンク:[サンプル データと SQL Server の最適化の学習用のスクリプト](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ パフォーマンスのテスト スクリプトとデータへのリンク:[サンプル データと SQL Server の最適化の学習用のスクリプト](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ Resume-一致するソリューションを説明する記事:[最適化ヒントとテクニックについては、SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ Resume-一致するソリューションを記述する情報の記事:[最適化ヒントとテクニックについては、SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Resume-一致するソリューションの SQL の最適化で使用されるスクリプト: [GitHub リポジトリ](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Resume-一致するソリューションの SQL の最適化で使用されるスクリプト:[GitHub リポジトリ](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
 ### <a name="learn-about-windows-server-management"></a>Windows server の管理について説明します
 
@@ -365,11 +365,11 @@ CPU の結合は、R ジョブへの影響を評価するための再開に一�
 
 ### <a name="learn-about-sql-server-optimizations"></a>SQL Server の最適化について説明します
 
-+ [インデックスの再編成と再構築](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [メモリ最適化テーブルの概要](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
-+ [デモ: インメモリ OLTP のパフォーマンスの向上](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [デモ:インメモリ OLTP のパフォーマンスの向上](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
 + [データの圧縮](../../relational-databases/data-compression/data-compression.md)
 
@@ -400,7 +400,7 @@ CPU の結合は、R ジョブへの影響を評価するための再開に一�
 
 ## <a name="other-articles-in-this-series"></a>このシリーズの他の記事
 
-[パフォーマンス チューニング-R の概要](sql-server-r-services-performance-tuning.md)
+[パフォーマンス チューニング - R の概要](sql-server-r-services-performance-tuning.md)
 
 [R で SQL Server の構成のパフォーマンス チューニング](sql-server-configuration-r-services.md)
 

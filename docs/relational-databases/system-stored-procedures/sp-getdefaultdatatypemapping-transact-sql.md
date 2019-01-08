@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_getdefaultdatatypemapping_TSQL
@@ -17,12 +16,12 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44ddeb1370044c0218d0ef85c1d7e61bad78c646
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2559c69e5857bbc5796d68d19b7d760476594b87
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700610"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589196"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@source_dbms**=] **'***source_dbms***'**  
+ [ **@source_dbms**=] **'**_source_dbms_**'**  
  データ型のマップ元となる DBMS の名前を指定します。 *source_dbms*は**sysname**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**MSSQLSERVER**|ソースが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。|  
+|**MSSQLSERVER**|マップ元は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**ORACLE**|マップ元は Oracle データベース。|  
   
  このパラメーターを指定する必要があります。  
   
- [  **@source_version=** ] **'***source_version***'**  
+ [  **@source_version=** ] **'**_source_version_**'**  
  マップ元 DBMS のバージョン番号を指定します。 *source_version*は**varchar (10)** 既定値は NULL です。  
   
- [ **@source_type**=] **'***source_type***'**  
+ [ **@source_type**=] **'**_source_type_**'**  
  マップ元 DBMS のデータ型です。 *source_type*は**sysname**、既定値はありません。  
   
  [  **@source_length=** ] *source_length*  
@@ -81,7 +80,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@source_nullable=** ] *source_nullable*  
  マップ元 DBMS でデータ型が NULL の値をサポートするかどうかを指定します。 *source_nullable*は**ビット**の既定値を持つ**1**NULL 値がサポートされていることを意味します。  
   
- [ **@destination_dbms** =] **'***destination_dbms***'**  
+ [ **@destination_dbms** =] **'**_destination_dbms_**'**  
  マップ先 DBMS の名前です。 *destination_dbms*は**sysname**値は次のいずれかを指定できます。  
   
 |値|説明|  
@@ -93,10 +92,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  このパラメーターを指定する必要があります。  
   
- [ **@destination_version**=] **'***destination_version***'**  
+ [ **@destination_version**=] **'**_destination_version_**'**  
  マップ先 DBMS の製品バージョンを指定します。 *destination_version*は**varchar (10)** 既定値は NULL です。  
   
- [ **@destination_type**=] **'***destination_type***'** 出力  
+ [ **@destination_type**=] **'**_destination_type_**'** 出力  
  マップ先 DBMS で定義されているデータ型を指定します。 *destination_type*は**sysname**既定値は NULL です。  
   
  [  **@destination_length=** ] *destination_length*出力  
@@ -105,13 +104,13 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@destination_precision=** ] *destination_precision*出力  
  マップ先 DBMS でのデータ型の有効桁数を指定します。 *destination_precision*は**bigint**既定値は NULL です。  
   
- [  **@destination_scale=** ] *@destination_scale * * * 出力**  
+ [  **@destination_scale=** ] _destination_scale_**出力**  
  マップ先 DBMS でのデータ型の小数点以下桁数を指定します。 *destination_scale*は**int**既定値は NULL です。  
   
- [  **@destination_nullable=** ] *@destination_nullable * * * 出力**  
+ [  **@destination_nullable=** ] _destination_nullable_**出力**  
  マップ先 DBMS でデータ型が NULL の値をサポートするかどうかを指定します。 *destination_nullable*は**ビット**既定値は NULL です。 **1** NULL 値がサポートされていることを意味します。  
   
- [  **@dataloss=** ]*データ消失 * * * 出力**  
+ [  **@dataloss=** ]_データ消失_**出力**  
  マッピングでデータ損失の可能性があるかどうかを示します。 *データ損失*は**ビット**既定値は NULL です。 **1**データ損失の可能性があることを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

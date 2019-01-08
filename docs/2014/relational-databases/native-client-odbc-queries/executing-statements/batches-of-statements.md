@@ -17,15 +17,15 @@ ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa97baae4ad6331193cab16ae2609212753c5be0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051939"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368714"
 ---
 # <a name="batches-of-statements"></a>ステートメントのバッチ
-  バッチの[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントに渡される 1 つの文字列に組み込まれている、セミコロン (;) で区切られた 2 つ以上のステートメントが含まれています**SQLExecDirect**または[SQLPrepare 関数](http://go.microsoft.com/fwlink/?LinkId=59360)します。 以下に例を示します。  
+  バッチの[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントに渡される 1 つの文字列に組み込まれている、セミコロン (;) で区切られた 2 つ以上のステートメントが含まれています**SQLExecDirect**または[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)します。 以下に例を示します。  
   
 ```  
 SQLExecDirect(hstmt,   

@@ -1,5 +1,5 @@
 ---
-title: 作成、トレーニング、および R (SQL Server Machine Learning Services) でのパーティションに基づくモデルのスコア付けのチュートリアル |Microsoft Docs
+title: 作成、トレーニング、および R - SQL Server Machine Learning Services でのパーティションに基づくモデルのスコア付けに関するチュートリアル
 description: モデル化、トレーニング、および SQL Server machine learning のパーティション ベースのモデリング機能を使用するときに動的に作成されるパーティション分割されたデータを使用する方法について説明します。
 ms.custom: sqlseattle
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462008"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596463"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル: SQL Server での R でのパーティションに基づくモデルを作成します。
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル:SQL Server での R のパーティションに基づくモデルを作成します。
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 SQL Server の 2019 でパーティション ベースのモデルを作成し、パーティション分割されたデータに対してモデルをトレーニングする機能があります。 地理的リージョン、日付と時間、年齢や性別 - などの特定の分類のスキームに自然に分割する層化データのスクリプトを実行全体のデータ セットに対してモデル化、トレーニング、およびそのままのパーティションでスコア付けすることができます。これらすべての操作。 

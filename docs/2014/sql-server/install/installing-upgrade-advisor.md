@@ -15,12 +15,12 @@ ms.assetid: 1b7d6eca-1df1-47df-bbba-0fc485706a95
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95bcdfca34b618043515c27030bc74104e4da590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82db1c6f36d8b03d2a603c0a616090ec9d3544af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078072"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353997"
 ---
 # <a name="installing-upgrade-advisor"></a>アップグレード アドバイザーのインストール
   インストールする場合、SQL Server 2014 アップグレード アドバイザーは、どのようなは、分析対象によって異なります。 アップグレード アドバイザーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のすべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをリモートで分析できます。 インスタンスをスキャンしない場合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に接続できる任意のコンピューターでアップグレード アドバイザーをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、かつを満たす、[アップグレード アドバイザーの前提条件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンする場合は、アップグレード アドバイザーをレポート サーバーにインストールする必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "48078072"
   
 -   **Redist**のフォルダー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品メディア。  
   
--   一部として、 [SQL 2014 Feature Pack ダウンロード](http://www.microsoft.com/download/details.aspx?id=42295)します。  
+-   一部として、 [SQL 2014 Feature Pack ダウンロード](https://www.microsoft.com/download/details.aspx?id=42295)します。  
   
 ## <a name="uninstalling-upgrade-advisor"></a>アップグレード アドバイザーのアンインストール  
  使用してアップグレード アドバイザーをアンインストールする**プログラム追加と削除**します。 コマンド プロンプトの構文でも、削除またはアンインストール操作がサポートされます。  

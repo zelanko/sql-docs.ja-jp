@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergearticlecolumn
@@ -17,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 479ac5e7d9a1d451ea489a3a43c0ff481a6a121f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837026"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590076"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +44,32 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =**] **'***パブリケーション***'**  
+ [  **@publication =**] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@article =**] **'***記事***'**  
+ [  **@article =**] **'**_記事_**'**  
  パブリケーションのアーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
- [  **@column =**] **'***列***'**  
+ [  **@column =**] **'**_列_**'**  
  列方向にパーティション分割する列の名前を指定します。 *列*は**sysname**、既定値は NULL です。 値が NULL で `@operation = N'add'` の場合、既定ではソース テーブルのすべての列がアーティクルに追加されます。 *列*ときに、NULL にすることはできません*操作*に設定されている**ドロップ**します。 アーティクルから列を除外するには実行**sp_mergearticlecolumn**指定と*列*と`@operation = N'drop'`を削除するには、各列の指定した*記事*.  
   
- [  **@operation =**] **'***操作***'**  
+ [  **@operation =**] **'**_操作_**'**  
  レプリケーションの状態を指定します。 *操作*は**nvarchar (4)**、既定値は ADD です。 **追加**レプリケーションする列をマークします。 **drop**列をクリアします。  
   
- [  **@schema_replication=**] **'***schema_replication***'**  
+ [  **@schema_replication=**] **'**_schema_replication_**'**  
  マージ エージェントが実行されたときにスキーマの変更を通知します。 *schema_replication*は**nvarchar (5)**、既定値は FALSE。  
   
 > [!NOTE]  
 >  のみ**FALSE**はサポートされて*schema_replication*します。  
   
- [  **@force_invalidate_snapshot =** ]*更によって*  
+ [ **@force_invalidate_snapshot =** ]*更によって*  
  スナップショットを無効にする機能を有効または無効にします。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**にマージ アーティクルへの変更はスナップショットが無効であることがありません。  
   
  **1**マージ アーティクルへの変更は、スナップショットが無効であることで発生する可能性がありますを指定します。 場合、値がある場合と**1** 、新しいスナップショットを作成する権限が与えられます。  
   
- [* *@force_reinit_subscription =] * * * 更によって*  
+ [  **@force_reinit_subscription =]**_更によって_  
  サブスクリプションを再初期化する機能を有効または無効にします。 *更によって*は bit で、既定値は**0**します。  
   
  **0**マージ アーティクルへの変更では、サブスクリプションを再初期化するのには発生しませんを指定します。  

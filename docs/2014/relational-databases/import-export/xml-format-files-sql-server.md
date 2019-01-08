@@ -14,12 +14,12 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a6dee085342d800caf2cf7353d28a6813d8b74b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201042"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373874"
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 *のテーブルにデータを一括インポートする目的で使用する* XML フォーマット ファイル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を記述するための構文を定義した XML スキーマが用意されています。 このスキーマは XML Schema Definition Language (XSDL) で定義されています。XML フォーマット ファイルはこのスキーマに準拠している必要があります。 XML フォーマット ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client と共にインストールされている場合のみサポートされます。  
@@ -176,7 +176,7 @@ ms.locfileid: "48201042"
 |ID **="*`fieldID`*"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> < FIELD ID **="*`fieldID`*"**/> にマップされます < COLUMN SOURCE **="*`fieldID`*"**/>|必須|  
 |xsi:type **="*`fieldType`*"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
 |LENGTH **="*`n`*"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
-|PREFIX_LENGTH **="*`p`*"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p*は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
+|PREFIX_LENGTH **="*`p`*"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の*p*次のいずれかを指定する必要があります。1、2、4、または 8 です。|省略可能 (xsi:type 値で必要な場合は必須)。|  
 |MAX_LENGTH **="*`m`*"**|指定したフィールドに格納できる最大バイト数を定義します。 対象のテーブルがない場合、列の最大長を決めることはできません。 MAX_LENGTH 属性では、出力先の文字列型の列の最大長を制限し、列の値に割り当てる領域を制限しています。 この属性は、SELECT FROM 句で OPENROWSET 関数の BULK オプションを使用している場合に特に有益です。<br /><br /> *m* の値は、正の整数にする必要があります。 既定では、 **char** 列の最大長は 8,000 文字で、 **nchar** 列の最大長は 4,000 文字です。|省略可|  
 |照合順序 **="*`collationName`*"**|COLLATION は、文字列型のフィールドでのみ使用できる属性です。 SQL 照合順序名の一覧については、「[SQL Server の照合順序名 &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)」を参照してください。|省略可|  
 |ターミネータ **="*`terminator`*"**|データ フィールドのターミネータを指定します。 ターミネータには、任意の文字を使用できます。 ただし、ターミネータには、データに含まれていない一意な文字を使用する必要があります。<br /><br /> 既定では、フィールド ターミネータはタブ文字 (\t) です。 段落記号を表すには、\r\n を使用します。|この属性が必要な文字型データの xsi:type でのみ使用されます。|  
@@ -228,7 +228,7 @@ ms.locfileid: "48201042"
 |----------------------|-----------------|------------------------------|  
 |ソース **="*`fieldID`*"**|列にマップされているフィールドの ID を指定します。<br /><br /> < COLUMN SOURCE **="*`fieldID`*"**/> にマップされます < FIELD ID **="*`fieldID`*"**/>|必須|  
 |NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|必須|  
-|xsi **:** 型 **="*`ColumnType`*"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: の有効な値*ColumnType*と関連する属性が次の表に一覧表示します。|省略可|  
+|xsi **:** 型 **="*`ColumnType`*"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注:可能な値*ColumnType*と関連する属性が次の表に一覧表示します。|省略可|  
 |LENGTH **="*`n`*"**|固定長データ型のインスタンスの長さを定義します。 LENGTH 属性は、xsi:type が文字列データ型の場合にのみ使用します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type が文字列データ型の場合にのみ使用可能)|  
 |PRECISION **="*`n`*"**|数値全体の桁数を示します。 たとえば、数字 123.45 の有効桁数は 5 桁です。<br /><br /> この値は、正の整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
 |スケール **="*`int`*"**|数値の中で小数点より右側の桁数を示します。 たとえば、数字 123.45 の小数点以下桁数は 2 桁です。<br /><br /> この値は、整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
@@ -241,7 +241,7 @@ ms.locfileid: "48201042"
   
 |データ型|\<COLUMN> データ型|必要な XML<br /><br /> 属性|データ型に関する省略可能な XML<br /><br /> 属性|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|固定|`SQLBIT`、 `SQLTINYINT`、 `SQLSMALLINT`、 `SQLINT`、 `SQLBIGINT`、 `SQLFLT4`、 `SQLFLT8`、 `SQLDATETIME`、 `SQLDATETIM4`、 `SQLDATETIM8`、 `SQLMONEY`、 `SQLMONEY4`、 `SQLVARIANT`、と `SQLUNIQUEID`|[なし] :|NULLABLE|  
+|固定|`SQLBIT`、`SQLTINYINT`、`SQLSMALLINT`、`SQLINT`、`SQLBIGINT`、`SQLFLT4`、`SQLFLT8`、`SQLDATETIME`、`SQLDATETIM4``SQLDATETIM8`、`SQLMONEY`、`SQLMONEY4`、`SQLVARIANT``SQLUNIQUEID`|[なし] :|NULLABLE|  
 |可変数値|`SQLDECIMAL` および `SQLNUMERIC`|[なし] :|NULLABLE、PRECISION、SCALE|  
 |LOB|`SQLIMAGE`、`CharLOB`、`SQLTEXT`、および `SQLUDT`|[なし] :|NULLABLE|  
 |CLOB|`SQLNTEXT`|[なし] :|NULLABLE|  
@@ -249,7 +249,7 @@ ms.locfileid: "48201042"
 |文字列|`SQLCHAR`、`SQLVARYCHAR`、`SQLNCHAR`、および `SQLNVARCHAR`|[なし] :|NULLABLE、LENGTH|  
   
 > [!IMPORTANT]  
->  SQLXML データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には、SQLCHAR または SQLVARYCHAR (データはクライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送られます)、SQLBINARY または SQLVARYBIN (データは変換なしで送られます) のいずれかを使用します。  
+>  SQLXML データを一括エクスポートまたは一括インポートするには、フォーマット ファイルで次のいずれかのデータ型を使用します。SQLCHAR または SQLVARYCHAR (データは、クライアント コード ページまたは照合順序で暗黙的に指定するコード ページに送信される)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送ら)、SQLBINARY または SQLVARYBIN (データは変換なし送信) します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)」を参照してください。  
   
@@ -308,9 +308,9 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. 文字データ フィールドの順序とテーブル列の順序が同じ場合  
  次の例は、文字データのフィールドを 3 つ含んだデータ ファイルを記述する XML フォーマット ファイルを示しています。 フォーマット ファイルによって、このデータ ファイルを 3 列のテーブルにマッピングします。 データ フィールドは、テーブルの列と一対一に対応します。  
   
- **テーブル (行):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **テーブル (行):** Person (の Age int, FirstName varchar (20)、, LastName varchar(30))  
   
- **データ ファイル (レコード):** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **データ ファイル (レコード):** 年齢\<タブ > Firstname\<タブ > Lastname\<返す >  
   
  次の XML フォーマット ファイルはデータ ファイルのデータをテーブルに読み込みます。  
   
@@ -321,7 +321,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -346,9 +346,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. データ フィールドの順序とテーブル列の順序が異なる場合  
  次の例は、文字データのフィールドを 3 つ含んだデータ ファイルを記述する XML フォーマット ファイルを示しています。 フォーマット ファイルによって、データ ファイルを 3 列のテーブルにマッピングします。ここでは、データ ファイルのフィールドの順序とマッピング先のテーブルの列の順序は異なるものとします。  
   
- **テーブル (行):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **テーブル (行):** Person (の Age int, FirstName varchar (20)、, LastName varchar(30))  
   
- **データ ファイル** (レコード): Age\<tab>Lastname\<tab>Firstname\<return>  
+ **データ ファイル**(レコード)。年齢\<タブ > Lastname\<タブ > Firstname\<返す >  
   
  `<RECORD>` 要素では、3 つのフィールドすべてのデータ値が文字データとして表現されています。  
   
@@ -357,7 +357,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -381,9 +381,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ### <a name="c-omitting-a-data-field"></a>C. データ フィールドをスキップする場合  
  次の例は、文字データのフィールドを 4 つ含んだデータ ファイルを記述する XML フォーマット ファイルを示しています。 フォーマット ファイルによって、このデータ ファイルを 3 列のテーブルにマッピングします。 2 番目のデータ フィールドは対応するテーブル列がありません。  
   
- **テーブル (行):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
+ **テーブル (行):** Person (Age int, FirstName varchar (20)、LastName Varchar(30))  
   
- **データ ファイル (レコード):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **データ ファイル (レコード):** 年齢\<タブ > employeeID\<タブ > Firstname\<タブ > Lastname\<返す >  
   
  `<RECORD>` 要素では、4 つのフィールドすべてのデータ値が文字データとして表現されています。 各フィールドの TERMINATOR 属性は、データ値の後のターミネータを示します。  
   
@@ -391,7 +391,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 ```  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -423,7 +423,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
@@ -465,7 +465,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
@@ -484,7 +484,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  

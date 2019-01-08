@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ServiceName Property (SqlServiceAdvancedProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 89d8e1ef4f51c9abc258ef23d5677eed4db32aca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf4a413fe9b45a253e25b55267f4b65d6008c4b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192712"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371654"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName プロパティ (SqlServiceAdvancedProperty クラス)
   詳細プロパティに関連付けられたマネージド サービスの名前を取得します。  
@@ -45,9 +43,9 @@ object
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  詳細プロパティに関連付けられたサービスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>関連項目  
- [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>参照  
+ [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

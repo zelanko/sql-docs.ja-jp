@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659215"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160530"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Linux 上の SQL Server の新機能については
 
@@ -34,7 +34,7 @@ SQL Server 2019 プレビューがリリースされました。 この記事で
 - ネイティブ Linux パスのサポート。
 - IPV6 をサポートします。
 - NFS 上のデータベース ファイルのサポート。
-- 有効になっている[透過的な層のセキュリティ](sql-server-linux-encrypted-connections.md)(TLS) 暗号化します。
+- 有効になっている[トランスポート層セキュリティ](sql-server-linux-encrypted-connections.md)(TLS) 暗号化します。
 - 有効になっている[Active Directory 認証](sql-server-linux-active-directory-authentication.md)します。
 - [可用性グループ機能](sql-server-linux-availability-group-overview.md)高可用性を実現します。
 - [フルテキスト検索](sql-server-linux-setup-full-text-search.md)をサポートします。

@@ -20,12 +20,12 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738862"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785923"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "47738862"
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|パッケージの名前。 説明は、パッケージ自体から公開されます。 NULL 値は許可されません。|  
+|NAME|**nvarchar (256)**|パッケージの名前。 説明は、パッケージ自体から公開されます。 NULL 値は許可されません。|  
 |guid|**uniqueidentifier**|パッケージを識別する GUID。 NULL 値は許可されません。|  
-|description|**nvarchar (256)**|パッケージの説明。 descriptionis では、パッケージの作成者によって設定され、null 値を許容することはできません。|  
+|description|**nvarchar(3072)**|パッケージの説明。 descriptionis では、パッケージの作成者によって設定され、null 値を許容することはできません。|  
 |capabilities|**int**|このパッケージの機能を説明するビットマップ。 NULL 値が許可されます。|  
 |capabilities_desc|**nvarchar (256)**|このパッケージで使用できるすべての機能の一覧。 NULL 値が許可されます。|  
-|module_guid|**uniqueidentifier**|このパッケージを公開するモジュールの GUID。 NULL 値は許可されません。|  
+|module_guid|**nvarchar(60)**|このパッケージを公開するモジュールの GUID。 NULL 値は許可されません。|  
 |module_address|**varbinary(8)**|パッケージを含むモジュールが読み込まれるベース アドレス。 1 つのモジュールで複数のパッケージが公開される場合があります。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  

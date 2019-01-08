@@ -1,170 +1,122 @@
 ---
-title: 作成し、R スクリプト (SQL と R deep dive) を実行 |Microsoft ドキュメント
+title: RevoScaleR のチュートリアル - SQL Server Machine Learning の概要統計情報を計算します。
+description: SQL Server で R 言語を使用して概要統計情報の統計を計算する方法のチュートリアル。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1ff4b72b535f97ba0132dd5e2712b56f90effb10
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dea877323911b3965f7fef5d52ffc121b3990f7d
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204694"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645251"
 ---
-# <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>作成し、R スクリプト (SQL と R deep dive) を実行します。
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R (SQL Server と RevoScaleR チュートリアル) で概要統計情報を計算します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
+このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
 
-データ ソースを設定し、1 つまたは複数のコンピューティング コンテキストを確立したら、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を利用し、高性能な R スクリプトを実行できます。  このレッスンでは、サーバーのコンピューティング コンテキストを使用してをいくつか共通機械学習のタスクを行うには。
+この 1 つで高性能の R スクリプトを実行するのに、確立されているデータ ソースと前のレッスンで作成した計算コンテキストを使用します。 このレッスンでは、ローカルとリモート サーバーの計算コンテキストを使用して、次のタスク。
 
-- データを視覚化し、概要統計情報を生成する
-- 線形回帰モデルを作成する
-- ロジスティック回帰モデルを作成する
-- 新しいデータにスコアを付け、スコアのヒストグラムを作成する
+> [!div class="checklist"]
+> * SQL Server 計算コンテキストを切り替える
+> * リモート データ オブジェクトの概要統計情報を取得します。
+> * ローカル サマリーを計算します。
 
-## <a name="change-compute-context-to-the-server"></a>変更をサーバーにコンテキストを計算します。
+前のレッスンを完了すると場合、これらのリモート コンピューティング コンテキストが必要: sqlCompute sqlComputeTrace とします。 使用するフォワードして、移動は sqlCompute とローカル コンピューティング コンテキスト以降のレッスンでします。
 
-R コードを実行する前に、 *現行* のコンピューティング コンテキストまたは *アクティブ* なコンピューティング コンテキストを指定する必要があります。
+R IDE を使用するか、 **Rgui**このレッスンでは、R スクリプトを実行します。
 
-1. R を使用して既に定義したコンピューティング コンテキストをアクティブにするには、ここに示すように **rxSetComputeContext** 関数を利用します。
+## <a name="compute-summary-statistics-on-remote-data"></a>リモート データの概要統計情報を計算します。
+
+リモートでの R コードを実行するには、リモート コンピューティング コンテキストを指定する必要があります。 後続のすべての計算実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で指定されたコンピューター、 *sqlCompute*パラメーター。
+
+コンピューティング コンテキストは、変更するまでアクティブなままです。 ただし、R スクリプト*できません*リモート サーバー コンテキストで実行を自動的にローカルで実行します。
+
+コンピューティング コンテキストの動作を確認するには、リモートの SQL Server で sqlFraudDS データ ソースの概要統計情報を生成します。 このデータ ソース オブジェクトを作成した[レッスン 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) RevoDeepDive データベース ccFraudSmall テーブルを表します。 
+
+1. SqlCompute 前のレッスンで作成するには、コンピューティング コンテキストを切り替えます。
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
-  
-    すべての後続の計算のテキストが行われるこのステートメントを実行するようになったら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で指定されたコンピューター、 *sqlCompute*パラメーター。
-  
-2. ワークステーションで R コードを実行する場合、  **local** キーワードを利用し、コンピューティング コンテキストをローカル コンピューターに再び切り替えることができます。
-  
-    ```R
-    rxSetComputeContext ("local")
-    ```
-  
-    この関数でサポートされているその他のキーワードの一覧が必要な場合、R コマンド ラインに「 `help("rxSetComputeContext")` 」と入力してください。
-  
-3. コンピューティング コンテキストを指定すると、変更するまでアクティブな状態が維持されます。 ただし、リモート サーバー コンテキストで実行 *できない* R スクリプトはローカルで実行されます。
 
-## <a name="compute-some-summary-statistics"></a>いくつかの概要統計情報を計算します。
-
-コンピューティング コンテキストの動作を確認するには、概要統計情報を使用して一部の生成を再試行してください、`sqlFraudDS`データ ソース。  ただし、データ ソース オブジェクトには、使用するデータだけを定義しますコンピューティング コンテキストは変更されません。
-
-+ 実行するにはローカルに集計を使用して**rxSetComputeContext**を指定し、_ローカル_キーワード。
-+ SQL Server コンピューターで同じ計算を行うには、先に定義した SQL コンピューティング コンテキストに切り替えます。
-
-1. 呼び出す、 [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)関数し、数式やデータ ソースなどの必須引数を渡すし、結果を変数に代入`sumOut`です。
+2. 呼び出す、 [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)関数し、数式や、データ ソースなどの必須の引数を渡すし、結果を変数に割り当てる`sumOut`します。
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 言語には、多くの集計関数が用意されていますが、 **rxSummary**など、さまざまなリモート計算コンテキストで実行をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 同様の機能については、次を参照してください。 [RevoScaleR を使用したデータの要約](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)です。
+    R 言語には、多くの集計関数が用意されていますが、 **rxSummary**で**RevoScaleR**などのさまざまなリモート コンピューティング コンテキストで実行をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 同様の機能については、次を参照してください。 [RevoScaleR を使用してデータを集計](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)します。
   
-2. 内容を印刷するには処理が完了したら、`sumOut`変数をコンソールにします。
+3. コンソールに sumOut の内容を印刷します。
   
     ```R
     sumOut
     ```
-  
     > [!NOTE]
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターから返される前に結果を出力しないでください。出力すると、エラーが表示されることがあります。
+    > エラーが発生する場合は、実行が、コマンドを再試行する前に完了するまで数分を待機します。
 
 **結果**
 
-*Summary Statistics Results for: ~gender + balance + numTrans +*
+```R
+Summary Statistics Results for: ~gender + balance + numTrans + numIntlTrans + creditLine
+Data: sqlFraudDS (RxSqlServerData Data Source)
+Number of valid observations: 10000
 
- *numIntlTrans + creditLine*
+ Name  Mean    StdDev  Min Max ValidObs    MissingObs
+ balance       4075.0318 3926.558714            0   25626 100000
+ numTrans        29.1061   26.619923 0     100 10000    0           100000
+ numIntlTrans     4.0868    8.726757 0      60 10000    0           100000
+ creditLine       9.1856    9.870364 1      75 10000    0          100000
+ 
+ Category Counts for gender
+ Number of categories: 2
+ Number of valid observations: 10000
+ Number of missing observations: 0
 
- *Data: sqlFraudDS (RxSqlServerData Data Source)*
+ gender Counts
+  Male   6154
+  Female 3846
+```
 
- *Number of valid observations: 10000*
+## <a name="create-a-local-summary"></a>ローカル サマリーを作成します。
 
- *Name  Mean    StdDev  Min Max ValidObs    MissingObs*
-
- *balance       4075.0318 3926.558714            0   25626 100000*
-
- *numTrans        29.1061   26.619923 0     100 10000    0           100000*
-
- *numIntlTrans     4.0868    8.726757 0      60 10000    0           100000*
-
- *creditLine 9.1856 9.870364 1 75 10000 0 100000*
-
- *性別カテゴリのカウント*
-
- *Number of categories: 2*
-
- *Number of valid observations: 10000*
-
- *Number of missing observations: 0*
-
- *gender Counts*
-
- *Male   6154*
-
-  *Female 3846*
-
-## <a name="add-maximum-and-minimum-values"></a>最大値と最小値を追加します。
-
-計算された概要統計情報に基づき、後続の計算で使用するためにデータ ソースに入力するデータに関する有益な情報がいくつか得られました。 たとえば、ヒストグラムを計算する最小値と最大値を使用できます。 このため、上限と下限値を追加してみましょう、 **RxSqlServerData**データ ソース。
-
-さいわい[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]カテゴリ要素のデータに整数型のデータを効率的に変換する最適化された関数が含まれています。
-
-1. まず、仮の変数をいくつか設定します。
+1. すべての作業をローカルに行うように計算コンテキストを変更します。
   
     ```R
-    sumDF <- sumOut$sDataFrame
-    var <- sumDF$Name
+    rxSetComputeContext ("local")
     ```
   
-2. 先に作成した変数 `ccColInfo` を利用し、データ ソースに列を定義します。
-  
-    また、いくつかの新しい計算列を追加 (`numTrans`、 `numIntlTrans`、および`creditLine`) を列のコレクション。
-  
-    ```R 
-    ccColInfo <- list(
-        gender = list(type = "factor",
-          levels = c("1", "2"), 
-          newLevels = c("Male", "Female")),
-        cardholder = list(type = "factor",
-          levels = c("1", "2"), 
-          newLevels = c("Principal", "Secondary")), 
-        state = list(type = "factor", 
-          levels = as.character(1:51), 
-          newLevels = stateAbb), 
-        balance  = list(type = "numeric"),
-        numTrans = list(type = "factor", 
-          levels = as.character(sumDF[var == "numTrans", "Min"]:sumDF[var == "numTrans", "Max"])),
-        numIntlTrans = list(type = "factor",  
-            levels = as.character(sumDF[var == "numIntlTrans", "Min"]:sumDF[var =="numIntlTrans", "Max"])),
-        creditLine = list(type = "numeric")
-            )
-    ```
-  
-3. 最新バージョンを作成するには、次のステートメントを適用する列のコレクションを更新すること、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]前に定義したデータ ソース。
+2. SQL Server からデータを抽出するときに多くの場合、取得できますパフォーマンスを向上させる 1 回の読み取り、抽出された行の数を増やすことでメモリの増加のブロック サイズを確保できると仮定した場合します。 値を増やすには、次のコマンドを実行、 *rowsPerRead*データ ソースのパラメーター。 これまでは、 *rowsPerRead* の値は 5000 に設定されていました。
   
     ```R
-    sqlFraudDS <- RxSqlServerData(
-        connectionString = sqlConnString,
-        table = sqlFraudTable,
-        colInfo = ccColInfo,
-        rowsPerRead = sqlRowsPerRead)
+    sqlServerDS1 <- RxSqlServerData(
+       connectionString = sqlConnString,
+       table = sqlFraudTable,
+       colInfo = ccColInfo,
+       rowsPerRead = 10000)
+    ```
+
+3. 呼び出す**rxSummary**新しいデータ ソース。
+  
+    ```R
+    rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
     ```
   
-    `sqlFraudDS`データ ソースを使用して追加された新しい列を含むようになりました`ccColInfo`です。
-  
+   実際の結果は、 **コンピューターのコンテキストで** rxSummary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行した場合と同じになるはずです。 ただし、処理は速くなる場合と遅くなる場合があります。 データは分析のためのローカル コンピューターに転送されるので、処理速度はデータベースへの接続に左右されます。
 
-この時点では、変更が R; でデータ ソース オブジェクトに影響します。新しいデータが書き込まれていないデータベース テーブルにまだです。 ただしでキャプチャしたデータを使用することができます、`sumOut`視覚エフェクトと集計を作成する変数。 次の手順では、計算コンテキストの切り替え中にこれを行う方法を説明します。
+4. 以降のいくつかのレッスンのコンピューティング コンテキストをリモートにスイッチ_バックします。
 
-> [!TIP]
-> 使用しているコンピューティング コンテキストを忘れた場合は、実行`rxGetComputeContext()`です。  「RxLocalSeq コンピューティング コンテキスト」の戻り値は、ローカルの計算コンテキストで実行していることを示します。
+    ```R
+    rxSetComputeContext(sqlCompute)
+    ```
 
-## <a name="next-step"></a>次の手順
+## <a name="next-steps"></a>次の手順
 
-[R を使用して SQL Server のデータを表示する](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
-
-## <a name="previous-step"></a>前の手順
-
-[計算コンテキストの定義と使用](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
+> [!div class="nextstepaction"]
+> [R を使用して SQL Server のデータを表示する](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)

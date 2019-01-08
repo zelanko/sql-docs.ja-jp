@@ -18,12 +18,12 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aca8858c65a900c085eba9d91461c4b3dc57b7fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 102e9122b93938b8e16d2e8714eed8d1372d21ad
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772980"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591526"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,22 +65,22 @@ sp_update_jobstep
  [ **@job_id =**] *job_id*  
  ステップが属するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'**_job_name_**'**  
  ステップが属するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
  [ **@step_id =**] *step_id*  
  変更するジョブ ステップの識別番号を指定します。 この番号は変更できません。 *step_id*は**int**、既定値はありません。  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **'**_step_name_**'**  
  ステップの新しい名前を指定します。 *step_name*は**sysname**、既定値は NULL です。  
   
- [  **@subsystem =**] **'***サブシステム***'**  
+ [  **@subsystem =**] **'**_サブシステム_**'**  
  実行する Microsoft SQL Server エージェントによって使用されるサブシステム*コマンド*します。 *サブシステム*は**nvarchar (40)**、既定値は NULL です。  
   
- [ **@command =**] **'***command***'**  
+ [  **@command =**] **'**_コマンド_**'**  
  使用して実行するコマンド*サブシステム*します。 *コマンド*は**nvarchar (max)**、既定値は NULL です。  
   
- [  **@additional_parameters =**] **'***パラメーター***'**  
+ [  **@additional_parameters =**] **'**_パラメーター_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@cmdexec_success_code =**] *success_code*  
@@ -112,14 +112,14 @@ sp_update_jobstep
  [ **@on_fail_step_id =**] *fail_step_id*  
  ステップが失敗した場合に実行するには、このジョブ ステップの識別番号と*fail_action*は**4**します。 *fail_step_id*は**int**、既定値は NULL です。  
   
- [ **@server =**] **'***server***'**  
+ [  **@server =**] **'**_server_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server*は**nvarchar (128)**、既定値は NULL です。  
   
- [ **@database_name =**] **'***database***'**  
+ [  **@database_name =**] **'**_データベース_**'**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステップを実行するデータベースの名前を指定します。 *データベース*は**sysname**します。 角かっこ ([ ]) で囲まれた名前は使用できません。 既定値は NULL になります。  
   
- [ **@database_user_name =**] **'***user***'**  
- 実行時に使用するユーザー アカウントの名前、[!INCLUDE[tsql](../../includes/tsql-md.md)]手順。 *ユーザー*は**sysname**、既定値は NULL です。  
+ [  **@database_user_name =**] **'**_ユーザー_**'**  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステップを実行するときに使用するユーザー アカウントの名前を指定します。 *ユーザー*は**sysname**、既定値は NULL です。  
   
  [ **@retry_attempts =**] *retry_attempts*  
  ステップが失敗したときに行う再試行の回数を指定します。 *retry_attempts*は**int**、既定値は NULL です。  
@@ -130,7 +130,7 @@ sp_update_jobstep
  [  **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@output_file_name =**] **'***file_name***'**  
+ [  **@output_file_name =**] **'**_file_name_**'**  
  ステップの出力を保存するファイルの名前を指定します。 *file_name*は**nvarchar (200)**、既定値は NULL です。 このパラメーターは、[!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステムまたは CmdExec サブシステム上で実行されるコマンドに対してのみ有効です。  
   
  Output_file_name を NULL に設定するに設定する必要があります*output_file_name*に空の文字列 (' ') や、空白文字の文字列を使用できない、 **char (32)** 関数。 この引数に空文字列を設定する例を次に示します。  
@@ -151,7 +151,7 @@ sp_update_jobstep
  [ **@proxy_id**= ] *proxy_id*  
  ジョブ ステップを実行するプロキシの ID 番号を指定します。 *proxy_id*型は、 **int**、既定値は NULL です。 いない場合*proxy_id*が指定されていない*proxy_name*が指定されているおよび no *user_name*を指定すると、ジョブ ステップをサービス アカウントとして実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+ [ **@proxy_name**=] **'**_proxy_name_**'**  
  ジョブ ステップを実行するプロキシの名前を指定します。 *proxy_name*型は、 **sysname**、既定値は NULL です。 いない場合*proxy_id*が指定されていない*proxy_name*が指定されているおよび no *user_name*を指定すると、ジョブ ステップをサービス アカウントとして実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -178,7 +178,7 @@ sp_update_jobstep
  ジョブ ステップでプロキシにアクセスする必要がある場合、ジョブ ステップの作成者は、ジョブ ステップのプロキシへのアクセス権を保持している必要があります。 Transact-SQL を除くすべてのサブシステムでは、プロキシ アカウントが必要です。 メンバーの**sysadmin**と使用できるすべてのプロキシにアクセスできる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロキシ エージェント サービス アカウント。  
   
 ## <a name="examples"></a>使用例  
- 次の例の最初のステップの再試行回数を変更する、`Weekly Sales Data Backup`ジョブ。 この例を実行すると、再試行回数は `10` 回になります。  
+ 次の例では、`Weekly Sales Data Backup` ジョブの最初のステップに対して、再試行の回数を変更します。 この例を実行すると、再試行回数は `10` 回になります。  
   
 ```  
 USE msdb ;  

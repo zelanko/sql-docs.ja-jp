@@ -1,5 +1,5 @@
 ---
-title: スレッド プール プロパティ |Microsoft Docs
+title: Analysis Services のスレッド プールのプロパティ |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ea8ea712579b4d9c96d793a0c633c63508c376b1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393730"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785963"
 ---
 # <a name="thread-pool-properties"></a>スレッド プール プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -23,24 +23,8 @@ ms.locfileid: "40393730"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスは、スレッド プールの独自セットを維持します。 テーブル インスタンスと多次元インスタンスでは、スレッド プールの使用方法が異なります。 たとえば、多次元インスタンスのみが **IOProcess** スレッド プールを使用します。 そのため、 **PerNumaNode**テーブル インスタンスにとって意味は、この記事で説明されているプロパティ。 後の [プロパティ リファレンス](#bkmk_propref) セクションでは、各プロパティについてモードの要件が示されています。
   
- このトピックの内容は次のとおりです。  
-  
--   [Analysis Services におけるスレッド管理](#bkmk_threadarch)  
-  
--   [スレッド プール プロパティに関するリファレンス](#bkmk_propref)  
-  
--   [プロセッサ グループ内のプロセッサにスレッドを関連付けるための GroupAffinity の設定](#bkmk_groupaffinity)  
-  
--   [NUMA ノード内のプロセッサに IO スレッドを関連付けるための PerNumaNode の設定](#bkmk_pernumanode)  
-  
--   [現在のスレッド プールの設定の確認](#bkmk_currentsettings)  
-  
--   [依存プロパティまたは関連プロパティ](#bkmk_related)  
-  
--   [MSMDSRV.INI の概要](#bkmk_msmdrsrvini)  
-  
 > [!NOTE]  
->  NUMA システムに対する表形式の配置は、このトピックの範囲外です。 NUMA システムに対して表形式のソリューションを正常に配置できますが、表形式のモデルが採用しているインメモリ データベース テクノロジのパフォーマンス特性による利点は、高度にスケールアップされたアーキテクチャでは制約を受ける可能性があります。 詳しくは、「 [Analysis Services ケース スタディ: 大規模なコマーシャル ソリューションでテーブル モデルを使用する](http://msdn.microsoft.com/library/dn751533.aspx) 」および「 [表形式のソリューションに関するハードウェアのサイズ設定](http://go.microsoft.com/fwlink/?LinkId=330359)」をご覧ください。  
+>  NUMA システムに対する表形式の配置は、このトピックの範囲外です。 NUMA システムに対して表形式のソリューションを正常に配置できますが、表形式のモデルが採用しているインメモリ データベース テクノロジのパフォーマンス特性による利点は、高度にスケールアップされたアーキテクチャでは制約を受ける可能性があります。 詳細については、次を参照してください。 [Analysis Services ケース スタディ。大規模な商用ソリューションにおける表形式モデルを使用して](http://msdn.microsoft.com/library/dn751533.aspx)と[ハードウェア サイズ決定の表形式ソリューション](http://go.microsoft.com/fwlink/?LinkId=330359)します。  
   
 ##  <a name="bkmk_threadarch"></a> Analysis Services におけるスレッド管理  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はマルチスレッドを使用して、並列実行されるタスクの数を増やすことにより、使用可能な CPU リソースを活用します。 ストレージ エンジンはマルチスレッド化されています。 ストレージ エンジン内で実行されるマルチ スレッドのジョブには、オブジェクトの並列処理、ストレージ エンジンにパブリッシュされた独立したクエリの処理、クエリによって要求されたデータ値を返す処理などがあります。 数式エンジンは、実行する計算に順次処理という性質があるため、シングル スレッド化されています。 各クエリは主にシングル スレッド内で実行され、データを要求し、多くの場合はストレージ エンジンから返されるデータを待ちます。 クエリ スレッドは実行に長い時間を要する傾向があり、クエリ全体が完了した後にのみ解放されます。  
@@ -49,8 +33,7 @@ ms.locfileid: "40393730"
   
  多数のプロセッサを使用した場合の副次的な影響の 1 つとして、クエリと処理の負荷が複数のプロセッサに分散され、共有データ構造に関する競合が増加するために、パフォーマンスの低下が発生する可能性があることが挙げられます。 この現象が発生する可能性があるのは、特に NUMA アーキテクチャを使用するハイエンド システムですが、データを集中的に使用する複数のアプリケーションを同じハードウェア上で実行する非 NUMA システムにも当てはまります。  
   
- この問題を緩和するために、特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 操作の種類と、特定の論理プロセッサ セットの間で関係を設定することができます。 
-  **GroupAffinity** プロパティを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の管理対象であるスレッド プールの種類ごとに、どのシステム リソースを使用するかを指定するカスタム関係マスクを作成できます。
+ この問題を緩和するために、特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 操作の種類と、特定の論理プロセッサ セットの間で関係を設定することができます。 **GroupAffinity** プロパティを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の管理対象であるスレッド プールの種類ごとに、どのシステム リソースを使用するかを指定するカスタム関係マスクを作成できます。
  
 表形式インスタンスで **GroupAffinity** を設定する場合は、SQL Server 2016 Cumulative Update 1 (CU1) 以降をお勧めします。 
   
@@ -74,7 +57,7 @@ ms.locfileid: "40393730"
  要求を処理する際に、作業の実行に必要とされる場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスレッド プールの上限を超えて追加のスレッドを要求することもできます。 ただし、スレッドが自らのタスクの実行を完了した時点で、現在のスレッド数が上限を超えている場合は、そのスレッドはスレッド プールに返される代わりに、単純に終了されます。  
   
 > [!NOTE]  
->  特定のデッドロック状態が発生する場合のみ、スレッド プールの最大数を上回ると、保護が開始されます。 最大値を超えるランナウェイ スレッド作成を防止するために、最大値に達した後は (短い遅延の後) スレッドが徐々に作成されます。 スレッドの最大数を超えると、タスクの実行速度が低下する可能性があります。 パフォーマンス カウンターによって示されるスレッド数が常にスレッド プールの最大サイズを上回っている場合は、システムによって要求される同時実行の度合いに比べてスレッド プールのサイズが小さすぎることを示すインジケーターと見なすこともできます。  
+>  特定のデッドロック状態が発生する場合のみ、スレッド プールの最大数を上回ると、保護が開始されます。 最大値を超えるランナウェイ スレッド作成を防止するために、最大値に達した後は (短い遅延の後) スレッドが徐々に作成されます。 スレッドの最大数を超えると、タスクの実行速度が低下する可能性があります。 パフォーマンス カウンターによって示されるスレッド数が常にスレッド プールの最大サイズを上回っている場合は、システムによって要求されるコンカレンシーの度合いに比べてスレッド プールのサイズが小さすぎることを示すインジケーターと見なすこともできます。  
   
  既定では、スレッド プールのサイズは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって決まり、コアの数に基づく値になります。 サーバーの起動後に msmdsrv.log ファイルを参照すると、選択済みの既定値を確認できます。 パフォーマンス チューニングの練習として、クエリまたは処理のパフォーマンスを向上させる目的で、スレッド プールのサイズを大きくする方針を選択することもできます。  
   
@@ -176,7 +159,7 @@ ms.locfileid: "40393730"
  多次元の Analysis Services インスタンスでは、 **IOProcess** スレッド プールに対して **PerNumaNode** を設定して、スレッドのスケジューリングと実行をさらに最適化することができ案す。 **GroupAffinity** は特定のスレッド プールでどの論理プロセッサ セットを使用するかを識別するのに対し、 **PerNumaNode** は複数のスレッド プールを作成するかどうかを指定し、さらに、許容される論理プロセッサの特定のサブセットに対して関連付けることで、1 歩先へ進んだ設定と言えます。  
   
 > [!NOTE]  
->  Windows Server 2012 でタスク マネージャーを起動し、コンピューター上の NUMA ノード数を表示します。 タスク マネージャーの [パフォーマンス] タブで、 **[CPU]** を選択し、グラフ領域を右クリックして NUMA ノードを表示します。 もう 1 つの方法として、Windows Sysinternals から Coreinfo ユーティリティを [ダウンロード](http://technet.microsoft.com/sysinternals/cc835722.aspx) し、NUMA ノードと各ノードの論理プロセッサを返す `coreinfo –n` を実行します。  
+>  Windows Server 2012 でタスク マネージャーを起動し、コンピューター上の NUMA ノード数を表示します。 タスク マネージャーの [パフォーマンス] タブで、 **[CPU]** を選択し、グラフ領域を右クリックして NUMA ノードを表示します。 もう 1 つの方法として、Windows Sysinternals から Coreinfo ユーティリティを [ダウンロード](http://technet.microsoft.com/sysinternals/cc835722.aspx) し、NUMA ノードと各ノードの論理プロセッサを返す `coreinfo -n` を実行します。  
   
  このトピックの「 **スレッド プール プロパティに関するリファレンス** 」で説明したように、 [PerNumaNode](#bkmk_propref) の有効な値は -1、0、1、2 です。  
   
@@ -242,23 +225,23 @@ ms.locfileid: "40393730"
  **CoordinatorQueryMaxThreads** の既定値は 16 であり、各パーティションに対して並列実行できるセグメント ジョブの数が制限されます。  
   
 ##  <a name="bkmk_currentsettings"></a> 現在のスレッド プールの設定の確認  
- 各サービスの起動時に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は現在のスレッド プール設定を msmdsrv.log ファイルに出力し、その中には最小スレッド数と最大スレッド数、プロセッサ関係マスク、および同時実行数が含まれます。  
+ 各サービスの起動時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は現在のスレッド プール設定を msmdsrv.log ファイルに出力し、その中には最小スレッド数と最大スレッド数、プロセッサ関係マスク、およびコンカレンシー数が含まれます。  
   
  次の例は、ログ ファイルからの抽出であり、ハイパースレッディングが有効になっている 4 コアのシステムでの Query スレッド プールに関する既定の設定 (MinThread=0、MaxThread=0、Concurrency=2) を示しています。 関係マスクは 0xFF であり、8 つの論理プロセッサを表しています。 マスクに対して先頭の 0 が追加されることに注意してください。 先頭の 0 は無視できます。  
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- **MinThread** と **MaxThread** を設定するアルゴリズムが、システム構成、特にプロセッサ数を組み込んでいることに注意してください。 次のブログ投稿は、値の計算方法に関する洞察を示しています。「 [Analysis Services 2012 の構成設定 (Wordpress ブログ)](http://go.microsoft.com/fwlink/?LinkId=330387)」。 これらの設定と動作が、それ以降のリリースで調整される可能性があることに注意してください。  
+ **MinThread** と **MaxThread** を設定するアルゴリズムが、システム構成、特にプロセッサ数を組み込んでいることに注意してください。 次のブログ記事では、値の計算方法についての洞察を提供します。[Analysis Services 2012 の構成設定 (Wordpress ブログ)](http://go.microsoft.com/fwlink/?LinkId=330387)します。 これらの設定と動作が、それ以降のリリースで調整される可能性があることに注意してください。  
   
  次の一覧に、プロセッサのさまざまな組み合わせを対象にした、他の関係マスクの設定例を示します。  
   
--   8 コアのシステムでプロセッサ 3-2-1-0 との関係を設定すると、ビットマスクは 00001111 になり、対応する 16 進値は 0xF です  
+-   8 コアのシステムでプロセッサ 3-2-1-0 のようにすると、このビットマスクが得られます。00001111、および 16 進数値の場合:0xF  
   
--   8 コアのシステムでプロセッサ 7-6-5-4 との関係を設定すると、ビットマスクは 11110000 になり、対応する 16 進値は 0xF0 です  
+-   8 コアのシステムでプロセッサ 7-6-5-4 は、このビットマスクが得られます。11110000、および 16 進数値の場合:0xF0  
   
--   8 コアのシステムでプロセッサ 5-4-3-2 との関係を設定すると、ビットマスクは 00111100 になり、対応する 16 進値は 0x3C です  
+-   8 コアのシステムでプロセッサ 5-4-3-2 は、このビットマスクが得られます。00111100、および 16 進数値の場合:0x3C  
   
--   8 コアのシステムでプロセッサ 7-6-1-0 との関係を設定すると、ビットマスクは 11000011 になり、対応する 16 進値は 0xC3 です  
+-   8 コアのシステムでプロセッサ 7-6-1-0 は、このビットマスクが得られます。11000011、および 16 進数値の場合:0xC3  
   
  システムに複数のプロセッサ グループが存在する場合は、グループごとに個別の関係マスクが生成され、コンマ区切りリストの形式で表現されることに注意してください。  
   
@@ -276,7 +259,7 @@ ms.locfileid: "40393730"
  [プロセスとスレッドの概要](/windows/desktop/ProcThread/about-processes-and-threads)   
  [複数のプロセッサ](/windows/desktop/ProcThread/multiple-processors)   
  [プロセッサ グループ](/windows/desktop/ProcThread/processor-groups)   
- [SQL server 2012 analysis Services のスレッド プールの変更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [SQL Server 2012 での Analysis Services のスレッド プールの変更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 の構成設定 (Wordpress ブログ)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [64 を超えるプロセッサを搭載したシステムのサポート](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)  

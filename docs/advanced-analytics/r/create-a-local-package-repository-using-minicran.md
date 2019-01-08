@@ -1,5 +1,6 @@
 ---
-title: MiniCRAN (SQL Server Machine Learning) を使用してローカルの R パッケージ リポジトリを作成する |Microsoft Docs
+title: MiniCRAN - SQL Server Machine Learning Services を使用してローカルの R パッケージ リポジトリを作成します。
+description: MiniCran を使用して、検出、アセンブル、および 1 つの統合パッケージ R パッケージの依存関係をインストールします。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ef84cc3c08f461745e30fa2ce65e468263ded18d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dc2e286e6eb80fe1eef3e8b86ed1002a6344cfb
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699400"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431755"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>MiniCRAN を使用してローカルの R パッケージ リポジトリを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,16 +33,16 @@ ms.locfileid: "51699400"
 
 パッケージ リポジトリには、これらのシナリオがあります。
 
-- **セキュリティ**: ダウンロードと CRAN またはいずれかのミラー サイトからは、新しい R パッケージをインストールに多くの R ユーザーが慣れています。 ただし、セキュリティ上の理由から、実行している運用サーバーの[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]通常、インターネット接続はありません。
+- **セキュリティ**:ダウンロードと CRAN またはいずれかのミラー サイトからは、新しい R パッケージをインストールするのには、多くの R ユーザーが慣れています。 ただし、セキュリティ上の理由から、実行している運用サーバーの[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]通常、インターネット接続はありません。
 
-- **オフライン インストールを容易に**: サーバーがオフラインにパッケージをインストールすることも、すべてのパッケージの依存関係をダウンロードする、Using miniCRAN を使用すると、正しい形式ですべての依存関係を取得しやすくが必要です。
+- **オフライン インストールを容易に**:オフラインのサーバーにパッケージをインストールするには、ことも、すべてのパッケージの依存関係をダウンロードする、Using miniCRAN を使用すると、正しい形式ですべての依存関係を取得しやすくが必要です。
 
     MiniCRAN を使用するをインストールするパッケージを準備するときに、パッケージの依存関係のエラーを回避できます、 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)ステートメント。
 
-- **強化されたバージョン管理**: マルチ ユーザー環境では、サーバー上の複数のパッケージ バージョンの無制限のインストールを回避するために、それなりの理由。 ローカル リポジトリを使用して、アナリストによって使用される一貫性のある一連のパッケージを提供します。 
+- **強化されたバージョン管理**:マルチ ユーザー環境では、サーバー上の複数のパッケージ バージョンの無制限のインストールを回避するために、それなりの理由があります。 ローカル リポジトリを使用して、アナリストによって使用される一貫性のある一連のパッケージを提供します。 
 
 > [!TIP]
-> Azure Machine Learning で使用するためのパッケージを準備するのに miniCRAN を使用することもできます。 詳細については、このブログを参照してください: [Michele Usuelli での Azure ML で miniCRAN を使用します。](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
+> Azure Machine Learning で使用するためのパッケージを準備するのに miniCRAN を使用することもできます。 詳細については、このブログを参照してください。[Michele Usuelli での Azure ML で miniCRAN を使用します。](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## <a name="install-minicran"></a>MiniCRAN をインストールします。
 
@@ -99,9 +100,9 @@ local_repo <- "C:/mylocalrepo"
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-   MiniCRAN パッケージからこの情報は、パッケージをコピーする必要のあるフォルダー構造の作成、 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)]以降。
+   MiniCRAN パッケージからこの情報は、パッケージをコピーする必要のあるフォルダー構造の作成、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]以降。
 
-この時点で、パッケージを含むフォルダーがある必要があり、他のパッケージが必要です。 この例のようなパスでなければなりません: C:\mylocalrepo\bin\windows\contrib\3.3 とそれには、zip 形式のパッケージのコレクションを含める必要があります。 パッケージを解凍したり、すべてのファイルの名前を変更しないでください。
+この時点で、パッケージを含むフォルダーがある必要があり、他のパッケージが必要です。 この例のようなパスがあります。C:\mylocalrepo\bin\windows\contrib\3.3 とそれには、zip 形式のパッケージのコレクションを含める必要があります。 パッケージを解凍したり、すべてのファイルの名前を変更しないでください。
 
 必要に応じて、ローカル miniCRAN リポジトリに含まれるパッケージを一覧表示するには、次のコードを実行します。
 

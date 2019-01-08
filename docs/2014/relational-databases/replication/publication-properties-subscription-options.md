@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c36b2de74fd93c36da61e186a1bb3a6a56382d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080522"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753854"
 ---
 # <a name="publication-properties-subscription-options"></a>[パブリケーションのプロパティ]、[サブスクリプション オプション]
   **[パブリケーション プロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページを使用すると、サブスクリプションに関連付けられたパブリケーション レベルのプロパティを表示したり設定したりできます。 プロパティは次のように分類されます。  
@@ -85,10 +84,10 @@ ms.locfileid: "48080522"
   
 ### <a name="updatable-subscriptions"></a>[更新可能なサブスクリプション]  
  **[キュー更新サブスクリプションを許可]**  
- サブスクライバーのデータ変更をパブリッシャーに即時にレプリケートできるかどうかを決定します。 このオプションは読み取り専用であり、更新サブスクリプションを有効にできるのは、パブリケーションが作成された場合のみです。 詳細については、「 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)を使用して、更新可能トランザクション サブスクリプションの更新モードを切り替える方法について説明します。  
+ サブスクライバーのデータ変更をパブリッシャーに即時にレプリケートできるかどうかを決定します。 このオプションは読み取り専用であり、更新サブスクリプションを有効にできるのは、パブリケーションが作成された場合のみです。 詳細については、「 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)」を参照してください。  
   
  **[ピア ツー ピア サブスクリプションを許可]**  
- サブスクライバーのデータ変更をキューに登録しておき、後からパブリッシャーにレプリケートできるかどうかを決定します。 このオプションは読み取り専用であり、更新サブスクリプションを有効にできるのは、パブリケーションが作成された場合のみです。 詳細については、「 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)を使用して、更新可能トランザクション サブスクリプションの更新モードを切り替える方法について説明します。  
+ サブスクライバーのデータ変更をキューに登録しておき、後からパブリッシャーにレプリケートできるかどうかを決定します。 このオプションは読み取り専用であり、更新サブスクリプションを有効にできるのは、パブリケーションが作成された場合のみです。 詳細については、「 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)」を参照してください。  
   
  **[競合を一元的にレポート]**  
  パブリッシャーのみで、またはパブリッシャーとサブスクライバーの両方で、競合するデータ変更をレポートするかどうかを決定します ( **[キュー更新サブスクリプションを許可]** が有効な場合のみ)。 このオプションは読み取り専用であり、パブリケーションの新規作成ウィザードで作成されたパブリケーションに対して既定で **[True]** に設定され、パブリケーション作成後は変更できません。 値 **[True]** は、競合がパブリッシャーでのみレポートされることを示します。 競合は、レポートされた場所でのみ参照できます。  
@@ -107,7 +106,7 @@ ms.locfileid: "48080522"
   
 ### <a name="filtering"></a>フィルター  
  **[パラメーター化されたフィルターの許可]**  
- パラメーター化されたフィルターを、パブリケーションで使用するかどうかに基づいて設定します。 このオプションは常に読み取り専用です。 詳細については、「 [パラメーター化された行フィルター](merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+ パラメーター化されたフィルターを、パブリケーションで使用するかどうかに基づいて設定します。 このオプションは常に読み取り専用です。 詳細については、「 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
  **[サブスクライバーの検証]**  
  サブスクライバーで、正しいデータのパーティションが保持されているかどうかを検証する場合に使用する関数を決定します。 複数の値がある場合はコンマで区切ります。 詳細については、「[マージ サブスクライバーのパーティション情報の検証](validate-partition-information-for-a-merge-subscriber.md)」を参照してください。  
@@ -116,7 +115,7 @@ ms.locfileid: "48080522"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 どのデータがどのパーティションに属しているかを事前に計算することによって、同期を最適化するかどうかを決定します。 この設定は、パブリケーションが事前計算済みパーティションの基準を満たしている場合、既定で **[True]** になっています。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
  **[同期の最適化]**  
- 各サブスクライバーで追加メタデータを格納することによって、マージ プロセスを最適化するかどうかを決定します。 この最適化よりも事前計算済みパーティションが優先されます。 **[同期の最適化]** オプションは、 **[パーティションの事前計算]** が **[False]** に設定された場合のみ適用されます。 詳細については、「 [パラメーター化された行フィルター](merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+ 各サブスクライバーで追加メタデータを格納することによって、マージ プロセスを最適化するかどうかを決定します。 この最適化よりも事前計算済みパーティションが優先されます。 **[同期の最適化]** オプションは、 **[パーティションの事前計算]** が **[False]** に設定された場合のみ適用されます。 詳しくは、「 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 ### <a name="merge-processes"></a>[マージ プロセス]  
  **[同時実行プロセスの制限]**  

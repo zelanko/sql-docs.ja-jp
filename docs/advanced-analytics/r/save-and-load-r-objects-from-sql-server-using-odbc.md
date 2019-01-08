@@ -1,5 +1,5 @@
 ---
-title: 保存して、ODBC を使用して SQL Server から R オブジェクトを読み込む |Microsoft ドキュメント
+title: 保存して、ODBC の SQL Server Machine Learning Services を使用して SQL Server から R オブジェクトを読み込む
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 17f9ebc151e7112b04766ea1c644aad0a32bc580
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c7b874adc53d217c341a5dce689c7c5b4eb70bfe
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201904"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431955"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>保存して、ODBC を使用して SQL Server から R オブジェクトを読み込む
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,13 +23,13 @@ SQL Server R Services ではシリアル化された R オブジェクトをテ�
 
 ## <a name="overview"></a>概要
 
-現在、 **RevoScaleR** パッケージには新しい関数が含まれています。これにより、R オブジェクトを SQL Server に保存した後で、SQL Server テーブルからオブジェクトを読み取る作業がより簡単になります。 一般に、各関数呼び出しをキーは、オブジェクトの名前、単純なキー値ストアを使用して、キーに関連付けられている値は、テーブル内外に移動する varbinary R オブジェクト。
+現在、 **RevoScaleR** パッケージには新しい関数が含まれています。これにより、R オブジェクトを SQL Server に保存した後で、SQL Server テーブルからオブジェクトを読み取る作業がより簡単になります。 一般に、各関数呼び出しは、キーが、オブジェクトの名前は、単純なキー値ストアを使用して、キーに関連付けられている値はテーブルの内外で移動する varbinary R オブジェクトです。
 
-SQL Server への R 環境から直接 R オブジェクトを保存、次の操作を行う必要があります。
+SQL Server に R オブジェクトを保存、R 環境から直接には、次の必要があります。
 
-+ 使用して SQL サーバーへの接続を確立、 *RxOdbcData*データ ソース。
-+ ODBC 接続経由での新しい関数を呼び出す
-+ 必要に応じて、あるオブジェクトをシリアル化できませんを指定できます。 次に、既定の圧縮アルゴリズムの代わりに使用する新しい圧縮アルゴリズムを選択します。
++ 使用して SQL Server への接続が確立されている、 *RxOdbcData*データ ソース。
++ ODBC 接続経由で、新しい関数を呼び出す
++ 必要に応じて、オブジェクト、シリアル化されないことを指定できます。 次に、既定の圧縮アルゴリズムではなくを使用する新しい圧縮アルゴリズムを選択します。
 
 既定では、SQL Server に移動するために R から呼び出されるオブジェクトはすべてシリアル化され、圧縮されます。 逆に、R コードで使用するために SQL Server テーブルからオブジェクトを読み込む場合、オブジェクトは逆シリアル化され、圧縮解除されます。
 
@@ -43,7 +43,7 @@ SQL Server への R 環境から直接 R オブジェクトを保存、次の操
 
 - `rxListKeys` は、すべての使用可能なオブジェクトをキーと値のペアとして一覧表示します。 これは、R オブジェクトの名前とバージョンを特定する場合に役立ちます。
 
-各関数の構文の詳細なヘルプが必要な場合は、R のヘルプを使用してください。 詳細はまた、 [ScaleR 参照](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)です。
+各関数の構文の詳細なヘルプが必要な場合は、R のヘルプを使用してください。 詳細についてはまた、 [ScaleR 参照](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)します。
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>ODBC を使用して SQL Server に R オブジェクトを格納する方法
 

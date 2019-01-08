@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461033"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360104"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
   スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、**[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。  
@@ -86,9 +84,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  ときに、**スクリプト変換エディター**最初の出力では、エディターのセットを作成、`SynchronousInputID`への出力のプロパティ、`ID`コンポーネントの入力。 しかし、その後の出力時には、出力の `SynchronousInputID` プロパティが 0 に設定されます。  
 >   
->  同期出力型コンポーネントを作成する場合、各出力の `SynchronousInputID` プロパティを、コンポーネントの入力の `ID` に設定する必要があります。 このため、最初の出力後は、エディターで出力を作成するたびに、`SynchronousInputID` 値を 0 からコンポーネントの入力の `ID` に変更する必要があります。  
+>  同期出力型コンポーネントを作成する場合、各出力があります、`SynchronousInputID`プロパティに設定、`ID`コンポーネントの入力。 このため、最初の出力後は、エディターで出力を作成するたびに、`SynchronousInputID` 値を 0 からコンポーネントの入力の `ID` に変更する必要があります。  
 >   
->  非同期出力型コンポーネントを作成する場合、各出力の `SynchronousInputID` プロパティを 0 に設定する必要があります。 このため、最初の出力時は、`SynchronousInputID` 値をコンポーネントの入力の `ID` から 0 に変更する必要があります。  
+>  非同期出力型コンポーネントを作成する場合、各出力の `SynchronousInputID` プロパティを 0 に設定する必要があります。 そのため、最初の出力があります、`SynchronousInputID`値から変更、`ID`を 0 に、コンポーネントの入力。  
   
  スクリプト コンポーネントで 2 つの同期出力のうちのいずれかに行を送信する例については、「[スクリプト コンポーネントによる同期変換の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」を参照してください。  
   
@@ -128,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  詳しくは、「[スクリプト コンポーネントでのデータ ソースへの接続](connecting-to-data-sources-in-the-script-component.md)」をご覧ください。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト コンポーネントのコーディングおよびデバッグ](coding-and-debugging-the-script-component.md)  

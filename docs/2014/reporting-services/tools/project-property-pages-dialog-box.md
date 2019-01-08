@@ -15,21 +15,21 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122372"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589626"
 ---
 # <a name="project-property-pages-dialog-box"></a>[プロパティ ページ] ダイアログ ボックス
-  プロジェクトのプロパティ ページを使用すると、レポート サーバー プロジェクトの配置プロパティを構成できます。 このダイアログ ボックスを開くには、**[プロジェクト]** メニューの *[\<レポート プロジェクト名>* **のプロパティ]** をクリックします。  
+  プロジェクトのプロパティ ページを使用すると、レポート サーバー プロジェクトの配置プロパティを構成できます。 このダイアログ ボックスを開くには、**[プロジェクト]** メニューの _[\<レポート プロジェクト名>_ **のプロパティ]** をクリックします。  
   
  構成プロパティを定義した後は、ツール バーの **[ソリューション構成]** ボックスの一覧から構成を選択できるようになります。  
   
 ## <a name="options"></a>および  
  **Configuration**  
- 編集する構成を選択します。 初期状態で使用できる構成は、 **[Debug]**、 **[DebugLocal]**、および **[Release]** です。 アクティブな構成が、 **Active(Debug)** のように最初に表示されます。  
+ 編集する構成を選択します。 最初に、次の構成を使用できます。**デバッグ**、 **DebugLocal**、および**リリース**します。 アクティブな構成が、 **Active(Debug)** のように最初に表示されます。  
   
  複数の構成のプロパティを同時に表示するには、 **[すべての構成]** または **[複数の構成]** を選択します。  
   
@@ -79,8 +79,8 @@ ms.locfileid: "48122372"
   
 ## <a name="see-also"></a>参照  
  [レポートのパブリッシュ](../publish-reports.md)   
- [SharePoint ライブラリにレポートをパブリッシュします。](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [配置プロパティを設定&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [SharePoint ライブラリへのレポートのパブリッシュ](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [配置プロパティを設定する (Reporting Services)](set-deployment-properties-reporting-services.md)   
  [レポート デザイナーの F1 ヘルプ](report-designer-f1-help.md)  
   
   

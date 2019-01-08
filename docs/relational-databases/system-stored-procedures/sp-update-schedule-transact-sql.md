@@ -18,17 +18,17 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fa647aabd7e2048c6f56e5518dde8a2edc12dde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661230"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591806"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  設定を変更、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント スケジュール。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールの設定を変更します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_update_schedule
  [ **@schedule_id =** ] *schedule_id*  
  変更するスケジュールの識別子を指定します。 *schedule_id*は**int**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定する必要があります。  
   
- [ **@name =** ]  **'***schedule_name***'**  
+ [  **@name =** ] **'**_schedule_name_**'**  
  変更するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定する必要があります。  
   
  [ **@new_name**= ] *new_name*  
@@ -135,7 +135,7 @@ sp_update_schedule
  [ **@active_end_time =** ] *active_end_time*  
  間の日で時間*active_start_date*と*active_end_date*ジョブの実行を終了します。 *active_end_time*は**int**、既定値は**235959**、午後 11時 59分: 59 を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**]  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**]  
  スケジュールを所有するサーバー プリンシパルの名前を指定します。 *owner_login_name*は**sysname**で、既定値は NULL には、スケジュールが作成者によって所有されていることを示します。  
   
  [ **@automatic_post =**] *automatic_post*  
@@ -161,7 +161,7 @@ sp_update_schedule
  メンバーだけ**sysadmin**別のユーザーが所有するスケジュールを変更できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例の有効な状態の変更、`NightlyJobs`スケジュール`0`、所有者を設定および`terrid`。  
+ 次の例では `NightlyJobs` スケジュールの有効な状態を `0` に変更し、所有者を `terrid` に設定します。  
   
 ```  
 USE msdb ;  

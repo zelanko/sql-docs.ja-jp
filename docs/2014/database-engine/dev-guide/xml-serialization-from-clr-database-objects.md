@@ -17,12 +17,12 @@ ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f863aa3d32ae60ff1cbcac562e74250899088
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183172"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356577"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>CLR データベース オブジェクトからの XML シリアル化
   XML シリアル化は、次の 2 つのシナリオで必要になります。  
@@ -37,7 +37,7 @@ ms.locfileid: "48183172"
   
 2.  `CREATE ASSEMBLY` ステートメントを使用して、生成したアセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録します。  
   
- エラーに関する情報が表示されるときに XML シリアル化を実行する次のマイクロソフトのサポート資料を参照: [「動的に生成されたシリアル化アセンブリを読み込むことができません」](http://support.microsoft.com/kb/913668)します。  
+ XML シリアル化を実行するときに表示されるエラーについては、次の Microsoft サポート記事を参照してください。[「動的に生成されたシリアル化アセンブリを読み込むことができません」](https://support.microsoft.com/kb/913668)します。  
   
  XMLSerializer でサポートされないデータ型については、.NET Framework のドキュメントで、.NET Framework の XML スキーマ バインディング サポートに関する情報を参照してください。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
@@ -17,12 +16,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 546b52e8e0cc944e279e976bc4709d9fcee076f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906412"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369964"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
   データ プロファイル タスクでは、データ ソースについて詳細に理解し、解決する必要があるデータの問題を特定するために役立つさまざまなプロファイルが計算されます。  
@@ -30,7 +29,7 @@ ms.locfileid: "48906412"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータ プロファイル タスクを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されているデータをプロファイルし、発生する可能性のあるデータ品質の問題を特定することができます。  
   
 > [!NOTE]  
->  このトピックでは、のみ、機能と、データ プロファイル タスクの要件について説明します。 データ プロファイル タスクの使用方法のチュートリアルについては、「 [データ プロファイル タスクとビューアー](data-profiling-task-and-viewer.md)」を参照してください。  
+>  このトピックでは、データ プロファイル タスクの機能と要件についてのみ説明します。 データ プロファイル タスクの使用方法のチュートリアルについては、「 [データ プロファイル タスクとビューアー](data-profiling-task-and-viewer.md)」を参照してください。  
   
 ## <a name="requirements-and-limitations"></a>要件と制限  
  データ プロファイル タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されているデータでのみ機能します。 このタスクは、サード パーティまたはファイル ベースのデータ ソースでは機能しません。  
@@ -117,7 +116,7 @@ ms.locfileid: "48906412"
 |**DataProfilingTaskTrace**|タスクの状態に関する説明情報を提供します。 メッセージには次の情報が含まれます。<br /><br /> 処理要求の開始<br /><br /> クエリの開始<br /><br /> クエリの終了<br /><br /> 計算要求の完了|  
   
 ## <a name="output-and-its-schema"></a>出力とそのスキーマ  
- データ プロファイル タスクでは、選択したプロファイルは DataProfile.xsd スキーマに従って構造化された XML に出力されます。 この XML 出力をファイルに保存するかパッケージ変数に保存するかを指定できます。 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/) でこのスキーマをオンラインで表示できます。 この Web ページから、スキーマのローカル コピーを保存できます。 その後、スキーマのローカル コピーを Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで表示できます。  
+ データ プロファイル タスクでは、選択したプロファイルは DataProfile.xsd スキーマに従って構造化された XML に出力されます。 この XML 出力をファイルに保存するかパッケージ変数に保存するかを指定できます。 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) でこのスキーマをオンラインで表示できます。 この Web ページから、スキーマのローカル コピーを保存できます。 その後、スキーマのローカル コピーを Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで表示できます。  
   
  データ品質情報に関するこのスキーマは、次の場合に役立ちます。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48906412"
   
 -   データ品質情報を処理するカスタム ツールを作成する場合  
   
- ターゲットの名前空間は、スキーマで [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/) として識別されます。  
+ ターゲットの名前空間は、スキーマで [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) として識別されます。  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>パッケージの条件ワークフローでの出力  
  データ プロファイル コンポーネントには、データ プロファイル タスクの出力に基づいて [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのワークフローに条件ロジックを実装する機能は組み込まれていません。 ただし、スクリプト タスクで最小限のプログラミングを行って、このロジックを簡単に追加することができます。 このコードでは、XML 出力に対して XPath クエリを実行し、その結果をパッケージ変数に保存します。 スクリプト タスクを後続のタスクに接続する優先順位制約では、ワークフローを決定する式を使用できます。 たとえば、スクリプト タスクによって、列の NULL 値の比率が特定のしきい値を超えていることを検出できます。 この条件が満たされた場合は、パッケージを中断し、問題を解決してから続行することができます。  

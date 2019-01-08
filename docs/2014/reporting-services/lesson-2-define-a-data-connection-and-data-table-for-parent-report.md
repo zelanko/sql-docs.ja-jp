@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する | Microsoft Docs'
+title: レッスン 2:親レポートのデータ接続とデータ テーブルの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 13bb0c14b4458122ee94b4a674b86d20bf667d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5dba0a87f34c794e22fa52274591bbec0db63f86
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162652"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358544"
 ---
-# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2:親レポートのデータ接続とデータ テーブルを定義します。
   Visual C# 用の ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成した後は、親レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2008 データベースを使用しますが、 AdventureWorks2012 データベースに接続することもできます。  
   
 ### <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>DataSet を追加してデータ接続とデータ テーブルを定義するには (親レポート用)  
@@ -29,11 +29,11 @@ ms.locfileid: "48162652"
   
      これにより、 **DataSet1.xsd** という新しい XSD ファイルがプロジェクトに追加され、データセット デザイナーが開きます。  
   
-3.  [ツールボックス] ウィンドウからドラッグして、 **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** コントロールをデザイン画面。 これにより、 **TableAdapter** の構成ウィザードが起動します。  
+3.  [ツールボックス] ウィンドウから **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** コントロールをデザイン画面にドラッグします。 これにより、 **TableAdapter** の構成ウィザードが起動します。  
   
 4.  **データ接続の選択**] ページで [**新しい接続**します。  
   
-5.  Visual Studio で初めてデータ ソースを作成する場合は、 **[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
+5.  Visual Studio で初めてデータ ソースを作成する場合は、**[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
   
 6.  **[接続の追加]** ダイアログ ボックスで、次の手順を実行します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48162652"
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-     クリックして、クエリを作成することもできます。**クエリ ビルダー**、クリックして、クエリを確認および**クエリの実行**します。 クエリを実行したときに期待したデータが返されない場合は、以前のバージョンの AdventureWorks を使用している可能性があります。 インストールの詳細については、 **AdventureWorks2008**のバージョンの AdventureWorks を参照してください[チュートリアル: AdventureWorks データベースのインストール](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)します。  
+     クリックして、クエリを作成することもできます。**クエリ ビルダー**、クリックして、クエリを確認および**クエリの実行**します。 クエリを実行したときに期待したデータが返されない場合は、以前のバージョンの AdventureWorks を使用している可能性があります。 インストールの詳細については、 **AdventureWorks2008**のバージョンの AdventureWorks を参照してください[チュートリアル。AdventureWorks データベースのインストール](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)します。  
   
 11. **生成するメソッドの選択**オフにしてください ページで、 **(GenerateDBDirectMethods) データベースに直接更新を送信するためのメソッドを作成する**、順にクリックします**を完了**.  
   

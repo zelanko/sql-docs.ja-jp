@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning Services の動的管理ビュー (Dmv) を使用したの監視 |Microsoft Docs
-description: 動的管理ビュー (Dmv) を使用すると、SQL Server Machine Learning サービスを監視できます。
+title: 動的管理ビュー (Dmv) - SQL Server Machine Learning を使用して R と Python スクリプトの実行を監視します。
+description: 動的管理ビュー (Dmv) を使用すると、SQL Server Machine Learning Services での R と Python の外部スクリプト実行を監視できます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: aa05c78f8bac4af5187b815126e0ec9e4b6fff4e
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743455"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645551"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>SQL Server Machine Learning Services の動的管理ビュー (Dmv) を使用した監視します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ Machine Learning サービスのインストールの設定と構成オプショ
 
 この出力を取得する次のクエリを実行します。 ビューおよび関数の使用の詳細については、次を参照してください。 [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)、 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)、および[SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)します。
 
-```SQL
+```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
     , CAST(value_in_use AS INT) AS ExternalScriptsEnabled
     , COALESCE(SIGN(SUSER_ID(CONCAT (
@@ -93,7 +93,7 @@ WHERE name = 'external scripts enabled';
 
 この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)、 [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)、および[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)します。
 
-```SQL
+```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
     , s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time
     , r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
@@ -133,7 +133,7 @@ R と Python の外部のランタイム実行の統計を表示します。 Rev
 
 この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)します。 クエリは、複数回実行された関数のみを返します。
 
-```SQL
+```sql
 SELECT language, counter_name, counter_value
 FROM sys.dm_external_script_execution_stats
 WHERE counter_value > 0
@@ -156,7 +156,7 @@ ORDER BY language, counter_name;
 
 この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)します。
 
-```SQL
+```sql
 SELECT counter_name, cntr_value
 FROM sys.dm_os_performance_counters 
 WHERE object_name LIKE '%External Scripts%'
@@ -182,7 +182,7 @@ OS、SQL Server、および外部プールによって使用されるメモリ�
 
 この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)と[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)します。
 
-```SQL
+```sql
 SELECT physical_memory_kb, committed_kb
     , (SELECT SUM(peak_memory_kb)
         FROM sys.dm_resource_governor_external_resource_pools AS ep
@@ -200,13 +200,13 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>メモリ構成
 
-SQL Server と外部リソース プールの割合の最大メモリ構成に関する情報を表示します。 既定値は、SQL サーバーが実行されているかどうかは`max server memory (MB)`、OS メモリの 100% としてと見なされます。
+SQL Server と外部リソース プールの割合の最大メモリ構成に関する情報を表示します。 既定値は、SQL Server が実行されているかどうかは`max server memory (MB)`、OS メモリの 100% としてと見なされます。
 
 ![メモリ構成のクエリからの出力](media/dmv-memory-configuration.png "メモリ構成のクエリからの出力")
 
 この出力を取得する次のクエリを実行します。 ビューの使用の詳細については、次を参照してください。 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)と[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)します。
 
-```SQL
+```sql
 SELECT 'SQL Server' AS name
     , CASE CAST(c.value AS BIGINT)
         WHEN 2147483647 THEN 100
@@ -234,7 +234,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)と[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)します。
 
-```SQL
+```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
     , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
 FROM sys.dm_resource_governor_resource_pools AS p
@@ -265,7 +265,7 @@ SQL Server Machine Learning Services でインストールされている R パ�
 
 この出力を取得する次のクエリを実行します。 クエリの使用状況を R パッケージを特定の R スクリプトは、SQL Server と共にインストールします。
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
@@ -291,7 +291,7 @@ SQL Server Machine Learning Services でインストールされた Python パ�
 
 この出力を取得する次のクエリを実行します。 クエリでは、Python スクリプトを使用を SQL Server と共にインストールされる Python パッケージを特定します。
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'Python'
 , @script = N'
 import pip

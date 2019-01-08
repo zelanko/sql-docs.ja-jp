@@ -17,12 +17,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 026c1bf822a6493c6605128582f7142178ad6776
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188262"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357310"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>グローバリゼーションのヒントとベスト プラクティス (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多次元のみ  
@@ -50,7 +50,7 @@ ms.locfileid: "48188262"
   
  空白文字は「特殊ケース」です。Unicode では、単一バイト (SBCS) とダブル バイト文字セット (DBCS) のどちらでも表せるからです。 リレーショナル エンジンでは、スペース (1 つは SBCS、もう 1 つは DBCS) で区切られた 2 つの複合文字列は同じであると見なされます。 Analysis Services では、処理中、同じ 2 つの複合文字列は同一ではなく、2 つ目のインスタンスは重複としてフラグが立てられます。  
   
- 詳細および提案されている回避策については、「 [Unicode 文字列にブランクがある場合、照合順序に基づいて処理結果が異なる](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)」をご覧ください。  
+ 詳細および提案されている回避策については、「 [Unicode 文字列にブランクがある場合、照合順序に基づいて処理結果が異なる](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)」をご覧ください。  
   
 ##  <a name="bkmk_recos"></a> 照合順序に関する一般的な推奨事項  
  Analysis Services は、常にすべての使用可能な言語および照合順序の一覧を提示します。ユーザーが選択した言語に基づいて照合順序がフィルター処理されることはありません。 必ず、実行可能な組み合わせを選択してください。  
@@ -69,7 +69,7 @@ ms.locfileid: "48188262"
   
      中華人民共和国およびシンガポールでは、Microsoft サポートの観察によると、ピンイン付きの簡体字国語の並べ替え順序がよく使用されています。 推奨される照合順序は、Chinese_PRC (SQL Server 2000 の場合)、Chinese_PRC_90 (SQL Server 2005 の場合)、または Chinese_Simplified_Pinyin_100 (SQL Server 2008 以降の場合) です。  
   
-     台湾では、繁体字中国語のほうが一般的で、お勧めする並べ替え順序は画数に基づく次のものです。Chinese_Taiwan_Stroke (SQL Server 2000 の場合)、Chinese_Taiwan_Stroke_90 (SQL Server 2005 の場合)、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降の場合)。  
+     台湾では、繁体字中国語のほうが一般的で、推奨される並べ替え順序は画数に基づく次のものです。Chinese_Taiwan_Stroke (SQL Server 2000 の場合)、Chinese_Taiwan_Stroke_90 (SQL Server 2005 の場合)、または Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降の場合)。  
   
      その他の地域 (香港特別行政区やマカオなど) でも、繁体字中国語を使用します。 香港特別行政区では、照合順序に Chinese_Hong_Kong_Stroke_90 (SQL Server 2005 上) が使用されることも珍しくありません。 マカオでは、かなり多くの場合に、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降) が使用されます。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48188262"
   
 |言語セット|大文字と小文字の区別|  
 |---------------------|----------------------|  
-|**基本的なラテン アルファベット**|ラテン文字 (任意の 26 個の英語大文字小文字) で表されるオブジェクト ID は、照合順序に関係なく、大文字小文字の区別なしで処理されます。 たとえば、次のオブジェクト ID は同じであると見なされます。54321**abcdef**、54321**ABCDEF**、54321**AbCdEf**。 Analysis Services はこうした文字列内の文字を内部的には大文字として処理し、言語に関係なく単純なバイト比較を実行します。<br /><br /> 26 文字だけが影響を受けることに注意してください。 言語が西ヨーロッパ言語で、スカンジナビア語の文字を使用している場合、追加の文字は大文字に変換されません。|  
+|**基本的なラテン アルファベット**|ラテン文字 (任意の 26 個の英語大文字小文字) で表されるオブジェクト ID は、照合順序に関係なく、大文字小文字の区別なしで処理されます。 たとえば、次のオブジェクト ID は同じであると見なされます。54321**abcdef**、54321**ABCDEF**、54321**AbCdEf**します。 Analysis Services はこうした文字列内の文字を内部的には大文字として処理し、言語に関係なく単純なバイト比較を実行します。<br /><br /> 26 文字だけが影響を受けることに注意してください。 言語が西ヨーロッパ言語で、スカンジナビア語の文字を使用している場合、追加の文字は大文字に変換されません。|  
 |**キリル語、ギリシャ語、コプト語、アルメニア語**|キリル語など、ラテン語以外の大文字小文字の区別がある言語のオブジェクト ID では、常に大文字小文字が区別されます。 たとえば、Измерение と измерение の違いは最初の文字の大文字小文字だけですが、この場合も 2 つの異なる値であると見なされます。|  
   
  **オブジェクト ID の大文字小文字の区別の影響**  
@@ -140,7 +140,7 @@ ms.locfileid: "48188262"
   
 3.  **ユニバーサルの日時情報に対する ISO 日付形式の使用**  
   
-     1 人の [Analysis Services の専門家](http://geekswithblogs.net/darrengosbell/Default.aspx) は次のように勧めています。「SQL または MDX でクエリに渡す日付文字列には ISO 日付形式 yyyy-mm-dd を必ず使います。この形式にはあいまいさがなく、クライアントまたはサーバーの地域設定に関係なく作動するためです。 サーバーでは、あいまいな日付形式を解析する場合にこの地域設定に従う必要があるとは思いますが、どのような場合であってもそれが最善の選択肢であると考える必要はないとも思います」。  
+     1 つ[Analysis Services の専門家](http://geekswithblogs.net/darrengosbell/Default.aspx)がこの推奨事項。「SQL または MDX でクエリに渡す日付文字列には ISO 日付形式 yyyy-mm-dd を必ず使用します。この形式にはあいまいさがなく、クライアントまたはサーバーの地域設定に関係なく作動するためです。 サーバーでは、あいまいな日付形式を解析する場合にこの地域設定に従う必要があるとは思いますが、どのような場合であってもそれが最善の選択肢であると考える必要はないとも思います」。  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

@@ -14,12 +14,12 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01149b1f75c78ba5ca6da467abf8955adf41f2f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170402"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354818"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WinForms ReportViewer コントロールを使用して Windows アプリケーションでレポートを表示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "48170402"
   
  コントロールがフォームに追加されると、**[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。  
   
- 表示するレポートがレポート サーバーに配置されている場合は、**[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、**[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、**[レポートのパス]** は表示するレポートへの完全なパスです。  
+ 表示するレポートがレポート サーバーに配置されている場合は、**[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 後に、 **\<サーバー レポート >** オプションが選択されている場合、2 つの追加プロパティが表示されます。**レポート サーバーの Url**と**レポート パス**します。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、**[レポートのパス]** は表示するレポートへの完全なパスです。  
   
  ![サーバー レポートの選択](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "サーバー レポートの選択")  
   
@@ -154,7 +154,7 @@ End Class
   
 3.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples プロジェクトをインストールした場所を参照します。  
   
-     レポート サンプルをダウンロードするには、「[AdventureWorks 2012 Report Samples](http://go.microsoft.com/fwlink/?LinkId=404153)」 (AdventureWorks 2012 のレポート サンプル) を参照してください  
+     レポート サンプルをダウンロードするには、「[AdventureWorks 2012 Report Samples](https://go.microsoft.com/fwlink/?LinkId=404153)」 (AdventureWorks 2012 のレポート サンプル) を参照してください  
   
 4.  Sales Order Detail.rdl ファイルを選択して **[追加]** ボタンをクリックします。  
   

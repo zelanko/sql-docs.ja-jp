@@ -16,12 +16,12 @@ ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b2ec18b03081d3469e9187db6043ba27406389b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a231e4fcc071338f4fcf168475bde86514470b41
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207682"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590836"
 ---
 # <a name="expression-dialog-box"></a>[式] ダイアログ ボックス
   使用して、**式**書き込む ダイアログ ボックス[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]の式のレポート アイテムのプロパティ。 式を使用して、色、フォント、罫線など多数のプロパティを設定できます。 実行時に、レポート プロセッサによって式が評価され、その結果がプロパティの値に置き換えられます。  
@@ -37,11 +37,11 @@ ms.locfileid: "48207682"
 ## <a name="expression-constructs"></a>式の構成  
  式は等号 (=) で始まり、定数、リテラル、演算子に加え、組み込みフィールド、組み込みコレクション、組み込み関数、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ランタイム ライブラリ関数、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 共通言語ランタイム クラス、およびカスタム関数への参照を含むことができます。 式に追加できるカテゴリおよび値を次に示します。  
   
- **式の設定:***\<PropertyName >*   
+ **式を設定します。**_\<プロパティ名 >_  
  式を定義するプロパティの名前です。 このプロパティは、[プロパティ] ペインで名前を指定して設定することもできます。  
   
  **定数**  
- 定数に基づくプロパティに有効な定義済みの値の一覧を、このプロパティに提供します。 たとえば、色に基づいたプロパティでは、有効な色の名前が表示されます。 Boolean データ型は、プロパティ、値は`True`と`False`します。  
+ 定数に基づくプロパティに有効な定義済みの値の一覧を、このプロパティに提供します。 たとえば、色に基づいたプロパティでは、有効な色の名前が表示されます。 ブール値型のプロパティの場合、値は `True` および `False` になります。  
   
  式をサポートするすべてのアイテムに定数を設定できるとは限りません。 プロパティに定数値を設定できない場合は、その情報が説明ペインに表示されます。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48207682"
  **パラメーター**  
  レポート パラメーターの一覧を表示します。  
   
- **フィールド (** *\<データセットを選択 >* **)**  
+ **フィールド (** _\<データセットを選択 >_ **)**  
  [データセット] カテゴリで選択したデータセットのフィールドの一覧を表示します。 **[式]** ボックスにフィールドをコピーするには、フィールドをダブルクリックします。  
   
  **データセット**  
@@ -90,13 +90,13 @@ ms.locfileid: "48207682"
 ## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [数値と日付の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [フィルター式の例&#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [式内で組み込みコレクション&#40;レポート ビルダーおよび SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
+ [式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)](report-design/built-in-collections-in-expressions-report-builder.md)   
  [式の追加 (レポート ビルダーおよび SSRS)](report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   

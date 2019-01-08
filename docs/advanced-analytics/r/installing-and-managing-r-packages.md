@@ -1,5 +1,5 @@
 ---
-title: 既定の SQL Server の R と SQL Server Machine Learning で R と Python のパッケージ ライブラリ |Microsoft Docs
+title: 既定の R と Python ライブラリの SQL Server Machine Learning サービスをパッケージ化
 description: SQL Server R Services で R Server では、Machine Learning サービス (In-database)、および Machine Learning Server (スタンドアロン) によってインストールされた R と Python のパッケージ
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7f5c51e9b93aca5d52858417667865633a0c4151
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 0a8c4c0f14a099dd4b6d8e6c48b8d84e209f6024
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118310"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432335"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server の既定の R と Python のパッケージ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

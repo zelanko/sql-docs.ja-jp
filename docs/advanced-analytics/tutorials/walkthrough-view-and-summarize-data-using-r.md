@@ -1,43 +1,34 @@
 ---
-title: R (チュートリアル) を使用したデータの概要を表示および |Microsoft Docs
+title: 表示、および SQL Server Machine Learning の R 関数を使用して SQL Server データの概要
+description: データベース内分析は、SQL Server で R 関数を使用して、統計サマリーを生成し、視覚化する方法を示すチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/02/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1d6c225b3ec6b2a7a80dea155b564b94ecab60fb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 368caa21545e534c393aca29ce8fd3a59f9d9837
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032889"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644561"
 ---
-# <a name="view-and-summarize-data-using-r"></a>表示し、R を使用したデータの概要
+# <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>表示し、R (チュートリアル) を使用した SQL Server データの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-ここで R コードを使用して、同じデータを見ていきましょう。 このレッスンで関数を使用する方法について説明します、 **RevoScaleR**パッケージ。
+このレッスンでは関数に、 **RevoScaleR**パッケージ化し、次のタスクの手順します。
 
-R スクリプトは、このチュートリアルで提供しており、データ オブジェクトの作成、集計の生成、モデルの構築に必要なすべてのコードを含んでいます。 R スクリプト ファイル **RSQL_RWalkthrough.R**は、スクリプト ファイルをインストールした場所にあります。
-
-+ R の使用経験がある場合、一度にすべてスクリプトを実行できます。
-+ RevoScaleR の使用方法を学ぶ人々 にとって、このチュートリアルは、スクリプトの 1 行ずつ説明します。
-+ スクリプトから個別行を実行するには、ファイル内の行を強調表示し、Ctrl を押しながら ENTER を押します。
-
-> [!TIP]
-> このチュートリアルの残りの部分を後で実行する場合は、R ワークスペースを保存します。  これにより、データ オブジェクトとその他の変数は再利用できる状態です。
+> [!div class="checklist"]
+> * SQL Server への接続
+> * 必要なデータを含むクエリを定義するか、テーブルまたはビューを指定します。
+> * R コードの実行時に使用する計算コンテキストを 1 つまたは複数定義します。
+> * 必要に応じて、元の読み取り中には、データ ソースに適用される変換を定義します。
 
 ## <a name="define-a-sql-server-compute-context"></a>SQL Server の計算コンテキストを定義します。
 
-Microsoft R では、データを取得する簡単な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]R コードで使用します。 このプロセスは次のとおりです。
-  
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続を作成します。
-- 必要なデータを含むクエリを定義するか、テーブルまたはビューを指定します。
-- R コードの実行時に使用する計算コンテキストを 1 つまたは複数定義します。
-- 必要に応じて、元の読み取り中には、データ ソースに適用される変換を定義します。
-
-次の手順では、すべての R コードの一部し、R 環境で実行する必要があります。 すべての RevoScaleR パッケージだけでなく、基本的な軽量な R ツールのセットが含まれているために Microsoft R Client を使用しました。
+クライアント ワークステーションで R 環境で R の次のステートメントを実行します。 このセクションで、 [Microsoft R Client でのデータ サイエンス ワークステーション](../r/set-up-a-data-science-client.md)RevoScaleR パッケージだけでなく、基本的な軽量な R ツールのセットが含まれているため、します。 たとえば、Rgui.exe を使用して、このセクションでは、R スクリプトを実行することができます。
 
 1. 場合、 **RevoScaleR**パッケージがまだ読み込まれていない、R コードの行を実行します。
 
@@ -49,13 +40,15 @@ Microsoft R では、データを取得する簡単な[!INCLUDE[ssNoVersion](../
      
      エラーが発生する場合は、R 開発環境が RevoScaleR パッケージが含まれているライブラリを使用することを確認します。 コマンドを使用して`.libPaths()`を現在のライブラリ パスを表示します。
 
-2. SQL Server の接続文字列を作成し、それを R 変数に保存_connStr_します。
+2. SQL Server の接続文字列を作成し、それを R 変数に保存*connStr*します。
+
+   有効な SQL Server インスタンス名に"your_server_name"プレース ホルダーを変更する必要があります。 サーバー名、インスタンスの名前を使用できる場合があります。 またはネットワークによって、名前、完全に修飾する必要があります。
     
+   SQL Server 認証の場合は、接続の構文がとおりです。
+
     ```R
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Uid=your-sql-login;Pwd=your-login-password"
     ```
-
-    サーバー名、インスタンスの名前を使用できる場合があります。 またはネットワークによって、名前、完全に修飾する必要があります。
 
     Windows 認証の場合、構文が少し異なります。
     
@@ -63,7 +56,7 @@ Microsoft R では、データを取得する簡単な[!INCLUDE[ssNoVersion](../
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Trusted_Connection=True"
     ```
 
-    ダウンロード可能な R スクリプトでは、SQL ログインのみを使用します。 通常、R コードでのパスワードの保存されないように、可能な場合は、Windows 認証を使用することをお勧めします。 ただし、このチュートリアルでは、コードが Github からダウンロードされたコードを一致させるには、チュートリアルの残りの部分で、SQL ログインを使用します。
+    通常、R コードでのパスワードの保存されないように、可能な場合は、Windows 認証を使用することをお勧めします。
 
 3. 使用して作成、新しい変数を定義*コンピューティング コンテキスト*します。 計算コンテキスト オブジェクトを作成した後は、SQL Server インスタンス上の R コードの実行に使用できます。
 
@@ -75,10 +68,9 @@ Microsoft R では、データを取得する簡単な[!INCLUDE[ssNoVersion](../
 
     - ワークステーションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューター間で双方向に R オブジェクトをシリアル化する際、R では、一時ディレクトリが使用されます。 *sqlShareDir*として使用されるローカル ディレクトリを指定するか、既定のものをそのまま利用できます。
   
-    - 使用*sqlWait*を R サーバーからの結果を待機するかどうかを示します。  待機時間のないジョブとの比較の詳細については、次を参照してください。[分散し、Microsoft r ScaleR の並列コンピューティング](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)します。
+    - 使用*sqlWait*を R サーバーからの結果を待機するかどうかを示します。  待機時間のないジョブとの比較の詳細については、次を参照してください。[分散し、Microsoft R で RevoScaleR の並列コンピューティング](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)します。
   
     - 引数を使用して*sqlConsoleOutput*に R コンソールからの出力を確認しないことを示します。
-
 
 4. 呼び出す、 [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)変数と、既に定義されている接続文字列で計算コンテキスト オブジェクトを作成し、R 変数に新しいオブジェクトを保存するコンス トラクター *sqlcc*します。
   
@@ -92,14 +84,14 @@ Microsoft R では、データを取得する簡単な[!INCLUDE[ssNoVersion](../
     rxSetComputeContext(sqlcc)
     ```
 
-    + `rxSetComputeContext` は以前にアクティブな計算コンテキストを非表示で返すので、それを利用できます。
-    + `rxGetComputeContext` はアクティブな計算コンテキストを返します
+    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)を返す、以前にアクティブなコンピューティング コンテキスト視覚的を使用できるように
+    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)アクティブなコンピューティング コンテキストを返します
     
-    計算コンテキストの設定は、 **RevoScaleR** パッケージ内の関数を使用する操作にのみ影響を与えます。計算コンテキストは、オープン ソース R 操作を実行する方法には影響しません。
+    コンピューティング コンテキストの設定のみに影響する関数を使用する操作に注意してください、 **RevoScaleR**パッケージは、コンピューティング コンテキストでは、オープン ソース R 操作を実行する方法には影響しません。
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>RxSqlServer を使用してデータ ソースを作成します。
 
-Microsoft R で、*データ ソース*RevoScaleR 関数を使用して作成するオブジェクトです。 データ ソース オブジェクトには、モデルのトレーニングや機能の抽出などのタスクを使用するデータのセットを指定します。 さまざまなソースからデータを取得できます。現在サポートされているソースの一覧で、次を参照してください。 [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)します。
+RevoScaleR と MicrosoftML などの Microsoft R ライブラリを使用する場合、*データソース*RevoScaleR 関数を使用して作成するオブジェクトです。 データ ソース オブジェクトには、モデルのトレーニングや機能の抽出などのタスクを使用するデータのセットを指定します。 さまざまな SQL Server を含むソースからデータを取得できます。 現在サポートされているソースの一覧で、次を参照してください。 [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)します。
 
 以前、接続文字列を定義し、R 変数にその情報を保存します。 取得するデータを指定する接続情報を再利用することができます。
 
@@ -125,7 +117,7 @@ Microsoft R で、*データ ソース*RevoScaleR 関数を使用して作成す
     
     + 引数  *colClasses* により、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と R の間でデータを移動するときに使用する列の型が指定されます。これが重要なのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が R と異なるデータ型とその他のデータ型を使用するためです。 詳細については、次を参照してください。 [R ライブラリとデータ型](../r/r-libraries-and-data-types.md)します。
   
-    + 引数*rowsPerRead*がメモリ使用量と効率的な計算を管理するために重要です。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 内の拡張分析関数の大部分は、データをチャンク単位で処理し、中間結果を蓄積していきます。すべてのデータを読み取ったら、最終的な計算結果を返します。  追加することで、 *rowsPerRead*パラメーター、データの行の数は、処理のためには、各チャンクに読み取られるかを制御できます。  このパラメーターの値が大きすぎる場合、そのような大規模なデータ チャンクを効率的に処理するのに十分なメモリは備えていないため、データ アクセスは遅くなる可能性があります。  システムによっては、 *rowsPerRead*極端に小さい値にもできるパフォーマンスが低下します。
+    + 引数*rowsPerRead*がメモリ使用量と効率的な計算を管理するために重要です。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 内の拡張分析関数の大部分は、データをチャンク単位で処理し、中間結果を蓄積していきます。すべてのデータを読み取ったら、最終的な計算結果を返します。  追加することで、 *rowsPerRead*パラメーター、データの行の数は、処理のためには、各チャンクに読み取られるかを制御できます。  このパラメーターの値が大きすぎる場合は、データの大きなチャンクを効率的に処理するための十分なメモリがあるないため、データ アクセスが低速あります。  システムによっては、 *rowsPerRead*極端に小さい値にもできるパフォーマンスが低下します。
 
 3. この時点では、作成した、 *inDataSource*オブジェクトが、データは含まれません。 データは、関数を実行するまでには、ローカル環境に SQL クエリから召集されません[rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep)または[rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary)します。
 
@@ -147,7 +139,7 @@ Microsoft R で、*データ ソース*RevoScaleR 関数を使用して作成す
 
     **結果**
     
-    ```
+    ```R
     Var 1: tipped, Type: integer
     Var 2: fare_amount, Type: numeric
     Var 3: passenger_count, Type: integer
@@ -182,7 +174,7 @@ Microsoft R で、*データ ソース*RevoScaleR 関数を使用して作成す
 
     RxSummary 関数が正常に実行されている場合、このような結果が表示カテゴリごとの統計情報のリストが続きます。 
 
-    ```
+    ```R
     rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
@@ -216,10 +208,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 > 
 > これらを使用して SQL Server で実行される R ジョブを監視することも[カスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
 
-## <a name="next-lesson"></a>次のレッスン
+## <a name="next-steps"></a>次の手順
 
-[R を利用してグラフやプロットを作成する](walkthrough-create-graphs-and-plots-using-r.md)
-
-## <a name="previous-lesson"></a>前のレッスン
-
-[SQL を使用してデータを探索する](walkthrough-view-and-explore-the-data.md)
+> [!div class="nextstepaction"]
+> [R を利用してグラフやプロットを作成する](walkthrough-create-graphs-and-plots-using-r.md)

@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: xsd ツールを使用して、RDL スキーマからクラスを生成する |Microsoft Docs'
+title: レッスン 2:Xsd ツールを使用して RDL スキーマからクラスを生成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34c279f44df33bddf12b3fd9ec3e128514d1f50c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818400a678b16f524e79da607a25775ad756ca5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065982"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374494"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>レッスン 2 : xsd ツールを使用して RDL スキーマからクラスを作成
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>レッスン 2:Xsd ツールを使用して RDL スキーマからクラスを生成します。
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトを作成したら、次はレポート定義スキーマのローカル コピーを取得して、XML スキーマ定義ツール (Xsd.exe) を実行します。  
   
 ### <a name="to-generate-the-rdl-classes"></a>RDL クラスを生成するには  
@@ -26,7 +26,7 @@ ms.locfileid: "48065982"
 1.  インスタンスを開いて[!INCLUDE[msCoName](../includes/msconame-md.md)]Internet Explorer (または同等の Web ブラウザー)、次の URL に移動します。  
   
     ```  
-    http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
+    https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
     ```  
   
 2.  RDL スキーマは、ブラウザーで開かれている、したらを参照、**ファイル**メニューを選択し、**付けて**します。  
@@ -53,7 +53,7 @@ ms.locfileid: "48065982"
     >  ReportDefinition.xsd ファイルをプロジェクトに追加した後でわかります**ソリューション エクスプ ローラー** ReportDefinition.cs (.vb) ファイルがないことがあります。 ファイルを表示するには、ReportDefinition.xsd ファイルの横にある展開/折りたたみのボタンをクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、RDL スキーマから生成したクラスを使って、レポート サーバーからレポート定義を読み込むコードを作成します。 参照してください[レッスン 3: レポート サーバーからレポート定義を読み込む](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)します。  
+ 次のレッスンでは、RDL スキーマから生成したクラスを使って、レポート サーバーからレポート定義を読み込むコードを作成します。 参照してください[レッスン 3。レポート サーバーからレポート定義を読み込む](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)します。  
   
 ## <a name="see-also"></a>参照  
  [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -14,12 +13,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067032"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371554"
 ---
 # <a name="what39s-new-database-engine"></a>どのような&#39;s 新しい (データベース エンジン)
   この最新リリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]には、データ ストレージ システムを設計、開発、および管理する設計者、開発者、および管理者の能力や生産性を向上させる、以下のような新機能や機能強化が導入されています。 [!INCLUDE[ssDE](../includes/ssde-md.md)]の機能が強化された分野は以下のとおりです。  
@@ -35,7 +34,7 @@ ms.locfileid: "48067032"
   
   
 ###  <a name="AzureVM"></a> Windows での SQL Server データベースをホストする Azure 仮想マシン  
- 使用して、 [Windows Azure 仮想マシンに SQL Server データベースのデプロイ](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)ウィザードのインスタンスからデータベースをホストする[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows Azure 仮想マシンでします。  
+ 使用して、 [Windows Azure 仮想マシンに SQL Server データベースのデプロイ](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)ウィザードのインスタンスからデータベースをホストする[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows Azure 仮想マシンでします。  
   
   
 ###  <a name="Backup"></a> バックアップと復元の機能強化  
@@ -51,11 +50,11 @@ ms.locfileid: "48067032"
   
 -   **バックアップの暗号化**  
   
-     バックアップ操作中にバックアップ ファイルを暗号化する方法を選択できるようになりました。  AES 128、AES 192、AES 256、Triple DES を含むいくつかの暗号化アルゴリズムがサポートされています。 バックアップ中に暗号化を実行するには、証明書または非対称キーを使用する必要があります。 詳細については、次を参照してください。[バックアップの暗号化](../relational-databases/backup-restore/backup-encryption.md)します。  
+     バックアップ操作中にバックアップ ファイルを暗号化する方法を選択できるようになりました。  AES 128、AES 192、AES 256、Triple DES を含むいくつかの暗号化アルゴリズムがサポートされています。 バックアップ中に暗号化を実行するには、証明書または非対称キーを使用する必要があります。 詳細については、「 [バックアップの暗号化](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
   
   
 ###  <a name="CE"></a> カーディナリティを推定するための新しいデザイン  
- カーディナリティ推定機能と呼ばれる、カーディナリティ推定ロジックがで再設計された[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]クエリ プランの品質を向上させるためクエリのパフォーマンスを向上させるためにします。 新しいカーディナリティ推定機能には、現在の OLTP ワークロードとデータ ウェアハウス ワークロードで適切に機能する想定とアルゴリズムが組み込まれています。 この機能は、現在のワークロードを対象とするカーディナリティ推定に関する詳細な調査、および SQL Server のカーディナリティ推定機能を向上させるための過去 15 年にわたる研究を土台としています。 お客様からのフィードバックによると、大半のクエリは今回の変更によって性能が向上するか、何も変化しないこと、一方で、少数のクエリは以前のカーディナリティ推定機能と比較すると性能が低下する可能性があることが示されています。 パフォーマンスの推奨事項のテストとチューニングでは、次を参照してください。[カーディナリティ推定&#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)します。  
+ カーディナリティ推定ロジックをカーディナリティ推定機能と呼びますが、クエリ プランの品質を向上させ、その結果、クエリのパフォーマンスを向上させる目的で、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] でこの機能を再設計しました。 新しいカーディナリティ推定機能には、現在の OLTP ワークロードとデータ ウェアハウス ワークロードで適切に機能する想定とアルゴリズムが組み込まれています。 この機能は、現在のワークロードを対象とするカーディナリティ推定に関する詳細な調査、および SQL Server のカーディナリティ推定機能を向上させるための過去 15 年にわたる研究を土台としています。 お客様からのフィードバックによると、大半のクエリは今回の変更によって性能が向上するか、何も変化しないこと、一方で、少数のクエリは以前のカーディナリティ推定機能と比較すると性能が低下する可能性があることが示されています。 パフォーマンスの推奨事項のテストとチューニングでは、次を参照してください。[カーディナリティ推定&#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)します。  
    
   
 ###  <a name="Durability"></a> 遅延持続性  
@@ -97,11 +96,11 @@ ms.locfileid: "48067032"
   
 -   **プラン表示**  
   
-     SHOWPLAN には、列ストア インデックスに関する情報が表示されます。 **EstimatedExecutionMode**と**ActualExecutionMode**プロパティがある 2 つの値:**バッチ**または**行**します。  **ストレージ**プロパティが 2 つの値:**行ストア**と**ColumnStore**します。  
+     SHOWPLAN には、列ストア インデックスに関する情報が表示されます。 **EstimatedExecutionMode**と**ActualExecutionMode**プロパティがある 2 つの値。**バッチ**または**行**します。  **ストレージ**プロパティが 2 つの値。**行ストア**と**ColumnStore**します。  
   
 -   **保存用データ圧縮**  
   
-     ALTER INDEX … 再構築が、さらに、列ストア インデックスの指定パーティションを圧縮する新しい COLUMNSTORE_ARCHIVE データ圧縮オプション。 保存用や、データ ストレージのサイズを減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用します。 詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)」を参照してください。  
+     ALTER INDEX ...再構築が、さらに、列ストア インデックスの指定パーティションを圧縮する新しい COLUMNSTORE_ARCHIVE データ圧縮オプション。 保存用や、データ ストレージのサイズを減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用します。 詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)」を参照してください。  
    
   
 ###  <a name="Buffer"></a> バッファー プール拡張機能  
@@ -119,7 +118,7 @@ ms.locfileid: "48067032"
   
   
 ###  <a name="OnlineEvent"></a> Online Index Operation イベント クラス  
- Online index operation イベントのクラスの進行状況レポートが 2 つの新しいデータ列になりました: **PartitionId**と**PartitionNumber**します。 詳細については、次を参照してください。 [Progress Report: Online Index Operation イベント クラス](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)します。  
+ Online Index Operation イベント クラスの進行状況レポートには、**PartitionId**と**PartitionNumber**します。 詳細については、次を参照してください。[の進行状況レポート。Online Index Operation イベント クラス](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)します。  
   
   
 ###  <a name="Compat"></a> データベースの互換性レベル  
@@ -130,8 +129,8 @@ ms.locfileid: "48067032"
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>CLUSTERED および NONCLUSTERED のインライン指定  
  ディスク ベース テーブルに対する `CLUSTERED` および `NONCLUSTERED` インデックスのインライン指定が許可されるようになりました。 インライン インデックスを含むテーブルを作成することは、テーブルの作成ステートメントに続いて、対応する `CREATE INDEX` ステートメントを発行することと同じです。 付加列とフィルター条件は、インライン インデックスではサポートされていません。  
   
-### <a name="select--into"></a>SELECT … INTO  
- `SELECT … INTO` ステートメントは改善され、並行して実行できるようになりました。 データベース互換性レベルを 110 以上に設定する必要があります。  
+### <a name="select--into"></a>このオプションを選択するとしてください.INTO  
+ `SELECT ... INTO` ステートメントは改善され、並行して実行できるようになりました。 データベース互換性レベルを 110 以上に設定する必要があります。  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>[!INCLUDE[tsql](../includes/tsql-md.md)] でのインメモリ OLTP の強化  
  については、[!INCLUDE[tsql](../includes/tsql-md.md)]では、インメモリ OLTP をサポートするために変更を参照してください[TRANSACT-SQL は、インメモリ OLTP のサポート](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)します。  

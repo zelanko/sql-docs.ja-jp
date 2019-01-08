@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d60680f4c6f286db1c1d0e47961e75b057b14a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fda0f61806c1fa2be33b1a231e877758c4c67ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192102"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358184"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription イベント クラス
   QN:Subscription イベントでは、通知サブスクリプションに関する情報が報告されます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48192102"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 199。|27|いいえ|  
 |EventSequence|`int`|このイベントのシーケンス番号。|51|いいえ|  
-|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> 登録されているサブスクリプション: クエリ通知サブスクリプションがデータベースに正常に登録された日時を示します。<br /><br /> サブスクリプションが巻き戻され: かを示す、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は既存のサブスクリプションを正確に一致するサブスクリプション要求を受信します。 この場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、既存のサブスクリプションのタイムアウト値が、新しいサブスクリプション要求で指定されたタイムアウト値に設定されます。<br /><br /> サブスクリプションが起動しました。 通知配信登録が通知メッセージを生成する場合を示します。<br /><br /> ブローカー エラーで起動が失敗しました: 通知メッセージがために失敗したことを示します、[!INCLUDE[ssSB](../../includes/sssb-md.md)]エラー。<br /><br /> ブローカー エラーが発生せず、起動が失敗しました: 通知メッセージが失敗が原因でないことを示します、[!INCLUDE[ssSB](../../includes/sssb-md.md)]エラー。<br /><br /> Broker のエラーをインターセプト: ことを示します[!INCLUDE[ssSB](../../includes/sssb-md.md)]クエリ通知に使用するメッセージ交換でエラーを提供します。<br /><br /> サブスクリプションの削除の試行: ことを示します、[!INCLUDE[ssDE](../../includes/ssde-md.md)]リソースを解放するための有効期限が切れたサブスクリプションを削除しようとしています。<br /><br /> サブスクリプションを削除できませんでした。 有効期限が切れたサブスクリプションを削除する試行が失敗したことを示します。 リソースを解放するために、サブスクリプションを削除するスケジュールが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に組み直されます。<br /><br /> サブスクリプションの破棄: ことを示します、[!INCLUDE[ssDE](../../includes/ssde-md.md)]期限切れのサブスクリプションが正常に削除|21|はい|  
+|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> サブスクリプションに登録します。クエリ通知サブスクリプションがデータベースに正常に登録された日時を示します。<br /><br /> サブスクリプションが巻き戻されます。既存のサブスクリプションと正確に一致するサブスクリプション要求を[!INCLUDE[ssDE](../../includes/ssde-md.md)]が受け取った日時を示します。 この場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、既存のサブスクリプションのタイムアウト値が、新しいサブスクリプション要求で指定されたタイムアウト値に設定されます。<br /><br /> サブスクリプションが起動しました。通知サブスクリプションによって通知メッセージが生成された日時を示します。<br /><br /> ブローカー エラーの発生が失敗しました。通知メッセージが [!INCLUDE[ssSB](../../includes/sssb-md.md)] エラーのために失敗した日時を示します。<br /><br /> ブローカー エラーが発生せず、起動に失敗しました。通知メッセージが [!INCLUDE[ssSB](../../includes/sssb-md.md)] エラー以外の原因で失敗した日時を示します。<br /><br /> インターセプト ブローカー エラー:[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、クエリ通知に使用するメッセージ交換でエラーが配信されたことを示します。<br /><br /> サブスクリプションの削除しようとしました。リソースを解放するために、有効期限が切れたサブスクリプションを削除する試行が[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって行われたことを示します。<br /><br /> サブスクリプションの削除に失敗しました。有効期限が切れたサブスクリプションを削除する試行が失敗したことを示します。 リソースを解放するために、サブスクリプションを削除するスケジュールが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に組み直されます。<br /><br /> サブスクリプションが破棄されます。有効期限が切れたサブスクリプションが[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって正常に削除されたことを示します。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
@@ -48,6 +47,6 @@ ms.locfileid: "48192102"
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、アプリケーションから、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|`ntext`|このイベント固有の情報を含む XML ドキュメントを返します。 このドキュメントは、 [SQL Server Query Notification Profiler Event Schema](http://go.microsoft.com/fwlink/?LinkId=63331) ページから入手できる XML スキーマに準拠しています。|1|はい|  
+|TextData|`ntext`|このイベント固有の情報を含む XML ドキュメントを返します。 このドキュメントは、 [SQL Server Query Notification Profiler Event Schema](https://go.microsoft.com/fwlink/?LinkId=63331) ページから入手できる XML スキーマに準拠しています。|1|はい|  
   
   

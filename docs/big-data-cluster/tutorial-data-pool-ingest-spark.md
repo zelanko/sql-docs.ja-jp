@@ -1,20 +1,22 @@
 ---
-title: Spark ジョブの SQL Server のデータ プールにデータを取り込む方法 |Microsoft Docs
+title: Spark ジョブを使用してデータを取り込む
+titleSuffix: SQL Server 2019 big data clusters
 description: このチュートリアルでは、Azure Data Studio で Spark ジョブを使用して SQL Server 2019 ビッグ データ クラスター (プレビュー) のデータ プールにデータを取り込む方法を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: d1780ae630231cd96e9424f4f541d921b1496e7d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221478"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432365"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル: Spark ジョブの SQL Server のデータ プールへのデータを取り込み
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブの SQL Server のデータ プールにデータを取り込む
 
 このチュートリアルで Spark ジョブを使用してデータを読み込む方法、[データ プール](concept-data-pool.md)の SQL Server 2019 ビッグ データ クラスター (プレビュー)。 
 
@@ -30,17 +32,17 @@ ms.locfileid: "51221478"
 
 ## <a id="prereqs"></a> 前提条件
 
-* [Kubernetes でのビッグ データ クラスター デプロイ](deployment-guidance.md)します。
-* [Azure Data Studio と SQL Server 2019 拡張機能をインストール](deploy-big-data-tools.md)します。
-* [クラスターにサンプル データを読み込む](#sampledata)します。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [ビッグ データ ツール](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 の拡張機能**
+- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>データ プール内の外部テーブルを作成します。
 
 次の手順では、外部テーブルを作成という名前のデータ プールに**web_clickstreams_spark_results**します。 このテーブルことができますし、場所としてのデータの取り込みに使用するビッグ データ クラスター。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](deploy-big-data-tools.md#master)します。
+1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
 
 1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
 
@@ -61,13 +63,13 @@ ms.locfileid: "51221478"
       );
    ```
   
-1. CTP 2.1 でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
+1. CTP 2.2 でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
 
 ## <a name="start-a-spark-streaming-job"></a>Spark ストリーミングのジョブを開始します。
 
 次の手順は、データ プールで作成した外部テーブルに、Spark ストリーミング web クリック ストリーム データを読み込みます (HDFS) の記憶域プールからジョブを作成します。
 
-1. Azure Data Studio、ビッグ データ クラスターの HDFS/Spark ゲートウェイに接続します。 詳細については、次を参照してください。 [HDFS/Spark ゲートウェイへの接続](deploy-big-data-tools.md#hdfs)します。
+1. Azure のデータの Studio に接続、 **HDFS/Spark ゲートウェイ**ビッグ データ クラスター。 詳細については、次を参照してください。 [HDFS/Spark ゲートウェイへの接続](connect-to-big-data-cluster.md#hdfs)します。
 
 1. HDFS/Spark ゲートウェイ接続をダブルクリックして、**サーバー**ウィンドウ。 選び**Spark ジョブを新しい**します。
 
@@ -81,10 +83,12 @@ ms.locfileid: "51221478"
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
+1. **Main クラス**フィールドに、入力`FileStreaming`します。
+
 1. **引数**フィールドに、SQL Server のマスター インスタンス内にパスワードを指定する、次のテキストを入力、`<your_password>`プレース ホルダーです。 
 
    ```text
-   mssql-master-pool-0.service-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
+   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
    ```
 
    次の表では、それぞれの引数について説明します。
@@ -100,6 +104,7 @@ ms.locfileid: "51221478"
    | ストリーミング用のソース ディレクトリ | 完全な URI をなどあるこの必要があります"hdfs:///clickstream_data" |
    | 入力の形式 | これは、"csv"、"parquet"または"json" |
    | チェックポイントを有効にします。 | true または false |
+   | timeout | 時間 (ミリ秒単位) のジョブを終了する前に実行するには |
 
 1. キーを押して**送信**ジョブを送信します。
 
@@ -113,7 +118,7 @@ ms.locfileid: "51221478"
 
    ![Spark ジョブの履歴](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. このチュートリアルの先頭に開かれた SQL Server マスター インスタンスのクエリ ウィンドウに戻ります.
+1. このチュートリアルの先頭に開かれた SQL Server のマスター インスタンス クエリ ウィンドウに戻ります。
 
 1. 取り込まれたデータを検査する次のクエリを実行します。
 

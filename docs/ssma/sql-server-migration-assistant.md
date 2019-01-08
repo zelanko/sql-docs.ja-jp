@@ -1,7 +1,7 @@
 ---
 title: SQL Server Migration Assistant |Microsoft Docs
 ms.custom: ''
-ms.date: 09/30/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
+ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668402"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031718"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、MySQL、Oracle、および SAP ASE から SQL Server をデータベースの移行を自動化するためのツールです。  
@@ -42,9 +42,10 @@ SSMA では、次のターゲット バージョンはサポートされます�
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- Windows および Linux 上の SQL Server 2017
+- Windows および Linux 上の SQL Server 2019
 - Azure SQL データベース
-- SQL Server 2017 on Windows と Linux (プレビュー)
-- * * Azure SQL Data Warehouse
+- Azure SQL データ ウェアハウス * *
 
 * * このターゲットは、SSMA for Oracle でのみサポートされます。
  
@@ -60,7 +61,7 @@ SSMA では、次のターゲット バージョンはサポートされます�
   
 -   **製品ヘルプ**- を製品サポートにアクセスする、SSMA を起動し、[ヘルプ] メニューを選択します。 または F1 キーを押します。  
   
--   **SQL Server コミュニティ フォーラム**– SQL Server コミュニティで質問します。  
+-   **SQL Server コミュニティ フォーラム**-SQL Server コミュニティで質問します。  
   
     -   [SQL Server コミュニティ](https://go.microsoft.com/fwlink/?LinkId=42455)-SQL Server コミュニティが監視するニュースグループとフォーラム。 ブログや Web サイトなど、コミュニティ情報のソースも一覧表示されます。  
   
@@ -70,7 +71,7 @@ SSMA では、次のターゲット バージョンはサポートされます�
   
 -   Premier サポートの Premier 契約がある場合すれば、Premier サポートで、 [Premier Online ポータル](https://premier.microsoft.com/)します。  
   
--   移行、移動を支援してコンサルティング サービス – パートナー、[パートナー ポータル](https://www.platformmodernization.org/Pages/default.aspx)します。  
+-   移行、移動を支援してコンサルティング サービス - パートナーの[パートナー ポータル](https://www.platformmodernization.org/Pages/default.aspx)します。  
   
 ## <a name="legal-notice-ssma"></a>免責事項 (SSMA)  
 このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  
@@ -81,7 +82,7 @@ SSMA では、次のターゲット バージョンはサポートされます�
   
 マイクロソフトは、このマニュアルに記載されている内容に関し、特許、特許申請、商標、著作権、またはその他の無体財産権を有する場合があります。 このマニュアルはこれらの特許、商標、著作権、またはその他の無体財産権に関する権利をお客様に許諾するものではありません。  
   
-© 2017 Microsoft Corporation. All rights reserved.  
+© 2019 Microsoft Corporation. All rights reserved.  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System、および WinFX は、米国 Microsoft Corporation の米国およびその他の国における登録商標または商標です。  
   
@@ -90,7 +91,7 @@ SAP NetWeaver は、ドイツ SAP AG のドイツおよびその他の国にお�
 記載されている会社名、製品名には、各社の商標のものもあります。  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server のサポートおよびアップグレードに関するドキュメント ポリシー  
-SQL Server のドキュメントに記載されている内容は、十分なテストを実施した後にはじめて公開されます。 製品のドキュメント (SQL Server オンライン ブック、Readme ファイル、既知の問題に関するドキュメント、サポート技術情報の資料) には、あらゆるお客様が一般的な用途に安心してご利用になれる SQL Server の機能に関する内容が記載されています。 このポリシーは、リリースおよびサービス パックの Readme ファイルを含む、すべての SQL Server のドキュメントに適用されます。Readme は、オンライン ブックの追加ファイルとして扱われます。  
+SQL Server のドキュメントに記載されている内容は、十分なテストを実施した後にはじめて公開されます。 -SQL Server オンライン ブック、readme ファイル、既知の問題ドキュメント、およびサポート技術情報の記事 - 製品ドキュメントには、SQL Server の機能とは安全にすべての顧客によって一般的な使用するのに十分な堅牢な機能に関する内容が含まれています。 このポリシーは、リリースおよびサービス パックの Readme ファイルを含む、すべての SQL Server のドキュメントに適用されます。Readme は、オンライン ブックの追加ファイルとして扱われます。  
   
 機能によっては、お客様が直接使用しないものもあり、そのような機能に関してはドキュメントに記載されていません。 Microsoft が発行する SQL Server のドキュメントに記載されていない機能については、サード パーティの書籍や Web サイトの内容は Microsoft カスタマー サポートによってサポートされません。実稼働データベースやアプリケーションでは使用しないでください。  
   

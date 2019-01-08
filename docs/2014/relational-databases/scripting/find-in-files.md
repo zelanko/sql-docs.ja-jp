@@ -7,21 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.findinfiles
-- vs.findinfiles
 helpviewer_keywords:
 - Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 882e13938e85db653dbe43e859bbc582833d68d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a7b8baf1eb666e6639e7e7f47cbf6c321dc217b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114062"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328642"
 ---
 # <a name="find-in-files"></a>[フォルダーを指定して検索]
   **[検索と置換]** ウィンドウの [フォルダーを指定して検索] タブでは、指定したファイルのセットのコードで文字列や式を検索できます。 検出された項目および実行するアクションは、 **[結果オプション]** で選択された検索結果ウィンドウに表示されます。  
@@ -137,5 +134,3 @@ ms.locfileid: "48114062"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

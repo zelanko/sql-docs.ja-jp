@@ -1,21 +1,22 @@
 ---
-title: SQL Server 可用性グループの RHEL のクラスターの構成 |Microsoft Docs
-description: ''
+title: SQL Server 可用性グループの RHEL のクラスターを構成します。
+titleSuffix: SQL Server
+description: Red Hat Enterprise Linux (RHEL) を実行するときに、可用性グループのクラスターについて説明します
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670821"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160603"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループの RHEL のクラスターを構成します。
 
@@ -88,7 +89,7 @@ RHEL の高可用性を構成するには、高可用性のサブスクリプシ
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-詳細については、[Pacemaker – オープン ソースな高可用性クラスター](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)を参照してください。  
+詳細については、次を参照してください。 [Pacemaker -、オープン ソースの高可用性クラスター](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)します。 
 
 サブスクリプションを構成した後は、 Pacemaker を構成するため次の手順を実行します。
 
@@ -112,7 +113,7 @@ STONITH、およびフェンス操作については、次の記事を参照し�
 
 * [Pacemaker クラスターを最初から作成](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
 * [フェンスと STONITH](https://clusterlabs.org/doc/crm_fencing.html)
-* [Pacemaker を使用した Red Hat High Availability Add-On の設定: フェンス機能](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Pacemaker の高可用性アドオンを Red Hat:フェンス操作](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 ノード レベル でのフェンス操作は環境に大きく依存するため、このチュートリアルでは無効にします (後で構成することができます)。 次のスクリプトで、ノード レベルのフェンス操作を無効にします。
 

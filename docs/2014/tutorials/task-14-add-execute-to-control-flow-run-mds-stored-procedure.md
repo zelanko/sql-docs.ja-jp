@@ -1,5 +1,5 @@
 ---
-title: 'タスク 14: 追加する SQL 実行タスクを MDS のストアド プロシージャを実行する制御フロー |Microsoft Docs'
+title: タスク 14:実行 SQL タスクは、MDS のストアド プロシージャを実行する制御フローを追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e2f62236d844a6ded850f33207bad9da082ce62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75529b9880183a644abdbdce1f6174c375245ba2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177292"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355844"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>タスク 14: SQL 実行タスクを制御フローに追加して MDS のストアド プロシージャを実行する
-  MDS のステージング テーブルにデータを読み込んだ後、ステージングから MDS データベース内の適切なテーブルにデータを読み込むために、そのテーブルに関連付けられているストアド プロシージャを実行します。 このストアド プロシージャには、2 つの必須パラメーター LogFlag および VersionName を渡す必要があります。 LogFlag はトランザクションがステージング処理中にログ記録されるかどうかを指定し、VersionName はモデルのバージョンを示します。 参照してください[ステージング ストアド プロシージャ](http://msdn.microsoft.com/library/hh231028.aspx)詳細についてはトピック。  
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>タスク 14:SQL 実行タスクを制御フローに追加して MDS のストアド プロシージャを実行する
+  MDS のステージング テーブルにデータを読み込んだ後、ステージングから MDS データベース内の適切なテーブルにデータを読み込むために、そのテーブルに関連付けられているストアド プロシージャを実行します。 このストアド プロシージャには、2 つの必須パラメーター LogFlag および VersionName を渡す必要があります。 LogFlag はトランザクションがステージング処理中にログ記録されるかどうかを指定し、VersionName はモデルのバージョンを示します。 参照してください[ステージング ストアド プロシージャ](https://msdn.microsoft.com/library/hh231028.aspx)詳細についてはトピック。  
   
  ここでは、適切な MDS テーブルにステージング データを読み込むためのストアド プロシージャを起動する制御フローに SQL 実行タスクを追加します。  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48177292"
 15. クリックして**OK**を閉じる、 **SQL 実行エディター**  ダイアログ ボックス。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 15: SSIS プロジェクトをビルドおよび実行する](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
+ [タスク 15:構築して SSIS プロジェクトを実行します。](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
   
   

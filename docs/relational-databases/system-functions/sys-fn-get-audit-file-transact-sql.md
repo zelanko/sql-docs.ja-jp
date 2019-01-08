@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018337"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980048"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,22 +117,22 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 引数として渡されるユーザー定義済みのイベント id **sp_audit_write**します。 **NULL**システム イベント (既定値) のユーザー定義のイベントに対しては 0 以外。 詳細については、次を参照してください。 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)します。|  
 |user_defined_information|**nvarchar (4000)**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ユーザーに記録する追加情報を記録するために使用 |監査ログを使用して、 **sp_audit_write**ストアド プロシージャ。|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **適用対象**: SQL Server のみ (2016年以降) |  
-|transaction_id |**bigint** | **適用対象**: SQL Server のみ (2016年以降) |  
-|client_ip |**nvarchar(128)** | **適用対象**: Azure SQL DB + SQL Server (2017年以降) |  
-|application_name |**nvarchar(128)** | **適用対象**: Azure SQL DB + SQL Server (2017年以降) |  
-|duration_milliseconds |**bigint** | **適用対象**: Azure SQL DB のみ |  
-|response_rows |**bigint** | **適用対象**: Azure SQL DB のみ |  
-|affected_rows |**bigint** | **適用対象**: Azure SQL DB のみ |  
-|connection_id |GUID | **適用対象**: Azure SQL DB のみ |
-|data_sensitivity_information |nvarchar (4000) | **適用対象**: Azure SQL DB のみ |
+|sequence_group_id |**varbinary** | **適用対象**:SQL Server のみ (2016年以降) |  
+|transaction_id |**bigint** | **適用対象**:SQL Server のみ (2016年以降) |  
+|client_ip |**nvarchar(128)** | **適用対象**:Azure SQL DB + SQL Server (2017年以降) |  
+|application_name |**nvarchar(128)** | **適用対象**:Azure SQL DB + SQL Server (2017年以降) |  
+|duration_milliseconds |**bigint** | **適用対象**:Azure SQL DB のみ |  
+|response_rows |**bigint** | **適用対象**:Azure SQL DB のみ |  
+|affected_rows |**bigint** | **適用対象**:Azure SQL DB のみ |  
+|connection_id |GUID | **適用対象**:Azure SQL DB のみ |
+|data_sensitivity_information |nvarchar (4000) | **適用対象**:Azure SQL DB のみ |
   
 ## <a name="remarks"></a>コメント  
  場合、 *file_pattern*に渡される引数**fn_get_audit_file**参照パスまたはファイルが存在しない、または、ファイルは、監査ファイルがない場合、 **MSG_INVALID_AUDIT_FILE**エラー メッセージが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- - **SQL Server**: が必要です、 **CONTROL SERVER**権限。  
- - **Azure SQL DB**: が必要です、 **CONTROL DATABASE**権限。     
+ - **SQL Server**:**CONTROL SERVER** 権限が必要です。  
+ - **Azure SQL DB**:必要があります、 **CONTROL DATABASE**権限。     
     - サーバー管理者は、サーバー上のすべてのデータベースの監査ログにアクセスできます。
     - 以外のサーバー管理者は、現在のデータベースから監査ログをのみアクセスできます。
     - 上記の条件を満たしていない blob はスキップされます (スキップされた blob の一覧は、クエリの出力メッセージの表示は、)、関数は、アクセスが許可されている blob からのみログを返します。  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  この例では、`\\serverName\Audit\HIPPA_AUDIT.sqlaudit` という名前のファイルから読み取ります。  
+  この例では、`\\serverName\Audit\HIPAA_AUDIT.sqlaudit` という名前のファイルから読み取ります。  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

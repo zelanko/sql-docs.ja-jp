@@ -1,5 +1,5 @@
 ---
-title: 'タスク 6: Excel ソースをデータ フローに追加する |Microsoft Docs'
+title: タスク 6:Excel ソースをデータ フローに追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f51d2f6f48263e764d73eb9fcd8ee0dcd27b26da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb79a52e8ce910425de44b5cf475400daa3f40aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071762"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356540"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>タスク 6: Excel ソースをデータ フローに追加する
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>タスク 6:Excel ソースをデータ フローに追加する
   ここでは、Excel ソースをデータ フローに追加してソース Excel ファイルから仕入先データを読み取ります。 Excel ソースは、Microsoft Excel ブック内のワークシートまたは範囲からデータを抽出します。 参照してください[Excel ソース](../integration-services/data-flow/excel-source.md)詳細についてはトピック。  
   
 1.  ドラッグ アンド ドロップ**Excel ソース**から**その他のソース**で**SSIS ツールボックス**を**データ フロー**タブ。  
@@ -45,9 +45,9 @@ ms.locfileid: "48071762"
   
 9. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
-10. ドラッグ アンド ドロップ**DQS クレンジング**変換**その他の変換**上、 **SSIS ツールボックス**を**データ フロー**タブ**Excel ファイルから仕入先データを読み取る**します。 DQS クレンジング変換では、Data Quality Services (DQS) を使用し、ナレッジ ベースの承認済みのルールを適用することで、データを修正します。 この変換は、実行時に、DQS サーバー上に DQS クレンジング プロジェクトを作成します。 参照してください[DQS クレンジング変換](http://msdn.microsoft.com/library/ee677619.aspx)詳細についてはトピック。  
+10. ドラッグ アンド ドロップ**DQS クレンジング**変換**その他の変換**上、 **SSIS ツールボックス**を**データ フロー**タブ**Excel ファイルから仕入先データを読み取る**します。 DQS クレンジング変換では、Data Quality Services (DQS) を使用し、ナレッジ ベースの承認済みのルールを適用することで、データを修正します。 この変換は、実行時に、DQS サーバー上に DQS クレンジング プロジェクトを作成します。 参照してください[DQS クレンジング変換](https://msdn.microsoft.com/library/ee677619.aspx)詳細についてはトピック。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 7: DQS クレンジング変換をデータ フローに追加する](../integration-services/data-flow/data-flow.md)  
+ [タスク 7:追加の DQS クレンジング変換データ フローを](../integration-services/data-flow/data-flow.md)  
   
   

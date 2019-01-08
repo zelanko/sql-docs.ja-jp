@@ -1,5 +1,5 @@
 ---
-title: 'レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS) | Microsoft Docs'
+title: レポートをトラブルシューティングします。マップ レポート (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197414"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375344"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートをトラブルシューティングします。マップ レポート (レポート ビルダーおよび SSRS)
   レポートでマップの問題が発生しやすいのは、マップまたはマップ レイヤーをレポートに追加するときや、レポート内の既存のマップまたはマップ レイヤーをカスタマイズするとき、レポートのマップをプレビューするとき、またはマップを含んだレポートをパブリッシュするときです。 このトピックでは、このような問題のトラブルシューティングについて説明します。  
   
 > [!NOTE]  
@@ -173,7 +173,7 @@ ms.locfileid: "48197414"
 -   詳細については、「 [ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>カラー スケールの NaN という値について  
- `NaN` 非数の略です。 カラー スケールの値には数値が想定されています。 カラー スケールに関連付けられているルールの分布の設定と凡例のテキスト値をチェックしてください。 分布の範囲を独自に作成した場合は、最初の範囲に下限が、最後の範囲に上限が指定されていることを確認してください。  
+ `NaN` とは、非数 (Not a Number) を表します。 カラー スケールの値には数値が想定されています。 カラー スケールに関連付けられているルールの分布の設定と凡例のテキスト値をチェックしてください。 分布の範囲を独自に作成した場合は、最初の範囲に下限が、最後の範囲に上限が指定されていることを確認してください。  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>レポートを実行してもカラー スケールが表示されない  
  カラー スケールは、マップ レイヤーのレイヤー全体または埋め込みマップ要素に対し、多角形、線、またはポイントに対する色ルールが指定されている場合に、ユーザーに情報を表示するものです。 マップ要素に色ルールが指定されていない場合や、色ルールの指定に (カラー マップではなく) 凡例が使用されている場合、レンダリングされたレポートにカラー マップは表示されません。  
@@ -194,7 +194,7 @@ ms.locfileid: "48197414"
   
 -   マップ投影法が **[Mercator]** である必要があります。  
   
--   ローカル プレビューの場合は、インターネットにアクセスできる必要があります。 レポート サーバーから実行されるレポートの場合は、タイルの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「マップ サポートの計画」を参照してください。  
+-   ローカル プレビューの場合は、インターネットにアクセスできる必要があります。 レポート サーバーから実行されるレポートの場合は、タイルの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「マップ サポートの計画」を参照してください。  
   
  タイトル レイヤーの追加方法の詳細については、「[マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   

@@ -1,6 +1,6 @@
 ---
-title: T-SQL (CREATE EXTERNAL LIBRARY) を使用して、SQL Server Machine Learning Services での R パッケージをインストールする |Microsoft Docs
-description: SQL Server 2017 の Machine Learning Services (In-database) に新しい R パッケージを追加します。
+title: T-SQL (CREATE EXTERNAL LIBRARY) を使用して、SQL Server Machine Learning Services の R パッケージをインストールするには
+description: SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) するには、新しい R パッケージを追加します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/30/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 897bafaaf5ec32c417bb5d9625ce6cef22d6e783
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6e910f1c3b29522b11f1faa83db890d399bf3680
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699390"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645051"
 ---
-# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server-2017-machine-learning-services"></a>T-SQL (CREATE EXTERNAL LIBRARY) を使用して、SQL Server 2017 Machine Learning Services での R パッケージをインストールするには
+# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL (CREATE EXTERNAL LIBRARY) を使用して、SQL Server に R パッケージをインストールするには
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、機械学習が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。 選択できる複数の方法はあります。 サーバー管理者が R. に慣れていない T-SQL を使用して最適します。
@@ -48,7 +48,7 @@ T-SQL ステートメントを実行して`CREATE EXTERNAL LIBRARY`圧縮され�
 
 たとえば、次のステートメント名、パッケージ ソースとして、miniCRAN リポジトリを含む、 **randomForest**パッケージ、その依存関係とします。 
 
-```SQL
+```sql
 CREATE EXTERNAL LIBRARY randomForest
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
@@ -60,7 +60,7 @@ WITH (LANGUAGE = 'R');
 
 ライブラリが正常に作成すると場合、は、ストアド プロシージャ内で呼び出して、SQL Server でパッケージを実行できます。
     
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language =N'R',
 @script=N'library(randomForest)'

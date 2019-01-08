@@ -1,6 +1,6 @@
 ---
-title: SQL Server の学習のインターネット アクセスなしでコンポーネントを R と Python のインストール |Microsoft Docs
-description: オフラインまたは未接続 Machine Learning R と Python でセットアップ分離の SQL Server インスタンス。
+title: R 言語とインターネットにアクセスできない - SQL Server Machine Learning の Python コンポーネントをインストールします。
+description: オフラインまたは未接続 Machine Learning R と Python でセットアップ ネットワーク ファイアウォールの背後にある SQL Server インスタンスを分離します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150551"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596993"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server マシンがインターネットにアクセスできないコンピューターでの R と Python の学習のインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Microsoft Python サーバー    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.c
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 のオフライン インストール
 
-SQL Server 2016 データベース内分析は CAB が製品のパッケージと、オープン ソース R の Microsoft のディストリビューションのそれぞれファイル R 専用で、2 つだけです。 これらのリリースのいずれかをインストールすることによって開始: RTM、SP 1 では、SP 2。 適切な基本のインストールを行った後は、次の手順として累積的更新プログラムを適用できます。
+SQL Server 2016 データベース内分析は CAB が製品のパッケージと、オープン ソース R の Microsoft のディストリビューションのそれぞれファイル R 専用で、2 つだけです。 これらのリリースのいずれかをインストールして開始します。RTM、SP 1、SP 2。 適切な基本のインストールを行った後は、次の手順として累積的更新プログラムを適用できます。
 
 コンピューターでインターネット接続には、データベース内分析を SQL Server 2016 をインストールするセットアップで使用される CAB ファイルをダウンロードします。 
 
@@ -121,9 +121,22 @@ SQL Server 2016 RTM、SP 1、または SP 2 は、ターゲット コンピュ�
 
 6. セットアップを実行します。 ライセンス条項に同意し、[機能の選択] ページで、累積的更新プログラムの適用対象の機能を確認します。 Machine learning の機能を含む、現在のインスタンスのインストールされているすべての機能が表示されます。
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![機能ツリーから機能の選択](media/cumulative-update-feature-selection.png "機能一覧")
 
 5. R と Python のディストリビューションのライセンス条項を使用して、ウィザードの手順を続行します。 インストール中に、更新済みの CAB ファイルを含むフォルダーの場所の選択を求められます。
+
+## <a name="set-environment-variables"></a>環境変数な設定
+
+R の機能統合のみに設定する必要があります、 **MKL_CBWR**環境変数を[出力を一貫性のある](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)Intel 数値演算ライブラリ (MKL) 計算から。
+
+1. コントロール パネルで、次のようにクリックします**システムとセキュリティ** > **システム** > **システムの詳細設定** >   **。環境変数**します。
+
+2. 新しいユーザーまたはシステム変数を作成します。 
+
+  + セットを変数名を指定 `MKL_CBWR`
+  + 変数の値に設定します。 `AUTO`
+
+この手順では、サーバーを再起動する必要があります。 スクリプトの実行を有効にしようとする場合は、すべての構成作業が完了するまでは、再起動時に留保することができます。
 
 ## <a name="post-install-configuration"></a>インストール後の構成
 

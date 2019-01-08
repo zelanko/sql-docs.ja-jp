@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 047b936bf608be86407c93860078758d43ebbb2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792070"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591016"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@class =** ] **'***クラス***'**  
+ [  **@class =** ] **'**_クラス_**'**  
  追加するカテゴリのクラスを指定します。 *クラス*は**varchar (8)** でジョブの既定値は、これらの値のいずれかを指定できます。  
   
 |値|説明|  
@@ -52,7 +52,7 @@ sp_add_category
 |ALERT|警告カテゴリを追加します。|  
 |OPERATOR|オペレーター カテゴリを追加します。|  
   
- [ **@type =** ] **'***type***'**  
+ [  **@type =** ] **'**_型_**'**  
  追加するカテゴリの種類を指定します。 *型*は**varchar (12)** の既定値を持つ**ローカル**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
@@ -61,7 +61,7 @@ sp_add_category
 |マルチ サーバー|マルチサーバー ジョブ カテゴリ|  
 |なし|JOB 以外のクラスのカテゴリ**します。**|  
   
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **'**_名前_**'**  
  追加するカテゴリの名前を指定します。 名前は指定したクラス内で一意であることが必要です。 *名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

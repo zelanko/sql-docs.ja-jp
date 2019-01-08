@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergeconflictrows_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26bf2e89462c0096c9a6fd2a081cb72c68e9a32a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746580"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589166"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +42,16 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** します。 パブリケーションを指定した場合は、パブリケーションに関係するすべての競合が返されます。 たとえば場合、 **MSmerge_conflict_Customers**テーブルが競合する行を**WA**と**CA**パブリケーション、パブリケーション名を渡して**CA**に関連する競合の取得、 **CA**パブリケーション。  
   
- [  **@conflict_table=**] **'***conflict_table***'**  
- 競合テーブルの名前を指定します。 *conflict_table*は**sysname**、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以降のバージョンで競合テーブルの名前付けの形式名を使用して **msmerge_conflict _* パブリケーション *_* 記事 * * *、パブリッシュされた各テーブルを使用アーティクルです。  
+ [  **@conflict_table=**] **'**_conflict_table_**'**  
+ 競合テーブルの名前を指定します。 *conflict_table*は**sysname**、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以降のバージョンで競合テーブルの名前付け形式名の使用**MSmerge_conflict\__パブリケーション\_記事_** でパブリッシュされたアーティクルごとに 1 つのテーブル。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_パブリッシャー_**'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  パブリッシャー データベースの名前です。*publisher_db*は**sysname**、既定値は NULL です。  
   
  [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
@@ -64,7 +63,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|競合の元です。|  
-|**conflict_type**|**int**|競合のタイプを示すコード。<br /><br /> **1** = 更新の競合: 行レベルで競合が検出されました。<br /><br /> **2** = 列更新の競合: 列レベルで検出された競合します。<br /><br /> **3** = 更新プログラムの削除が優先される競合: 競合で削除が優先されます。<br /><br /> **4** = 更新 Wins の削除の競合: 競合を避けるに削除された rowguid がこのテーブルに記録されます。<br /><br /> **5** = 挿入のアップロードの失敗: サブスクライバーからの挿入がパブリッシャーで適用できませんでした。<br /><br /> **6** = 挿入のダウンロードに失敗: パブリッシャーからの挿入がサブスクライバーで適用できませんでした。<br /><br /> **7** = アップロードの削除に失敗: サブスクライバーでの削除がパブリッシャーにアップロードできませんでした。<br /><br /> **8** = 削除のダウンロードに失敗: パブリッシャーでの削除をサブスクライバーにダウンロードできませんでした。<br /><br /> **9** = アップロードの更新に失敗: サブスクライバーでの更新がパブリッシャーで適用できませんでした。<br /><br /> **10** = 更新のダウンロードに失敗: パブリッシャーでの更新をサブスクライバーに適用できませんでした。<br /><br /> **12** = 論理レコードの更新が優先削除: 削除された論理レコード競合を避けるがこのテーブルに記録されます。<br /><br /> **13** = 論理レコード競合挿入更新: 更新プログラムと競合して論理レコードを挿入します。<br /><br /> **14** = 論理レコードの削除が優先更新の競合: 競合を避ける論理レコードの更新がこのテーブルに記録されます。|  
+|**conflict_type**|**int**|競合のタイプを示すコード。<br /><br /> **1** = 更新の競合。行レベルで競合が検出されています。<br /><br /> **2** = 列更新の競合。列レベルで検出された競合します。<br /><br /> **3** = update 削除が優先される競合。削除が優先されます。<br /><br /> **4** = update Wins 削除の競合。競合を避けるに削除された rowguid が、このテーブルに記録されます。<br /><br /> **5** = 挿入のアップロードに失敗しました。パブリッシャーでサブスクライバーからの挿入を適用できませんでした。<br /><br /> **6** = 挿入のダウンロードに失敗しました。サブスクライバーでパブリッシャーからの挿入を適用できませんでした。<br /><br /> **7** = 削除のアップロードに失敗しました。サブスクライバーでの削除をパブリッシャーにアップロードされませんでした。<br /><br /> **8** = 削除のダウンロードに失敗しました。パブリッシャーでの削除がサブスクライバーにダウンロードできませんでした。<br /><br /> **9** = アップロードを更新できませんでした。サブスクライバーで更新プログラムをパブリッシャー側で適用されませんでした。<br /><br /> **10** = 更新のダウンロードに失敗しました。パブリッシャーでの更新をサブスクライバーに適用されませんでした。<br /><br /> **12** = 論理レコードの更新の Wins の削除。競合を避ける削除された論理レコードは、このテーブルに記録されます。<br /><br /> **13** = 論理レコード競合挿入の更新。更新プログラムを論理レコードの競合を挿入します。<br /><br /> **14** = 論理レコードの削除が優先される更新競合。競合を避ける更新された論理レコードは、このテーブルに記録されます。|  
 |**reason_code**|**int**|状況依存のエラー コードです。|  
 |**reason_text**|**varchar(720)**|状況依存のエラーの説明です。|  
 |**pubid**|**uniqueidentifier**|パブリケーションの識別子です。|  

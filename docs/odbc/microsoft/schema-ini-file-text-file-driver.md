@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169222"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590866"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini ファイル (テキスト ファイル ドライバー)
 テキストのドライバーを使用する場合、スキーマ情報ファイルを使用してテキスト ファイルの形式が決まります。 スキーマの情報ファイルは常に Schema.ini という名前し、常にテキスト データ ソースと同じディレクトリに保持されます。 スキーマの情報ファイルは、ファイル、列名とデータ型情報、およびその他のいくつかのデータの特性の一般的な形式に関する情報を IISAM を提供します。 Schema.ini ファイルは、固定長データにアクセスするために必要では常にします。 テキスト、テーブルには、DateTime、通貨、または 10 進数データ、またはいつでも、テーブル内のデータの処理を制御することが含まれている場合、Schema.ini ファイルを使用する必要があります。  
@@ -95,7 +95,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>コメント  
- 次の表の各部分の説明、**Col * * * n*エントリ。  
+ 次の表の各部分の説明、 **Col**_n_エントリ。  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
@@ -105,7 +105,7 @@ n=ColumnNametype [#]
 |*#*|列の幅を指定する整数値 (必要な場合**幅**を指定)。|  
   
 ## <a name="selecting-a-character-set"></a>文字セットの選択  
- 2 つの文字セットから選択できます: ANSI、OEM です。 **CharacterSet** Schema.ini の設定は、Windows レジストリ、ファイルごとの設定をオーバーライドします。 次の例では、ANSI に設定する文字を設定する Schema.ini エントリを示します。  
+ 2 つの文字セットから選択できます。ANSI、OEM です。 **CharacterSet** Schema.ini の設定は、Windows レジストリ、ファイルごとの設定をオーバーライドします。 次の例では、ANSI に設定する文字を設定する Schema.ini エントリを示します。  
   
 ```  
 CharacterSet=ANSI  
@@ -119,11 +119,11 @@ CharacterSet=ANSI
 |**DateTimeFormat**|日付と時刻を示す書式指定文字列に設定できます。 インポート/エクスポート内のすべての日付/時刻フィールドが同じ形式で処理される場合は、このエントリを指定する必要があります。 午前を除くすべての Microsoft Jet 形式 および p. m. サポートされます。 書式指定文字列がない場合は、Windows コントロール パネルの短い日付画像と時間のオプションが使用されます。|  
 |**DecimalSymbol**|数値の小数部からの整数を分離するために使用する任意の 1 文字に設定できます。|  
 |**NumberDigits**|数値の小数部分の 10 進数字の数を示します。|  
-|**NumberLeadingZeros**|1 より小さいと – 1 以上の 10 進数の値が先頭に 0 を含めるかどうかを指定します。この値は False (先行ゼロを付けない)、または True です。|  
+|**NumberLeadingZeros**|1 より小さい、-1 以上の 10 進数の値が先頭に 0 を含めるかどうかを指定します。この値は False (先行ゼロを付けない)、または True です。|  
 |**CurrencySymbol**|通貨値のテキスト ファイルで使用できる通貨記号を示します。 例には、Dm、ドル記号 ($) が含まれます。|  
 |**CurrencyPosFormat**|次の値のいずれかに設定できます。<br /><br /> 、($1) を分離せずに通貨記号のプレフィックス<br />、分離せずに通貨記号のサフィックス (1$)<br />の 1 文字分 ($ 1) 通貨記号のプレフィックス<br />通貨記号のサフィックスが 1 文字分 (1 $)|  
 |**CurrencyDigits**|通貨値の小数部分を使用する桁数を指定します。|  
-|**CurrencyNegFormat**|次の値のいずれかです。<br /><br /> -   ($1)<br />-   –$1<br />-   $–1<br />-   $1–<br />-   (1$)<br />-   –1$<br />-   1–$<br />-   1$–<br />-   –1 $<br />-   –$ 1<br />-   1 $–<br />-   $ 1–<br />-   $ –1<br />-   1– $<br />-   ($ 1)<br />-   (1 $)<br /><br /> この例には、ドル記号が表示されますが、適切な置換する必要があります**CurrencySymbol**実際のプログラム内の値。|  
+|**CurrencyNegFormat**|次のいずれかの値になります。<br /><br /> -   ($1)<br />--$1<br />-$1<br />-1-<br />-   (1$)<br />--1$<br />-1$<br />-$ 1-<br />--1 $<br />--$ 1<br />-$ 1-<br />-1-<br />-$-1<br />-1 $<br />-   ($ 1)<br />-   (1 $)<br /><br /> この例には、ドル記号が表示されますが、適切な置換する必要があります**CurrencySymbol**実際のプログラム内の値。|  
 |**CurrencyThousandSymbol**|数千ものが、テキスト ファイル内の通貨値を区切るために使用できる 1 文字の記号を示します。|  
 |**CurrencyDecimalSymbol**|通貨値の小数部から全体を分離するために使用する任意の 1 文字に設定できます。|  
   

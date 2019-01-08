@@ -11,12 +11,12 @@ ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148002"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372974"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>コール センター モデルの予測の作成 (中級者向けデータ マイニング チュートリアル)
   シフト、オペレーターの数、電話、およびサービス グレードの間の相互作用について学習した後は、ビジネス分析および計画に使用できる予測クエリを作成します。 最初に、調査モデルに対していくつかの予測を作成していくつかの仮定をテストします。 次に、ロジスティック回帰モデルを使用して一括予測を作成します。  
@@ -184,9 +184,9 @@ ms.locfileid: "48148002"
 ## <a name="remarks"></a>コメント  
  データ マイニング アドインの Excel 2007 では、レベル 2 オペレーターの人数などの複雑な質問に回答しやすくロジスティック回帰ウィザードは、特定のシフトのターゲット レベルのサービス グレードを向上させるために必要なを提供します。 データ マイニング アドインは、無料でダウンロード、ニューラル ネットワークまたはロジスティック回帰アルゴリズムに基づくウィザードが含まれています。 詳細については、次のリンクを参照してください。  
   
--   [SQL Server 2005 データ マイニング アドイン Office 2007 用](http://www.microsoft.com/sql/technologies/dm/addins.mspx): ゴール シークおよび What If シナリオ分析  
+-   [SQL Server 2005 データ マイニング アドイン Office 2007 用](https://www.microsoft.com/sql/technologies/dm/addins.mspx):ゴール シークおよび What If シナリオ分析  
   
--   [SQL Server 2008 データ マイニング アドイン Office 2007 用](http://go.microsoft.com/fwlink/?LinkID=117790): ゴール シーク シナリオ分析、What If シナリオ分析、および予測計算  
+-   [SQL Server 2008 データ マイニング アドイン Office 2007 用](https://go.microsoft.com/fwlink/?LinkID=117790):ゴール シーク シナリオ分析、What If シナリオ分析、および予測計算  
   
 ## <a name="conclusion"></a>まとめ  
  ここでは、Microsoft ニューラル ネットワーク アルゴリズムおよび Microsoft ロジスティック回帰アルゴリズムに基づいたマイニング モデルを作成、カスタマイズ、および解釈する方法について説明しました。 これらの種類のモデルは非常に高度であり、あらゆる分析が可能であるため、複雑であり、習得するのが困難です。  
@@ -196,7 +196,7 @@ ms.locfileid: "48148002"
 ## <a name="see-also"></a>参照  
  [ロジスティック回帰モデルのクエリ例](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Microsoft ロジスティック回帰アルゴリズム](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Microsoft ニューラル ネットワーク アルゴリズム](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [ニューラル ネットワーク モデルのクエリ例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

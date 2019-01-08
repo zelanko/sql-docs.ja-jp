@@ -1,6 +1,6 @@
 ---
-title: 計算テーブルを作成 |Microsoft ドキュメント
-ms.date: 05/07/2018
+title: Analysis Services 表形式モデルでの計算テーブルの作成 |Microsoft Docs
+ms.date: 12/19/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,27 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f920d7ef7ae8a8fb5016e4bb4833b3637b325f8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 199096efcdf9212e19e1055f1276079eddfb1a75
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041996"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626261"
 ---
 # <a name="create-a-calculated-table"></a>計算テーブルを作成します。 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   *計算テーブル* は、DAX クエリまたは式に基づいて計算されたオブジェクトで、同じモデル内の他のテーブルの全部または一部から派生しています。  
   
- 計算テーブルで解決できる一般的な設計上の問題では、クライアント アプリケーションでクエリ構造として公開できるように、特定のコンテキストで多様ディメンションが表示されています。  多様ディメンションは、複数のコンテキストで表示される単なる 1 つのテーブルです。従来の例としては、外部キー関係に応じて OrderDate、ShipDate、または DueDate としてマニフェストされる Date テーブルなどがあります。 明示的に ShipDate 用の計算テーブルを作成すると、他のテーブルのように完全に操作可能なクエリに使用できるスタンドアロン テーブルが作成されます。  
+ 計算テーブルで解決できる一般的な設計上の問題では、クライアント アプリケーションでクエリ構造として公開できるように、特定のコンテキストで多様ディメンションが表示されています。  多様ディメンションは、複数のコンテキストで表示される単なる 1 つのテーブルです。従来の例としては、外部キー関係に応じて OrderDate、ShipDate、または DueDate としてマニフェストされる Date テーブルなどがあります。 明示的に ShipDate 用の計算テーブルを作成すると、他のテーブルのように完全に操作可能なクエリに使用できるスタンドアロン テーブルが作成されます。 別の用途には、フィルター選択された行セット、サブセット、またはその他の既存のテーブルの列のスーパー セットの構成が含まれます。 これにより、元のテーブルを変更せずに保持しながら、特定のシナリオをサポートするテーブルのバリエーションを作成できます。  
   
- 計算テーブルの第 2 の用途には、他の既存テーブルの列からフィルターで選択した行セット、他の既存テーブルの列のサブセットまたはスーパーセットを構成することが含まれます。 これにより、元のテーブルを変更せずに保持しながら、特定のシナリオをサポートするテーブルのバリエーションを作成できます。  
-  
- 計算テーブルを最大限に活用するには、少なくとも DAX についてある程度理解している必要があります。 テーブルに式を使用するときは、計算テーブルには DAXSource の 1 つのパーティションが含まれること、および式は DAX 式であることを理解していると役に立ちます。  
-式によって返される列ごとに 1 つの CalculatedTableColumn があります。SourceColumn は返される列の名前です (非計算テーブルの DataColumns に似ています)。  
+ 計算テーブルを最大限に活用するには、少なくとも DAX についてある程度理解している必要があります。 テーブルの式を操作するときは、計算テーブルに、式は、DAX 式を DAXSource の 1 つのパーティションが含まれているかを把握する役立つ可能性があります。  
+式によって返される列ごとに 1 つの CalculatedTableColumn があります。SourceColumn は返される列の名前です (非計算テーブルの DataColumns に似ています)。 
+
+少なくとも 1 つのテーブルには、計算テーブルを作成する前に存在する必要があります。 スタンドアロン計算テーブルのオブジェクトとして計算テーブルを作成する場合は、(csv、xls、xml) ファイルのデータ ソースからインポートすることでテーブルを作成することができます。 1 つの列と 1 つの値をファイルからインポートすることができます。 そのテーブルをし、非表示にすることができます。 
   
 ## <a name="how-to-create-a-calculated-table"></a>計算テーブルを作成する方法  
   
-1.  最初に、表形式モデルが 1200 以上の互換性レベルを確認します。 SSDT のモデルで **[互換性レベル]** プロパティを確認できます。  
+1.  最初に、表形式モデルが互換性レベル 1200 以上のことを確認します。 SSDT のモデルで **[互換性レベル]** プロパティを確認できます。  
   
 2.  データ ビューに切り替えます。 ダイアグラム ビューでは計算テーブルを作成できません。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34041996"
   
 5.  テーブルの名前を設定します。  
   
-6.  モデルの他のテーブルへのリレーションシップを作成します。 参照してください[、リレーションシップの間で 2 つのテーブルを作成する](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)このステップのヘルプを必要がある場合。  
+6.  モデルの他のテーブルへのリレーションシップを作成します。 参照してください[2 テーブル間のリレーションシップを作成](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)この手順で必要な場合。  
   
 7.  モデル内の計算や式でテーブルを参照するか、またはアドホック データ探索用に **[Excel で分析]** で使用します。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "34041996"
 =CROSSJOIN(DimProductCategory, DimCurrency)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Data Analysis Expressions &#40;DAX&#41; Analysis services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
- [テーブル モデルで DAX を理解します。](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
+ [Analysis Services の Data Analysis Expressions (DAX)](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
+ [表形式モデルで DAX を理解します。](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

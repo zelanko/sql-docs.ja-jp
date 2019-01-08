@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd7f01df2c381ae4ee13b62e196efbc33809e23d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803770"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591496"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [ **@schedule_id=** ] *schedule_id*  
  削除するスケジュールの識別番号を指定します。 *schedule_id*は**int**、既定値は NULL です。  
   
-> **注:** か*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
+> **注:** いずれか*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'**_schedule_name_**'**  
  削除するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値は NULL です。  
   
-> **注:** か*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
+> **注:** いずれか*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
   
  [ **@force_delete** =] *force_delete*  
  スケジュールがジョブに関連付けられている場合にプロシージャを失敗させるかどうかを指定します。 *Force_delete*は bit で、既定値は、 **0**します。 ときに*force_delete*は**0**、ストアド プロシージャ、スケジュールがジョブに関連付けられている場合は失敗します。 ときに*force_delete*は**1**スケジュールをジョブにアタッチするかどうかに関係なく、スケジュールを削除します。  
@@ -81,7 +81,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-deleting-a-schedule"></a>A. スケジュールを削除する  
- 次の例は、スケジュールを削除`NightlyJobs`します。 スケジュールがジョブに関連付けられている場合、この例ではスケジュールは削除されません。  
+ 次の例では、スケジュール `NightlyJobs` を削除します。 スケジュールがジョブに関連付けられている場合、この例ではスケジュールは削除されません。  
   
 ```  
 USE msdb ;  

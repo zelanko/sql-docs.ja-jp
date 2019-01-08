@@ -14,12 +14,12 @@ ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f0963c1f703d471827f60514181e976051abb8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125803"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368184"
 ---
 # <a name="performance-of-clr-integration"></a>CLR 統合のパフォーマンス
   このトピックではいくつかのパフォーマンスを強化する設計上の選択肢の[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]との統合、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 共通言語ランタイム (CLR)。  
@@ -35,7 +35,7 @@ ms.locfileid: "48125803"
  コンパイル処理の結果、実行時にネイティブ コードから呼び出すことのできる関数ポインターが生成されます。 ユーザー定義スカラー値関数の場合、関数が行ごとに呼び出されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と CLR の切り替えコストを最小限にするために、マネージド呼び出しを行うステートメントには対象になるアプリケーション ドメインを識別する起動処理があります。 この識別処理により、行ごとの切り替えコストを抑えます。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
- 次に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合固有のパフォーマンスに関する考慮事項を要約します。 詳細な情報が記載されて"[SQL Server 2005 の CLR 統合を使用して](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN Web サイト。 マネージ コードのパフォーマンスに関する一般的な情報が見つかりません"[.NET アプリケーションのパフォーマンスとスケーラビリティ](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN Web サイト。  
+ 次に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合固有のパフォーマンスに関する考慮事項を要約します。 詳細な情報が記載されて"[SQL Server 2005 の CLR 統合を使用して](https://go.microsoft.com/fwlink/?LinkId=50332)"MSDN Web サイト。 マネージ コードのパフォーマンスに関する一般的な情報が見つかりません"[.NET アプリケーションのパフォーマンスとスケーラビリティ](https://go.microsoft.com/fwlink/?LinkId=50333)"MSDN Web サイト。  
   
 ### <a name="user-defined-functions"></a>ユーザー定義関数  
  CLR 関数は、[!INCLUDE[tsql](../../../includes/tsql-md.md)] のユーザー定義関数に比べて呼び出し手順が速いという利点があります。 また、マネージド コードはプロシージャ コード、計算、および文字列操作のパフォーマンスが [!INCLUDE[tsql](../../../includes/tsql-md.md)] に比べて決定的に優れています。 計算中心の CLR 関数およびデータ アクセスを行わない CLR 関数は、マネージド コードで記述する方が適切です。 ただし、データ アクセスは [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数の方が CLR 統合に比べて効率的です。  

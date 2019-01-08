@@ -11,18 +11,18 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018677"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373224"
 ---
 # <a name="spatial-indexes-overview"></a>空間インデックスの概要
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、空間データと空間インデックスがサポートされています。 *空間インデックス* は拡張インデックスの一種で、空間列にインデックスを設定することができます。 空間列とは、空間データ型 (`geometry` や `geography` など) のデータを含むテーブル列です。  
   
 > [!IMPORTANT]  
->  空間インデックスに影響を及ぼす機能を含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー『 [New Spatial Features in SQL Server 2012 (SQL Server 2012 の新しい空間機能)](http://go.microsoft.com/fwlink/?LinkId=226407)』をダウンロードしてご覧ください。  
+>  空間インデックスに影響を及ぼす機能を含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー『 [New Spatial Features in SQL Server 2012 (SQL Server 2012 の新しい空間機能)](https://go.microsoft.com/fwlink/?LinkId=226407)』をダウンロードしてご覧ください。  
   
 ##  <a name="about"></a> 空間インデックスについて  
   
@@ -106,7 +106,7 @@ ms.locfileid: "51018677"
 #### <a name="deepest-cell-rule"></a>最下位のセルのルール  
  最下位のセルのルールでは、下位レベルのセルはすべてその上のセルに属しているという事実が利用されています。レベル 4 のセルはレベル 3 のセルに、レベル 3 のセルはレベル 2 のセルに、レベル 2 のセルはレベル 1 のセルにそれぞれ属しています。 たとえば、セル 1.1.1.1 に属しているオブジェクトは、セル 1.1.1、セル 1.1、およびセル 1 にも属しています。 こうしたセルの階層関係の情報はクエリ プロセッサに組み込まれているため、 インデックスに記録するのは最下位レベルのセルだけで済みます。これにより、インデックスに格納する情報を最小限に抑えられます。  
   
- 次の図では、比較的小さな菱形の多角形がテセレーションされています。 このインデックスで使用されているオブジェクトごとのセル数の制限は既定の 16 で、この小さなオブジェクトではその制限に達しないため、 テセレーションはレベル 4 まで続けられます。 この多角形は、4、4.4、および 4.4.10 と 4.4.14 というレベル 1 ～ 3 のセルにも存在していますが、 最下位のセルのルールが使用されるため、テセレーションでカウントされるのはレベル 4 の 12 個のセル (4.4.10.13 ～ 15 と 4.4.14.1 ～ 3、4.4.14.5 ～ 7、および 4.4.14.9 ～ 11) だけです。  
+ 次の図では、比較的小さな菱形の多角形がテセレーションされています。 このインデックスで使用されているオブジェクトごとのセル数の制限は既定の 16 で、この小さなオブジェクトではその制限に達しないため、 テセレーションはレベル 4 まで続けられます。 多角形は、レベル 3 のセルを次のレベル 1 に存在します。4、4.4、および 4.4.10 と 4.4.14 にも存在していますが、 テセレーションは、最下位のセルのルールを使用して、12 個のレベル 4 のセルのみをカウントします。(4.4.10.13 ～ 15 と 4.4.14.1 ～ 3、4.4.14.5 ～ 7、および 4.4.14.9 ～ 11) のみです。  
   
  ![最下位のセルの最適化](../../database-engine/media/spndx-opt-deepest-cell.gif "最下位のセルの最適化")  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51018677"
 >  空間インデックスの **tessellation_scheme** 設定は、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューで確認できます。  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>ジオメトリ グリッド テセレーション スキーム  
- GEOMETRY_AUTO_GRID テセレーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以降の `geometry` データ型用の既定のテセレーション スキームです。  GEOMETRY_GRID テセレーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の geometry データ型で使用できる唯一のテセレーション スキームです。 ここでは、空間インデックスの操作に関連するジオメトリ グリッド テセレーションの特徴 (サポートされるメソッドと境界ボックス) について説明します。  
+ GEOMETRY_AUTO_GRID テセレーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以降の `geometry` データ型用の既定のテセレーション スキームです。  GEOMETRY_GRID テセレーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の geometry データ型で使用できる唯一のテセレーション スキームです。 ここでは、空間インデックスの操作に関連するジオメトリ グリッド テセレーションの特徴 (サポートされるメソッドと境界ボックス) について説明します。  
   
 > [!NOTE]  
 >  このテセレーション スキームを明示的に指定するには、[CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 句を使用します。  
@@ -179,7 +179,7 @@ ms.locfileid: "51018677"
 ##  <a name="methods"></a> 空間インデックスでサポートされるメソッド  
   
 ###  <a name="geometry"></a> 空間インデックスでサポートされるジオメトリ メソッド  
- 空間インデックスは、特定の条件下で、STContains()、STDistance()、STEquals()、STIntersects()、STOverlaps()、STTouches()、STWithin() というセット指向のジオメトリ メソッドをサポートします。 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句または JOIN ON 句内で、次の一般的な述語の形式で使用する必要があります。  
+ 空間インデックスでは、特定の条件下で、次のセット指向のジオメトリ メソッドをサポートします。STContains()、STDistance()、STEquals()、STIntersects()、STOverlaps()、STTouches()、および STWithin() します。 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句または JOIN ON 句内で、次の一般的な述語の形式で使用する必要があります。  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51018677"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> 空間インデックスでサポートされる地理メソッド  
- 空間インデックスは、特定の条件下で、STIntersects()、STEquals()、STDistance() というセット指向の地理メソッドをサポートします。 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句内で、次の一般的な述語の形式で使用する必要があります。  
+ 特定の条件下では、空間インデックスは、次のセット指向の地理メソッドをサポートします。Stintersects()、Stequals()、STDistance(). 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句内で、次の一般的な述語の形式で使用する必要があります。  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

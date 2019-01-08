@@ -11,12 +11,12 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117492"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358154"
 ---
 # <a name="report-builder-ssrs"></a>レポート ビルダー (SSRS)
   レポート ビルダーは、レポート作成環境で作業を好むビジネス ユーザー向け、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 環境。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。  
@@ -42,11 +42,11 @@ ms.locfileid: "48117492"
   
 -   レポートおよび関連アイテムを SharePoint ライブラリ、レポート サーバー、またはローカル コンピューターに保存します。  
   
- レポート ビルダーとレポート デザイナーは、多くの機能を共有します。 レポート ビルダーの詳細については、次を参照してください。[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com します。  
+ レポート ビルダーとレポート デザイナーは、多くの機能を共有します。 レポート ビルダーの詳細については、次を参照してください。[レポート ビルダーに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com します。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダーへのアクセスを構成します。](../report-server/configure-report-builder-access.md)   
+ [レポート ビルダーへのアクセスの構成](../report-server/configure-report-builder-access.md)   
  [Reporting Services ツール](reporting-services-tools.md)   
- [レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+ [レポート デザイナーを使用してレポートをデザインする (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

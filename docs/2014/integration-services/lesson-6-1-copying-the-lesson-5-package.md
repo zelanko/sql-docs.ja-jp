@@ -1,24 +1,23 @@
 ---
-title: '手順 1: レッスン 5 のパッケージのコピー | Microsoft Docs'
+title: 手順 1:レッスン 5 のパッケージのコピー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71d12e661036d2ccd227429903c19c273c3c9268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3175da6c4f53bd8a829a54180fd6739d2a3e051
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111474"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357851"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>手順 1: レッスン 5 のパッケージのコピー
+# <a name="step-1-copying-the-lesson-5-package"></a>手順 1:レッスン 5 のパッケージのコピー
   ここでは、レッスン 5 で作成した Lesson 5.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 5 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 6 の実習では、このパッケージの新しいコピーを使用します。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>レッスン 5 のパッケージをコピーするには  
@@ -53,7 +52,7 @@ ms.locfileid: "48111474"
   
      このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   
-    1.  「[Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   
@@ -64,6 +63,6 @@ ms.locfileid: "48111474"
      レッスン 5 パッケージをコピーした後で、ソリューション内に前のレッスンで使用したパッケージが現在存在している場合は、レッスン 1 ～ 5 の各パッケージを右クリックし、[プロジェクトから除外] をクリックします。 作業完了後は、ソリューション内にの Lesson 6.dtsx のみが存在しています。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 2: プロジェクトをプロジェクト配置モデルに変換する](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [手順 2:プロジェクトをプロジェクト配置モデルに変換します。](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning サービスで新しい R パッケージをインストールする |Microsoft Docs
-description: SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) に新しい R パッケージを追加します。
+title: SQL Server Machine Learning Services の R パッケージ マネージャーを使用して、
+description: SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) に新しい R パッケージを追加するのにには、install.packages などの標準の R コマンドを使用します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864350"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432885"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>SQL Server に R パッケージをインストールするのに R パッケージ マネージャーを使用します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47864350"
 
 1. RGui.exe を右クリックして**管理者として実行**します。 必要なアクセス許可がない、データベース管理者に問い合わせてくださいし、必要なパッケージの一覧を提供します。
 
-1. コマンドラインから、パッケージ名がわかっている場合を入力できます:`install.packages("the_package-name")`二重引用符は、パッケージ名に必要です。
+1. コマンドラインから、パッケージ名がわかっている場合を入力できます。`install.packages("the_package-name")` 二重引用符は、パッケージ名に必要な。
 
 1. ミラー サイトを求められたら、その地域の便利な任意のサイトを選択します。
 

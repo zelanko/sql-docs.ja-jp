@@ -1,6 +1,6 @@
 ---
-title: SQL Server コンピューターの Windows で Learning サービス (In-database) のインストール |Microsoft Docs
-description: SQL Server または SQL Server での Python での R は、Windows 上の SQL Server 2017 Machine Learning Services をインストールするときに使用できます。
+title: インストール SQL Server Machine Learning サービス (In-database) Windows - SQL Server で機械学習
+description: SQL Server または Windows の SQL Server 2017 Machine Learning Services の SQL Server インストールの手順での Python での R です。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878095"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645351"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>SQL Server Machine Learning では、Windows サービスをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 以降、R と Python のサポートのデータベース内分析は、SQL Server Machine Learning Services の後継で提供されます[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 で導入されました。 関数ライブラリは、R と Python で使用可能なし、データベース エンジンのインスタンス上の外部スクリプトとして実行します。 
+SQL Server 2017 以降、R と Python のサポートで、データベース内分析が提供されます**SQL Server Machine Learning Services**、後継[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 で導入されました。 関数ライブラリは、R と Python で使用可能なし、データベース エンジンのインスタンス上の外部スクリプトとして実行します。 
 
 この記事を実行して、machine learning コンポーネントをインストールする方法を説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ ウィザード、および次の画面に表示されます。
 
@@ -54,7 +54,7 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
   
 2. **インストール**] タブで [ **SQL Server の新規スタンドアロン インストールまたは既存のインストールに機能の追加**します。
 
-   ![Machine Learning Services データベースをインストールします。](media/2017setup-installation-page-mlsvcs.PNG)
+   ![SQL Server の新規スタンドアロン インストール](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. **[機能の選択]** ページで、次のオプションを選択します。
   
@@ -101,6 +101,19 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
 
 7. セットアップが完了したら、コンピューターを再起動するように指示される場合ようになりました。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
 
+## <a name="set-environment-variables"></a>環境変数な設定
+
+R の機能統合のみに設定する必要があります、 **MKL_CBWR**環境変数を[出力を一貫性のある](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)Intel 数値演算ライブラリ (MKL) 計算から。
+
+1. コントロール パネルで、次のようにクリックします**システムとセキュリティ** > **システム** > **システムの詳細設定** >   **。環境変数**します。
+
+2. 新しいユーザーまたはシステム変数を作成します。 
+
+  + セットを変数名を指定 `MKL_CBWR`
+  + 変数の値に設定します。 `AUTO`
+
+この手順では、サーバーを再起動する必要があります。 スクリプトの実行を有効にしようとする場合は、すべての構成作業が完了するまでは、再起動時に留保することができます。
+
 <a name="bkmk_enableFeature"></a>
 
 ## <a name="enable-script-execution"></a>スクリプトの実行を有効にします。
@@ -108,13 +121,13 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 
 
     > [!TIP]
-    > ダウンロードして、このページから、適切なバージョンをインストールすることができます:[ダウンロード SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)します。
+    > ダウンロードして、このページから、適切なバージョンをインストールすることができます。[SQL Server Management Studio (SSMS) をダウンロードしてください](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
     > 
     > プレビュー リリースを試すこともできます[Azure Data Studio](../../azure-data-studio/what-is.md)、管理タスクと SQL Server に対してクエリをサポートします。
   
 2. Machine Learning サービスがインストールされているインスタンスに接続し、をクリックして**新しいクエリ**クエリ ウィンドウを開いて、次のコマンドを実行します。
 
-   ```SQL
+   ```sql
    sp_configure
    ```
 
@@ -122,7 +135,7 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
     
 3.  外部のスクリプト機能を有効にするには、次のステートメントを実行します。
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -145,7 +158,7 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
 
 1. SQL Server Management studio で新しいクエリ ウィンドウを開き、次のコマンドを実行します。
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -159,7 +172,7 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
     
     + R 用
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -171,7 +184,7 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
 
     + Python 用
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'Python',
     @script=N'
     OutputDataSet = InputDataSet;
@@ -205,15 +218,15 @@ SQL Server 2017 以降、R と Python のサポートのデータベース内分
 
 切断されたサーバーは、追加の手順が必要です。 詳細については、次を参照してください。[インターネット アクセスなしでコンピューターにインストール > の累積更新プログラムを適用](sql-ml-component-install-without-internet-access.md#apply-cu)します。
 
-1. 既にインストールされているベースライン インスタンスを開始: SQL Server 2017 の最初のリリース
+1. 既にインストールされているベースライン インスタンスで開始します。SQL Server 2017 の最初のリリース
 
-2. 累積更新プログラムの一覧に: [SQL Server 2017 の更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+2. 累積更新プログラムの一覧を参照してください。[SQL Server 2017 更新プログラム](https://sqlserverupdates.com/sql-server-2017-updates/)
 
 3. 最新の累積的な更新プログラムを選択します。 実行可能ファイルがダウンロードされ、自動的に抽出します。
 
 4. セットアップを実行します。 ライセンス条項に同意し、[機能の選択] ページで、累積的更新プログラムの適用対象の機能を確認します。 Machine learning の機能を含む、現在のインスタンスのインストールされているすべての機能が表示されます。 セットアップでは、すべての機能を更新するために必要な CAB ファイルをダウンロードします。
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![インストールされている機能の概要](media/cumulative-update-feature-selection.png)
 
 5. R と Python のディストリビューションのライセンス条項を使用して、ウィザードの手順を続行します。 
 
@@ -275,12 +288,12 @@ SQL Server で使用するパッケージは、インスタンスによって使
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 
-+ [チュートリアル: T-SQL で R を実行します。](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [R の開発者向けチュートリアル: データベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル:T-SQL での R を実行します。](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [チュートリアル:R の開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python の開発者は、これらのチュートリアルに従って、SQL Server で Python を使用する方法を学ぶことができます。
 
-+ [チュートリアル: T-SQL での Python を実行します。](../tutorials/run-python-using-t-sql.md)
-+ [Python 開発者向けチュートリアル: データベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [チュートリアル:T-SQL での Python を実行します。](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル:Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 実際のシナリオに基づく機械学習の例を表示するを参照してください。 [Machine learning のチュートリアル](../tutorials/machine-learning-services-tutorials.md)します。

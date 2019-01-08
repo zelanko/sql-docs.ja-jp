@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
@@ -17,12 +16,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38586615ce582ed4534bf23612bfca64b53af461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc99090255eb0667c09f180be0b52d570b6cb682
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224412"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371324"
 ---
 # <a name="script-task"></a>スクリプト タスク
   スクリプト タスクでは、組み込みのタスクで利用できない関数を実行するコード、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されている変換を実行するコードが用意されています。 また、スクリプト タスクを使用すると、複数のタスクおよび変換を使用しなくても、関数を 1 つのスクリプトに結合できます。 スクリプト タスクは、データ行ごとに 1 回ではなく、1 つのパッケージ内で 1 回 (または列挙されたオブジェクトごとに 1 回) 行う作業に使用します。  
@@ -69,13 +68,13 @@ ms.locfileid: "48224412"
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|スクリプト内でのログ記録の実装結果を報告します。 タスクが呼び出しごとにログ エントリを書き込み、`Log`のメソッド、`Dts`オブジェクト。 タスクは、これらのエントリをコードの実行時に書き込みます。 詳細については、「 [スクリプト タスクでのログ記録](../extending-packages-scripting/task/logging-in-the-script-task.md)」を参照してください。|  
+|`ScriptTaskLogEntry`|スクリプト内でのログ記録の実装結果を報告します。 タスクは、`Log` オブジェクトの `Dts` メソッドを呼び出すたびにログ エントリを書き込みます。 タスクは、これらのエントリをコードの実行時に書き込みます。 詳細については、「 [スクリプト タスクでのログ記録](../extending-packages-scripting/task/logging-in-the-script-task.md)」を参照してください。|  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [スクリプト タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[スクリプト タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [スクリプト タスク エディター &#40;[スクリプト] ページ&#41;](../script-task-editor-script-page.md)  
+-   [[スクリプト タスク エディター] &#40;[スクリプト] ページ&#41;](../script-task-editor-script-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -90,6 +89,6 @@ ms.locfileid: "48224412"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](http://go.microsoft.com/fwlink/?LinkId=237625)」  
+-   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](https://go.microsoft.com/fwlink/?LinkId=237625)」  
   
   

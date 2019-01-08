@@ -11,12 +11,12 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8199d7fc40da29c9fc0657ddcc242252eeace9c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a042f9f28b9be59f3f72773ae745308fe160853d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057504"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369434"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>詳細レポート (レポート ビルダーおよび SSRS)
   詳細レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 たとえば、次の図では、売り上げ要約レポートに販売注文と合計の一覧が含まれています。 この要約一覧で任意の注文番号をクリックすると、この注文に関する詳細が含まれた別のレポートが開きます。  
@@ -28,7 +28,7 @@ ms.locfileid: "48057504"
 > [!NOTE]  
 >  レポート ビルダーで作業しているときに、メイン レポートのドリルスルー リンクをクリックしたときに開く詳細レポートを表示するには、レポート サーバーに接続している必要があります。  
   
- 今すぐ詳細レポートを表示するには、「[チュートリアル: 詳細レポートとメイン レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)」を参照してください。 詳細レポートは、2 つのビジネス インテリジェンス ソリューションでも取り上げて[BI レポート: レポートとサブスクリプションのシナリオ](http://technet.microsoft.com/bi/ff769487.aspx)と[企業ダッシュ ボード: 販売ソリューション](http://technet.microsoft.com/bi/ff643005.aspx)  
+ 詳細レポートをすばやく開始するのを参照してください。[チュートリアル。詳細レポートとメイン レポートを作成する&#40;レポート ビルダー&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)します。 詳細レポートは、2 つのビジネス インテリジェンス ソリューションでも取り上げて[BI レポートします。レポートとサブスクリプションのシナリオ](https://technet.microsoft.com/bi/ff769487.aspx)と[企業ダッシュ ボード。売り上げソリューション](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -52,6 +52,6 @@ ms.locfileid: "48057504"
  ドリルスルー リンクを含むレポートをパブリッシュした後に表示するには、要約レポートと同じレポート サーバー上に詳細レポートを配置する必要があります。 どの場合でも、ユーザーは詳細レポートを表示する権限を持つ必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域&#40;レポート ビルダーおよび SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

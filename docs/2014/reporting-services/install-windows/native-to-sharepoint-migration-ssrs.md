@@ -11,12 +11,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e5a00f42527f081c2240e4f427bd9e690c67bf5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0b8526bf0a56f550659e613988b31c20f1ccde7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073452"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372624"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサーバー モードを別のモードにアップグレードまたは変換することはできません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードにアップグレードまたは変換することはできません。 モードが異なると使用されるデータベース スキーマも異なるため、モード間でレポート サーバー データベースをコピーすることはできません。 コンテンツはレポート サーバー間で移行できます。 使用するツールは、移行元サーバーと移行先サーバーに対して構成されたレポート サーバー モードの種類によって異なります。  
@@ -26,7 +26,7 @@ ms.locfileid: "48073452"
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 移行ツール  
  このツールでは、ネイティブ モードの配置から SharePoint モードの配置へのコンテンツの移行がサポートされます。 SharePoint モードから SharePoint モードまたは SharePoint モードからネイティブ モードへの移行はサポートされません。  
   
- 詳細については、「[Reporting Services 移行ツール](http://www.microsoft.com/download/details.aspx?id=29560)」(http://www.microsoft.com/download/details.aspx?id=29560) を参照してください。  
+ 詳細については、「[Reporting Services 移行ツール](https://www.microsoft.com/download/details.aspx?id=29560)」(https://www.microsoft.com/download/details.aspx?id=29560) を参照してください。  
   
 ## <a name="use-script-to-migrate-content"></a>スクリプトを使用したコンテンツの移行  
  移行ツールが目的に合わない場合は、レポート サーバー データを手動で移行できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 間でのレポート アイテムの移行を完了するための手順の概要を次に示します。 この方法では、移行元サーバーまたは移行先サーバーとしてネイティブ モードまたは SharePoint モードをサポートしています。  
@@ -50,7 +50,7 @@ ms.locfileid: "48073452"
 |モデル|はい||  
 |[データセット]|はい||  
 |レポート パーツ||移行後にレポート パーツへのパスを確認または更新します。|  
-|スケジュール|はい|ListSchedules メソッドを参照してください[Subscription and Delivery Methods。](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|Schedules|はい|ListSchedules メソッドに関する説明 (「 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)」) を参照してください。|  
 |サブスクリプション|はい|Listsubscriptions メソッドを参照してください[Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)と ChangeSubscriptionOwner メソッド。 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |スナップショット|||  
 ||||  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -20,12 +19,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229852"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353802"
 ---
 # <a name="lookup-transformation"></a>参照変換
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
@@ -130,15 +129,15 @@ ms.locfileid: "48229852"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   msdn.microsoft.com のビデオ「 [フル キャッシュ モードで参照変換を実装する方法](http://go.microsoft.com/fwlink/?LinkId=131031)」  
+-   ビデオ、[方法。フル キャッシュ モードで参照変換を実装](https://go.microsoft.com/fwlink/?LinkId=131031)msdn.microsoft.com で  
   
--   blogs.msdn.com のブログ「 [参照変換のキャッシュ モードを使用する際の推奨事項](http://go.microsoft.com/fwlink/?LinkId=146623)」  
+-   blogs.msdn.com のブログ「 [参照変換のキャッシュ モードを使用する際の推奨事項](https://go.microsoft.com/fwlink/?LinkId=146623)」  
   
--   blogs.msdn.com のブログ「 [参照パターン : 大文字と小文字を区別しない](http://go.microsoft.com/fwlink/?LinkId=157782)」  
+-   ブログ エントリ「[参照パターン。大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)、blogs.msdn.com  
   
--   msftisprodsamples.codeplex.com のサンプル「 [参照変換](http://go.microsoft.com/fwlink/?LinkId=267528)」  
+-   msftisprodsamples.codeplex.com のサンプル「 [参照変換](https://go.microsoft.com/fwlink/?LinkId=267528)」  
   
-     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 製品サンプルとサンプル データベースのインストールの詳細については、「 [SQL Server Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=267527)」をご覧ください。  
+     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 製品サンプルとサンプル データベースのインストールの詳細については、「 [SQL Server Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=267527)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [あいまい参照変換](fuzzy-lookup-transformation.md)   

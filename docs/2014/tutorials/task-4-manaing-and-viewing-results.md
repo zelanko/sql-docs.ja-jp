@@ -1,5 +1,5 @@
 ---
-title: 'タスク 4: 管理および結果の表示 |Microsoft Docs'
+title: タスク 4:管理および結果を表示する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5062f24c679d2d85da09a1dc81d9c487d6536f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119875"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377534"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>タスク 4: 結果を管理および表示する
-  ここでは、コンピューター支援型のクレンジングの結果を確認し、仕入先データに対してインタラクティブなクレンジングを実行します。 参照してください[インタラクティブなクレンジング ステージ](http://msdn.microsoft.com/library/hh213061.aspx#Interactive)の詳細。  
+# <a name="task-4-manaing-and-viewing-results"></a>タスク 4:結果を管理および表示する
+  ここでは、コンピューター支援型のクレンジングの結果を確認し、仕入先データに対してインタラクティブなクレンジングを実行します。 参照してください[インタラクティブなクレンジング ステージ](https://msdn.microsoft.com/library/hh213061.aspx#Interactive)の詳細。  
   
 1.  選択**Contact Email**ドメインの一覧からドメイン。  
   
-2.  切り替えて、**無効な**右ペインでタブ。 2 つの電子メール アドレスで末尾の文字 's' が抜けていることに注意してください。 これら 2 つの電子メールで終わるすべての電子メール アドレスを要求するドメイン ルールを無効になることは**@adventure-works.com** (での ')。 DQS は、クレンジング中にドメイン ルールを使用して電子メールが有効かどうかを判断します。 このタブには、ナレッジ ベースで無効と見なされたドメイン値か、ドメイン ルールに違反するドメイン値が表示されます。 この場合、これらの値はドメイン ルール (Email Validation) に違反しています。  
+2.  切り替えて、**無効な**右ペインでタブ。 通知の 2 つの電子メール アドレスは文字の不足している ' 最後にします。 これら 2 つの電子メールで終わるすべての電子メール アドレスを要求するドメイン ルールを無効になることは**@adventure-works.com** (での ')。 DQS は、クレンジング中にドメイン ルールを使用して電子メールが有効かどうかを判断します。 このタブには、ナレッジ ベースで無効と見なされたドメイン値か、ドメイン ルールに違反するドメイン値が表示されます。 この場合、これらの値はドメイン ルール (Email Validation) に違反しています。  
   
 3.  **に修正**列に適切な電子メール アドレスで終わる型**@adventure-works.com** (での ')。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "49119875"
   
 18. 選択、 **Address Validation**複合ドメイン ドメインの一覧から。  
   
-19. 右側のウィンドウに切り替えると、**修正**タブ。正しいことにあるアドレスを表示する必要があります、 **Melissa Data – Address Check** DQS サービス、 **Azure Marketplace**します。  
+19. 右側のウィンドウに切り替えると、**修正**タブ。正しいことにあるアドレスを表示する必要があります、 **Melissa Data の Address Check** DQS サービス、 **Azure Marketplace**します。  
   
 20. 切り替えて、 **Corrected**タブ。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "49119875"
   
 22. 注意、**承認**オプション ボタンはこの項目の一覧で既に選択されています。 これで項目の既定の動作は、 **Corrected**タブ。  
   
-23. 切り替えて、**提案**タブ。によって提案された変更の確認、 **Melissa Data – Address Check**サービス。  
+23. 切り替えて、**提案**タブ。によって提案された変更の確認、 **Melissa Data の Address Check**サービス。  
   
 24. **承認のすべての用語をクリックします**ツール バー ボタンをクリック**OK**上、**確認**メッセージ ボックス。  
   
@@ -90,6 +90,6 @@ ms.locfileid: "49119875"
 25. をクリックして**次**に切り替える、**エクスポート**ページ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 5: Excel ファイルにクレンジングの結果をエクスポートする](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [タスク 5:クレンジングの結果を Excel ファイルにエクスポートします。](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

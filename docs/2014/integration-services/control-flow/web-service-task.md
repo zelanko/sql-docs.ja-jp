@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicetask.f1
@@ -15,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a83900ff92611778bb5b71574a7e98ce5e6df18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189192"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363164"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
@@ -83,8 +82,8 @@ ms.locfileid: "48189192"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>関連コンテンツ  
- technet.microsoft.com のビデオ「[Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](http://go.microsoft.com/fwlink/?LinkId=259642)」  
+ ビデオ、[方法。Web サービス タスク (SQL Server ビデオ) を使用して Web サービスを呼び出す](https://go.microsoft.com/fwlink/?LinkId=259642)、technet.microsoft.com します。  
   
- curatedviews.cloudapp.net の Curated Answer「 [Consume Web Services in SSIS using Scripts (Script を使用して SSIS で Web サービスを利用する)](http://go.microsoft.com/fwlink/?LinkId=321996)」  
+ curatedviews.cloudapp.net の Curated Answer「 [Consume Web Services in SSIS using Scripts (Script を使用して SSIS で Web サービスを利用する)](https://go.microsoft.com/fwlink/?LinkId=321996)」  
   
   

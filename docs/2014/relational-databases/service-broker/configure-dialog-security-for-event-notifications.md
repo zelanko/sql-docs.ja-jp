@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
@@ -12,12 +12,12 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 754cec388eb6eb6ce30ae600b23a9397cc84f205
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191402"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359524"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>イベント通知のダイアログ セキュリティの構成
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログ セキュリティを構成する必要があります。 ダイアログ セキュリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログの完全セキュリティ モデルに従って手動で構成する必要があります。 完全セキュリティ モデルでは、リモート サーバーとの間で送受信するメッセージの暗号化および暗号化解除が可能です。 イベント通知は一方向に送信されますが、エラーなどのメッセージは逆方向にも返されます。  
@@ -28,11 +28,11 @@ ms.locfileid: "48191402"
 > [!IMPORTANT]  
 >  すべての証明書は、有効となる開始日と有効期限終了日を指定して作成する必要があります。  
   
- **手順 1. : TCP ポート番号と送信先サービスの名前を設定します。**  
+ **ステップ 1: TCP ポート番号と送信先サービスの名前を確立します。**  
   
  送信元サーバーと送信先サーバーの両方がメッセージを受信する TCP ポートを設定します。 送信先サービスの名前も決定する必要があります。  
   
- **手順 2. : データベース レベルの認証で共有される暗号化と証明書を構成します。**  
+ **手順 2:暗号化とデータベース レベルの認証に共有証明書を構成します。**  
   
  送信元サーバーと送信先サーバーの両方で次の操作を実行します。  
   
@@ -45,27 +45,27 @@ ms.locfileid: "48191402"
 |送信先サーバーからアクセス可能なファイルに[証明書をバックアップ](/sql/t-sql/statements/backup-certificate-transact-sql) します。|送信元サーバーからアクセス可能なファイルに証明書をバックアップします。|  
 |送信先データベースのユーザーと WITHOUT LOGIN を指定して[ユーザーを作成](/sql/t-sql/statements/create-user-transact-sql)します。 このユーザーは、バックアップ ファイルから作成された送信先データベースの証明書を所有します。 このユーザーをログインにマッピングする必要はありません。なぜなら、このユーザーの唯一の目的は、後述の手順 3. で作成する送信先データベースの証明書を所有することだからです。|送信元データベースのユーザーと WITHOUT LOGIN を指定してユーザーを作成します。 このユーザーは、バックアップ ファイルから作成された送信元データベースの証明書を所有します。 このユーザーをログインにマッピングする必要はありません。なぜなら、このユーザーの唯一の目的は、後述の手順 3. で作成する送信元データベースの証明書を所有することだからです。|  
   
- **手順 3. : データベース レベルの認証で使用する証明書を共有し、権限を許可します。**  
+ **手順 3:証明書を共有し、データベース レベルの認証のアクセス許可を付与します。**  
   
  送信元サーバーと送信先サーバーの両方で次の操作を実行します。  
   
 |[転送元サーバー]|送信先サーバー|  
 |-------------------|-------------------|  
 |送信先データベースのユーザーを所有者に指定して、送信先の証明書のバックアップ ファイルから[証明書を作成](/sql/t-sql/statements/create-certificate-transact-sql) します。|送信元データベースのユーザーを所有者に指定して、送信元の証明書のバックアップ ファイルから証明書を作成します。|  
-|送信元データベースのユーザーに、イベント通知を作成する[権限を許可](/sql/t-sql/statements/grant-transact-sql) します。 この権限の詳細については、「 [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-notification-transact-sql)します。|送信先データベースのユーザーに既存のイベント通知の [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクト : `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`に対する REFERENCES 権限を許可します。|  
+|送信元データベースのユーザーに、イベント通知を作成する[権限を許可](/sql/t-sql/statements/grant-transact-sql) します。 この権限の詳細については、「 [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-notification-transact-sql)します。|送信先データベースのユーザーに既存のイベント通知の [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクト : `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`に対する REFERENCES 権限を許可します。|  
 |送信先サービスへの[リモート サービス バインドを作成](/sql/t-sql/statements/create-remote-service-binding-transact-sql) し、送信先データベースのユーザーの資格情報を指定します。 リモート サービス バインドは、送信先サーバーに送信されるメッセージが、送信元データベースのユーザーが所有する証明書の公開キーによって認証されることを保証します。|送信先データベースのユーザーに CREATE QUEUE 権限、CREATE SERVICE 権限、および CREATE SCHEMA 権限を[許可](/sql/t-sql/statements/grant-transact-sql) します。|  
 ||まだデータベースに送信先データベース ユーザーとして接続していない場合は、直ちに接続してください。|  
 ||イベント通知メッセージを受信する[キューを作成](/sql/t-sql/statements/create-queue-transact-sql) し、メッセージを配信する [サービスを作成](/sql/t-sql/statements/create-service-transact-sql) します。|  
 ||送信元データベースのユーザーに、送信先サービスに対する[SEND 権限を許可](/sql/t-sql/statements/grant-transact-sql) します。|  
 |送信元データベースの Service Broker 識別子を送信先サーバーに指定します。 この識別子は、 **sys.databases** カタログ ビューの [service_broker_guid](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列にクエリを実行することで取得できます。 サーバー レベルのイベント通知の場合は、Service Broker 識別子として **msdb**を使用します。|送信先データベースの Service Broker 識別子を送信元サーバーに指定します。|  
   
- **手順 4. : ルートを作成し、サーバー レベルの認証を設定します。**  
+ **手順 4:ルートを作成し、サーバー レベルの認証を設定します。**  
   
  送信元サーバーと送信先サーバーの両方で次の操作を実行します。  
   
 |[転送元サーバー]|送信先サーバー|  
 |-------------------|-------------------|  
-|送信先サービスへの[ルートを作成](/sql/t-sql/statements/create-route-transact-sql) し、送信先データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。|送信元サービスへのルートを作成し、送信元データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。 送信元サービスを指定するには、 `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`で提供されるサービスを使用します。|  
+|送信先サービスへの[ルートを作成](/sql/t-sql/statements/create-route-transact-sql) し、送信先データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。|送信元サービスへのルートを作成し、送信元データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。 送信元サービスを指定するには、 `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`で提供されるサービスを使用します。|  
 |**master** データベースに切り替えて、サーバー レベルの認証を構成します。|**master** データベースに切り替えて、サーバー レベルの認証を構成します。|  
 |**master** データベースにマスター キーが存在しない場合は、 [マスター キーを作成](/sql/t-sql/statements/create-master-key-transact-sql)します。|**master** データベースにマスター キーが存在しない場合は、マスター キーを作成します。|  
 |データベースを認証する[証明書を作成](/sql/t-sql/statements/create-certificate-transact-sql) します。|データベースを認証する証明書を作成します。|  
@@ -75,7 +75,7 @@ ms.locfileid: "48191402"
 |送信先の認証子のログインに、エンドポイントに対する[CONNECT 権限を許可](/sql/t-sql/statements/grant-transact-sql) します。|送信元の認証子のログインに、エンドポイントに対する CONNECT 権限を許可します。|  
 |[ユーザーを作成](/sql/t-sql/statements/create-user-transact-sql)し、送信先の認証子のログインを指定します。|ユーザーを作成し、送信元の認証子のログインを指定します。|  
   
- **手順 5. : サーバー レベルの認証で使用する証明書を共有し、イベント通知を作成します。**  
+ **手順 5:サーバー レベルの認証に証明書を共有し、イベント通知を作成します。**  
   
  送信元サーバーと送信先サーバーの両方で次の操作を実行します。  
   

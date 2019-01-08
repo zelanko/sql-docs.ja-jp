@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -25,17 +24,17 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f3254d3356caefcd7f9e15709702970a9b064e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050182"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369771"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでのパッケージ実行中に発生するログ記録のスコープを構成できます。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](../enable-logging-for-package-execution-on-the-ssis-server.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでのパッケージ実行中に発生するログ記録のスコープを構成できます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../enable-logging-for-package-execution-on-the-ssis-server.md)」を参照してください。  
   
  **dtexec** コマンド プロンプト ユーティリティを使用してパッケージを実行する際にも、ログ記録を使用できます。 ログ記録をサポートするコマンド プロンプトの引数の詳細については、「 [dtexec Utility](../packages/dtexec-utility.md)」を参照してください。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "48050182"
 |演算子|パッケージを起動したユーザーの ID。|  
 |SourceName|ログ イベントが発生したコンテナーまたはタスクの名前。|  
 |[SourceID]|ログ イベントが発生したパッケージ、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、またはタスクの一意識別子。|  
-|[ExecutionID]|パッケージ実行インスタンスの GUID。<br /><br /> 注: 単一のパッケージを実行すると、ExecutionID 要素の値が異なるログ エントリが作成される場合があります。 たとえば、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で 1 つのパッケージを実行すると、検証フェーズでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]に対応する ExecutionID 要素を持つログ エントリが作成されます。 一方、実行フェーズでは、dtshost.exe に対応する ExecutionID 要素を持つログ エントリが作成されます。 また、パッケージ実行タスクを含むパッケージを実行すると、これらの各タスクで子パッケージが実行されます。 これらの子パッケージでは、親パッケージが作成するログ エントリとは異なる ExecutionID 要素を持つログ エントリが作成される場合があります。|  
+|[ExecutionID]|パッケージ実行インスタンスの GUID。<br /><br /> 注:単一のパッケージを実行すると、ExecutionID 要素の値が異なるログ エントリが作成される場合があります。 たとえば、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で 1 つのパッケージを実行すると、検証フェーズでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]に対応する ExecutionID 要素を持つログ エントリが作成されます。 一方、実行フェーズでは、dtshost.exe に対応する ExecutionID 要素を持つログ エントリが作成されます。 また、パッケージ実行タスクを含むパッケージを実行すると、これらの各タスクで子パッケージが実行されます。 これらの子パッケージでは、親パッケージが作成するログ エントリとは異なる ExecutionID 要素を持つログ エントリが作成される場合があります。|  
 |[MessageText]|ログ エントリに関連付けられているメッセージ。|  
 |[DataBytes]|ログ エントリ固有のバイト配列。 このフィールドの意味は、ログ エントリによって異なります。|  
   
@@ -148,7 +147,7 @@ ms.locfileid: "48050182"
   
 1.  パッケージおよびタスクのログ記録を有効にします。 ログは、パッケージ レベル、コンテナー レベル、またはタスク レベルで記録できます。 パッケージ、コンテナー、タスクに対して、それぞれ異なるログを指定できます。  
   
-2.  ログ プロバイダーを選択して、パッケージのログを追加します。 ログはパッケージ レベルでのみ作成可能で、タスクやコンテナーではパッケージで作成されたログのいずれかを使用します。 各ログは、テキスト ファイル、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows のイベント ログ、または XML ファイルのいずれかのログ プロバイダーに関連付けられます。 詳しくは、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](../enable-package-logging-in-sql-server-data-tools.md)」をご覧ください。  
+2.  ログ プロバイダーを選択して、パッケージのログを追加します。 ログはパッケージ レベルでのみ作成可能で、タスクやコンテナーではパッケージで作成されたログのいずれかを使用します。 各ログは、次のログ プロバイダーのいずれかで関連付けられています。テキスト ファイル、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows イベント ログ、または XML ファイル。 詳細については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](../enable-package-logging-in-sql-server-data-tools.md)」を参照してください。  
   
 3.  ログに取り込むイベントと、各イベントのログ スキーマ情報を選択します。 詳細については、「 [保存されている構成ファイルを使用してログ記録を構成する](../configure-logging-by-using-a-saved-configuration-file.md)」を参照してください。  
   
@@ -213,7 +212,7 @@ ms.locfileid: "48050182"
 -   [[ログ イベント] ウィンドウでログ エントリを表示する](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [完全かつ詳細なログ記録用の DTLoggedExec ツール (CodePlex プロジェクト)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [完全かつ詳細なログ記録用の DTLoggedExec ツール (CodePlex プロジェクト)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>参照  
  [[ログ イベント] ウィンドウでログ エントリを表示する](../view-log-entries-in-the-log-events-window.md)  

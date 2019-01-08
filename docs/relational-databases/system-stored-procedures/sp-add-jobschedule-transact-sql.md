@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834490"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591586"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  スケジュールを追加するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値はありません。  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  スケジュールを追加するジョブの名前。 *job_name*は**nvarchar (128)**、既定値はありません。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **'**_名前_**'**  
  スケジュールの名前。 *名前*は**nvarchar (128)**、既定値はありません。  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -77,7 +77,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**8**|毎週。|  
 |**16**|毎月。|  
 |**32**|毎月、に対して相対的な*frequency_interval します。*|  
-|**64**|実行するときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスを開始します。|  
+|**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの起動時に実行します。|  
 |**128**|コンピューターがアイドル状態のときに実行します。|  
   
  [ **@freq_interval=** ] *frequency_interval*  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  間の日で時間*active_start_date*と*active_end_date*ジョブの実行を開始します。 *active_start_time*は**int**、既定値はありません。 時間は 24 時間制の hhmmss 形式で指定として書式設定します。  
   
- [ **@active_end_time=***active_end_time*  
+ [  **@active_end_time=**_active_end_time_  
  間の日で時間*active_start_date*と*active_end_date*ジョブ実行を終了します。 *active_end_time*は**int**、既定値はありません。 時間は 24 時間制の hhmmss 形式で指定として書式設定します。  
   
- [ **@schedule_id=***schedule_id***OUTPUT**  
+ [  **@schedule_id=**_schedule_id_**出力**  
  スケジュールの作成が成功したときにスケジュールに割り当てられるスケジュール ID 番号を指定します。 *schedule_id*型の output 変数は、 **int**、既定値はありません。  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] _schedule_uid_**出力**  
  スケジュールの一意識別子を指定します。 *schedule_uid*型の変数は、 **uniqueidentifier**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

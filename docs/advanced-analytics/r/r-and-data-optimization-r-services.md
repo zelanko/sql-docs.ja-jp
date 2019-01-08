@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services - データの最適化のパフォーマンス |Microsoft Docs
+title: データの最適化 - SQL Server Machine Learning サービスのパフォーマンス チューニング
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699510"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432405"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services - データの最適化のパフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ SQL Server 2016 および 2017 で、いずれかを使用できる、**ロー�
 
 ## <a name="factors"></a>因子
 
-R 言語の概念には*要因*、カテゴリ データの特殊な変数であります。 データ サイエンティストは多くの場合、数式で因子変数を使用して、データを確実要因としてのカテゴリの変数を処理するためは、machine learning の関数によって正しく処理します。 詳細については、次を参照してください。[ダミーの R: 因子変数](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)します。
+R 言語の概念には*要因*、カテゴリ データの特殊な変数であります。 データ サイエンティストは多くの場合、数式で因子変数を使用して、データを確実要因としてのカテゴリの変数を処理するためは、machine learning の関数によって正しく処理します。 詳細については、次を参照してください[ダミーの R:。要因変数](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)します。
 
 仕様では、整数と保管または処理用にもう一度因子変数文字列から変換できます。 R`data.frame`場合を除き、関数が要素の変数としてすべての文字列を処理、引数*stringsAsFactors*に設定されている**False**します。 これにより、処理するために整数に変換され、元の文字列にマップされ、文字列が自動的には。
 
@@ -151,11 +151,11 @@ RevoScaleR の最適化については、次の記事を参照してください
 
 + サポートの記事:[パフォーマンス チューニング rxDForest と rxDTree のオプション](https://support.microsoft.com/kb/3104235)
 
-+ ブースト ツリー モデルでモデルを制御する方法に合わせて:[の推定モデルを使用して確率的勾配ブースティング](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ ブースト ツリー モデルに適合するモデルを制御するためのメソッド:[確率的勾配ブースティングを使用してモデルを見積もる](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ RevoScaleR の移動し、データ処理の概要: [ScaleR でカスタムのチャンク アルゴリズムを記述します。](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ RevoScaleR の移動し、データ処理の概要:[ScaleR でカスタムのチャンク アルゴリズムを記述します。](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ RevoScaleR のプログラミング モデル: [RevoScaleR でスレッドを管理します。](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ RevoScaleR のプログラミング モデル:[RevoScaleR のスレッドを管理します。](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
 + 関数リファレンス[rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
@@ -173,13 +173,13 @@ RevoScaleR の最適化については、次の記事を参照してください
 
 場合は、シナリオでは、格納されたモデルを使用して予測を高速をアプリケーションに machine learning の統合、使用することもできます、 [operationalization](https://docs.microsoft.com/r-server/what-is-operationalization) (旧称 DeployR)、Microsoft R Server で機能します。
 
-+ として、**データ サイエンティスト**を使用して、 [mrsdeploy パッケージ](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)、他のコンピューターと R コードを共有し、web、デスクトップ、モバイル、およびダッシュ ボード アプリケーション内での R 分析を統合する:[を発行する方法R Server で R の web サービスおよび管理](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ として、**データ サイエンティスト**を使用して、 [mrsdeploy パッケージ](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)、他のコンピューターと R コードを共有し、web、デスクトップ、モバイル、およびダッシュ ボード アプリケーション内での R 分析を統合します。[発行および R Server で R の web サービスを管理する方法](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ として、**管理者**、パッケージの管理、web のノードを監視する方法について説明しますとコンピューティング ノード、および R ジョブでのセキュリティを制御:[と対話し、R での web サービスを使用する方法](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ として、**管理者**パッケージの管理、web のノードを監視する方法について説明しますとコンピューティング ノード、および R ジョブでのセキュリティを制御します。[操作し、R での web サービスを使用する方法](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>このシリーズの記事
 
-[パフォーマンス チューニング-R の概要](sql-server-r-services-performance-tuning.md)
+[パフォーマンス チューニング - R の概要](sql-server-r-services-performance-tuning.md)
 
 [R で SQL Server の構成のパフォーマンス チューニング](sql-server-configuration-r-services.md)
 

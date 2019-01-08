@@ -1,5 +1,5 @@
 ---
-title: データベース ユーザー (SQL Server Machine Learning) としての SQLRUserGroup の追加 |Microsoft Docs
+title: データベース ユーザー - SQL Server Machine Learning のサービスとしての SQLRUserGroup を追加します。
 description: ループバック接続は暗黙の認証を使用して、ワーカー アカウントは id の変換、呼び出し元のユーザーに、サーバーにログインできるように、データベース ユーザーとして SQLRUserGroup を追加します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419087"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432355"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>データベース ユーザーとしての SQLRUserGroup の追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
