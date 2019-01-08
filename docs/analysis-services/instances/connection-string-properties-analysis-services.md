@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b224b70c8985b23568d24f6230b138d6c43f5928
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6e4b457cc59602c9c4c1fc2306446cbb7f47c173
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148167"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984123"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "50148167"
 |--------------|-----------------|-------------|  
 |**Data Source** または **DataSource**|サーバー インスタンスを指定します。 このプロパティは、すべての接続に必要です。 有効な値には、サーバーのネットワーク名または IP アドレス、ローカル接続の local または localhost、URL (サーバーが HTTP または HTTPS アクセス用に構成されている場合)、またはローカル キューブ (.cub) ファイルの名前があります。 <br /><br /> Azure Analysis services では、有効な値`<protocol>://<region>/<servername>`文字列 asazure をプロトコルには、リージョンは、サーバーが作成された Uri (たとえば、westus.asazure.windows.net)、servername は、リージョン内で一意なサーバーの名前です。 |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />`Data source=AW-SRV01` : 既定のインスタンスとポート (TCP 2383) の場合。<br /><br /> `Data source=AW-SRV01$Finance:8081` : 名前付きインスタンス ($Finance) と固定ポートの場合。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` : 完全修飾ドメイン名の場合。既定のインスタンスとポートを想定しています。<br /><br /> `Data source=172.16.254.1` : サーバーの IP アドレスの場合。DNS サーバーの参照をバイパスします。接続の問題をトラブルシューティングする場合に便利です。|  
 |**Initial Catalog** または **Catalog**|接続先の Analysis Services データベースの名前を指定します。 データベースが Analysis Services に配置されており、データベースに接続するための権限を持っている必要があります。 このプロパティは、AMO 接続では省略できますが、ADOMD.NET では必須です。|`Initial catalog=AdventureWorks2016`|  
-|**Provider**|有効な値には、MSOLAP が含まれます。\<バージョン > ここで、\<バージョン > 4、5、6 または 7 です。<br /><br /> -   MSOLAP.4 は、SQL Server 2008 でリリースされ、SQL Server 2008 R2 で再度リリースされました (ファイル名は SQL Server 2008 および 2008 R2 では msolap100.dll です)。<br />-   MSOLAP.5 は、SQL Server 2012 でリリースされました (ファイル名は msolap110.dll です)。<br />-   MSOLAP.6 は、SQL Server 2014 でリリースされました (ファイル名は msolap1200.dll です)。<br />-   MSOLAP.7 は、SQL Server 2016 でリリースされました (ファイル名は msolap130.dll です)。<br /><br /> このプロパティは省略可能です。 既定では、クライアント ライブラリは、レジストリから現在のバージョンの OLE DB プロバイダーを読み取ります。 SQL Server 2012 インスタンスに接続するなど、特定のバージョンのデータ プロバイダーが必要な場合のみ、このプロパティを設定する必要があります。<br /><br /> MSOLAP.4 は、SQL Server 2008 と SQL Server 2008 R2 の両方でリリースされました。 2008 R2 バージョンは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをサポートしており、SharePoint サーバーに手動でインストールすることが必要な場合があります。 これらのバージョンを区別するには、プロバイダーのファイル プロパティでビルド番号を確認する必要があります。それには、Program files\Microsoft Analysis Services\AS OLEDB\10 に移動します。 msolap110.dll を右クリックし、 **[プロパティ]** をクリックします。 **[詳細]** をクリックします。 ファイルのバージョン情報が表示されます。 バージョンは 10.50 を含める必要があります。\<buildnumber > の SQL Server 2008 R2。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 」および「 [Analysis Services 接続に使用するデータ プロバイダー](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)」を参照してください。|`Provider=MSOLAP.7` は、SQL Server 2016 バージョンの OLE DB Provider for Analysis Services を必要とする接続に使用します。|  
+|**Provider**|有効な値には、MSOLAP が含まれます。\<バージョン > ここで、\<バージョン > 4、5、6 または 7 です。<br /><br /> -   MSOLAP.4 は、SQL Server 2008 でリリースされ、SQL Server 2008 R2 で再度リリースされました (ファイル名は SQL Server 2008 および 2008 R2 では msolap100.dll です)。<br />-   MSOLAP.5 は、SQL Server 2012 でリリースされました (ファイル名は msolap110.dll です)。<br />-   MSOLAP.6 は、SQL Server 2014 でリリースされました (ファイル名は msolap1200.dll です)。<br />-   MSOLAP.7 は、SQL Server 2016 でリリースされました (ファイル名は msolap130.dll です)。<br /><br /> このプロパティは省略可能です。 既定では、クライアント ライブラリは、レジストリから現在のバージョンの OLE DB プロバイダーを読み取ります。 SQL Server 2012 インスタンスに接続するなど、特定のバージョンのデータ プロバイダーが必要な場合のみ、このプロパティを設定する必要があります。<br /><br /> MSOLAP.4 は、SQL Server 2008 と SQL Server 2008 R2 の両方でリリースされました。 2008 R2 バージョンは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをサポートしており、SharePoint サーバーに手動でインストールすることが必要な場合があります。 これらのバージョンを区別するためには、プロバイダーのファイル プロパティでビルド番号を確認する必要があります。Program files\Microsoft Analysis Services\AS OLEDB\10 に移動します。 msolap110.dll を右クリックし、 **[プロパティ]** をクリックします。 **[詳細]** をクリックします。 ファイルのバージョン情報が表示されます。 バージョンは 10.50 を含める必要があります。\<buildnumber > の SQL Server 2008 R2。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 」および「 [Analysis Services 接続に使用するデータ プロバイダー](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)」を参照してください。|`Provider=MSOLAP.7` は、SQL Server 2016 バージョンの OLE DB Provider for Analysis Services を必要とする接続に使用します。|  
 |**Cube**|キューブ名またはパースペクティブ名。 データベースには、複数のキューブおよびパースペクティブを含めることができます。 複数の対象が考えられる場合は、接続文字列にキューブ名またはパースペクティブ名を含めます。|`Cube=SalesPerspective` は、Cube 接続文字列プロパティを使用して、キューブの名前またはパースペクティブの名前を指定できることを示しています。|  
   
 ##  <a name="bkmk_auth"></a> 認証およびセキュリティ  
@@ -47,18 +47,18 @@ ms.locfileid: "50148167"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**EffectiveUserName**|サーバーでエンド ユーザー ID の権限を借用する必要がある場合に使用します。 アカウントを domain\user という形式で指定します。 このプロパティを使用するには、呼び出し元に Analysis Services に対する管理権限が必要です。 SharePoint から Excel ブックのこのプロパティを使用する方法の詳細については、「 [SharePoint Server 2013 で Analysis Services の EffectiveUserName を使用する](http://go.microsoft.com/fwlink/?LinkId=311905)」をご覧ください。 Reporting Services でこのプロパティを使用する方法の詳細については、「 [SSAS での EffectiveUserName を使用した権限の借用](http://go.microsoft.com/fwlink/?LinkId=301385)」をご覧ください。<br /><br /> **EffectiveUserName** は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールで使用情報を取得する場合に使用します。 ユーザー ID を含むイベントまたはエラーをログ ファイルに記録できるように、ユーザー ID がサーバーに渡されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]の場合、承認には使用されません。|  
+|**EffectiveUserName**|サーバーでエンド ユーザー ID の権限を借用する必要がある場合に使用します。 アカウントを domain\user という形式で指定します。 このプロパティを使用するには、呼び出し元に Analysis Services に対する管理権限が必要です。 SharePoint から Excel ブックのこのプロパティを使用する方法の詳細については、「 [SharePoint Server 2013 で Analysis Services の EffectiveUserName を使用する](http://go.microsoft.com/fwlink/?LinkId=311905)」をご覧ください。<br /><br /> **EffectiveUserName** は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールで使用情報を取得する場合に使用します。 ユーザー ID を含むイベントまたはエラーをログ ファイルに記録できるように、ユーザー ID がサーバーに渡されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]の場合、承認には使用されません。|  
 |**Encrypt Password**|ローカル キューブを暗号化するためにローカル パスワードを使用するかどうかを指定します。 有効な値は True または False です。 既定値は False です。|  
 |**Encryption Password**|暗号化されたローカル キューブの暗号化を解除するために使用するパスワード。 既定値は空です。 この値は、ユーザーが明示的に設定する必要があります。|  
 |**Impersonation Level**|サーバーがクライアントの権限を借用するときに使用できる権限借用レベルを示します。 有効な値は次のとおりです。<br /><br /> -   Anonymous。 クライアントはサーバーに対して匿名です。 サーバー プロセスではクライアントに関する情報を取得できず、クライアントの権限を借用できません。<br />-   Identify。 サーバー プロセスではクライアント ID を取得できます。 また、サーバーでは承認のためにクライアント ID の権限を借用できますが、クライアントとしてシステム オブジェクトにアクセスすることはできません。<br />-   Impersonate。 これが既定値です。 クライアント ID の権限を借用できますが、接続を確立する場合に限られ、すべての呼び出しで借用できるわけではありません。<br />-   Delegate。 サーバー プロセスでは、クライアントに代わって機能を実行するときに、クライアントのセキュリティ コンテキストの権限を借用できます。 また、他のサーバーに対する呼び出しを送信することもできます。|  
-|**統合セキュリティ**|Analysis Services に接続するために使用する呼び出し元の Windows ID。 有効な値は、空白、SSPI、および BASIC です。<br /><br /> **Integrated Security**=**SSPI** は、TCP 接続の既定値です。NTLM、Kerberos、または匿名認証を許可します。 空白は、HTTP 接続の既定値です。<br /><br /> **SSPI**を使用する場合、 **ProtectionLevel** を **Connect**、 **PktIntegrity**、 **PktPrivacy**のいずれかに設定する必要があります。|  
+|**統合セキュリティ**|Analysis Services に接続するために使用する呼び出し元の Windows ID。 有効な値は、空白、SSPI、および BASIC です。<br /><br /> **Integrated Security**=**SSPI** は、TCP 接続の既定値です。NTLM、Kerberos、または匿名認証を許可します。 空白は、HTTP 接続の既定値です。<br /><br /> 使用する場合**SSPI**、 **ProtectionLevel**次のいずれかに設定する必要があります。**接続**、 **PktIntegrity**、 **PktPrivacy**します。|  
 |**Persist Encrypted**|クライアント アプリケーションでデータ ソース オブジェクトに暗号化された形式で秘密の認証情報 (パスワードなど) を保存する必要がある場合に、このプロパティを設定します。 既定では、認証情報は保存されません。|  
 |**Persist Security Info**|有効値は True および False です。 True に設定した場合、以前に接続文字列に指定したユーザー ID やパスワードなどのセキュリティ情報を接続の確立後に接続から取得できます。 既定値は False です。|  
 |**保護レベル**|接続で使用するセキュリティ レベルを指定します。 有効な値は、<br /><br /> -   **None**。 未認証の接続または匿名接続。 サーバーに送信されるデータの認証は行われません。<br />-   **Connect**。 認証された接続。 クライアントがサーバーとのリレーションシップを確立するときにのみ認証が行われます。<br />-   **パケット整合性**。 暗号化された接続。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されていないことが確認されます。<br />-   **パケット プライバシー**。 署名された暗号化 (XMLA でのみサポートされます)。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されておらず、暗号化することでデータのプライバシーが保護されていることが確認されます。<br /><br /> 詳細については、「 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)」をご覧ください。|  
-|**Roles**|定義済みロールのコンマ区切りの一覧を指定します。そのロールによって与えられる権限を使用して、サーバーまたはデータベースに接続します。 このプロパティを省略した場合、すべてのロールを使用し、有効な権限はすべてのロールの組み合わせになります。 Roles=' ' のように、プロパティを空の値に設定した場合、クライアント接続にロールのメンバーシップは与えられません。<br /><br /> このプロパティを使用した管理者は、ロールによって与えられた権限を使用して接続します。 ロールによって与えられた権限が十分でない場合、コマンドが失敗することがあります。|  
+|**Roles**|定義済みロールのコンマ区切りの一覧を指定します。そのロールによって与えられる権限を使用して、サーバーまたはデータベースに接続します。 このプロパティを省略した場合、すべてのロールを使用し、有効な権限はすべてのロールの組み合わせになります。 プロパティを空の値に設定 (たとえば、ロール =' ') クライアント接続には、ロールのメンバーシップがありません。<br /><br /> このプロパティを使用した管理者は、ロールによって与えられた権限を使用して接続します。 ロールによって与えられた権限が十分でない場合、コマンドが失敗することがあります。|  
 |**SSPI**|**Integrated Security** が **SSPI**に設定されているときにクライアント認証に使用するセキュリティ パッケージを明示的に指定します。 SSPI では複数のパッケージがサポートされていますが、このプロパティを使用すると特定のパッケージを指定できます。 有効な値は、Negotiate、Kerberos、NTLM、および Anonymous User です。 このプロパティを設定しない場合、接続ですべてのパッケージを使用できます。|  
 |**Use Encryption for Data**|データ転送を暗号化します。 有効な値は True および False です。|  
-|**User ID**=…; **Password**=|**User ID** と **Password** を一緒に使用します。 Analysis Services では、これらの資格情報によって指定されたユーザー ID の権限を借用します。 Analysis Services 接続では、サーバーが HTTP アクセス用に構成されており、IIS 仮想ディレクトリに統合セキュリティではなく基本認証を指定した場合にのみ、コマンド ラインで資格情報を入力します。 サーバーに直接接続すると、 **UserID** と **Password** 接続文字列パラメーターは無視され、その接続はログオン ユーザーのコンテキストを使用して確立されます。 <br /><br />ユーザー名とパスワードは、Windows ID (ローカルまたはドメイン ユーザー アカウント) の資格情報である必要があります。 **User ID** には空白が挿入されていることに注意してください。 このプロパティの他の別名には、 **UserName** (空白なし) および **UID**があります。 **Password** の別名は、 **PWD**です。|  
+|**ユーザー ID**=…。**パスワード**=|**User ID** と **Password** を一緒に使用します。 Analysis Services では、これらの資格情報によって指定されたユーザー ID の権限を借用します。 Analysis Services 接続では、サーバーが HTTP アクセス用に構成されており、IIS 仮想ディレクトリに統合セキュリティではなく基本認証を指定した場合にのみ、コマンド ラインで資格情報を入力します。 サーバーに直接接続すると、 **UserID** と **Password** 接続文字列パラメーターは無視され、その接続はログオン ユーザーのコンテキストを使用して確立されます。 <br /><br />ユーザー名とパスワードは、Windows ID (ローカルまたはドメイン ユーザー アカウント) の資格情報である必要があります。 **User ID** には空白が挿入されていることに注意してください。 このプロパティの他の別名には、 **UserName** (空白なし) および **UID**があります。 **Password** の別名は、 **PWD**です。|  
   
 ##  <a name="bkmk_special"></a> 特別な用途のパラメーター  
  ここでは、残りの接続文字列パラメーターについて説明します。 これらは、アプリケーションで必要な特定の接続動作を実現するために使用します。  
@@ -67,7 +67,7 @@ ms.locfileid: "50148167"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**Application Name**|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、接続文字列に Application Name='test' を追加すると、次のスクリーン ショットに示すように、SQL Server Profiler トレースに 'test' が表示されます。<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、 **sspropinitAppName**および **AppName**があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](http://go.microsoft.com/fwlink/?LinkId=301699)」をご覧ください。|  
+|**Application Name**|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、アプリケーション名を追加 = 'test'、接続文字列 'test' を SQL Server Profiler トレースに表示する次のスクリーン ショットに示すようにします。<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、 **sspropinitAppName**および **AppName**があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](http://go.microsoft.com/fwlink/?LinkId=301699)」をご覧ください。|  
 |**AutoSyncPeriod**|クライアントとサーバーのキャッシュを同期する頻度 (ミリ秒単位) を設定します。 ADOMD.NET には、最小限のメモリ オーバーヘッドが発生する、よく使用されるオブジェクトのために、クライアント キャッシュが用意されています。 これは、サーバーへのラウンド トリップを減らすのに役立ちます。 既定値は 10,000 ミリ秒 (10 秒) です。 null または 0 に設定した場合、自動同期は無効になります。|  
 |**Character Encoding**|要求での文字をエンコードする方法を定義します。 有効な値は、Default または UTF-8 (これらは同じです) と、UTF-16 です。| 
 |**CommitTimeout**|XMLA プロパティ。 現在実行中のコマンドのコミット フェーズがロールバックするまでに待機する時間をミリ秒数で指定します。 0 より大きいとき、サーバー構成の該当する CommitTimeout プロパティの値をオーバーライドします。 |   
@@ -114,7 +114,7 @@ ms.locfileid: "50148167"
 -   Use Formula Cache  
   
 ##  <a name="bkmk_examples"></a> 接続文字列の例  
- ここでは、一般的なアプリケーションで Analysis Services 接続を設定する際によく使用する接続文字列を示します。  
+ このセクションでは、アプリケーションで使用される一般的で Analysis Services 接続を設定するときに使用するほとんどの場合、接続文字列が表示されます。  
   
  **一般的な接続文字列**  
   
@@ -135,17 +135,17 @@ ms.locfileid: "50148167"
   
  **サーバーへのネイティブ (直接) 接続**  
   
- `Data Source=server[:port][\instance]` ("port" および "\instance" は省略可)。 たとえば、「Data Source=server1」のように指定すると、"server1" という名前のサーバーの既定のインスタンス (既定のポート 2383) に対する接続が開きます。  
+ `Data Source=server[:port][\instance]` 場所"port"および"\instance"は省略可能です。 たとえば、指定すると"データ ソース = server1""server1"という名前のサーバーで、既定のインスタンス (と既定のポート 2383) への接続を開きます。  
   
- "Data Source=server1:port1" は、"server1" 上のポート "port1" で実行されている Analysis Services インスタンスに対する接続を開きます。  
+ "データ ソース = server1:port1"ポート"port1""server1"上で実行されている Analysis Services インスタンスへの接続が開きます。  
   
- "Data Source=server1\instance1" は、SQL Browser (既定のポート 2382) への接続を開き、名前付きインスタンス "instance1" のポートを解決した後、対応する Analysis Services ポートへの接続を開きます。  
+ "データ ソース = server1\instance1"は (既定のポート 2382) で SQL Browser への接続を開き、ポート、名前付きインスタンス"instance1"を解決、その Analysis Services ポートへの接続を開きます。  
   
- "Data Source=server1:port1\instance1" は、"port1" 上の SQL Browser への接続を開き、名前付きインスタンス "instance1" のポートを解決した後、対応する Analysis Services ポートへの接続を開きます。  
+ "データ ソース = server1:port1\instance1"は"port1"で SQL Browser への接続を開き、名前付きインスタンス"instance1"のポートを解決するには、その Analysis Services ポートへの接続を開きます。  
   
  **ローカル キューブ接続 (.cub ファイル)**  
   
- `Data Source=<path>`(例: “Data Source=c:\temp\a.cub”)  
+ `Data Source=<path>`、たとえば"データ Source=c:\temp\a.cub"  
   
  **msmdpump.dll への Http(s) 接続**  
   

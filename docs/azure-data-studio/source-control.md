@@ -1,7 +1,8 @@
 ---
-title: ソース管理で Azure Data Studio |Microsoft Docs
-description: Azure Data Studio でソース管理を構成する方法について説明します。
-ms.custom: tools|sos
+title: ソース管理
+titleSuffix: Azure Data Studio
+description: Azure Data Studio でソース管理を構成する方法について説明します
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 956ead73c4fe28a045f5ff24280012ed32937f9c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 5fb3c8dea11e570bba4452e181626625e31acbe0
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356313"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030676"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>ソース管理での使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

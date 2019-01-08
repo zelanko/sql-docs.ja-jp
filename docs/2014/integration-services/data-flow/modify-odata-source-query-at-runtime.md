@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea891738a0a22353e67ff72b87d642bd04749270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093902"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804851"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの変更
   データ フロー タスクの **[OData ソース].[クエリ]** プロパティに式を追加すると、OData ソースのクエリを実行時に変更できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "48093902"
 ## <a name="exposing-the-query-as-a-parameter"></a>クエリをパラメーターとして公開  
  次の手順には、OData ソース コンポーネントによって使用されるクエリを、パッケージに対するパラメーターとして公開する手順が含まれています。  
   
-1.  **[データ フロー タスク]** を右クリックし、 **[パラメーター化]** オプションを選択します。  
+1.  **[データ フロー タスク]** を右クリックし、**[パラメーター化]** オプションを選択します。  
   
 2.  **[パラメーター化]** ダイアログで、**[プロパティ]** に対して **[\<OData ソース コンポーネント名>].[クエリ]** を選択します。  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48093902"
   
 2.  **[プロパティ]** ウィンドウで、 **[Expressions]** プロパティを強調表示します。  
   
-3.  [...] (省略記号) をクリックすると、 **[プロパティ式エディター]** が表示されます。  
+3.  をクリックします.(省略記号) をクリックする、**プロパティ式エディター**します。  
   
 4.  **[OData ソース].[クエリ]** プロパティを選択します。  
   
-5.  [...] (省略記号) ボタンを**式**します。  
+5.  をクリックします.(省略記号) ボタンを**式**します。  
   
 6.  **[式]** を入力します。  
   

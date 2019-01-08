@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistpublisher
@@ -17,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b8233a5ba3d4610e43dc2c9fb47ba9107ffad268
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716990"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206571"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  ディストリビューション データベースの名前を指定します。 *distributor_db*は**sysname**、既定値はありません。 このパラメーターは、レプリケーション エージェントがパブリッシャーに接続するために使用します。  
   
  [  **@security_mode=**] *security_mode*  
- 実装されているセキュリティ モードを指定します。 このパラメーターは、キュー更新サブスクリプションのパブリッシャーに接続する場合、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーを使用する場合に、レプリケーション エージェントのみによって使用されます。 *security_mode*は**int**、これらの値のいずれかを指定できます。  
+ 実装されているセキュリティ モードを指定します。 このパラメーターは、キュー更新サブスクリプションまたは以外のパブリッシャーに接続するレプリケーション エージェントのみ使用が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *security_mode*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**0**|ディストリビューターの使用時のレプリケーション エージェント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーへの接続を認証します。|  
+|**0**|ディストリビューター側のレプリケーション エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用してパブリッシャーに接続します。|  
 |**1** (既定値)|ディストリビューター側のレプリケーション エージェントは Windows 認証を使用してパブリッシャーに接続します。|  
   
  [  **@login=**] **'***ログイン***'**  
@@ -89,7 +88,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  設定*encrypted_password*現在サポートされていません。 これを設定しようとしています。**ビット**パラメーターを**1** 、エラーが発生します。  
   
  [  **@thirdparty_flag =**] *thirdparty_flag*  
- パブリッシャーの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 *thirdparty_flag*は**ビット**値は次のいずれかを指定できます。  
+ パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] であるかどうかを指定します。 *thirdparty_flag*は**ビット**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -97,11 +96,11 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータベース|  
   
  [ **@publisher_type**=] **'***publisher_type***'**  
- パブリッシャーでないときに、パブリッシャーの種類を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 *publisher_type*が sysname で、次の値のいずれかを指定できます。  
+ パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外の場合に、パブリッシャーの種類を指定します。 *publisher_type*が sysname で、次の値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**MSSQLSERVER**<br /><br /> (既定値)。|指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。|  
+|**MSSQLSERVER**<br /><br /> (既定値)。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーを指定します。|  
 |**ORACLE**|標準の Oracle パブリッシャーを指定します。|  
 |**ORACLE GATEWAY**|Oracle ゲートウェイ パブリッシャーを指定します。|  
   

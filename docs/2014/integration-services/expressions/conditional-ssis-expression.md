@@ -1,11 +1,10 @@
 ---
-title: '? : (条件) (SSIS 式) | Microsoft Docs'
+title: '? :(条件付き)(SSIS 式) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - conditional operator (?:)
@@ -14,14 +13,14 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d1713e75acf4ad8e76cfdf309ede46523690b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f644dc95d5c137c8ee1cdb5ecf8b0e2659e28e40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197262"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811194"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (条件) (SSIS 式)
+# <a name="--conditional-ssis-expression"></a>? :(条件付き)(SSIS 式)
   ブール式の評価に基づいて 2 つの式のうちのいずれかの式を返します。 ブール式が TRUE に評価された場合、最初の式が評価対象となり、その結果が式の結果になります。 ブール式が FALSE に評価された場合、2 番目の式が評価対象となり、その結果が式の結果になります。  
   
 ## <a name="syntax"></a>構文  
@@ -58,9 +57,9 @@ boolean_expression?expression1:expression2
   
 -   **数値** *expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  
   
--   **文字列** *expression1* と *expression2* は、どちらも DT_STR または DT_WSTR の文字列データ型である必要があります。 2 つの式が評価される文字列データ型は、異なっていてもかまいません。 DT_WSTR データ型の結果の長さは、長いほうの引数の長さと同じです。  
+-   **文字列**両方*expression1*と*expression2*文字列データ型である必要があります。DT_STR または dt_wstr 型。 2 つの式が評価される文字列データ型は、異なっていてもかまいません。 DT_WSTR データ型の結果の長さは、長いほうの引数の長さと同じです。  
   
--   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME のいずれかのデータ型に評価される必要があります。  
+-   **日付、時刻、または日付/時刻**両方*expression1*と*expression2*次のデータ型のいずれかを評価する必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  
@@ -100,6 +99,6 @@ ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
- [演算子&#40;SSIS 式&#41;](operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   
   

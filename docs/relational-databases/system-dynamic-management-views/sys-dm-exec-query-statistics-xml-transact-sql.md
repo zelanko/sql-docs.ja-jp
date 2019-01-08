@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675101"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819104"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Showplan XML 部分の統計を使用します。 Null 値を許容します。|
 
 ## <a name="remarks"></a>コメント
-このシステム関数は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で利用可能です。
+このシステム関数は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で利用可能です。 サポート技術情報を参照してください[3190871。](https://support.microsoft.com/en-us/help/3190871)
 
 このシステム関数が両方の下で動作**標準**と**軽量**実行統計プロファイリング インフラストラクチャをクエリします。  
   
@@ -64,7 +64,7 @@ sys.dm_exec_query_statistics_xml(session_id)
   -  [統計プロファイルの設定](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  `query_post_execution_showplan`拡張イベント。  
   
-**ライトウェイト**統計プロファイリング インフラストラクチャが表示されます。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 と[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]と有効にすることができます。
+**ライトウェイト**統計プロファイリング インフラストラクチャは[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 と有効にすることができます。
   -  グローバルにトレースを使用して 7412 フラグを設定します。
   -  [*query_thread_profile*](https://support.microsoft.com/kb/3170113) 拡張イベント を使用します。
   

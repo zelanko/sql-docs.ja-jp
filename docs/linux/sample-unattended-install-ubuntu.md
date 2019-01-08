@@ -1,5 +1,6 @@
 ---
-title: Ubuntu 上の SQL Server の無人インストール |Microsoft Docs
+title: Ubuntu 上の SQL Server の無人インストール
+titleSuffix: SQL Server
 description: SQL Server のスクリプト サンプル - Ubuntu への無人インストール
 author: rothja
 ms.author: jroth
@@ -7,16 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: dc6d12a52c20bf3269f52fcc8d2ef87c4366061f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab93dde353b8576f682a2e032888da36a5743012
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626547"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160500"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu のサンプル: SQL Server の無人インストール スクリプト
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>サンプル:Ubuntu の無人インストール用の SQL Server のインストール スクリプト
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: OLE DB for Data Mining |Microsoft Docs
+title: OLE DB for Analysis Services データ マイニング |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 951557b7d4f1d02b5032db03ccf321f9279205c9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 8b567883a3031fe62d60072b049a278d7b2f8e4b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144399"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071799"
 ---
 # <a name="data-mining-programming---ole-db"></a>データ マイニングのプログラミング - OLE DB
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "50144399"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、この仕様を拡張し、新しいスキーマ行セットを追加しました。また、既存のスキーマ行セットに列を追加し、マイニング構造の作成と管理に使用する DMX (データ マイニング拡張機能) 言語に構文を追加しました。  
   
- **詳細情報:** [データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)、[マイニング構造の作成&#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)、[マイニング構造の ALTER &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)、[マイニング構造のドロップ&#40;DMX&#41;](../dmx/drop-mining-structure-dmx.md)  
+ **詳細情報。**[データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)、[マイニング構造の作成&#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)、[マイニング構造の ALTER &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)、[マイニング構造のドロップ&#40;DMX&#41;](../dmx/drop-mining-structure-dmx.md)  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のスキーマ行セット](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   

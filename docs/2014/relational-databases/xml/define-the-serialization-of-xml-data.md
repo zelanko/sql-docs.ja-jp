@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51f65bc99f5fa4ac3840c283c110594eeb48800c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 268204e17083d5ddfe02fefca97a3cea6c857c88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156112"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814554"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML データのシリアル化の定義
   XML データ型を SQL 文字列型やバイナリ型に明示的または暗黙にキャストすると、XML データ型のコンテンツはこのトピックで説明する規則に従ってシリアル化されます。  
@@ -34,10 +34,10 @@ ms.locfileid: "48156112"
  以下に例を示します。  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -48,13 +48,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
  以下に例を示します。  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
-<Δ/>  
+<??/>  
 ```  
   
  SQL の対象型が VARCHAR または NCHAR の場合、結果はバイト順マークまたは XML 宣言を付けずに、データベースの照合順序のコード ページに対応するエンコードでシリアル化されます。 対象型が小さすぎるか、または対象の照合順序のコード ページに値をマップできない場合、エラーが発生します。  
@@ -62,10 +62,10 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
  以下に例を示します。  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
 ```  
   
- 現在の照合順序のコード ページで Unicode 文字 Δ を表すことができない場合、エラーになる可能性があります。または、特定のエンコードで表されることになります。  
+ これは、エラーが発生する、現在の照合順序のコード ページは、Unicode 文字を表すことができない場合 [概要] タブ、または特定のエンコーディングを表します。  
   
  XML の結果がクライアント側に返されるときは、UTF-16 エンコードでデータが送信されます。 クライアント側のプロバイダーでは、API の規則に従ってデータを公開します。  
   
@@ -96,11 +96,11 @@ set @u = N'<a a="
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <a a="  
-    𐌀>">     
+    ????>">     
 </a>  
 ```  
   
@@ -118,7 +118,7 @@ set @x = N'<a>This example contains an entitized char: <.</a>'
 select @x.query('/a/text()')  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 This example contains an entitized char: <.  
@@ -130,7 +130,7 @@ This example contains an entitized char: <.
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 This example contains an entitized char: <.  

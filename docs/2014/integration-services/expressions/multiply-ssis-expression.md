@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '* (multiply operator)'
@@ -14,12 +13,12 @@ ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a357e02af88c1e3a0c9806b1f1a228881137397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4814d45b0cb4184356f6a5059d33c556e239361
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069852"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808954"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乗算) (SSIS 式)
   2 つの数値式を乗算します。  
@@ -63,6 +62,6 @@ ListPrice - (ListPrice * @[Discount%])
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
- [演算子&#40;SSIS 式&#41;](operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   
   

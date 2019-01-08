@@ -1,5 +1,5 @@
 ---
-title: Analysis Services での翻訳のサポート |Microsoft ドキュメント
+title: Analysis Services での翻訳のサポート |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 882434c2bd0a194a2ecbe21a62d3b22964b30f09
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18b0dd9990c863d6630e63969250bc60b3287255
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041836"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213631"
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services での翻訳のサポート
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34041836"
  翻訳は、ロケール識別子 (LCID)、オブジェクトの翻訳されたキャプション (たとえば、ディメンションまたは属性の名前)、およびオプションとして対象言語でのデータ値を提供する列へのバインドで構成されます。 複数の翻訳を保持できますが、特定の接続で使用できる翻訳は 1 つのみです。 モデルに埋め込むことができる翻訳の数に理論上の制限はありませんが、翻訳を 1 つ追加するごとにテストの複雑さが増すことと、すべての翻訳で同じ照合順序を共有する必要があることから、ソリューションを設計する際にはこれらの当然の制約に注意してください。  
   
 > [!TIP]  
->  Excel、Management Studio、および SQL Server Profiler などのクライアント アプリケーションを使用して、翻訳した文字列を取得することができます。 詳細については、「 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。  
+>  Excel、Management Studio、および SQL Server Profiler などのクライアント アプリケーションを使用して、翻訳した文字列を取得することができます。 詳細については、「 [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。  
   
 ## <a name="how-to-add-translated-metadata-to-model-in-analysis-services"></a>Analysis Services 内のモデルに翻訳済みメタデータを追加する方法  
  手順の詳細については、以下のリンクを参照してください。  
@@ -39,8 +39,8 @@ ms.locfileid: "34041836"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のグローバリゼーションのシナリオ](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [言語および照合順序と #40 です。Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [言語および照合順序 (Analysis Services)](../analysis-services/languages-and-collations-analysis-services.md)   
  [列の照合順序の設定または変更](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [グローバリゼーションのヒントとベスト プラクティス (&) #40 です。Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

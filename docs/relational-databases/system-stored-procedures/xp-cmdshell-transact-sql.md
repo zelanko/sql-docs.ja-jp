@@ -18,12 +18,12 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 252e3c5f2738b5f3e87632be86ba9f4b6c1cfbc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782800"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211521"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,20 +63,20 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  により、Windows プロセスが生成された**xp_cmdshell**と同じセキュリティ権限を持つ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウント。  
   
  **xp_cmdshell**同期的に動作します。 制御は、コマンド シェルのコマンドが完了するまで呼び出し元に返されません。  
   
  **xp_cmdshell**有効になっているし、ポリシー ベースの管理を使用するか、実行することによって無効になっていることができます**sp_configure**します。 詳細については、次を参照してください。[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)と[xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)します。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  場合**xp_cmdshell**バッチ内で実行され、エラーが返されます、バッチは失敗します。 これは新しい動作です。 以前のバージョンの[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッチは実行を続行します。  
   
 ## <a name="xpcmdshell-proxy-account"></a>xp_cmdshell プロキシ アカウント  
  メンバーでないユーザーによって呼び出されたとき、 **sysadmin**固定サーバー ロール、 **xp_cmdshell**という名前の資格情報に格納されているパスワードとアカウントの名前を使用して Windows に接続する **##xp_cmdshell_proxy_account ##** します。 このプロキシ資格情報が存在しない場合**xp_cmdshell**は失敗します。  
   
- プロキシ アカウントの資格情報を実行することによって作成できます**sp_xp_cmdshell_proxy_account**します。 このストアド プロシージャは、Windows のユーザー名とパスワードを引数にとります。 たとえば、次のコマンドは Windows ドメイン ユーザーのプロキシ資格情報を作成します。 `SHIPPING\KobeR` Windows パスワードを持つ`sdfh%dkc93vcMt0`します。  
+ プロキシ アカウントの資格情報を実行することによって作成できます**sp_xp_cmdshell_proxy_account**します。 このストアド プロシージャは、Windows のユーザー名とパスワードを引数にとります。 たとえば次のコマンドでは、Windows ドメイン ユーザー `SHIPPING\KobeR` 用のプロキシ資格情報が、Windows パスワード `sdfh%dkc93vcMt0` で作成されます。  
   
 ```  
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
@@ -129,7 +129,7 @@ EXEC master..xp_cmdshell 'dir *.exe''
 ```  
   
 ### <a name="b-returning-no-output"></a>B. 出力を返さない  
- 次の例では`xp_cmdshell`をクライアントに出力を返さずにコマンド文字列を実行します。  
+ 次の例では、`xp_cmdshell` を使用して、クライアントに出力を返さずにコマンド文字列を実行します。  
   
 ```  
 USE master;  
@@ -140,7 +140,7 @@ GO
 ```  
   
 ### <a name="c-using-return-status"></a>C. 戻りステータスを使用する  
- 次の例では、`xp_cmdshell`拡張ストアド プロシージャは、また、戻り値の状態を特定します。 リターン コード値が変数に格納されている`@result`します。  
+ 次の例では、`xp_cmdshell`拡張ストアド プロシージャは、また、戻り値の状態を特定します。 リターン コード値は、変数 `@result` に格納されます。  
   
 ```  
 DECLARE @result int;  
@@ -162,7 +162,7 @@ EXEC master..xp_cmdshell @cmd;
 ```  
   
 ### <a name="e-capturing-the-result-of-a-command-to-a-file"></a>E. コマンドの結果をファイルにキャプチャする  
- 次の例では、現在のディレクトリの内容をという名前のファイルに書き込みます`dir_out.txt`サーバーの現在のディレクトリにします。  
+ 次の例では、現在のディレクトリの内容を、現在のサーバー ディレクトリにある `dir_out.txt` というファイルに書き込みます。  
   
 ```  
 DECLARE @cmd sysname, @var sysname;  
@@ -171,7 +171,7 @@ SET @cmd = @var + ' > dir_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [汎用拡張ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscription_properties
@@ -17,12 +16,12 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d0e785c2deb018464058594daeae56d2e6ebc78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c81f2878c5573174b7f50f15f2ef2adf9329021a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615920"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808284"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +67,8 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前です。|  
 |**パブリケーション**|**sysname**|パブリケーションの名前。|  
 |**publication_type**|**int**|パブリケーションの種類です。<br /><br /> **0** = トランザクション<br /><br /> **1** = スナップショット<br /><br /> **2**マージを =|  
-|**publisher_login**|**sysname**|パブリッシャーで使用されたログイン ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**publisher_password**|**nvarchar (524)**|パブリッシャーで使用されるパスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](暗号化) 認証します。|  
+|**publisher_login**|**sysname**|パブリッシャーで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のログイン ID。|  
+|**publisher_password**|**nvarchar (524)**|パブリッシャーで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用の (暗号化されている) パスワードです。|  
 |**publisher_security_mode**|**int**|パブリッシャーで使用されているセキュリティ モードです。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
 |**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
 |**distributor_login**|**sysname**|ディストリビューター ログイン。|  

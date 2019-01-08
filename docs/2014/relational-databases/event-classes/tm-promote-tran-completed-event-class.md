@@ -1,11 +1,10 @@
 ---
-title: 'TM: Promote Tran Completed イベント クラス | Microsoft Docs'
+title: TM:Promote Tran Completed イベント クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 729988d6e1c7b1d87cf596537c26ee81b4add5c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 029b077b034d7b022ea1e27832624df86decb547
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103412"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823207"
 ---
-# <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed イベント クラス
-  TM: Promote Tran Completed イベント クラスは、PROMOTE TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。  
+# <a name="tm-promote-tran-completed-event-class"></a>TM:Promote Tran Completed イベント クラス
+  TM:Promote Tran Completed イベント クラスは、PROMOTE TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。  
   
-## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM: Promote Tran Completed イベント クラスのデータ列  
+## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM:Promote Tran Completed イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  

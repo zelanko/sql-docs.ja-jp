@@ -1,10 +1,10 @@
 ---
-title: ジョブ ステップのプロパティ ジョブ ステップの新しい ([全般] ページ) |Microsoft Docs
+title: ジョブ ステップのプロパティ:新しいジョブ ステップ ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepgeneral.f1
@@ -12,14 +12,14 @@ ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d20df5bbaaa7c9ba273b5796dc6a6b9e32bc287f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196078"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807125"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>ジョブ ステップのプロパティ: [新しいジョブ ステップ] ([全般] ページ)
+# <a name="job-step-properties-new-job-step-general-page"></a>ジョブ ステップのプロパティ:新しいジョブ ステップ ([全般] ページ)
   このページでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
   
  このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]** をクリックします。  

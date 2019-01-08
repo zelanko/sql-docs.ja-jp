@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07f5c483c5be88b8f764c076df4410c02e71e3e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ad7019b30555077d274af62156115cfb71944fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147902"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816274"
 ---
 # <a name="audit-fulltext-event-class"></a>Audit Fulltext イベント クラス
   **Audit Fulltext** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がフルテキスト フィルター デーモン プロセスに接続して通信する際に発生します。  

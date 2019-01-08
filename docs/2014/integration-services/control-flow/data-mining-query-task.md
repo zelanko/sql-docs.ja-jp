@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
@@ -16,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4eddd53df9d9a373a9a4101686dd016a09d20e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3e66397a61dc6cf5679e089bc03ce0e2d252cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225162"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785034"
 ---
 # <a name="data-mining-query-task"></a>データ マイニング クエリ タスク
   データ マイニング クエリ タスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に構築されたデータ マイニング モデルに基づいて、予測クエリを実行します。 予測クエリは、マイニング モデルを使用して新しいデータの予測を作成します。 たとえば、予測クエリにより、夏季のヨット販売数を予測したり、ヨットを購入する可能性の高い顧客の一覧を生成できます。  
@@ -52,11 +51,11 @@ ms.locfileid: "48225162"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [データ マイニング クエリ タスク エディター&#40;マイニング モデル タブ&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [[データ マイニング クエリ タスク エディター] &#40;[マイニング モデル] タブ&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [データ マイニング クエリ タスク エディター&#40;クエリ タブ&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [[データ マイニング クエリ タスク エディター] &#40;[クエリ] タブ&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [データ マイニング クエリ タスク エディター &#40;[出力] タブ&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [[データ マイニング クエリ タスク エディター] &#40;[出力] タブ&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  [データ マイニング クエリ変換エディター] には、[式] ページがありません。 代わりに **[プロパティ]** ウィンドウを使用して、データ マイニング クエリ タスクのプロパティのプロパティ式を作成、管理するツールにアクセスできます。  

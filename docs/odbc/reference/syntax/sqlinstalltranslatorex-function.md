@@ -20,18 +20,18 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3506e1421ef47c4bb74537f81b7007348895555b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742380"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212531"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 関数
 **準拠**  
- バージョンが導入されています。 ODBC 3.0  
+ バージョンが導入されました。ODBC 3.0  
   
- **概要**  
+ **まとめ**  
  **SQLInstallTranslatorEx**翻訳者に関する情報をシステム情報 (見つかりましたの Odbcinst.ini のセクションに追加されます。INI\ODBC トランスレーターのレジストリ キー)。  
   
  機能**SQLInstallTranslatorEx**にアクセスすることも[ODBCCONF します。EXE](../../../odbc/odbcconf-exe.md)します。  
@@ -73,9 +73,9 @@ BOOL SQLInstallTranslatorEx(
  *起こり*  
  [入力]要求の種類。 *起こり*値は次のいずれかを含める必要があります。  
   
- ODBC_INSTALL_INQUIRY: を問い合わせて、変換プログラムをインストールできます。  
+ ODBC_INSTALL_INQUIRY:翻訳者をインストールできる場所について照会します。  
   
- ODBC_INSTALL_COMPLETE: は、インストールの要求を完了します。  
+ ODBC_INSTALL_COMPLETE:インストール要求を完了します。  
   
  *lpdwUsageCount*  
  [出力]この関数が呼び出された後、変換プログラムの使用率カウントします。  

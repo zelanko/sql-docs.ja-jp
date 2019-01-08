@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], connections
@@ -14,12 +13,12 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd6904980e160b027147649751d076085307a3ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14bbe37b0b13c9325c56bd0892a4b660c202c313
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204462"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796004"
 ---
 # <a name="connect-components-in-a-data-flow"></a>データ フロー内でコンポーネントを連結する
   この手順は、データ フロー内のコンポーネントの出力を、同じデータ フロー内にある別のコンポーネントに連結する方法について説明します。  
@@ -42,8 +41,8 @@ ms.locfileid: "48204462"
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [追加またはデータ フローでコンポーネントを削除します。](data-flow.md)   
- [データ フロー コンポーネントでエラー出力を構成します。](../configure-an-error-output-in-a-data-flow-component.md)   
+ [データ フローでコンポーネントを追加または削除する](data-flow.md)   
+ [データ フロー コンポーネントでエラー出力を構成する](../configure-an-error-output-in-a-data-flow-component.md)   
  [データ フロー](data-flow.md)  
   
   

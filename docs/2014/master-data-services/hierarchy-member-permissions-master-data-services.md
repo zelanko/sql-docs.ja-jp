@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -14,12 +13,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4310f16b19fa85012844cc6e0fb71b2dce3ce6f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797044"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限 (マスター データ サービス)
   階層メンバーの権限はオプションであり、特定のメンバーに対するユーザーのアクセスを制限する場合にのみ使用します。 **[階層メンバー]** タブで権限を割り当てていなければ、ユーザーの権限は、 **[モデル]** タブで割り当てられた権限のみに基づいて決定されます。  
@@ -37,7 +36,7 @@ ms.locfileid: "48112048"
   
 |権限|説明|  
 |----------------|-----------------|  
-|**読み取り専用です。**|メンバーが表示されますが、ユーザーはメンバーを変更できません。 また、メンバーが属する明示的階層またはコレクションでメンバーを移動することもできません。<br /><br /> 注: を割り当てる場合**読み取り専用**へのアクセス許可**ルート**、下にあるメンバー**ルート**は読み取り専用ですただし、明示的階層およびコレクションで、ユーザーが移動できる。メンバーを**ルート**に新しいメンバーを追加することができます**ルート**します。|  
+|**読み取り専用です。**|メンバーが表示されますが、ユーザーはメンバーを変更できません。 また、メンバーが属する明示的階層またはコレクションでメンバーを移動することもできません。<br /><br /> 注:割り当てる場合**読み取り専用**へのアクセス許可**ルート**、下にあるメンバー**ルート**は読み取り専用ですただし、明示的階層およびコレクションで、ユーザーに移動するメンバー。**ルート**に新しいメンバーを追加することができます**ルート**します。|  
 |**Update**|メンバーが表示され、ユーザーはメンバーを変更できます。 また、メンバーが属する明示的階層またはコレクションでメンバーを移動することもできます。|  
 |**Deny**|メンバーが表示されません。|  
   
@@ -57,10 +56,10 @@ ms.locfileid: "48112048"
 -   1 つの階層ノードが割り当てられている場合**Update**または**読み取り専用**アクセス許可と別のノードが割り当てられている**Deny**、ノード内のメンバーは表示されません。  
   
 ## <a name="see-also"></a>参照  
- [階層メンバー権限を割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [権限の決定方法&#40;マスター データ サービス&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [階層メンバーの権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [権限の決定方法 (マスター データ サービス)](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)   
  [階層 (マスター データ サービス)](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [メンバーの権限を直ちに適用する&#40;マスター データ サービス&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [メンバー権限を直ちに適用する (マスター データ サービス)](immediately-apply-member-permissions-master-data-services.md)  
   
   

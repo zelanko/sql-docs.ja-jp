@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86f3e229893373589521a739b9a3cbdaceb290d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176352"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815734"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server フェールオーバー クラスターのインストール
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のフェールオーバー クラスターをインストールするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行してフェールオーバー クラスター インスタンスを作成し、構成する必要があります。  
@@ -51,7 +50,7 @@ ms.locfileid: "48176352"
   
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに追加する各ノードで、セットアップを実行し、ノードの追加機能を使用して、ノードを追加します。  
   
-##### <a name="option-2-advancedenterprise-installation"></a>オプション 2: 高度/エンタープライズ インストール  
+##### <a name="option-2-advancedenterprise-installation"></a>オプション 2:高度/エンタープライズ インストール  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 高度/エンタープライズ フェールオーバー クラスター インストールは、次の 2 つの手順で構成されています。  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの一部となる各ノードで、セットアップを実行し、フェールオーバー クラスターの準備機能を使用します。 この手順ではノードのクラスター化の準備を行いますが、この手順が終了しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスは操作できません。  

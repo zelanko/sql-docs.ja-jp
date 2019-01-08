@@ -20,18 +20,18 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98fb29265c17970fbcef0f21778d7a9130e52771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644520"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206971"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLGetFunctions**ドライバーが、特定の ODBC 関数をサポートするかどうかに関する情報を返します。 この関数には、ドライバー マネージャーでは実装されてドライバーで実装することもできます。 ドライバーが実装されている場合**SQLGetFunctions**、ドライバー マネージャーがドライバーで関数を呼び出します。 それ以外の場合、関数自体を実行します。  
   
 ## <a name="syntax"></a>構文  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="comments"></a>コメント  
  **SQLGetFunctions**は常に返します**SQLGetFunctions**、 **SQLDataSources**、および**SQLDrivers**はサポートされています。 これは、これらの関数は、ドライバー マネージャーで実装されるためです。 ドライバー マネージャーは、Unicode 関数が存在し、Unicode 関数は、ANSI 関数が存在する場合、対応する ANSI 関数にマップする場合は、ANSI の関数を対応する Unicode 関数にマップされます。 アプリケーションの使用方法については**SQLGetFunctions**を参照してください[インターフェイスの適合性レベル](../../../odbc/reference/develop-app/interface-conformance-levels.md)します。  
   
- 有効な値の一覧を次に*FunctionId* ISO 92 – 標準準拠のレベルに準拠している関数。  
+ 有効な値の一覧を次に*FunctionId* ISO 92 標準準拠のレベルに準拠している関数。  
   
 |FunctionId 値|FunctionId 値|  
 |----------|----------|  
@@ -109,14 +109,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- 有効な値の一覧を次に*FunctionId* Open Group 標準-コンプライアンスのレベルに準拠している関数。  
+ 有効な値の一覧を次に*FunctionId* Open Group 標準準拠のレベルに準拠している関数。  
   
 |FunctionId 値|FunctionId 値|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- 有効な値の一覧を次に*FunctionId*関数、ODBC 標準 – への準拠レベルに準拠しています。  
+ 有効な値の一覧を次に*FunctionId*関数、ODBC 標準準拠のレベルに準拠しています。  
   
 |FunctionId 値|FunctionId 値|  
 |-|-|  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS マクロ  
  SQL_FUNC_EXISTS (*SupportedPtr*、 *FunctionID*) マクロを使用して、ODBC 3 のサポートを確認 *.x*または以前の関数の後**SQLGetFunctions**で呼び出されましたが、 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS の引数。 アプリケーションの呼び出しで SQL_FUNC_EXISTS、 *SupportedPtr*引数に設定、 *SupportedPtr*で渡される*SQLGetFunctions*を使用して、 *FunctionID*引数に設定、 **#define**関数。 SQL_FUNC_EXISTS はそれ以外の場合、関数がサポートされている場合は SQL_TRUE および sql_false を受け取りますに返します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 を使用する場合 *.x*ドライバー、ODBC 3 *.x*ドライバー マネージャーの SQL_TRUE を返します**SQLAllocHandle**と**SQLFreeHandle**ため**SQLAllocHandle**にマップされて**SQLAllocEnv**、 **SQLAllocConnect**、または**SQLAllocStmt**と**SQLFreeHandle**にマップされて**SQLFreeEnv**、 **SQLFreeConnect**、または**SQLFreeStmt**します。 **SQLAllocHandle**または**SQLFreeHandle**で、 *HandleType* SQL_HANDLE_DESC の引数はサポートされていません、ただしが SQL_TRUE が関数では、返される場合でもありませんODBC 2 *.x*にここで割り当てる関数。  
   
 ## <a name="code-example"></a>コード例  

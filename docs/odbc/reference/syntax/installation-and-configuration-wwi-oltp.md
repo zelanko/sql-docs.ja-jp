@@ -13,18 +13,18 @@ ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b886bdf5ce769201addacfdfe9e2f22c6e8a15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c344315764eac32e2e63663f07b7f797571a0e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706010"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204691"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 関数
 **準拠**  
- バージョンで導入されました ODBC 3.81 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLSetDriverConnectInfo**接続文字列をアプリケーションの接続情報のトークンに設定に使用される**SQLDriverConnect**呼び出します。  
   
 ## <a name="syntax"></a>構文  

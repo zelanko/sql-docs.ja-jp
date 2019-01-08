@@ -1,18 +1,20 @@
 ---
-title: Azure Data Studio でノートブックを管理する方法 |Microsoft Docs
-description: ''
+title: Azure Data Studio で notebook を管理します。
+titleSuffix: SQL Server 2019 big data clusters
+description: Azure Data Studio でノートブックを管理する方法について説明します。 これは、保存、およびビッグ データ クラスター接続を変更するノートブックを開いてが含まれます。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ca756c81dcf54f42cb46be4b0f412ce9630814af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.custom: seodec18
+ms.openlocfilehash: 998692f56f75e890ef0b4f8e40e256f2ebbd54de
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48796745"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246591"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio でノートブックを管理する方法
 
@@ -22,8 +24,11 @@ ms.locfileid: "48796745"
 
 この記事で Azure Data Studio を使用するノートブック済みであることを前提としています。 ノートブックを作成する場合は、「 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。 Notebook を使用して、Azure Data Studio で、次の前提条件を満たす必要があります。
 
-- [SQL Server 2019 preview の最新のビッグ データ ツールをインストール](deploy-big-data-tools.md)します。
 - [ビッグ データ クラスター デプロイ](quickstart-big-data-cluster-deploy.md)します。
+- [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 の拡張機能**
+   - **kubectl**
 
 ## <a name="open-a-notebook"></a>ノートブックを開く
 
@@ -43,7 +48,7 @@ ms.locfileid: "48796745"
 
 ### <a name="command-palette"></a>コマンド パレット
 
-コマンドを使用して**ファイル: 開いている**(Windows) で Ctrl + Shift + P と Cmd + Shift + P (Mac) で入力してコマンド パレットから。
+コマンドを使用して**ファイル。開いている**(Windows) で Ctrl + Shift + P と Cmd + Shift + P (Mac) で入力してコマンド パレットから。
 
 ![コマンド パレットで File:Open を入力してファイルを開く ダイアログを開きます](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -57,7 +62,7 @@ ms.locfileid: "48796745"
 > 次のメソッドは、現在変更を保存しないのノートブックに。
 >
 > - **ファイルを保存**、**ファイルの名前を付けて保存.** と**ファイルすべて保存**ファイル メニューからコマンド。
-> - **ファイル: 保存**コマンド パレットで入力したコマンド。
+> - **ファイル:保存**コマンド パレットで入力したコマンド。
 
 ## <a name="change-the-big-data-cluster"></a>ビッグ データ クラスターを変更します。
 

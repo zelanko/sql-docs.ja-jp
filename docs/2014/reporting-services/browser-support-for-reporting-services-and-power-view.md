@@ -20,15 +20,15 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1f1b4d74d7ad7f34254a5c56c6dafc5fd2fb829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157042"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350492"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services と Power View ブラウザー サポートの計画 (Reporting Services 2014)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]、Web ブラウザーを使用してレポートを表示およびレポート マネージャーを実行します。 すべてのブラウザーですべてのレポート機能がサポートされているわけではありません。 このトピックでは、レポート マネージャーの管理機能、レポートの表示、Visual Studio のレポート ビューアー コントロールのサポートと要件について説明します。 また、サポートされるブラウザーで使用できる機能、認証要件、およびスクリプトの要件の概要も示します。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、Web ブラウザーを使用して、レポートを表示したりレポート マネージャーを実行したりします。 すべてのブラウザーですべてのレポート機能がサポートされているわけではありません。 このトピックでは、レポート マネージャーの管理機能、レポートの表示、Visual Studio のレポート ビューアー コントロールのサポートと要件について説明します。 また、サポートされるブラウザーで使用できる機能、認証要件、およびスクリプトの要件の概要も示します。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48157042"
 -   [Visual Studio での ReportViewer Web サーバー コントロールのブラウザー サポート](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Power View のブラウザーのシナリオ  
- サポートされるブラウザーとブラウザーのバージョンの一覧を[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]サポート、どのような種類のドキュメントが開かれるによって異なります。 Excel 2013 ブックと "**.rdlx**" ファイルでは、さまざまなコンポーネントが使用されます。  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] でサポートされているブラウザーとそのバージョンの一覧は、開くドキュメントの種類によって異なります。 Excel 2013 ブックと"**.rdlx**"ファイルは、さまざまなコンポーネントを利用します。  
   
 |ドキュメントの種類|環境|ブラウザー サポート|  
 |-------------------|-----------------|---------------------|  
@@ -57,11 +57,11 @@ ms.locfileid: "48157042"
   
 -   この表は、SharePoint 2010 と SharePoint 2013 に適用されます。  
   
--   SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](http://technet.microsoft.com//library/cc263526\(office.15\).aspx)(http://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
+-   SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
   
--   SharePoint 2010 のブラウザー サポートの詳細については、次を参照してください。 [(SharePoint Server 2010) のブラウザー サポートを計画する](http://technet.microsoft.com/library/cc263526\(office.14\).aspx)(http://technet.microsoft.com/library/cc263526(office.14).aspx)します。  
+-   SharePoint 2010 のブラウザー サポートの詳細については、次を参照してください。 [(SharePoint Server 2010) のブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.14\).aspx)(https://technet.microsoft.com/library/cc263526(office.14).aspx)します。  
   
-|**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 ~ 10.9**|  
+|**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**(デスクトップ) 用の Internet Explorer 11**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|  
 |**(デスクトップ) 用の Internet Explorer 10**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|  
@@ -74,14 +74,14 @@ ms.locfileid: "48157042"
 >  "32 ビット" はブラウザーのことであり、オペレーティング システムではありません。 たとえば、32 ビット版の Internet Explorer 9 を 64 ビット版の Windows 7 で使用できます。  
   
 #### <a name="inprivate-browsing-feature-in-internet-explorer"></a>Internet Explorer での InPrivate ブラウズ機能  
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] では、[!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 および Internet Explorer 9 の InPrivate ブラウズ機能はサポートされていません。 InPrivate ブラウズの詳細については、次を参照してください[InPrivate ブラウズとは何ですか?。](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] では、[!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 および Internet Explorer 9 の InPrivate ブラウズ機能はサポートされていません。 InPrivate ブラウズの詳細については、次を参照してください[InPrivate ブラウズとは何ですか?。](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing)。  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Excel Services または SharePoint Online の Excel Web App の power View  
- 次の表に、サポートされているブラウザー バージョンでは、[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]ユーザーが Excel Services を実行している SharePoint サーバー上の Power View シートで、Excel 2013 ブックを開いたとき。  
+ 次の表は、Excel Services を実行している SharePoint Server で、Power View シートが含まれた Excel 2013 ブックをユーザーが開く場合に、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] でサポートされるブラウザーのバージョンをまとめたものです。  
   
--   SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](http://technet.microsoft.com/library/cc263526\(office.15\).aspx)(http://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
+-   SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
   
-|**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 ~ 10.9**|  
+|**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**(デスクトップ) 用の Internet Explorer 11**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|  
 |**(デスクトップ) 用の Internet Explorer 10**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|  
@@ -94,19 +94,19 @@ ms.locfileid: "48157042"
  **(\*)** Chrome は、Netscape プラグイン API (NPAPI)、Silverlight で使用されるサポートを中止します。 Power View は、Silverlight に依存します。  詳細については、 [NPAPI の最終的なカウント ダウンに関するページ](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html)を参照してください。  
   
 ##  <a name="bkmk_reportmanager"></a> レポート マネージャーのブラウザーの要件 (ネイティブ モード)  
- 現在の実行に使用できるサポートされているブラウザーの一覧を次に、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ネイティブ モードのレポート マネージャーでレポートとレポート サーバーを管理します。  
+ 次に示しているのは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードのレポート マネージャーを実行してレポートとレポート サーバーを管理するために使用できるブラウザーの最新の一覧です。  
   
 |ブラウザー|  
 |-------------|  
 |Internet Explorer 7 以降 (スクリプト機能オン)|  
-|Mozilla Firefox (最新公開リリース バージョン)|  
+|Mozilla FireFox (最新公開リリース バージョン)|  
 |Apple Safari (最新公開リリース バージョン)|  
 |Google Chrome (最新公開リリース バージョン)|  
   
 ##  <a name="bkmk_reportviewer"></a> レポートを表示するためのブラウザー要件  
- レポート ビューアーでサポートされているブラウザーと機能の最新の一覧を次に示します。 レポート ビューアーからのレポートの表示をサポートしている[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート マネージャーおよび SharePoint ライブラリです。  
+ レポート ビューアーでサポートされているブラウザーと機能の最新の一覧を次に示します。 レポート ビューアーでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーおよび SharePoint ライブラリからのレポートの表示がサポートされています。  
   
-|**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 ~ 10.9**|**iPad の iOS 6 ~ 7**|  
+|**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|**iPad の iOS 6 ~ 7**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**(デスクトップ) 用の Internet Explorer 11**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|サポートされていません|サポートされていません|  
 |**(デスクトップ) 用の Internet Explorer 10**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|サポートされていません|サポートされていません|  
@@ -117,7 +117,7 @@ ms.locfileid: "48157042"
 |**Apple Safari (最新公開リリース バージョン)**|サポートされていません|サポートされていません|サポートされていません|サポートされていません|サポートされていません|32 ビット、64 ビット|機能制限付きでサポートされている<sup>(1)</sup>|  
 |**Google Chrome (最新公開リリース バージョン)**|32 ビット|32 ビット|32 ビット|32 ビット|32 ビット|サポートされていません|サポートされていません|  
   
- **<sup>(1)</sup>** 次の機能がサポートされています。  
+ **<sup>(1)</sup>**  次の機能がサポートされます。  
   
 -   PDF 形式および TIFF 形式へのエクスポート  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48157042"
   
 -   詳細については、次を参照してください。 [Microsoft Surface デバイスと Apple iOS デバイスでのビュー Reporting Services レポート](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)します。  
   
- **注** Macintosh コンピューターからレポート サーバーにアクセスする場合は、Safari を使用することをお勧めします。 統合されている SharePoint 製品を使用しているかどうかは[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[ブラウザー サポート (Windows SharePoint Services) を計画する](http://go.microsoft.com/fwlink/?LinkId=183583)します。  
+ **注** Macintosh コンピューターからレポート サーバーにアクセスする場合は、Safari を使用することをお勧めします。 統合されている SharePoint 製品を使用しているかどうかは[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[ブラウザー サポート (Windows SharePoint Services) を計画する](https://go.microsoft.com/fwlink/?LinkId=183583)します。  
   
 ### <a name="url-access-for-viewing-reports"></a>URL アクセスを使用したレポートの表示  
  レポート マネージャーを使用せずに直接レポートを表示するには、レポートおよびレポート ビューアーにリンクする URL アクセスを使用します。 URL アクセスでは、さまざまなブラウザーがサポートされます。  
@@ -169,15 +169,15 @@ ms.locfileid: "48157042"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**ブラウザー**|**Windows 8** および **Windows 8.1**|**Windows 7**|**Windows Server 2012** および **2012 R2**|**Windows Server 2008** および **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 ~ 10.9**|**注**|  
-|**(デスクトップ用 Internet Explorer 11**|はい|はい|はい|サポートされていません|サポートされていません|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。|  
-|**(デスクトップ) 用の Internet Explorer 10**|はい|はい|はい|サポートされていません|サポートされていません|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。|  
-|**Internet Explorer 9**|サポートされていません|はい|サポートされていません|はい|はい|はい|Internet Explorer では、ReportViewer のすべての機能をサポートしています。|  
-|**Internet Explorer 8.0**|サポートされていません|はい|サポートされていません|はい|[はい]<sup>1</sup>|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。 <sup>1</sup>|  
-|**Internet Explorer 7.0**|サポートされていません|はい|サポートされていません|はい|[はい]<sup>1</sup>|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。 <sup>1</sup>|  
-|**Firefox (最新公開リリース バージョン)**|はい|はい|はい|はい|はい|サポートされていません|印刷とズームはサポートされていません。|  
+|**ブラウザー**|**Windows 8** および **Windows 8.1**|**Windows 7**|**Windows Server 2012** および **2012 R2**|**Windows Server 2008** および **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 10.9**|**注**|  
+|**(デスクトップ用 Internet Explorer 11**|はい|[はい]|はい|サポートされていません|サポートされていません|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。|  
+|**(デスクトップ) 用の Internet Explorer 10**|はい|[はい]|はい|サポートされていません|サポートされていません|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。|  
+|**Internet Explorer 9**|サポートされていません|はい|サポートされていません|はい|[はい]|はい|Internet Explorer では、ReportViewer のすべての機能をサポートしています。|  
+|**Internet Explorer 8.0**|サポートされていません|はい|サポートされていません|はい|可<sup>1</sup>|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。 <sup>1</sup>|  
+|**Internet Explorer 7.0**|サポートされていません|はい|サポートされていません|はい|可<sup>1</sup>|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。 <sup>1</sup>|  
+|**Firefox (最新公開リリース バージョン)**|はい|[はい]|[はい]|[はい]|はい|サポートされていません|印刷とズームはサポートされていません。|  
 |**Safari (最新公開リリース バージョン)**|サポートされていません|サポートされていません|サポートされていません|サポートされていません|サポートされていません|はい|印刷とズームはサポートされていません。<br /><br /> パラメーター化されたレポートで日付を選択するために使用するカレンダー コントロールは、このブラウザーでは無効になっています。 ユーザーは、使用する日付をパラメーター プロンプト領域に手動で入力する必要があります。|  
-|**Chrome (最新公開リリース バージョン)**|はい|はい|はい|はい|はい|サポートされていません|印刷とズームはサポートされていません。|  
+|**Chrome (最新公開リリース バージョン)**|はい|[はい]|[はい]|[はい]|はい|サポートされていません|印刷とズームはサポートされていません。|  
   
  <sup>1</sup>標準モード、Internet Explorer 7.0 および 8.0 は表示されませんレポートに斜線します。 レポートで斜線を使用している場合は、ASP.NET ページを Internet Explorer の Quirks モードで実行するように設定します。 これを行うには、検索、 \<!DOCTYPE > タグで、ASP.NET ページ。 また、マスター ページを使用している場合は、.master ファイルでこのタグを探します。 このタグは次のようになっています。  
   
@@ -191,9 +191,9 @@ ms.locfileid: "48157042"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```  
   
- Internet Explorer の互換モードの詳細については、次を参照してください。[ドキュメント互換性の定義](http://go.microsoft.com/fwlink/?LinkId=180380)(http://go.microsoft.com/fwlink/?LinkId=180380)します。  
+ Internet Explorer の互換モードの詳細については、次を参照してください。[ドキュメント互換性の定義](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380)します。  
   
- ReportViewer コントロールの使用の詳細については、次を参照してください。[展開レポートと ReportViewer コントロール](http://msdn.microsoft.com/library/ms251723.aspx)(http://msdn.microsoft.com/library/ms251723.aspx)します。  
+ ReportViewer コントロールの使用の詳細については、次を参照してください。[展開レポートと ReportViewer コントロール](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx)します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services ツール](tools/reporting-services-tools.md)   

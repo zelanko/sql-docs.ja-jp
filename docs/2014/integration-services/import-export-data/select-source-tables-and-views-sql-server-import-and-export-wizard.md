@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.selectsourcetablesandviews.f1
@@ -13,12 +12,12 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f99b94c133ba2a8bfd8bbe6d7b78bd455061409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074fb9aff14a2d173658c0a8ed8e31740e957a37
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050138"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760314"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>[コピー元のテーブルおよびビューを選択]\(SQL Server インポートおよびエクスポート ウィザード)
   使用して、**選択元のテーブルおよびビュー**ページでテーブルと変換先にデータ ソースからコピーされるビューを指定します。  
@@ -40,7 +39,7 @@ ms.locfileid: "48050138"
  コピー元のテーブルごとに、一覧からコピー先のテーブルを選択します。  
   
 > [!NOTE]  
->  この時点で、変換先テーブルを作成するウィザードで一時停止した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]か別のツール、新しいテーブルが使用できる変換先テーブルの一覧に直ちに表示ではありません。 変換先テーブルの一覧を更新するには、手順に 2 つのページをバックアップ、**変換先の選択**ページで、移行先データベースを再度選択し、もう一度ステップ前進、**選択元のテーブルおよびビュー**します。  
+>  この時点でウィザードを一時停止し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または別のツールを使用して [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の変換先テーブルを作成した場合、新しいテーブルは使用可能な変換先テーブルの一覧にすぐには表示されません。 変換先テーブルの一覧を更新するには、手順に 2 つのページをバックアップ、**変換先の選択**ページで、移行先データベースを再度選択し、もう一度ステップ前進、**選択元のテーブルおよびビュー**します。  
   
 ### <a name="other-options"></a>その他のオプション  
  **マッピングを編集します。**  

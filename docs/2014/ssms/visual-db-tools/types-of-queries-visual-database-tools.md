@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -16,12 +16,12 @@ ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e12595ddb5074ac780e997f2d0255e57c4470aa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165232"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807114"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>クエリの種類 (Visual Database Tools)
   クエリおよびビュー デザイナーは、選択、結果の挿入、値の挿入、更新、削除、テーブルの作成など、いくつかのクエリに対応した組み込み機能を用意しています。また、UNION、フルテキスト検索、CASE 式によるクエリもサポートしています。  
@@ -51,7 +51,7 @@ ms.locfileid: "48165232"
  [更新クエリの作成 (Visual Database Tools)](create-update-queries-visual-database-tools.md)  
  テーブルを更新するクエリの作成方法を説明します。  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>参照  
  [クエリのプロパティ (Visual Database Tools)](query-properties-visual-database-tools.md)  
  クエリを設計する場合に使用できるプロパティについて説明します。  
   

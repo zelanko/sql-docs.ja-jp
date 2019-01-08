@@ -1,5 +1,5 @@
 ---
-title: ロール |Microsoft Docs
+title: Analysis Services 表形式モデルのロール |Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975691"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072169"
 ---
 # <a name="roles"></a>ロール
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,14 +63,14 @@ ms.locfileid: "45975691"
   
  行フィルターを定義できるのは、読み取りおよび読み取りと処理の権限を持つロールに対してだけです。 既定では、ある特定のテーブルに対して行フィルターが定義されていない場合、読み取り権限または読み取りと処理の権限を持つロールのメンバーは、別のテーブルからのクロスフィルター処理が適用されていない限り、テーブル内のすべての行を照会できます。  
   
- ある特定のテーブルに対して行フィルターが定義されると、DAX 式 (これは TRUE/FALSE 値に評価される必要がある) によりその特定のロールのメンバーが照会できる行が定義されます。 DAX 式に含まれていない行は照会できません。 たとえば、Sales ロールのメンバーの場合、 *=Customers [Country] = “USA”* という行フィルター式を持つ Customers テーブルで表示されるのは、米国内の顧客だけです。  
+ ある特定のテーブルに対して行フィルターが定義されると、DAX 式 (これは TRUE/FALSE 値に評価される必要がある) によりその特定のロールのメンバーが照会できる行が定義されます。 DAX 式に含まれていない行は照会できません。 たとえば、Sales ロールのメンバーの場合、次の行を持つ Customers テーブル フィルター、式、 *= Customers [Country] ="USA"*、Sales ロールのメンバーは、米国内の顧客を参照してください。 できます。  
   
  行フィルターは、指定行と関連行に適用されます。 1 つのテーブルに複数のリレーションシップがある場合、フィルターによりセキュリティがアクティブなリレーションシップに適用されます。 行フィルターには、関連テーブルに対して定義された他の行フィルターと類似する点があります。次に例を示します。  
   
 |テーブル|DAX 式|  
 |-----------|--------------------|  
-|Region|=Region[Country]="USA"|  
-|ProductCategory|=ProductCategory[Name]="Bicycles"|  
+|Region|= リージョン [Country] ="USA"|  
+|ProductCategory|= ProductCategory [Name]「自転車」を =|  
 |トランザクション|=Transactions[Year]=2008|  
   
  Transactions テーブルに対するこれらの権限の実質的な影響は、顧客が米国内に存在し、製品カテゴリが自転車で、しかも年度が 2008 であるデータ行をメンバーが照会できることです。 メンバーは、顧客が米国外にいるか、製品が自転車でないか、または年度が 2008 年でないトランザクションは照会できません。ただし、これらの権限を付与された別のロールのメンバーである場合を除きます。  
@@ -82,7 +82,7 @@ ms.locfileid: "45975691"
   
  動的なセキュリティを実装する場合、DAX 式に次の関数を使用すると、現在ログオンしているユーザーの名前、または接続文字列の CustomData プロパティが返されます。  
   
-|機能|説明|  
+|関数|説明|  
 |--------------|-----------------|  
 |[USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|現在ログオンしているユーザーの domain\username を返します。|  
 |[CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|接続文字列の CustomData プロパティを返します。|  
@@ -117,7 +117,7 @@ ms.locfileid: "45975691"
 |7|Sales and Marketing|  
   
 ##  <a name="bkmk_testroles"></a> Testing roles  
- モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]** をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳細についてを参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)します。  
+ モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]** をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳細については、「 [[Excel で分析]](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)と同じコンピューター上に Excel がインストールされている必要があります。  
   
 ##  <a name="bkmk_rt"></a> 関連タスク  
   
@@ -127,7 +127,7 @@ ms.locfileid: "45975691"
   
 ## <a name="see-also"></a>参照  
  [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Excel で分析します。](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
+ [[Excel で分析]](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
  [USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
  [LOOKUPVALUE 関数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
  [CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  

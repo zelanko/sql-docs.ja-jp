@@ -20,18 +20,18 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9055fa6c277ebcbeccae909ddd397d39d62cf04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b04dc2554b820fc6ac8344457754aae984d4b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846060"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213111"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLDataSources**データ ソースに関する情報を返します。 この関数は、ドライバー マネージャーによってのみ実装されます。  
   
 ## <a name="syntax"></a>構文  
@@ -90,7 +90,7 @@ SQLRETURN SQLDataSources(
   
 |SQLSTATE|[エラー]|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|(DM) ドライバー マネージャー固有の情報メッセージ。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
+|01000|一般的な警告|(DM) ドライバー マネージャーに固有の情報メッセージ。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データで、右側が切り捨てられました|(DM) バッファー \* *ServerName*完全なデータ ソース名を取得するのに十分な大きさがありません。 そのため、名前が切り捨てられました。 全体のデータ ソース名の長さが返される\* *NameLength1Ptr*します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> (DM) バッファー \**説明*を完全なドライバーの説明を返すのに十分な大きさがありません。 そのため、説明が切り捨てられました。 切り詰められていないデータ ソースの説明の長さが返される **NameLength2Ptr*します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |HY000|一般的なエラー|(DM) エラーが発生する固有の SQLSTATE がなかったし、対象の実装に固有の SQLSTATE が定義されていません。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリの割り当てエラー|(DM)、ドライバー マネージャーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  

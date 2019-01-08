@@ -1,5 +1,5 @@
 ---
-title: 作成し、ロールの管理 |Microsoft Docs
+title: 作成し、Analysis Services 表形式モデルでロールの管理 |Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883eab47796f5cb09d5993fa2b2570cdda3cd2ae
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 093197db8257cf9be261658f1828783fa01d7cc2
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099653"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072219"
 ---
 # <a name="create-and-manage-roles"></a>作成し、ロールの管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "50099653"
   
     |権限|説明|  
     |----------------|-----------------|  
-    |**なし**|メンバーは、モデル スキーマを変更したり、データをクエリしたりすることはできません。|  
+    |**None**|メンバーは、モデル スキーマを変更したり、データをクエリしたりすることはできません。|  
     |**読み取り**|メンバーは、(行フィルターに基づいて) データをクエリできますが、モデル スキーマを変更することはできません。|  
     |**読み取りと処理**|メンバーは、(行レベル フィルターに基づいて) データをクエリでき、処理およびすべて処理の各操作も実行できますが、モデル スキーマを変更することはできません。|  
     |**[処理]**|メンバーは、処理およびすべて処理の各操作を実行できます。 モデル スキーマを変更することはできませんし、データをクエリすることもできません。|  

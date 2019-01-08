@@ -1,5 +1,5 @@
 ---
-title: 2 次属性に基づく属性メンバーの並べ替え |Microsoft ドキュメント
+title: 2 次属性に基づく属性メンバーの並べ替え |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720920da4dbd935bca493e3a2e76ab9a683fff21
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 010e416115e793c46f8744c7724dc164ca01ec87
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019349"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951694"
 ---
-# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>レッスン 4、5、2 次属性に基づく並べ替え属性メンバー
+# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>レッスン 4-5 - 2 次属性に基づく並べ替え属性メンバー
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 レッスン 3 では、名前とキー値に基づいて属性メンバーを並べ替える方法を学習しました。 また、属性メンバーと並べ替え順序に影響する複合メンバー キーの使用方法も学習しました。 詳細については、「 [Date ディメンションの変更](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)」を参照してください。 ただし、属性の名前とキーのどちらを使用しても目的の順序での並べ替えを実現できない場合は、2 次属性を使用して目的の順序で並べ替えるようにすることもできます。 属性間にリレーションシップを定義すると、2 次属性を使用して、1 次属性のメンバーを並べ替えることができます。  
   
 属性リレーションシップは、属性間のリレーションシップまたは依存関係を定義します。 1 つのリレーショナル テーブルから派生しているディメンションでは、通常、キー属性を介してすべての属性が互いに関連付けられています。 これは、ディメンションのすべての属性によって、関連する各メジャー グループのファクト テーブル内のファクトにディメンションのキー属性によってリンクされているメンバーの情報が提供されるためです。 複数のテーブルから派生しているディメンションでは、通常、テーブル間の属性が結合キーに基づいて関連付けられています。 基になるデータでサポートされている場合は、関連属性を使用して並べ替え順序を指定できます。 たとえば、関連属性に並べ替えのロジックを提供する新しい属性を作成できます。  
   
-ディメンション デザイナーでは、属性間に新しいリレーションシップを定義できるほか、既定のリレーションシップを変更してパフォーマンスを向上させることができます。 属性リレーションシップを作成するときの主な制限は、参照元の属性のメンバーに対応する値が参照先の属性に複数あってはならない点です。 2 つの属性の間にリレーションシップを定義する際には、リレーションシップを変更できるようにするのか、または固定するのかを定義できます。どちらに指定するかは、メンバー間のリレーションシップが時間と共に変化するかどうかによります。 たとえば、従業員が別の販売地域に移動することはありますが、都市が別の州に移動することはありません。 リレーションシップを固定すると、ディメンションの処理が進むたびに属性の集計が再計算されるようなことはありません。 しかし、メンバー間のリレーションシップが変わる場合は、常にディメンションを処理する必要があります。 詳細については、「 [属性リレーションシップ](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」、「 [属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md)」、「 [属性リレーションシップのプロパティの構成](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)」、および「 [ユーザー定義階層の属性間での属性リレーションシップの指定](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)」を参照してください。  
+ディメンション デザイナーでは、属性間に新しいリレーションシップを定義できるほか、既定のリレーションシップを変更してパフォーマンスを向上させることができます。 属性リレーションシップを作成するときの主な制限は、参照元の属性のメンバーに対応する値が参照先の属性に複数あってはならない点です。 2 つの属性の間にリレーションシップを定義する際には、リレーションシップを変更できるようにするのか、または固定するのかを定義できます。どちらに指定するかは、メンバー間のリレーションシップが時間と共に変化するかどうかによります。 たとえば、従業員が別の販売地域に移動することはありますが、都市が別の州に移動することはありません。 リレーションシップを固定すると、ディメンションの処理が進むたびに属性の集計が再計算されるようなことはありません。 しかし、メンバー間のリレーションシップが変わる場合は、常にディメンションを処理する必要があります。 詳細については、「 [属性リレーションシップ](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」、「 [属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md)」、「 [属性リレーションシップのプロパティの構成](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)」、および「 [ユーザー定義階層の属性間での属性リレーションシップの指定](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)」を参照してください。  
   
 このトピックの実習では、基になるディメンション テーブルの既存の列に基づき、 **Date** ディメンションに新しい属性を定義します。 この新しい属性を使用して、アルファベット順に並んでいるカレンダーの月メンバーを日付順に並べ替えます。 また、 **Commute Distance** 属性メンバーを並べ替える名前付き計算に基づいて、 **Customer** ディメンションに新しい属性を定義します。 次のトピックでは、属性リレーションシップを使用してクエリのパフォーマンスを向上させる方法について学習します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "34019349"
   
     次の図のように、月が日付順に並べ替えられました。  
   
-    ![時間においてこの順にユーザー階層を変更](../analysis-services/media/l4-memberproperties-3.gif "時間においてこの順にユーザーの階層構造の変更")  
+    ![時系列順でのユーザー階層を変更](../analysis-services/media/l4-memberproperties-3.gif "ユーザー階層順の変更")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Customer ディメンションの属性リレーションシップおよび並べ替え順序の定義  
   
@@ -115,10 +115,10 @@ ms.locfileid: "34019349"
   
     次の図のように、属性階層のメンバーは、通勤距離の長い順に論理的な順序で並べ替えられました。  
   
-    ![Commute Distance 属性階層を再度並べ替えられる](../analysis-services/media/l4-memberproperties-5.gif "Re-sorted Commute Distance 属性階層")  
+    ![Commute Distance 属性階層の並べ替えをし](../analysis-services/media/l4-memberproperties-5.gif "Re-sorted Commute Distance 属性階層")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[ユーザー定義階層の属性間での属性リレーションシップの指定](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[ユーザー定義階層の属性間での属性リレーションシップの指定](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   
   

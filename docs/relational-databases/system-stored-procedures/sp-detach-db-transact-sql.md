@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825670"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201911"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  データベースをデタッチするとき、そのデータベースに関連付けられているフルテキスト インデックス ファイルを削除しないことを指定します。 *KeepFulltextIndexFile*は、 **nvarchar (10)** 値、既定値は**true**します。 場合*KeepFulltextIndexFile*は**false**データベースに関連付けられているフルテキスト インデックスのすべてのファイルおよびデータベースが読み取り専用でない限り、フルテキスト インデックスのメタデータを削除します。 NULL の場合、または**true**、フルテキスト関連するメタデータが保持されます。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **@keepfulltextindexfile**パラメーターは将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新規の開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く修正してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -114,7 +114,7 @@ GO
 ```  
   
 > [!NOTE]  
->  現在ユーザー データベースから直ちに、または指定された数 (秒単位) の使用しても、ROLLBACK オプション: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
+>  現在ユーザー データベースから直ちに、または指定された数 (秒単位) の使用しても、ROLLBACK オプション。ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*します。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 ## <a name="reattaching-a-database"></a>データベースの再アタッチ  
  デタッチされたファイルはそのまま残り、FOR ATTACH または FOR ATTACH_REBUILD_LOG オプションを指定した CREATE DATABASE によって再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
@@ -129,7 +129,7 @@ GO
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
- 次の例のデタッチ、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースし、フルテキスト インデックス ファイルおよびフルテキスト インデックスのメタデータが保持されます。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースをデタッチし、フルテキスト インデックス ファイルおよびフルテキスト インデックスのメタデータは保持します。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
   
 ```  
 exec sp_detach_db @dbname='AdventureWorks2012'  

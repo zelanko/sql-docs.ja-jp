@@ -21,23 +21,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f6d23e30a589c4924925b834b310921d17ba57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818940"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540781"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   1 つ以上の行を削除したコミット済みトランザクションの現在の状態を出力します。 ガベージ コレクションのアイドル スレッドは、1 分ごとに、または前回のガベージ コレクション サイクル以降にコミット済み DML トランザクションの数が内部しきい値を超えたときに起動されます。 ガベージ コレクション サイクルの一環として、コミット済みトランザクションは、generation と関連付けられている 1 つ以上のキューに移動されます。 古いバージョンを生成したトランザクションは、次のようにして、16 の generation にわたり 16 トランザクションごとの単位にグループ化されます。  
   
--   generation 0: 最も古いアクティブなトランザクションより前にコミットされたトランザクションがすべて格納されます。 これらのトランザクションによって生成された行バージョンは、直ちにガベージ コレクションの対象となります。  
+-   generation 0:これは、最も古いアクティブなトランザクションより前にコミットされたすべてのトランザクションを格納します。 これらのトランザクションによって生成された行バージョンは、直ちにガベージ コレクションの対象となります。  
   
--   generation 1 ～ 14: 最も古いアクティブなトランザクションより後のタイムスタンプを持つトランザクションが格納されます。 行バージョンに対してガベージ コレクションを実行することはできません。 各 generation には最大 16 のトランザクションを保持できます。 これらの generation に存在できるトランザクション数は、合計 224 (14 * 16) になります。  
+-   generation 1 ～ 14:最も古いアクティブなトランザクションより後のタイムスタンプを持つトランザクションを格納します。 行バージョンに対してガベージ コレクションを実行することはできません。 各 generation には最大 16 のトランザクションを保持できます。 これらの generation に存在できるトランザクション数は、合計 224 (14 * 16) になります。  
   
--   generation 15: 最も古いアクティブなトランザクションより後のタイムスタンプを持つ、残りのトランザクションは generation 15 に格納されます。 generation 0 と同様、generation 15 にもトランザクション数の制限はありません。  
+-   Generation 15:タイムスタンプが最も古いアクティブなトランザクションより後の残りのトランザクションは generation 15 に移動します。 generation 0 と同様、generation 15 にもトランザクション数の制限はありません。  
   
  メモリが不足している場合、ガベージ コレクション スレッドは、最も古いアクティブなトランザクションのヒントを積極的に更新します。これにより、ガベージ コレクションが強制されます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47818940"
 |cycle_id|**bigint**|ガベージ コレクション サイクルの一意の識別子|  
 |ticks_at_cycle_start|**bigint**|サイクルが開始した時点におけるティック|  
 |ticks_at_cycle_end|**bigint**|サイクルが終了した時点におけるティック|  
-|base_generation|**bigint**|データベースの現在のベース generation 値 ガベージ コレクションのトランザクションを識別するために使用される、最も古いアクティブなトランザクションのタイムスタンプを表します。 最も古いアクティブなトランザクションの ID は、16 ごとに更新されます。 たとえば、トランザクション id として 124、125、126 がある場合。 139、値は 124 になります。 また、たとえばトランザクション 140 を追加した場合、この値は 140 になります。|  
+|base_generation|**bigint**|データベースの現在のベース generation 値 ガベージ コレクションのトランザクションを識別するために使用される、最も古いアクティブなトランザクションのタイムスタンプを表します。 最も古いアクティブなトランザクションの ID は、16 ごとに更新されます。 たとえば、トランザクション id として 124、125、126 がある.139、値は 124 になります。 また、たとえばトランザクション 140 を追加した場合、この値は 140 になります。|  
 |xacts_copied_to_local|**bigint**|トランザクションのパイプラインからデータベースの generation 配列にコピーされたトランザクションの数|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|generation ごとのトランザクションの数|  
   

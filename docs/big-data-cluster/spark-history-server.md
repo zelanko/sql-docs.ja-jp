@@ -1,20 +1,21 @@
 ---
-title: デバッグと Spark History Server の SQL Server のビッグ データ クラスター上で Spark アプリケーションの診断
-description: デバッグと Spark History Server の SQL Server のビッグ データ クラスター上で Spark アプリケーションの診断
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Spark アプリケーションのデバッグ/診断します。
+titleSuffix: SQL Server 2019 big data clusters
+description: Spark History Server を使用して、デバッグおよび SQL Server 2019 ビッグ データ クラスター上で実行されている Spark アプリケーションを診断します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: a9416f774e84d6b458e14aeb28db2ab39ad8543e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460867"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029746"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>デバッグと Spark History Server の SQL Server のビッグ データ クラスター上で Spark アプリケーションの診断
 
@@ -25,7 +26,7 @@ ms.locfileid: "49460867"
 オープン ソースから、Spark 履歴サーバーのユーザー エクスペリエンスは、情報、ジョブに固有のデータとビッグ データ クラスターのジョブ グラフやデータ フローの対話型の視覚化を含むが強化されています。 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Spark History Server Web URL で UI を開く
-開いている、次の URL を参照して、Spark History Server を交換して`<Ipaddress>`と`<Port>`ビッグ データ クラスター固有の情報。 詳細についてを参照できます:[ビッグ データ クラスターの SQL Server の展開](quickstart-big-data-cluster-deploy.md)
+開いている、次の URL を参照して、Spark History Server を交換して`<Ipaddress>`と`<Port>`ビッグ データ クラスター固有の情報。 詳細についてを参照できます。[SQL Server のビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -41,31 +42,31 @@ Spark History Server web UI をようになります。
 
 + チェック、**入力**、**出力**と**テーブル操作**を個別にタブを選択します。
 
-    ![データ タブ](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Spark History Server のデータ タブ](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + ボタンをクリックしてすべての行をコピー**コピー**します。
 
-    ![データのコピー](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![すべての行をコピーします。](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + ボタンをクリックして、すべてのデータを CSV ファイルとして保存**csv**します。
 
-    ![保存データ](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![データを CSV ファイルとして保存します。](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + フィールドにキーワードを入力して検索**検索**、検索結果がすぐに表示されます。
 
-    ![データの検索](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![キーワードを使用した検索します。](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + テーブルを並べ替え、詳細については、表示する行を展開するプラス記号をクリックします。 または行を折りたたむにマイナス記号をクリックします。 列ヘッダーをクリックします。
 
-    ![データ テーブル](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![データ テーブルの機能](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + ボタンをクリックして、1 つのファイルをダウンロード**部分的なダウンロード**選択したファイルがローカルの場所にダウンロードし、右側にある配置します。 ファイルがこれ以上存在しない場合、エラー メッセージを表示する新しいタブが開きます。
 
-    ![データ ダウンロードの行](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![データ行をダウンロードします。](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + 完全なパスまたは相対パスを選択してコピー、**完全パスのコピー**、**相対パスのコピー**ダウンロード メニューを展開します。 Azure data lake ストレージのファイルの**Azure ストレージ エクスプ ローラーで開く**が Azure Storage Explorer を起動します。 サインインするときに、正確なフォルダーを探します。
 
-    ![データ パスのコピー](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![完全なまたは相対パスをコピーします。](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + 1 つのページに表示する行多くをテーブルの下に移動の数がすぎるときにページをクリックします。 
 
@@ -99,11 +100,11 @@ Spark History Server web UI をようになります。
 
 + クリックして、ジョブを再生、**再生**ボタンをクリックし、[停止] ボタンをクリックして、いつでも停止できます。 タスクの表示を再生するときに、別の状態を表示する色。
 
-    + 成功した緑色: ジョブが正常に完了します。
-    + 再試行のオレンジ色: ジョブの最終結果には影響しません、失敗したタスクのインスタンス。 これらのタスクが重複していますか、後で成功する可能性がある再試行インスタンス。
-    + 実行されている場合は青色: タスクが実行されています。
-    + 待機中の場合は白またはスキップされた: 実行するには、タスクが待機しているまたはステージがスキップされます。
-    + 赤色は失敗しました: タスクが失敗しました。
+    + 緑色は成功しました。ジョブが正常に完了しました。
+    + オレンジ色の再試行。ジョブの最終結果には影響しません、失敗したタスクのインスタンス。 これらのタスクが重複していますか、後で成功する可能性がある再試行インスタンス。
+    + 青の実行:タスクが実行されています。
+    + 待機中の場合は白またはスキップします。実行するには、タスクが待機しているまたはステージがスキップされます。
+    + 赤が失敗しました。タスクが失敗しました。
 
     ![グラフの色のサンプルを実行しています。](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
@@ -161,13 +162,13 @@ Spark History Server web UI をようになります。
 ### <a name="data-skew"></a>データ スキュー
 をクリックして**データ スキュー**タブの対応する指定されたパラメーターに基づいて傾斜したタスクが表示されます。 
 
-+ **パラメーターを指定する**-最初のセクションには、データ スキューを検出するために使用されると、パラメーターが表示されます。 組み込みの規則は、: 読み取られたタスク データが 3 回の読み取り、タスクの平均データよりも大きいと、読み取られたタスク データは 10 MB を超える。 傾斜したタスクの独自の規則を定義する場合、パラメーターを選択できます、**傾斜したステージ**、および**Char 傾斜**セクションはそれに応じて更新されます。 
++ **パラメーターを指定する**-最初のセクションには、データ スキューを検出するために使用されると、パラメーターが表示されます。 組み込みの規則は次のとおりです。読み取られたタスク データが読み取られる、タスクの平均データの 3 回より大きいと、読み取られたタスク データは 10 MB を超える。 傾斜したタスクの独自の規則を定義する場合、パラメーターを選択できます、**傾斜したステージ**、および**Char 傾斜**セクションはそれに応じて更新されます。 
 
 + **ステージの傾斜**-2 番目のセクションには、ステージで、上記で指定した条件を満たすタスクが傾斜が表示されます。 ステージに 1 つ以上の傾斜したタスクがある場合、傾斜したステージ テーブルには最も傾斜タスク (たとえば、データ傾斜の最大データ) のみが表示されます。 
 
     ![データ スキュー セクション 2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **グラフの傾斜**傾斜ステージ テーブルの行を選択すると、– タスクのディストリビューションの詳細は、データの読み取りと実行時間に基づくスキューのグラフが表示されます。 傾斜のタスクが赤でマークされているされ、通常のタスクは、青色でマークされます。 パフォーマンスの考慮事項に関するグラフには、最大 100 個のサンプル タスクのみが表示されます。 右下のパネルには、タスクの詳細が表示されます。
++ **グラフの傾斜**- 傾斜ステージ テーブルの行を選択すると、タスクのディストリビューションの詳細は、データの読み取りと実行時間に基づくスキューのグラフが表示されます。 傾斜のタスクが赤でマークされているされ、通常のタスクは、青色でマークされます。 パフォーマンスの考慮事項に関するグラフには、最大 100 個のサンプル タスクのみが表示されます。 右下のパネルには、タスクの詳細が表示されます。
 
     ![データ スキューの 3 番目のセクション](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 

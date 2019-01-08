@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], reversing
@@ -13,12 +12,12 @@ ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 572a0fbe10594226a755a4f7ecb59c2e52ef6c82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24e1c1fea5404d984f05391624fd244960c0eec3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140678"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822996"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>トランザクションを破棄する (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、管理者は、アクションを元に戻す必要があるときにトランザクションを破棄できます。 トランザクションの例としては、属性値の変更、階層の移動、メンバーの削除などがあります。  
@@ -27,7 +26,7 @@ ms.locfileid: "48140678"
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-reverse-a-transaction"></a>トランザクションを破棄するには  
   
@@ -46,7 +45,7 @@ ms.locfileid: "48140678"
 7.  確認のダイアログ ボックスで **[OK]** をクリックします。 破棄されたトランザクションを記録するために、別のトランザクションがグリッドに追加されます。  
   
 ## <a name="see-also"></a>参照  
- [トランザクション&#40;マスター データ サービス&#41;](../../2014/master-data-services/transactions-master-data-services.md)   
- [メンバーまたはコレクションを再アクティブ化&#40;マスター データ サービス&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [トランザクション (マスター データ サービス)](../../2014/master-data-services/transactions-master-data-services.md)   
+ [メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
   

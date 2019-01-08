@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089854"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810954"
 ---
 # <a name="replicate-identity-columns"></a>ID 列のレプリケート
   IDENTITY プロパティを列に割り当てると、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、その ID 列を含むテーブルに挿入された新しい行に対して連続する番号が自動的に生成されます。 詳細については、「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)」を参照してください。 ID 列は主キーの一部に含まれる場合があるため、ID 列の値が重複しないようにすることが重要です。 複数のノードで更新されるレプリケーション トポロジで ID 列を使用するには、レプリケーション トポロジ内の各ノードで異なる範囲の ID 値を使用して、重複が生じないようにする必要があります。  
@@ -57,7 +56,7 @@ ms.locfileid: "48089854"
  挿入が **db_owner** 固定データベース ロールのメンバーによって実行されている場合は、パブリッシャーがその挿入後に ID 範囲をすべて使用すると、新しい範囲が自動的に割り当てられます。 挿入がそのロール以外のユーザー、ログ リーダー エージェント、マージ エージェントによって実行されている場合は、**db_owner** ロールのメンバーであるユーザーが [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql) を実行する必要があります。 トランザクション パブリケーションの場合は、ログ リーダー エージェントを実行して新しい範囲を自動で割り当てる必要があります (既定ではエージェントは継続して実行されます)。  
   
 > [!WARNING]  
->  大規模な一括挿入処理中、レプリケーション トリガーが起動されるのは、挿入の行ごとではなく 1 度だけです。 Id 範囲がなど、大規模な挿入時になくなった場合、insert ステートメントが失敗する可能性を`INSERT INTO`ステートメント。  
+>  大規模な一括挿入処理中、レプリケーション トリガーが起動されるのは、挿入の行ごとではなく 1 度だけです。 その結果、大規模な挿入処理中に ID 範囲が使い果たされると、`INSERT INTO` ステートメントなど、挿入ステートメントが失敗する場合があります。  
   
 |データ型|範囲|  
 |---------------|-----------|  

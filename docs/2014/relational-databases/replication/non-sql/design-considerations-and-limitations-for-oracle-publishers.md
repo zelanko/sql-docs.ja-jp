@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
@@ -13,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191472"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810894"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
   Oracle データベースからのパブリッシュは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースからのパブリッシュとほぼ同じように機能するように設計されています。 ただし、以下の制限および問題に注意してください。  
@@ -60,7 +59,7 @@ ms.locfileid: "48191472"
   
 -   入れ子になったテーブル  
   
--   ビュー  
+-   Views  
   
 -   パッケージ、パッケージ本体、プロシージャ、およびトリガー  
   
@@ -104,7 +103,7 @@ ms.locfileid: "48191472"
   
  以下の問題についても考慮に入れてください。  
   
--   Oracle および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、NULL の扱いが異なります。Oracle では、NULL を許容する列に NULL 値が指定された複数の行を許可し、一意の制約またはインデックスに含めることができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
+-   Oracle と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]NULL の処理が異なります。Oracle では、NULL を許容し、一意の制約またはインデックスに含まれる列の NULL 値を持つ複数の行を許可します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
   
 -   一意性をテストする場合、フィールドの後続の空白は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では無視されますが、Oracle では無視されません。  
   

@@ -20,18 +20,18 @@ ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeff68aaa4e4901820054a9bf3079efc7d74cebc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f070b1494cb54d026d65f5a432c5faf834c38aa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818850"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201741"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 関数
 **準拠**  
- バージョンが導入されています。 ODBC 2.0  
+ バージョンが導入されました。ODBC 2.0  
   
- **概要**  
+ **まとめ**  
  **SQLWritePrivateProfileString**システム情報の Odbc.ini サブキーに値の名前とデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
@@ -39,10 +39,10 @@ ms.locfileid: "47818850"
 ```  
   
 BOOL SQLWritePrivateProfileString(  
-     LPCSTR     lpszSection,  
-     LPCSTR     lpszEntry,  
-     LPCSTR     lpszString,  
-     LPCSTR     lpszFilename);  
+     LPCSTR     lpszSection,  
+     LPCSTR     lpszEntry,  
+     LPCSTR     lpszString,  
+     LPCSTR     lpszFilename);  
 ```  
   
 ## <a name="arguments"></a>引数  

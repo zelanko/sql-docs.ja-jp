@@ -1,5 +1,5 @@
 ---
-title: '[全般] プロパティ |Microsoft Docs'
+title: Analysis Services の [全般] プロパティ |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906212"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072389"
 ---
 # <a name="general-properties"></a>全般プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「[Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 特に記載のない限り、多次元サーバー モードおよびテーブル サーバー モードが対象となります。  
+ **適用対象:** 多次元および表形式サーバー モードでは、それ以外の場合に記載されていない場合  
   
 ## <a name="non-specific-category"></a>不特定カテゴリ  
  **AdminTimeout**  
@@ -64,7 +64,7 @@ ms.locfileid: "48906212"
  データを保存するディレクトリの名前を指定する文字列プロパティです。  
   
  **DeploymentMode**  
- Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログ ボックス、メッセージ、およびドキュメントで "サーバー モード" と呼ばれます。 このプロパティは、Analysis Services のインストール時に選択したサーバー モードに基づいて、SQL Server セットアップによって構成されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
+ Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログ ボックス、メッセージ、およびドキュメントの「サーバー モード」と呼ばれます。 このプロパティは、Analysis Services のインストール時に選択したサーバー モードに基づいて、SQL Server セットアップによって構成されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
   
  このプロパティの有効値を以下に示します。  
   

@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8266418969de6249f0e2313ad7368a8054576c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644699"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213771"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 潜在的な障害を検出するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関する診断データと正常性の情報をキャプチャします。 プロシージャは繰り返しモードで実行され、結果は定期的に送信されます。 このプロシージャは、通常の接続または DAC 接続から呼び出すことができます。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,29 +64,29 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**component_type**|**sysname**|行の情報が含まれるかどうかを示します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス レベルのコンポーネントまたは Always On 可用性グループ。<br /><br /> インスタンス (instance)<br /><br /> Always On: 可用性グループ|  
 |**component_name**|**sysname**|コンポーネントの名前または可用性グループの名前を示します。<br /><br /> システム<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> イベント<br /><br /> *\<可用性グループの名前 >*|  
 |**state**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|状態列について説明します。 状態列の値に対応する説明は、次のとおりです。<br /><br /> 0: 不明な<br /><br /> 1: クリーン<br /><br /> 2: 警告<br /><br /> 3: エラー|  
+|**state_desc**|**sysname**|状態列について説明します。 状態列の値に対応する説明は、次のとおりです。<br /><br /> 0:Unknown<br /><br /> 1: クリーン<br /><br /> 2: 警告<br /><br /> 3: エラー|  
 |**data**|**varchar (max)**|コンポーネントに固有のデータを指定します。|  
   
  5 つのコンポーネントの説明は以下のとおりです。  
   
--   **システム**: システムの観点から、スピンロック、深刻な処理の条件、応答していないタスク、ページ フォールト、および CPU 使用率ではデータを収集します。 この情報から、全体的な正常性状態の推奨設定が生成されます。  
+-   **システム**:スピンロック、深刻な処理の条件、応答していないタスク、ページ フォールト、および CPU 使用率のシステムの観点からデータを収集します。 この情報から、全体的な正常性状態の推奨設定が生成されます。  
   
--   **リソース**: 物理メモリと仮想メモリ、バッファー プール、ページ、キャッシュ、およびその他のメモリ オブジェクトのリソースの観点からデータを収集します。 この情報は、全体的な正常性状態推奨事項を生成します。  
+-   **リソース**:物理メモリと仮想メモリ、バッファー プール、ページ、キャッシュ、およびその他のメモリ オブジェクトのリソースの観点からデータを収集します。 この情報は、全体的な正常性状態推奨事項を生成します。  
   
--   **query_processing**: 型、CPU を集中的なセッション、およびブロックのタスクを待機する、ワーカー スレッド、タスク、クエリ処理の観点からデータを収集します。 この情報は、全体的な正常性状態推奨事項を生成します。  
+-   **query_processing**:ワーカー スレッド、タスク、待機の種類、CPU を集中的なセッション、およびブロックのタスクで、クエリ処理の観点からデータを収集します。 この情報は、全体的な正常性状態推奨事項を生成します。  
   
--   **io_subsystem**: IO のデータを収集します。 このコンポーネントは診断データのほかに、IO サブシステムのみについてクリーンまたは警告の正常性状態を生成します。  
+-   **io_subsystem**:IO でデータを収集します。 このコンポーネントは診断データのほかに、IO サブシステムのみについてクリーンまたは警告の正常性状態を生成します。  
   
--   **イベント**: データを収集し、エラーとリング バッファーの例外に関する詳細情報を含む、サーバーによって記録された対象のイベントで、ストアド プロシージャからのサーフェスは、メモリ、スケジューラ モニター、外のメモリ ブローカーに関するイベントのバッファーをリングバッファー プール、スピンロック、セキュリティ、および接続します。 イベント状態としては、常に 0 が表示されます。  
+-   **イベント**:エラーとリング バッファーの例外、メモリ、スケジューラ モニター、バッファー プール、スピンロック、外のメモリ ブローカーに関するリング バッファー イベントに関する詳細情報を含む、サーバーによって記録された対象のイベントのデータと、ストアド プロシージャからのサーフェスを収集しますセキュリティ、および接続します。 イベント状態としては、常に 0 が表示されます。  
   
--   **\<可用性グループの名前 >**: 指定された可用性グループのデータを収集 (場合 component_type ="常に : AvailabilityGroup")。  
+-   **\<可用性グループの名前 >**:指定された可用性グループのデータを収集 (場合 component_type ="常に : AvailabilityGroup")。  
   
 ## <a name="remarks"></a>コメント  
 障害の観点からは、system、resource、query_processing の各コンポーネントは障害の検出に利用され、io_subsystem および events コンポーネントは診断目的のみに利用されます。  
   
 次の表は、各コンポーネントと関連する正常性状態をマップしたものです。  
   
-|Components|クリーン (1)|警告 (2)|エラー (3)|不明 (0)|  
+|コンポーネント|クリーン (1)|警告 (2)|エラー (3)|不明 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |システム|x|x|x||  
 |resource|x|x|x||  

@@ -20,18 +20,18 @@ ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f9eed345d3d6483cd1b47f8141e00d2a0164eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 197c22a160b30fc9c1958e90470c174e3888a053
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680820"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201981"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 関数
 **準拠**  
- ODBC のバージョンが導入されました: 1.0  
+ バージョンが導入されました。ODBC 1.0  
   
- **概要**  
+ **まとめ**  
  **SQLWriteDSNToIni**システム情報をデータ ソースを追加します。  
   
 ## <a name="syntax"></a>構文  

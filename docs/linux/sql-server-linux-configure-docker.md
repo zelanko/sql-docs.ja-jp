@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657986"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266063"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -46,11 +46,11 @@ ms.locfileid: "51657986"
 たとえば、次のコマンドでは、RHEL を使用する最新の SQL Server 2019 プレビュー コンテナーは取得します。
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ::: moniker-end
@@ -253,7 +253,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 この手法では、共有し、Docker の外部でホスト上のファイルを表示することもできます。
 
 > [!IMPORTANT]
-> この時点では、SQL Server Linux イメージ上で Mac 上の Docker のホスト ボリュームのマッピングはサポートされていません。 データ ボリューム コンテナーを使用してください。 この制限に固有の`/var/opt/mssql`ディレクトリ。 正常にマウントされたディレクトリ動作からの読み取り。 たとえば、– v を使用して、Mac 上でホスト ディレクトリをマウントでき、ホスト上にある .bak ファイルからバックアップを復元できます。
+> この時点では、SQL Server Linux イメージ上で Mac 上の Docker のホスト ボリュームのマッピングはサポートされていません。 データ ボリューム コンテナーを使用してください。 この制限に固有の`/var/opt/mssql`ディレクトリ。 正常にマウントされたディレクトリ動作からの読み取り。 たとえば、-v を使用して、Mac 上でホスト ディレクトリをマウントでき、ホスト上にある .bak ファイルからバックアップを復元できます。
 
 ### <a name="use-data-volume-containers"></a>データ ボリューム コンテナーを使用します。
 

@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 934262fb9f5e1e67ebf475310518f924aebbc4c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196812"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351472"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 の開発者向けリファレンス
   以下の機能とテクノロジによって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのデータにアクセスするアプリケーションの開発が可能になります。  
@@ -25,7 +25,7 @@ ms.locfileid: "48196812"
 ## <a name="programming-reference-sections"></a>プログラミング リファレンスのセクション  
  ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[共通言語ランタイム&#40;CLR&#41;統合のプログラミング概念](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[ネイティブ XML](http://technet.microsoft.com/library/ms191274.aspx)  
+ ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[ネイティブ XML](https://technet.microsoft.com/library/ms191274.aspx)  
   
  ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [SQL Server Native Client プログラミング](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
@@ -62,10 +62,10 @@ ms.locfileid: "48196812"
 ## <a name="other-programming-resources"></a>その他のプログラミング リソース  
  データ アクセス アプリケーションの開発では、以下に示すテクノロジの 1 つ以上が必要になる可能性があります。  
   
- [Visual Studio でのデータにアクセスします。](http://go.microsoft.com/fwlink/?LinkId=129902)  
+ [Visual Studio でのデータにアクセスします。](https://go.microsoft.com/fwlink/?LinkId=129902)  
   
- [SQL Server Driver for PHP](http://go.microsoft.com/fwlink/?LinkID=119889)  
+ [SQL Server Driver for PHP](https://go.microsoft.com/fwlink/?LinkID=119889)  
   
- [JDBC](http://go.microsoft.com/fwlink/?LinkId=129903)  
+ [JDBC](https://go.microsoft.com/fwlink/?LinkId=129903)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb493378240f8c536b0af1c1b0ff5cf3bc93c042
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558539"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545221"
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルの Connect セクション
 ハンドラーの既定の動作では、すべての接続を拒否します。 **接続**セクションでは、その動作の例外を指定します。 たとえば、すべての場合、**接続**セクションが存在しない場合、または空の場合、既定で接続を確立できませんでした。  

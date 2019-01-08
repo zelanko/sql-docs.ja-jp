@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692140"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205751"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>作成し、SQL Server on Linux の可用性グループの構成
 
@@ -378,7 +378,7 @@ sudo systemctl restart mssql-server
 -   [読み取り専用ルーティングの可用性グループ (SQL Server) の構成します。](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [作成または可用性グループ リスナー (SQL Server) の構成](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one--two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>例 1-2 レプリカ構成のみのレプリカ (外部のクラスターの種類)
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>例 1-2 レプリカ構成のみのレプリカ (外部のクラスターの種類)
 
 この例では、構成専用レプリカを使用する 2 つのレプリカの可用性グループを作成する方法を示します。
 
@@ -424,7 +424,7 @@ sudo systemctl restart mssql-server
     GO
    ```
 
-#### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>例 2 ~ 3 レプリカの読み取り専用ルーティング (外部のクラスターの種類)
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>読み取り専用ルーティング (外部のクラスターの種類) でレプリカを 3 つの 2 つの例
 
 この例では 3 つの完全なレプリカとどのように読み取り専用ルーティングは、最初に作成する可用性グループの一部として構成できます。
 
@@ -482,7 +482,7 @@ sudo systemctl restart mssql-server
     
 3.  3 番目のレプリカに対して、手順 2. を繰り返します。
 
-#### <a name="example-three--two-replicas-with-read-only-routing-none-cluster-type"></a>例 3-2 レプリカの読み取り専用ルーティング (None クラスターの種類)
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>例 3-2 レプリカの読み取り専用ルーティング (None クラスターの種類)
 
 この例では、None のクラスターの種類を使用して、2 つのレプリカ構成の作成を示します。 フェールオーバーする必要はありません、読み取りスケールのシナリオに使用されます。 これは実際には、プライマリ レプリカだけでなく、読み取り専用ルーティング、ラウンド ロビンの機能を使用してリスナーを作成します。
 

@@ -1,20 +1,22 @@
 ---
-title: SQL Server のビッグ データ クラスターへ、データベースの復元 |Microsoft Docs
-description: この記事では、ビッグ データの SQL Server クラスターのマスター インスタンスにデータベースを復元する方法を示します。
+title: データベースの復元
+titleSuffix: SQL Server 2019 big data clusters
+description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスにデータベースを復元する方法を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/09/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3a15d63b38ac92a6dcdba7363d1fa5ccd05534b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: 854f31f6ac04e9767ff1fc12cfb04f5d28c2aa13
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700730"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030826"
 ---
-# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server ビッグ データ クラスターのマスター インスタンスにデータベースを復元します。
+# <a name="restore-a-database-into-the-sql-server-2019-big-data-cluster-master-instance"></a>SQL Server 2019 ビッグ データ クラスターのマスター インスタンスにデータベースを復元します。
 
 この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスに既存のデータベースを復元する方法について説明します。 使用して、バックアップ、コピー、およびアプローチを復元することをお勧めします。
 

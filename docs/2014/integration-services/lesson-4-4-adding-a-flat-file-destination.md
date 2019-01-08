@@ -1,24 +1,23 @@
 ---
-title: '手順 4 : フラット ファイル変換先の追加 | Microsoft Docs'
+title: 手順 4:フラット ファイル変換先の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a29d4953919644100b5863c3f4766895ea356c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c43885de9e2a6945a8a24263765df8ee8e26920a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075582"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823376"
 ---
-# <a name="step-4-adding-a-flat-file-destination"></a>手順 4 : フラット ファイル変換先の追加
+# <a name="step-4-adding-a-flat-file-destination"></a>手順 4:フラット ファイル変換先の追加
   Lookup Currency Key 変換のエラー出力では、参照操作に失敗したデータ行がスクリプト変換にリダイレクトされます。 スクリプト変換ではスクリプトが実行され、発生したエラーに関するさらに詳しい情報を記述したエラーの説明が取得されます。  
   
  ここでは、後の処理に向けて、失敗した行に関するすべての情報を区切りファイルに保存します。 失敗した行を保存するには、フラット ファイル接続マネージャーで、フラット ファイル変換先を追加し、エラー データを保存するテキスト ファイルを構成する必要があります。 フラット ファイル変換先が使用するフラット ファイル接続マネージャーでプロパティを設定することにより、フラット ファイル変換先がテキスト ファイルをフォーマットする方法と書き込む方法を指定できます。 詳細については、「 [フラット ファイル接続マネージャー](connection-manager/file-connection-manager.md) 」および「 [フラット ファイル変換先](data-flow/flat-file-destination.md)」を参照してください。  
@@ -47,7 +46,7 @@ ms.locfileid: "48075582"
   
 11. [オプション] ペインで、 **[列]** をクリックします。  
   
-     変換元データ ファイルの列に加え、新しい 3 つの列 (ErrorCode、ErrorColumn、および ErrorDescription) が表示されます。 これらの列は、Lookup Currency Key 変換のエラー出力と Get Error Description 変換のスクリプトによって生成されたものです。これらの列は、失敗した行の問題を解決するために使用できます。  
+     ソース データ ファイルからの列に加え、いることを確認、3 つの新しい列が存在します。ErrorCode、ErrorColumn、および ErrorDescription です。 これらの列は、Lookup Currency Key 変換のエラー出力と Get Error Description 変換のスクリプトによって生成されたものです。これらの列は、失敗した行の問題を解決するために使用できます。  
   
 12. **[OK]** をクリックします。  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48075582"
 15. **[OK]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- [手順 5: レッスン 4 のチュートリアル パッケージのテスト](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [手順 5:レッスン 4 のチュートリアル パッケージのテスト](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

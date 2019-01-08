@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545421"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>フィルター条件式  
  マイニング モデルで使用するケースを制限するフィルターを定義できます。 フィルターは、ケース テーブルの列、入れ子になったテーブルの行、またはその両方に適用できます。  
   
- フィルター条件式は、簡略化された DMX 述語で、WHERE 句に似ています。 フィルター式は、基本的な算術演算子、スカラー、および列名を使用する式に制限されます。 ただし、EXISTS 演算子は例外です。これは、サブクエリに対して少なくとも 1 行が返される場合は true に評価されます。 述語は、AND、OR、および NOT という一般的な論理演算子を使用して組み合わせることができます。  
+ フィルター条件式は、簡略化された DMX 述語で、WHERE 句に似ています。 フィルター式は、基本的な算術演算子、スカラー、および列名を使用する式に制限されます。 ただし、EXISTS 演算子は例外です。これは、サブクエリに対して少なくとも 1 行が返される場合は true に評価されます。 述語は、共通の論理演算子を使用して結合できます。AND、OR、および NOT です。  
   
  マイニング モデルで使用されるフィルターの詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
   
@@ -143,10 +143,10 @@ USING <algorithm> [(<parameter list>)]
  パラメーター リストの構文は次のとおりです。  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
-## <a name="example-1-add-a-model-to-a-structure"></a>例 1: 構造へのモデルの追加  
+## <a name="example-1-add-a-model-to-a-structure"></a>例 1 : 構造体へのモデルを追加します。  
  次の例は、Naive Bayes マイニング モデルを追加、 **New Mailing**属性の最大数が 50 というマイニング構造および制限します。  
   
 ```  
@@ -161,7 +161,7 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>例 2: 構造へのフィルター選択されたモデルの追加  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>例 2:構造体へのフィルター選択されたモデルを追加します。  
  次の例では、マイニング モデルでは、`Naive Bayes Women`を**New Mailing**マイニング構造です。 新しいモデルの基本構造は、例 1 で追加されたマイニング モデルと同じです。ただし、このモデルでは、マイニング構造のケースを 51 歳以上の女性の顧客だけに制限します。  
   
 ```  
@@ -177,7 +177,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>例 3: 入れ子になったテーブルを含む構造へのフィルター選択されたモデルの追加  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>例 3:入れ子になったテーブルを含む構造体にフィルター選択されたモデルを追加します。  
  次の例では、変更した Market Basket マイニング構造にマイニング モデルを追加します。 追加する例で使用されるマイニング構造が変更された、**リージョン**列は、顧客の地域の属性が含まれていると、 **Income Group**を使用して顧客の収入を分類します。値**高**、**中程度**、または**低**します。  
   
  マイニング構造には、顧客が購入した品目を一覧表示する、入れ子になったテーブルも含まれます。  

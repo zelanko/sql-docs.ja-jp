@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.location.file
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffa9cad3ef994f3306a485d5a911f2e03eff0f2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36833c6eb5fc588edb2d12716ba439140b8a1cbe
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211442"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327333"
 ---
 # <a name="edit-a-breakpoint-location"></a>ブレークポイントの位置の編集
   ブレークポイントの位置では、ブレークポイントを設定する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイル内の行や文字を指定します。 ブレークポイントの位置を編集して、ブレークポイントを別の位置や別のスクリプトに移動できます。  
@@ -45,5 +43,3 @@ ms.locfileid: "48211442"
  [ブレークポイント アクションの指定](specify-a-breakpoint-action.md)   
  [ブレークポイント条件の指定](specify-a-breakpoint-condition.md)   
  [ブレークポイント フィルターの指定](specify-a-breakpoint-filter.md)  
-  
-  

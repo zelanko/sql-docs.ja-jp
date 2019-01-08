@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87fb9b43b723fa489e42f05f5f4f727bafd18dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45aadf2eab3cad31bfc376de59e8cce25126533f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692290"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785734"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,9 +78,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_login**||ディストリビューター ログイン。|  
 |**distributor_password**||ディストリビューター パスワード。|  
 |**distributor_security_mode**|**1**|ディストリビューターに接続するときに Windows 認証を使用。|  
-||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターに接続するときに認証します。|  
+||**0**|ディストリビューターに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用。|  
 |**dts_package_name**||SQL Server 2000 データ変換サービス (DTS) パッケージの名前。 トランザクション パブリケーションまたはスナップショット パブリケーションの場合のみ、この値を指定できます。|  
-|**dts_package_password**||パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は null の場合、変更せずに残すパスワード プロパティが指定します。<br /><br /> 注: DTS パッケージには、パスワードが必要です。<br /><br /> トランザクション パブリケーションまたはスナップショット パブリケーションの場合のみ、この値を指定できます。|  
+|**dts_package_password**||パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は null の場合、変更せずに残すパスワード プロパティが指定します。<br /><br /> 注:DTS パッケージにはパスワードが必要です。<br /><br /> トランザクション パブリケーションまたはスナップショット パブリケーションの場合のみ、この値を指定できます。|  
 |**dts_package_location**||DTS パッケージが格納されている場所です。 トランザクション パブリケーションまたはスナップショット パブリケーションの場合のみ、この値を指定できます。|  
 |**dynamic_snapshot_location**||スナップショット ファイルが保存されるフォルダーへのパス。 マージ パブリケーションの場合のみ、この値を指定できます。|  
 |**ftp_address**||これは旧バージョンとの互換性のためにだけ用意されています。|  
@@ -92,7 +91,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインです。|  
 |**internet_password**||基本認証を使用して Web 同期をホストしている Web サーバーに、マージ エージェントが接続するときのパスワード。|  
 |**internet_security_mode**|**1**|Web 同期に Windows 統合認証を使用。 基本認証を Web 認証と共に使用することをお勧めします。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。|  
-||**0**|Web 同期に基本認証を使用。<br /><br /> 注: Web 同期には、Web サーバーへの SSL 接続が必要です。|  
+||**0**|Web 同期に基本認証を使用。<br /><br /> 注:Web 同期には、Web サーバーへの SSL 接続が必要です。|  
 |**internet_timeout**||Web 同期要求が期限切れとなるまでの時間 (秒単位)。|  
 |**internet_url**||Web 同期中にレプリケーション リスナーの位置を表す URL です。|  
 |**merge_job_login**||エージェントを実行する Windows アカウントのログイン。|  
@@ -100,7 +99,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_login**||パブリッシャーのログイン。 変更する*publisher_login*はマージ パブリケーションに対するサブスクリプションの場合のみ使用します。|  
 |**publisher_password**||パブリッシャーのパスワード。 変更する*publisher_password*はマージ パブリケーションに対するサブスクリプションの場合のみ使用します。|  
 |**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 変更する*publisher_security_mode*はマージ パブリケーションに対するサブスクリプションの場合のみ使用します。|  
-||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証します。|  
+||**0**|パブリッシャーに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用。|  
 |**@use_ftp**|**true**|標準のプロトコルの代わりに FTP を使用してスナップショットを取得。|  
 ||**false**|標準のプロトコルを使用してスナップショットを取得。|  
 |**@use_web_sync**|**true**|Web 同期を有効にする。|  

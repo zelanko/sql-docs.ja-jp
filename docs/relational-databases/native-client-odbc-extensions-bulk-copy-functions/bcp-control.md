@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c15063ef190c3858007e7d64bc0e4d7ebf0d5b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761759"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210461"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ RETCODE bcp_control (
  BCPFILE_RAW を指定すると、ファイル内のデータには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコード ページが使用されます。  
   
  BCPFILEFMT  
- データ ファイル形式のバージョン番号を指定します。 これは、80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。 テキスト列から取得されたデータをインポートするなど、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]にサーバーを**varchar (max)** 内の列を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のサーバーでは、80 を指定する必要があります。 同様からのデータをエクスポートするときに 80 を指定する場合、 **varchar (max)** 列、保存されるのでテキスト列は、保存と同様、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]書式設定、およびテキストの列にインポートすることができます、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー。  
+ データ ファイル形式のバージョン番号を指定します。 これは、80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。 テキスト列から取得されたデータをインポートするなど、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]にサーバーを**varchar (max)** 内の列を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のサーバーでは、80 を指定する必要があります。 同様からのデータをエクスポートするときに 80 を指定する場合、 **varchar (max)** 列、保存されるのでテキスト列は、保存と同様、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]書式設定、およびテキストの列にインポートすることができます、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー。  
   
  BCPFIRST   
  ファイルまたはテーブルにコピーする最初のデータ行を指定します。 既定値は 1 です。1 未満の値を指定すると、このオプションは既定値にリセットされます。  
@@ -117,7 +117,7 @@ RETCODE bcp_control (
  BCPODBC  
  TRUE の場合、指定する**datetime**と**smalldatetime**文字形式で保存される値は、ODBC タイムスタンプ エスケープ シーケンスのプレフィックスとサフィックスが使用されます。 BCPODBC オプションは、DB_OUT にのみ適用されます。  
   
- FALSE の場合、 **datetime** 1997 年 1 月 1 日を表す値が文字の文字列に変換されます。 1997-01-01 00:00:00.000 します。 TRUE の場合、同じ**datetime**として表される値: {ts ' 1997-01-01 00:00:00.000'}。  
+ FALSE の場合、 **datetime** 1997 年 1 月 1 日を表す値が文字の文字列に変換されます。1997-01-01 00:00:00.000 します。 TRUE の場合、同じ**datetime**として表される値: {ts ' 1997-01-01 00:00:00.000'}。  
   
  BCPROWCOUNT  
  現在 (または最後) の BCP 操作で処理された行数を返します。  

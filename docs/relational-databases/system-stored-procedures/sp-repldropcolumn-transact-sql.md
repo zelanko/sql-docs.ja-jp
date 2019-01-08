@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_repldropcolumn_TSQL
@@ -17,20 +16,20 @@ ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b15bcd0b5a24c464799d1bb8150be59600a85ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c2a269abf3e7f465c71e09437c313196e1dcd30
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652890"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205691"
 ---
 # <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   パブリッシュされた既存のテーブル アーティクルから列を削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
-> [!IMPORTANT]  
->  このストアド プロシージャは、主に旧バージョンとの互換性のためにサポートされており、非推奨とされます。 のみ使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]パブリッシャーと[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]再パブリッシュ サブスクライバー。 導入されたデータ型列に対してこのプロシージャを使用する必要があります[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]またはそれ以降。  
+> [!IMPORTANT]
+>  このストアド プロシージャは、主に旧バージョンとの互換性のためにサポートされており、非推奨とされます。 のみ使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]パブリッシャーと[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]再パブリッシュ サブスクライバー。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降で導入されたデータ型の列に対してこのプロシージャを使用しないでください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +55,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
  ストアド プロシージャがレプリケーション エージェントにより実行されているかどうかを示します。 *from_agent* int、既定値は 0 の場合は、レプリケーション エージェントによってこのストアド プロシージャが実行されていると、その他のすべてのケースで、既定値の 0 を使用する必要があります、値 1 が使用されています。  
   
  [ @schema_change_script =] '*schema_change_script*'  
- パスと名前を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成カスタム ストアド プロシージャを使用して、システムを変更するスクリプト。 *schema_change_script* nvarchar (4000)、既定値は NULL です。 レプリケーションを行うと、トランザクション レプリケーションで使用される 1 つ以上の既定のプロシージャを、ユーザー定義カスタム ストアド プロシージャに置き換えることができます。 *schema_change_script*スキーマの変更は、sp_repldropcolumn でレプリケートされたテーブル アーティクルに加えられたれ、次のいずれかの操作に使用できる後に実行されます。  
+ システム生成カスタム ストアド プロシージャを修正するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプトの名前とパスを指定します。 *schema_change_script* nvarchar (4000)、既定値は NULL です。 レプリケーションを行うと、トランザクション レプリケーションで使用される 1 つ以上の既定のプロシージャを、ユーザー定義カスタム ストアド プロシージャに置き換えることができます。 *schema_change_script*スキーマの変更は、sp_repldropcolumn でレプリケートされたテーブル アーティクルに加えられたれ、次のいずれかの操作に使用できる後に実行されます。  
   
 -   カスタム ストアド プロシージャが自動的に再生成される場合*schema_change_script*にこれらのカスタム ストアド プロシージャを削除し、ユーザー定義カスタム ストアド プロシージャ、新しいスキーマをサポートするで置き換えることができます。  
   

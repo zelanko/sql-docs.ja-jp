@@ -20,18 +20,18 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd3604b6de03d6344470758c4de14c15ad47e572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602680"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212429"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **準拠**  
- バージョンが導入されています。 ODBC 2.0  
+ バージョンが導入されました。ODBC 2.0  
   
- **概要**  
+ **まとめ**  
  **SQLManageDataSources**ユーザーことができますを設定する、追加、およびシステム情報のデータ ソースを削除 ダイアログ ボックスを表示します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,7 +39,7 @@ ms.locfileid: "47602680"
 ```  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -64,7 +64,7 @@ BOOL SQLManageDataSources(
   
  ![ODBC データ ソース アドミニストレーター ダイアログ ボックス](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- ダイアログ ボックスが 3 つのタブの下のシステム情報の一覧にあるデータ ソースが表示されます:**ユーザー DSN**、**システム DSN**、および**ファイル DSN**します。 ユーザーについて、データ ソースをダブルクリックまたはデータ ソースを選択およびクリックしてでかどうか**構成**、 **SQLManageDataSources**呼び出し**ConfigDSN** ODBC_CONFIG_ による DLL のセットアップDSN のオプションです。  
+ ダイアログ ボックスでは、3 つのタブの下のシステム情報の一覧にあるデータ ソースが表示されます。**ユーザー DSN**、**システム DSN**、および**ファイル DSN**します。 ユーザーについて、データ ソースをダブルクリックまたはデータ ソースを選択およびクリックしてでかどうか**構成**、 **SQLManageDataSources**呼び出し**ConfigDSN** ODBC_CONFIG_ による DLL のセットアップDSN のオプションです。  
   
  ユーザーがクリックした場合**追加**、 **SQLManageDataSources**が表示されます、**データ ソースの新規作成** ダイアログ ボックスで、次の図に示すようにします。  
   

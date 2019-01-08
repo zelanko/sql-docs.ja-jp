@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e961628f9cae062861b61bf46569331cd42da61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087018"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815964"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理ツール コマンド ライン オプション (Distributed Replay Utility)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツール、 `DReplay.exe`、分散再生コント ローラーとの通信に使用できるコマンド ライン ツールです。 管理ツールを使用して、コントローラー上の操作を開始、監視、取り消しできます。  
@@ -59,13 +59,13 @@ Usage:
   
  コマンドの引数や例などの構文情報の詳細については、次のトピックを参照してください。  
   
--   [前処理オプション&#40;Distributed Replay 管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [前処理オプション &#40;Distributed Replay 管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Replay オプション&#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [Status オプション&#40;Distributed Replay 管理ツール&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [status オプション &#40;Distributed Replay 管理ツール&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [Cancel オプション&#40;Distributed Replay 管理ツール&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [cancel オプション &#40;Distributed Replay 管理ツール&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  RPC は、言語イベントとしてではなく RPC として再生されます。  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helppullsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c983e26eae228e114682208a0dcafb2974b9d63f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b094d8bb3f9bd2cebfd9184976aeb57de77886e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781544"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801804"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,15 +69,15 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**最後のトランザクションのタイムスタンプ**|**varbinary(16)**|最後にレプリケートしたトランザクションのタイムスタンプ。|  
 |**更新モード**|**tinyint**|許可された更新の種類。|  
 |**ディストリビューション エージェント job_id**|**int**|ディストリビューション エージェントのジョブ ID。|  
-|**enabled_for_synmgr**|**int**|サブスクリプションを介した同期が可能かどうか、[!INCLUDE[msCoName](../../includes/msconame-md.md)]同期マネージャーです。|  
+|**enabled_for_synmgr**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager を介してサブスクリプションの同期が可能かどうかを示します。|  
 |**サブスクリプション guid**|**binary(16)**|パブリケーションに対してサブスクリプションのバージョンのグローバル識別子です。|  
 |**subid**|**binary(16)**|匿名サブスクリプションを表すグローバル識別子。|  
 |**immediate_sync**|**bit**|スナップショット エージェントを実行するたびに、同期ファイルを作成または再作成するかどうかを示します。|  
-|**パブリッシャー ログイン**|**sysname**|パブリッシャーで使用されたログイン ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**パブリッシャーのパスワード**|**nvarchar (524)**|パブリッシャーで使用するパスワード (暗号化)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
+|**パブリッシャー ログイン**|**sysname**|パブリッシャーで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のログイン ID。|  
+|**パブリッシャーのパスワード**|**nvarchar (524)**|パブリッシャーで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用の (暗号化されている) パスワード。|  
 |**パブリッシャー security_mode**|**int**|パブリッシャーで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証<br /><br /> **2**静的な同期のトリガーの使用を = **sysservers**リモート プロシージャ呼び出し (RPC) を実行するエントリと*パブリッシャー*で定義する必要があります、 **sysservers**リモート サーバーまたはリンク サーバーとしてのテーブル。|  
 |**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
-|**distributor_login**|**sysname**|ディストリビューターで使用されたログイン ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
+|**distributor_login**|**sysname**|ディストリビューターで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のログイン ID。|  
 |**distributor_password**|**nvarchar (524)**|ディストリビューターで使用するパスワード (暗号化)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**distributor_security_mode**|**int**|ディストリビューターで実装されているセキュリティ モード:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
 |**ftp_address**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。|  

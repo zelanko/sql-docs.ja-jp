@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], alternate folder locations
@@ -15,12 +14,12 @@ ms.assetid: 9293f0eb-5531-47ec-b6e2-0392823ce5cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cae9676985ce2858d7eae1e2f6dc139ee6e4ed54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6505d78a48b60fba5ed3580b8c00503d1f54ddce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132952"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815474"
 ---
 # <a name="specify-an-alternate-snapshot-folder-location-sql-server-management-studio"></a>代替スナップショット フォルダーの場所の指定 (SQL Server Management Studio)
   **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[スナップショット]** ページで、代替スナップショット フォルダーの場所を指定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  

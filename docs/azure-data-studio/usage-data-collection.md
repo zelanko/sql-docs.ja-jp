@@ -1,7 +1,8 @@
 ---
-title: 有効にするまたは使用状況データの収集を無効にしてクラッシュ レポートを Azure Data Studio |Microsoft Docs
+title: 有効にするか、使用状況データ収集、およびクラッシュの報告を無効にします。
+titleSuffix: Azure Data Studio
 description: この記事では、使用状況とクラッシュ レポート データを収集し、Microsoft に送信される場合を制御する方法について説明します。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0a5adf802ab07e05f1041b1385044e2d580db32
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 1f9dd29edf2474ab8db0e3dc7ad7dc2ff78016d1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356483"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030106"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>有効にするかの使用状況データ収集を無効にします。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -31,7 +32,7 @@ ms.locfileid: "49356483"
     "telemetry.enableTelemetry": false
 ```
 
-**重要なお知らせ**: このオプションは、の再起動を伴う[!INCLUDE[name-sos](../includes/name-sos-short.md)]を有効にします。 
+**重要なお知らせ**:このオプションは、の再起動を伴う[!INCLUDE[name-sos](../includes/name-sos-short.md)]を有効にします。 
 
 ## <a name="how-to-disable-crash-reporting"></a>クラッシュ レポートを無効にする方法
 
@@ -41,7 +42,7 @@ ms.locfileid: "49356483"
     "telemetry.enableCrashReporter": false
 ```
 
-**重要なお知らせ**: このオプションは、の再起動を伴う[!INCLUDE[name-sos](../includes/name-sos-short.md)]を有効にします。
+**重要なお知らせ**:このオプションは、の再起動を伴う[!INCLUDE[name-sos](../includes/name-sos-short.md)]を有効にします。
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="additional-resources"></a>その他の技術情報
 - [ワークスペースとユーザーの設定](settings.md)

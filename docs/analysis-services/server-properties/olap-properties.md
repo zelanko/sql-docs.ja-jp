@@ -1,5 +1,5 @@
 ---
-title: OLAP プロパティ |Microsoft ドキュメント
+title: Analysis Services OLAP のプロパティ |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239292"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072519"
 ---
 # <a name="olap-properties"></a>OLAP のプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示す OLAP サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元サーバー モードのみ  
+ **適用対象:** 多次元サーバー モードの場合のみ  
   
 ## <a name="memory"></a>Memory  
  **DefaultPageSizeForData**  

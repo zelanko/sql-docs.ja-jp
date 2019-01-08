@@ -1,5 +1,6 @@
 ---
-title: Linux 上の SQL Server の active Directory 認証のチュートリアル |Microsoft Docs
+title: チュートリアル:Linux 上の SQL Server の active Directory 認証
+titleSuffix: SQL Server
 description: このチュートリアルでは、SQL Server on Linux の AAD 認証の構成手順を提供します。
 author: meet-bhagdev
 ms.date: 02/23/2018
@@ -7,18 +8,18 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658498"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160604"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux でのチュートリアル: Active Directory を使用して認証
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -230,7 +231,7 @@ AD 認証を構成する前にする必要があります。
    ```
 
    > [!NOTE]
-   > Spn で、ドメインが大きい場合は特に、数分に反映されるまで、ドメインがかかる場合があります。 エラーが発生した場合"kvno: サーバー データベースに見つかりません Kerberos MSSQLSvc の資格情報を取得中に/\*\*\<ホスト コンピューターの完全修飾ドメイン名\>\*\*:\* \* \<tcp ポート\>\*\*\@CONTOSO.COM"、数分待ってから、もう一度やり直してください。
+   > Spn で、ドメインが大きい場合は特に、数分に反映されるまで、ドメインがかかる場合があります。 エラーが発生した場合"kvno:サーバーで Kerberos のデータベースが見つかりません MSSQLSvc の資格情報を取得中に/\*\*\<ホスト コンピューターの完全修飾ドメイン名\>\*\*:\* \* \< 。tcp ポート\>\*\*\@CONTOSO.COM"、数分待ってから、もう一度やり直してください。
 
 2. Keytab ファイルを作成**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 前の手順で作成した AD ユーザーにします。 入力を求められたら、その AD アカウントのパスワードを入力します。
 
@@ -292,7 +293,7 @@ AD 認証を構成する前にする必要があります。
    sudo systemctl restart mssql-server
    ```
 
-6. 省略可能: は、パフォーマンスを向上させるために、ドメイン コント ローラーへの UDP 接続を無効にします。 多くの場合、UDP 接続は常に失敗構成オプションを設定するために、ドメイン コント ローラーに接続するときに`/etc/krb5.conf`UDP 呼び出しをスキップします。 編集`/etc/krb5.conf`し、次のオプションを設定します。
+6. 省略可能:パフォーマンスを向上させるために、ドメイン コント ローラーへの UDP 接続を無効にします。 多くの場合、UDP 接続は常に失敗構成オプションを設定するために、ドメイン コント ローラーに接続するときに`/etc/krb5.conf`UDP 呼び出しをスキップします。 編集`/etc/krb5.conf`し、次のオプションを設定します。
 
    ```/etc/krb5.conf
    [libdefaults]
@@ -339,8 +340,8 @@ AD 認証を構成する前にする必要があります。
 
 * その他のクライアント ドライバーを使用して AD 認証
 
-  * JDBC: [Kerberos を使用して統合 SQL Server の接続の認証](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC:[統合認証を使用](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
+  * JDBC:[Kerberos 統合認証を使用して、SQL Server に接続するには](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * ODBC :[統合認証を使用する](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET:[接続文字列の構文](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
 
 ## <a name="performance-improvements"></a>パフォーマンスの強化

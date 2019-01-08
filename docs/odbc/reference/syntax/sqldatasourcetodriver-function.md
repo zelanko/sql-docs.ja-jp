@@ -20,12 +20,12 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631dcb0f76346de88a2a48e8dfb00060626d58f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813580"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206261"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 関数
 **SQLDataSourceToDriver** supportstranslations ODBC ドライバー。 ODBC 対応のアプリケーションではこの関数は呼び出されませんアプリケーション要求経由で翻訳**SQLSetConnectAttr**します。 関連付けられているドライバー、 *ConnectionHandle*で指定されている**SQLSetConnectAttr**ドライバーにデータ ソースから送られて、すべてのデータの翻訳を実行する指定された DLL を呼び出します。 ODBC 初期化ファイルには、既定のトランスレーター DLL を指定できます。  
@@ -52,7 +52,7 @@ BOOL SQLDataSourceToDriver(
  [入力]オプションの値。  
   
  *fSqlType*  
- [入力]SQL データ型です。 この引数に変換する方法をドライバーに指示*rgbValueIn*アプリケーションで許容される形式にします。 有効な SQL データ型の一覧は、次を参照してください。、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型」セクション。  
+ [入力]SQL データ型です。 この引数に変換する方法をドライバーに指示*rgbValueIn*アプリケーションで許容される形式にします。 有効な SQL データ型の一覧は、次を参照してください、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: セクション。データ型。  
   
  *rgbValueIn*  
  [入力]変換する値。  

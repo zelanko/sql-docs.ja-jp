@@ -13,12 +13,12 @@ ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ba4b4189691bf907b3ad67db91a8534268a8ec0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616430"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202221"
 ---
 # <a name="dealing-with-failed-updates"></a>失敗した更新の処理
 更新プログラムは、エラーの終了時に、種類と、エラーの重大度、およびアプリケーションのロジックに依存、エラーを解決する方法。 ただし、データベースは、他のユーザーと共有される場合、一般的なエラーは実行する前に、フィールドを変更他のユーザー。 この種のエラーは、競合と呼ばれます。 ADO では、このような状況を検出し、エラーを報告します。  
@@ -29,10 +29,10 @@ ms.locfileid: "47616430"
  更新の競合をユーザーにアラートを生成するコードは、次のようになります。  
   
 ```  
-objRs.Filter = adFilterConflictingRecords  
+objRs.Filter = adFilterConflictingRecords  
 objRs.MoveFirst  
-Do While Not objRst.EOF  
-   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
+Do While Not objRst.EOF  
+   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
    objRs.MoveNext  
 Loop  
 ```  
