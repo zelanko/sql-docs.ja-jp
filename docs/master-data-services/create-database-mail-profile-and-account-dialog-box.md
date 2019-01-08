@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
@@ -14,12 +13,12 @@ ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 779558e5ad884a1fd7d92986588821d40cc5b1a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26128939285a16478b02de30ab17537c8fcafa14
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672220"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796794"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス
 
@@ -57,7 +56,7 @@ ms.locfileid: "47672220"
 |**[データベース エンジン サービスの資格情報を使用する Windows 認証]**|データベース メールでは、SMTP サーバーの認証に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用することを指定します。|  
 |**[基本認証]**|データベース メールでは、SMTP サーバーの認証に特定のユーザー名とパスワードを使用することを指定します。 この情報は、電子メール サーバーとの認証だけに使用されるため、アカウントは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザー、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を実行しているコンピューターのユーザーに対応している必要はありません。|  
 |**User name**|データベース メールで SMTP サーバーへのログオンに使用されるユーザー アカウントの名前を入力します。 SMTP サーバーで基本認証が求められる場合、ユーザー名が必要になります。|  
-|**Password**|データベース メールで SMTP サーバーへのログオンに使用されるパスワードを入力します。 SMTP サーバーで基本認証が求められる場合、パスワードが必要になります。|  
+|**パスワード**|データベース メールで SMTP サーバーへのログオンに使用されるパスワードを入力します。 SMTP サーバーで基本認証が求められる場合、パスワードが必要になります。|  
 |**[パスワードの確認入力]**|パスワードに間違いがないことを確認するために、設定したパスワードをもう一度入力します。|  
 |**[匿名認証]**|SMTP サーバーで認証を要求しないことを指定します。 SMTP サーバーの認証には資格情報をまったく使用しません。|  
   

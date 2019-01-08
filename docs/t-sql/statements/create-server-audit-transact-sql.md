@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb561e2001940fef59429236dd85d376a1c3c27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624e20f25deda3e226cf060f0793c33022289b1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834760"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979948"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ CREATE SERVER AUDIT audit_name
  ターゲットで監査ログへの書き込みができない場合に、ターゲットへのインスタンスの書き込みをエラーにするか、続行するか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止するかを示します。 既定値は CONTINUE です。  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 続行オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許可する場合があります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 続行オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許可する場合があります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
   
 SHUTDOWN  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がなんらかの理由で監査ターゲットへのデータの書き込みに失敗した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを強制的にシャットダウンします。 `CREATE SERVER AUDIT` ステートメントを実行しているログインには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内での `SHUTDOWN` 権限が必要です。 実行中のログインから `SHUTDOWN` アクセス許可が後で取り消された場合でも、シャットダウンの動作は継続します。 ユーザーがこのアクセス許可を持っていない場合は、ステートメントが失敗し、監査は作成されません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを使用します。 詳細については、「[SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)」を参照してください。  
@@ -160,7 +160,7 @@ SHUTDOWN
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-server-audit-with-a-file-target"></a>A. ファイル ターゲットを使用するサーバー監査を作成する  
- 次の例では、バイナリ ファイルをターゲットとする `HIPPA_Audit` というサーバー監査を、オプションなしで作成します。  
+ 次の例では、バイナリ ファイルをターゲットとする `HIPAA_Audit` というサーバー監査を、オプションなしで作成します。  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
@@ -168,7 +168,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. Windows アプリケーション ログ ターゲットを使用するサーバー監査をオプション付きで作成する  
- 次の例では、Windows アプリケーション ログをターゲット セットとする `HIPPA_Audit` というサーバー監査を作成します。 キューには 1 秒ごとに書き込みが行われ、失敗時はキューによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンがシャットダウンされます。  
+ 次の例では、Windows アプリケーション ログをターゲット セットとする `HIPAA_Audit` というサーバー監査を作成します。 キューには 1 秒ごとに書き込みが行われ、失敗時はキューによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンがシャットダウンされます。  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
