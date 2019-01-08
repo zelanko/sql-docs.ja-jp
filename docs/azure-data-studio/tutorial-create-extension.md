@@ -1,7 +1,8 @@
 ---
-title: 'チュートリアル: Azure Data Studio の拡張機能を作成する |Microsoft Docs'
-description: このチュートリアルでは、Azure Data Studio の拡張機能を作成する方法を示します。
-ms.custom: tools|sos
+title: チュートリアル:拡張機能を作成する
+titleSuffix: Azure Data Studio
+description: このチュートリアルでは、Azure Data Studio にカスタム機能を追加する拡張機能を作成する方法を示します。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: ae1605f1c99e4fa2a74c7f728f191baf5a8b9bf8
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356553"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030606"
 ---
-# <a name="tutorial-create-an-azure-data-studio-extension"></a>チュートリアル: Azure Data Studio 拡張機能を作成します。
+# <a name="tutorial-create-an-azure-data-studio-extension"></a>チュートリアル:Azure Data Studio の拡張機能を作成します。
 
 このチュートリアルでは、Azure Data Studio の新しい拡張機能を作成する方法を示します。 拡張機能は、Azure Data Studio で、SSMS の使い慣れたキー バインドを作成します。
 
@@ -37,7 +38,7 @@ Azure Data Studio は、Visual Studio Code を使用して Azure Data Studio の
 - [Node.js](https://nodejs.org)インストールされで使用できる、`$PATH`します。 Node.js を含む[npm](https://www.npmjs.com/)、拡張機能ジェネレーターをインストールするために使用する Node.js パッケージ マネージャー。
 - [Visual Studio Code](https://code.visualstudio.com)拡張機能をデバッグします。
 - Azure の Data Studio[拡張機能をデバッグ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)します。
-- Sqlops がパスを確認します。 、Windows のことを選択することを確認して、 `Add to Path` setup.exe オプション。 Mac または Linux の場合は、実行、 *'sqlops' コマンドのインストール パスで*オプション。
+- 確認`sqlops`がパスにします。 、Windows のことを選択することを確認して、 `Add to Path` setup.exe オプション。 Mac または Linux の場合は、実行、 *'sqlops' コマンドのインストール パスで*オプション。
 - SQL Operations Studio のデバッグ拡張機能 (省略可能)。 これにより、パッケージ化し、Azure Data Studio にインストールすることがなく、拡張機能をテストできます。
 
 
@@ -66,26 +67,26 @@ Azure Data Studio は、Visual Studio Code を使用して Azure Data Studio の
 
 ### <a name="add-a-keyboard-shortcut"></a>キーボード ショートカットを追加します。
 
-**手順 1: 置換するショートカットを検索します。**
+**ステップ 1: 置換するショートカットを検索します。**
 
 準備が整ったら、拡張機能をしたら、いくつか SSMS キーボード ショートカット (またはキー バインド) Azure Data Studio を追加します。 使用して[Andy Mallon のチートシート](https://am2.co/2018/02/updated-cheat-sheet/)とインスピレーションを RedGate のキーボード ショートカットの一覧。
 
 見た、不足している上位のものは次のとおりです。
 
 - 有効になっている実際の実行プランでは、クエリを実行します。 これは**Ctrl + M** SSMS で Azure Data Studio にバインディングを持っていないとします。
-- ある**CTRL + SHIFT + E**のクエリを実行する 2 つ目の方法として。 ユーザーからのフィードバックでは、これが不足していることを示しています。
+- ある**CTRL + SHIFT + E**のクエリを実行する 2 番目の方法として。 ユーザーからのフィードバックでは、これが不足していることを示しています。
 - ある**alt+f1**実行`sp_help`します。 Azure Data Studio でこれを追加しましたにマップした後、そのバインドが既に使用されて、 **ALT + F2**代わりにします。
 - 全画面表示の切り替え (**SHIFT + ALT + ENTER**)。
 - **F8**を表示する**オブジェクト エクスプ ローラー** / **サーバー 表示で**します。
 
-検索し、置換のこれらのキー バインドを簡単になります。 実行*オープンのキーボード ショートカット*を表示する、**のキーボード ショートカット**で Azure Data Studio タブで、検索*クエリ*選び、**変更 Keybinding**. 完了したら、キーの割り当ての変更を確認できます keybindings.json ファイルで更新されるマッピング (実行*オープンのキーボード ショートカット*を確認する)。
+検索し、置換のこれらのキー バインドを簡単になります。 実行*オープンのキーボード ショートカット*を表示する、**のキーボード ショートカット**で Azure Data Studio タブで、検索*クエリ*選び、**バインドのキーの変更**. 完了したら、キーの割り当てを変更するには、keybindings.json ファイルで更新されるマッピングを表示できます (実行*オープンのキーボード ショートカット*を確認する)。
 
 ![キーボード ショートカット](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
 ![keybindings.json 拡張機能](./media/tutorial-create-extension/keybindings-json.png)
 
 
-**手順 2: 拡張機能にショートカットを追加します。**
+**手順 2:拡張機能のショートカットを追加します。**
 
 拡張機能には、ショートカットを追加するには、開く、 *package.json* (拡張機能) でファイルを開き、`contributes`を次のセクション。
 
@@ -132,7 +133,7 @@ Visual Studio Code で Azure Data Studio のデバッグ拡張機能がインス
 
 ![拡張機能をテストします。](./media/tutorial-create-extension/test-extension.png)
 
-キーマップは、新しい拡張機能が正常に機能し、共有できるようになりますので、作成する最も簡単な拡張機能の 1 つです。
+キー マップでは、新しい拡張機能が正常に機能し、共有できるようになりますのでを作成する最も簡単な拡張機能の 1 つです。
 
 ## <a name="package-your-extension"></a>拡張機能をパッケージ化します。
 

@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.output
 helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
@@ -16,12 +14,12 @@ ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3b5ec44bf875701a029423bd19aa1467a9a7f95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30c92ad13360d6c675ba95d45c9684cf25e7eba8
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204202"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328582"
 ---
 # <a name="output-window"></a>[出力ウィンドウ]
   このウィンドウには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のさまざまな機能の状態メッセージが表示されます。 **デバッガー、外部ツール機能、またはデバッガーの** [コマンド] ウィンドウ [!INCLUDE[tsql](../../includes/tsql-md.md)] で実行されるコマンドから、 **[出力]** ウィンドウの特別のペインに出力が表示されます。 .bat ファイルや .com ファイルなど、通常は [コマンド プロンプト] ウィンドウに表示される外部ツールからの出力も参照できます。  
@@ -39,5 +37,3 @@ ms.locfileid: "48204202"
   
 ## <a name="see-also"></a>参照  
  [Transact-SQL デバッガー](transact-sql-debugger.md)  
-  
-  

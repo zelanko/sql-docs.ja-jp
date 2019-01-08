@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43397c243985fac65e14be8af3acadf129fd8114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a71f486318c9431e25898b36343c67562da5451e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714940"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784684"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +62,10 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**alt_snapshot_folder**||スナップショット フォルダーが既定の場所以外、または既定の場所に加えて保存されている場合の格納場所です。|  
 |**description**||このマージ プル サブスクリプションの説明です。|  
 |**ディストリビューター**||ディストリビューターの名前。|  
-|**distributor_login**||ディストリビューターで使用されたログイン ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証|  
+|**distributor_login**||ディストリビューターで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のログイン ID です。|  
 |**distributor_password**||ディストリビューターで使用するパスワード (暗号化)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**distributor_security_mode**|**1**|ディストリビューターに接続するときに Windows 認証を使用。|  
-||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターに接続するときに認証します。|  
+||**0**|ディストリビューターに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用。|  
 |**dynamic_snapshot_location**||スナップショット ファイルが保存されるフォルダーへのパスです。|  
 |**ftp_address**||旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用ファイル転送プロトコル (FTP) サービスのネットワーク アドレスです。|  
 |**ftp_login**||旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー名です。|  
@@ -82,9 +81,9 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**merge_job_login**||エージェントを実行する Windows アカウントのログイン。|  
 |**merge_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
 |**priority**||旧バージョンとの互換性だけです。実行[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)パブリッシャー側で代わりに、サブスクリプションの優先度を変更します。|  
-|**publisher_login**||パブリッシャーで使用されたログイン ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**publisher_password**||パブリッシャーで使用するパスワード (暗号化)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**publisher_security_mode**|**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証します。|  
+|**publisher_login**||パブリッシャーで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のログイン ID。|  
+|**publisher_password**||パブリッシャーで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用の (暗号化されている) パスワード。|  
+|**publisher_security_mode**|**0**|パブリッシャーに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用。|  
 ||**1**|パブリッシャーに接続するときに Windows 認証を使用。|  
 ||**2**|同期のトリガーを使用して、静的な**sysservers**でリモート プロシージャ コール (RPC)、およびパブリッシャーを実行するエントリを定義する必要があります、 **sysservers**リモート サーバーまたはリンク サーバーとしてのテーブル。|  
 |**sync_type**|**自動**|パブリッシュされたテーブルのスキーマと初期データが、最初にサブスクライバーに転送されます。|  

@@ -1,5 +1,6 @@
 ---
-title: Red Hat Enterprise Linux 上の SQL Server の無人インストール |Microsoft Docs
+title: Red Hat Enterprise Linux 上の SQL Server の無人インストール
+titleSuffix: SQL Server
 description: SQL Server のスクリプト サンプル - Red Hat Enterprise Linux での無人インストール
 author: rothja
 ms.author: jroth
@@ -7,16 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 12fd72edb9d8d2909bbbaa3a1e327bd358bcb8c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d82789f3b74c245654061162cf3a3a41bd75f75
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838380"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160520"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 用のサンプル: SQL Server の無人インストール スクリプト
+# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>サンプル:Red Hat Enterprise Linux の SQL Server の無人インストール スクリプト
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

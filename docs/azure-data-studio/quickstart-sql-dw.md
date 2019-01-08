@@ -1,7 +1,8 @@
 ---
-title: 'クイック スタート: 接続し、Azure Data Studio を使用して Azure SQL Data Warehouse に対するクエリ |Microsoft Docs'
-description: このクイック スタートは、Azure Data Studio を使用して SQL database に接続し、クエリを実行する方法を示しています。
-ms.custom: tools|sos
+title: クイック スタート:接続し、Azure SQL Data Warehouse に対するクエリ
+titleSuffix: Azure Data Studio
+description: このクイック スタートは、Azure Data Studio を使用して Azure SQL Data Warehouse に接続し、クエリを実行する方法を示しています。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: bf26924bc7791cf5321c32b3c127abc52780740b
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355733"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030756"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して、Azure SQL Data Warehouse に接続しデータを照会する
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート:使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]に接続して、Azure SQL Data Warehouse のデータの照会
 
 このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して、Azure SQL データ ウェアハウスに接続し、TRANSACT-SQL ステートメントを使用して、データを作成、挿入、および選択する方法を説明します。 
 

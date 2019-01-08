@@ -13,17 +13,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ef5b5b551d06281cef03dbfd68d5bea190126285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be76f5f308213f905224de5ade9b604ec119c30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514651"
 ---
 # <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  表示情報をすべてのリソースの種類の待機[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。  
+  表示内のすべてのリソース型の情報を待機する [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
@@ -37,7 +37,7 @@ ms.locfileid: "47674346"
 |acquire_time|**datetime**|これで、ロックまたはリソースが取得された時刻です。||  
 |state|**nvarchar (50)**|待機状態の状態です。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|待機中の項目の優先度。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|コンカレンシー スロット (最大 32 個) の数がこの要求用に予約します。|1 – SmallRC の<br /><br /> 3 – MediumRC の<br /><br /> LargeRC の 7<br /><br /> XLargeRC の: 22|  
+|concurrency_slots_used|**int**|コンカレンシー スロット (最大 32 個) の数がこの要求用に予約します。|1 - SmallRC の<br /><br /> 3 - MediumRC の<br /><br /> LargeRC の 7<br /><br /> XLargeRC の - 22|  
 |resource_class|**nvarchar(20)**|この要求のリソース クラスです。|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## <a name="see-also"></a>参照  

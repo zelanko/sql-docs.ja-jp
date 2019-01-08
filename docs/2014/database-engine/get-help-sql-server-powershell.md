@@ -15,12 +15,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3851ebeb72cc76ce6466d4456772ec13de48a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065322"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363554"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーおよびコマンドレットの使用方法に関していくつかの情報源が用意されています。 これには、Windows PowerShell 環境で参照できるヘルプが含まれます。  
@@ -33,7 +33,7 @@ ms.locfileid: "48065322"
 ### <a name="help-in-the-windows-powershell-environment"></a>Windows PowerShell 環境でのヘルプ  
  Windows PowerShell 環境でヘルプを参照するには、 **Get-Help** コマンドレットを使用します。 **Get-Help** では、Windows PowerShell 言語および Windows PowerShell で使用できるさまざまなコマンドレットやプロバイダーの基本的なヘルプが提供されます。  
   
- **Get-Help**の使用方法の詳細については、「 [ヘルプの表示: Get-Help](http://go.microsoft.com/fwlink/?LinkId=102136)」を参照してください。  
+ 使用することができます、方法の詳細については**Get-help**を参照してください[ヘルプの表示。ヘルプの](https://go.microsoft.com/fwlink/?LinkId=102136)します。  
   
 ### <a name="sql-server-powershell-provider-help"></a>SQL Server PowerShell プロバイダーのヘルプ  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーは、SQLSERVER:\SQL、SQLSERVER:\DAC フォルダーなど、SQLSERVER 仮想ドライブ上のいくつかのフォルダーを実装します。 各フォルダーは、SQL Server 管理オブジェクト モデルの 1 つに関連付けられています。 SQL Server パスの各ノードに関連付けられているメソッドとプロパティを一覧表示することはできますが、PowerShell 環境でそれらのヘルプを参照することはできません。 フォルダーと、関連するプログラミング リファレンスへのリンクの表については、「 [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)」をご覧ください。  
@@ -62,16 +62,16 @@ ms.locfileid: "48065322"
 Get-Help Invoke-Sqlcmd  
   
 ## Get the full help.  
-Get-Help Invoke-Sqlcmd –Full  
+Get-Help Invoke-Sqlcmd -Full  
   
 ## Get the parameter descriptions.  
 Get-Help Invoke-Sqlcmd -Parameter *  
   
 ## Get the code examples.  
-Get-Help Invoke-Sqlcmd –Examples  
+Get-Help Invoke-Sqlcmd -Examples  
   
 ## Get the syntax diagram.  
-Get-Help Invoke-Sqlcmd –Syntax  
+Get-Help Invoke-Sqlcmd -Syntax  
 ```  
   
 ## <a name="get-a-list-of-providers"></a>プロバイダーの一覧の取得  
@@ -79,9 +79,9 @@ Get-Help Invoke-Sqlcmd –Syntax
   
 1.  プロバイダーのカテゴリを指定して、Get-Help を実行します。  
   
- Windows PowerShell でプロバイダーのヘルプを参照する方法の詳細については、「 [ドライブとプロバイダー](http://go.microsoft.com/fwlink/?LinkId=102137)」をご覧ください。  
+ Windows PowerShell でプロバイダーのヘルプを参照する方法の詳細については、「 [ドライブとプロバイダー](https://go.microsoft.com/fwlink/?LinkId=102137)」をご覧ください。  
   
-### <a name="example-get-a-list-of-providers"></a>例: プロバイダーの一覧の取得  
+### <a name="example-get-a-list-of-providers"></a>例:プロバイダーの一覧の取得  
  次のコードは、Windows PowerShell セッションで現在有効になっているプロバイダーの一覧を返します。  
   
 ```  
@@ -93,7 +93,7 @@ Get-Help -Category provider
   
 1.  名前を SQLServer と指定して、Get-Help を実行します。  
   
-### <a name="example-get-sql-server-provider-help"></a>例: SQL Server プロバイダーのヘルプの参照  
+### <a name="example-get-sql-server-provider-help"></a>例:SQL Server プロバイダーのヘルプを取得します。  
  この例は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーに関する基本的な情報を返します。  
   
 ```  
@@ -105,9 +105,9 @@ Get-Help SQLServer
   
 1.  SQL Server パスのノードに CD するか、その場所を設定された変数を作成します。  
   
-2.  –Type パラメーターを Methods または Properties に設定して、 **Get-Member** コマンドレットを実行する  
+2.  実行、 **Get-member**コマンドレットでは、型パラメーターを Methods または Properties に設定  
   
-### <a name="examples-listing-methods-and-properties"></a>例: メソッドとプロパティの一覧表示  
+### <a name="examples-listing-methods-and-properties"></a>例 :メソッドとプロパティの一覧表示  
  この例は、Databases ノードでサポートされているメソッドを一覧表示します。  
   
 ```  

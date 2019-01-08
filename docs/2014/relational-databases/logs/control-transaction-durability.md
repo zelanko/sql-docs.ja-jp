@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - delayed durability
@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ff62ed93210521c9bc5499c5518edae7cf7d2ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147169"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818354"
 ---
 # <a name="control-transaction-durability"></a>トランザクションの持続性の制御
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] におけるトランザクションのコミットには、完全持続性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値、または遅延持続性 (低速コミットとも呼ばれます) が適用されます。  
@@ -91,19 +91,19 @@ ms.locfileid: "48147169"
  DBA は次のステートメントを使用して、トランザクションの遅延持続性をデータベースに対してユーザーが使用できるかどうかを制御できます。 遅延持続性の設定は ALTER DATABASE で設定する必要があります。  
   
 ```tsql  
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
  `DISABLED`  
  [既定値] この設定では、コミット レベルの設定 (DELAYED_DURABILITY=[ON | OFF]) に関係なく、データベースに対してコミットされたトランザクションにはすべて完全持続性が適用されます。 ストアド プロシージャの変更および再コンパイルの必要はありません。 この設定により、遅延持続性によるリスクを負うことなく、すべてのデータを持続可能にできます。  
   
  `ALLOWED`  
- この設定では、各トランザクションの持続性がトランザクション レベル (DELAYED_DURABILITY = { *OFF* | ON }) で決定されます。 詳細については、「 [ATOMIC ブロック レベルの制御 – ネイティブ コンパイル ストアド プロシージャ](control-transaction-durability.md#compiledproccontrol) 」と「 [COMMIT レベルの制御 – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) 」を参照してください。  
+ この設定では、各トランザクションの持続性がトランザクション レベル (DELAYED_DURABILITY = { *OFF* | ON }) で決定されます。 詳細については、「[ATOMIC ブロック レベルの制御 - ネイティブ コンパイル ストアド プロシージャ](control-transaction-durability.md#compiledproccontrol)」と「[COMMIT レベルの制御 - Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol)」を参照してください。  
   
  `FORCED`  
  この設定では、データベースにコミットされるすべてのトランザクションに遅延持続性が適用されます。 トランザクションで完全持続性 (DELAYED_DURABILITY = OFF) が指定された場合も、指定がまったく行われていない場合も、遅延持続性トランザクションになります。 データベースに対してトランザクションの遅延持続性が役立ち、アプリケーション コードの変更を行わない場合に、この設定を使用できます。  
   
-###  <a name="CompiledProcControl"></a> ATOMIC ブロック レベルの制御 – ネイティブ コンパイル ストアド プロシージャ  
+###  <a name="CompiledProcControl"></a> ATOMIC ブロック レベルの制御 - ネイティブ コンパイル ストアド プロシージャ  
  次のコードは、ATOMIC ブロック内で使用します。  
   
 ```tsql  
@@ -119,26 +119,26 @@ DELAYED_DURABILITY = { OFF | ON }
  **コード例:**  
   
 ```tsql  
-CREATE PROCEDURE <procedureName> …  
+CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
 (  
     DELAYED_DURABILITY = ON,  
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
     LANGUAGE = N'English'  
-    …  
+    ...  
 )  
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>表 1: ATOMIC ブロックの持続性  
+### <a name="table-1-durability-in-atomic-blocks"></a>表 1:Atomic ブロックの持続性  
   
 |ATOMIC ブロックの持続性オプション|既存のトランザクションが存在しない場合|処理中の (完全持続性または遅延持続性) トランザクションが存在する場合|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  
 |`DELAYED_DURABILITY = OFF`|ATOMIC ブロックで、新しい完全持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|  
 |`DELAYED_DURABILITY = ON`|ATOMIC ブロックで、新しい遅延持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|  
   
-###  <a name="bkmk_T-SQLControl"></a> COMMIT レベルの制御 –[!INCLUDE[tsql](../../includes/tsql-md.md)]  
+###  <a name="bkmk_T-SQLControl"></a> COMMIT レベルの制御 - [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  COMMIT 構文は、トランザクションの遅延持続性を適用できるように拡張されています。 DELAYED_DURABILITY がデータベース レベルで DISABLED または FORCED に設定されている場合 (上記を参照)、この COMMIT オプションは無視されます。  
   
 ```tsql  
@@ -159,8 +159,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
 |`DELAYED_DURABILITY = OFF` データベース レベル トランザクション。|トランザクションに完全持続性が適用されます。|トランザクションに完全持続性が適用されます。|トランザクションに遅延持続性が適用されます。|  
 |`DELAYED_DURABILITY = ON` データベース レベル トランザクション。|トランザクションに完全持続性が適用されます。|トランザクションに遅延持続性が適用されます。|トランザクションに遅延持続性が適用されます。|  
-|`DELAYED_DURABILITY = OFF` クロス データベース トランザクションまたは分散トランザクション。|トランザクションに完全持続性が適用されます。|トランザクションに完全持続性が適用されます。|トランザクションに完全持続性が適用されます。|  
-|`DELAYED_DURABILITY = ON` クロス データベース トランザクションまたは分散トランザクション。|トランザクションに完全持続性が適用されます。|トランザクションに完全持続性が適用されます。|トランザクションに完全持続性が適用されます。|  
+|`DELAYED_DURABILITY = OFF` 複数データベース間トランザクションまたは分散トランザクション。|トランザクションに完全持続性が適用されます。|トランザクションに完全持続性が適用されます。|トランザクションに完全持続性が適用されます。|  
+|`DELAYED_DURABILITY = ON` 複数データベース間トランザクションまたは分散トランザクション。|トランザクションに完全持続性が適用されます。|トランザクションに完全持続性が適用されます。|トランザクションに完全持続性が適用されます。|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>トランザクション ログのフラッシュを強制する方法  
  強制的にトランザクション ログをディスクにフラッシュするには、次の 2 つの方法があります。  
@@ -203,7 +203,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウンと再起動  
  遅延持続性の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の予期しないシャットダウンと予期されたシャットダウン/再起動に違いはありません。 重大なイベントと同様に、データ損失に対する計画を立てる必要があります。 計画されたシャットダウン/再起動では、ディスクに書き込まれていない一部のトランザクションが最初にディスクに保存される場合がありますが、それを予期することはできません。 計画されているかどうかに関係なく、シャットダウン/再起動によって重大なイベントと同様にデータが失われるものとして計画してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トランザクション分離レベル](../../database-engine/transaction-isolation-levels.md)   
  [メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン](../in-memory-oltp/memory-optimized-tables.md)  
   

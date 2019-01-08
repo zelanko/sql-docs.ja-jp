@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
@@ -14,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f6a14942e60e38405fa24f9b49e7a4ca34d72991
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9acd3857115a2f6fc13e74d4129630286a27323
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225062"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356135"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>ソフト NUMA を使用するように SQL Server を構成する方法 (SQL Server)
 最新のプロセッサでは、1 つのソケットに対して複数のコアが与えられます。 各ソケットは、通常、1 つの NUMA ノードとして表示されます。 SQL Server データベース エンジンは、さまざまな内部構造を分割し、NUMA ノード単位でサービス スレッドを分割します。 1 ソケットにつき 10 個以上のコアを含む、ソフトウェアを使用するプロセッサを搭載したは、一般にハードウェア NUMA ノードに分割する NUMA (ソフト NUMA) は、スケーラビリティとパフォーマンスが向上します。   
@@ -39,7 +38,7 @@ SQL Server 2014 Service Pack 2 以降、データベース エンジン サー�
 
 ## <a name="manual-soft-numa"></a>手動ソフト NUMA
   
-構成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ソフト NUMA を手動で使用する場合は、ノード構成関係マスクを追加するレジストリを編集する必要があります。 ソフト NUMA マスクは、バイナリ、DWORD (16 進数または 10 進数)、または QWORD (16 進数または 10 進数) のレジストリ エントリとして記述できます。 最初の 32 個を超える CPU を構成するには、QWORD またはバイナリのレジストリ値を使用します  ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前では QWORD 値を使用できません。)ソフト NUMA を構成するには、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を再起動する必要があります。  
+構成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ソフト NUMA を手動で使用する場合は、ノード構成関係マスクを追加するレジストリを編集する必要があります。 ソフト NUMA マスクは、バイナリ、DWORD (16 進数または 10 進数)、または QWORD (16 進数または 10 進数) のレジストリ エントリとして記述できます。 最初の 32 個を超える CPU を構成するには、QWORD またはバイナリのレジストリ値を使用します ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前では QWORD 値を使用できません。)ソフト NUMA を構成するには、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を再起動する必要があります。  
   
 > [!TIP]  
 >  CPU には、0 から始まる番号が付けられます。  
@@ -56,7 +55,7 @@ SQL Server 2014 Service Pack 2 以降、データベース エンジン サー�
   
  多くの I/O が発生するインスタンス A には、2 つの I/O スレッドと 1 つのレイジー ライター スレッドが存在するようになります。一方、プロセッサに負荷が集中する操作を実行するインスタンス B には、1 つの I/O スレッドと 1 つのレイジー ライター スレッドしかありません。 異なる量のメモリをこれらのインスタンスに割り当てることができますが、ハードウェア NUMA とは異なり、どちらもオペレーティング システムの同じメモリ ブロックからメモリを受け取るのでメモリおよびプロセッサ間の関係はありません。  
   
- レイジー ライター スレッドは、物理 NUMA メモリ ノードの SQL OS のビューに関連付けられています。 したがって、ハードウェアが物理 NUMA ノードとして表すものは、作成されるレイジー ライター スレッドの数と一致します。 詳細については、「 [動作方法: ソフト NUMA、I/O 完了スレッド、レイジー ライター ワーカー、およびメモリ ノード](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)」を参照してください。  
+ レイジー ライター スレッドは、物理 NUMA メモリ ノードの SQL OS のビューに関連付けられています。 したがって、ハードウェアが物理 NUMA ノードとして表すものは、作成されるレイジー ライター スレッドの数と一致します。 詳細については、次を参照してください。[動作方法。ソフト NUMA、I/O 完了スレッド、レイジー ライター ワーカー、およびメモリ ノード](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)します。  
   
 > [!NOTE]  
 >  **のインスタンスをアップグレードするときに** ソフト NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レジストリ キーはコピーされません。  
@@ -98,11 +97,11 @@ SQL Server 2014 Service Pack 2 以降、データベース エンジン サー�
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node5|DWORD|CPUMask|0x3f000|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node5|DWORD|グループ化|1|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node6|DWORD|CPUMask|0x3F|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node6|DWORD|[グループ]|2|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node6|DWORD|グループ化|2|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node7|DWORD|CPUMask|0x0fc0|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node7|DWORD|[グループ]|2|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node7|DWORD|グループ化|2|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node8|DWORD|CPUMask|0x3f000|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node8|DWORD|[グループ]|2|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node8|DWORD|グループ化|2|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node9|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node9|DWORD|グループ化|3|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node10|DWORD|CPUMask|0x0fc0|  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072296"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788484"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Active Directory からパブリケーション情報を削除します。|  
 |**replicate_ddl**|**1**|パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントがレプリケートされます。|  
 ||**0**|DDL ステートメントはレプリケートされません。|  
-|**保有期間**||これは、 **int**の数を表す*retention_period_unit*単位を指定したパブリケーションに対する変更を保存します。 保有期間内にサブスクリプションが同期されず、受信した保留中の変更がディストリビューター側でクリーンアップ操作によって削除された場合、サブスクリプションは有効期限切れとなり、再初期化する必要があります。 最大許容保有期間は、現在の日付から 9999 年 12 月 31 日までの日数です。<br /><br /> 注: マージ パブリケーションの保有期間では、サブスクライバーの異なるタイム ゾーンに対応する 24 時間の猶予期間があります。|  
+|**保有期間**||これは、 **int**の数を表す*retention_period_unit*単位を指定したパブリケーションに対する変更を保存します。 保有期間内にサブスクリプションが同期されず、受信した保留中の変更がディストリビューター側でクリーンアップ操作によって削除された場合、サブスクリプションは有効期限切れとなり、再初期化する必要があります。 最大許容保有期間は、現在の日付から 9999 年 12 月 31 日までの日数です。<br /><br /> 注:マージ パブリケーションの保有期間は、サブスクライバーの異なるタイム ゾーンに対応する 24 時間の猶予期間です。|  
 |**retention_period_unit**|**day**|保有期間は、日単位で指定されます。|  
 ||**week**|保有期間は、週単位で指定されます。|  
 ||**month**|保有期間は、月単位で指定されます。|  
@@ -119,13 +118,13 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**非アクティブ**|パブリケーションは非アクティブな状態です。|  
 |**sync_mode**|**ネイティブ**または<br /><br /> **ネイティブ bcp**|初期スナップショットに対してすべてのテーブルのネイティブ モードの一括コピー プログラム出力が使用されます。|  
 ||**character**<br /><br /> または**bcp 文字**|初期スナップショットに対してすべてのテーブルの文字モードの一括コピー プログラム出力が使用されます。これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーで必要です。|  
-|**use_partition_groups**<br /><br /> 注: 場合に、partition_groups を使用して後を使用する元に戻す**setupbelongs**、設定と**use_partition_groups = false**で**changemergearticle**、これがありますスナップショットが作成後に正しく反映されます。 スナップショットが生成するトリガーはパーティション グループに準拠します。<br /><br /> このシナリオを回避する状態を非アクティブに設定を変更するには、 **use_partition_groups**、し、状態をアクティブに設定します。|**true**|パブリケーションは事前計算済みパーティションを使用します。|  
+|**use_partition_groups**<br /><br /> 注:場合に、partition_groups を使用した後を使用する元に戻す**setupbelongs**、設定と**use_partition_groups = false**で**changemergearticle**、正しく限りませんスナップショットが作成した後に反映されます。 スナップショットが生成するトリガーはパーティション グループに準拠します。<br /><br /> このシナリオを回避する状態を非アクティブに設定を変更するには、 **use_partition_groups**、し、状態をアクティブに設定します。|**true**|パブリケーションは事前計算済みパーティションを使用します。|  
 ||**false**|パブリケーションは事前計算済みパーティションを使用しません。|  
 |**validate_subscriber_info**||サブスクライバー情報の取得に使用する関数を一覧表示します。 次に、情報のパーティション分割が一貫性を保っていることをサブスクライバーが確認するときに使用する動的フィルター選択の基準の妥当性を検証します。|  
 |**web_synchronization_url**||Web 同期に使用されるインターネット URL の既定値です。|  
 |NULL (既定値)||サポートされている値の一覧を返します*プロパティ*します。|  
   
- [  **@force_invalidate_snapshot =** ]*更によって*  
+ [ **@force_invalidate_snapshot =** ]*更によって*  
  このストアド プロシージャが実行する操作が既存のスナップショットが無効になることを確認します。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**こと、パブリケーションの変更を無効にしない、スナップショットを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unequal operator (!=)
@@ -14,12 +13,12 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92d3f38973671a29f5de28f2337afb33ede6f337
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7df4340e2dc54a2c30b1c5693efeda26ecc9b3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052992"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785524"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (等しくない) (SSIS 式)
   互換性のあるデータ型の 2 つの式が等しくないかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  
@@ -53,7 +52,7 @@ expression1 != expression2
     > [!NOTE]  
     >  文字列の比較では、大文字と小文字、アクセント、かな、および文字幅が区別されます。  
   
--   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME のいずれかのデータ型に評価される必要があります。  
+-   **日付、時刻、または日付/時刻**両方*expression1*と*expression2*次のデータ型のいずれかを評価する必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  
@@ -82,7 +81,7 @@ expression1 != expression2
   
 -   **バイナリ** *expression1* と *expression2* は、どちらも DT_BYTES データ型に評価される必要があります。  
   
--   **BLOB** *expression1* と *expression2* は、どちらも同じバイナリ ラージ オブジェクト ブロック (BLOB) データ型 (DT_TEXT、DT_NTEXT、または DT_IMAGE) に評価される必要があります。  
+-   **BLOB**両方*expression1*と*expression2*同じバイナリ ラージ オブジェクト ブロック (BLOB) データ型に評価される必要があります。DT_TEXT、DT_NTEXT、または DT_IMAGE です。  
   
  データ型について詳しくは、「 [Integration Services のデータ型](../data-flow/integration-services-data-types.md)」をご覧ください。  
   
@@ -106,8 +105,8 @@ ListPrice != 500
 ```  
   
 ## <a name="see-also"></a>参照  
- [= =&#40;等しい&#41; &#40;SSIS 式&#41;](equal-ssis-expression.md)   
+ [== &#40;等しい&#41; &#40;SSIS 式&#41;](equal-ssis-expression.md)   
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
- [演算子&#40;SSIS 式&#41;](operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   
   

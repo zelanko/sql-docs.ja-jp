@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating collections [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 386da4804e3153361e055fc11cff6dfc2352a473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c0e899ebc7180fdfbe234c893cb364d3f9d01ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208842"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782354"
 ---
 # <a name="create-a-collection-master-data-services"></a>コレクションを作成する (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーまたは統合メンバーの一覧表示を作成する必要があるときは、コレクションを作成します。 コレクションは、エンティティのすべてのメンバーを含む必要はありません。  
@@ -55,11 +54,11 @@ ms.locfileid: "48208842"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [コレクションにメンバーを追加&#40;マスター データ サービス&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [コレクションにメンバーを追加する (マスター データ サービス)](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [コレクション&#40;マスター データ サービス&#41;](../../2014/master-data-services/collections-master-data-services.md)   
- [メンバーまたはコレクションの削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [明示的階層を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+ [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)   
+ [メンバーまたはコレクションを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

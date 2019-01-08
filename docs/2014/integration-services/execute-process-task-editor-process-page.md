@@ -15,12 +15,12 @@ ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d98e80da1f311292daf3fa275c87e4db5f9cc2e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100632"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530634"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   **[プロセス実行タスク エディター]** ダイアログ ボックスの **[処理]** ページを使用すると、プロセスを実行する際のオプションを構成できます。 オプションには、実行する実行可能ファイル、そのファイルの場所、コマンド プロンプト引数、入力するための変数、出力をキャプチャする変数などが含まれます。  
@@ -43,7 +43,7 @@ ms.locfileid: "48100632"
  **[StandardInputVariable]**  
  プロセスへの入力を指定する変数を選択するか、\<[**新しい変数>]** をクリックして新しい変数を作成します。  
   
- **関連項目:**[変数の追加  ](../../2014/integration-services/add-variable.md)  
+ **関連項目:**[変数の追加](../../2014/integration-services/add-variable.md)  
   
  **[StandardOutputVariable]**  
  プロセスの出力をキャプチャする変数を選択するか、\<[**新しい変数]** をクリックして新しい変数を作成します。  

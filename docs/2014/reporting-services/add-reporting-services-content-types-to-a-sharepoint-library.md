@@ -11,28 +11,28 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96b7c2c1c3f603a7b71c823a61f4e2e31cc44b70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155452"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617142"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>レポート サーバー コンテンツの種類をライブラリに追加する (Reporting Services の SharePoint 統合モード)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、およびレポート ビルダーのレポート定義 (.rdl) ファイルの管理に使用される定義済みの SharePoint コンテンツ タイプを提供します。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用するコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード:  
   
  コンテンツの種類をライブラリに追加するには、サイトの管理者であるか、またはフル コントロール レベルの権限を持っている必要があります。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツの種類とコンテンツの種類の管理は自動的に有効になります次から作成された既存のサイト コレクションのすべてのドキュメント ライブラリで**ビジネス インテリジェンス センター**サイト テンプレート。  
+ 次の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ビジネス インテリジェンス センター **サイト テンプレートから作成された既存のサイト コレクションのすべてのドキュメント ライブラリで** コンテンツの種類およびコンテンツの種類の管理が自動的に有効になります。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 統合後に作成されたサイトでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のコンテンツの種類が有効になっていません。  
   
 > [!TIP]  
->  あれば**いない**ライブラリに対してコンテンツの種類は、最初のコンテンツの種類の管理を有効にし、有効にする以前に構成された、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツの種類。 単一のドキュメント ライブラリでコンテンツの種類の管理を有効にするための手順を参照してください。  
+>  以前にライブラリのコンテンツの種類を構成して **いない** 場合は、コンテンツの種類の管理を有効にしてから、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のコンテンツの種類を有効にします。 単一のドキュメント ライブラリでコンテンツの種類の管理を有効にするための手順を参照してください。  
   
- **短いビデオ:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
+ **短いビデオ:**[(SSRS)Content Types in SharePoint2010.wmv を有効にする](http://www.youtube.com/watch?v=yqhm3DrtT1w)(http://www.youtube.com/watch?v=yqhm3DrtT1w)します。  
   
  **このトピックの内容:**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48155452"
   
 5.  ブラウザーを更新します。 **[レポート サーバーの統合機能]** の **[アクティブ化]** をクリックします。  
   
-     ![rs_reportserver_integration_deactive](media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+    ![非アクティブ化](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> 1 つのドキュメント ライブラリでコンテンツの種類の管理を有効にするには (SharePoint 2013)  
   
@@ -107,17 +107,17 @@ ms.locfileid: "48155452"
 8.  コンテンツの種類の追加操作が完了したら、 **[OK]** をクリックします。  
   
 9. > [!NOTE]  
-    >  場合、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツ タイプ グループ**SQL Server Reporting Services のコンテンツ種類**に表示されていない、**コンテンツ タイプの追加**true は、次の条件のいずれかのページで。  
+    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] コンテンツの種類のグループ **[SQL Server Reporting Services のコンテンツの種類]** が **[コンテンツ タイプの追加]** ページに表示されない場合は、次のいずれかの状況に該当しています。  
   
     -   SharePoint 製品用の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインがインストールされていません。 詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)します。 このトピックには、アドインのインストール方法、アドインのファイルのみのインストールをステップ実行して問題に対処する方法が記載されています。  
   
     -   アドインはインストールされていますが、サイト コレクション機能 **[レポート サーバーの統合機能]** がアクティブになっていません。 **[サイトの設定]** でサイト コレクション機能を確認してください。  
   
-    -   すべての[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツの種類がライブラリに既に追加されています。 すべてのコンテンツの種類がライブラリの一部である場合、このグループは **[コンテンツ タイプの追加]** ページから削除されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の 1 つまたは複数のコンテンツの種類を削除すると、 **[SQL Server Reporting Services のコンテンツの種類]** グループが **[コンテンツ タイプの追加]** ページに表示されます。  
+    -   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のすべてのコンテンツの種類が既にライブラリに追加されています。 すべてのコンテンツの種類がライブラリの一部である場合、このグループは **[コンテンツ タイプの追加]** ページから削除されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の 1 つまたは複数のコンテンツの種類を削除すると、 **[SQL Server Reporting Services のコンテンツの種類]** グループが **[コンテンツ タイプの追加]** ページに表示されます。  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 1 つのドキュメント ライブラリでコンテンツの種類の管理を有効にするには (SharePoint 2010)  
   
-1.  複数のコンテンツの種類を有効にする対象ライブラリを開きます。 ライブラリ メニュー バーに表示されるメニューは、 **[新規作成]**、 **[アップロード]**、 **[アクション]**、および **[設定]** です。 コンテンツの種類を追加する権限を持っていない場合は、 **[設定]** が表示されません。  
+1.  複数のコンテンツの種類を有効にする対象ライブラリを開きます。 ライブラリ メニュー バーには、以下のメニューが表示されます。**新しい**、**アップロード**、**アクション**、および**設定**します。 コンテンツの種類を追加する権限を持っていない場合は、 **[設定]** が表示されません。  
   
 2.  **[ライブラリ ツール]** リボンで、 **[ライブラリ]** をクリックします。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48155452"
 4.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint サイトとレポート サーバー アイテムのリスト権限のリファレンス](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [レポート ビルダーの起動&#40;レポート ビルダー&#41;](report-builder/start-report-builder.md)  
   
   

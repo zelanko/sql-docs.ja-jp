@@ -1,5 +1,5 @@
 ---
-title: DirectQuery モード |Microsoft Docs
+title: Analysis Services での DirectQuery モード |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 14c5f32981b6109c0159018ab9c1ebf09ae2f1fa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a51b38dacf5a1ebaf67a19bf8b3761800425a347
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982484"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072469"
 ---
 # <a name="directquery-mode"></a>DirectQuery モード
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,11 +45,11 @@ DirectQuery モードのテーブル モデルにはいくつかの制限があ�
 |||  
 |-|-|  
 |**機能領域**|**制限**|  
-|**[データ ソース]**|DirectQuery モデルは、SQL Server、Azure SQL Database、Oracle、Teradata いずれか 1 つのリレーショナル データベースからのデータのみを使用できます。  バージョンとプロバイダーについては、この記事で後述する「DirectQuery でサポートされるデータ ソース」を参照してください。| 
+|**[データ ソース]**|DirectQuery モデルでは、次の種類の 1 つのリレーショナル データベースからのデータのみ使用できます。SQL Server、Azure SQL Database、Oracle、および Teradata の場合。  バージョンとプロバイダーについては、この記事で後述する「DirectQuery でサポートされるデータ ソース」を参照してください。| 
 |**SQL ストアド プロシージャ**|DirectQuery モデルの場合、データ インポート ウィザードを使用するときに SQL ステートメントでテーブルを定義するストアド プロシージャを指定できません。 |   
 |**計算テーブル**|DirectQuery モデルでは、計算テーブルはサポートされませんが、計算列はサポートされます。 計算テーブルを含むテーブル モデルを変換しようとすると、モデルは貼り付けられたデータを含むことができないというエラーが発生します。|  
 |**クエリの制限**|既定の行数の上限は 100 万行です。この上限は、msmdsrv.ini ファイルで **MaxIntermediateRowSize** を指定することで増やすことができます。 詳細については、「 [DAX のプロパティ](../../analysis-services/server-properties/dax-properties.md) 」を参照してください。
-|**DAX の数式**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、DirectQuery モードでテーブル モデルをクエリするときに、DAX の数式とメジャー定義を SQL ステートメントに変換します。 SQL 構文に変換できない要素を含む DAX の数式がある場合、モデルで検証エラーが返されます。<br /><br /> この制限は、ほとんどの場合は特定の DAX 関数に限定されます。 メジャーの場合、DAX の数式はリレーショナル データ ストアに対するセットベースの操作に変換されます。 これは、暗黙的に作成されるすべてのメジャーがサポートされることを意味します。 <br /><br /> 検証エラーが発生したときは、数式を書き換えるか、別の関数に置き換えるか、データ ソースで派生列を使用することによって回避する必要があります。  互換性のない関数を含む数式がテーブル モデルにある場合、デザイナーで DirectQuery モードに切り替えるときにレポートされます。 <br /><br />**注:**  モデル内の一部の数式は、モデルを DirectQuery モードに切り替えるときに検証できますが、キャッシュとリレーショナル データ ストアに対して実行したときに異なる結果を返します。 その理由は、キャッシュに対する計算では Excel の動作をエミュレートすることを意図した機能を含むインメモリ分析エンジンのセマンティクスが使用され、一方、リレーショナル データ ソースに格納されているデータに対するクエリでは SQL Server のセマンティクスを使用するためです。<br /><br /> SQL Stored  <br /><br /> 詳細についてを参照してください。 [DirectQuery モードでの DAX 数式の互換性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)します。|  
+|**DAX の数式**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、DirectQuery モードでテーブル モデルをクエリするときに、DAX の数式とメジャー定義を SQL ステートメントに変換します。 SQL 構文に変換できない要素を含む DAX の数式がある場合、モデルで検証エラーが返されます。<br /><br /> この制限は、ほとんどの場合は特定の DAX 関数に限定されます。 メジャーの場合、DAX の数式はリレーショナル データ ストアに対するセットベースの操作に変換されます。 これは、暗黙的に作成されるすべてのメジャーがサポートされることを意味します。 <br /><br /> 検証エラーが発生したときは、数式を書き換えるか、別の関数に置き換えるか、データ ソースで派生列を使用することによって回避する必要があります。  互換性のない関数を含む数式がテーブル モデルにある場合、デザイナーで DirectQuery モードに切り替えるときにレポートされます。 <br /><br />**注:** モデル内の一部の数式は、モデルを DirectQuery モードに切り替えるときに検証できますが、キャッシュとリレーショナル データ ストアに対して実行したときに異なる結果を返します。 その理由は、キャッシュに対する計算では Excel の動作をエミュレートすることを意図した機能を含むインメモリ分析エンジンのセマンティクスが使用され、一方、リレーショナル データ ソースに格納されているデータに対するクエリでは SQL Server のセマンティクスを使用するためです。<br /><br />詳細についてを参照してください。 [DirectQuery モードでの DAX 数式の互換性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)します。|  
 |**数式の整合性**|特定のケースでは、同じ数式で返される結果が、キャッシュ モデルと、リレーショナル データ ストアのみを使用する DirectQuery モデルとで異なる場合があります。 これらの相違は、インメモリ分析エンジンと SQL Server 間のセマンティックの相違によるものです。<br /><br /> 返す可能性のある別の結果、モデルの配置時にリアルタイムに関数を含む、互換性の問題の完全な一覧については、次を参照してください。 [DirectQuery モード (SQL Server Analysis Services) での DAX 数式の互換性](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e)します。|  
 |**MDX の制限事項**|相対的なオブジェクト名はありません。 すべてのオブジェクト名を完全修飾する必要があります。<br /><br /> セッション スコープの MDX ステートメントは使用できません (名前付きセット、計算メンバー、計算セル、表示部分の合計、既定メンバーなど)。ただし、"WITH" 句などのクエリ スコープ構造は使用できます。<br /><br /> MDX のサブセレクト句の異なるレベルのメンバーとの組は使用できません。<br /><br /> ユーザー定義階層は使用できません。<br /><br /> ネイティブ SQL クエリは使用できません (通常、Analysis Services は T-SQL のサブセットをサポートしますが、DirectQuery モデルについてはサポートしません)。|  
 

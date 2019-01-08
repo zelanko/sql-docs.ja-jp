@@ -18,12 +18,12 @@ ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5b6861d1dcd4a9e516fbbf9d1ef22af7ea881d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 158635a13a60d652da3b78408db6cbb9d74ffd86
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698110"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617562"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47698110"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|各復元操作を識別する一意な識別番号。 ID、主キー。|  
-|**restore_date**|**datetime**|復元操作の完了日時。 NULL にすることができます。|  
+|**restore_date**|**datetime**|復元操作の開始の日時。 NULL にすることができます。|  
 |**destination_database_name**|**nvarchar(128)**|復元操作の対象となるデータベース名。 NULL にすることができます。|  
 |**user_name**|**nvarchar(128)**|復元操作を実行したユーザー名。 NULL にすることができます。|  
 |**backup_set_id**|**int**|復元されるバックアップ セットを識別する一意な識別番号。 参照**backupset (backup_set_id)** します。|  

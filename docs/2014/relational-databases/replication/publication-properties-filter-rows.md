@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.filterrows.f1
@@ -13,12 +12,12 @@ ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a33c0344fd0b195f920919bcabfdbf49fb0b63dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a12867b5efe457fa2361a85ac426db07c2760ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065672"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780384"
 ---
 # <a name="publication-properties-filter-rows"></a>[パブリケーションのプロパティ]、[行のフィルター選択]
   **[パブリケーションのプロパティ]** ダイアログ ボックスの **[行のフィルター選択]** ページを使用すると、次のフィルターを追加、編集、または削除できます。  
@@ -51,7 +50,7 @@ ms.locfileid: "48065672"
  このペインには、パブリケーションのテーブル アーティクルに追加したフィルターが表示されます。 行フィルターが設定されているテーブルは、ペイン内で最上位レベルのノードとして表示されます。 マージ パブリケーションの場合、結合フィルターを介してフィルター選択が拡張されているテーブルは、子ノードとして表示されます。  
   
  **[追加]**  
- **[追加]** をクリックすると、テーブル アーティクルをフィルター選択するためのダイアログ ボックスが表示されます。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 マージ パブリケーションに対して **[追加]** をクリックすると、 **[フィルターの追加]**、 **[選択したフィルターを拡張するために結合を追加する]**、 **[フィルターを自動的に生成]** の 3 つのオプションが表示されます。  
+ **[追加]** をクリックすると、テーブル アーティクルをフィルター選択するためのダイアログ ボックスが表示されます。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 クリックすると**追加**マージ パブリケーションには、3 つの選択肢が表示されます。**フィルターの追加**;**、選択したフィルターを拡張する結合の追加**;**フィルターを自動的に生成**します。  
   
 -   **[フィルターの追加]** をクリックすると、 **[フィルターの追加]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、行フィルターをテーブル アーティクルに適用できます。 たとえば、 **[フィルターの追加]** ダイアログ ボックスを使用して、顧客データ テーブルをサブスクライバーにレプリケートするときにフランスの顧客に関するデータだけを格納するように指定できます。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "48065672"
  [サブスクリプションの再初期化](reinitialize-a-subscription.md)   
  [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
  [パブリッシュされたデータのフィルター選択](publish/filter-published-data.md)   
- [結合フィルター](merge/join-filters.md)   
+ [Join Filters](merge/join-filters.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)  
   

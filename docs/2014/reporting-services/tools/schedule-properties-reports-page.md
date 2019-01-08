@@ -13,12 +13,12 @@ ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 635a5428685feff5887b0800388a41f95a108c1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 999f0b922705e210e6761d7b534490387c8fef74
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209232"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363234"
 ---
 # <a name="schedule-properties-reports-page"></a>[スケジュールのプロパティ] ([レポート] ページ)
   このページを使用すると、共有データ ソースを使用するすべてのレポートの一覧を表示できます。 スケジュールを使用して、レポート スナップショットの更新、レポート履歴の生成、サブスクリプションのトリガー、またはレポートのキャッシュされたコピーの期限の終了を実行できます。 スケジュールがどのように使用されているかを確認するには、レポートのプロパティおよびサブスクリプション情報を参照します。  
@@ -28,7 +28,7 @@ ms.locfileid: "48209232"
  このページを開くには、開始[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、開いているレポート サーバーに接続する、**共有スケジュール**フォルダーが共有スケジュールを右クリックし、選択**プロパティ**、順にクリックします**レポート**.  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473)」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
 ## <a name="options"></a>および  
  **フォルダー**  
@@ -39,7 +39,7 @@ ms.locfileid: "48209232"
   
 ## <a name="see-also"></a>参照  
  [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)   
- [[スケジュール]](../subscriptions/schedules.md)   
+ [スケジュール](../subscriptions/schedules.md)   
  [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
  [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [レポートの [全般] プロパティを構成する&#40;レポート マネージャー&#41;](../configure-general-properties-for-a-report-report-manager.md)  

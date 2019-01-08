@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergefilter
@@ -17,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d29fca659426075f4c7ee07f82ac6507fc0709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595211"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777914"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'***パブリケーション***'**  
+ [  **@publication=** ] **'**_パブリケーション_**'**  
  マージ フィルターを追加するパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@article=** ] **'***記事***'**  
+ [  **@article=** ] **'**_記事_**'**  
  マージ フィルターを追加するアーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
- [  **@filtername=** ] **'***filtername***'**  
+ [  **@filtername=** ] **'**_filtername_**'**  
  フィルターの名前です。 *filtername*必須パラメーターです。 *filtername*は**sysname**、既定値はありません。  
   
- [  **@join_articlename=** ] **'***join_articlename***'**  
+ [  **@join_articlename=** ] **'**_join_articlename_**'**  
  子アーティクルがで指定された親アーティクルです*記事*で指定された結合句を使用して結合する必要があります*join_filterclause*を満たす子アーティクル内の行を判別するために、マージ フィルターのフィルター条件です。 *join_articlename*は**sysname**、既定値はありません。 指定されたパブリケーションでアーティクルがある必要があります*パブリケーション*します。  
   
  [  **@join_filterclause=** ] *join_filterclause*  
@@ -120,7 +119,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="see-also"></a>参照  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [マージ アーティクル間の結合フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [結合フィルター](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

@@ -1,24 +1,23 @@
 ---
-title: 'レッスン 2: 別のコンピューターからの接続 | Microsoft Docs'
+title: レッスン 2:別のコンピューターからの接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bb12113055da47358baf4c14403c4b95b433cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183212"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367195"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
+# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2:別のコンピューターから接続します。
   セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
   
  このレッスンの内容は次のとおりです。  
@@ -58,7 +57,7 @@ ms.locfileid: "48183212"
  セキュリティ強化のために、Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]、および Windows 7 では Windows ファイアウォールが有効になっています。 別のコンピューターからこのインスタンスに接続する場合は、ファイアウォールで通信ポートを開放する必要があります。 [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスはポート 1433 でリッスンするので、固定ポートを構成する必要はありません。 ただし、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の名前付きインスタンスは、動的ポートでリッスンします。 ファイアウォールでポートを開く前に、まず [!INCLUDE[ssDE](../includes/ssde-md.md)] が固定ポートまたは静的ポートと呼ばれる特定のポートでリッスンするように構成する必要があります。このように構成しないと、 [!INCLUDE[ssDE](../includes/ssde-md.md)] は起動のたびに異なるポートでリッスンする可能性があります。 ファイアウォール、Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
 > [!NOTE]  
->  ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、[http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844) に一覧が掲載されています。ポート番号には 49152 ～ 65535 の数値を割り当てる必要があります。  
+>  ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、[http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) に一覧が掲載されています。ポート番号には 49152 ～ 65535 の数値を割り当てる必要があります。  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>SQL Server が特定のポートでリッスンするよう構成するには  
   
@@ -128,6 +127,6 @@ ms.locfileid: "48183212"
  これで、基本的な接続に関する簡単なチュートリアルを終了します。  
   
 ## <a name="return-to-tutorials-portal"></a>チュートリアル ポータルに戻る  
- [チュートリアル : データベース エンジンの概要](tutorial-getting-started-with-the-database-engine.md)  
+ [チュートリアル:データベース エンジンの概要](tutorial-getting-started-with-the-database-engine.md)  
   
   

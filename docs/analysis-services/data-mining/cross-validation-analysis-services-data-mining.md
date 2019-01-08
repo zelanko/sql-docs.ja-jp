@@ -1,5 +1,5 @@
 ---
-title: クロス検証 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: クロス検証 (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 910df69baf3b6af2b084bf1c45d06c6289cc83d9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bf8960fb659611003325275b2cf86d9325351c29
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017879"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540746"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>相互検証 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  *クロス検証* は標準の分析ツールであり、データ マイニング モデルの開発と微調整に役立つ重要な機能です。 マイニング構造および関連マイニング モデルを作成した後に、相互検証を使用してモデルの有効性を確認します。  相互検証には次の用途があります。  
+  *クロス検証*は標準の分析ツールであり、データ マイニング モデルの開発と微調整に役立つ重要な機能です。 マイニング構造および関連マイニング モデルを作成した後に、相互検証を使用してモデルの有効性を確認します。  相互検証には次の用途があります。  
   
 -   特定のマイニング モデルの堅牢性を検証します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34017879"
   
  図の例は、3 つのフォールドを指定した場合のデータの使用方法を示しています。  
   
- ![クロス検証によるデータのセグメント](../../analysis-services/data-mining/media/xvoverviewmain.gif "クロス検証によるデータの分割")  
+ ![クロス検証によるデータのセグメント](../../analysis-services/data-mining/media/xvoverviewmain.gif "クロス検証によるデータの分割方法")  
   
  図のシナリオでは、テスト用に使用される予約データセットがマイニング構造に含まれていますが、相互検証にはこのテスト データセットが含まれていません。 その結果、トレーニング データセット内のすべてのデータ、つまりマイニング構造内のデータの 70% が、相互検証に使用されます。 相互検証レポートには、各パーティションで使用されたケースの合計数が示されます。  
   
@@ -77,13 +77,13 @@ ms.locfileid: "34017879"
 ### <a name="choosing-models-and-columns-to-validate"></a>検証するモデルおよび列の選択  
  データ マイニング デザイナーの **[クロス検証]** タブを使用する場合、最初に一覧から予測可能列を選択する必要があります。 通常、1 つのマイニング構造で複数のマイニング モデルをサポートできますが、すべてのマイニング モデルで同じ予測可能列が使用されるわけではありません。 クロス検証を実行した場合、レポートに含めることができるのは、同じ予測可能列を使用するモデルのみです。  
   
- 予測可能な属性を選択するには、**[対象の属性]** をクリックし、一覧から列を選択します。 形式を使用して、入れ子になった列の名前を入力する必要があります、対象の属性が、入れ子になった列または入れ子になったテーブル内の列の場合は、\<入れ子になったテーブルの名前 > (キー).\<列を入れ子になった >。 入れ子になったテーブルから使用される唯一の列がキー列の場合は、行うこともできます\<入れ子になったテーブルの名前 > (キー)。  
+ 予測可能な属性を選択するには、 **[対象の属性]** をクリックし、一覧から列を選択します。 対象の属性が入れ子になった列の場合、または入れ子になったテーブルの列の場合は、形式を使用して、入れ子になった列の名前を入力する必要があります\<入れ子になったテーブル名 > (キー).\<列を入れ子になった >。 使用することができます、入れ子になったテーブルから使用される唯一の列がキー列の場合は、\<入れ子になったテーブル名 > (キー)。  
   
- 予測可能な属性を選択すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] により、同じ予測可能な属性を使用しているすべてのモデルが自動的にテストされます。 対象の属性に不連続値が含まれているときに特定の値を予測する場合は、予測可能列を選択した後で、必要に応じて対象の状態を入力することができます。  
+ 予測可能な属性を選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] により、同じ予測可能な属性を使用しているすべてのモデルが自動的にテストされます。 対象の属性に不連続値が含まれているときに特定の値を予測する場合は、予測可能列を選択した後で、必要に応じて対象の状態を入力することができます。  
   
- 対象の状態の選択は、返されるメジャーに影響します。 モデルで予測する特定の値を選択するのではなく、列名を対象の属性として指定した場合、既定では、モデルは最も可能性の高い状態の予測に対して評価されます。  
+ 対象の状態の選択は、返されるメジャーに影響します。 対象の属性を指定する場合、列名は、- し、既定では、モデルが最も可能性の高い状態の予測に対して評価される、予測するモデルを特定の値を選択しないでください。  
   
- クラスター モデルに対してクロス検証を使用する場合、予測可能列は存在しません。この場合は、 **[対象の属性]** ボックスの一覧から **[#Cluster]** を選択します。 このオプションを選択すると、 **[対象の状態]** などの、クラスター モデルに関連しない他のオプションは無効になります。 マイニング構造に関連付けられたすべてのクラスター モデルが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によってテストされます。  
+ クラスター モデルに対してクロス検証を使用する場合、予測可能列は存在しません。この場合は、 **[対象の属性]** ボックスの一覧から **[#Cluster]** を選択します。 このオプションを選択すると、 **[対象の状態]** などの、クラスター モデルに関連しない他のオプションは無効になります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] マイニング構造に関連付けられたすべてのクラスター モデルが によってテストされます。  
   
 ## <a name="tools-for-cross-validation"></a>クロス検証のためのツール  
  クロス検証は、データ マイニング デザイナーから使用できるほか、ストアド プロシージャを実行することによって行うこともできます。  
@@ -96,7 +96,7 @@ ms.locfileid: "34017879"
  このユーザー インターフェイスからクロス検証レポートを作成する方法の例については、「 [クロス検証レポートの作成](../../analysis-services/data-mining/create-a-cross-validation-report.md)」を参照してください。  
   
 ### <a name="cross-validation-stored-procedures"></a>クロス検証ストアド プロシージャ  
- 上級ユーザーは、完全にパラメーター化されたシステム ストアド プロシージャの形式でクロス検証を使用することもできます。 インスタンスに接続することで、ストアド プロシージャを実行することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、またはいずれかからマネージ コード アプリケーションです。  
+ 上級ユーザーは、完全にパラメーター化されたシステム ストアド プロシージャの形式でクロス検証を使用することもできます。 ストアド プロシージャを実行するにはからインスタンスに接続して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、またはいずれかからマネージ コード アプリケーション。  
   
  ストアド プロシージャは、マイニング モデルの種類別にグループ化されています。 そのうちの 1 つは、クラスタリング モデルのみを扱うストアド プロシージャのグループです。 それ以外のマイニング モデルを扱うストアド プロシージャは、他のグループに含まれています。  
   
@@ -106,17 +106,17 @@ ms.locfileid: "34017879"
   
  最初のフェーズでは、指定した数のパーティションをデータセット内に作成し、各パーティションに対して精度の結果を返すシステム ストアド プロシージャを呼び出します。 それぞれの基準について、パーティションの平均と標準偏差が Analysis Services によって計算されます。  
   
--   [SystemGetCrossValidationResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterCrossValidationResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
   
  **データセット全体の基準の生成**  
   
  2 番目のフェーズでは、先ほどとは異なる一連のストアド プロシージャを呼び出します。 これらのストアド プロシージャは、データセットのパーティション分割を行わずに、指定したデータセット全体の精度の結果を生成します。 マイニング構造のパーティション分割と処理を既に終えている場合は、この 2 つ目の一連のストアド プロシージャを呼び出すだけで結果を得ることができます。  
   
--   [SystemGetAccuracyResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetAccuracyResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterAccuracyResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
 #### <a name="defining-the-testing-data"></a>テスト データの定義  
  精度を計算するクロス検証ストアド プロシージャ (SystemGetAccuracyResults または SystemGetClusterAccuracyResults) を実行する際、クロス検証時のテストに使用するデータのソースを指定できます。 このオプションは、ユーザー インターフェイスでは使用できません。  
@@ -146,7 +146,7 @@ ms.locfileid: "34017879"
   
  すべてのメジャーをテストの種類ごとに掲載しています。 メジャーの解釈について簡単に説明します。  
   
- [クロス検証レポート内のメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
+ [相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
  各メジャーを計算する数式について説明し、適用先となる属性の種類をメジャーごとに示します。  
   
@@ -176,14 +176,14 @@ ms.locfileid: "34017879"
   
 |トピック|リンク|  
 |------------|-----------|  
-|SQL Server Development Studio でクロス検証のパラメーターを設定する方法について説明します。|[クロス検証」 タブと &#40; です。マイニング精度チャート」 ビューと &#41; です。](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
+|SQL Server Development Studio でクロス検証のパラメーターを設定する方法について説明します。|[[相互検証] タブ ([マイニング精度チャート] ビュー)](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
 |クロス検証によって得られるメトリックについて説明します。|[クロス検証の式](../../analysis-services/data-mining/cross-validation-formulas.md)|  
-|クロス検証レポートの形式について説明し、モデルの種類ごとに用意されている統計的尺度を明らかにします。|[クロス検証レポート内のメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
-|クロス検証の統計値を計算するためのストアド プロシージャを一覧にしています。|[データ マイニングのストアド プロシージャと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
+|クロス検証レポートの形式について説明し、モデルの種類ごとに用意されている統計的尺度を明らかにします。|[相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
+|クロス検証の統計値を計算するためのストアド プロシージャを一覧にしています。|[データ マイニングのストアド プロシージャ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
 |||  
-|マイニング構造および関連するモデルのテスト データセットの作成方法について説明します。|[トレーニング セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|他の種類の精度チャートの例を紹介します。|[分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|各種の精度チャートを作成する手順について説明します。|[テストおよび検証タスクと操作方法 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|マイニング構造および関連するモデルのテスト データセットの作成方法について説明します。|[トレーニング データ セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|他の種類の精度チャートの例を紹介します。|[分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [リフト チャート (Analysis Services - データ マイニング)](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート (Analysis Services - データ マイニング)](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|各種の精度チャートを作成する手順について説明します。|[テストおよび検証タスク、および操作方法 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
  [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  

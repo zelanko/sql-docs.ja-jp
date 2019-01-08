@@ -12,12 +12,12 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 788e68241cb922839274834ab3415b6c1111066c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc32145fab5305a19298c4bc9043a7a68a7f2566
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182522"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353710"
 ---
 # <a name="columns-with-a-name"></a>名前のある列
   行セット内の名前のある列が、大文字と小文字を区別して結果の XML にマップされる条件を次に示します。  
@@ -46,7 +46,7 @@ go
   
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <row PmId="7">  
@@ -75,7 +75,7 @@ SELECT 2+2 as result
 for xml PATH  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <row>  
@@ -89,7 +89,7 @@ for xml PATH
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
@@ -98,7 +98,7 @@ FOR XML PATH
 go  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <row>  
@@ -152,7 +152,7 @@ AND    E.EmployeeID=1
 FOR XML PATH, ELEMENTS XSINIL  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
@@ -184,7 +184,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <row EmpID="1">  
@@ -222,7 +222,7 @@ FOR XML PATH
   
  このクエリの結果、<`EmpName`> 要素が 2 つ作成されます。 最初の <`EmpName`> 要素には <`FirstName`> 子要素が、2 番目の <`EmpName`> 要素には <`MiddleName`> 子要素と <`LastName`> 子要素が含まれます。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <row EmpID="1">  

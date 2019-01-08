@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80334de2-17c1-43c9-951e-21a9f864e9cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946228116a33e57f118c1205bd2b4c24cb87441b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 247d422febda291c8ecc4ef2abeebe992b26dbd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064532"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784874"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>CDC デザイナーで使用する SQL Server 接続に必要な権限
   CDC デザイナー コンソールのタスクを実行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続情報が必要です。 このトピックでは、 **との接続を設定するために** [SQL Server への接続] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ダイアログ ボックスで指定できる情報について説明します。  
@@ -36,7 +35,7 @@ ms.locfileid: "48064532"
 |構成の変更およびキャプチャ インスタンスの追加/削除|`db_datareader` ロールと `db_datawriter` ロール<br /><br /> `db_owner` ロール|  
   
 ## <a name="see-also"></a>参照  
- [CDC デザイナー コンソールへのアクセスします。](access-the-cdc-designer-console.md)   
- [インスタンスの作成のための SQL Server 接続](sql-server-connection-for-instance-creation.md)  
+ [CDC デザイナー コンソールへのアクセス](access-the-cdc-designer-console.md)   
+ [インスタンスの作成のための SQL サーバー接続](sql-server-connection-for-instance-creation.md)  
   
   

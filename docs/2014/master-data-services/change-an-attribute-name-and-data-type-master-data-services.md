@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
@@ -13,12 +12,12 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f275a3f900feee3679456cf9d77d1ad03a028a18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76c46959327cdaf7a65cb7814e7ab0abf001eb28
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056710"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793055"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>属性名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の名前を変更できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "48056710"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-change-an-attribute-name"></a>属性名を変更するには  
   
@@ -51,8 +50,8 @@ ms.locfileid: "48056710"
 9. **[属性の保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [テキスト属性を作成&#40;マスター データ サービス&#41;](create-a-text-attribute-master-data-services.md)   
- [属性を削除する &#40;マスター データ サービス&#41;](delete-an-attribute-master-data-services.md)   
- [属性&#40;マスター データ サービス&#41;](attributes-master-data-services.md)  
+ [テキスト属性を作成する (マスター データ サービス)](create-a-text-attribute-master-data-services.md)   
+ [属性を削除する (マスター データ サービス)](delete-an-attribute-master-data-services.md)   
+ [属性 (マスター データ サービス)](attributes-master-data-services.md)  
   
   

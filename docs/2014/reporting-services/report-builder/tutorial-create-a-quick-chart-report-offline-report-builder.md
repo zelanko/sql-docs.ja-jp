@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:クイック チャート オフライン レポートの作成 (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: da0f35362a329974f8044da21b125d545c7bb323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091372"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527000"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
-  このチュートリアルでは、ウィザードを使用して円グラフを作成し、少し変更して実行可能な操作を確認します。 このチュートリアルは 2 つの異なる方法で実行できます。 どちらの方法でも、次の図に示すような円グラフが作成されます。  
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル:クイック チャート オフライン レポートの作成 (レポート ビルダー)
+  このチュートリアルでは、ウィザードを使用して円グラフを作成し、少し変更して実行可能な操作を確認します。 このチュートリアルは 2 つの異なる方法で実行できます。 両方の方法では、同じ結果を円グラフでは、次の図のようながあります。  
   
  ![「マイ円グラフの最初のグラフ」実行の表示](../media/rs-my1stpierunview.gif "実行ビューでの My First Pie Chart")  
   
@@ -42,11 +42,11 @@ ms.locfileid: "48091372"
  [XML データを使用して円グラフを作成する](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>このチュートリアル用のデータを含む Transact-SQL クエリの使用  
- データを含むクエリをこのトピックからコピーし、ウィザードに貼り付けることができます。 インスタンスの名前は必要があります[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]と任意のデータベースに読み取り専用アクセスのための十分な資格情報。 チュートリアルのデータセット クエリでは、リテラル データを使用します。ただし、クエリは、レポート データセットに必要なメタデータを返すように、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンスで処理される必要があります。  
+ データを含むクエリをこのトピックからコピーし、ウィザードに貼り付けることができます。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 チュートリアルのデータセット クエリでは、リテラル データを使用します。ただし、クエリは、レポート データセットに必要なメタデータを返すように、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンスで処理される必要があります。  
   
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用する利点は、レポート ビルダーの他のすべてのチュートリアルで同じ方法が使用されているため、他のチュートリアルを実行するときに既に手順がわかっていることです。  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリは他のいくつかの前提条件は必要です。 詳細については、「[チュートリアルの前提条件 &#40;レポート ビルダー&#41;](../report-builder-tutorials.md)」を参照してください。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリの場合、他にもいくつか必要な前提条件があります。 詳細については、「[チュートリアルの前提条件 &#40;レポート ビルダー&#41;](../report-builder-tutorials.md)」を参照してください。  
   
  [データを含む SQL クエリを使用して円グラフを作成する](#CreatePieQueryData)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48091372"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> 円グラフを作成、[!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリ  
+##  <a name="CreatePieQueryData"></a>[!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して円グラフを作成する  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>データを含む [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して円グラフを作成するには  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48091372"
   
 3.  型`#PERCENT{P0}`の**データ ラベル**オプション。  
   
-     `{P0}`小数点以下を含まないパーセンテージが表示されます。 だけ入力する場合`#PERCENT`数値は小数点以下 2 桁になります。 `#PERCENT` キーワードでは、計算または関数を実行します。その他の多くがあります。  
+     `{P0}` を指定すると、小数点以下を含まないパーセンテージが表示されます。 「`#PERCENT`」とだけ入力すると、小数点以下 2 桁を含む数値になります。 `#PERCENT` は計算または関数を実行するキーワードで、他にも多数あります。  
   
  グラフのラベルと凡例をカスタマイズする方法の詳細については、「[円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)」および「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md)」を参照してください。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48091372"
 ##  <a name="WhatsNext"></a> 次の課題  
  レポート ビルダーでレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 レポート ビルダーを実行するには、データベースなど、データ ソースを表示するアクセス許可が必要です。 を*接続文字列*、実際にデータ ソースにする接続。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
   
- その他のチュートリアルは、操作するには、インスタンスの名前が必要です。[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]と任意のデータベースに読み取り専用アクセスのための十分な資格情報。 これもシステム管理者が設定できます。  
+ 他のチュートリアルを実行するには、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 これもシステム管理者が設定できます。  
   
  最後に、レポートをレポート サーバーまたはレポート サーバーと統合されている SharePoint サイトに保存するには、URL と権限が必要です。 作成したレポートは自分のコンピューターから直接実行できますが、レポート サーバーまたは SharePoint サイトから実行するとレポートの機能が増えます。 自分のレポートまたはその他のレポートをパブリッシュ元のレポート サーバーまたは SharePoint サイトから実行する権限が必要です。 アクセス権を取得するには、システム管理者に問い合わせてください。  
   

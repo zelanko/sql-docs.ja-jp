@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1b52e98fe47049640a2ee5a3240d9ad43961bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128779"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794774"
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で外部キーのリレーションシップを作成する方法について説明します。 あるテーブルの行と他のテーブルの行を関連付ける場合は、2 つのテーブル間にリレーションシップを作成します。  
@@ -37,7 +36,7 @@ ms.locfileid: "48128779"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48128779"
   
 4.  **[選択されたリレーションシップ]** ボックスの一覧で、リレーションシップをクリックします。  
   
-5.  右側のグリッドの **[テーブルと列の指定]** をクリックし、その右側にある省略記号 (**[...]**) をクリックします。  
+5.  右側のグリッドの **[テーブルと列の指定]** をクリックし、その右側にある省略記号 ( **[...]** ) をクリックします。  
   
 6.  **[テーブルと列]** ダイアログ ボックスの **[主キー]** ボックスの一覧で、リレーションシップの主キー側となるテーブルをクリックします。  
   

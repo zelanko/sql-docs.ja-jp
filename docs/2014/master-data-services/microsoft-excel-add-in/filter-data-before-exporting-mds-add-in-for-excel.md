@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 828205b1786d2539e81dd54317ab0dc0a15e8a6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3bbbc189df4a004f18e8b23dba22a6a9469e3a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111912"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793015"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>読み込み前のデータのフィルター処理 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、サイズまたは Excel に読み込むデータのスコープを制限する場合に、データをフィルター処理します。  
@@ -54,6 +53,6 @@ ms.locfileid: "48111912"
 ## <a name="see-also"></a>参照  
  [データの読み込み&#40;MDS アドインの Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン)](filter-dialog-box-mds-add-in-for-excel.md)   
- [列の並べ替え&#40;MDS アドインの Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
+ [列の並べ替え (Excel 用 MDS アドイン)](reorder-columns-mds-add-in-for-excel.md)  
   
   

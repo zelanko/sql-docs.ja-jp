@@ -13,12 +13,12 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f44eb85e80135f81d0e2ca1f37657818843a237
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710060"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540240"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL コマンド
 1 つまたは複数のテーブルからデータを取得します。  
@@ -35,7 +35,7 @@ SELECT [ALL | DISTINCT]
 FROM [DatabaseName!]Table [Local_Alias]  
    [, [DatabaseName!]Table [Local_Alias] ...]   
 [WHERE JoinCondition [AND JoinCondition  
-…]  
+...]  
    [AND | OR FilterCondition [AND | OR FilterCondition ...]]]  
 [GROUP BY GroupColumn [, GroupColumn ...]]  
 [HAVING FilterCondition]  
@@ -82,15 +82,15 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  次のフィールド関数は、select 項目には、フィールドまたはフィールドを含む式で使用できるようにします。  
   
--   AVG (*Select_Item*)、数値データの列の平均を計算します。  
+-   AVG (*Select_Item*) の数値データの列の平均を計算します。  
   
 -   カウント (*Select_Item*)-列の選択項目の数をカウントします。 COUNT(*) では、クエリの出力内の行の数をカウントします。  
   
--   MIN (*Select_Item*) などの最小値を決定します*Select_Item*列にします。  
+-   MIN (*Select_Item*)-の最小値を決定*Select_Item*列にします。  
   
--   最大 (*Select_Item*) などの最大値を決定します*Select_Item*列にします。  
+-   最大 (*Select_Item*)-の最大値を決定します。 *Select_Item*列にします。  
   
--   SUM (*Select_Item*)、数値データの列を合計します。  
+-   SUM (*Select_Item*) の数値データの列を合計します。  
   
  フィールドの関数を入れ子にすることはできません。  
   

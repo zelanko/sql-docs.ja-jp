@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server destination
@@ -17,12 +16,12 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e78121e3e55cb921da9e48618b67bc997dba28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24f0adb1564882697bf862407cda8dfaee44cd23
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201282"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791024"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>SQL Server 変換先を使用してデータの一括読み込みを行う
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つのデータ ソースがあらかじめ含まれている必要があります。  
@@ -39,7 +38,7 @@ ms.locfileid: "48201282"
   
 5.  変換先をダブルクリックします。  
   
-6.  **[SQL Server 変換先エディター]** の **[接続マネージャー]** ページで、既存の OLE DB 接続マネージャーを選択するか、または **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](../connection-manager/ole-db-connection-manager.md)」をご覧ください。  
+6.  **[SQL Server 変換先エディター]** の **[接続マネージャー]** ページで、既存の OLE DB 接続マネージャーを選択するか、または **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](../connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 7.  データの読み込み先となるテーブルまたはビューを指定するには、次のいずれかの操作を行います。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48201282"
     > [!NOTE]  
     >  この変換先では、同じ名前の列は自動的にマップされます。  
   
-9. **[詳細設定]** をクリックし、一括読み込みオプションの **[ID を保持する]**、 **[NULL を保持する]**、 **[テーブル ロック]**、 **[CHECK 制約]**、および **[トリガーを起動する]** を設定します。  
+9. をクリックして **[詳細設定]** し、一括読み込みオプションを設定します。**Id を保持する**、 **null の保持**、 **Table lock**、 **Check 制約**、および**トリガーを起動する**します。  
   
      必要に応じて、挿入する最初の入力行と最後の入力行、挿入操作が停止するまでに発生できるエラーの最大数、および挿入を並べ替える列を指定します。  
   
@@ -67,9 +66,9 @@ ms.locfileid: "48201282"
 11. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 変換先](sql-server-destination.md)   
+ [SQL Server Destination](sql-server-destination.md)   
  [Integration Services の変換](transformations/integration-services-transformations.md)   
  [Integration Services のパス](integration-services-paths.md)   
- [データ フロー タスク](../control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../control-flow/data-flow-task.md)  
   
   

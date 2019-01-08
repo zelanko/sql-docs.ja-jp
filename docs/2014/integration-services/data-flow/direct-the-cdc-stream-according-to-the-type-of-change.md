@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bff3b71c0f091bc60d500dfaced02cb62b483753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0f98b373b736b9e7b97e9c5a599812210e4136
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069262"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799654"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>変更の種類に応じた CDC ストリームのダイレクト
   CDC スプリッター変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの CDC ソースが含まれている必要があります。  
@@ -37,11 +36,11 @@ ms.locfileid: "48069262"
   
 6.  以下の出力のいずれかを選択します。  
   
-    -   削除出力: DELETE 変更行のダイレクト先の出力。  
+    -   出力を削除します。DELETE 変更行の出力がリダイレクトされます。  
   
-    -   挿入出力: INSERT 変更行のダイレクト先の出力。  
+    -   出力を挿入します。INSERT 変更行の出力がリダイレクトされます。  
   
-    -   更新出力: 更新前および更新後の UPDATE 変更行と、Merge 変更行のダイレクト先の出力。  
+    -   更新プログラムの出力:前に、/後の UPDATE 変更行と結合の変更が行の出力がリダイレクトされます。  
   
 7.  必要に応じて、 **[詳細エディター]** ダイアログ ボックスを使用して、詳細なプロパティを構成できます。  
   

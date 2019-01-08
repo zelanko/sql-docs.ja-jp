@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server Managed Backup to Windows Azure: 相互運用性と共存 |Microsoft Docs'
+title: SQL Server を Windows Azure マネージ バックアップ:相互運用性と共存 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184242"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509131"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Windows Azure への SQL Server マネージド バックアップ: 相互運用性と共存
-  このトピックでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] のいくつかの機能との [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の相互運用性および共存について説明します。 これらの機能には、AlwaysOn 可用性グループ、データベース ミラーリング、バックアップ メンテナンス プラン、ログ配布、アドホック バックアップ、データベースのデタッチ、およびデータベースの削除が含まれます。  
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server を Windows Azure マネージ バックアップ:相互運用性と共存
+  このトピックでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] のいくつかの機能との [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の相互運用性および共存について説明します。 使用できる機能には、次のようなものがあります。AlwaysOn 可用性グループ、データベース ミラーリング、バックアップ メンテナンス プラン、ログ配布、アドホック バックアップ、データベースのデタッチ、および Drop Database。  
   
 ### <a name="alwayson-availability-groups"></a>AlwaysOn 可用性グループ  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、Windows Azure 専用のソリューションとして構成されている AlwaysOn 可用性グループがサポートされています。 内部設置型のみまたはハイブリッドの AlwaysOn 可用性グループの構成はサポートされていません。 他の考慮事項と詳細については、次を参照してください[可用性グループの SQL Server Managed Backup to Windows Azure の設定。](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ Windows のサポートされている Azure のみのソリューションとして構成されている AlwaysOn 可用性グループ[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]します。 内部設置型のみまたはハイブリッドの AlwaysOn 可用性グループの構成はサポートされていません。 他の考慮事項と詳細については、次を参照してください[可用性グループの SQL Server Managed Backup to Windows Azure の設定。](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>データベース ミラーリング  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、プリンシパル データベースでのみサポートされます。 プリンシパルとミラーの両方が [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用するように構成されている場合、ミラーリングされたデータベースはスキップされ、バックアップされません。 ただしフェールオーバーが発生した場合、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、ミラーが役割の交代を完了してオンラインになった後に、バックアップ プロセスを開始します。 この場合、バックアップは新しいコンテナーに格納されます。 ミラーが [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用するように構成されていない場合は、フェールオーバー時にはバックアップがまったく作成されません。 フェールオーバー時にもバックアップが継続されるように、プリンシパルとミラーの両方に対して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を構成することをお勧めします。  
@@ -53,7 +53,7 @@ ms.locfileid: "48184242"
 ### <a name="log-backups-using-other-backup-tools-or-custom-scripts"></a>他のバックアップ ツールまたはカスタム スクリプトを使用したログ バックアップ  
  2 つのバックアップが同じデータベースでログ バックアップを実行するように構成されていると、バックアップ ログ チェーンが中断されます。 チェーンの中断が検出されると、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は完全バックアップをスケジュールしてバックアップ チェーンの中断を修復しようとしますが、これは中断が定期的に発生し、競合する 2 つのツールによってログ バックアップが実行されるという状態が続くことを意味します。 また、一方のツールがバックアップの完全なセットを順序どおりに保持することは期待できないため、データベースの回復性に影響する可能性があります。 これは、ログ バックアップを実行する 2 つの機能またはツールに当てはまりますが、次に示す具体的な例を強調する際に役立ちます。 また、これは、このトピックの以前のセクションで説明したメンテナンス プランまたはログ配布の構成に関する問題の根拠でもあります。  
   
- **Data Protection Manager (DPM) ベースのバックアップ:** Microsoft Data Protection Manager を使用する完全と増分バックアップします。 増分バックアップは、トランザクション ログ バックアップの作成後にログの切り捨てを実行するログ バックアップです。 そのため、同じデータベースで DPM と [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の両方を構成することはできません。  
+ **Data Protection Manager (DPM) ベースのバックアップ。** Microsoft Data Protection Manager を使用する完全と増分バックアップします。 増分バックアップは、トランザクション ログ バックアップの作成後にログの切り捨てを実行するログ バックアップです。 そのため、同じデータベースで DPM と [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の両方を構成することはできません。  
   
  **サード パーティ製ツールまたはスクリプト:** 任意のサード パーティ製ツールまたは原因となるログの切り捨てと互換性がないログ バックアップを実行するスクリプト[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]はサポートされていません。  
   

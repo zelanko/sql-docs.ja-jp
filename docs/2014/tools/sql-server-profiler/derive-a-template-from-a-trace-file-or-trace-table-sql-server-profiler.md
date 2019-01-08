@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
@@ -14,12 +13,12 @@ ms.assetid: 305817b7-4d23-49fb-9e6c-4d34359877bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5b4d3626c0035cbf46f64d00b641a1eedad17bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1982d7941fd42eeac8a2d6eaa0bb78260c24317
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775054"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>トレース ファイルまたはトレース テーブルからのテンプレートの作成 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、既存のトーレス ファイルまたはトレース テーブルからトレース テンプレートを作成する方法について説明します。  
@@ -36,7 +35,7 @@ ms.locfileid: "48185223"
 >  既存のテンプレート ファイルを選択した場合は、ファイルを上書きするかどうかを確認するメッセージが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [トレース テンプレートを作成&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [実行中のトレースからのテンプレートの作成 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

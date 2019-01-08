@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
@@ -14,12 +13,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 680cb75aa3a302b8aa889f009a6fd080eb3cd1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223522"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786694"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle パブリッシャーのトラブルシューティング
   このトピックでは、Oracle パブリッシャーを構成および使用する際に発生する可能性のあるいくつかの問題を示します。  
@@ -206,7 +205,7 @@ ms.locfileid: "48223522"
 ## <a name="oracle-error-ora-01555"></a>Oracle エラー ORA-01555  
  次の Oracle データベース エラーは、スナップショット レプリケーションに関連するものではありません。このエラーは、Oracle でのデータの読み取り一貫性ビューの構築方法に関連します。  
   
- "ORA-01555: Snapshot too old"  
+ "ORA-01555:スナップショットが古すぎる"  
   
  Oracle では、ロールバック セグメントと呼ばれるオブジェクトを使用して、SQL ステートメントの発行時点のデータの読み取り一貫性ビューを構築します。 "Snapshot too old" エラーは、ロールバック情報が他の同時接続セッションによって上書きされた場合に発生する可能性があります。 Oracle 9i よりも前のバージョンでは、このエラーの発生頻度を減らす方法として、ロールバック セグメントのサイズや数を増やしたり、大きいトランザクションを特定のロールバック セグメントに割り当てる方法が推奨されていました。  
   

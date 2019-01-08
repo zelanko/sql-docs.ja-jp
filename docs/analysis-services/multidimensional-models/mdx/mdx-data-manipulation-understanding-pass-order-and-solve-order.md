@@ -1,5 +1,5 @@
 ---
-title: パス順序と解決順序 (MDX) の理解 |Microsoft ドキュメント
+title: パス順序と解決順序 (MDX) の理解 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4b865293cb9c76fb46e8fe12befb2a000d21907
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6a578537f5221fef314a4a732f00f99d82311bbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025959"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545405"
 ---
-# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX データ操作のパスを理解する順序し、解決順序
+# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX データ操作 - パスの理解と解決順序の注文
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   MDX スクリプトの結果としてキューブが計算される場合、計算に関連するさまざまな機能の使われ方によっては、キューブは多数の計算段階をたどることがあります。 それらの各段階は、計算パスと呼ばれます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34025959"
 > [!NOTE]  
 >  Adventure Works サンプル多次元データベースに対してこれらの MDX クエリを実行できます。 [AdventureWorks Multidimensional Models SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) サンプルは、CodePlex サイトからダウンロードできます。  
   
-### <a name="query-1differences-in-income-and-expenses"></a>クエリ 1 - 収益と経費の差  
+### <a name="query-1-differences-in-income-and-expenses"></a>クエリ 1 - 収益と経費の違い  
  1 番目の MDX クエリとして、年ごとの売上とコストの差を計算するために、次の例のような単純な MDX クエリを作成します。  
   
 ```  
@@ -86,7 +86,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>クエリ 2 - 経費差し引き後の収益のパーセンテージ  
+### <a name="query-2-percentage-of-income-after-expenses"></a>クエリ 2-経費差し引き後の収入の割合  
  2 番目のクエリとして、年ごとの経費差し引き後の収益のパーセンテージを計算するために、次の MDX クエリを使用します。  
   
 ```  
@@ -114,7 +114,7 @@ FROM [Adventure Works]
   
  1 番目のクエリと 2 番目のクエリの結果セットの違いは、計算されるメンバーの配置位置の違いによるものです。 1 番目のクエリでは、計算されるメンバーは ROWS 軸の一部ですが、2 番目のクエリの場合は COLUMNS 軸の一部になっています。 次の例で、2 つの計算されるメンバーを 1 つの MDX クエリで組み合わせて使用するときに、この配置位置の違いが重要になります。  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>クエリ 3 - 年に関する差と純利益の計算の組み合わせ  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>クエリ 3 結合年に関する差と純利益の計算  
  最後のクエリでは、前の 2 つの例を 1 つの MDX クエリに結合します。このとき、列と行の両方で計算を行うため、解決順序が重要になります。 計算が正しい順序で確実に行われるように、 **SOLVE_ORDER** キーワードを使用して計算の行われる順序を定義します。  
   
  **SOLVE_ORDER** キーワードは、MDX クエリまたは **CREATE MEMBER** コマンド内の計算されるメンバーの解決順序を指定します。 **SOLVE_ORDER** キーワードで使用される整数値は相対値であり、0 で始まる必要はありません。また、連続値である必要もありません。 この値は、より高い値を持つメンバーを計算して得られる値に基づいてそのメンバーを計算するように MDX に指示するだけです。 計算されるメンバーの定義に **SOLVE_ORDER** キーワードが含まれていない場合、その計算されるメンバーの既定値は 0 です。  
@@ -205,9 +205,9 @@ FROM [Adventure Works]
  解決順序の問題は、計算されるメンバー、カスタム ロールアップ式、または計算されるセルの関係するディメンションが多数あるキューブの場合は特に、非常に複雑になります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が MDX クエリを評価するとき、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、MDX クエリで指定されているキューブのディメンションも含め、特定のパスに関係するものすべての解決順序の値を考慮します。  
   
 ## <a name="see-also"></a>参照  
- [CalculationCurrentPass & #40 です。MDX と #41 です。](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue & #40 です。MDX と #41 です。](../../../mdx/calculationpassvalue-mdx.md)   
- [MEMBER ステートメント & #40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-member.md)   
- [操作に使用するデータ & #40 です。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass (MDX)](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue (MDX)](../../../mdx/calculationpassvalue-mdx.md)   
+ [CREATE MEMBER ステートメント (MDX)](../../../mdx/mdx-data-definition-create-member.md)   
+ [データの操作 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

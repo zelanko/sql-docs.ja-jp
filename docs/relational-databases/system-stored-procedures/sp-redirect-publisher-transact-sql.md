@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_redirect_publisher_TSQL
@@ -17,12 +16,12 @@ ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2a6ecf88b7b41929644b78e04544e47f5f98b61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c04df4cb844faf42506c781607a220e98a7db17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718770"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779114"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_redirect_publisher
   
 ## <a name="arguments"></a>引数  
  [ **@original_publisher** =] **'***original_publisher***'**  
- インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを最初に発行します。 *original_publisher*は**sysname**、既定値はありません。  
+ 最初にデータベースをパブリッシュした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。 *original_publisher*は**sysname**、既定値はありません。  
   
  [ **@publisher_db** =] **'***publisher_db***'**  
  パブリッシュされるデータベースの名前。 *publisher_db*は**sysname**、既定値はありません。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
@@ -15,21 +14,21 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a3e2caa3c2b89ead6ee109ea13fa6783cc61dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116412"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781265"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
   
-1.  **作業を開始する準備:**  [アクセス許可](#Permissions)  
+1.  **作業を開始する準備:**[アクセス許可](#Permissions)  
   
-2.  **リソース ガバナーのプロパティを表示するには (次を使用):**  [[リソース ガバナーのプロパティ] ページ](#ViewRGProp)  
+2.  **使用して、リソース ガバナーのプロパティを表示するには。**[リソース ガバナーのプロパティ ページ](#ViewRGProp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  **[リソース ガバナーのプロパティ]** ページでは、リソース ガバナー エンティティのプロパティを表示する以外に、さまざまな構成タスクを実行できます。 詳細については、次のトピックをご覧ください。  
   
 -   [リソース ガバナーの有効化](enable-resource-governor.md)  
@@ -126,8 +125,8 @@ ms.locfileid: "48116412"
   
 2.  リソース ガバナー エンティティの現在の構成を表示するには、「[リソース ガバナー関連の動的管理ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql)」を使用します。  
   
-## <a name="see-also"></a>関連項目  
- [[リソース ガバナー]](resource-governor.md)   
+## <a name="see-also"></a>参照  
+ [リソース ガバナー](resource-governor.md)   
  [リソース ガバナーの有効化](enable-resource-governor.md)   
  [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   

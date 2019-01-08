@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7bb964c435a641afb1fb5ac288d1f341ba45d716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c8ef9f6a2bcc4fb9b5f78bbc968693d348319e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147022"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793344"
 ---
 # <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>データ品質照合の列 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]でデータを照合した後、リボンの **[データ品質]** グループの **[詳細の表示]** をクリックすると照合の詳細が含まれる列を表示できます。  
@@ -31,7 +30,7 @@ ms.locfileid: "48147022"
 |**SCORE**|グループ内のレコードがピボット レコードとどの程度類似しているかを表します。 このスコアは DQS によって決定されます。 スコアが表示されない場合、そのレコードは他のレコードのピボットであるか、照合が見つかりませんでした。|  
   
 ## <a name="see-also"></a>参照  
- [データ品質の Excel 用 MDS アドインの照合](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [Excel 用 MDS アドインでのデータ品質照合](data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [類似データの照合 (Excel 用 MDS アドイン)](match-similar-data-mds-add-in-for-excel.md)   
  [データ照合](../../data-quality-services/data-matching.md)  
   

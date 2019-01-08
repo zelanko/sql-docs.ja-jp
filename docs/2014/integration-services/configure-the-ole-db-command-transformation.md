@@ -14,12 +14,12 @@ ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6926eae9c92a80e271c786a325e94f58b6ab647
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 307773a82206cc1c804a41525b733175ffbb12da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229772"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540173"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>OLE DB コマンド変換を構成する
   OLE DB コマンド変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと、フラット ファイル ソースや OLE DB ソースなどの変換元があらかじめ含まれている必要があります。 この変換は、通常、パラメーター化クエリを実行するために使用されます。  
@@ -36,9 +36,9 @@ ms.locfileid: "48229772"
   
 5.  コンポーネントを右クリックし、[編集] または **[詳細エディターの表示]** をクリックします。  
   
-6.  **[接続マネージャー]** タブで、 **[接続マネージャー]** 一覧から OLE DB 接続マネージャーを選択します。 詳細については、「 [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」をご覧ください。  
+6.  **[接続マネージャー]** タブで、 **[接続マネージャー]** 一覧から OLE DB 接続マネージャーを選択します。 詳細については、「 [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
-7.  **[コンポーネントのプロパティ]** タブをクリックし、 **[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
+7.  **[コンポーネントのプロパティ]** タブをクリックし、**[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
   
 8.  **[文字列値エディター]** で、各パラメーターのパラメーター マーカーとして疑問符 (?) を使用して、パラメーター化 SQL ステートメントを入力します。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "48229772"
 15. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [OLE DB コマンド変換](data-flow/transformations/ole-db-command-transformation.md)   
+ [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
  [Integration Services の変換](data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](data-flow/integration-services-paths.md)   
- [データ フロー タスク](control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](control-flow/data-flow-task.md)  
   
   

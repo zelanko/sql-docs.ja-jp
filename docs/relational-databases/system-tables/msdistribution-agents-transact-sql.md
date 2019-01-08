@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdistribution_agents_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc908623e3979943214132605a1ab92ceaad657b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846630"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785754"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47846630"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|ディストリビューション エージェントまたはマージ エージェントが作成された日時。|  
-|**queue_id**|**sysname**|キュー更新サブスクリプションのキューを判別するための識別子。 キューに登録されていないサブスクリプションの場合、値は NULL です。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キュー ベースのパブリケーションでは、値は、サブスクリプションに使用するキューを一意に識別する GUID。 SQL Server ベースのキュー パブリケーションの場合、列が値を含む**SQL**します。<br /><br /> 注: を使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューは非推奨し、現在サポートされていません。|  
+|**queue_id**|**sysname**|キュー更新サブスクリプションのキューを判別するための識別子。 キューに登録されていないサブスクリプションの場合、値は NULL です。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing ベースのパブリケーションの場合、値は、サブスクリプションで使用されるキューを一意に識別する GUID です。 SQL Server ベースのキュー パブリケーションの場合、列が値を含む**SQL**します。<br /><br /> 注:[!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing は非推奨とされており、現在はサポートされていません。|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|エージェントをリモートから起動できるかどうかを示します。<br /><br /> **0**エージェントをリモートから起動できないことを指定します。<br /><br /> **1**リモート、および示されているリモート コンピューター上にエージェントをアクティブにことを指定します、 *offload_server*プロパティ。|  
 |**offload_server**|**sysname**|エージェントをリモートから起動するときに使用するサーバーのネットワーク名。|  

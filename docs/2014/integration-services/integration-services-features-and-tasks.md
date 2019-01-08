@@ -14,24 +14,24 @@ ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be4bab2d37570dab0bc3e6048b999330ddebb7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61871299c35df0495932f1b149fe99ab858edaa5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142802"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524870"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services の機能とタスク
-  すべての人が情報の検索-デザイナーや開発者、アナリスト、管理者-作成および開発する必要があります[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージ。 開発中のアプリケーションや Web サイトにパッケージを組み込む方法についても解説されています。  
+  そのすべてのユーザー デザイナー、開発者、アナリスト、または管理者に情報を検索の作成および開発する必要があります[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージ。 開発中のアプリケーションや Web サイトにパッケージを組み込む方法についても解説されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Integration Services &#40;SSIS&#41;と Studio 環境](integration-services-ssis-development-and-management-tools.md)  
   
  [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)  
   
- [Integration Services &#40;SSIS&#41;接続](connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)  
   
- [Integration Services &#40;SSIS&#41;プロジェクト](integration-services-ssis-projects-and-solutions.md)  
+ [Integration Services (SSIS) プロジェクト](integration-services-ssis-projects-and-solutions.md)  
   
  [Integration Services &#40;SSIS&#41;パラメーター](integration-services-ssis-package-and-project-parameters.md)  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48142802"
   
  [Integration Services &#40;です。SSIS&#41; 式](expressions/integration-services-ssis-expressions.md)  
   
- [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
- [Integration Services &#40;SSIS&#41;イベント ハンドラー](integration-services-ssis-event-handlers.md)  
+ [Integration Services (SSIS) のイベント ハンドラー](integration-services-ssis-event-handlers.md)  
   
  [Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48142802"
   
  [パッケージの実行およびその他の操作の監視](performance/monitor-running-packages-and-other-operations.md)  
   
- [セキュリティの概要&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [セキュリティの概要 &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
  [Azure Feature Pack](azure-feature-pack-for-integration-services-ssis.md)  
   

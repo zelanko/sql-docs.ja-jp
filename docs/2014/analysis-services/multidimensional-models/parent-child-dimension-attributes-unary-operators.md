@@ -15,12 +15,12 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e69e7f66b633a218ad5a2fb77cd44047c9810ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544390"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>親子ディメンションの単項演算子
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーにカスタム ロールアップを指定する、単項 (またはカスタム ロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
@@ -34,7 +34,7 @@ ms.locfileid: "48131614"
 |単項演算子|説明|  
 |--------------------|-----------------|  
 |+ (正符号)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値に加算されます。 これは、単項演算子列が属性に対して定義されていない場合の既定の演算子です。|  
-|- (負符号)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値から減算されます。|  
+|-(マイナス記号)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値から減算されます。|  
 |* (アスタリスク)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値で乗算されます。|  
 |/ (スラッシュ)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値で除算されます。|  
 |~ (チルダ)|メンバーの値は無視されます。|  
@@ -46,7 +46,7 @@ ms.locfileid: "48131614"
  ディメンション デザイナーの **[ブラウザー]** タブでは、階層内の各メンバーの隣に単項演算子を表示できます。 書き込み許可ディメンションを使用する場合は、単項演算子を変更することもできます。 ディメンションが書き込み可能でない場合は、データ ソースを直接変更するためのツールを使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ディメンション属性のプロパティの参照](dimension-attribute-properties-reference.md)   
+ [ディメンションの属性のプロパティの参照](dimension-attribute-properties-reference.md)   
  [親子ディメンションのカスタム ロールアップ演算子](parent-child-dimension-attributes-custom-rollup-operators.md)   
  [ディメンション デザイナーでのビジネス インテリジェンス ウィザードの起動](database-dimensions-bi-wizard-in-dimension-designer.md)  
   

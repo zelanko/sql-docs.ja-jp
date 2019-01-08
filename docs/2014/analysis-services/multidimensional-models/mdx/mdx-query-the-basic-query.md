@@ -17,15 +17,15 @@ ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5f577d48d14790ca946348ccff030f4ff31d9c2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 785a03a5d9fffe3adf072a32f578b0ba936ae6f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169722"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521020"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>MDX の基本的なクエリ (MDX)
-  多次元式 (MDX) の基本的なクエリは SELECT ステートメントであり、これは MDX で最も頻繁に使用するクエリでもあります。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  
+  基本的な多次元式 (MDX) クエリは、MDX の SELECT ステートメント、最もよく使用されるクエリです。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  
   
 ## <a name="specifying-a-result-set"></a>結果セットの指定  
  MDX の SELECT ステートメントでは、キューブから返された多次元データのサブセットを格納した結果セットが指定されます。 結果セットを指定するには、MDX クエリに次の情報を含める必要があります。  
@@ -110,7 +110,7 @@ WHERE ( [Sales Territory].[Southwest] )
  詳細な例については、「[クエリ軸の内容の指定 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)」および「[スライサー軸の内容の指定 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [SELECT ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [MDX の主な概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
+ [SELECT ステートメント (MDX)](/sql/mdx/mdx-data-manipulation-select)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
@@ -14,12 +13,12 @@ ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a3aee9b1bbe939c3790d2849c829a706425aa1b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adc2a5156c84545c90a9ae904749f96a729c251a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794984"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>数値属性を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ユーザーにより属性値として数値が入力される場合は、数値属性を作成します。  
@@ -75,9 +74,9 @@ ms.locfileid: "48072632"
 15. **[エンティティのメンテナンス]** ページで **[エンティティの保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [属性&#40;マスター データ サービス&#41;](attributes-master-data-services.md)   
+ [属性 (マスター データ サービス)](attributes-master-data-services.md)   
  [属性名を変更&#40;マスター データ サービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [ファイル属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+ [ファイル属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
@@ -13,12 +12,12 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 730e203281c4bc964e2b2694e475095280483d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23baf42a1ddc30ceccf5ec7c6f8b9db96e72e588
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095790"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804922"
 ---
 # <a name="create-relationships"></a>[リレーションシップの作成]
   **[リレーションシップの作成]** ダイアログ ボックスを使用すると、[あいまい参照変換エディター]、[参照変換エディター]、および [用語参照変換エディター] で設定したソース列と参照テーブル列の間のマッピングを編集できます。  
@@ -51,8 +50,8 @@ ms.locfileid: "48095790"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services-error-and-message-reference.md)   
- [あいまい参照変換エディター &#40;[列] タブ&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [あいまい参照変換エディター ([列] タブ)](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [[参照変換エディター] &#40;[列] ページ&#41;](../../lookup-transformation-editor-columns-page.md)   
- [用語参照変換エディター&#40;用語参照 タブ&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+ [用語参照変換エディター ([用語参照] タブ)](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

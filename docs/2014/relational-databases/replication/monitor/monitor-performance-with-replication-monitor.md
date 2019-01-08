@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086492"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815574"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>レプリケーション モニターを使用したパフォーマンスの監視
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] &#xA0;レプリケーション モニターを使用すると、トランザクション レプリケーションとマージ レプリケーションのパフォーマンスを次の方法で監視できます。  
@@ -76,7 +75,7 @@ ms.locfileid: "48086492"
   
     |[非常に良い]|[良い]|[普通]|悪い|重大|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   マージ レプリケーションの場合、パフォーマンス品質は、しきい値とは関係ありません (行処理しきい値は、 **[パフォーマンス クリティカル]** の値を **[状態]** 列に表示するかどうかを決定します)。 パフォーマンス品質は、個々のサブスクリプション パフォーマンスを、接続の種類 (ダイヤルアップまたは LAN) が同じパブリケーションのサブスクリプションの平均的な過去のパフォーマンスと比較することで決定されます。 レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続により 5 回行われた後で、値が表示されます。 50 以上の変更に伴う同期が 5 回未満の場合、または最も最近の同期での変更が 50 未満の場合、レプリケーション モニターには値は表示されません。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48086492"
   
     |[非常に良い]|[良い]|[普通]|悪い|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
  サブスクリプション情報の表示の詳細については、「[サブスクリプションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)」を参照してください。  
   

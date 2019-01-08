@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する | Microsoft Docs'
+title: レッスン 4:子レポートのデータ接続とデータ テーブルの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3403d416ed7945d4f980ef4c15d89ff0e56c8720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0aed81ff4ac2daa517bb17ddb53ebaf7eacdcbe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184312"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365414"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4:子レポートのデータ接続とデータ テーブルを定義します。
   親レポートを設計した後は、子レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2008 データベースを使用しますが、 AdventureWorks2012 データベースに接続することもできます。  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>DataSet を追加してデータ接続と DataTable を定義するには (子レポート用)  
@@ -57,11 +57,11 @@ ms.locfileid: "48184312"
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-     クリックして、クエリを作成することもできます。**クエリ ビルダー**、クリックして、クエリを確認し**クエリの実行**ボタンをクリックします。 クエリを実行したときに期待したデータが返されない場合は、以前のバージョンの AdventureWorks を使用している可能性があります。 インストールの詳細については、 **AdventureWorks2008**のバージョンの AdventureWorks を参照してください[チュートリアル: AdventureWorks データベースのインストール](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)します。  
+     クリックして、クエリを作成することもできます。**クエリ ビルダー**、クリックして、クエリを確認し**クエリの実行**ボタンをクリックします。 クエリを実行したときに期待したデータが返されない場合は、以前のバージョンの AdventureWorks を使用している可能性があります。 インストールの詳細については、 **AdventureWorks2008**のバージョンの AdventureWorks を参照してください[チュートリアル。AdventureWorks データベースのインストール](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)します。  
   
 10. **生成するメソッドの選択**をオフにします ページで、 **(GenerateDBDirectMethods) データベースに直接更新を送信するためのメソッドを作成**、順にクリックします**完了**。  
   
-     ADO.NET の構成が完了するようになりました[DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx)レポートのデータ ソースとして。 Visual Studio の [データセット デザイナー] ページに、追加した **DataTable** にクエリで指定した列が表示されます。 DataSet2 には、クエリに基づいて PurhcaseOrderDetail テーブルのデータが含まれています。  
+     ADO.NET の構成が完了するようになりました[DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx)レポートのデータ ソースとして。 Visual Studio の [データセット デザイナー] ページに、追加した **DataTable** にクエリで指定した列が表示されます。 DataSet2 には、クエリに基づいて PurhcaseOrderDetail テーブルのデータが含まれています。  
   
 11. ファイルを保存します。  
   

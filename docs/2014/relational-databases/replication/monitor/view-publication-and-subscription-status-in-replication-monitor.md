@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, monitoring
@@ -22,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d408644f56f097e3389dab51d8b8d10ccc8954cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218242"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786744"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。  
@@ -54,11 +53,11 @@ ms.locfileid: "48218242"
   
  **パブリケーションおよびサブスクリプションの状態を表示するには**  
   
--   レプリケーション モニター: [パブリケーションの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)[サブスクリプションの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   レプリケーション モニター:[情報を表示し、パブリケーションのタスクを実行&#40;レプリケーション モニター&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)と[情報を表示し、サブスクリプションのタスクを実行&#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
   
  **エージェントの詳細情報を表示するには**  
   
--   レプリケーション モニター: [パブリケーションに関連付けられているエージェントの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-publication-agents.md)、[サブスクリプションに関連付けられているエージェントの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-subscription-agents.md)。  
+-   レプリケーション モニター:[情報を表示し、パブリケーションに関連付けられているエージェントのタスクを実行&#40;レプリケーション モニター&#41; ](view-information-and-perform-tasks-for-publication-agents.md)と[情報を表示し、サブスクリプションに関連付けられているエージェントのタスクを実行&#40;レプリケーションモニター&#41;](view-information-and-perform-tasks-for-subscription-agents.md)します。  
   
 ## <a name="publication-status-values"></a>パブリケーションの状態の値  
  次の表は、パブリケーションの状態の値と対応するアイコンを優先度順に示しています。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -17,21 +16,21 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e3c468524f470a11ec73ace3c5feffaa2f52ead
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049672"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800624"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>キャッシュ、更新、およびレプリケーション モニターのパフォーマンス
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターは、運用システム内の多数のコンピューターを効率的に監視することを目的に設計されています。 計算の実行、およびデータの収集のためにレプリケーション モニターによって使用されるクエリは、定期的にキャッシュおよび更新されます。 キャッシュによってレプリケーション モニターでさまざまなページを表示する際に必要なクエリと計算の数が削減され、監視のスケーラビリティが向上し、複数のユーザーに対応できるようになります。  
   
  キャッシュの更新は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブである **ディストリビューションのレプリケーション モニターの状態更新機能**によって処理されます。 このジョブは継続的に実行されますが、キャッシュの更新スケジュールは、前回の更新後の待機時間に基づいて設定されます。  
   
--   前回のキャッシュの作成時以降にエージェント履歴が変更された場合、待機時間は、最短の 4 秒、または前回のキャッシュが作成されたときにかかった時間になります。  
+-   キャッシュが最後に作成されたためエージェント履歴の変更があった場合、待機時間はの最小値には。4 秒です。または、前回のキャッシュの作成にかかる時間の量。  
   
--   前回のキャッシュ作成時以降に (他の種類の変更があったとしても) エージェント履歴が変更されなかった場合、待機時間は、最長の 30 秒、または前回のキャッシュが作成されたときにかかった時間になります。  
+-   キャッシュが最後にあるために、エージェントの履歴の変更がない場合は、作成 (があったその他の変更)、待機時間が最大数。30 秒です。または、前回のキャッシュの作成にかかる時間の量。  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>レプリケーション モニターのユーザー インターフェイスの更新  
  レプリケーション モニターのユーザー インターフェイスは、以下の方法で更新できます。  

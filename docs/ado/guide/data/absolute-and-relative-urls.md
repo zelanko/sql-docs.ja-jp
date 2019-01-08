@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604882"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541930"
 ---
 # <a name="absolute-and-relative-urls"></a>絶対 URL と相対 URL
 URL には、ローカルまたはネットワーク コンピューターに格納されているターゲットの場所を指定します。 ファイル、ディレクトリ、HTML ページ、画像、プログラム、およびにターゲットを指定できます*します。*  
@@ -58,7 +58,7 @@ URL には、ローカルまたはネットワーク コンピューターに格
  開くことでコンテキストを定義することも、**レコード**または**Recordset**これらのオブジェクトが既にある、暗黙的または明示的に宣言されたため、ディレクトリを表すオブジェクトを**接続**コンテキストを指定するオブジェクト。  
   
 ## <a name="scoped-operations"></a>スコープの操作  
- コンテキストでは、スコープも定義します: これは、ディレクトリとそのサブディレクトリ後続の操作に参加できます。 **レコード**オブジェクトのディレクトリを操作するいくつかのスコープを持つメソッドとそのすべてのサブディレクトリがあります。 これらのメソッドを含める[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)、および[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)します。  
+ コンテキストでは、スコープも定義します-つまり、ディレクトリとそのサブディレクトリ後続の操作に参加できます。 **レコード**オブジェクトのディレクトリを操作するいくつかのスコープを持つメソッドとそのすべてのサブディレクトリがあります。 これらのメソッドを含める[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)、および[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)します。  
   
 ## <a name="relative-urls-as-command-text"></a>コマンド テキストと相対 Url  
  内の文字列を入力して、データ ソースで実行するコマンドを指定することができます、 *CommandText*のパラメーター、**接続**オブジェクトの[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)メソッドをおよび、 *ソース*のパラメーター、 **Recordset**オブジェクトの[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド。  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
@@ -15,12 +15,12 @@ ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bacf87c25d7949580eb3d366467e1dae9381e8a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115592"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795618"
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
   マルチサーバー管理では、マスター サーバー (MSX) 1 台と、対象サーバー (TSX) 1 台以上を設定する必要があります。 すべての対象サーバーで処理されるジョブは、まずマスター サーバーで定義されてから対象サーバーにダウンロードされます。  
@@ -37,11 +37,11 @@ ms.locfileid: "48115592"
   
 ||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 以降**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|はい|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|**MSX = 8.0 &LT; SP3**|はい|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|**MSX = 8.0 SP3 以降**|いいえ|いいえ|はい|はい|はい|はい|はい|  
-|**MSX = 9.0**|いいえ|いいえ|いいえ|はい|はい|はい|はい|  
-|**MSX = 10.0**|いいえ|いいえ|いいえ|いいえ|はい|はい|はい|  
+|**MSX = 7.0**|はい|[はい]|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|**MSX = 8.0 &LT; SP3**|はい|[はい]|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|**MSX = 8.0 SP3 以降**|いいえ|いいえ|はい|[はい]|[はい]|[はい]|はい|  
+|**MSX = 9.0**|いいえ|いいえ|いいえ|はい|[はい]|[はい]|はい|  
+|**MSX = 10.0**|いいえ|いいえ|いいえ|いいえ|はい|[はい]|はい|  
 |**MSX = 10.5**|いいえ|いいえ|いいえ|いいえ|いいえ|はい|はい|  
 |**MSX = 11.0**|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|はい|  
   

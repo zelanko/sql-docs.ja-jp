@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropsubscription
@@ -17,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8af8a4fc4572389bfaca7d1c678de8ec95641e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687480"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812972"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +43,22 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'***パブリケーション***'**  
+ [  **@publication=** ] **'**_パブリケーション_**'**  
  関連付けられているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。 場合**すべて**、指定のサブスクライバーのすべてのパブリケーションのすべてのサブスクリプションが取り消されました。 *パブリケーション*必須パラメーターです。  
   
- [  **@article=** ] **'***記事***'**  
+ [  **@article=** ] **'**_記事_**'**  
  アーティクルの名前を指定します。 *記事*は**sysname**既定値は NULL です。 場合**すべて**、ごとにすべてのアーティクルに対してサブスクリプションがパブリケーションとサブスクライバーの削除を指定します。 使用**すべて**即時を許可するパブリケーションを更新します。  
   
- [  **@subscriber=** ] **'* **サブスクライブ*r**' * *  
+ [  **@subscriber=** ] **'**_subscribe_r **'**  
  削除するサブスクリプションがあるサブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。 場合**すべて**、すべてのサブスクライバーのすべてのサブスクリプションが削除されます。  
   
- [  **@destination_db=** ] **'***destination_db***'**  
+ [  **@destination_db=** ] **'**_destination_db_**'**  
  対象データベース名を指定します。 *destination_db*は**sysname**、既定値は NULL です。 NULL を指定する場合、そのサブスクライバーからすべてのサブスクリプションが削除されます。  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'***予約***'**  
+ [  **@reserved=** ] **'**_予約_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
