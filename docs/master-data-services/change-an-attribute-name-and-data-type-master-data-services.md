@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
@@ -14,12 +13,12 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 789cbb1c0b55b7b41b4e0829d3562cac8fbacd50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6348cc9a2b64501f7a639d480a7112bf28923585
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626770"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785278"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>属性名とデータ型を変更する (マスター データ サービス)
 
@@ -62,7 +61,7 @@ ms.locfileid: "47626770"
   
 ## <a name="see-also"></a>参照  
  [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [属性を削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
+ [属性を削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-master-data-services.md)   
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
   

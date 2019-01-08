@@ -5,8 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating consolidated members [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 60510b3d7eefea9add5dec803b2f5e86dc38306e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33eea7308e4f2729a14ca1f3a0361b83ac566006
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596691"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780534"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>統合メンバーを作成する (マスター データ サービス)
 
@@ -60,7 +59,7 @@ ms.locfileid: "47596691"
   
 ## <a name="see-also"></a>参照  
  [明示的階層を作成する (マスター データ サービス)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [リーフ メンバーを作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
+ [リーフ メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-leaf-member-master-data-services.md)   
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   
  [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   

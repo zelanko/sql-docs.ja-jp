@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], changing name
@@ -14,12 +13,12 @@ ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b135aaa1da4044fadf9c188b8903a972c8ed7946
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c77f802f7714e24345449405d0de75bd874a75f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777872"
 ---
 # <a name="change-a-version-name-master-data-services"></a>バージョン名を変更する (マスター データ サービス)
 
@@ -48,8 +47,8 @@ ms.locfileid: "47650590"
   
 ## <a name="see-also"></a>参照  
  [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [バージョンをロックする &#40;マスター データ サービス&#41;](../master-data-services/lock-a-version-master-data-services.md)   
- [バージョンをコミットする &#40;マスター データ サービス&#41;](../master-data-services/commit-a-version-master-data-services.md)   
+ [バージョンをロックする (マスター データ サービス)](../master-data-services/lock-a-version-master-data-services.md)   
+ [バージョンをコミットする (マスター データ サービス)](../master-data-services/commit-a-version-master-data-services.md)   
  [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   
   
