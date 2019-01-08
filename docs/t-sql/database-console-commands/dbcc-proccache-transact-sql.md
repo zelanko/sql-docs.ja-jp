@@ -43,7 +43,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>引数  
- のすべてのメンションを  
+ WITH  
  オプションの指定を許可します。  
   
  NO_INFOMSGS  

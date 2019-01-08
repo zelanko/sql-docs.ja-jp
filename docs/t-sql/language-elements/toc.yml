@@ -144,7 +144,7 @@
       items:
         - name: ALL
           href: all-transact-sql.md
-        - name: '[AND]'
+        - name: AND
           href: and-transact-sql.md
         - name: ANY
           href: any-transact-sql.md
@@ -156,9 +156,9 @@
           href: in-transact-sql.md
         - name: LIKE
           href: like-transact-sql.md
-        - name: '[NOT]'
+        - name: NOT
           href: not-transact-sql.md
-        - name: スイッチまたは
+        - name: OR
           href: or-transact-sql.md
         - name: SOME | ANY
           href: some-any-transact-sql.md

@@ -69,7 +69,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  断片化情報をチェックするインデックスを指定します。 インデックスを指定しない場合、ステートメントは指定されたテーブルまたはビューのベース インデックスを処理します。 インデックス ID を取得するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューを使用します。  
   
- のすべてのメンションを  
+ WITH  
  DBCC ステートメントが返す情報の種類に関するオプションを指定します。  
   
  FAST  
