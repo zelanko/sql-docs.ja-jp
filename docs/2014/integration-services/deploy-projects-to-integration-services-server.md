@@ -11,12 +11,12 @@ ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e701bb22a2350d90fdaf4ab461aa70063eab97b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120962"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408179"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Integration Services サーバーへのプロジェクトの配置
   現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーを使用すると、さまざまな環境を利用して、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
@@ -30,14 +30,14 @@ ms.locfileid: "48120962"
   
 1.  SSISDB カタログをまだ作成していない場合は、作成します。 詳細については、「 [SSIS カタログの作成](catalog/ssis-catalog.md)」を参照してください。  
   
-2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、「 [プロジェクトをプロジェクトの配置モデルに変換するには](#convert)」の手順を参照してください。  
+2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、以下の手順を参照してください。[プロジェクトをプロジェクト配置モデルに変換するには](#convert)  
   
     -   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]でプロジェクトを作成した場合、既定では、プロジェクトでプロジェクト配置モデルが使用されます。  
   
     -   以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でプロジェクトを作成した場合、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]でプロジェクト ファイルを開いた後に、プロジェクトをプロジェクト配置モデルに変換します。  
   
         > [!NOTE]  
-        >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有できるデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
+        >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有できるデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)」 を参照してください。  
   
          **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のいずれから実行するかによって、ウィザードが実行する変換タスクは異なります。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48120962"
   
      パッケージのアップグレードの詳細については、「 [Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages.md) 」および「 [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)」を参照してください。  
   
-3.  プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置します。 詳細については、「 [Integration Services サーバーにプロジェクトを配置するには](#deploy)」の手順を参照してください。  
+3.  プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置します。 詳細については、以下の手順を参照してください。[Integration Services サーバーにプロジェクトを配置する](#deploy)します。  
   
 4.  (省略可能) 配置されたプロジェクト用の環境を作成します。 詳細については、「 [サーバー環境の作成とマップ](../../2014/integration-services/create-and-map-a-server-environment.md)」を参照してください。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48120962"
   
      オブジェクト エクスプローラーの [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]で、 **[プロジェクト]** ノードを右クリックし、 **[パッケージのインポート]** を選択します。  
   
-2.  ウィザードを完了します。 詳細については、「[Integration Services プロジェクトの変換ウィザード](../../2014/integration-services/integration-services-project-conversion-wizard.md)」を参照してください。  
+2.  ウィザードを完了します。 詳細については、「 [Integration Services プロジェクトの変換ウィザード](../../2014/integration-services/integration-services-project-conversion-wizard.md)」を参照してください。  
   
 ##  <a name="deploy"></a> Integration Services サーバーにプロジェクトを配置するには  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48120962"
   
      -または-  
   
-     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]、展開、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB**オブジェクト エクスプ ローラーでノードを展開するプロジェクトのプロジェクト フォルダーを検索します。 **[プロジェクト]** フォルダーを右クリックして **[プロジェクトの配置]** をクリックします。  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** ノードの順に展開し、配置するプロジェクトの [プロジェクト] フォルダーを探します。 **[プロジェクト]** フォルダーを右クリックして **[プロジェクトの配置]** をクリックします。  
   
      - または -  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667991"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408869"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server の SLES 共有ディスク クラスターを構成します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "51667991"
     ```
 
     > [!NOTE]
-    > セットアップ時に、SQL Server インスタンスのためにサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるため、その id はノード間で共有されません。 したがって、各ローカル mssql アカウント がサーバー マスター  キーの暗号化を解除するためにアクセスできるようにするために、各セカンダリ ノードにプライマリ ノードから暗号化キーをコピーする必要があります。
+    > セットアップ時に、SQL Server インスタンスのためにサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるために、その id は、ノード間で共有されません。 したがって、各ローカル mssql アカウント がサーバー マスター  キーの暗号化を解除するためにアクセスできるようにするために、各セカンダリ ノードにプライマリ ノードから暗号化キーをコピーする必要があります。
 4. プライマリ ノードで、Pacemaker 用 SQL server ログインを作成および実行する権限をログイン`sp_server_diagnostics`します。 Pacemaker は、このアカウントを使用して、ノードは、SQL Server を実行していることを確認します。
 
     ```bash
@@ -102,7 +102,7 @@ ms.locfileid: "51667991"
 
 ### <a name="configure-an-nfs-server"></a>NFS サーバーを構成します。
 
-NFS サーバーを構成するには、SUSE ドキュメントでは、次の手順を参照してください。: [NFS サーバーを構成する](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server)します。
+NFS サーバーを構成するには、SUSE ドキュメントでは、次の手順を参照してください。[NFS サーバーを構成する](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server)します。
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>NFS 共有の記憶域に接続するすべてのクラスター ノードを構成します。
 
@@ -123,7 +123,7 @@ NFS サーバーを構成するには、SUSE ドキュメントでは、次の�
     - [クライアントの構成](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > SUSE のベスト プラクティスと高使用可能な NFS ストレージに関する推奨事項に従うことをお勧めします。 [DRBD と Pacemaker を使用できる NFS ストレージ高](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)します。
+    > SUSE のベスト プラクティスと高使用可能な NFS ストレージに関する推奨事項に従うことをお勧めします。[DRBD と Pacemaker に高可用性 NFS ストレージ](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)します。
 
 2. 新しいファイル パスで SQL Server が正常に開始するかを検証します。 これは、各ノードで行います。 この時点で 一度に1 つのノードのみで SQL Server を実行する必要があります。 各ノードが同時にデータベースファイルにアクセスしようとするため(両方のノードで SQL Server が誤って開始しないように、ファイル システムのクラスター リソースを使用して、ファイル共有が別々 のノードによって 2 回マウントされていないようにします) 各ノードで同時に実行することはできません。 次のコマンドは、SQL Server を起動し、状態を確認し、SQL Server を停止します。 
 
@@ -196,8 +196,8 @@ NFS サーバーを構成するには、SUSE ドキュメントでは、次の�
 
 次の手順では、SQL Server のクラスター リソースを構成する方法について説明します。 2 つの設定をカスタマイズする必要があります。
 
-- **SQL Server リソース名**: クラスター化された SQL Server リソースの名前。 
-- **タイムアウト値**: タイムアウト値は、クラスターがリソースをオンラインにしている間に待機時間。 SQL Server、これは SQL Server を実行すると予想される時間、`master`データベースをオンラインします。 
+- **SQL Server リソース名**:クラスター化された SQL Server リソースの名前。 
+- **タイムアウト値**:タイムアウト値は、クラスターがリソースをオンラインにしている間に待機時間です。 SQL Server、これは SQL Server を実行すると予想される時間、`master`データベースをオンラインします。 
 
 次のスクリプト環境から値を更新します。 クラスター化されたサービスを構成および開始するために 1 つのノード上で実行します。
 
@@ -248,7 +248,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>クラスター リソースの管理
 
-クラスター リソースを管理するには、次の SUSE のトピックを参照してください:[クラスター リソースの管理。](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+クラスター リソースを管理するには、次の SUSE のトピックを参照してください。[クラスター リソースの管理](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>手動フェールオーバー (manual failover)
 
