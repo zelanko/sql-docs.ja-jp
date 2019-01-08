@@ -10,12 +10,12 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 048dbd899f8c330e053ce9e97ee78d38b7f4e336
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177182"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349298"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)
   このサンプルでは、IRowsetFastLoad を使用して可変長の BLOB データを行ごとにストリーミングする方法について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "48177182"
   
  ソース コードで #define USE_ISEQSTREAM のコメント化を解除した場合、このサンプルでは ISequentialStream が使用されます。 サンプルにストリームの実装を定義すると、MAX_BLOB を変更するだけであらゆるサイズの BLOB データを送信できます。 ストリーム データの場合、メモリ容量に合わせる必要も、1 ブロックにする必要もありません。 このプロバイダーを呼び出すには、IRowsetFastLoad::InsertRow を使用します。 IRowsetFastLoad::InsertRow を使用して、ストリームから読み出すことができるデータ量と一緒に、ポインターをデータ バッファー (rgBinding.obValue オフセット) のストリームの実装に渡します。 プロバイダーによっては、バインドするときにデータの長さを渡す必要がない場合があります。 その場合は、バインドから長さを省略できます。  
   
- このサンプルでは、プロバイダーにデータを書き込む際に、プロバイダーのストリーム インターフェイスを使用しません。 代わりに、プロバイダーがデータを読み出すために使用するストリーム オブジェクトにポインターを渡します。 通常、Microsoft のプロバイダー (SQLOLEDB および SQLNCLI) では、すべてのデータを処理するまでオブジェクトからデータを 1024 バイト単位で読み出します。 SQLOLEDB と SQLNCLI のどちらも、コンシューマーからプロバイダーのストリーム オブジェクトへのデータの書き込みができる完全な実装は備えていません。 プロバイダーのストリーム オブジェクトを使用して送信できるのは、長さ 0 のデータだけです。  
+ サンプルでは、プロバイダーにデータを書き込む、プロバイダーのストリーム インターフェイスを使用しません。 代わりに、プロバイダーがデータを読み出すために使用するストリーム オブジェクトにポインターを渡します。 通常、Microsoft のプロバイダー (SQLOLEDB および SQLNCLI) では、すべてのデータを処理するまでオブジェクトからデータを 1024 バイト単位で読み出します。 SQLOLEDB と SQLNCLI のどちらも、コンシューマーからプロバイダーのストリーム オブジェクトへのデータの書き込みができる完全な実装は備えていません。 プロバイダーのストリーム オブジェクトを使用して送信できるのは、長さ 0 のデータだけです。  
   
  コンシューマーに実装された ISequentialStream オブジェクトは、行セット データ (IRowsetChange::InsertRow、IRowsetChange::SetData) と共に使用できます。DBTYPE_IUNKNOWN としてパラメーターをバインドすることで、パラメーターとも共に使用できます。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48177182"
  詳細については、次を参照してください。 [Blob と OLE オブジェクト](../native-client-ole-db-blobs/blobs-and-ole-objects.md)します。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するテーブルを作成します。  

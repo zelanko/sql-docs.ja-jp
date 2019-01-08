@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - navigational access [Master Data Services]
@@ -14,15 +13,15 @@ ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20f3e8f8d51231f823fe43a8aeff4e606a10ffa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e29a2e266dd525893e5b2fe54ba82414e046c9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087202"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780864"
 ---
 # <a name="navigational-access-master-data-services"></a>ナビゲーション アクセス (マスター データ サービス)
-  ナビゲーション アクセスは、**[モデル]** タブで割り当てられるモデル オブジェクト セキュリティに適用されます。  
+  ナビゲーション アクセスは、 **[モデル]** タブで割り当てられるモデル オブジェクト セキュリティに適用されます。  
   
  ナビゲーション アクセスは、セキュリティを割り当てたレベルよりも高いレベルへのアクセスです。  
   
@@ -43,6 +42,6 @@ ms.locfileid: "48087202"
  コレクションに権限を割り当てた場合、名前、コード、説明、および所有者 ID の読み取りまたは更新を実行できます。 また、モデル名を読み取ることもできます。  
   
 ## <a name="see-also"></a>参照  
- [権限の決定方法&#40;マスター データ サービス&#41;](how-permissions-are-determined-master-data-services.md)  
+ [権限の決定方法 (マスター データ サービス)](how-permissions-are-determined-master-data-services.md)  
   
   

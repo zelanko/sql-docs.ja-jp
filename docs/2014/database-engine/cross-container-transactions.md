@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17461cb9fcde8e37118a275512b332085beb5313
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112122"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538593"
 ---
 # <a name="cross-container-transactions"></a>複数コンテナーにまたがるトランザクション
   複数コンテナーにまたがるトランザクションは、ネイティブ コンパイル ストアド プロシージャの呼び出しまたはメモリ最適化テーブルでの操作を含む、暗黙的または明示的なユーザー トランザクションです。  
@@ -37,13 +37,13 @@ set transaction isolation level serializable
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
@@ -54,11 +54,11 @@ set transaction isolation level read committed
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   
@@ -80,7 +80,7 @@ commit
  一連の読み取りに関するトランザクションの一貫性では、読み取られた行バージョンがすべて正確な同じ一連のトランザクションからの更新を含んでいることが保証されるかどうかを参照します。  
   
  安定性では、読み取られたデータについてシステムからトランザクション T への提供が保証されます。  
- また、安定性では、トランザクションの読み取りが反復可能であるかどうかを参照します。 したがって、読み取りが反復された場合、同じ行や行バージョンが返されるかということになります。  
+ 安定性は、トランザクションの読み取りが反復可能かどうかを参照します。 したがって、読み取りが反復された場合、同じ行や行バージョンが返されるかということになります。  
   
  特定の保証では、トランザクションの論理的な終了時刻を参照します。 一般に、論理的な終了時刻は、トランザクションがデータベースにコミットされる時間です。 メモリ最適化テーブルにトランザクションからアクセスする場合、論理的な終了時刻は、理論的には検証フェーズの開始時です  (詳細については、トランザクション有効期間の説明を参照してください。[メモリ最適化テーブルでのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
   

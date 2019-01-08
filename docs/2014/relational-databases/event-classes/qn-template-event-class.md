@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eaee265571f647c4908a42634a45fc91b355d7bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209282"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349510"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template イベント クラス
   QN:Template イベントでは、クエリ テンプレートの内部使用に関する情報が報告されます。 クエリ テンプレートは、通知用のクエリ定義を共有するために [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されるメカニズムです。 これらのテンプレートは、パラメーター テーブルと共に作成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、クエリ テンプレートの作成時、使用時、または破棄時にこの型のイベントが作成されます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48209282"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 201。|27|いいえ|  
 |EventSequence|`int`|このイベントのシーケンス番号。|51|いいえ|  
-|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> Template created: クエリ通知テンプレートがデータベースに作成されていることを示します。<br /><br /> Template matched: クエリ通知テンプレートが再利用された日時を示します。<br /><br /> Template dropped: クエリ通知テンプレートがデータベースから削除された日時を示します。|21|はい|  
+|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> テンプレートを作成します。クエリ通知テンプレートがデータベースに作成されていることを示します。<br /><br /> 一致したテンプレート:クエリ通知テンプレートが再利用された日時を示します。<br /><br /> テンプレートを削除します。クエリ通知テンプレートがデータベースから削除された日時を示します。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
@@ -48,6 +47,6 @@ ms.locfileid: "48209282"
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、アプリケーションから、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|`ntext`|このイベント固有の情報を含む XML ドキュメントを返します。 このドキュメントは、 [SQL Server Query Notification Profiler Event Schema](http://go.microsoft.com/fwlink/?LinkId=63331) ページから入手できる XML スキーマに準拠しています。|1|はい|  
+|TextData|`ntext`|このイベント固有の情報を含む XML ドキュメントを返します。 このドキュメントは、 [SQL Server Query Notification Profiler Event Schema](https://go.microsoft.com/fwlink/?LinkId=63331) ページから入手できる XML スキーマに準拠しています。|1|はい|  
   
   

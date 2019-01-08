@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
@@ -14,12 +14,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072892"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807014"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにはトランザクション ログがあり、データベース内のすべてのトランザクションとそれらのトランザクションによって加えられた変更が記録されます。 トランザクション ログは、いっぱいにならないように、定期的に切り捨てる必要があります。 ただし、いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
@@ -31,7 +31,7 @@ ms.locfileid: "48072892"
   
  **このトピックの内容**  
   
--   [トランザクション ログでサポートされている利点: 操作](#Benefits)  
+-   [利点:トランザクション ログでサポートされる操作](#Benefits)  
   
 -   [トランザクション ログの切り捨て](#Truncation)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072892"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="Benefits"></a> トランザクション ログでサポートされている利点: 操作  
+##  <a name="Benefits"></a> 利点:トランザクション ログによりサポートされる操作  
  トランザクション ログでは、次の操作がサポートされます。  
   
 -   個別のトランザクションの復旧  
@@ -88,12 +88,12 @@ ms.locfileid: "48072892"
 |7|DATABASE_SNAPSHOT_CREATION|データベース スナップショットが作成されている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
 |8|LOG_SCAN|ログ スキャンが行われている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
 |9|AVAILABILITY_REPLICA|可用性グループのセカンダリ レプリカが、このデータベースのトランザクション ログ レコードを対応するセカンダリ データベースに適用中である  (完全復旧モデル)。<br /><br /> 詳細については、次を参照してください。 [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)します。|  
-|10|—|内部使用のみ|  
-|11|—|内部使用のみ|  
-|12|—|内部使用のみ|  
+|10|-|内部使用のみ|  
+|11|-|内部使用のみ|  
+|12|-|内部使用のみ|  
 |13|OLDEST_PAGE|データベースが間接的なチェックポイントを使用するように構成されている場合、データベース上の最も古いページはチェックポイントの LSN よりも古くなることがある。 この場合、最も古いページのログの切り捨てが遅れる可能性があります (すべての復旧モデル)。<br /><br /> 間接的なチェックポイントの詳細については、「 [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md)」を参照してください。|  
 |14|OTHER_TRANSIENT|この値は現在使用されていません。|  
-|16|XTP_CHECKPOINT|データベースは、メモリ最適化ファイル グループに、トランザクション ログ切り捨てられない可能性が自動まで[!INCLUDE[hek_2](../../includes/hek-2-md.md)]チェックポイントがトリガーされます (これは、ログの増加のすべての 512 MB で発生します)。<br /><br /> 注: 512 MB のサイズが前に、のトランザクション ログの切り捨てを行うためには、問題のあるデータベースに対して手動で Checkpoint コマンドを起動します。|  
+|16|XTP_CHECKPOINT|データベースにメモリ最適化ファイル グループがある場合は、自動 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] チェックポイントがトリガーされるまで (これはログが 512 MB 増加するたびに発生します)、トランザクション ログは切り捨てられません。<br /><br /> 注:512 MB のサイズになる前に、トランザクション ログを切り捨てるには、対象のデータベースに対して手動で Checkpoint コマンドを起動します。|  
   
 ##  <a name="MinimallyLogged"></a> 最小ログ記録操作  
  *最小ログ記録* では、トランザクションの復旧に必要な情報だけが記録されます。特定の時点への復旧はサポートしません。 このトピックでは、一括ログ復旧モデルで (バックアップが実行されていない場合は単純復旧モデルで) 最小ログが記録される操作について説明します。  
@@ -135,7 +135,7 @@ ms.locfileid: "48072892"
     -   DROP INDEX による新しいヒープの再構築 (適用可能な場合)。  
   
         > [!NOTE]  
-        >  インデックス ページの割り当て解除中に、 [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql)操作が常に完全にログに記録します。  
+        >  [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 操作中のインデックス ページの割り当て解除は、常に完全にログ記録されます。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  `Managing the transaction log`  

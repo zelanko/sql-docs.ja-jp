@@ -11,19 +11,19 @@ ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 898f21162e7ba546bd134b90a18eba5b7653edee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11df5fadc7ca525f62ec0109ec1a7f6b199205af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123492"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349830"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>レポートへのグラフの追加 (レポート ビルダーおよび SSRS)
-  データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 グラフ要素の詳細については、「[グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
+  データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
   
  グラフ データ領域をレポートに追加するには、グラフの新規作成ウィザードを実行するのが最も簡単な方法です。 このウィザードを使用して、縦棒グラフ、折れ線グラフ、円グラフ、横棒グラフ、および面グラフを作成できます。 これらのグラフおよびその他の種類のグラフは、手動で追加することもできます。  
   
- グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 グラフをクリックすると、系列グループ、カテゴリ グループ、および値の 3 つの領域を持つグラフ データ ペインが表示されます。  
+ グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 次の 3 つの領域を持つグラフ データ ペインを表示するグラフをクリックします。系列グループ、カテゴリ グループ、および値。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -71,9 +71,9 @@ ms.locfileid: "48123492"
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [チュートリアル: レポートへの横棒グラフの追加 (レポート デザイナー)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [チュートリアル: レポートへの円グラフの追加 (レポート デザイナー)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [チュートリアル:横棒グラフの追加、レポート (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [チュートリアル:レポート (レポート デザイナー) に横棒グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [チュートリアル:レポート (レポート ビルダー) への円グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [チュートリアル:レポート (レポート デザイナー) への円グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

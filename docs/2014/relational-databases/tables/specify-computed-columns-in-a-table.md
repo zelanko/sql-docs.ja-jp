@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
@@ -13,15 +12,15 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d206821fe3a54f71c61d383c19a0a0479a8321f0
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 50067da1853795279216b16f7c12119bc03f38c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072186"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789094"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
-  計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 内の計算列の式を指定する[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。  
+  計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 上では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して計算列に式を指定できます。  
   
  **このトピックの内容**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "49072186"
   
 1.  **オブジェクト エクスプローラー**で、新しい計算列を追加するテーブルを展開します。 **[列]** を右クリックして **[新しい列]** をクリックします。  
   
-2.  列名を入力し、既定のデータ型 (`nchar`(10)) をそのまま使用します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]により、計算列のデータ型は、数式で指定された式のデータ型のうち優先順位が高い方になります。 たとえば、式で `money` 型の列と `int` 型の列を参照する場合、`money` 型の方が優先順位が高いため、計算列はそのデータ型になります。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql)」を参照してください。  
+2.  列名を入力し、既定のデータ型 (`nchar`(10)) をそのまま使用します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、計算列のデータ型は、数式で指定された式のデータ型のうち優先順位が高い方になります。 たとえば、式で `money` 型の列と `int` 型の列を参照する場合、`money` 型の方が優先順位が高いため、計算列はそのデータ型になります。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql)」を参照してください。  
   
 3.  **[列のプロパティ]** タブの **[計算列の指定]** プロパティを展開します。  
   

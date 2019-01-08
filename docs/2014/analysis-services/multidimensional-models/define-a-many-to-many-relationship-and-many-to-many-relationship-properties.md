@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091878"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354012"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多のリレーションシップと多対多のリレーションシップのプロパティの定義
   このトピックでは、多対多ディメンションを使用する状況と作成方法を含め、Analysis Services 内の多対多ディメンションについて説明します。  
@@ -61,7 +61,7 @@ ms.locfileid: "48091878"
   
  多対多リレーションシップを作成する手順を示すために、Adventure Works のサンプル キューブ内にある多対多リレーションシップの 1 つを、この手順で作成し直します。 リレーショナル データベース エンジンのインスタンスにソース データ (つまり、Adventure Works サンプル データ ウェアハウス) を既にインストールしてある場合は、次の手順に従うことができます。  
   
-#### <a name="step-1-verify-dsv-relationships"></a>手順 1: DSV リレーションシップの確認  
+#### <a name="step-1-verify-dsv-relationships"></a>手順 1:DSV リレーションシップを確認します。  
   
 1.  SQL Server データ ツールの多次元プロジェクトで、SQL Server データベース エンジンのインスタンスでホストされている Adventure Works DW 2012 リレーショナル データ ウェアハウスに接続するデータ ソースを作成します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48091878"
   
      ![関連テーブルを示す DSV](../media/ssas-m2m-dsvpkeys.PNG "関連テーブルを示す DSV")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>手順 2: ディメンションとメジャー グループの作成  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>手順 2:ディメンションを作成し、メジャー グループ  
   
 1.  SQL Server データ ツールの多次元プロジェクトで、 **[ディメンション]** を右クリックし、 **[新しいディメンション]** をクリックします。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48091878"
   
 11. キューブに名前を付け、 **[完了]** をクリックします。  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>手順 3: 多対多リレーションシップの定義  
+#### <a name="step-3-define-many-to-many-relationship"></a>手順 3:定義の多対多のリレーションシップ  
   
 1.  キューブ デザイナーで、[ディメンションの使用法] タブをクリックします。**Dim Sales Reason** と **Fact Internet Sales**の間に、既に多対多アイコンがあることに注意してください。 次のアイコンが、多対多リレーションシップを示していることに注意してください。  
   
@@ -175,21 +175,21 @@ ms.locfileid: "48091878"
   
 3.  モデルを変更した後、必ず配置と再接続を行ってください。 Excel で、リボンの [ピボットテーブル ツール] にある [更新] ボタンを使用します。  
   
-4.  複数の多対多リレーションシップで、リンク メジャー グループを使用することは避けてください。特に、これらのリレーションシップが異なるキューブ内に存在する場合です。 このような方法で使用すると、あいまいな集計になります。 詳細については、「 [多対多リレーションシップを含むキューブでリンク メジャーの値が不適切](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)」を参照してください。  
+4.  複数の多対多リレーションシップで、リンク メジャー グループを使用することは避けてください。特に、これらのリレーションシップが異なるキューブ内に存在する場合です。 このような方法で使用すると、あいまいな集計になります。 詳細については、「 [多対多リレーションシップを含むキューブでリンク メジャーの値が不適切](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)」を参照してください。  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  以下のリンクを使用して、この内容を習得するのに役立つ詳細情報を参照してください。  
   
- [Analysis Services で多対多ディメンションを定義する方法](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Analysis Services で多対多ディメンションを定義する方法](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [多対多の回転 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [多対多の回転 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [チュートリアル : SQL Server Analysis Services を対象とする多対多ディメンションの例](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [チュートリアル:SQL Server Analysis Services の多対多ディメンションの例](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>参照  
- [ディメンションのリレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Analysis Services 多次元モデリング チュートリアル用サンプル データおよびプロジェクトをインストールします。](../install-sample-data-and-projects.md)   
- [Analysis Services プロジェクトの配置&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
+ [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../install-sample-data-and-projects.md)   
+ [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [多次元モデルのパースペクティブ](perspectives-in-multidimensional-models.md)  
   
   

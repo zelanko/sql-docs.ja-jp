@@ -11,19 +11,19 @@ ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095372"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350023"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、特定のバージョンのレポート サーバーにおいて、特定の配置モードで動作する Web パーツがいくつかあります。  
   
--   **ネイティブ モード:** ネイティブ モードのレポート サーバーから SharePoint サイト上のレポート サーバー コンテンツにアクセスするには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に同梱されている SharePoint 2.0 Web パーツの、レポート エクスプローラーとレポート ビューアーを使用します。 このトピックでは、2.0 Web パーツのインストールと使用の方法について説明します。  
+-   **ネイティブ モード:** SharePoint 2.0 Web パーツの「レポート エクスプ ローラーとに含まれているレポート ビューアーを使用してネイティブ モードのレポート サーバーから SharePoint サイト上のレポート サーバー コンテンツにアクセスする場合は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。 このトピックでは、2.0 Web パーツのインストールと使用の方法について説明します。  
   
--   **SharePoint モード:** SharePoint モードで実行されているレポート サーバーにアクセスするには、SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインによってインストールされる Web パーツを使用します。 アドインの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」をご覧ください。  
+-   **SharePoint モード:** SharePoint モードで実行されているレポート サーバーにアクセスする場合でインストールされる web パーツを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン。 アドインの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」をご覧ください。  
   
 -   > [!NOTE]  
     >  ネイティブ モード用のレポート ビューアー Web パーツ (SPViewer.dwp) は、SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインによってインストールされる Web パーツ (ReportViewer.dwp) とは異なる Web パーツです。 これらの Web パーツのスキーマと実装は異なりますが、両方を同じ SharePoint ファームにインストールできます。 この 2 つの Web パーツは外観によって区別できます。アドインと共にインストールされるレポート ビューアー Web パーツには、ツール バーに **[アクション]** メニューがあります。  
@@ -97,7 +97,7 @@ ms.locfileid: "48095372"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     PowerShell の使用方法の詳細については、[Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx) を参照してください。  
+     PowerShell の使用方法の詳細については、[Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx) を参照してください。  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>STSADM.exe を使用した Web パーツのインストール  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48095372"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  "操作が正常に完了しました。" というメッセージが表示されます。  
+4.  "操作が正常に完了しました" というメッセージが表示されます。  
   
      `-globalinstall` を指定すると、Web パーツがグローバル アセンブリ キャッシュ (GAC) に追加されます。 Web パーツを接続する場合には、この手順を必ず実行してください。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48095372"
   
 7.  **[レポート マネージャー URL]** に、アクセス対象のネイティブ モードのレポート サーバーに関連付けられているレポート マネージャー インスタンスの URL を入力します。 レポート マネージャー URL の既定の構文は、**http://\<servername>/reports** です。  
   
-8.  **[レポート パス]** で、スラッシュ、フォルダーのパス、レポート名の順に指定します。 サーバー名やレポート マネージャーの仮想ディレクトリは **含めないでください** 。 たとえば、Adventure Works フォルダーにある Company Sales レポートを開くには、「 **/Adventure Works/Company Sales**」と指定します。 Products レポートがレポート サーバーのルート フォルダーの **/Products**にある別の例を次に示します。  
+8.  **[レポート パス]** で、スラッシュ、フォルダーのパス、レポート名の順に指定します。 サーバー名やレポート マネージャーの仮想ディレクトリは **含めないでください** 。 たとえば、Adventure Works フォルダーにある 'Company Sales' レポートを開くには、「**/Adventure Works/Company Sales**」と指定します。 'Products' レポートがレポート サーバーのルート フォルダーの **/Products** にある別の例を次に示します。  
   
 9. **[OK]** をクリックします。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "48095372"
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services レポート サーバー &#40;SharePoint モード&#41;](../reporting-services-report-server-sharepoint-mode.md)   
+ [Reporting Services Report Server &#40;SharePoint Mode&#41; (Reporting Services レポート サーバー &#40;SharePoint モード&#41;)](../reporting-services-report-server-sharepoint-mode.md)   
  [Reporting Services レポート サーバー &#40;ネイティブ モード&#41;](../report-server/reporting-services-report-server-native-mode.md)  
   
   

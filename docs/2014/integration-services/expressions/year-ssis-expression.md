@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], YEAR
@@ -14,12 +13,12 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0276dd964bd0ed5a4ea2a703ffc6d32d1ed52bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f228aa02e5537ddd52a7acb0fe4c7d4fbb855d5b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140322"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767892"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 式)
   ある日付の、年の日付要素を表す整数値を返します。  
@@ -44,7 +43,7 @@ YEAR(date)
  日付リテラルは、日付データ型のいずれかに明示的にキャストされる必要があります。 詳細については、「 [Integration Services Data Types](../data-flow/integration-services-data-types.md)」を参照してください。  
   
 > [!NOTE]  
->  日付リテラルが DT_DBTIMESTAMPOFFSET と DT_DBTIMESTAMP2 のいずれかの日付データ型に明示的にキャストされると、式の検証は失敗します。  
+>  式は、リテラルの日付が日付データ型のいずれかに明示的にキャストするときに検証に失敗します。DT_DBTIMESTAMPOFFSET と DT_DBTIMESTAMP2 します。  
   
  YEAR 関数を使用すると、DATEPART("Year", date) 関数を使用する場合と同じ結果を、より簡単に取得できます。  
   
@@ -73,6 +72,6 @@ YEAR(GETDATE())
  [DATEPART &#40;SSIS 式&#41;](datepart-ssis-expression.md)   
  [DAY &#40;SSIS 式&#41;](day-ssis-expression.md)   
  [MONTH &#40;SSIS 式&#41;](month-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

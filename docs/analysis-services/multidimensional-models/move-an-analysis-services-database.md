@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148437"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544558"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services データベースの移動
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "50148437"
   
 1.  SSMS の左側または右側のペインで、移動するデータベースを探します。  
   
-2.  データベースを右クリックし、 **[デタッチ]** をクリックします。  
+2.  クリックし、データベースを右クリックして**デタッチしています.**  
   
 3.  デタッチするデータベースにパスワードを割り当て、 **[OK]** をクリックしてデタッチ コマンドを実行します。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "50148437"
   
 5.  SSMS の左側または右側のペインで、 **[データベース]** フォルダーを探します。  
   
-6.  **[データベース]** フォルダーを右クリックし、 **[アタッチ]** をクリックします。  
+6.  右クリックし、**データベース**フォルダーと選択**アタッチしています.**  
   
-7.  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 または、参照ボタン (**[…]**) を使用して、データベース フォルダーを探すこともできます。  
+7.  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 また、[参照] ボタンを使用することができます (**.**) データベース フォルダーを検索します。  
   
 8.  データベースの **ReadWrite** モードを選択します。  
   

@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350646"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535550"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマでは、理想的な世界はいずれかを指定すべてのデータ ソースが OLE DB インターフェイスを公開します。 ADO は、データ ソースに直接呼び出すことができるようにします。 ますます多くのデータベース ベンダーは、OLE DB インターフェイスを実装するは、一部のデータ ソースのこの方法はまだ公開されません。 ただし、今日のほとんどの DBMS システムは、ODBC を通じてアクセスできます。
@@ -107,14 +107,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Order By (KAGPROP_MAXCOLUMNSINORDERBY) で最大の列|SELECT ステートメントの ORDER BY 句を記載されている列の最大数を示します。|
 |最大の列で (KAGPROP_MAXCOLUMNSINSELECT) を選択します。|SELECT ステートメントの SELECT 部分を記載されている列の最大数を示します。|
 |テーブル (KAGPROP_MAXCOLUMNSINTABLE) の最大列|テーブルで許可されている列の最大数を示します。|
-|数値関数 (KAGPROP_NUMERICFUNCTIONS)|数値関数が ODBC ドライバーでサポートされていることを示します。 関数名と、関連するこのビットマスクで使用される値の一覧については、次を参照してください。[付録 e: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)、ODBC のドキュメントにします。|
+|数値関数 (KAGPROP_NUMERICFUNCTIONS)|数値関数が ODBC ドライバーでサポートされていることを示します。 関数名と、関連するこのビットマスクで使用される値の一覧については、次を参照してください[付録 e:。スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)ODBC のドキュメントにします。|
 |外部結合機能 (KAGPROP_OJCAPABILITY)|プロバイダーでサポートされている外部結合の種類を示します。|
 |外部結合 (KAGPROP_OUTERJOINS)|プロバイダーが外部結合をサポートしているかどうかを示します。|
 |特殊文字 (KAGPROP_SPECIALCHARACTERS)|ODBC ドライバーの特別な意味を持つ文字を示します。|
 |ストアド プロシージャ (KAGPROP_PROCEDURES)|ストアド プロシージャは、この ODBC ドライバーで使用できるかどうかを示します。|
-|文字列関数 (KAGPROP_STRINGFUNCTIONS)|文字列関数が ODBC ドライバーでサポートされていることを示します。 関数名と、関連するこのビットマスクで使用される値の一覧については、次を参照してください。[付録 e: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)、ODBC のドキュメントにします。|
-|システム関数 (KAGPROP_SYSTEMFUNCTIONS)|ODBC ドライバーがサポートするシステム関数を示します。 関数名と、関連するこのビットマスクで使用される値の一覧については、次を参照してください。[付録 e: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)、ODBC のドキュメントにします。|
-|日付/時刻関数 (KAGPROP_TIMEDATEFUNCTIONS)|ODBC ドライバーでどの日付と時刻の関数がサポートされていることを示します。 関数名と、関連するこのビットマスクで使用される値の一覧については、次を参照してください。[付録 e: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)、ODBC のドキュメントにします。|
+|文字列関数 (KAGPROP_STRINGFUNCTIONS)|文字列関数が ODBC ドライバーでサポートされていることを示します。 関数名と、関連するこのビットマスクで使用される値の一覧については、次を参照してください[付録 e:。スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)ODBC のドキュメントにします。|
+|システム関数 (KAGPROP_SYSTEMFUNCTIONS)|ODBC ドライバーがサポートするシステム関数を示します。 関数名と、関連するこのビットマスクで使用される値の一覧については、次を参照してください[付録 e:。スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)ODBC のドキュメントにします。|
+|日付/時刻関数 (KAGPROP_TIMEDATEFUNCTIONS)|ODBC ドライバーでどの日付と時刻の関数がサポートされていることを示します。 関数名と、関連するこのビットマスクで使用される値の一覧については、次を参照してください[付録 e:。スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)ODBC のドキュメントにします。|
 |SQL 文法のサポート (KAGPROP_ODBCSQLCONFORMANCE)|ODBC ドライバーがサポートする SQL 文法を示します。|
 
 ## <a name="provider-specific-recordset-and-command-properties"></a>プロバイダー固有のレコード セットとコマンドのプロパティ
@@ -137,7 +137,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  ODBC では、ストアド プロシージャの呼び出しを特定の構文を提供します。 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)のプロパティを**コマンド**オブジェクト、 *CommandText*への引数、 **Execute**メソッドを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト、または*ソース*への引数、**オープン**メソッドを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、この構文を使用して文字列に渡されます。
 
 ```
-"{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
+"{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
  各**でしょうか。** 内のオブジェクトの参照、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。 最初の**でしょうか。** 参照**パラメーター**(0)、[次へ]**でしょうか。** 参照**パラメーター**(1)、という具合です。
@@ -173,7 +173,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  標準の ADO の可用性**Recordset**プロパティ。
 
-|プロパティ|ForwardOnly|動的|Keyset|静的|
+|プロパティ|ForwardOnly|動的|Keyset|スタティック|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|使用できません。|使用できません。|読み取り/書き込み|読み取り/書き込み|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|使用できません。|使用できません。|読み取り/書き込み|読み取り/書き込み|
@@ -199,7 +199,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  標準の ADO の可用性**Recordset**メソッド。
 
-|方法|ForwardOnly|動的|Keyset|静的|
+|方法|ForwardOnly|動的|Keyset|スタティック|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|はい|[はい]|[はい]|はい|
 |[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|[はい]|[はい]|はい|
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>動的プロパティ
  Microsoft OLE DB Provider for ODBC にいくつかの動的プロパティの挿入、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。
 
- 次の表は、ADO および OLE DB 名の各動的プロパティの相互です。 「説明です」という用語を ADO プロパティ名を参照して OLE DB プログラマーズ リファレンス これらのプロパティの詳細については、OLE DB プログラマーズ リファレンスに見つかります。 インデックスの OLE DB プロパティの名前を検索または参照してください[付録 c: OLE DB プロパティ](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)します。
+ 次の表は、ADO および OLE DB 名の各動的プロパティの相互です。 「説明です」という用語を ADO プロパティ名を参照して OLE DB プログラマーズ リファレンス これらのプロパティの詳細については、OLE DB プログラマーズ リファレンスに見つかります。 インデックスの OLE DB プロパティの名前を検索または参照してください[付録 c:OLE DB プロパティ](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)します。
 
 ## <a name="connection-dynamic-properties"></a>接続の動的プロパティ
  次のプロパティに追加されます、**接続**オブジェクトの**プロパティ**コレクション。
