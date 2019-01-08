@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '- (subtract)'
@@ -14,12 +13,12 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82d268ed8f61085a2a829821ee3d68931f31e680
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d23203fece79af9b52c363bc51b9e7442d82158
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161832"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810414"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減算) (SSIS 式)
   最初の数値式から 2 番目の数値式を減算します。  
@@ -28,7 +27,7 @@ ms.locfileid: "48161832"
   
 ```  
   
-numeric_expression1 – numeric_expression2  
+numeric_expression1 - numeric_expression2  
   
 ```  
   
@@ -66,6 +65,6 @@ ListPrice - (ListPrice * @[Discount%])
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
- [演算子&#40;SSIS 式&#41;](operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   
   

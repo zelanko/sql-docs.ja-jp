@@ -1,5 +1,5 @@
 ---
-title: リレーションシップ |Microsoft ドキュメント
+title: Analysis Services 表形式モデルでのリレーションシップ |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b704b7e2fdc299006d77e08314d2b16ffd750a0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045306"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072529"
 ---
 # <a name="relationships"></a>リレーションシップ 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "34045306"
 ##  <a name="what"></a> 利点  
  リレーションシップは、各テーブル内の 1 つ以上の列に基づく、2 つのデータ テーブル間の接続を表します。 リレーションシップが有用である理由を理解するために、業務において顧客注文のデータを追跡する場合を考えます。 すべてのデータは、次のような構造を持つ単一のテーブルで追跡できます。  
   
-|CustomerID|名前|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|名前|EMail|DiscountRate|OrderID|OrderDate|製品|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
- この方法でも機能しますが、すべての注文に対して顧客の電子メール アドレスなど冗長なデータを多数格納することになってしまいます。 ストレージは安価ですが、電子メール アドレスが変更された場合には、その顧客に関連する行をすべて更新する必要があります。 この問題に対する解決策の 1 つとして、データを複数のテーブルに分割し、それらのテーブル間のリレーションシップを定義する方法があります。 これで使用されているアプローチ*リレーショナル データベース*などの SQL Server。 たとえば、モデルにインポートしたデータベースでは、次の 3 つの関連テーブルを使用して注文データを表すことができます。  
+ この方法でも機能しますが、すべての注文に対して顧客の電子メール アドレスなど冗長なデータを多数格納することになってしまいます。 ストレージは安価ですが、電子メール アドレスが変更された場合には、その顧客に関連する行をすべて更新する必要があります。 この問題に対する解決策の 1 つとして、データを複数のテーブルに分割し、それらのテーブル間のリレーションシップを定義する方法があります。 これで使用されるアプローチ*リレーショナル データベース*(SQL Server など)。 たとえば、モデルにインポートしたデータベースでは、次の 3 つの関連テーブルを使用して注文データを表すことができます。  
   
 ### <a name="customers"></a>Customers  
   
@@ -55,13 +55,13 @@ ms.locfileid: "34045306"
   
 ### <a name="orders"></a>Orders  
   
-|CustomerID|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|OrderID|OrderDate|製品|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- これらのテーブルを同じデータベースからインポートした場合、テーブルのインポート ウィザードではテーブル間のリレーションシップを角かっこ ([ ]) で囲んで示した列に基づいて検出できるため、モデル デザイナーでこれらのリレーションシップを再現できます。 詳細については、このトピックの「 [リレーションシップの自動検出と自動推定](#detection) 」を参照してください。 説明したように、手動でリレーションシップを作成するテーブルを複数のソースからインポートした場合[、リレーションシップの間で 2 つのテーブルを作成する](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)です。  
+ これらのテーブルを同じデータベースからインポートした場合、テーブルのインポート ウィザードではテーブル間のリレーションシップを角かっこ ([ ]) で囲んで示した列に基づいて検出できるため、モデル デザイナーでこれらのリレーションシップを再現できます。 詳細については、このトピックの「 [リレーションシップの自動検出と自動推定](#detection) 」を参照してください。 説明されているように、手動でリレーションシップを作成するテーブルを複数のソースからインポートした場合[2 テーブル間のリレーションシップを作成](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)です。  
   
 ### <a name="columns-and-keys"></a>列およびキー  
  リレーションシップは、同じデータが格納されている各テーブルの列に基づきます。 たとえば、Customers テーブルと Orders テーブルにはどちらにも顧客 ID を格納する列が含まれているため、これらのテーブルは相互に関連付けることができます。 この例では列名が同じになっていますが、これは必須条件ではありません。 Orders テーブルのすべての行に Customers テーブルにも格納されている ID が含まれていれば、一方の列名を CustomerID にして、もう一方の列名を CustomerNumber にすることもできます。  
@@ -83,7 +83,7 @@ ms.locfileid: "34045306"
   
  次の表は、3 つのテーブル間のリレーションシップを示しています。  
   
-|リレーションシップ|型|参照列|列|  
+|リレーションシップ|型|参照列|[列]|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|一対一|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|一対多|Customers.CustomerID|Orders.CustomerID|  
@@ -95,9 +95,9 @@ ms.locfileid: "34045306"
  モデル デザイナーには、リレーションシップの作成時に従う必要がある要件がいくつかあります。  
   
 ### <a name="single-active-relationship-between-tables"></a>テーブル間に 1 つのアクティブなリレーションシップ  
- 複数のリレーションシップを作成すると、テーブル間の依存関係があいまいになる可能性があります。 正確な計算を作成するには、テーブル間のパスを 1 つにする必要があります。 そのため、テーブルの各ペアの間に作成できるアクティブなリレーションシップは 1 つだけです。 たとえば、AdventureWorks DW 2012 の DimDate テーブルには、FactInternetSales テーブルの 3 つの異なる列 (OrderDate、DueDate、および ShipDate) に関連付けられた DateKey 列が含まれています。 これらのテーブルをインポートしようとした場合、最初のリレーションシップは正常に作成されますが、同じ列を使用する後続のリレーションシップに関して次のエラーが出力されます。  
+ 複数のリレーションシップを作成すると、テーブル間の依存関係があいまいになる可能性があります。 正確な計算を作成するには、テーブル間のパスを 1 つにする必要があります。 そのため、テーブルの各ペアの間に作成できるアクティブなリレーションシップは 1 つだけです。 たとえば、AdventureWorks DW 2012 には DimDate テーブルには、FactInternetSales テーブルの 3 つの異なる列に関連付けられた DateKey 列が含まれています。OrderDate、DueDate、および ShipDate します。 これらのテーブルをインポートしようとした場合、最初のリレーションシップは正常に作成されますが、同じ列を使用する後続のリレーションシップに関して次のエラーが出力されます。  
   
- \* リレーションシップ: table [column 1] は table [column 2] の状態を ->: エラー - 理由: テーブル間のリレーションシップを作成できません\<テーブル 1 > と\<2 のテーブル > です。 2 つのテーブル間に作成できる直接的または間接的なリレーションシップは 1 つだけです。  
+ \* リレーションシップ: table [column 1] が -> table [column 2] - 状態: エラー - 理由。テーブル間のリレーションシップを作成できません\<テーブル 1 > と\<2 のテーブル > です。 2 つのテーブル間に作成できる直接的または間接的なリレーションシップは 1 つだけです。  
   
  2 つのテーブルの間に複数のリレーションシップが存在している場合は、参照列を含むテーブルのコピーを複数インポートし、テーブルの各ペアの間にリレーションシップを 1 つ作成します。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34045306"
 ### <a name="one-relationship-for-each-source-column"></a>ソース列ごとに 1 つのリレーションシップ  
  ソース列は、複数のリレーションシップに参加できません。 既に 1 つのリレーションシップである列をソース列として使用している場合、別のテーブルの別の関連参照列に関連付けるためにその列を使用するには、その列のコピーを作成して新しいリレーションシップに使用します。  
   
- 計算列で DAX 数式を使用すると、値がまったく同じ列のコピーを簡単に作成できます。 詳細については、次を参照してください。[計算列を作成する](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)です。  
+ 計算列で DAX 数式を使用すると、値がまったく同じ列のコピーを簡単に作成できます。 詳細については、次を参照してください。[計算列を作成する](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)します。  
   
 ### <a name="unique-identifier-for-each-table"></a>テーブルごとに一意の識別子  
  各テーブルには、各行を一意に識別する列を 1 つ含める必要があります。 この列は、通常、主キーと呼ばれます。  
@@ -115,7 +115,7 @@ ms.locfileid: "34045306"
  参照列のデータ値は一意である必要があります。 つまり、参照列に重複値を格納することはできません。 テーブル モデルの場合、null と空の文字列は、明確なデータ値である空白と同じものとして扱われます。 つまり、参照列には複数の null を格納できません。  
   
 ### <a name="compatible-data-types"></a>互換性のあるデータ型  
- ソース列と参照列のデータ型には互換性がある必要があります。 データ型の詳細については、次を参照してください。[データ型はサポートされて](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)です。  
+ ソース列と参照列のデータ型には互換性がある必要があります。 データの種類の詳細については、次を参照してください。[型でサポートされているデータ](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)します。  
   
 ### <a name="composite-keys-and-lookup-columns"></a>複合キーと参照列  
  テーブル モデルでは複合キーを使用できません。テーブルの各行を一意に識別する列は常に 1 つである必要があります。 複合キーに基づく既存のリレーションシップを持つテーブルをインポートしようとすると、このリレーションシップはテーブル モデルで作成できないため、テーブルのインポート ウィザードでは無視されます。  
@@ -125,7 +125,7 @@ ms.locfileid: "34045306"
 ###  <a name="bkmk_many_to_many"></a> Many-to-Many relationships  
  テーブル モデルは多対多リレーションシップをサポートしていないため、モデル デザイナー内に *交差テーブル* を追加することはできません。 ただし、DAX 関数を使用して、多対多リレーションシップをモデル化することができます。  
   
- また、双方向のクロス フィルターを設定して、同じ処理が可能かどうかを試してみることもできます。 場合もありますクロス フィルターのコンテキストを複数のテーブル リレーションシップ間で永続化されるフィルターを設定するには、を介して多対多リレーションシップの要件を満たしてます。 詳細については、「 [SQL Server 2016 Analysis Services における表形式モデルの双方向のクロス フィルター](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 」を参照してください。  
+ また、双方向のクロス フィルターを設定して、同じ処理が可能かどうかを試してみることもできます。 場合によって複数のテーブル リレーションシップ間でフィルター コンテキストを維持するクロス フィルターするには、を介して多対多のリレーションシップの要件を満たします。 詳細については、「 [SQL Server 2016 Analysis Services における表形式モデルの双方向のクロス フィルター](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 」を参照してください。  
   
 ### <a name="self-joins-and-loops"></a>自己結合とループ  
  自己結合はテーブル モデルのテーブルでは許可されていません。 自己結合は、テーブルとそれ自体との間の再帰的なリレーションシップです。 自己結合は、親子階層を定義するためによく使用されます。 たとえば、Employees テーブルの自己結合を行うと、業務の管理チェーンを示す階層を生成できます。  
@@ -159,7 +159,7 @@ ms.locfileid: "34045306"
   
  モデルに複数のソースのデータが含まれる場合は、リレーションシップの手動作成が必要になる可能性が高くなります。 たとえば、Customers、CustomerDiscounts、および Orders テーブルをリレーショナル データソースからインポートできます。 ソースでこれらのテーブル間に存在するリレーションシップは、モデルに自動的に作成されます。 たとえば、別のソースから別のテーブルを追加し、Microsoft Excel のブックに Geography テーブルの地域データをインポートできます。 次に、Customers テーブルの列と Geography テーブルの列との間にリレーションシップを手動で作成できます。  
   
- テーブル モデルでリレーションシップを手動で作成するには、ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用できます。 ダイアグラム ビューでは、テーブル間のリレーションシップと共にグラフィカルな形式でテーブルが表示されます。 1 つのテーブルの列をクリックし、カーソルを別のテーブルにドラッグして、テーブル間のリレーションシップを正しい順序で簡単に作成できます。 [リレーションシップの管理] ダイアログ ボックスでは、テーブル間のリレーションシップが単純なテーブル形式で表示されます。 リレーションシップを手動で作成する方法についてを参照してください。 [、リレーションシップの間で 2 つのテーブルを作成する](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)です。  
+ テーブル モデルでリレーションシップを手動で作成するには、ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用できます。 ダイアグラム ビューでは、テーブル間のリレーションシップと共にグラフィカルな形式でテーブルが表示されます。 1 つのテーブルの列をクリックし、カーソルを別のテーブルにドラッグして、テーブル間のリレーションシップを正しい順序で簡単に作成できます。 [リレーションシップの管理] ダイアログ ボックスでは、テーブル間のリレーションシップが単純なテーブル形式で表示されます。 リレーションシップを手動で作成する方法についてを参照してください。 [2 テーブル間のリレーションシップを作成](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)です。  
   
 ##  <a name="bkmk_dupl_errors"></a> Duplicate values and other errors  
  リレーションシップで使用できない列を選択すると、その列の横に赤い X が表示されます。 エラー アイコンの上にカーソルを置くと、問題の詳細を示すメッセージが表示されます。 選択した列間のリレーションシップを作成できない原因となる問題には、次のものがあります。  
@@ -169,15 +169,15 @@ ms.locfileid: "34045306"
 |選択した両方の列に重複する値が含まれるため、リレーションシップを作成できない。|有効なリレーションシップを作成するには、選択したペアの少なくとも一方の列には一意の値のみが含まれている必要があります。<br /><br /> 列を編集して重複値を削除するか、一意の値を含む列が **[関連する参照列]** として使用されるように、列の順序を逆にすることができます。|  
 |列に NULL 値または空の値が含まれている。|データ列を NULL 値で相互に結合することはできません。 すべての行で、リレーションシップに使用されている両方の列に値が含まれている必要があります。|  
   
-##  <a name="bkmk_related_tasks"></a> Related tasks  
+##  <a name="bkmk_related_tasks"></a> 関連タスク  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[2 つのテーブル間のリレーションシップの作成](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|2 つのテーブル間のリレーションシップを手動で作成する方法について説明します。|  
 |[リレーションシップの削除](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|リレーションシップを削除する方法とリレーションシップの削除がもたらす影響について説明します。|  
 |[SQL Server 2016 Analysis Services における表形式モデルの双方向のクロス フィルター](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|関連するテーブルの双方向クロス フィルターについて説明します。 テーブル間の関係があり、双方向のクロス フィルターが定義されている場合は、あるテーブル リレーションシップのフィルター コンテキストを 2 つ目のテーブル リレーションシップ間でクエリを実行するときに使用できます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルと列](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [データのインポート](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   

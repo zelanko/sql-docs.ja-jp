@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
@@ -16,12 +15,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43378e9129b40324144a2f20f2039f6f376fa39d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c1ebef7107ed58629502457bdc81bfe3e07f337
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200522"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805674"
 ---
 # <a name="copy-package-objects"></a>パッケージ オブジェクトをコピーする
   このトピックでは、制御フロー アイテム、データ フロー アイテム、および接続マネージャーをパッケージ内またはパッケージ間でコピーする方法について説明します。  
@@ -63,8 +62,8 @@ ms.locfileid: "48200522"
 6.  **[接続マネージャー]** 領域を右クリックして、 **[貼り付け]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [制御フロー](control-flow/control-flow.md)   
- [データ フロー](data-flow/data-flow.md)   
+ [[制御フロー]](control-flow/control-flow.md)   
+ [[データ フロー]](data-flow/data-flow.md)   
  [Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)   
  [プロジェクト アイテムをコピーする](../../2014/integration-services/copy-project-items.md)  
   

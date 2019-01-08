@@ -1,42 +1,41 @@
 ---
-title: 'チュートリアル: SQL Server のバックアップと復元を Windows Azure Blob ストレージ サービス |Microsoft Docs'
+title: チュートリアル:SQL Server のバックアップと復元を Windows Azure Blob ストレージ サービス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65015ec9175bc1e09b97486794f7bdd44d1c1038
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056132"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811244"
 ---
-# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元
+# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>チュートリアル:SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元
   「Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元」チュートリアルへようこそ。 このチュートリアルにより、Windows Azure BLOB ストレージ サービスへのバックアップ書き込みと Windows Azure BLOB ストレージ サービスからの復元を実行する方法について把握できます。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルでは、Windows ストレージ アカウント、BLOB コンテナーを作成し、ストレージ アカウントにアクセスするための資格情報の作成、BLOB サービスへのバックアップの書き込み、簡単な復元の実行を行う方法について説明します。 このチュートリアルは、次の 4 つのレッスンで構成されています。  
   
- [レッスン 1: Microsoft Azure Storage オブジェクトの作成](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [レッスン 1:Windows Azure ストレージ オブジェクトを作成します。](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  このレッスンでは、Windows Azure ストレージ アカウントおよび BLOB コンテナーを作成します。  
   
- [レッスン 2: SQL Server 資格情報の作成](../tutorials/lesson-2-create-a-sql-server-credential.md)  
+ [レッスン 2:SQL Server 資格情報を作成します。](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  このレッスンでは、Windows Azure ストレージ アカウントへのアクセスに使用するセキュリティ情報を格納するための資格情報を作成します。  
   
- [レッスン 3: Windows Azure Blob Storage サービスに対するデータベースの完全バックアップの書き込み](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
+ [レッスン 3:Windows Azure Blob ストレージ サービスに対するデータベースの完全バックアップを書き込み](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
  このレッスンでは、T-SQL ステートメントを実行して、Windows Azure BLOB ストレージ サービスに AdventureWorks2012 データベースのバックアップを書き込みます。  
   
- [レッスン 4: データベースの完全バックアップからの復元](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
+ [レッスン 4:データベースの完全バックアップから復元を実行します。](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
  このレッスンでは、T-SQL ステートメントを実行して、前のレッスンで作成したデータベース バックアップから復元します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  このチュートリアルを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念と T-SQL 構文についての知識が必要です。 このチュートリアルを使用するには、以下のシステム要件を満たしている必要があります。  
   
 -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] インスタンス、およびインストールされた AdventureWorks2012 データベース。  

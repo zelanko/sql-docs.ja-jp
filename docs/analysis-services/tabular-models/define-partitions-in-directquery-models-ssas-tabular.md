@@ -1,5 +1,5 @@
 ---
-title: パーティションと DirectQuery モデルでの定義 |Microsoft ドキュメント
+title: Analysis Services の DirectQuery モデルでパーティションの定義 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 599e2f97991bc6256132861f335ac7bd0b0aa592
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044616"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072279"
 ---
 # <a name="define-partitions-in-directquery-models"></a>パーティションと DirectQuery モデルの定義
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 テーブル モデルでパーティションの概要については、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)です。  
+  ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 表形式モデルでのパーティションに関する一般的な情報は、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)します。  
   
 > [!NOTE]  
 >  1 つのテーブルに対して複数のパーティションを設定することができますが、DirectQuery モードでは、クエリの実行に使用できるのはそのうちの 1 つのみです。 この単一のパーティションの要件は、すべての互換性レベルの DirectQuery モデルに適用されます。  
@@ -69,13 +69,13 @@ ms.locfileid: "34044616"
   
  DirectQuery パーティションには 2 つの処理オプションがあります。 このプロパティを設定するには、 **の** [パーティション マネージャー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、 **[処理オプション]** プロパティを選択します。 次の表にこのプロパティの値を示し、接続文字列の [DirectQueryUsage] プロパティと組み合わせた場合の各値の影響について説明します。  
   
-|**接続文字列** プロパティ|**[処理オプション]** プロパティ|注|  
+|**接続文字列** プロパティ|**[処理オプション]** プロパティ|メモ|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|[このパーティションを処理しない]|モデルが DirectQuery のみを使用している場合、処理は必要ありません。<br /><br /> ハイブリッド モデルでは、DirectQuery パーティションが処理されないように構成できます。 たとえば、非常に大きなデータ セットを操作する場合に、キャッシュに結果のすべてを追加する必要がなければ、DirectQuery パーティションにテーブル内の他のパーティションに対する結果の和集合を含めて、和集合を処理しないことを指定できます。 リレーショナル ソースに対するクエリは影響を受けず、キャッシュ データに対するクエリは他のパーティションからのデータを結合します。|  
 |DataView = サンプル<br /><br /> サンプル データ ビューを使用して表形式モデルに適用されます。|[パーティションを処理できる]|データ モデルがサンプルを使用している場合は、モデルの設計時に視覚的な手掛かりを提供するフィルター選択されたデータセットを返すようにテーブルを処理できます。|  
 |DirectQueryUsage = InMemory With DirectQuery (インメモリ (DirectQuery あり))<br /><br /> インメモリと DirectQuery モードの組み合わせで実行される 1100 または 1103 表形式モデルに適用されます。|[パーティションを処理できる]|モデルがハイブリッド モードを使用している場合は、インメモリと DirectQuery データ ソースに対するクエリで同じパーティションを使用する必要があります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

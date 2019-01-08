@@ -14,22 +14,22 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220342"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792264"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではフルテキスト クエリで類義語辞典を使用し、指定した用語のシノニムを検索できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の*類義語辞典*では、特定の言語の一連のシノニムを定義します。 システム管理者は、拡張セットと置換セットという 2 つの形式のシノニムを定義できます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 類義語辞典の照合は、FORMSOF THESAURUS 句を指定する [CONTAINS](/sql/t-sql/queries/contains-transact-sql) クエリと [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) クエリの場合、およびすべての [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) クエリと [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) クエリの場合に行われます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではフルテキスト クエリで類義語辞典を使用し、指定した用語のシノニムを検索できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の*類義語辞典*では、特定の言語の一連のシノニムを定義します。 システム管理者は、拡張セットと置換セットという 2 つの形式のシノニムを定義できます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 類義語辞典の照合は、FORMSOF THESAURUS 句を指定する [CONTAINS](/sql/t-sql/queries/freetext-transact-sql) クエリと [CONTAINSTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) クエリの場合、およびすべての [FREETEXT](/sql/t-sql/queries/contains-transact-sql) クエリと [FREETEXTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) クエリの場合に行われます。  
   
 ##  <a name="tasks"></a> 類義語辞典ファイルを設定するための基本的なタスク  
  サーバー インスタンス上のフルテキスト検索クエリで特定の言語のシノニムを検索するには、その言語の類義語辞典のマッピング (シノニム) を定義しておく必要があります。 各類義語辞典は、次の内容を定義するために手動で構成する必要があります。  
   
 -   分音文字の設定  
   
-     類義語辞典では、チルダ (**~**)、アキュート アクセント記号 (**´**)、ウムラウト (**¨**) などの分音記号をすべての検索パターンで区別するかしないか ( *アクセントを区別する* 、または *アクセントを区別しない*) が設定されます。 たとえば、フルテキスト クエリで "café" というパターンが他のパターンに置き換えられるように指定するとします。 類義語辞典でアクセントが区別されない場合、フルテキスト検索では、パターン "café" と "cafe" が置き換えられます。 類義語辞典でアクセントが区別される場合、フルテキスト検索では "café" というパターンのみが置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
+     すべての検索パターンは機密性の高いまたはチルダなどの分音記号の区別に関する特定の類義語辞典の (**~**)、アキュート アクセント記号 (**??**)、またはウムラウト (**??**) (つまり、*アクセントの区別*または*アクセントを区別しない*)。 たとえば、「カフェ??」というパターンを指定します。 フルテキスト クエリでは、他のパターンによって置き換えられます。 類義語辞典は、アクセントを区別しない場合、フルテキスト検索では、パターン「カフェ??」が置き換えられます 「カフェ」。 類義語辞典がアクセントを区別する場合は、フルテキスト検索にのみ、パターン「カフェ??」が置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
   
 -   拡張セット  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48220342"
   
   
 ##  <a name="structure"></a> 類義語辞典ファイルの構造を理解します。  
- 各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus`の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--` … `-->`が定義されます。 類義語辞典がで定義されている、\<類義語辞典 > 要素を次のように分音文字の設定、拡張セット、および置換セットを定義する子要素のサンプルが含まれています。  
+ 各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus` の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--`...`-->` が定義されます。 類義語辞典がで定義されている、\<類義語辞典 > 要素を次のように分音文字の設定、拡張セット、および置換セットを定義する子要素のサンプルが含まれています。  
   
 -   分音文字の設定の XML 構造  
   

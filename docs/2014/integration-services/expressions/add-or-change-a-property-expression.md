@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
@@ -14,12 +13,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178502"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807384"
 ---
 # <a name="add-or-change-a-property-expression"></a>プロパティ式を追加または変更する
   パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、シーケンス コンテナー、イベント ハンドラー、パッケージおよびプロジェクト レベルの接続マネージャー、およびログ プロバイダーに対してプロパティ式を作成できます。  
@@ -44,9 +43,9 @@ ms.locfileid: "48178502"
   
     -   **[式]** 列で直接プロパティ式を入力するか変更し、 **[OK]** をクリックします。  
   
-         — または —  
+         - または -  
   
-    -   プロパティの式の行の省略記号 [...] をクリックし、 **[式ビルダー]** ダイアログ ボックスを開きます。  
+    -   プロパティの式の行の省略記号 [...] をクリックし、**[式ビルダー]** ダイアログ ボックスを開きます。  
   
 5.  (省略可能) **[式ビルダー]** での次のタスクのいずれかを実行します。  
   
@@ -67,8 +66,8 @@ ms.locfileid: "48178502"
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; 式](integration-services-ssis-expressions.md)   
- [パッケージでプロパティ式を使用します。](use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41;パッケージ](../integration-services-ssis-packages.md)   
+ [パッケージでプロパティ式を使用する](use-property-expressions-in-packages.md)   
+ [Integration Services &#40;SSIS&#41; パッケージ](../integration-services-ssis-packages.md)   
  [Integration Services コンテナー](../control-flow/integration-services-containers.md)   
  [Integration Services タスク](../control-flow/integration-services-tasks.md)   
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../integration-services-ssis-event-handlers.md)   

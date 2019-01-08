@@ -19,19 +19,19 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69e0eb339ee66da1f91956555a931a71ac94406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743520"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213693"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   要求されたオブジェクトの現在のサイズ、および要求された圧縮状態での推定オブジェクト サイズを返します。 圧縮は、テーブル全体またはテーブルの一部について評価できます。 これには、ヒープ、クラスター化インデックスが含まれますが、非クラスター化インデックス、列ストア インデックス、インデックス付きビュー、およびテーブルおよびインデックス パーティション。 オブジェクトは、行、ページ、列ストアまたは列ストア アーカイブの圧縮を使用して圧縮できます。 テーブル、インデックス、またはパーティションが既に圧縮されている場合は、このプロシージャを使用して、再圧縮された場合のテーブル、インデックス、またはパーティションのサイズを推定できます。  
   
-> [!NOTE]  
+> [!NOTE]
 >  圧縮と**sp_estimate_data_compression_savings**のすべてのエディションでは使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  要求された圧縮設定を使用した場合のオブジェクト サイズを推定するために、このストアド プロシージャでは、ソース オブジェクトがサンプリングされ、そのデータが tempdb に作成された同等のテーブルとインデックスに読み込まれます。 さらに、tempdb に作成されたテーブルまたはインデックスが要求された設定に圧縮され、圧縮で削減される推定領域が計算されます。  
@@ -72,7 +72,7 @@ sp_estimate_data_compression_savings
  パーティションを指定するには、指定の[$partition](../../t-sql/functions/partition-transact-sql.md)関数。 所有するオブジェクトのすべてのパーティションについて情報を返すには、NULL を指定します。  
   
  [ @data_compression=] '*data_compression*'  
- 評価される圧縮の種類です。 *data_compression*値は次のいずれかを指定できます。 NONE、行、ページ、列ストア、または COLUMNSTORE_ARCHIVE です。  
+ 評価される圧縮の種類です。 *data_compression*値は次のいずれかを指定できます。[なし]、行、ページ、列ストア、または COLUMNSTORE_ARCHIVE です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

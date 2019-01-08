@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - GUID regenerating [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2b9179a6c94c6bffd0a7ebc9f5c9b1bb2897605
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a43cb8fcadf514885397530792f54c1d3643e695
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156672"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798904"
 ---
 # <a name="reuse-of-package-objects"></a>パッケージ オブジェクトの再利用
   多くの場合、パッケージには、再利用できるような機能が含まれています。 たとえば、一連のタスクを作成した場合、それらのアイテムを合わせてグループとして再利用したり、別の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトで作成した接続マネージャーのように、1 つのアイテムを再利用したりすることができます。  

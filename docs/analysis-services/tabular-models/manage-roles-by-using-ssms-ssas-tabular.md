@@ -1,5 +1,5 @@
 ---
-title: SSMS を使用してロールの管理 |Microsoft Docs
+title: SSMS を使用して Analysis Services 表形式モデルのロールの管理 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22fd8242de50f73eee634d1bc6bc3fcf5e887f0b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045350"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072619"
 ---
 # <a name="manage-roles-by-using-ssms"></a>SSMS を使用したロールの管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

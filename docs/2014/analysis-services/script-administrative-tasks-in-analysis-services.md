@@ -14,12 +14,12 @@ ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f5324a8996261745c7aa64f0deca150b9b73e80
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0ff9d6a44f027de2ef5994ea9a7b29c97175e45b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146657"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357753"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Analysis Services の管理タスクのスクリプト作成
   SQL Server エージェントで手動、またはスケジュールして実行できるスクリプトを記述または生成することで、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理タスクを自動化できます。 次の表は、使用可能なスクリプト作成オプションについてまとめ、詳細情報へのリンクを提供します。  
@@ -28,7 +28,7 @@ ms.locfileid: "50146657"
   
 |手法|ファイル形式|説明|リンク|  
 |-----------------|-----------------|-----------------|-----------|  
-|PowerShell|.ps1|Analysis Services は、SQL Server PowerShell のスクリプト環境を、新しいプロバイダーを通じてサポートします。このプロバイダーは、コマンド ラインからのオブジェクトのナビゲーションと、バックアップ、復元、処理、ロール管理などの管理タスク用の新しいコマンドレットからのオブジェクトのナビゲーションを追加します。<br /><br /> さらに、SQL Server PowerPivot (SQLPS) プロバイダーには、汎用コマンドレット、`Invoke-ASCmd` も含まれ、XMLA、MDX、または、DMX スクリプトを PowerShell セッション内で実行することができます。<br /><br /> Analysis Services の PowerShell スクリプトは、多次元モデルとテーブル モデルの両方でサポートされますが、SharePoint からアクセスする PowerPivot ブックではサポートされません。|[Analysis Services PowerShell](analysis-services-powershell.md)<br /><br /> [Windows PowerShell サバイバル ガイド](http://go.microsoft.com/fwlink/?LinkId=233747)|  
+|PowerShell|.ps1|Analysis Services は、SQL Server PowerShell のスクリプト環境を、新しいプロバイダーを通じてサポートします。このプロバイダーは、コマンド ラインからのオブジェクトのナビゲーションと、バックアップ、復元、処理、ロール管理などの管理タスク用の新しいコマンドレットからのオブジェクトのナビゲーションを追加します。<br /><br /> さらに、SQL Server PowerPivot (SQLPS) プロバイダーには、汎用コマンドレット、`Invoke-ASCmd` も含まれ、XMLA、MDX、または、DMX スクリプトを PowerShell セッション内で実行することができます。<br /><br /> Analysis Services の PowerShell スクリプトは、多次元モデルとテーブル モデルの両方でサポートされますが、SharePoint からアクセスする PowerPivot ブックではサポートされません。|[Analysis Services PowerShell](analysis-services-powershell.md)<br /><br /> [Windows PowerShell サバイバル ガイド](https://go.microsoft.com/fwlink/?LinkId=233747)|  
 |ASSL または XMLA スクリプト|.xmla|Analysis Services スクリプト言語 (ASSL) は、テーブル モデルまたは多次元モデルで実行される Analysis Services 上のオブジェクトと操作のデータ アクセスを提供する XMLA の拡張機能です。 ASSL には、XML 形式での Analysis Services オブジェクトと操作の完全な式を有効化するデータ定義とコマンド言語のサポートが含まれます。 ASSL で提供されるオブジェクトとコマンドを使用するスクリプトは、.xmla ファイルとして保存されます。 Analysis Services のコンテキスト内では、ASSL を XMLA スクリプトとして参照するのが一般的です。 以下の要件が含まれる場合、この方法を選択してください。<br /><br /> スクリプトがサーバー上に直接オブジェクトを作成する、またはデータ定義と操作の両方のタスクを実行する (たとえば、データベースの再作成と処理)。<br /><br /> 複数のツールとテクノロジでスクリプトの再利用を最大限行うことが必要 SSIS パッケージまたは PowerShell スクリプトで参照される SQL Server エージェントで XMLA スクリプトは、Analysis Services コマンド タスクに追加できます。<br /><br /> スクリプトは自動的に実行する必要がある。 SQL Server エージェントを使用して、XMLA スクリプトまたは XMLA を含む SSIS パッケージを含むジョブをスケジュールできます。<br /><br /> XMLA を使用するアプリケーション要件がある。 XMLA は、マネージド コード環境を必要としないインターフェイスです。 .NET Framework を使用しないアプリケーションで XMLA スクリプトを実行することができます。|[Management Studio での Analysis Services スクリプトの作成](instances/create-analysis-services-scripts-in-management-studio.md)<br /><br /> [SQL Server Management Studio での Analysis Services テンプレートの使用](instances/use-analysis-services-templates-in-sql-server-management-studio.md)<br /><br /> [SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う](instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)<br /><br /> [Analysis Services スクリプト言語 (ASSL) での開発](multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)<br /><br /> [Invoke-ASCmd コマンドレット](/sql/analysis-services/powershell/invoke-ascmd-cmdlet)|  
 |||XMLA スクリプトを作成するには、Management Studio でスクリプト ジェネレーターを使用することができます。 オブジェクト レベルでは、オブジェクトを右クリックして、オブジェクトを作成、変更、または削除するスクリプトを生成します。 コマンド レベルでは、バックアップや復元の処理、集計のデザイン、その他のコマンドなどに対して、ダイアログ ボックスでスクリプト機能を使用してスクリプトを生成することができます。ダイアログ ボックスでは、スクリプトの出力先を新しいウィンドウ、ファイル、またはクリップボードのオプションから選択できます。 また、テキスト エディターまたはコード エディターで、XMLA スクリプトを手動で作成したり、テンプレート エクスプ ローラーで、テンプレートを使用することもできます。 スクリプトを実行するには、次のいずれかの方法を実行します。<br /><br /> Management Studio を使用して、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスでオブジェクトを直接作成または変更する。<br /><br /> SQL Server エージェントを使用して、Analysis Services コマンドのタスクを含むジョブをスケジュールする。<br /><br /> Invoke ASCmd コマンドレットを使用して、PowerShell セッションでスクリプトを実行する。||  
 |MDX Script|.mdx|多次元式 (MDX) 言語は、分析データ ソースに対する業界標準クエリ言語で、XMLA 仕様の一部でもあります。<br /><br /> データまたはシステム情報をクエリするスタンドアロンの MDX スクリプト ファイルを作成することができます。 たとえば、ローカル サーバーの操作やサーバーの正常性に関する情報を公開する動的管理ビュー (DMV) は、MDX の Select ステートメントを介してアクセスします。<br /><br /> MDX スクリプトは、多次元モードとテーブル モードの両方のサーバーで実行されます。 SQL Server Management Studio、または `Invoke-ASCmd` を使用して PowerShell セッションから対話的にスクリプトを実行することができます。|[MDX スクリプティングの基礎 (Analysis Services)](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)<br /><br /> [動的管理ビュー (DMV) を使用した Analysis Services の監視](instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)<br /><br /> [SQL Server Management Studio での Analysis Services テンプレートの使用](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  

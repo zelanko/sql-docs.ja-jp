@@ -1,5 +1,6 @@
 ---
-title: Ubuntu 上の SQL Server の概要 |Microsoft Docs
+title: Ubuntu 上の SQL Server を概要します。
+titleSuffix: SQL Server
 description: このクイック スタートでは、SQL Server 2017 または SQL Server 2019 を Ubuntu にインストールを作成および sqlcmd を使用したデータベースの照会する方法を示します。
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677953"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160550"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート: SQL Server をインストールし、Ubuntu 上でデータベースを作成します。
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート:Ubuntu に SQL Server をインストールし、データベースを作成
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -88,7 +89,7 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
    ```
 
    > [!TIP]
-   > 無料でライセンスは、次の SQL Server 2017 エディション: Evaluation、Developer、および高速です。
+   > 次の SQL Server 2017 エディションのライセンスは自由に。Evaluation、Developer、および高速です。
 
    > [!NOTE]
    > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)。
@@ -183,7 +184,7 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **省略可能な**: 追加`/opt/mssql-tools/bin/`を**パス**bash シェル内の環境変数。
+1. **省略可能な**:追加`/opt/mssql-tools/bin/`を**パス**bash シェル内の環境変数。
 
    させる**sqlcmd と bcp**ログイン セッションでは、bash シェルからアクセス可能な変更、**パス**で、 **~/.bash_profile**次のコマンドでファイル。
 

@@ -1,5 +1,5 @@
 ---
-title: 作成し、階層の管理 |Microsoft ドキュメント
+title: 作成し、Analysis Services 表形式モデルでの階層の管理 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c9282c3b28ca5998cc21d2906f06d50f862e49a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044836"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072599"
 ---
 # <a name="create-and-manage-hierarchies"></a>作成し、階層の管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34044836"
   
 2.  階層の名前を入力します。  
   
- 追加する列を階層の親レベルにドラッグすると、列はコピーされます。 子レベルを階層内の目的の場所にドロップします。  
+ 階層の親レベル、列をコピーするには、追加の列をドラッグできます。 子レベルを階層内の目的の場所にドロップします。  
   
 > [!NOTE]  
 >  1 つ以上の列と共に 1 つのメジャーを複数選択するか、または複数のテーブルから複数の列を選択した場合、ショートカット メニューの [階層の作成] コマンドは無効になります。  

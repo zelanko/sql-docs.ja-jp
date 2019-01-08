@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
@@ -17,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3a2e2ff2fd28004d924f2b06a19b6bab3c52914
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e8d49827c9f533c75933a316ff3b655d3f13025
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155372"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353898"
 ---
 # <a name="xml-source"></a>XML ソース
   XML ソースは XML データ ファイルを読み取り、ソース出力の列にデータを設定します。  
@@ -66,7 +65,7 @@ ms.locfileid: "48155372"
 ## <a name="configuration-of-the-xml-source"></a>XML ソースの構成  
  XML ソースでは、3 つの異なるデータ アクセス モードがサポートされています。 XML データ ファイルのファイルの場所、ファイルの場所を含む変数、または XML データを含む変数を指定できます。  
   
- XML ソースが含まれています、`XMLData`と`XMLSchemaDefinition`のカスタム プロパティが、パッケージが読み込まれるときに、プロパティ式で更新できます。 詳細については、「[Integration Services (SSIS) の式](../expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../expressions/use-property-expressions-in-packages.md)」、および「[XML 入力元のカスタム プロパティ](xml-source-custom-properties.md)」を参照してください。  
+ XML ソースには、パッケージの読み込み時にプロパティ式で更新できる、`XMLData` カスタム プロパティと `XMLSchemaDefinition` カスタム プロパティがあります。 詳細については、「[Integration Services (SSIS) の式](../expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../expressions/use-property-expressions-in-packages.md)」、および「[XML 入力元のカスタム プロパティ](xml-source-custom-properties.md)」を参照してください。  
   
  XML ソースでは、複数の標準出力と複数のエラー出力がサポートされています。  
   
@@ -96,6 +95,6 @@ ms.locfileid: "48155372"
  [XML ソースを使用してデータを抽出する](xml-source.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- curatedviews.cloudapp.net の Curated Answer 「 [SSIS パッケージ用の XML 変換先を作成する](http://go.microsoft.com/fwlink/?LinkId=321993)」  
+ curatedviews.cloudapp.net の Curated Answer 「[SSIS パッケージ用の XML 変換先を作成する](https://go.microsoft.com/fwlink/?LinkId=321993)」  
   
   

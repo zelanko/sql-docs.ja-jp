@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - max-depth annotation
@@ -23,12 +21,12 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a815a5d5213d4069df6ceda490ee9f4b7e92b279
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189152"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800834"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth を使用した、再帰リレーションシップの深さの指定
   リレーショナル データベースでは、テーブルのリレーションシップにそのテーブル自身が含まれることを、再帰リレーションシップと呼びます。 たとえば、監督者と被監督者のリレーションシップでは、従業員の記録を格納するテーブルのリレーションシップに、そのテーブル自身が含まれます。 この場合、従業員テーブルはリレーションシップの 1 つの側では監督者となり、別の側では被監督者となります。  
@@ -148,7 +146,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -231,7 +229,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>sql:max-depth 注釈  
  再帰リレーションシップで構成されるスキーマでは、スキーマ内に再帰の深さを明示的に指定する必要があります。 これは、対応する FOR XML EXPLICIT クエリを正常に作成し、要求された結果を返すために必要です。  
   
- スキーマで記述されている再帰リレーションシップの再帰の深さを指定するには、スキーマで `sql:max-depth` 注釈を使用します。 `sql:max-depth` 注釈の値は、再帰の回数を示す正の整数値 (1 ～ 50) です。値 1 を指定した場合は、`sql:max-depth` 注釈が指定されている要素で再帰が停止します。値 2 を指定した場合は、`sql:max-depth` が指定されている要素の次のレベルで再帰が停止します。このように、指定した値に応じたレベルで再帰が停止します。  
+ スキーマで記述されている再帰リレーションシップの再帰の深さを指定するには、スキーマで `sql:max-depth` 注釈を使用します。 値、`sql:max-depth`注釈は、再帰の数を示す正の整数 (1 ~ 50)。1 の値を要素で再帰を停止します、`sql:max-depth`注釈が指定されて; 値が 2 の停止位置を示す要素から、[次へ] レベルで再帰`sql:max-depth`; 指定され具合です。  
   
 > [!NOTE]  
 >  この基本となる実装では、マッピング スキーマに対して指定されている XPath クエリが、SELECT ... FOR XML EXPLICIT クエリに変換されます。 このクエリでは、再帰に有限の深さを指定する必要があります。 `sql:max-depth` に指定する値が大きいほど、生成される FOR XML EXPLICIT クエリは大きくなります。 これによって、取得に時間がかかることがあります。  

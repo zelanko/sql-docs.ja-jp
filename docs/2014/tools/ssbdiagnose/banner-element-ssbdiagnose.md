@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - banner element
@@ -15,12 +14,12 @@ ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b461370b4bbab4cc7e28bcb1ed95d0a3e6d5553e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080742"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803364"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 要素 (ssbdiagnose)
   **ssbdiagnose** の出力 XML ファイルを生成したユーティリティを示します。  
@@ -55,7 +54,7 @@ ms.locfileid: "48080742"
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[DiagnosticInformation 要素&#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
+|**親要素**|[DiagnosticInformation 要素 &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  

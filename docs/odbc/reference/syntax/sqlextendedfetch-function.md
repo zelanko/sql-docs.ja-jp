@@ -20,22 +20,22 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1896ec473caf1af8a3fa2bdaa4156ddca3c0a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697051"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204041"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
- **概要**  
+ **まとめ**  
  **SQLExtendedFetch**結果セットからデータの指定した行セットをフェッチし、すべてのバインドされた列のデータを返します。 絶対または相対位置にまたはブックマークによる行セットを指定できます。  
   
-> [!NOTE]  
->  ODBC 3 *.x*、 **SQLExtendedFetch**置き換わりました**SQLFetchScroll**します。 ODBC 3 *.x*アプリケーションは呼び出さないでください**SQLExtendedFetch**; 代わりに呼び出す必要がある**SQLFetchScroll**します。 ドライバー マネージャー マップ**SQLFetchScroll**に**SQLExtendedFetch** ODBC 2 を使用する場合 *.x*ドライバー。 ODBC 3 *.x*ドライバーをサポートする必要があります**SQLExtendedFetch** ODBC 2 を使用する場合は *.x*付けますアプリケーション。 詳細については、「コメント」を参照してくださいと[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
+> [!NOTE]
+>  ODBC 3 *.x*、 **SQLExtendedFetch**置き換わりました**SQLFetchScroll**します。 ODBC 3 *.x*アプリケーションは呼び出さないでください**SQLExtendedFetch**; 代わりに呼び出す必要がある**SQLFetchScroll**します。 ドライバー マネージャー マップ**SQLFetchScroll**に**SQLExtendedFetch** ODBC 2 を使用する場合 *.x*ドライバー。 ODBC 3 *.x*ドライバーをサポートする必要があります**SQLExtendedFetch** ODBC 2 を使用する場合は *.x*付けますアプリケーション。 詳細については、「コメント」を参照してくださいと[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)で付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,7 +65,7 @@ SQLRETURN SQLExtendedFetch(
  *RowStatusArray*  
  [出力]各行のステータスが返される配列へのポインター。 この配列は、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって指定された配列と同じ方法で使用されます。  
   
- ただし、この配列のアドレスは、IRD の SQL_DESC_STATUS_ARRAY_PTR フィールドには格納されません。 さらに、この配列がでのみ使用される**SQLExtendedFetch**および**SQLBulkOperations**で、*操作*SQL_ADD のまたは**SQLSetPos**後に呼び出されます**SQLExtendedFetch**します。 によって使用されていない**SQLFetch**または**SQLFetchScroll**で使用されていないと**SQLBulkOperations**または**SQLSetPos**後に呼び出されますが**SQLFetch**または**SQLFetchScroll**します。 ない場合に使用**SQLBulkOperations**で、*操作*SQL_ADD の前に呼び出される、フェッチ関数が呼び出されます。 つまり、ステートメントの状態 S7 でのみ使用されます。 S5 または S6 ステートメントの状態では使用されません。 詳細については、次を参照してください。[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)付録 b: ODBC の状態遷移のテーブルにします。  
+ ただし、この配列のアドレスは、IRD の SQL_DESC_STATUS_ARRAY_PTR フィールドには格納されません。 さらに、この配列がでのみ使用される**SQLExtendedFetch**および**SQLBulkOperations**で、*操作*SQL_ADD のまたは**SQLSetPos**後に呼び出されます**SQLExtendedFetch**します。 によって使用されていない**SQLFetch**または**SQLFetchScroll**で使用されていないと**SQLBulkOperations**または**SQLSetPos**後に呼び出されますが**SQLFetch**または**SQLFetchScroll**します。 ない場合に使用**SQLBulkOperations**で、*操作*SQL_ADD の前に呼び出される、フェッチ関数が呼び出されます。 つまり、ステートメントの状態 S7 でのみ使用されます。 S5 または S6 ステートメントの状態では使用されません。 詳細については、次を参照してください[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)で付録 b:。ODBC の状態遷移のテーブル。  
   
  アプリケーションで有効なポインターを提供する必要があります、 *RowStatusArray*引数かどうかの動作**SQLExtendedFetch**への呼び出しの動作と**SQLBulkOperations**または**SQLSetPos**によってカーソルが位置付けられている後**SQLExtendedFetch**は定義されていません。  
   
@@ -86,7 +86,7 @@ SQLRETURN SQLExtendedFetch(
 |07009|無効な記述子のインデックス|バインドされた列 0 **SQLBindCol**SQL_ATTR_USE_BOOKMARKS のステートメント属性 SQL_UB_OFF に設定されているとします。|  
 |08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
 |22002|インジケーター変数が必要ですが、指定されていません|NULL データのフェッチの列にある*StrLen_or_IndPtr*によって設定**SQLBindCol**が null ポインター。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|22003|数値が範囲外|(数値または文字列) として 1 つまたは複数の列の数値の値を取得する原因となる (ではなく小数部) 整数部分が切り捨てられる数値。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> 詳細については、次を参照してください。[間隔と数値データ型に関するガイドライン](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)付録 d: データ型。|  
+|22003|数値が範囲外|(数値または文字列) として 1 つまたは複数の列の数値の値を取得する原因となる (ではなく小数部) 整数部分が切り捨てられる数値。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> 詳細については、次を参照してください[間隔と数値データ型に関するガイドライン](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)付録 d:。データ型。|  
 |22007|無効な datetime 形式|結果セット内の文字の列は、日付、時刻、またはタイムスタンプ C 構造体にバインドされましたし、列の値が、それぞれ、無効な日付、時刻、またはタイムスタンプ。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |22012|0 による除算|算術式の値がによって返される、その結果、除算 0。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |22015|Interval フィールド オーバーフロー|真数型または interval SQL 型から C の間隔の種類への割り当てと、先頭のフィールドに有効桁数の損失が発生します。<br /><br /> C の間隔の種類にデータをフェッチするときに C の間隔の種類の SQL 型の値の表現はありませんでした。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -121,7 +121,7 @@ SQLRETURN SQLExtendedFetch(
   
 -   **SQLExtendedFetch**バインディングのオフセット (SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性) をサポートしていません。  
   
--   呼び出す**SQLExtendedFetch**への呼び出しを混在させることはできません**SQLFetch**または**SQLFetchScroll**、場合**SQLBulkOperations**が呼び出されますすべてのフェッチ関数が呼び出される前に**SQLExtendedFetch**カーソルを閉じてから再度開くまでに呼び出すことはできません。 つまり、 **SQLExtendedFetch**ステートメント状態 S7 でのみ呼び出すことができます。 詳細については、次を参照してください。[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)付録 b: ODBC の状態遷移のテーブルにします。  
+-   呼び出す**SQLExtendedFetch**への呼び出しを混在させることはできません**SQLFetch**または**SQLFetchScroll**、場合**SQLBulkOperations**が呼び出されますすべてのフェッチ関数が呼び出される前に**SQLExtendedFetch**カーソルを閉じてから再度開くまでに呼び出すことはできません。 つまり、 **SQLExtendedFetch**ステートメント状態 S7 でのみ呼び出すことができます。 詳細については、次を参照してください[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)で付録 b:。ODBC の状態遷移のテーブル。  
   
  アプリケーションを呼び出すと**SQLFetchScroll** 、ODBC 2 を使用しているときに *.x*ドライバー、ドライバー マネージャーは、マップするには、この呼び出し**SQLExtendedFetch**します。 詳細については、次を参照してください。"SQLFetchScroll および ODBC 2 *.x*ドライバー"で[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)します。  
   

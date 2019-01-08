@@ -1,5 +1,5 @@
 ---
-title: Power Pivot データ アクセス |Microsoft ドキュメント
+title: Power Pivot データ アクセス |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d6c1b5e8ca611abf821f81761d862a6b0ddde20
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 79366c8f07728f0063fa5841f8fc5e0c8e3cc236
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027029"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983903"
 ---
 # <a name="power-pivot-data-access"></a>Power Pivot データ アクセス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34027029"
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのデータの一部は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって処理されません。 ワークシートのテーブルおよびセル データは Excel Services によって処理されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって処理されるのは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに合わないピボットテーブル、ピボットグラフ、およびスライサーだけです。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services に接続します。](../../analysis-services/instances/connect-to-analysis-services.md)   
- [表形式モデルのデータ アクセス](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)   
+
   
   

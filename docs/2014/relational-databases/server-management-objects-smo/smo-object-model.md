@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - object models [SMO]
@@ -16,12 +14,12 @@ ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9239d354f16558471db273ab31ed10d0b721698f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 637c60fd6d7ba53087a145135d7152066983b644
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092402"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808594"
 ---
 # <a name="smo-object-model"></a>SMO オブジェクト モデル
   SMO オブジェクト モデルは、オブジェクトの階層で構成されています。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトはトップ レベル オブジェクトであるため、すべてのインスタンス クラス オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトの下位に位置します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
@@ -15,12 +14,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107211"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798934"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
   スパース列は、NULL 値用にストレージが最適化されている通常の列です。 スパース列によって、NULL 以外の値を取得するためのオーバーヘッドは増大しますが、NULL 値に必要となる領域は削減されます。 少なくとも 20 ～ 40% の領域を削減できる場合は、スパース列の使用を検討してください。 スパース列および列セットを定義するには、 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) または [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ステートメントを使用します。  
@@ -86,7 +85,7 @@ ms.locfileid: "48107211"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **長さが有効桁数に依存するデータ型**  
+ **Precision-Dependent-Length データ型**  
   
 |データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
@@ -100,7 +99,7 @@ ms.locfileid: "48107211"
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|控えめな推定値として `decimal` 型を使用してください。|||  
   
- **長さがデータに依存するデータ型**  
+ **Data-Dependent-Length データ型**  
   
 |データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
@@ -121,7 +120,7 @@ ms.locfileid: "48107211"
 ## <a name="restrictions-for-using-sparse-columns"></a>スパース列の使用に関する制限  
  スパース列は、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にすることができ、他の列と同じように動作しますが、次の制限があります。  
   
--   スパース列は、NULL 値を許容する必要があり、ROWGUIDCOL または IDENTITY プロパティを持つことができません。 スパース列は、次のデータ型にすることはできません: `text`、 `ntext`、 `image`、 `timestamp`、ユーザー定義データ型、 `geometry`、または`geography`; は FILESTREAM 属性。  
+-   スパース列は、NULL 値を許容する必要があり、ROWGUIDCOL または IDENTITY プロパティを持つことができません。 スパース列のデータ型を `text`、`ntext`、`image`、`timestamp`、ユーザー定義データ型、`geometry`、または `geography` にすることはできません。また、スパース列には FILESTREAM 属性を指定できません。  
   
 -   スパース列には既定値を設定できません。  
   

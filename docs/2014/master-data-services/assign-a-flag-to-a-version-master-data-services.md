@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], assigning flags
@@ -14,12 +13,12 @@ ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2268e5f13f78cd4f1e8909fa2008f9ec9aeecd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4a6c9c8d24211476d6f0e520da991c239ba7d24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066392"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795504"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>バージョンにフラグを割り当てる (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンにフラグを割り当てて、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示します。  
@@ -32,7 +31,7 @@ ms.locfileid: "48066392"
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   割り当てるバージョン フラグを作成している必要があります。 詳細については、「[バージョン フラグを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)」を参照してください。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48066392"
 4.  Enter キーを押して変更を保存します。  
   
 ## <a name="see-also"></a>参照  
- [バージョン フラグを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)   
- [バージョン&#40;マスター データ サービス&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [バージョン フラグを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)   
+ [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)  
   
   

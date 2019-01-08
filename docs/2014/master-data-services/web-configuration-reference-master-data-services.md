@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
@@ -13,12 +12,12 @@ ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2f52ca10bd9d857d4e87a54f19cfaa87f1e92575
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8712497d6732bc979f128ccb9acf859cc2e2748
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130962"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363414"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 設定リファレンス (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では Web.config ファイルを使用することで、インターネット インフォメーション サービス (IIS) を有効にして [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションおよび Web サービスをホストできるようにする構成設定を取り込みます。 この Web.config ファイルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インストール パスの WebApplication フォルダーにあります。 パスと権限の詳細については、「[フォルダーとファイルの権限 (マスター データ サービス)](folder-and-file-permissions-master-data-services.md)」を参照してください。  
@@ -29,16 +28,16 @@ ms.locfileid: "48130962"
 |Configuration 要素|説明|  
 |---------------------------|-----------------|  
 |`masterDataServices`|Custom 要素。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに接続します。|  
-|`connectionStrings`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [connectionStrings 要素 (ASP.NET 設定スキーマ)](http://go.microsoft.com/fwlink/?LinkId=178347) 」を参照してください。|  
-|`system.web`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [system.web 要素 (ASP.NET 設定スキーマ)](http://go.microsoft.com/fwlink/?LinkId=178348) 」を参照してください。|  
-|`startup`|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<startup> 要素](http://go.microsoft.com/fwlink/?LinkId=178349)」を参照してください。|  
-|`runtime`|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<runtime> 要素](http://go.microsoft.com/fwlink/?LinkId=178350)」を参照してください。|  
-|`system.codedom`|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<system.codedom> 要素](http://go.microsoft.com/fwlink/?LinkId=178351)」を参照してください。|  
-|`system.web.extensions`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [system.web.extensions 要素 (ASP.NET 設定スキーマ)](http://go.microsoft.com/fwlink/?LinkId=178352) 」を参照してください。|  
-|`system.webServer`|IIS 要素を含んだセクション グループ。 詳細については、MSDN ライブラリの「[system.webServer セクション グループ \[IIS 7 設定スキーマ\]](http://go.microsoft.com/fwlink/?LinkId=178353)」を参照してください。|  
-|`system.serviceModel`|WCF 要素。 詳細については、MSDN ライブラリの「[\<system.serviceModel>](http://go.microsoft.com/fwlink/?LinkId=178354)」を参照してください。|  
-|`system.diagnostics`|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<system.diagnostics> 要素](http://go.microsoft.com/fwlink/?LinkId=178355)」を参照してください。|  
-|`appSettings`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [appSettings 要素 (全般設定スキーマ)](http://go.microsoft.com/fwlink/?LinkId=178356) 」を参照してください。|  
+|`connectionStrings`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [connectionStrings 要素 (ASP.NET 設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178347) 」を参照してください。|  
+|`system.web`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [system.web 要素 (ASP.NET 設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178348) 」を参照してください。|  
+|`startup`|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<startup> 要素](https://go.microsoft.com/fwlink/?LinkId=178349)」を参照してください。|  
+|`runtime`|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<runtime> 要素](https://go.microsoft.com/fwlink/?LinkId=178350)」を参照してください。|  
+|`system.codedom`|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<system.codedom> 要素](https://go.microsoft.com/fwlink/?LinkId=178351)」を参照してください。|  
+|`system.web.extensions`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [system.web.extensions 要素 (ASP.NET 設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178352) 」を参照してください。|  
+|`system.webServer`|IIS 要素を含んだセクション グループ。 詳細については、MSDN ライブラリの「[system.webServer セクション グループ \[IIS 7 設定スキーマ\]](https://go.microsoft.com/fwlink/?LinkId=178353)」を参照してください。|  
+|`system.serviceModel`|WCF 要素。 詳細については、MSDN ライブラリの「[\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354)」を参照してください。|  
+|`system.diagnostics`|.NET Framework 要素。 詳細については、MSDN ライブラリの「[\<system.diagnostics> 要素](https://go.microsoft.com/fwlink/?LinkId=178355)」を参照してください。|  
+|`appSettings`|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [appSettings 要素 (全般設定スキーマ)](https://go.microsoft.com/fwlink/?LinkId=178356) 」を参照してください。|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices 要素  
  **\<masterDataServices>** 要素は、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに接続するのに使用するカスタム要素です。  

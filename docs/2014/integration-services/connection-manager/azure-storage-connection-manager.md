@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpstorageconn.f1
@@ -14,15 +13,15 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f50d324049e4ee52b3945b201d6714323714b0c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1e19ee8c9b565f1b0333e68aad4353741511bcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061352"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799734"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 接続マネージャー
-  Azure Storage 接続マネージャーにより、SSIS パッケージのプロパティを指定する値を使用して、Azure Storage アカウントに接続する: ストレージ アカウント名とアカウント キー。  
+  Azure Storage 接続マネージャーでは、プロパティを指定する値を使用して、Azure Storage アカウントに接続する SSIS パッケージが有効にします。ストレージ アカウント名とアカウント キー。  
   
 1.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureStorage]**(AzureStorage) を選択し、 **[追加]** をクリックします。  
   

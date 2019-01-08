@@ -21,17 +21,17 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819240"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211221"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  保有ポリシーに基づいて、管理データ ウェアハウスからデータを削除します。 この手順は、mdw_purge_data によって毎日実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理データ ウェアハウスに対して、エージェント ジョブは、指定したインスタンスに関連付けられています。 このストアド プロシージャを使用すると、要求に応じて管理データ ウェアハウスからデータを削除できます。  
+  保有ポリシーに基づいて、管理データ ウェアハウスからデータを削除します。 このプロシージャは、指定されたインスタンスに関連付けられている管理データ ウェアハウスに対して、mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブによって毎日実行されます。 このストアド プロシージャを使用すると、要求に応じて管理データ ウェアハウスからデータを削除できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

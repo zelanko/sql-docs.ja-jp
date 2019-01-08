@@ -17,12 +17,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 92460328b9d85ab5818679b12639618ffe2b0a14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 100bac6834825af1e22658279d26be02c30f3f39
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149902"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349261"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>多次元モードおよびデータ マイニング モードでの Analysis Services のインストール
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、ビジネス インテリジェンス アプリケーション用のオンライン分析処理 (OLAP) 機能とデータ マイニング機能が用意されています。 このリリースで OLAP データベースとデータ マイニング モデルのサポートが利用可能なインストールするときに[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で*多次元モード*します。 多次元モードは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が実行される 3 つのサーバー モードのうちの 1 つです。 これは既定のモードです。 既定値を使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をインストールすると、多次元データベースとデータ マイニング モデルを実行するインスタンスがインストールされます。  
@@ -67,13 +67,13 @@ ms.locfileid: "48149902"
   
  [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
- [SQL Server データ マイニング アドイン](http://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server データ マイニング アドイン](https://go.microsoft.com/fwlink/?LinkId=197091)  
   
- 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベース、サンプル コード、およびクライアント アプリケーション アドインはインストールされません。 サンプル データベースとサンプル コードをインストールする場合は、 [CodePlex Web サイト](http://go.microsoft.com/fwlink/?LinkId=87843)を参照してください。  
+ 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベース、サンプル コード、およびクライアント アプリケーション アドインはインストールされません。 サンプル データベースとサンプル コードをインストールする場合は、 [CodePlex Web サイト](https://go.microsoft.com/fwlink/?LinkId=87843)を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)   
- [言語および照合順序&#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
+ [SQL Server 2012 の各エディションでサポートされる機能](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [言語および照合順序 (Analysis Services)](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
  [Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)  
   
   

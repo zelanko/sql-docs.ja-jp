@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91aafd30e5c2c9765a2b2d7a467854142694cf4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aeb6709930190017487476d0d19b105261ae7acd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225782"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801404"
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL イベント クラス
   Unprepare SQL イベント クラスは、1 つ以上の準備済み [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが SqlClient、ODBC、OLE DB、または DB-Library によって準備解除された (削除された) ことを示します。  

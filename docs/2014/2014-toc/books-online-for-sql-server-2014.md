@@ -19,15 +19,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161762"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353910"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Books Online for SQL Server 2014
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® オンライン ブックへようこそ。 オンライン ブックには、タスクの説明とを使用してデータ管理とビジネス インテリジェンスの作業を実行する方法を説明するリファレンス ドキュメントが含まれています。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® オンライン ブックへようこそ。 オンライン ブックには、タスクの説明とリファレンスのドキュメントが含まれており、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用してデータ管理およびビジネス インテリジェンスに関連する作業を行う方法が記載されています。  
   
  **お試しください:**  
  ![Azure Virtual Machine のアイコン](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure アカウントをすでにお持ちですか?  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、次を参照してください。 [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。 
@@ -50,17 +50,17 @@ ms.locfileid: "48161762"
   
  **SQL Server の Web サイト**  
   
--   [Microsoft.com の SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)  
+-   [Microsoft.com の SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server リソース センター](http://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server リソース センター](https://go.microsoft.com/fwlink/?linkid=218841)  
   
--   [SQL Server TechCenter](http://go.microsoft.com/fwlink/?linkid=28107)  
+-   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   
--   [SQL Server デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=42457)  
+-   [SQL Server デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [データ プラットフォーム デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [データ プラットフォーム デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
--   [XML デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=42458)  
+-   [XML デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 構成マネージャーのヘルプ](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

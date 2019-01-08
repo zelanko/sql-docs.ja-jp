@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c506123c772e1063713fc81f32fdbbaa0d5c8f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0160628621049db7c9498ca931c675c080e78b8d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051082"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798304"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>ユーザーのアクセス許可のテスト (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、テスト ユーザーを作成し、Web アプリケーションにログインして権限をテストできます。ユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] の URL にアクセスを試みると、ユーザーの資格情報が認証されます。 Internet Explorer のセキュリティ設定によって、自動認証を行うかユーザー名とパスワードの入力を求めるかが制御されます。 これらの設定を変更するには、次の手順を実行します。  
@@ -32,6 +31,6 @@ ms.locfileid: "48051082"
 4.  次にブラウザー ウィンドウを開くときに、ユーザー名とパスワードの入力を求められます。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ &#40;マスター データ サービス&#41;](security-master-data-services.md)  
+ [セキュリティ (マスター データ サービス)](security-master-data-services.md)  
   
   

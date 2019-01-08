@@ -1,5 +1,5 @@
 ---
-title: Power View レポートの既定のフィールド セットの構成 |Microsoft ドキュメント
+title: Analysis Services での Power View レポートの既定のフィールド セットの構成 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32d8d9c4acbc1c5eae47e90709c4ffdedd269f11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041856"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072059"
 ---
-# <a name="power-view---configure-default-field-set-for-reports"></a>Power View - レポートの既定のフィールド セットを構成します。
+# <a name="power-view---configure-default-field-set-for-reports"></a>Power View - レポートの既定のフィールド セットの構成
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   既定のフィールド セットは、列とメジャーの定義済みリストであり、レポート フィールド リストでテーブルを選択したときに、自動的に [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポート キャンバスに追加されます。 テーブル モデルの作成者が既定のフィールド セットを作成しておけば、レポートの作成者がレポートのためにモデルを使用するときに、余分な手順を省くことができます。 たとえば、顧客の連絡先情報を参照するほとんどのレポート作成者が、連絡先の名前、通常の電話番号、電子メール アドレス、および会社名を常に確認する必要があることがわかっている場合は、これらの列をあらかじめ選択し、作成者が Customer Contact テーブルをクリックしたときに、これらの列が常にレポート キャンバスに追加されるようにすることができます。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "34041856"
 6.  ブックの他のテーブルについて、この手順を繰り返します。  
   
 ## <a name="next-step"></a>次の手順  
- 既定のフィールド セットを作成した後、既定のラベル、既定の画像、既定のグループ動作、または同じ値を含む行を 1 行にグループ化するか個別に表示するかを指定することによって、レポートのデザイン作業にさらに影響を与えることができます。 詳細については、次を参照してください。 [Power View レポート用のテーブル動作プロパティの構成](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)です。  
+ 既定のフィールド セットを作成した後、既定のラベル、既定の画像、既定のグループ動作、または同じ値を含む行を 1 行にグループ化するか個別に表示するかを指定することによって、レポートのデザイン作業にさらに影響を与えることができます。 詳細については、次を参照してください。 [Power View レポート用のテーブル動作プロパティの構成](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)します。  
   
   

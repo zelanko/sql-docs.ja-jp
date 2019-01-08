@@ -1,7 +1,8 @@
 ---
-title: 'チュートリアル: Azure Data Studio でテーブル領域使用状況のサンプル insight ウィジェットを有効にする |Microsoft Docs'
+title: チュートリアル:テーブル領域使用状況のサンプル insight ウィジェットを有効にします。
+titleSuffix: Azure Data Studio
 description: このチュートリアルでは、Azure Data Studio データベース ダッシュ ボードのテーブル領域使用状況のサンプル insight ウィジェットを有効にする方法について説明します。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355993"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030356"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>チュートリアル: テーブル領域使用状況分析ウィジェットを使用する例を有効にします。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>チュートリアル:テーブル領域使用状況分析ウィジェットを使用する例を有効にします。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 このチュートリアルでは、データベース内のすべてのテーブルの領域の使用状況についての概要ビューを提供すること、データベースのダッシュ ボード、洞察のウィジェットを有効にする方法について説明します。 このチュートリアルでは、中に確認する方法。
 
@@ -38,7 +39,7 @@ ms.locfileid: "49355993"
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] データベース内のテーブルで使用される領域を監視するための組み込みのサンプルのウィジェットがあり。
 
 1. 開く*ユーザー設定*キーを押して**Ctrl + Shift + P**を開く、*コマンド パレット*します。
-2. 型*設定*検索ボックスを選び**設定: ユーザー設定を開く**します。
+2. 型*設定*検索ボックスを選び**設定。ユーザー設定を開く**します。
 2. 型*ダッシュ ボード*設定検索入力ボックス探し**dashboard.database.widgets**します。
 
 3. カスタマイズする、 **dashboard.database.widgets**設定を編集する必要がある、 **dashboard.database.widgets**内のエントリ、**ユーザー設定**セクション (列に、右側にある)。 存在する場合ありません**dashboard.database.widgets**で、**ユーザー設定**セクションで、マウス、 **dashboard.database.widgets**テキスト列の既定の設定をクリックします鉛筆アイコンをクリックして、テキストの左側に表示される**設定にコピーする**します。 ポップアップがの場合は**設定を指定して置換**、クリックしてしないでください。 移動、**ユーザー設定**右に列を探し、 **dashboard.database.widgets**セクションと、次の手順に進みます。

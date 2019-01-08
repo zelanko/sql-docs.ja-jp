@@ -1,11 +1,10 @@
 ---
-title: 'TM: Begin Tran Completed イベント クラス | Microsoft Docs'
+title: TM:Begin Tran Completed イベント クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca4f86e8309e9872682488bc37ecc15c8accb460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54247d32ab508601fb6768e1de493a98a3369b65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125992"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803975"
 ---
-# <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed イベント クラス
-  TM: Begin Tran Completed イベント クラスは、BEGIN TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。  
+# <a name="tm-begin-tran-completed-event-class"></a>TM:Begin Tran Completed イベント クラス
+  TM:Begin Tran Completed イベント クラスは、BEGIN TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。  
   
-## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM: Begin Tran Completed イベント クラスのデータ列  
+## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM:Begin Tran Completed イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -53,7 +52,7 @@ ms.locfileid: "48125992"
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)  

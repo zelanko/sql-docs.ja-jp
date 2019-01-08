@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSreplication_subscriptions
@@ -19,12 +18,12 @@ ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f195247e3daf764903028e8ba10ca0d7dd24a426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fa68012f419939c3f77980020795f23c4ca4672
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794534"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47800840"
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。|  
 |**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> 0 = プッシュ<br /><br /> 1 = プル<br /><br /> 2 = 匿名です。|  
 |**distribution_agent**|**sysname**|ディストリビューション エージェントの名前。|  
-|**Time**|**smalldatetime**|ディストリビューション エージェントによる前回の更新時刻。|  
+|**[時刻]**|**smalldatetime**|ディストリビューション エージェントによる前回の更新時刻。|  
 |**description**|**nvarchar (255)**|サブスクリプションの説明。|  
 |**transaction_timestamp**|**varbinary(16)**|内部使用のみ。|  
 |**update_mode**|**tinyint**|更新の種類。|  

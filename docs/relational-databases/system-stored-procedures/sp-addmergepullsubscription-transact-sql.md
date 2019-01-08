@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepullsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e6e3a2ddd7c046051b0d7f89097c7c0a075ca6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98d31c0d4895573059104d43a1ebddd879ba1967
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659016"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813124"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,28 +44,28 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_パブリッシャー_**'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は、ローカル サーバー名。 パブリッシャーは有効なサーバーであることが必要です。  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
+ [  **@publisher_db =**] **'**_publisher_db_**'**  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。  
   
- [  **@subscriber_type=**] **'***subscriber_type***'**  
- サブスクライバーの種類を指定します。 *subscriber_type*は**nvarchar (15)**、でき、**グローバル**、**ローカル**または**匿名**します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以降のバージョンでは、ローカル サブスクリプションはクライアント サブスクリプションとして参照し、グローバル サブスクリプションはサーバー サブスクリプションとして参照します。  
+ [  **@subscriber_type=**] **'**_subscriber_type_**'**  
+ サブスクライバーの種類を指定します。 *subscriber_type*は**nvarchar (15)**、でき、**グローバル**、**ローカル**または**匿名**します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、ローカル サブスクリプションはクライアント サブスクリプションと呼ばれ、グローバル サブスクリプションはサーバー サブスクリプションと呼ばれます。  
   
  [  **@subscription_priority=**] *subscription_priority*  
  サブスクリプションの優先度。 *subscription_priority*は**実際**、既定値は NULL です。 ローカル サブスクリプションと匿名サブスクリプションを優先度は**0.0**します。 優先度は、競合の検出時、既定の競合回避モジュールによって実行される操作を選択する場合に使用されます。 グローバル サブスクライバーの場合、サブスクリプション優先度をパブリッシャーの優先度である 100 未満にする必要があります。  
   
- [  **@sync_type=**] **'***sync_type***'**  
+ [  **@sync_type=**] **'**_sync_type_**'**  
  サブスクリプションの同期の種類を指定します。 *sync_type*は**nvarchar (15)**、既定値は**自動**します。 **自動**または**none**します。 場合**自動**スキーマと初期データのパブリッシュされたテーブルの最初に転送されます、サブスクライバー。 場合**none**サブスクライバーが既にスキーマと初期データのパブリッシュされたテーブルのことが前提とします。 システム テーブルとデータは常に転送されます。  
   
 > [!NOTE]  
 >  値を指定しないで**none**します。  
   
- [  **@description=**] **'***説明***'**  
+ [  **@description=**] **'**_説明_**'**  
  対象となるプル サブスクリプションの短い説明を指定します。 *説明*は**nvarchar (255)**、既定値は NULL です。 レプリケーション モニターでこの値が表示されます、**フレンドリ名**列は、監視されるパブリケーションのサブスクリプションの並べ替えに使用できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

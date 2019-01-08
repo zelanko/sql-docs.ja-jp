@@ -1,7 +1,8 @@
 ---
-title: 作成し、Azure Data Studio でのキーボード ショートカットのカスタマイズ |Microsoft Docs
-description: 作成し、Azure Data Studio でのキーボード ショートカットをカスタマイズする方法について説明します。
-ms.custom: tools|sos
+title: 作成し、キーボード ショートカットのカスタマイズ
+titleSuffix: Azure Data Studio
+description: 作成して Azure Data Studio でのキーボード ショートカットをカスタマイズする方法について説明します
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3452e2e19d237f8ba5135c723e9971c0932ba61c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356473"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030256"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>キーボード ショートカット [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -28,7 +29,7 @@ ms.locfileid: "49356473"
 
 現在のすべてを表示するには、キーボード ショートカットを定義します。
 
-開く、**のキーボード ショートカット**エディターから、**ファイル**メニュー:**ファイル** > **設定** >  **キーボード ショートカット**(**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **設定** > **キーボード ショートカット**Mac で)。
+開く、**のキーボード ショートカット**エディターから、**ファイル**メニュー。**ファイル** > **設定** > **キーボード ショートカット**(**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >  **基本設定** > **キーボード ショートカット**Mac で)。
 
 現在のキー バインドを表示するだけでなく、**のキーボード ショートカット**エディターが定義されているキーボード ショートカットを持たない使用可能なコマンドを一覧表示されます。 **のキーボード ショートカット**エディターでは、簡単に変更、削除、リセット、および新しいキー バインドを定義することができます。  
 
@@ -53,7 +54,7 @@ ms.locfileid: "49356473"
 
 新しいキーボード ショートカットを作成します。
 
-1. コマンドは任意のキー バインドがあるし、選択を右クリックして**キー バインドの追加**します。
+1. 任意のキー バインドと選択を持たないコマンドを右クリックして**キーの追加のバインド**します。
 
    ![キーボード ショートカットを作成します。](media/keyboard-shortcuts/add-keybinding.png)
 

@@ -1,22 +1,24 @@
 ---
-title: MLeap Spark 機械学習モデルのエクスポート |SQL Server
-description: Spark の machine learning MLeap を使用したモデルをエクスポートします。
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: MLeap と Spark ML モデルをエクスポートします。
+titleSuffix: SQL Server 2019 big data clusters
+description: Spark の機械学習モデル MLeap をエクスポートする方法について説明します。
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: 546e46c6e9c5b2875f817fbf9a5fc3107afeb8a2
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: db6e980441c2037311cf2dc35a8f9de01acb045b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411855"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211171"
 ---
-# <a name="export-models-using-mleap"></a>Mleap を使用してモデルをエクスポートします。
+# <a name="export-spark-machine-learning-models-with-mleap"></a>Spark の machine learning MLeap を使用したモデルをエクスポートします。
+
 一般的な機械学習シナリオには、モデルのトレーニングを Spark と Spark の外部でスコア付けが含まれます。 Spark 外部ために使用できるように、移植可能な形式でモデルをエクスポートします。 [MLeap](https://github.com/combust/mleap)はこのような 1 つのモデル交換形式です。 これにより、Spark は machine learning パイプラインと移植可能な形式としてエクスポートし、任意の JVM ベースのシステムで使用するモデル、`Mleap`ランタイム。
 
 このガイドでは、Mleap を使用して spark モデルをエクスポートする方法を示します。 手順は次に示します、コードは、次のセクションで詳しく説明します。
@@ -27,8 +29,7 @@ ms.locfileid: "50411855"
 4. インポートを検証する、`Mleap`バックを再度バンドルし、Spark でスコア付けするに使用します。
 
 ## <a name="step-1---start-by-creating-a-spark-model"></a>手順 1 - Spark モデルを作成することにより、
-実行 [Spark を使用したモデルをトレーニングおよび作成の機械学習] (train-and-create-machinelearning-models-with-spark.md) トレーニング/テストのセットと、モデルを作成し、HDFS ストレージに保存します。 としてモデルをエクスポートする必要が`AdultCensus.mml`下、`spark_ml`ディレクトリ。
-
+実行[Spark を使用したモデルのトレーニング セットと機械学習を作成する](train-and-create-machinelearning-models-with-spark.md)トレーニング/テストのセットと、モデルを作成し、HDFS ストレージに保存します。 としてモデルをエクスポートする必要が`AdultCensus.mml`下、`spark_ml`ディレクトリ。
 
 ## <a name="step-2---import-the-trainingtest-data-and-the-model"></a>手順 2 - training\test データとモデルのインポート
 
@@ -49,7 +50,6 @@ model = PipelineModel.load(model_fs)
 print("Model is " , model)
 print("Model stages", model.stages)
 ```
-
 
 ## <a name="step-3---export-the-model-as-mleap-bundle"></a>手順 3 - としてモデルをエクスポート`Mleap`バンドル
 

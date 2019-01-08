@@ -1,18 +1,20 @@
 ---
-title: SQL Server 2019 ビッグ データ クラスターとは | Microsoft Docs
+title: ビッグ データ クラスターとは
+titleSuffix: SQL Server 2019 big data clusters
 description: Kubernetes で実行して、リレーショナルの両方でスケール アウト オプションおよび HDFS データを提供する SQL Server 2019 ビッグ データ クラスター (プレビュー) について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 5a44fe9001b7a3bffb67cb3f213bed2ac1065970
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221708"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030046"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターとは
 
@@ -75,13 +77,13 @@ Kubernetes は、ニーズに合わせてコンテナーのデプロイでスケ
 |--|--|
 | **Cluster** | Kubernetes クラスターは、一連のノードと呼ばれるマシンです。 1 つのノードがクラスターを制御し、マスター ノードが指定されます。残りのノードは、ワーカー ノードです。 Kubernetes マスターは、ワーカー間の作業を配布して、クラスターの正常性を監視します。 |
 | **[Node]** | ノードには、コンテナー化されたアプリケーションが実行されます。 物理マシンまたは仮想マシンのいずれかを指定できます。 Kubernetes クラスターには、物理マシンと仮想マシン ノードの組み合わせを含めることができます。 |
-| **pod 型** | ポッドは、Kubernetes のデプロイのアトミック単位です。 ポッドは、1 つまたは複数のコンテナーの論理グループ- と関連リソース: アプリケーションを実行するために必要です。 それぞれのポッドが; ノードで実行します。ノードには、1 つまたは複数のポッドを実行できます。 Kubernetes マスターは、クラスター内のノードにポッドを自動的に割り当てます。 |
+| **pod 型** | ポッドは、Kubernetes のデプロイのアトミック単位です。 ポッドは、1 つまたは複数のコンテナーの論理グループ-リソース必要なアプリケーションの実行に関連付けられているとします。 それぞれのポッドが; ノードで実行します。ノードには、1 つまたは複数のポッドを実行できます。 Kubernetes マスターは、クラスター内のノードにポッドを自動的に割り当てます。 |
 
 ビッグ データの SQL Server クラスター、Kubernetes は SQL Server のビッグ データ クラスター; の状態を担当Kubernetes で、ビルド、クラスター ノードを構成およびノードにポッドを割り当てます、および、クラスターの正常性を監視します。
 
 ### <a name="big-data-clusters-architecture"></a>ビッグ データ クラスターのアーキテクチャ
 
-クラスター内のノードが 3 つの論理面に配置されます: コントロール プレーン、計算ウィンドウ、およびデータ プレーンです。 各プレーンでは、クラスターにさまざまな役割を持っています。 SQL Server のビッグ データ クラスター内のすべての Kubernetes ノードが少なくとも 1 つの平面のコンポーネントのポッドをホストしています。
+クラスター内のノードが 3 つの論理面に配置されます: コントロール プレーン、コンピューティング、プレーンとデータ プレーンです。 各プレーンでは、クラスターにさまざまな役割を持っています。 SQL Server のビッグ データ クラスター内のすべての Kubernetes ノードが少なくとも 1 つの平面のコンポーネントのポッドをホストしています。
 
 ![アーキテクチャの概要](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -91,7 +93,7 @@ Kubernetes は、ニーズに合わせてコンテナーのデプロイでスケ
 
 ### <a id="computeplane"></a> 平面を計算します。
 
-コンピューティングの面では、クラスターにコンピューティング リソースを提供します。 SQL Server を Linux のポッドで実行されるノードが含まれています。 コンピューティング平面のポッドが分割*プールのコンピューティング*特定のタスクを処理します。 コンピューティング プールが果たすことができる、 [PolyBase](../relational-databases/polybase/polybase-guide.md)さまざまなデータ ソースに対する分散クエリのスケール アウト グループ: HDFS、Oracle、MongoDB、Teradata など。
+コンピューティングの面では、クラスターにコンピューティング リソースを提供します。 SQL Server を Linux のポッドで実行されるノードが含まれています。 コンピューティング平面のポッドが分割*プールのコンピューティング*特定のタスクを処理します。 コンピューティング プールが果たすことができる、 [PolyBase](../relational-databases/polybase/polybase-guide.md)ソースなどさまざまなデータとして HDFS、Oracle、MongoDB、または Teradata に対する分散クエリのスケール アウト グループ。
 
 ### <a id="dataplane"></a> データ プレーン
 
