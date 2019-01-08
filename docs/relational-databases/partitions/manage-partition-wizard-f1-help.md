@@ -21,15 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 61cf0d2acb9dbe2e2f5a9ec68be92cecf16ce22b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bcc98052bf076515ff3d961fee24e6550830118
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731680"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414167"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>パーティションの管理ウィザードの F1 ヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "47731680"
 ##  <a name="NewJob"></a> [新しいジョブ スケジュール] ページ  
  **[新しいジョブ スケジュール]** ページを使用すると、スケジュールのプロパティを表示したり、変更したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに必要なスケジュールの種類を選択します。  
   
  **名前**  
@@ -249,7 +249,7 @@ ms.locfileid: "47731680"
 ### <a name="one-time-schedule-types-options"></a>指定日時スケジュールのオプション  
  ジョブを一度だけ実行するようにスケジュールする場合は、将来の日付と時刻を選択する必要があります。  
   
- **日付**  
+ **Date**  
  ジョブを実行する日付を選択します。  
   
  **[時刻]**  
@@ -269,7 +269,7 @@ ms.locfileid: "47731680"
 ##  <a name="Progress"></a> [進行状況] ページ  
  **[進行状況]** ページを使用すると、 **パーティションの管理ウィザード**のアクションに関する状態情報を監視できます。 ウィザードで選択したオプションに応じて、 **[進行状況]** ページに 1 つまたは複数のアクションが含まれる可能性があります。 上部のボックスには、ウィザードの全体的な状態と受信した状態メッセージ、エラー メッセージ、および警告メッセージの数が表示されます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **詳細**  
  アクション、状態、およびウィザードで実行したアクションから返されたメッセージが提供されます。  
   

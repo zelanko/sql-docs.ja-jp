@@ -7,26 +7,24 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.windows
 helpviewer_keywords:
 - Windows dialog box
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9dffd3854e2ccf153b099bce26a916b53b7c221a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 004ac3bc70ca52efbd13336067bc958a0e975cde
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660350"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328073"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>[ウィンドウ] ダイアログ ボックス (Microsoft Document Explorer ヘルプ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスを使用すると、エディターおよびデザイナー内で開いているドキュメントを表示したり、閉じたり、整列したりできます。 このダイアログ ボックスを表示するには、 **[ウィンドウ]** メニューの **[ウィンドウ]** をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **名前**  
 ドキュメント ウィンドウおよびツール ウィンドウの名前を、現在選択しているアクティブな項目と一緒に表示します。  
   
@@ -41,4 +39,3 @@ ms.locfileid: "47660350"
   
 **[ウィンドウを閉じる]**  
 一覧内で選択しているドキュメントおよびウィンドウを閉じます。  
-  

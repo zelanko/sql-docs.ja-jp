@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4687887715ffb9df13168bc1ee1dc78418c196c3
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 1ce02d6d6c177eec37a8a2279931f454368f3e54
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383917"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210691"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>クラスター化インデックスと非クラスター化インデックスの概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "49383917"
   
 -   クラスター化インデックス  
   
-    -   クラスター化インデックスは、テーブルまたはビュー内のデータ行をそのキー値に基づいて並べ替え、格納します。 クラスター化インデックスは、インデックス定義に含まれる列です。 データ行自体は 1 つの順序でしか並べ替えられないので、1 つのテーブルに設定できるクラスター化インデックスは 1 つだけです。  
+    -   クラスター化インデックスは、テーブルまたはビュー内のデータ行をそのキー値に基づいて並べ替え、格納します。 クラスター化インデックスは、インデックス定義に含まれる列です。 データ行自体は 1 つの順序でしか並べ替えられないので、1 つのテーブルに設定できるクラスター化インデックスは 1 つだけです。  
   
     -   テーブル内のデータ行が並べ替えられた順に格納されるのは、テーブルにクラスター化インデックスが含まれているときだけです。 テーブルにクラスター化インデックスが含まれている場合、そのテーブルをクラスター化テーブルと呼びます。 クラスター化インデックスが含まれないテーブルのデータ行は、ヒープと呼ばれる順序付けられていない構造に格納されます。  
   

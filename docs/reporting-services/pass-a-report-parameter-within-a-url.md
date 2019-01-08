@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390485"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211211"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
   レポート パラメーターはレポート URL に含めることでレポートに渡すことができます。 このような URL パラメーターにはプレフィックスを付けません。パラメーターはレポート処理エンジンに直接渡されるためです。  
@@ -28,12 +28,12 @@ ms.locfileid: "52390485"
   
  すべてのクエリ パラメーターには、対応するレポート パラメーターを指定できます。 クエリ パラメーターをレポートに渡すには、対応するレポート パラメーターを渡します。 詳細については、「[リレーショナル クエリ デザイナーでのクエリの作成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」を参照してください。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  レポート パラメーターでは大文字と小文字が区別されます。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  レポート パラメーターでは大文字と小文字が区別され、次の特殊文字が使用されます。  
->   
+> 
 >  -   URL 文字列では、URL エンコード規格に基づいてすべての空白文字が文字列 "%20" に置き換えられます。  
 > -   URL のパラメーター部分にある空白文字はプラス記号 (+) に置き換えられます。  
 > -   文字列の任意の部分にあるセミコロンは文字列 "%3A" に置き換えられます。  

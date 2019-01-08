@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4e09058b71b920a109bccc05c1ee480dc82036c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 86c556fb4365df12d573294b0c937c36d91dffb3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813334"
 ---
 # <a name="model-deployment-options-master-data-services"></a>モデル配置オプション (マスター データ サービス)
 
@@ -32,7 +31,7 @@ ms.locfileid: "52415029"
   
 -   モデルのパッケージを作成し、同じ環境に新しいモデルとして配置します。 この場合、モデルに新しい名前を付ける必要があります。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  MDS データベースでは、各モデル オブジェクトに一意の識別子 (ID) があります。 これらの ID は、モデルの配置パッケージに含まれます。 パッケージを配置する際、これらの ID をどのように処理するかを選択する必要があります。  
   
  次の表は、システム管理のモデル配置ウィザードまたは MDSModelDeploy ツールのいずれかを使用してモデルを配置する際に何を選択すればよいかを決定するのに役立ちます。  

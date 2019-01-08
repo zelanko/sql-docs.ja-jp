@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 912f0473db120c9874e231334d1d393e18518c71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509524"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202491"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] やレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。  
@@ -92,17 +92,17 @@ ms.locfileid: "52509524"
   
 10. ページの **[URL]** セクションでリンクをクリックして URL をテストします。 URL をテストするには、先にレポート サーバー データベースを作成して構成する必要があります。 手順については、「[ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。  
 
-> [!NOTE]  
+> [!NOTE]
 >  既存の SSL バインドと URL 予約があり、SSL バインドを変更する (たとえば、別の証明書やホスト ヘッダーを使用する) 場合、次の手順を順番に実行することをお勧めします。  
->   
+> 
 >  1.  まず、すべての URL 予約を削除します。  
 > 2.  すべての SSL バインドを削除します。  
 > 3.  URL と SSL バインドを作成し直します。  
->   
+> 
 >  前の手順は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して行うことができます。  
->   
+> 
 >  Microsoft Windows では、IP アドレスとポートの組み合わせごとに 1 つのバインドがサポートされています。 特定のホスト ヘッダー値を使用するようにレポート サーバーを構成し、ポートと IP アドレスの組み合わせに対する証明書が別のホスト ヘッダー値にも発行される場合、証明書と使用中の URL が一致しないことを示す警告がブラウザーに表示されます。  
->   
+> 
 >  この問題を修正するには、すべてのバインドを削除し、一意の設定で新しいバインドを作成するか、ワイルドカードを使用して Reporting Services の URL 登録を構成してください。
   
 ### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>URL 予約を作成するには [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  

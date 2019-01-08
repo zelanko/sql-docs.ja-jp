@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2273d2c0108d96478aa5f5645abcb0034f6c89e5
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: dbdfeb334b3089ac8028952eae5444b4c211e27d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710783"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212171"
 ---
 # <a name="clickthrough-reports-ssrs"></a>クリックスルー レポート (SSRS)
   クリックスルー レポートとは、メイン レポートに含まれるデータの詳細情報を提供するレポートです。 クリックスルー レポートは、メイン レポートに表示される対話型データをユーザーがクリックすると表示されます。 これらのレポートは、レポート サーバーによって自動的に生成されます。 クリックスルー レポートに表示される内容は、モデルをデザインするときに、レポート モデルのエンティティに割り当てる **DefaultDetailAttribute** プロパティと **DefaultAggregateAttribute** プロパティを設定することによって指定できます。  
   
-> [!NOTE]  
+> [!NOTE]
 >  クリックスルー レポートは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](~/sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。 組織で実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションが不明な場合は、データベース管理者に問い合わせてください。  
   
 ## <a name="using-default-templates"></a>既定のテンプレートの使用  

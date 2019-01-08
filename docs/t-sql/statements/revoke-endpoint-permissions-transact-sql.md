@@ -17,12 +17,12 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cad53aef8b06cca5dc37bca1b5a95d82d6c89d74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae9f994111a6c15c3bdf0a5c8d4f972e62605a9c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839910"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591796"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE (エンドポイントの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  エンドポイントで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  権限を許可するエンドポイントを指定します。 スコープ修飾子 (**::**) が必要です。  
   
  { FROM | TO } \<server_principal> 権限を取り消す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  

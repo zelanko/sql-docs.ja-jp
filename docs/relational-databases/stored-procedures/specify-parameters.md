@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42db9954a071865124d443be32203fc284dfe699
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 079a54bdbf107ec9f83e1078fedba1be84374c5b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838960"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589136"
 ---
 # <a name="specify-parameters"></a>パラメーターの指定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -169,7 +169,7 @@ GO
  `usp_GetList` を実行し、原価が $700 未満である [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (自転車) の一覧を返します。 ここではフロー制御言語と共に OUTPUT パラメーターの **\@cost** および **\@compareprices** を使用して、**[メッセージ]** ウィンドウにメッセージを返します。  
   
 > [!NOTE]  
->  プロシージャの作成中にも変数の使用中にも、OUTPUT 変数を定義する必要があります。 パラメーター名と変数名が一致する必要はありません。 ただし、データ型とパラメーターの位置は一致する必要があります (**\@listprice=** *variable* が使用されている場合は除きます)。  
+>  プロシージャの作成中にも変数の使用中にも、OUTPUT 変数を定義する必要があります。 パラメーター名と変数名が一致する必要はありません。 ただし、データ型とパラメーターの位置は一致する必要があります (**\@listprice=** _variable_ が使用されている場合は除きます)。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

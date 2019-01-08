@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531491"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205331"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server のヘルプとフィードバック
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ SQL Server の問題に役立つ可能性がある MSDN フォーラムが多数
 - [セットアップとアップグレード](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [高可用性とディザスター リカバリー](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
 - [SQL Server ツール](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [Security](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
+- [セキュリティ](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [レプリケーション](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
 - [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
 - [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
@@ -85,7 +85,7 @@ SQL チームにもアクセスできるソーシャル メディア アウト�
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する
 
-###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![コンテンツの編集](../includes/media/edit-topic-pencil.png) コンテンツの編集
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![コンテンツの編集](../includes/media/edit-topic-pencil.png) コンテンツの編集
 ドキュメントに誤りを見つけた場合、 またはドキュメントを改善できる投稿をお持ちの場合、 docs.microsoft.com で対象のコンテンツを自分で編集できます。 そうすることで、ドキュメントが改善されるだけでなく、ページの共同作成者としてもクレジットされます。 詳細については、[https://aka.ms/editsqldocs](https://aka.ms/editsqldocs)を参照してください。 
 
 公開されるすべての投稿は、SQL コンテンツ チームによって技術的正確さと一貫性が確認されます。 

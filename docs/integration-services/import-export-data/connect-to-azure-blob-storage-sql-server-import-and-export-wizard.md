@@ -11,20 +11,20 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed6e4ef356d56029f94789dd462e0578161d6668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ad5132b4fe6750c2e2dd66786b5a4dceb4577e5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693418"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211771"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Azure Blob Storage に接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Azure Blob Storage** データ ソースに接続する方法を説明します。
 
->   [!NOTE]
+> [!NOTE]
 > Azure Blob Source または Azure Blob Destination を使用するには、SQL Server Integration Services 用 Azure Feature Pack をインストールする必要があります。
 > - Feature Pack のダウンロード方法の詳細については、「[Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)」を参照してください。
->
+> 
 > - 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。
 
 次のスクリーン ショットでは、Azure Blob Storage に接続するための構成オプションを示します。

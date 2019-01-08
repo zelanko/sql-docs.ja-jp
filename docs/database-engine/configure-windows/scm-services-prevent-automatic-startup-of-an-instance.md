@@ -18,12 +18,12 @@ ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02afdd859faf63e7317b49971591ab4ef49037be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706300"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590279"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM サービス - インスタンスの自動開始を回避する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "47706300"
   
 3.  詳細ペインで、 **[MSSQLServer]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[全般]** ページの **[サービス]** タブの **[SQL Server \<***instancename***> のプロパティ]** ダイアログ ボックスで、**[開始モード]** の値を **[手動]** に設定します。  
+4.  **[SQL Server \<**_インスタンス名_**> のプロパティ]** ダイアログ ボックスの **[サービス]** タブの **[全般]** ボックスで、**[開始モード]** の値を **[手動]** に設定します。  
   
-5.  **[OK]** をクリックして **[SQL Server \<***instancename***> のプロパティ]** ダイアログ ボックスを閉じ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを閉じます。  
+5.  **[OK]** をクリックして **[SQL Server \<**_instancename_**> のプロパティ]** ダイアログ ボックスを閉じ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを閉じます。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

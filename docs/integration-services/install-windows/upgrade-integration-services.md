@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d07d683b217b4f4eff6c9cfd1c6275ab4a9e5ca1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642359"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214890"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 以降がコンピューターに現在インストールされている場合は、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]にアップグレードできます。  
@@ -36,16 +36,16 @@ ms.locfileid: "51642359"
 ## <a name="before-upgrading-integration-services"></a>Integration Services をアップグレードする前に  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする前に、アップグレード アドバイザーを実行することをお勧めします。 アップグレード アドバイザーは、既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で使用される新しいパッケージ形式に移行する場合に発生する可能性がある問題を報告します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL Server 2012 では、データ変換サービス (DTS) パッケージの移行または実行のサポートは廃止されました。 次の DTS 機能は廃止されました。  
->   
+> 
 >  -   DTS ランタイム  
 > -   DTS API  
 > -   DTS パッケージを次期バージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   DTS パッケージのメンテナンス機能のサポート [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   DTS 2000 パッケージ実行タスク  
 > -   アップグレード アドバイザーによる DTS パッケージのスキャン  
->   
+> 
 >  廃止されたその他の機能については、「 [SQL Server 2016 で提供が中止された Integration Services の機能](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)」をご覧ください。  
   
 ## <a name="upgrading-integration-services"></a>Integration Services のアップグレード  
