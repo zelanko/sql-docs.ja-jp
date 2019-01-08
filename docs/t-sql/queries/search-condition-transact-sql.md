@@ -118,13 +118,13 @@ ms.locfileid: "51699800"
  \<graph_search_pattern>  
  グラフの一致パターンを指定します。 この句の引数の詳細については、「[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)」を参照してください
  
- [NOT]  
+ NOT  
  述語によって指定されたブール式を否定します。 詳細については、「[NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)」を参照してください。  
   
- [AND]  
+ AND  
  2 つの条件を結合し、両方の条件が真の場合に TRUE と評価します。 詳細については、「[AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)」を参照してください。  
   
- スイッチまたは  
+ OR  
  2 つの条件を結合し、少なくとも片方の条件が真の場合に TRUE と評価します。 詳細については、「[OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)」を参照してください。  
   
  \< predicate >  
