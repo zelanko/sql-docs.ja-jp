@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80bf0fa78d101f853b04793c1084a69a6f6bdd00
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7475254de99fc01f36388a73434bde4e04420394
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661181"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886737"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON が SQL Server データ型を JSON データ型に変換する方法 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,10 +37,6 @@ ms.locfileid: "51661181"
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  
   
-### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
-  
-具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
-
 ### <a name="microsoft-videos"></a>Microsoft ビデオ
 
 SQL Server と Azure SQL Database に組み込まれている JSON のサポートの視覚的な紹介は、次のビデオをご覧ください。
