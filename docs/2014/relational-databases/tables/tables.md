@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acdc9600b7d1081492893f3cc8497359df65fdb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153726"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782884"
 ---
 # <a name="tables"></a>テーブル
   テーブルは、データベースのすべてのデータを格納するデータベース オブジェクトです。 テーブルでは、スプレッドシートのように、データが論理的に行と列の形式にまとめられます。 各行は一意なレコードを表し、各列はレコードのフィールドを表します。 たとえば、会社の従業員のデータを格納するテーブルを、各従業員に相当する行と、従業員の社員番号、姓名、住所、役職名、自宅の電話番号などの情報を格納する列から構成する場合があります。  

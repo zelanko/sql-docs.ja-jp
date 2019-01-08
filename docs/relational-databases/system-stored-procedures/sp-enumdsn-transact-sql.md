@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_enumdsn
@@ -17,12 +16,12 @@ ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0efa131401cddf568d3cf92842387d5cdd8f09ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f58a16b3d4d393a94dc5e42413ddfeb2a8eb5d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657906"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773894"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_enumdsn
 |**プロバイダー名**|**varchar(255)**|OLE DB プロバイダーの名前です。 ODBC DSN の場合、値は NULL です。|  
   
 ## <a name="remarks"></a>コメント  
- すべて[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスがユーザーのコンテキスト。 ユーザー コンテキストは、そのユーザーの ODBC データ ソースの定義を含むレジストリ エントリの集合です。 ユーザー コンテキストが、ユーザー名によって提供される、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。  
+ すべて[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスがユーザーのコンテキスト。 ユーザー コンテキストは、そのユーザーの ODBC データ ソースの定義を含むレジストリ エントリの集合です。 ユーザー コンテキストは実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] におけるユーザー名により提供されます。  
   
  たとえば、サーバーがシステム アカウントのユーザー コンテキストで実行されている場合は、返されるデータ ソース名 (DSN) はシステム アカウントに関連付けられているすべてのシステム DSN です。 サーバーがプライベートなユーザー アカウントで実行されている場合は、そのユーザーのプライベート アカウントで定義された DSN だけが返されます。  
   

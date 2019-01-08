@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, navigating
@@ -15,12 +15,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f12ed69b92922046f4a4432ed56b46d9a40904d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123192"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769164"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーでの移動 (Visual Database Tools)
   クエリおよびビュー デザイナー内では、キーボードまたはマウスを使用して作業できます。 具体的な方法については、次の表を参照してください。  
@@ -36,7 +36,7 @@ ms.locfileid: "48123192"
   
 ## <a name="diagram-pane"></a>ダイアグラム ペイン  
   
-|**変換先**|**ショートカット キー**|**クリックする場所**|  
+|**To**|**ショートカット キー**|**クリックする場所**|  
 |------------|---------------|---------------|  
 |テーブルやその他のテーブル構造オブジェクト間で移動する (または、結合線に移動する)|Tab または Shift + Tab|移動先のテーブル、テーブル構造オブジェクト、または結合線|  
 |テーブルまたはテーブル構造オブジェクト内の列間で移動する|方向キー|移動先の列|  
@@ -86,7 +86,7 @@ ms.locfileid: "48123192"
   
 ## <a name="results-pane"></a>結果ペイン  
   
-|**変換先**|**ショートカット キー**|**クリックする場所**|  
+|**To**|**ショートカット キー**|**クリックする場所**|  
 |------------|---------------|---------------|  
 |セル間を移動する|方向キーまたは Tab または Shift + Tab|移動先のセル|  
 |現在の行の最初または最後のセルに移動する|ホームまたは End||  

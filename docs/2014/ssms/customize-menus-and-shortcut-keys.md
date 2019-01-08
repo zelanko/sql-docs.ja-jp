@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0df572c5e939504222bd0f24884e7b00ac9b075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183123"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778174"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>メニューとショートカット キーのカスタマイズ
   キーボード アクセラレータでは、alt キーを押してメニュー コマンドやボタンを選択できます。*\<1 文字 >* します。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], executing template files
@@ -17,12 +15,12 @@ ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 442d6a8d355a11d53f5eb6728b7a0f207e37de6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a4347b3cd3f9163eb13f76e1ae22e123b1026c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199046"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777014"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream プロパティを使用した、テンプレート ファイルの実行
   この例では、SqlXmlCommand オブジェクトの CommandStream プロパティを使用して、SQL または XPath クエリで構成されるテンプレート ファイルを指定する方法を示しています。 このアプリケーションでは、コマンド ファイルの場合、FileStreamobject が開かれ、ファイル ストリームが実行される CommandStream として割り当てられています。  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147959"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509473"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "50147959"
   
  次の規則に適用されます**名前**と**ID**プロパティ。  
   
--   名前では大文字と小文字は区別されません。 同じデータベース内に "sales" および "Sales" という 2 つの Cube が存在することはできません。  
+-   名前では大文字と小文字は区別されません。 "Sales"という名前のキューブを持つことはできませんし、同じデータベースに"Sales"という名前です。  
   
 -   オブジェクト名の先頭または末尾にスペースを付けることは許されません。ただし名前の途中にスペースを入れることはできます。 先頭および末尾にあるスペースは暗黙的に切り捨てられます。 両方に適用、**名前**と**ID**のオブジェクト。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "50147959"
 |**ディメンション**または**階層**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<、>|  
 |他のすべてのオブジェクト|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} < >|  
   
- **例外処理: 場合の予約文字が許可されます。**  
+ **例外処理:予約済みの文字を使用する場合**  
   
  先に述べたように、特定のモダリティと互換性レベルを持つデータベースでは、予約文字を含むオブジェクト名を使用できます。 拡張文字を使用できる表形式データベース (1103 以上) の場合、ディメンション属性、階層、レベル、メジャー、および KPI オブジェクト名で予約文字を使用できます。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "50147959"
 |MOLAP (すべてのバージョン)|いいえ|  
 |表形式の 1050|いいえ|  
 |表形式 - 1100|いいえ|  
-|表形式 – 1130 以上|はい|  
+|表形式の 1130 以上|はい|  
   
  データベースは既定の ModelType を持つことができます。 既定値は多次元モデルと同等です。そのため、列名での予約文字の使用はサポートされません。  
   

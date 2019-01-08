@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - f1Help
@@ -13,12 +12,12 @@ ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57bc85e4afa17a6b26068d89e88485a2d8706210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63aafb542a92667935998b6479a460ed9cd00f8a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164812"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770844"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Change Data Capture Designer for Oracle by Attunity の F1 ヘルプ参照
   Change Data Capture Designer for Oracle by Attunity は、Oracle CDC インスタンスの作成および管理に使用します。 このセクションのトピックでは、CDC デザイナー コンソールで利用可能なタスクを実行する方法について説明します。  
@@ -49,7 +48,7 @@ ms.locfileid: "48164812"
   
     -   [ミラー テーブルおよび CDC キャプチャ インスタンスの生成](generate-mirror-tables-and-cdc-capture-instances.md)  
   
-    -   [[完了]](finish.md)  
+    -   [完了](finish.md)  
   
 -   [インスタンスのプロパティの編集](edit-instance-properties.md)(または、次のいずれかのタスクを直接参照してください)  
   

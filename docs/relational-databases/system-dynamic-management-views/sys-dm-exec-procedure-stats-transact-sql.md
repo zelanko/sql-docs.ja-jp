@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9826f15be35c001f1b951f3b2a3750fa9aba925b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663396"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418686"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   キャッシュされたストアド プロシージャの集計パフォーマンス統計を返します。 ビューは、キャッシュされたストアド プロシージャのプランごとに 1 行を返します。その行の有効期間はストアド プロシージャがキャッシュに残っている間になります。 つまり、ストアド プロシージャがキャッシュから削除されると、対応する行もこのビューから削除されます。 その時点では、パフォーマンス統計 SQL トレース イベントが発生するのような**sys.dm_exec_query_stats**します。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。  
   
 > [!NOTE]
 > 最初のクエリの**sys.dm_exec_procedure_stats**サーバーで現在実行中のワークロードがある場合、不正確な結果を生成可能性があります。 クエリを再実行すると、より正確な結果を確認できます。  
@@ -72,10 +72,10 @@ ms.locfileid: "47663396"
 |**last_elapsed_time**|**bigint**|経過時間をマイクロ秒単位で、これの最後に完了した実行のためのストアド プロシージャです。|  
 |**min_elapsed_time**|**bigint**|最小経過時間をマイクロ秒で、これを完了した実行用のストアド プロシージャです。|  
 |**max_elapsed_time**|**bigint**|最大経過時間をマイクロ秒で、これを完了した実行用のストアド プロシージャです。|  
-|**total_spills**|**bigint**|コンパイルされたので、このストアド プロシージャの実行をこぼしたのページの合計数です。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**last_spills**|**bigint**|ページの数は、ストアド プロシージャが実行された最後の時間をこぼした。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**min_spills**|**bigint**|このストアド プロシージャが 1 つの実行中にこれまでにこぼしたことページの最小数です。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**max_spills**|**bigint**|このストアド プロシージャが 1 つの実行中にこれまでにこぼしたことページの最大数です。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_spills**|**bigint**|コンパイルされたので、このストアド プロシージャの実行をこぼしたのページの合計数です。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|ページの数は、ストアド プロシージャが実行された最後の時間をこぼした。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|このストアド プロシージャが 1 つの実行中にこれまでにこぼしたことページの最小数です。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|このストアド プロシージャが 1 つの実行中にこれまでにこぼしたことページの最大数です。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|この配布であるノードの識別子。<br /><br />**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
  <sup>1</sup>ネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にすると、ワーカー時間がミリ秒単位で収集します。 クエリが 1 ミリ秒未満で実行された場合は、値は 0 になります。  

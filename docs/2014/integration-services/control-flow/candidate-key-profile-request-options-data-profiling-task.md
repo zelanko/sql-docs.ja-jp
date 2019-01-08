@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78fb82daf907173befd246799686433a6eab3b43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64975d3e249db13a956f6300d340ac77dfc29db8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190822"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767154"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>[候補キー プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[候補キー プロファイル要求]** のオプションを設定できます。 候補キー プロファイルは、列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうかを報告します。 また、このプロファイルを使用すると、キーとなる可能性がある列の重複値などのデータの問題を特定できます。  
@@ -26,7 +25,7 @@ ms.locfileid: "48190822"
 > [!NOTE]  
 >  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer (Data Profile Viewer)](data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
 ## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>KeyColumns プロパティの列の選択について  
  各 **候補キー プロファイル要求** は、1 つまたは複数の列で構成される単一のキー候補のキーの強さを計算します。  
@@ -118,7 +117,7 @@ ms.locfileid: "48190822"
   
 |値|説明|  
 |-----------|-----------------|  
-|**なし**|しきい値が指定されていません。 キーの強さは、その値に関係なく報告されます。|  
+|**None**|しきい値が指定されていません。 キーの強さは、その値に関係なく報告されます。|  
 |**[Specified]**|しきい値は **[KeyStrengthThreshold]** で指定します。 キーの強さは、このしきい値より大きい場合にのみ報告されます。|  
 |**[Exact]**|しきい値が指定されていません。 キーの強さは、選択した列がキーに完全に一致している場合にのみ報告されます。|  
   
@@ -129,7 +128,7 @@ ms.locfileid: "48190822"
  出力で報告する候補キー違反の最大数を指定します。 このプロパティの既定値は 100 です。 このオプションは、 **[KeyStrengthThresholdSetting]** で **[Exact]** が選択されている場合は無効です。  
   
 ## <a name="see-also"></a>参照  
- [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+ [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
+ [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
   
   

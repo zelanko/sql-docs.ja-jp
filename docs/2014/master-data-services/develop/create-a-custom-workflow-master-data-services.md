@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eaa5a06916b0956a93fb1c473667bbb80b55bd15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229902"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750944"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>カスタム ワークフローの作成 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、ビジネス ルールを使用して基本的なワークフロー ソリューションを作成します (たとえば、指定した条件に基づいてデータを自動的に更新および検証し、電子メール通知を送信するなど)。 組み込みのワークフロー アクションよりも複雑な処理が必要な場合は、カスタム ワークフローを使用します。 カスタム ワークフローは、ユーザーが作成する .NET アセンブリです。 作成したワークフロー アセンブリが呼び出された際には、記述したコードを通じて、状況に応じた任意のアクションを実行できます。 たとえば、複数階層の承認や複雑な意思決定ツリーなど、複雑なイベント処理を必要とするワークフローの場合は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を構成することで、データを分析し、データの承認のための送信先を決定するカスタム ワークフローを開始できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "48229902"
 5.  SQL Server MDS Workflow Integration Services は、それらのデータをワークフロー ハンドラー アセンブリにルーティングします。  
   
 > [!NOTE]  
->  注: SQL Server MDS Workflow Integration Service は単純な処理をトリガーするためのものです。 カスタム コードで複雑な処理を行う必要がある場合は、個別のスレッド内か、またはワークフロー プロセスの外部で処理を完了してください。  
+>  注:SQL Server MDS Workflow Integration Service は、単純なプロセスをトリガーします。 カスタム コードで複雑な処理を行う必要がある場合は、個別のスレッド内か、またはワークフロー プロセスの外部で処理を完了してください。  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>カスタム ワークフロー向けの Master Data Services の構成  
  カスタム ワークフローを作成するには、カスタム コードの記述と [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] の構成を行って、ワークフロー データをワークフロー ハンドラーに渡す必要があります。 カスタム ワークフロー処理を有効にするには、次の手順を実行します。  
@@ -60,7 +60,7 @@ ms.locfileid: "48229902"
   
 3.  C# コード ファイルに、'using Microsoft.MasterDataServices.Core.Workflow;' を追加します。  
   
-4.  クラス宣言で、<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> を継承します。 クラス宣言は次のようになります: 'public class WorkflowTester : IWorkflowTypeExtender'  
+4.  クラス宣言で、<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> を継承します。 クラス宣言のようになります ' public class WorkflowTester:。IWorkflowTypeExtender'。  
   
 5.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> インターフェイスを実装します。 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> メソッドは、ワークフローを開始するために SQL Server MDS Workflow Integration Service によって呼び出されます。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48229902"
 6.  サービス スナップインを使用して、SQL Server MDS Workflow Integration Service を開始します。 これを行うには、サービス スナップインで SQL Server MDS Workflow Integration Service を見つけて選択し、**[開始]** リンクをクリックします。  
   
 ### <a name="create-a-workflow-business-rule"></a>ワークフロー ビジネス ルールの作成  
- [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] を使用して、適用時にワークフローを開始するビジネス ルールを作成およびパブリッシュします。 ビジネス ルールには、属性値を変更するアクションを必ず含めて、そのルールが一度適用された後、false と評価されるようにしてください。 たとえば、Price 属性値が 500 より大きく、Approved 属性値が空白の場合に、true と評価されるビジネス ルールがあるとします。 その場合、そのルールに次の 2 つのアクションを含めることができます。1 つは、Approved 属性値を Pending に設定するアクション。もう 1 つは、ワークフローを開始するアクションです。 また、"has changed" 条件を使用するルールを作成し、追跡グループを変更するための属性を追加する方法もあります。 ビジネス ルールの詳細については、「[ビジネス ルール &#40;マスター データ サービス&#41;](../business-rules-master-data-services.md)」を参照してください。  
+ [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] を使用して、適用時にワークフローを開始するビジネス ルールを作成およびパブリッシュします。 ビジネス ルールには、属性値を変更するアクションを必ず含めて、そのルールが一度適用された後、false と評価されるようにしてください。 たとえば、Price 属性値が 500 より大きく、Approved 属性値が空白の場合に、true と評価されるビジネス ルールがあるとします。 その場合、そのルールに次の 2 つのアクションを含めることができます。1 つは、Approved 属性値を Pending に設定するアクション。もう 1 つは、ワークフローを開始するアクションです。 また、"が変更されている" 条件を使用するルールを作成し、追跡グループを変更するための属性を追加する方法もあります。 ビジネス ルールの詳細については、「[ビジネス ルール &#40;マスター データ サービス&#41;](../business-rules-master-data-services.md)」を参照してください。  
   
  カスタム ワークフローを開始するビジネス ルールを [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で作成するには、次の手順を実行します。  
   
@@ -134,14 +134,14 @@ ms.locfileid: "48229902"
  データにビジネス ルールを適用して、ワークフローを開始します。 これを行うには、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] を使用して、検証するメンバーを含んだエンティティを編集します。 **[ビジネス ルールの適用]** をクリックします。 ビジネス ルールへの応答として、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの Service Broker キューに値を設定します。 SQL Server MDS Workflow Integration Service は、キューをチェックすると、指定されたワークフロー ハンドラー アセンブリにデータを送信し、キューをクリアします。 ワークフロー ハンドラー アセンブリは、コードに記述された任意のアクションを実行します。  
   
 ## <a name="troubleshoot-custom-workflows"></a>カスタム ワークフローのトラブルシューティング  
- ワークフロー ハンドラー アセンブリがデータを受け取らなかった場合は、SQL Server MDS Workflow Integration Service をデバッグするか、または Service Broker キューを参照します。  
+ ワークフロー ハンドラー アセンブリがデータを受け取らなかった場合は、SQL Server MDS Workflow Integration Service をデバッグするか、または Service Broker キューを表示してみることができます。  
   
 ### <a name="debug-sql-server-mds-workflow-integration-service"></a>SQL Server MDS Workflow Integration Service のデバッグ  
  SQL Server Workflow Integration Service をデバッグするには、次の手順に従います。  
   
 1.  サービス スナップインを使用して、サービスを停止します。  
   
-2.  コマンド プロンプトを開き、サービスの場所に移動した後、コマンド Microsoft.MasterDataServices.Workflow.exe -console を入力してサービスをコンソール モードで実行します。  
+2.  コマンド プロンプトを開き、サービスの場所に移動を入力して、コンソール モードでサービスを実行します。Microsoft.MasterDataServices.Workflow.exe-コンソールです。  
   
 3.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で、メンバーを更新し、ビジネス ルールを再度適用します。 詳細なログがコンソール ウィンドウに表示されます。  
   

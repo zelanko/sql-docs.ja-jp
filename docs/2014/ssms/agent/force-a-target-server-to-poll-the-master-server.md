@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - forcing master server polling
@@ -15,12 +15,12 @@ ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2373b75766acbc34547f062a2ffc76a3125ade5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172262"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764214"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>対象サーバーからのマスター サーバーのポーリングの強制
   このトピックでは、対象サーバーからマスター サーバーにポーリングさせる方法について説明します。 対象サーバーは、マスター サーバーの登録済みサーバーである必要があります。  
@@ -30,17 +30,17 @@ ms.locfileid: "48172262"
 > [!NOTE]  
 >  対象サーバーがジョブの状態をアップロードするときにマスター サーバーにアクセスできない場合、そのジョブの状態はマスター サーバーがアクセスできるようになるまでスプールされます。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [セキュリティ](#Security)  
+-   **作業を開始する準備:**[制限事項と制約](#Restrictions)、[セキュリティ](#Security)  
   
--   **ターゲット サーバーからマスター サーバーにポーリングさせるのにを使用して:**[SQL Server Management Studio  ](#SSMS)  
+-   **ターゲット サーバーからマスター サーバーにポーリングさせるのにを使用します。**[SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  対象サーバーは、マスター サーバーの登録済みサーバーである必要があります。 このトピックに説明されている手順は、マスター サーバーから実行する必要があります。  
   
 ###  <a name="Security"></a> セキュリティ  
- 詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 」および「 [マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
+ 詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 」および「 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
  **対象サーバーからマスター サーバーにポーリングさせるには**  

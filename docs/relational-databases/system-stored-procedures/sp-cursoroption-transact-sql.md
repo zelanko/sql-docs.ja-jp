@@ -18,12 +18,12 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e043fd2ea37b9ff790a519311e8db78fa443422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659050"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545501"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_cursoroption cursor, code, value
 |0x0003|TEXTDATA|以降のフェッチで、特定の text 列または image 列のテキスト ポインターではなく実際のデータを返します (これにより、TEXTPTR_ONLY の効力が取り消されます)。<br /><br /> 特定の列で TEXTDATA が有効になると、行は再フェッチ (更新) されます。後で TEXTPTR_ONLY に戻すことができます。 TEXTPTR_ONLY と同様に、value パラメーターは列番号を指定する整数で、値が 0 の場合はすべての text 列および image 列が返されます。|  
 |0x0004|SCROLLOPT|スクロール オプションです。 詳細については、後の「戻り値」を参照してください。|  
 |0x0005|CCOPT|コンカレンシー制御オプションです。 詳細については、後の「戻り値」を参照してください。|  
-|0x0006|ROWCOUNT|現在結果セット内にある行の数です。<br /><br /> 注: 非同期設定が使用されている場合は、sp_cursoropen から返される値以降、ROWCOUNT に変更された可能性があります。 行数が不明な場合は、値 -1 が返されます。|  
+|0x0006|ROWCOUNT|現在結果セット内にある行の数です。<br /><br /> 注:非同期設定が使用されている場合は、sp_cursoropen から値が返されてから ROWCOUNT が変更されている場合があります。 行の数が不明の場合、値-1 が返されます。|  
   
  *value*  
  によって返される値を指定*コード*します。 *値*0x0001、0x0002、または 0x0003 を呼び出して取得する必須パラメーター*コード*値を入力します。  

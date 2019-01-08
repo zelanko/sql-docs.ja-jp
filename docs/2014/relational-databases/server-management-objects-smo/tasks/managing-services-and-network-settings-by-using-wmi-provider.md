@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI provider [SMO]
@@ -17,17 +15,17 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc42cd7c5f7670ed3ece73ee424de03891ed5781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211662"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762204"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI プロバイダーを使用したサービスの管理とネットワーク設定
-  WMI プロバイダーが公開されたインターフェイスで使用される[!INCLUDE[msCoName](../../../includes/msconame-md.md)]を管理する管理コンソール (MMC)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスおよびネットワーク プロトコル。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>オブジェクトは、WMI プロバイダーを表します。  
+  WMI プロバイダーは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] のサービスおよびネットワーク プロトコルを管理するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理コンソール (MMC) によって使用される、公開されたインターフェイスです。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは WMI プロバイダーを表します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>で確立された接続とは独立して動作するオブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、WMI サービスに接続する Windows 資格情報を使用します。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで確立されている接続から独立して動作し、Windows 資格情報を使用して WMI サービスに接続します。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

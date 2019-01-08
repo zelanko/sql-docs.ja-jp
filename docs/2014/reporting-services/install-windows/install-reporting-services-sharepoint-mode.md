@@ -15,17 +15,17 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b1406c93a798df2b19f49d3a83123221826d1bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 549cae9b4e42866194f5a391bb7d5e111eb202ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170822"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395156"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services SharePoint モードのインストール (SharePoint 2010 および SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードはレポートの生成と配信に基づくを提供するサーバー コンポーネントのコレクション[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint 製品。  
   
- SharePoint モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を実行すると、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] とデータの警告機能が表示されます。 SharePoint モードの機能の詳細については、「 [Reporting Services レポート サーバー](../reporting-services-report-server.md)」の「サーバー モードごとの機能サポートと動作の違い」を参照してください。  
+ SharePoint モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を実行すると、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] とデータの警告機能が表示されます。 SharePoint モードの機能に関する詳細については、「機能サポートと動作の違いによってサーバー モード」セクションを参照してください[Reporting Services レポート サーバー](../reporting-services-report-server.md)  
   
  SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に必要な基本的なインストールは 2 つあります。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48170822"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールするには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール メディアを使用します。  
   
- 高度な展開シナリオについては、次を参照してください[展開のチェックリスト: Reporting Services、Power View および PowerPivot for SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)と[展開のチェックリスト: 既存に Reporting Services のインストール。SharePoint ファーム](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)します。  
+ 高度な展開シナリオについては、次を参照してください。[展開のチェックリスト。Reporting Services、Power View および PowerPivot for SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)と[展開のチェックリスト。既存の SharePoint ファームに Reporting Services をインストール](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SharePoint と Reporting Services サーバーとアドインのサポートされる組み合わせ&#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
@@ -49,11 +49,11 @@ ms.locfileid: "48170822"
   
  [SharePoint 製品用 Reporting Services アドインの検索場所](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [レポート サーバーをファームに追加&#40;SSRS スケール アウト&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [ファームへのレポート サーバーの追加 &#40;SSRS スケールアウト&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [ファームへの Reporting Services Web フロントエンドの追加](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [電子メール、Reporting Services サービス アプリケーションの構成&#40;SharePoint 2010 および SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [Reporting Services サービス アプリケーションの電子メールの構成 (SharePoint 2010 および SharePoint 2013)](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   

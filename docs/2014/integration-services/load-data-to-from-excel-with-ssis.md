@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991255"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778314"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
@@ -41,7 +41,7 @@ Excel からデータをインポートする、または Excel にデータを�
 
 Excel からデータをインポートしたり、データを Excel にエクスポートするには、事前に Excel の接続コンポーネントをダウンロードする必要があります (まだインストールされていない場合)。 Excel の接続コンポーネントは、既定ではインストールされません。
 
-[Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)で、Excel の接続コンポーネントの最新バージョンをダウンロードします。
+ここで Excel の接続コンポーネントの最新バージョンをダウンロードには。[Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)します。
   
 以前のバージョンの Excel で作成したファイルは、最新バージョンのコンポーネントで開くことができます。
 
@@ -53,7 +53,7 @@ Office 365 サブスクリプションをお持ちの場合は、インストー
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-2016 再頒布可能パッケージのインストールに問題がある場合は、代わりに [Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=13255)から 2010 再頒布可能パッケージをインストールします  (Excel 2013 用の再頒布可能パッケージはありません)。
+2016 再頒布可能パッケージのインストールに問題があれば、代わりにここから 2010 再頒布可能パッケージをインストールします。[Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=13255)します。 (Excel 2013 用の再頒布可能パッケージはありません)。
 
 ## <a name="specify-excel"></a> Excel を指定する
 
@@ -161,17 +161,17 @@ SSIS で、**Excel ソース エディター**または **Excel 変換先エデ�
 
 Excel ドライバーでは、データ型の限定されたセットのみを認識します。 たとえば、すべての数値列は倍精度浮動小数点型 (DT_R8) として解釈され、すべての文字列の列 (メモ列以外) は 255 文字の Unicode 文字列 (DT_WSTR) として解釈されます。 SSIS では、Excel データ型を次のようにマップします。
 
--   Numeric – 倍精度浮動小数 (DT_R8)
+-   Numeric - 倍精度浮動小数点数 (DT_R8)
 
--   Currency – 通貨 (DT_CY)
+-   Currency - 通貨 (DT_CY)
 
--   Boolean – ブール (DT_BOOL)
+-   Boolean - ブール (DT_BOOL)
 
--   Date/time – 日時 (DT_DATE)
+-   Date/time - 日時 (DT_DATE)
 
--   String – Unicode 文字列、長さ 255 (DT_WSTR)
+-   String - Unicode 文字列、長さ 255 (DT_WSTR)
 
--   Memo – Unicode テキスト ストリーム (DT_NTEXT)
+-   Memo - Unicode テキスト ストリーム (DT_NTEXT)
 
 ### <a name="data-type-and-length-conversions"></a>データ型と長さの変換
 

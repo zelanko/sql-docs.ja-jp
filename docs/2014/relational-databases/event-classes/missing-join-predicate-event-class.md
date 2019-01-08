@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abbf752f1e272f92c555bb9695da0c7b0e4c0e26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb2cd178440a2d0ea0cd9842616a52058a63f7b7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124044"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775844"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate イベント クラス
   Missing Join Predicate イベント クラスは、結合述語がないクエリが実行されていることを示します。 クエリの終了に時間がかかる可能性があります。 結合述語の詳細については、「[述語 &#40;Transact-SQL&#41;](/sql/t-sql/queries/predicates)」を参照してください。  

@@ -15,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdfb1bf06bd7b1157525ffd2beed10c4c3daf2be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a3f3e2b41dcda79c21d3b7b4f3dc6ab7ed6573ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659381"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539875"
 ---
 # <a name="general-xquery-use-cases"></a>XQuery の一般的な使用例
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "51659381"
  次のクエリでは、製品カタログの説明に製品モデル ID と重量が含まれている場合、これらの情報を返します。 クエリにより、次の形式で XML が構築されます。  
   
 ```  
-<Product ProductModelID="…">  
-  <Weight>…</Weight>  
+<Product ProductModelID="...">  
+  <Weight>...</Weight>  
 </Product>  
 ```  
   
@@ -61,7 +61,7 @@ WHERE CatalogDescription is not null
   
 -   WHERE 句で、 **exist()** 製品カタログの説明が含まれている行のみを検索するメソッドを使用します。 つまり、<`ProductDescription`> 要素が含まれる XML です。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <Product ProductModelID="19"/>  
@@ -95,7 +95,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
  カタログの説明に正面からの小さな写真が含まれる製品モデルを取得するために、クエリは次の形式の XML を構築します。  
   
 ```  
-< Product ProductModelID="…">  
+< Product ProductModelID="...">  
   <Picture>  
     <Angle>front</Angle>  
     <Size>small</Size>  
@@ -306,7 +306,7 @@ WHERE CatalogDescription.value('
   
 -   **Value()** のメソッド、 **xml**データ型によって返される値を比較する**contains()** を 1 にします。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 ProductModelID Result        

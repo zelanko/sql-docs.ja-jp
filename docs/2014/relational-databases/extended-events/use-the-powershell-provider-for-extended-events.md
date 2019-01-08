@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
@@ -15,17 +14,17 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185082"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752844"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>拡張イベントへの PowerShell プロバイダーの使用
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントを管理できます。 XEvent サブフォルダーは、SQLSERVER ドライブで利用可能です。 このフォルダーには、次のいずれかの方法でアクセスできます。  
   
--   コマンド プロンプトで「 `sqlps`、し、ENTER キーを押します。 型`cd xevent`、し、ENTER キーを押します。 そこから、使用することができます、 **cd**と`dir`コマンド (または**Set-location**と**Get-childitem**コマンドレット)、サーバー名とインスタンス名に移動します。  
+-   コマンド プロンプトで「 `sqlps`、し、ENTER キーを押します。 「`cd xevent`」と入力して Enter キーを押します。 そこから、使用することができます、 **cd**と`dir`コマンド (または**Set-location**と**Get-childitem**コマンドレット)、サーバー名とインスタンス名に移動します。  
   
 -   オブジェクト エクスプローラーで、インスタンス名、 **[管理]** の順に展開し、 **[拡張イベント]** を右クリックして、 **[PowerShell の起動]** をクリックします。 これにより、次のパスで PowerShell が起動します。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48185082"
   
 -   スクリプトは、.ps1 拡張子を付けて保存してください。  
   
--   PowerShell 実行ポリシーで、スクリプトを実行できるようにする必要があります。 実行ポリシーを設定するには、 **Set-Executionpolicy** コマンドレットを使用します (詳細については、「 `get-help set-executionpolicy -detailed`、し、ENTER キーを押します)。  
+-   PowerShell 実行ポリシーで、スクリプトを実行できるようにする必要があります。 実行ポリシーを設定するには、 **Set-Executionpolicy** コマンドレットを使用します (詳細については、「`get-help set-executionpolicy -detailed`」と入力し、Enter キーを押します)。  
   
  次のスクリプトでは、"TestSession" という名前の新しいセッションが作成されます。  
   
@@ -67,7 +66,7 @@ $event.AddAction("package0.callstack")
 $session.Create()  
 ```  
   
- 次のスクリプトでは、前の例で作成したセッションにリング バッファー ターゲットが追加されます  (この例では、`Alter` メソッドの使用方法を示しています。 ターゲットは、最初にセッションを作成するときに追加できます)。  
+ 次のスクリプトでは、前の例で作成したセッションにリング バッファー ターゲットが追加されます (この例では、`Alter` メソッドの使用方法を示しています。 ターゲットは、最初にセッションを作成するときに追加できます)。  
   
 ```  
 #Script to alter a session.  

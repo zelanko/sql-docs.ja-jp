@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
@@ -14,12 +14,12 @@ ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 549c23271b8c969dc0e62d3bb73b973bbd85819c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108175"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770184"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>データベース ダイアグラムからのテーブルの削除 (Visual Database Tools)
   データベース ダイアグラムからは、テーブルを削除できます。 データベース ダイアグラムからテーブルを削除しても、データベースは変更されません。 削除したテーブルと、他のテーブルとのリレーションシップは、データベースに残ります。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
@@ -13,12 +12,12 @@ ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: baff749af3e0cc745342787b5d5ab73d7f7f6e1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cc706bb7e4852e37f473378d519c813001a96d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139514"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768124"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>属性グループ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループ名を変更できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "48139514"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-change-an-attribute-group-name"></a>属性グループ名を変更するには  
   
@@ -51,8 +50,8 @@ ms.locfileid: "48139514"
 9. **[グループの保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [属性グループ&#40;マスター データ サービス&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [属性グループを作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)   
- [属性グループを削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)  
+ [属性グループ (マスター データ サービス)](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [属性グループを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)   
+ [属性グループを削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)  
   
   

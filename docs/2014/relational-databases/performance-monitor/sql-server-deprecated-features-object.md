@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -15,12 +15,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211852"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763944"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨の機能が検出された回数を示す使用カウントを表示します。  
@@ -46,7 +46,7 @@ ms.locfileid: "48211852"
 |CREATE TRIGGER WITH APPEND|WITH APPEND 句を指定した CREATE TRIGGER ステートメントが見つかりました。 代わりに、トリガー全体を再作成してください。 DDL ステートメントで使用するごとに 1 回発生します。|  
 |CREATE_DROP_DEFAULT|CREATE DEFAULT または DROP DEFAULT 構文が見つかりました。 CREATE TABLE または ALTER TABLE の DEFAULT オプションを使用してコマンドを書き直してください。 コンパイルごとに 1 回発生します。|  
 |CREATE_DROP_RULE|CREATE RULE 構文が見つかりました。 制約を使用してコマンドを書き直してください。 コンパイルごとに 1 回発生します。|  
-|データ型 : text、ntext、または image|`text`、`ntext`、または `image` データ型が見つかりました。 使用するアプリケーションを書き直して、`varchar(max)`データを入力して削除`text`、 `ntext`、および`image`データ型の構文。 クエリごとに 1 回発生します。|  
+|データ型 : text、ntext、または image|`text`、`ntext`、または `image` データ型が見つかりました。 `varchar(max)` データ型を使用し、`text`、`ntext`、および `image` データ型を削除した構文を使用して、アプリケーションを書き直してください。 クエリごとに 1 回発生します。|  
 |データベース互換性レベル 80|データベースが互換性レベル 80 に変更された合計回数。 次のリリースの前にデータベースおよびアプリケーションのアップグレードを計画してください。 互換性レベルが 80 のデータベースが起動されるときにも発生します。|  
 |Database compatibility level 90|データベースが互換性レベル 90 に変更された合計回数。 今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。 互換性レベルが 90 のデータベースが起動されるときにも発生します。|  
 |DATABASE_MIRRORING|データベース ミラーリング機能への参照が発生しました。 AlwaysOn 可用性グループにアップグレードすることを検討するか、AlwaysOne 可用性グループがサポートされないエディションの SQL Server を実行している場合は、ログ配布に移行するようにしてください。|  
@@ -112,14 +112,14 @@ ms.locfileid: "48211852"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|非推奨の sys.numbered_procedure_parameters への参照が見つかりました。 使用しないでください。 コンパイルごとに 1 回発生します。|  
 |numbered_procedures|非推奨の sys.numbered_procedures への参照が見つかりました。 使用しないでください。 コンパイルごとに 1 回発生します。|  
-|Oldstyle RAISEERROR|非推奨の RAISERROR (形式 : RAISERROR 整数文字列) 構文が見つかりました。 現在の RAISERROR 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
+|Oldstyle RAISEERROR|非推奨の RAISERROR (形式。RAISERROR 整数文字列) 構文が見つかりました。 現在の RAISERROR 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |アドホック接続の OLEDB|SQLOLEDB はサポートされないプロバイダーです。 アドホック接続には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用してください。|  
 |PERMISSIONS|PERMISSIONS 組み込み関数への参照が見つかりました。 代わりに sys.fn_my_permissions をクエリしてください。 クエリごとに 1 回発生します。|  
 |ProcNums|非推奨の ProcNums 構文が見つかりました。 参照を削除してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |READTEXT|READTEXT 構文が見つかりました。 `varchar(max)` データ型を使用し、`text` データ型を削除した構文を使用して、アプリケーションを書き直してください。 クエリごとに 1 回発生します。|  
-|RESTORE DATABASE または LOG WITH DBO_ONLY|RESTORE … WITH DBO_ONLY 構文が見つかりました。 代わりに RESTORE … RESTRICTED_USER を使用してください。|  
-|RESTORE DATABASE または LOG WITH MEDIAPASSWORD|RESTORE … WITH MEDIAPASSWORD 構文が見つかりました。 WITH MEDIAPASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
-|RESTORE DATABASE または LOG WITH PASSWORD|RESTORE … WITH PASSWORD 構文が見つかりました。 WITH PASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
+|RESTORE DATABASE または LOG WITH DBO_ONLY|RESTORE ...WITH DBO_ONLY 構文が見つかりました。 代わりに RESTORE ...RESTRICTED_USER を使用してください。|  
+|RESTORE DATABASE または LOG WITH MEDIAPASSWORD|RESTORE ...WITH MEDIAPASSWORD 構文が見つかりました。 WITH MEDIAPASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
+|RESTORE DATABASE または LOG WITH PASSWORD|RESTORE ...WITH PASSWORD 構文が見つかりました。 WITH PASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
 |トリガーから結果を返す|このイベントは、トリガーを呼び出すごとに 1 回発生します。 結果セットを返さないようにトリガーを書き直してください。|  
 |ROWGUIDCOL|ROWGUIDCOL 構文が見つかりました。 $rowguid 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |SET ANSI_NULLS OFF|SET ANSI_NULLS OFF 構文が見つかりました。 この非推奨の構文を削除してください。 コンパイルごとに 1 回発生します。|  
@@ -156,13 +156,13 @@ ms.locfileid: "48211852"
 |sp_configure 'ft notify bandwidth (min)'|sp_configure の ft notify bandwidth (min) オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_configure 'locks'|sp_configure の locks オプションが見つかりました。 ロックは構成できなくなりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_configure 'open objects'|sp_configure の open objects オプションが見つかりました。 開いているオブジェクトの数は構成できなくなりました。 使用しないでください。 クエリごとに 1 回発生します。|  
-|sp_configure 'priority boost'|sp_configure の priority boost オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。 Windows start /high … program.exe オプションを代わりに使用してください。|  
+|sp_configure 'priority boost'|sp_configure の priority boost オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。 代わりに、Windows start /high ... program.exe オプションを使用してください。|  
 |sp_configure 'remote proc trans'|sp_configure の remote proc trans オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_configure 'set working set size'|sp_configure の set working set size オプションが見つかりました。 ワーキング セットのサイズは構成できなくなりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password ストアド プロシージャでは、マスター キーがあるかどうかは確認されません。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は非推奨とされます。 今後のリリースでは、マスター キーは存在する必要があり、ストアド プロシージャ sp_control_dbmasterkey_password で使用されるパスワードはデータベース マスター キーを暗号化するために使用されるパスワードの 1 つと同じである必要があります。|  
 |sp_create_removable|sp_create_removable プロシージャが見つかりました。 代わりに CREATE DATABASE を使用してください。 クエリごとに 1 回発生します。|  
-|sp_db_vardecimal_storage_format|使用`vardecimal`ストレージ形式が発生しました。 代わりにデータ圧縮を使用してください。|  
-|sp_dbcmptlevel|sp_dbcmptlevel プロシージャが見つかりました。 代わりに ALTER DATABASE ... SET COMPATIBILITY_LEVEL を使用してください。 クエリごとに 1 回発生します。|  
+|sp_db_vardecimal_storage_format|`vardecimal` ストレージ形式の使用が見つかりました。 代わりにデータ圧縮を使用してください。|  
+|sp_dbcmptlevel|sp_dbcmptlevel プロシージャが見つかりました。 ALTER DATABASE ...SET COMPATIBILITY_LEVEL を使用してください。 クエリごとに 1 回発生します。|  
 |sp_dbfixedrolepermission|sp_dbfixedrolepermission プロシージャが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_dboption|sp_dboption プロシージャが見つかりました。 代わりに、ALTER DATABASE および DATABASEPROPERTYEX を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_dbremove|sp_dbremove プロシージャが見つかりました。 代わりに DROP DATABASE を使用してください。 クエリごとに 1 回発生します。|  
@@ -179,7 +179,7 @@ ms.locfileid: "48211852"
 |sp_droprole|sp_droprole プロシージャが見つかりました。 代わりに DROP ROLE を使用してください。 クエリごとに 1 回発生します。|  
 |sp_droptype|sp_droptype プロシージャが見つかりました。 代わりに DROP TYPE を使用してください。|  
 |sp_dropuser|sp_dropuser プロシージャが見つかりました。 代わりに DROP USER を使用してください。 クエリごとに 1 回発生します。|  
-|sp_estimated_rowsize_reduction_for_vardecimal|使用`vardecimal`ストレージ形式が発生しました。 代わりにデータ圧縮と sp_estimate_data_compression_savings を使用してください。|  
+|sp_estimated_rowsize_reduction_for_vardecimal|`vardecimal` ストレージ形式の使用が見つかりました。 代わりにデータ圧縮と sp_estimate_data_compression_savings を使用してください。|  
 |sp_fulltext_catalog|sp_fulltext_catalog プロシージャが見つかりました。 代わりに CREATE/ALTER/DROP FULLTEXT CATALOG を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_fulltext_column|sp_fulltext_column プロシージャが見つかりました。 代わりに、ALTER FULLTEXT INDEX を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_fulltext_database|sp_fulltext_database プロシージャが見つかりました。 代わりに ALTER DATABASE を使用してください。 コンパイルごとに 1 回発生します。|  
@@ -249,13 +249,13 @@ ms.locfileid: "48211852"
 |sysusers|sysusers への参照が見つかりました。 代わりに sys.database_principals を使用してください。 コンパイルごとに 1 回発生します。|  
 |Table hint without WITH|テーブル ヒントを使用しているが WITH キーワードを使用していないステートメントが見つかりました。 WITH キーワードを含めるようにステートメントを変更してください。 コンパイルごとに 1 回発生します。|  
 |Text in row テーブル オプション|'text in row' テーブル オプションへの参照が見つかりました。 代わりに sp_tableoption 'large value types out of row' を使用してください。 クエリごとに 1 回発生します。|  
-|TEXTPTR|TEXTPTR 関数への参照が見つかりました。 使用するアプリケーションを書き直して、`varchar(max)`データを入力して削除`text`、 `ntext`、および`image`データ型の構文。 クエリごとに 1 回発生します。|  
-|TEXTVALID|TEXTVALID 関数への参照が見つかりました。 使用するアプリケーションを書き直して、`varchar(max)`データを入力して削除`text`、 `ntext`、および`image`データ型の構文。 クエリごとに 1 回発生します。|  
-|timestamp|数の合計時間、非推奨`timestamp`DDL ステートメントでデータ型が見つかりました。 使用して、`rowversion`代わりにデータを入力します。|  
-|UPDATETEXT または WRITETEXT|UPDATETEXT または WRITETEXT ステートメントが見つかりました。 使用するアプリケーションを書き直して、`varchar(max)`データを入力して削除`text`、 `ntext`、および`image`データ型の構文。 クエリごとに 1 回発生します。|  
+|TEXTPTR|TEXTPTR 関数への参照が見つかりました。 `varchar(max)` データ型を使用し、`text`、`ntext`、および `image` データ型を削除した構文を使用して、アプリケーションを書き直してください。 クエリごとに 1 回発生します。|  
+|TEXTVALID|TEXTVALID 関数への参照が見つかりました。 `varchar(max)` データ型を使用し、`text`、`ntext`、および `image` データ型を削除した構文を使用して、アプリケーションを書き直してください。 クエリごとに 1 回発生します。|  
+|timestamp|非推奨の `timestamp` データ型が DDL ステートメントで見つかった合計回数。 代わりに、`rowversion` データ型を使用してください。|  
+|UPDATETEXT または WRITETEXT|UPDATETEXT または WRITETEXT ステートメントが見つかりました。 `varchar(max)` データ型を使用し、`text`、`ntext`、および `image` データ型を削除した構文を使用して、アプリケーションを書き直してください。 クエリごとに 1 回発生します。|  
 |USER_ID|USER_ID 関数への参照が見つかりました。 代わりに、DATABASE_PRINCIPAL_ID 関数を使用してください。 コンパイルごとに 1 回発生します。|  
 |リンク サーバーに対する OLEDB の使用||  
-|vardecimal ストレージ形式|使用`vardecimal`ストレージ形式が発生しました。 代わりにデータ圧縮を使用してください。|  
+|vardecimal ストレージ形式|`vardecimal` ストレージ形式の使用が見つかりました。 代わりにデータ圧縮を使用してください。|  
 |XMLDATA|FOR XML 構文が見つかりました。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードに取って代わるものはありません。 コンパイルごとに 1 回発生します。|  
 |XP_API|拡張ストアド プロシージャ ステートメントが見つかりました。 使用しないでください。|  
 |xp_grantlogin|xp_grantlogin プロシージャが見つかりました。 代わりに CREATE LOGIN を使用してください。 コンパイルごとに 1 回発生します。|  

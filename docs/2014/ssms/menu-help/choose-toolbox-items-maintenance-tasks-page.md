@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
@@ -15,12 +15,12 @@ ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54952d2e72de22efe1f3b9eb34183464339fbd51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053242"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764584"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)
   **[ツールボックス アイテムの選択]** ダイアログ ボックスのこのタブには、コンピューターに登録されているメンテナンス タスク コンポーネントがすべて一覧表示され、ツールボックスに表示されているメンテナンス タスクを変更できます。 **[ツールボックス アイテムの選択]** ダイアログ ボックスは、 **[ツール]** メニューから開けます。 コンポーネントの一覧を並べ替えるには、列見出しを選択します。  

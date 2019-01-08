@@ -12,18 +12,18 @@ ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c547fa6363ab3a60ecbee8b348c233077e17ceed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1af16003b73b76ea0d899ecacb19dda42aa867d9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097454"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538691"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>主要業績評価指標表現 (テーブル)
   KPI は、対象の値に対するベース メジャーによって定義される値のパフォーマンスを測定に使用されます。  
   
 ## <a name="key-performance-indicator-representation"></a>主要業績評価指標表現  
- テーブル オブジェクト モデルにおける主要業績評価指標 (KPI) とは、クライアント アプリケーションでグラフィカルに表示するための追加情報を含むメジャーです。 通常、KPI には、取得する目標に関する情報、目標と比較するメジャーの状態、クライアント ツールで状態をグラフィカルに表示する方法に関する情報が含まれています。  
+ 表形式オブジェクトで、主要業績評価指標の kpi をモデル化-グラフィカルに表示するクライアント アプリケーションの追加情報を含むメジャーです。 通常、KPI には、取得する目標に関する情報、目標と比較するメジャーの状態、クライアント ツールで状態をグラフィカルに表示する方法に関する情報が含まれています。  
   
 ### <a name="key-performance-indicator-in-amo"></a>AMO における主要業績評価指標  
  AMO を使用してテーブル モデル KPI を管理する場合、AMO 内の KPI に一対一で対応するオブジェクトは存在しません。AMO <xref:Microsoft.AnalysisServices.Kpi> オブジェクトは、この目的には使用されません。AMO では、テーブル モデルに対して、<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> コレクションおよび <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 内の要素の 1 つで作成された一連のオブジェクトによって KPI が表されます。  
@@ -223,6 +223,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular サンプル  
- AMO を使用して作成し、主要業績評価指標を操作する方法を理解しておくには、表現は、AMO to Tabular サンプル; のソース コードを参照してください。具体的には、次のソース ファイルをチェックイン: AddKPIs.cs します。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
+ AMO を使用して作成し、主要業績評価指標を操作する方法を理解しておくには、表現は、AMO to Tabular サンプル; のソース コードを参照してください。具体的には、次のソース ファイルで確認します。AddKPIs.cs します。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   

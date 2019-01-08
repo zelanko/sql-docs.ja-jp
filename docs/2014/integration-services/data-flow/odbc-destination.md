@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
@@ -13,12 +12,12 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd6980bd66e4aeca0672fd4c8c1bffb95e09b9ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079142"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770964"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
@@ -30,16 +29,16 @@ ms.locfileid: "48079142"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> 読み込みオプション  
  ODBC 入力先先は、2 つのアクセス読み込みモジュールのうちどちらかを使用できます。 [ODBC ソース エディター &#40;[接続マネージャー] ページ&#41;](../odbc-source-editor-connection-manager-page.md)。 次の 2 つのモードがあります。  
   
--   **バッチ**: このモードでは、ODBC 入力先は、把握した ODBC プロバイダーの機能に基づいて、最も効率的な挿入方法を使用します。 最新の ODBC プロバイダーの場合、これは、パラメーターを設定した INSERT ステートメントを準備し、行方向の配列パラメーター バインドを使用する方法です (このとき、配列のサイズは **BatchSize** プロパティによって制御します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
+-   **バッチ**:このモードでは、odbc 入力先は、把握した ODBC プロバイダーの機能に基づいて、最も効率的な挿入方法を使用しようとします。 最新の ODBC プロバイダーの場合、これは、パラメーターを設定した INSERT ステートメントを準備し、行方向の配列パラメーター バインドを使用する方法です (このとき、配列のサイズは **BatchSize** プロパティによって制御します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
   
--   **行ごと**: このモードでは、ODBC 入力先はパラメーターを設定した INSERT ステートメントを準備し、 **SQL の Execute** を使用して一度に 1 行ずつ行を挿入します。  
+-   **行で**:このモードで、odbc 入力先はパラメーターを使用して INSERT ステートメントを準備します**SQL の Execute**一度に 1 行ずつ行を挿入します。  
   
 ## <a name="error-handling"></a>エラー処理  
  ODBC 入力先にはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
   
--   **エラー コード**: 現在のエラーに対応する数字です。 エラーの一覧については、ソース データベースのドキュメントを参照してください。 SSIS エラー コードの一覧については、「SSIS のエラー コードおよびメッセージ リファレンス」を参照してください。  
+-   **エラー コード**:現在のエラーに対応する番号。 エラーの一覧については、ソース データベースのドキュメントを参照してください。 SSIS エラー コードの一覧については、「SSIS のエラー コードおよびメッセージ リファレンス」を参照してください。  
   
--   **エラー列**: (変換エラーの) エラーの原因となるソース列。  
+-   **エラー列**:(変換エラー) エラーを原因となるソース列。  
   
 -   標準出力データ列。  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48079142"
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [Odbc 入力先エディター&#40;接続マネージャー ページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [Odbc 入力先エディター&#40;マッピング ページ&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 変換先エディター &#40;[マッピング] ページ&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Odbc 入力先エディター&#40;エラー出力 ページ&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../odbc-destination-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
   
@@ -76,14 +75,14 @@ ms.locfileid: "48079142"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [Odbc 入力先エディター&#40;エラー出力 ページ&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [Odbc 入力先エディター&#40;マッピング ページ&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 変換先エディター &#40;[マッピング] ページ&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Odbc 入力先エディター&#40;接続マネージャー ページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [ODBC 変換先を使用したデータ読み込み](odbc-destination.md)  
+-   [ODBC 入力先を使用したデータ読み込み](odbc-destination.md)  
   
--   [ODBC 変換先のカスタム プロパティ](odbc-destination-custom-properties.md)  
+-   [ODBC 入力先のカスタム プロパティ](odbc-destination-custom-properties.md)  
   
   

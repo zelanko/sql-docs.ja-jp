@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation
@@ -16,12 +15,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce09e0765f553d2a884a271b7740118a293a9510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb778827f9193cd9fae136e078e353241d2b55ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089772"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769744"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
   参照変換は、次の部分キャッシュ モードまたはキャッシュなしのモードを使用するように構成できます。  
@@ -53,7 +52,7 @@ ms.locfileid: "48089772"
   
 6.  **[一致するエントリがない行の処理方法の指定]** ボックスの一覧で、エラー処理オプションを選択します。  
   
-7.  **[接続]** ページで、 **[OLE DB 接続マネージャー]** ボックスの一覧から接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](../../connection-manager/ole-db-connection-manager.md)」をご覧ください。  
+7.  **[接続]** ページで、 **[OLE DB 接続マネージャー]** ボックスの一覧から接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](../../connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 8.  次のいずれかの手順を実行します。  
   
@@ -61,11 +60,11 @@ ms.locfileid: "48089772"
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成します。  
   
-         — または —  
+         - または -  
   
          **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** で用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         — または —  
+         - または -  
   
          **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b15ac5c21a8fb9b1efafd1124e2338b58d0324e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111410"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775764"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats イベント クラス
   **Auto Stats** イベント クラスは、インデックス統計と列統計が自動更新されたことを示します。  
@@ -38,7 +37,7 @@ ms.locfileid: "48111410"
 |**Error**|**int**|特定のイベントのエラー番号。 多くの場合、 **sys.messages** カタログ ビューに保存されているエラー番号です。|31|はい|  
 |**EventClass**|**int**|イベントの種類 = 58。|27|いいえ|  
 |**EventSequence**|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 1: 統計を作成/同期的に更新します。**TextData**列は、どの統計とかどうかを作成または更新されたことを示します。<br /><br /> 2: 統計の非同期更新。ジョブがキューに登録されました。<br /><br /> 3: 統計の非同期更新。ジョブが開始しました。<br /><br /> 4: 統計の非同期更新。ジョブが完了しました。|21|はい|  
+|**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 1:統計の作成/同期的に更新します。**TextData**列は、どの統計とかどうかを作成または更新されたことを示します。<br /><br /> 2:統計の非同期更新。ジョブがキューに登録されました。<br /><br /> 3:統計の非同期更新。ジョブが開始しました。<br /><br /> 4:統計の非同期更新。ジョブが完了しました。|21|はい|  
 |**GroupID**|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**IndexID**|**int**|イベントの影響を受けるオブジェクトに付けられたインデックスまたは統計エントリの ID。 オブジェクトのインデックス ID を特定するには、 **sys.indexes** カタログ ビューの **index_id** 列を使用します。|24|はい|  
@@ -56,7 +55,7 @@ ms.locfileid: "48111410"
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**成功**|**int**|0 = エラー。<br /><br /> 1 = 成功。<br /><br /> 2 = サーバーの絞込みによりスキップ (MSDE)。|23|はい|  
-|**TextData**|**ntext**|この列の内容は、統計が同期的に更新されたのか、または非同期に更新されたのかによって異なります。同期更新の場合**EventSubClass** は 1、非同期更新の場合**EventSubClass** は 2、3、または 4 になります。<br /><br /> 1: 更新または作成された統計をリストで示します。<br /><br /> 2、3、または 4: NULL。 **IndexID** 列には、更新された統計のインデックスまたは統計の ID が格納されます。|1|はい|  
+|**TextData**|**ntext**|この列の内容は、統計が同期的に更新されたのか、または非同期に更新されたのかによって異なります。同期更新の場合**EventSubClass** は 1、非同期更新の場合**EventSubClass** は 2、3、または 4 になります。<br /><br /> 1:更新または作成された統計をリストで示します。<br /><br /> 2、3、または 4:NULL です。**IndexID**列が更新された統計のインデックス/統計 ID が格納されます。|1|はい|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**型**|**int**|ジョブの種類。|57|はい|  
   

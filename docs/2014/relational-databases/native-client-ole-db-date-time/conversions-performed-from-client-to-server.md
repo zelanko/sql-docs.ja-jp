@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
@@ -12,12 +12,12 @@ ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 887ca3e11fba803c59e44b5846e251957edd0287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176702"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748732"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB を使用して作成されたクライアント アプリケーションと [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) との間で実行される日付または時刻の変換について説明します。  

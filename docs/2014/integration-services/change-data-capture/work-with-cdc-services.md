@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - cdcServ
@@ -13,12 +12,12 @@ ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c500fc1313fb4f5d6cbf6cd6f8c19a8662069e0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44d0a2833add4680636966cea805c19af32f267
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105422"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756934"
 ---
 # <a name="work-with-cdc-services"></a>CDC Service の操作
   CDC Service 構成コンソールを使用すると、新しい CDC サービスを作成したり、CDC 用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを準備したりできます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48105422"
  [新しい Oracle CDC Service] ダイアログ ボックスが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [CDC サービスを操作する方法](work-with-cdc-services.md)   
+ [CDC Service の操作方法](work-with-cdc-services.md)   
  [Oracle CDC Service の作成と編集](create-and-edit-an-oracle-cdc-service.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], changing e-mail address
@@ -13,12 +12,12 @@ ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3bf1021262a4cf972a93b04f9f2f9f8905df7dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 209462ef2a49a29e5c5216ba1ce89887079bd824
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215792"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782364"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>ユーザーの電子メール アドレスを変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、通知の送信先の電子メール アドレスおよび通知電子メールの既定の形式を変更できます。  
@@ -44,9 +43,9 @@ ms.locfileid: "48215792"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [機能領域アクセス許可を割り当てる&#40;マスター データ サービス&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [機能領域の権限を割り当てる (マスター データ サービス)](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ &#40;マスター データ サービス&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [セキュリティ (マスター データ サービス)](../../2014/master-data-services/security-master-data-services.md)  
   
   

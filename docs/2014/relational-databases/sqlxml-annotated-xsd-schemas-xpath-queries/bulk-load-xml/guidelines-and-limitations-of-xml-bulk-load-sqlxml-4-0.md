@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
@@ -15,12 +13,12 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f8bb180ef8c0b7483ce8bab27d11804ac81a387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7a569bbc5672b0fc5996507e37ed250721bd2fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082662"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774924"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みのガイドラインと制限 (SQLXML 4.0)
   XML 一括読み込みを使用する場合は、次のガイドラインと制限に留意してください。  
@@ -31,7 +29,7 @@ ms.locfileid: "48082662"
   
 -   XML ドキュメントが適切な形式であるかどうかはチェックされますが、検証は行われません。  
   
-     XML 一括読み込みでは、XML ドキュメントが適切な形式であるかどうか、つまり W3C (World Wide Web Consortium) の XML 1.0 で推奨されている構文要件を満たしているかどうかがチェックされます。 ドキュメントが適切な形式でない場合、XML 一括読み込みの処理は取り消され、エラーが返されます。 ただし、ドキュメントがフラグメントの場合 (ドキュメントに単一のルート要素がない場合) だけは、XML 一括読み込みでドキュメントが読み込まれます。  
+     XML 一括読み込みは、XML ドキュメントも整形式ことがあるかどうかを判断する場合は、XML が World Wide Web Consortium の XML 1.0 勧告の構文の要件に準拠していることを確認するかを確認します。 ドキュメントが適切な形式でない場合、XML 一括読み込みの処理は取り消され、エラーが返されます。 ただし、ドキュメントがフラグメントの場合 (ドキュメントに単一のルート要素がない場合) だけは、XML 一括読み込みでドキュメントが読み込まれます。  
   
      XML 一括読み込みでは、XML データ ファイル内で定義または参照されている XML-Data または DTD スキーマに関して、ドキュメントの検証は行われません。 さらに、XML 一括読み込みでは、指定されるマッピング スキーマに対して XML データ ファイルは検証されません。  
   
@@ -159,7 +157,7 @@ ms.locfileid: "48082662"
   
      マッピング スキーマで指定されているテーブルは、新しく作成されます (データベースは存在する必要があります)。 1 つ以上のテーブルが既に存在するデータベースの場合 SGDropTables プロパティは、これらの既存のテーブルを削除して再作成するかどうかを決定します。  
   
--   SchemaGen プロパティを指定する場合 (たとえばを SchemaGen = true)、マッピング スキーマで指定されているテーブルが作成されます。 1 つの例外を SchemaGen がこれらのテーブル (PRIMARY KEY/FOREIGN KEY 制約) など、制約を作成できませんリレーションシップの主キーを構成する XML ノードが XML 型の ID を持つものとして定義されている場合 (つまり、`type="xsd:ID"`の。XSD) SGUseID プロパティを SchemaGen、True に設定しからの主キーの作成だけでなく、ID の入力ノードが、マッピング スキーマ リレーションシップから主キー/外部キーのリレーションシップが作成されます。  
+-   SchemaGen プロパティを指定する場合 (たとえばを SchemaGen = true)、マッピング スキーマで指定されているテーブルが作成されます。 ただし、SchemaGen が 1 つの例外でこれらのテーブル (PRIMARY KEY/FOREIGN KEY 制約) など、制約を作成できません。リレーションシップの主キーを構成する XML ノードが XML 型の ID を持つものとして定義されているかどうか (つまり、 `type="xsd:ID"` XSD の) SGUseID プロパティを SchemaGen、True に設定し、ID からの主キーの作成だけでなく入力ノード、が、マッピング スキーマ リレーションシップから主キー/外部キーのリレーションシップが作成されます。  
   
 -   SchemaGen は使いません XSD スキーマ ファセットと機能拡張、リレーショナルを生成する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]スキーマ。  
   

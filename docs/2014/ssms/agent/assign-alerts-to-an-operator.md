@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -17,12 +17,12 @@ ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62479a884be565fd58bc931f821cb049ea0bf8a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102940"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762854"
 ---
 # <a name="assign-alerts-to-an-operator"></a>オペレーターへの警告の割り当て
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告をオペレーターに割り当てて、ジョブに関する通知を受信できるようにする方法について説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "48102940"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48102940"
   
 3.  プラス記号をクリックして **[オペレーター]** フォルダーを展開します。  
   
-4.  警告を割り当てるオペレーターを右クリックし、 **[プロパティ]** を選択して、 **[通知]** ページを選択します。  
+4.  警告を割り当てるオペレーターを右クリックし、**[プロパティ]** を選択して、**[通知]** ページを選択します。  
   
-5.  *[<オペレーター名> のプロパティ]* ダイアログ ボックスで、**[ページの選択]** の **[通知]** を選択します。  
+5.  [_operator_name_ **のプロパティ]** ダイアログ ボックスで、**[ページの選択]** の **[通知]** を選択します。  
   
-6.  **[このユーザーに送信された通知の表示方法]** で、 **[警告]** を選択してこのオペレーターに送信する警告の一覧を表示するか、または **[ジョブ]** を選択してこのオペレーターに通知を送信するジョブの一覧を表示します。 **[電子メール]**、 **[ポケットベル]**、 **[Net Send]** のチェック ボックスの中から 1 つ以上を選択し、必要に応じて通知ごとに通知方法を定義します。  
+6.  **[このユーザーに送信された通知の表示方法]** で、 **[警告]** を選択してこのオペレーターに送信する警告の一覧を表示するか、または **[ジョブ]** を選択してこのオペレーターに通知を送信するジョブの一覧を表示します。 1 つ以上の必要に応じて、各通知の通知方法を定義する次のチェック ボックスを選択します。**電子メール**、**ポケットベル**、または**Net send**します。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   
@@ -86,13 +86,13 @@ ms.locfileid: "48102940"
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert)  
-    -- This example assumes that Test Alert already exists and that François Ajenstat is a valid operator name.  
+    -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_add_notification  
      @alert_name = N'Test Alert',  
-     @operator_name = N'François Ajenstat',  
+     @operator_name = N'Fran??ois Ajenstat',  
      @notification_method = 1 ;  
     GO  
     ```  

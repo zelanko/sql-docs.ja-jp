@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f017c96bd10feb0ac794041d11c449b199ce196b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147412"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757714"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>トレースの作成 (SQL Server Profiler)
   このトピックでは、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースを作成する方法について説明します。  
@@ -51,14 +50,14 @@ ms.locfileid: "48147412"
   
 5.  必要に応じて、**[トレース停止時刻を有効にする]** チェック ボックスをオンにして、停止日時を指定します。  
   
-6.  イベント、データ列、フィルターを追加または削除するには、**[イベントの選択]** タブをクリックします。 詳細については、「[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)」を参照してください。  
+6.  イベント、データ列、フィルターを追加または削除するには、**[イベントの選択]** タブをクリックします。 詳細については、以下をご覧ください。[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
   
 7.  **[実行]** をクリックしてトレースを開始します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler の実行に必要な権限](permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートと権限](sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Profiler](sql-server-profiler.md)   
+ [[SQL Server Profiler]](sql-server-profiler.md)   
  [トレースと Windows パフォーマンス ログ データの関連付け &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

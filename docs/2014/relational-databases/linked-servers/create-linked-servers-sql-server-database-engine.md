@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120209"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766614"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
@@ -82,9 +81,9 @@ ms.locfileid: "49120209"
     > [!NOTE]  
     >  **SQL Server** インスタンスが既定のインスタンスの場合は、 **SQL Server**インスタンスをホストするコンピューターの名前を入力します。 **SQL Server** が名前付きインスタンスの場合は、コンピューターの名前とインスタンスの名前を入力します (例: **Accounting\SQLExpress**)。  
   
-3.  **サーバーの種類**領域で、 **SQL Server**リンク サーバーが別のインスタンスであることを示す**SQL Server**します。  
+3.  **[サーバーの種類]** 領域で **[SQL Server]** をクリックし、リンク サーバーが別の **SQL Server** インスタンスであることを指定します。  
   
-4.  **[セキュリティ]** ページで、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリンク サーバーに接続するときに使用するセキュリティ コンテキストを指定します。 ユーザーがドメイン ログインを使用して接続するドメイン環境では、 **[ログインの現在のセキュリティ コンテキストを使用する]** を選択することが最適な場合が多くあります。 ユーザーが **SQL Server** ログインを使用して元の **SQL Server** に接続する場合は、 **[このセキュリティ コンテキストを使用する]** をクリックして、リンク サーバーでの認証に必要な資格情報を指定することが最適です。  
+4.  **[セキュリティ]** ページで、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリンク サーバーに接続するときに使用するセキュリティ コンテキストを指定します。 ユーザーがドメイン ログインを使用して接続するドメイン環境では、**[ログインの現在のセキュリティ コンテキストを使用する]** を選択することが最適な場合が多くあります。 ユーザーが **SQL Server** ログインを使用して元の **SQL Server** に接続する場合は、 **[このセキュリティ コンテキストを使用する]** をクリックして、リンク サーバーでの認証に必要な資格情報を指定することが最適です。  
   
      **[ローカル ログイン]**  
      リンク サーバーに接続できるローカル ログインを指定します。 ローカル ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインまたは Windows 認証ログインのいずれかを使用するログインにすることができます。 この一覧を使用して、特定のログインへの接続を制限することも、一部のログインが別のログインとして接続できるように設定することもできます。  
@@ -179,7 +178,7 @@ ms.locfileid: "49120209"
      プロバイダーに対して起動できるのはレベル 0 の OLE DB インターフェイスだけです。  
   
      **[InProcess 許可]**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、インプロセス サーバーとしてプロバイダーのインスタンスを作成できます。 このオプションを設定しない場合、既定の動作として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス外でプロバイダーのインスタンスが作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でプロバイダーのインスタンスが作成されると、プロバイダーでエラーが発生しても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスは影響を受けません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でインスタンスが作成されたプロバイダーでは、長い列 (`text`、`ntext`、または `image`) を参照する更新や挿入はできません。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、インプロセス サーバーとしてプロバイダーのインスタンスを作成できます。 このオプションを設定しない場合、既定の動作として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス外でプロバイダーのインスタンスが作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でプロバイダーのインスタンスが作成されると、プロバイダーでエラーが発生しても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスは影響を受けません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でインスタンスが作成されたプロバイダーでは、長い列 (`text`、`ntext`、または `image`) を参照する更新や挿入はできません。  
   
      **[トランザクション更新以外]**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、 **ITransactionLocal** を利用できない場合でも更新を実行できます。 このオプションがオンの場合、プロバイダーはトランザクションをサポートしないので、プロバイダーに対する更新を回復することはできません。  
@@ -221,7 +220,7 @@ ms.locfileid: "49120209"
   
     ```  
   
-##  <a name="FollowUp"></a> 補足情報: リンク サーバーの作成後に実行する手順  
+##  <a name="FollowUp"></a> フォローしてください：リンク サーバーの作成後に実行する手順  
   
 #### <a name="to-test-the-linked-server"></a>リンク サーバーをテストするには  
   

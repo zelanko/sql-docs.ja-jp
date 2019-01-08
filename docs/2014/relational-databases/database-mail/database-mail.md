@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - architecture [SQL Server], Database Mail
@@ -15,12 +14,12 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fea03f3328d2cf19a0f17d4e4339a670b2af9b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132922"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787974"
 ---
 # <a name="database-mail"></a>データベース メール
   データベース メールは、[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]から電子メールを送信するためのエンタープライズ ソリューションです。 データベース メールを使用すると、データベース アプリケーションからユーザーに電子メールを送信できます。 メッセージにはクエリ結果を含めることができ、ネットワーク上にあるリソースのファイルも含めることができます。  
@@ -42,37 +41,37 @@ ms.locfileid: "48132922"
   
 ### <a name="scalability"></a>スケーラビリティ  
   
--   バックグラウンド配信: データベース メールでは、バックグラウンド配信または非同期配信が提供されています。 **sp_send_dbmail** を呼び出してメッセージを送信すると、データベース メールによって [!INCLUDE[ssSB](../../includes/sssb-md.md)] のキューに要求が追加されます。 ストアド プロシージャが直ちに返されます。 外部の電子メール コンポーネントが要求を受信し、電子メールを配信します。  
+-   バック グラウンド配信:データベース メールでは、バックグラウンド配信または非同期配信が提供されています。 **sp_send_dbmail** を呼び出してメッセージを送信すると、データベース メールによって [!INCLUDE[ssSB](../../includes/sssb-md.md)] のキューに要求が追加されます。 ストアド プロシージャが直ちに返されます。 外部の電子メール コンポーネントが要求を受信し、電子メールを配信します。  
   
--   複数のプロファイル: データベース メールを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に複数のプロファイルを作成できます。 オプションで、メッセージを送信するときにデータベース メールが使用するプロファイルを選択できます。  
+-   複数のプロファイル:データベース メールを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に複数のプロファイルを作成できます。 オプションで、メッセージを送信するときにデータベース メールが使用するプロファイルを選択できます。  
   
--   複数のアカウント: 各プロファイルに、複数のフェールオーバー アカウントを含めることができます。 別々のアカウントを持つ別々のプロファイルを構成して、複数の電子メール サーバーで電子メールを配信できます。  
+-   複数のアカウント:各プロファイルに、複数のフェールオーバー アカウントを含めることができます。 別々のアカウントを持つ別々のプロファイルを構成して、複数の電子メール サーバーで電子メールを配信できます。  
   
--   64 ビット互換性: データベース メールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 64 ビット インストールで完全にサポートされています。  
+-   64 ビット互換性:データベース メールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 64 ビット インストールで完全にサポートされています。  
   
 ### <a name="security"></a>セキュリティ  
   
--   既定でオフ: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部からのアクセスを縮小するために、データベース メールのストアド プロシージャは既定で無効になっています。  
+-   既定でオフします。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部からのアクセスを縮小するために、データベース メールのストアド プロシージャは既定で無効になっています。  
   
 -   メールのセキュリティ: データベース メールを送信するには、 **msdb** データベースの **DatabaseMailUserRole** データベース ロールのメンバーである必要があります。  
   
--   プロファイルのセキュリティ: データベース メールでは、メール プロファイルにセキュリティが適用されます。 データベース メール プロファイルにアクセスする **msdb** データベース ユーザーまたはグループを選択することによって、 特定のユーザーまたは **msdb**のすべてのユーザーにアクセスを許可できます。 プライベート プロファイルでは、指定した一覧のユーザーにアクセスが制限されます。 パブリック プロファイルは、データベースのすべてのユーザーがアクセスできます。  
+-   プロファイルのセキュリティ:データベース メールでは、メール プロファイルにセキュリティが適用されます。 データベース メール プロファイルにアクセスする **msdb** データベース ユーザーまたはグループを選択することによって、 特定のユーザーまたは **msdb**のすべてのユーザーにアクセスを許可できます。 プライベート プロファイルでは、指定した一覧のユーザーにアクセスが制限されます。 パブリック プロファイルは、データベースのすべてのユーザーがアクセスできます。  
   
--   添付ファイル サイズ ガバナー: データベース メールでは、添付ファイル サイズの制限を構成できます。 この制限は、 [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) ストアド プロシージャを使用して変更できます。  
+-   添付ファイル サイズ ガバナー:データベース メールでは、添付ファイル サイズの制限を構成できます。 この制限は、 [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) ストアド プロシージャを使用して変更できます。  
   
--   禁止するファイル拡張子: データベース メールでは、禁止するファイル拡張子の一覧が保持されます。 ユーザーは、一覧に含まれている拡張子を持つファイルを添付できません。 この一覧は、sysmail_configure_sp を使用して変更できます。  
+-   ファイルの拡張機能を使用できません。データベース メールでは、禁止するファイル拡張子の一覧が保持されます。 ユーザーは、一覧に含まれている拡張子を持つファイルを添付できません。 この一覧は、sysmail_configure_sp を使用して変更できます。  
   
 -   データベース メールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジン サービス アカウントで実行されます。 フォルダー内のファイルを電子メールに添付するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンのアカウントに、対象ファイルのあるフォルダーへのアクセス権限が必要です。  
   
 ### <a name="supportability"></a>サポート性  
   
--   統合された構成: データベース メールでは、電子メール アカウントの情報が [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]に保存されます。  
+-   統合の構成:データベース メールでは、電子メール アカウントの情報が [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]に保存されます。  
   
 -   ログ記録。 電子メールの利用状況は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Microsoft Windows アプリケーション イベント ログ、および **msdb** データベースのテーブルに記録されます。  
   
--   監査: データベース メールでは、送信したメッセージおよび添付ファイルのコピーが **msdb** データベースに保存されます。 データベース メールの利用状況の監査や、保存されているメッセージの確認を簡単に行うことができます。  
+-   監査: データベース メール メッセージ送信された添付ファイルのコピーを保持する、 **msdb**データベース。 データベース メールの利用状況の監査や、保存されているメッセージの確認を簡単に行うことができます。  
   
--   HTML のサポート: データベース メールを使用すると、HTML 形式の電子メールを送信できます。  
+-   HTML のサポート:データベース メールを使用すると、HTML 形式の電子メールを送信できます。  
   
 
   

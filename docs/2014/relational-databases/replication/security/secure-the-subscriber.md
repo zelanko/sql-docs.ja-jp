@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], security
@@ -15,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fccfdf6883a0b5c049824f75086a97a2533c3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217789"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780084"
 ---
 # <a name="secure-the-subscriber"></a>サブスクライバーのセキュリティ保護
   マージ エージェントとディストリビューション エージェントはサブスクライバーに接続します。 これらの接続は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインまたは Windows ログインのコンテキスト下で行われます。 最低限必要な権限のみを与え、かつ、すべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを提供することが重要です。 各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](replication-agent-security-model.md)」を参照してください。  
@@ -72,7 +71,7 @@ ms.locfileid: "48217789"
     > [!IMPORTANT]  
     >  サブスクライバーへの接続には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用し、各サブスクライバーへの接続にはそれぞれ異なるアカウントを指定してください。 プル サブスクリプションを使用する場合は、レプリケーションによって、常に Windows 認証を使用するように接続が設定されます (プル サブスクリプションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が必要なサブスクライバーのメタデータにレプリケーションからアクセスすることはできません)。 その場合、サブスクリプションを構成した後に、接続で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するように変更してください。  
   
-     詳細については、「トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する方法 (SQL Server Management Studio)」および「[レプリケーションのセキュリティ設定の表示および変更](view-and-modify-replication-security-settings.md)」を参照してください。  
+     詳細については、次を参照してください。 方法。(SQL Server Management Studio) のトランザクション パブリケーションに対する更新サブスクリプションを作成し、[表示およびレプリケーションのセキュリティ設定を変更](view-and-modify-replication-security-settings.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

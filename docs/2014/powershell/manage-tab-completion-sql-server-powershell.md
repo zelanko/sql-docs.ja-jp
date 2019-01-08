@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1815b3e4e45fb08430af1c22a39a125cd8d81595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155512"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766704"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>タブ補完の管理 (SQL Server PowerShell)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインが 3 つの変数を導入 (`$SqlServerMaximumTabCompletion`、 `$SqlServerMaximumChildItems`、および`$SqlServerIncludeSystemObjects`) Windows PowerShell のタブ補完を制御します。 入力された文字列で名前が始まるアイテムの一覧を返すタブ補完によって、入力の手間を削減することができます。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインには、Windows PowerShell のタブ補完を制御するための 3 つの変数 (`$SqlServerMaximumTabCompletion`、`$SqlServerMaximumChildItems`、および `$SqlServerIncludeSystemObjects`) が追加されました。 入力された文字列で名前が始まるアイテムの一覧を返すタブ補完によって、入力の手間を削減することができます。  
   
 ## <a name="before-you-begin"></a>はじめに  
  Windows PowerShell のタブ補完機能では、パスやコマンドレット名の一部を入力して Tab キーを押すと、既に入力した部分に一致する名前のアイテムの一覧を取得できます。 名前の残りの部分を入力しなくても、その一覧からアイテムを選択できます。  

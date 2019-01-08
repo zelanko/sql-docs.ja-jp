@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 043f431287f4cc60c32e81ea9abe2d1076713c60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 386d9ac822b1524169021c5f9c6f27b0701221fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152142"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770554"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose イベント クラス
   カーソルを閉じるイベントは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がカーソルを閉じて割り当てを解除したときに発生します。 **CursorClose** イベント クラスは、アプリケーション プログラミング インターフェイス (API) カーソルで発生する、カーソルを閉じるイベントを記述しています。 このイベント クラスは、ODBC、OLE DB、または DB-Library によって実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル ステートメントが終了したときに発生します。  

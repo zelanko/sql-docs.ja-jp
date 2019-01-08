@@ -11,15 +11,15 @@ ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ff5ee3c22a01b0b1963f1ca6021e72502aa377b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a0a8457dfde0090ac0d88d12079e88995b39efb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724120"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507450"
 ---
 # <a name="standard-database-access-architectures"></a>標準のデータベース アクセス アーキテクチャ
-前のセクションで説明されているデータベースへのアクセス コンポーネントを調べて、結局のところその 2 つの: プログラミング インターフェイスと、データ ストリーム プロトコル: は標準化が適しています。 その他の 2 つのコンポーネント-IPC メカニズムとネットワーク プロトコル: 低いレベルで存在するだけでなくが、両方のネットワークとオペレーティング システムに大きく依存します。 3 つ目のアプローチもありますが、ゲートウェイ-標準化の可能性を提供します。  
+前のセクションで説明されているデータベースへのアクセス コンポーネントを調べて、結局プログラミング - そのうち 2 つのインターフェイスをデータ ストリーム プロトコルには、標準化の候補。 その他の 2 つのコンポーネント - IPC メカニズムおよびネットワーク プロトコルでは、低いレベルでだけでなくに存在するはどちらも、ネットワークとオペレーティング システムに大きく依存します。 標準化の可能性を提供する 3 番目の方法 - ゲートウェイでもあります。  
   
  このセクションでは、次のトピックを扱います。  
   

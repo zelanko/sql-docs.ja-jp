@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
@@ -13,19 +12,19 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daaa7a1ffd22de93ade868ad10c8bcf3db8eb7d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bdc6c232814f3d45330a1cb0982f207272f39c3f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200198"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764094"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)
   使用して、**データ型マッピングの確認**ページ、ウィザードを実行してソース データのコピー先との互換性があるデータ型変換についての詳細情報を確認します。 この情報には、成功すると予測される変換と、エラーまたは切り捨てが発生する可能性がある変換を区別するための視覚的な手掛かりが含まれています。 変換ごとに、ウィザードによって提案された変換を受け入れるかどうかを決定したり、発生したエラーの処理方法を指定したりすることができます。  
   
  このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と、ウィザードを起動するオプションについて説明しますを参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
- 目的、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードは、先のソースからデータをコピーします。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **データ型マッピングの確認**ページから成る、**テーブル** ボックスの一覧を**データ型マッピング**リスト、およびエラー処理オプション。  
@@ -53,7 +52,7 @@ ms.locfileid: "48200198"
 |**変換先列**|変換先列の名前を表示します。|  
 |**変換先の型**|変換先列のデータ型を表示します。|  
 |**[変換]**|計画した変換を続行する必要があるかどうかを指定します。<br /><br /> 計画した変換をウィザードで続行するには、このチェック ボックスをオンにします。<br /><br /> データ型の変換を取り消すには、このチェック ボックスをオフにします。|  
-|**エラー時**|ウィザードでエラーを処理する方法を指定します。<br /><br /> 使用して、 **エラー時 (グローバル)** 設定します。<br /><br /> エラーが発生して失敗し、インポート処理またはエクスポート処理を停止します。<br /><br /> エラーを無視します。|  
+|**On Error**|ウィザードでエラーを処理する方法を指定します。<br /><br /> 使用して、 **エラー時 (グローバル)** 設定します。<br /><br /> エラーが発生して失敗し、インポート処理またはエクスポート処理を停止します。<br /><br /> エラーを無視します。|  
 |**切り捨て時**|ウィザードで切り捨てを処理する方法を指定します。<br /><br /> 使用して、 **切り捨て時 (グローバル)** 設定します。<br /><br /> エラーで失敗して、インポートを停止またはエクスポート処理<br /><br /> 切り捨てを無視します。|  
   
  データの特定の列の変換に関する詳細情報を表示するには、一覧内の任意の行をダブルクリックします。 **[列変換の詳細]** ダイアログ ボックスが開き、列の詳細な変換情報が表示されます。  

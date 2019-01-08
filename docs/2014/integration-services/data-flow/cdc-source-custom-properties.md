@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c358e493a7e0c16207884754cd8008f60b17720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e665c63a2772494b1d2c9ac526b8d031ab97dca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163012"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757004"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC ソースのカスタム プロパティ
   次の表は、CDC ソースのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, encryption
@@ -14,12 +14,12 @@ ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f548d2de0206ae324bd9aede95c4375119a8aad2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9443319c17c2148284d606aebcad89db38de12eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143982"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781474"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>対象サーバーでの暗号化オプションの設定
   マスター サーバーと一部またはすべての対象サーバーの間で SSL (Secure Sockets Layer) 暗号通信の証明書を使用できない場合、これらの間のチャネルを暗号化するには、必要なセキュリティ レベルを使用するように対象サーバーを構成します。  

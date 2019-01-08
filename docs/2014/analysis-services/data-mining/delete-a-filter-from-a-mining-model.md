@@ -13,12 +13,12 @@ ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02bf9026d14f759b5e5931b132faae3ee0fec1a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb98e29f320a64518c968f3bbc35b590c96a891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082942"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508400"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>マイニング モデルからのフィルターの削除
   マイニング モデルに対するフィルターを作成する場合は、データ ソース ビュー内のデータのサブセットに対するモデルを作成できます。 フィルターは、元のデータのサブセットでモデルの精度をテストするためにも役立ちます。  
@@ -33,7 +33,7 @@ ms.locfileid: "48082942"
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     または  
+     - または -  
   
      モデルを選択します。 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48082942"
 -   **[フィルター エディター]** ダイアログ ボックスで、グリッドの任意の行を右クリックし、 **[すべて削除]** をクリックします。  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>[プロパティ] ウィンドウを使用したモデル フィルターの操作  
- フィルター全体を削除する場合、フィルター エディターのダイアログ ボックスを開く必要はありません。 作成したフィルター条件が表示されます、`Filter`マイニング モデルのプロパティ。  
+ フィルター全体を削除する場合、フィルター エディターのダイアログ ボックスを開く必要はありません。 作成したフィルター条件は、マイニング モデルの `Filter` プロパティで使用できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ではマイニング モデルのプロパティを表示できますが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ではできません。  
@@ -60,8 +60,8 @@ ms.locfileid: "48082942"
 3.  BackSpace キーまたは Del キーを押します。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデルからケース データにドリルスルーします。](drill-through-to-case-data-from-a-mining-model.md)   
+ [マイニング モデルからケース データへのドリルスルー](drill-through-to-case-data-from-a-mining-model.md)   
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
- [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)  
+ [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)  
   
   

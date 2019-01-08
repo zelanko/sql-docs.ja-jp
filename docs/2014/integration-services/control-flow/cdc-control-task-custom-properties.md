@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70ad2bc83f1a77bc9649e3747c309ad6522b2007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 327e02721efaeb480d2b816de6af8135e1d1a80f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196362"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771104"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 制御タスクのカスタム プロパティ
   次の表は、CDC 制御タスクのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
@@ -34,7 +33,7 @@ ms.locfileid: "48196362"
 |CommandTimeOut|整数 (integer)|この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと通信する際に使用されるタイムアウト (秒単位) を示します。 この値は、データベースからの応答時間が非常に遅い場合に使用されるため、既定値 (30 秒) では不十分です。|  
   
 ## <a name="see-also"></a>参照  
- [CDC 制御タスク](cdc-control-task.md)   
- [CDC 制御タスク エディター](../cdc-control-task-editor.md)  
+ [CDC Control Task](cdc-control-task.md)   
+ [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

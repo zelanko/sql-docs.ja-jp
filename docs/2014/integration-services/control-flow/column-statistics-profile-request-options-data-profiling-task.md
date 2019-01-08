@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16e1e0d68cf8f5253d03fc6a8d2f36daaafca08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 046e1c9d97cf7f508fa69e67bfe7369e7186e137
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110122"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768464"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>[列統計プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列統計プロファイル要求]** のオプションを設定できます。 列統計プロファイルは、最小、最大、平均値、および数値の列、および最低限の標準偏差、最大などの統計を報告`datetime`列。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。  
@@ -71,7 +70,7 @@ ms.locfileid: "48110122"
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
 ## <a name="see-also"></a>参照  
- [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+ [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
+ [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
   
   

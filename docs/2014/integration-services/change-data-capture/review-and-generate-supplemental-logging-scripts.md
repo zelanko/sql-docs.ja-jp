@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - scripts
@@ -13,12 +12,12 @@ ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a622bdebc82f1c557a80ea43a18f474a852cca9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d4731cbc7b6b4a761de3c5d0e3777a028c8a3c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048992"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777086"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>補足ログ スクリプトの確認および生成
   補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、**[スクリプト]** タブを使用します。  
@@ -56,6 +55,6 @@ ms.locfileid: "48048992"
   
 ## <a name="see-also"></a>参照  
  [CDC インスタンスのプロパティを編集する方法](how-to-edit-the-cdc-instance-properties.md)   
- [スクリプトを実行するための Oracle 資格情報](oracle-credentials-for-running-script.md)  
+ [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
   
   

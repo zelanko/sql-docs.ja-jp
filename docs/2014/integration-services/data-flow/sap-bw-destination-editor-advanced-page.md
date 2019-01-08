@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 404fdbe10430e09ad2be96ec31b45c4bbf563260
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73cd576233301131191f1b0de77fbec1567edc5e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159612"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773095"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>[SAP BW 変換先エディター] ([詳細設定] ページ)
   パッケージのサイズやタイムアウトの情報などの詳細を設定するには、**[SAP BW 変換先エディター]** の **[詳細設定]** ページを使用します。  
@@ -55,8 +54,8 @@ ms.locfileid: "48159612"
  変換先がインフォパッケージを開始せず、SAP Netweaver BW システムがデータの読み込みを開始した通知だけを待機することを指定します。  
   
 ## <a name="see-also"></a>参照  
- [SAP BW 変換先エディター&#40;接続マネージャー ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)   
- [SAP BW 変換先エディター&#40;マッピング ページ&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 変換先エディター &#40;[マッピング] ページ&#41;](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 変換先エディター &#40;[エラー出力] ページ&#41;](sap-bw-destination-editor-error-output-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -16,12 +15,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c68295673fb34c0257a9772540282b8e814df03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169792"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772204"
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーション エージェント プロファイルを操作する方法について説明します。 各レプリケーション エージェントの動作は、エージェント プロファイルで設定できる一連のパラメーターによって制御されます。 各エージェントには既定のプロファイルがあり、その一部には事前に定義された追加のプロファイルがあります。1 つのエージェントに対しては、1 つのプロファイルのみがアクティブになります。  
@@ -62,7 +61,7 @@ ms.locfileid: "48169792"
   
     -   プロファイルの削除  
   
--   **フォロー アップ:** [エージェント パラメーターを変更した後](#FollowUp)  
+-   **補足情報:**[エージェントのパラメーターを変更した後](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48169792"
   
 1.  **[エージェント プロファイル]** ダイアログ ボックスにエージェントのプロファイルが複数表示されている場合は、エージェントを 1 つ選択します。  
   
-2.  プロファイルの横にあるプロパティ ボタン (**[...]**) をクリックします。  
+2.  プロファイルの横にあるプロパティ ボタン **[...]** をクリックします。  
   
 3.  **[\<ProfileName> プロファイル プロパティ]** ダイアログ ボックスにパラメーターと値が表示されます。  
   
@@ -245,7 +244,7 @@ ms.locfileid: "48169792"
   
     -   (省略可) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - プロファイルの説明。  
   
-    -   (省略可能)<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -このプロパティを設定`true`場合この新しいエージェント ジョブをすべて<xref:Microsoft.SqlServer.Replication.AgentType>既定でこのプロファイルを使用します。  
+    -   (省略可) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - この <xref:Microsoft.SqlServer.Replication.AgentType> の新しいエージェント ジョブすべてが、既定でこのプロファイルを使用する場合、このプロパティを `true` に設定します。  
   
 4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> メソッドを呼び出し、サーバーにプロファイルを作成します。  
   
@@ -279,13 +278,13 @@ ms.locfileid: "48169792"
   
 2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> クラスのインスタンスを作成します。 プロファイルの名前を <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> に設定し、手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>に設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが戻る場合`false`、指定した名前が誤ってまたはプロファイルがサーバー上に存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが `false` を返す場合、指定された名前が誤っているか、プロファイルがサーバーに存在していません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> プロパティが <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>に設定されていることを確認します。これは、顧客のプロファイルを表します。 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> の値が <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>であるプロファイルは削除しないでください。  
   
 5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> メソッドを呼び出して、このオブジェクトで表されるユーザー定義プロファイルをサーバーから削除します。  
   
-##  <a name="FollowUp"></a> フォロー アップ: エージェント パラメーターを変更した後  
+##  <a name="FollowUp"></a> フォローしてください：エージェントのパラメーターを変更した後  
  エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  

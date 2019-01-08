@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
@@ -22,12 +21,12 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 288eb3b2e8e8b86d27c50efdaf6a1f6a2754e91d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76157486751a08d17cf46de312f63e6e41dc3cb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140728"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785234"
 ---
 # <a name="integration-services-transformations"></a>Integration Services の変換
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の変換とは、パッケージのデータ フロー内にある、データを集計、マージ、配信、および変更するコンポーネントのことです。 変換では、参照操作を実行してサンプル データセットを生成することもできます。 このセクションでは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換と、その機能について説明します。  

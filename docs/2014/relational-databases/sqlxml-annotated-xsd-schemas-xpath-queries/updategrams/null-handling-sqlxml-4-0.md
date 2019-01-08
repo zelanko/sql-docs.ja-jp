@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - updg:nullvalue attribute
@@ -17,12 +15,12 @@ ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a6da64b6a626da7dcdc3ff8b29c9e291b8684b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59110e6686307e9555355fb72fefdbf6099bbc69
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160042"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767324"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL の取り扱い (SQLXML 4.0)
   XML 構文では、NULL は "存在しない" ことを表します。 たとえば、属性または要素値が NULL の場合、その属性または要素は XML ドキュメントに存在しません。[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML では、`updg:nullvalue` 属性を使用して、要素または属性値に NULL を指定できます。  
@@ -44,7 +42,7 @@ ms.locfileid: "48160042"
   
  パラメーターをアップデートグラムに渡すときには、パラメーター値として NULL を指定できます。 これを行うには、`nullvalue` ブロックに `<updg:header>` 属性を指定します。 例については、次を参照してください。[アップデート グラムにパラメーターを渡す&#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.savedtspackage.f1
@@ -13,12 +12,12 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b8ef62839d7379c35b55af7bcb65ab46e4b455d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a8211f27d3ea5377d0f68375ecb75aca5a83e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048233"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747944"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
   使用して、 **SSIS パッケージの保存**名前、説明、および保存するページ、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) にパッケージ化、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`データベースまたはファイルを持つ、.dtsx拡張機能。  
@@ -38,7 +37,7 @@ ms.locfileid: "48048233"
  パッケージの説明を指定します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、パッケージの目的について記述することをお勧めします。  
   
  **移行先**  
- ターゲットを表示 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはファイル)、変換先ファイルの指定されていた。  
+ 保存先ファイルとしてあらかじめ指定されているターゲット ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはファイル) を表示します。  
   
 ## <a name="target-dynamic-options"></a>保存先の動的オプション  
   
@@ -50,13 +49,13 @@ ms.locfileid: "48048233"
  保存先として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択した場合は、Windows 統合認証を使用してサーバーに接続するかどうかを指定します。 これは、推奨される認証方法です。  
   
  **[SQL Server 認証を使用する]**  
- 選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、SQL Server 認証を使用して、サーバーに接続するかどうかを指定します。  
+ 保存先として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択した場合は、SQL Server 認証を使用してサーバーに接続するかどうかを指定します。  
   
  **ユーザー名**  
- 選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、および SQL Server 認証の種類を指定した、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー名。  
+ 保存先として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択し、SQL Server 認証を使用してサーバーに接続することを指定した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザー名を入力します。  
   
  **Password**  
- 選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、および SQL Server 認証の種類を指定した、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パスワード。  
+ 保存先として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択し、SQL Server 認証を使用してサーバーに接続することを指定した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパスワードを入力します。  
   
 ### <a name="target--file-system"></a>[変換先] = [ファイル システム]  
  **[ファイル名]**  

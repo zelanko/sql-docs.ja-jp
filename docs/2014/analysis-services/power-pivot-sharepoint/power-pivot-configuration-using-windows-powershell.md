@@ -11,12 +11,12 @@ ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f61c87bdb1790b254ca024132d7ed1f90aa5e985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3e0cdae7e9f57a7bfd62a3a0e947c43ced0b8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164272"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530655"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Windows PowerShell を使用した PowerPivot の構成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]のインストールを構成するために使用できる Windows PowerShell コマンドレットが含まれています。 PowerShell によりインストールを完全に構成するには、SharePoint コマンドレットと PowerPivot for SharePoint コマンドレットの両方を使用する必要があります。 構成の大部分は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ツールのいずれかを使用して実行することができます。 ツールの詳細については、次を参照してください。 [PowerPivot 構成ツール](power-pivot-configuration-tools.md)します。  
@@ -46,7 +46,7 @@ ms.locfileid: "48164272"
   
     -   SharePoint モードで構成された SQL Server 2012 Analysis Services サーバーおよび SharePoint 2010 では、17 個のコマンドレットを使用できます。  
   
-     返された一覧にコマンドがない場合、または「`get-help could not find *powerpivot* in a help file in this session.`」と同様のエラー メッセージが表示された場合は、このトピックの次のセクションの「サーバーで PowerPivot コマンドレットを有効にする」を参照してください。  
+     一覧にコマンドが返されないかのようなエラー メッセージを参照してください"`get-help could not find *powerpivot* in a help file in this session.`"、サーバーで PowerPivot コマンドレットを有効にする方法については、このトピックでは、次のセクションを参照してください。  
   
      すべてのコマンドレットに、オンライン ヘルプが用意されています。 `New-PowerPivotServiceApplication` コマンドレットのオンライン ヘルプを表示する方法を次の例に示します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48164272"
 2.  最初のコマンドレットを実行します。  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      コマンドレットにより、ソリューション名、ソリューション ID、および Deployed=False が返されます。 次の手順では、ソリューションを配置します。  
@@ -76,7 +76,7 @@ ms.locfileid: "48164272"
 3.  2 番目のコマンドレットを実行してソリューションを配置します。  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 4.  ウィンドウを閉じます。 **[管理者として実行]** を使用してもう一度ウィンドウを開きます。  

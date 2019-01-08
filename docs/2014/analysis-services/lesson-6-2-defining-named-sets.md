@@ -11,12 +11,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9970c8c086c14dcc49f741e47c48f76f9b9c6f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189132"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507865"
 ---
 # <a name="defining-named-sets"></a>名前付きセットの定義
   名前付きセットとは、ディメンション メンバーのセットを返す多次元式 (MDX) です。 名前付きセットを定義し、キューブ定義の一部として保存できます。さらに、名前付きセットをクライアント アプリケーションで作成することもできます。 名前付きセットは、キューブ データ、算術演算子、数値、関数を組み合わせることによって作成します。 名前付きセットは、クライアント アプリケーションの MDX クエリの中で使用できます。また、サブキューブのセットを定義するときも使用できます。 サブキューブは、クロス結合によるセットのコレクションであり、後続のステートメントに対して、キューブ空間を定義されたサブスペースに制限します。 制限されたキューブ領域の定義は MDX スクリプティングの基本概念です。  
@@ -68,7 +68,7 @@ ms.locfileid: "48189132"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     これで、Exists セット式の最初のセットを定義できました。続いて 2 番目のセット、つまり多数の従業員を含む Reseller ディメンションのメンバーのセットを追加できます。  
+     定義したので、Exists の最初のセット式を設定する、従業員の最大数を含む Reseller ディメンションのメンバーのセットが 2 番目のセットを追加する準備が整いました。  
   
 7.  **メタデータ** タブで、**計算ツール**ウィンドウで、展開**Number of Employees** 、Reseller ディメンションで、展開`Members`を展開し**All Resellers**します。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48189132"
      ![フィルター ペインの 2 つの名前を格納している設定](../../2014/tutorials/media/l6-named-set-05.gif "という名前の 2 つを含むフィルター ウィンドウの設定")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [レッスン 7: 主要業績評価指標 (KPI) の定義](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [レッスン 7:主要業績評価指標を定義する&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>参照  
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   

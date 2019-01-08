@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, properties
@@ -16,12 +14,12 @@ ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63badb45984b754e8f586e30f2d659a840db5d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ec13acbaa0025b871475675140e83363eb64b81
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134727"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759074"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの概要 (SQLXML 4.0)
   SQLXMLOLEDB プロバイダーは、ActiveX Data Objects (ADO) を介して [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 機能へのアクセスを提供する OLE DB プロバイダーです。 ただし、このプロバイダーでは、ADO の "出力ストリームへの書き込み" モードでのみコマンドを実行できます。 SQLXMLOLEDB プロバイダーは行セット プロバイダーではありません。 コマンドを実行するときは adExecuteStream フラグを指定した出力ストリームを使用する ADO に指示を指定してください。  
@@ -39,13 +37,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>SQLXMLOLEDB プロバイダー固有のプロパティ  
  SQLXMLOLEDB プロバイダーでは、次のプロバイダー固有の接続プロパティへのアクセスが提供されます。  
   
-|接続<br /><br /> property|既定<br /><br /> (ある場合)|説明|  
+|接続<br /><br /> property|既定値<br /><br /> (ある場合)|説明|  
 |-----------------------------|----------------------------|-----------------|  
 |データ プロバイダー||OLE DB プロバイダーの PROGID を提供します。SQLXMLOLEDB ではこれを介してコマンドが実行されます。 SQLXML 4.0 および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降、このプロバイダーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 内に含まれているため、このプロパティ値は "SQLNCLI11" に制限されます。 詳細については、「 [SQL Server Native Client プログラミング](../../native-client/sql-server-native-client-programming.md)」を参照してください。|  
   
  SQLXMLOLEDB プロバイダーでは、次のプロバイダー固有のコマンド プロパティへのアクセスが提供されます。  
   
-|コマンド<br /><br /> property|既定<br /><br /> (ある場合)|説明|  
+|コマンド<br /><br /> property|既定値<br /><br /> (ある場合)|説明|  
 |--------------------------|----------------------------|-----------------|  
 |基本パス|""|基本ファイル パスを指定します。 基本ファイル パスは、XML Stylesheet Language (XSL) の場所またはマッピング スキーマ ファイルを指定するときに使用します。 基本ファイルのパスは、XSL またはマッピング スキーマ ファイル、XSL またはマッピング スキーマのプロパティで指定されている相対パスの解決にも使用されます。<br /><br /> このプロパティを使用する例についてを参照してください[を実行する XPath クエリ&#40;SQLXMLOLEDB プロバイダー&#41;](executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |ClientSideXML|False|行セットを XML に変換する処理をサーバーではなくクライアントで行う場合は、このプロパティを True に設定します。 これはパフォーマンスの負荷を中間層に移す場合に便利です。<br /><br /> このプロパティを使用する例についてを参照してください[を実行する SQL クエリ&#40;SQLXMLOLEDB プロバイダー&#41; ](executing-sql-queries-sqlxmloledb-provider.md)または[を実行するテンプレートを含む SQL クエリ&#40;SQLXMLOLEDB プロバイダー&#41; ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
