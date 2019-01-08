@@ -5,8 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c54890fe1ba42a0ca91b37d4cbf048fbb744dc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0927a940b23a906f2dcd5c595326d9b13f065c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806750"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796820"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>明示的階層を作成する (マスター データ サービス)
 
@@ -78,7 +77,7 @@ ms.locfileid: "47806750"
   
 ## <a name="see-also"></a>参照  
  [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [明示的なキャップを持つ派生階層 &#40;マスター データ サービス&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [明示的なキャップを持つ派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [明示的階層名を変更する (マスター データ サービス)](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: データの追加 |Microsoft Docs'
+title: レッスン 2:データの追加 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034681"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401637"
 ---
-# <a name="lesson-2-add-data"></a>レッスン 2: データの追加
+# <a name="lesson-2-add-data"></a>レッスン 2:データを追加する
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは、AdventureWorksDW SQL サンプル データベースに接続、データを選択、プレビューと、データをフィルター処理をモデル ワークスペース データをインポートして SSDT でテーブルのインポート ウィザードを使用します。  
   
-テーブルのインポート ウィザードを使用すると、Access、SQL、Oracle、Sybase、Informix、DB2、Teradata など、さまざまなリレーショナル ソースからデータをインポートできます。 それぞれのリレーショナル ソースからデータをインポートする手順は、以下で説明する手順とそれほど変わりません。 ストアド プロシージャを使用してデータを選択することもできます。 データとデータのソースからインポートすることのさまざまな種類のインポートの詳細については、次を参照してください。[データソース](../analysis-services/tabular-models/data-sources-ssas-tabular.md)します。  
+テーブルのインポート ウィザードを使用すると、さまざまなリレーショナル ソースからデータをインポートできます。アクセス、SQL、Oracle、Sybase、Informix、DB2、Teradata、および詳細。 それぞれのリレーショナル ソースからデータをインポートする手順は、以下で説明する手順とそれほど変わりません。 ストアド プロシージャを使用してデータを選択することもできます。 データとデータのソースからインポートすることのさまざまな種類のインポートの詳細については、次を参照してください。[データソース](../analysis-services/tabular-models/data-sources-ssas-tabular.md)します。  
   
-このレッスンの推定所要時間: **20 分**  
+このレッスンを完了するまでに時間を推定するには。**20 分**  
   
 ## <a name="prerequisites"></a>前提条件  
-このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前の「 [レッスン 1: 新しいテーブル モデル プロジェクトの作成](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)」を完了している必要があります。  
+このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 1:新しいテーブル モデル プロジェクト作成](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)です。  
   
 ## <a name="create-a-connection"></a>接続の作成  
   
@@ -38,7 +38,7 @@ ms.locfileid: "38034681"
     
     ![として-テーブル-レッスン 2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
-    注: 1400 互換性レベル モデルを作成する場合、テーブルのインポート ウィザードではなく新しい Get Data エクスペリエンスが表示されます。 ダイアログ ボックスが表示されます、次の手順とは少し異なりますが、先に進むにことができますをします。 
+    注:1400 互換性レベル モデルを作成する場合は、テーブルのインポート ウィザードではなく新しい Get Data エクスペリエンスを確認します。 ダイアログ ボックスが表示されます、次の手順とは少し異なりますが、先に進むにことができますをします。 
   
 2.  テーブルのインポート ウィザードで [**リレーショナル データベース**、] をクリックして**Microsoft SQL Server** > **次**します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "38034681"
   
 7.  **[データのインポート方法の選択]** ページで、 **[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認します。 テーブルとビューの一覧から選択するには、 **[次へ]** をクリックして、ソース データベース内のすべてのソース テーブルの一覧を表示します。  
   
-8.  **[テーブルとビューの選択]** ページで、 **DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および **FactInternetSales**の各テーブルのチェック ボックスをオンにします。  
+8.  **テーブルおよびビュー**ページで、次のテーブルのチェック ボックスを選択します。**DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および**FactInternetSales**します。  
   
     **[完了]** をクリック **しないでください**。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "38034681"
   
 1.  行を選択、 **DimCustomer**テーブル、およびクリックして**プレビューとフィルター**します。 **[選択したテーブルのプレビュー]** ウィンドウが開き、DimCustomer ソース テーブルのすべての列が表示されます。  
   
-2.  次の列の上部にあるチェック ボックスをオフにします。 **SpanishEducation**、 **FrenchEducation**、 **SpanishOccupation**、 **FrenchOccupation**」を参照してください。 
+2.  次の列の上部にあるチェック ボックスをオフにします。**SpanishEducation**、 **FrenchEducation**、 **SpanishOccupation**、 **FrenchOccupation**します。 
 
     ![として-テーブル-レッスン 2-tiw のクリア](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
@@ -164,7 +164,7 @@ ms.locfileid: "38034681"
 -   Click **[ファイル]** > **[すべてを保存]**」を参照してください。  
   
 ## <a name="whats-next"></a>次の操作
-次のレッスンに移動:[レッスン 3: 日付テーブルとしてマーク](../analysis-services/lesson-3-mark-as-date-table.md)します。
+次のレッスンに移動します。[レッスン 3:日付テーブルとしてマーク](../analysis-services/lesson-3-mark-as-date-table.md)します。
 
   
   

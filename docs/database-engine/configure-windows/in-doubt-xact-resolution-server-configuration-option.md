@@ -15,12 +15,12 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b42584dfc1e77ad6c9e214e8c755828bd758307
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4a61d8d593c9adcedbc454e052817594bab71479
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513789"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209371"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ GO
   
  **in-doubt xact resolution** は拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用して **in-doubt xact resolution** の設定を変更するには、 **show advanced options** を 1 に設定する必要があります。 新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-> [!NOTE]  
+> [!NOTE]
 >  分散トランザクションに関係するすべての [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで、このオプションを同じように構成すると、データの不整合を防ぐことができます。  
   
 ## <a name="see-also"></a>参照  

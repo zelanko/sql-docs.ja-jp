@@ -15,12 +15,12 @@ ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 590cb6da26f0857c62b87542b7890732416aa486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d83edf8ee65b638525c0ddd5ee994a26cfcfbd70
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103992"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545798"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>[エラー メッセージ転送タスク エディター] ([メッセージ] ページ)
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[メッセージ]** ページを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスからインスタンスへ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザー定義エラー メッセージをコピーする際のプロパティを指定できます。 このタスクの詳細については、「 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)」を参照してください。  
@@ -60,9 +60,9 @@ ms.locfileid: "48103992"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
- [エラー メッセージ転送タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [[エラー メッセージ転送タスク エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [SMO 接続マネージャー](connection-manager/smo-connection-manager.md)   
- [エラー メッセージ転送タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [[エラー メッセージ転送タスク エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [SMO 接続マネージャー](connection-manager/smo-connection-manager.md)  
   
   

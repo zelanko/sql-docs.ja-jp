@@ -22,12 +22,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269cc4c9c8459154fd422ed7896304cc3da27db3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cba3e301a98c905b157959094a7075b0e3357d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164522"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512775"
 ---
 # <a name="dimension-relationships"></a>ディメンション リレーションシップ
   ディメンションを使用する場合は、キューブ内にある、キューブ ディメンションとメジャー グループ間のリレーションシップが定義されます。 キューブ ディメンションとは、特定のキューブで使用されるデータベース ディメンションのインスタンスです。 キューブにはキューブ ディメンションを含めることができ、実際、多くの場合は含んでいます。キューブ ディメンションはメジャー グループと直接には関連付けられていませんが、別のディメンションまたは別のメジャー グループを介して間接的にメジャー グループと関連付けられることがあります。 データベース ディメンションまたはメジャー グループがキューブに追加すると[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を調べて、ディメンション テーブルと、キューブのデータ ソース ビューでは、ファクト テーブル間のリレーションシップを調べて、ディメンションの使用法を判別しようとしています。ディメンションの属性間のリレーションシップ。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、検出できるリレーションシップのディメンションの使用法を自動設定します。  
@@ -35,7 +35,7 @@ ms.locfileid: "48164522"
  ディメンションとメジャー グループ間のリレーション シップは、そのリレーション シップに参加しているディメンション テーブルとファクト テーブル、および特定のメジャー グループに含まれているディメンションの粒度を指定する粒度属性で構成されます。  
   
 ## <a name="regular-dimension-relationships"></a>標準ディメンションのリレーションシップ  
- ディメンションのキー列が直接ファクト テーブルと結合されている場合、キューブ ディメンションとメジャー グループ間には標準ディメンションのリレーションシップが存在します。 この直接的なリレーションシップは、基になるリレーショナル データベースの主キー/外部キー リレーションシップに基づきますが、データ ソース ビューで定義されている論理リレーションシップに基づくこともあります。 標準ディメンションのリレーションシップは、従来のスター スキーマ デザインにおけるディメンション テーブルとファクト テーブル間のリレーションシップを表します。 通常のリレーションシップの詳細については、次を参照してください。[標準のリレーションシップとファクト リレーションシップのプロパティを定義](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)します。  
+ ディメンションのキー列が直接ファクト テーブルと結合されている場合、キューブ ディメンションとメジャー グループ間には標準ディメンションのリレーションシップが存在します。 この直接的なリレーションシップは、基になるリレーショナル データベース、プライマリ キーと外部キー リレーションシップに基づきますが、データ ソース ビューで定義されている論理リレーションシップに基づくこともあります。 標準ディメンションのリレーションシップは、従来のスター スキーマ デザインにおけるディメンション テーブルとファクト テーブル間のリレーションシップを表します。 通常のリレーションシップの詳細については、次を参照してください。[標準のリレーションシップとファクト リレーションシップのプロパティを定義](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)します。  
   
 ## <a name="reference-dimension-relationships"></a>参照ディメンション リレーションシップ  
  次の図に示すように、キューブ ディメンションのキー列が別のディメンション テーブルのキーを使用して間接的にファクト テーブルに結合される場合は、このキューブ ディメンションとメジャー グループ間には参照ディメンションのリレーションシップが存在します。  
@@ -61,7 +61,7 @@ ms.locfileid: "48164522"
   
  ![列のテーブルがディメンションをサポートする実際](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "列ディメンションをサポートするには、ファクト テーブル")  
   
- このテーブルには、販売店からの注文を格納する各行の属性情報だけではなく、注文自体についても属性情報が格納されています。 前の図で円で囲まれた属性の識別の情報は、 **FactResellerSales**ディメンションの属性として使用できるテーブルです。 この場合、運送業者の問い合わせ番号および販売店からの受注番号という 2 つの付加情報が CarrierTrackingNumber 属性列と CustomerPONumber 属性列によって表されます。 これは関心を引く情報です。たとえば、1 つの追跡番号で発送されたすべての注文品について、ユーザーは商品の合計金額などの集計情報を確認したいと考えるでしょう。 ただし、この 2 つの属性の編成および集計には、ディメンション データが必要です。  
+ このテーブルには、販売店からの注文を格納する各行の属性情報だけではなく、注文自体についても属性情報が格納されています。 前の図で円で囲まれた属性の識別の情報は、 **FactResellerSales**ディメンションの属性として使用できるテーブルです。 この場合、運送業者の問い合わせ番号および販売店からの受注番号という 2 つの付加情報が CarrierTrackingNumber 属性列と CustomerPONumber 属性列によって表されます。 この情報は、興味深い-たとえば、ユーザー間違いなくことに関心を 1 つの追跡番号で発送されたすべての注文のコスト、商品の合計などの集計情報を確認します。 ただし、この 2 つの属性の編成および集計には、ディメンション データが必要です。  
   
  理論上は、FactResellerSales テーブルと同じキー情報を使用するディメンション テーブルを 1 つ作成し、残りの 2 つの属性列である CarrierTrackingNumber と CustomerPONumber をそのディメンション テーブルに移動できます。 ただし、わずか 2 つの属性を別のディメンションとして表すために、非常に多くの重複データを設定し、データ ウェアハウスを不必要に複雑にすることになります。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164522"
   
  多対多リレーションシップの詳細については、次を参照してください。[定義多対多リレーションシップと多対多リレーションシップのプロパティ](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [ディメンション&#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>参照  
+ [ディメンション &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
