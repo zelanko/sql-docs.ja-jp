@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f72b451ab5897593042189f77ba7c351f7ff8119
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4193f98f4431ae5d73cfeadb1ef9898bd330a078
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522184"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field を使用した、未使用データの取得 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- さらに、tempdb データベース用の仮想ディレクトリを作成する必要があります: のテンプレート仮想名と**テンプレート**"template"という名前の型。  
+ さらに、tempdb データベース用の仮想ディレクトリを作成する必要があります-のテンプレート仮想名と**テンプレート**"template"という名前の型。  
   
  次の例では、マッピング スキーマで、Customers2 テーブルの AddressOverflow 列に格納されている未使用データを取得します。  
   

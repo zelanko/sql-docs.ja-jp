@@ -1,5 +1,5 @@
 ---
-title: ドリルスルー アクションの定義と |Microsoft ドキュメント
+title: ドリルスルー アクションの定義と |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507959"
 ---
-# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>レッスン 8-1-を定義して、ドリルスルー アクションを使用します。
+# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>レッスン 8-1-定義とドリルスルー アクションの使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 ファクト ディメンションによってファクト データを多次元化する場合、必要なデータのみが返されるようにフィルターを設定しないとクエリのパフォーマンスが低下する可能性があります。 これを回避するために、返される合計行数を制限するドリルスルー アクションを定義できます。 これにより、クエリのパフォーマンスが大幅に向上します。  
@@ -31,13 +31,13 @@ ms.locfileid: "34018049"
   
     次の図はキューブ デザイナーの **[アクション]** タブを示しています。  
   
-    ![キューブ デザイナーの操作 タブ](../analysis-services/media/l8-action1.gif "キューブ デザイナーの操作 タブ")  
+    ![キューブ デザイナーの [アクション] タブ](../analysis-services/media/l8-action1.gif "キューブ デザイナーの [アクション] タブ")  
   
 2.  **[アクション]** タブのツール バーで **[新しいドリルスルー アクション]** ボタンをクリックします。  
   
     表示ペインに、空のアクション テンプレートが表示されます。  
   
-    ![表示ウィンドウで、空白のアクション テンプレート](../analysis-services/media/l8-action2.gif "表示ウィンドウで、空白のアクション テンプレート")  
+    ![表示ウィンドウで、空のアクション テンプレート](../analysis-services/media/l8-action2.gif "表示ウィンドウで、空のアクション テンプレート")  
   
 3.  **[名前]** ボックスに、このアクションの名前として「 **Internet Sales Details Drillthrough Action**」と入力します。  
   
@@ -47,19 +47,19 @@ ms.locfileid: "34018049"
   
 6.  **[返される列]** リストで、 **[Item Description]** と **[Order Number]** チェック ボックスをオンにして、 **[OK]** をクリックします。 次の図は、ここまでの手順を実行した場合に表示されるアクション テンプレートを示しています。  
   
-    ![ドリルスルー列 ボックス](../analysis-services/media/l8-action3.gif "ドリルスルー列 ボックス")  
+    ![[ドリルスルー列] ボックス](../analysis-services/media/l8-action3.gif "ドリルスルー列 ボックス")  
   
 7.  次の図のように、 **[追加のプロパティ]** ボックスを展開します。  
   
-    ![追加のプロパティ ボックス](../analysis-services/media/l8-action4.gif "追加のプロパティ ボックス")  
+    ![追加のプロパティ ボックス](../analysis-services/media/l8-action4.gif "追加のプロパティのボックス")  
   
 8.  **[最大行数]** ボックスに「 **10**」と入力します。  
   
-9. **[キャプション]** ボックスに「 **Drillthrough to Order Details...**」と入力します。  
+9. **キャプション**ボックスに「 **Drillthrough to Order Details.**.  
   
     これらの設定は、返される行数を制限し、クライアント アプリケーションのメニューに表示されるキャプションを指定します。 次の図は、 **[追加のプロパティ]** ボックスでの設定を示しています。  
   
-    ![追加のプロパティ ボックス](../analysis-services/media/l8-action5.gif "追加のプロパティ ボックス")  
+    ![追加のプロパティ ボックス](../analysis-services/media/l8-action5.gif "追加のプロパティのボックス")  
   
 ## <a name="using-the-drillthrough-action"></a>ドリルスルー アクションの使用  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34018049"
   
     次の図のように、Adam Powell に発送された注文の詳細が **[データ サンプル ビューアー]** に表示されます。 しかし、注文日、期限、発送日などの追加の情報があればさらに便利です。 次の手順では、これらの情報を追加します。  
   
-    ![注文が Adam Powell に発送](../analysis-services/media/l8-action6.gif "Adam powell 氏に出荷された注文")  
+    ![注文が Adam Powell に発送](../analysis-services/media/l8-action6.gif "注文が Adam Powell に発送")  
   
 8.  Excel を閉じます。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34018049"
   
     次の図はこれらの列が選択された状態を示しています。  
   
-    ![ドリルスルー列 ボックス](../analysis-services/media/l8-action7.gif "ドリルスルー列 ボックス")  
+    ![[ドリルスルー列] ボックス](../analysis-services/media/l8-action7.gif "ドリルスルー列 ボックス")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>変更されたドリルスルー アクションの確認  
   
@@ -141,10 +141,10 @@ ms.locfileid: "34018049"
   
     Adam Powell に発送された注文の詳細が一時ワークシートに表示されます。 表示される情報には、次の図に示すように、アイテムの説明、注文番号、受注日、期日、出荷日が含まれます。  
   
-    ![注文が Adam Powell に発送](../analysis-services/media/l8-action8.gif "Adam powell 氏に出荷された注文")  
+    ![注文が Adam Powell に発送](../analysis-services/media/l8-action8.gif "注文が Adam Powell に発送")  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[レッスン 9:パースペクティブと翻訳の定義](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>参照  
 [アクション &#40;Analysis Services - 多次元データ&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  

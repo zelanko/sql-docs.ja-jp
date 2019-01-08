@@ -11,12 +11,12 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526108"
 ---
 # <a name="modifying-the-date-dimension"></a>Date ディメンションの変更
   このトピックの実習では、ユーザー定義階層を作成し、Date、Month、Calendar Quarter、および Calendar Semester 属性に表示されるメンバー名を変更します。 また、属性の複合キーの定義、ディメンション メンバーの並べ替え順序の制御、および属性リレーションシップの定義も行います。  
@@ -65,7 +65,7 @@ ms.locfileid: "50753579"
   
 3.  [プロパティ] ウィンドウが開いていない場合は、[プロパティ] ウィンドウを開き、タイトル バーにある **[自動的に隠す]** ボタンをクリックします。これにより、[プロパティ] ウィンドウが開いたままになります。  
   
-4.  ウィンドウの下部付近にある **[NameColumn]** プロパティ フィールドをクリックし、参照ボタン (**[...]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
+4.  をクリックして、 **NameColumn**プロパティは、ウィンドウの下部にあるフィールドし、参照ボタンをクリックし (**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 5.  選択`SimpleDate`の下部にある、**基になる列**ボックスの一覧をクリックして**OK**。  
   

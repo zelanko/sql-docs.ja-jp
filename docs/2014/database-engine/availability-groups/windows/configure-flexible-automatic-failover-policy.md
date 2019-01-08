@@ -14,12 +14,12 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2f3c3da8228924a7d4b697865ee729e9b84aff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9a063413a665d9e159cb513ea936ab851715ce4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131192"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515403"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成 (AlwaysOn 可用性グループ)
   このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] で [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]または PowerShell を使用して AlwaysOn 可用性グループの柔軟なフェールオーバー ポリシーを構成する方法について説明します。 柔軟なフェールオーバー ポリシーを使用すると、可用性グループの自動フェールオーバーを実行する条件をきめ細かく制御できます。 自動フェールオーバーを実行するエラー条件および正常性チェックの頻度を変更することで、自動フェールオーバーの確率値を増減して高可用性の SLA をサポートできます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48131192"
     > [!NOTE]  
     >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Limitations"></a> 自動フェールオーバーの制限  
   
@@ -90,13 +90,13 @@ ms.locfileid: "48131192"
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **柔軟なフェールオーバー ポリシーを構成するには**  
   
-1.  既定の設定 (`cd`) プライマリ レプリカをホストするサーバー インスタンスにします。  
+1.  既定 (`cd`) を、プライマリ レプリカをホストするサーバー インスタンスに設定します。  
   
 2.  可用性グループに可用性レプリカを追加する場合は、`New-SqlAvailabilityGroup` コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、`Set-SqlAvailabilityGroup` コマンドレットを使用します。  
   
     -   フェールオーバー条件レベルを設定するには使用、 `FailureConditionLevel`*レベル*パラメーター、どこで、*レベル*は、次の値の 1 つです。  
   
-        |値|レベル|自動フェールオーバーが開始される条件|  
+        |値|Level|自動フェールオーバーが開始される条件|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
         |`OnServerUnresponsive`|2|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
@@ -125,7 +125,7 @@ ms.locfileid: "48131192"
         ```  
   
 > [!NOTE]  
->  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+>  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   

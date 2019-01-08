@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebaa2f29054b1fee64c44ea5c269f7d741617f97
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b9a357303950bc7c36a605483a2a94daf1f3748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673861"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523358"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 変換の適用 (SQLXMLOLEDB プロバイダー)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51673861"
   
  Xsl プロパティが、アプリケーションで指定されました。そのため、クライアントでは、生成される XML ドキュメントに XSL 変換が適用し、2 列のテーブルになります。  
   
- テンプレート コマンドを実行するには、XML テンプレート言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を指定する必要があります。  
+ テンプレート コマンドを実行するには、XML テンプレート言語 - {5d531cb2-e6ed-11d2-b252-00c04f681b71} - を指定する必要があります。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例ではデータ プロバイダーとして [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用するよう指定していますが、これには追加ネットワーク クライアントがインストールされていることが必要です。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)します。  

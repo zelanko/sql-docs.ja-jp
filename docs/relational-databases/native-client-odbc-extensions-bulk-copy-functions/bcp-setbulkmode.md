@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea0f839fb1f1366827279d2a9254a88dbe0f8de6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5dcea48b96087770ff90202a9e0758c35203316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854650"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532165"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,10 +72,10 @@ RETCODE bcp_setbulkmode (
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で – c オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLCHARACTER**します。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の – w オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**します。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の – N オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**列の型が文字列 (既定文字列でない場合) の場合。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の – n オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティが既定値に設定します。|  
+|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で-c オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLCHARACTER**します。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の-w オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**します。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP で-n オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**列の型が文字列 (既定文字列でない場合) の場合。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP で-n オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティが既定値に設定します。|  
   
  Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスでは、bcp_setbulkmode を使用しないでください。 たとえば、bcp_control(BCPTEXTFILE) と bcp_setbulkmode をしない呼び出す必要があります。  
   
@@ -86,30 +86,30 @@ RETCODE bcp_setbulkmode (
  関数シーケンス エラーが発生する関数呼び出しの例を次に示します。  
   
 ```  
-bcp_init(“table”, DB_IN);  
+bcp_init("table", DB_IN);  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_readfmt();  
 ```  
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_setcolfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_readfmt();  
 bcp_setcolfmt();  
@@ -119,18 +119,18 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_columns();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setcolfmt();  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 10: パーティションの作成 |Microsoft Docs'
+title: Analysis Services チュートリアル レッスン 10:パーティションの作成 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: b7a4cfcb32023c20e05728a3faac3715278c1019
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091330"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401145"
 ---
 # <a name="create-partitions"></a>パーティションの作成
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-このレッスンでは、他のパーティションの独立したパーティションをより小さな論理部分を処理できる、FactInternetSales テーブルに分割 (更新) が作成します。 モデルに含めるすべてのテーブルの使用には既定では 1 つのパーティションは、すべてのテーブルの列と行が含まれています。 FactInternetSales テーブルで年間でデータを分割します。各テーブルの 5 年間の 1 つのパーティション。 これにより、各パーティションを個別に処理できるようにします。 詳細についてを参照してください。[パーティション](../tabular-models/partitions-ssas-tabular.md)します。 
+このレッスンでは、他のパーティションの独立したパーティションをより小さな論理部分を処理できる、FactInternetSales テーブルに分割 (更新) が作成します。 モデルに含めるすべてのテーブルの使用には既定では 1 つのパーティションは、すべてのテーブルの列と行が含まれています。 FactInternetSales テーブルで年間でデータを分割します。各テーブルの 5 年間の 1 つのパーティション。 これにより、各パーティションを個別に処理できるようにします。 詳細については、「 [[パーティション]](../tabular-models/partitions-ssas-tabular.md)」を参照してください。 
   
-このレッスンの推定所要時間: **15 分**  
+このレッスンを完了するまでに時間を推定するには。**15 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 9: 階層の作成](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)です。  
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 9:階層を作成する](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)します。  
   
 ## <a name="create-partitions"></a>パーティションの作成  
   
@@ -44,7 +44,7 @@ ms.locfileid: "43091330"
 
     ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
-6.  行のフィルター選択 ダイアログ ボックスで**行を表示: OrderDate**、まま**は次の値以降**、し、日付フィールドに、次のように入力します。 **2010 年 1 月 1 日**。 ままに、**と**選択すると、演算子を選択し、**する前に**、し、日付フィールドに、次のように入力します。 **2011 年 1 月 1 日**、順にクリックします **[ok]** します。
+6.  行のフィルター選択 ダイアログ ボックスで**行を表示します。OrderDate**、まま**は次の値以降**、し、日付フィールドに、次のように入力します。 **2010 年 1 月 1 日**します。 ままに、**と**選択すると、演算子を選択し、**する前に**、し、日付フィールドに、次のように入力します。 **2011 年 1 月 1 日**、順にクリックします **[ok]** します。
 
     ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
@@ -117,4 +117,4 @@ Partition manager での**Last Processed**列の新しい各パーティショ�
   
  ## <a name="whats-next"></a>次の操作
 
-次のレッスンに移動:[レッスン 11: ロールの作成](../tutorial-tabular-1400/as-lesson-11-create-roles.md)です。 
+次のレッスンに移動します。[レッスン 11:ロールを作成](../tutorial-tabular-1400/as-lesson-11-create-roles.md)です。 

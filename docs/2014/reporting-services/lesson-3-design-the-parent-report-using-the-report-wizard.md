@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: レポート ウィザードを使用して親レポートを設計する | Microsoft Docs'
+title: 'レッスン 3: レポート ウィザードを使用して親レポートの設計 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2b872449bf553a00b53bcf6153befd68b6053d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 331d073082ce68f3ad1b58749256c5a177897e07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219992"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395067"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>レッスン 3: レポート ウィザードを使用して親レポートを設計する
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>レッスン 3: レポート ウィザードを使用して、親レポートをデザインします。
   親レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して親レポートを設計します。 レポート デザイナーの詳細については、「[レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」を参照してください。  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>レポート ウィザードを使用して親レポートを設計するには  
@@ -31,7 +31,7 @@ ms.locfileid: "48219992"
   
      これにより、レポート ウィザードが起動します。  
   
-4.  **データセットのプロパティ**ページで、**データ ソース**ボックスで、選択、 **DataSet1**で作成した[レッスン 2: データ接続とデータ テーブルの定義レポートの親](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)します。  
+4.  **データセットのプロパティ**ページで、**データ ソース**ボックスで、選択、 **DataSet1**で作成した[レッスン 2。親レポートのデータ接続とデータ テーブルを定義](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)します。  
     上の手順で作成した **DataTable** で **[使用できるデータセット]** ボックスが自動的に更新されます。  
   
 5.  **[次へ]** をクリックします。  
@@ -44,7 +44,7 @@ ms.locfileid: "48219992"
   
 7.  をクリックして **[次へ]** 2 回クリックして**完了**を閉じる、**レポート ウィザード**します。  
   
-     これで、.rdlc ファイルが作成されました。 このファイルはレポート デザイナーで開くことができます。 設計した Tablix がデザイン画面に表示されます。  
+     これで .rdlc ファイルが作成されました。 このファイルはレポート デザイナーで開くことができます。 設計した Tablix がデザイン画面に表示されます。  
   
 8.  .rdlc ファイルを保存します。  
   

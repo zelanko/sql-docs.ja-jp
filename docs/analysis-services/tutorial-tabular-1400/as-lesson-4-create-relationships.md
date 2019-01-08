@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 4: リレーションシップの作成 |Microsoft Docs'
+title: Analysis Services チュートリアル-レッスン 4:リレーションシップの作成 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063733"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394524"
 ---
 # <a name="create-relationships"></a>リレーションシップの作成
 
@@ -22,11 +22,11 @@ ms.locfileid: "43063733"
 
 このレッスンでは、リレーションシップ、データのインポート時に自動的に作成されたことを確認し、異なるテーブル間に新しいリレーションシップを追加します。 リレーションシップとは、2 つのテーブル間を接続し、それらのテーブル内のデータをどのように関連付けるかを決定するものです。 たとえば、DimProduct テーブルと DimProductSubcategory テーブルには、各製品が特定のサブカテゴリに属しているということに基づくリレーションシップがあります。 詳細についてを参照してください。[リレーションシップ](../tabular-models/relationships-ssas-tabular.md)します。
   
-このレッスンの推定所要時間: **10 分**  
+このレッスンを完了するまでに時間を推定するには。**10 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 3: 日付テーブルとしてマーク](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)します。 
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 3:日付テーブルとしてマーク](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)します。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>既存のリレーションシップの確認と新しいリレーションシップの追加  
 
@@ -50,7 +50,7 @@ ms.locfileid: "43063733"
   
 2.  間の実線をクリックして、 **DimCustomer**テーブルおよび**DimGeography**テーブル。 これら 2 つのテーブル間の実線は、このリレーションシップがアクティブ、つまり、DAX の数式を計算するときに既定で使用されては示しています。  
   
-    通知、 **GeographyKey**内の列、 **DimCustomer**テーブルおよび**GeographyKey**内の列、 **DimGeography**テーブル両方のようになりましたボックス内に表示されます。 これらの列はリレーションシップで使用されます。 リレーションシップのプロパティが、**[プロパティ]** ウィンドウに表示されます。  
+    通知、 **GeographyKey**内の列、 **DimCustomer**テーブルおよび**GeographyKey**内の列、 **DimGeography**テーブル両方のようになりましたボックス内に表示されます。 これらの列はリレーションシップで使用されます。 リレーションシップのプロパティに表示されます、**プロパティ**ウィンドウ。  
   
     > [!TIP]  
     > 表形式ですべてのテーブル間のリレーションシップを表示するのにリレーションシップの管理 ダイアログ ボックスを使用することもできます。 表形式モデル エクスプ ローラーで右クリック**リレーションシップ** > **リレーションシップの管理**します。
@@ -65,7 +65,7 @@ ms.locfileid: "43063733"
     |はい|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |はい|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    リレーションシップのいずれかが存在しない場合は、モデルには、次の表が含まれることを確認します。 DimCustomer、DimDate、DimGeography、DimProduct、DimProductCategory、DimProductSubcategory、FactInternetSales とします。 同じデータ ソース接続のテーブルが別々 の間のリレーションシップ時期にインポートされた場合、それらのテーブルは作成されず、手動で作成する必要があります。 リレーションシップが表示されない場合がデータ ソースに関係がないことを意味します。 その操作は、データ モデルに手動で作成できます。
+    リレーションシップのいずれかが存在しない場合は、モデルには、次の表が含まれることを確認します。DimCustomer、DimDate、DimGeography、DimProduct、DimProductCategory、DimProductSubcategory、および FactInternetSales します。 同じデータ ソース接続のテーブルが別々 の間のリレーションシップ時期にインポートされた場合、それらのテーブルは作成されず、手動で作成する必要があります。 リレーションシップが表示されない場合がデータ ソースに関係がないことを意味します。 その操作は、データ モデルに手動で作成できます。
 
 ### <a name="take-a-closer-look"></a>詳しく見てください。
 
@@ -102,7 +102,7 @@ ms.locfileid: "43063733"
   
 ## <a name="whats-next"></a>次の操作
 
-[レッスン 5: 計算列を作成する](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)します。
+[レッスン 5:計算列を作成](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)です。
   
   
   

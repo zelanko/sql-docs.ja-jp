@@ -1,5 +1,5 @@
 ---
-title: Product ディメンションの変更 |Microsoft ドキュメント
+title: Product ディメンションの変更 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fd0617d5c3d79ae0cf2eb7021f730a8062bd969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019569"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525841"
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>レッスン 3-3-Product ディメンションの変更
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34019569"
   
 2.  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Line]** をクリックします。  
   
-3.  画面右側の [プロパティ] ウィンドウで、ウィンドウの下部にある **[NameColumn]** プロパティ フィールドをクリックし、参照ボタン (**[...]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます (場合によっては、画面右側の **[プロパティ]** タブをクリックして、[プロパティ] ウィンドウを開く必要があります)。  
+3.  画面の右側にある プロパティ ウィンドウで、 **NameColumn**プロパティ ウィンドウの下部にあるフィールドし、クリックし、参照 (**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。 (場合によっては、画面右側の **[プロパティ]** タブをクリックして、[プロパティ] ウィンドウを開く必要があります)。  
   
 4.  **[基になる列]** ボックスの一覧の下部にある **[ProductLineName]** を選択し、 **[OK]** をクリックします。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34019569"
   
 5.  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Key]** をクリックします。  
   
-6.  [プロパティ] ウィンドウで、 **[NameColumn]** プロパティ フィールドをクリックし、参照ボタン (**[...]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
+6.  プロパティ ウィンドウ、 **NameColumn**プロパティ フィールドし、参照ボタンをクリックし (**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 7.  **[基になる列]** ボックスの一覧で **[EnglishProductName]** を選択し、 **[OK]** をクリックします。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34019569"
   
     -   **Safety Stock Level**  
   
-    -   **サイズ**  
+    -   **Size**  
   
     -   **Size Range**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "34019569"
   
     -   **[開始日]**  
   
-    -   **[状態]**  
+    -   **ステータス**  
   
 6.  [プロパティ] ウィンドウで、 **AttributeHierarchyDisplayFolder** プロパティのセルに「 **History**」と入力します。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "34019569"
 [Date ディメンションの変更](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>参照  
-[データ ソース ビュー & #40; での名前付き計算を定義します。Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[データ ソース ビューでの名前付き計算の定義 (Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [ユーザー定義階層の作成](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [属性階層の &#40;All&#41; レベルの構成](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

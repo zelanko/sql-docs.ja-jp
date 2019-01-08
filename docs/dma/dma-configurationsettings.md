@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643820"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419253"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant の設定を構成します。
 
@@ -40,7 +40,7 @@ Dma.exe.config ファイルで構成値を設定して、Data Migration Assistan
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>並列で評価するためのデータベースの数
 
-Data Migration Assistant は、並列で複数のデータベースを評価します。 評価時に Data Migration Assistant は、データベース スキーマを理解するのには、データ層アプリケーション (dacpac) を抽出します。 この操作では、同じサーバー上の複数のデータベースが並列で評価される場合は、タイムアウトになることができます。 
+Data Migration Assistant は、並列で複数のデータベースを評価します。 評価時に Data Migration Assistant は、データベース スキーマを理解するのには、データ層アプリケーション (dacpac) を抽出します。 この操作では、同じサーバー上の複数のデータベースが並列で評価される場合は、タイムアウトになることができます。 
 
 Data Migration Assistant のバージョン 2.0 以降では、制御できますこの、parallelDatabases 構成値を設定しています。 既定値は 8 です。
 
@@ -70,7 +70,7 @@ Data Migration Assistant は移行を並列に複数のデータベースが前�
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ Data Migration Assistant は移行を並列に複数のデータベースが前�
 
 - commandTimeout
 
-   このパラメーター IDbCommand.CommandTimeout プロパティを設定する*秒*します。 (既定 = 60)
+   このパラメーター IDbCommand.CommandTimeout プロパティを設定する*秒*します。 (既定 = 60)
 
 - databaseLockTimeout
 
-   このパラメーターは[SET LOCK\_タイムアウト タイムアウト\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)で*ミリ秒*します。 (既定 = 5000)
+   このパラメーターは[SET LOCK\_タイムアウト タイムアウト\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)で*ミリ秒*します。 (既定 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  このパラメーターは、使用する SQL 接続プールの接続の数を設定します。 (既定値 = 8)
+  このパラメーターは、使用する SQL 接続プールの接続の数を設定します。 (既定値 = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -110,7 +110,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: 推奨事項のしきい値
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database は:推奨事項のしきい値
 
 [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)、ウォームおよびコールド トランザクション データを Microsoft SQL Server 2016 から Azure に動的に拡張することができます。 ターゲットのコールド データの大量のトランザクション データベースの Stretch Database。 最初に Stretch Database の推奨事項の記憶域機能の推奨事項の下には、テーブルを識別と思われることが、この機能から得られるし、この機能については、表を可能にするために必要な変更を識別します。
 
@@ -121,7 +121,7 @@ Data Migration Assistant の v2.0 以降、recommendedNumberOfRows 構成値を�
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,7 +136,7 @@ Data Migration Assistant の v2.0 以降、recommendedNumberOfRows 構成値を�
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```

@@ -22,12 +22,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58a7f5c5702123ae6be475b1cb377b2f8a9c52fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ca45caed31d31b1614947cbcbf3fbf6c4c27273
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657541"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515369"
 ---
 # <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- この例で示しているように、定数式から要素を構築すると便利ですが、XQuery 言語機能の真の威力は、データベースから動的にデータを抽出する XML を構築できる点にあります。 中かっこを使用するとクエリ式を指定できます。 作成される XML では、クエリ式がその式の値に置き換えられます。 たとえば、次のクエリでは子要素 (<`e`>) が 1 つある <`NewRoot`> 要素が構築されます。 要素の値 <`e`> は、中かっこ ("{... 内にパス式を指定することによって計算 }").  
+ この例で示しているように、定数式から要素を構築すると便利ですが、XQuery 言語機能の真の威力は、データベースから動的にデータを抽出する XML を構築できる点にあります。 中かっこを使用するとクエリ式を指定できます。 作成される XML では、クエリ式がその式の値に置き換えられます。 たとえば、次のクエリでは子要素 (<`e`>) が 1 つある <`NewRoot`> 要素が構築されます。 要素の値 <`e`> 中かっこ (「{...}」) 内にパス式を指定することによって計算されます。  
   
 ```sql
 DECLARE @x xml;  
@@ -89,7 +89,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  中かっこはコンテキスト切り替えトークンとして機能し、XML の構築からクエリの評価へとクエリを切り替えます。 この場合、中かっこ内の XQuery パス式 `/root` が評価されて、その結果がこのパス式と置き換えられます。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <NewRoot>  
@@ -112,7 +112,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <NewRoot>  
@@ -131,7 +131,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
@@ -150,7 +150,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <FirstLocation>  
@@ -253,7 +253,7 @@ SET @y = (SELECT @x.query('<NewRoot attr="{ data(/root) }" ></NewRoot>'));
 SELECT @y;  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <NewRoot attr="5" />  
@@ -278,7 +278,7 @@ where ProductModelID=7;
   
 ```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
-  <AWMI:step …   
+  <AWMI:step ...   
   </AWMI:step>  
   ...  
 </FirstLocation>  
@@ -309,7 +309,7 @@ where ProductModelID=7;
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
-         結果を次に示します。  
+         これは、結果です。  
   
         ```xml
         <a attr="Item 5" />  
@@ -323,7 +323,7 @@ where ProductModelID=7;
   
          この場合、2 つの文字列値の間に空白が追加されません。 2 つの文字列値の間に空白が必要な場合は、明示的に空白を指定する必要があります。  
   
-         結果を次に示します。  
+         これは、結果です。  
   
         ```xml
         <a attr="Item5" />  
@@ -351,7 +351,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
-     結果を次に示します。  
+     これは、結果です。  
   
     ```xml
     <a attr="Item 5" />  
@@ -393,7 +393,7 @@ select @x.query( '
   </a>' )   
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <a xmlns="a">  
@@ -412,7 +412,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 <x:a xmlns:x="a">  
@@ -474,7 +474,7 @@ select @x.query( '
  要素 <`b`> の構築では、名前空間宣言属性の値が空文字列で指定されていることに注意してください。 これにより、親要素で宣言されている既定の名前空間の宣言が解除されます。  
   
 
-結果を次に示します。  
+これは、結果です。  
 
 ```xml
 <a xmlns="a">  
@@ -524,7 +524,7 @@ test
   
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```xml
 -- result  

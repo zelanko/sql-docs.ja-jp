@@ -14,12 +14,12 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82df10e6b8effeb040b362dcf466eb173dfce4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541873"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 動的カーソル
 動的カーソルがあっただけです。 動的です。 メンバーシップ、順序、および、カーソルを開いた後に結果セットの値に加えられた変更を検出できます。 たとえば、動的カーソルが 2 つの行をフェッチし、別のアプリケーションは、これらの行のいずれかを更新し、もう一方を削除します。 動的カーソルは、行の再フェッチしようとすると、削除された行は見つかりませんが、更新された行の新しい値を返します。  
@@ -41,6 +41,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- このステートメントは、2 番目の結果セットが最初の行セットは、元の結果セット内の次の行セットを作成します-この場合は、Customers テーブル内の行のセット。 カーソルは、アプリケーションにこの行セットを返します。  
+ このステートメントは、Customers テーブルに 2 つ目の結果セットを最初の行セットは、この例では、元の結果セット内の次の行セットが、行のセットを作成します。 カーソルは、アプリケーションにこの行セットを返します。  
   
  興味深いは、この方法で実装される動的カーソルは、多くの結果セットを実際に作成して元の結果セットの変更を検出することができます。 アプリケーションはこれら補助の結果セットの存在を学習します。カーソルが元の結果セットへの変更を検出できない場合は、単が表示されます。

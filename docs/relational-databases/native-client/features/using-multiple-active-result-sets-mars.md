@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e05d6734333e6863d2f487cf77943763fdd8229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b072c3c07ea2f70e365ca04be83d407203d48b01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816132"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521370"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>複数のアクティブな結果セット (MARS) の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  ステートメントとはインターリーブされます。 atomic ブロックによって行われた変更は、互いから分離されます。 たとえば、1 つのステートメントまたは atomic ブロックは、いくつかの変更を行い、別のステートメントの実行が生成される場合、新しいステートメントは最初のステートメントによって行われた変更は表示されません。 さらに、最初のステートメントが実行を再開時に他のステートメントによって加えられた変更しない表示されます。 ステートメントは、終了され、ステートメントが開始する前にコミットされる変更にのみ表示されます。  
   
- 新しいユーザー トランザクションは、BEGIN TRANSACTION ステートメントを使用して現在のユーザー トランザクション内で開始できます – これは、相互運用モードでのみサポートされているため、BEGIN TRANSACTION は、T-SQL ステートメントからのみ呼び出すことされからネイティブ コンパイルで保存されません。プロシージャです。保存を作成する保存トランザクションまたはトランザクションへの API 呼び出しを使用してトランザクションにポイントします。セーブポイントにロールバックする Save(save_point_name) します。 この機能は、T-SQL ステートメントからのみ有効になりますからではなく内でネイティブ コンパイル ストアド プロシージャ。  
+ 新しいユーザー トランザクションは、BEGIN TRANSACTION ステートメントを使用して現在のユーザー トランザクション内で開始できます - これは相互運用モードでのみサポートされているため、BEGIN TRANSACTION は、T-SQL ステートメントからのみ呼び出すことがありからではなく、ネイティブ コンパイルで保存プロシージャです。保存を作成する保存トランザクションまたはトランザクションへの API 呼び出しを使用してトランザクションにポイントします。セーブポイントにロールバックする Save(save_point_name) します。 この機能は、T-SQL ステートメントからのみ有効になりますからではなく内でネイティブ コンパイル ストアド プロシージャ。  
   
  **MARS と列ストア インデックス**  
   
@@ -226,8 +226,8 @@ SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt2);
   
 // The 2nd execute would have failed with connection busy error if  
 // MARS were not enabled.  
-SQLExecDirect(hstmt1, L”SELECT * FROM Authors”, SQL_NTS);  
-SQLExecDirect(hstmt2, L”SELECT * FROM Titles”, SQL_NTS);  
+SQLExecDirect(hstmt1, L"SELECT * FROM Authors", SQL_NTS);  
+SQLExecDirect(hstmt2, L"SELECT * FROM Titles", SQL_NTS);  
   
 // Result set processing can interleave.  
 SQLFetch(hstmt1);  

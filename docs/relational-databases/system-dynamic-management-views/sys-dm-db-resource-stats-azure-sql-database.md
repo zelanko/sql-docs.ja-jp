@@ -22,17 +22,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f00a7e8db9e5b91e5b722598c991c7a8dbc2e67c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbf31fb20ebab569e681cda717cb62ff5f973447
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596120"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396792"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  CPU、I/O、およびメモリの消費量を返す、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]データベース。 1 つの行は、データベース内にアクティビティがない場合でも、15 秒ごとに存在します。 1 時間では、履歴データは維持されます。  
+  CPU、I/O、およびメモリの消費量を返す、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベース。 1 つの行は、データベース内にアクティビティがない場合でも、15 秒ごとに存在します。 1 時間では、履歴データは維持されます。  
   
 |[列]|データ型|説明|  
 |-------------|---------------|-----------------|  

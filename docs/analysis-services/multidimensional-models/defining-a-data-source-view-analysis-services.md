@@ -1,5 +1,5 @@
 ---
-title: 定義、データ ソース ビュー (Analysis Services) |Microsoft ドキュメント
+title: 定義、データ ソース ビュー (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025849"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523102"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>データ ソース ビューの定義 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  データ ソース ビューには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元データベース オブジェクト (つまり、キューブ、ディメンション、およびマイニング構造) で使用されるスキーマの論理モデルが含まれます。 データ ソース ビューとは、XML 形式で格納されている、統合ディメンショナル モデル (UDM) とマイニング構造で使用されるこれらのスキーマ要素のメタデータ定義です。 データ ソース ビューには、次の特徴があります。  
+  データ ソース ビューには、論理モデルで使用されるスキーマが含まれています。[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多次元データベース オブジェクトつまりキューブ、ディメンション、およびマイニング構造です。 データ ソース ビューとは、XML 形式で格納されている、統合ディメンショナル モデル (UDM) とマイニング構造で使用されるこれらのスキーマ要素のメタデータ定義です。 データ ソース ビューには、次の特徴があります。  
   
 -   スキーマ生成に関するトップダウン アプローチに従う場合は、基になる 1 つ以上のデータ ソースから選択したオブジェクトを表すメタデータ、または基になるリレーショナル データ ソースの生成に使用されるメタデータを格納します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34025849"
   
 4.  **使用できるオブジェクトのフィルター処理**  
   
-     [使用できるオブジェクト] ボックスの一覧に非常に多くのオブジェクトが含まれている場合、選択条件として文字列を指定する単純なフィルターを適用して一覧を絞り込むことができます。 たとえば、「 **dbo** 」と入力し、 **[フィルター]** ボタンをクリックすると、"dbo" で始まる項目のみが **[使用できるオブジェクト]** ボックスの一覧に表示されます。 フィルターには、文字列の一部を指定することもできますが (たとえば、"sal" と指定すると、"sales" と "salary" の両方が返されます)、複数の文字列や演算子を指定することはできません。  
+     [使用できるオブジェクト] ボックスの一覧に非常に多くのオブジェクトが含まれている場合、選択条件として文字列を指定する単純なフィルターを適用して一覧を絞り込むことができます。 たとえば、「 **dbo** 」と入力し、 **[フィルター]** ボタンをクリックすると、"dbo" で始まる項目のみが **[使用できるオブジェクト]** ボックスの一覧に表示されます。 フィルターは、(たとえば、"sal"を返します。 sales と給与) の部分の文字列を使用できますが、複数の文字列や演算子を含めることはできません。  
   
 5.  テーブルのリレーションシップが設定されていないリレーショナル データ ソースの場合は、 **[名前の一致]** ページが表示され、名前を一致させる適切な方法を選択することができます。 詳細については、このトピックの「 [リレーションシップの名前一致条件の指定](#bkmk_NameMatch) 」セクションを参照してください。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34025849"
   
  データ ソース ビュー ウィザードは、ユーザーが指定した名前一致条件を使用して列名を一致させ、DSV 内のさまざまなテーブル間にリレーションシップを作成します。 次の表に示すいずれかの条件を指定できます。  
   
-|名前一致条件|Description|  
+|名前一致条件|説明|  
 |----------------------------|-----------------|  
 |**[主キーと同一の名前]**|基になるテーブルの外部キー列名は、対象になるテーブルの主キー列名と同じです。 たとえば、外部キー列 `Order.CustomerID` は、主キー列 `Customer.CustomerID`と同じです。|  
 |**[対象のテーブル名と同一の名前]**|基になるテーブルの外部キー列名は、対象になるテーブルの名前と同じです。 たとえば、外部キー列 `Order.Customer` は、主キー列 `Customer.CustomerID`と同じです。|  
@@ -127,13 +127,13 @@ ms.locfileid: "34025849"
   
 ## <a name="see-also"></a>参照  
  [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビューで論理主キーの定義&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビューで名前付き計算の定義&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビューで名前付きクエリの定義&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [テーブルまたはデータ ソース ビューの名前付きクエリを置換&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビュー デザイナー & #40; でのダイアグラムの操作します。Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [データ ソース ビューでデータを探索&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビューの削除&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [データ ソース ビューでの論理主キーの定義 (Analysis Services)](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [データ ソース ビューでの名前付きクエリの定義 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [データ ソース ビュー内のテーブルまたは名前付きクエリの置換 (Analysis Services)](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [データ ソース ビューでのデータの検索 (Analysis Services)](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [データ ソース ビューの削除 (Analysis Services)](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [データ ソース ビューでのスキーマの更新 (Analysis Services)](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c89ec6b6054f6a681550fa3fb12aa925476bc0c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506365"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47742680"
 |**create_date**|**datetime**|監査が作成された UTC 日付。|  
 |**modify_date**|**datetime**|監査が最後に変更された UTC 日付。|  
 |**principal_id**|**int**|サーバーに登録した監査の所有者の ID。|  
-|**type**|**char(2)**|監査の種類。<br /><br /> SL – NT セキュリティ イベント ログ<br /><br /> AL – NT アプリケーション イベント ログ<br /><br /> FL – ファイル システムのファイル|  
+|**type**|**char(2)**|監査の種類。<br /><br /> SL - NT セキュリティ イベント ログ<br /><br /> AL - NT アプリケーション イベント ログ<br /><br /> FL - ファイル システム上のファイル|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
-|**on_failure**|**tinyint**|アクション エントリの書き込みに失敗した場合 : <br /><br /> 0 – 続行<br /><br /> 1 – サーバー インスタンスのシャットダウン<br /><br /> 2 – 失敗の操作|  
+|**on_failure**|**tinyint**|アクション エントリの書き込みに失敗した場合 : <br /><br /> 0 - 続行します。<br /><br /> 1 - サーバー インスタンスのシャット ダウン<br /><br /> 2 - 操作に失敗します。|  
 |**on_failure_desc**|**nvarchar(60)**|アクション エントリの書き込みに失敗した場合 : <br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0 - 無効<br /><br /> 1 - 有効|  
 |**queue_delay**|**int**|ディスクに書き込むまでに待機する最大時間 (ミリ秒)。 0 の場合は、イベントが続行する前に書き込みが行われます。|  

@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6c0bf5769d20d806944a3b312ce0e65bc71c42aa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906062"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407099"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS テーブル)
   *KPI* (主要業績評価指標) は、表形式モデルで、*対象*の値に対する*ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 このトピックは、テーブル モデル作成者が表形式モデルの KPI の基本を理解できることを目的としています。  
@@ -48,7 +48,7 @@ ms.locfileid: "48906062"
 ##  <a name="bkmk_example"></a> 例  
  Adventure Works の販売責任者は、販売担当者の一定期間 (年) の販売ノルマの達成状況がひとめでわかるようなピボットテーブルを作成しようとしています。 各販売の従業員の彼女ドルで実績販売額をドルの販売ノルマとかどうか、各営業担当者の下で、以上、販売ノルマのステータスを示す単純なグラフィック表示を表示するピボット テーブルが希望しています。 データは年単位でスライスできるようにしたいと考えています。  
   
- これを実現するために、組織の BI ソリューション開発者にサポートを依頼し、AdventureWorks 表形式モデルに販売 KPI を追加することにします。 次に、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] を使用してデータ ソースの Adventure Works 表形式モデルに接続し、ピボットテーブルを作成してフィールド (メジャーと KPI) およびスライサーを設定し、販売担当者がノルマを達成したかどうかを分析します。  
+ これを行うには、営業マネージャーは、AdventureWorks 表形式モデルに販売 KPI を追加する、彼女の組織の BI ソリューションの開発者向けのヘルプを参加させます。 次に、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] を使用してデータ ソースの Adventure Works 表形式モデルに接続し、ピボットテーブルを作成してフィールド (メジャーと KPI) およびスライサーを設定し、販売担当者がノルマを達成したかどうかを分析します。  
   
  モデルの FactResellerSales テーブルの SalesAmount 列に、各販売担当者の実績販売額をドル単位で表すメジャーが作成されます。 このメジャーは KPI のベース値を定義します。  
   
@@ -71,7 +71,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  KPI のベース値および対象の値となるメジャーを作成した後は、販売メジャーを新しい販売 KPI に拡張します。 販売 KPI では、ターゲットの SalesAmountQuota メジャーが対象の値として定義されます。 状態のしきい値はパーセンテージ範囲によって定義されます。ターゲットが 100% の場合、販売メジャーによって定義された実績販売額がターゲットの SalesAmoutnQuota メジャーで定義されたノルマに達したことを意味します。 [低] および [高] のパーセンテージはステータス バーで定義され、グラフィックの種類が選択されます。  
   
- これで、販売責任者は KPI のベース値、対象の値、状態を [値] フィールドに追加するピボットテーブルを作成できます。 Employees 列を RowLabel フィールドに追加し、CalendarYear 列をスライサーとして追加します。  
+ セールス マネージャーは、KPI のベース値、対象の値、および状態を [値] フィールドに追加するピボット テーブルを作成できます。 Employees 列を RowLabel フィールドに追加し、CalendarYear 列をスライサーとして追加します。  
   
  販売責任者は、各販売担当者の実績販売額、販売ノルマ、状態を年単位でスライスできるようになりました。 これによって数年間の売上傾向を分析し、販売担当者の販売ノルマを調整する必要があるかどうかを判断できます。  
   

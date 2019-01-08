@@ -11,15 +11,15 @@ ms.assetid: 34b1e95a-a80e-4aca-9201-abde47f2ca74
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da5cd273a0bfc00e86a6290777376fb6d1d30c6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72feb645258f7e1521f3f0380ca9de42b85a1192
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107672"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522761"
 ---
 # <a name="create-an-extended-events-session"></a>拡張イベント セッションの作成
-  拡張イベント セッションを作成するには、クエリ エディターを使用するか、オブジェクト エクスプローラーでセッションを作成します。 オブジェクト エクスプローラーでは、拡張イベントにイベント セッション データを作成、変更、および表示するための 2 つのユーザー インターフェイスが用意されています。その 1 つはイベント セッションの作成プロセスを指示に従って操作するウィザードで、もう 1 つは詳細な構成オプションを設定する [新しいセッション] の UI です。 拡張イベント セッションを作成して SQL Server のトレースを診断できます。これにより次のような問題を解決できます。  
+  拡張イベント セッションを作成するには、クエリ エディターを使用するか、オブジェクト エクスプローラーでセッションを作成します。 オブジェクト エクスプ ローラーでは、拡張イベントは、作成、変更、およびイベント セッション データのイベント セッションの作成プロセスをガイドするウィザードとより高度な構成オプションを提供する新しいセッション UI を表示する際、2 つのユーザー インターフェイスを提供します。 拡張イベント セッションを作成して SQL Server のトレースを診断できます。これにより次のような問題を解決できます。  
   
 -   最も高価なクエリを見つける  
   

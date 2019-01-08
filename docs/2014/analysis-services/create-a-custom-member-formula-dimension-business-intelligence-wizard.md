@@ -13,21 +13,21 @@ ms.assetid: 0bea4831-982e-4848-86cd-e6219c860138
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfedee8dfc4f5ece1d4502716d6a7690fa73d9cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36f09632e55bfae58a30f571c2928564f4f7beee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193800"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507951"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>[カスタム メンバー式の作成] ([ディメンション]) (ビジネス インテリジェンス ウィザード)
-  ビジネス インテリジェンス ウィザードの **[カスタム メンバー式の作成]** ページを使用すると、カスタム メンバー式列を使用して属性に関連付けるディメンションを選択できます。カスタム メンバー式列には、その属性のメンバー値を定義する多次元式 (MDX) ステートメントが格納されます。  
+  使用して、**カスタム メンバー式の作成**先、ビジネス インテリジェンス ウィザードで属性と関連付けるカスタム メンバー式列の列を含む多次元式 (MDX) でディメンションを選択するページその属性のメンバーの値を定義するステートメント。  
   
 ## <a name="options"></a>および  
  **Dimension**  
  ウィザードでカスタム メンバー式を使用して、ディメンションに含まれる属性と関連付けるディメンションを選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

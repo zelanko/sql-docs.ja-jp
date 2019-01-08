@@ -13,12 +13,12 @@ ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227702"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394243"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>タスク 1 (前提条件): MDS の仕入先データを削除する
   ここでは、MDS に格納されている仕入先データを削除します。 使用して手動でデータをアップロードした**MDS Excel アドイン**前のレッスンでします。 このレッスンで作成する SSIS パッケージは、MDS にデータを自動的にアップロードします。 したがって、SSIS パッケージをテストする前に、MDS からの仕入先データの削除、派生階層の削除、Supplier および State エンティティの削除、データのない Supplier エンティティの作成が必要となります。  
@@ -43,7 +43,7 @@ ms.locfileid: "48227702"
   
 10. 持つ Excel ウィンドウに切り替える**Cleansed and Matched Suppliers.xls**ファイルを開く。 切り替えて、 **Sheet1**下部にあるタブ。  
   
-11. のみを選択、**最初の行のヘッダーを含む**します。 他の行は選択しないでください。 Excel の列に基づいてエンティティを作成しますが、データはアップロードしません。 したがって、行見出しがある先頭行のみを選択することになります。  
+11. のみを選択、**最初の行のヘッダーを含む**します。 その他の任意の行を選択しないでください。 Excel の列に基づいてエンティティを作成しますが、すべてのデータをアップロードする必要はありません。 したがって、行見出しがある先頭行のみを選択することになります。  
   
 12. クリックして**マスター データ**メニュー バーでします。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48227702"
 22. **[エクスプローラー]** をクリックします。 注意して、**業者**ですべての属性を持つエンティティが作成された**値を含まない**します。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2 &#40;(省略可能)&#41;: マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成します。](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [タスク 2&#40;省略可能な&#41;:マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成します。](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

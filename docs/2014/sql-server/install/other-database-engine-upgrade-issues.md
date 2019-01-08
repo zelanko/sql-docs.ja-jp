@@ -13,12 +13,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cbaa1d648b3de2cdd0b16d233db93bf52635b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176062"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321638"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>データベース エンジンのアップグレードに関するその他の問題
   アップグレードに関する次の問題は、現在のバージョンのアップグレード アドバイザーでは検出されません。 一覧表示されている問題を確認し、使用するシステムへの影響を判断してください。  
@@ -64,7 +64,7 @@ ms.locfileid: "48176062"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>定義済みのトリガーを使用できなくなった OUTPUT INTO 句の対象テーブル  
- トリガーが有効化されているテーブルを OUPUT INTO の対象テーブルにすることはできません。  
+ OUTPUT INTO テーブルに有効なトリガーがある場合は、ターゲット テーブルはサポートされていません。  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>OUTPUT INTO 句の対象がテーブルである場合に発生する UDF のコンパイル時エラー  
  ユーザー定義関数 (UDF) は、データベースの状態を変更するアクションの実行には使用できません。 たとえば、テーブル変数以外のオブジェクトに対して、UDF で DDL (CREATE、ALTER、DROP) または DML (INSERT、UPDATE、DELETE) アクションを実行することはできません。  
@@ -85,7 +85,7 @@ ms.locfileid: "48176062"
   
 4.  DROP SCHEMA を使用して CDC スキーマを削除します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

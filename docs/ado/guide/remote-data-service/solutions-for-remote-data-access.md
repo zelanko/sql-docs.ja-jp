@@ -13,12 +13,12 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535799"
 ---
 # <a name="solutions-for-remote-data-access"></a>リモート データ アクセスのソリューション
 ## <a name="the-issue"></a>問題  
@@ -41,7 +41,7 @@ ms.locfileid: "51558619"
  シンプルで効率的なアプリケーション プログラミング インターフェイスを 3 層システムをサポートし、に関する情報を返しますとして簡単に取得されていた場合、2 層システムを必要とします。 リモート データ サービス (RDS) は、このインターフェイスです。  
   
 ## <a name="the-solution"></a>解決策  
- RDS のプログラミング モデルを定義します: 一連のアクティビティにアクセスし、データ ソースを更新するために必要: インターネット インフォメーション サービス (IIS) など、仲介者を使用してデータにアクセスします。 プログラミング モデルは、RDS の全体の機能をまとめたものです。  
+ RDS では、一連のアクティビティにアクセスし、インターネット インフォメーション サービス (IIS) など、仲介者を使用してデータにアクセスする - データ ソースを更新するために必要なプログラミング モデルを定義します。 プログラミング モデルは、RDS の全体の機能をまとめたものです。  
   
 ## <a name="see-also"></a>参照  
  [基本的な RDS のプログラミング モデル](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   

@@ -1,5 +1,5 @@
 ---
-title: テンプレートから単一予測クエリを作成 |Microsoft ドキュメント
+title: テンプレートから単一予測クエリの作成 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: baa6153adde1a5cc5aaeaad5f8b04366dcb2dad8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 72fadf42bae238fbc656a120e39317ce5211919e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019769"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392965"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>テンプレートからの単一予測クエリの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  単一クエリは、予測に使用するモデルがあり、それを外部入力データ セットにマップしたり一括予測を行ったりしない場合に役立ちます。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  
+  単一クエリは、外部入力データ セットにマップしたり一括予測を行う必要はありませんが、使用、予測に使用するモデルがある場合に便利です。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  
   
  たとえば、次の DMX クエリは、メーリング対象モデル TM_Decision_Tree に対する単一クエリを表しています。  
   
@@ -91,6 +91,6 @@ AS [t]
 11. **[実行]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [予測 & #40; を作成します。基本的なデータ マイニング チュートリアル & #41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
+ [予測の作成 &#40;基本的なデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

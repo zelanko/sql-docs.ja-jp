@@ -11,12 +11,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b6b360af5bd4e10bff706377caa91927bdd8d00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ae99e33bb51b38afd92ad815662947f645bf8dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055512"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392096"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>SharePoint 用 Reporting Services アドインのインストールまたはアンインストール (SharePoint 2010 および SharePoint 2013)
   SharePoint サーバー上で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products (rsSharePoint.msi) on SharePoint servers to enable [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features within a SharePoint deployment. 提供される機能には、Power View、レポート ビューアー Web パーツ、URL プロキシ エンドポイント、コンテンツの種類、アプリケーション ページなどがあります。これにより、レポート、レポート モデル、データ ソース、およびその他のレポート サーバー コンテンツを SharePoint サイト上で作成、表示、管理できます。 SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは、SharePoint モードで実行されるレポート サーバーに必要なコンポーネントです。 アドインは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードからインストールするか、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能パックから rsSharePoint.msi をダウンロードしてインストールすることができます。 アドインのバージョンの一覧およびダウンロード ページについては、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
@@ -48,7 +48,7 @@ ms.locfileid: "48055512"
 -   [RsCustomAction.exe](#bkmk_rscustomaction)  
   
 ##  <a name="bkmk_prereq"></a> 前提条件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインのインストールは、レポート サーバーと SharePoint 製品のインスタンスを統合するために必要ないくつかの手順の 1 つです。 SharePoint モードを使用するための要件の完全なセットの詳細については、次を参照してください。 [Hardware and Software Requirements for Reporting Services SharePoint モードの](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)します。 インストールと構成の詳細については[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を参照してください[Install Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインのインストールは、レポート サーバーと SharePoint 製品のインスタンスを統合するために必要ないくつかの手順の 1 つです。 SharePoint モードの使用のすべての前提条件の詳細については、「 [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)」を参照してください。 インストールと構成の詳細については[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を参照してください[Install Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)します。  
   
 -   複数の Web フロントエンド アプリケーションがある SharePoint ファームに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を統合する場合は、Web サーバー フロントエンドがあるファームの各コンピューターにアドインをインストールします。 この作業は、レポート サーバー コンテンツのアクセスに使用する Web フロントエンドに対してのみ行ってください。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "48055512"
   
 -   SharePoint 2010 製品準備ツールにより、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインがインストールされます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] アドインに必要なは新しいバージョンを含む[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]機能します。  
   
-     まだをインストールする必要がある場合は、SharePoint 製品準備ツールを実行する、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のバージョン、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン。  
+     SharePoint 製品準備ツールを実行する場合でも、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをインストールする必要があります。  
   
--   インストールする場合[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のバージョン、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン準備ツールでは、新しいとして、アドインの古いバージョンをインストールしなかったことを示す次のダイアログが表示されます、SharePoint 製品準備ツールを実行するときに、最初に、バージョンが検出されました。 これは想定されている動作です。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをインストールした場合は、SharePoint 製品準備ツールを実行すると、新しいバージョンが検知されたために準備ツールによってアドインの旧バージョンがインストールされなかったことを示す次のダイアログが表示されます。 これは想定されている動作です。  
   
      ![SSRS アドインが既にインストールされています。](../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "SSRS アドインが既にインストールされています。")  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48055512"
   
 -   **インストール ウィザード:** ![注](../../../2014/reporting-services/media/rs-fyinote.png "注")New with[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でアドインをインストールする、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール ウィザード。 ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
   
--   **rsSharepoint.msi:** インストール メディアまたはダウンロードからアドインを直接インストールする。 rsSharepoint.msi は、グラフィカル ユーザー インターフェイスもコマンド ライン インストールもサポートしています。 .msi を管理者特権を使用して実行する必要があるため、まず高度な権限でコマンド プロンプトを開いてから、コマンド ラインから rsSharepoint.msi を実行します。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
+-   **rsSharepoint.msi:** アドインをインストール メディアから直接インストールする、またはダウンロードしてインストールする。 rsSharepoint.msi は、グラフィカル ユーザー インターフェイスもコマンド ライン インストールもサポートしています。 .msi を管理者特権を使用して実行する必要があるため、まず高度な権限でコマンド プロンプトを開いてから、コマンド ラインから rsSharepoint.msi を実行します。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
     > [!NOTE]  
     >  サイレント コマンド ライン インストールで **/q** スイッチを使用する場合、使用許諾契約書は表示されません。 インストール方法にかかわらず、このソフトウェアの使用は、使用許諾契約に基づいています。ユーザーは使用許諾契約に準拠する責任があります。  
@@ -108,7 +108,7 @@ Rssharepoint.msi /?
   
 1.  セットアップ プログラムをダウンロード (`rsSharepoint.msi`) の[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
-2.  管理者は、次のように実行します。`rsSharepoint.msi`インストール ウィザードを実行します。 ウィザードに、"ようこそ" ページ、ソフトウェア ライセンス条項、および登録情報ページが表示されます。 セットアップ時に、次のパスにフォルダーが作成され、そのフォルダーにファイルがコピーされます。  
+2.  管理者は、`rsSharepoint.msi` を実行して、インストール ウィザードを実行します。 ウィザードに、"ようこそ" ページ、ソフトウェア ライセンス条項、および登録情報ページが表示されます。 セットアップ時に、次のパスにフォルダーが作成され、そのフォルダーにファイルがコピーされます。  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\14\`  
   
@@ -138,7 +138,7 @@ Rssharepoint.msi /?
   
 2.  カスタム アクションの実行可能ファイルを実行します。  
   
-    1.  ファイルを含むフォルダーに移動します`rsCustomAction.exe`します。 このファイルは、アドインのファイルのみのインストールを実行することで、コンピューターにコピーされます。 `rsCustomAction.exe` ある、 **%temp%** ディレクトリ。 ファイルに移動するには、コマンド プロンプトから次のように入力します。  
+    1.  `rsCustomAction.exe` ファイルのあるフォルダーに移動します。 このファイルは、アドインのファイルのみのインストールを実行することで、コンピューターにコピーされます。 `rsCustomAction.exe` ある、 **%temp%** ディレクトリ。 ファイルに移動するには、コマンド プロンプトから次のように入力します。  
   
          **CD %temp%**。  
   
@@ -153,7 +153,7 @@ Rssharepoint.msi /?
     3.  変更が有効になるまでの時間はサーバー環境によって異なる場合があります。 **iisreset** 実行して、更新にかかる時間を短縮することもできます。  
   
 ### <a name="quiet-installation-for-scripting"></a>スクリプト作成のためのサイレント インストール  
- **/q** スイッチまたは **/quiet** スイッチを使用すると、ダイアログや警告が表示されないサイレント インストールを実行できます。 サイレント インストールは、アドインのインストールのスクリプトを作成する場合に役立ちます。  
+ **/q** スイッチまたは **/quiet** スイッチを使用すると、ダイアログや警告が表示されない "サイレント" インストールを実行できます。 サイレント インストールは、アドインのインストールのスクリプトを作成する場合に役立ちます。  
   
 > [!NOTE]  
 >  サイレント コマンド ライン インストールで **/q** スイッチを使用する場合、使用許諾契約書は表示されません。 インストール方法にかかわらず、このソフトウェアの使用は、使用許諾契約に基づいています。ユーザーは使用許諾契約に準拠する責任があります。  
@@ -177,7 +177,7 @@ Rssharepoint.msi /?
   
  アドインをアンインストールすると、レポート サーバーでレポートの処理に使用されているサーバー統合機能が削除されます。 SharePoint サーバーの全体管理ページおよびその他のカスタム [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページから、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページも削除されます。 また、影響を受ける SharePoint サイトで、今後使用しないレポートとその他のレポート サーバー アイテムをすべて削除することもできます。 これらは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインを削除すると実行できなくなります。  
   
- アンインストールする、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドインが必要、[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]または[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]インストールされています。 SharePoint 2010 を先にアンインストールした場合をアンインストールすることをインストールする必要があります、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをアンインストールするには、[!INCLUDE[SPF2010](../../includes/spf2010-md.md)] または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] がインストールされている必要があります。 SharePoint 2010 を先にアンインストールした場合は、それを再インストールしないと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをアンインストールできません。  
   
  アドインをアンインストールする手順は、スタンドアロンのサーバーの場合もサーバー ファームの場合も同じです。 セットアップにより、インストール時に追加されたプログラム ファイルと構成設定が削除されます。  
   
@@ -308,6 +308,6 @@ Rssharepoint.msi /?
   
 ## <a name="see-also"></a>参照  
  [SharePoint 2010 用の Reporting Services SharePoint モードをインストールします。](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)   
- [Reporting Services レポート サーバー &#40;SharePoint モード&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
+ [Reporting Services Report Server &#40;SharePoint Mode&#41; (Reporting Services レポート サーバー &#40;SharePoint モード&#41;)](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
   
   

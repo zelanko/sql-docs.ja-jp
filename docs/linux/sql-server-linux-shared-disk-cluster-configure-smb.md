@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 5bd5581b2842ec5d11cd27a989aa41ddb2cee1de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661940"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532005"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - SMB - SQL Server on Linux の構成します。
 
@@ -22,7 +22,7 @@ ms.locfileid: "47661940"
 
 この記事では、Linux でのフェールオーバー クラスター インスタンス (FCI) の SMB 記憶域を構成する方法について説明します。 
  
-Windows 以外の世界で、SMB が多くの場合、として、共通インターネット ファイル システム (CIFS) を共有する呼ばれ、Samba を使用して実装されます。 Windows の世界で、この方法の実行で、SMB 共有にアクセスする: \\servername \sharename します。 Linux ベースの SQL Server インストールの場合、SMB 共有フォルダーとしてマウントする必要があります。
+Windows 以外の世界で、SMB が多くの場合、として、共通インターネット ファイル システム (CIFS) を共有する呼ばれ、Samba を使用して実装されます。 Windows の世界では、SMB 共有にアクセスは、この方法に行われます。\\SERVERNAME \SHARENAME します。 Linux ベースの SQL Server インストールの場合、SMB 共有フォルダーとしてマウントする必要があります。
 
 ## <a name="important-source-and-server-information"></a>ソース サーバーとサーバーの重要な情報
 
@@ -102,7 +102,7 @@ Windows 以外の世界で、SMB が多くの場合、として、共通イン�
    *    既存の SQL Server データ ディレクトリからファイルを削除します。 成功した場合は、すべての受信確認は受信しません。
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    ファイルが削除されたことを確認します。 

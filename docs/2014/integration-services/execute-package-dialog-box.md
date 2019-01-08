@@ -14,12 +14,12 @@ ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5e90c0ceb79af8834bb2df17ab84943099276bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 715bcfdda978801bac28e59246aeddc9ab76851e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129882"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418653"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   **[パッケージの実行]** ダイアログ ボックスでは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージを実行できます。  
@@ -73,12 +73,12 @@ ms.locfileid: "48129882"
  パッケージ実行のログ記録レベルを選択します。 詳細については、「[catalog.set_execution_parameter_value (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)」を参照してください。  
   
  **エラー時にダンプする**  
- パッケージの実行中にエラーが発生した場合にダンプ ファイルを作成するかどうかを指定します。 詳細については、「[パッケージ実行用のダンプ ファイルを生成する](troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
+ パッケージの実行中にエラーが発生した場合にダンプ ファイルを作成するかどうかを指定します。 詳細については、「 [パッケージ実行用のダンプ ファイルを生成する](troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
   
  **32 ビット ランタイム**  
  パッケージが 32 ビット システムで実行されるように指定します。  
   
 ##  <a name="script"></a> [パッケージの実行] ダイアログ ボックスのオプションのスクリプト作成  
- **[パッケージの実行]** ダイアログ ボックスが表示されているときに、ツール バーの **[スクリプト]** を使用すると、[!INCLUDE[tsql](../includes/tsql-md.md)] コードを生成することもできます。 生成されたスクリプトからは、**[パッケージの実行]** ダイアログ ボックスで選択したのと同じオプションを指定したストアド プロシージャ [catalog.start_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) が呼び出されます。 このスクリプトは、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の新しいスクリプト ウィンドウに表示されます。  
+ **[パッケージの実行]** ダイアログ ボックスが表示されているときに、ツール バーの **[スクリプト]** を使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] コードを生成することもできます。 生成されたスクリプトからは、**[パッケージの実行]** ダイアログ ボックスで選択したのと同じオプションを指定したストアド プロシージャ [catalog.start_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) が呼び出されます。 このスクリプトは、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の新しいスクリプト ウィンドウに表示されます。  
   
   

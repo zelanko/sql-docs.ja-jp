@@ -13,17 +13,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3c09c2a1771f1fad8640031ea1c1327921f8c82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7332f9e4196c901777e0c35a349f55207e7608dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520359"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  管理者の下すシステム管理に役立つセグメント単位でクラスター化列ストア インデックス情報を提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。 **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. 使用**sys.pdw_nodes_column_store_row_groups**行を判断するグループが削除された行の割合が高いと、再構築する必要があります。  
+  管理者の決定を下すシステム管理のために役立つセグメント単位でクラスター化列ストア インデックス情報を提供する [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. 使用**sys.pdw_nodes_column_store_row_groups**行を判断するグループが削除された行の割合が高いと、再構築する必要があります。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -33,11 +33,11 @@ ms.locfileid: "47698240"
 |**row_group_id**|**int**|この行グループの ID です。 この番号はパーティション内で一意です。|  
 |**dellta_store_hobt_id**|**bigint**|デルタ行グループの hobt_id で、行グループの種類がデルタではない場合は NULL。 デルタ行グループとは、新しいレコードを受け入れる読み取り/書き込み行グループのことです。 デルタ行グループが、**オープン**状態。 デルタ行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。|  
 |**state**|**tinyint**|state_description に関連付けられている ID 番号。<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|行グループの永続的な状態の説明:<br /><br /> OPEN - 新しいレコードを受け入れる読み取り/書き込み行グループ。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED - いっぱいになったが、組ムーバー プロセスによってまだ圧縮されていない行グループ。<br /><br /> COMPRESSED - いっぱいになり、圧縮された行グループ。|  
+|**state_desccription**|**nvarchar(60)**|行グループの永続的な状態の説明:<br /><br /> 開く - 新しいレコードを受け入れる読み取り/書き込み行グループ。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> 終了 - いっぱいされましたが、組ムーバー プロセスによってまだ圧縮行グループ。<br /><br /> 圧縮 - いっぱいになり、圧縮行グループ。|  
 |**total_rows**|**bigint**|行グループに物理的に格納されている行の合計。 削除された行がまだ格納されていることがあります。 1 つの行グループの最大行数は 1,048,576 (16 進数では FFFFF) です。|  
 |**deleted_rows**|**bigint**|削除対象としてマークされた行グループ内に物理的に格納されている行の数。<br /><br /> 常にデルタの場合は 0 の行グループ。|  
 |**size_in_bytes**|**int**|この行グループ内のすべてのページのバイト単位の合計サイズ。 このサイズでは、メタデータと共有辞書の格納に必要なサイズは含まれません。|  
-|**pdw_node_id**|**int**|一意の id、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|  
+|**pdw_node_id**|**int**|一意の id、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ノードです。|  
 |**distribution_id**|**int**|分布の一意の id。|
   
 ## <a name="remarks"></a>コメント  

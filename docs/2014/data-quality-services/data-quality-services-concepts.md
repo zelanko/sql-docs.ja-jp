@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: b139ff48d818ad586c029103f8d86e6ff2721af0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032121"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414799"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services の概念
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ マネージメント、データ品質プロジェクト、およびデータ品質管理の概念を簡単に説明します。  
@@ -48,9 +48,9 @@ ms.locfileid: "51032121"
   
  DQS でのデータ クレンジングは、DQS ナレッジ ベースのナレッジに基づいて行われます。 DQS のデータ クレンジングは、2 段階のプロセスから成ります。  
   
--   **コンピューター支援型のクレンジング**: DQS では、クレンジング プロジェクト用に選択したナレッジ ベースのナレッジを使用して、データ ソースの値に対する修正または提案を提示します。  
+-   **コンピューター支援型のクレンジング**:DQS では、クレンジング プロジェクトの選択されたナレッジ ベースでナレッジを使用して、修正または提案をデータ ソースの値。  
   
--   **インタラクティブなクレンジング**: データ スチュワードは、インタラクティブなクレンジング プロセスを実行して、コンピューター支援型のデータ クレンジング プロセスで提示されたデータ修正を変更したり拡張したりできます。 このプロセスでは、データ クレンジング プロセスで識別された信頼レベルや統計情報を使用することも、プロジェクトにおける独自の変更を手動で入力することもできます。  
+-   **インタラクティブなクレンジング**:データ スチュワードは、変更したり、コンピューター支援型のデータのクレンジング プロセスで提示されたデータ修正を拡張したりするインタラクティブなクレンジング プロセスを実行できます。 このプロセスでは、データ クレンジング プロセスで識別された信頼レベルや統計情報を使用することも、プロジェクトにおける独自の変更を手動で入力することもできます。  
   
  データ クレンジングの後で、データ スチュワードは、処理されたデータを SQL Server データベース、.csv ファイル、または Excel ファイルにエクスポートできます。 詳細については、「 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)」をご覧ください。  
   

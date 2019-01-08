@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2168e339fb6485035a2a1249dbf109a1560889a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168814"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540843"
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用し、付加列 (非キー列) を追加して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]の非クラスター化インデックスの機能を拡張する方法について説明します。 非キー列を含めることにより、より多くのクエリをカバーする非クラスター化インデックスを作成できます。 これは、非キー列には次の利点があるためです。  
@@ -55,7 +55,7 @@ ms.locfileid: "48168814"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="DesignRecs"></a> 設計上の推奨事項  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48168814"
   
 -   非キー列を定義できるのは、クラスター化されていないインデックスだけです。  
   
--   すべてのデータ型を除く`text`、 `ntext`、および`image`非キー列として使用できます。  
+-   `text`、`ntext`、および `image` を除くすべてのデータ型は、非キー列として使用できます。  
   
 -   決定的な計算列は、正確かどうかに関係なく、非キー列にすることができます。 詳細については、「 [計算列のインデックス](indexes-on-computed-columns.md)」を参照してください。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48168814"
   
     -   列の NULL 値の許容を NOT NULL から NULL に変更する。  
   
-    -   長さを増やす`varchar`、 `nvarchar`、または`varbinary`列。  
+    -   `varchar`、`nvarchar`、または `varbinary` の各列の長さを拡張する。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -96,17 +96,17 @@ ms.locfileid: "48168814"
   
 3.  プラス記号をクリックして、非キー列を含むインデックスの作成先となるテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントし、 **[非クラスター化インデックス...]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントし、**[非クラスター化インデックス]** を選択します。  
   
 5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-6.  **[インデックス キー列]** タブで、 **[追加]** をクリックします。  
+6.  **[インデックス キー列]** タブで、**[追加...]** をクリックします。  
   
 7.  *[テーブル名から列を選択]* ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
-9. **[付加列]** タブで、 **[追加]** をクリックします。  
+9. **[付加列]** タブで、**[追加...]** をクリックします。  
   
 10. *[<テーブル名> から列を選択]* ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   

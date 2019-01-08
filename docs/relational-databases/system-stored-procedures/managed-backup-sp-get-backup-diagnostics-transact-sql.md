@@ -21,12 +21,12 @@ ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e86b68bc387b777a94d6f1435ae6161674013699
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84fe7cea5418a022282958a7c16d263e5c7e9604
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705660"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399836"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> 引数  
  @xevent_channel  
- 拡張イベントの種類。 既定値は、それまでの 30 分間にログに記録されたすべてのイベントを返すよう設定されています。 ログに記録されるイベントは、有効にした拡張イベントの種類によって異なります。 このパラメーターを使用すると、特定の種類のイベントのみが表示されるようにストアド プロシージャにフィルターを適用できます。 イベントの完全名を指定または、部分文字列を指定することができます: **'Admin'**、 **"Analytic"**、 **"Operational"**、および **'Debug'**. @event_channelは**VARCHAR (255)** します。  
+ 拡張イベントの種類。 既定値は、それまでの 30 分間にログに記録されたすべてのイベントを返すよう設定されています。 ログに記録されるイベントは、有効にした拡張イベントの種類によって異なります。 このパラメーターを使用すると、特定の種類のイベントのみが表示されるようにストアド プロシージャにフィルターを適用できます。 イベントの完全名を指定するか、次の部分文字列を指定することができます。**'Admin'**、 **'Analytic'**、 **'Operational'**、および **'Debug'** します。 @event_channelは**VARCHAR (255)** します。  
   
  イベントの種類が現在有効になって使用の一覧を取得する、 **managed_backup.fn_get_current_xevent_settings**関数。  
   

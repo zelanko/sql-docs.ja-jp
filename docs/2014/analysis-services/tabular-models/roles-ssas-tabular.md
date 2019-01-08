@@ -11,12 +11,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181372"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419853"
 ---
 # <a name="roles-ssas-tabular"></a>ロール (SSAS テーブル)
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 各ロールには、Windows ユーザー名または Windows グループ別のメンバー、および権限 (読み取り、処理、および管理者) があります。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。  
@@ -41,7 +41,7 @@ ms.locfileid: "48181372"
 -   [関連タスク](#bkmk_rt)  
   
 ##  <a name="bkmk_underst"></a> ロールについて  
- ロールは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] とデータのセキュリティを管理するために、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、次の 2 種類のロールがあります。  
+ ロールは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、次の 2 種類のロールがあります。  
   
 -   サーバー ロール。管理者が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスにアクセスできるようにするための固定ロールです。  
   
@@ -76,14 +76,14 @@ ms.locfileid: "48181372"
   
  行フィルターを定義できるのは、読み取りおよび読み取りと処理の権限を持つロールに対してだけです。 既定では、ある特定のテーブルに対して行フィルターが定義されていない場合、読み取り権限または読み取りと処理の権限を持つロールのメンバーは、別のテーブルからのクロスフィルター処理が適用されていない限り、テーブル内のすべての行を照会できます。  
   
- ある特定のテーブルに対して行フィルターが定義されると、DAX 式 (これは TRUE/FALSE 値に評価される必要がある) によりその特定のロールのメンバーが照会できる行が定義されます。 DAX 式に含まれていない行は照会できません。 たとえば、Sales ロールのメンバーの場合、 *=Customers [Country] = “USA”* という行フィルター式を持つ Customers テーブルで表示されるのは、米国内の顧客だけです。  
+ ある特定のテーブルに対して行フィルターが定義されると、DAX 式 (これは TRUE/FALSE 値に評価される必要がある) によりその特定のロールのメンバーが照会できる行が定義されます。 DAX 式に含まれていない行は照会できません。 たとえば、Sales ロールのメンバーの場合、次の行を持つ Customers テーブル フィルター、式、 *= Customers [Country] ="USA"*、Sales ロールのメンバーは、米国内の顧客を参照してください。 できます。  
   
  行フィルターは、指定行と関連行に適用されます。 1 つのテーブルに複数のリレーションシップがある場合、フィルターによりセキュリティがアクティブなリレーションシップに適用されます。 行フィルターには、関連テーブルに対して定義された他の行フィルターと類似する点があります。次に例を示します。  
   
 |テーブル|DAX 式|  
 |-----------|--------------------|  
-|Region|=Region[Country]="USA"|  
-|ProductCategory|=ProductCategory[Name]="Bicycles"|  
+|Region|= リージョン [Country] ="USA"|  
+|ProductCategory|= ProductCategory [Name]「自転車」を =|  
 |トランザクション|=Transactions[Year]=2008|  
   
  Transactions テーブルに対するこれらの権限の実質的な影響は、顧客が米国内に存在し、製品カテゴリが自転車で、しかも年度が 2008 であるデータ行をメンバーが照会できることです。 メンバーは、顧客が米国外にいるか、製品が自転車でないか、または年度が 2008 年でないトランザクションは照会できません。ただし、これらの権限を付与された別のロールのメンバーである場合を除きます。  
@@ -95,7 +95,7 @@ ms.locfileid: "48181372"
   
  動的なセキュリティを実装する場合、DAX 式に次の関数を使用すると、現在ログオンしているユーザーの名前、または接続文字列の CustomData プロパティが返されます。  
   
-|機能|説明|  
+|関数|説明|  
 |--------------|-----------------|  
 |[USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|現在ログオンしているユーザーの domain\username を返します。|  
 |[CUSTOMDATA 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|接続文字列の CustomData プロパティを返します。|  
@@ -130,17 +130,17 @@ ms.locfileid: "48181372"
 |7|Sales and Marketing|  
   
 ##  <a name="bkmk_testroles"></a> ロールのテスト  
- モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]** をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳細については、「[Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)」を参照してください。  
+ モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]** をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳しくは、後の「 [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)で [ロール マネージャー] ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。  
   
 ##  <a name="bkmk_rt"></a> 関連タスク  
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[作成し、管理ロール&#40;SSAS 表形式&#41;](create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
+|[ロールの作成および管理 &#40;SSAS テーブル&#41;](create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
   
 ## <a name="see-also"></a>参照  
- [パースペクティブ&#40;SSAS 表形式&#41;](perspectives-ssas-tabular.md)   
- [Excel で分析&#40;SSAS 表形式&#41;](analyze-in-excel-ssas-tabular.md)   
+ [パースペクティブ &#40;SSAS テーブル&#41;](perspectives-ssas-tabular.md)   
+ [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [LOOKUPVALUE 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [CUSTOMDATA 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  

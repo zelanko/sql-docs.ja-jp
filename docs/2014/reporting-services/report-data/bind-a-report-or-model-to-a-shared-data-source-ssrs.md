@@ -14,12 +14,12 @@ ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a5f45b4f453780b1c3a0f87d6ec898650ffd8037
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca6d2e98bc631a675aee3d4968103c9981775019
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521768"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>レポートまたはモデルを共有データ ソースにバインドする (SSRS)
   レポートまたはモデルをテスト サーバーから実稼働サーバーに移動するときなど、ファイルをローカル コンピューターに保存した後で別のレポート サーバーにアップロードする操作が必要になる場合があります。 レポートまたはモデルを新しいサーバーにアップロードしたときは、新しいレポート サーバー上に格納されている共有データ ソースにレポートまたはモデルを再バインドする必要があります。 レポートまたはモデルの再バインドを行わないと、レポートまたはモデルが新しいレポート サーバーからアクセスされたときに正常に動作しない場合があります。  
@@ -55,7 +55,7 @@ ms.locfileid: "48100352"
   
 5.  **[接続の種類]** 領域で、 **[共有データ ソース]** が選択されていることを確認します。  
   
-6.  **[データ ソース リンク]** 領域で、省略記号ボタン ([...]) をクリックします。  
+6.  **[データ ソース リンク]** 領域で、省略記号ボタン ( [...] ) をクリックします。  
   
 7.  使用するデータ ソースを探します。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48100352"
 10. **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ファイルまたはレポートをアップロード&#40;レポート マネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)   
+ [ファイルまたはレポートをアップロードする (レポート マネージャー)](../reports/upload-a-file-or-report-report-manager.md)   
  [SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [作成および共有データ ソースの管理&#40;Reporting Services の SharePoint 統合モード&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [作成、削除、または共有データ ソース変更&#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services でサポートされるデータ ソース (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

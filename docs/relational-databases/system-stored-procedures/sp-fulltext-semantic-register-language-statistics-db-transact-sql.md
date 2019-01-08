@@ -18,19 +18,19 @@ ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 577a587f601dc19d3c3ee652ee09a1fbe23a4001
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b540d233eeb1eb52a86737372d3d3db6f77a7217
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691360"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417733"
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスで、事前にデータが設定されているセマンティック言語統計データベースを登録します。  
   
- セマンティックな抽出は、この言語統計データベースをアタッチし、このストアド プロシージャを使用して登録した後でのみ開始できます。 インスタンスごとに 1 回このタスクを実行するだけで済みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+ セマンティックな抽出は、この言語統計データベースをアタッチし、このストアド プロシージャを使用して登録した後でのみ開始できます。 このタスクは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスごとに 1 回だけ実行する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,13 +38,13 @@ ms.locfileid: "47691360"
   
 ```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db  
-    [ @dbname = ] ‘database_name’;  
+    [ @dbname = ] 'database_name';  
 GO  
 ```  
   
 ##  <a name="Arguments"></a> 引数  
  [ @dbname =] '*database_name*'  
- 現在のインスタンスに登録するセマンティック言語統計データベースの名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 データベースが既にアタッチされている必要があります。 *database_name*は**sysname**NULL にできない可能性があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスに登録するセマンティック言語統計データベースの名前を指定します。 データベースが既にアタッチされている必要があります。 *database_name*は**sysname**NULL にできない可能性があります。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  **0** (成功) または**1** (失敗)  
@@ -57,15 +57,15 @@ GO
   
  **sp_fulltext_semantic_register_language_statistics_db**は、次の手順を実行します。  
   
-1.  確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セマンティックな処理をサポートするバージョンです。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがセマンティックな処理をサポートしているバージョンであることを確認します。  
   
-2.  確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]まだ定義されているセマンティック言語統計データベースがないです。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでセマンティック言語統計データベースがまだ定義されていないことを確認します。  
   
 3.  データベースが有効なセマンティック言語統計データベースであることを確認します。  
   
 4.  ユーザーによるセマンティック言語統計データベースへのアクセスを制限するために、データベースに対する権限を設定します。  
   
-5.  インスタンスのセマンティック言語統計データベースの名前を定義するメタデータを挿入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対してセマンティック言語統計データベースの名前を定義するメタデータを挿入します。  
   
 6.  インストールされたセマンティック言語統計データベースと内部言語モデル テーブル間のマッピングを定義するメタデータを挿入します。  
   

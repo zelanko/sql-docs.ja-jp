@@ -11,12 +11,12 @@ ms.assetid: 64174d54-edee-49b8-9b43-039574bf2ca1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f36ac52021644d901a6586f3b265e6916b897a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb472e106438aee781bf54fd6216d2ed32f7f190
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167422"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531838"
 ---
 # <a name="cluster-node-configuration-complete"></a>クラスター ノードの構成 (完了)
   [クラスター ノードの構成] (完了) ページを使用して、クラスター化用に準備されている既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールまたはアップグレードするには、フェールオーバー クラスターの各ノードでセットアップ プログラムを実行する必要があります。 既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。  
@@ -24,10 +24,10 @@ ms.locfileid: "48167422"
 ## <a name="options"></a>および  
  ドロップダウン ボックスから、次の項目を選択します。  
   
--   [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインスタンス名を選択します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名 - のインスタンス名を選択、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェイル オーバー クラスター。  
   
--   [このノードの名前] - このフィールドには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムが実行されているコンピューターの名前があらかじめ設定されます。  
+-   このノードでは、このフィールドの名前はコンピューター名であらかじめ設定されている、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ プログラムが実行されています。  
   
--   [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのネットワーク名] - このフィールドには、値があらかじめ設定されていません。 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのネットワーク名を指定します。 これは、ネットワーク上のフェールオーバー クラスター インスタンスを識別する名前です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター ネットワーク名 - このフィールドがあらかじめ設定されているではありません。 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのネットワーク名を指定します。 これは、ネットワーク上のフェールオーバー クラスター インスタンスを識別する名前です。  
   
   

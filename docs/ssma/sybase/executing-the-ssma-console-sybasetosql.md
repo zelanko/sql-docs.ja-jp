@@ -19,12 +19,12 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 517c96deaf37934e82c1161c66b8e5825d1b14b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780450"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406409"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA コンソールの実行 (SybaseToSQL)
 Microsoft は、ファイルのコマンドを実行し、SSMA アクティビティを制御する堅牢なスクリプトのセットを提供します。 次のセクションでは、同じについて説明します。  
@@ -57,7 +57,7 @@ Microsoft は、ファイルのコマンドを実行し、SSMA アクティビ�
   
   overwrite-if-exists="<true/false>" (optional)  
   
-   project-type=”<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>”  
+   project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
 '上書きの場合-存在' 属性が**false**既定。  
@@ -136,7 +136,7 @@ Microsoft は、ファイルのコマンドを実行し、SSMA アクティビ�
 **構文例:**  
   
 ```xml  
-<force-load metabase=”<source/target>” >  
+<force-load metabase="<source/target>" >  
   
   <metabase-object object-name="<object-name>"/>  
   
@@ -219,7 +219,7 @@ Microsoft は、ファイルのコマンドを実行し、SSMA アクティビ�
   
   object-type="<object-category>"  
   
-  write-summary-report-to="<file-name/folder-name>”             (optional)  
+  write-summary-report-to="<file-name/folder-name>"             (optional)  
   
   verbose="<true/false>"                       (optional)  
   
@@ -370,7 +370,7 @@ Microsoft は、ファイルのコマンドを実行し、SSMA アクティビ�
 移行の準備中のコマンドは、ソースとターゲット データベース間のスキーマ マッピングを開始します。  
   
 > [!NOTE]  
-> 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力: ソース オブジェクトのツリーのルート ノードで概要のみです。  
+> 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力を示します。ソース オブジェクトのツリーのルート ノードでのみの概要です。  
   
 ### <a name="map-schema"></a>マップとスキーマ  
 このコマンドは、ターゲット スキーマにソース データベースのスキーマ マッピングを提供します。  
@@ -391,7 +391,7 @@ sql-server-schema="<target-schema>"/>
 管理コマンドは、ソース データベースとターゲットのデータベース オブジェクトを同期するのに役立ちます。  
   
 > [!NOTE]  
-> 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力: ソース オブジェクトのツリーのルート ノードで概要のみです。  
+> 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力を示します。ソース オブジェクトのツリーのルート ノードでのみの概要です。  
   
 ### <a name="synchronize-target"></a>同期ターゲット  
 このコマンドは、ターゲット データベースとターゲット オブジェクトを同期します。  

@@ -17,12 +17,12 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136192"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414599"
 ---
 # <a name="using-large-value-types"></a>大きな値をとるデータ型の使用
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値データ型は、8 KB の最大行サイズを超えています。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入された、 **max**の指定子**varchar**、 **nvarchar**と**varbinary** 2 と同じ大きさの値を格納を許可するデータ型 ^31-1バイト数。 テーブルの列と[!INCLUDE[tsql](../../../includes/tsql-md.md)]変数を指定できます**varchar (max)**、 **nvarchar (max)** または**varbinary (max)** データ型。  
@@ -43,7 +43,7 @@ ms.locfileid: "48136192"
   
  **max** のサイズが無制限に設定されている列の **varchar(max)** データ型、**varbinary(max)** データ型、**nvarchar(max)** データ型は、列のデータ型を返す主要な OLE DB スキーマ行セットやインターフェイスでは ISLONG で表されます。  
   
- コマンド オブジェクトの **IAccessor** の実装は、DBTYPE_IUNKNOWN としてバインドできるように変更されています。 コンシューマーが DBTYPE_IUNKNOWN を指定し、*pObject* を NULL に設定すると、プロバイダーからコンシューマーに **ISequentialStream** インターフェイスが返されます。これにより、コンシューマーは **varchar(max)** データ、**nvarchar(max)** データ、または **varbinary(max)** データを出力変数からストリームできます。  
+ コマンド オブジェクトの**IAccessor** DBTYPE_IUNKNOWN としてバインドできるように実装に変わりました。 コンシューマーが DBTYPE_IUNKNOWN を指定し、*pObject* を NULL に設定すると、プロバイダーからコンシューマーに **ISequentialStream** インターフェイスが返されます。これにより、コンシューマーは **varchar(max)** データ、**nvarchar(max)** データ、または **varbinary(max)** データを出力変数からストリームできます。  
   
  ストリーミングされる出力パラメーターの値は、すべての結果行の後に返されます。 アプリケーションが、返される出力パラメーター値をすべて使用しないうちに **IMultipleResults::GetResult** を呼び出して次の結果セットに移動しようとすると、DB_E_OBJECTOPEN が返されます。  
   
