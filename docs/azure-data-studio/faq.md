@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio に関する FAQ |Microsoft Docs
-description: よく寄せられる質問 (FAQ) の Azure Data Studio です。
-ms.custom: tools|sos
+title: よく寄せられる質問
+titleSuffix: Azure Data Studio
+description: Azure Data Studio についてよく寄せられる質問 (FAQ)。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356353"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030333"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
@@ -48,7 +49,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>オープン ソース SSMS 予定ですか。
 
-No. ただし、次世代の複数 os と GUI の CLI ツールはオープン ソースです。 たとえば、VS Code、mssql スクリプト作成者および msql CLI mssql 拡張機能は、GitHub 上のすべてのオープン ソースです。 Azure データ Studo のソース コードは GitHub で入手できます。  
+No. ただし、次世代の複数 os と GUI の CLI ツールはオープン ソースです。 たとえば、VS Code、mssql スクリプト作成者および msql CLI mssql 拡張機能は、GitHub 上のすべてのオープン ソースです。 Azure Data Studio のソース コードは GitHub で入手できます。  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Azure Data Studio は、これでは Microsoft 廃止を計画する SSMS と SSDT のでしょうか。 
 
@@ -94,7 +95,7 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |作業ウィンドウ|はい||
 |テーマ|はい||
 |ダーク モード|はい||
-|Azure リソース エクスプ ローラー|プレビュー||
+|Azure リソース エクスプ ローラー|[プレビュー]||
 |スクリプト生成ウィザード||はい
 |DACPAC のインポート||はい|
 |オブジェクトのプロパティ||はい|
@@ -108,7 +109,7 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |CSV、JSON、XLSX に結果をエクスポートします。|はい||
 |IntelliSense|はい|はい|
 |スニペット|はい|はい|
-|プランを表示します。|プレビュー|はい|
+|プランを表示します。|[プレビュー]|はい|
 |クライアント統計||はい|
 |ライブ クエリ統計||はい|
 |[クエリ オプション]||はい|
@@ -130,18 +131,18 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 
 |機能|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|外部データ ウィザード|プレビュー||
-|HDFS の統合|プレビュー||
-|ノートブック|プレビュー||
+|外部データ ウィザード|[プレビュー]||
+|HDFS の統合|[プレビュー]||
+|ノートブック|[プレビュー]||
 
 ### <a name="database-administration"></a>データベースの管理
 
 |機能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |バックアップ/復元|はい|はい|
-|フラット ファイルのインポート|プレビュー|はい|
-|SQL エージェント|プレビュー|はい|
-|SQL Profiler|プレビュー|はい|
+|フラット ファイルのインポート|[プレビュー]|はい|
+|SQL エージェント|[プレビュー]|はい|
+|SQL Profiler|[プレビュー]|はい|
 |Always On||はい|
 |Always Encrypted||はい|
 |データのコピー ウィザード||はい|

@@ -1,20 +1,22 @@
 ---
-title: クラスターの管理ポータルを使用したビッグ データ クラスター (プレビュー) SQL Server の監視 |Microsoft Docs
+title: クラスターの管理ポータル
+titleSuffix: SQL Server 2019 big data clusters
 description: クラスターの管理ポータルを使用して、SQL Server 2019 ビッグ データ クラスター (プレビュー) を監視する方法について説明します。
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 46d2565ac90bfd007bbe0f3c9e8a2382ca5eeb74
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221468"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215538"
 ---
-# <a name="introduction-to-the-cluster-administration-portal"></a>クラスターの管理ポータルの概要
+# <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>クラスターの管理ポータルを使用してビッグ データの SQL Server クラスターを監視する方法
 
 監視または SQL Server 2019 ビッグ データ クラスター (プレビュー) のトラブルシューティングを行う場合は、クラスターの管理ポータルを使用します。
 
@@ -29,10 +31,10 @@ ms.locfileid: "51221468"
 
 に従って、 [、ビッグ データ クラスターをデプロイするクイック スタート](quickstart-big-data-cluster-deploy.md)に到達するまで、**クラスター管理ポータル**セクション。 Mssqlctl で実行されているビッグ データ クラスターを作成したら、次の手順に従います。
 
-コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
+コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
 
 > [!NOTE]
-> CTP 2.1 ではセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
+> CTP 2.2 はセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
 
 ## <a name="overview"></a>概要
 

@@ -1,5 +1,5 @@
 ---
-title: テーブル、列、または行フィルターのマッピング変更 |Microsoft ドキュメント
+title: Analysis Services 表形式モデルのテーブル、列、または行のフィルターのマッピングの変更 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6eab5a756fb52afeb69c5f4c7646d768b9ec263f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a421f9c43b827f24b15073a4d9a41904f8812f4b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039736"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071759"
 ---
 # <a name="change-table-column-or-row-filter-mappings"></a>テーブル、列、または行のフィルターのマッピングの変更 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  この記事の内容を使用してテーブル、列、または行フィルターのマッピングを変更する方法を説明します、**テーブル プロパティの編集** ダイアログ ボックスで[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]です。  
+  この記事を使用して、テーブル、列、または行のフィルターのマッピングを変更する方法を説明します、**テーブルのプロパティの編集** ダイアログ ボックスで[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]します。  
   
  **[テーブルのプロパティの編集]** ダイアログ ボックスのオプションは、最初にデータをインポートしたときに一覧からテーブルを選択したか SQL クエリを使用したかによって異なります。 最初にデータをインポートするときに一覧から選択した場合は、 **[テーブルのプロパティの編集]** ダイアログ ボックスにテーブルのプレビュー モードが表示されます。 このモードでは、ソース テーブルの最初の 50 行に制限されたサブセットのみが表示されます。 最初にデータをインポートするときに SQL ステートメントを使用した場合は、 **[テーブルのプロパティの編集]** ダイアログ ボックスには SQL ステートメントのみが表示されます。 SQL クエリ ステートメントを使用すると、フィルターをデザインするか、SQL ステートメントを手動で編集することによって、行のサブセットを取得することもできます。  
   
  現在のテーブルと異なる列を持つテーブルにソースを変更すると、列が異なることを示す警告メッセージが表示されます。 現在のテーブルに含める列を選択し、 **[保存]** をクリックします。 テーブルの左側にあるチェック ボックスをオンにすると、テーブル全体を置換できます。  
   
 > [!NOTE]  
->  テーブルに複数のパーティションがある場合、[テーブルのプロパティの編集] ダイアログ ボックスを使用して、行のフィルターのマッピングを変更することはできません。 複数のパーティションを持つテーブルについて行のフィルターのマッピングを変更するには、パーティション マネージャーを使用します。 詳細については、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)です。  
+>  テーブルに複数のパーティションがある場合、[テーブルのプロパティの編集] ダイアログ ボックスを使用して、行のフィルターのマッピングを変更することはできません。 複数のパーティションを持つテーブルについて行のフィルターのマッピングを変更するには、パーティション マネージャーを使用します。 詳細については、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)します。  
   
 #### <a name="to-change-table-column-or-row-filter-mappings"></a>テーブル、列、または行のフィルターのマッピングを変更するには  
   

@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739910"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266103"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |0-9|予約済み。|予約済み。|  
 |10|RPC:Completed|リモート プロシージャ呼び出し (RPC) が完了したときに発生します。|  
 |11|RPC:Starting|RPC が開始したときに発生します。|  
-|12|SQL:BatchCompleted|発生したときに、[!INCLUDE[tsql](../../includes/tsql-md.md)]のバッチが完了します。|  
+|12|SQL:BatchCompleted|[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチが完了したときに発生します。|  
 |13|SQL:BatchStarting|[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチが開始したときに発生します。|  
 |14|Audit Login|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に正常にログオンしたときに発生します。|  
 |15|Audit Logout|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からログアウトしたときに発生します。|  
@@ -85,17 +85,17 @@ sp_trace_setevent [ @traceid = ] trace_id
 |37|SP:Recompile|ストアド プロシージャが再コンパイルされたことを示します。|  
 |38|SP:CacheHit|ストアド プロシージャがプロシージャ キャッシュ内にあることを示します。|  
 |39|非推奨|非推奨|  
-|40|SQL:StmtStarting|発生したときに、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが開始します。|  
-|41|SQL:StmtCompleted|発生したときに、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが完了しました。|  
+|40|SQL:StmtStarting|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが開始したときに発生します。|  
+|41|SQL:StmtCompleted|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが完了したときに発生します。|  
 |42|SP:Starting|ストアド プロシージャが開始されたことを示します。|  
 |43|SP:Completed|ストアド プロシージャが完了したことを示します。|  
-|44|SP:StmtStarting|示します、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャ内のステートメントが実行を開始します。|  
+|44|SP:StmtStarting|ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの実行が開始されたことを示します。|  
 |45|SP:StmtCompleted|ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの実行が完了したことを示します。|  
 |46|Object:Created|CREATE INDEX、CREATE TABLE、CREATE DATABASE などのステートメントで、オブジェクトが作成されたことを示します。|  
 |47|Object:Deleted|DROP INDEX や DROP TABLE などのステートメントで、オブジェクトが削除されたことを示します。|  
 |48|予約済み。||  
 |49|予約済み。||  
-|50|SQL Transaction|トラック[!INCLUDE[tsql](../../includes/tsql-md.md)]BEGIN、COMMIT、SAVE、および ROLLBACK TRANSACTION ステートメント。|  
+|50|SQL Transaction|[!INCLUDE[tsql](../../includes/tsql-md.md)] の BEGIN、COMMIT、SAVE、および ROLLBACK TRANSACTION の各ステートメントを追跡します。|  
 |51|Scan:Started|テーブル スキャンまたはインデックス スキャンが開始されたことを示します。|  
 |52|Scan:Stopped|テーブル スキャンまたはインデックス スキャンが停止したことを示します。|  
 |53|CursorOpen|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで、ODBC、OLE DB、または DB-Library によりカーソルがオープンされたことを示します。|  
@@ -110,18 +110,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |67|Execution Warnings|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントまたはストアド プロシージャの実行中に発生した警告を示します。|  
 |68|Showplan Text (Unencoded)|実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのプラン ツリーを表示します。|  
 |69|Sort Warnings|メモリの中に収まらない並べ替え操作を示します。 インデックスの作成に関連する並べ替え操作は対象になりません。SELECT ステートメントで使用される ORDER BY 句など、クエリ内の並べ替え操作のみが対象になります。|  
-|70|CursorPrepare|カーソルを示す、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC、OLE DB、または Db-library によってステートメントが準備に使用します。|  
-|71|Prepare SQL|ODBC、OLE DB、または Db-library が準備、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメントを使用します。|  
+|70|CursorPrepare|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのカーソルが、ODBC、OLE DB、または DB-Library で使用できるよう準備されたことを示します。|  
+|71|Prepare SQL|ODBC、OLE DB、または DB-Library によって、1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが使用できるように準備されたことを示します。|  
 |72|Exec Prepared SQL|ODBC、OLE DB、または DB-Library によって、準備された 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されたことを示します。|  
-|73|Unprepare SQL|ODBC、OLE DB、または Db-library が準備されていない (削除)、準備された[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント。|  
+|73|Unprepare SQL|ODBC、OLE DB、または DB-Library によって、準備された 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが削除されたことを示します。|  
 |74|CursorExecute|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで ODBC、OLE DB、または DB-Library によって準備されたカーソルが実行されたことを示します。|  
 |75|CursorRecompile|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで ODBC または DB-Library によってオープンされていたカーソルが、直接再コンパイルされたか、またはスキーマが変更されたために再コンパイルされたことを示します。<br /><br /> これは ANSI および非 ANSI のカーソルの場合に発生します。|  
-|76|CursorImplicitConversion|カーソルを[!INCLUDE[tsql](../../includes/tsql-md.md)]でステートメントが変換されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]別の 1 つの型から。<br /><br /> これは ANSI および非 ANSI のカーソルの場合に発生します。|  
+|76|CursorImplicitConversion|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのカーソルの種類が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって別の種類に変換されたことを示します。<br /><br /> これは ANSI および非 ANSI のカーソルの場合に発生します。|  
 |77|CursorUnprepare|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで準備されたカーソルが、ODBC、OLE DB、または DB-Library によって削除されたことを示します。|  
-|78|CursorClose|以前にカーソルを開か、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC、OLE DB、または Db-library によってステートメントが終了します。|  
+|78|CursorClose|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでオープンされていたカーソルが、ODBC、OLE DB、または DB-Library によってクローズされたことを示します。|  
 |79|Missing Column Statistics|オプティマイザーに有効な列の統計が利用できません。|  
 |80|Missing Join Predicate|結合の述語がないクエリが実行されています。 クエリの終了に時間がかかる可能性があります。|  
-|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ使用量の増加または減少 1 メガバイト (MB) または最大サーバー メモリの 5% のいずれか、大きい方になります。|  
+|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用量の増加または減少分が、1 MB または最大サーバー メモリの 5% のいずれか大きい方に達したことを示します。|  
 |82-91|User Configurable (0-9)|ユーザー定義のイベント データです。|  
 |92|Data File Auto Grow|データ ファイルがサーバーによって自動的に拡張されたことを示します。|  
 |93|Log File Auto Grow|ログ ファイルがサーバーによって自動的に拡張されたことを示します。|  
@@ -138,7 +138,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |104|Audit AddLogin Event|発生したときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインが追加または削除の**sp_addlogin**と**sp_droplogin**します。|  
 |105|Audit Login GDR Event|Windows ログインの権利が追加または削除されたときに発生します**sp_grantlogin**、 **sp_revokelogin**、および**sp_denylogin**します。|  
 |106|Audit Login Change Property Event|パスワードを除く、ログインのプロパティが変更されたときに発生します**sp_defaultdb**と**sp_defaultlanguage**します。|  
-|107|Audit Login Change Password Event|発生したときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン パスワードを変更します。<br /><br /> パスワードは記録されません。|  
+|107|Audit Login Change Password Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン パスワードが変更されたときに発生します。<br /><br /> パスワードは記録されません。|  
 |108|Audit Add Login to Server Role Event|ログインが追加または、固定サーバー ロールから削除されたときに発生します**sp_addsrvrolemember**、および**sp_dropsrvrolemember**します。|  
 |109|Audit Add DB User Event|ログインが追加またはデータベース ユーザーとして削除するときに発生します (Windows または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) データベースには**sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**、**sp_dropuser**します。|  
 |110|Audit Add Member to DB Role Event|ログインが追加またはデータベースに (固定またはユーザー定義) は、データベース ユーザーとして削除するときに発生します**sp_addrolemember**、 **sp_droprolemember**、および**sp_changegroup**します。|  
@@ -155,8 +155,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |121|OLEDB DataRead Event|OLE DB プロバイダーに対して、データ要求の呼び出しが行われたときに発生します。|  
 |122|Showplan XML|SQL ステートメントが実行されたときに発生します。 プラン表示演算子を識別するために、このイベントが含まれます。 各イベントは、整形式の XML ドキュメントに格納されます。 なお、**バイナリ**列でこのイベントでエンコードされたプラン表示が含まれています。 トレースを開いてプラン表示を確認するには、SQL Server Profiler を使用します。|  
 |123|SQL:FullTextQuery|フルテキスト クエリが実行されたときに発生します。|  
-|124|Broker:Conversation|進行状況を報告する[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ交換します。|  
-|125|Deprecation Announcement|将来のバージョンから削除される機能を使用するときに発生します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
+|124|Broker:Conversation|[!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ交換の進行状況をレポートします。|  
+|125|Deprecation Announcement|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定の機能を使用したときに発生します。|  
 |126|Deprecation Final Support|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の次の主要なリリースで削除される予定の機能を使用したときに発生します。|  
 |127|Exchange Spill Event|並列クエリ プランの通信バッファーに一時的に書き込まれたときに発生します、 **tempdb**データベース。|  
 |128|Audit Database Management Event|データベースが作成、変更、または削除されたときに発生します。|  
@@ -173,8 +173,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |139|Broker:Forwarded Message Sent|[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージが転送されたときに発生します。|  
 |140|Broker:Forwarded Message Dropped|[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって転送予定のメッセージが削除されたときに発生します。|  
 |141|Broker:Message Classify|[!INCLUDE[ssSB](../../includes/sssb-md.md)] でメッセージのルーティングが決定されたときに発生します。|  
-|142|Broker:Transmission|エラーが発生したことを示します、[!INCLUDE[ssSB](../../includes/sssb-md.md)]トランスポート層です。 エラー番号と状態の値で、エラーの原因を確認できます。|  
-|143|Broker:Queue Disabled|5 つの連続するトランザクションのロールバックがあったため、有害なメッセージが検出されたを示します、[!INCLUDE[ssSB](../../includes/sssb-md.md)]キュー。 このイベントには、データベース ID と、ポイズン メッセージが格納されているキューのキュー ID が含まれます。|  
+|142|Broker:Transmission|[!INCLUDE[ssSB](../../includes/sssb-md.md)] のトランスポート層でエラーが発生したことを示します。 エラー番号と状態の値で、エラーの原因を確認できます。|  
+|143|Broker:Queue Disabled|[!INCLUDE[ssSB](../../includes/sssb-md.md)] キューにトランザクションのロールバックが 5 つ連続して格納されているため、ポイズン メッセージが検出されたことを示します。 このイベントには、データベース ID と、ポイズン メッセージが格納されているキューのキュー ID が含まれます。|  
 |144-145|予約済み。||  
 |146|Showplan XML Statistics Profile|SQL ステートメントが実行されたときに発生します。 プラン表示演算子が識別され、コンパイル時の完全なデータが表示されます。 なお、**バイナリ**列でこのイベントでエンコードされたプラン表示が含まれています。 トレースを開いてプラン表示を確認するには、SQL Server Profiler を使用します。|  
 |148|Deadlock Graph|ロックを取得しようとしてデッドロックが発生したため、ロックの取得が取り消されたときに発生します。 デッドロックについての XML の説明が提供されます。|  
@@ -187,10 +187,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 |155|FT:Crawl Started|フルテキストのクロール (カタログ作成) が開始したときに発生します。 クロールの要求が作業タスクで受け取られたかどうかを確認する場合に使用します。|  
 |156|FT:Crawl Stopped|フルテキストのクロール (カタログ作成) が停止したときに発生します。 クロールが停止するのは、正常に完了するか重大なエラーが発生したときです。|  
 |157|FT:Crawl Aborted|フルテキストのクロール中に例外が検出されたときに発生します。 通常、これによってフルテキストのクロールは停止します。|  
-|158|Audit Broker Conversation|監査に関連するメッセージを報告[!INCLUDE[ssSB](../../includes/sssb-md.md)]ダイアログ セキュリティ。|  
-|159|Audit Broker Login|監査に関連するメッセージを報告[!INCLUDE[ssSB](../../includes/sssb-md.md)]トランスポート セキュリティ。|  
-|160|Broker:Message Undeliverable|発生したときに[!INCLUDE[ssSB](../../includes/sssb-md.md)]をサービスに配信された受信メッセージを保持することはできません。|  
-|161|Broker:Corrupted Message|発生したときに[!INCLUDE[ssSB](../../includes/sssb-md.md)]が破損したメッセージを受信します。|  
+|158|Audit Broker Conversation|[!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログ セキュリティに関する監査メッセージをレポートします。|  
+|159|Audit Broker Login|[!INCLUDE[ssSB](../../includes/sssb-md.md)] トランスポート セキュリティに関する監査メッセージをレポートします。|  
+|160|Broker:Message Undeliverable|[!INCLUDE[ssSB](../../includes/sssb-md.md)] が、サービスに配信される予定であったメッセージを受信し、このメッセージを保持できないときに発生します。|  
+|161|Broker:Corrupted Message|[!INCLUDE[ssSB](../../includes/sssb-md.md)] が破損したメッセージを受信したときに発生します。|  
 |162|User Error Message|エラーや例外が発生したときにユーザーに表示されるエラー メッセージを表示します。|  
 |163|Broker:Activation|キュー モニターによって、アクティブ化ストアド プロシージャの開始や QUEUE_ACTIVATION 通知の送信が行われたときに発生します。またはキュー モニターが終了してアクティブ化ストアド プロシージャが開始したときに発生します。|  
 |164|Object:Altered|データベース オブジェクトが変更されたときに発生します。|  
@@ -208,18 +208,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|サーバー プリンシパルが作成、変更、または削除されたときに発生します。|  
 |178|Audit Database Operation Event|チェックポイントやクエリ通知のサブスクライブなど、データベース操作が行われたときに発生します。|  
 |180|Audit Database Object Access Event|スキーマなどのデータベース オブジェクトにアクセスがあったときに発生します。|  
-|181|TM: Begin Tran starting|BEGIN TRANSACTION 要求が開始されたときに発生します。|  
-|182|TM: Begin Tran completed|BEGIN TRANSACTION 要求が完了したときに発生します。|  
-|183|TM: Promote Tran starting|PROMOTE TRANSACTION 要求が開始されたときに発生します。|  
-|184|TM: Promote Tran completed|PROMOTE TRANSACTION 要求が完了したときに発生します。|  
-|185|TM: Commit Tran starting|COMMIT TRANSACTION 要求が開始されたときに発生します。|  
-|186|TM: Commit Tran completed|COMMIT TRANSACTION 要求が完了したときに発生します。|  
-|187|TM: Rollback Tran starting|ROLLBACK TRANSACTION 要求が開始されたときに発生します。|  
-|188|TM: Rollback Tran completed|ROLLBACK TRANSACTION 要求が完了したときに発生します。|  
+|181|TM:Begin Tran starting|BEGIN TRANSACTION 要求が開始されたときに発生します。|  
+|182|TM:Begin Tran が完了しました|BEGIN TRANSACTION 要求が完了したときに発生します。|  
+|183|TM:Tran starting を昇格します。|PROMOTE TRANSACTION 要求が開始されたときに発生します。|  
+|184|TM:Tran completed の昇格します。|PROMOTE TRANSACTION 要求が完了したときに発生します。|  
+|185|TM:Commit Tran starting|COMMIT TRANSACTION 要求が開始されたときに発生します。|  
+|186|TM:Commit Tran completed|COMMIT TRANSACTION 要求が完了したときに発生します。|  
+|187|TM:Rollback Tran の開始|ROLLBACK TRANSACTION 要求が開始されたときに発生します。|  
+|188|TM:Rollback Tran の完了|ROLLBACK TRANSACTION 要求が完了したときに発生します。|  
 |189|Lock:Timeout (timeout > 0)|ページなどのリソースへのロック要求がタイムアウトしたときに発生します。|  
-|190|Progress Report: Online Index Operation|オンライン インデックスの構築中に、操作の進行状況をレポートします。|  
-|191|TM: Save Tran starting|SAVE TRANSACTION 要求が開始されたときに発生します。|  
-|192|TM: Save Tran completed|SAVE TRANSACTION 要求が完了したときに発生します。|  
+|190|Progress Report:オンライン インデックス操作|オンライン インデックスの構築中に、操作の進行状況をレポートします。|  
+|191|TM:Tran starting を保存します。|SAVE TRANSACTION 要求が開始されたときに発生します。|  
+|192|TM:Tran completed の保存します。|SAVE TRANSACTION 要求が完了したときに発生します。|  
 |193|Background Job Error|バックグラウンド ジョブが異常終了したときに発生します。|  
 |194|OLEDB Provider Information|分散クエリが実行され、プロバイダー接続に関する情報が収集されたときに発生します。|  
 |195|Mount Tape|テープ マウント要求を受け取ったときに発生します。|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|クエリでビットマップ フィルターが無効になっていることを示します。|  
 |213|Database Suspect Data Page|ページが加わった時点を示します、 **suspect_pages**テーブルに**msdb**します。|  
 |214|CPU Threshold Exceeded|CPU しきい値 (REQUEST_MAX_CPU_TIME_SEC) をクエリが超えたことをリソース ガバナーで検出したことを示します。|  
-|215|LOGON トリガーまたはリソース ガバナー分類子関数の実行が開始されたことを示します。|LOGON トリガーまたはリソース ガバナー分類子関数の実行が開始されたことを示します。|  
+|215|PreConnect:Starting|LOGON トリガーまたはリソース ガバナー分類子関数の実行が開始されたことを示します。|  
 |216|PreConnect:Completed|LOGON トリガーまたはリソース ガバナー分類子関数の実行が完了したことを示します。|  
 |217|Plan Guide Successful|SQL Server でプラン ガイドを含むクエリまたはバッチの実行プランが正常に生成されたことを示します。|  
 |218|Plan Guide Unsuccessful|SQL Server でプラン ガイドを含むクエリまたはバッチの実行プランを生成できなかったことを示します。 SQL Server はプラン ガイドを適用せずにこのクエリまたはバッチの実行プランを生成しようとしました。 無効なプラン ガイドが原因になった可能性があります。 sys.fn_validate_plan_guide システム関数を使用して、プラン ガイドを検証することができます。|  
@@ -256,8 +256,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |8|**HostName**|要求を生成したクライアント コンピューターの名前。|  
 |9|**ClientProcessID**|クライアント アプリケーションが実行されているプロセスに対し、クライアントのコンピューターが割り当てた ID。|  
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|  
-|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのログイン名です。|  
-|12|**SPID**|によって割り当てられたサーバー プロセス ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントに関連付けられたプロセスにします。|  
+|11|**LoginName**|クライアントの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名。|  
+|12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってクライアントに関連付けられたプロセスに割り当てられたサーバー プロセス ID。|  
 |13|**Duration**|イベントの実行に要した経過時間 (マイクロ秒単位)。 Hash Warning イベントに対しては、このデータ列は作成されません。|  
 |14|**StartTime**|イベントの開始時刻 (取得できた場合)。|  
 |15|**EndTime**|イベントの終了時刻。 **SQL:BatchStarting** や **SP:Starting**などの開始イベント クラスについては、この列に値が格納されません。 これはも作成されません、 **Hash Warning**イベント。|  

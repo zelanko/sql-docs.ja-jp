@@ -5,8 +5,7 @@ ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergearticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b9a298cb35b21559e6f89c42c61ca606674b504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752270"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823146"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|サブスクライバーで実行された INSERT ステートメントをパブリッシャーで適用する前に、テーブルレベルの権限がパブリッシャーで確認されます。|  
 ||**0x20**|サブスクライバーで実行された UPDATE ステートメントをパブリッシャーで適用する前に、テーブルレベルの権限がパブリッシャーで確認されます。|  
 ||**0x40**|サブスクライバーで実行された DELETE ステートメントをパブリッシャーで適用する前に、テーブルレベルの権限がパブリッシャーで確認されます。|  
-|**column_tracking**|**true**|列レベルの追跡を有効にします。 テーブル アーティクルにのみ適用されます。<br /><br /> 注: 複数の 246 列を含むテーブルをパブリッシュときは、列レベルの追跡を使用できません。|  
+|**column_tracking**|**true**|列レベルの追跡を有効にします。 テーブル アーティクルにのみ適用されます。<br /><br /> 注:列レベルの追跡は、パブリッシュ テーブルの列が 246 を超える場合は使用できません。|  
 ||**false**|列レベルの追跡を無効にし、競合検出を行レベルのままにします。 テーブル アーティクルにのみ適用されます。|  
 |**compensate_for_errors**|**true**|同期中にエラーが発生したときに、補正操作が実行されます。 詳細については、次を参照してください。 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。|  
 ||**false**|補正操作は実行されません。これは既定の動作です。 詳細については、次を参照してください。 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。<br /><br /> **\*\* 重要な\* \*** エラーに対処するとすぐに収束に、影響を受けた行のデータが表示されますが変更を適用して、データが収束します。 アーティクルのソース テーブルが別のパブリケーションの値で既にパブリッシュされている場合*compensate_for_errors*の両方のアーティクルで同じである必要があります。|  
@@ -86,7 +85,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**partition_options**|**0**|アーティクルのフィルター選択は、静的であるか、または各パーティションのデータの一意のサブセットを作成しません。つまり "重複する" パーティションになります。|  
 ||**1**|パーティションは重複しています。サブスクライバーで実行された DML 更新では、行が属するパーティションを変更できません。|  
 ||**2**|アーティクルのフィルター選択により、重複しないパーティションが作成されますが、複数のサブスクライバーは同じパーティションを受け取ることができます。|  
-||**3**|アーティクルのフィルター選択により、各サブスクリプションに対して、一意で重複しないパーティションが作成されます。<br /><br /> 注: の値を指定する場合**3**の**partition_options**を単一のサブスクリプションのみパーティションごとにそのアーティクル内のデータがあります。 第 2 のサブスクリプションを作成し、その新しいサブスクリプションのフィルター選択条件が既存のサブスクリプションと同じパーティションとして判別される場合、既存のサブスクリプションは削除されます。|  
+||**3**|アーティクルのフィルター選択により、各サブスクリプションに対して、一意で重複しないパーティションが作成されます。<br /><br /> 注:値を指定する場合**3**の**partition_options**を単一のサブスクリプションのみパーティションごとにそのアーティクル内のデータがあります。 第 2 のサブスクリプションを作成し、その新しいサブスクリプションのフィルター選択条件が既存のサブスクリプションと同じパーティションとして判別される場合、既存のサブスクリプションは削除されます。|  
 |**pre_creation_command**|**[なし]**|サブスクライバーに既にテーブルがある場合、操作は何も行われません。|  
 ||**delete**|サブセット フィルター内の WHERE 句に基づいて削除します。|  
 ||**drop**|テーブルを再作成する前に削除します。|  
@@ -95,7 +94,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**identity_range**||**bigint**場合、アーティクルは、サーバー サブスクリプションを使用してサブスクライバーに割り当てる範囲のサイズを指定する**identityrangemanagementoption**設定**自動**または**ツールidentity_range**設定**true**します。 この ID 範囲は、再パブリッシュ元のサブスクライバーが自らのサブスクライバーに割り当てるために予約されています。 テーブル アーティクルのみに適用されます。 詳細については、の「マージ レプリケーション」セクションを参照してください。 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)します。|  
 |**published_in_tran_pub**|**true**|アーティクルはトランザクション パブリケーションでもパブリッシュされます。|  
 ||**false**|アーティクルはトランザクション パブリケーションではパブリッシュされません。|  
-|**resolver_info**||カスタム競合回避モジュールが必要とする追加の情報の指定に使用します。 いくつかの[!INCLUDE[msCoName](../../includes/msconame-md.md)]競合回避モジュールが、競合回避モジュールへの入力として提供されている列が必要です。 **resolver_info**は**nvarchar (255)**、既定値は NULL です。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。|  
+|**resolver_info**||カスタム競合回避モジュールが必要とする追加の情報の指定に使用します。 一部の [!INCLUDE[msCoName](../../includes/msconame-md.md)] 競合回避モジュールには、入力用の列が必要です。 **resolver_info**は**nvarchar (255)**、既定値は NULL です。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。|  
 |**schema_option** (ビットマップ)||詳細については、このトピックの後半の「解説」を参照してください。|  
 ||**0x00**|スナップショット エージェントによるスクリプト作成を無効にし、提供するスクリプトを使用して**creation_script**します。|  
 ||**0x01**|オブジェクト作成スクリプト (CREATE TABLE、CREATE PROCEDURE など) を生成します。|  
@@ -127,7 +126,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x20000000**|変換の大きなオブジェクトのデータ型 (**nvarchar (max)**、 **varchar (max)**、および**varbinary (max)**) で導入された[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]はサポートされているデータ型に[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。|  
 ||**0x40000000**|アクセス許可をレプリケートします。|  
 ||**0x80000000**|パブリケーションの一部ではない任意のオブジェクトに対する依存関係を削除しようとしてください。|  
-||**0x100000000**|このオプションを使用して、指定されている場合は、FILESTREAM 属性をレプリケートする**varbinary (max)** 列。 テーブルをレプリケートする場合は、このオプションを指定しない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]サブスクライバー。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。 関連するオプションを参照してください。 **0x800000000**します。|  
+||**0x100000000**|このオプションを使用して、指定されている場合は、FILESTREAM 属性をレプリケートする**varbinary (max)** 列。 テーブルを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートする場合は、このオプションを指定しないでください。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。 関連するオプションを参照してください。 **0x800000000**します。|  
 ||**0x200000000**|日付と時刻のデータ型に変換 (**日付**、**時間**、 **datetimeoffset**、および**datetime2**) で導かれ[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以前のバージョンでサポートされているデータ型に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 ||**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 ||**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)します。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
@@ -150,7 +149,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|カスタム競合回避モジュールのデジタル署名について、信頼されるソースからの署名であるかを判断するための検証を行いません。|  
 |NULL (既定値)||サポートされている値の一覧を返します*プロパティ*します。|  
   
- [  **@force_invalidate_snapshot =** ]*更によって*  
+ [ **@force_invalidate_snapshot =** ]*更によって*  
  このストアド プロシージャが実行する操作によって既存のスナップショットが無効になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**スナップショットが無効であることをマージ アーティクルへの変更が発生しないことを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  

@@ -10,12 +10,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c58a8a9b8f476c55ebce54e8284051fe89d882a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064292"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519541"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>PowerShell の使用による Windows Azure BLOB ストレージ サービスへの複数データベースのバックアップ
   このトピックには、PowerShell コマンドレットを使用して Windows Azure BLOB ストレージ サービスへのバックアップを自動化するためのサンプル スクリプトを掲載しています。  
@@ -49,9 +49,9 @@ ms.locfileid: "48064292"
   
  サンプル スクリプトに関する注意点を次に示します。  
   
-1.  **SQL Server PowerShell パスの移動:** Windows PowerShell では、コマンドレットを実装して、PowerShell プロバイダーによりサポートされるオブジェクトの階層を表すパス構造を移動できます。 そのパス内のノードへ移動したときに、他のコマンドレットを使用して、現在のオブジェクトの基本的な操作を実行することができます。  
+1.  **SQL Server PowerShell パスの移動。** Windows PowerShell では、PowerShell プロバイダーによってサポートされるオブジェクトの階層を表すパス構造を移動するためのコマンドレットを実装します。 そのパス内のノードへ移動したときに、他のコマンドレットを使用して、現在のオブジェクトの基本的な操作を実行することができます。  
   
-2.  `Get-ChildItem` コマンドレット: `Get-ChildItem` から返される情報は、SQL Server PowerShell パス内の場所によって異なります。 たとえば、場所がコンピューター レベルである場合、このコマンドレットはコンピューターにインストールされているすべての SQL Server データベース エンジン インスタンスを返します。 もう 1 つの例として、場所がデータベースなどのオブジェクト レベルである場合、このコマンドレットはデータベース オブジェクトのリストを返します。  既定では、`Get-ChildItem`コマンドレットはシステム オブジェクトを返しません。  –Force パラメーターを使用すると、システム オブジェクトを表示できます。  
+2.  `Get-ChildItem` コマンドレット:によって返される情報、 `Get-ChildItem` SQL Server PowerShell パス内の場所によって異なります。 たとえば、場所がコンピューター レベルである場合、このコマンドレットはコンピューターにインストールされているすべての SQL Server データベース エンジン インスタンスを返します。 もう 1 つの例として、場所がデータベースなどのオブジェクト レベルである場合、このコマンドレットはデータベース オブジェクトのリストを返します。  既定では、`Get-ChildItem` コマンドレットはシステム オブジェクトを返しません。  -Force パラメーターを使用すると、システム オブジェクトを表示できます。  
   
      詳細については、「 [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md)」をご参照ください。  
   

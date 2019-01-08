@@ -1,22 +1,24 @@
 ---
-title: マスター インスタンスの SQL Server のビッグ データ クラスターとは何ですか。 | Microsoft Docs
-description: この記事では、SQL Server 2019 ビッグ データ クラスター内のマスター インスタンスについて説明します。
+title: マスター インスタンスとは何ですか。
+titleSuffix: SQL Server 2019 big data clusters
+description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) で SQL Server のマスター インスタンスについて説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 2ea25aeb5c7c39c5b00e545bc39974073132b1b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221598"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208171"
 ---
-# <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>マスター インスタンスをクラスター、SQL Server のビッグ データとは何ですか。
+# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 ビッグ データ クラスター内のマスター インスタンスとは何ですか。
 
-この記事では、の役割を説明します、 *SQL Server のマスター インスタンス*で SQL Server 2019 ビッグ ata クラスター。 マスター インスタンスが SQL Server のビッグ データ クラスターで実行されている SQL Server インスタンス[コントロール プレーン](big-data-cluster-overview.md#controlplane)します。
+この記事では、の役割を説明します、 *SQL Server のマスター インスタンス*で SQL Server 2019 のビッグ データ クラスター。 マスター インスタンスが SQL Server のビッグ データ クラスターで実行されている SQL Server インスタンス[コントロール プレーン](big-data-cluster-overview.md#controlplane)します。
 
 SQL Server のマスター インスタンスは、次の機能を提供します。
 
@@ -26,7 +28,7 @@ SQL Server のマスター インスタンスは、クラスターの外部か�
 
 ## <a name="scale-out-query-management"></a>スケール アウト クエリの管理
 
-SQL Server のマスター インスタンスには内のノード上の SQL Server インスタンス間でクエリを配布するために使用するスケール アウト クエリ エンジンが含まれています、[プールのコンピューティング](concept-compute-pool.md)します。 スケール アウト クエリ エンジンには、TRANSACT-SQL で、追加の構成なしでクラスター内のすべての Hive テーブルへのアクセスも提供します。 (Hive テーブルのサポートは、CTP 2.1 ではありません)
+SQL Server のマスター インスタンスには内のノード上の SQL Server インスタンス間でクエリを配布するために使用するスケール アウト クエリ エンジンが含まれています、[プールのコンピューティング](concept-compute-pool.md)します。 スケール アウト クエリ エンジンには、TRANSACT-SQL で、追加の構成なしでクラスター内のすべての Hive テーブルへのアクセスも提供します。 (Hive テーブルのサポートは、CTP 2.2 ではありません)
 
 ## <a name="metadata-and-user-databases"></a>データベース メタデータとユーザー データベース
 
@@ -43,7 +45,7 @@ SQL Server のマスター インスタンスにユーザー データベース�
 
 SQL Server machine learning サービスは、SQL Server で Java、R および Python のコードを実行するため、データベース エンジンへのアドオン機能です。 この機能はコア エンジンのプロセスから外部プロセスの分離は、R または Python のステートメントを含む T-SQL スクリプトまたは Java、R ストアド プロシージャとしてのリレーショナル データを完全に統合される SQL Server の機能拡張フレームワークに基づいて、またはT-SQL を格納している Python コードです。
 
-ビッグ データの SQL Server クラスターの一部として、machine learning サービスは既定では SQL Serevr マスター インスタンスで使用可能になります。 つまり外部スクリプトの実行が SQL Server のマスター インスタンスで有効にするとは、Java の sp_execute_external_script を使用して、R と Python のスクリプトの実行を可能にすることができます。
+ビッグ データの SQL Server クラスターの一部として、machine learning サービスは既定では、SQL Server のマスター インスタンスで使用可能になります。 つまり外部スクリプトの実行が SQL Server のマスター インスタンスで有効にするとは、Java の sp_execute_external_script を使用して、R と Python のスクリプトの実行を可能にすることができます。
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>ビッグ データ クラスターでの machine learning サービスの利点
 

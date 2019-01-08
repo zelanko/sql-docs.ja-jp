@@ -1,5 +1,5 @@
 ---
-title: 多次元モデルのアセンブリの管理 |Microsoft ドキュメント
+title: 多次元モデルのアセンブリの管理 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,27 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025669"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215791"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多次元モデルのアセンブリの管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多数の目的を階層内のメンバーを走査する標準的な統計計算からすべての情報を達成する、多次元式 (MDX) およびデータ マイニング拡張機能 (DMX) 言語で使用するための組み込み関数を提供します。 ただし、他のすべての複雑で強力な製品がそうであるように、この製品も常に機能の拡張を求められています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、標準偏差計算から階層内でのメンバーのスキャンまで、あらゆる動作を実現するためにデザインされた、多次元式 (MDX) 言語およびデータ マイニング拡張機能 (DMX) 言語で使用するための多数の組み込み関数が提供されています。 ただし、他のすべての複雑で強力な製品がそうであるように、この製品も常に機能の拡張を求められています。  
   
  このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスまたはデータベースにアセンブリを追加するための機能が用意されています。 アセンブリを使用すると、Microsoft Visual Basic .NET や Microsoft Visual C# など、任意の共通言語ランタイム (CLR) 言語を使用する外部ユーザー定義関数を作成できます。 Microsoft Visual Basic や Microsoft Visual C++ など、コンポーネント オブジェクト モデル (COM) オートメーション言語を使用することもできます。  
   
 > [!IMPORTANT]  
->  COM アセンブリにより、セキュリティ上のリスクが生じる可能性があります。 このリスクやその他の考慮事項により、 [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]では、COM アセンブリが推奨されていません。 COM アセンブリは、今後のリリースではサポートされない可能性があります。  
+>  COM アセンブリにより、セキュリティ上のリスクが生じる可能性があります。 このリスクやその他の考慮事項により、[!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)] では、COM アセンブリが非推奨とされました。 COM アセンブリは、今後のリリースではサポートされない可能性があります。  
   
  アセンブリにより、MDX と DMX のビジネス機能が拡張されます。 必要な機能はダイナミック リンク ライブラリ (DLL) などのライブラリに作成し、このライブラリはアセンブリとして [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに追加します。 ライブラリ内のパブリック メソッドは、ユーザー定義関数として、MDX および DMX 式、プロシージャ、計算、動作、およびクライアント アプリケーションに公開されます。  
   
  新しいプロシージャや関数を使用したアセンブリをサーバーに追加できます。 アセンブリを使用して、サーバーによって提供されていない独自の機能を拡張または追加できます。 アセンブリを使用することにより、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、またはストアド プロシージャに新しい関数を追加できます。 カスタム アプリケーションの実行場所からアセンブリが読み込まれ、アセンブリ バイナリ ファイルのコピーは、データベースのデータと共にサーバーに保存されます。 アセンブリを削除すると、そのアセンブリのコピーもサーバーから削除されます。  
   
- アセンブリには、COM と CLR の 2 種類があります。 CLR アセンブリとは、C#、Visual Basic .NET、マネージ C++ など、.NET Framework プログラミング言語で開発されたアセンブリです。 COM アセンブリとは、サーバーに登録する必要がある COM ライブラリです。  
+ 2 つのさまざまな種類のアセンブリができます。COM と CLR です。 CLR アセンブリとは、C#、Visual Basic .NET、マネージド C++ など、.NET Framework プログラミング言語で開発されたアセンブリです。 COM アセンブリとは、サーバーに登録する必要がある COM ライブラリです。  
   
  アセンブリは、 <xref:Microsoft.AnalysisServices.Server> オブジェクトまたは <xref:Microsoft.AnalysisServices.Database> オブジェクトに追加できます。 サーバー アセンブリは、サーバーまたはサーバー内の任意のオブジェクトに接続している任意のユーザーが呼び出すことができます。 データベース アセンブリは、 <xref:Microsoft.AnalysisServices.Database> オブジェクトまたはデータベースに接続しているユーザーのみが呼び出すことができます。  
   
@@ -68,27 +68,27 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
-## <a name="security"></a>Security  
- アセンブリのセキュリティは、コード アクセス セキュリティ モデルである、.NET Framework セキュリティ モデルに基づいています。 .NET Framework は、ランタイムが完全に信頼されるコードと部分的に信頼されるコードの両方をホストできると仮定する、コード アクセス セキュリティ メカニズムをサポートしています。 .NET Framework コード アクセス セキュリティによって保護されるリソースは、通常、リソースへのアクセスを許可する前に対応する権限を要求する、マネージ コードによってラップされます。 権限の要求は、(アセンブリ レベルで) 呼び出し履歴内のすべての呼び出し側が、対応するリソース権限を持つ場合にのみ満たされます。  
+## <a name="security"></a>セキュリティ  
+ アセンブリのセキュリティは、コード アクセス セキュリティ モデルである、.NET Framework セキュリティ モデルに基づいています。 .NET Framework は、ランタイムが完全に信頼されるコードと部分的に信頼されるコードの両方をホストできると仮定する、コード アクセス セキュリティ メカニズムをサポートしています。 .NET Framework コード アクセス セキュリティによって保護されるリソースは、通常、リソースへのアクセスを許可する前に対応する権限を要求する、マネージド コードによってラップされます。 権限の要求は、(アセンブリ レベルで) 呼び出し履歴内のすべての呼び出し側が、対応するリソース権限を持つ場合にのみ満たされます。  
   
- アセンブリでは、実行権限は **Assembly** オブジェクトの **PermissionSet** プロパティを使用して渡されます。 マネージ コードが取得する権限は、有効なセキュリティ ポリシーによって決定されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以外によるホスト環境では、エンタープライズ、コンピューター、およびユーザーの 3 つの有効なポリシー レベルがあります。 コードが取得する権限の有効なリストは、これら 3 つのレベルによって取得される権限の共通部分によって決定されます。  
+ アセンブリでは、実行権限は **Assembly** オブジェクトの **PermissionSet** プロパティを使用して渡されます。 マネージド コードが取得する権限は、有効なセキュリティ ポリシーによって決定されます。 以外で有効なポリシーの 3 つのレベルが既に存在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ホスト環境: エンタープライズ、コンピューターおよびユーザー。 コードが取得する権限の有効なリストは、これら 3 つのレベルによって取得される権限の共通部分によって決定されます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって、ホスト時の CLR にホスト レベルのセキュリティ ポリシー レベルが提供されます。このポリシーは、常に有効な 3 つのポリシー レベルよりも下位の、追加のポリシー レベルです。 このポリシーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって作成されるアプリケーション ドメインごとに設定されます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ホスト レベル ポリシーは、システム アセンブリの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定ポリシーと、ユーザー アセンブリのユーザー指定ポリシーの組み合わせです。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ホスト ポリシーのユーザー指定部分は、各アセンブリの 3 つの権限バケットの 1 つを指定するアセンブリの所有者に基づいています。  
   
-|設定する権限|Description|  
+|設定する権限|説明|  
 |------------------------|-----------------|  
 |**Safe**|内部的な計算権限を提供します。 この権限バケットでは、.NET Framework 内の保護されたリソースにアクセスする権限は許可されません。 これは、 **PermissionSet** プロパティで何も指定されていない場合に、アセンブリに既定の権限バケットです。|  
 |**ExternalAccess**|外部システム リソースにアクセスする追加機能と共に、 **Safe** 設定と同じアクセスを提供します。 この権限バケットはセキュリティの保証を提供するものではありませんが、信頼性の保証は提供されます (このシナリオを保証するのは可能です)。|  
-|**Unsafe**|制限はありません。 この権限セットで実行されるマネージ コードに対する、セキュリティあるいは信頼性の保証はありません。 管理者によって指定されたカスタム権限であっても、すべての権限が、この信頼性のレベルで実行されるコードに与えられます。|  
+|**Unsafe**|制限はありません。 この権限セットで実行されるマネージド コードに対する、セキュリティあるいは信頼性の保証はありません。 管理者によって指定されたカスタム権限であっても、すべての権限が、この信頼性のレベルで実行されるコードに与えられます。|  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって CLR がホストされるとき、スタックウォーク ベースの権限チェックはネイティブの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コードとの境界で停止されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アセンブリ内のすべてのマネージ コードは常に、上記の 3 つの権限カテゴリのいずれかに分類されます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって CLR がホストされるとき、スタックウォーク ベースの権限チェックはネイティブの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コードとの境界で停止されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アセンブリ内のすべてのマネージド コードは常に、上記の 3 つの権限カテゴリのいずれかに分類されます。  
   
  COM (またはアンマネージ) アセンブリ ルーチンは、CLR セキュリティ モデルをサポートしません。  
   
 ### <a name="impersonation"></a>権限借用  
- マネージ コードが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]外部のリソースにアクセスする場合、必ず適切な Windows セキュリティ コンテキスト内でアクセスが行われるようにするため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はアセンブリの **ImpersonationMode** プロパティ設定に関連付けられているルールに従います。 **Safe** 権限設定を使用するアセンブリは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]外部のリソースにアクセスできないため、これらのルールは **ExternalAccess** 権限設定および **Unsafe** 権限設定を使用するアセンブリにのみ適用可能です。  
+ マネージド コードが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]外部のリソースにアクセスする場合、必ず適切な Windows セキュリティ コンテキスト内でアクセスが行われるようにするため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はアセンブリの **ImpersonationMode** プロパティ設定に関連付けられているルールに従います。 **Safe** 権限設定を使用するアセンブリは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]外部のリソースにアクセスできないため、これらのルールは **ExternalAccess** 権限設定および **Unsafe** 権限設定を使用するアセンブリにのみ適用可能です。  
   
 -   現在の実行コンテキストが Windows 認証ログインに対応しており、元の呼び出し側のコンテキストと同じ場合 (つまり、途中に EXECUTE AS が存在しない場合)、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は Windows 認証ログインの権限を借用してからリソースにアクセスします。  
   

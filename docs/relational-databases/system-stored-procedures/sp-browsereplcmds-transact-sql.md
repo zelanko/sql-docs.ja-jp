@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsereplcmds_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e3884ba1d35a488319ee9ba32e584450b300eda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670480"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802384"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@xact_seqno_start =**] **'***xact_seqno_start***'**  
+ [  **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
  返すシーケンス番号の最小値を正確に指定します。 *xact_seqno_start*は**nchar (22)**、既定値は 0x00000000000000000000 です。  
   
- [  **@xact_seqno_end =**] **'***xact_seqno_end***'**  
+ [  **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
  返すシーケンス番号の最大値を正確に指定します。 *xact_seqno_end*は**nchar (22)**、既定値は 0 xffffffffffffffffffff です。  
   
- [  **@originator_id =**] **'***originator_id***'**  
+ [  **@originator_id =**] **'**_originator_id_**'**  
  場合を指定します。 指定したコマンド*originator_id*が返されます。 *originator_id*は**int**、既定値は NULL です。  
   
- [  **@publisher_database_id =**] **'***化コ***'**  
+ [  **@publisher_database_id =**] **'**_化コ_**'**  
  場合を指定します。 指定したコマンド*化コ*が返されます。 *化コ*は**int**、既定値は NULL です。  
   
- [  **@article_id =**] **'***コ***'**  
+ [  **@article_id =**] **'**_コ_**'**  
  場合を指定します。 指定したコマンド*コ*が返されます。 *コ*は**int**、既定値は NULL です。  
   
  [  **@command_id =**] *command_id*  
@@ -87,7 +86,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID です。|  
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョンです。|  
 |**originator_lsn**|**varbinary(16)**|発生元パブリケーションでのコマンドのログ シーケンス番号 (LSN) を識別します。 ピア ツー ピア トランザクション レプリケーションで使用します。|  
-|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドです。|  
 |**command_id**|**int**|内のコマンドの ID [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)します。|  
   
  コマンド名が長いものは、結果セット内でいくつかの行に分割表示されることがあります。  

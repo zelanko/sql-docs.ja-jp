@@ -1,5 +1,5 @@
 ---
-title: Analysis Services の新機能 |Microsoft ドキュメント
+title: SQL Server 2016 Analysis Services の新機能新機能 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145997"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210191"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services の新機能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -32,7 +32,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
 
 特に、SQL Server 2016 SP1 Analysis Services は、以下の主要領域の機能を改善しています。
 
--   **NUMA 対応** - NUMA のサポートを改善するために、Analysis Services 内のインメモリ (VertiPaq) エンジンは各 NUMA ノードで別のジョブ キューを維持するようになりました。 これによって、セグメント スキャン ジョブを、セグメント データのメモリが割り当てられている同じノードで確実に実行することができます。 ただし、NUMA 対応は、既定で 4 つ以上の NUMA ノードがあるシステムで有効にすることができます。 2 ノード システムの場合、割り当て済みメモリにリモート アクセスするコストは、NUMA の詳細を管理するオーバーヘッドを保証しません。
+-   **NUMA 対応** - NUMA のサポートを改善するために、Analysis Services 内のインメモリ (VertiPaq) エンジンは各 NUMA ノードで別のジョブ キューを維持するようになりました。 これによって、セグメント スキャン ジョブを、セグメント データのメモリが割り当てられている同じノードで確実に実行することができます。 ただし、NUMA 対応は、既定で 4 つ以上の NUMA ノードがあるシステムで有効にすることができます。 2 つのノードのシステムでのコストにアクセスするリモート割り当て済みメモリは NUMA の詳細を管理するオーバーヘッドを保証しません。
 -   **メモリの割り当て** - Analysis Services は、Intel Threading Building Blocks (Intel TBB) で高速になりました。Intel TBB は、すべてのコアに別のメモリ プールを提供するスケーラブルな割り当てツールです。 コア数の増加に比例してシステムを拡張することができます。
 -   **ヒープの断片化** - Intel TBB ベースのスケーラブルな割り当てツールを使用すると、Windows ヒープで発生するヒープの断片化によるパフォーマンスの問題を軽減できます。
 
@@ -49,10 +49,6 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
 - [SQL Server Management Studio (SSMS) のダウンロード](http://msdn.microsoft.com/library/mt238290.aspx)   
 
 カスタムの AMO 依存アプリケーションがある場合は、AMO の更新バージョンをインストールする必要がある可能性があります。 手順については、「[Analysis Services データ プロバイダー &#40;AMO、ADOMD.NET、MSOLAP&#41; をインストールする](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md)」を参照してください。    
-
- #### <a name="technet-virtual-labs-sql-server-2016-analysis-services"></a>TechNet 仮想ラボ: SQL Server 2016 Analysis Services
-学習するうえで実践に勝るものはありません。 [SQL Server 2016 Analysis Services 仮想ラボの新機能](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true)に関する記事の手順に従って進めてください。
-このラボでは、拡張イベント (xEvent) の作成と監視、表形式プロジェクトの互換性レベル 1200 へのアップグレード、Visual Studio の構成の操作、新しい計算機能の実装、新しいテーブル リレーションシップ機能の実装、表示フォルダーの構成、モデルの翻訳の管理、新しい表形式モデルのスクリプト言語 (TMSL) の操作、PowerShell の操作、新しい DirectQuery モード機能の試行を実施します。
 
 ## <a name="modeling"></a>モデリング    
 ### <a name="improved-modeling-performance-for-tabular-1200-models"></a>表形式モデル 1200 の強化されたモデリング パフォーマンス    
@@ -92,7 +88,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
 
 ## <a name="scripting"></a>スクリプトの作成
  ### <a name="powershell-for-tabular-models"></a>表形式モデル用の PowerShell    
- このリリースには、互換性レベル 1200 の表形式モデル用の PowerShell の拡張機能が含まれています。 すべての該当するコマンドレットに加えて、表形式モードに固有の [Invoke ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) コマンドレットと [Invoke ProcessTable コマンドレット](../analysis-services/powershell/invoke-processtable-cmdlet.md)を使用できます。    
+ このリリースには、互換性レベル 1200 の表形式モデル用の PowerShell の拡張機能が含まれています。 すべての該当するコマンドレットは、に加えて、表形式モードに固有のコマンドレットを使用できます。[Invoke-processasdatabase](../analysis-services/powershell/invoke-processasdatabase.md)と[Invoke ProcessTable コマンドレット](../analysis-services/powershell/invoke-processtable-cmdlet.md)します。    
  ### <a name="ssms-scripting-database-operations"></a>SSMS スクリプトのデータベース操作    
  [最新の SQL Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)では、スクリプトで Create、Alter、Delete、Backup、Restore、Attach、Detach などのデータベース コマンドを使用できるようになりました。 Output は、JSON での表形式モデルのスクリプト言語 (TMSL) です。 詳細については、「[表形式モデルのスクリプト言語 &#40;TMSL&#41; リファレンス](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)」を参照してください。    
  ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク    
@@ -101,7 +97,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
  SSAS PowerShell コマンドレット **Invoke-ASCmd** は、表形式モデルのスクリプト言語 (TMSL) コマンドを受け入れるようになりました。 その他の SSAS PowerShell コマンドレットは、新しい表形式のメタデータを使用するために、今後のリリースで更新される可能性があります (例外はリリース ノートに記載されます)。    
 詳細については、「 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) 」を参照してください。    
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>SSMS でサポートされる表形式モデルのスクリプト言語 (TMSL)    
-  [最新バージョンの SSMS](http://msdn.microsoft.com/library/mt238290.aspx)を使用して、表形式モデル 1200 のほとんどの管理タスクを自動化するスクリプトを作成できるようになりました。 現時点では、次のタスクをスクリプト化できます。すべてのレベルの Process、およびデータベース レベルの CREATE、ALTER、DELETE。    
+  [最新バージョンの SSMS](http://msdn.microsoft.com/library/mt238290.aspx)を使用して、表形式モデル 1200 のほとんどの管理タスクを自動化するスクリプトを作成できるようになりました。 現時点では、次のタスクをスクリプト化できます。プロセス レベル、および CREATE、ALTER、データベース レベルで削除します。    
     
  機能的には、TMSL は、表形式のメタデータを説明する **model**、 **table**、および **relationship** などのネイティブ記述子を使用する TMSL を除いて、多次元オブジェクトの定義を提供する XMLA ASSL の拡張機能と同じです。 スキーマの詳細については、「[表形式モデルのスクリプト言語 &#40;TMSL&#41; リファレンス](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)」を参照してください。    
     
@@ -134,7 +130,7 @@ refresh|オブジェクトを処理します。 ASSL では PROCESS に相当し
 
 ## <a name="dax"></a>DAX
 ### <a name="improved-dax-formula-editing"></a>強化された DAX 数式の編集
-数式バーの更新プログラムでは、関数、フィールド、および構文の色を区別して、より簡単に数式を記述することができます。これは、インテリジェント関数やフィールドの候補を提供し、DAX 式に間違っている部分がある場合はエラーの *波線*を使用して示します。 複数の行 (Alt + Enter) とインデント (Tab) も使用できます。 数式バーでは、メジャーの一部としてコメントも記述できるようになりました。「//」と入力するだけで、同じ行にあるこの文字の後のすべてがコメントと見なされます。
+数式バーの更新プログラムでは、関数、フィールド、および構文の色を区別して、より簡単に数式を記述することができます。これは、インテリジェント関数やフィールドの候補を提供し、DAX 式に間違っている部分がある場合はエラーの *波線*を使用して示します。 複数の行 (Alt + Enter) とインデント (Tab) も使用できます。 数式バーもできるようになりました、メジャーの一部としてコメントを作成、入力するだけにする"//"と同じ行にこれらの文字がコメントを考慮する後のすべて。
 
 ### <a name="dax-variables"></a>DAX の変数    
 このリリースでは、DAX の変数のサポートが追加されました。 変数は、式の結果を名前付きの変数として保存できるようになりました。これは、他のメジャーの式に引数として渡すことができます。 結果の値が可変式に対して計算されると、その変数が別の式で参照される場合でも、それらの値は変更されません。 詳細については、「 [VAR 関数](http://msdn.microsoft.com/library/mt243785.aspx)」を参照してください。    
@@ -177,10 +173,10 @@ Visual Studio 2015 の [コードの表示] で、表形式モデル 1200 の BI
     }    
     ```    
     
-> [!WARNING]    
+> [!WARNING]
 > JSON を直接編集しないでください。 編集すると、モデルが破壊される場合があります。    
- ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>MS-CSDLBI 2.0 スキーマの新しい要素    
- 次の要素が、[MS-CSDLBI] 2.0 スキーマで定義された **TProperty** 複合型に追加されました。    
+>  ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>MS-CSDLBI 2.0 スキーマの新しい要素    
+>  次の要素が、[MS-CSDLBI] 2.0 スキーマで定義された **TProperty** 複合型に追加されました。    
     
 |要素|定義|    
 |-------------|----------------|    

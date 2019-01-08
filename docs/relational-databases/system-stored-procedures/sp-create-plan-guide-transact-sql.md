@@ -18,12 +18,12 @@ ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909fd7c82e91f90b24b643a555ddd8d8d93c639f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734100"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202568"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  プラン ガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name*の規則に従っている必要があります[識別子](../../relational-databases/databases/database-identifiers.md)番号記号で始めることはできません (#)。 最大長*plan_guide_name*は 124 文字です。  
   
  [ \@stmt =] N'*statement_text*'  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントに対してプラン ガイドを作成します。 ときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーがクエリに一致する*statement_text*、 *plan_guide_name*有効になります。 成功するプラン ガイドの作成を*statement_text*で指定されたコンテキストで表示する必要があります、\@型、 \@module_or_batch、および\@params パラメーター。  
+ プラン ガイドを作成する対象の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 ときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーがクエリに一致する*statement_text*、 *plan_guide_name*有効になります。 成功するプラン ガイドの作成を*statement_text*で指定されたコンテキストで表示する必要があります、\@型、 \@module_or_batch、および\@params パラメーター。  
   
  *statement_text*によって識別されるモジュールと、バッチ内で対応するステートメントと一致する、クエリ オプティマイザーを許可する方法を指定する必要があります\@module_or_batch と\@params します。 詳細については、「解説」セクションを参照してください。 サイズ*statement_text*サーバーの使用可能なメモリによってのみ制限されます。  
   
@@ -109,11 +109,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。 プラン ガイドで参照され、トリガーが定義されているテーブルを削除しようとする場合もエラーが発生します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  プラン ガイドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 プラン ガイドはどのエディションでも表示できます。 また、プラン ガイドを含むデータベースは、どのエディションに対してもアタッチできます。 アップグレード済みのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータベースを復元またはアタッチした場合、プラン ガイドはまったく影響を受けません。 サーバーのアップグレード後に、各データベース内のプラン ガイドが適切かどうかを確認する必要があります。  
   
 ## <a name="plan-guide-matching-requirements"></a>プラン ガイドの照合要件  
- 指定するプラン ガイドの\@型 = 'SQL' または\@型 = 'TEMPLATE' の値、クエリを正常に一致するように*batch_text*と *\@parameter_name data_type*[、*... .n* ]、アプリケーションによって送信される対応と完全に同じ形式を指定する必要があります。 つまり、バッチ テキストを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンパイラが受信したときとまったく同じように指定する必要があります。 使用することができます、実際のバッチおよびパラメーターのテキストをキャプチャする[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]します。 詳細については、次を参照してください。[を作成およびプラン ガイドをテストする SQL Server Profiler を使用して](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)します。  
+ 指定するプラン ガイドの\@型 = 'SQL' または\@型 = 'TEMPLATE' の値、クエリを正常に一致するように*batch_text*と *\@parameter_name data_type*[、*... .n* ]、アプリケーションによって送信される対応と完全に同じ形式を指定する必要があります。 つまり、バッチ テキストを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンパイラが受信したときとまったく同じように指定する必要があります。 実際のバッチおよびパラメーター テキストをキャプチャするには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用する必要があります。 詳細については、次を参照してください。[を作成およびプラン ガイドをテストする SQL Server Profiler を使用して](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)します。  
   
  ときに\@型 = 'SQL' と\@module_or_batch が null の場合の値に設定されている\@の値に設定されている module_or_batch \@stmt します。値は、これにより*statement_text*と完全に同じ形式を指定する必要がありますの文字を送信するときと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 この適合を容易にするために内部変換は実行されません。  
   
@@ -137,7 +137,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  `N'SELECT * FROM T WHERE b = 10'`  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キャリッジ リターン、ライン フィード、および最初のクエリ内の空白文字は無視されます。 2 つ目のクエリのシーケンス `WHERE b = 10` は、`WHERE a = 10` とは異なるものと解釈されます。 照合処理では、大文字小文字が区別されないキーワードを除き、(データベースの照合順序で大文字小文字が区別されない場合でも) 大文字小文字およびアクセントが区別されます。 キーワードの省略形は区別されません。 たとえば、キーワード `EXECUTE`、`EXEC`、および `execute` は同じものと解釈されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、最初のクエリ内にある復帰、改行、空白文字を無視します。 2 つ目のクエリのシーケンス `WHERE b = 10` は、`WHERE a = 10` とは異なるものと解釈されます。 照合処理では、大文字小文字が区別されないキーワードを除き、(データベースの照合順序で大文字小文字が区別されない場合でも) 大文字小文字およびアクセントが区別されます。 キーワードの省略形は区別されません。 たとえば、キーワード `EXECUTE`、`EXEC`、および `execute` は同じものと解釈されます。  
   
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>プラン キャッシュに対するプラン ガイドの効果  
  モジュールにプラン ガイドを作成すると、そのモジュールのクエリ プランがプラン キャッシュから削除されます。 バッチに OBJECT 型または SQL 型のプラン ガイドを作成すると、同じハッシュ値を持つバッチのクエリ プランが削除されます。 TEMPLATE 型のプラン ガイドを作成すると、単一ステートメントのバッチがデータベース内のプラン キャッシュからすべて削除されます。  
@@ -284,7 +284,7 @@ EXEC sp_cursorprepexec @p1 output,@p2 output,N'@P1 varchar(255),@P2 varchar(255)
 SELECT @p1, @p2, @p5, @p6, @p7;  
 ```  
   
- このデータを見ると、`SELECT` の呼び出しの `sp_cursorprepexec` クエリに対するプランでマージ結合を使用していることがわかりますが、ハッシュ結合を使用するとします。 使用して送信されるクエリ`sp_cursorprepexec`がパラメーター化されたクエリ文字列とパラメーター文字列の両方を含むです。 `sp_cursorprepexec` の呼び出しで、表示されているとおり完全に同じであるクエリ文字列とパラメーター文字列を使用して、次のプラン ガイドを作成し、プランの選択を変更できます。  
+ このデータを見ると、`SELECT` の呼び出しの `sp_cursorprepexec` クエリに対するプランでマージ結合を使用していることがわかりますが、ハッシュ結合を使用するとします。 `sp_cursorprepexec` を使用して送信されるクエリは、クエリ文字列およびパラメーター文字列の両方を含めて、パラメーター化されます。 `sp_cursorprepexec` の呼び出しで、表示されているとおり完全に同じであるクエリ文字列とパラメーター文字列を使用して、次のプラン ガイドを作成し、プランの選択を変更できます。  
   
 ```  
 EXEC sp_create_plan_guide   

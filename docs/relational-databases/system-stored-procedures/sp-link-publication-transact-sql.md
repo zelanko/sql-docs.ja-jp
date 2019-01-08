@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_link_publication_TSQL
@@ -17,23 +16,23 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd0e41f54792978dd2adf8186d88dd4f07c1fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683090"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210056"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   パブリッシャーへの接続時に即時更新サブスクリプションの同期トリガーが使用する、構成およびセキュリティ情報を設定します。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
-  
-> [!IMPORTANT]  
->  サブスクライバーが実行されている場合、特定の条件下でこのストアド プロシージャが失敗することができます[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 またはそれ以降、および発行元は、以前のバージョンを実行します。 このシナリオでは、ストアド プロシージャが失敗すると、アップグレードのパブリッシャーから[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 1 またはそれ以降。  
+> 
+> [!IMPORTANT]
+>  サブスクライバーが実行されている場合、特定の条件下でこのストアド プロシージャが失敗することができます[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 またはそれ以降、および発行元は、以前のバージョンを実行します。 このシナリオでストアド プロシージャが失敗する場合は、パブリッシャーを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 以降にアップグレードしてください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,8 +64,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |値|説明|  
 |-----------|-----------------|  
-|**0**|使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]としてこのストアド プロシージャで指定されたログインを使用して認証*ログイン*と*パスワード*します。<br /><br /> 注: 以前のバージョンので[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このオプションが動的なリモート プロシージャ コール (RPC) を指定するために使用します。|  
-|**1**|セキュリティ コンテキストを使用して ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証または Windows 認証) のサブスクライバーで、変更を行ったユーザー。<br /><br /> 注: このアカウントは、十分な特権でパブリッシャーに存在する必要がありますも。 Windows 認証を使用する場合は、セキュリティ アカウントの委任がサポートされる必要があります。|  
+|**0**|使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]としてこのストアド プロシージャで指定されたログインを使用して認証*ログイン*と*パスワード*します。<br /><br /> 注:前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このオプションを使用して動的なリモート プロシージャ コール (RPC) を指定していました。|  
+|**1**|サブスクライバーで変更を行っているユーザーのセキュリティ コンテキスト ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証または Windows 認証) を使用します。<br /><br /> 注:パブリッシャー側でも、十分な権限を持つこのアカウントが必要です。 Windows 認証を使用する場合は、セキュリティ アカウントの委任がサポートされる必要があります。|  
 |**2**|使用して作成、既存のユーザー定義リンク サーバー ログイン**sp_link_publication**します。|  
   
  [ **@login**=] **'***ログイン***'**  

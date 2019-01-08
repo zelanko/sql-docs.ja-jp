@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_reinitsubscription
@@ -17,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1e22ef6cd6ed820bf290125c109ab5e0f772cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785140"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207333"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
  初期スナップショットが自動的に適用され、パブリケーションで更新可能なサブスクリプションが許可されない場合のサブスクリプションについては、このストアド プロシージャを実行してからスナップショット エージェントを実行する必要があります。こうすると、スキーマおよび一括コピー プログラム ファイルの準備ができてから、ディストリビューション エージェントでサブスクリプションを再同期化できます。  
   
- 初期スナップショットが自動的に適用され、パブリケーションで更新可能なサブスクリプションが許可される場合のサブスクリプションについては、ディストリビューション エージェントでサブスクリプションを再同期化するときに、スナップショット エージェントによって以前に作成された最新のスキーマおよび一括コピー プログラム ファイルが使用されます。 ユーザーが実行した直後に、ディストリビューション エージェントがサブスクリプションを再同期化**sp_reinitsubscription**ディストリビューション エージェントがビジー状態ですそれ以外の同期が、メッセージの間隔 (後に発生する可能性がある場合は、。ディストリビューション エージェント コマンド プロンプト パラメーターで指定された: **MessageInterval**)。  
+ 初期スナップショットが自動的に適用され、パブリケーションで更新可能なサブスクリプションが許可される場合のサブスクリプションについては、ディストリビューション エージェントでサブスクリプションを再同期化するときに、スナップショット エージェントによって以前に作成された最新のスキーマおよび一括コピー プログラム ファイルが使用されます。 ユーザーが実行した直後に、ディストリビューション エージェントがサブスクリプションを再同期化**sp_reinitsubscription**ディストリビューション エージェントがビジー状態ですそれ以外の同期が、メッセージの間隔 (後に発生する可能性がある場合は、。ディストリビューション エージェント コマンド プロンプト パラメーターで指定します。**MessageInterval**)。  
   
  **sp_reinitsubscription**何も起こりませんサブスクリプション、初期スナップショットが手動で適用される場所。  
   

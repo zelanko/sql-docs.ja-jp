@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio の拡張機能を作成する |Microsoft Docs
-description: Azure データ studio の拡張機能を追加します。
-ms.custom: tools|sos
+title: 拡張機能を作成します。
+titleSuffix: Azure Data Studio
+description: 作成して、Azure Data Studio への拡張機能の追加について説明します
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7d778eb4df52d28a44ec8127ebc9f657a9f0dde
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355884"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030518"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の機能を拡張します
+# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio の拡張機能を作成して、機能を拡張します。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] の拡張機能はベース [!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストールにより多くの機能を簡単に追加する方法を提供します。
 

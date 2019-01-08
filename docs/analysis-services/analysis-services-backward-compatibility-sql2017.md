@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7dc1581fd2940ec5bad7698985eeab2c8ed96b2c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037520"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072429"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services の旧バージョンとの互換性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -32,10 +32,10 @@ A*非推奨の機能*は将来のリリースで製品から廃止されます�
 |多次元|データ マイニング|
 |多次元|リモート リンク メジャー グループ|
 |テーブル|1100 と 1103 互換性レベル モデル|
-|テーブル|表形式オブジェクト モデルのプロパティ: Column.TableDetailPosition、Column.IsDefaultLabel、Column.IsDefaultImage|
+|テーブル|表形式オブジェクト モデルのプロパティ:Column.TableDetailPosition、Column.IsDefaultLabel、Column.IsDefaultImage|
 |ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
 |ツール|Server Profiler for Trace Replay <br />置換します。 これに代わる機能はありません。|  
-|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> -トレース構成: Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り: Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
+|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> -トレース構成:Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り:Microsoft.SqlServer.XEvent.Linq<br />-トレース再生。なし|  
 
 
 ## <a name="discontinued-features"></a>廃止された機能
@@ -64,5 +64,5 @@ A*動作の変更*以前のリリースと比較して、現在のリリース�
 MDSCHEMA_MEASUREGROUP_DIMENSIONS を DISCOVER_CALC_DEPENDENCY、変更の詳細について、 [Analysis Services 用 SQL Server 2017 CTP 2.1 の新](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/)お知らせします。
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Analysis Services の旧バージョンとの互換性 (SQL Server 2016)](analysis-services-backward-compatibility.md)

@@ -18,12 +18,12 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1fa8689862184f0554eff0aefd3d39896f2abdf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662521"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210521"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51662521"
   
 ||  
 |-|  
-|**適用対象**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
+|**適用対象**:SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|基になるテーブルのデータをバッファーに再読み込みする場合に使用します。オプティミスティック コンカレンシーのために更新や削除が失敗した場合や UPDATE の後に、行を更新するために使用できます。|  
 |0X10|LOCK|SQL Server U ロックを指定された行が含まれるページに獲得されるが発生します。 このロックは、S ロックとは互換性がありますが、X ロックや他の U ロックとは互換性がありません。 短期間のロックを実装する場合に使用できます。|  
 |0X20|SETPOSITION|DELETE または UPDATE ステートメントを配置してプログラムを後続の SQL server を実行するときにのみ使用されます。|  
-|0X40|ABSOLUTE|UPDATE または DELETE との組み合わせでのみ使用できます。  ABSOLUTE は KEYSET カーソルでのみ使用されます (DYNAMIC カーソルでは無視されます。STATIC カーソルは更新できません)。<br /><br /> 注: 絶対フェッチされていないキーセット内の行を指定すると場合、操作の同時実行制御チェックが失敗し、返される結果は保証できません。|  
+|0X40|ABSOLUTE|UPDATE または DELETE との組み合わせでのみ使用できます。  ABSOLUTE は KEYSET カーソルでのみ使用されます (DYNAMIC カーソルでは無視されます。STATIC カーソルは更新できません)。<br /><br /> 注:まだフェッチされていないキーセット内の行に対して ABSOLUTE を指定すると、操作でコンカレンシー チェックが失敗する可能性があるため、返される結果が保証されません。|  
   
  *rownum*  
  カーソルによる操作、更新、または削除の対象となるフェッチ バッファー内の行を指定します。  
@@ -137,7 +137,7 @@ sp_cursor  cursor, optype, rownum, table
   
  1 つのパラメーターを使用する場合は、次の構文を使用して UPDATE ステートメントを送信できます。  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  場合更新\<テーブル名 > を指定すると、任意の値がの指定、*テーブル*パラメーターは無視されます。  
@@ -169,7 +169,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- ただし、VALUES を指定した場合は例外として、最後の式の末尾に ")" を付ける必要があります。 ここで、 *\<テーブル名 >* で構築された UDPATE ステートメントが指定した値または既定値に 1 つ、*テーブル*パラメーター。  
+ ただし、VALUES を指定した場合は例外として、最後の式の末尾に ")" を付ける必要があります。 ここで、 *\<テーブル名 >* で作成される UPDATE ステートメントが指定した値または既定値に 1 つ、*テーブル*パラメーター。  
   
 > [!NOTE]  
 >  1 つのパラメーターを名前付きパラメーターとして送信することもできます ("`@VALUES`" など)。 その場合、他の名前付きパラメーターは使用できません。  

@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changearticle
@@ -17,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 064465e133e5b122ef532fa09a7601a81f5606ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705990"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208161"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||新しいレプリケーション先テーブルです。|  
 |**destination_owner**||対象オブジェクトの所有者名です。|  
 |**フィルター (filter)**||テーブルをフィルターによって選択 (行方向のフィルター選択) するために使用される新しいストアド プロシージャです。 既定値は NULL です。 ピア ツー ピア レプリケーションのパブリケーションに対しては変更できません。|  
-|**fire_triggers_on_snapshot**|**true**|初期スナップショットが適用されたときに、レプリケートされたユーザー トリガーが実行されます。<br /><br /> 注: トリガーをレプリケートするためのビットマスク値*schema_option*値を含める必要があります**0x100**します。|  
+|**fire_triggers_on_snapshot**|**true**|初期スナップショットが適用されたときに、レプリケートされたユーザー トリガーが実行されます。<br /><br /> 注:トリガーをレプリケートするためのビットマスク値*schema_option*値を含める必要があります**0x100**します。|  
 ||**false**|初期スナップショットが適用されたときに、レプリケートされたユーザー トリガーが実行されません。|  
 |**identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**ins_cmd**||実行する INSERT ステートメントです。指定しないと、ログから作成されます。|  
@@ -95,7 +94,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|列レベルの照合順序をレプリケートします。|  
 ||**0x2000**|パブリッシュされたアーティクルのソース オブジェクトに関連付けられた拡張プロパティをレプリケートします。|  
 ||**0x4000**|テーブル アーティクル上で定義されていれば、一意キーをレプリケートします。|  
-||**0x8000**|ALTER TABLE ステートメントを使用して、テーブル アーティクル上の主キーと一意キーを制約としてレプリケートします。<br /><br /> 注: このオプションは廃止されました。 使用**0x80**と**0x4000**代わりにします。|  
+||**0x8000**|ALTER TABLE ステートメントを使用して、テーブル アーティクル上の主キーと一意キーを制約としてレプリケートします。<br /><br /> 注:このオプションは非推奨とされました。 使用**0x80**と**0x4000**代わりにします。|  
 ||**0x10000**|CHECK 制約を NOT FOR REPLICATION としてレプリケートして、この制約が同期中に適用されないようにします。|  
 ||**0x20000**|FOREIGN KEY 制約を NOT FOR REPLICATION としてレプリケートして、この制約が同期中に適用されないようにします。|  
 ||**0x40000**|パーティション テーブルまたはインデックスに関連付けられているファイル グループをレプリケートします。|  
@@ -112,7 +111,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x20000000**|変換の大きなオブジェクトのデータ型 (**nvarchar (max)**、 **varchar (max)**、および**varbinary (max)**) で導入された[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]はサポートされているデータ型に[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。|  
 ||**0x40000000**|アクセス許可をレプリケートします。|  
 ||**0x80000000**|パブリケーションの一部ではない任意のオブジェクトに対する依存関係を削除しようとしてください。|  
-||**0x100000000**|このオプションを使用して、指定されている場合は、FILESTREAM 属性をレプリケートする**varbinary (max)** 列。 テーブルをレプリケートする場合は、このオプションを指定しない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]サブスクライバー。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。<br /><br /> 関連するオプションを参照してください。 **0x800000000**します。|  
+||**0x100000000**|このオプションを使用して、指定されている場合は、FILESTREAM 属性をレプリケートする**varbinary (max)** 列。 テーブルを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートする場合は、このオプションを指定しないでください。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。<br /><br /> 関連するオプションを参照してください。 **0x800000000**します。|  
 ||**0x200000000**|日付と時刻のデータ型に変換 (**日付**、**時間**、 **datetimeoffset**、および**datetime2**) で導入された[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以前のバージョンでサポートされているデータ型に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 ||**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 ||**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)します。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
@@ -236,8 +235,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**func スキーマのみ**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|  
 |**インデックス付きビュー スキーマのみ**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**、および**0x80000000**|  
   
-> [!NOTE]  
->  更新パブリケーションのキューに置かれた場合、 *schema_option* @property **0x80**有効にする必要があります。 サポートされている*schema_option*値以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーションは: **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**と**0x4000**します。  
+> [!NOTE]
+>  更新パブリケーションのキューに置かれた場合、 *schema_option* @property **0x80**有効にする必要があります。 サポートされている*schema_option*値以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーションは。**0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**と**0x4000**します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

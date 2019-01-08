@@ -1,18 +1,20 @@
 ---
-title: Kubernetes クラスターのビッグ データ、SQL Server でのデータ永続化 |Microsoft Docs
+title: Kubernetes でのデータ永続化
+titleSuffix: SQL Server 2019 big data clusters
 description: SQL Server 2019 のビッグ データ クラスター内のデータ永続化のしくみについて説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 75cf78e7c73ad61e5e28ed6f0707639899d8ec19
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221788"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207671"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server のビッグ データ クラスターでのデータ永続化
 
@@ -23,8 +25,7 @@ ms.locfileid: "51221788"
 使用してビッグ データの SQL Server クラスターは、これらの永続的なボリュームを使用する方法は、[ストレージ クラス](https://kubernetes.io/docs/concepts/storage/storage-classes/)します。 異なる種類のストレージ用のさまざまなストレージ クラスを作成し、ビッグ データ クラスターのデプロイ時にそれらを指定できます。 目的 (プール) を使用するには、どのストレージ クラスを構成することができます。 SQL Server のビッグ データ クラスターを作成します[永続ボリューム要求](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)永続ボリュームが必要なポッドごとの指定した記憶域クラス名を指定します。 ポッドに対応する永続的なボリュームをマウントします。
 
 > [!NOTE]
-
-> CTP 2.1 のみ`ReadWriteOnce`クラスター全体のアクセス モードがサポートされています。
+> CTP 2.2、のみ`ReadWriteOnce`クラスター全体のアクセス モードがサポートされています。
 
 ## <a name="deployment-settings"></a>展開の設定
 
@@ -65,7 +66,7 @@ Kubeadm は、組み込みストレージ クラスが付属していません�
 
 オンプレミス クラスター明らかに付属していない任意の組み込みストレージ クラス、したがってを設定する必要があります[永続ボリューム](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[プロビジョナー](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/)事前し、対応するを使用してSQL Server のビッグ データ クラスターのデプロイ時にストレージ クラスです。
 
-# <a name="customize-storage-size-for-each-pool"></a>各プールの記憶域のサイズをカスタマイズします。
+## <a name="customize-storage-size-for-each-pool"></a>各プールの記憶域のサイズをカスタマイズします。
 既定では、各クラスターのプロビジョニングのポッドのプロビジョニングされた永続的なボリュームのサイズは 6 GB です。 これは、環境変数を設定して構成可能な`STORAGE_SIZE`を別の値。 たとえば、次のコマンドを実行する前に 10 GB に値を設定する実行することができます、`mssqlctl create cluster command`します。
 
 ```bash

@@ -14,18 +14,18 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 45e0f3be43ce8e2780268b7dfde83253b71da946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559439"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539705"
 ---
 # <a name="rds-scenario"></a>RDS のシナリオ
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- アドレス帳アプリケーションがリモート データ サービス (RDS) を使用して、簡単なデータ対応の Web アプリケーションを構築する方法を示すシナリオ-オンラインのコーポレート アドレス帳。 このシナリオは Microsoft Visual Basic Scripting Edition (VBScript) に役立ちますを希望する COM プログラマが RDS を使用してデータ対応の ActiveX コントロールを使用する方法について説明し開発者向けのデータ中心の Web アプリケーションのビルド経験豊富なソフトウェア。  
+ アドレス帳アプリケーションは、リモート データ サービス (RDS) を使用して単純なデータ対応 Web アプリケーション - オンラインのコーポレート アドレス帳を構築する方法を示すシナリオです。 このシナリオは Microsoft Visual Basic Scripting Edition (VBScript) に役立ちますを希望する COM プログラマが RDS を使用してデータ対応の ActiveX コントロールを使用する方法について説明し開発者向けのデータ中心の Web アプリケーションのビルド経験豊富なソフトウェア。  
   
  このシナリオでは、ActiveX コントロールで基本的な HTML タグのレイアウト、DHTML データ バインディングの使用方法、およびプログラムを使用する方法がわかっている前提としています。  
   

@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio とは何ですか。 | Microsoft Docs
-description: Azure Data Studio は無料の軽量ツール、SQL Server、Azure SQL Database、および Azure SQL Data Warehouse; を管理するために、Windows、macOS、および Linux で実行されています。任意の場所が実行されています。
-ms.custom: tools|sos
+title: 概要
+titleSuffix: Azure Data Studio
+description: Azure Data Studio は、無料の軽量ツール、SQL Server、Azure SQL Database、および Azure SQL Data Warehouse を管理するために、Windows、macOS、および Linux で実行されているです。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ca279b9bbc945cbd9aad5be0bce3165820598fe1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099784"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030776"
 ---
-# <a name="what-is-includename-sosincludesname-sosmd"></a>新機能[!INCLUDE[name-sos](../includes/name-sos.md)]とは?
+# <a name="what-is-azure-data-studio"></a>Azure Data Studio とは何ですか。
 
 Azure Data Studio クロス プラットフォームは、オンプレミスの Microsoft ファミリを使用してデータのプロフェッショナル向けのツールのデータベースし、クラウドの Windows、MacOS、Linux でのデータ プラットフォーム。
 

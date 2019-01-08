@@ -20,21 +20,21 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dda856d0381b6e9ca8f5a8c9625151c148435edb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22051ca07dbdb732cfcda2f8200b7375f593463
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746430"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202891"
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLSetStmtAttr**ステートメントに関連する属性を設定します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC 3 の詳細については *.x*アプリケーションの操作は、ODBC 2 *.x*ドライバーを参照してください[後方のマッピング置換関数アプリケーションの互換性を](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)します。  
   
 ## <a name="syntax"></a>構文  
@@ -124,11 +124,11 @@ SQLRETURN SQLSetStmtAttr(
   
  情報の形式設定*ValuePtr*に指定した依存*属性*します。 **SQLSetStmtAttr**属性情報を 2 つの異なる形式のいずれかで受け取り: 文字の文字列または整数値。 それぞれの形式は、属性の説明に記録されます。 内の各属性に対して返される情報をこの形式を適用**SQLGetStmtAttr**します。 文字列の指す、 *ValuePtr*の引数**SQLSetStmtAttr**長さ*StringLength*します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ステートメント属性を呼び出すことで、接続レベルで設定できる**SQLSetConnectAttr** ODBC 3 では非推奨 *.x*します。 ODBC 3 *.x*アプリケーションは接続レベルでステートメント属性を設定しない必要があります。 ODBC 3 *.x*で、これは、接続属性とステートメントの属性の両方を指定できます、SQL_ATTR_METADATA_ID および SQL_ATTR_ASYNC_ENABLE 属性を除く、接続レベルでのステートメント属性を設定することはできません接続レベルまたはステートメント レベルのいずれかに設定します。  
-  
-> [!NOTE]  
->  ODBC 3 *.x* ODBC 2 協力する場合、ドライバーはこの機能をサポートのみ必要 *.x* ODBC 2 を設定するアプリケーションに *.x*接続レベルでステートメントのオプション。 詳細については、「設定ステートメント オプションで、接続レベル」を参照してください。 [SQLSetConnectOption のマッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)付録 g: ドライバーとの下位互換性ためのガイドラインにします。  
+> 
+> [!NOTE]
+>  ODBC 3 *.x* ODBC 2 協力する場合、ドライバーはこの機能をサポートのみ必要 *.x* ODBC 2 を設定するアプリケーションに *.x*接続レベルでステートメントのオプション。 詳細については、「設定ステートメント オプションで、接続レベル」を参照してください[SQLSetConnectOption のマッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)で付録 g:。旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
 ## <a name="statement-attributes-that-set-descriptor-fields"></a>記述子フィールドの設定を与えるステートメント属性  
  多くのステートメント属性は、記述子のヘッダー フィールドに対応します。 記述子フィールドの設定でこれらの属性に実際に結果を設定します。 フィールドの設定への呼び出しによって**SQLSetStmtAttr**なく**SQLSetDescField**記述子ハンドルが関数呼び出しを取得する必要はありません利点があります。  
@@ -184,7 +184,7 @@ SQLRETURN SQLSetStmtAttr(
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR (ODBC 3.0)|Sqlulen です * 動的パラメーターのバインドを変更へのポインターに追加のオフセットを示す値。 ドライバーにポインターを逆参照し、遅延のフィールド (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR) の記述子レコードのそれぞれに逆参照された値を追加し、新しいポインター値を使用してこのフィールドが null 以外の場合は、バインドするときにします。 設定されている既定では null にします。<br /><br /> バインドのオフセットは常に、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR フィールドに直接追加します。 オフセットが別の値に変更されると、新しい値は、記述子フィールドの値に直接追加されます。 新しいオフセットは、フィールドの値と、以前のオフセットには追加されません。<br /><br /> 詳細については、次を参照してください。[パラメーター バインド オフセット](../../../odbc/reference/develop-app/parameter-binding-offsets.md)します。<br /><br /> このステートメント属性を設定すると、APD ヘッダーで SQL_DESC_BIND_OFFSET_PTR フィールドが設定されます。|  
 |SQL_ATTR_PARAM_BIND_TYPE (ODBC 3.0)|動的パラメーターに使用するバインディングの方向を示す sqlulen です値を指定します。<br /><br /> このフィールドは、列方向のバインドを選択する sql_param_bind_by_column です (既定値) に設定されます。<br /><br /> 行方向のバインドを選択するには、このフィールドは構造体、または一連の動的パラメーターにバインドされるバッファーのインスタンスの長さに設定されます。 この長さは、すべてのバインドされたパラメーターおよび構造体またはバインドされたパラメーターのアドレスが指定した長さでインクリメントされた場合は、結果は、次に、同じパラメーターの先頭にポイントすることを確認するバッファーの埋め込み用の領域を含める必要があります。パラメーターのセット。 使用する場合、 *sizeof* ANSI c 演算子は、この動作が保証されます。<br /><br /> 詳細については、次を参照してください。[パラメーターの配列のバインド](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)します。<br /><br /> このステートメント属性を設定すると、APD ヘッダーで SQL_DESC_ BIND_TYPE フィールドが設定されます。|  
 |SQL_ATTR_PARAM_OPERATION_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 値の配列を指す値を SQL ステートメントの実行中にパラメーターを無視するために使用します。 各値は、(実行のパラメーター) に対して SQL_PARAM_PROCEED または SQL_PARAM_IGNORE (のパラメーターが無視される) のいずれかに設定されます。<br /><br /> SQL_PARAM_IGNORE に APD の SQL_DESC_ARRAY_STATUS_PTR が指す配列で、状態値を設定して、処理中に一連のパラメーターを無視できます。 SQL_PARAM_PROCEED にその状態値が設定されている場合、または配列内の要素が設定されていない場合は、パラメーターのセットが処理されます。<br /><br /> このステートメント属性は、する場合、ドライバーは返しませんパラメーター状態値、null ポインターを設定できます。 この属性は、いつでも設定できますが、新しい値は、次の時間までは使用されません**SQLExecDirect**または**SQLExecute**が呼び出されます。<br /><br /> バインドされたパラメーターがない場合、この属性は無視されます。<br /><br /> 詳細については、次を参照してください。[パラメーターの配列を使用して](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)します。<br /><br /> このステートメント属性を設定すると、APD ヘッダーで SQL_DESC_ARRAY_STATUS_PTR フィールドが設定されます。|  
-|SQL_ATTR_PARAM_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT\*値 SQLUSMALLINT の配列を指す値が呼び出しの後にパラメーター値の行ごとに状態情報を含む**SQLExecute**または**SQLExecDirect**します。 このフィールドは、PARAMSET_SIZE が 1 より大きい場合にのみ必要です。<br /><br /> 状態値は、次の値を含めることができます。<br /><br /> SQL_PARAM_SUCCESS: SQL ステートメントが正常にこのパラメーターのセットを実行します。<br /><br /> SQL_PARAM_SUCCESS_WITH_INFO: このパラメーターのセットの SQL ステートメントが実行されましたが正常にただし、警告情報は、診断データの構造体で使用できます。<br /><br /> SQL_PARAM_ERROR: このパラメーターのセットの処理でエラーが発生しました。 追加のエラー情報は、診断データの構造体で使用できます。<br /><br /> SQL_PARAM_UNUSED: このパラメーターが設定されたに使用される、可能性があるためという事実にいくつか前のパラメーター セットには、さらに処理を中止エラーが発生しました。 または、SQL_ATTR_PARAM_ で指定された配列内のパラメーターのセットの SQL_PARAM_IGNORE が設定されているためOPERATION_PTR します。<br /><br /> SQL_PARAM_DIAG_UNAVAILABLE: ドライバーは、モノリシックな単位としてパラメーターの配列を処理し、のでこのレベルのエラー情報を生成しません。<br /><br /> このステートメント属性は、する場合、ドライバーは返しませんパラメーター状態値、null ポインターを設定できます。 この属性は、いつでも設定できますが、新しい値は、次の時間までは使用されません**SQLExecute**または**SQLExecDirect**が呼び出されます。 この属性の設定は影響、ドライバーによって実装されている出力パラメーターの動作に注意してください。<br /><br /> 詳細については、次を参照してください。[パラメーターの配列を使用して](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)します。<br /><br /> このステートメント属性を設定すると、IPD ヘッダーで SQL_DESC_ARRAY_STATUS_PTR フィールドが設定されます。|  
+|SQL_ATTR_PARAM_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT\*値 SQLUSMALLINT の配列を指す値が呼び出しの後にパラメーター値の行ごとに状態情報を含む**SQLExecute**または**SQLExecDirect**します。 このフィールドは、PARAMSET_SIZE が 1 より大きい場合にのみ必要です。<br /><br /> 状態値は、次の値を含めることができます。<br /><br /> SQL_PARAM_SUCCESS:SQL ステートメントは、このパラメーターのセットを正常に実行されました。<br /><br /> SQL_PARAM_SUCCESS_WITH_INFO:SQL ステートメントがこのパラメーターのセットを正常に実行ただし、警告情報は、診断データの構造体で使用できます。<br /><br /> SQL_PARAM_ERROR:このパラメーターのセットの処理中にエラーが発生しました。 追加のエラー情報は、診断データの構造体で使用できます。<br /><br /> SQL_PARAM_UNUSED:このパラメーターのセットでしたに使用される、可能性があるためという事実にいくつか前のパラメーター セットには、さらに処理を中止エラーが発生しました。 または、SQL_ATTR_PARAM_OPERATION_PTR で指定された配列内のパラメーターのセットの SQL_PARAM_IGNORE が設定されているためです。<br /><br /> SQL_PARAM_DIAG_UNAVAILABLE:ドライバーは、モノリシックな単位としてパラメーターの配列を処理し、そのためこのレベルのエラー情報を生成しません。<br /><br /> このステートメント属性は、する場合、ドライバーは返しませんパラメーター状態値、null ポインターを設定できます。 この属性は、いつでも設定できますが、新しい値は、次の時間までは使用されません**SQLExecute**または**SQLExecDirect**が呼び出されます。 この属性の設定は影響、ドライバーによって実装されている出力パラメーターの動作に注意してください。<br /><br /> 詳細については、次を参照してください。[パラメーターの配列を使用して](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)します。<br /><br /> このステートメント属性を設定すると、IPD ヘッダーで SQL_DESC_ARRAY_STATUS_PTR フィールドが設定されます。|  
 |SQL_ATTR_PARAMS_PROCESSED_PTR (ODBC 3.0)|Sqlulen です\*で処理されて、エラーのセットを含むパラメーターのセットの数を返すバッファーを指すレコードのフィールド。 これが null ポインターの場合は、数は返されません。<br /><br /> このステートメント属性を設定すると、IPD ヘッダーで SQL_DESC_ROWS_PROCESSED_PTR フィールドが設定されます。<br /><br /> 場合に呼び出し**SQLExecDirect**または**SQLExecute**をこの属性によって指し示されるバッファー内の塗りつぶしが SQL_SUCCESS または sql_success_with_info が返されません、バッファーの内容は未定義です。<br /><br /> 詳細については、次を参照してください。[パラメーターの配列を使用して](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)します。|  
 |SQL_ATTR_PARAMSET_SIZE (ODBC 3.0)|各パラメーターの値の数を示す sqlulen です値を指定します。 SQL_ATTR_PARAMSET_SIZE が 1 より大きい場合は、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および、APD の SQL_DESC_OCTET_LENGTH_PTR 配列をポイントします。 各配列のカーディナリティは、このフィールドの値と同じです。<br /><br /> バインドされたパラメーターがない場合、この属性は無視されます。<br /><br /> 詳細については、次を参照してください。[パラメーターの配列を使用して](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)します。<br /><br /> このステートメント属性を設定すると、APD ヘッダーで SQL_DESC_ARRAY_SIZE フィールドが設定されます。|  
 |SQL_ATTR_QUERY_TIMEOUT (ODBC 1.0)|アプリケーションに返す前に実行する SQL ステートメントを待機する秒数に対応する sqlulen です値。 場合*ValuePtr*は 0 (既定値) に等しいか、タイムアウトはありません。<br /><br /> 指定したタイムアウトがデータ ソースのタイムアウトの最大値を超えていますまたは最小のタイムアウトよりも小さい場合**SQLSetStmtAttr**その値に置き換えられ、SQLSTATE 01S02 を返します (オプションの値が変更されました)。<br /><br /> アプリケーションを呼び出す必要はありませんので注意**SQLCloseCursor**場合、ステートメントを再利用する、**選択**ステートメントがタイムアウトしました。<br /><br /> このステートメント属性クエリ タイムアウトは、同期および非同期モードでは無効です。|  

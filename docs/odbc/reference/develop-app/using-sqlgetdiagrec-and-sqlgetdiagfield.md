@@ -17,12 +17,12 @@ ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37fb095579fd173fd24a5df933e3e1a65edbeada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1db402e7c015ef50ce47b5137e670d9f1836a326
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626040"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204701"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec および SQLGetDiagField の使用
 アプリケーション呼び出し**SQLGetDiagRec**または**SQLGetDiagField**診断情報を取得します。 これらの関数は、環境、接続、ステートメント、または記述子ハンドルをそのまま使用し、最後にそのハンドルを使用した関数から診断を返します。 特定のハンドルをログに記録する診断は、そのハンドルを使用して新しい関数が呼び出されたときに破棄されます。 関数には、複数の診断レコードが返されると複数回; に、アプリケーション呼び出しがこれらの関数状態レコードの合計数が呼び出すことによって取得**SQLGetDiagField** SQL_DIAG_NUMBER オプションを使用してヘッダー レコード (レコード 0)。  

@@ -19,12 +19,12 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e1ea6363f2acb76d7c95fb6d2e8f7c0e9dbdbc6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08840dee8164ae1dd460d1a5d5905ecda937dba6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108932"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351118"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブまたは SharePoint の 2 つのモードのうちのいずれかのモードでインストールできます。 インストールの確認に必要な手順は、レポート サーバーのモードによって変わります。  
@@ -75,7 +75,7 @@ ms.locfileid: "48108932"
   
 1.  SharePoint ドキュメント ライブラリ内で、タイトルなどに使用するテキスト ボックスのみを含む基本的な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを作成します。 このレポートには、データ ソースやデータセットは何も含めません。 目標は、レポート ビルダーを開いて基本的なレポートをプレビューできることの確認です。  
   
-2.  レポートをドキュメント ライブラリに保存し、ライブラリからレポートを実行します。 レポート ビルダーでレポートを作成する方法の詳細については、「 [レポート ビルダーの起動 (レポート ビルダー)](http://technet.microsoft.com/library/ms159221.aspx)」を参照してください。  
+2.  レポートをドキュメント ライブラリに保存し、ライブラリからレポートを実行します。 レポート ビルダーでレポートを作成する方法の詳細については、「 [レポート ビルダーの起動 (レポート ビルダー)](https://technet.microsoft.com/library/ms159221.aspx)」を参照してください。  
   
 #### <a name="reporting-services-samples"></a>Reporting Services のサンプル  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48108932"
 2.  サンプル レポートをインストールした場合は、サンプル レポート プロジェクト ファイルを開き、レポート サーバーにレポートをパブリッシュします。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services のインストールをトラブルシューティングします。](troubleshoot-a-reporting-services-installation.md)   
+ [Reporting Services インストール時の問題解決](troubleshoot-a-reporting-services-installation.md)   
  [Reporting Services エラーの原因と解決方法](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

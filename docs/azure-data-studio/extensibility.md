@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio の機能を拡張 |Microsoft Docs
-description: Azure Data Studio を拡張する方法について説明します
-ms.custom: tools|sos
+title: 拡張機能を通じて追加の機能を追加します。
+titleSuffix: Azure Data Studio
+description: 機能拡張モデルと Azure Data Studio の機能を拡張するための重要な拡張機能領域について説明します
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460247"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030016"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>概要[!INCLUDE[name-sos](../includes/name-sos-short.md)]機能拡張
 
@@ -68,7 +69,7 @@ Dashboard.tabs では、タブ セクションでは、ダッシュ ボード �
     "when": "connectionProvider == 'MSSQL' && !mssql:iscloud",
     "alwaysShow": true,
     "container": {
-        …
+        ...
     }
 }
 ]
@@ -83,13 +84,13 @@ Dashboard.tabs では、タブ セクションでは、ダッシュ ボード �
 {
     "id": "innerTab1",
     "container": {
-        …
+        ...
     }
 },
 {
     "id": "innerTab2",
     "container": {
-       …
+       ...
     }
 }
 ]
@@ -112,7 +113,7 @@ Dashboard.tabs では、タブ セクションでは、ダッシュ ボード �
 
 `dashboard.insights`
 
-Dashboard.insights を使用してインサイトを登録することができます。 これはのような[チュートリアル: カスタム インサイト ウィジェットをビルド](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Dashboard.insights を使用してインサイトを登録することができます。 これはのような[チュートリアル。カスタム インサイト ウィジェットをビルドします。](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -241,7 +242,7 @@ Dashboard.insights を使用してインサイトを登録することができ�
                     "dark": "./icons/tab1Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             },
             {
@@ -252,7 +253,7 @@ Dashboard.insights を使用してインサイトを登録することができ�
                     "dark": "./icons/tab2Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             }
         ]

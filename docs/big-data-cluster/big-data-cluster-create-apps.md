@@ -1,24 +1,26 @@
 ---
-title: SQL Server のビッグ データ クラスター上のアプリをデプロイする方法 |Microsoft Docs
+title: アプリをデプロイする方法
+titleSuffix: SQL Server 2019 big data clusters
 description: SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリケーションとしては、Python または R スクリプトを展開します。
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: dd24b4379f50a5b974e7a0a90412d1e13bf6db22
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.custom: seodec18
+ms.openlocfilehash: cca0ac5e7b81318d95fbb133758fca83e1a0742e
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272560"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246413"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
 
 この記事では、デプロイし、SQL Server 2019 ビッグ データ クラスター (プレビュー) 内でアプリケーションとして R と Python スクリプトを管理する方法について説明します。
 
-R および Python アプリケーションがデプロイおよびで管理されている、 **mssqlctl pre**コマンド ライン ユーティリティ CTP 2.1 に含まれています。 この記事では、これらの R と Python スクリプトをコマンドラインからのアプリとして展開する方法の例を示します。
+R および Python アプリケーションがデプロイおよびで管理されている、 **mssqlctl pre**コマンド ライン ユーティリティ CTP 2.2 に含まれています。 この記事では、これらの R と Python スクリプトをコマンドラインからのアプリとして展開する方法の例を示します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -29,12 +31,12 @@ R および Python アプリケーションがデプロイおよびで管理さ�
 **Mssqlctl pre** Python および R のアプリケーション展開機能をプレビューするコマンド ライン ユーティリティが提供されます。 ユーティリティをインストールするのにには、次のコマンドを使用します。
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## <a name="capabilities"></a>Capabilities
 
-CTP 2.1 では作成することができますでは、リストを削除し、R または Python アプリケーションを実行します。 次の表は、アプリケーションの展開コマンドで使用できる**mssqlctl pre**します。
+CTP 2.2 を作成することができますでは、リストを削除し、R または Python アプリケーションを実行します。 次の表は、アプリケーションの展開コマンドで使用できる**mssqlctl pre**します。
 
 | コマンド | 説明 |
 |---|---|
@@ -54,15 +56,16 @@ mssqlctl-pre app create --help
 
 ## <a name="log-in"></a>ログイン
 
-R および Python アプリケーションを構成する前にまずは、ログインを使用したクラスターのビッグ データ、SQL Server に、`mssqlctl-pre login`コマンド。 IP アドレス (外部) を指定、 `service-proxy-lb` (例: `https://ip-address:30777`) およびユーザー名とクラスターへのパスワード。
+R および Python アプリケーションを構成する前にまずは、ログインを使用したクラスターのビッグ データ、SQL Server に、`mssqlctl-pre login`コマンド。 外部 IP アドレスを指定、`service-proxy-lb`または`service-proxy-nodeport`サービス (例: `https://ip-address:30777`) およびユーザー名とクラスターへのパスワード。
 
-Bash または cmd ウィンドウでこのコマンドを実行してサービス プロキシ-lb サービスの IP アドレスを取得できます。
+IP アドレスを取得することができます、**サービス プロキシ-lb**または**サービス-プロキシ-nodeport** bash または cmd ウィンドウでこのコマンドを実行してサービス。
+
 ```bash 
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="create-an-app"></a>アプリを作成します。

@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147857"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352167"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に付属しているデータベースの同期機能は、同期元サーバー上のデータベースから同期先サーバー上のデータベースにデータおよびメタデータをコピーすることによって、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを同一にします。 データベースの同期機能は、次のタスクを達成するために使用します。  
@@ -41,7 +41,7 @@ ms.locfileid: "50147857"
  データベースを同期するには、データベースの同期ウィザードを実行して直ちにデータベースを同期するか、このウィザードを使用して、後で実行できる同期スクリプトを生成します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースおよびキューブの可用性とスケーラビリティを向上するために、いずれかの方法を使用できます。  
   
 > [!NOTE]  
->  次のホワイト ペーパーは、Analysis Services の以前のバージョンを対象として作成されたものですが、SQL Server 2012 を使用して作成したスケーラブルな多次元ソリューションにも引き続き当てはまります。 詳細については、「 [Analysis Services を使用するクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253136) 」および「 [読み取り専用データベースによる Analysis Services のクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253137.)」を参照してください。  
+>  次のホワイト ペーパーは、Analysis Services の以前のバージョンを対象として作成されたものですが、SQL Server 2012 を使用して作成したスケーラブルな多次元ソリューションにも引き続き当てはまります。 詳細については、「[Analysis Services を使用するクエリのスケールアウト](https://go.microsoft.com/fwlink/?LinkId=253136)」および「[読み取り専用データベースによる Analysis Services のクエリのスケールアウト](https://go.microsoft.com/fwlink/?LinkId=253137.)」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  データベースの同期を開始する同期先 (またはターゲット) サーバーで、Analysis Services サーバー管理者ロールのメンバーである必要があります。 同期元サーバーで、使用している Windows ユーザー アカウントに、同期元データベースに対するフル コントロールの権限が付与されている必要があります。 データベースを対話形式で同期する場合は、自分の Windows ユーザー ID のセキュリティ コンテキストで同期が実行されることに注意してください。 自分のアカウントが特定のオブジェクトへのアクセスを拒否された場合は、そのようなオブジェクトは操作から除外されます。 サーバー管理者ロールとデータベース権限の詳細については、次を参照してください[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)と[データベース アクセス許可を付与&#40;。Analysis Services&#41;](grant-database-permissions-analysis-services.md)します。  
@@ -55,7 +55,7 @@ ms.locfileid: "50147857"
  同期元サーバーでレイジー集計処理を使用している場合は、その処理を無効にします。 バックグラウンドで処理されている集計は、データベースの同期を妨げる可能性があります。 このサーバー プロパティの設定の詳細については、「[OLAP のプロパティ](../server-properties/olap-properties.md)」を参照してください。  
   
 > [!NOTE]  
->  データベースのサイズは、同期が適切な方法であるかどうかを判断する要因になります。 厳格な要件は存在しませんが、同期が非常に遅い場合は、「 [Analysis Services の同期に関する推奨事項](http://go.microsoft.com/fwlink/?LinkID=253136)」というテクニカル ペーパーで説明されているように、複数のサーバーを並列に同期することを検討してください。  
+>  データベースのサイズは、同期が適切な方法であるかどうかを判断する要因になります。 厳格な要件はありませんが、同期が遅すぎる場合はときに、考慮を並列に複数のサーバー同期テクニカル ペーパーで説明されています。[Analysis Services の同期のベスト プラクティス](https://go.microsoft.com/fwlink/?LinkID=253136)します。  
   
 ## <a name="synchronize-database-wizard"></a>データベースの同期ウィザード  
  同期元から同期先データベースへの一方向の同期を実行するか、データベースの同期操作を指定するスクリプトを生成するには、データベースの同期ウィザードを使用します。 同期処理中にローカル パーティションとリモート パーティションの両方を同期し、ロールを含めるかどうかを選択することもできます。  

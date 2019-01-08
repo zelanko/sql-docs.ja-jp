@@ -1,5 +1,5 @@
 ---
-title: 計算列 |Microsoft Docs
+title: Analysis Services 表形式モデルの列が計算されます |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982524"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072399"
 ---
 # <a name="calculated-columns"></a>計算列
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  計算列、テーブル モデルでは、モデルに新しいデータを追加することを有効にします。 列に値を貼り付けまたはインポートする代わりに、列の行レベルの値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
+  計算列、テーブル モデルでは、モデルに新しいデータを追加することを有効にします。 貼り付けや列に値のインポートではなく、列の行レベルの値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
  
   
   
@@ -72,7 +72,7 @@ ms.locfileid: "38982524"
 |-----------|-----------------|  
 |[計算列の作成](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|このトピックのタスクでは、テーブルに新しい計算列を追加する方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルと列](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [メジャー](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [計算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  

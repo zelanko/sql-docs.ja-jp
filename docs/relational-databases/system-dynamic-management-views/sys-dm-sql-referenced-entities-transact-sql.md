@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756240"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213461"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  各ユーザー定義エンティティを名前で指定された参照元エンティティの定義で参照されている 1 つの行を返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 1 つのユーザー定義エンティティが呼び出されたときに、2 つのエンティティ間の依存関係が作成された、*エンティティを参照*と呼ばれる、別のユーザー定義エンティティの保存されている SQL 式で名前によって表示される、*エンティティを参照します*。 たとえば、参照元エンティティとしてストアド プロシージャを指定した場合、この関数は、そのストアド プロシージャの中で参照されたすべてのユーザー定義エンティティ (テーブル、ビュー、ユーザー定義型 (UDT)、他のストアド プロシージャなど) を返します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定された参照元エンティティの定義の中で、名前により参照された各ユーザー定義エンティティについて、対応する 1 行を返します。 1 つのユーザー定義エンティティが呼び出されたときに、2 つのエンティティ間の依存関係が作成された、*エンティティを参照*と呼ばれる、別のユーザー定義エンティティの保存されている SQL 式で名前によって表示される、*エンティティを参照します*。 たとえば、参照元エンティティとしてストアド プロシージャを指定した場合、この関数は、そのストアド プロシージャの中で参照されたすべてのユーザー定義エンティティ (テーブル、ビュー、ユーザー定義型 (UDT)、他のストアド プロシージャなど) を返します。  
   
  この動的管理関数に参照元エンティティを指定すると、そのエンティティによって参照された次の種類のエンティティをレポートできます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47756240"
   
 -   パーティション関数  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -90,14 +90,14 @@ sys.dm_sql_referenced_entities (
 |referenced_minor_id|**int**|参照先エンティティが列の場合は列 ID。それ以外の場合は 0。 たとえば、参照先エンティティ自体を一覧表示する行では、referenced_minor_id は 0 になります。<br /><br /> 非スキーマ バインド参照の場合、列の依存関係は、すべての参照先エンティティがバインドできる場合にのみ報告されます。 バインドできない参照先エンティティが 1 つでも存在した場合、列レベルの依存関係は報告されず、referenced_minor_id は 0 になります。 例 D を参照してください。|  
 |referenced_class|**tinyint**|参照先エンティティのクラス。<br /><br /> 1 = オブジェクトまたは列<br /><br /> 6 = 型<br /><br /> 10 = XML スキーマ コレクション<br /><br /> 21 = パーティション関数|  
 |referenced_class_desc|**nvarchar(60)**|参照先エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
-|is_caller_dependent|**bit**|参照先エンティティのスキーマ バインドが実行時に発生することを示します。したがって、エンティティ ID の解決方法は、呼び出し元のスキーマに依存します。 これが該当するのは、参照先エンティティがストアド プロシージャ、拡張ストアド プロシージャ、または、EXECUTE ステートメント内で呼び出されるユーザー定義関数である場合です。<br /><br /> 1 = 参照先エンティティが呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティの ID は呼び出し元に依存しません。 スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただしの形式での参照を`EXEC MyDatabase..MyProc`は呼び出し元が依存します。|  
+|is_caller_dependent|**bit**|参照先エンティティのスキーマ バインドが実行時に発生することを示します。したがって、エンティティ ID の解決方法は、呼び出し元のスキーマに依存します。 これが該当するのは、参照先エンティティがストアド プロシージャ、拡張ストアド プロシージャ、または、EXECUTE ステートメント内で呼び出されるユーザー定義関数である場合です。<br /><br /> 1 = 参照先エンティティが呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティの ID は呼び出し元に依存しません。 スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただし、`EXEC MyDatabase..MyProc` 形式の参照は呼び出し元に依存します。|  
 |is_ambiguous|**bit**|参照があいまいであり、実行時、ユーザー定義関数、ユーザー定義型 (UDT)、または型の列への xquery 参照に解決できることを示します**xml**します。 たとえば、ステートメント`SELECT Sales.GetOrder() FROM Sales.MySales`ストアド プロシージャで定義されています。 `Sales.GetOrder()` が `Sales` スキーマ内のユーザー定義関数なのか、`Sales` という名前のメソッドを持つ UDT 型の `GetOrder()` という名前の列なのかは、ストアド プロシージャが実行されるまで不明です。<br /><br /> 1 = ユーザー定義関数の参照なのか、列のユーザー定義型 (UDT) のメソッドなのかがあいまいです。<br /><br /> 0 = 参照は明確です。つまり、関数を呼び出したときに、エンティティを正しくバインドできます。<br /><br /> スキーマ バインド参照の場合は常に 0 になります。|  
 |is_selected|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトまたは列が選択されています。|  
 |is_updated|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトまたは列が変更されています。|  
 |is_select_all|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトは SELECT * 句で使用されています (オブジェクトレベルのみ)。|  
 |is_all_columns_found|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトに対するすべての列の依存関係が見つかりました。<br /><br /> 0 = オブジェクトに対する列の依存関係が見つかりませんでした。|
 |is_insert_all|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = INSERT ステートメントに列の一覧 (オブジェクト レベルのみ) で、オブジェクトが使用されます。|  
-|is_incomplete|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = オブジェクトまたは列バインド エラーが発生し、完全ではありません。|
+|is_incomplete|**bit**|**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br /><br /> 1 = オブジェクトまたは列バインド エラーが発生し、完全ではありません。|
   
 ## <a name="exceptions"></a>例外  
  次のいずれかの条件に該当した場合は、空の結果セットが返されます。  
@@ -148,7 +148,7 @@ sys.dm_sql_referenced_entities (
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. データベース レベルの DDL トリガーによって参照されるエンティティを取得する  
- 次の例は、データベース レベルの DDL トリガーによって参照されるエンティティ (テーブルおよび列) を返します`ddlDatabaseTriggerLog`。  
+ 次の例では、データベース レベルの DDL トリガー `ddlDatabaseTriggerLog` によって参照されるエンティティ (テーブルおよび列) を取得します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -172,7 +172,7 @@ GO
 ```  
   
 ### <a name="c-returning-column-dependencies"></a>C. 列の依存関係を取得する  
- テーブルを作成する例を次`Table1`計算列を持つ`c`列の合計として定義されている`a`と`b`。 その後、`sys.dm_sql_referenced_entities` ビューが呼び出されます。 このビューは、2 つの行 (計算列で定義された各列につき 1 行) を返します。  
+ 次の例では、`Table1` 列と `c` 列の合計として定義された計算列 `a` を持つテーブル `b` を作成します。 その後、`sys.dm_sql_referenced_entities` ビューが呼び出されます。 このビューは、2 つの行 (計算列で定義された各列につき 1 行) を返します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -201,7 +201,7 @@ GO
 ```
 
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. 非スキーマ バインド列の依存関係を取得する  
- 次の例`Table1`を作成し、`Table2`ストアド プロシージャと`Proc1`。 プロシージャの参照`Table2`と、存在しないテーブルの`Table1`です。 ビュー`sys.dm_sql_referenced_entities`参照元エンティティとして指定されているストアド プロシージャを使用して実行します。 結果セットには、`Table1` に対する 1 行と `Table2` に対する 3 行があります。 `Table1`が存在しない列の依存関係を解決することはできませんし、エラー 2020 が返されます。 `is_all_columns_found` 列の `Table1` に対する 0 は、検出できなかった列があることを示します。  
+ 次の例では、`Table1` を削除し、`Table2` およびストアド プロシージャ `Proc1` を作成します。 このプロシージャは、`Table2` および存在しないテーブル `Table1` を参照します。 ビュー `sys.dm_sql_referenced_entities` は、参照元エンティティとして指定されたストアド プロシージャで実行されます。 結果セットには、`Table1` に対する 1 行と `Table2` に対する 3 行があります。 `Table1` は存在しないので、列の依存関係が解決されず、エラー 2020 が返されます。 `is_all_columns_found` 列の `Table1` に対する 0 は、検出できなかった列があることを示します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -266,7 +266,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. オブジェクトまたは列の使用状況を返す  
- 次の例では、ストアド プロシージャ `HumanResources.uspUpdateEmployeePersonalInfo` のオブジェクトと列の依存関係を返します。 この手順は、列を更新`NationalIDNumber`、 `BirthDate,``MaritalStatus`、および`Gender`の`Employee`テーブルに基づいて、指定した`BusinessEntityID`値です。 別のストアド プロシージャでは、`upsLogError`に定義されています.CATCH ブロックに実行エラーをキャプチャします。 `is_selected`、`is_updated`、および `is_select_all` 列では、参照元オブジェクト内でのこれらのオブジェクトと列の使用方法についての情報が返されます。 変更されているテーブルと列は、is_updated 列で 1 と示されます。 `BusinessEntityID`のみ選択されている列とストアド プロシージャ`uspLogError`は、選択されても変更します。  
+ 次の例では、ストアド プロシージャ `HumanResources.uspUpdateEmployeePersonalInfo` のオブジェクトと列の依存関係を返します。 この手順は、列を更新`NationalIDNumber`、 `BirthDate,``MaritalStatus`、および`Gender`の`Employee`テーブルに基づいて、指定した`BusinessEntityID`値です。 別のストアド プロシージャ、`upsLogError`で定義しています.CATCH ブロックを実行エラーをキャプチャします。 `is_selected`、`is_updated`、および `is_select_all` 列では、参照元オブジェクト内でのこれらのオブジェクトと列の使用方法についての情報が返されます。 変更されているテーブルと列は、is_updated 列で 1 と示されます。 `BusinessEntityID` 列は選択されているのみで、ストアド プロシージャ `uspLogError` は選択も変更もされていません。  
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

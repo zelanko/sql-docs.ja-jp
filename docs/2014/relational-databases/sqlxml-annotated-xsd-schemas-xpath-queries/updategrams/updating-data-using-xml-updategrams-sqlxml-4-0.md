@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -28,12 +26,12 @@ ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7611e0c52f4b7e2efab23d55fdacd07e565113d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222844"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808174"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの更新 (SQLXML 4.0)
   既存のデータを更新するときに、両方を指定する必要があります、 **\<する前に >** と**\<後 >** ブロックします。 指定した要素、 **\<する前に >** と**\<後 >** ブロックが、必要な変更について説明します。 アップデート グラムで指定されている要素を使用して、 **\<する前に >** データベースの既存のレコードを識別するためにブロックします。 内で、対応する要素、 **\<後 >** ブロックは、更新操作を実行した後、レコードの表示方法を示します。 アップデート グラムからこの情報は、一致する SQL ステートメントが作成、 **\<後 >** ブロックします。 そのステートメントによってデータベースが更新されます。  
@@ -556,7 +554,7 @@ ms.locfileid: "48222844"
   
  マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

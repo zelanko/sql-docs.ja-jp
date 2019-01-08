@@ -20,18 +20,18 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa90a3ec804717ff23c249b8a54e23665933f1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794270"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206661"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 関数
 **準拠**  
- バージョンの導入された: ODBC 3.0: Windows XP Service Pack 2、Windows Server 2003 Service Pack 1 では、以降のオペレーティング システムで非推奨とされます。  
+ バージョンが導入されました。ODBC 3.0:Windows XP Service Pack 2、Windows Server 2003 Service Pack 1 では、以降のオペレーティング システムでは、非推奨とされます。  
   
- **概要**  
+ **まとめ**  
  **SQLRemoveDriverManager**システム情報の Odbcinst.ini のエントリから ODBC コア コンポーネントに関する情報を削除または変更します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,7 +39,7 @@ ms.locfileid: "47794270"
 ```  
   
 BOOL SQLRemoveDriverManager(  
-     LPDWORD     pdwUsageCount);  
+     LPDWORD     pdwUsageCount);  
 ```  
   
 ## <a name="arguments"></a>引数  

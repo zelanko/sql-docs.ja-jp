@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145018"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207521"
 ---
 # <a name="canceling-commands-xmla"></a>コマンドのキャンセル (XMLA)
   コマンドを発行したユーザーの管理アクセス許可に応じて、[キャンセル](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)Analysis (XMLA) は、コマンドをキャンセルして、セッション、セッション、接続、サーバー プロセス、または、関連付けられているセッションでの XML でコマンドまたは接続します。  
@@ -36,7 +36,7 @@ ms.locfileid: "50145018"
 ## <a name="canceling-connections"></a>接続のキャンセル  
  接続識別子を指定することによって、 [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla)のプロパティ、**キャンセル**コマンド、サーバー管理者は、すべてのセッションをすべて含む、特定の接続に関連付けられているをキャンセルできます、コマンドを実行し、接続をキャンセルします。  
   
-> [!NOTE]  
+> [!NOTE]
 >  場合、インスタンスの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]見つけてインスタンスが接続を取り消すことはできません、データ ポンプでは、HTTP 接続を提供しながら複数のセッションが開いたらなど、接続に関連付けられているセッションを取り消すことはできません。 このケースがの実行中に発生した場合、**キャンセル**コマンドでエラーが発生します。  
   
  サーバー管理者のアクティブな接続を取得できます、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、XMLA を使用して DISCOVER_CONNECTIONS スキーマ行セットを取得することによってインスタンス**Discover**メソッド。  

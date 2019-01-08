@@ -1,5 +1,5 @@
 ---
-title: グローバリゼーションのヒントとベスト プラクティス (Analysis Services) |Microsoft ドキュメント
+title: グローバリゼーションのヒントとベスト プラクティス (Analysis Services) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 12b771c40e6c17f1da41f1636b785b7dfc719941
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019389"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202631"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>グローバリゼーションのヒントとベスト プラクティス (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "34019389"
   
      中華人民共和国およびシンガポールでは、Microsoft サポートの観察によると、ピンイン付きの簡体字国語の並べ替え順序がよく使用されています。 推奨される照合順序は、Chinese_PRC (SQL Server 2000 の場合)、Chinese_PRC_90 (SQL Server 2005 の場合)、または Chinese_Simplified_Pinyin_100 (SQL Server 2008 以降の場合) です。  
   
-     台湾では、繁体字中国語のほうが一般的で、お勧めする並べ替え順序は画数に基づく次のものです。Chinese_Taiwan_Stroke (SQL Server 2000 の場合)、Chinese_Taiwan_Stroke_90 (SQL Server 2005 の場合)、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降の場合)。  
+     台湾では、繁体字中国語のほうが一般的で、推奨される並べ替え順序は画数に基づく次のものです。Chinese_Taiwan_Stroke (SQL Server 2000 の場合)、Chinese_Taiwan_Stroke_90 (SQL Server 2005 の場合)、または Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降の場合)。  
   
-     その他の地域 (香港やマカオなど) でも、繁体字中国語を使用します。 香港では、照合順序に Chinese_Hong_Kong_Stroke_90 (SQL Server 2005 上) が使用されることも珍しくありません。 マカオでは、かなり多くの場合に、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降) が使用されます。  
+     その他の地域 (香港特別行政区やマカオなど) でも、繁体字中国語を使用します。 香港特別行政区では、照合順序に Chinese_Hong_Kong_Stroke_90 (SQL Server 2005 上) が使用されることも珍しくありません。 マカオでは、かなり多くの場合に、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降) が使用されます。  
   
 -   日本語では、最もよく使用される照合順序は Japanese_CI_AS です。 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)をサポートするシステムでは、Japanese_XJIS_100 が使用されます。 Japanese_BIN2 は、通常、Windows 以外のプラットフォームからのデータ、または SQL Server リレーショナル データベース エンジン以外のデータ ソースからのデータを移行するプロジェクトで使用されるのが一般的です。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34019389"
   
 |言語セット|大文字と小文字の区別|  
 |---------------------|----------------------|  
-|**基本的なラテン アルファベット**|ラテン文字 (任意の 26 個の英語大文字小文字) で表されるオブジェクト ID は、照合順序に関係なく、大文字小文字の区別なしで処理されます。 たとえば、次のオブジェクト ID は同じであると見なされます。54321**abcdef**、54321**ABCDEF**、54321**AbCdEf**。 Analysis Services はこうした文字列内の文字を内部的には大文字として処理し、言語に関係なく単純なバイト比較を実行します。<br /><br /> 26 文字だけが影響を受けることに注意してください。 言語が西ヨーロッパ言語で、スカンジナビア語の文字を使用している場合、追加の文字は大文字に変換されません。|  
+|**基本的なラテン アルファベット**|ラテン文字 (任意の 26 個の英語大文字小文字) で表されるオブジェクト ID は、照合順序に関係なく、大文字小文字の区別なしで処理されます。 たとえば、次のオブジェクト ID は同じであると見なされます。54321**abcdef**、54321**ABCDEF**、54321**AbCdEf**します。 Analysis Services はこうした文字列内の文字を内部的には大文字として処理し、言語に関係なく単純なバイト比較を実行します。<br /><br /> 26 文字だけが影響を受けることに注意してください。 言語が西ヨーロッパ言語で、スカンジナビア語の文字を使用している場合、追加の文字は大文字に変換されません。|  
 |**キリル語、ギリシャ語、コプト語、アルメニア語**|キリル語など、ラテン語以外の大文字小文字の区別がある言語のオブジェクト ID では、常に大文字小文字が区別されます。 たとえば、Измерение と измерение の違いは最初の文字の大文字小文字だけですが、この場合も 2 つの異なる値であると見なされます。|  
   
  **オブジェクト ID の大文字小文字の区別の影響**  
@@ -89,7 +89,7 @@ ms.locfileid: "34019389"
   
      Adventure Works サンプル データベースのフランス語翻訳が表示されるはずです。  
   
-     ![フランス語翻訳された Excel ピボット テーブル](../analysis-services/media/ssas-localetest-excel.png "フランス語翻訳された Excel ピボット テーブル")  
+     ![フランス語の翻訳を持つ Excel ピボット テーブル](../analysis-services/media/ssas-localetest-excel.png "フランス語の翻訳を持つ Excel ピボット テーブル")  
   
  その後、SQL Server Profiler を使用してロケールを確認できます。 `Session Initialize` イベントをクリックし、下に表示されるテキスト領域のプロパティ リストを探して `<localeidentifier>1036</localeidentifier>`を見つけます。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "34019389"
   
 -   Adventure Works データベースに対して、MDX クエリを実行します。 クエリ結果は、フランス語翻訳になるはずです。  
   
-     ![SSMS のフランス語翻訳に MDX クエリ](../analysis-services/media/ssas-localetest-ssms.png "SSMS のフランス語翻訳に MDX クエリ")  
+     ![SSMS のフランス語の翻訳を持つ MDX クエリ](../analysis-services/media/ssas-localetest-ssms.png "SSMS のフランス語の翻訳を持つ MDX クエリ")  
   
 ##  <a name="bkmk_mdx"></a> 翻訳が含まれるソリューションにおける MDX クエリの作成  
  翻訳では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトの名前の表示情報が提供されますが、同じオブジェクトの識別子は翻訳されません。 可能であれば必ず、翻訳されたキャプションと名前ではなく、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトの識別子とキーを使用してください。 たとえば、多次元式 (MDX) ステートメントおよびスクリプトのメンバー名ではなく、メンバー キーを使用して、複数の言語間での移植性を確保します。  
@@ -122,7 +122,7 @@ ms.locfileid: "34019389"
   
 3.  **ユニバーサルの日時情報に対する ISO 日付形式の使用**  
   
-     1 人の [Analysis Services の専門家](http://geekswithblogs.net/darrengosbell/Default.aspx) は次のように勧めています。「SQL または MDX でクエリに渡す日付文字列には ISO 日付形式 yyyy-mm-dd を必ず使います。この形式にはあいまいさがなく、クライアントまたはサーバーの地域設定に関係なく作動するためです。 サーバーでは、あいまいな日付形式を解析する場合にこの地域設定に従う必要があるとは思いますが、どのような場合であってもそれが最善の選択肢であると考える必要はないとも思います」。  
+     1 つ[Analysis Services の専門家](http://geekswithblogs.net/darrengosbell/Default.aspx)がこの推奨事項。「SQL または MDX でクエリに渡す日付文字列には ISO 日付形式 yyyy-mm-dd を必ず使用します。この形式にはあいまいさがなく、クライアントまたはサーバーの地域設定に関係なく作動するためです。 サーバーでは、あいまいな日付形式を解析する場合にこの地域設定に従う必要があるとは思いますが、どのような場合であってもそれが最善の選択肢であると考える必要はないとも思います」。  
   
 4.  **Format 関数を使用すると、地域の言語設定に関係なく、特定の形式を適用できます。**  
   

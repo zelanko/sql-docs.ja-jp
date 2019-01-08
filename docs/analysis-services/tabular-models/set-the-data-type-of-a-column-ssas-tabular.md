@@ -1,5 +1,5 @@
 ---
-title: 列のデータ型を設定 |Microsoft ドキュメント
+title: Analysis Services 表形式モデルでの列のデータ型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 595f2cf0c95cf09241dd2189c380deb3ce7b5760
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045806"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071959"
 ---
 # <a name="set-the-data-type-of-a-column"></a>列のデータ型の設定 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34045806"
   
  Business Intelligence Semantic Model で使用できるデータ型は次のとおりです。  
   
--   **テキスト**  
+-   **Text**  
   
 -   **10 進数**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34045806"
   
 -   **TRUE/FALSE**  
   
--   **日付**  
+-   **Date**  
   
  インポートしたデータのデータ型が間違っていた場合や、目的のデータ型と違っていた場合は、次の選択肢があります。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34045806"
   
  そのデータ型がサポートされていても、新しいデータ型の範囲でサポートされていない値が見つかった場合は、モデル デザイナーによって別のエラーが表示されます。この場合は、続行する前にデータ値を修正する必要があります。  
   
- Business intelligence semantic model で使用されるデータ型の詳細については、暗黙的に変換、およびさまざまなデータ型ではどのように式で使用するを参照してください[データ型はサポートされて](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)です。  
+ Business intelligence semantic model で使用されるデータ型の詳細については、暗黙的に変換、およびさまざまなデータ型がどのような数式で使用しを参照してください[型でサポートされているデータ](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)します。  
   
 ## <a name="see-also"></a>参照  
  [サポートされているデータ型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  

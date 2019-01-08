@@ -22,22 +22,22 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a79eed306e8920ece4cc6ea1de97352c4706622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afab607b547302d3f24f3bb64060757bfa76495a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604620"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209911"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  この機能は現在プレビュー状態です。 この機能は将来のリリースで変更または削除される可能性があるので、この機能の特定の実装に依存する設定は行わないでください。  
->   
->  プレビュー状態で、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]運用チームには、この DMV のオンとオフのデータ収集が有効にすることがあります。  
->   
+> 
+>  プレビュー状態の間に、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 運用チームがこの DMV のデータ収集機能を無効にしたり有効にしたりする可能性があります。  
+> 
 >  -   有効になっていると、DMV は集計時点の現在のデータを返します。  
 > -   無効になっていると、DMV は古くなった可能性のある履歴データを返します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47604620"
 |time|**datetime**|1 時間単位の時刻 (UTC)。|  
 |database_name|**nvarchar**|ユーザー データベースの名前。|  
 |sku|**nvarchar**|SKU の名前です。 使用できる値を次に示します。<br /><br /> Web<br /><br /> ビジネス<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|1 時間の間隔において使用された CPU 時間の合計。<br /><br /> 注: この列は非推奨 v11 と V12 には適用されません。 **値は常に 0 に設定します。**|  
+|usage_in_seconds|**int**|1 時間の間隔において使用された CPU 時間の合計。<br /><br /> 注:この列は非推奨 v11 と V12 には適用されません。 **値は常に 0 に設定します。**|  
 |storage_in_megabytes|**decimal**|1 時間の間隔の最大ストレージ サイズ。これにはデータベースのデータ、インデックス、ストアド プロシージャ、メタデータが含まれます。|  
   
 ## <a name="permissions"></a>アクセス許可  

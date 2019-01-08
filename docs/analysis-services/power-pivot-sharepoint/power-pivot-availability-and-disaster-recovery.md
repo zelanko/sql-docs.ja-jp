@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979584"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984023"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot の可用性と災害復旧
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "38979584"
   
  ![sharepoint 2010 で powerpivot の可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "sharepoint 2010 で powerpivot の可用性")  
   
--   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールします。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
+-   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールします。 「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
   
 -   **(2)** 2 つの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共有サービスと **(4)** Windows Service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** が、SharePoint アプリケーション サーバーにインストールされます。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "38979584"
   
 ||コメント|  
 |-|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の同期ミラーリングを同じファーム内で行うことによる可用性の確保|サポートはされますが、推奨はされません。 同期コミット モードの AlwaysOn を推奨します。|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の同期ミラーリングを同じファーム内で行うことによる可用性の確保|サポートはされますが、推奨はされません。 同期 - コミット モードで Always On を使用することをお勧めします。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 同期コミット モードの|サポートされ、なおかつ推奨されます。|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同期ミラーリングまたはログ配布を別のファームとの間で行うことによるディザスター リカバリー|サポートされています。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー |サポートされている|  
@@ -91,15 +91,13 @@ ms.locfileid: "38979584"
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]を含んだコールド スタンドバイのシナリオを計画する方法の詳細については、 [PowerPivot の災害復旧](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx)に関するページを参照してください。  
   
 ## <a name="verification"></a>検証  
- ディザスター リカバリー サイクルの前後に [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置を効率的に検証するためのガイダンスとスクリプトについては、「 [チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)」を参照してください。  
+ ガイダンスと確認に役立つスクリプト、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]前に、と後、ディザスター リカバリー サイクルのデプロイに確認[チェックリスト。PowerShell を使用して Powerpivot for SharePoint を確認する](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)します。  
   
 ##  <a name="bkmk_more_resources"></a> 詳細情報へのリンク  
   
 -   [サポートされている SharePoint データベース用の高可用性とディザスター リカバリーのオプション (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [ディザスター リカバリーを計画する (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
-  
--   [SQL Server クラウドのバックアップと復旧に関するホワイト ペーパー](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
 -   [Microsoft® SQL Server Backup to Microsoft Windows® Azure®Tool](http://www.microsoft.com/download/details.aspx?id=40740)  
   

@@ -20,18 +20,18 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855920"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204561"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLEndTran**接続に関連付けられているすべてのステートメントにアクティブなすべての操作をコミットまたはロールバック操作を要求します。 **SQLEndTran**環境に関連付けられているすべての接続のコミットまたはロールバック操作を実行することが要求もできます。  
   
 > [!NOTE]  
@@ -132,13 +132,13 @@ SQLRETURN SQLEndTran(
   
 -   ドライバーでは、次のメッセージは、トランザクションが完了しなかったことを確認の 1 つ返されませんでした。  
   
-    -   25S03: トランザクションがロールバック  
+    -   25S03:トランザクションをロールバックします。  
   
-    -   40001: シリアル化エラー  
+    -   40001:シリアル化エラー  
   
-    -   40002: 整合性制約  
+    -   40002:整合性制約  
   
-    -   HYC00: 省略可能な機能が実装されていません  
+    -   HYC00:省略可能な機能が実装されていません  
   
  場合**SQLEndTran**が呼び出された環境でハンドルとその接続のいずれかで、上記の条件が満たさ、同じドライバーに接続するすべての接続は中断状態に格納されます。  
   

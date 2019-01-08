@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
@@ -20,12 +19,12 @@ ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae1484fd98b7cf10f06eb86406b03b9c2991a210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84ffe2ad4be91f8a05e4bbbd84b2ad5a67cb09a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098102"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792494"
 ---
 # <a name="validate-replicated-data"></a>レプリケートされたデータの検証
   トランザクション レプリケーションとマージ レプリケーションを使用すると、サブスクライバーのデータがパブリッシャーのデータと一致するかどうかを検証できます。 検証は、1 つのパブリケーションの特定のサブスクリプション、またはすべてのサブスクリプションに対して行うことができます。 次のいずれかの種類の検証を指定すると、ディストリビューション エージェントまたはマージ エージェントは次回の実行時にデータを検証します。  
@@ -38,14 +37,14 @@ ms.locfileid: "48098102"
   
  **データを検証するには**  
   
- サブスクリプションのすべてのアーティクルを検証するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、ストアド プロシージャ、またはレプリケーション管理オブジェクト (RMO) を使用します。 詳しくは、「 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)」をご覧ください。 スナップショット パブリケーションおよびトランザクション パブリケーションの個々のアーティクルを検証するには、ストアド プロシージャを使用する必要があります。  
+ サブスクリプションのすべてのアーティクルを検証するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、ストアド プロシージャ、またはレプリケーション管理オブジェクト (RMO) を使用します。 詳細については、「 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)」を参照してください。 スナップショット パブリケーションおよびトランザクション パブリケーションの個々のアーティクルを検証するには、ストアド プロシージャを使用する必要があります。  
   
 ## <a name="data-validation-results"></a>データ検証の結果  
  検証が完了すると、ディストリビューション エージェントまたはマージ エージェントは成功または失敗に関するメッセージをログに記録します (レプリケーションでは失敗した行については報告されません)。 これらのメッセージは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、レプリケーション モニター、およびレプリケーション システム テーブルで参照できます。 操作方法に関する上記のトピックは、検証の実行方法と結果を表示する方法を示しています。  
   
  データ検証の問題に対処するために、次の点を検討してください。  
   
--   失敗が通知されるように、 **[レプリケーション: サブスクライバーでデータ検証で問題が見つかりました]** というレプリケーション警告を設定します。 詳細については、次を参照してください。 [構成の定義済みのレプリケーションの警告&#40;SQL Server Management Studio & #41 41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) します。  
+-   構成というレプリケーション警告**レプリケーション。サブスクライバーでは、データの検証が失敗した**エラーの場合に通知されるようにします。 詳細については、次を参照してください。 [構成の定義済みのレプリケーションの警告&#40;SQL Server Management Studio & #41 41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) します。  
   
 -   検証の失敗はアプリケーションにとって問題となりますか? 検証の失敗が問題となる場合、データを手動で更新して同期するか、サブスクリプションを再初期化してください。  
   

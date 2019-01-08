@@ -1,6 +1,8 @@
 ---
-title: Azure リソース エクスプ ローラーで Azure SQL のリソースの探索 |Microsoft Docs
-description: 調査および Azure SQL Server、Azure SQL DB と Azure Resource Explorer で Azure SQL マネージ インスタンスを管理する方法について説明します。
+title: Azure リソース エクスプ ローラーで Azure SQL のリソースを調べる
+titleSuffix: Azure Data Studio
+description: 調査および Azure SQL Server、Azure SQL Database、Azure Resource Explorer で Azure SQL マネージ インスタンスを管理する方法について説明します。
+ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
 manager: craigg
@@ -8,14 +10,14 @@ ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 5b969ded699c11414c1822c0cb455ee84dfa212f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356063"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030116"
 ---
-# <a name="explore-azure-sql-resources-with-azure-resource-explorer"></a>Azure リソース エクスプ ローラーで Azure SQL のリソースを調べる
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>調査、Azure リソース エクスプ ローラーで Azure SQL のリソースの管理
 
 このドキュメントでは、調査し、Azure SQL Server、Azure SQL database、および Azure SQL マネージ インスタンスでの Azure リソース エクスプ ローラーを使用したリソースを管理する方法を説明します[!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]します。
 

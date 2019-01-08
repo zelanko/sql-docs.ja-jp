@@ -12,12 +12,12 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7937c507eda266669ba2040d202dac66559a242d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ff043a40449664385360b073451b0217727a5c0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191362"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355231"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn ポリシーを使用した可用性グループの正常性の確認 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の AlwaysOn ポリシーまたは [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の PowerShell を使用して、AlwaysOn 可用性グループの運用状態の正常性を確認する方法について説明します。 AlwaysOn ポリシー ベースの管理については、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
@@ -27,7 +27,7 @@ ms.locfileid: "48191362"
   
 
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48191362"
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **AlwaysOn ポリシーを使用して、可用性グループのヘルスを表示するには**  
   
-1.  既定の設定 (`cd`) 可用性レプリカの 1 つをホストするサーバー インスタンスにします。 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
+1.  可用性レプリカの 1 つをホストするサーバー インスタンスを既定の操作対象に設定 (`cd`) します。 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
   
 2.  次のコマンドレットを使用します。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48191362"
     |------------|-----------------|  
     |`AllowUserPolicies`|AlwaysOn ポリシーのカテゴリにあるユーザー ポリシーを実行します。|  
     |`InputObject`|可用性グループ、可用性レプリカ、または可用性データベースの状態 (使用するコマンドレットに応じて異なります) を表すオブジェクトのコレクションです。 コマンドレットを実行すると、指定されたオブジェクトの正常性が計算されます。|  
-    |`NoRefresh`|このパラメーターが設定されている場合、コマンドレットは手動で更新されませんで指定されたオブジェクト、`-Path`または`-InputObject`パラメーター。|  
+    |`NoRefresh`|このパラメーターを設定すると、コマンドレットの実行時に、`-Path` または `-InputObject` パラメーターで指定されたオブジェクトが手動で最新の情報に更新されません。|  
     |`Path`|可用性グループ、1 つ以上の可用性レプリカ、または可用性データベースのデータベース レプリカ クラスターの状態へのパス (使用するコマンドレットに応じて異なります) です。 これは省略可能なパラメーターです。 このパラメーターの値を指定しない場合、既定では、現在の場所に設定されます。|  
     |`ShowPolicyDetails`|このコマンドレットで実行された各ポリシー評価の結果を表示します。 コマンドレットを実行すると、ポリシー評価ごとに 1 つのオブジェクトが出力されます。このオブジェクトには評価の結果を表すフィールド (ポリシーが渡されるかどうかに関係なく、ポリシー名、カテゴリなど) があります。|  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48191362"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
@@ -115,15 +115,15 @@ ms.locfileid: "48191362"
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
- **SQL Server AlwaysOn チームのブログ: PowerShell を使用した AlwaysOn 正常性状態を監視します。**  
+ **SQL Server AlwaysOn チームの PowerShell を使用した AlwaysOn 正常性のブログを監視します。**  
   
--   [パート 1: 基本的なコマンドレットの概要](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+-   [第 1 部:基本的なコマンドレットの概要](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   
--   [パート 2: 高度なコマンドレットの使用方法](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+-   [パート 2:高度なコマンドレットの使用方法](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
--   [パート 3: 単純な監視アプリケーション](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+-   [パート 3:単純な監視アプリケーション](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
--   [パート 4: SQL Server エージェントの統合](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+-   [パート 4:SQL Server エージェントとの統合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

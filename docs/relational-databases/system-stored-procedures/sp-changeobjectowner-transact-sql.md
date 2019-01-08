@@ -18,22 +18,22 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 30ae865060ff3d667de8f18c6d73f4b7087f0780
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ba2e0130c766763c554d6ec256a8858db3373b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707700"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204931"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベース内のオブジェクトの所有者を変更します。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  このストアド プロシージャで使用可能なオブジェクトでのみ動作[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md)または[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)代わりにします。 **sp_changeobjectowner**スキーマと所有者の両方を変更します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を維持するために、現在の所有者と新しい所有者がデータベースのユーザー名と同じ名前のスキーマを所有している場合は、このストアド プロシージャはオブジェクトの所有者だけを変更します。  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  このストアド プロシージャには、新しい権限要件が追加されています。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

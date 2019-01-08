@@ -1,5 +1,5 @@
 ---
-title: Analysis Services データベースのバックアップと復元 |Microsoft ドキュメント
+title: Analysis Services データベースのバックアップと復元 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e43357e843f28133f7bb2f5cd9db078ee4bace27
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aa0e023b32418cd5eabee04819213955c517e0ee
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024449"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984003"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services データベースのバックアップと復元
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34024449"
   
  ソース データを含む完全バックアップでは、詳細データを含むデータベースをバックアップする必要があります。 具体的には、ROLAP または DirectQuery データベース ストレージを使用している場合、詳細データは Analysis Services データベースとは異なる外部の SQL Server リレーショナル データベースに格納されます。 すべてのオブジェクトがテーブルまたは多次元の場合は、Analysis Services バックアップにはメタデータとソース データの両方が含まれます。  
   
- バックアップを自動化する明らかな利点の 1 つは、自動バックアップ頻度の指定に応じて、データのスナップショットが常に最新の状態に保たれることです。 自動スケジューラにより、バックアップの実行漏れはなくなります。 データベースの復元も自動化が可能です。これはデータをレプリケートする場合に適していますが、レプリケート先のインスタンスの暗号化キー ファイルを必ずバックアップする必要があります。 同期機能は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのレプリケーションに特化していますが、最新でないデータに対してのみ実行されます。 ここで説明する機能はすべて、ユーザー インターフェイス、XML/A コマンド、または AMO 経由でのプログラムの実行によって実装できます。 バックアップの方針の詳細については、「 [Microsoft SQL Server 2005 Analysis Services を使用したバックアップの方針](http://go.microsoft.com/fwlink/?LinkId=81888)」を参照してください。  
+ バックアップを自動化する明らかな利点の 1 つは、自動バックアップ頻度の指定に応じて、データのスナップショットが常に最新の状態に保たれることです。 自動スケジューラにより、バックアップの実行漏れはなくなります。 データベースの復元も自動化が可能です。これはデータをレプリケートする場合に適していますが、レプリケート先のインスタンスの暗号化キー ファイルを必ずバックアップする必要があります。 同期機能は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのレプリケーションに特化していますが、最新でないデータに対してのみ実行されます。 ここで説明する機能はすべて、ユーザー インターフェイス、XML/A コマンド、または AMO 経由でのプログラムの実行によって実装できます。
   
  このトピックのセクションは次のとおりです。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34024449"
  管理者は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのサイズにかかわらず、データベースを 1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) にバックアップできます。 手順の詳細については、「 [Analysis Services データベースをバックアップする方法 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 」と「 [Analysis Services データベースのバックアップの自動化 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、の読み込みとクエリを実行するために使用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データ モデルを SharePoint 環境では、SharePoint コンテンツ データベースからそのモデルを読み込みます。 これらのコンテンツ データベースはリレーショナル データベースであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース エンジン上で動作します。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルについては、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のバックアップと復元の方法はありません。 SharePoint コンテンツ用のディザスター リカバリー計画がある場合、その計画では、コンテンツ データベースに格納されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルが対象となります。  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]は SharePoint 環境で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルの読み込みとクエリを実行する際に使用され、SharePoint コンテンツ データベースからそのモデルを読み込みます。 これらのコンテンツ データベースはリレーショナル データベースであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース エンジン上で動作します。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルについては、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のバックアップと復元の方法はありません。 SharePoint コンテンツ用のディザスター リカバリー計画がある場合、その計画では、コンテンツ データベースに格納されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルが対象となります。  
   
  **リモート パーティション**  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlecolumn
@@ -17,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d9238e5b0f8ad5480e05ded3a0154eb5510904
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640720"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210121"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  このアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@article=**] **'***記事***'**  
+ [  **@article=**] **'**_記事_**'**  
  アーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
   
- [  **@column=**] **'***列***'**  
+ [  **@column=**] **'**_列_**'**  
  追加または削除する列の名前を指定します。 *列*は**sysname**、既定値は NULL です。 NULL の場合はすべての列がパブリッシュされます。  
   
- [  **@operation=**] **'***操作***'**  
+ [  **@operation=**] **'**_操作_**'**  
  アーティクルの列を追加するか削除するかを指定します。 *操作*は**nvarchar (5)**、既定値は add です。 **追加**レプリケーションする列をマークします。 **drop**列のマークを解除します。  
   
  [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
@@ -70,7 +69,7 @@ sp_articlecolumn [ @publication = ] 'publication'
  [  **@change_active =** ] *@change_active*  
  サブスクリプションを持つパブリケーションの列の変更を許可します。 *@change_active*は、 **int** 、既定値は**0**します。 場合**0**列は変更されません。 場合**1**列を追加またはサブスクリプションを持つアクティブなアーティクルから削除されることができます。  
   
- [  **@force_invalidate_snapshot =** ]*更によって*  
+ [ **@force_invalidate_snapshot =** ]*更によって*  
  このストアド プロシージャが実行する操作によって既存のスナップショットが無効になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  
@@ -82,13 +81,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0**アーティクルへの変更では、サブスクリプションを再初期化するのには発生しないことを指定します。 ストアド プロシージャが、変更がサブスクリプションの再初期化する必要になることを検出した場合は、エラーが発生し、変更は行われません。 **1**アーティクルへの変更が発生する既存のサブスクリプションを再初期化することを指定します。 サブスクリプションの再初期化を許可します。  
   
- [  **@publisher=** ] **'***パブリッシャー***'**  
+ [  **@publisher=** ] **'**_パブリッシャー_**'**  
  以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*では使用できません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
- [  **@internal=** ] **'***内部***'**  
+ [  **@internal=** ] **'**_内部_**'**  
  内部使用のみです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

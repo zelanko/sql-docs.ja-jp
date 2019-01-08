@@ -20,18 +20,18 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90c1c31e6b4b33d662636d34fcebbd17393f69a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608250"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201771"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 関数
 **準拠**  
- 2.5 ODBC のバージョンで導入されました。  
+ バージョンが導入されました。ODBC 2.5  
   
- **概要**  
+ **まとめ**  
  **SQLConfigDriver**適切なドライバーのセットアップ DLL と呼び出しを読み込み、 **ConfigDriver**関数。  
   
  機能**SQLConfigDriver**にアクセスすることも[ODBCCONF します。EXE](../../../odbc/odbcconf-exe.md)します。  
@@ -57,11 +57,11 @@ BOOL SQLConfigDriver(
  *起こり*  
  [入力]要求の種類。 *起こり*値は次のいずれかを含める必要があります。  
   
- ODBC_CONFIG_DRIVER: は、接続プール、ドライバーによって使用されるタイムアウトを変更します。  
+ ODBC_CONFIG_DRIVER:接続プール、ドライバーによって使用されるタイムアウトを変更します。  
   
- ODBC_INSTALL_DRIVER: は、新しいドライバーをインストールします。  
+ ODBC_INSTALL_DRIVER:新しいドライバーをインストールします。  
   
- ODBC_REMOVE_DRIVER: は、既存のドライバーを削除します。  
+ ODBC_REMOVE_DRIVER:既存のドライバーを削除します。  
   
  このオプションは、ドライバー固有を場合にも、*起こり*最初のオプションが ODBC_CONFIG_DRIVER_MAX + 1 から開始する必要があります。 *起こり*追加のオプションは ODBC_CONFIG_DRIVER_MAX + 1 より大きい値から開始もする必要があります。  
   

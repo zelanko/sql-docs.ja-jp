@@ -5,8 +5,7 @@ ms.date: 01/15/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -19,12 +18,12 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1341b9e9b1f00494c655ed5a91943fadfbd5b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614140"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808904"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict _&lt;スキーマ&gt;_&lt;テーブル&gt;(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "47614140"
 |__$originator_id|**int**|競合する変更が発生したノードの ID です。 Id の一覧は、実行[sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)します。|  
 |__$origin_datasource|**int**|競合する変更が発生したノードです。|  
 |__$tranid|**nvarchar (40)**|__$origin_datasource で適用されたときの競合する変更のログ シーケンス番号 (LSN) です。|  
-|__$conflict_type|**int**|競合の種類。次の値のいずれかです。<br /><br /> 1: ローカル行が別の更新によって変更されたか、削除された後に再挿入されたため、更新に失敗しました。<br /><br /> 2: ローカル行が既に削除されていたため、更新に失敗しました。<br /><br /> 3: ローカル行が別の更新によって変更されたか、削除された後に再挿入されたため、削除に失敗しました。<br /><br /> 4: ローカル行が既に削除されていたため、削除に失敗しました。<br /><br /> 5: ローカル行が既に挿入されていたか、挿入された後に更新されたため、挿入に失敗しました。|  
+|__$conflict_type|**int**|競合の種類。次の値のいずれかです。<br /><br /> 1:ローカル行が別の更新プログラムまたはことによって変更されたために失敗しました。 更新プログラムが削除され、後に再挿入します。<br /><br /> 2:ローカル行が既に削除されて、更新に失敗しました。<br /><br /> 3:ローカル行が別の更新プログラムまたはことによって変更されたために失敗しました。 削除が削除され、後に再挿入します。<br /><br /> 4:ローカル行が既に削除されたために、削除が失敗しました。<br /><br /> 5:ローカル行が既に挿入されているかが、挿入し、更新、挿入が失敗しました。|  
 |__$is_winner|**bit**|このテーブルの行が競合で優先されるかどうか (ローカル ノードに適用されるかどうか) を示します。|  
 |__$pre_version|**varbinary (32)**|競合する変更が発生したデータベースのバージョンです。|  
-|__$reason_code|**int**|競合の解決コード。 次の値のいずれかです。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 詳細については、次を参照してください。 **_ _ $reason_text**します。|  
-|__$reason_text|**nvarchar (720)**|競合の解決。 次の値のいずれかです。<br /><br /> 解決 (1)<br /><br /> 未解決 (2)<br /><br /> 不明 (0)|  
+|__$reason_code|**int**|競合の解決コード。 次のいずれかの値になります。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 詳細については、次を参照してください。 **_ _ $reason_text**します。|  
+|__$reason_text|**nvarchar (720)**|競合の解決。 次のいずれかの値になります。<br /><br /> 解決 (1)<br /><br /> 未解決 (2)<br /><br /> 不明 (0)|  
 |__$update_bitmap|**varbinary (** *n* **)** します。 サイズはコンテンツにより異なります。|更新 - 更新の競合が発生した場合にどの列が更新されたかを示すビットマップです。|  
 |__$inserted_date|**datetime**|競合する行がこのテーブルに挿入された日時です。|  
 |__$row_id|**timestamp**|競合の原因となった行に関連付けられている行バージョンです。|  

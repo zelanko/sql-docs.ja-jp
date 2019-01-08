@@ -1,5 +1,5 @@
 ---
-title: テーブルおよび列 |Microsoft ドキュメント
+title: Analysis Services 表形式モデルのテーブルと列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10133b2843c01f16134c028140394247c2669236
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043426"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072159"
 ---
 # <a name="tables-and-columns"></a>テーブルと列 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34043426"
  **テーブルのメタデータ**  
  リレーションシップ、メジャー、ロール、パースペクティブ、および貼り付けられたデータはすべて、テーブルのコンテキスト内のオブジェクトを定義するメタデータです。  
   
- **データ**  
+ **Data**  
  データは、テーブルのインポート ウィザードを使用するか計算列で新しいデータを作成してテーブルを最初にインポートしたときに、テーブル列に入力されます。 ソースでデータが変更されるか、モデルがメモリから削除された場合は、テーブルにデータを再入力する処理操作を実行する必要があります。  
   
 ##  <a name="bkmk_working"></a> テーブルと列の操作  
@@ -49,7 +49,7 @@ ms.locfileid: "34043426"
   
 -   テーブルにコピーまたは貼り付けられたリレーショナル データと表形式 (HTML) データの組み合わせ。  
   
- データをインポートすると、各テーブルやビュー、シート、データのファイルがテーブルとしてモデル デザイナーに追加されます。 通常はソースごとに別々のタブにデータを追加しますが、**[貼り付け]** および **[貼り付け追加]** を使用すると 1 つのテーブルにデータを結合することができます。 詳細については、次を参照してください。[コピーと貼り付けデータ](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)です。  
+ データをインポートすると、各テーブルやビュー、シート、データのファイルがテーブルとしてモデル デザイナーに追加されます。 通常はソースごとに別々のタブにデータを追加しますが、 **[貼り付け]** および **[貼り付け追加]** を使用すると 1 つのテーブルにデータを結合することができます。 詳細については、次を参照してください。[コピーと貼り付けデータ](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)します。  
   
  必要なデータをすべて追加した後で、テーブル、参照、または参照関連値の間の追加のリレーションシップを他のテーブルで作成したり、新しい計算列を追加して派生値を作成したりできます。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34043426"
   
 ##  <a name="bkmk_related_tasks"></a> 関連タスク  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[テーブルへの列の追加](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|テーブル定義にソース列を追加する方法について説明します。|  
 |[列の削除](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|モデル デザイナー、または [テーブルのプロパティ] ダイアログ ボックスを使用して、モデル テーブルの列を削除する方法について説明します。|  
@@ -67,8 +67,8 @@ ms.locfileid: "34043426"
 |[テーブルの削除](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|モデル ワークスペース データベース内の不要なテーブルを削除する方法について説明します。|  
 |[テーブルまたは列名の変更](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|モデル内で識別できるようにテーブルまたは列の名前を変更する方法について説明します。|  
 |[列のデータ型の設定](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|列のデータ型を変更する方法について説明します。 データ型は、列のデータの格納および表示方法を定義します。|  
-|[列の非表示または固定](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|表示しない列を非表示にする方法、およびモデルのある領域内の特定の列を固定 (ロック) して、その領域を表示したまま別の領域にスクロールする方法について説明します。|  
+|[列の非表示または固定](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|領域の 1 つで特定の列を (ロック) 固定することによって、モデルの別の領域にスクロールするときに、モデルの領域を表示したままに表示する列を非表示にする方法について説明します。|  
 |[計算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)|このセクションのトピックでは、計算列を使用して集計データをモデルに追加する方法について説明します。|  
-|[フィルターとのデータの並べ替え](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|このセクションのトピックでは、モデル デザイナーのコントロールを使用してデータのフィルター処理または並べ替えを実行する方法について説明します。|  
+|[データのフィルター処理と並べ替え](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|このセクションのトピックでは、モデル デザイナーのコントロールを使用してデータのフィルター処理または並べ替えを実行する方法について説明します。|  
   
   

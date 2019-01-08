@@ -12,25 +12,25 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 46795611f8bb3554491dbdd400d383a59a540b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766596"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826087"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux への接続の暗号化
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux を使用してトランスポート層セキュリティ (TLS) 暗号化をクライアント アプリケーションとのインスタンス間のネットワーク経由で送信されるデータ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows と Linux の両方で同じ TLS プロトコルをサポートしています。 TLS 1.2、1.1、および 1.0。 ただし、TLS を構成する手順は、オペレーティング システムに固有[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が実行されています。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux を使用してトランスポート層セキュリティ (TLS) 暗号化をクライアント アプリケーションとのインスタンス間のネットワーク経由で送信されるデータ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows と Linux の両方で同じ TLS プロトコルをサポートしています。TLS 1.2、1.1、および 1.0。 ただし、TLS を構成する手順は、オペレーティング システムに固有[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が実行されています。  
 
 ## <a name="requirements-for-certificates"></a>証明書の要件 
 始める前に、証明書がこれらの要件に従うことを確認する必要があります。
 - 現在のシステム時刻は、証明書のプロパティをプロパティと有効期間の前に、証明書の発効後にする必要があります。
 - 証明書がサーバー認証に使用されていること。 つまり、証明書の [拡張キー使用法] プロパティで [ サーバー認証 ] (1.3.6.1.5.5.7.3.1) が指定されている必要があります。
 - AT_KEYEXCHANGE の KeySpec オプションを使用して証明書を作成する必要があります。 通常、証明書のキー使用法プロパティ (KEY_USAGE) では、キーの暗号化 (CERT_KEY_ENCIPHERMENT_KEY_USAGE) も含まれています。
-- 証明書の Subject プロパティは、共通名 (CN) が同じホスト名またはサーバー コンピューターの完全修飾ドメイン名 (FQDN) を示す必要があります。 注: ワイルドカード証明書がサポートされています。
+- 証明書の Subject プロパティは、共通名 (CN) が同じホスト名またはサーバー コンピューターの完全修飾ドメイン名 (FQDN) を示す必要があります。 注:ワイルドカード証明書がサポートされています。
 
 ## <a name="configuring-the-openssl-libraries-for-use-optional"></a>(省略可能) を使用するため、OpenSSL ライブラリを構成します。
 シンボリック リンクを作成することができます、`/opt/mssql/lib/`ディレクトリを参照する`libcrypto.so`と`libssl.so`ライブラリは、暗号化に使用する必要があります。 これは、システムによって提供される既定以外の特定のバージョンの OpenSSL を使用する SQL Server を強制する場合に便利です。 これらのシンボリック リンクが存在しない場合、SQL Server は、システムの既定の構成の OpenSSL ライブラリを読み込みます。
@@ -56,8 +56,8 @@ TLS は、クライアント アプリケーションからの接続の暗号化
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
@@ -65,14 +65,14 @@ TLS は、クライアント アプリケーションからの接続の暗号化
 
     -   CA の署名証明書を使用している場合は、ユーザー証明書ではなく証明書機関 (CA) 証明書をクライアント コンピューターにコピーする必要があります。 
     -   自己署名証明書を使用している場合だけ、.pem ファイルを配布にはそれぞれ次のフォルダーにコピーし、コマンドを実行できるようにします 
-        - **Ubuntu**: コピーの証明書と```/usr/share/ca-certificates/```を .crt に名前の変更拡張機能では、dpkg reconfigure の ca 証明書を使用して、システム CA の証明書として有効にします。 
-        - **RHEL**: コピーの証明書と```/etc/pki/ca-trust/source/anchors/```使用```update-ca-trust```システム CA の証明書として有効にします。
-        - **SUSE**: コピーの証明書と```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```システム CA の証明書として有効にします。
-        - **Windows**: ルート証明機関証明書]-> [信頼された .pem ファイルを現在のユーザー証明書として]-> [インポート
+        - **Ubuntu**:コピーの証明書と```/usr/share/ca-certificates/```を .crt に名前の変更拡張機能では、dpkg reconfigure の ca 証明書を使用して、システム CA の証明書として有効にします。 
+        - **RHEL**:コピーの証明書と```/etc/pki/ca-trust/source/anchors/```使用```update-ca-trust```システム CA の証明書として有効にします。
+        - **SUSE**:コピーの証明書と```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```システム CA の証明書として有効にします。
+        - **Windows**:ルート証明機関証明書]-> [信頼された .pem ファイルを現在のユーザー証明書として]-> [インポート
         - **macOS**: 
            - 証明書をコピーします。 ```/usr/local/etc/openssl/certs```
            - ハッシュ値を取得する次のコマンドを実行します。 ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 値に、証明書の名前を変更します。 たとえば、「 ```mv mssql.pem dc2dd900.0```」のように入力します。 Dc2dd900.0 がで確認します。 ```/usr/local/etc/openssl/certs```
+           - 値に、証明書の名前を変更します。 たとえば、 ```mv mssql.pem dc2dd900.0```のようにします。 Dc2dd900.0 がで確認します。 ```/usr/local/etc/openssl/certs```
     
 -   **接続文字列の例** 
 
@@ -106,8 +106,8 @@ TLS は、クライアント アプリケーションからの接続の暗号化
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
         

@@ -1,5 +1,5 @@
 ---
-title: 'タスク 4: ドメイン ルールを設定する |Microsoft Docs'
+title: タスク 4:ドメイン ルールを設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c8bbc2bb88747aee84be9eeff18fcae59df54d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c3b51408258b93f6585b46171793eb885a6d0d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138768"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349574"
 ---
-# <a name="task-4-setting-domain-rules"></a>タスク 4: ドメイン ルールを設定する
-  このタスクでのルールを作成する、 **Contact Email**かどうかに、電子メール アドレスが終わることを確認するドメイン **@adventure-works.com**します。 参照してください[ドメイン ルールを作成する](http://msdn.microsoft.com/library/hh510397.aspx)ページの詳細についてはトピック。  
+# <a name="task-4-setting-domain-rules"></a>タスク 4:ドメイン ルールを設定する
+  このタスクでのルールを作成する、 **Contact Email**かどうかに、電子メール アドレスが終わることを確認するドメイン **@adventure-works.com**します。 参照してください[ドメイン ルールを作成する](https://msdn.microsoft.com/library/hh510397.aspx)ページの詳細についてはトピック。  
   
 1.  クリックして**Contact Email**で、**ドメイン リスト**します。  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48138768"
 13. クリックして**閉じます**を閉じる、**ドメイン ルールのテスト** ダイアログ ボックス。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 5: 用語ベースのリレーションを設定する](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [タスク 5:ベースのリレーションを設定](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

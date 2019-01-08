@@ -1,27 +1,31 @@
 ---
-title: Azure Data Studio で SQL Server のビッグ データ クラスターで Spark ジョブの送信します。
-description: Azure Data Studio で SQL Server のビッグ データ クラスターで Spark ジョブの送信します。
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Azure Data Studio での Spark ジョブを実行します。
+titleSuffix: SQL Server 2019 big data clusters
+description: Azure Data Studio で SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/07/2018
 ms.topic: conceptual
-ms.date: 11/06/2018
-ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: d0843315b44b52a38377068023b9d17ba2bd05a2
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221608"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246501"
 ---
-# <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio で SQL Server のビッグ データ クラスターで Spark ジョブの送信します。
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 
-主なシナリオの 1 つは、SQL Server 2019 CTP 2.1 の Spark ジョブを送信する機能です。 Spark ジョブの送信機能では、SQL Server 2019 ビッグ データ クラスターへの参照を含むローカル Jar、Py ファイルを送信できます。 HDFS ファイル システムに既にあるは、Jar または Py のファイルを実行することもできます。 
+ビッグ データ クラスターの主なシナリオの 1 つは、SQL Server 2019 プレビューの Spark ジョブを送信する機能です。 Spark ジョブの送信機能では、SQL Server 2019 ビッグ データ クラスターへの参照を含むローカル Jar、Py ファイルを送信できます。 HDFS ファイル システムに既にあるは、Jar または Py のファイルを実行することもできます。 
 
-## <a name="prerequisite"></a>前提条件 
-SQL Server のビッグ データ ツールをインストールし、Spark ジョブを送信する前に、ビッグ データ クラスターに接続します。 インストールの詳細については、リンクを参照してください[ビッグ データ ツールの展開](deploy-big-data-tools.md)します。
+## <a name="prerequisites"></a>前提条件
+
+- [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 の拡張機能**
+   - **kubectl**
+
+- [ビッグ データ クラスターの HDFS/Spark ゲートウェイに接続して Azure Data Studio](connect-to-big-data-cluster.md)します。
 
 ## <a name="open-spark-job-submission-dialog"></a>Spark ジョブの送信 ダイアログを開きます
 Spark ジョブの送信 ダイアログを開くのいくつかの方法はあります。 方法には、ダッシュ ボードで、オブジェクト エクスプ ローラー、およびコマンド Palate のコンテキスト メニューが含まれます。

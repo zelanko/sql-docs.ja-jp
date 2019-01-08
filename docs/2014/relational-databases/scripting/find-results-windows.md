@@ -8,8 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vs.findresults1
-- findresultswindow
 - vs.findresults2
 helpviewer_keywords:
 - Find Results Windows dialog box
@@ -17,12 +15,12 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fbb23c1e85d5c612ded5ddfefa53ca3ddc9f1c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10e5dfa6bd2ca34fe24433333bc20c99bcf25a66
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106492"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328462"
 ---
 # <a name="find-results-windows"></a>検索結果ウィンドウ
   2 つの検索結果ウィンドウには、 **[検索と置換]** ダイアログの **[フォルダーを指定して検索]** タブまたは **[フォルダーを指定して置換]** タブを使用して検出された項目が表示されます。 **[フォルダーを指定して検索]** または **[フォルダーを指定して置換]** の **[検索結果]** コマンドを使用すると、検出された項目が表示される検索結果ウィンドウを選択できます。  
@@ -97,5 +95,3 @@ ms.locfileid: "48106492"
  最後の行には、次のような統計情報が含まれます。  
   
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
-  
-  

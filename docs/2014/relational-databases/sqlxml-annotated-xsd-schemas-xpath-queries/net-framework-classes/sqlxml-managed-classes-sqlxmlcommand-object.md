@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - void ExecuteNonQuery() method
@@ -32,12 +30,12 @@ ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0aba35418c1a7759f5c083bd5e5f7485118cbfc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207222"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807344"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand オブジェクト (SQLXML マネージド クラス)
   SqlXmlCommand オブジェクトのコンス トラクターです。  
@@ -46,7 +44,7 @@ ms.locfileid: "48207222"
 public SqlXmlCommand(string cnString)  
 ```  
   
- ここで、`cnString` は `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` のように、サーバー、データベース、およびログイン情報を識別する ADO または OLEDB 接続文字列です。  
+ 場所`cnString`は、サーバー、データベース、およびログイン情報を識別する ADO または OLEDB 接続文字列-たとえば、 `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`。  
   
  接続文字列では、`Provider` に SQLOLEDB を指定する必要があります。プロバイダーの文字列に `Data Provider` は使用できません。  
   
@@ -75,7 +73,7 @@ public SqlXmlCommand(string cnString)
  void ClearParameters()  
  指定したコマンド オブジェクトに作成されたパラメーターを消去します。 このメソッドは、同一のコマンド オブジェクトで複数のクエリを実行する場合に便利です。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  SqlXmlCommand オブジェクトには、これらのプロパティもサポートしています。  
   
  ClientSideXml  

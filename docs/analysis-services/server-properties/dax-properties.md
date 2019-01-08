@@ -1,5 +1,5 @@
 ---
-title: DAX のプロパティ |Microsoft Docs
+title: Analysis Services DAX のプロパティ |Microsoft Docs
 ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 794caf245e0cc3494713991159c5a911a187afae
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 20a6df833f8c525c24abdf3bb51278d0067db951
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264868"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071899"
 ---
 # <a name="dax-properties"></a>DAX のプロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
    Msmdsrv.ini の DAX セクションには、DAX クエリの結果セットで返される行の数の上限など、Analysis Services では、特定のクエリの動作の制御に使用される設定が含まれています。
 
-  巨大な行セットについては、DirectQuery モデルで返される行数など、既定の 100 万行では不十分である場合があります。 上限の調整が必要であるかどうかは、"The result set of a query to external data source has exceeded the maximum allowed size of '1000000' rows (外部データ ソースへのクエリの結果セットが許可されている最大サイズである '1000000' 行を超えています)" というエラーが発生することでわかります。
+  巨大な行セットについては、DirectQuery モデルで返される行数など、既定の 100 万行では不十分である場合があります。 制限によって、このエラーが発生した場合の調整が必要かどうかがわかります。「外部データ ソースへのクエリの結果セットを超えました '1000000' 行のサイズが最大。」
 
 上限を増やすには、 **MaxIntermediateRowSize** 構成設定を指定します。 構成ファイルの DAX セクションに全要素を手動で追加する必要があります。 追加するまで設定はファイル内に存在しません。
 

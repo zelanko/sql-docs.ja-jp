@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677918"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215458"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
@@ -105,7 +105,7 @@ Linux と Docker の両方のインストールに/var/opt/mssql/log/errorlog �
 場合は、変換することも、ファイルを utf-8 を使用して読み取る次のコマンドで ' 以下' または '詳細'。
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>拡張イベント
 
@@ -118,9 +118,9 @@ Linux でのログ ディレクトリにダンプを探します。 Linux のコ
 コア ダンプの 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-For SQL dumps 
+SQL ダンプの 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -205,7 +205,7 @@ SQLCMD を使用したシングル ユーザー モードで SQL Server を起�
 
    記事のトラブルシューティングのセクションを参照してください。 [SQL Server on Linux への接続](#connection)します。
 
-2. エラー: ホスト名は 15 文字である必要がありますまたはそれ以下。
+2. ERROR:ホスト名は 15 文字である必要がありますまたはそれ以下。
 
    これは、SQL Server の Debian パッケージをインストールしようとするマシンの名前が 15 文字より長いときに発生する既知の問題です。 現在、マシンの名前を変更する以外の回避策はありません。 これを実現する方法の 1 つは、ホスト名のファイルを編集し、マシンを再起動することです。 次[web サイトのガイド](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)これを詳しく説明します。
 

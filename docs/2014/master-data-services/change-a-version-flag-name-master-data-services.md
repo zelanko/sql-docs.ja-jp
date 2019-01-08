@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], changing name
@@ -13,12 +12,12 @@ ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d28c0b37b12bad3e62c789fd49a8b59c9f9d946e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab922142698101c276f59c9ca0d398f297eedee4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188132"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814334"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>バージョン フラグ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、バージョン フラグの名前を変更できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "48188132"
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-change-a-version-flag-name"></a>バージョン フラグ名を変更するには  
   
@@ -44,8 +43,8 @@ ms.locfileid: "48188132"
   
 6.  Enter キーを押します。  
   
-## <a name="see-also"></a>関連項目  
- [バージョン&#40;マスター データ サービス&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [バージョンにフラグを割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)   
+ [バージョンにフラグを割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
   

@@ -11,17 +11,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 768d35d4cc2763ee055fc2bebfee3e954a64dc65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099663"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350193"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005 からアップグレードしますか?
   SQL Server 2005 の延長サポートの終了は、新しいバージョンの SQL Server や Azure SQL Database への早めのアップグレードをお勧めする 1 つの理由です。 アップグレードすると、セキュリティとコンプライアンスを維持し、パフォーマンスを大きく改善し、データ プラットフォームのインフラストラクチャを最適化できます。  
   
- アップグレードまたは移行の計画と自動化を行うための情報、ガイダンス、ツールの詳細については、「 [SQL Server 2005 のサポート終了](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)」をご覧ください。  
+ アップグレードまたは移行の計画と自動化を行うための情報、ガイダンス、ツールの詳細については、「 [SQL Server 2005 のサポート終了](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)」をご覧ください。  
   
 ## <a name="why-upgrade"></a>アップグレードの目的  
   
@@ -33,13 +33,13 @@ ms.locfileid: "50099663"
  ![SQL Server 2005 からのアップグレードに関するデータ シート](../../../2014/sql-server/install/media/sqlserver2005eos.png "SQL Server 2005 からのアップグレードに関するデータ シート")  
   
 ## <a name="choose-your-upgrade-option"></a>アップグレード オプションの選択  
- ここでは、リレーショナル データベースを SQL Server 2005 からアップグレードする場合に使用できる、Microsoft プラットフォームでのリレーショナル ストレージ用のオプションを示します。  
+ リレーショナル データベースを SQL Server 2005 からアップグレードする場合、Microsoft プラットフォームでリレーショナル ストレージのオプションを示します。  
   
  これらのオプションの包括的な分析の詳細を確認するには、 [こちら](http://sql05upgrade.azurewebsites.net/)をクリックします。  
   
 |リレーショナル ストレージのオプション|利点|その他の考慮すべき要素|  
 |-------------------------------|--------------|-------------------------------|  
-|**オンプレミスの SQL Server**<br /><br /> トランザクション システムからデータ ウェアハウスまで、あらゆる種類のデータベース アプリケーションに対して、このオプションをご検討ください。<br /><br /> 詳細については、次を参照してください。 [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)します。|ハードウェアとソフトウェアの両方を管理するので、機能と拡張性の大部分を制御できます。<br /><br /> SQL Server 2005 からアップグレードする場合、これが最も類似した環境になります。|自前のハードウェアとソフトウェアを購入、維持、管理する必要があるため、必要な先行投資は最大で、管理は最も継続的なものとなります。|  
+|**オンプレミスの SQL Server**<br /><br /> トランザクション システムからデータ ウェアハウスまで、あらゆる種類のデータベース アプリケーションに対して、このオプションをご検討ください。<br /><br /> 詳細については、次を参照してください。 [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)します。|ハードウェアとソフトウェアの両方を管理するので、機能と拡張性の大部分を制御できます。<br /><br /> SQL Server 2005 からアップグレードする場合に、これは最も類似した環境です。|自前のハードウェアとソフトウェアを購入、維持、管理する必要があるため、必要な先行投資は最大で、管理は最も継続的なものとなります。|  
 |**Azure 仮想マシンでホストされる SQL Server**<br /><br /> 次のことが必要な場合は、このオプションをご検討ください。<br />-ホスト環境への移行の利点があります。<br />-運用環境を制御します。<br />-SQL Server の使い慣れた機能セットです。<br /><br /> 詳細については、次を参照してください。 [on Azure Virtual Machines の概要 SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)します。<br /><br /> 移行について詳しくは、「 [Azure VM の SQL Server へのデータベースの移行](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)」をご覧ください。|仮想マシン イメージのライブラリからすばやく展開できます。<br /><br /> SQL Server の完全な機能セットが利用できます。<br /><br /> ハードウェアとサーバー ソフトウェアのコストを節約できます。 1 時間単位で使用した分だけ課金されます。|SQL Server と、オペレーティング システム ソフトウェアの両方を構成して管理する必要があります。|  
 |**Azure SQL Database のホストされるデータベース サービス**<br /><br /> メンテナンスが容易で低コストのソリューションをお探しなら、このオプションをご検討ください。<br /><br /> このオプションは、必要なキャパシティがいつも同じではないアプリ、または外部アクセスを許可する必要のあるアプリに、特に適しています。<br /><br /> 詳細については、次を参照してください。 [SQL Database](https://azure.microsoft.com/services/sql-database/)します。<br /><br /> 移行について詳しくは、次を参照してください。 [Azure SQL Database に SQL Server データベースを移行する](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)します。|すばやく展開でき、簡単にスケール アップできます。<br /><br /> 1 時間単位で使用した分だけ課金されます。<br /><br /> サービスのコストには、ストレージだけでなく高可用性の自動バックアップが含まれています。|Azure SQL Database には、ホストされるクラウド環境には当てはまらない一部の SQL Server の機能が装備されていません。 詳しくは、「 [Azure SQL Database の Transact-SQL 情報](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)」を参照してください。<br /><br /> また、Azure SQL Database のデータベースの最大サイズは 500 GB である一方、SQL Server は 524 PB です。|  
   
@@ -58,11 +58,11 @@ ms.locfileid: "50099663"
   
 -   アップグレードを計画する方法については、SQL Server チームからの次の一連のブログ投稿をご確認ください。  
   
-    -   [SQL Server 2005 からの効率的なアップグレードの計画: ステップ 1/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [SQL Server 2005 からの効率的なアップグレードを計画するには。ステップ 1/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
   
-    -   [SQL Server 2005 からの効率的なアップグレードの計画: ステップ 2/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [SQL Server 2005 からの効率的なアップグレードを計画するには。ステップ 2/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
   
-    -   [SQL Server 2005 からの効率的なアップグレードの計画: ステップ 3/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [SQL Server 2005 からの効率的なアップグレードを計画するには。ステップ 3/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
 -   要件と考慮事項を確認[SQL Server のインストール計画](../../../2014/sql-server/install/planning-a-sql-server-installation.md)など、 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)します。  
   
@@ -73,16 +73,16 @@ ms.locfileid: "50099663"
         > [!IMPORTANT]  
         >  SQL Server 2005 サーバーを SQL Server 2014 サーバーにイン プレースでアップグレードすることはできません。 SQL Server 2014 をインストールしてから、SQL Server 2005 データベースを新規インストールに移行する必要があります。  
   
-    -   詳細が記載されている「テクニカル アップグレード ガイド」を PDF 形式で入手するには、 [こちらをクリック](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)してください。  
+    -   詳細が記載されている「テクニカル アップグレード ガイド」を PDF 形式で入手するには、 [こちらをクリック](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)してください。  
   
--   アップグレードまたは移行の計画と自動化を行うための情報、ガイダンス、ツールの詳細については、「 [SQL Server 2005 のサポート終了](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)」をご覧ください。  
+-   アップグレードまたは移行の計画と自動化を行うための情報、ガイダンス、ツールの詳細については、「 [SQL Server 2005 のサポート終了](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)」をご覧ください。  
   
 ## <a name="get-sql-server-2014"></a>SQL Server 2014 の取得  
  SQL Server 2014 の評価版をダウンロードする[ここをクリックして](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2014)します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
- [SQL Server 2005 のサポート終了](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
+ [SQL Server 2014](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
+ [SQL Server 2005 のサポート終了](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
  [SQL Server 2005 から SQL Server 2016 へのアップグレード](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: '手順 3: Fields リスト ボックスの設定 |Microsoft Docs'
+title: 手順 3:フィールドのリスト ボックスに入力 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bf639f5b624c222ca115b443ec327b45b836b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784010"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206891"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>手順 3: Fields リスト ボックスに値を設定する
+# <a name="step-3-populate-the-fields-list-box"></a>手順 3:フィールド リスト ボックスを設定します。
 フィールドのリスト ボックスを設定するには、クリック イベント ハンドラーに次のコードを挿入`lstMain`:  
   
 ```  
@@ -57,7 +57,7 @@ End Sub
   
  リソースが構造化ドキュメントの場合は、コードは実装されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターネットのシナリオへの発行](../../../ado/guide/data/internet-publishing-scenario.md)   
- [手順 2: Main リスト ボックスを初期化します。](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [手順 4: Details テキスト ボックスに値を設定する](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+ [手順 2:メイン リスト ボックスを初期化します。](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
+ [手順 4:詳細情報のテキスト ボックスに入力します。](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

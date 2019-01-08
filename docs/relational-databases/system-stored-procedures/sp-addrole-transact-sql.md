@@ -18,19 +18,19 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b0358f6f9781076b043975dc794f2521aac171ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f51d462e46a86a3c824a7e37aeb1f30ba28d987b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841900"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212921"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースに新しいデータベース ロールを作成します。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **sp_addrole**が以前のバージョンの互換性のために含まれる[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来のリリースではサポートされない可能性があります。 使用[CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -53,7 +53,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- 名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールは、1 ~ 128 文字、文字、記号、および数字を含めることができます。 データベース ロールの名前のことはできません。 円記号を含める (\\)、null 値、または空の文字列 (**''**)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールは 1 ～ 128 文字で指定でき、英数字と記号を含めることができます。 データベース ロールの名前のことはできません。 円記号を含める (\\)、null 値、または空の文字列 (**''**)。  
   
  データベース ロールに追加した後を使用して、 [sp_addrolemember &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 、ロールにプリンシパルを追加します。 GRANT、DENY、または REVOKE ステートメントを使用して権限をデータベース ロールに適用すると、そのデータベース ロールのメンバーには、それぞれのアカウントに直接適用した場合と同様に、権限が継承されます。  
   

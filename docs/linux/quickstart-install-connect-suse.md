@@ -1,5 +1,6 @@
 ---
-title: SUSE Linux Enterprise Server 上の SQL Server の概要 |Microsoft Docs
+title: SUSE Linux Enterprise Server 上の SQL Server の概要します。
+titleSuffix: SQL Server
 description: このクイック スタートでは、SUSE Linux Enterprise Server 上の SQL Server 2017 または SQL Server 2019 のインストールしし、作成し、sqlcmd を使用したデータベースの照会する方法を示します。
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: d73a1a3b75bbdce6604677464b6947c789bedbac
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269625"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160560"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート: SQL Server をインストールし、SUSE Linux Enterprise Server 上のデータベースの作成
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート:SQL Server をインストールし、SUSE Linux Enterprise Server にデータベースを作成
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -89,7 +90,7 @@ Sles SQL Server を構成するには、インストールするターミナル�
    ```
 
    > [!TIP]
-   > 無料でライセンスは、次の SQL Server 2017 エディション: Evaluation、Developer、および高速です。
+   > 次の SQL Server 2017 エディションのライセンスは自由に。Evaluation、Developer、および高速です。
 
    > [!NOTE]
    > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)。

@@ -4,28 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
-f1_keywords:
-- vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 869bbc88b10c5b1c561dd7fa9f085c5296aaf16f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103178"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328942"
 ---
 # <a name="toolbox-component-f1-help"></a>ツールボックス コンポーネントの F1 ヘルプ
-  **[ツールボックス]** には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトで使用するさまざまなアイテムが表示されます。 **[ツールボックス]** は、 **[表示]** メニューから開くことができます。このウィンドウは自由にドッキングできます。 ドッキングするときに、 **[ツールボックス]** を固定して開くように設定したり、使用していないときは **[自動的に隠す]** を適用したりできます。  
+
+**[ツールボックス]** には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトで使用するさまざまなアイテムが表示されます。 **[ツールボックス]** は、 **[表示]** メニューから開くことができます。このウィンドウは自由にドッキングできます。 ドッキングするときに、 **[ツールボックス]** を固定して開くように設定したり、使用していないときは **[自動的に隠す]** を適用したりできます。  
   
- **ツールボックス**内ビュー画面設計にアイコンをドラッグし、削除、またはコピーしコード エディターに貼り付けるか[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+**ツールボックス**内ビュー画面設計にアイコンをドラッグし、削除、またはコピーしコード エディターに貼り付けるか[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
 ## <a name="using-the-toolbox"></a>ツールボックスの使用  
  [ツールボックス] はスライド式のツリー コントロールで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows エクスプローラーの動作と似ていますが、グリッド線や接続線はありません。 **[ツールボックス]** の複数のセグメント (タブ) を同時に展開し、ツリー全体をスクロールして **[ツールボックス]** ウィンドウ内を移動することができます。 **[ツールボックス]** のタブを展開するには、名前の横のプラス記号 (**[+]**) をクリックします。 展開したタブを折りたたむには、名前の横のマイナス記号 (**[-]**) をクリックします。  
@@ -40,5 +38,3 @@ ms.locfileid: "48103178"
 ## <a name="see-also"></a>参照  
  [ツールボックスの使用](../../ssms/use-the-toolbox.md)   
  [[ツールボックス アイテムの選択] &#40;[メンテナンス タスク] ページ&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
-  
-  

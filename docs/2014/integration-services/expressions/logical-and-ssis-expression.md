@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '&& (logical AND)'
@@ -15,12 +14,12 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a59545c26427afa1677eca78e4c00263e663dded
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0482db6754777c2501e776a166f4d385e86900a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065535"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780194"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (論理 AND) (SSIS 式)
   論理 AND 演算を実行します。 両方の条件が TRUE の場合、式は TRUE に評価されます。  
@@ -65,8 +64,8 @@ StandardCost < @SPrice && ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>参照  
- [&&#40;ビットごとの AND&#41; &#40;SSIS 式&#41;](bitwise-and-ssis-expression.md)   
+ [& (ビット演算子 AND) (SSIS 式)](bitwise-and-ssis-expression.md)   
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
- [演算子&#40;SSIS 式&#41;](operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   
   

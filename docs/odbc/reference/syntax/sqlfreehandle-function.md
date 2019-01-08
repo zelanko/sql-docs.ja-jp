@@ -20,21 +20,21 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14d883228c17b24f42765c6fbf8484592b5fa117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820200"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203911"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLFreeHandle**特定の環境、接続、ステートメント、または記述子ハンドルに関連付けられたリソースを解放します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  このハンドルを解放するジェネリック関数です。 ODBC 2.0 関数に置き換えられます**SQLFreeConnect** (接続ハンドルを解放) 用と**SQLFreeEnv** (の環境ハンドルを解放)。 **SQLFreeConnect**と**SQLFreeEnv** ODBC 3 で非推奨両方 *.x*します。 **SQLFreeHandle**も ODBC 2.0 関数は置き換えられます**SQLFreeStmt** (、SQL_DROP で*オプション*) のステートメント ハンドルを解放します。 詳細については、「コメントです。」を参照してください。 どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC 3 の詳細については *.x*アプリケーションの操作は、ODBC 2 *.x*ドライバーを参照してください[後方のマッピング置換関数アプリケーションの互換性を](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)します。  
   
 ## <a name="syntax"></a>構文  
@@ -109,7 +109,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="freeing-a-descriptor-handle"></a>記述子ハンドルの解放  
  呼び出し**SQLFreeHandle**で、 *HandleType* SQL_HANDLE_DESC の記述子ハンドルを解放*処理*します。 呼び出し**SQLFreeHandle**任意のポインターのフィールド (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR を含む) で参照されているアプリケーションによって割り当てられたメモリを解放しません。記述子レコードの*処理*します。 ハンドルが解放されると、ポインター フィールドではないフィールド用のドライバーによって割り当てられたメモリは解放されます。 ユーザーに割り当てられた記述子ハンドルが解放されると、解放されたハンドルが関連付けられているすべてのステートメントは、それぞれ自動的に割り当てられた記述子ハンドルに戻ります。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 *.x*記述子ハンドルの割り当てをサポートしていないのと同様のドライバーが、記述子ハンドルの解放をサポートしています。  
   
  注意**SQLDisconnect**接続でステートメントや開いている記述子を自動的に削除されます。 アプリケーションでは、ステートメント ハンドルを解放、ドライバーは、そのハンドルに関連付けられたすべての自動生成された記述子を解放します。  

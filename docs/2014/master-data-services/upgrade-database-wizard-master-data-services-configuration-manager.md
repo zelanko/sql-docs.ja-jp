@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ce9dd246ed810f1b7e04f22b43f9dec34f26ab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55a722f54b6697aacf7fea87e436d33a5479afb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050050"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797963"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
   **データベースのアップグレード ウィザード** を使用すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
   
-## <a name="action"></a>操作  
+## <a name="action"></a>アクション  
  これは、ウィザードの最初のページです。 **[次へ]** をクリックして、データベースのアップグレード処理を開始します。  
   
 ## <a name="upgrade-review"></a>[アップグレードの確認]  
@@ -36,7 +35,7 @@ ms.locfileid: "48050050"
  アップグレード処理の進捗状況を表示します。 データベースのアップグレードが完了したら、ログ ファイルへのリンクをクリックしてアップグレードに関する詳細情報を表示するか、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 アップグレードされたデータベースが選択され、そのシステム設定を表示および変更できます。  
   
 ## <a name="see-also"></a>参照  
- [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+ [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [マスター データ サービスのデータベースと web サイトの設定します。](set-up-the-database-and-website-for-master-data-services.md)   
  [マスター データ サービスのアップグレード](../database-engine/install-windows/upgrade-master-data-services.md)  
   

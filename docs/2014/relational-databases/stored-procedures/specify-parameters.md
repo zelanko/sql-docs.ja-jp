@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87180b692a613289fa8bbd22f6d605b0aa25cf6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a173b15546db7e2ceda571e617191fe4f0e84a4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096392"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211841"
 ---
 # <a name="specify-parameters"></a>パラメーターの指定
   プロシージャのパラメーターを指定することで、呼び出し元のプログラムからプロシージャの本体に値を渡すことができます。 これらの値は、プロシージャの実行中にさまざまな目的で使用できます。 プロシージャ パラメーターも、パラメーターが OUTPUT パラメーターとしてマークされている場合は、呼び出し元のプログラムに値を返すことができます。  
@@ -62,10 +62,10 @@ GO
   
  パラメーターに明示的に名前を付け、プロシージャ呼び出しで各パラメーターに適切な値を代入することで、パラメーターを任意の順序で指定できます。 たとえば、**my_proc** というプロシージャが **\@first**、**\@second**、および **\@third** という 3 つのパラメーターを必要とする場合、プロシージャに渡される値は、`EXECUTE my_proc @second = 2, @first = 1, @third = 3;` ようにパラメーター名に代入できます。  
   
-> [!NOTE]  
+> [!NOTE]
 >  1 つのパラメーター値を **/@parameter =***value* の形式で指定した場合は、後続のパラメーターもすべてこの形式で指定する必要があります。 パラメーター値を **\@parameter =***value* の形式で渡さない場合は、CREATE PROCEDURE ステートメント内のパラメーターと同じ順序 (左から右) で値を指定する必要があります。  
-  
-> [!WARNING]  
+> 
+> [!WARNING]
 >  **\@parameter =***value* の形式で渡すパラメーターのスペルが間違っていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成され、プロシージャは実行されません。  
   
 ## <a name="specifying-parameter-data-types"></a>パラメーターのデータ型の指定  

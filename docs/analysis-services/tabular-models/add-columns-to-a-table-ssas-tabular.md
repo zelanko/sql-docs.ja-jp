@@ -1,5 +1,5 @@
 ---
-title: テーブルに列の追加 |Microsoft Docs
+title: Analysis Services 表形式モデル テーブルに列の追加 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a726f7dd8ef72ad30bd055d2f76cc58c7db6183d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991474"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072709"
 ---
-# <a name="add-columns-to-a-table"></a>テーブルに列を追加します。
+# <a name="add-columns-to-a-table"></a>テーブルへの列の追加
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   この記事では、既存のテーブルに列を追加する方法について説明します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "37991474"
   
 2.  一番上のセルをクリックし、名前を入力してから Enter キーを押します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルのプロパティ ダイアログ ボックスを編集します。](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [テーブル、列、または行のフィルターのマッピングの変更](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   

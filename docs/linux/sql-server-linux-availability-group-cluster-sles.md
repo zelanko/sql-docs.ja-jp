@@ -1,21 +1,22 @@
 ---
-title: SQL Server 可用性グループの SLES クラスターの構成 |Microsoft Docs
-description: ''
+title: SQL Server 可用性グループの SLES クラスターを構成します。
+titleSuffix: SQL Server
+description: SQL Server SUSE Linux Enterprise Server (SLES) 上の可用性グループのクラスターを作成する方法について説明します
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670621"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160630"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループの SLES クラスターを構成します。
 
@@ -220,7 +221,7 @@ Pacemaker クラスターのベンダーは、STONITH を有効にして、サ�
 
 ノード レベルのフェンス操作により、ノードがどのリソースも実行しないことが保証されます。 ノードをリセットすることでこれし、その Pacemaker 実装には、STONITH (これは「その他のノードを先頭に撮影」略) が呼び出されます。 Pacemaker は、さまざまな、無停電電源装置または管理インターフェイス カードのサーバーなどのデバイスをフェンスをサポートします。
 
-詳細については、次を参照してください。 [Pacemaker クラスターを最初から](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)、[フェンスと Stonith](https://clusterlabs.org/doc/crm_fencing.html)と[SUSE HA のドキュメント: フェンスと STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)します。
+詳細については、次を参照してください。 [Pacemaker クラスターを最初から](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)、[フェンスと Stonith](https://clusterlabs.org/doc/crm_fencing.html)と[SUSE HA のドキュメント。フェンスと STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)します。
 
 クラスターの初期化時に構成が検出されない場合は、STONITH が無効です。 次のコマンドを実行中で後で有効にできます。
 

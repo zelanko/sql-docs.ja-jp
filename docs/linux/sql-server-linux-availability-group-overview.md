@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723190"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206621"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux で可用性グループ
 
@@ -43,7 +43,7 @@ Pacemaker を使用する場合にする必要があります適切に構成す�
 
 ## <a name="cluster-type-and-failover-mode"></a>クラスターの種類とフェールオーバー モード
 
-初めて使用する[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]Ag のクラスターの種類の導入です。 Linux の場合は、2 つの有効な値: External と None です。 外部のクラスターの種類は、可用性グループの下に Pacemaker を使用することを意味します。 外部を使用してクラスターの種類は、フェールオーバー モードが外部にも設定する必要があります (新[!INCLUDE[sssql17-md](../includes/sssql17-md.md)])。 自動フェールオーバーがサポートされていますが、Pacemaker を使用する場合は、フェールオーバー モードを自動ではありません、外部に設定するよう、WSFC とは異なり。 WSFC の場合とは異なり、可用性グループを構成した後、可用性グループの Pacemaker 部分が作成されます。
+初めて使用する[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]Ag のクラスターの種類の導入です。 Linux の場合は、2 つの有効な値があります。External と None です。 外部のクラスターの種類は、可用性グループの下に Pacemaker を使用することを意味します。 外部を使用してクラスターの種類は、フェールオーバー モードが外部にも設定する必要があります (新[!INCLUDE[sssql17-md](../includes/sssql17-md.md)])。 自動フェールオーバーがサポートされていますが、Pacemaker を使用する場合は、フェールオーバー モードを自動ではありません、外部に設定するよう、WSFC とは異なり。 WSFC の場合とは異なり、可用性グループを構成した後、可用性グループの Pacemaker 部分が作成されます。
 
 None のクラスターの種類は、要件がないことは、可用性グループを使用して、Pacemaker を意味します。 Pacemaker が構成されているサーバー上であっても、可用性グループがある場合、None のクラスターの種類で構成されている Pacemaker をしないを参照してくださいまたはその AG を管理します。 None のクラスターの種類には、プライマリからセカンダリ レプリカへの手動フェールオーバーのみサポートされます。 なしで作成した AG は主に読み取りスケール アウト シナリオとアップグレードの対象とします。 ディザスター リカバリーまたは自動フェールオーバーが必要なローカルの可用性のようなシナリオで使用する、中には推奨されません。 リスナー ストーリー Pacemaker せずより複雑です。
 
@@ -55,11 +55,11 @@ None のクラスターの種類は、要件がないことは、可用性グル
 
 組み合わせ`required_synchronized_secondaries_to_commit`と新しいシーケンス番号 (に格納されている`sys.availability_groups`) Pacemaker 通知と[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]など、自動フェールオーバーの発生、します。 その場合は、セカンダリ レプリカでは、最新の構成情報がすべて最新であることを意味、プライマリと同じシーケンス番号があります。
 
-に対して設定できる 3 つの値がある`required_synchronized_secondaries_to_commit`: 0、1、または 2 です。 これらは、レプリカが使用できなくなったときの動作の動作を制御します。 数値は、プライマリと同期する必要がありますセカンダリ レプリカの数に対応します。 動作は、Linux のとおりです。
+に対して設定できる 3 つの値がある`required_synchronized_secondaries_to_commit`:0、1、2 のいずれか。 これらは、レプリカが使用できなくなったときの動作の動作を制御します。 数値は、プライマリと同期する必要がありますセカンダリ レプリカの数に対応します。 動作は、Linux のとおりです。
 
--   0 – 自動フェールオーバーはありませんので、セカンダリ レプリカを同期する必要はありません。 プライマリ データベースは、常に使用できます。
--   1 – 1 つのセカンダリ レプリカは、プライマリと同期された状態である必要があります。自動フェールオーバーは、可能性があります。 セカンダリ同期レプリカが利用可能になるまで、プライマリ データベースは使用できません。
--   2 – 両方のセカンダリ レプリカを 3 つ以上のノードの AG の構成では、プライマリと同期する必要があります。自動フェールオーバーは、可能性があります。
+-   0 - 自動フェールオーバーはありませんので、セカンダリ レプリカを同期する必要はありません。 プライマリ データベースは、常に使用できます。
+-   1-1 つのセカンダリ レプリカは、プライマリと同期された状態である必要があります。自動フェールオーバーは、可能性があります。 セカンダリ同期レプリカが利用可能になるまで、プライマリ データベースは使用できません。
+-   2-両方のセカンダリ レプリカを 3 つ以上のノードの AG の構成では、プライマリと同期する必要があります。自動フェールオーバーは、可能性があります。
 
 `required_synchronized_secondaries_to_commit` だけでなくの同期レプリカですがデータの損失とフェールオーバーの動作を制御します。 1 または 2 の値を含むため、データの冗長性が必ずセカンダリ レプリカが同期される必要な常に。 データの損失がありません。
 
@@ -87,7 +87,7 @@ AG の自動フェールオーバーは、次の条件が満たされたとき�
 -   プライマリ レプリカとセカンダリ レプリカは、同期データ移動に設定されます。
 -   セカンダリには、同期 (同期していない)、つまり、同じデータ ポイントは、2 つの状態があります。
 -   クラスターの種類は、外部に設定されます。 自動フェールオーバーが None のクラスターの種類ではできません。
--   `sequence_number`になるセカンダリ レプリカのプライマリが最大のシーケンス番号: つまり、セカンダリ レプリカの`sequence_number`元のプライマリ レプリカから 1 つに一致します。
+-   `sequence_number`になるセカンダリ レプリカのプライマリには最大のシーケンス番号 - つまり、セカンダリ レプリカの`sequence_number`元のプライマリ レプリカから 1 つに一致します。
 
 これらの条件が満たされており、プライマリ レプリカをホストするサーバーが失敗した場合は、AG では、同期レプリカに所有権が変更されます。 同期レプリカの動作 (存在できる 3 つの合計: 1 つのプライマリ レプリカと 2 つのセカンダリ レプリカ) でさらに制御できる`required_synchronized_secondaries_to_commit`します。 これにより、Windows と Linux の両方で、Ag で機能しますが完全に異なる方法で構成されています。 Linux では、値は AG リソース自体のクラスターで自動的に構成します。
 
@@ -147,11 +147,11 @@ AG が NONE のクラスターの種類では、そのレプリカのため、�
 
 ![ハイブリッドなし](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分散型 AG では、OS の境界を越えることができますも。 これらの構成方法など、外部の中で構成されているいずれかの規則によって基になる可用性がバインドされた Linux でのみが、WSFC を使用して、可用性グループに参加していることを構成する可能性があります。 次の例を参照してください。
+分散型 AG では、OS の境界を越えることができますも。 これらの構成方法など、外部の中で構成されているいずれかの規則によって基になる可用性がバインドされた Linux でのみが、WSFC を使用して、可用性グループに参加していることを構成する可能性があります。 次に例を示します。
 
 ![ハイブリッド Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

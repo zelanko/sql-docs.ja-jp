@@ -1,5 +1,5 @@
 ---
-title: SSDT での DirectQuery モードを有効にする |Microsoft ドキュメント
+title: SSDT での Analysis Services の DirectQuery モードで有効にする |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1d2a1ced9638a48dc02729c0f224b883974a7dde
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 83fa1cf8d99f18cd82e00b4020a2d846b1bdfdc6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040736"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206301"
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>SSDT での DirectQuery モードの有効化
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,11 +41,11 @@ DirectQuery モードを有効にする前にモデルが部分的または完�
 
 テーブルごとにサンプル パーティションを作成し、サンプル データを追加できるため、作成時にモデルの動作を検証することができます。 追加したすべてのサンプル データは、 **[Excel で分析]** またはワークスペース データベースに接続できるその他のクライアント ツールで使用されます。 詳細については、「 [Design モードで DirectQuery モデルにサンプル データを追加する](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) 」を参照してください。  
   
-> [!TIP]  
-    >  空のモデルの DirectQuery モードでも、各テーブルの小規模な組み込み行セットをいつでも表示できます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** > **[テーブルのプロパティ]** の順にクリックすると、50 行データセットが表示されます。  
+> [!TIP]
+>  空のモデルの DirectQuery モードでも、各テーブルの小規模な組み込み行セットをいつでも表示できます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** > **[テーブルのプロパティ]** の順にクリックすると、50 行データセットが表示されます。  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMS での DirectQuery モードの有効化](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)
 
 [Design モードで DirectQuery モデルにサンプル データを追加する](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md)

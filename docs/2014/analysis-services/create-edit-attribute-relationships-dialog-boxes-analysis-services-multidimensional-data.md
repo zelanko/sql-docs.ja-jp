@@ -13,12 +13,12 @@ ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f13c975be4fb8e993cb682da20c6bdf725f25ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141592"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528741"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性リレーションシップの作成] ダイアログ ボックスと [属性リレーションシップの編集] ダイアログ ボックス ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[属性リレーションシップの作成]** ダイアログ ボックスを使用すると、新しい属性リレーションシップを定義できます。また、**[属性リレーションシップの編集]** ダイアログ ボックスを使用すると、属性リレーションシップを変更できます。 詳細については、「 [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」を参照してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "48141592"
   
 2.  ツール バーの [新しい属性リレーションシップ] をクリックします。  
   
-     または  
+     - または -  
   
      属性リレーションシップ ダイアグラムまたは **[属性]** の一覧で属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   

@@ -1,5 +1,5 @@
 ---
-title: デザイン モードで DirectQuery モデルにサンプル データを追加する |Microsoft ドキュメント
+title: デザイン モードで Analysis Services の DirectQuery モデルにサンプル データを追加する |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ca4c4c2a00eed80e709602084cf5de427134977
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041636"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071539"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Design モードで DirectQuery モデルにサンプル データを追加する
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34041636"
   
 2.  **[テーブル]** > **[プロパティ]** の順にクリックして [パーティション管理] ダイアログ ボックスを開きます。  
   
-    既定のパーティションに **(直接クエリ)\<テーブル名 >** です。 これが完全データ ビューです。 このパーティションは削除しないでください。 このパーティションは、モデルを配置するときに使用されます。  
+    既定のパーティションは **(直接クエリ)\<テーブル名 >** します。 これが完全データ ビューです。 このパーティションは削除しないでください。 このパーティションは、モデルを配置するときに使用されます。  
   
 4.  パーティションを選択し、 **[コピー]** をクリックします。  
 

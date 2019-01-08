@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906232"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211741"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のセキュリティ機能のチュートリアル
 
@@ -23,7 +23,7 @@ ms.locfileid: "48906232"
 
 新しい SQL Server にある Linux ユーザーの場合は、次のタスクはセキュリティ タスクの一部を説明します。 これらは Linux に固有のものではありませんが、より詳しく調べたい領域を知るのに役立ちます。 それぞれの例では、リンクがその領域の詳細なドキュメントに提供されます。
 
->  [!NOTE]
+> [!NOTE]
 >  次の例を使用して、 **AdventureWorks2014**サンプル データベース。 このサンプル データベースを入手し、インストールする方法については、次を参照してください。 [Windows から Linux に SQL Server のデータベースを復元](sql-server-linux-migrate-restore-database.md)。
 
 
@@ -35,7 +35,7 @@ ms.locfileid: "48906232"
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
->  [!NOTE]
+> [!NOTE]
 >  上記のコマンドで、アスタリスクの代わりに、強力なパスワードを常に使用します。
 
 ログインでは、SQL Server に接続でき、master データベースに (制限された権限) にアクセスすることができます。 ユーザー データベースに接続するには、ログインには、データベース ユーザーと呼ばれる、データベース レベルで対応する id が必要があります。 ユーザーは、各データベースに固有し、アクセスを許可するには、各データベースで個別に作成する必要があります。 次の例は、AdventureWorks2014 データベースに移動しを使用して、 [CREATE USER](../t-sql/statements/create-user-transact-sql.md) Larry をという名前のログインに関連付けられている Larry という名前のユーザーを作成するステートメント。 ただし、ログインとユーザーは、(相互にマップされる) に関連する、さまざまなオブジェクトであります。 ログインはサーバー レベルのプリンシプルいます。 ユーザーは、データベース レベルのプリンシパルです。
@@ -84,44 +84,44 @@ ALTER ROLE db_datareader ADD MEMBER Jerry;
 
 たとえば、次のステートメントがという名前のデータベース ロールを作成`Sales`、付与、`Sales`を参照してください、更新、および行を削除する機能をグループ化、`Orders`テーブル、およびユーザーを追加`Jerry`を`Sales`ロール。   
    
-```   
-CREATE ROLE Sales;   
-GRANT SELECT ON Object::Sales TO Orders;   
-GRANT UPDATE ON Object::Sales TO Orders;   
-GRANT DELETE ON Object::Sales TO Orders;   
-ALTER ROLE Sales ADD MEMBER Jerry;   
-```   
+```   
+CREATE ROLE Sales;   
+GRANT SELECT ON Object::Sales TO Orders;   
+GRANT UPDATE ON Object::Sales TO Orders;   
+GRANT DELETE ON Object::Sales TO Orders;   
+ALTER ROLE Sales ADD MEMBER Jerry;   
+```   
 
-権限システムの詳細については、次を参照してください。[データベース エンジンの権限の概要](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)します。
+For more information about the permission system, see [Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 
-## <a name="configure-row-level-security"></a>行レベル セキュリティを構成します。  
+## Configure row-level security  
 
-[行レベル セキュリティ](../relational-databases/security/row-level-security.md)クエリを実行するユーザーに基づいて、データベース内の行へのアクセスを制限することができます。 この機能は、お客様が自分のデータにのみアクセスできますか、ワーカーが自分の部署に関連するデータにのみアクセスできますようなシナリオに便利です。   
+[Row-Level Security](../relational-databases/security/row-level-security.md) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
 
-次の手順ができるようにさまざまな行レベルのアクセス権を持つ 2 人のユーザー設定、`Sales.SalesOrderHeader`テーブル。 
+The following steps walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
 
-行レベルのセキュリティをテストする 2 つのユーザー アカウントを作成します。    
+Create two user accounts to test the row level security:    
    
-```   
-USE AdventureWorks2014;   
-GO   
+```   
+USE AdventureWorks2014;   
+GO   
    
-CREATE USER Manager WITHOUT LOGIN;     
+CREATE USER Manager WITHOUT LOGIN;     
    
-CREATE USER SalesPerson280 WITHOUT LOGIN;    
-```   
+CREATE USER SalesPerson280 WITHOUT LOGIN;    
+```   
 
-読み取りアクセス権を与える、`Sales.SalesOrderHeader`両方のユーザーにテーブル。    
+Grant read access on the `Sales.SalesOrderHeader` table to both users:    
    
-```   
-GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
-GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
-```   
+```   
+GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
+GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
+```   
    
-新しいスキーマとインライン テーブル値関数を作成します。 1 の行を返し、`SalesPersonID`列の ID に一致する、`SalesPerson`ログインまたはクエリを実行するユーザーがマネージャー ユーザー。   
+Create a new schema and inline table-valued function. The function returns 1 when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login or if the user executing the query is the Manager user.   
    
-```     
+```     
 CREATE SCHEMA Security;   
 GO   
    
@@ -131,66 +131,63 @@ WITH SCHEMABINDING
 AS     
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
-    OR (USER_NAME() = 'Manager');    
-```   
+    OR (USER_NAME() = 'Manager');    
+```   
 
-フィルターと、テーブルでブロック述語として関数を追加するセキュリティ ポリシーを作成します。  
+Create a security policy adding the function as both a filter and a block predicate on the table:  
 
 ```
-CREATE SECURITY POLICY SalesFilter   
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
-  ON Sales.SalesOrderHeader,   
-ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
-  ON Sales.SalesOrderHeader   
+セキュリティ ポリシー SalesFilter を作成します。   
+フィルター述語 Security.fn_securitypredicate(SalesPersonID) を追加します。    
+  Sales.SalesOrderHeader、   
+ブロック述語 Security.fn_securitypredicate(SalesPersonID) を追加します。    
+  Sales.SalesOrderHeader で   
 WITH (STATE = ON);   
 ```
 
-次のクエリを実行して、`SalesOrderHeader`として各ユーザー テーブルします。 いることを確認`SalesPerson280`しか表示されませんし、それぞれの売上から 95 行、`Manager`テーブル内のすべての行を確認できます。  
+Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
 
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
-SELECT * FROM Sales.SalesOrderHeader;    
-REVERT; 
+選択 * Sales.SalesOrderHeader; から    
+元に戻します。 
  
-EXECUTE AS USER = 'Manager';   
-SELECT * FROM Sales.SalesOrderHeader;   
-REVERT;   
+EXECUTE AS USER = 'マネージャー';   
+選択 * Sales.SalesOrderHeader; から   
+元に戻します。   
 ```
  
-セキュリティ ポリシーを変更してポリシーを無効にします。  これですべての行を両方のユーザーにアクセスできます。 
+Alter the security policy to disable the policy.  Now both users can access all rows. 
 
 ```
-ALTER SECURITY POLICY SalesFilter   
-WITH (STATE = OFF);    
+セキュリティ ポリシー SalesFilter を変更します。   
+使用 (状態 = オフ)。    
 ``` 
 
 
-## <a name="enable-dynamic-data-masking"></a>動的データ マスクを有効にします。
+## Enable dynamic data masking
 
-[動的データ マスク](../relational-databases/security/dynamic-data-masking.md)完全または部分的には、特定の列をマスクすることによって、アプリケーションのユーザーに機密データの公開を制限することができます。 
+[Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md) enables you to limit the exposure of sensitive data to users of an application by fully or partially masking certain columns. 
 
-使用して、`ALTER TABLE`にマスク関数を追加するステートメント、`EmailAddress`内の列、`Person.EmailAddress`テーブル。 
+Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USE AdventureWorks2014;
-GO
-ALTER TABLE Person.EmailAddress    
-ALTER COLUMN EmailAddress    
-ADD MASKED WITH (FUNCTION = 'email()');
+AdventureWorks2014; の使用します。移動の ALTER TABLE Person.EmailAddress     ALTER 列 EmailAddress    
+追加マスクで (関数 = ' email()');
 ``` 
  
-新しいユーザーを作成`TestUser`で`SELECT`、テーブルに対する権限がクエリを実行し、`TestUser`マスクされたデータを表示します。   
+Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-CREATE USER TestUser WITHOUT LOGIN;   
-GRANT SELECT ON Person.EmailAddress TO TestUser;    
+TestUser のユーザーを作成しますログインに関係なく。   
+GRANT SELECT ON Person.EmailAddress TestUser; に    
  
-EXECUTE AS USER = 'TestUser';   
-SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
-REVERT;    
+EXECUTE AS USER ="TestUser";   
+SELECT EmailAddressID、EmailAddress Person.EmailAddress; から       
+元に戻します。    
 ```
  
-マスク関数がから最初のレコード内の電子メール アドレスを変更することを確認します。
+Verify that the masking function changes the email address in the first record from:
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
@@ -203,88 +200,81 @@ into
 |1 |kXXX@XXXX.com |   
 
 
-## <a name="enable-transparent-data-encryption"></a>透過的なデータ暗号化の有効化
+## Enable Transparent Data Encryption
 
-データベースに 1 つの脅威とは、ハード ドライブからのデータベース ファイルを盗み、だれかがリスクです。 これが侵入の発生または (ラップトップ) などのファイルを格納しているコンピューターの盗難によって、問題の従業員のアクションをシステムへの特権アクセスを取得すると発生する可能性があります。
+One threat to your database is the risk that someone will steal the database files off of your hard-drive. This could happen with an intrusion that gets elevated access to your system, through the actions of a problem employee, or by theft of the computer containing the files (such as a laptop).
 
-Transparent Data Encryption (TDE) は、ハード ドライブに格納されているデータ ファイルを暗号化します。 SQL Server データベース エンジンの master データベースでは、データベース エンジンがデータを操作できるように、暗号化キーがあります。 キーにアクセスすることがなく、データベース ファイルを読み取ることができません。 高レベルの管理者では、管理、バックアップでき、データベースを移動するには、これが選択したユーザーによってのみ、キーを再作成することができます。 TDE が構成されている場合、`tempdb`データベースが自動的に暗号化します。 
+Transparent Data Encryption (TDE) encrypts the data files as they are stored on the hard drive. The master database of the SQL Server database engine has the encryption key, so that the database engine can manipulate the data. The database files cannot be read without access to the key. High-level administrators can manage, backup, and recreate the key, so the database can be moved, but only by selected people. When TDE is configured, the `tempdb` database is also automatically encrypted. 
 
-データベース エンジンでは、データを読み取り、ため Transparent Data Encryption は直接メモリ、読み取りまたは管理者アカウントを SQL Server にアクセスできるコンピューターの管理者による不正アクセスから保護されません。
+Since the Database Engine can read the data, Transparent Data Encryption does not protect against unauthorized access by administrators of the computer who can directly read memory, or access SQL Server through an administrator account.
 
-### <a name="configure-tde"></a>TDE を構成します。
+### Configure TDE
 
-- マスター キーを作成します。
-- マスター キーで保護された証明書を作成または取得します。
-- データベース暗号化キーを作成し、証明書で保護します。
-- 暗号化を使用するようにデータベースを設定します。
+- Create a master key
+- Create or obtain a certificate protected by the master key
+- Create a database encryption key and protect it by the certificate
+- Set the database to use encryption
 
-TDE を構成する必要があります`CONTROL`master データベースに対する権限と`CONTROL`ユーザー データベースに対する権限。 通常、管理者は、TDE を構成します。 
+Configuring TDE requires `CONTROL` permission on the master database and `CONTROL` permission on the user database. Typically an administrator configures TDE. 
 
-次の例では、 `AdventureWorks2014` という名前のサーバーにインストールされた証明書を使用して、 `MyServerCert`データベースを暗号化および暗号化解除しています。
+The following example illustrates encrypting and decrypting the `AdventureWorks2014` database using a certificate installed on the server named `MyServerCert`.
 
 
 ```
 USE master;  
 GO  
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
+マスター_キーをパスワードで暗号化を作成する = ' * * * ';  
 GO  
 
-CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
+作成 MyServerCert の証明書の件名の付いた = '、データベース暗号化キー証明書';  
 GO  
 
-USE AdventureWorks2014;  
-GO
+AdventureWorks2014; の使用します。 移動
   
 CREATE DATABASE ENCRYPTION KEY  
-WITH ALGORITHM = AES_256  
-ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
+アルゴリズムで AES_256 を =  
+サーバー証明書 MyServerCert; による暗号化  
 GO
   
 ALTER DATABASE AdventureWorks2014  
-SET ENCRYPTION ON;   
+セットの暗号化。   
 ```
 
-TDE を削除するには、次のように実行します。 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
-暗号化と復号化の操作は、SQL Server によってバック グラウンド スレッドでスケジュールされます。 これらの操作の状態は、この後の一覧に示すカタログ ビューおよび動的管理ビューを使用して確認できます。   
+The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
 
->  [!WARNING]
->  TDE が有効になっているデータベースのバックアップ ファイルも、データベース暗号化キーを使用して暗号化されます。 このため、このバックアップを復元するときには、データベース暗号化キーを保護している証明書が必要です。 つまり、データの損失を防ぐには、データベースをバックアップするだけでなく、サーバー証明書のバックアップも確実に保守する必要があります。 証明書が使用できなくなると、データの損失が発生します。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
+> [!WARNING]
+>  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-TDE の詳細については、次を参照してください。 [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md)します。   
+For more information about TDE, see [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
 
-## <a name="configure-backup-encryption"></a>バックアップの暗号化を構成します。
-SQL Server では、バックアップを作成するときに、データを暗号化する機能があります。 暗号化アルゴリズムおよび暗号化機能 (証明書または非対称キー) を指定してバックアップを作成するときに、暗号化されたバックアップ ファイルを作成することができます。    
+## Configure backup encryption
+SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
   
-> [!WARNING]  
->  証明書または非対称キーをバックアップすることが非常に重要であり、これらを使用して暗号化したバックアップ ファイルとは別の場所に保存することをお勧めします。 証明書または非対称キーがないと、バックアップ ファイルが使用不可能になり、バックアップを復元することができません。 
+> [!WARNING]  
+>  It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
  
  
-次の例では、証明書を作成し、証明書によって保護されているバックアップを作成します。
+The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
-USE master;  
-GO  
-CREATE CERTIFICATE BackupEncryptCert   
-   WITH SUBJECT = 'Database backups';  
-GO 
-BACKUP DATABASE [AdventureWorks2014]  
-TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
+使用して master; 移動 証明書の作成 BackupEncryptCert サブジェクト = 'データベースのバックアップ'; データベースのバックアップ [AdventureWorks2014] に移動して ディスク N'/var/opt/mssql/backups/AdventureWorks2014.bak を ='  
 WITH  
-  COMPRESSION,  
+  圧縮、  
   ENCRYPTION   
    (  
-   ALGORITHM = AES_256,  
-   SERVER CERTIFICATE = BackupEncryptCert  
+   アルゴリズム、AES_256 を =  
+   サーバー証明書 BackupEncryptCert を =  
    ),  
   STATS = 10  
 GO  
 ```
 
-詳細については、「 [バックアップの暗号化](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。
+For more information, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).
 
 
-## <a name="next-steps"></a>次の手順
+## Next steps
 
-SQL Server のセキュリティ機能の詳細については、次を参照してください。 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)します。
+For more information about the security features of SQL Server, see [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).

@@ -1,5 +1,5 @@
 ---
-title: 多次元モデルでの計算 |Microsoft ドキュメント
+title: 多次元モデルの計算 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b51dc3cbb0ad98b5f14fdd278c03dc54b43a6b9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c72d43c95013074051356c690ac2d7abf0a575e0
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023719"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983993"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多次元モデルの計算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,8 +28,6 @@ ms.locfileid: "34023719"
   
 -   計算式ペインでは、フォーム ビューおよびスクリプト ビューがサポートされています。  
   
-> [!NOTE]  
->  MDX スクリプティングの詳細については、「 [Microsoft SQL Server 2005 の MDX スクリプトの紹介](http://go.microsoft.com/fwlink/?LinkId=81892)」、および Microsoft TechNet Web サイトの「 [SQL Server 2005 - Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) 」ページにある「その他のリソース」セクションを参照してください。 キューブ デザインに関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンス ガイド](http://go.microsoft.com/fwlink/?LinkId=81621)」を参照してください。  
   
 ## <a name="creating-a-new-calculation"></a>新しい計算の作成  
  新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、 **[新しい計算されるメンバー]**、 **[新しい名前付きセット]**、または **[新しいスクリプト コマンド]** をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、 **[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「 [計算されるメンバーの作成](../../analysis-services/multidimensional-models/create-calculated-members.md)」、「 [名前付きセットの作成](../../analysis-services/multidimensional-models/create-named-sets.md)」、および「 [割り当てとその他のスクリプト コマンドの定義](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)」を参照してください。  
@@ -44,7 +42,7 @@ ms.locfileid: "34023719"
 ## <a name="changing-solve-order"></a>解決順序の変更  
  計算は、 **[スクリプト オーガナイザー]** ペインに一覧表示されている順序で解決されます。 計算を右クリックし、ショートカット メニューの **[上へ移動]** または **[下へ移動]** をクリックして、計算の順序を変更できます。 また、計算をクリックし、ツール バーの **[上へ移動]** ボタンまたは **[下へ移動]** ボタンをクリックすることもできます。  
   
- 計算されるセルおよび計算されるメンバーについて、この順序を手動で上書きできます。 パス順序と解決順序の詳細については、「[パス順序と解決順序の概要 (MDX)](../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)」を参照してください。  
+ 計算されるセルおよび計算されるメンバーについて、この順序を手動でオーバーライドできます。 パス順序と解決順序の詳細については、「[パス順序と解決順序の概要 (MDX)](../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)」を参照してください。  
   
 ## <a name="deleting-a-calculation"></a>計算の削除  
  既存の計算を削除するには、 **[スクリプト オーガナイザー]** ペインの **[計算]** タブで、削除する計算を選択し、 **[編集]** メニューの **[削除]** をクリックするか、ツール バーの **[削除]** アイコンをクリックします。 また、 **[スクリプト オーガナイザー]** ペインで計算を右クリックし、ショートカット メニューから **[削除]** を選択することもできます。  
