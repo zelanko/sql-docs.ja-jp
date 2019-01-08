@@ -1,32 +1,37 @@
 ---
-title: 新しいデータを (SQL と R deep dive) スコア付け |Microsoft ドキュメント
+title: RevoScaleR と rxPredict - SQL Server Machine Learning を使用して新しいデータのスコア付け
+description: SQL Server で R 言語を使用してデータをスコア付けする方法のチュートリアル。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2de06b0159c432ac1d53d9e51bbdf0cd820efd7a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2a54ce22a7012f0747cd417f0f3b3fee0fda0ddf
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202334"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644981"
 ---
-# <a name="score-new-data-sql-and-r-deep-dive"></a>新しいデータを (SQL と R deep dive) スコア付け
+# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>新しいデータ (SQL Server と RevoScaleR チュートリアル) のスコア付け
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
+このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
 
-このステップでは、入力として同じ独立変数を使用する別のデータ セットのスコアを作成する前に作成したロジスティック回帰モデルを使用します。
+この手順では、同じ独立変数を入力として使用する別のデータ セットのスコアを付け、前のレッスンで作成したロジスティック回帰モデルを使用します。
+
+> [!div class="checklist"]
+> * 新しいデータのスコア付け
+> * スコアのヒストグラムを作成します。
 
 > [!NOTE]
 > 次の手順の一部の DDL 管理者特権を必要があります。
 
 ## <a name="generate-and-save-scores"></a>生成し、スコアの保存
   
-1. 以前に設定したデータ ソースを更新`sqlScoreDS`、必須の列情報を追加します。
+1. SqlScoreDS データ ソースを更新 (で作成した[レッスン 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) 前のレッスンで作成された列の情報を使用します。
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -36,7 +41,7 @@ ms.locfileid: "31202334"
         rowsPerRead = sqlRowsPerRead)
     ```
   
-2. 結果が失われないようにするには、新しいデータ ソース オブジェクトを作成します。 新しいテーブルを作成する新しいデータ ソース オブジェクトを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。
+2. 結果が失われないようにするには、新しいデータ ソース オブジェクトを作成します。 次に、新しいデータ ソース オブジェクトを使用して、RevoDeepDive データベースに新しいテーブルを作成します。
   
     ```R
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",
@@ -45,25 +50,24 @@ ms.locfileid: "31202334"
     ```
     この時点では、テーブルは作成されていません。 これはデータのコンテナーを定義するためだけのステートメントです。
      
-3. 現在のコンピューティング コンテキストを確認し、必要に応じてコンピューティング コンテキストをサーバーに設定します。
+3. 現在のコンピューティング コンテキストを使用するかを確認**rxGetComputeContext()**、し、必要な場合は、サーバーに、コンピューティング コンテキストを設定します。
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
   
-4. 結果を生成する予測関数を実行する前に、既存の出力テーブルの存在を確認する必要があります。 それ以外の場合、新しいテーブルを作成しようとしたときに、エラーを得られます。
+4. 念のため、出力テーブルの存在を確認します。 同じ名前で既に存在する場合に、新しいテーブルを作成する際は、エラーが表示されます。
   
-    この処理を実行するには、入力としてテーブル名を渡して、関数 **rxSqlServerTableExists** と **rxSqlServerDropTable**を呼び出します。
+    この処理を実行するには、入力としてテーブル名を渡して、関数 [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) と [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)を呼び出します。
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    -  関数 **rxSqlServerTableExists** は ODBC ドライバーに対してクエリを実行し、テーブルが存在する場合は TRUE、それ以外の場合は FALSE を返します。
-    -  関数は、 **rxSqlServerDropTable** DDL を実行し、テーブルが正常に場合は TRUE。 削除すると、FALSE それ以外の場合を返します。
-    - 参照は、どちらの関数をご覧ください: [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)
-  
-5. これで、使用する準備ができたら、 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 、スコアを作成する機能、データ ソースで定義されている新しいテーブルに保存`sqlScoreDS`です。
+    + **rxSqlServerTableExists** ODBC ドライバーを照会し、テーブルが存在する場合、FALSE それ以外の場合は TRUE を返します。
+    + **rxSqlServerDropTable** DDL を実行し、TRUE の場合は、テーブルが正常に削除すると、FALSE それ以外の場合を返します。
+
+5. 実行[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)にスコアを作成し、データ ソースの sqlScoreDS で定義されている新しいテーブルに保存します。
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -75,17 +79,17 @@ ms.locfileid: "31202334"
         overwrite = TRUE)
     ```
   
-    **rxPredict** 関数も、リモート計算コンテキストでの実行をサポートする関数です。 **rxLinMod** 、 [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、または [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)を使用して作成したモデルからスコアを作成する場合に [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm)関数を使用できます。
+    **rxPredict** 関数も、リモート計算コンテキストでの実行をサポートする関数です。 使用することができます、 **rxPredict**モデルからスコアを作成する関数がに基づいて[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、 [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)、または[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm)します。
   
     - ここで *writeModelVars* パラメーターは **TRUE** に設定されます。 これは見積もりに使用された変数が新しいテーブルに追加されることを意味します。
   
-    - *predVarNames* パラメーターにより、結果が保存される変数が指定されます。 ここで、新しい変数を渡している`ccFraudLogitScore`です。
+    - *predVarNames* パラメーターにより、結果が保存される変数が指定されます。 ここで、新しい変数を渡している`ccFraudLogitScore`します。
   
-    - *rxPredict* の **type** パラメーターで、予測の計算方法を定義します。 キーワードを指定**応答**応答変数の小数点以下桁数に基づくスコアを生成します。 また、キーワードを使用して**リンク**ロジスティック スケールを使用している場合、基になるリンク関数に基づいてスコアを生成する予測が作成されます。
+    - *rxPredict* の **type** パラメーターで、予測の計算方法を定義します。 キーワードを指定する**応答**応答変数のスケールに基づいてスコアを生成します。 または、キーワードを使用して**リンク**ロジスティック スケールを使用する場合、基になるリンク関数に基づいてスコアを生成する予測が作成されます。
 
 6. 少し時間をおいて Management Studio でテーブルの一覧を更新すると、新しいテーブルとそのデータを確認することができます。
 
-7. 出力予測に変数を追加するには、*extraVarsToWrite* 引数を使用します。  たとえば、次のコードでは、変数で`custID`がスコア付けのデータ テーブルからの予測の出力テーブルに追加します。
+7. 出力予測に変数を追加するには、*extraVarsToWrite* 引数を使用します。  たとえば、次のコードの変数 *custID* は、スコアリング データ テーブルから予測の出力テーブルに追加されています。
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -98,11 +102,11 @@ ms.locfileid: "31202334"
             overwrite = TRUE)
     ```
 
-## <a name="display-scores-in-a-histogram"></a>ヒストグラムのスコアを表示
+## <a name="display-scores-in-a-histogram"></a>ヒストグラムでスコアを表示
 
-新しいテーブルが作成された後は、コンピューティングし、10,000 の予測スコアのヒストグラムを表示します。 場合は、低、高の値を指定、ので、データベースから取得、作業データに追加、計算を高速です。
+新しいテーブルが作成された後は、コンピューティングし、10,000 の予測スコアのヒストグラムを表示します。 下限と上限値を指定しますのでこれらは、データベースから取得し、作業中のデータを追加するには、計算を高速です。
 
-1. 新しいデータ ソースの作成`sqlMinMax`、低、高の値を取得するデータベースのクエリを実行します。
+1. 新しいデータ ソースでは、下限と上限値を取得するデータベースのクエリを実行するには、sqlMinMax を作成します。
   
     ```R
     sqlMinMax <- RxSqlServerData(
@@ -113,20 +117,22 @@ ms.locfileid: "31202334"
 
      この例を見ると、 **RxSqlServerData** データ ソース オブジェクトを使用して SQL クエリ、関数、またはストアド プロシージャに基づいて任意のデータセットを定義し、それを R コードで使用するのが簡単だということがわかります。 この変数には実際の値は格納されず、データ ソースの定義のみが格納されます。 **rxImport**など関数で使用する場合にのみ、このクエリを実行して値を生成します。
       
-2. 呼び出す、 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)コンピューティング コンテキスト間で共有できるデータ フレームの値を格納する関数。
+2. 呼び出す、 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)コンピューティング コンテキスト全体で共有できるデータ フレームに値を格納する関数。
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)
-    minMaxVals \<- as.vector(unlist(minMaxVals))
-  
+    minMaxVals <- as.vector(unlist(minMaxVals))
     ```
-     **結果**
+
+    **結果**
      
-     *> minMaxVals*
+    ```R
+    > minMaxVals
      
-     *[1] -23.970256   9.786345*
-  
-3. 最大値と最小値を使用可能値を使用して、生成されたスコアの別のデータ ソースを作成します。
+    [1] -23.970256   9.786345
+    ```
+
+3. 最大値と最小値が使用可能な値を使用して、生成されたスコアの別のデータ ソースを作成します。
   
     ```R
     sqlOutScoreDS <- RxSqlServerData(sqlQuery = "SELECT ccFraudLogitScore FROM ccScoreOutput",
@@ -137,7 +143,7 @@ ms.locfileid: "31202334"
                         high = ceiling(minMaxVals[2]) ) ) )
     ```
 
-4. データ ソース オブジェクトを使用して`sqlOutScoreDS`スコアの取得を計算し、ヒストグラムを表示します。 必要に応じて、計算コンテキストを設定するコードを追加してください。
+4. スコアを取得し、コンピューティングし、ヒストグラムを表示するには、データ ソース オブジェクトの sqlOutScoreDS を使用します。 必要に応じて、計算コンテキストを設定するコードを追加してください。
   
     ```R
     # rxSetComputeContext(sqlCompute)
@@ -148,12 +154,7 @@ ms.locfileid: "31202334"
   
     ![R で作成された複雑なヒストグラム](media/rsql-sue-complex-histogram.png "R で作成された複雑なヒストグラム")
   
-## <a name="next-step"></a>次の手順
+## <a name="next-steps"></a>次の手順
 
-[R を使用したデータの変換](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
-## <a name="previous-step"></a>前の手順
-
-[モデルを作成する](../../advanced-analytics/tutorials/deepdive-create-models.md)
-
-
+> [!div class="nextstepaction"]
+> [R を使用したデータの変換](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)

@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674199"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626322"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes サービス (AKS) での Kubernetes での SQL Server のコンテナーをデプロイします。
 
@@ -41,11 +41,11 @@ Kubernetes バージョン 1.6 およびそれ以降はサポートしていま�
 
 次の図に、`mssql-server`コンテナーが失敗しました。 レプリカの正常なインスタンスの正しい数設定、および構成に従って、新しいコンテナーを開始、オーケストレーターとして Kubernetes が保証されます。 オーケストレーターは、同じノードで、新しいポッドを開始し、`mssql-server`が同じ永続的な記憶域に再接続します。 サービスに再作成された接続`mssql-server`します。
 
-![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 次の図では、ノードのホスト、`mssql-server`コンテナーが失敗しました。 オーケストレーターは、別のノードに新しいポッドを開始し、`mssql-server`が同じ永続的な記憶域に再接続します。 サービスに再作成された接続`mssql-server`します。
 
-![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![SQL Server の Kubernetes クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -174,13 +174,15 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -209,14 +211,14 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
 
    という名前の新しいファイルに上記のコードをコピー`sqldeployment.yaml`します。 次の値を更新します。 
 
-   * `value: "Developer"`: SQL Server Developer エディションを実行するコンテナーを設定します。 Developer edition では、実稼働データのライセンスがありません。 展開が実稼働環境用の場合は、適切なエディションを設定します。 (`Enterprise`、 `Standard`、または`Express`)。 
+   * MSSQL_PID `value: "Developer"`:SQL Server Developer エディションを実行するコンテナーを設定します。 Developer edition では、実稼働データのライセンスがありません。 展開が実稼働環境用の場合は、適切なエディションを設定します。 (`Enterprise`、 `Standard`、または`Express`)。 
 
       >[!NOTE]
       >詳細については、次を参照してください。 [SQL Server のライセンス方法](https://www.microsoft.com/sql-server/sql-server-2017-pricing)します。
 
-   * `persistentVolumeClaim`: この値には、のエントリが必要です。`claimName:`永続ボリューム要求に使用される名前にマップされます。 このチュートリアルでは`mssql-data`します。 
+   * `persistentVolumeClaim`:この値には、エントリが必要です。`claimName:`永続ボリューム要求に使用される名前にマップされます。 このチュートリアルでは`mssql-data`します。 
 
-   * `name: SA_PASSWORD`: このセクションで定義されている、SA のパスワードを設定するコンテナー イメージを構成します。
+   * `name: SA_PASSWORD`:このセクションで定義されている、SA のパスワードを設定するコンテナー イメージを構成します。
 
      ```yaml
      valueFrom:

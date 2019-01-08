@@ -1,5 +1,5 @@
 ---
-title: テーブル内のデータをフィルター処理 |Microsoft ドキュメント
+title: Analysis Services 表形式モデル テーブルにデータをフィルター処理 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 65b3e9bfc1b4e3c8a246d2732484d835065e82bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9b1fcdda5bd49f8056a6035ec10da8fb52f1c5d1
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039245"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072126"
 ---
 # <a name="filter-data-in-a-table"></a>テーブル内のデータのフィルター処理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34039245"
   
 1.  フィルターをクリアする列の見出しの矢印をクリックします。  
   
-2.  をクリックして**からフィルターをクリア\<列名 >** です。  
+2.  クリックして**フィルターをクリア\<列名 >** します。  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>テーブルのすべてのフィルターをクリアするには  
   

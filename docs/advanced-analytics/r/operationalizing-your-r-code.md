@@ -1,5 +1,6 @@
 ---
-title: SQL Server Machine Learning Services での R コードを運用化 |Microsoft Docs
+title: ストアド プロシージャ - SQL Server Machine Learning Services を使用して R コードを運用化します。
+description: SQL Server データベースへのアクセス権を持つ任意のクライアント アプリケーションで使用できるようにする SQL Server ストアド プロシージャで R 言語のコードを埋め込みます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 41da5cfe2e545bdcbc59f8d557afc599177c9d5e
-ms.sourcegitcommit: f083867f97bb740caa211ca37cb046641172b8c0
+ms.openlocfilehash: 3fc96e57fffb3e000a7e1a19887ed27651df9009
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952465"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432185"
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>R コード (Machine Learning サービス) を操作します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "38952465"
 
 + [R Services で使用するための R コードの変換](converting-r-code-for-use-in-sql-server.md)
 
-+ [Sqlrutils を使用してストアド プロシージャを R を生成します。](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Sqlrutils ヘルパー関数を使用します。](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>R および Python アプリケーションを統合します。
 

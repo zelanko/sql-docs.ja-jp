@@ -1,18 +1,20 @@
 ---
-title: SQL Server 2019 ビッグ データ クラスターのリリース ノート |Microsoft Docs
-description: この記事では、最新の更新プログラムと SQL Server 2019 (プレビュー) のビッグ データ クラスターの既知の問題について説明します。
+title: リリース ノート
+titleSuffix: SQL Server 2019 big data clusters
+description: この記事では、最新の更新プログラムと SQL Server 2019 ビッグ データ クラスター (プレビュー) の既知の問題について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: b39b7ff732d068214e257061d7fbf60015070985
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 8c9c57e641c76f78bf66565cc8e1ce8f67323b7e
+ms.sourcegitcommit: 3f19c843b38d3835d07921612f0143620eb9a0e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221678"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53709815"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -20,11 +22,80 @@ ms.locfileid: "51221678"
 
 | リリース | date |
 |---|---|
+| [CTP 2.2](#ctp22) | 2018 年の 12 月 |
 | [CTP 2.1](#ctp21) | 2018 年 11 月 |
 | [CTP 2.0](#ctp20) | 2018 の年 10 月 |
 
-
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp22"></a> CTP 2.2 (2018 の年 12 月)
+
+次のセクションでは、新機能と SQL Server 2019 CTP 2.2 でのビッグ データ クラスターの既知の問題について説明します。
+
+### <a name="whats-in-the-ctp-22-release"></a>CTP 2.2 のリリースの新機能ですか。
+
+- クラスターの管理ポータルを使用してアクセス`/portal`(**https://\<ip アドレス\>: 30777/ポータル**)。
+- マスターのプールのサービス名から変更`service-master-pool-lb`と`service-master-pool-nodeport`に`endpoint-master-pool`します。
+- 新しいバージョンの**mssqlctl**イメージを更新します。
+- その他のバグ修正と機能強化。
+
+### <a name="known-issues"></a>既知の問題
+
+次のセクションでは、CTP 2.2 での SQL Server のビッグ データ クラスターの既知の問題を説明します。
+
+#### <a name="deployment"></a>展開
+
+- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。 バックアップし、最新のリリースを展開する前に、既存のビッグ データ クラスターを削除する必要があります。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
+
+- を AKS にデプロイした後、展開から、次の 2 つの警告イベントを表示があります。 2 つのイベントには既知の問題が、それらが妨げられないして AKS でビッグ データ クラスターを正常に展開します。
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間は削除されません。 これは、結果、クラスターの孤立した、名前空間。 回避策では、同じ名前のクラスターをデプロイする前に、名前空間を手動で削除します。
+
+#### <a name="cluster-administration-portal"></a>クラスターの管理ポータル
+
+クラスターの管理ポータルでは、SQL Server のマスター インスタンスのエンドポイントは表示されません。 マスター インスタンスの IP アドレスとポートを検索するには、次を使用**kubectl**コマンド。
+
+```
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
+```
+
+#### <a name="external-tables"></a>外部テーブル
+
+- 列の型はサポートされていないテーブルのデータ プール外部テーブルを作成することになります。 外部テーブルを照会する場合はメッセージが表示、次のような。
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- 記憶域プールの外部テーブルをクエリすると、同時に、基になるファイルを HDFS にコピーするは場合にエラーが発生する可能性があります。
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+#### <a name="spark-and-notebooks"></a>Spark と notebook
+
+- ポッド IP アドレスは、ポッドの再起動時に Kubernetes 環境で変更できます。 マスター ポッドを再起動する場合、Spark セッションが失敗とする`NoRoteToHostException`します。 これは、原因は新しい IP で更新しない JVM キャッシュでアドレスします。
+
+- Windows に既にインストールされている Jupyter と別の Python がある、Spark のノートブックが失敗する可能性があります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
+
+- Notebook をクリックした場合に、**テキストの追加**コマンド、テキスト セルが編集モードではなく、プレビュー モードで追加されます。 編集モードとセルの編集に切り替え、プレビュー アイコンをクリックすることができます。
+
+#### <a name="hdfs"></a>HDFS
+
+- プレビューするために HDFS 内のファイルを右クリックした場合は、次のエラーを参照してください可能性があります。
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   現時点で Azure Data Studio 30 MB より大きいファイルをプレビューする方法はありません。
+
+- HDFS hdfs-site.xml への変更に関連する構成の変更はサポートされていません。
+
+#### <a name="security"></a>セキュリティ
+
+- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
+
+- AKS のログは、ビッグ データ クラスターのデプロイの SA パスワードを含めることができます。
 
 ## <a id="ctp21"></a> CTP 2.1 (2018 年 11 月)
 

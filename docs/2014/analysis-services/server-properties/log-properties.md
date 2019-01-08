@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b72ef3d7579cdcd8e1d3be83d7caf8d202d1bca7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204842"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374594"
 ---
 # <a name="log-properties"></a>ログのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すログ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -86,11 +86,11 @@ ms.locfileid: "48204842"
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  
   
  **ErrorLog\KeyErrorAction**  
- サーバーによって実行されるアクションを指定します。 ときに、`KeyNotFound`エラーが発生します。 このエラーへの有効な応答は次のとおりです。  
+ `KeyNotFound` エラーが発生した場合に、サーバーが実行するアクションを指定します。 このエラーへの有効な応答は次のとおりです。  
   
--   `ConvertToUnknown` 不明なメンバーにエラーのキー値を割り当てるようにサーバーに指示します。  
+-   `ConvertToUnknown` は、不明なメンバーにエラーのキー値を割り当てるようにサーバーに指示します。  
   
--   `DiscardRecord` レコードを除外するサーバーに指示します。  
+-   `DiscardRecord` は、レコードを除外するようにサーバーに指示します。  
   
  **ErrorLog\KeyErrorLogFile**  
  サービス アカウントが読み取り/書き込み権限を持つフォルダーにある、.log ファイル拡張子を持つ必要があるユーザー定義のファイル名です。 このログ ファイルには、処理中に生成されたエラーのみが含まれます。 詳細情報が必要な場合はフライト レコーダーを使用します。  
@@ -106,22 +106,22 @@ ms.locfileid: "48204842"
 -   `StopLogging` は、エラーの上限に到達した場合にエラーの記録を停止するものの、処理を継続するようにサーバーに指示します。  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- サーバーによって実行されるアクションを指定します。 ときに、`KeyNotFound`エラーが発生します。 このエラーへの有効な応答は次のとおりです。  
+ `KeyNotFound` エラーが発生した場合に、サーバーが実行するアクションを指定します。 このエラーへの有効な応答は次のとおりです。  
   
--   `IgnoreError` 続行するサーバーに指示せず、エラーを記録するか、キー エラーの上限に達するまでカウントを処理します。 エラーを無視すると、エラー カウントに追加したり画面またはログ ファイルに記録することなく、処理を継続します。 レコードにデータの整合性の問題があり、データベースに追加できません。 レコードを破棄するか、不明なメンバーに集計されますによって決定される、`KeyErrorAction`プロパティ。  
+-   `IgnoreError` は、エラーを記録せずに処理を継続するか、キー エラーの上限に達するまでカウントするようにサーバーに指示します。 エラーを無視すると、エラー カウントに追加したり画面またはログ ファイルに記録することなく、処理を継続します。 レコードにデータの整合性の問題があり、データベースに追加できません。 レコードは、`KeyErrorAction` プロパティで指定されているとおりに、破棄されるか、不明なメンバーに集計されます。  
   
 -   `ReportAndContinue` は、エラーを記録して、キー エラーの上限に達するまでカウントし、処理を継続するようにサーバーに指示します。 エラーをトリガーするレコードは、破棄されるか、不明メンバーに変換されます。  
   
 -   `ReportAndStop` は、エラーを記録し、キー エラーの上限に関係なく処理を直ちに停止するようにサーバーに指示します。 エラーをトリガーするレコードは、破棄されるか、不明メンバーに変換されます。  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- 重複したキーが見つかった場合に、サーバーが実行するアクションを指定します。 有効な値は`IgnoreError`、エラーが発生しなかったかのように処理を続行する`ReportAndContinue`、エラーを記録し、処理を続行して`ReportAndStop`エラーを記録し、エラーの数が、エラーの上限未満の場合でも直ちに処理を停止します。  
+ 重複したキーが見つかった場合に、サーバーが実行するアクションを指定します。 有効な値は、エラーが発生しなかったかのように処理を継続する `IgnoreError`、エラーを記録して処理を継続する `ReportAndContinue`、エラー数がエラーの上限に達していなくてもエラーを記録して直ちに処理を停止する `ReportAndStop` です。  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- NULL キーが不明なメンバーに変換された場合にサーバーが実行する操作を指定します。 有効な値は`IgnoreError`、エラーが発生しなかったかのように処理を続行する`ReportAndContinue`、エラーを記録し、処理を続行して`ReportAndStop`エラーを記録し、エラーの数が、エラーの上限未満の場合でも直ちに処理を停止します。  
+ NULL キーが不明なメンバーに変換された場合にサーバーが実行する操作を指定します。 有効な値は、エラーが発生しなかったかのように処理を継続する `IgnoreError`、エラーを記録して処理を継続する `ReportAndContinue`、エラー数がエラーの上限に達していなくてもエラーを記録して直ちに処理を停止する `ReportAndStop` です。  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- サーバーによって実行されるアクションを指定します。 ときに`NullProcessing`に設定されている`Error`ディメンション属性。 エラーは、指定された属性で NULL 値が許可されていない場合に生成されます。 このエラー構成プロパティは、次の手順を通知します。つまり、エラーを報告してエラーの上限に達するまで処理を継続します。 有効な値は`IgnoreError`、エラーが発生しなかったかのように処理を続行する`ReportAndContinue`、エラーを記録し、処理を続行して`ReportAndStop`エラーを記録し、エラーの数が、エラーの上限未満の場合でも直ちに処理を停止します。  
+ `NullProcessing` がディメンション属性の `Error` に設定されている場合にサーバーが実行するアクションを指定します。 エラーは、指定された属性で NULL 値が許可されていない場合に生成されます。 このエラー構成プロパティは、次の手順を通知します。つまり、エラーを報告してエラーの上限に達するまで処理を継続します。 有効な値は、エラーが発生しなかったかのように処理を継続する `IgnoreError`、エラーを記録して処理を継続する `ReportAndContinue`、エラー数がエラーの上限に達していなくてもエラーを記録して直ちに処理を停止する `ReportAndStop` です。  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  
@@ -172,7 +172,7 @@ ms.locfileid: "48204842"
  このプロパティの既定値は空白です。その場合、既定で使用されるファイル名は FlightRecorderTraceDef.xml になります。  
   
 ## <a name="query-log"></a>クエリ ログ  
- **適用対象:** 多次元サーバー モードのみ  
+ **適用対象:** 多次元サーバー モードの場合のみ  
   
  **QueryLog\QueryLogFileName**  
  クエリ ログ ファイルの名前を指定する文字列プロパティです。 このプロパティは、データベース テーブル (既定の動作) ではなく、ディスク ファイルがログ記録に使用される場合にのみ適用されます。  
@@ -199,7 +199,7 @@ ms.locfileid: "48204842"
  このプロパティの既定値は False であり、サーバーによってログ テーブルが自動的に作成されず、クエリ イベントがログ記録されないことを示します。  
   
 > [!NOTE]  
->  クエリ ログの構成の詳細については、「 [Analysis Services クエリ ログの構成](http://go.microsoft.com/fwlink/?LinkId=81890)」を参照してください。  
+>  クエリ ログの構成の詳細については、「 [Analysis Services クエリ ログの構成](https://go.microsoft.com/fwlink/?LinkId=81890)」を参照してください。  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

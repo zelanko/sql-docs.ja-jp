@@ -20,18 +20,18 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a044f3122f3f553e068d474901e52cce3eef1c9
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120089"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204671"
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLProcedures**特定のデータ ソースに格納されているプロシージャ名の一覧を返します。 *プロシージャ*記述に使用される一般的な用語には、*実行可能オブジェクト*、または入力と出力パラメーターを使用して呼び出すことができる名前付きエンティティ。 手順の詳細については、次を参照してください。、[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)します。  
   
 ## <a name="syntax"></a>構文  
@@ -135,7 +135,7 @@ SQLRETURN SQLProcedures(
 |NUM_OUTPUT_PARAMS (ODBC 2.0)|5|なし|将来使用するために予約されています。 アプリケーションは、これらの結果の列で返されるデータに依存させないでください。|  
 |NUM_RESULT_SETS (ODBC 2.0)|6|なし|将来使用するために予約されています。 アプリケーションは、これらの結果の列で返されるデータに依存させないでください。|  
 |「解説」(ODBC 2.0)|7|Varchar|プロシージャの説明です。|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|プロシージャの種類を定義します。<br /><br /> SQL_PT_UNKNOWN: 特定できないかどうか、プロシージャが値を返します。<br /><br /> SQL_PT_PROCEDURE: 返されるオブジェクトは、プロシージャです。つまり、戻り値はありません。<br /><br /> : は、返されたオブジェクトは、関数です。つまり、戻り値があります。|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|プロシージャの種類を定義します。<br /><br /> SQL_PT_UNKNOWN:プロシージャが値を返すかどうかを特定できません。<br /><br /> SQL_PT_PROCEDURE:返されるオブジェクトはプロシージャです。つまり、戻り値はありません。<br /><br /> :返されるオブジェクトが関数です。つまり、戻り値があります。|  
   
  *SchemaName*と*ProcName*引数は、検索パターンをそのまま使用します。 有効な検索パターンの詳細については、次を参照してください。[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)します。  
   

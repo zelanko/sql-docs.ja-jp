@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription_agent
@@ -17,12 +16,12 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c1ba5e237a9e652e0ef33e359cad0858420abbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cd847b9c3f5bcbc24260632ed632f42ad6840c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649636"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808764"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,22 +80,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_パブリッシャー_**'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@publisher_db=**] **' * * * publisher_db'*  
+ [  **@publisher_db=**] **'**_publisher_db'_  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**既定値は NULL です。 *publisher_db* Oracle パブリッシャーでは無視されます。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@subscriber=**] **'***サブスクライバー***'**  
+ [  **@subscriber=**] **'**_サブスクライバー_**'**  
  サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。  
   
- [  **@subscriber_db=**] **'***@subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_@subscriber_db_**'**  
  サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -108,22 +107,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 ディストリビューション エージェントは常に Windows 認証を使用してローカル サブスクライバーに接続します。 NULL 以外の値または**1**指定は、このパラメーターは、警告メッセージが返されます。  
   
- [  **@subscriber_login =**] **'***subscriber_login***'**  
+ [  **@subscriber_login =**] **'**_subscriber_login_**'**  
  同期するサブスクライバーに接続するときに使用するサブスクライバー ログインです。*subscriber_login*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターの値を指定すると、警告メッセージが返されますが、値は無視されます。  
   
- [  **@subscriber_password=**] **'***@subscriber_password***'**  
+ [  **@subscriber_password=**] **'**_@subscriber_password_**'**  
  サブスクライバーのパスワードです。 *@subscriber_password*場合は必須です*subscriber_security_mode*に設定されている**0**します。 *@subscriber_password*は**sysname**、既定値は NULL です。 サブスクライバー パスワードを使用する場合、サブスクライバー パスワードは自動的に暗号化されます。  
   
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターの値を指定すると、警告メッセージが返されますが、値は無視されます。  
   
- [  **@distributor=**] **'***ディストリビューター***'**  
+ [  **@distributor=**] **'**_ディストリビューター_**'**  
  ディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値で指定された値は*パブリッシャー*します。  
   
- [  **@distribution_db=**] **'***distribution_db***'**  
+ [  **@distribution_db=**] **'**_distribution_db_**'**  
  ディストリビューション データベースの名前を指定します。 *distribution_db*は**sysname**既定値は NULL です。  
   
  [  **@distributor_security_mode=**] *distributor_security_mode*  
@@ -132,16 +131,16 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=**] **'***distributor_login***'**  
+ [  **@distributor_login=**] **'**_distributor_login_**'**  
  ディストリビューターへ接続して同期するときに使用するディストリビューター ログインを指定します。 *distributor_login*場合は必須です*distributor_security_mode*に設定されている**0**します。 *distributor_login*は**sysname**、既定値は NULL です。  
   
- [  **@distributor_password =**] **'***distributor_password***'**  
+ [  **@distributor_password =**] **'**_distributor_password_**'**  
  ディストリビューターのパスワードです。 *distributor_password*場合は必須です*distributor_security_mode*に設定されている**0**します。 *distributor_password*は**sysname**、既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
- [  **@optional_command_line=**] **'***optional_command_line***'**  
+ [  **@optional_command_line=**] **'**_optional_command_line_**'**  
  ディストリビューション エージェントに与えられるコマンド プロンプトで、省略可能です。 たとえば、 **-definitionfile** C:\Distdef.txt または **- CommitBatchSize** 10。 *optional_command_line*は**nvarchar (4000)**、既定値は空の文字列。  
   
  [  **@frequency_type=**] *frequency_type*  
@@ -203,52 +202,52 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@active_end_date=**] *active_end_date*  
  ディストリビューション エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は**0**します。  
   
- [  **@distribution_jobid =**] *distribution_jobid * * * 出力**  
+ [  **@distribution_jobid =**] _distribution_jobid_**出力**  
  このジョブのディストリビューションの ID を指定します。 *distribution_jobid*は**binary (16)**、既定値は null には、出力パラメーター。  
   
  [  **@encrypted_distributor_password=**] *encrypted_distributor_password*  
  設定*encrypted_distributor_password*現在サポートされていません。 これを設定しようとしています。**ビット**パラメーターを**1** 、エラーが発生します。  
   
- [  **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr***'**  
- サブスクリプションを介した同期が可能かどうかは、[!INCLUDE[msCoName](../../includes/msconame-md.md)]同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+ [  **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
+ 使用、サブスクリプションを同期させるかどうかが [!INCLUDE[msCoName](../../includes/msconame-md.md)] 同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
- [  **@ftp_address=**] **'***ftp_address***'**  
+ [  **@ftp_address=**] **'**_ftp_address_**'**  
  これは旧バージョンとの互換性のためにだけ用意されています。  
   
  [  **@ftp_port=**] *ftp_port*  
  これは旧バージョンとの互換性のためにだけ用意されています。  
   
- [  **@ftp_login=**] **'***ftp_login***'**  
+ [  **@ftp_login=**] **'**_ftp_login_**'**  
  これは旧バージョンとの互換性のためにだけ用意されています。  
   
- [  **@ftp_password=**] **'***ftp_password***'**  
+ [  **@ftp_password=**] **'**_ftp_password_**'**  
  これは旧バージョンとの互換性のためにだけ用意されています。  
   
- [  **@alt_snapshot_folder=** ] **' * * * alternate_snapshot_folder'*  
+ [  **@alt_snapshot_folder=** ] **'**_alternate_snapshot_folder'_  
  スナップショットの代替フォルダーの場所を指定します。 *alternate_snapshot_folder*は**nvarchar (255)**、既定値は NULL です。  
   
- [ **@working_directory**=] **'***working_director***'**  
+ [ **@working_directory**=] **'**_working_director_**'**  
  パブリケーション用のデータ ファイルとスキーマ ファイルの格納に使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)**、既定値は NULL です。 名前は UNC 形式で指定する必要があります。  
   
- [ **@use_ftp**=] **'***@use_ftp***'**  
+ [ **@use_ftp**=] **'**_@use_ftp_**'**  
  標準のプロトコルの代わりに FTP を使用してスナップショットを取得します。 *@use_ftp*は**nvarchar (5)**、既定値は FALSE。  
   
  [ **@publication_type**=] *publication_type*  
  パブリケーションのレプリケーションの種類を指定します。 *publication_type*は、 **tinyint** 、既定値は**0**します。 場合**0**パブリケーションがトランザクションの種類。 場合**1**パブリケーションがスナップショットの種類。 場合**2**パブリケーションはマージの種類。  
   
- [ **@dts_package_name**=] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'**_dts_package_name_**'**  
  DTS パッケージの名前を指定します。 *dts_package_name*は、 **sysname**既定値は NULL です。 たとえば、`DTSPub_Package` というパッケージを指定するには、パラメーターを `@dts_package_name = N'DTSPub_Package'` と設定します。  
   
- [ **@dts_package_password**=] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'**_dts_package_password_**'**  
  パッケージのパスワード (ある場合) を指定します。 *dts_package_password*は**sysname**既定値は NULL には、つまり、パッケージにパスワードがないです。  
   
 > [!NOTE]  
 >  場合は、パスワードを指定する必要があります*dts_package_name*を指定します。  
   
- [ **@dts_package_location**=] **'***dts_package_location***'**  
+ [ **@dts_package_location**=] **'**_dts_package_location_**'**  
  パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は**サブスクライバー**します。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**します。  
   
- [ **@reserved**=] **'***予約***'**  
+ [ **@reserved**=] **'**_予約_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@offloadagent**=] '*remote_agent_activation*'  
@@ -262,10 +261,10 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [ **@job_name**=] '*job_name*'  
  既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーになっていない場合、 **sysadmin**するを指定する必要があります固定サーバー ロール、 *job_login*と*job_password*を指定すると*job_name*.  
   
- [ **@job_login**=] **'***job_login***'**  
+ [ **@job_login**=] **'**_job_login_**'**  
  エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはサブスクライバーへのエージェント接続で常に使用されます。  
   
- [ **@job_password**=] **'***job_password***'**  
+ [ **@job_password**=] **'**_job_password_**'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。  
   
 > [!IMPORTANT]  

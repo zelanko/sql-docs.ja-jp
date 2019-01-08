@@ -1,41 +1,32 @@
 ---
-title: SQL Server Machine Learning で R データ型の使用 |Microsoft Docs
+title: R-SQL データ型の変換 - SQL Server Machine Learning サービス
+description: 明示的および暗黙的なデータ型 converstions を R と SQL Server の間でデータ サイエンスと機械学習ソリューションを確認します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bcabb40cffb00e4f3ed1f5b7bb1df72f20f3f121
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 23318c4a0ad9fceff9b293b706ff61f62643ee6d
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890068"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644951"
 ---
-# <a name="r-libraries-and-r-data-types"></a>R ライブラリと R データ型
+# <a name="data-type-mappings-betweenr-and-sql-server"></a>データ型のマッピング betweenR および SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、R ライブラリに含まれていると、次の製品でサポートされているデータ型について説明します。
+SQL Server Machine Learning Services での R 統合機能で実行される R ソリューションでは、サポートされていないデータ型、および R ライブラリと SQL Server 間のデータが渡されるときに暗黙的に実行することがあるデータ型変換の一覧を確認してください。
 
-+ SQL Server 2016 R Services (In-database)
-+ SQL Server Machine Learning Services (In-database)
+## <a name="base-r-version"></a>基本 R バージョン
 
-この記事では、サポートされていないデータ型も一覧表示されます。 し、一覧データが R と SQL Server の間でデータが渡されるときに暗黙的に実行することが変換を入力します。
+Microsoft R Open の特定のリリースでは、SQL Server 2016 R Services と、R を使用した SQL Server 2017 Machine Learning サービスを配置します。 たとえば、最新のリリースでは、SQL Server 2017 Machine Learning サービスは Microsoft R Open 上に構築された 3.3.3 します。
 
-## <a name="r-libraries"></a>R ライブラリ
+SQL Server の特定のインスタンスに関連付けられている R のバージョンを表示する開いて**RGui**します。 既定のインスタンスのパスとして次のようになります。 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-両方の製品では、R Services と、R を使用した Machine Learning サービスは、Microsoft R Open の特定のリリースに揃えて配置されます。 たとえば、最新のリリースでは、SQL Server 2017 Machine Learning サービスは Microsoft R Open 上に構築された 3.3.3 します。
-
-SQL Server の特定のインスタンスに関連付けられている R のバージョンを表示するには、RGui を開きます。
-
-1. 既定のインスタンスのパスとして次のようになります。 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
-2. R の配布と Microsoft R Open のバージョン番号を一覧表示するメッセージが表示されます。
-
-Microsoft R Server の特定のバージョンに含まれている R のバージョンを検索するには、次を参照してください。 [R Server の新機能](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)します。
-
-SQL Server でのパッケージ管理システムは、複数のユーザー、同じパッケージの共有または同じパッケージの異なるバージョンを使用して、R パッケージの複数のバージョンが、同じコンピューターにインストールできます意味に注意してください。 詳細については、次を参照してください。 [SQL Server での R パッケージ管理](../r/install-additional-r-packages-on-sql-server.md)します。
+このツールは、基本の R と他のライブラリを読み込みます。 パッケージのバージョン情報は、セッションの起動時に読み込まれているパッケージごとの通知で提供されます。 
 
 ## <a name="r-and-sql-data-types"></a>R と SQL データ型
 
@@ -109,18 +100,18 @@ GUID (一意識別子)、タイムスタンプ、監査に使用されるその�
 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型が R でサポートされておらず、R スクリプトでデータの列を使用する必要がある場合、R スクリプトでデータを使用する前に、[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数を使用してデータ型変換が意図したとおりに実行されることを確認することをお勧めします。  
 
 > [!WARNING]
-データの移動中に **rxDataStep** を使用して互換性のない列を削除する場合、引数 "_varsToKeep_" と "_varsToDrop_" は **RxSqlServerData** データ ソース型としてサポートされないことにご注意ください。
+> データの移動中に **rxDataStep** を使用して互換性のない列を削除する場合、引数 "_varsToKeep_" と "_varsToDrop_" は **RxSqlServerData** データ ソース型としてサポートされないことにご注意ください。
 
 
 ## <a name="examples"></a>使用例
 
-### <a name="example-1-implicit-conversion"></a>例 1: 暗黙の変換
+### <a name="example-1-implicit-conversion"></a>例 1 : 暗黙的な変換
 
 次の例では、SQL Server と R の間を往復するときにデータを変換する方法を示しています。
 
 クエリは、一連からの値を取得します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル、およびストアド プロシージャを使用して[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) R ランタイムを使用して値を出力します。
 
-```SQL
+```sql
 CREATE TABLE MyTable (    
  c1 int,    
  c2 varchar(10),    
@@ -176,7 +167,7 @@ R で `str` 関数を使用すると、出力データのスキーマが取得�
 -   **列 C4**。 この列には、元のデータには存在しない、R スクリプトで生成された値が含まれます。
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>例2: R を使用した動的な列の選択
+## <a name="example-2-dynamic-column-selection-using-r"></a>例 2:R を使用して動的な列の選択
 
 次の例では、R コードを使用して無効な列の型をチェックする方法を示します。 指定されたテーブルのスキーマを SQL Server システム ビューを使用して取得し、指定された無効な型を持つ列をすべて削除します。
 
@@ -188,5 +179,5 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 

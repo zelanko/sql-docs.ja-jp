@@ -1,5 +1,5 @@
 ---
-title: 事前トレーニング済みの機械学習モデルを SQL Server のインストール |Microsoft Docs
+title: 事前トレーニング済みの機械学習モデルの SQL Server Machine Learning のインストールします。
 description: センチメントの分析とイメージの特性付けの事前トレーニング済みモデルを SQL Server 2017 Machine Learning サービス (R または Python) または SQL Server 2016 R Services を追加します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216833"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645441"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの machine learning のモデルでは、SQL Server をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -104,7 +104,7 @@ R および Python のモデルのインストール パスは次のとおりで
 
 2. コマンド プロンプトで次の R スクリプトを貼り付けます。
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -126,7 +126,7 @@ R および Python のモデルのインストール パスは次のとおりで
 
 3. センチメント スコアを表示するには Enter キーを押します。 出力は次のようにする必要があります。
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -168,7 +168,7 @@ R および Python のモデルのインストール パスは次のとおりで
 
 3. スコアを印刷するには Enter キーを押します。 出力は次のようにする必要があります。
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH
@@ -190,7 +190,7 @@ R および Python のモデルのインストール パスは次のとおりで
 
   イメージの事前トレーニング済みモデルでは、指定したイメージの特徴の生成をサポートします。 モデルを使用して、呼び出す、 **featurizeImage**変換します。 イメージが読み込まれるサイズ変更、トレーニング済みモデルを特徴とします。 DNN featurizer の出力は画像の分類の線形モデルのトレーニングに使用されます。 このモデルを使用するには、トレーニング済みモデルの要件を満たすすべてのイメージのサイズを変更する必要があります。 たとえば、AlexNet モデルを使用する場合、イメージ必要がありますを変更する場合 227 x 227 ピクセルです。
 
-+ [コード サンプル: テキストの特徴抽出器を使った感情分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [コード サンプル:テキストの特徴抽出器を使った感情分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 
@@ -211,7 +211,7 @@ R および Python のモデルのインストール パスは次のとおりで
 
 + [Microsoft Computational Network Toolkit は、最も効率的なの分散深層に優れたコンピューティング性能を学習を提供しています](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
 + [SQL Server 2017 の Machine Learning サービス](sql-machine-learning-services-windows-install.md)

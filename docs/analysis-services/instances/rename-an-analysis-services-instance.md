@@ -1,5 +1,5 @@
 ---
-title: Analysis Services インスタンスの名前を変更 |Microsoft ドキュメント
+title: Analysis Services インスタンスの名前変更 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6214dbcef4036bc545a931f90ee8dca4580ef287
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015919"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393015"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services インスタンスの名前変更
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34015919"
   
      仮想アカウントを使用してサービスを準備した場合は、データベース ログインまたはファイル権限を更新する必要があります。 仮想アカウントはインスタンス名に依存するため、インスタンスの名前を変更した場合、同時に仮想アカウントも更新されます。 つまり、変更前のインスタンス用に作成したログインや権限はすべて無効になります。  
   
-     次に例を示します。 既定の仮想アカウントを使用し、"Tabular" というインスタンス名でテーブル モードのサーバーをインストールしたとします。この場合、次のような構成になります。  
+     次に例を示します。 "Tabular"既定の仮想アカウントを使用してその結果、次の構成を名前付きインスタンスとして、表形式モードのサーバーをインストールしたとします。  
   
     1.  インスタンス名 = \<server > \TABULAR  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34015919"
   
     3.  仮想アカウント = NT Service\ MSOLAP$TABULAR  
   
-     ここで、インスタンスの名前を "TAB2" に変更したとします。 名前を変更したことで、必要な構成も次のように変わります。  
+     これで、"TAB2"インスタンスの名前を変更するとします。 名前を変更したことで、必要な構成も次のように変わります。  
   
     1.  インスタンス名 = \<server > \TAB2  
   
@@ -68,6 +68,6 @@ ms.locfileid: "34015919"
   
     3.  仮想アカウント = NT Service\ MSOLAP$TAB2  
   
-     当然、"NT Service\ MSOLAP$TABULAR" に付与されていたデータベースおよびファイルの権限は無効になります。 それまでサービスによって実行されてきたタスクや操作を従来と同じように実行するためには、新しくデータベースとファイルの権限を "NT Service\ MSOLAP$TAB2" に付与する必要があります。  
+     ご覧のように、"NT service \ MSOLAP$ TABULAR"に付与されていたデータベースとファイルのアクセス許可は無効になります。 する前に、現在のタスクと、サービスによって実行された操作を実行することを確認するには、「NT service \ MSOLAP $tab2」に新しいデータベースとファイルのアクセス許可を付与する必要があります。  
   
   

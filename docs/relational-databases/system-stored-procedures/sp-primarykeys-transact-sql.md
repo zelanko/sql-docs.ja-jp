@@ -18,12 +18,12 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d994e44e3db00921ca184ed063bcf1bdff487297
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 484890cfe30ace1c65ea45fe2d9e447a6396b52e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753600"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591456"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,17 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@table_server =** ] **' * * * table_server'*  
+ [  **@table_server =** ] **'**_table_server'_  
  主キーの情報を返すリンク サーバーの名前を指定します。 *table_server*は**sysname**、既定値はありません。  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  主キー情報を提供するテーブルの名前を指定します。 *table_name*は**sysname**、既定値は NULL です。  
   
- [  **@table_schema =** ] **'***、table_schema、***'**  
+ [  **@table_schema =** ] **'**_、table_schema、_**'**  
  テーブル スキーマを指定します。 *table_schema、* は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
- カタログの名前は、指定した*table_name*が存在します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]環境では、これは、データベース名に対応します。 *table_catalog*は**sysname**、既定値は NULL です。  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
+ カタログの名前は、指定した*table_name*が存在します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはデータベース名に相当します。 *table_catalog*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -78,7 +78,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例の主キー列を返します、`LONDON1`用のサーバー、`HumanResources.JobCandidate`テーブルに、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
+ 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `LONDON1` テーブルの主キー列を、`HumanResources.JobCandidate` サーバーから返します。  
   
 ```  
 EXEC sp_primarykeys @table_server = N'LONDON1',   

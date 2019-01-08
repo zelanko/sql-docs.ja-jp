@@ -1,5 +1,5 @@
 ---
-title: 予測および SQL Server で機械学習モデルを使用して予測を生成する方法 |Microsoft Docs
+title: 予測および機械学習モデルの SQL Server Machine Learning Services を使用して予測を生成します。
 description: ネイティブの予測のスコア付けと R および SQL Server Machine Learning で Pythin で予測のため、リアルタイムのスコア付けまたは予測の T-SQL rxPredict、または sp_rxPredict を使用します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712474"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432505"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>予測および SQL Server で機械学習モデルを使用して予測を生成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "46712474"
 | 手法           | インターフェイス         | ライブラリの要件 | 処理速度 |
 |-----------------------|-------------------|----------------------|----------------------|
 | 機能拡張フレームワーク | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | [なし] : モデルは、任意の R または Python 関数に基づくことができます。 | 数百ミリ秒かかります。 <br/>ランタイム環境の読み込みとが固定コストは、新しいデータをスコア付けする前に 3 つを 600 ミリ秒単位の平均を計算します。 |
-| [リアルタイム スコアリングの CLR の拡張機能](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)でシリアル化されたモデル | R: RevoScaleR、MicrosoftML <br/>Python: revoscalepy、microsoftml | 数十ミリ秒単位の平均です。 |
-| [ネイティブの C++ 拡張機能をスコア付け](../sql-native-scoring.md) | [T-SQL の予測関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)でシリアル化されたモデル | R: RevoScaleR <br/>Python: revoscalepy | 平均の数は 20 ミリ秒です。 | 
+| [リアルタイム スコアリングの CLR の拡張機能](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)でシリアル化されたモデル | R:RevoScaleR の MicrosoftML <br/>Python: revoscalepy、microsoftml | 数十ミリ秒単位の平均です。 |
+| [ネイティブの C++ 拡張機能をスコア付け](../sql-native-scoring.md) | [T-SQL の予測関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)でシリアル化されたモデル | R:RevoScaleR <br/>Python: revoscalepy | 平均の数は 20 ミリ秒です。 | 
 
 処理の速度と出力のない物質は、差別化機能です。 同じ機能および入力と仮定すると、スコア付けされた出力が変わることはありませんを使用するアプローチを。
 
@@ -36,7 +36,7 @@ ms.locfileid: "46712474"
 
 CLR と C++ の拡張機能の重要性は、データベース エンジン自体に近いです。 データベース エンジンのネイティブ言語は、C++ で、拡張機能の依存関係を含むを実行する C++ で記述されたことを意味します。 これに対し、CLR の拡張機能は、.NET Core に依存します。 
 
-ご想像のとおり、これらの実行時環境でにプラットフォームのサポートに影響します。 ネイティブ データベース エンジンの拡張機能は、リレーショナル データベースがサポートされている任意の場所を実行します。 Windows、Linux で Azure。 .NET Core の要件と CLR の拡張機能は現在 Windows のみです。
+ご想像のとおり、これらの実行時環境でにプラットフォームのサポートに影響します。 ネイティブ データベース エンジンの拡張機能は、リレーショナル データベースがサポートされている任意の場所を実行します。Windows、Linux で Azure。 .NET Core の要件と CLR の拡張機能は現在 Windows のみです。
 
 ## <a name="scoring-overview"></a>スコア付けの概要
 
@@ -99,7 +99,7 @@ R コードから呼び出して、 [rxWriteObject](https://docs.microsoft.com/m
 使用する場合、[スタンドアロン サーバー](r-server-standalone.md)または[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)、ストアド プロシージャと予測をすばやく生成するための T-SQL 関数だけでなく、その他のオプションがあります。 スタンドアロン サーバーと Machine Learning Server の両方の概念をサポートする、 *web サービス*コードのデプロイ。 R をバンドルするまたは実行時に新しいデータ入力の評価と呼ばれる、web サービスとして事前トレーニング済みモデル Python。 詳細については、次の記事を参照してください。
 
 + [Machine Learning Server での web サービスとは](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [運用化とは何ですか。](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [運用化とは何ですか。](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Python のモデルを azureml モデル管理 sdk を使用した web サービスとしてデプロイします。](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [新しい web サービスとして、R コードのブロックまたはリアルタイムのモデルを発行します。](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [R の mrsdeploy パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

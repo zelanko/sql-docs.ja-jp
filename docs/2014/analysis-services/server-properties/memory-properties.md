@@ -24,21 +24,21 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94fa7654af0494d7d6bfec8396212634afade30f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091652"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362824"
 ---
 # <a name="memory-properties"></a>メモリのプロパティ
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー メモリ プロパティがサポートされています。 これらのプロパティの設定方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー メモリ プロパティがサポートされています。 これらのプロパティの設定方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  1 ～ 100 の値は、 **[物理メモリの合計]** または **[仮想アドレス領域]** のどちらか少ない方に対する割合を示します。 100 を超える値はメモリ制限を示します (単位: バイト)。  
   
  **適用対象:** 特に記載のない限り、多次元サーバー モードおよびテーブル サーバー モードが対象となります。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  `LowMemoryLimit`  
  サーバーがメモリ不足になる時点を定義する、符号付き 64 ビット倍精度浮動小数点数のプロパティ。合計物理メモリの比率として表されます。 この制限に達すると、インスタンスは、期限切れのセッションを終了したり、使用されていない計算をアンロードしたりすることによって、徐々にキャッシュ内のメモリを解放し始めます。 この制限を下回っている間は、メモリは解放されません。 既定値は 65 です。これは、物理メモリまたは仮想アドレス空間の 65% (どちらか少ない方) を超えたらメモリ不足とすることを示します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48091652"
  `TotalMemoryLimit` は常に、`HardMemoryLimit` より小さくする必要があります。  
   
  `HardMemoryLimit`  
- インスタンスが、メモリ使用量を減らすために、アクティブなユーザー セッションを積極的に終了し始めるメモリのしきい値を指定します。 終了されたすべてのセッションには、メモリ不足によって使用中止となった旨のエラーが送信されます。 既定値、ゼロ (0) の意味、`HardMemoryLimit`間の値に設定されます`TotalMemoryLimit`とシステム プロセス、し、仮想アドレスの仮想アドレス空間よりも大きい場合は、システムの物理メモリの合計物理メモリ領域が計算する代わりに使用`HardMemoryLimit`します。  
+ インスタンスが、メモリ使用量を減らすために、アクティブなユーザー セッションを積極的に終了し始めるメモリのしきい値を指定します。 終了されたすべてのセッションには、メモリ不足によって使用中止となった旨のエラーが送信されます。 既定値 (0) は、`HardMemoryLimit` が `TotalMemoryLimit` とシステムの物理メモリ合計の間の値に設定されることを意味します。システムの物理メモリがプロセスの仮想アドレス領域を超える場合は、`HardMemoryLimit` を計算せずに、仮想アドレス空間が使用されます。  
   
  `VirtualMemoryLimit`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
@@ -60,9 +60,9 @@ ms.locfileid: "48091652"
   
  **1** が既定値です。 このプロパティを指定した場合、オペレーティング システムのページング ファイル (pagefile.sys) を使用してディスクへのページングが行われます。  
   
- ときに`VertiPaqPagingPolicy`設定は 1、処理は、サーバーが指定したメソッドを使用してディスクへのページングを試行ので、メモリ制約が原因で失敗する可能性を低減します。 `VertiPaqPagingPolicy` プロパティを設定しても、メモリ エラーが発生しないことが保証されるわけではありません。 以下の状況では、メモリ不足エラーが発生する可能性があります。  
+ `VertiPaqPagingPolicy` が 1 に設定された場合、指定された方法を使用してサーバーがディスクへのページングを試行するので、メモリ制約によって処理が失敗する可能性は低くなります。 `VertiPaqPagingPolicy` プロパティを設定しても、メモリ エラーが発生しないことが保証されるわけではありません。 以下の状況では、メモリ不足エラーが発生する可能性があります。  
   
--   すべての辞書のための十分なメモリがない。 処理中に、Analysis Services の各列の辞書をメモリにロックをそれらすべての値は指定された値を超える`VertiPaqMemoryLimit`します。  
+-   すべての辞書のための十分なメモリがない。 処理中に、Analysis Services は各列の辞書をメモリにロックします。それらすべての合計が、`VertiPaqMemoryLimit` で指定されている値を超えることはできません。  
   
 -   処理に対応するための十分な仮想アドレス空間がない。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48091652"
  `VertiPaqMemoryLimit`  
  ディスクへのページングを許可した場合に、ページングが開始されるメモリ消費レベル (メモリの合計に対する割合) をこのプロパティで指定します。 既定値は 60 です。 メモリ消費量が 60% 未満の場合、ディスクへのページングは実行されません。  
   
- このプロパティによって異なります、 `VertiPaqPagingPolicyProperty`、ページングを有効にするために 1 に設定する必要がある必要があります。  
+ このプロパティは、`VertiPaqPagingPolicyProperty` に依存します (ページングを有効にするには 1 に設定する必要があります)。  
   
  テーブル サーバー モードにのみ適用されます。  
   

@@ -15,12 +15,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7ef284a927504bb4c7567d8700a8b15d63c92be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3800e9ed229491c4abe1746f6d0325ff1c63525d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190802"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365264"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>使用法に基づく最適化ウィザードの F1 ヘルプ
   使用法に基づく最適化ウィザードを使用するとパーティションの集計をデザインすることができ、その出力は集計のデザイン ウィザードに似ています。 ただし、使用法に基づく最適化ウィザードでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスのクエリ ログに記録されているクエリの特定の使用パターンに基づいて集計をデザインします。 集計を利用するとパフォーマンスが向上しますが、これは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が各クエリの基となるデータ ソースからデータを取得して再計算を行うのではなく、キューブのストレージから直接、事前に計算された合計を取得するためです。  
@@ -39,12 +39,12 @@ ms.locfileid: "48190802"
   
 -   パーティション、メジャー グループ、またはキューブの保存と処理 (省略可) を行い、定義された集計を生成します。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 記憶域のサイズによって制限されることができますまたはパフォーマンスの向上の推定を集計デザインを提供するパーティションの構造の統計分析に基づいて集計をデザインする集計のデザイン ウィザードを提供します。 集計のデザイン ウィザードを使用するとパーティションの全体的なパフォーマンスを向上させることができますが、このウィザードの集計デザインはビジネス ユーザーの特定のニーズに合致したものではありません。 使用法に基づく最適化ウィザードでは、こうした特定のニーズに合致した集計デザインが可能ですが、このためには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスのクエリ ログに、こうしたクエリを構築するための十分な情報が記録されている必要があります。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の集計のデザイン ウィザードでは、集計デザインを提供するパーティション構造の統計分析に基づいて集計をデザインします。集計をデザインする際には、ストレージ サイズまたはパフォーマンスの推定向上度を制限できます。 集計のデザイン ウィザードを使用するとパーティションの全体的なパフォーマンスを向上させることができますが、このウィザードの集計デザインはビジネス ユーザーの特定のニーズに合致したものではありません。 使用法に基づく最適化ウィザードでは、こうした特定のニーズに合致した集計デザインが可能ですが、このためには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスのクエリ ログに、こうしたクエリを構築するための十分な情報が記録されている必要があります。  
   
  通常、両方のウィザードを併用することで、配置後のパフォーマンスと長期的なパフォーマンスを向上させます。 パーティション (または、パーティションを含むキューブやメジャー グループ) を最初に配置するときに、まず集計のデザイン ウィザードを使用して全体的なパフォーマンスを向上させる必要があります。 その後、一定期間が経過してパーティションに対するビジネス ユーザーのクエリがクエリ ログに記録されたら、使用法に基づく最適化ウィザードを使用します。これにより、ビジネス ユーザーのクエリ要件に適応した、よりパフォーマンスの高い集計デザインを作成することができます。  
   
 > [!NOTE]  
->  クエリ ログの構成については、「 [Analysis Services クエリ ログの構成](http://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx)」をご覧ください。  
+>  クエリ ログの構成については、「 [Analysis Services クエリ ログの構成](https://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx)」をご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

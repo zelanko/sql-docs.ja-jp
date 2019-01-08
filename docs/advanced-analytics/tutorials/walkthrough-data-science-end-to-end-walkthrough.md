@@ -1,78 +1,90 @@
 ---
-title: R と SQL Server のエンド ツー エンドのデータ サイエンスのチュートリアル |Microsoft Docs
+title: SQL Server Machine Learning の R 言語を使用して、データ サイエンティスト向けのチュートリアル
+description: In-database 分析をエンド ツー エンド R ソリューションを作成する方法を示すチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d4f38fd424c881392d48b0a6a24feb7f7e27ee0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086504"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596423"
 ---
-# <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R と SQL Server のエンド ツー エンドのデータ サイエンスのチュートリアル
+# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>チュートリアル:R を使用して、データ サイエンティスト向けのデータベース内分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このチュートリアルでは、SQL Server 2016 または SQL Server 2017 のいずれかでサポートされる R 機能に基づく予測モデリングのエンド ツー エンド ソリューションを開発します。
+データ サイエンティスト向けのこのチュートリアルでは、SQL Server 2016 または SQL Server 2017 のいずれかでサポートされる R 機能に基づく予測モデリングのエンド ツー エンド ソリューションを構築する方法を説明します。 このチュートリアルでは、 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server データベース。 
 
-このチュートリアルは、よく知られている公開データ セット、ニューヨーク市タクシー データセットに基づいています。 R コードの組み合わせを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ、およびドライバーが特定のタクシーの乗車でチップを取得する確率を示す分類モデルを構築するカスタム SQL 関数。 デプロイすることも、R モデルを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とサーバーのデータを使用して、モデルに基づいてスコアを生成します。
+R コードの組み合わせを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ、およびドライバーが特定のタクシーの乗車でチップを取得する確率を示す分類モデルを構築するカスタム SQL 関数。 デプロイすることも、R モデルを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とサーバーのデータを使用して、モデルに基づいてスコアを生成します。
 
 この例は、すべての種類の販売キャンペーンに対する顧客の反応を予測するか、支出やイベント参加者数を予測するなど、現実の問題に拡張できます。 ストアド プロシージャからモデルを呼び出すことが、ためには、アプリケーションで簡単に埋め込むことができます。
 
 チュートリアルの目的は、R 開発者に紹介するため、 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]、可能な場合、R を使用します。 ただし、R は、各タスクに最適なツールでは必ずしもつまりされません。 多くの場合、特にデータ集計と機能エンジニアリングについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の方が優れたパフォーマンスを示す可能性があります。  このようなタスクでは、特に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の新機能 (メモリ最適化列ストア インデックスなど) のメリットが得られます。 可能な最適化の過程で指摘ましょう。
 
-## <a name="target-audience"></a>対象ユーザー
-
-このチュートリアルは、R または SQL の開発者向けです。 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を使用してエンタープライズ ワークフローに R を統合する方法の概要について説明します。  データベースとテーブルを作成、データをインポートするクエリの実行などのデータベース操作する必要があります。
-
-+ すべての SQL と R スクリプトが含まれます。
-+ 環境内で実行する、スクリプト内の文字列を変更する必要があります。 これを任意のコード エディターなど[Visual Studio Code](https://code.visualstudio.com/Download)します。
-
 ## <a name="prerequisites"></a>前提条件
 
-ラップトップまたは他の Microsoft R ライブラリがインストールされているコンピューターでは、このチュートリアルを実行することをお勧めします。 を、同じネットワーク上に接続できる必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server と R 言語を有効になっているコンピューター。
++ [R 統合で SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md#verify-installation)または[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-両方を備えたコンピューターでチュートリアルを実行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と R 開発環境ですが運用環境のためには、この構成は推奨されません。
++ [データベース権限](../security/user-permission.md)と SQL Server データベースのユーザー ログイン
 
-ラップトップなどのリモート コンピューターまたはその他のネットワークに接続されたコンピューターから R コマンドを実行する場合は、Microsoft R Open ライブラリをインストールする必要があります。 Microsoft R Client または Microsoft R Server をインストールすることができます。 リモート コンピューターに接続できる必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。
++ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
-同じコンピューターにクライアントとサーバーを配置する必要がある場合は、「リモート」のクライアントから R スクリプトの送信に使用する Microsoft R ライブラリの別のセットをインストールすることを確認します。 使用するため R ライブラリがインストールされているは SQL Server インスタンスによってこの目的のため使用しないでください。
++ [NYC タクシー デモ データベース](demo-data-nyctaxi-in-sql.md)
 
-## <a name="add-r-to-sql-server"></a>SQL Server に R を追加します。
++ RStudio などの R IDE または R に付属する組み込み RGUI ツール
 
-R がインストールされている対応の SQL Server のインスタンスへのアクセスが必要です。 このチュートリアルは当初 SQL ーバー 2016 用に開発されされるには、次の SQL Server のバージョンのいずれかを使用することが、2017 年でテストします。 (いくつか小さな違いが RevoScaleR 関数で、リリース間。)
+クライアント ワークステーションでは、このチュートリアルを実行することをお勧めします。 を、同じネットワーク上に接続できる必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server と R 言語を有効になっているコンピューター。 ワークステーションの構成については、次を参照してください。 [R 開発用のデータ サイエンス クライアント セットアップ](../r/set-up-a-data-science-client.md)します。
 
-+ [SQL Server 2017 Machine Learning Services をインストールします。](../install/sql-machine-learning-services-windows-install.md)
-+ [SQL Server 2016 R Services のインストール](../install/sql-r-services-windows-install.md)します。
+両方を備えたコンピューターでチュートリアルを実行する代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と R 開発環境では、ですが運用環境のためには、この構成は推奨されません。 同じコンピューターにクライアントとサーバーを配置する必要がある場合は、「リモート」のクライアントから R スクリプトを送信するための Microsoft R ライブラリの 2 番目のセットをインストールすることを確認します。 SQL Server インスタンスのプログラム ファイルにインストールされている R ライブラリを使用しません。 具体的には、1 台のコンピューターを使用している場合は、クライアントとサーバーの操作をサポートするためにこれらの場所の両方で RevoScaleR ライブラリ必要があります。
 
-## <a name="install-an-r-development-environment"></a>R 開発環境をインストールします。
++ C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
++ C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
-このチュートリアルでは、R 開発環境を使用することをお勧めします。 推奨事項を次に示します。
+<a name="add-packages"></a>
 
-- **R Tools for Visual Studio** (RTVS) は、無料プラグインを Intellisense、デバッグを提供し、R Server と SQL Server Machine Learning サービスの両方で使用できる Microsoft R をサポートします。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)」を参照してください。
+## <a name="additional-r-packages"></a>追加の R パッケージ
 
-- **Microsoft R Client**は RevoScaleR パッケージを使用して R の開発をサポートする軽量の開発ツールです。 これを取得する方法については、「 [Get Started with Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)」 (Microsoft R Client の概要) を参照してください。
+このチュートリアルではいくつかの R ライブラリの一部として、既定でインストールされていない[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]します。 ソリューションを開発する場合と、パッケージをクライアントにインストールする必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ソリューションをデプロイするコンピューター。
 
-- **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、次を参照してください。 [ https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)します。
+### <a name="on-a-client-workstation"></a>クライアント ワークステーションにインストール
 
-    RStudio または他の環境の一般的なインストールを使用して、このチュートリアルを完了することはできません。Microsoft R Open の接続ライブラリと R パッケージをインストールすることも必要があります。 詳しくは、「 [データ サイエンス クライアントのセットアップ](../r/set-up-a-data-science-client.md)」を参照してください。
+R 環境では、次の行をコピーし、(Rgui または IDE) は、コンソール ウィンドウで、コードを実行します。 一部のパッケージでは、必要なパッケージもインストールします。 すべてでは、約 32 パッケージがインストールされます。 インターネットに接続すると、この手順を完了する必要があります。
+    
+  ```R
+  # Install required R libraries, if they are not already installed.
+  if (!('ggmap' %in% rownames(installed.packages()))){install.packages('ggmap')}
+  if (!('mapproj' %in% rownames(installed.packages()))){install.packages('mapproj')}
+  if (!('ROCR' %in% rownames(installed.packages()))){install.packages('ROCR')}
+  if (!('RODBC' %in% rownames(installed.packages()))){install.packages('RODBC')}
+  ```
 
-- 基本 R ツール (R.exe、RTerm.exe、RScripts.exe) は、SQL Server または R Client に R をインストールするときにも既定でインストールされます。 IDE をインストールしたくない場合は、これらのツールを使用できます。
+### <a name="on-the-server"></a>サーバーで
 
-## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>SQL Server インスタンスとデータベースのアクセス許可を取得します。
+SQL Server にパッケージをインストールするためのいくつかのオプションがあります。 たとえば、SQL Server は[R パッケージ管理](../r/install-additional-r-packages-on-sql-server.md)により、データベース管理者はパッケージ リポジトリを作成し、ユーザーが自分のパッケージをインストールする権限を割り当てる機能。 ただし、コンピューターの管理者の場合は、適切なライブラリをインストールする場合に限り、R を使用して新しいパッケージをインストールできます。
 
-インスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にスクリプトを実行して、データをアップロードして、データベース サーバーで有効なログインを持って必要があります。  SQL ログインまたは統合 Windows 認証を使用できます。 R: を使用するデータベースで、アカウントの次のアクセス許可を構成するデータベース管理者に問い合わせてください。
+> [!NOTE]
+> サーバーで、**しない**場合でも、入力を求め、ユーザー ライブラリにインストールします。 ユーザー ライブラリにインストールする場合、SQL Server インスタンスが見つからないか、パッケージを実行します。 詳細については、次を参照してください。 [SQL サーバーに新しい R パッケージをインストールする](../r/install-additional-r-packages-on-sql-server.md)します。
 
-- データベース、テーブル、関数、ストアド プロシージャの作成
-- テーブルにデータを書き込む
-- R スクリプトを実行する機能 (`GRANT EXECUTE ANY EXTERNAL SCRIPT to <user>`)
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターで、**管理者権限で** RGui.exe を開きます。  既定値を使用して SQL Server R Services をインストールした場合、Rgui.exe は C:\Program files \microsoft SQL Server\MSSQL13 で見つかんだことができます。MSSQLSERVER\R_SERVICES\bin\x64)。
 
-このチュートリアルでは、SQL ログインを使用しましたが**RTestUser**します。 私たちは一般に、Windows 統合認証を使用することが、デモのためにいくつかの単純な SQL ログインを使用してはお勧めします。
+2. R プロンプトで、次の R コマンドを実行します。
+  
+  ```R
+  install.packages("ggmap", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("mapproj", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  ```
+  この例では、R grep 関数を使用して、使用可能なパスのベクトルを検索し、"Program Files"を含むパスを見つけます。 詳細については、次を参照してください。 [ https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)します。
 
-## <a name="next-steps"></a>次のステップ
+  パッケージが既にインストールされている場合を実行してインストールされているパッケージの一覧を確認してください。`installed.packages()`します。
 
-[PowerShell を使用してデータを準備します。](walkthrough-prepare-the-data.md)
+## <a name="next-steps"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [確認し、データの集計](walkthrough-view-and-summarize-data-using-r.md)

@@ -13,12 +13,12 @@ ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67de722e96d6818dc491410da4feb0f5dfe76bed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3ff85f2d8f99f530ad784b3a68c3ef2bfcd6432
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201922"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369614"
 ---
 # <a name="cluster-resource-group"></a>クラスター リソース グループ
   [クラスター リソース グループ] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想サーバー リソースが配置されるディスクを指定します。  
@@ -31,6 +31,6 @@ ms.locfileid: "48201922"
 -   作成する新しいグループの名前を入力します。 "使用可能記憶域" という名前はグループ名として有効ではないことに注意してください。  
   
 ## <a name="see-also"></a>参照  
- [方法: 新しい SQL Server フェールオーバー クラスターの作成](http://go.microsoft.com/fwlink/?LinkId=190960)  
+ [操作方法：新しい SQL Server フェールオーバー クラスターを作成します。](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

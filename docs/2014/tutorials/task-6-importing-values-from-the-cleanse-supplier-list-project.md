@@ -1,5 +1,5 @@
 ---
-title: 'タスク 6: から値のインポート、Cleanse Supplier List プロジェクト |Microsoft Docs'
+title: タスク 6:値をインポート、Cleanse Supplier List プロジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0eff880132e33cd8d73e7a1faa6dc6649b2caa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac003c18ae36f4cd2d58a1355df16d6d2f9b066
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137642"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359854"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>タスク 6: Cleanse Supplier List プロジェクトから値をインポートする
-  ここでは、クレンジング プロセスで収集したデータ品質ナレッジをインポートします。 参照してください[クレンジング プロジェクトの値をドメインにインポート](http://msdn.microsoft.com/library/hh479581.aspx)詳細についてはトピック。 エクスポートすることも、ナレッジ ベースを DQS ファイルに、更新を発行する前に**Suppliers**ナレッジ ベース。  
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>タスク 6:Cleanse Supplier List プロジェクトから値をインポートする
+  ここでは、クレンジング プロセスで収集したデータ品質ナレッジをインポートします。 参照してください[クレンジング プロジェクトの値をドメインにインポート](https://msdn.microsoft.com/library/hh479581.aspx)詳細についてはトピック。 エクスポートすることも、ナレッジ ベースを DQS ファイルに、更新を発行する前に**Suppliers**ナレッジ ベース。  
   
 1.  メイン ページで**DQS クライアント**、] をクリックして**右矢印**横に**Suppliers** [**最近使用したナレッジ ベース**をクリックします **。ドメイン管理**します。  
   
@@ -59,15 +59,15 @@ ms.locfileid: "48137642"
   
 10. 型、Tutorial フォルダーに移動**Suppliers.dqs**の**ファイル名**、 をクリック**保存**します。 この DQS ファイルを使用して、これに基づく新しいナレッジ ベースを作成できます。  
   
-11. クリックして**OK**を閉じる、**ナレッジ ベースのエクスポート – Suppliers**メッセージ ボックス。  
+11. をクリックして**OK**を閉じる、**ナレッジ ベースのエクスポート - サプライヤー**メッセージ ボックス。  
   
 12. クリックして**完了**してアクティビティを終了します。  
   
-13. **[パブリッシュ]** をクリックします。  
+13. **[発行]** をクリックします。  
   
 14. クリックして**OK**メッセージ ボックス。  
   
 ## <a name="next-step"></a>次の手順  
- [レッスン 3: データを照合して仕入先の一覧から重複を削除する](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [レッスン 3:削除するデータを照合して仕入先の一覧から重複します。](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

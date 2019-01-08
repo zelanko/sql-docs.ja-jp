@@ -13,12 +13,12 @@ ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc75b9a7ab93e3157d6594be15c0b2cc36456415
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726160"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516533"
 ---
 # <a name="the-field-object"></a>Field オブジェクト
 各**フィールド**オブジェクトは、通常、データベース テーブル内の列に対応します。 ただし、**フィールド**を別のポインターを表すことができますも**レコード セット**チャプターと呼ばれます。 チャプター列などの例外は、このガイドの後半で取り上げます。  
@@ -44,7 +44,7 @@ ms.locfileid: "47726160"
  使用してバッチを更新中にフィールドの値の不一致を解決するには、 **OriginalValue**と**UnderlyingValue**プロバイダーは、バッチ更新をサポートする場合は、プロパティ。  
   
 ## <a name="describing-a-field"></a>フィールドを記述します。  
- 以下のトピックのプロパティの説明、[フィールド](../../../ado/reference/ado-api/field-object.md)を説明する情報を表すオブジェクトを**フィールド**オブジェクト自体-フィールドの詳細については、メタデータ。 この情報は、のスキーマの詳細については、多くの決定に使用できます、 **Recordset**します。 これらのプロパティを含める**型**、 **DefinedSize**と**ActualSize**、**名前**、および**NumericScale**と**精度**します。  
+ 以下のトピックのプロパティの説明、[フィールド](../../../ado/reference/ado-api/field-object.md)を説明する情報を表すオブジェクトを**フィールド**オブジェクト自体のフィールドの詳細については、メタデータ。 この情報は、のスキーマの詳細については、多くの決定に使用できます、 **Recordset**します。 これらのプロパティを含める**型**、 **DefinedSize**と**ActualSize**、**名前**、および**NumericScale**と**精度**します。  
   
 ### <a name="discovering-the-data-type"></a>データ型の検出  
  **型**プロパティ フィールドのデータ型を示します。 データ型が ADO でサポートされている列挙型定数は「[格納](../../../ado/reference/ado-api/datatypeenum.md)で、 *ADO プログラマー リファレンス*します。  

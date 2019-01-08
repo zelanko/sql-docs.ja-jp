@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644000"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544111"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>オンプレミス データベースの適切な Azure SQL データベース SKU の識別します。
 
@@ -54,11 +54,11 @@ V4.0 の Database Migration Assistant をダウンロードまたはそれ以降
     ![DMA フォルダーに示すように PowerShell ファイル](../dma/media/dma-sku-recommend-data-collection-file.png)
 
 2. 次の引数には、PowerShell スクリプトを実行します。
-    - **ComputerName**: データベースをホストするコンピューターの名前。
-    - **OutputFilePath**: 出力ファイルのパスを収集したカウンターを保存します。
-    - **CollectionTimeInSeconds**: パフォーマンス カウンター データを収集する場合、時間数。
+    - **ComputerName**:データベースをホストするコンピューターの名前。
+    - **OutputFilePath**:収集したカウンターを保存する出力ファイルのパス。
+    - **CollectionTimeInSeconds**:この中にパフォーマンス カウンター データを収集する時間数。
       意味のある推奨事項を取得するには少なくとも 40 分のパフォーマンス カウンターをキャプチャします。 がキャプチャ期間を長く、より正確な推奨事項になります。
-    - **DbConnectionString**: 元のパフォーマンス カウンター データを収集しているコンピューターでホストされている master データベースを指す接続文字列。
+    - **DbConnectionString**:元のパフォーマンス カウンター データを収集しているコンピューターでホストされている master データベースを指す接続文字列。
      
     呼び出しの例を次に示します。
 
@@ -78,30 +78,30 @@ V4.0 の Database Migration Assistant をダウンロードまたはそれ以降
 
 次の引数、dmacmd.exe を実行します。
 
-- **/Action = SkuRecommendation**: SKU の評価を実行するには、この引数を入力します。
-- **/SkuRecommendationInputDataFilePath**: 前のセクションで収集されたカウンター ファイルへのパス。
-- **/SkuRecommendationTsvOutputResultsFilePath**: TSV 形式で出力結果を書き込むパス。
-- **/SkuRecommendationJsonOutputResultsFilePath**: JSON 形式で出力結果を書き込むパス。
-- **/SkuRecommendationHtmlResultsFilePath**: HTML 形式で出力結果を書き込むパス。
+- **/Action = SkuRecommendation**:SKU の評価を実行するには、この引数を入力します。
+- **/SkuRecommendationInputDataFilePath**:前のセクションで収集されたカウンター ファイルへのパス。
+- **/SkuRecommendationTsvOutputResultsFilePath**:TSV 形式で出力結果を書き込むパス。
+- **/SkuRecommendationJsonOutputResultsFilePath**:JSON 形式で出力結果を書き込むパス。
+- **/SkuRecommendationHtmlResultsFilePath**:HTML 形式で出力結果を書き込むパス。
 
 さらに、次の引数のいずれかを選択する必要があります。
 - 価格の更新されないようにします。
-    - **/SkuRecommendationPreventPriceRefresh**: 価格の更新が発生していることを防ぎます。 オフライン モードで実行されている場合に使用します。
+    - **/SkuRecommendationPreventPriceRefresh**:価格の更新が発生するを防ぎます。 オフライン モードで実行されている場合に使用します。
 - 最新の価格を取得します。 
-    - **/SkuRecommendationCurrencyCode**: (例: 価格を表示する通貨"USD")。
-    - **/SkuRecommendationOfferName**: プランの名前 (例。"MS-解決しない場合、0003 P")。 詳細については、次を参照してください。、 [Microsoft Azure プランの詳細](https://azure.microsoft.com/support/legal/offer-details/)ページ。
-    - **/SkuRecommendationRegionName**: 領域の名前 (例。「米国西部」)。
-    - **/SkuRecommendationSubscriptionId**: サブスクリプション id。
-    - **/AzureAuthenticationTenantId**: 認証テナント。
-    - **/AzureAuthenticationClientId**: 認証に使用される AAD アプリのクライアント ID。
+    - **/SkuRecommendationCurrencyCode**:(例: 価格を表示する通貨"USD")。
+    - **/SkuRecommendationOfferName**:プランの名前 (例。"MS-解決しない場合、0003 P")。 詳細については、次を参照してください。、 [Microsoft Azure プランの詳細](https://azure.microsoft.com/support/legal/offer-details/)ページ。
+    - **/SkuRecommendationRegionName**:領域の名前 (例。「米国西部」)。
+    - **/SkuRecommendationSubscriptionId**:サブスクリプション ID です。
+    - **/AzureAuthenticationTenantId**:認証のテナント。
+    - **/AzureAuthenticationClientId**:認証に使用される AAD アプリのクライアント ID。
     - 次の認証オプションのいずれか:
         - Interactive
-            - **AzureAuthenticationInteractiveAuthentication**: 認証のポップアップ ウィンドウに対して true に設定します。
+            - **AzureAuthenticationInteractiveAuthentication**:認証のポップアップ ウィンドウに対して true に設定します。
         - 証明書ベース
-            - **AzureAuthenticationCertificateStoreLocation**: (例: 証明書ストアの場所に設定"CurrentUser")。
-            - **AzureAuthenticationCertificateThumbprint**: 証明書のサムプリントに設定します。
+            - **AzureAuthenticationCertificateStoreLocation**:(例: 証明書ストアの場所に設定します。"CurrentUser")。
+            - **AzureAuthenticationCertificateThumbprint**:証明書のサムプリントに設定します。
         - トークン ベース
-            - **AzureAuthenticationToken**: 証明書トークンに設定します。
+            - **AzureAuthenticationToken**:証明書トークンに設定します。
 
 いくつかのサンプル呼び出しを次に示します。
 
@@ -135,8 +135,8 @@ TSV の出力ファイルには次の図に表示される列が含まれます�
 
 各列の説明に従います。
 
-- **DatabaseName** – データベースの名前。
-- **MetricName** – メトリックが実行されたかどうか。
+- **DatabaseName** -データベースの名前。
+- **MetricName** - メトリックが実行されたかどうか。
 - **MetricType** -Azure SQL Database の推奨レベルです。
 - **MetricValue** -Azure SQL Database の SKU をお勧めします。
 - **SQLMiEquivalentCores** -Azure SQL Database マネージ インスタンスに移動する場合は、コア数のこの値を使用できます。
@@ -152,11 +152,11 @@ HTML ファイルには、グラフィカルな形式では、この情報が含
 ほんの数回のクリックで、データベースを移行する Azure でターゲット データベースの準備には、前の手順からの推奨事項を使用できます。 次のように HTML ファイルを更新することで推奨事項は、変更を行うこともできます。
 
 1. HTML ファイルを開き、次の情報を入力します。
-    - **サブスクリプション ID** – データベースをプロビジョニングする Azure サブスクリプションのサブスクリプション ID。
-    - **リージョン**– データベースをプロビジョニングするリージョン。 サブスクリプションが選択領域をサポートしていることを確認します。
-    - **リソース グループ**– データベースをデプロイするリソース グループ。 存在するリソース グループを入力します。
-    - **サーバー名**– Azure SQL Database サーバーのデータベースをデプロイします。 存在しないサーバー名を入力すると、それが作成されます。
-    - **管理者ユーザー名とパスワード**– サーバー管理者ユーザー名とパスワード。
+    - **サブスクリプション ID** -データベースをプロビジョニングする Azure サブスクリプションのサブスクリプション ID。
+    - **リージョン**-データベースをプロビジョニングするリージョン。 サブスクリプションが選択領域をサポートしていることを確認します。
+    - **リソース グループ**-データベースをデプロイするリソース グループ。 存在するリソース グループを入力します。
+    - **サーバー名**-Azure SQL Database サーバーのデータベースをデプロイします。 存在しないサーバー名を入力すると、それが作成されます。
+    - **管理者ユーザー名とパスワード**-サーバー管理者ユーザー名とパスワード。
 
 2. データベースごとの推奨事項を確認し、価格レベルを変更、レベル、および必要に応じて、最大データ サイズを計算します。 現在しないプロビジョニングするすべてのデータベースの選択を解除してください。
 

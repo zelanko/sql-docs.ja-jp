@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1bf998c44b554647097e84b77079b3e5eb8ebdd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b204fe10d94cc875f1967aa50d8531826cd53f4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062442"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758904"
 ---
 # <a name="developer39s-guide-master-data-services"></a>開発者&#39;ガイド (マスター データ サービス)
   ここでは、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] の操作方法を、コードの記述によってカスタマイズする方法について説明します。 具体的には、次の方法を学習します。  

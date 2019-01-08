@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changedynamicsnapshot_job
@@ -17,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 984967c174e35115124054f68a70627b974d8ef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b3f2d65811e856bfec95fcd5ffa1749f62c58c3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779771"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822476"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +135,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  マージ エージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
   
  [  **@job_login=** ] **'***job_login***'**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)]パラメーター化された行フィルターを使用してサブスクリプション用のスナップショットを生成するときに、スナップショット エージェントを実行する Windows アカウント。 *job_login*は**nvarchar (257)** 既定値は NULL です。  
+ パラメーター化された行フィルターを使用してサブスクリプション用のスナップショットを生成するときに、スナップショット エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定します。 *job_login*は**nvarchar (257)** 既定値は NULL です。  
   
  [  **@job_password=** ] **'***job_password***'**  
  パラメーター化された行フィルターを使ってサブスクリプション用のスナップショットを生成するときに、スナップショット エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password*は**nvarchar (257)** 既定値は NULL です。  
@@ -147,7 +146,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **sp_changedynamicsnapshot_job**はパブリケーションのパラメーター化された行フィルターを使用したマージ レプリケーションで使用します。  
   
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
@@ -155,7 +154,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changedynamicsnapshot_job**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   

@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44ffbbfdac8e1976df99be35ecbed7dd94e3ee61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745440"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589387"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@table_server=** ] **'***table_server***'**  
+ [  **@table_server=** ] **'**_table_server_**'**  
  テーブル情報を返すリンク サーバーの名前です。 *table_server*は**sysname**、既定値はありません。  
   
- [ **、** [  **@table_name=** ] **'***table_name***'**]  
+ [ **、** [  **@table_name=** ] **'**_table_name_**'**]  
  データ型情報を返すテーブルの名前です。 *table_name*は**sysname**、既定値は NULL です。  
   
- [  **@table_schema=** ] **'***、table_schema、***'**]  
+ [  **@table_schema=** ] **'**_、table_schema、_**'**]  
  テーブル スキーマを指定します。 *table_schema、* は**sysname**、既定値は NULL です。  
   
- [  **@table_catalog=** ] **'***table_catalog***'**  
+ [  **@table_catalog=** ] **'**_table_catalog_**'**  
  データベースの名前は、指定した*table_name*が存在します。 *table_catalog*は**sysname**、既定値は NULL です。  
   
- [  **@table_type=** ] **'***table_type***'**  
+ [  **@table_type=** ] **'**_table_type_**'**  
  返すテーブルの種類です。 *table_type*は**sysname**、既定値は null の場合、次の値のいずれかを指定できます。  
   
 |値|説明|  
@@ -71,7 +71,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|ユーザー テーブルの名前です。|  
 |**VIEW**|ビューの名前です。|  
   
- [  **@fUsePattern=** ] **'***fUsePattern***'**  
+ [  **@fUsePattern=** ] **'**_fUsePattern_**'**  
  決定かどうか、文字 **_**、 **%**、 **[** と **]** はワイルドカード文字として解釈されます。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *fUsePattern*は**ビット**、既定値は 1 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -81,11 +81,11 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|テーブル修飾子の名前。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 他のいくつかの製品では、これはテーブルのデータベース環境のサーバー名を表します。 このフィールドには NULL を指定できます。|  
-|**TABLE_SCHEM**|**sysname**|テーブルの所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、テーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
+|**TABLE_CAT**|**sysname**|テーブル修飾子の名前。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_修飾子_**.**_所有者_**.**_名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列はデータベース名を表します。 他のいくつかの製品では、これはテーブルのデータベース環境のサーバー名を表します。 このフィールドには NULL を指定できます。|  
+|**TABLE_SCHEM**|**sysname**|テーブルの所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列はテーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。 このフィールドは常に値を返します。|  
 |**TABLE_TYPE**|**varchar (32)**|テーブル、システム テーブル、またはビューです。|  
-|**「解説」**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値は返されません。|  
+|**「解説」**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この列の値を返しません。|  
   
 ## <a name="remarks"></a>コメント  
  **sp_tables_ex**の TABLES 行セットのクエリを実行することによって実行される、 **IDBSchemaRowset**に対応する OLE DB プロバイダーのインターフェイス*table_server*します。 *Table_name*、 *、table_schema、*、 *table_catalog*、および*列*行を制限するには、このインターフェイスに渡されるパラメーター返されます。  
@@ -96,7 +96,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例に含まれているテーブルに関する情報を返します、`HumanResources`内のスキーマ、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]上のデータベース、`LONDON2`リンク サーバー。  
+ 次の例では、`HumanResources` リンク サーバー上の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `LONDON2` スキーマに含まれているテーブルに関する情報を返します。  
   
 ```  
 EXEC sp_tables_ex @table_server = 'LONDON2',   

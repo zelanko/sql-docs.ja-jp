@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c9b6b7e6118fc23ef821d85ea6d0ac2f040e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537871"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,25 +55,25 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  ジョブの名前を指定します。 名前が一意であり、割合を含めることはできません (**%**) 文字。 *job_name*は**nvarchar (128)**、既定値はありません。  
   
  [ **@enabled =** ] *enabled*  
  追加されるジョブの状態を指定します。 *有効になっている*は**tinyint**、既定値は 1 (有効)。 場合**0**、ただし、これは手動で実行するには、ジョブが有効でないと、スケジュールに従って実行されません。  
   
- [ **@description =** ] **'***description***'**  
+ [  **@description =** ] **'**_説明_**'**  
  ジョブの説明を指定します。 *説明*は**nvarchar (512)**、既定値は NULL です。 場合*説明*は省略すると、「使用可能な説明はありません」が使用されます。  
   
  [ **@start_step_id =** ] *step_id*  
  ジョブで実行する最初のステップの ID 番号を指定します。 *step_id*は**int**、既定値は 1 です。  
   
- [  **@category_name =** ] **'***カテゴリ***'**  
+ [  **@category_name =** ] **'**_カテゴリ_**'**  
  ジョブのカテゴリを指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
  [ **@category_id =** ] *category_id*  
  ジョブ カテゴリを指定するための、言語に依存しないメカニズムを指定します。 *category_id*は**int**、既定値は NULL です。  
   
- [ **@owner_login_name =** ] **'***login***'**  
+ [  **@owner_login_name =** ] **'**_ログイン_**'**  
  ジョブを所有するログインの名前です。 *ログイン*は**sysname**の既定値は NULL には、現在のログイン名として解釈されます。 メンバーのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できる **@owner_login_name**します。 場合以外のユーザーがメンバーの**sysadmin**ロールを設定またはの値を変更**@owner_login_name**、このストアド プロシージャの実行が失敗し、エラーが返されます。  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
@@ -95,13 +95,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@notify_level_page =** ] *page_level*  
  対象となるジョブの完了後、いつポケットベルのメッセージを送信するかを示す値を指定します。 *page_level*は**int**、既定値は**0**、しないことを示します。 *page_level*として同じ値を使用して*eventlog_level*します。  
   
- [ **@notify_email_operator_name =** ] **'***email_name***'**  
+ [  **@notify_email_operator_name =** ] **'**_email_name_**'**  
  ときに電子メールの送信先となる相手の電子メール名*email_level*に到達します。 *email_name*は**sysname**、既定値は NULL です。  
   
- [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [  **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
  対象となるジョブの完了時にネットワーク メッセージの送信先となるオペレーターの名前を指定します。 *netsend_name*は**sysname**、既定値は NULL です。  
   
- [ **@notify_page_operator_name =** ] **'***page_name***'**  
+ [  **@notify_page_operator_name =** ] **'**_page_name_**'**  
  対象となるジョブの完了時にポケットベルのメッセージの送信先となる相手の名前を指定します。 *page_name*は**sysname**、既定値は NULL です。  
   
  [ **@delete_level =** ] *delete_level*  
@@ -110,7 +110,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  ときに*delete_level*は**3**ジョブを 1 回だけ実行、ジョブのスケジュールに関係を定義します。 また、ジョブが自分自身を削除した場合、そのジョブのすべての履歴も削除されます。  
   
- [ **@job_id =** ] *job_id***OUTPUT**  
+ [  **@job_id =** ] _job_id_**出力**  
  ジョブの作成が成功したときにジョブに割り当てられるジョブ ID 番号を指定します。 *job_id*型の output 変数は、 **uniqueidentifier**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -144,7 +144,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-adding-a-job"></a>A. ジョブを追加する  
- この例では、という名前の新しいジョブを追加します。`NightlyBackups`します。  
+ 次の例では、`NightlyBackups` という新しいジョブを追加します。  
   
 ```  
 USE msdb ;  
@@ -156,10 +156,10 @@ GO
 ```  
   
 ### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. ポケットベル、電子メール、Net Send で情報を送るジョブを追加する  
- この例は、という名前のジョブを作成します。`Ad hoc Sales Data Backup`通知`François Ajenstat`(ポケットベル、電子メール、またはネットワーク ポップアップ メッセージ) を、ジョブが失敗した場合、正常完了時にジョブを削除します。  
+ 次の例では、`Ad hoc Sales Data Backup` というジョブを作成します。このジョブが失敗したときにはポケットベル、電子メール、またはネットワーク ポップアップ メッセージを使って `François Ajenstat` に通知し、ジョブが正常に完了したときにはジョブを削除します。  
   
 > [!NOTE]  
->  この例では、という名前のオペレーター`François Ajenstat`という名前のログインと`françoisa`既に存在します。  
+>  この例では、`François Ajenstat` というオペレーターと、`françoisa` というログインが存在することを前提としています。  
   
 ```  
 USE msdb ;  

@@ -1,5 +1,5 @@
 ---
-title: ディスク領域使用率 (Power Pivot for SharePoint) の構成 |Microsoft ドキュメント
+title: ディスク使用量 (Power Pivot for SharePoint) の構成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024749"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409199"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>ディスクの使用領域の構成 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "34024749"
   
  システム レベルでは、ディスク領域が少なくなったときに通知する電子メールによる警告を作成できます。 Microsoft System Center には、電子メール警告機能があります。 また、ファイル サーバー リソース マネージャー、タスク スケジューラ、または PowerShell スクリプトを使用して、警告を設定することもできます。 次のリンクでは、ディスク領域不足に関する通知を設定するための有用な情報が提供されています。  
   
--   [ファイル サーバー リソース マネージャーの新](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)です。  
+-   [新しいファイル サーバー リソース マネージャーでは](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)します。  
   
--   [Windows Server 2008 r2 ステップ バイ ステップ ガイドをファイル サーバー リソース マネージャー](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875)です。  
+-   [Windows Server 2008 R2 のファイル サーバー リソース マネージャーのステップ バイ ステップ ガイド](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)します。  
   
--   [Windows Server 2008 でディスクの空き領域のアラートの設定](http://go.microsoft.com/fwlink/?LinkID=204870)(http://go.microsoft.com/fwlink/?LinkID=204870)です。  
+-   [Windows Server 2008 でディスクの空き領域のアラートの設定](http://go.microsoft.com/fwlink/?LinkID=204870)(http://go.microsoft.com/fwlink/?LinkID=204870)します。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>キャッシュされたファイルの格納に使用するディスク領域のサイズを制限する方法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024749"
   
 3.  [ディスク使用量] の **[合計ディスク領域]** で、キャッシュ用に使用されるディスク容量の上限を制限する値を GB 単位で設定します。 既定値は 0 です。この場合、Analysis Services は使用可能なすべてのディスク領域を使用できます。  
   
-4.  [ディスク使用量] の **[直前の 'n' 時間にキャッシュされたデータベースを削除する]** 設定で、ディスク領域が上限に達したときにキャッシュを空にするための "最終使用" 条件を指定します。  
+4.  ディスク使用量 で、**キャッシュされた最後の 'n' 内のデータベースの削除時間**キャッシュを空にすると、ディスク領域が上限に最近使用した条件を指定を設定します。  
   
      既定値は 4 時間です。この場合、4 時間以上非アクティブであったすべてのデータベースがファイル システムから削除されます。 非アクティブであってもまだメモリ内にあるデータベースは、アンロードされた後、ファイル システムから削除されます。  
   

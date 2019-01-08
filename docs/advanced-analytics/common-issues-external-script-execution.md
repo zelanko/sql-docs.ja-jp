@@ -1,27 +1,25 @@
 ---
-title: スタート パッド サービスと SQL Server の外部スクリプトの実行に関する一般的な問題 |Microsoft Docs
+title: スタート パッド サービスと SQL Server Machine Learning サービス - 外部スクリプトの実行に関する一般的な問題
 ms.prod: sql
-ms.technology: mlserver
+ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701450"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644922"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>スタート パッド サービスと SQL Server の外部スクリプトの実行に関する一般的な問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- SQL Server Trusted Launchpad サービスは、R と Python の外部スクリプトの実行をサポートします。 SQL Server 2016 R Services では、SP1 は、サービスを提供します。 SQL Server 2017 には、初期インストールの一部としてスタート パッドの表記が含まれています。
+ SQL Server Trusted Launchpad サービスは、R と Python の外部スクリプトの実行をサポートします。 SQL Server 2016 R Services では、SP1 は、サービスを提供します。 SQL Server 2017 には、最初のインストールの一部としてスタート パッド サービスが含まれています。
 
 複数の問題は、開始、構成の問題など、変更、またはネットワーク プロトコルがありませんからスタート パッドを防ぐことができます。 この記事では、多くの問題のトラブルシューティングの指針を提供します。 イテレーションのいずれに質問を投稿できます、 [Machine Learning Server フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)します。
-
-**適用対象:** SQL Server 2016 R Services、SQL Server 2017 の Machine Learning サービス
 
 ## <a name="determine-whether-launchpad-is-running"></a>スタート パッドが実行されているかどうかを判断します。
 
@@ -69,7 +67,7 @@ SQL Server Machine Learning サービスのセットアップ中に、Windows �
 
 SQL Server Management studio で、問題を解決するには、セキュリティ管理者は、次のスクリプトを実行して、SQL ログインまたは Windows ユーザー アカウントを変更できます。
 
-```SQL
+```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
@@ -131,7 +129,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     A. ランチャーの .config ファイルを確認し、作業ディレクトリが有効であることを確認します。
 
-    B. スタート パッドで使用される Windows グループが、SQL Server インスタンスに接続できることを確認する」の説明に従って、[前のセクション](#bkmk_LaunchpadTS)します。
+    B. スタート パッドで使用される Windows グループは、SQL Server インスタンスに接続できることを確認します。
 
     c. サービスのプロパティを変更する場合は、スタート パッド サービスを再起動します。
 
@@ -171,7 +169,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 インスタンスによって使用される R パッケージ ライブラリの場所を確認するのには、インスタンスに接続する SQL Server Management Studio を開いて (またはその他のデータベース クエリ ツール) を次のストアド プロシージャを実行します。
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R',  
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```
@@ -211,7 +209,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 > [!NOTE] 
 > 以前のシステムでは、スタート パッドを 8dot3 表記法の要件がある場合を開始できないことができます。 この要件は、今後のリリースで削除されました。 SQL Server 2016 R Services のお客様は、次のいずれかでインストールする必要があります。
-> * SQL Server 2016 SP1 と CU1: [Cumulative Update 1 for SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)します。
+> * SQL Server 2016 SP1 CU1.[SQL Server の累積更新プログラム 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)します。
 > * SQL Server 2016 RTM、累積的な更新プログラム 3、およびそのこの[修正プログラム](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)オンデマンドで提供されています。
 
 R を使用した互換性のため、SQL Server 2016 R Services (In-database) を使用して短いファイル名の作成をサポートするために、機能がインストールされているドライブが必要な*8dot3 表記*します。 8.3 ファイル名とも呼ばれますが、*短いファイル名*、または長いファイル名の代替として Microsoft Windows の以前のバージョンと互換性のため使用されます。

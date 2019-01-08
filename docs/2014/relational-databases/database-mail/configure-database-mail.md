@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
@@ -40,19 +39,19 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1e6aa62858c85da20f13295cfb2dce0ee302ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217622"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371184"
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
   このトピックでは、データベース メール構成ウィザードを使用してデータベース メールを有効化して構成する方法、およびテンプレートを使用してデータベース メール構成スクリプトを作成する方法について説明します。  
   
 
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  **Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 詳細については、「 [Database Mail XPs サーバー構成オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 」を参照してください。  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
@@ -88,10 +87,10 @@ ms.locfileid: "48217622"
  
   
 ###  <a name="ConfigTask"></a> [構成タスクの選択]  
- ウィザードを使用するたびに、 **[構成タスクの選択]** ページを使用して、完了するタスクを指定します。 ウィザードを完了する前に変更が必要になった場合は、**[戻る]** ボタンを使用してこのページに戻り、別のタスクを選択します。  
+ ウィザードを使用するたびに、 **[構成タスクの選択]** ページを使用して、完了するタスクを指定します。 ウィザードを完了する前に変更が必要になった場合は、 **[戻る]** ボタンを使用してこのページに戻り、別のタスクを選択します。  
   
 > [!NOTE]  
->  データベース メール機能が有効になっていない場合は、"**データベース メール機能は使用できません。有効にしますか? " というメッセージが表示されます。** ここで **[はい]** をクリックすることは、 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) システム ストアド プロシージャの **Database Mail XPs オプション** を使用してデータベース メールを有効にすることと同じです。  
+>  データベース メールが有効になっていない場合、メッセージが表示されます。**データベース メール機能は使用できません。有効にしますか? " というメッセージが表示されます。** ここで **[はい]** をクリックすることは、 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) システム ストアド プロシージャの **Database Mail XPs オプション** を使用してデータベース メールを有効にすることと同じです。  
   
  **[次のタスクを実行してデータベース メールをセットアップする]**  
  データベース メールを初めてセットアップするときに必要なタスクをすべて実行します。 このオプションには、他の 3 つのオプションがすべて含まれています。  
@@ -415,7 +414,7 @@ ms.locfileid: "48217622"
  テスト電子メール メッセージの **mailitem_id** 。  
   
  **[トラブルシューティング]**  
- クリックすると、オンライン ブックのトピック「 [データベース メールのトラブルシューティング](http://msdn.microsoft.com/library/ms188663.aspx)」が開きます。  
+ クリックすると、オンライン ブックのトピック「 [データベース メールのトラブルシューティング](https://msdn.microsoft.com/library/ms188663.aspx)」が開きます。  
   
 
   

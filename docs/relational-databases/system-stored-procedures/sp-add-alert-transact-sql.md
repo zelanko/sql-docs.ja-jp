@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 924c6ccdcd5d6e2c5529c3967c2943ec6349fe19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610761"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203282"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@include_event_description_in =** ] *include_event_description_in*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーに関する説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*は**tinyint**、既定値は**5** (電子メールと**net send**)、およびは 1 つまたはと共にこれらの値の詳細は、**または**論理演算子です。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
 |値|説明|  
@@ -98,7 +98,7 @@ sp_add_alert [ @name = ] 'name'
  どのデータベースでエラーが発生したときに警告を起動するかを指定します。 場合*データベース*が指定されていない、エラーの発生場所に関係なく警告が発生します。 *データベース*は**sysname**します。 角かっこ ([ ]) で囲まれた名前は使用できません。 既定値は NULL になります。  
   
  [  **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明に、どのような文字のシーケンスが含まれている必要があるかを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のように、パターン検索文字を使用できます。 *event_description_keyword_pattern*は**nvarchar (100)**、既定値は NULL です。 このパラメーターはオブジェクト名をフィルター処理するために役立ちます (たとえば、 **%customer_table%**)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明に、どのような文字のシーケンスが含まれている必要があるかを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 式のパターン検索文字を使用できます。 *event_description_keyword_pattern*は**nvarchar (100)**、既定値は NULL です。 このパラメーターはオブジェクト名をフィルター処理するために役立ちます (たとえば、 **%customer_table%**)。  
   
  [ **@job_id =** ] *job_id*  
  対象となる警告に対する応答として実行するジョブのジョブ ID 番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
@@ -110,7 +110,7 @@ sp_add_alert [ @name = ] 'name'
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
- では未実装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン 7.0。 *raise_snmp_trap*は**tinyint**、既定値は 0。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では実装されていません。 *raise_snmp_trap*は**tinyint**、既定値は 0。  
   
  [  **@performance_condition =** ] **'***performance_condition***'**  
  形式で表される値は、'*itemcomparatorvalue*'。 *performance_condition*は**nvarchar (512)** 既定値は null の場合、これらの要素で構成されています。  
@@ -136,10 +136,10 @@ sp_add_alert [ @name = ] 'name'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **sp_add_alert**から実行する必要があります、 **msdb**データベース。  
   
- これらは、エラーやメッセージによって生成される状況[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アプリケーションは、Windows アプリケーション ログに送信され、警告を生成するため。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアプリケーションで生成されたエラーやメッセージが Windows のアプリケーション ログに送られます。したがって、警告を起動できるのは次の場合です。  
   
 -   重大度が 19 以上**sys.messages**エラー  
   
@@ -153,7 +153,7 @@ sp_add_alert [ @name = ] 'name'
   
  警告が正常に動作しないときは、次のことを確認してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスが実行されています。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービスが実行されていること。  
   
 -   Windows アプリケーション ログにイベントが表示されること。  
   
@@ -168,7 +168,7 @@ sp_add_alert [ @name = ] 'name'
  次の例では、警告発生時にジョブ `Back up the AdventureWorks2012 Database` を実行する Test Alert という警告を追加します。  
   
 > [!NOTE]  
->  この例では、メッセージ 55001 と`Back up the AdventureWorks2012 Database`ジョブが既に存在します。 この例は、説明の目的でのみが表示されます。  
+>  この例では、メッセージ 55001 と、ジョブ `Back up the AdventureWorks2012 Database` が既に存在することを前提としています。 この例は、説明の目的でのみが表示されます。  
   
 ```  
 USE msdb ;  
@@ -183,7 +183,7 @@ EXEC dbo.sp_add_alert
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_delete_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   

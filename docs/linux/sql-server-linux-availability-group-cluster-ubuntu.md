@@ -1,21 +1,22 @@
 ---
-title: SQL Server 可用性グループの Ubuntu クラスターの構成 |Microsoft Docs
-description: ''
+title: SQL Server 可用性グループ用の Ubuntu クラスターを構成します。
+titleSuffix: SQL Server
+description: Ubuntu の可用性グループのクラスターを作成する方法について説明します
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658382"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160620"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu のクラスターと可用性グループ リソースを構成します。
 
@@ -97,7 +98,7 @@ sudo systemctl enable pacemaker
 
 1. すべてのノードから、既存のクラスター構成を削除します。 
 
-   実行中の 'sudo apt-get install pc' は、pacemaker、corosync、および pc を同時にインストールし、3 つすべてのサービスの実行を開始します。  Corosync を起動するには、テンプレートが生成されます。 '/etc/cluster/corosync.conf' ファイル。  次の手順をこのファイルを成功に存在してはいけません – 回避 pacemaker を停止するには、/corosync および削除 '/etc/cluster/corosync.conf' とし、次の手順が正常に完了します。 同じことには 'pcs cluster destroy' と、1 つとして使用することができますに最初のクラスターのセットアップ手順です。
+   実行中の 'sudo apt-get install pc' は、pacemaker、corosync、および pc を同時にインストールし、3 つすべてのサービスの実行を開始します。  Corosync を起動するには、テンプレートが生成されます。 '/etc/cluster/corosync.conf' ファイル。  次の手順をこのファイルを成功に存在してはいけません - 回避 pacemaker を停止するには、/corosync および削除 '/etc/cluster/corosync.conf' とし、次の手順が正常に完了します。 同じことには 'pcs cluster destroy' と、1 つとして使用することができますに最初のクラスターのセットアップ手順です。
    
    次のコマンドは、既存のクラスター構成ファイルを削除し、すべてのクラスター サービスを停止します。 これにより、クラスターが完全に破棄します。 実稼働前環境での最初の手順として実行します。 注 pacemaker サービスと、再度有効にする必要があること"pcs cluster destroy' 無効になっています。 すべてのノードで次のコマンドを実行します。
    
@@ -123,7 +124,7 @@ sudo systemctl enable pacemaker
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```

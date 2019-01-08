@@ -10,12 +10,12 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9af1d66612485f3a790de1ebc8149b7a9e374103
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178262"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360414"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server インデックス デザイン ガイド
   不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この SQL Server インデックス デザイン ガイドには、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つ情報および推奨事項が含まれています。  
@@ -389,7 +389,7 @@ INCLUDE (FileName);
   
     -   列の NULL 値の許容を NOT NULL から NULL に変更する。  
   
-    -   長さを増やす`varchar`、 `nvarchar`、または`varbinary`列。  
+    -   `varchar`、`nvarchar`、または `varbinary` の各列の長さを拡張する。  
   
         > [!NOTE]  
         >  これらの列の変更の制限は、インデックス キー列にも適用されます。  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
   
 ##  <a name="Additional_Reading"></a> その他の情報  
- [SQL Server 2008 のインデックス付きビューによるパフォーマンスの向上](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [SQL Server 2008 のインデックス付きビューによるパフォーマンスの向上](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
  [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   

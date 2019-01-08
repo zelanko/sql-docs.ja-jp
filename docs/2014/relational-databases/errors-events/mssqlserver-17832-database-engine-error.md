@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37ca0222975528efcd722ec3c39f84ca570fc08b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda6c6038a4bdfce089d8523c2b4655d1b4d2d39
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186962"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362094"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -43,7 +43,7 @@ ms.locfileid: "48186962"
   
  トークンが正しく作成されなかったか、転送中に破損した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は問題に関する追加情報を提供できません。  
   
- ユーザーが多数のグループのメンバーであるか、多数のポリシーを持つ場合、それらすべてを一覧表示するトークンは通常よりも大きくなる可能性があります。 トークンがサーバー コンピューターの **MaxTokenSize** 値よりも大きくなると、クライアントは一般的なネットワーク エラー (GNE) によって接続に失敗し、エラー 17832 が発生することがあります。 この問題は、多数のグループに属しているか、多数のポリシーを持つ一部のユーザーのみに影響します。 問題の原因がサーバー コンピューターの **MaxTokenSize** 値である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログのエラー 17832 は、状態 9 のエラーを伴います。 Kerberos および **MaxTokenSize** の詳細については、[KB327825](http://support.microsoft.com/kb/327825) を参照してください。  
+ ユーザーが多数のグループのメンバーであるか、多数のポリシーを持つ場合、それらすべてを一覧表示するトークンは通常よりも大きくなる可能性があります。 トークンがサーバー コンピューターの **MaxTokenSize** 値よりも大きくなると、クライアントは一般的なネットワーク エラー (GNE) によって接続に失敗し、エラー 17832 が発生することがあります。 この問題は、多数のグループに属しているか、多数のポリシーを持つ一部のユーザーのみに影響します。 問題の原因がサーバー コンピューターの **MaxTokenSize** 値である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログのエラー 17832 は、状態 9 のエラーを伴います。 Kerberos および **MaxTokenSize** の詳細については、[KB327825](https://support.microsoft.com/kb/327825) を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  この問題を解決するには、サーバー コンピューターの **MaxTokenSize** 値を、組織内のユーザーの最も大きなトークンを格納できるサイズに増やします。 組織に適したトークン サイズを調べるには、**Tokensz** アプリケーションの使用を検討してください。   
@@ -51,7 +51,7 @@ ms.locfileid: "48186962"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **MaxTokenSize を変更する****サーバー コンピューター**   
+ **MaxTokenSize を変更する****サーバー コンピューター**  
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   

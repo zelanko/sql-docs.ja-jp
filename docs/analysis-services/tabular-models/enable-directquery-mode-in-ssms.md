@@ -1,5 +1,5 @@
 ---
-title: SSMS での DirectQuery モードを有効にする |Microsoft Docs
+title: SSMS で Analysis Services の DirectQuery モードで有効にする |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700590"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072209"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS での DirectQuery モードの有効化
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51700590"
 > [!IMPORTANT]  
 >  データ ストレージ モードを切り替えるには、Management Studio ではなく、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] の使用をお勧めします。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用してモデルを変更すると、サーバーにデプロイされ、モデルとデータベースが同期します。さらに、モデル内のストレージ モードを変更すると、発生した検証エラーを確認できます。 この記事で説明するように [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用すると、検証エラーは報告されません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  表形式モデルで DirectQuery モードを使用できるようにするには、複数の手順を行います。  
   
 -   モデルに DirectQuery モードで検証エラーが発生する機能がないことを確認し、モデルのデータ ストレージ モードをメモリ内から DirectQuery に変更します。  
@@ -44,7 +44,7 @@ ms.locfileid: "51700590"
   
 -   最後の手順として、DirectQuery モードがクエリを実行して動作することを確認します。  
   
-## <a name="step-1-check-the-compatibility-level"></a>手順 1: 互換性レベルを確認する  
+## <a name="step-1-check-the-compatibility-level"></a>手順 1:互換性レベルを確認してください。  
  データ アクセスを定義するプロパティは、互換性レベルで異なります。 準備の段階として、データベースがどの互換性レベルなのか確認してください。  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の場合、表形式モデルのあるインスタンスに接続します。  
@@ -55,7 +55,7 @@ ms.locfileid: "51700590"
   
  表形式モデルを DirectQuery モードに変更すると、すぐに新しいデータ ストレージ モードが有効になります。  
   
-## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>手順 2 a: 表形式 1200 データベースを DirectQuery モードに切り替える  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>手順 2 a:表形式 1200 データベースを DirectQuery モードに切り替える  
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[モデル]**  >  **[既定のモード]** の順にクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51700590"
     |**DirectQuery**|クエリは、モデルに定義されているデータ ソース接続を使用して、バックエンド リレーショナル データベースに対して実行されます。<br /><br /> モデルへのクエリは、ネイティブ データベース クエリに変換され、データ ソースにリダイレクトします。<br /><br /> モデル セットを DirectQuery モードで処理すると、メタデータのみがコンパイルされ、デプロイされます。 データ自体はモデルの外部にあり、稼動しているデータ ソースのデータベース ファイルに存在します。|  
     |**[インポート]**|クエリは、MDX または DAX の表形式データベースに対して実行されます。<br /><br /> モデル セットをインポート モードで処理すると、データはバックエンド データ ソースから取得され、ディスクに格納されます。 データベースがロードされると、非常に高速のテーブル スキャンやクエリが実行され、データ全体がメモリにコピーされます。<br /><br /> これは表形式モデルの既定のモードで、特定の (非リレーショナル) データ ソースに適応する唯一のモードです。|  
   
-## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>手順 2 a: 表形式 1100 から 1103 データベースを DirectQuery モードに切り替える  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>手順 2 b:表形式の 1100 から 1103 データベースを DirectQuery モードに切り替える  
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[データベース]**  >  **[DirectQueryMode]** の順にクリックします。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "51700590"
   
 -   モデルが配置された後、優先される接続方法を変更できます。 たとえば、テストにはハイブリッド モードを使用し、モデルを使用するレポートまたはクエリを完全にテストした後でのみ **DirectQuery のみ** のモードに切り替えることができます。 詳しくは、「 [DirectQuery の優先接続方法の設定または変更](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751)」をご覧ください。  
   
-## <a name="step-3-check-the-connection-properties-on-the-database"></a>手順 3: データベースの接続プロパティを確認する  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>手順 3:データベースの接続のプロパティを確認してください。  
  データ ソース接続のセットアップ方法に応じて、DirectQuery を切り替えると、接続のセキュリティ コンテキストを変更することができます。 データ アクセス モードを変更するときに、偽装や接続文字列プロパティをチェックして、バックエンド データベースに接続しているログインが有効であることを確認してください。  
   
  「 **Configure Analysis Services for Kerberos constrained delegation** 」の「 [信頼された委任用に Analysis Services を構成する](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 」セクションを確認します。こちらでは、DirectQuery シナリオのユーザー ID の委任について、その経緯を説明しています。  
@@ -114,7 +114,7 @@ ms.locfileid: "51700590"
   
  モデルをメモリ内でのみ使用する場合は、権限借用を使用できません。 モデルで DirectQuery モードを使用していない限り、 **ImpersonateCurrentUser**設定は無効です。  
   
-## <a name="step-4-validate-directquery-access"></a>手順 4: DirectQuery アクセスを検証する  
+## <a name="step-4-validate-directquery-access"></a>手順 4:DirectQuery アクセスを検証します。  
   
 1.  Management Studio で、SQL Server のリレーショナル データベースに接続しながら、SQL Server Profiler または xEvents を使用して、トレースを開始します。  
   

@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac31a6f55e365a208bd2a4d3d8f6690693775a0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 603eb8682b69a5f2abc3cd0f46adbd735de05170
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780249"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591376"
 ---
 # <a name="diagnostic-records-and-fields"></a>診断レコードと診断フィールド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47780249"
   
  状態レコード内のフィールドには、SQLSTATE、ネイティブ エラー番号、診断メッセージ、列番号、行番号など、ODBC ドライバー マネージャー、ドライバー、またはデータ ソースから返される特定のエラーや警告に関する情報が保存されます。 状態レコードは、関数から SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA、または SQL_STILL_EXECUTING が返された場合のみ作成されます。 状態レコードのフィールドの完全な一覧を参照してください。 **SQLGetDiagField**します。  
   
- **SQLGetDiagRec** ODBC SQLSTATE、ネイティブ エラー番号、診断メッセージ フィールドと 1 つの診断レコードを取得します。 この機能は、ODBC 2 に似ています。*x * * * SQLError** 関数。 ODBC 3 で最も簡単なエラー処理関数。*x*を繰り返し呼び出すことが**SQLGetDiagRec**以降では、 *RecNumber*パラメーター 1 とインクリメントに設定*RecNumber*まで 1**SQLGetDiagRec** sql_no_data が返されます。 これは、ODBC 2 に相当します。*x*アプリケーション呼び出し**SQLError** SQL_NO_DATA_FOUND が返されるまでです。  
+ **SQLGetDiagRec** ODBC SQLSTATE、ネイティブ エラー番号、診断メッセージ フィールドと 1 つの診断レコードを取得します。 この機能は、ODBC 2 に似ています。_x_**SQLError**関数。 ODBC 3 で最も簡単なエラー処理関数。*x*を繰り返し呼び出すことが**SQLGetDiagRec**以降では、 *RecNumber*パラメーター 1 とインクリメントに設定*RecNumber*まで 1**SQLGetDiagRec** sql_no_data が返されます。 これは、ODBC 2 に相当します。*x*アプリケーション呼び出し**SQLError** SQL_NO_DATA_FOUND が返されるまでです。  
   
  ODBC 3。*x* ODBC 2 よりもより多くの診断情報をサポートしています *。x*します。 この情報を使用して取得する診断レコードの追加フィールドに格納されます**SQLGetDiagField**します。  
   

@@ -1,5 +1,6 @@
 ---
-title: トレーニングし、T-SQL を使用して Python モデルの保存 |Microsoft Docs
+title: トレーニングし、T-SQL - SQL Server Machine Learning を使用して、Python モデルの保存
+description: Python のトレーニングし、SQL Server で TRANSACT-SQL を使用して、モデルを保存する方法を示すチュートリアル。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
@@ -7,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d3917678cb16462f065754dd389be53ae8cd6016
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032719"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645180"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>トレーニングし、T-SQL を使用して Python モデルの保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "51032719"
 
     このストアド プロシージャは、既に作成する必要がありますが、作成時に次のコードを実行することができます。
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
     GO
 
@@ -48,20 +49,10 @@ ms.locfileid: "51032719"
 
 2. カスタム分割を使用してデータを分割するには、ストアド プロシージャを実行し、トレーニング セットに割り当てられたデータの割合を表す整数を入力します。 たとえば、次のステートメントでは、データをトレーニング セットの 60% を割り当てます。
 
-    ```SQL
+    ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
-
-## <a name="add-a-name-column-in-nyctaximodels"></a>Nyc_taxi_models で name 列を追加します。
-
-このチュートリアルではスクリプトでは、生成されたモデルのラベルとしてモデル名を格納します。 モデル名は、revoscalepy または SciKit モデルを選択するクエリで使用されます。
-
-1. Management studio で開く、 **nyc_taxi_models**テーブル。
-
-2. 右クリック**列**クリック**新しい列**します。 列名を設定*名前*、型を持つ**nchar(250)** null を許容するとします。
-
-    ![モデル名を格納するための名前列](media/sqldev-python-newcolumn.png)
 
 ## <a name="build-a-logistic-regression-model"></a>ロジスティック回帰モデルを構築します。
 
@@ -78,7 +69,7 @@ ms.locfileid: "51032719"
 
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、新しく開きます**クエリ**ウィンドウとストアド プロシージャを作成する次のステートメントを実行**PyTrainScikit**します。  ストアド プロシージャには、入力クエリを提供する必要はありませんので、入力データの定義が含まれています。
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
@@ -117,7 +108,7 @@ ms.locfileid: "51032719"
 
 2. 次の実行にトレーニング済みモデルを挿入する SQL ステートメントのテーブル nyc\_taxi_models します。
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
@@ -136,11 +127,11 @@ ms.locfileid: "51032719"
 
 このストアド プロシージャは、新しい**revoscalepy**パッケージは、Python 用の新しいパッケージです。 オブジェクト、変換、および R 言語の提供するものと同様のアルゴリズムが含まれている**RevoScaleR**パッケージ。 
 
-使用して**revoscalepy**、リモート計算コンテキストを作成することができます、コンピューティング コンテキスト、データを変換、ロジスティック回帰と線形回帰、デシジョン ツリーなどの人気のあるアルゴリズムを使用して予測モデルをトレーニングの間でデータを移動し、もっとその。 詳細については、次を参照してください[revoscalepy とは何ですか?。](../python/what-is-revoscalepy.md)
+使用して**revoscalepy**、リモート計算コンテキストを作成することができます、コンピューティング コンテキスト、データを変換、ロジスティック回帰と線形回帰、デシジョン ツリーなどの人気のあるアルゴリズムを使用して予測モデルをトレーニングの間でデータを移動し、もっとその。 詳細については、次を参照してください。 [SQL Server で revoscalepy モジュール](../python/ref-py-revoscalepy.md)と[revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)します。
 
 1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、新しく開きます**クエリ**ウィンドウとストアド プロシージャを作成する次のステートメントを実行_TrainTipPredictionModelRxPy_します。  ストアド プロシージャには、入力データの定義が既に含まれているために、入力クエリを提供する必要はありません。
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
     GO
 
@@ -181,7 +172,7 @@ ms.locfileid: "51032719"
 
 2. 次のように、トレーニング済みの挿入にストアド プロシージャを実行**revoscalepy**モデル テーブルに*nyc_taxi_models*します。
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);

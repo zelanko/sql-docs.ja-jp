@@ -11,15 +11,15 @@ ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f06745f47bd78df8d9464c090afb46116594e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96b7798dcacc69b1de233b330b053b2d9a2bd776
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104802"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370084"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>PowerPivot の構成とソリューションの配置 (SharePoint 2013)
-  このトピックは、展開と PowerPivot の機能の中間層機能強化の構成について説明します。 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] PowerPivot ギャラリーを含む、データ更新、管理ダッシュ ボード、およびデータ プロバイダーをスケジュールします。 **PowerPivot for SharePoint 2013 の構成** ツールを実行して、以下を完了します。  
+  このトピックでは、PowerPivot ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーなどの [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] の PowerPivot 機能への中間層機能強化の展開および構成について説明します。 **PowerPivot for SharePoint 2013 の構成** ツールを実行して、以下を完了します。  
   
 -   SharePoint ソリューション ファイルを配置する。  
   
@@ -38,20 +38,20 @@ ms.locfileid: "48104802"
  [問題のトラブルシューティング](#bkmk_troubleshoot_issues)  
   
 ##  <a name="bkmk_run_configuration_tool"></a> PowerPivot for SharePoint 2013 の構成を実行します。  
- **注:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] セットアップ ウィザードでは、 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]の 2 種類の構成ツールがインストールされます。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
+ **注:**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]セットアップ ウィザードの 2 つの異なる構成ツールをインストールする[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]します。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
   
 |名前|説明|  
 |----------|-----------------|  
 |PowerPivot for SharePoint 2013 の構成|SharePoint 2013|  
 |PowerPivot 構成ツール|SharePoint 2010 Service Pack 1 (SP1)|  
   
- **注:** 次の手順を実行するには、ファーム管理者である必要があります。 次のようなエラー メッセージが表示される場合があります。  
+ **注:** 次の手順を完了するには、ファーム管理者があります。 次のようなエラー メッセージが表示される場合があります。  
   
--   "ユーザーはファームの管理者ではありません。 検証エラーを修正して、再試行してください。"  
+-   "ユーザーはファーム管理者ではありません。 検証エラーを修正して、再試行してください。"  
   
  SharePoint のインストール時に使用したアカウントでログインするか、SharePoint サーバーの全体管理サイトのプライマリ管理者としてセットアップ アカウントを構成します。  
   
-1.  **開始** メニューのをクリックして**すべてのプログラム**、順にクリックします[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、 をクリックして**構成ツール**、 をクリックし、 **PowerPivot For SharePoint2013 の構成**します。 ツールは、PowerPivot for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
+1.  **[スタート]** メニューの **[すべてのプログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]** をクリックし、 **[PowerPivot For SharePoint 2013 の構成]** をクリックします。 ツールは、PowerPivot for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
   
 2.  **[PowerPivot for SharePoint の構成または修復]** をクリックし、 **[OK]** をクリックします。  
   
@@ -59,15 +59,15 @@ ms.locfileid: "48104802"
   
 4.  **[パラメーター]** タブで、次の操作を行います。  
   
-    1.  **[既定のアカウント ユーザー名]:** 既定のアカウントのドメイン ユーザー アカウントを入力します。 このアカウントは、PowerPivot サービス アプリケーション プールなどのサービスを準備する際に使用します。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
+    1.  **既定のアカウントのユーザー名**:既定のアカウントのドメイン ユーザー アカウントを入力します。 このアカウントは、PowerPivot サービス アプリケーション プールなどのサービスを準備する際に使用します。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
   
-    2.  **[データベース サーバー]:** SharePoint ファームでサポートされている SQL Server データベース エンジンを使用できます。  
+    2.  **データベース サーバー**:SharePoint ファームのサポートされている SQL Server データベース エンジンを使用することができます。  
   
-    3.  **[パスフレーズ]:** パスフレーズを入力します。 新しい SharePoint ファームを作成する場合、SharePoint ファームにサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 ファームが既に存在する場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力してください。  
+    3.  **パスフレーズ**:パスフレーズを入力します。 新しい SharePoint ファームを作成する場合、SharePoint ファームにサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 ファームが既に存在する場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力してください。  
   
-    4.  **Excel Services 用 PowerPivot サーバー**: の名前を入力、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint モードのサーバー。 シングル サーバー配置では、データベース サーバーと同じサーバーです。 `[ServerName]\powerpivot`  
+    4.  **Excel 用 PowerPivot サーバーのサービス**:名前を入力、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint モードのサーバー。 シングル サーバー配置では、データベース サーバーと同じサーバーです。 `[ServerName]\powerpivot`  
   
-    5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]` になります。 既定値を変更するには、左側のウィンドウの **[既定の Web アプリケーションの作成]** ページおよび **[Web アプリケーション ソリューションの配置]** ページを確認します。  
+    5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]` になります。 変更するには、既定値は、左側のウィンドウで、次のページを確認します。**既定の Web アプリケーションを作成する**と**Web アプリケーション ソリューションの配置**  
   
 5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 それぞれの詳細については、セクションをご覧ください。"サーバーの構成に使用する入力値[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) in this トピック。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48104802"
   
      サービス アプリケーションの名前をクリックして、このサービス アプリケーションの PowerPivot 管理ダッシュボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
- 詳細については、次を参照してください。 [for SharePoint のインストール Verify a PowerPivot](../../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)します。  
+ 詳細については、「 [Verify a PowerPivot for SharePoint Installation](../../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)」を参照してください。  
   
 ##  <a name="bkmk_troubleshoot_issues"></a> 問題のトラブルシューティング  
  問題のトラブルシューティングに役立てるために、診断ログを有効にすることをお勧めします。  
@@ -135,8 +135,8 @@ ms.locfileid: "48104802"
   
 5.  **[OK]** をクリックします。  
   
- データのトラブルシューティングの更新の詳細については、次を参照してください。 [PowerPivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)します。  
+ データのトラブルシューティングの更新の詳細については、次を参照してください。 [PowerPivot データ更新のトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)します。  
   
- 構成ツールの詳細については、次を参照してください。 [PowerPivot 構成ツール](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)します。  
+ 構成ツールの詳細については、「 [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   
   

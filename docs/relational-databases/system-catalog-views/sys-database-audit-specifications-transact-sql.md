@@ -20,12 +20,12 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b91e302c48917454ba29210a2557caf558940a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604911"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522980"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47604911"
 |database_specification_id|**int**|データベース仕様の ID。|  
 |create_date|**datetime**|監査仕様が作成された日付。|  
 |modified_date|**datetime**|監査仕様が最後に変更された日付。|  
-|is_state_enabled|**bit**|監査仕様の状態。<br /><br /> 0 – DISABLED<br /><br /> 1 – ENABLED|  
+|is_state_enabled|**bit**|監査仕様の状態。<br /><br /> 0 - 無効<br /><br /> 1 - 有効になっています。|  
 |audit_GUID|**uniqueidentifer**|この仕様を含む監査の GUID。 データベースのインポートまたは起動時に、メンバー データベース監査仕様を列挙するときに使用されます。|  
   
 ## <a name="remarks"></a>コメント  
@@ -47,7 +47,7 @@ ms.locfileid: "47604911"
 ## <a name="permissions"></a>アクセス許可  
  持つプリンシパル、 **ALTER ANY DATABASE AUDIT**または**VIEW DEFINITION**このカタログ ビューにアクセス許可、dbo ロール、および db_owners の固定データベース ロールのメンバー アクセスします。 さらに、プリンシパル必要があります拒否されていない**VIEW DEFINITION**権限。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

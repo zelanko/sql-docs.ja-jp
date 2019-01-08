@@ -20,12 +20,12 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d6598d507f936af43b7c81734b6d67e7a4c0e7f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 842f7a9f677312501a92a42301017eedaee0f5d4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725390"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589146"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_type=** ] **'***job_type***'** ]  
+ [  **@job_type=** ] **'**_job_type_**'** ]  
  追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** 、既定値は**キャプチャ**します。 有効な入力は**キャプチャ**と**クリーンアップ**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -70,7 +70,7 @@ GO
 ```  
   
 ### <a name="b-starting-a-cleanup-job"></a>B. クリーンアップ ジョブを開始する  
- 次の例のクリーンアップ ジョブの開始、`AdventureWorks2012`データベース。  
+ 次の例では、`AdventureWorks2012` データベースのクリーンアップ ジョブを開始します。  
   
 ```  
 USE AdventureWorks2012;  

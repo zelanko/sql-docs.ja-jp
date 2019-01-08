@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 048e8d37c7988577586b996687aae9ea4b930664
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168052"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759404"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を使用する前に、このトピックで説明する製品の要件を検討してください。  
@@ -42,7 +41,7 @@ ms.locfileid: "48168052"
   
 -   `.trc` 拡張子を持つ 1 つのトレース ファイル。  
   
--   ファイル ロールオーバー名前付け規則に準拠したロールオーバー トレース ファイルのセット。例: `<TraceFile>.trc`、 `<TraceFile>_1.trc`、 `<TraceFile>_2.trc`、 `<TraceFile>_3.trc`、... `<TraceFile>_n.trc`」を参照してください。  
+-   ファイル ロールオーバー名前付け規則に準拠したロールオーバー トレース ファイルのセット。例: `<TraceFile>.trc`、`<TraceFile>_1.trc`、`<TraceFile>_2.trc`、`<TraceFile>_3.trc`、... `<TraceFile>_n.trc`。  
   
 ### <a name="input-trace-events-and-columns"></a>入力トレースのイベントと列  
  入力トレース データには、分散再生で再生される特定のイベントと列を含める必要があります。 **内の** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] テンプレートには、すべての必要なイベントおよび列と、追加情報が含まれています。 このテンプレートの詳細については、「 [再生を実行するための必要条件](../sql-server-profiler/replay-requirements.md)」を参照してください。  
@@ -159,7 +158,7 @@ ms.locfileid: "48168052"
  失われたログインや不正なログインに関連付けられたイベントを再生すると、再生エラーとなります。ただし、再生の処理は継続されます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 分散再生](sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [分散再生のセキュリティ](distributed-replay-security.md)   
  [分散再生のインストール](install-distributed-replay-overview.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -22,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199408"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376684"
 ---
 # <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
   **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用される SQL Server プロセス用に SQL Server Memory Manager によって管理されるメモリ量を MB 単位で再構成します。  
@@ -35,7 +34,7 @@ ms.locfileid: "48199408"
  **min server memory** の既定の設定は 0 MB で、 **max server memory** の既定の設定は 2,147,483,647 MB です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  
   
 > [!NOTE]  
->  **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、 **–f** 起動オプションを使用して起動し、 **max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](database-engine-service-startup-options.md)」を参照してください。  
+>  **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、**-f** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](database-engine-service-startup-options.md)」を参照してください。  
   
  メモリを動的に使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はシステムに定期的にクエリして、メモリの空き容量を確認します。 このようにメモリの空き容量を維持することによって、オペレーティング システム (OS) のページングが防止されます。 空きメモリが少ない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は OS に対してメモリを解放します。 空きメモリが多い場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより多くのメモリを割り当てることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってメモリが追加されるのは、ワークロードが高いためにメモリを増やす必要がある場合だけです。アクティブでないサーバーの仮想アドレス空間のサイズは増えません。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48199408"
 ## <a name="lock-pages-in-memory"></a>lock pages in memory  
  この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。 メモリ内のページをロックすると、ディスクへのメモリのページングが発生した際に、サーバーの応答性を維持できます。 SQL Server **Lock Pages in Memory**の 32 ビットおよび 64 ビットのインスタンスでオプションが ON に設定[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Standard edition およびより高い場合に sqlservr.exe の実行権限を持つアカウントに、Windows が付与されて"内の Locked ページMemory"(LPIM) ユーザー権利。 それよりも前のバージョンの SQL Server の場合、SQL Server の 32 ビット インスタンスで Lock Pages オプションを設定するには、sqlservr.exe の実行権限があるアカウントに LPIM のユーザー権利があること、さらに、'awe_enabled' 構成オプションがオンに設定されていることが必要となります。  
   
- **の** Lock Pages In Memory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションを無効にするには、SQL Server 開始アカウントに対する "Locked Pages in Memory" ユーザー権利を削除します。  
+ 無効にする、 **Lock Pages In Memory**オプション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、"Locked Pages in Memory"ユーザー、SQL Server 開始アカウントの権利を削除します。  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Lock Pages in Memory を無効にするには  
  **Lock pages in memory オプションを無効にします。**  
@@ -135,9 +134,9 @@ ms.locfileid: "48199408"
 |-|-------------|-------------|  
 |コンベンショナル メモリ|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでプロセス仮想アドレス空間制限まで:<br /><br /> 2 GB<br /><br /> 3 GB **3 gb**パラメーター * の起動<br /><br /> 4 GB wow64\*\*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでプロセス仮想アドレス空間制限まで:<br /><br /> 8 TB (x64 アーキテクチャの場合)|  
   
- ***/3gb** は、オペレーティング システムのブート パラメーターです。 詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
+ ***/3gb** は、オペレーティング システムのブート パラメーターです。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
   
- * * WOW64 (Windows on Windows 64) は 32 ビット モードであり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は 64 ビットのオペレーティング システムで実行されます。 詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
+ * * WOW64 (Windows on Windows 64) は 32 ビット モードであり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は 64 ビットのオペレーティング システムで実行されます。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
   
 ## <a name="examples"></a>使用例  
   

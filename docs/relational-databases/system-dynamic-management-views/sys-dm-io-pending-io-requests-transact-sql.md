@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd497cc466d7dfb11e471be2472b7d7b8bf534fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71fb4daabcdb0eef03e615f595df20d555673a24
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764780"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980208"
 ---
 # <a name="sysdmiopendingiorequests-transact-sql"></a>sys.dm_io_pending_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,14 +39,15 @@ ms.locfileid: "47764780"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**io_completion_request_address**|**varbinary(8)**|I/O 要求のメモリ アドレス。 NULL 値は許可されません。|  
-|**io_type**|**varchar(7)**|保留中の I/O 要求の種類。 NULL 値は許可されません。|  
-|**io_pending**|**int**|I/O 要求が Windows で保留されているか、完了しているかを示します。 でも Windows が完了すると、要求を保留中の I/O 要求ができますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を I/O 要求を処理し、この一覧から削除して、コンテキストが切り替えがまだ実行されていません。 NULL 値は許可されません。|  
+|**io_type**|**nvarchar(60)**|保留中の I/O 要求の種類。 NULL 値は許可されません。|  
+|**io_pending_ms_ticks**|**bigint**|内部使用のみです。 NULL 値は許可されません。| 
+|**io_pending**|**int**|I/O 要求が Windows で保留されているか、完了しているかを示します。 I/O 要求は、Windows で要求が完了していても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で I/O 要求を処理し、一覧から削除するコンテキスト切り替えがまだ実行されていない場合には、引き続き保留中になることがあります。 NULL 値は許可されません。|  
 |**io_completion_routine_address**|**varbinary(8)**|I/O 要求が完了したときに呼び出される内部関数。 NULL 値が許可されます。|  
 |**io_user_data_address**|**varbinary(8)**|内部使用のみです。 NULL 値が許可されます。|  
 |**scheduler_address**|**varbinary(8)**|I/O 要求が発行されたスケジューラ。 I/O 要求はスケジューラの保留中 I/O 一覧に表示されます。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)します。 NULL 値は許可されません。|  
 |**io_handle**|**varbinary(8)**|I/O 要求で使用されているファイルのファイル ハンドル。 NULL 値が許可されます。|  
 |**io_offset**|**bigint**|I/O 要求のオフセット。 NULL 値は許可されません。|  
-|**io_pending_ms_ticks**|**int**|内部使用のみです。 NULL 値は許可されません。|  
+|**io_handle_path**|**nvarchar (256)**| I/O 要求で使用されているファイルのパス。 NULL 値が許可されます。|
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  

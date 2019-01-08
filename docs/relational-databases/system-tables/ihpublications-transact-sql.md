@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublications_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 175d43ed9cd6165ee8670d558a5488f239a39b0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605170"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802784"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +58,8 @@ ms.locfileid: "47605170"
 |**centralized_conflicts**|**bit**|競合レコードがパブリッシャーに格納されるかどうかを示します。<br /><br /> **0** = 競合レコードはパブリッシャー側の両方と、競合の原因となったサブスクライバーで格納されます。<br /><br /> **1** = 競合レコードはパブリッシャーに格納されます。<br /><br /> *非 SQL パブリッシャーに対してサポートされていません。*|  
 |**conflict_retention**|**int**|競合の保有期間の日数を指定します。 *非 SQL パブリッシャーに対してサポートされていません。*|  
 |**conflict_policy**|**int**|キュー更新サブスクライバー オプションを使用するときの競合の解決方法。 これらの値のいずれかを指定できます。<br /><br /> **1** = パブリッシャー優先します。<br /><br /> **2** = サブスクライバー優先します。<br /><br /> **3** = サブスクリプションを再初期化します。<br /><br /> *非 SQL パブリッシャーに対してサポートされていません。*|  
-|**queue_type**|**int**|使用されるキューの種類。 これらの値のいずれかを指定できます。<br /><br /> **1** 、msmq を =[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューがトランザクションを格納します。<br /><br /> **2** = を使用して、sql[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納します。<br /><br /> この列は、以外では使用されません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> 注: を使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューは非推奨し、現在サポートされていません。<br /><br /> *このコラムでは、非 SQL パブリッシャーに対してはサポートされていません。*|  
-|**ad_guidname**|**sysname**|パブリケーションがパブリッシュされるかどうかを指定します、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory。 有効なグローバル一意識別子 (GUID) は、パブリケーションがパブリッシュされることを指定します、[!INCLUDE[msCoName](../../includes/msconame-md.md)]が対応する Active Directory パブリケーション オブジェクトの Active Directory、および GUID **objectGUID**します。 パブリケーションがパブリッシュされません NULL の場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory。 *非 SQL パブリッシャーに対してサポートされていません。*|  
+|**queue_type**|**int**|使用されるキューの種類。 これらの値のいずれかを指定できます。<br /><br /> **1** 、msmq を =[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューがトランザクションを格納します。<br /><br /> **2** = を使用して、sql[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納します。<br /><br /> この列は、以外では使用されません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> 注:[!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing は非推奨とされており、現在はサポートされていません。<br /><br /> *このコラムでは、非 SQL パブリッシャーに対してはサポートされていません。*|  
+|**ad_guidname**|**sysname**|パブリケーションが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory にパブリッシュされるかどうかを示します。 有効なグローバル一意識別子 (GUID) は、パブリケーションがパブリッシュされることを指定します、[!INCLUDE[msCoName](../../includes/msconame-md.md)]が対応する Active Directory パブリケーション オブジェクトの Active Directory、および GUID **objectGUID**します。 NULL の場合、パブリケーションは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory にパブリッシュされません。 *非 SQL パブリッシャーに対してサポートされていません。*|  
 |**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *非 SQL パブリッシャーに対してサポートされていません。*|  
 |**description**|**nvarchar (255)**|パブリケーションの説明エントリ。|  
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。<br /><br /> **0** = パブリケーションは共有ディストリビューション エージェントを使用して、パブリッシャー データベース/サブスクライバー データベースの各ペアが 1 つの共有エージェント。<br /><br /> **1** = このパブリケーション用のスタンドアロン ディストリビューション エージェントが存在します。|  

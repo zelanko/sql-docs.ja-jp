@@ -1,5 +1,5 @@
 ---
-title: 'タスク 5: クレンジングの結果を Excel ファイルをエクスポートする |Microsoft Docs'
+title: タスク 5:クレンジングの結果を Excel ファイルにエクスポートする |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b01c9394419a4e526969c4a8ecccaf262f576d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138172"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368214"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>タスク 5: Excel ファイルにクレンジングの結果をエクスポートする
-  ここでは、クレンジング アクティビティから Excel ファイルに結果をエクスポートします。 参照してください[エクスポート ステージ](http://msdn.microsoft.com/library/hh213061.aspx#Export)詳細についてはトピック。  
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>タスク 5:Excel ファイルにクレンジングの結果をエクスポートする
+  ここでは、クレンジング アクティビティから Excel ファイルに結果をエクスポートします。 参照してください[エクスポート ステージ](https://msdn.microsoft.com/library/hh213061.aspx#Export)詳細についてはトピック。  
   
 1.  右側のウィンドウで次のように選択します。 **Excel**の、**変換先の型**します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138172"
   
 7.  開く、 **Cleansed Supplier List.xls**次の操作を行います。  
   
-    1.  ワークシートで adventure-work.com を検索して、末尾が adventure-work.com (文字 's' が抜けている) の電子メール アドレスがないことを確認します。  
+    1.  Adventure-work.com で終わる電子メール アドレスがないことを確認します (文字のない ')、ワークシートで adventure-work.com を検索しています。  
   
     2.  あることを確認しない**USA**値、**国**列。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48138172"
     5.  削除、 **Address Validation**列、スプレッドシートから、excel ファイルを保存します。 この追加列は Address Validation 複合ドメインに対応します。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 6: Cleanse Supplier List プロジェクトから値をインポートする](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [タスク 6:値をインポート、Cleanse Supplier List プロジェクト](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

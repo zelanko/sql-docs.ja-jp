@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edcc54e1915e0fe78ace560c0d7db7d52509e2c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106732"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372524"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
   次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスのフィールドとして定義されています。  
@@ -45,7 +44,7 @@ ms.locfileid: "48106732"
 -   [データ フロー コンポーネントのエラー メッセージ (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> エラー メッセージ  
- シンボル名は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]エラー メッセージが始まる`DTS_E_`します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_E_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -194,7 +193,7 @@ ms.locfileid: "48106732"
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|指定されたパッケージ パスにパッケージ名が含まれていません。 このエラーは、パスに円記号またはスラッシュがまったく含まれていない場合に発生します。|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|フォルダー "%1" が見つかりません。|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|SQL のフォルダーを検索中に、OLE DB エラーが発生し、エラー コード 0x%1!8.8X! (%2) が検出されました。|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|SSIS ログ記録プロバイダーは、ログを開けませんでした。 エラー コード: 0x%1!8.8X!。|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|SSIS ログ記録プロバイダーは、ログを開けませんでした。 エラー コード:0x%1!8.8x! です。|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|エラー 0x%1!8.8X! "%2" により、ConnectionInfos コレクションを取得できませんでした 。 このエラーは、IDTSApplication100::get_ConnectionInfos への呼び出しが失敗した場合に発生します。|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|変数をロックしようとしたときに、デッドロックが検出されました。 16 回試行しましたがロックを取得できません。 ロックはタイムアウトしました。|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|VariableDispenser から Variables コレクションが返されませんでした。 ディスペンサーで管理されているコレクションのみで許可されている操作が試行されました。|  
@@ -374,9 +373,9 @@ ms.locfileid: "48106732"
 |0xC00220E2|-1073602334|DTS_E_TKEXECPACKAGE_INCORRECTCONNECTIONMANAGERTYPE|接続マネージャー "%1" は、サポートされていない種類 "%2" です。 ファイル接続マネージャーおよび OLE DB 接続マネージャーのみがサポートされています。|  
 |0xC00220E3|-1073602333|DTS_E_TKEXECPACKAGE_UNABLETOLOADXML|エラー 0x%1!8.8X! がパッケージ ファイル "%3" を XML ドキュメントに読み込み中に発生しました。 %2。|  
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|エラー 0x%1!8.8X! がパッケージの読み込みを準備中に発生しました。 %2。|  
-|0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|タスクの Validate メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が返されました。 タスクの Validate メソッドが成功し、"out" パラメーターを使用して結果が示される必要があります。|  
+|0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|タスクの Validate メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Validate メソッドが成功し、"out" パラメーターを使用して結果が示される必要があります。|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|タスクの Execute メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Execute メソッドは成功し、"out" パラメーターを使用して結果が示される必要があります。|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|タスク "%1" で依存関係を取得中にエラー 0x%2!8.8X! が 発生しました。 エラーが発生したとき、ランタイムがタスクの依存関係のコレクションから依存関係を取得しようとしていました。 タスクにより、いずれかの依存関係のインターフェイスが正しく実装されなかった可能性があります。|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|タスク"%1"でエラーが発生しました。0x%2!8.8X! 発生しました。 エラーが発生したとき、ランタイムがタスクの依存関係のコレクションから依存関係を取得しようとしていました。 タスクにより、いずれかの依存関係のインターフェイスが正しく実装されなかった可能性があります。|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|タスクの検証中にエラーが発生しました。|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|接続文字列の形式が無効です。 セミコロンで区切った X=Y という形式が 1 つ以上含まれている必要があります。 このエラーは、データベース接続マネージャーに、コンポーネントを持たない接続文字列が設定されている場合に発生します。|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|接続文字列コンポーネントには、引用符で囲まれていないセミコロンを含めることはできません。 値にセミコロンを含める必要がある場合は、値全体を引用符で囲みます。 このエラーは、InitialCatalog プロパティなどの接続文字列の値に引用符で囲まれていないセミコロンが含まれている場合に発生します。|  
@@ -569,7 +568,7 @@ ms.locfileid: "48106732"
 |0xC00291BE|-1073573442|DTS_E_SCRIPTTASK_INVALID_SCRIPT_LANGUAGE|指定されたスクリプト言語は無効です。|  
 |0xC00291BF|-1073573441|DTS_E_SCRIPTTASK_INVALID_ENTRY_POINT|エントリ ポイントが見つかりません。|  
 |0xC00291C0|-1073573440|DTS_E_SCRIPTTASK_LANGUAGE_EMPTY|スクリプト言語が指定されていません。 有効なスクリプト言語が指定されていることを確認してください。|  
-|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|ユーザー インターフェイスの初期化: タスクが NULL です。|  
+|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|ユーザー インターフェイスの初期化:タスクが null です。|  
 |0xC00291C2|-1073573438|DTS_E_SCRIPTTASK_UI_INITIALIZATION_WITH_WRONG_TASK|スクリプト タスクのユーザー インターフェイスが、正しくないタスクで初期化されています。|  
 |0xC00291C3|-1073573437|DTS_E_SENDMAILTASK_RECIPIENT_EMPTY|受信者が指定されていません。|  
 |0xC00291C4|-1073573436|DTS_E_SENDMAILTASK_SMTP_SERVER_NOT_SPECIFIED|簡易メール転送プロトコル (SMTP) サーバーが指定されていません。 SMTP サーバーの有効な名前または IP アドレスを指定してください。|  
@@ -790,7 +789,7 @@ ms.locfileid: "48106732"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|少なくとも 1 つの転送元ファイルを指定してください。|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|転送元データベース "%2" に、ファイル "%1" が見つかりませんでした。|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|U.S. FIPS 140-2 と互換性のあるシステムでは、要求された操作は許可されません。|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|クエリ "%1" の実行が次のエラーで失敗しました: "%2"。 考えられるエラーの理由: クエリに問題がある、"ResultSet" プロパティが正しく設定されていない、パラメーターが正しく設定されていない、または接続が正しく確立されていない。|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|クエリ "%1" の実行が次のエラーで失敗しました: "%2"。 考えられるエラーの理由:クエリでは、"ResultSet"プロパティ正しく設定されていない、パラメーターが正しく設定されていないまたは正しく確立されていない接続の問題。|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|XML ファイルからストアド プロシージャ名の読み取り中にエラーが発生しました。|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|ストアド プロシージャ転送タスクでは無効なデータ ノードです。|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|接続 "%1" の種類は、"SMOServer" ではありません。|  
@@ -1064,7 +1063,7 @@ ms.locfileid: "48106732"
 |0xC00470B8|-1073450824|DTS_E_EXPREVALILLEGALESCAPEINSTRINGLITERAL|文字列リテラル "%1" に、無効なエスケープ シーケンス "\\%2!c!" が含まれています。 このエスケープ シーケンスは、式エバリュエーターの文字列リテラルでサポートされていません。 文字列に円記号が必要な場合は、2 つの円記号 "\\\\" を続けて入力してください。|  
 |0xC00470B9|-1073450823|DTS_E_NOOUTPUTCOLUMNS|"%1" には出力列が含まれていません。 非同期出力には出力列が必要です。|  
 |0xC00470BA|-1073450822|DTS_E_LOBDATATYPENOTSUPPORTED|"%1" には、サポートされていない大きなサイズのオブジェクトのデータ型 (DT_TEXT、DT_NTEXT、または DT_IMAGE) があります。|  
-|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|出力 ID %1!d!  が複数のエラー出力の構成に指定されました。 最初は %2!d! と %3!d!、次は %4!d! と %5!d! です。|  
+|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|出力 ID %1!d! が複数のエラー出力の構成に指定されました。 最初は %2!d! と %3!d!、次は %4!d! と %5!d! です。|  
 |0xC00470BC|-1073450820|DTS_E_FAILEDDURINGOLEDBDATATYPECONVERSIONCHECK|OLE DB プロバイダーが、"%1" のデータ型変換の確認中に失敗しました。|  
 |0xC00470BD|-1073450819|DTS_E_BUFFERISEOR|このバッファーは行セットの末尾を表すので、その行数を変更できません。  行セット フラグの末尾を保持するバッファーで AddRow または RemoveRow が呼び出されました。|  
 |0xC00470BE|-1073450818|DTS_E_EXPREVALUNSUPPORTEDTYPE|データ型 "%1" は、式ではサポートされていません。 指定した型がサポートされていないか、無効です。|  
@@ -1114,7 +1113,7 @@ ms.locfileid: "48106732"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|値 %1!d! は 指定された NULL 関数の小数点以下桁数のパラメーターに指定された値 %1!d! が範囲外です。 小数点以下桁数は %3!d! から %4!d! までの範囲で指定する必要があります。 小数点以下桁数は、有効桁数よりも大きい値にすることも負の値にすることもできません。|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|値 %1!d! は 指定された "NULL" 関数の長さのパラメーターに指定された値 %1!d! は、負の値なので無効です。 長さには正の値を指定してください。|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|%1 には負の値を代入できません。|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2" の "%1" カスタム プロパティを True に設定できません。  列のデータ型には次のいずれかを指定する必要があります: DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4、DT_UI8、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAMPOFFSET、DT_DATE、DT_DBDATE、DT_DBTIME、DT_DBTIME2、または DT_FILETIME。|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2" の "%1" カスタム プロパティを True に設定できません。  列のデータ型は、次のいずれかを指定する必要があります。DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4、DT_UI8、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAMPOFFSET、DT_DATE、DT_DBDATE、DT_DBTIME、DT_DBTIME2、または DT_FILETIME。|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|"%1" を再アタッチできません。 パスを削除し、新しいパスを追加してから、アタッチしてください。|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|関数 "%1" に必要なパラメーター数は %3!d! ではなく %2!d! です。 関数名は認識されましたが、パラメーター数が無効です。|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|関数 "%1" に必要なパラメーター数は %3!d! ではなく %2!d! です。 関数名は認識されましたが、パラメーター数が無効です。|  
@@ -1237,15 +1236,15 @@ ms.locfileid: "48106732"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|参照変換がユーザーからキャンセル要求を受け取りました。|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|4 GB の制限に達したため、文字またはバイナリ ラージ オブジェクト (LOB) の処理が停止しました。|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|マネージド パイプライン コンポーネント "%1" を読み込めませんでした。  例外: %2。|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS エラー コード DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: 64 ビット バージョンの SSIS では OLE DB プロバイダーを使用できないため、Excel 接続マネージャーがサポートされません。|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS エラー コード DTS_E_OLEDB_EXCEL_NOT_SUPPORTED:OLE DB プロバイダーと、Excel 接続マネージャーは、SSIS の 64 ビット バージョンでサポートされていません。|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|キャッシュ ファイルが破損しているか、ファイルがキャッシュ接続マネージャーを使用して作成されませんでした。  有効なキャッシュ ファイルを指定してください。|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|SQL コマンドが正しく設定されていません。 SQLCommand プロパティを確認してください。|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|COM エラー オブジェクト情報があります。  ソース: "%1" エラー コード: 0x%2!8.8X!  説明: "%3"。|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|COM エラー オブジェクト情報があります。  ソース:"%1"のエラー コード:0x%2!8.8X!  説明: "%3"。|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|取得した接続にアクセスできません。|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|列数が正しくありません。|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|列 "%1" がデータ ソースに見つかりません。|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|OLE DB レコードを使用できます。  ソース: "%1" Hresult: 0x%2!8.8X!  説明: "%3"。|  
-|0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS エラー コード DTS_E_OLEDBERROR。  OLE DB エラーが発生しました。 エラー コード: 0x%1!8.8X!。|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|OLE DB レコードを使用できます。  ソース:"%1"の Hresult。0x%2!8.8X!  説明: "%3"。|  
+|0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS エラー コード DTS_E_OLEDBERROR。  OLE DB エラーが発生しました。 エラー コード:0x%1!8.8x! です。|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|コンポーネントの接続は完了しています。 コンポーネントに接続する前に、接続を切断する必要があります。|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|プロパティ "%1" の値が正しくありません。|  
 |0xC020200E|-1071636466|DTS_E_CANNOTOPENDATAFILE|データ ファイル "%1" を開けません。|  
@@ -1687,7 +1686,7 @@ ms.locfileid: "48106732"
 |0xC0208301|-1071611135|DTS_E_TXCHARMAP_INVALIDMAPFLAGANDDATATYPE|列 "%1" のデータ型を指定どおりにマップできません。|  
 |0xC0208302|-1071611134|DTS_E_TXFUZZYLOOKUP_UNSUPPORTED_MATCH_INDEX_VERSION|既存の一致インデックス "%2" のバージョン (%1) はサポートされていません。 予期していたバージョンは "%3" です。 このエラーは、インデックス メタデータに保存されているバージョンが現在のコードが構築されたときのバージョンと一致しない場合に発生します。 現在のバージョンのコードを使用してインデックスを再構築することで、エラーを修正してください。|  
 |0xC0208303|-1071611133|DTS_E_TXFUZZYLOOKUP_INVALID_MATCH_INDEX|テーブル "%1" は、構築済みの有効な一致インデックスではないようです。 このエラーは、メタデータ レコードを指定された構築済みのインデックスから読み込めない場合に発生します。|  
-|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|指定された構築済みの一致インデックス "%1" を読み取れません。  OLEDB エラー コード: 0x%2!8.8X!。|  
+|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|指定された構築済みの一致インデックス "%1" を読み取れません。  OLEDB エラー コード:0x%2!8.8X!|  
 |0xC0208305|-1071611131|DTS_E_TXFUZZYLOOKUP_NO_JOIN_COLUMNS|参照テーブル列への有効な結合が指定された入力列はありませんでした。  少なくとも 1 つの結合が、入力列プロパティ JoinToReferenceColumn および JoinType で定義されていることを確認してください。|  
 |0xC0208306|-1071611130|DTS_E_TXFUZZYLOOKUP_INDEX_DOES_NOT_CONTAIN_COLUMN|指定された既存の一致インデックス "%1" は、もともと列 "%2" のあいまい一致情報を使用して構築されていませんでした。  この情報を含めるために、既存の一致インデックスを再構築する必要があります。 このエラーは、インデックスがあいまい結合列以外の列を使用して構築された場合に発生します。|  
 |0xC0208307|-1071611129|DTS_E_TXFUZZYLOOKUP_IDENTIFIER_PROPERTY|プロパティ "%2" に指定された名前 "%1" は、有効な SQL 識別子名ではありません。 このエラーは、プロパティの名前が、有効な SQL 識別子名の仕様に準拠していない場合に発生します。|  
@@ -1992,8 +1991,8 @@ ms.locfileid: "48106732"
 |0xC02092B5|-1071607115|DTS_E_COMMITFAILED|コミットに失敗しました。|  
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|カスタム プロパティ "%1" (%2 上) は ANSI ファイルでのみ使用できます。|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|カスタム プロパティ "%1" (%2 上) は DT_BYTES でのみ使用できます。|  
-|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。 エラー コード: 0x%1!8.8X!。|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。使用できる 64 ビット プロバイダーが存在しない可能性があります。  エラー コード: 0x%1!8.8X!。|  
+|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。 エラー コード:0x%1!8.8x! です。|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。使用できる 64 ビット プロバイダーが存在しない可能性があります。  エラー コード:0x%1!8.8x! です。|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|キャッシュ列 "%1" が複数の列にマップされています。 重複する列マッピングを削除してください。|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|%1 は有効なキャッシュ列にマップされていません。|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|入力列 "%1" とキャッシュ列 "%2" は、データ型が一致しないため、マップすることができません。|  
@@ -2013,8 +2012,8 @@ ms.locfileid: "48106732"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|要素 "%2" で、"%1" の XML スキーマ データ型情報が変更されています。  このコンポーネントのメタデータを再度初期化して、列マッピングを確認してください。|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 は、結合またはコピーで使用されていません。 入力列の一覧から未使用の列を削除してください。|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|入力バッファーの並べ替え中に、スタック オーバーフローによって並べ替えが失敗しました。  データ フロー タスクの DefaultBufferMaxRows プロパティを小さくしてください。|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|接続文字列の PROVIDER を %1 に変更することを検討するか、 http://www.microsoft.com/downloads にアクセスして %2 のサポートを探しインストールしてください。|  
-|||DTS_E_INITTASKOBJECTFAILED|タスク オブジェクトを初期化できませんでした。タスク "%1!s!"、型 "%2!s!"。 エラー: 0x%3!8.8X! "  %4!s!"。|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|接続文字列の PROVIDER を %1 に変更することを検討するか、 https://www.microsoft.com/downloads にアクセスして %2 のサポートを探しインストールしてください。|  
+|||DTS_E_INITTASKOBJECTFAILED|タスク オブジェクトを初期化できませんでした。タスク "%1!s!"、型 "%2!s!"。 エラー: 0x%3!8.8X! " %4!s!"。|  
 |||DTS_E_GETRTINTERFACEFAILED|COM コンポーネント カテゴリ マネージャーを作成できませんでした。エラー: 0x%1!8.8X! "%2!s!"。|  
 |||DTS_E_COMPONENTINITFAILED|エラー 0x%2!8.8X! " %3!s!" によって コンポーネント %1!s! の初期化に失敗しました 。|  
   
@@ -2037,7 +2036,7 @@ ms.locfileid: "48106732"
 |0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|構成エントリ "%1" の形式が正しくありませんでした。 このエラーは、区切り記号がないか、配列の区切り記号が無効であるなどの形式エラーが原因で発生する可能性があります。|  
 |0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|親変数のコレクションがなかったので、親変数 "%1" からの構成が行われませんでした。|  
 |0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|次の構成ファイルをインポート中にエラーが発生しました: "%1"。|  
-|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|親変数がなかったので、親変数 "%1" からの構成が行われませんでした。 エラー コード: 0x%2!8.8X!。|  
+|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|親変数がなかったので、親変数 "%1" からの構成が行われませんでした。 エラー コード:0x%2!8.8X!|  
 |0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|構成ファイルは空であり、構成エントリが含まれていませんでした。|  
 |0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|構成 "%1" の構成の種類が無効です。 このエラーは、構成オブジェクトの種類プロパティを無効な構成の種類に設定しようとしたときに発生することがあります。|  
 |0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|レジストリ構成の構成の種類が、キー "%1" に見つかりませんでした。 レジストリ キーに ConfigType という値を追加し、"Variable"、"Property"、"ConnectionManager"、"LoggingProvider"、"ForEachEnumerator" のいずれかの文字列値を設定してください。|  
@@ -2125,7 +2124,7 @@ ms.locfileid: "48106732"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|コンポーネント %2 の "%1" 値が見つかりません。 コンポーネントの CurrentVersion 値が見つかりません。 このエラーは、DTSInfo セクションに CurrentVersion 値を含むようにコンポーネントのレジストリ情報が設定されていない場合に発生します。 このメッセージは、コンポーネントが正しく登録されていない状態で、コンポーネントを開発していたり、コンポーネントをパッケージで使用しているときに表示されます。|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|バッファー マネージャーは一時ファイルの名前を取得できませんでした。|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|バッファー マネージャーはパス "%1" に一時ファイルを作成できませんでした。 このパスは一時保存域として見なされません。|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告: パフォーマンス DLL と通信するためのグローバル共有メモリを開けなかったため、データ フロー パフォーマンス カウンターは使用できません。  解決するには、このパッケージを管理者として実行するか、システムのコンソールで実行してください。|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告:パフォーマンス DLL との通信にグローバル共有メモリを開けませんでした。データ フロー パフォーマンス カウンターは使用できません。  解決するには、このパッケージを管理者として実行するか、システムのコンソールで実行してください。|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|ファイルの末尾に不完全な行があります。|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|ヘッダー行の読み取り中に、データ ファイルの末尾に到達しました。 ヘッダー行の区切り記号とスキップするヘッダー行数が正しいことを確認してください。|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|OLE DB プロバイダーから列コード ページ情報を取得できません。  コンポーネントで "%1" プロパティがサポートされている場合は、そのプロパティのコード ページを使用します。  現在の文字列のコード ページの値が正しくない場合は、プロパティの値を変更してください。  コンポーネントでこのプロパティがサポートされていない場合は、コンポーネントのロケール ID のコード ページを使用します。|  
@@ -2264,7 +2263,7 @@ ms.locfileid: "48106732"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 変換先 "%1" の挿入コミット サイズの最大値プロパティは 0 に設定されています。 このプロパティの設定により、実行中のパッケージは応答を停止する可能性があります。 詳細については、[OLE DB 変換先エディター] ([接続マネージャー] ページ) の F1 ヘルプ トピックを参照してください。|  
   
 ##  <a name="msgGeneral"></a> 一般的なメッセージおよびイベント メッセージ  
- シンボル名は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]エラー メッセージが始まる`DTS_MSG_`します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_MSG_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2303,7 +2302,7 @@ ms.locfileid: "48106732"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|イベント名: %1<br /><br /> メッセージ: %9<br /><br /> 演算子: %2<br /><br /> ソース名: %3<br /><br /> ソース ID: %4<br /><br /> 実行 ID: %5<br /><br /> 開始時刻: %6<br /><br /> 終了時刻: %7<br /><br /> データ コード: %8|  
   
 ##  <a name="msgSuccess"></a> 成功時のメッセージ  
- シンボル名は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]成功メッセージが始まる`DTS_S_`します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、`DTS_S_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  

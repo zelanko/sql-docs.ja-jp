@@ -15,12 +15,12 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125042"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541411"
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースでは、フルテキストが既定で有効になっています。 ただし、テーブルでフルテキスト インデックスを使用するには、Full-Text Engine を使用してアクセスするテーブルの列に対してフルテキスト インデックス作成機能をセットアップする必要があります。  
@@ -51,7 +51,7 @@ ms.locfileid: "48125042"
   
 2.  テーブルまたはインデックス付きビューで、フルテキスト インデックスを作成する。  
   
-     フルテキスト インデックスは、Full-Text Engine により構築および管理されるトークンベースの特殊な機能インデックスです。 テーブルまたはビューにフルテキスト検索を作成するには、そのテーブルまたはビューに、単一列で非 NULL 値の一意なインデックスが作成されている必要があります。 Full-Text Engine では、テーブルの各行を一意の圧縮可能なキーにマップするために、この一意のインデックスが必要になります。 フルテキスト インデックスを含めることができます`char`、 `varchar`、 `nchar`、 `nvarchar`、 `text`、 `ntext`、 `image`、 `xml`、 `varbinary`、および`varbinary(max)`列。 詳細については、「 [フルテキスト インデックスの作成と管理](create-and-manage-full-text-indexes.md)」をご覧ください。  
+     フルテキスト インデックスは、Full-Text Engine により構築および管理されるトークンベースの特殊な機能インデックスです。 テーブルまたはビューにフルテキスト検索を作成するには、そのテーブルまたはビューに、単一列で非 NULL 値の一意なインデックスが作成されている必要があります。 Full-Text Engine では、テーブルの各行を一意の圧縮可能なキーにマップするために、この一意のインデックスが必要になります。 フルテキスト インデックスには、`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary`、`varbinary(max)` 型の列を含めることができます。 詳細については、「 [フルテキスト インデックスの作成と管理](create-and-manage-full-text-indexes.md)」をご覧ください。  
   
  フルテキスト インデックスの作成について学習する前に、フルテキスト インデックスと標準の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インデックスの違いを見ることが重要です。 次の表に、両方のインデックスの相違点を示します。  
   
@@ -129,7 +129,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  通常、カタログ全体の作成を実行している間は、結果として 1 が返されます。  
   
   
-##  <a name="example"></a> 例: フルテキスト検索のセットアップ  
+##  <a name="example"></a> 例:フルテキスト検索のセットアップ  
  次の 2 部構成の例では、AdventureWorks データベースに `AdvWksDocFTCat` という名前のフルテキスト カタログを作成し、次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の `Document` テーブルにフルテキスト インデックスを作成します。 このステートメントによって、セットアップ時に指定した既定のディレクトリ内にフルテキスト カタログが作成されます。 `AdvWksDocFTCat` というフォルダーが既定のディレクトリ内にあります。  
   
 1.  `AdvWksDocFTCat` という名前のフルテキスト カタログを作成するために、この例では、[CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) ステートメントを使用します。  
@@ -161,7 +161,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     この例で定義する TYPE COLUMN では、"Document" 列 (バイナリ型) の各行のドキュメント型が含まれる、テーブルの型列を指定します。 この型列には、特定の行のドキュメントのユーザー指定ファイル拡張子 (".doc"、".xls" など) が格納されます。 Full-Text Engine では、特定の行のファイル拡張子を使用して、その行のデータを解析するために使用する正しいフィルターを呼び出します。 その行のバイナリ データをフィルターが解析した後、指定されたワード ブレーカーがコンテンツを解析します (この例では、英語 (U.K.) のワード ブレーカーを使用します)。 フィルター処理が行われるのは、インデックス作成時か、フルテキスト インデックスへの自動変更追跡が有効になっている場合にユーザーがベース テーブルで列を挿入または列を更新したときだけである点に注意してください。 詳細については、「 [検索用フィルターの構成と管理](configure-and-manage-filters-for-search.md)」を参照してください。  
+     この例で定義する TYPE COLUMN では、"Document" 列 (バイナリ型) の各行のドキュメント型が含まれる、テーブルの型列を指定します。 型の列は、特定の行で、ユーザー指定のファイル拡張機能-".doc"、".xls"などとなどのドキュメントを格納します。 Full-Text Engine では、特定の行のファイル拡張子を使用して、その行のデータを解析するために使用する正しいフィルターを呼び出します。 その行のバイナリ データをフィルターが解析した後、指定されたワード ブレーカーがコンテンツを解析します (この例では、英語 (U.K.) のワード ブレーカーを使用します)。 フィルター処理が行われるのは、インデックス作成時か、フルテキスト インデックスへの自動変更追跡が有効になっている場合にユーザーがベース テーブルで列を挿入または列を更新したときだけである点に注意してください。 詳細については、「 [検索用フィルターの構成と管理](configure-and-manage-filters-for-search.md)」を参照してください。  
   
   
 ##  <a name="tasks"></a> 一般的なタスク  

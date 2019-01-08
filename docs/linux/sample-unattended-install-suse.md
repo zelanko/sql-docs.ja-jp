@@ -1,5 +1,6 @@
 ---
-title: SUSE Linux Enterprise Server 上の SQL Server の無人インストール |Microsoft Docs
+title: SUSE Linux Enterprise Server 上の SQL Server の無人インストール
+titleSuffix: SQL Server
 description: SQL Server のスクリプト サンプル - SUSE Linux Enterprise server の無人インストール
 author: rothja
 ms.author: jroth
@@ -7,16 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 9eb7c5585cd752719e7294fea96abe0c0d66a512
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33341becf4c441383fda90fbc6f3d95e09a6d56d
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650830"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160510"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server のサンプル: SQL Server の無人インストール スクリプト
+# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>サンプル:SUSE Linux Enterprise Server の無人インストール用の SQL Server のインストール スクリプト
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

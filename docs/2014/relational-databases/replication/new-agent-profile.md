@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.newperfprofile.f1
@@ -15,12 +14,12 @@ ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f817afb2364728b93718f9dc5831b501f681d9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070612"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780294"
 ---
 # <a name="new-agent-profile"></a>[新しいエージェント プロファイル]
   **[新しいエージェント プロファイル]** ダイアログ ボックスを使用すると、新しいプロファイルを作成できます。 新しいプロファイルは常に既存のプロファイルに基づきますが、アプリケーション要件に一致するように変更することもできます。 プロファイルを作成したら、 **[エージェント プロファイル]** ダイアログ ボックスで、既存のエージェントおよび今後のエージェントのジョブに適用できます。 エージェントのパラメーター値は、[\<**AgentProfileName> のプロパティ]** ダイアログ ボックスで編集できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "48070612"
  **名前**  
  プロファイルの名前を入力します。  
   
- **Description**  
+ **[説明]**  
  プロファイルの説明を入力します。  
   
  **パラメーター**  
@@ -54,7 +53,7 @@ ms.locfileid: "48070612"
  **[このプロファイルに使用されているパラメーターのみ表示する]**  
  指定されたエージェントに有効なパラメーターをすべて表示するにはオフにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション エージェント プロファイルの操作](agents/work-with-replication-agent-profiles.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)   
  [レプリケーション エージェント プロファイル](agents/replication-agent-profiles.md)  

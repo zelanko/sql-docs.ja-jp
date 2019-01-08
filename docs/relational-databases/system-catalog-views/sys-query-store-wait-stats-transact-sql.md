@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169142"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521251"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
 
@@ -40,8 +40,8 @@ ms.locfileid: "49169142"
 |**runtime_stats_interval_id**|**bigint**|外部キーです。 結合[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)します。|  
 |**wait_category**|**tinyint**|待機の種類は、次の表を使用して、分類されにわたって待機時間を集計し、これらの待機のカテゴリ。 待機カテゴリによって異なりますが、問題を解決するが、同じカテゴリの潜在顧客から同様のトラブルシューティング エクスペリエンスへの型を待機する場合は、さまざまなフォロー アップ分析を必要とし、不足している部分を完了するには、待機にさらに、影響を受けるクエリを提供する、このような調査の大半が正常にします。|
 |**wait_category_desc**|**nvarchar(128)**|待機のカテゴリ フィールドの説明テキストは、次の表を参照してください。|
-|**execution_type**|**tinyint**|クエリの実行の種類を決定します。<br /><br /> 0 ～ 通常の実行 (が正常に完了)<br /><br /> 3 – クライアントによって起動される実行を中止します。<br /><br /> 4-例外は、実行を中止します。|  
-|**execution_type_desc**|**nvarchar(128)**|実行の種類のフィールドの説明テキスト。<br /><br /> 0 – 標準<br /><br /> 3 – が中止されました<br /><br /> 4-例外|  
+|**execution_type**|**tinyint**|クエリの実行の種類を決定します。<br /><br /> 0 - 通常の実行 (が正常に完了)<br /><br /> 3-クライアントによる実行を中止<br /><br /> 4-例外は、実行を中止します。|  
+|**execution_type_desc**|**nvarchar(128)**|実行の種類のフィールドの説明テキスト。<br /><br /> 0 - 標準<br /><br /> 3-中止<br /><br /> 4-例外|  
 |**total_query_wait_time_ms**|**bigint**|合計`CPU wait`集計間隔内でクエリ プランの時間し、待機のカテゴリ (ミリ秒単位で報告されます)。|
 |**avg_query_wait_time_ms**|**float**|平均の待機時間 (ミリ秒単位で報告されます)、集計間隔と待機カテゴリ内の実行ごとのクエリ プラン。|
 |**last_query_wait_time_ms**|**bigint**|最後に、集計間隔内でクエリ プランの待機時間と待機のカテゴリ (ミリ秒単位で報告されます)。|
