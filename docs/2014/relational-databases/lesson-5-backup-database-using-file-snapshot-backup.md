@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 6: ソースからのデータベースの移行のターゲット コンピューターに Windows Azure にオンプレミスのマシン |Microsoft Docs'
+title: レッスン 6:ソースからデータベースの移行のターゲット コンピューターに Windows Azure にオンプレミスのマシン |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215132"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404283"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>レッスン 6: 内部設置型のソース コンピューターから Windows Azure のターゲット コンピューターにデータベースを移行する
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>レッスン 6:ソースからデータベースの移行のターゲット コンピューターに Windows Azure にオンプレミスのマシン
   このレッスンでは、別の内部設置型コンピューターまたは Windows Azure 仮想マシンに存在している別の SQL Server が既にあるものと仮定します。 Windows Azure で SQL Server の仮想マシンを作成する方法については、次を参照してください。 [Windows Azure で SQL Server 仮想マシンのプロビジョニング](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)します。 Windows Azure で SQL Server 仮想マシンを準備した後、別のコンピューターの SQL Server Management Studio 経由でこの仮想マシンの SQL Server インスタンスに接続できることを確認します。  
   
  このレッスンは、次の手順を完了済みであることも前提としています。  
@@ -51,7 +51,7 @@ ms.locfileid: "48215132"
   
         2.  標準のツール バーで、**新しいクエリ**します。  
   
-        3.  次の例をコピーしてクエリ ウィンドウに貼り付け、必要に応じて変更します。 次のステートメントは、ストレージ コンテナーの共有アクセス証明書を格納する SQL Server 資格情報を作成します。  
+        3.  次の例をコピーしてクエリ ウィンドウに貼り付け、必要に応じて変更します。 次のステートメントは、ストレージ コンテナーの共有アクセス証明書を格納する SQL Server の資格情報を作成します。  
   
             ```tsql  
   
@@ -147,6 +147,6 @@ ms.locfileid: "48215132"
   
  **次のレッスン:**  
   
- [レッスン 7: Windows Azure ストレージにデータ ファイルを移動する](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [レッスン 7:Windows Azure ストレージにデータ ファイルを移動します。](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

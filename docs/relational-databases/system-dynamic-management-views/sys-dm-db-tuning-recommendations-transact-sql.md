@@ -23,19 +23,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527507"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_チューニング\_(TRANSACT-SQL) の推奨事項
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   チューニングの推奨事項に関する詳細な情報を返します。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。
 
 | **列名** | **データ型** | **[説明]** |
 | --- | --- | --- |
@@ -80,7 +80,7 @@ JSON ドキュメント`state`列が現在の状態で、推奨事項である�
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` オプションは、検証プロセス中に、ユーザーが無効です。 有効にする`FORCE_LAST_GOOD_PLAN`オプションを使用して[AUTOMATIC_TUNING 設定データベースの ALTER &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)ステートメントまたは強制的に、プラン内のスクリプトを使用して手動で`[details]`列。 |
 | `UnsupportedStatementType` | クエリにプランを強制することはできません。 サポートされていないクエリの例は、カーソルと`INSERT BULK`ステートメント。 |
 | `LastGoodPlanForced` | 推奨事項が正常に適用されます。 |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 潜在的なパフォーマンスの低下、識別されたが、`FORCE_LAST_GOOD_PLAN`オプションが有効になっていないを参照してください: [AUTOMATIC_TUNING 設定データベースの ALTER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 推奨事項を手動で適用または有効にする`FORCE_LAST_GOOD_PLAN`オプション。 |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 潜在的なパフォーマンスの低下、識別されたが、`FORCE_LAST_GOOD_PLAN`オプションが有効になっていないを参照してください - [AUTOMATIC_TUNING 設定データベースの ALTER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)します。 推奨事項を手動で適用または有効にする`FORCE_LAST_GOOD_PLAN`オプション。 |
 | `VerificationAborted`| 検証プロセスが再起動またはクエリ ストアのクリーンアップにより中止されました。 |
 | `VerificationForcedQueryRecompile`| クエリは、大幅なパフォーマンス向上がないために再コンパイルされます。 |
 | `PlanForcedByUser`| プランを使用して、ユーザーが手動で強制[sp_query_store_force_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)プロシージャ。 |

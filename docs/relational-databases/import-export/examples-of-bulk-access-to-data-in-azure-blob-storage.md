@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 190a9a07ad293253ee9a2005a6b5981db129465f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560409"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214101"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure BLOB ストレージのデータに一括アクセスする例
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,16 +31,16 @@ ms.locfileid: "51560409"
 
 SQL Server から Azure BLOB ストレージに一括アクセスする場合、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以上が必要になります。
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  コンテナーと BLOB 上のファイルへのパスはすべて、`CASE SENSITIVE` です。 正しくない場合は、"一括読み込みできません。 ファイル "file.csv" が存在しないか、ファイルへのアクセス権がありません。" などのエラーが返される可能性があります。
-"
+> "
 
 
 ## <a name="create-the-credential"></a>資格情報を作成する   
    
 下のすべての例で、Shared Access Signature を参照するデータベース スコープ資格情報が必要です。   
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  外部データ ソースは、`SHARED ACCESS SIGNATURE` ID を使用するデータベース スコープ資格情報で作成する必要があります。 ストレージ アカウントの Shared Access Signature を作成するには、Azure ポータルのストレージ アカウント プロパティに関するページで **Shared Access Signature** プロパティを参照してください。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 資格情報の詳細については、「[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープ資格情報を作成する) を参照してください。  
  
 `IDENTITY` (`SHARED ACCESS SIGNATURE` に設定します) を利用してデータベース スコープ資格情報を作成します。 Azure ポータルのシークレットを使用します。 例 :  

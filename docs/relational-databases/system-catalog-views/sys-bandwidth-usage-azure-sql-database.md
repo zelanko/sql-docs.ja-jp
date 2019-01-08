@@ -22,17 +22,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603850"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403718"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注: これにのみ適用されます[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11 します。**  
+  **注:これにのみ適用されます[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11 します。**  
   
  内の各データベースで使用されるネットワーク帯域幅に関する情報を返します、  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 の論理サーバー**、します。 指定のデータベースに対して返される各行は、1 時間にわたる 1 つの方向とクラスの使用状況をまとめたものです。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "47603850"
 |-----------------|-----------------|  
 |**time**|帯域幅が使用されていた時間。 このビューの行は、1 時間単位です。 たとえば、2009-09-19 02:00: 00.000 は、帯域幅が 2009 年 9 月 19 日午前 2:00 から午前 3:00 までの間に使用された ことを示します。|  
 |**database_name**|帯域幅を使用したデータベースの名前。|  
-|**方向**|使用された帯域幅の種類。次のどちらかです。<br /><br /> イングレス: 移行するデータ[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。<br /><br /> エグレス: データの移動が、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。|  
-|**class**|使用された帯域幅のクラス。次のどちらかです。<br />Azure プラットフォーム内を移動する内部エラー: データ。<br />Azure platform から移行する外部: データ。<br /><br /> このクラスは、データベースはリージョン間で連続コピー リレーションシップに関与している場合にのみ返されます ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 連続コピー リレーションシップで、特定のデータベースが参加していない場合は、「インター リンク」行は返されません。 詳細については、後述する「解説」をご覧ください。|  
+|**direction**|使用された帯域幅の種類。次のどちらかです。<br /><br /> 受信:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に移行するデータ。<br /><br /> 送信:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] から移行するデータ。|  
+|**class**|使用された帯域幅のクラス。次のどちらかです。<br />内部。Azure Platform 内に移行するデータ。<br />外部:Azure Platform から移行するデータ。<br /><br /> このクラスは、データベースで、地域 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 間の連続コピー リレーションシップが進行中である場合に返されます。 連続コピー リレーションシップで、特定のデータベースが参加していない場合は、「インター リンク」行は返されません。 詳細については、このトピックの後半の「解説」セクションを参照してください。|  
 |**time_period**|使用状況が発生したときの時間帯とは、ピーク時または OffPeak のいずれかです。 Peak 時間帯は、サーバーが作成された領域に基づいています。 たとえば、 サーバーが "US_Northwest" リージョンで作成された場合、Peak 時間帯は太平洋標準時の午前 10:00 から 午後 6 時まで  定義されます。|  
 |**数量**|使用された帯域幅の量 (キロバイト (KB) 単位)。|  
   
