@@ -11,15 +11,15 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e2c54ec3c724e9fb43eff956e0bf96fd406d6bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091112"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395525"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>計算列 (SSAS テーブル)
-  テーブル モデルの計算列では、モデルに新しいデータを追加することができます。 列に値を貼り付けまたはインポートする代わりに、列の行レベルの値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
+  テーブル モデルの計算列では、モデルに新しいデータを追加することができます。 貼り付けや列に値のインポートではなく、列の行レベルの値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
   
 > [!NOTE]  
 >  計算列は、DirectQuery モードでのテーブル モデルではサポートされません。 詳しくは、「[DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)」をご覧ください。  
@@ -82,11 +82,11 @@ ms.locfileid: "48091112"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[計算列を作成&#40;SSAS 表形式&#41;](ssas-calculated-columns-create-a-calculated-column.md)|このトピックのタスクでは、テーブルに新しい計算列を追加する方法について説明します。|  
+|[計算列の作成 &#40;SSAS テーブル&#41;](ssas-calculated-columns-create-a-calculated-column.md)|このトピックのタスクでは、テーブルに新しい計算列を追加する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [テーブルと列&#40;SSAS 表形式&#41;](tables-and-columns-ssas-tabular.md)   
- [メジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)   
- [計算&#40;SSAS 表形式&#41;](calculations-ssas-tabular.md)  
+ [テーブルと列 &#40;SSAS テーブル&#41;](tables-and-columns-ssas-tabular.md)   
+ [メジャー &#40;SSAS テーブル&#41;](measures-ssas-tabular.md)   
+ [計算 &#40;SSAS テーブル&#41;](calculations-ssas-tabular.md)  
   
   
