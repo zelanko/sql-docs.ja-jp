@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 7: Windows Azure ストレージへのデータ ファイルの移動 |Microsoft Docs'
+title: レッスン 7:Windows Azure ストレージへのデータ ファイルの移動 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b49907bb7cb9c2d33d7672570f161cbd98432d45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170084"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355332"
 ---
-# <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>レッスン 7: Windows Azure ストレージにデータ ファイルを移動する
+# <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>レッスン 7:Microsoft Azure ストレージへのデータ ファイルの移動
   このレッスンでは、Windows Azure ストレージ (SQL Server インスタンスではなく) にデータ ファイルを移動する方法について学習します。 このレッスンを続行するには、レッスン 4、5、および 6 を実行する必要はありません。  
   
  Windows Azure ストレージにデータ ファイルを移動するには、データ ファイルの場所を変更できる `ALTER DATABASE` ステートメントを使用できます。  
@@ -64,7 +64,7 @@ ms.locfileid: "48170084"
   
     ```  
   
-3.  これを実行すると、次のメッセージが表示されます。「システム カタログのファイル "TestDB1Alter" が変更されました。 次回データベースを起動するときに、新しいパスが使用されます。」  
+3.  実行すると、次のメッセージが表示されます。"ファイル"TestDB1Alter"がシステム カタログに変更されました。 新しいパスが使用次回データベースを起動します。"  
   
 4.  続いて、データベースをオフラインにします。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "48170084"
   
     ```  
   
-5.  ここで、次のメソッドのいずれかを使用して Windows Azure ストレージにデータ ファイルをコピーする必要があります: [AzCopy ツール](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[ストレージ クライアント ライブラリ リファレンス](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサード パーティのストレージ エクスプ ローラー ツールです。  
+5.  ここで、次のいずれかの方法を使用してデータ ファイルを Microsoft Azure Storage へコピーする必要があります。[AzCopy ツール](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[ストレージ クライアント ライブラリ リファレンス](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサード パーティのストレージ エクスプ ローラー ツール。  
   
-     **重要:** この新しい機能強化を使用する場合は、必ずブロック blob ではなくページ blob を作成することを確認します。  
+     **重要:** この新しい機能強化を使用する場合は、必ずブロック BLOB ではなくページ BLOB を作成してください。  
   
 6.  続いて、データベースをオンラインにします。  
   

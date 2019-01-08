@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f5596801574815bea45762df5e91bbce9047841
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141052"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801144"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss イベント クラス
   SP:CacheMiss イベント クラスは、プロシージャをキャッシュ内で検出できなかったことを示します。 SP:CacheMiss イベント クラスが頻繁に発生する場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用できるメモリを増やす必要があることを示している可能性があります。メモリを増やすと、プロシージャ キャッシュのサイズが増えます。  

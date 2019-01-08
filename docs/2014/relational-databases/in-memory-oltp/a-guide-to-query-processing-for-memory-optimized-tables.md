@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c0372c07edc32be23034a4c221e2480bd2047be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213082"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374824"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、インメモリ OLTP によってメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャが導入されています。 ここでは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの両方に対するクエリ処理の概要について説明します。  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- ここでは、クエリ プランを構築できるように、2 個のテーブルに Northwind サンプル データベースのサンプル データが読み込まれています。このサンプル データベースは「 [SQL Server 2000 用の Northwind サンプル データベースと pubs サンプル データベース](http://www.microsoft.com/download/details.aspx?id=23654)」からダウンロードできます。  
+ ここでは、クエリ プランを構築できるように、2 個のテーブルに Northwind サンプル データベースのサンプル データが読み込まれています。このサンプル データベースは「 [SQL Server 2000 用の Northwind サンプル データベースと pubs サンプル データベース](https://www.microsoft.com/download/details.aspx?id=23654)」からダウンロードできます。  
   
  次のクエリについて考えてみます。このクエリでは、Customer テーブルと Order テーブルを結合し、注文の ID および関連付けられた顧客情報を返します。  
   
@@ -79,7 +79,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Order テーブルのデータは、CustomerID 列の非クラスター化インデックスを使用して取得されます。 このインデックスには、結合に使用される CustomerID 列と、ユーザーに返す主キー列 OrderID の両方が含まれています。 Order テーブルから追加の列を返す場合は、Order テーブルのクラスター化インデックス内の参照が必要です。  
   
--   `Inner Join` 論理操作は、`Merge Join` 物理操作により実装されます。 その他の物理結合の種類は、`Nested Loops` と `Hash Join` です。 `Merge Join`両方のインデックスが結合列 CustomerID で並べ替えられているファクトの演算子を利用します。  
+-   `Inner Join` 論理操作は、`Merge Join` 物理操作により実装されます。 その他の物理結合の種類は、`Nested Loops` と `Hash Join` です。 この `Merge Join` 操作では、両方のインデックスが結合列 CustomerID を基準に並べ替えられていることを利用します。  
   
  これを少し変えたバリエーションとして、OrderID だけでなく、Order テーブルのすべての行を返すクエリを検討します。  
   
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![ディスク ベース テーブルのハッシュ結合のクエリ プラン。](../../database-engine/media/hekaton-query-plan-2.gif "ディスク ベース テーブルのハッシュ結合のクエリ プラン。")  
 ディスク ベース テーブルのハッシュ結合のクエリ プラン。  
   
- このクエリでは、Orders テーブルの行はクラスター化インデックスを使用して取得されます。 `Hash Match`物理演算子の使用、`Inner Join`します。 Order のクラスター化インデックスは CustomerID で並べ替えられていないため、`Merge Join`パフォーマンスに影響を与えるソート演算子が必要になります。 前の例の `Hash Match` 操作のコスト (46%) と比較して、`Merge Join` 操作 (75%) の相対コストを確認してください。 オプティマイザーと判断されて、`Hash Match`演算子も前の例で検討したうえで、`Merge Join`演算子は、パフォーマンスの向上を指定します。  
+ このクエリでは、Orders テーブルの行はクラスター化インデックスを使用して取得されます。 これで、`Hash Match` 物理操作は `Inner Join` に使用されます。 Order のクラスター化インデックスは CustomerID で並べ替えられません。したがって、`Merge Join` はパフォーマンスに影響を与える並べ替え操作を必要とします。 前の例の `Hash Match` 操作のコスト (46%) と比較して、`Merge Join` 操作 (75%) の相対コストを確認してください。 オプティマイザーでは、前の例でも `Hash Match` 操作を検討したうえで、`Merge Join` 操作の方がパフォーマンスがよいと判断されています。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディスク ベース テーブルに対するクエリ処理  
  次の図は、アドホック クエリに対する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のクエリ処理フローの概要を示しています。  
@@ -170,7 +170,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   クラスター化インデックスは、メモリ最適化テーブルでサポートされていません。 代わりに、すべてのメモリ最適化テーブルには 1 つ以上の非クラスター化インデックスが必要です。メモリ最適化テーブルのすべてのインデックスは、そのテーブル内のすべての列に効率的にアクセスできます。列をインデックスに格納したり、クラスター化されたインデックスを参照したりする必要はありません。  
   
--   このプランには、`Hash Match` ではなく `Merge Join` が含まれます。 Order テーブルと Customer テーブルの両方のインデックスはハッシュ インデックスになるため、順序付けされません。 A`Merge Join`によりパフォーマンスが低下する並べ替え操作が必要になります。  
+-   このプランには、`Hash Match` ではなく `Merge Join` が含まれます。 Order テーブルと Customer テーブルの両方のインデックスはハッシュ インデックスになるため、順序付けされません。 `Merge Join` では並べ替え操作が必要であり、それによってパフォーマンスが低下していました。  
   
 ## <a name="natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ  
  ネイティブ コンパイル ストアド プロシージャは、クエリ実行エンジンによって解釈されるのではなく、マシン語コードにコンパイルされる [!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャです。 次のスクリプトは、(クエリの例のセクションの) クエリの例を実行する、ネイティブ コンパイル ストアド プロシージャを作成します。  
@@ -205,7 +205,7 @@ END
   
  この処理は次のとおりです。  
   
-1.  ユーザーの問題、`CREATE PROCEDURE`ステートメント[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+1.  ユーザーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に対して `CREATE PROCEDURE` ステートメントを実行します。  
   
 2.  パーサーと algebrizer は、プロシージャの処理フロー、およびストアド プロシージャ内の [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリのクエリ ツリーを作成します。  
   
@@ -226,7 +226,7 @@ END
   
 2.  パーサーは、名前とストアド プロシージャのパラメーターを抽出します。  
   
-     場合は、例を使用して、ステートメントが準備`sp_prep_exec`パーサーはプロシージャ名と実行時にパラメーターを抽出する必要はありません。  
+     たとえば `sp_prep_exec` を使用して、ステートメントが準備されている場合、パーサーは実行時にプロシージャ名とパラメーターを抽出する必要はありません。  
   
 3.  インメモリ OLTP ランタイムがストアド プロシージャに対する DLL エントリ ポイントを特定します。  
   
@@ -236,7 +236,7 @@ END
   
  解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャは最初の実行時にコンパイルされますが、ネイティブ コンパイル ストアド プロシージャは作成時にコンパイルされます。 解釈されたストアド プロシージャが呼び出し時にコンパイルされる場合、この呼び出しに指定されたパラメーターの値が、実行プランの生成時にオプティマイザーによって使用されます。 コンパイル時にパラメーターをこのように使用することを、"パラメーターを見つけ出す" と表現します。  
   
- パラメーターを見つけ出すことは、ネイティブ コンパイル ストアド プロシージャのコンパイルには使用されません。 ストアド プロシージャに対するすべてのパラメーターは、UNKNOWN 値があると見なされます。 このような解釈されたストアド プロシージャ、ネイティブ コンパイル ストアド プロシージャもサポート、`OPTIMIZE FOR`ヒント。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)」を参照してください。  
+ パラメーターを見つけ出すことは、ネイティブ コンパイル ストアド プロシージャのコンパイルには使用されません。 ストアド プロシージャに対するすべてのパラメーターは、UNKNOWN 値があると見なされます。 解釈されたストアド プロシージャと同様に、ネイティブ コンパイル ストアド プロシージャでも、`OPTIMIZE FOR` ヒントがサポートされます。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)」を参照してください。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランの取得  
  ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 **の** 推定実行プラン [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]または [!INCLUDE[tsql](../../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 以下に例を示します。  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|Hash Match 操作が集計をサポートしていないことに注意してください。 したがって、解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] 内の同じクエリに対するプランが Hash Match 操作を使用しても、ネイティブ コンパイル ストアド プロシージャ内のすべての集計は Stream Aggregate 操作を使用します<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>列統計と結合  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インデックス スキャンやインデックス シークなど特定の操作のコストを推定できるように、インデックス キー列に値の統計を保持します。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、非インデックス キー列に対しても、明示的に作成された場合またはクエリ オプティマイザーによってクエリの述語に応じて作成された場合、統計が作成されます)。コストの推定の主要な基準は、1 個の操作によって処理される行数です。 ディスク ベース テーブルの場合、コストの推定では、特定の操作でアクセスされるページ数が重要です。 ただし、メモリ最適化テーブルではページ数は重要ではないため (常にゼロ)、ここでは行数を中心に説明します。 推定は、プラン内のインデックス シークおよびスキャン操作で開始され、続いて、結合操作などの他の操作へと進みます。 結合操作によって処理される行数の推定値は、基になるインデックス、シーク、およびスキャン操作の推定値に基づきます。 解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスの場合は、実際の実行プランを調べて、プラン内の操作の推定行数と実際の行数の違いを確認することができます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インデックス スキャンやインデックス シークなど特定の操作のコストを推定できるように、インデックス キー列に値の統計を保持します。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]明示的に作成する場合、または、クエリ オプティマイザーがクエリ述語の応答でそれらを作成する場合も非インデックス キー列に対して統計を作成します)。コストの推定の主要な基準は、1 個の操作によって処理される行数です。 ディスク ベース テーブルの場合、コストの推定では、特定の操作でアクセスされるページ数が重要です。 ただし、メモリ最適化テーブルではページ数は重要ではないため (常にゼロ)、ここでは行数を中心に説明します。 推定は、プラン内のインデックス シークおよびスキャン操作で開始され、続いて、結合操作などの他の操作へと進みます。 結合操作によって処理される行数の推定値は、基になるインデックス、シーク、およびスキャン操作の推定値に基づきます。 解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスの場合は、実際の実行プランを調べて、プラン内の操作の推定行数と実際の行数の違いを確認することができます。  
   
  図 1 の例の場合は、次のようになります。  
   
@@ -300,7 +300,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   IX_CustomerID でのフル インデックス スキャンは、インデックス シークで置き換えられました。 これにより、スキャンの対象は 5 行となり、フル インデックス スキャンに必要な 830 行ではなくなります。  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>メモリ最適化テーブルの統計およびカーディナリティ  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] メモリ最適化テーブルの列レベルの統計を保持します。 また、テーブルの実際の行数も保持されます。 ただし、ディスク ベース テーブルとは異なり、メモリ最適化テーブルの統計は自動更新されません。 このため、テーブルに重要な変更が発生した場合は、統計を手動で更新する必要があります。 詳細については、「 [メモリ最適化テーブルの統計](memory-optimized-tables.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、メモリ最適化テーブルの列レベルの統計が保持されます。 また、テーブルの実際の行数も保持されます。 ただし、ディスク ベース テーブルとは異なり、メモリ最適化テーブルの統計は自動更新されません。 このため、テーブルに重要な変更が発生した場合は、統計を手動で更新する必要があります。 詳細については、「 [メモリ最適化テーブルの統計](memory-optimized-tables.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化テーブル](memory-optimized-tables.md)  

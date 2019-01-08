@@ -1,5 +1,5 @@
 ---
-title: SQL Server にパッケージの RevoScaleR 関数を使用して、見つからないか、R をインストールする方法 |Microsoft Docs
+title: RevoScaleR 関数を使用して、見つからないか、SQL Server Machine Learning Services の R パッケージをインストールする方法
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e9009e26a891c031194697de78cac97db6844d58
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563978"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645361"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 関数を使用して、検索、または SQL Server に R パッケージをインストールする方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ SQL Server 2017 Machine Learning サービスには、RevoScaleR の新しいバ
 
 次の表では、R パッケージのインストールと管理に使用される関数について説明します。
 
-| 機能 | 説明 |
+| 関数 | 説明 |
 |----------|-------------|
 | [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | リモートの SQL Server のインスタンスのライブラリのパスを決定します。 |
 | [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | リモートの SQL Server で 1 つまたは複数のパッケージのパスを取得します。 |
@@ -34,7 +34,7 @@ SQL Server 2017 Machine Learning サービスには、RevoScaleR の新しいバ
 | [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | については、ファイル システムと、指定した計算コンテキストのデータベース間でのパッケージ ライブラリをコピーします。 |
 | [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 指定された計算コンテキストからパッケージを削除します。 また、依存関係を計算し、によりリソースを解放する、SQL Server 上の他のパッケージで使用するパッケージが削除します。 |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + [リモート SQL Server での R パッケージの管理を有効にします。](r-package-how-to-enable-or-disable.md)
 
@@ -181,7 +181,7 @@ rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 
 Management Studio または現在のインスタンスにインストールされているパッケージの一覧を取得する、T-SQL をサポートする別のツールからこのコマンドの実行を使用して`rxInstalledPackages`ストアド プロシージャにします。
 
-```SQL
+```sql
 EXEC sp_execute_external_script 
   @language=N'R', 
   @script=N'
@@ -192,7 +192,7 @@ EXEC sp_execute_external_script
 
 `rxSqlLibPaths`関数は、SQL Server Machine Learning サービスで使用されるアクティブなライブラリを使用できます。 このスクリプトでは、現在のサーバーのライブラリ パスのみを返すことができます。 
 
-```SQL
+```sql
 declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
 exec sp_execute_external_script 
   @language = N'R',

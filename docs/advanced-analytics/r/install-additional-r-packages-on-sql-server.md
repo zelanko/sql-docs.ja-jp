@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning サービスで新しい R パッケージをインストールする |Microsoft Docs
+title: 新しい R 言語パッケージ - SQL Server Machine Learning Services のインストールします。
 description: SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) に新しい R パッケージを追加します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f345dc0649c5b7b9665e095207ad7a5a12d16871
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 590dbcc08d433147b61678c2b865ba205a0e547d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697050"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432802"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server に新しい R パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51697050"
 
 R パッケージ ライブラリは限定的なアクセスのセキュリティで保護されたフォルダーには、SQL Server インスタンスの Program Files フォルダー内に物理的に配置します。 この場所に書き込むには、管理者のアクセス許可が必要です。
 
-管理者以外のユーザーがパッケージをインストールできますが、これは addititional 構成と機能の初期インストールでは使用できないために必要です。 管理者以外のパッケージのインストールの 2 つのアプローチ: RevoScaleR バージョン 9.0.1 と以降、またはを使用して外部ライブラリの作成 (SQL Server 2017 のみ) を使用します。 SQL Server 2017 で**dbo_owner** CREATE EXTERNAL LIBRARY のアクセス許可を持つ別のユーザーは、現在のデータベースに R パッケージをインストールすることもできます。
+管理者以外のユーザーがパッケージをインストールできますが、これは addititional 構成と機能の初期インストールでは使用できないために必要です。 管理者以外のパッケージのインストールの 2 つの方法はあります。RevoScaleR バージョン 9.0.1 と以降、またはを使用して外部ライブラリの作成 (SQL Server 2017 のみ) を使用します。 SQL Server 2017 で**dbo_owner** CREATE EXTERNAL LIBRARY のアクセス許可を持つ別のユーザーは、現在のデータベースに R パッケージをインストールすることもできます。
 
 R 開発者は、中央に配置されたライブラリが手付かずの状態がある場合に必要なパッケージのユーザーのライブラリの作成に慣れています。 この実習では、SQL Server データベース エンジンのインスタンスで実行される R コードの問題が発生します。 SQL Server は、そのライブラリが同じコンピューター上にある場合でも、外部ライブラリをからパッケージを読み込むことはできません。 インスタンスのライブラリからのみパッケージは、SQL Server で実行される R コードで使用できます。
 

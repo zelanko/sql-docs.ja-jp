@@ -1,6 +1,6 @@
 ---
-title: レッスン 1 の探索と R と T-SQL (SQL Server Machine Learning) を使用してデータの視覚化 |Microsoft Docs
-description: SQL Server に R を埋め込む方法を示すチュートリアルはストアド プロシージャと T-SQL 関数
+title: レッスン 1 の探索と R と T-SQL - SQL Server Machine Learning を使用してデータを視覚化します。
+description: 探索し、R 関数を使用して SQL Server のデータを視覚化する方法を示すチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032219"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645501"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1: の探索し、データの視覚化
+# <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1:探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
@@ -38,7 +38,7 @@ ms.locfileid: "51032219"
 
 **タクシーの識別子**
   
--   _medallion_ 列はタクシーの一意の識別子を表します。
+-   _Medallion_列はタクシーの一意の id 番号を表します。
   
 -   _Hack\_ライセンス_列には、タクシー運転手のライセンスの数 (匿名化された) が含まれています。
   
@@ -67,7 +67,7 @@ ms.locfileid: "51032219"
 
 2. ヒストグラムをプロットするストアド プロシージャを作成する次のスクリプトを貼り付けます。 この例の名前は **RPlotRxHistogram*します。
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ ms.locfileid: "51032219"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のステートメントを実行します。
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ ms.locfileid: "51032219"
   
 2.  PowerShell コマンド プロンプトを開き、適切なインスタンス名、データベース名、ユーザー名、および引数としての資格情報を提供する、次のコマンドを実行します。 Windows id を使用してそれらを置き換えることができます **-u**と **-p**で **-t**します。
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ ms.locfileid: "51032219"
   
     -   後で再利用するために出力パラメーターを保存する場合、「 **Y** 」を入力します。
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ ms.locfileid: "51032219"
   
     **結果**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ ms.locfileid: "51032219"
 
 2. ヒストグラムをプロットするストアド プロシージャを作成する次のスクリプトを貼り付けます。 この例の名前は**RPlotHist**します。
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ ms.locfileid: "51032219"
 
 プロットをバイナリ データを JPEG、PDF ファイル形式にエクスポートするのには、次のステートメントを実行します。
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **結果**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 
@@ -279,7 +279,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[レッスン 2: T-SQL を使用してデータ機能を作成します。](sqldev-create-data-features-using-t-sql.md)
+[レッスン 2:T-SQL を使用してデータ機能を作成します。](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 

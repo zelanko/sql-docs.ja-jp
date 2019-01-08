@@ -1,5 +1,5 @@
 ---
-title: StrToMember (MDX) |Microsoft ドキュメント
+title: StrToMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37c76d6e1e7ffe9bc40d785952b5c456ab1fc6fa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0c5878a553895dccc3350ddbae9397d5a48c6349
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531213"
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
 
 
-  多次元式 (MDX) 形式の文字列によって指定されているメンバーを返します。  
+  MDX 形式の文字列によって指定されたメンバーを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,9 +33,9 @@ StrToMember(Member_Name [,CONSTRAINED] )
  直接的または間接的にメンバーを指定する有効な文字列式です。  
   
 ## <a name="remarks"></a>コメント  
- **StrToMember**関数、文字列式で指定されたメンバーを返します。 **StrToMember**関数は、通常使用ユーザー定義関数またはを返す、メンバー指定を外部関数から MDX ステートメントでは、MDX クエリがパラメーター化されたときにします。  
+ **StrToMember**関数、文字列式で指定されたメンバーを返します。 **StrToMember**またはを返す、メンバー指定を外部関数から MDX ステートメントで MDX クエリがパラメーター化されたときに関数が通常使用のユーザー定義関数。  
   
--   CONSTRAINED フラグを使用するときは、メンバー名には修飾されているメンバー名または修飾されていないメンバー名に直接解決できる文字列を指定する必要があります。 このフラグは、指定された文字列によるインジェクション攻撃の危険性を軽減するために使用します。 修飾されているメンバー名または修飾されていないメンバー名に直接解決できない文字列を指定すると、"STRTOMEMBER 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラーが表示されます。  
+-   CONSTRAINED フラグを使用するときは、メンバー名には修飾されているメンバー名または修飾されていないメンバー名に直接解決できる文字列を指定する必要があります。 このフラグは、指定された文字列によるインジェクション攻撃の危険性を軽減するために使用します。 文字列は、修飾名または修飾されていないメンバー名に直接解決ではありませんが、次のエラーが表示されます。"CONSTRAINED によって設定された制限 STRTOMEMBER 関数でフラグに違反しました"。  
   
 -   CONSTRAINED フラグを使用しない場合、メンバー名に直接解決されるメンバーも、名前に解決される MDX 式に解決されるメンバーも指定できます。  
   
@@ -81,6 +81,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

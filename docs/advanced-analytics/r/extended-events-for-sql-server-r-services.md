@@ -1,5 +1,5 @@
 ---
-title: SQL Server の Machine Learning のサービスの拡張イベント |Microsoft ドキュメント
+title: R と Python のプロセス - SQL Server Machine Learning サービスを監視するための拡張イベント
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,25 +7,25 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 43fbd32cf1bead610e4cdae9b59983fe5ad1b15e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aefc4fd3ba5fa1ba69e8e29575037f5e7ac6789a
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202684"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644881"
 ---
-# <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスの拡張イベント
+# <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server に関連する操作のトラブルシューティングで使用する拡張イベントのセットを提供する、 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]Python または R ジョブを送信するとともに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
+SQL Server に関連する操作のトラブルシューティングで使用する拡張イベントのセットを提供する、[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]に Python または R ジョブが送信されるほか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。
 
-**適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
+**適用対象:** SQL Server 2016 R Services、SQL Server 2017 の Machine Learning サービス
 
-## <a name="sql-server-events-for-machine-learning"></a>機械学習の SQL Server イベント
+## <a name="sql-server-events-for-machine-learning"></a>Machine learning 用の SQL Server イベント
 
 SQL Server に関するイベントの一覧を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から次のクエリを実行します。
 
-```SQL
+```sql
 SELECT o.name AS event_name, o.description
 FROM sys.dm_xe_objects o
 JOIN sys.dm_xe_packages p
@@ -34,20 +34,20 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-拡張イベントの使用に関する概要については、次を参照してください。[拡張イベントのツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)です。
+拡張イベントの使用の詳細については、次を参照してください。[拡張のイベント ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)します。
 
 > [!TIP]
-> SQL Server によって生成される、拡張イベントの新しいを再試行してください[SSMS の XEvent プロファイラー](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler)です。 Management Studio のこの新機能の拡張イベントは、ライブ ビューアーが表示されます、小さい関与するレベルを SQL Server のようなプロファイラー トレースよりもします。
+> SQL Server によって生成される拡張イベントの新しいお試しください[SSMS XEvent profiler](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler)します。 Management Studio のこの新機能では、拡張のイベントのライブ ビューアーを表示しと同様の Profiler トレースよりも SQL Server に煩雑です。
 
-## <a name="additional-events-specific-to-machine-learning-components"></a>Machine learning のコンポーネントに固有のイベントの追加
+## <a name="additional-events-specific-to-machine-learning-components"></a>Machine learning コンポーネントに固有のイベントの追加
 
-その他の拡張イベントに関連するおよびなど SQL Server Machine Learning のサービスで使用されるコンポーネントの使用可能な[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]、R ランタイムを起動するサテライト プロセスである bxlserver です。 これらの追加拡張イベント、外部プロセスから起動され、ため、外部のユーティリティを使用するとキャプチャする必要があります。
+追加の拡張イベントが関連するおよびなど SQL Server Machine Learning のサービスで使用されるコンポーネントの使用可能な[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]、bxlserver、R ランタイムを起動しているサテライト プロセスです。 これらの追加拡張イベントは外部のプロセスから発生し、そのため、外部のユーティリティを使用するとキャプチャする必要があります。
 
-これを行う方法の詳細についてを参照してください、[外部プロセスからイベントを収集](#bkmk_externalevents)です。
+これを行う方法の詳細については、このセクションを参照してください。[外部プロセスからイベントを収集](#bkmk_externalevents)します。
 
 ##  <a name="bkmk_xeventtable"></a> 拡張イベントの表
 
-|イベント|Description|注|  
+|イベント|説明|メモ|  
 |-----------|-----------------|---------|  
 |connection_accept|新しい接続が受け入れられたときに発生します。 このイベントは、すべての接続試行をログに記録するために役立ちます。||  
 |failed_launching|起動に失敗しました。|エラーを示します。|  
@@ -60,7 +60,7 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|サテライト接続が 1 つのデータ チャンクの送信を完了したときに発生します。|イベントにより、送信された行数と列数、使用された SNI パケット数、チャンクの送信にかかった時間 (ミリ秒) が報告されます。 この情報は、さまざまな型のデータを渡すためにかかった時間と、使用されたパケット数を理解するのに役立ちます。|  
 |satellite_data_receive_completion|サテライト接続経由でクエリに必要なすべてのデータが受信されたときに発生します。|外部プロセスからのみ起動されます。 外部プロセスからイベントを収集する手順を参照してください。|  
 |satellite_data_send_completion|サテライト接続経由でセッションに必要なすべてのデータが送信されたときに発生します。||  
-|satellite_data_send_start|データ転送の開始時に発生します。| データ転送は、最初のデータ チャンクを送信する直前に開始します。|  
+|satellite_data_send_start|データ転送の開始と発生します。| データ転送の最初のデータ チャンクが送信される直前に開始します。|  
 |satellite_error|Sql サテライト エラーのトレースに使われます||  
 |satellite_invalid_sized_message|メッセージのサイズが正しくありません。||  
 |satellite_message_coalesced|ネットワーク レイヤーでのメッセージ結合のトレースに使われます||  
@@ -80,25 +80,25 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|サテライト接続が 1 つのデータ チャンクの送信を完了したときに発生します。|列数、行数、パケット数、チャンクの送信にかかった時間に関する情報を格納します。|  
 |satellite_sessionId_mismatch|メッセージのセッション ID が予期されたものではありません||  
   
-###  <a name="bkmk_externalevents"></a> 外部プロセスからのイベントの収集
+###  <a name="bkmk_externalevents"></a> 外部プロセスからイベントの収集
 
-SQL Server の Machine Learning のサービスは、SQL Server プロセスの外部で実行している一部のサービスを開始します。 これらの外部プロセスに関連するイベントをキャプチャするには、するには、イベント トレース構成ファイルを作成し、プロセスの実行可能ファイルと同じディレクトリにファイルを配置します。  
+SQL Server Machine Learning Services では、SQL Server プロセス外で実行されるいくつかのサービスを開始します。 これらの外部プロセスに関連するイベントをキャプチャするには、イベント トレース構成ファイルを作成し、プロセスの実行可能ファイルと同じディレクトリにファイルを配置する必要があります。  
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
     スタートパッドに関連するイベントをキャプチャするには、Binn ディレクトリに SQL Server インスタンスの *.config* ファイルを配置します。  既定のインストールでは、これは、次のようになります。
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`」を参照してください。  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn` 。  
   
-+ **BXLServer**は R、Python などの外部のスクリプト言語による SQL 拡張機能をサポートしているサテライト プロセスです。 各外部の言語のインスタンスである BxlServer の個別のインスタンスが起動します。
++ **BXLServer** R や Python などの外部のスクリプト言語による SQL 拡張機能をサポートしているサテライト プロセスです。 BxlServer の個別のインスタンスでは、各外部言語のインスタンスが起動します。
   
-    BXLServer に関連するイベントをキャプチャするには、配置、 *.config* R または Python のインストール ディレクトリ内のファイルです。  既定のインストールでは、これは、次のようになります。
+    BXLServer に関連するイベントをキャプチャするには、配置、 *.config* R または Python のインストール ディレクトリ内のファイル。  既定のインストールでは、これは、次のようになります。
      
-    **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`です。  
+    **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`します。  
 
-    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`です。
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`します。
 
-構成ファイルは、"[name].xevents.xml" の形式を使用した実行可能ファイルと同じ名前にする必要があります。 つまり、次のようにファイルに名前を付ける必要があります。
+構成ファイルは、"[name].xevents.xml"の形式を使用して実行可能ファイルと同じ名前する必要があります。 つまり、次のようにファイルに名前を付ける必要があります。
 
 + `Launchpad.xevents.xml`
 + `bxlserver.xevents.xml`
@@ -121,10 +121,10 @@ SQL Server の Machine Learning のサービスは、SQL Server プロセスの�
 </event_sessions>  
 ```
 
-+ トレースを構成するのには、編集、*セッション名*プレース ホルダー、ファイル名のプレース ホルダー (`[SessionName].xel`)、およびキャプチャする、たとえば、イベントの名前`[XEvent Name 1]`、 `[XEvent Name 1]`)。  
-+ イベント パッケージのタグの任意の数は見えますが、および name 属性が正しい限り収集されます。
++ トレースを構成するには編集、*セッション名*プレース ホルダー、ファイル名のプレース ホルダー (`[SessionName].xel`)、およびキャプチャする、たとえば、イベントの名前を`[XEvent Name 1]`、 `[XEvent Name 1]`)。  
++ イベント パッケージのタグの任意の数が表示され、name 属性が正しい限り収集されます。
 
-### <a name="example-capturing-launchpad-events"></a>例: スタートパッド イベントのキャプチャ
+### <a name="example-capturing-launchpad-events"></a>例:スタート パッド イベントのキャプチャ
 
 次の例では、スタート パッド サービスのイベント トレースの定義を示します。
 
@@ -145,9 +145,9 @@ SQL Server の Machine Learning のサービスは、SQL Server プロセスの�
 ```
 
 + Binn ディレクトリに SQL Server インスタンスの *.config* ファイルを配置します。
-+ このファイルの名前である必要があります`Launchpad.xevents.xml`です。
++ このファイルの名前を`Launchpad.xevents.xml`します。
 
-### <a name="example-capturing-bxlserver-events"></a>例: BXLServer イベントのキャプチャ  
+### <a name="example-capturing-bxlserver-events"></a>例:BXLServer イベントのキャプチャ  
 
 次の例に、BXLServer 実行可能ファイルのイベント トレースの定義を示します。
   
@@ -175,8 +175,8 @@ SQL Server の Machine Learning のサービスは、SQL Server プロセスの�
 ```
 
 + BXLServer 実行可能ファイルと同じディレクトリに、*.config* ファイルを配置します。
-+ このファイルの名前である必要があります`bxlserver.xevents.xml`です。
++ このファイルの名前を`bxlserver.xevents.xml`します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Machine Learning のサービスのカスタム管理 Studio のレポート](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
+[Machine Learning Services のカスタムの Management Studio のレポート](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

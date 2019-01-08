@@ -1,11 +1,10 @@
 ---
-title: 'TM: Save Tran Completed イベント クラス | Microsoft Docs'
+title: TM:保存 Tran Completed イベント クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb14b93ce3fd7cf4e04dd5ab47b3b6427dc9e57d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b50f4026daa390000a1a46377446abc3cee709e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138112"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774364"
 ---
-# <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed イベント クラス
-  TM: Save Tran Completed イベント クラスは、SAVE TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。  
+# <a name="tm-save-tran-completed-event-class"></a>TM:保存 Tran Completed イベント クラス
+  TM:Save Tran Completed イベント クラスは、SAVE TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。  
   
-## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM: Save Tran Completed イベント クラスのデータ列  
+## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM:保存 Tran Completed イベント クラスのデータの列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  

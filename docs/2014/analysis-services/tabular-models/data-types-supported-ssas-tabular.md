@@ -11,12 +11,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 083eff2195b0c8099ec4fdfb80e7224e1d42d135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086902"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405477"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>サポートされているデータ型 (SSAS 表形式)
   このトピックでは、テーブル モデルで使用できるデータ型について説明し、データが計算される場合または Data Analysis Expressions (DAX) の数式で使用される場合の暗黙的な変換についても解説します。  
@@ -51,7 +51,7 @@ ms.locfileid: "48086902"
   
  <sup>2</sup>を非常に大きい数値を持つデータをインポートしようとすると、インポートが次のエラーで失敗します。  
   
- インメモリ データベース エラー: '\<列名 >' の列、'\<テーブル名 >' テーブルには、値が含まれています。' 1.7976931348623157 e + 308' はサポートされていません。 操作は取り消されました。  
+ インメモリ データベース エラー:'\<列名 >' の列、'\<テーブル名 >' テーブルには、値が含まれています。' 1.7976931348623157 e + 308' はサポートされていません。 操作は取り消されました。  
   
  このエラーは、モデル デザイナーがこの値を使用して NULL を表すために発生します。 次の一覧の値は、上で説明した NULL 値のシノニムです。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48086902"
   
  引数として指定する列内のデータと、関数が受け取るデータ型との互換性がない場合、DAX では多くの場合エラーが返されます。 ただし、DAX は可能な限り、必要なデータ型への暗黙的な変換を試行します。 以下に例を示します。  
   
--   数値 (たとえば "123") は、文字列として入力できます。 DAX はこの文字列を解析し、数値データ型として指定しようとします。  
+-   数値、たとえば「123」, は、文字列として入力できます。 DAX はこの文字列を解析し、数値データ型として指定しようとします。  
   
 -   TRUE + 1 では 2 が返されます。これは、TRUE が数値の 1 に暗黙的に変換され、1 + 1 という演算が実行されるためです。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "48086902"
   
  次の DAX 式はこの動作を示しています。  
   
- `=IF(FALSE()>"true","Expression is true", "Expression is false")`を返します `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")` では `"Expression is true"` が返されます。  
   
- `=IF("12">12,"Expression is true", "Expression is false")`を返します `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")` では `"Expression is true"` が返されます。  
   
- `=IF("12"=12,"Expression is true", "Expression is false")`を返します `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")` では `"Expression is false"` が返されます。  
   
  次の表に示すように、数値型または日付/時刻型については、変換は暗黙的に実行されます。  
   
@@ -187,12 +187,12 @@ ms.locfileid: "48086902"
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|空白|[エラー]|  
-|BLANK AND BLANK|BLANK|[エラー]|  
+|BLANK AND BLANK|空白|[エラー]|  
   
  特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](https://msdn.microsoft.com/library/ee634396.aspx)」セクションの各 DAX 関数のトピックを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース&#40;SSAS 表形式&#41;](../data-sources-ssas-tabular.md)   
- [データをインポート&#40;SSAS 表形式&#41;](../import-data-ssas-tabular.md)  
+ [データ ソース &#40;SSAS テーブル&#41;](../data-sources-ssas-tabular.md)   
+ [データのインポート &#40;SSAS テーブル&#41;](../import-data-ssas-tabular.md)  
   
   

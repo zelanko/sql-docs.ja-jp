@@ -1,5 +1,5 @@
 ---
-title: Customer ディメンションの変更 |Microsoft ドキュメント
+title: Customer ディメンションの変更 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514710"
 ---
-# <a name="lesson-3-2---modifying-the-customer-dimension"></a>レッスン 3-2 の Customer ディメンションの変更
+# <a name="lesson-3-2---modifying-the-customer-dimension"></a>レッスン 3-2-Customer ディメンションの変更
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 キューブのディメンションの使いやすさと機能性を向上させる方法は数多くあります。 このトピックの実習では、Customer ディメンションを変更します。  
@@ -32,11 +32,11 @@ ms.locfileid: "34019049"
   
 3.  同様に、次の属性の名前も変更します。  
   
-    -   **English Education** 属性を **Education**  
+    -   **English Education**属性 - 変更**教育**  
   
-    -   **English Occupation** 属性を **Occupation**  
+    -   **English Occupation**属性 - 変更**職業**  
   
-    -   **State Province Name** 属性を **State-Province**  
+    -   **State Province Name**属性 - 変更**State-province**  
   
 4.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
@@ -106,9 +106,9 @@ ms.locfileid: "34019049"
   
 4.  **[Name]** プロパティ フィールドに「 **Full Name**」と入力します。  
   
-5.  下部の **[NameColumn]** プロパティ フィールド内をクリックし、参照ボタン (**[…]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
+5.  をクリックして、 **NameColumn**プロパティは、下部にあるフィールドし、クリックし、参照 (**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
-6.  **[基になる列]** ボックスの一覧の下部にある **[FullName]** を選択し、**[OK]** をクリックします。  
+6.  **[基になる列]** ボックスの一覧の下部にある **[FullName]** を選択し、 **[OK]** をクリックします。  
   
 7.  [ディメンション構造] タブで、**[属性]** ペインの **[Full Name]** 属性を、**[階層]** ペインの **[<new level>]** セル (**[City]** レベルの下) にドラッグします。  
   

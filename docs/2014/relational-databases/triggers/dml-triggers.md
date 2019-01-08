@@ -14,12 +14,12 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d99c70928dfc1d3de2ff02499c0b33a173cf888a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195142"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797744"
 ---
 # <a name="dml-triggers"></a>DML トリガー
   DML トリガーとは、そこに定義されているテーブルまたはビューに影響するようなデータ操作言語 (DML) イベントが発生すると自動的に実行される特殊なストアド プロシージャです。 DML イベントには、INSERT、UPDATE、または DELETE のステートメントが含まれます。 DML トリガーを使用して、ビジネス ルールやデータの整合性を強制的に適用したり、他のテーブルを照会したりできるほか、複雑な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用することもできます。 トリガーとそのトリガーを起動するステートメントは単一のトランザクションとして扱われ、このトランザクションはトリガー内からロールバックできます。 ディスクの空き容量の不足などの重大なエラーが検出されると、このトランザクション全体が自動的にロールバックされます。  
@@ -54,12 +54,12 @@ ms.locfileid: "48195142"
   
  次の表は、AFTER トリガーと INSTEAD OF トリガーの機能を比較したものです。  
   
-|機能|AFTER トリガー|INSTEAD OF トリガー|  
+|関数|AFTER トリガー|INSTEAD OF トリガー|  
 |--------------|-------------------|------------------------|  
 |適用範囲|テーブル|テーブルとビュー|  
 |テーブルまたはビューごとの数|トリガーを起動する動作 (UPDATE、DELETE、および INSERT) ごとに複数指定できます。|トリガーを起動する動作 (UPDATE、DELETE、および INSERT) ごとに 1 つしか指定できません。|  
 |連鎖参照|制限はありません。|INSTEAD OF UPDATE トリガーと DELETE トリガーは、参照整合性制約の連鎖の対象となっているテーブルでは許可されません。|  
-|実行|次の処理の後<br /><br /> 制約処理<br />宣言参照動作<br />**inserted** テーブルと **deleted** テーブルの作成<br />トリガーを起動する動作|次の処理の前: 制約処理<br /><br /> 次の処理の代わり: トリガーを起動する動作<br /><br /> 次の処理の後:  **inserted** テーブルと **deleted** テーブルの作成|  
+|実行|次の処理の後<br /><br /> 制約処理<br />宣言参照動作<br />**inserted** テーブルと **deleted** テーブルの作成<br />トリガーを起動する動作|次の処理の前制約処理<br /><br /> 次の処理の代わりトリガーを起動する動作<br /><br /> 次の処理の後:  **inserted** テーブルと **deleted** テーブルの作成|  
 |実行の順序|最初と最後の実行内容を指定できます。|適用なし|  
 |`varchar(max)`、 `nvarchar(max)`、および`varbinary(max)`列を参照**挿入**と**削除**テーブル|Allowed|Allowed|  
 |`text`、 `ntext`、および`image`列を参照**挿入**と**削除**テーブル|使用不可|Allowed|  

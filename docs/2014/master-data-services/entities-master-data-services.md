@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
@@ -14,12 +13,12 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97a3fe9e9552170332e6be0d5cf5a3cb8541fe9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072912"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800914"
 ---
 # <a name="entities-master-data-services"></a>エンティティ (Master Data Services)
   エンティティは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] モデルに含まれるオブジェクトです。 各エンティティには、管理対象のマスター データの行であるメンバーが含まれています。  
@@ -36,7 +35,7 @@ ms.locfileid: "48072912"
   
  管理対象のマスター データのリストをエンティティに設定します。  
   
- 複数のエンティティを使用して派生階層を構築できます。派生階層とは、複数のエンティティに基づくレベルベースの階層です。 詳細については、「[派生階層 (マスター データ サービス)](derived-hierarchies-master-data-services.md)」を参照してください。  
+ 複数のエンティティを使用して派生階層を構築できます。派生階層とは、複数のエンティティに基づくレベルベースの階層です。 詳細については、「 [派生階層 (マスター データ サービス)](derived-hierarchies-master-data-services.md)」を参照してください。  
   
  また、場合によっては、エンティティに明示的階層 (単一のエンティティに基づく不規則な構造) とコレクション (メンバーのサブセットの 1 回限りの組み合わせ) を含めることも可能です。 詳細については、「[明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)」および「[コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)」を参照してください。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48072912"
  関連するモデル オブジェクトを含む、エンティティに対する権限をユーザーに付与できます。 詳細については、「[エンティティ権限 (マスター データ サービス)](../../2014/master-data-services/entity-permissions-master-data-services.md)」を参照してください。  
   
 ## <a name="entity-examples"></a>エンティティの例  
- 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
+ 次の例は、これらの属性を持つエンティティを示しています。Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto します。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
  ![自転車製品エンティティ テーブル](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   
@@ -65,18 +64,18 @@ ms.locfileid: "48072912"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新規エンティティを作成する。|[エンティティを作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|新規エンティティを作成する。|[エンティティを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |エンティティに明示的階層とコレクションを含むことができるように指定する。|[明示的階層およびコレクションに対してエンティティを有効にする&#40;マスター データ サービス&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |既存のエンティティの名前を変更する。|[エンティティ名を変更&#40;マスター データ サービス&#41;](edit-an-entity-master-data-services.md)|  
-|既存のエンティティを削除する。|[エンティティを削除する&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|エンティティに権限を割り当てる。|[モデル オブジェクト権限を割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|既存のエンティティを削除する。|[エンティティを削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
+|エンティティに権限を割り当てる。|[モデル オブジェクト権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
 -   [モデル (マスター データ サービス)](../../2014/master-data-services/models-master-data-services.md)  
   
--   [メンバー&#40;マスター データ サービス&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)  
   
--   [属性&#40;マスター データ サービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

@@ -22,12 +22,12 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee1d51d304e43e2c6e50bd8621035486dd778133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7f088d85a5a56a6440266bd9851cbd90c9c0f9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799520"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590456"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@table=** ] **'***テーブル***'**  
+ [  **@table=** ] **'**_テーブル_**'**  
  ストレージ形式を変更するテーブルの、3 つの要素で構成された名前を指定します。 *テーブル*は**nvarchar (776)** します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -73,7 +73,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
  テーブルに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 場合、次の例では、推定行サイズの削減、`Production.WorkOrderRouting`テーブルに、`AdventureWorks2012`データベースを圧縮します。  
+ 次の例では、`Production.WorkOrderRouting` データベースの `AdventureWorks2012` テーブルを圧縮した場合の行サイズの削減量を見積もります。  
   
 ```  
 USE AdventureWorks2012;  

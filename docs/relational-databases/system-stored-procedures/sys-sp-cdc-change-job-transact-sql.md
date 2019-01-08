@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f2aa4413bd9f226bd0bbdf5b676da0da866fde32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705860"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591746"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_type=** ] **'***job_type***'**  
+ [  **@job_type=** ] **'**_job_type_**'**  
  変更するジョブの種類を指定します。 *job_type*は**nvarchar (20)** 既定値は 'capture' です。 有効な入力値は 'capture' と 'cleanup' です。  
   
- [ **@maxtrans** ] **= * * * max_trans*  
+ [ **@maxtrans** ] **=** _max_trans_  
  各スキャン サイクルで処理する最大トランザクション数を指定します。 *max_trans*は**int**既定値は NULL でないことを示しますこのパラメーターに変更します。 指定する場合、値は正の整数にする必要があります。  
   
  *max_trans*はキャプチャ ジョブでのみ有効です。  
   
- [ **@maxscans** ] **= * * * max_scans*  
+ [ **@maxscans** ] **=** _max_scans_  
  ログからすべての行を抽出するために実行する最大スキャン サイクル数を指定します。 *max_scans*は**int**既定値は NULL でないことを示しますこのパラメーターに変更します。  
   
  *max_scan*はキャプチャ ジョブでのみ有効です。  
   
- [ **@continuous** ] **= * * * 継続的な*  
+ [ **@continuous** ] **=**_継続的な_  
  キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を指定します。 *継続的な*は**ビット**既定値は NULL でないことを示しますこのパラメーターに変更します。  
   
  ときに*連続*= 1、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブは、ログをスキャンし、最大処理 (*max_trans* \* *max_scans*)トランザクション。 指定された秒数待機し、 *polling_interval*次のログ スキャンを開始する前にします。  
@@ -74,17 +74,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *継続的な*はキャプチャ ジョブでのみ有効です。  
   
- [ **@pollinginterval** ] **= * * * polling_interval*  
+ [ **@pollinginterval** ] **=** _polling_interval_  
  ログ スキャン サイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**既定値は NULL でないことを示しますこのパラメーターに変更します。  
   
  *polling_interval*キャプチャに対してのみ有効ですがジョブの場合に*連続*が 1 に設定します。  
   
- [ **@retention** ] **= * * * 保有期間*  
+ [ **@retention** ] **=**_保有期間_  
  変更行が変更テーブルに保持される分数を指定します。 *保有期間*は**bigint**既定値は NULL でないことを示しますこのパラメーターに変更します。 最大値は 52494800 (100 年) です。 指定する場合、値は正の整数にする必要があります。  
   
  *保有期間*はクリーンアップ ジョブでのみ有効です。  
   
- [  **@threshold=** ] **'***しきい値を削除***'**  
+ [  **@threshold=** ] **'**_しきい値を削除_**'**  
  クリーンアップ時に 1 つのステートメントを使用して削除できる最大削除エントリ数を指定します。 *しきい値を削除*は**bigint**既定値は NULL でないことを示しますこのパラメーターに変更します。 *しきい値を削除*はクリーンアップ ジョブでのみ有効です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -106,7 +106,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-a-capture-job"></a>A. キャプチャ ジョブを変更する  
- 次の例の更新プログラム、 `@job_type`、 `@maxscans`、および`@maxtrans`でキャプチャ ジョブのパラメーター、`AdventureWorks2012`データベース。 キャプチャ ジョブでは、その他の有効なパラメーター`@continuous`と`@pollinginterval`、省略しています。 その値は変更されません。  
+ 次の例の更新プログラム、 `@job_type`、 `@maxscans`、および`@maxtrans`でキャプチャ ジョブのパラメーター、`AdventureWorks2012`データベース。 キャプチャ ジョブで有効な他のパラメーター (`@continuous` および `@pollinginterval`) については、指定が省略されているため値は変更されません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. クリーンアップ ジョブを変更する  
- 次の例のクリーンアップ ジョブの更新、`AdventureWorks2012`データベース。 この有効なパラメーターをすべてのジョブ以外の種類、  **@threshold**が指定されています。 値**@threshold**は変更されません。  
+ 次の例では、`AdventureWorks2012` データベースのクリーンアップ ジョブを更新します。 この有効なパラメーターをすべてのジョブ以外の種類、  **@threshold**が指定されています。 値**@threshold**は変更されません。  
   
 ```  
 USE AdventureWorks2012;  
